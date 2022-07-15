@@ -1,0 +1,18 @@
+# Created by https://www.toptal.com/developers/gitignore/api/swift
+# Edit at https://www.toptal.com/developers/gitignore?templates=swift
+
+### Swift ###
+# Xcode
+#
+# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+
+## Fotogroep Waalre API key to access telephone numbers, etc.
+privateMembersURL_.swift
+Screenshots/
+SwiftUIEnvironmentValues.png
+
+### Xcode ###
+## User settings
+xcuserdata/
+
+*.UserInterfaceState.xcuserstate

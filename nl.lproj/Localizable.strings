@@ -1,0 +1,242 @@
+/* No comment provided by engineer. */
+"'Current members' includes 'club officers'" = "'Huidige leden' bevat 'bestuursleden'";
+
+/* No comment provided by engineer. */
+"'Former members' includes 'deceased members'" = "'Ex-leden' bevat 'overleden leden'";
+
+/* <role1 and role2> of <photoclub>. Note <and> is handled elsewhere. */
+"%@ of %@" = "%@ van %@";
+
+/* <count> members (including all types of members) within photo club */
+"%lld members (inc. ex-members)" = "%lld leden (incl. ex-leden)";
+
+/* Administrative role of member within a club. Used as part of concatenations. */
+"admin" = "admin";
+
+/* To generate strings like "secretary and admin" */
+"and" = "en";
+
+/* Shown on Readme page. */
+"App version %@ (build %@)" = "App versie %@ (build %@)";
+
+/* Name of the fruit, not the company. */
+"Apple" = "Appel";
+
+/* Shown in gray at the bottom of the Portfolios page. */
+"At least one photographer (%@) is listed multiple times here. This is because such photographers are or were associated with more than one photo club." = "Een of meer fotografen (waaronder %@) komt meerdere keren op de lijst voor. Dit betekent dat deze fotograaf betrokken is of was bij meerdere fotoclubs.";
+
+/* Birthday of member (without year). Date not currently localized? */
+"Birthday:" = "Verjaardag:";
+
+/* Administrative role of member within a club. Used as part of concatenations. */
+"chairman" = "voorzitter";
+
+/* Relationship status of member within a club. Used as prefix. */
+"deceased" = "overleden";
+
+/* No comment provided by engineer. */
+"Developers wanted" = "Ontwikkelaars in de zaal?";
+
+/* Relationship of member to the iOS device. Used in concatenations. */
+"device owner" = "eigenaar van dit apparaat";
+
+/* Button at top right of Settings. Stores preference settings.
+Button to close Info page. */
+"Done" = "OK";
+
+/* Relationship status of member within a club. Used in concatenations. */
+"external coach" = "mentor";
+
+/* No comment provided by engineer. */
+"Features and tips" = "Functionaliteit en tips";
+
+/* Relationship status of member within a club. Used as prefex. */
+"former" = "voormalig";
+
+/* Caption for image on Readme page */
+"Fragment of the Swift source code" = "Stukje Swift code uit de app";
+
+/* Relationship status of member within a club. Used in concatenations. */
+"honorary member" = "erelid";
+
+/* Shown in gray at the bottom of the Photographers page. */
+"Information about a photographer's links to a photo club can be found on the Portfolio page. This page contains club-independent information such as a link to the photographer's own photography website." = "Deze pagina geeft een overzicht van alle fotografen die in deze app voorkomen. De beelden van een fotograaf die vertoond zijn in een specifieke fotoclub zijn te vinden op respectievelijke Portfolio paginas.";
+
+/* Caption of Localizations image on Readme page */
+"List of supported languages" = "De beschikbare talen";
+
+/* Default status of member within a club. Used in concatenations. */
+"member" = "lid";
+
+/* In Settings, above toggles like 'Show former members' */
+"Member categories" = "Lidmaatschapstypen";
+
+/* Section title on Readme page. */
+"Open Source" = "Ontwikkelaars gezocht";
+
+/* First paragraph in The Club section of Readme page */
+"Paragraph_1.1" = "De fotoclub \"Fotogroep Waalre\" is vernoemd naar Waalre, een dorp vlak onder Eindhoven. Sedert 1988 komen de leden van de club bijeen voor fotobespreekavonden. Verder organiseert de club exposities en fotoexcursies.";
+
+/* First paragraph in The App on Readme page */
+"Paragraph_2.1" = "Het doel van deze app is om ***portfolio's*** te tonen met geselecteerd werk van de leden van fotoclubs.";
+
+/* Second paragraph in The App on Readme page */
+"Paragraph_2.2" = "De app bevat tientallen portfolio's. Iedere portfolio betreft het werk van één fotograaf voor zover dat een band heeft met één fotoclub. Indien een fotograaf lid is (of was) van meer dan één fotoclub, dan bevat de app voor de desbetreffende fotograaf één portfolio per fotoclub (althans voor fotoclubs die meedoen aan de app).";
+
+/* Third paragraph in The App on Readme page */
+"Paragraph_2.3" = "De beelden in een portfolio staan in chronologische volgorde: van nieuw naar oud. Een portfolio bestrijkt namelijk vaak een periode van vele jaren.";
+
+/* Fourth paragraph in The App on Readme page */
+"Paragraph_2.4" = "Net als bij een tentoonstelling is het belangrijk om een portfolio zonder afleiding te kunnen bekijken. Webpagina's zijn hiervoor vaak iets te druk wegens de bedieningselementen van de browser (zoals de adresbalk), en omdat een clubwebsite vaak ook andere doeleinden dient (bijvoorbeeld het tonen van clubnieuws).";
+
+/* Fifth paragraph in the App on Readme page */
+"Paragraph_2.5" = "Oorspronkelijk ondersteunde de app uitsluitend Fotogroep Waalre, maar sedert versie 2.0 kan de app meerdere clubs gelijktijdig ondersteunen. Om een voorproefje te zien van hoe dit eruit ziet, ga naar de Fotogroepen pagina en sleep deze \"aan de tekst\" omlaag. Bij het verversen van de pagina laadt de app (_Easter Egg_) enkele voorbeeldleden van naburige clubs.";
+
+/* Sixth paragraph in the App on Readme page */
+"Paragraph_2.6" = "De app kan, indien een club daarvoor kiest, ook de portfolio's van *voormalige* clubleden tonen. De gebruiker kan bepalen of de portfolio's van ex-leden zichtbaar zijn.";
+
+/* Seventh paragraph in the App on Readme page */
+"Paragraph_2.7" = "Clubs met belangstelling om deel te nemen kunnen contact opnemen via app@FotogroepWaalre.nl.";
+
+/* First paragraph in The Features section of Readme page */
+"Paragraph_3.1" = "__Websites__\nHet hoofddoel van de app is om de portfolio's via een strakke presentatie tot hun recht te laten komen. Wij streven er dus _niet_ naar dat de app een website kan vervangen. Daarom verwijst de app de gebruiker via links desgewenst door naar de websites van de clubs.";
+
+/* Second paragraph in The Features section of Readme page */
+"Paragraph_3.2" = "__Meertalig__\nDe app ondersteunt zowel Nederlands als Engels. De taal van de app past zich automatisch aan op de taalinstelling van het apparaat (_Instellingen → Algemeen → Taal en regio → Volgorde voorkeurstalen_). Als alternatief kan een gebruiker de taalkeuze alleen voor deze app aanpassen (_Instellingen → Fotogroep Waalre → Voorkeurstaal_).";
+
+/* Third paragraph in The Features section of Readme page */
+"Paragraph_3.3" = "__Wissen__\nDe gebruiker kan op de Portfolio pagina leden verwijderen door hun naam naar links te vegen. Dat verwijderen is slechts tijdelijk indien het lid nog op de online ledenlijst van de club staat: bij opnieuw synchroniseren komt de naam dan automatisch weer terug. Maar dit \"wegvegen\" kan nuttig zijn als bijvoorbeeld een kandidaat-lid vertrekt zonder lid te worden. Hiermee verwijder je iemand uit de locale database die niet meer voorkomt in de online ledenlijst. Als alternatief kan men ook de app verwijderen en opnieuw installeren.";
+
+/* First paragraph in Animation section of Readme page */
+"Paragraph_4.1" = "Bij het opstarten van de app, wordt een grote versie van het logo van de app zichtbaar. Dit is een interactief speeltje. Door ***binnen het beeld*** te klikken zoomt het beeld langzaam uit tot en vierkante versie van bovenstaande foto.";
+
+/* Second paragraph in Animation section of Readme page */
+"Paragraph_4.2" = "De daarop aangebrachte gekleurde vlakjes tonen hoe de kleurenfilters in een digitale camera werken. Deze [Bayer kleurenfilters](https://en.wikipedia.org/wiki/Bayer_filter) komen in vrijwel alle digitale camera's voor. Iedere kleurenfilter zorgt ervoor dat de afgedekte fotocel (\"pixel\") vooral gevoelig is voor licht van die ene hoofdkleur.";
+
+/* Second paragraph in Animation section of Readme page */
+"Paragraph_4.3" = "Nogmaals klikken op het beeld maakt het mogelijk om verschillende delen van het beeld-met-vlakjes te bekijken. Klik ***buiten het beeld*** om de animatie te beëindigen. De animatie is opnieuw te zien door de app volledig af te sluiten en dan opnieuw op te starten.";
+
+/* First paragraph SupportedPlatforms section of Readme page */
+"Paragraph_5.1" = "De app draait zowel op de iPhone als op de iPad. Verder draait het op de nieuwe generatie Macs met _Apple Silicon_. De app vereist een recente versie van iOS (vanaf iOS/iPadOS 15). Dit dekt in principe alle iOS apparaten af die maximaal 5 jaar oud zijn.";
+
+/* Second paragraph SupportedPlatforms section of Readme page */
+"Paragraph_5.2" = "De app maakt intern gebruik van diverse __Apple__ software technologieën: Swift (een programmeertaal), SwiftUI (voor schermontwerp), Core Data (lokale dataopslag), Metal (versnelt de animatie), Concurrency (laden van data), en Animations (gebruikersinteractie).";
+
+/* Third paragraph SupportedPlatforms section of Readme page */
+"Paragraph_5.3" = "Door alleen Apple technologie te ondersteunen, kan het ontwikkelen van de app zich richten op functionaliteit in plaats van op het ondersteunen van diverse apparaten of het ondersteunen van oudere versies van het besturingssysteem.";
+
+/* Fourth paragraph SupportedPlatforms section of Readme page */
+"Paragraph_5.4" = "Dit heeft uiteraard wel het nadeel dat er niet gauw een __Android__ versie van deze app beschikbaar zal komen. De bekendste apps doen dit wel om de gehele mobiele markt te kunnen bedienen, maar dit vereist veel meer werk om de voortvloeiende technische beperkingen te omzeilen.";
+
+/* Fifth paragraph SupportedPlatforms section of Readme page */
+"Paragraph_5.5" = "De keus om Android vooralsnog te negeren heeft ook een ander gevolg: de app mag eigenlijk geen essentiële functionaliteit bevatten waarvoor geen alternatief voorhanden is. En met \"alternatief\" denken we dus vooral aan een website.";
+
+/* Sixth paragraph SupportedPlatforms section of Readme page */
+"Paragraph_5.6" = "Overigens, zelfs als er een Android versie van de app bestond, dan heeft een club nog altijd een website nodig voor bijvoorbeeld PC gebruikers. En voor het verlenen van andere diensten zoals clubnieuws, vergaderschema of archiveren van jaarverslagen.";
+
+/* First paragraph Developers section of Readme page */
+"Paragraph_6.1" = "Wij gaan vermoedelijk de broncode van de app via GitHub delen. Mede omdat wij ontwikkelaars zoeken om hun steentjes bij te dragen. Dit levert meer voortgang, bevordert frisse ideeën en verhoogt de kans op continuïteit.";
+
+/* Second paragraph Developers section of Readme page */
+"Paragraph_6.2" = "Enkele mogelijkheden om als __software ontwikkelaar__ bij te dragen zijn: nieuwe functionaliteit, software onderhoud, meedenken over de architectuur en nieuwe interfaces, en wellicht een centrale server.";
+
+/* Third paragraph Developers section of Readme page */
+"Paragraph_6.3" = "Bijdragen __zonder programmeerwerk__ zijn ook welkom: testen via TestFlight, bijbehorende ideeën, meer vertalingen, iconen (SVG), geluidseffecten en meewerken aan de bedienbaarheid (UX/UI).";
+
+/* Fourth paragraph Developers section of Readme page */
+"Paragraph_6.4" = "Een uitdaging voor de toekomst wordt het realiseren van een elegante en gebruikersvriendelijk manier om de ledenlijst en portfolio informatie per fotoclub te delen. De interne database is hiervoor al aangepast. Een fotoclub zou straks in staat moeten zijn gegevens zelf in te voeren en deze gegevens zelf te onderhouden - dus zonder dat er aan de app iets hoeft te veranderen.";
+
+/* Fifth paragraph Developers section of Readme page */
+"Paragraph_6.5" = "Momenteel bevat de app intern een Swift klasse per fotoclub. Die software module laadt en vertaalt de gegevens van de server (\"website\") van de desbetreffende club en combineert de gegevens met de gegevens in de app. Bij Fotogroep Waalre, bijvoorbeeld, leest de app de ledenlijst vanuit een HTML tabel (die deel uitmaakt van een met wachtwoord afgeschermd stukje website). De app leest de portfolio's met foto's per lid vanuit XML files. Deze XML files worden automatisch gegenereerd door een Lightroom Classic plug-in ([JuiceBox-Pro](https://www.juicebox.net)). Lightroom doet dus dienst als de editor voor portfolio's (als LR _collections_). Deze portfolio's worden via een LR upload-to-web knop en JuiceBox-Pro op www.FotogroepWaalre.nl gezet. En de app leest vervolgens de actuele portfolio's als XML bestanden in vanaf deze website.";
+
+/* Sixth paragraph Developers section of Readme page */
+"Paragraph_6.6" = "Samenvattend: wij zoeken vrijwilligers die mee willen helpen. Voor het meeprogrammeren zoeken wij mensen die eerder een eigen app gemaakt hebben op basis van SwiftUI. Of ervaren programmeurs die serieus bezig zijn met een SwiftUI cursus (b.v. [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/) van _Hacking With Swift_, of het college [CS193p](https://cs193p.sites.stanford.edu) dat Stanford University online hield ivm de pandemie). Vragen over de mogelijkheden om bij te dragen graag sturen naar appdev@FotogroepWaalre.nl.";
+
+/* First paragraph Model section of Readme page */
+"Paragraph_7.1" = "Tenslotte een snelle tour langs het onderliggende informatiemodel danwel [MVVM](https://www.hackingwithswift.com/books/ios-swiftui/introducing-mvvm-into-your-swiftui-project) “model”. In de SwiftUI wereld betekent dat de entiteiten in de Modellaag als _structs_ gedefinieerd worden. De Swift taal ondersteunt als moderne programmeertaal uiteraard _klassen_, maar maakt ook veel gebruik van [_structs_](https://www.avanderlee.com/swift/struct-class-differences/) en [_protocollen_](https://docs.swift.org/swift-book/LanguageGuide/Protocols.html).";
+
+/* Second paragraph Model section of Readme page */
+"Paragraph_7.2" = "Hier volgt het model, inclusief de engelstalige entiteitnamen:\n\nIedere ***PhotoClub*** heeft ***Members*** van diverse soorten (b.v. huidige leden, ex-leden). Sommige Members hebben een bestuursfunctie (b.v. voorzitter, penningmeester) binnen de PhotoClub. Members zijn eigenlijk ***Photographers***. Member is _geen_ subklasse van Photographer, omdat een Photographer lid kan zijn van meerdere PhotoClubs. Sommige informatie over Photographers (zoals naam en verjaardag) staat los van hun banden met PhotoClubs. Een Portfolio bevat het werk een Member, maar eigenlijk zijn Portfolio en Member model-technisch synoniemen. Een Portfolio is dus een chronologische reeks ***Images***. Een Image kan echter voorkomen in meerdere Portfolio's, namelijk als het in meerdere PhotoClubs besproken of geëxposeerd is.";
+
+/* Caption for image on Readme page */
+"Partial model" = "Model (onvolledig)";
+
+/* Telephone number (usually invisible) */
+"Phone:" = "Tel:";
+
+/* Title used in Navigation View */
+"Photo Club Waalre" = "Fotogroep Waalre";
+
+/* Title of page with clubs and maps */
+"Photo clubs" = "Fotogroepen";
+
+/* Title of page showing member portfolios */
+"Portfolios" = "Portfolio's";
+
+/* Title of screen with toggles to adjust preferences */
+"Preferences" = "Instellingen";
+
+/* Relationship status of member within a club. Used in concatenations. */
+"prospective member" = "aspirant-lid";
+
+/* Title of Readme page */
+"Readme" = "Over deze app";
+
+/* Field at top of Photographers page that allows the user to filter the photographers based on either given- and family name.
+Field at top of Members page that allows the user to filter the members based on either given- and family name. */
+"Search names" = "Zoek op naam";
+
+/* Administrative role of member within a club. Used as part of concatenations. */
+"secretary" = "secretaris";
+
+/* Label of toggle in Settings */
+"Show aspiring members" = "Toon aspirant-leden";
+
+/* Label of toggle in Settings */
+"Show club officers" = "Toon bestuursleden";
+
+/* Label of toggle in Settings */
+"Show current members" = "Toon huidige leden";
+
+/* Label of toggle in Settings */
+"Show deceased members" = "Toon overleden leden";
+
+/* Label of toggle in Settings */
+"Show external coaches" = "Toon externe mentoren";
+
+/* Label of toggle in Settings */
+"Show former members" = "Toon ex-leden";
+
+/* Label of toggle in Settings */
+"Show honorary members" = "Toon ereleden";
+
+/* Section title on Readme page. */
+"Supported Platforms" = "iOS, iPadOS, MacOS";
+
+/* No comment provided by engineer. */
+"The Animation" = "De Animatie";
+
+/* No comment provided by engineer. */
+"The Club" = "Fotogroep Waalre";
+
+/* No comment provided by engineer. */
+"The Model" = "Voer voor nerds";
+
+/* Hint to the user if the database returns zero Members. */
+"To see names here, please adapt the Search filter or enable additional categories on the Preferences page." = "Tip: om leden hier te zien, pass de Zoek filter aan of pas weergave instellingen in de Instellingen pagina aan.";
+
+/* Hint to the user if the database returns zero Members. */
+"To see names here, please enable additional categories on the Preferences page." = "Tip: op de Instellingen pagina staan alle instellingen momenteel op \"niet weergeven\".";
+
+/* Administrative role of member within a club. Used as part of concatenations. */
+"treasurer" = "penningmeester";
+
+/* Administrative role of member within a club. Used as part of concatenations. */
+"vice-chairman" = "vicevoorzitter";
+
+/* Hint to the user if all of the Preference toggles are disabled. */
+"Warning: all member categories on the Preferences page are disabled. Please enable one or more options to see names here." = "Waarschuwing: op de Instellingen pagina staan alle instellingen momenteel op \"niet weergeven\".";
+
+/* Title of page with list of photographers */
+"Who's who" = "Namenlijst";
+
