@@ -28,25 +28,14 @@ struct FotogroepWaalreApp: App {
 
     var body: some Scene {
         WindowGroup {
-            if deviceOwner.fullOwnerName.contains("Bram") || deviceOwner.fullOwnerName.contains("Berge") {
-                MemberListView() // Bram hates the intro animation, so avoid it for him
-                    .environmentObject(deviceOwner)
-                    .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext) // main Q!
-                    .onAppear {
-                        //      _ = BIMembersProvider()
-                        _ = FGWMembersProvider(fullOwnerName: deviceOwner.fullOwnerName)
-                        //      _ = TestMembersProvider()
-                    }
-            } else {
-                AnimatedLogo() // fullOwnerName passed down to MemberListView()
-                    .environmentObject(deviceOwner)
-                    .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext) // main Q!
-                    .onAppear {
-                        //      _ = BIMembersProvider()
-                        _ = FGWMembersProvider(fullOwnerName: deviceOwner.fullOwnerName)
-                        //      _ = TestMembersProvider()
-                    }
-            }
+            AnimatedLogo() // fullOwnerName passed down to MemberListView()
+                .environmentObject(deviceOwner)
+                .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext) // main Q!
+                .onAppear {
+                    //      _ = BIMembersProvider()
+                    _ = FGWMembersProvider(fullOwnerName: deviceOwner.fullOwnerName)
+                    //      _ = TestMembersProvider()
+                }
         }
         .onChange(of: scenePhase) { _ in
             PersistenceController.shared.save() // when app moves to background
