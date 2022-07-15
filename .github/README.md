@@ -6,7 +6,7 @@
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 
-[![Product Name Screen Shot][product-screenshot]](https://github.com/vdhamer/PhotoClubWaalre)
+[![Portfolios Screen Shot][portfolios-screenshot]](https://github.com/vdhamer/PhotoClubWaalre)
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -197,5 +197,5 @@ Project Link: [https://github.com/vdhamer/PhotoClubWaalre](https://github.com/vd
 [issues-url]: https://github.com/vdhamer/PhotoClubWaalre/issues
 [license-shield]: https://img.shields.io/github/license/vdhamer/PhotoClubWaalre.svg?style=for-the-badge
 [license-url]: https://github.com/vdhamer/PhotoClubWaalre/blob/main/.github/LICENSE.txt
-[product-screenshot]: images/screenshot.png
+[portfolios-screenshot]: images/portfolios.png
 [product-schema]: ../Assets.xcassets/images/Schema.imageset/Schema.jpg
