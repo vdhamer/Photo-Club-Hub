@@ -16,7 +16,6 @@
 		D0275F5527E3E21F002FA4FE /* View+OnTapGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0275F5427E3E21F002FA4FE /* View+OnTapGesture.swift */; };
 		D02C35F02880C298008C671A /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = D02C35EF2880C298008C671A /* LICENSE.txt */; };
 		D02C35F22880C3D6008C671A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D02C35F12880C3D6008C671A /* README.md */; };
-		D02C35F42880C57F008C671A /* screenshot.png in Resources */ = {isa = PBXBuildFile; fileRef = D02C35F32880C57F008C671A /* screenshot.png */; };
 		D032944A283F9D1D0044C70C /* Bundle+VersionBuild.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0329449283F9D1D0044C70C /* Bundle+VersionBuild.swift */; };
 		D0396075278CF6550035F750 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D0396074278CF6550035F750 /* Settings.bundle */; };
 		D044646527FCE7C100990613 /* UIDevice+IsIPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = D044646427FCE7C100990613 /* UIDevice+IsIPad.swift */; };
@@ -61,6 +60,7 @@
 		D0E2235427DE9139002A8600 /* AnimatedLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E2235327DE9139002A8600 /* AnimatedLogo.swift */; };
 		D0E449A327AECEC4003FDA37 /* ShapeStyle+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E449A227AECEC4003FDA37 /* ShapeStyle+Colors.swift */; };
 		D0E694C927EF9B450054D634 /* LockAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E694C827EF9B450054D634 /* LockAnimation.swift */; };
+		D0FF1F6C28822072007401E9 /* portfolios.png in Resources */ = {isa = PBXBuildFile; fileRef = D0FF1F6B28822072007401E9 /* portfolios.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,7 +94,6 @@
 		D02A71332829C56F0071EF74 /* Fotogroep_Waalre_2_0_9.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fotogroep_Waalre_2_0_9.xcdatamodel; sourceTree = "<group>"; };
 		D02C35EF2880C298008C671A /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		D02C35F12880C3D6008C671A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		D02C35F32880C57F008C671A /* screenshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot.png; sourceTree = "<group>"; };
 		D02E4C8D281F41AF005C32D0 /* Fotogroep_Waalre_2_0_8.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fotogroep_Waalre_2_0_8.xcdatamodel; sourceTree = "<group>"; };
 		D0329449283F9D1D0044C70C /* Bundle+VersionBuild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+VersionBuild.swift"; sourceTree = "<group>"; };
 		D0333C7C27F88BAC00AF651E /* Fotogroep_Waalre_2_0_7.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fotogroep_Waalre_2_0_7.xcdatamodel; sourceTree = "<group>"; };
@@ -157,6 +156,7 @@
 		D0E449A227AECEC4003FDA37 /* ShapeStyle+Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ShapeStyle+Colors.swift"; path = "Fotogroep Waalre/Utilities/ShapeStyle+Colors.swift"; sourceTree = SOURCE_ROOT; };
 		D0E694C827EF9B450054D634 /* LockAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockAnimation.swift; sourceTree = "<group>"; };
 		D0FDC51827F6653D008CD990 /* Fotogroep_Waalre_2_0_6.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fotogroep_Waalre_2_0_6.xcdatamodel; sourceTree = "<group>"; };
+		D0FF1F6B28822072007401E9 /* portfolios.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = portfolios.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -433,7 +433,7 @@
 		D0F2F2F32873A19F009DDD2A /* images */ = {
 			isa = PBXGroup;
 			children = (
-				D02C35F32880C57F008C671A /* screenshot.png */,
+				D0FF1F6B28822072007401E9 /* portfolios.png */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -551,11 +551,11 @@
 				D0396075278CF6550035F750 /* Settings.bundle in Resources */,
 				D0831A57277F82460049AB84 /* en.xcloc in Resources */,
 				D02C35F22880C3D6008C671A /* README.md in Resources */,
+				D0FF1F6C28822072007401E9 /* portfolios.png in Resources */,
 				D07A1E2F28314EA600C77F66 /* SwiftUIEnvironmentValues.png in Resources */,
 				D0831A56277F82460049AB84 /* nl.xcloc in Resources */,
 				D0B5249A277F9A4B00927BCA /* MemberListSections.strings in Resources */,
 				D0B52497277F9A4B00927BCA /* Localizable.strings in Resources */,
-				D02C35F42880C57F008C671A /* screenshot.png in Resources */,
 				D0831A51277F73C00049AB84 /* Preview Assets.xcassets in Resources */,
 				D0B52494277F9A4B00927BCA /* Fotogroep-Waalre-InfoPlist.strings in Resources */,
 				D08319EB277F70A40049AB84 /* Assets.xcassets in Resources */,
