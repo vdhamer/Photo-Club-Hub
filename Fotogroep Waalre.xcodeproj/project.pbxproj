@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		D008D2AA28739167007A7BE2 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = D008D2A928739167007A7BE2 /* .gitignore */; };
 		D008D2AC287392F0007A7BE2 /* PrivateMembersURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = D008D2AB287392F0007A7BE2 /* PrivateMembersURL.swift */; };
-		D008D2AE28739304007A7BE2 /* PrivateMembersURL_.swift in Sources */ = {isa = PBXBuildFile; fileRef = D008D2AD28739304007A7BE2 /* PrivateMembersURL_.swift */; };
 		D01D2B6227D3BBDC00E2FE41 /* View+Navigate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01D2B6127D3BBDC00E2FE41 /* View+Navigate.swift */; };
 		D02382B7279322B0001BFE59 /* DeviceOwnership.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02382B6279322B0001BFE59 /* DeviceOwnership.swift */; };
 		D024F11628423BE60055021B /* Sounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = D024F11528423BE60055021B /* Sounds.swift */; };
@@ -663,7 +662,6 @@
 				D0831A20277F72270049AB84 /* PhotoClubs.swift in Sources */,
 				D0E2235427DE9139002A8600 /* AnimatedLogo.swift in Sources */,
 				D0AE1B782788A19500E0100E /* PhotographerListView.swift in Sources */,
-				D008D2AE28739304007A7BE2 /* PrivateMembersURL_.swift in Sources */,
 				D0831A21277F72270049AB84 /* Photographers.swift in Sources */,
 				D0831A3E277F72B70049AB84 /* Fotogroep_Waalre_2.xcdatamodeld in Sources */,
 				D0831A35277F72590049AB84 /* SettingsStruct.swift in Sources */,

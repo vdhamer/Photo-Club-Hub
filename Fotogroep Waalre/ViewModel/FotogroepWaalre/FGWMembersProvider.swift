@@ -11,10 +11,6 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
 
     private let fullOwnerName: String?
     private static let photoClubID: (name: String, town: String) = ("Fotogroep Waalre", "Waalre")
-    private static let privateMembersURL =
-                                    "https://www.fotogroepwaalre.nl/leden/leden2/?ppt=6c008489faf3f256ffd4acdb6f13cb93"
-    // Note: PRIVATEMEMBERSURL is encrypted via the "Post Password Token" Wordpress plug-in
-    //       using $1$Iy6PEloR$GR0xaB.UOoHxocTc.r9z as salt
 
 //    /// A shared member provider for use within the main app bundle.
 //    static let shared = FotogroepWaalreMembersProvider()
