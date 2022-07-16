@@ -7,9 +7,9 @@
 
 extension FGWMembersProvider {
 
-//    private static let privateMembersURL =
-//                                    "https://www.fotogroepwaalre.nl/leden/leden3/?ppt=<apikey>"
+    static let privateMembersURL
+               = "https://www.fotogroepwaalre.nl/leden3/?ppt=3c21d45fd43c5eb7a51b1111586d7e20"
     // Note: PRIVATEMEMBERSURL is encrypted via the "Post Password Token" Wordpress plug-in
-    //       using <tbd> as salt
+    //       using $1$Iy6PEloR$GR0xaB.UOoHxocTc.r9z as salt
 
 }

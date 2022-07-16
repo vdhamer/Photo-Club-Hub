@@ -3,7 +3,9 @@
 
 • added an extra save() when app goes to background state
 • linked loading of Fotogroep Waalre data to .onAppear of first view
-• migrate to Github
+• put source code on Github
+• removed automatic accessibility feature for BvdB
+• removed SwiftUIEnvirontValue.png graphic out of build
 
 ? udate text in internal readme to reflect status on Github
 ? replace NSSortDescriptor() by SortDescriptor(). Propagates to NSFetchRequest. request.wrappedValue?
