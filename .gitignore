@@ -7,7 +7,8 @@
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
 ## Fotogroep Waalre API key to access telephone numbers, etc.
-privateMembersURL*.swift
+#PrivateMembersURL.swift
+PrivateMembersURL_.swift
 
 Screenshots/
 SwiftUIEnvironmentValues.png
