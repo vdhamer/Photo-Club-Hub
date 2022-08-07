@@ -3,11 +3,11 @@
 * CoreData / SQLite to store persistent data
 * Coding rules follow SwiftLint's defaults
 * adapted for iOS 15 - including some Task/Await asynchronous behavior
+* Search field on Member list
 
 ## Technical Changes (to do)
 * Local storage as cache for images
-* No use of WKWebView for galleries
-* Search field on Member list
+* stop using WKWebView for galleries
 * support for MacOS
 * replace "43 total members in PhotoClub" by "xx members shown"
 * PhotoClub.refreshCountries() to asynchronously lookup Country (in localized String) for photo clubs with coordinates

@@ -154,7 +154,7 @@ You can alternatively submit an `issue` with a tag like ”enhancement" or “bu
 
 The app uses a [Swift-style MVVM](https://www.hackingwithswift.com/books/ios-swiftui/introducing-mvvm-into-your-swiftui-project) design, meaning the model data is stored in structs (and in database tables) rather than in classes. As an intro for developers, here is a quick tour of the model. 
 
-[![Product schema][product-schema]](https://github.com/vdhamer/PhotoClubWaalre/tree/readme#about-the-model)
+[![Product schema][product-schema]](https://github.com/vdhamer/PhotoClubWaalre/blob/main/Assets.xcassets/images/Schema.imageset/Screen%20Shot%202022-05-08%20at%2000.14.43.jpg)
 
 Every `PhotoClub` has zero or more `Members` of various types (current, former, etc.). Some of these `Members` have a formal role like chairman within the `PhotoClub`. We will come back to why `Member` is not visible in the model in a moment.
 
@@ -181,7 +181,8 @@ Project Link: [https://github.com/vdhamer/PhotoClubWaalre](https://github.com/vd
 
 ## Acknowledgments
 
-* The opening image animation uses an image by Greetje van Son.
+* The opening image animation uses an image by Greetje van Son
+* A file with club member data is encrypted using [git-crypt](https://github.com/AGWA/git-crypt)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

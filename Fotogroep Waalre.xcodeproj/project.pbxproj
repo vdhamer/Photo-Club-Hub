@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		D008D2AA28739167007A7BE2 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = D008D2A928739167007A7BE2 /* .gitignore */; };
-		D008D2AC287392F0007A7BE2 /* PrivateMembersURL2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D008D2AB287392F0007A7BE2 /* PrivateMembersURL2.swift */; };
 		D01D2B6227D3BBDC00E2FE41 /* View+Navigate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01D2B6127D3BBDC00E2FE41 /* View+Navigate.swift */; };
 		D02382B7279322B0001BFE59 /* DeviceOwnership.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02382B6279322B0001BFE59 /* DeviceOwnership.swift */; };
 		D024F11628423BE60055021B /* Sounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = D024F11528423BE60055021B /* Sounds.swift */; };
@@ -21,7 +20,6 @@
 		D05E451E27EF2A2C00D31327 /* ReadmeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05E451D27EF2A2C00D31327 /* ReadmeView.swift */; };
 		D06061E828A0453F00A675A7 /* PrivateMembersURL2.txt in Resources */ = {isa = PBXBuildFile; fileRef = D06061E728A0453F00A675A7 /* PrivateMembersURL2.txt */; };
 		D06061EA28A0456C00A675A7 /* PrivateMembersURL3.txt in Resources */ = {isa = PBXBuildFile; fileRef = D06061E928A0456C00A675A7 /* PrivateMembersURL3.txt */; };
-		D06061EB28A0580200A675A7 /* PrivateMembersURL3.swift in Sources */ = {isa = PBXBuildFile; fileRef = D008D2AD28739304007A7BE2 /* PrivateMembersURL3.swift */; };
 		D06061ED28A05D4600A675A7 /* String+paths.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06061EC28A05D4600A675A7 /* String+paths.swift */; };
 		D081655B278611150078AB16 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D081655A278611150078AB16 /* WebView.swift */; };
 		D081655F278616930078AB16 /* MemberGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D081655E278616930078AB16 /* MemberGalleryView.swift */; };
@@ -85,8 +83,6 @@
 /* Begin PBXFileReference section */
 		D007030F279A23A600DC33AA /* Fotogroep_Waalre_2_0_ 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Fotogroep_Waalre_2_0_ 3.xcdatamodel"; sourceTree = "<group>"; };
 		D008D2A928739167007A7BE2 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		D008D2AB287392F0007A7BE2 /* PrivateMembersURL2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateMembersURL2.swift; sourceTree = "<group>"; };
-		D008D2AD28739304007A7BE2 /* PrivateMembersURL3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateMembersURL3.swift; sourceTree = "<group>"; };
 		D01526BC278B91BA004DBD19 /* Fotogroep Waalre.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Fotogroep Waalre.entitlements"; sourceTree = "<group>"; };
 		D01D2B6127D3BBDC00E2FE41 /* View+Navigate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Navigate.swift"; sourceTree = "<group>"; };
 		D01DFAA627E778BD007BABFA /* offsets.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = offsets.md; sourceTree = "<group>"; };
@@ -328,8 +324,6 @@
 			children = (
 				D0831A2C277F72590049AB84 /* FGWMembersProvider.swift */,
 				D0831A2B277F72590049AB84 /* FGWMembersProvider+insertSomeMembers.swift */,
-				D008D2AB287392F0007A7BE2 /* PrivateMembersURL2.swift */,
-				D008D2AD28739304007A7BE2 /* PrivateMembersURL3.swift */,
 				D06061E728A0453F00A675A7 /* PrivateMembersURL2.txt */,
 				D06061E928A0456C00A675A7 /* PrivateMembersURL3.txt */,
 			);
@@ -654,14 +648,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0DE02772789D1B30062738C /* RoleIconView.swift in Sources */,
-				D06061EB28A0580200A675A7 /* PrivateMembersURL3.swift in Sources */,
 				D0831A33277F72590049AB84 /* BIMembersProvider+insertSomeMembers.swift in Sources */,
 				D0831A45277F731C0049AB84 /* FoundationExtensions.swift in Sources */,
 				D0831A1F277F72270049AB84 /* FilteredMembers.swift in Sources */,
 				D0831A34277F72590049AB84 /* BIMembersProvider.swift in Sources */,
 				D0ADF4AE27922DCA00535432 /* MemberRolesAndStatus.swift in Sources */,
 				D0831A38277F72590049AB84 /* PhotoClub.swift in Sources */,
-				D008D2AC287392F0007A7BE2 /* PrivateMembersURL2.swift in Sources */,
 				D06061ED28A05D4600A675A7 /* String+paths.swift in Sources */,
 				D0275F5527E3E21F002FA4FE /* View+OnTapGesture.swift in Sources */,
 				D0831A22277F72270049AB84 /* MemberListView.swift in Sources */,
