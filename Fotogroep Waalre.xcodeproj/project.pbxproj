@@ -21,6 +21,8 @@
 		D05E451E27EF2A2C00D31327 /* ReadmeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05E451D27EF2A2C00D31327 /* ReadmeView.swift */; };
 		D06061E828A0453F00A675A7 /* PrivateMembersURL2.txt in Resources */ = {isa = PBXBuildFile; fileRef = D06061E728A0453F00A675A7 /* PrivateMembersURL2.txt */; };
 		D06061EA28A0456C00A675A7 /* PrivateMembersURL3.txt in Resources */ = {isa = PBXBuildFile; fileRef = D06061E928A0456C00A675A7 /* PrivateMembersURL3.txt */; };
+		D06061EB28A0580200A675A7 /* PrivateMembersURL3.swift in Sources */ = {isa = PBXBuildFile; fileRef = D008D2AD28739304007A7BE2 /* PrivateMembersURL3.swift */; };
+		D06061ED28A05D4600A675A7 /* String+paths.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06061EC28A05D4600A675A7 /* String+paths.swift */; };
 		D081655B278611150078AB16 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D081655A278611150078AB16 /* WebView.swift */; };
 		D081655F278616930078AB16 /* MemberGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D081655E278616930078AB16 /* MemberGalleryView.swift */; };
 		D08319E7277F70A30049AB84 /* Fotogroep_Waalre_App.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08319E6277F70A30049AB84 /* Fotogroep_Waalre_App.swift */; };
@@ -102,6 +104,7 @@
 		D05E451D27EF2A2C00D31327 /* ReadmeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeView.swift; sourceTree = "<group>"; };
 		D06061E728A0453F00A675A7 /* PrivateMembersURL2.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = PrivateMembersURL2.txt; sourceTree = "<group>"; };
 		D06061E928A0456C00A675A7 /* PrivateMembersURL3.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = PrivateMembersURL3.txt; sourceTree = "<group>"; };
+		D06061EC28A05D4600A675A7 /* String+paths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+paths.swift"; sourceTree = "<group>"; };
 		D077EBB52846D134002811F9 /* Fotogroep_Waalre_2_0_11.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fotogroep_Waalre_2_0_11.xcdatamodel; sourceTree = "<group>"; };
 		D07A1E2E28314EA600C77F66 /* SwiftUIEnvironmentValues.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SwiftUIEnvironmentValues.png; sourceTree = "<group>"; };
 		D07DD91327EA96E900472266 /* Fotogroep_Waalre_2_0_5.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fotogroep_Waalre_2_0_5.xcdatamodel; sourceTree = "<group>"; };
@@ -344,6 +347,7 @@
 		D0831A3F277F731C0049AB84 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				D06061EC28A05D4600A675A7 /* String+paths.swift */,
 				D044646427FCE7C100990613 /* UIDevice+IsIPad.swift */,
 				D0275F5427E3E21F002FA4FE /* View+OnTapGesture.swift */,
 				D0831A40277F731C0049AB84 /* Published+UserDefaults.swift */,
@@ -650,6 +654,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0DE02772789D1B30062738C /* RoleIconView.swift in Sources */,
+				D06061EB28A0580200A675A7 /* PrivateMembersURL3.swift in Sources */,
 				D0831A33277F72590049AB84 /* BIMembersProvider+insertSomeMembers.swift in Sources */,
 				D0831A45277F731C0049AB84 /* FoundationExtensions.swift in Sources */,
 				D0831A1F277F72270049AB84 /* FilteredMembers.swift in Sources */,
@@ -657,6 +662,7 @@
 				D0ADF4AE27922DCA00535432 /* MemberRolesAndStatus.swift in Sources */,
 				D0831A38277F72590049AB84 /* PhotoClub.swift in Sources */,
 				D008D2AC287392F0007A7BE2 /* PrivateMembersURL2.swift in Sources */,
+				D06061ED28A05D4600A675A7 /* String+paths.swift in Sources */,
 				D0275F5527E3E21F002FA4FE /* View+OnTapGesture.swift in Sources */,
 				D0831A22277F72270049AB84 /* MemberListView.swift in Sources */,
 				D0A0884C27F8C697002CC8E1 /* TestMembersProvider+insertSomeMembers.swift in Sources */,

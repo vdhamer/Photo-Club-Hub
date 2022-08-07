@@ -21,14 +21,50 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
         let fgwBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
         insertSomeMembers(fgwBackgroundContext: fgwBackgroundContext, commit: true)
 
-        let privateURL: URL = URL(string: FGWMembersProvider.privateMembersURL)!
-        Task {
-            await loadPrivateMembersFromWebsite( backgroundContext: fgwBackgroundContext,
-                                                 privateMemberURL: privateURL,
-                                                 photoClubID: FGWMembersProvider.photoClubID,
-                                                 commit: true,
-                                                 fullOwnerName: fullOwnerName
-            )
+        let urlString = getFileAsString(secretFilename: "PrivateMembersURL2.txt",
+                                        unsecretFileName: "StringPrivateMembersURL3.txt")
+        if let privateURL = URL(string: urlString) {
+//      if let privateURL: URL = URL(string: FGWMembersProvider.privateMembersURL) {
+            Task {
+                await loadPrivateMembersFromWebsite( backgroundContext: fgwBackgroundContext,
+                                                     privateMemberURL: privateURL,
+                                                     photoClubID: FGWMembersProvider.photoClubID,
+                                                     commit: true,
+                                                     fullOwnerName: fullOwnerName
+                )
+            }
+        } else {
+            fatalError("Could not convert \(urlString) to a URL.")
+        }
+
+    }
+
+    private func getFileAsString(secretFilename: String, unsecretFileName: String) -> String {
+        if let secret = readLineFromLocalFile(fileNameWithExtension: secretFilename) {
+            return secret
+        } else {
+            if let unsecret = readLineFromLocalFile(fileNameWithExtension: unsecretFileName) {
+                return unsecret
+            } else {
+                return "file \(unsecretFileName) looks encrypted"
+            }
+        }
+    }
+
+    private func readLineFromLocalFile(fileNameWithExtension: String) -> String? {
+        let fileName = fileNameWithExtension.fileName()
+        let fileExtension = fileNameWithExtension.fileExtension()
+        if let filepath = Bundle.main.path(forResource: fileName, ofType: fileExtension) {
+            do {
+                let firstLine = try String(contentsOfFile: filepath).components(separatedBy: "\n")[0]
+                return firstLine // encypted version starts with hex 00 47 49 54 43 52 59 50 54 00 and is not a String
+            } catch {
+                print("Warning: \(error.localizedDescription) File is not a text file.")
+                return nil
+            }
+        } else {
+            print("Cannot find file \(fileNameWithExtension) from bundle")
+            return("File missing!")
         }
     }
 
