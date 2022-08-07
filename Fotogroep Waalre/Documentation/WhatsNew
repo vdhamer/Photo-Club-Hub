@@ -6,6 +6,7 @@
 • put source code on Github
 • removed automatic accessibility feature for BvdB
 • removed SwiftUIEnvirontValue.png graphic out of build
+• tested on iOS 16 beta 4
 
 ? udate text in internal readme to reflect status on Github
 ? replace NSSortDescriptor() by SortDescriptor(). Propagates to NSFetchRequest. request.wrappedValue?
