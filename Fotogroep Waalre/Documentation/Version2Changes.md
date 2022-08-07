@@ -10,7 +10,7 @@
 * Search field on Member list
 * support for MacOS
 * replace "43 total members in PhotoClub" by "xx members shown"
-* PhotoClub.refreshCountries() to asynchronously lookup Country (in localized String)for photo clubs with coordinates
+* PhotoClub.refreshCountries() to asynchronously lookup Country (in localized String) for photo clubs with coordinates
 
 ## Bugs
 * delete a PhotoClub or Photographer gives crash due to nul Photographer. Currently .ondelete is deactivated.
