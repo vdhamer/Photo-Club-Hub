@@ -52,27 +52,74 @@
 
 ### The name
 
-Photo Club Waalre is a photography club named after Waalre, a town in the south of The Netherlands. Since 1988 its club members meet to critique each other’s photos, organize excursions, and hold yearly photo expositions.
+Photo Club Waalre is a photography club named after Waalre, a town in the south of The Netherlands. Its members meet since 1988 to critique each other’s photos, organize excursions, and hold yearly photo expositions.
 
 ### Portfolios
 
 The goal of this app is to **showcase curated work of members of photo clubs**.
 
-The work is organized into `portfolios`. Each portfolio covers that part of a photographer's work that was shared within a photo club. If a photographer is (or was) a member of more than one of the supported photo clubs, the app will contain multiple portfolios for that photographer.
+The work is organized into `portfolios`.
+Each portfolio covers that part of a photographer's work that was shared within a photo club.
+If a photographer joined multiple photo clubs,
+the app may contain more than one portfolios for that photographer.
 
-Each portfolio is shown in chronological order, with the latest work shown first, and typically spans multiple years.
+A portfolio within the app often spans a multi-year period. The app shows the work in most-recent-first order.
+
 
 ### Built With
-* [Swift](https://www.swift.org)
-* [Core Data](https://developer.apple.com/documentation/coredata)
-* [SwiftUI](https://developer.apple.com/xcode/swiftui/)
+
+* [Swift](https://www.swift.org) - programming language
+* [SwiftUI](https://developer.apple.com/xcode/swiftui/) - user interface framework
+* [Core Data](https://developer.apple.com/documentation/coredata) - persistent storage framework
+* [JuiceBox Pro](https://www.juicebox.net) - JavaScript image galleries
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## Getting Started
-To get a local copy up and running, use GitHub’s `Open with Xcode` feature, compile and run on a simulator or physical device. Those who prefer running git from the command line should be able to manage on their own.
+## Installation
 
-### Installation
+### Cloning the repository
+
+To install the code locally, it is easiest to use GitHub’s `Open with Xcode` feature.
+Those used to running Git from the command line should be able to manage on their own.
+Xcode handles the installation on a device or on an Xcode simulator for an iPhone or iPad.
+
+### Security
+
+During the build you may be prompted to provide a developer license (personal or commercial)
+in order to install the app on a physical device. This is standard iOS behavior.
+
+On iOS 16 you may need to configure a physical device to allow it to run apps 
+that haven't passed through the Apple App Store. This involves Settings > Privacy & Security >
+Developer Mode. This was introduced in iOS 16.
+
+### Updating the app
+
+If you upgrade to a newer version or build, data stored in the app's internal data storage
+remains available. If you remove and reinstall the app, this data gets reset.
+
+## Hiding member data
+
+The following has **no impact** (zero, nada, nil) on the app's functionality or user interface.
+But encryption code can draw a lot of attention, so explaining it here may prevent you from
+wasting your time in trying to figure out what's going on :nerd_face: :
+
+Currently one data file in the repository is encrypted. 
+As you will expect, the key to decrypt the file is *not* provided.
+The file, in its decrypted form, gives access to a password-protected web page
+containing telephone numbers and e-mail addresses of one photo club's members. 
+Apart from the fact that the data is of rather boring, all this has no impact because: 
+- the data, when encrypted, is automatically replaced by dummy data
+- the data (dummy or real) is currently not used yet by the app
+
+So, all this hasstle is just so that an App Store version *could* allow club members to
+unlock extra functionality using a password, but without leaking the protected data via GitHub.
+
+And how would the password be protected? The app can check a hash of the provided password.
+But the app's source code then gives me access to this super secret web page, right?
+Wrong. The password, or a source code level bypass, does allow a user
+to *see* the "dummy or real" data, right? Correct. 
+But without the not-provided encryption key it would still be the dummy data (which you
+can already access via the source code). 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -80,36 +127,51 @@ To get a local copy up and running, use GitHub’s `Open with Xcode` feature, co
 
 ### Opening animation
 
-When the app opens, it shows a large image corresponding to the app’s icon. If you tap somewhere inside the image, it zooms out to show the full image representing how digital cameras see color.
+When the app launches, it shows a large version of the app’s icon. 
+If you tap somewhere inside the image, 
+it zooms out to show a sample infographic representing how digital cameras see color.
 
-This involves a Bayer color filter array that filters the light per pixel. The filter array is shown here superimposed on a colorful photo.
+This involves a Bayer color filter array that filters the light reaching each pixel/photocell.
+The filter array is shown here superimposed on a colorful photo.
+In a 24 MPixel camera, the sensor might consist of 4000 rows of 6000 photocells each.
 
-Tapping inside the image allows you to zoom in or out to your heart's content. Tapping outside the image area ends the animation. You can trigger the animation again by restarting the app. A single tap outside the image allows you to skip the animation entirely.
+Tapping **inside** the image allows you to zoom in or out to your heart's content.
+Tapping **outside** the image area ends the animation.
+You can trigger the animation again by restarting the app.
+A single tap outside the image allows you to skip the animation entirely.
+
+Is the animation useful? Uhhh... it might explain where the app's logo comes from.
 
 ### The screens
 
-- `Portfolios` shows the available portfolios (gallery of images of a photographer in the context of one club).
-    Clicking on one item shows a `detail` screen with the contents of the selected portfolio.
-    Swiping left can, in exceptional cases, be used to delete an entry.
-    The `Search` bar filters the list of portfolios.
+- `Portfolios` shows the available portfolios
+   (gallery of images of a photographer in the context of one club).
+   Clicking on a name shows a `detail` screen with the contents of the selected portfolio.
+   Swiping left deletes an entry. It is not normally needed.
+   The `Search` bar filters the portfolios by matching the names.
 - `Settings` allows you to configure what types of members you want to see in the list of Portfolios.
 - `Readme` contains a scrollable explanation, similar to what you are reading.
 - `Photo clubs` lists the photo clubs that are currently loaded.
-    A purple pin on the map show the location of the club's club house (where they meet).
-    A blue pin shows the location of other loaded photo clubs.
-    A lock icon selects whether a map can be zoomed and panned, or is pinned in place.
-- `Photographers` lists the photographers currently loaded into the app. It gives information which is club-independent.
-    The entries may store birthdays, and clickable links to personal (club-independent) photography sites.
+    A purple pin on the map shows the location where the club meets.
+    A blue pin shows the location of other photo clubs.
+    A lock icon selects whether a map can be zoomed and panned, or whether it is pinned down.
+- `Photographers` lists the photographers currently loaded into the app. I
+	It shows information that is club-independent.
+    The entries may store birthdays, and clickable links to personal
+    (club-independent) photography sites.
     The `Search` bar filters the list of portfolios.
     
 ### Multi-club support
 
-Version one the app only supported Photo Club Waalre (aka *Fotogroep Waalre*), but Version 2 supports multiple photo clubs. For a preview, drag down (“pull to refresh”) the Photo Club page. This loads just enough test data to show what multi-club support looks like.
+Version one of the app only supported Photo Club Waalre (aka *Fotogroep Waalre*).
+Version 2 added support for multiple photo clubs.
+For a preview, drag down (“pull to refresh”) the Photo Club page.
+This loads just enough test data to show what multi-club support looks like.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Roadmap
-- [x] Distribute the source code on GitHub
+- [x] Put the app's source code on GitHub
     - [ ] Publish article to get attention in Dutch photo club [organization](https://fotobond.nl)
 - [ ] MemberListView: show thumbnails of most recent photos
 - [ ] MemberListView: remove members who are removed on server
@@ -122,17 +184,23 @@ See the [open issues](https://github.com/vdhamer/PhotoClubWaalre/issues) for a f
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Contributing
-All contributions are greatly appreciated.
+All contributions are welcome.
 
 ### Areas for contribution
 
-Welcome contributions include adding features, code improvements, ideas on architecture and interface definition, and possibly even a backend.
+Possible contributions include adding features, code improvements, ideas on architecture and interface specifications, and possibly even a dedicated backend server.
 
-Contributions that don't require coding are also welcome: beta testing via TestFlight, feature requests, translations, SVG icon design, and maybe UI/UX design.
+Contributions that don't require coding include beta testing, well thought-through feature requests, translations, and SVG icons.
 
 ### One likely big change
 
-A central design challenge for a next stage will be to provide a clean, standardized interface to retrieve data per photo club. The interface is needed to load the data, but also keeps the data within the app up to date. After all, membership data and portfolios change regularly. The current interface is essentially a plug-in design with an adaptor per photo club. This needs to be replaced by a standard data interface to avoid having to extend the source code whenever a new club comes aboard.
+A central design challenge for a next stage will be to provide a clean,
+standardized interface to retrieve data per photo club.
+The interface is needed to load the data, but also keeps the data within the app up to date.
+This is needed because membership data and portfolios change regularly.
+The current interface is essentially a plug-in design with an adaptor per photo club.
+This needs to be replaced by a standard data interface to avoid
+having to extend the source code whenever a new club comes aboard.
 
 The app currently uses a software module per club. That module loads membership and portfolio data from the club’s server and merges it into the in-app database. For Photo Club Waalre, the membership data is read from a HTML table on a password protected part of the club’s website. The portfolios use a somewhat more robust solution: they are read from XML files generated by a Lightroom Web plug-in called JuiceBox-Pro Thus portfolios are created and managed as Lightroom collections. These collections are then uploaded to the webserver with a single Upload click (thus triggering JuiceBox-Pro) where they can be downloaded by the app.
 
