@@ -16,14 +16,15 @@
       <a href="#about-the-project">About The Project</a>
       <ul>
         <li><a href="#the-name">The Name</a></li>
-        <li><a href="#portfolios">Portfolios</a></li>
+        <li><a href="#The portfolio concept">The portfolio concept</a></li>
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Getting Started</a>
+      <a href="#installation">Installation</a>
       <ul>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#Cloning the repository">Cloning the repository</a></li>
+        <li><a href="#Code signing">Code signing</a></li>
       </ul>
     </li>
     <li><a href="#usage">Usage and features</a></li>
@@ -52,19 +53,27 @@
 
 ### The name
 
-Photo Club Waalre is a photography club named after Waalre, a town in the south of The Netherlands. Its members meet since 1988 to critique each other’s photos, organize excursions, and hold yearly photo expositions.
+Photo Club Waalre is a photography club named after Waalre, a town in the south of The 
+Netherlands. Its members meet since 1988 to critique each other’s photos.
+There are also yearly photography excursions and photo expositions.
 
-### Portfolios
+### The portfolio concept
 
-The goal of this app is to **showcase curated work of members of photo clubs**.
+The app is designed to **showcase curated work of members of photo clubs**.
 
-The work is organized into `portfolios`.
-Each portfolio covers that part of a photographer's work that was shared within a photo club.
-If a photographer joined multiple photo clubs,
-the app may contain more than one portfolios for that photographer.
+That work is organized into `portfolios`.
+A portfolio within the app often spans a multi-year period. 
+The app shows the work in most-recent-first order.
 
-A portfolio within the app often spans a multi-year period. The app shows the work in most-recent-first order.
+By definition, each portfolio covers that part of a photographer's work that was shared
+*within* a photo club.
 
+Images by a photographer that are *not* associated with a photo club are not shown (or known)
+in the app. But the app can link to a photographer's personal website if that information is
+available.
+
+In the event that a photographer joined *multiple* supported photo clubs (at the same time
+or sequentially), the app will show *multiple* portfolios for that photographer.
 
 ### Built With
 
@@ -77,49 +86,63 @@ A portfolio within the app often spans a multi-year period. The app shows the wo
 
 ## Installation
 
+If you just want to install the binary version of the app, it is simplest to get it from Apple's app store (link).
+
 ### Cloning the repository
 
 To install the code locally, it is easiest to use GitHub’s `Open with Xcode` feature.
 Those used to running Git from the command line should be able to manage on their own.
-Xcode handles the installation on a device or on an Xcode simulator for an iPhone or iPad.
+Xcode handles the installation on a device or Xcode iPhone/iPad simulator.
 
-### Security
+### Code signing
 
 During the build you may be prompted to provide a developer license (personal or commercial)
-in order to install the app on a physical device. This is standard iOS behavior.
+in order to install the app on a physical device. This is standard by Apple for iOS apps.
 
-On iOS 16 you may need to configure a physical device to allow it to run apps 
-that haven't passed through the Apple App Store. This involves Settings > Privacy & Security >
-Developer Mode. This was introduced in iOS 16.
+Starting on iOS version 16 you may need to configure a physical device to allow it to run apps 
+that haven't passed through the Apple App Store. This requires enabling Developer Mode using
+Settings > Privacy & Security > Developer Mode. Again, this is a policy by Apple rather
+than something specific about this app.
 
 ### Updating the app
 
-If you upgrade to a newer version or build, data stored in the app's internal data storage
-remains available. If you remove and reinstall the app, this data gets reset.
+If you upgrade to a newer build of the app, data stored in the app's internal data storage
+stays available.
 
-## Hiding member data
+If necessary the device will do a so-called schema migration if the data
+structure has changaed. If you remove and reinstall the app, this data gets reset.
+This is standard behavior of Apple's Core Data framework, although the app does its bit
+so that Core Data can track, for example, renamed properties in a persisted object.
 
-The following has **no impact** (zero, nada, nil) on the app's functionality or user interface.
-But encryption code can draw a lot of attention, so explaining it here may prevent you from
-wasting your time in trying to figure out what's going on :nerd_face: :
+## Data privacy
 
-Currently one data file in the repository is encrypted. 
-As you will expect, the key to decrypt the file is *not* provided.
-The file, in its decrypted form, gives access to a password-protected web page
-containing telephone numbers and e-mail addresses of one photo club's members. 
-Apart from the fact that the data is of rather boring, all this has no impact because: 
-- the data, when encrypted, is automatically replaced by dummy data
+The following has **no impact** (zero, null, nil) on the app's functionality or user interface.
+So feel free to skip reading this.
+
+The repo contains a minimal amount of encrypted data.
+But encryption code can draw a lot of attention, so we are explaining it here
+mainly so you don't waste time trying to figure our what's going on or whether
+you consider that secure enough. It simply isn't a big deal :nerd_face: :
+
+So... one data file in the repository is encrypted. 
+As you will expect, the key needed to decrypt the file is *not* provided.
+The file, in its decrypted form, gives access to a password-protected HTML page on a server
+containing telephone numbers and e-mail addresses of one specific photo club's members. 
+Apart from the fact that the data is of little interest, this has no impact because: 
+- the data, when is found to be encrypted, is automatically substitutded by a second non-encrypted page with the supposedly sensitive data removed. Meaning it contains dummy phone numbers and e-mail addresses.
 - the data (dummy or real) is currently not used yet by the app
 
-So, all this hasstle is just so that an App Store version *could* allow club members to
-unlock extra functionality using a password, but without leaking the protected data via GitHub.
+So, all this hasstle is just so that a future App Store version *could* allow club members to
+unlock extra functionality using a password,
+but without leaking the "sensitive" data via GitHub.
 
 And how would the password be protected? The app can check a hash of the provided password.
-But the app's source code then gives me access to this super secret web page, right?
-Wrong. The password, or a source code level bypass, does allow a user
+But the source code then gives me access to the "sensitive" version of the web page, right?
+Wrong. Somehow bypassing the password (e.g. a modification of the code), does allow a user
 to *see* the "dummy or real" data, right? Correct. 
-But without the not-provided encryption key it would still be the dummy data (which you
-can already access via the source code). 
+But without the not-provided encryption key a user still cannot access the sensitive version
+of the page. You would only be able to access the non-sensitive version.
+Back to more relevant stuff.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -128,21 +151,21 @@ can already access via the source code).
 ### Opening animation
 
 When the app launches, it shows a large version of the app’s icon. 
-If you tap somewhere inside the image, 
-it zooms out to show a sample infographic representing how digital cameras see color.
+If you tap somewhere inside the image, runs an animation whereby the icon turns into
+a digitial image illustrating how almost all digital cameras see color.
 
 This involves a Bayer color filter array that filters the light reaching each pixel/photocell.
-The filter array is shown here superimposed on a colorful photo.
-In a 24 MPixel camera, the sensor might consist of 4000 rows of 6000 photocells each.
+In a 24 MPixel camera, the image sensor might consist of 4000 rows of 6000 photocells, each
+with either a red, green of blue color filter.
 
 Tapping **inside** the image allows you to zoom in or out to your heart's content.
-Tapping **outside** the image area ends the animation.
-You can trigger the animation again by restarting the app.
-A single tap outside the image allows you to skip the animation entirely.
+Tapping **outside** the image area gets you to the main Portfolio screen of the app.
+To see the animation again, just restarting the app.
 
-Is the animation useful? Uhhh... it might explain where the app's logo comes from.
+Is the animation useful? Well, it was a challenge to make (it runs on the device's GPU), but
+at least it explains where the app logo comes from.
 
-### The screens
+### The user interface screens
 
 - `Portfolios` shows the available portfolios
    (gallery of images of a photographer in the context of one club).
