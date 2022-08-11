@@ -12,7 +12,6 @@
 		D02382B7279322B0001BFE59 /* DeviceOwnership.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02382B6279322B0001BFE59 /* DeviceOwnership.swift */; };
 		D024F11628423BE60055021B /* Sounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = D024F11528423BE60055021B /* Sounds.swift */; };
 		D0275F5527E3E21F002FA4FE /* View+OnTapGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0275F5427E3E21F002FA4FE /* View+OnTapGesture.swift */; };
-		D02C35F02880C298008C671A /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = D02C35EF2880C298008C671A /* LICENSE.txt */; };
 		D02C35F22880C3D6008C671A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D02C35F12880C3D6008C671A /* README.md */; };
 		D032944A283F9D1D0044C70C /* Bundle+VersionBuild.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0329449283F9D1D0044C70C /* Bundle+VersionBuild.swift */; };
 		D0396075278CF6550035F750 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D0396074278CF6550035F750 /* Settings.bundle */; };
@@ -90,7 +89,6 @@
 		D024F11528423BE60055021B /* Sounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sounds.swift; sourceTree = "<group>"; };
 		D0275F5427E3E21F002FA4FE /* View+OnTapGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+OnTapGesture.swift"; sourceTree = "<group>"; };
 		D02A71332829C56F0071EF74 /* Fotogroep_Waalre_2_0_9.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fotogroep_Waalre_2_0_9.xcdatamodel; sourceTree = "<group>"; };
-		D02C35EF2880C298008C671A /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		D02C35F12880C3D6008C671A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D02E4C8D281F41AF005C32D0 /* Fotogroep_Waalre_2_0_8.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fotogroep_Waalre_2_0_8.xcdatamodel; sourceTree = "<group>"; };
 		D0329449283F9D1D0044C70C /* Bundle+VersionBuild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+VersionBuild.swift"; sourceTree = "<group>"; };
@@ -426,7 +424,6 @@
 			isa = PBXGroup;
 			children = (
 				D02C35F12880C3D6008C671A /* README.md */,
-				D02C35EF2880C298008C671A /* LICENSE.txt */,
 				D0F2F2F32873A19F009DDD2A /* images */,
 			);
 			path = .github;
@@ -548,7 +545,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D02C35F02880C298008C671A /* LICENSE.txt in Resources */,
 				D008D2AA28739167007A7BE2 /* .gitignore in Resources */,
 				D0396075278CF6550035F750 /* Settings.bundle in Resources */,
 				D0831A57277F82460049AB84 /* en.xcloc in Resources */,
