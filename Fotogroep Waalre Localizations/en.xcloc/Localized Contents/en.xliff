@@ -2,7 +2,7 @@
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
   <file original="en.lproj/Fotogroep-Waalre-InfoPlist.strings" source-language="en" target-language="en" datatype="plaintext">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="13.2.1" build-num="13C100"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="14.0" build-num="14A5294e"/>
     </header>
     <body>
       <trans-unit id="CFBundleName" xml:space="preserve">
@@ -14,7 +14,7 @@
   </file>
   <file original="en.lproj/Localizable.strings" source-language="en" target-language="en" datatype="plaintext">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="13.2.1" build-num="13C100"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="14.0" build-num="14A5294e"/>
     </header>
     <body>
       <trans-unit id="%@ of %@" xml:space="preserve">
@@ -30,12 +30,12 @@
       <trans-unit id="'Current members' includes 'club officers'" xml:space="preserve">
         <source>'Current members' includes 'club officers'</source>
         <target>'Current members' includes 'club officers'</target>
-        <note>No comment provided by engineer.</note>
+        <note>Shown when 'Show club officers' entry is missing in Settings</note>
       </trans-unit>
       <trans-unit id="'Former members' includes 'deceased members'" xml:space="preserve">
         <source>'Former members' includes 'deceased members'</source>
         <target>'Former members' includes 'deceased members'</target>
-        <note>No comment provided by engineer.</note>
+        <note>Shown when 'Show deceased members' entry is missing in Settings</note>
       </trans-unit>
       <trans-unit id="App version %@ (build %@)" xml:space="preserve">
         <source>App version %@ (build %@)</source>
@@ -423,7 +423,7 @@ Field at top of Members page that allows the user to filter the members based on
   </file>
   <file original="Settings.bundle/en.lproj/Root.strings" source-language="en" target-language="en" datatype="plaintext">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="13.2.1" build-num="13C100"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="14.0" build-num="14A5294e"/>
     </header>
     <body>
       <trans-unit id="About" xml:space="preserve">

@@ -1,21 +1,20 @@
-2.0.11 (build ????) ??-07-22
-----------------------------
+2.1.0 (build ????) 14-08-22
+---------------------------
 
+• source code is now on Github (https://github.com/vdhamer/PhotoClubWaalre)
+• mechanism (via Git-Crypt) to protect some private data of photo club members
+• updated internal readme text and created README.md for GitHub
 • added an extra save() when app goes to background state
 • linked loading of Fotogroep Waalre data to .onAppear of first view
-• put source code on Github
 • removed automatic accessibility feature for BvdB
 • removed SwiftUIEnvirontValue.png graphic from build
-• initial testing on iPadOS 16 beta 5 on physical device
-• updated security mechanism to use Git-Crypt
-
-? update text in internal readme to reflect status on Github
+• initial compatibility testing on iPadOS 16 beta
+? update screenshots on App Store
 
 ? replace NSSortDescriptor() by SortDescriptor(). Propagates to NSFetchRequest. request.wrappedValue?
 ? use actual photo on Member page
 ? handle disappearing members
 ? filter who's who page
-? update screenshots
 ? use SwiftSoup to parse HTML page
 
 ? handle being offline better (when installing for 1st time)

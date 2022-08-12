@@ -36,7 +36,8 @@ struct SettingsView: View {
                         HStack {
                             RoleStatusIconView(memberStatus: .current)
                                 .foregroundColor(.memberColor)
-                            Toggle(String(localized: "Show current members", comment: "Label of toggle in Settings"),
+                            Toggle(String(localized: "Show current members",
+                                          comment: "Label of toggle in Settings"),
                                    isOn: $localSettings.showCurrentMembers.animation())
                         }
                         if localSettings.showCurrentMembers == false {
@@ -51,7 +52,8 @@ struct SettingsView: View {
                             HStack {
                                 RoleStatusIconView(memberRole: .viceChairman)
                                     .foregroundColor(.deceasedColor)
-                                Text("'Current members' includes 'club officers'")
+                                Text("'Current members' includes 'club officers'",
+                                     comment: "Shown when 'Show club officers' entry is missing in Settings")
                                     .foregroundColor(.gray)
                             }
                         }
@@ -85,7 +87,9 @@ struct SettingsView: View {
                             HStack {
                                 RoleStatusIconView(memberStatus: .deceased)
                                     .foregroundColor(.deceasedColor)
-                                Text("'Former members' includes 'deceased members'")
+                                Text(
+                                    "'Former members' includes 'deceased members'",
+                                    comment: "Shown when 'Show deceased members' entry is missing in Settings")
                                     .foregroundColor(.gray)
                             }
                         }
