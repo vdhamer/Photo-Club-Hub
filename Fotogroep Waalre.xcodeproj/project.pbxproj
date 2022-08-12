@@ -89,6 +89,7 @@
 		D024F11528423BE60055021B /* Sounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sounds.swift; sourceTree = "<group>"; };
 		D0275F5427E3E21F002FA4FE /* View+OnTapGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+OnTapGesture.swift"; sourceTree = "<group>"; };
 		D02A71332829C56F0071EF74 /* Fotogroep_Waalre_2_0_9.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fotogroep_Waalre_2_0_9.xcdatamodel; sourceTree = "<group>"; };
+		D02AB3EF28A702800021BF41 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		D02C35F12880C3D6008C671A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D02E4C8D281F41AF005C32D0 /* Fotogroep_Waalre_2_0_8.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fotogroep_Waalre_2_0_8.xcdatamodel; sourceTree = "<group>"; };
 		D0329449283F9D1D0044C70C /* Bundle+VersionBuild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+VersionBuild.swift"; sourceTree = "<group>"; };
@@ -424,6 +425,7 @@
 			isa = PBXGroup;
 			children = (
 				D02C35F12880C3D6008C671A /* README.md */,
+				D02AB3EF28A702800021BF41 /* LICENSE.md */,
 				D0F2F2F32873A19F009DDD2A /* images */,
 			);
 			path = .github;
