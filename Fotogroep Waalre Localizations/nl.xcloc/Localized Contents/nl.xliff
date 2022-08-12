@@ -172,8 +172,8 @@ De gebruiker kan op de Portfolio pagina leden verwijderen door hun naam naar lin
         <note>Second paragraph in Animation section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_5.1" xml:space="preserve">
-        <source>The app runs on iPhone and iPad and requires iOS 15.0 or higher. iOS users tend to upgrade to the latest possible iOS version, which means that the app supports devices made in the last 5 or 6 years. The app also runs on the new generation of Macs with “Apple Silicon”.</source>
-        <target>De app draait zowel op de iPhone als op de iPad. Verder draait het op de nieuwe generatie Macs met _Apple Silicon_. De app vereist een recente versie van iOS (vanaf iOS/iPadOS 15). Dit dekt in principe alle iOS apparaten af die maximaal 5 jaar oud zijn.</target>
+        <source>The app runs on iPhone and iPad and requires iOS 15.5 or higher. iOS users tend to upgrade to the latest possible iOS version, which means that the app supports devices made in the last 5 or 6 years. The app also runs on the new generation of Macs with “Apple Silicon”.</source>
+        <target>De app draait zowel op de iPhone als op de iPad. Verder draait het op de nieuwe generatie Macs met _Apple Silicon_. De app vereist een recente versie van iOS (vanaf iOS/iPadOS 15.5). Dit dekt in principe alle iOS apparaten af die maximaal 5 jaar oud zijn.</target>
         <note>First paragraph SupportedPlatforms section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_5.2" xml:space="preserve">
@@ -202,8 +202,8 @@ De gebruiker kan op de Portfolio pagina leden verwijderen door hun naam naar lin
         <note>Sixth paragraph SupportedPlatforms section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_6.1" xml:space="preserve">
-        <source>We expect to put the app on GitHub to enable other software developers to contribute. Getting more developers speeds things up somewhat, but also gives fresh ideas and promotes continuity.</source>
-        <target>Wij gaan vermoedelijk de broncode van de app via GitHub delen. Mede omdat wij ontwikkelaars zoeken om hun steentjes bij te dragen. Dit levert meer voortgang, bevordert frisse ideeën en verhoogt de kans op continuïteit.</target>
+        <source>You can find this app on GitHub. This allows other software developers to contribute. Getting more developers speeds things up somewhat, but also gives fresh ideas and promotes continuity.</source>
+        <target>De broncode van deze app is te vinden op GitHub. Mede omdat wij mede-ontwikkelaars zoeken om hun steentjes bij te dragen. Dit levert meer voortgang, bevordert frisse ideeën en bevordert de continuïteit.</target>
         <note>First paragraph Developers section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_6.2" xml:space="preserve">

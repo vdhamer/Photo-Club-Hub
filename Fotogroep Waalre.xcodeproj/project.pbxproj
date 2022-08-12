@@ -257,8 +257,8 @@
 				D0831A23277F72340049AB84 /* ViewModel */,
 				D0831A3B277F727E0049AB84 /* Model */,
 				D0831A3F277F731C0049AB84 /* Utilities */,
-				D0831A4F277F73C00049AB84 /* Preview Content */,
 				D0831A48277F736C0049AB84 /* Documentation */,
+				D0831A4F277F73C00049AB84 /* Preview Content */,
 			);
 			path = "Fotogroep Waalre";
 			sourceTree = "<group>";

@@ -1,7 +1,7 @@
-/* No comment provided by engineer. */
+/* Shown when 'Show club officers' entry is missing in Settings */
 "'Current members' includes 'club officers'" = "'Huidige leden' bevat 'bestuursleden'";
 
-/* No comment provided by engineer. */
+/* Shown when 'Show deceased members' entry is missing in Settings */
 "'Former members' includes 'deceased members'" = "'Ex-leden' bevat 'overleden leden'";
 
 /* <role1 and role2> of <photoclub>. Note <and> is handled elsewhere. */
@@ -117,7 +117,7 @@ Button to close Info page. */
 "Paragraph_4.3" = "Nogmaals klikken op het beeld maakt het mogelijk om verschillende delen van het beeld-met-vlakjes te bekijken. Klik ***buiten het beeld*** om de animatie te beëindigen. De animatie is opnieuw te zien door de app volledig af te sluiten en dan opnieuw op te starten.";
 
 /* First paragraph SupportedPlatforms section of Readme page */
-"Paragraph_5.1" = "De app draait zowel op de iPhone als op de iPad. Verder draait het op de nieuwe generatie Macs met _Apple Silicon_. De app vereist een recente versie van iOS (vanaf iOS/iPadOS 15). Dit dekt in principe alle iOS apparaten af die maximaal 5 jaar oud zijn.";
+"Paragraph_5.1" = "De app draait zowel op de iPhone als op de iPad. Verder draait het op de nieuwe generatie Macs met _Apple Silicon_. De app vereist een recente versie van iOS (vanaf iOS/iPadOS 15.5). Dit dekt in principe alle iOS apparaten af die maximaal 5 jaar oud zijn.";
 
 /* Second paragraph SupportedPlatforms section of Readme page */
 "Paragraph_5.2" = "De app maakt intern gebruik van diverse __Apple__ software technologieën: Swift (een programmeertaal), SwiftUI (voor schermontwerp), Core Data (lokale dataopslag), Metal (versnelt de animatie), Concurrency (laden van data), en Animations (gebruikersinteractie).";
@@ -135,7 +135,7 @@ Button to close Info page. */
 "Paragraph_5.6" = "Overigens, zelfs als er een Android versie van de app bestond, dan heeft een club nog altijd een website nodig voor bijvoorbeeld PC gebruikers. En voor het verlenen van andere diensten zoals clubnieuws, vergaderschema of archiveren van jaarverslagen.";
 
 /* First paragraph Developers section of Readme page */
-"Paragraph_6.1" = "Wij gaan vermoedelijk de broncode van de app via GitHub delen. Mede omdat wij ontwikkelaars zoeken om hun steentjes bij te dragen. Dit levert meer voortgang, bevordert frisse ideeën en verhoogt de kans op continuïteit.";
+"Paragraph_6.1" = "De broncode van deze app is te vinden op GitHub. Mede omdat wij mede-ontwikkelaars zoeken om hun steentjes bij te dragen. Dit levert meer voortgang, bevordert frisse ideeën en bevordert de continuïteit.";
 
 /* Second paragraph Developers section of Readme page */
 "Paragraph_6.2" = "Enkele mogelijkheden om als __software ontwikkelaar__ bij te dragen zijn: nieuwe functionaliteit, software onderhoud, meedenken over de architectuur en nieuwe interfaces, en wellicht een centrale server.";
