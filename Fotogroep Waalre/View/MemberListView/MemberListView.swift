@@ -131,6 +131,7 @@ struct MemberListView: View {
                                     filter the members based on either given- and family name.
                                     """
                             ))
+                .disableAutocorrection(true)
             }
         }
         .navigationViewStyle(StackNavigationViewStyle()) // avoids split screen on iPad

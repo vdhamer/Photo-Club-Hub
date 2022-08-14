@@ -1,15 +1,18 @@
-2.1.0 (build ????) 14-08-22
+2.1.0 (build ????) 13-08-22
 ---------------------------
 
-• source code is now on Github (https://github.com/vdhamer/PhotoClubWaalre)
-• mechanism (via Git-Crypt) to protect some private data of photo club members
-• updated internal readme text and created README.md for GitHub
+• GitHub: source code is publically available (https://github.com/vdhamer/PhotoClubWaalre)
+• GitHub: renamed version to 2.1.x
+• GitHub: mechanism to secure some data of photo club members (GitHub related)
+• GitHub: extra README.md for GitHub web site
 • added an extra save() when app goes to background state
 • linked loading of Fotogroep Waalre data to .onAppear of first view
-• removed automatic accessibility feature for BvdB
-• removed SwiftUIEnvirontValue.png graphic from build
-• initial compatibility testing on iPadOS 16 beta
-? update screenshots on App Store
+• removed dedicated accessibility feature for specific user
+• minimum requirement is iOS 15.5 (will switch to iOS 16 when it is released)
+• disabled autocorrection on Search text
+? added video to App Store
+
+• [ removed SwiftUIEnvirontValue.png graphic from build ]
 
 ? replace NSSortDescriptor() by SortDescriptor(). Propagates to NSFetchRequest. request.wrappedValue?
 ? use actual photo on Member page
