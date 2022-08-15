@@ -1,4 +1,4 @@
-2.1.0 (build ????) 13-08-22
+2.1.0 (build ????) 16-08-22
 ---------------------------
 
 • GitHub: source code is publically available (https://github.com/vdhamer/PhotoClubWaalre)
@@ -10,7 +10,7 @@
 • removed dedicated accessibility feature for specific user
 • minimum requirement is iOS 15.5 (will switch to iOS 16 when it is released)
 • disabled autocorrection on Search text
-? added video to App Store
+• added .mp4 "App Preview" video to App Store
 
 • [ removed SwiftUIEnvirontValue.png graphic from build ]
 
