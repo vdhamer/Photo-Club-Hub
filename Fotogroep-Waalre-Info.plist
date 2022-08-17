@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>LSMinimumSystemVersion</key>
-	<string>13.0.0</string>
+	<string>12.3.0</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>fetch</string>
