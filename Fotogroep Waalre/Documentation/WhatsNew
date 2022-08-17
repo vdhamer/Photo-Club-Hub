@@ -1,17 +1,5 @@
-2.1.0 (build 4378) 17-08-22
+To do list
 ---------------------------
-
-• GitHub: source code is publically available (https://github.com/vdhamer/PhotoClubWaalre)
-• GitHub: renamed version to 2.1.x
-• GitHub: mechanism to secure some data of photo club members (GitHub related)
-• GitHub: extra README.md for GitHub web site
-• added an extra save() when app goes to background state
-• linked loading of Fotogroep Waalre data to .onAppear of first view
-• removed dedicated accessibility feature for specific user
-• minimum requirement is iOS 15.5 (will switch to iOS 16 when it is released)
-• disabled autocorrection on Search text
-• added .mp4 "App Preview" video to App Store
-• [ removed SwiftUIEnvirontValue.png graphic from build ]
 
 ? replace NSSortDescriptor() by SortDescriptor(). Propagates to NSFetchRequest. request.wrappedValue?
 ? use actual photo on Member page
@@ -21,6 +9,21 @@
 
 ? handle being offline better (when installing for 1st time)
 ? remember to update localizable texts and schema
+
+2.1.0 (build 4379) 17-08-22
+---------------------------
+
+• GitHub: source code is publically available (https://github.com/vdhamer/PhotoClubWaalre)
+• GitHub: renamed version to 2.1.x
+• GitHub: mechanism to secure some data of photo club members (GitHub related)
+• GitHub: extra README.md for GitHub web site (it is not included in or used by the App itself)
+• added an extra save() when app goes to background state
+• linked loading of Fotogroep Waalre data to .onAppear of first view
+• removed dedicated accessibility feature for specific user
+• minimum requirement is iOS 15.5
+• disabled autocorrection on Search text
+• added .mp4 "App Preview" video to App Store
+• [ removed SwiftUIEnvirontValue.png graphic from build ]
 
 2.0.10 (build 4303) 1-06-22
 ----------------------------

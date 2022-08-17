@@ -12,7 +12,6 @@
 		D02382B7279322B0001BFE59 /* DeviceOwnership.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02382B6279322B0001BFE59 /* DeviceOwnership.swift */; };
 		D024F11628423BE60055021B /* Sounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = D024F11528423BE60055021B /* Sounds.swift */; };
 		D0275F5527E3E21F002FA4FE /* View+OnTapGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0275F5427E3E21F002FA4FE /* View+OnTapGesture.swift */; };
-		D02C35F22880C3D6008C671A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D02C35F12880C3D6008C671A /* README.md */; };
 		D032944A283F9D1D0044C70C /* Bundle+VersionBuild.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0329449283F9D1D0044C70C /* Bundle+VersionBuild.swift */; };
 		D0396075278CF6550035F750 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D0396074278CF6550035F750 /* Settings.bundle */; };
 		D044646527FCE7C100990613 /* UIDevice+IsIPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = D044646427FCE7C100990613 /* UIDevice+IsIPad.swift */; };
@@ -550,7 +549,6 @@
 				D008D2AA28739167007A7BE2 /* .gitignore in Resources */,
 				D0396075278CF6550035F750 /* Settings.bundle in Resources */,
 				D0831A57277F82460049AB84 /* en.xcloc in Resources */,
-				D02C35F22880C3D6008C671A /* README.md in Resources */,
 				D0FF1F6C28822072007401E9 /* portfolios.png in Resources */,
 				D0831A56277F82460049AB84 /* nl.xcloc in Resources */,
 				D0B5249A277F9A4B00927BCA /* MemberListSections.strings in Resources */,
@@ -875,7 +873,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Fotogroep Waalre/Fotogroep Waalre.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4378;
+				CURRENT_PROJECT_VERSION = 4379;
 				DEVELOPMENT_ASSET_PATHS = "\"Fotogroep Waalre/Preview Content\"";
 				DEVELOPMENT_TEAM = YDEWPN9GZ6;
 				ENABLE_PREVIEWS = YES;
@@ -911,7 +909,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Fotogroep Waalre/Fotogroep Waalre.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4378;
+				CURRENT_PROJECT_VERSION = 4379;
 				DEVELOPMENT_ASSET_PATHS = "\"Fotogroep Waalre/Preview Content\"";
 				DEVELOPMENT_TEAM = YDEWPN9GZ6;
 				ENABLE_PREVIEWS = YES;

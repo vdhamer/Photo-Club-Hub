@@ -100,10 +100,10 @@ Xcode handles the installation on a device or Xcode iPhone/iPad simulator.
 During the build you may be prompted to provide a developer license (personal or commercial)
 in order to install the app on a physical device. This is standard by Apple for iOS apps.
 
-Starting on iOS version 16 you may need to configure a physical device to allow it to run apps 
-that haven't passed through the Apple App Store. This requires enabling Developer Mode using
-Settings > Privacy & Security > Developer Mode. Again, this is a policy by Apple rather
-than something specific about this app.
+<!-- Starting on iOS version 16 you may need to configure a physical device to allow it to run apps -->
+<!-- that haven't passed through the Apple App Store. This requires enabling Developer Mode using -->
+<!-- Settings > Privacy & Security > Developer Mode. Again, this is a policy by Apple rather -->
+<!-- than something specific about this app. -->
 
 ### Updating the app
 
