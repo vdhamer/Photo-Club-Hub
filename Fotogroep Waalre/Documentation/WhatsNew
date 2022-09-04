@@ -1,4 +1,4 @@
-To do list
+2.1.1 (build 4???) ??-09-22
 ---------------------------
 
 ? replace NSSortDescriptor() by SortDescriptor(). Propagates to NSFetchRequest. request.wrappedValue?
