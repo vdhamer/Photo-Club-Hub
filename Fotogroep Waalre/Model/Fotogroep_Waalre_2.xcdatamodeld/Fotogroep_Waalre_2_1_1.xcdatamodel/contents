@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="20G527" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Member" representedClassName="Member" syncable="YES" codeGenerationType="class">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21277" systemVersion="21G83" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="MemberPortfolio" representedClassName="MemberPortfolio" elementID="Member" syncable="YES" codeGenerationType="class">
         <attribute name="dateIntervalEnd_" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="dateIntervalStart_" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="isAdmin" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
@@ -26,7 +26,7 @@
         <attribute name="photoClubWebsite" optional="YES" attributeType="URI"/>
         <attribute name="priority_" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="town_" attributeType="String" defaultValueString="DefaultTown"/>
-        <relationship name="members_" toMany="YES" deletionRule="Cascade" destinationEntity="Member" inverseName="photoClub_" inverseEntity="Member"/>
+        <relationship name="members_" toMany="YES" deletionRule="Cascade" destinationEntity="MemberPortfolio" inverseName="photoClub_" inverseEntity="MemberPortfolio"/>
     </entity>
     <entity name="Photographer" representedClassName="Photographer" syncable="YES" codeGenerationType="class">
         <attribute name="bornDT" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
@@ -37,11 +37,6 @@
         <attribute name="isDeviceOwner" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="phoneNumber_" optional="YES" attributeType="String"/>
         <attribute name="photographerWebsite" optional="YES" attributeType="URI"/>
-        <relationship name="memberships_" toMany="YES" deletionRule="Cascade" destinationEntity="Member" inverseName="photographer_" inverseEntity="Member"/>
+        <relationship name="memberships_" toMany="YES" deletionRule="Cascade" destinationEntity="MemberPortfolio" inverseName="photographer_" inverseEntity="MemberPortfolio"/>
     </entity>
-    <elements>
-        <element name="Member" positionX="-222.5982666015625" positionY="-32.8890380859375" width="128" height="239"/>
-        <element name="PhotoClub" positionX="-49.90740966796875" positionY="128.9934692382812" width="128" height="179"/>
-        <element name="Photographer" positionX="-393.9984130859375" positionY="149.3863525390625" width="128" height="164"/>
-    </elements>
 </model>

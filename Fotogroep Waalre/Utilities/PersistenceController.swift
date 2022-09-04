@@ -27,7 +27,7 @@ struct PersistenceController {
             )
 			let photoClub = PhotoClub.findCreateUpdate(context: viewContext, name: "PhotoClub\(index)",
 													   town: "Town\(index)", fotobondNumber: Int16(index*1111))
-			let member = Member.findCreateUpdate(context: viewContext,
+			let memberPortfolio = MemberPortfolio.findCreateUpdate(context: viewContext,
                                                  photoClub: photoClub, photographer: photographer,
                                                  memberRolesAndStatus: memberRolesAndStatus
             )

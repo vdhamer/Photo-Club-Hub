@@ -153,7 +153,7 @@ struct ReadmeView: View {
                                     .resizable()
                                     .border(.gray, width: 1)
                                     .scaledToFit()
-                                    .frame(width: 250, alignment: .center)
+                                    .frame(width: 350, alignment: .center)
                                 Text("Partial model", comment: "Caption for image on Readme page")
                                     .font(.callout.italic())
                                     .frame(width: geo.size.width, alignment: .center)
@@ -223,7 +223,6 @@ struct ReadmeView: View {
                     Image(systemName: "square.fill")
                         .foregroundColor((boxCount-integer-1) % 3 == 0 ? .fgwBlue :
                                          (boxCount-integer-1) % 3 == 1 ? .fgwGreen : .fgwRed)
-//                      .scaleEffect(const1 - const2 * CGFloat(boxCount-integer-1))
                         .scaleEffect(const3 + const2 * CGFloat(integer))
                 }
                 Text(localizedStringKey, comment: comment) // can receive an empty string

@@ -42,7 +42,7 @@ extension BIMembersProvider { // fill with some initial hard-coded content
                                                              phoneNumber: "", eMail: "info@ricoco.nl"
                                                             )
         // register Rico a member of Bellus Imago (if needed)
-        _ = Member.findCreateUpdate(context: biBackgroundContext, // just a test case, no special roles
+        _ = MemberPortfolio.findCreateUpdate(context: biBackgroundContext, // just a test case, no special roles
                                     photoClub: clubBellusImago, photographer: photographerRico,
                                     memberRolesAndStatus: MemberRolesAndStatus(role: [:], stat: [ .former: false]),
                                     memberWebsite: URL(string: "https://www.fotoclubbellusimago.nl/rico.html")
@@ -56,7 +56,7 @@ extension BIMembersProvider { // fill with some initial hard-coded content
                                                                                                         stat: [:])
                                                             )
         // register Loek a member of Bellus Imago (if needed)
-        _ = Member.findCreateUpdate(context: biBackgroundContext, // just a test case, no special roles
+        _ = MemberPortfolio.findCreateUpdate(context: biBackgroundContext, // just a test case, no special roles
                                     photoClub: clubBellusImago, photographer: photographerLoek,
                                     memberRolesAndStatus: MemberRolesAndStatus(role: [ .chairman: true ], stat: [:]),
                                     memberWebsite: URL(string: "https://www.fotoclubbellusimago.nl/loek.html")

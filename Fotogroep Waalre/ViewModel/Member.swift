@@ -8,15 +8,15 @@
 import CoreData // for NSFetchRequest and NSManagedObjectContext
 import SwiftUI
 
-extension Member: Comparable {
+extension MemberPortfolio: Comparable {
 
-	public static func < (lhs: Member, rhs: Member) -> Bool {
+	public static func < (lhs: MemberPortfolio, rhs: MemberPortfolio) -> Bool {
 		return (lhs.photographer.fullName < rhs.photographer.fullName)
 	}
 
 }
 
-extension Member { // computed properties (some related to handling optionals)
+extension MemberPortfolio { // computed properties (some related to handling optionals)
 
 	var dateIntervalEnd: Date { // non-optional version of toDT_
 		get {
@@ -178,7 +178,7 @@ extension Member { // computed properties (some related to handling optionals)
     }
 }
 
-extension Member { // findCreateUpdate() records in Member table
+extension MemberPortfolio { // findCreateUpdate() records in Member table
 
 	// Find existing object or create a new object
 	// Update existing attributes or fill the new object
@@ -189,35 +189,37 @@ extension Member { // findCreateUpdate() records in Member table
                                  memberRolesAndStatus: MemberRolesAndStatus,
                                  dateInterval: DateInterval? = nil,
                                  memberWebsite: URL? = nil
-                                ) -> Member {
+                                ) -> MemberPortfolio {
         let predicateFormat: String = "photoClub_ = %@ AND photographer_ = %@" // avoid localization
         let request = fetchRequest(predicate: NSPredicate(format: predicateFormat, photoClub, photographer))
 
-		let members: [Member] = (try? context.fetch(request)) ?? [] // nil means absolute failure
+		let memberPortfolios: [MemberPortfolio] = (try? context.fetch(request)) ?? [] // nil means absolute failure
 
-		if let member = members.first { // already exists, so make sure secondary attributes are up to date
-            if update(context: context, member: member,
+		if let memberPortfolio = memberPortfolios.first { // already exists, so make sure secondary attributes are up to date
+            if update(context: context, memberPortfolio: memberPortfolio,
                       memberRolesAndStatus: memberRolesAndStatus,
                       dateInterval: dateInterval,
                       memberWebsite: memberWebsite) {
-                print("Updated info for member \(member.photographer.fullName) in club \(member.photoClub.name)")
+                print("Updated info for member \(memberPortfolio.photographer.fullName) " +
+                      "in club \(memberPortfolio.photoClub.name)")
             }
- 			return member
+ 			return memberPortfolio
 		} else {
-			let member = Member(context: context) // create new Member object
-			member.photoClub_ = photoClub
-			member.photographer_ = photographer
-            _ = update(context: context, member: member,
+			let memberPortfolio = MemberPortfolio(context: context) // create new Member object
+			memberPortfolio.photoClub_ = photoClub
+			memberPortfolio.photographer_ = photographer
+            _ = update(context: context, memberPortfolio: memberPortfolio,
                        memberRolesAndStatus: memberRolesAndStatus,
                        dateInterval: dateInterval,
                        memberWebsite: memberWebsite)
-            print("Created new membership for \(member.photographer.fullName) in \(member.photoClub.name)")
-			return member
+            print("Created new membership for \(memberPortfolio.photographer.fullName) " +
+                  "in \(memberPortfolio.photoClub.name)")
+			return memberPortfolio
 		}
 	}
 
 	// Update non-identifying attributes/properties within existing instance of class PhotoClub
-    private static func update(context: NSManagedObjectContext, member: Member,
+    private static func update(context: NSManagedObjectContext, memberPortfolio: MemberPortfolio,
                                memberRolesAndStatus: MemberRolesAndStatus,
                                dateInterval: DateInterval?,
                                memberWebsite: URL?) -> Bool {
@@ -236,21 +238,22 @@ extension Member { // findCreateUpdate() records in Member table
             }
         }
 
-        let oldMemberRolesAndStatus = member.memberRolesAndStatus // copy of original value
-        member.memberRolesAndStatus = memberRolesAndStatus // actually this setter does merging (overload + or += ?)
-        let newMemberRolesAndStatus = member.memberRolesAndStatus // copy after possible changes
+        let oldMemberRolesAndStatus = memberPortfolio.memberRolesAndStatus // copy of original value
+        // actually this setter does merging (overload + or += operators for this?)
+        memberPortfolio.memberRolesAndStatus = memberRolesAndStatus
+        let newMemberRolesAndStatus = memberPortfolio.memberRolesAndStatus // copy after possible changes
         modified = (oldMemberRolesAndStatus != newMemberRolesAndStatus)
 
-        updateIfChanged(update: &member.dateIntervalStart, with: dateInterval?.start)
-        updateIfChanged(update: &member.dateIntervalEnd, with: dateInterval?.end)
-        updateIfChanged(update: &member.memberWebsite, with: memberWebsite)
+        updateIfChanged(update: &memberPortfolio.dateIntervalStart, with: dateInterval?.start)
+        updateIfChanged(update: &memberPortfolio.dateIntervalEnd, with: dateInterval?.end)
+        updateIfChanged(update: &memberPortfolio.memberWebsite, with: memberWebsite)
 
 		if modified {
 			do {
 				try context.save()
 			} catch {
-                fatalError("Update failed for member \(member.photographer.fullName) in club \(member.photoClub.name)" +
-                           "\(error)")
+                fatalError("Update failed for member \(memberPortfolio.photographer.fullName) " +
+                           "in club \(memberPortfolio.photoClub.name): \(error)")
 			}
 		}
         return modified
@@ -258,17 +261,18 @@ extension Member { // findCreateUpdate() records in Member table
 
 }
 
-extension Member { // convenience function
+extension MemberPortfolio { // convenience function
 
-	static func fetchRequest(predicate: NSPredicate) -> NSFetchRequest<Member> { // pre-iOS 15 version
-		let request = NSFetchRequest<Member>(entityName: "Member")
+	static func fetchRequest(predicate: NSPredicate) -> NSFetchRequest<MemberPortfolio> { // pre-iOS 15 version
+		let request = NSFetchRequest<MemberPortfolio>(entityName: "MemberPortfolio")
 
 		request.predicate = predicate // WHERE part of the SQL query
-        request.sortDescriptors = [
-                                    NSSortDescriptor(keyPath: \Member.photographer_?.givenName_, ascending: true),
-									NSSortDescriptor(keyPath: \Member.photographer_?.familyName_, ascending: true),
-                                    NSSortDescriptor(keyPath: \Member.photoClub_?.name_, ascending: true)
-		]
+        request.sortDescriptors =
+            [
+                NSSortDescriptor(keyPath: \MemberPortfolio.photographer_?.givenName_, ascending: true),
+                NSSortDescriptor(keyPath: \MemberPortfolio.photographer_?.familyName_, ascending: true),
+                NSSortDescriptor(keyPath: \MemberPortfolio.photoClub_?.name_, ascending: true)
+            ]
 		return request
 	}
 

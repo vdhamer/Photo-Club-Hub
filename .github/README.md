@@ -266,24 +266,23 @@ The app uses a [Swift-style MVVM](https://www.hackingwithswift.com/books/ios-swi
 design, meaning the model data is stored in structs (and in database tables) rather than in
 classes. As an intro for developers, here is a quick tour of the model. 
 
-[![Product schema][product-schema]](https://github.com/vdhamer/PhotoClubWaalre/blob/main/Assets.xcassets/images/Schema.imageset/Schema.jpg)
+[![Product schema][product-schema]](https://github.com/vdhamer/PhotoClubWaalre/blob/main/Assets.xcassets/images/Schema.imageset/Schema.png)
 
 Every `PhotoClub` has zero or more `Members` of various types (current, former, etc.).
-Some of these `Members` have a formal role like chairman within the `PhotoClub`.
-We will come back to why `Member` is not visible in the model in a moment.
+Some of these `Members` have a formal role (e.g., Chairman) within the `PhotoClub`.
 
 Some of information about a `Photographer` (like name, birthday, a personal website) is
 unrelated to the `Photographer's` `Member`ship of a `PhotoClub`.
 
-`Portfolio` represent the body of work of a `Photographer` in the context of a single `PhotoClub`.
+`Portfolio` represent the work of a single `Photographer` in the context of a single `PhotoClub`.
 A `Portfolio` contains `Images`, but an `Image` could be in multiple `Portfolios` - depending
 on where the `Image` was shared.
 
 `Member` and `Portfolio` can be considered synonyms from a modeling perspective:
 we create exactly one `Portfolio` for each `PhotoClub` that a `Photographer` joined.
 And every `Member` of a `PhotoClub` has exactly one `Portfolio` in the app.
-Therefore `Member` and `Portfolio` are from a formal perspective synonyms, 
-and thus modelled here as a single concept or table.
+Therefore `Member` and `Portfolio` are formally synonyms, 
+and thus modelled here as a single concept or table called `MemberPortfolio`.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

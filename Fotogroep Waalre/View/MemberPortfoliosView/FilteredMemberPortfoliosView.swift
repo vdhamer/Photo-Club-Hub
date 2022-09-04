@@ -1,5 +1,5 @@
 //
-//  FilteredMemberPortfolioView.swift
+//  FilteredMemberPortfoliosView.swift
 //  Fotogroep Waalre
 //
 //  Created by Peter van den Hamer on 29/12/2021.
@@ -11,13 +11,13 @@ import WebKit
 struct FilteredMemberPortfoliosView: View {
 
     @Environment(\.managedObjectContext) private var viewContext
-    @FetchRequest var fetchRequest: FetchedResults<Member>
+    @FetchRequest var fetchRequest: FetchedResults<MemberPortfolio>
     var wkWebView = WKWebView()
     let searchText: Binding<String>
 
     // regenerate Section using current FetchRequest with current filters and sorting
     init(predicate: NSPredicate, searchText: Binding<String>) {
-        _fetchRequest = FetchRequest<Member>(sortDescriptors: [ // replaces previous fetchRequest
+        _fetchRequest = FetchRequest<MemberPortfolio>(sortDescriptors: [ // replaces previous fetchRequest
                                                 SortDescriptor(\.photographer_!.givenName_, order: .forward),
                                                 SortDescriptor(\.photographer_!.familyName_, order: .forward)
                                             ],
@@ -77,7 +77,7 @@ struct FilteredMemberPortfoliosView: View {
             Text("""
                  To see names here, please enable additional categories on the Preferences page.
                  """, comment: "Hint to the user if the database returns zero Members.")
-        } else if let photographer=findFirstNonDistinct(members: filteredPhotographerFetchResult) {
+        } else if let photographer=findFirstNonDistinct(memberPortfolios: filteredPhotographerFetchResult) {
             Text("""
                  At least one photographer (\(photographer.fullName)) is listed multiple times here. \
                  This is because such photographers are or were associated with more than one photo club.
@@ -87,17 +87,17 @@ struct FilteredMemberPortfoliosView: View {
 
     }
 
-    private func findFirstNonDistinct(members: [Member]) -> Photographer? {
-        let members = members.sorted()
-        var previousMember: Member?
+    private func findFirstNonDistinct(memberPortfolios: [MemberPortfolio]) -> Photographer? {
+        let members = memberPortfolios.sorted()
+        var previousMemberPortfolio: MemberPortfolio?
 
         for member in members {
-            if let previousMember = previousMember {
+            if let previousMember = previousMemberPortfolio {
                 if previousMember.photographer == member.photographer {
                     return member.photographer
                 }
             }
-            previousMember = member
+            previousMemberPortfolio = member
         }
         return nil
     }
@@ -127,14 +127,14 @@ struct FilteredMemberPortfoliosView: View {
         }
     }
 
-    private var filteredPhotographerFetchResult: [Member] {
+    private var filteredPhotographerFetchResult: [MemberPortfolio] {
         if searchText.wrappedValue.isEmpty {
             return fetchRequest.filter { _ in
                 true
             }
         } else {
-            return fetchRequest.filter { member in
-                member.photographer.fullName.localizedCaseInsensitiveContains(searchText.wrappedValue) }
+            return fetchRequest.filter { memberPortfolio in
+                memberPortfolio.photographer.fullName.localizedCaseInsensitiveContains(searchText.wrappedValue) }
         }
     }
 

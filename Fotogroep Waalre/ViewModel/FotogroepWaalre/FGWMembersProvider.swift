@@ -190,7 +190,7 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
                     )
 
                     let (givenName, familyName) = self.componentizePersonName(name: personName, printName: false)
-                    _ = Member.findCreateUpdate(
+                    _ = MemberPortfolio.findCreateUpdate(
                         context: backgroundContext, photoClub: photoClub, photographer: photographer,
                         memberRolesAndStatus: MemberRolesAndStatus(
                             role: [:],

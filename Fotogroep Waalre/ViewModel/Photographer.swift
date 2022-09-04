@@ -17,8 +17,8 @@ extension Photographer: Comparable {
 
 extension Photographer {
 
-	var memberships: Set<Member> {
-		get { (memberships_ as? Set<Member>) ?? [] }
+	var memberships: Set<MemberPortfolio> {
+		get { (memberships_ as? Set<MemberPortfolio>) ?? [] }
 		set { memberships_ = newValue as NSSet }
 	}
 
