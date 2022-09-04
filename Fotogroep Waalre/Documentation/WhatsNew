@@ -1,6 +1,9 @@
 2.1.1 (build 4???) ??-09-22
 ---------------------------
 
+• internal: renamed various SwiftUI views (e.g. MemberListView > MemberPortfolioView)
+• internal: renamed Member table in database > MemberPortfolio
+
 ? replace NSSortDescriptor() by SortDescriptor(). Propagates to NSFetchRequest. request.wrappedValue?
 ? use actual photo on Member page
 ? handle disappearing members
