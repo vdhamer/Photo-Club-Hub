@@ -20,7 +20,7 @@
 		D06061EA28A0456C00A675A7 /* PrivateMembersURL3.txt in Resources */ = {isa = PBXBuildFile; fileRef = D06061E928A0456C00A675A7 /* PrivateMembersURL3.txt */; };
 		D06061ED28A05D4600A675A7 /* String+paths.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06061EC28A05D4600A675A7 /* String+paths.swift */; };
 		D081655B278611150078AB16 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D081655A278611150078AB16 /* WebView.swift */; };
-		D081655F278616930078AB16 /* MemberGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D081655E278616930078AB16 /* MemberGalleryView.swift */; };
+		D081655F278616930078AB16 /* SinglePortfolioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D081655E278616930078AB16 /* SinglePortfolioView.swift */; };
 		D08319E7277F70A30049AB84 /* Fotogroep_Waalre_App.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08319E6277F70A30049AB84 /* Fotogroep_Waalre_App.swift */; };
 		D08319EB277F70A40049AB84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D08319EA277F70A40049AB84 /* Assets.xcassets */; };
 		D08319FD277F70A50049AB84 /* Fotogroep_Waalre_2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08319FC277F70A50049AB84 /* Fotogroep_Waalre_2Tests.swift */; };
@@ -103,7 +103,7 @@
 		D07A1E2E28314EA600C77F66 /* SwiftUIEnvironmentValues.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SwiftUIEnvironmentValues.png; sourceTree = "<group>"; };
 		D07DD91327EA96E900472266 /* Fotogroep_Waalre_2_0_5.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fotogroep_Waalre_2_0_5.xcdatamodel; sourceTree = "<group>"; };
 		D081655A278611150078AB16 /* WebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
-		D081655E278616930078AB16 /* MemberGalleryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberGalleryView.swift; sourceTree = "<group>"; };
+		D081655E278616930078AB16 /* SinglePortfolioView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SinglePortfolioView.swift; sourceTree = "<group>"; };
 		D08267C6277FA2E200598C24 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = "en.lproj/Fotogroep-Waalre-InfoPlist.strings"; sourceTree = "<group>"; };
 		D083093D283C41630072D268 /* Fotogroep_Waalre_2_1_0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fotogroep_Waalre_2_1_0.xcdatamodel; sourceTree = "<group>"; };
 		D08319E3277F70A30049AB84 /* Fotogroep Waalre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fotogroep Waalre.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -210,13 +210,13 @@
 			path = MemberPortfoliosView;
 			sourceTree = "<group>";
 		};
-		D081655D278616710078AB16 /* MemberGaleryView */ = {
+		D081655D278616710078AB16 /* SinglePortFolioView */ = {
 			isa = PBXGroup;
 			children = (
-				D081655E278616930078AB16 /* MemberGalleryView.swift */,
+				D081655E278616930078AB16 /* SinglePortfolioView.swift */,
 				D081655A278611150078AB16 /* WebView.swift */,
 			);
-			path = MemberGaleryView;
+			path = SinglePortFolioView;
 			sourceTree = "<group>";
 		};
 		D08319DA277F70A30049AB84 = {
@@ -287,7 +287,7 @@
 				D081655C278612470078AB16 /* MemberPortfoliosView */,
 				D0AE1B7327889D6700E0100E /* PhotoClubsView */,
 				D0AE1B762788A14500E0100E /* PhotographersView */,
-				D081655D278616710078AB16 /* MemberGaleryView */,
+				D081655D278616710078AB16 /* SinglePortFolioView */,
 				D05E451B27EF286B00D31327 /* SettingsView */,
 				D05E451C27EF297100D31327 /* ReadmeView */,
 			);
@@ -669,7 +669,7 @@
 				D0831A21277F72270049AB84 /* PhotographersInnerView.swift in Sources */,
 				D0831A3E277F72B70049AB84 /* Fotogroep_Waalre_2.xcdatamodeld in Sources */,
 				D0831A35277F72590049AB84 /* SettingsStruct.swift in Sources */,
-				D081655F278616930078AB16 /* MemberGalleryView.swift in Sources */,
+				D081655F278616930078AB16 /* SinglePortfolioView.swift in Sources */,
 				D0831A47277F731C0049AB84 /* PersistenceController.swift in Sources */,
 				D0A0884B27F8C697002CC8E1 /* TestMembersProvider.swift in Sources */,
 				D08319E7277F70A30049AB84 /* Fotogroep_Waalre_App.swift in Sources */,

@@ -9,7 +9,7 @@ import SwiftUI
 import WebKit // for UIViewRepresentable protocol and WKWebView
 
 // There will be multiple MemberViews?
-struct MemberGalleryView: UIViewRepresentable {
+struct SinglePortfolioView: UIViewRepresentable {
 
     @State var url: URL
 
@@ -28,18 +28,17 @@ struct MemberGalleryView: UIViewRepresentable {
 }
 
 // only visible when canvas is simulating/running
-struct MemberGalleryView_Previews: PreviewProvider {
+struct SinglePortfolioView_Previews: PreviewProvider {
     static var webView = WKWebView()
     static var url: URL = URL(string: "https://www.fotogroepwaalre.nl/fotos/Peter_van_den_Hamer/")!
 
     static var previews: some View {
-//        NavigationView {
-            VStack {
-                MemberGalleryView(url: url, webView: webView)
-                    .previewLayout(.sizeThatFits)
-            }
-            .navigationBarTitle(String("MemberGalleryView")) // avoid localization
-            .navigationBarTitleDisplayMode(.large)
-//        }
+        NavigationView {
+            SinglePortfolioView(url: url, webView: webView)
+                .previewLayout(.sizeThatFits)
+                .navigationBarTitle(String("SinglePortfolioView")) // avoid localization
+                .navigationBarTitleDisplayMode(.large)
+        }
+        .navigationViewStyle(.stack)
     }
 }

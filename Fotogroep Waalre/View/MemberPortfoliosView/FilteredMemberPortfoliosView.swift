@@ -29,7 +29,7 @@ struct FilteredMemberPortfoliosView: View {
 
     var body: some View {
         ForEach(filteredPhotographerFetchResult, id: \.id) { filteredMember in
-            NavigationLink(destination: MemberGalleryView(url: filteredMember.memberWebsite, webView: wkWebView)
+            NavigationLink(destination: SinglePortfolioView(url: filteredMember.memberWebsite, webView: wkWebView)
                             .navigationTitle(filteredMember.photographer.fullName)
                             .navigationBarTitleDisplayMode(NavigationBarItem.TitleDisplayMode.inline)) {
                 HStack(alignment: .center) {
