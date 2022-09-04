@@ -18,8 +18,8 @@ extension PhotoClub: Comparable {
 
 extension PhotoClub {
 
-	var members: Set<Member> {
-		get { (members_ as? Set<Member>) ?? [] }
+	var members: Set<MemberPortfolio> {
+		get { (members_ as? Set<MemberPortfolio>) ?? [] }
 		set { members_ = newValue as NSSet }
 	}
 

@@ -42,7 +42,7 @@ extension TestMembersProvider { // fill with some initial hard-coded content
                                                              phoneNumber: nil, eMail: "foobar@vdhamer.com"
                                                             )
         // register Peter as a member of Test (if needed)
-        _ = Member.findCreateUpdate(context: testBackgroundContext, // just a test case, no special roles
+        _ = MemberPortfolio.findCreateUpdate(context: testBackgroundContext, // just a test case, no special roles
                                     photoClub: clubTest, photographer: photographerPeter,
                                     memberRolesAndStatus: MemberRolesAndStatus(role: [:], stat: [ .former: false]),
                                     memberWebsite: URL(string: "https://www.example.com/peter.html")
