@@ -28,7 +28,7 @@ struct FotogroepWaalreApp: App {
 
     var body: some Scene {
         WindowGroup {
-            AnimatedLogo() // fullOwnerName passed down to MemberListView()
+            AnimatedLogoView() // fullOwnerName passed down to MemberListView()
                 .environmentObject(deviceOwner)
                 .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext) // main Q!
                 .onAppear {

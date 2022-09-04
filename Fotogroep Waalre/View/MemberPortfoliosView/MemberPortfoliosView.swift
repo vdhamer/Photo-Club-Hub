@@ -1,5 +1,5 @@
 //
-//  MemberListView.swift
+//  MemberPortfolioView.swift
 //  Fotogroep Waalre
 //
 //  Created by Peter van den Hamer on 20/06/2021.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MemberListView: View {
+struct MemberPortfoliosView: View {
 	@Environment(\.managedObjectContext) private var viewContext
     @State private var showingFilterSettings = false // controls visibility of Settings screen
     @State private var showingReadme = false // controls visibility of Readme screen
@@ -35,7 +35,7 @@ struct MemberListView: View {
         NavigationView {
             GeometryReader { geo in
                 List { // lists are automatically "Lazy"
-                    FilteredMembers(predicate: model.settings.memberPredicate, searchText: $searchText)
+                    FilteredMemberPortfoliosView(predicate: model.settings.memberPredicate, searchText: $searchText)
                 }
                 .refreshable {
                     FGWMembersProvider.foundAnOwner = false // for pull-to-refresh
@@ -101,7 +101,7 @@ struct MemberListView: View {
                     ToolbarItemGroup(placement: toolbarItemPlacement) {
 
                         NavigationLink(destination: {
-                            PhotoClubListView()
+                            PhotoClubsView()
                         }, label: {
                             Image("mappin.ellipse.rectangle")
                                 .font(.title)
@@ -110,7 +110,7 @@ struct MemberListView: View {
                             .offset(x: 5)
 
                         NavigationLink(destination: {
-                            PhotographerListView(searchText: $searchText)
+                            PhotographersView(searchText: $searchText)
                         }, label: {
                             Image("person.text.rectangle.custom")
                                 .font(.title)
@@ -141,7 +141,7 @@ struct MemberListView: View {
 
 struct MemberListView_Previews: PreviewProvider {
     static var previews: some View {
-        MemberListView()
+        MemberPortfoliosView()
 			.environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

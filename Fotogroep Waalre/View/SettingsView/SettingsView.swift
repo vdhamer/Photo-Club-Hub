@@ -126,7 +126,7 @@ struct SettingsView: View {
 }
 
 struct SettingsView_Previews: PreviewProvider {
-    @State static private var title = "FilterSettings Preview"
+    @State static private var title = "SettingsView Preview"
     @State static var settings = SettingsStruct.defaultValue
 
     static var previews: some View {

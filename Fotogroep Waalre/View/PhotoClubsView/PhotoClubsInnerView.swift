@@ -8,7 +8,7 @@
 import SwiftUI
 import MapKit
 
-struct PhotoClubs: View {
+struct PhotoClubsInnerView: View {
 
     @Environment(\.managedObjectContext) private var viewContext // may not be correct
     @FetchRequest var fetchRequest: FetchedResults<PhotoClub>
@@ -66,7 +66,7 @@ struct PhotoClubs: View {
                         },
                         label: {
                             HStack { // to make background color clickable too
-                                LockAnimation(locked: scrollLocks[filteredPhotoClub.name] ?? true)
+                                LockAnimationView(locked: scrollLocks[filteredPhotoClub.name] ?? true)
                             }
                             .frame(maxWidth: 60, maxHeight: 60)
                             .contentShape(Rectangle())
@@ -112,15 +112,17 @@ struct PhotoClubs: View {
 
 }
 
-struct PhotoClubSection_Previews: PreviewProvider {
+struct PhotoClubsInner_Previews: PreviewProvider {
     static let predicate = NSPredicate(format: "name_ = %@", argumentArray: ["Fotogroep Waalre"])
 
     static var previews: some View {
-        VStack {
+        NavigationView {
             List { // lists are "Lazy" automatically
-                PhotoClubs(predicate: predicate)
+                PhotoClubsInnerView(predicate: predicate)
                     .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
             }
-         }
+            .navigationBarTitle(Text(String("PhotoClubListView"))) // prevent localization
+        }
+        .navigationViewStyle(.stack)
     }
 }

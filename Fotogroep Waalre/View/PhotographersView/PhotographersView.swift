@@ -1,5 +1,5 @@
 //
-//  PhotographerListView.swift
+//  PhotographersView.swift
 //  Fotogroep Waalre 2
 //
 //  Created by Peter van den Hamer on 07/01/2022.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PhotographerListView: View {
+struct PhotographersView: View {
     @Environment(\.managedObjectContext) private var viewContext
     @State private var showingPhotoClubs = false
     @State private var showingMembers = false
@@ -19,7 +19,7 @@ struct PhotographerListView: View {
     var body: some View {
         VStack {
             List { // lists are "Lazy" automatically
-                Photographers(predicate: model.settings.photographerPredicate, searchText: searchText)
+                PhotographersInnerView(predicate: model.settings.photographerPredicate, searchText: searchText)
                 Text("""
                      Information about a photographer's links to a photo club \
                      can be found on the Portfolio page. This page contains club-independent information \
@@ -49,10 +49,16 @@ struct PhotographerListView: View {
 
 }
 
-struct PhotographerListView_Previews: PreviewProvider {
+struct PhotographersView_Previews: PreviewProvider {
     @State static var searchText = ""
     static var previews: some View {
-        PhotographerListView(searchText: $searchText)
-            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        NavigationView {
+            List {
+                PhotographersView(searchText: $searchText)
+                    .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+            }
+            .navigationBarTitle(Text(String("PhotographerListView"))) // prevent localization
+        }
+        .navigationViewStyle(.stack)
     }
 }

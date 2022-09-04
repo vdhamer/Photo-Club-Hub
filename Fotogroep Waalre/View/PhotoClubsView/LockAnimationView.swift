@@ -1,5 +1,5 @@
 //
-//  LockAnimation.swift
+//  LockAnimationView.swift
 //
 //  Created by Amos Gyamfi on 17.3.2020.
 //  Copyright © 2020 Amos Gyamfi. All rights reserved.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct LockAnimation: View {
+struct LockAnimationView: View {
     // https://github.com/amosgyamfi/swiftui-animation-library/blob/master/unlock.zip
     var locked: Bool
     var lineWidth: Double = 2.3
@@ -59,12 +59,12 @@ struct LockAnimation: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct LockAnimation_Previews: PreviewProvider {
     @State private var locked: Bool = true
 
     static var previews: some View {
         GeometryReader { geo in
-            LockAnimation(locked: true, lineWidth: 10, lineColor: .teal)
+            LockAnimationView(locked: true, lineWidth: 10, lineColor: .teal)
                 .frame(width: min(geo.size.width, geo.size.height),
                        height: min(geo.size.width, geo.size.height))
                 .frame(width: geo.size.width, height: geo.size.height)

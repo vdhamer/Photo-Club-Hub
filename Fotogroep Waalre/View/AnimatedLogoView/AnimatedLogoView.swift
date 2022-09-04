@@ -1,5 +1,5 @@
 //
-//  AnimatedLogo.swift
+//  AnimatedLogoView.swift
 //  Fotogroep Waalre
 //
 //  Created by Peter van den Hamer on 05/03/2022.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AnimatedLogo: View {
+struct AnimatedLogoView: View {
 
     // MARK: - Constants
     private static let maxCellRepeat: Double = 32 // max number of cells horizontally and vertically
@@ -30,7 +30,7 @@ struct AnimatedLogo: View {
     func offset(frame rect: CGSize) -> CGSize { // used to position large image in the middle of a cell
         guard logScale != 0 else { return .zero }
         let shortFrameDimension: Double = min(rect.width, rect.height)
-        let cellPitchInPixels: Double = shortFrameDimension/AnimatedLogo.maxCellRepeat
+        let cellPitchInPixels: Double = shortFrameDimension/AnimatedLogoView.maxCellRepeat
         let offset = CGSize( width: cellPitchInPixels * Double(offsetInCells.x) * pow(2, logScale),
                              height: cellPitchInPixels * Double(offsetInCells.y) * pow(2, logScale) )
         return offset
@@ -40,7 +40,7 @@ struct AnimatedLogo: View {
         guard logScale != 0 else { return OffsetVectorInCells(x: 0, y: 0) }
         let shortFrameDimension = min(rect.width, rect.height)
         let halfFrameDimension = shortFrameDimension / 2
-        let cellPitchInPixels = shortFrameDimension/AnimatedLogo.maxCellRepeat
+        let cellPitchInPixels = shortFrameDimension/AnimatedLogoView.maxCellRepeat
         return OffsetVectorInCells( x: Int((((halfFrameDimension - location.x) / cellPitchInPixels)).rounded()),
                                     y: Int((((halfFrameDimension - location.y) / cellPitchInPixels)).rounded()) )
     }
@@ -66,23 +66,23 @@ struct AnimatedLogo: View {
 
                     ZStack {
                         Group {
-                            LogoPath(logCellRepeat: AnimatedLogo.log2CellRepeat, // upper left part of logo
-                                     relPixelSize: AnimatedLogo.squareSize,
+                            LogoPath(logCellRepeat: AnimatedLogoView.log2CellRepeat, // upper left part of logo
+                                     relPixelSize: AnimatedLogoView.squareSize,
                                      offsetPoint: .zero)
                                 .fill(.fgwGreen)
                                 .blendMode(.normal)
-                            LogoPath(logCellRepeat: AnimatedLogo.log2CellRepeat, // upper right part of logo
-                                     relPixelSize: AnimatedLogo.squareSize,
+                            LogoPath(logCellRepeat: AnimatedLogoView.log2CellRepeat, // upper right part of logo
+                                     relPixelSize: AnimatedLogoView.squareSize,
                                      offsetPoint: .top)
                                 .fill(.fgwRed)
                                 .blendMode(.normal)
-                            LogoPath(logCellRepeat: AnimatedLogo.log2CellRepeat, // lower left part of logo
-                                     relPixelSize: AnimatedLogo.squareSize,
+                            LogoPath(logCellRepeat: AnimatedLogoView.log2CellRepeat, // lower left part of logo
+                                     relPixelSize: AnimatedLogoView.squareSize,
                                      offsetPoint: .leading)
                                 .fill(.fgwBlue)
                                 .blendMode(.normal)
-                            LogoPath(logCellRepeat: AnimatedLogo.log2CellRepeat, // lower righ part of logo
-                                     relPixelSize: AnimatedLogo.squareSize,
+                            LogoPath(logCellRepeat: AnimatedLogoView.log2CellRepeat, // lower righ part of logo
+                                     relPixelSize: AnimatedLogoView.squareSize,
                                      offsetPoint: .center)
                                 .fill(.fgwGreen)
                                 .blendMode(.normal)
@@ -111,7 +111,7 @@ struct AnimatedLogo: View {
                         withAnimation(.easeInOut(duration: 7)) { // carefull: code is duplicated twice ;-(
                             // tapCounter = min(AnimatedLogo.maxTapCounter, tapCounter+1)
                             if logScale == 0.0 { // if we are completely zoomed out at the time of the tap
-                                logScale = log2(AnimatedLogo.maxCellRepeat) // zoom in
+                                logScale = log2(AnimatedLogoView.maxCellRepeat) // zoom in
                                 offsetInCells = intOffset(rect: geo.size, location: location)
                             } else {
                                 offsetInCells = OffsetVectorInCells(x: 0, y: 0)
@@ -139,7 +139,7 @@ struct AnimatedLogo: View {
                         withAnimation(.easeInOut(duration: 7)) { // carefull: code is duplicated twice ;-(
                             // tapCounter = min(AnimatedLogo.maxTapCounter, tapCounter+1)
                             if logScale == 0.0 { // if we are completely zoomed out at the time of the tap
-                                logScale = log2(AnimatedLogo.maxCellRepeat) // zoom in
+                                logScale = log2(AnimatedLogoView.maxCellRepeat) // zoom in
                                 offsetInCells = intOffset(rect: geo.size, location: location)
                             } else {
                                 offsetInCells = OffsetVectorInCells(x: 0, y: 0)
@@ -154,7 +154,7 @@ struct AnimatedLogo: View {
                 .padding()
 
         }
-            .navigate(to: MemberListView(), when: $willMoveToNextScreen)
+            .navigate(to: MemberPortfoliosView(), when: $willMoveToNextScreen)
     }
 
     struct OffsetVectorInCells {
@@ -259,9 +259,8 @@ struct AnimatedLogo: View {
 }
 
 struct AnimatedLogo_Previews: PreviewProvider {
-
     static var previews: some View {
-        AnimatedLogo()
+        AnimatedLogoView()
             .previewInterfaceOrientation(.portrait)
     }
 }

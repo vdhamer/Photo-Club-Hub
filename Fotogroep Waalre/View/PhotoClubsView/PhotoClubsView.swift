@@ -1,13 +1,13 @@
 //
-//  PhotoClubListView.swift
-//  Fotogroep Waalre 2
+//  PhotoClubView.swift
+//  Fotogroep Waalre
 //
 //  Created by Peter van den Hamer on 07/01/2022.
 //
 
 import SwiftUI
 
-struct PhotoClubListView: View {
+struct PhotoClubsView: View {
     @Environment(\.managedObjectContext) private var viewContext
     @State private var showingPhotographers = false
     @State private var showingMembers = false
@@ -25,7 +25,7 @@ struct PhotoClubListView: View {
     var body: some View {
         VStack {
             List { // lists are "Lazy" automatically
-                PhotoClubs(predicate: model.settings.photoClubPredicate)
+                PhotoClubsInnerView(predicate: model.settings.photoClubPredicate)
             }
             .refreshable {
                 FGWMembersProvider.foundAnOwner = false // for pull-to-refresh
@@ -40,9 +40,15 @@ struct PhotoClubListView: View {
 
 }
 
-struct PhotoClubListView_Previews: PreviewProvider {
+struct PhotoClubsView_Previews: PreviewProvider {
     static var previews: some View {
-        PhotoClubListView()
-            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        NavigationView {
+            List {
+                PhotoClubsView()
+                    .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+            }
+            .navigationBarTitle(Text(String("PhotoClubListView"))) // prevent localization
+        }
+        .navigationViewStyle(.stack)
     }
 }

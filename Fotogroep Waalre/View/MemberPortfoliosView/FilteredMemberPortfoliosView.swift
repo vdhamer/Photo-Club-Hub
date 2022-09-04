@@ -1,5 +1,5 @@
 //
-//  FilteredMembers.swift
+//  FilteredMemberPortfolioView.swift
 //  Fotogroep Waalre
 //
 //  Created by Peter van den Hamer on 29/12/2021.
@@ -8,7 +8,7 @@
 import SwiftUI
 import WebKit
 
-struct FilteredMembers: View {
+struct FilteredMemberPortfoliosView: View {
 
     @Environment(\.managedObjectContext) private var viewContext
     @FetchRequest var fetchRequest: FetchedResults<Member>
@@ -140,17 +140,17 @@ struct FilteredMembers: View {
 
 }
 
-struct FilteredMemberSection_Previews: PreviewProvider {
+struct FilteredMemberPortfolios_Previews: PreviewProvider {
     static let predicate = NSPredicate(format: "photographer_.givenName_ = %@", argumentArray: ["Jan"])
     @State static var searchText: String = ""
 
     static var previews: some View {
         NavigationView {
             List { // lists are "Lazy" automatically
-                FilteredMembers(predicate: predicate, searchText: $searchText)
+                FilteredMemberPortfoliosView(predicate: predicate, searchText: $searchText)
                     .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
             }
-            .navigationBarTitle(Text(String("FilteredMembers View"))) // prevent localization
+            .navigationBarTitle(Text(String("FilteredMemberPortfoliosView"))) // prevent localization
         }
         .navigationViewStyle(.stack)
         .searchable(text: $searchText, placement: .toolbar, prompt: Text("Search names"))

@@ -76,7 +76,7 @@ struct RoleStatusIconView: View {
     }
 }
 
-struct SwiftUIView_Previews: PreviewProvider {
+struct RoleStatusIconView_Previews: PreviewProvider {
     static let layout: [GridItem] = [GridItem(.adaptive(minimum: 200, maximum: .infinity))]
 
     static var previews: some View {

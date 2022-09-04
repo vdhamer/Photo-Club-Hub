@@ -1,5 +1,5 @@
 //
-//  Photographers.swift
+//  PhotographersInner.swift
 //  Fotogroep Waalre
 //
 //  Created by Peter van den Hamer on 30/12/2021.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Photographers: View {
+struct PhotographersInnerView: View {
 
     @Environment(\.managedObjectContext) private var viewContext // may not be correct
     @FetchRequest var fetchRequest: FetchedResults<Photographer>
@@ -138,16 +138,18 @@ struct Photographers: View {
     }
 }
 
-struct PhotographerSection_Previews: PreviewProvider {
+struct PhotographersInnerView_Previews: PreviewProvider {
     static let predicate = NSPredicate(format: "familyName_ = %@", argumentArray: ["D'Eau1"])
     @State static var searchText: String = ""
 
     static var previews: some View {
-        VStack {
+        NavigationView {
             List {
-                Photographers(predicate: predicate, searchText: $searchText)
+                PhotographersInnerView(predicate: predicate, searchText: $searchText)
                     .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
             }
+            .navigationBarTitle(Text(String("PhotographersInnerView"))) // prevent localization
         }
+        .navigationViewStyle(.stack)
     }
 }
