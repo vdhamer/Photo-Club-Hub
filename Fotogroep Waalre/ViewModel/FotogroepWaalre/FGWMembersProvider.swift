@@ -24,7 +24,6 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
         let urlString = getFileAsString(secretFilename: "PrivateMembersURL2.txt",
                                         unsecretFileName: "StringPrivateMembersURL3.txt")
         if let privateURL = URL(string: urlString) {
-//      if let privateURL: URL = URL(string: FGWMembersProvider.privateMembersURL) {
             Task {
                 await loadPrivateMembersFromWebsite( backgroundContext: fgwBackgroundContext,
                                                      privateMemberURL: privateURL,
