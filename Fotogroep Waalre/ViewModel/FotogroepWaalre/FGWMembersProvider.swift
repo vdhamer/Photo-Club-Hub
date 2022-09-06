@@ -22,7 +22,7 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
         insertSomeMembers(fgwBackgroundContext: fgwBackgroundContext, commit: true)
 
         let urlString = getFileAsString(secretFilename: "PrivateMembersURL2.txt",
-                                        unsecretFileName: "StringPrivateMembersURL3.txt")
+                                        unsecretFileName: "PrivateMembersURL3.txt")
         if let privateURL = URL(string: urlString) {
             Task {
                 await loadPrivateMembersFromWebsite( backgroundContext: fgwBackgroundContext,
@@ -58,7 +58,7 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
                 let firstLine = try String(contentsOfFile: filepath).components(separatedBy: "\n")[0]
                 return firstLine // encypted version starts with hex 00 47 49 54 43 52 59 50 54 00 and is not a String
             } catch {
-                print("Warning: \(error.localizedDescription) File is not a text file.")
+                print("Warning: \(error) File is not a text file.")
                 return nil
             }
         } else {
