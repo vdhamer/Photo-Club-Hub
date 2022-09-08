@@ -6,6 +6,7 @@
 //
 
 import CoreData
+import CoreLocation // needed for coordinate translation
 
 struct PersistenceController {
 	static let shared = PersistenceController()
@@ -25,8 +26,16 @@ struct PersistenceController {
                 familyName: "D'Eau\(index)",
                 memberRolesAndStatus: memberRolesAndStatus
             )
-			let photoClub = PhotoClub.findCreateUpdate(context: viewContext, name: "PhotoClub\(index)",
-													   town: "Town\(index)", fotobondNumber: Int16(index*1111))
+            let photoClub = PhotoClub.findCreateUpdate(context: viewContext,
+                                                       name: "PhotoClub\(index)",
+                                                       town: "Town\(index)",
+                                                       photoClubWebsite: URL(string: "http://www.example.com/\(index)"),
+                                                       fotobondNumber: Int16(index*1111),
+                                                       kvkNumber: Int32(100+index),
+                                                       coordinates: CLLocationCoordinate2D( // spread around BeNeLux
+                                                            latitude: 51.39184 + Double.random(in: -2.0 ... 2.0),
+                                                            longitude: 5.46144 + Double.random(in: -2.0 ... 1.0)),
+                                                       priority: Int16(11-index)) // low number gets high priority
 			let memberPortfolio = MemberPortfolio.findCreateUpdate(context: viewContext,
                                                  photoClub: photoClub, photographer: photographer,
                                                  memberRolesAndStatus: memberRolesAndStatus

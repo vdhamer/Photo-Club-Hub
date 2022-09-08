@@ -113,7 +113,8 @@ struct PhotoClubsInnerView: View {
 }
 
 struct PhotoClubsInner_Previews: PreviewProvider {
-    static let predicate = NSPredicate(format: "name_ = %@", argumentArray: ["Fotogroep Waalre"])
+    static let predicate = NSPredicate(format: "name_ = %@ || name_ = %@ || name_ = %@",
+                                       argumentArray: ["PhotoClub2", "PhotoClub1", "PhotoClub3"])
 
     static var previews: some View {
         NavigationView {
@@ -121,7 +122,7 @@ struct PhotoClubsInner_Previews: PreviewProvider {
                 PhotoClubsInnerView(predicate: predicate)
                     .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
             }
-            .navigationBarTitle(Text(String("PhotoClubListView"))) // prevent localization
+            .navigationBarTitle(Text(String("PhotoClubInnerView"))) // prevent localization
         }
         .navigationViewStyle(.stack)
     }

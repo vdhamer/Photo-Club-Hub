@@ -1,5 +1,5 @@
 //
-//  MemberGalleryView.swift
+//  SinglePortfolioView.swift
 //  WKWebView+SwiftUI
 //
 //  Created by Peter van den Hamer on 03/01/2022.

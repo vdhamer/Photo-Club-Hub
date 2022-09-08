@@ -5,6 +5,7 @@
 • internal: renamed Member table in database > MemberPortfolio
 • internal: updated swiftlint utility to version 0.49.1 (no impact visible)
 • bug fix: crash when building and running Github version (error in file name)
+• internal: compiled with XCode 14 RC
 
 ? replace NSSortDescriptor() by SortDescriptor(). Propagates to NSFetchRequest. request.wrappedValue?
 ? use actual photo on Member page

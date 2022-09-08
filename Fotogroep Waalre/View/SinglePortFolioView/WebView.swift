@@ -1,5 +1,5 @@
 //
-//  WebViewModel.swift
+//  WebView.swift
 //  Fotogroep Waalre
 //
 //  Created by Peter van den Hamer on 03/01/2022.

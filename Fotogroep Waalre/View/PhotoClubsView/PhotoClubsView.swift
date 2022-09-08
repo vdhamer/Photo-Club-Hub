@@ -21,6 +21,15 @@ struct PhotoClubsView: View {
     private var photoClubs: FetchedResults<PhotoClub>
 
     private let title = String(localized: "Photo Club Waalre", comment: "Title used in Navigation View")
+    private var predicate: NSPredicate = NSPredicate.all
+
+    init(predicate: NSPredicate) {
+        self.predicate = predicate
+    }
+
+    init() {
+        self.predicate = model.settings.photoClubPredicate // default value
+    }
 
     var body: some View {
         VStack {
@@ -41,13 +50,16 @@ struct PhotoClubsView: View {
 }
 
 struct PhotoClubsView_Previews: PreviewProvider {
+    static let predicate = NSPredicate(format: "name_ = %@ || name_ = %@ || name_ = %@",
+                                       argumentArray: ["PhotoClub2", "PhotoClub1", "PhotoClub3"])
+
     static var previews: some View {
         NavigationView {
             List {
-                PhotoClubsView()
+                PhotoClubsView(predicate: predicate)
                     .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
             }
-            .navigationBarTitle(Text(String("PhotoClubListView"))) // prevent localization
+            .navigationBarTitle(Text(String("PhotoClubView"))) // prevent localization
         }
         .navigationViewStyle(.stack)
     }
