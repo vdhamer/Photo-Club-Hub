@@ -12,6 +12,8 @@
 ? Get all view previews working
 ? Fix warning "[Sandbox] Could not enable Mach bootstrap, errno = 1."
 ? Fix warning "This method should not be called on the main thread as it may lead to UI unresponsiveness."
+? Fix warning PhotoClubsView.swift:31 warning "Accessing StateObject's object without being installed on a View."
+? Test on iOS 16
 
 ? replace NSSortDescriptor() by SortDescriptor(). Propagates to NSFetchRequest. request.wrappedValue?
 ? use actual photo on Member page

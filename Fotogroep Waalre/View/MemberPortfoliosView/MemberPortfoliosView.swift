@@ -101,7 +101,7 @@ struct MemberPortfoliosView: View {
                     ToolbarItemGroup(placement: toolbarItemPlacement) {
 
                         NavigationLink(destination: {
-                            PhotoClubsView()
+                            PhotoClubsView(predicate: NSPredicate.all)
                         }, label: {
                             Image("mappin.ellipse.rectangle")
                                 .font(.title)

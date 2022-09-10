@@ -9,8 +9,6 @@ import SwiftUI
 
 struct PhotoClubsView: View {
     @Environment(\.managedObjectContext) private var viewContext
-    @State private var showingPhotographers = false
-    @State private var showingMembers = false
     @EnvironmentObject var deviceOwner: DeviceOwner
     @StateObject var model = SettingsViewModel()
 
@@ -20,15 +18,20 @@ struct PhotoClubsView: View {
         animation: .default)
     private var photoClubs: FetchedResults<PhotoClub>
 
-    private let title = String(localized: "Photo Club Waalre", comment: "Title used in Navigation View")
+    private let title = String(localized: "Photo Club Waalre", comment: "Title used in PhotoClubs View")
     private var predicate: NSPredicate = NSPredicate.all
+    private var navigationTitle = String(localized: "Photo clubs", comment: "Title of page with clubs and maps")
 
-    init(predicate: NSPredicate) {
-        self.predicate = predicate
-    }
-
-    init() {
-        self.predicate = model.settings.photoClubPredicate // default value
+    init(predicate: NSPredicate? = nil,
+         navigationTitle: String? = nil) {
+        if predicate != nil {
+            self.predicate = predicate!
+        } else {
+            self.predicate = model.settings.photoClubPredicate // dummy data for Preview
+        }
+        if let navigationTitle = navigationTitle {
+            self.navigationTitle = navigationTitle
+        }
     }
 
     var body: some View {
@@ -43,7 +46,7 @@ struct PhotoClubsView: View {
                 _ = TestMembersProvider()
             }
         }
-        .navigationTitle(String(localized: "Photo clubs", comment: "Title of page with clubs and maps"))
+        .navigationTitle(navigationTitle)
         .navigationViewStyle(StackNavigationViewStyle()) // avoids split screen on iPad
     }
 
@@ -55,11 +58,8 @@ struct PhotoClubsView_Previews: PreviewProvider {
 
     static var previews: some View {
         NavigationView {
-            List {
-                PhotoClubsView(predicate: predicate)
-                    .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
-            }
-            .navigationBarTitle(Text(String("PhotoClubView"))) // prevent localization
+            PhotoClubsView(predicate: predicate, navigationTitle: String("PhotoClubView"))
+                .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
         }
         .navigationViewStyle(.stack)
     }
