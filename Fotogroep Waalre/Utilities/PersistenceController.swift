@@ -24,7 +24,11 @@ struct PersistenceController {
 			let photographer = Photographer.findCreateUpdate(
                 context: viewContext, givenName: "Jan",
                 familyName: "D'Eau\(index)",
-                memberRolesAndStatus: memberRolesAndStatus
+                memberRolesAndStatus: memberRolesAndStatus,
+                phoneNumber: "06-12345678",
+                eMail: "Jan.D.Eau\(index)@example.com",
+                photographerWebsite: URL(string: "https://www.example.com/JanDEau\(index)"),
+                bornDT: Date() - Double.random(in: 365*24*3600 ... 75*365*24*3600)
             )
             let photoClub = PhotoClub.findCreateUpdate(context: viewContext,
                                                        name: "PhotoClub\(index)",

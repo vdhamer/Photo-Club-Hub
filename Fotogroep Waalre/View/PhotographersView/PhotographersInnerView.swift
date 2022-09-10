@@ -139,8 +139,9 @@ struct PhotographersInnerView: View {
 }
 
 struct PhotographersInnerView_Previews: PreviewProvider {
-    static let predicate = NSPredicate(format: "familyName_ = %@", argumentArray: ["D'Eau1"])
-    @State static var searchText: String = ""
+    static let predicate = NSPredicate(format: "familyName_ = %@ || familyName_ = %@ || familyName_ = %@",
+                                       argumentArray: ["D'Eau1", "D'Eau2", "D'Eau10"])
+    @State static var searchText: String = "Eau1"
 
     static var previews: some View {
         NavigationView {
@@ -151,5 +152,6 @@ struct PhotographersInnerView_Previews: PreviewProvider {
             .navigationBarTitle(Text(String("PhotographersInnerView"))) // prevent localization
         }
         .navigationViewStyle(.stack)
+//        .searchable(text: $searchText)
     }
 }
