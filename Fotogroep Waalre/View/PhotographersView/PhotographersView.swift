@@ -15,6 +15,14 @@ struct PhotographersView: View {
 
     @StateObject var model = SettingsViewModel()
     @EnvironmentObject var deviceOwner: DeviceOwner
+    private var navigationTitle = String(localized: "Who's who", comment: "Title of page with list of photographers")
+
+    init(searchText: Binding<String>, navigationTitle: String? = nil) {
+        self.searchText = searchText
+        if let navigationTitle = navigationTitle {
+            self.navigationTitle = navigationTitle
+        }
+    }
 
     var body: some View {
         VStack {
@@ -43,21 +51,20 @@ struct PhotographersView: View {
                                  """
                                  ))
         .disableAutocorrection(true)
-        .navigationTitle(String(localized: "Who's who", comment: "Title of page with list of photographers"))
+        .navigationTitle(navigationTitle)
         .navigationViewStyle(StackNavigationViewStyle()) // avoids split screen on iPad
     }
 
 }
 
 struct PhotographersView_Previews: PreviewProvider {
-    @State static var searchText = ""
+    @State static var searchText = "D'Eau1"
     static var previews: some View {
         NavigationView {
-            List {
-                PhotographersView(searchText: $searchText)
+                PhotographersView(searchText: $searchText,
+                                  navigationTitle: String("PhotographerListView")
+                )
                     .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
-            }
-            .navigationBarTitle(Text(String("PhotographerListView"))) // prevent localization
         }
         .navigationViewStyle(.stack)
     }

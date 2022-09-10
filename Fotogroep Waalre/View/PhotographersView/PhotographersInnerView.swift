@@ -139,7 +139,8 @@ struct PhotographersInnerView: View {
 }
 
 struct PhotographersInnerView_Previews: PreviewProvider {
-    static let predicate = NSPredicate(format: "familyName_ = %@", argumentArray: ["D'Eau1"])
+    static let predicate = NSPredicate(format: "familyName_ = %@ || familyName_ = %@ || familyName_ = %@",
+                                       argumentArray: ["D'Eau1", "D'Eau2", "D'Eau3"])
     @State static var searchText: String = ""
 
     static var previews: some View {
