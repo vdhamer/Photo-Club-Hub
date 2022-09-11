@@ -1,5 +1,5 @@
 //
-//  Member.swift
+//  MemberPortfolio.swift
 //  Fotogroep Waalre
 //
 //  Created by Peter van den Hamer on 03/07/2021.

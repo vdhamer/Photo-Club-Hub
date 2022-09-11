@@ -1,4 +1,4 @@
-2.1.1 (build 4381) 11-09-22
+2.2.0 (build 4xxx) xx-09-22
 ---------------------------
 
 • internal: renamed various SwiftUI views (e.g. MemberListView > MemberPortfolioView)
@@ -12,7 +12,6 @@
 [Github issues]
 ? Fix warning "[Sandbox] Could not enable Mach bootstrap, errno = 1."
 ? Fix warning "This method should not be called on the main thread as it may lead to UI unresponsiveness."
-? Fix warning PhotoClubsView.swift:31 warning "Accessing StateObject's object without being installed on a View."
 ? Test on iOS 16
 
 ? replace NSSortDescriptor() by SortDescriptor(). Propagates to NSFetchRequest. request.wrappedValue?
@@ -23,6 +22,15 @@
 
 ? handle being offline better (when installing for 1st time)
 ! remember to update localizable texts and schema
+
+2.1.1 (build 4381) 11-09-22
+---------------------------
+
+• internal: renamed various SwiftUI views (e.g. MemberListView > MemberPortfolioView)
+• internal: renamed Member table from Member to MemberPortfolio
+• bug fix: immediate crash running Github version (error in file name). No impact on App Store version.
+• internal: upgraded to XCode 14RC and swiftlint 0.49.1
+• internal: got Previews of all Views working
 
 2.1.0 (build 4379) 17-08-22
 ---------------------------
