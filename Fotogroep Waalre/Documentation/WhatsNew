@@ -1,15 +1,15 @@
-2.1.1 (build 4???) ??-09-22
+2.1.1 (build 4381) 11-09-22
 ---------------------------
 
 • internal: renamed various SwiftUI views (e.g. MemberListView > MemberPortfolioView)
 • internal: renamed Member table from Member to MemberPortfolio
 • bug fix: immediate crash running Github version (error in file name). No impact on App Store version.
 • internal: upgraded to XCode 14RC and swiftlint 0.49.1
+• internal: got Previews of all Views working
 
 ! so far, no features at all that benefit end users at all. Might still be worth a consolidation release.
 
 [Github issues]
-? Get all view previews working
 ? Fix warning "[Sandbox] Could not enable Mach bootstrap, errno = 1."
 ? Fix warning "This method should not be called on the main thread as it may lead to UI unresponsiveness."
 ? Fix warning PhotoClubsView.swift:31 warning "Accessing StateObject's object without being installed on a View."
