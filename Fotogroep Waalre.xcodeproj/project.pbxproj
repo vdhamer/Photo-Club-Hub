@@ -597,7 +597,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#buildNumber=$(xcodebuild -showBuildSettings | grep CURRENT_PROJECT_VERSION | tr -d 'CURRENT_PROJECT_VERSION =')\n#buildNumber=`echo $buildNumber +1|bc`\n#xcrun agvtool new-version $buildNumber\n";
+			shellScript = "buildNumber=$(xcodebuild -showBuildSettings | grep CURRENT_PROJECT_VERSION | tr -d 'CURRENT_PROJECT_VERSION =')\n#buildNumber=`echo $buildNumber +1|bc`\nxcrun agvtool new-version $buildNumber\n";
 			showEnvVarsInLog = 0;
 		};
 		D05FCD28278E4573008F41D0 /* Run UpdateVersionInSettingsBundle script */ = {

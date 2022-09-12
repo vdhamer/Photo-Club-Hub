@@ -29,7 +29,7 @@
 • internal: renamed various SwiftUI views (e.g. MemberListView > MemberPortfolioView)
 • internal: renamed Member table from Member to MemberPortfolio
 • bug fix: immediate crash running Github version (error in file name). No impact on App Store version.
-• internal: upgraded to XCode 14RC and swiftlint 0.49.1
+• internal: upgraded to XCode 14 and swiftlint 0.49.1
 • internal: got Previews of all Views working
 
 2.1.0 (build 4379) 17-08-22
