@@ -1,13 +1,16 @@
 2.2.0 (build 4xxx) xx-09-22
 ---------------------------
 
-• internal: renamed various SwiftUI views (e.g. MemberListView > MemberPortfolioView)
-• internal: renamed Member table from Member to MemberPortfolio
-• bug fix: immediate crash running Github version (error in file name). No impact on App Store version.
-• internal: upgraded to XCode 14RC and swiftlint 0.49.1
-• internal: got Previews of all Views working
+• minimum requirement is iOS 15.5
 
-! so far, no features at all that benefit end users at all. Might still be worth a consolidation release.
+Design notes:
+• add latestImage_ field to MemberPortfolio table
+- create new Git branch to hold major feature. Name:
+- add getter/setter for latestImage field to MemberPortfolio class
+  if latestImage_ == nil, return dummy image with app logo else return latestImage_ from database
+- initially read index.xml file for one fixed member (Peter) from Fotogroep_Waalre_App.swift
+  Use this to update latestImage_ in CoreData model
+- asynchronously read index.xml file for every member and fills latestImage_ field in database
 
 [Github issues]
 ? Fix warning "[Sandbox] Could not enable Mach bootstrap, errno = 1."
