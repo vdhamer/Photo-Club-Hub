@@ -42,7 +42,7 @@ struct FilteredMemberPortfoliosView: View {
                             .font(.title3)
                             .tracking(1)
                             .allowsTightening(true)
-                            .foregroundColor(chooseColor(accentColor: .accentColor,
+                            .foregroundColor(chooseColor(defaultColor: .accentColor,
                                                          isDeceased: filteredMember.photographer.isDeceased,
                                                          isDeviceOwner: filteredMember.photographer.isDeviceOwner))
                         Text("\(filteredMember.roleDescription) of \(filteredMember.photoClub.name)",
@@ -119,11 +119,13 @@ struct FilteredMemberPortfoliosView: View {
         }
     }
 
-    private func chooseColor(accentColor: Color, isDeceased: Bool, isDeviceOwner: Bool) -> Color {
+    private func chooseColor(defaultColor: Color, isDeceased: Bool, isDeviceOwner: Bool) -> Color {
         if isDeceased { // ignore isDeviceOwner for now
             return .deceasedColor
+        } else if isDeviceOwner {
+            return defaultColor
         } else {
-            return accentColor // .primary
+            return defaultColor // .primary
         }
     }
 
