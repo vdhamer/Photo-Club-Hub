@@ -2,11 +2,18 @@
 ---------------------------
 
 • minimum required iOS version is 16.0
-? removed detection of owner's name (UIDevice.name no longer supported in iOS 16)
+• updated Vice-chairman role for FGW
+• merged removeDeviceName branch
+    • removed detection of owner's name (UIDevice.name no longer supported in iOS 16)
+• new iOS16 branch:
+    ? fix deprecated mapPin
+    ? fix deprecated NavigationView
+• new PortfolioThumbnails branch contains:
+    • new latestImage_ field in MemberPortfolio table
+    • getter/setter for latestImage (that maps to latestImage_)
+    • Portfolios page displays a (fixed) image per
 
 Design notes:
-• add latestImage_ field to MemberPortfolio table
-- create new Git branch to hold major feature. Name:
 - add getter/setter for latestImage field to MemberPortfolio class
   if latestImage_ == nil, return dummy image with app logo else return latestImage_ from database
 - initially read index.xml file for one fixed member (Peter) from Fotogroep_Waalre_App.swift
@@ -16,7 +23,6 @@ Design notes:
 [Github issues]
 ? Fix warning "[Sandbox] Could not enable Mach bootstrap, errno = 1."
 ? Fix warning "This method should not be called on the main thread as it may lead to UI unresponsiveness."
-? Test on iOS 16
 
 ? replace NSSortDescriptor() by SortDescriptor(). Propagates to NSFetchRequest. request.wrappedValue?
 ? use actual photo on Member page
