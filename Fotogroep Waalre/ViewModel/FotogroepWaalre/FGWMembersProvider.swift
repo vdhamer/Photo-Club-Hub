@@ -39,10 +39,10 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
     }
 
     private func getFileAsString(secretFilename: String, unsecretFileName: String) -> String {
-        if let secret = readLineFromLocalFile(fileNameWithExtension: secretFilename) {
+        if let secret = readURLFromLocalFile(fileNameWithExtension: secretFilename) {
             return secret
         } else {
-            if let unsecret = readLineFromLocalFile(fileNameWithExtension: unsecretFileName) {
+            if let unsecret = readURLFromLocalFile(fileNameWithExtension: unsecretFileName) {
                 return unsecret
             } else {
                 return "file \(unsecretFileName) looks encrypted"
@@ -50,7 +50,7 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
         }
     }
 
-    private func readLineFromLocalFile(fileNameWithExtension: String) -> String? {
+    private func readURLFromLocalFile(fileNameWithExtension: String) -> String? {
         let fileName = fileNameWithExtension.fileName()
         let fileExtension = fileNameWithExtension.fileExtension()
         if let filepath = Bundle.main.path(forResource: fileName, ofType: fileExtension) {
