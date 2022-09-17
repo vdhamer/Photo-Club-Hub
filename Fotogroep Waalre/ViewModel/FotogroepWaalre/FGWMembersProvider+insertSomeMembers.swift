@@ -42,9 +42,7 @@ extension FGWMembersProvider { // fill with some initial hard-coded content
         )
 
         addMember(context: fgwBackgroundContext,
-                  givenName: "Greetje", familyName: "van Son", bornDT: toDate(from: "27/11/1950"),
-                  photoClub: clubWaalre,
-                  memberRolesAndStatus: MemberRolesAndStatus(role: [ .viceChairman: true ], stat: [:])
+                  givenName: "Greetje", familyName: "van Son", bornDT: toDate(from: "27/11/1950"), photoClub: clubWaalre
         )
 
         addMember(context: fgwBackgroundContext,
@@ -63,6 +61,12 @@ extension FGWMembersProvider { // fill with some initial hard-coded content
                   givenName: "Erik", familyName: "van Geest", bornDT: toDate(from: "16/09/1967"),
                   photoClub: clubWaalre,
                   memberRolesAndStatus: MemberRolesAndStatus(role: [ .admin: true ], stat: [:])
+        )
+
+        addMember(context: fgwBackgroundContext,
+                  givenName: "Bettina", familyName: "de Graaf", bornDT: toDate(from: "19/07/1970"),
+                  photoClub: clubWaalre,
+                  memberRolesAndStatus: MemberRolesAndStatus(role: [ .viceChairman: true ], stat: [:])
         )
 
         if commit {
@@ -88,7 +92,7 @@ extension FGWMembersProvider { // fill with some initial hard-coded content
                            familyName: String,
                            bornDT: Date? = nil,
                            photoClub: PhotoClub,
-                           memberRolesAndStatus: MemberRolesAndStatus,
+                           memberRolesAndStatus: MemberRolesAndStatus = MemberRolesAndStatus(role: [:], stat: [:]),
                            memberWebsite: URL? = nil) {
         let photographer = Photographer.findCreateUpdate(
                             context: context, givenName: givenName, familyName: familyName,
