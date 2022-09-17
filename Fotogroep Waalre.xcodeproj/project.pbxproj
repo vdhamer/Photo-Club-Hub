@@ -155,6 +155,7 @@
 		D0E2235627DE9D0F002A8600 /* Fotogroep_Waalre_2_0_4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fotogroep_Waalre_2_0_4.xcdatamodel; sourceTree = "<group>"; };
 		D0E449A227AECEC4003FDA37 /* ShapeStyle+Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ShapeStyle+Colors.swift"; path = "Fotogroep Waalre/Utilities/ShapeStyle+Colors.swift"; sourceTree = SOURCE_ROOT; };
 		D0E694C827EF9B450054D634 /* LockAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockAnimationView.swift; sourceTree = "<group>"; };
+		D0F5C52F28D689CE001E2574 /* Fotogroep_Waalre_2_1_1_noIsDeviceOwner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fotogroep_Waalre_2_1_1_noIsDeviceOwner.xcdatamodel; sourceTree = "<group>"; };
 		D0FDC51827F6653D008CD990 /* Fotogroep_Waalre_2_0_6.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fotogroep_Waalre_2_0_6.xcdatamodel; sourceTree = "<group>"; };
 		D0FF1F6B28822072007401E9 /* portfolios.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = portfolios.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1059,6 +1060,7 @@
 		D0831A3C277F72B70049AB84 /* Fotogroep_Waalre_2.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				D0F5C52F28D689CE001E2574 /* Fotogroep_Waalre_2_1_1_noIsDeviceOwner.xcdatamodel */,
 				D06770F928CE445E00832079 /* Fotogroep_Waalre_2_2_0.xcdatamodel */,
 				D09D543428C4BD8300DC37C9 /* Fotogroep_Waalre_2_1_1.xcdatamodel */,
 				D077EBB52846D134002811F9 /* Fotogroep_Waalre_2_0_11.xcdatamodel */,
@@ -1073,7 +1075,7 @@
 				D0B1EDBA279771A500D37431 /* Fotogroep_Waalre_2_0_2.xcdatamodel */,
 				D0831A3D277F72B70049AB84 /* Fotogroep_Waalre.xcdatamodel */,
 			);
-			currentVersion = D09D543428C4BD8300DC37C9 /* Fotogroep_Waalre_2_1_1.xcdatamodel */;
+			currentVersion = D0F5C52F28D689CE001E2574 /* Fotogroep_Waalre_2_1_1_noIsDeviceOwner.xcdatamodel */;
 			path = Fotogroep_Waalre_2.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
