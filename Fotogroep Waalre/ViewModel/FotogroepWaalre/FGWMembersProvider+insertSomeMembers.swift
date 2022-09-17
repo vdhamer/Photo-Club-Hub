@@ -14,6 +14,7 @@ extension FGWMembersProvider { // fill with some initial hard-coded content
         print("Starting insertSomeMembers() for Fotogroep Waalre in background")
         fgwBackgroundContext.perform {
             self.insertSomeMembersCommon(fgwBackgroundContext: fgwBackgroundContext, commit: commit)
+            print("Completed insertSomeMembers() for Fotogroep Waalre in background")
         }
     }
 
@@ -69,7 +70,6 @@ extension FGWMembersProvider { // fill with some initial hard-coded content
                 if fgwBackgroundContext.hasChanges {
                     try fgwBackgroundContext.save() // commit all changes
                 }
-                print("Completed insertSomeMembers() for Fotogroep Waalre in background")
             } catch {
                 fatalError("Failed to save changes for Fotogroep Waalre")
             }
