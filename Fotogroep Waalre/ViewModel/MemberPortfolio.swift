@@ -77,6 +77,19 @@ extension MemberPortfolio { // computed properties (some related to handling opt
         }
     }
 
+    var latestImage: URL {
+        get {
+            if latestImage_ == nil {
+                latestImage_ = URL(string: "https://www.fotogroepwaalre.nl/wp-content/uploads/" +
+                                           "2022/07/2022_Textielmuseum_025.jpg")!
+            }
+            return latestImage_!
+        }
+        set {
+            latestImage_ = newValue
+        }
+    }
+
     var roleDescription: String {
         var prefixList = [String]()
         var suffixList = [String]()

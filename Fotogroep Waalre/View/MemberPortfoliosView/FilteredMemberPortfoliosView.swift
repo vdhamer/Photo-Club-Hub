@@ -53,10 +53,28 @@ struct FilteredMemberPortfoliosView: View {
                             .foregroundColor(filteredMember.photographer.isDeceased ? .deceasedColor : .primary)
                     }
                     Spacer()
-                    Image(systemName: "photo.on.rectangle")
-                        .font(.title2)
-                        .foregroundStyle(.memberColor, .gray, .red) // red tertiary color should not show up
-                        .symbolRenderingMode(.palette)
+                    AsyncImage(url: filteredMember.latestImage) { phase in
+                        if let image = phase.image { // Displays the loaded image
+                            image
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .clipped()
+                        } else if phase.error != nil { // Displays image indicating an error occurred
+                            Image(systemName: "exclamationmark.triangle")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .foregroundStyle(.red, .yellow, .red) // red tertiary color should not show up
+                                .symbolRenderingMode(.palette)
+                        } else { // Displays placeholder while loading
+                            Image(systemName: "hourglass")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .foregroundStyle(.memberColor, .gray, .red) // red tertiary color should not show up
+                                .symbolRenderingMode(.palette)
+                        }
+                    }
+                    .frame(width: 80, height: 80)
+                    .border(TintShapeStyle() )
                 }
             }
 
