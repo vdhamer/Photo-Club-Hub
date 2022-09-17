@@ -67,7 +67,8 @@ extension Photographer {
     // Update existing attributes or fill the new object
     static func findCreateUpdate(context: NSManagedObjectContext,
                                  givenName: String, familyName: String,
-                                 memberRolesAndStatus: MemberRolesAndStatus,
+                                 memberRolesAndStatus: MemberRolesAndStatus = MemberRolesAndStatus(role: [:],
+                                                                                                   stat: [:]),
                                  phoneNumber: String? = nil, eMail: String? = nil,
                                  photographerWebsite: URL? = nil, bornDT: Date? = nil) -> Photographer {
         let predicateFormat: String = "givenName_ = %@ AND familyName_ = %@" // avoid localization
