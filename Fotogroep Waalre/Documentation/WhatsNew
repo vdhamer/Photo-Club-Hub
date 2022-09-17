@@ -1,7 +1,8 @@
 2.2.0 (build 4xxx) xx-09-22
 ---------------------------
 
-• minimum requirement is iOS 15.5
+• minimum required iOS version is 16.0
+? removed detection of owner's name (UIDevice.name no longer supported in iOS 16)
 
 Design notes:
 • add latestImage_ field to MemberPortfolio table
@@ -29,6 +30,7 @@ Design notes:
 2.1.1 (build 4381) 11-09-22
 ---------------------------
 
+• minimum required iOS version is 15.5
 • internal: renamed various SwiftUI views (e.g. MemberListView > MemberPortfolioView)
 • internal: renamed Member table from Member to MemberPortfolio
 • bug fix: immediate crash running Github version (error in file name). No impact on App Store version.
