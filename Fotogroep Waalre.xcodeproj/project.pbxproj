@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		D008D2AA28739167007A7BE2 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = D008D2A928739167007A7BE2 /* .gitignore */; };
 		D01D2B6227D3BBDC00E2FE41 /* View+Navigate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01D2B6127D3BBDC00E2FE41 /* View+Navigate.swift */; };
-		D02382B7279322B0001BFE59 /* DeviceOwnership.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02382B6279322B0001BFE59 /* DeviceOwnership.swift */; };
 		D024F11628423BE60055021B /* Sounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = D024F11528423BE60055021B /* Sounds.swift */; };
 		D0275F5527E3E21F002FA4FE /* View+OnTapGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0275F5427E3E21F002FA4FE /* View+OnTapGesture.swift */; };
 		D032944A283F9D1D0044C70C /* Bundle+VersionBuild.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0329449283F9D1D0044C70C /* Bundle+VersionBuild.swift */; };
@@ -84,7 +83,6 @@
 		D01526BC278B91BA004DBD19 /* Fotogroep Waalre.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Fotogroep Waalre.entitlements"; sourceTree = "<group>"; };
 		D01D2B6127D3BBDC00E2FE41 /* View+Navigate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Navigate.swift"; sourceTree = "<group>"; };
 		D01DFAA627E778BD007BABFA /* offsets.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = offsets.md; sourceTree = "<group>"; };
-		D02382B6279322B0001BFE59 /* DeviceOwnership.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceOwnership.swift; sourceTree = "<group>"; };
 		D024F11528423BE60055021B /* Sounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sounds.swift; sourceTree = "<group>"; };
 		D0275F5427E3E21F002FA4FE /* View+OnTapGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+OnTapGesture.swift"; sourceTree = "<group>"; };
 		D02A71332829C56F0071EF74 /* Fotogroep_Waalre_2_0_9.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fotogroep_Waalre_2_0_9.xcdatamodel; sourceTree = "<group>"; };
@@ -157,6 +155,7 @@
 		D0E2235627DE9D0F002A8600 /* Fotogroep_Waalre_2_0_4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fotogroep_Waalre_2_0_4.xcdatamodel; sourceTree = "<group>"; };
 		D0E449A227AECEC4003FDA37 /* ShapeStyle+Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ShapeStyle+Colors.swift"; path = "Fotogroep Waalre/Utilities/ShapeStyle+Colors.swift"; sourceTree = SOURCE_ROOT; };
 		D0E694C827EF9B450054D634 /* LockAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockAnimationView.swift; sourceTree = "<group>"; };
+		D0F5C52F28D689CE001E2574 /* Fotogroep_Waalre_2_1_1_noIsDeviceOwner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fotogroep_Waalre_2_1_1_noIsDeviceOwner.xcdatamodel; sourceTree = "<group>"; };
 		D0FDC51827F6653D008CD990 /* Fotogroep_Waalre_2_0_6.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fotogroep_Waalre_2_0_6.xcdatamodel; sourceTree = "<group>"; };
 		D0FF1F6B28822072007401E9 /* portfolios.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = portfolios.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -349,7 +348,6 @@
 				D0831A40277F731C0049AB84 /* Published+UserDefaults.swift */,
 				D0831A41277F731C0049AB84 /* FoundationExtensions.swift */,
 				D0831A43277F731C0049AB84 /* PersistenceController.swift */,
-				D02382B6279322B0001BFE59 /* DeviceOwnership.swift */,
 				D0E449A227AECEC4003FDA37 /* ShapeStyle+Colors.swift */,
 				D01D2B6127D3BBDC00E2FE41 /* View+Navigate.swift */,
 				D0329449283F9D1D0044C70C /* Bundle+VersionBuild.swift */,
@@ -680,7 +678,6 @@
 				D0831A37277F72590049AB84 /* FGWMembersProvider.swift in Sources */,
 				D0831A31277F72590049AB84 /* MemberPortfolio.swift in Sources */,
 				D0831A32277F72590049AB84 /* Photographer.swift in Sources */,
-				D02382B7279322B0001BFE59 /* DeviceOwnership.swift in Sources */,
 				D081655B278611150078AB16 /* WebView.swift in Sources */,
 				D044646527FCE7C100990613 /* UIDevice+IsIPad.swift in Sources */,
 				D05E451E27EF2A2C00D31327 /* ReadmeView.swift in Sources */,
@@ -1063,6 +1060,7 @@
 		D0831A3C277F72B70049AB84 /* Fotogroep_Waalre_2.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				D0F5C52F28D689CE001E2574 /* Fotogroep_Waalre_2_1_1_noIsDeviceOwner.xcdatamodel */,
 				D06770F928CE445E00832079 /* Fotogroep_Waalre_2_2_0.xcdatamodel */,
 				D09D543428C4BD8300DC37C9 /* Fotogroep_Waalre_2_1_1.xcdatamodel */,
 				D077EBB52846D134002811F9 /* Fotogroep_Waalre_2_0_11.xcdatamodel */,
@@ -1077,7 +1075,7 @@
 				D0B1EDBA279771A500D37431 /* Fotogroep_Waalre_2_0_2.xcdatamodel */,
 				D0831A3D277F72B70049AB84 /* Fotogroep_Waalre.xcdatamodel */,
 			);
-			currentVersion = D09D543428C4BD8300DC37C9 /* Fotogroep_Waalre_2_1_1.xcdatamodel */;
+			currentVersion = D0F5C52F28D689CE001E2574 /* Fotogroep_Waalre_2_1_1_noIsDeviceOwner.xcdatamodel */;
 			path = Fotogroep_Waalre_2.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

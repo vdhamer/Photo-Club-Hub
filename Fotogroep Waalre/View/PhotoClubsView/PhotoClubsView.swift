@@ -9,7 +9,6 @@ import SwiftUI
 
 struct PhotoClubsView: View {
     @Environment(\.managedObjectContext) private var viewContext
-    @EnvironmentObject var deviceOwner: DeviceOwner
     @StateObject var model = SettingsViewModel()
 
     @FetchRequest(
@@ -39,9 +38,8 @@ struct PhotoClubsView: View {
             List { // lists are "Lazy" automatically
                 PhotoClubsInnerView(predicate: model.settings.photoClubPredicate)
             }
-            .refreshable {
-                FGWMembersProvider.foundAnOwner = false // for pull-to-refresh
-                _ = FGWMembersProvider(fullOwnerName: deviceOwner.fullOwnerName)
+            .refreshable { // for pull-to-refresh
+                _ = FGWMembersProvider()
                 _ = BIMembersProvider()
                 _ = TestMembersProvider()
             }

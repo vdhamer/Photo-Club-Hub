@@ -14,7 +14,6 @@ struct PhotographersView: View {
     var searchText: Binding<String>
 
     @StateObject var model = SettingsViewModel()
-    @EnvironmentObject var deviceOwner: DeviceOwner
     private var navigationTitle = String(localized: "Who's who", comment: "Title of page with list of photographers")
 
     init(searchText: Binding<String>, navigationTitle: String? = nil) {
@@ -35,9 +34,8 @@ struct PhotographersView: View {
                      """, comment: "Shown in gray at the bottom of the Photographers page.")
                     .foregroundColor(.gray)
             }
-            .refreshable {
-                FGWMembersProvider.foundAnOwner = false // for pull-to-refresh
-                _ = FGWMembersProvider(fullOwnerName: deviceOwner.fullOwnerName)
+            .refreshable { // for pull-to-refresh
+                _ = FGWMembersProvider()
             }
         }
         .keyboardType(.namePhonePad)

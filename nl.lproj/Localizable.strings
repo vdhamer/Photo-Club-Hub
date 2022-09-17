@@ -37,9 +37,6 @@
 /* No comment provided by engineer. */
 "Developers wanted" = "Ontwikkelaars in de zaal?";
 
-/* Relationship of member to the iOS device. Used in concatenations. */
-"device owner" = "eigenaar van dit apparaat";
-
 /* Button at top right of Settings. Stores preference settings.
 Button to close Info page. */
 "Done" = "OK";

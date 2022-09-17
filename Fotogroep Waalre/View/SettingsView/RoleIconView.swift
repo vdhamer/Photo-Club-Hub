@@ -20,7 +20,6 @@ struct RoleStatusIconView: View {
     private let memberStatusToImage: [MemberStatus: Image] = [ // dictionary
         .coach: Image(systemName: "mic.square"),
         .deceased: Image("deceased.member"),
-        .deviceOwner: Image(systemName: "questionmark.square"),
         .former: Image("former.member"),
         .honorary: Image(systemName: "star.square"),
         .current: Image(systemName: "dot.square"),

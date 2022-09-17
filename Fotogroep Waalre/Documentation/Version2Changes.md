@@ -46,7 +46,7 @@
 * Photographer
 	* givenName, familyName
 	* birthdate?
-    * isDeceased, isDeviceOwner
+    * isDeceased
     * photographerWebsite
 * Member
 	* ^Photographer, ^PhotoClub

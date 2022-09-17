@@ -39,9 +39,7 @@ struct PhotographersInnerView: View {
                     .padding([.trailing], 5)
                 VStack(alignment: .leading) {
                     let alive = filteredPhotographer.isDeceased ? " - " + MemberStatus.deceased.localizedString() : ""
-                    let deviceOwner = filteredPhotographer.isDeviceOwner ?
-                                      " - " + MemberStatus.deviceOwner.localizedString() : ""
-                    Text(verbatim: "\(filteredPhotographer.fullName)\(alive)\(deviceOwner)")
+                    Text(verbatim: "\(filteredPhotographer.fullName)\(alive)")
                         .font(.title3)
                         .tracking(1)
                         .foregroundColor(chooseColor(accentColor: .accentColor,
