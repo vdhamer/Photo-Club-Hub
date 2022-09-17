@@ -124,6 +124,7 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
                                         commit: Bool,
                                         fullOwnerName: String? ) async {
 
+        print("Starting loadPrivateMembersFromWebsite() for Fotogroep Waalre in background")
         var results: (utfContent: Data?, urlResponse: URLResponse?)? = (nil, nil)
         results = try? await URLSession.shared.data(from: privateMemberURL)
         if results != nil, results?.utfContent != nil {
@@ -134,6 +135,7 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
                 do {
                     if backgroundContext.hasChanges {
                         try backgroundContext.save()
+                        print("Completed loadPrivateMembersFromWebsite() for Fotogroep Waalre in background")
                     }
                  } catch {
                     print("Could not save backgroundContext in FotogroepWaalreMembersProvider.init()")
