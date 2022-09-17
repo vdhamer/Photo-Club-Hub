@@ -37,8 +37,6 @@ extension TestMembersProvider { // fill with some initial hard-coded content
         let photographerPeter = Photographer.findCreateUpdate(
                                                              context: testBackgroundContext,
                                                              givenName: "Peter", familyName: "van den Hamer",
-                                                             memberRolesAndStatus: MemberRolesAndStatus(role: [:],
-                                                                                                        stat: [:]),
                                                              phoneNumber: nil, eMail: "foobar@vdhamer.com"
                                                             )
         // register Peter as a member of Test (if needed)
