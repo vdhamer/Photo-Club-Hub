@@ -24,7 +24,6 @@ struct MemberPortfoliosView: View {
     private var photoClubs: FetchedResults<PhotoClub>
 
     @StateObject var model = SettingsViewModel()
-    @EnvironmentObject var deviceOwner: DeviceOwner
 
     private let title = String(localized: "Photo Club Waalre", comment: "Title used in Navigation View")
     private let toolbarItemPlacement: ToolbarItemPlacement = UIDevice.isIPad ?
@@ -37,9 +36,8 @@ struct MemberPortfoliosView: View {
                 List { // lists are automatically "Lazy"
                     FilteredMemberPortfoliosView(predicate: model.settings.memberPredicate, searchText: $searchText)
                 }
-                .refreshable {
-                    FGWMembersProvider.foundAnOwner = false // for pull-to-refresh
-                    _ = FGWMembersProvider(fullOwnerName: deviceOwner.fullOwnerName)
+                .refreshable { // for pull-to-refresh
+                    _ = FGWMembersProvider()
                 }
                 .keyboardType(.namePhonePad)
                 .autocapitalization(.none)

@@ -22,11 +22,6 @@ struct AnimatedLogoView: View {
     @State private var willMoveToNextScreen = false // used to navigate to next screen
     @State private var tapCounter: Int = 0
 
-    private var fullOwnerName: String // irrelevant here; just passed through to main View (eliminate via environment?)
-    init(fullOwnerName: String = "Peter van den Hamer") {
-        self.fullOwnerName = fullOwnerName
-    }
-
     func offset(frame rect: CGSize) -> CGSize { // used to position large image in the middle of a cell
         guard logScale != 0 else { return .zero }
         let shortFrameDimension: Double = min(rect.width, rect.height)

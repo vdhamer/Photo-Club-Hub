@@ -12,7 +12,6 @@ import CoreData // for mergePolicy
 struct FotogroepWaalreApp: App {
 
     @Environment(\.scenePhase) var scenePhase
-    @StateObject var deviceOwner = DeviceOwner()
 
     init() {
         // Core Data settings
@@ -28,12 +27,11 @@ struct FotogroepWaalreApp: App {
 
     var body: some Scene {
         WindowGroup {
-            AnimatedLogoView() // fullOwnerName passed down to MemberListView()
-                .environmentObject(deviceOwner)
+            AnimatedLogoView()
                 .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext) // main Q!
                 .onAppear {
                     //      _ = BIMembersProvider()
-                    _ = FGWMembersProvider(fullOwnerName: deviceOwner.fullOwnerName)
+                    _ = FGWMembersProvider()
                     //      _ = TestMembersProvider()
                 }
         }
@@ -42,12 +40,4 @@ struct FotogroepWaalreApp: App {
         }
     }
 
-}
-
-final class DeviceOwner: ObservableObject {
-    @Published var fullOwnerName: String
-
-    init() {
-        fullOwnerName = DeviceOwnership().fullOwnerName
-    }
 }
