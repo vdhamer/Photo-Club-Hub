@@ -57,8 +57,7 @@ struct FilteredMemberPortfoliosView: View {
                         if let image = phase.image { // Displays the loaded image
                             image
                                 .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .clipped()
+                                .aspectRatio(contentMode: .fill)
                         } else if phase.error != nil { // Displays image indicating an error occurred
                             Image(systemName: "exclamationmark.triangle")
                                 .resizable()
@@ -74,6 +73,7 @@ struct FilteredMemberPortfoliosView: View {
                         }
                     }
                     .frame(width: 80, height: 80)
+                    .clipped()
                     .border(TintShapeStyle() )
                 }
             }
