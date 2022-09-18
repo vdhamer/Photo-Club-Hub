@@ -80,8 +80,15 @@ extension MemberPortfolio { // computed properties (some related to handling opt
     var latestImage: URL {
         get {
             if latestImage_ == nil {
-                latestImage_ = URL(string: "https://www.fotogroepwaalre.nl/wp-content/uploads/" +
-                                           "2022/07/2022_Textielmuseum_025.jpg")!
+                let urlTestStrings: [String] = [
+                    "https://www.fotogroepwaalre.nl/wp-content/uploads/2022/07/2022_Textielmuseum_025.jpg",
+                    "https://www.fotogroepwaalre.nl/wp-content/uploads/2022/07/2022_FotogroepWaalre_050.jpg",
+                    "https://www.fotogroepwaalre.nl/wp-content/uploads/2021/09/2021_FotogroepWaalre_067.jpg",
+                    "https://www.fotogroepwaalre.nl/wp-content/uploads/2021/09/2021_FotogroepWaalre_064.jpg",
+                    "https://www.fotogroepwaalre.nl/wp-content/uploads/2020/11/2020_FotogroepWaalre_018.jpg",
+                    "https://www.fotogroepwaalre.nl/wp-content/uploads/2020/11/2020_FotogroepWaalre_027.jpg"
+                ]
+                latestImage_ = URL(string: urlTestStrings[Int.random(in: 0..<urlTestStrings.count)])!
             }
             return latestImage_!
         }
