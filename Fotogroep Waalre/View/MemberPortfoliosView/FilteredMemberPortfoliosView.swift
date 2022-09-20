@@ -39,7 +39,7 @@ struct FilteredMemberPortfoliosView: View {
                         .offset(x: -5, y: 0)
                     VStack(alignment: .leading) {
                         Text(verbatim: "\(filteredMember.photographer.fullName)")
-                            .font(.title3)
+                            .font(UIDevice.isIPad ? .title : .title3)
                             .tracking(1)
                             .allowsTightening(true)
                             .foregroundColor(chooseColor(defaultColor: .accentColor,
@@ -48,14 +48,32 @@ struct FilteredMemberPortfoliosView: View {
                              comment: "<role1 and role2> of <photoclub>. Note <and> is handled elsewhere.")
                             .truncationMode(.tail)
                             .lineLimit(2)
-                            .font(.subheadline)
+                            .font(UIDevice.isIPad ? .headline : .subheadline)
                             .foregroundColor(filteredMember.photographer.isDeceased ? .deceasedColor : .primary)
                     }
                     Spacer()
-                    Image(systemName: "photo.on.rectangle")
-                        .font(.title2)
-                        .foregroundStyle(.memberColor, .gray, .red) // red tertiary color should not show up
-                        .symbolRenderingMode(.palette)
+                    AsyncImage(url: filteredMember.latestImage) { phase in
+                        if let image = phase.image { // Displays the loaded image
+                            image
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                        } else if phase.error != nil { // Displays image indicating an error occurred
+                            Image(systemName: "exclamationmark.triangle")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .foregroundStyle(.red, .yellow, .red) // red tertiary color should not show up
+                                .symbolRenderingMode(.palette)
+                        } else { // Displays placeholder while loading
+                            Image(systemName: "hourglass")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .foregroundStyle(.memberColor, .gray, .red) // red tertiary color should not show up
+                                .symbolRenderingMode(.palette)
+                        }
+                    }
+                    .frame(width: 80, height: 80)
+                    .clipped()
+                    .border(TintShapeStyle() )
                 }
             }
 
