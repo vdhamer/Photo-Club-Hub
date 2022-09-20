@@ -39,7 +39,7 @@ struct FilteredMemberPortfoliosView: View {
                         .offset(x: -5, y: 0)
                     VStack(alignment: .leading) {
                         Text(verbatim: "\(filteredMember.photographer.fullName)")
-                            .font(.title3)
+                            .font(UIDevice.isIPad ? .title : .title3)
                             .tracking(1)
                             .allowsTightening(true)
                             .foregroundColor(chooseColor(defaultColor: .accentColor,
@@ -49,7 +49,7 @@ struct FilteredMemberPortfoliosView: View {
                              comment: "<role1 and role2> of <photoclub>. Note <and> is handled elsewhere.")
                             .truncationMode(.tail)
                             .lineLimit(2)
-                            .font(.subheadline)
+                            .font(UIDevice.isIPad ? .headline : .subheadline)
                             .foregroundColor(filteredMember.photographer.isDeceased ? .deceasedColor : .primary)
                     }
                     Spacer()
