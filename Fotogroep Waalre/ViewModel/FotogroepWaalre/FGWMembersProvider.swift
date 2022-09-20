@@ -9,15 +9,12 @@ import CoreData // for NSManagedObjectContext
 
 class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
 
-    private let fullOwnerName: String?
     private static let photoClubID: (name: String, town: String) = ("Fotogroep Waalre", "Waalre")
 
 //    /// A shared member provider for use within the main app bundle.
 //    static let shared = FotogroepWaalreMembersProvider()
 
-    init(fullOwnerName: String? = nil) {
-        self.fullOwnerName = fullOwnerName
-
+    init() {
         let fgwBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
         insertSomeMembers(fgwBackgroundContext: fgwBackgroundContext, commit: true)
 
@@ -28,8 +25,7 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
                 await loadPrivateMembersFromWebsite( backgroundContext: fgwBackgroundContext,
                                                      privateMemberURL: privateURL,
                                                      photoClubID: FGWMembersProvider.photoClubID,
-                                                     commit: true,
-                                                     fullOwnerName: fullOwnerName
+                                                     commit: true
                 )
             }
         } else {
@@ -121,8 +117,7 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
     func loadPrivateMembersFromWebsite( backgroundContext: NSManagedObjectContext,
                                         privateMemberURL: URL,
                                         photoClubID: (name: String, town: String),
-                                        commit: Bool,
-                                        fullOwnerName: String? ) async {
+                                        commit: Bool ) async {
 
         print("Starting loadPrivateMembersFromWebsite() for Fotogroep Waalre in background")
         var results: (utfContent: Data?, urlResponse: URLResponse?)? = (nil, nil)
@@ -198,10 +193,7 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
                             stat: [
                                 .former: !self.isCurrentMember(name: personName, includeCandidates: true),
                                 .coach: self.isMentor(name: personName),
-                                .prospective: self.isProspectiveMember(name: personName),
-                                .deviceOwner: self.isDeviceOwner(fullOwnerName: self.fullOwnerName,
-                                                                 givenName: givenName, familyName: familyName,
-                                                                 phoneNumber: phoneNumber)
+                                .prospective: self.isProspectiveMember(name: personName)
                             ]
                         ),
                         memberWebsite: self.generateInternalURL(using: "\(givenName) \(familyName)")
@@ -347,24 +339,6 @@ extension FGWMembersProvider { // private utitity functions
         } else {
             return false
         }
-    }
-
-    static var foundAnOwner: Bool = false // first match is returned, to prevent multiple matches
-
-    private func isDeviceOwner(fullOwnerName: String?, givenName: String, familyName: String,
-                               phoneNumber: String?) -> Bool {
-        guard let fullOwnerName = fullOwnerName else { return false } // don't know the owner -> give up
-        guard isStillAlive(phone: phoneNumber) else { return false } // don't select deceased members
-        guard !FGWMembersProvider.foundAnOwner else { return false } // only select one member
-        if fullOwnerName == "\(givenName) \(familyName)" { // if last name of owner known, use it
-            FGWMembersProvider.foundAnOwner = true
-            return true
-        }
-        if fullOwnerName == givenName {
-            FGWMembersProvider.foundAnOwner = true
-            return true
-        }
-        return false
     }
 
     private func generateInternalURL(using name: String) -> URL? {

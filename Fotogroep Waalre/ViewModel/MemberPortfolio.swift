@@ -105,9 +105,6 @@ extension MemberPortfolio { // computed properties (some related to handling opt
 
         if photographer.isDeceased {
             prefixList.append(MemberStatus.deceased.localizedString())
-        } else if photographer.isDeviceOwner {
-            prefixList.append(MemberStatus.deviceOwner.localizedString() +
-                              " " + andLocalized)
         }
         if isFormerMember && !isHonoraryMember { prefixList.append(MemberStatus.former.localizedString()) }
 
@@ -143,7 +140,6 @@ extension MemberPortfolio { // computed properties (some related to handling opt
             var memberRS = MemberRolesAndStatus(role: [:], stat: [:])
 
             if photographer.isDeceased { memberRS.stat[.deceased] = true }
-            if photographer.isDeviceOwner { memberRS.stat[.deviceOwner] = true }
             if isFormerMember { memberRS.stat[.former] = true }
             if isHonoraryMember { memberRS.stat[.honorary] = true}
             if isProspectiveMember { memberRS.stat[.prospective] = true }
@@ -163,9 +159,6 @@ extension MemberPortfolio { // computed properties (some related to handling opt
         set { // merge newValue with existing dictionary
             if let newBool = newValue.stat[.deceased] {
                 photographer.isDeceased = newBool!
-            }
-            if let newBool = newValue.stat[.deviceOwner] {
-                photographer.isDeviceOwner = newBool!
             }
             if let newBool = newValue.stat[.former] {
                 isFormerMember = newBool!

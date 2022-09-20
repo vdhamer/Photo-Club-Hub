@@ -37,8 +37,6 @@ extension BIMembersProvider { // fill with some initial hard-coded content
         let photographerRico = Photographer.findCreateUpdate(
                                                              context: biBackgroundContext,
                                                              givenName: "Rico", familyName: "Coolen",
-                                                             memberRolesAndStatus: MemberRolesAndStatus(role: [:],
-                                                                                                        stat: [:]),
                                                              phoneNumber: "", eMail: "info@ricoco.nl"
                                                             )
         // register Rico a member of Bellus Imago (if needed)
@@ -51,9 +49,7 @@ extension BIMembersProvider { // fill with some initial hard-coded content
         // add Loek as a person to Photographers (if needed)
         let photographerLoek = Photographer.findCreateUpdate(
                                                              context: biBackgroundContext,
-                                                             givenName: "Loek", familyName: "Dirkx",
-                                                             memberRolesAndStatus: MemberRolesAndStatus(role: [:],
-                                                                                                        stat: [:])
+                                                             givenName: "Loek", familyName: "Dirkx"
                                                             )
         // register Loek a member of Bellus Imago (if needed)
         _ = MemberPortfolio.findCreateUpdate(context: biBackgroundContext, // just a test case, no special roles

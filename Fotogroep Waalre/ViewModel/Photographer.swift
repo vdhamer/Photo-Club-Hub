@@ -39,16 +39,12 @@ extension Photographer {
     var memberRolesAndStatus: MemberRolesAndStatus {
         get { // conversion from Bool to dictionary
             return MemberRolesAndStatus(role: [:], stat: [
-                .deceased: isDeceased,
-                .deviceOwner: isDeviceOwner]
+                .deceased: isDeceased]
             )
         }
         set { // merge newValue with existing dictionary
             if let newBool = newValue.stat[.deceased] {
                 isDeceased = newBool!
-            }
-            if let newBool = newValue.stat[.deviceOwner] {
-                isDeviceOwner = newBool!
             }
         }
     }
@@ -67,7 +63,8 @@ extension Photographer {
     // Update existing attributes or fill the new object
     static func findCreateUpdate(context: NSManagedObjectContext,
                                  givenName: String, familyName: String,
-                                 memberRolesAndStatus: MemberRolesAndStatus,
+                                 memberRolesAndStatus: MemberRolesAndStatus = MemberRolesAndStatus(role: [:],
+                                                                                                   stat: [:]),
                                  phoneNumber: String? = nil, eMail: String? = nil,
                                  photographerWebsite: URL? = nil, bornDT: Date? = nil) -> Photographer {
         let predicateFormat: String = "givenName_ = %@ AND familyName_ = %@" // avoid localization
@@ -100,7 +97,7 @@ extension Photographer {
     static func findCreateUpdate(context: NSManagedObjectContext,
                                  givenName: String, familyName: String,
                                  memberRolesAndStatus: MemberRolesAndStatus,
-                                 isDeceased: Bool? = nil, isDeviceOwner: Bool? = nil,
+                                 isDeceased: Bool? = nil,
                                  phoneNumber: String? = nil, eMail: String? = nil,
                                  photographerWebsite: URL? = nil, bornDT: Date? = nil
                                 ) -> Photographer {
@@ -111,7 +108,7 @@ extension Photographer {
 
 		if let photographer = photographers.first { // already exists, so make sure secondary attributes are up to date
             if update(context: context, photographer: photographer,
-                      isDeceased: isDeceased, isDeviceOwner: isDeviceOwner,
+                      isDeceased: isDeceased,
                       phoneNumber: phoneNumber, eMail: eMail,
                       photographerWebsite: photographerWebsite, bornDT: bornDT) {
                 print("Updated info for photographer \(photographer.fullName)")
@@ -122,7 +119,6 @@ extension Photographer {
 			photographer.givenName = givenName
 			photographer.familyName = familyName
 			photographer.isDeceased = isDeceased ?? false
-            photographer.isDeviceOwner = isDeviceOwner ?? false
             photographer.phoneNumber = phoneNumber ?? ""
             photographer.eMail = eMail ?? ""
             photographer.bornDT = bornDT
@@ -145,11 +141,6 @@ extension Photographer {
             photographer.memberRolesAndStatus.stat[.deceased] = isDeceased
 			modified = true
 		}
-
-        if let isDeviceOwner = memberRolesAndStatus.stat[.deviceOwner], photographer.isDeviceOwner != isDeviceOwner {
-            photographer.memberRolesAndStatus.stat[.deviceOwner] = isDeviceOwner
-            modified = true
-        }
 
         if let bornDT = bornDT, photographer.bornDT != bornDT {
 			photographer.bornDT = bornDT

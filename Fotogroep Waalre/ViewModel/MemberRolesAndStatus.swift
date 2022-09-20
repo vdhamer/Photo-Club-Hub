@@ -50,7 +50,6 @@ enum MemberStatus {
     // a Member can have multiple of these special statusses
     case coach // rawValue not used because string needs localization
     case deceased
-    case deviceOwner
     case former
     case honorary
     case current
@@ -66,8 +65,6 @@ enum MemberStatus {
                                    comment: "Relationship status of member within a club. Used as prefex.")
         case .honorary: return String(localized: "honorary member",
                                    comment: "Relationship status of member within a club. Used in concatenations.")
-        case .deviceOwner: return String(localized: "device owner",
-                                   comment: "Relationship of member to the iOS device. Used in concatenations.")
         case .current: return String(localized: "member",
                                    comment: "Default status of member within a club. Used in concatenations.")
         case .prospective: return String(localized: "prospective member",

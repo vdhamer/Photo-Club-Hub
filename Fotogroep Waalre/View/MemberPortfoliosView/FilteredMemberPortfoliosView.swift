@@ -43,8 +43,7 @@ struct FilteredMemberPortfoliosView: View {
                             .tracking(1)
                             .allowsTightening(true)
                             .foregroundColor(chooseColor(defaultColor: .accentColor,
-                                                         isDeceased: filteredMember.photographer.isDeceased,
-                                                         isDeviceOwner: filteredMember.photographer.isDeviceOwner))
+                                                         isDeceased: filteredMember.photographer.isDeceased))
                         Text("\(filteredMember.roleDescription) of \(filteredMember.photoClub.name)",
                              comment: "<role1 and role2> of <photoclub>. Note <and> is handled elsewhere.")
                             .truncationMode(.tail)
@@ -137,11 +136,9 @@ struct FilteredMemberPortfoliosView: View {
         }
     }
 
-    private func chooseColor(defaultColor: Color, isDeceased: Bool, isDeviceOwner: Bool) -> Color {
-        if isDeceased { // ignore isDeviceOwner for now
+    private func chooseColor(defaultColor: Color, isDeceased: Bool) -> Color {
+        if isDeceased {
             return .deceasedColor
-        } else if isDeviceOwner {
-            return defaultColor
         } else {
             return defaultColor // .primary
         }
