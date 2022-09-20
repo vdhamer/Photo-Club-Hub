@@ -8,10 +8,10 @@
 • new iOS16 branch:
     ? fix deprecated mapPin
     ? fix deprecated NavigationView
-• new PortfolioThumbnails branch contains:
+• merged PortfolioThumbnails branch contains:
     • new latestImage_ field in MemberPortfolio table
     • getter/setter for latestImage (that maps to latestImage_)
-    • Portfolios page displays a (fixed) image per
+    • Portfolios page displays a (fixed dummy) latest image per portfolio
 
 Design notes:
 - add getter/setter for latestImage field to MemberPortfolio class
