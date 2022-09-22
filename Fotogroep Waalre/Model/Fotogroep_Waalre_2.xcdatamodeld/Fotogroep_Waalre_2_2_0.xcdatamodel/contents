@@ -13,6 +13,7 @@
         <attribute name="isTreasurer" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="isViceChairman" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="latestImage_" optional="YES" attributeType="URI"/>
+        <attribute name="latestImageSeen" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="memberWebsite_" optional="YES" attributeType="URI"/>
         <relationship name="photoClub_" maxCount="1" deletionRule="Nullify" destinationEntity="PhotoClub" inverseName="members_" inverseEntity="PhotoClub"/>
         <relationship name="photographer_" maxCount="1" deletionRule="Nullify" destinationEntity="Photographer" inverseName="memberships_" inverseEntity="Photographer"/>

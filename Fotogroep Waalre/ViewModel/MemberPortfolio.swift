@@ -80,7 +80,7 @@ extension MemberPortfolio { // computed properties (some related to handling opt
     var latestImage: URL {
         get {
             if latestImage_ == nil {
-                let urlTestStrings: [String] = [
+                let urlTestStrings: [String] = [ // temp dummy data
                     "https://www.fotogroepwaalre.nl/wp-content/uploads/2022/07/2022_Textielmuseum_025.jpg",
                     "https://www.fotogroepwaalre.nl/wp-content/uploads/2022/07/2022_FotogroepWaalre_050.jpg",
                     "https://www.fotogroepwaalre.nl/wp-content/uploads/2021/09/2021_FotogroepWaalre_067.jpg",
