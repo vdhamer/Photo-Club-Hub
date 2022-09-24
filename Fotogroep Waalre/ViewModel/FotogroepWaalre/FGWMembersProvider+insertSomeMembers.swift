@@ -42,7 +42,9 @@ extension FGWMembersProvider { // fill with some initial hard-coded content
         )
 
         addMember(context: fgwBackgroundContext,
-                  givenName: "Greetje", familyName: "van Son", bornDT: toDate(from: "27/11/1950"), photoClub: clubWaalre
+                  givenName: "Greetje", familyName: "van Son", bornDT: toDate(from: "27/11/1950"),
+                  photoClub: clubWaalre,
+                  memberRolesAndStatus: MemberRolesAndStatus(role: [ .viceChairman: false ], stat: [:])
         )
 
         addMember(context: fgwBackgroundContext,
