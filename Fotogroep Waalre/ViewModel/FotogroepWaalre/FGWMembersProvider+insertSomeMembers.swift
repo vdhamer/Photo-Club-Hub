@@ -18,6 +18,7 @@ extension FGWMembersProvider { // fill with some initial hard-coded content
         }
     }
 
+    // swiftlint:disable:next function_body_length
     private func insertSomeMembersCommon(fgwBackgroundContext: NSManagedObjectContext, commit: Bool) {
 
         let clubWaalre = PhotoClub.findCreateUpdate( context: fgwBackgroundContext,

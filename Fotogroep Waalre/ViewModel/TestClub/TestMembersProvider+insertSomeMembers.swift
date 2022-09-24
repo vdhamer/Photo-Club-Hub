@@ -43,8 +43,10 @@ extension TestMembersProvider { // fill with some initial hard-coded content
         _ = MemberPortfolio.findCreateUpdate(context: testBackgroundContext, // just a test case, no special roles
                                     photoClub: clubTest, photographer: photographerPeter,
                                     memberRolesAndStatus: MemberRolesAndStatus(role: [:], stat: [ .former: false]),
-                                    memberWebsite: URL(string: "https://www.example.com/peter.html")
-                                   )
+                                    memberWebsite: URL(
+                                        string: "https://www.fotogroepwaalre.nl/fotos/Peter_van_den_Hamer_test"
+                                    )
+        )
 
         if commit {
             do {
