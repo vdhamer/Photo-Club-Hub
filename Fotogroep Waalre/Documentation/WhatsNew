@@ -12,6 +12,9 @@
     • new latestImage_ field in MemberPortfolio table
     • getter/setter for latestImage (that maps to latestImage_)
     • Portfolios page displays a (fixed dummy) latest image per portfolio
+• renamed Test Photo Club (was Nederlands Fotografie Museum, which was confusing)
+• enable deletion of photo clubs (not normally needed)
+• added help text at the bottom of the Photo Clubs page
 
 Design notes:
 - add getter/setter for latestImage field to MemberPortfolio class

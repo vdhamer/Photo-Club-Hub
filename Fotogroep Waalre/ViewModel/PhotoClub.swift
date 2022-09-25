@@ -140,6 +140,18 @@ extension PhotoClub {
         return modified
 	}
 
+    func deleteAllMembers(context: NSManagedObjectContext) { // doesn't work ;-(
+//        for member in members {
+//            print("Deleting member \(member.photographer.fullName) of photo club \(self.name)")
+//            context.delete(member)
+//        }
+//        do {
+//            try context.save()
+//        } catch {
+//            fatalError("Failed to delete members photo club \(self.name)")
+//        }
+    }
+
 }
 
 extension PhotoClub { // convenience function

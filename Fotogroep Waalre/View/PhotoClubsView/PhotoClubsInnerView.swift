@@ -7,12 +7,13 @@
 
 import SwiftUI
 import MapKit
+import CoreData
 
 struct PhotoClubsInnerView: View {
 
     @Environment(\.managedObjectContext) private var viewContext // may not be correct
     @FetchRequest var fetchRequest: FetchedResults<PhotoClub>
-    private let deletePhotoClubs = false // disables .delete() functionality for this section
+    private let permitDeletionOfPhotoClubs = true // disables .delete() functionality for this section
     @Environment(\.layoutDirection) var layoutDirection // .leftToRight or .rightToLeft
     @State private var scrollLocks: [String: Bool] = [:] // blocks scrolling and panning of maps
 
@@ -89,25 +90,33 @@ struct PhotoClubsInnerView: View {
             }
             .accentColor(.photoClubColor)
         }
+        .onDelete(perform: deletePhotoClubs)
     }
 
     func deletePhotoClubs(offsets: IndexSet) {
-        guard deletePhotoClubs else { return }
-        let name: String = offsets.map { fetchRequest[$0] }.first?.name_ ?? "DefaultPhotoClubName"
-        offsets.map { fetchRequest[$0] }.forEach( viewContext.delete )
-
-        do {
-            if viewContext.hasChanges {
-                try viewContext.save()
+        guard permitDeletionOfPhotoClubs else { return } // to turn off the feature
+        if let photoClub = (offsets.map { fetchRequest[$0] }.first) { // unwrap first PhotoClub to be deleted
+            photoClub.deleteAllMembers(context: viewContext)
+            guard photoClub.members.count == 0 else { // safety: will crash if member.photoClub == nil
+                print("Could not delete photo club \(photoClub.name) " +
+                      "because it still has \(photoClub.members.count) members.")
+                return
             }
-            print("Deleted photo club \(name) and all of its members")
-        } catch {
-            // Replace this implementation with code to handle the error appropriately.
-            // fatalError() causes the application to generate a crash log and terminate.
-            // You should not use this function in a shipping application, although it may be useful during development.
-            let nsError = error as NSError
-            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+            offsets.map { fetchRequest[$0] }.forEach( viewContext.delete )
+
+            do {
+                if viewContext.hasChanges {
+                    try viewContext.save()
+                }
+            } catch {
+                // Replace this implementation with code to handle the error appropriately.
+                // fatalError() causes the application to generate a crash log and terminate.
+                // You should not use this function in a shipping application
+                let nsError = error as NSError
+                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+            }
         }
+
     }
 
 }
