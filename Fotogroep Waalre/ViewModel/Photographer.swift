@@ -23,12 +23,12 @@ extension Photographer {
 	}
 
 	private(set) var givenName: String {
-		get { return givenName_! }
+		get { return givenName_ ?? "MissingGivenName" }
 		set { givenName_ = newValue }
 	}
 
 	private(set) var familyName: String {
-		get { return familyName_! }
+		get { return familyName_ ?? "MissingFamilyName" }
 		set { familyName_ = newValue }
 	}
 
