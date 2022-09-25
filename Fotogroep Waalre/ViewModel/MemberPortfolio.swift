@@ -80,15 +80,9 @@ extension MemberPortfolio { // computed properties (some related to handling opt
     var latestImage: URL {
         get {
             if latestImage_ == nil {
-                let urlTestStrings: [String] = [ // temp dummy data
-                    "https://www.fotogroepwaalre.nl/wp-content/uploads/2022/07/2022_Textielmuseum_025.jpg",
-                    "https://www.fotogroepwaalre.nl/wp-content/uploads/2022/07/2022_FotogroepWaalre_050.jpg",
-                    "https://www.fotogroepwaalre.nl/wp-content/uploads/2021/09/2021_FotogroepWaalre_067.jpg",
-                    "https://www.fotogroepwaalre.nl/wp-content/uploads/2021/09/2021_FotogroepWaalre_064.jpg",
-                    "https://www.fotogroepwaalre.nl/wp-content/uploads/2020/11/2020_FotogroepWaalre_018.jpg",
-                    "https://www.fotogroepwaalre.nl/wp-content/uploads/2020/11/2020_FotogroepWaalre_027.jpg"
-                ]
-                latestImage_ = URL(string: urlTestStrings[Int.random(in: 0..<urlTestStrings.count)])!
+                latestImage_ = URL(
+                               string: "https://www.fotogroepwaalre.nl/wp-content/uploads/2022/09/question-mark2.png"
+                )!
             }
             return latestImage_!
         }
@@ -201,7 +195,8 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
                                  // other attributes of a Member
                                  memberRolesAndStatus: MemberRolesAndStatus,
                                  dateInterval: DateInterval? = nil,
-                                 memberWebsite: URL? = nil
+                                 memberWebsite: URL? = nil,
+                                 latestImage: URL? = nil
                                 ) -> MemberPortfolio {
         let predicateFormat: String = "photoClub_ = %@ AND photographer_ = %@" // avoid localization
         let request = fetchRequest(predicate: NSPredicate(format: predicateFormat, photoClub, photographer))
@@ -212,7 +207,8 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
             if update(context: context, memberPortfolio: memberPortfolio,
                       memberRolesAndStatus: memberRolesAndStatus,
                       dateInterval: dateInterval,
-                      memberWebsite: memberWebsite) {
+                      memberWebsite: memberWebsite,
+                      latestImage: latestImage) {
                 print("Updated info for member \(memberPortfolio.photographer.fullName) " +
                       "in club \(memberPortfolio.photoClub.name)")
             }
@@ -224,7 +220,8 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
             _ = update(context: context, memberPortfolio: memberPortfolio,
                        memberRolesAndStatus: memberRolesAndStatus,
                        dateInterval: dateInterval,
-                       memberWebsite: memberWebsite)
+                       memberWebsite: memberWebsite,
+                       latestImage: latestImage)
             print("Created new membership for \(memberPortfolio.photographer.fullName) " +
                   "in \(memberPortfolio.photoClub.name)")
 			return memberPortfolio
@@ -232,10 +229,12 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
 	}
 
 	// Update non-identifying attributes/properties within existing instance of class PhotoClub
+    // swiftlint:disable:next function_parameter_count
     private static func update(context: NSManagedObjectContext, memberPortfolio: MemberPortfolio,
                                memberRolesAndStatus: MemberRolesAndStatus,
                                dateInterval: DateInterval?,
-                               memberWebsite: URL?) -> Bool {
+                               memberWebsite: URL?,
+                               latestImage: URL?) -> Bool {
 		var modified: Bool = false
 
         context.mergePolicy = NSMergePolicy.mergeByPropertyStoreTrump // not sure about this, prevents error
@@ -260,6 +259,7 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
         updateIfChanged(update: &memberPortfolio.dateIntervalStart, with: dateInterval?.start)
         updateIfChanged(update: &memberPortfolio.dateIntervalEnd, with: dateInterval?.end)
         updateIfChanged(update: &memberPortfolio.memberWebsite, with: memberWebsite)
+        updateIfChanged(update: &memberPortfolio.latestImage, with: latestImage)
 
 		if modified {
 			do {

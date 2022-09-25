@@ -33,19 +33,16 @@ extension TestMembersProvider { // fill with some initial hard-coded content
                                                          priority: 1
                                                         )
 
-        // add Peter as a person to Photographers (if needed)
-        let photographerPeter = Photographer.findCreateUpdate(
-                                                             context: testBackgroundContext,
-                                                             givenName: "Peter", familyName: "van den Hamer",
-                                                             phoneNumber: nil, eMail: "foobar@vdhamer.com"
-                                                            )
-        // register Peter as a member of Test (if needed)
-        _ = MemberPortfolio.findCreateUpdate(context: testBackgroundContext, // just a test case, no special roles
-                                    photoClub: clubTest, photographer: photographerPeter,
-                                    memberRolesAndStatus: MemberRolesAndStatus(role: [:], stat: [ .former: false]),
-                                    memberWebsite: URL(
-                                        string: "https://www.fotogroepwaalre.nl/fotos/Peter_van_den_Hamer_test"
-                                    )
+        addMember(context: testBackgroundContext,
+                  givenName: "Peter",
+                  familyName: "van den Hamer",
+                  photoClub: clubTest,
+                  memberRolesAndStatus: MemberRolesAndStatus(role: [ .admin: true ], stat: [ .former: false]),
+                  memberWebsite: URL(string: "https://www.fotogroepwaalre.nl/fotos/Peter_van_den_Hamer_test")!,
+                  latestImage: URL(string:
+                     "https://www.fotogroepwaalre.nl/fotos/Peter_van_den_Hamer_test/images/2015_Madeira_RX1r_064.jpg")!,
+                  phoneNumber: nil,
+                  eMail: "foobar@vdhamer.com"
         )
 
         if commit {
@@ -59,6 +56,28 @@ extension TestMembersProvider { // fill with some initial hard-coded content
             }
         }
 
+    }
+
+    private func addMember(context: NSManagedObjectContext,
+                           givenName: String,
+                           familyName: String,
+                           bornDT: Date? = nil,
+                           photoClub: PhotoClub,
+                           memberRolesAndStatus: MemberRolesAndStatus = MemberRolesAndStatus(role: [:], stat: [:]),
+                           memberWebsite: URL? = nil,
+                           latestImage: URL? = nil,
+                           phoneNumber: String? = nil,
+                           eMail: String? = nil) {
+        let photographer = Photographer.findCreateUpdate(
+                            context: context, givenName: givenName, familyName: familyName,
+                            memberRolesAndStatus: memberRolesAndStatus,
+                            bornDT: bornDT )
+
+        _ = MemberPortfolio.findCreateUpdate(
+                            context: context, photoClub: photoClub, photographer: photographer,
+                            memberRolesAndStatus: memberRolesAndStatus,
+                            memberWebsite: memberWebsite,
+                            latestImage: latestImage)
     }
 
 }
