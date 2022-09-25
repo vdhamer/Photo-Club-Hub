@@ -1,20 +1,20 @@
 2.2.0 (build 4xxx) xx-10-22
 ---------------------------
 
-• minimum required iOS version is 16.0
+• minimum required iOS version is now 16.0
 • updated Vice-chairman role for FGW
 • merged removeDeviceName branch
     • removed detection of owner's name (UIDevice.name no longer supported in iOS 16)
-• new iOS16 branch:
-    ? fix deprecated mapPin
-    ? fix deprecated NavigationView
 • merged PortfolioThumbnails branch contains:
     • new latestImage_ field in MemberPortfolio table
     • getter/setter for latestImage (that maps to latestImage_)
-    • Portfolios page displays a (fixed dummy) latest image per portfolio
+    • Portfolios page displays a (for now hardcoded) recent image per portfolio
+    • shows a stylized question mark if no latestImage is available
+    • added a latestImageSeen_ field in the MemberPortfolio table (not used yet)
 • renamed Test Photo Club (was Nederlands Fotografie Museum, which was confusing)
-• enable deletion of photo clubs (not normally needed)
-• added help text at the bottom of the Photo Clubs page
+• enabled deletion of photo clubs (not normally needed)
+• added gray help text at the bottom of the Photo Clubs page
+• extended list of birthdays to cover all members of FGW
 
 Design notes:
 - add getter/setter for latestImage field to MemberPortfolio class
@@ -24,6 +24,8 @@ Design notes:
 - asynchronously read index.xml file for every member and fills latestImage_ field in database
 
 [Github issues]
+? fix deprecated mapPin
+? fix deprecated NavigationView
 ? Fix warning "[Sandbox] Could not enable Mach bootstrap, errno = 1."
 ? Fix warning "This method should not be called on the main thread as it may lead to UI unresponsiveness."
 
