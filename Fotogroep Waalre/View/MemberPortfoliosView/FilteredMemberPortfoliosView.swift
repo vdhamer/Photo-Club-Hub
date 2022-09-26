@@ -58,7 +58,7 @@ struct FilteredMemberPortfoliosView: View {
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)
                         } else if phase.error != nil { // Displays image indicating an error occurred
-                            Image(systemName: "exclamationmark.triangle")
+                            Image("Orange-question-mark")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .foregroundStyle(.red, .yellow, .red) // red tertiary color should not show up
