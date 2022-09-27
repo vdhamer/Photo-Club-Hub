@@ -81,7 +81,7 @@ extension MemberPortfolio { // computed properties (some related to handling opt
         get {
             if latestImage_ == nil {
                 latestImage_ = URL(
-                               string: "https://www.fotogroepwaalre.nl/wp-content/uploads/2022/09/question-mark2.png"
+                               string: "https://www.fotogroepwaalre.nl/wp-content/uploads/2022/09/question-mark2.jpg"
                 )!
             }
             return latestImage_!

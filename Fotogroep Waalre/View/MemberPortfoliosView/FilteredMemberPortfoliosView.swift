@@ -64,7 +64,7 @@ struct FilteredMemberPortfoliosView: View {
                                 .foregroundStyle(.red, .yellow, .red) // red tertiary color should not show up
                                 .symbolRenderingMode(.palette)
                         } else { // Displays placeholder while loading
-                            Image(systemName: "hourglass")
+                            Image("Embarrassed-snail")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .foregroundStyle(.memberColor, .gray, .red) // red tertiary color should not show up
