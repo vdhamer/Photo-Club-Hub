@@ -173,9 +173,7 @@ extension FGWMembersProvider { // fill with some initial hard-coded content
 
         addMember(context: fgwBackgroundContext,
                   givenName: "Zoë", familyName: "Aspirant",
-                  photoClub: clubWaalre,
-                  latestImage: URL(string:
-                            "https://www.fotogroepwaalre.nl/wp-content/uploads/2022/09/question-mark2.png")!
+                  photoClub: clubWaalre
         )
 
         if commit {
