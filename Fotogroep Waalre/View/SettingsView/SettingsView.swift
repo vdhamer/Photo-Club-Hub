@@ -52,8 +52,8 @@ struct SettingsView: View {
                             HStack {
                                 RoleStatusIconView(memberRole: .viceChairman)
                                     .foregroundColor(.deceasedColor)
-                                Text("'Current members' includes 'club officers'",
-                                     comment: "Shown when 'Show club officers' entry is missing in Settings")
+                                Text("\"Current members\" includes \"club officers\"",
+                                     comment: "Shown when \"Show club officers\" entry is missing in Settings")
                                     .foregroundColor(.gray)
                             }
                         }
@@ -88,8 +88,8 @@ struct SettingsView: View {
                                 RoleStatusIconView(memberStatus: .deceased)
                                     .foregroundColor(.deceasedColor)
                                 Text(
-                                    "'Former members' includes 'deceased members'",
-                                    comment: "Shown when 'Show deceased members' entry is missing in Settings")
+                                    "\"Former members\" includes \"deceased members\"",
+                                    comment: "Shown when \"Show deceased members\" entry is missing in Settings")
                                     .foregroundColor(.gray)
                             }
                         }
