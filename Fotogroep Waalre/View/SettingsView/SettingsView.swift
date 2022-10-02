@@ -31,7 +31,7 @@ struct SettingsView: View {
             NavigationView {
                 List {
                     Section(header: Text("Member categories",
-                                         comment: "In Settings, above toggles like 'Show former members'"),
+                                         comment: "In Settings, above toggles like \"Show former members\""),
                             content: {
                         HStack {
                             RoleStatusIconView(memberStatus: .current)
