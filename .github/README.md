@@ -87,7 +87,7 @@ or sequentially), the app will show *multiple* portfolios for that photographer.
 
 ## Installation
 
-If you just want to install the binary version of the app, it is simplest to get it from Apple's app store (link).
+If you just want to install the binary version of the app, it is simplest to get it from Apple's app store ([link](https://apps.apple.com/nl/app/photo-club-waalre/id1178324330?l=en)).
 
 ### Cloning the repository
 
