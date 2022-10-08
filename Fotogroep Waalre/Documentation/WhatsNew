@@ -9,8 +9,14 @@ ToDo
 ? handle being offline better (when installing for 1st time)
 ! remember to update localizable texts and schema
 
+2.2.1 (Github hash xxxxxxx) xx-10-22
+------------------------------------
+
+* Portfolios screen
+    * .popover(attachmentAnchor:) gave wrong attachment point for Preferences and Info screens
+
 2.2.0 (Github hash c9f0d16) 08-10-22
-------------------------------------------------
+------------------------------------
 
 * This is build 4573 in Apple's App Store
 * Minimum required iOS version is now 16.0 (16.0 is available for iPhone, 16.x is expected soon for iPad).
@@ -31,7 +37,7 @@ ToDo
     * Minor text change (single to double quotes)
 
 2.1.1 (Github hash 4974461) 11-09-22
-------------------------------------------------
+------------------------------------
 
 * This is build 4381 in Apple's App Store
 * Bug fix
@@ -44,7 +50,7 @@ ToDo
     * Now all Previews of all Views work again
 
 2.1.0 (Github hash a658b52) 17-08-22
-------------------------------------------------
+------------------------------------
 
 * This is build 4379 in Apple's App Store
 * Minimum required iOS version is 15.5

@@ -57,8 +57,8 @@ struct MemberPortfoliosView: View {
                                 .foregroundStyle(.memberColor, .gray, .sliderColor)
                         }
                         .popover(isPresented: $showingFilterSettings,
-                                 attachmentAnchor: .point(UnitPoint()),
-                                 arrowEdge: .top,
+                                 attachmentAnchor: .rect(.bounds),
+                                 arrowEdge: .top, // ignored in iOS
                                  content: {
                             SettingsView(settings: $model.settings)
                                 .frame(minWidth: geo.size.width * 0.2,
@@ -81,8 +81,8 @@ struct MemberPortfoliosView: View {
                                 .foregroundStyle(.linkColor, .gray, .white)
                         }
                         .popover(isPresented: $showingReadme,
-                                 attachmentAnchor: .point(UnitPoint()),
-                                 arrowEdge: .top,
+                                 attachmentAnchor: .rect(.bounds),
+                                 arrowEdge: .top, // ignored in iOS
                                  content: {
                             ReadmeView()
                                 .frame(minWidth: geo.size.width * 0.2,
