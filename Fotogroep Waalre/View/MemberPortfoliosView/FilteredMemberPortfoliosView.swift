@@ -83,7 +83,7 @@ struct FilteredMemberPortfoliosView: View {
         if fetchRequest.nsPredicate == NSPredicate.none {
             Text("""
                  Warning: all member categories on the Preferences page are disabled. \
-                 Please enable one or more options to see names here.
+                 Please enable one or more options in Preferences.
                  """, comment: "Hint to the user if all of the Preference toggles are disabled.")
         } else if searchText.wrappedValue != "" && filteredPhotographerFetchResult.isEmpty {
             Text("""

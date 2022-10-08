@@ -1,36 +1,10 @@
-2.2.0 (build 4572) 28-09-22
----------------------------
+ToDo
+----
 
-• minimum required iOS version is now 16.0
-• updated Vice-chairman role for FGW
-• merged removeDeviceName branch
-    • removed detection of owner's name (UIDevice.name no longer supported in iOS 16)
-• merged PortfolioThumbnails branch contains:
-    • new latestImage_ field in MemberPortfolio table
-    • getter/setter for latestImage (that maps to latestImage_)
-    • Portfolios page displays a (for now hardcoded) recent image per portfolio
-    • shows a stylized question mark if no latestImage is available
-    • added a latestImageSeen_ field in the MemberPortfolio table (not used yet)
-• renamed Test Photo Club (was Nederlands Fotografie Museum, which was confusing)
-• enabled deletion of photo clubs (not normally needed)
-• added gray help text at the bottom of the Photo Clubs page
-• extended list of birthdays to cover all members of FGW
-
-Design notes:
-- add getter/setter for latestImage field to MemberPortfolio class
-  if latestImage_ == nil, return dummy image with app logo else return latestImage_ from database
-- initially read index.xml file for one fixed member (Peter) from Fotogroep_Waalre_App.swift
-  Use this to update latestImage_ in CoreData model
-- asynchronously read index.xml file for every member and fills latestImage_ field in database
-
-[Github issues]
-? fix deprecated mapPin
-? fix deprecated NavigationView
 ? Fix warning "[Sandbox] Could not enable Mach bootstrap, errno = 1."
 ? Fix warning "This method should not be called on the main thread as it may lead to UI unresponsiveness."
 
 ? replace NSSortDescriptor() by SortDescriptor(). Propagates to NSFetchRequest. request.wrappedValue?
-? use actual photo on Member page
 ? handle disappearing members
 ? filter who's who page
 ? use SwiftSoup to parse HTML page
@@ -38,30 +12,52 @@ Design notes:
 ? handle being offline better (when installing for 1st time)
 ! remember to update localizable texts and schema
 
-2.1.1 (build 4381) 11-09-22
----------------------------
+2.2.0 (build 4573; Github hash ???????) 08-10-22
+------------------------------------------------
 
-• minimum required iOS version is 15.5
-• internal: renamed various SwiftUI views (e.g. MemberListView > MemberPortfolioView)
-• internal: renamed Member table from Member to MemberPortfolio
-• bug fix: immediate crash running Github version (error in file name). No impact on App Store version.
-• internal: upgraded to XCode 14 and swiftlint 0.49.1
-• internal: got Previews of all Views working
+* Minimum required iOS version is now 16.0 (16.0 is available for iPhone, 16.x is expected soon for iPad).
+* Portfolios screen
+    * Displays a (temp hardcoded) thumbnail image per portfolio for all current members of the FGW club
+    * Increased font size (on iPad only) within the Portfolio list.
+    * If no recent image is available yet (e.g. ex-members), a stylised question mark is shown.
+    * While downloading the thumbnail, a sketch of an anxious-looking snail is shown (only visible if download takes a while).
+    * Incidentally, both the question-mark and the snail were generated using Stable Diffusion text-to-image software.
+* Photo Clubs screen
+    * Swipe-left to delete an unneeded photo club (usually not needed). FGW can be deleted, but will reappears on restart.
+    * Added a brief explanation at the bottom of the screen (about swiping and more).
+    * Renamed "Test Photo Club" (was "Nederlands Fotografie Museum", which is simply not a photo club).
+* Who's Who screen
+    * Extended list of birthdays (still hardcoded) to cover all current members of FGW.
+* Preferences screen
+    * Minor text change (single to double quotes)
 
-2.1.0 (build 4379) 17-08-22
----------------------------
+2.1.1 (build 4381; Github hash 7c459eb) 11-09-22
+------------------------------------------------
 
-• GitHub: source code is publically available (https://github.com/vdhamer/PhotoClubWaalre)
-• GitHub: renamed version to 2.1.x
-• GitHub: mechanism to secure some data of photo club members (GitHub related)
-• GitHub: extra README.md for GitHub web site (it is not included in or used by the App itself)
-• added an extra save() when app goes to background state
-• linked loading of Fotogroep Waalre data to .onAppear of first view
-• removed dedicated accessibility feature for specific user
-• minimum requirement is iOS 15.5
-• disabled autocorrection on Search text
-• added .mp4 "App Preview" video to App Store
-• [ removed SwiftUIEnvirontValue.png graphic from build ]
+* Bug fix
+    * Immediate crash running Github version (due to file name error). No impact on App Store version.
+* Refactoring
+    * Renamed a CoreData table from Member to MemberPortfolio
+    * Renamed various SwiftUI views (e.g. MemberListView > MemberPortfolioView)
+    * Upgraded to XCode 14 and swiftlint 0.49.1
+* SwiftUI previews
+    * Now all Previews of all Views work again
+
+2.1.0 (build 4379; Github hash a658b52) 17-08-22
+------------------------------------------------
+
+* Minimum required iOS version is 15.5
+* Github support
+    * Source code is publically available (https://github.com/vdhamer/PhotoClubWaalre)
+    * Mechanism to secure some data of photo club members (GitHub related)
+    * New README.md for GitHub web site (it is not included in or used by the App itself)
+* Robustness
+    * added an extra save() when app goes to background state
+    * Linked loading of Fotogroep Waalre data to .onAppear of first view
+    * Disabled autocorrection on Search text
+    * [ removed unneeded SwiftUIEnvirontValue.png graphic from build ]
+* Removed dedicated accessibility feature for specific user
+* Added .mp4 "App Preview" video to App Store
 
 2.0.10 (build 4303) 1-06-22
 ----------------------------

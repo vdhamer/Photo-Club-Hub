@@ -1,8 +1,8 @@
-/* Shown when 'Show club officers' entry is missing in Settings */
-"'Current members' includes 'club officers'" = "'Huidige leden' bevat 'bestuursleden'";
+/* Shown when "Show club officers" entry is missing in Settings */
+"“Current members” includes “club officers”" = "De optie “huidige leden“ bevat “bestuursleden“";
 
-/* Shown when 'Show deceased members' entry is missing in Settings */
-"'Former members' includes 'deceased members'" = "'Ex-leden' bevat 'overleden leden'";
+/* Shown when "Show deceased members" entry is missing in Settings */
+"“Former members” includes “deceased members”" = "De optie “ex-leden“ bevat “overleden leden“";
 
 /* <role1 and role2> of <photoclub>. Note <and> is handled elsewhere. */
 "%@ of %@" = "%@ van %@";
@@ -65,7 +65,7 @@ Button to close Info page. */
 /* Default status of member within a club. Used in concatenations. */
 "member" = "lid";
 
-/* In Settings, above toggles like 'Show former members' */
+/* In Settings, above toggles like "Show former members" */
 "Member categories" = "Lidmaatschapstypen";
 
 /* Section title on Readme page. */
@@ -224,7 +224,7 @@ Field at top of Members page that allows the user to filter the members based on
 "To see names here, please adapt the Search filter or enable additional categories on the Preferences page." = "Tip: om leden hier te zien, pass de Zoek filter aan of pas weergave instellingen in de Instellingen pagina aan.";
 
 /* Hint to the user if the database returns zero Members. */
-"To see names here, please enable additional categories on the Preferences page." = "Tip: op de Instellingen pagina staan alle instellingen momenteel op \"niet weergeven\".";
+"To see names here, please enable additional categories on the Preferences page." = "Tip: op de Instellingen pagina staan alle instellingen momenteel op \"niet weergeven\". Hierdoor is deze lijst leeg.";
 
 /* Administrative role of member within a club. Used as part of concatenations. */
 "treasurer" = "penningmeester";
@@ -233,7 +233,7 @@ Field at top of Members page that allows the user to filter the members based on
 "vice-chairman" = "vicevoorzitter";
 
 /* Hint to the user if all of the Preference toggles are disabled. */
-"Warning: all member categories on the Preferences page are disabled. Please enable one or more options to see names here." = "Waarschuwing: op de Instellingen pagina staan alle instellingen momenteel op \"niet weergeven\".";
+"Warning: all member categories on the Preferences page are disabled. Please enable one or more options in Preferences." = "Waarschuwing: op de Instellingen pagina staan alle soorten leden op “niet weergeven“. Hierdoor is deze lijst leeg.";
 
 /* Title of page with list of photographers */
 "Who's who" = "Namenlijst";
