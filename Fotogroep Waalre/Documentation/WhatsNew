@@ -9,9 +9,10 @@ ToDo
 ? handle being offline better (when installing for 1st time)
 ! remember to update localizable texts and schema
 
-2.2.0 (build 4573; Github hash ???????) 08-10-22
+2.2.0 (Github hash c9f0d16) 08-10-22
 ------------------------------------------------
 
+* This is build 4573 in Apple's App Store
 * Minimum required iOS version is now 16.0 (16.0 is available for iPhone, 16.x is expected soon for iPad).
 * Portfolios screen
     * Displays a (temp hardcoded) thumbnail image per portfolio for all current members of the FGW club
@@ -28,9 +29,10 @@ ToDo
 * Preferences screen
     * Minor text change (single to double quotes)
 
-2.1.1 (build 4381; Github hash 7c459eb) 11-09-22
+2.1.1 (Github hash 4974461) 11-09-22
 ------------------------------------------------
 
+* This is build 4381 in Apple's App Store
 * Bug fix
     * Immediate crash running Github version (due to file name error). No impact on App Store version.
 * Refactoring
@@ -40,9 +42,10 @@ ToDo
 * SwiftUI previews
     * Now all Previews of all Views work again
 
-2.1.0 (build 4379; Github hash a658b52) 17-08-22
+2.1.0 (Github hash a658b52) 17-08-22
 ------------------------------------------------
 
+* This is build 4379 in Apple's App Store
 * Minimum required iOS version is 15.5
 * Github support
     * Source code is publically available (https://github.com/vdhamer/PhotoClubWaalre)
