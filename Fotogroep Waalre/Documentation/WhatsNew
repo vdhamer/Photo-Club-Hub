@@ -20,6 +20,7 @@ ToDo
     * If no recent image is available yet (e.g. ex-members), a stylised question mark is shown.
     * While downloading the thumbnail, a sketch of an anxious-looking snail is shown (only visible if download takes a while).
     * Incidentally, both the question-mark and the snail were generated using Stable Diffusion text-to-image software.
+    * The App Store videos and screenshots have been updated to reflect the new thumbnails.
 * Photo Clubs screen
     * Swipe-left to delete an unneeded photo club (usually not needed). FGW can be deleted, but will reappears on restart.
     * Added a brief explanation at the bottom of the screen (about swiping and more).
