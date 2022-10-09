@@ -91,6 +91,7 @@
 		D02E4C8D281F41AF005C32D0 /* Fotogroep_Waalre_2_0_8.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fotogroep_Waalre_2_0_8.xcdatamodel; sourceTree = "<group>"; };
 		D0329449283F9D1D0044C70C /* Bundle+VersionBuild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+VersionBuild.swift"; sourceTree = "<group>"; };
 		D0333C7C27F88BAC00AF651E /* Fotogroep_Waalre_2_0_7.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fotogroep_Waalre_2_0_7.xcdatamodel; sourceTree = "<group>"; };
+		D0386F2A28F38E67004FBC58 /* Fotogroep_Waalre_2_2_2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fotogroep_Waalre_2_2_2.xcdatamodel; sourceTree = "<group>"; };
 		D0396074278CF6550035F750 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		D044646427FCE7C100990613 /* UIDevice+IsIPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+IsIPad.swift"; sourceTree = "<group>"; };
 		D04CCDCE28CE908300B689A4 /* LatestImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestImage.swift; sourceTree = "<group>"; };
@@ -1060,6 +1061,7 @@
 		D0831A3C277F72B70049AB84 /* Fotogroep_Waalre_2.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				D0386F2A28F38E67004FBC58 /* Fotogroep_Waalre_2_2_2.xcdatamodel */,
 				D0F5C52F28D689CE001E2574 /* Fotogroep_Waalre_2_1_1_noIsDeviceOwner.xcdatamodel */,
 				D06770F928CE445E00832079 /* Fotogroep_Waalre_2_2_0.xcdatamodel */,
 				D09D543428C4BD8300DC37C9 /* Fotogroep_Waalre_2_1_1.xcdatamodel */,
@@ -1075,7 +1077,7 @@
 				D0B1EDBA279771A500D37431 /* Fotogroep_Waalre_2_0_2.xcdatamodel */,
 				D0831A3D277F72B70049AB84 /* Fotogroep_Waalre.xcdatamodel */,
 			);
-			currentVersion = D06770F928CE445E00832079 /* Fotogroep_Waalre_2_2_0.xcdatamodel */;
+			currentVersion = D0386F2A28F38E67004FBC58 /* Fotogroep_Waalre_2_2_2.xcdatamodel */;
 			path = Fotogroep_Waalre_2.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
