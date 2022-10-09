@@ -16,10 +16,11 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
 
     init() {
         let fgwBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-        insertSomeMembers(fgwBackgroundContext: fgwBackgroundContext, commit: true)
+        // following is asynchronous, but not documented as such using async/await
+        insertSomeHardcodedMemberData(fgwBackgroundContext: fgwBackgroundContext, commit: true)
 
         let urlString = getFileAsString(secretFilename: "PrivateMembersURL2.txt",
-                                        unsecretFileName: "PrivateMembersURL3.txt")
+                                        unsecretFileName: "PrivateMembersURL3.txt") // fetch URL2 or URL3
         if let privateURL = URL(string: urlString) {
             Task {
                 await loadPrivateMembersFromWebsite( backgroundContext: fgwBackgroundContext,

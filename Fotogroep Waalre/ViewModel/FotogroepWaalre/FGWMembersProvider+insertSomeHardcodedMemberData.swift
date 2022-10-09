@@ -1,6 +1,6 @@
 //
-//  FGWMembersProvider+insertSomeMembers.swift
-//  FGWMembersProvider+insertSomeMembers
+//  FGWMembersProvider+insertSomeHardcodedMemberData.swift
+//  FGWMembersProvider+insertSomeHardcodedMemberData
 //
 //  Created by Peter van den Hamer on 01/08/2021.
 //
@@ -10,16 +10,16 @@ import MapKit // for CLLocationCoordinate2D
 
 extension FGWMembersProvider { // fill with some initial hard-coded content
 
-    func insertSomeMembers(fgwBackgroundContext: NSManagedObjectContext, commit: Bool) {
-        print("Starting insertSomeMembers() for Fotogroep Waalre in background")
-        fgwBackgroundContext.perform {
-            self.insertSomeMembersCommon(fgwBackgroundContext: fgwBackgroundContext, commit: commit)
-            print("Completed insertSomeMembers() for Fotogroep Waalre in background")
+    func insertSomeHardcodedMemberData(fgwBackgroundContext: NSManagedObjectContext, commit: Bool) {
+        fgwBackgroundContext.perform { // done asynchronously by CoreData
+            print("Starting insertSomeHardcodedMemberData() for Fotogroep Waalre in background")
+            self.insertSomeHardcodedMemberDataCommon(fgwBackgroundContext: fgwBackgroundContext, commit: commit)
+            print("Completed insertSomeHardcodedMemberData() for Fotogroep Waalre in background")
         }
     }
 
     // swiftlint:disable:next function_body_length
-    private func insertSomeMembersCommon(fgwBackgroundContext: NSManagedObjectContext, commit: Bool) {
+    private func insertSomeHardcodedMemberDataCommon(fgwBackgroundContext: NSManagedObjectContext, commit: Bool) {
 
         let clubWaalre = PhotoClub.findCreateUpdate( context: fgwBackgroundContext,
                                                      name: "Fotogroep Waalre", town: "Waalre",

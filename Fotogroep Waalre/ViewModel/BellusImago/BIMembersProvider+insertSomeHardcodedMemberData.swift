@@ -1,6 +1,6 @@
 //
-//  BIMembersProvider+insertSomeMembers.swift
-//  BIMembersProvider+insertSomeMembers
+//  BIMembersProvider+insertSomeHardcodedMemberData.swift
+//  BIMembersProvider+insertSomeHardcodedMemberData
 //
 //  Created by Peter van den Hamer on 01/08/2021.
 //
@@ -12,15 +12,15 @@ extension BIMembersProvider { // fill with some initial hard-coded content
 
     private static let bellusImagoURL = URL(string: "https://www.fotoClubBellusImago.nl")
 
-    func insertSomeMembers(biBackgroundContext: NSManagedObjectContext) {
+    func insertSomeHardcodedMemberData(biBackgroundContext: NSManagedObjectContext) {
         biBackgroundContext.perform {
-            print("Starting insertSomeMembers() for Bellus Imago in background")
-            self.insertSomeMembersCommon(biBackgroundContext: biBackgroundContext, commit: true)
+            print("Starting insertSomeHardcodedMemberData() for Bellus Imago in background")
+            self.insertSomeHardcodedMemberDataCommon(biBackgroundContext: biBackgroundContext, commit: true)
         }
     }
 
-    private func insertSomeMembersCommon(biBackgroundContext: NSManagedObjectContext,
-                                         commit: Bool) {
+    private func insertSomeHardcodedMemberDataCommon(biBackgroundContext: NSManagedObjectContext,
+                                                     commit: Bool) {
 
         // add Bellus Imago to Photo Clubs (if needed)
         let clubBellusImago = PhotoClub.findCreateUpdate(
@@ -63,7 +63,7 @@ extension BIMembersProvider { // fill with some initial hard-coded content
                 if biBackgroundContext.hasChanges {
                     try biBackgroundContext.save() // commit all changes
                 }
-                print("Completed insertSomeMembers() for Bellus Imago in background")
+                print("Completed insertSomeHardcodedMemberData() for Bellus Imago in background")
             } catch {
                 fatalError("Failed to save changes for Bellus Imago")
             }

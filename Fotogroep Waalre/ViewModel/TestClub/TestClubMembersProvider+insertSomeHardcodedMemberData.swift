@@ -1,6 +1,6 @@
 //
-//  TestClubMembersProvider+insertSomeMembers.swift
-//  TestClubMembersProvider+insertSomeMembers
+//  TestClubMembersProvider+insertSomeHardcodedMemberData.swift
+//  TestClubMembersProvider+insertSomeHardcodedMemberData
 //
 //  Created by Peter van den Hamer on 01/08/2021.
 //
@@ -12,15 +12,15 @@ extension TestClubMembersProvider { // fill with some initial hard-coded content
 
     private static let testURL = URL(string: "https://www.nederlandsfotomuseum.nl")
 
-    func insertSomeMembers(testBackgroundContext: NSManagedObjectContext) {
+    func insertSomeHardcodedMemberData(testBackgroundContext: NSManagedObjectContext) {
         testBackgroundContext.perform {
-            print("Starting insertSomeMembers() for photo club Test in background")
-            self.insertSomeMembersCommon(testBackgroundContext: testBackgroundContext, commit: true)
+            print("Starting insertSomeHardcodedMemberData() for photo club Test in background")
+            self.insertSomeHardcodedMemberDataCommon(testBackgroundContext: testBackgroundContext, commit: true)
         }
     }
 
-    private func insertSomeMembersCommon(testBackgroundContext: NSManagedObjectContext,
-                                         commit: Bool) {
+    private func insertSomeHardcodedMemberDataCommon(testBackgroundContext: NSManagedObjectContext,
+                                                     commit: Bool) {
 
         // add photo club to Photo Clubs (if needed)
         let clubTest = PhotoClub.findCreateUpdate(
@@ -50,7 +50,7 @@ extension TestClubMembersProvider { // fill with some initial hard-coded content
                 if testBackgroundContext.hasChanges {
                     try testBackgroundContext.save() // commit all changes
                 }
-                print("Completed insertSomeMembers() for Test in background")
+                print("Completed insertSomeHardcodedMemberData() for Test in background")
             } catch {
                 fatalError("Failed to save changes for Test")
             }

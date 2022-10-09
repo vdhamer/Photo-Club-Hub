@@ -15,8 +15,8 @@ class TestClubMembersProvider {
         let testBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
 
         // Photo club Test doesn't currently support loading member data from an online site.
-        // So we only insert a member or two from info hardcoded in insertSomeMembers()
-        insertSomeMembers(testBackgroundContext: testBackgroundContext)
+        // So we only insert a member or two from info hardcoded in insertSomeHardcodedMemberData()
+        insertSomeHardcodedMemberData(testBackgroundContext: testBackgroundContext)
     }
 
 }

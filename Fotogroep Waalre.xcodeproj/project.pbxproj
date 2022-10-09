@@ -33,10 +33,10 @@
 		D0831A22277F72270049AB84 /* MemberPortfoliosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A1D277F72270049AB84 /* MemberPortfoliosView.swift */; };
 		D0831A31277F72590049AB84 /* MemberPortfolio.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A24277F72590049AB84 /* MemberPortfolio.swift */; };
 		D0831A32277F72590049AB84 /* Photographer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A25277F72590049AB84 /* Photographer.swift */; };
-		D0831A33277F72590049AB84 /* BIMembersProvider+insertSomeMembers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A27277F72590049AB84 /* BIMembersProvider+insertSomeMembers.swift */; };
+		D0831A33277F72590049AB84 /* BIMembersProvider+insertSomeHardcodedMemberData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A27277F72590049AB84 /* BIMembersProvider+insertSomeHardcodedMemberData.swift */; };
 		D0831A34277F72590049AB84 /* BIMembersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A28277F72590049AB84 /* BIMembersProvider.swift */; };
 		D0831A35277F72590049AB84 /* SettingsStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A29277F72590049AB84 /* SettingsStruct.swift */; };
-		D0831A36277F72590049AB84 /* FGWMembersProvider+insertSomeMembers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A2B277F72590049AB84 /* FGWMembersProvider+insertSomeMembers.swift */; };
+		D0831A36277F72590049AB84 /* FGWMembersProvider+insertSomeHardcodedMemberData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A2B277F72590049AB84 /* FGWMembersProvider+insertSomeHardcodedMemberData.swift */; };
 		D0831A37277F72590049AB84 /* FGWMembersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A2C277F72590049AB84 /* FGWMembersProvider.swift */; };
 		D0831A38277F72590049AB84 /* PhotoClub.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A2D277F72590049AB84 /* PhotoClub.swift */; };
 		D0831A44277F731C0049AB84 /* Published+UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A40277F731C0049AB84 /* Published+UserDefaults.swift */; };
@@ -46,7 +46,7 @@
 		D0831A56277F82460049AB84 /* nl.xcloc in Resources */ = {isa = PBXBuildFile; fileRef = D0831A54277F82460049AB84 /* nl.xcloc */; };
 		D0831A57277F82460049AB84 /* en.xcloc in Resources */ = {isa = PBXBuildFile; fileRef = D0831A55277F82460049AB84 /* en.xcloc */; };
 		D0A0884B27F8C697002CC8E1 /* TestClubMembersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A0884927F8C697002CC8E1 /* TestClubMembersProvider.swift */; };
-		D0A0884C27F8C697002CC8E1 /* TestClubMembersProvider+insertSomeMembers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A0884A27F8C697002CC8E1 /* TestClubMembersProvider+insertSomeMembers.swift */; };
+		D0A0884C27F8C697002CC8E1 /* TestClubMembersProvider+insertSomeHardcodedMemberData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A0884A27F8C697002CC8E1 /* TestClubMembersProvider+insertSomeHardcodedMemberData.swift */; };
 		D0ADF4AE27922DCA00535432 /* MemberRolesAndStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ADF4AD27922DCA00535432 /* MemberRolesAndStatus.swift */; };
 		D0AE1B7527889E8600E0100E /* PhotoClubsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AE1B7427889E8600E0100E /* PhotoClubsView.swift */; };
 		D0AE1B782788A19500E0100E /* PhotographersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AE1B772788A19500E0100E /* PhotographersView.swift */; };
@@ -123,10 +123,10 @@
 		D0831A1D277F72270049AB84 /* MemberPortfoliosView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberPortfoliosView.swift; sourceTree = "<group>"; };
 		D0831A24277F72590049AB84 /* MemberPortfolio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberPortfolio.swift; sourceTree = "<group>"; };
 		D0831A25277F72590049AB84 /* Photographer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photographer.swift; sourceTree = "<group>"; };
-		D0831A27277F72590049AB84 /* BIMembersProvider+insertSomeMembers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BIMembersProvider+insertSomeMembers.swift"; sourceTree = "<group>"; };
+		D0831A27277F72590049AB84 /* BIMembersProvider+insertSomeHardcodedMemberData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BIMembersProvider+insertSomeHardcodedMemberData.swift"; sourceTree = "<group>"; };
 		D0831A28277F72590049AB84 /* BIMembersProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BIMembersProvider.swift; sourceTree = "<group>"; };
 		D0831A29277F72590049AB84 /* SettingsStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsStruct.swift; sourceTree = "<group>"; };
-		D0831A2B277F72590049AB84 /* FGWMembersProvider+insertSomeMembers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FGWMembersProvider+insertSomeMembers.swift"; sourceTree = "<group>"; };
+		D0831A2B277F72590049AB84 /* FGWMembersProvider+insertSomeHardcodedMemberData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FGWMembersProvider+insertSomeHardcodedMemberData.swift"; sourceTree = "<group>"; };
 		D0831A2C277F72590049AB84 /* FGWMembersProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FGWMembersProvider.swift; sourceTree = "<group>"; };
 		D0831A2D277F72590049AB84 /* PhotoClub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoClub.swift; sourceTree = "<group>"; };
 		D0831A3D277F72B70049AB84 /* Fotogroep_Waalre.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fotogroep_Waalre.xcdatamodel; sourceTree = "<group>"; };
@@ -141,7 +141,7 @@
 		D0831A55277F82460049AB84 /* en.xcloc */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = en.xcloc; sourceTree = "<group>"; };
 		D09D543428C4BD8300DC37C9 /* Fotogroep_Waalre_2_1_1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fotogroep_Waalre_2_1_1.xcdatamodel; sourceTree = "<group>"; };
 		D0A0884927F8C697002CC8E1 /* TestClubMembersProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestClubMembersProvider.swift; sourceTree = "<group>"; };
-		D0A0884A27F8C697002CC8E1 /* TestClubMembersProvider+insertSomeMembers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TestClubMembersProvider+insertSomeMembers.swift"; sourceTree = "<group>"; };
+		D0A0884A27F8C697002CC8E1 /* TestClubMembersProvider+insertSomeHardcodedMemberData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TestClubMembersProvider+insertSomeHardcodedMemberData.swift"; sourceTree = "<group>"; };
 		D0ADF4AD27922DCA00535432 /* MemberRolesAndStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberRolesAndStatus.swift; sourceTree = "<group>"; };
 		D0AE1B7427889E8600E0100E /* PhotoClubsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoClubsView.swift; sourceTree = "<group>"; };
 		D0AE1B772788A19500E0100E /* PhotographersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotographersView.swift; sourceTree = "<group>"; };
@@ -314,7 +314,7 @@
 		D0831A26277F72590049AB84 /* BellusImago */ = {
 			isa = PBXGroup;
 			children = (
-				D0831A27277F72590049AB84 /* BIMembersProvider+insertSomeMembers.swift */,
+				D0831A27277F72590049AB84 /* BIMembersProvider+insertSomeHardcodedMemberData.swift */,
 				D0831A28277F72590049AB84 /* BIMembersProvider.swift */,
 			);
 			path = BellusImago;
@@ -324,7 +324,7 @@
 			isa = PBXGroup;
 			children = (
 				D0831A2C277F72590049AB84 /* FGWMembersProvider.swift */,
-				D0831A2B277F72590049AB84 /* FGWMembersProvider+insertSomeMembers.swift */,
+				D0831A2B277F72590049AB84 /* FGWMembersProvider+insertSomeHardcodedMemberData.swift */,
 				D06061E728A0453F00A675A7 /* PrivateMembersURL2.txt */,
 				D06061E928A0456C00A675A7 /* PrivateMembersURL3.txt */,
 			);
@@ -390,7 +390,7 @@
 			isa = PBXGroup;
 			children = (
 				D0A0884927F8C697002CC8E1 /* TestClubMembersProvider.swift */,
-				D0A0884A27F8C697002CC8E1 /* TestClubMembersProvider+insertSomeMembers.swift */,
+				D0A0884A27F8C697002CC8E1 /* TestClubMembersProvider+insertSomeHardcodedMemberData.swift */,
 			);
 			path = TestClub;
 			sourceTree = "<group>";
@@ -647,7 +647,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0DE02772789D1B30062738C /* RoleIconView.swift in Sources */,
-				D0831A33277F72590049AB84 /* BIMembersProvider+insertSomeMembers.swift in Sources */,
+				D0831A33277F72590049AB84 /* BIMembersProvider+insertSomeHardcodedMemberData.swift in Sources */,
 				D0831A45277F731C0049AB84 /* FoundationExtensions.swift in Sources */,
 				D0831A1F277F72270049AB84 /* FilteredMemberPortfoliosView.swift in Sources */,
 				D0D5B58E28E4918F00244F34 /* Fotogroep_Waalre_2.xcdatamodeld in Sources */,
@@ -657,14 +657,14 @@
 				D06061ED28A05D4600A675A7 /* String+paths.swift in Sources */,
 				D0275F5527E3E21F002FA4FE /* View+OnTapGesture.swift in Sources */,
 				D0831A22277F72270049AB84 /* MemberPortfoliosView.swift in Sources */,
-				D0A0884C27F8C697002CC8E1 /* TestClubMembersProvider+insertSomeMembers.swift in Sources */,
+				D0A0884C27F8C697002CC8E1 /* TestClubMembersProvider+insertSomeHardcodedMemberData.swift in Sources */,
 				D0AE1B7527889E8600E0100E /* PhotoClubsView.swift in Sources */,
 				D0E449A327AECEC4003FDA37 /* ShapeStyle+Colors.swift in Sources */,
 				D0E694C927EF9B450054D634 /* LockAnimationView.swift in Sources */,
 				D032944A283F9D1D0044C70C /* Bundle+VersionBuild.swift in Sources */,
 				D0831A44277F731C0049AB84 /* Published+UserDefaults.swift in Sources */,
 				D024F11628423BE60055021B /* Sounds.swift in Sources */,
-				D0831A36277F72590049AB84 /* FGWMembersProvider+insertSomeMembers.swift in Sources */,
+				D0831A36277F72590049AB84 /* FGWMembersProvider+insertSomeHardcodedMemberData.swift in Sources */,
 				D0831A20277F72270049AB84 /* PhotoClubsInnerView.swift in Sources */,
 				D0E2235427DE9139002A8600 /* AnimatedLogoView.swift in Sources */,
 				D0AE1B782788A19500E0100E /* PhotographersView.swift in Sources */,
