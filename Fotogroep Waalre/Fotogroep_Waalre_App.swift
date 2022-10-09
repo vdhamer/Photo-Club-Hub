@@ -30,9 +30,9 @@ struct FotogroepWaalreApp: App {
             AnimatedLogoView()
                 .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext) // main Q!
                 .onAppear {
-                    //      _ = BIMembersProvider()
-                    _ = FGWMembersProvider()
-                    //      _ = TestMembersProvider()
+                    _ = FGWMembersProvider() // always load members of Fotogroep Waalre
+                    // other groups can be added here by calling, for example, TestMembersProvider()
+                    // but they are loaded by Pulling-to-Refresh the Photo Clubs screen
                 }
         }
         .onChange(of: scenePhase) { _ in

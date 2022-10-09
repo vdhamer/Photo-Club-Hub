@@ -7,7 +7,7 @@
 
 import CoreData // for PersistenceController
 
-class TestMembersProvider {
+class TestClubMembersProvider {
 
     init() {
 

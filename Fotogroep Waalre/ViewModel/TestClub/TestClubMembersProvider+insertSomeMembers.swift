@@ -1,6 +1,6 @@
 //
-//  BIMembersProvider+insertSomeMembers.swift
-//  BIMembersProvider+insertSomeMembers
+//  TestClubMembersProvider+insertSomeMembers.swift
+//  TestClubMembersProvider+insertSomeMembers
 //
 //  Created by Peter van den Hamer on 01/08/2021.
 //
@@ -8,7 +8,7 @@
 import CoreData // for NSManagedObjectContext
 import MapKit // for CLLocationCoordinate2D
 
-extension TestMembersProvider { // fill with some initial hard-coded content
+extension TestClubMembersProvider { // fill with some initial hard-coded content
 
     private static let testURL = URL(string: "https://www.nederlandsfotomuseum.nl")
 
@@ -26,7 +26,7 @@ extension TestMembersProvider { // fill with some initial hard-coded content
         let clubTest = PhotoClub.findCreateUpdate(
                                                          context: testBackgroundContext,
                                                          name: "Test Fotoclub", town: "Rotterdam",
-                                                         photoClubWebsite: TestMembersProvider.testURL,
+                                                         photoClubWebsite: TestClubMembersProvider.testURL,
                                                          fotobondNumber: 1234, kvkNumber: nil,
                                                          coordinates: CLLocationCoordinate2D(latitude: 51.905292,
                                                                                              longitude: 4.486934),

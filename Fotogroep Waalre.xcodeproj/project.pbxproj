@@ -45,8 +45,8 @@
 		D0831A51277F73C00049AB84 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0831A50277F73C00049AB84 /* Preview Assets.xcassets */; };
 		D0831A56277F82460049AB84 /* nl.xcloc in Resources */ = {isa = PBXBuildFile; fileRef = D0831A54277F82460049AB84 /* nl.xcloc */; };
 		D0831A57277F82460049AB84 /* en.xcloc in Resources */ = {isa = PBXBuildFile; fileRef = D0831A55277F82460049AB84 /* en.xcloc */; };
-		D0A0884B27F8C697002CC8E1 /* TestMembersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A0884927F8C697002CC8E1 /* TestMembersProvider.swift */; };
-		D0A0884C27F8C697002CC8E1 /* TestMembersProvider+insertSomeMembers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A0884A27F8C697002CC8E1 /* TestMembersProvider+insertSomeMembers.swift */; };
+		D0A0884B27F8C697002CC8E1 /* TestClubMembersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A0884927F8C697002CC8E1 /* TestClubMembersProvider.swift */; };
+		D0A0884C27F8C697002CC8E1 /* TestClubMembersProvider+insertSomeMembers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A0884A27F8C697002CC8E1 /* TestClubMembersProvider+insertSomeMembers.swift */; };
 		D0ADF4AE27922DCA00535432 /* MemberRolesAndStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ADF4AD27922DCA00535432 /* MemberRolesAndStatus.swift */; };
 		D0AE1B7527889E8600E0100E /* PhotoClubsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AE1B7427889E8600E0100E /* PhotoClubsView.swift */; };
 		D0AE1B782788A19500E0100E /* PhotographersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AE1B772788A19500E0100E /* PhotographersView.swift */; };
@@ -140,8 +140,8 @@
 		D0831A54277F82460049AB84 /* nl.xcloc */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = nl.xcloc; sourceTree = "<group>"; };
 		D0831A55277F82460049AB84 /* en.xcloc */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = en.xcloc; sourceTree = "<group>"; };
 		D09D543428C4BD8300DC37C9 /* Fotogroep_Waalre_2_1_1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fotogroep_Waalre_2_1_1.xcdatamodel; sourceTree = "<group>"; };
-		D0A0884927F8C697002CC8E1 /* TestMembersProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestMembersProvider.swift; sourceTree = "<group>"; };
-		D0A0884A27F8C697002CC8E1 /* TestMembersProvider+insertSomeMembers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TestMembersProvider+insertSomeMembers.swift"; sourceTree = "<group>"; };
+		D0A0884927F8C697002CC8E1 /* TestClubMembersProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestClubMembersProvider.swift; sourceTree = "<group>"; };
+		D0A0884A27F8C697002CC8E1 /* TestClubMembersProvider+insertSomeMembers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TestClubMembersProvider+insertSomeMembers.swift"; sourceTree = "<group>"; };
 		D0ADF4AD27922DCA00535432 /* MemberRolesAndStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberRolesAndStatus.swift; sourceTree = "<group>"; };
 		D0AE1B7427889E8600E0100E /* PhotoClubsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoClubsView.swift; sourceTree = "<group>"; };
 		D0AE1B772788A19500E0100E /* PhotographersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotographersView.swift; sourceTree = "<group>"; };
@@ -299,8 +299,8 @@
 			isa = PBXGroup;
 			children = (
 				D0831A2A277F72590049AB84 /* FotogroepWaalre */,
-				D0831A26277F72590049AB84 /* BellusImago */,
 				D0A0884827F8C697002CC8E1 /* TestClub */,
+				D0831A26277F72590049AB84 /* BellusImago */,
 				D0831A24277F72590049AB84 /* MemberPortfolio.swift */,
 				D04CCDCE28CE908300B689A4 /* LatestImage.swift */,
 				D0831A2D277F72590049AB84 /* PhotoClub.swift */,
@@ -389,8 +389,8 @@
 		D0A0884827F8C697002CC8E1 /* TestClub */ = {
 			isa = PBXGroup;
 			children = (
-				D0A0884927F8C697002CC8E1 /* TestMembersProvider.swift */,
-				D0A0884A27F8C697002CC8E1 /* TestMembersProvider+insertSomeMembers.swift */,
+				D0A0884927F8C697002CC8E1 /* TestClubMembersProvider.swift */,
+				D0A0884A27F8C697002CC8E1 /* TestClubMembersProvider+insertSomeMembers.swift */,
 			);
 			path = TestClub;
 			sourceTree = "<group>";
@@ -657,7 +657,7 @@
 				D06061ED28A05D4600A675A7 /* String+paths.swift in Sources */,
 				D0275F5527E3E21F002FA4FE /* View+OnTapGesture.swift in Sources */,
 				D0831A22277F72270049AB84 /* MemberPortfoliosView.swift in Sources */,
-				D0A0884C27F8C697002CC8E1 /* TestMembersProvider+insertSomeMembers.swift in Sources */,
+				D0A0884C27F8C697002CC8E1 /* TestClubMembersProvider+insertSomeMembers.swift in Sources */,
 				D0AE1B7527889E8600E0100E /* PhotoClubsView.swift in Sources */,
 				D0E449A327AECEC4003FDA37 /* ShapeStyle+Colors.swift in Sources */,
 				D0E694C927EF9B450054D634 /* LockAnimationView.swift in Sources */,
@@ -672,7 +672,7 @@
 				D0831A35277F72590049AB84 /* SettingsStruct.swift in Sources */,
 				D081655F278616930078AB16 /* SinglePortfolioView.swift in Sources */,
 				D0831A47277F731C0049AB84 /* PersistenceController.swift in Sources */,
-				D0A0884B27F8C697002CC8E1 /* TestMembersProvider.swift in Sources */,
+				D0A0884B27F8C697002CC8E1 /* TestClubMembersProvider.swift in Sources */,
 				D08319E7277F70A30049AB84 /* Fotogroep_Waalre_App.swift in Sources */,
 				D0831A1E277F72270049AB84 /* SettingsView.swift in Sources */,
 				D0831A37277F72590049AB84 /* FGWMembersProvider.swift in Sources */,
@@ -874,7 +874,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Fotogroep Waalre/Fotogroep Waalre.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4574;
+				CURRENT_PROJECT_VERSION = 4575;
 				DEVELOPMENT_ASSET_PATHS = "\"Fotogroep Waalre/Preview Content\"";
 				DEVELOPMENT_TEAM = YDEWPN9GZ6;
 				ENABLE_PREVIEWS = YES;
@@ -891,7 +891,7 @@
 					"@executable_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 2.2.1;
+				MARKETING_VERSION = 2.2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vdhamer.Fotogroep-Waalre";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -910,7 +910,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Fotogroep Waalre/Fotogroep Waalre.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4574;
+				CURRENT_PROJECT_VERSION = 4575;
 				DEVELOPMENT_ASSET_PATHS = "\"Fotogroep Waalre/Preview Content\"";
 				DEVELOPMENT_TEAM = YDEWPN9GZ6;
 				ENABLE_PREVIEWS = YES;
@@ -927,7 +927,7 @@
 					"@executable_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 2.2.1;
+				MARKETING_VERSION = 2.2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vdhamer.Fotogroep-Waalre";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -945,7 +945,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4574;
+				CURRENT_PROJECT_VERSION = 4575;
 				DEVELOPMENT_TEAM = YDEWPN9GZ6;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
@@ -965,7 +965,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4574;
+				CURRENT_PROJECT_VERSION = 4575;
 				DEVELOPMENT_TEAM = YDEWPN9GZ6;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
@@ -984,7 +984,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4574;
+				CURRENT_PROJECT_VERSION = 4575;
 				DEVELOPMENT_TEAM = YDEWPN9GZ6;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
@@ -1002,7 +1002,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4574;
+				CURRENT_PROJECT_VERSION = 4575;
 				DEVELOPMENT_TEAM = YDEWPN9GZ6;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;

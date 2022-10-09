@@ -9,7 +9,15 @@ ToDo
 ? handle being offline better (when installing for 1st time)
 ! remember to update localizable texts and schema
 
-2.2.1 (Github hash xxxxxxx) xx-10-22
+2.2.2 (Github hash xxxxxxx) xx-10-22
+------------------------------------
+
+* This is build 4575 in Apple's App Store
+* Refactoring
+    * Renamed TestClubMembersProvider class
+    * Added comments on club loading in Fotogroep_Waalre_App
+
+2.2.1 (Github hash 71b3b84) 09-10-22
 ------------------------------------
 
 * This is build 4574 in Apple's App Store
