@@ -12,13 +12,16 @@ ToDo
 2.2.1 (Github hash xxxxxxx) xx-10-22
 ------------------------------------
 
-* Portfolios screen
-    * .popover(attachmentAnchor:) gave wrong attachment point for Preferences and Info screens
+* This is build 4574 in Apple's App Store
+* Preferences screen
+    * Bug fix (iPad only): incorrect attachment point at top of screen. Cosmetic flaw.
+* Readme screen
+    * Bug fix (iPad only): incorrect attachment point at top of screen. Cosmetic flaw.
 
 2.2.0 (Github hash c9f0d16) 08-10-22
 ------------------------------------
 
-* This is build 4573 in Apple's App Store
+* This is build 4573 (but it didn't make it onto Apple's App Store)
 * Minimum required iOS version is now 16.0 (16.0 is available for iPhone, 16.x is expected soon for iPad).
 * Portfolios screen
     * Displays a (temp hardcoded) thumbnail image per portfolio for all current members of the FGW club
@@ -27,6 +30,7 @@ ToDo
     * While downloading the thumbnail, a sketch of an anxious-looking snail is shown (only visible if download takes a while).
     * Incidentally, both the question-mark and the snail were generated using Stable Diffusion text-to-image software.
     * The App Store videos and screenshots have been updated to reflect the new thumbnails.
+    * Veranderde vicevoorzitterschap doorgevoerd bij Fotogroep Waalre.
 * Photo Clubs screen
     * Swipe-left to delete an unneeded photo club (usually not needed). FGW can be deleted, but will reappears on restart.
     * Added a brief explanation at the bottom of the screen (about swiping and more).
