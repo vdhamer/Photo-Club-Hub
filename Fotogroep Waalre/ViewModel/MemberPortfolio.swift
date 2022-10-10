@@ -77,17 +77,17 @@ extension MemberPortfolio { // computed properties (some related to handling opt
         }
     }
 
-    var latestImage: URL {
+    var latestImageURL: URL {
         get {
-            if latestImage_ == nil {
-                latestImage_ = URL(
+            if latestImageURL_ == nil {
+                latestImageURL_ = URL(
                                string: "https://www.fotogroepwaalre.nl/wp-content/uploads/2022/09/question-mark2.jpg"
                 )!
             }
-            return latestImage_!
+            return latestImageURL_!
         }
         set {
-            latestImage_ = newValue
+            latestImageURL_ = newValue
         }
     }
 
@@ -259,7 +259,7 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
         updateIfChanged(update: &memberPortfolio.dateIntervalStart, with: dateInterval?.start)
         updateIfChanged(update: &memberPortfolio.dateIntervalEnd, with: dateInterval?.end)
         updateIfChanged(update: &memberPortfolio.memberWebsite, with: memberWebsite)
-        updateIfChanged(update: &memberPortfolio.latestImage, with: latestImage)
+        updateIfChanged(update: &memberPortfolio.latestImageURL, with: latestImage)
 
 		if modified {
 			do {

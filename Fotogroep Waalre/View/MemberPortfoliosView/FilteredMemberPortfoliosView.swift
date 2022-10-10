@@ -52,7 +52,7 @@ struct FilteredMemberPortfoliosView: View {
                             .foregroundColor(filteredMember.photographer.isDeceased ? .deceasedColor : .primary)
                     }
                     Spacer()
-                    AsyncImage(url: filteredMember.latestImage) { phase in
+                    AsyncImage(url: filteredMember.latestImageURL) { phase in
                         if let image = phase.image { // Displays the loaded image
                             image
                                 .resizable()
