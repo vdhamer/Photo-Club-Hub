@@ -273,6 +273,7 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
                            "in club \(memberPortfolio.photoClub.name): \(error)")
 			}
 		}
+
         return needsSaving
 	}
 
