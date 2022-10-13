@@ -17,6 +17,7 @@ ToDo
     * Renamed TestClubMembersProvider class
     * Added comments on club loading in Fotogroep_Waalre_App
     * Renamed insertSomeHardcodedMemberData() method
+    * Renamed latestImageURL property
 
 2.2.1 (Github hash 71b3b84) 09-10-22
 ------------------------------------

@@ -77,17 +77,17 @@ extension MemberPortfolio { // computed properties (some related to handling opt
         }
     }
 
-    var latestImage: URL {
+    var latestImageURL: URL {
         get {
-            if latestImage_ == nil {
-                latestImage_ = URL(
+            if latestImageURL_ == nil {
+                latestImageURL_ = URL(
                                string: "https://www.fotogroepwaalre.nl/wp-content/uploads/2022/09/question-mark2.jpg"
                 )!
             }
-            return latestImage_!
+            return latestImageURL_!
         }
         set {
-            latestImage_ = newValue
+            latestImageURL_ = newValue
         }
     }
 
@@ -228,40 +228,44 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
 		}
 	}
 
-	// Update non-identifying attributes/properties within existing instance of class PhotoClub
+	// Update non-identifying attributes/properties within existing instance of class MemberPortfolio
     // swiftlint:disable:next function_parameter_count
     private static func update(context: NSManagedObjectContext, memberPortfolio: MemberPortfolio,
                                memberRolesAndStatus: MemberRolesAndStatus,
                                dateInterval: DateInterval?,
                                memberWebsite: URL?,
                                latestImage: URL?) -> Bool {
-		var modified: Bool = false
+		var needsSaving: Bool = false
 
         context.mergePolicy = NSMergePolicy.mergeByPropertyStoreTrump // not sure about this, prevents error
 
         // function only works for non-optional Types.
         // If optional support needed, create variant with "inout Type?" instead of "inout Type"
-        func updateIfChanged<Type>(update persistedValue: inout Type, with newValue: Type?) where Type: Equatable {
-            if let newValue = newValue {
-                if newValue != persistedValue {
-                    persistedValue = newValue
-                    modified = true
+        func updateIfChanged<Type>(update persistedValue: inout Type,
+                                   with newValue: Type?) -> Bool // true only if needSaving
+                                   where Type: Equatable {
+            if let newValue = newValue { // nil means no new value known - and thus doesn't erase existing value
+                if persistedValue != newValue {
+                    persistedValue = newValue // actual update
+                    return true // update needs to be saved
                 }
             }
+            return false
         }
 
         let oldMemberRolesAndStatus = memberPortfolio.memberRolesAndStatus // copy of original value
         // actually this setter does merging (overload + or += operators for this?)
         memberPortfolio.memberRolesAndStatus = memberRolesAndStatus
         let newMemberRolesAndStatus = memberPortfolio.memberRolesAndStatus // copy after possible changes
-        modified = (oldMemberRolesAndStatus != newMemberRolesAndStatus)
 
-        updateIfChanged(update: &memberPortfolio.dateIntervalStart, with: dateInterval?.start)
-        updateIfChanged(update: &memberPortfolio.dateIntervalEnd, with: dateInterval?.end)
-        updateIfChanged(update: &memberPortfolio.memberWebsite, with: memberWebsite)
-        updateIfChanged(update: &memberPortfolio.latestImage, with: latestImage)
+        let changed0 = oldMemberRolesAndStatus != newMemberRolesAndStatus
+        let changed1 = updateIfChanged(update: &memberPortfolio.dateIntervalStart, with: dateInterval?.start)
+        let changed2 = updateIfChanged(update: &memberPortfolio.dateIntervalEnd, with: dateInterval?.end)
+        let changed3 = updateIfChanged(update: &memberPortfolio.memberWebsite, with: memberWebsite)
+        let changed4 = updateIfChanged(update: &memberPortfolio.latestImageURL, with: latestImage)
+        needsSaving = changed0 || changed1 || changed2 || changed3 || changed4 // forces execution of updateIfChanged()
 
-		if modified {
+		if needsSaving {
 			do {
 				try context.save()
 			} catch {
@@ -269,7 +273,8 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
                            "in club \(memberPortfolio.photoClub.name): \(error)")
 			}
 		}
-        return modified
+
+        return needsSaving
 	}
 
 }
