@@ -20,7 +20,7 @@ ToDo
     * Renamed latestImageURL in database and struct
 * Photo Clubs screen
     * Switched from MapPin to MapMarker on map (MapPin deprecated in iOS16)
-    * adapted icon per photo club on Photo Clubs page
+    * adapted icon representing photo clubs
 
 2.2.1 (Github hash 71b3b84) 09-10-22
 ------------------------------------
