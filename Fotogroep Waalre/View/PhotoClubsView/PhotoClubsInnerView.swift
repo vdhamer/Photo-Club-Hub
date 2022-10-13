@@ -16,6 +16,7 @@ struct PhotoClubsInnerView: View {
     private let permitDeletionOfPhotoClubs = true // disables .delete() functionality for this section
     @Environment(\.layoutDirection) var layoutDirection // .leftToRight or .rightToLeft
     @State private var scrollLocks: [String: Bool] = [:] // blocks scrolling and panning of maps
+    let accentColor: Color = .accentColor // needed to solve a typing issue
 
     // regenerate Section using dynamic FetchRequest with dynamic predicate and dynamic sortDescriptor
     init(predicate: NSPredicate) {
@@ -30,7 +31,9 @@ struct PhotoClubsInnerView: View {
         ForEach(fetchRequest, id: \.id) { filteredPhotoClub in
             VStack {
                 HStack(alignment: .center) {
-                    Image(systemName: "mappin.and.ellipse")
+                    Image(systemName: "mappin.circle.fill")
+                        .foregroundStyle(.white, .yellow, accentColor ) // yellow secondary color should not show up
+                        .symbolRenderingMode(.palette)
                         .foregroundColor(.accentColor)
                         .font(.title)
                         .padding([.trailing], 5)
@@ -82,8 +85,8 @@ struct PhotoClubsInnerView: View {
                                        span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))),
                     interactionModes: (scrollLocks[filteredPhotoClub.name] ?? true) ? [] : [.zoom, .pan],
                     annotationItems: fetchRequest) { photoClub in
-                    MapPin( coordinate: photoClub.coordinates,
-                            tint: photoClub == filteredPhotoClub ? .photoClubColor : .blue )
+                    MapMarker( coordinate: photoClub.coordinates,
+                               tint: photoClub == filteredPhotoClub ? .photoClubColor : .blue )
                 }
                     .frame(minHeight: 300, idealHeight: 500, maxHeight: .infinity)
                     .onAppear(perform: { scrollLocks[filteredPhotoClub.name] = fetchRequest.count > 1 })
