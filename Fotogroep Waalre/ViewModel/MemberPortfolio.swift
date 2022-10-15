@@ -77,7 +77,7 @@ extension MemberPortfolio { // computed properties (some related to handling opt
         }
     }
 
-    var latestImageURL: URL? { // nil means 
+    var latestImageURL: URL? { // nil means image is not available
         get {
             return latestImageURL_
         }
