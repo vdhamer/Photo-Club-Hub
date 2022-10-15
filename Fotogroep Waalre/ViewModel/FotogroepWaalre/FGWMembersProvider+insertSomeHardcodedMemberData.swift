@@ -71,7 +71,7 @@ extension FGWMembersProvider { // fill with some initial hard-coded content
                   photoClub: clubWaalre,
                   memberRolesAndStatus: MemberRolesAndStatus(role: [ .admin: true ], stat: [:]),
                   latestImage: URL(string:
-                            "https://www.fotogroepwaalre.nl/wp-content/uploads/2022/07/2022_FotogroepWaalre_049.jpg")!
+                            "https://www.fotogroepwaalre.nl/wp-content/uploads/2019/11/2019_FotogroepWaalre_028.jpg")!
         )
 
         addMember(context: fgwBackgroundContext,
