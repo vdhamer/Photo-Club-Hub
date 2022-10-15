@@ -136,7 +136,7 @@
 		D0831A43277F731C0049AB84 /* PersistenceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		D0831A49277F736C0049AB84 /* Version2Changes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Version2Changes.md; sourceTree = "<group>"; };
 		D0831A4A277F736C0049AB84 /* FotogroepWaalre.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = FotogroepWaalre.xlsx; sourceTree = "<group>"; };
-		D0831A4B277F736C0049AB84 /* WhatsNew */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WhatsNew; sourceTree = "<group>"; };
+		D0831A4B277F736C0049AB84 /* ReleaseNotes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = ReleaseNotes.md; sourceTree = "<group>"; };
 		D0831A50277F73C00049AB84 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D0831A54277F82460049AB84 /* nl.xcloc */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = nl.xcloc; sourceTree = "<group>"; };
 		D0831A55277F82460049AB84 /* en.xcloc */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = en.xcloc; sourceTree = "<group>"; };
@@ -360,7 +360,7 @@
 		D0831A48277F736C0049AB84 /* Documentation */ = {
 			isa = PBXGroup;
 			children = (
-				D0831A4B277F736C0049AB84 /* WhatsNew */,
+				D0831A4B277F736C0049AB84 /* ReleaseNotes.md */,
 				D0831A49277F736C0049AB84 /* Version2Changes.md */,
 				D0C6E10B282B18B700388A33 /* Readme FotogroepWaalre App EN.docx */,
 				D0831A4A277F736C0049AB84 /* FotogroepWaalre.xlsx */,

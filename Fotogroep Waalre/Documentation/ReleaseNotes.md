@@ -1,13 +1,3 @@
-Partial ToDo
-============
-* replace NSSortDescriptor() by SortDescriptor(). Propagates to NSFetchRequest. request.wrappedValue?
-* handle disappearing members
-* filter who's who page
-* use SwiftSoup to parse HTML page
-
-* handle being offline better (when installing for 1st time)
-* remember to update localizable texts and schema
-
 2.2.2 (Github hash ( tbd ) xx-10-22
 ====================================
 * This is build (tbd) in Apple's App Store
@@ -191,6 +181,16 @@ Settings
 Compatibility
 Usability
 Robustness
+
+Partial ToDo
+============
+* replace NSSortDescriptor() by SortDescriptor(). Propagates to NSFetchRequest. request.wrappedValue?
+* handle disappearing members
+* filter who's who page
+* use SwiftSoup to parse HTML page
+
+* handle being offline better (when installing for 1st time)
+* remember to update localizable texts and schema
 
 TODO Difficult
 ==============
