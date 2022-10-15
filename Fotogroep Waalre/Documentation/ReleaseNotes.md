@@ -18,6 +18,7 @@ Partial ToDo
     * Added comments on club loading in Fotogroep_Waalre_App
     * Renamed insertSomeHardcodedMemberData() method
     * Renamed latestImageURL in database and struct
+    * Converted WhatNew.txt to ReleaseNotes.md
 * Photo Clubs screen
     * Switched from MapPin to MapMarker on map (MapPin deprecated in iOS16)
     * adapted icon representing photo clubs
