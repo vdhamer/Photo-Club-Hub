@@ -53,18 +53,19 @@ struct FilteredMemberPortfoliosView: View {
                     }
                     Spacer()
                     AsyncImage(url: filteredMember.latestImageURL) { phase in
-                        if let image = phase.image { // Displays the loaded image
-                            image
+                        if let image = phase.image {
+                            image // Displays the loaded image
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)
-                        } else if phase.error != nil { // Displays image indicating an error occurred
-                            Image("Orange-question-mark")
+                        } else if phase.error != nil ||
+                                  filteredMember.latestImageURL == nil {
+                            Image("Orange-question-mark") // Displays image indicating an error occurred
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .foregroundStyle(.red, .yellow, .red) // red tertiary color should not show up
                                 .symbolRenderingMode(.palette)
-                        } else { // Displays placeholder while loading
-                            Image("Embarrassed-snail")
+                        } else {
+                            Image("Embarrassed-snail") // Displays placeholder while loading
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .foregroundStyle(.memberColor, .gray, .red) // red tertiary color should not show up

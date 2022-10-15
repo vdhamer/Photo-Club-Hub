@@ -13,7 +13,7 @@ This is build (***tbd***) in Apple's App Store
     * adapted icon representing photo clubs to match MapMarker
 * Portfolios screen
     * changed one thumbnail
-
+    * yellow question mark is no longer used (replacement is orange question mark that is stored as asset)
 ---------------------------------------------------------------------------
 ### 2.2.1 (Github hash 71b3b84) 09-10-22
 
@@ -22,7 +22,6 @@ This is build 4574 in Apple's App Store
     * Bug fix (iPad only): incorrect attachment point at top of screen. Cosmetic flaw.
 * Readme screen
     * Bug fix (iPad only): incorrect attachment point at top of screen. Cosmetic flaw.
-
 ---------------------------------------------------------------------------
 ### 2.2.0 (Github hash c9f0d16) 08-10-22
 
@@ -44,7 +43,6 @@ This is build 4573 (but it was rejected Apple's App Store because the screenshot
     * Extended list of birthdays (still hardcoded) to cover all current members of FGW.
 * Preferences screen
     * Minor text change (single to double quotes)
-
 ---------------------------------------------------------------------------
 ### 2.1.1 (Github hash 4974461) 11-09-22
 
@@ -57,7 +55,6 @@ This is build 4381 in Apple's App Store
     * Upgraded to XCode 14 and swiftlint 0.49.1
 * SwiftUI previews
     * Now all Previews of all Views work again
-
 ---------------------------------------------------------------------------
 ### 2.1.0 (Github hash a658b52) 17-08-22
 
@@ -74,7 +71,6 @@ This is build 4379 in Apple's App Store
     * removed unneeded SwiftUIEnvirontValue.png graphic from build
 * Removed dedicated accessibility feature for one specific user
 * Added .mp4 "App Preview" video to App Store
-
 ---------------------------------------------------------------------------
 ### 2.0.10 (not on Github) 1-06-22
 
@@ -84,7 +80,6 @@ This is build 4303 in Apple's App Store
     * added checking on Done button
     * added animation and sound to 2 toggles.
 * Minor text changes
-
 ---------------------------------------------------------------------------
 ### 2.0.9 (not on Github) 23-05-22
 
@@ -93,7 +88,6 @@ This is build 4299 in Apple's App Store
 * Animimation screen
     * Return, Esc and Space keys all dismiss the opening animation (if you have a keyboard attached)
 * Used @EnvironmentObject to distribute deviceOwnership
-
 ---------------------------------------------------------------------------
 ### 2.0.8 (not on Github) 09-05-22
 
@@ -109,7 +103,6 @@ This is build 4298 in Apple's App Store
     * renamed the "Photographer" page to "Who's who" and "About" page to "Readme"
 * numerous text changes to Dutch and English versions of the Readme page
 * dark mode version of app icon
-
 ---------------------------------------------------------------------------
 ### 2.0.7 (not on Github) 01-05-22
 
@@ -127,7 +120,6 @@ This is build 4294 in Apple's App Store
 * Readme screen
     * rewritten Readme page and added a Dutch language version
     * added scroll bar to the Readme page (it's fairly long)
-
 ---------------------------------------------------------------------------
 ### 2.0.6 (not on Github) 03-04-22
 
@@ -140,7 +132,6 @@ This is build 3982 in Apple's App Store
 * animation of lock icon on Photo Clubs page (with sound)
 * other minor user interface improvements: smaller click target for photo club URL, Done button, "Current members", "incl."
 * prevented largest DynamicType setting from causing WAALRE to wrap in Intro animation
-
 ---------------------------------------------------------------------------
 ### 2.0.5 (not on Github) 24-03-22
 
@@ -149,7 +140,6 @@ This is build 3976 in Apple's App Store
 * higher resolution version of opening image
 * minor user interface improvements: icon for Preferences, URL for photo clubs
 * scrolling and panning of maps can be locked by toggling a lock/unlock icon
-
 ---------------------------------------------------------------------------
 ### 2.0.4 (not on Github) 13-03-22
 
@@ -158,7 +148,6 @@ This is build 3974 in Apple's App Store
 * new opening animation showing App icon morphing into Bayer color filter array
 * internal improvements: handling of special colors
 * updated App Store screenshots (to do)
-
 ---------------------------------------------------------------------------
 ### 2.0.3 (not on Github) 29-01-22
 
@@ -169,7 +158,6 @@ This is build 3966 in Apple's App Store
 * added club-internal websites for two persons as demo within the Easter egg
 * internal improvements: SwiftUI previews, full set of localization comments, colors stored in Assets
 * internal: removed test code for non-existent photo club "Old Vic" in Reykjavík
-
 ---------------------------------------------------------------------------
 ### 2.0.2 (not on Github) 20-01-22
 
@@ -183,7 +171,6 @@ This is build 3956 in Apple's App Store
 * App Store: fixed issue with some screenshots still showing the old version 1.x
 * Internal improvements: schema migration (like firstName_ to givenName_).
 * And member roles converted to enums for robustness.
-
 ---------------------------------------------------------------------------
 ### 2.0.1 (not on Github) 09-01-22
 
@@ -199,14 +186,12 @@ This is build 3566 in Apple's App Store
 * display home location of any supported photo club (with surrounding photo clubs) on a map
 * added icons to Settings popup
 * added 3000 to build number to allow shipping as Fotogroep Waalre bundel
-
 ---------------------------------------------------------------------------
 ### 2.0.0 (not on Github) 01-01-22
 
 This is build 31, but it didn't reach Apple's' App Store, because app was too website-like.
 * First version using SwiftUI and CoreData.
 * First version designed to support more than one photo club.
-
 ---------------------------------------------------------------------------
 ## ToDo (incomplete)
 
