@@ -1,6 +1,5 @@
 Partial ToDo
-------------
-
+============
 * replace NSSortDescriptor() by SortDescriptor(). Propagates to NSFetchRequest. request.wrappedValue?
 * handle disappearing members
 * filter who's who page
@@ -9,9 +8,8 @@ Partial ToDo
 * handle being offline better (when installing for 1st time)
 * remember to update localizable texts and schema
 
-2.2.2 (Github hash ( tbd )) xx-10-22
-------------------------------------
-
+2.2.2 (Github hash ( tbd ) xx-10-22
+====================================
 * This is build (tbd) in Apple's App Store
 * Refactoring
    * Renamed TestClubMembersProvider class
@@ -24,8 +22,7 @@ Partial ToDo
    * adapted icon representing photo clubs
 
 2.2.1 (Github hash 71b3b84) 09-10-22
-------------------------------------
-
+====================================
 * This is build 4574 in Apple's App Store
 * Preferences screen
    * Bug fix (iPad only): incorrect attachment point at top of screen. Cosmetic flaw.
@@ -33,8 +30,7 @@ Partial ToDo
    * Bug fix (iPad only): incorrect attachment point at top of screen. Cosmetic flaw.
 
 2.2.0 (Github hash c9f0d16) 08-10-22
-------------------------------------
-
+====================================
 * This is build 4573 (but it was rejected Apple's App Store because the screenshots showed device bezels)
 * Minimum required iOS version is now 16.0 (16.0 is available for iPhone, 16.x is expected soon for iPad).
 * Portfolios screen
@@ -55,8 +51,7 @@ Partial ToDo
    * Minor text change (single to double quotes)
 
 2.1.1 (Github hash 4974461) 11-09-22
-------------------------------------
-
+====================================
 * This is build 4381 in Apple's App Store
 * Bug fix
    * Immediate crash running Github version (due to file name error). No impact on App Store version.
@@ -68,62 +63,68 @@ Partial ToDo
    * Now all Previews of all Views work again
 
 2.1.0 (Github hash a658b52) 17-08-22
-------------------------------------
-
+====================================
 * This is build 4379 in Apple's App Store
 * Minimum required iOS version is 15.5
 * Github support
-   * Source code is publically available (https://github.com/vdhamer/PhotoClubWaalre)
+   * Source code is publically available on [Github](https://github.com/vdhamer/PhotoClubWaalre)
    * Mechanism to secure some data of photo club members (GitHub related)
    * New README.md for GitHub web site (it is not included in or used by the App itself)
 * Robustness
    * added an extra save() when app goes to background state
    * Linked loading of Fotogroep Waalre data to .onAppear of first view
    * Disabled autocorrection on Search text
-   * [ removed unneeded SwiftUIEnvirontValue.png graphic from build ]
-* Removed dedicated accessibility feature for specific user
+   * removed unneeded SwiftUIEnvirontValue.png graphic from build
+* Removed dedicated accessibility feature for one specific user
 * Added .mp4 "App Preview" video to App Store
 
 2.0.10 (build 4303) 1-06-22
-----------------------------
-
-* fixed bug regarding updating of version/build info in iOS Settings (build script -> startup code)
+===========================
+* Fixed bug regarding updating of version/build info in iOS Settings (build script -> startup code)
 * Preferences screen
    * added checking on Done button
    * added animation and sound to 2 toggles.
-* minor text changes
+* Minor text changes
 
 2.0.9 (build 4299) 23-05-22
----------------------------
-
-* many text changes in embedded Dutch language ReadMe (and a few to the English version)
-* Return, Esc and Space keys all dismiss the opening animation (if you have a keyboard attached)
-* user @EnvironmentObject to distribute deviceOwnership
+===========================
+* Many text changes in embedded Dutch language ReadMe (and a few to the English version)
+* Animimation screen
+   * Return, Esc and Space keys all dismiss the opening animation (if you have a keyboard attached)
+* Used @EnvironmentObject to distribute deviceOwnership
 
 2.0.8 (build 4298) 09-05-22
----------------------------
-* simplified Preferences page, while adding toggle to show club officers
+===========================
+* Preferences screen
+   * simplified Preferences page, while adding toggle to show club officers
 * bug fix: sort oder on Photographers page was reversed
 * various minor user interface improvements
 * app has been tested on an M1 Mac
-* introduced the term "portfolio" in the User Interface and Readme page
-* renamed the "Photographer" page to "Who's who" and "About" page to "Readme"
+* Portfolio screen
+   * introduced the term "portfolio" in the User Interface and Readme page
+* Who's who screen
+   * renamed the "Photographer" page to "Who's who" and "About" page to "Readme"
 * numerous text changes to Dutch and English versions of the Readme page
 * dark mode version of app icon
 
 2.0.7 (build 4294) 01-05-22
----------------------------
-* fixed: "former members" no longer includes external coaches
-* text "Members" didn't fit in navigation view when scrolling upwards
-* iPad only: shifted location of search field on Members page
-* more precise alignment of logo in Opening page
-* changed order of photo clubs on Photo Clubs page
-* rewritten Readme page and added a Dutch language version
-* added scroll bar to the Readme page (it's fairly long)
-* minimized chance of user getting stuck in the opening animation
+===========================
+* Preferences screen
+   * fixed: "former members" no longer includes external coaches
+* Portfolios screen (called Members at the time)
+   * text "Members" didn't fit in navigation view when scrolling upwards
+   * iPad only: shifted location of search field on Members page
+* Animation screen
+   * more precise alignment of logo in Opening page
+   * minimized chance of user getting stuck in the opening animation
+* Photo clubs screen
+   * changed order of photo clubs
+* Readme screen
+   * rewritten Readme page and added a Dutch language version
+   * added scroll bar to the Readme page (it's fairly long)
 
 2.0.6 (build 3982) 03-04-22
----------------------------
+===========================
 * fixed top layout of Readme page on iPhones
 * new [i] button and Readme page
 * extended the list of items under Preferences
@@ -134,21 +135,21 @@ Partial ToDo
 * prevented largest DynamicType setting from causing WAALRE to wrap in Intro animation
 
 2.0.5 (build 3976) 24-03-22
----------------------------
+===========================
 * made opening animation more interactive
 * higher resolution version of opening image
 * minor user interface improvements: icon for Preferences, URL for photo clubs
 * scrolling and panning of maps can be locked by toggling a lock/unlock icon
 
 2.0.4 (build 3974) 13-03-22
----------------------------
+===========================
 * changed membership status icons and various other user interface improvements
 * new opening animation showing App icon morphing into Bayer color filter array
 * internal improvements: handling of special colors
 * updated App Store screenshots (to do)
 
 2.0.3 (build 3966) 29-01-22
----------------------------
+===========================
 * new Search feature to search the lists of names
 * the web addresses of club-external websites are now displayed (when the info is available)
 * minor user interface improvements: Settings page size, lilac theme color for Photo Clubs
@@ -157,7 +158,7 @@ Partial ToDo
 * internal: removed test code for non-existent photo club "Old Vic" in Reykjavík
 
 2.0.2 (build 3956) 20-01-22
----------------------------
+===========================
 * map supports panning.
 * user interface refinements in icons and colors.
 * highlights a person's name if app "guesses" this may be the device owner (based on device's name).
@@ -169,7 +170,7 @@ Partial ToDo
 * And member roles converted to enums for robustness.
 
 2.0.1 (build 3566) 09-01-22
----------------------------
+===========================
 * Minor: moved documentation files out of target / bundle.
 * Minor: changed accent colors in all List sections. Causes .accentcolor to turn gray when a page loses focus.
 * Stopped showing URLs in website
@@ -183,7 +184,7 @@ Partial ToDo
 * added 3000 to build number to allow shipping as Fotogroep Waalre bundel
 
 2.0.0 (build 31) 01-01-22
--------------------------
+=========================
 Rejected by Apple App Store, because of (messy?) dependency on the Safari browser
 
 Settings
@@ -192,6 +193,7 @@ Usability
 Robustness
 
 TODO Difficult
+==============
 * fix concurrency
 * internationalization
 * register CoreData into CoreSpotlight according to WWDC21
@@ -199,6 +201,7 @@ TODO Difficult
 * follow concurrency guidelines of https://developer.apple.com/videos/play/wwdc2021/10019/
 
 TODO Cleanup Easy
+=================
 * rename loadMembersFromServer & loadMembersFromCode
 * define photoClubID as a struct instead of (name: String, town: String) tuple. Prevents repeated typedef code.
 * remove TestMembersProvider
