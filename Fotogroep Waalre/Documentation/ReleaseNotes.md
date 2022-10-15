@@ -1,5 +1,5 @@
-ToDo
-----
+Partial ToDo
+------------
 
 ? replace NSSortDescriptor() by SortDescriptor(). Propagates to NSFetchRequest. request.wrappedValue?
 ? handle disappearing members
@@ -9,7 +9,7 @@ ToDo
 ? handle being offline better (when installing for 1st time)
 ! remember to update localizable texts and schema
 
-2.2.2 (Github hash xxxxxxx) xx-10-22
+2.2.2 (Github hash < tbd >) xx-10-22
 ------------------------------------
 
 * This is build <tbd> in Apple's App Store
@@ -86,99 +86,99 @@ ToDo
 2.0.10 (build 4303) 1-06-22
 ----------------------------
 
-• fixed bug regarding updating of version/build info in iOS Settings (build script -> startup code)
-• added checking on Done button in Preferences
-• added animation and sound to 2 toggles on the Preferences page
-• minor text changes
+* fixed bug regarding updating of version/build info in iOS Settings (build script -> startup code)
+* added checking on Done button in Preferences
+* added animation and sound to 2 toggles on the Preferences page
+* minor text changes
 
 2.0.9 (build 4299) 23-05-22
 ---------------------------
 
-• many text changes in embedded Dutch language ReadMe (and a few to the English version)
-• Return, Esc and Space keys all dismiss the opening animation (if you have a keyboard attached)
-• user @EnvironmentObject to distribute deviceOwnership
+* many text changes in embedded Dutch language ReadMe (and a few to the English version)
+* Return, Esc and Space keys all dismiss the opening animation (if you have a keyboard attached)
+* user @EnvironmentObject to distribute deviceOwnership
 
 2.0.8 (build 4298) 09-05-22
 ---------------------------
-• simplified Preferences page, while adding toggle to show club officers
-• bug fix: sort oder on Photographers page was reversed
-• various minor user interface improvements
-• app has been tested on an M1 Mac
-• introduced the term "portfolio" in the User Interface and Readme page
-• renamed the "Photographer" page to "Who's who" and "About" page to "Readme"
-• numerous text changes to Dutch and English versions of the Readme page
-• dark mode version of app icon
+* simplified Preferences page, while adding toggle to show club officers
+* bug fix: sort oder on Photographers page was reversed
+* various minor user interface improvements
+* app has been tested on an M1 Mac
+* introduced the term "portfolio" in the User Interface and Readme page
+* renamed the "Photographer" page to "Who's who" and "About" page to "Readme"
+* numerous text changes to Dutch and English versions of the Readme page
+* dark mode version of app icon
 
 2.0.7 (build 4294) 01-05-22
 ---------------------------
-• fixed: "former members" no longer includes external coaches
-• text "Members" didn't fit in navigation view when scrolling upwards
-• iPad only: shifted location of search field on Members page
-• more precise alignment of logo in Opening page
-• changed order of photo clubs on Photo Clubs page
-• rewritten Readme page and added a Dutch language version
-• added scroll bar to the Readme page (it's fairly long)
-• minimized chance of user getting stuck in the opening animation
+* fixed: "former members" no longer includes external coaches
+* text "Members" didn't fit in navigation view when scrolling upwards
+* iPad only: shifted location of search field on Members page
+* more precise alignment of logo in Opening page
+* changed order of photo clubs on Photo Clubs page
+* rewritten Readme page and added a Dutch language version
+* added scroll bar to the Readme page (it's fairly long)
+* minimized chance of user getting stuck in the opening animation
 
 2.0.6 (build 3982) 03-04-22
 ---------------------------
-• fixed top layout of Readme page on iPhones
-• new [i] button and Readme page
-• extended the list of items under Preferences
-• user can decide to show or hide current members via the Preferences page
-• Member page can show warnings/tips if the page is empty or contains duplicate names
-• animation of lock icon on Photo Clubs page (with sound)
-• other minor user interface improvements: smaller click target for photo club URL, Done button, "Current members", "incl."
-• prevented largest DynamicType setting from causing WAALRE to wrap in Intro animation
+* fixed top layout of Readme page on iPhones
+* new [i] button and Readme page
+* extended the list of items under Preferences
+* user can decide to show or hide current members via the Preferences page
+* Member page can show warnings/tips if the page is empty or contains duplicate names
+* animation of lock icon on Photo Clubs page (with sound)
+* other minor user interface improvements: smaller click target for photo club URL, Done button, "Current members", "incl."
+* prevented largest DynamicType setting from causing WAALRE to wrap in Intro animation
 
 2.0.5 (build 3976) 24-03-22
 ---------------------------
-• made opening animation more interactive
-• higher resolution version of opening image
-• minor user interface improvements: icon for Preferences, URL for photo clubs
-• scrolling and panning of maps can be locked by toggling a lock/unlock icon
+* made opening animation more interactive
+* higher resolution version of opening image
+* minor user interface improvements: icon for Preferences, URL for photo clubs
+* scrolling and panning of maps can be locked by toggling a lock/unlock icon
 
 2.0.4 (build 3974) 13-03-22
 ---------------------------
-• changed membership status icons and various other user interface improvements
-• new opening animation showing App icon morphing into Bayer color filter array
-• internal improvements: handling of special colors
-• updated App Store screenshots (to do)
+* changed membership status icons and various other user interface improvements
+* new opening animation showing App icon morphing into Bayer color filter array
+* internal improvements: handling of special colors
+* updated App Store screenshots (to do)
 
 2.0.3 (build 3966) 29-01-22
 ---------------------------
-• new Search feature to search the lists of names
-• the web addresses of club-external websites are now displayed (when the info is available)
-• minor user interface improvements: Settings page size, lilac theme color for Photo Clubs
-• added club-internal websites for two persons as demo within the Easter egg
-• internal improvements: SwiftUI previews, full set of localization comments, colors stored in Assets
-• internal: removed test code for non-existent photo club "Old Vic" in Reykjavík
+* new Search feature to search the lists of names
+* the web addresses of club-external websites are now displayed (when the info is available)
+* minor user interface improvements: Settings page size, lilac theme color for Photo Clubs
+* added club-internal websites for two persons as demo within the Easter egg
+* internal improvements: SwiftUI previews, full set of localization comments, colors stored in Assets
+* internal: removed test code for non-existent photo club "Old Vic" in Reykjavík
 
 2.0.2 (build 3956) 20-01-22
 ---------------------------
-• map supports panning.
-• user interface refinements in icons and colors.
-• highlights a person's name if app "guesses" this may be the device owner (based on device's name).
-• bug fix: deceased members were not displayable (even with Preferences toggle set).
-• Easter egg: pull-to-refresh the map page for basic demo of multi-club support. Swipe individual members left to delete.
-• Settings app now displays version and copyright information of the Photo Club Waalre app.
-• App Store: fixed issue with some screenshots still showing the old version 1.x
-• Internal improvements: schema migration (like firstName_ to givenName_).
-• And member roles converted to enums for robustness.
+* map supports panning.
+* user interface refinements in icons and colors.
+* highlights a person's name if app "guesses" this may be the device owner (based on device's name).
+* bug fix: deceased members were not displayable (even with Preferences toggle set).
+* Easter egg: pull-to-refresh the map page for basic demo of multi-club support. Swipe individual members left to delete.
+* Settings app now displays version and copyright information of the Photo Club Waalre app.
+* App Store: fixed issue with some screenshots still showing the old version 1.x
+* Internal improvements: schema migration (like firstName_ to givenName_).
+* And member roles converted to enums for robustness.
 
 2.0.1 (build 3566) 09-01-22
 ---------------------------
-• Minor: moved documentation files out of target / bundle.
-• Minor: changed accent colors in all List sections. Causes .accentcolor to turn gray when a page loses focus.
-• Stopped showing URLs in website
-• App name localized to system level preferences (but not to app-level preference)
-• switched to using WKWebView to run JavaScipt-based website. Uses NavigationLink instead of Link.
-• icons show role of members (instead of first letter) in Members screen
-• moved lists of members / photoclubs / photographers to separate pages
-• added entitlement for app background fetches (not working?)
-• display home location of any supported photo club (with surrounding photo clubs) on a map
-• added icons to Settings popup
-• added 3000 to build number to allow shipping as Fotogroep Waalre bundel
+* Minor: moved documentation files out of target / bundle.
+* Minor: changed accent colors in all List sections. Causes .accentcolor to turn gray when a page loses focus.
+* Stopped showing URLs in website
+* App name localized to system level preferences (but not to app-level preference)
+* switched to using WKWebView to run JavaScipt-based website. Uses NavigationLink instead of Link.
+* icons show role of members (instead of first letter) in Members screen
+* moved lists of members / photoclubs / photographers to separate pages
+* added entitlement for app background fetches (not working?)
+* display home location of any supported photo club (with surrounding photo clubs) on a map
+* added icons to Settings popup
+* added 3000 to build number to allow shipping as Fotogroep Waalre bundel
 
 2.0.0 (build 31) 01-01-22
 -------------------------
