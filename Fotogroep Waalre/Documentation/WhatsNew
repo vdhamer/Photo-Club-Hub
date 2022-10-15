@@ -34,7 +34,7 @@ ToDo
 2.2.0 (Github hash c9f0d16) 08-10-22
 ------------------------------------
 
-* This is build 4573 (but it didn't make it onto Apple's App Store)
+* This is build 4573 (but it was rejected Apple's App Store because the screenshots showed device bezels)
 * Minimum required iOS version is now 16.0 (16.0 is available for iPhone, 16.x is expected soon for iPad).
 * Portfolios screen
     * Displays a (temp hardcoded) thumbnail image per portfolio for all current members of the FGW club
