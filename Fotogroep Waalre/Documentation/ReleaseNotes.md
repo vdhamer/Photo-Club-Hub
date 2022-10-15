@@ -1,18 +1,18 @@
 Partial ToDo
 ------------
 
-? replace NSSortDescriptor() by SortDescriptor(). Propagates to NSFetchRequest. request.wrappedValue?
-? handle disappearing members
-? filter who's who page
-? use SwiftSoup to parse HTML page
+* replace NSSortDescriptor() by SortDescriptor(). Propagates to NSFetchRequest. request.wrappedValue?
+* handle disappearing members
+* filter who's who page
+* use SwiftSoup to parse HTML page
 
-? handle being offline better (when installing for 1st time)
-! remember to update localizable texts and schema
+* handle being offline better (when installing for 1st time)
+* remember to update localizable texts and schema
 
-2.2.2 (Github hash < tbd >) xx-10-22
+2.2.2 (Github hash ( tbd )) xx-10-22
 ------------------------------------
 
-* This is build <tbd> in Apple's App Store
+* This is build (tbd) in Apple's App Store
 * Refactoring
    * Renamed TestClubMembersProvider class
    * Added comments on club loading in Fotogroep_Waalre_App
@@ -192,16 +192,16 @@ Usability
 Robustness
 
 TODO Difficult
-! fix concurrency
-- internationalization
-? register CoreData into CoreSpotlight according to WWDC21
-- introduce "shared" pattern (thus killing PersistenceController?)
-! follow concurrency guidelines of https://developer.apple.com/videos/play/wwdc2021/10019/
+* fix concurrency
+* internationalization
+* register CoreData into CoreSpotlight according to WWDC21
+* introduce "shared" pattern (thus killing PersistenceController?)
+* follow concurrency guidelines of https://developer.apple.com/videos/play/wwdc2021/10019/
 
 TODO Cleanup Easy
-- rename loadMembersFromServer & loadMembersFromCode
-- define photoClubID as a struct instead of (name: String, town: String) tuple. Prevents repeated typedef code.
-- remove TestMembersProvider
-? rename Bundle Identifier from com.vdhamer.Fotogroep-Waalre2 to com.vdhamer.Fotogroep-Waalre (to force upgrading)
-- fix refresh in iOS15
-- move loadMembers from init to new loadMembers function (to allow refresh to work correctly?)
+* rename loadMembersFromServer & loadMembersFromCode
+* define photoClubID as a struct instead of (name: String, town: String) tuple. Prevents repeated typedef code.
+* remove TestMembersProvider
+* rename Bundle Identifier from com.vdhamer.Fotogroep-Waalre2 to com.vdhamer.Fotogroep-Waalre (to force upgrading)
+* fix refresh in iOS15
+* move loadMembers from init to new loadMembers function (to allow refresh to work correctly?)
