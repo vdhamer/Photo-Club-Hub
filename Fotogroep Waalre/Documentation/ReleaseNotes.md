@@ -1,12 +1,17 @@
 ---------------------------------------------------------------------------
-### 2.2.2 (Github hash (***tbd***)) xx-10-22
+### 2.2.3 (Github hash ???????) ??-11-22
+
+This is build (4576) in Apple's App Store
+
+---------------------------------------------------------------------------
+### 2.2.2 (Github hash 2462bf9) 23-10-22
 
 This is build (4575) in Apple's App Store
 * Photo Clubs screen
     * Switched from MapPin to MapMarker on map (MapPin deprecated in iOS16)
     * adapted icon representing photo clubs to match MapMarker
 * Portfolios screen
-    * changed one thumbnail (for CK)
+    * changed one thumbnail image (for CK)
 * Who's Who screen
     * fixed one incorrect role (CK was admin)
 * Refactoring
