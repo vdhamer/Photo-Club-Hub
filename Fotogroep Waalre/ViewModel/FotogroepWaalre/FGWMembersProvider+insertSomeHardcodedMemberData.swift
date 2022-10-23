@@ -11,7 +11,7 @@ import MapKit // for CLLocationCoordinate2D
 extension FGWMembersProvider { // fill with some initial hard-coded content
 
     func insertSomeHardcodedMemberData(fgwBackgroundContext: NSManagedObjectContext, commit: Bool) {
-        fgwBackgroundContext.perform { // done asynchronously by CoreData
+        fgwBackgroundContext.performAndWait { // done asynchronously by CoreData (.perform also works)
             print("Starting insertSomeHardcodedMemberData() for Fotogroep Waalre in background")
             self.insertSomeHardcodedMemberDataCommon(fgwBackgroundContext: fgwBackgroundContext, commit: commit)
             print("Completed insertSomeHardcodedMemberData() for Fotogroep Waalre in background")

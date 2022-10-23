@@ -77,14 +77,9 @@ extension MemberPortfolio { // computed properties (some related to handling opt
         }
     }
 
-    var latestImageURL: URL {
+    var latestImageURL: URL? { // nil means image is not available
         get {
-            if latestImageURL_ == nil {
-                latestImageURL_ = URL(
-                               string: "https://www.fotogroepwaalre.nl/wp-content/uploads/2022/09/question-mark2.jpg"
-                )!
-            }
-            return latestImageURL_!
+            return latestImageURL_
         }
         set {
             latestImageURL_ = newValue
@@ -242,8 +237,20 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
         // function only works for non-optional Types.
         // If optional support needed, create variant with "inout Type?" instead of "inout Type"
         func updateIfChanged<Type>(update persistedValue: inout Type,
-                                   with newValue: Type?) -> Bool // true only if needSaving
+                                   with newValue: Type?) -> Bool // true only if needsSaving
                                    where Type: Equatable {
+            if let newValue = newValue { // nil means no new value known - and thus doesn't erase existing value
+                if persistedValue != newValue {
+                    persistedValue = newValue // actual update
+                    return true // update needs to be saved
+                }
+            }
+            return false
+        }
+
+        func updateIfChangedOptional<Type>(update persistedValue: inout Type?,
+                                           with newValue: Type?) -> Bool // true only if needsSaving
+                                           where Type?: Equatable {
             if let newValue = newValue { // nil means no new value known - and thus doesn't erase existing value
                 if persistedValue != newValue {
                     persistedValue = newValue // actual update
@@ -258,16 +265,23 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
         memberPortfolio.memberRolesAndStatus = memberRolesAndStatus
         let newMemberRolesAndStatus = memberPortfolio.memberRolesAndStatus // copy after possible changes
 
-        let changed0 = oldMemberRolesAndStatus != newMemberRolesAndStatus
-        let changed1 = updateIfChanged(update: &memberPortfolio.dateIntervalStart, with: dateInterval?.start)
-        let changed2 = updateIfChanged(update: &memberPortfolio.dateIntervalEnd, with: dateInterval?.end)
-        let changed3 = updateIfChanged(update: &memberPortfolio.memberWebsite, with: memberWebsite)
-        let changed4 = updateIfChanged(update: &memberPortfolio.latestImageURL, with: latestImage)
-        needsSaving = changed0 || changed1 || changed2 || changed3 || changed4 // forces execution of updateIfChanged()
+        let changed1 = oldMemberRolesAndStatus != newMemberRolesAndStatus
+        let changed2 = updateIfChanged(update: &memberPortfolio.dateIntervalStart, with: dateInterval?.start)
+        let changed3 = updateIfChanged(update: &memberPortfolio.dateIntervalEnd, with: dateInterval?.end)
+        let changed4 = updateIfChanged(update: &memberPortfolio.memberWebsite, with: memberWebsite)
+        let changed5 = updateIfChangedOptional(update: &memberPortfolio.latestImageURL, with: latestImage)
+        needsSaving = changed1 || changed2 || changed3 || changed4 || changed5 // forces execution of updateIfChanged()
 
 		if needsSaving {
 			do {
 				try context.save()
+                if changed1 { print("Changed roles for \(memberPortfolio.photographer.fullName)") }
+                if changed2 { print("Changed start date for \(memberPortfolio.photographer.fullName)") }
+                if changed3 { print("Changed end date for \(memberPortfolio.photographer.fullName)") }
+                if changed4 { print("Changed club website for \(memberPortfolio.photographer.fullName)") }
+                if changed5 { print("Just changed latest image for \(memberPortfolio.photographer.fullName) " +
+                                    "to \(String(describing: latestImage?.absoluteString))")
+                }
 			} catch {
                 fatalError("Update failed for member \(memberPortfolio.photographer.fullName) " +
                            "in club \(memberPortfolio.photoClub.name): \(error)")
