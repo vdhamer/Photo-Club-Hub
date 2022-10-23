@@ -1,7 +1,7 @@
 ---------------------------------------------------------------------------
 ### 2.2.2 (Github hash (***tbd***)) xx-10-22
 
-This is build (***tbd***) in Apple's App Store
+This is build (4575) in Apple's App Store
 * Refactoring
     * Renamed TestClubMembersProvider class
     * Added comments on club loading in Fotogroep_Waalre_App
@@ -13,6 +13,8 @@ This is build (***tbd***) in Apple's App Store
     * adapted icon representing photo clubs to match MapMarker
 * Portfolios screen
     * changed one thumbnail
+* Who's Who screen'
+    * fixed one incorrect role (CK was admin)
 
 ---------------------------------------------------------------------------
 ### 2.2.1 (Github hash 71b3b84) 09-10-22
