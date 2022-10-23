@@ -12,7 +12,7 @@ This is build (4575) in Apple's App Store
     * Switched from MapPin to MapMarker on map (MapPin deprecated in iOS16)
     * adapted icon representing photo clubs to match MapMarker
 * Portfolios screen
-    * changed one thumbnail
+    * changed one thumbnail (for CK)
 * Who's Who screen'
     * fixed one incorrect role (CK was admin)
 
