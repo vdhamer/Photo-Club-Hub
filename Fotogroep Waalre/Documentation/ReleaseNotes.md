@@ -1,5 +1,5 @@
 ---------------------------------------------------------------------------
-### 2.2.3 (Github hash ???????) 23-11-22
+### 2.2.3 (Github hash 9d1dfed) 23-11-22
 
 This is build (4576) in Apple's App Store
 Release notes for 2.2.3 also contain 2.2.2 release notes
