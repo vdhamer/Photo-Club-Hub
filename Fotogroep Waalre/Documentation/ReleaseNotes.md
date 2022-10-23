@@ -2,12 +2,6 @@
 ### 2.2.2 (Github hash (***tbd***)) xx-10-22
 
 This is build (4575) in Apple's App Store
-* Refactoring
-    * Renamed TestClubMembersProvider class
-    * Added comments on club loading in Fotogroep_Waalre_App
-    * Renamed insertSomeHardcodedMemberData() method
-    * Renamed latestImageURL in database and struct
-    * Converted WhatNew.txt to ReleaseNotes.md
 * Photo Clubs screen
     * Switched from MapPin to MapMarker on map (MapPin deprecated in iOS16)
     * adapted icon representing photo clubs to match MapMarker
@@ -15,6 +9,12 @@ This is build (4575) in Apple's App Store
     * changed one thumbnail (for CK)
 * Who's Who screen'
     * fixed one incorrect role (CK was admin)
+* Refactoring
+    * Renamed TestClubMembersProvider class
+    * Added comments on club loading in Fotogroep_Waalre_App
+    * Renamed insertSomeHardcodedMemberData() method
+    * Renamed latestImageURL in database and struct
+    * Converted WhatNew.txt to ReleaseNotes.md
 
 ---------------------------------------------------------------------------
 ### 2.2.1 (Github hash 71b3b84) 09-10-22
