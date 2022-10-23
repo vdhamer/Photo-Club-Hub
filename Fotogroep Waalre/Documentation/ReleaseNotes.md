@@ -7,7 +7,7 @@ This is build (4575) in Apple's App Store
     * adapted icon representing photo clubs to match MapMarker
 * Portfolios screen
     * changed one thumbnail (for CK)
-* Who's Who screen'
+* Who's Who screen
     * fixed one incorrect role (CK was admin)
 * Refactoring
     * Renamed TestClubMembersProvider class
