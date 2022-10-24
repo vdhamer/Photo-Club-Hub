@@ -14,7 +14,7 @@ struct PhotographersView: View {
     var searchText: Binding<String>
 
     @StateObject var model = SettingsViewModel()
-    private var navigationTitle = String(localized: "Who's who", comment: "Title of page with list of photographers")
+    private var navigationTitle = String(localized: "Who's Who", comment: "Title of page with list of photographers")
 
     init(searchText: Binding<String>, navigationTitle: String? = nil) {
         self.searchText = searchText
