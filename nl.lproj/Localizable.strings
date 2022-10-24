@@ -166,7 +166,7 @@ Title used in PhotoClubs View */
 "Photo Club Waalre" = "Fotogroep Waalre";
 
 /* Title of page with clubs and maps */
-"Photo clubs" = "Fotogroepen";
+"Photo Clubs" = "Fotogroepen";
 
 /* Title of page showing member portfolios */
 "Portfolios" = "Portfolio's";
@@ -236,7 +236,7 @@ Field at top of Members page that allows the user to filter the members based on
 "Warning: all member categories on the Preferences page are disabled. Please enable one or more options in Preferences." = "Waarschuwing: op de Instellingen pagina staan alle soorten leden op “niet weergeven“. Hierdoor is deze lijst leeg.";
 
 /* Title of page with list of photographers */
-"Who's who" = "Namenlijst";
+"Who's Who" = "Namenlijst";
 
 /* Shown in gray at the bottom of the Photo Club page. */
 "You can prevent a map from scrolling using the lock icon. To add extra photo clubs for testing purposes, drag down and release the page. An individiual photo club can be deleted again by swiping it to the left. Delete a club's members (Portfolios) before deleting the club." = "Het slotje kan gebruikt worden om de landkaarten vast te zetten. De pagina omlaag slepen en loslaten (*pull to refresh*) laadt enkele extra testfotogroepen. Een fotogroep kan eventueel verwijderd worden door eerst alle betrokken Portfolio's te verwijden en dan de fotoclub naar links te slepen (*swipe left*).";
