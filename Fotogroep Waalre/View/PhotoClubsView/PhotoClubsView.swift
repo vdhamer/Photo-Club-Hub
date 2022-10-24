@@ -19,7 +19,7 @@ struct PhotoClubsView: View {
 
     private let title = String(localized: "Photo Club Waalre", comment: "Title used in PhotoClubs View")
     private var predicate: NSPredicate = NSPredicate.all
-    private var navigationTitle = String(localized: "Photo clubs", comment: "Title of page with clubs and maps")
+    private var navigationTitle = String(localized: "Photo Clubs", comment: "Title of page with clubs and maps")
 
     init(predicate: NSPredicate? = nil,
          navigationTitle: String? = nil) {
