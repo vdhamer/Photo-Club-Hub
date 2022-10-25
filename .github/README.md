@@ -305,7 +305,7 @@ Project Link: [https://github.com/vdhamer/PhotoClubWaalre](https://github.com/vd
 
 ## Acknowledgments
 
-* The opening image animation uses an image by Greetje van Son
+* The opening image animation uses a photo by Greetje van Son
 * A file with club member data is encrypted using [git-crypt](https://github.com/AGWA/git-crypt)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
