@@ -39,7 +39,7 @@
     <li><a href="#contributing">Contributing</a>
         <ul>
             <li><a href="#areas-for-contribution">Areas for Contribution</a></li>
-            <li><a href="#a-likely-architectural-change">A Likely Architecture Change</a></li>
+            <li><a href="#a-likely-architecture-change">A Likely Architecture Change</a></li>
             <li><a href="#how-to-contribute">How to Contribute</a></li>
         </ul>
     </li>
