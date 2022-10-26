@@ -15,35 +15,35 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
-        <li><a href="#the-name">The name</a></li>
-        <li><a href="#the-portfolio-concept">The portfolio concept</a></li>
-        <li><a href="#built-with">Built with</a></li>
+        <li><a href="#waalre">Waalre</a></li>
+        <li><a href="#the-portfolio-concept">The Portfolio Concept</a></li>
+        <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
     <li>
       <a href="#installation">Installation</a>
       <ul>
-        <li><a href="#cloning-the-repository">Cloning the repository</a></li>
-        <li><a href="#code-signing">Code signing</a></li>
-        <li><a href="#upgrading-the-app">Upgrading the app</a></li>
+        <li><a href="#cloning-the-repository">Cloning the Repository</a></li>
+        <li><a href="#code-signing">Code Signing</a></li>
+        <li><a href="#upgrading-the-app">Upgrading the App</a></li>
       </ul>
     </li>
-    <li><a href="#data-privacy">Data privacy</a></li>
-    <li><a href="#usage-and-features">Usage and features</a></li>
+    <li><a href="#data-privacy">Data Privacy</a></li>
+    <li><a href="#usage-and-features">Usage and Features</a></li>
         <ul>
-        <li><a href="#opening-animation">Opening animation</a></li>
-        <li><a href="#The-user-interface-screens">The user interface screens</a></li>
-        <li><a href="#multi-club-support">Multi-club support</a></li>
+        <li><a href="#opening-animation">Opening Animation</a></li>
+        <li><a href="#The-user-interface-screens">The User Interface Screens</a></li>
+        <li><a href="#multi-club-support">Multi-club Support</a></li>
       </ul>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a>
         <ul>
-            <li><a href="#areas-for-contribution">Areas for contribution</a></li>
-            <li><a href="#one-likely-big-change">One likely big change</a></li>
-            <li><a href="#how-to-contribute">How to contribute</a></li>
+            <li><a href="#areas-for-contribution">Areas for Contribution</a></li>
+            <li><a href="#a-likely-architectural-change">A Likely Architecture Change</a></li>
+            <li><a href="#how-to-contribute">How to Contribute</a></li>
         </ul>
     </li>
-    <li><a href="#about-the-model">About the model</a></li>
+    <li><a href="#about-the-model">About the Model</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
@@ -80,7 +80,7 @@ the years), the app will show *multiple* portfolios for that photographer.
 
 So this app is club-and-photographer oriented rather than just photographer oriented.
 
-### Built with
+### Built With
 
 * [Swift](https://www.swift.org) - programming language
 * [SwiftUI](https://developer.apple.com/xcode/swiftui/) - user interface framework
@@ -93,13 +93,13 @@ So this app is club-and-photographer oriented rather than just photographer orie
 
 If you just want to install the binary version of the app, it is simplest to get it from Apple's app store ([link](https://apps.apple.com/nl/app/photo-club-waalre/id1178324330?l=en)).
 
-### Cloning the repository
+### Cloning the Repository
 
 To install the code locally, it is easiest to use GitHub’s `Open with Xcode` feature.
 Those used to running Git from the command line should be able to manage on their own.
 Xcode handles the installation on a device or Xcode iPhone/iPad simulator.
 
-### Code signing
+### Code Signing
 
 During the build you may be prompted to provide a developer license (personal or commercial)
 in order to install the app on a physical device. This is standard by Apple for iOS apps.
@@ -109,7 +109,7 @@ that haven't passed through the Apple App Store. This requires enabling Develope
 Settings > Privacy & Security > Developer Mode. Again, this is a policy by Apple rather
 than something specific about this app.
 
-### Updating the app
+### Updating the App
 
 If you upgrade to a newer build of the app, data stored in the app's internal data storage
 stays available.
@@ -119,7 +119,7 @@ structure has changaed. If you remove and reinstall the app, this data gets rese
 This is standard behavior of Apple's Core Data framework, although the app does its bit
 so that Core Data can track, for example, renamed properties in a persisted object.
 
-## Data privacy
+## Data Privacy
 
 The following has **no impact** (zero, null, nil) on the app's functionality or user interface.
 So feel free to skip reading this.
@@ -151,9 +151,9 @@ Back to more relevant stuff.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## Usage and features
+## Usage and Features
 
-### Opening animation
+### Opening Animation
 
 When the app launches, it shows a large version of the app’s icon. 
 If you tap somewhere inside the image, an animation turns the icon into
@@ -172,7 +172,7 @@ To see the animation again, just shut down and restart the app.
 Is the animation useful? Well, it was a bit tricky to make (it runs on the device's GPU cores),
 but at least it explains where the app's logo came from.
 
-### The user interface screens
+### The User Interface Screens
 
 - `Portfolios` shows the available portfolios
    (gallery of images of a photographer in the context of one club).
@@ -196,7 +196,7 @@ but at least it explains where the app's logo came from.
     (club-independent) photography sites.
     The `Search` bar filters the list of photographers.
     
-### Multi-club support
+### Multi-club Support
 
 Version 1 of the app only supported Photo Club Waalre (aka *Fotogroep Waalre*).
 Version 2 added support for multiple photo clubs.
@@ -224,17 +224,17 @@ proposed features (and known issues).
 ## Contributing
 All contributions are welcome.
 
-### Areas for contribution
+### Areas for Contribution
 
 Possible contributions include adding features, code improvements, ideas on architecture and interface specifications, and possibly even a dedicated backend server.
 
 Contributions that don't require coding include beta testing, well thought-through feature requests, translations, and SVG icons.
 
-### One likely big change
+### A Likely Architecture Change
 
-A major design challenge for a next stage will be to provide a clean,
+A major design challenge for a next stage should be to provide a clean,
 standardized interface to retrieve data per photo club.
-The interface is needed to load the data, but also to keeps the data up to date.
+That interface is needed to load the data, but also to keeps the data up to date.
 This is needed because membership data and portfolios change regularly.
 The current interface is essentially a plug-in design with an adaptor per photo club.
 This needs to be replaced by a standard data interface to avoid
@@ -249,7 +249,7 @@ Thus portfolios are created and managed as Lightroom collections.
 These collections are then uploaded to the webserver with a single Upload click
 (thus triggering JuiceBox-Pro) where they can be downloaded by the app.
 
-### How to contribute
+### How to Contribute
 
 If you have a suggestion that would make this better, you can fork the repo and create a pull
 request.  The command line `git` commands to do this (but the Xcode IDE has equivalent commands under `Source Control`):
@@ -264,7 +264,7 @@ You can alternatively submit an `issue` with a tag like ”enhancement" or “bu
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## About the model
+## About the Model
 
 The app uses a [Swift-style MVVM](https://www.hackingwithswift.com/books/ios-swiftui/introducing-mvvm-into-your-swiftui-project)
 design, meaning the model data is stored in structs (and in database tables) rather than in
