@@ -55,14 +55,15 @@
 ### Waalre
 
 Photo Club Waalre is a photography club named after Waalre, a town in the south of The 
-Netherlands. Its members meet since 1988 to critique each other’s photos.
+Netherlands. Its members meet since 1988 to, among others, critique each other’s photos.
 
 In future versions, Waalre will probably disappear from the app's name
-once the multi-club feature of the app starts to gain traction.
+once the multi-club features of the app start to gain traction.
 
 ### The Portfolio Concept
 
-The app is designed to **showcase curated images made by members of photo clubs**.
+The app is designed to **showcase curated images made by members of photo clubs**. As will
+become apparent below, photo clubs play an important role in this app.
 
 The images within the app are divided into `portfolios`. By definition within this app, 
 a portfolio covers the part of a photographer's work that was shared *within* a single photo club.
