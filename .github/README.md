@@ -57,7 +57,7 @@
 Photo Club Waalre is a photography club named after Waalre, a town in the south of The 
 Netherlands. Its members meet since 1988 to critique each other’s photos.
 
-In future versions, the name Waalre may disappear from the app
+In future versions, Waalre will probably disappear from the app's name
 once the multi-club feature of the app starts to gain traction.
 
 ### The Portfolio Concept
