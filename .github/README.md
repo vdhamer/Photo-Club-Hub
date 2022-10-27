@@ -56,29 +56,26 @@
 
 Photo Club Waalre is a photography club named after Waalre, a town in the south of The 
 Netherlands. Its members meet since 1988 to critique each other’s photos.
-There are also yearly photography excursions and photo expositions.
 
-In future versions, the name Waalre is likely to disappear from the app
-after the app starts to be used by multiple photo clubs.
+In future versions, the name Waalre may disappear from the app
+once the multi-club feature of the app starts to gain traction.
 
 ### The Portfolio Concept
 
-The app is designed to **showcase curated work of members of photo clubs**.
+The app is designed to **showcase curated images made by members of photo clubs**.
 
-That work is organized into `portfolios` that hold the images.
-A typical portfolio spans a period of years or even decades. 
-The app shows the work in most-recent-first order.
+The images within the app are divided into `portfolios` that are displayed
+with the most recent images shown first (social media style, rather than biography style).
+By definition, a portfolio covers the part of a photographer's work that was shared
+*within* a single photo club.
 
-By definition, each portfolio covers that part of a photographer's work that was shared
-*within* a photo club.
+Thus images by a photographer that are *not* associated with a photo club are not supported
+by the app. Instead the app can provide a link to a photographer's personal website.
 
-Thus images by a photographer that are *not* associated with a photo club are not visible (not known)
-in the app. But the app does provide a link to a photographer's "external" personal website where possible.
-
-In the event that a photographer joined *multiple* supported photo clubs (simultaneously or over 
-the years), the app will show *multiple* portfolios for that photographer.
-
-So this app is club-and-photographer oriented rather than just photographer oriented.
+If a photographer joined *multiple* photo clubs, the app will show *multiple* portfolios (with different
+sets of images) for that photographer. Example 1: the photographer is simultaneously
+a member of two (or more) clubs. Example 2: the photographer used to be a member of club A, but later
+switched to club B.
 
 ### Built With
 
@@ -86,6 +83,7 @@ So this app is club-and-photographer oriented rather than just photographer orie
 * [SwiftUI](https://developer.apple.com/xcode/swiftui/) - user interface framework
 * [Core Data](https://developer.apple.com/documentation/coredata) - persistent storage framework
 * [JuiceBox Pro](https://www.juicebox.net) - JavaScript image galleries
+* [GitCrypt](https://github.com/AGWA/git-crypt) - encryption of selected files in Git repositories
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -95,7 +93,7 @@ If you just want to install the binary version of the app, it is simplest to get
 
 ### Cloning the Repository
 
-To install the code locally, it is easiest to use GitHub’s `Open with Xcode` feature.
+To install the code locally, ::it is easiest to use GitHub’s `Open with Xcode` feature.
 Those used to running Git from the command line should be able to manage on their own.
 Xcode handles the installation on a device or Xcode iPhone/iPad simulator.
 
