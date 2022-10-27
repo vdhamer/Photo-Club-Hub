@@ -64,10 +64,9 @@ once the multi-club feature of the app starts to gain traction.
 
 The app is designed to **showcase curated images made by members of photo clubs**.
 
-The images within the app are divided into `portfolios` that are displayed
-with the most recent images shown first (social media style, rather than biography style).
-By definition, a portfolio covers the part of a photographer's work that was shared
-*within* a single photo club.
+The images within the app are divided into `portfolios`. By definition within this app, 
+a portfolio covers the part of a photographer's work that was shared *within* a single photo club.
+Within a portfolio, images are displayed most-recent-shown first (social media style).
 
 Thus images by a photographer that are *not* associated with a photo club are not supported
 by the app. Instead the app can provide a link to a photographer's personal website.
