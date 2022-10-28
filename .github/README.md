@@ -111,9 +111,9 @@ than something specific about this app.
 If you upgrade to a newer build of the app, data stored in the app's internal data storage remains available.
 
 If needed, Core Data will automatically perform a so-called schema migration if the data
-structure has changaed. If you remove and reinstall the app, any existing CoreData data gets deleted.
+structure has changed. If you remove and reinstall the app, any existing CoreData data gets deleted.
 This is standard behavior of Apple's Core Data framework, although the app does its bit
-so that Core Data can track, for example, renamed properties in a persisted object.
+so that Core Data can track, for example, renamed struct types or renamed properties.
 
 ## Data Privacy
 
@@ -123,26 +123,24 @@ So feel free to skip reading this.
 The repo contains a minimal amount of encrypted data.
 But encryption code can draw a lot of attention, so we are explaining it here
 mainly so you don't waste time trying to figure our what's going on or whether
-you consider that secure enough. It simply isn't a big deal :nerd_face: :
+you consider that secure enough. It simply isn't a big deal :nerd_face:.
 
 So... one data file in the repository is encrypted. 
 As you will expect, the key needed to decrypt the file is *not* provided.
 The file, in its decrypted form, gives access to a password-protected HTML page on a server
-containing telephone numbers and e-mail addresses of one specific photo club's members. 
+containing telephone numbers and e-mail addresses of the members of Photo Club Waalre. 
 Apart from the fact that the data is of little interest, this has no impact because: 
-- the data, when is found to be encrypted, is automatically substitutded by a second non-encrypted page with the supposedly sensitive data removed. Meaning it contains dummy phone numbers and e-mail addresses.
-- the data (dummy or real) is currently not used yet by the app
+- the data, if is found to be encrypted, is automatically substituted by a second non-encrypted page with the sensitive data removed. Meaning it contains dummy phone numbers and e-mail addresses.
+- (dummy or real) phone numbers and e-mail addresses are not used yet by the app. Only date of birth is used to display (year-free) birthdays.
 
 So, all this hasstle is just so that a future App Store version *could* allow club members to
-unlock extra functionality using a password,
-but without leaking the "sensitive" data via GitHub.
+unlock extra functionality using a password, but without leaking the "sensitive" data via GitHub.
 
 And how would the password be protected? The app can check a hash of the provided password.
 But the source code then gives me access to the "sensitive" version of the web page, right?
-Wrong. Somehow bypassing the password (e.g. a modification of the code), does allow a user
+Wrong. Bypassing the password (e.g. a code modification), does allow a user
 to *see* the "dummy or real" data, right? Correct. 
-But without the not-provided encryption key a user still cannot access the sensitive version
-of the page. You would only be able to access the non-sensitive version.
+But without the not-provided encryption key a user would only be able to access the non-sensitive version.
 Back to more relevant stuff.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
