@@ -92,27 +92,26 @@ If you just want to install the binary version of the app, it is easiest to get 
 
 ### Cloning the Repository
 
-To install the code locally, ::it is easiest to use GitHub’s `Open with Xcode` feature.
-Those used to running Git from the command line should be able to manage on their own.
-Xcode handles the installation on a device or Xcode iPhone/iPad simulator.
+To install the source code locally, it is easiest to use GitHub’s `Open with Xcode` feature.
+Developers used to running Git from the command line should manage on their own.
+Xcode handles the installation of the binary on a physical device or Xcode iPhone/iPad simulator.
 
 ### Code Signing
 
 During the build you may be prompted to provide a developer license (personal or commercial)
 in order to install the app on a physical device. This is standard by Apple for iOS apps.
 
-Starting on iOS version 16 you may need to configure a physical device to allow it to run apps
+Starting on iOS version 16 you may need to configure physical devices to allow it to run apps
 that haven't passed through the Apple App Store. This requires enabling Developer Mode using
-Settings > Privacy & Security > Developer Mode. Again, this is a policy by Apple rather
+Settings > Privacy & Security > Developer Mode. Again, this is a standard policy by Apple rather
 than something specific about this app.
 
 ### Updating the App
 
-If you upgrade to a newer build of the app, data stored in the app's internal data storage
-stays available.
+If you upgrade to a newer build of the app, data stored in the app's internal data storage remains available.
 
-If necessary the device will do a so-called schema migration if the data
-structure has changaed. If you remove and reinstall the app, this data gets reset.
+If needed, Core Data will automatically perform a so-called schema migration if the data
+structure has changaed. If you remove and reinstall the app, any existing CoreData data gets deleted.
 This is standard behavior of Apple's Core Data framework, although the app does its bit
 so that Core Data can track, for example, renamed properties in a persisted object.
 
