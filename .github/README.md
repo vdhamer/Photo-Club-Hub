@@ -118,7 +118,7 @@ so that Core Data can track, for example, renamed struct types or renamed proper
 ## Data Privacy
 
 The following has **no impact** (zero, null, nil) on the app's functionality or user interface.
-So feel free to skip reading this.
+So feel free to skip this section.
 
 The repo contains a minimal amount of encrypted data.
 But encryption code can draw a lot of attention, so we are explaining it here
@@ -130,18 +130,18 @@ As you will expect, the key needed to decrypt the file is *not* provided.
 The file, in its decrypted form, gives access to a password-protected HTML page on a server
 containing telephone numbers and e-mail addresses of the members of Photo Club Waalre. 
 Apart from the fact that the data is of little interest, this has no impact because: 
-- the data, if is found to be encrypted, is automatically substituted by a second non-encrypted page with the sensitive data removed. Meaning it contains dummy phone numbers and e-mail addresses.
-- (dummy or real) phone numbers and e-mail addresses are not used yet by the app. Only date of birth is used to display (year-free) birthdays.
+- if the file is found to be encrypted, it is automatically substituted by a second non-encrypted file which doesn't give access to any sensitive data about members.with the sensitive data substituded by dummy values.
+- (dummy or real) phone numbers and e-mail addresses are not used yet by the app.
 
 So, all this hasstle is just so that a future App Store version *could* allow club members to
 unlock extra functionality using a password, but without leaking the "sensitive" data via GitHub.
 
 And how would the password be protected? The app can check a hash of the provided password.
-But the source code then gives me access to the "sensitive" version of the web page, right?
+But modified source code then gives access to the "sensitive" version of the web page, right?
 Wrong. Bypassing the password (e.g. a code modification), does allow a user
 to *see* the "dummy or real" data, right? Correct. 
 But without the not-provided encryption key a user would only be able to access the non-sensitive version.
-Back to more relevant stuff.
+So let's get back to more relevant stuff.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
