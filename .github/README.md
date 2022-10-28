@@ -57,31 +57,30 @@
 Photo Club Waalre is a photography club named after Waalre, a town in the south of The 
 Netherlands. Its members meet since 1988 to, among others, critique each other’s photos.
 
-In future versions, Waalre will probably disappear from the app's name
+In future versions, the name of the photo club will probably disappear from the app's name
 once the multi-club features of the app start to gain traction.
 
 ### The Portfolio Concept
 
-The app is designed to **showcase curated images made by members of photo clubs**. As will
-become apparent below, photo clubs play an important role in this app.
+The app is designed to **showcase curated images made by members of photo clubs**.
 
-The images within the app are divided into `portfolios`. By definition within this app, 
+The images within the app are divided into `portfolios`. Within this app 
 a portfolio covers the part of a photographer's work that was shared *within* a single photo club.
-Within a portfolio, images are displayed most-recent-shown first (social media style).
+Within a portfolio, images are displayed most-recent-first (as in social media and news channels).
 
-Thus images by a photographer that are *not* associated with a photo club are not supported
-by the app. Instead the app can provide a link to a photographer's personal website.
+Images by a photographer that are *not* associated with a photo club are not supported by the app
+because the app is club oriented. But the app can provide a link to a photographer's personal, non-club-oriented website.
 
 If a photographer joined *multiple* photo clubs, the app will show *multiple* portfolios (with different
 sets of images) for that photographer. Example 1: the photographer is simultaneously
-a member of two (or more) clubs. Example 2: the photographer used to be a member of club A, but later
-switched to club B.
+a member of multiple clubs. Example 2: the photographer is a former member of club A, but
+left club A and joined club B.
 
 ### Built With
 
 * [Swift](https://www.swift.org) - programming language
-* [SwiftUI](https://developer.apple.com/xcode/swiftui/) - user interface framework
-* [Core Data](https://developer.apple.com/documentation/coredata) - persistent storage framework
+* [SwiftUI](https://developer.apple.com/xcode/swiftui/) - an Apple user interface framework
+* [Core Data](https://developer.apple.com/documentation/coredata) - Apple's persistent storage framework
 * [JuiceBox Pro](https://www.juicebox.net) - JavaScript image galleries
 * [GitCrypt](https://github.com/AGWA/git-crypt) - encryption of selected files in Git repositories
 
