@@ -57,8 +57,8 @@
 Photo Club Waalre is a photography club named after Waalre, a town in the south of The 
 Netherlands. Its members meet since 1988 to, among others, critique each other’s photos.
 
-In future versions, the name of the photo club will probably disappear from the app's name
-once the multi-club features of the app start to gain traction.
+In future app versions, the name of the photo club will likely disappear from the app name
+because to stress the support for multiple photo clubs.
 
 ### The Portfolio Concept
 
@@ -88,7 +88,7 @@ left club A and joined club B.
 
 ## Installation
 
-If you just want to install the binary version of the app, it is simplest to get it from Apple's app store ([link](https://apps.apple.com/nl/app/photo-club-waalre/id1178324330?l=en)).
+If you just want to install the binary version of the app, it is easiest to get it from Apple's app store ([link](https://apps.apple.com/nl/app/photo-club-waalre/id1178324330?l=en)).
 
 ### Cloning the Repository
 
