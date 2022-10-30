@@ -62,7 +62,7 @@ to stress that the app supports multiple photo clubs.
 
 ### The Portfolio Concept
 
-The app is designed to **showcase curated images made by members of photo clubs**.
+The app is designed to *showcase curated images made by members of photo clubs*.
 
 The images within the app are divided into `portfolios`. Within this app 
 a portfolio covers the part of a photographer's work that was shared *within* a single photo club.
@@ -117,7 +117,7 @@ so that Core Data can track, for example, renamed struct types or renamed proper
 
 ## Data Privacy
 
-The following has **no impact** (zero, null, nil) on the app's functionality or user interface.
+The following has *no impact* (zero, null, nil) on the app's functionality or user interface.
 So feel free to skip this section.
 
 The repo contains a minimal amount of encrypted data.
@@ -151,7 +151,7 @@ So let's get back to more relevant stuff.
 
 When the app launches, it shows a large version of the app’s icon. 
 If you tap somewhere inside the image, an animation turns the icon into
-a digitial image illustrating how most digital cameras detect color.
+an image illustrating how most digital cameras detect color.
 
 > This involves a [Bayer color filter array](https://en.wikipedia.org/wiki/Bayer_filter)
 > that filters the light reaching each CMOS photocell or pixel.
@@ -159,11 +159,11 @@ a digitial image illustrating how most digital cameras detect color.
 > each with either a red, green of blue color filter. Thus only a single color is measured per
 > pixel: the missing information is estimated using surrounding pixels of that color.
 
-Tapping **inside** the image allows you to zoom in or out to your heart's content.
-Tapping **outside** the image area gets you to the main Portfolio screen of the app.
+Tapping *inside* the image allows you to zoom in or out to your heart's content.
+Tapping *outside* the image area gets you to the main Portfolio screen of the app.
 To see the animation again, just shut down and restart the app.
 
-Is the animation useful? Well, it was a bit tricky to make (it runs on the device's GPU cores),
+Is the animation useful? Well, it was interesting to create and runs on the device's GPU cores,
 but at least it explains where the app's logo came from.
 
 ### The User Interface Screens
@@ -172,29 +172,37 @@ but at least it explains where the app's logo came from.
    (gallery of images of a photographer in the context of one club).
    Clicking on a name shows a screen with the contents of the selected portfolio.
    Swiping left deletes an entry, but is seldom needed.
-   The `Search` bar filters the portfolios to only show photographers with that name.
+   The `Search` bar filters the list of portfolios.
 
-- `Settings` allows you to configure which kinds of members you want to see in the list of
-   Portfolios. You can for example choose to show former members.
+- `Settings` allows you to configure which portfolios you want to be visible in the
+   Portfolios screen. You can, for example, choose whether or not to include former members.
 
 - `Readme` contains in-app background information that is comparable to this text.
 
-- `Photo clubs` lists the photo clubs that are currently loaded.
-    A purple pin on the map shows the location where a selected club meets.
-    A blue pin shows the location of non-selected photo clubs.
-    A lock icon sets whether the map is frozen or can be zoomed and panned.
+- `Photo Clubs` lists the photo clubs that are currently loaded.
+   A purple pin on the map shows the location where a selected club meets.
+   A blue pin shows the location of other nearby photo clubs.
+   A lock icon sets whether the map is frozen or can be zoomed-and-panned.
 
-- `Photographers` lists the photographers currently loaded into the app. I
-	It shows information that is club-independent.
-    The entries may display birthdays, and clickable links to personal
-    (club-independent) photography sites.
-    The `Search` bar filters the list of photographers.
+- `Who's Who` lists the photographers that you can be found in the app.
+   It shows information that is club-independent.
+   The entries may display birthdays, and clickable links to personal
+   (club-independent) photography sites.
+   The `Search` bar filters the list of photographers.
+   
+- `Individual portfolio`
+   The title of a portfolio is the photographer's name.
+   Note that there may be multiple portfolios for that photographer: one per photo clubs.
+   Images are shown in chronological order, with the most recent first.
+   For Fotogroep Waalre, you will see the year the image was created in the caption.
+   You can swipe to manually move to other images.
+   There is also an autoplay mode that advanced the image automatically after a few seconds.
     
 ### Multi-club Support
 
 Version 1 of the app only supported Photo Club Waalre (aka *Fotogroep Waalre*).
 Version 2 added support for multiple photo clubs.
-For a preview of how that works, drag down (“pull to refresh”) the Photo Club page.
+For a preview of how that works, drag down (“pull to refresh”) the Photo Clubs page.
 This loads just enough test data to demo the feature.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
