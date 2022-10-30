@@ -101,10 +101,10 @@ Xcode handles the installation of the binary on a physical device or Xcode iPhon
 During the build you may be prompted to provide a developer license (personal or commercial)
 in order to install the app on a physical device. This is standard by Apple for iOS apps.
 
-Starting on iOS version 16 you may need to configure physical devices to allow it to run apps
-that haven't passed through the Apple App Store. This requires enabling Developer Mode using
-Settings > Privacy & Security > Developer Mode. Again, this is a standard policy by Apple rather
-than something specific about this app.
+Starting with iOS version 16 you will need to configure physical devices to allow them to run apps
+that have not been distributed via the Apple App Store. This configuration requires enabling
+Developer Mode on the device using `Settings` > `Privacy & Security` > `Developer Mode`.
+Again, this is a standard iOS policy rather than something specific to this app.
 
 ### Updating the App
 
