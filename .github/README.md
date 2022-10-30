@@ -190,7 +190,7 @@ but at least it explains where the app's logo came from.
    (club-independent) photography sites.
    The `Search` bar filters the list of photographers.
    
-- `Photographer name`
+- `<Photographer name>`
    The title of a portfolio is the photographer's name.
    Note that there may be multiple portfolios for that photographer: one per photo clubs.
    Images are shown in chronological order, with the most recent first.
