@@ -190,13 +190,13 @@ but at least it explains where the app's logo came from.
    (club-independent) photography sites.
    The `Search` bar filters the list of photographers.
    
-- `Individual portfolio`
+- `Photographer name`
    The title of a portfolio is the photographer's name.
    Note that there may be multiple portfolios for that photographer: one per photo clubs.
    Images are shown in chronological order, with the most recent first.
    For Fotogroep Waalre, you will see the year the image was created in the caption.
-   You can swipe to manually move to other images.
-   There is also an autoplay mode that advanced the image automatically after a few seconds.
+   You can *swipe* to manually move forwards/backwards between the images.
+   There is also an *autoplay* mode that advanced the image automatically after a few seconds.
     
 ### Multi-club Support
 
