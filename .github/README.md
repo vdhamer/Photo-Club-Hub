@@ -26,16 +26,16 @@
         <li><a href="#cloning-the-repository">Cloning the Repository</a></li>
         <li><a href="#code-signing">Code Signing</a></li>
         <li><a href="#upgrading-the-app">Upgrading the App</a></li>
+	<li><a href="#data-privacy">Data Privacy</a></li>
       </ul>
-    </li>
-    <li><a href="#data-privacy">Data Privacy</a></li>
+    </li>  
     <li><a href="#usage-and-features">Usage and Features</a></li>
         <ul>
         <li><a href="#opening-animation">Opening Animation</a></li>
-        <li><a href="#The-user-interface-screens">The User Interface Screens</a></li>
+        <li><a href="#the-user-interface-screens">The User Interface Screens</a></li>
         <li><a href="#multi-club-support">Multi-club Support</a></li>
-      </ul>
-    <li><a href="#roadmap">Roadmap</a></li>
+        <li><a href="#roadmap">Roadmap</a></li>
+    </ul>
     <li><a href="#contributing">Contributing</a>
         <ul>
             <li><a href="#areas-for-contribution">Areas for Contribution</a></li>
@@ -115,7 +115,7 @@ structure has changed. If you remove and reinstall the app, any existing CoreDat
 This is standard behavior of Apple's Core Data framework, although the app does its bit
 so that Core Data can track, for example, renamed struct types or renamed properties.
 
-## Data Privacy
+### Data Privacy
 
 The following has *no impact* (zero, null, nil) on the app's functionality or user interface.
 So feel free to skip this section.
@@ -205,9 +205,7 @@ Version 2 added support for multiple photo clubs.
 For a preview of how that works, drag down (“pull to refresh”) the Photo Clubs page.
 This loads just enough test data to demo the feature.
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-## Roadmap
+### Roadmap
 - [x] Put the app's source code on GitHub.
 	- [x] Handle private data about members in a secure way
     - [ ] Publish article in Dutch photo club [organization](https://fotobond.nl)
