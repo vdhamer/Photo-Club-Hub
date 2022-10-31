@@ -43,7 +43,10 @@
             <li><a href="#how-to-contribute">How to Contribute</a></li>
         </ul>
     </li>
-    <li><a href="#about-the-model">About the Model</a></li>
+    <li><a href="#architecture">Architecture</a>
+        <ul>
+           <li><a href="#about-the-model">About the Model</a></li>
+	</ul>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
@@ -264,7 +267,9 @@ You can alternatively submit an `issue` with a tag like ”enhancement" or “bu
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## About the Model
+## Architecture
+
+### About the Model
 
 The app uses a [Swift-style MVVM](https://www.hackingwithswift.com/books/ios-swiftui/introducing-mvvm-into-your-swiftui-project)
 design, meaning the model data is stored in structs (and in database tables) rather than in
