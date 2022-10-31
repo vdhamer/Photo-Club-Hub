@@ -17,7 +17,6 @@
       <ul>
         <li><a href="#waalre">Waalre</a></li>
         <li><a href="#the-portfolio-concept">The Portfolio Concept</a></li>
-        <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
     <li>
@@ -26,6 +25,7 @@
         <li><a href="#cloning-the-repository">Cloning the Repository</a></li>
         <li><a href="#code-signing">Code Signing</a></li>
         <li><a href="#upgrading-the-app">Upgrading the App</a></li>
+        <li><a href="#built-with">Built With</a></li>
 	<li><a href="#data-privacy">Data Privacy</a></li>
       </ul>
     </li>  
@@ -76,14 +76,6 @@ sets of images) for that photographer. Example 1: the photographer is simultaneo
 a member of multiple clubs. Example 2: the photographer is a former member of club A, but
 left club A and joined club B.
 
-### Built With
-
-* [Swift](https://www.swift.org) - programming language
-* [SwiftUI](https://developer.apple.com/xcode/swiftui/) - an Apple user interface framework
-* [Core Data](https://developer.apple.com/documentation/coredata) - Apple's persistent storage framework
-* [JuiceBox Pro](https://www.juicebox.net) - JavaScript image galleries
-* [GitCrypt](https://github.com/AGWA/git-crypt) - encryption of selected files in Git repositories
-
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Installation
@@ -114,6 +106,14 @@ If needed, Core Data will automatically perform a so-called schema migration if 
 structure has changed. If you remove and reinstall the app, any existing CoreData data gets deleted.
 This is standard behavior of Apple's Core Data framework, although the app does its bit
 so that Core Data can track, for example, renamed struct types or renamed properties.
+
+### Built With
+
+* [Swift](https://www.swift.org) - programming language
+* [SwiftUI](https://developer.apple.com/xcode/swiftui/) - an Apple user interface framework
+* [Core Data](https://developer.apple.com/documentation/coredata) - Apple's persistent storage framework
+* [JuiceBox Pro](https://www.juicebox.net) - JavaScript image galleries
+* [GitCrypt](https://github.com/AGWA/git-crypt) - encryption of selected files in Git repositories
 
 ### Data Privacy
 
