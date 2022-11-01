@@ -22,10 +22,10 @@
     <li>
       <a href="#installation">Installation</a>
       <ul>
-        <li><a href="#cloning-the-repository">Cloning the Repository</a></li>
+        <li><a href="#built-with">Built With</a></li>
+	<li><a href="#cloning-the-repository">Cloning the Repository</a></li>
         <li><a href="#code-signing">Code Signing</a></li>
         <li><a href="#upgrading-the-app">Upgrading the App</a></li>
-        <li><a href="#built-with">Built With</a></li>
 	<li><a href="#data-privacy">Data Privacy</a></li>
       </ul>
     </li>  
@@ -85,6 +85,14 @@ left club A and joined club B.
 
 If you just want to install the binary version of the app, it is easiest to get it from Apple's app store ([link](https://apps.apple.com/nl/app/photo-club-waalre/id1178324330?l=en)).
 
+### Built With
+
+* [Swift](https://www.swift.org) - programming language
+* [SwiftUI](https://developer.apple.com/xcode/swiftui/) - an Apple user interface framework
+* [Core Data](https://developer.apple.com/documentation/coredata) - Apple's persistent storage framework
+* [JuiceBox Pro](https://www.juicebox.net) - JavaScript image galleries
+* [GitCrypt](https://github.com/AGWA/git-crypt) - encryption of selected files in Git repositories
+ 
 ### Cloning the Repository
 
 To install the source code locally, it is easiest to use GitHub’s `Open with Xcode` feature.
@@ -109,14 +117,6 @@ If needed, Core Data will automatically perform a so-called schema migration if 
 structure has changed. If you remove and reinstall the app, any existing CoreData data gets deleted.
 This is standard behavior of Apple's Core Data framework, although the app does its bit
 so that Core Data can track, for example, renamed struct types or renamed properties.
-
-### Built With
-
-* [Swift](https://www.swift.org) - programming language
-* [SwiftUI](https://developer.apple.com/xcode/swiftui/) - an Apple user interface framework
-* [Core Data](https://developer.apple.com/documentation/coredata) - Apple's persistent storage framework
-* [JuiceBox Pro](https://www.juicebox.net) - JavaScript image galleries
-* [GitCrypt](https://github.com/AGWA/git-crypt) - encryption of selected files in Git repositories
 
 ### Data Privacy
 
