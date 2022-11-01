@@ -226,10 +226,13 @@ proposed features (and known issues).
 
 ## Contributing
 All contributions are welcome.
+Before investing a lot of coding effort, it might be good to first describe the idea or functional change in the description of `an Issue`.
+That allows for some upfront discussion and iteration of the idea. 
 
 ### Areas for Contribution
 
-Possible contributions include adding features, code improvements, ideas on architecture and interface specifications, and possibly even a dedicated backend server.
+Possible contributions include adding features, code improvements, ideas on architecture and interface specifications, 
+and possibly even a dedicated backend server.
 
 Contributions that don't require coding include beta testing, well thought-through feature requests, translations, and SVG icons.
 
