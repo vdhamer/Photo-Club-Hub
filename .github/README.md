@@ -47,9 +47,12 @@
            <li><a href="#about-the-model">About the Model</a></li>
 	   <li><a href="#a-likely-architecture-change">A Likely Architecture Change</a></li>
 	</ul>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li><a href="#administrative">Administrative</a></li>
+	<ul>  
+           <li><a href="#license">License</a></li>
+           <li><a href="#contact">Contact</a></li>
+           <li><a href="#acknowledgments">Acknowledgments</a></li>
+	</ul>
   </ol>
 </details>
 
@@ -298,20 +301,22 @@ These collections are then uploaded to the webserver with a single Upload click
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## License
+## Administrative
+
+### License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## Contact
+### Contact
 Peter van den Hamer - github@vdhamer.com
 
 Project Link: [https://github.com/vdhamer/PhotoClubWaalre](https://github.com/vdhamer/PhotoClubWaalre)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## Acknowledgments
+### Acknowledgments
 
 * The opening image animation uses a photo by Greetje van Son
 * A file with club member data is encrypted using [git-crypt](https://github.com/AGWA/git-crypt)
