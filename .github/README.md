@@ -307,14 +307,10 @@ These collections are then uploaded to the webserver with a single Upload click
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 ### Contact
 Peter van den Hamer - github@vdhamer.com
 
 Project Link: [https://github.com/vdhamer/PhotoClubWaalre](https://github.com/vdhamer/PhotoClubWaalre)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 ### Acknowledgments
 
