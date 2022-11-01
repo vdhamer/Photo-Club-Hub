@@ -89,7 +89,7 @@ If you just want to install the binary version of the app, it is easiest to get 
 
 To install the source code locally, it is easiest to use GitHub’s `Open with Xcode` feature.
 Developers used to running Git from the command line should manage on their own.
-Xcode handles the installation of the binary on a physical device or Xcode iPhone/iPad simulator.
+Xcode covers the installation of the binary on a physical device or on an Xcode iPhone/iPad simulator.
 
 ### Code Signing
 
