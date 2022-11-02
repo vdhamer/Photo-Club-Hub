@@ -44,7 +44,7 @@
     </li>
     <li><a href="#architecture">Architecture</a>
         <ul>
-           <li><a href="#the-model">The Model</a></li>
+           <li><a href="#data-model">Data Model</a></li>
 	   <li><a href="#a-likely-architecture-change">A Likely Architecture Change</a></li>
 	</ul>
     <li><a href="#administrative">Administrative</a></li>
@@ -256,9 +256,9 @@ and possibly even a dedicated backend server.
 ## Architecture
 
 The app uses a [Swift-style MVVM](https://www.hackingwithswift.com/books/ios-swiftui/introducing-mvvm-into-your-swiftui-project)
-design.
+design. The model's data is fetched and updated via the internet, but cached in a database (Apple's CoreData framework).
 
-### The Model
+### Data Model
 
 The use of an MVVM architecture imples that model data is stored in structs (and in database tables) rather than in
 classes. Here is a quick tour of the model. 
@@ -266,20 +266,22 @@ classes. Here is a quick tour of the model.
 [![Product schema][product-schema]](https://github.com/vdhamer/PhotoClubWaalre/blob/main/Assets.xcassets/images/Schema.imageset/Schema.png)
 
 Every `PhotoClub` has zero or more `Members` of various types (current, former, etc.).
-Any `Member` can optionally have one or more formal roles (e.g., Chairman and Admin) within the `PhotoClub`.
+A club with zero `Members` sounds rather sad, but is supported and might temporarily occur.
+Any `Member` can optionally have one or more formal roles (e.g., Chairman and Admin) within a `PhotoClub`.
 
 Some of information about a `Photographer` (like name, birthday, a personal website) is
-unrelated to the `Photographer` being a `Member` of a `PhotoClub`.
+related to the `Photographer` as an individual, rather that being related to any particular `PhotoClub`.
+Such club-independent information is stored in the `Photographer` table/struct.
 
-`Portfolio` represent the work of a single `Photographer` in the context of a single `PhotoClub`.
-A `Portfolio` contains `Images` (not shown). An `Image` could be included in multiple `Portfolios` -
+`Portfolio` represent the work of one `Photographer` in the context of one `PhotoClub`.
+A `Portfolio` contains `Images` (not stored in CoreData yet). An `Image` can show up in multiple `Portfolios` -
 meaning the photo was discussed in multiple `PhotoClub`s.
 
 `Member` and `Portfolio` can be considered synonyms from a modeling perspective:
 we create exactly one `Portfolio` for each `PhotoClub` that a `Photographer` joined.
 And every `Member` of a `PhotoClub` has exactly one `Portfolio`.
 This one-to-one relationship between `Member` and `Portfolio` allows them to be 
-modelled using once single concept (=table) that we named `MemberPortfolio`.
+modelled using once single concept (=table) that we internally named `MemberPortfolio`.
 
 ### A Likely Architecture Change
 
