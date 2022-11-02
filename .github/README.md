@@ -44,7 +44,7 @@
     </li>
     <li><a href="#architecture">Architecture</a>
         <ul>
-           <li><a href="#about-the-model">About the Model</a></li>
+           <li><a href="#the-model">The Model</a></li>
 	   <li><a href="#a-likely-architecture-change">A Likely Architecture Change</a></li>
 	</ul>
     <li><a href="#administrative">Administrative</a></li>
@@ -256,11 +256,13 @@ You can alternatively submit an `issue` with a tag like ”enhancement" or “bu
 
 ## Architecture
 
-### About the Model
-
 The app uses a [Swift-style MVVM](https://www.hackingwithswift.com/books/ios-swiftui/introducing-mvvm-into-your-swiftui-project)
-design, meaning the model data is stored in structs (and in database tables) rather than in
-classes. As an intro for developers, here is a quick tour of the model. 
+design.
+
+### The Model
+
+The use of an MVVM architecture imples that model data is stored in structs (and in database tables) rather than in
+classes. Here is a quick tour of the model. 
 
 [![Product schema][product-schema]](https://github.com/vdhamer/PhotoClubWaalre/blob/main/Assets.xcassets/images/Schema.imageset/Schema.png)
 
