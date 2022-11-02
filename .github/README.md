@@ -266,20 +266,20 @@ classes. Here is a quick tour of the model.
 [![Product schema][product-schema]](https://github.com/vdhamer/PhotoClubWaalre/blob/main/Assets.xcassets/images/Schema.imageset/Schema.png)
 
 Every `PhotoClub` has zero or more `Members` of various types (current, former, etc.).
-Some of these `Members` have a formal role (e.g., Chairman) within the `PhotoClub`.
+Any `Member` can optionally have one or more formal roles (e.g., Chairman and Admin) within the `PhotoClub`.
 
 Some of information about a `Photographer` (like name, birthday, a personal website) is
-unrelated to the `Photographer's` `Member`ship of a `PhotoClub`.
+unrelated to the `Photographer` being a `Member` of a `PhotoClub`.
 
 `Portfolio` represent the work of a single `Photographer` in the context of a single `PhotoClub`.
-A `Portfolio` contains `Images`, but an `Image` could be in multiple `Portfolios` - depending
-on where the `Image` was shared.
+A `Portfolio` contains `Images` (not shown). An `Image` could be included in multiple `Portfolios` -
+meaning the photo was discussed in multiple `PhotoClub`s.
 
 `Member` and `Portfolio` can be considered synonyms from a modeling perspective:
 we create exactly one `Portfolio` for each `PhotoClub` that a `Photographer` joined.
-And every `Member` of a `PhotoClub` has exactly one `Portfolio` in the app.
-Therefore `Member` and `Portfolio` are formally synonyms, 
-and thus modelled here as a single concept or table called `MemberPortfolio`.
+And every `Member` of a `PhotoClub` has exactly one `Portfolio`.
+This one-to-one relationship between `Member` and `Portfolio` allows them to be 
+modelled using once single concept (=table) that we named `MemberPortfolio`.
 
 ### A Likely Architecture Change
 
