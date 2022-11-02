@@ -38,8 +38,8 @@
     </ul>
     <li><a href="#contributing">Contributing</a>
         <ul>
-            <li><a href="#areas-for-contribution">Areas for Contribution</a></li> 
-            <li><a href="#how-to-contribute">How to Contribute</a></li>
+	    <li><a href="#how-to-contribute">How to Contribute</a></li>
+	    <li><a href="#areas-for-contribution">Areas for Contribution</a></li> 
         </ul>
     </li>
     <li><a href="#architecture">Architecture</a>
@@ -231,12 +231,6 @@ proposed features (and known issues).
 All contributions are welcome.
 Before investing a lot of coding effort, it might be good to first describe the idea or functional change in the description of `an Issue`.
 That allows for some upfront discussion and iteration of the idea. 
-
-### Areas for Contribution
-
-Possible contributions include adding features, code improvements, ideas on architecture and interface specifications, 
-and possibly even a dedicated backend server.
-
 Contributions that don't require coding include beta testing, well thought-through feature requests, translations, and SVG icons.
 
 ### How to Contribute
@@ -251,6 +245,11 @@ request.  The command line `git` commands to do this (but the Xcode IDE has equi
 5. Open a Pull Request
 
 You can alternatively submit an `issue` with a tag like ”enhancement" or “bug” without having to do the code changes yourself.
+
+### Areas for Contribution
+
+Possible contributions include adding features, code improvements, ideas on architecture and interface specifications, 
+and possibly even a dedicated backend server.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
