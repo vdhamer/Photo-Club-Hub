@@ -13,7 +13,7 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#about-the-project">About The Project</a>
+      <a href="#about-the-project">About the Project</a>
       <ul>
         <li><a href="#waalre">Waalre</a></li>
         <li><a href="#the-portfolio-concept">The Portfolio Concept</a></li>
@@ -56,7 +56,7 @@
   </ol>
 </details>
 
-## About The Project
+## About the Project
 
 ### Waalre
 
