@@ -85,18 +85,6 @@ content) for that photographer. An example: the photographer is simultaneously a
 A differebt example: the photographer was formerly a member of club A, but at some point left club A and joined club B.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-## Installation
-
-If you just want to install the binary version of the app, it is easiest to get it from Apple's app store ([link](https://apps.apple.com/nl/app/photo-club-waalre/id1178324330?l=en)).
-
-### Built With
-
-* [Swift](https://www.swift.org) - programming language
-* [SwiftUI](https://developer.apple.com/xcode/swiftui/) - an Apple user interface framework
-* [Core Data](https://developer.apple.com/documentation/coredata) - Apple's persistent storage framework
-* [JuiceBox Pro](https://www.juicebox.net) - JavaScript image galleries
-* [GitCrypt](https://github.com/AGWA/git-crypt) - encryption of selected files in Git repositories
  
 ## Usage and Features
 
@@ -173,6 +161,18 @@ See the [open issues](https://github.com/vdhamer/PhotoClubWaalre/issues) for a f
 proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
+
+## Installation
+
+If you just want to install the binary version of the app, it is easiest to get it from Apple's app store ([link](https://apps.apple.com/nl/app/photo-club-waalre/id1178324330?l=en)).
+
+### Built With
+
+* [Swift](https://www.swift.org) - programming language
+* [SwiftUI](https://developer.apple.com/xcode/swiftui/) - an Apple user interface framework
+* [Core Data](https://developer.apple.com/documentation/coredata) - Apple's persistent storage framework
+* [JuiceBox Pro](https://www.juicebox.net) - JavaScript image galleries
+* [GitCrypt](https://github.com/AGWA/git-crypt) - encryption of selected files in Git repositories
 
 ### Cloning the Repository
 
