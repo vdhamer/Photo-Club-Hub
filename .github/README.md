@@ -262,10 +262,12 @@ and possibly even a dedicated backend server.
 The app uses a [Swift-style MVVM](https://www.hackingwithswift.com/books/ios-swiftui/introducing-mvvm-into-your-swiftui-project)
 design. The model's data is fetched and updated via the internet, and is cached in a local database (Apple's CoreData framework).
 
+The use of an MVVM architecture implies that the model data is stored in structs (and in database tables) rather than in classes.
+
 ### The Data Model
 
-The use of an MVVM architecture imples that model data is stored in structs (and in database tables) rather than in
-classes. Here is a quick tour of the 3 central concepts or tables. The amount of tables will grow in the future.
+Here is a quick tour of the 3 central concepts or tables or struct types. The amount of tables will increase a bit in the future.
+Note that, in relational database jargon, the tables are highly "normalized", implying minimal data redundancy.
 
 [![Product schema][product-schema]](https://github.com/vdhamer/PhotoClubWaalre/blob/main/Assets.xcassets/images/Schema.imageset/Schema.png)
 
