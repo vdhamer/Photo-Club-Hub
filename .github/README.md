@@ -19,6 +19,13 @@
         <li><a href="#the-portfolio-concept">The Portfolio Concept</a></li>
       </ul>
     </li>
+    <li><a href="#usage-and-features">Usage and Features</a></li>
+        <ul>
+        <li><a href="#opening-animation">Opening Animation</a></li>
+        <li><a href="#the-user-interface-screens">The User Interface Screens</a></li>
+        <li><a href="#multi-club-support">Multi-club Support</a></li>
+        <li><a href="#roadmap">Roadmap</a></li>
+        </ul>
     <li>
       <a href="#installation">Installation</a>
       <ul>
@@ -28,14 +35,7 @@
         <li><a href="#upgrading-the-app">Upgrading the App</a></li>
 	<li><a href="#data-privacy">Data Privacy</a></li>
       </ul>
-    </li>  
-    <li><a href="#usage-and-features">Usage and Features</a></li>
-        <ul>
-        <li><a href="#opening-animation">Opening Animation</a></li>
-        <li><a href="#the-user-interface-screens">The User Interface Screens</a></li>
-        <li><a href="#multi-club-support">Multi-club Support</a></li>
-        <li><a href="#roadmap">Roadmap</a></li>
-    </ul>
+    </li>
     <li><a href="#contributing">Contributing</a>
         <ul>
 	    <li><a href="#how-to-contribute">How to Contribute</a></li>
@@ -68,23 +68,21 @@ Photo Club Waalre is a photography club named after Waalre, a town in the south 
 Netherlands. Its members meet since 1988, mainly to critique each other’s photos.
 
 The name of the photo club will probably disappear from the app's name at some point.
-This would be to emphasize that the app supports multiple photo clubs rather than just a single club.
+This will be needed to emphasize that the app supports multiple photo clubs rather than just one.
 
 ### The Portfolio Concept
 
-The app is designed to *showcase curated images made by members of photo clubs*.
+The app is designed to showcase curated images made by members of photo clubs.
 
-The images within the app are divided into `portfolios`. Within this app 
+The images within the app are divided into `portfolios`. Within this app, 
 a portfolio covers the part of a photographer's work that was shared *within* a single photo club.
-Within a portfolio, images are displayed most-recent-first (as in social media and news channels).
 
 Images by a photographer that are *not* associated with a photo club are not supported by the app
-because the app is club oriented. But the app can provide a link to a photographer's personal, non-club-oriented website.
+because the app is club-oriented. But the app can provide a link to a photographer's personal, non-club-oriented website.
 
 If a photographer joined *multiple* photo clubs, the app will show *multiple* portfolios (with different
-sets of images) for that photographer. Example 1: the photographer is simultaneously
-a member of multiple clubs. Example 2: the photographer is a former member of club A, but
-left club A and joined club B.
+content) for that photographer. An example: the photographer is simultaneously a member of multiple clubs.
+A differebt example: the photographer was formerly a member of club A, but at some point left club A and joined club B.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -100,61 +98,6 @@ If you just want to install the binary version of the app, it is easiest to get 
 * [JuiceBox Pro](https://www.juicebox.net) - JavaScript image galleries
 * [GitCrypt](https://github.com/AGWA/git-crypt) - encryption of selected files in Git repositories
  
-### Cloning the Repository
-
-To install the source code locally, it is easiest to use GitHub’s `Open with Xcode` feature.
-Developers used to running Git from the command line should manage on their own.
-Xcode covers the installation of the binary on a physical device or on an Xcode iPhone/iPad simulator.
-
-### Code Signing
-
-During the build you may be prompted to provide a developer license (personal or commercial)
-in order to install the app on a physical device. This is standard by Apple for iOS apps.
-
-Starting with iOS version 16 you will need to configure physical devices to allow them to run apps
-that have not been distributed via the Apple App Store. This configuration requires enabling
-Developer Mode on the device using `Settings` > `Privacy & Security` > `Developer Mode`.
-Again, this is a standard iOS policy rather than something specific to this app.
-
-### Updating the App
-
-If you upgrade to a newer build of the app, data stored in the app's internal data storage remains available.
-
-If needed, Core Data will automatically perform a so-called schema migration if the data
-structure has changed. If you remove and reinstall the app, any existing CoreData data gets deleted.
-This is standard behavior of Apple's Core Data framework, although the app does its bit
-so that Core Data can track, for example, renamed struct types or renamed properties.
-
-### Data Privacy
-
-The following has *no impact* (zero, null, nil) on the app's functionality or user interface.
-So feel free to skip this section.
-
-The repo contains a minimal amount of encrypted data.
-But encryption code can draw a lot of attention, so we are explaining it here
-mainly so you don't waste time trying to figure our what's going on or whether
-you consider that secure enough. It simply isn't a big deal :nerd_face:.
-
-So... one data file in the repository is encrypted. 
-As you will expect, the key needed to decrypt the file is *not* provided.
-The file, in its decrypted form, gives access to a password-protected HTML page on a server
-containing telephone numbers and e-mail addresses of the members of Photo Club Waalre. 
-Apart from the fact that the data is of little interest, this has no impact because: 
-- if the file is found to be encrypted, it is automatically substituted by a second non-encrypted file which doesn't give access to any sensitive data about members.with the sensitive data substituded by dummy values.
-- (dummy or real) phone numbers and e-mail addresses are not used yet by the app.
-
-So, all this hasstle is just so that a future App Store version *could* allow club members to
-unlock extra functionality using a password, but without leaking the "sensitive" data via GitHub.
-
-And how would the password be protected? The app can check a hash of the provided password.
-But modified source code then gives access to the "sensitive" version of the web page, right?
-Wrong. Bypassing the password (e.g. a code modification), does allow a user
-to *see* the "dummy or real" data, right? Correct. 
-But without the not-provided encryption key a user would only be able to access the non-sensitive version.
-So let's get back to more relevant stuff.
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 ## Usage and Features
 
 ### Opening Animation
@@ -228,6 +171,61 @@ This loads just enough test data to demo the feature.
 
 See the [open issues](https://github.com/vdhamer/PhotoClubWaalre/issues) for a full list of
 proposed features (and known issues).
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+### Cloning the Repository
+
+To install the source code locally, it is easiest to use GitHub’s `Open with Xcode` feature.
+Developers used to running Git from the command line should manage on their own.
+Xcode covers the installation of the binary on a physical device or on an Xcode iPhone/iPad simulator.
+
+### Code Signing
+
+During the build you may be prompted to provide a developer license (personal or commercial)
+in order to install the app on a physical device. This is standard by Apple for iOS apps.
+
+Starting with iOS version 16 you will need to configure physical devices to allow them to run apps
+that have not been distributed via the Apple App Store. This configuration requires enabling
+Developer Mode on the device using `Settings` > `Privacy & Security` > `Developer Mode`.
+Again, this is a standard iOS policy rather than something specific to this app.
+
+### Updating the App
+
+If you upgrade to a newer build of the app, data stored in the app's internal data storage remains available.
+
+If needed, Core Data will automatically perform a so-called schema migration if the data
+structure has changed. If you remove and reinstall the app, any existing CoreData data gets deleted.
+This is standard behavior of Apple's Core Data framework, although the app does its bit
+so that Core Data can track, for example, renamed struct types or renamed properties.
+
+### Data Privacy
+
+The following has *no impact* (zero, null, nil) on the app's functionality or user interface.
+So feel free to skip this section.
+
+The repo contains a minimal amount of encrypted data.
+But encryption code can draw a lot of attention, so we are explaining it here
+mainly so you don't waste time trying to figure our what's going on or whether
+you consider that secure enough. It simply isn't a big deal :nerd_face:.
+
+So... one data file in the repository is encrypted. 
+As you will expect, the key needed to decrypt the file is *not* provided.
+The file, in its decrypted form, gives access to a password-protected HTML page on a server
+containing telephone numbers and e-mail addresses of the members of Photo Club Waalre. 
+Apart from the fact that the data is of little interest, this has no impact because: 
+- if the file is found to be encrypted, it is automatically substituted by a second non-encrypted file which doesn't give access to any sensitive data about members.with the sensitive data substituded by dummy values.
+- (dummy or real) phone numbers and e-mail addresses are not used yet by the app.
+
+So, all this hasstle is just so that a future App Store version *could* allow club members to
+unlock extra functionality using a password, but without leaking the "sensitive" data via GitHub.
+
+And how would the password be protected? The app can check a hash of the provided password.
+But modified source code then gives access to the "sensitive" version of the web page, right?
+Wrong. Bypassing the password (e.g. a code modification), does allow a user
+to *see* the "dummy or real" data, right? Correct. 
+But without the not-provided encryption key a user would only be able to access the non-sensitive version.
+So let's get back to more relevant stuff.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
