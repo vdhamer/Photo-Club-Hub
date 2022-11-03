@@ -42,7 +42,7 @@
 	    <li><a href="#areas-for-contribution">Areas for Contribution</a></li> 
         </ul>
     </li>
-    <li><a href="#the-app's-architecture">The App's Architecture</a>
+    <li><a href="#the-app-s-architecture">The App's Architecture</a>
         <ul>
            <li><a href="#the-data-model">The Data Model</a></li>
 	   <li><a href="#how-the-data-is-loaded">How the Data is Loaded</a></li>
