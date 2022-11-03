@@ -42,7 +42,7 @@
 	    <li><a href="#areas-for-contribution">Areas for Contribution</a></li> 
         </ul>
     </li>
-    <li><a href="#the-app-s-architecture">The App's Architecture</a>
+    <li><a href="#the-app-architecture">The App's Architecture</a>
         <ul>
            <li><a href="#the-data-model">The Data Model</a></li>
 	   <li><a href="#how-the-data-is-loaded">How the Data is Loaded</a></li>
@@ -257,7 +257,7 @@ and possibly even a dedicated backend server.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## The App's Architecture
+## The App Architecture
 
 The app uses a [Swift-style MVVM](https://www.hackingwithswift.com/books/ios-swiftui/introducing-mvvm-into-your-swiftui-project)
 design. The model's data is fetched and updated via the internet, and is cached in a local database (Apple's CoreData framework).
