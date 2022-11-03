@@ -265,16 +265,16 @@ design. The model's data is fetched and updated via the internet, and is cached 
 ### The Data Model
 
 The use of an MVVM architecture imples that model data is stored in structs (and in database tables) rather than in
-classes. Here is a quick tour of the model.
+classes. Here is a quick tour of the 3 central concepts or tables. The amount of tables will grow in the future.
 
 [![Product schema][product-schema]](https://github.com/vdhamer/PhotoClubWaalre/blob/main/Assets.xcassets/images/Schema.imageset/Schema.png)
 
 Every `PhotoClub` has zero or more `Members` of various roles (Chairman, Admin, ...) and states (current, former, apiring, ...).
 A `Member` may have multiple formal roles (e.g., Secretary and Admin) within a given `PhotoClub`.
 
-Some of information about a `Photographer` (name, date of birth, personal website) is
+Some basic information about a `Photographer` (name, date of birth, personal website, ...) is
 related to the `Photographer` as an individual, rather that being associated with any particular `PhotoClub`.
-Such club-independent information is stored in the `Photographer` structs/records.
+That club-independent information is stored in the individual's `Photographer` struct/record.
 
 `Portfolio` represent the work of one `Photographer` in the context of one `PhotoClub`.
 A `Portfolio` contains `Images` (not stored in CoreData yet). An `Image` can show up in multiple `Portfolios` -
