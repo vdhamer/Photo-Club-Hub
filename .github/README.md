@@ -42,7 +42,7 @@
 	    <li><a href="#areas-for-contribution">Areas for Contribution</a></li> 
         </ul>
     </li>
-    <li><a href="#architecture">Architecture</a>
+    <li><a href="#the-app's-architecture">The App's Architecture</a>
         <ul>
            <li><a href="#the-data-model">The Data Model</a></li>
 	   <li><a href="#how-the-data-is-loaded">How the Data is Loaded</a></li>
@@ -257,25 +257,24 @@ and possibly even a dedicated backend server.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## Architecture
+## The App's Architecture
 
 The app uses a [Swift-style MVVM](https://www.hackingwithswift.com/books/ios-swiftui/introducing-mvvm-into-your-swiftui-project)
-design. The model's data is fetched and updated via the internet, but cached in a database (Apple's CoreData framework).
+design. The model's data is fetched and updated via the internet, and is cached in a local database (Apple's CoreData framework).
 
 ### The Data Model
 
 The use of an MVVM architecture imples that model data is stored in structs (and in database tables) rather than in
-classes. Here is a quick tour of the model. 
+classes. Here is a quick tour of the model.
 
 [![Product schema][product-schema]](https://github.com/vdhamer/PhotoClubWaalre/blob/main/Assets.xcassets/images/Schema.imageset/Schema.png)
 
-Every `PhotoClub` has zero or more `Members` of various types (current, former, etc.).
-A club with zero `Members` sounds rather sad, but is supported and might temporarily occur.
-Any `Member` can optionally have one or more formal roles (e.g., Chairman and Admin) within a `PhotoClub`.
+Every `PhotoClub` has zero or more `Members` of various roles (Chairman, Admin, ...) and states (current, former, apiring, ...).
+A `Member` may have multiple formal roles (e.g., Secretary and Admin) within a given `PhotoClub`.
 
-Some of information about a `Photographer` (like name, birthday, a personal website) is
-related to the `Photographer` as an individual, rather that being related to any particular `PhotoClub`.
-Such club-independent information is stored in the `Photographer` table/struct.
+Some of information about a `Photographer` (name, date of birth, personal website) is
+related to the `Photographer` as an individual, rather that being associated with any particular `PhotoClub`.
+Such club-independent information is stored in the `Photographer` structs/records.
 
 `Portfolio` represent the work of one `Photographer` in the context of one `PhotoClub`.
 A `Portfolio` contains `Images` (not stored in CoreData yet). An `Image` can show up in multiple `Portfolios` -
