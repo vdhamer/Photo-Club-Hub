@@ -183,16 +183,16 @@ Xcode covers the installation of the binary on a physical device or on an Xcode 
 ### Code Signing
 
 During the build you may be prompted to provide a developer license (personal or commercial)
-in order to install the app on a physical device. This is standard by Apple for iOS apps.
+in order to install the app on a physical device. This is standard Apple policy for iOS apps.
 
 Starting with iOS version 16 you will need to configure physical devices to allow them to run apps
 that have not been distributed via the Apple App Store. This configuration requires enabling
-Developer Mode on the device using `Settings` > `Privacy & Security` > `Developer Mode`.
+`Developer Mode` on the device using `Settings` > `Privacy & Security` > `Developer Mode`.
 Again, this is a standard iOS policy rather than something specific to this app.
 
 ### Updating the App
 
-If you upgrade to a newer build of the app, data stored in the app's internal data storage remains available.
+If you update to a newer build of the app, data stored in the app's internal data storage remains available.
 
 If needed, Core Data will automatically perform a so-called schema migration if the data
 structure has changed. If you remove and reinstall the app, any existing CoreData data gets deleted.
@@ -204,7 +204,7 @@ so that Core Data can track, for example, renamed struct types or renamed proper
 The following has *no impact* (zero, null, nil) on the app's functionality or user interface.
 So feel free to skip this section.
 
-The repo contains a minimal amount of encrypted data.
+The repo contains a minimal amount (1 small file) of encrypted data.
 But encryption code can draw a lot of attention, so we are explaining it here
 mainly so you don't waste time trying to figure our what's going on or whether
 you consider that secure enough. It simply isn't a big deal :nerd_face:.
@@ -212,20 +212,20 @@ you consider that secure enough. It simply isn't a big deal :nerd_face:.
 So... one data file in the repository is encrypted. 
 As you will expect, the key needed to decrypt the file is *not* provided.
 The file, in its decrypted form, gives access to a password-protected HTML page on a server
-containing telephone numbers and e-mail addresses of the members of Photo Club Waalre. 
+containing the telephone numbers and e-mail addresses of members of Photo Club Waalre. 
 Apart from the fact that the data is of little interest, this has no impact because: 
-- if the file is found to be encrypted, it is automatically substituted by a second non-encrypted file which doesn't give access to any sensitive data about members.with the sensitive data substituded by dummy values.
-- (dummy or real) phone numbers and e-mail addresses are not used yet by the app.
+- if the file is found to be encrypted, it is automatically substituted by a second non-encrypted file 
+  which doesn't give access to any sensitive data about members: the sensitive data has been replaced by dummy data.
+- phone numbers and e-mail addresses (real or dummy) are not used yet by the app.
 
 So, all this hasstle is just so that a future App Store version *could* allow club members to
-unlock extra functionality using a password, but without leaking the "sensitive" data via GitHub.
+unlock extra functionality using a club-specific password, but without leaking the "sensitive" data to non-members via GitHub.
 
-And how would the password be protected? The app can check a hash of the provided password.
-But modified source code then gives access to the "sensitive" version of the web page, right?
-Wrong. Bypassing the password (e.g. a code modification), does allow a user
-to *see* the "dummy or real" data, right? Correct. 
-But without the not-provided encryption key a user would only be able to access the non-sensitive version.
-So let's get back to more relevant stuff.
+And how would this password be protected? The app can check a hash of the provided password.
+But a simple source code modification then gives access to the "sensitive" version of the web page, right?
+No, not quite 🤓. Bypassing the password via a code modification, does allow a user
+to *see* the "dummy or real" data. But that data is still encrypted by a not-provided encryption key:
+a user would only be able to access the non-sensitive version.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
