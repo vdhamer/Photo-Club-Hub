@@ -45,6 +45,11 @@
     <li><a href="#the-app-architecture">The App's Architecture</a>
         <ul>
            <li><a href="#the-data-model">The Data Model</a></li>
+	      <ul>
+		 <li><a href="#photoclub">PhotoClub</a></li>
+		 <li><a href="#photographer">Photographer</a></li>
+		 <li><a href="#memberportfolio">MemberPortfolio</a></li>
+	      </ul>
 	   <li><a href="#how-the-data-is-loaded">How the Data is Loaded</a></li>
 	      <ul>
 		 <li><a href="#the-current-approach">The Current Approach</a></li>
@@ -271,12 +276,18 @@ meaning that redundancy in the stored data has been minimized.
 
 [![Product schema][product-schema]](https://github.com/vdhamer/PhotoClubWaalre/blob/main/Assets.xcassets/images/Schema.imageset/Schema.png)
 
+#### PhotoClub
+
 Every `PhotoClub` has zero or more `Members` of various roles (Chairman, Admin, ...) and states (current, former, apiring, ...).
 A `Member` may have multiple roles (e.g., acting as both Secretary and Admin for the same `PhotoClub`).
+
+#### Photographer
 
 Some basic information about a `Photographer` (name, date of birth, personal website, ...) is
 related to the `Photographer` as an individual, rather to the `Photographer's` membership of any particular `PhotoClub`.
 This club-independent information is stored in the individual's `Photographer` struct/record.
+
+#### MemberPortfolio
 
 `Portfolio` represents the work of one `Photographer` in the context of one `PhotoClub`.
 A `Portfolio` contains `Images` (not in CoreData yet). An `Image` can show up in multiple `Portfolios` if
