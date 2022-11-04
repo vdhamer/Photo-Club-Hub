@@ -105,7 +105,7 @@ Tapping *outside* the image area gets you to the main Portfolio screen of the ap
 To see the animation again, just shut down and restart the app.
 
 Is the animation useful? Well, it was interesting to create and runs on the device's GPU cores,
-but at least it explains where the app's logo came from.
+but at least it explains where the app's logo comes from.
 
 ### The User Interface Screens
 
