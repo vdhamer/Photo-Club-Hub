@@ -81,8 +81,8 @@ Images by a photographer that are *not* associated with a photo club are not sup
 because the app is club-oriented. But the app can provide a link to a photographer's personal, non-club-oriented website.
 
 If a photographer joined *multiple* photo clubs, the app will show *multiple* portfolios (with different
-content) for that photographer. An example: the photographer is simultaneously a member of multiple clubs.
-A differebt example: the photographer was formerly a member of club A, but at some point left club A and joined club B.
+content) for that photographer. An example: the photographer is simultaneously a member of both club A and club B.
+Another example: the photographer was formerly a member of club A, but at some point left club A to join club B.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
  
