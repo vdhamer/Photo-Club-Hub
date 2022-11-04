@@ -275,18 +275,19 @@ Every `PhotoClub` has zero or more `Members` of various roles (Chairman, Admin, 
 A `Member` may have multiple roles (e.g., acting as both Secretary and Admin for the same `PhotoClub`).
 
 Some basic information about a `Photographer` (name, date of birth, personal website, ...) is
-related to the `Photographer` as an individual, rather that being associated with any particular `PhotoClub`.
-That club-independent information is stored in the individual's `Photographer` struct/record.
+related to the `Photographer` as an individual, rather to the `Photographer's` membership of any particular `PhotoClub`.
+This club-independent information is stored in the individual's `Photographer` struct/record.
 
 `Portfolio` represents the work of one `Photographer` in the context of one `PhotoClub`.
-A `Portfolio` contains `Images` (not stored in a CoreData table yet). An `Image` can show up in multiple `Portfolios` -
-meaning the photo was discussed in multiple `PhotoClubs`.
+A `Portfolio` contains `Images` (not in CoreData yet). An `Image` can show up in multiple `Portfolios` if
+the `Photographer` "used" the same phone in more than one `PhotoClub`.
 
-`Member` and `Portfolio` can be considered synonyms from a modeling perspective:
+`Member` and `Portfolio` can be considered *synonyms* from a modeling perspective:
 we create exactly one `Portfolio` for each `PhotoClub` that a `Photographer` became a `Member` of.
-And every `Member` of a `PhotoClub` has exactly one `Portfolio` - even if it still contains zero images.
+And every `Member` of a `PhotoClub` has exactly one `Portfolio` - even if it still contains zero images - 
+because this is needed to store information about this membership.
 This one-to-one relationship between `Member` and `Portfolio` allows them to be 
-modelled using once single concept (or table) that we named `MemberPortfolio`.
+modelled using once single concept (aka table) that we named `MemberPortfolio`.
 
 ### How the Data is Loaded
 
