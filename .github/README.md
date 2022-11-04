@@ -278,8 +278,6 @@ meaning that redundancy in the stored data has been minimized.
 
 #### PhotoClub
 
-Every `PhotoClub` has zero or more `Members` of various roles (Chairman, Admin, ...) and states (current, former, apiring, ...).
-A `Member` may have multiple roles (e.g., acting as both Secretary and Admin for the same `PhotoClub`).
 
 #### Photographer
 
@@ -288,6 +286,13 @@ related to the `Photographer` as an individual, rather to the `Photographer's` m
 This club-independent information is stored in the individual's `Photographer` struct/record.
 
 #### MemberPortfolio
+
+Every `PhotoClub` has zero or more `Members` who can have various roles (Chairman, Admin, ...) representing some
+kind of task they perform in that photo club. 
+A `Member` may have multiple roles within the same `PhotoClub` (e.g., members acts as both Secretary and Admin).
+
+Members also have a status, the default being `current` membership. Other values represent former membership and aspiring
+membership (some clubs have a form of probation period).
 
 `Portfolio` represents the work of one `Photographer` in the context of one `PhotoClub`.
 A `Portfolio` contains `Images` (not in CoreData yet). An `Image` can show up in multiple `Portfolios` if
