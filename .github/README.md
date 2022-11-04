@@ -278,6 +278,15 @@ meaning that redundancy in the stored data has been minimized.
 
 #### PhotoClub
 
+A `PhotoClub` is uniquely identified by it `name` *and* a `town` - just in case two towns have a photo club with the same name.
+
+A `PhotoClub` has a rough address down to the `town` level and GPS coordinates representing where the club meets (say at the address level).
+The GPS coordinates are used to insert markers on a map.
+
+Esoteric side note: `town` and `country` are not currently localized.
+Thus Germany should be labelled Deutschland (D) or Duitsland (NL), etc.
+This can be fixed someday by doing a reverse geolocation lookup using the GPS coordinates
+instead of storing `town` and `country` in the database.
 
 #### Photographer
 
@@ -287,12 +296,12 @@ This club-independent information is stored in the individual's `Photographer` s
 
 #### MemberPortfolio
 
-Every `PhotoClub` has zero or more `Members` who can have various roles (Chairman, Admin, ...) representing some
-kind of task they perform in that photo club. 
-A `Member` may have multiple roles within the same `PhotoClub` (e.g., members acts as both Secretary and Admin).
+Every `PhotoClub` has zero or more `Members` who can have various roles (`isChairman`, `isAdmin`, ...)
+representing some kind of task they perform in that photo club. 
+A `Member` may perform multiple roles within the same `PhotoClub` (e.g., members is both `isSecretary` and `isAdmin`).
 
-Members also have a status, the default being `current` membership. Other values represent former membership and aspiring
-membership (some clubs have a form of probation period).
+Members also have a status, the implicit default being `isCurrent` membership.
+Explicit status values include `isFormer`, `isAspiring`, `isHonorary` and `isMentor`.
 
 `Portfolio` represents the work of one `Photographer` in the context of one `PhotoClub`.
 A `Portfolio` contains `Images` (not in CoreData yet). An `Image` can show up in multiple `Portfolios` if
