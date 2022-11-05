@@ -269,10 +269,12 @@ The use of a Swift MVVM architecture implies that the model data is stored in st
 
 ### The Data Model
 
-Here are the three central concepts (aka tables or struct types). The number of tables will increase in the future.
+Here are the three central concepts (aka tables or struct types). The number of tables should roughly double in the future.
 
 Note that the tables are fully "normalized" (in the relational database sense),
-meaning that redundancy in the stored data has been minimized.
+meaning that redundancy in the stored data has been minimized. 
+Optional properties in the database with names like `town_` have a corresponding computed non-optional property like `town` that always
+returns a value (such as "Unknown town").
 
 [![Product schema][product-schema]](https://github.com/vdhamer/PhotoClubWaalre/blob/main/Assets.xcassets/images/Schema.imageset/Schema.png)
 
