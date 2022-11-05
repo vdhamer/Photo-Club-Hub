@@ -44,7 +44,7 @@
     </li>
     <li><a href="#the-app-architecture">The App's Architecture</a>
         <ul>
-              <li><a href="#"role-of-the-database>Role of the Database</a></li>
+              <li><a href="#role-of-the-database">Role of the Database</a></li>
               <li><a href="#the-data-model">The Data Model</a></li>
 	      <ul>
 		 <li><a href="#photoclub">PhotoClub</a></li>
@@ -268,10 +268,19 @@ architecture.
 
 ### Role of the Database 
 
-The model's data is fetched and updated via the internet, and a copy is stored in a local database (Apple's CoreData framework).
-So far, all data in the local database is also available online.
-
 The use of a Swift MVVM architecture implies that the model data is stored in structs (and in database tables) rather than in classes.
+
+The model's data is fetched and updated via the internet, and a copy of required data is stored in a local database
+(Apple's CoreData framework, which here provides an abstraction of SQL and [SQLite](https://en.wikipedia.org/wiki/SQLite)).
+
+So far, all data in the local database is also available online.
+The presense of the database improves startup speed and reduces network traffic.
+
+That may sound a lot like a cache but, strictly speaking, it is not quite "same data, but faster"
+because the data is fetched asynchronously: the app continously shows the data in the `model` (dabase)
+and pushes (MVVM) asynchronous updates to the model data towards the user interface (SwiftUI `views`). 
+In practice, when the app launches, the user sees the data in the database, and possibly seconds later
+sees any new or updated records as they are received from the network.
 
 ### The Data Model
 
