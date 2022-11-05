@@ -44,7 +44,8 @@
     </li>
     <li><a href="#the-app-architecture">The App's Architecture</a>
         <ul>
-           <li><a href="#the-data-model">The Data Model</a></li>
+              <li><a href="#"role-of-the-database>Role of the Database</a></li>
+              <li><a href="#the-data-model">The Data Model</a></li>
 	      <ul>
 		 <li><a href="#photoclub">PhotoClub</a></li>
 		 <li><a href="#photographer">Photographer</a></li>
@@ -263,7 +264,12 @@ and possibly even a dedicated backend server.
 ## The App Architecture
 
 The app uses a [Swift-style MVVM](https://www.hackingwithswift.com/books/ios-swiftui/introducing-mvvm-into-your-swiftui-project)
-architecture. The model's data is fetched and updated via the internet, and is cached in a local database (Apple's CoreData framework).
+architecture. 
+
+### Role of the Database 
+
+The model's data is fetched and updated via the internet, and a copy is stored in a local database (Apple's CoreData framework).
+So far, all data in the local database is also available online.
 
 The use of a Swift MVVM architecture implies that the model data is stored in structs (and in database tables) rather than in classes.
 
