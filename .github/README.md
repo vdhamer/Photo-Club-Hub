@@ -267,25 +267,27 @@ The app uses a [Swift-style MVVM](https://www.hackingwithswift.com/books/ios-swi
 architecture with SwiftUI as the user interface framework. 
 
 The use of a Swift MVVM architecture implies that the model data is stored in structs rather than in classes.
-Any changes to the data in these structs automatically trigger the required updates to the SwiftUI views.
+Any changes to the data in these structs automatically trigger the required updates to the SwiftUI's `Views`.
 
 ### Role of the Database 
 
-The model's data is loaded and kept up to date via the internet, and is stored in a local database
-(Apple's CoreData framework, which bridges the [SQLite](https://en.wikipedia.org/wiki/SQLite) world to the world of Swift structs).
+The model's data is loaded and kept up to date via the internet, and is stored in a local database. 
+Internally the database is [SQLite](https://en.wikipedia.org/wiki/SQLite), but that is abstracted away using Apple's
+Core Data framework.
 
-The data in the local database is (almost entirely) available online. So the app *could* have fetched the data from the network
-during each startup. Using the database, however, improves startup speed because, when launched, the app already has a working copy of
-the data from a previous session that is valid enough to drive the user interface. 
+The data in the local database is in principle available online. So the app *could* have retrieve that data over the network
+at each startup. However, by using a database, app startup is faster: when launched, the app normally already has a reasonably
+up-to-date data set from a previous session. That possibly somewhat outdated data is valid enough to initialize and drive the user interface. 
 
-To handle data updates, an asynchrous request fetches the latest version of the data from the network. And the MVVM architecture
-uses this to update the data that the user sees (MVVM `Views`). So occasionally, seconds after the app launches,
-the user sees the list of portfolios on the Portfolio's screen extend (via an animation) if a club got a new member.
+To handle data updates, an asynchrous network call fetches the current version of the data from the network. 
+And the MVVM architecture uses this to update the data that the user sees (MVVM Views).
+So occasionally, seconds after the app launches, the user may see the portfolios on the Portfolios screen change (via an animation) 
+if a club's online list of members changed since the last session.
 
-To be fully accurate, the implementation of this architecture still has some gaps:
+To be accurate, the above is the target architecture. But its implementation still has some gaps:
 1. the lists of images per portfolio are not buffered in the database yet. This is a roadmap item.
-2. members who don't shup up in the online membership list anymore don't get automatically deleted from the database. Consider it a bug, although it is actually a deliberate priority choice.
-3. some member data was not available online in an easily readable form. Example: "who is the Chairman of Photo Club Waalre?". That data is inserted into the database using code.
+2. members who no longer show up in the online membership list are not (yet) automatically deleted from the database. This requires a bit more administration, because these cases are not directly detected by working through the online list (the deleted data is *not* on the list!).
+3. for the data for Fotogoep Waalre, some member data is not available online and is added through code (file name?). Examples are the club's officials (e.g. Chairman) and date of birth of current members. 
 
 ### The Data Model
 
