@@ -286,8 +286,11 @@ if a club's online list of members changed since the last session.
 
 To be accurate, the above is the target architecture. But its implementation still has some gaps:
 1. the lists of images per portfolio are not buffered in the database yet. This is a roadmap item.
-2. members who no longer show up in the online membership list are not (yet) automatically deleted from the database. This requires a bit more administration, because these cases are not directly detected by working through the online list (the deleted data is *not* on the list!).
-3. for the data for Fotogoep Waalre, some member data is not available online and is added through code ([file](https://github.com/vdhamer/PhotoClubWaalre/blob/main/Fotogroep%20Waalre/ViewModel/FotogroepWaalre/FGWMembersProvider%2BinsertSomeHardcodedMemberData.swift)). Examples are the club's officials (e.g. Chairman) and date of birth of current members. 
+2. members who no longer show up in the online membership list are not (yet) automatically deleted from the database.
+This requires a bit more administration, because these cases are not directly detected by working through the online list
+(that deleted data is *not* on the online list anymore!).
+4. for the data for Fotogoep Waalre, some member data is not available online and is added through code
+( [file(https://github.com/vdhamer/PhotoClubWaalre/blob/main/Fotogroep%20Waalre/ViewModel/FotogroepWaalre/FGWMembersProvider%2BinsertSomeHardcodedMemberData.swift)). Examples are the club's officials (e.g. Chairman) and date of birth of current members.
 
 ### The Data Model
 
