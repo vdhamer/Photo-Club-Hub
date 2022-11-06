@@ -268,20 +268,24 @@ architecture.
 
 ### Role of the Database 
 
-The use of a Swift MVVM architecture implies that the model data is stored in structs
-(and in this case in database tables) rather than in classes.
+The use of a Swift MVVM architecture implies that the model data is stored in structs rather than in classes
+and that any changes to the the data in these structs automatically triggers updates the SwiftUI user interface.
 
-The model's data is fetched and updated via the internet, and a copy of that data is stored in a local database
-(Apple's CoreData framework, which here provides an abstraction of [SQLite](https://en.wikipedia.org/wiki/SQLite)).
+The model's data is loaded and kept up to date via the internet, and is stored in a local database
+(Apple's CoreData framework, which bridges the [SQLite](https://en.wikipedia.org/wiki/SQLite) and Swift struct worlds).
 
-So far, all data in the local database is also available online.
-The use of the database improves startup speed and reduces network traffic.
+The data in the local database is (almost entirely) available online. So the app *could* have fetched the data from the network
+during each startup. Using the database, however, improves startup speed because, when launched, the app already has a working copy of
+the data from a previous session that is valid enough to drive the user interface. 
 
-That may sound a lot like a cache but, strictly speaking, it is not quite "same data, but faster"
-because the data is fetched asynchronously: the app continously shows the data in the `model` (dabase)
-and pushes (MVVM) asynchronous updates of the model data towards the user interface (SwiftUI `views`). 
-In practice, when the app launches, the user sees the data in the database, and possibly seconds later
-sees any new or updated records as they are received from the network.
+To handle data updates, an asynchrous request fetches the latest version of the data from the network. And the MVVM architecture
+uses this to update the data that the user sees (MVVM `Views`). So occasionally, seconds after the app launches,
+the user sees the list of portfolios on the Portfolio's screen extend (via an animation) if a club got a new member.
+
+To be fully accurate, the implementation of this architecture still has some gaps:
+1. the lists of images per portfolio are not buffered in the database yet. This is a roadmap item.
+2. members who don't shup up in the online membership list anymore don't get automatically deleted from the database. Consider it a bug, although it is actually a deliberate priority choice.
+3. some member data was not available online in an easily readable form. Example: "who is the Chairman of Photo Club Waalre?". That data is inserted into the database using code.
 
 ### The Data Model
 
