@@ -264,15 +264,15 @@ and possibly even a dedicated backend server.
 ## The App Architecture
 
 The app uses a [Swift-style MVVM](https://www.hackingwithswift.com/books/ios-swiftui/introducing-mvvm-into-your-swiftui-project)
-architecture. 
+architecture with SwiftUI as the user interface framework. 
+
+The use of a Swift MVVM architecture implies that the model data is stored in structs rather than in classes.
+Any changes to the data in these structs automatically trigger the required updates to the SwiftUI views.
 
 ### Role of the Database 
 
-The use of a Swift MVVM architecture implies that the model data is stored in structs rather than in classes
-and that any changes to the the data in these structs automatically triggers updates the SwiftUI user interface.
-
 The model's data is loaded and kept up to date via the internet, and is stored in a local database
-(Apple's CoreData framework, which bridges the [SQLite](https://en.wikipedia.org/wiki/SQLite) and Swift struct worlds).
+(Apple's CoreData framework, which bridges the [SQLite](https://en.wikipedia.org/wiki/SQLite) world to the world of Swift structs).
 
 The data in the local database is (almost entirely) available online. So the app *could* have fetched the data from the network
 during each startup. Using the database, however, improves startup speed because, when launched, the app already has a working copy of
