@@ -263,11 +263,12 @@ and possibly even a dedicated backend server.
 
 ## The App Architecture
 
-The app uses a [Swift-style MVVM](https://www.hackingwithswift.com/books/ios-swiftui/introducing-mvvm-into-your-swiftui-project)
-architecture with SwiftUI as the user interface framework. 
+The app uses a [SwiftUI-based MVVM](https://www.hackingwithswift.com/books/ios-swiftui/introducing-mvvm-into-your-swiftui-project)
+architecture pattern. 
 
-The use of a Swift MVVM architecture implies that the model data is stored in structs rather than in classes.
+The use of a SwiftUI-based MVVM architecture implies that the model data is stored in structs rather than in classes.
 Any changes to the data in these structs automatically trigger the required updates to the SwiftUI's `Views`.
+The `Model` and `View` layers are connected by a `ViewModel` layer. Each of the three layers has its own source code directory.
 
 ### Role of the Database 
 
