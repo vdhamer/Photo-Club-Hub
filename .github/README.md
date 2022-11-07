@@ -276,18 +276,20 @@ The model's data is loaded and kept up to date via the internet, and is stored i
 Internally the database is [SQLite](https://en.wikipedia.org/wiki/SQLite), but that is abstracted away using Apple's
 Core Data framework.
 
-The data in the local database is in principle available online. So the app *could* have retrieve that data over the network
-at each startup. However, by using a database, app startup is faster: when launched, the app normally already has a reasonably
-up-to-date data set from a previous session. That possibly somewhat outdated data is valid enough to initialize and drive the user interface. 
+The data in the local database is in principle available online. So the app *could* have retrieved that data over the network each
+time the app was launched. By using a database, however, the app starts up faster because, when launched, the app 
+starts by displaying the database state left by the previous session.
 
+That possibly somewhat outdated data is enough to initialize and drive the user interface. 
 To handle data updates, an asynchrous network call fetches the current version of the data from the network. 
 And the MVVM architecture uses this to update the data that the user sees (MVVM Views).
-So occasionally, seconds after the app launches, the user may see the portfolios on the Portfolios screen change (via an animation) 
-if a club's online list of members changed since the last session.
+So occasionally, seconds after the app launches, the user may see the list of portfolios on the Portfolios screen change 
+(via an animation) because a club's online list of members changed since the last session.
 
-To be accurate, the above is the target architecture. But its implementation still has some gaps:
-1. the lists of images per portfolio are not buffered in the database yet. This is a roadmap item.
-2. members who no longer show up in the online membership list are not (yet) automatically deleted from the database.
+To be accurate, the above is the target architecture.
+Its implementation still has a a few gaps - even though it works well enough that user shouldn't notice:
+1. the lists of images per portfolio are not stored in the database yet. This is a roadmap item.
+3. members who no longer show up in the online membership list are not (yet) automatically deleted from the database.
 This requires a bit more administration, because these cases are not directly detected by working through the online list
 (that deleted data is *not* on the online list anymore!).
 4. for the data for Fotogoep Waalre, some member data is not available online and is added through code
