@@ -281,24 +281,25 @@ The model's data is loaded and kept up to date via the internet, and is stored i
 Internally the database is [SQLite](https://en.wikipedia.org/wiki/SQLite), but that is abstracted away using Apple's
 Core Data framework.
 
-The data in the local database is in principle available online. So the app *could* have retrieved that data over the network each
-time the app was launched. By using a database, however, the app starts up faster because, when launched, the app 
-starts by displaying the database state left by the previous session.
+The data in the local database is in principle available online.
+So the app *could* have alternatively retrieved that data over the network each time the app was launched.
+By using a database, however, the app starts up quicker because, when launched, the app 
+can already display the database state as left behind after the previous session.
+That data might be somewhat outdated, but is should be accurate enough to fill the user interface. 
 
-That possibly somewhat outdated data is enough to initialize and drive the user interface. 
 To handle data updates, an asynchrous network call fetches the current version of the data from the network. 
-And the MVVM architecture uses this to update the data that the user sees (MVVM Views).
-So occasionally, seconds after the app launches, the user may see the list of portfolios on the Portfolios screen change 
-(via an animation) because a club's online list of members changed since the last session.
+And the MVVM architecture uses this to update the user interface views as soon as the data comes in.
+So occasionally, one or two seconds after the app launches, the user may see the list of portfolios on the Portfolios screen change 
+(using an animation), meaning that a club's online members list changed since the last session.
 
 To be accurate, the above is the target architecture.
 Its implementation still has a a few gaps - even though it works well enough that user shouldn't notice:
-1. the lists of images per portfolio are not stored in the database yet. This is a roadmap item.
-3. members who no longer show up in the online membership list are not (yet) automatically deleted from the database.
-This requires a bit more administration, because these cases are not directly detected by working through the online list
-(that deleted data is *not* on the online list anymore!).
-4. for the data for Fotogoep Waalre, some member data is not available online and is added through code
-( [file(https://github.com/vdhamer/PhotoClubWaalre/blob/main/Fotogroep%20Waalre/ViewModel/FotogroepWaalre/FGWMembersProvider%2BinsertSomeHardcodedMemberData.swift)). Examples are the club's officials (e.g. Chairman) and date of birth of current members.
+1. the lists of images per portfolio are *not* stored in the database yet and are not cached. This is a roadmap item.
+2. members who drop off the online membership list are not (yet) automatically deleted from the database.
+This requires a bit more administration, because these cases are not detectable by iterating through the online membership list:
+any disappearing records are simply *not* on the online list anymore!
+3. in the case of Fotogoep Waalre, some member data is not easily available online and is added programmatically
+(in [this file](https://github.com/vdhamer/PhotoClubWaalre/blob/main/Fotogroep%20Waalre/ViewModel/FotogroepWaalre/FGWMembersProvider%2BinsertSomeHardcodedMemberData.swift)). Examples of this data include the club's list officials (e.g. Chairman) and date of birth of each member.
 
 ### The Data Model
 
