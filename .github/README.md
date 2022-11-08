@@ -271,7 +271,7 @@ It also implies that any changes to the model data automatically triggers the re
 that the `Model` and `View` layers are connected by a `ViewModel` layer.
 
 Each of the three layers has its own source code directory:
-- [Model](https://github.com/vdhamer/PhotoClubWaalre/tree/main/Fotogroep%20Waalre/Model) contains the data model in various versions
+- [Model](https://github.com/vdhamer/PhotoClubWaalre/tree/main/Fotogroep%20Waalre/Model) contains the current data model (and older versions, as needed for schema migration)
 - [View](https://github.com/vdhamer/PhotoClubWaalre/tree/main/Fotogroep%20Waalre/View) contains only SwiftUI views
 - [ViewModel](https://github.com/vdhamer/PhotoClubWaalre/tree/main/Fotogroep%20Waalre/ViewModel) includes the code that populates and updates the model
 
