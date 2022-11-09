@@ -295,11 +295,13 @@ So occasionally, one or two seconds after the app launches, the user may see the
 To be entirely accurate, the above is the target architecture.
 Its implementation still has a few gaps - even though it works well enough that user shouldn't notice:
 1. the lists of images per portfolio are *not* stored in the database yet and are not cached. This is a roadmap item.
-2. members who drop off the online membership list are not (yet) automatically deleted from the database.
-This requires a bit more administration, because these cases are not detectable by iterating through the online membership list:
-any disappearing records are simply *not* on the online list anymore!
-3. in the case of Fotogoep Waalre, some member data is not easily available online and is added programmatically
-(in [this file](https://github.com/vdhamer/PhotoClubWaalre/blob/main/Fotogroep%20Waalre/ViewModel/FotogroepWaalre/FGWMembersProvider%2BinsertSomeHardcodedMemberData.swift)). Examples of this data include the club's list officials (e.g. Chairman) and date of birth of each member.
+2. members who are removed from the online membership list are not (yet) automatically deleted from the database.
+This requires a bit more administration, because these individuals don't show up when iterating through the online membership list:
+their names/records are simply *not* on the online list anymore!
+3. in the case of Fotogoep Waalre, some member data is not easily available online and is added programmatically instead
+(in [this file](https://github.com/vdhamer/PhotoClubWaalre/blob/main/Fotogroep%20Waalre/ViewModel/FotogroepWaalre/FGWMembersProvider%2BinsertSomeHardcodedMemberData.swift)).
+Examples of this data include the club's list officials (e.g. Chairman) and date of birth of each member.
+Again, this is not desirable. Some of these issues are addressed [below](#a-better-approach).
 
 ### The Data Model
 
