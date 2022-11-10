@@ -40,7 +40,7 @@ extension FGWMembersProvider { // fill with some initial hard-coded content
         addMember(context: fgwBackgroundContext,
                   givenName: "Bettina", familyName: "de Graaf", bornDT: toDate(from: "19/07/1970"),
                   photoClub: clubWaalre,
-                  memberRolesAndStatus: MemberRolesAndStatus(role: [ .viceChairman: true ], stat: [:]),
+                  memberRolesAndStatus: MemberRolesAndStatus(role: [ .viceChairman: false ], stat: [:]),
                   latestImage: URL(string:
                             "https://www.fotogroepwaalre.nl/wp-content/uploads/2022/05/2022_FotogroepWaalre_019.jpg")!
         )

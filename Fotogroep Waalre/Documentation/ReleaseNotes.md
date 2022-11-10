@@ -1,7 +1,12 @@
 ---------------------------------------------------------------------------
 ### 2.2.4 (Github hash ???????) ??-11-22
 
-This is build (4577) in Apple's App Store
+This is build (4577?) in Apple's App Store
+
+* Update of the readme.md file (architecture topics)
+* Portfolios screen
+    * Changed vice-chairman status for Fotogroep Waalre
+* Minor: capitalized words in titles    
 ---------------------------------------------------------------------------
 ### 2.2.3 (Github hash 9d1dfed) 23-10-22
 
