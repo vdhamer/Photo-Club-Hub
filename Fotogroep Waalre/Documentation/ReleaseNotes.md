@@ -3,9 +3,10 @@
 
 This is build (4577?) in Apple's App Store
 
-* Update of the readme.md file (architecture topics)
+* Update of the readme.md file (mainly architecture topics)
 * Portfolios screen
     * Changed vice-chairman status for Fotogroep Waalre
+    * Updated hardcoded thumbnails to include newer Expo2022 images
 * Minor: capitalized words in titles    
 ---------------------------------------------------------------------------
 ### 2.2.3 (Github hash 9d1dfed) 23-10-22
@@ -52,7 +53,7 @@ This is build 4573 (but it was rejected Apple's App Store because the screenshot
     * While downloading the thumbnail, a sketch of an anxious-looking snail is shown (only visible if download takes a while).
     * Incidentally, both the question-mark and the snail were generated using Stable Diffusion text-to-image software.
     * The App Store videos and screenshots have been updated to reflect the new thumbnails.
-    * Veranderde vicevoorzitterschap doorgevoerd bij Fotogroep Waalre.
+    * Changed vice-chairmanship for Fotogroep Waalre.
 * Photo Clubs screen
     * Swipe-left to delete an unneeded photo club (usually not needed). FGW can be deleted, but will reappears on restart.
     * Added a brief explanation at the bottom of the screen (about swiping and more).
