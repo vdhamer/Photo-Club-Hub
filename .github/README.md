@@ -268,12 +268,16 @@ architecture pattern.
 The use of a SwiftUI-based MVVM architecture implies that the model data is stored in _structs_ 
 rather than in slightly more heavyweight _classes_. It also implies that any changes to the
 model data automatically trigger the required updates to the SwiftUI's `Views` and
-that the `Model` and `View` layers are connected by a `ViewModel` layer.
+that the gap between the `Model` and `View` layers are bridged by a `ViewModel` glue layer.
 
 Each of the three layers has its own source code directory:
-- [Model](https://github.com/vdhamer/PhotoClubWaalre/tree/main/Fotogroep%20Waalre/Model) contains the current data model (and older versions, as needed for schema migration)
-- [View](https://github.com/vdhamer/PhotoClubWaalre/tree/main/Fotogroep%20Waalre/View) contains only SwiftUI views
-- [ViewModel](https://github.com/vdhamer/PhotoClubWaalre/tree/main/Fotogroep%20Waalre/ViewModel) includes the code that populates and updates the model
+- [Model](https://github.com/vdhamer/PhotoClubWaalre/tree/main/Fotogroep%20Waalre/Model) contains the
+  data model. It contains both the current version and older versions as separate files,
+  as needed for schema migration.
+- [View](https://github.com/vdhamer/PhotoClubWaalre/tree/main/Fotogroep%20Waalre/View) exclusively
+  contains SwiftUI views
+- [ViewModel](https://github.com/vdhamer/PhotoClubWaalre/tree/main/Fotogroep%20Waalre/ViewModel) includes
+  the code that populates and updates the model data.
 
 ### Role of the Database 
 
