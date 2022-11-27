@@ -115,7 +115,7 @@ Tapping *inside* the image allows you to zoom in or out to your heart's content.
 Tapping *outside* the image area gets you to the main Portfolio screen of the app.
 To see the animation again, just shut down and restart the app.
 
-Is the animation useful? Well, it was interesting to create and runs on the device's GPU cores,
+But is the animation useful? Well, it was interesting to create and it runs on the device's GPU cores,
 but at least it explains where the app's logo comes from.
 
 ### The User Interface Screens
@@ -126,15 +126,15 @@ but at least it explains where the app's logo comes from.
    Swiping left deletes an entry, but is seldom needed.
    The `Search` bar filters the list of portfolios.
 
-- `Settings` allows you to configure which portfolios you want to be visible in the
+- `Settings` allows you to configure which types of portfolios you want to be visible in the
    Portfolios screen. You can, for example, choose whether or not to include former members.
 
 - `Readme` contains in-app background information that is comparable to this text.
 
 - `Photo Clubs` lists the photo clubs that are currently loaded.
    A purple pin on the map shows the location where a selected club meets.
-   A blue pin shows the location of other nearby photo clubs.
-   A lock icon sets whether the map is frozen or can be zoomed-and-panned.
+   A blue pin shows the location of any other photo club on that map.
+   A button with a lock icon toggles whether the map is frozen or can be zoomed-and-panned.
 
 - `Who's Who` lists the photographers that you can be found in the app.
    It shows information that is club-independent.
@@ -142,17 +142,17 @@ but at least it explains where the app's logo comes from.
    (club-independent) photography sites.
    The `Search` bar filters the list of photographers.
    
-- `<Photographer name>`
-   The title of a portfolio is the photographer's name.
-   Note that there may be multiple portfolios for that photographer: one per photo clubs.
+- `Single portfolio`
+   The actual title of this screen is the photographer's name.
+   Note that there may be multiple portfolios for that photographer: one per photo club.
    Images are shown in chronological order, with the most recent first.
    For Fotogroep Waalre, you will see the year the image was created in the caption.
-   You can *swipe* to manually move forwards/backwards between the images.
-   There is also an *autoplay* mode that advanced the image automatically after a few seconds.
+   You can *swipe* left or right to manually move backwards or forwards through the portfolio.
+   There is also an *autoplay* mode that advances automatically to the next image after a delay.
     
 ### Multi-club Support
 
-Version 1 of the app only supported Photo Club Waalre (aka *Fotogroep Waalre*).
+Version 1 of the app only supported Photo Club Waalre (aka *Fotogroep Waalre* in Dutch).
 Version 2 added support for multiple photo clubs.
 For a preview of how that works, drag down (“pull to refresh”) the Photo Clubs page.
 This loads just enough test data to demo the feature.
@@ -161,15 +161,15 @@ This loads just enough test data to demo the feature.
 - [x] Put the app's source code on GitHub.
 	- [x] Handle private data about members in a secure way
     - [ ] Publish article in Dutch photo club [organization](https://fotobond.nl)
-- [ ] MemberListView: show thumbnails of most recent photos
-- [ ] MemberListView: automatically remove members who are removed on the server
+- [ ] Support expositions by photo clubs. Here is an [example](https://www.fotogroepwaalre.nl/fotos/Expo2022/#2).
+- [ ] MemberListView: show thumbnails of most recent photos. Already partially working prototype.
+- [ ] MemberListView: automatically remove members who are no longer on the online membership lists.
 - [ ] MemberGaleryView: replace use of WebKit by SwiftUI equivalent
-- [ ] Support onboarding of clubs without any code changes. A big challenge.
-- [ ] Notifications when new images are added to the portfolios.
-- [ ] Support expositions by photo clubs.
+- [ ] Support onboarding of clubs without any code changes. A big challenge, see below.
+- [ ] Notifications when new images are published.
 
-See the [open issues](https://github.com/vdhamer/PhotoClubWaalre/issues) for a full list of
-proposed features (and known issues).
+See the [open issues](https://github.com/vdhamer/PhotoClubWaalre/issues) for a list of
+proposed enhancements and known limitations.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
