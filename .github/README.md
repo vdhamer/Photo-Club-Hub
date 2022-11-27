@@ -318,8 +318,9 @@ Here are the three central concepts (also know as database entities or tables or
 
 Note that the tables are fully "normalized" in the relational database sense,
 meaning that redundancy in the data as stored has been minimized. 
-Optional properties in the database with names like `town_` have a corresponding computed property 
-that is not optional like `town`. Essentially `town` always returns a string value such as "Unknown town".
+Optional properties in the database with names like `PhotoClub.town_` have a corresponding computed
+property that is not optional like `PhotoClub.town`. This allows `PhotoClub.town` to always return
+a string value such as "Unknown town".
 
 [![Product schema][product-schema]](https://github.com/vdhamer/PhotoClubWaalre/blob/main/Assets.xcassets/images/Schema.imageset/Schema.png)
 
@@ -338,28 +339,30 @@ instead of storing `town` and `country` in the database.
 #### Photographer
 
 Some basic information about a `Photographer` (name, date of birth, personal website, ...) is
-related to the `Photographer` as an individual, rather to the `Photographer's` membership of any particular `PhotoClub`.
-This club-independent information is stored in the individual's `Photographer` struct/record.
+related to the `Photographer` as an individual, rather to the `Photographer's` membership of any
+specific `PhotoClub`. This club-independent information is stored in the individual's `Photographer`
+struct/record.
 
 #### MemberPortfolio
 
-Every `PhotoClub` has zero or more `Members` who can have various roles (`isChairman`, `isAdmin`, ...)
-representing some kind of task they perform in that photo club. 
-A `Member` may perform multiple roles within the same `PhotoClub` (e.g., members is both `isSecretary` and `isAdmin`).
+Every `PhotoClub` has (zero or more) `Members` who can have various roles (`isChairman`, `isAdmin`, ...)
+representing the tasks they perform in the photo club. A `Member` may have multiple roles within one
+`PhotoClub` (e.g., members is both `isSecretary` and `isAdmin`).
 
 Members also have a status, the implicit default being `isCurrent` membership.
 Explicit status values include `isFormer`, `isAspiring`, `isHonorary` and `isMentor`.
 
 `Portfolio` represents the work of one `Photographer` in the context of one `PhotoClub`.
-A `Portfolio` contains `Images` (not in CoreData yet). An `Image` can show up in multiple `Portfolios` if
-the `Photographer` "used" the same phone in more than one `PhotoClub`.
+A `Portfolio` contains `Images` (the list is not stored in the database yet). 
+An `Image` can show up in multiple `Portfolios` if the `Photographer` presented the same photo within
+multiple `PhotoClubs`.
 
 `Member` and `Portfolio` can be considered *synonyms* from a modeling perspective:
 we create exactly one `Portfolio` for each `PhotoClub` that a `Photographer` became a `Member` of.
 And every `Member` of a `PhotoClub` has exactly one `Portfolio` - even if it still contains zero images - 
 because this is needed to store information about this membership.
 This one-to-one relationship between `Member` and `Portfolio` allows them to be 
-modelled using once single concept (aka table) that we named `MemberPortfolio`.
+modelled using once concept (aka table) instead of two. We named that `MemberPortfolio`.
 
 ### How the Data is Loaded
 
