@@ -265,8 +265,9 @@ translations, and SVG icons.
 The app uses a [SwiftUI-based MVVM](https://www.hackingwithswift.com/books/ios-swiftui/introducing-mvvm-into-your-swiftui-project)
 architecture pattern. 
 
-The use of a SwiftUI-based MVVM architecture implies that the model data is stored in structs rather than in classes.
-It also implies that any changes to the model data automatically trigger the required updates to the SwiftUI's `Views` and
+The use of a SwiftUI-based MVVM architecture implies that the model data is stored in _structs_ 
+rather than in slightly more heavyweight _classes_. It also implies that any changes to the
+model data automatically trigger the required updates to the SwiftUI's `Views` and
 that the `Model` and `View` layers are connected by a `ViewModel` layer.
 
 Each of the three layers has its own source code directory:
