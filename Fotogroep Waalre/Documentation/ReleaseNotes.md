@@ -7,7 +7,10 @@ This is build (4577?) in Apple's App Store
 * Portfolios screen
     * Changed vice-chairman status for Fotogroep Waalre
     * Updated hardcoded thumbnails to include newer Expo2022 images
-* Minor: capitalized words in titles    
+* Refactoring
+    * Minor: tweaked capitalization of titles
+    * upgraded to SwiftLint 0.50.1
+    * removed file DeviceOwnership.swift (it was not part of the build, but SwiftLint was checking it)
 ---------------------------------------------------------------------------
 ### 2.2.3 (Github hash 9d1dfed) 23-10-22
 
