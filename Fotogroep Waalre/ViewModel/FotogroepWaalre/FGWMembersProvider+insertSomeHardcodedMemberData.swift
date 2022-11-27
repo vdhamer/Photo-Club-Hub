@@ -32,7 +32,7 @@ extension FGWMembersProvider { // fill with some initial hard-coded content
         addMember(context: fgwBackgroundContext,
                   givenName: "Bart", familyName: "van Stekelenburg", bornDT: toDate(from: "2/6/1970"),
                   photoClub: clubWaalre,
-                  memberRolesAndStatus: MemberRolesAndStatus(role: [ .chairman: true ], stat: [:]),
+                  memberRolesAndStatus: MemberRolesAndStatus(role: [ .chairman: true ]),
                   latestImage: URL(string:
                             "https://www.fotogroepwaalre.nl/wp-content/uploads/2022/07/2022_FotogroepWaalre_057.jpg")!
         )
@@ -40,7 +40,7 @@ extension FGWMembersProvider { // fill with some initial hard-coded content
         addMember(context: fgwBackgroundContext,
                   givenName: "Bettina", familyName: "de Graaf", bornDT: toDate(from: "19/07/1970"),
                   photoClub: clubWaalre,
-                  memberRolesAndStatus: MemberRolesAndStatus(role: [ .viceChairman: false ], stat: [:]),
+                  memberRolesAndStatus: MemberRolesAndStatus(role: [ .viceChairman: false ]),
                   latestImage: URL(string:
                             "https://www.fotogroepwaalre.nl/wp-content/uploads/2022/05/2022_FotogroepWaalre_019.jpg")!
         )
@@ -76,7 +76,7 @@ extension FGWMembersProvider { // fill with some initial hard-coded content
         addMember(context: fgwBackgroundContext,
                   givenName: "Erik", familyName: "van Geest", bornDT: toDate(from: "16/09/1967"),
                   photoClub: clubWaalre,
-                  memberRolesAndStatus: MemberRolesAndStatus(role: [ .admin: true ], stat: [:]),
+                  memberRolesAndStatus: MemberRolesAndStatus(role: [ .admin: true ]),
                   latestImage: URL(string:
                             "https://www.fotogroepwaalre.nl/wp-content/uploads/2022/07/2022_FotogroepWaalre_033.jpg")!
         )
@@ -120,7 +120,7 @@ extension FGWMembersProvider { // fill with some initial hard-coded content
         addMember(context: fgwBackgroundContext,
                   givenName: "Jos", familyName: "Jansen", bornDT: toDate(from: "17/5/1945"),
                   photoClub: clubWaalre,
-                  memberRolesAndStatus: MemberRolesAndStatus(role: [ .treasurer: true ], stat: [:]),
+                  memberRolesAndStatus: MemberRolesAndStatus(role: [ .treasurer: true ]),
                   latestImage: URL(string:
                             "https://www.fotogroepwaalre.nl/wp-content/uploads/2022/08/2022_FotogroepWaalre_081.jpg")!
         )
@@ -150,7 +150,7 @@ extension FGWMembersProvider { // fill with some initial hard-coded content
         addMember(context: fgwBackgroundContext,
                   givenName: "Peter", familyName: "van den Hamer", bornDT: toDate(from: "18/10/1957"),
                   photoClub: clubWaalre,
-                  memberRolesAndStatus: MemberRolesAndStatus(role: [ .admin: true, .secretary: true ], stat: [:]),
+                  memberRolesAndStatus: MemberRolesAndStatus(role: [ .admin: true, .secretary: true ]),
                   memberWebsite: URL(string: "https://www.fotogroepwaalre.nl/fotos/Peter_van_den_Hamer/")!,
                   latestImage: URL(string:
                             "https://www.fotogroepwaalre.nl/wp-content/uploads/2022/08/2013_Phoenix_RX1r_580.jpg")!
