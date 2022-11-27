@@ -308,17 +308,18 @@ even though it works well enough a user typically won't notice:
 3. in the case of Fotogoep Waalre, some member data is not yet available online in a machine-readable
    form and is thus added programmatically instead. This is done in [this file](https://github.com/vdhamer/PhotoClubWaalre/blob/main/Fotogroep%20Waalre/ViewModel/FotogroepWaalre/FGWMembersProvider%2BinsertSomeHardcodedMemberData.swift).
    Examples of this hardcoded data include the club's officials (e.g. Chairman) and the date of birth of
-   member. 
-Again, this is not desirable. Some of these issues are addressed [below](#a-better-approach).
+   member.
+
+Again, these 3 gaps need fixing. Some of these issues are addressed [below](#a-better-approach).
 
 ### The Data Model
 
-Here are the three central concepts (aka tables or struct types). The number of tables should roughly double in the future.
+Here are the three central concepts (also know as database entities or tables or struct types).
 
-Note that the tables are fully "normalized" (in the relational database sense),
-meaning that redundancy in the stored data has been minimized. 
-Optional properties in the database with names like `town_` have a corresponding computed non-optional property like `town` that always
-returns a value (such as "Unknown town").
+Note that the tables are fully "normalized" in the relational database sense,
+meaning that redundancy in the data as stored has been minimized. 
+Optional properties in the database with names like `town_` have a corresponding computed property 
+that is not optional like `town`. Essentially `town` always returns a string value such as "Unknown town".
 
 [![Product schema][product-schema]](https://github.com/vdhamer/PhotoClubWaalre/blob/main/Assets.xcassets/images/Schema.imageset/Schema.png)
 
