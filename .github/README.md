@@ -73,23 +73,28 @@
 Photo Club Waalre is a photography club named after Waalre, a town in the south of 
 The Netherlands. Its members meet since 1988, mainly to critique each other’s photos.
 
-The name of the photo club may disappear from the app's name at some point.
-This would stress that the app can support *multiple* photo clubs rather than just one.
+This app originally served as an alternative way to view the photos published on the club's web
+site. The name of the app may, however, change to stress that the app can support *multiple* photo clubs.
 
 ### The Portfolio Concept
 
-The app is designed to showcase curated images made by members of photo clubs.
+The app is meant to showcase curated images made by members of photo clubs.
 
-The images within the app are divided into `portfolios`. Within this app, 
-a portfolio covers the part of a photographer's work that was shared *within* a single photo club.
+The images within the app are divided into so-called `portfolios`. Within this app, 
+a portfolio covers the part of a photographer's work that is associated with a single photo club.
 
 Images by a photographer that are *not* associated with a photo club are not supported by the app
-because the app is club-oriented. But the app can provide a link to a photographer's personal (club-unrelated) photography website.
+because the app is club-oriented. The app can, however, provide a link to a photographer's
+personal (club-unrelated) photography website.
 
 If a photographer joined *multiple* photo clubs, the app will show *multiple* portfolios (with different
 content) for that photographer. Examples:
 - the photographer is _simultaneously_ a member of both club A and club B.
 - the photographer was _formerly_ a member of club A, but at some point left club A and joined club B.
+
+Despite the app being fundamentally club-oriented, nothing prevents you from setting
+up a one-man club, or grouping independent photographers based on say geography, language
+or interest.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
  
