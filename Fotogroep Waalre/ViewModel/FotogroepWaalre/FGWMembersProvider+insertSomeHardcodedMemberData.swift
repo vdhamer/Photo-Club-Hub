@@ -34,7 +34,7 @@ extension FGWMembersProvider { // fill with some initial hard-coded content
                   photoClub: clubWaalre,
                   memberRolesAndStatus: MemberRolesAndStatus(role: [ .chairman: true ]),
                   latestImage: URL(string:
-                            "https://www.fotogroepwaalre.nl/wp-content/uploads/2022/07/2022_FotogroepWaalre_057.jpg")!
+                            "https://www.fotogroepwaalre.nl/wp-content/uploads/2022/01/2022_FotogroepWaalre_010.jpg")!
         )
 
         addMember(context: fgwBackgroundContext,
@@ -42,28 +42,28 @@ extension FGWMembersProvider { // fill with some initial hard-coded content
                   photoClub: clubWaalre,
                   memberRolesAndStatus: MemberRolesAndStatus(role: [ .viceChairman: false ]),
                   latestImage: URL(string:
-                            "https://www.fotogroepwaalre.nl/wp-content/uploads/2022/05/2022_FotogroepWaalre_019.jpg")!
+                            "https://www.fotogroepwaalre.nl/wp-content/uploads/2022/01/2021_FotogroepWaalre_102.jpg")!
         )
 
         addMember(context: fgwBackgroundContext,
                   givenName: "Bram", familyName: "van den Berge", bornDT: toDate(from: "28/04/1952"),
                   photoClub: clubWaalre,
                   latestImage: URL(string:
-                            "https://www.fotogroepwaalre.nl/wp-content/uploads/2021/04/2021_FotogroepWaalre_005.jpg")!
+                            "https://www.fotogroepwaalre.nl/wp-content/uploads/2022/11/2022_FotogroepWaalre_087.jpg")!
         )
 
         addMember(context: fgwBackgroundContext,
                   givenName: "Carel", familyName: "Bullens", bornDT: toDate(from: "01/11/1952"),
                   photoClub: clubWaalre,
                   latestImage: URL(string:
-                            "https://www.fotogroepwaalre.nl/wp-content/uploads/2022/05/2022_FotogroepWaalre_021.jpg")!
+                            "https://www.fotogroepwaalre.nl/wp-content/uploads/2022/01/2022_FotogroepWaalre_011.jpg")!
         )
 
         addMember(context: fgwBackgroundContext,
                   givenName: "Cassandra", familyName: "Postema", bornDT: toDate(from: "28/01/1971"),
                   photoClub: clubWaalre,
                   latestImage: URL(string:
-                            "https://www.fotogroepwaalre.nl/wp-content/uploads/2022/05/2022_FotogroepWaalre_022.jpg")!
+                        "https://www.fotogroepwaalre.nl/wp-content/uploads/2022/11/2022_ExpoFotogroepWaalre_037.jpg")!
         )
 
         addMember(context: fgwBackgroundContext,
@@ -85,7 +85,7 @@ extension FGWMembersProvider { // fill with some initial hard-coded content
                   givenName: "François", familyName: "Hermans", bornDT: toDate(from: "10/08/1956"),
                   photoClub: clubWaalre,
                   latestImage: URL(string:
-                            "https://www.fotogroepwaalre.nl/wp-content/uploads/2011/02/varen-2.jpg")!
+                            "https://www.fotogroepwaalre.nl/wp-content/uploads/2022/11/2022_FotogroepWaalre_091.jpg")!
         )
 
         addMember(context: fgwBackgroundContext,
@@ -93,7 +93,7 @@ extension FGWMembersProvider { // fill with some initial hard-coded content
                   photoClub: clubWaalre,
                   memberRolesAndStatus: MemberRolesAndStatus(role: [ .viceChairman: false ], stat: [:]),
                   latestImage: URL(string:
-                            "https://www.fotogroepwaalre.nl/wp-content/uploads/2022/08/2022_FotogroepWaalre_079.jpg")!
+                            "https://www.fotogroepwaalre.nl/wp-content/uploads/2022/05/2022_FotogroepWaalre_035.jpg")!
         )
 
         addMember(context: fgwBackgroundContext,
@@ -114,7 +114,7 @@ extension FGWMembersProvider { // fill with some initial hard-coded content
                   givenName: "Henriëtte", familyName: "van Ekert", bornDT: toDate(from: "21/11/1957"),
                   photoClub: clubWaalre,
                   latestImage: URL(string:
-                            "https://www.fotogroepwaalre.nl/wp-content/uploads/2022/07/2022_FotogroepWaalre_055.jpg")!
+                        "https://www.fotogroepwaalre.nl/wp-content/uploads/2022/11/2022_ExpoFotogroepWaalre_097.jpg")!
         )
 
         addMember(context: fgwBackgroundContext,
@@ -122,14 +122,14 @@ extension FGWMembersProvider { // fill with some initial hard-coded content
                   photoClub: clubWaalre,
                   memberRolesAndStatus: MemberRolesAndStatus(role: [ .treasurer: true ]),
                   latestImage: URL(string:
-                            "https://www.fotogroepwaalre.nl/wp-content/uploads/2022/08/2022_FotogroepWaalre_081.jpg")!
+                        "https://www.fotogroepwaalre.nl/wp-content/uploads/2022/11/2022_ExpoFotogroepWaalre_011.jpg")!
         )
 
         addMember(context: fgwBackgroundContext,
                   givenName: "Kees", familyName: "van Gemert", bornDT: toDate(from: "05/06/1953"),
                   photoClub: clubWaalre,
                   latestImage: URL(string:
-                            "https://www.fotogroepwaalre.nl/wp-content/uploads/2021/04/2021_FotogroepWaalre_024.jpg")!
+                        "https://www.fotogroepwaalre.nl/wp-content/uploads/2022/11/2022_ExpoFotogroepWaalre_067.jpg")!
         )
 
         addMember(context: fgwBackgroundContext,
@@ -144,7 +144,7 @@ extension FGWMembersProvider { // fill with some initial hard-coded content
                   givenName: "Miek", familyName: "Kerkhoven", bornDT: toDate(from: "09/02/1951"),
                   photoClub: clubWaalre,
                   latestImage: URL(string:
-                            "https://www.fotogroepwaalre.nl/wp-content/uploads/2022/07/2022_FotogroepWaalre_067.jpg")!
+                            "https://www.fotogroepwaalre.nl/wp-content/uploads/2022/01/2022_FotogroepWaalre_015.jpg")!
         )
 
         addMember(context: fgwBackgroundContext,
@@ -153,21 +153,21 @@ extension FGWMembersProvider { // fill with some initial hard-coded content
                   memberRolesAndStatus: MemberRolesAndStatus(role: [ .admin: true, .secretary: true ]),
                   memberWebsite: URL(string: "https://www.fotogroepwaalre.nl/fotos/Peter_van_den_Hamer/")!,
                   latestImage: URL(string:
-                            "https://www.fotogroepwaalre.nl/wp-content/uploads/2022/08/2013_Phoenix_RX1r_580.jpg")!
+                            "https://www.fotogroepwaalre.nl/wp-content/uploads/2021/09/2021_Iceland_R5_085.jpg")!
         )
 
         addMember(context: fgwBackgroundContext,
                   givenName: "Sipke", familyName: "Wadman", bornDT: toDate(from: "18/09/1951"),
                   photoClub: clubWaalre,
                   latestImage: URL(string:
-                            "https://www.fotogroepwaalre.nl/wp-content/uploads/2021/09/2021_FotogroepWaalre_045.jpg")!
+                        "https://www.fotogroepwaalre.nl/wp-content/uploads/2022/11/2022_ExpoFotogroepWaalre_040.jpg")!
         )
 
         addMember(context: fgwBackgroundContext,
                   givenName: "Tis", familyName: "Veugen", bornDT: toDate(from: "30/04/1957"),
                   photoClub: clubWaalre,
                   latestImage: URL(string:
-                            "https://www.fotogroepwaalre.nl/wp-content/uploads/2022/07/2022_FotogroepWaalre_052.jpg")!
+                        "https://www.fotogroepwaalre.nl/wp-content/uploads/2022/11/2022_ExpoFotogroepWaalre_081-1.jpg")!
         )
 
         addMember(context: fgwBackgroundContext,
