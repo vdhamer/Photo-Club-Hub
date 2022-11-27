@@ -275,36 +275,40 @@ Each of the three layers has its own source code directory:
   data model. It contains both the current version and older versions as separate files,
   as needed for schema migration.
 - [View](https://github.com/vdhamer/PhotoClubWaalre/tree/main/Fotogroep%20Waalre/View) exclusively
-  contains SwiftUI views
+  contains SwiftUI views.
 - [ViewModel](https://github.com/vdhamer/PhotoClubWaalre/tree/main/Fotogroep%20Waalre/ViewModel) includes
   the code that populates and updates the model data.
 
 ### Role of the Database 
 
-The model's data is loaded and kept up to date via the internet, and is stored in a local database. 
-Internally the database is [SQLite](https://en.wikipedia.org/wiki/SQLite), but that is abstracted away using Apple's
-Core Data framework.
+The model's data is loaded and updated via the internet, and is stored in an on-device database. 
+Internally the database is [SQLite](https://en.wikipedia.org/wiki/SQLite), but that is abstracted
+away using Apple's Core Data framework.
 
-The data in the app's local database is in principle available online.
-So the app *could* have alternatively retrieved that data over the network wheneveer the app is launched.
-By using a database, however, the app starts up quicker because, upon launch the app 
-can already display the database content left behind by the previous session.
-That data might sometimes be somewhat outdated, but is should be accurate enough to fill the user interface. 
+Because the data in the app's local database is in principle available online,
+the app *could* have chosen to fetch that data over the network whenever the app is launched.
+By using a database, however, the app starts up quicker because, at launch, the app 
+can already display the database as left behind by the previous session.
+That data might be a bit outdated, but is should be accurate enough to start off with. 
 
-To handle data updates, an asynchrous network call fetches the current version of the data from the network. 
-And the MVVM architecture uses this to update the user interface views as soon as the requested data comes back.
-So occasionally, one or two seconds after the app launches, the user may see the portfolio list on the Portfolios screen change 
-(using an animation). This means that a club's online members list changed since the last session.
+To handle any data updates, an asynchrous call fetches the current version of the data over the network. 
+And the MVVM architecture uses this to update the user interface views as soon as the requested data arrives.
+So occasionally, maybe one or two seconds after the app launches, the user may see the portfolio list
+on the Portfolios screen change (using an animation). 
+This can happen, for example if a club's online member list changed since the last session.
 
-To be entirely accurate, the above is the target architecture.
-Its implementation still has a few gaps - even though it works well enough that user shouldn't notice:
-1. the lists of images per portfolio are *not* stored in the database yet and are not cached. This is a roadmap item.
-2. members who are removed from the online membership list are not (yet) automatically deleted from the database.
-This requires a bit more administration, because these individuals don't show up when iterating through the online membership list:
-their names/records are simply *not* on the online list anymore!
-3. in the case of Fotogoep Waalre, some member data is not easily available online and is added programmatically instead
-(in [this file](https://github.com/vdhamer/PhotoClubWaalre/blob/main/Fotogroep%20Waalre/ViewModel/FotogroepWaalre/FGWMembersProvider%2BinsertSomeHardcodedMemberData.swift)).
-Examples of this data include the club's list officials (e.g. Chairman) and date of birth of each member.
+To be precise, the above is the target architecture. Right now there are still a few gaps -
+even though it works well enough a user typically won't notice:
+1. the lists of images per portfolio are *not* stored in the database yet.
+   These images are also not cached. Image caching is a roadmap item.
+2. members who are removed from the online membership list are not automatically deleted from the
+   database. This requires a bit more administration, because these individuals don't show up
+   iterates through the online membership list. This is simply because those names/records are
+   _not_ on the online list anymore!
+3. in the case of Fotogoep Waalre, some member data is not yet available online in a machine-readable
+   form and is thus added programmatically instead. This is done in [this file](https://github.com/vdhamer/PhotoClubWaalre/blob/main/Fotogroep%20Waalre/ViewModel/FotogroepWaalre/FGWMembersProvider%2BinsertSomeHardcodedMemberData.swift).
+   Examples of this hardcoded data include the club's officials (e.g. Chairman) and the date of birth of
+   member. 
 Again, this is not desirable. Some of these issues are addressed [below](#a-better-approach).
 
 ### The Data Model
