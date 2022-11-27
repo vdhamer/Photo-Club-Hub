@@ -70,11 +70,11 @@
 
 ### Waalre
 
-Photo Club Waalre is a photography club named after Waalre, a town in the south of The 
-Netherlands. Its members meet since 1988, mainly to critique each other’s photos.
+Photo Club Waalre is a photography club named after Waalre, a town in the south of 
+The Netherlands. Its members meet since 1988, mainly to critique each other’s photos.
 
-The name of the photo club will probably disappear from the app's name at some point.
-This would help stress that the app supports *multiple* photo clubs rather than just one.
+The name of the photo club may disappear from the app's name at some point.
+This would stress that the app can support *multiple* photo clubs rather than just one.
 
 ### The Portfolio Concept
 
@@ -84,11 +84,12 @@ The images within the app are divided into `portfolios`. Within this app,
 a portfolio covers the part of a photographer's work that was shared *within* a single photo club.
 
 Images by a photographer that are *not* associated with a photo club are not supported by the app
-because the app is club-oriented. But the app can provide a link to a photographer's personal, non-club-oriented website.
+because the app is club-oriented. But the app can provide a link to a photographer's personal (club-unrelated) photography website.
 
 If a photographer joined *multiple* photo clubs, the app will show *multiple* portfolios (with different
-content) for that photographer. An example: the photographer is simultaneously a member of both club A and club B.
-Another example: the photographer was formerly a member of club A, but at some point left club A to join club B.
+content) for that photographer. Examples:
+- the photographer is _simultaneously_ a member of both club A and club B.
+- the photographer was _formerly_ a member of club A, but at some point left club A and joined club B.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
  
