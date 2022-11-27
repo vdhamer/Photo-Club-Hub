@@ -83,18 +83,17 @@ The app is meant to showcase curated images made by members of photo clubs.
 The images within the app are divided into so-called `portfolios`. Within this app, 
 a portfolio covers the part of a photographer's work that is associated with a single photo club.
 
-Images by a photographer that are *not* associated with a photo club are not supported by the app
-because the app is club-oriented. The app can, however, provide a link to a photographer's
-personal (club-unrelated) photography website.
-
 If a photographer joined *multiple* photo clubs, the app will show *multiple* portfolios (with different
 content) for that photographer. Examples:
 - the photographer is _simultaneously_ a member of both club A and club B.
 - the photographer was _formerly_ a member of club A, but at some point left club A and joined club B.
 
-Despite the app being fundamentally club-oriented, nothing prevents you from setting
-up a one-man club, or grouping independent photographers based on say geography, language
-or interest.
+Images by a photographer that are *not* associated with a photo club are not supported
+by the app because the app is club-oriented. The app can, however, provide a link to a
+photographer's personal (club-unrelated) photography website.
+Furthermore, it is up to you how formal a club should be: nothing prevents you from
+setting up a one-man club, or supporting a group of photographers with a shared
+interest or live in the same regio, but who only communicate online.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
  
