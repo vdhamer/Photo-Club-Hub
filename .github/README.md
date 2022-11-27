@@ -38,7 +38,6 @@
     </li>
     <li><a href="#contributing">Contributing</a>
         <ul>
-	    <li><a href="#how-to-contribute">How to Contribute</a></li>
 	    <li><a href="#areas-for-contribution">Areas for Contribution</a></li> 
         </ul>
     </li>
@@ -247,26 +246,17 @@ But that data is still encrypted by a private encryption key that is not provide
 ## Contributing
 All contributions are welcome.
 Before investing a lot of coding effort, it might be good to first describe the idea or functional change in the description of `an Issue`.
-That allows for some upfront discussion and iteration of the idea. 
-Contributions that don't require coding include beta testing, well thought-through feature requests, translations, and SVG icons.
-
-### How to Contribute
-
-If you have a suggestion that would make this better, you can fork the repo and create a pull
-request.  The command line `git` commands to do this (but the Xcode IDE has equivalent commands under `Source Control`):
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+That allows for some upfront discussion and iteration of the idea.
 
 You can alternatively submit an `issue` with a tag like ”enhancement" or “bug” without having to do the code changes yourself.
 
 ### Areas for Contribution
 
-Possible contributions include adding features, code improvements, ideas on architecture and interface specifications, 
-and possibly even a dedicated backend server.
+Possible contributions include adding features, code improvements, ideas on architecture and interface
+specifications, and possibly even a dedicated backend server.
+
+Contributions that don't require coding include beta testing, well thought-through feature requests,
+translations, and SVG icons.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
