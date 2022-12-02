@@ -1,12 +1,11 @@
 ---------------------------------------------------------------------------
-### 2.2.4 (Github hash ???????) ??-11-22
+### 2.2.4 (Github hash ???????) 2-12-22
 
-This is build (4577?) in Apple's App Store
-
+This is build (4577) in Apple's App Store
 * Updated README.md file (mainly architecture topics)
 * Portfolios screen
     * Changed vice-chairman status for Fotogroep Waalre
-    * Updated hardcoded thumbnails to include newer Expo2022 images
+    * Updated hardcoded thumbnails uses various Expo2022 images
 * Refactoring
     * Minor: tweaked capitalization of titles
     * upgraded to SwiftLint 0.50.1
