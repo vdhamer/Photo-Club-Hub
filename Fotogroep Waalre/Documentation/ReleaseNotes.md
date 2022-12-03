@@ -1,5 +1,5 @@
 ---------------------------------------------------------------------------
-### 2.2.4 (Github hash ???????) 2-12-22
+### 2.2.4 (Github hash 15c87ab) 2-12-22
 
 This is build (4577) in Apple's App Store
 * Updated README.md file (mainly architecture topics)
