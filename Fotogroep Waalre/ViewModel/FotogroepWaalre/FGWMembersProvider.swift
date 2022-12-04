@@ -37,12 +37,15 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
 
     private func getFileAsString(secretFilename: String, unsecretFileName: String) -> String {
         if let secret = readURLFromLocalFile(fileNameWithExtension: secretFilename) {
+            print("About to use confidential version of Private member data file.")
             return secret
         } else {
             if let unsecret = readURLFromLocalFile(fileNameWithExtension: unsecretFileName) {
+                print("About to use non-confidential version of Private member data file.")
                 return unsecret
             } else {
-                return "file \(unsecretFileName) looks encrypted"
+                print("Problem accessing either version of Private member data file.")
+                return "Internal error: file \(unsecretFileName) looks encrypted"
             }
         }
     }

@@ -14,7 +14,7 @@ class BIMembersProvider {
         // used by BIMembersProvider only
         let biBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
 
-        // Bellus Imago doesn't currently support loading member data from an online site.
+        // Photo club Bellus Imago doesn't currently support loading member data from an online site.
         // So we only insert a member or two from info hardcoded in insertSomeHardcodedMemberData()
         insertSomeHardcodedMemberData(biBackgroundContext: biBackgroundContext)
     }
