@@ -68,38 +68,70 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
     }
 
     ///////////////////////////////////////////////////////////////////////////////////////////
-    // MARK: - Load ex-members array (including name and URLs) from internal website page
+    // MARK: - Load members/ex-members/mentors from password-protected website page
+    // swiftlint:disable line_length
 
-    // Example fragment from middle of PRIVATELEDENURL file
-    // <table>
-    // <tbody>
-    // <tr>
-    // <th>Ex-lid</th>
-    // <th>E-mail</th>
-    // <th>Telefoon</th>
-    // </tr>
-    // <tr>
-    // <td>Aad Schoenmakers</td>
-    // <td><a href="mailto:aad@fotograad.nl">aad@fotograad.nl</a></td>
-    // <td>06-10859556</td>
-    // </tr>
-    // <tr>
-    // <td>Hans van Steensel (aspirantlid)</td>
-    // <td><a href="mailto:info@vansteenselconsultants.nl">info@vansteenselconsultants.nl</a></td>
-    // <td>06-53952538</td>
-    // </tr>
+    /*
+    Excerpt from PRIVATELEDENURL file (but with extra indentation and comments)
+    <table> <!-- found .tableStart, now search for .tableHeader -->
+    <tbody>
+       <tr>
+          <th>Groepslid</th> <!-- found .tableHeader, now search for .rowStart -->
+          <th>E-mail</th>
+          <th>Telefoon</th>
+          <th>Eigen website</th>
+       </tr>
+       <tr> <!-- found .rowStart, now search for .personName -->
+          <td>Bart van Stekelenburg (lid)</td> <!-- found .personName, now search for .eMail -->
+          <td><a href="mailto:x@gmail.com">x@gmail.com</a></td> <!-- found .eMail, now search for .phoneNumber -->
+          <td>040-1234567</td> <!-- found .phoneNumber, now search for .externalURL -->
+          <td><a title="" <="" a=""></a></td> <!-- found .externalURL, now search for .rowStart -->
+       </tr>
+    </tbody>
+    </table>
+    <table>
+    <tbody>
+       <tr> <!-- found .rowStart, now search for .personName -->
+          <th>Ex-lid</th>
+          <th>E-mail</th>
+          <th>Telefoon</th>
+          <th>Eigen website</th>
+       </tr>
+       <tr>
+          <td>Joop Postema</td> <!-- found .personName, now search for .eMail -->
+          <td><a href="mailto:x@gmail.com">x@gmail.com</a></td> <!-- found .eMail, now search for .phoneNumber -->
+          <td>[overleden]</td> <!-- found .phoneNumber, now search for .externalURL -->
+          <td><a title="" href="http://www.flickr.com/photos/jooppostema/" target="_blank" rel="noopener noreferrer">extern</a></td> <!-- found .externalURL, now search for .rowStart -->
+       </tr>
+    </tbody> <!-- if we can't find a next .rawStart, the looping stops -->
+    </table>
+    */
+    // swiftlint:enable line_length
 
-    enum HTMLPageLoadingState: String {
+    enum HTMLPageLoadingState {
         // rawValues are target search strings in the HTML file
-        case tableStart     = "<table>"
-        case tableHeader    = "Groepslid" // "Ex-lid" "Groepslid""
-        case rowStart       = "<tr>"
-        case personName     = "<td>"
-        case eMail          = "<td><a href"
-        case phoneNumber    = "<td"            // strings have to be unique, otherwise <td> would be more obvious
-        case externalURL    = "<td><a title"
+        case tableStart
+        case tableHeader
+        case rowStart
+        case personName
+        case eMail
+        case phoneNumber
+        case externalURL
 
-        // compute next state for given state
+        // returns search string needed to find HTMLPageLoadingState
+        func targetString() -> String {
+            switch self {
+            case .tableStart:    return "<table>" // finds start of 1st table (we are parsing multiple tables)
+            case .tableHeader:   return "Groepslid" // finds expected table header of 1st table
+            case .rowStart:      return "<tr>" // ignores rest of table header, and searches for rows
+            case .personName:    return "<td>" // assumes personName is first field, no special way to recognize field
+            case .eMail:         return "<td><a href"
+            case .phoneNumber:   return "<td>"   // table cell after .email cell (no other special characteristics)
+            case .externalURL:   return "<td><a title"
+            }
+        }
+
+        // define next state based on the preceding state
         func nextState() -> HTMLPageLoadingState {
             switch self {
             case .tableStart:    return .tableHeader
@@ -110,11 +142,6 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
             case .phoneNumber:   return .externalURL
             case .externalURL:   return .rowStart
             }
-        }
-
-        // myState.targetString() alternative to myState.rawValue
-        func targetString() -> String {
-            return self.rawValue
         }
     }
 
@@ -171,6 +198,7 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
                 case .personName:       // find first cell in row
                     personName = self.stripOffTagsFromName(taggedString: line) // cleanup
                     (givenName, familyName) = self.componentizePersonName(name: personName, printName: false)
+                    print("\(givenName) \(familyName) in input file")
 
                 case .eMail:                      // then find 2nd cell in row
                     eMail = self.stripOffTagsFromEMail(taggedString: line) // store url after cleanup
@@ -180,6 +208,7 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
 
                 case .externalURL:
                     externalURL = self.stripOffTagsFromExternalURL(taggedString: line) // url after cleanup
+                    print("    externalURL: \(externalURL) in input file")
 
                     let photographer = Photographer.findCreateUpdate(
                         context: backgroundContext, givenName: givenName, familyName: familyName,
@@ -261,14 +290,15 @@ extension FGWMembersProvider { // private utitity functions
     private func stripOffTagsFromExternalURL(taggedString: String) -> String {
         // swiftlint:disable:next line_length
         // <td><a title="Ariejan van Twisk fotografie" href="http://www.ariejanvantwiskfotografie.nl" target="_blank">extern</a></td>
-        // <td><a title="" href="" target="_blank"></a></td>
+        // <td><a title="" href="" target="_blank"></a></td> // old Wordpress template: no URL available
+        // <td><a title="" <="" a=""></a></td> // sometimes Wordpress does this if no URL available (bug in WP?)
 
         let REGEX: String = " href=\"([^\"]*)\""
         let result = taggedString.capturedGroups(withRegex: REGEX)
         if result.count > 0 {
             return result[0]
         } else {
-            return "Error: \(taggedString)"
+            return "" // backup in " href=..." not found
         }
     }
 
