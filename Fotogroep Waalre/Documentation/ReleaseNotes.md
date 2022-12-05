@@ -6,6 +6,7 @@
     * Changed vice-chairman status for Fotogroep Waalre (GvS)
 * Who's who screen
     * parse date of birth from membership file for FGW
+    * birthday now also shown for ex-members
 ---------------------------------------------------------------------------
 ### 2.2.4 (Github hash 15c87ab) 2-12-22
 

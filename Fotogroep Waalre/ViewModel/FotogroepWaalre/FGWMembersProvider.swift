@@ -122,14 +122,14 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
         // returns search string needed to find HTMLPageLoadingState
         func targetString() -> String {
             switch self {
-            case .tableStart:   return "<table>"      // finds start of 1st table (we are parsing multiple tables)
-            case .tableHeader:  return "Groepslid"    // finds expected table header of 1st table
-            case .rowStart:     return "<tr>"         // ignores rest of table header, and searches for rows
-            case .personName:   return "<td>"         // assumes personName is 1st field, no special way to identifier
-            case .eMail:        return "<td><a href"  // recognize URL using HTML tag
-            case .phoneNumber:  return "<td>"         // table cell after .email (no special identifier)
-            case .externalURL:  return "<td><a title" // recognize URL using HTML tag
-            case .birthDate:    return "<td>"         // table cell after .externalURL (no special identifier)
+            case .tableStart:   return "<table>"     // finds start of 1st table (we are parsing multiple tables)
+            case .tableHeader:  return "Groepslid"   // finds expected table header of 1st table
+            case .rowStart:     return "<tr>"        // ignores rest of table header, and searches for rows
+            case .personName:   return "<td>"        // assumes personName is 1st field, no special way to identifier
+            case .eMail:        return "<td><a href" // recognize URL using HTML tag
+            case .phoneNumber:  return "<td>"        // table cell after .email (no special identifier)
+            case .externalURL:  return "<td>"        // no special identifier ("<td><a title" works, but is fragile)
+            case .birthDate:    return "<td>"        // table cell after .externalURL (no special identifier)
             }
         }
 
@@ -212,7 +212,7 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
 
                 case .externalURL:
                     externalURL = self.stripOffTagsFromExternalURL(taggedString: line) // url after cleanup
-                    print("    externalURL: \(externalURL) in input file")
+                    if !externalURL.isEmpty { print("    externalURL: \(externalURL) in input file") }
 
                 case .birthDate:
                     birthDate = self.stripOffTagsFromBirthDate(taggedString: line)
@@ -309,7 +309,7 @@ extension FGWMembersProvider { // private utitity functions
         }
     }
 
-    private func stripOffTagsFromBirthDate(taggedString: String) -> Date {
+    private func stripOffTagsFromBirthDate(taggedString: String) -> Date? {
         // <td>02 jun 1970</td>
         // <td>01 jan 9999</td>
 
@@ -321,7 +321,11 @@ extension FGWMembersProvider { // private utitity functions
         let result = taggedString.capturedGroups(withRegex: REGEX)
         if result.count > 0 {
             if let date = dateFormatter.date(from: result[0]) {
-                return date
+                let components = Calendar.current.dateComponents([.day, .month, .year], from: date)
+                if let year = components.year, year != 9999 {
+                    return date
+                }
+                return nil // transform 01 jan 9999 to nil
             } else {
                 fatalError("Failed to decode data from \(result[0]) is in wrong format")
             }
