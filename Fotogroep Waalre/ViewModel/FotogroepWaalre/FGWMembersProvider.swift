@@ -222,7 +222,7 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
                         memberRolesAndStatus: MemberRolesAndStatus(role: [:], stat: [
                             .deceased: !self.isStillAlive(phone: phoneNumber) ]),
                         phoneNumber: phoneNumber, eMail: eMail,
-                        photographerWebsite: URL(string: externalURL)
+                        photographerWebsite: URL(string: externalURL), bornDT: birthDate
                     )
 
                     let (givenName, familyName) = self.componentizePersonName(name: personName, printName: false)
@@ -315,7 +315,7 @@ extension FGWMembersProvider { // private utitity functions
 
         let dateFormatter: DateFormatter
         dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd MMM YYYY" // used here for birthdays only, so year is hidden
+        dateFormatter.dateFormat = "dd MMM yyyy" // used here for birthdays only, so year is hidden
 
         let REGEX: String = "<td>(.*)</td>"
         let result = taggedString.capturedGroups(withRegex: REGEX)
