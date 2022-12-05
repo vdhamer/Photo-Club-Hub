@@ -1,10 +1,18 @@
 ---------------------------------------------------------------------------
+### 2.2.5 (Github hash ???????) ??-12-22
+
+* Improved robustness of HTML parsing in FGWMembersProvider class
+* Portfolios screen
+    * Changed vice-chairman status for Fotogroep Waalre (GvS)
+* Who's who screen
+    * parse date of birth from membership file for FGW
+---------------------------------------------------------------------------
 ### 2.2.4 (Github hash 15c87ab) 2-12-22
 
 This is build (4577) in Apple's App Store
 * Updated README.md file (mainly architecture topics)
 * Portfolios screen
-    * Changed vice-chairman status for Fotogroep Waalre
+    * Changed vice-chairman status for Fotogroep Waalre (BdG)
     * Updated hardcoded thumbnails uses various Expo2022 images
 * Refactoring
     * Minor: tweaked capitalization of titles

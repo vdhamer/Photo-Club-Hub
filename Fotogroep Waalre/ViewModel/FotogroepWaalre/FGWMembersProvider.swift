@@ -117,30 +117,33 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
         case eMail
         case phoneNumber
         case externalURL
+        case birthDate
 
         // returns search string needed to find HTMLPageLoadingState
         func targetString() -> String {
             switch self {
-            case .tableStart:    return "<table>" // finds start of 1st table (we are parsing multiple tables)
-            case .tableHeader:   return "Groepslid" // finds expected table header of 1st table
-            case .rowStart:      return "<tr>" // ignores rest of table header, and searches for rows
-            case .personName:    return "<td>" // assumes personName is first field, no special way to recognize field
-            case .eMail:         return "<td><a href"
-            case .phoneNumber:   return "<td>"   // table cell after .email cell (no other special characteristics)
-            case .externalURL:   return "<td><a title"
+            case .tableStart:   return "<table>"      // finds start of 1st table (we are parsing multiple tables)
+            case .tableHeader:  return "Groepslid"    // finds expected table header of 1st table
+            case .rowStart:     return "<tr>"         // ignores rest of table header, and searches for rows
+            case .personName:   return "<td>"         // assumes personName is 1st field, no special way to identifier
+            case .eMail:        return "<td><a href"  // recognize URL using HTML tag
+            case .phoneNumber:  return "<td>"         // table cell after .email (no special identifier)
+            case .externalURL:  return "<td><a title" // recognize URL using HTML tag
+            case .birthDate:    return "<td>"         // table cell after .externalURL (no special identifier)
             }
         }
 
         // define next state based on the preceding state
         func nextState() -> HTMLPageLoadingState {
             switch self {
-            case .tableStart:    return .tableHeader
-            case .tableHeader:   return .rowStart
-            case .rowStart:      return .personName
-            case .personName:    return .eMail
-            case .eMail:         return .phoneNumber
-            case .phoneNumber:   return .externalURL
-            case .externalURL:   return .rowStart
+            case .tableStart:   return .tableHeader
+            case .tableHeader:  return .rowStart
+            case .rowStart:     return .personName
+            case .personName:   return .eMail
+            case .eMail:        return .phoneNumber
+            case .phoneNumber:  return .externalURL
+            case .externalURL:  return .birthDate
+            case .birthDate:    return .rowStart
             }
         }
     }
@@ -181,8 +184,9 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
                                   photoClubID: (name: String, town: String)) {
         var targetState: HTMLPageLoadingState = .tableStart        // initial entry point on loop of states
 
-        var eMail = "", phoneNumber: String?, externalURL: String = ""
         var familyName = "", givenName = "", personName  = ""
+        var eMail = "", phoneNumber: String?, externalURL: String = ""
+        var birthDate = toDate(from: "1/1/9999") // dummy value that is overwritten later
 
         let photoClub: PhotoClub = PhotoClub.findCreateUpdate(context: backgroundContext,
                                                               name: photoClubID.name, town: photoClubID.town)
@@ -209,6 +213,9 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
                 case .externalURL:
                     externalURL = self.stripOffTagsFromExternalURL(taggedString: line) // url after cleanup
                     print("    externalURL: \(externalURL) in input file")
+
+                case .birthDate:
+                    birthDate = self.stripOffTagsFromBirthDate(taggedString: line)
 
                     let photographer = Photographer.findCreateUpdate(
                         context: backgroundContext, givenName: givenName, familyName: familyName,
@@ -302,6 +309,27 @@ extension FGWMembersProvider { // private utitity functions
         }
     }
 
+    private func stripOffTagsFromBirthDate(taggedString: String) -> Date {
+        // <td>02 jun 1970</td>
+        // <td>01 jan 9999</td>
+
+        let dateFormatter: DateFormatter
+        dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd MMM YYYY" // used here for birthdays only, so year is hidden
+
+        let REGEX: String = "<td>(.*)</td>"
+        let result = taggedString.capturedGroups(withRegex: REGEX)
+        if result.count > 0 {
+            if let date = dateFormatter.date(from: result[0]) {
+                return date
+            } else {
+                fatalError("Failed to decode data from \(result[0]) is in wrong format")
+            }
+        } else {
+            fatalError("Failed to decode data from \(taggedString) because RegEx didn't trigger")
+        }
+    }
+
     // Split a String containing a name into PersonNameComponents
     // This is done manually instead of using the iOS 10
     // formatter.personNameComponents() function to handle last names like Henny Looren de Jong
@@ -391,6 +419,12 @@ extension FGWMembersProvider { // private utitity functions
             tweakedName = tweakedName.capturedGroups(withRegex: REGEX)[0]
         }
         return URL(string: baseURL + tweakedName + "/")
+    }
+
+    private func toDate(from dateString: String) -> Date? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy"
+        return dateFormatter.date(from: dateString)
     }
 
 }
