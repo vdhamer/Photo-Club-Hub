@@ -202,7 +202,6 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
                 case .personName:       // find first cell in row
                     personName = self.stripOffTagsFromName(taggedString: line) // cleanup
                     (givenName, familyName) = self.componentizePersonName(name: personName, printName: false)
-                    print("\(givenName) \(familyName) in input file")
 
                 case .eMail:                      // then find 2nd cell in row
                     eMail = self.stripOffTagsFromEMail(taggedString: line) // store url after cleanup
@@ -212,7 +211,6 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
 
                 case .externalURL:
                     externalURL = self.stripOffTagsFromExternalURL(taggedString: line) // url after cleanup
-                    if !externalURL.isEmpty { print("    externalURL: \(externalURL) in input file") }
 
                 case .birthDate:
                     birthDate = self.stripOffTagsFromBirthDate(taggedString: line)

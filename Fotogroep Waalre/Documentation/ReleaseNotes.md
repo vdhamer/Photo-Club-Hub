@@ -5,7 +5,7 @@
 * Portfolios screen
     * Changed vice-chairman status for Fotogroep Waalre (GvS)
 * Who's who screen
-    * parse date of birth from membership file for FGW
+    * extract date of birth from (extended) membership file for FGW instead of hardcoding this data
     * birthday now also shown for ex-members
 ---------------------------------------------------------------------------
 ### 2.2.4 (Github hash 15c87ab) 2-12-22
