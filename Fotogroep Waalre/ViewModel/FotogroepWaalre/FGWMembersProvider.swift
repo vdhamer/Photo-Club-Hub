@@ -213,7 +213,7 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
                     externalURL = self.stripOffTagsFromExternalURL(taggedString: line) // url after cleanup
 
                 case .birthDate:
-                    birthDate = self.stripOffTagsFromBirthDate(taggedString: line)
+                    birthDate = self.stripOffTagsFromBirthDateAndDecode(taggedString: line)
 
                     let photographer = Photographer.findCreateUpdate(
                         context: backgroundContext, givenName: givenName, familyName: familyName,
@@ -307,28 +307,28 @@ extension FGWMembersProvider { // private utitity functions
         }
     }
 
-    private func stripOffTagsFromBirthDate(taggedString: String) -> Date? {
-        // <td>02 jun 1970</td>
-        // <td>01 jan 9999</td>
-
-        let dateFormatter: DateFormatter
-        dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd MMM yyyy" // used here for birthdays only, so year is hidden
+    private func stripOffTagsFromBirthDateAndDecode(taggedString: String) -> Date? {
+        // <td>2022-05-26</td> is valid input
+        // <td>9999-01-01</td> is treated as nil as long as the year is 9999
 
         let REGEX: String = "<td>(.*)</td>"
         let result = taggedString.capturedGroups(withRegex: REGEX)
-        if result.count > 0 {
-            if let date = dateFormatter.date(from: result[0]) {
-                let components = Calendar.current.dateComponents([.day, .month, .year], from: date)
-                if let year = components.year, year != 9999 {
-                    return date
-                }
-                return nil // transform 01 jan 9999 to nil
-            } else {
-                fatalError("Failed to decode data from \(result[0]) is in wrong format")
-            }
-        } else {
+        guard result.count > 0 else {
             fatalError("Failed to decode data from \(taggedString) because RegEx didn't trigger")
+        }
+
+        let strategy = Date.ParseStrategy(format: "\(year: .defaultDigits)-\(month: .twoDigits)-\(day: .twoDigits)",
+                                          timeZone: TimeZone.autoupdatingCurrent)
+        let date = try? Date(result[0], strategy: strategy) // can be nil
+        if date==nil {
+            print("Failed to decode data from \"\(result[0])\" because the date is not in ISO8601 format")
+            return date
+        } else {
+            let components = Calendar.current.dateComponents([.day, .month, .year], from: date!)
+            if let year = components.year, year != 9999 {
+                return date
+            }
+            return nil // transform 01 jan 9999 to nil
         }
     }
 
