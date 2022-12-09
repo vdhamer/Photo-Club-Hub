@@ -228,7 +228,6 @@ extension FGWMembersProvider { // private utitity functions
 
     private func stripOffTagsFromBirthDateAndDecode(taggedString: String) -> Date? {
         // <td>2022-05-26</td> is valid input
-        // <td>9999-01-01</td> is treated as nil as long as the year is 9999
 
         let REGEX: String = "<td>(.*)</td>"
         let result = taggedString.capturedGroups(withRegex: REGEX)
@@ -239,16 +238,8 @@ extension FGWMembersProvider { // private utitity functions
         let strategy = Date.ParseStrategy(format: "\(year: .defaultDigits)-\(month: .twoDigits)-\(day: .twoDigits)",
                                           timeZone: TimeZone.autoupdatingCurrent)
         let date = try? Date(result[0], strategy: strategy) // can be nil
-        if date==nil {
-            print("Failed to decode data from \"\(result[0])\" because the date is not in ISO8601 format")
-            return date
-        } else {
-            let components = Calendar.current.dateComponents([.day, .month, .year], from: date!)
-            if let year = components.year, year != 9999 {
-                return date
-            }
-            return nil // transform 01 jan 9999 to nil
-        }
+        if date==nil { print("Failed to decode data from \"\(result[0])\" because the date is not in ISO8601 format") }
+        return date
     }
 
     // Split a String containing a name into PersonNameComponents
