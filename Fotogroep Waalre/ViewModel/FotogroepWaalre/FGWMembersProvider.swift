@@ -19,8 +19,9 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
         // following is asynchronous, but not documented as such using async/await
         insertSomeHardcodedMemberData(fgwBackgroundContext: fgwBackgroundContext, commit: true)
 
-        let urlString = getFileAsString(secretFilename: "PrivateMembersURL2.txt",
-                                        unsecretFileName: "PrivateMembersURL3.txt") // fetch URL2 or URL3
+        let urlString = getFileAsString(nameEncryptedFile: "PrivateMembersURL2.txt",
+                                        nameUnencryptedFile: "PrivateMembersURL3.txt",
+                                        okToUseEncryptedFile: true) // false forces use of PrivateMembersURL3.txt
         if let privateURL = URL(string: urlString) {
             Task {
                 await loadPrivateMembersFromWebsite( backgroundContext: fgwBackgroundContext,
@@ -35,17 +36,19 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
 
     }
 
-    private func getFileAsString(secretFilename: String, unsecretFileName: String) -> String {
-        if let secret = readURLFromLocalFile(fileNameWithExtension: secretFilename) {
+    private func getFileAsString(nameEncryptedFile: String,
+                                 nameUnencryptedFile: String,
+                                 okToUseEncryptedFile: Bool = true) -> String {
+        if let secret = readURLFromLocalFile(fileNameWithExtension: nameEncryptedFile), okToUseEncryptedFile {
             print("About to use confidential version of Private member data file.")
             return secret
         } else {
-            if let unsecret = readURLFromLocalFile(fileNameWithExtension: unsecretFileName) {
+            if let unsecret = readURLFromLocalFile(fileNameWithExtension: nameUnencryptedFile) {
                 print("About to use non-confidential version of Private member data file.")
                 return unsecret
             } else {
                 print("Problem accessing either version of Private member data file.")
-                return "Internal error: file \(unsecretFileName) looks encrypted"
+                return "Internal error: file \(nameUnencryptedFile) looks encrypted"
             }
         }
     }
@@ -237,8 +240,11 @@ extension FGWMembersProvider { // private utitity functions
 
         let strategy = Date.ParseStrategy(format: "\(year: .defaultDigits)-\(month: .twoDigits)-\(day: .twoDigits)",
                                           timeZone: TimeZone.autoupdatingCurrent)
-        let date = try? Date(result[0], strategy: strategy) // can be nil
-        if date==nil { print("Failed to decode data from \"\(result[0])\" because the date is not in ISO8601 format") }
+        let birthDateString = result[0]
+        let date = try? Date(birthDateString, strategy: strategy) // can be nil
+        if date==nil && !birthDateString.isEmpty {
+            print("Failed to decode data from \"\(result[0])\" because the date is not in ISO8601 format")
+        }
         return date
     }
 
