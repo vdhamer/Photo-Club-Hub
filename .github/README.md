@@ -265,19 +265,20 @@ translations, and SVG icons.
 The app uses a [SwiftUI-based MVVM](https://www.hackingwithswift.com/books/ios-swiftui/introducing-mvvm-into-your-swiftui-project)
 architecture pattern. 
 
-The use of a SwiftUI-based MVVM architecture implies that the model data is stored in _structs_ 
-rather than in slightly more heavyweight _classes_. It also implies that any changes to the
-model data automatically trigger the required updates to the SwiftUI's `Views` and
-that the gap between the `Model` and `View` layers are bridged by a `ViewModel` glue layer.
+The use of a SwiftUI-based MVVM architecture implies that the model data is stored in 
+lightweight _structs_ rather than in _classes_. It also implies that any changes to the
+model's data automatically trigger the required updates to the SwiftUI's `Views` (struct-based) and
+that the gap between the `Model` and `View` layers are bridged by a `ViewModel` layer (class-based).
 
-Each of the three layers has its own source code directory:
+Source code for each of the three layers is in its own directory:
 - [Model](https://github.com/vdhamer/PhotoClubWaalre/tree/main/Fotogroep%20Waalre/Model) contains the
-  data model. It contains both the current version and older versions as separate files,
+  data model. It contains the current model version as well as older versions as separate files,
   as needed for schema migration.
-- [View](https://github.com/vdhamer/PhotoClubWaalre/tree/main/Fotogroep%20Waalre/View) exclusively
-  contains SwiftUI views.
+- [View](https://github.com/vdhamer/PhotoClubWaalre/tree/main/Fotogroep%20Waalre/View) only
+  contains SwiftUI views, which are at the Swift level structs that adhere to the View protocol.
 - [ViewModel](https://github.com/vdhamer/PhotoClubWaalre/tree/main/Fotogroep%20Waalre/ViewModel) includes
-  the code that populates and updates the model data.
+  the code that populates and updates the model data. Currently this layer is implemented _per photo club_,
+  and thus stored in subdirectories.
 
 ### Role of the Database 
 
