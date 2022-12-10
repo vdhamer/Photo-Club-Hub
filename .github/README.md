@@ -287,9 +287,9 @@ Internally the database is [SQLite](https://en.wikipedia.org/wiki/SQLite), but t
 away using Apple's Core Data framework.
 
 Because the data in the app's local database is in principle available online,
-the app *could* have chosen to fetch that data over the network whenever the app is launched.
+the app *could* have chosen to fetch that data over the network each time the app is launched.
 By using a database, however, the app starts up quicker because, at launch, the app 
-can already display the database as left behind by the previous session.
+can already display the database content as it was at the end of the previous session.
 That data might be a bit outdated, but is should be accurate enough to start off with. 
 
 To handle any data updates, an asynchrous call fetches the current version of the data over the network. 
