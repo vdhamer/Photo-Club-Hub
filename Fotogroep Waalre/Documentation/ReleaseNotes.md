@@ -1,12 +1,18 @@
 ---------------------------------------------------------------------------
-### 2.2.5 (Github hash ???????) ??-12-22
+### 2.2.5 (Github hash ???????) 10-12-22
 
-* Improved robustness of HTML parsing in FGWMembersProvider class
+This is build (4578) in Apple's App Store
 * Portfolios screen
-    * Changed vice-chairman status for Fotogroep Waalre (GvS)
+    * Changed vice-chairman status for Fotogroep Waalre (for now GvS)
 * Who's who screen
-    * extract date of birth from (extended) membership file for FGW instead of hardcoding this data
-    * birthday now also shown for ex-members
+    * Extract date of birth from (extended) membership file for FGW instead of hardcoding this data
+    * Birthdays are now also shown for ex-members
+    * Renamed corresponding SwiftUI `view` to `WhoIsWho` to match screen label in UI
+* Refactoring
+    * Improved robustness of HTML parsing in FGWMembersProvider class
+    * Split file FGWMemberProvider into 2 files to make SwiftLint happy
+    * Extra param called `okToUseEncryptedFile` in `getFileAsString()`  for testing purposes
+    * Deleted unused source control branches
 ---------------------------------------------------------------------------
 ### 2.2.4 (Github hash 15c87ab) 2-12-22
 
@@ -17,26 +23,26 @@ This is build (4577) in Apple's App Store
     * Updated hardcoded thumbnails uses various Expo2022 images
 * Refactoring
     * Minor: tweaked capitalization of titles
-    * upgraded to SwiftLint 0.50.1
-    * removed file DeviceOwnership.swift (it was not part of the build, but SwiftLint was checking it)
+    * Upgraded to SwiftLint 0.50.1
+    * Removed file DeviceOwnership.swift (it was not part of the build, but SwiftLint was checking it)
 ---------------------------------------------------------------------------
 ### 2.2.3 (Github hash 9d1dfed) 23-10-22
 
 This is build (4576) in Apple's App Store
 Release notes for 2.2.3 also contain 2.2.2 release notes
 * Portfolios screen
-    * yellow question mark is no longer used (replaced by orange question mark stored internally) 
+    * Yellow question mark is no longer used (replaced by orange question mark stored internally) 
 ---------------------------------------------------------------------------
 ### 2.2.2 (Github hash 2462bf9) 23-10-22
 
 This is build (4575) didn't end up in Apple's App Store (forgot to merge a branch)
 * Photo Clubs screen
     * Switched from MapPin to MapMarker on map (MapPin deprecated in iOS16)
-    * adapted icon representing photo clubs to match MapMarker
+    * Adapted icon representing photo clubs to match MapMarker
 * Portfolios screen
-    * changed one image thumbnail (for CK)
+    * Changed one image thumbnail (for CK)
 * Who's Who screen
-    * fixed incorrect admin role of one member (CK)
+    * Cixed incorrect admin role of one member (CK)
 * Refactoring
     * Renamed TestClubMembersProvider class
     * Added comments on club loading in Fotogroep_Waalre_App
