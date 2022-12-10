@@ -2,12 +2,12 @@
 ### 2.2.5 (Github hash ???????) 10-12-22
 
 This is build (4578) in Apple's App Store
-* Portfolios screen
-    * Changed vice-chairman status for Fotogroep Waalre (for now GvS)
 * Who's who screen
     * Extract date of birth from (extended) membership file for FGW instead of hardcoding this data
-    * Birthdays are now also shown for ex-members
+    * Birthdays are now also shown for former members
     * Renamed corresponding SwiftUI `view` to `WhoIsWho` to match screen label in UI
+* Portfolios screen
+    * Changed vice-chairman status for Fotogroep Waalre (for now GvS)
 * Refactoring
     * Improved robustness of HTML parsing in FGWMembersProvider class
     * Split file FGWMemberProvider into 2 files to make SwiftLint happy
