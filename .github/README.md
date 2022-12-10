@@ -161,8 +161,8 @@ This loads just enough test data to demo the feature.
 	- [x] Handle private data about members in a secure way
     - [ ] Publish article in Dutch photo club [organization](https://fotobond.nl)
 - [ ] Support expositions by photo clubs. Here is an [example](https://www.fotogroepwaalre.nl/fotos/Expo2022/#2).
-- [ ] MemberListView: show thumbnails of most recent photos. Already partially working prototype.
-- [ ] MemberListView: automatically remove members who are no longer on the online membership lists.
+- [ ] MemberPortfoliosView: show thumbnails of most recent photos. Already partially working prototype.
+- [ ] MemberPortfoliosView: automatically remove members who are no longer on the online membership lists.
 - [ ] MemberGaleryView: replace use of WebKit by SwiftUI equivalent
 - [ ] Support onboarding of clubs without any code changes. A big challenge, see below.
 - [ ] Notifications when new images are published.
