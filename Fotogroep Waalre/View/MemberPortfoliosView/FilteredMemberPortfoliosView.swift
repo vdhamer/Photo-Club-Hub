@@ -59,7 +59,7 @@ struct FilteredMemberPortfoliosView: View {
                                 .aspectRatio(contentMode: .fill)
                         } else if phase.error != nil ||
                                   filteredMember.latestImageURL == nil {
-                            Image("Orange-question-mark") // Displays image indicating an error occurred
+                            Image("Question-mark") // Displays image indicating an error occurred
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .foregroundStyle(.red, .yellow, .red) // red tertiary color should not show up
