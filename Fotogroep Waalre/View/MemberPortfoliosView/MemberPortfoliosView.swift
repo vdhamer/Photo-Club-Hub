@@ -108,7 +108,7 @@ struct MemberPortfoliosView: View {
                             .offset(x: 5)
 
                         NavigationLink(destination: {
-                            PhotographersView(searchText: $searchText)
+                            WhoIsWho(searchText: $searchText)
                         }, label: {
                             Image("person.text.rectangle.custom")
                                 .font(.title)

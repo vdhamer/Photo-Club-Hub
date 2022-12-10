@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PhotographersInnerView: View {
+struct WhoIsWhoInnerView: View {
 
     @Environment(\.managedObjectContext) private var viewContext // may not be correct
     @FetchRequest var fetchRequest: FetchedResults<Photographer>
@@ -144,7 +144,7 @@ struct PhotographersInnerView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
             List {
-                PhotographersInnerView(predicate: predicate, searchText: $searchText)
+                WhoIsWhoInnerView(predicate: predicate, searchText: $searchText)
                     .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
             }
             .navigationBarTitle(Text(String("PhotographersInnerView"))) // prevent localization
