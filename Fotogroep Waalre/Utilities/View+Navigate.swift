@@ -7,30 +7,23 @@
 
 import SwiftUI
 
-// https://stackoverflow.com/questions/56437335/go-to-a-new-view-using-swiftui
-
 extension View {
     /// Navigate to a new view.
     /// - Parameters:
     ///   - view: View to navigate to.
     ///   - binding: Only navigates when this condition is `true`.
-    func navigate<NewView: View>(to view: NewView, when binding: Binding<Bool>) -> some View {
-        NavigationView {
-            ZStack {
+    func navigate<NewView: View>(to view: NewView,
+                                 when binding: Binding<Bool>,
+                                 returnable: Bool = false) -> some View {
+        NavigationStack {
+            NavigationLink(value: "") { // value not used
                 self
-                    .navigationBarTitle("")
                     .navigationBarHidden(true)
-
-                NavigationLink(
-                    destination: view
-                        .navigationBarTitle("")
-                        .navigationBarHidden(true),
-                    isActive: binding
-                ) {
-                    EmptyView()
-                }
+            }
+            .navigationDestination(isPresented: binding) {
+                view
+                    .navigationBarHidden(returnable == false) // prevents returning to original View
             }
         }
-        .navigationViewStyle(.stack)
     }
 }

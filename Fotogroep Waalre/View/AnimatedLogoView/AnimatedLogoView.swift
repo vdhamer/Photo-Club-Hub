@@ -149,7 +149,9 @@ struct AnimatedLogoView: View {
                 .padding()
 
         }
-            .navigate(to: MemberPortfoliosView(), when: $willMoveToNextScreen)
+            .navigationBarTitle("Animation")
+            .navigate(to: MemberPortfoliosView().navigationBarTitle("Portfolios"),
+                      when: $willMoveToNextScreen)
     }
 
     struct OffsetVectorInCells {
