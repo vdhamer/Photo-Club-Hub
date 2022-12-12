@@ -31,7 +31,7 @@ struct MemberPortfoliosView: View {
                                                                 .navigationBarTrailing // iPhone: Search field in drawer
 
     var body: some View {
-        NavigationView {
+//        NavigationStack {
             GeometryReader { geo in
                 List { // lists are automatically "Lazy"
                     FilteredMemberPortfoliosView(predicate: model.settings.memberPredicate, searchText: $searchText)
@@ -131,8 +131,8 @@ struct MemberPortfoliosView: View {
                             ))
                 .disableAutocorrection(true)
             }
-        }
-        .navigationViewStyle(StackNavigationViewStyle()) // avoids split screen on iPad
+//        }
+//        .navigationViewStyle(StackNavigationViewStyle()) // avoids split screen on iPad
     }
 
 }

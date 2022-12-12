@@ -14,15 +14,25 @@ extension View {
     ///   - binding: Only navigates when this condition is `true`.
     func navigate<NewView: View>(to view: NewView,
                                  when binding: Binding<Bool>,
-                                 returnable: Bool = false) -> some View {
+                                 enableBack: Bool = true) // for testing
+                                 -> some View {
         NavigationStack {
-            NavigationLink(value: "") { // value not used
-                self
+
+//            NavigationLink {
+//                view // destination
+//                    .navigationBarHidden(enableBack == false) // prevents returning to original View
+//            } label: {
+//                self
+//                    .navigationBarHidden(true) // no navigationTitle on screen itself
+//            }
+
+            NavigationLink(value: 0) { // `value` is not used
+                self // tapping this sets off the link
                     .navigationBarHidden(true)
             }
             .navigationDestination(isPresented: binding) {
                 view
-                    .navigationBarHidden(returnable == false) // prevents returning to original View
+                    .navigationBarBackButtonHidden(enableBack == false)
             }
         }
     }
