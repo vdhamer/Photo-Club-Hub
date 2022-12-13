@@ -2,7 +2,8 @@
 ### 2.2.6 (Github hash 52650bf) 10-12-22
 
 This is build (4579) in Apple's App Store
-* 
+* Prepare for XCode 14.2, moved to iOS 16.2
+* Convert from NavigationView to NavigationStack
 
 ---------------------------------------------------------------------------
 ### 2.2.5 (Github hash 6f40286) 10-12-22
