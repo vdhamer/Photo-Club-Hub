@@ -17,16 +17,7 @@ extension View {
                                  enableBack: Bool = true) // for testing
                                  -> some View {
         NavigationStack {
-
-//            NavigationLink {
-//                view // destination
-//                    .navigationBarHidden(enableBack == false) // prevents returning to original View
-//            } label: {
-//                self
-//                    .navigationBarHidden(true) // no navigationTitle on screen itself
-//            }
-
-            NavigationLink(value: 0) { // `value` is not used
+            NavigationLink(value: 0) { /// `value` is not used
                 self // tapping this sets off the link
                     .navigationBarHidden(true)
             }

@@ -163,14 +163,11 @@ struct FilteredMemberPortfolios_Previews: PreviewProvider {
     @State static var searchText: String = ""
 
     static var previews: some View {
-//        NavigationStack {
-            List { // lists are "Lazy" automatically
-                FilteredMemberPortfoliosView(predicate: predicate, searchText: $searchText)
-                    .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
-            }
-            .navigationBarTitle(Text(String("FilteredMemberPortfoliosView"))) // prevent localization
-//        }
-//        .navigationViewStyle(.stack)
+        List { // lists are "Lazy" automatically
+            FilteredMemberPortfoliosView(predicate: predicate, searchText: $searchText)
+                .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        }
+        .navigationBarTitle(Text(String("FilteredMemberPortfoliosView"))) // prevent localization
         .searchable(text: $searchText, placement: .toolbar, prompt: Text("Search names"))
     }
 }

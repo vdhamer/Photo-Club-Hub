@@ -129,13 +129,12 @@ struct PhotoClubsInner_Previews: PreviewProvider {
                                        argumentArray: ["PhotoClub2", "PhotoClub1", "PhotoClub3"])
 
     static var previews: some View {
-        NavigationView {
+        NavigationStack {
             List { // lists are "Lazy" automatically
                 PhotoClubsInnerView(predicate: predicate)
                     .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
             }
             .navigationBarTitle(Text(String("PhotoClubInnerView"))) // prevent localization
         }
-        .navigationViewStyle(.stack)
     }
 }
