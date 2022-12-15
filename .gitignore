@@ -7,6 +7,7 @@ SwiftUIEnvironmentValues.png
 # git-crypt - following 2 lines are not really used (key stored in ../git-crypt-key, so outside repo scope)
 .git/git-crypt/keys/**
 ../git-crypt-key
+# there is an encrypted version of this file in the repo, but to avoid accidents...
 PrivateMembersURL2.txt
 
 ###################################
