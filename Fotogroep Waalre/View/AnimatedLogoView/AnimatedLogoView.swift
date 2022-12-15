@@ -149,7 +149,7 @@ struct AnimatedLogoView: View {
                 .padding()
 
         }
-            .navigationBarTitle("")
+            .navigationBarTitle("Intro")
             .navigate(to: MemberPortfoliosView().navigationBarTitle("Portfolios"),
                       when: $willMoveToNextScreen)
     }

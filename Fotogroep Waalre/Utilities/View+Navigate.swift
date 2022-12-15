@@ -14,7 +14,7 @@ extension View {
     ///   - binding: Only navigates when this condition is `true`.
     func navigate<NewView: View>(to view: NewView,
                                  when binding: Binding<Bool>,
-                                 enableBack: Bool = true) // for testing
+                                 enableBack: Bool = determineEnableBack()) // for testing
                                  -> some View {
         NavigationStack {
             NavigationLink(value: 0) { /// `value` is not used
@@ -26,5 +26,12 @@ extension View {
                     .navigationBarBackButtonHidden(enableBack == false)
             }
         }
+    }
+
+    static func determineEnableBack() -> Bool {
+        if UIDevice.isIPad {
+            return true
+        }
+        return false
     }
 }
