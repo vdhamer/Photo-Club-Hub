@@ -308,8 +308,8 @@ even though it works well enough a user typically won't notice:
    _not_ on the online list anymore!
 3. in the case of Fotogoep Waalre, some member data is not yet available online in a machine-readable
    form and is thus added programmatically instead. This is done in [this file](https://github.com/vdhamer/PhotoClubWaalre/blob/main/Fotogroep%20Waalre/ViewModel/FotogroepWaalre/FGWMembersProvider%2BinsertSomeHardcodedMemberData.swift).
-   Examples of this hardcoded data include the club's officials (e.g. Chairman) and the date of birth of
-   member.
+   Examples of this hardcoded data include the club's officials (e.g. chairman, treasurer) and, 
+   temporarily, the photo used as thumbnail.
 
 Again, these 3 gaps need fixing. Some of these issues are addressed [below](#a-better-approach).
 
