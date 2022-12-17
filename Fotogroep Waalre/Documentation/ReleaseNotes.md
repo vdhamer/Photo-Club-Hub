@@ -5,7 +5,6 @@ This is build (4579) in Apple's App Store
 * Tested on iOS/iPadOS 16.2 (and with XCode 14.2 and SwiftLint 0.50.3)
 * Convert from NavigationView to NavigationStack
     * New Back button (shown only on wide displays) returns user to the intro/animation screen
-
 ---------------------------------------------------------------------------
 ### 2.2.5 (Github hash 6f40286) 10-12-22
 
