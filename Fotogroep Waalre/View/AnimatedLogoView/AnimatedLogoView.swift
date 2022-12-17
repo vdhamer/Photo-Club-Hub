@@ -21,6 +21,7 @@ struct AnimatedLogoView: View {
     @State private var logScale = log2CellRepeat // value driving the animation
     @State private var willMoveToNextScreen = false // used to navigate to next screen
     @State private var tapCounter: Int = 0
+    @Environment(\.horizontalSizeClass) var horSizeClass
 
     func offset(frame rect: CGSize) -> CGSize { // used to position large image in the middle of a cell
         guard logScale != 0 else { return .zero }
@@ -151,7 +152,8 @@ struct AnimatedLogoView: View {
         }
             .navigationBarTitle("Intro")
             .navigate(to: MemberPortfoliosView().navigationBarTitle("Portfolios"),
-                      when: $willMoveToNextScreen)
+                      when: $willMoveToNextScreen,
+                      horSizeClass: horSizeClass)
     }
 
     struct OffsetVectorInCells {

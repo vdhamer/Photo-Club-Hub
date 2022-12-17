@@ -8,14 +8,15 @@
 import SwiftUI
 
 extension View {
+
     /// Navigate to a new view.
     /// - Parameters:
-    ///   - view: View to navigate to.
-    ///   - binding: Only navigates when this condition is `true`.
+    ///   - to: View to navigate to.
+    ///   - when: Only navigates when this condition is `true`.
+    ///   - horSizeClass: if SizeClass is .compact, hide back button to save space
     func navigate<NewView: View>(to view: NewView,
                                  when binding: Binding<Bool>,
-                                 enableBack: Bool = determineEnableBack()) // for testing
-                                 -> some View {
+                                 horSizeClass: UserInterfaceSizeClass?) -> some View {
         NavigationStack {
             NavigationLink(value: 0) { /// `value` is not used
                 self // tapping this sets off the link
@@ -23,15 +24,15 @@ extension View {
             }
             .navigationDestination(isPresented: binding) {
                 view
-                    .navigationBarBackButtonHidden(enableBack == false)
+                    .navigationBarBackButtonHidden(hideBackButton(horSizeClass: horSizeClass))
             }
         }
     }
 
-    static func determineEnableBack() -> Bool {
-        if UIDevice.isIPad {
-            return true
-        }
-        return false
+    // hide "<" or "< Intro" if there is not enough space for all the icons
+    func hideBackButton(horSizeClass: UserInterfaceSizeClass?) -> Bool {
+        guard horSizeClass != nil else { return true } // don't know
+        return horSizeClass == UserInterfaceSizeClass.compact // .regular on iPad and iPhone 14 Plus or Pro Max
     }
+
 }
