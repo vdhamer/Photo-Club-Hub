@@ -14,13 +14,11 @@ struct AnimatedLogoView: View {
     private static let log2CellRepeat: Double = log2(maxCellRepeat) // typically log2(32) = 5
     private static let squareSize = 5.5 / 18 // size of single colored square compared to pitch (0.3055555)
     private let crossHairsWidth: CGFloat = 1
-    // private static let maxTapCounter = 8
 
     // MARK: - State variables
     @State private var offsetInCells = OffsetVectorInCells(x: 8, y: 6) // number of cell units left/above image center
     @State private var logScale = log2CellRepeat // value driving the animation
     @State private var willMoveToNextScreen = false // used to navigate to next screen
-    @State private var tapCounter: Int = 0
     @Environment(\.horizontalSizeClass) var horSizeClass
 
     func offset(frame rect: CGSize) -> CGSize { // used to position large image in the middle of a cell
@@ -105,7 +103,6 @@ struct AnimatedLogoView: View {
                     .contentShape(Rectangle())
                     .onTapGesture { location in
                         withAnimation(.easeInOut(duration: 7)) { // carefull: code is duplicated twice ;-(
-                            // tapCounter = min(AnimatedLogo.maxTapCounter, tapCounter+1)
                             if logScale == 0.0 { // if we are completely zoomed out at the time of the tap
                                 logScale = log2(AnimatedLogoView.maxCellRepeat) // zoom in
                                 offsetInCells = intOffset(rect: geo.size, location: location)
@@ -122,7 +119,7 @@ struct AnimatedLogoView: View {
                     .stroke(.purple, lineWidth: crossHairsWidth)
                     .blendMode(.normal)
 
-                EscapeHatch(tapCounter: tapCounter, willMoveToNextScreen: $willMoveToNextScreen)
+                EscapeHatch(willMoveToNextScreen: $willMoveToNextScreen)
 
                 Text(verbatim: "WAALRE")
                     .foregroundColor(.black)
@@ -133,7 +130,6 @@ struct AnimatedLogoView: View {
                     .frame(width: geo.size.width, height: geo.size.height)
                     .onTapGesture { location in
                         withAnimation(.easeInOut(duration: 7)) { // carefull: code is duplicated twice ;-(
-                            // tapCounter = min(AnimatedLogo.maxTapCounter, tapCounter+1)
                             if logScale == 0.0 { // if we are completely zoomed out at the time of the tap
                                 logScale = log2(AnimatedLogoView.maxCellRepeat) // zoom in
                                 offsetInCells = intOffset(rect: geo.size, location: location)
@@ -221,7 +217,6 @@ struct AnimatedLogoView: View {
     }
 
     struct EscapeHatch: View {
-        let tapCounter: Int
         let willMoveToNextScreen: Binding<Bool>
 
         var body: some View {
@@ -248,7 +243,6 @@ struct AnimatedLogoView: View {
                     } label: { EmptyView() }
                     .keyboardShortcut(.cancelAction) // Esc key
                 }
-                // .opacity(Double(tapCounter)/Double(AnimatedLogo.maxTapCounter))
                 .font(.title)
             }
 
