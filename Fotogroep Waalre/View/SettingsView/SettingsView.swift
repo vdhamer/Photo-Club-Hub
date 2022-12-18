@@ -28,7 +28,7 @@ struct SettingsView: View {
 
     var body: some View {
         GeometryReader(content: { geo in
-            NavigationView {
+            NavigationStack {
                 List {
                     Section(header: Text("Member categories",
                                          comment: "In Settings, above toggles like \"Show former members\""),
@@ -132,6 +132,6 @@ struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
         SettingsView(settings: $settings)
             .navigationTitle(title)
-            .navigationViewStyle(.stack)
+//            .navigationViewStyle(.stack)
     }
 }

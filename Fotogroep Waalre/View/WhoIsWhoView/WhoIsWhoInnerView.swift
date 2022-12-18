@@ -142,14 +142,14 @@ struct PhotographersInnerView_Previews: PreviewProvider {
     @State static var searchText: String = "Eau1"
 
     static var previews: some View {
-        NavigationView {
+        NavigationStack {
             List {
                 WhoIsWhoInnerView(predicate: predicate, searchText: $searchText)
                     .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
             }
             .navigationBarTitle(Text(String("PhotographersInnerView"))) // prevent localization
         }
-        .navigationViewStyle(.stack)
+//        .navigationViewStyle(.stack)
 //        .searchable(text: $searchText)
     }
 }

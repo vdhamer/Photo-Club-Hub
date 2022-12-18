@@ -112,7 +112,10 @@ an image illustrating how most digital cameras detect color.
 
 Tapping *inside* the image allows you to zoom in or out to your heart's content.
 Tapping *outside* the image area gets you to the main Portfolio screen of the app.
-To see the animation again, just shut down and restart the app.
+
+If there is enough horizontal space, such as on iPads or Plus or Max sized iPhones,
+there will be a back button so you can return to the opening animation.
+Alternatively, shutting down the app and restarting will also work.
 
 But is the animation useful? Well, it was interesting to create and it runs on the device's GPU cores,
 but at least it explains where the app's logo comes from.

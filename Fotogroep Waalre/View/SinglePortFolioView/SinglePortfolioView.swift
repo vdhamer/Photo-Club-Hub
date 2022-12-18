@@ -34,12 +34,12 @@ struct SinglePortfolioView_Previews: PreviewProvider {
     static var url: URL = URL(string: "https://www.fotogroepwaalre.nl/fotos/Peter_van_den_Hamer/")!
 
     static var previews: some View {
-        NavigationView {
+        NavigationStack {
             SinglePortfolioView(url: url, webView: webView)
                 .previewLayout(.sizeThatFits)
                 .navigationBarTitle(String("SinglePortfolioView")) // avoid localization
                 .navigationBarTitleDisplayMode(.large)
         }
-        .navigationViewStyle(.stack)
+//        .navigationViewStyle(.stack)
     }
 }

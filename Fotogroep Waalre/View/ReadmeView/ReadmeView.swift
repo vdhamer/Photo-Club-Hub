@@ -15,7 +15,7 @@ struct ReadmeView: View {
 
     var body: some View {
         GeometryReader { geo in
-            NavigationView {
+            NavigationStack {
                 ScrollView(.vertical, showsIndicators: true) {
                     VStack {
                         VStack { // extra hierarchy level because container View can handle max 10 Views
@@ -45,8 +45,8 @@ struct ReadmeView: View {
                                 if let build = Bundle.main.infoDictionary?["CFBundleVersion"] as? String {
                                     Text("App version \(version) (build \(build))",
                                          comment: "Shown on Readme page.")
-                                        .font(.callout.italic())
-                                        .frame(width: geo.size.width, alignment: .center)
+                                    .font(.callout.italic())
+                                    .frame(width: geo.size.width, alignment: .center)
                                     Text("")
                                 }
                             }
@@ -70,8 +70,8 @@ struct ReadmeView: View {
                                 .frame(width: geo.size.width, alignment: .center)
                             Text("List of supported languages",
                                  comment: "Caption of Localizations image on Readme page")
-                                .font(.callout.italic())
-                                .frame(width: geo.size.width, alignment: .center)
+                            .font(.callout.italic())
+                            .frame(width: geo.size.width, alignment: .center)
                             Text("")
 
                             Paragraph("3.1",
@@ -181,7 +181,7 @@ struct ReadmeView: View {
                         }
                     }
                 }
-            } // NavigationView
+            }
             .padding(.init(top: 0, leading: 0, bottom: 15, trailing: 0))
             .frame(minWidth: geo.size.width*0.2, idealWidth: geo.size.width*0.5, maxWidth: geo.size.width,
                    minHeight: geo.size.height*0.5, idealHeight: geo.size.height, maxHeight: geo.size.height)
@@ -274,7 +274,6 @@ struct ReadmeView_Previews: PreviewProvider {
         ReadmeView()
             .preferredColorScheme(.light)
             .navigationTitle(title)
-            .navigationViewStyle(.stack)
             .previewInterfaceOrientation(.portrait)
     }
 }

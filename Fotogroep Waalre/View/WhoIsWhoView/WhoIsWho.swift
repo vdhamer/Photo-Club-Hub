@@ -50,7 +50,6 @@ struct WhoIsWho: View {
                                  ))
         .disableAutocorrection(true)
         .navigationTitle(navigationTitle)
-        .navigationViewStyle(StackNavigationViewStyle()) // avoids split screen on iPad
     }
 
 }
@@ -58,12 +57,11 @@ struct WhoIsWho: View {
 struct PhotographersView_Previews: PreviewProvider {
     @State static var searchText = "D'Eau1"
     static var previews: some View {
-        NavigationView {
+        NavigationStack {
                 WhoIsWho(searchText: $searchText,
                                   navigationTitle: String("PhotographerListView")
                 )
                     .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
         }
-        .navigationViewStyle(.stack)
     }
 }

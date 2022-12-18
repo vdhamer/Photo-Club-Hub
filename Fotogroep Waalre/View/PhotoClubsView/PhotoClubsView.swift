@@ -52,7 +52,6 @@ struct PhotoClubsView: View {
             }
         }
         .navigationTitle(navigationTitle)
-        .navigationViewStyle(StackNavigationViewStyle()) // avoids split screen on iPad
     }
 
 }
@@ -62,10 +61,9 @@ struct PhotoClubsView_Previews: PreviewProvider {
                                        argumentArray: ["PhotoClub2", "PhotoClub1", "PhotoClub3"])
 
     static var previews: some View {
-        NavigationView {
+        NavigationStack {
             PhotoClubsView(predicate: predicate, navigationTitle: String("PhotoClubView"))
                 .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
         }
-        .navigationViewStyle(.stack)
     }
 }
