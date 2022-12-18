@@ -40,7 +40,7 @@
 		D0831A37277F72590049AB84 /* FGWMembersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A2C277F72590049AB84 /* FGWMembersProvider.swift */; };
 		D0831A38277F72590049AB84 /* PhotoClub.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A2D277F72590049AB84 /* PhotoClub.swift */; };
 		D0831A44277F731C0049AB84 /* Published+UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A40277F731C0049AB84 /* Published+UserDefaults.swift */; };
-		D0831A45277F731C0049AB84 /* FoundationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A41277F731C0049AB84 /* FoundationExtensions.swift */; };
+		D0831A45277F731C0049AB84 /* String+Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A41277F731C0049AB84 /* String+Regex.swift */; };
 		D0831A47277F731C0049AB84 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A43277F731C0049AB84 /* PersistenceController.swift */; };
 		D0831A51277F73C00049AB84 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0831A50277F73C00049AB84 /* Preview Assets.xcassets */; };
 		D0831A56277F82460049AB84 /* nl.xcloc in Resources */ = {isa = PBXBuildFile; fileRef = D0831A54277F82460049AB84 /* nl.xcloc */; };
@@ -135,7 +135,7 @@
 		D0831A2D277F72590049AB84 /* PhotoClub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoClub.swift; sourceTree = "<group>"; };
 		D0831A3D277F72B70049AB84 /* Fotogroep_Waalre.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fotogroep_Waalre.xcdatamodel; sourceTree = "<group>"; };
 		D0831A40277F731C0049AB84 /* Published+UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Published+UserDefaults.swift"; sourceTree = "<group>"; };
-		D0831A41277F731C0049AB84 /* FoundationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationExtensions.swift; sourceTree = "<group>"; };
+		D0831A41277F731C0049AB84 /* String+Regex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Regex.swift"; sourceTree = "<group>"; };
 		D0831A43277F731C0049AB84 /* PersistenceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		D0831A49277F736C0049AB84 /* Version2Changes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Version2Changes.md; sourceTree = "<group>"; };
 		D0831A4A277F736C0049AB84 /* FotogroepWaalre.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = FotogroepWaalre.xlsx; sourceTree = "<group>"; };
@@ -354,7 +354,7 @@
 				D044646427FCE7C100990613 /* UIDevice+IsIPad.swift */,
 				D0275F5427E3E21F002FA4FE /* View+OnTapGesture.swift */,
 				D0831A40277F731C0049AB84 /* Published+UserDefaults.swift */,
-				D0831A41277F731C0049AB84 /* FoundationExtensions.swift */,
+				D0831A41277F731C0049AB84 /* String+Regex.swift */,
 				D0831A43277F731C0049AB84 /* PersistenceController.swift */,
 				D0E449A227AECEC4003FDA37 /* ShapeStyle+Colors.swift */,
 				D01D2B6127D3BBDC00E2FE41 /* View+Navigate.swift */,
@@ -656,7 +656,7 @@
 			files = (
 				D0DE02772789D1B30062738C /* RoleIconView.swift in Sources */,
 				D0831A33277F72590049AB84 /* BIMembersProvider+insertSomeHardcodedMemberData.swift in Sources */,
-				D0831A45277F731C0049AB84 /* FoundationExtensions.swift in Sources */,
+				D0831A45277F731C0049AB84 /* String+Regex.swift in Sources */,
 				D0831A1F277F72270049AB84 /* FilteredMemberPortfoliosView.swift in Sources */,
 				D0D5B58E28E4918F00244F34 /* Fotogroep_Waalre_2.xcdatamodeld in Sources */,
 				D0831A34277F72590049AB84 /* BIMembersProvider.swift in Sources */,
