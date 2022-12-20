@@ -19,6 +19,7 @@ struct AnimatedLogoView: View {
     @State private var offsetInCells = OffsetVectorInCells(x: 8, y: 6) // number of cell units left/above image center
     @State private var logScale = log2CellRepeat // value driving the animation
     @State private var willMoveToNextScreen = false // used to navigate to next screen
+    @State private var debugLocation = CGPoint(x: 0, y: 0)
     @Environment(\.horizontalSizeClass) var horSizeClass
 
     func offset(frame rect: CGSize) -> CGSize { // used to position large image in the middle of a cell
@@ -119,7 +120,9 @@ struct AnimatedLogoView: View {
                     .stroke(.purple, lineWidth: crossHairsWidth)
                     .blendMode(.normal)
 
-                EscapeHatch(willMoveToNextScreen: $willMoveToNextScreen)
+                EscapeHatch(willMoveToNextScreen: $willMoveToNextScreen,
+                            offset: $offsetInCells, location: $debugLocation,
+                            geo: geo)
 
                 Text(verbatim: "WAALRE")
                     .foregroundColor(.black)
@@ -129,6 +132,8 @@ struct AnimatedLogoView: View {
                     .opacity(logScale == 0  ? 0 : 1)
                     .frame(width: geo.size.width, height: geo.size.height)
                     .onTapGesture { location in
+                        debugLocation = location // for debugging only
+                        print(location)
                         withAnimation(.easeInOut(duration: 7)) { // carefull: code is duplicated twice ;-(
                             if logScale == 0.0 { // if we are completely zoomed out at the time of the tap
                                 logScale = log2(AnimatedLogoView.maxCellRepeat) // zoom in
@@ -218,11 +223,15 @@ struct AnimatedLogoView: View {
 
     struct EscapeHatch: View {
         let willMoveToNextScreen: Binding<Bool>
+        let offset: Binding<OffsetVectorInCells>
+        let location: Binding<CGPoint>
+        var geo: GeometryProxy
 
         var body: some View {
             VStack {
                 Spacer()
                 HStack {
+                    DebugText(geo: geo, offset: offset, location: location)
                     Spacer()
                     Button {
                         willMoveToNextScreen.wrappedValue = true
@@ -246,6 +255,24 @@ struct AnimatedLogoView: View {
                 .font(.title)
             }
 
+        }
+    }
+
+    struct DebugText: View {
+        var geo: GeometryProxy
+        @Binding var offset: OffsetVectorInCells
+        @Binding var location: CGPoint
+
+        var body: some View {
+            Text("""
+                  size=[\(Int(geo.size.width)), \(Int(geo.size.height))]
+                  offsetInCells=[\($offset.wrappedValue.x), \($offset.wrappedValue.y)]
+                  location=[\(Int($location.wrappedValue.x)), \(Int(location.y))]
+                 """)
+                .font(.body)
+                .foregroundColor(Color(white: 0.1))
+                .padding([.horizontal])
+                .background { Color(white: 0.9) }
         }
     }
 
