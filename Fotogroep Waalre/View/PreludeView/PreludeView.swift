@@ -1,5 +1,5 @@
 //
-//  AnimatedLogoView.swift
+//  PreludeView.swift
 //  Fotogroep Waalre
 //
 //  Created by Peter van den Hamer on 05/03/2022.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AnimatedLogoView: View {
+struct PreludeView: View {
 
     // MARK: - Constants
     private static let maxCellRepeat: Double = 32 // max number of cells horizontally and vertically
@@ -25,7 +25,7 @@ struct AnimatedLogoView: View {
     func offset(frame rect: CGSize) -> CGSize { // used to position large image in the middle of a cell
         guard logScale != 0 else { return .zero }
         let shortFrameDimension: Double = min(rect.width, rect.height)
-        let cellPitchInPixels: Double = shortFrameDimension/AnimatedLogoView.maxCellRepeat
+        let cellPitchInPixels: Double = shortFrameDimension/PreludeView.maxCellRepeat
         let offset = CGSize( width: cellPitchInPixels * Double(offsetInCells.x) * pow(2, logScale),
                              height: cellPitchInPixels * Double(offsetInCells.y) * pow(2, logScale) )
         return offset
@@ -35,7 +35,7 @@ struct AnimatedLogoView: View {
         guard logScale != 0 else { return OffsetVectorInCells(x: 0, y: 0) }
         let shortFrameDimension = min(rect.width, rect.height)
         let halfFrameDimension = shortFrameDimension / 2
-        let cellPitchInPixels = shortFrameDimension/AnimatedLogoView.maxCellRepeat
+        let cellPitchInPixels = shortFrameDimension/PreludeView.maxCellRepeat
         return OffsetVectorInCells( x: Int((((halfFrameDimension - location.x) / cellPitchInPixels)).rounded()),
                                     y: Int((((halfFrameDimension - location.y) / cellPitchInPixels)).rounded()) )
     }
@@ -66,23 +66,23 @@ struct AnimatedLogoView: View {
 
                         ZStack {
                             Group {
-                                LogoPath(logCellRepeat: AnimatedLogoView.log2CellRepeat, // upper left part of logo
-                                         relPixelSize: AnimatedLogoView.squareSize,
+                                LogoPath(logCellRepeat: PreludeView.log2CellRepeat, // upper left part of logo
+                                         relPixelSize: PreludeView.squareSize,
                                          offsetPoint: .zero)
                                 .fill(.fgwGreen)
                                 .blendMode(.normal)
-                                LogoPath(logCellRepeat: AnimatedLogoView.log2CellRepeat, // upper right part of logo
-                                         relPixelSize: AnimatedLogoView.squareSize,
+                                LogoPath(logCellRepeat: PreludeView.log2CellRepeat, // upper right part of logo
+                                         relPixelSize: PreludeView.squareSize,
                                          offsetPoint: .top)
                                 .fill(.fgwRed)
                                 .blendMode(.normal)
-                                LogoPath(logCellRepeat: AnimatedLogoView.log2CellRepeat, // lower left part of logo
-                                         relPixelSize: AnimatedLogoView.squareSize,
+                                LogoPath(logCellRepeat: PreludeView.log2CellRepeat, // lower left part of logo
+                                         relPixelSize: PreludeView.squareSize,
                                          offsetPoint: .leading)
                                 .fill(.fgwBlue)
                                 .blendMode(.normal)
-                                LogoPath(logCellRepeat: AnimatedLogoView.log2CellRepeat, // lower righ part of logo
-                                         relPixelSize: AnimatedLogoView.squareSize,
+                                LogoPath(logCellRepeat: PreludeView.log2CellRepeat, // lower righ part of logo
+                                         relPixelSize: PreludeView.squareSize,
                                          offsetPoint: .center)
                                 .fill(.fgwGreen)
                                 .blendMode(.normal)
@@ -111,7 +111,7 @@ struct AnimatedLogoView: View {
                             debugLocation = location
                             withAnimation(.easeInOut(duration: 7)) { // carefull: code is duplicated twice ;-(
                                 if logScale == 0.0 { // if we are completely zoomed out at the time of the tap
-                                    logScale = log2(AnimatedLogoView.maxCellRepeat) // zoom in
+                                    logScale = log2(PreludeView.maxCellRepeat) // zoom in
                                     offsetInCells = intOffset(rect: geo.size, location: location)
                                 } else {
                                     offsetInCells = OffsetVectorInCells(x: 0, y: 0)
@@ -143,7 +143,7 @@ struct AnimatedLogoView: View {
                             print(location)
                             withAnimation(.easeInOut(duration: 7)) { // carefull: code is duplicated twice ;-(
                                 if logScale == 0.0 { // if we are completely zoomed out at the time of the tap
-                                    logScale = log2(AnimatedLogoView.maxCellRepeat) // zoom in
+                                    logScale = log2(PreludeView.maxCellRepeat) // zoom in
                                     offsetInCells = intOffset(rect: geo.size, location: location)
                                 } else {
                                     offsetInCells = OffsetVectorInCells(x: 0, y: 0)
@@ -295,7 +295,7 @@ struct AnimatedLogoView: View {
 
 struct AnimatedLogo_Previews: PreviewProvider {
     static var previews: some View {
-        AnimatedLogoView()
+        PreludeView()
             .previewInterfaceOrientation(.portrait)
     }
 }

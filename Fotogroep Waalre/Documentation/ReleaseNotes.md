@@ -4,7 +4,7 @@
 This is build (4579) in Apple's App Store
 * Tested on iOS/iPadOS 16.2 (and with XCode 14.2 and SwiftLint 0.50.3)
 * Convert from NavigationView to NavigationStack
-    * New Back button (shown only on wide displays) returns user to the intro/animation screen
+    * New Back button (shown only on wide displays) returns user to the intro/prelude screen
 ---------------------------------------------------------------------------
 ### 2.2.5 (Github hash 6f40286) 10-12-22
 
@@ -129,7 +129,7 @@ This is build 4303 in Apple's App Store
 This is build 4299 in Apple's App Store
 * Many text changes in embedded Dutch language ReadMe (and a few to the English version)
 * Animimation screen
-    * Return, Esc and Space keys all dismiss the opening animation (if you have a keyboard attached)
+    * Return, Esc and Space keys all dismiss the Prelude screen (if you have a keyboard attached)
 * Used @EnvironmentObject to distribute deviceOwnership
 ---------------------------------------------------------------------------
 ### 2.0.8 (not on Github) 09-05-22
@@ -155,9 +155,9 @@ This is build 4294 in Apple's App Store
 * Portfolios screen (called Members at the time)
     * text "Members" didn't fit in navigation view when scrolling upwards
     * iPad only: shifted location of search field on Members page
-* Animation screen
+* Prelude screen
     * more precise alignment of logo in Opening page
-    * minimized chance of user getting stuck in the opening animation
+    * minimized chance of user getting stuck in the opening Prelude screen
 * Photo clubs screen
     * changed order of photo clubs
 * Readme screen
@@ -174,12 +174,12 @@ This is build 3982 in Apple's App Store
 * Member page can show warnings/tips if the page is empty or contains duplicate names
 * animation of lock icon on Photo Clubs page (with sound)
 * other minor user interface improvements: smaller click target for photo club URL, Done button, "Current members", "incl."
-* prevented largest DynamicType setting from causing WAALRE to wrap in Intro animation
+* prevented largest DynamicType setting from causing WAALRE to wrap in Prelude animation
 ---------------------------------------------------------------------------
 ### 2.0.5 (not on Github) 24-03-22
 
 This is build 3976 in Apple's App Store
-* made opening animation more interactive
+* made opening Prelude screen more interactive
 * higher resolution version of opening image
 * minor user interface improvements: icon for Preferences, URL for photo clubs
 * scrolling and panning of maps can be locked by toggling a lock/unlock icon
@@ -188,7 +188,7 @@ This is build 3976 in Apple's App Store
 
 This is build 3974 in Apple's App Store
 * changed membership status icons and various other user interface improvements
-* new opening animation showing App icon morphing into Bayer color filter array
+* new opening Prelude screen showing App icon morphing into Bayer color filter array
 * internal improvements: handling of special colors
 * updated App Store screenshots (to do)
 ---------------------------------------------------------------------------

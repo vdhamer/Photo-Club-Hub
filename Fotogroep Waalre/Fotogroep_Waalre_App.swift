@@ -27,7 +27,7 @@ struct FotogroepWaalreApp: App {
 
     var body: some Scene {
         WindowGroup {
-            AnimatedLogoView()
+            PreludeView()
                 .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext) // main queue!
                 .onAppear {
                     _ = FGWMembersProvider() // always load members of Fotogroep Waalre

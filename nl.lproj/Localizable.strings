@@ -104,14 +104,14 @@ Button to close Info page. */
 /* Third paragraph in The Features section of Readme page */
 "Paragraph_3.3" = "__Wissen__\nDe gebruiker kan op de Portfolio pagina leden verwijderen door hun naam naar links te vegen. Dat verwijderen is slechts tijdelijk indien het lid nog op de online ledenlijst van de club staat: bij opnieuw synchroniseren komt de naam dan automatisch weer terug. Maar dit \"wegvegen\" kan nuttig zijn als bijvoorbeeld een kandidaat-lid vertrekt zonder lid te worden. Hiermee verwijder je iemand uit de locale database die niet meer voorkomt in de online ledenlijst. Als alternatief kan men ook de app verwijderen en opnieuw installeren.";
 
-/* First paragraph in Animation section of Readme page */
+/* First paragraph in Prelude section of Readme page */
 "Paragraph_4.1" = "Bij het opstarten van de app, wordt een grote versie van het logo van de app zichtbaar. Dit is een interactief speeltje. Door ***binnen het beeld*** te klikken zoomt het beeld langzaam uit tot en vierkante versie van bovenstaande foto.";
 
-/* Second paragraph in Animation section of Readme page */
+/* Second paragraph in Prelude section of Readme page */
 "Paragraph_4.2" = "De daarop aangebrachte gekleurde vlakjes tonen hoe de kleurenfilters in een digitale camera werken. Deze [Bayer kleurenfilters](https://en.wikipedia.org/wiki/Bayer_filter) komen in vrijwel alle digitale camera's voor. Iedere kleurenfilter zorgt ervoor dat de afgedekte fotocel (\"pixel\") vooral gevoelig is voor licht van die ene hoofdkleur.";
 
-/* Second paragraph in Animation section of Readme page */
-"Paragraph_4.3" = "Nogmaals klikken op het beeld maakt het mogelijk om verschillende delen van het beeld-met-vlakjes te bekijken. Klik ***buiten het beeld*** om de animatie te beëindigen. De animatie is opnieuw te zien door de app volledig af te sluiten en dan opnieuw op te starten.";
+/* Third paragraph in Prelude section of Readme page */
+"Paragraph_4.3" = "Nogmaals klikken op het beeld maakt het mogelijk om verschillende delen van het beeld-met-vlakjes te bekijken. Klik ***buiten het beeld*** om de animatie te beëindigen. De prelude is opnieuw te zien door de app volledig af te sluiten en dan opnieuw op te starten.";
 
 /* First paragraph SupportedPlatforms section of Readme page */
 "Paragraph_5.1" = "De app draait zowel op de iPhone als op de iPad. Verder draait het op de nieuwe generatie Macs met _Apple Silicon_. De app vereist een recente versie van iOS (vanaf iOS/iPadOS 15.5). Dit dekt in principe alle iOS apparaten af die maximaal 5 jaar oud zijn.";
@@ -212,7 +212,7 @@ Field at top of Members page that allows the user to filter the members based on
 "Supported Platforms" = "iOS, iPadOS, MacOS";
 
 /* No comment provided by engineer. */
-"The Animation" = "De Animatie";
+"The Prelude" = "Prelude";
 
 /* No comment provided by engineer. */
 "The Club" = "Fotogroep Waalre";

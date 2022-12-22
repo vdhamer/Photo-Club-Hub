@@ -83,7 +83,7 @@ struct ReadmeView: View {
                         }
 
                         VStack {
-                            SectionHeader("The Animation", comment: "Section title on Readme page", geo: geo)
+                            SectionHeader("The Prelude", comment: "Section title on Readme page", geo: geo)
 
                             Image("2021_FotogroepWaalre_058")
                                 .resizable()
@@ -95,9 +95,9 @@ struct ReadmeView: View {
                                 .font(.callout.italic())
                                 .frame(width: geo.size.width, alignment: .center)
 
-                            Paragraph("4.1", comment: "First paragraph in Animation section of Readme page", geo: geo)
-                            Paragraph("4.2", comment: "Second paragraph in Animation section of Readme page", geo: geo)
-                            Paragraph("4.3", comment: "Third paragraph in Animation section of Readme page", geo: geo)
+                            Paragraph("4.1", comment: "First paragraph in Prelude section of Readme page", geo: geo)
+                            Paragraph("4.2", comment: "Second paragraph in Prelude section of Readme page", geo: geo)
+                            Paragraph("4.3", comment: "Third paragraph in Prelude section of Readme page", geo: geo)
                         }
 
                         VStack {
