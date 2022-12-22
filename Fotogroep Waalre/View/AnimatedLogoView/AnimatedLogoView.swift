@@ -41,13 +41,14 @@ struct AnimatedLogoView: View {
     }
 
     var body: some View {
-        ZStack { // not needed if there is no slider
-            AngularGradient(gradient: Gradient(colors: [.white, .fgwGreen,
-                                                        .white, .fgwRed,
-                                                        .white, .fgwGreen,
-                                                        .white, .fgwBlue,
-                                                        .white]
-                                              ), center: .center)
+        NavigationStack { // defines navigation structure of entire app, even though you don't see navigation bar yet
+            ZStack {
+                AngularGradient(gradient: Gradient(colors: [.white, .fgwGreen,
+                                                            .white, .fgwRed,
+                                                            .white, .fgwGreen,
+                                                            .white, .fgwBlue,
+                                                            .white]
+                ), center: .center)
                 .saturation(0.5)
                 .brightness(0.05)
                 .ignoresSafeArea()
@@ -56,105 +57,110 @@ struct AnimatedLogoView: View {
                         willMoveToNextScreen = true
                     }
                 }
-            GeometryReader { geo in
-                ZStack(alignment: .center) {
+                .navigate(to: MemberPortfoliosView().navigationBarTitle("Portfolios"),
+                          when: $willMoveToNextScreen,
+                          horSizeClass: horSizeClass)
 
-                    ZStack {
-                        Group {
-                            LogoPath(logCellRepeat: AnimatedLogoView.log2CellRepeat, // upper left part of logo
-                                     relPixelSize: AnimatedLogoView.squareSize,
-                                     offsetPoint: .zero)
+                GeometryReader { geo in
+                    ZStack(alignment: .center) {
+
+                        ZStack {
+                            Group {
+                                LogoPath(logCellRepeat: AnimatedLogoView.log2CellRepeat, // upper left part of logo
+                                         relPixelSize: AnimatedLogoView.squareSize,
+                                         offsetPoint: .zero)
                                 .fill(.fgwGreen)
                                 .blendMode(.normal)
-                            LogoPath(logCellRepeat: AnimatedLogoView.log2CellRepeat, // upper right part of logo
-                                     relPixelSize: AnimatedLogoView.squareSize,
-                                     offsetPoint: .top)
+                                LogoPath(logCellRepeat: AnimatedLogoView.log2CellRepeat, // upper right part of logo
+                                         relPixelSize: AnimatedLogoView.squareSize,
+                                         offsetPoint: .top)
                                 .fill(.fgwRed)
                                 .blendMode(.normal)
-                            LogoPath(logCellRepeat: AnimatedLogoView.log2CellRepeat, // lower left part of logo
-                                     relPixelSize: AnimatedLogoView.squareSize,
-                                     offsetPoint: .leading)
+                                LogoPath(logCellRepeat: AnimatedLogoView.log2CellRepeat, // lower left part of logo
+                                         relPixelSize: AnimatedLogoView.squareSize,
+                                         offsetPoint: .leading)
                                 .fill(.fgwBlue)
                                 .blendMode(.normal)
-                            LogoPath(logCellRepeat: AnimatedLogoView.log2CellRepeat, // lower righ part of logo
-                                     relPixelSize: AnimatedLogoView.squareSize,
-                                     offsetPoint: .center)
+                                LogoPath(logCellRepeat: AnimatedLogoView.log2CellRepeat, // lower righ part of logo
+                                         relPixelSize: AnimatedLogoView.squareSize,
+                                         offsetPoint: .center)
                                 .fill(.fgwGreen)
                                 .blendMode(.normal)
+                            }
+                            .opacity(logScale == 0  ? 0.5 : 1)
+                            Image("2021_FotogroepWaalre_058_square")
+                                .resizable()
+                                .scaledToFit()
+                                .brightness(logScale == 0  ? 0.1 : 0.2)
+                                .blendMode(.multiply)
+
                         }
-                        .opacity(logScale == 0  ? 0.5 : 1)
-                        Image("2021_FotogroepWaalre_058_square")
-                            .resizable()
-                            .scaledToFit()
-                            .brightness(logScale == 0  ? 0.1 : 0.2)
-                            .blendMode(.multiply)
-
-                    }
-                    .scaleEffect(CGSize(width: pow(2, logScale), height: pow(2, logScale))) // does the zooming
-                    .offset(offset(frame: geo.size)) // does the panning
-
-                    .frame(width: min(geo.size.width, geo.size.height), height: min(geo.size.width, geo.size.height))
-                    .overlay(RoundedRectangle(cornerRadius: CGFloat(Int(min(geo.size.width,
-                                                                            geo.size.height) * 0.15)),
-                                              style: .continuous)
-                                .stroke(.black, lineWidth: 2))
-                    .clipShape(RoundedRectangle(cornerRadius: CGFloat(Int(min(geo.size.width,
-                                                                  geo.size.height) * 0.15)),
-                                                style: .continuous)) // approximate iOS rounding
-                    .contentShape(Rectangle())
-                    .onTapGesture { location in
-                        withAnimation(.easeInOut(duration: 7)) { // carefull: code is duplicated twice ;-(
-                            if logScale == 0.0 { // if we are completely zoomed out at the time of the tap
-                                logScale = log2(AnimatedLogoView.maxCellRepeat) // zoom in
-                                offsetInCells = intOffset(rect: geo.size, location: location)
-                            } else {
-                                offsetInCells = OffsetVectorInCells(x: 0, y: 0)
-                                logScale = 0.0 // zoom out
+                        .scaleEffect(CGSize(width: pow(2, logScale), height: pow(2, logScale))) // does the zooming
+                        .offset(offset(frame: geo.size)) // does the panning
+                        .frame(width: min(geo.size.width, geo.size.height),
+                               height: min(geo.size.width, geo.size.height))
+                        .overlay(RoundedRectangle(cornerRadius: CGFloat(Int(min(geo.size.width,
+                                                                                geo.size.height) * 0.15)),
+                                                  style: .continuous)
+                        .stroke(.black, lineWidth: 2))
+                        .clipShape(RoundedRectangle(cornerRadius: CGFloat(Int(min(geo.size.width,
+                                                                                  geo.size.height) * 0.15)),
+                                                    style: .continuous)) // approximate iOS app icon rounding
+                        .contentShape(Rectangle())
+                        .onTapGesture { location in
+                            debugLocation = location
+                            withAnimation(.easeInOut(duration: 7)) { // carefull: code is duplicated twice ;-(
+                                if logScale == 0.0 { // if we are completely zoomed out at the time of the tap
+                                    logScale = log2(AnimatedLogoView.maxCellRepeat) // zoom in
+                                    offsetInCells = intOffset(rect: geo.size, location: location)
+                                } else {
+                                    offsetInCells = OffsetVectorInCells(x: 0, y: 0)
+                                    logScale = 0.0 // zoom out
+                                }
                             }
                         }
+                        .frame(width: geo.size.width, height: geo.size.height)
                     }
-                    .frame(width: geo.size.width, height: geo.size.height)
-                }
 
-                CrossHairs(isVisible: false, circleScaling: 1.13)
-                    .stroke(.purple, lineWidth: crossHairsWidth)
-                    .blendMode(.normal)
+                    CrossHairs(isInvisible: true, circleScaling: 1.13)
+                        .stroke(.purple, lineWidth: crossHairsWidth)
+                        .blendMode(.normal)
 
-                EscapeHatch(willMoveToNextScreen: $willMoveToNextScreen,
-                            offset: $offsetInCells, location: $debugLocation,
-                            geo: geo)
+                    EscapeHatch(willMoveToNextScreen: $willMoveToNextScreen,
+                                offset: $offsetInCells,
+                                location: $debugLocation,
+                                size: geo.size)
 
-                Text(verbatim: "WAALRE")
-                    .foregroundColor(.black)
-                    .font(Font.custom("Gill Sans", size: 105*(min(geo.size.width, geo.size.height)/800)))
-                    .kerning((140/3)*(min(geo.size.width, geo.size.height)/800))
-                    .offset(x: (60/3)*(min(geo.size.width, geo.size.height)/800))
-                    .opacity(logScale == 0  ? 0 : 1)
-                    .frame(width: geo.size.width, height: geo.size.height)
-                    .onTapGesture { location in
-                        debugLocation = location // for debugging only
-                        print(location)
-                        withAnimation(.easeInOut(duration: 7)) { // carefull: code is duplicated twice ;-(
-                            if logScale == 0.0 { // if we are completely zoomed out at the time of the tap
-                                logScale = log2(AnimatedLogoView.maxCellRepeat) // zoom in
-                                offsetInCells = intOffset(rect: geo.size, location: location)
-                            } else {
-                                offsetInCells = OffsetVectorInCells(x: 0, y: 0)
-                                logScale = 0.0 // zoom out
+                    Text(verbatim: "WAALRE")
+                        .foregroundColor(.black)
+                        .font(Font.custom("Gill Sans", size: 105*(min(geo.size.width, geo.size.height)/800)))
+                        .kerning((140/3)*(min(geo.size.width, geo.size.height)/800))
+                        .offset(x: (60/3)*(min(geo.size.width, geo.size.height)/800))
+                        .opacity(logScale == 0  ? 0 : 1)
+                        .frame(width: geo.size.width, height: geo.size.height)
+                        .onTapGesture { location in
+                            debugLocation = location // for debugging only
+                            print(location)
+                            withAnimation(.easeInOut(duration: 7)) { // carefull: code is duplicated twice ;-(
+                                if logScale == 0.0 { // if we are completely zoomed out at the time of the tap
+                                    logScale = log2(AnimatedLogoView.maxCellRepeat) // zoom in
+                                    offsetInCells = intOffset(rect: geo.size, location: location)
+                                } else {
+                                    offsetInCells = OffsetVectorInCells(x: 0, y: 0)
+                                    logScale = 0.0 // zoom out
+                                }
                             }
                         }
-                    }
-                    .dynamicTypeSize(DynamicTypeSize.large ...
-                                     DynamicTypeSize.large) // don't let DynamicType change WAALRE size
-            }
+                        .dynamicTypeSize(DynamicTypeSize.large ...
+                                         DynamicTypeSize.large) // don't let DynamicType change WAALRE size
+
+                } // GeometryReader
                 .drawingGroup()
                 .padding()
 
+            }
+            .navigationBarTitle("Prelude")
         }
-            .navigationBarTitle("Intro")
-            .navigate(to: MemberPortfoliosView().navigationBarTitle("Portfolios"),
-                      when: $willMoveToNextScreen,
-                      horSizeClass: horSizeClass)
     }
 
     struct OffsetVectorInCells {
@@ -200,22 +206,22 @@ struct AnimatedLogoView: View {
     struct CrossHairs: Shape { // InsettableShape {
         let rotationAdjustment = Angle.degrees(90.0)
         let clockwise = true
-        var isVisible = true
+        var isInvisible = false
         var circleScaling: Double = 1.0
 
         func path(in rect: CGRect) -> Path {
+            guard !isInvisible else { return Path() } // nothing gets displayed
+
             var path = Path()
-            if isVisible {
-                for startAngle in stride(from: 0.0, through: 315.0, by: 45.0) {
-                    path.move(to: CGPoint(x: rect.midX, y: rect.midY))
-                    path.addArc(center: CGPoint(x: rect.midX, y: rect.midY), // 45 degree pie segment
-                                radius: rect.midX * circleScaling,
-                                startAngle: Angle.degrees(startAngle)-rotationAdjustment,
-                                endAngle: Angle.degrees(startAngle+45)-rotationAdjustment,
-                                clockwise: !clockwise)
-                    path.addLine(to: CGPoint(x: rect.midX, y: rect.midY)) // center
-                    path.closeSubpath()
-                }
+            for startAngle in stride(from: 0.0, through: 315.0, by: 45.0) {
+                path.move(to: CGPoint(x: rect.midX, y: rect.midY))
+                path.addArc(center: CGPoint(x: rect.midX, y: rect.midY), // 45 degree pie segment
+                            radius: rect.midX * circleScaling,
+                            startAngle: Angle.degrees(startAngle)-rotationAdjustment,
+                            endAngle: Angle.degrees(startAngle+45)-rotationAdjustment,
+                            clockwise: !clockwise)
+                path.addLine(to: CGPoint(x: rect.midX, y: rect.midY)) // center
+                path.closeSubpath()
             }
             return path
         }
@@ -225,13 +231,13 @@ struct AnimatedLogoView: View {
         let willMoveToNextScreen: Binding<Bool>
         let offset: Binding<OffsetVectorInCells>
         let location: Binding<CGPoint>
-        var geo: GeometryProxy
+        var size: CGSize
 
         var body: some View {
             VStack {
                 Spacer()
                 HStack {
-                    DebugText(geo: geo, offset: offset, location: location)
+                    DebugPanel(isInvisible: true, size: size, offset: offset, location: location)
                     Spacer()
                     Button {
                         willMoveToNextScreen.wrappedValue = true
@@ -258,21 +264,30 @@ struct AnimatedLogoView: View {
         }
     }
 
-    struct DebugText: View {
-        var geo: GeometryProxy
+    struct DebugPanel: View {
+        var isInvisible: Bool = false
+        var size: CGSize
         @Binding var offset: OffsetVectorInCells
         @Binding var location: CGPoint
 
         var body: some View {
-            Text("""
-                  size=[\(Int(geo.size.width)), \(Int(geo.size.height))]
-                  offsetInCells=[\($offset.wrappedValue.x), \($offset.wrappedValue.y)]
-                  location=[\(Int($location.wrappedValue.x)), \(Int(location.y))]
-                 """)
+            if !isInvisible {
+                Text("""
+                     frameSize = [\
+                     \(Int(size.width), format: .number.grouping(.never)),\
+                     \(Int(size.height), format: .number.grouping(.never))]
+                     tapLocation = [\(Int(location.x)), \(Int(location.y))]
+                     offsetInCells = [\(offset.x), \(offset.y)]
+                     """)
                 .font(.body)
-                .foregroundColor(Color(white: 0.1))
-                .padding([.horizontal])
+                .foregroundColor(.black)
+                .padding()
+                .border(.black)
                 .background { Color(white: 0.9) }
+                .transaction { transaction in // https://www.avanderlee.com/swiftui/disable-animations-transactions/
+                    transaction.animation = nil
+                }
+            }
         }
     }
 
