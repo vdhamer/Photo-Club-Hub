@@ -188,18 +188,6 @@ struct ReadmeView: View {
         } // GeometryReader
     }
 
-//    func getAppIcon() -> UIImage {
-//        // https://medium.com/macoclock/swift-how-to-get-current-app-icon-in-ios-2b3adbeedf16
-//        var appIcon: UIImage! {
-//            guard let iconsDictionary = Bundle.main.infoDictionary?["CFBundleIcons"] as? [String: Any],
-//                  let primaryIconsDictionary = iconsDictionary["CFBundlePrimaryIcon"] as? [String: Any],
-//                  let iconFiles = primaryIconsDictionary["CFBundleIconFiles"] as? [String],
-//                  let lastIcon = iconFiles.last else { return nil }
-//            return UIImage(named: lastIcon)
-//        }
-//        return appIcon
-//    }
-
     struct SectionHeader: View {
         let localizedStringKey: LocalizedStringKey
         let comment: StaticString

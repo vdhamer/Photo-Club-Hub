@@ -239,7 +239,7 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
         func updateIfChanged<Type>(update persistedValue: inout Type,
                                    with newValue: Type?) -> Bool // true only if needsSaving
                                    where Type: Equatable {
-            if let newValue = newValue { // nil means no new value known - and thus doesn't erase existing value
+            if let newValue { // nil means no new value known - and thus doesn't erase existing value
                 if persistedValue != newValue {
                     persistedValue = newValue // actual update
                     return true // update needs to be saved
@@ -251,7 +251,7 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
         func updateIfChangedOptional<Type>(update persistedValue: inout Type?,
                                            with newValue: Type?) -> Bool // true only if needsSaving
                                            where Type?: Equatable {
-            if let newValue = newValue { // nil means no new value known - and thus doesn't erase existing value
+            if let newValue { // nil means no new value known - and thus doesn't erase existing value
                 if persistedValue != newValue {
                     persistedValue = newValue // actual update
                     return true // update needs to be saved

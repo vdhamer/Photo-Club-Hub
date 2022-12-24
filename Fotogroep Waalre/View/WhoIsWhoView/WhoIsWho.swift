@@ -18,7 +18,7 @@ struct WhoIsWho: View {
 
     init(searchText: Binding<String>, navigationTitle: String? = nil) {
         self.searchText = searchText
-        if let navigationTitle = navigationTitle {
+        if let navigationTitle {
             self.navigationTitle = navigationTitle
         }
     }
