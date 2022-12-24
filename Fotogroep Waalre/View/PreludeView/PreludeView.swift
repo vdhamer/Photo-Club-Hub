@@ -10,7 +10,7 @@ import SwiftUI
 struct PreludeView: View {
 
     // MARK: - Constants
-    private static let maxCellRepeat: Double = 32 // max number of cells horizontally and vertically
+    static let maxCellRepeat: Double = 32 // max number of cells horizontally and vertically
     private static let log2CellRepeat: Double = log2(maxCellRepeat) // typically log2(32) = 5
     private static let squareSize = 5.5 / 18 // size of single colored square compared to pitch (0.3055555)
     private let crossHairsWidth: CGFloat = 1
@@ -124,7 +124,7 @@ struct PreludeView: View {
                         .frame(width: geo.size.width, height: geo.size.height)
                     }
 
-                    CrossHairs(hidden: !crosshairsVisible, circleScaling: 1.13)
+                    CrossHairs(hidden: !crosshairsVisible)
                         .stroke(.purple, lineWidth: crossHairsWidth)
                         .blendMode(.normal)
 
@@ -164,70 +164,6 @@ struct PreludeView: View {
 
             }
             .navigationBarTitle("Prelude")
-        }
-    }
-
-    struct OffsetVectorInCells {
-        // swiftlint:disable:next identifier_name
-        var x, y: Int
-    }
-
-    struct LogoPath: Shape {
-        var logCellRepeat: Double
-        var relPixelSize: Double // value between 0.0 and 1.0
-        var offsetPoint: UnitPoint
-
-        var animatableData: Double {
-            get {
-                logCellRepeat
-            }
-            set {
-                logCellRepeat = newValue
-            }
-        }
-
-        func path(in rect: CGRect) -> Path {
-            var path = Path()
-            path.move(to: .zero)
-            let frameSize: Double = min(rect.width, rect.height)
-            let pixelPitch: Double = frameSize / pow(2, logCellRepeat)
-            let pixelSize: Double = pixelPitch * relPixelSize
-            let extraOffset: Double = (0.5 - relPixelSize)/2
-
-            for row in 0..<Int(pow(2, logCellRepeat) + 0.1) { // + 0.1 to avoid rounding errors
-                for column in 0..<Int(pow(2, logCellRepeat)+0.1) {
-                    let startX = pixelPitch * (Double(column) + offsetPoint.x + extraOffset)
-                    let startY = pixelPitch * (Double(row) + offsetPoint.y + extraOffset)
-                    let rect = CGRect(x: startX, y: startY, width: pixelSize, height: pixelSize)
-                    path.addRect(rect)
-                }
-            }
-            return path
-        }
-
-    }
-
-    struct CrossHairs: Shape { // InsettableShape {
-        let rotationAdjustment = Angle.degrees(90.0)
-        let clockwise = true
-        var hidden: Bool
-        var circleScaling: Double = 1.0
-
-        func path(in rect: CGRect) -> Path {
-            guard !hidden else { return Path() } // nothing gets displayed
-
-            var path = Path()
-            for startAngle in stride(from: 0.0, through: 315.0, by: 45.0) {
-                path.move(to: CGPoint(x: rect.midX, y: rect.midY))
-                path.addArc(center: CGPoint(x: rect.midX, y: rect.midY), // 45 degree pie segment
-                            radius: rect.midX * circleScaling,
-                            startAngle: Angle.degrees(startAngle)-rotationAdjustment,
-                            endAngle: Angle.degrees(startAngle+45)-rotationAdjustment,
-                            clockwise: !clockwise)
-                path.addLine(to: CGPoint(x: rect.midX, y: rect.midY)) // center
-                path.closeSubpath()
-            }
-            return path
         }
     }
 
@@ -280,37 +216,14 @@ struct PreludeView: View {
         }
     }
 
-    struct DebugPanel: View {
-        var size: CGSize
-        @Binding var offset: OffsetVectorInCells
-        @Binding var location: CGPoint
-        var hidden: Bool
-
-        var body: some View {
-            if !hidden {
-                VStack {
-                    // swiftlint:disable:next line_length
-                    Text("frameSize = [\(Int(size.width), format: IntegerFormatStyle.number.grouping(.never)),\(Int(size.height), format: IntegerFormatStyle.number.grouping(.never))]",
-                    comment: "Used in DebugPanel. I couldn't avoid localization here. Just use original as translation")
-                    // I didn't manage to avoid localization in the above Text.
-                    Text(verbatim: "tapLocation = [\(Int(location.x)), \(Int(location.y))]")
-                    Text(verbatim: "offsetInCells = [\(offset.x), \(offset.y)]")
-                }
-                .font(.body)
-                .foregroundColor(.black)
-                .padding()
-                .border(.black)
-                .background { Color(white: 0.9) }
-                .transaction { transaction in // https://www.avanderlee.com/swiftui/disable-animations-transactions/
-                    transaction.animation = nil
-                }
-            }
-        }
-    }
-
 }
 
-struct AnimatedLogo_Previews: PreviewProvider {
+struct OffsetVectorInCells {
+    // swiftlint:disable:next identifier_name
+    var x, y: Int
+}
+
+struct Prelude_Previews: PreviewProvider {
     static var previews: some View {
         PreludeView()
             .previewInterfaceOrientation(.portrait)
