@@ -34,13 +34,13 @@
 /* Third paragraph in The Features section of Readme page */
 "Paragraph_3.3" = "On the Portfolio page, you can swipe to ***Delete*** a member from the list. Don't worry - if the person is still a club member, that person will reappear the next time the app synchronizes its local data with online data. This swiping can be useful to remove members who are no longer on the online data members lists. In any case, swipe as much as you like (after all, it just might be therapeutical).";
 
-/* First paragraph in Animation section of Readme page */
+/* First paragraph in Prelude section of Readme page */
 "Paragraph_4.1" = "When the app opens, it shows a large image corresponding to the app’s icon. If you tap somewhere ***inside*** the image, it zooms out to show the full image representing how digital cameras see color.";
 
-/* Second paragraph in Animation section of Readme page */
+/* Second paragraph in Prelude section of Readme page */
 "Paragraph_4.2" = "This involves a [Bayer color filter array](https://en.wikipedia.org/wiki/Bayer_filter) that filters the light per pixel. The filter array is shown here superimposed on a colorful photo.";
 
-/* Second paragraph in Animation section of Readme page */
+/* Third paragraph in Prelude section of Readme page */
 "Paragraph_4.3" = "Tapping ***inside*** the image allows you to zoom in or out to your heart's content. Tapping ***outside*** the image area ends the animation. You can trigger the animation again by restarting the app. A single tap ***outside*** the image allows you to skip the animation entirely.";
 
 /* First paragraph SupportedPlatforms section of Readme page */

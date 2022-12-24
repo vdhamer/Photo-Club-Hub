@@ -21,7 +21,7 @@
     </li>
     <li><a href="#usage-and-features">Usage and Features</a></li>
         <ul>
-        <li><a href="#opening-animation">Opening Animation</a></li>
+        <li><a href="#opening-prelude">Opening Prelude</a></li>
         <li><a href="#the-user-interface-screens">The User Interface Screens</a></li>
         <li><a href="#multi-club-support">Multi-club Support</a></li>
         <li><a href="#roadmap">Roadmap</a></li>
@@ -98,7 +98,7 @@ interest or live in the same regio, but who only communicate online.
  
 ## Usage and Features
 
-### Opening Animation
+### Opening Prelude
 
 When the app launches, it shows a large version of the app’s icon. 
 If you tap somewhere inside the image, an animation turns the icon into
@@ -117,7 +117,7 @@ If there is enough horizontal space, such as on iPads or Plus or Max sized iPhon
 there will be a back button so you can return to the opening animation.
 Alternatively, shutting down the app and restarting will also work.
 
-But is the animation useful? Well, it was interesting to create and it runs on the device's GPU cores,
+But is the Prelude screen useful? Well, it was interesting to create and it runs on the device's GPU cores,
 but at least it explains where the app's logo comes from.
 
 ### The User Interface Screens
@@ -422,7 +422,7 @@ Project Link: [https://github.com/vdhamer/PhotoClubWaalre](https://github.com/vd
 
 ### Acknowledgments
 
-* The opening image animation uses a photo by Greetje van Son
+* The opening Prelude screen uses a photo of colorful building by Greetje van Son
 * A file with club member data is encrypted using [git-crypt](https://github.com/AGWA/git-crypt)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
