@@ -7,7 +7,7 @@ This is build (4579) in Apple's App Store
 * Prelude screen (formerly Animation screen)
     * on iPad and large iPhones: "<" button in Portfolios screen return to Prelude screen
     * if you press outside the central image, there is a brief flash to confirm the button press
-    * a pane can show tap coordinates (is only for debugging)
+    * a pane can show the tap coordinates (for debugging). Toggle with "d"
 ---------------------------------------------------------------------------
 ### 2.2.5 (Github hash 6f40286) 10-12-22
 

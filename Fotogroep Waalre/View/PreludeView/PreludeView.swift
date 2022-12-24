@@ -19,6 +19,7 @@ struct PreludeView: View {
     @State private var offsetInCells = OffsetVectorInCells(x: 8, y: 6) // number of cell units left/above image center
     @State private var logScale = log2CellRepeat // value driving the animation
     @State private var willMoveToNextScreen = false // used to navigate to next screen
+    @State private var debugPanelVisible = false // displays DebugPanel, can be toggled via keyboard "d" character
     @State private var debugLocation = CGPoint(x: 0, y: 0)
     @Environment(\.horizontalSizeClass) var horSizeClass
 
@@ -129,7 +130,8 @@ struct PreludeView: View {
                     EscapeHatch(willMoveToNextScreen: $willMoveToNextScreen,
                                 offset: $offsetInCells,
                                 location: $debugLocation,
-                                size: geo.size)
+                                size: geo.size,
+                                debugPanelVisible: $debugPanelVisible)
 
                     Text(verbatim: "WAALRE")
                         .foregroundColor(.black)
@@ -232,12 +234,13 @@ struct PreludeView: View {
         let offset: Binding<OffsetVectorInCells>
         let location: Binding<CGPoint>
         var size: CGSize
+        @Binding var debugPanelVisible: Bool
 
         var body: some View {
             VStack {
                 Spacer()
-                HStack {
-                    DebugPanel(isInvisible: true, size: size, offset: offset, location: location)
+                HStack(alignment: .bottom) {
+                    DebugPanel(size: size, offset: offset, location: location, hidden: !debugPanelVisible)
                     Spacer()
                     Button {
                         willMoveToNextScreen.wrappedValue = true
@@ -257,6 +260,11 @@ struct PreludeView: View {
                         willMoveToNextScreen.wrappedValue = true
                     } label: { EmptyView() }
                     .keyboardShortcut(.cancelAction) // Esc key
+
+                    Button {
+                        debugPanelVisible.toggle()
+                    } label: { EmptyView() }
+                    .keyboardShortcut("d", modifiers: []) // cannot support more than one shortcut
                 }
                 .font(.title)
             }
@@ -265,13 +273,13 @@ struct PreludeView: View {
     }
 
     struct DebugPanel: View {
-        var isInvisible: Bool = false
         var size: CGSize
         @Binding var offset: OffsetVectorInCells
         @Binding var location: CGPoint
+        var hidden: Bool
 
         var body: some View {
-            if !isInvisible {
+            if !hidden {
                 VStack {
                     // swiftlint:disable:next line_length
                     Text("frameSize = [\(Int(size.width), format: IntegerFormatStyle.number.grouping(.never)),\(Int(size.height), format: IntegerFormatStyle.number.grouping(.never))]",
