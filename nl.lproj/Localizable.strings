@@ -53,6 +53,9 @@ Button to close Info page. */
 /* Caption for image on Readme page */
 "Fragment of the Swift source code" = "Stukje Swift code uit de app";
 
+/* Used in DebugPanel. I couldn't avoid localization here. Just use original as translation */
+"frameSize = [%@,%@]" = "frameSize = [%@,%@]";
+
 /* Relationship status of member within a club. Used in concatenations. */
 "honorary member" = "erelid";
 
@@ -180,8 +183,8 @@ Title used in PhotoClubs View */
 /* Title of Readme page */
 "Readme" = "Over deze app";
 
-/* Field at top of Photographers page that allows the user to filter the photographers based on either given- and family name.
-Field at top of Members page that allows the user to filter the members based on either given- and family name. */
+/* Field at top of Members page that allows the user to filter the members based on either given- and family name.
+Field at top of Photographers page that allows the user to filter the photographers based on either given- and family name. */
 "Search names" = "Zoek op naam";
 
 /* Administrative role of member within a club. Used as part of concatenations. */
@@ -212,13 +215,13 @@ Field at top of Members page that allows the user to filter the members based on
 "Supported Platforms" = "iOS, iPadOS, MacOS";
 
 /* No comment provided by engineer. */
-"The Prelude" = "Prelude";
-
-/* No comment provided by engineer. */
 "The Club" = "Fotogroep Waalre";
 
 /* No comment provided by engineer. */
 "The Model" = "Voer voor nerds";
+
+/* No comment provided by engineer. */
+"The Prelude" = "Prelude";
 
 /* Hint to the user if the database returns zero Members. */
 "To see names here, please adapt the Search filter or enable additional categories on the Preferences page." = "Tip: om leden hier te zien, pass de Zoek filter aan of pas weergave instellingen in de Instellingen pagina aan.";

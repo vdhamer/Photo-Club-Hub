@@ -237,7 +237,7 @@ struct PreludeView: View {
             VStack {
                 Spacer()
                 HStack {
-                    DebugPanel(isInvisible: true, size: size, offset: offset, location: location)
+                    DebugPanel(isInvisible: false, size: size, offset: offset, location: location)
                     Spacer()
                     Button {
                         willMoveToNextScreen.wrappedValue = true
@@ -272,13 +272,14 @@ struct PreludeView: View {
 
         var body: some View {
             if !isInvisible {
-                Text("""
-                     frameSize = [\
-                     \(Int(size.width), format: .number.grouping(.never)),\
-                     \(Int(size.height), format: .number.grouping(.never))]
-                     tapLocation = [\(Int(location.x)), \(Int(location.y))]
-                     offsetInCells = [\(offset.x), \(offset.y)]
-                     """)
+                VStack {
+                    // swiftlint:disable:next line_length
+                    Text("frameSize = [\(Int(size.width), format: IntegerFormatStyle.number.grouping(.never)),\(Int(size.height), format: IntegerFormatStyle.number.grouping(.never))]",
+                    comment: "Used in DebugPanel. I couldn't avoid localization here. Just use original as translation")
+                    // I didn't manage to avoid localization in the above Text.
+                    Text(verbatim: "tapLocation = [\(Int(location.x)), \(Int(location.y))]")
+                    Text(verbatim: "offsetInCells = [\(offset.x), \(offset.y)]")
+                }
                 .font(.body)
                 .foregroundColor(.black)
                 .padding()
