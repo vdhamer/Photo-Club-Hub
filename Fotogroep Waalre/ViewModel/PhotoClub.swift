@@ -121,12 +121,12 @@ extension PhotoClub {
 			photoClub.kvkNumber = kvkNumber
 			modified = true
 		}
-        if let coordinates = coordinates, photoClub.coordinates != coordinates {
+        if let coordinates, photoClub.coordinates != coordinates {
             photoClub.longitude_ = coordinates.longitude
             photoClub.latitude_ = coordinates.latitude
 			modified = true
 		}
-        if let priority = priority, photoClub.priority != priority {
+        if let priority, photoClub.priority != priority {
             photoClub.priority_ = priority
             modified = true
         }

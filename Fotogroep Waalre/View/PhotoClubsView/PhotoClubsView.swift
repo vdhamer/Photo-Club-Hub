@@ -28,7 +28,7 @@ struct PhotoClubsView: View {
         } else {
             self.predicate = model.settings.photoClubPredicate // dummy data for Preview
         }
-        if let navigationTitle = navigationTitle {
+        if let navigationTitle {
             self.navigationTitle = navigationTitle
         }
     }

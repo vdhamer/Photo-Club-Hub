@@ -142,22 +142,22 @@ extension Photographer {
 			modified = true
 		}
 
-        if let bornDT = bornDT, photographer.bornDT != bornDT {
+        if let bornDT, photographer.bornDT != bornDT {
 			photographer.bornDT = bornDT
 			modified = true
 		}
 
-        if let phoneNumber = phoneNumber, photographer.phoneNumber != phoneNumber {
+        if let phoneNumber, photographer.phoneNumber != phoneNumber {
             photographer.phoneNumber = phoneNumber
             modified = true
         }
 
-        if let eMail = eMail, photographer.eMail != eMail {
+        if let eMail, photographer.eMail != eMail {
             photographer.eMail = eMail
             modified = true
         }
 
-        if let photographerWebsite = photographerWebsite, photographer.photographerWebsite != photographerWebsite {
+        if let photographerWebsite, photographer.photographerWebsite != photographerWebsite {
             photographer.photographerWebsite = photographerWebsite
             modified = true
         }
