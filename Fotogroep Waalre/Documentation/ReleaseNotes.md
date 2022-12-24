@@ -4,11 +4,10 @@
 This is build (4579) in Apple's App Store
 * Adapted for iOS/iPadOS 16.2, XCode 14.2 and SwiftLint 0.50.3
     * Converted from NavigationView to NavigationStack (new in iOS 16)
-* Prelude screen
-    * renamed Animation screen to Prelude screen
-    * new Back button to return to Prelude screen (on iPad and Max/Plus iPhones only)
+* Prelude screen (formerly Animation screen)
+    * on iPad and large iPhones: "<" button in Portfolios screen return to Prelude screen
     * if you press outside the central image, there is a brief flash to confirm the button press
-    * a debug plan can show tap coordinates (is disabled in standard build)
+    * a pane can show tap coordinates (is only for debugging)
 ---------------------------------------------------------------------------
 ### 2.2.5 (Github hash 6f40286) 10-12-22
 
