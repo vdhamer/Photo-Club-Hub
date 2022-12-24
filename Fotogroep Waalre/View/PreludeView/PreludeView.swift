@@ -19,7 +19,8 @@ struct PreludeView: View {
     @State private var offsetInCells = OffsetVectorInCells(x: 8, y: 6) // number of cell units left/above image center
     @State private var logScale = log2CellRepeat // value driving the animation
     @State private var willMoveToNextScreen = false // used to navigate to next screen
-    @State private var debugPanelVisible = false // displays DebugPanel, can be toggled via keyboard "d" character
+    @State private var crosshairsVisible = false // displays Crosshairs view, can be toggled via keyboard "c" character
+    @State private var debugPanelVisible = false // displays DebugPanel view, can be toggled via keyboard "d" character
     @State private var debugLocation = CGPoint(x: 0, y: 0)
     @Environment(\.horizontalSizeClass) var horSizeClass
 
@@ -123,7 +124,7 @@ struct PreludeView: View {
                         .frame(width: geo.size.width, height: geo.size.height)
                     }
 
-                    CrossHairs(isInvisible: true, circleScaling: 1.13)
+                    CrossHairs(hidden: !crosshairsVisible, circleScaling: 1.13)
                         .stroke(.purple, lineWidth: crossHairsWidth)
                         .blendMode(.normal)
 
@@ -131,7 +132,8 @@ struct PreludeView: View {
                                 offset: $offsetInCells,
                                 location: $debugLocation,
                                 size: geo.size,
-                                debugPanelVisible: $debugPanelVisible)
+                                debugPanelVisible: $debugPanelVisible,
+                                crosshairsVisible: $crosshairsVisible)
 
                     Text(verbatim: "WAALRE")
                         .foregroundColor(.black)
@@ -208,11 +210,11 @@ struct PreludeView: View {
     struct CrossHairs: Shape { // InsettableShape {
         let rotationAdjustment = Angle.degrees(90.0)
         let clockwise = true
-        var isInvisible = false
+        var hidden: Bool
         var circleScaling: Double = 1.0
 
         func path(in rect: CGRect) -> Path {
-            guard !isInvisible else { return Path() } // nothing gets displayed
+            guard !hidden else { return Path() } // nothing gets displayed
 
             var path = Path()
             for startAngle in stride(from: 0.0, through: 315.0, by: 45.0) {
@@ -235,6 +237,7 @@ struct PreludeView: View {
         let location: Binding<CGPoint>
         var size: CGSize
         @Binding var debugPanelVisible: Bool
+        @Binding var crosshairsVisible: Bool
 
         var body: some View {
             VStack {
@@ -264,7 +267,12 @@ struct PreludeView: View {
                     Button {
                         debugPanelVisible.toggle()
                     } label: { EmptyView() }
-                    .keyboardShortcut("d", modifiers: []) // cannot support more than one shortcut
+                    .keyboardShortcut("d", modifiers: []) // d-key
+
+                    Button {
+                        crosshairsVisible.toggle()
+                    } label: { EmptyView() }
+                    .keyboardShortcut("c", modifiers: []) // c-key
                 }
                 .font(.title)
             }
