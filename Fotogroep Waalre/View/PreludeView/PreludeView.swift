@@ -237,7 +237,7 @@ struct PreludeView: View {
             VStack {
                 Spacer()
                 HStack {
-                    DebugPanel(isInvisible: false, size: size, offset: offset, location: location)
+                    DebugPanel(isInvisible: true, size: size, offset: offset, location: location)
                     Spacer()
                     Button {
                         willMoveToNextScreen.wrappedValue = true
