@@ -2,7 +2,7 @@
 ### 2.2.6 (Github hash ???????) ??-12-22
 
 This is build (4579) in Apple's App Store
-* Adapted for iOS/iPadOS 16.2, XCode 14.2 and SwiftLint 0.50.3
+* Adapted for iOS/iPadOS 16.2, XCode 14.2, Swift 5.7 and SwiftLint 0.50.3
     * Converted from NavigationView to NavigationStack (new in iOS 16)
 * Prelude screen (formerly Animation screen)
     * on iPad and large iPhones: "<" button in Portfolios screen return to Prelude screen

@@ -23,6 +23,7 @@
 		D081655B278611150078AB16 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D081655A278611150078AB16 /* WebView.swift */; };
 		D081655F278616930078AB16 /* SinglePortfolioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D081655E278616930078AB16 /* SinglePortfolioView.swift */; };
 		D082BE912957806800FF0812 /* LogoPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = D082BE902957806800FF0812 /* LogoPath.swift */; };
+		D082BE922957C6CE00FF0812 /* LatestImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04CCDCE28CE908300B689A4 /* LatestImage.swift */; };
 		D08319E7277F70A30049AB84 /* Fotogroep_Waalre_App.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08319E6277F70A30049AB84 /* Fotogroep_Waalre_App.swift */; };
 		D08319EB277F70A40049AB84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D08319EA277F70A40049AB84 /* Assets.xcassets */; };
 		D08319FD277F70A50049AB84 /* Fotogroep_Waalre_2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08319FC277F70A50049AB84 /* Fotogroep_Waalre_2Tests.swift */; };
@@ -705,6 +706,7 @@
 				D0AE1B782788A19500E0100E /* WhoIsWho.swift in Sources */,
 				D0831A21277F72270049AB84 /* WhoIsWhoInnerView.swift in Sources */,
 				D0831A35277F72590049AB84 /* SettingsStruct.swift in Sources */,
+				D082BE922957C6CE00FF0812 /* LatestImage.swift in Sources */,
 				D081655F278616930078AB16 /* SinglePortfolioView.swift in Sources */,
 				D0831A47277F731C0049AB84 /* PersistenceController.swift in Sources */,
 				D0A0884B27F8C697002CC8E1 /* TestClubMembersProvider.swift in Sources */,
