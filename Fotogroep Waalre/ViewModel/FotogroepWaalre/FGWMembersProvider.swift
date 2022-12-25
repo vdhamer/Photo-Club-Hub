@@ -132,7 +132,7 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
 //                    let resultOld: String? = self.stripOffTagsFromName_old(taggedString: line)
 //                    let resultNew: String? = self.stripOffTagsFromName(taggedString: line)
 //                    if resultOld != resultNew {
-//                        fatalError("stripOffTagsFromEMail mismatch:\n\(resultOld ?? "nil")\n\(resultNew ?? "nil")")
+//                        fatalError("stripOffTagsFromName mismatch:\n\(resultOld ?? "nil")\n\(resultNew ?? "nil")")
 //                    }
                     personName = self.stripOffTagsFromName(taggedString: line) // cleanup
                     (givenName, familyName) = self.componentizePersonName(name: personName, printName: false)
@@ -203,7 +203,9 @@ extension FGWMembersProvider { // private utitity functions
                 return nil
             }
         } else {
-            return "Bad tel#: \(taggedString)"
+            let error = "Bad tel#: \(taggedString)"
+            print(error)
+            return error
         }
     }
 
@@ -251,11 +253,35 @@ extension FGWMembersProvider { // private utitity functions
             }
             return String(result[emailCapture])
         } else {
-            return "Bad e-mail: \(taggedString)"
+            let error = "Bad e-mail: \(taggedString)"
+            print(error)
+            return error
         }
     }
 
     private func stripOffTagsFromName(taggedString: String) -> String {
+        // <td>Bart van Stekelenburg</td>
+        let nameCapture = Reference(Substring.self)
+        let regex: Regex = Regex {
+            "<td>"
+            Capture(as: nameCapture) {
+                OneOrMore(
+                    CharacterClass(.anyOf("<").inverted)
+                )
+            }
+            "</td>"
+        }
+
+        if let result = try? regex.firstMatch(in: taggedString) { // is a bit more robust than .wholeMatch
+            return String(result[nameCapture])
+        } else {
+            let error = "Bad name: \(taggedString)"
+            print(error)
+            return error
+        }
+    }
+
+    private func stripOffTagsFromName_old(taggedString: String) -> String {
         // <td>Bart van Stekelenburg</td>
 
         let REGEX: String = "<td>([^<]+)<\\/td>"
@@ -303,7 +329,7 @@ extension FGWMembersProvider { // private utitity functions
 
     // Split a String containing a name into PersonNameComponents
     // This is done manually instead of using the iOS 10
-    // formatter.personNameComponents() function to handle last names like Henny Looren de Jong
+    // formatter.personNameComponents() function to handle last names like firstname=Henny lastname=Looren de Jong
     // An optional suffix like (lid), (aspirantlid) or (mentor) is removed
     // This is done in 2 stages using regular expressions because I coudn't get it to work in one stage
     private func componentizePersonName(name: String, printName: Bool) -> (givenName: String, familyName: String) {

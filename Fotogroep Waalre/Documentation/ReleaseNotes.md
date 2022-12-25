@@ -2,7 +2,9 @@
 ### 2.2.7 (Github commit ???????) ??-01-23
 
 This is build (4580) in Apple's App Store
-* 
+* Refactoring
+    * Converted to Swift 5.7 Regex Builder introduced in iOS 16.0
+    * Made some of the pattern matching a bit more robust
 ---------------------------------------------------------------------------
 ### 2.2.6 (Github commit e763662) 25-12-22
 
