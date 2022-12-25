@@ -107,7 +107,7 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
                                   photoClubID: (name: String, town: String)) {
         var targetState: HTMLPageLoadingState = .tableStart        // initial entry point on loop of states
 
-        var familyName = "", givenName = "", personName  = ""
+        var personName = PersonName(fullName: "", givenName: "", familyName: "")
         var eMail = "", phoneNumber: String?, externalURL: String = ""
         var birthDate = toDate(from: "1/1/9999") // dummy value that is overwritten later
 
@@ -129,40 +129,40 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
                     eMail = self.stripOffTagsFromEMail(taggedString: line) // store url after cleanup
 
                 case .personName:       // find first cell in row
-//                    let resultOld: String? = self.stripOffTagsFromName_old(taggedString: line)
-//                    let resultNew: String? = self.stripOffTagsFromName(taggedString: line)
-//                    if resultOld != resultNew {
-//                        fatalError("stripOffTagsFromName mismatch:\n\(resultOld ?? "nil")\n\(resultNew ?? "nil")")
-//                    }
-                    personName = self.stripOffTagsFromName(taggedString: line) // cleanup
-                    (givenName, familyName) = self.componentizePersonName(name: personName, printName: false)
+                    personName = self.extractName(taggedString: line)
 
                 case .externalURL:
+//                    let resultOld: String = self.stripOffTagsFromExternalURL_old(taggedString: line)
+//                    let resultNew: String = self.stripOffTagsFromExternalURL(taggedString: line)
+//                    if resultOld != resultNew {
+//                        fatalError("stripOffTagsFromExternalURL mismatch:\n\(resultOld)\n\(resultNew)")
+//                    }
                     externalURL = self.stripOffTagsFromExternalURL(taggedString: line) // url after cleanup
 
                 case .birthDate:
                     birthDate = self.stripOffTagsFromBirthDateAndDecode(taggedString: line)
 
                     let photographer = Photographer.findCreateUpdate(
-                        context: backgroundContext, givenName: givenName, familyName: familyName,
+                        context: backgroundContext, givenName: personName.givenName, familyName: personName.familyName,
                         memberRolesAndStatus: MemberRolesAndStatus(role: [:], stat: [
                             .deceased: !self.isStillAlive(phone: phoneNumber) ]),
                         phoneNumber: phoneNumber, eMail: eMail,
                         photographerWebsite: URL(string: externalURL), bornDT: birthDate
                     )
 
-                    let (givenName, familyName) = self.componentizePersonName(name: personName, printName: false)
                     _ = MemberPortfolio.findCreateUpdate(
                         context: backgroundContext, photoClub: photoClub, photographer: photographer,
                         memberRolesAndStatus: MemberRolesAndStatus(
                             role: [:],
                             stat: [
-                                .former: !self.isCurrentMember(name: personName, includeCandidates: true),
-                                .coach: self.isMentor(name: personName),
-                                .prospective: self.isProspectiveMember(name: personName)
+                                .former: !self.isCurrentMember(name: personName.fullName, includeCandidates: true),
+                                .coach: self.isMentor(name: personName.fullName),
+                                .prospective: self.isProspectiveMember(name: personName.fullName)
                             ]
                         ),
-                        memberWebsite: self.generateInternalURL(using: "\(givenName) \(familyName)")
+                        memberWebsite: self.generateInternalURL(
+                            using: "\(personName.givenName) \(personName.familyName)"
+                        )
                     )
 
                 }
@@ -259,37 +259,18 @@ extension FGWMembersProvider { // private utitity functions
         }
     }
 
-    private func stripOffTagsFromName(taggedString: String) -> String {
-        // <td>Bart van Stekelenburg</td>
-        let nameCapture = Reference(Substring.self)
-        let regex: Regex = Regex {
-            "<td>"
-            Capture(as: nameCapture) {
-                OneOrMore(
-                    CharacterClass(.anyOf("<").inverted)
-                )
-            }
-            "</td>"
-        }
+    private func stripOffTagsFromExternalURL_old(taggedString: String) -> String {
+        // swiftlint:disable:next line_length
+        // <td><a title="Ariejan van Twisk fotografie" href="http://www.ariejanvantwiskfotografie.nl" target="_blank">extern</a></td>
+        // <td><a title="" href="" target="_blank"></a></td> // old Wordpress template: no URL available
+        // <td><a title="" <="" a=""></a></td> // sometimes Wordpress does this if no URL available (bug in WP?)
 
-        if let result = try? regex.firstMatch(in: taggedString) { // is a bit more robust than .wholeMatch
-            return String(result[nameCapture])
-        } else {
-            let error = "Bad name: \(taggedString)"
-            print(error)
-            return error
-        }
-    }
-
-    private func stripOffTagsFromName_old(taggedString: String) -> String {
-        // <td>Bart van Stekelenburg</td>
-
-        let REGEX: String = "<td>([^<]+)<\\/td>"
+        let REGEX: String = " href=\"([^\"]*)\""
         let result = taggedString.capturedGroups(withRegex: REGEX)
         if result.count > 0 {
             return result[0]
         } else {
-            return "Error: \(taggedString)"
+            return "" // backup in " href=..." not found
         }
     }
 
@@ -325,43 +306,6 @@ extension FGWMembersProvider { // private utitity functions
             print("Failed to decode data from \"\(result[0])\" because the date is not in ISO8601 format")
         }
         return date
-    }
-
-    // Split a String containing a name into PersonNameComponents
-    // This is done manually instead of using the iOS 10
-    // formatter.personNameComponents() function to handle last names like firstname=Henny lastname=Looren de Jong
-    // An optional suffix like (lid), (aspirantlid) or (mentor) is removed
-    // This is done in 2 stages using regular expressions because I coudn't get it to work in one stage
-    private func componentizePersonName(name: String, printName: Bool) -> (givenName: String, familyName: String) {
-        var components = PersonNameComponents()
-        var strippedNameString: String
-        if name.contains(" (lid)") {
-            let REGEX: String = "([^(]*) \\(lid\\).*"
-            strippedNameString = name.capturedGroups(withRegex: REGEX)[0]
-        } else if name.contains(" (aspirantlid)") {
-            let REGEX: String = "([^(]*) \\(aspirantlid\\).*"
-            strippedNameString = name.capturedGroups(withRegex: REGEX)[0]
-        } else if name.contains(" (mentor)") {
-            let REGEX: String = "([^(]*) \\(mentor\\).*"
-            strippedNameString = name.capturedGroups(withRegex: REGEX)[0]
-        } else {
-            strippedNameString = name
-        }
-        let REGEX: String = "([^ ]+) (.*)" // split on first space
-        let result = strippedNameString.capturedGroups(withRegex: REGEX)
-        if result.count > 1 {
-            components.givenName  = result[0]
-            components.familyName = result[1]
-            if printName {
-                print("Name found: \(components.givenName!) \(components.familyName!)")
-            }
-            return (components.givenName!, components.familyName!)
-        } else {
-            if printName {
-                print("Error in componentizePersonName() while handling \(name)")
-            }
-           return ("Bad member name: ", "rawNameString")
-        }
     }
 
     private func isStillAlive(phone: String?) -> Bool {

@@ -52,6 +52,7 @@
 		D0ADF4AE27922DCA00535432 /* MemberRolesAndStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ADF4AD27922DCA00535432 /* MemberRolesAndStatus.swift */; };
 		D0AE1B7527889E8600E0100E /* PhotoClubsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AE1B7427889E8600E0100E /* PhotoClubsView.swift */; };
 		D0AE1B782788A19500E0100E /* WhoIsWho.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AE1B772788A19500E0100E /* WhoIsWho.swift */; };
+		D0B260B72958FC2D00B73E1A /* FGWMerbersProvider+extractName.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B260B62958FC2D00B73E1A /* FGWMerbersProvider+extractName.swift */; };
 		D0B52494277F9A4B00927BCA /* Fotogroep-Waalre-InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0B52492277F9A4B00927BCA /* Fotogroep-Waalre-InfoPlist.strings */; };
 		D0B52497277F9A4B00927BCA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0B52495277F9A4B00927BCA /* Localizable.strings */; };
 		D0C6E95529577921001E5CE9 /* DebugPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C6E95429577921001E5CE9 /* DebugPanel.swift */; };
@@ -156,6 +157,7 @@
 		D0AE1B772788A19500E0100E /* WhoIsWho.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhoIsWho.swift; sourceTree = "<group>"; };
 		D0B1EDBA279771A500D37431 /* Fotogroep_Waalre_2_0_2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fotogroep_Waalre_2_0_2.xcdatamodel; sourceTree = "<group>"; };
 		D0B260B5295874B800B73E1A /* Fotogroep_Waalre_2_2_7.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fotogroep_Waalre_2_2_7.xcdatamodel; sourceTree = "<group>"; };
+		D0B260B62958FC2D00B73E1A /* FGWMerbersProvider+extractName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FGWMerbersProvider+extractName.swift"; sourceTree = "<group>"; };
 		D0B52493277F9A4B00927BCA /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = "nl.lproj/Fotogroep-Waalre-InfoPlist.strings"; sourceTree = "<group>"; };
 		D0B52496277F9A4B00927BCA /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D0B52499277F9A4B00927BCA /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/MemberListSections.strings; sourceTree = "<group>"; };
@@ -360,6 +362,7 @@
 				D0831A2B277F72590049AB84 /* FGWMembersProvider+insertSomeHardcodedMemberData.swift */,
 				D06061E728A0453F00A675A7 /* PrivateMembersURL2.txt */,
 				D06061E928A0456C00A675A7 /* PrivateMembersURL3.txt */,
+				D0B260B62958FC2D00B73E1A /* FGWMerbersProvider+extractName.swift */,
 			);
 			path = FotogroepWaalre;
 			sourceTree = "<group>";
@@ -710,6 +713,7 @@
 				D0831A47277F731C0049AB84 /* PersistenceController.swift in Sources */,
 				D0A0884B27F8C697002CC8E1 /* TestClubMembersProvider.swift in Sources */,
 				D08319E7277F70A30049AB84 /* Fotogroep_Waalre_App.swift in Sources */,
+				D0B260B72958FC2D00B73E1A /* FGWMerbersProvider+extractName.swift in Sources */,
 				D0831A1E277F72270049AB84 /* SettingsView.swift in Sources */,
 				D0831A37277F72590049AB84 /* FGWMembersProvider.swift in Sources */,
 				D0831A31277F72590049AB84 /* MemberPortfolio.swift in Sources */,
