@@ -1,16 +1,22 @@
 ---------------------------------------------------------------------------
-### 2.2.6 (Github hash ???????) ??-12-22
+### 2.2.7 (Github commit ???????) ??-01-23
+
+This is build (4580) in Apple's App Store
+* 
+---------------------------------------------------------------------------
+### 2.2.6 (Github commit e763662) 25-12-22
 
 This is build (4579) in Apple's App Store
-* Adapted for iOS/iPadOS 16.2, XCode 14.2, Swift 5.7 and SwiftLint 0.50.3
-    * Converted from NavigationView to NavigationStack (new in iOS 16)
-* Prelude screen (formerly Animation screen)
-    * on iPad and large iPhones: "<" button in Portfolios screen return to Prelude screen
-    * if you press outside the central image, there is a brief flash to confirm the button press
-    * pressing "d" on a keyboard toggles a debug panel while in Prelude screen
-    * pressing "c" on a keyboard toggles crosshairs while in Prelude screen
+* Adapted for iOS 16.2, Swift 5.7, XCode 14.2,  and SwiftLint 0.50.3
+    * Converted to NavigationStack and replaced deprecated NavigationLink (new in iOS 16)
+* Prelude screen (formerly known as Animation screen)
+    * on iPad and large iPhones: user can return to Prelude screen from Portfolios screen via nav bar
+    * if you press outside the central image, there is a brief flash to confirm the Button press
+    * debug features available on devices with a keyboard (such as iPad with Magic Keyboard)
+        * pressing "d" toggles a debug panel with coordinates of last tap on central image
+        * pressing "c" toggles crosshairs to identify indicate exact location of center of screen
 ---------------------------------------------------------------------------
-### 2.2.5 (Github hash 6f40286) 10-12-22
+### 2.2.5 (Github commit 6f40286) 10-12-22
 
 This is build (4578) in Apple's App Store
 * Who's who screen
@@ -25,7 +31,7 @@ This is build (4578) in Apple's App Store
     * Extra param called `okToUseEncryptedFile` in `getFileAsString()`  for testing purposes
     * Deleted unused source control branches
 ---------------------------------------------------------------------------
-### 2.2.4 (Github hash 15c87ab) 2-12-22
+### 2.2.4 (Github commit 15c87ab) 2-12-22
 
 This is build (4577) in Apple's App Store
 * Updated README.md file (mainly architecture topics)
@@ -37,14 +43,14 @@ This is build (4577) in Apple's App Store
     * Upgraded to SwiftLint 0.50.1
     * Removed file DeviceOwnership.swift (it was not part of the build, but SwiftLint was checking it)
 ---------------------------------------------------------------------------
-### 2.2.3 (Github hash 9d1dfed) 23-10-22
+### 2.2.3 (Github commit 9d1dfed) 23-10-22
 
 This is build (4576) in Apple's App Store
 Release notes for 2.2.3 also contain 2.2.2 release notes
 * Portfolios screen
     * Yellow question mark is no longer used (replaced by orange question mark stored internally) 
 ---------------------------------------------------------------------------
-### 2.2.2 (Github hash 2462bf9) 23-10-22
+### 2.2.2 (Github commit 2462bf9) 23-10-22
 
 This is build (4575) didn't end up in Apple's App Store (forgot to merge a branch)
 * Photo Clubs screen
@@ -62,7 +68,7 @@ This is build (4575) didn't end up in Apple's App Store (forgot to merge a branc
     * Converted WhatNew.txt to ReleaseNotes.md
     * Built with Xcode 14.1
 ---------------------------------------------------------------------------
-### 2.2.1 (Github hash 71b3b84) 09-10-22
+### 2.2.1 (Github commit 71b3b84) 09-10-22
 
 This is build 4574 in Apple's App Store
 * Preferences screen
@@ -70,7 +76,7 @@ This is build 4574 in Apple's App Store
 * Readme screen
     * Bug fix (iPad only): incorrect attachment point at top of screen. Cosmetic flaw.
 ---------------------------------------------------------------------------
-### 2.2.0 (Github hash c9f0d16) 08-10-22
+### 2.2.0 (Github commit c9f0d16) 08-10-22
 
 This is build 4573 (but it was rejected Apple's App Store because the screenshots showed device bezels)
 * Minimum required iOS version is now 16.0 (16.0 is available for iPhone, 16.x is expected soon for iPad).
@@ -91,7 +97,7 @@ This is build 4573 (but it was rejected Apple's App Store because the screenshot
 * Preferences screen
     * Minor text change (single to double quotes)
 ---------------------------------------------------------------------------
-### 2.1.1 (Github hash 4974461) 11-09-22
+### 2.1.1 (Github commit 4974461) 11-09-22
 
 This is build 4381 in Apple's App Store
 * Bug fix
@@ -103,7 +109,7 @@ This is build 4381 in Apple's App Store
 * SwiftUI previews
     * Now all Previews of all Views work again
 ---------------------------------------------------------------------------
-### 2.1.0 (Github hash a658b52) 17-08-22
+### 2.1.0 (Github commit a658b52) 17-08-22
 
 This is build 4379 in Apple's App Store
 * Minimum required iOS version is 15.5
