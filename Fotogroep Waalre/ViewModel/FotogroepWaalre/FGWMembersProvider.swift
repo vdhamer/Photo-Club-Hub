@@ -122,20 +122,20 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
                 case .tableHeader: break  // find head of table (only happens once)
                 case .rowStart: break     // find start of a table row defintion (may contain <td> or <th>)
 
-                case .personName:       // find first cell in row
-                    personName = self.stripOffTagsFromName(taggedString: line) // cleanup
-                    (givenName, familyName) = self.componentizePersonName(name: personName, printName: false)
+                case .phoneNumber:                  // then find 3rd cell in row
+                    phoneNumber = self.stripOffTagsFromPhone(taggedString: line) // store url after cleanup
 
                 case .eMail:                      // then find 2nd cell in row
                     eMail = self.stripOffTagsFromEMail(taggedString: line) // store url after cleanup
 
-                case .phoneNumber:                  // then find 3rd cell in row
-//                    let result1: String? = self.stripOffTagsFromPhone(taggedString: line)
-//                    let result2: String? = self.stripOffTagsFromPhone2(taggedString: line)
-//                    if result1 != result2 {
-//                        fatalError("stripOffTagsFromPhone2 mismatch:\n\(result1 ?? "nil")\n\(result2 ?? "nil")")
+                case .personName:       // find first cell in row
+//                    let resultOld: String? = self.stripOffTagsFromName_old(taggedString: line)
+//                    let resultNew: String? = self.stripOffTagsFromName(taggedString: line)
+//                    if resultOld != resultNew {
+//                        fatalError("stripOffTagsFromEMail mismatch:\n\(resultOld ?? "nil")\n\(resultNew ?? "nil")")
 //                    }
-                    phoneNumber = self.stripOffTagsFromPhone(taggedString: line) // store url after cleanup
+                    personName = self.stripOffTagsFromName(taggedString: line) // cleanup
+                    (givenName, familyName) = self.componentizePersonName(name: personName, printName: false)
 
                 case .externalURL:
                     externalURL = self.stripOffTagsFromExternalURL(taggedString: line) // url after cleanup
@@ -177,13 +177,14 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
 extension FGWMembersProvider { // private utitity functions
 
     func stripOffTagsFromPhone(taggedString: String) -> String? {
+        let phoneCapture = Reference(Substring.self)
         let regex = Regex {
             "<td>"
-            Capture {
+            Capture(as: phoneCapture) {
                 ChoiceOf {
                     One("[overleden]") // accepts <td>[overleden]</td> in NL
                     One("[deceased]") // accepts <td>[deceased]</td> in EN
-                    OneOrMore { // accepts <td>2213761</td> or <td>06-22479317</td> or <td>+31 6 22479317</td>
+                    OneOrMore { // accepts <td>12345678</td> or <td>06-12345678</td> or <td>+31 6 12345678</td>
                         CharacterClass(
                             .anyOf("-+ "),
                             ("0"..."9")
@@ -194,32 +195,68 @@ extension FGWMembersProvider { // private utitity functions
             }
             "</td>"
         }
+
         if let result = try? regex.firstMatch(in: taggedString) { // is a bit more robust than .wholeMatch
-            if result.1 != "?" {
-                return String(result.1)
+            if result[phoneCapture] != "?" {
+                return String(result[phoneCapture])
             } else {
                 return nil
             }
         } else {
-            return "Error: \(taggedString)"
+            return "Bad tel#: \(taggedString)"
         }
     }
 
     private func stripOffTagsFromEMail(taggedString: String) -> String {
-        // <td><a href="mailto:bsteek@gmail.com">bsteek@gmail.com</a></td>
+        let emailCapture = Reference(Substring.self)
+        let regex: Regex = Regex {
+            "<td><a href=\"mailto:" // <td><a href="mailto:somebody@gmail.com">somebody@gmail.com</a></td>
+            Capture(as: emailCapture) {
+                OneOrMore(
+                    CharacterClass(.anyOf("@").inverted) // somebody
+                ) // stop before closing <@>
+                "@"                                      // @
+                OneOrMore(
+                    CharacterClass(.anyOf(".").inverted) // gmail
+                ) // stop before closing <.>
+                "."                                      // .
+                OneOrMore(
+                    CharacterClass(.anyOf("\"").inverted) // com
+                ) // stop before closing <">
+            }
+            "\">"
+            Capture { // Capture(as:) doesn't really work here because .1 and .2 have same type
+                OneOrMore(
+                    CharacterClass(.anyOf("@").inverted) // somebody
+                ) // stop before closing <@>
+                "@"                                      // @
+                OneOrMore(
+                    CharacterClass(.anyOf(".").inverted) // gmail
+                ) // stop before closing <.>
+                "."                                      // .
+                OneOrMore(
+                    CharacterClass(.anyOf("<").inverted) // com
+                )
+            }
+            "</a></td>"
+        }
 
-        let REGEX: String = "<td><a href=\"[^\"]+\">([^<]+)<\\/a><\\/td>"
-        let result = taggedString.capturedGroups(withRegex: REGEX)
-        if result.count > 0 {
-            return result[0]
+        if let result = try? regex.firstMatch(in: taggedString) { // is a bit more robust than .wholeMatch
+            if result[emailCapture] != result.2 {
+                print("""
+                      Warning: mismatched e-mail addresses\
+                                  \(result[emailCapture])\
+                                  \(result.2)
+                      """)
+            }
+            return String(result[emailCapture])
         } else {
-            print("Error: \(taggedString)")
-            return "Error: \(taggedString)"
+            return "Bad e-mail: \(taggedString)"
         }
     }
 
     private func stripOffTagsFromName(taggedString: String) -> String {
-        // <td>Ariejan van Twisk</td>
+        // <td>Bart van Stekelenburg</td>
 
         let REGEX: String = "<td>([^<]+)<\\/td>"
         let result = taggedString.capturedGroups(withRegex: REGEX)
