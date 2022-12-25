@@ -6,6 +6,7 @@
 //
 
 import CoreData // for NSManagedObjectContext
+import RegexBuilder
 
 class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
 
@@ -129,6 +130,11 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
                     eMail = self.stripOffTagsFromEMail(taggedString: line) // store url after cleanup
 
                 case .phoneNumber:                  // then find 3rd cell in row
+//                    let result1: String? = self.stripOffTagsFromPhone(taggedString: line)
+//                    let result2: String? = self.stripOffTagsFromPhone2(taggedString: line)
+//                    if result1 != result2 {
+//                        fatalError("stripOffTagsFromPhone2 mismatch:\n\(result1 ?? "nil")\n\(result2 ?? "nil")")
+//                    }
                     phoneNumber = self.stripOffTagsFromPhone(taggedString: line) // store url after cleanup
 
                 case .externalURL:
@@ -170,17 +176,27 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
 
 extension FGWMembersProvider { // private utitity functions
 
-    private func stripOffTagsFromPhone(taggedString: String) -> String? {
-        // <td>2213761</td>
-        // <td>06-22479317</td>
-        // <td>[overleden]</td>
-        // <td>[mentor]</td>
-
-        let REGEX: String = "<td>(\\[mentor\\]|\\[overleden\\]|[0-9\\-\\?]+)<\\/td>"
-        let result = taggedString.capturedGroups(withRegex: REGEX)
-        if result.count > 0 {
-            if result[0] != "?" {
-                return result[0]
+    func stripOffTagsFromPhone(taggedString: String) -> String? {
+        let regex = Regex {
+            "<td>"
+            Capture {
+                ChoiceOf {
+                    One("[overleden]") // accepts <td>[overleden]</td> in NL
+                    One("[deceased]") // accepts <td>[deceased]</td> in EN
+                    OneOrMore { // accepts <td>2213761</td> or <td>06-22479317</td> or <td>+31 6 22479317</td>
+                        CharacterClass(
+                            .anyOf("-+ "),
+                            ("0"..."9")
+                        )
+                    }
+                    One("?") // signifies that phone number is unknown
+                }
+            }
+            "</td>"
+        }
+        if let result = try? regex.firstMatch(in: taggedString) { // is a bit more robust than .wholeMatch
+            if result.1 != "?" {
+                return String(result.1)
             } else {
                 return nil
             }
