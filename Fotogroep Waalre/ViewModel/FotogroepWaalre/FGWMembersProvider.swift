@@ -122,14 +122,14 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
                 case .tableHeader: break  // find head of table (only happens once)
                 case .rowStart: break     // find start of a table row defintion (may contain <td> or <th>)
 
-                case .phoneNumber:                  // then find 3rd cell in row
-                    phoneNumber = self.stripOffTagsFromPhone(taggedString: line) // store url after cleanup
-
-                case .eMail:                      // then find 2nd cell in row
-                    eMail = self.stripOffTagsFromEMail(taggedString: line) // store url after cleanup
-
                 case .personName:       // find first cell in row
                     personName = self.extractName(taggedString: line)
+
+                case .phoneNumber:                  // then find 3rd cell in row
+                    phoneNumber = self.extractPhone(taggedString: line) // store url after cleanup
+
+                case .eMail:                      // then find 2nd cell in row
+                    eMail = self.extractEMail(taggedString: line) // store url after cleanup
 
                 case .externalURL:
 //                    let resultOld: String = self.stripOffTagsFromExternalURL_old(taggedString: line)
@@ -137,10 +137,10 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
 //                    if resultOld != resultNew {
 //                        fatalError("stripOffTagsFromExternalURL mismatch:\n\(resultOld)\n\(resultNew)")
 //                    }
-                    externalURL = self.stripOffTagsFromExternalURL(taggedString: line) // url after cleanup
+                    externalURL = self.extractExternalURL(taggedString: line) // url after cleanup
 
                 case .birthDate:
-                    birthDate = self.stripOffTagsFromBirthDateAndDecode(taggedString: line)
+                    birthDate = self.extractBirthDate(taggedString: line)
 
                     let photographer = Photographer.findCreateUpdate(
                         context: backgroundContext, givenName: personName.givenName, familyName: personName.familyName,
@@ -175,138 +175,6 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
 }
 
 extension FGWMembersProvider { // private utitity functions
-
-    func stripOffTagsFromPhone(taggedString: String) -> String? {
-        let phoneCapture = Reference(Substring.self)
-        let regex = Regex {
-            "<td>"
-            Capture(as: phoneCapture) {
-                ChoiceOf {
-                    One("[overleden]") // accepts <td>[overleden]</td> in NL
-                    One("[deceased]") // accepts <td>[deceased]</td> in EN
-                    OneOrMore { // accepts <td>12345678</td> or <td>06-12345678</td> or <td>+31 6 12345678</td>
-                        CharacterClass(
-                            .anyOf("-+ "),
-                            ("0"..."9")
-                        )
-                    }
-                    One("?") // signifies that phone number is unknown
-                }
-            }
-            "</td>"
-        }
-
-        if let result = try? regex.firstMatch(in: taggedString) { // is a bit more robust than .wholeMatch
-            if result[phoneCapture] != "?" {
-                return String(result[phoneCapture])
-            } else {
-                return nil
-            }
-        } else {
-            let error = "Bad tel#: \(taggedString)"
-            print(error)
-            return error
-        }
-    }
-
-    private func stripOffTagsFromEMail(taggedString: String) -> String {
-        let emailCapture = Reference(Substring.self)
-        let regex: Regex = Regex {
-            "<td><a href=\"mailto:" // <td><a href="mailto:somebody@gmail.com">somebody@gmail.com</a></td>
-            Capture(as: emailCapture) {
-                OneOrMore(
-                    CharacterClass(.anyOf("@").inverted) // somebody
-                ) // stop before closing <@>
-                "@"                                      // @
-                OneOrMore(
-                    CharacterClass(.anyOf(".").inverted) // gmail
-                ) // stop before closing <.>
-                "."                                      // .
-                OneOrMore(
-                    CharacterClass(.anyOf("\"").inverted) // com
-                ) // stop before closing <">
-            }
-            "\">"
-            Capture { // Capture(as:) doesn't really work here because .1 and .2 have same type
-                OneOrMore(
-                    CharacterClass(.anyOf("@").inverted) // somebody
-                ) // stop before closing <@>
-                "@"                                      // @
-                OneOrMore(
-                    CharacterClass(.anyOf(".").inverted) // gmail
-                ) // stop before closing <.>
-                "."                                      // .
-                OneOrMore(
-                    CharacterClass(.anyOf("<").inverted) // com
-                )
-            }
-            "</a></td>"
-        }
-
-        if let result = try? regex.firstMatch(in: taggedString) { // is a bit more robust than .wholeMatch
-            if result[emailCapture] != result.2 {
-                print("""
-                      Warning: mismatched e-mail addresses\
-                                  \(result[emailCapture])\
-                                  \(result.2)
-                      """)
-            }
-            return String(result[emailCapture])
-        } else {
-            let error = "Bad e-mail: \(taggedString)"
-            print(error)
-            return error
-        }
-    }
-
-    private func stripOffTagsFromExternalURL_old(taggedString: String) -> String {
-        // swiftlint:disable:next line_length
-        // <td><a title="Ariejan van Twisk fotografie" href="http://www.ariejanvantwiskfotografie.nl" target="_blank">extern</a></td>
-        // <td><a title="" href="" target="_blank"></a></td> // old Wordpress template: no URL available
-        // <td><a title="" <="" a=""></a></td> // sometimes Wordpress does this if no URL available (bug in WP?)
-
-        let REGEX: String = " href=\"([^\"]*)\""
-        let result = taggedString.capturedGroups(withRegex: REGEX)
-        if result.count > 0 {
-            return result[0]
-        } else {
-            return "" // backup in " href=..." not found
-        }
-    }
-
-    private func stripOffTagsFromExternalURL(taggedString: String) -> String {
-        // swiftlint:disable:next line_length
-        // <td><a title="Ariejan van Twisk fotografie" href="http://www.ariejanvantwiskfotografie.nl" target="_blank">extern</a></td>
-        // <td><a title="" href="" target="_blank"></a></td> // old Wordpress template: no URL available
-        // <td><a title="" <="" a=""></a></td> // sometimes Wordpress does this if no URL available (bug in WP?)
-
-        let REGEX: String = " href=\"([^\"]*)\""
-        let result = taggedString.capturedGroups(withRegex: REGEX)
-        if result.count > 0 {
-            return result[0]
-        } else {
-            return "" // backup in " href=..." not found
-        }
-    }
-
-    private func stripOffTagsFromBirthDateAndDecode(taggedString: String) -> Date? {
-        // <td>2022-05-26</td> is valid input
-
-        let REGEX: String = "<td>(.*)</td>"
-        let result = taggedString.capturedGroups(withRegex: REGEX)
-        guard result.count > 0 else {
-            fatalError("Failed to decode data from \(taggedString) because RegEx didn't trigger")
-        }
-
-        let strategy = Date.ParseStrategy(format: "\(year: .defaultDigits)-\(month: .twoDigits)-\(day: .twoDigits)",
-                                          timeZone: TimeZone.autoupdatingCurrent)
-        let birthDateString = result[0]
-        let date = try? Date(birthDateString, strategy: strategy) // can be nil
-        if date==nil && !birthDateString.isEmpty {
-            print("Failed to decode data from \"\(result[0])\" because the date is not in ISO8601 format")
-        }
-        return date
-    }
 
     private func isStillAlive(phone: String?) -> Bool {
         return phone != "[overleden]"

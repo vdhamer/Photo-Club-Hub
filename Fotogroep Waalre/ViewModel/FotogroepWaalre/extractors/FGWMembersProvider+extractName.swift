@@ -5,7 +5,7 @@
 //  Created by Peter van den Hamer on 25/12/2022.
 //
 
-import Foundation
+import Foundation // for PersonNameComponents
 import RegexBuilder
 
 extension FGWMembersProvider {
@@ -19,7 +19,7 @@ extension FGWMembersProvider {
     func extractName(taggedString: String) -> PersonName {
         // <td>Bart van Stekelenburg</td>
         let nameCapture = Reference(Substring.self)
-        let regex: Regex = Regex {
+        let regex = Regex {
             "<td>"
             Capture(as: nameCapture) {
                 OneOrMore(
