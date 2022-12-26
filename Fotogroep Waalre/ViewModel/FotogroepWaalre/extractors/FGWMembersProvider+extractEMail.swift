@@ -10,10 +10,9 @@ import RegexBuilder
 extension FGWMembersProvider {
 
     func extractEMail(taggedString: String) -> String {
-        let emailCapture = Reference(Substring.self)
         let regex: Regex = Regex {
             "<td><a href=\"mailto:" // <td><a href="mailto:somebody@gmail.com">somebody@gmail.com</a></td>
-            Capture(as: emailCapture) {
+            Capture {
                 OneOrMore(
                     CharacterClass(.anyOf("@").inverted) // somebody
                 ) // stop before closing <@>
@@ -43,15 +42,16 @@ extension FGWMembersProvider {
             "</a></td>"
         }
 
-        if let result = try? regex.firstMatch(in: taggedString) { // is a bit more robust than .wholeMatch
-            if result[emailCapture] != result.2 {
+        if let match = try? regex.firstMatch(in: taggedString) { // is a bit more robust than .wholeMatch
+            let (_, email1, email2) = match.output
+            if email1 != email2 {
                 print("""
                       Warning: mismatched e-mail addresses\
-                                  \(result[emailCapture])\
-                                  \(result.2)
+                                  \(email1)\
+                                  \(email2)
                       """)
             }
-            return String(result[emailCapture])
+            return String(email1)
         } else {
             let error = "Bad e-mail: \(taggedString)"
             print(error)

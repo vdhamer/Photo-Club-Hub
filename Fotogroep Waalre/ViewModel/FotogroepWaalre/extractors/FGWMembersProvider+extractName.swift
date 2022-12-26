@@ -18,13 +18,10 @@ extension FGWMembersProvider {
 
     func extractName(taggedString: String) -> PersonName {
         // <td>Bart van Stekelenburg</td>
-        let nameCapture = Reference(Substring.self)
         let regex = Regex {
             "<td>"
-            Capture(as: nameCapture) {
-                OneOrMore(
-                    CharacterClass(.anyOf("<").inverted)
-                )
+            Capture {
+                OneOrMore(.any, .reluctant)
             }
             "</td>"
         }
@@ -33,8 +30,9 @@ extension FGWMembersProvider {
         let givenName: String
         let familyName: String
 
-        if let result = try? regex.firstMatch(in: taggedString) { // is a bit more robust than .wholeMatch
-            fullName = String(result[nameCapture])
+        if let match = try? regex.firstMatch(in: taggedString) { // is a bit more robust than .wholeMatch
+            let (_, name) = match.output
+            fullName = String(name)
         } else {
             let error = "Bad name: \(taggedString)"
             print(error)
