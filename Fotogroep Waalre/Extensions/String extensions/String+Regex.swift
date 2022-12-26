@@ -35,7 +35,7 @@ extension CLLocationCoordinate2D: Equatable {
 // http://samwize.com/2016/07/21/how-to-capture-multiple-groups-in-a-regex-with-swift/
 // "abcdefg".capturedGroups(withRegex: "a(.*)f") will match "bcde"
 
-extension String {
+extension String { 
     func capturedGroups(withRegex pattern: String) -> [String] {
         var results = [String]()
 
