@@ -10,10 +10,9 @@ import RegexBuilder
 extension FGWMembersProvider {
 
     func extractPhone(taggedString: String) -> String? {
-        let phoneCapture = Reference(Substring.self)
         let regex = Regex {
             "<td>"
-            Capture(as: phoneCapture) {
+            Capture {
                 ChoiceOf {
                     One("[overleden]") // accepts <td>[overleden]</td> in NL
                     One("[deceased]") // accepts <td>[deceased]</td> in EN
@@ -29,9 +28,10 @@ extension FGWMembersProvider {
             "</td>"
         }
 
-        if let result = try? regex.firstMatch(in: taggedString) { // is a bit more robust than .wholeMatch
-            if result[phoneCapture] != "?" {
-                return String(result[phoneCapture])
+        if let match = try? regex.firstMatch(in: taggedString) { // is a bit more robust than .wholeMatch
+            let (_, phone) = match.output
+            if phone != "?" {
+                return String(phone)
             } else {
                 return nil
             }

@@ -132,10 +132,10 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
                     eMail = self.extractEMail(taggedString: line) // store url after cleanup
 
                 case .externalURL:
-//                    let resultOld: String = self.stripOffTagsFromExternalURL_old(taggedString: line)
-//                    let resultNew: String = self.stripOffTagsFromExternalURL(taggedString: line)
+//                    let resultOld: String = self.extractExternalURL_old(taggedString: line)
+//                    let resultNew: String = self.extractExternalURL(taggedString: line)
 //                    if resultOld != resultNew {
-//                        fatalError("stripOffTagsFromExternalURL mismatch:\n\(resultOld)\n\(resultNew)")
+//                        fatalError("extractExternalURL mismatch:\n\(resultOld)\n\(resultNew)")
 //                    }
                     externalURL = self.extractExternalURL(taggedString: line) // url after cleanup
 
