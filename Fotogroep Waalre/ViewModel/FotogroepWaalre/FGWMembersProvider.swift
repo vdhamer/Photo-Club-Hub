@@ -184,16 +184,11 @@ extension FGWMembersProvider { // private utitity functions
         return phone != "[overleden]"
     }
 
-//    private func isCurrentMember(name: String, includeCandidates: Bool) -> Bool {
-//        let resultNew = isCurrentMember_new(name: name, includeCandidates: includeCandidates)
-//        let resultOld = isCurrentMember_old(name: name, includeCandidates: includeCandidates)
-//        if resultOld != resultNew {
-//            fatalError("isCurrentMember mismatch: old \(resultOld)) new \(resultNew))")
-//        }
-//        return resultNew
-//    }
-
     private func isCurrentMember(name: String, includeCandidates: Bool) -> Bool {
+        // "Guido Steger" --> false
+        // "Bart van Stekelenburg (lid)" --> true
+        // "Zoë Aspirant (aspirantlid)" --> depends on includeCandidates param
+        // "Hans Zoete (mentor)" --> false
         let regex = Regex {
             ZeroOrMore(.any)
             OneOrMore(.horizontalWhitespace)
@@ -215,19 +210,54 @@ extension FGWMembersProvider { // private utitity functions
     }
 
     private func isMentor(name: String) -> Bool {
-        let REGEX: String = ".* (\\(mentor\\))"
-        let result = name.capturedGroups(withRegex: REGEX)
-        if result.count > 0 {
+        // "Guido Steger" --> false
+        // "Bart van Stekelenburg (lid)" --> false
+        // "Zoë Aspirant (aspirantlid)" --> false
+        // "Hans Zoete (mentor)" --> true
+        let regex = Regex {
+            ZeroOrMore(.any)
+            OneOrMore(.horizontalWhitespace)
+            Capture {
+                ChoiceOf {
+                    "(mentor)"
+                    "(coach)"
+                }
+            }
+        }
+
+        if (try? regex.wholeMatch(in: name)) != nil {
             return true
         } else {
             return false
         }
     }
 
+//    private func isProspectiveMember(name: String) -> Bool {
+//        let resultNew = isProspectiveMember_new(name: name)
+//        let resultOld = isProspectiveMember_old(name: name)
+//        if resultOld != resultNew {
+//            fatalError("isProspectiveMember mismatch: old \(resultOld) new \(resultNew)")
+//        }
+//        return resultNew
+//    }
+
     private func isProspectiveMember(name: String) -> Bool {
-        let REGEX: String = ".* (\\(aspirantlid\\))"
-        let result = name.capturedGroups(withRegex: REGEX)
-        if result.count > 0 {
+        // "Bart van Stekelenburg (lid)" --> false
+        // "Zoë Aspirant (aspirantlid)" --> true
+        // "Guido Steger" --> false
+        // "Hans Zoete (mentor)" --> false
+        let regex = Regex {
+            ZeroOrMore(.any)
+            OneOrMore(.horizontalWhitespace)
+            Capture {
+                ChoiceOf {
+                    "(aspirantlid)"
+                    "(aspiring)"
+                }
+            }
+        }
+
+        if (try? regex.wholeMatch(in: name)) != nil {
             return true
         } else {
             return false
