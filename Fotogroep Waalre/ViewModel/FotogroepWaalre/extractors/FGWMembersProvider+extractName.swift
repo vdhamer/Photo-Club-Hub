@@ -17,7 +17,10 @@ extension FGWMembersProvider {
     }
 
     func extractName(taggedString: String) -> PersonName {
-        // <td>Bart van Stekelenburg</td>
+        // "<td>José Daniëls</td>"
+        // "<td>Bart van Stekelenburg (lid)</td>"
+        // "<td>Zoë Aspirant (aspirantlid)</td>"
+        // "<td>Hans Zoete (mentor)</td>"
         let regex = Regex {
             "<td>"
             Capture {
@@ -27,9 +30,6 @@ extension FGWMembersProvider {
         }
 
         let fullName: String
-        let givenName: String
-        let familyName: String
-
         if let match = try? regex.firstMatch(in: taggedString) { // is a bit more robust than .wholeMatch
             let (_, name) = match.output
             fullName = String(name)
@@ -39,6 +39,8 @@ extension FGWMembersProvider {
             fullName = error
         }
 
+        let givenName: String
+        let familyName: String
         (givenName, familyName) = componentizePersonName(name: fullName, printName: false)
         return PersonName(fullName: fullName, givenName: givenName, familyName: familyName)
     }
@@ -50,34 +52,39 @@ extension FGWMembersProvider {
     // This is done in 2 stages using regular expressions because I coudn't get it to work in one stage
 
     func componentizePersonName(name: String, printName: Bool) -> (givenName: String, familyName: String) {
-        var components = PersonNameComponents()
-        var strippedNameString: String
-        if name.contains(" (lid)") {
-            let REGEX: String = "([^(]*) \\(lid\\).*"
-            strippedNameString = name.capturedGroups(withRegex: REGEX)[0]
-        } else if name.contains(" (aspirantlid)") {
-            let REGEX: String = "([^(]*) \\(aspirantlid\\).*"
-            strippedNameString = name.capturedGroups(withRegex: REGEX)[0]
-        } else if name.contains(" (mentor)") {
-            let REGEX: String = "([^(]*) \\(mentor\\).*"
-            strippedNameString = name.capturedGroups(withRegex: REGEX)[0]
-        } else {
-            strippedNameString = name
+        // "José Daniëls" -> ("José","Daniëls") former member
+        // "Bart van Stekelenburg (lid)" -> ("Bart","van Steklenburg") member
+        // "Zoë Aspirant (aspirantlid)" -> ("Zoë","Aspirant") aspiring member
+        // "Hans Zoete (mentor)" -> ("Hans","Zoete") coach
+        let regex = Regex {
+            Capture {
+                OneOrMore(.any, .reluctant) // reluctant prevents capturing the " "
+            } transform: { givenName in String(givenName) }
+            " "
+            Capture {
+                OneOrMore(.any, .reluctant)
+            } transform: { familyName in String(familyName) } // reluctant prevents capturing the optional ChoiceOf
+            Optionally {
+                ChoiceOf {
+                    " (lid)" // NL
+                    " (member)" // EN
+                    " (aspirantlid)" // NL
+                    " (aspiring)" // EN
+                    " (mentor)" // NL
+                    " (coach)" // EN
+                }
+            }
         }
-        let REGEX: String = "([^ ]+) (.*)" // split on first space
-        let result = strippedNameString.capturedGroups(withRegex: REGEX)
-        if result.count > 1 {
-            components.givenName  = result[0]
-            components.familyName = result[1]
+
+        if let match = try? regex.wholeMatch(in: name) { // is a bit more robust than .wholeMatch
+            let (_, givenName, familyName) = match.output
             if printName {
-                print("Name found: \(components.givenName!) \(components.familyName!)")
+                print("Name found: \(givenName) \(familyName)")
             }
-            return (components.givenName!, components.familyName!)
+            return (givenName, familyName)
         } else {
-            if printName {
-                print("Error in componentizePersonName() while handling \(name)")
-            }
-           return ("Bad member name: ", "rawNameString")
+            print("Error: problem in componentizePersonName() <\(name)>")
+            return ("errorInGivenName", "errorInFamilyName")
         }
     }
 

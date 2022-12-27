@@ -185,16 +185,16 @@ extension FGWMembersProvider { // private utitity functions
     }
 
     private func isCurrentMember(name: String, includeCandidates: Bool) -> Bool {
-        // "Guido Steger" --> false
-        // "Bart van Stekelenburg (lid)" --> true
-        // "Zoë Aspirant (aspirantlid)" --> depends on includeCandidates param
-        // "Hans Zoete (mentor)" --> false
+        // "Guido Steger" -> false
+        // "Bart van Stekelenburg (lid)" -> true
+        // "Zoë Aspirant (aspirantlid)" -> depends on includeCandidates param
+        // "Hans Zoete (mentor)" -> false
         let regex = Regex {
             ZeroOrMore(.any)
             OneOrMore(.horizontalWhitespace)
             Capture {
                 ChoiceOf {
-                    "(lid)"
+                    "(lid)" // NL
                     "(member)" // not via localization because input file can have different language setting than app
                 }
             }
@@ -210,17 +210,17 @@ extension FGWMembersProvider { // private utitity functions
     }
 
     private func isMentor(name: String) -> Bool {
-        // "Guido Steger" --> false
-        // "Bart van Stekelenburg (lid)" --> false
-        // "Zoë Aspirant (aspirantlid)" --> false
-        // "Hans Zoete (mentor)" --> true
+        // "Guido Steger" -> false
+        // "Bart van Stekelenburg (lid)" -> false
+        // "Zoë Aspirant (aspirantlid)" -> false
+        // "Hans Zoete (mentor)" -> true
         let regex = Regex {
             ZeroOrMore(.any)
             OneOrMore(.horizontalWhitespace)
             Capture {
                 ChoiceOf {
-                    "(mentor)"
-                    "(coach)"
+                    "(mentor)" // NL
+                    "(coach)" // EN
                 }
             }
         }
@@ -233,17 +233,17 @@ extension FGWMembersProvider { // private utitity functions
     }
 
     private func isProspectiveMember(name: String) -> Bool {
-        // "Bart van Stekelenburg (lid)" --> false
-        // "Zoë Aspirant (aspirantlid)" --> true
-        // "Guido Steger" --> false
-        // "Hans Zoete (mentor)" --> false
+        // "Bart van Stekelenburg (lid)" -> false
+        // "Zoë Aspirant (aspirantlid)" -> true
+        // "Guido Steger" -> false
+        // "Hans Zoete (mentor)" -> false
         let regex = Regex {
             ZeroOrMore(.any)
             OneOrMore(.horizontalWhitespace)
             Capture {
                 ChoiceOf {
-                    "(aspirantlid)"
-                    "(aspiring)"
+                    "(aspirantlid)" // NL
+                    "(aspiring)" // EN
                 }
             }
         }
@@ -256,10 +256,10 @@ extension FGWMembersProvider { // private utitity functions
     }
 
     private func generateInternalURL(using name: String) -> URL? { // for URLs we want basic latin alphabet
-        // "Peter van den Hamer" --> "https://www.fotogroepwaalre.nl/fotos/Peter_van_den_Hamer"
-        // "Henriëtte van Ekert" --> "https://www.fotogroepwaalre.nl/fotos/Henriette_van_Ekert"
-        // "José_Daniëls" --> "https://www.fotogroepwaalre.nl/fotos/Jose_Daniels"
-        // "Ekin Özbiçer" --> "https://www.fotogroepwaalre.nl/fotos/Ekin_" // app doesn't substitute the Ö yet
+        // "Peter van den Hamer" -> "https://www.fotogroepwaalre.nl/fotos/Peter_van_den_Hamer"
+        // "Henriëtte van Ekert" -> "https://www.fotogroepwaalre.nl/fotos/Henriette_van_Ekert"
+        // "José_Daniëls" -> "https://www.fotogroepwaalre.nl/fotos/Jose_Daniels"
+        // "Ekin Özbiçer" -> "https://www.fotogroepwaalre.nl/fotos/Ekin_" // app doesn't substitute the Ö yet
         let baseURL = "https://www.fotogroepwaalre.nl/fotos/"
         var tweakedName = name.replacingOccurrences(of: " ", with: "_")
         tweakedName = tweakedName.replacingOccurrences(of: "á", with: "a") // István_Nagy
