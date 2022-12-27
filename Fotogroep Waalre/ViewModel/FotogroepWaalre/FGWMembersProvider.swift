@@ -132,14 +132,18 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
                     eMail = self.extractEMail(taggedString: line) // store url after cleanup
 
                 case .externalURL:
-//                    let resultOld: String = self.extractExternalURL_old(taggedString: line)
-//                    let resultNew: String = self.extractExternalURL(taggedString: line)
-//                    if resultOld != resultNew {
-//                        fatalError("extractExternalURL mismatch:\n\(resultOld)\n\(resultNew)")
-//                    }
                     externalURL = self.extractExternalURL(taggedString: line) // url after cleanup
 
                 case .birthDate:
+                    let resultOld: Date? = self.extractBirthDate_old(taggedString: line)
+                    let resultNew: Date? = self.extractBirthDate(taggedString: line)
+                    if resultOld != resultNew {
+                        fatalError("""
+                                   extractExternalURL mismatch:
+                                   \(String(describing: resultOld))
+                                   \(String(describing: resultNew))
+                                   """)
+                    }
                     birthDate = self.extractBirthDate(taggedString: line)
 
                     let photographer = Photographer.findCreateUpdate(
@@ -181,6 +185,7 @@ extension FGWMembersProvider { // private utitity functions
     }
 
     private func isCurrentMember(name: String, includeCandidates: Bool) -> Bool {
+
         let REGEX: String = ".* (\\(lid\\))"
         let result = name.capturedGroups(withRegex: REGEX)
         if result.count > 0 {
