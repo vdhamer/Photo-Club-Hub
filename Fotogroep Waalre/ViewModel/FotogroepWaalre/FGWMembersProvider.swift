@@ -232,15 +232,6 @@ extension FGWMembersProvider { // private utitity functions
         }
     }
 
-//    private func isProspectiveMember(name: String) -> Bool {
-//        let resultNew = isProspectiveMember_new(name: name)
-//        let resultOld = isProspectiveMember_old(name: name)
-//        if resultOld != resultNew {
-//            fatalError("isProspectiveMember mismatch: old \(resultOld) new \(resultNew)")
-//        }
-//        return resultNew
-//    }
-
     private func isProspectiveMember(name: String) -> Bool {
         // "Bart van Stekelenburg (lid)" --> false
         // "Zoë Aspirant (aspirantlid)" --> true
@@ -264,22 +255,42 @@ extension FGWMembersProvider { // private utitity functions
         }
     }
 
-    private func generateInternalURL(using name: String) -> URL? {
-        let     baseURL = "https://www.fotogroepwaalre.nl/fotos/"
+    private func generateInternalURL(using name: String) -> URL? { // for URLs we want basic latin alphabet
+        // "Peter van den Hamer" --> "https://www.fotogroepwaalre.nl/fotos/Peter_van_den_Hamer"
+        // "Henriëtte van Ekert" --> "https://www.fotogroepwaalre.nl/fotos/Henriette_van_Ekert"
+        // "José_Daniëls" --> "https://www.fotogroepwaalre.nl/fotos/Jose_Daniels"
+        // "Ekin Özbiçer" --> "https://www.fotogroepwaalre.nl/fotos/Ekin_" // app doesn't substitute the Ö yet
+        let baseURL = "https://www.fotogroepwaalre.nl/fotos/"
         var tweakedName = name.replacingOccurrences(of: " ", with: "_")
         tweakedName = tweakedName.replacingOccurrences(of: "á", with: "a") // István_Nagy
         tweakedName = tweakedName.replacingOccurrences(of: "é", with: "e") // José_Daniëls
-        tweakedName = tweakedName.replacingOccurrences(of: "ë", with: "e") // José_Daniëls and Henriëtte van Ekert
+        tweakedName = tweakedName.replacingOccurrences(of: "ë", with: "e") // José_Daniëls and Henriëtte_van_Ekert
         tweakedName = tweakedName.replacingOccurrences(of: "ç", with: "c") // François_Hermans
 
-        if tweakedName.contains("_(lid)") {
-            let REGEX: String = "([^(]*)_\\(lid\\).*"
-            tweakedName = tweakedName.capturedGroups(withRegex: REGEX)[0]
-        } else if tweakedName.contains("_(aspirantlid)") {
-            let REGEX: String = "([^(]*)_\\(aspirantlid\\).*"
-            tweakedName = tweakedName.capturedGroups(withRegex: REGEX)[0]
+        let regex = Regex { // check if tweakedName consists of only clean ASCII characters
+            Capture {
+                OneOrMore {
+                    CharacterClass(
+                        .anyOf("_"),
+                        ("a"..."z"),
+                        ("A"..."Z")
+                    )
+                }
+            }
         }
-        return URL(string: baseURL + tweakedName + "/")
+
+        if (try? regex.wholeMatch(in: tweakedName)) == nil {
+            print("Error: please add special chars of <\(tweakedName)> to generateInternalURL()")
+        } else {
+            if let match = (try? regex.firstMatch(in: tweakedName)) {
+                let (_, first) = match.output
+                tweakedName = String(first) // shorten name up to first weird character
+            } else {
+                fatalError("Error in generateInternalURL()")
+            }
+        }
+
+        return URL(string: baseURL + tweakedName + "/") // "/" not strictly needed (link works without)
     }
 
     private func toDate(from dateString: String) -> Date? {
