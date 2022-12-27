@@ -184,11 +184,28 @@ extension FGWMembersProvider { // private utitity functions
         return phone != "[overleden]"
     }
 
-    private func isCurrentMember(name: String, includeCandidates: Bool) -> Bool {
+//    private func isCurrentMember(name: String, includeCandidates: Bool) -> Bool {
+//        let resultNew = isCurrentMember_new(name: name, includeCandidates: includeCandidates)
+//        let resultOld = isCurrentMember_old(name: name, includeCandidates: includeCandidates)
+//        if resultOld != resultNew {
+//            fatalError("isCurrentMember mismatch: old \(resultOld)) new \(resultNew))")
+//        }
+//        return resultNew
+//    }
 
-        let REGEX: String = ".* (\\(lid\\))"
-        let result = name.capturedGroups(withRegex: REGEX)
-        if result.count > 0 {
+    private func isCurrentMember(name: String, includeCandidates: Bool) -> Bool {
+        let regex = Regex {
+            ZeroOrMore(.any)
+            OneOrMore(.horizontalWhitespace)
+            Capture {
+                ChoiceOf {
+                    "(lid)"
+                    "(member)" // not via localization because input file can have different language setting than app
+                }
+            }
+        }
+
+        if (try? regex.wholeMatch(in: name)) != nil {
             return true
         } else if !includeCandidates {
             return false
