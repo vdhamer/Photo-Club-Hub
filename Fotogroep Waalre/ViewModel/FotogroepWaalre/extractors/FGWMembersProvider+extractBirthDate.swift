@@ -11,51 +11,28 @@ import RegexBuilder
 extension FGWMembersProvider {
 
     func extractBirthDate(taggedString: String) -> Date? {
-        // <td>2022-05-26</td> is valid input
+        // <td>2001-12-31</td> is Dec 31st 2001
+        // <td></td> means birthday is not known
 
-        let birthDate: String
-
+        let birthDate: Date?
         let regex = Regex {
             "<td>"
-            Capture {
-                ZeroOrMore(.any, .reluctant)
+            Optionally { // date string might be empty
+                Capture(.date(format: "\(year: .defaultDigits)-\(month: .twoDigits)-\(day: .twoDigits)",
+                              locale: Locale.autoupdatingCurrent,
+                              timeZone: TimeZone.autoupdatingCurrent))
             }
             "</td>"
         }
 
         if let match = try? regex.wholeMatch(in: taggedString) {
-            let (_, dateString) = match.output
-            birthDate = String(dateString)
+            let (_, date) = match.output
+            birthDate = date
         } else {
             fatalError("Failed to decode date from \(taggedString) because RegEx didn't trigger")
         }
 
-        let strategy = Date.ParseStrategy(format: "\(year: .defaultDigits)-\(month: .twoDigits)-\(day: .twoDigits)",
-                                          timeZone: TimeZone.autoupdatingCurrent)
-        let date = try? Date(birthDate, strategy: strategy) // can be nil
-        if date==nil && !birthDate.isEmpty {
-            print("Failed to decode data from \"\(birthDate)\" because the date is not in ISO8601 format")
-        }
-        return date
-    }
-
-    func extractBirthDate_old(taggedString: String) -> Date? { // TODO: remove
-        // <td>2022-05-26</td> is valid input
-
-        let REGEX: String = "<td>(.*)</td>"
-        let result = taggedString.capturedGroups(withRegex: REGEX)
-        guard result.count > 0 else {
-            fatalError("Failed to decode data from \(taggedString) because RegEx didn't trigger")
-        }
-
-        let strategy = Date.ParseStrategy(format: "\(year: .defaultDigits)-\(month: .twoDigits)-\(day: .twoDigits)",
-                                          timeZone: TimeZone.autoupdatingCurrent)
-        let birthDateString = result[0]
-        let date = try? Date(birthDateString, strategy: strategy) // can be nil
-        if date==nil && !birthDateString.isEmpty {
-            print("Failed to decode data from \"\(result[0])\" because the date is not in ISO8601 format")
-        }
-        return date
+        return birthDate
     }
 
 }
