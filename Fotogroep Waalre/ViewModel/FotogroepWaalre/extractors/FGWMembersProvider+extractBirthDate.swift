@@ -12,7 +12,6 @@ extension FGWMembersProvider {
 
     func extractBirthDate(taggedString: String) -> Date? {
         // <td>2022-05-26</td> is valid input
-//        let regex_old: Regex = /"<td>(.*)</td>"/
 
         let birthDate: String
 
