@@ -77,7 +77,6 @@ struct FilteredMemberPortfoliosView: View {
                     .border(TintShapeStyle() )
                 }
             }
-
         }
             .onDelete(perform: deleteMembers)
             .accentColor(.memberColor)
@@ -146,14 +145,21 @@ struct FilteredMemberPortfoliosView: View {
     }
 
     private var filteredPhotographerFetchResult: [MemberPortfolio] {
+        let filteredPortfolios: [MemberPortfolio]
         if searchText.wrappedValue.isEmpty {
-            return fetchRequest.filter { _ in
+            filteredPortfolios = fetchRequest.filter { _ in
                 true
             }
         } else {
-            return fetchRequest.filter { memberPortfolio in
+            filteredPortfolios = fetchRequest.filter { memberPortfolio in
                 memberPortfolio.photographer.fullName.localizedCaseInsensitiveContains(searchText.wrappedValue) }
         }
+        for portfolio in filteredPortfolios {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                print("Out of filter: \(portfolio.photographer.fullName)")
+            }
+        }
+        return filteredPortfolios
     }
 
 }
