@@ -176,9 +176,9 @@ extension FGWMembersProvider { // fill with some initial hard-coded content
                            memberWebsite: URL? = nil,
                            latestImage: URL? = nil) {
         let photographer = Photographer.findCreateUpdate(
-                            context: context, givenName: givenName, familyName: familyName,
-                            memberRolesAndStatus: memberRolesAndStatus,
-                            bornDT: bornDT )
+                           context: context, givenName: givenName, familyName: familyName,
+                           memberRolesAndStatus: memberRolesAndStatus,
+                           bornDT: bornDT )
 
         _ = MemberPortfolio.findCreateUpdate(
                             context: context, photoClub: photoClub, photographer: photographer,

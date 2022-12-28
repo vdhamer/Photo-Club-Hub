@@ -135,15 +135,6 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
                     externalURL = self.extractExternalURL(taggedString: line) // url after cleanup
 
                 case .birthDate:
-//                    let resultOld: Date? = self.extractBirthDate_old(taggedString: line)
-//                    let resultNew: Date? = self.extractBirthDate(taggedString: line)
-//                    if resultOld != resultNew {
-//                        fatalError("""
-//                                   extractExternalURL mismatch:
-//                                   \(String(describing: resultOld))
-//                                   \(String(describing: resultNew))
-//                                   """)
-//                    }
                     birthDate = self.extractBirthDate(taggedString: line)
 
                     let photographer = Photographer.findCreateUpdate(
