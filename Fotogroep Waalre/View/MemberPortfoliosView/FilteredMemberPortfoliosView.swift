@@ -28,7 +28,8 @@ struct FilteredMemberPortfoliosView: View {
     }
 
     var body: some View {
-        ForEach(filteredPhotographerFetchResult, id: \.id) { filteredMember in
+        let copyFilteredPhotographerFetchResult = filteredPhotographerFetchResult // fPFR is a costly computed property
+        ForEach(copyFilteredPhotographerFetchResult, id: \.id) { filteredMember in
             NavigationLink(destination: SinglePortfolioView(url: filteredMember.memberWebsite, webView: wkWebView)
                             .navigationTitle(filteredMember.photographer.fullName)
                             .navigationBarTitleDisplayMode(NavigationBarItem.TitleDisplayMode.inline)) {
@@ -86,16 +87,16 @@ struct FilteredMemberPortfoliosView: View {
                  Warning: all member categories on the Preferences page are disabled. \
                  Please enable one or more options in Preferences.
                  """, comment: "Hint to the user if all of the Preference toggles are disabled.")
-        } else if searchText.wrappedValue != "" && filteredPhotographerFetchResult.isEmpty {
+        } else if searchText.wrappedValue != "" && copyFilteredPhotographerFetchResult.isEmpty {
             Text("""
                  To see names here, please adapt the Search filter \
                  or enable additional categories on the Preferences page.
                  """, comment: "Hint to the user if the database returns zero Members.")
-        } else if searchText.wrappedValue == "" && filteredPhotographerFetchResult.isEmpty {
+        } else if searchText.wrappedValue == "" && copyFilteredPhotographerFetchResult.isEmpty {
             Text("""
                  To see names here, please enable additional categories on the Preferences page.
                  """, comment: "Hint to the user if the database returns zero Members.")
-        } else if let photographer=findFirstNonDistinct(memberPortfolios: filteredPhotographerFetchResult) {
+        } else if let photographer=findFirstNonDistinct(memberPortfolios: copyFilteredPhotographerFetchResult) {
             Text("""
                  At least one photographer (\(photographer.fullName)) is listed multiple times here. \
                  This is because such photographers are or were associated with more than one photo club.
