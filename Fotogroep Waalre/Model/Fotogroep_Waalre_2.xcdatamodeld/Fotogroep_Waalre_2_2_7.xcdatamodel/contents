@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21511" systemVersion="21G115" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21513" systemVersion="22C65" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="MemberPortfolio" representedClassName="MemberPortfolio" elementID="Member" syncable="YES" codeGenerationType="class">
         <attribute name="dateIntervalEnd_" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="dateIntervalStart_" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
@@ -13,7 +13,7 @@
         <attribute name="isTreasurer" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="isViceChairman" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="latestImageSeen" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
-        <attribute name="latestImageURL_" optional="YES" attributeType="URI" elementID="latestImage_"/>
+        <attribute name="latestImageURL" optional="YES" attributeType="URI" elementID="latestImage_"/>
         <attribute name="memberWebsite_" optional="YES" attributeType="URI"/>
         <relationship name="photoClub_" maxCount="1" deletionRule="Nullify" destinationEntity="PhotoClub" inverseName="members_" inverseEntity="PhotoClub"/>
         <relationship name="photographer_" maxCount="1" deletionRule="Nullify" destinationEntity="Photographer" inverseName="memberships_" inverseEntity="Photographer"/>

@@ -77,15 +77,6 @@ extension MemberPortfolio { // computed properties (some related to handling opt
         }
     }
 
-    var latestImageURL: URL? { // nil means image is not available
-        get {
-            return latestImageURL_
-        }
-        set {
-            latestImageURL_ = newValue
-        }
-    }
-
     var roleDescription: String {
         var prefixList = [String]()
         var suffixList = [String]()
