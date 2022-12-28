@@ -1,14 +1,14 @@
 ---------------------------------------------------------------------------
 ### 2.2.7 (Github commit ???????) ??-01-23
 
-This is build (4580) in Apple's App Store
+This is build #4580 in Apple's App Store
 * Refactoring
-    * Converted to Swift 5.7 Regex Builder introduced in iOS 16.0
-    * Made some of the pattern matching a bit more robust
+    * Used Swift 5.7 Regex Builder introduced in iOS 16.0 to replace older Regex api
+    * Made parsing of the FGW membership file more robust
 ---------------------------------------------------------------------------
 ### 2.2.6 (Github commit e763662) 25-12-22
 
-This is build (4579) in Apple's App Store
+This is build #4579 in Apple's App Store
 * Adapted for iOS 16.2, Swift 5.7, XCode 14.2,  and SwiftLint 0.50.3
     * Converted to NavigationStack and replaced deprecated NavigationLink (new in iOS 16)
 * Prelude screen (formerly known as Animation screen)
@@ -20,7 +20,7 @@ This is build (4579) in Apple's App Store
 ---------------------------------------------------------------------------
 ### 2.2.5 (Github commit 6f40286) 10-12-22
 
-This is build (4578) in Apple's App Store
+This is build #4578 in Apple's App Store
 * Who's who screen
     * Extract date of birth from (extended) membership file for FGW instead of hardcoding this data
     * Birthdays are now also shown for former members
@@ -35,7 +35,7 @@ This is build (4578) in Apple's App Store
 ---------------------------------------------------------------------------
 ### 2.2.4 (Github commit 15c87ab) 2-12-22
 
-This is build (4577) in Apple's App Store
+This is build #4577 in Apple's App Store
 * Updated README.md file (mainly architecture topics)
 * Portfolios screen
     * Changed vice-chairman status for Fotogroep Waalre (BdG)
@@ -47,14 +47,14 @@ This is build (4577) in Apple's App Store
 ---------------------------------------------------------------------------
 ### 2.2.3 (Github commit 9d1dfed) 23-10-22
 
-This is build (4576) in Apple's App Store
+This is build #4576 in Apple's App Store
 Release notes for 2.2.3 also contain 2.2.2 release notes
 * Portfolios screen
     * Yellow question mark is no longer used (replaced by orange question mark stored internally) 
 ---------------------------------------------------------------------------
 ### 2.2.2 (Github commit 2462bf9) 23-10-22
 
-This is build (4575) didn't end up in Apple's App Store (forgot to merge a branch)
+This is build #4575 that didn't end up in Apple's App Store (forgot to merge a branch)
 * Photo Clubs screen
     * Switched from MapPin to MapMarker on map (MapPin deprecated in iOS16)
     * Adapted icon representing photo clubs to match MapMarker
