@@ -368,6 +368,7 @@ extension MemberPortfolio {
         let thumbURL = URL(string: self.memberWebsite.absoluteString + thumbSuffix)
 
         if member.latestImageURL != thumbURL && thumbURL != nil {
+            let photoClub = member.photoClub.name
             do {
                 member.latestImageURL = thumbURL
                 try backgroundContext.save()
