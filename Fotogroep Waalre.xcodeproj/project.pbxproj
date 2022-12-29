@@ -265,7 +265,7 @@
 			path = SinglePortFolioView;
 			sourceTree = "<group>";
 		};
-		D08281342959C9D800D9C232 /* extractors */ = {
+		D08281342959C9D800D9C232 /* FGW Extractors */ = {
 			isa = PBXGroup;
 			children = (
 				D08281322959C7EA00D9C232 /* FGWMembersProvider+extractEMail.swift */,
@@ -274,7 +274,7 @@
 				D08281352959CA7000D9C232 /* FGWMembersProvider+extractExternalURL.swift */,
 				D08281372959CB5000D9C232 /* FGWMembersProvider+extractBirthDate.swift */,
 			);
-			path = extractors;
+			path = "FGW Extractors";
 			sourceTree = "<group>";
 		};
 		D08319DA277F70A30049AB84 = {
@@ -382,7 +382,7 @@
 				D0831A2C277F72590049AB84 /* FGWMembersProvider.swift */,
 				D067549F2942B23F00C0AB08 /* FGWMembersProvide+enumHTMLPageLoadingState.swift */,
 				D0831A2B277F72590049AB84 /* FGWMembersProvider+insertSomeHardcodedMemberData.swift */,
-				D08281342959C9D800D9C232 /* extractors */,
+				D08281342959C9D800D9C232 /* FGW Extractors */,
 				D06061E728A0453F00A675A7 /* FGWPrivateMembersURL2.txt */,
 				D06061E928A0456C00A675A7 /* FGWPrivateMembersURL3.txt */,
 			);
