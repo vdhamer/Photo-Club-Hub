@@ -7,6 +7,7 @@
 
 import CoreData // for NSFetchRequest and NSManagedObjectContext
 import SwiftUI
+import RegexBuilder
 
 extension MemberPortfolio: Comparable {
 
@@ -298,5 +299,84 @@ extension MemberPortfolio { // convenience function
             ]
 		return request
 	}
+
+}
+
+extension MemberPortfolio {
+
+    func refreshFirstImage(backgroundContext: NSManagedObjectContext) async {
+        let photoClub: String = self.photoClub.name
+        guard photoClub == "Fotogroep Waalre" else { return } // code needs closure per photo club (see issue)
+
+        if let urlIndex = URL(string: self.memberWebsite.absoluteString + "config.xml") { // assume JuiceBox Pro
+            print("\(photoClub): starting refreshFirstImage() \(urlIndex.absoluteString) in background")
+
+            var results: (utfContent: Data?, urlResponse: URLResponse?)? = (nil, nil)
+            results = try? await URLSession.shared.data(from: urlIndex)
+            guard results != nil && results!.utfContent != nil else {
+                print("\(photoClub): ERROR - loading refreshFirstImage() \(urlIndex.absoluteString) failed")
+                return
+            }
+
+            let xmlContent = String(data: results!.utfContent! as Data,
+                                    encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue))!
+            parseXMLContent(backgroundContext: backgroundContext, xmlContent: xmlContent, member: self)
+            print("\(photoClub): completed refreshFirstImage() \(urlIndex.absoluteString)")
+        }
+    }
+
+    private func parseXMLContent(backgroundContext: NSManagedObjectContext,
+                                 xmlContent: String, member: MemberPortfolio) {
+        //    <?xml version="1.0" encoding="UTF-8"?>
+        //    <juiceboxgallery
+        //                 galleryTitlePosition="NONE"
+        //                     showOverlayOnLoad="false"
+        //                     :
+        //                     imageTransitionType="CROSS_FADE"
+        //         >
+        //             <image imageURL="images/image1.jpg" thumbURL="thumbs/image1.jpg" linkURL="" linkTarget="_blank">
+        //             <title><![CDATA[]]></title>
+        //             <caption><![CDATA[2022]]></caption>
+        //         </image>
+        //             <image imageURL="images/image2.jpg" thumbURL="thumbs/image2.jpg" linkURL="" linkTarget="_blank">
+        //             <title><![CDATA[]]></title>
+        //             <caption><![CDATA[2022]]></caption>
+        //     </juiceboxgallery>
+
+        let regex = Regex {
+            "<image imageURL=\""
+            Capture {
+                "images/"
+                OneOrMore(.any, .reluctant)
+            }
+            "\"" // closing double quote
+            OneOrMore(.horizontalWhitespace)
+            "thumbURL=\""
+            Capture {
+                "thumbs/"
+                OneOrMore(.any, .reluctant)
+            }
+            "\"" // closing double quote
+        }
+
+        guard let match = try? regex.firstMatch(in: xmlContent) else {
+            print("\(photoClub): ERROR - could not find image in parseXMLContent() " +
+                  "for \(member.photographer.fullName) in \(member.photoClub.name)")
+            return
+        }
+        let (_, _, thumbSuffix) = match.output
+        let thumbURL = URL(string: self.memberWebsite.absoluteString + thumbSuffix)
+
+        if member.latestImageURL != thumbURL && thumbURL != nil {
+            do {
+                member.latestImageURL = thumbURL
+                try backgroundContext.save()
+                print("\(photoClub): updating \(thumbURL!.absoluteString)")
+            } catch {
+                print("\(photoClub): ERROR - cannot update Core Data for \(thumbURL!.absoluteString)")
+            }
+
+        }
+    }
 
 }

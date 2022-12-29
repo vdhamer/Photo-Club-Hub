@@ -17,13 +17,11 @@ struct SinglePortfolioView: UIViewRepresentable {
     @State var webView: WKWebView // sharing WKWebView to avoid error messages if webView goes out of scope
 
     func makeUIView(context: Context) -> WKWebView {
-        print("SinglePortfolioView.makeUIView() should only be initialized once")
-        return webView
+         return webView
     }
 
     func updateUIView(_ uiView: WKWebView, context: Context) {
         webView.load(URLRequest(url: url))
-        print("SinglePortfolioView.updateUIView() can be called multiple times")
     }
 
 }

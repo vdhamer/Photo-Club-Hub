@@ -14,7 +14,7 @@ extension BIMembersProvider { // fill with some initial hard-coded content
 
     func insertSomeHardcodedMemberData(biBackgroundContext: NSManagedObjectContext) {
         biBackgroundContext.perform {
-            print("Starting insertSomeHardcodedMemberData() for Bellus Imago in background")
+            print("Bellus Imago: starting insertSomeHardcodedMemberData() in background")
             self.insertSomeHardcodedMemberDataCommon(biBackgroundContext: biBackgroundContext, commit: true)
         }
     }
@@ -63,9 +63,9 @@ extension BIMembersProvider { // fill with some initial hard-coded content
                 if biBackgroundContext.hasChanges {
                     try biBackgroundContext.save() // commit all changes
                 }
-                print("Completed insertSomeHardcodedMemberData() for Bellus Imago in background")
+                print("Bellus Imago: completed insertSomeHardcodedMemberData()")
             } catch {
-                fatalError("Failed to save changes for Bellus Imago")
+                fatalError("Bellus Imago: ERROR - failed to save changes to Core Data")
             }
         }
 

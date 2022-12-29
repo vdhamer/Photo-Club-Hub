@@ -14,7 +14,7 @@ extension TestClubMembersProvider { // fill with some initial hard-coded content
 
     func insertSomeHardcodedMemberData(testBackgroundContext: NSManagedObjectContext) {
         testBackgroundContext.perform {
-            print("Starting insertSomeHardcodedMemberData() for photo club Test in background")
+            print("Photo Club Test: starting insertSomeHardcodedMemberData() in background")
             self.insertSomeHardcodedMemberDataCommon(testBackgroundContext: testBackgroundContext, commit: true)
         }
     }
@@ -50,7 +50,7 @@ extension TestClubMembersProvider { // fill with some initial hard-coded content
                 if testBackgroundContext.hasChanges {
                     try testBackgroundContext.save() // commit all changes
                 }
-                print("Completed insertSomeHardcodedMemberData() for Test in background")
+                print("Photo Club Test: completed insertSomeHardcodedMemberData()")
             } catch {
                 fatalError("Failed to save changes for Test")
             }

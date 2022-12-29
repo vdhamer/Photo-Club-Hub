@@ -17,8 +17,8 @@
 		D0416282295BBA7700ED073A /* CoreLocation+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0416281295BBA7700ED073A /* CoreLocation+Equatable.swift */; };
 		D044646527FCE7C100990613 /* UIDevice+IsIPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = D044646427FCE7C100990613 /* UIDevice+IsIPad.swift */; };
 		D05E451E27EF2A2C00D31327 /* ReadmeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05E451D27EF2A2C00D31327 /* ReadmeView.swift */; };
-		D06061E828A0453F00A675A7 /* PrivateMembersURL2.txt in Resources */ = {isa = PBXBuildFile; fileRef = D06061E728A0453F00A675A7 /* PrivateMembersURL2.txt */; };
-		D06061EA28A0456C00A675A7 /* PrivateMembersURL3.txt in Resources */ = {isa = PBXBuildFile; fileRef = D06061E928A0456C00A675A7 /* PrivateMembersURL3.txt */; };
+		D06061E828A0453F00A675A7 /* FGWPrivateMembersURL2.txt in Resources */ = {isa = PBXBuildFile; fileRef = D06061E728A0453F00A675A7 /* FGWPrivateMembersURL2.txt */; };
+		D06061EA28A0456C00A675A7 /* FGWPrivateMembersURL3.txt in Resources */ = {isa = PBXBuildFile; fileRef = D06061E928A0456C00A675A7 /* FGWPrivateMembersURL3.txt */; };
 		D06061ED28A05D4600A675A7 /* String+Paths.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06061EC28A05D4600A675A7 /* String+Paths.swift */; };
 		D06754A02942B23F00C0AB08 /* FGWMembersProvide+enumHTMLPageLoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D067549F2942B23F00C0AB08 /* FGWMembersProvide+enumHTMLPageLoadingState.swift */; };
 		D0795CEC294FCCC200FA62A8 /* ShapeStyle+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0795CEB294FCCC200FA62A8 /* ShapeStyle+Colors.swift */; };
@@ -111,8 +111,8 @@
 		D04CCDCE28CE908300B689A4 /* LatestImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestImage.swift; sourceTree = "<group>"; };
 		D04EA9952905BFF5005AA96C /* Fotogroep_Waalre_2_2_4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fotogroep_Waalre_2_2_4.xcdatamodel; sourceTree = "<group>"; };
 		D05E451D27EF2A2C00D31327 /* ReadmeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeView.swift; sourceTree = "<group>"; };
-		D06061E728A0453F00A675A7 /* PrivateMembersURL2.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = PrivateMembersURL2.txt; sourceTree = "<group>"; };
-		D06061E928A0456C00A675A7 /* PrivateMembersURL3.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = PrivateMembersURL3.txt; sourceTree = "<group>"; };
+		D06061E728A0453F00A675A7 /* FGWPrivateMembersURL2.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = FGWPrivateMembersURL2.txt; sourceTree = "<group>"; };
+		D06061E928A0456C00A675A7 /* FGWPrivateMembersURL3.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = FGWPrivateMembersURL3.txt; sourceTree = "<group>"; };
 		D06061EC28A05D4600A675A7 /* String+Paths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Paths.swift"; sourceTree = "<group>"; };
 		D067549F2942B23F00C0AB08 /* FGWMembersProvide+enumHTMLPageLoadingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FGWMembersProvide+enumHTMLPageLoadingState.swift"; sourceTree = "<group>"; };
 		D06770F928CE445E00832079 /* Fotogroep_Waalre_2_2_0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fotogroep_Waalre_2_2_0.xcdatamodel; sourceTree = "<group>"; };
@@ -385,8 +385,8 @@
 				D067549F2942B23F00C0AB08 /* FGWMembersProvide+enumHTMLPageLoadingState.swift */,
 				D0831A2B277F72590049AB84 /* FGWMembersProvider+insertSomeHardcodedMemberData.swift */,
 				D08281342959C9D800D9C232 /* extractors */,
-				D06061E728A0453F00A675A7 /* PrivateMembersURL2.txt */,
-				D06061E928A0456C00A675A7 /* PrivateMembersURL3.txt */,
+				D06061E728A0453F00A675A7 /* FGWPrivateMembersURL2.txt */,
+				D06061E928A0456C00A675A7 /* FGWPrivateMembersURL3.txt */,
 			);
 			path = FotogroepWaalre;
 			sourceTree = "<group>";
@@ -615,11 +615,11 @@
 				D0396075278CF6550035F750 /* Settings.bundle in Resources */,
 				D0831A57277F82460049AB84 /* en.xcloc in Resources */,
 				D0831A56277F82460049AB84 /* nl.xcloc in Resources */,
-				D06061EA28A0456C00A675A7 /* PrivateMembersURL3.txt in Resources */,
+				D06061EA28A0456C00A675A7 /* FGWPrivateMembersURL3.txt in Resources */,
 				D0B52497277F9A4B00927BCA /* Localizable.strings in Resources */,
 				D0831A51277F73C00049AB84 /* Preview Assets.xcassets in Resources */,
 				D0B52494277F9A4B00927BCA /* Fotogroep-Waalre-InfoPlist.strings in Resources */,
-				D06061E828A0453F00A675A7 /* PrivateMembersURL2.txt in Resources */,
+				D06061E828A0453F00A675A7 /* FGWPrivateMembersURL2.txt in Resources */,
 				D0D5B58F28E4921700244F34 /* MemberListSections.strings in Resources */,
 				D0C8DD472933EBB000658C58 /* portfolios.png in Resources */,
 				D08319EB277F70A40049AB84 /* Assets.xcassets in Resources */,

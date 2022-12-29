@@ -156,8 +156,8 @@ struct FilteredMemberPortfoliosView: View {
                 memberPortfolio.photographer.fullName.localizedCaseInsensitiveContains(searchText.wrappedValue) }
         }
         for portfolio in filteredPortfolios {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                print("Out of filter: \(portfolio.photographer.fullName)")
+            Task {
+                await portfolio.refreshFirstImage(backgroundContext: viewContext) // is await really needed?
             }
         }
         return filteredPortfolios
