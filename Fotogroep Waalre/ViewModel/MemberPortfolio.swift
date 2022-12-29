@@ -305,20 +305,23 @@ extension MemberPortfolio { // convenience function
 extension MemberPortfolio {
 
     func refreshFirstImage(backgroundContext: NSManagedObjectContext) async {
+        let photoClub: String = self.photoClub.name
+        guard photoClub == "Fotogroep Waalre" else { return } // code needs closure per photo club (see issue)
+
         if let urlIndex = URL(string: self.memberWebsite.absoluteString + "config.xml") { // assume JuiceBox Pro
-            print("Starting refreshFirstImage() \(urlIndex.absoluteString) in background")
+            print("\(photoClub): starting refreshFirstImage() \(urlIndex.absoluteString) in background")
 
             var results: (utfContent: Data?, urlResponse: URLResponse?)? = (nil, nil)
             results = try? await URLSession.shared.data(from: urlIndex)
             guard results != nil && results!.utfContent != nil else {
-                print("Error: loading refreshFirstImage() \(urlIndex.absoluteString) failed")
+                print("\(photoClub): ERROR - loading refreshFirstImage() \(urlIndex.absoluteString) failed")
                 return
             }
 
             let xmlContent = String(data: results!.utfContent! as Data,
                                     encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue))!
             parseXMLContent(backgroundContext: backgroundContext, xmlContent: xmlContent, member: self)
-            print("Completed refreshFirstImage() \(urlIndex.absoluteString) in background")
+            print("\(photoClub): completed refreshFirstImage() \(urlIndex.absoluteString)")
         }
     }
 
@@ -357,24 +360,22 @@ extension MemberPortfolio {
         }
 
         guard let match = try? regex.firstMatch(in: xmlContent) else {
-            print("Could not find image in parseXMLContent() for \(member.photographer.fullName)")
+            print("\(photoClub): ERROR - could not find image in parseXMLContent() " +
+                  "for \(member.photographer.fullName) in \(member.photoClub.name)")
             return
         }
         let (_, _, thumbSuffix) = match.output
         let thumbURL = URL(string: self.memberWebsite.absoluteString + thumbSuffix)
-        print(thumbURL?.absoluteString ?? "nil")
 
         if member.latestImageURL != thumbURL && thumbURL != nil {
             do {
                 member.latestImageURL = thumbURL
                 try backgroundContext.save()
-                print(">> saving \(thumbURL!.absoluteString)")
+                print("\(photoClub): updating \(thumbURL!.absoluteString)")
             } catch {
-                print(">> unable to save \(thumbURL!.absoluteString)")
+                print("\(photoClub): ERROR - cannot update Core Data for \(thumbURL!.absoluteString)")
             }
 
-        } else {
-            print(">> not saving \(thumbURL!.absoluteString)")
         }
     }
 

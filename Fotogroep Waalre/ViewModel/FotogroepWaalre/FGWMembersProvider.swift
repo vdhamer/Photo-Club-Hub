@@ -41,14 +41,14 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
                                  nameUnencryptedFile: String,
                                  okToUseEncryptedFile: Bool = true) -> String {
         if let secret = readURLFromLocalFile(fileNameWithExtension: nameEncryptedFile), okToUseEncryptedFile {
-            print("About to use confidential version of Private member data file.")
+            print("Fotogroep Waalre: will use confidential version of Private member data file.")
             return secret
         } else {
             if let unsecret = readURLFromLocalFile(fileNameWithExtension: nameUnencryptedFile) {
-                print("About to use non-confidential version of Private member data file.")
+                print("Fotogroep Waalre: will use non-confidential version of Private member data file.")
                 return unsecret
             } else {
-                print("Problem accessing either version of Private member data file.")
+                print("Fotogroep Waalre: ERROR - roblem accessing either version of Private member data file.")
                 return "Internal error: file \(nameUnencryptedFile) looks encrypted"
             }
         }
@@ -62,11 +62,11 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
                 let firstLine = try String(contentsOfFile: filepath).components(separatedBy: "\n")[0]
                 return firstLine // encypted version starts with hex 00 47 49 54 43 52 59 50 54 00 and is not a String
             } catch {
-                print("Warning: \(error) File is not a text file.")
+                print("Fotogroep Waalre: ERROR - \(error) File is not a text file.")
                 return nil
             }
         } else {
-            print("Cannot find file \(fileNameWithExtension) from bundle")
+            print("Fotogroep Waalre: ERROR - cannot find file \(fileNameWithExtension) from bundle")
             return("File missing!")
         }
     }
@@ -76,7 +76,7 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
                                         photoClubID: (name: String, town: String),
                                         commit: Bool ) async {
 
-        print("Starting loadPrivateMembersFromWebsite() for Fotogroep Waalre in background")
+        print("Fotogroep Waalre: starting loadPrivateMembersFromWebsite() in background")
         var results: (utfContent: Data?, urlResponse: URLResponse?)? = (nil, nil)
         results = try? await URLSession.shared.data(from: privateMemberURL)
         if results != nil, results?.utfContent != nil {
@@ -87,14 +87,16 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
                 do {
                     if backgroundContext.hasChanges {
                         try backgroundContext.save()
-                        print("Completed loadPrivateMembersFromWebsite() for Fotogroep Waalre in background")
+                        print("Fotogroep Waalre: completed loadPrivateMembersFromWebsite()")
                     }
                  } catch {
-                    print("Could not save backgroundContext in FotogroepWaalreMembersProvider.init()")
+                    print("Fotogroep Waalre: ERROR - could not save backgroundContext to Core Data " +
+                          "in loadPrivateMembersFromWebsite()")
                 }
             }
         } else { // careful - we are likely running on a background thread (but print() is ok)
-                print("loading from \(privateMemberURL) in loadPrivateMembersFromWebsite() failed")
+                print("Fotogroep Waalre: ERROR - loading from \(privateMemberURL) " +
+                      "in loadPrivateMembersFromWebsite() failed")
         }
     }
 

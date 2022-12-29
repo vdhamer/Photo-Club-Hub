@@ -12,9 +12,9 @@ extension FGWMembersProvider { // fill with some initial hard-coded content
 
     func insertSomeHardcodedMemberData(fgwBackgroundContext: NSManagedObjectContext, commit: Bool) {
         fgwBackgroundContext.performAndWait { // done asynchronously by CoreData (.perform also works)
-            print("Starting insertSomeHardcodedMemberData() for Fotogroep Waalre in background")
-            self.insertSomeHardcodedMemberDataCommon(fgwBackgroundContext: fgwBackgroundContext, commit: commit)
-            print("Completed insertSomeHardcodedMemberData() for Fotogroep Waalre in background")
+            print("Fotogroep Waalre: starting insertSomeHardcodedMemberData() in background")
+            insertSomeHardcodedMemberDataCommon(fgwBackgroundContext: fgwBackgroundContext, commit: commit)
+            print("Fotogroep Waalre: completed insertSomeHardcodedMemberData()")
         }
     }
 
@@ -60,8 +60,7 @@ extension FGWMembersProvider { // fill with some initial hard-coded content
 
         addMember(context: fgwBackgroundContext,
                   givenName: "Peter", familyName: "van den Hamer", photoClub: clubWaalre,
-                  memberRolesAndStatus: MemberRolesAndStatus(role: [ .admin: true, .secretary: true ]),
-                  memberWebsite: URL(string: "https://www.fotogroepwaalre.nl/fotos/Peter_van_den_Hamer/")!
+                  memberRolesAndStatus: MemberRolesAndStatus(role: [ .admin: true, .secretary: true ])
         )
 
         if commit {
@@ -70,7 +69,7 @@ extension FGWMembersProvider { // fill with some initial hard-coded content
                     try fgwBackgroundContext.save() // commit all changes
                 }
             } catch {
-                fatalError("Failed to save changes for Fotogroep Waalre")
+                fatalError("Fotogroep Waalre: ERROR - failed to save changes to Core Data")
             }
         }
 
