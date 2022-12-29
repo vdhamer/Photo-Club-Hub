@@ -93,13 +93,8 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
                     print("Could not save backgroundContext in FotogroepWaalreMembersProvider.init()")
                 }
             }
-        } else {
-            DispatchQueue.main.async {
+        } else { // careful - we are likely running on a background thread (but print() is ok)
                 print("loading from \(privateMemberURL) in loadPrivateMembersFromWebsite() failed")
-                // print(results?.urlResponse)
-                // if let errorcode: HTTPURLResponse = results?.urlResponse {
-                    // print("\nHTTP status code: \(errorcode.statusCode)")
-            }
         }
     }
 
