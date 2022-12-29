@@ -63,14 +63,10 @@ struct FilteredMemberPortfoliosView: View {
                             Image("Question-mark") // Displays image indicating an error occurred
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
-                                .foregroundStyle(.red, .yellow, .red) // red tertiary color should not show up
-                                .symbolRenderingMode(.palette)
                         } else {
                             Image("Embarrassed-snail") // Displays placeholder while loading
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
-                                .foregroundStyle(.memberColor, .gray, .red) // red tertiary color should not show up
-                                .symbolRenderingMode(.palette)
                         }
                     }
                     .frame(width: 80, height: 80)
