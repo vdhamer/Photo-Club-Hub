@@ -2,9 +2,15 @@
 ### 2.2.7 (Github commit ???????) ??-01-23
 
 This is build #4580 in Apple's App Store
+* Portfolios screen
+    * Thumbnails now show up for former members of Photo Club Waalre
+    * Thumbnails use lower resolution versions of the images
+    * Thumbnails automatically change when an image gets added to the head of the portfolio
 * Refactoring
     * Used Swift 5.7 Regex Builder introduced in iOS 16.0 to replace older Regex api
     * Made parsing of the FGW membership file more robust
+    * Thumbnails are no longer hardcoded
+    * Log messages using print() start with name of the photo club where applicable
 ---------------------------------------------------------------------------
 ### 2.2.6 (Github commit e763662) 25-12-22
 
