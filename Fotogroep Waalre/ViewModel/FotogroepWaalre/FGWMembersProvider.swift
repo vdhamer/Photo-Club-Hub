@@ -20,8 +20,8 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
         // following is asynchronous, but not documented as such using async/await
         insertSomeHardcodedMemberData(fgwBackgroundContext: fgwBackgroundContext, commit: true)
 
-        let urlString = getFileAsString(nameEncryptedFile: "PrivateMembersURL2.txt",
-                                        nameUnencryptedFile: "PrivateMembersURL3.txt",
+        let urlString = getFileAsString(nameEncryptedFile: "FGWPrivateMembersURL2.txt",
+                                        nameUnencryptedFile: "FGWPrivateMembersURL3.txt",
                                         okToUseEncryptedFile: true) // false forces use of PrivateMembersURL3.txt
         if let privateURL = URL(string: urlString) {
             Task {

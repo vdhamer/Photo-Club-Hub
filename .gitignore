@@ -8,7 +8,7 @@ SwiftUIEnvironmentValues.png
 .git/git-crypt/keys/**
 ../git-crypt-key
 # there is an encrypted version of this file in the repo, but to avoid accidents...
-PrivateMembersURL2.txt
+FGWPrivateMembersURL2.txt
 
 ###################################
 
