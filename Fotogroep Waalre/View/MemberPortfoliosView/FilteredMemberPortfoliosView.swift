@@ -64,9 +64,15 @@ struct FilteredMemberPortfoliosView: View {
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                         } else {
-                            Image("Embarrassed-snail") // Displays placeholder while loading
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
+                            ZStack {
+                                Image("Embarrassed-snail") // Displays placeholder while loading
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .opacity(0.4)
+                                ProgressView()
+                                    .scaleEffect(x: 2, y: 2, anchor: .center)
+                                    .blendMode(BlendMode.difference)
+                            }
                         }
                     }
                     .frame(width: 80, height: 80)
