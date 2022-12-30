@@ -153,7 +153,7 @@ struct FilteredMemberPortfoliosView: View {
         }
         for portfolio in filteredPortfolios {
             Task {
-                await portfolio.refreshFirstImage(backgroundContext: viewContext) // is await really needed?
+                await portfolio.refreshFirstImage() // is await really needed?
             }
         }
         return filteredPortfolios

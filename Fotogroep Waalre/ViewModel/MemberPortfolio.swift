@@ -304,7 +304,7 @@ extension MemberPortfolio { // convenience function
 
 extension MemberPortfolio {
 
-    func refreshFirstImage(backgroundContext: NSManagedObjectContext) async {
+    func refreshFirstImage() async {
         let photoClub: String = self.photoClub.name
         guard photoClub == "Fotogroep Waalre" else { return } // code needs closure per photo club (see issue)
 
@@ -320,13 +320,12 @@ extension MemberPortfolio {
 
             let xmlContent = String(data: results!.utfContent! as Data,
                                     encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue))!
-            parseXMLContent(backgroundContext: backgroundContext, xmlContent: xmlContent, member: self)
+            parseXMLContent(xmlContent: xmlContent, member: self)
             print("\(photoClub): completed refreshFirstImage() \(urlIndex.absoluteString)")
         }
     }
 
-    private func parseXMLContent(backgroundContext: NSManagedObjectContext,
-                                 xmlContent: String, member: MemberPortfolio) {
+    private func parseXMLContent(xmlContent: String, member: MemberPortfolio) {
         //    <?xml version="1.0" encoding="UTF-8"?>
         //    <juiceboxgallery
         //                 galleryTitlePosition="NONE"
@@ -360,7 +359,7 @@ extension MemberPortfolio {
         }
 
         guard let match = try? regex.firstMatch(in: xmlContent) else {
-            print("\(photoClub): ERROR - could not find image in parseXMLContent() " +
+            print("\(photoClub.name): ERROR - could not find image in parseXMLContent() " +
                   "for \(member.photographer.fullName) in \(member.photoClub.name)")
             return
         }
@@ -368,15 +367,8 @@ extension MemberPortfolio {
         let thumbURL = URL(string: self.memberWebsite.absoluteString + thumbSuffix)
 
         if member.latestImageURL != thumbURL && thumbURL != nil {
-            let photoClub = member.photoClub.name
-            do {
-                member.latestImageURL = thumbURL
-                try backgroundContext.save()
-                print("\(photoClub): updating \(thumbURL!.absoluteString)")
-            } catch {
-                print("\(photoClub): ERROR - cannot update Core Data for \(thumbURL!.absoluteString)")
-            }
-
+            member.latestImageURL = thumbURL // this is where it happens. Note that there is context.save()
+            print("\(photoClub.name): found new thumbnail \(thumbURL!)")
         }
     }
 
