@@ -159,6 +159,7 @@ struct FilteredMemberPortfoliosView: View {
         }
         for portfolio in filteredPortfolios {
             Task {
+                FotogroepWaalreApp.antiZombiePinningOfMemberPortfolios.insert(portfolio)
                 await portfolio.refreshFirstImage() // is await really needed?
             }
         }

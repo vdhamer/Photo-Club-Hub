@@ -25,6 +25,8 @@ struct FotogroepWaalreApp: App {
         UserDefaults.standard.set(Bundle.main.fullVersion, forKey: "version_preference")
     }
 
+    static var antiZombiePinningOfMemberPortfolios: Set<MemberPortfolio> = [] // hack to avoid zombies, global scope
+
     var body: some Scene {
         WindowGroup {
             PreludeView()
