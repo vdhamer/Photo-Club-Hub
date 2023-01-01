@@ -26,7 +26,7 @@ struct WhoIsWhoInnerView: View {
                                              animation: .default)
 
         dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd MMM" // used here for birthdays only, so year is hidden
+        dateFormatter.dateFormat = "dd MMMM" // used here for birthdays only, so year is hidden
         self.searchText = searchText
     }
 
