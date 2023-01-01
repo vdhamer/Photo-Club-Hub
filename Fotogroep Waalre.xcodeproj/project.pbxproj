@@ -369,8 +369,8 @@
 		D0831A26277F72590049AB84 /* BellusImago */ = {
 			isa = PBXGroup;
 			children = (
-				D0831A27277F72590049AB84 /* BIMembersProvider+insertSomeHardcodedMemberData.swift */,
 				D0831A28277F72590049AB84 /* BIMembersProvider.swift */,
+				D0831A27277F72590049AB84 /* BIMembersProvider+insertSomeHardcodedMemberData.swift */,
 			);
 			path = BellusImago;
 			sourceTree = "<group>";
