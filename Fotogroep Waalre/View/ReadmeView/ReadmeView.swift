@@ -10,7 +10,7 @@ import SwiftUI
 struct ReadmeView: View {
 
     private static let paddingAmount: CGFloat = 20
-    private let title = String(localized: "Readme", comment: "Title of Readme page")
+    private let title = String(localized: "Readme", comment: "Title of Readme screen")
     @Environment(\.dismiss) var dismiss: DismissAction // \.dismiss requires iOS 15
 
     var body: some View {

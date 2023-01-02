@@ -262,7 +262,7 @@ Title used in PhotoClubs View</note>
       <trans-unit id="Prelude" xml:space="preserve">
         <source>Prelude</source>
         <target>Prelude</target>
-        <note>No comment provided by engineer.</note>
+        <note>Title of the opening animation screen</note>
       </trans-unit>
       <trans-unit id="Readme" xml:space="preserve">
         <source>Readme</source>
@@ -333,12 +333,12 @@ Field at top of Photographers page that allows the user to filter the photograph
       <trans-unit id="To see names here, please adapt the Search filter or enable additional categories on the Preferences page." xml:space="preserve">
         <source>To see names here, please adapt the Search filter or enable additional categories on the Preferences page.</source>
         <target>To see names here, please adapt the Search filter or enable additional categories on the Preferences page.</target>
-        <note>Hint to the user if the database returns zero Members.</note>
+        <note>Hint to the user if the database returns zero Members with Search filter in use.</note>
       </trans-unit>
       <trans-unit id="To see names here, please enable additional categories on the Preferences page." xml:space="preserve">
         <source>To see names here, please enable additional categories on the Preferences page.</source>
         <target>To see names here, please enable additional categories on the Preferences page.</target>
-        <note>Hint to the user if the database returns zero Members.</note>
+        <note>Hint to the user if the database returns zero Members with unused Search filter.</note>
       </trans-unit>
       <trans-unit id="Warning: all member categories on the Preferences page are disabled. Please enable one or more options in Preferences." xml:space="preserve">
         <source>Warning: all member categories on the Preferences page are disabled. Please enable one or more options in Preferences.</source>

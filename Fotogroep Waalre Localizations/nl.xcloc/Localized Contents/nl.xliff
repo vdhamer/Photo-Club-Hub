@@ -266,7 +266,8 @@ Title used in PhotoClubs View</note>
       </trans-unit>
       <trans-unit id="Prelude" xml:space="preserve">
         <source>Prelude</source>
-        <note>No comment provided by engineer.</note>
+        <target>Prelude</target>
+        <note>Title of the opening animation screen</note>
       </trans-unit>
       <trans-unit id="Readme" xml:space="preserve">
         <source>Readme</source>
@@ -337,12 +338,12 @@ Field at top of Photographers page that allows the user to filter the photograph
       <trans-unit id="To see names here, please adapt the Search filter or enable additional categories on the Preferences page." xml:space="preserve">
         <source>To see names here, please adapt the Search filter or enable additional categories on the Preferences page.</source>
         <target>Tip: om leden hier te zien, pass de Zoek filter aan of pas weergave instellingen in de Instellingen pagina aan.</target>
-        <note>Hint to the user if the database returns zero Members.</note>
+        <note>Hint to the user if the database returns zero Members with Search filter in use.</note>
       </trans-unit>
       <trans-unit id="To see names here, please enable additional categories on the Preferences page." xml:space="preserve">
         <source>To see names here, please enable additional categories on the Preferences page.</source>
-        <target>Tip: op de Instellingen pagina staan alle instellingen momenteel op "niet weergeven". Hierdoor is deze lijst leeg.</target>
-        <note>Hint to the user if the database returns zero Members.</note>
+        <target>Tip: deze lijst is leeg omdat er onvoldoende categorieën op de Instellingen pagina aan staan. Categorieën die momenteel wel aanstaan zijn kennelijk leeg.</target>
+        <note>Hint to the user if the database returns zero Members with unused Search filter.</note>
       </trans-unit>
       <trans-unit id="Warning: all member categories on the Preferences page are disabled. Please enable one or more options in Preferences." xml:space="preserve">
         <source>Warning: all member categories on the Preferences page are disabled. Please enable one or more options in Preferences.</source>

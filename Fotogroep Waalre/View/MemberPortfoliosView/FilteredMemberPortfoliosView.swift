@@ -92,11 +92,11 @@ struct FilteredMemberPortfoliosView: View {
             Text("""
                  To see names here, please adapt the Search filter \
                  or enable additional categories on the Preferences page.
-                 """, comment: "Hint to the user if the database returns zero Members.")
+                 """, comment: "Hint to the user if the database returns zero Members with Search filter in use.")
         } else if searchText.wrappedValue == "" && copyFilteredPhotographerFetchResult.isEmpty {
             Text("""
                  To see names here, please enable additional categories on the Preferences page.
-                 """, comment: "Hint to the user if the database returns zero Members.")
+                 """, comment: "Hint to the user if the database returns zero Members with unused Search filter.")
         } else if let photographer=findFirstNonDistinct(memberPortfolios: copyFilteredPhotographerFetchResult) {
             Text("""
                  At least one photographer (\(photographer.fullName)) is listed multiple times here. \

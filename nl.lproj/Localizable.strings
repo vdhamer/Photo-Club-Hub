@@ -177,10 +177,13 @@ Title used in PhotoClubs View */
 /* Title of screen with toggles to adjust preferences */
 "Preferences" = "Instellingen";
 
+/* Title of the opening animation screen */
+"Prelude" = "Prelude";
+
 /* Relationship status of member within a club. Used in concatenations. */
 "prospective member" = "aspirant-lid";
 
-/* Title of Readme page */
+/* Title of Readme screen */
 "Readme" = "Over deze app";
 
 /* Field at top of Members page that allows the user to filter the members based on either given- and family name.
@@ -223,11 +226,11 @@ Field at top of Photographers page that allows the user to filter the photograph
 /* No comment provided by engineer. */
 "The Prelude" = "Prelude";
 
-/* Hint to the user if the database returns zero Members. */
+/* Hint to the user if the database returns zero Members with Search filter in use. */
 "To see names here, please adapt the Search filter or enable additional categories on the Preferences page." = "Tip: om leden hier te zien, pass de Zoek filter aan of pas weergave instellingen in de Instellingen pagina aan.";
 
-/* Hint to the user if the database returns zero Members. */
-"To see names here, please enable additional categories on the Preferences page." = "Tip: op de Instellingen pagina staan alle instellingen momenteel op \"niet weergeven\". Hierdoor is deze lijst leeg.";
+/* Hint to the user if the database returns zero Members with unused Search filter. */
+"To see names here, please enable additional categories on the Preferences page." = "Tip: deze lijst is leeg omdat er onvoldoende categorieën op de Instellingen pagina aan staan. Categorieën die momenteel wel aanstaan zijn kennelijk leeg.";
 
 /* Administrative role of member within a club. Used as part of concatenations. */
 "treasurer" = "penningmeester";

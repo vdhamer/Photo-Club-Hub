@@ -163,7 +163,8 @@ struct PreludeView: View {
                 .padding()
 
             }
-            .navigationBarTitle("Prelude")
+            .navigationBarTitle(String(localized: "Prelude",
+                                       comment: "Title of the opening animation screen"))
         }
     }
 
