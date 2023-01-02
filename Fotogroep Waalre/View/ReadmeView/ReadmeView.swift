@@ -199,17 +199,12 @@ struct ReadmeView: View {
     }
 
     struct SectionHeader: View {
-//        let localizedStringKey: LocalizedStringKey
         let localizedString: String
-//        let comment: StaticString
         let geo: GeometryProxy
 
         // explicit init() used here just to suppress localizedStringKey argument label
         init(_ localizedString: String, geo: GeometryProxy) {
-//        init(_ localizedStringKey: LocalizedStringKey, comment: StaticString, geo: GeometryProxy) {
-//            self.localizedStringKey = localizedStringKey
             self.localizedString = localizedString
-//            self.comment = comment
             self.geo = geo
         }
 
