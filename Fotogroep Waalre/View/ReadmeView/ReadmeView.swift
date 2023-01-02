@@ -19,7 +19,8 @@ struct ReadmeView: View {
                 ScrollView(.vertical, showsIndicators: true) {
                     VStack {
                         VStack { // extra hierarchy level because container View can handle max 10 Views
-                            SectionHeader("The Club", comment: "Section title on Readme page", geo: geo)
+                            SectionHeader(String(localized: "The Club", comment: "Section title on Readme page"),
+                                          geo: geo)
 
                             Image("Waalre_map")
                                 .resizable()
@@ -34,7 +35,8 @@ struct ReadmeView: View {
                         }
 
                         VStack {
-                            SectionHeader("Portfolios", comment: "Section title on Readme page", geo: geo)
+                            SectionHeader(String(localized: "Portfolios", comment: "Section title on Readme page"),
+                                                 geo: geo)
 
                             Image("Waalre_AppIcon")
                                 .resizable()
@@ -61,7 +63,9 @@ struct ReadmeView: View {
                         }
 
                         VStack {
-                            SectionHeader("Features and tips", comment: "Section title on Readme page", geo: geo)
+                            SectionHeader(String(localized: "Features and tips",
+                                                 comment: "Section title on Readme page"),
+                                          geo: geo)
 
                             Image("Localizations")
                                 .resizable()
@@ -83,7 +87,8 @@ struct ReadmeView: View {
                         }
 
                         VStack {
-                            SectionHeader("The Prelude", comment: "Section title on Readme page", geo: geo)
+                            SectionHeader(String(localized: "The Prelude", comment: "Section title on Readme page"),
+                                          geo: geo)
 
                             Image("2021_FotogroepWaalre_058")
                                 .resizable()
@@ -101,7 +106,9 @@ struct ReadmeView: View {
                         }
 
                         VStack {
-                            SectionHeader("Supported Platforms", comment: "Section title on Readme page", geo: geo)
+                            SectionHeader(String(localized: "Supported Platforms",
+                                                 comment: "Section title on Readme page"),
+                                          geo: geo)
 
                             Image("2006_Stilleven_054")
                                 .resizable()
@@ -123,7 +130,9 @@ struct ReadmeView: View {
                         }
 
                         VStack {
-                            SectionHeader("Developers wanted", comment: "Section title on Readme page", geo: geo)
+                            SectionHeader(String(localized: "Developers wanted",
+                                                 comment: "Section title on Readme page"),
+                                          geo: geo)
 
                             VStack {
                                 Image("Swift_enum")
@@ -146,7 +155,8 @@ struct ReadmeView: View {
                         }
 
                         VStack {
-                            SectionHeader("The Model", comment: "Section title on Readme page", geo: geo)
+                            SectionHeader(String(localized: "The Model", comment: "Section title on Readme page"),
+                                          geo: geo)
 
                             VStack {
                                 Image("Schema")
@@ -164,7 +174,7 @@ struct ReadmeView: View {
                             Paragraph("7.2", comment: "Second paragraph in Model section of Readme page", geo: geo)
                         }
 
-                        SectionHeader("", comment: "", geo: geo)
+                        SectionHeader("", geo: geo)
 
                     } // outer VStack
 
@@ -189,14 +199,17 @@ struct ReadmeView: View {
     }
 
     struct SectionHeader: View {
-        let localizedStringKey: LocalizedStringKey
-        let comment: StaticString
+//        let localizedStringKey: LocalizedStringKey
+        let localizedString: String
+//        let comment: StaticString
         let geo: GeometryProxy
 
         // explicit init() used here just to suppress localizedStringKey argument label
-        init(_ localizedStringKey: LocalizedStringKey, comment: StaticString, geo: GeometryProxy) {
-            self.localizedStringKey = localizedStringKey
-            self.comment = comment
+        init(_ localizedString: String, geo: GeometryProxy) {
+//        init(_ localizedStringKey: LocalizedStringKey, comment: StaticString, geo: GeometryProxy) {
+//            self.localizedStringKey = localizedStringKey
+            self.localizedString = localizedString
+//            self.comment = comment
             self.geo = geo
         }
 
@@ -213,7 +226,7 @@ struct ReadmeView: View {
                                          (boxCount-integer-1) % 3 == 1 ? .fgwGreen : .fgwRed)
                         .scaleEffect(const3 + const2 * CGFloat(integer))
                 }
-                Text(localizedStringKey, comment: comment) // can receive an empty string
+                Text(localizedString) // can receive an empty string
                     .foregroundColor(.linkColor)
                     .allowsTightening(true)
                     .lineLimit(2)

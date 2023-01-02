@@ -50,7 +50,7 @@
       <trans-unit id="Developers wanted" xml:space="preserve">
         <source>Developers wanted</source>
         <target>Developers wanted</target>
-        <note>No comment provided by engineer.</note>
+        <note>Section title on Readme page</note>
       </trans-unit>
       <trans-unit id="Done" xml:space="preserve">
         <source>Done</source>
@@ -61,7 +61,7 @@ Button to close Info page.</note>
       <trans-unit id="Features and tips" xml:space="preserve">
         <source>Features and tips</source>
         <target>Features and tips</target>
-        <note>No comment provided by engineer.</note>
+        <note>Section title on Readme page</note>
       </trans-unit>
       <trans-unit id="Fragment of the Swift source code" xml:space="preserve">
         <source>Fragment of the Swift source code</source>
@@ -252,7 +252,8 @@ Title used in PhotoClubs View</note>
       <trans-unit id="Portfolios" xml:space="preserve">
         <source>Portfolios</source>
         <target>Portfolios</target>
-        <note>Title of page showing member portfolios</note>
+        <note>Title of page showing member portfolios
+Section title on Readme page</note>
       </trans-unit>
       <trans-unit id="Preferences" xml:space="preserve">
         <source>Preferences</source>
@@ -267,7 +268,7 @@ Title used in PhotoClubs View</note>
       <trans-unit id="Readme" xml:space="preserve">
         <source>Readme</source>
         <target>Readme</target>
-        <note>Title of Readme page</note>
+        <note>Title of Readme screen</note>
       </trans-unit>
       <trans-unit id="Search names" xml:space="preserve">
         <source>Search names</source>
@@ -318,17 +319,17 @@ Field at top of Photographers page that allows the user to filter the photograph
       <trans-unit id="The Club" xml:space="preserve">
         <source>The Club</source>
         <target>The Club</target>
-        <note>No comment provided by engineer.</note>
+        <note>Section title on Readme page</note>
       </trans-unit>
       <trans-unit id="The Model" xml:space="preserve">
         <source>The Model</source>
         <target>The Model</target>
-        <note>No comment provided by engineer.</note>
+        <note>Section title on Readme page</note>
       </trans-unit>
       <trans-unit id="The Prelude" xml:space="preserve">
         <source>The Prelude</source>
         <target>The Prelude</target>
-        <note>No comment provided by engineer.</note>
+        <note>Section title on Readme page</note>
       </trans-unit>
       <trans-unit id="To see names here, please adapt the Search filter or enable additional categories on the Preferences page." xml:space="preserve">
         <source>To see names here, please adapt the Search filter or enable additional categories on the Preferences page.</source>
