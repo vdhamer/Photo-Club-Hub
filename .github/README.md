@@ -28,6 +28,7 @@
 			<li><a href="#opening-animation">Opening Animation</a></li>
 			<li><a href="#multi-club-support">Multi-club Support</a></li>
 			<li><a href="#roadmap">Roadmap</a></li>
+			<li><a href="#data-privacy">Data Privacy</a></li>
        	</ul>
     </details>
 	<details><summary><a href="#installation">Installation</a></summary>
@@ -36,10 +37,9 @@
     	   	<li><a href="#cloning-the-repository">Cloning the Repository</a></li>
     	   	<li><a href="#code-signing">Code Signing</a></li>
     	   	<li><a href="#upgrading-the-app">Upgrading the App</a></li>
-						<ul>
-							<li><a href="schema-migration">Schema Migration</a></li>
-					  </ul>
-			<li><a href="#data-privacy">Data Privacy</a></li>
+				<ul>
+					<li><a href="schema-migration">Schema Migration</a></li>
+				</ul>
       	</ul>
     </details>
     <details><summary><a href="#contributing">Contributing</a></summary>
@@ -201,6 +201,40 @@ This loads a little bit of additional data to demo the feature.
 
 <details><summary>
 
+### Data Privacy
+
+</summary>
+The following has *no impact* on the app's functionality or user interface.
+So feel free to ignore this section.
+
+The repo contains a 1 tiny file with encrypted data.
+But encryption code can draw a lot of attention, so we are explaining it here
+mainly so you don't waste time trying to figure our what's going on or whether
+you consider that secure enough. It simply isn't a big deal :nerd_face:.
+
+So... one tiny data file in the repository is encrypted. 
+As you will expect, the key needed to decrypt the file is *not* provided.
+The file, in its decrypted form, gives access to a password-protected HTML page on a server.
+The HTML page contains telephone numbers and e-mail addresses of members of Photo Club Waalre. 
+Apart from the fact that the data is of little interest, this has no impact because: 
+- if the file is found to be encrypted, it is automatically substituted by another non-encrypted file 
+  which doesn't give access to any sensitive data about members: it contains dummy data.
+- phone numbers and e-mail addresses (real or dummy) are not used yet by the app.
+
+So, all this hasstle is just so that a future App Store version *could* allow club members to
+unlock extra functionality using a club-specific password,
+but without leaking the supposedly sensitive data to non-members via GitHub.
+
+But how would this future club-specific password be protected?
+The app might try to check a hash of the provided password.
+But a simple source code modification then gives access to the encrypted version of the web page.
+Actually, not quite 🤓. Bypassing the password via a code modification, would allow the app to
+fetch the encrypted data rather than the unencrypted dummy data. 
+But that data is still encrypted by a private encryption key that is not provided on Github.
+</details>
+
+<details><summary>
+
 ### Roadmap
 
 </summary>
@@ -288,40 +322,6 @@ so that Core Data can track, for example, renamed struct types or renamed proper
 </details>
 </details></ul>
 
-<details><summary>
-
-### Data Privacy
-
-</summary>
-The following has *no impact* on the app's functionality or user interface.
-So feel free to ignore this section.
-
-The repo contains a 1 tiny file with encrypted data.
-But encryption code can draw a lot of attention, so we are explaining it here
-mainly so you don't waste time trying to figure our what's going on or whether
-you consider that secure enough. It simply isn't a big deal :nerd_face:.
-
-So... one tiny data file in the repository is encrypted. 
-As you will expect, the key needed to decrypt the file is *not* provided.
-The file, in its decrypted form, gives access to a password-protected HTML page on a server.
-The HTML page contains telephone numbers and e-mail addresses of members of Photo Club Waalre. 
-Apart from the fact that the data is of little interest, this has no impact because: 
-- if the file is found to be encrypted, it is automatically substituted by another non-encrypted file 
-  which doesn't give access to any sensitive data about members: it contains dummy data.
-- phone numbers and e-mail addresses (real or dummy) are not used yet by the app.
-
-So, all this hasstle is just so that a future App Store version *could* allow club members to
-unlock extra functionality using a club-specific password,
-but without leaking the supposedly sensitive data to non-members via GitHub.
-
-But how would this future club-specific password be protected?
-The app might try to check a hash of the provided password.
-But a simple source code modification then gives access to the encrypted version of the web page.
-Actually, not quite 🤓. Bypassing the password via a code modification, would allow the app to
-fetch the encrypted data rather than the unencrypted dummy data. 
-But that data is still encrypted by a private encryption key that is not provided on Github.
-</details></ul>
-
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Contributing
@@ -332,6 +332,7 @@ That allows for some upfront discussion and prevents wasted effort due to overla
 
 You can submit an `Issue` with a tag like ”enhancement" or “bug” without commiting to make the code changes yourself.
 Essentially that is an idea, bug, or feature request, rather than an offer to help.
+</ul>
 
 <ul><details><summary>
 
