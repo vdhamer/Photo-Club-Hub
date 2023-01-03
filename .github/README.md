@@ -99,16 +99,16 @@ These portfolios cover the part of a photographer's work that is associated with
 </summary>
 
 If a photographer joined *multiple* photo clubs, the app can show *multiple* portfolios (with independent
-content) for that particular photographer. This is useful when a photographer is simultaneously a member of _two_ clubs.
-But it also works if a photographer left one club and joined another club. 
+content) for that particular photographer. This is useful when a photographer is simultaneously 
+a member of _two_ clubs. But it also works if a photographer left one club and joined another club. 
 In both cases, or anything in between, the `portfolio` concept keeps both sets of images separate.</p>
 
 Thus, the app is focussed on supporting photo clubs. The app, however, provide a clickable link to a
 photographer's personal photography website. Such sites can then cover a photographer's work without
 organizing it per photo club.</p>
 
-Incidentally, nothing prevents you from
-supporting an online group of photography friends: you will only need to give this "club" a name, and decide what images to post here.
+Incidentally, nothing prevents you from supporting an online group of photography friends:
+you will only need to give this "club" a name, and decide what images to post here.
 If you want, you could even consider yourself a one-person club.
 
 </detail></ul></detail>
@@ -118,7 +118,7 @@ If you want, you could even consider yourself a one-person club.
 ## The User Interface Screens
 <ul>
 
-- The `prelude` screen shows an opening animation
+- The `Prelude` screen shows an opening animation
   Clicking outside the central image brings you to the main `Portfolios` screen.
 
 - The `Portfolios` screen lists the available portfolios
@@ -128,7 +128,8 @@ If you want, you could even consider yourself a one-person club.
   The `Search` bar filters the list by name.
 
 - The `Settings` screen allows you to configure which types of portfolios you want to include in the
-  Portfolios screen. You can, for example, choose to include former members in addition to the default of current members.
+  Portfolios screen. You can, for example, choose to include former members in addition to
+  the default of current members.
 
 - `Readme` contains information about the app.
 
@@ -184,17 +185,23 @@ on the GPU cores). But it also helps explain the app's logo: the Bayer filter ar
 one blue, and _two_ green pixels.
 </details>
 
-
 <details><summary>
  
 ### Multi-club Support
 
+</summary>
 Version 1 of the app only supported Photo Club Waalre (known as *Fotogroep Waalre* in Dutch).
 Version 2 added support for multiple photo clubs.
 For a preview of how that works, drag down (“pull to refresh”) the Photo Clubs page.
 This loads a little bit of additional data to demo the feature.
+</details>
+
+<details><summary>
 
 ### Roadmap
+
+</summary>
+
 - [x] Put the app's source code on GitHub.
 	- [x] Handle private data about members in a secure way
     - [ ] Publish article in Dutch photo club [organization](https://fotobond.nl)
@@ -207,15 +214,20 @@ This loads a little bit of additional data to demo the feature.
 
 See the [open issues](https://github.com/vdhamer/PhotoClubWaalre/issues) for a list of
 proposed enhancements and known limitations.
+</ul></detail>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-</ul></detail>
+
 
 ## Installation
 
 If you just want to install the binary version of the app, just get it from Apple's app store ([link](https://apps.apple.com/nl/app/photo-club-waalre/id1178324330?l=en)).
+<ul>
+<details><summary>
 
 ### Built-With
+
+</summary>
 
 * the [Swift](https://www.swift.org) programming language
 * Apple's newer [SwiftUI](https://developer.apple.com/xcode/swiftui/) user interface framework
@@ -223,15 +235,23 @@ If you just want to install the binary version of the app, just get it from Appl
 * [Adobe Lightroom Classic](https://www.adobe.com/products/photoshop-lightroom.html) maintaining the portfolios (so far Fotogroep Waalre only)
 * a low cost [JuiceBox Pro](https://www.juicebox.net) JavaScript plugin for exporting from Adobe Lightroom (so far Fotogroep Waalre only)
 * the [GitCrypt](https://github.com/AGWA/git-crypt) framework for encrypting selected files in a Git repository
+</details>
+
+<details><summary>
 
 ### Cloning the Repository
 
+</summary>
 To install the source code locally, it is easiest to use GitHub’s `Open with Xcode` feature.
 Developers used to running Git from the command line should manage on their own.
 Xcode covers the installation of the binary on a physical device or on an Xcode iPhone/iPad simulator.
+</details>
+
+<details><summary>
 
 ### Code Signing
 
+</summary>
 During the build you may be prompted to provide a developer license (personal or commercial)
 when you want to install the app on a physical device. This is a standard Apple iOS policy
 rather than something specific to this app.
@@ -240,9 +260,13 @@ Starting with iOS 16.0 you will also need to configure physical devices to allow
 that have _not_ been distributed via the Apple App Store. This configuration requires enabling
 `Developer Mode` on the device using `Settings` > `Privacy & Security` > `Developer Mode`.
 Again, this is a standard Apple iOS policy. This doesn't apply to MacOS.
+</details>
+
+<details><summary>
 
 ### Updating the App
 
+</summary>
 The following has *no impact* on the app's functionality or user interface.
 So feel free to ignore this section.
 
@@ -254,9 +278,13 @@ If you remove and reinstall the app, the Core Data database is lost, but this is
 database so far doesn't contain any user data.
 Schema migration is standard feature of Apple's Core Data framework, although the app does its bit
 so that Core Data can track, for example, renamed struct types or renamed properties.
+</details>
+
+<details><summary>
 
 ### Data Privacy
 
+</summary>
 The following has *no impact* on the app's functionality or user interface.
 So feel free to ignore this section.
 
@@ -284,6 +312,7 @@ But a simple source code modification then gives access to the encrypted version
 Actually, not quite 🤓. Bypassing the password via a code modification, would allow the app to
 fetch the encrypted data rather than the unencrypted dummy data. 
 But that data is still encrypted by a private encryption key that is not provided on Github.
+</details></ul>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -296,23 +325,30 @@ That allows for some upfront discussion and prevents wasted effort due to overla
 You can submit an `Issue` with a tag like ”enhancement" or “bug” without commiting to make the code changes yourself.
 Essentially that is an idea, bug, or feature request, rather than an offer to help.
 
+<ul><details><summary>
+
 ### Areas for Contribution
 
+</summary>
 Possible contributions include adding features, code improvements, ideas on architecture and interface
 specifications, and possibly even a dedicated backend server.
 
 Contributions that do not involve coding include beta testing, thoughtful and detailed feature requests,
 translations, and icon design improvements.
+</details></ul>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## The App Architecture
 
-The app uses a [SwiftUI-based MVVM](https://www.hackingwithswift.com/books/ios-swiftui/introducing-mvvm-into-your-swiftui-project)
-architecture pattern. 
+<ul>The app uses a [SwiftUI-based MVVM](https://www.hackingwithswift.com/books/ios-swiftui/introducing-mvvm-into-your-swiftui-project)
+architecture pattern.
+
+<details><summary> 
 
 ### MVVM Layers
 
+</summary>
 The use of a SwiftUI-based MVVM architecture implies that 
 - the `model`'s data is stored in 
 lightweight _structs_ rather than in _classes_. It also implies that any changes to the
@@ -330,8 +366,12 @@ Each of the layers has its own directory (found at the linked locations):
   the code that populates and updates the database content ("model"). 
   This layer is currently implemented _per photo club_, and stored a subdirectory per club.
 
+</details>
+<details><summary>
+
 ### Role of the Database 
 
+</summary>
 The model's data is loaded and updated via the internet, and is stored in an on-device database. 
 Internally the database is [SQLite](https://en.wikipedia.org/wiki/SQLite), but that is invisible because
 it is wrapped inside Apple's Core Data framework.
@@ -365,9 +405,13 @@ but because it usually works well enough, a user typically won't notice:
 5. Photo club data is minimal (name, town/country, GPS, website), but is currently still hardcoded.
 
 Some of these gaps are addressed [below](#a-better-approach).
+</details>
+
+<details><summary>
 
 ### The Data Model
 
+</summary>
 Here are the three central concepts (also know as database entities or tables or struct types).
 
 Note that the tables are fully "normalized" in the relational database sense,
@@ -378,9 +422,12 @@ property that is non-optional like `PhotoClub.town`. This allows `PhotoClub.town
 a string value such as "Unknown town".
 
 [![Product schema][product-schema]](https://github.com/vdhamer/PhotoClubWaalre/blob/main/Assets.xcassets/images/Schema.imageset/Schema.png)
+</details>
 
+<details><summary>
 #### PhotoClub
 
+</summary>
 A `PhotoClub` is uniquely identified by its `name` *and* a `town`. Including the town helps when two towns happen to have a photo club with the same name.
 
 A `PhotoClub` has a rough address down to the `town` level and GPS coordinates. The GPS coordinates can precisely representing where the club meets (say at the address level). The GPS coordinates are used to insert markers on a map.
@@ -390,16 +437,24 @@ A `PhotoClub` has a rough address down to the `town` level and GPS coordinates. 
 > This could be fixed by recognizing "supported" locations, and then using iOS facilities to localize strings. But this would
 > go against the vision of configuring club information without requiring any updates to the software. So the best solution is
 > to do a reverse geolocation lookup (GPS --> localized strings), thus replacing the stored `town` and `country` strings in the database.
+</details>
+
+<details><summary>
 
 #### Photographer
 
+</summary>
 Some basic information about a `Photographer` (name, date of birth, personal website, ...) is
 related to the `Photographer` as an individual, rather to the `Photographer's` membership of any
 specific `PhotoClub`. This club-independent information is stored in the individual's `Photographer`
 struct/record.
+</details>
+
+<details><summary>
 
 #### MemberPortfolio
 
+</summary>
 Every `PhotoClub` has (zero or more) `Members` who can have various roles (`isChairman`, `isAdmin`, ...)
 representing the tasks they perform in the photo club. A `Member` may have multiple roles within one
 `PhotoClub` (e.g., members is both `isSecretary` and `isAdmin`).
@@ -418,11 +473,18 @@ And every `Member` of a `PhotoClub` has exactly one `Portfolio` - even if it sti
 because this is needed to store information about this membership.
 This one-to-one relationship between `Member` and `Portfolio` allows them to be 
 modelled using once concept (aka table) instead of two. We named that `MemberPortfolio`.
+</details>
+
+<details><summary>
 
 ### How the Data is Loaded
 
+</summary>
+<details><summary>
+
 #### The Current Approach
 
+</summary>
 The app currently uses a software module per club. This means a club can
 in theory store their online list of members (`MemberPortfolios`) in any conceivable format.
 It is then up to the software module to convert it to the app's internal data representation.
@@ -447,9 +509,13 @@ Lightroom collections. A new or changed portfolio can be uplaoded (ftp) to the w
 of Lightroom's Web module. This triggers JuiceBox-Pro to generate an XML index file for the portfolio
 and to upload the actual images to a server on the directory. All required settings (e.g. copyright
 choice of directory) only need to be configured once per portfolio.
+</details>
+
+<details><summary>
 
 #### A Better Approach
 
+</summary>
 A major design challenge for a next stage should be to provide a clean,
 standardized interface to retrieve data per photo club.
 That interface is needed to load the data, but also to keeps the data up to date.
@@ -457,11 +523,13 @@ This is needed because membership data and portfolios change every few weeks.
 The current interface is essentially a plug-in design with an adaptor per photo club.
 This needs to be replaced by a standard data interface to avoid
 having to modify the source code whenever a new club comes onboard.
+</details><ul>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Administrative
 
+<ul>
 ### License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
@@ -476,6 +544,7 @@ Project Link: [https://github.com/vdhamer/PhotoClubWaalre](https://github.com/vd
 * The opening Prelude screen uses a photo of colorful building by Greetje van Son
 * A file with club member data is encrypted using [git-crypt](https://github.com/AGWA/git-crypt)
 
+</ul>
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
