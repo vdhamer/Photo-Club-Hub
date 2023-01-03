@@ -82,7 +82,7 @@ The Netherlands. Its members meet since 1988, mainly to critique each other’s 
 This app originally served as an alternative way to view the photos published on the club's web
 site. The name of the app may change to emphasize that the app can support *multiple* photo clubs.
 </details>
-<details><summary>
+<details open><summary>
 	
 ### The Portfolio Concept
 
