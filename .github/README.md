@@ -29,6 +29,9 @@
 			<li><a href="#multi-club-support">Multi-club Support</a></li>
 			<li><a href="#roadmap">Roadmap</a></li>
 			<li><a href="#data-privacy">Data Privacy</a></li>
+				<ul>
+					<li><a href="#encryption-details">Encryption Details</a></li>
+				</ul>
        	</ul>
     </details>
 	<details><summary><a href="#installation">Installation</a></summary>
