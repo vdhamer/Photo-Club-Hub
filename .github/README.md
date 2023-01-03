@@ -15,7 +15,7 @@
       	<ul>
         	<li><a href="#whats-a-waalre">What's a Waalre?</a></li>
         	<li><a href="#the-portfolio-concept">The Portfolio Concept</a></li>
-			<li><a href="#implications-of-portfolios">Consequences of having Portfolios/a>
+			<li><a href="#implications-of-portfolios">Implications of Portfolios/a>
       	</ul>
     </details>
     <details><summary><a href="#the-user-interface-screens">The User Interface Screens</a></summary>
