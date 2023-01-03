@@ -483,7 +483,7 @@ because this is needed to store information about this membership.
 This one-to-one relationship between `Member` and `Portfolio` allows them to be 
 modelled using once concept (aka table) instead of two. We named that `MemberPortfolio`.
 </details>
-</details></ul>
+</details>
 	
 <details><summary>
 
@@ -540,11 +540,13 @@ having to modify the source code whenever a new club comes onboard.
 ## Administrative
 
 <ul>
+
 ### License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 ### Contact
+
 Peter van den Hamer - github@vdhamer.com
 
 Project Link: [https://github.com/vdhamer/PhotoClubWaalre](https://github.com/vdhamer/PhotoClubWaalre)
