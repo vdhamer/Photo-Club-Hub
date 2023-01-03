@@ -422,7 +422,6 @@ property that is non-optional like `PhotoClub.town`. This allows `PhotoClub.town
 a string value such as "Unknown town".
 
 [![Product schema][product-schema]](https://github.com/vdhamer/PhotoClubWaalre/blob/main/Assets.xcassets/images/Schema.imageset/Schema.png)
-</details>
 
 <ul><details><summary>
 	
@@ -474,8 +473,9 @@ And every `Member` of a `PhotoClub` has exactly one `Portfolio` - even if it sti
 because this is needed to store information about this membership.
 This one-to-one relationship between `Member` and `Portfolio` allows them to be 
 modelled using once concept (aka table) instead of two. We named that `MemberPortfolio`.
+</details>
 </details></ul>
-
+	
 <details><summary>
 
 ### How the Data is Loaded
@@ -510,7 +510,6 @@ Lightroom collections. A new or changed portfolio can be uplaoded (ftp) to the w
 of Lightroom's Web module. This triggers JuiceBox-Pro to generate an XML index file for the portfolio
 and to upload the actual images to a server on the directory. All required settings (e.g. copyright
 choice of directory) only need to be configured once per portfolio.
-</details>
 
 <details><summary>
 
@@ -525,7 +524,8 @@ The current interface is essentially a plug-in design with an adaptor per photo 
 This needs to be replaced by a standard data interface to avoid
 having to modify the source code whenever a new club comes onboard.
 </details></ul>
-
+</details>
+	
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Administrative
