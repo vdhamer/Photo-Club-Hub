@@ -13,19 +13,19 @@
 <ul>
 	<details><summary><a href="#about-the-project">About the Project</a></summary>
       	<ul>
-        	<li><a href="#what-s-a-waalre">What's a Waalre?</a></li>
+        	<li><a href="#whats-a-waalre">What's a Waalre?</a></li>
         	<li><a href="#the-portfolio-concept">The Portfolio Concept</a></li>
 			<li><a href="#implications-of-portfolios">Consequences of having Portfolios/a>
       	</ul>
     </details>
-    <details><summary><a href="#screens">Screens</a></summary>
+    <details><summary><a href="#the-user-interface-screens">The User Interface Screens</a></summary>
 		<ul>
-			<li><a href="#opening-prelude-screen">Opening Prelude Screen</a></li>
 			<li><a href="#the-user-interface-screens">The User Interface Screens</a></li>
       	</ul>
     </details>
     <details><summary><a href="#features">Features</a></summary>
 		<ul>
+			<li><a href="#opening-animation">Opening Animation</a></li>
 			<li><a href="#multi-club-support">Multi-club Support</a></li>
 			<li><a href="#roadmap">Roadmap</a></li>
        	</ul>
@@ -115,11 +115,52 @@ If you want, you could even consider yourself a one-person club.
 </ul>
 <p align="right">(<a href="#top">back to top</a>)</p>
  
-## Screens
-<ul> 
+## The User Interface Screens
+<ul>
+
+- The `prelude` screen shows an opening animation
+  Clicking outside the central image brings you to the main `Portfolios` screen.
+
+- The `Portfolios` screen lists the available portfolios
+  (see above definition of `portfolio`).
+  Clicking on a portfolio shows a screen with the "detailed" contents of that portfolio.
+  Swiping left deletes an entry, but is not normally needed: the deletion is temporary.
+  The `Search` bar filters the list by name.
+
+- The `Settings` screen allows you to configure which types of portfolios you want to include in the
+  Portfolios screen. You can, for example, choose to include former members in addition to the default of current members.
+
+- `Readme` contains information about the app.
+
+- The `Photo Clubs` screen lists the photo clubs that are currently loaded.
+  A button with a lock icon toggles whether the map can be dragged-and-pinched.
+  Interactive maps are powerful, but can be inconvenient if you need to scroll to other photo clubs.
+  A _purple_ pin on the map shows where the club is based (e.g., a school or municipal building).
+  A _blue_ pin shows the location of any other photo club that are visible on that map.
+
+- The `Who's Who` screen lists the photographers that can be found in the app.
+  It shows information that is club-independent.
+  Whenever available, it displays birthdays or clickable links to personal
+  (club-independent) photography websites.
+  The `Search` bar filters the list of photographers.
+   
+- A lot of `Individual portfolio` screens.
+  The actual title of each screen shows the photographer's name (soon with the photo club name?).
+  Images are shown in chronological order, with the most recent capture date first.
+  For Fotogroep Waalre, you will see the year in the caption.
+  You can *swipe* left or right to manually move backwards or forwards through the portfolio.
+  There is also an *autoplay* mode for an automatic slide show.
+
+
+</detail></ul></detail>
+</ul>
+<p align="right">(<a href="#top">back to top</a>)</p>
+ 
+## Features
+<ul>
 <details><summary>
 
-### Opening Prelude Screen
+### Opening Animation
 
 </summary>
 When the app launches, it shows a large version of the app’s icon. 
@@ -143,48 +184,7 @@ on the GPU cores). But it also helps explain the app's logo: the Bayer filter ar
 one blue, and _two_ green pixels.
 </details>
 
-<details><summary>
 
-### The User Interface Screens
-
-</summary
-- The `Portfolios` screen lists the available portfolios
-   (see above definition of `portfolio`).
-   Clicking on a portfolio shows a screen with the "detailed" contents of that portfolio.
-   Swiping left deletes an entry, but is not normally needed: the deletion is temporary.
-   The `Search` bar filters the list by name.
-
-- The `Settings` screen allows you to configure which types of portfolios you want to include in the
-   Portfolios screen. You can, for example, choose to include former members in addition to the default of current members.
-
-- `Readme` contains information about the app.
-
-- The `Photo Clubs` screen lists the photo clubs that are currently loaded.
-   A button with a lock icon toggles whether the map can be dragged-and-pinched.
-   Interactive maps are powerful, but can be inconvenient if you need to scroll to other photo clubs.
-   A _purple_ pin on the map shows where the club is based (e.g., a school or municipal building).
-   A _blue_ pin shows the location of any other photo club that are visible on that map.
-
-- The `Who's Who` screen lists the photographers that can be found in the app.
-   It shows information that is club-independent.
-   Whenever available, it displays birthdays or clickable links to personal
-   (club-independent) photography websites.
-   The `Search` bar filters the list of photographers.
-   
-- A lot of `Individual portfolio` screens.
-   The actual title of each screen shows the photographer's name (soon with the photo club name?).
-   Images are shown in chronological order, with the most recent capture date first.
-   For Fotogroep Waalre, you will see the year in the caption.
-   You can *swipe* left or right to manually move backwards or forwards through the portfolio.
-   There is also an *autoplay* mode for an automatic slide show.
-
-
-</detail></ul></detail>
-</ul>
-<p align="right">(<a href="#top">back to top</a>)</p>
- 
-## Features
-<ul> 
 <details><summary>
  
 ### Multi-club Support
