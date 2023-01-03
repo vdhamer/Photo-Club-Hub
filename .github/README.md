@@ -519,6 +519,7 @@ Lightroom collections. A new or changed portfolio can be uplaoded (ftp) to the w
 of Lightroom's Web module. This triggers JuiceBox-Pro to generate an XML index file for the portfolio
 and to upload the actual images to a server on the directory. All required settings (e.g. copyright
 choice of directory) only need to be configured once per portfolio.
+</details>
 
 <details><summary>
 
