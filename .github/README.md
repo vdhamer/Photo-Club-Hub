@@ -204,9 +204,16 @@ This loads a little bit of additional data to demo the feature.
 ### Data Privacy
 
 </summary>
-The following has *no impact* on the app's functionality or user interface.
-So feel free to ignore this section.
+The phone numbers, e-mail addresses and ages of members of Fotogroep Waalre may not be public information.
+They are read by the app, but not actually shown or used at present. For good measure, the data is stored
+in encrypted form and decryted by the version of the app in the Apple App Store. The Github version
+circumvents the encrypted data altogether, which - although a detail - turns out to be tricky to do reliably.
 
+<ul><detail><summary>
+
+#### Encryption details
+
+</summary>
 The repo contains a 1 tiny file with encrypted data.
 But encryption code can draw a lot of attention, so we are explaining it here
 mainly so you don't waste time trying to figure our what's going on or whether
@@ -231,6 +238,7 @@ But a simple source code modification then gives access to the encrypted version
 Actually, not quite 🤓. Bypassing the password via a code modification, would allow the app to
 fetch the encrypted data rather than the unencrypted dummy data. 
 But that data is still encrypted by a private encryption key that is not provided on Github.
+</details></ul>
 </details>
 
 <details><summary>
@@ -534,7 +542,7 @@ The current interface is essentially a plug-in design with an adaptor per photo 
 This needs to be replaced by a standard data interface to avoid
 having to modify the source code whenever a new club comes onboard.
 </details></ul>
-</details>
+	</details></ul>
 	
 <p align="right">(<a href="#top">back to top</a>)</p>
 
