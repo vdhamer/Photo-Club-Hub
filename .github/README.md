@@ -168,7 +168,7 @@ If you want, you could even consider yourself a one-person club.
 
 </summary>
 When the app launches, it shows a large version of the app’s icon. 
-Tapping on the icon turns it into an interactive image illustrating how most digital cameras detect color.
+Tapping on the icon turns it into an interactive image illustrating how most digital cameras detect color.</p>
 
 > This involves a [Bayer color filter array](https://en.wikipedia.org/wiki/Bayer_filter)
 > that filters the light reaching each photocell or pixel.
