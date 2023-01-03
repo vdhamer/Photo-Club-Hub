@@ -212,7 +212,7 @@ They are read by the app, but not actually shown or used at present. For good me
 in encrypted form and decryted by the version of the app in the Apple App Store. The Github version
 circumvents the encrypted data altogether, which - although a detail - turns out to be tricky to do reliably.
 
-<ul><detail><summary>
+<ul><details><summary>
 
 #### Encryption details
 
