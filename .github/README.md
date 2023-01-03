@@ -13,7 +13,7 @@
 <ul>
 	<details><summary><a href="#about-the-project">About the Project</a></summary>
       	<ul>
-        	<li><a href="#what-s-a-waalre">What's a Waalre?</a></li>
+        	<li><a href="#whats-a-waalre">What's a Waalre?</a></li>
         	<li><a href="#the-portfolio-concept">The Portfolio Concept</a></li>
 			<li><a href="#implications-of-portfolios">Consequences of having Portfolios/a>
       	</ul>
