@@ -534,7 +534,7 @@ The current interface is essentially a plug-in design with an adaptor per photo 
 This needs to be replaced by a standard data interface to avoid
 having to modify the source code whenever a new club comes onboard.
 </details></ul>
-</details>
+	</details></ul>
 	
 <p align="right">(<a href="#top">back to top</a>)</p>
 
