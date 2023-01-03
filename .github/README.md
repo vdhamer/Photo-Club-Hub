@@ -9,73 +9,73 @@
 [![Portfolios Screen Shot][portfolios-screenshot]](https://github.com/vdhamer/PhotoClubWaalre)
 
 <!-- TABLE OF CONTENTS -->
-<details open><summary>Table of Contents</summary>
-    <p>
-	<ol>
-    	<details><summary><a href="#about-the-project">About the Project</a></summary>
+## Table of Contents
+<ul>
+	<details><summary><a href="#about-the-project">About the Project</a></summary>
       	<ul>
         	<li><a href="#waalre">Waalre</a></li>
         	<li><a href="#the-portfolio-concept">The Portfolio Concept</a></li>
 			<li><a href="#consequences-of-having-ortfolios">Consequences of having Portfolios/a>
       	</ul>
-    	</details>
-    	<details><summary><a href="#usage-and-features">Usage and Features</a></summary>
-			<ul>
-				<li><a href="#opening-prelude-screen">Opening Prelude Screen</a></li>
-				<li><a href="#the-user-interface-screens">The User Interface Screens</a></li>
-				<li><a href="#multi-club-support">Multi-club Support</a></li>
-				<li><a href="#roadmap">Roadmap</a></li>
-        	</ul>
-    	</details>
-		<details><summary><a href="#installation">Installation</a></summary>
-      	<ul>
-        	<li><a href="#built-with">Built-With</a></li>
+    </details>
+    <details><summary><a href="#usage-and-features">Usage and Features</a></summary>
+		<ul>
+			<li><a href="#opening-prelude-screen">Opening Prelude Screen</a></li>
+			<li><a href="#the-user-interface-screens">The User Interface Screens</a></li>
+			<li><a href="#multi-club-support">Multi-club Support</a></li>
+			<li><a href="#roadmap">Roadmap</a></li>
+       	</ul>
+    </details>
+	<details><summary><a href="#installation">Installation</a></summary>
+     	<ul>
+    	   	<li><a href="#built-with">Built-With</a></li>
 			<li><a href="#cloning-the-repository">Cloning the Repository</a></li>
         	<li><a href="#code-signing">Code Signing</a></li>
         	<li><a href="#upgrading-the-app">Upgrading the App</a></li>
 			<li><a href="#data-privacy">Data Privacy</a></li>
       	</ul>
-    	</details>
-    	<details><summary><a href="#contributing">Contributing</a></summary>
-        	<ul>
-				<li><a href="#areas-for-contribution">Areas for Contribution</a></li> 
-        	</ul>
-		</details>
-    	<details><summary><a href="#the-app-architecture">The App's Architecture</a></summary>
-        	<ul>
-				<li><a href="#role-of-the-database">Role of the Database</a></li>
-            	<li><a href="#the-data-model">The Data Model</a></li>
-					<ul>
-		 				<li><a href="#photoclub">PhotoClub</a></li>
-		 				<li><a href="#photographer">Photographer</a></li>
-		 				<li><a href="#memberportfolio">MemberPortfolio</a></li>
-	    			</ul>
-				<li><a href="#how-the-data-is-loaded">How the Data is Loaded</a></li>
-					<ul>
-						<li><a href="#the-current-approach">The Current Approach</a></li>
-						<li><a href="#a-better-approach">A Better Approach</a></li>
-					</ul>
-			</ul>
-		</details>
-		<details><summary><a href="#administrative">Administrative</a></summary>
-			<ul>  
-        		<li><a href="#license">License</a></li>
-        		<li><a href="#contact">Contact</a></li>
-        	<li><a href="#acknowledgments">Acknowledgments</a></li>
-			</ul>
-		</details>
-	</ol>
-</details>
+    </details>
+    <details><summary><a href="#contributing">Contributing</a></summary>
+       	<ul>
+			<li><a href="#areas-for-contribution">Areas for Contribution</a></li> 
+       	</ul>
+	</details>
+    <details><summary><a href="#the-app-architecture">The App's Architecture</a></summary>
+       	<ul>
+			<li><a href="#role-of-the-database">Role of the Database</a></li>
+           	<li><a href="#the-data-model">The Data Model</a></li>
+				<ul>
+	 				<li><a href="#photoclub">PhotoClub</a></li>
+	 				<li><a href="#photographer">Photographer</a></li>
+	 				<li><a href="#memberportfolio">MemberPortfolio</a></li>
+	   			</ul>
+			<li><a href="#how-the-data-is-loaded">How the Data is Loaded</a></li>
+				<ul>
+					<li><a href="#the-current-approach">The Current Approach</a></li>
+					<li><a href="#a-better-approach">A Better Approach</a></li>
+				</ul>
+		</ul>
+	</details>
+	<details><summary><a href="#administrative">Administrative</a></summary>
+		<ul>  
+       		<li><a href="#license">License</a></li>
+       		<li><a href="#contact">Contact</a></li>
+       	<li><a href="#acknowledgments">Acknowledgments</a></li>
+		</ul>
+	</details>
+</ul>
 
 ## About the Project
-
-### Waalre
-
+<ul> 
+<details open><summary>### Waalre</summary>
 Photo Club Waalre is a photography club named after Waalre, a town in the south of 
 The Netherlands. Its members meet since 1988, mainly to critique each other’s photos.
 
 This app originally served as an alternative way to view the photos published on the club's web
 site. The name of the app may change to emphasize that the app can support *multiple* photo clubs.
+</details>
+</ul>
+
 
 ### The Portfolio Concept
 
