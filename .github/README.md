@@ -362,10 +362,10 @@ translations, and icon design improvements.
 
 ## The App Architecture
 
-<ul>The app uses a [SwiftUI-based MVVM](https://www.hackingwithswift.com/books/ios-swiftui/introducing-mvvm-into-your-swiftui-project)
+The app uses a [SwiftUI-based MVVM](https://www.hackingwithswift.com/books/ios-swiftui/introducing-mvvm-into-your-swiftui-project)
 architecture pattern.
 
-<details><summary> 
+<ul><details><summary> 
 
 ### MVVM Layers
 
