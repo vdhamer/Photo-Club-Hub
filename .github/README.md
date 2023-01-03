@@ -67,7 +67,7 @@
 
 ## About the Project
 <ul> 
-<details open><summary>
+<details><summary>
 
 ### Waalre
 
@@ -78,7 +78,6 @@ The Netherlands. Its members meet since 1988, mainly to critique each other’s 
 This app originally served as an alternative way to view the photos published on the club's web
 site. The name of the app may change to emphasize that the app can support *multiple* photo clubs.
 </details>
-
 <details><summary>
 	
 ### The Portfolio Concept
@@ -89,9 +88,7 @@ The app showcases curated images made by members of photo clubs.</p>
 The images within the app are divided into so-called `portfolios`.
 These portfolios cover the part of a photographer's work that is associated with one photo club.
 
-<detail>
-
-<summary>
+<ul><details><summary>
 		
 ### Consequences of having Portfolios
 	
@@ -110,7 +107,7 @@ Incidentally, nothing prevents you from
 supporting an online group of photography friends: you will only need to give this "club" a name, and decide what images to post here.
 If you want, you could even consider yourself a one-person club.
 
-</detail></detail>
+</detail></ul></detail>
 </ul>
 <p align="right">(<a href="#top">back to top</a>)</p>
  
