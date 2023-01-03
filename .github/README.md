@@ -424,7 +424,7 @@ a string value such as "Unknown town".
 [![Product schema][product-schema]](https://github.com/vdhamer/PhotoClubWaalre/blob/main/Assets.xcassets/images/Schema.imageset/Schema.png)
 </details>
 
-<details><summary>
+<ul><details><summary>
 	
 #### PhotoClub
 
@@ -474,14 +474,14 @@ And every `Member` of a `PhotoClub` has exactly one `Portfolio` - even if it sti
 because this is needed to store information about this membership.
 This one-to-one relationship between `Member` and `Portfolio` allows them to be 
 modelled using once concept (aka table) instead of two. We named that `MemberPortfolio`.
-</details>
+</details></ul>
 
 <details><summary>
 
 ### How the Data is Loaded
 
 </summary>
-<details><summary>
+<ul><details><summary>
 
 #### The Current Approach
 
@@ -524,7 +524,7 @@ This is needed because membership data and portfolios change every few weeks.
 The current interface is essentially a plug-in design with an adaptor per photo club.
 This needs to be replaced by a standard data interface to avoid
 having to modify the source code whenever a new club comes onboard.
-</details><ul>
+</details></ul>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
