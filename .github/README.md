@@ -332,6 +332,7 @@ That allows for some upfront discussion and prevents wasted effort due to overla
 
 You can submit an `Issue` with a tag like ”enhancement" or “bug” without commiting to make the code changes yourself.
 Essentially that is an idea, bug, or feature request, rather than an offer to help.
+</ul>
 
 <ul><details><summary>
 
