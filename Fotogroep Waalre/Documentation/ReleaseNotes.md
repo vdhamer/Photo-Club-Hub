@@ -2,9 +2,9 @@
 
 This is build #4581 in Apple's App Store
 * Portfolios screen
-    * Fixed a Dutch text message (with a hint shown when Portfolio list is empty)
+    * Fixed a Dutch text message (containing a hint what to do if the Portfolio list is empty)
 * Documentation
-    * Added `<summary>` and `<detail>` tags to make Github README.md more readable
+    * Restructured the Github README.md to include collapsible text blocks
 ---------------------------------------------------------------------------
 ### 2.2.7 (Github commit 0130c45) 01-01-23
 
