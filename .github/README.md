@@ -188,7 +188,7 @@ on the GPU cores). But it also helps explain the app's logo: the Bayer filter ar
 one blue, and _two_ green pixels.
 </details>
 
-<details><summary>
+<details open><summary>
  
 ### Multi-club Support
 
