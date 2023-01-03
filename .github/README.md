@@ -315,9 +315,10 @@ Again, this is a standard Apple iOS policy. This doesn't apply to MacOS.
 ### Updating the App
 
 </summary>
+
 If you update to a newer build of the app, app data stored in the device's internal data storage 
 will remain available. If you choose to remove and reinstall the app, the database content will be lost.
-_But_ this has no real implications for the user as the data storage doesn't contain any relevant user data yet.
+But_ this has no real implications for the user as the data storage doesn't contain any relevant user data yet.
 	
 <ul><details><summary>
 	
