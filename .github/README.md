@@ -78,30 +78,40 @@ The Netherlands. Its members meet since 1988, mainly to critique each other’s 
 This app originally served as an alternative way to view the photos published on the club's web
 site. The name of the app may change to emphasize that the app can support *multiple* photo clubs.
 </details>
-</ul>
 
+<details><summary>
+	
 ### The Portfolio Concept
 
-The app showcases curated images made by members of photo clubs.
+</summary>	
+The app showcases curated images made by members of photo clubs.</p>
 
 The images within the app are divided into so-called `portfolios`.
 These portfolios cover the part of a photographer's work that is associated with one photo club.
 
+<detail>
+
+<summary>
+		
 ### Consequences of having Portfolios
+	
+</summary>
 
 If a photographer joined *multiple* photo clubs, the app can show *multiple* portfolios (with independent
 content) for that particular photographer. This is useful when a photographer is simultaneously a member of _two_ clubs.
 But it also works if a photographer left one club and joined another club. 
-In both cases, or anything in between, the `portfolio` concept keeps both sets of images separate.
+In both cases, or anything in between, the `portfolio` concept keeps both sets of images separate.</p>
 
 Thus, the app is focussed on supporting photo clubs. The app, however, provide a clickable link to a
 photographer's personal photography website. Such sites can then cover a photographer's work without
-organizing it per photo club.
+organizing it per photo club.</p>
 
 Incidentally, nothing prevents you from
 supporting an online group of photography friends: you will only need to give this "club" a name, and decide what images to post here.
 If you want, you could even consider yourself a one-person club.
 
+</detail></detail>
+</ul>
 <p align="right">(<a href="#top">back to top</a>)</p>
  
 ## Usage and Features
