@@ -33,9 +33,12 @@
 	<details><summary><a href="#installation">Installation</a></summary>
      	<ul>
     	   	<li><a href="#built-with">Built-With</a></li>
-			<li><a href="#cloning-the-repository">Cloning the Repository</a></li>
-        	<li><a href="#code-signing">Code Signing</a></li>
-        	<li><a href="#upgrading-the-app">Upgrading the App</a></li>
+    	   	<li><a href="#cloning-the-repository">Cloning the Repository</a></li>
+    	   	<li><a href="#code-signing">Code Signing</a></li>
+    	   	<li><a href="#upgrading-the-app">Upgrading the App</a></li>
+						<ul>
+							<li><a href="schema-migration">Schema Migration</a></li>
+					  </ul>
 			<li><a href="#data-privacy">Data Privacy</a></li>
       	</ul>
     </details>
@@ -267,18 +270,23 @@ Again, this is a standard Apple iOS policy. This doesn't apply to MacOS.
 ### Updating the App
 
 </summary>
-The following has *no impact* on the app's functionality or user interface.
-So feel free to ignore this section.
-
 If you update to a newer build of the app, app data stored in the device's internal data storage 
-will remain available.
-
-If the data structure has changed, Core Data will automatically perform a so-called schema migration.
+will remain available. If you choose to remove and reinstall the app, the database content will be lost.
+_But_ this has no real implications for the user as the data storage doesn't contain any relevant user data yet.
+	
+<ul><details><summary>
+	
+#### Schema Migration
+	
+</summary>
+If the data structure has changed from one version to a later version,
+Core Data will automatically perform a so-called schema migration.
 If you remove and reinstall the app, the Core Data database is lost, but this isn't an issue as the 
 database so far doesn't contain any user data.
 Schema migration is standard feature of Apple's Core Data framework, although the app does its bit
 so that Core Data can track, for example, renamed struct types or renamed properties.
 </details>
+</details></ul>
 
 <details><summary>
 
