@@ -133,6 +133,14 @@ If you want, you could even consider yourself a one-person club.
   Swiping left deletes an entry, but is not normally needed: the deletion is temporary.
   The `Search` bar filters the list by name.
 
+- The `individual portfolio` screen shows the portfolio of a user-selected photographer.
+  The title at the top of each screen shows the photographer's name (soon with the photo club name).
+  Images are shown in present-to-past order, based on the images's *capture* date.
+  For Fotogroep Waalre, the year the image was made is shown in the caption.
+  You can *swipe* left or right to manually move backwards or forwards through the portfolio.
+  There is also an *autoplay* mode for an automatic slide show. This screen is (for Fotogroep Waalre)
+  currently based on a commercial Javascript module (Juicebox Pro) that is normally used on websites.
+
 - The `Settings` screen allows you to configure which types of portfolios you want to include in the
   Portfolios screen. You can, for example, choose to include former members in addition to
   the default of current members.
@@ -150,14 +158,6 @@ If you want, you could even consider yourself a one-person club.
   Whenever available, it displays birthdays or clickable links to personal
   (club-independent) photography websites.
   The `Search` bar filters the list of photographers.
-   
-- There can be many `Individual portfolio` screens.
-  The title at the top of each screen shows the photographer's name (soon with the photo club name?).
-  Images are shown in recent-to-older order, based on the images's with *capture* date.
-  For Fotogroep Waalre, this is shown as a year (YYYY) in the caption.
-  You can *swipe* left or right to manually move backwards or forwards through the portfolio.
-  There is also an *autoplay* mode for an automatic slide show. This screen is (for Fotogroep Waalre)
-  currently based on a commercial Javascript module (Juicebox Pro) that is normally used on websites.
 
 </detail></ul></detail>
 </ul>
