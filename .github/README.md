@@ -151,13 +151,13 @@ If you want, you could even consider yourself a one-person club.
   (club-independent) photography websites.
   The `Search` bar filters the list of photographers.
    
-- A lot of `Individual portfolio` screens.
-  The actual title of each screen shows the photographer's name (soon with the photo club name?).
-  Images are shown in chronological order, with the most recent capture date first.
-  For Fotogroep Waalre, you will see the year in the caption.
+- There can be many `Individual portfolio` screens.
+  The title at the top of each screen shows the photographer's name (soon with the photo club name?).
+  Images are shown in recent-to-older order, based on the images's with *capture* date.
+  For Fotogroep Waalre, this is shown as a year (YYYY) in the caption.
   You can *swipe* left or right to manually move backwards or forwards through the portfolio.
-  There is also an *autoplay* mode for an automatic slide show.
-
+  There is also an *autoplay* mode for an automatic slide show. This screen is (for Fotogroep Waalre)
+  currently based on a commercial Javascript module (Juicebox Pro) that is normally used on websites.
 
 </detail></ul></detail>
 </ul>
