@@ -124,7 +124,7 @@ If you want, you could even consider yourself a one-person club.
 ## The User Interface Screens
 <ul>
 
-- The `Prelude` screen shows an opening animation
+- The `Prelude` screen shows an opening animation.
   Clicking outside the central image brings you to the main `Portfolios` screen.
 
 - The `Portfolios` screen lists the available portfolios
@@ -137,7 +137,7 @@ If you want, you could even consider yourself a one-person club.
   Portfolios screen. You can, for example, choose to include former members in addition to
   the default of current members.
 
-- `Readme` contains information about the app.
+- The `Readme` screen contains information about the app.
 
 - The `Photo Clubs` screen lists the photo clubs that are currently loaded.
   A button with a lock icon toggles whether the map can be dragged-and-pinched.
