@@ -125,7 +125,7 @@ If you want, you could even consider yourself a one-person club.
 <ul>
 
 - The `Prelude` screen shows an opening animation.
-  Clicking outside the central image brings you to the main `Portfolios` screen.
+  Clicking outside the central image brings you to the central `Portfolios` screen.
 
 - The `Portfolios` screen lists the available portfolios
   (see above definition of `portfolio`).
