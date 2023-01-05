@@ -134,7 +134,7 @@ If you want, you could even consider yourself a one-person club.
   The `Search` bar filters the list by name.
 
 - The `individual portfolio` screen shows the portfolio of a user-selected photographer.
-  The title at the top of each screen shows the photographer's name (soon with the photo club name).
+  The title at the top of each screen shows the photographer's name.
   Images are shown in present-to-past order, based on the images's *capture* date.
   For Fotogroep Waalre, the year the image was made is shown in the caption.
   You can *swipe* left or right to manually move backwards or forwards through the portfolio.
