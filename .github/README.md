@@ -93,7 +93,7 @@ site. The name of the app may change to emphasize that the app can support *mult
 ### The Portfolio Concept
 
 </summary>	
-> The app showcases curated images made by members of photo clubs.</p>
+> The app showcases curated images made by members of photo clubs.
 
 The images within the app are divided into so-called `portfolios`.
 These portfolios cover the part of a photographer's work that is associated with one photo club.
