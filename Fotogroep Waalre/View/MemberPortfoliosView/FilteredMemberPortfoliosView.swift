@@ -11,6 +11,7 @@ import WebKit
 struct FilteredMemberPortfoliosView: View {
 
     @Environment(\.managedObjectContext) private var viewContext
+    @Environment(\.horizontalSizeClass) var horSizeClass
     @FetchRequest var fetchRequest: FetchedResults<MemberPortfolio>
     var wkWebView = WKWebView()
     let searchText: Binding<String>
@@ -31,7 +32,8 @@ struct FilteredMemberPortfoliosView: View {
         let copyFilteredPhotographerFetchResult = filteredPhotographerFetchResult // fPFR is a costly computed property
         ForEach(copyFilteredPhotographerFetchResult, id: \.id) { filteredMember in
             NavigationLink(destination: SinglePortfolioView(url: filteredMember.memberWebsite, webView: wkWebView)
-                            .navigationTitle(filteredMember.photographer.fullName)
+                .navigationTitle((filteredMember.photographer.fullName +
+                                  " @ " + filteredMember.photoClub.nameOrShortName(horSizeClass: horSizeClass)))
                             .navigationBarTitleDisplayMode(NavigationBarItem.TitleDisplayMode.inline)) {
                 HStack(alignment: .center) {
                     RoleStatusIconView(memberRolesAndStatus: filteredMember.memberRolesAndStatus)

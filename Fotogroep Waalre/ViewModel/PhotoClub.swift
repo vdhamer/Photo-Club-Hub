@@ -7,6 +7,7 @@
 
 import CoreData // needed for NSSet
 import CoreLocation // needed for coordinate translation
+import SwiftUI
 
 extension PhotoClub: Comparable {
 
@@ -27,6 +28,17 @@ extension PhotoClub {
 		get { return name_ ?? "DefaultPhotoClubName" }
 		set { name_ = newValue }
 	}
+
+    var shortName: String {
+        get { return shortName_ ?? "Name?" }
+        set { shortName_ = newValue }
+    }
+
+    func nameOrShortName(horSizeClass: UserInterfaceSizeClass?) -> String {
+        // full photo club name on iPad and iPhone 14 Plus or Pro Max only
+        guard horSizeClass != nil else { return shortName } // don't know size of display
+        return (horSizeClass! == UserInterfaceSizeClass.compact) ? shortName : name
+    }
 
 	var town: String {
 		get { return town_ ?? "DefaultPhotoClubTown" }  // nil shouldn't occur, but it does?
@@ -62,7 +74,9 @@ extension PhotoClub {
 	// Find existing object or create a new object
 	// Update existing attributes or fill the new object
     static func findCreateUpdate(context: NSManagedObjectContext,
-                                 name: String, town: String,
+                                 name: String,
+                                 shortName: String,
+                                 town: String,
                                  photoClubWebsite: URL? = nil, fotobondNumber: Int16? = nil, kvkNumber: Int32? = nil,
                                  coordinates: CLLocationCoordinate2D? = nil,
                                  priority: Int16? = nil
@@ -73,7 +87,7 @@ extension PhotoClub {
 		let photoClubs: [PhotoClub] = (try? context.fetch(request)) ?? [] // nil means absolute failure
 
 		if let photoClub = photoClubs.first { // already exists, so make sure secondary attributes are up to date
-            if update(context: context, photoClub: photoClub, town: town,
+            if update(context: context, photoClub: photoClub, shortName: shortName, town: town,
                    optionalFields: (photoClubWebsite: photoClubWebsite,
                                     fotobondNumber: fotobondNumber,
                                     kvkNumber: kvkNumber),
@@ -85,7 +99,7 @@ extension PhotoClub {
 		} else {
 			let photoClub = PhotoClub(context: context) // create new PhotoClub object
 			photoClub.name = name
-            _ = update(context: context, photoClub: photoClub, town: town,
+            _ = update(context: context, photoClub: photoClub, shortName: shortName, town: town,
                    optionalFields: (photoClubWebsite: photoClubWebsite,
                                     fotobondNumber: fotobondNumber,
                                     kvkNumber: kvkNumber),
@@ -98,14 +112,18 @@ extension PhotoClub {
 
 	// Update non-identifying attributes/properties within existing instance of class PhotoClub
     // swiftlint:disable:next function_parameter_count
-    static func update(context: NSManagedObjectContext, photoClub: PhotoClub, town: String,
+    static func update(context: NSManagedObjectContext, photoClub: PhotoClub, shortName: String, town: String,
                        // swiftlint:disable:next large_tuple
                        optionalFields: (photoClubWebsite: URL?, fotobondNumber: Int16?, kvkNumber: Int32?),
                        coordinates: CLLocationCoordinate2D?, priority: Int16?) -> Bool {
 
 		var modified: Bool = false
 
-		if photoClub.town != town {
+        if photoClub.shortName != shortName {
+            photoClub.shortName = shortName
+            modified = true
+        }
+        if photoClub.town != town {
 			photoClub.town = town
 			modified = true
 		}

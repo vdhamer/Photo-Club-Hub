@@ -25,7 +25,9 @@ extension BIMembersProvider { // fill with some initial hard-coded content
         // add Bellus Imago to Photo Clubs (if needed)
         let clubBellusImago = PhotoClub.findCreateUpdate(
                                                          context: biBackgroundContext,
-                                                         name: "Bellus Imago", town: "Veldhoven",
+                                                         name: "Bellus Imago",
+                                                         shortName: "BImago",
+                                                         town: "Veldhoven",
                                                          photoClubWebsite: BIMembersProvider.bellusImagoURL,
                                                          fotobondNumber: 1671, kvkNumber: nil,
                                                          coordinates: CLLocationCoordinate2D(latitude: 51.425410,

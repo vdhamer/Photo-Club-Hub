@@ -25,7 +25,9 @@ extension TestClubMembersProvider { // fill with some initial hard-coded content
         // add photo club to Photo Clubs (if needed)
         let clubTest = PhotoClub.findCreateUpdate(
                                                          context: testBackgroundContext,
-                                                         name: "Test Fotoclub", town: "Rotterdam",
+                                                         name: "Test Fotoclub",
+                                                         shortName: "TestFC",
+                                                         town: "Rotterdam",
                                                          photoClubWebsite: TestClubMembersProvider.testURL,
                                                          fotobondNumber: 1234, kvkNumber: nil,
                                                          coordinates: CLLocationCoordinate2D(latitude: 51.905292,

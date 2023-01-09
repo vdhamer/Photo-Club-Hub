@@ -32,6 +32,7 @@ struct PersistenceController {
             )
             let photoClub = PhotoClub.findCreateUpdate(context: viewContext,
                                                        name: "PhotoClub\(index)",
+                                                       shortName: "Club\(index)",
                                                        town: "Town\(index)",
                                                        photoClubWebsite: URL(string: "http://www.example.com/\(index)"),
                                                        fotobondNumber: Int16(index*1111),

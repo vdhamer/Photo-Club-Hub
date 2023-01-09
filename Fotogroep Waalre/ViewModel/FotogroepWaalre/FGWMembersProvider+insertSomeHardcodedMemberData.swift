@@ -21,7 +21,9 @@ extension FGWMembersProvider { // fill with some initial hard-coded content
     private func insertSomeHardcodedMemberDataCommon(fgwBackgroundContext: NSManagedObjectContext, commit: Bool) {
 
         let clubWaalre = PhotoClub.findCreateUpdate( context: fgwBackgroundContext,
-                                                     name: "Fotogroep Waalre", town: "Waalre",
+                                                     name: "Fotogroep Waalre",
+                                                     shortName: "FGWaalre",
+                                                     town: "Waalre",
                                                      photoClubWebsite: URL(string: "https://www.fotogroepwaalre.nl"),
                                                      fotobondNumber: 1634, kvkNumber: 17261693,
                                                      coordinates: CLLocationCoordinate2D(latitude: 51.39184,
