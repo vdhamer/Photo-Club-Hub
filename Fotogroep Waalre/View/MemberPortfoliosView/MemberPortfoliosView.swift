@@ -25,7 +25,6 @@ struct MemberPortfoliosView: View {
 
     @StateObject var model = SettingsViewModel()
 
-    private let title = String(localized: "Photo Club Waalre", comment: "Title used in Navigation View")
     private let toolbarItemPlacement: ToolbarItemPlacement = UIDevice.isIPad ?
         .destructiveAction : // iPad: Search field in toolbar
         .navigationBarTrailing // iPhone: Search field in drawer

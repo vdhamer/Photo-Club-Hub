@@ -2,7 +2,9 @@
 
 This is build #4581 in Apple's App Store
 * Portfolios screen
-    * Fixed a Dutch text message (containing a hint what to do if the Portfolio list is empty)
+    * Fixed wording of a Dutch text message (that triggers if the Portfolio list is empty)
+* Individual Portfolio screens
+    * Title at top of screen now includes name of photo club
 * Documentation
     * Restructured the Github README.md to include collapsible text blocks
 ---------------------------------------------------------------------------

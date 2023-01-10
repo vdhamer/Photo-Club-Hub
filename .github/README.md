@@ -138,8 +138,10 @@ to organize different types of images. But a straightforward website would proba
 
 - The `individual portfolio` screen shows the portfolio of a user-selected photographer.
   The title at the top of the screen shows the photographer's name and club affiation: "Robert Capa @ Magnum Photos".
+
   Images are shown in present-to-past order, based on the images's *capture* date.
   For Fotogroep Waalre, the year the image was made is shown in the caption.
+
   You can *swipe* left or right to manually move backwards or forwards through the portfolio.
   There is also an *autoplay* mode for an automatic slide show. This screen is (for Fotogroep Waalre)
   currently based on a commercial Javascript module (Juicebox Pro) that is normally used on websites.
