@@ -63,7 +63,7 @@ extension MemberPortfolio { // computed properties (some related to handling opt
 	}
 
     public var id: String {
-        return photographer.fullName + " in " + photoClub.name
+        return photographer.fullName + " in " + photoClub.fullName
     }
 
     var memberWebsite: URL {
@@ -197,7 +197,7 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
                       memberWebsite: memberWebsite,
                       latestImage: latestImage) {
                 print("Updated info for member \(memberPortfolio.photographer.fullName) " +
-                      "in club \(memberPortfolio.photoClub.name)")
+                      "in club \(memberPortfolio.photoClub.fullName)")
             }
  			return memberPortfolio
 		} else {
@@ -210,7 +210,7 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
                        memberWebsite: memberWebsite,
                        latestImage: latestImage)
             print("Created new membership for \(memberPortfolio.photographer.fullName) " +
-                  "in \(memberPortfolio.photoClub.name)")
+                  "in \(memberPortfolio.photoClub.fullName)")
 			return memberPortfolio
 		}
 	}
@@ -276,7 +276,7 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
                 }
 			} catch {
                 fatalError("Update failed for member \(memberPortfolio.photographer.fullName) " +
-                           "in club \(memberPortfolio.photoClub.name): \(error)")
+                           "in club \(memberPortfolio.photoClub.fullName): \(error)")
 			}
 		}
 
@@ -305,7 +305,7 @@ extension MemberPortfolio { // convenience function
 extension MemberPortfolio {
 
     func refreshFirstImage() async {
-        let photoClub: String = self.photoClub.name
+        let photoClub: String = self.photoClub.fullName
         guard photoClub == "Fotogroep Waalre" else { return } // code needs closure per photo club (see issue)
 
         if let urlIndex = URL(string: self.memberWebsite.absoluteString + "config.xml") { // assume JuiceBox Pro
@@ -359,8 +359,8 @@ extension MemberPortfolio {
         }
 
         guard let match = try? regex.firstMatch(in: xmlContent) else {
-            print("\(photoClub.name): ERROR - could not find image in parseXMLContent() " +
-                  "for \(member.photographer.fullName) in \(member.photoClub.name)")
+            print("\(photoClub.fullName): ERROR - could not find image in parseXMLContent() " +
+                  "for \(member.photographer.fullName) in \(member.photoClub.fullName)")
             return
         }
         let (_, _, thumbSuffix) = match.output
@@ -368,7 +368,7 @@ extension MemberPortfolio {
 
         if member.latestImageURL != thumbURL && thumbURL != nil {
             member.latestImageURL = thumbURL // this is where it happens. Note that there is context.save()
-            print("\(photoClub.name): found new thumbnail \(thumbURL!)")
+            print("\(photoClub.fullName): found new thumbnail \(thumbURL!)")
         }
     }
 
