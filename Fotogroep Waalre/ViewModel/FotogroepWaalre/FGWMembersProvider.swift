@@ -10,8 +10,8 @@ import RegexBuilder
 
 class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
 
-    private static let photoClubID: (name: String, shortName: String, town: String) =
-                                    ("Fotogroep Waalre", "FGWaalre", "Waalre")
+    static let photoClubWaalreID = PhotoClubID(id: (fullName: "Fotogroep Waalre", town: "Waalre"),
+                                               shortNickname: "FG Waalre")
 
 //    /// A shared member provider for use within the main app bundle.
 //    static let shared = FotogroepWaalreMembersProvider()
@@ -28,7 +28,7 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
             Task {
                 await loadPrivateMembersFromWebsite( backgroundContext: fgwBackgroundContext,
                                                      privateMemberURL: privateURL,
-                                                     photoClubID: FGWMembersProvider.photoClubID,
+                                                     photoClubID: FGWMembersProvider.photoClubWaalreID,
                                                      commit: true
                 )
             }
@@ -74,7 +74,7 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
 
     func loadPrivateMembersFromWebsite( backgroundContext: NSManagedObjectContext,
                                         privateMemberURL: URL,
-                                        photoClubID: (name: String, shortName: String, town: String),
+                                        photoClubID: PhotoClubID,
                                         commit: Bool ) async {
 
         print("Fotogroep Waalre: starting loadPrivateMembersFromWebsite() in background")
@@ -102,7 +102,7 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
     }
 
     private func parseHTMLContent(backgroundContext: NSManagedObjectContext, htmlContent: String,
-                                  photoClubID: (name: String, shortName: String, town: String)) {
+                                  photoClubID: PhotoClubID) {
         var targetState: HTMLPageLoadingState = .tableStart        // initial entry point on loop of states
 
         var personName = PersonName(fullName: "", givenName: "", familyName: "")
@@ -110,9 +110,7 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
         var birthDate = toDate(from: "1/1/9999") // dummy value that is overwritten later
 
         let photoClub: PhotoClub = PhotoClub.findCreateUpdate(context: backgroundContext,
-                                                              name: photoClubID.name,
-                                                              shortName: photoClubID.shortName,
-                                                              town: photoClubID.town)
+                                                              photoClubID: photoClubID)
 
         htmlContent.enumerateLines { (line, _ stop) -> Void in
             if line.contains(targetState.targetString()) {

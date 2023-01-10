@@ -11,10 +11,14 @@ import MapKit // for CLLocationCoordinate2D
 extension BIMembersProvider { // fill with some initial hard-coded content
 
     private static let bellusImagoURL = URL(string: "https://www.fotoClubBellusImago.nl")
+    private static let photoClubBellusImagoID = PhotoClubID(id: (fullName: "Fotoclub Bellus Imago",
+                                                                 town: "Veldhoven"),
+                                                            shortNickname: "FC BellusImago")
 
     func insertSomeHardcodedMemberData(biBackgroundContext: NSManagedObjectContext) {
+        let clubNickname = BIMembersProvider.photoClubBellusImagoID.shortNickname
         biBackgroundContext.perform {
-            print("Bellus Imago: starting insertSomeHardcodedMemberData() in background")
+            print("\(clubNickname): starting insertSomeHardcodedMemberData() in background")
             self.insertSomeHardcodedMemberDataCommon(biBackgroundContext: biBackgroundContext, commit: true)
         }
     }
@@ -25,9 +29,7 @@ extension BIMembersProvider { // fill with some initial hard-coded content
         // add Bellus Imago to Photo Clubs (if needed)
         let clubBellusImago = PhotoClub.findCreateUpdate(
                                                          context: biBackgroundContext,
-                                                         name: "Bellus Imago",
-                                                         shortName: "BImago",
-                                                         town: "Veldhoven",
+                                                         photoClubID: Self.photoClubBellusImagoID,
                                                          photoClubWebsite: BIMembersProvider.bellusImagoURL,
                                                          fotobondNumber: 1671, kvkNumber: nil,
                                                          coordinates: CLLocationCoordinate2D(latitude: 51.425410,
@@ -56,13 +58,15 @@ extension BIMembersProvider { // fill with some initial hard-coded content
         )
 
         if commit {
+            let clubNickname = BIMembersProvider.photoClubBellusImagoID.shortNickname
+
             do {
                 if biBackgroundContext.hasChanges {
                     try biBackgroundContext.save() // commit all changes
                 }
-                print("Bellus Imago: completed insertSomeHardcodedMemberData()")
+                print("\(clubNickname): completed insertSomeHardcodedMemberData()")
             } catch {
-                fatalError("Bellus Imago: ERROR - failed to save changes to Core Data")
+                fatalError("\(clubNickname): ERROR - failed to save changes to Core Data")
             }
         }
 

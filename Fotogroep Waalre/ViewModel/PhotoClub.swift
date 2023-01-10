@@ -12,7 +12,7 @@ import SwiftUI
 extension PhotoClub: Comparable {
 
 	public static func < (lhs: PhotoClub, rhs: PhotoClub) -> Bool {
-		return lhs.name < rhs.name
+		return lhs.fullName < rhs.fullName
 	}
 
 }
@@ -24,7 +24,7 @@ extension PhotoClub {
 		set { members_ = newValue as NSSet }
 	}
 
-	var name: String {
+	var fullName: String {
 		get { return name_ ?? "DefaultPhotoClubName" }
 		set { name_ = newValue }
 	}
@@ -37,7 +37,7 @@ extension PhotoClub {
     func nameOrShortName(horSizeClass: UserInterfaceSizeClass?) -> String {
         // full photo club name on iPad and iPhone 14 Plus or Pro Max only
         guard horSizeClass != nil else { return shortName } // don't know size of display
-        return (horSizeClass! == UserInterfaceSizeClass.compact) ? shortName : name
+        return (horSizeClass! == UserInterfaceSizeClass.compact) ? shortName : fullName
     }
 
 	var town: String {
@@ -74,38 +74,41 @@ extension PhotoClub {
 	// Find existing object or create a new object
 	// Update existing attributes or fill the new object
     static func findCreateUpdate(context: NSManagedObjectContext,
-                                 name: String,
-                                 shortName: String,
-                                 town: String,
+                                 photoClubID: PhotoClubID,
                                  photoClubWebsite: URL? = nil, fotobondNumber: Int16? = nil, kvkNumber: Int32? = nil,
                                  coordinates: CLLocationCoordinate2D? = nil,
                                  priority: Int16? = nil
                                 ) -> PhotoClub {
         let predicateFormat: String = "name_ = %@" // avoid localization
-        let request: NSFetchRequest = fetchRequest(predicate: NSPredicate(format: predicateFormat, name))
+        let request: NSFetchRequest = fetchRequest(predicate: NSPredicate(format: predicateFormat,
+                                                                          photoClubID.id.fullName))
 
 		let photoClubs: [PhotoClub] = (try? context.fetch(request)) ?? [] // nil means absolute failure
 
 		if let photoClub = photoClubs.first { // already exists, so make sure secondary attributes are up to date
-            if update(context: context, photoClub: photoClub, shortName: shortName, town: town,
-                   optionalFields: (photoClubWebsite: photoClubWebsite,
-                                    fotobondNumber: fotobondNumber,
-                                    kvkNumber: kvkNumber),
+            if update(context: context, photoClub: photoClub,
+                      shortName: photoClubID.shortNickname,
+                      town: photoClubID.id.town,
+                      optionalFields: (photoClubWebsite: photoClubWebsite,
+                                       fotobondNumber: fotobondNumber,
+                                       kvkNumber: kvkNumber),
                       coordinates: coordinates,
                       priority: priority) {
-                            print("Updated info for photo club \(photoClub.name)")
+                            print("Updated info for photo club \(photoClub.fullName)")
             }
 			return photoClub
 		} else {
 			let photoClub = PhotoClub(context: context) // create new PhotoClub object
-			photoClub.name = name
-            _ = update(context: context, photoClub: photoClub, shortName: shortName, town: town,
-                   optionalFields: (photoClubWebsite: photoClubWebsite,
-                                    fotobondNumber: fotobondNumber,
-                                    kvkNumber: kvkNumber),
-                   coordinates: coordinates,
-                   priority: priority)
-            print("Created new photo club \(photoClub.name) in \(photoClub.town), \(photoClub.country)")
+            photoClub.fullName = photoClubID.id.fullName
+            _ = update(context: context, photoClub: photoClub,
+                       shortName: photoClubID.shortNickname,
+                       town: photoClubID.id.town,
+                       optionalFields: (photoClubWebsite: photoClubWebsite,
+                                        fotobondNumber: fotobondNumber,
+                                        kvkNumber: kvkNumber),
+                       coordinates: coordinates,
+                       priority: priority)
+            print("Created new photo club \(photoClub.fullName) in \(photoClub.town), \(photoClub.country)")
 			return photoClub
 		}
 	}
@@ -152,7 +155,7 @@ extension PhotoClub {
 			do {
 				try context.save()
  			} catch {
-                fatalError("Update failed for photo club \(photoClub.name)")
+                fatalError("Update failed for photo club \(photoClub.fullName)")
 			}
 		}
         return modified

@@ -38,7 +38,7 @@ struct PhotoClubsInnerView: View {
                         .font(.title)
                         .padding([.trailing], 5)
                     VStack(alignment: .leading) {
-                        Text(verbatim: "\(filteredPhotoClub.name)")
+                        Text(verbatim: "\(filteredPhotoClub.fullName)")
                             .font(.title3)
                             .tracking(1)
                             .foregroundColor(.photoClubColor)
@@ -63,14 +63,14 @@ struct PhotoClubsInnerView: View {
                     Spacer()
                     Button(
                         action: {
-                            if scrollLocks[filteredPhotoClub.name] != nil {
-                                openCloseSound(openClose: scrollLocks[filteredPhotoClub.name]! ? .close : .open)
-                                scrollLocks[filteredPhotoClub.name] = !scrollLocks[filteredPhotoClub.name]!
+                            if scrollLocks[filteredPhotoClub.fullName] != nil {
+                                openCloseSound(openClose: scrollLocks[filteredPhotoClub.fullName]! ? .close : .open)
+                                scrollLocks[filteredPhotoClub.fullName] = !scrollLocks[filteredPhotoClub.fullName]!
                             }
                         },
                         label: {
                             HStack { // to make background color clickable too
-                                LockAnimationView(locked: scrollLocks[filteredPhotoClub.name] ?? true)
+                                LockAnimationView(locked: scrollLocks[filteredPhotoClub.fullName] ?? true)
                             }
                             .frame(maxWidth: 60, maxHeight: 60)
                             .contentShape(Rectangle())
@@ -83,13 +83,13 @@ struct PhotoClubsInnerView: View {
                         latitude: filteredPhotoClub.latitude_,
                         longitude: filteredPhotoClub.longitude_),
                                        span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))),
-                    interactionModes: (scrollLocks[filteredPhotoClub.name] ?? true) ? [] : [.zoom, .pan],
+                    interactionModes: (scrollLocks[filteredPhotoClub.fullName] ?? true) ? [] : [.zoom, .pan],
                     annotationItems: fetchRequest) { photoClub in
                     MapMarker( coordinate: photoClub.coordinates,
                                tint: photoClub == filteredPhotoClub ? .photoClubColor : .blue )
                 }
                     .frame(minHeight: 300, idealHeight: 500, maxHeight: .infinity)
-                    .onAppear(perform: { scrollLocks[filteredPhotoClub.name] = fetchRequest.count > 1 })
+                    .onAppear(perform: { scrollLocks[filteredPhotoClub.fullName] = fetchRequest.count > 1 })
             }
             .accentColor(.photoClubColor)
         }
@@ -101,7 +101,7 @@ struct PhotoClubsInnerView: View {
         if let photoClub = (offsets.map { fetchRequest[$0] }.first) { // unwrap first PhotoClub to be deleted
             photoClub.deleteAllMembers(context: viewContext)
             guard photoClub.members.count == 0 else { // safety: will crash if member.photoClub == nil
-                print("Could not delete photo club \(photoClub.name) " +
+                print("Could not delete photo club \(photoClub.fullName) " +
                       "because it still has \(photoClub.members.count) members.")
                 return
             }
