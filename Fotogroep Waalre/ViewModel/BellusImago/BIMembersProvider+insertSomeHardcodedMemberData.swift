@@ -40,6 +40,7 @@ extension BIMembersProvider { // fill with some initial hard-coded content
         addMember(context: biBackgroundContext, // add Rico to Photographers and member of Bellus (if needed)
                   givenName: "Rico",
                   familyName: "Coolen",
+                  photographerWebsite: URL(string: "https://www.ricoco.nl"),
                   photoClub: clubBellusImago,
                   memberWebsite: URL(string: "https://www.fotoclubbellusimago.nl/rico.html")!,
                   latestImage: URL(string:
@@ -75,6 +76,7 @@ extension BIMembersProvider { // fill with some initial hard-coded content
     private func addMember(context: NSManagedObjectContext,
                            givenName: String,
                            familyName: String,
+                           photographerWebsite: URL? = nil,
                            bornDT: Date? = nil,
                            photoClub: PhotoClub,
                            memberRolesAndStatus: MemberRolesAndStatus = MemberRolesAndStatus(role: [:], stat: [:]),
@@ -82,16 +84,15 @@ extension BIMembersProvider { // fill with some initial hard-coded content
                            latestImage: URL? = nil,
                            phoneNumber: String? = nil,
                            eMail: String? = nil) {
-        let photographer = Photographer.findCreateUpdate(
-                            context: context, givenName: givenName, familyName: familyName,
-                            memberRolesAndStatus: memberRolesAndStatus,
-                            bornDT: bornDT )
+        let photographer = Photographer.findCreateUpdate(context: context, givenName: givenName, familyName: familyName,
+                                                         memberRolesAndStatus: memberRolesAndStatus,
+                                                         photographerWebsite: photographerWebsite,
+                                                         bornDT: bornDT)
 
-        _ = MemberPortfolio.findCreateUpdate(
-                            context: context, photoClub: photoClub, photographer: photographer,
-                            memberRolesAndStatus: memberRolesAndStatus,
-                            memberWebsite: memberWebsite,
-                            latestImage: latestImage)
+        _ = MemberPortfolio.findCreateUpdate(context: context, photoClub: photoClub, photographer: photographer,
+                                             memberRolesAndStatus: memberRolesAndStatus,
+                                             memberWebsite: memberWebsite,
+                                             latestImage: latestImage)
     }
 
 }
