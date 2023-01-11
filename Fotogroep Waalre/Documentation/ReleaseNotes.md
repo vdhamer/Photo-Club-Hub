@@ -9,6 +9,7 @@ This is build #4581 in Apple's App Store
     * Restructured the GitHub README.md to include collapsible text blocks
 * Maintainability
     * Added a PhotoClubID struct
+    * Hardcoded photographer info can now contain photograperWebsite URL
 ---------------------------------------------------------------------------
 ### 2.2.7 (Github commit 0130c45) 01-01-23
 
