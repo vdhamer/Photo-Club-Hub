@@ -49,6 +49,7 @@ struct PhotoClubsView: View {
                 _ = FGWMembersProvider()
                 _ = BIMembersProvider()
                 _ = TestClubMembersProvider()
+//                _ = TestClub2MembersProvider()
             }
         }
         .navigationTitle(navigationTitle)
