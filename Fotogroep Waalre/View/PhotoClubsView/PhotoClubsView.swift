@@ -13,7 +13,8 @@ struct PhotoClubsView: View {
 
     @FetchRequest(
         sortDescriptors: [SortDescriptor(\.priority_, order: .reverse), // highest priority first
-                          SortDescriptor(\.name_, order: .forward)],
+                          SortDescriptor(\.name_, order: .forward), // photo clubs are identified by (name, town)
+                          SortDescriptor(\.town_, order: .forward)], // just to make it repeatable
         animation: .default)
     private var photoClubs: FetchedResults<PhotoClub>
 
@@ -49,7 +50,7 @@ struct PhotoClubsView: View {
                 _ = FGWMembersProvider()
                 _ = BIMembersProvider()
                 _ = TestClubMembersProvider()
-//                _ = TestClub2MembersProvider()
+                _ = TestClub2MembersProvider()
             }
         }
         .navigationTitle(navigationTitle)

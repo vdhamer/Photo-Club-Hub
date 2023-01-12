@@ -79,11 +79,16 @@ extension PhotoClub {
                                  coordinates: CLLocationCoordinate2D? = nil,
                                  priority: Int16? = nil
                                 ) -> PhotoClub {
-        let predicateFormat: String = "name_ = %@" // avoid localization
+        let predicateFormat: String = "name_ = %@ AND town_ = %@" // avoid localization
         let request: NSFetchRequest = fetchRequest(predicate: NSPredicate(format: predicateFormat,
-                                                                          photoClubID.id.fullName))
+                                                                          photoClubID.id.fullName,
+                                                                          photoClubID.id.town))
 
 		let photoClubs: [PhotoClub] = (try? context.fetch(request)) ?? [] // nil means absolute failure
+        if photoClubs.count > 1 {
+            fatalError("Query returned \(photoClubs.count) photoclub(s) named " +
+                       "\(photoClubID.id.fullName) in \(photoClubID.id.town)")
+        }
 
 		if let photoClub = photoClubs.first { // already exists, so make sure secondary attributes are up to date
             if update(context: context, photoClub: photoClub,

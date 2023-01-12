@@ -17,7 +17,7 @@ extension TestClub2MembersProvider { // fill with some initial hard-coded conten
 
     func insertSomeHardcodedMemberData(test2BackgroundContext: NSManagedObjectContext) {
         test2BackgroundContext.perform {
-            print("Photo Club Test: starting insertSomeHardcodedMemberData() in background")
+            print("Photo Club Test2: starting insertSomeHardcodedMemberData() in background")
             self.insertSomeHardcodedMemberDataCommon(test2BackgroundContext: test2BackgroundContext, commit: true)
         }
     }

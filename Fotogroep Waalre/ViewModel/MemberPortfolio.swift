@@ -295,7 +295,8 @@ extension MemberPortfolio { // convenience function
             [
                 NSSortDescriptor(keyPath: \MemberPortfolio.photographer_?.givenName_, ascending: true),
                 NSSortDescriptor(keyPath: \MemberPortfolio.photographer_?.familyName_, ascending: true),
-                NSSortDescriptor(keyPath: \MemberPortfolio.photoClub_?.name_, ascending: true)
+                NSSortDescriptor(keyPath: \MemberPortfolio.photoClub_?.name_, ascending: true),
+                NSSortDescriptor(keyPath: \MemberPortfolio.photoClub_?.town_, ascending: true)
             ]
 		return request
 	}
