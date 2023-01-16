@@ -30,7 +30,7 @@ extension FGWMembersProvider { // fill with some initial hard-coded content
 
         addMember(context: fgwBackgroundContext,
                   givenName: "Bart", familyName: "van Stekelenburg", photoClub: clubWaalre,
-                  memberRolesAndStatus: MemberRolesAndStatus(role: [ .chairman: true ])
+                  memberRolesAndStatus: MemberRolesAndStatus(role: [ .chairman: false ])
         )
 
         addMember(context: fgwBackgroundContext,
@@ -45,7 +45,7 @@ extension FGWMembersProvider { // fill with some initial hard-coded content
 
         addMember(context: fgwBackgroundContext,
                   givenName: "Greetje", familyName: "van Son", photoClub: clubWaalre,
-                  memberRolesAndStatus: MemberRolesAndStatus(role: [ .viceChairman: true ], stat: [:])
+                  memberRolesAndStatus: MemberRolesAndStatus(role: [ .viceChairman: false ], stat: [:])
         )
 
         addMember(context: fgwBackgroundContext,
@@ -60,7 +60,7 @@ extension FGWMembersProvider { // fill with some initial hard-coded content
 
         addMember(context: fgwBackgroundContext,
                   givenName: "Peter", familyName: "van den Hamer", photoClub: clubWaalre,
-                  memberRolesAndStatus: MemberRolesAndStatus(role: [ .admin: true, .secretary: true ])
+                  memberRolesAndStatus: MemberRolesAndStatus(role: [ .admin: false, .secretary: false ])
         )
 
         if commit {
