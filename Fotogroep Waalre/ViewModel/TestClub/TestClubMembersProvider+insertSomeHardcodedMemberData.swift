@@ -11,7 +11,8 @@ import MapKit // for CLLocationCoordinate2D
 extension TestClubMembersProvider { // fill with some initial hard-coded content
 
     private static let testURL = URL(string: "https://www.nederlandsfotomuseum.nl")
-    static let photoClubTestID = PhotoClubID(id: (fullName: "Test Fotoclub", town: "Rotterdam"),
+    static let photoClubTestID = PhotoClubID(id: (fullName: "Test Fotoclub",
+                                                  town: "Rotterdam"),
                                              shortNickname: "FC Test")
 
     func insertSomeHardcodedMemberData(testBackgroundContext: NSManagedObjectContext) {

@@ -12,7 +12,7 @@ extension TestClub2MembersProvider { // fill with some initial hard-coded conten
 
     private static let test2URL = URL(string: "https://www.foam.org")
     static let photoClubTest2ID = PhotoClubID(id: (fullName: "Test Fotoclub", // identical name to club in Rotterdam
-                                                  town: "Amsterdam"),
+                                                   town: "Amsterdam"),
                                              shortNickname: "FC Test2")
 
     func insertSomeHardcodedMemberData(test2BackgroundContext: NSManagedObjectContext) {
