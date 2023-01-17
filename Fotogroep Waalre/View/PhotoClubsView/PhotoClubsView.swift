@@ -47,8 +47,8 @@ struct PhotoClubsView: View {
                     .foregroundColor(.gray)
             }
             .refreshable { // for pull-to-refresh
-                _ = FGWMembersProvider()
-                _ = BIMembersProvider()
+//                _ = FGWMembersProvider()
+//                _ = BIMembersProvider()
                 _ = TestClubMembersProvider()
                 _ = TestClub2MembersProvider()
             }
