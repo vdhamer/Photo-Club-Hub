@@ -12,8 +12,8 @@ extension TestClub2MembersProvider { // fill with some initial hard-coded conten
 
     private static let test2URL = URL(string: "https://www.foam.org")
     static let photoClubTest2ID = PhotoClubID(id: (fullName: "Test Fotoclub", // identical name to club in Rotterdam
-                                                  town: "Amsterdam"),
-                                             shortNickname: "FC Test2")
+                                                   town: "Amsterdam"),
+                                              shortNickname: "FC Test2")
 
     func insertSomeHardcodedMemberData(test2BackgroundContext: NSManagedObjectContext) {
         test2BackgroundContext.perform {
@@ -40,11 +40,11 @@ extension TestClub2MembersProvider { // fill with some initial hard-coded conten
                   givenName: "Peter",
                   familyName: "van den Hamer",
                   photoClub: clubTest2,
-                  memberRolesAndStatus: MemberRolesAndStatus(role: [ .chairman: true ]),
+                  memberRolesAndStatus: MemberRolesAndStatus(role: [ .secretary: true ], stat: [ .former: false]),
                   memberWebsite: URL(string: "https://www.fotogroepwaalre.nl/fotos/Peter_van_den_Hamer_test2")!,
                   latestImage: URL(string:
                      "https://www.fotogroepwaalre.nl/fotos/Peter_van_den_Hamer_test2/" +
-                                                    "thumbs/2019_Pimpernel_5D2_009.jpg")!,
+                                                    "images/2022_Iceland_R5_013.jpg")!,
                   phoneNumber: nil,
                   eMail: "foobar2@vdhamer.com"
         )

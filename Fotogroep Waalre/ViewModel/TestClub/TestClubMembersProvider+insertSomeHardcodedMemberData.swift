@@ -1,6 +1,6 @@
 //
 //  TestClubMembersProvider+insertSomeHardcodedMemberData.swift
-//  TestClubMembersProvider+insertSomeHardcodedMemberData
+//  Fotogroep Waalre
 //
 //  Created by Peter van den Hamer on 01/08/2021.
 //
@@ -11,7 +11,8 @@ import MapKit // for CLLocationCoordinate2D
 extension TestClubMembersProvider { // fill with some initial hard-coded content
 
     private static let testURL = URL(string: "https://www.nederlandsfotomuseum.nl")
-    static let photoClubTestID = PhotoClubID(id: (fullName: "Test Fotoclub", town: "Rotterdam"),
+    static let photoClubTestID = PhotoClubID(id: (fullName: "Test Fotoclub", // identical name to club in Amsterdam
+                                                  town: "Rotterdam"),
                                              shortNickname: "FC Test")
 
     func insertSomeHardcodedMemberData(testBackgroundContext: NSManagedObjectContext) {
@@ -42,7 +43,8 @@ extension TestClubMembersProvider { // fill with some initial hard-coded content
                   memberRolesAndStatus: MemberRolesAndStatus(role: [ .admin: true ], stat: [ .former: false]),
                   memberWebsite: URL(string: "https://www.fotogroepwaalre.nl/fotos/Peter_van_den_Hamer_test")!,
                   latestImage: URL(string:
-                     "https://www.fotogroepwaalre.nl/fotos/Peter_van_den_Hamer_test/images/2015_Madeira_RX1r_064.jpg")!,
+                     "https://www.fotogroepwaalre.nl/fotos/Peter_van_den_Hamer_test/" +
+		                                    "images/2015_Madeira_RX1r_064.jpg")!,
                   phoneNumber: nil,
                   eMail: "foobar@vdhamer.com"
         )
