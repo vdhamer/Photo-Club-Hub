@@ -30,53 +30,43 @@ extension FGWMembersProvider { // fill with some initial hard-coded content
 
         addMember(context: fgwBackgroundContext,
                   givenName: "Bart", familyName: "van Stekelenburg", photoClub: clubWaalre,
-                  memberRolesAndStatus: MemberRolesAndStatus(role: [ .chairman: false ])
-        )
+                  memberRolesAndStatus: MemberRolesAndStatus(role: [ .chairman: false ]))
 
         addMember(context: fgwBackgroundContext,
                   givenName: "Miek", familyName: "Kerkhoven", photoClub: clubWaalre,
-                  memberRolesAndStatus: MemberRolesAndStatus(role: [ .chairman: true ])
-        )
+                  memberRolesAndStatus: MemberRolesAndStatus(role: [ .chairman: true ]))
 
         addMember(context: fgwBackgroundContext,
                   givenName: "Bettina", familyName: "de Graaf", photoClub: clubWaalre,
-                  memberRolesAndStatus: MemberRolesAndStatus(role: [ .viceChairman: false ])
-        )
+                  memberRolesAndStatus: MemberRolesAndStatus(role: [ .viceChairman: false ]))
 
         addMember(context: fgwBackgroundContext,
                   givenName: "Erik", familyName: "van Geest", photoClub: clubWaalre,
-                  memberRolesAndStatus: MemberRolesAndStatus(role: [ .admin: true ])
-        )
+                  memberRolesAndStatus: MemberRolesAndStatus(role: [ .admin: true ]))
 
         addMember(context: fgwBackgroundContext,
                   givenName: "Greetje", familyName: "van Son", photoClub: clubWaalre,
-                  memberRolesAndStatus: MemberRolesAndStatus(role: [ .viceChairman: false ], stat: [:])
-        )
+                  memberRolesAndStatus: MemberRolesAndStatus(role: [ .viceChairman: false ], stat: [:]))
 
         addMember(context: fgwBackgroundContext,
                   givenName: "Carel", familyName: "Bullens", photoClub: clubWaalre,
-                  memberRolesAndStatus: MemberRolesAndStatus(role: [ .viceChairman: true ], stat: [:])
-        )
+                  memberRolesAndStatus: MemberRolesAndStatus(role: [ .viceChairman: true ], stat: [:]))
 
         addMember(context: fgwBackgroundContext,
                   givenName: "Jos", familyName: "Jansen", photoClub: clubWaalre,
-                  memberRolesAndStatus: MemberRolesAndStatus(role: [ .treasurer: true ])
-        )
+                  memberRolesAndStatus: MemberRolesAndStatus(role: [ .treasurer: true ]))
 
         addMember(context: fgwBackgroundContext,
                   givenName: "Marijke", familyName: "Gallas", photoClub: clubWaalre,
-                  memberRolesAndStatus: MemberRolesAndStatus(role: [:], stat: [ .honorary: true ])
-        )
+                  memberRolesAndStatus: MemberRolesAndStatus(role: [:], stat: [ .honorary: true ]))
 
         addMember(context: fgwBackgroundContext,
                   givenName: "Peter", familyName: "van den Hamer", photoClub: clubWaalre,
-                  memberRolesAndStatus: MemberRolesAndStatus(role: [ .admin: false, .secretary: false ])
-        )
+                  memberRolesAndStatus: MemberRolesAndStatus(role: [ .admin: false, .secretary: false ]))
 
         addMember(context: fgwBackgroundContext,
                   givenName: "Kees", familyName: "van Gemert", photoClub: clubWaalre,
-                  memberRolesAndStatus: MemberRolesAndStatus(role: [ .secretary: true ])
-        )
+                  memberRolesAndStatus: MemberRolesAndStatus(role: [ .secretary: true ]))
 
         if commit {
             do {

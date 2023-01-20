@@ -29,6 +29,10 @@ extension PhotoClub {
 		set { name_ = newValue }
 	}
 
+    var fullNameCommaTown: String {
+        fullName + ", " + town
+    }
+
     var shortName: String {
         get { return shortName_ ?? "Name?" }
         set { shortName_ = newValue }

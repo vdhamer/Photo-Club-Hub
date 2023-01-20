@@ -47,7 +47,7 @@ struct FilteredMemberPortfoliosView: View {
                             .allowsTightening(true)
                             .foregroundColor(chooseColor(defaultColor: .accentColor,
                                                          isDeceased: filteredMember.photographer.isDeceased))
-                        Text("\(filteredMember.roleDescription) of \(filteredMember.photoClub.fullName), \(filteredMember.photoClub.town)",
+                        Text("\(filteredMember.roleDescription) of \(filteredMember.photoClub.fullNameCommaTown)",
                              comment: "<role1 and role2> of <photoclub>. Note <and> is handled elsewhere.")
                             .truncationMode(.tail)
                             .lineLimit(2)
