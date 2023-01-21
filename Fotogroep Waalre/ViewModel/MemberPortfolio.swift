@@ -12,10 +12,10 @@ import RegexBuilder
 extension MemberPortfolio: Comparable {
 
 	public static func < (lhs: MemberPortfolio, rhs: MemberPortfolio) -> Bool {
-        if (lhs.photographer.fullName == rhs.photographer.fullName) {
-            return (lhs.photoClub.town < rhs.photoClub.town)
+        if lhs.photographer.fullName != rhs.photographer.fullName {
+                return (lhs.photographer.fullName < rhs.photographer.fullName) // primary sorting criterium
         } else {
-            return (lhs.photographer.fullName < rhs.photographer.fullName)
+            return (lhs.photoClub.fullName < rhs.photoClub.fullName) // secondary sorting criterium
         }
 	}
 
