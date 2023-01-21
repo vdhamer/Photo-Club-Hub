@@ -12,7 +12,11 @@ import RegexBuilder
 extension MemberPortfolio: Comparable {
 
 	public static func < (lhs: MemberPortfolio, rhs: MemberPortfolio) -> Bool {
-		return (lhs.photographer.fullName < rhs.photographer.fullName)
+        if lhs.photographer.fullName != rhs.photographer.fullName {
+                return (lhs.photographer.fullName < rhs.photographer.fullName) // primary sorting criterium
+        } else {
+            return (lhs.photoClub.fullName < rhs.photoClub.fullName) // secondary sorting criterium
+        }
 	}
 
 }
