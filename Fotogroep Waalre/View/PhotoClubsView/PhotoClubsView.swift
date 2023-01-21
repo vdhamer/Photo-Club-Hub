@@ -49,8 +49,8 @@ struct PhotoClubsView: View {
             .refreshable { // for pull-to-refresh
 //                _ = FGWMembersProvider()
 //                _ = BIMembersProvider()
-                _ = TestClubMembersProvider()
-                _ = TestClub2MembersProvider()
+//                _ = TestClubRMembersProvider()
+//                _ = TestClubAMembersProvider()
             }
         }
         .navigationTitle(navigationTitle)

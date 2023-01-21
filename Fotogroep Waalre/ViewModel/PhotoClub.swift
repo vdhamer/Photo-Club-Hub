@@ -108,10 +108,11 @@ extension PhotoClub {
 			return photoClub
 		} else {
 			let photoClub = PhotoClub(context: context) // create new PhotoClub object
-            photoClub.fullName = photoClubID.id.fullName
+            photoClub.fullName = photoClubID.id.fullName // first part of ID
+            photoClub.town = photoClubID.id.town // second part of ID
             _ = update(context: context, photoClub: photoClub,
                        shortName: photoClubID.shortNickname,
-                       town: photoClubID.id.town,
+                       town: photoClubID.id.town, // TODO: why is this here?
                        optionalFields: (photoClubWebsite: photoClubWebsite,
                                         fotobondNumber: fotobondNumber,
                                         kvkNumber: kvkNumber),
@@ -135,7 +136,7 @@ extension PhotoClub {
             photoClub.shortName = shortName
             modified = true
         }
-        if photoClub.town != town {
+        if photoClub.town != town { // TODO: why is this here?
 			photoClub.town = town
 			modified = true
 		}

@@ -1,5 +1,5 @@
 //
-//  TestClub2MembersProvider+insertSomeHardcodedMemberData.swift
+//  TestClubAMembersProvider+insertSomeHardcodedMemberData.swift
 //  Fotogroep Waalre
 //
 //  Created by Peter van den Hamer on 11/01/2023.
@@ -8,55 +8,55 @@
 import CoreData // for NSManagedObjectContext
 import MapKit // for CLLocationCoordinate2D
 
-extension TestClub2MembersProvider { // fill with some initial hard-coded content
+extension TestClubAMembersProvider { // fill with some initial hard-coded content
 
-    private static let test2URL = URL(string: "https://www.foam.org")
-    static let photoClubTest2ID = PhotoClubID(id: (fullName: "Test Fotoclub", // identical name to club in Rotterdam
+    private static let testAURL = URL(string: "https://www.foam.org")
+    static let photoClubTestAID = PhotoClubID(id: (fullName: "Test Fotoclub", // identical name to club in Rotterdam
                                                    town: "Amsterdam"),
-                                              shortNickname: "FC Test2")
+                                              shortNickname: "FC Test Adam")
 
-    func insertSomeHardcodedMemberData(test2BackgroundContext: NSManagedObjectContext) {
-        test2BackgroundContext.perform {
-            print("Photo Club Test2: starting insertSomeHardcodedMemberData() in background")
-            self.insertSomeHardcodedMemberDataCommon(test2BackgroundContext: test2BackgroundContext, commit: true)
+    func insertSomeHardcodedMemberData(testABackgroundContext: NSManagedObjectContext) {
+        testABackgroundContext.perform {
+            print("Photo Club Test Adam: starting insertSomeHardcodedMemberData() in background")
+            self.insertSomeHardcodedMemberDataCommon(testABackgroundContext: testABackgroundContext, commit: true)
         }
     }
 
-    private func insertSomeHardcodedMemberDataCommon(test2BackgroundContext: NSManagedObjectContext,
+    private func insertSomeHardcodedMemberDataCommon(testABackgroundContext: NSManagedObjectContext,
                                                      commit: Bool) {
 
         // add photo club to Photo Clubs (if needed)
-        let clubTest2 = PhotoClub.findCreateUpdate(
-                                                         context: test2BackgroundContext,
-                                                         photoClubID: Self.photoClubTest2ID,
-                                                         photoClubWebsite: TestClub2MembersProvider.test2URL,
+        let clubTestA = PhotoClub.findCreateUpdate(
+                                                         context: testABackgroundContext,
+                                                         photoClubID: Self.photoClubTestAID,
+                                                         photoClubWebsite: TestClubAMembersProvider.testAURL,
                                                          fotobondNumber: 5678, kvkNumber: nil,
                                                          coordinates: CLLocationCoordinate2D(latitude: 52.364217,
                                                                                              longitude: 4.893370),
                                                          priority: 1
                                                         )
 
-        addMember(context: test2BackgroundContext,
+        addMember(context: testABackgroundContext,
                   givenName: "Peter",
                   familyName: "van den Hamer",
-                  photoClub: clubTest2,
+                  photoClub: clubTestA,
                   memberRolesAndStatus: MemberRolesAndStatus(role: [ .secretary: true ], stat: [ .former: false]),
-                  memberWebsite: URL(string: "https://www.fotogroepwaalre.nl/fotos/Peter_van_den_Hamer_test2")!,
+                  memberWebsite: URL(string: "https://www.fotogroepwaalre.nl/fotos/Peter_van_den_Hamer_testA")!,
                   latestImage: URL(string:
-                     "https://www.fotogroepwaalre.nl/fotos/Peter_van_den_Hamer_test2/" +
+                     "https://www.fotogroepwaalre.nl/fotos/Peter_van_den_Hamer_testA/" +
                                                     "images/2022_Iceland_R5_013.jpg")!,
-                  phoneNumber: nil,
-                  eMail: "foobar2@vdhamer.com"
+//                  phoneNumber: nil,
+                  eMail: "foobarA@vdhamer.com"
         )
 
         if commit {
             do {
-                if test2BackgroundContext.hasChanges {
-                    try test2BackgroundContext.save() // commit all changes
+                if testABackgroundContext.hasChanges { // TODO: does this give problems?
+                    try testABackgroundContext.save() // commit all changes
                 }
-                print("Photo Club Test2: completed insertSomeHardcodedMemberData()")
+                print("Photo Club TestA: completed insertSomeHardcodedMemberData()")
             } catch {
-                fatalError("Failed to save changes for Test2")
+                fatalError("Failed to save changes for TestA")
             }
         }
 

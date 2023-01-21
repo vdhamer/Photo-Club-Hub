@@ -12,7 +12,11 @@ import RegexBuilder
 extension MemberPortfolio: Comparable {
 
 	public static func < (lhs: MemberPortfolio, rhs: MemberPortfolio) -> Bool {
-		return (lhs.photographer.fullName < rhs.photographer.fullName)
+        if (lhs.photographer.fullName == rhs.photographer.fullName) {
+            return (lhs.photoClub.town < rhs.photoClub.town)
+        } else {
+            return (lhs.photographer.fullName < rhs.photographer.fullName)
+        }
 	}
 
 }
@@ -210,7 +214,7 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
                        memberWebsite: memberWebsite,
                        latestImage: latestImage)
             print("Created new membership for \(memberPortfolio.photographer.fullName) " +
-                  "in \(memberPortfolio.photoClub.fullName)")
+                  "in \(memberPortfolio.photoClub.fullName) of \(memberPortfolio.photoClub.town)")
 			return memberPortfolio
 		}
 	}
