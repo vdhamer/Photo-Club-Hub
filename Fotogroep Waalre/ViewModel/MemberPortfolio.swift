@@ -67,7 +67,7 @@ extension MemberPortfolio { // computed properties (some related to handling opt
 	}
 
     public var id: String {
-        return photographer.fullName + " in " + photoClub.fullName
+        return photographer.fullName + " in " + photoClub.fullNameCommaTown
     }
 
     var memberWebsite: URL {
