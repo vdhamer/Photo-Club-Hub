@@ -9,7 +9,7 @@ This is build #4581 in Apple's App Store
 * Individual Portfolio screens
     * Portfolio title now includes name of the corresponding photo club (`photographer` @ `club>`).
 * Documentation
-    * Cleaned up the GitHub README.md by adding collapsible text blocks (`parent`, `detail`).
+    * Cleaned up the GitHub README.md by adding collapsible text blocks (HTML `summary`, `details`).
 * Maintainability
     * Added a PhotoClubID struct.
     * Hardcoded photographer info can now contain photograperWebsite URL.
