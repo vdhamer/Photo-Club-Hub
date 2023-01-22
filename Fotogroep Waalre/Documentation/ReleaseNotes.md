@@ -1,15 +1,18 @@
-### 2.2.8 (Github commit ???????) ??-01-23
+### 2.2.8 (Github commit ???????) 22-01-23
 
 This is build #4581 in Apple's App Store
 * Portfolios screen
-    * Fixed wording of a Dutch text (that is shown when the returned Portfolio list is empty)
+    * Changed misleading wording of a Dutch text (shown when the returned Portfolio list is empty).
+* Photo Clubs screen
+    * Software can now support multiple photo clubs that share the same name but are in a different town.
+    * There is now a 4th photo club to test/demo this (drag-down-to-refresh in Photo Clubs screen).
 * Individual Portfolio screens
-    * Title at top of screen now includes name of photo club (photographer @ club)
+    * Portfolio title now includes name of the corresponding photo club (`photographer` @ `club>`).
 * Documentation
-    * Restructured the GitHub README.md to include collapsible text blocks
+    * Cleaned up the GitHub README.md by adding collapsible text blocks (`parent`, `detail`).
 * Maintainability
-    * Added a PhotoClubID struct
-    * Hardcoded photographer info can now contain photograperWebsite URL
+    * Added a PhotoClubID struct.
+    * Hardcoded photographer info can now contain photograperWebsite URL.
 ---------------------------------------------------------------------------
 ### 2.2.7 (Github commit 0130c45) 01-01-23
 
