@@ -34,7 +34,7 @@
 /* Relationship status of member within a club. Used as prefix. */
 "deceased" = "overleden";
 
-/* No comment provided by engineer. */
+/* Section title on Readme page */
 "Developers wanted" = "Ontwikkelaars in de zaal?";
 
 /* Button at top right of Settings. Stores preference settings.
@@ -44,7 +44,7 @@ Button to close Info page. */
 /* Relationship status of member within a club. Used in concatenations. */
 "external coach" = "mentor";
 
-/* No comment provided by engineer. */
+/* Section title on Readme page */
 "Features and tips" = "Functionaliteit en tips";
 
 /* Relationship status of member within a club. Used as prefex. */
@@ -96,7 +96,7 @@ Button to close Info page. */
 "Paragraph_2.6" = "De app kan, indien een club daarvoor kiest, ook de portfolio's van *voormalige* clubleden tonen. De gebruiker kan bepalen of de portfolio's van ex-leden zichtbaar zijn.";
 
 /* Seventh paragraph in the App on Readme page */
-"Paragraph_2.7" = "Clubs met belangstelling om deel te nemen kunnen contact opnemen via app@FotogroepWaalre.nl.";
+"Paragraph_2.7" = "Clubs met belangstelling om deel te nemen kunnen contact opnemen via github@vdhamer.com.";
 
 /* First paragraph in The Features section of Readme page */
 "Paragraph_3.1" = "__Websites__\nHet hoofddoel van de app is om de portfolio's via een strakke presentatie tot hun recht te laten komen. Wij streven er dus _niet_ naar dat de app een website kan vervangen. Daarom verwijst de app de gebruiker via links desgewenst door naar de websites van de clubs.";
@@ -150,7 +150,7 @@ Button to close Info page. */
 "Paragraph_6.5" = "Momenteel bevat de app intern een Swift klasse per fotoclub. Die software module laadt en vertaalt de gegevens van de server (\"website\") van de desbetreffende club en combineert de gegevens met de gegevens in de app. Bij Fotogroep Waalre, bijvoorbeeld, leest de app de ledenlijst vanuit een HTML tabel (die deel uitmaakt van een met wachtwoord afgeschermd stukje website). De app leest de portfolio's met foto's per lid vanuit XML files. Deze XML files worden automatisch gegenereerd door een Lightroom Classic plug-in ([JuiceBox-Pro](https://www.juicebox.net)). Lightroom doet dus dienst als de editor voor portfolio's (als LR _collections_). Deze portfolio's worden via een LR upload-to-web knop en JuiceBox-Pro op www.FotogroepWaalre.nl gezet. En de app leest vervolgens de actuele portfolio's als XML bestanden in vanaf deze website.";
 
 /* Sixth paragraph Developers section of Readme page */
-"Paragraph_6.6" = "Samenvattend: wij zoeken vrijwilligers die mee willen helpen. Voor het meeprogrammeren zoeken wij mensen die eerder een eigen app gemaakt hebben op basis van SwiftUI. Of ervaren programmeurs die serieus bezig zijn met een SwiftUI cursus (b.v. [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/) van _Hacking With Swift_, of het college [CS193p](https://cs193p.sites.stanford.edu) dat Stanford University online hield ivm de pandemie). Vragen over de mogelijkheden om bij te dragen graag sturen naar appdev@FotogroepWaalre.nl.";
+"Paragraph_6.6" = "Samenvattend: wij zoeken vrijwilligers die mee willen helpen. Voor het meeprogrammeren zoeken wij mensen die eerder een eigen app gemaakt hebben op basis van SwiftUI. Of ervaren programmeurs die serieus bezig zijn met een SwiftUI cursus (b.v. [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/) van _Hacking With Swift_, of het college [CS193p](https://cs193p.sites.stanford.edu) dat Stanford University online hield ivm de pandemie). Vragen over de mogelijkheden om bij te dragen graag sturen naar github@vdhamer.com.";
 
 /* First paragraph Model section of Readme page */
 "Paragraph_7.1" = "Tenslotte een snelle tour langs het onderliggende informatiemodel danwel [MVVM](https://www.hackingwithswift.com/books/ios-swiftui/introducing-mvvm-into-your-swiftui-project) “model”. In de SwiftUI wereld betekent dat de entiteiten in de Modellaag als _structs_ gedefinieerd worden. De Swift taal ondersteunt als moderne programmeertaal uiteraard _klassen_, maar maakt ook veel gebruik van [_structs_](https://www.avanderlee.com/swift/struct-class-differences/) en [_protocollen_](https://docs.swift.org/swift-book/LanguageGuide/Protocols.html).";
@@ -164,14 +164,14 @@ Button to close Info page. */
 /* Telephone number (usually invisible) */
 "Phone:" = "Tel:";
 
-/* Title used in Navigation View
-Title used in PhotoClubs View */
+/* Title used in PhotoClubs View */
 "Photo Club Waalre" = "Fotogroep Waalre";
 
 /* Title of page with clubs and maps */
 "Photo Clubs" = "Fotogroepen";
 
-/* Title of page showing member portfolios */
+/* Title of page showing member portfolios
+Section title on Readme page */
 "Portfolios" = "Portfolio's";
 
 /* Title of screen with toggles to adjust preferences */
@@ -217,13 +217,13 @@ Field at top of Photographers page that allows the user to filter the photograph
 /* Section title on Readme page. */
 "Supported Platforms" = "iOS, iPadOS, MacOS";
 
-/* No comment provided by engineer. */
+/* Section title on Readme page */
 "The Club" = "Fotogroep Waalre";
 
-/* No comment provided by engineer. */
+/* Section title on Readme page */
 "The Model" = "Voer voor nerds";
 
-/* No comment provided by engineer. */
+/* Section title on Readme page */
 "The Prelude" = "Prelude";
 
 /* Hint to the user if the database returns zero Members with Search filter in use. */

@@ -124,8 +124,8 @@ Button to close Info page.</note>
         <note>Sixth paragraph in the App on Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_2.7" xml:space="preserve">
-        <source>Contact us (app@FotogroepWaalre.nl) if you are interested in adding support for your photo club.</source>
-        <target>Contact us (app@FotogroepWaalre.nl) if you are interested in adding support for your photo club.</target>
+        <source>Contact us (github@vdhamer.com) if you are interested in adding support for your photo club.</source>
+        <target>Contact us (github@vdhamer.com) if you are interested in adding support for your photo club.</target>
         <note>Seventh paragraph in the App on Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.1" xml:space="preserve">
@@ -214,8 +214,8 @@ Button to close Info page.</note>
         <note>Fifth paragraph Developers section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_6.6" xml:space="preserve">
-        <source>Software developers or other volunteers who are willing to help can contact us via appdev@FotogroepWaalre.nl. Regarding the required level of development experience: you should be good to go if you have created a complete SwiftUI app before. Alternatively, an experienced developer who is learning SwiftUI would also fit the bill. Recommended courses for learning SwiftUI are Hacking with Swift's practical [100 days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/) or Stanford's fast paced and more academic online [CS193p course](https://cs193p.sites.stanford.edu).</source>
-        <target>Software developers or other volunteers who are willing to help can contact us via appdev@FotogroepWaalre.nl. Regarding the required level of development experience: you should be good to go if you have created a complete SwiftUI app before. Alternatively, an experienced developer who is learning SwiftUI would also fit the bill. Recommended courses for learning SwiftUI are Hacking with Swift's practical [100 days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/) or Stanford's fast paced and more academic online [CS193p course](https://cs193p.sites.stanford.edu).</target>
+        <source>Software developers or other volunteers who are willing to help can contact us via github@vdhamer.com. Regarding the required level of development experience: you should be good to go if you have created a complete SwiftUI app before. Alternatively, an experienced developer who is learning SwiftUI would also fit the bill. Recommended courses for learning SwiftUI are Hacking with Swift's practical [100 days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/) or Stanford's fast paced and more academic online [CS193p course](https://cs193p.sites.stanford.edu).</source>
+        <target>Software developers or other volunteers who are willing to help can contact us via github@vdhamer.com. Regarding the required level of development experience: you should be good to go if you have created a complete SwiftUI app before. Alternatively, an experienced developer who is learning SwiftUI would also fit the bill. Recommended courses for learning SwiftUI are Hacking with Swift's practical [100 days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/) or Stanford's fast paced and more academic online [CS193p course](https://cs193p.sites.stanford.edu).</target>
         <note>Sixth paragraph Developers section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_7.1" xml:space="preserve">
@@ -241,8 +241,7 @@ Button to close Info page.</note>
       <trans-unit id="Photo Club Waalre" xml:space="preserve">
         <source>Photo Club Waalre</source>
         <target>Photo Club Waalre</target>
-        <note>Title used in Navigation View
-Title used in PhotoClubs View</note>
+        <note>Title used in PhotoClubs View</note>
       </trans-unit>
       <trans-unit id="Photo Clubs" xml:space="preserve">
         <source>Photo Clubs</source>
