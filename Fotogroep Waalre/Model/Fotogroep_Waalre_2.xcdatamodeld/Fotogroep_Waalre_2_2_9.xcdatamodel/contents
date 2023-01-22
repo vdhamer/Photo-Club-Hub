@@ -23,6 +23,7 @@
         <attribute name="fotobondNumber" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="kvkNumber" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="latitude_" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="lockedMap" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="longitude_" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="name_" attributeType="String" defaultValueString="DefaultPhotoClubName"/>
         <attribute name="photoClubWebsite" optional="YES" attributeType="URI"/>
