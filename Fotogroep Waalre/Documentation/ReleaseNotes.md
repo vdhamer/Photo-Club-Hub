@@ -1,4 +1,8 @@
-### 2.2.8 (Github commit ???????) 22-01-23
+### 2.2.9 (Github commit ???????) ??-02-23
+
+This is build #4582 in Apple's App Store
+---------------------------------------------------------------------------
+### 2.2.8 (Github commit 426c09c) 22-01-23
 
 This is build #4581 in Apple's App Store
 * Portfolios screen
