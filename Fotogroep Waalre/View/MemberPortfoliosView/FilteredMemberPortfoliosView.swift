@@ -18,10 +18,13 @@ struct FilteredMemberPortfoliosView: View {
 
     // regenerate Section using current FetchRequest with current filters and sorting
     init(predicate: NSPredicate, searchText: Binding<String>) {
-        _fetchRequest = FetchRequest<MemberPortfolio>(sortDescriptors: [ // replaces previous fetchRequest
-                                                SortDescriptor(\.photographer_!.givenName_, order: .forward),
-                                                SortDescriptor(\.photographer_!.familyName_, order: .forward)
-                                            ],
+        let sortDescriptors = [ // XCode had problems parsing this array
+            SortDescriptor(\MemberPortfolio.photographer_!.givenName_, order: .forward),
+            SortDescriptor(\MemberPortfolio.photographer_!.familyName_, order: .forward),
+            SortDescriptor(\MemberPortfolio.photoClub_!.name_, order: .forward),
+            SortDescriptor(\MemberPortfolio.photoClub_!.town_, order: .forward)
+        ]
+        _fetchRequest = FetchRequest<MemberPortfolio>(sortDescriptors: sortDescriptors,
                                              predicate: predicate,
                                              animation: .default
         )

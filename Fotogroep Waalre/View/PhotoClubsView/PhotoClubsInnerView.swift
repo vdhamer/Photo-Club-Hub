@@ -22,7 +22,8 @@ struct PhotoClubsInnerView: View {
     init(predicate: NSPredicate) {
         _fetchRequest = FetchRequest<PhotoClub>(sortDescriptors: // replaces previous fetchRequest
                                                     [SortDescriptor(\.priority_, order: .reverse), // highest prio first
-                                                     SortDescriptor(\.name_, order: .forward)],
+                                                     SortDescriptor(\.name_, order: .forward), // photoclubID=name&town
+                                                     SortDescriptor(\.town_, order: .forward)],
                                                 predicate: predicate,
                                                 animation: .default)
     }

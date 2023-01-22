@@ -19,7 +19,9 @@ struct MemberPortfoliosView: View {
     private var photographers: FetchedResults<Photographer>
 
     @FetchRequest(
-        sortDescriptors: [SortDescriptor(\.name_, order: .forward)],
+        sortDescriptors: [SortDescriptor(\.priority_, order: .reverse), // highest priority first
+                          SortDescriptor(\.name_, order: .forward), // photo clubs are identified by (name, town)
+                          SortDescriptor(\.town_, order: .forward)],
         animation: .default)
     private var photoClubs: FetchedResults<PhotoClub>
 

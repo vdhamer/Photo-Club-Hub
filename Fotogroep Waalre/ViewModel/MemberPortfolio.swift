@@ -67,7 +67,7 @@ extension MemberPortfolio { // computed properties (some related to handling opt
 	}
 
     public var id: String {
-        return photographer.fullName + " in " + photoClub.fullName
+        return photographer.fullName + " in " + photoClub.fullNameCommaTown
     }
 
     var memberWebsite: URL {
@@ -214,7 +214,7 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
                        memberWebsite: memberWebsite,
                        latestImage: latestImage)
             print("Created new membership for \(memberPortfolio.photographer.fullName) " +
-                  "in \(memberPortfolio.photoClub.fullName)")
+                  "in \(memberPortfolio.photoClub.fullName) of \(memberPortfolio.photoClub.town)")
 			return memberPortfolio
 		}
 	}
@@ -299,7 +299,8 @@ extension MemberPortfolio { // convenience function
             [
                 NSSortDescriptor(keyPath: \MemberPortfolio.photographer_?.givenName_, ascending: true),
                 NSSortDescriptor(keyPath: \MemberPortfolio.photographer_?.familyName_, ascending: true),
-                NSSortDescriptor(keyPath: \MemberPortfolio.photoClub_?.name_, ascending: true)
+                NSSortDescriptor(keyPath: \MemberPortfolio.photoClub_?.name_, ascending: true),
+                NSSortDescriptor(keyPath: \MemberPortfolio.photoClub_?.town_, ascending: true)
             ]
 		return request
 	}

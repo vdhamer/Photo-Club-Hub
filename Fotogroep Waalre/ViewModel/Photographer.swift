@@ -91,44 +91,6 @@ extension Photographer {
         }
     }
 
-	// Find existing object and otherwise create a new object
-	// Update existing attributes or fill the new object
-    /*
-    static func findCreateUpdate(context: NSManagedObjectContext,
-                                 givenName: String, familyName: String,
-                                 memberRolesAndStatus: MemberRolesAndStatus,
-                                 isDeceased: Bool? = nil,
-                                 phoneNumber: String? = nil, eMail: String? = nil,
-                                 photographerWebsite: URL? = nil, bornDT: Date? = nil
-                                ) -> Photographer {
-        let predicateFormat: String = "givenName_ = %@ AND familyName_ = %@" // avoid localization
-		let request = fetchRequest(predicate: NSPredicate(format: predicateFormat, givenName, familyName))
-
-		let photographers: [Photographer] = (try? context.fetch(request)) ?? [] // nil means absolute failure
-
-		if let photographer = photographers.first { // already exists, so make sure secondary attributes are up to date
-            if update(context: context, photographer: photographer,
-                      isDeceased: isDeceased,
-                      phoneNumber: phoneNumber, eMail: eMail,
-                      photographerWebsite: photographerWebsite, bornDT: bornDT) {
-                print("Updated info for photographer \(photographer.fullName)")
-            }
-			return photographer
-		} else {
-			let photographer = Photographer(context: context) // new record in database
-			photographer.givenName = givenName
-			photographer.familyName = familyName
-			photographer.isDeceased = isDeceased ?? false
-            photographer.phoneNumber = phoneNumber ?? ""
-            photographer.eMail = eMail ?? ""
-            photographer.bornDT = bornDT
-            _ = update(context: context, photographer: photographer,
-                       phoneNumber: phoneNumber, eMail: eMail, photographerWebsite: photographerWebsite, bornDT: bornDT)
-            print("Created new photographer \(photographer.fullName)")
-			return photographer
-		}
-	}*/
-
 	// Update non-identifying attributes/properties within existing instance of class PhotoClub
     static func update(context: NSManagedObjectContext, photographer: Photographer,
                        memberRolesAndStatus: MemberRolesAndStatus,
@@ -180,7 +142,7 @@ extension Photographer { // convenience function
 		let request = NSFetchRequest<Photographer>(entityName: "Photographer")
 		request.predicate = predicate // WHERE part of the SQL query
 		request.sortDescriptors = [NSSortDescriptor(key: "givenName_", ascending: true),
-								   NSSortDescriptor(key: "familyName_", ascending: true)] // ORDER BY part of the SQL query
+								   NSSortDescriptor(key: "familyName_", ascending: true)]
 		return request
 	}
 
