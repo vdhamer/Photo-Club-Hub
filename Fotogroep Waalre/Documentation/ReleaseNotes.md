@@ -1,8 +1,11 @@
-### 2.2.8 (Github commit ???????) ??-01-23
+### 2.2.8 (Github commit ???????) 22-01-23
 
 This is build #4581 in Apple's App Store
 * Portfolios screen
     * Fixed wording of a Dutch text (that is shown when the returned Portfolio list is empty)
+* Photo Clubs screen
+    * Software can now support multiple photo clubs with same name but in a different town
+    * There is now a 4th photo club to test/demo this (drag-down-to-refresh in Photo Clubs screen)
 * Individual Portfolio screens
     * Title at top of screen now includes name of photo club (photographer @ club)
 * Documentation
