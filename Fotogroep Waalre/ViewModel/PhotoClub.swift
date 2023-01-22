@@ -97,7 +97,6 @@ extension PhotoClub {
 		if let photoClub = photoClubs.first { // already exists, so make sure secondary attributes are up to date
             if update(context: context, photoClub: photoClub,
                       shortName: photoClubID.shortNickname,
-                      town: photoClubID.id.town,
                       optionalFields: (photoClubWebsite: photoClubWebsite,
                                        fotobondNumber: fotobondNumber,
                                        kvkNumber: kvkNumber),
@@ -112,7 +111,6 @@ extension PhotoClub {
             photoClub.town = photoClubID.id.town // second part of ID
             _ = update(context: context, photoClub: photoClub,
                        shortName: photoClubID.shortNickname,
-                       town: photoClubID.id.town, // TODO: why is this here?
                        optionalFields: (photoClubWebsite: photoClubWebsite,
                                         fotobondNumber: fotobondNumber,
                                         kvkNumber: kvkNumber),
@@ -125,7 +123,7 @@ extension PhotoClub {
 
 	// Update non-identifying attributes/properties within existing instance of class PhotoClub
     // swiftlint:disable:next function_parameter_count
-    static func update(context: NSManagedObjectContext, photoClub: PhotoClub, shortName: String, town: String,
+    static func update(context: NSManagedObjectContext, photoClub: PhotoClub, shortName: String,
                        // swiftlint:disable:next large_tuple
                        optionalFields: (photoClubWebsite: URL?, fotobondNumber: Int16?, kvkNumber: Int32?),
                        coordinates: CLLocationCoordinate2D?, priority: Int16?) -> Bool {
@@ -136,10 +134,6 @@ extension PhotoClub {
             photoClub.shortName = shortName
             modified = true
         }
-        if photoClub.town != town { // TODO: why is this here?
-			photoClub.town = town
-			modified = true
-		}
         if let website = optionalFields.photoClubWebsite, photoClub.photoClubWebsite != website {
 			photoClub.photoClubWebsite = website
 			modified = true

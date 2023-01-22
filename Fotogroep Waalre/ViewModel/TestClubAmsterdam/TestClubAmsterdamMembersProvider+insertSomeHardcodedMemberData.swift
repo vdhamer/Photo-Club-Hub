@@ -52,7 +52,7 @@ extension TestClubAmsterdamMembersProvider { // fill with some initial hard-code
 
         if commit {
             do {
-                if testAmsterdamBackgroundContext.hasChanges { // TODO: does this give problems?
+                if testAmsterdamBackgroundContext.hasChanges { // is this necessary? sometimes save() done earlier
                     try testAmsterdamBackgroundContext.save() // commit all changes
                 }
                 print("Photo Club TestAmsterdam: completed insertSomeHardcodedMemberData()")

@@ -174,7 +174,7 @@ struct FilteredMemberPortfoliosView: View {
 }
 
 struct FilteredMemberPortfolios_Previews: PreviewProvider {
-    static let predicate = NSPredicate(format: "photographer_.givenName_ = %@", argumentArray: ["Jan"]) // TODO town
+    static let predicate = NSPredicate(format: "photographer_.givenName_ = %@", argumentArray: ["Jan"])
     @State static var searchText: String = ""
 
     static var previews: some View {
