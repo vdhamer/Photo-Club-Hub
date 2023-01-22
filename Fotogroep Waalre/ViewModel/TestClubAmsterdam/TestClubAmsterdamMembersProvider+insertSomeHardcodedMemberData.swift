@@ -8,38 +8,39 @@
 import CoreData // for NSManagedObjectContext
 import MapKit // for CLLocationCoordinate2D
 
-extension TestClubAMembersProvider { // fill with some initial hard-coded content
+extension TestClubAmsterdamMembersProvider { // fill with some initial hard-coded content
 
-    private static let testAURL = URL(string: "https://www.foam.org")
-    static let photoClubTestAID = PhotoClubID(id: (fullName: "Test Fotoclub", // identical name to club in Rotterdam
+    private static let testAmsterdamURL = URL(string: "https://www.foam.org")
+    static let photoClubTestAmsterdamID = PhotoClubID(id: (fullName: "Test Fotoclub", // same name to club in Rotterdam
                                                    town: "Amsterdam"),
                                               shortNickname: "FC Test Adam")
 
-    func insertSomeHardcodedMemberData(testABackgroundContext: NSManagedObjectContext) {
-        testABackgroundContext.perform {
+    func insertSomeHardcodedMemberData(testAmsterdamBackgroundContext: NSManagedObjectContext) {
+        testAmsterdamBackgroundContext.perform {
             print("Photo Club Test Adam: starting insertSomeHardcodedMemberData() in background")
-            self.insertSomeHardcodedMemberDataCommon(testABackgroundContext: testABackgroundContext, commit: true)
+            self.insertSomeHardcodedMemberDataCommon(testAmsterdamBackgroundContext: testAmsterdamBackgroundContext,
+                                                     commit: true)
         }
     }
 
-    private func insertSomeHardcodedMemberDataCommon(testABackgroundContext: NSManagedObjectContext,
+    private func insertSomeHardcodedMemberDataCommon(testAmsterdamBackgroundContext: NSManagedObjectContext,
                                                      commit: Bool) {
 
         // add photo club to Photo Clubs (if needed)
-        let clubTestA = PhotoClub.findCreateUpdate(
-                                                         context: testABackgroundContext,
-                                                         photoClubID: Self.photoClubTestAID,
-                                                         photoClubWebsite: TestClubAMembersProvider.testAURL,
-                                                         fotobondNumber: 5678, kvkNumber: nil,
-                                                         coordinates: CLLocationCoordinate2D(latitude: 52.364217,
-                                                                                             longitude: 4.893370),
-                                                         priority: 1
-                                                        )
+        let clubTestAmsterdam = PhotoClub.findCreateUpdate(
+                                                 context: testAmsterdamBackgroundContext,
+                                                 photoClubID: Self.photoClubTestAmsterdamID,
+                                                 photoClubWebsite: TestClubAmsterdamMembersProvider.testAmsterdamURL,
+                                                 fotobondNumber: 5678, kvkNumber: nil,
+                                                 coordinates: CLLocationCoordinate2D(latitude: 52.364217,
+                                                                                     longitude: 4.893370),
+                                                 priority: 1
+                                                )
 
-        addMember(context: testABackgroundContext,
+        addMember(context: testAmsterdamBackgroundContext,
                   givenName: "Peter",
                   familyName: "van den Hamer",
-                  photoClub: clubTestA,
+                  photoClub: clubTestAmsterdam,
                   memberRolesAndStatus: MemberRolesAndStatus(role: [ .secretary: true ], stat: [ .former: false]),
                   memberWebsite: URL(string: "https://www.fotogroepwaalre.nl/fotos/Peter_van_den_Hamer_testA")!,
                   latestImage: URL(string:
@@ -51,12 +52,12 @@ extension TestClubAMembersProvider { // fill with some initial hard-coded conten
 
         if commit {
             do {
-                if testABackgroundContext.hasChanges { // TODO: does this give problems?
-                    try testABackgroundContext.save() // commit all changes
+                if testAmsterdamBackgroundContext.hasChanges { // TODO: does this give problems?
+                    try testAmsterdamBackgroundContext.save() // commit all changes
                 }
-                print("Photo Club TestA: completed insertSomeHardcodedMemberData()")
+                print("Photo Club TestAmsterdam: completed insertSomeHardcodedMemberData()")
             } catch {
-                fatalError("Failed to save changes for TestA")
+                fatalError("Failed to save changes for TestAmsterdam")
             }
         }
 

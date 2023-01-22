@@ -8,38 +8,39 @@
 import CoreData // for NSManagedObjectContext
 import MapKit // for CLLocationCoordinate2D
 
-extension TestClubRMembersProvider { // fill with some initial hard-coded content
+extension TestClubRotterdamMembersProvider { // fill with some initial hard-coded content
 
-    private static let testRURL = URL(string: "https://www.nederlandsfotomuseum.nl")
-    static let photoClubTestRID = PhotoClubID(id: (fullName: "Test Fotoclub", // identical name to club in Amsterdam
+    private static let testRotterdamURL = URL(string: "https://www.nederlandsfotomuseum.nl")
+    static let photoClubTestRotterdamID = PhotoClubID(id: (fullName: "Test Fotoclub", // same name as club in Amsterdam
                                                   town: "Rotterdam"),
                                              shortNickname: "FC Test Rdam")
 
-    func insertSomeHardcodedMemberData(testRBackgroundContext: NSManagedObjectContext) {
-        testRBackgroundContext.perform {
+    func insertSomeHardcodedMemberData(testRotterdamBackgroundContext: NSManagedObjectContext) {
+        testRotterdamBackgroundContext.perform {
             print("Photo Club Test Rdam: starting insertSomeHardcodedMemberData() in background")
-            self.insertSomeHardcodedMemberDataCommon(testRBackgroundContext: testRBackgroundContext, commit: true)
+            self.insertSomeHardcodedMemberDataCommon(testRotterdamBackgroundContext: testRotterdamBackgroundContext,
+                                                     commit: true)
         }
     }
 
-    private func insertSomeHardcodedMemberDataCommon(testRBackgroundContext: NSManagedObjectContext,
+    private func insertSomeHardcodedMemberDataCommon(testRotterdamBackgroundContext: NSManagedObjectContext,
                                                      commit: Bool) {
 
         // add photo club to Photo Clubs (if needed)
-        let clubTestR = PhotoClub.findCreateUpdate(
-                                                         context: testRBackgroundContext,
-                                                         photoClubID: Self.photoClubTestRID,
-                                                         photoClubWebsite: TestClubRMembersProvider.testRURL,
-                                                         fotobondNumber: 1234, kvkNumber: nil,
-                                                         coordinates: CLLocationCoordinate2D(latitude: 51.905292,
-                                                                                             longitude: 4.486934),
-                                                         priority: 1
-                                                        )
+        let clubTestRotterdam = PhotoClub.findCreateUpdate(
+                                             context: testRotterdamBackgroundContext,
+                                             photoClubID: Self.photoClubTestRotterdamID,
+                                             photoClubWebsite: TestClubRotterdamMembersProvider.testRotterdamURL,
+                                             fotobondNumber: 1234, kvkNumber: nil,
+                                             coordinates: CLLocationCoordinate2D(latitude: 51.905292,
+                                                                                 longitude: 4.486934),
+                                             priority: 1
+                                            )
 
-        addMember(context: testRBackgroundContext,
+        addMember(context: testRotterdamBackgroundContext,
                   givenName: "Peter",
                   familyName: "van den Hamer",
-                  photoClub: clubTestR,
+                  photoClub: clubTestRotterdam,
                   memberRolesAndStatus: MemberRolesAndStatus(role: [ .admin: true ], stat: [ .former: false]),
                   memberWebsite: URL(string: "https://www.fotogroepwaalre.nl/fotos/Peter_van_den_Hamer_testR")!,
                   latestImage: URL(string:
@@ -51,8 +52,8 @@ extension TestClubRMembersProvider { // fill with some initial hard-coded conten
 
         if commit {
             do {
-                if testRBackgroundContext.hasChanges {
-                    try testRBackgroundContext.save() // commit all changes
+                if testRotterdamBackgroundContext.hasChanges {
+                    try testRotterdamBackgroundContext.save() // commit all changes
                 }
                 print("Photo Club Test Rdam: completed insertSomeHardcodedMemberData()")
             } catch {
