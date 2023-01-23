@@ -10,8 +10,9 @@ import RegexBuilder
 
 class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
 
-    static let photoClubWaalreID = PhotoClubID(id: (fullName: "Fotogroep Waalre", town: "Waalre"),
-                                               shortNickname: "FG Waalre")
+    static let photoClubWaalreIdPlus = PhotoClubIdPlus(fullName: "Fotogroep Waalre",
+                                                       town: "Waalre",
+                                                       nickname: "FG Waalre")
 
 //    /// A shared member provider for use within the main app bundle.
 //    static let shared = FotogroepWaalreMembersProvider()
@@ -28,7 +29,7 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
             Task {
                 await loadPrivateMembersFromWebsite( backgroundContext: fgwBackgroundContext,
                                                      privateMemberURL: privateURL,
-                                                     photoClubID: FGWMembersProvider.photoClubWaalreID,
+                                                     photoClubIdPlus: FGWMembersProvider.photoClubWaalreIdPlus,
                                                      commit: true
                 )
             }
@@ -74,7 +75,7 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
 
     func loadPrivateMembersFromWebsite( backgroundContext: NSManagedObjectContext,
                                         privateMemberURL: URL,
-                                        photoClubID: PhotoClubID,
+                                        photoClubIdPlus: PhotoClubIdPlus,
                                         commit: Bool ) async {
 
         print("Fotogroep Waalre: starting loadPrivateMembersFromWebsite() in background")
@@ -83,7 +84,9 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
         if results != nil, results?.utfContent != nil {
             let htmlContent = String(data: results!.utfContent! as Data,
                                      encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue))!
-            parseHTMLContent(backgroundContext: backgroundContext, htmlContent: htmlContent, photoClubID: photoClubID)
+            parseHTMLContent(backgroundContext: backgroundContext,
+                             htmlContent: htmlContent,
+                             photoClubIdPlus: photoClubIdPlus)
             if commit {
                 do {
                     if backgroundContext.hasChanges {
@@ -101,8 +104,9 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
         }
     }
 
-    private func parseHTMLContent(backgroundContext: NSManagedObjectContext, htmlContent: String,
-                                  photoClubID: PhotoClubID) {
+    private func parseHTMLContent(backgroundContext: NSManagedObjectContext,
+                                  htmlContent: String,
+                                  photoClubIdPlus: PhotoClubIdPlus) {
         var targetState: HTMLPageLoadingState = .tableStart        // initial entry point on loop of states
 
         var personName = PersonName(fullName: "", givenName: "", familyName: "")
@@ -110,7 +114,7 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
         var birthDate = toDate(from: "1/1/9999") // dummy value that is overwritten later
 
         let photoClub: PhotoClub = PhotoClub.findCreateUpdate(context: backgroundContext,
-                                                              photoClubID: photoClubID)
+                                                              photoClubIdPlus: photoClubIdPlus)
 
         htmlContent.enumerateLines { (line, _ stop) -> Void in
             if line.contains(targetState.targetString()) {

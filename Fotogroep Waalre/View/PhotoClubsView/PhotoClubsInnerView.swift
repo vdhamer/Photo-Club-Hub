@@ -15,7 +15,7 @@ struct PhotoClubsInnerView: View {
     @FetchRequest var fetchRequest: FetchedResults<PhotoClub>
     private let permitDeletionOfPhotoClubs = true // disables .delete() functionality for this section
     @Environment(\.layoutDirection) var layoutDirection // .leftToRight or .rightToLeft
-    @State private var scrollLocks: [String: Bool] = [:] // blocks scrolling and panning of maps
+    @State private var scrollLocks: [PhotoClubId: Bool] = [:] // blocks scrolling and panning of maps
     let accentColor: Color = .accentColor // needed to solve a typing issue
 
     // regenerate Section using dynamic FetchRequest with dynamic predicate and dynamic sortDescriptor
@@ -64,14 +64,14 @@ struct PhotoClubsInnerView: View {
                     Spacer()
                     Button(
                         action: {
-                            if scrollLocks[filteredPhotoClub.fullName] != nil {
-                                openCloseSound(openClose: scrollLocks[filteredPhotoClub.fullName]! ? .close : .open)
-                                scrollLocks[filteredPhotoClub.fullName] = !scrollLocks[filteredPhotoClub.fullName]!
+                            if scrollLocks[filteredPhotoClub.id] != nil {
+                                openCloseSound(openClose: scrollLocks[filteredPhotoClub.id]! ? .close : .open)
+                                scrollLocks[filteredPhotoClub.id] = !scrollLocks[filteredPhotoClub.id]!
                             }
                         },
                         label: {
                             HStack { // to make background color clickable too
-                                LockAnimationView(locked: scrollLocks[filteredPhotoClub.fullName] ?? true)
+                                LockAnimationView(locked: scrollLocks[filteredPhotoClub.id] ?? true)
                             }
                             .frame(maxWidth: 60, maxHeight: 60)
                             .contentShape(Rectangle())
@@ -84,13 +84,14 @@ struct PhotoClubsInnerView: View {
                         latitude: filteredPhotoClub.latitude_,
                         longitude: filteredPhotoClub.longitude_),
                                        span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))),
-                    interactionModes: (scrollLocks[filteredPhotoClub.fullName] ?? true) ? [] : [.zoom, .pan],
+                    interactionModes: (scrollLocks[filteredPhotoClub.id] ?? false) ? [] : [.zoom, .pan],
                     annotationItems: fetchRequest) { photoClub in
                     MapMarker( coordinate: photoClub.coordinates,
                                tint: photoClub == filteredPhotoClub ? .photoClubColor : .blue )
                 }
                     .frame(minHeight: 300, idealHeight: 500, maxHeight: .infinity)
-                    .onAppear(perform: { scrollLocks[filteredPhotoClub.fullName] = fetchRequest.count > 1 })
+                    // if there is only one Photo Club map, allow scrolling and panning
+                    .onAppear(perform: { scrollLocks[filteredPhotoClub.id] = fetchRequest.count > 1 })
             }
             .accentColor(.photoClubColor)
         }

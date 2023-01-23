@@ -7,7 +7,30 @@
 
 import Foundation
 
-struct PhotoClubID {
-    var id: (fullName: String, town: String)
-    var shortNickname: String
+struct PhotoClubIdPlus { // PhotoClubID plus non-identifying nickname
+    var id: PhotoClubId
+    var nickname: String
+
+    init(fullName: String, // initializer hides PhotoClubId level
+         town: String,
+         nickname: String) {
+        let id = PhotoClubId(fullName: fullName, town: town)
+        self.id = id
+        self.nickname = nickname
+    }
+
+    init(id: PhotoClubId, // initionalizer exposes PhotoClubId level
+         nickname: String) {
+        self.id = id
+        self.nickname = nickname
+    }
+
+    // convenience functions
+    var fullName: String { id.fullName }
+    var town: String { id.town }
+}
+
+public struct PhotoClubId: Hashable { // hashable because PhotoClubId is used as dictionary key
+    var fullName: String
+    var town: String
 }
