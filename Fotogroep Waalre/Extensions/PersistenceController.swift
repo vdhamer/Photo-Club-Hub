@@ -31,9 +31,9 @@ struct PersistenceController {
                 bornDT: Date() - Double.random(in: 365*24*3600 ... 75*365*24*3600)
             )
             let photoClub = PhotoClub.findCreateUpdate(context: viewContext,
-                                                       photoClubID: PhotoClubID(id: (fullName: "PhotoClub\(index)",
-                                                                                     town: "Town\(index)"),
-                                                                                shortNickname: "Club\(index)"),
+                                                       photoClubIdPlus: PhotoClubIdPlus(fullName: "PhotoClub\(index)",
+                                                                                        town: "Town\(index)",
+                                                                                        nickname: "ClubNick\(index)"),
                                                        photoClubWebsite: URL(string: "http://www.example.com/\(index)"),
                                                        fotobondNumber: Int16(index*1111),
                                                        kvkNumber: Int32(100+index),

@@ -11,9 +11,9 @@ import MapKit // for CLLocationCoordinate2D
 extension TestClubRotterdamMembersProvider { // fill with some initial hard-coded content
 
     private static let testRotterdamURL = URL(string: "https://www.nederlandsfotomuseum.nl")
-    static let photoClubTestRotterdamID = PhotoClubID(id: (fullName: "Test Fotoclub", // same name as club in Amsterdam
-                                                  town: "Rotterdam"),
-                                             shortNickname: "FC Test Rdam")
+    static let photoClubTestRotterdamIdPlus = PhotoClubIdPlus(fullName: "Test Fotoclub",
+                                                              town: "Rotterdam", // Amsterdam also has a "Test Fotoclub"
+                                                              nickname: "FC Test Rdam")
 
     func insertSomeHardcodedMemberData(testRotterdamBackgroundContext: NSManagedObjectContext) {
         testRotterdamBackgroundContext.perform {
@@ -29,7 +29,7 @@ extension TestClubRotterdamMembersProvider { // fill with some initial hard-code
         // add photo club to Photo Clubs (if needed)
         let clubTestRotterdam = PhotoClub.findCreateUpdate(
                                              context: testRotterdamBackgroundContext,
-                                             photoClubID: Self.photoClubTestRotterdamID,
+                                             photoClubIdPlus: Self.photoClubTestRotterdamIdPlus,
                                              photoClubWebsite: TestClubRotterdamMembersProvider.testRotterdamURL,
                                              fotobondNumber: 1234, kvkNumber: nil,
                                              coordinates: CLLocationCoordinate2D(latitude: 51.905292,
