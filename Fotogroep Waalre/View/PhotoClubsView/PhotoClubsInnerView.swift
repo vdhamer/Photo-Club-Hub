@@ -64,14 +64,18 @@ struct PhotoClubsInnerView: View {
                     Spacer()
                     Button(
                         action: {
-                            if scrollLocks[filteredPhotoClub.fullName] != nil {
-                                openCloseSound(openClose: scrollLocks[filteredPhotoClub.fullName]! ? .close : .open)
-                                scrollLocks[filteredPhotoClub.fullName] = !scrollLocks[filteredPhotoClub.fullName]!
+                            if scrollLocks[filteredPhotoClub.fullNameCommaTown] != nil {
+                                openCloseSound(openClose: scrollLocks[filteredPhotoClub.fullNameCommaTown]!
+                                               ? .close : .open)
+                                filteredPhotoClub.isScrollLocked.toggle()
+                                scrollLocks[filteredPhotoClub.fullNameCommaTown]! = filteredPhotoClub.isScrollLocked
                             }
                         },
                         label: {
                             HStack { // to make background color clickable too
-                                LockAnimationView(locked: scrollLocks[filteredPhotoClub.fullName] ?? true)
+                                if let isLocked = scrollLocks[filteredPhotoClub.fullNameCommaTown] {
+                                    LockAnimationView(locked: .constant(isLocked))
+                                }
                             }
                             .frame(maxWidth: 60, maxHeight: 60)
                             .contentShape(Rectangle())
@@ -84,13 +88,15 @@ struct PhotoClubsInnerView: View {
                         latitude: filteredPhotoClub.latitude_,
                         longitude: filteredPhotoClub.longitude_),
                                        span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))),
-                    interactionModes: (scrollLocks[filteredPhotoClub.fullName] ?? true) ? [] : [.zoom, .pan],
+                    interactionModes: (scrollLocks[filteredPhotoClub.fullNameCommaTown] ?? true) ? [] : [.zoom, .pan],
                     annotationItems: fetchRequest) { photoClub in
                     MapMarker( coordinate: photoClub.coordinates,
                                tint: photoClub == filteredPhotoClub ? .photoClubColor : .blue )
                 }
                     .frame(minHeight: 300, idealHeight: 500, maxHeight: .infinity)
-                    .onAppear(perform: { scrollLocks[filteredPhotoClub.fullName] = fetchRequest.count > 1 })
+                    .onAppear(perform: { scrollLocks[filteredPhotoClub.fullNameCommaTown] =
+                                                                                    filteredPhotoClub.isScrollLocked })
+                    .onDisappear(perform: { try? viewContext.save() }) // to store map scroll lock state in database
             }
             .accentColor(.photoClubColor)
         }
