@@ -33,8 +33,6 @@ struct FotogroepWaalreApp: App {
                 .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext) // main queue!
                 .onAppear {
                     _ = FGWMembersProvider() // always load members of Fotogroep Waalre
-//                    _ = TestClubMembersProvider()  // TODO:
-//                    _ = TestClub2MembersProvider()
                     // other groups can be added here by calling, for example, TestMembersProvider()
                     // but they are loaded by Pulling-to-Refresh the Photo Clubs screen
                 }

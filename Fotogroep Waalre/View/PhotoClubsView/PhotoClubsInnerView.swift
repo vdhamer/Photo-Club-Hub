@@ -64,16 +64,16 @@ struct PhotoClubsInnerView: View {
                     Spacer()
                     Button(
                         action: {
-                            if scrollLocks[filteredPhotoClub.fullNameCommaTown] != nil {
-                                openCloseSound(openClose: scrollLocks[filteredPhotoClub.fullNameCommaTown]!
+                            if scrollLocks[filteredPhotoClub.id] != nil {
+                                openCloseSound(openClose: scrollLocks[filteredPhotoClub.id]!
                                                ? .close : .open)
                                 filteredPhotoClub.isScrollLocked.toggle()
-                                scrollLocks[filteredPhotoClub.fullNameCommaTown]! = filteredPhotoClub.isScrollLocked
+                                scrollLocks[filteredPhotoClub.id]! = filteredPhotoClub.isScrollLocked
                             }
                         },
                         label: {
                             HStack { // to make background color clickable too
-                                if let isLocked = scrollLocks[filteredPhotoClub.fullNameCommaTown] {
+                                if let isLocked = scrollLocks[filteredPhotoClub.id] {
                                     LockAnimationView(locked: .constant(isLocked))
                                 }
                             }
@@ -94,7 +94,7 @@ struct PhotoClubsInnerView: View {
                                tint: photoClub == filteredPhotoClub ? .photoClubColor : .blue )
                 }
                     .frame(minHeight: 300, idealHeight: 500, maxHeight: .infinity)
-                    .onAppear(perform: { scrollLocks[filteredPhotoClub.fullNameCommaTown] =
+                    .onAppear(perform: { scrollLocks[filteredPhotoClub.id] =
                                                                                     filteredPhotoClub.isScrollLocked })
                     .onDisappear(perform: { try? viewContext.save() }) // to store map scroll lock state in database
             }
