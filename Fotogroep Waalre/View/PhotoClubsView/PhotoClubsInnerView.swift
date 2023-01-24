@@ -15,7 +15,7 @@ struct PhotoClubsInnerView: View {
     @FetchRequest var fetchRequest: FetchedResults<PhotoClub>
     private let permitDeletionOfPhotoClubs = true // disables .delete() functionality for this section
     @Environment(\.layoutDirection) var layoutDirection // .leftToRight or .rightToLeft
-    @State private var scrollLocks: [String: Bool] = [:] // blocks scrolling and panning of maps
+    @State private var scrollLocks: [PhotoClubId: Bool] = [:] // blocks scrolling and panning of maps
     let accentColor: Color = .accentColor // needed to solve a typing issue
 
     // regenerate Section using dynamic FetchRequest with dynamic predicate and dynamic sortDescriptor
@@ -88,7 +88,7 @@ struct PhotoClubsInnerView: View {
                         latitude: filteredPhotoClub.latitude_,
                         longitude: filteredPhotoClub.longitude_),
                                        span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))),
-                    interactionModes: (scrollLocks[filteredPhotoClub.fullNameCommaTown] ?? true) ? [] : [.zoom, .pan],
+                    interactionModes: (scrollLocks[filteredPhotoClub.id] ?? false) ? [] : [.zoom, .pan],
                     annotationItems: fetchRequest) { photoClub in
                     MapMarker( coordinate: photoClub.coordinates,
                                tint: photoClub == filteredPhotoClub ? .photoClubColor : .blue )

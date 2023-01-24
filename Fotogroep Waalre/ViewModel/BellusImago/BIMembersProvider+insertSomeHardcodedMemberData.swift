@@ -11,12 +11,12 @@ import MapKit // for CLLocationCoordinate2D
 extension BIMembersProvider { // fill with some initial hard-coded content
 
     private static let bellusImagoURL = URL(string: "https://www.fotoClubBellusImago.nl")
-    private static let photoClubBellusImagoID = PhotoClubID(id: (fullName: "Fotoclub Bellus Imago",
-                                                                 town: "Veldhoven"),
-                                                            shortNickname: "FC BellusImago")
+    private static let photoClubBellusImagoIdPlus = PhotoClubIdPlus(fullName: "Fotoclub Bellus Imago",
+                                                                    town: "Veldhoven",
+                                                                    nickname: "FC BellusImago")
 
     func insertSomeHardcodedMemberData(biBackgroundContext: NSManagedObjectContext) {
-        let clubNickname = BIMembersProvider.photoClubBellusImagoID.shortNickname
+        let clubNickname = BIMembersProvider.photoClubBellusImagoIdPlus.nickname
         biBackgroundContext.perform {
             print("\(clubNickname): starting insertSomeHardcodedMemberData() in background")
             self.insertSomeHardcodedMemberDataCommon(biBackgroundContext: biBackgroundContext, commit: true)
@@ -29,7 +29,7 @@ extension BIMembersProvider { // fill with some initial hard-coded content
         // add Bellus Imago to Photo Clubs (if needed)
         let clubBellusImago = PhotoClub.findCreateUpdate(
                                                          context: biBackgroundContext,
-                                                         photoClubID: Self.photoClubBellusImagoID,
+                                                         photoClubIdPlus: Self.photoClubBellusImagoIdPlus,
                                                          photoClubWebsite: BIMembersProvider.bellusImagoURL,
                                                          fotobondNumber: 1671, kvkNumber: nil,
                                                          coordinates: CLLocationCoordinate2D(latitude: 51.425410,
@@ -59,7 +59,7 @@ extension BIMembersProvider { // fill with some initial hard-coded content
         )
 
         if commit {
-            let clubNickname = BIMembersProvider.photoClubBellusImagoID.shortNickname
+            let clubNickname = BIMembersProvider.photoClubBellusImagoIdPlus.nickname
 
             do {
                 if biBackgroundContext.hasChanges {

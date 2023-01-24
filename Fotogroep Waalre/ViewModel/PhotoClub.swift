@@ -33,6 +33,10 @@ extension PhotoClub {
         fullName + ", " + town
     }
 
+    public var id: PhotoClubId { // public because needed for Identifiable protocol
+        PhotoClubId(fullName: self.fullName, town: self.town)
+    }
+
     var shortName: String {
         get { return shortName_ ?? "Name?" }
         set { shortName_ = newValue }
@@ -78,25 +82,25 @@ extension PhotoClub {
 	// Find existing object or create a new object
 	// Update existing attributes or fill the new object
     static func findCreateUpdate(context: NSManagedObjectContext,
-                                 photoClubID: PhotoClubID,
+                                 photoClubIdPlus: PhotoClubIdPlus,
                                  photoClubWebsite: URL? = nil, fotobondNumber: Int16? = nil, kvkNumber: Int32? = nil,
                                  coordinates: CLLocationCoordinate2D? = nil,
                                  priority: Int16? = nil
                                 ) -> PhotoClub {
         let predicateFormat: String = "name_ = %@ AND town_ = %@" // avoid localization
         let request: NSFetchRequest = fetchRequest(predicate: NSPredicate(format: predicateFormat,
-                                                                          photoClubID.id.fullName,
-                                                                          photoClubID.id.town))
+                                                                          photoClubIdPlus.fullName,
+                                                                          photoClubIdPlus.town))
 
 		let photoClubs: [PhotoClub] = (try? context.fetch(request)) ?? [] // nil means absolute failure
         if photoClubs.count > 1 {
             fatalError("Query returned \(photoClubs.count) photoclub(s) named " +
-                       "\(photoClubID.id.fullName) in \(photoClubID.id.town)")
+                       "\(photoClubIdPlus.fullName) in \(photoClubIdPlus.town)")
         }
 
 		if let photoClub = photoClubs.first { // already exists, so make sure secondary attributes are up to date
             if update(context: context, photoClub: photoClub,
-                      shortName: photoClubID.shortNickname,
+                      shortName: photoClubIdPlus.nickname,
                       optionalFields: (photoClubWebsite: photoClubWebsite,
                                        fotobondNumber: fotobondNumber,
                                        kvkNumber: kvkNumber),
@@ -107,10 +111,10 @@ extension PhotoClub {
 			return photoClub
 		} else {
 			let photoClub = PhotoClub(context: context) // create new PhotoClub object
-            photoClub.fullName = photoClubID.id.fullName // first part of ID
-            photoClub.town = photoClubID.id.town // second part of ID
+            photoClub.fullName = photoClubIdPlus.fullName // first part of ID
+            photoClub.town = photoClubIdPlus.town // second part of ID
             _ = update(context: context, photoClub: photoClub,
-                       shortName: photoClubID.shortNickname,
+                       shortName: photoClubIdPlus.nickname,
                        optionalFields: (photoClubWebsite: photoClubWebsite,
                                         fotobondNumber: fotobondNumber,
                                         kvkNumber: kvkNumber),

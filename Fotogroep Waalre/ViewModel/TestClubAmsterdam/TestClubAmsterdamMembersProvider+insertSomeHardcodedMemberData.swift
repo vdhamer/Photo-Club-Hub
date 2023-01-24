@@ -1,5 +1,5 @@
 //
-//  TestClubAMembersProvider+insertSomeHardcodedMemberData.swift
+//  TestClubAmsterdamMembersProvider+insertSomeHardcodedMemberData.swift
 //  Fotogroep Waalre
 //
 //  Created by Peter van den Hamer on 11/01/2023.
@@ -11,9 +11,9 @@ import MapKit // for CLLocationCoordinate2D
 extension TestClubAmsterdamMembersProvider { // fill with some initial hard-coded content
 
     private static let testAmsterdamURL = URL(string: "https://www.foam.org")
-    static let photoClubTestAmsterdamID = PhotoClubID(id: (fullName: "Test Fotoclub", // same name to club in Rotterdam
-                                                   town: "Amsterdam"),
-                                              shortNickname: "FC Test Adam")
+    static let photoClubTestAmsterdamIdPlus = PhotoClubIdPlus(fullName: "Test Fotoclub",
+                                                              town: "Amsterdam", // Rotterdam also has a "Test Fotoclub"
+                                                              nickname: "FC Test Adam")
 
     func insertSomeHardcodedMemberData(testAmsterdamBackgroundContext: NSManagedObjectContext) {
         testAmsterdamBackgroundContext.perform {
@@ -29,7 +29,7 @@ extension TestClubAmsterdamMembersProvider { // fill with some initial hard-code
         // add photo club to Photo Clubs (if needed)
         let clubTestAmsterdam = PhotoClub.findCreateUpdate(
                                                  context: testAmsterdamBackgroundContext,
-                                                 photoClubID: Self.photoClubTestAmsterdamID,
+                                                 photoClubIdPlus: Self.photoClubTestAmsterdamIdPlus,
                                                  photoClubWebsite: TestClubAmsterdamMembersProvider.testAmsterdamURL,
                                                  fotobondNumber: 5678, kvkNumber: nil,
                                                  coordinates: CLLocationCoordinate2D(latitude: 52.364217,

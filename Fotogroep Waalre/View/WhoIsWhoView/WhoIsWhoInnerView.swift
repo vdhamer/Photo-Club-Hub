@@ -149,7 +149,5 @@ struct PhotographersInnerView_Previews: PreviewProvider {
             }
             .navigationBarTitle(Text(String("PhotographersInnerView"))) // prevent localization
         }
-//        .navigationViewStyle(.stack)
-//        .searchable(text: $searchText)
     }
 }
