@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LockAnimationView: View {
     // https://github.com/amosgyamfi/swiftui-animation-library/blob/master/unlock.zip
-    var locked: Binding<Bool>
+    var locked: Bool
     var lineWidth: Double = 2.3
     var lineColor: Color = .photoClubColor
 
@@ -27,16 +27,14 @@ struct LockAnimationView: View {
                            height: min(geo.size.width, geo.size.height)*0.40)
 
                 Capsule()
-                    .trim(from: locked.wrappedValue ? 0.60 : 0.60,
-                          to: locked.wrappedValue ? 0.90: 0.95)
+                    .trim(from: locked ? 0.60 : 0.60,
+                          to: locked ? 0.90: 0.95)
                     .stroke(style: StrokeStyle(lineWidth: lineWidth, lineCap: .round))
                     .frame(width: min(geo.size.width, geo.size.height)*0.20,
                            height: min(geo.size.width, geo.size.height)*0.5)
                     .foregroundColor(lineColor)
-                    .offset(y: locked.wrappedValue ?
-                            min(geo.size.width, geo.size.height) * 0.20 :
-                            min(geo.size.width, geo.size.height) * 0.10)
-                    .rotation3DEffect(.degrees(locked.wrappedValue ? 0 : 180),
+                    .offset(y: min(geo.size.width, geo.size.height) * (locked ? 0.20 : 0.10))
+                    .rotation3DEffect(.degrees(locked ? 0 : 180),
                                       axis: (x: 0, y: -1, z: 0),
                                       anchor: .topTrailing,
                                       anchorZ: 0, perspective: 1)
@@ -53,8 +51,8 @@ struct LockAnimationView: View {
 
             }
             .offset(x: 7, y: -7)
-            .rotationEffect(.degrees(locked.wrappedValue ? 0 : 15))
-            .animation(Animation.easeInOut(duration: 0.3), value: locked.wrappedValue)
+            .rotationEffect(.degrees(locked ? 0 : 15))
+            .animation(Animation.easeInOut(duration: 0.3), value: locked)
         }
     }
 }
@@ -64,7 +62,7 @@ struct LockAnimation_Previews: PreviewProvider {
 
     static var previews: some View {
         GeometryReader { geo in
-            LockAnimationView(locked: .constant(true), lineWidth: 10, lineColor: .teal)
+            LockAnimationView(locked: true, lineWidth: 10, lineColor: .teal)
                 .frame(width: min(geo.size.width, geo.size.height),
                        height: min(geo.size.width, geo.size.height))
                 .frame(width: geo.size.width, height: geo.size.height)
