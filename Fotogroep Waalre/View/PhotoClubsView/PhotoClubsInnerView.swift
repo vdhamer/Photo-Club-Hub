@@ -87,7 +87,7 @@ struct PhotoClubsInnerView: View {
                                tint: photoClub == filteredPhotoClub ? .photoClubColor : .blue )
                 }
                     .frame(minHeight: 300, idealHeight: 500, maxHeight: .infinity)
-                    .onDisappear(perform: { try? viewContext.save() }) // to store map scroll lock state in database
+                    .onDisappear(perform: { try? viewContext.save() }) // store map scroll lock states in database
             }
             .accentColor(.photoClubColor)
         }
