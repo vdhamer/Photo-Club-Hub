@@ -13,7 +13,7 @@
 <ul>
 	<details><summary><a href="#about-the-project">About the Project</a></summary>
       	<ul>
-        	<li><a href="#whats-a-waalre">What's a Waalre?</a></li>
+        	<li><a href="#whats-a-waalre">What's Waalre?</a></li>
         	<li><a href="#the-portfolio-concept">The Portfolio Concept</a></li>
 			<li><a href="#implications-of-portfolios">Implications of Portfolios</a>
       	</ul>
@@ -79,14 +79,14 @@
 <ul> 
 <details><summary>
 
-### What's a Waalre?
+### What's Waalre?
 
 </summary>
 Photo Club Waalre is a photography club named after Waalre, a town in the south of 
 The Netherlands. Its members meet since 1988, mainly to critique each other’s photos.</p>
 
 This app originally served as an alternative way to view the photos published on the club's web
-site. The name of the app may change to emphasize that the app can support *multiple* photo clubs.
+site. The name of the app will change to emphasize that the app can support *multiple* photo clubs.
 </details>
 <details open><summary>
 	
