@@ -97,7 +97,7 @@ site. We expect to change the name of the app to emphasize that the app can supp
 > The app showcases curated images made by members of photo clubs.
 
 The images within the app are divided into so-called `portfolios`.
-These portfolios cover the part of a photographer's work that is associated with one photo club.
+Each portfolio covers that part of a photographer's work that is associated with one single photo club.
 
 <ul><details><summary>
 		
