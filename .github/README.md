@@ -105,7 +105,7 @@ Each portfolio covers that part of a photographer's work that is associated with
 	
 </summary>
 
-This app focusses on photographers as members of photo clubs.
+As mentioned above, this app focusses on photographers as members of photo clubs.
 
 If a photographer joined *multiple* photo clubs, the app can show *multiple* portfolios (with independent
 content) for that photographer. This can be relevant if a photographer is simultaneously 
