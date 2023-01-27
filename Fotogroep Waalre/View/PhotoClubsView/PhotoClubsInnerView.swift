@@ -13,7 +13,7 @@ struct PhotoClubsInnerView: View {
 
     @Environment(\.managedObjectContext) private var viewContext // may not be correct
     @FetchRequest var fetchRequest: FetchedResults<PhotoClub>
-    private let permitDeletionOfPhotoClubs = true // disables .delete() functionality for this section
+    private let permitDeletionOfPhotoClubs = true // disables .delete() functionality for this screen
     @Environment(\.layoutDirection) var layoutDirection // .leftToRight or .rightToLeft
     let accentColor: Color = .accentColor // needed to solve a typing issue
 
@@ -76,7 +76,7 @@ struct PhotoClubsInnerView: View {
                     )
                          .buttonStyle(.plain) // to avoid entire List element to be clickable
                 }
-                Map(coordinateRegion: .constant(
+                Map(coordinateRegion: .constant( // this probably gives issues, because it is not a real constant
                     MKCoordinateRegion(center: CLLocationCoordinate2D(
                         latitude: filteredPhotoClub.latitude_,
                         longitude: filteredPhotoClub.longitude_),
