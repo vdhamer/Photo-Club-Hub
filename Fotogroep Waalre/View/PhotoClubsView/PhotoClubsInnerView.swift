@@ -78,8 +78,7 @@ struct PhotoClubsInnerView: View {
                 }
                 Map(coordinateRegion: .constant( // this probably gives issues, because it is not a real constant
                     MKCoordinateRegion(center: CLLocationCoordinate2D(
-                        latitude: filteredPhotoClub.latitude_,
-                        longitude: filteredPhotoClub.longitude_),
+                                        latitude: filteredPhotoClub.latitude_, longitude: filteredPhotoClub.longitude_),
                                        span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))),
                     interactionModes: filteredPhotoClub.isScrollLocked ? [] : [.pan, .zoom],
                     annotationItems: fetchRequest) { photoClub in
