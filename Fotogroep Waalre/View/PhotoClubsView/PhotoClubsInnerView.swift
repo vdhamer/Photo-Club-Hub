@@ -17,6 +17,9 @@ struct PhotoClubsInnerView: View {
     @Environment(\.layoutDirection) var layoutDirection // .leftToRight or .rightToLeft
     let accentColor: Color = .accentColor // needed to solve a typing issue
     @State private var coordinateRegions: [PhotoClubId: MKCoordinateRegion] = [:]
+    private let defaultCoordRegion = MKCoordinateRegion( // used as a default if region is not found
+                center: CLLocationCoordinate2D(latitude: 48.858222, longitude: 2.2945), // Eifel Tower, Paris
+                span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
 
     // regenerate Section using dynamic FetchRequest with dynamic predicate and dynamic sortDescriptor
     init(predicate: NSPredicate) {
@@ -85,6 +88,16 @@ struct PhotoClubsInnerView: View {
                 }
                     .frame(minHeight: 300, idealHeight: 500, maxHeight: .infinity)
             }
+            .onAppear(perform: {
+                for filteredPhotoClub in fetchRequest {
+                    coordinateRegions[filteredPhotoClub.id] = MKCoordinateRegion(
+                        center: CLLocationCoordinate2D( latitude: filteredPhotoClub.latitude_,
+                                                        longitude: filteredPhotoClub.longitude_),
+                        span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
+                    print(filteredPhotoClub.fullName + " in " + filteredPhotoClub.town)
+                    print(coordinateRegions[filteredPhotoClub.id] as Any)
+                }
+            })
         }
         .onDelete(perform: deletePhotoClubs)
         .onAppear(perform: { initializeCoordinateRegions() })
