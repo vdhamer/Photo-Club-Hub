@@ -16,6 +16,10 @@ struct PhotoClubsInnerView: View {
     private let permitDeletionOfPhotoClubs = true // disables .delete() functionality for this screen
     @Environment(\.layoutDirection) var layoutDirection // .leftToRight or .rightToLeft
     let accentColor: Color = .accentColor // needed to solve a typing issue
+    @State private var coordinateRegions: [PhotoClubId: MKCoordinateRegion] = [:]
+    private let defaultCoordRegion = MKCoordinateRegion( // used as a default if region is not found
+                center: CLLocationCoordinate2D(latitude: 48.858222, longitude: 2.2945), // Eifel Tower, Paris
+                span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
 
     // regenerate Section using dynamic FetchRequest with dynamic predicate and dynamic sortDescriptor
     init(predicate: NSPredicate) {
@@ -76,21 +80,54 @@ struct PhotoClubsInnerView: View {
                     )
                          .buttonStyle(.plain) // to avoid entire List element to be clickable
                 }
-                Map(coordinateRegion: .constant( // this probably gives issues, because it is not a real constant
-                    MKCoordinateRegion(center: CLLocationCoordinate2D(
-                                        latitude: filteredPhotoClub.latitude_, longitude: filteredPhotoClub.longitude_),
-                                       span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))),
+                Map(coordinateRegion: binding(for: filteredPhotoClub.id),
                     interactionModes: filteredPhotoClub.isScrollLocked ? [] : [.pan, .zoom],
                     annotationItems: fetchRequest) { photoClub in
                     MapMarker( coordinate: photoClub.coordinates,
                                tint: photoClub == filteredPhotoClub ? .photoClubColor : .blue )
                 }
                     .frame(minHeight: 300, idealHeight: 500, maxHeight: .infinity)
-                    .onDisappear(perform: { try? viewContext.save() }) // store map scroll lock states in database
             }
-            .accentColor(.photoClubColor)
+            .onAppear(perform: {
+                for filteredPhotoClub in fetchRequest {
+                    coordinateRegions[filteredPhotoClub.id] = MKCoordinateRegion(
+                        center: CLLocationCoordinate2D( latitude: filteredPhotoClub.latitude_,
+                                                        longitude: filteredPhotoClub.longitude_),
+                        span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
+                    print(filteredPhotoClub.fullName + " in " + filteredPhotoClub.town)
+                    print(coordinateRegions[filteredPhotoClub.id] as Any)
+                }
+            })
         }
         .onDelete(perform: deletePhotoClubs)
+        .onDisappear(perform: { try? viewContext.save() }) // store map scroll lock states in database
+//        .onAppear(perform: {
+//            for filteredPhotoClub in fetchRequest {
+//                coordinateRegions[filteredPhotoClub.id] = MKCoordinateRegion(
+//                    center: CLLocationCoordinate2D( latitude: filteredPhotoClub.latitude_,
+//                                                    longitude: filteredPhotoClub.longitude_),
+//                    span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
+//                print(filteredPhotoClub.fullName + " in " + filteredPhotoClub.town)
+//                print(coordinateRegions[filteredPhotoClub.id] as Any)
+//            }
+//        })
+        .accentColor(.photoClubColor)
+    }
+
+    private func binding(for key: PhotoClubId) -> Binding<MKCoordinateRegion> {
+        // https://stackoverflow.com/questions/68430007/how-to-use-state-with-dictionary
+        // https://forums.swift.org/t/swiftui-how-to-use-dictionary-as-binding/34967
+
+        return .init(
+            get: {
+                print("key: \(key.fullName) in \(key.town)")
+                print("map center: \(String(describing: coordinateRegions[key]?.center))")
+                print("map span: \(String(describing: coordinateRegions[key]?.span))")
+                return coordinateRegions[key] ?? defaultCoordRegion
+            },
+            set: { coordinateRegions[key] = $0 }
+        )
+
     }
 
     func deletePhotoClubs(offsets: IndexSet) {
