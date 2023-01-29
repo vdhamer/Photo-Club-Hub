@@ -17,7 +17,6 @@ struct PhotoClubsInnerView: View {
     @Environment(\.layoutDirection) var layoutDirection // .leftToRight or .rightToLeft
     let accentColor: Color = .accentColor // needed to solve a typing issue
     @State private var coordinateRegions: [PhotoClubId: MKCoordinateRegion] = [:]
-//    private var alreadyInitializedCoordinateRegions: [PhotoClubId: Bool] = [:]
     private let defaultCoordRegion = MKCoordinateRegion( // used as a default if region is not found
                 center: CLLocationCoordinate2D(latitude: 48.858222, longitude: 2.2945), // Eifel Tower, Paris
                 span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
@@ -90,7 +89,7 @@ struct PhotoClubsInnerView: View {
                     .frame(minHeight: 300, idealHeight: 500, maxHeight: .infinity)
             }
             .task {
-                initializeCoordinateRegions() // seems to work slightly better than .onAppear(perform:)
+                initializeCoordinateRegion(photoClub: filteredPhotoClub) // works better than .onAppear(perform:)?
             }
         }
         .onDelete(perform: deletePhotoClubs)
@@ -98,14 +97,12 @@ struct PhotoClubsInnerView: View {
         .accentColor(.photoClubColor)
     }
 
-    private func initializeCoordinateRegions() {
-        print("Initialize coordinateRegions[]")
-        for filteredPhotoClub in fetchRequest {
-            coordinateRegions[filteredPhotoClub.id] = MKCoordinateRegion(
-                center: CLLocationCoordinate2D( latitude: filteredPhotoClub.latitude_,
-                                                longitude: filteredPhotoClub.longitude_),
-                span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
-        }
+    private func initializeCoordinateRegion(photoClub: PhotoClub) {
+        print("Initialize coordinateRegion for photo club \(photoClub.fullName) in \(photoClub.town)")
+        coordinateRegions[photoClub.id] = MKCoordinateRegion(
+            center: CLLocationCoordinate2D( latitude: photoClub.latitude_,
+                                            longitude: photoClub.longitude_),
+            span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
     }
 
     private func binding(for key: PhotoClubId) -> Binding<MKCoordinateRegion> {

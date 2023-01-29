@@ -3,9 +3,10 @@
 This is build #4582 in Apple's App Store
 * Photo Clubs screen
     * Fixed bug for (rare) case of multiple clubs with same name: locks were not independent.
-    * Made user's settings for the lock per photo club persistent.
+    * Saved the state of the locks (using Core Data).
+    * Updated the text at the botton of the screen.
 * Maintainability
-    * Testing and adaptation for iOS 16.3 and XCode ?.?
+    * Compatibility testing on iOS 16.3 and iPadOS 16.3
 ---------------------------------------------------------------------------
 ### 2.2.8 (Github commit 426c09c) 22-01-23
 

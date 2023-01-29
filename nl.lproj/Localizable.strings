@@ -170,6 +170,9 @@ Button to close Info page. */
 /* Title of page with clubs and maps */
 "Photo Clubs" = "Fotogroepen";
 
+/* Shown in gray at the bottom of the Photo Club page. */
+"PhotoClubs_Caption" = "● Het slotje kan gebruikt worden om deze landkaarten sleepbaar en inzoombaar/uitzoombaar te maken.\n● Men kan enkele testfotogroepen (voor demo doeleinden) toevoegen door de bovenkant van deze pagina omlaag te slepen en los te laten (*pull to refresh*).\n● Een fotogroep kan verwijderd worden door eerst alle betrokken Portfolio's te verwijden (*swipe left*) en dan de fotoclub zelf te verwijderen (*swipe left*).";
+
 /* Title of page showing member portfolios
 Section title on Readme page */
 "Portfolios" = "Portfolio's";
@@ -243,7 +246,4 @@ Field at top of Photographers page that allows the user to filter the photograph
 
 /* Title of page with list of photographers */
 "Who's Who" = "Namenlijst";
-
-/* Shown in gray at the bottom of the Photo Club page. */
-"You can prevent a map from scrolling using the lock icon. To add extra photo clubs for testing purposes, drag down and release the page. An individiual photo club can be deleted again by swiping it to the left. Delete a club's members (Portfolios) before deleting the club." = "Het slotje kan gebruikt worden om de landkaarten vast te zetten. De pagina omlaag slepen en loslaten (*pull to refresh*) laadt enkele extra testfotogroepen. Een fotogroep kan eventueel verwijderd worden door eerst alle betrokken Portfolio's te verwijden en dan de fotoclub naar links te slepen (*swipe left*).";
 
