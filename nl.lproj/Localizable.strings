@@ -171,7 +171,7 @@ Button to close Info page. */
 "Photo Clubs" = "Fotogroepen";
 
 /* Shown in gray at the bottom of the Photo Club page. */
-"PhotoClubs_Caption" = "● Het slotje kan gebruikt worden om deze landkaarten sleepbaar en inzoombaar/uitzoombaar te maken.\n● Men kan enkele testfotogroepen (voor demo doeleinden) toevoegen door de bovenkant van deze pagina omlaag te slepen en los te laten (*pull to refresh*).\n● Een fotogroep kan verwijderd worden door eerst alle betrokken Portfolio's te verwijden (*swipe left*) en dan de fotoclub zelf te verwijderen (*swipe left*).";
+"PhotoClubs_Caption" = "① Het slotje kan gebruikt worden om deze landkaarten sleepbaar en inzoombaar/uitzoombaar te maken.\n② Men kan enkele testfotogroepen (voor demo doeleinden) toevoegen door de bovenkant van deze pagina omlaag te slepen en los te laten (*pull to refresh*).\n③ Een fotogroep kan verwijderd worden door eerst alle betrokken Portfolio's te verwijden (*swipe left*) en dan de fotoclub zelf te verwijderen (*swipe left*).";
 
 /* Title of page showing member portfolios
 Section title on Readme page */

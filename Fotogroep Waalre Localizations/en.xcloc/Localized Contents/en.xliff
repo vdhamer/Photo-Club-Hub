@@ -249,12 +249,12 @@ Button to close Info page.</note>
         <note>Title of page with clubs and maps</note>
       </trans-unit>
       <trans-unit id="PhotoClubs_Caption" xml:space="preserve">
-        <source>● You can unlock/lock a map's scrolling and panning features using the Lock icon.
-● To add extra photo clubs for testing purposes, drag down and release the top of the page.
-● An individiual photo club can be deleted by first deleting (swipe left) all linked Portfolios on the Portfolio page, and then deleting (swipe left) the photo club itself on this page.</source>
-        <target>● You can unlock/lock a map's scrolling and panning features using the Lock icon.
-● To add extra photo clubs for testing purposes, drag down and release the top of the page.
-● An individiual photo club can be deleted by first deleting (swipe left) all linked Portfolios on the Portfolio page, and then deleting (swipe left) the photo club itself on this page.</target>
+        <source>① You can unlock/lock a map's scrolling and panning features using the Lock icon.
+② To add extra photo clubs for testing purposes, drag down and release the top of the page.
+③ An individiual photo club can be deleted by first deleting (swipe left) all linked Portfolios on the Portfolio page, and then deleting (swipe left) the photo club itself on this page.</source>
+        <target>① You can unlock/lock a map's scrolling and panning features using the Lock icon.
+② To add extra photo clubs for testing purposes, drag down and release the top of the page.
+③ An individiual photo club can be deleted by first deleting (swipe left) all linked Portfolios on the Portfolio page, and then deleting (swipe left) the photo club itself on this page.</target>
         <note>Shown in gray at the bottom of the Photo Club page.</note>
       </trans-unit>
       <trans-unit id="Portfolios" xml:space="preserve">
