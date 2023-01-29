@@ -38,12 +38,7 @@ struct PhotoClubsView: View {
         VStack {
             List { // lists are "Lazy" automatically
                 PhotoClubsInnerView(predicate: model.settings.photoClubPredicate)
-                Text("""
-                     You can prevent a map from scrolling using the lock icon. \
-                     To add extra photo clubs for testing purposes, drag down and release the page. \
-                     An individiual photo club can be deleted again by swiping it to the left. \
-                     Delete a club's members (Portfolios) before deleting the club.
-                     """, comment: "Shown in gray at the bottom of the Photo Club page.")
+                Text("PhotoClubs_Caption", comment: "Shown in gray at the bottom of the Photo Club page.")
                     .foregroundColor(.gray)
             }
             .refreshable { // for pull-to-refresh

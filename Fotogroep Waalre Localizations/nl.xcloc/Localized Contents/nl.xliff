@@ -253,6 +253,12 @@ Iedere ***PhotoClub*** heeft ***Members*** van diverse soorten (b.v. huidige led
         <target>Fotogroepen</target>
         <note>Title of page with clubs and maps</note>
       </trans-unit>
+      <trans-unit id="PhotoClubs_Caption" xml:space="preserve">
+        <source>You can unlock/lock a map's scrolling and panning features using the Lock icon.
+To add extra photo clubs for testing purposes, drag down and release the top of the page.
+An individiual photo club can be deleted by first deleting (swipe left) all linked Portfolios on the Portfolio page, and then deleting the photo club (swipe left) on this page.</source>
+        <note>Shown in gray at the bottom of the Photo Club page.</note>
+      </trans-unit>
       <trans-unit id="Portfolios" xml:space="preserve">
         <source>Portfolios</source>
         <target>Portfolio's</target>
@@ -354,11 +360,6 @@ Field at top of Photographers page that allows the user to filter the photograph
         <source>Who's Who</source>
         <target>Namenlijst</target>
         <note>Title of page with list of photographers</note>
-      </trans-unit>
-      <trans-unit id="You can prevent a map from scrolling using the lock icon. To add extra photo clubs for testing purposes, drag down and release the page. An individiual photo club can be deleted again by swiping it to the left. Delete a club's members (Portfolios) before deleting the club." xml:space="preserve">
-        <source>You can prevent a map from scrolling using the lock icon. To add extra photo clubs for testing purposes, drag down and release the page. An individiual photo club can be deleted again by swiping it to the left. Delete a club's members (Portfolios) before deleting the club.</source>
-        <target>Het slotje kan gebruikt worden om de landkaarten vast te zetten. De pagina omlaag slepen en loslaten (*pull to refresh*) laadt enkele extra testfotogroepen. Een fotogroep kan eventueel verwijderd worden door eerst alle betrokken Portfolio's te verwijden en dan de fotoclub naar links te slepen (*swipe left*).</target>
-        <note>Shown in gray at the bottom of the Photo Club page.</note>
       </trans-unit>
       <trans-unit id="admin" xml:space="preserve">
         <source>admin</source>

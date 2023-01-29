@@ -85,6 +85,9 @@
 /* Second paragraph Model section of Readme page */
 "Paragraph_7.2" = "The model: every **PhotoClub** has **Members** of various types (current, former, etc.), while some Members have a formal role like chairman within the PhotoClub. Some of **Photographer**'s data (like name and birthday) are unrelated to being a Member of a PhotoClub. **Portfolios** represent the body of work of a Photographer in the context of a PhotoClub. A Portfolio contains **Images**, but an Image could be in multiple Portfolios depending on where the Image was shared. Member and Portfolio can technically be considered synonyms from a modeling perspective: we create exactly one Portfolio for each PhotoClub that a Photographer joined. They are thus a single table in the database.";
 
+/* Shown in gray at the bottom of the Photo Club page. */
+"PhotoClubs_Caption" = "You can unlock/lock a map's scrolling and panning features using the Lock icon.\nTo add extra photo clubs for testing purposes, drag down and release the top of the page.\nAn individiual photo club can be deleted by first deleting (swipe left) all linked Portfolios on the Portfolio page, and then deleting (swipe left) the photo club itself on this page.";
+
 /* Section title on Readme page. */
 "Supported Platforms" = "iOS, iPadOS, MacOS";
 
