@@ -46,6 +46,7 @@ struct PhotoClubsView: View {
                 _ = BIMembersProvider()
                 _ = TestClubRotterdamMembersProvider()
                 _ = TestClubAmsterdamMembersProvider()
+                _ = TestClubDenHaagMembersProvider()
             }
         }
         .navigationTitle(navigationTitle)

@@ -45,7 +45,7 @@ extension TestClubAmsterdamMembersProvider { // fill with some initial hard-code
                   memberWebsite: URL(string: "https://www.fotogroepwaalre.nl/fotos/Peter_van_den_Hamer_testA")!,
                   latestImage: URL(string:
                      "https://www.fotogroepwaalre.nl/fotos/Peter_van_den_Hamer_testA/" +
-                                                    "images/2022_Iceland_R5_013.jpg")!,
+                                                    "thumbs/2022_Iceland_R5_013.jpg")!,
 //                  phoneNumber: nil,
                   eMail: "foobarA@vdhamer.com"
         )
