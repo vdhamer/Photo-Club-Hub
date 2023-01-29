@@ -17,6 +17,7 @@ struct PhotoClubsInnerView: View {
     @Environment(\.layoutDirection) var layoutDirection // .leftToRight or .rightToLeft
     let accentColor: Color = .accentColor // needed to solve a typing issue
     @State private var coordinateRegions: [PhotoClubId: MKCoordinateRegion] = [:]
+//    private var alreadyInitializedCoordinateRegions: [PhotoClubId: Bool] = [:]
     private let defaultCoordRegion = MKCoordinateRegion( // used as a default if region is not found
                 center: CLLocationCoordinate2D(latitude: 48.858222, longitude: 2.2945), // Eifel Tower, Paris
                 span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
@@ -88,19 +89,11 @@ struct PhotoClubsInnerView: View {
                 }
                     .frame(minHeight: 300, idealHeight: 500, maxHeight: .infinity)
             }
-            .onAppear(perform: {
-                for filteredPhotoClub in fetchRequest {
-                    coordinateRegions[filteredPhotoClub.id] = MKCoordinateRegion(
-                        center: CLLocationCoordinate2D( latitude: filteredPhotoClub.latitude_,
-                                                        longitude: filteredPhotoClub.longitude_),
-                        span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
-                    print(filteredPhotoClub.fullName + " in " + filteredPhotoClub.town)
-                    print(coordinateRegions[filteredPhotoClub.id] as Any)
-                }
-            })
+            .task {
+                initializeCoordinateRegions() // seems to work slightly better than .onAppear(perform:)
+            }
         }
         .onDelete(perform: deletePhotoClubs)
-        .onAppear(perform: { initializeCoordinateRegions() })
         .onDisappear(perform: { try? viewContext.save() }) // store map scroll-lock states in database
         .accentColor(.photoClubColor)
     }
@@ -123,7 +116,7 @@ struct PhotoClubsInnerView: View {
 
         // https://stackoverflow.com/questions/68430007/how-to-use-state-with-dictionary
         // https://forums.swift.org/t/swiftui-how-to-use-dictionary-as-binding/34967
-        return .init( // a bit ackward, but this does return a binding
+        return .init( // a bit ackward, but the geter does return a binding. Not sure about the setter.
             get: { return coordinateRegions[key] ?? defaultCoordinateRegion },
             set: { newValue in coordinateRegions[key] = newValue } // set is not used, but has to be defined
         )
