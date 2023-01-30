@@ -18,7 +18,7 @@
 			<li><a href="#implications-of-portfolios">Implications of Portfolios</a>
       	</ul>
     </details>
-    <details><summary><a href="#the-user-interface-screens">The User Interface Screens</a></summary>
+    <details><summary><a href="#screens">Screens</a></summary>
 		<ul>
 			<li><a href="#the-user-interface-screens">The User Interface Screens</a></li>
       	</ul>
@@ -124,7 +124,9 @@ to organize different types of images. But a straightforward website would proba
 </ul>
 <p align="right">(<a href="#top">back to top</a>)</p>
  
-## The User Interface Screens
+## Screens
+
+Usage of the various screens in the user interface:
 <ul>
 
 - The `Prelude` screen shows an opening animation.
