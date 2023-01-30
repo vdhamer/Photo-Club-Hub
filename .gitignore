@@ -24,6 +24,7 @@ FGWPrivateMembersURL2.txt
 # Icon must end with two \r
 Icon
 
+
 # Thumbnails
 ._*
 
@@ -139,6 +140,7 @@ iOSInjectionProject/
 *.xcodeproj/*
 !*.xcodeproj/project.pbxproj
 !*.xcodeproj/xcshareddata/
+!*.xcodeproj/project.xcworkspace/
 !*.xcworkspace/contents.xcworkspacedata
 /*.gcno
 **/xcshareddata/WorkspaceSettings.xcsettings
