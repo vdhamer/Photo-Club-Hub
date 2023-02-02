@@ -8,7 +8,7 @@ This is build #4582 in Apple's App Store
     * Added an extra Test photo club
 * Maintainability
     * Compatibility testing on iOS 16.3 and iPadOS 16.3
-    * Updated .gitignore
+    * Updated .gitignore file
 ---------------------------------------------------------------------------
 ### 2.2.8 (Github commit 426c09c) 22-01-23
 
