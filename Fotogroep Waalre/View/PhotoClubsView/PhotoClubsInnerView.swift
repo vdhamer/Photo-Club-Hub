@@ -32,73 +32,81 @@ struct PhotoClubsInnerView: View {
     }
 
     var body: some View {
-        ForEach(fetchRequest, id: \.id) { filteredPhotoClub in
-            VStack {
-                HStack(alignment: .center) {
-                    Image(systemName: "mappin.circle.fill")
-                        .foregroundStyle(.white, .yellow, accentColor ) // yellow secondary color should not show up
-                        .symbolRenderingMode(.palette)
-                        .foregroundColor(.accentColor)
-                        .font(.title)
-                        .padding([.trailing], 5)
-                    VStack(alignment: .leading) {
-                        Text(verbatim: "\(filteredPhotoClub.fullName)")
-                            .font(.title3)
-                            .tracking(1)
-                            .foregroundColor(.photoClubColor)
-                        Text(verbatim: layoutDirection == .leftToRight ?
-                             "\(filteredPhotoClub.town), \(filteredPhotoClub.country)" : // English, Dutch
-                             "\(filteredPhotoClub.country) ,\(filteredPhotoClub.town)") // Hebrew, Arabic
+        Section {
+            ForEach(fetchRequest, id: \.id) { filteredPhotoClub in
+                VStack {
+                    HStack(alignment: .center) {
+                        Image(systemName: "mappin.circle.fill")
+                            .foregroundStyle(.white, .yellow, accentColor ) // yellow secondary color shouldn't show up
+                            .symbolRenderingMode(.palette)
+                            .foregroundColor(.accentColor)
+                            .font(.title)
+                            .padding([.trailing], 5)
+                        VStack(alignment: .leading) {
+                            Text(verbatim: "\(filteredPhotoClub.fullName)")
+                                .font(.title3)
+                                .tracking(1)
+                                .foregroundColor(.photoClubColor)
+                            Text(verbatim: layoutDirection == .leftToRight ?
+                                 "\(filteredPhotoClub.town), \(filteredPhotoClub.country)" : // English, Dutch
+                                 "\(filteredPhotoClub.country) ,\(filteredPhotoClub.town)") // Hebrew, Arabic
                             .font(.subheadline)
-                        Text("\(filteredPhotoClub.members.count) members (inc. ex-members)",
-                             comment: "<count> members (including all types of members) within photo club")
+                            Text("\(filteredPhotoClub.members.count) members (inc. ex-members)",
+                                 comment: "<count> members (including all types of members) within photo club")
                             .font(.subheadline)
-                        if let url: URL = filteredPhotoClub.photoClubWebsite {
-                            Link(destination: url, label: {
-                                Text(url.absoluteString)
-                                    .lineLimit(1)
-                                    .truncationMode(.middle)
-                                    .font(.subheadline)
-                                    .foregroundColor(.linkColor)
-                            })
+                            if let url: URL = filteredPhotoClub.photoClubWebsite {
+                                Link(destination: url, label: {
+                                    Text(url.absoluteString)
+                                        .lineLimit(1)
+                                        .truncationMode(.middle)
+                                        .font(.subheadline)
+                                        .foregroundColor(.linkColor)
+                                })
                                 .buttonStyle(.plain) // to avoid entire List element to be clickable
-                        }
-                    }
-                    Spacer()
-                    Button(
-                        action: {
-                            openCloseSound(openClose: filteredPhotoClub.isScrollLocked ? .close : .open)
-                            filteredPhotoClub.isScrollLocked.toggle()
-                        },
-                        label: {
-                            HStack { // to make background color clickable too
-                                LockAnimationView(locked: filteredPhotoClub.isScrollLocked)
                             }
-                            .frame(maxWidth: 60, maxHeight: 60)
-                            .contentShape(Rectangle())
                         }
-                    )
-                         .buttonStyle(.plain) // to avoid entire List element to be clickable
+                        Spacer()
+                        Button(
+                            action: {
+                                openCloseSound(openClose: filteredPhotoClub.isScrollLocked ? .close : .open)
+                                filteredPhotoClub.isScrollLocked.toggle()
+                            },
+                            label: {
+                                HStack { // to make background color clickable too
+                                    LockAnimationView(locked: filteredPhotoClub.isScrollLocked)
+                                }
+                                .frame(maxWidth: 60, maxHeight: 60)
+                                .contentShape(Rectangle())
+                            }
+                        )
+                        .buttonStyle(.plain) // to avoid entire List element to be clickable
+                    }
+                    Map(coordinateRegion: binding(for: filteredPhotoClub.id),
+                        interactionModes: filteredPhotoClub.isScrollLocked ? [] : [.pan, .zoom],
+                        annotationItems: fetchRequest) { photoClub in
+                        MapMarker( coordinate: photoClub.coordinates,
+                                   tint: photoClub == filteredPhotoClub ? .photoClubColor : .blue )
+                    }
+                        .frame(minHeight: 300, idealHeight: 500, maxHeight: .infinity)
                 }
-                Map(coordinateRegion: binding(for: filteredPhotoClub.id),
-                    interactionModes: filteredPhotoClub.isScrollLocked ? [] : [.pan, .zoom],
-                    annotationItems: fetchRequest) { photoClub in
-                    MapMarker( coordinate: photoClub.coordinates,
-                               tint: photoClub == filteredPhotoClub ? .photoClubColor : .blue )
-                }
-                    .frame(minHeight: 300, idealHeight: 500, maxHeight: .infinity)
-            }
-            .task {
-                initializeCoordinateRegion(photoClub: filteredPhotoClub) // works better than .onAppear(perform:)?
-            }
+                .task {
+                    initializeCoordinateRegion(photoClub: filteredPhotoClub) // works better than .onAppear(perform:)?
+                } // VStack
+                .onDisappear(perform: { try? viewContext.save() }) // store map scroll-lock states in database
+                .accentColor(.photoClubColor)
+                .listRowSeparator(.hidden)
+                .padding()
+                .background(Color(white: 0.95))
+            } // ForEach
+            .onDelete(perform: deletePhotoClubs)
         }
-        .onDelete(perform: deletePhotoClubs)
-        .onDisappear(perform: { try? viewContext.save() }) // store map scroll-lock states in database
-        .accentColor(.photoClubColor)
+    header: {
+        Text("\(fetchRequest.count) \(fetchRequest.count==1 ? String(localized: "club") : String(localized: "clubs"))")
+            .padding(.horizontal)
     }
+}
 
     private func initializeCoordinateRegion(photoClub: PhotoClub) {
-        print("Initialize coordinateRegion for photo club \(photoClub.fullName) in \(photoClub.town)")
         coordinateRegions[photoClub.id] = MKCoordinateRegion(
             center: CLLocationCoordinate2D( latitude: photoClub.latitude_,
                                             longitude: photoClub.longitude_),
@@ -106,7 +114,6 @@ struct PhotoClubsInnerView: View {
     }
 
     private func binding(for key: PhotoClubId) -> Binding<MKCoordinateRegion> {
-        print("Do lookup in coordinateRegions[]")
         let defaultCoordinateRegion = MKCoordinateRegion( // used as a default if region is not found
                     center: CLLocationCoordinate2D(latitude: 0, longitude: 0), // equator, off shore of W. Africa
                     span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
