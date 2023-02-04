@@ -71,6 +71,9 @@ Button to close Info page. */
 /* In Settings, above toggles like "Show former members" */
 "Member categories" = "Lidmaatschapstypen";
 
+/* Header of section of Photo Clubs screen */
+"One club" = "Één fotoclub";
+
 /* Section title on Readme page. */
 "Open Source" = "Ontwikkelaars gezocht";
 

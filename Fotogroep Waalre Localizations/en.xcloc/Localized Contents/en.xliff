@@ -22,6 +22,11 @@
         <target>%@ of %@</target>
         <note>&lt;role1 and role2&gt; of &lt;photoclub&gt;. Note &lt;and&gt; is handled elsewhere.</note>
       </trans-unit>
+      <trans-unit id="%lld clubs" xml:space="preserve">
+        <source>%lld clubs</source>
+        <target>%lld clubs</target>
+        <note>Header of section of Photo Clubs screen</note>
+      </trans-unit>
       <trans-unit id="%lld members (inc. ex-members)" xml:space="preserve">
         <source>%lld members (inc. ex-members)</source>
         <target>%lld members (inc. ex-members)</target>
@@ -82,6 +87,11 @@ Button to close Info page.</note>
         <source>Member categories</source>
         <target>Member categories</target>
         <note>In Settings, above toggles like "Show former members"</note>
+      </trans-unit>
+      <trans-unit id="One club" xml:space="preserve">
+        <source>One club</source>
+        <target>One club</target>
+        <note>Header of section of Photo Clubs screen</note>
       </trans-unit>
       <trans-unit id="Open Source" xml:space="preserve">
         <source>Developers</source>

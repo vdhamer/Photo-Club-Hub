@@ -35,12 +35,13 @@ struct PhotoClubsView: View {
     }
 
     var body: some View {
-        VStack {
+        Group {
             List { // lists are "Lazy" automatically
                 PhotoClubsInnerView(predicate: model.settings.photoClubPredicate)
                 Text("PhotoClubs_Caption", comment: "Shown in gray at the bottom of the Photo Club page.")
                     .foregroundColor(.gray)
             }
+            .listStyle(.plain)
             .refreshable { // for pull-to-refresh
                 _ = FGWMembersProvider()
                 _ = BIMembersProvider()
