@@ -1,13 +1,18 @@
-### 2.2.9 (Github commit ???????) ??-02-23
+### 2.2.9 (Github commit ???????) 05-02-23
 
 This is build #4582 in Apple's App Store
+* Portfolios screen
+    * Changed layout of list slightly (saves horizontal space)
+    * Count of portfolios displayed at top of screen
 * Photo Clubs screen
-    * Fixed bug for (rare) case of multiple clubs with same name: locks were not independent.
-    * Saved the state of the locks (using Core Data).
+    * Changed layout of list slightly
+    * Count of photo clubs displayed at top of screen
     * Updated the text at the botton of the screen.
-    * Added an extra Test photo club
+    * Fixed bug when multiple photo clubs have same name: locks were not independent.
+    * Made lock settings persistent across sessions.
+    * Added another Test photo club
 * Maintainability
-    * Compatibility testing on iOS 16.3 and iPadOS 16.3
+    * Compatibility testing on iOS/iPadOS 16.3
     * Updated .gitignore file
 ---------------------------------------------------------------------------
 ### 2.2.8 (Github commit 426c09c) 22-01-23
