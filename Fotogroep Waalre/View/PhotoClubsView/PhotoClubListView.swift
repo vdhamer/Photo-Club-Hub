@@ -1,5 +1,5 @@
 //
-//  PhotoClubView.swift
+//  PhotoClubListView.swift
 //  Fotogroep Waalre
 //
 //  Created by Peter van den Hamer on 07/01/2022.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PhotoClubsView: View {
+struct PhotoClubListView: View {
     @Environment(\.managedObjectContext) private var viewContext
     @StateObject var model = SettingsViewModel()
 
@@ -37,7 +37,7 @@ struct PhotoClubsView: View {
     var body: some View {
         Group {
             List { // lists are "Lazy" automatically
-                PhotoClubsInnerView(predicate: model.settings.photoClubPredicate)
+                PhotoClubView(predicate: model.settings.photoClubPredicate)
                 Text("PhotoClubs_Caption", comment: "Shown in gray at the bottom of the Photo Club page.")
                     .foregroundColor(.gray)
             }
@@ -55,13 +55,13 @@ struct PhotoClubsView: View {
 
 }
 
-struct PhotoClubsView_Previews: PreviewProvider {
+struct PhotoClubListView_Previews: PreviewProvider {
     static let predicate = NSPredicate(format: "name_ = %@ || name_ = %@ || name_ = %@",
                                        argumentArray: ["PhotoClub2", "PhotoClub1", "PhotoClub3"])
 
     static var previews: some View {
         NavigationStack {
-            PhotoClubsView(predicate: predicate, navigationTitle: String("PhotoClubView"))
+            PhotoClubListView(predicate: predicate, navigationTitle: String("PhotoClubView"))
                 .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
         }
     }

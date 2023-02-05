@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MemberPortfoliosView: View {
+struct MemberPortfolioListView: View {
     @Environment(\.managedObjectContext) private var viewContext
     @State private var showingFilterSettings = false // controls visibility of Settings screen
     @State private var showingReadme = false // controls visibility of Readme screen
@@ -36,9 +36,8 @@ struct MemberPortfoliosView: View {
             List { // lists are automatically "Lazy"
                 FilteredMemberPortfoliosView(predicate: model.settings.memberPredicate, searchText: $searchText)
             }
-            .refreshable { // for pull-to-refresh
-                _ = FGWMembersProvider()
-            }
+                .listStyle(.plain)
+                .refreshable { _ = FGWMembersProvider() } // for pull-to-refresh
             .keyboardType(.namePhonePad)
             .autocapitalization(.none)
             .submitLabel(.done) // currently only works with text fields?
@@ -99,7 +98,7 @@ struct MemberPortfoliosView: View {
                 ToolbarItemGroup(placement: toolbarItemPlacement) {
 
                     NavigationLink(destination: {
-                        PhotoClubsView(predicate: NSPredicate.all)
+                        PhotoClubListView(predicate: NSPredicate.all)
                     }, label: {
                         Image("mappin.ellipse.rectangle")
                             .font(.title)
@@ -137,7 +136,7 @@ struct MemberPortfoliosView: View {
 
 struct MemberListView_Previews: PreviewProvider {
     static var previews: some View {
-        MemberPortfoliosView()
+        MemberPortfolioListView()
 			.environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

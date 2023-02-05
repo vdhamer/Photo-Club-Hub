@@ -1,5 +1,5 @@
 //
-//  PhotoClubs.swift
+//  PhotoClubView.swift
 //  Fotogroep Waalre
 //
 //  Created by Peter van den Hamer on 30/12/2021.
@@ -9,7 +9,7 @@ import SwiftUI
 import MapKit
 import CoreData
 
-struct PhotoClubsInnerView: View {
+struct PhotoClubView: View {
 
     @Environment(\.managedObjectContext) private var viewContext // may not be correct
     @FetchRequest var fetchRequest: FetchedResults<PhotoClub>
@@ -100,18 +100,17 @@ struct PhotoClubsInnerView: View {
             } // ForEach
             .onDelete(perform: deletePhotoClubs)
         }
-    header: {
-        Text(makeHeaderString(count: fetchRequest.count))
+        header: {
+            Text(makeHeaderString(count: fetchRequest.count))
             .padding(.leading)
+        }
     }
-}
 
     private func makeHeaderString(count: Int) -> String {
         let singular = String(localized: "One club", comment: "Header of section of Photo Clubs screen")
         let plural = String(localized: "\(count) clubs", comment: "Header of section of Photo Clubs screen")
         return count==1 ? singular : plural
     }
-}
 
     private func initializeCoordinateRegion(photoClub: PhotoClub) {
         coordinateRegions[photoClub.id] = MKCoordinateRegion(
@@ -169,7 +168,7 @@ struct PhotoClubsInner_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
             List { // lists are "Lazy" automatically
-                PhotoClubsInnerView(predicate: predicate)
+                PhotoClubView(predicate: predicate)
                     .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
             }
             .navigationBarTitle(Text(String("PhotoClubInnerView"))) // prevent localization

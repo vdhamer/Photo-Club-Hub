@@ -59,7 +59,7 @@ struct PreludeView: View {
                         willMoveToNextScreen = true
                     }
                 }
-                .navigate(to: MemberPortfoliosView().navigationBarTitle("Portfolios"),
+                .navigate(to: MemberPortfolioListView().navigationBarTitle("Portfolios"),
                           when: $willMoveToNextScreen,
                           horSizeClass: horSizeClass)
 

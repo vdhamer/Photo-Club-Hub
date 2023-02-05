@@ -33,61 +33,68 @@ struct FilteredMemberPortfoliosView: View {
 
     var body: some View {
         let copyFilteredPhotographerFetchResult = filteredPhotographerFetchResult // fPFR is a costly computed property
-        ForEach(copyFilteredPhotographerFetchResult, id: \.id) { filteredMember in
-            NavigationLink(destination: SinglePortfolioView(url: filteredMember.memberWebsite, webView: wkWebView)
-                .navigationTitle((filteredMember.photographer.fullName +
-                                  " @ " + filteredMember.photoClub.nameOrShortName(horSizeClass: horSizeClass)))
-                            .navigationBarTitleDisplayMode(NavigationBarItem.TitleDisplayMode.inline)) {
-                HStack(alignment: .center) {
-                    RoleStatusIconView(memberRolesAndStatus: filteredMember.memberRolesAndStatus)
-                        .foregroundStyle(.memberColor, .gray, .red) // red tertiary color should not show up
-                        .imageScale(.large)
-                        .offset(x: -5, y: 0)
-                    VStack(alignment: .leading) {
-                        Text(verbatim: "\(filteredMember.photographer.fullName)")
-                            .font(UIDevice.isIPad ? .title : .title3)
-                            .tracking(1)
-                            .allowsTightening(true)
-                            .foregroundColor(chooseColor(defaultColor: .accentColor,
+        Section {
+            ForEach(copyFilteredPhotographerFetchResult, id: \.id) { filteredMember in
+                NavigationLink(destination: SinglePortfolioView(url: filteredMember.memberWebsite, webView: wkWebView)
+                    .navigationTitle((filteredMember.photographer.fullName +
+                                      " @ " + filteredMember.photoClub.nameOrShortName(horSizeClass: horSizeClass)))
+                        .navigationBarTitleDisplayMode(NavigationBarItem.TitleDisplayMode.inline)) {
+                            HStack(alignment: .center) {
+                                RoleStatusIconView(memberRolesAndStatus: filteredMember.memberRolesAndStatus)
+                                    .foregroundStyle(.memberColor, .gray, .red) // red tertiary color should not show up
+                                    .imageScale(.large)
+                                    .offset(x: -5, y: 0)
+                                VStack(alignment: .leading) {
+                                    Text(verbatim: "\(filteredMember.photographer.fullName)")
+                                        .font(UIDevice.isIPad ? .title : .title3)
+                                        .tracking(1)
+                                        .allowsTightening(true)
+                                        .foregroundColor(chooseColor(defaultColor: .accentColor,
                                                          isDeceased: filteredMember.photographer.isDeceased))
-                        Text("\(filteredMember.roleDescription) of \(filteredMember.photoClub.fullNameCommaTown)",
-                             comment: "<role1 and role2> of <photoclub>. Note <and> is handled elsewhere.")
-                            .truncationMode(.tail)
-                            .lineLimit(2)
-                            .font(UIDevice.isIPad ? .headline : .subheadline)
-                            .foregroundColor(filteredMember.photographer.isDeceased ? .deceasedColor : .primary)
-                    }
-                    Spacer()
-                    AsyncImage(url: filteredMember.latestImageURL) { phase in
-                        if let image = phase.image {
-                            image // Displays the loaded image
-                                .resizable()
-                                .aspectRatio(contentMode: .fill)
-                        } else if phase.error != nil ||
-                                  filteredMember.latestImageURL == nil {
-                            Image("Question-mark") // Displays image indicating an error occurred
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                        } else {
-                            ZStack {
-                                Image("Embarrassed-snail") // Displays placeholder while loading
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .opacity(0.4)
-                                ProgressView()
-                                    .scaleEffect(x: 2, y: 2, anchor: .center)
-                                    .blendMode(BlendMode.difference)
+                                    Text("""
+                                         \(filteredMember.roleDescription) of \
+                                         \(filteredMember.photoClub.fullNameCommaTown)
+                                         """,
+                                         comment: "<role1 and role2> of <photoclub>. Note <and> is handled elsewhere.")
+                                    .truncationMode(.tail)
+                                    .lineLimit(2)
+                                    .font(UIDevice.isIPad ? .headline : .subheadline)
+                                    .foregroundColor(filteredMember.photographer.isDeceased ? .deceasedColor : .primary)
+                                }
+                                Spacer()
+                                AsyncImage(url: filteredMember.latestImageURL) { phase in
+                                    if let image = phase.image {
+                                        image // Displays the loaded image
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fill)
+                                    } else if phase.error != nil ||
+                                                filteredMember.latestImageURL == nil {
+                                        Image("Question-mark") // Displays image indicating an error occurred
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fit)
+                                    } else {
+                                        ZStack {
+                                            Image("Embarrassed-snail") // Displays placeholder while loading
+                                                .resizable()
+                                                .aspectRatio(contentMode: .fit)
+                                                .opacity(0.4)
+                                            ProgressView()
+                                                .scaleEffect(x: 2, y: 2, anchor: .center)
+                                                .blendMode(BlendMode.difference)
+                                        }
+                                    }
+                                }
+                                .frame(width: 80, height: 80)
+                                .clipped()
+                                .border(TintShapeStyle() )
                             }
                         }
-                    }
-                    .frame(width: 80, height: 80)
-                    .clipped()
-                    .border(TintShapeStyle() )
-                }
             }
-        }
             .onDelete(perform: deleteMembers)
             .accentColor(.memberColor)
+        } header: {
+            Text(makeHeaderString(count: copyFilteredPhotographerFetchResult.count))
+        }
         if fetchRequest.nsPredicate == NSPredicate.none {
             Text("""
                  Warning: all member categories on the Preferences page are disabled. \
@@ -110,6 +117,12 @@ struct FilteredMemberPortfoliosView: View {
                 .foregroundColor(.gray)
         }
 
+    }
+
+    private func makeHeaderString(count: Int) -> String {
+        let singular = String(localized: "One portfolio", comment: "Header of section of Portfolios screen")
+        let plural = String(localized: "\(count) portfolios", comment: "Header of section of Portfolios screen")
+        return count==1 ? singular : plural
     }
 
     private func findFirstNonDistinct(memberPortfolios: [MemberPortfolio]) -> Photographer? {
