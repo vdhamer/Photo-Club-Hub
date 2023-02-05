@@ -111,6 +111,7 @@ struct PhotoClubsInnerView: View {
         let plural = String(localized: "\(count) clubs", comment: "Header of section of Photo Clubs screen")
         return count==1 ? singular : plural
     }
+}
 
     private func initializeCoordinateRegion(photoClub: PhotoClub) {
         coordinateRegions[photoClub.id] = MKCoordinateRegion(
