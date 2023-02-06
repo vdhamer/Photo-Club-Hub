@@ -1,7 +1,12 @@
-### 2.2.10 (Github commit ???????) ??-02-23
+### 2.2.10 (Github commit ???????) 06-02-23
+
 This is build #4583 in Apple's App Store
 Photo Clubs screen
     * Fixed bug w.r.t. dark mode.
+    * Replaced "Number of photo clubs displayed at top of screen." by
+    * Photo club name displayed as section header
+
+*In Apple's App Store, release notes for 2.2.10 and 2.2.9 are combined.*
 ---------------------------------------------------------------------------
 ### 2.2.9 (Github commit 21a6cd6) 05-02-23
 
