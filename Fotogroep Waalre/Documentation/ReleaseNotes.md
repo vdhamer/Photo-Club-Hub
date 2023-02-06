@@ -1,6 +1,11 @@
-### 2.2.9 (Github commit ???????) 05-02-23
+### 2.2.10 (Github commit ???????) ??-02-23
+This is build #4583 in Apple's App Store
+Photo Clubs screen
+    * Fixed bug w.r.t. dark mode.
+---------------------------------------------------------------------------
+### 2.2.9 (Github commit 21a6cd6) 05-02-23
 
-This is build #4582 in Apple's App Store
+This is build #4582 (didn't make to Apple's App Store)
 Portfolios screen
     * Small layout change to scrolling list (saves some horizontal space).
     * Number of portfolios displayed at top of screen.

@@ -32,8 +32,8 @@ struct PhotoClubView: View {
     }
 
     var body: some View {
-        Section {
-            ForEach(fetchRequest, id: \.id) { filteredPhotoClub in
+        ForEach(fetchRequest, id: \.id) { filteredPhotoClub in
+            Section {
                 VStack {
                     HStack(alignment: .center) {
                         Image(systemName: "mappin.circle.fill")
@@ -96,20 +96,19 @@ struct PhotoClubView: View {
                 .accentColor(.photoClubColor)
                 .listRowSeparator(.hidden)
                 .padding()
-                .background(Color(white: 0.95))
-            } // ForEach
-            .onDelete(perform: deletePhotoClubs)
-        }
-        header: {
-            Text(makeHeaderString(count: fetchRequest.count))
-            .padding(.leading)
-        }
-    }
-
-    private func makeHeaderString(count: Int) -> String {
-        let singular = String(localized: "One club", comment: "Header of section of Photo Clubs screen")
-        let plural = String(localized: "\(count) clubs", comment: "Header of section of Photo Clubs screen")
-        return count==1 ? singular : plural
+                .background(Color(.secondarySystemBackground)) // compatible with light and dark mode
+            } // Section
+            header: {
+                HStack {
+                    Spacer()
+                    Text("\(filteredPhotoClub.fullName) ")
+                    Text("(\(filteredPhotoClub.town))")
+                        .foregroundColor(.secondary)
+                    Spacer()
+                }
+            }
+        } // ForEach
+        .onDelete(perform: deletePhotoClubs)
     }
 
     private func initializeCoordinateRegion(photoClub: PhotoClub) {
