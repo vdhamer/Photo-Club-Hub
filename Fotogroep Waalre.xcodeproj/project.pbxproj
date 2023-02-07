@@ -187,6 +187,7 @@
 		D0C8DD462933EBB000658C58 /* portfolios.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = portfolios.png; sourceTree = "<group>"; };
 		D0CB581228149D18005D496F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D0D18C77296E1F6A00B334DB /* PhotoClubID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoClubID.swift; sourceTree = "<group>"; };
+		D0DC001D2992EC8700083A14 /* Fotogroep_Waalre_2_3_0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fotogroep_Waalre_2_3_0.xcdatamodel; sourceTree = "<group>"; };
 		D0DE02762789D1B30062738C /* RoleIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleIconView.swift; sourceTree = "<group>"; };
 		D0E2235327DE9139002A8600 /* PreludeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreludeView.swift; sourceTree = "<group>"; };
 		D0E2235627DE9D0F002A8600 /* Fotogroep_Waalre_2_0_4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fotogroep_Waalre_2_0_4.xcdatamodel; sourceTree = "<group>"; };
@@ -1057,7 +1058,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4583;
+				CURRENT_PROJECT_VERSION = 4585;
 				DEVELOPMENT_TEAM = YDEWPN9GZ6;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -1077,7 +1078,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4583;
+				CURRENT_PROJECT_VERSION = 4585;
 				DEVELOPMENT_TEAM = YDEWPN9GZ6;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -1096,7 +1097,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4583;
+				CURRENT_PROJECT_VERSION = 4585;
 				DEVELOPMENT_TEAM = YDEWPN9GZ6;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
@@ -1114,7 +1115,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4583;
+				CURRENT_PROJECT_VERSION = 4585;
 				DEVELOPMENT_TEAM = YDEWPN9GZ6;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
@@ -1172,6 +1173,7 @@
 		D0831A3C277F72B70049AB84 /* Fotogroep_Waalre_2.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				D0DC001D2992EC8700083A14 /* Fotogroep_Waalre_2_3_0.xcdatamodel */,
 				D020C9C4297DB5BB000D06BF /* Fotogroep_Waalre_2_2_9.xcdatamodel */,
 				D0FD9A33296632EA00732959 /* Fotogroep_Waalre_2_2_8.xcdatamodel */,
 				D0B260B5295874B800B73E1A /* Fotogroep_Waalre_2_2_7.xcdatamodel */,
@@ -1195,7 +1197,7 @@
 				D0B1EDBA279771A500D37431 /* Fotogroep_Waalre_2_0_2.xcdatamodel */,
 				D0831A3D277F72B70049AB84 /* Fotogroep_Waalre.xcdatamodel */,
 			);
-			currentVersion = D020C9C4297DB5BB000D06BF /* Fotogroep_Waalre_2_2_9.xcdatamodel */;
+			currentVersion = D0DC001D2992EC8700083A14 /* Fotogroep_Waalre_2_3_0.xcdatamodel */;
 			path = Fotogroep_Waalre_2.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
