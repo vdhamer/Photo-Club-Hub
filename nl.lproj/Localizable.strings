@@ -4,11 +4,20 @@
 /* Shown when "Show deceased members" entry is missing in Settings */
 "“Former members” includes “deceased members”" = "De optie “ex-leden“ bevat “overleden leden“";
 
+/* No comment provided by engineer. */
+"%@ (%@)" = "%@ (%@)";
+
 /* <role1 and role2> of <photoclub>. Note <and> is handled elsewhere. */
 "%@ of %@" = "%@ van %@";
 
 /* <count> members (including all types of members) within photo club */
 "%lld members (inc. ex-members)" = "%lld leden (incl. ex-leden)";
+
+/* Header of section of Who's Who screen */
+"%lld photographers" = "%lld fotografen";
+
+/* Header of section of Portfolios screen */
+"%lld portfolios" = "%lld portfolio's";
 
 /* Administrative role of member within a club. Used as part of concatenations. */
 "admin" = "admin";
@@ -71,8 +80,11 @@ Button to close Info page. */
 /* In Settings, above toggles like "Show former members" */
 "Member categories" = "Lidmaatschapstypen";
 
-/* Header of section of Photo Clubs screen */
-"One club" = "Één fotoclub";
+/* Header of section of Who's Who screen */
+"One photographer" = "Één fotograaf";
+
+/* Header of section of Portfolios screen */
+"One portfolio" = "Één portfolio";
 
 /* Section title on Readme page. */
 "Open Source" = "Ontwikkelaars gezocht";
@@ -176,8 +188,8 @@ Button to close Info page. */
 /* Shown in gray at the bottom of the Photo Club page. */
 "PhotoClubs_Caption" = "① Het slotje kan gebruikt worden om deze landkaarten sleepbaar en inzoombaar/uitzoombaar te maken.\n② Men kan enkele testfotogroepen (voor demo doeleinden) toevoegen door de bovenkant van deze pagina omlaag te slepen en los te laten (*pull to refresh*).\n③ Een fotogroep kan verwijderd worden door eerst alle betrokken Portfolio's te verwijden (*swipe left*) en dan de fotoclub zelf te verwijderen (*swipe left*).";
 
-/* Title of page showing member portfolios
-Section title on Readme page */
+/* Section title on Readme page
+Title of page showing member portfolios */
 "Portfolios" = "Portfolio's";
 
 /* Title of screen with toggles to adjust preferences */
@@ -192,8 +204,8 @@ Section title on Readme page */
 /* Title of Readme screen */
 "Readme" = "Over deze app";
 
-/* Field at top of Members page that allows the user to filter the members based on either given- and family name.
-Field at top of Photographers page that allows the user to filter the photographers based on either given- and family name. */
+/* Field at top of Photographers page that allows the user to filter the photographers based on either given- and family name.
+Field at top of Members page that allows the user to filter the members based on either given- and family name. */
 "Search names" = "Zoek op naam";
 
 /* Administrative role of member within a club. Used as part of concatenations. */

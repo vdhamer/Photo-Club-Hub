@@ -17,19 +17,30 @@
       <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="14.2" build-num="14C18"/>
     </header>
     <body>
+      <trans-unit id="%@ (%@)" xml:space="preserve">
+        <source>%@ (%@)</source>
+        <target>%@ (%@)</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
       <trans-unit id="%@ of %@" xml:space="preserve">
         <source>%@ of %@</source>
         <target>%@ van %@</target>
         <note>&lt;role1 and role2&gt; of &lt;photoclub&gt;. Note &lt;and&gt; is handled elsewhere.</note>
       </trans-unit>
-      <trans-unit id="%lld clubs" xml:space="preserve">
-        <source>%lld clubs</source>
-        <note>Header of section of Photo Clubs screen</note>
-      </trans-unit>
       <trans-unit id="%lld members (inc. ex-members)" xml:space="preserve">
         <source>%lld members (inc. ex-members)</source>
         <target>%lld leden (incl. ex-leden)</target>
         <note>&lt;count&gt; members (including all types of members) within photo club</note>
+      </trans-unit>
+      <trans-unit id="%lld photographers" xml:space="preserve">
+        <source>%lld photographers</source>
+        <target>%lld fotografen</target>
+        <note>Header of section of Who's Who screen</note>
+      </trans-unit>
+      <trans-unit id="%lld portfolios" xml:space="preserve">
+        <source>%lld portfolios</source>
+        <target>%lld portfolio's</target>
+        <note>Header of section of Portfolios screen</note>
       </trans-unit>
       <trans-unit id="App version %@ (build %@)" xml:space="preserve">
         <source>App version %@ (build %@)</source>
@@ -87,10 +98,15 @@ Button to close Info page.</note>
         <target>Lidmaatschapstypen</target>
         <note>In Settings, above toggles like "Show former members"</note>
       </trans-unit>
-      <trans-unit id="One club" xml:space="preserve">
-        <source>One club</source>
-        <target>Één fotoclub</target>
-        <note>Header of section of Photo Clubs screen</note>
+      <trans-unit id="One photographer" xml:space="preserve">
+        <source>One photographer</source>
+        <target>Één fotograaf</target>
+        <note>Header of section of Who's Who screen</note>
+      </trans-unit>
+      <trans-unit id="One portfolio" xml:space="preserve">
+        <source>One portfolio</source>
+        <target>Één portfolio</target>
+        <note>Header of section of Portfolios screen</note>
       </trans-unit>
       <trans-unit id="Open Source" xml:space="preserve">
         <source>Developers</source>
@@ -274,8 +290,8 @@ Iedere ***PhotoClub*** heeft ***Members*** van diverse soorten (b.v. huidige led
       <trans-unit id="Portfolios" xml:space="preserve">
         <source>Portfolios</source>
         <target>Portfolio's</target>
-        <note>Title of page showing member portfolios
-Section title on Readme page</note>
+        <note>Section title on Readme page
+Title of page showing member portfolios</note>
       </trans-unit>
       <trans-unit id="Preferences" xml:space="preserve">
         <source>Preferences</source>
@@ -295,8 +311,8 @@ Section title on Readme page</note>
       <trans-unit id="Search names" xml:space="preserve">
         <source>Search names</source>
         <target>Zoek op naam</target>
-        <note>Field at top of Members page that allows the user to filter the members based on either given- and family name.
-Field at top of Photographers page that allows the user to filter the photographers based on either given- and family name.</note>
+        <note>Field at top of Photographers page that allows the user to filter the photographers based on either given- and family name.
+Field at top of Members page that allows the user to filter the members based on either given- and family name.</note>
       </trans-unit>
       <trans-unit id="Show aspiring members" xml:space="preserve">
         <source>Show aspiring members</source>

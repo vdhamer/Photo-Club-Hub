@@ -94,6 +94,7 @@ struct FilteredMemberPortfoliosView: View {
             .accentColor(.memberColor)
         } header: {
             Text(makeHeaderString(count: copyFilteredPhotographerFetchResult.count))
+                .textCase(nil) // arguably a bug
         }
         if fetchRequest.nsPredicate == NSPredicate.none {
             Text("""

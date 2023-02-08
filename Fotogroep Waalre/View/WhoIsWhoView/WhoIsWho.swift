@@ -25,7 +25,7 @@ struct WhoIsWho: View {
 
     var body: some View {
         VStack {
-            List { // lists are "Lazy" automatically
+            List { // lists are automatically "Lazy"
                 WhoIsWhoInnerView(predicate: model.settings.photographerPredicate, searchText: searchText)
                 Text("""
                      Information about a photographer's links to a photo club \

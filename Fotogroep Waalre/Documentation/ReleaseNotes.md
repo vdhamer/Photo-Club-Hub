@@ -1,13 +1,17 @@
 ### 2.3.0 (Github commit ???????) ??-02-23
 
 This is build #4585 in Apple's App Store
+Photo Clubs screen
+    * Minor layout improvement in section header (padding removed)
+Who's Who screen
+    * Added count at top of screen (temporary)
 ---------------------------------------------------------------------------
 ### 2.2.10 (Github commit 09212fb) 06-02-23
 
 This is build #4583 in Apple's App Store
 Photo Clubs screen
     * Fixed bug w.r.t. dark mode.
-    * Replaced "Number of photo clubs displayed at top of screen." by
+    * Replaced "Number of photo clubs displayed at top of screen" by...
     * Photo club name displayed as section header
 
 *In Apple's App Store, the release notes of 2.2.10 and 2.2.9 are combined.*

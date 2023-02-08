@@ -31,62 +31,74 @@ struct WhoIsWhoInnerView: View {
     }
 
     var body: some View {
-        ForEach(filteredPhotographers, id: \.id) { filteredPhotographer in
-            HStack(alignment: .center) {
-                PhotographerImage(isDeceased: filteredPhotographer.isDeceased)
-                    .foregroundStyle(.photographerColor, .gray, .red) // red tertiary color should not show up
-                    .font(.title3)
-                    .padding([.trailing], 5)
-                VStack(alignment: .leading) {
-                    let alive = filteredPhotographer.isDeceased ? " - " + MemberStatus.deceased.localizedString() : ""
-                    Text(verbatim: "\(filteredPhotographer.fullName)\(alive)")
+        Section {
+            ForEach(filteredPhotographers, id: \.id) { filteredPhotographer in
+                HStack(alignment: .center) {
+                    PhotographerImage(isDeceased: filteredPhotographer.isDeceased)
+                        .foregroundStyle(.photographerColor, .gray, .red) // red tertiary color should not show up
                         .font(.title3)
-                        .tracking(1)
-                        .foregroundColor(chooseColor(accentColor: .accentColor,
-                                                     isDeceased: filteredPhotographer.isDeceased))
-                    if let date: Date = filteredPhotographer.bornDT {
-                        let locBirthday = String(localized: "Birthday:",
-                                          comment: "Birthday of member (without year). Date not currently localized?")
-                        Text(verbatim: "\(locBirthday) \(dateFormatter.string(from: date))")
-                            .font(.subheadline)
-                            .foregroundColor(filteredPhotographer.isDeceased ? .deceasedColor : .primary)
+                        .padding([.trailing], 5)
+                    VStack(alignment: .leading) {
+                        let alive = filteredPhotographer.isDeceased ? " - " + MemberStatus.deceased.localizedString()
+                                                                    : ""
+                        Text(verbatim: "\(filteredPhotographer.fullName)\(alive)")
+                            .font(.title3)
+                            .tracking(1)
+                            .foregroundColor(chooseColor(accentColor: .accentColor,
+                                                         isDeceased: filteredPhotographer.isDeceased))
+                        if let date: Date = filteredPhotographer.bornDT {
+                            let locBirthday = String(localized: "Birthday:",
+                                            comment: "Birthday of member (without year). Date not currently localized?")
+                            Text(verbatim: "\(locBirthday) \(dateFormatter.string(from: date))")
+                                .font(.subheadline)
+                                .foregroundColor(filteredPhotographer.isDeceased ? .deceasedColor : .primary)
+                        }
+                        if let phoneNumber = filteredPhotographer.phoneNumber, phoneNumber != "",
+                           showPhoneMail, !filteredPhotographer.isDeceased {
+                            let locPhone = String(localized: "Phone:", comment: "Telephone number (usually invisible)")
+                            Text(verbatim: "\(locPhone): \(phoneNumber)")
+                                .font(.subheadline)
+                                .foregroundColor(.primary) // we don't show phone numbers for deceased people
+                        }
+                        if let eMail = filteredPhotographer.eMail, eMail != "",
+                           showPhoneMail, !filteredPhotographer.isDeceased {
+                            Text(verbatim: "mailto://\(eMail)")
+                                .font(.subheadline)
+                                .foregroundColor(.primary) // we don't show phone numbers for deceased people
+                        }
+                        if let url: URL = filteredPhotographer.photographerWebsite {
+                            Link(destination: url, label: {
+                                Text(url.absoluteString)
+                                    .lineLimit(1)
+                                    .truncationMode(.middle)
+                                    .font(.subheadline)
+                                    .foregroundColor(.linkColor)
+                            })
+                            .buttonStyle(.plain) // to avoid entire List element to be clickable
+                        }
                     }
-                    if let phoneNumber = filteredPhotographer.phoneNumber, phoneNumber != "",
-                                         showPhoneMail, !filteredPhotographer.isDeceased {
-                        let locPhone = String(localized: "Phone:", comment: "Telephone number (usually invisible)")
-                        Text(verbatim: "\(locPhone): \(phoneNumber)")
-                            .font(.subheadline)
-                            .foregroundColor(.primary) // we don't show phone numbers for deceased people
-                    }
-                    if let eMail = filteredPhotographer.eMail, eMail != "",
-                       showPhoneMail, !filteredPhotographer.isDeceased {
-                        Text(verbatim: "mailto://\(eMail)")
-                            .font(.subheadline)
-                            .foregroundColor(.primary) // we don't show phone numbers for deceased people
-                    }
+                    Spacer()
                     if let url: URL = filteredPhotographer.photographerWebsite {
                         Link(destination: url, label: {
-                            Text(url.absoluteString)
-                                .lineLimit(1)
-                                .truncationMode(.middle)
-                                .font(.subheadline)
+                            Image(systemName: "link")
                                 .foregroundColor(.linkColor)
                         })
-                            .buttonStyle(.plain) // to avoid entire List element to be clickable
+                        .buttonStyle(.plain) // to avoid entire List element to be clickable
                     }
                 }
-                Spacer()
-                if let url: URL = filteredPhotographer.photographerWebsite {
-                    Link(destination: url, label: {
-                        Image(systemName: "link")
-                            .foregroundColor(.linkColor)
-                    })
-                        .buttonStyle(.plain) // to avoid entire List element to be clickable
-                }
+                .accentColor(.photographerColor)
             }
-            .accentColor(.photographerColor)
+            .onDelete(perform: deletePhotographers) // can be disabled using isDeletedPhotographerEnabled flag
+        } header: {
+            Text(makeHeaderString(count: filteredPhotographers.count))
+                .textCase(nil) // arguably a bug
         }
-        .onDelete(perform: deletePhotographers) // can be disabled using isDeletedPhotographerEnabled flag
+    }
+
+    private func makeHeaderString(count: Int) -> String {
+        let singular = String(localized: "One photographer", comment: "Header of section of Who's Who screen")
+        let plural = String(localized: "\(count) photographers", comment: "Header of section of Who's Who screen")
+        return count==1 ? singular : plural
     }
 
     private var filteredPhotographers: [Photographer] {
