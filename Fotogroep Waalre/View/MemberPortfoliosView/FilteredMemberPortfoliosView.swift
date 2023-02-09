@@ -94,7 +94,7 @@ struct FilteredMemberPortfoliosView: View {
             .accentColor(.memberColor)
         } header: {
             Text(makeHeaderString(count: copyFilteredPhotographerFetchResult.count))
-                .textCase(nil) // arguably a bug
+                .textCase(nil) // arguably a bug in SwiftUI that this sometimes gets capitalized
         }
         if fetchRequest.nsPredicate == NSPredicate.none {
             Text("""
@@ -121,8 +121,8 @@ struct FilteredMemberPortfoliosView: View {
     }
 
     private func makeHeaderString(count: Int) -> String {
-        let singular = String(localized: "One portfolio", comment: "Header of section of Portfolios screen")
-        let plural = String(localized: "\(count) portfolios", comment: "Header of section of Portfolios screen")
+        let singular = String(localized: "One portfolio shown", comment: "Header of section of Portfolios screen")
+        let plural = String(localized: "\(count) portfolios shown", comment: "Header of section of Portfolios screen")
         return count==1 ? singular : plural
     }
 

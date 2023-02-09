@@ -4,9 +4,6 @@
 /* Shown when "Show deceased members" entry is missing in Settings */
 "“Former members” includes “deceased members”" = "De optie “ex-leden“ bevat “overleden leden“";
 
-/* No comment provided by engineer. */
-"%@ (%@)" = "%@ (%@)";
-
 /* <role1 and role2> of <photoclub>. Note <and> is handled elsewhere. */
 "%@ of %@" = "%@ van %@";
 
@@ -17,7 +14,7 @@
 "%lld photographers" = "%lld fotografen";
 
 /* Header of section of Portfolios screen */
-"%lld portfolios" = "%lld portfolio's";
+"%lld portfolios shown" = "%lld portfolio's zichtbaar";
 
 /* Administrative role of member within a club. Used as part of concatenations. */
 "admin" = "admin";
@@ -84,7 +81,7 @@ Button to close Info page. */
 "One photographer" = "Één fotograaf";
 
 /* Header of section of Portfolios screen */
-"One portfolio" = "Één portfolio";
+"One portfolio shown" = "Één portfolio zichtbaar";
 
 /* Section title on Readme page. */
 "Open Source" = "Ontwikkelaars gezocht";

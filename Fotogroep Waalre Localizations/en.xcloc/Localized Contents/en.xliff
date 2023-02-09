@@ -17,11 +17,6 @@
       <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="14.2" build-num="14C18"/>
     </header>
     <body>
-      <trans-unit id="%@ (%@)" xml:space="preserve">
-        <source>%@ (%@)</source>
-        <target>%@ (%@)</target>
-        <note>No comment provided by engineer.</note>
-      </trans-unit>
       <trans-unit id="%@ of %@" xml:space="preserve">
         <source>%@ of %@</source>
         <target>%@ of %@</target>
@@ -37,9 +32,9 @@
         <target>%lld photographers</target>
         <note>Header of section of Who's Who screen</note>
       </trans-unit>
-      <trans-unit id="%lld portfolios" xml:space="preserve">
-        <source>%lld portfolios</source>
-        <target>%lld portfolios</target>
+      <trans-unit id="%lld portfolios shown" xml:space="preserve">
+        <source>%lld portfolios shown</source>
+        <target>%lld portfolios shown</target>
         <note>Header of section of Portfolios screen</note>
       </trans-unit>
       <trans-unit id="App version %@ (build %@)" xml:space="preserve">
@@ -103,9 +98,9 @@ Button to close Info page.</note>
         <target>One photographer</target>
         <note>Header of section of Who's Who screen</note>
       </trans-unit>
-      <trans-unit id="One portfolio" xml:space="preserve">
-        <source>One portfolio</source>
-        <target>One portfolio</target>
+      <trans-unit id="One portfolio shown" xml:space="preserve">
+        <source>One portfolio shown</source>
+        <target>One portfolio shown</target>
         <note>Header of section of Portfolios screen</note>
       </trans-unit>
       <trans-unit id="Open Source" xml:space="preserve">

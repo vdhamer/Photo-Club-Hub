@@ -101,7 +101,7 @@ struct PhotoClubView: View {
             header: {
                 HStack {
                     Spacer()
-                    Text("\(filteredPhotoClub.fullName) (\(filteredPhotoClub.town))")
+                    Text(verbatim: "\(filteredPhotoClub.fullName) (\(filteredPhotoClub.town))")
                         .foregroundColor(.secondary)
                     Spacer()
                 }
