@@ -135,8 +135,8 @@ Usage of the various screens in the user interface:
 - The `Portfolios` screen lists the available portfolios
   (see above definition of `portfolio`).
   Clicking on a portfolio shows a screen with the "detailed" contents of that portfolio.
-  Swiping left deletes an entry, but is not normally needed: the deletion is temporary.
-  The `Search` bar filters the list by name.
+  Swiping left deletes an entry, but this is not normally needed and is currently harmless.
+  The `Search` bar filters the list using the photographer's full name.
 
 - The `individual portfolio` screen shows the portfolio of a user-selected photographer.
   The title at the top of the screen shows the photographer's name and club affiation: "Robert Capa @ Magnum Photos".
