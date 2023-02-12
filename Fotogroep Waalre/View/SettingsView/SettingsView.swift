@@ -35,7 +35,7 @@ struct SettingsView: View {
                             content: {
                         HStack {
                             RoleStatusIconView(memberStatus: .current)
-                                .foregroundColor(.memberColor)
+                                .foregroundColor(.memberPortfolioColor)
                             Toggle(String(localized: "Show current members",
                                           comment: "Label of toggle in Settings"),
                                    isOn: $localSettings.showCurrentMembers.animation())
@@ -59,19 +59,19 @@ struct SettingsView: View {
                         }
                         HStack {
                             RoleStatusIconView(memberStatus: .prospective)
-                                .foregroundColor(.memberColor)
+                                .foregroundColor(.memberPortfolioColor)
                             Toggle(String(localized: "Show aspiring members", comment: "Label of toggle in Settings"),
                                    isOn: $localSettings.showAspiringMembers)
                         }
                         HStack {
                             RoleStatusIconView(memberStatus: .honorary)
-                                .foregroundColor(.memberColor)
+                                .foregroundColor(.memberPortfolioColor)
                             Toggle(String(localized: "Show honorary members", comment: "Label of toggle in Settings"),
                                    isOn: $localSettings.showHonoraryMembers)
                         }
                         HStack {
                             RoleStatusIconView(memberStatus: .former)
-                                .foregroundColor(.memberColor)
+                                .foregroundColor(.memberPortfolioColor)
                             Toggle(String(localized: "Show former members", comment: "Label of toggle in Settings"),
                                    isOn: $localSettings.showFormerMembers.animation())
                         }
@@ -95,7 +95,7 @@ struct SettingsView: View {
                         }
                         HStack {
                             RoleStatusIconView(memberStatus: .coach)
-                                .foregroundColor(.memberColor)
+                                .foregroundColor(.memberPortfolioColor)
                             Toggle(String(localized: "Show external coaches", comment: "Label of toggle in Settings"),
                                    isOn: $localSettings.showExternalCoaches)
                         }
