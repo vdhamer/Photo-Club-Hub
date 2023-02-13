@@ -53,7 +53,7 @@ struct MemberPortfolioListView: View {
                     } label: {
                         Image("slider.horizontal.3.rectangle")
                             .font(.title)
-                            .foregroundStyle(.memberColor, .gray, .sliderColor)
+                            .foregroundStyle(.memberPortfolioColor, .gray, .sliderColor)
                     }
                     .popover(isPresented: $showingFilterSettings,
                              attachmentAnchor: .rect(.bounds),

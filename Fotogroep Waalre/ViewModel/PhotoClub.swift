@@ -29,7 +29,7 @@ extension PhotoClub {
 		set { name_ = newValue }
 	}
 
-    var fullNameCommaTown: String {
+    @objc var fullNameCommaTown: String { // objc needed for SectionedFetchRequest's sectionIdentifier
         fullName + ", " + town
     }
 
