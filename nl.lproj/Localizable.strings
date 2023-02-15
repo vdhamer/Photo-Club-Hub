@@ -10,6 +10,9 @@
 /* <count> members (including all types of members) within photo club */
 "%lld members (inc. ex-members)" = "%lld leden (incl. ex-leden)";
 
+/* No comment provided by engineer. */
+"%lld of %lld %@ %@ %@" = "%lld van %lld %@ %@ %@";
+
 /* Header of section of Who's Who screen */
 "%lld photographers" = "%lld fotografen";
 
@@ -27,9 +30,6 @@
 
 /* Name of the fruit, not the company. */
 "Apple" = "Appel";
-
-/* Shown in gray at the bottom of the Portfolios page. */
-"At least one photographer (%@) is listed multiple times here. This is because such photographers are or were associated with more than one photo club." = "Een of meer fotografen (waaronder %@) komt meerdere keren op de lijst voor. Dit betekent dat deze fotograaf betrokken is of was bij meerdere fotoclubs.";
 
 /* Birthday of member (without year). Date not currently localized? */
 "Birthday:" = "Verjaardag:";
@@ -185,6 +185,12 @@ Button to close Info page. */
 /* Shown in gray at the bottom of the Photo Club page. */
 "PhotoClubs_Caption" = "① Het slotje kan gebruikt worden om deze landkaarten sleepbaar en inzoombaar/uitzoombaar te maken.\n② Men kan enkele testfotogroepen (voor demo doeleinden) toevoegen door de bovenkant van deze pagina omlaag te slepen en los te laten (*pull to refresh*).\n③ Een fotogroep kan verwijderd worden door eerst alle betrokken Portfolio's te verwijden (*swipe left*) en dan de fotoclub zelf te verwijderen (*swipe left*).";
 
+/* No comment provided by engineer. */
+"portfolio" = "portfolio";
+
+/* No comment provided by engineer. */
+"portfolios" = "portfolio's";
+
 /* Section title on Readme page
 Title of page showing member portfolios */
 "Portfolios" = "Portfolio's";
@@ -229,6 +235,9 @@ Field at top of Members page that allows the user to filter the members based on
 /* Label of toggle in Settings */
 "Show honorary members" = "Toon ereleden";
 
+/* No comment provided by engineer. */
+"shown for" = "getoond voor";
+
 /* Section title on Readme page. */
 "Supported Platforms" = "iOS, iPadOS, MacOS";
 
@@ -240,12 +249,6 @@ Field at top of Members page that allows the user to filter the members based on
 
 /* Section title on Readme page */
 "The Prelude" = "Prelude";
-
-/* Hint to the user if the database returns zero Members with Search filter in use. */
-"To see names here, please adapt the Search filter or enable additional categories on the Preferences page." = "Tip: om leden hier te zien, pass de Zoek filter aan of pas weergave instellingen in de Instellingen pagina aan.";
-
-/* Hint to the user if the database returns zero Members with unused Search filter. */
-"To see names here, please enable additional categories on the Preferences page." = "Tip: deze lijst is leeg omdat er onvoldoende categorieën op de Instellingen pagina aan staan. Categorieën die momenteel wel aanstaan zijn kennelijk leeg.";
 
 /* Administrative role of member within a club. Used as part of concatenations. */
 "treasurer" = "penningmeester";

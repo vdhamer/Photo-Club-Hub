@@ -113,7 +113,9 @@ struct FilteredMemberPortfoliosView: View {
             } header: {
                 Header(title: section.id) // String used to group the elements into Sections
             } footer: {
-                Footer(count: section.endIndex, listName: section.id)
+                Footer(filtCount: filterPortfolios(unFilteredPortfolios: section).count,
+                       unfiltCount: section.endIndex,
+                       listName: section.id)
             }
         }
         if sectionedFilteredPortfolios.nsPredicate == NSPredicate.none {
@@ -152,15 +154,20 @@ struct FilteredMemberPortfoliosView: View {
     }
 
     private struct Footer: View {
-        var count: Int // number of items in list
+        var filtCount: Int // // number of items in filtered list
+        var unfiltCount: Int // number of items in unfiltered list
         var listName: String
-        let portfolio = String(localized: "portfolio")
-        let portfolios = String(localized: "portfolios")
+        static let comment: StaticString = "Statistics at end of section of FilteredMemberPortfoliosView"
+        let portfolio = String(localized: "portfolio", comment: comment)
+        let portfolios = String(localized: "portfolios", comment: comment)
         let shownFor = String(localized: "shown for")
 
         var body: some View {
             EmptyView()
-            Text("\(count) \(count==1 ? portfolio : portfolios) \(shownFor) \(listName)")
+            Text(filtCount < unfiltCount ?
+                 "\(filtCount) (of \(unfiltCount)) \(filtCount==1 ? portfolio : portfolios) \(shownFor) \(listName)" :
+                 "\(unfiltCount) \(unfiltCount==1 ? portfolio : portfolios) \(shownFor) \(listName)",
+                 comment: FilteredMemberPortfoliosView.Footer.comment)
                 .font(.subheadline)
                 .foregroundColor(.memberPortfolioColor)
         }
