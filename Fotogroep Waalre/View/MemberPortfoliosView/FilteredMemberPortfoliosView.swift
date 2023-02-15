@@ -16,7 +16,7 @@ struct FilteredMemberPortfoliosView: View {
         sectionIdentifier: \.photoClub_!.fullNameCommaTown,
         sortDescriptors: [],
         predicate: NSPredicate.none
-    ) private var sectionedfilteredPortfolios: SectionedFetchResults<String, MemberPortfolio>
+    ) private var sectionedFilteredPortfolios: SectionedFetchResults<String, MemberPortfolio> // TODO: rename
 
     var wkWebView = WKWebView()
     let searchText: Binding<String>
@@ -33,7 +33,7 @@ struct FilteredMemberPortfoliosView: View {
             SortDescriptor(\MemberPortfolio.photographer_!.givenName_, order: .forward),
             SortDescriptor(\MemberPortfolio.photographer_!.familyName_, order: .forward)
         ]
-        _sectionedfilteredPortfolios = SectionedFetchRequest(
+        _sectionedFilteredPortfolios = SectionedFetchRequest(
             sectionIdentifier: \.photoClub_!.fullNameCommaTown,
             sortDescriptors: sortDescriptors,
             predicate: predicate,
@@ -42,10 +42,10 @@ struct FilteredMemberPortfoliosView: View {
     }
 
     var body: some View {
-        let copyFilteredPhotographerFetchResult = sectionedfilteredPortfolios
+        let copyFilteredPhotographerFetchResult = sectionedFilteredPortfolios
         ForEach(copyFilteredPhotographerFetchResult) {section in
             Section {
-                ForEach(section, id: \.id) { filteredMember in
+                ForEach(filterPortfolios(unFilteredPortfolios: section), id: \.id) { filteredMember in
                     NavigationLink(destination: SinglePortfolioView(url: filteredMember.memberWebsite,
                                                                     webView: wkWebView)
                         .navigationTitle((filteredMember.photographer.fullName +
@@ -116,7 +116,7 @@ struct FilteredMemberPortfoliosView: View {
                 Footer(count: section.endIndex, listName: section.id)
             }
         }
-        if sectionedfilteredPortfolios.nsPredicate == NSPredicate.none {
+        if sectionedFilteredPortfolios.nsPredicate == NSPredicate.none {
             Text("""
                  Warning: all member categories on the Preferences page are disabled. \
                  Please enable one or more options in Preferences.
@@ -209,24 +209,29 @@ struct FilteredMemberPortfoliosView: View {
         }
     }
 
-//    private var filteredPhotographerFetchResult: [MemberPortfolio] { // TODO
-//        let filteredPortfolios: [MemberPortfolio]
-//        if searchText.wrappedValue.isEmpty {
-//            filteredPortfolios = sectionedfilteredPortfolios.filter { _ in
-//                true
-//            }
-//        } else {
-//            filteredPortfolios = sectionedfilteredPortfolios.filter { memberPortfolio in
-//                memberPortfolio.photographer.fullName.localizedCaseInsensitiveContains(searchText.wrappedValue) }
-//        }
-//        for portfolio in filteredPortfolios {
-//            Task {
-//                FotogroepWaalreApp.antiZombiePinningOfMemberPortfolios.insert(portfolio)
-//                await portfolio.refreshFirstImage() // is await really needed?
-//            }
-//        }
-//        return filteredPortfolios
-//    }
+    // dynamically filter a sectionedFetchResult based on the bound searchText
+    // The input type and output type differ: .filter returns a different data type (why?)
+    // But the output type is simpler, and also works in a SwiftUI ForEach.
+    private func filterPortfolios(unFilteredPortfolios: SectionedFetchResults<String, MemberPortfolio>.Element)
+                                  -> [MemberPortfolio] {
+        let filteredPortfolios: [MemberPortfolio]
+
+        if searchText.wrappedValue.isEmpty {
+            filteredPortfolios = unFilteredPortfolios.filter { _ in true } // to convert types
+        } else {
+            filteredPortfolios = unFilteredPortfolios.filter { memberPortfolio in
+                memberPortfolio.photographer.fullName.localizedCaseInsensitiveContains(searchText.wrappedValue) }
+        }
+
+        // loosely related task: asynchronously update the thumbnail of any shown photographer
+        for portfolio in filteredPortfolios {
+            Task {
+                FotogroepWaalreApp.antiZombiePinningOfMemberPortfolios.insert(portfolio)
+                await portfolio.refreshFirstImage() // is await really needed?
+            }
+        }
+        return filteredPortfolios
+    }
 
 }
 
