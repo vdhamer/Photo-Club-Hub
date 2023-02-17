@@ -6,19 +6,16 @@
 //
 
 import SwiftUI
-import WebKit
 
 struct FilteredMemberPortfoliosView: View {
 
     @Environment(\.managedObjectContext) private var viewContext
-    @Environment(\.horizontalSizeClass) var horSizeClass
     @SectionedFetchRequest<String, MemberPortfolio>(
         sectionIdentifier: \.photoClub_!.fullNameCommaTown,
         sortDescriptors: [],
         predicate: NSPredicate.none
     ) private var sectionedFilteredPortfolios: SectionedFetchResults<String, MemberPortfolio> // TODO: rename
 
-    var wkWebView = WKWebView()
     let searchText: Binding<String>
 
     // regenerate Section using current FetchRequest with current filters and sorting
@@ -46,67 +43,7 @@ struct FilteredMemberPortfoliosView: View {
         ForEach(copyFilteredPhotographerFetchResult) {section in
             Section {
                 ForEach(filterPortfolios(unFilteredPortfolios: section), id: \.id) { filteredMember in
-                    NavigationLink(destination: SinglePortfolioView(url: filteredMember.memberWebsite,
-                                                                    webView: wkWebView)
-                        .navigationTitle((filteredMember.photographer.fullName +
-                                          " @ " + filteredMember.photoClub.nameOrShortName(horSizeClass: horSizeClass)))
-                            .navigationBarTitleDisplayMode(NavigationBarItem.TitleDisplayMode.inline)) {
-                                HStack(alignment: .center) {
-                                    RoleStatusIconView(memberRolesAndStatus: filteredMember.memberRolesAndStatus)
-                                        .foregroundStyle(.memberPortfolioColor, .gray, .red) // red color is not used
-                                        .imageScale(.large)
-                                        .offset(x: -5, y: 0)
-                                    VStack(alignment: .leading) {
-                                        Text(verbatim: "\(filteredMember.photographer.fullName)")
-                                            .font(UIDevice.isIPad ? .title : .title3)
-                                            .tracking(1)
-                                            .allowsTightening(true)
-                                            .foregroundColor(chooseColor(
-                                                defaultColor: .accentColor,
-                                                isDeceased: filteredMember.photographer.isDeceased
-                                            ))
-                                        Text("""
-                                         \(filteredMember.roleDescription) of \
-                                         \(filteredMember.photoClub.fullNameCommaTown)
-                                         """,
-                                             comment: """
-                                                      <role1 and role2> of <photoclub>. \
-                                                      Note <and> is handled elsewhere.
-                                                      """)
-                                        .truncationMode(.tail)
-                                        .lineLimit(2)
-                                        .font(UIDevice.isIPad ? .headline : .subheadline)
-                                        .foregroundColor(filteredMember.photographer.isDeceased ?
-                                                            .deceasedColor : .primary)
-                                    }
-                                    Spacer()
-                                    AsyncImage(url: filteredMember.latestImageURL) { phase in
-                                        if let image = phase.image {
-                                            image // Displays the loaded image
-                                                .resizable()
-                                                .aspectRatio(contentMode: .fill)
-                                        } else if phase.error != nil ||
-                                                    filteredMember.latestImageURL == nil {
-                                            Image("Question-mark") // Displays image indicating an error occurred
-                                                .resizable()
-                                                .aspectRatio(contentMode: .fit)
-                                        } else {
-                                            ZStack {
-                                                Image("Embarrassed-snail") // Displays placeholder while loading
-                                                    .resizable()
-                                                    .aspectRatio(contentMode: .fit)
-                                                    .opacity(0.4)
-                                                ProgressView()
-                                                    .scaleEffect(x: 2, y: 2, anchor: .center)
-                                                    .blendMode(BlendMode.difference)
-                                            }
-                                        }
-                                    }
-                                    .frame(width: 80, height: 80)
-                                    .clipped()
-                                    .border(TintShapeStyle() )
-                                }
-                            }
+                    MemberPortfolioRow(member: filteredMember)
                 }
                 .onDelete(perform: deleteMembers)
                 .accentColor(.memberPortfolioColor)
@@ -206,14 +143,6 @@ struct FilteredMemberPortfoliosView: View {
 //            let nsError = error as NSError
 //            fatalError("Unresolved error deleting members \(nsError), \(nsError.userInfo)")
 //        } // TODO
-    }
-
-    private func chooseColor(defaultColor: Color, isDeceased: Bool) -> Color {
-        if isDeceased {
-            return .deceasedColor
-        } else {
-            return defaultColor // .primary
-        }
     }
 
     // dynamically filter a sectionedFetchResult based on the bound searchText
