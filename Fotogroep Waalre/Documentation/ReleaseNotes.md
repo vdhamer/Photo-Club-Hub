@@ -1,8 +1,10 @@
 ### 2.3.0 (Github commit ???????) ??-02-23
 
 This is build #4585 in Apple's App Store
+Portfolio screen
+    * Grouped portfolios into sections representing photo clubs
 Photo Clubs screen
-    * Minor layout improvement in section header (padding removed)
+    * Removed section header (redundant)
 Who's Who screen
     * Added count at top of screen (temporary)
 ---------------------------------------------------------------------------

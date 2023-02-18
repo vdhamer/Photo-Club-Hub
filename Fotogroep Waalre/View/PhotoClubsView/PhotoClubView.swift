@@ -98,14 +98,6 @@ struct PhotoClubView: View {
                 .padding()
                 .background(Color(.secondarySystemBackground)) // compatible with light and dark mode
             } // Section
-            header: {
-                HStack {
-                    Spacer()
-                    Text(verbatim: "\(filteredPhotoClub.fullName) (\(filteredPhotoClub.town))")
-                        .foregroundColor(.secondary)
-                    Spacer()
-                }
-            }
         } // ForEach
         .onDelete(perform: deletePhotoClubs)
     }

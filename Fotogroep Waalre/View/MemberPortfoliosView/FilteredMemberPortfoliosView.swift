@@ -45,7 +45,9 @@ struct FilteredMemberPortfoliosView: View {
                 ForEach(filterPortfolios(unFilteredPortfolios: section), id: \.id) { filteredMember in
                     MemberPortfolioRow(member: filteredMember)
                 }
-                .onDelete(perform: deleteMembers)
+                .onDelete(perform: { indexSet in
+                    deleteMembers(section: Array(section), indexSet: indexSet)
+                })
                 .accentColor(.memberPortfolioColor)
             } header: {
                 Header(title: section.id) // String used to group the elements into Sections
@@ -71,7 +73,6 @@ struct FilteredMemberPortfoliosView: View {
 //                 To see names here, please enable additional categories on the Preferences page.
 //                 """, comment: "Hint to the user if the database returns zero Members with unused Search filter.")
 //        }
-
     }
 
     private struct Header: View {
@@ -131,18 +132,21 @@ struct FilteredMemberPortfoliosView: View {
         return nil
     }
 
-    private func deleteMembers(offsets: IndexSet) { // only temporarily deletes a member, just for show
-//        offsets.map { fetchRequest[$0] }.forEach( viewContext.delete )
-//
-//        do {
-//            if viewContext.hasChanges {
-//                try viewContext.save()
-//                print("Deleted member")
-//            }
-//        } catch {
-//            let nsError = error as NSError
-//            fatalError("Unresolved error deleting members \(nsError), \(nsError.userInfo)")
-//        } // TODO
+    private func deleteMembers(section: [MemberPortfolio], indexSet: IndexSet) { // only temporarily deletes a member
+        for index in indexSet {
+            let memberPortfolio = section[index] // could use map()
+            viewContext.delete(memberPortfolio)
+        }
+
+        do {
+            if viewContext.hasChanges {
+                try viewContext.save()
+                print("Deleted member")
+            }
+        } catch {
+            let nsError = error as NSError
+            fatalError("Unresolved error deleting members \(nsError), \(nsError.userInfo)")
+        }
     }
 
     // dynamically filter a sectionedFetchResult based on the bound searchText
