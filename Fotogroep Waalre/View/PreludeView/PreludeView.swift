@@ -104,7 +104,7 @@ struct PreludeView: View {
                         .overlay(RoundedRectangle(cornerRadius: CGFloat(Int(min(geo.size.width,
                                                                                 geo.size.height) * 0.15)),
                                                   style: .continuous)
-                        .stroke(.black, lineWidth: 2))
+                            .stroke(.black, lineWidth: 2))
                         .clipShape(RoundedRectangle(cornerRadius: CGFloat(Int(min(geo.size.width,
                                                                                   geo.size.height) * 0.15)),
                                                     style: .continuous)) // approximate iOS app icon rounding

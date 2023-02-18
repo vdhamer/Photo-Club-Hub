@@ -41,21 +41,26 @@ struct FilteredMemberPortfoliosView: View {
     var body: some View {
         let copyFilteredPhotographerFetchResult = sectionedFilteredPortfolios
         ForEach(copyFilteredPhotographerFetchResult) {section in
-            Section {
-                ForEach(filterPortfolios(unFilteredPortfolios: section), id: \.id) { filteredMember in
-                    MemberPortfolioRow(member: filteredMember)
-                }
-                .onDelete(perform: { indexSet in
-                    deleteMembers(section: Array(section), indexSet: indexSet)
-                })
-                .accentColor(.memberPortfolioColor)
-            } header: {
-                Header(title: section.id) // String used to group the elements into Sections
-            } footer: {
-                Footer(filtCount: filterPortfolios(unFilteredPortfolios: section).count,
-                       unfiltCount: section.endIndex,
-                       listName: section.id)
-            }
+//            VStack {
+                Section {
+                    ForEach(filterPortfolios(unFilteredPortfolios: section), id: \.id) { filteredMember in
+                        MemberPortfolioRow(member: filteredMember)
+                    }
+                    .onDelete(perform: { indexSet in
+                        deleteMembers(section: Array(section), indexSet: indexSet)
+                    })
+                    .accentColor(.memberPortfolioColor)
+                } header: {
+                    Header(title: section.id) // String used to group the elements into Sections
+                } footer: {
+                    Footer(filtCount: filterPortfolios(unFilteredPortfolios: section).count,
+                           unfiltCount: section.endIndex,
+                           listName: section.id)
+                }// }
+                .listRowSeparator(.hidden)
+//                .padding()
+//                .background(Color(.secondarySystemBackground)) // compatible with light and dark mode
+//                .clipShape(RoundedRectangle(cornerSize: CGSize(width: 25.0, height: 25.0)))
         }
         if sectionedFilteredPortfolios.nsPredicate == NSPredicate.none {
             Text("""
@@ -81,13 +86,21 @@ struct FilteredMemberPortfoliosView: View {
         var body: some View {
             HStack {
                 Spacer()
-                Text(title) // String used to group the elements into Sections
-                    .font(.title2)
-                    .foregroundColor(.primary.opacity(0.75))
+                ZStack {
+                    Capsule(style: .continuous)
+                        .fill(Gradient(colors: [.memberPortfolioColor.opacity(0.3),
+                                                .memberPortfolioColor.opacity(0.1),
+                                                .memberPortfolioColor.opacity(0.2),
+                                                .memberPortfolioColor.opacity(0.3)]))
+                        .frame(maxWidth: 400, alignment: .center)
+                    Text(title) // String used to group the elements into Sections
+                        .font(.title2)
+                        .lineLimit(1)
+                        .foregroundColor(.memberPortfolioColor)
+                        .padding(.horizontal)
+                 }
                 Spacer()
             }
-            .padding(.vertical, 3)
-                .background(.memberPortfolioColor.opacity(0.5))
         }
     }
 
@@ -101,13 +114,17 @@ struct FilteredMemberPortfoliosView: View {
         let shownFor = String(localized: "shown for")
 
         var body: some View {
-            EmptyView()
-            Text(filtCount < unfiltCount ?
-                 "\(filtCount) (of \(unfiltCount)) \(filtCount==1 ? portfolio : portfolios) \(shownFor) \(listName)" :
-                 "\(unfiltCount) \(unfiltCount==1 ? portfolio : portfolios) \(shownFor) \(listName)",
-                 comment: FilteredMemberPortfoliosView.Footer.comment)
-                .font(.subheadline)
-                .foregroundColor(.memberPortfolioColor)
+            HStack {
+                Spacer()
+                Text(filtCount < unfiltCount ?
+                     "\(filtCount) (of \(unfiltCount)) \(filtCount==1 ? portfolio : portfolios) \(shownFor) \(listName)" :
+                     "\(unfiltCount) \(unfiltCount==1 ? portfolio : portfolios) \(shownFor) \(listName)",
+                     comment: FilteredMemberPortfoliosView.Footer.comment)
+                    .font(.subheadline)
+                    .lineLimit(2)
+                    .foregroundColor(.secondary)
+                Spacer()
+            }
         }
     }
 
