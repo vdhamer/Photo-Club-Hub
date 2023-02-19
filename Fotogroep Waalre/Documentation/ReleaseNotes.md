@@ -2,10 +2,11 @@
 
 This is build #4585 in Apple's App Store
 Portfolio screen
-    * Grouped portfolios into sections representing photo clubs
+    * List of portfolios is now grouped into sections each representing a photo club.
 Photo Clubs screen
-    * Removed section header (redundant)
+    * Removed section header because it was redundant
 Who's Who screen
+    * Added count at top of screen (temporary solution)
     * Added count at top of screen (temporary)
 Maintenance
     * Updated to match XCode 14.3 beta 1
