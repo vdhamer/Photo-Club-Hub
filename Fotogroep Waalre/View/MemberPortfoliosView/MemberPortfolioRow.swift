@@ -13,7 +13,7 @@ struct MemberPortfolioRow: View {
     var showPhotoClub: Bool = false // not needed now that Portfolios screen is sectioned, but to make it reusable
     @Environment(\.horizontalSizeClass) var horSizeClass
     var wkWebView = WKWebView()
-    let of = String(localized: "of2", comment: "<person> of <photo club>")
+    let of2 = String(localized: "of2", comment: "<person> of <photo club>")
 
     var body: some View {
         NavigationLink(destination: SinglePortfolioView(url: member.memberWebsite,
@@ -37,7 +37,7 @@ struct MemberPortfolioRow: View {
                         ))
                     Group {
                         if showPhotoClub {
-                            Text(verbatim: "\(member.roleDescription) \(of) \(member.photoClub.fullNameCommaTown)")
+                            Text(verbatim: "\(member.roleDescription) \(of2) \(member.photoClub.fullNameCommaTown)")
                         } else {
                             Text(verbatim: "\(member.roleDescription)")
                         }

@@ -115,7 +115,7 @@ struct FilteredMemberPortfoliosView: View {
                                 comment: "Statistics at end of section of FilteredMemberPortfoliosView")
         let shown = String(localized: "shown",
                            comment: "X portfolio(s) shown (due to various forms of filtering)")
-        let of = String(localized: "of1",
+        let of1 = String(localized: "of1",
                            comment: "X of Y portfolio(s) shown (due to various forms of filtering)")
 
         var body: some View {
@@ -124,7 +124,7 @@ struct FilteredMemberPortfoliosView: View {
                 Group {
                     if filtCount < unfiltCount {
                         Text(verbatim: // verbatim keeps these pretty empty strings out of the localized Strings
-                                "\(filtCount) (\(of) \(unfiltCount)) \(filtCount==1 ? portfolio : portfolios) \(shown)")
+                                "\(filtCount) (\(of1) \(unfiltCount)) \(filtCount==1 ? portfolio : portfolios) \(shown)")
                     } else {
                         Text(verbatim:
                                 "\(unfiltCount) \(unfiltCount==1 ? portfolio : portfolios) \(shown)")
