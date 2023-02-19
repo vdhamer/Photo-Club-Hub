@@ -10,6 +10,7 @@ import WebKit // for wkWebView
 
 struct MemberPortfolioRow: View {
     var member: MemberPortfolio
+    var showPhotoClub: Bool = false // not needed now that Portfolios screen is sectioned, but to make it reusable
     @Environment(\.horizontalSizeClass) var horSizeClass
     var wkWebView = WKWebView()
 
@@ -33,8 +34,10 @@ struct MemberPortfolioRow: View {
                             defaultColor: .accentColor,
                             isDeceased: member.photographer.isDeceased
                         ))
-                    Text("\(member.roleDescription) of \(member.photoClub.fullNameCommaTown)",
-                         comment: "<role1 and role2> of <photoclub>. Note <and> is handled elsewhere.")
+                    Text(showPhotoClub ?
+                         "\(member.roleDescription) of \(member.photoClub.fullNameCommaTown)" :
+                         "\(member.roleDescription)",
+                         comment: "<role1 and role2> within a <photo club>. Note <and> is handled elsewhere.")
                     .truncationMode(.tail)
                     .lineLimit(2)
                     .font(UIDevice.isIPad ? .headline : .subheadline)
