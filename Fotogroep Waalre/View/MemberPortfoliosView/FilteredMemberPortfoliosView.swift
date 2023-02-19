@@ -10,7 +10,7 @@ import SwiftUI
 struct FilteredMemberPortfoliosView: View {
 
     @Environment(\.managedObjectContext) private var viewContext
-    
+
     @SectionedFetchRequest<String, MemberPortfolio>(
         sectionIdentifier: \.photoClub_!.fullNameCommaTown,
         sortDescriptors: [],
