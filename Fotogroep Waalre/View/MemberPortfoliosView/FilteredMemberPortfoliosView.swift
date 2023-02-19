@@ -10,6 +10,7 @@ import SwiftUI
 struct FilteredMemberPortfoliosView: View {
 
     @Environment(\.managedObjectContext) private var viewContext
+    
     @SectionedFetchRequest<String, MemberPortfolio>(
         sectionIdentifier: \.photoClub_!.fullNameCommaTown,
         sortDescriptors: [],
@@ -81,6 +82,7 @@ struct FilteredMemberPortfoliosView: View {
     }
 
     private struct Header: View {
+        @Environment(\.colorScheme) private var colorScheme // to detect dark mode
         var title: String
 
         var body: some View {
@@ -96,7 +98,7 @@ struct FilteredMemberPortfoliosView: View {
                     Text(title) // String used to group the elements into Sections
                         .font(.title2)
                         .lineLimit(1)
-                        .foregroundColor(.memberPortfolioColor)
+                        .foregroundColor(colorScheme == .dark ? .memberPortfolioColor : .primary)
                         .padding(.horizontal)
                  }
                 Spacer()
@@ -117,8 +119,8 @@ struct FilteredMemberPortfoliosView: View {
             HStack {
                 Spacer()
                 Text(filtCount < unfiltCount ?
-                     "\(filtCount) (of \(unfiltCount)) \(filtCount==1 ? portfolio : portfolios) \(shownFor) \(listName)" :
-                     "\(unfiltCount) \(unfiltCount==1 ? portfolio : portfolios) \(shownFor) \(listName)",
+                     "\(filtCount) (of \(unfiltCount)) \(filtCount==1 ? portfolio : portfolios) \(shownFor)" :
+                     " \(listName) \(unfiltCount) \(unfiltCount==1 ? portfolio : portfolios) \(shownFor) \(listName)",
                      comment: FilteredMemberPortfoliosView.Footer.comment)
                     .font(.subheadline)
                     .lineLimit(2)
