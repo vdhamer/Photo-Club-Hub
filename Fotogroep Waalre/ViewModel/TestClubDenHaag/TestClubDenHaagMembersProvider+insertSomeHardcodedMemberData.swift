@@ -41,7 +41,7 @@ extension TestClubDenHaagMembersProvider { // fill with some initial hard-coded 
                   givenName: "Peter",
                   familyName: "van den Hamer",
                   photoClub: clubTestDenHaag,
-                  memberRolesAndStatus: MemberRolesAndStatus(role: [ .viceChairman: true ], stat: [ .former: true]),
+                  memberRolesAndStatus: MemberRolesAndStatus(role: [ .viceChairman: true ], stat: [ .former: false]),
                   memberWebsite: URL(string: "https://www.fotogroepwaalre.nl/fotos/Peter_van_den_Hamer_testDH")!,
                   latestImage: URL(string:
                      "https://www.fotogroepwaalre.nl/fotos/Peter_van_den_Hamer_testDH/" +
