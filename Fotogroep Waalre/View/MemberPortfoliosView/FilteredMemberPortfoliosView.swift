@@ -45,7 +45,7 @@ struct FilteredMemberPortfoliosView: View {
 //            VStack {
                 Section {
                     ForEach(filterPortfolios(unFilteredPortfolios: section), id: \.id) { filteredMember in
-                        MemberPortfolioRow(member: filteredMember)
+                        MemberPortfolioRow(member: filteredMember, showPhotoClub: true)
                     }
                     .onDelete(perform: { indexSet in
                         deleteMembers(section: Array(section), indexSet: indexSet)
@@ -124,10 +124,10 @@ struct FilteredMemberPortfoliosView: View {
                 Group {
                     if filtCount < unfiltCount {
                         Text(verbatim: // verbatim keeps these pretty empty strings out of the localized Strings
-                                "\(filtCount) (\(of1) \(unfiltCount)) \(filtCount==1 ? portfolio : portfolios) \(shown)")
+                             "\(filtCount) (\(of1) \(unfiltCount)) \(filtCount==1 ? portfolio : portfolios) \(shown)")
                     } else {
                         Text(verbatim:
-                                "\(unfiltCount) \(unfiltCount==1 ? portfolio : portfolios) \(shown)")
+                             "\(unfiltCount) \(unfiltCount==1 ? portfolio : portfolios) \(shown)")
                     }
                 }
                     .font(.subheadline)

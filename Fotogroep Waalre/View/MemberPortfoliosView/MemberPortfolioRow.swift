@@ -10,7 +10,7 @@ import WebKit // for wkWebView
 
 struct MemberPortfolioRow: View {
     var member: MemberPortfolio
-    var showPhotoClub: Bool = false // not needed now that Portfolios screen is sectioned, but to make it reusable
+    var showPhotoClub: Bool // not strictly needed now that Portfolios screen has section titles
     @Environment(\.horizontalSizeClass) var horSizeClass
     var wkWebView = WKWebView()
     let of2 = String(localized: "of2", comment: "<person> of <photo club>")
@@ -28,7 +28,7 @@ struct MemberPortfolioRow: View {
                     .offset(x: -5, y: 0)
                 VStack(alignment: .leading) {
                     Text(verbatim: "\(member.photographer.fullName)")
-                        .font(UIDevice.isIPad ? .title : .title3)
+                        .font(UIDevice.isIPad ? .title : .title2)
                         .tracking(1)
                         .allowsTightening(true)
                         .foregroundColor(chooseColor(
