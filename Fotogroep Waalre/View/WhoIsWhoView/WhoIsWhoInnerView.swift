@@ -53,16 +53,15 @@ struct WhoIsWhoInnerView: View {
                                 .font(.subheadline)
                                 .foregroundColor(filteredPhotographer.isDeceased ? .deceasedColor : .primary)
                         }
-                        if let phoneNumber = filteredPhotographer.phoneNumber, phoneNumber != "",
-                           showPhoneMail, !filteredPhotographer.isDeceased {
+                        if filteredPhotographer.phoneNumber != "", showPhoneMail, !filteredPhotographer.isDeceased {
                             let locPhone = String(localized: "Phone:", comment: "Telephone number (usually invisible)")
-                            Text(verbatim: "\(locPhone): \(phoneNumber)")
+                            Text(verbatim: "\(locPhone): \(filteredPhotographer.phoneNumber)")
                                 .font(.subheadline)
                                 .foregroundColor(.primary) // we don't show phone numbers for deceased people
                         }
-                        if let eMail = filteredPhotographer.eMail, eMail != "",
+                        if filteredPhotographer.eMail != "",
                            showPhoneMail, !filteredPhotographer.isDeceased {
-                            Text(verbatim: "mailto://\(eMail)")
+                            Text(verbatim: "mailto://\(filteredPhotographer.eMail)")
                                 .font(.subheadline)
                                 .foregroundColor(.primary) // we don't show phone numbers for deceased people
                         }

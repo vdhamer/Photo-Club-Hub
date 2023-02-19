@@ -7,6 +7,8 @@ Photo Clubs screen
     * Removed section header (redundant)
 Who's Who screen
     * Added count at top of screen (temporary)
+Maintenance
+    * Updated to match XCode 14.3 beta 1
 ---------------------------------------------------------------------------
 ### 2.2.10 (Github commit 09212fb) 06-02-23
 
