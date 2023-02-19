@@ -1,3 +1,9 @@
+/* X of Y portfolio(s) shown (due to various forms of filtering) */
+"of1" = "of";
+
+/* <person> of <photo club> */
+"of2" = "of";
+
 /* Section title on Readme page. */
 "Open Source" = "Developers";
 

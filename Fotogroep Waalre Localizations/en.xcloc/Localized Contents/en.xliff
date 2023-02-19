@@ -2,7 +2,7 @@
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
   <file original="en.lproj/Fotogroep-Waalre-InfoPlist.strings" source-language="en" target-language="en" datatype="plaintext">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="14.2" build-num="14C18"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="14.3" build-num="14E5197f"/>
     </header>
     <body>
       <trans-unit id="CFBundleName" xml:space="preserve">
@@ -14,23 +14,13 @@
   </file>
   <file original="en.lproj/Localizable.strings" source-language="en" target-language="en" datatype="plaintext">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="14.2" build-num="14C18"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="14.3" build-num="14E5197f"/>
     </header>
     <body>
-      <trans-unit id="%@ of %@" xml:space="preserve">
-        <source>%@ of %@</source>
-        <target>%@ of %@</target>
-        <note>&lt;role1 and role2&gt; of &lt;photoclub&gt;. Note &lt;and&gt; is handled elsewhere.</note>
-      </trans-unit>
       <trans-unit id="%lld members (inc. ex-members)" xml:space="preserve">
         <source>%lld members (inc. ex-members)</source>
         <target>%lld members (inc. ex-members)</target>
         <note>&lt;count&gt; members (including all types of members) within photo club</note>
-      </trans-unit>
-      <trans-unit id="%lld of %lld %@ %@ %@" xml:space="preserve">
-        <source>%lld of %lld %@ %@ %@</source>
-        <target>%lld of %lld %@ %@ %@</target>
-        <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="%lld photographers" xml:space="preserve">
         <source>%lld photographers</source>
@@ -359,6 +349,16 @@ Field at top of Members page that allows the user to filter the members based on
         <target>The Prelude</target>
         <note>Section title on Readme page</note>
       </trans-unit>
+      <trans-unit id="To see names here, please adapt the Search filter or enable additional categories on the Preferences page." xml:space="preserve">
+        <source>To see names here, please adapt the Search filter or enable additional categories on the Preferences page.</source>
+        <target>To see names here, please adapt the Search filter or enable additional categories on the Preferences page.</target>
+        <note>Hint to the user if the database returns zero Members with Search filter in use.</note>
+      </trans-unit>
+      <trans-unit id="To see names here, please enable additional categories on the Preferences page." xml:space="preserve">
+        <source>To see names here, please enable additional categories on the Preferences page.</source>
+        <target>To see names here, please enable additional categories on the Preferences page.</target>
+        <note>Hint to the user if the database returns zero Members with unused Search filter.</note>
+      </trans-unit>
       <trans-unit id="Warning: all member categories on the Preferences page are disabled. Please enable one or more options in Preferences." xml:space="preserve">
         <source>Warning: all member categories on the Preferences page are disabled. Please enable one or more options in Preferences.</source>
         <target>Warning: all member categories on the Preferences page are disabled. Please enable one or more options in Preferences.</target>
@@ -414,15 +414,25 @@ Field at top of Members page that allows the user to filter the members based on
         <target>member</target>
         <note>Default status of member within a club. Used in concatenations.</note>
       </trans-unit>
+      <trans-unit id="of1" xml:space="preserve">
+        <source>of</source>
+        <target>of</target>
+        <note>X of Y portfolio(s) shown (due to various forms of filtering)</note>
+      </trans-unit>
+      <trans-unit id="of2" xml:space="preserve">
+        <source>of</source>
+        <target>of</target>
+        <note>&lt;person&gt; of &lt;photo club&gt;</note>
+      </trans-unit>
       <trans-unit id="portfolio" xml:space="preserve">
         <source>portfolio</source>
         <target>portfolio</target>
-        <note>No comment provided by engineer.</note>
+        <note>Statistics at end of section of FilteredMemberPortfoliosView</note>
       </trans-unit>
       <trans-unit id="portfolios" xml:space="preserve">
         <source>portfolios</source>
         <target>portfolios</target>
-        <note>No comment provided by engineer.</note>
+        <note>Statistics at end of section of FilteredMemberPortfoliosView</note>
       </trans-unit>
       <trans-unit id="prospective member" xml:space="preserve">
         <source>prospective member</source>
@@ -434,10 +444,10 @@ Field at top of Members page that allows the user to filter the members based on
         <target>secretary</target>
         <note>Administrative role of member within a club. Used as part of concatenations.</note>
       </trans-unit>
-      <trans-unit id="shown for" xml:space="preserve">
-        <source>shown for</source>
-        <target>shown for</target>
-        <note>No comment provided by engineer.</note>
+      <trans-unit id="shown" xml:space="preserve">
+        <source>shown</source>
+        <target>shown</target>
+        <note>X portfolio(s) shown (due to various forms of filtering)</note>
       </trans-unit>
       <trans-unit id="treasurer" xml:space="preserve">
         <source>treasurer</source>
@@ -463,7 +473,7 @@ Field at top of Members page that allows the user to filter the members based on
   </file>
   <file original="Settings.bundle/en.lproj/Root.strings" source-language="en" target-language="en" datatype="plaintext">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="14.2" build-num="14C18"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="14.3" build-num="14E5197f"/>
     </header>
     <body>
       <trans-unit id="About" xml:space="preserve">

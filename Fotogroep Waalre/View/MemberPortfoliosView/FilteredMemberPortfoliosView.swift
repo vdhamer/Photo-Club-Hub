@@ -15,7 +15,7 @@ struct FilteredMemberPortfoliosView: View {
         sectionIdentifier: \.photoClub_!.fullNameCommaTown,
         sortDescriptors: [],
         predicate: NSPredicate.none
-    ) private var sectionedFilteredPortfolios: SectionedFetchResults<String, MemberPortfolio> // TODO: rename
+    ) private var sectionedPortfolios: SectionedFetchResults<String, MemberPortfolio>
 
     let searchText: Binding<String>
 
@@ -31,7 +31,7 @@ struct FilteredMemberPortfoliosView: View {
             SortDescriptor(\MemberPortfolio.photographer_!.givenName_, order: .forward),
             SortDescriptor(\MemberPortfolio.photographer_!.familyName_, order: .forward)
         ]
-        _sectionedFilteredPortfolios = SectionedFetchRequest(
+        _sectionedPortfolios = SectionedFetchRequest(
             sectionIdentifier: \.photoClub_!.fullNameCommaTown,
             sortDescriptors: sortDescriptors,
             predicate: predicate,
@@ -40,8 +40,8 @@ struct FilteredMemberPortfoliosView: View {
     }
 
     var body: some View {
-        let copyFilteredPhotographerFetchResult = sectionedFilteredPortfolios
-        ForEach(copyFilteredPhotographerFetchResult) {section in
+        let sectionedPortfoliosResults = sectionedPortfolios // copy results to avoid recomputation
+        ForEach(sectionedPortfoliosResults) {section in
 //            VStack {
                 Section {
                     ForEach(filterPortfolios(unFilteredPortfolios: section), id: \.id) { filteredMember in
@@ -59,26 +59,25 @@ struct FilteredMemberPortfoliosView: View {
                            listName: section.id)
                 }// }
                 .listRowSeparator(.hidden)
-//                .padding()
+//                .padding() // disabled because it doesn't work in combination with sectioning
 //                .background(Color(.secondarySystemBackground)) // compatible with light and dark mode
 //                .clipShape(RoundedRectangle(cornerSize: CGSize(width: 25.0, height: 25.0)))
         }
-        if sectionedFilteredPortfolios.nsPredicate == NSPredicate.none {
+        if sectionedPortfoliosResults.nsPredicate == NSPredicate.none {
             Text("""
                  Warning: all member categories on the Preferences page are disabled. \
                  Please enable one or more options in Preferences.
                  """, comment: "Hint to the user if all of the Preference toggles are disabled.")
-        } // TODO
-//        } else if searchText.wrappedValue != "" && copyFilteredPhotographerFetchResult.isEmpty {
-//            Text("""
-//                 To see names here, please adapt the Search filter \
-//                 or enable additional categories on the Preferences page.
-//                 """, comment: "Hint to the user if the database returns zero Members with Search filter in use.")
-//        } else if searchText.wrappedValue == "" && copyFilteredPhotographerFetchResult.isEmpty {
-//            Text("""
-//                 To see names here, please enable additional categories on the Preferences page.
-//                 """, comment: "Hint to the user if the database returns zero Members with unused Search filter.")
-//        }
+        } else if searchText.wrappedValue != "" && sectionedPortfoliosResults.isEmpty {
+            Text("""
+                 To see names here, please adapt the Search filter \
+                 or enable additional categories on the Preferences page.
+                 """, comment: "Hint to the user if the database returns zero Members with Search filter in use.")
+        } else if searchText.wrappedValue == "" && sectionedPortfoliosResults.isEmpty {
+            Text("""
+                 To see names here, please enable additional categories on the Preferences page.
+                 """, comment: "Hint to the user if the database returns zero Members with unused Search filter.")
+        }
     }
 
     private struct Header: View {
@@ -110,18 +109,27 @@ struct FilteredMemberPortfoliosView: View {
         var filtCount: Int // // number of items in filtered list
         var unfiltCount: Int // number of items in unfiltered list
         var listName: String
-        static let comment: StaticString = "Statistics at end of section of FilteredMemberPortfoliosView"
-        let portfolio = String(localized: "portfolio", comment: comment)
-        let portfolios = String(localized: "portfolios", comment: comment)
-        let shown = String(localized: "shown")
+        let portfolio = String(localized: "portfolio",
+                               comment: "Statistics at end of section of FilteredMemberPortfoliosView")
+        let portfolios = String(localized: "portfolios",
+                                comment: "Statistics at end of section of FilteredMemberPortfoliosView")
+        let shown = String(localized: "shown",
+                           comment: "X portfolio(s) shown (due to various forms of filtering)")
+        let of = String(localized: "of1",
+                           comment: "X of Y portfolio(s) shown (due to various forms of filtering)")
 
         var body: some View {
             HStack {
                 Spacer()
-                Text(filtCount < unfiltCount ?
-                     "\(filtCount) (of \(unfiltCount)) \(filtCount==1 ? portfolio : portfolios) \(shown)" :
-                     "\(unfiltCount) \(unfiltCount==1 ? portfolio : portfolios) \(shown)",
-                     comment: FilteredMemberPortfoliosView.Footer.comment)
+                Group {
+                    if filtCount < unfiltCount {
+                        Text(verbatim: // verbatim keeps these pretty empty strings out of the localized Strings
+                                "\(filtCount) (\(of) \(unfiltCount)) \(filtCount==1 ? portfolio : portfolios) \(shown)")
+                    } else {
+                        Text(verbatim:
+                                "\(unfiltCount) \(unfiltCount==1 ? portfolio : portfolios) \(shown)")
+                    }
+                }
                     .font(.subheadline)
                     .lineLimit(2)
                     .foregroundColor(.secondary)

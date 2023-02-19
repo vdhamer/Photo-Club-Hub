@@ -13,6 +13,7 @@ struct MemberPortfolioRow: View {
     var showPhotoClub: Bool = false // not needed now that Portfolios screen is sectioned, but to make it reusable
     @Environment(\.horizontalSizeClass) var horSizeClass
     var wkWebView = WKWebView()
+    let of = String(localized: "of2", comment: "<person> of <photo club>")
 
     var body: some View {
         NavigationLink(destination: SinglePortfolioView(url: member.memberWebsite,
@@ -34,10 +35,13 @@ struct MemberPortfolioRow: View {
                             defaultColor: .accentColor,
                             isDeceased: member.photographer.isDeceased
                         ))
-                    Text(showPhotoClub ?
-                         "\(member.roleDescription) of \(member.photoClub.fullNameCommaTown)" :
-                         "\(member.roleDescription)",
-                         comment: "<role1 and role2> within a <photo club>. Note <and> is handled elsewhere.")
+                    Group {
+                        if showPhotoClub {
+                            Text(verbatim: "\(member.roleDescription) \(of) \(member.photoClub.fullNameCommaTown)")
+                        } else {
+                            Text(verbatim: "\(member.roleDescription)")
+                        }
+                    }
                     .truncationMode(.tail)
                     .lineLimit(2)
                     .font(UIDevice.isIPad ? .headline : .subheadline)

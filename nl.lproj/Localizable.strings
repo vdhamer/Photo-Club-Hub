@@ -4,14 +4,8 @@
 /* Shown when "Show deceased members" entry is missing in Settings */
 "“Former members” includes “deceased members”" = "De optie “ex-leden“ bevat “overleden leden“";
 
-/* <role1 and role2> of <photoclub>. Note <and> is handled elsewhere. */
-"%@ of %@" = "%@ van %@";
-
 /* <count> members (including all types of members) within photo club */
 "%lld members (inc. ex-members)" = "%lld leden (incl. ex-leden)";
-
-/* No comment provided by engineer. */
-"%lld of %lld %@ %@ %@" = "%lld van %lld %@ %@ %@";
 
 /* Header of section of Who's Who screen */
 "%lld photographers" = "%lld fotografen";
@@ -76,6 +70,12 @@ Button to close Info page. */
 
 /* In Settings, above toggles like "Show former members" */
 "Member categories" = "Lidmaatschapstypen";
+
+/* X of Y portfolio(s) shown (due to various forms of filtering) */
+"of1" = "van";
+
+/* <person> of <photo club> */
+"of2" = "van";
 
 /* Header of section of Who's Who screen */
 "One photographer" = "Één fotograaf";
@@ -185,10 +185,10 @@ Button to close Info page. */
 /* Shown in gray at the bottom of the Photo Club page. */
 "PhotoClubs_Caption" = "① Het slotje kan gebruikt worden om deze landkaarten sleepbaar en inzoombaar/uitzoombaar te maken.\n② Men kan enkele testfotogroepen (voor demo doeleinden) toevoegen door de bovenkant van deze pagina omlaag te slepen en los te laten (*pull to refresh*).\n③ Een fotogroep kan verwijderd worden door eerst alle betrokken Portfolio's te verwijden (*swipe left*) en dan de fotoclub zelf te verwijderen (*swipe left*).";
 
-/* No comment provided by engineer. */
+/* Statistics at end of section of FilteredMemberPortfoliosView */
 "portfolio" = "portfolio";
 
-/* No comment provided by engineer. */
+/* Statistics at end of section of FilteredMemberPortfoliosView */
 "portfolios" = "portfolio's";
 
 /* Section title on Readme page
@@ -235,8 +235,8 @@ Field at top of Members page that allows the user to filter the members based on
 /* Label of toggle in Settings */
 "Show honorary members" = "Toon ereleden";
 
-/* No comment provided by engineer. */
-"shown for" = "getoond voor";
+/* X portfolio(s) shown (due to various forms of filtering) */
+"shown" = "getoond";
 
 /* Section title on Readme page. */
 "Supported Platforms" = "iOS, iPadOS, MacOS";
@@ -249,6 +249,12 @@ Field at top of Members page that allows the user to filter the members based on
 
 /* Section title on Readme page */
 "The Prelude" = "Prelude";
+
+/* Hint to the user if the database returns zero Members with Search filter in use. */
+"To see names here, please adapt the Search filter or enable additional categories on the Preferences page." = "Deze lijst is leeg doordat de Zoek filter niets vindt in de gekozen ledencategorieën. Pas dus de Zoek filter aan of voeg categorieën toe (bij Instellingen).";
+
+/* Hint to the user if the database returns zero Members with unused Search filter. */
+"To see names here, please enable additional categories on the Preferences page." = "Deze lijst is vermoedelijk leeg omdat er onvoldoende ledencategorieën geselecteerd zijn op het Instellingen scherm.";
 
 /* Administrative role of member within a club. Used as part of concatenations. */
 "treasurer" = "penningmeester";
