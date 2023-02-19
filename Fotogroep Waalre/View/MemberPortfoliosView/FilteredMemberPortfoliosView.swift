@@ -113,14 +113,14 @@ struct FilteredMemberPortfoliosView: View {
         static let comment: StaticString = "Statistics at end of section of FilteredMemberPortfoliosView"
         let portfolio = String(localized: "portfolio", comment: comment)
         let portfolios = String(localized: "portfolios", comment: comment)
-        let shownFor = String(localized: "shown for")
+        let shown = String(localized: "shown")
 
         var body: some View {
             HStack {
                 Spacer()
                 Text(filtCount < unfiltCount ?
-                     "\(filtCount) (of \(unfiltCount)) \(filtCount==1 ? portfolio : portfolios) \(shownFor)" :
-                     " \(listName) \(unfiltCount) \(unfiltCount==1 ? portfolio : portfolios) \(shownFor) \(listName)",
+                     "\(filtCount) (of \(unfiltCount)) \(filtCount==1 ? portfolio : portfolios) \(shown)" :
+                     "\(unfiltCount) \(unfiltCount==1 ? portfolio : portfolios) \(shown)",
                      comment: FilteredMemberPortfoliosView.Footer.comment)
                     .font(.subheadline)
                     .lineLimit(2)
