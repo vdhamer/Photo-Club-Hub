@@ -99,14 +99,14 @@ site. We expect to change the name of the app now that the app has been redesign
 Since release 2.3.0 images are shown in a 3-level hierarchy:
 
 * photo clubA
-	* photographer1
+	* `portfolio` for photographer1
 		* individual images
-	* photographer2
+	* `portfolio` for photographer2
 		* individual images
 * photo clubB
-	* photographer3
+	* `portfolio` for photographer3
 		* individual images
-	* photogrpaher4
+	* `portfolio` for photogrpaher4
 		* individual images
 
 The middle level, called `portfolio`, thus represents the part of a photographer's work that is associated with one single photo club.
