@@ -86,7 +86,7 @@ Photo Club Waalre is a photography club named after Waalre, a town in the south 
 The Netherlands. Its members meet since 1988, mainly to critique each other’s photos.</p>
 
 This app originally served as an alternative way to view the photos published on the club's web
-site. We expect to change the name of the app to emphasize that the app can support *multiple* photo clubs.
+site. We expect to change the name of the app now that the app has been redesigned to support *multiple* photo clubs.
 </details>
 <details open><summary>
 	
@@ -96,8 +96,33 @@ site. We expect to change the name of the app to emphasize that the app can supp
 
 > The app showcases curated images made by members of photo clubs.
 
-The images within the app are divided into so-called `portfolios`.
-Each portfolio covers that part of a photographer's work that is associated with one single photo club.
+Since release 2.3.0 images are shown in a 3-level hierarchy:
+
+* photo clubA (on hostA)
+	* `portfolio` for photographer1
+		* individual images
+	* `portfolio` for photographer2
+		* individual images
+* photo clubB (on hostB)
+	* `portfolio` for photographer3
+		* individual images
+	* `portfolio` for photogrpaher4
+		* individual images
+
+
+The `portfolio` level thus holds a photographer's images that are associated with one particular photo club.
+The `photo club` level is the level at which a club's portfolios and images are administered. 
+You can see photo club as the level at which "their" potfolios of images are hosted and curated.
+
+For comparison, here's what personal websites of photographers tend to do:
+	
+* website for photographer1 (on host1)
+	* photo styleA
+		* invidiual images
+	* photo styleB
+		* individual imgages
+* website for photographer 2 (on host2)
+	* etc.
 
 <ul><details><summary>
 		
