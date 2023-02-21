@@ -96,8 +96,11 @@ site. We expect to change the name of the app now that the app has been redesign
 
 > The app showcases curated images made by members of photo clubs.
 
-The images within the app are divided into so-called `portfolios`.
-Each portfolio covers that part of a photographer's work that is associated with one single photo club.
+Since release 2.3.0 images are shown in a 3-level hierarchy:
+	* photo club
+		* photographer
+			* individual image
+The middle level is known as a `portfolio. Each portfolio thus covers that part of a photographer's work that is associated with one single photo club.
 
 <ul><details><summary>
 		
