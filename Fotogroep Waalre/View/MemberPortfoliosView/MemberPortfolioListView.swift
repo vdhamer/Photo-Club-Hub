@@ -10,6 +10,7 @@ import SwiftUI
 struct MemberPortfolioListView: View {
     @Environment(\.managedObjectContext) private var viewContext
     @State private var showingFilterSettings = false // controls visibility of Settings screen
+    @State private var selectedSettingsDetent = PresentationDetent.fraction(0.5)
     @State private var showingReadme = false // controls visibility of Readme screen
     @State private var searchText: String = ""
 
@@ -55,20 +56,12 @@ struct MemberPortfolioListView: View {
                             .font(.title)
                             .foregroundStyle(.memberPortfolioColor, .gray, .sliderColor)
                     }
-                    .popover(isPresented: $showingFilterSettings,
-                             attachmentAnchor: .rect(.bounds),
-                             arrowEdge: .top, // ignored in iOS
-                             content: {
-                        SettingsView(settings: $model.settings)
-                            .frame(minWidth: geo.size.width * 0.2,
-                                   idealWidth: geo.size.width * 0.45,
-                                   maxWidth: geo.size.width * 1.0,
-                                   minHeight: geo.size.height * 0.3,
-                                   idealHeight: 485,
-                                   maxHeight: .infinity
-                            )
-                    })
-                    .padding(Edge.Set.trailing, 5)
+                        .sheet(isPresented: $showingFilterSettings, content: {
+                            SettingsView(settings: $model.settings)
+                                .presentationDetents([ .fraction(0.1), .fraction(0.3), .fraction(0.5),
+                                                       .fraction(0.70), .fraction(0.90), .large ],
+                                                     selection: $selectedSettingsDetent)
+                        })
 
                     Button {
                         if !showingFilterSettings {
