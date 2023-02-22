@@ -11,6 +11,8 @@ Photo Clubs screen
 Who's Who screen
     * Added count at top of screen (temporary solution)
     * Added count at top of screen (temporary)
+Readme and Setting screens
+    * Converted to "bottom screen"
 Maintenance
     * Updated to match XCode 14.3 beta 1
 ---------------------------------------------------------------------------
