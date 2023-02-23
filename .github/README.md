@@ -115,13 +115,14 @@ You can see photo club as the level at which "their" potfolios of images are hos
 
 For comparison, here's what personal websites of photographers tend to do:
 	
-* website for photographer1 (on host1)
-	* photo styleA
-		* invidiual images
-	* photo styleB
-		* individual imgages
-* website for photographer 2 (on host2)
-	* etc.
+* website for photographer1 (hosted on site1)
+  * photo galleryA (e.g. portraits)
+    * invidiual images
+  * photo galleryB (e.g. landscapes)
+    * individual imgages
+* website for photographer 2 (hosted on site2)
+  * photo galleryC
+    * :
 
 <ul><details><summary>
 		
