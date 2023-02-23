@@ -114,9 +114,9 @@ Since release 2.3.0, the app shows images using the following 3-level hierarchy:
 
 The `portfolio` level thus holds a photographer's work that is associated with one particular photo club.
 The `photo club` level is the higher level at which 
-1) a club's membership list is maintained, 
-2) portfolios are maintained for each club member ("curated"),
-3) and the actual listed images are hosted 
+1. a club's membership list is maintained, 
+2. portfolios are maintained for each club member ("curated"),
+3. the actual images in the portfolios are hosted 
 
 <a/></p>
 
