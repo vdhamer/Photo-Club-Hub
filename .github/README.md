@@ -110,6 +110,7 @@ Since release 2.3.0, the app shows images using the following 3-level hierarchy:
     * individual images
 
 [//]: # (to terminate list)
+
 The `portfolio` level thus holds a photographer's images that are associated with one particular photo club.
 The `photo club` level is the level at which a club's portfolios and images are administered. 
 You can see photo club as the level at which "their" potfolios of images are hosted and curated.
