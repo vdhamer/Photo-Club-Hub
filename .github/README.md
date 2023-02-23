@@ -108,7 +108,8 @@ Since release 2.3.0, the app shows images using the following 3-level hierarchy:
     * individual images
   * `portfolio` for photogrpaher4
     * individual images
-<a/>
+
+[//]: # (to terminate list)
 The `portfolio` level thus holds a photographer's images that are associated with one particular photo club.
 The `photo club` level is the level at which a club's portfolios and images are administered. 
 You can see photo club as the level at which "their" potfolios of images are hosted and curated.
@@ -123,7 +124,8 @@ For comparison, here's what personal websites of photographers tend to do:
 * website for photographer 2 (hosted on site2)
   * photo galleryC
     * :
-<a/>
+
+[//]: # (to terminate list)
 
 <ul><details><summary>
 		
