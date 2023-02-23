@@ -99,15 +99,16 @@ site. We expect to change the name of the app now that the app has been redesign
 Since release 2.3.0, the app shows images using the following 3-level hierarchy:
 
 * photo clubA (hosted on siteA)
-  * `portfolio` for photographer1
-    * individual images
-  * `portfolio` for photographer2
-    * individual images
+  * portfolio1 for photographer1
+    * images in portfolio1
+  * portfolio2 for photographer2
+    * images in portfolio2
+
 * photo clubB (hosted on siteB)
-  * `portfolio` for photographer3
-    * individual images
-  * `portfolio` for photogrpaher4
-    * individual images
+  * portfolio3 for photographer3
+    * images in portfolio3
+  * portfolio4 for photogrpaher4
+    * images in portfolio4
 
 <a/></p>
 
@@ -119,9 +120,10 @@ For comparison, here's what personal websites of photographers tend to do:
 	
 * website for photographer1 (hosted on site1)
   * photo galleryA (e.g. portraits)
-    * invidiual images
+    * images in galleryA
   * photo galleryB (e.g. landscapes)
-    * individual imgages
+    * images in galleryB
+
 * website for photographer 2 (hosted on site2)
   * photo galleryC
     * :
