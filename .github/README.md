@@ -118,6 +118,8 @@ The `photo club` level is the higher level at which
 2) portfolios are maintained for each club member ("curated"),
 3) and the actual listed images are hosted 
 
+<a/></p>
+
 In contrast, here's how classical personal photography websites tend to be organized:
 	
 * website for photographer1 (hosted on site1)
