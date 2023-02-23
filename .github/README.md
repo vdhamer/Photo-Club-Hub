@@ -96,19 +96,18 @@ site. We expect to change the name of the app now that the app has been redesign
 
 > The app showcases curated images made by members of photo clubs.
 
-Since release 2.3.0 of the app, images are shown in a 3-level hierarchy:
+Since release 2.3.0, the app shows images using the following 3-level hierarchy:
 
-* photo clubA (on hostA)
-	* `portfolio` for photographer1
-		* individual images
-	* `portfolio` for photographer2
-		* individual images
-* photo clubB (on hostB)
-	* `portfolio` for photographer3
-		* individual images
-	* `portfolio` for photogrpaher4
-		* individual images
-
+* photo clubA (hosted on siteA)
+  * `portfolio` for photographer1
+    * individual images
+  * `portfolio` for photographer2
+    * individual images
+* photo clubB (hosted on siteB)
+  * `portfolio` for photographer3
+    * individual images
+  * `portfolio` for photogrpaher4
+    * individual images
 
 The `portfolio` level thus holds a photographer's images that are associated with one particular photo club.
 The `photo club` level is the level at which a club's portfolios and images are administered. 
