@@ -120,7 +120,7 @@ The `photo club` level is the higher level at which
 
 <a/></p>
 
-In contrast, here's how classical personal photography websites tend to be organized:
+For comparison, this is what personal photographer websites look like in the same notation:
 	
 * website for photographer1 (hosted on site1)
   * photo galleryA (e.g. portraits)
@@ -133,7 +133,7 @@ In contrast, here's how classical personal photography websites tend to be organ
     * :
 
 <a/></p>
-Here each photographer selects which images to display, and hosts them on a personal website.
+Now each photographer is on his/her own, and determines which images to display, how to host them, and how to present them.
 
 <ul><details><summary>
 		
