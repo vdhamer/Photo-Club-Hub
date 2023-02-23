@@ -107,7 +107,7 @@ Since release 2.3.0, the app shows images using the following 3-level hierarchy:
 * photo clubB (hosted on siteB)
   * portfolio3 for photographer3
     * images in portfolio3
-  * portfolio4 for photogrpaher4
+  * portfolio4 for photographer4
     * images in portfolio4
 
 <a/></p>
