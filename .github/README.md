@@ -141,20 +141,19 @@ Now each photographer is on his/her own, and determines which images to display,
 	
 </summary>
 
-As mentioned above, this app focusses on photographers as members of photo clubs.
-
 If a photographer joined *multiple* photo clubs, the app can show *multiple* portfolios (with independent
-content) for that photographer. This can be relevant if a photographer is simultaneously 
-a member of _two_ clubs. But it also works if a photographer left one club and joined another club. 
-In either case (and a lot of variations on this), the `portfolio` concept keeps both sets of images separate.</p>
+content) for that photographer - one per photo club. This happens when the photographer is simultaneously 
+a member of _two_ clubs. But it also happens if a photographer left one club and joined another club.
+Other variants are also thinkable.
+In all cases, the `portfolio` concept groups the images both by photographer and by photo club.</p>
 
-Despite the focus on photo clubs, the app can link to a photographer's personal photography website.
-Such sites often showcase a photographer's work as an individual.
-Furthermore, nothing prevents you from supporting an online group of photography friends:
-you will only need to give this "club" a name, and decide what images to post here.
+The app is thus not intended as a personal website replacement, but it can have links to a photographer's personal website.
+Furthermore, nothing prevents you from supporting an online group of photography friends - assuming
+that they are interested in organizing this together.
 
-If you really want, you could even consider yourself a one-person club and optionally use the portfolio concept
-to organize different types of images. But a straightforward website would probably work file for this.
+You could even consider yourself a one-person club and put your images in a single portfolio below that club.
+Or you could use the club level to group a few individual photographers (by region or interest) as long as the members
+of this non-club are willing to align (e.g. maintain the list of portfolios=photographers who are then a member of a loosely-knit club).
 
 </detail></ul></detail>
 </ul>
