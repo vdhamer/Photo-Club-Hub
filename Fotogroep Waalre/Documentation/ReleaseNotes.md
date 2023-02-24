@@ -15,6 +15,7 @@ Readme and Setting screens
     * Converted to "bottom screen"
 Maintenance
     * Updated to match XCode 14.3 beta 1
+    * Updated github README.md
 ---------------------------------------------------------------------------
 ### 2.2.10 (Github commit 09212fb) 06-02-23
 
