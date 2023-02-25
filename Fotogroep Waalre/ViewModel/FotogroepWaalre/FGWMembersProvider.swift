@@ -24,7 +24,7 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
 
         let urlString = getFileAsString(nameEncryptedFile: "FGWPrivateMembersURL2.txt",
                                         nameUnencryptedFile: "FGWPrivateMembersURL3.txt",
-                                        okToUseEncryptedFile: true) // false forces use of PrivateMembersURL3.txt
+                                        allowUseEncryptedFile: true) // false forces use of PrivateMembersURL3.txt
         if let privateURL = URL(string: urlString) {
             Task {
                 await loadPrivateMembersFromWebsite( backgroundContext: fgwBackgroundContext,
@@ -41,8 +41,8 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
 
     private func getFileAsString(nameEncryptedFile: String,
                                  nameUnencryptedFile: String,
-                                 okToUseEncryptedFile: Bool = true) -> String {
-        if let secret = readURLFromLocalFile(fileNameWithExtension: nameEncryptedFile), okToUseEncryptedFile {
+                                 allowUseEncryptedFile: Bool = true) -> String {
+        if let secret = readURLFromLocalFile(fileNameWithExtension: nameEncryptedFile), allowUseEncryptedFile {
             print("Fotogroep Waalre: will use confidential version of Private member data file.")
             return secret
         } else {

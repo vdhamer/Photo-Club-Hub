@@ -37,7 +37,7 @@ struct FotogroepWaalreApp: App {
                     _ = TestClubAmsterdamMembersProvider()
                     _ = TestClubRotterdamMembersProvider()
                     // other groups can be added here by calling, for example, BIMembersProvider()
-                    // but they are loaded by Pulling-to-Refresh the Photo Clubs screen
+                    // They are already loadable manually using pull-to-refresh on the Photo Clubs screen.
                 }
         }
         .onChange(of: scenePhase) { _ in
