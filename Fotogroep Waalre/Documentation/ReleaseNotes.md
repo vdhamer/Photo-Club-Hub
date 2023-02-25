@@ -16,6 +16,8 @@ Readme and Setting screens
 Maintenance
     * Tested on XCode 14.3 beta 1
     * Updated github README.md
+    * Moved text2 and text3 files to other URL (http instead of https)
+    * "?" is now accepted accepted as placeholder when bithdate is unknown
 ---------------------------------------------------------------------------
 ### 2.2.10 (Github commit 09212fb) 06-02-23
 

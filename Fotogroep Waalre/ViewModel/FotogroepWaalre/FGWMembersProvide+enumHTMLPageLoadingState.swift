@@ -48,6 +48,7 @@ extension FGWMembersProvider { // private utitity functions
     </tbody> <!-- if we can't find a next .rawStart, the looping stops -->
     </table>
     */
+
     // swiftlint:enable line_length
 
     enum HTMLPageLoadingState {

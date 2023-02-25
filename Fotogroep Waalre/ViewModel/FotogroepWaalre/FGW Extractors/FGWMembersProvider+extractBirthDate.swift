@@ -12,12 +12,13 @@ extension FGWMembersProvider {
 
     func extractBirthDate(taggedString: String) -> Date? {
         // <td>2001-12-31</td> is Dec 31st 2001
-        // <td></td> means birthday is not known
+        // <td>?</td> means birthdate is unavailableba
 
         let birthDate: Date?
         let regex = Regex {
             "<td>"
-            Optionally { // date string might be empty
+            ChoiceOf {
+                One("?") // can probably be made stricter: <td>?2001-12-31</td> is interpred as 2001-12-31
                 Capture(.date(format: "\(year: .defaultDigits)-\(month: .twoDigits)-\(day: .twoDigits)",
                               locale: Locale.autoupdatingCurrent,
                               timeZone: TimeZone.autoupdatingCurrent))

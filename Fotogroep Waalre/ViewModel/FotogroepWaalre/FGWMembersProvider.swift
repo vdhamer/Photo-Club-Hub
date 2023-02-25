@@ -24,7 +24,7 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
 
         let urlString = getFileAsString(nameEncryptedFile: "FGWPrivateMembersURL2.txt",
                                         nameUnencryptedFile: "FGWPrivateMembersURL3.txt",
-                                        allowUseEncryptedFile: true) // false forces use of PrivateMembersURL3.txt
+                                        allowUseEncryptedFile: true) // set to false only for testing purposes
         if let privateURL = URL(string: urlString) {
             Task {
                 await loadPrivateMembersFromWebsite( backgroundContext: fgwBackgroundContext,
@@ -50,7 +50,7 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
                 print("Fotogroep Waalre: will use non-confidential version of Private member data file.")
                 return unsecret
             } else {
-                print("Fotogroep Waalre: ERROR - roblem accessing either version of Private member data file.")
+                print("Fotogroep Waalre: ERROR - problem accessing either version of Private member data file.")
                 return "Internal error: file \(nameUnencryptedFile) looks encrypted"
             }
         }
