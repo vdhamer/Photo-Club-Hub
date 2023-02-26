@@ -10,9 +10,6 @@
 /* Header of section of Who's Who screen */
 "%lld photographers" = "%lld fotografen";
 
-/* Header of section of Portfolios screen */
-"%lld portfolios shown" = "%lld portfolio's zichtbaar";
-
 /* Administrative role of member within a club. Used as part of concatenations. */
 "admin" = "admin";
 
@@ -65,11 +62,15 @@ Button to close Info page. */
 /* Caption of Localizations image on Readme page */
 "List of supported languages" = "De beschikbare talen";
 
-/* Default status of member within a club. Used in concatenations. */
+/* Statistics at end of section of FilteredMemberPortfoliosView
+Default status of member within a club. Used in concatenations. */
 "member" = "lid";
 
 /* In Settings, above toggles like "Show former members" */
 "Member categories" = "Lidmaatschapstypen";
+
+/* Statistics at end of section of FilteredMemberPortfoliosView */
+"members" = "leden";
 
 /* X of Y portfolio(s) shown (due to various forms of filtering) */
 "of1" = "van";
@@ -79,9 +80,6 @@ Button to close Info page. */
 
 /* Header of section of Who's Who screen */
 "One photographer" = "Één fotograaf";
-
-/* Header of section of Portfolios screen */
-"One portfolio shown" = "Één portfolio zichtbaar";
 
 /* Section title on Readme page. */
 "Open Source" = "Ontwikkelaars gezocht";
@@ -185,12 +183,6 @@ Button to close Info page. */
 /* Shown in gray at the bottom of the Photo Club page. */
 "PhotoClubs_Caption" = "① Het slotje kan gebruikt worden om deze landkaarten sleepbaar en inzoombaar/uitzoombaar te maken.\n② Men kan enkele testfotogroepen (voor demo doeleinden) toevoegen door de bovenkant van deze pagina omlaag te slepen en los te laten (*pull to refresh*).\n③ Een fotogroep kan verwijderd worden door eerst alle betrokken Portfolio's te verwijden (*swipe left*) en dan de fotoclub zelf te verwijderen (*swipe left*).";
 
-/* Statistics at end of section of FilteredMemberPortfoliosView */
-"portfolio" = "portfolio";
-
-/* Statistics at end of section of FilteredMemberPortfoliosView */
-"portfolios" = "portfolio's";
-
 /* Section title on Readme page
 Title of page showing member portfolios */
 "Portfolios" = "Portfolio's";
@@ -235,7 +227,7 @@ Field at top of Members page that allows the user to filter the members based on
 /* Label of toggle in Settings */
 "Show honorary members" = "Toon ereleden";
 
-/* X portfolio(s) shown (due to various forms of filtering) */
+/* X member(s) shown (due to various forms of filtering) */
 "shown" = "getoond";
 
 /* Section title on Readme page. */

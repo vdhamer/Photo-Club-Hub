@@ -109,25 +109,25 @@ struct FilteredMemberPortfoliosView: View {
         var filtCount: Int // // number of items in filtered list
         var unfiltCount: Int // number of items in unfiltered list
         var listName: String
-        let portfolio = String(localized: "portfolio",
+        let member = String(localized: "member",
                                comment: "Statistics at end of section of FilteredMemberPortfoliosView")
-        let portfolios = String(localized: "portfolios",
+        let members = String(localized: "members",
                                 comment: "Statistics at end of section of FilteredMemberPortfoliosView")
         let shown = String(localized: "shown",
-                           comment: "X portfolio(s) shown (due to various forms of filtering)")
+                           comment: "X member(s) shown (due to various forms of filtering)")
         let of1 = String(localized: "of1",
-                           comment: "X of Y portfolio(s) shown (due to various forms of filtering)")
+                           comment: "X of Y member(s) shown (due to various forms of filtering)")
 
         var body: some View {
             HStack {
                 Spacer()
-                Group {
+                VStack {
                     if filtCount < unfiltCount {
                         Text(verbatim: // verbatim keeps these pretty empty strings out of the localized Strings
-                             "\(filtCount) (\(of1) \(unfiltCount)) \(filtCount==1 ? portfolio : portfolios) \(shown)")
+                             "\(filtCount) (\(of1) \(unfiltCount)) \(filtCount==1 ? member : members) \(shown)")
                     } else {
                         Text(verbatim:
-                             "\(unfiltCount) \(unfiltCount==1 ? portfolio : portfolios) \(shown)")
+                             "\(unfiltCount) \(unfiltCount==1 ? member : members) \(shown)")
                     }
                 }
                     .font(.subheadline)
@@ -136,12 +136,6 @@ struct FilteredMemberPortfoliosView: View {
                 Spacer()
             }
         }
-    }
-
-    private func makeFooterString(count: Int) -> String {
-        let singular = String(localized: "One portfolio shown", comment: "Header of section of Portfolios screen")
-        let plural = String(localized: "\(count) portfolios shown", comment: "Header of section of Portfolios screen")
-        return count==1 ? singular : plural
     }
 
     private func findFirstNonDistinct(memberPortfolios: [MemberPortfolio]) -> Photographer? {
