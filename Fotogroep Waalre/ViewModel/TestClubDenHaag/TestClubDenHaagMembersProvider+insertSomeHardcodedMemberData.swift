@@ -36,6 +36,7 @@ extension TestClubDenHaagMembersProvider { // fill with some initial hard-coded 
                                                                                      longitude: 4.279722),
                                                  priority: 1
                                                 )
+        clubTestDenHaag.hasHardCodedMemberData = true // store in database that we ran insertSomeHardcodedMembers...
 
         addMember(context: testDenHaagBackgroundContext,
                   givenName: "Peter",

@@ -36,6 +36,7 @@ extension BIMembersProvider { // fill with some initial hard-coded content
                                                                                              longitude: 5.387560),
                                                          priority: 2
                                                         )
+        clubBellusImago.hasHardCodedMemberData = true // store in database that we ran insertSomeHardcodedMembers...
 
         addMember(context: biBackgroundContext, // add Rico to Photographers and member of Bellus (if needed)
                   givenName: "Rico",

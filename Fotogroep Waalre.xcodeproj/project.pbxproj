@@ -466,8 +466,8 @@
 		D0831A53277F82460049AB84 /* Fotogroep Waalre Localizations */ = {
 			isa = PBXGroup;
 			children = (
-				D0831A54277F82460049AB84 /* nl.xcloc */,
 				D0831A55277F82460049AB84 /* en.xcloc */,
+				D0831A54277F82460049AB84 /* nl.xcloc */,
 			);
 			path = "Fotogroep Waalre Localizations";
 			sourceTree = "<group>";

@@ -66,6 +66,18 @@ extension PhotoClub {
         set { country_ = newValue}
     }
 
+    var memberListURL: URL? { // use memberListURL for display only (memberListURL_ is the real source of truth)
+        get {
+            if let urlString = memberListURL_?.absoluteString {
+                if let url = memberListURL_, urlString.contains("vdhamer.com") { // don't confuse user with mirror site
+                    return URL(string: "https://www.fotogroepwaalre.nl" + url.path + "/")
+                }
+            }
+            return memberListURL_
+        }
+        set { memberListURL_ = newValue }
+    }
+
     var priority: Int16 {
         get { return priority_ }
         set { priority_ = newValue}
