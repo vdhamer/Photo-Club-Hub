@@ -5,7 +5,8 @@ Portfolio screen
     * List of portfolios is now grouped into sections each representing a photo club.
     * Stopped mentioning photo club's name for every portfolio
     * Increased font size of photographer's name
-    * Loads 3 test photo clubs at startup to demonstrate multi-club support. A 4th can be loaded manually.
+    * Show where data per photo club is coming from (in section footer)
+    * Loads 3 photo clubs (named Test) at startup to demonstrate multi-club support. A 4th can be loaded manually.
 Photo Clubs screen
     * Removed section header because it was redundant
 Who's Who screen

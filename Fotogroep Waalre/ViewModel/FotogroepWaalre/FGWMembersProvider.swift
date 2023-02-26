@@ -22,10 +22,15 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
         // following is asynchronous, but not documented as such using async/await
         insertSomeHardcodedMemberData(fgwBackgroundContext: fgwBackgroundContext, commit: true)
 
+        // can't rely on async (!) insertSomeHardcodedMemberData() to return managed photoClub object in time
+        let clubWaalre = PhotoClub.findCreateUpdate( context: fgwBackgroundContext,
+                                                     photoClubIdPlus: FGWMembersProvider.photoClubWaalreIdPlus )
+
         let urlString = getFileAsString(nameEncryptedFile: "FGWPrivateMembersURL2.txt",
                                         nameUnencryptedFile: "FGWPrivateMembersURL3.txt",
                                         allowUseEncryptedFile: true) // set to false only for testing purposes
         if let privateURL = URL(string: urlString) {
+            clubWaalre.memberListURL = privateURL
             Task {
                 await loadPrivateMembersFromWebsite( backgroundContext: fgwBackgroundContext,
                                                      privateMemberURL: privateURL,

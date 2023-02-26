@@ -56,7 +56,9 @@ struct FilteredMemberPortfoliosView: View {
                 } footer: {
                     Footer(filtCount: filterPortfolios(unFilteredPortfolios: section).count,
                            unfiltCount: section.endIndex,
-                           listName: section.id)
+                           listName: section.id,
+                           photoClub: section.first?.photoClub
+                    )
                 }// }
                 .listRowSeparator(.hidden)
 //                .padding() // disabled because it doesn't work in combination with sectioning
@@ -109,6 +111,7 @@ struct FilteredMemberPortfoliosView: View {
         var filtCount: Int // // number of items in filtered list
         var unfiltCount: Int // number of items in unfiltered list
         var listName: String
+        var photoClub: PhotoClub? // optional because we copy this from first member in the photoClub collection
         let member = String(localized: "member",
                                comment: "Statistics at end of section of FilteredMemberPortfoliosView")
         let members = String(localized: "members",
@@ -128,6 +131,19 @@ struct FilteredMemberPortfoliosView: View {
                     } else {
                         Text(verbatim:
                              "\(unfiltCount) \(unfiltCount==1 ? member : members) \(shown)")
+                    }
+                    if let photoClub, photoClub.hasHardCodedMemberData {
+                        Text("Data source: in-app member data")
+                    }
+                    if photoClub != nil,
+                       photoClub!.memberListURL != nil,
+                       photoClub!.memberListURL!.host != nil,
+                       photoClub!.memberListURL!.scheme != nil {
+                            Text(String(localized: "Data source: \(photoClub!.memberListURL!.scheme!)://") +
+                                 "\(photoClub!.memberListURL!.host!)" +
+                                 "\(photoClub!.memberListURL!.path)/")
+                            .lineLimit(1)
+                            .truncationMode(.tail)
                     }
                 }
                     .font(.subheadline)
