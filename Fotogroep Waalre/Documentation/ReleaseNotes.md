@@ -6,14 +6,15 @@ Portfolio screen
     * Stopped mentioning photo club's name for every portfolio
     * Increased font size of photographer's name
     * Show where data per photo club is coming from (in section footer)
-    * Loads 3 photo clubs (named Test) at startup to demonstrate multi-club support. A 4th can be loaded manually.
+    * Loads 3 photo clubs (named start with Test) at startup to demonstrate multi-club support.
 Photo Clubs screen
     * Removed section header because it was redundant
 Who's Who screen
-    * Added count at top of screen (temporary solution)
-    * Added count at top of screen (temporary)
-Readme and Setting screens
-    * Converted to "bottom screen"
+    * Temporarily added count of names at top of screen
+Readme screen
+    * Converted to `bottom sheet`
+Settings screen
+    * Converted to `bottom sheet`
 Maintenance
     * Tested on XCode 14.3 beta 1
     * Updated github README file
