@@ -559,7 +559,7 @@ Thus, the software module per photo club loads membership and portfolio data acr
 The data will likely be stored on the club’s webserver, presumable in a simple file format.
 The data is used to initialize the in-app database as well as to update it. 
 This updating is done in background whenever the app lauches,
-and thus takes care of changes in club membership as well as changes in member portfolios. 
+and thus takes care of changes in club membership as well as changes in member portfolios.
 
 For Photo Club Waalre, the membership data is read from an HTML table on a password protected
 page on the club’s website. HTML on the one hand messy to parse, but on the other hand results
