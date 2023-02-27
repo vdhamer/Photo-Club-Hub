@@ -580,7 +580,7 @@ choice of directory) only need to be configured once per portfolio (=member).
 #### A Better Approach
 
 </summary>
-A major design challenge for a next stage should be to provide a clean,
+A major design goal for the near future is to provide a clean,
 standardized interface to retrieve data per photo club.
 That interface is needed to load the data, but also to keeps the data up to date.
 This is needed because membership data and portfolios change every few weeks.
@@ -588,7 +588,27 @@ The current interface is essentially a plug-in design with an adaptor per photo 
 This needs to be replaced by a standard data interface to avoid
 having to modify the source code whenever a new club comes onboard.
 </details></ul>
-	</details></ul>
+
+The basic idea is to store the required information in a hierarchical, distributed way.
+This allows the app to load the information in a sequence of steps:
+1. Index of clubs (central)
+The app loads an index of photo clubs from a fixed location. Because the file is kept separate
+from the app, it can be updated without releasing a new version of the app. The file is in a
+predetermined format (e.g., JSON) and contains the list of supported photo clubs. 
+The file notably includes the location of next-level indices.
+2. Index of members (per club)
+The index per photo club lists the members of each club, notably including the location of the final level indices.
+Currently this level also includes the location of one image used as thumbnail.
+Membership list can be stored and managed on the club's own server. The file needs to be in
+a standardized data format (e.g., JSON) and may require an editing tool to ensure syntactic consistency.
+3. Index of images (per member, per club)
+The index of images (per club member) is fetched only when a portfolio is selected for viewing. There is thus
+no need to prefetch the entire 3-level tree (root/memberlist/imagelist). Again, this index needs to be in
+a fixed format, and thus will possibly require an editing tool to guard the syntax. Currently this tool already exists:
+index and files are exported from Lightroom using a Web plug-in.
+Depending on local preference, this level can be managed by a club volunteer, or distributed across the
+individual club members. In the latter case, a portfolio can be updated whenever a member wants.
+In the former (and more formal) case, the club can have some kind of approval or rating system in place.
 	
 <p align="right">(<a href="#top">back to top</a>)</p>
 
