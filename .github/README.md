@@ -587,7 +587,6 @@ This is needed because membership data and portfolios change every few weeks.
 The current interface is essentially a plug-in design with an adaptor per photo club.
 This needs to be replaced by a standard data interface to avoid
 having to modify the source code whenever a new club comes onboard.
-</details></ul>
 
 The basic idea is to store the required information in a hierarchical, distributed way.
 This allows the app to load the information in a sequence of steps:
@@ -609,6 +608,7 @@ index and files are exported from Lightroom using a Web plug-in.
 Depending on local preference, this level can be managed by a club volunteer, or distributed across the
 individual club members. In the latter case, a portfolio can be updated whenever a member wants.
 In the former (and more formal) case, the club can have some kind of approval or rating system in place.
+</details></ul>
 	
 <p align="right">(<a href="#top">back to top</a>)</p>
 
