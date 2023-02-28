@@ -127,13 +127,13 @@ struct FilteredMemberPortfoliosView: View {
                 VStack {
                     if filtCount < unfiltCount {
                         Text(verbatim: // verbatim keeps these pretty empty strings out of the localized Strings
-                             "\(filtCount) (\(of1) \(unfiltCount)) \(filtCount==1 ? member : members) \(shown)")
+                             "\(filtCount) (\(of1) \(unfiltCount)) \(filtCount==1 ? member : members) \(shown).")
                     } else {
                         Text(verbatim:
-                             "\(unfiltCount) \(unfiltCount==1 ? member : members) \(shown)")
+                             "\(unfiltCount) \(unfiltCount==1 ? member : members) \(shown).")
                     }
                     if let photoClub, photoClub.hasHardCodedMemberData {
-                        Text("Data source: in-app member data")
+                        Text("Data source: in-app member data.")
                     }
                     if photoClub != nil,
                        photoClub!.memberListURL != nil,
