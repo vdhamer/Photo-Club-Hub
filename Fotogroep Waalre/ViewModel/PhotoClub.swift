@@ -69,7 +69,7 @@ extension PhotoClub {
     var memberListURL: URL? { // use memberListURL for display only (memberListURL_ is the real source of truth)
         get {
             if let urlString = memberListURL_?.absoluteString {
-                if let url = memberListURL_, urlString.contains("vdhamer.com") { // don't confuse user with mirror site
+                if let url = memberListURL_, urlString.lowercased().contains("vdhamer.com/leden2") { // site mirroring
                     return URL(string: "https://www.fotogroepwaalre.nl" + url.path + "/")
                 }
             }
