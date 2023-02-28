@@ -1,14 +1,13 @@
-### 2.3.0 (Github commit ???????) ??-02-23
+### 2.3.0 (Github commit ???????) 02-03-23
 
 This is build #4585 in Apple's App Store
-Portfolio screen
-    * List of portfolios is now grouped into sections each representing a photo club.
-    * Stopped mentioning photo club's name for every portfolio
+Portfolios screen
+    * List of portfolios is now grouped into sections, each representing a different photo club.
     * Increased font size of photographer's name
-    * Show where data per photo club is coming from (in section footer)
-    * Loads 3 photo clubs (named start with Test) at startup to demonstrate multi-club support.
+    * Show data source per photo club (in section footer)
+    * Loads 3 dummy photo clubs (named start with Test) at startup to demonstrate multi-club support.
 Photo Clubs screen
-    * Removed section header because it was redundant
+    * Removed section header (it was redundant)
 Who's Who screen
     * Temporarily added count of names at top of screen
 Readme screen
@@ -18,8 +17,8 @@ Settings screen
 Maintenance
     * Tested on XCode 14.3 beta 1
     * Updated github README file
-    * Moved text2 and text3 files to other URL (http instead of https)
-    * "?" is now accepted accepted as placeholder when bithdate is unknown
+    * FGWPrivateMembersURL? files point to different site (and temporarily use http)
+    * "?" is now a supported placeholder when birthdate is unknown
 ---------------------------------------------------------------------------
 ### 2.2.10 (Github commit 09212fb) 06-02-23
 
