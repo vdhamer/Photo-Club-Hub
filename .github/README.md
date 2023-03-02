@@ -576,7 +576,7 @@ Web plug-in called [JuiceBox-Pro](https://www.juicebox.net/).
 Thus portfolios are created and maintained within a Lightroom Classic catalog as a set of 
 Lightroom collections. A portfolio can be uploaded or updated to the webserver using the Upload (ftp) button
 of Lightroom's Web module. This triggers JuiceBox-Pro to generate an XML index file for the portfolio
-and to upload the actual images to the server. All required settings (e.g. copyright
+and to upload the actual images to the server. All required settings (e.g. copyright,
 choice of directory) only need to be configured once per portfolio (=member).
 </details>
 
