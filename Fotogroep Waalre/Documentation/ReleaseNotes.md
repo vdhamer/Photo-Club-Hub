@@ -1,4 +1,11 @@
-### 2.3.0 (Github commit ???????) 02-03-23
+### 2.3.1 (Github commit ???????) ??-03-23
+
+This is build #4586 in Apple's App Store
+
+Maintenance
+    * Tested against XCode 14.3 beta 2 and Swift 5.8
+---------------------------------------------------------------------------
+### 2.3.0 (Github commit 8d35bd6) 02-03-23
 
 This is build #4585 in Apple's App Store
 Portfolios screen
@@ -15,7 +22,7 @@ Readme screen
 Settings screen
     * Converted to `bottom sheet`
 Maintenance
-    * Tested on XCode 14.3 beta 1
+    * Tested against XCode 14.3 beta 1
     * Updated github README file
     * FGWPrivateMembersURL? files point to different site (and temporarily use http)
     * "?" is now a supported placeholder when birthdate is unknown
