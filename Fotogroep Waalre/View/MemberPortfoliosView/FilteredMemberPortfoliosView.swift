@@ -142,7 +142,8 @@ struct FilteredMemberPortfoliosView: View {
                             Text(String(localized: "Data source: \(photoClub!.memberListURL!.scheme!)://",
                                         comment: "Section footer text Portfolios screen") +
                                  "\(photoClub!.memberListURL!.host!)" +
-                                 "\(photoClub!.memberListURL!.path)/")
+                                 "\(photoClub!.memberListURL!.path)/",
+                                 comment: "Section footer text Portfolios screen")
                             .lineLimit(1)
                             .truncationMode(.tail)
                     }
