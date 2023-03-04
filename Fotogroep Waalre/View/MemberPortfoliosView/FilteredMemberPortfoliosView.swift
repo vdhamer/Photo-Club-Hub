@@ -133,13 +133,14 @@ struct FilteredMemberPortfoliosView: View {
                              "\(unfiltCount) \(unfiltCount==1 ? member : members) \(shown).")
                     }
                     if let photoClub, photoClub.hasHardCodedMemberData {
-                        Text("Data source: in-app member data.")
+                        Text("Data source: in-app member data.", comment: "Section footer text Portfolios screen")
                     }
                     if photoClub != nil,
                        photoClub!.memberListURL != nil,
                        photoClub!.memberListURL!.host != nil,
                        photoClub!.memberListURL!.scheme != nil {
-                            Text(String(localized: "Data source: \(photoClub!.memberListURL!.scheme!)://") +
+                            Text(String(localized: "Data source: \(photoClub!.memberListURL!.scheme!)://",
+                                        comment: "Section footer text Portfolios screen") +
                                  "\(photoClub!.memberListURL!.host!)" +
                                  "\(photoClub!.memberListURL!.path)/")
                             .lineLimit(1)
