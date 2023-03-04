@@ -91,15 +91,15 @@ struct FilteredMemberPortfoliosView: View {
                 Spacer()
                 ZStack {
                     Capsule(style: .continuous)
-                        .fill(Gradient(colors: [.memberPortfolioColor.opacity(0.3),
-                                                .memberPortfolioColor.opacity(0.1),
-                                                .memberPortfolioColor.opacity(0.2),
-                                                .memberPortfolioColor.opacity(0.3)]))
+                        .fill(Gradient(colors: [.gray.opacity(0.5),
+                                                .gray.opacity(0.1),
+                                                .gray.opacity(0.2),
+                                                .gray.opacity(0.5)]))
                         .frame(maxWidth: 400, alignment: .center)
                     Text(title) // String used to group the elements into Sections
                         .font(.title2)
                         .lineLimit(1)
-                        .foregroundColor(colorScheme == .dark ? .memberPortfolioColor : .primary)
+                        .foregroundColor(.secondary)
                         .padding(.horizontal)
                  }
                 Spacer()
