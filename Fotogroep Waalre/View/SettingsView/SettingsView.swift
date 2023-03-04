@@ -27,7 +27,7 @@ struct SettingsView: View {
     }
 
     var body: some View {
-        GeometryReader(content: { geo in
+        GeometryReader(content: { _ in
             NavigationStack {
                 List {
                     Section(header: Text("Member categories",
@@ -102,24 +102,24 @@ struct SettingsView: View {
                     })
                 }
                 .navigationTitle(title)
-                .toolbar {
-                    ToolbarItemGroup(placement: ToolbarItemPlacement.confirmationAction) {
-                        Button { // actual saving done in .onDisappear
-                            dismiss()
-                        } label: {
-                            Text("Done",
-                                 comment: "Button at top right of Settings. Stores preference settings.")
-                        }
-                        .disabled(localSettings.nothingEnabled)
-                    }
-                }
+//                .toolbar {
+//                    ToolbarItemGroup(placement: ToolbarItemPlacement.confirmationAction) {
+//                        Button { // actual saving done in .onDisappear
+//                            dismiss()
+//                        } label: {
+//                            Text("Done",
+//                                 comment: "Button at top right of Settings. Stores preference settings.")
+//                        }
+//                        .disabled(localSettings.nothingEnabled)
+//                    }
+//                }
             }
             .onDisappear {
                 // need to update Bindings for showPhotoClubsList etc
                 settings = localSettings
             }
-            .frame(minWidth: geo.size.width*0.2, idealWidth: geo.size.width*0.35, maxWidth: geo.size.width,
-                   minHeight: geo.size.height*0.3, idealHeight: geo.size.height*0.8, maxHeight: geo.size.height)
+//            .frame(minWidth: geo.size.width*0.2, idealWidth: geo.size.width*0.35, maxWidth: geo.size.width,
+//                   minHeight: geo.size.height*0.3, idealHeight: geo.size.height*0.8, maxHeight: geo.size.height)
         })
     }
 

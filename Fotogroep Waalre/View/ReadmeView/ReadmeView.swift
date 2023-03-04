@@ -181,16 +181,16 @@ struct ReadmeView: View {
                 } // ScrollView
                 .navigationTitle(title)
                 .navigationBarTitleDisplayMode(UIDevice.isIPhone ? .inline : .large)
-                .toolbar {
-                    ToolbarItemGroup(placement: ToolbarItemPlacement.confirmationAction) {
-                        Button { // actual saving done in .onDisappear
-                            dismiss()
-                        } label: {
-                            Text("Done",
-                                 comment: "Button to close Info page.")
-                        }
-                    }
-                }
+//                .toolbar {
+//                    ToolbarItemGroup(placement: ToolbarItemPlacement.confirmationAction) {
+//                        Button { // actual saving done in .onDisappear
+//                            dismiss()
+//                        } label: {
+//                            Text("Done",
+//                                 comment: "Button to close Info page.")
+//                        }
+//                    }
+//                }
             }
             .padding(.init(top: 0, leading: 0, bottom: 15, trailing: 0))
             .frame(minWidth: geo.size.width*0.2, idealWidth: geo.size.width*0.5, maxWidth: geo.size.width,

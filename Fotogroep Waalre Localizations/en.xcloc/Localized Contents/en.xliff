@@ -5,6 +5,11 @@
       <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="14.2" build-num="14C18"/>
     </header>
     <body>
+      <trans-unit id="CFBundleDisplayName" xml:space="preserve">
+        <source>Photo Club Waalre</source>
+        <target>Photo Club Waalre</target>
+        <note>Bundle display name</note>
+      </trans-unit>
       <trans-unit id="CFBundleName" xml:space="preserve">
         <source>Photo Club Waalre</source>
         <target>Photo Club Waalre</target>
@@ -56,12 +61,6 @@
         <source>Developers wanted</source>
         <target>Developers wanted</target>
         <note>Section title on Readme page</note>
-      </trans-unit>
-      <trans-unit id="Done" xml:space="preserve">
-        <source>Done</source>
-        <target>Done</target>
-        <note>Button at top right of Settings. Stores preference settings.
-Button to close Info page.</note>
       </trans-unit>
       <trans-unit id="Features and tips" xml:space="preserve">
         <source>Features and tips</source>
