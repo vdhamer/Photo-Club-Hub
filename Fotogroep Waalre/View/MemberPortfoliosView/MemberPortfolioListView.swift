@@ -50,27 +50,30 @@ struct MemberPortfolioListView: View {
             ToolbarItemGroup(placement: .navigationBarLeading) {
 
                 Button {
-                    if !showingReadme {
+                    if !showingReadme { // actually currently can't press Settings button while showingReadme
                         showingSettings = true
                     }
                 } label: {
-                    Image("slider.horizontal.3.rectangle")
-                        .font(.title)
-                        .foregroundStyle(.memberPortfolioColor, .gray, .sliderColor)
+                    SettingsIcon()
                 }
                 .sheet(isPresented: $showingSettings, content: {
-                    SettingsView(settings: $model.settings)
-                    // the detents don't do anything on an iPad
-                        .presentationDetents(detentsList, selection: $selectedSettingsDetent)
-                        .presentationDragIndicator(.visible) // show drag indicator
-                    // swiftlint:disable:next unavailable_condition
                     if #available(iOS 16.4, *) {
-                        // .presentationCornerRadius(20) // compiler can't handle this yet
+                        SettingsView(settings: $model.settings)
+                        // the detents don't do anything on an iPad
+                            .presentationDetents(detentsList, selection: $selectedSettingsDetent)
+//                            .presentationBackground(.regularMaterial) // doesn't work yet with SettingsView
+//                            .presentationCornerRadius(40)
+                            .presentationDragIndicator(.visible) // show drag indicator
+                    } else {
+                        SettingsView(settings: $model.settings)
+                        // the detents don't do anything on an iPad
+                            .presentationDetents(detentsList, selection: $selectedSettingsDetent)
+                            .presentationDragIndicator(.visible) // show drag indicator
                     }
                 })
 
                 Button {
-                    if !showingSettings {
+                    if !showingSettings { // actually currently can't press Settings button while showingReadme
                         showingReadme = true
                     }
                 } label: {
@@ -79,13 +82,18 @@ struct MemberPortfolioListView: View {
                         .foregroundStyle(.linkColor, .gray, .white)
                 }
                 .sheet(isPresented: $showingReadme, content: {
-                    ReadmeView()
-                    // the detents don't do anything on an iPad
-                        .presentationDetents(detentsList, selection: $selectedReadmeDetent)
-                        .presentationDragIndicator(.visible) // show drag indicator
-                    // swiftlint:disable:next unavailable_condition
                     if #available(iOS 16.4, *) {
-                        // .presentationCornerRadius(20) // compiler can't handle this yet
+                        ReadmeView()
+                        // the detents don't do anything on an iPad
+                            .presentationDetents(detentsList, selection: $selectedReadmeDetent)
+//                            .presentationBackground(.thickMaterial) // doesn't work yet with ReadmeView
+//                            .presentationCornerRadius(40) // compiler can't handle this yet
+                            .presentationDragIndicator(.visible) // show drag indicator
+                    } else {
+                        ReadmeView()
+                        // the detents don't do anything on an iPad
+                            .presentationDetents(detentsList, selection: $selectedReadmeDetent)
+                            .presentationDragIndicator(.visible) // show drag indicator
                     }
                 })
             }
@@ -131,5 +139,17 @@ struct MemberListView_Previews: PreviewProvider {
     static var previews: some View {
         MemberPortfolioListView()
 			.environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+    }
+}
+
+struct SettingsIcon: View {
+    @Environment(\.isEnabled) private var isEnabled: Bool
+
+    var body: some View {
+        Image("slider.horizontal.3.rectangle")
+            .font(.title)
+            .foregroundStyle(isEnabled ? .memberPortfolioColor : .gray, // isEnabled is always true :-(
+                             .gray,
+                             isEnabled ? .sliderColor : .gray)
     }
 }
