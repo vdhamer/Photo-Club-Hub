@@ -28,10 +28,10 @@
 /* Administrative role of member within a club. Used as part of concatenations. */
 "chairman" = "voorzitter";
 
-/* No comment provided by engineer. */
-"Data source: %@://" = "Bron: %@://";
+/* Section footer text Portfolios screen */
+"Data source: %@://%@%@/" = "Bron: %@://%@%@/";
 
-/* No comment provided by engineer. */
+/* Section footer text Portfolios screen */
 "Data source: in-app member data." = "Bron: partiële in-app ledenlijst.";
 
 /* Relationship status of member within a club. Used as prefix. */
