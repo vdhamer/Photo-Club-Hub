@@ -54,7 +54,7 @@
       </trans-unit>
       <trans-unit id="Data source: in-app member data." xml:space="preserve">
         <source>Data source: in-app member data.</source>
-        <target>Bron: partiële in-app ledenlijst</target>
+        <target>Bron: partiële in-app ledenlijst.</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Developers wanted" xml:space="preserve">
