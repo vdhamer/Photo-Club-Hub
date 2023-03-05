@@ -1,13 +1,22 @@
-### 2.3.1 (Github commit ???????) ??-03-23
+### 2.3.1 (Github commit 1793262) 05-03-23
 
 This is build #4586 in Apple's App Store
-
+Portfolios screen
+    * Section headers on Portfolios page are now gray to attract less attention
+Readme screen
+    * Removed Done button
+Settings screen
+    * Removed Done button
 Maintenance
     * Tested against XCode 14.3 beta 2 and Swift 5.8
+    * Fixed text localization issue
+    * Improved Readme.md text on Github
+
+*In Apple's App Store, the release notes of 2.3.0 and 2.3.1 are combined.*
 ---------------------------------------------------------------------------
 ### 2.3.0 (Github commit 8d35bd6) 02-03-23
 
-This is build #4585 in Apple's App Store
+This is build #4585 (didn't make it to Apple's App Store)
 Portfolios screen
     * List of portfolios is now grouped into sections, each representing a different photo club.
     * Increased font size of photographer's name
