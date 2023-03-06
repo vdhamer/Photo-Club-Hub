@@ -10,6 +10,9 @@
 /* First paragraph in The Club section of Readme page */
 "Paragraph_1.1" = "Photo Club Waalre is a photography club named after Waalre, a town in the south of The Netherlands. Since 1988 its club members meet to critique each other’s photos, organize excursions, and hold yearly photo expositions.";
 
+/* Second paragraph in The Club section of Readme page */
+"Paragraph_1.2" = "Originally the app only supported Photo Club Waalre (aka _Fotogroep Waalre_), but the current version supports **multiple** photo clubs. At some point the app will get a new name.";
+
 /* First paragraph in The App on Readme page */
 "Paragraph_2.1" = "The goal of this app is to showcase curated work of members of photo clubs.";
 
@@ -23,13 +26,10 @@
 "Paragraph_2.4" = "We try to show the portfolios with **minimal distraction**. Web sites are often less optimal for this because they need to show browser controls (e.g., an address bar or tabs) and serve multiple purposes (e.g., show club news or contact information).";
 
 /* Fifth paragraph in the App on Readme page */
-"Paragraph_2.5" = "Originally the app only supported Photo Club Waalre (aka _Fotogroep Waalre_), but the current version supports **multiple** photo clubs. For a preview of what that looks like, drag down (“pull to refresh”) the screen of the Photo Club page. This loads a few random members from friendly neighboring clubs.";
+"Paragraph_2.5" = "For Photo Club Waalre, we chose to also include the work of former club members. By default, former members are not visible, but you can configure the app to show them.";
 
 /* Sixth paragraph in the App on Readme page */
-"Paragraph_2.6" = "For Photo Club Waalre, we chose to also include the work of former club members. By default, former members are not visible, but you can configure the app to show them.";
-
-/* Seventh paragraph in the App on Readme page */
-"Paragraph_2.7" = "Contact us (github@vdhamer.com) if you are interested in adding support for your photo club.";
+"Paragraph_2.6" = "Contact us (github@vdhamer.com) if you are interested in adding support for your photo club.";
 
 /* First paragraph in The Features section of Readme page */
 "Paragraph_3.1" = "We regularly add features to the app. This requires some care, because we still want to maintain our focus on providing an optimal viewing experience. The app therefore explicitly does _not_ aim to replace existing websites, but instead provides links to these websites.";

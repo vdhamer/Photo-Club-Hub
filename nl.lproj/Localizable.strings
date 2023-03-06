@@ -89,6 +89,9 @@ Default status of member within a club. Used in concatenations. */
 /* First paragraph in The Club section of Readme page */
 "Paragraph_1.1" = "De fotoclub \"Fotogroep Waalre\" is vernoemd naar Waalre, een dorp vlak onder Eindhoven. Sedert 1988 komen de leden van de club bijeen voor fotobespreekavonden. Verder organiseert de club exposities en fotoexcursies.";
 
+/* Second paragraph in The Club section of Readme page */
+"Paragraph_1.2" = "Oorspronkelijk ondersteunde de app uitsluitend Fotogroep Waalre, maar sedert versie 2.0 kan de app meerdere clubs gelijktijdig ondersteunen. De naam Fotogroep Waalre zal daarom binnenkort veranderen.";
+
 /* First paragraph in The App on Readme page */
 "Paragraph_2.1" = "Het doel van deze app is om ***portfolio's*** te tonen met geselecteerd werk van de leden van fotoclubs.";
 
@@ -102,13 +105,10 @@ Default status of member within a club. Used in concatenations. */
 "Paragraph_2.4" = "Net als bij een tentoonstelling is het belangrijk om een portfolio zonder afleiding te kunnen bekijken. Webpagina's zijn hiervoor vaak iets te druk wegens de bedieningselementen van de browser (zoals de adresbalk), en omdat een clubwebsite vaak ook andere doeleinden dient (bijvoorbeeld het tonen van clubnieuws).";
 
 /* Fifth paragraph in the App on Readme page */
-"Paragraph_2.5" = "Oorspronkelijk ondersteunde de app uitsluitend Fotogroep Waalre, maar sedert versie 2.0 kan de app meerdere clubs gelijktijdig ondersteunen. Om een voorproefje te zien van hoe dit eruit ziet, ga naar de Fotogroepen pagina en sleep deze \"aan de tekst\" omlaag. Bij het verversen van de pagina laadt de app (_Easter Egg_) enkele voorbeeldleden van naburige clubs.";
+"Paragraph_2.5" = "De app kan, indien een club daarvoor kiest, ook de portfolio's van *voormalige* clubleden tonen. De gebruiker kan bepalen of de portfolio's van ex-leden zichtbaar zijn.";
 
 /* Sixth paragraph in the App on Readme page */
-"Paragraph_2.6" = "De app kan, indien een club daarvoor kiest, ook de portfolio's van *voormalige* clubleden tonen. De gebruiker kan bepalen of de portfolio's van ex-leden zichtbaar zijn.";
-
-/* Seventh paragraph in the App on Readme page */
-"Paragraph_2.7" = "Clubs met belangstelling om deel te nemen kunnen contact opnemen via github@vdhamer.com.";
+"Paragraph_2.6" = "Clubs met belangstelling om deel te nemen kunnen contact opnemen via github@vdhamer.com.";
 
 /* First paragraph in The Features section of Readme page */
 "Paragraph_3.1" = "__Websites__\nHet hoofddoel van de app is om de portfolio's via een strakke presentatie tot hun recht te laten komen. Wij streven er dus _niet_ naar dat de app een website kan vervangen. Daarom verwijst de app de gebruiker via links desgewenst door naar de websites van de clubs.";
