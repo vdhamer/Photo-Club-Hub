@@ -1,9 +1,12 @@
-### 2.3.0 (Github commit ???????) ??-03-23
+### 2.3.2 (Github commit ???????) ??-03-23
 
 This is build #4587 in Apple's App Store
+Readme screen
+    * Fixed section header layout on iPad
 Maintenance
     * Increased the required iOS version from 16.0 to 16.2
     * Disabled support for running iPad app on Mac (it crashed)
+    * Added Roadmap package
 ---------------------------------------------------------------------------
 ### 2.3.1 (Github commit 1793262) 05-03-23
 
