@@ -32,6 +32,7 @@ struct ReadmeView: View {
                                 .frame(width: geo.size.width, alignment: .center)
 
                             Paragraph("1.1", comment: "First paragraph in The Club section of Readme page", geo: geo)
+                            Paragraph("1.2", comment: "Fifth paragraph in the App section of Readme page", geo: geo)
                         }
 
                         VStack {
@@ -57,9 +58,8 @@ struct ReadmeView: View {
                             Paragraph("2.2", comment: "Second paragraph in The App section of Readme page", geo: geo)
                             Paragraph("2.3", comment: "Third paragraph in The App section of Readme page", geo: geo)
                             Paragraph("2.4", comment: "Fourth paragraph in the App section of Readme page", geo: geo)
-                            Paragraph("2.5", comment: "Fifth paragraph in the App section of Readme page", geo: geo)
-                            Paragraph("2.6", comment: "Sixth paragraph in the App section of Readme page", geo: geo)
-                            Paragraph("2.7", comment: "Seventh paragraph in the App section of Readme page", geo: geo)
+                            Paragraph("2.5", comment: "Sixth paragraph in the App section of Readme page", geo: geo)
+                            Paragraph("2.6", comment: "Seventh paragraph in the App section of Readme page", geo: geo)
                         }
 
                         VStack {
