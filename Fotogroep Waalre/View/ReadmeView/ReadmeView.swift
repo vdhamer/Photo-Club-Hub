@@ -209,7 +209,7 @@ struct ReadmeView: View {
         }
 
         var body: some View {
-            let boxCount: Int = UIDevice.isIPad ? 8 : 3
+            let boxCount: Int = UIDevice.isIPad ? 7 : 3 // number of boxes to left or right of chapter title
             let const1: CGFloat = 0.8
             let const2: CGFloat = 0.05
             let const3: CGFloat = const1 - const2 * CGFloat(boxCount - 1)
