@@ -12,6 +12,9 @@ struct ReadmeView: View {
     private static let paddingAmount: CGFloat = 20
     private let title = String(localized: "Readme", comment: "Title of Readme screen")
     @Environment(\.dismiss) var dismiss: DismissAction // \.dismiss requires iOS 15
+    @State private var showingRoadmap = false // controls visibility of Settings screen
+    @State private var selectedRoadmapDetent = PresentationDetent.fraction(0.70) // must be element of detentsList
+    private var detentsList: Set<PresentationDetent> = [ .fraction(0.5), .fraction(0.70), .fraction(0.90), .large ]
 
     var body: some View {
         GeometryReader { geo in
@@ -54,12 +57,20 @@ struct ReadmeView: View {
                                 }
                             }
 
-                            Paragraph("2.1", comment: "First paragraph in The App section of Readme page", geo: geo)
-                            Paragraph("2.2", comment: "Second paragraph in The App section of Readme page", geo: geo)
-                            Paragraph("2.3", comment: "Third paragraph in The App section of Readme page", geo: geo)
-                            Paragraph("2.4", comment: "Fourth paragraph in the App section of Readme page", geo: geo)
-                            Paragraph("2.5", comment: "Sixth paragraph in the App section of Readme page", geo: geo)
-                            Paragraph("2.6", comment: "Seventh paragraph in the App section of Readme page", geo: geo)
+                            Group { // can have max 10 views within a container view
+                                Paragraph("2.1",
+                                          comment: "First paragraph in The App section of Readme page", geo: geo)
+                                Paragraph("2.2",
+                                          comment: "Second paragraph in The App section of Readme page", geo: geo)
+                                Paragraph("2.3",
+                                          comment: "Third paragraph in The App section of Readme page", geo: geo)
+                                Paragraph("2.4",
+                                          comment: "Fourth paragraph in the App section of Readme page", geo: geo)
+                                Paragraph("2.5",
+                                          comment: "Sixth paragraph in the App section of Readme page", geo: geo)
+                                Paragraph("2.6",
+                                          comment: "Seventh paragraph in the App section of Readme page", geo: geo)
+                            }
                         }
 
                         VStack {
@@ -78,12 +89,32 @@ struct ReadmeView: View {
                             .frame(width: geo.size.width, alignment: .center)
                             Text("")
 
-                            Paragraph("3.1",
-                                      comment: "First paragraph in The Features section of Readme page", geo: geo)
-                            Paragraph("3.2",
-                                      comment: "Second paragraph in The Features section of Readme page", geo: geo)
-                            Paragraph("3.3",
-                                      comment: "Third paragraph in The Features section of Readme page", geo: geo)
+                            Group { // can have max 10 views within a container view
+                                Paragraph("3.1",
+                                          comment: "First paragraph in The Features section of Readme page", geo: geo)
+                                Paragraph("3.2",
+                                          comment: "Second paragraph in The Features section of Readme page", geo: geo)
+                                Paragraph("3.3",
+                                          comment: "Third paragraph in The Features section of Readme page", geo: geo)
+                                Paragraph("3.4",
+                                          comment: "Fourth paragraph in The Features section of Readme page", geo: geo)
+                            }
+
+                            HStack {
+                                Spacer()
+                                Button {
+                                    showingRoadmap = true
+                                } label: {
+                                    Text("Vote for features")
+                                }
+                                    .sheet(isPresented: $showingRoadmap, content: {
+                                            MyRoadmapView()
+                                            // the detents don't do anything on an iPad
+                                                .presentationDetents(detentsList, selection: $selectedRoadmapDetent)
+                                                .presentationDragIndicator(.visible) // show drag indicator
+                                    })
+                                Spacer()
+                            }
                         }
 
                         VStack {

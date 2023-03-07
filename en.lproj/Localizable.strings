@@ -32,13 +32,16 @@
 "Paragraph_2.6" = "Contact us (github@vdhamer.com) if you are interested in adding support for your photo club.";
 
 /* First paragraph in The Features section of Readme page */
-"Paragraph_3.1" = "We regularly add features to the app. This requires some care, because we still want to maintain our focus on providing an optimal viewing experience. The app therefore explicitly does _not_ aim to replace existing websites, but instead provides links to these websites.";
+"Paragraph_3.1" = "__Web sites__\nWe regularly add features to the app. This requires some care, because we still want to maintain our focus on providing an optimal viewing experience. The app therefore explicitly does _not_ aim to replace existing websites, but instead provides links to these websites.";
 
 /* Second paragraph in The Features section of Readme page */
-"Paragraph_3.2" = "The app supports the Dutch and English ***languages***. iOS automatically selects a language based on your device’s language settings (_Settings > General > Language & Region > Preferred Language Order_). iOS also allows you to overrule this per app (_Settings > Photo Club Waalre > Language_).";
+"Paragraph_3.2" = "__Languages__\nThe app supports English and Dutch. iOS automatically selects the app's language based on your device’s language settings (_Settings > General > Language & Region > Preferred Language Order_). iOS also allows you to overrule this choice per app (_Settings > Photo Club Waalre > Language_).";
 
 /* Third paragraph in The Features section of Readme page */
-"Paragraph_3.3" = "On the Portfolio page, you can swipe to ***Delete*** a member from the list. Don't worry - if the person is still a club member, that person will reappear the next time the app synchronizes its local data with online data. This swiping can be useful to remove members who are no longer on the online data members lists. In any case, swipe as much as you like (after all, it just might be therapeutical).";
+"Paragraph_3.3" = "__Deleting__\nOn the Portfolio page, you can swipe to ***Delete*** a member from the list. Don't worry - if the person is still a club member, that person will reappear the next time the app synchronizes its local data with online data. This swiping can be useful to remove members who are no longer on the online data members lists. In any case, swipe as much as you like (after all, it just might be therapeutical).";
+
+/* Fourth paragraph in The Features section of Readme page */
+"Paragraph_3.4" = "__Roadmap__\nBy clicking on the button below you can (anonymously) vote for improvements you would like in future versions of this app. You can vote once for any particular improvement. Try to vote for as few improvements as possible: voting for all features has the same impact as not voting at all.";
 
 /* First paragraph in Prelude section of Readme page */
 "Paragraph_4.1" = "When the app opens, it shows a large image corresponding to the app’s icon. If you tap somewhere ***inside*** the image, it zooms out to show the full image representing how digital cameras see color.";
