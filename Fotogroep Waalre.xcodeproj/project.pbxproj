@@ -75,6 +75,9 @@
 		D0E2235427DE9139002A8600 /* PreludeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E2235327DE9139002A8600 /* PreludeView.swift */; };
 		D0E694C927EF9B450054D634 /* LockAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E694C827EF9B450054D634 /* LockAnimationView.swift */; };
 		D0EB533C295775240061613B /* Crosshairs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EB533B295775240061613B /* Crosshairs.swift */; };
+		D0FCF2E129B54CDD00F31442 /* Roadmap in Frameworks */ = {isa = PBXBuildFile; productRef = D0FCF2E029B54CDD00F31442 /* Roadmap */; };
+		D0FCF2E329B5517000F31442 /* RoadmapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FCF2E229B5517000F31442 /* RoadmapView.swift */; };
+		D0FCF2E629B558FE00F31442 /* Roadmap.json in Resources */ = {isa = PBXBuildFile; fileRef = D0FCF2E529B558FE00F31442 /* Roadmap.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -199,6 +202,8 @@
 		D0F7221929454D4D00F6C0E2 /* Fotogroep_Waalre_2_2_5.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fotogroep_Waalre_2_2_5.xcdatamodel; sourceTree = "<group>"; };
 		D0F7221A29454D6100F6C0E2 /* Fotogroep_Waalre_2_2_6.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fotogroep_Waalre_2_2_6.xcdatamodel; sourceTree = "<group>"; };
 		D0FCF2DE29B5084D00F31442 /* Fotogroep_Waalre_2_3_2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fotogroep_Waalre_2_3_2.xcdatamodel; sourceTree = "<group>"; };
+		D0FCF2E229B5517000F31442 /* RoadmapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadmapView.swift; sourceTree = "<group>"; };
+		D0FCF2E529B558FE00F31442 /* Roadmap.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Roadmap.json; sourceTree = "<group>"; };
 		D0FD9A33296632EA00732959 /* Fotogroep_Waalre_2_2_8.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fotogroep_Waalre_2_2_8.xcdatamodel; sourceTree = "<group>"; };
 		D0FDC51827F6653D008CD990 /* Fotogroep_Waalre_2_0_6.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fotogroep_Waalre_2_0_6.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -208,6 +213,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0FCF2E129B54CDD00F31442 /* Roadmap in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,6 +380,7 @@
 				D081655D278616710078AB16 /* SinglePortFolioView */,
 				D05E451B27EF286B00D31327 /* SettingsView */,
 				D05E451C27EF297100D31327 /* ReadmeView */,
+				D0FCF2E429B558B500F31442 /* RoadmapView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -539,6 +546,15 @@
 			path = images;
 			sourceTree = "<group>";
 		};
+		D0FCF2E429B558B500F31442 /* RoadmapView */ = {
+			isa = PBXGroup;
+			children = (
+				D0FCF2E229B5517000F31442 /* RoadmapView.swift */,
+				D0FCF2E529B558FE00F31442 /* Roadmap.json */,
+			);
+			path = RoadmapView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -558,6 +574,9 @@
 			dependencies = (
 			);
 			name = "Fotogroep Waalre";
+			packageProductDependencies = (
+				D0FCF2E029B54CDD00F31442 /* Roadmap */,
+			);
 			productName = "Fotogroep Waalre 2";
 			productReference = D08319E3277F70A30049AB84 /* Fotogroep Waalre.app */;
 			productType = "com.apple.product-type.application";
@@ -631,6 +650,9 @@
 				Base,
 			);
 			mainGroup = D08319DA277F70A30049AB84;
+			packageReferences = (
+				D0FCF2DF29B54CDD00F31442 /* XCRemoteSwiftPackageReference "Roadmap" */,
+			);
 			productRefGroup = D08319E4277F70A30049AB84 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -649,6 +671,7 @@
 			files = (
 				D008D2AA28739167007A7BE2 /* .gitignore in Resources */,
 				D0396075278CF6550035F750 /* Settings.bundle in Resources */,
+				D0FCF2E629B558FE00F31442 /* Roadmap.json in Resources */,
 				D0831A57277F82460049AB84 /* en.xcloc in Resources */,
 				D0831A56277F82460049AB84 /* nl.xcloc in Resources */,
 				D06061EA28A0456C00A675A7 /* FGWPrivateMembersURL3.txt in Resources */,
@@ -790,6 +813,7 @@
 				D0D18C78296E1F6A00B334DB /* PhotoClubID.swift in Sources */,
 				D0831A1E277F72270049AB84 /* SettingsView.swift in Sources */,
 				D0831A37277F72590049AB84 /* FGWMembersProvider.swift in Sources */,
+				D0FCF2E329B5517000F31442 /* RoadmapView.swift in Sources */,
 				D0831A31277F72590049AB84 /* MemberPortfolio.swift in Sources */,
 				D0831A32277F72590049AB84 /* Photographer.swift in Sources */,
 				D081655B278611150078AB16 /* WebView.swift in Sources */,
@@ -1177,6 +1201,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D0FCF2DF29B54CDD00F31442 /* XCRemoteSwiftPackageReference "Roadmap" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AvdLee/Roadmap";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D0FCF2E029B54CDD00F31442 /* Roadmap */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D0FCF2DF29B54CDD00F31442 /* XCRemoteSwiftPackageReference "Roadmap" */;
+			productName = Roadmap;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		D0831A3C277F72B70049AB84 /* Fotogroep_Waalre_2.xcdatamodeld */ = {

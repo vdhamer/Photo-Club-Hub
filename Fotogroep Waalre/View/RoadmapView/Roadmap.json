@@ -1,0 +1,33 @@
+[
+  {
+    "id": "1",
+    "title": "Cache thumbnail images",
+    "status": "planned",
+    "description": "Thumbnails are currently fetched multiple times per sessions."
+  },
+  {
+    "id": "2",
+    "title": "Delete photo clubs",
+    "status": "?",
+    "description": "Deletion of the Test photo clubs (and others), including their membership list. Photographers in Who's Who page are not deleted.",
+    "isFinished": false
+  },
+  {
+    "id": "3",
+    "title": "Maps",
+    "status": "?",
+    "description": "Add names of clubs to pins. Maybe show user's current location."
+  },
+  {
+    "id": "4",
+    "title": "Index of Clubs",
+    "status": "planned",
+    "description": "Host JSON file with photo clubs (name and URL) on a server. Allows clubs to be added/removed without updating software."
+  },
+  {
+    "id": "5",
+    "title": "Rename app",
+    "status": "planned",
+    "description": "Change app name from Photo Club Waalre to something not associated with any single club."
+  }
+]
