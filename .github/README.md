@@ -19,7 +19,7 @@
           </ul>
     </details>
     <details><summary><a href="#screens">Screens</a></summary>
-        <ul>
+          <ul>
             <li><a href="#the-user-interface-screens">The User Interface Screens</a></li>
           </ul>
     </details>
@@ -32,7 +32,7 @@
                 <ul>
                     <li><a href="#encryption-details">Encryption Details</a></li>
                 </ul>
-           </ul>
+        </ul>
     </details>
     <details><summary><a href="#installation">Installation</a></summary>
          <ul>
@@ -40,14 +40,14 @@
                <li><a href="#cloning-the-repository">Cloning the Repository</a></li>
                <li><a href="#code-signing">Code Signing</a></li>
                <li><a href="#upgrading-the-app">Upgrading the App</a></li>
-                <ul>
+               <ul>
                     <li><a href="schema-migration">Schema Migration</a></li>
-                </ul>
-          </ul>
+               </ul>
+         </ul>
     </details>
     <details><summary><a href="#contributing">Contributing</a></summary>
            <ul>
-            <li><a href="#areas-for-contribution">Areas for Contribution</a></li> 
+                <li><a href="#areas-for-contribution">Areas for Contribution</a></li> 
            </ul>
     </details>
     <details><summary><a href="#the-app-architecture">The App's Architecture</a></summary>
@@ -58,7 +58,7 @@
                      <li><a href="#photoclub">PhotoClub</a></li>
                      <li><a href="#photographer">Photographer</a></li>
                      <li><a href="#memberportfolio">MemberPortfolio</a></li>
-                   </ul>
+                </ul>
             <li><a href="#how-the-data-is-loaded">How the Data is Loaded</a></li>
                 <ul>
                     <li><a href="#the-current-approach">The Current Approach</a></li>
@@ -68,16 +68,16 @@
     </details>
     <details><summary><a href="#administrative">Administrative</a></summary>
         <ul>  
-               <li><a href="#license">License</a></li>
-               <li><a href="#contact">Contact</a></li>
+            <li><a href="#license">License</a></li>
+            <li><a href="#contact">Contact</a></li>
             <li><a href="#acknowledgments">Acknowledgments</a></li>
         </ul>
     </details>
 </ul>
 
 ## About the Project
-<ul> 
-<details><summary>
+
+<ul><details><summary>
 
 ### What's Waalre?
 
@@ -87,7 +87,9 @@ The Netherlands. Its members meet since 1988, mainly to critique each other’s 
 
 This app originally served as an alternative way to view the photos published on the club's web
 site. We expect to change the name of the app now that the app has been redesigned to support *multiple* photo clubs.
+
 </details>
+
 <details open><summary>
     
 ### The Portfolio Concept
@@ -156,6 +158,7 @@ Or you could use the club level to group a few individual photographers (by regi
 of this non-club are willing to align (e.g. maintain the list of portfolios=photographers who are then a member of a loosely-knit club).
 
 </detail></ul></detail>
+
 </ul>
 <p align="right">(<a href="#top">back to top</a>)</p>
  
@@ -176,11 +179,11 @@ Usage of the various screens in the user interface:
 - The `individual portfolio` screen shows the portfolio of a user-selected photographer.
   The title at the top of the screen shows the photographer's name and club affiation: "Robert Capa @ Magnum Photos".
 
-  Images are shown in present-to-past order, based on the images's *capture* date.
+  Images are shown in present-to-past order, based on the images's _capture_ date.
   For Fotogroep Waalre, the year the image was made is shown in the caption.
 
-  You can *swipe* left or right to manually move backwards or forwards through the portfolio.
-  There is also an *autoplay* mode for an automatic slide show. This screen is (for Fotogroep Waalre)
+  You can _swipe_ left or right to manually move backwards or forwards through the portfolio.
+  There is also an _autoplay_ mode for an automatic slide show. This screen is (for Fotogroep Waalre)
   currently based on a commercial Javascript module (Juicebox Pro) that is normally used on websites.
 
 - The `Settings` screen allows you to configure which types of portfolios you want to include in the
@@ -231,6 +234,7 @@ On wide screens (iPad, iPhone Pro Max) there is a navigation button that allows 
 Why provide such a fancy opening screen? Well, it was partly a nice challenge to make (it actually runs
 on the GPU cores). But it also helps explain the app's logo: the Bayer filter array indeed consists of one red,
 one blue, and _two_ green pixels.
+
 </details>
 
 <details open><summary>
@@ -283,6 +287,7 @@ But a simple source code modification then gives access to the encrypted version
 Actually, not quite 🤓. Bypassing the password via a code modification, would allow the app to
 fetch the encrypted data rather than the unencrypted dummy data. 
 But that data is still encrypted by a private encryption key that is not provided on Github.
+
 </details></ul>
 </details>
 
@@ -304,6 +309,7 @@ But that data is still encrypted by a private encryption key that is not provide
 
 See the [open issues](https://github.com/vdhamer/PhotoClubWaalre/issues) for a list of
 proposed enhancements and known limitations.
+
 </ul></detail>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -312,6 +318,7 @@ proposed enhancements and known limitations.
 ## Installation
 
 If you just want to install the binary version of the app, just get it from Apple's app store ([link](https://apps.apple.com/nl/app/photo-club-waalre/id1178324330?l=en)).
+
 <ul>
 <details><summary>
 
@@ -335,6 +342,7 @@ If you just want to install the binary version of the app, just get it from Appl
 To install the source code locally, it is easiest to use GitHub’s `Open with Xcode` feature.
 Developers used to running Git from the command line should manage on their own.
 Xcode covers the installation of the binary on a physical device or on an Xcode iPhone/iPad simulator.
+
 </details>
 
 <details><summary>
@@ -621,8 +629,6 @@ In the former (and more formal) case, the club can have some kind of approval or
     
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-<ul>
-
 ## Administrative
 
 ### License
@@ -641,7 +647,6 @@ Project Link: [https://github.com/vdhamer/PhotoClubWaalre](https://github.com/vd
 * One file with club member data is encrypted using [git-crypt](https://github.com/AGWA/git-crypt).
 * The interactive Roadmap screen uses the [AvdLee/Roadmap](https://github.com/AvdLee/Roadmap) package.
 
-</ul>
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
@@ -658,4 +663,5 @@ Project Link: [https://github.com/vdhamer/PhotoClubWaalre](https://github.com/vd
 [license-url]: https://github.com/vdhamer/PhotoClubWaalre/blob/main/.github/LICENSE.md
 [portfolios-screenshot]: images/portfolios.png
 [product-schema]: ../Assets.xcassets/images/Schema.imageset/Schema.png
+
 
