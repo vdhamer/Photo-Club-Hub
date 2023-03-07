@@ -430,8 +430,8 @@ Each of the layers has its own directory (found at the linked locations):
   the code that populates and updates the database content ("model"). 
   This layer is currently implemented _per photo club_, and stored a subdirectory per club.
 
-</details>
-<details><summary>
+</details></ul>
+<ul><details><summary>
 
 ### Role of the Database 
 
@@ -469,9 +469,9 @@ but because it usually works well enough, a user typically won't notice:
 5. Photo club data is minimal (name, town/country, GPS, website), but is currently still hardcoded.
 
 Some of these gaps are addressed [below](#a-better-approach).
-</details>
+</details></ul>
 
-<details><summary>
+<ul><details><summary>
 
 ### The Data Model
 
@@ -501,9 +501,9 @@ A `PhotoClub` has a rough address down to the `town` level and GPS coordinates. 
 > This could be fixed by recognizing "supported" locations, and then using iOS facilities to localize strings. But this would
 > go against the vision of configuring club information without requiring any updates to the software. So the best solution is
 > to do a reverse geolocation lookup (GPS --> localized strings), thus replacing the stored `town` and `country` strings in the database.
-</details>
+</details></ul>
 
-<details><summary>
+<ul><details><summary>
 
 #### Photographer
 
@@ -512,9 +512,9 @@ Some basic information about a `Photographer` (name, date of birth, personal web
 related to the `Photographer` as an individual, rather to the `Photographer's` membership of any
 specific `PhotoClub`. This club-independent information is stored in the individual's `Photographer`
 struct/record.
-</details>
+</ul></details>
 
-<details><summary>
+<ul><details><summary>
 
 #### MemberPortfolio
 
@@ -537,8 +537,8 @@ And every `Member` of a `PhotoClub` has exactly one `Portfolio` - even if it sti
 because this is needed to store information about this membership.
 This one-to-one relationship between `Member` and `Portfolio` allows them to be 
 modelled using once concept (aka table) instead of two. We named that `MemberPortfolio`.
-</details>
-</details>
+</ul></details>
+</ul></details>
 	
 <ul><details><summary>
 
@@ -620,9 +620,8 @@ In the former (and more formal) case, the club can have some kind of approval or
 	
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## Administrative
-
 <ul>
+## Administrative
 
 ### License
 
