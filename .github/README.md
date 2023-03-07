@@ -521,7 +521,7 @@ Some basic information about a `Photographer` (name, date of birth, personal web
 related to the `Photographer` as an individual, rather to the `Photographer's` membership of any
 specific `PhotoClub`. This club-independent information is stored in the individual's `Photographer`
 struct/record.
-</ul></details>
+</details></ul>
 
 <ul><details><summary>
 
@@ -546,8 +546,8 @@ And every `Member` of a `PhotoClub` has exactly one `Portfolio` - even if it sti
 because this is needed to store information about this membership.
 This one-to-one relationship between `Member` and `Portfolio` allows them to be 
 modelled using once concept (aka table) instead of two. We named that `MemberPortfolio`.
-</ul></details>
-</ul></details>
+</details></ul>
+</details></ul>
     
 <ul><details><summary>
 
