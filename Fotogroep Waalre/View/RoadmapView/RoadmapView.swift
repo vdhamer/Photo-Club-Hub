@@ -12,8 +12,15 @@ struct MyRoadmapView: View {
     let configuration = RoadmapConfiguration(
         roadmapJSONURL: URL(string: "https://simplejsoncms.com/api/u6i9frt5lfa")!
     )
+    private let title = String(localized: "Roadmap", comment: "Title of Roadmap screen")
 
     var body: some View {
-        RoadmapView(configuration: configuration)
+//        NavigationStack { TODO
+//            ScrollView(.vertical, showsIndicators: true) {
+                RoadmapView(configuration: configuration)
+//            }
+//                .navigationTitle(title)
+//                .navigationBarTitleDisplayMode(UIDevice.isIPhone ? .inline : .large)
+//        }
     }
 }
