@@ -70,7 +70,7 @@
 		<ul>  
        		<li><a href="#license">License</a></li>
        		<li><a href="#contact">Contact</a></li>
-       	<li><a href="#acknowledgments">Acknowledgments</a></li>
+            <li><a href="#acknowledgments">Acknowledgments</a></li>
 		</ul>
 	</details>
 </ul>
@@ -539,7 +539,7 @@ modelled using once concept (aka table) instead of two. We named that `MemberPor
 </details>
 </details>
 	
-<details><summary>
+<ul><details><summary>
 
 ### How the Data is Loaded
 
@@ -578,9 +578,9 @@ Lightroom collections. A portfolio can be uploaded or updated to the webserver u
 of Lightroom's Web module. This triggers JuiceBox-Pro to generate an XML index file for the portfolio
 and to upload the actual images to the server. All required settings (e.g. copyright,
 choice of directory) only need to be configured once per portfolio (=member).
-</details>
+</details></ul>
 
-<details><summary>
+<ul><details><summary>
 
 #### A Better Approach
 
@@ -614,6 +614,8 @@ Depending on local preference, this level can be managed by a club volunteer, or
 individual club members. In the latter case, a portfolio can be updated whenever a member wants.
 In the former (and more formal) case, the club can have some kind of approval or rating system in place.
 </details></ul>
+
+</ul>
 	
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -633,9 +635,9 @@ Project Link: [https://github.com/vdhamer/PhotoClubWaalre](https://github.com/vd
 
 ### Acknowledgments
 
-* The opening Prelude screen uses a photo of colorful building by Greetje van Son
-* One file with club member data is encrypted using [git-crypt](https://github.com/AGWA/git-crypt)
-* The interactive Roadmap screen uses the [AvdLee/Roadmap](https://github.com/AvdLee/Roadmap) package
+* The opening Prelude screen uses a photo of colorful building by Greetje van Son.
+* One file with club member data is encrypted using [git-crypt](https://github.com/AGWA/git-crypt).
+* The interactive Roadmap screen uses the [AvdLee/Roadmap](https://github.com/AvdLee/Roadmap) package.
 
 </ul>
 <p align="right">(<a href="#top">back to top</a>)</p>
