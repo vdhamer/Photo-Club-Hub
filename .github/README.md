@@ -11,68 +11,68 @@
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
 <ul>
-	<details><summary><a href="#about-the-project">About the Project</a></summary>
-      	<ul>
-        	<li><a href="#whats-waalre">What's Waalre?</a></li>
-        	<li><a href="#the-portfolio-concept">The Portfolio Concept</a></li>
-			<li><a href="#implications-of-portfolios">Implications of Portfolios</a>
-      	</ul>
+    <details><summary><a href="#about-the-project">About the Project</a></summary>
+          <ul>
+            <li><a href="#whats-waalre">What's Waalre?</a></li>
+            <li><a href="#the-portfolio-concept">The Portfolio Concept</a></li>
+            <li><a href="#implications-of-portfolios">Implications of Portfolios</a>
+          </ul>
     </details>
     <details><summary><a href="#screens">Screens</a></summary>
-		<ul>
-			<li><a href="#the-user-interface-screens">The User Interface Screens</a></li>
-      	</ul>
+        <ul>
+            <li><a href="#the-user-interface-screens">The User Interface Screens</a></li>
+          </ul>
     </details>
     <details><summary><a href="#features">Features</a></summary>
-		<ul>
-			<li><a href="#opening-animation">Opening Animation</a></li>
-			<li><a href="#multi-club-support">Multi-club Support</a></li>
-			<li><a href="#roadmap">Roadmap</a></li>
-			<li><a href="#data-privacy">Data Privacy</a></li>
-				<ul>
-					<li><a href="#encryption-details">Encryption Details</a></li>
-				</ul>
-       	</ul>
+        <ul>
+            <li><a href="#opening-animation">Opening Animation</a></li>
+            <li><a href="#multi-club-support">Multi-club Support</a></li>
+            <li><a href="#roadmap">Roadmap</a></li>
+            <li><a href="#data-privacy">Data Privacy</a></li>
+                <ul>
+                    <li><a href="#encryption-details">Encryption Details</a></li>
+                </ul>
+           </ul>
     </details>
-	<details><summary><a href="#installation">Installation</a></summary>
-     	<ul>
-    	   	<li><a href="#built-with">Built-With</a></li>
-    	   	<li><a href="#cloning-the-repository">Cloning the Repository</a></li>
-    	   	<li><a href="#code-signing">Code Signing</a></li>
-    	   	<li><a href="#upgrading-the-app">Upgrading the App</a></li>
-				<ul>
-					<li><a href="schema-migration">Schema Migration</a></li>
-				</ul>
-      	</ul>
+    <details><summary><a href="#installation">Installation</a></summary>
+         <ul>
+               <li><a href="#built-with">Built-With</a></li>
+               <li><a href="#cloning-the-repository">Cloning the Repository</a></li>
+               <li><a href="#code-signing">Code Signing</a></li>
+               <li><a href="#upgrading-the-app">Upgrading the App</a></li>
+                <ul>
+                    <li><a href="schema-migration">Schema Migration</a></li>
+                </ul>
+          </ul>
     </details>
     <details><summary><a href="#contributing">Contributing</a></summary>
-       	<ul>
-			<li><a href="#areas-for-contribution">Areas for Contribution</a></li> 
-       	</ul>
-	</details>
+           <ul>
+            <li><a href="#areas-for-contribution">Areas for Contribution</a></li> 
+           </ul>
+    </details>
     <details><summary><a href="#the-app-architecture">The App's Architecture</a></summary>
-       	<ul>
-			<li><a href="#role-of-the-database">Role of the Database</a></li>
-           	<li><a href="#the-data-model">The Data Model</a></li>
-				<ul>
-	 				<li><a href="#photoclub">PhotoClub</a></li>
-	 				<li><a href="#photographer">Photographer</a></li>
-	 				<li><a href="#memberportfolio">MemberPortfolio</a></li>
-	   			</ul>
-			<li><a href="#how-the-data-is-loaded">How the Data is Loaded</a></li>
-				<ul>
-					<li><a href="#the-current-approach">The Current Approach</a></li>
-					<li><a href="#a-better-approach">A Better Approach</a></li>
-				</ul>
-		</ul>
-	</details>
-	<details><summary><a href="#administrative">Administrative</a></summary>
-		<ul>  
-       		<li><a href="#license">License</a></li>
-       		<li><a href="#contact">Contact</a></li>
+           <ul>
+            <li><a href="#role-of-the-database">Role of the Database</a></li>
+               <li><a href="#the-data-model">The Data Model</a></li>
+                <ul>
+                     <li><a href="#photoclub">PhotoClub</a></li>
+                     <li><a href="#photographer">Photographer</a></li>
+                     <li><a href="#memberportfolio">MemberPortfolio</a></li>
+                   </ul>
+            <li><a href="#how-the-data-is-loaded">How the Data is Loaded</a></li>
+                <ul>
+                    <li><a href="#the-current-approach">The Current Approach</a></li>
+                    <li><a href="#a-better-approach">A Better Approach</a></li>
+                </ul>
+        </ul>
+    </details>
+    <details><summary><a href="#administrative">Administrative</a></summary>
+        <ul>  
+               <li><a href="#license">License</a></li>
+               <li><a href="#contact">Contact</a></li>
             <li><a href="#acknowledgments">Acknowledgments</a></li>
-		</ul>
-	</details>
+        </ul>
+    </details>
 </ul>
 
 ## About the Project
@@ -89,7 +89,7 @@ This app originally served as an alternative way to view the photos published on
 site. We expect to change the name of the app now that the app has been redesigned to support *multiple* photo clubs.
 </details>
 <details open><summary>
-	
+    
 ### The Portfolio Concept
 
 </summary>
@@ -121,7 +121,7 @@ The `photo club` level is the higher level at which
 <a/></p>
 
 For comparison, this is what personal photographer websites look like in the same notation:
-	
+    
 * website for photographer1 (hosted on site1)
   * photo galleryA (e.g. portraits)
     * portraits in galleryA
@@ -136,9 +136,9 @@ For comparison, this is what personal photographer websites look like in the sam
 Now each photographer is on his/her own, and determines which images to display, how to host them, and how to present them.
 
 <ul><details><summary>
-		
+        
 ### Implications of Portfolios
-	
+    
 </summary>
 
 If a photographer joined *multiple* photo clubs, the app can show *multiple* portfolios (with independent
@@ -293,7 +293,7 @@ But that data is still encrypted by a private encryption key that is not provide
 </summary>
 
 - [x] Put the app's source code on GitHub.
-	- [x] Handle private data about members in a secure way
+    - [x] Handle private data about members in a secure way
     - [ ] Publish article in Dutch photo club [organization](https://fotobond.nl)
 - [ ] Support expositions by photo clubs. Here is an [example](https://www.fotogroepwaalre.nl/fotos/Expo2022/#2).
 - [x] MemberPortfoliosView: show thumbnails of most recent photos.
@@ -361,11 +361,11 @@ Again, this is a standard Apple iOS policy. This doesn't apply to MacOS.
 If you update to a newer build of the app, all app data stored in the device's internal data storage 
 will remain available. If you choose to remove and reinstall the app, the database content will be lost.
 Fortunately, this has no real implications for the user as the data storage doesn't contain any relevant user data (so far).
-	
+    
 <ul><details><summary>
-	
+    
 #### Schema Migration
-	
+    
 </summary>
 If the data structure has changed from one version to a later version,
 Core Data will automatically perform a so-called schema migration.
@@ -402,7 +402,8 @@ translations, and icon design improvements.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-<ul>
+</ul>
+
 ## The App Architecture
 
 The app uses a [SwiftUI-based MVVM](https://www.hackingwithswift.com/books/ios-swiftui/introducing-mvvm-into-your-swiftui-project)
@@ -488,7 +489,7 @@ a string value such as "Unknown town".
 [![Product schema][product-schema]](https://github.com/vdhamer/PhotoClubWaalre/blob/main/Assets.xcassets/images/Schema.imageset/Schema.png)
 
 <ul><details><summary>
-	
+    
 #### PhotoClub
 
 </summary>
@@ -539,7 +540,7 @@ This one-to-one relationship between `Member` and `Portfolio` allows them to be
 modelled using once concept (aka table) instead of two. We named that `MemberPortfolio`.
 </ul></details>
 </ul></details>
-	
+    
 <ul><details><summary>
 
 ### How the Data is Loaded
@@ -570,7 +571,7 @@ In the case of Photo Club Waalre, the membership list is password protected in W
 using a long key and the Wordpress [Post Password Token](https://wordpress.org/plugins/post-password-plugin/) plugin. 
 The Github version uses a (redacted) copy of the membership list in order to show real data. Details about these details
 can be found above.
-	
+    
 The __image lists__ or `portfolios` use a more robust and easier to maintain approach: 
 for Photo Club Waalre, portfolios are read from XML files generated by an Adobe Lightroom
 Web plug-in called [JuiceBox-Pro](https://www.juicebox.net/). 
@@ -616,11 +617,12 @@ individual club members. In the latter case, a portfolio can be updated whenever
 In the former (and more formal) case, the club can have some kind of approval or rating system in place.
 </details></ul>
 
-</ul></ul>
-	
+</ul>
+    
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <ul>
+
 ## Administrative
 
 ### License
@@ -656,3 +658,4 @@ Project Link: [https://github.com/vdhamer/PhotoClubWaalre](https://github.com/vd
 [license-url]: https://github.com/vdhamer/PhotoClubWaalre/blob/main/.github/LICENSE.md
 [portfolios-screenshot]: images/portfolios.png
 [product-schema]: ../Assets.xcassets/images/Schema.imageset/Schema.png
+
