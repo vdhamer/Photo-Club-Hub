@@ -634,7 +634,8 @@ Project Link: [https://github.com/vdhamer/PhotoClubWaalre](https://github.com/vd
 ### Acknowledgments
 
 * The opening Prelude screen uses a photo of colorful building by Greetje van Son
-* A file with club member data is encrypted using [git-crypt](https://github.com/AGWA/git-crypt)
+* One file with club member data is encrypted using [git-crypt](https://github.com/AGWA/git-crypt)
+* The interactive Roadmap screen uses the [AvdLee/Roadmap](https://github.com/AvdLee/Roadmap) package
 
 </ul>
 <p align="right">(<a href="#top">back to top</a>)</p>
