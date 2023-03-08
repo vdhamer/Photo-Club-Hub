@@ -30,4 +30,22 @@
     "status": "planned",
     "description": "Change app name from Photo Club Waalre to something not associated with any single club."
   }
+    {
+    "id": "6",
+    "title": "Support club expositions",
+    "status": "?",
+    "description": "Present images shown at a club exposition as a Portfolio. This could be reachable from either the Portfolios page, or the Photo Clubs page."
+  }
+  {
+    "id": "7",
+    "title": "Support onboarding of clubs without any code changes.",
+    "status": "planned",
+    "description": "This is probably essential to get widespread adoption across photo clubs. 'Index of Clubs' is part of this."
+  }
+  {
+    "id": "8",
+    "title": "Notifications for new images",
+    "status": "?",
+    "description": "Show using a badge/dot that a portfolio has been updated. Sounds/alerts would be opt-in, if supported at all."
+  }
 ]
