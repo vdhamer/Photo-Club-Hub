@@ -10,17 +10,27 @@ import Roadmap
 
 struct MyRoadmapView: View {
     let configuration = RoadmapConfiguration(
-        roadmapJSONURL: URL(string: "https://simplejsoncms.com/api/u6i9frt5lfa")!
+        roadmapJSONURL: URL(string: "https://simplejsoncms.com/api/u6i9frt5lfa")!,
+        style: RoadmapTemplate.standard.style
     )
-    private let title = String(localized: "Roadmap", comment: "Title of Roadmap screen")
+    private let title = String(localized: "Roadmap voting booth", comment: "Title of Roadmap screen")
 
     var body: some View {
-//        NavigationStack { TODO
-//            ScrollView(.vertical, showsIndicators: true) {
+        NavigationStack {
+            VStack {
                 RoadmapView(configuration: configuration)
-//            }
-//                .navigationTitle(title)
-//                .navigationBarTitleDisplayMode(UIDevice.isIPhone ? .inline : .large)
-//        }
+            }
+            .navigationTitle(title)
+            .navigationBarTitleDisplayMode(UIDevice.isIPhone ? .inline : .large)
+        }
+    }
+}
+
+struct MyRoadmapView_Previews: PreviewProvider {
+    @State static private var title = "MyRoadmapView_Preview"
+
+    static var previews: some View {
+        MyRoadmapView()
+            .navigationTitle(title)
     }
 }

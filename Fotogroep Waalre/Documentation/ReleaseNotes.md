@@ -7,6 +7,7 @@ Maintenance
     * Increased the required iOS version from 16.0 to 16.2
     * Disabled support for running iPad app on Mac (it crashed)
     * Added Roadmap package
+    * Updated Github README and associated screenshot
 ---------------------------------------------------------------------------
 ### 2.3.1 (Github commit 1793262) 05-03-23
 

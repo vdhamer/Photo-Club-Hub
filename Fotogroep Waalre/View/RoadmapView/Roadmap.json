@@ -2,50 +2,110 @@
   {
     "id": "1",
     "title": "Cache thumbnail images",
-    "status": "planned",
-    "description": "Thumbnails are currently fetched multiple times per sessions."
+    "localizedTitle": [
+      {
+        "language": "en",
+        "value": "Cache thumbnail images"
+      },
+      {
+        "language": "nl",
+        "value": "Cache verkleinde afbeeldingen"
+      }
+    ],
+    "status": "to be added (someday)",
+    "localizedStatus": [
+      {
+        "language": "en",
+        "value": "to be added (someday)"
+      },
+      {
+        "language": "nl",
+        "value": "komt er tzt aan"
+      }
+    ],
+    "description": "Thumbnails are currently fetched multiple times per sessions. Caching them on your device improves responsiveness and saves bandwidth.",
+    "localizedDescription": [
+      {
+        "language": "en",
+        "value": "Thumbnails are currently fetched multiple times per sessions. Caching them on your device improves responsiveness and saves bandwidth."
+      },
+      {
+        "language": "nl",
+        "value": "Plaatjes worden meerde keren over het netwerk opgehaald. Dit kost snelheid en bandbreedte."
+      }
+    ]
+  },
+  {
+    "id": "6",
+    "title": "Expositions",
+    "localizedTitle": [
+      {
+        "language": "en",
+        "value": "Expositions"
+      },
+      {
+        "language": "nl",
+        "value": "Exposities"
+      }
+    ],
+    "status": "wanted?",
+    "localizedStatus": [
+      {
+        "language": "en",
+        "value": "wanted?"
+      },
+      {
+        "language": "nl",
+        "value": "nuttig?"
+      }
+    ],
+    "description": "Present images shown at a club exposition in a Portfolio like way. Each such Portfolio would contain images by different photographers in a controllable order."
+    "localizedDescription": [
+      {
+        "language": "en",
+        "value": "Present images shown at a club exposition in a Portfolio like way. Each such Portfolio would contain images by different photographers in a controllable order."
+      },
+      {
+        "language": "nl",
+        "value": "Toon beelden van meerdere makers die tijdens een expositie vertoond zijn. De volgorde van de beelden is belangrijk."
+      }
+    ]
   },
   {
     "id": "2",
     "title": "Delete photo clubs",
-    "status": "?",
-    "description": "Deletion of the Test photo clubs (and others), including their membership list. Photographers in Who's Who page are not deleted.",
+    "status": "needed?",
+    "description": "Allow deletion of photo clubs (like the Test Photo Clubs). This would include deleting their membership list. Entries on the Who's Who page are not deleted.",
     "isFinished": false
-  },
-  {
-    "id": "3",
-    "title": "Maps",
-    "status": "?",
-    "description": "Add names of clubs to pins. Maybe show user's current location."
   },
   {
     "id": "4",
     "title": "Index of Clubs",
-    "status": "planned",
-    "description": "Host JSON file with photo clubs (name and URL) on a server. Allows clubs to be added/removed without updating software."
+    "status": "to be added (someday)",
+    "description": "Host list of photo clubs on a server. Allows clubs to be added/removed without updating software. Each entry would include: name, coordinates, town, country, URL of membership list and URL of club website."
+  },
+  {
+    "id": "3",
+    "title": "Maps",
+    "status": "wanted?",
+    "description": "Add names of clubs to pins on the maps of the Photo Clubs screen. Possibly add marker showing the user's location."
+  },
+  {
+    "id": "8",
+    "title": "Mark portfolios that changed",
+    "status": "wanted?",
+    "description": "Show (using a 'badge') when a Portfolio has been updated since it was last visited. Could be extended with an actual notification."
   },
   {
     "id": "5",
     "title": "Rename app",
-    "status": "planned",
-    "description": "Change app name from Photo Club Waalre to something not associated with any single club."
-  }
-    {
-    "id": "6",
-    "title": "Support club expositions",
-    "status": "?",
-    "description": "Present images shown at a club exposition as a Portfolio. This could be reachable from either the Portfolios page, or the Photo Clubs page."
-  }
+    "status": "needed (someday)",
+    "description": "Change app name from Photo Club Waalre to a new name not associated with any particular photo club."
+  },
   {
     "id": "7",
-    "title": "Support onboarding of clubs without any code changes.",
-    "status": "planned",
-    "description": "This is probably essential to get widespread adoption across photo clubs. 'Index of Clubs' is part of this."
-  }
-  {
-    "id": "8",
-    "title": "Notifications for new images",
-    "status": "?",
-    "description": "Show using a badge/dot that a portfolio has been updated. Sounds/alerts would be opt-in, if supported at all."
+    "title": "Simple onboarding of new clubs",
+    "status": "needed (someday)",
+    "description": "Onboarding of clubs should not require a new app release. Instead, all required information is fetched from the respective club websites. The data format should be simple/safe. We think this is needed to get widespread adoption across photo clubs."
   }
 ]
