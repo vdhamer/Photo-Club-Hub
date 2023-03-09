@@ -1,39 +1,40 @@
 [
   {
     "id": "1",
-    "title": "Cache thumbnail images",
+    "title": "Image caching",
     "localizedTitle": [
       {
         "language": "en",
-        "value": "Cache thumbnail images"
+        "value": "Image caching"
       },
       {
         "language": "nl",
-        "value": "Cache verkleinde afbeeldingen"
+        "value": "Afbeeldingen 'cachen'"
       }
     ],
-    "status": "to be added (someday)",
+    "status": "planned",
     "localizedStatus": [
       {
         "language": "en",
-        "value": "to be added (someday)"
+        "value": "planned"
       },
       {
         "language": "nl",
-        "value": "komt er tzt aan"
+        "value": "verwacht"
       }
     ],
-    "description": "Thumbnails are currently fetched multiple times per sessions. Caching them on your device improves responsiveness and saves bandwidth.",
+    "description": "Thumbnails are currently fetched multiple times per session and across sessions. Saving (caching) a temporary copy improves responsiveness and saves bandwidth.",
     "localizedDescription": [
       {
         "language": "en",
-        "value": "Thumbnails are currently fetched multiple times per sessions. Caching them on your device improves responsiveness and saves bandwidth."
+        "value": "Thumbnails are currently fetched multiple times per session and across sessions. Saving (caching) a temporary copy improves responsiveness and saves bandwidth."
       },
       {
         "language": "nl",
-        "value": "Plaatjes worden meerde keren over het netwerk opgehaald. Dit kost snelheid en bandbreedte."
+        "value": "Dezelfde foto's worden momenteel herhaardelijk opgehaald. Dit kost tijd en bandbreedte. Verhelpen door een lokale copie tijdelijk te bewaren."
       }
-    ]
+    ],
+    "isFinished": false
   },
   {
     "id": "6",
@@ -48,64 +49,183 @@
         "value": "Exposities"
       }
     ],
-    "status": "wanted?",
-    "localizedStatus": [
-      {
-        "language": "en",
-        "value": "wanted?"
-      },
-      {
-        "language": "nl",
-        "value": "nuttig?"
-      }
-    ],
-    "description": "Present images shown at a club exposition in a Portfolio like way. Each such Portfolio would contain images by different photographers in a controllable order."
+    "status": "?",
+    "description": "Display the images shown at club expositions. Such an image series would typically included images by multiple club members.",
     "localizedDescription": [
       {
         "language": "en",
-        "value": "Present images shown at a club exposition in a Portfolio like way. Each such Portfolio would contain images by different photographers in a controllable order."
+        "value": "Display the images shown at club expositions. Such an image series would typically included images by multiple club members."
       },
       {
         "language": "nl",
-        "value": "Toon beelden van meerdere makers die tijdens een expositie vertoond zijn. De volgorde van de beelden is belangrijk."
+        "value": "Ondersteuning voor club exposities als beeldenreeksen, van meerdere clubleden en in een instelbare volgorde."
       }
-    ]
-  },
-  {
-    "id": "2",
-    "title": "Delete photo clubs",
-    "status": "needed?",
-    "description": "Allow deletion of photo clubs (like the Test Photo Clubs). This would include deleting their membership list. Entries on the Who's Who page are not deleted.",
+    ],
     "isFinished": false
   },
   {
-    "id": "4",
-    "title": "Index of Clubs",
-    "status": "to be added (someday)",
-    "description": "Host list of photo clubs on a server. Allows clubs to be added/removed without updating software. Each entry would include: name, coordinates, town, country, URL of membership list and URL of club website."
+    "id": "2",
+    "title": "Hide/remove photo club",
+    "localizedTitle": [
+      {
+        "language": "en",
+        "value": "Hide/remove photo club"
+      },
+      {
+        "language": "nl",
+        "value": "Photo club verbergen/ontvolgen"
+      }
+    ],
+    "status": "planned",
+    "localizedStatus": [
+      {
+        "language": "en",
+        "value": "planned"
+      },
+      {
+        "language": "nl",
+        "value": "verwacht"
+      }
+    ],
+    "description": "Allow hiding or unfollowing of a photo club that is no longer of interest.",
+    "localizedDescription": [
+      {
+        "language": "en",
+        "value": "Allow simple hiding of photo clubs that the user is no longer interested in. Especially relevant if there are many clubs to choose from."
+      },
+      {
+        "language": "nl",
+        "value": "Men moet eenvoudig een fotogroep kunnen selecteren maar ook verwijderen. Vooral nuttig als de app veel clubs bevat."
+      }
+    ],
+    "isFinished": false
   },
   {
     "id": "3",
-    "title": "Maps",
-    "status": "wanted?",
-    "description": "Add names of clubs to pins on the maps of the Photo Clubs screen. Possibly add marker showing the user's location."
+    "title": "Map improvements",
+    "localizedTitle": [
+      {
+        "language": "en",
+        "value": "Map improvements"
+      },
+      {
+        "language": "nl",
+        "value": "Landkaarten"
+      }
+    ],
+    "status": "?",
+    "description": "Add names of clubs to pins on the maps of the Photo Clubs screen. Possibly add marker showing the user's location.",
+    "localizedDescription": [
+      {
+        "language": "en",
+        "value": "Add names of clubs to pins on the maps of the Photo Clubs screen. Possibly add marker showing the user's location."
+      },
+      {
+        "language": "nl",
+        "value": "Namen van de fotogroepen bij de spelden op de kaart weergeven. Mogelijk ook huidige locatie van de gebruiker tonen."
+      }
+    ],
+    "isFinished": false
   },
   {
     "id": "8",
-    "title": "Mark portfolios that changed",
-    "status": "wanted?",
-    "description": "Show (using a 'badge') when a Portfolio has been updated since it was last visited. Could be extended with an actual notification."
+    "title": "Indicate portfolios that changed",
+    "localizedTitle": [
+      {
+        "language": "en",
+        "value": "Indicate portfolios that changed"
+      },
+      {
+        "language": "nl",
+        "value": "Toon welke portfolios gewijzigd zijn"
+      }
+    ],
+    "status": "?",
+    "description": "Show (using a 'badge') when a Portfolio has been updated since user's last visit.",
+    "localizedDescription": [
+      {
+        "language": "en",
+        "value": "Show (using a 'badge') when a Portfolio has been updated since user's last visit."
+      },
+      {
+        "language": "nl",
+        "value": "Geef visueel aan indien er foto's aan een Portfolio toegevoegd zijn."
+      }
+    ],
+    "isFinished": false
   },
   {
     "id": "5",
     "title": "Rename app",
-    "status": "needed (someday)",
-    "description": "Change app name from Photo Club Waalre to a new name not associated with any particular photo club."
+    "localizedTitle": [
+      {
+        "language": "en",
+        "value": "Rename app"
+      },
+      {
+        "language": "nl",
+        "value": "Verander app naam"
+      }
+    ],
+    "status": "planned",
+    "localizedStatus": [
+      {
+        "language": "en",
+        "value": "planned"
+      },
+      {
+        "language": "nl",
+        "value": "verwacht"
+      }
+    ],
+    "description": "Change app name from Photo Club Waalre to a name that is not linked to any specific club.",
+    "localizedDescription": [
+      {
+        "language": "en",
+        "value": "Change app name from Photo Club Waalre to a name that is not linked to any specific club."
+      },
+      {
+        "language": "nl",
+        "value": "Verander naam van de app zodat deze niet vernoemd is naar één enkele club."
+      }
+    ],
+    "isFinished": false
   },
   {
     "id": "7",
     "title": "Simple onboarding of new clubs",
-    "status": "needed (someday)",
-    "description": "Onboarding of clubs should not require a new app release. Instead, all required information is fetched from the respective club websites. The data format should be simple/safe. We think this is needed to get widespread adoption across photo clubs."
+    "localizedTitle": [
+      {
+        "language": "en",
+        "value": "Simple onboarding of new clubs"
+      },
+      {
+        "language": "nl",
+        "value": "Vereenvoudig toevoeging van een club"
+      }
+    ],
+    "status": "planned",
+    "localizedStatus": [
+      {
+        "language": "en",
+        "value": "planned"
+      },
+      {
+        "language": "nl",
+        "value": "verwacht"
+      }
+    ],
+    "description": "Onboarding of clubs should be made easy. This implies needing no code changes to the app itself. Instead, club membership lists and lists of images could be stored and maintained by the clubs on their own websites (e.g., Wordpress) or on simpleJsonCMS.com.",
+    "localizedDescription": [
+      {
+        "language": "en",
+        "value": "Onboarding of clubs should be made easy. This implies needing no code changes to the app itself. Instead, club membership lists and lists of images could be stored and maintained by the clubs on their own websites (e.g., Wordpress) or on simpleJsonCMS.com."
+      },
+      {
+        "language": "nl",
+        "value": "Verlaag de drempelig om een nieuwe club toe te voegen of om clubinformatie te wijzigen. Dit zou moeten kunen zonder dat de app zelf aangepast moet worden. Dit zou kunnen als de club zelf de vereiste informatie op een eigen website kan zetten en beheren."
+      }
+    ],
+    "isFinished": false
   }
 ]
