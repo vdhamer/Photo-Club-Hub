@@ -105,12 +105,12 @@ struct ReadmeView: View {
                                 Button {
                                     showingRoadmap = true
                                 } label: {
-                                    Text("Vote for features")
+                                    Text("Vote for new features", comment: "Button leading to Roadmap voting screen")
                                 }
                                     .sheet(isPresented: $showingRoadmap, content: {
-                                            MyRoadmapView()
+                                            VoteOnRoadmapView()
                                             // the detents don't do anything on an iPad
-                                                .presentationDetents(detentsList, selection: $selectedRoadmapDetent)
+                                                .presentationDetents([.large], selection: $selectedRoadmapDetent)
                                                 .presentationDragIndicator(.visible) // show drag indicator
                                     })
                                 Spacer()

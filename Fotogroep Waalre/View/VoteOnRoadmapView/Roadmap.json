@@ -1,0 +1,231 @@
+[
+  {
+    "id": "1",
+    "title": "Image caching",
+    "localizedTitle": [
+      {
+        "language": "en",
+        "value": "Image caching"
+      },
+      {
+        "language": "nl",
+        "value": "Afbeeldingen 'cachen'"
+      }
+    ],
+    "status": "planned",
+    "localizedStatus": [
+      {
+        "language": "en",
+        "value": "planned"
+      },
+      {
+        "language": "nl",
+        "value": "verwacht"
+      }
+    ],
+    "description": "Images are currently fetched multiple times over the network. Saving (caching) temporary copies improves performance and saves bandwidth.",
+    "localizedDescription": [
+      {
+        "language": "en",
+        "value": "Images are currently fetched multiple times over the network. Saving (caching) temporary copies improves performance and saves bandwidth."
+      },
+      {
+        "language": "nl",
+        "value": "Momenteel worden foto's vaak herhaardelijk opgehaald. Dit kan tijd kosten en kost bandbreedte. Dit is oplosbaar door een tijdelijke lokale copie te bewaren."
+      }
+    ],
+    "isFinished": false
+  },
+  {
+    "id": "3",
+    "title": "Map improvements",
+    "localizedTitle": [
+      {
+        "language": "en",
+        "value": "Map improvements"
+      },
+      {
+        "language": "nl",
+        "value": "Landkaarten"
+      }
+    ],
+    "status": "?",
+    "description": "Show club names for the pins on the maps per photo club. Maybe also mark  the user's current location.",
+    "localizedDescription": [
+      {
+        "language": "en",
+        "value": "Show club names for the pins on the maps per photo club. Maybe also mark  the user's current location."
+      },
+      {
+        "language": "nl",
+        "value": "Toon de namen van de fotogroepen (spelden) op de landkaarten. Toon eventueel ook de huidige locatie van de gebruiker indien die binnen het bereik van de kaart valt."
+      }
+    ],
+    "isFinished": false
+  },
+  {
+    "id": "5",
+    "title": "Change app name",
+    "localizedTitle": [
+      {
+        "language": "en",
+        "value": "Rename app"
+      },
+      {
+        "language": "nl",
+        "value": "Verander app naam"
+      }
+    ],
+    "status": "planned",
+    "localizedStatus": [
+      {
+        "language": "en",
+        "value": "planned"
+      },
+      {
+        "language": "nl",
+        "value": "verwacht"
+      }
+    ],
+    "description": "Change app name from Photo Club Waalre to a name that isn't linked to any one club. The new name is still undecided.",
+    "localizedDescription": [
+      {
+        "language": "en",
+        "value": "Change app name from Photo Club Waalre to a name that isn't linked to any one club. The new name is still undecided."
+      },
+      {
+        "language": "nl",
+        "value": "Verander naam van de app zodat deze niet vernoemd is naar één enkele club. De nieuwe naam is nog niet bekend. Suggesties?"
+      }
+    ],
+    "isFinished": false
+  },
+  {
+    "id": "6",
+    "title": "Expositions",
+    "localizedTitle": [
+      {
+        "language": "en",
+        "value": "Expositions"
+      },
+      {
+        "language": "nl",
+        "value": "Exposities"
+      }
+    ],
+    "status": "?",
+    "description": "Display images presented at club expositions. Images in an expo would be by many different club members. And should be presented in controllable order.",
+    "localizedDescription": [
+      {
+        "language": "en",
+        "value": "Display images presented at club expositions. Images in an expo would be by many different club members. And should be presented in controllable order."
+      },
+      {
+        "language": "nl",
+        "value": "Ondersteuning voor club exposities. Dat zouden dus beeldenreeksen, gemaakt door diverse clubleden, en vertoond in een instelbare volgorde."
+      }
+    ],
+    "isFinished": false
+  },
+  {
+    "id": "7",
+    "title": "Simple onboarding of new clubs",
+    "localizedTitle": [
+      {
+        "language": "en",
+        "value": "Simple onboarding of new clubs"
+      },
+      {
+        "language": "nl",
+        "value": "Vereenvoudig toevoeging van een club"
+      }
+    ],
+    "status": "planned",
+    "localizedStatus": [
+      {
+        "language": "en",
+        "value": "planned"
+      },
+      {
+        "language": "nl",
+        "value": "verwacht"
+      }
+    ],
+    "description": "Onboarding of clubs should be easy and should not require any changes to the app itself. Instead all data (club list, member lists, image lists) would be fetched over the network. Clubs can store and manage their data on their own websites (e.g., Wordpress).",
+    "localizedDescription": [
+      {
+        "language": "en",
+        "value": "Onboarding of clubs should be easy and should not require any changes to the app itself. Instead all data (club list, member lists, image lists) would be fetched over the network. Clubs can store and manage their data on their own websites (e.g., Wordpress)."
+      },
+      {
+        "language": "nl",
+        "value": "Verlaag de drempel om een nieuwe clubs toe te voegen of om clubinformatie aan te passen. Dit zou dus zijn zonder aanpassing van de app zelf. Hierdoor zou een club zelf de vereiste informatie op de eigen website plaatsen en beheren."
+      }
+    ],
+    "isFinished": false
+  },
+  {
+    "id": "8",
+    "title": "Mark new photos",
+    "localizedTitle": [
+      {
+        "language": "en",
+        "value": "Indicate portfolios that changed"
+      },
+      {
+        "language": "nl",
+        "value": "Toon welke portfolios gewijzigd zijn"
+      }
+    ],
+    "status": "?",
+    "description": "Mark (using a 'badge' or big dot) portfolios with images that have been recently updated. This would indicate whether you viewed the image - somewhat like 'read' e-mails or messages.",
+    "localizedDescription": [
+      {
+        "language": "en",
+        "value": "Mark (using a 'badge' or big dot) portfolios with images that have been recently updated. This would indicate whether you viewed the image - somewhat like 'read' e-mails or messages."
+      },
+      {
+        "language": "nl",
+        "value": "Geef aan (gekleurde stip?) wanneer een portfolio nieuwe foto's bevat. 'Nieuw' betekent hier dat de foto's nog niet bekeken zijn. De opzet is dus vergelijkbaar met e-mail of messaging programma's - wellicht op termijn met optionele notificatie."
+      }
+    ],
+    "isFinished": false
+  },
+  {
+    "id": "9",
+    "title": "Select/deselect photo clubs",
+    "localizedTitle": [
+      {
+        "language": "en",
+        "value": "Hide/remove photo club"
+      },
+      {
+        "language": "nl",
+        "value": "Photo club verbergen/ontvolgen"
+      }
+    ],
+    "status": "planned",
+    "localizedStatus": [
+      {
+        "language": "en",
+        "value": "planned"
+      },
+      {
+        "language": "nl",
+        "value": "verwacht"
+      }
+    ],
+    "description": "Support 'following' and 'unfollowing' of clubs or individual club members. This will be needed when there are dozens of clubs and hundreds of members accessible via the app.",
+    "localizedDescription": [
+      {
+        "language": "en",
+        "value": "Support 'following' and 'unfollowing' of clubs or individual club members. This will be needed when there are dozens of clubs and hundreds of members accessible via the app."
+      },
+      {
+        "language": "nl",
+        "value": "Men moet kunnen kiezen welke clubs of individuele leden te 'volgen'. Dit is pas nodig als de app veel clubs en heel veel clubleden omvat."
+      }
+    ],
+    "isFinished": false
+  }
+]
