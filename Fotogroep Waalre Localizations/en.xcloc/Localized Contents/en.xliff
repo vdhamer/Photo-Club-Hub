@@ -102,6 +102,11 @@
         <target>Photo Club Waalre is a photography club named after Waalre, a town in the south of The Netherlands. Since 1988 its club members meet to critique each other’s photos, organize excursions, and hold yearly photo expositions.</target>
         <note>First paragraph in The Club section of Readme page</note>
       </trans-unit>
+      <trans-unit id="Paragraph_1.2" xml:space="preserve">
+        <source>Originally the app only supported Photo Club Waalre (aka _Fotogroep Waalre_), but the current version supports **multiple** photo clubs. At some point the app will get a new name.</source>
+        <target>Originally the app only supported Photo Club Waalre (aka _Fotogroep Waalre_), but the current version supports **multiple** photo clubs. At some point the app will get a new name.</target>
+        <note>Second paragraph in The Club section of Readme page</note>
+      </trans-unit>
       <trans-unit id="Paragraph_2.1" xml:space="preserve">
         <source>The goal of this app is to showcase curated work of members of photo clubs.</source>
         <target>The goal of this app is to showcase curated work of members of photo clubs.</target>
@@ -123,34 +128,42 @@
         <note>Fourth paragraph in The App on Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_2.5" xml:space="preserve">
-        <source>Originally the app only supported Photo Club Waalre (aka _Fotogroep Waalre_), but the current version supports **multiple** photo clubs. For a preview of what that looks like, drag down (“pull to refresh”) the screen of the Photo Club page. This loads a few random members from friendly neighboring clubs.</source>
-        <target>Originally the app only supported Photo Club Waalre (aka _Fotogroep Waalre_), but the current version supports **multiple** photo clubs. For a preview of what that looks like, drag down (“pull to refresh”) the screen of the Photo Club page. This loads a few random members from friendly neighboring clubs.</target>
+        <source>For Photo Club Waalre, we chose to also include the work of former club members. By default, former members are not visible, but you can configure the app to show them.</source>
+        <target>For Photo Club Waalre, we chose to also include the work of former club members. By default, former members are not visible, but you can configure the app to show them.</target>
         <note>Fifth paragraph in the App on Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_2.6" xml:space="preserve">
-        <source>For Photo Club Waalre, we chose to also include the work of former club members. By default, former members are not visible, but you can configure the app to show them.</source>
-        <target>For Photo Club Waalre, we chose to also include the work of former club members. By default, former members are not visible, but you can configure the app to show them.</target>
-        <note>Sixth paragraph in the App on Readme page</note>
-      </trans-unit>
-      <trans-unit id="Paragraph_2.7" xml:space="preserve">
         <source>Contact us (github@vdhamer.com) if you are interested in adding support for your photo club.</source>
         <target>Contact us (github@vdhamer.com) if you are interested in adding support for your photo club.</target>
-        <note>Seventh paragraph in the App on Readme page</note>
+        <note>Sixth paragraph in the App on Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.1" xml:space="preserve">
-        <source>We regularly add features to the app. This requires some care, because we still want to maintain our focus on providing an optimal viewing experience. The app therefore explicitly does _not_ aim to replace existing websites, but instead provides links to these websites.</source>
-        <target>We regularly add features to the app. This requires some care, because we still want to maintain our focus on providing an optimal viewing experience. The app therefore explicitly does _not_ aim to replace existing websites, but instead provides links to these websites.</target>
+        <source>__Web sites__
+We regularly add features to the app. This requires some care, because we still want to maintain our focus on providing an optimal viewing experience. The app therefore explicitly does _not_ aim to replace existing websites, but instead provides links to these websites.</source>
+        <target>__Web sites__
+We regularly add features to the app. This requires some care, because we still want to maintain our focus on providing an optimal viewing experience. The app therefore explicitly does _not_ aim to replace existing websites, but instead provides links to these websites.</target>
         <note>First paragraph in The Features section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.2" xml:space="preserve">
-        <source>The app supports the Dutch and English ***languages***. iOS automatically selects a language based on your device’s language settings (_Settings &gt; General &gt; Language &amp; Region &gt; Preferred Language Order_). iOS also allows you to overrule this per app (_Settings &gt; Photo Club Waalre &gt; Language_).</source>
-        <target>The app supports the Dutch and English ***languages***. iOS automatically selects a language based on your device’s language settings (_Settings &gt; General &gt; Language &amp; Region &gt; Preferred Language Order_). iOS also allows you to overrule this per app (_Settings &gt; Photo Club Waalre &gt; Language_).</target>
+        <source>__Languages__
+The app supports English and Dutch. iOS automatically selects the app's language based on your device’s language settings (_Settings &gt; General &gt; Language &amp; Region &gt; Preferred Language Order_). iOS also allows you to overrule this choice per app (_Settings &gt; Photo Club Waalre &gt; Language_).</source>
+        <target>__Languages__
+The app supports English and Dutch. iOS automatically selects the app's language based on your device’s language settings (_Settings &gt; General &gt; Language &amp; Region &gt; Preferred Language Order_). iOS also allows you to overrule this choice per app (_Settings &gt; Photo Club Waalre &gt; Language_).</target>
         <note>Second paragraph in The Features section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.3" xml:space="preserve">
-        <source>On the Portfolio page, you can swipe to ***Delete*** a member from the list. Don't worry - if the person is still a club member, that person will reappear the next time the app synchronizes its local data with online data. This swiping can be useful to remove members who are no longer on the online data members lists. In any case, swipe as much as you like (after all, it just might be therapeutical).</source>
-        <target>On the Portfolio page, you can swipe to ***Delete*** a member from the list. Don't worry - if the person is still a club member, that person will reappear the next time the app synchronizes its local data with online data. This swiping can be useful to remove members who are no longer on the online data members lists. In any case, swipe as much as you like (after all, it just might be therapeutical).</target>
+        <source>__Deleting__
+On the Portfolio page, you can swipe to ***Delete*** a member from the list. Don't worry - if the person is still a club member, that person will reappear the next time the app synchronizes its local data with online data. This swiping can be useful to remove members who are no longer on the online data members lists. In any case, swipe as much as you like (after all, it just might be therapeutical).</source>
+        <target>__Deleting__
+On the Portfolio page, you can swipe to ***Delete*** a member from the list. Don't worry - if the person is still a club member, that person will reappear the next time the app synchronizes its local data with online data. This swiping can be useful to remove members who are no longer on the online data members lists. In any case, swipe as much as you like (after all, it just might be therapeutical).</target>
         <note>Third paragraph in The Features section of Readme page</note>
+      </trans-unit>
+      <trans-unit id="Paragraph_3.4" xml:space="preserve">
+        <source>__Roadmap__
+By clicking on the button below you can (anonymously) vote for improvements you would like in future versions of this app. You can vote once for any particular improvement. Try to vote for as few improvements as possible: voting for all features has the same impact as not voting at all.</source>
+        <target>__Roadmap__
+By clicking on the button below you can (anonymously) vote for improvements you would like in future versions of this app. You can vote once for any particular improvement. Try to vote for as few improvements as possible: voting for all features has the same impact as not voting at all.</target>
+        <note>Fourth paragraph in The Features section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_4.1" xml:space="preserve">
         <source>When the app opens, it shows a large image corresponding to the app’s icon. If you tap somewhere ***inside*** the image, it zooms out to show the full image representing how digital cameras see color.</source>
@@ -358,6 +371,16 @@ Field at top of Members page that allows the user to filter the members based on
         <target>To see names here, please enable additional categories on the Preferences page.</target>
         <note>Hint to the user if the database returns zero Members with unused Search filter.</note>
       </trans-unit>
+      <trans-unit id="Vote for features" xml:space="preserve">
+        <source>Vote for features</source>
+        <target>Vote for features</target>
+        <note>Button leading to Roadmap voting screen</note>
+      </trans-unit>
+      <trans-unit id="Vote on Roadmap Items" xml:space="preserve">
+        <source>Vote on Roadmap Items</source>
+        <target>Vote on Roadmap Items</target>
+        <note>Title of Roadmap screen</note>
+      </trans-unit>
       <trans-unit id="Warning: all member categories on the Preferences page are disabled. Please enable one or more options in Preferences." xml:space="preserve">
         <source>Warning: all member categories on the Preferences page are disabled. Please enable one or more options in Preferences.</source>
         <target>Warning: all member categories on the Preferences page are disabled. Please enable one or more options in Preferences.</target>
@@ -367,6 +390,16 @@ Field at top of Members page that allows the user to filter the members based on
         <source>Who's Who</source>
         <target>Who's Who</target>
         <note>Title of page with list of photographers</note>
+      </trans-unit>
+      <trans-unit id="You can vote below on which roadmap items you would like to see. Please read the entire list before voting: you cannot undo a vote. Don't waste your vote by voting for almost all items: this is about prioritization rather than liking." xml:space="preserve">
+        <source>You can vote below on which roadmap items you would like to see. Please read the entire list before voting: you cannot undo a vote. Don't waste your vote by voting for almost all items: this is about prioritization rather than liking.</source>
+        <target>You can vote below on which roadmap items you would like to see. Please read the entire list before voting: you cannot undo a vote. Don't waste your vote by voting for almost all items: this is about prioritization rather than liking.</target>
+        <note>Text at top of Roadmap screen</note>
+      </trans-unit>
+      <trans-unit id="[ more ]" xml:space="preserve">
+        <source>[ more ]</source>
+        <target>[ more ]</target>
+        <note>Instructions on Roadmap screen when text is truncated</note>
       </trans-unit>
       <trans-unit id="admin" xml:space="preserve">
         <source>admin</source>
