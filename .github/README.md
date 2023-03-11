@@ -98,7 +98,7 @@ site. We expect to change the name of the app now that the app has been redesign
 
 > The app showcases curated images made by members of photo clubs.
 
-Since release 2.3.0, the app shows images using the following 3-level hierarchy:
+Since release 2.3.0, the app organized images in the following 3-level hierarchy:
 
 * photo clubA (hosted on siteA)
   * portfolio1 for photographer1
