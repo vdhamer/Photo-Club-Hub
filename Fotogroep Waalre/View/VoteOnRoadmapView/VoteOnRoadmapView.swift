@@ -12,11 +12,11 @@ struct VoteOnRoadmapView: View {
     let configuration = RoadmapConfiguration(
                             roadmapJSONURL: URL(string: "https://simplejsoncms.com/api/vnlg2fq62s")!,
                             namespace: Bundle.main.bundleIdentifier,
-                            style: RoadmapStyle(icon: Image(systemName: "arrowtriangle.up.fill"),
+                            style: RoadmapStyle(icon: Image(systemName: "circle.square.fill"),
                                                 titleFont: RoadmapTemplate.standard.style.titleFont.italic(),
                                                 numberFont: RoadmapTemplate.standard.style.numberFont,
                                                 statusFont: RoadmapTemplate.standard.style.statusFont,
-                                                statusTintColor: lookupStatusTintColor,
+                                                statusTintColor: lookupStatusTintColor, // closure
                                                 cornerRadius: 10,
                                                 cellColor: RoadmapTemplate.standard.style.cellColor,
                                                 selectedColor: RoadmapTemplate.standard.style.selectedForegroundColor,
@@ -65,7 +65,7 @@ struct VoteOnRoadmapView: View {
     static func lookupStatusTintColor(string: String) -> Color {
         switch string.localizedLowercase {
         case "planned": return Color(.green)
-        case "?": return Color(.blue)
+        case "?": return Color(.yellow)
         default: return Color.secondary
         }
     }
