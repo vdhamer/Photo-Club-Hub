@@ -33,10 +33,10 @@ struct VoteOnRoadmapView: View {
         _isCollapsed = State(initialValue: UIDevice.isIPhone) // tricky to initialize an @State variable
         textFull = String(localized:
                           """
-                          You can vote below on which roadmap items you would like to see. \
-                          Please read the entire list before voting: you cannot undo a vote. \
-                          Don't waste your vote by voting for almost all items: \
-                          this is about prioritization rather than liking.
+                          You can vote here on which roadmap items you would like to see. \
+                          Please read the entire list before voting bacause you cannot undo a vote. \
+                          Don't vote for more than half the items: the data helps us \
+                          prioritize - this isn't about 'liking' individual features.
                           """,
                           comment: "Text at top of Roadmap screen")
         textCollapsed = textFull + " " + String(localized: "[ more ]",
@@ -55,6 +55,7 @@ struct VoteOnRoadmapView: View {
                 .italic()
                 .foregroundColor(.blue)
                 .padding(.horizontal)
+
                 RoadmapView(configuration: configuration)
             }
             .navigationTitle(title)
