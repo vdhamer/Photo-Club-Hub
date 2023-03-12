@@ -44,4 +44,12 @@ extension ShapeStyle where Self == Color {
     static var sliderColor: Color {
         Color("_SliderColor") // from asset catalog
     }
+
+    static var plannedColor: Color {
+        Color("_PlannedColor") // from asset catalog
+    }
+
+    static var unplannedColor: Color {
+        Color("_UnplannedColor") // from asset catalog
+    }
 }

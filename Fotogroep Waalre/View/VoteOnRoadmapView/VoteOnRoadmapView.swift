@@ -18,9 +18,9 @@ struct VoteOnRoadmapView: View {
                                                 statusFont: RoadmapTemplate.standard.style.statusFont,
                                                 statusTintColor: lookupStatusTintColor, // closure
                                                 cornerRadius: 10,
-                                                cellColor: RoadmapTemplate.standard.style.cellColor,
+                                                cellColor: RoadmapTemplate.standard.style.cellColor, // cell background
                                                 selectedColor: RoadmapTemplate.standard.style.selectedForegroundColor,
-                                                tint: RoadmapTemplate.standard.style.tintColor),
+                                                tint: RoadmapTemplate.standard.style.tintColor), // voting icon
                             shuffledOrder: true,
                             allowVotes: true,
                             allowSearching: false)
@@ -64,8 +64,8 @@ struct VoteOnRoadmapView: View {
 
     static func lookupStatusTintColor(string: String) -> Color {
         switch string.localizedLowercase {
-        case "planned": return Color(.green)
-        case "?": return Color(.yellow)
+        case "planned": return .plannedColor
+        case "?": return .unplannedColor
         default: return Color.secondary
         }
     }
