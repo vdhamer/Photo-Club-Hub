@@ -160,9 +160,9 @@ On the Portfolio page, you can swipe to ***Delete*** a member from the list. Don
       </trans-unit>
       <trans-unit id="Paragraph_3.4" xml:space="preserve">
         <source>__Roadmap__
-By clicking on the button below you can (anonymously) vote for improvements you would like in future versions of this app. You can vote once for any particular improvement. Try to vote for as few improvements as possible: voting for all features has the same impact as not voting at all.</source>
+By clicking on the above button you can (anonymously) vote for improvements you would like in future versions of this app. You can only vote once for any particular improvement.</source>
         <target>__Roadmap__
-By clicking on the button below you can (anonymously) vote for improvements you would like in future versions of this app. You can vote once for any particular improvement. Try to vote for as few improvements as possible: voting for all features has the same impact as not voting at all.</target>
+By clicking on the above button you can (anonymously) vote for improvements you would like in future versions of this app. You can only vote once for any particular improvement.</target>
         <note>Fourth paragraph in The Features section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_4.1" xml:space="preserve">
@@ -300,6 +300,11 @@ Title of page showing member portfolios</note>
         <target>Readme</target>
         <note>Title of Readme screen</note>
       </trans-unit>
+      <trans-unit id="Roadmap Items" xml:space="preserve">
+        <source>Roadmap Items</source>
+        <target>Roadmap Items</target>
+        <note>Title of Roadmap screen</note>
+      </trans-unit>
       <trans-unit id="Search names" xml:space="preserve">
         <source>Search names</source>
         <target>Search names</target>
@@ -371,15 +376,10 @@ Field at top of Members page that allows the user to filter the members based on
         <target>To see names here, please enable additional categories on the Preferences page.</target>
         <note>Hint to the user if the database returns zero Members with unused Search filter.</note>
       </trans-unit>
-      <trans-unit id="Vote for features" xml:space="preserve">
-        <source>Vote for features</source>
-        <target>Vote for features</target>
+      <trans-unit id="Vote on roadmap items" xml:space="preserve">
+        <source>Vote on roadmap items</source>
+        <target>Vote on roadmap items</target>
         <note>Button leading to Roadmap voting screen</note>
-      </trans-unit>
-      <trans-unit id="Vote on Roadmap Items" xml:space="preserve">
-        <source>Vote on Roadmap Items</source>
-        <target>Vote on Roadmap Items</target>
-        <note>Title of Roadmap screen</note>
       </trans-unit>
       <trans-unit id="Warning: all member categories on the Preferences page are disabled. Please enable one or more options in Preferences." xml:space="preserve">
         <source>Warning: all member categories on the Preferences page are disabled. Please enable one or more options in Preferences.</source>
@@ -391,15 +391,10 @@ Field at top of Members page that allows the user to filter the members based on
         <target>Who's Who</target>
         <note>Title of page with list of photographers</note>
       </trans-unit>
-      <trans-unit id="You can vote below on which roadmap items you would like to see. Please read the entire list before voting: you cannot undo a vote. Don't waste your vote by voting for almost all items: this is about prioritization rather than liking." xml:space="preserve">
-        <source>You can vote below on which roadmap items you would like to see. Please read the entire list before voting: you cannot undo a vote. Don't waste your vote by voting for almost all items: this is about prioritization rather than liking.</source>
-        <target>You can vote below on which roadmap items you would like to see. Please read the entire list before voting: you cannot undo a vote. Don't waste your vote by voting for almost all items: this is about prioritization rather than liking.</target>
+      <trans-unit id="You can vote here on roadmap items that you would like to see. Please read the entire list before voting bacause you cannot undo a vote. Don't vote for more than half the items: the data helps us prioritize (this isn't about &quot;liking&quot; individual items)." xml:space="preserve">
+        <source>You can vote here on roadmap items that you would like to see. Please read the entire list before voting bacause you cannot undo a vote. Don't vote for more than half the items: the data helps us prioritize (this isn't about "liking" individual items).</source>
+        <target>You can vote here on roadmap items that you would like to see. Please read the entire list before voting bacause you cannot undo a vote. Don't vote for more than half the items: the data helps us prioritize (this isn't about "liking" individual items).</target>
         <note>Text at top of Roadmap screen</note>
-      </trans-unit>
-      <trans-unit id="[ more ]" xml:space="preserve">
-        <source>[ more ]</source>
-        <target>[ more ]</target>
-        <note>Instructions on Roadmap screen when text is truncated</note>
       </trans-unit>
       <trans-unit id="admin" xml:space="preserve">
         <source>admin</source>
