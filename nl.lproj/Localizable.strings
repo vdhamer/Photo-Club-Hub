@@ -120,7 +120,7 @@ Default status of member within a club. Used in concatenations. */
 "Paragraph_3.3" = "__Wissen__\nDe gebruiker kan op de Portfolio pagina leden verwijderen door hun naam naar links te vegen. Dat verwijderen is slechts tijdelijk indien het lid nog op de online ledenlijst van de club staat: bij opnieuw synchroniseren komt de naam dan automatisch weer terug. Maar dit \"wegvegen\" kan nuttig zijn als bijvoorbeeld een kandidaat-lid vertrekt zonder lid te worden. Hiermee verwijder je iemand uit de locale database die niet meer voorkomt in de online ledenlijst. Als alternatief kan men ook de app verwijderen en opnieuw installeren.";
 
 /* Fourth paragraph in The Features section of Readme page */
-"Paragraph_3.4" = "__Roadmap__\nVia onderstaande knop kunt U (anoniem) stemmen op mogelijke toekomstige uitbreiding. U kan op meer dan één optie stemmen. Stemmen op vrijwel alle opties heeft echter weinig zin: op vrijwel alles stemmen geeft geen informatie wat U het hardst nodig hebt.";
+"Paragraph_3.4" = "__Roadmap__\nVia bovenstaande knop kunt U (anoniem) stemmen op mogelijke toekomstige uitbreiding. U kan op meer dan één optie stemmen.";
 
 /* First paragraph in Prelude section of Readme page */
 "Paragraph_4.1" = "Bij het opstarten van de app, wordt een grote versie van het logo van de app zichtbaar. Dit is een interactief speeltje. Door ***binnen het beeld*** te klikken zoomt het beeld langzaam uit tot en vierkante versie van bovenstaande foto.";
@@ -204,6 +204,9 @@ Title of page showing member portfolios */
 /* Title of Readme screen */
 "Readme" = "Over deze app";
 
+/* Title of Roadmap screen */
+"Roadmap Items" = "Mogelijke uitbreidingen";
+
 /* Field at top of Photographers page that allows the user to filter the photographers based on either given- and family name.
 Field at top of Members page that allows the user to filter the members based on either given- and family name. */
 "Search names" = "Zoek op naam";
@@ -259,11 +262,8 @@ Field at top of Members page that allows the user to filter the members based on
 /* Administrative role of member within a club. Used as part of concatenations. */
 "vice-chairman" = "vicevoorzitter";
 
-/* No comment provided by engineer. */
-"Vote for new features" = "Stem op mogelijke uitbreidingen";
-
-/* Title of Roadmap screen */
-"Vote on Roadmap Items" = "Stem op mogelijke uitbreidingen";
+/* Button leading to Roadmap voting screen */
+"Vote on roadmap items" = "Stem op app uitbreidingen";
 
 /* Hint to the user if all of the Preference toggles are disabled. */
 "Warning: all member categories on the Preferences page are disabled. Please enable one or more options in Preferences." = "Waarschuwing: op de Instellingen pagina staan alle soorten leden op “niet weergeven“. Hierdoor is deze lijst leeg.";
@@ -272,5 +272,5 @@ Field at top of Members page that allows the user to filter the members based on
 "Who's Who" = "Namenlijst";
 
 /* Text at top of Roadmap screen */
-"You can vote here on which roadmap items you would like to see. Please read the entire list first, and then vote: cannot withdraw a vote. Please vote for at most half of the items: the data helps us prioritize - this isn't about 'liking' the ideas." = "Stem hier op de nuttigste toekomstige veranderingen in deze app. Bekijk vóór het stemmen de gehele lijst: een afgegeven stem kan niet ingetrokken worden. Stem hooguit op de helfd van de voorstellen: het gaat ons om de prioriteit - het zijn dus geen 'likes'.";
+"You can vote here on roadmap items that you would like to see. Please read the entire list before voting bacause you cannot undo a vote. Don't vote for more than half the items: the data helps us prioritize (this isn't about \"liking\" individual items)." = "Stem hier op de nuttigste uitbreidingen in deze app. Bekijk vóór het stemmen de gehele lijst: een afgegeven stem kan niet ingetrokken worden. Stem hooguit op de helfd van de mogelijke uitbreidingen: het gaat ons om de prioriteit - het zijn dus geen \"likes\".";
 
