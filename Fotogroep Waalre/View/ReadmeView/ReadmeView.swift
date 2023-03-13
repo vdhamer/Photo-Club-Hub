@@ -110,8 +110,6 @@ struct ReadmeView: View {
                                     .buttonStyle(.borderedProminent)
                                     .buttonBorderShape(.roundedRectangle(radius: 10))
                                     .multilineTextAlignment(.center)
-//                                .scaleEffect(configuration.isPressed ? 1.2 : 1)
-//                                .animation(.easeOut(duration: 0.2), value: configuration.isPressed)
                                     .sheet(isPresented: $showingRoadmap, content: {
                                             VoteOnRoadmapView()
                                             // the detents don't do anything on an iPad
