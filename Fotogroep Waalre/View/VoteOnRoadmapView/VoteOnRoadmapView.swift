@@ -25,41 +25,26 @@ struct VoteOnRoadmapView: View {
                             shuffledOrder: true,
                             allowVotes: true,
                             allowSearching: false)
-    private let title = String(localized: "Vote on Roadmap Items", comment: "Title of Roadmap screen")
-    @State var isCollapsed: Bool = true // overwritten in init()
-    private var textFull = "" // overwritten in init()
-    private var textCollapsed = "" // overwritten in init()
-
-    init() {
-        _isCollapsed = State(initialValue: UIDevice.isIPhone) // tricky to initialize an @State variable
-        textFull = String(localized:
-                          """
-                          You can vote below on which roadmap items you would like to see. \
-                          Please read the entire list before voting: you cannot undo a vote. \
-                          Don't waste your vote by voting for almost all items: \
-                          this is about prioritization rather than liking.
-                          """,
-                          comment: "Text at top of Roadmap screen")
-        textCollapsed = textFull + " " + String(localized: "[ more ]",
-                                                comment: "At end of text on Roadmap screen when text is truncated")
-    }
+    private let title = String(localized: "Roadmap Items", comment: "Title of Roadmap screen")
+    private let buttonText = String(localized:
+                              """
+                              You can vote here on roadmap items that you would like to see. \
+                              Please read the entire list before voting bacause you cannot undo a vote. \
+                              Don't vote for more than half the items: the data helps us \
+                              prioritize (this isn't about \"liking\" individual items).
+                              """,
+                              comment: "Text at top of Roadmap screen")
 
     var body: some View {
         NavigationStack {
-            VStack {
-                Text(isCollapsed ? textCollapsed : textFull)
-                    .lineLimit(isCollapsed ? (UIDevice.isIPad ? 3 : 2) : 10) // don't waste non-scrolling iPhone space
-                    .truncationMode(.middle)
-                .onTapGesture {
-                    isCollapsed.toggle()
-                }
-                .italic()
-                .foregroundColor(.blue)
-                .padding(.horizontal)
-                RoadmapView(configuration: configuration)
-            }
-            .navigationTitle(title)
-            .navigationBarTitleDisplayMode(UIDevice.isIPhone ? .inline : .large)
+            RoadmapView(configuration: configuration, header: {
+                Text(buttonText)
+                    .italic()
+                    .font(.callout)
+                    .foregroundColor(.blue)
+            })
+                .navigationTitle(title)
+//                .navigationBarTitleDisplayMode(UIDevice.isIPhone ? .inline : .large)
         }
     }
 

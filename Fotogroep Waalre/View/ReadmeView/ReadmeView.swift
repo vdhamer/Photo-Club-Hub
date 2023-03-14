@@ -96,8 +96,6 @@ struct ReadmeView: View {
                                           comment: "Second paragraph in The Features section of Readme page", geo: geo)
                                 Paragraph("3.3",
                                           comment: "Third paragraph in The Features section of Readme page", geo: geo)
-                                Paragraph("3.4",
-                                          comment: "Fourth paragraph in The Features section of Readme page", geo: geo)
                             }
 
                             HStack {
@@ -105,8 +103,13 @@ struct ReadmeView: View {
                                 Button {
                                     showingRoadmap = true
                                 } label: {
-                                    Text("Vote for new features", comment: "Button leading to Roadmap voting screen")
+                                    Label(String(localized: "Vote on roadmap items",
+                                                 comment: "Button leading to Roadmap voting screen"),
+                                          systemImage: "circle.square.fill")
                                 }
+                                    .buttonStyle(.borderedProminent)
+                                    .buttonBorderShape(.roundedRectangle(radius: 10))
+                                    .multilineTextAlignment(.center)
                                     .sheet(isPresented: $showingRoadmap, content: {
                                             VoteOnRoadmapView()
                                             // the detents don't do anything on an iPad
@@ -115,6 +118,10 @@ struct ReadmeView: View {
                                     })
                                 Spacer()
                             }
+
+                            Paragraph("3.4",
+                                      comment: "Fourth paragraph in The Features section of Readme page",
+                                      geo: geo)
                         }
 
                         VStack {
@@ -211,17 +218,6 @@ struct ReadmeView: View {
 
                 } // ScrollView
                 .navigationTitle(title)
-                .navigationBarTitleDisplayMode(UIDevice.isIPhone ? .inline : .large)
-//                .toolbar {
-//                    ToolbarItemGroup(placement: ToolbarItemPlacement.confirmationAction) {
-//                        Button { // actual saving done in .onDisappear
-//                            dismiss()
-//                        } label: {
-//                            Text("Done",
-//                                 comment: "Button to close Info page.")
-//                        }
-//                    }
-//                }
             }
             .padding(.init(top: 0, leading: 0, bottom: 15, trailing: 0))
             .frame(minWidth: geo.size.width*0.2, idealWidth: geo.size.width*0.5, maxWidth: geo.size.width,

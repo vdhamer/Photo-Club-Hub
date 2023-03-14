@@ -160,9 +160,9 @@ De gebruiker kan op de Portfolio pagina leden verwijderen door hun naam naar lin
       </trans-unit>
       <trans-unit id="Paragraph_3.4" xml:space="preserve">
         <source>__Roadmap__
-By clicking on the button below you can (anonymously) vote for improvements you would like in future versions of this app. You can vote once for any particular improvement. Try to vote for as few improvements as possible: voting for all features has the same impact as not voting at all.</source>
+By clicking on the above button you can (anonymously) vote for improvements you would like in future versions of this app. You can only vote once for any particular improvement.</source>
         <target>__Roadmap__
-Via onderstaande knop kunt U (anoniem) stemmen op mogelijke toekomstige uitbreiding. U kan op meer dan één optie stemmen. Stemmen op vrijwel alle opties heeft echter weinig zin: op vrijwel alles stemmen geeft geen informatie wat U het hardst nodig hebt.</target>
+Via bovenstaande knop kunt U (anoniem) stemmen op mogelijke toekomstige uitbreiding. U kan op meer dan één optie stemmen.</target>
         <note>Fourth paragraph in The Features section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_4.1" xml:space="preserve">
@@ -302,6 +302,11 @@ Title of page showing member portfolios</note>
         <target>Over deze app</target>
         <note>Title of Readme screen</note>
       </trans-unit>
+      <trans-unit id="Roadmap Items" xml:space="preserve">
+        <source>Roadmap Items</source>
+        <target>Mogelijke uitbreidingen</target>
+        <note>Title of Roadmap screen</note>
+      </trans-unit>
       <trans-unit id="Search names" xml:space="preserve">
         <source>Search names</source>
         <target>Zoek op naam</target>
@@ -373,15 +378,10 @@ Field at top of Members page that allows the user to filter the members based on
         <target>Deze lijst is vermoedelijk leeg omdat er onvoldoende ledencategorieën geselecteerd zijn op het Instellingen scherm.</target>
         <note>Hint to the user if the database returns zero Members with unused Search filter.</note>
       </trans-unit>
-      <trans-unit id="Vote for features" xml:space="preserve">
-        <source>Vote for features</source>
-        <target>Stem op toekomstige uitbreidingen</target>
+      <trans-unit id="Vote on roadmap items" xml:space="preserve">
+        <source>Vote on roadmap items</source>
+        <target>Stem op app uitbreidingen</target>
         <note>Button leading to Roadmap voting screen</note>
-      </trans-unit>
-      <trans-unit id="Vote on Roadmap Items" xml:space="preserve">
-        <source>Vote on Roadmap Items</source>
-        <target>Stem op mogelijke uitbreidingen</target>
-        <note>Title of Roadmap screen</note>
       </trans-unit>
       <trans-unit id="Warning: all member categories on the Preferences page are disabled. Please enable one or more options in Preferences." xml:space="preserve">
         <source>Warning: all member categories on the Preferences page are disabled. Please enable one or more options in Preferences.</source>
@@ -393,14 +393,10 @@ Field at top of Members page that allows the user to filter the members based on
         <target>Namenlijst</target>
         <note>Title of page with list of photographers</note>
       </trans-unit>
-      <trans-unit id="You can vote below on which roadmap items you would like to see. Please read the entire list before voting: you cannot undo a vote. Don't waste your vote by voting for almost all items: this is about prioritization rather than liking." xml:space="preserve">
-        <source>You can vote below on which roadmap items you would like to see. Please read the entire list before voting: you cannot undo a vote. Don't waste your vote by voting for almost all items: this is about prioritization rather than liking.</source>
-        <target>Stem hier op de nuttigste toekomstige veranderingen in deze app. Bekijk voor het stemmen de lijst: een afgegeven stem kan niet ingetrokken worden. Stem niet op vrijwel alle opties: het gaat erom prioriteit aan te geven.</target>
+      <trans-unit id="You can vote here on roadmap items that you would like to see. Please read the entire list before voting bacause you cannot undo a vote. Don't vote for more than half the items: the data helps us prioritize (this isn't about &quot;liking&quot; individual items)." xml:space="preserve">
+        <source>You can vote here on roadmap items that you would like to see. Please read the entire list before voting bacause you cannot undo a vote. Don't vote for more than half the items: the data helps us prioritize (this isn't about "liking" individual items).</source>
+        <target>Stem hier op de nuttigste uitbreidingen in deze app. Bekijk vóór het stemmen de gehele lijst: een afgegeven stem kan niet ingetrokken worden. Stem hooguit op de helfd van de mogelijke uitbreidingen: het gaat ons om de prioriteit - het zijn dus geen "likes".</target>
         <note>Text at top of Roadmap screen</note>
-      </trans-unit>
-      <trans-unit id="[ more ]" xml:space="preserve">
-        <source>[ more ]</source>
-        <note>Instructions on Roadmap screen when text is truncated</note>
       </trans-unit>
       <trans-unit id="admin" xml:space="preserve">
         <source>admin</source>

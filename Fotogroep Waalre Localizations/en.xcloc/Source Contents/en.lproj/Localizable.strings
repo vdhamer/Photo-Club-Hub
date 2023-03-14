@@ -41,7 +41,7 @@
 "Paragraph_3.3" = "__Deleting__\nOn the Portfolio page, you can swipe to ***Delete*** a member from the list. Don't worry - if the person is still a club member, that person will reappear the next time the app synchronizes its local data with online data. This swiping can be useful to remove members who are no longer on the online data members lists. In any case, swipe as much as you like (after all, it just might be therapeutical).";
 
 /* Fourth paragraph in The Features section of Readme page */
-"Paragraph_3.4" = "__Roadmap__\nBy clicking on the button below you can (anonymously) vote for improvements you would like in future versions of this app. You can vote once for any particular improvement. Try to vote for as few improvements as possible: voting for all features has the same impact as not voting at all.";
+"Paragraph_3.4" = "__Roadmap__\nBy clicking on the above button you can (anonymously) vote for improvements you would like in future versions of this app. You can only vote once for any particular improvement.";
 
 /* First paragraph in Prelude section of Readme page */
 "Paragraph_4.1" = "When the app opens, it shows a large image corresponding to the app’s icon. If you tap somewhere ***inside*** the image, it zooms out to show the full image representing how digital cameras see color.";
