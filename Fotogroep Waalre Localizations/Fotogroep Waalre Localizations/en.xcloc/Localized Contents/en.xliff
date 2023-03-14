@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
+  <file original="en.lproj/Fotogroep-Waalre-InfoPlist.strings" source-language="en" target-language="en" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="14.2" build-num="14C18"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleDisplayName" xml:space="preserve">
+        <source>Photo Club Waalre</source>
+        <target>Photo Club Waalre</target>
+        <note>Bundle display name</note>
+      </trans-unit>
+      <trans-unit id="CFBundleName" xml:space="preserve">
+        <source>Photo Club Waalre</source>
+        <target>Photo Club Waalre</target>
+        <note>Bundle name</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="en.lproj/Localizable.strings" source-language="en" target-language="en" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="14.2" build-num="14C18"/>
+    </header>
+    <body>
+      <trans-unit id="%lld members (inc. ex-members)" xml:space="preserve">
+        <source>%lld members (inc. ex-members)</source>
+        <target>%lld members (inc. ex-members)</target>
+        <note>&lt;count&gt; members (including all types of members) within photo club</note>
+      </trans-unit>
+      <trans-unit id="%lld photographers" xml:space="preserve">
+        <source>%lld photographers</source>
+        <target>%lld photographers</target>
+        <note>Header of section of Who's Who screen</note>
+      </trans-unit>
+      <trans-unit id="App version %@ (build %@)" xml:space="preserve">
+        <source>App version %@ (build %@)</source>
+        <target>App version %@ (build %@)</target>
+        <note>Shown on Readme page.</note>
+      </trans-unit>
+      <trans-unit id="Apple" xml:space="preserve">
+        <source>Apple</source>
+        <target>Apple</target>
+        <note>Name of the fruit, not the company.</note>
+      </trans-unit>
+      <trans-unit id="Birthday:" xml:space="preserve">
+        <source>Birthday:</source>
+        <target>Birthday:</target>
+        <note>Birthday of member (without year). Date not currently localized?</note>
+      </trans-unit>
+      <trans-unit id="Data source: %@://%@%@/" xml:space="preserve">
+        <source>Data source: %@://%@%@/</source>
+        <target>Data source: %@://%@%@/</target>
+        <note>Section footer text Portfolios screen</note>
+      </trans-unit>
+      <trans-unit id="Data source: in-app member data." xml:space="preserve">
+        <source>Data source: in-app member data.</source>
+        <target>Data source: in-app member data.</target>
+        <note>Section footer text Portfolios screen</note>
+      </trans-unit>
+      <trans-unit id="Developers wanted" xml:space="preserve">
+        <source>Developers wanted</source>
+        <target>Developers wanted</target>
+        <note>Section title on Readme page</note>
+      </trans-unit>
+      <trans-unit id="Features and tips" xml:space="preserve">
+        <source>Features and tips</source>
+        <target>Features and tips</target>
+        <note>Section title on Readme page</note>
+      </trans-unit>
+      <trans-unit id="Fragment of the Swift source code" xml:space="preserve">
+        <source>Fragment of the Swift source code</source>
+        <target>Fragment of the Swift source code</target>
+        <note>Caption for image on Readme page</note>
+      </trans-unit>
+      <trans-unit id="Information about a photographer's links to a photo club can be found on the Portfolio page. This page contains club-independent information such as a link to the photographer's own photography website." xml:space="preserve">
+        <source>Information about a photographer's links to a photo club can be found on the Portfolio page. This page contains club-independent information such as a link to the photographer's own photography website.</source>
+        <target>Information about a photographer's links to a photo club can be found on the Portfolio page. This page contains club-independent information such as a link to the photographer's own photography website.</target>
+        <note>Shown in gray at the bottom of the Photographers page.</note>
+      </trans-unit>
+      <trans-unit id="List of supported languages" xml:space="preserve">
+        <source>List of supported languages</source>
+        <target>List of supported languages</target>
+        <note>Caption of Localizations image on Readme page</note>
+      </trans-unit>
+      <trans-unit id="Member categories" xml:space="preserve">
+        <source>Member categories</source>
+        <target>Member categories</target>
+        <note>In Settings, above toggles like "Show former members"</note>
+      </trans-unit>
+      <trans-unit id="One photographer" xml:space="preserve">
+        <source>One photographer</source>
+        <target>One photographer</target>
+        <note>Header of section of Who's Who screen</note>
+      </trans-unit>
+      <trans-unit id="Open Source" xml:space="preserve">
+        <source>Developers</source>
+        <target>Developers</target>
+        <note>Section title on Readme page.</note>
+      </trans-unit>
+      <trans-unit id="Paragraph_1.1" xml:space="preserve">
+        <source>Photo Club Waalre is a photography club named after Waalre, a town in the south of The Netherlands. Since 1988 its club members meet to critique each other’s photos, organize excursions, and hold yearly photo expositions.</source>
+        <target>Photo Club Waalre is a photography club named after Waalre, a town in the south of The Netherlands. Since 1988 its club members meet to critique each other’s photos, organize excursions, and hold yearly photo expositions.</target>
+        <note>First paragraph in The Club section of Readme page</note>
+      </trans-unit>
+      <trans-unit id="Paragraph_1.2" xml:space="preserve">
+        <source>Originally the app only supported Photo Club Waalre (aka _Fotogroep Waalre_), but the current version supports **multiple** photo clubs. At some point the app will get a new name.</source>
+        <target>Originally the app only supported Photo Club Waalre (aka _Fotogroep Waalre_), but the current version supports **multiple** photo clubs. At some point the app will get a new name.</target>
+        <note>Second paragraph in The Club section of Readme page</note>
+      </trans-unit>
+      <trans-unit id="Paragraph_2.1" xml:space="preserve">
+        <source>The goal of this app is to showcase curated work of members of photo clubs.</source>
+        <target>The goal of this app is to showcase curated work of members of photo clubs.</target>
+        <note>First paragraph in The App on Readme page</note>
+      </trans-unit>
+      <trans-unit id="Paragraph_2.2" xml:space="preserve">
+        <source>The work is organized into ***portfolios***. Each portfolio covers that part of a photographer's work that was shared within a photo club. If a photographer is (or was) a member of more than one of the supported photo clubs, the app will show _multiple_ portfolios for that photographer.</source>
+        <target>The work is organized into ***portfolios***. Each portfolio covers that part of a photographer's work that was shared within a photo club. If a photographer is (or was) a member of more than one of the supported photo clubs, the app will show _multiple_ portfolios for that photographer.</target>
+        <note>Second paragraph in The App on Readme page</note>
+      </trans-unit>
+      <trans-unit id="Paragraph_2.3" xml:space="preserve">
+        <source>Each portfolio is shown in chronological order, with the latest work shown first, and typical spans multiple years.</source>
+        <target>Each portfolio is shown in chronological order, with the latest work shown first, and typical spans multiple years.</target>
+        <note>Third paragraph in The App on Readme page</note>
+      </trans-unit>
+      <trans-unit id="Paragraph_2.4" xml:space="preserve">
+        <source>We try to show the portfolios with **minimal distraction**. Web sites are often less optimal for this because they need to show browser controls (e.g., an address bar or tabs) and serve multiple purposes (e.g., show club news or contact information).</source>
+        <target>We try to show the portfolios with **minimal distraction**. Web sites are often less optimal for this because they need to show browser controls (e.g., an address bar or tabs) and serve multiple purposes (e.g., show club news or contact information).</target>
+        <note>Fourth paragraph in The App on Readme page</note>
+      </trans-unit>
+      <trans-unit id="Paragraph_2.5" xml:space="preserve">
+        <source>For Photo Club Waalre, we chose to also include the work of former club members. By default, former members are not visible, but you can configure the app to show them.</source>
+        <target>For Photo Club Waalre, we chose to also include the work of former club members. By default, former members are not visible, but you can configure the app to show them.</target>
+        <note>Fifth paragraph in the App on Readme page</note>
+      </trans-unit>
+      <trans-unit id="Paragraph_2.6" xml:space="preserve">
+        <source>Contact us (github@vdhamer.com) if you are interested in adding support for your photo club.</source>
+        <target>Contact us (github@vdhamer.com) if you are interested in adding support for your photo club.</target>
+        <note>Sixth paragraph in the App on Readme page</note>
+      </trans-unit>
+      <trans-unit id="Paragraph_3.1" xml:space="preserve">
+        <source>__Web sites__
+We regularly add features to the app. This requires some care, because we still want to maintain our focus on providing an optimal viewing experience. The app therefore explicitly does _not_ aim to replace existing websites, but instead provides links to these websites.</source>
+        <target>__Web sites__
+We regularly add features to the app. This requires some care, because we still want to maintain our focus on providing an optimal viewing experience. The app therefore explicitly does _not_ aim to replace existing websites, but instead provides links to these websites.</target>
+        <note>First paragraph in The Features section of Readme page</note>
+      </trans-unit>
+      <trans-unit id="Paragraph_3.2" xml:space="preserve">
+        <source>__Languages__
+The app supports English and Dutch. iOS automatically selects the app's language based on your device’s language settings (_Settings &gt; General &gt; Language &amp; Region &gt; Preferred Language Order_). iOS also allows you to overrule this choice per app (_Settings &gt; Photo Club Waalre &gt; Language_).</source>
+        <target>__Languages__
+The app supports English and Dutch. iOS automatically selects the app's language based on your device’s language settings (_Settings &gt; General &gt; Language &amp; Region &gt; Preferred Language Order_). iOS also allows you to overrule this choice per app (_Settings &gt; Photo Club Waalre &gt; Language_).</target>
+        <note>Second paragraph in The Features section of Readme page</note>
+      </trans-unit>
+      <trans-unit id="Paragraph_3.3" xml:space="preserve">
+        <source>__Deleting__
+On the Portfolio page, you can swipe to ***Delete*** a member from the list. Don't worry - if the person is still a club member, that person will reappear the next time the app synchronizes its local data with online data. This swiping can be useful to remove members who are no longer on the online data members lists. In any case, swipe as much as you like (after all, it just might be therapeutical).</source>
+        <target>__Deleting__
+On the Portfolio page, you can swipe to ***Delete*** a member from the list. Don't worry - if the person is still a club member, that person will reappear the next time the app synchronizes its local data with online data. This swiping can be useful to remove members who are no longer on the online data members lists. In any case, swipe as much as you like (after all, it just might be therapeutical).</target>
+        <note>Third paragraph in The Features section of Readme page</note>
+      </trans-unit>
+      <trans-unit id="Paragraph_3.4" xml:space="preserve">
+        <source>__Roadmap__
+By clicking on the above button you can (anonymously) vote for improvements you would like in future versions of this app. You can only vote once for any particular improvement.</source>
+        <target>__Roadmap__
+By clicking on the above button you can (anonymously) vote for improvements you would like in future versions of this app. You can only vote once for any particular improvement.</target>
+        <note>Fourth paragraph in The Features section of Readme page</note>
+      </trans-unit>
+      <trans-unit id="Paragraph_4.1" xml:space="preserve">
+        <source>When the app opens, it shows a large image corresponding to the app’s icon. If you tap somewhere ***inside*** the image, it zooms out to show the full image representing how digital cameras see color.</source>
+        <target>When the app opens, it shows a large image corresponding to the app’s icon. If you tap somewhere ***inside*** the image, it zooms out to show the full image representing how digital cameras see color.</target>
+        <note>First paragraph in Prelude section of Readme page</note>
+      </trans-unit>
+      <trans-unit id="Paragraph_4.2" xml:space="preserve">
+        <source>This involves a [Bayer color filter array](https://en.wikipedia.org/wiki/Bayer_filter) that filters the light per pixel. The filter array is shown here superimposed on a colorful photo.</source>
+        <target>This involves a [Bayer color filter array](https://en.wikipedia.org/wiki/Bayer_filter) that filters the light per pixel. The filter array is shown here superimposed on a colorful photo.</target>
+        <note>Second paragraph in Prelude section of Readme page</note>
+      </trans-unit>
+      <trans-unit id="Paragraph_4.3" xml:space="preserve">
+        <source>Tapping ***inside*** the image allows you to zoom in or out to your heart's content. Tapping ***outside*** the image area ends the animation. You can trigger the animation again by restarting the app. A single tap ***outside*** the image allows you to skip the animation entirely.</source>
+        <target>Tapping ***inside*** the image allows you to zoom in or out to your heart's content. Tapping ***outside*** the image area ends the animation. You can trigger the animation again by restarting the app. A single tap ***outside*** the image allows you to skip the animation entirely.</target>
+        <note>Third paragraph in Prelude section of Readme page</note>
+      </trans-unit>
+      <trans-unit id="Paragraph_5.1" xml:space="preserve">
+        <source>The app runs on iPhone and iPad and requires iOS 15.5 or higher. iOS users tend to upgrade to the latest possible iOS version, which means that the app supports devices made in the last 5 or 6 years. The app also runs on the new generation of Macs with “Apple Silicon”.</source>
+        <target>The app runs on iPhone and iPad and requires iOS 15.5 or higher. iOS users tend to upgrade to the latest possible iOS version, which means that the app supports devices made in the last 5 or 6 years. The app also runs on the new generation of Macs with “Apple Silicon”.</target>
+        <note>First paragraph SupportedPlatforms section of Readme page</note>
+      </trans-unit>
+      <trans-unit id="Paragraph_5.2" xml:space="preserve">
+        <source>The app uses various Apple software technologies including Swift (a programming language), SwiftUI (a user interface framework), Core Data (local data storage), Metal (graphics acceleration), concurrency (for fetching data), and animations.</source>
+        <target>The app uses various Apple software technologies including Swift (a programming language), SwiftUI (a user interface framework), Core Data (local data storage), Metal (graphics acceleration), concurrency (for fetching data), and animations.</target>
+        <note>Second paragraph SupportedPlatforms section of Readme page</note>
+      </trans-unit>
+      <trans-unit id="Paragraph_5.3" xml:space="preserve">
+        <source>The benefit of an iOS focus is that it allows the developers to focus on functionality rather than cross-platform and cross-version interoperability issues.</source>
+        <target>The benefit of an iOS focus is that it allows the developers to focus on functionality rather than cross-platform and cross-version interoperability issues.</target>
+        <note>Third paragraph SupportedPlatforms section of Readme page</note>
+      </trans-unit>
+      <trans-unit id="Paragraph_5.4" xml:space="preserve">
+        <source>The drawback, however, is the lack of Android support, because the Android universe has its own set of software technologies. Apps that choose to support multiple platforms require more development effort and often contain more technical compromises.</source>
+        <target>The drawback, however, is the lack of Android support, because the Android universe has its own set of software technologies. Apps that choose to support multiple platforms require more development effort and often contain more technical compromises.</target>
+        <note>Fourth paragraph SupportedPlatforms section of Readme page</note>
+      </trans-unit>
+      <trans-unit id="Paragraph_5.5" xml:space="preserve">
+        <source>There is another perspective on not targeting Android anytime soon: it implies the app cannot contain any essentially functionality for which there is no alternative. So, again, the app cannot replace a club's website.</source>
+        <target>There is another perspective on not targeting Android anytime soon: it implies the app cannot contain any essentially functionality for which there is no alternative. So, again, the app cannot replace a club's website.</target>
+        <note>Fifth paragraph SupportedPlatforms section of Readme page</note>
+      </trans-unit>
+      <trans-unit id="Paragraph_5.6" xml:space="preserve">
+        <source>To put the app's device support into perspective, consider the top-6 software environments. The top-6 platforms are, in [largest-first order](https://www.youtube.com/watch?v=7S9PBgS8HS8): web, Android, Windows, iOS, iPadOS, and MacOS. MacOS's market share is the smallest of the six but is still larger than all smaller platforms combined. Only the very largest apps (like MS Word, Twitter, Minecraft, Chrome) manage to cover the full range. But many well-known apps choose to focus their resources: Photoshop (Windows, MacOS, iPadOS), WhatsApp (iOS, Android, web - kind of), Pokémon Go (Android, iOS, iPadOS - kind of). So, covering three of the top-six is a decent enough score for now.</source>
+        <target>To put the app's device support into perspective, consider the top-6 software environments. The top-6 platforms are, in [largest-first order](https://www.youtube.com/watch?v=7S9PBgS8HS8): web, Android, Windows, iOS, iPadOS, and MacOS. MacOS's market share is the smallest of the six but is still larger than all smaller platforms combined. Only the very largest apps (like MS Word, Twitter, Minecraft, Chrome) manage to cover the full range. But many well-known apps choose to focus their resources: Photoshop (Windows, MacOS, iPadOS), WhatsApp (iOS, Android, web - kind of), Pokémon Go (Android, iOS, iPadOS - kind of). So, covering three of the top-six is a decent enough score for now.</target>
+        <note>Sixth paragraph SupportedPlatforms section of Readme page</note>
+      </trans-unit>
+      <trans-unit id="Paragraph_6.1" xml:space="preserve">
+        <source>You can find this app on GitHub. This allows other software developers to contribute. Getting more developers speeds things up somewhat, but also gives fresh ideas and promotes continuity.</source>
+        <target>You can find this app on GitHub. This allows other software developers to contribute. Getting more developers speeds things up somewhat, but also gives fresh ideas and promotes continuity.</target>
+        <note>First paragraph Developers section of Readme page</note>
+      </trans-unit>
+      <trans-unit id="Paragraph_6.2" xml:space="preserve">
+        <source>Welcome contributions include adding features, code improvements, ideas on architecture and interface definition, and possibly even a backend.</source>
+        <target>Welcome contributions include adding features, code improvements, ideas on architecture and interface definition, and possibly even a backend.</target>
+        <note>Second paragraph Developers section of Readme page</note>
+      </trans-unit>
+      <trans-unit id="Paragraph_6.3" xml:space="preserve">
+        <source>Contributions that don't require coding are also very welcome: beta testing via TestFlight, feature requests, translations, SVG icons, sound effects, and maybe UI/UX design.</source>
+        <target>Contributions that don't require coding are also very welcome: beta testing via TestFlight, feature requests, translations, SVG icons, sound effects, and maybe UI/UX design.</target>
+        <note>Third paragraph Developers section of Readme page</note>
+      </trans-unit>
+      <trans-unit id="Paragraph_6.4" xml:space="preserve">
+        <source>A central design challenge for a next stage will be to provide a clean, standardized interface to retrieve data per photo club. The interface is needed to load the data, but also keeps the data within the app up to date. After all, membership data and portfolios change regularly. The current interface is essentially a plug-in design with an adaptor per photo club. This needs to be replaced by a standard data interface to avoid having to extend the source code whenever a new club comes aboard.</source>
+        <target>A central design challenge for a next stage will be to provide a clean, standardized interface to retrieve data per photo club. The interface is needed to load the data, but also keeps the data within the app up to date. After all, membership data and portfolios change regularly. The current interface is essentially a plug-in design with an adaptor per photo club. This needs to be replaced by a standard data interface to avoid having to extend the source code whenever a new club comes aboard.</target>
+        <note>Fourth paragraph Developers section of Readme page</note>
+      </trans-unit>
+      <trans-unit id="Paragraph_6.5" xml:space="preserve">
+        <source>The app currently uses a software module per club. That module loads membership and portfolio data from the club’s server and merges it into the in-app database. For Photo Club Waalre, the membership data is read from a HTML table on a password protected part of the club’s [website](https://www.FotogroepWaalre.nl). The portfolios use a somewhat more robust solution: they are read from XML files generated by a Lightroom Web plug-in called [JuiceBox-Pro](https://www.juicebox.net/tour/). Thus portfolios are created and managed as Lightroom *collections*. These collections are then uploaded to the webserver with a single _Upload_ click (thus triggering JuiceBox-Pro) where they can be downloaded by the app.</source>
+        <target>The app currently uses a software module per club. That module loads membership and portfolio data from the club’s server and merges it into the in-app database. For Photo Club Waalre, the membership data is read from a HTML table on a password protected part of the club’s [website](https://www.FotogroepWaalre.nl). The portfolios use a somewhat more robust solution: they are read from XML files generated by a Lightroom Web plug-in called [JuiceBox-Pro](https://www.juicebox.net/tour/). Thus portfolios are created and managed as Lightroom *collections*. These collections are then uploaded to the webserver with a single _Upload_ click (thus triggering JuiceBox-Pro) where they can be downloaded by the app.</target>
+        <note>Fifth paragraph Developers section of Readme page</note>
+      </trans-unit>
+      <trans-unit id="Paragraph_6.6" xml:space="preserve">
+        <source>Software developers or other volunteers who are willing to help can contact us via github@vdhamer.com. Regarding the required level of development experience: you should be good to go if you have created a complete SwiftUI app before. Alternatively, an experienced developer who is learning SwiftUI would also fit the bill. Recommended courses for learning SwiftUI are Hacking with Swift's practical [100 days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/) or Stanford's fast paced and more academic online [CS193p course](https://cs193p.sites.stanford.edu).</source>
+        <target>Software developers or other volunteers who are willing to help can contact us via github@vdhamer.com. Regarding the required level of development experience: you should be good to go if you have created a complete SwiftUI app before. Alternatively, an experienced developer who is learning SwiftUI would also fit the bill. Recommended courses for learning SwiftUI are Hacking with Swift's practical [100 days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/) or Stanford's fast paced and more academic online [CS193p course](https://cs193p.sites.stanford.edu).</target>
+        <note>Sixth paragraph Developers section of Readme page</note>
+      </trans-unit>
+      <trans-unit id="Paragraph_7.1" xml:space="preserve">
+        <source>As an intro for developers, here is an informal tour of the ***model***. The model is a [schema](https://en.wikipedia.org/wiki/Database_schema) or information model in the database sense, or “Model“ in the sense of the [Model-View-ViewModel](https://www.hackingwithswift.com/books/ios-swiftui/introducing-mvvm-into-your-swiftui-project) design pattern. The app uses a Swift-style MVVM design, meaning model data is stored in structs rather than in classes.</source>
+        <target>As an intro for developers, here is an informal tour of the ***model***. The model is a [schema](https://en.wikipedia.org/wiki/Database_schema) or information model in the database sense, or “Model“ in the sense of the [Model-View-ViewModel](https://www.hackingwithswift.com/books/ios-swiftui/introducing-mvvm-into-your-swiftui-project) design pattern. The app uses a Swift-style MVVM design, meaning model data is stored in structs rather than in classes.</target>
+        <note>First paragraph Model section of Readme page</note>
+      </trans-unit>
+      <trans-unit id="Paragraph_7.2" xml:space="preserve">
+        <source>The model: every **PhotoClub** has **Members** of various types (current, former, etc.), while some Members have a formal role like chairman within the PhotoClub. Some of **Photographer**'s data (like name and birthday) are unrelated to being a Member of a PhotoClub. **Portfolios** represent the body of work of a Photographer in the context of a PhotoClub. A Portfolio contains **Images**, but an Image could be in multiple Portfolios depending on where the Image was shared. Member and Portfolio can technically be considered synonyms from a modeling perspective: we create exactly one Portfolio for each PhotoClub that a Photographer joined. They are thus a single table in the database.</source>
+        <target>The model: every **PhotoClub** has **Members** of various types (current, former, etc.), while some Members have a formal role like chairman within the PhotoClub. Some of **Photographer**'s data (like name and birthday) are unrelated to being a Member of a PhotoClub. **Portfolios** represent the body of work of a Photographer in the context of a PhotoClub. A Portfolio contains **Images**, but an Image could be in multiple Portfolios depending on where the Image was shared. Member and Portfolio can technically be considered synonyms from a modeling perspective: we create exactly one Portfolio for each PhotoClub that a Photographer joined. They are thus a single table in the database.</target>
+        <note>Second paragraph Model section of Readme page</note>
+      </trans-unit>
+      <trans-unit id="Partial model" xml:space="preserve">
+        <source>Partial model</source>
+        <target>Partial model</target>
+        <note>Caption for image on Readme page</note>
+      </trans-unit>
+      <trans-unit id="Phone:" xml:space="preserve">
+        <source>Phone:</source>
+        <target>Phone:</target>
+        <note>Telephone number (usually invisible)</note>
+      </trans-unit>
+      <trans-unit id="Photo Club Waalre" xml:space="preserve">
+        <source>Photo Club Waalre</source>
+        <target>Photo Club Waalre</target>
+        <note>Title used in PhotoClubs View</note>
+      </trans-unit>
+      <trans-unit id="Photo Clubs" xml:space="preserve">
+        <source>Photo Clubs</source>
+        <target>Photo Clubs</target>
+        <note>Title of page with clubs and maps</note>
+      </trans-unit>
+      <trans-unit id="PhotoClubs_Caption" xml:space="preserve">
+        <source>① You can unlock/lock a map's scrolling and panning features using the Lock icon.
+② To add extra photo clubs for testing purposes, drag down and release the top of the page.
+③ An individiual photo club can be deleted by first deleting (swipe left) all linked Portfolios on the Portfolio page, and then deleting (swipe left) the photo club itself on this page.</source>
+        <target>① You can unlock/lock a map's scrolling and panning features using the Lock icon.
+② To add extra photo clubs for testing purposes, drag down and release the top of the page.
+③ An individiual photo club can be deleted by first deleting (swipe left) all linked Portfolios on the Portfolio page, and then deleting (swipe left) the photo club itself on this page.</target>
+        <note>Shown in gray at the bottom of the Photo Club page.</note>
+      </trans-unit>
+      <trans-unit id="Portfolios" xml:space="preserve">
+        <source>Portfolios</source>
+        <target>Portfolios</target>
+        <note>Section title on Readme page
+Title of page showing member portfolios</note>
+      </trans-unit>
+      <trans-unit id="Preferences" xml:space="preserve">
+        <source>Preferences</source>
+        <target>Preferences</target>
+        <note>Title of screen with toggles to adjust preferences</note>
+      </trans-unit>
+      <trans-unit id="Prelude" xml:space="preserve">
+        <source>Prelude</source>
+        <target>Prelude</target>
+        <note>Title of the opening animation screen</note>
+      </trans-unit>
+      <trans-unit id="Readme" xml:space="preserve">
+        <source>Readme</source>
+        <target>Readme</target>
+        <note>Title of Readme screen</note>
+      </trans-unit>
+      <trans-unit id="Roadmap Items" xml:space="preserve">
+        <source>Roadmap Items</source>
+        <target>Roadmap Items</target>
+        <note>Title of Roadmap screen</note>
+      </trans-unit>
+      <trans-unit id="Search names" xml:space="preserve">
+        <source>Search names</source>
+        <target>Search names</target>
+        <note>Field at top of Photographers page that allows the user to filter the photographers based on either given- and family name.
+Field at top of Members page that allows the user to filter the members based on either given- and family name.</note>
+      </trans-unit>
+      <trans-unit id="Show aspiring members" xml:space="preserve">
+        <source>Show aspiring members</source>
+        <target>Show aspiring members</target>
+        <note>Label of toggle in Settings</note>
+      </trans-unit>
+      <trans-unit id="Show club officers" xml:space="preserve">
+        <source>Show club officers</source>
+        <target>Show club officers</target>
+        <note>Label of toggle in Settings</note>
+      </trans-unit>
+      <trans-unit id="Show current members" xml:space="preserve">
+        <source>Show current members</source>
+        <target>Show current members</target>
+        <note>Label of toggle in Settings</note>
+      </trans-unit>
+      <trans-unit id="Show deceased members" xml:space="preserve">
+        <source>Show deceased members</source>
+        <target>Show deceased members</target>
+        <note>Label of toggle in Settings</note>
+      </trans-unit>
+      <trans-unit id="Show external coaches" xml:space="preserve">
+        <source>Show external coaches</source>
+        <target>Show external coaches</target>
+        <note>Label of toggle in Settings</note>
+      </trans-unit>
+      <trans-unit id="Show former members" xml:space="preserve">
+        <source>Show former members</source>
+        <target>Show former members</target>
+        <note>Label of toggle in Settings</note>
+      </trans-unit>
+      <trans-unit id="Show honorary members" xml:space="preserve">
+        <source>Show honorary members</source>
+        <target>Show honorary members</target>
+        <note>Label of toggle in Settings</note>
+      </trans-unit>
+      <trans-unit id="Supported Platforms" xml:space="preserve">
+        <source>iOS, iPadOS, MacOS</source>
+        <target>iOS, iPadOS, MacOS</target>
+        <note>Section title on Readme page.</note>
+      </trans-unit>
+      <trans-unit id="The Club" xml:space="preserve">
+        <source>The Club</source>
+        <target>The Club</target>
+        <note>Section title on Readme page</note>
+      </trans-unit>
+      <trans-unit id="The Model" xml:space="preserve">
+        <source>The Model</source>
+        <target>The Model</target>
+        <note>Section title on Readme page</note>
+      </trans-unit>
+      <trans-unit id="The Prelude" xml:space="preserve">
+        <source>The Prelude</source>
+        <target>The Prelude</target>
+        <note>Section title on Readme page</note>
+      </trans-unit>
+      <trans-unit id="To see names here, please adapt the Search filter or enable additional categories on the Preferences page." xml:space="preserve">
+        <source>To see names here, please adapt the Search filter or enable additional categories on the Preferences page.</source>
+        <target>To see names here, please adapt the Search filter or enable additional categories on the Preferences page.</target>
+        <note>Hint to the user if the database returns zero Members with Search filter in use.</note>
+      </trans-unit>
+      <trans-unit id="To see names here, please enable additional categories on the Preferences page." xml:space="preserve">
+        <source>To see names here, please enable additional categories on the Preferences page.</source>
+        <target>To see names here, please enable additional categories on the Preferences page.</target>
+        <note>Hint to the user if the database returns zero Members with unused Search filter.</note>
+      </trans-unit>
+      <trans-unit id="Vote on roadmap items" xml:space="preserve">
+        <source>Vote on roadmap items</source>
+        <target>Vote on roadmap items</target>
+        <note>Button leading to Roadmap voting screen</note>
+      </trans-unit>
+      <trans-unit id="Warning: all member categories on the Preferences page are disabled. Please enable one or more options in Preferences." xml:space="preserve">
+        <source>Warning: all member categories on the Preferences page are disabled. Please enable one or more options in Preferences.</source>
+        <target>Warning: all member categories on the Preferences page are disabled. Please enable one or more options in Preferences.</target>
+        <note>Hint to the user if all of the Preference toggles are disabled.</note>
+      </trans-unit>
+      <trans-unit id="Who's Who" xml:space="preserve">
+        <source>Who's Who</source>
+        <target>Who's Who</target>
+        <note>Title of page with list of photographers</note>
+      </trans-unit>
+      <trans-unit id="You can vote here on roadmap items that you would like to see. Please read the entire list before voting bacause you cannot undo a vote. Don't vote for more than half the items: the data helps us prioritize (this isn't about &quot;liking&quot; individual items)." xml:space="preserve">
+        <source>You can vote here on roadmap items that you would like to see. Please read the entire list before voting bacause you cannot undo a vote. Don't vote for more than half the items: the data helps us prioritize (this isn't about "liking" individual items).</source>
+        <target>You can vote here on roadmap items that you would like to see. Please read the entire list before voting bacause you cannot undo a vote. Don't vote for more than half the items: the data helps us prioritize (this isn't about "liking" individual items).</target>
+        <note>Text at top of Roadmap screen</note>
+      </trans-unit>
+      <trans-unit id="admin" xml:space="preserve">
+        <source>admin</source>
+        <target>admin</target>
+        <note>Administrative role of member within a club. Used as part of concatenations.</note>
+      </trans-unit>
+      <trans-unit id="and" xml:space="preserve">
+        <source>and</source>
+        <target>and</target>
+        <note>To generate strings like "secretary and admin"</note>
+      </trans-unit>
+      <trans-unit id="chairman" xml:space="preserve">
+        <source>chairman</source>
+        <target>chairman</target>
+        <note>Administrative role of member within a club. Used as part of concatenations.</note>
+      </trans-unit>
+      <trans-unit id="deceased" xml:space="preserve">
+        <source>deceased</source>
+        <target>deceased</target>
+        <note>Relationship status of member within a club. Used as prefix.</note>
+      </trans-unit>
+      <trans-unit id="external coach" xml:space="preserve">
+        <source>external coach</source>
+        <target>external coach</target>
+        <note>Relationship status of member within a club. Used in concatenations.</note>
+      </trans-unit>
+      <trans-unit id="former" xml:space="preserve">
+        <source>former</source>
+        <target>former</target>
+        <note>Relationship status of member within a club. Used as prefex.</note>
+      </trans-unit>
+      <trans-unit id="frameSize = [%@,%@]" xml:space="preserve">
+        <source>frameSize = [%@,%@]</source>
+        <target>frameSize = [%@,%@]</target>
+        <note>Used in DebugPanel. I couldn't avoid localization here. Just use original as translation</note>
+      </trans-unit>
+      <trans-unit id="honorary member" xml:space="preserve">
+        <source>honorary member</source>
+        <target>honorary member</target>
+        <note>Relationship status of member within a club. Used in concatenations.</note>
+      </trans-unit>
+      <trans-unit id="member" xml:space="preserve">
+        <source>member</source>
+        <target>member</target>
+        <note>Statistics at end of section of FilteredMemberPortfoliosView
+Default status of member within a club. Used in concatenations.</note>
+      </trans-unit>
+      <trans-unit id="members" xml:space="preserve">
+        <source>members</source>
+        <target>members</target>
+        <note>Statistics at end of section of FilteredMemberPortfoliosView</note>
+      </trans-unit>
+      <trans-unit id="of1" xml:space="preserve">
+        <source>of</source>
+        <target>of</target>
+        <note>X of Y portfolio(s) shown (due to various forms of filtering)</note>
+      </trans-unit>
+      <trans-unit id="of2" xml:space="preserve">
+        <source>of</source>
+        <target>of</target>
+        <note>&lt;person&gt; of &lt;photo club&gt;</note>
+      </trans-unit>
+      <trans-unit id="prospective member" xml:space="preserve">
+        <source>prospective member</source>
+        <target>prospective member</target>
+        <note>Relationship status of member within a club. Used in concatenations.</note>
+      </trans-unit>
+      <trans-unit id="secretary" xml:space="preserve">
+        <source>secretary</source>
+        <target>secretary</target>
+        <note>Administrative role of member within a club. Used as part of concatenations.</note>
+      </trans-unit>
+      <trans-unit id="shown" xml:space="preserve">
+        <source>shown</source>
+        <target>shown</target>
+        <note>X member(s) shown (due to various forms of filtering)</note>
+      </trans-unit>
+      <trans-unit id="treasurer" xml:space="preserve">
+        <source>treasurer</source>
+        <target>treasurer</target>
+        <note>Administrative role of member within a club. Used as part of concatenations.</note>
+      </trans-unit>
+      <trans-unit id="vice-chairman" xml:space="preserve">
+        <source>vice-chairman</source>
+        <target>vice-chairman</target>
+        <note>Administrative role of member within a club. Used as part of concatenations.</note>
+      </trans-unit>
+      <trans-unit id="“Current members” includes “club officers”" xml:space="preserve">
+        <source>“Current members” includes “club officers”</source>
+        <target>“Current members” includes “club officers”</target>
+        <note>Shown when "Show club officers" entry is missing in Settings</note>
+      </trans-unit>
+      <trans-unit id="“Former members” includes “deceased members”" xml:space="preserve">
+        <source>“Former members” includes “deceased members”</source>
+        <target>“Former members” includes “deceased members”</target>
+        <note>Shown when "Show deceased members" entry is missing in Settings</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="Settings.bundle/en.lproj/Root.strings" source-language="en" target-language="en" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="14.2" build-num="14C18"/>
+    </header>
+    <body>
+      <trans-unit id="About" xml:space="preserve">
+        <source>About</source>
+        <target>About</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Copyright" xml:space="preserve">
+        <source>Copyright</source>
+        <target>Copyright</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Version" xml:space="preserve">
+        <source>Version</source>
+        <target>Version</target>
+        <note/>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
