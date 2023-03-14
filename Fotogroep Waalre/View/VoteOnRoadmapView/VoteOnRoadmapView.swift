@@ -9,10 +9,11 @@ import SwiftUI
 import Roadmap
 
 struct VoteOnRoadmapView: View {
+
     let configuration = RoadmapConfiguration(
                             // could use an external URL(string: "https://simplejsoncms.com/api/vnlg2fq62s")!,
                             roadmapJSONURL: Bundle.main.url(forResource: "Roadmap", withExtension: "json")!,
-                            namespace: Bundle.main.bundleIdentifier,
+                            voter: CustomVoter(namespace: Bundle.main.bundleIdentifier!),
                             style: RoadmapStyle(icon: Image(systemName: "circle.square.fill"),
                                                 titleFont: RoadmapTemplate.standard.style.titleFont.italic(),
                                                 numberFont: RoadmapTemplate.standard.style.numberFont,
@@ -25,6 +26,7 @@ struct VoteOnRoadmapView: View {
                             shuffledOrder: true,
                             allowVotes: true,
                             allowSearching: false)
+
     private let title = String(localized: "Roadmap Items", comment: "Title of Roadmap screen")
     private let buttonText = String(localized:
                               """
@@ -44,7 +46,6 @@ struct VoteOnRoadmapView: View {
                     .foregroundColor(.blue)
             })
                 .navigationTitle(title)
-//                .navigationBarTitleDisplayMode(UIDevice.isIPhone ? .inline : .large)
         }
     }
 
@@ -54,6 +55,25 @@ struct VoteOnRoadmapView: View {
         case "?": return .unplannedColor
         default: return Color.secondary
         }
+    }
+
+}
+
+// CustomVoter is a wrapper around the default voter used by the Roadmap package
+private struct CustomVoter: FeatureVoter {
+
+    private let defaultVoter: FeatureVoterCountAPI
+
+    init(namespace: String) {
+        defaultVoter = FeatureVoterCountAPI(namespace: namespace)
+    }
+
+    func fetch(for feature: Roadmap.RoadmapFeature) async -> Int {
+        await defaultVoter.fetch(for: feature)
+    }
+
+    func vote(for feature: Roadmap.RoadmapFeature) async -> Int? {
+        await defaultVoter.vote(for: feature)
     }
 
 }
