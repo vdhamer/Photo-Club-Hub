@@ -10,7 +10,8 @@ import Roadmap
 
 struct VoteOnRoadmapView: View {
     let configuration = RoadmapConfiguration(
-                            roadmapJSONURL: URL(string: "https://simplejsoncms.com/api/vnlg2fq62s")!,
+                            // could use an external URL(string: "https://simplejsoncms.com/api/vnlg2fq62s")!,
+                            roadmapJSONURL: Bundle.main.url(forResource: "Roadmap", withExtension: "json")!,
                             namespace: Bundle.main.bundleIdentifier,
                             style: RoadmapStyle(icon: Image(systemName: "circle.square.fill"),
                                                 titleFont: RoadmapTemplate.standard.style.titleFont.italic(),
