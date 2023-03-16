@@ -13,7 +13,7 @@ struct ReadmeView: View {
     private let title = String(localized: "Readme", comment: "Title of Readme screen")
     @Environment(\.dismiss) var dismiss: DismissAction // \.dismiss requires iOS 15
     @State private var showingRoadmap = false // controls visibility of Settings screen
-    @State private var selectedRoadmapDetent = PresentationDetent.fraction(0.70) // must be element of detentsList
+    @State private var selectedRoadmapDetent = PresentationDetent.large // careful: must be element of detentsList
     private var detentsList: Set<PresentationDetent> = [ .fraction(0.5), .fraction(0.70), .fraction(0.90), .large ]
 
     var body: some View {
