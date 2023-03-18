@@ -95,7 +95,8 @@ struct ReadmeView: View {
                                 Paragraph("3.2",
                                           comment: "Second paragraph in The Features section of Readme page", geo: geo)
                                 Paragraph("3.3",
-                                          comment: "Third paragraph in The Features section of Readme page", geo: geo)
+                                          comment: "Third paragraph in The Features section of Readme page",
+                                          geo: geo, bottomPaddingAmount: 10)
                             }
 
                             HStack {
@@ -271,18 +272,22 @@ struct ReadmeView: View {
         var localizedStringKey: LocalizedStringKey
         let comment: StaticString
         let geo: GeometryProxy
+        var bottomPaddingAmount: CGFloat // defaults to value of horizontal padding
 
         // explicit init() used here just to suppress localizedStringKey argument label
-        init(_ localizedStringKeySuffix: String, comment: StaticString, geo: GeometryProxy) {
-            let localizedStringKey: String = "Paragraph_" + localizedStringKeySuffix // extra strep needed
+        init(_ localizedStringKeySuffix: String, comment: StaticString,
+             geo: GeometryProxy, bottomPaddingAmount: CGFloat = paddingAmount) {
+            let localizedStringKey: String = "Paragraph_" + localizedStringKeySuffix
             self.localizedStringKey = LocalizedStringKey(localizedStringKey)
             self.comment = comment
             self.geo = geo
+            self.bottomPaddingAmount = bottomPaddingAmount
         }
 
         var body: some View {
             Text(localizedStringKey, comment: comment)
-                .padding([.horizontal, .bottom], paddingAmount)
+                .padding([.horizontal], paddingAmount)
+                .padding([.bottom], bottomPaddingAmount)
                 .frame(width: geo.size.width, alignment: .leading)
                 .fixedSize() // magic to get Text to wrap
         }

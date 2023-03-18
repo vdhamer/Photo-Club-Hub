@@ -9,26 +9,29 @@ import SwiftUI
 import Roadmap
 
 struct VoteOnRoadmapView: View {
+    static let useOnlineList = true // online allows updates, but avoids confusion if device is offline
 
     let configuration = RoadmapConfiguration(
-                            // could use an external URL(string: "https://simplejsoncms.com/api/vnlg2fq62s")!,
-                            roadmapJSONURL: Bundle.main.url(forResource: "Roadmap", withExtension: "json")!,
-                            voter: CustomVoter(namespace: Bundle.main.bundleIdentifier!),
+                            roadmapJSONURL: VoteOnRoadmapView.useOnlineList ? // JSON file with list of features
+                                URL(string: "https://simplejsoncms.com/api/vnlg2fq62s")! : // password protected
+                                Bundle.main.url(forResource: "Roadmap",
+                                                withExtension: "json")!,
+                            voter: CustomVoter(namespace: "com.vdhamer.photo_clubs_vote_on_features"),
                             style: RoadmapStyle(icon: Image(systemName: "circle.square.fill"),
                                                 titleFont: RoadmapTemplate.standard.style.titleFont.italic(),
                                                 numberFont: RoadmapTemplate.standard.style.numberFont,
                                                 statusFont: RoadmapTemplate.standard.style.statusFont,
-                                                statusTintColor: lookupStatusTintColor, // closure
+                                                statusTintColor: lookupStatusTintColor, // function name
                                                 cornerRadius: 10,
                                                 cellColor: RoadmapTemplate.standard.style.cellColor, // cell background
                                                 selectedColor: RoadmapTemplate.standard.style.selectedForegroundColor,
                                                 tint: RoadmapTemplate.standard.style.tintColor), // voting icon
                             shuffledOrder: true,
                             allowVotes: true,
-                            allowSearching: false)
+                            allowSearching: true)
 
     private let title = String(localized: "Roadmap Items", comment: "Title of Roadmap screen")
-    private let buttonText = String(localized:
+    private let headerText = String(localized:
                               """
                               You can vote here on roadmap items that you would like to see. \
                               Please read the entire list before voting bacause you cannot undo a vote. \
@@ -40,7 +43,7 @@ struct VoteOnRoadmapView: View {
     var body: some View {
         NavigationStack {
             RoadmapView(configuration: configuration, header: {
-                Text(buttonText)
+                Text(headerText)
                     .italic()
                     .font(.callout)
                     .foregroundColor(.blue)
