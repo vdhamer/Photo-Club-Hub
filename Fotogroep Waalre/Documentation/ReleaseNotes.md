@@ -2,13 +2,14 @@
 
 This is build #4587 in Apple's App Store
 Readme screen
+    * User can vote on potential roadmap items (see Readme > Features and tips > Vote on roadmap items)
     * Fixed section header layout on iPad
-    * Ability to vote (!) on importance of future features
 Maintenance
     * Increased the required iOS version from 16.0 to 16.2
-    * Disabled support for running the iPad app on MacOS (it currently crashes on rendering maps)
+    * Disabled support for running the iPad version on MacOS (because it currently crashes on rendering maps)
     * Added Roadmap package
-    * Updated Github README and associated screenshot
+    * Updated Github README and associated screenshot for Github
+    * Tested against XCode 14.3 beta 3
 ---------------------------------------------------------------------------
 ### 2.3.1 (Github commit 1793262) 05-03-23
 
