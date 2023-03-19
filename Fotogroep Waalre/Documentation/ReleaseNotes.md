@@ -1,12 +1,12 @@
-### 2.3.2 (Github commit ???????) ??-03-23
+### 2.3.2 (Github commit ???????) 19-03-23
 
 This is build #4587 in Apple's App Store
 Readme screen
-    * User can vote on potential roadmap items (see Readme > Features and tips > Vote on roadmap items)
+    * User can vote on possible enhancements within the app (Readme > Features and tips > Vote on roadmap items)
     * Fixed section header layout on iPad
 Maintenance
-    * Increased the required iOS version from 16.0 to 16.2
-    * Disabled support for running the iPad version on MacOS (because it currently crashes on rendering maps)
+    * Required iOS version is now 16.2 (was 16.0)
+    * Disabled support for running the iPad version on MacOS (because Maps crashed in Photo Clubs screen)
     * Added Roadmap package
     * Updated Github README and associated screenshot for Github
     * Tested against XCode 14.3 beta 3
