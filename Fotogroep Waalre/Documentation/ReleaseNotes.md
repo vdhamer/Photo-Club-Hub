@@ -1,6 +1,8 @@
 ### 2.3.3 (Github commit ???????) ??-03-23
 
 This is build #4588 in Apple's App Store
+Maintenance
+    * Disabled support (in App store) for running the iPad version on MacOS (because Photo Clubs screen crashed)
 ---------------------------------------------------------------------------
 ### 2.3.2 (Github commit ef445ca) 19-03-23
 
