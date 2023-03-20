@@ -1,6 +1,8 @@
 ### 2.3.3 (Github commit ???????) ??-03-23
 
 This is build #4588 in Apple's App Store
+Readme screen
+    * Temp bug fix: colors of status field of Roadmap items fail in Dutch translation
 Maintenance
     * Disabled support (in App store) for running the iPad version on MacOS (because Photo Clubs screen crashed)
 ---------------------------------------------------------------------------
