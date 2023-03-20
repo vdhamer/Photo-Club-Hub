@@ -56,10 +56,10 @@ struct VoteOnRoadmapView: View {
         let planned = String(localized: "planned", comment: "Status string to indicated that roadmap item is planned.")
         let unplanned = String(localized: "?", comment: "Status string to indicated that roadmap item is not planned.")
 
-        switch string.lowercased() { // string seems to be localized using JSON file before it gets here &^%$
-            case planned: return .plannedColor
-            case unplanned: return .unplannedColor
-            default: return Color.red
+        switch string.localizedLowercase { // string is already localized using JSON file before it gets here &^%$
+        case planned: return .plannedColor
+        case unplanned: return .unplannedColor
+        default: return Color.secondary
         }
     }
 
