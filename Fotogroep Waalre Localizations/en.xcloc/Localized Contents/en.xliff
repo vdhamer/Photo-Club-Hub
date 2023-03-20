@@ -2,7 +2,7 @@
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
   <file original="en.lproj/Fotogroep-Waalre-InfoPlist.strings" source-language="en" target-language="en" datatype="plaintext">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="14.2" build-num="14C18"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="14.3" build-num="14E5215g"/>
     </header>
     <body>
       <trans-unit id="CFBundleDisplayName" xml:space="preserve">
@@ -19,7 +19,7 @@
   </file>
   <file original="en.lproj/Localizable.strings" source-language="en" target-language="en" datatype="plaintext">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="14.2" build-num="14C18"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="14.3" build-num="14E5215g"/>
     </header>
     <body>
       <trans-unit id="%lld members (inc. ex-members)" xml:space="preserve">
@@ -31,6 +31,11 @@
         <source>%lld photographers</source>
         <target>%lld photographers</target>
         <note>Header of section of Who's Who screen</note>
+      </trans-unit>
+      <trans-unit id="?" xml:space="preserve">
+        <source>?</source>
+        <target>?</target>
+        <note>Status string to indicated that roadmap item is not planned.</note>
       </trans-unit>
       <trans-unit id="App version %@ (build %@)" xml:space="preserve">
         <source>App version %@ (build %@)</source>
@@ -457,6 +462,11 @@ Default status of member within a club. Used in concatenations.</note>
         <target>of</target>
         <note>&lt;person&gt; of &lt;photo club&gt;</note>
       </trans-unit>
+      <trans-unit id="planned" xml:space="preserve">
+        <source>planned</source>
+        <target>planned</target>
+        <note>Status string to indicated that roadmap item is planned.</note>
+      </trans-unit>
       <trans-unit id="prospective member" xml:space="preserve">
         <source>prospective member</source>
         <target>prospective member</target>
@@ -496,7 +506,7 @@ Default status of member within a club. Used in concatenations.</note>
   </file>
   <file original="Settings.bundle/en.lproj/Root.strings" source-language="en" target-language="en" datatype="plaintext">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="14.2" build-num="14C18"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="14.3" build-num="14E5215g"/>
     </header>
     <body>
       <trans-unit id="About" xml:space="preserve">
