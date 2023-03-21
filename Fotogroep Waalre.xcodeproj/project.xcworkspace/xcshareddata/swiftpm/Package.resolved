@@ -3,10 +3,10 @@
     {
       "identity" : "roadmap",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/AvdLee/Roadmap",
+      "location" : "https://github.com/vdhamer/Roadmap",
       "state" : {
         "branch" : "main",
-        "revision" : "3de4838e5edc6d69f0e229a70f7b552f1c48954e"
+        "revision" : "c27f8abcc3770faa110674e1ab4df113272dc176"
       }
     }
   ],
