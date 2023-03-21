@@ -32,11 +32,6 @@
         <target>%lld fotografen</target>
         <note>Header of section of Who's Who screen</note>
       </trans-unit>
-      <trans-unit id="?" xml:space="preserve">
-        <source>?</source>
-        <target>?</target>
-        <note>Status string to indicated that roadmap item is not planned.</note>
-      </trans-unit>
       <trans-unit id="App version %@ (build %@)" xml:space="preserve">
         <source>App version %@ (build %@)</source>
         <target>App versie %@ (build %@)</target>
@@ -463,11 +458,6 @@ Default status of member within a club. Used in concatenations.</note>
         <source>of</source>
         <target>van</target>
         <note>&lt;person&gt; of &lt;photo club&gt;</note>
-      </trans-unit>
-      <trans-unit id="planned" xml:space="preserve">
-        <source>planned</source>
-        <target>verwacht</target>
-        <note>Status string to indicated that roadmap item is planned.</note>
       </trans-unit>
       <trans-unit id="prospective member" xml:space="preserve">
         <source>prospective member</source>

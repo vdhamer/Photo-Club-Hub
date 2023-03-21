@@ -1,6 +1,3 @@
-/* Status string to indicated that roadmap item is not planned. */
-"?" = "?";
-
 /* Shown when "Show club officers" entry is missing in Settings */
 "“Current members” includes “club officers”" = "De optie “huidige leden“ bevat “bestuursleden“";
 
@@ -190,9 +187,6 @@ Default status of member within a club. Used in concatenations. */
 
 /* Shown in gray at the bottom of the Photo Club page. */
 "PhotoClubs_Caption" = "① Het slotje kan gebruikt worden om deze landkaarten sleepbaar en inzoombaar/uitzoombaar te maken.\n② Men kan enkele testfotogroepen (voor demo doeleinden) toevoegen door de bovenkant van deze pagina omlaag te slepen en los te laten (*pull to refresh*).\n③ Een fotogroep kan verwijderd worden door eerst alle betrokken Portfolio's te verwijden (*swipe left*) en dan de fotoclub zelf te verwijderen (*swipe left*).";
-
-/* Status string to indicated that roadmap item is planned. */
-"planned" = "verwacht";
 
 /* Section title on Readme page
 Title of page showing member portfolios */

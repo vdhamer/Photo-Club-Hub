@@ -53,12 +53,9 @@ struct VoteOnRoadmapView: View {
     }
 
     static func lookupStatusTintColor(string: String) -> Color {
-        let planned = String(localized: "planned", comment: "Status string to indicate that roadmap item is planned.")
-        let unplanned = String(localized: "?", comment: "Status string to indicate that roadmap item is not planned.")
-
-        switch string.localizedLowercase { // string is already localized using JSON file before it gets here &^%$
-        case planned: return .plannedColor
-        case unplanned: return .unplannedColor
+        switch string.lowercased() { // string should be unlocalized version as defined in Roadmap.json file
+        case "planned": return .plannedColor
+        case "?": return .unplannedColor
         default: return Color.red
         }
     }
