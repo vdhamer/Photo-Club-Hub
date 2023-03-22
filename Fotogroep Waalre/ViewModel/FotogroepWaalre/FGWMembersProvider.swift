@@ -48,11 +48,11 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
                                  nameUnencryptedFile: String,
                                  allowUseEncryptedFile: Bool = true) -> String {
         if let secret = readURLFromLocalFile(fileNameWithExtension: nameEncryptedFile), allowUseEncryptedFile {
-            print("Fotogroep Waalre: will use confidential version of Private member data file.")
+            ifDebugPrint("Fotogroep Waalre: will use confidential version of Private member data file.")
             return secret
         } else {
             if let unsecret = readURLFromLocalFile(fileNameWithExtension: nameUnencryptedFile) {
-                print("Fotogroep Waalre: will use non-confidential version of Private member data file.")
+                ifDebugPrint("Fotogroep Waalre: will use non-confidential version of Private member data file.")
                 return unsecret
             } else {
                 print("Fotogroep Waalre: ERROR - problem accessing either version of Private member data file.")
@@ -83,7 +83,7 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
                                         photoClubIdPlus: PhotoClubIdPlus,
                                         commit: Bool ) async {
 
-        print("Fotogroep Waalre: starting loadPrivateMembersFromWebsite() in background")
+        ifDebugPrint("Fotogroep Waalre: starting loadPrivateMembersFromWebsite() in background")
         var results: (utfContent: Data?, urlResponse: URLResponse?)? = (nil, nil)
         results = try? await URLSession.shared.data(from: privateMemberURL)
         if results != nil, results?.utfContent != nil {
@@ -96,7 +96,7 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
                 do {
                     if backgroundContext.hasChanges {
                         try backgroundContext.save()
-                        print("Fotogroep Waalre: completed loadPrivateMembersFromWebsite()")
+                        ifDebugPrint("Fotogroep Waalre: completed loadPrivateMembersFromWebsite() in background")
                     }
                  } catch {
                     print("Fotogroep Waalre: ERROR - could not save backgroundContext to Core Data " +

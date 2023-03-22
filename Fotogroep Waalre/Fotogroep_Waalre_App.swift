@@ -33,11 +33,11 @@ struct FotogroepWaalreApp: App {
                 .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext) // main queue!
                 .onAppear {
                     _ = FGWMembersProvider() // always load members of Fotogroep Waalre
-                    _ = TestClubDenHaagMembersProvider()
+                    _ = TestClubDenHaagMembersProvider() // and 3 imaginary photo clubs for demo reasons
                     _ = TestClubAmsterdamMembersProvider()
                     _ = TestClubRotterdamMembersProvider()
                     // other groups can be added here by calling, for example, BIMembersProvider()
-                    // They are already loadable manually using pull-to-refresh on the Photo Clubs screen.
+                    // They can be loaded manually using pull-to-refresh on the Photo Clubs screen.
                 }
         }
         .onChange(of: scenePhase) { _ in

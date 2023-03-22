@@ -17,7 +17,7 @@ extension TestClubRotterdamMembersProvider { // fill with some initial hard-code
 
     func insertSomeHardcodedMemberData(testRotterdamBackgroundContext: NSManagedObjectContext) {
         testRotterdamBackgroundContext.perform {
-            print("Photo Club Test Rdam: starting insertSomeHardcodedMemberData() in background")
+            ifDebugPrint("Photo Club Test Rdam: starting insertSomeHardcodedMemberData() in background")
             self.insertSomeHardcodedMemberDataCommon(testRotterdamBackgroundContext: testRotterdamBackgroundContext,
                                                      commit: true)
         }
@@ -31,7 +31,7 @@ extension TestClubRotterdamMembersProvider { // fill with some initial hard-code
                                              context: testRotterdamBackgroundContext,
                                              photoClubIdPlus: Self.photoClubTestRotterdamIdPlus,
                                              photoClubWebsite: TestClubRotterdamMembersProvider.testRotterdamURL,
-                                             fotobondNumber: 1234, kvkNumber: nil,
+                                             fotobondNumber: nil, kvkNumber: nil,
                                              coordinates: CLLocationCoordinate2D(latitude: 51.905292,
                                                                                  longitude: 4.486934),
                                              priority: 1
@@ -56,7 +56,7 @@ extension TestClubRotterdamMembersProvider { // fill with some initial hard-code
                 if testRotterdamBackgroundContext.hasChanges {
                     try testRotterdamBackgroundContext.save() // commit all changes
                 }
-                print("Photo Club Test Rdam: completed insertSomeHardcodedMemberData()")
+                ifDebugPrint("Photo Club Test Rdam: completed insertSomeHardcodedMemberData()")
             } catch {
                 fatalError("Failed to save changes for Test Rdam")
             }

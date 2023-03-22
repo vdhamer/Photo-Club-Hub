@@ -17,7 +17,7 @@ extension TestClubAmsterdamMembersProvider { // fill with some initial hard-code
 
     func insertSomeHardcodedMemberData(testAmsterdamBackgroundContext: NSManagedObjectContext) {
         testAmsterdamBackgroundContext.perform {
-            print("Photo Club Test Adam: starting insertSomeHardcodedMemberData() in background")
+            ifDebugPrint("Photo Club Test Adam: starting insertSomeHardcodedMemberData() in background")
             self.insertSomeHardcodedMemberDataCommon(testAmsterdamBackgroundContext: testAmsterdamBackgroundContext,
                                                      commit: true)
         }
@@ -31,7 +31,7 @@ extension TestClubAmsterdamMembersProvider { // fill with some initial hard-code
                                                  context: testAmsterdamBackgroundContext,
                                                  photoClubIdPlus: Self.photoClubTestAmsterdamIdPlus,
                                                  photoClubWebsite: TestClubAmsterdamMembersProvider.testAmsterdamURL,
-                                                 fotobondNumber: 5678, kvkNumber: nil,
+                                                 fotobondNumber: nil, kvkNumber: nil,
                                                  coordinates: CLLocationCoordinate2D(latitude: 52.364217,
                                                                                      longitude: 4.893370),
                                                  priority: 1
@@ -56,7 +56,7 @@ extension TestClubAmsterdamMembersProvider { // fill with some initial hard-code
                 if testAmsterdamBackgroundContext.hasChanges { // is this necessary? sometimes save() done earlier
                     try testAmsterdamBackgroundContext.save() // commit all changes
                 }
-                print("Photo Club TestAmsterdam: completed insertSomeHardcodedMemberData()")
+                ifDebugPrint("Photo Club TestAmsterdam: completed insertSomeHardcodedMemberData()")
             } catch {
                 fatalError("Failed to save changes for TestAmsterdam")
             }

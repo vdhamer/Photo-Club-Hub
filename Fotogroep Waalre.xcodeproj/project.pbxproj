@@ -25,6 +25,7 @@
 		D06061ED28A05D4600A675A7 /* String+Paths.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06061EC28A05D4600A675A7 /* String+Paths.swift */; };
 		D06754A02942B23F00C0AB08 /* FGWMembersProvide+enumHTMLPageLoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D067549F2942B23F00C0AB08 /* FGWMembersProvide+enumHTMLPageLoadingState.swift */; };
 		D0795CEC294FCCC200FA62A8 /* ShapeStyle+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0795CEB294FCCC200FA62A8 /* ShapeStyle+Colors.swift */; };
+		D079A3E429CBA5BE007CDD81 /* ifDebugPrint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D079A3E329CBA5BE007CDD81 /* ifDebugPrint.swift */; };
 		D081655B278611150078AB16 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D081655A278611150078AB16 /* WebView.swift */; };
 		D081655F278616930078AB16 /* SinglePortfolioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D081655E278616930078AB16 /* SinglePortfolioView.swift */; };
 		D08281312959C6F400D9C232 /* FGWMembersProvider+extractPhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08281302959C6F400D9C232 /* FGWMembersProvider+extractPhone.swift */; };
@@ -130,6 +131,7 @@
 		D06770F928CE445E00832079 /* Fotogroep_Waalre_2_2_0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fotogroep_Waalre_2_2_0.xcdatamodel; sourceTree = "<group>"; };
 		D077EBB52846D134002811F9 /* Fotogroep_Waalre_2_0_11.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fotogroep_Waalre_2_0_11.xcdatamodel; sourceTree = "<group>"; };
 		D0795CEB294FCCC200FA62A8 /* ShapeStyle+Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ShapeStyle+Colors.swift"; sourceTree = "<group>"; };
+		D079A3E329CBA5BE007CDD81 /* ifDebugPrint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ifDebugPrint.swift; sourceTree = "<group>"; };
 		D07A1E2E28314EA600C77F66 /* SwiftUIEnvironmentValues.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SwiftUIEnvironmentValues.png; sourceTree = "<group>"; };
 		D07DD91327EA96E900472266 /* Fotogroep_Waalre_2_0_5.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fotogroep_Waalre_2_0_5.xcdatamodel; sourceTree = "<group>"; };
 		D081655A278611150078AB16 /* WebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
@@ -420,6 +422,7 @@
 				D08281342959C9D800D9C232 /* FGW Extractors */,
 				D06061E728A0453F00A675A7 /* FGWPrivateMembersURL2.txt */,
 				D06061E928A0456C00A675A7 /* FGWPrivateMembersURL3.txt */,
+				D079A3E329CBA5BE007CDD81 /* ifDebugPrint.swift */,
 			);
 			path = FotogroepWaalre;
 			sourceTree = "<group>";
@@ -823,6 +826,7 @@
 				D01D2B6227D3BBDC00E2FE41 /* View+Navigate.swift in Sources */,
 				D06754A02942B23F00C0AB08 /* FGWMembersProvide+enumHTMLPageLoadingState.swift in Sources */,
 				D082BE912957806800FF0812 /* LogoPath.swift in Sources */,
+				D079A3E429CBA5BE007CDD81 /* ifDebugPrint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

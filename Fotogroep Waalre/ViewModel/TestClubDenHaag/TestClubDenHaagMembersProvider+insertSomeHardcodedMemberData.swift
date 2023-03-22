@@ -17,7 +17,7 @@ extension TestClubDenHaagMembersProvider { // fill with some initial hard-coded 
 
     func insertSomeHardcodedMemberData(testDenHaagBackgroundContext: NSManagedObjectContext) {
         testDenHaagBackgroundContext.perform {
-            print("Photo Club Test Adam: starting insertSomeHardcodedMemberData() in background")
+            ifDebugPrint("Photo Club Test Adam: starting insertSomeHardcodedMemberData() in background")
             self.insertSomeHardcodedMemberDataCommon(testDenHaagBackgroundContext: testDenHaagBackgroundContext,
                                                      commit: true)
         }
@@ -31,7 +31,7 @@ extension TestClubDenHaagMembersProvider { // fill with some initial hard-coded 
                                                  context: testDenHaagBackgroundContext,
                                                  photoClubIdPlus: Self.photoClubTestDenHaagIdPlus,
                                                  photoClubWebsite: TestClubDenHaagMembersProvider.testDenHaagURL,
-                                                 fotobondNumber: 2517, kvkNumber: nil,
+                                                 fotobondNumber: nil, kvkNumber: nil,
                                                  coordinates: CLLocationCoordinate2D(latitude: 52.090556,
                                                                                      longitude: 4.279722),
                                                  priority: 1
@@ -55,7 +55,7 @@ extension TestClubDenHaagMembersProvider { // fill with some initial hard-coded 
                 if testDenHaagBackgroundContext.hasChanges { // is this necessary? sometimes save() done earlier
                     try testDenHaagBackgroundContext.save() // commit all changes
                 }
-                print("Photo Club TestDenHaag: completed insertSomeHardcodedMemberData()")
+                ifDebugPrint("Photo Club TestDenHaag: completed insertSomeHardcodedMemberData()")
             } catch {
                 fatalError("Failed to save changes for TestDenHaag")
             }
