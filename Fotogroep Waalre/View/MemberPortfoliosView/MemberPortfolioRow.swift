@@ -12,8 +12,8 @@ struct MemberPortfolioRow: View {
     var member: MemberPortfolio
     var showPhotoClub: Bool // not strictly needed now that Portfolios screen has section titles
     @Environment(\.horizontalSizeClass) var horSizeClass
-    var wkWebView = WKWebView()
-    let of2 = String(localized: "of2", comment: "<person> of <photo club>")
+    private let wkWebView = WKWebView()
+    private let of2 = String(localized: "of2", comment: "<person> of <photo club>")
 
     var body: some View {
         NavigationLink(destination: SinglePortfolioView(url: member.memberWebsite,

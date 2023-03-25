@@ -26,7 +26,6 @@
 		D06754A02942B23F00C0AB08 /* FGWMembersProvide+enumHTMLPageLoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D067549F2942B23F00C0AB08 /* FGWMembersProvide+enumHTMLPageLoadingState.swift */; };
 		D0795CEC294FCCC200FA62A8 /* ShapeStyle+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0795CEB294FCCC200FA62A8 /* ShapeStyle+Colors.swift */; };
 		D079A3E429CBA5BE007CDD81 /* ifDebugPrint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D079A3E329CBA5BE007CDD81 /* ifDebugPrint.swift */; };
-		D081655B278611150078AB16 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D081655A278611150078AB16 /* WebView.swift */; };
 		D081655F278616930078AB16 /* SinglePortfolioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D081655E278616930078AB16 /* SinglePortfolioView.swift */; };
 		D08281312959C6F400D9C232 /* FGWMembersProvider+extractPhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08281302959C6F400D9C232 /* FGWMembersProvider+extractPhone.swift */; };
 		D08281332959C7EA00D9C232 /* FGWMembersProvider+extractEMail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08281322959C7EA00D9C232 /* FGWMembersProvider+extractEMail.swift */; };
@@ -134,7 +133,6 @@
 		D079A3E329CBA5BE007CDD81 /* ifDebugPrint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ifDebugPrint.swift; sourceTree = "<group>"; };
 		D07A1E2E28314EA600C77F66 /* SwiftUIEnvironmentValues.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SwiftUIEnvironmentValues.png; sourceTree = "<group>"; };
 		D07DD91327EA96E900472266 /* Fotogroep_Waalre_2_0_5.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fotogroep_Waalre_2_0_5.xcdatamodel; sourceTree = "<group>"; };
-		D081655A278611150078AB16 /* WebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		D081655E278616930078AB16 /* SinglePortfolioView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SinglePortfolioView.swift; sourceTree = "<group>"; };
 		D08267C6277FA2E200598C24 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = "en.lproj/Fotogroep-Waalre-InfoPlist.strings"; sourceTree = "<group>"; };
 		D08281302959C6F400D9C232 /* FGWMembersProvider+extractPhone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FGWMembersProvider+extractPhone.swift"; sourceTree = "<group>"; };
@@ -295,7 +293,6 @@
 			isa = PBXGroup;
 			children = (
 				D081655E278616930078AB16 /* SinglePortfolioView.swift */,
-				D081655A278611150078AB16 /* WebView.swift */,
 			);
 			path = SinglePortFolioView;
 			sourceTree = "<group>";
@@ -820,7 +817,6 @@
 				D0FCF2E329B5517000F31442 /* VoteOnRoadmapView.swift in Sources */,
 				D0831A31277F72590049AB84 /* MemberPortfolio.swift in Sources */,
 				D0831A32277F72590049AB84 /* Photographer.swift in Sources */,
-				D081655B278611150078AB16 /* WebView.swift in Sources */,
 				D044646527FCE7C100990613 /* UIDevice+IsIPad.swift in Sources */,
 				D05E451E27EF2A2C00D31327 /* ReadmeView.swift in Sources */,
 				D01D2B6227D3BBDC00E2FE41 /* View+Navigate.swift in Sources */,
@@ -1027,7 +1023,6 @@
 				INFOPLIST_FILE = "Fotogroep-Waalre-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Photo Club Waalre";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.photography";
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIStatusBarStyle = "";
@@ -1066,7 +1061,6 @@
 				INFOPLIST_FILE = "Fotogroep-Waalre-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Photo Club Waalre";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.photography";
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIStatusBarStyle = "";

@@ -61,8 +61,8 @@ struct MemberPortfolioListView: View {
                         SettingsView(settings: $model.settings)
                         // the detents don't do anything on an iPad
                             .presentationDetents(detentsList, selection: $selectedSettingsDetent)
-//                            .presentationBackground(.regularMaterial) // doesn't work yet with SettingsView
-//                            .presentationCornerRadius(40)
+                            .presentationBackground(.regularMaterial) // doesn't work yet with SettingsView
+                            .presentationCornerRadius(40)
                             .presentationDragIndicator(.visible) // show drag indicator
                     } else {
                         SettingsView(settings: $model.settings)
@@ -86,8 +86,8 @@ struct MemberPortfolioListView: View {
                         ReadmeView()
                         // the detents don't do anything on an iPad
                             .presentationDetents(detentsList, selection: $selectedReadmeDetent)
-//                            .presentationBackground(.thickMaterial) // doesn't work yet with ReadmeView
-//                            .presentationCornerRadius(40) // compiler can't handle this yet
+                            .presentationBackground(.thickMaterial) // doesn't work yet with ReadmeView
+                            .presentationCornerRadius(40) // compiler can't handle this yet
                             .presentationDragIndicator(.visible) // show drag indicator
                     } else {
                         ReadmeView()
