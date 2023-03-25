@@ -2,11 +2,12 @@
 
 This is build #4588 in Apple's App Store
 Readme screen
-    * Temp bug fix: colors of status field of Roadmap items didn't get triggered in Dutch translation
+    * Bug fix: colors of status field of Roadmap items didn't get triggered in Dutch translation
 Maintenance
     * Disabled support (in App store) for running the iPad version on MacOS (because Photo Clubs screen crashed)
     * Fixed bug in AvdLee/Roadmap related to `statusTintColor` when status strings are localized 
     * Tested on iOS 16.4 RC and XCode 14.3 RC
+    * Removed WebView.swift (dead code)
 ---------------------------------------------------------------------------
 ### 2.3.2 (Github commit ef445ca) 19-03-23
 
