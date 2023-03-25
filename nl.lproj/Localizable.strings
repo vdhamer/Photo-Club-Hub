@@ -28,6 +28,9 @@
 /* Administrative role of member within a club. Used as part of concatenations. */
 "chairman" = "voorzitter";
 
+/* Section title on Readme page */
+"Concept" = "Het concept";
+
 /* Section footer text Portfolios screen */
 "Data source: %@://%@%@/" = "Bron: %@://%@%@/";
 
@@ -86,41 +89,44 @@ Default status of member within a club. Used in concatenations. */
 /* Section title on Readme page. */
 "Open Source" = "Ontwikkelaars gezocht";
 
-/* First paragraph in The Club section of Readme page */
-"Paragraph_1.1" = "De fotoclub \"Fotogroep Waalre\" is vernoemd naar Waalre, een dorp vlak onder Eindhoven. Sedert 1988 komen de leden van de club bijeen voor fotobespreekavonden. Verder organiseert de club exposities en fotoexcursies.";
+/* First paragraph in Waalre section of Readme page */
+"Paragraph_1.1" = "De fotoclub \"Fotogroep Waalre\" is vernoemd naar Waalre, een dorp vlak onder Eindhoven. Sedert 1988 komen de leden van die club bijeen voor fotobespreekavonden.";
 
-/* Second paragraph in The Club section of Readme page */
-"Paragraph_1.2" = "Oorspronkelijk ondersteunde de app uitsluitend Fotogroep Waalre, maar sedert versie 2.0 kan de app meerdere clubs gelijktijdig ondersteunen. De naam Fotogroep Waalre zal daarom binnenkort veranderen.";
+/* Second paragraph in Waalre section of Readme page */
+"Paragraph_1.2" = "Oorspronkelijk ondersteunde de app uitsluitend Fotogroep Waalre, maar sedert versie 2 ondersteunt de app in principe meerdere clubs. De naam Fotogroep Waalre zal daarom ter zijner tijd veranderd worden in iets algemeners.";
 
 /* First paragraph in The App on Readme page */
-"Paragraph_2.1" = "Het doel van deze app is om ***portfolio's*** te tonen met geselecteerd werk van de leden van fotoclubs.";
+"Paragraph_2.1" = "Het doel van deze app is om geselecteerd werk te tonen van clubleden van fotoclubs.";
 
 /* Second paragraph in The App on Readme page */
-"Paragraph_2.2" = "De app bevat tientallen portfolio's. Iedere portfolio betreft het werk van één fotograaf voor zover dat een band heeft met één fotoclub. Indien een fotograaf lid is (of was) van meer dan één fotoclub, dan bevat de app voor de desbetreffende fotograaf één portfolio per fotoclub (althans voor fotoclubs die meedoen aan de app).";
+"Paragraph_2.2" = "De app heeft een hiërarchische structuur. Op het hoogste niveau vindt men de ***fotoclubs***. Binnen een fotoclubs treft men de ***portfolio's*** aan van de clubleden. Een portfolio bevat tenslotte de ***foto's*** van dat lid - althans die foto's van die betrekking hebben op de fotoclub.";
 
 /* Third paragraph in The App on Readme page */
-"Paragraph_2.3" = "De beelden in een portfolio staan in chronologische volgorde: van nieuw naar oud. Een portfolio bestrijkt namelijk vaak een periode van vele jaren.";
+"Paragraph_2.3" = "Een fotograaf kan meerdere portfolios hebben door lid te zijn (of geweest zijn) van meerdere fotoclubs. Een portfolio bevat dus alleen werk van een fotograaf dat besproken of geëxposeerde is bij één fotoclub. In principe kan een foto overigens in meerdere portfolios van die fotograaf voorkomen.";
 
 /* Fourth paragraph in The App on Readme page */
-"Paragraph_2.4" = "Net als bij een tentoonstelling is het belangrijk om een portfolio zonder afleiding te kunnen bekijken. Webpagina's zijn hiervoor vaak iets te druk wegens de bedieningselementen van de browser (zoals de adresbalk), en omdat een clubwebsite vaak ook andere doeleinden dient (bijvoorbeeld het tonen van clubnieuws).";
+"Paragraph_2.4" = "De beelden in een portfolio staan in chronologische volgorde: van nieuw naar oud. Een portfolio bestrijkt namelijk vaak een periode van vele jaren.";
 
-/* Fifth paragraph in the App on Readme page */
-"Paragraph_2.5" = "De app kan, indien een club daarvoor kiest, ook de portfolio's van *voormalige* clubleden tonen. De gebruiker kan bepalen of de portfolio's van ex-leden zichtbaar zijn.";
+/* Fifth paragraph in The App on Readme page */
+"Paragraph_2.5" = "Net als bij een tentoonstelling is het belangrijk om een portfolio zonder afleiding te kunnen bekijken. Webpagina's zijn hiervoor vaak iets te druk wegens de bedieningselementen van de browser (zoals de adresbalk), en omdat een clubwebsite vaak ook andere doeleinden dient (bijvoorbeeld het tonen van clubnieuws).";
 
 /* Sixth paragraph in the App on Readme page */
-"Paragraph_2.6" = "Clubs met belangstelling om deel te nemen kunnen contact opnemen via github@vdhamer.com.";
+"Paragraph_2.6" = "De app kan, indien een club daarvoor kiest, ook de portfolio's van *voormalige* clubleden tonen. De gebruiker kan bepalen of beschikbare portfolio's van ex-leden zichtbaar zijn.";
+
+/* Seventh paragraph in the App on Readme page */
+"Paragraph_2.7" = "Clubs met belangstelling om deel te nemen kunnen contact opnemen via github@vdhamer.com.";
 
 /* First paragraph in The Features section of Readme page */
-"Paragraph_3.1" = "__Websites__\nHet hoofddoel van de app is om de portfolio's via een strakke presentatie tot hun recht te laten komen. Wij streven er dus _niet_ naar dat de app een website kan vervangen. Daarom verwijst de app de gebruiker via links desgewenst door naar de websites van de clubs.";
+"Paragraph_3.1" = "__Websites__\nHet hoofddoel van de app is om de portfolio's via een strakke presentatie tot hun recht te laten komen. Wij proberen dus _niet_ om websites te vervangen met deze app. Daarom verwijst de app de gebruiker via links desgewenst door naar clubwebsites.";
 
 /* Second paragraph in The Features section of Readme page */
-"Paragraph_3.2" = "__Meertalig__\nDe app ondersteunt zowel Nederlands als Engels. De taal van de app past zich automatisch aan op de taalinstelling van het apparaat (_Instellingen → Algemeen → Taal en regio → Volgorde voorkeurstalen_). Als alternatief kan een gebruiker de taalkeuze alleen voor deze app aanpassen (_Instellingen → Fotogroep Waalre → Voorkeurstaal_).";
+"Paragraph_3.2" = "__Meertalig__\nDe app ondersteunt de Nederlands de Engelse taal. De taal van de app past zich automatisch aan op de taalinstelling van het apparaat (_Instellingen → Algemeen → Taal en regio → Volgorde voorkeurstalen_). Als alternatief kan een gebruiker de taalkeuze alleen voor deze app aanpassen (_Instellingen → Fotogroep Waalre → Voorkeurstaal_).";
 
 /* Third paragraph in The Features section of Readme page */
-"Paragraph_3.3" = "__Wissen__\nDe gebruiker kan op de Portfolio pagina leden verwijderen door hun naam naar links te vegen. Dat verwijderen is slechts tijdelijk indien het lid nog op de online ledenlijst van de club staat: bij opnieuw synchroniseren komt de naam dan automatisch weer terug. Maar dit \"wegvegen\" kan nuttig zijn als bijvoorbeeld een kandidaat-lid vertrekt zonder lid te worden. Hiermee verwijder je iemand uit de locale database die niet meer voorkomt in de online ledenlijst. Als alternatief kan men ook de app verwijderen en opnieuw installeren.";
+"Paragraph_3.3" = "__Wissen__\nDe gebruiker kan op de Portfolio pagina leden verwijderen door hun naam naar links te vegen. Dat verwijderen is slechts tijdelijk indien het lid nog op de online ledenlijst van de club staat: bij opnieuw synchroniseren komt dat lid automatisch weer terug. Maar dit \"wegvegen\" kan nuttig zijn als bijvoorbeeld een kandidaat-lid vertrekt zonder lid te worden. Hiermee verwijder je iemand uit de locale database die niet meer voorkomt in de online ledenlijst. Als alternatief kan men ook de app verwijderen en opnieuw installeren. Hiermee wordt de locale database gewist en opnieuw gevuld.";
 
 /* Fourth paragraph in The Features section of Readme page */
-"Paragraph_3.4" = "__Roadmap__\nVia bovenstaande knop kunt U (anoniem) stemmen op mogelijke toekomstige uitbreiding. U kan op meer dan één optie stemmen.";
+"Paragraph_3.4" = "__Roadmap__\nVia de blauwe knop kunt U (anoniem) stemmen op mogelijke toekomstige uitbreiding. U kan op meer dan één optie stemmen.";
 
 /* First paragraph in Prelude section of Readme page */
 "Paragraph_4.1" = "Bij het opstarten van de app, wordt een grote versie van het logo van de app zichtbaar. Dit is een interactief speeltje. Door ***binnen het beeld*** te klikken zoomt het beeld langzaam uit tot en vierkante versie van bovenstaande foto.";
@@ -132,7 +138,7 @@ Default status of member within a club. Used in concatenations. */
 "Paragraph_4.3" = "Nogmaals klikken op het beeld maakt het mogelijk om verschillende delen van het beeld-met-vlakjes te bekijken. Klik ***buiten het beeld*** om de animatie te beëindigen. De prelude is opnieuw te zien door de app volledig af te sluiten en dan opnieuw op te starten.";
 
 /* First paragraph SupportedPlatforms section of Readme page */
-"Paragraph_5.1" = "De app draait zowel op de iPhone als op de iPad. Verder draait het op de nieuwe generatie Macs met _Apple Silicon_. De app vereist een recente versie van iOS (vanaf iOS/iPadOS 15.5). Dit dekt in principe alle iOS apparaten af die maximaal 5 jaar oud zijn.";
+"Paragraph_5.1" = "De app ondersteunt de iPhone de iPad mits deze iOS 16.4 of hoger draaien. iOS gebruikers gaan doorgaans vrij snel over op nieuwe versies, en Apple heeft de gewoonte om apparaten minstens voor 5 jaar in de nieuwste iOS te ondersteunen. Oudere apparaten worden op de Apple App Store automatisch doorverwezen naar een oudere versie van deze app.";
 
 /* Second paragraph SupportedPlatforms section of Readme page */
 "Paragraph_5.2" = "De app maakt intern gebruik van diverse __Apple__ software technologieën: Swift (een programmeertaal), SwiftUI (voor schermontwerp), Core Data (lokale dataopslag), Metal (versnelt de animatie), Concurrency (laden van data), en Animations (gebruikersinteractie).";
@@ -188,8 +194,7 @@ Default status of member within a club. Used in concatenations. */
 /* Shown in gray at the bottom of the Photo Club page. */
 "PhotoClubs_Caption" = "① Het slotje kan gebruikt worden om deze landkaarten sleepbaar en inzoombaar/uitzoombaar te maken.\n② Men kan enkele testfotogroepen (voor demo doeleinden) toevoegen door de bovenkant van deze pagina omlaag te slepen en los te laten (*pull to refresh*).\n③ Een fotogroep kan verwijderd worden door eerst alle betrokken Portfolio's te verwijden (*swipe left*) en dan de fotoclub zelf te verwijderen (*swipe left*).";
 
-/* Section title on Readme page
-Title of page showing member portfolios */
+/* Title of page showing member portfolios */
 "Portfolios" = "Portfolio's";
 
 /* Title of screen with toggles to adjust preferences */
@@ -239,10 +244,10 @@ Field at top of Members page that allows the user to filter the members based on
 "shown" = "getoond";
 
 /* Section title on Readme page. */
-"Supported Platforms" = "iOS, iPadOS, MacOS";
+"Supported Platforms" = "iOS, iPadOS";
 
 /* Section title on Readme page */
-"The Club" = "Fotogroep Waalre";
+"The concept" = "Het concept";
 
 /* Section title on Readme page */
 "The Model" = "Voer voor nerds";
@@ -264,6 +269,9 @@ Field at top of Members page that allows the user to filter the members based on
 
 /* Button leading to Roadmap voting screen */
 "Vote on roadmap items" = "Stem op app uitbreidingen";
+
+/* Section title on Readme page */
+"Waalre" = "Waalre";
 
 /* Hint to the user if all of the Preference toggles are disabled. */
 "Warning: all member categories on the Preferences page are disabled. Please enable one or more options in Preferences." = "Waarschuwing: op de Instellingen pagina staan alle soorten leden op “niet weergeven“. Hierdoor is deze lijst leeg.";

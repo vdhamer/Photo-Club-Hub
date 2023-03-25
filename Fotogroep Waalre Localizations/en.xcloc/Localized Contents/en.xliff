@@ -2,7 +2,7 @@
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
   <file original="en.lproj/Fotogroep-Waalre-InfoPlist.strings" source-language="en" target-language="en" datatype="plaintext">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="14.3" build-num="14E5215g"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="14.3" build-num="14E222a"/>
     </header>
     <body>
       <trans-unit id="CFBundleDisplayName" xml:space="preserve">
@@ -19,7 +19,7 @@
   </file>
   <file original="en.lproj/Localizable.strings" source-language="en" target-language="en" datatype="plaintext">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="14.3" build-num="14E5215g"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="14.3" build-num="14E222a"/>
     </header>
     <body>
       <trans-unit id="%lld members (inc. ex-members)" xml:space="preserve">
@@ -46,6 +46,11 @@
         <source>Birthday:</source>
         <target>Birthday:</target>
         <note>Birthday of member (without year). Date not currently localized?</note>
+      </trans-unit>
+      <trans-unit id="Concept" xml:space="preserve">
+        <source>The concept</source>
+        <target>The concept</target>
+        <note>Section title on Readme page</note>
       </trans-unit>
       <trans-unit id="Data source: %@://%@%@/" xml:space="preserve">
         <source>Data source: %@://%@%@/</source>
@@ -98,14 +103,14 @@
         <note>Section title on Readme page.</note>
       </trans-unit>
       <trans-unit id="Paragraph_1.1" xml:space="preserve">
-        <source>Photo Club Waalre is a photography club named after Waalre, a town in the south of The Netherlands. Since 1988 its club members meet to critique each other’s photos, organize excursions, and hold yearly photo expositions.</source>
-        <target>Photo Club Waalre is a photography club named after Waalre, a town in the south of The Netherlands. Since 1988 its club members meet to critique each other’s photos, organize excursions, and hold yearly photo expositions.</target>
-        <note>First paragraph in The Club section of Readme page</note>
+        <source>Photo Club Waalre is a photography club named after Waalre, a town in the south of The Netherlands. Since 1988, its club members meet to critique each other’s photos, organize excursions, and hold yearly photo expositions.</source>
+        <target>Photo Club Waalre is a photography club named after Waalre, a town in the south of The Netherlands. Since 1988, its club members meet to critique each other’s photos, organize excursions, and hold yearly photo expositions.</target>
+        <note>First paragraph in Waalre section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_1.2" xml:space="preserve">
         <source>Originally the app only supported Photo Club Waalre (aka _Fotogroep Waalre_), but the current version supports **multiple** photo clubs. At some point the app will get a new name.</source>
         <target>Originally the app only supported Photo Club Waalre (aka _Fotogroep Waalre_), but the current version supports **multiple** photo clubs. At some point the app will get a new name.</target>
-        <note>Second paragraph in The Club section of Readme page</note>
+        <note>Second paragraph in Waalre section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_2.1" xml:space="preserve">
         <source>The goal of this app is to showcase curated work of members of photo clubs.</source>
@@ -113,29 +118,34 @@
         <note>First paragraph in The App on Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_2.2" xml:space="preserve">
-        <source>The work is organized into ***portfolios***. Each portfolio covers that part of a photographer's work that was shared within a photo club. If a photographer is (or was) a member of more than one of the supported photo clubs, the app will show _multiple_ portfolios for that photographer.</source>
-        <target>The work is organized into ***portfolios***. Each portfolio covers that part of a photographer's work that was shared within a photo club. If a photographer is (or was) a member of more than one of the supported photo clubs, the app will show _multiple_ portfolios for that photographer.</target>
+        <source>The main screen of the app shown a series of ***photo clubs***. Each photo club, in turn, contains a series of member ***portfolios***. The portfolios contain the actual images.</source>
+        <target>The main screen of the app shown a series of ***photo clubs***. Each photo club, in turn, contains a series of member ***portfolios***. The portfolios contain the actual images.</target>
         <note>Second paragraph in The App on Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_2.3" xml:space="preserve">
-        <source>Each portfolio is shown in chronological order, with the latest work shown first, and typical spans multiple years.</source>
-        <target>Each portfolio is shown in chronological order, with the latest work shown first, and typical spans multiple years.</target>
+        <source>Each portfolio thus covers the subset of the photographer's work that is associated with that photo club. A photographer could have more than one portfolio in this app, if the photographer was (at some point in time) a member of multiple photo clubs.</source>
+        <target>Each portfolio thus covers the subset of the photographer's work that is associated with that photo club. A photographer could have more than one portfolio in this app, if the photographer was (at some point in time) a member of multiple photo clubs.</target>
         <note>Third paragraph in The App on Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_2.4" xml:space="preserve">
-        <source>We try to show the portfolios with **minimal distraction**. Web sites are often less optimal for this because they need to show browser controls (e.g., an address bar or tabs) and serve multiple purposes (e.g., show club news or contact information).</source>
-        <target>We try to show the portfolios with **minimal distraction**. Web sites are often less optimal for this because they need to show browser controls (e.g., an address bar or tabs) and serve multiple purposes (e.g., show club news or contact information).</target>
+        <source>Each portfolio is shown in chronological order, with the latest work shown first, and typical spans multiple years.</source>
+        <target>Each portfolio is shown in chronological order, with the latest work shown first, and typical spans multiple years.</target>
         <note>Fourth paragraph in The App on Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_2.5" xml:space="preserve">
-        <source>For Photo Club Waalre, we chose to also include the work of former club members. By default, former members are not visible, but you can configure the app to show them.</source>
-        <target>For Photo Club Waalre, we chose to also include the work of former club members. By default, former members are not visible, but you can configure the app to show them.</target>
-        <note>Fifth paragraph in the App on Readme page</note>
+        <source>We try to show the portfolios with **minimal distraction**. Web sites are often less optimal for this because they need to show browser controls (e.g., an address bar or tabs) and serve multiple purposes (e.g., show club news or contact information).</source>
+        <target>We try to show the portfolios with **minimal distraction**. Web sites are often less optimal for this because they need to show browser controls (e.g., an address bar or tabs) and serve multiple purposes (e.g., show club news or contact information).</target>
+        <note>Fifth paragraph in The App on Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_2.6" xml:space="preserve">
+        <source>For Photo Club Waalre, we chose to also include the work of former club members. By default, former members are not visible, but you can configure the app to show them.</source>
+        <target>For Photo Club Waalre, we chose to also include the work of former club members. By default, former members are not visible, but you can configure the app to show them.</target>
+        <note>Sixth paragraph in the App on Readme page</note>
+      </trans-unit>
+      <trans-unit id="Paragraph_2.7" xml:space="preserve">
         <source>Contact us (github@vdhamer.com) if you are interested in adding support for your photo club.</source>
         <target>Contact us (github@vdhamer.com) if you are interested in adding support for your photo club.</target>
-        <note>Sixth paragraph in the App on Readme page</note>
+        <note>Seventh paragraph in the App on Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.1" xml:space="preserve">
         <source>__Web sites__
@@ -181,8 +191,8 @@ By clicking on the above button you can (anonymously) vote for improvements you 
         <note>Third paragraph in Prelude section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_5.1" xml:space="preserve">
-        <source>The app runs on iPhone and iPad and requires iOS 15.5 or higher. iOS users tend to upgrade to the latest possible iOS version, which means that the app supports devices made in the last 5 or 6 years. The app also runs on the new generation of Macs with “Apple Silicon”.</source>
-        <target>The app runs on iPhone and iPad and requires iOS 15.5 or higher. iOS users tend to upgrade to the latest possible iOS version, which means that the app supports devices made in the last 5 or 6 years. The app also runs on the new generation of Macs with “Apple Silicon”.</target>
+        <source>The app runs on iPhone and iPad and requires iOS 16.4 or higher. Most iOS users tend to upgrade to the latest possible iOS version, which means that the app supports devices made in the last 5 or 6 years.</source>
+        <target>The app runs on iPhone and iPad and requires iOS 16.4 or higher. Most iOS users tend to upgrade to the latest possible iOS version, which means that the app supports devices made in the last 5 or 6 years.</target>
         <note>First paragraph SupportedPlatforms section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_5.2" xml:space="preserve">
@@ -206,8 +216,8 @@ By clicking on the above button you can (anonymously) vote for improvements you 
         <note>Fifth paragraph SupportedPlatforms section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_5.6" xml:space="preserve">
-        <source>To put the app's device support into perspective, consider the top-6 software environments. The top-6 platforms are, in [largest-first order](https://www.youtube.com/watch?v=7S9PBgS8HS8): web, Android, Windows, iOS, iPadOS, and MacOS. MacOS's market share is the smallest of the six but is still larger than all smaller platforms combined. Only the very largest apps (like MS Word, Twitter, Minecraft, Chrome) manage to cover the full range. But many well-known apps choose to focus their resources: Photoshop (Windows, MacOS, iPadOS), WhatsApp (iOS, Android, web - kind of), Pokémon Go (Android, iOS, iPadOS - kind of). So, covering three of the top-six is a decent enough score for now.</source>
-        <target>To put the app's device support into perspective, consider the top-6 software environments. The top-6 platforms are, in [largest-first order](https://www.youtube.com/watch?v=7S9PBgS8HS8): web, Android, Windows, iOS, iPadOS, and MacOS. MacOS's market share is the smallest of the six but is still larger than all smaller platforms combined. Only the very largest apps (like MS Word, Twitter, Minecraft, Chrome) manage to cover the full range. But many well-known apps choose to focus their resources: Photoshop (Windows, MacOS, iPadOS), WhatsApp (iOS, Android, web - kind of), Pokémon Go (Android, iOS, iPadOS - kind of). So, covering three of the top-six is a decent enough score for now.</target>
+        <source>To put the app's device support into perspective, consider the top-6 software environments. The top-6 platforms are, in [largest-first order](https://www.youtube.com/watch?v=7S9PBgS8HS8): web, Android, Windows, iOS, iPadOS. Only the very largest apps (like MS Word, Twitter, Minecraft, Chrome) manage to cover the full range. But many well-known apps choose to focus their resources: Photoshop (Windows, MacOS, iPadOS), WhatsApp (iOS, Android, web - kind of), Pokémon Go (Android, iOS, iPadOS - kind of). So, covering three of the top-six is a decent enough score for now.</source>
+        <target>To put the app's device support into perspective, consider the top-6 software environments. The top-6 platforms are, in [largest-first order](https://www.youtube.com/watch?v=7S9PBgS8HS8): web, Android, Windows, iOS, iPadOS. Only the very largest apps (like MS Word, Twitter, Minecraft, Chrome) manage to cover the full range. But many well-known apps choose to focus their resources: Photoshop (Windows, MacOS, iPadOS), WhatsApp (iOS, Android, web - kind of), Pokémon Go (Android, iOS, iPadOS - kind of). So, covering three of the top-six is a decent enough score for now.</target>
         <note>Sixth paragraph SupportedPlatforms section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_6.1" xml:space="preserve">
@@ -282,8 +292,7 @@ By clicking on the above button you can (anonymously) vote for improvements you 
       <trans-unit id="Portfolios" xml:space="preserve">
         <source>Portfolios</source>
         <target>Portfolios</target>
-        <note>Section title on Readme page
-Title of page showing member portfolios</note>
+        <note>Title of page showing member portfolios</note>
       </trans-unit>
       <trans-unit id="Preferences" xml:space="preserve">
         <source>Preferences</source>
@@ -348,13 +357,8 @@ Field at top of Members page that allows the user to filter the members based on
       </trans-unit>
       <trans-unit id="Supported Platforms" xml:space="preserve">
         <source>iOS, iPadOS, MacOS</source>
-        <target>iOS, iPadOS, MacOS</target>
+        <target>iOS, iPadOS</target>
         <note>Section title on Readme page.</note>
-      </trans-unit>
-      <trans-unit id="The Club" xml:space="preserve">
-        <source>The Club</source>
-        <target>The Club</target>
-        <note>Section title on Readme page</note>
       </trans-unit>
       <trans-unit id="The Model" xml:space="preserve">
         <source>The Model</source>
@@ -364,6 +368,11 @@ Field at top of Members page that allows the user to filter the members based on
       <trans-unit id="The Prelude" xml:space="preserve">
         <source>The Prelude</source>
         <target>The Prelude</target>
+        <note>Section title on Readme page</note>
+      </trans-unit>
+      <trans-unit id="The concept" xml:space="preserve">
+        <source>The concept</source>
+        <target>The concept</target>
         <note>Section title on Readme page</note>
       </trans-unit>
       <trans-unit id="To see names here, please adapt the Search filter or enable additional categories on the Preferences page." xml:space="preserve">
@@ -380,6 +389,11 @@ Field at top of Members page that allows the user to filter the members based on
         <source>Vote on roadmap items</source>
         <target>Vote on roadmap items</target>
         <note>Button leading to Roadmap voting screen</note>
+      </trans-unit>
+      <trans-unit id="Waalre" xml:space="preserve">
+        <source>Waalre</source>
+        <target>Waalre</target>
+        <note>Section title on Readme page</note>
       </trans-unit>
       <trans-unit id="Warning: all member categories on the Preferences page are disabled. Please enable one or more options in Preferences." xml:space="preserve">
         <source>Warning: all member categories on the Preferences page are disabled. Please enable one or more options in Preferences.</source>
@@ -496,7 +510,7 @@ Default status of member within a club. Used in concatenations.</note>
   </file>
   <file original="Settings.bundle/en.lproj/Root.strings" source-language="en" target-language="en" datatype="plaintext">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="14.3" build-num="14E5215g"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="14.3" build-num="14E222a"/>
     </header>
     <body>
       <trans-unit id="About" xml:space="preserve">

@@ -22,7 +22,7 @@ struct ReadmeView: View {
                 ScrollView(.vertical, showsIndicators: true) {
                     VStack {
                         VStack { // extra hierarchy level because container View can handle max 10 Views
-                            SectionHeader(String(localized: "The Club", comment: "Section title on Readme page"),
+                            SectionHeader(String(localized: "Waalre", comment: "Section title on Readme page"),
                                           geo: geo)
 
                             Image("Waalre_map")
@@ -34,12 +34,12 @@ struct ReadmeView: View {
                                 .font(.callout.italic())
                                 .frame(width: geo.size.width, alignment: .center)
 
-                            Paragraph("1.1", comment: "First paragraph in The Club section of Readme page", geo: geo)
-                            Paragraph("1.2", comment: "Fifth paragraph in the App section of Readme page", geo: geo)
+                            Paragraph("1.1", comment: "First paragraph in Waalre section of Readme page", geo: geo)
+                            Paragraph("1.2", comment: "Fifth paragraph in Waalre section of Readme page", geo: geo)
                         }
 
                         VStack {
-                            SectionHeader(String(localized: "Portfolios", comment: "Section title on Readme page"),
+                            SectionHeader(String(localized: "The concept", comment: "Section title on Readme page"),
                                                  geo: geo)
 
                             Image("Waalre_AppIcon")
@@ -59,17 +59,19 @@ struct ReadmeView: View {
 
                             Group { // can have max 10 views within a container view
                                 Paragraph("2.1",
-                                          comment: "First paragraph in The App section of Readme page", geo: geo)
+                                          comment: "First paragraph in Concept section of Readme page", geo: geo)
                                 Paragraph("2.2",
-                                          comment: "Second paragraph in The App section of Readme page", geo: geo)
+                                          comment: "Second paragraph in Concept section of Readme page", geo: geo)
                                 Paragraph("2.3",
-                                          comment: "Third paragraph in The App section of Readme page", geo: geo)
+                                          comment: "Third paragraph in Concept section of Readme page", geo: geo)
                                 Paragraph("2.4",
-                                          comment: "Fourth paragraph in the App section of Readme page", geo: geo)
+                                          comment: "Fourth paragraph in Concept section of Readme page", geo: geo)
                                 Paragraph("2.5",
-                                          comment: "Sixth paragraph in the App section of Readme page", geo: geo)
+                                          comment: "Fifth paragraph in Concept section of Readme page", geo: geo)
                                 Paragraph("2.6",
-                                          comment: "Seventh paragraph in the App section of Readme page", geo: geo)
+                                          comment: "Sixth paragraph in Concept section of Readme page", geo: geo)
+                                Paragraph("2.7",
+                                          comment: "Seventh paragraph in Concept section of Readme page", geo: geo)
                             }
                         }
 
