@@ -6,7 +6,7 @@ Readme screen
 Maintenance
     * Disabled support (in App store) for running the iPad version on MacOS (because Photo Clubs screen crashed)
     * Fixed bug in AvdLee/Roadmap related to `statusTintColor` when status strings are localized 
-    * Built using XCode 14.3 RC and tested with iOS 16.4
+    * Built using XCode 14.3 RC and tested with iOS 16.4 RC
     * Removed WebView.swift (dead code)
     * Disabled support for running the iPad version on MacOS (because Maps crashed in Photo Clubs screen)
 ---------------------------------------------------------------------------
