@@ -15,12 +15,12 @@
 ## Bugs
 * delete a PhotoClub or Photographer gives crash due to nul Photographer. Currently .ondelete is deactivated.
 * removing an external link from the website does not remove it from core data
-* error message related to Settings: invalid mode 'kCFRunLoopCommonModes' provided to CFRunLoopRunSpecific ("Log noise")
+* error message w.r.t. Preferences: invalid mode 'kCFRunLoopCommonModes' provided to CFRunLoopRunSpecific ("Log noise")
 
 ## Functional Changes (done)
 * faster startup (less dependent on supporting website)
 * schema can support multiple photo clubs with unique/common members
-* Settings window to configure what kind of members to show per photo club
+* Preferences window to configure what kind of members to show per photo club
 * More info visible in Member list
 	* who are the club officials
     * support for honorary members

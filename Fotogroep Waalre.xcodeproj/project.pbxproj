@@ -38,7 +38,7 @@
 		D08319FD277F70A50049AB84 /* Fotogroep_Waalre_2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08319FC277F70A50049AB84 /* Fotogroep_Waalre_2Tests.swift */; };
 		D0831A07277F70A50049AB84 /* Fotogroep_Waalre_2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A06277F70A50049AB84 /* Fotogroep_Waalre_2UITests.swift */; };
 		D0831A09277F70A50049AB84 /* Fotogroep_Waalre_2UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A08277F70A50049AB84 /* Fotogroep_Waalre_2UITestsLaunchTests.swift */; };
-		D0831A1E277F72270049AB84 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A19277F72270049AB84 /* SettingsView.swift */; };
+		D0831A1E277F72270049AB84 /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A19277F72270049AB84 /* PreferencesView.swift */; };
 		D0831A1F277F72270049AB84 /* FilteredMemberPortfoliosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A1A277F72270049AB84 /* FilteredMemberPortfoliosView.swift */; };
 		D0831A20277F72270049AB84 /* PhotoClubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A1B277F72270049AB84 /* PhotoClubView.swift */; };
 		D0831A21277F72270049AB84 /* WhoIsWhoInnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A1C277F72270049AB84 /* WhoIsWhoInnerView.swift */; };
@@ -47,7 +47,7 @@
 		D0831A32277F72590049AB84 /* Photographer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A25277F72590049AB84 /* Photographer.swift */; };
 		D0831A33277F72590049AB84 /* BIMembersProvider+insertSomeHardcodedMemberData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A27277F72590049AB84 /* BIMembersProvider+insertSomeHardcodedMemberData.swift */; };
 		D0831A34277F72590049AB84 /* BIMembersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A28277F72590049AB84 /* BIMembersProvider.swift */; };
-		D0831A35277F72590049AB84 /* SettingsStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A29277F72590049AB84 /* SettingsStruct.swift */; };
+		D0831A35277F72590049AB84 /* PreferencesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A29277F72590049AB84 /* PreferencesViewModel.swift */; };
 		D0831A36277F72590049AB84 /* FGWMembersProvider+insertSomeHardcodedMemberData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A2B277F72590049AB84 /* FGWMembersProvider+insertSomeHardcodedMemberData.swift */; };
 		D0831A37277F72590049AB84 /* FGWMembersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A2C277F72590049AB84 /* FGWMembersProvider.swift */; };
 		D0831A38277F72590049AB84 /* PhotoClub.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A2D277F72590049AB84 /* PhotoClub.swift */; };
@@ -150,7 +150,7 @@
 		D0831A06277F70A50049AB84 /* Fotogroep_Waalre_2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fotogroep_Waalre_2UITests.swift; sourceTree = "<group>"; };
 		D0831A08277F70A50049AB84 /* Fotogroep_Waalre_2UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fotogroep_Waalre_2UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D0831A17277F71340049AB84 /* Fotogroep-Waalre-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Fotogroep-Waalre-Info.plist"; sourceTree = SOURCE_ROOT; };
-		D0831A19277F72270049AB84 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		D0831A19277F72270049AB84 /* PreferencesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
 		D0831A1A277F72270049AB84 /* FilteredMemberPortfoliosView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilteredMemberPortfoliosView.swift; sourceTree = "<group>"; };
 		D0831A1B277F72270049AB84 /* PhotoClubView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoClubView.swift; sourceTree = "<group>"; };
 		D0831A1C277F72270049AB84 /* WhoIsWhoInnerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhoIsWhoInnerView.swift; sourceTree = "<group>"; };
@@ -159,7 +159,7 @@
 		D0831A25277F72590049AB84 /* Photographer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photographer.swift; sourceTree = "<group>"; };
 		D0831A27277F72590049AB84 /* BIMembersProvider+insertSomeHardcodedMemberData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BIMembersProvider+insertSomeHardcodedMemberData.swift"; sourceTree = "<group>"; };
 		D0831A28277F72590049AB84 /* BIMembersProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BIMembersProvider.swift; sourceTree = "<group>"; };
-		D0831A29277F72590049AB84 /* SettingsStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsStruct.swift; sourceTree = "<group>"; };
+		D0831A29277F72590049AB84 /* PreferencesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesViewModel.swift; sourceTree = "<group>"; };
 		D0831A2B277F72590049AB84 /* FGWMembersProvider+insertSomeHardcodedMemberData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FGWMembersProvider+insertSomeHardcodedMemberData.swift"; sourceTree = "<group>"; };
 		D0831A2C277F72590049AB84 /* FGWMembersProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FGWMembersProvider.swift; sourceTree = "<group>"; };
 		D0831A2D277F72590049AB84 /* PhotoClub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoClub.swift; sourceTree = "<group>"; };
@@ -247,7 +247,7 @@
 		D05E451B27EF286B00D31327 /* SettingsView */ = {
 			isa = PBXGroup;
 			children = (
-				D0831A19277F72270049AB84 /* SettingsView.swift */,
+				D0831A19277F72270049AB84 /* PreferencesView.swift */,
 				D0DE02762789D1B30062738C /* RoleIconView.swift */,
 			);
 			path = SettingsView;
@@ -396,7 +396,7 @@
 				D0831A24277F72590049AB84 /* MemberPortfolio.swift */,
 				D0831A2D277F72590049AB84 /* PhotoClub.swift */,
 				D0831A25277F72590049AB84 /* Photographer.swift */,
-				D0831A29277F72590049AB84 /* SettingsStruct.swift */,
+				D0831A29277F72590049AB84 /* PreferencesViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -803,7 +803,7 @@
 				D0E2235427DE9139002A8600 /* PreludeView.swift in Sources */,
 				D0AE1B782788A19500E0100E /* WhoIsWho.swift in Sources */,
 				D0831A21277F72270049AB84 /* WhoIsWhoInnerView.swift in Sources */,
-				D0831A35277F72590049AB84 /* SettingsStruct.swift in Sources */,
+				D0831A35277F72590049AB84 /* PreferencesViewModel.swift in Sources */,
 				D081655F278616930078AB16 /* SinglePortfolioView.swift in Sources */,
 				D0831A47277F731C0049AB84 /* PersistenceController.swift in Sources */,
 				D0A0884B27F8C697002CC8E1 /* TestClubRotterdamMembersProvider.swift in Sources */,
@@ -812,7 +812,7 @@
 				D0A4E6F829871E9300333D7B /* TestClubDenHaagMembersProvider.swift in Sources */,
 				D08281382959CB5000D9C232 /* FGWMembersProvider+extractBirthDate.swift in Sources */,
 				D0D18C78296E1F6A00B334DB /* PhotoClubID.swift in Sources */,
-				D0831A1E277F72270049AB84 /* SettingsView.swift in Sources */,
+				D0831A1E277F72270049AB84 /* PreferencesView.swift in Sources */,
 				D0831A37277F72590049AB84 /* FGWMembersProvider.swift in Sources */,
 				D0FCF2E329B5517000F31442 /* VoteOnRoadmapView.swift in Sources */,
 				D0831A31277F72590049AB84 /* MemberPortfolio.swift in Sources */,

@@ -11,8 +11,8 @@ struct MemberPortfolioListView: View {
     @Environment(\.managedObjectContext) private var viewContext
     private var detentsList: Set<PresentationDetent> = [ .fraction(0.5), .fraction(0.70), .fraction(0.90), .large ]
 
-    @State private var showingSettings = false // controls visibility of Settings screen
-    @State private var selectedSettingsDetent = PresentationDetent.fraction(0.70) // must be element of detentsList
+    @State private var showingPreferences = false // controls visibility of Preferences screen
+    @State private var selectedPreferencesDetent = PresentationDetent.fraction(0.70) // must be element of detentsList
     @State private var showingReadme = false // controls visibility of Readme screen
     @State private var selectedReadmeDetent = PresentationDetent.fraction(0.70) // must be element of detentsList
     @State private var searchText: String = ""
@@ -29,7 +29,7 @@ struct MemberPortfolioListView: View {
         animation: .default)
     private var photoClubs: FetchedResults<PhotoClub>
 
-    @StateObject var model = SettingsViewModel()
+    @StateObject var model = PreferencesViewModel()
 
     private let toolbarItemPlacement: ToolbarItemPlacement = UIDevice.isIPad ?
         .destructiveAction : // iPad: Search field in toolbar
@@ -37,7 +37,7 @@ struct MemberPortfolioListView: View {
 
     var body: some View {
         List { // lists are automatically "Lazy"
-            FilteredMemberPortfoliosView(predicate: model.settings.memberPredicate, searchText: $searchText)
+            FilteredMemberPortfoliosView(predicate: model.preferences.memberPredicate, searchText: $searchText)
         }
         .listStyle(.plain)
         .refreshable { _ = FGWMembersProvider() } // for pull-to-refresh
@@ -50,23 +50,23 @@ struct MemberPortfolioListView: View {
             ToolbarItemGroup(placement: .navigationBarLeading) {
 
                 Button {
-                    if !showingReadme { // actually currently can't press Settings button while showingReadme
-                        showingSettings = true
+                    if !showingReadme { // actually currently can't press Preferences button while showingReadme
+                        showingPreferences = true
                     }
                 } label: {
-                    SettingsIcon()
+                    PreferencesIcon()
                 }
-                .sheet(isPresented: $showingSettings, content: {
-                    SettingsView(settings: $model.settings)
+                .sheet(isPresented: $showingPreferences, content: {
+                    PreferencesView(preferences: $model.preferences)
                     // the detents don't do anything on an iPad
-                        .presentationDetents(detentsList, selection: $selectedSettingsDetent)
-                        .presentationBackground(.regularMaterial) // doesn't work yet with SettingsView
+                        .presentationDetents(detentsList, selection: $selectedPreferencesDetent)
+                        .presentationBackground(.regularMaterial) // doesn't work yet with PreferencesView
                         .presentationCornerRadius(40)
                         .presentationDragIndicator(.visible) // show drag indicator
                 })
 
                 Button {
-                    if !showingSettings { // actually currently can't press Settings button while showingReadme
+                    if !showingPreferences { // actually currently can't press Preferences button while showingReadme
                         showingReadme = true
                     }
                 } label: {
@@ -78,8 +78,8 @@ struct MemberPortfolioListView: View {
                     ReadmeView()
                     // the detents don't do anything on an iPad
                         .presentationDetents(detentsList, selection: $selectedReadmeDetent)
-//                        .presentationBackground(.thickMaterial) // doesn't work yet with ReadmeView
-//                        .presentationCornerRadius(40) // compiler can't handle this yet
+                        .presentationBackground(.thickMaterial) // doesn't work yet with ReadmeView
+                        .presentationCornerRadius(40) // compiler can't handle this yet
                         .presentationDragIndicator(.visible) // show drag indicator
                 })
             }
@@ -128,7 +128,7 @@ struct MemberListView_Previews: PreviewProvider {
     }
 }
 
-struct SettingsIcon: View {
+struct PreferencesIcon: View {
     @Environment(\.isEnabled) private var isEnabled: Bool
 
     var body: some View {

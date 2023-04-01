@@ -21,7 +21,7 @@ struct FotogroepWaalreApp: App {
         viewContext.undoManager = nil // nil by default on iOS
         viewContext.shouldDeleteInaccessibleFaults = true
 
-        // update version number shown in Settings
+        // update version number shown in iOS Settings app
         UserDefaults.standard.set(Bundle.main.fullVersion, forKey: "version_preference")
     }
 

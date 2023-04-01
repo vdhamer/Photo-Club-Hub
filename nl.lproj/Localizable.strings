@@ -1,7 +1,7 @@
-/* Shown when "Show club officers" entry is missing in Settings */
+/* Shown when "Show club officers" entry is missing in Preferences */
 "“Current members” includes “club officers”" = "De optie “huidige leden“ bevat “bestuursleden“";
 
-/* Shown when "Show deceased members" entry is missing in Settings */
+/* Shown when "Show deceased members" entry is missing in Preferences */
 "“Former members” includes “deceased members”" = "De optie “ex-leden“ bevat “overleden leden“";
 
 /* <count> members (including all types of members) within photo club */
@@ -71,7 +71,7 @@
 Default status of member within a club. Used in concatenations. */
 "member" = "lid";
 
-/* In Settings, above toggles like "Show former members" */
+/* In Preferences, above toggles like "Show former members" */
 "Member categories" = "Lidmaatschapstypen";
 
 /* Statistics at end of section of FilteredMemberPortfoliosView */
@@ -82,9 +82,6 @@ Default status of member within a club. Used in concatenations. */
 
 /* <person> of <photo club> */
 "of2" = "van";
-
-/* Closes alert dialog if user tries to cast a vote. */
-"OK" = "Akoord";
 
 /* Header of section of Who's Who screen */
 "One photographer" = "Één fotograaf";
@@ -222,25 +219,25 @@ Field at top of Members page that allows the user to filter the members based on
 /* Administrative role of member within a club. Used as part of concatenations. */
 "secretary" = "secretaris";
 
-/* Label of toggle in Settings */
+/* Label of toggle in Preferences */
 "Show aspiring members" = "Toon aspirant-leden";
 
-/* Label of toggle in Settings */
+/* Label of toggle in Preferences */
 "Show club officers" = "Toon bestuursleden";
 
-/* Label of toggle in Settings */
+/* Label of toggle in Preferences */
 "Show current members" = "Toon huidige leden";
 
-/* Label of toggle in Settings */
+/* Label of toggle in Preferences */
 "Show deceased members" = "Toon overleden leden";
 
-/* Label of toggle in Settings */
+/* Label of toggle in Preferences */
 "Show external coaches" = "Toon externe mentoren";
 
-/* Label of toggle in Settings */
+/* Label of toggle in Preferences */
 "Show former members" = "Toon ex-leden";
 
-/* Label of toggle in Settings */
+/* Label of toggle in Preferences */
 "Show honorary members" = "Toon ereleden";
 
 /* X member(s) shown (due to various forms of filtering) */
@@ -270,9 +267,6 @@ Field at top of Members page that allows the user to filter the members based on
 /* Administrative role of member within a club. Used as part of concatenations. */
 "vice-chairman" = "vicevoorzitter";
 
-/* Alert dialog title. Shown if user tries to cast a vote. */
-"Vote for this?" = "Hierop stemmen?";
-
 /* Button leading to Roadmap voting screen */
 "Vote on roadmap items" = "Stem op app uitbreidingen";
 
@@ -285,9 +279,6 @@ Field at top of Members page that allows the user to filter the members based on
 /* Title of page with list of photographers */
 "Who's Who" = "Namenlijst";
 
-/* Text at top of Roadmap screen */
+/* Instructions at top of Roadmap screen */
 "You can vote here on which roadmap items you would like to see. Please read the entire list before voting bacause you cannot undo a vote. Don't vote for more than half the items: the data helps us prioritize (this isn't about \"liking\" individual items)." = "Stem hier op de nuttigste uitbreidingen in deze app. Bekijk vóór het stemmen de gehele lijst: een afgegeven stem kan niet ingetrokken worden. Stem hooguit op de helfd van de mogelijke uitbreidingen: het gaat ons om de prioriteit - het zijn dus geen \"likes\".";
-
-/* Alert dialog message. Shown if user tries to cast a vote. */
-"You cannot undo this vote." = "Uitgebrachte stem kan niet ongedaan gemaakt worden.";
 

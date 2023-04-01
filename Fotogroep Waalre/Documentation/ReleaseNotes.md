@@ -44,7 +44,7 @@ Portfolios screen
     * Section headers on Portfolios page are now gray to attract less attention
 Readme screen
     * Removed Done button
-Settings screen
+Preferences screen
     * Removed Done button
 Maintenance
     * Tested against XCode 14.3 beta 2 and Swift 5.8
@@ -67,7 +67,7 @@ Who's Who screen
     * Temporarily added count of names at top of screen
 Readme screen
     * Converted to `bottom sheet`
-Settings screen
+Preferences screen
     * Converted to `bottom sheet`
 Maintenance
     * Tested against XCode 14.3 beta 1
@@ -335,7 +335,7 @@ This is build 3974 in Apple's App Store
 This is build 3966 in Apple's App Store
 * new Search feature to search the lists of names
 * the web addresses of club-external websites are now displayed (when the info is available)
-* minor user interface improvements: Settings page size, lilac theme color for Photo Clubs
+* minor user interface improvements: Preferences page size, lilac theme color for Photo Clubs
 * added club-internal websites for two persons as demo within the Easter egg
 * internal improvements: SwiftUI previews, full set of localization comments, colors stored in Assets
 * internal: removed test code for non-existent photo club "Old Vic" in Reykjavík
@@ -348,7 +348,7 @@ This is build 3956 in Apple's App Store
 * highlights a person's name if app "guesses" this may be the device owner (based on device's name).
 * bug fix: deceased members were not displayable (even with Preferences toggle set).
 * Easter egg: pull-to-refresh the map page for basic demo of multi-club support. Swipe individual members left to delete.
-* Settings app now displays version and copyright information of the Photo Club Waalre app.
+* iOS Settings app now displays version and copyright information of the Photo Club Waalre app.
 * App Store: fixed issue with some screenshots still showing the old version 1.x
 * Internal improvements: schema migration (like firstName_ to givenName_).
 * And member roles converted to enums for robustness.
@@ -365,7 +365,7 @@ This is build 3566 in Apple's App Store
 * moved lists of members / photoclubs / photographers to separate pages
 * added entitlement for app background fetches (not working?)
 * display home location of any supported photo club (with surrounding photo clubs) on a map
-* added icons to Settings popup
+* added icons to Preferences popup
 * added 3000 to build number to allow shipping as Fotogroep Waalre bundel
 ---------------------------------------------------------------------------
 ### 2.0.0 (not on Github) 01-01-22
