@@ -347,8 +347,8 @@ Field at top of Members page that allows the user to filter the members based on
         <note>Label of toggle in Settings</note>
       </trans-unit>
       <trans-unit id="Supported Platforms" xml:space="preserve">
-        <source>iOS, iPadOS, MacOS</source>
-        <target>iOS, iPadOS, MacOS</target>
+        <source>iOS, iPadOS</source>
+        <target>iOS, iPadOS</target>
         <note>Section title on Readme page.</note>
       </trans-unit>
       <trans-unit id="The Club" xml:space="preserve">
@@ -376,6 +376,11 @@ Field at top of Members page that allows the user to filter the members based on
         <target>To see names here, please enable additional categories on the Preferences page.</target>
         <note>Hint to the user if the database returns zero Members with unused Search filter.</note>
       </trans-unit>
+      <trans-unit id="Vote for this?" xml:space="preserve">
+        <source>Vote for this?</source>
+        <target>Vote for this?</target>
+        <note>Alert dialog title. Shown if user tries to cast a vote.</note>
+      </trans-unit>
       <trans-unit id="Vote on roadmap items" xml:space="preserve">
         <source>Vote on roadmap items</source>
         <target>Vote on roadmap items</target>
@@ -395,6 +400,11 @@ Field at top of Members page that allows the user to filter the members based on
         <source>You can vote here on roadmap items that you would like to see. Please read the entire list before voting bacause you cannot undo a vote. Don't vote for more than half the items: the data helps us prioritize (this isn't about "liking" individual items).</source>
         <target>You can vote here on roadmap items that you would like to see. Please read the entire list before voting bacause you cannot undo a vote. Don't vote for more than half the items: the data helps us prioritize (this isn't about "liking" individual items).</target>
         <note>Text at top of Roadmap screen</note>
+      </trans-unit>
+      <trans-unit id="You cannot undo this vote." xml:space="preserve">
+        <source>You cannot undo this vote.</source>
+        <target>You cannot undo this vote.</target>
+        <note>Alert dialog message. Shown if user tries to cast a vote.</note>
       </trans-unit>
       <trans-unit id="admin" xml:space="preserve">
         <source>admin</source>
