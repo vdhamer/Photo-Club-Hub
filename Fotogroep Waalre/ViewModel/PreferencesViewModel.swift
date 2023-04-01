@@ -1,5 +1,5 @@
 //
-//  SettingsStruct.swift
+//  PreferencesViewModel.swift
 //  Fotogroep Waalre
 //
 //  Created by Peter van den Hamer on 23/12/2021.
@@ -8,11 +8,11 @@
 import Foundation // for @Published and ObservableObject
 import CoreData // for NSManagedObject
 
-class SettingsViewModel: ObservableObject {
-    @Published("settings") var settings: SettingsStruct = .defaultValue
+class PreferencesViewModel: ObservableObject {
+    @Published("preferences") var preferences: PreferencesStruct = .defaultValue
 }
 
-struct SettingsStruct: Codable { // order in which they are shown on Preferences page
+struct PreferencesStruct: Codable { // order in which they are shown on Preferences page
     var showCurrentMembers: Bool {
         didSet {
             showOfficers = showCurrentMembers // officers are current members
@@ -31,7 +31,7 @@ struct SettingsStruct: Codable { // order in which they are shown on Preferences
     var showDeceasedMembers: Bool
     var showExternalCoaches: Bool
 
-    static let defaultValue = SettingsStruct( // has to match order of declaration
+    static let defaultValue = PreferencesStruct( // has to match order of declaration
         showCurrentMembers: true,
         showOfficers: true,
         showAspiringMembers: true,
@@ -40,17 +40,6 @@ struct SettingsStruct: Codable { // order in which they are shown on Preferences
         showDeceasedMembers: false,
         showExternalCoaches: false
     )
-
-    var nothingEnabled: Bool { // true if all showXXX options are off, used to disable Done button in Settings
-        let anythingVisible = showCurrentMembers ||
-                              showOfficers ||
-                              showAspiringMembers ||
-                              showHonoraryMembers ||
-                              showFormerMembers ||
-                              showDeceasedMembers ||
-                              showExternalCoaches
-        return !anythingVisible
-    }
 
     var memberPredicate: NSPredicate {
         var format = ""

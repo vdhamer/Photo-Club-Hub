@@ -13,7 +13,7 @@ struct WhoIsWho: View {
     @State private var showingMembers = false
     var searchText: Binding<String>
 
-    @StateObject var model = SettingsViewModel()
+    @StateObject var model = PreferencesViewModel()
     private var navigationTitle = String(localized: "Who's Who", comment: "Title of page with list of photographers")
 
     init(searchText: Binding<String>, navigationTitle: String? = nil) {
@@ -26,7 +26,7 @@ struct WhoIsWho: View {
     var body: some View {
         VStack {
             List { // lists are automatically "Lazy"
-                WhoIsWhoInnerView(predicate: model.settings.photographerPredicate, searchText: searchText)
+                WhoIsWhoInnerView(predicate: model.preferences.photographerPredicate, searchText: searchText)
                 Text("""
                      Information about a photographer's links to a photo club \
                      can be found on the Portfolio page. This page contains club-independent information \

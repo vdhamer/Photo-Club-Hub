@@ -186,7 +186,7 @@ Usage of the various screens in the user interface:
   There is also an _autoplay_ mode for an automatic slide show. This screen is (for Fotogroep Waalre)
   currently based on a commercial Javascript module (Juicebox Pro) that is normally used on websites.
 
-- The `Settings` screen allows you to configure which types of portfolios you want to include in the
+- The `Preferences` screen allows you to configure which types of portfolios you want to include in the
   Portfolios screen. You can, for example, choose to include former members in addition to
   the default of current members.
 

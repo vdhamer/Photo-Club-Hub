@@ -2,7 +2,7 @@
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
   <file original="en.lproj/Fotogroep-Waalre-InfoPlist.strings" source-language="en" target-language="en" datatype="plaintext">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="14.3" build-num="14E222a"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="14.3" build-num="14E222b"/>
     </header>
     <body>
       <trans-unit id="CFBundleDisplayName" xml:space="preserve">
@@ -19,7 +19,7 @@
   </file>
   <file original="en.lproj/Localizable.strings" source-language="en" target-language="en" datatype="plaintext">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="14.3" build-num="14E222a"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="14.3" build-num="14E222b"/>
     </header>
     <body>
       <trans-unit id="%lld members (inc. ex-members)" xml:space="preserve">
@@ -90,12 +90,7 @@
       <trans-unit id="Member categories" xml:space="preserve">
         <source>Member categories</source>
         <target>Member categories</target>
-        <note>In Settings, above toggles like "Show former members"</note>
-      </trans-unit>
-      <trans-unit id="OK" xml:space="preserve">
-        <source>OK</source>
-        <target>OK</target>
-        <note>Closes alert dialog if user tries to cast a vote.</note>
+        <note>In Preferences, above toggles like "Show former members"</note>
       </trans-unit>
       <trans-unit id="One photographer" xml:space="preserve">
         <source>One photographer</source>
@@ -328,37 +323,37 @@ Field at top of Members page that allows the user to filter the members based on
       <trans-unit id="Show aspiring members" xml:space="preserve">
         <source>Show aspiring members</source>
         <target>Show aspiring members</target>
-        <note>Label of toggle in Settings</note>
+        <note>Label of toggle in Preferences</note>
       </trans-unit>
       <trans-unit id="Show club officers" xml:space="preserve">
         <source>Show club officers</source>
         <target>Show club officers</target>
-        <note>Label of toggle in Settings</note>
+        <note>Label of toggle in Preferences</note>
       </trans-unit>
       <trans-unit id="Show current members" xml:space="preserve">
         <source>Show current members</source>
         <target>Show current members</target>
-        <note>Label of toggle in Settings</note>
+        <note>Label of toggle in Preferences</note>
       </trans-unit>
       <trans-unit id="Show deceased members" xml:space="preserve">
         <source>Show deceased members</source>
         <target>Show deceased members</target>
-        <note>Label of toggle in Settings</note>
+        <note>Label of toggle in Preferences</note>
       </trans-unit>
       <trans-unit id="Show external coaches" xml:space="preserve">
         <source>Show external coaches</source>
         <target>Show external coaches</target>
-        <note>Label of toggle in Settings</note>
+        <note>Label of toggle in Preferences</note>
       </trans-unit>
       <trans-unit id="Show former members" xml:space="preserve">
         <source>Show former members</source>
         <target>Show former members</target>
-        <note>Label of toggle in Settings</note>
+        <note>Label of toggle in Preferences</note>
       </trans-unit>
       <trans-unit id="Show honorary members" xml:space="preserve">
         <source>Show honorary members</source>
         <target>Show honorary members</target>
-        <note>Label of toggle in Settings</note>
+        <note>Label of toggle in Preferences</note>
       </trans-unit>
       <trans-unit id="Supported Platforms" xml:space="preserve">
         <source>iOS, iPadOS</source>
@@ -390,11 +385,6 @@ Field at top of Members page that allows the user to filter the members based on
         <target>To see names here, please enable additional categories on the Preferences page.</target>
         <note>Hint to the user if the database returns zero Members with unused Search filter.</note>
       </trans-unit>
-      <trans-unit id="Vote for this?" xml:space="preserve">
-        <source>Vote for this?</source>
-        <target>Vote for this?</target>
-        <note>Alert dialog title. Shown if user tries to cast a vote.</note>
-      </trans-unit>
       <trans-unit id="Vote on roadmap items" xml:space="preserve">
         <source>Vote on roadmap items</source>
         <target>Vote on roadmap items</target>
@@ -415,15 +405,10 @@ Field at top of Members page that allows the user to filter the members based on
         <target>Who's Who</target>
         <note>Title of page with list of photographers</note>
       </trans-unit>
-      <trans-unit id="You can vote here on roadmap items that you would like to see. Please read the entire list before voting bacause you cannot undo a vote. Don't vote for more than half the items: the data helps us prioritize (this isn't about &quot;liking&quot; individual items)." xml:space="preserve">
-        <source>You can vote here on roadmap items that you would like to see. Please read the entire list before voting bacause you cannot undo a vote. Don't vote for more than half the items: the data helps us prioritize (this isn't about "liking" individual items).</source>
-        <target>You can vote here on roadmap items that you would like to see. Please read the entire list before voting bacause you cannot undo a vote. Don't vote for more than half the items: the data helps us prioritize (this isn't about "liking" individual items).</target>
-        <note>Text at top of Roadmap screen</note>
-      </trans-unit>
-      <trans-unit id="You cannot undo this vote." xml:space="preserve">
-        <source>You cannot undo this vote.</source>
-        <target>You cannot undo this vote.</target>
-        <note>Alert dialog message. Shown if user tries to cast a vote.</note>
+      <trans-unit id="You can vote here on which roadmap items you would like to see. Please read the entire list before voting bacause you cannot undo a vote. Don't vote for more than half the items: the data helps us prioritize (this isn't about &quot;liking&quot; individual items)." xml:space="preserve">
+        <source>You can vote here on which roadmap items you would like to see. Please read the entire list before voting bacause you cannot undo a vote. Don't vote for more than half the items: the data helps us prioritize (this isn't about "liking" individual items).</source>
+        <target>You can vote here on which roadmap items you would like to see. Please read the entire list before voting bacause you cannot undo a vote. Don't vote for more than half the items: the data helps us prioritize (this isn't about "liking" individual items).</target>
+        <note>Instructions at top of Roadmap screen</note>
       </trans-unit>
       <trans-unit id="admin" xml:space="preserve">
         <source>admin</source>
@@ -514,18 +499,18 @@ Default status of member within a club. Used in concatenations.</note>
       <trans-unit id="“Current members” includes “club officers”" xml:space="preserve">
         <source>“Current members” includes “club officers”</source>
         <target>“Current members” includes “club officers”</target>
-        <note>Shown when "Show club officers" entry is missing in Settings</note>
+        <note>Shown when "Show club officers" entry is missing in Preferences</note>
       </trans-unit>
       <trans-unit id="“Former members” includes “deceased members”" xml:space="preserve">
         <source>“Former members” includes “deceased members”</source>
         <target>“Former members” includes “deceased members”</target>
-        <note>Shown when "Show deceased members" entry is missing in Settings</note>
+        <note>Shown when "Show deceased members" entry is missing in Preferences</note>
       </trans-unit>
     </body>
   </file>
   <file original="Settings.bundle/en.lproj/Root.strings" source-language="en" target-language="en" datatype="plaintext">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="14.3" build-num="14E222a"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="14.3" build-num="14E222b"/>
     </header>
     <body>
       <trans-unit id="About" xml:space="preserve">

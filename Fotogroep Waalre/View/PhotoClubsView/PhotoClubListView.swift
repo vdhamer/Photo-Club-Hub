@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PhotoClubListView: View {
     @Environment(\.managedObjectContext) private var viewContext
-    @StateObject var model = SettingsViewModel()
+    @StateObject var model = PreferencesViewModel()
 
     @FetchRequest(
         sortDescriptors: [SortDescriptor(\.priority_, order: .reverse), // highest priority first
@@ -27,7 +27,7 @@ struct PhotoClubListView: View {
         if predicate != nil {
             self.predicate = predicate!
         } else {
-            self.predicate = model.settings.photoClubPredicate // dummy data for Preview
+            self.predicate = model.preferences.photoClubPredicate // dummy data for Preview
         }
         if let navigationTitle {
             self.navigationTitle = navigationTitle
@@ -37,7 +37,7 @@ struct PhotoClubListView: View {
     var body: some View {
         Group {
             List { // lists are "Lazy" automatically
-                PhotoClubView(predicate: model.settings.photoClubPredicate)
+                PhotoClubView(predicate: model.preferences.photoClubPredicate)
                 Text("PhotoClubs_Caption", comment: "Shown in gray at the bottom of the Photo Club page.")
                     .foregroundColor(.gray)
             }
