@@ -193,7 +193,7 @@
   },
   {
     "id": "9",
-    "title": "Select/deselect photo clubs",
+    "title": "Hide/remove photo club",
     "localizedTitle": [
       {
         "language": "en",
@@ -224,6 +224,33 @@
       {
         "language": "nl",
         "value": "Men moet kunnen kiezen welke clubs of individuele leden te 'volgen'. Dit is pas nodig als de app veel clubs en heel veel clubleden omvat."
+      }
+    ],
+    "isFinished": false
+  },
+  {
+    "id": "10",
+    "title": "MacOS support",
+    "localizedTitle": [
+      {
+        "language": "en",
+        "value": "MacOS support"
+      },
+      {
+        "language": "nl",
+        "value": "MacOS ondersteuning"
+      }
+    ],
+    "status": "?",
+    "description": "Support notebooks and desktops with Apple Silicon.",
+    "localizedDescription": [
+      {
+        "language": "en",
+        "value": "Support notebooks and desktops with Apple Silicon."
+      },
+      {
+        "language": "nl",
+        "value": "Ondersteuning voor de Mac (met Apple Silicon)."
       }
     ],
     "isFinished": false

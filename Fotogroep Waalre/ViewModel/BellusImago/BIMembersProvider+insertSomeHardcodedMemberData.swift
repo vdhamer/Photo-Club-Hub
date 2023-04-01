@@ -18,7 +18,7 @@ extension BIMembersProvider { // fill with some initial hard-coded content
     func insertSomeHardcodedMemberData(biBackgroundContext: NSManagedObjectContext) {
         let clubNickname = BIMembersProvider.photoClubBellusImagoIdPlus.nickname
         biBackgroundContext.perform {
-            print("\(clubNickname): starting insertSomeHardcodedMemberData() in background")
+            ifDebugPrint("\(clubNickname): starting insertSomeHardcodedMemberData() in background")
             self.insertSomeHardcodedMemberDataCommon(biBackgroundContext: biBackgroundContext, commit: true)
         }
     }
@@ -66,7 +66,7 @@ extension BIMembersProvider { // fill with some initial hard-coded content
                 if biBackgroundContext.hasChanges {
                     try biBackgroundContext.save() // commit all changes
                 }
-                print("\(clubNickname): completed insertSomeHardcodedMemberData()")
+                ifDebugPrint("\(clubNickname): completed insertSomeHardcodedMemberData()")
             } catch {
                 fatalError("\(clubNickname): ERROR - failed to save changes to Core Data")
             }

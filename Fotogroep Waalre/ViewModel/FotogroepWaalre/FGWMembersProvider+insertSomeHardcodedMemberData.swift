@@ -12,9 +12,9 @@ extension FGWMembersProvider { // fill with some initial hard-coded content
 
     func insertSomeHardcodedMemberData(fgwBackgroundContext: NSManagedObjectContext, commit: Bool) {
         fgwBackgroundContext.performAndWait { // done asynchronously by CoreData (.perform also works)
-            print("Fotogroep Waalre: starting insertSomeHardcodedMemberData() in background")
+            ifDebugPrint("Fotogroep Waalre: starting insertSomeHardcodedMemberData() in background")
             insertSomeHardcodedMemberDataCommon(fgwBackgroundContext: fgwBackgroundContext, commit: commit)
-            print("Fotogroep Waalre: completed insertSomeHardcodedMemberData()")
+            ifDebugPrint("Fotogroep Waalre: completed insertSomeHardcodedMemberData() in background")
         }
     }
 

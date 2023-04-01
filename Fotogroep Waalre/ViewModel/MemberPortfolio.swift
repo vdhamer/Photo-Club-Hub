@@ -314,7 +314,7 @@ extension MemberPortfolio {
         guard photoClub == "Fotogroep Waalre" else { return } // code needs closure per photo club (see issue)
 
         if let urlIndex = URL(string: self.memberWebsite.absoluteString + "config.xml") { // assume JuiceBox Pro
-            print("\(photoClub): starting refreshFirstImage() \(urlIndex.absoluteString) in background")
+            ifDebugPrint("\(photoClub): starting refreshFirstImage() \(urlIndex.absoluteString) in background")
 
             var results: (utfContent: Data?, urlResponse: URLResponse?)? = (nil, nil)
             results = try? await URLSession.shared.data(from: urlIndex)
@@ -326,7 +326,7 @@ extension MemberPortfolio {
             let xmlContent = String(data: results!.utfContent! as Data,
                                     encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue))!
             parseXMLContent(xmlContent: xmlContent, member: self)
-            print("\(photoClub): completed refreshFirstImage() \(urlIndex.absoluteString)")
+            ifDebugPrint("\(photoClub): completed refreshFirstImage() \(urlIndex.absoluteString)")
         }
     }
 

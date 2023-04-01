@@ -38,6 +38,5 @@ struct SinglePortfolioView_Previews: PreviewProvider {
                 .navigationBarTitle(String("SinglePortfolioView")) // avoid localization
                 .navigationBarTitleDisplayMode(.large)
         }
-//        .navigationViewStyle(.stack)
     }
 }
