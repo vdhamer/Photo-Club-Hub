@@ -98,5 +98,5 @@
 "PhotoClubs_Caption" = "① You can unlock/lock a map's scrolling and panning features using the Lock icon.\n② To add extra photo clubs for testing purposes, drag down and release the top of the page.\n③ An individiual photo club can be deleted by first deleting (swipe left) all linked Portfolios on the Portfolio page, and then deleting (swipe left) the photo club itself on this page.";
 
 /* Section title on Readme page. */
-"Supported Platforms" = "iOS, iPadOS, MacOS";
+"Supported Platforms" = "iOS, iPadOS";
 

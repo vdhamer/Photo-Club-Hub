@@ -57,19 +57,12 @@ struct MemberPortfolioListView: View {
                     SettingsIcon()
                 }
                 .sheet(isPresented: $showingSettings, content: {
-                    if #available(iOS 16.4, *) {
-                        SettingsView(settings: $model.settings)
-                        // the detents don't do anything on an iPad
-                            .presentationDetents(detentsList, selection: $selectedSettingsDetent)
-//                            .presentationBackground(.regularMaterial) // doesn't work yet with SettingsView
-//                            .presentationCornerRadius(40)
-                            .presentationDragIndicator(.visible) // show drag indicator
-                    } else {
-                        SettingsView(settings: $model.settings)
-                        // the detents don't do anything on an iPad
-                            .presentationDetents(detentsList, selection: $selectedSettingsDetent)
-                            .presentationDragIndicator(.visible) // show drag indicator
-                    }
+                    SettingsView(settings: $model.settings)
+                    // the detents don't do anything on an iPad
+                        .presentationDetents(detentsList, selection: $selectedSettingsDetent)
+                        .presentationBackground(.regularMaterial) // doesn't work yet with SettingsView
+                        .presentationCornerRadius(40)
+                        .presentationDragIndicator(.visible) // show drag indicator
                 })
 
                 Button {

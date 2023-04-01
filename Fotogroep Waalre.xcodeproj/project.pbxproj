@@ -24,6 +24,7 @@
 		D06061EA28A0456C00A675A7 /* FGWPrivateMembersURL3.txt in Resources */ = {isa = PBXBuildFile; fileRef = D06061E928A0456C00A675A7 /* FGWPrivateMembersURL3.txt */; };
 		D06061ED28A05D4600A675A7 /* String+Paths.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06061EC28A05D4600A675A7 /* String+Paths.swift */; };
 		D06754A02942B23F00C0AB08 /* FGWMembersProvide+enumHTMLPageLoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D067549F2942B23F00C0AB08 /* FGWMembersProvide+enumHTMLPageLoadingState.swift */; };
+		D075D6E529D8744300CE8700 /* Roadmap in Frameworks */ = {isa = PBXBuildFile; productRef = D075D6E429D8744300CE8700 /* Roadmap */; };
 		D0795CEC294FCCC200FA62A8 /* ShapeStyle+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0795CEB294FCCC200FA62A8 /* ShapeStyle+Colors.swift */; };
 		D081655B278611150078AB16 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D081655A278611150078AB16 /* WebView.swift */; };
 		D081655F278616930078AB16 /* SinglePortfolioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D081655E278616930078AB16 /* SinglePortfolioView.swift */; };
@@ -63,7 +64,6 @@
 		D0ADF4AE27922DCA00535432 /* MemberRolesAndStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ADF4AD27922DCA00535432 /* MemberRolesAndStatus.swift */; };
 		D0AE1B7527889E8600E0100E /* PhotoClubListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AE1B7427889E8600E0100E /* PhotoClubListView.swift */; };
 		D0AE1B782788A19500E0100E /* WhoIsWho.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AE1B772788A19500E0100E /* WhoIsWho.swift */; };
-		D0B03E9829CA5FD600BF3259 /* Roadmap in Frameworks */ = {isa = PBXBuildFile; productRef = D0B03E9729CA5FD600BF3259 /* Roadmap */; };
 		D0B260B72958FC2D00B73E1A /* FGWMembersProvider+extractName.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B260B62958FC2D00B73E1A /* FGWMembersProvider+extractName.swift */; };
 		D0B52494277F9A4B00927BCA /* Fotogroep-Waalre-InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0B52492277F9A4B00927BCA /* Fotogroep-Waalre-InfoPlist.strings */; };
 		D0B52497277F9A4B00927BCA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0B52495277F9A4B00927BCA /* Localizable.strings */; };
@@ -214,7 +214,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0B03E9829CA5FD600BF3259 /* Roadmap in Frameworks */,
+				D075D6E529D8744300CE8700 /* Roadmap in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -576,7 +576,7 @@
 			);
 			name = "Fotogroep Waalre";
 			packageProductDependencies = (
-				D0B03E9729CA5FD600BF3259 /* Roadmap */,
+				D075D6E429D8744300CE8700 /* Roadmap */,
 			);
 			productName = "Fotogroep Waalre 2";
 			productReference = D08319E3277F70A30049AB84 /* Fotogroep Waalre.app */;
@@ -652,7 +652,7 @@
 			);
 			mainGroup = D08319DA277F70A30049AB84;
 			packageReferences = (
-				D0B03E9629CA5FD600BF3259 /* XCRemoteSwiftPackageReference "Roadmap" */,
+				D075D6E329D8744300CE8700 /* XCRemoteSwiftPackageReference "Roadmap" */,
 			);
 			productRefGroup = D08319E4277F70A30049AB84 /* Products */;
 			projectDirPath = "";
@@ -940,7 +940,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -997,7 +997,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1029,7 +1029,7 @@
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1068,7 +1068,7 @@
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1204,7 +1204,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		D0B03E9629CA5FD600BF3259 /* XCRemoteSwiftPackageReference "Roadmap" */ = {
+		D075D6E329D8744300CE8700 /* XCRemoteSwiftPackageReference "Roadmap" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/vdhamer/Roadmap";
 			requirement = {
@@ -1215,9 +1215,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		D0B03E9729CA5FD600BF3259 /* Roadmap */ = {
+		D075D6E429D8744300CE8700 /* Roadmap */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D0B03E9629CA5FD600BF3259 /* XCRemoteSwiftPackageReference "Roadmap" */;
+			package = D075D6E329D8744300CE8700 /* XCRemoteSwiftPackageReference "Roadmap" */;
 			productName = Roadmap;
 		};
 /* End XCSwiftPackageProductDependency section */

@@ -9,40 +9,45 @@ import SwiftUI
 import Roadmap
 
 struct VoteOnRoadmapView: View {
-    static let useOnlineList = true // online allows updates, but avoids confusion if device is offline
-
-    let configuration = RoadmapConfiguration(
-                            roadmapJSONURL: VoteOnRoadmapView.useOnlineList ? // JSON file with list of features
-                                URL(string: "https://simplejsoncms.com/api/vnlg2fq62s")! : // password protected
-                                Bundle.main.url(forResource: "Roadmap",
-                                                withExtension: "json")!,
-                            voter: CustomVoter(namespace: "com.vdhamer.photo_clubs_vote_on_features"),
-                            style: RoadmapStyle(icon: Image(systemName: "circle.square.fill"),
-                                                titleFont: RoadmapTemplate.standard.style.titleFont.italic(),
-                                                numberFont: RoadmapTemplate.standard.style.numberFont,
-                                                statusFont: RoadmapTemplate.standard.style.statusFont,
-                                                statusTintColor: lookupStatusTintColor, // function name
-                                                cornerRadius: 10,
-                                                cellColor: RoadmapTemplate.standard.style.cellColor, // cell background
-                                                selectedColor: RoadmapTemplate.standard.style.selectedForegroundColor,
-                                                tint: RoadmapTemplate.standard.style.tintColor), // voting icon
-                            shuffledOrder: true,
-                            allowVotes: true,
-                            allowSearching: true)
+    static let useOnlineList = true // online allows updates, but gives empty page if device is offline
 
     private let title = String(localized: "Roadmap Items", comment: "Title of Roadmap screen")
     private let headerText = String(localized:
                               """
-                              You can vote here on roadmap items that you would like to see. \
+                              You can vote here on which roadmap items you would like to see. \
                               Please read the entire list before voting bacause you cannot undo a vote. \
                               Don't vote for more than half the items: the data helps us \
                               prioritize (this isn't about \"liking\" individual items).
                               """,
-                              comment: "Text at top of Roadmap screen")
+                              comment: "Instructions at top of Roadmap screen")
+
+    @State var showingConfirmVote = false
+    static var configuration: RoadmapConfiguration? // nil gets overwritten during init() so we can have access to self
+
+    init() {
+        VoteOnRoadmapView.configuration = RoadmapConfiguration(
+            roadmapJSONURL: VoteOnRoadmapView.useOnlineList ? // JSON file with list of features
+                            URL(string: "https://simplejsoncms.com/api/vnlg2fq62s")! : // password protected
+                            Bundle.main.url(forResource: "Roadmap", withExtension: "json")!,
+            voter: CustomVoter(namespace: "com.vdhamer.photo_clubs_vote_on_features_dummy"),
+            style: RoadmapStyle(icon: Image(systemName: "circle.square.fill"),
+                                titleFont: RoadmapTemplate.standard.style.titleFont.italic(),
+                                numberFont: RoadmapTemplate.standard.style.numberFont,
+                                statusFont: RoadmapTemplate.standard.style.statusFont,
+                                statusTintColor: lookupStatusTintColor, // function name
+                                cornerRadius: 10,
+                                cellColor: RoadmapTemplate.standard.style.cellColor, // cell background
+                                selectedColor: RoadmapTemplate.standard.style.selectedForegroundColor,
+                                tint: RoadmapTemplate.standard.style.tintColor), // voting icon
+            shuffledOrder: true,
+            allowVotes: true,
+            allowSearching: true
+        )
+    }
 
     var body: some View {
         NavigationStack {
-            RoadmapView(configuration: configuration, header: {
+            RoadmapView(configuration: VoteOnRoadmapView.configuration!, header: {
                 Text(headerText)
                     .italic()
                     .font(.callout)
@@ -50,9 +55,16 @@ struct VoteOnRoadmapView: View {
             })
                 .navigationTitle(title)
         }
+       .alert(String(localized: "Vote for this?", comment: "Alert dialog title. Shown if user tries to cast a vote."),
+              isPresented: $showingConfirmVote) {
+            Button(String(localized: "OK", comment: "Closes alert dialog if user tries to cast a vote."),
+                   role: .cancel) { } // TODO
+        } message: {
+            Text("You cannot undo this vote.", comment: "Alert dialog message. Shown if user tries to cast a vote.")
+        }
     }
 
-    static func lookupStatusTintColor(string: String) -> Color {
+    private func lookupStatusTintColor(string: String) -> Color {
         switch string.lowercased() { // string should be unlocalized version as defined in Roadmap.json file
         case "planned": return .plannedColor
         case "?": return .unplannedColor
@@ -60,23 +72,28 @@ struct VoteOnRoadmapView: View {
         }
     }
 
-}
+    // CustomVoter is a wrapper around the default voter used by the Roadmap package
+    private struct CustomVoter: FeatureVoter {
 
-// CustomVoter is a wrapper around the default voter used by the Roadmap package
-private struct CustomVoter: FeatureVoter {
+//        @Binding var showingConfirmVote: Bool? TODO
+        private let defaultVoter: FeatureVoterCountAPI
 
-    private let defaultVoter: FeatureVoterCountAPI
+        init(namespace: String) {
+            defaultVoter = FeatureVoterCountAPI(namespace: namespace)
+        }
 
-    init(namespace: String) {
-        defaultVoter = FeatureVoterCountAPI(namespace: namespace)
-    }
+        func fetch(for feature: Roadmap.RoadmapFeature) async -> Int {
+            await defaultVoter.fetch(for: feature)
+        }
 
-    func fetch(for feature: Roadmap.RoadmapFeature) async -> Int {
-        await defaultVoter.fetch(for: feature)
-    }
+        func vote(for feature: Roadmap.RoadmapFeature) async -> Int? {
+//            showingConfirmVote = true // TODO
+            return await defaultVoter.vote(for: feature)
+        }
 
-    func vote(for feature: Roadmap.RoadmapFeature) async -> Int? {
-        await defaultVoter.vote(for: feature)
+//        func setBinding(showingConfirmVote: Binding<Bool>) { TODO
+//            _showingConfirmVote = $showingConfirmVote
+//        }
     }
 
 }

@@ -80,6 +80,9 @@ Default status of member within a club. Used in concatenations. */
 /* <person> of <photo club> */
 "of2" = "van";
 
+/* Closes alert dialog if user tries to cast a vote. */
+"OK" = "Akoord";
+
 /* Header of section of Who's Who screen */
 "One photographer" = "Één fotograaf";
 
@@ -262,6 +265,9 @@ Field at top of Members page that allows the user to filter the members based on
 /* Administrative role of member within a club. Used as part of concatenations. */
 "vice-chairman" = "vicevoorzitter";
 
+/* Alert dialog title. Shown if user tries to cast a vote. */
+"Vote for this?" = "Hierop stemmen?";
+
 /* Button leading to Roadmap voting screen */
 "Vote on roadmap items" = "Stem op app uitbreidingen";
 
@@ -272,5 +278,8 @@ Field at top of Members page that allows the user to filter the members based on
 "Who's Who" = "Namenlijst";
 
 /* Text at top of Roadmap screen */
-"You can vote here on roadmap items that you would like to see. Please read the entire list before voting bacause you cannot undo a vote. Don't vote for more than half the items: the data helps us prioritize (this isn't about \"liking\" individual items)." = "Stem hier op de nuttigste uitbreidingen in deze app. Bekijk vóór het stemmen de gehele lijst: een afgegeven stem kan niet ingetrokken worden. Stem hooguit op de helfd van de mogelijke uitbreidingen: het gaat ons om de prioriteit - het zijn dus geen \"likes\".";
+"You can vote here on which roadmap items you would like to see. Please read the entire list before voting bacause you cannot undo a vote. Don't vote for more than half the items: the data helps us prioritize (this isn't about \"liking\" individual items)." = "Stem hier op de nuttigste uitbreidingen in deze app. Bekijk vóór het stemmen de gehele lijst: een afgegeven stem kan niet ingetrokken worden. Stem hooguit op de helfd van de mogelijke uitbreidingen: het gaat ons om de prioriteit - het zijn dus geen \"likes\".";
+
+/* Alert dialog message. Shown if user tries to cast a vote. */
+"You cannot undo this vote." = "Uitgebrachte stem kan niet ongedaan gemaakt worden.";
 
