@@ -9,7 +9,7 @@ import SwiftUI
 import Roadmap
 
 struct VoteOnRoadmapView: View {
-    static let useOnlineList = true // online allows updates, but gives empty page if device is offline
+    var useOnlineList: Bool // using online allows updates, but gives empty page if device is offline
 
     private let title = String(localized: "Roadmap Items", comment: "Title of Roadmap screen")
     private let headerText = String(localized:
@@ -21,15 +21,17 @@ struct VoteOnRoadmapView: View {
                               """,
                               comment: "Instructions at top of Roadmap screen")
 
-    @State var showingConfirmVote = false
+    @State var showingConfirmVote = false // true displays alert to prevent accidental votin
     static var configuration: RoadmapConfiguration? // nil gets overwritten during init() so we can have access to self
 
-    init() {
+    init(useOnlineList: Bool) {
+        self.useOnlineList = useOnlineList
+
         VoteOnRoadmapView.configuration = RoadmapConfiguration(
-            roadmapJSONURL: VoteOnRoadmapView.useOnlineList ? // JSON file with list of features
+            roadmapJSONURL: useOnlineList ? // JSON file with list of features
                             URL(string: "https://simplejsoncms.com/api/vnlg2fq62s")! : // password protected
                             Bundle.main.url(forResource: "Roadmap", withExtension: "json")!,
-            voter: CustomVoter(namespace: "com.vdhamer.photo_clubs_vote_on_features_dummy"),
+            voter: CustomVoter(namespace: "com.vdhamer.photo_clubs_vote_on_features_dummy2"), // TODO remove suffix
             style: RoadmapStyle(icon: Image(systemName: "circle.square.fill"),
                                 titleFont: RoadmapTemplate.standard.style.titleFont.italic(),
                                 numberFont: RoadmapTemplate.standard.style.numberFont,
@@ -102,7 +104,7 @@ struct MyRoadmapView_Previews: PreviewProvider {
     @State static private var title = "MyRoadmapView_Preview"
 
     static var previews: some View {
-        VoteOnRoadmapView()
+        VoteOnRoadmapView(useOnlineList: false)
             .navigationTitle(title)
     }
 }

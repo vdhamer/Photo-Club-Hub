@@ -114,10 +114,10 @@ struct ReadmeView: View {
                                     .buttonBorderShape(.roundedRectangle(radius: 10))
                                     .multilineTextAlignment(.center)
                                     .sheet(isPresented: $showingRoadmap, content: {
-                                            VoteOnRoadmapView()
-                                            // the detents don't do anything on an iPad
-                                                .presentationDetents([.large], selection: $selectedRoadmapDetent)
-                                                .presentationDragIndicator(.visible) // show drag indicator
+                                        VoteOnRoadmapView(useOnlineList: true)
+                                        // the detents don't do anything on an iPad
+                                            .presentationDetents([.large], selection: $selectedRoadmapDetent)
+                                            .presentationDragIndicator(.visible) // show drag indicator
                                     })
                                 Spacer()
                             }
