@@ -75,19 +75,12 @@ struct MemberPortfolioListView: View {
                         .foregroundStyle(.linkColor, .gray, .white)
                 }
                 .sheet(isPresented: $showingReadme, content: {
-                    if #available(iOS 16.4, *) {
-                        ReadmeView()
-                        // the detents don't do anything on an iPad
-                            .presentationDetents(detentsList, selection: $selectedReadmeDetent)
-//                            .presentationBackground(.thickMaterial) // doesn't work yet with ReadmeView
-//                            .presentationCornerRadius(40) // compiler can't handle this yet
-                            .presentationDragIndicator(.visible) // show drag indicator
-                    } else {
-                        ReadmeView()
-                        // the detents don't do anything on an iPad
-                            .presentationDetents(detentsList, selection: $selectedReadmeDetent)
-                            .presentationDragIndicator(.visible) // show drag indicator
-                    }
+                    ReadmeView()
+                    // the detents don't do anything on an iPad
+                        .presentationDetents(detentsList, selection: $selectedReadmeDetent)
+//                        .presentationBackground(.thickMaterial) // doesn't work yet with ReadmeView
+//                        .presentationCornerRadius(40) // compiler can't handle this yet
+                        .presentationDragIndicator(.visible) // show drag indicator
                 })
             }
             ToolbarItemGroup(placement: toolbarItemPlacement) {
