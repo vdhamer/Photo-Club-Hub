@@ -21,7 +21,6 @@ struct VoteOnRoadmapView: View {
                               """,
                               comment: "Instructions at top of Roadmap screen")
 
-    @State var showingConfirmVote = false // true displays alert to prevent accidental votin
     static var configuration: RoadmapConfiguration? // nil gets overwritten during init() so we can have access to self
 
     init(useOnlineList: Bool) {
@@ -31,7 +30,7 @@ struct VoteOnRoadmapView: View {
             roadmapJSONURL: useOnlineList ? // JSON file with list of features
                             URL(string: "https://simplejsoncms.com/api/vnlg2fq62s")! : // password protected
                             Bundle.main.url(forResource: "Roadmap", withExtension: "json")!,
-            voter: CustomVoter(namespace: "com.vdhamer.photo_clubs_vote_on_features_dummy2"), // TODO remove suffix
+            voter: FeatureVoterCountAPI(namespace: "com.vdhamer.photo_clubs_vote_on_features"),
             style: RoadmapStyle(icon: Image(systemName: "circle.square.fill"),
                                 titleFont: RoadmapTemplate.standard.style.titleFont.italic(),
                                 numberFont: RoadmapTemplate.standard.style.numberFont,
@@ -57,13 +56,6 @@ struct VoteOnRoadmapView: View {
             })
                 .navigationTitle(title)
         }
-       .alert(String(localized: "Vote for this?", comment: "Alert dialog title. Shown if user tries to cast a vote."),
-              isPresented: $showingConfirmVote) {
-            Button(String(localized: "OK", comment: "Closes alert dialog if user tries to cast a vote."),
-                   role: .cancel) { } // TODO
-        } message: {
-            Text("You cannot undo this vote.", comment: "Alert dialog message. Shown if user tries to cast a vote.")
-        }
     }
 
     private func lookupStatusTintColor(string: String) -> Color {
@@ -72,30 +64,6 @@ struct VoteOnRoadmapView: View {
         case "?": return .unplannedColor
         default: return Color.red
         }
-    }
-
-    // CustomVoter is a wrapper around the default voter used by the Roadmap package
-    private struct CustomVoter: FeatureVoter {
-
-//        @Binding var showingConfirmVote: Bool? TODO
-        private let defaultVoter: FeatureVoterCountAPI
-
-        init(namespace: String) {
-            defaultVoter = FeatureVoterCountAPI(namespace: namespace)
-        }
-
-        func fetch(for feature: Roadmap.RoadmapFeature) async -> Int {
-            await defaultVoter.fetch(for: feature)
-        }
-
-        func vote(for feature: Roadmap.RoadmapFeature) async -> Int? {
-//            showingConfirmVote = true // TODO
-            return await defaultVoter.vote(for: feature)
-        }
-
-//        func setBinding(showingConfirmVote: Binding<Bool>) { TODO
-//            _showingConfirmVote = $showingConfirmVote
-//        }
     }
 
 }
