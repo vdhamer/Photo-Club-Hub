@@ -80,20 +80,22 @@ struct ReadmeView: View {
                                                  comment: "Section title on Readme page"),
                                           geo: geo)
 
-                            Image("Localizations")
-                                .resizable()
-                                .frame(width: 315, height: 64, alignment: .center)
-                                .border(.gray, width: 1)
-                                .frame(width: geo.size.width, alignment: .center)
-                            Text("List of supported languages",
-                                 comment: "Caption of Localizations image on Readme page")
-                            .font(.callout.italic())
-                            .frame(width: geo.size.width, alignment: .center)
-                            Text("")
-
                             Group { // can have max 10 views within a container view
                                 Paragraph("3.1",
-                                          comment: "First paragraph in The Features section of Readme page", geo: geo)
+                                          comment: "First paragraph in The Features section of Readme page",
+                                          geo: geo, bottomPaddingAmount: 10)
+
+                                Image("Localizations")
+                                    .resizable()
+                                    .frame(width: 315, height: 64, alignment: .center)
+                                    .border(.gray, width: 1)
+                                    .frame(width: geo.size.width, alignment: .center)
+                                Text("List of supported languages",
+                                     comment: "Caption of Localizations image on Readme page")
+                                .font(.callout.italic())
+                                .frame(width: geo.size.width, alignment: .center)
+                                Text("")
+
                                 Paragraph("3.2",
                                           comment: "Second paragraph in The Features section of Readme page", geo: geo)
                                 Paragraph("3.3",
