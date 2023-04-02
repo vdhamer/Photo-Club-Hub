@@ -2,16 +2,14 @@
 
 This is build #4589 in Apple's App Store
 Readme screen
-    * Roadmap voting screen `Search` function now also searches descriptions
-    * therefore (temp) using github.com/vdhamer/Roadmap instead of /AvdLee/Roadmap
-    * repositioned image within Readme screen text
+    * Roadmap voting screen `Search` function now searches descriptions (new) and titles
+    * therefore, temporarily, using vdhamer/Roadmap package fork instead of /AvdLee/Roadmap
+    * repositioned multi-language image within Readme screen text
 Maintenance
-    * Build requires iOS 16.4. Removed #if available code.
-    * Built using XCode 14.3, Swift 5.8 and tested on iOS 16.4
-    * Updated Swiftlint from 0.50.3 to 0.51
-    * Cleaned up naming of Preferences screen (was often called Settings in the source code)
-    * Removed `if #available(iOS 16.4, *)`
-    * Removed unused `anythingVisible` computed property.
+    * Built/tested using XCode 14.3, Swift 5.8, iOS 16.4, and SwiftLint 0.51
+    * Build now requires iOS 16.4. Removed `if #available(iOS 16.4, *)` in two places in code.
+    * Cleaned all references to Preferences screen (was a mix of Settings and Preferences)
+    * Removed minor unused `anythingVisible` computed property.
 
 *In Apple's App Store, the release notes of 2.3.3 and 2.3.4 are combined.*
 ---------------------------------------------------------------------------
