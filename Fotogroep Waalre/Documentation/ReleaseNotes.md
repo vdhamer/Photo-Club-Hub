@@ -1,4 +1,4 @@
-### 2.3.4 (Github commit ???????) 02-04-23
+### 2.3.4 (Github commit 5c3e710) 02-04-23
 
 This is build #4589 in Apple's App Store
 Readme screen
