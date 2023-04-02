@@ -92,6 +92,13 @@
         <target>Lidmaatschapstypen</target>
         <note>In Preferences, above toggles like "Show former members"</note>
       </trans-unit>
+      <trans-unit id="No photo clubs seem to be currently loaded.&#10;Try dragging down the Photo Clubs screen to reload the default clubs." xml:space="preserve">
+        <source>No photo clubs seem to be currently loaded.
+Try dragging down the Photo Clubs screen to reload the default clubs.</source>
+        <target>Er zijn geen Fotogroepen momenteel geladen.
+Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorbeeldclubs geladen. </target>
+        <note>Hint to the user if the database returns zero PhotoClubs.</note>
+      </trans-unit>
       <trans-unit id="One photographer" xml:space="preserve">
         <source>One photographer</source>
         <target>Één fotograaf</target>
@@ -385,7 +392,7 @@ Field at top of Members page that allows the user to filter the members based on
       <trans-unit id="To see names here, please enable additional categories on the Preferences page." xml:space="preserve">
         <source>To see names here, please enable additional categories on the Preferences page.</source>
         <target>Deze lijst is vermoedelijk leeg omdat er onvoldoende ledencategorieën geselecteerd zijn op het Instellingen scherm.</target>
-        <note>Hint to the user if the database returns zero Members with unused Search filter.</note>
+        <note>Hint to the user if the database returns zero Members with empty Search filter.</note>
       </trans-unit>
       <trans-unit id="Vote on roadmap items" xml:space="preserve">
         <source>Vote on roadmap items</source>

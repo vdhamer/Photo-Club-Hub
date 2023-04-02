@@ -38,6 +38,9 @@ struct PhotoClubListView: View {
         Group {
             List { // lists are "Lazy" automatically
                 PhotoClubView(predicate: model.preferences.photoClubPredicate)
+                if photoClubs.isEmpty {
+                    NoClubsText()
+                }
                 Text("PhotoClubs_Caption", comment: "Shown in gray at the bottom of the Photo Club page.")
                     .foregroundColor(.gray)
             }
@@ -53,6 +56,15 @@ struct PhotoClubListView: View {
         .navigationTitle(navigationTitle)
     }
 
+}
+
+struct NoClubsText: View {
+    var body: some View {
+        Text("""
+             No photo clubs seem to be currently loaded.
+             Try dragging down the Photo Clubs screen to reload the default clubs.
+             """, comment: "Hint to the user if the database returns zero PhotoClubs.")
+    }
 }
 
 struct PhotoClubListView_Previews: PreviewProvider {

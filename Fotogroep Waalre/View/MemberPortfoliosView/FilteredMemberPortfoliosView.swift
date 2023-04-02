@@ -78,7 +78,7 @@ struct FilteredMemberPortfoliosView: View {
         } else if searchText.wrappedValue == "" && sectionedPortfoliosResults.isEmpty {
             Text("""
                  To see names here, please enable additional categories on the Preferences page.
-                 """, comment: "Hint to the user if the database returns zero Members with unused Search filter.")
+                 """, comment: "Hint to the user if the database returns zero Members with empty Search filter.")
         }
     }
 

@@ -77,6 +77,9 @@ Default status of member within a club. Used in concatenations. */
 /* Statistics at end of section of FilteredMemberPortfoliosView */
 "members" = "leden";
 
+/* Hint to the user if the database returns zero PhotoClubs. */
+"No photo clubs seem to be currently loaded.\nTry dragging down the Photo Clubs screen to reload the default clubs." = "Er zijn geen Fotogroepen momenteel geladen.\nDoor dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorbeeldclubs geladen. ";
+
 /* X of Y portfolio(s) shown (due to various forms of filtering) */
 "of1" = "van";
 
@@ -258,7 +261,7 @@ Field at top of Members page that allows the user to filter the members based on
 /* Hint to the user if the database returns zero Members with Search filter in use. */
 "To see names here, please adapt the Search filter or enable additional categories on the Preferences page." = "Deze lijst is leeg doordat de Zoek filter niets vindt in de gekozen ledencategorieën. Pas dus de Zoek filter aan of voeg categorieën toe (bij Instellingen).";
 
-/* Hint to the user if the database returns zero Members with unused Search filter. */
+/* Hint to the user if the database returns zero Members with empty Search filter. */
 "To see names here, please enable additional categories on the Preferences page." = "Deze lijst is vermoedelijk leeg omdat er onvoldoende ledencategorieën geselecteerd zijn op het Instellingen scherm.";
 
 /* Administrative role of member within a club. Used as part of concatenations. */
