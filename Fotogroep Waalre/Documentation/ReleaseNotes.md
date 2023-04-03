@@ -4,7 +4,7 @@ This is build #4590 in Apple's App Store
 Photo Clubs screen
     * Displays a help message in the (rare) case that there are zero clubs loaded
 Maintenance
-    * Attempt to get rid of fopen warning
+    * Removed fopen() warnings when Metal initializes first time app is run
 ---------------------------------------------------------------------------
 ### 2.3.4 (Github commit 5c3e710) 02-04-23
 
