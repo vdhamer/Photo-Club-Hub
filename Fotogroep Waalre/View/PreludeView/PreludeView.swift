@@ -65,37 +65,31 @@ struct PreludeView: View {
 
                 GeometryReader { geo in
                     ZStack(alignment: .center) {
-
                         ZStack {
+                            Image("2021_FotogroepWaalre_058_square")
+                                .resizable()
+                                .scaledToFit()
+                                .brightness(logScale == 0  ? 0.1 : 0.2)
                             Group {
                                 LogoPath(logCellRepeat: PreludeView.log2CellRepeat, // upper left part of logo
                                          relPixelSize: PreludeView.squareSize,
                                          offsetPoint: .zero)
                                 .fill(.fgwGreen)
-                                .blendMode(.normal)
                                 LogoPath(logCellRepeat: PreludeView.log2CellRepeat, // upper right part of logo
                                          relPixelSize: PreludeView.squareSize,
                                          offsetPoint: .top)
                                 .fill(.fgwRed)
-                                .blendMode(.normal)
                                 LogoPath(logCellRepeat: PreludeView.log2CellRepeat, // lower left part of logo
                                          relPixelSize: PreludeView.squareSize,
                                          offsetPoint: .leading)
                                 .fill(.fgwBlue)
-                                .blendMode(.normal)
                                 LogoPath(logCellRepeat: PreludeView.log2CellRepeat, // lower righ part of logo
                                          relPixelSize: PreludeView.squareSize,
                                          offsetPoint: .center)
                                 .fill(.fgwGreen)
-                                .blendMode(.normal)
                             }
+                            .blendMode(.multiply)
                             .opacity(logScale == 0  ? 0.5 : 1)
-                            Image("2021_FotogroepWaalre_058_square")
-                                .resizable()
-                                .scaledToFit()
-                                .brightness(logScale == 0  ? 0.1 : 0.2)
-                                .blendMode(.multiply)
-
                         }
                         .scaleEffect(CGSize(width: pow(2, logScale), height: pow(2, logScale))) // does the zooming
                         .offset(offset(frame: geo.size)) // does the panning
@@ -144,7 +138,7 @@ struct PreludeView: View {
                         .frame(width: geo.size.width, height: geo.size.height)
                         .onTapGesture { location in
                             debugLocation = location // for debugging only
-                            print(location)
+                            ifDebugPrint("Tap location: (\(location.x),\(location.y))")
                             withAnimation(.easeInOut(duration: 7)) { // carefull: code is duplicated twice ;-(
                                 if logScale == 0.0 { // if we are completely zoomed out at the time of the tap
                                     logScale = log2(PreludeView.maxCellRepeat) // zoom in
@@ -159,7 +153,8 @@ struct PreludeView: View {
                                          DynamicTypeSize.large) // don't let DynamicType change WAALRE size
 
                 } // GeometryReader
-                .drawingGroup()
+                .compositingGroup() // This triggers use of Metal framework
+//                .drawingGroup() // This triggers use of Metal framework but gives fopen() warnings on first run
                 .padding()
 
             }
