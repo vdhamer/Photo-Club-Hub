@@ -48,7 +48,7 @@ extension TestClubRotterdamMembersProvider { // fill with some initial hard-code
                      "https://www.fotogroepwaalre.nl/fotos/Peter_van_den_Hamer_testR/" +
 		                                    "thumbs/2015_Madeira_RX1r_064.jpg")!,
                   phoneNumber: nil,
-                  eMail: "foobar@vdhamer.com"
+                  eMail: "foobarR@vdhamer.com"
         )
 
         if commit {
