@@ -21,12 +21,11 @@ struct VoteOnRoadmapView: View {
                               """,
                               comment: "Instructions at top of Roadmap screen")
 
-    static var configuration: RoadmapConfiguration? // nil gets overwritten during init() so we can have access to self
+    var configuration: RoadmapConfiguration? // nil gets overwritten during init(). Initialization needs access to self.
 
     init(useOnlineList: Bool) {
         self.useOnlineList = useOnlineList
-
-        VoteOnRoadmapView.configuration = RoadmapConfiguration(
+        configuration = RoadmapConfiguration(
             roadmapJSONURL: useOnlineList ? // JSON file with list of features
                             URL(string: "https://simplejsoncms.com/api/vnlg2fq62s")! : // password protected
                             Bundle.main.url(forResource: "Roadmap", withExtension: "json")!,
@@ -48,7 +47,7 @@ struct VoteOnRoadmapView: View {
 
     var body: some View {
         NavigationStack {
-            RoadmapView(configuration: VoteOnRoadmapView.configuration!, header: {
+            RoadmapView(configuration: configuration!, header: {
                 Text(headerText)
                     .italic()
                     .font(.callout)
@@ -68,8 +67,8 @@ struct VoteOnRoadmapView: View {
 
 }
 
-struct MyRoadmapView_Previews: PreviewProvider {
-    @State static private var title = "MyRoadmapView_Preview"
+struct VoteOnRoadmapView_Previews: PreviewProvider {
+    @State static private var title = "VoteOnRoadmapView_Preview"
 
     static var previews: some View {
         VoteOnRoadmapView(useOnlineList: false)
