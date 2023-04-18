@@ -19,11 +19,11 @@
 		D0416280295BB9DF00ED073A /* NSPredicate+all.swift in Sources */ = {isa = PBXBuildFile; fileRef = D041627F295BB9DF00ED073A /* NSPredicate+all.swift */; };
 		D0416282295BBA7700ED073A /* CoreLocation+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0416281295BBA7700ED073A /* CoreLocation+Equatable.swift */; };
 		D044646527FCE7C100990613 /* UIDevice+IsIPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = D044646427FCE7C100990613 /* UIDevice+IsIPad.swift */; };
+		D05AF1B229EF44530079AE77 /* Roadmap in Frameworks */ = {isa = PBXBuildFile; productRef = D05AF1B129EF44530079AE77 /* Roadmap */; };
 		D05E451E27EF2A2C00D31327 /* ReadmeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05E451D27EF2A2C00D31327 /* ReadmeView.swift */; };
 		D06061E828A0453F00A675A7 /* FGWPrivateMembersURL2.txt in Resources */ = {isa = PBXBuildFile; fileRef = D06061E728A0453F00A675A7 /* FGWPrivateMembersURL2.txt */; };
 		D06061EA28A0456C00A675A7 /* FGWPrivateMembersURL3.txt in Resources */ = {isa = PBXBuildFile; fileRef = D06061E928A0456C00A675A7 /* FGWPrivateMembersURL3.txt */; };
 		D06061ED28A05D4600A675A7 /* String+Paths.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06061EC28A05D4600A675A7 /* String+Paths.swift */; };
-		D062B9DB29D8872C003998BE /* Roadmap in Frameworks */ = {isa = PBXBuildFile; productRef = D062B9DA29D8872C003998BE /* Roadmap */; };
 		D06754A02942B23F00C0AB08 /* FGWMembersProvide+enumHTMLPageLoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D067549F2942B23F00C0AB08 /* FGWMembersProvide+enumHTMLPageLoadingState.swift */; };
 		D0795CEC294FCCC200FA62A8 /* ShapeStyle+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0795CEB294FCCC200FA62A8 /* ShapeStyle+Colors.swift */; };
 		D079A3E429CBA5BE007CDD81 /* ifDebugPrint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D079A3E329CBA5BE007CDD81 /* ifDebugPrint.swift */; };
@@ -215,7 +215,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D062B9DB29D8872C003998BE /* Roadmap in Frameworks */,
+				D05AF1B229EF44530079AE77 /* Roadmap in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -577,7 +577,7 @@
 			);
 			name = "Fotogroep Waalre";
 			packageProductDependencies = (
-				D062B9DA29D8872C003998BE /* Roadmap */,
+				D05AF1B129EF44530079AE77 /* Roadmap */,
 			);
 			productName = "Fotogroep Waalre 2";
 			productReference = D08319E3277F70A30049AB84 /* Fotogroep Waalre.app */;
@@ -653,7 +653,7 @@
 			);
 			mainGroup = D08319DA277F70A30049AB84;
 			packageReferences = (
-				D062B9D929D8872C003998BE /* XCRemoteSwiftPackageReference "Roadmap" */,
+				D05AF1B029EF44530079AE77 /* XCRemoteSwiftPackageReference "Roadmap" */,
 			);
 			productRefGroup = D08319E4277F70A30049AB84 /* Products */;
 			projectDirPath = "";
@@ -1203,9 +1203,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		D062B9D929D8872C003998BE /* XCRemoteSwiftPackageReference "Roadmap" */ = {
+		D05AF1B029EF44530079AE77 /* XCRemoteSwiftPackageReference "Roadmap" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/vdhamer/Roadmap";
+			repositoryURL = "https://github.com/AvdLee/Roadmap";
 			requirement = {
 				branch = main;
 				kind = branch;
@@ -1214,9 +1214,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		D062B9DA29D8872C003998BE /* Roadmap */ = {
+		D05AF1B129EF44530079AE77 /* Roadmap */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D062B9D929D8872C003998BE /* XCRemoteSwiftPackageReference "Roadmap" */;
+			package = D05AF1B029EF44530079AE77 /* XCRemoteSwiftPackageReference "Roadmap" */;
 			productName = Roadmap;
 		};
 /* End XCSwiftPackageProductDependency section */
