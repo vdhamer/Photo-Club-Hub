@@ -1,4 +1,4 @@
-### 2.3.5 (Github commit ???????) ??-04-23
+### 2.3.5 (Github commit ???????) ??-05-23
 This is build #4590 in Apple's App Store
 
 Photo Clubs screen
@@ -7,7 +7,8 @@ Roadmap screen
     * Disabled the entire Roadmap Screen because the employed counting service is down or gone
 Maintenance
     * Removed fopen() warnings when Metal initializes the very first time that app is run
-    * Switched back to using AvdLee/Roadmap instead of my own form
+    * Switched back to using AvdLee/Roadmap instead of my own version (but is not currently accessible)
+    * Changed URL from domain vdhamer.com to subdomain www.vdhamer.com
 ---------------------------------------------------------------------------
 ### 2.3.4 (Github commit 5c3e710) 02-04-23
 
