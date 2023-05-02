@@ -4,7 +4,7 @@ This is build #4590 in Apple's App Store
 Photo Clubs screen
     * Displays a help message in the (rare) case that there are zero clubs loaded
 Roadmap screen
-    * Disabled the entire Roadmap Screen because the employed counting service is down or gone
+    * Disabled the Roadmap Screen because the employed CountAPI service currently down
 Maintenance
     * Removed fopen() warnings when Metal initializes the very first time that app is run
     * Switched back to using AvdLee/Roadmap instead of my own version (but is not currently accessible)
