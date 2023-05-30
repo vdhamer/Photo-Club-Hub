@@ -14,7 +14,7 @@
 "Paragraph_1.1" = "Photo Club Waalre is a photography club named after Waalre, a town in the south of The Netherlands. Since 1988, its club members meet to critique each other’s photos, organize excursions, and hold yearly photo expositions.";
 
 /* Second paragraph in Waalre section of Readme page */
-"Paragraph_1.2" = "Originally the app only supported Photo Club Waalre (aka _Fotogroep Waalre_), but the current version supports **multiple** photo clubs. At some point the app will get a new name.";
+"Paragraph_1.2" = "Originally the app only supported Photo Club Waalre (aka _Fotogroep Waalre_), but the current version supports **multiple** photo clubs. The app name will change soon (probably to 'Photo Club Hub') to reflect this.";
 
 /* First paragraph in The App on Readme page */
 "Paragraph_2.1" = "The goal of this app is to showcase curated work of members of photo clubs.";

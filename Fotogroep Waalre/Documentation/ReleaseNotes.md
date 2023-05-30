@@ -4,12 +4,13 @@ This is build #4590 in Apple's App Store
 Photo Clubs screen
     * Displays a help message in the (rare) case that there are zero clubs loaded
 Roadmap screen
-    * Disabled the Roadmap Screen because the employed CountAPI service is currently down
+    * Disabled the Roadmap Screen because the underlying third-party countAPI service is currently down
+Readme screen
+    * preview of coming name change for the app
 Maintenance
-    * Removed fopen() warnings when Metal initializes the very first time that app is run
-    * Switched back to using AvdLee/Roadmap instead of my own version (but is not currently accessible)
-    * Changed URL from domain vdhamer.com to subdomain www.vdhamer.com
-    * Upgraded and tested with iOS 16.5, MacOS 13.4, XCode 13.4.1, Swift 5.8.1 and SwiftLint 0.52.2
+    * Removed fopen() warnings when Metal initializes the first time the app is run
+    * Changed URL from vdhamer.com to www.vdhamer.com (invisible to user)
+    * Upgraded and tested with iOS 16.5, MacOS 13.4, XCode 13.4.1 RC, Swift 5.8.1 and SwiftLint 0.52.2
 ---------------------------------------------------------------------------
 ### 2.3.4 (Github commit 5c3e710) 02-04-23
 

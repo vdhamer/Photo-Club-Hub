@@ -96,7 +96,7 @@ Default status of member within a club. Used in concatenations. */
 "Paragraph_1.1" = "De fotoclub \"Fotogroep Waalre\" is vernoemd naar Waalre, een dorp vlak onder Eindhoven. Sedert 1988 komen de leden van die club bijeen voor fotobespreekavonden.";
 
 /* Second paragraph in Waalre section of Readme page */
-"Paragraph_1.2" = "Oorspronkelijk ondersteunde de app uitsluitend Fotogroep Waalre, maar sedert versie 2 ondersteunt de app in principe meerdere clubs. De naam Fotogroep Waalre zal daarom ter zijner tijd veranderd worden in iets algemeners.";
+"Paragraph_1.2" = "Oorspronkelijk ondersteunde de app uitsluitend Fotogroep Waalre, maar sedert versie 2 ondersteunt de app in principe meerdere clubs. De naam van de app 'Fotogroep Waalre' zal daarom binnenkort veranderen (waarschijnlijk 'Foto Club Hub').";
 
 /* First paragraph in The App on Readme page */
 "Paragraph_2.1" = "Het doel van deze app is om geselecteerd werk te tonen van clubleden van fotoclubs.";
@@ -269,9 +269,6 @@ Field at top of Members page that allows the user to filter the members based on
 
 /* Administrative role of member within a club. Used as part of concatenations. */
 "vice-chairman" = "vicevoorzitter";
-
-/* Button leading to Roadmap voting screen */
-"Vote on roadmap items" = "Stem op app uitbreidingen";
 
 /* Section title on Readme page */
 "Waalre" = "Waalre";
