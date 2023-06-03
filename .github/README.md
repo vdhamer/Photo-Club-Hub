@@ -79,14 +79,14 @@
 
 <ul><details><summary>
 
-### What's Waalre?
+### The App
 
 </summary>
-Photo Club Waalre is a photography club named after Waalre, a town in the south of 
-The Netherlands. Its members meet since 1988, mainly to critique each other’s photos.</p>
+This app showcases selected work of current and former members of amateur photography clubs. The app requires a working internet connection to fetch membership lists, lists of photos, etc. This allows the content of the app to stay up to date when members come and go, or when new photos are added. 
 
-This app originally served as an alternative way to view the photos published on the club's web
-site. We expect to change the name of the app now that the app has been redesigned to support *multiple* photo clubs.
+The app originally supported a single photo club in Waalre in the Netherlands. Since version 2.0, the app was extended to support multiple photo clubs. This enables a user to view photos from multiple participating clubs without the hassle of finding their websites and finding their way within each unique web site site. To reflect this, the app's name was changed from the original "Photo Club Waalre" to "Photo Club Hub". 
+
+The app supports both Dutch and English. The source code of the iOS app on github.com/vdHamer to allow collaborative development of future versions. As the project is somewhat ambitious, contributions of time, expertise and ideas are greatly appreciated.
 
 </details>
 
