@@ -84,7 +84,7 @@
 </summary>
 This app showcases selected work of current and former members of amateur photography clubs. The app requires a working internet connection to fetch membership lists, lists of photos, etc. This allows the content of the app to stay up to date when members come and go, or when new photos are added. 
 
-The app originally supported a single photo club in Waalre in the Netherlands. Since version 2.0, the app was extended to support multiple photo clubs. This enables a user to view photos from multiple participating clubs without the hassle of finding their websites and finding their way within each unique web site site. To reflect this, the app's name was changed from the original "Photo Club Waalre" to "Photo Club Hub". 
+The app originally supported a single photo club in Waalre in the Netherlands. Since version 2.0, the app was extended to support multiple photo clubs. This enables a user to view photos from multiple participating clubs without the hassle of finding their websites and finding their way within each unique web site site. To reflect this, the app's name was changed from the original Photo Club Waalre to Photo Club Hub. 
 
 The app supports both Dutch and English. The source code of the iOS app on github.com/vdHamer to allow collaborative development of future versions. As the project is somewhat ambitious, contributions of time, expertise and ideas are greatly appreciated.
 
