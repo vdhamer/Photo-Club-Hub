@@ -13,7 +13,7 @@
 <ul>
     <details><summary><a href="#about-the-project">About the Project</a></summary>
           <ul>
-            <li><a href="#whats-waalre">What's Waalre?</a></li>
+            <li><a href="#the-app">The App</a></li>
             <li><a href="#the-portfolio-concept">The Portfolio Concept</a></li>
             <li><a href="#implications-of-portfolios">Implications of Portfolios</a>
           </ul>
