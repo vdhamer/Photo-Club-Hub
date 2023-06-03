@@ -77,7 +77,7 @@
 
 ## About the Project
 
-<ul><details><summary>
+<ul><details open><summary>
 
 ### The App
 
