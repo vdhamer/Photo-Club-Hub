@@ -83,11 +83,11 @@
 
 </summary>
 
-This iOS app showcases selected work of current (and optionally former) members of amateur photography clubs. It thus serves as a more-or-less permanent or gallery of the photographer's work.
+This iOS app showcases selected work of current (and optionally former) members of amateur photography clubs. It thus serves as a more-or-less permanent exposition or gallery of the photographer's work.
 
-The app originally supported a _single_ photo club in Waalre in the Netherlands. Since version 2.0, the app is stepwise being adapted to support _multiple_ photo clubs. This enables a user to view photos from multiple clubs without the hassle of having to find each club's website or finding the way within each of these websites. To stress this scope change, the app's name was changed from _Photo Club Waalre_ to _Photo Club Hub_.</p> 
+The app originally supported a _single_ photo club in Waalre in the Netherlands. Since version 2.0, the app is stepwise being modified to support _multiple_ photo clubs. This enables a user to view photos from multiple clubs without the hassle of having to find each club's website or finding their way within each of these websites. Because of this scope change, the app's name was changed from _Photo Club Waalre_ to _Photo Club Hub_.</p> 
     
-The app fetches membership lists and lists of photos from a server. This ensures that changes in club membership and any new photos appear without having to update the software. The app has been localized and supports both English and Dutch. Contributions in the form of code, testing and ideas are highly appreciated.
+The app fetches membership lists and lists of photos from a server. This ensures that changes in club membership and any new photos appear without requiring a software update. The app has been localized and supports both English and Dutch. Contributions in the form of code, testing and suggestions are highly appreciated.
 
 </details>
 
@@ -99,31 +99,31 @@ The app fetches membership lists and lists of photos from a server. This ensures
 
 > The app showcases curated images made by members of photo clubs.
 
-Since release 2.3.0, the app organized images in the following 3-level hierarchy:
+Since release 2.3.0, the app organizes images in a 3-level hierarchy or tree structure. A schematic example:
 
 * photo clubA (hosted on siteA)
-  * portfolio1 for photographer1
-    * images in portfolio1
-  * portfolio2 for photographer2
-    * images in portfolio2
+  * portfolio1 of photographer1
+    * images within portfolio1
+  * portfolio2 of photographer2
+    * images within portfolio2
 
 * photo clubB (hosted on siteB)
-  * portfolio3 for photographer3
-    * images in portfolio3
-  * portfolio4 for photographer4
-    * images in portfolio4
+  * portfolio3 of photographer3
+    * images within portfolio3
+  * portfolio4 of photographer4
+    * images within portfolio4
 
 <a/></p>
 
-The `portfolio` level thus holds a photographer's work that is associated with one particular photo club.
+The `portfolio` level holds the images that are associated with one particular photo club.
 The `photo club` level is the higher level at which 
-1. a club's membership list is maintained, 
-2. portfolios are maintained for each club member ("curated"),
+1. a club's membership list is maintained,
+2. portfolios are maintained for each club member ("curated images"),
 3. the actual images in the portfolios are hosted 
 
 <a/></p>
 
-For comparison, this is what personal photographer websites look like in the same notation:
+For comparison, this is what a typical photographer's website looks like (using the same notation):
     
 * website for photographer1 (hosted on site1)
   * photo galleryA (e.g. portraits)
@@ -136,7 +136,7 @@ For comparison, this is what personal photographer websites look like in the sam
     * :
 
 <a/></p>
-Now each photographer is on his/her own, and determines which images to display, how to host them, and how to present them.
+Here each photographer determines which images to display, how to host them, and how to present them.
 
 <ul><details><summary>
         
