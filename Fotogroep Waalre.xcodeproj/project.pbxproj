@@ -1023,6 +1023,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Fotogroep Waalre/Preview Content\"";
 				DEVELOPMENT_TEAM = YDEWPN9GZ6;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Fotogroep-Waalre-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Photo Club Waalre";
@@ -1061,6 +1062,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Fotogroep Waalre/Preview Content\"";
 				DEVELOPMENT_TEAM = YDEWPN9GZ6;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Fotogroep-Waalre-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Photo Club Waalre";
