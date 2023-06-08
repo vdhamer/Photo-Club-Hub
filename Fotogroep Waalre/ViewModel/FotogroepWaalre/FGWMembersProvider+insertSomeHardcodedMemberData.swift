@@ -26,7 +26,7 @@ extension FGWMembersProvider { // fill with some initial hard-coded content
                                                      fotobondNumber: 1634, kvkNumber: 17261693,
                                                      coordinates: CLLocationCoordinate2D(latitude: 51.39184,
                                                                                          longitude: 5.46144),
-                                                     priority: 3)
+                                                     priority: 1)
         clubWaalre.hasHardCodedMemberData = true // store in database that we ran insertSomeHardcodedMembers...
 
         addMember(context: fgwBackgroundContext,

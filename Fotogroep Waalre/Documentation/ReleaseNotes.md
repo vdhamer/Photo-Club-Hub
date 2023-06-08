@@ -5,6 +5,8 @@ Settings screen
     * By default "Former members" are now shown
 Maintenance
     * Upgraded and tested with iOS 17.0 beta (21A5248u), XCode 14.0 beta 1, Swift 5.9
+    * Temporarily set new ENABLE_USER_SCRIPT_SANDBOXING = NO, because this gives errors (swiftlint tries to read non-swift files?!?)
+    * Reduced priority of Fotogroepw Waalre from 3 to 1 to ensure basic alphabetical order
 ---------------------------------------------------------------------------
 ### 2.3.5 (Github commit 62a54b7) 30-05-23
 
