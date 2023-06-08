@@ -1,6 +1,14 @@
-### 2.3.5 (Github commit ???????) ??-05-23
-This is build #4590 in Apple's App Store
+### 2.3.6 (Github commit ???????) ??-06-23
 
+This is build #459? in Apple's App Store
+Settings screen
+    * By default "Former members" are now shown
+Maintenance
+    * Upgraded and tested with iOS 17.0 beta (21A5248u), XCode 14.0 beta 1, Swift 5.9
+---------------------------------------------------------------------------
+### 2.3.5 (Github commit 62a54b7) 30-05-23
+
+This is build #4590 in Apple's App Store
 Photo Clubs screen
     * Displays a help message in the (rare) case that there are zero clubs loaded
 Roadmap screen

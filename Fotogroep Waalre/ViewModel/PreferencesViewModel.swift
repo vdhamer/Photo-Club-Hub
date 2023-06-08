@@ -36,7 +36,7 @@ struct PreferencesStruct: Codable { // order in which they are shown on Preferen
         showOfficers: true,
         showAspiringMembers: true,
         showHonoraryMembers: true,
-        showFormerMembers: false,
+        showFormerMembers: true,
         showDeceasedMembers: false,
         showExternalCoaches: false
     )

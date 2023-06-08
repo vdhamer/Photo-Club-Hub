@@ -189,6 +189,7 @@
 		D0B52493277F9A4B00927BCA /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = "nl.lproj/Fotogroep-Waalre-InfoPlist.strings"; sourceTree = "<group>"; };
 		D0B52496277F9A4B00927BCA /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D0B52499277F9A4B00927BCA /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/MemberListSections.strings; sourceTree = "<group>"; };
+		D0C06F672A322AC10042B072 /* Fotogroep_Waalre_2_3_6.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fotogroep_Waalre_2_3_6.xcdatamodel; sourceTree = "<group>"; };
 		D0C6E10B282B18B700388A33 /* Readme FotogroepWaalre App EN.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Readme FotogroepWaalre App EN.docx"; sourceTree = "<group>"; };
 		D0C6E95429577921001E5CE9 /* DebugPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugPanel.swift; sourceTree = "<group>"; };
 		D0C8DD462933EBB000658C58 /* portfolios.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = portfolios.png; sourceTree = "<group>"; };
@@ -1016,7 +1017,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Fotogroep Waalre/Fotogroep Waalre.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4590;
+				CURRENT_PROJECT_VERSION = 4591;
 				DEVELOPMENT_ASSET_PATHS = "\"Fotogroep Waalre/Preview Content\"";
 				DEVELOPMENT_TEAM = YDEWPN9GZ6;
 				ENABLE_PREVIEWS = YES;
@@ -1035,7 +1036,7 @@
 					"@executable_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 2.3.5;
+				MARKETING_VERSION = 2.3.6;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vdhamer.Fotogroep-Waalre";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -1054,7 +1055,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Fotogroep Waalre/Fotogroep Waalre.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4590;
+				CURRENT_PROJECT_VERSION = 4591;
 				DEVELOPMENT_ASSET_PATHS = "\"Fotogroep Waalre/Preview Content\"";
 				DEVELOPMENT_TEAM = YDEWPN9GZ6;
 				ENABLE_PREVIEWS = YES;
@@ -1073,7 +1074,7 @@
 					"@executable_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 2.3.5;
+				MARKETING_VERSION = 2.3.6;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vdhamer.Fotogroep-Waalre";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -1091,7 +1092,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4590;
+				CURRENT_PROJECT_VERSION = 4591;
 				DEVELOPMENT_TEAM = YDEWPN9GZ6;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -1111,7 +1112,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4590;
+				CURRENT_PROJECT_VERSION = 4591;
 				DEVELOPMENT_TEAM = YDEWPN9GZ6;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -1130,7 +1131,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4590;
+				CURRENT_PROJECT_VERSION = 4591;
 				DEVELOPMENT_TEAM = YDEWPN9GZ6;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
@@ -1148,7 +1149,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4590;
+				CURRENT_PROJECT_VERSION = 4591;
 				DEVELOPMENT_TEAM = YDEWPN9GZ6;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
@@ -1225,6 +1226,7 @@
 		D0831A3C277F72B70049AB84 /* Fotogroep_Waalre_2.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				D0C06F672A322AC10042B072 /* Fotogroep_Waalre_2_3_6.xcdatamodel */,
 				D08E076429D9DD3B00EBEFB6 /* Fotogroep_Waalre_2_3_5.xcdatamodel */,
 				D0B38C2929C7B85E00AF76BF /* Fotogroep_Waalre_2_3_3.xcdatamodel */,
 				D0FCF2DE29B5084D00F31442 /* Fotogroep_Waalre_2_3_2.xcdatamodel */,
@@ -1252,7 +1254,7 @@
 				D0B1EDBA279771A500D37431 /* Fotogroep_Waalre_2_0_2.xcdatamodel */,
 				D0831A3D277F72B70049AB84 /* Fotogroep_Waalre.xcdatamodel */,
 			);
-			currentVersion = D08E076429D9DD3B00EBEFB6 /* Fotogroep_Waalre_2_3_5.xcdatamodel */;
+			currentVersion = D0C06F672A322AC10042B072 /* Fotogroep_Waalre_2_3_6.xcdatamodel */;
 			path = Fotogroep_Waalre_2.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
