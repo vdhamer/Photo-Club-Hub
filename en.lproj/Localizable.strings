@@ -11,10 +11,16 @@
 "Open Source" = "Developers";
 
 /* First paragraph in Waalre section of Readme page */
-"Paragraph_1.1" = "Photo Club Waalre is a photography club named after Waalre, a town in the south of The Netherlands. Since 1988, its club members meet to critique each other’s photos, organize excursions, and hold yearly photo expositions.";
+"Paragraph_1.1" = "This app showcases photos shared by members of (amateur) photography clubs.";
 
 /* Second paragraph in Waalre section of Readme page */
-"Paragraph_1.2" = "Originally the app only supported Photo Club Waalre (aka _Fotogroep Waalre_), but the current version supports **multiple** photo clubs. The app name will change soon (probably to 'Photo Club Hub') to reflect this.";
+"Paragraph_1.2" = "Like social media, the app creates a uniform way to access photos made by many different photographers. This uniformity replaces, for example, the hassle of having to find the websites and discovering how to navigate each site. But unlike social media or websites, the app doesn't aim to be a Swiss army knife: it's only goal is to present images with minimal distraction. The user can follow a link to a club website for other information.";
+
+/* Third paragraph in Waalre section of Readme page */
+"Paragraph_1.3" = "This app was originally named _Fotogroep (Photo Club) Waalre_ after one single photo club with about 20 members. The word 'Hub' in the new name stresses the support of multiple photo clubs.";
+
+/* Fourth paragraph in Waalre section of Readme page */
+"Paragraph_1.4" = "Supporting multiple photo clubs requires more than the ability to display a list of clubs, their members and the images shared by each member. Clubs also need to get that information into the app and keep it up to date. The README on the app's [GitHub site](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) sketches a plan to allow each club to host and maintain their own data while requiring minimal software skills.";
 
 /* First paragraph in The App on Readme page */
 "Paragraph_2.1" = "The goal of this app is to showcase curated work of members of photo clubs.";

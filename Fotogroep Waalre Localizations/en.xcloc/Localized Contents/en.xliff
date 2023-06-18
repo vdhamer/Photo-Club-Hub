@@ -115,14 +115,24 @@ Try dragging down the Photo Clubs screen to reload the default clubs.</target>
         <note>Section title on Readme page.</note>
       </trans-unit>
       <trans-unit id="Paragraph_1.1" xml:space="preserve">
-        <source>Photo Club Waalre is a photography club named after Waalre, a town in the south of The Netherlands. Since 1988, its club members meet to critique each other’s photos, organize excursions, and hold yearly photo expositions.</source>
-        <target>Photo Club Waalre is a photography club named after Waalre, a town in the south of The Netherlands. Since 1988, its club members meet to critique each other’s photos, organize excursions, and hold yearly photo expositions.</target>
+        <source>This app showcases photos shared by members of (amateur) photography clubs.</source>
+        <target>This app showcases photos shared by members of (amateur) photography clubs.</target>
         <note>First paragraph in Waalre section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_1.2" xml:space="preserve">
-        <source>Originally the app only supported Photo Club Waalre (aka _Fotogroep Waalre_), but the current version supports **multiple** photo clubs. The app name will change soon (probably to 'Photo Club Hub') to reflect this.</source>
-        <target>Originally the app only supported Photo Club Waalre (aka _Fotogroep Waalre_), but the current version supports **multiple** photo clubs. The app name will change soon (probably to 'Photo Club Hub') to reflect this.</target>
+        <source>Like social media, the app creates a uniform way to access photos made by many different photographers. This uniformity replaces, for example, the hassle of having to find the websites and discovering how to navigate each site. But unlike social media or websites, the app doesn't aim to be a Swiss army knife: it's only goal is to present images with minimal distraction. The user can follow a link to a club website for other information.</source>
+        <target>Like social media, the app creates a uniform way to access photos made by many different photographers. This uniformity replaces, for example, the hassle of having to find the websites and discovering how to navigate each site. But unlike social media or websites, the app doesn't aim to be a Swiss army knife: it's only goal is to present images with minimal distraction. The user can follow a link to a club website for other information.</target>
         <note>Second paragraph in Waalre section of Readme page</note>
+      </trans-unit>
+      <trans-unit id="Paragraph_1.3" xml:space="preserve">
+        <source>This app was originally named _Fotogroep (Photo Club) Waalre_ after one single photo club with about 20 members. The word 'Hub' in the new name stresses the support of multiple photo clubs.</source>
+        <target>This app was originally named _Fotogroep (Photo Club) Waalre_ after one single photo club with about 20 members. The word 'Hub' in the new name stresses the support of multiple photo clubs.</target>
+        <note>Third paragraph in Waalre section of Readme page</note>
+      </trans-unit>
+      <trans-unit id="Paragraph_1.4" xml:space="preserve">
+        <source>Supporting multiple photo clubs requires more than the ability to display a list of clubs, their members and the images shared by each member. Clubs also need to get that information into the app and keep it up to date. The README on the app's [GitHub site](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) sketches a plan to allow each club to host and maintain their own data while requiring minimal software skills.</source>
+        <target>Supporting multiple photo clubs requires more than the ability to display a list of clubs, their members and the images shared by each member. Clubs also need to get that information into the app and keep it up to date. The README on the app's [GitHub site](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) sketches a plan to allow each club to host and maintain their own data while requiring minimal software skills.</target>
+        <note>Fourth paragraph in Waalre section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_2.1" xml:space="preserve">
         <source>The goal of this app is to showcase curated work of members of photo clubs.</source>
@@ -316,16 +326,11 @@ By clicking on the above button you can (anonymously) vote for improvements you 
         <target>Readme</target>
         <note>Title of Readme screen</note>
       </trans-unit>
-      <trans-unit id="Roadmap Items" xml:space="preserve">
-        <source>Roadmap Items</source>
-        <target>Roadmap Items</target>
-        <note>Title of Roadmap screen</note>
-      </trans-unit>
       <trans-unit id="Search names" xml:space="preserve">
         <source>Search names</source>
         <target>Search names</target>
-        <note>Field at top of Members page that allows the user to filter the members based on either given- and family name.
-Field at top of Photographers page that allows the user to filter the photographers based on either given- and family name.</note>
+        <note>Field at top of Photographers page that allows the user to filter the photographers based on either given- and family name.
+Field at top of Members page that allows the user to filter the members based on either given- and family name.</note>
       </trans-unit>
       <trans-unit id="Show aspiring members" xml:space="preserve">
         <source>Show aspiring members</source>
@@ -377,6 +382,11 @@ Field at top of Photographers page that allows the user to filter the photograph
         <target>The Prelude</target>
         <note>Section title on Readme page</note>
       </trans-unit>
+      <trans-unit id="The app" xml:space="preserve">
+        <source>The app</source>
+        <target>The app</target>
+        <note>Section title on Readme page</note>
+      </trans-unit>
       <trans-unit id="The concept" xml:space="preserve">
         <source>The concept</source>
         <target>The concept</target>
@@ -392,11 +402,6 @@ Field at top of Photographers page that allows the user to filter the photograph
         <target>To see names here, please enable additional categories on the Preferences page.</target>
         <note>Hint to the user if the database returns zero Members with empty Search filter.</note>
       </trans-unit>
-      <trans-unit id="Waalre" xml:space="preserve">
-        <source>Waalre</source>
-        <target>Waalre</target>
-        <note>Section title on Readme page</note>
-      </trans-unit>
       <trans-unit id="Warning: all member categories on the Preferences page are disabled. Please enable one or more options in Preferences." xml:space="preserve">
         <source>Warning: all member categories on the Preferences page are disabled. Please enable one or more options in Preferences.</source>
         <target>Warning: all member categories on the Preferences page are disabled. Please enable one or more options in Preferences.</target>
@@ -406,11 +411,6 @@ Field at top of Photographers page that allows the user to filter the photograph
         <source>Who's Who</source>
         <target>Who's Who</target>
         <note>Title of page with list of photographers</note>
-      </trans-unit>
-      <trans-unit id="You can vote here on which roadmap items you would like to see. Please read the entire list before voting bacause you cannot undo a vote. Don't vote for more than half the items: the data helps us prioritize (this isn't about &quot;liking&quot; individual items)." xml:space="preserve">
-        <source>You can vote here on which roadmap items you would like to see. Please read the entire list before voting bacause you cannot undo a vote. Don't vote for more than half the items: the data helps us prioritize (this isn't about "liking" individual items).</source>
-        <target>You can vote here on which roadmap items you would like to see. Please read the entire list before voting bacause you cannot undo a vote. Don't vote for more than half the items: the data helps us prioritize (this isn't about "liking" individual items).</target>
-        <note>Instructions at top of Roadmap screen</note>
       </trans-unit>
       <trans-unit id="admin" xml:space="preserve">
         <source>admin</source>

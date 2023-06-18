@@ -22,7 +22,7 @@ struct ReadmeView: View {
                 ScrollView(.vertical, showsIndicators: true) {
                     VStack {
                         VStack { // extra hierarchy level because container View can handle max 10 Views
-                            SectionHeader(String(localized: "Waalre", comment: "Section title on Readme page"),
+                            SectionHeader(String(localized: "The app", comment: "Section title on Readme page"),
                                           geo: geo)
 
                             Image("Waalre_map")
@@ -36,6 +36,8 @@ struct ReadmeView: View {
 
                             Paragraph("1.1", comment: "First paragraph in Waalre section of Readme page", geo: geo)
                             Paragraph("1.2", comment: "Fifth paragraph in Waalre section of Readme page", geo: geo)
+                            Paragraph("1.3", comment: "Fifth paragraph in Waalre section of Readme page", geo: geo)
+                            Paragraph("1.4", comment: "Fifth paragraph in Waalre section of Readme page", geo: geo)
                         }
 
                         VStack {

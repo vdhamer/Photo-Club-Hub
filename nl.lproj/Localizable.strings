@@ -67,8 +67,8 @@
 /* Caption of Localizations image on Readme page */
 "List of supported languages" = "De beschikbare talen";
 
-/* Default status of member within a club. Used in concatenations.
-Statistics at end of section of FilteredMemberPortfoliosView */
+/* Statistics at end of section of FilteredMemberPortfoliosView
+Default status of member within a club. Used in concatenations. */
 "member" = "lid";
 
 /* In Preferences, above toggles like "Show former members" */
@@ -93,10 +93,16 @@ Statistics at end of section of FilteredMemberPortfoliosView */
 "Open Source" = "Ontwikkelaars gezocht";
 
 /* First paragraph in Waalre section of Readme page */
-"Paragraph_1.1" = "De fotoclub \"Fotogroep Waalre\" is vernoemd naar Waalre, een dorp vlak onder Eindhoven. Sedert 1988 komen de leden van die club bijeen voor fotobespreekavonden.";
+"Paragraph_1.1" = "Deze app is bedoeld om foto's gemaakt door leden van fotoclubs met een breder publiek te delen.";
 
 /* Second paragraph in Waalre section of Readme page */
-"Paragraph_1.2" = "Oorspronkelijk ondersteunde de app uitsluitend Fotogroep Waalre, maar sedert versie 2 ondersteunt de app in principe meerdere clubs. De naam van de app 'Fotogroep Waalre' zal daarom binnenkort veranderen (waarschijnlijk 'Foto Club Hub').";
+"Paragraph_1.2" = "De app pesenteert op een uniforme wijze het werk van alle clubleden van alle ondersteunde fotoclubs. Die uniformiteit helpt voorkomen dat de gebruiker zelf de clubwebsites moet zien te vinden en vervolgens moet navigeren binnen iedere unieke website. Dit wordt overigens vergemakkelijkt doordat de app alleen bedoeld is om de foto's tot hun recht te laten komen. Voor andere clubinformatie (zoals mededelingen of een vergaderagenda) wordt de gebruiker naar de websites doorgelinkt.";
+
+/* Third paragraph in Waalre section of Readme page */
+"Paragraph_1.3" = "Oorspronkelijk heette deze app _Fotogroep Waalre_ naar een fotoclub in de buurt van Eindhoven. Het woord _Hub_ (ofwel 'trefplaats') in de nieuwe naam benadrukt dat de app in de huidige versie meerdere fotoclubs tegelijk kan ondersteunen en wellicht de verbindingen tussen de aangesloten fotoclubs kan bevorderen.";
+
+/* Fourth paragraph in Waalre section of Readme page */
+"Paragraph_1.4" = "Dit ondersteunen van meerdere fotoclubs gebeurt deels door de foto's te groeperen per clublid, en de clubleden te groeperen per club. Voor toepasbaarheid op grotere schaal moet het echter voor iedere club ook eenvoudig mogelijk zijn om hun ledeninformatie en de lijsten met geselecteerde foto's in de app in te voeren en bij te houden. De huidige werkwijze en de plannen om deze te verbeteren zijn te vinden op de [GitHub softwaresite](https://GitHub.com/vdhamer/Photo-Club-Hub#readme).";
 
 /* First paragraph in The App on Readme page */
 "Paragraph_2.1" = "Het doel van deze app is om geselecteerd werk te tonen van clubleden van fotoclubs.";
@@ -209,11 +215,8 @@ Statistics at end of section of FilteredMemberPortfoliosView */
 /* Title of Readme screen */
 "Readme" = "Over deze app";
 
-/* Title of Roadmap screen */
-"Roadmap Items" = "Mogelijke uitbreidingen";
-
-/* Field at top of Photographers page that allows the user to filter the photographers based on either given- and family name.
-Field at top of Members page that allows the user to filter the members based on either given- and family name. */
+/* Field at top of Members page that allows the user to filter the members based on either given- and family name.
+Field at top of Photographers page that allows the user to filter the photographers based on either given- and family name. */
 "Search names" = "Zoek op naam";
 
 /* Administrative role of member within a club. Used as part of concatenations. */
@@ -247,6 +250,9 @@ Field at top of Members page that allows the user to filter the members based on
 "Supported Platforms" = "iOS, iPadOS";
 
 /* Section title on Readme page */
+"The app" = "De app";
+
+/* Section title on Readme page */
 "The concept" = "Het concept";
 
 /* Section title on Readme page */
@@ -267,15 +273,9 @@ Field at top of Members page that allows the user to filter the members based on
 /* Administrative role of member within a club. Used as part of concatenations. */
 "vice-chairman" = "vicevoorzitter";
 
-/* Section title on Readme page */
-"Waalre" = "Waalre";
-
 /* Hint to the user if all of the Preference toggles are disabled. */
 "Warning: all member categories on the Preferences page are disabled. Please enable one or more options in Preferences." = "Waarschuwing: op de Instellingen pagina staan alle soorten leden op “niet weergeven“. Hierdoor is deze lijst leeg.";
 
 /* Title of page with list of photographers */
 "Who's Who" = "Namenlijst";
-
-/* Instructions at top of Roadmap screen */
-"You can vote here on which roadmap items you would like to see. Please read the entire list before voting bacause you cannot undo a vote. Don't vote for more than half the items: the data helps us prioritize (this isn't about \"liking\" individual items)." = "Stem hier op de nuttigste uitbreidingen in deze app. Bekijk vóór het stemmen de gehele lijst: een afgegeven stem kan niet ingetrokken worden. Stem hooguit op de helfd van de mogelijke uitbreidingen: het gaat ons om de prioriteit - het zijn dus geen \"likes\".";
 

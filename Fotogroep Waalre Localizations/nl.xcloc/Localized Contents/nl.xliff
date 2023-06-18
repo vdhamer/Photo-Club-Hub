@@ -115,14 +115,24 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
         <note>Section title on Readme page.</note>
       </trans-unit>
       <trans-unit id="Paragraph_1.1" xml:space="preserve">
-        <source>Photo Club Waalre is a photography club named after Waalre, a town in the south of The Netherlands. Since 1988, its club members meet to critique each other’s photos, organize excursions, and hold yearly photo expositions.</source>
-        <target>De fotoclub "Fotogroep Waalre" is vernoemd naar Waalre, een dorp vlak onder Eindhoven. Sedert 1988 komen de leden van die club bijeen voor fotobespreekavonden.</target>
+        <source>This app showcases photos shared by members of (amateur) photography clubs.</source>
+        <target>Deze app is bedoeld om foto's gemaakt door leden van fotoclubs met een breder publiek te delen.</target>
         <note>First paragraph in Waalre section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_1.2" xml:space="preserve">
-        <source>Originally the app only supported Photo Club Waalre (aka _Fotogroep Waalre_), but the current version supports **multiple** photo clubs. The app name will change soon (probably to 'Photo Club Hub') to reflect this.</source>
-        <target>Oorspronkelijk ondersteunde de app uitsluitend Fotogroep Waalre, maar sedert versie 2 ondersteunt de app in principe meerdere clubs. De naam van de app 'Fotogroep Waalre' zal daarom binnenkort veranderen (waarschijnlijk 'Foto Club Hub').</target>
+        <source>Like social media, the app creates a uniform way to access photos made by many different photographers. This uniformity replaces, for example, the hassle of having to find the websites and discovering how to navigate each site. But unlike social media or websites, the app doesn't aim to be a Swiss army knife: it's only goal is to present images with minimal distraction. The user can follow a link to a club website for other information.</source>
+        <target>De app pesenteert op een uniforme wijze het werk van alle clubleden van alle ondersteunde fotoclubs. Die uniformiteit helpt voorkomen dat de gebruiker zelf de clubwebsites moet zien te vinden en vervolgens moet navigeren binnen iedere unieke website. Dit wordt overigens vergemakkelijkt doordat de app alleen bedoeld is om de foto's tot hun recht te laten komen. Voor andere clubinformatie (zoals mededelingen of een vergaderagenda) wordt de gebruiker naar de websites doorgelinkt.</target>
         <note>Second paragraph in Waalre section of Readme page</note>
+      </trans-unit>
+      <trans-unit id="Paragraph_1.3" xml:space="preserve">
+        <source>This app was originally named _Fotogroep (Photo Club) Waalre_ after one single photo club with about 20 members. The word 'Hub' in the new name stresses the support of multiple photo clubs.</source>
+        <target>Oorspronkelijk heette deze app _Fotogroep Waalre_ naar een fotoclub in de buurt van Eindhoven. Het woord _Hub_ (ofwel 'trefplaats') in de nieuwe naam benadrukt dat de app in de huidige versie meerdere fotoclubs tegelijk kan ondersteunen en wellicht de verbindingen tussen de aangesloten fotoclubs kan bevorderen.</target>
+        <note>Third paragraph in Waalre section of Readme page</note>
+      </trans-unit>
+      <trans-unit id="Paragraph_1.4" xml:space="preserve">
+        <source>Supporting multiple photo clubs requires more than the ability to display a list of clubs, their members and the images shared by each member. Clubs also need to get that information into the app and keep it up to date. The README on the app's [GitHub site](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) sketches a plan to allow each club to host and maintain their own data while requiring minimal software skills.</source>
+        <target>Dit ondersteunen van meerdere fotoclubs gebeurt deels door de foto's te groeperen per clublid, en de clubleden te groeperen per club. Voor toepasbaarheid op grotere schaal moet het echter voor iedere club ook eenvoudig mogelijk zijn om hun ledeninformatie en de lijsten met geselecteerde foto's in de app in te voeren en bij te houden. De huidige werkwijze en de plannen om deze te verbeteren zijn te vinden op de [GitHub softwaresite](https://GitHub.com/vdhamer/Photo-Club-Hub#readme).</target>
+        <note>Fourth paragraph in Waalre section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_2.1" xml:space="preserve">
         <source>The goal of this app is to showcase curated work of members of photo clubs.</source>
@@ -318,16 +328,11 @@ Iedere ***PhotoClub*** heeft ***Members*** van diverse soorten (b.v. huidige led
         <target>Over deze app</target>
         <note>Title of Readme screen</note>
       </trans-unit>
-      <trans-unit id="Roadmap Items" xml:space="preserve">
-        <source>Roadmap Items</source>
-        <target>Mogelijke uitbreidingen</target>
-        <note>Title of Roadmap screen</note>
-      </trans-unit>
       <trans-unit id="Search names" xml:space="preserve">
         <source>Search names</source>
         <target>Zoek op naam</target>
-        <note>Field at top of Members page that allows the user to filter the members based on either given- and family name.
-Field at top of Photographers page that allows the user to filter the photographers based on either given- and family name.</note>
+        <note>Field at top of Photographers page that allows the user to filter the photographers based on either given- and family name.
+Field at top of Members page that allows the user to filter the members based on either given- and family name.</note>
       </trans-unit>
       <trans-unit id="Show aspiring members" xml:space="preserve">
         <source>Show aspiring members</source>
@@ -379,6 +384,11 @@ Field at top of Photographers page that allows the user to filter the photograph
         <target>Prelude</target>
         <note>Section title on Readme page</note>
       </trans-unit>
+      <trans-unit id="The app" xml:space="preserve">
+        <source>The app</source>
+        <target>De app</target>
+        <note>Section title on Readme page</note>
+      </trans-unit>
       <trans-unit id="The concept" xml:space="preserve">
         <source>The concept</source>
         <target>Het concept</target>
@@ -394,11 +404,6 @@ Field at top of Photographers page that allows the user to filter the photograph
         <target>Deze lijst is vermoedelijk leeg omdat er onvoldoende ledencategorieën geselecteerd zijn op het Instellingen scherm.</target>
         <note>Hint to the user if the database returns zero Members with empty Search filter.</note>
       </trans-unit>
-      <trans-unit id="Waalre" xml:space="preserve">
-        <source>Waalre</source>
-        <target>Waalre</target>
-        <note>Section title on Readme page</note>
-      </trans-unit>
       <trans-unit id="Warning: all member categories on the Preferences page are disabled. Please enable one or more options in Preferences." xml:space="preserve">
         <source>Warning: all member categories on the Preferences page are disabled. Please enable one or more options in Preferences.</source>
         <target>Waarschuwing: op de Instellingen pagina staan alle soorten leden op “niet weergeven“. Hierdoor is deze lijst leeg.</target>
@@ -408,11 +413,6 @@ Field at top of Photographers page that allows the user to filter the photograph
         <source>Who's Who</source>
         <target>Namenlijst</target>
         <note>Title of page with list of photographers</note>
-      </trans-unit>
-      <trans-unit id="You can vote here on which roadmap items you would like to see. Please read the entire list before voting bacause you cannot undo a vote. Don't vote for more than half the items: the data helps us prioritize (this isn't about &quot;liking&quot; individual items)." xml:space="preserve">
-        <source>You can vote here on which roadmap items you would like to see. Please read the entire list before voting bacause you cannot undo a vote. Don't vote for more than half the items: the data helps us prioritize (this isn't about "liking" individual items).</source>
-        <target>Stem hier op de nuttigste uitbreidingen in deze app. Bekijk vóór het stemmen de gehele lijst: een afgegeven stem kan niet ingetrokken worden. Stem hooguit op de helfd van de mogelijke uitbreidingen: het gaat ons om de prioriteit - het zijn dus geen "likes".</target>
-        <note>Instructions at top of Roadmap screen</note>
       </trans-unit>
       <trans-unit id="admin" xml:space="preserve">
         <source>admin</source>
