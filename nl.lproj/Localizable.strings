@@ -67,8 +67,8 @@
 /* Caption of Localizations image on Readme page */
 "List of supported languages" = "De beschikbare talen";
 
-/* Statistics at end of section of FilteredMemberPortfoliosView
-Default status of member within a club. Used in concatenations. */
+/* Default status of member within a club. Used in concatenations.
+Statistics at end of section of FilteredMemberPortfoliosView */
 "member" = "lid";
 
 /* In Preferences, above toggles like "Show former members" */
@@ -188,9 +188,6 @@ Default status of member within a club. Used in concatenations. */
 /* Telephone number (usually invisible) */
 "Phone:" = "Tel:";
 
-/* Title used in PhotoClubs View */
-"Photo Club Waalre" = "Fotogroep Waalre";
-
 /* Title of page with clubs and maps */
 "Photo Clubs" = "Fotogroepen";
 
@@ -215,8 +212,8 @@ Default status of member within a club. Used in concatenations. */
 /* Title of Roadmap screen */
 "Roadmap Items" = "Mogelijke uitbreidingen";
 
-/* Field at top of Members page that allows the user to filter the members based on either given- and family name.
-Field at top of Photographers page that allows the user to filter the photographers based on either given- and family name. */
+/* Field at top of Photographers page that allows the user to filter the photographers based on either given- and family name.
+Field at top of Members page that allows the user to filter the members based on either given- and family name. */
 "Search names" = "Zoek op naam";
 
 /* Administrative role of member within a club. Used as part of concatenations. */

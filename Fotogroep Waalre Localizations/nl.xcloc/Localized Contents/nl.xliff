@@ -284,11 +284,6 @@ Iedere ***PhotoClub*** heeft ***Members*** van diverse soorten (b.v. huidige led
         <target>Tel:</target>
         <note>Telephone number (usually invisible)</note>
       </trans-unit>
-      <trans-unit id="Photo Club Waalre" xml:space="preserve">
-        <source>Photo Club Waalre</source>
-        <target>Fotogroep Waalre</target>
-        <note>Title used in PhotoClubs View</note>
-      </trans-unit>
       <trans-unit id="Photo Clubs" xml:space="preserve">
         <source>Photo Clubs</source>
         <target>Fotogroepen</target>
@@ -462,8 +457,8 @@ Field at top of Photographers page that allows the user to filter the photograph
       <trans-unit id="member" xml:space="preserve">
         <source>member</source>
         <target>lid</target>
-        <note>Default status of member within a club. Used in concatenations.
-Statistics at end of section of FilteredMemberPortfoliosView</note>
+        <note>Statistics at end of section of FilteredMemberPortfoliosView
+Default status of member within a club. Used in concatenations.</note>
       </trans-unit>
       <trans-unit id="members" xml:space="preserve">
         <source>members</source>
