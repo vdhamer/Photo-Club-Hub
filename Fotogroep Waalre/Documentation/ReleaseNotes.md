@@ -1,6 +1,7 @@
 ### 2.3.6 (Github commit ???????) ??-06-23
 
 This is build #4591 in Apple's App Store
+    * Changed user-visible app name to Photoclub Hub (NL: Fotoclub Hub)
 Settings screen
     * By default "Former members" are now shown. The user can change this behavior in the Preferences screen.
 Maintenance
