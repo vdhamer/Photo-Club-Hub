@@ -25,6 +25,9 @@ struct ReadmeView: View {
                             SectionHeader(String(localized: "The app", comment: "Section title on Readme page"),
                                           geo: geo)
 
+                            Paragraph("1.1", comment: "First paragraph in Waalre section of Readme page", geo: geo)
+                            Paragraph("1.2", comment: "Fifth paragraph in Waalre section of Readme page", geo: geo)
+
                             Image("Waalre_map")
                                 .resizable()
                                 .border(.gray, width: 1)
@@ -34,8 +37,6 @@ struct ReadmeView: View {
                                 .font(.callout.italic())
                                 .frame(width: geo.size.width, alignment: .center)
 
-                            Paragraph("1.1", comment: "First paragraph in Waalre section of Readme page", geo: geo)
-                            Paragraph("1.2", comment: "Fifth paragraph in Waalre section of Readme page", geo: geo)
                             Paragraph("1.3", comment: "Fifth paragraph in Waalre section of Readme page", geo: geo)
                             Paragraph("1.4", comment: "Fifth paragraph in Waalre section of Readme page", geo: geo)
                         }
