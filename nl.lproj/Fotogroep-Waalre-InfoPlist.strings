@@ -1,6 +1,9 @@
 /* Bundle display name */
-"CFBundleDisplayName" = "Fotogroep Waalre";
+"CFBundleDisplayName" = "Fotoclub Hub";
 
 /* Bundle name */
-"CFBundleName" = "Fotogroep Waalre";
+"CFBundleName" = "Fotoclub Hub";
+
+/* used for text-to-speech */
+"CFBundleSpokenName" = "Fotoclub Hub";
 
