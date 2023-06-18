@@ -76,8 +76,6 @@
 		D0E2235427DE9139002A8600 /* PreludeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E2235327DE9139002A8600 /* PreludeView.swift */; };
 		D0E694C927EF9B450054D634 /* LockAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E694C827EF9B450054D634 /* LockAnimationView.swift */; };
 		D0EB533C295775240061613B /* Crosshairs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EB533B295775240061613B /* Crosshairs.swift */; };
-		D0FCF2E329B5517000F31442 /* VoteOnRoadmapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FCF2E229B5517000F31442 /* VoteOnRoadmapView.swift */; };
-		D0FCF2E629B558FE00F31442 /* Roadmap.json in Resources */ = {isa = PBXBuildFile; fileRef = D0FCF2E529B558FE00F31442 /* Roadmap.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -674,7 +672,6 @@
 			files = (
 				D008D2AA28739167007A7BE2 /* .gitignore in Resources */,
 				D0396075278CF6550035F750 /* Settings.bundle in Resources */,
-				D0FCF2E629B558FE00F31442 /* Roadmap.json in Resources */,
 				D0831A57277F82460049AB84 /* en.xcloc in Resources */,
 				D0831A56277F82460049AB84 /* nl.xcloc in Resources */,
 				D06061EA28A0456C00A675A7 /* FGWPrivateMembersURL3.txt in Resources */,
@@ -816,7 +813,6 @@
 				D0D18C78296E1F6A00B334DB /* PhotoClubID.swift in Sources */,
 				D0831A1E277F72270049AB84 /* PreferencesView.swift in Sources */,
 				D0831A37277F72590049AB84 /* FGWMembersProvider.swift in Sources */,
-				D0FCF2E329B5517000F31442 /* VoteOnRoadmapView.swift in Sources */,
 				D0831A31277F72590049AB84 /* MemberPortfolio.swift in Sources */,
 				D0831A32277F72590049AB84 /* Photographer.swift in Sources */,
 				D044646527FCE7C100990613 /* UIDevice+IsIPad.swift in Sources */,
