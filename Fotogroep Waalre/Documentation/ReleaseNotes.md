@@ -1,11 +1,12 @@
 ### 2.3.6 (Github commit ???????) ??-06-23
 
-This is build #459? in Apple's App Store
+This is build #4591 in Apple's App Store
 Settings screen
-    * By default "Former members" are now shown
+    * By default "Former members" are now shown. The user can change this behavior in the Preferences screen.
 Maintenance
+    * Minimum deployment target is iOS 16.6.
     * Upgraded and tested with iOS 17.0 beta (21A5248u), XCode 14.0 beta 1, Swift 5.9
-    * Temporarily set new ENABLE_USER_SCRIPT_SANDBOXING = NO, because this gives errors (swiftlint reading non-swift files)
+    * Temporarily set new ENABLE_USER_SCRIPT_SANDBOXING = NO (swiftlint reading non-swift files)
     * Reduced priority of Fotogroepw Waalre from 3 to 1 to ensure basic alphabetical order
 ---------------------------------------------------------------------------
 ### 2.3.5 (Github commit 62a54b7) 30-05-23
