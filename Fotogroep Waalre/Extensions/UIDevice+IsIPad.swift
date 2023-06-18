@@ -1,6 +1,6 @@
 //
 //  UIDevice+IsIPad.swift
-//  Fotogroep Waalre
+//  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 05/04/2022.
 //

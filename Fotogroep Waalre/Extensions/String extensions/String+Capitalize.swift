@@ -1,6 +1,6 @@
 //
 //  FoundationExtensions.swift
-//  Fotogroep Waalre
+//  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 26/12/2021.
 //

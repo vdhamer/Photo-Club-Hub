@@ -1,6 +1,6 @@
 //
 //  PhotographersView.swift
-//  Fotogroep Waalre 2
+//  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 07/01/2022.
 //

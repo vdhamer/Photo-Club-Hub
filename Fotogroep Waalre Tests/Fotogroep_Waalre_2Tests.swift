@@ -1,6 +1,6 @@
 //
 //  Fotogroep_Waalre_2Tests.swift
-//  Fotogroep Waalre 2Tests
+//  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 31/12/2021.
 //

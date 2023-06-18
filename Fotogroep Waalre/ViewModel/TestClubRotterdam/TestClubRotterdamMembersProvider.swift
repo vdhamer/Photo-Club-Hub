@@ -1,6 +1,6 @@
 //
 //  TestClubRotterdamMembersProvider.swift
-//  Fotogroep Waalre
+//  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 02/04/2022.
 //

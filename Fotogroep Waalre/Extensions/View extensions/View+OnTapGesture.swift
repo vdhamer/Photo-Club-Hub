@@ -1,6 +1,6 @@
 //
 //  View+OnTapGesture.swift
-//  Fotogroep Waalre
+//  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 17/03/2022.
 //
