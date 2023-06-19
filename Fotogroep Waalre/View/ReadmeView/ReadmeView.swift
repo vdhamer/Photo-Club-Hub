@@ -28,12 +28,12 @@ struct ReadmeView: View {
                             Paragraph("1.1", comment: "First paragraph in Waalre section of Readme page", geo: geo)
                             Paragraph("1.2", comment: "Fifth paragraph in Waalre section of Readme page", geo: geo)
 
-                            Image("Waalre_map")
+                            Image("2017_ExpoAppPoster_001")
                                 .resizable()
                                 .border(.gray, width: 1)
                                 .scaledToFit()
-                                .frame(width: 293, height: 375, alignment: .center)
-                            Text(verbatim: "Waalre\n")
+                                .frame(width: 265, height: 375, alignment: .center)
+                            Text("Poster for a photo club exposition\n")
                                 .font(.callout.italic())
                                 .frame(width: geo.size.width, alignment: .center)
 
