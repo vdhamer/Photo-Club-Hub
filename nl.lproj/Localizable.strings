@@ -105,7 +105,7 @@ Default status of member within a club. Used in concatenations. */
 "Paragraph_1.4" = "Dit ondersteunen van meerdere fotoclubs gebeurt deels door de foto's te groeperen per clublid, en de clubleden te groeperen per club. Voor toepasbaarheid op grotere schaal moet het echter voor iedere club ook eenvoudig mogelijk zijn om hun ledeninformatie en de lijsten met geselecteerde foto's in de app in te voeren en bij te houden. De huidige werkwijze en de plannen om deze te verbeteren zijn te vinden op de [GitHub softwaresite](https://GitHub.com/vdhamer/Photo-Club-Hub#readme).";
 
 /* First paragraph in The App on Readme page */
-"Paragraph_2.1" = "Het doel van deze app is om geselecteerd werk te tonen van clubleden van fotoclubs.";
+"Paragraph_2.1" = "Het doel van deze app is, zoals gezegd, om geselecteerd werk te tonen van clubleden van fotoclubs.";
 
 /* Second paragraph in The App on Readme page */
 "Paragraph_2.2" = "De app heeft een hiërarchische structuur. Op het hoogste niveau vindt men de ***fotoclubs***. Binnen een fotoclubs treft men de ***portfolio's*** aan van de clubleden. Een portfolio bevat tenslotte de ***foto's*** van dat lid - althans die foto's van die betrekking hebben op de fotoclub.";
@@ -203,6 +203,9 @@ Default status of member within a club. Used in concatenations. */
 /* Title of page showing member portfolios */
 "Portfolios" = "Portfolio's";
 
+/* No comment provided by engineer. */
+"Poster for a photo club exposition\n" = "Poster voor een club expositie\n";
+
 /* Title of screen with toggles to adjust preferences */
 "Preferences" = "Instellingen";
 
@@ -215,8 +218,8 @@ Default status of member within a club. Used in concatenations. */
 /* Title of Readme screen */
 "Readme" = "Over deze app";
 
-/* Field at top of Members page that allows the user to filter the members based on either given- and family name.
-Field at top of Photographers page that allows the user to filter the photographers based on either given- and family name. */
+/* Field at top of Photographers page that allows the user to filter the photographers based on either given- and family name.
+Field at top of Members page that allows the user to filter the members based on either given- and family name. */
 "Search names" = "Zoek op naam";
 
 /* Administrative role of member within a club. Used as part of concatenations. */

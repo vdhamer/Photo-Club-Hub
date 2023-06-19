@@ -11,19 +11,19 @@
 "Open Source" = "Developers";
 
 /* First paragraph in Waalre section of Readme page */
-"Paragraph_1.1" = "This app showcases photos shared by members of (amateur) photography clubs.";
+"Paragraph_1.1" = "This app showcases photos shared by members of photography clubs.";
 
 /* Second paragraph in Waalre section of Readme page */
-"Paragraph_1.2" = "Like social media, the app creates a uniform way to access photos made by many different photographers. This uniformity replaces, for example, the hassle of having to find the websites and discovering how to navigate each site. But unlike social media or websites, the app doesn't aim to be a Swiss army knife: it's only goal is to present images with minimal distraction. The user can follow a link to a club website for other information.";
+"Paragraph_1.2" = "This app presents selected images by the members of supported photo clubs. It does this in a uniform way across the photographers and clubs to avoid the hassle of having to find the various websites and discovering how to navigate each one. Simplicity is further achieved by focusing on one goal: to present the images with minimal distraction. The app thus will not (and cannot)  replace websites. Instead, it actually provides links to each club's website in case the user needs other types of information.";
 
 /* Third paragraph in Waalre section of Readme page */
-"Paragraph_1.3" = "This app was originally named _Fotogroep (Photo Club) Waalre_ after one single photo club with about 20 members. The word 'Hub' in the new name stresses the support of multiple photo clubs.";
+"Paragraph_1.3" = "This app was originally named _Fotogroep (Photo Club) Waalre_ after one single photo club in The Netherlands. The word 'Hub' in the new name reflects the hope that the app can help stengthen the bonds between the clubs.";
 
 /* Fourth paragraph in Waalre section of Readme page */
-"Paragraph_1.4" = "Supporting multiple photo clubs requires more than the ability to display a list of clubs, their members and the images shared by each member. Clubs also need to get that information into the app and keep it up to date. The README on the app's [GitHub site](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) sketches a plan to allow each club to host and maintain their own data while requiring minimal software skills.";
+"Paragraph_1.4" = "At a pragmatic level, supporting multiple photo clubs requires more than the ability to display a list of clubs, their members and the selected photos per member. Clubs need to be able to provide that information and update it whenever needed without central support or programming skills. The app's [GitHub site](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) explains the current status and sketches plans how to further improve this.";
 
 /* First paragraph in The App on Readme page */
-"Paragraph_2.1" = "The goal of this app is to showcase curated work of members of photo clubs.";
+"Paragraph_2.1" = "As mentioned, the goal of this app is to showcase curated work of members of photo clubs.";
 
 /* Second paragraph in The App on Readme page */
 "Paragraph_2.2" = "The main screen of the app shown a series of ***photo clubs***. Each photo club, in turn, contains a series of member ***portfolios***. The portfolios contain the actual images.";
