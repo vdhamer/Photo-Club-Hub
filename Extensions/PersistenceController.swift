@@ -10,7 +10,7 @@ import CoreLocation // needed for coordinate translation
 
 struct PersistenceController {
 	static let shared = PersistenceController()
-    let storename = String("Fotogroep Waalre") // Used as Core Data database name - not localized.
+//    let storename = String("Foto Club Hub") // Used as Core Data database name - not localized.
 
 	static var preview: PersistenceController = {
 		let result = PersistenceController(inMemory: true)
