@@ -26,7 +26,8 @@ struct ReadmeView: View {
                                           geo: geo)
 
                             Paragraph("1.1", comment: "First paragraph in Waalre section of Readme page", geo: geo)
-                            Paragraph("1.2", comment: "Fifth paragraph in Waalre section of Readme page", geo: geo)
+                            Paragraph("1.2", comment: "Second paragraph in Waalre section of Readme page", geo: geo)
+                            Paragraph("1.3", comment: "Third paragraph in Waalre section of Readme page", geo: geo)
 
                             Image("2017_ExpoAppPoster_001")
                                 .resizable()
@@ -37,8 +38,9 @@ struct ReadmeView: View {
                                 .font(.callout.italic())
                                 .frame(width: geo.size.width, alignment: .center)
 
-                            Paragraph("1.3", comment: "Fifth paragraph in Waalre section of Readme page", geo: geo)
-                            Paragraph("1.4", comment: "Fifth paragraph in Waalre section of Readme page", geo: geo)
+                            Paragraph("1.4", comment: "Fourth paragraph in Waalre section of Readme page", geo: geo)
+                            Paragraph("1.5", comment: "Fifth paragraph in Waalre section of Readme page", geo: geo)
+                            Paragraph("1.6", comment: "Sixth paragraph in Waalre section of Readme page", geo: geo)
                         }
 
                         VStack {
