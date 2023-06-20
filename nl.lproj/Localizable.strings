@@ -99,16 +99,16 @@ Default status of member within a club. Used in concatenations. */
 "Paragraph_1.2" = "De app pesenteert op een uniforme wijze het werk van alle clubleden van alle ondersteunde fotoclubs.";
 
 /* Third paragraph in Waalre section of Readme page */
-"Paragraph_1.3" = "Deze uniformiteit helpt voorkomen dat de gebruiker zelf de clubwebsites moet zien te vinden en vervolgens moet navigeren binnen iedere unieke website. Dit wordt overigens vergemakkelijkt doordat de app alleen bedoeld is om de foto's tot hun recht te laten komen. Voor andere clubinformatie (zoals mededelingen of een vergaderagenda) wordt de gebruiker naar de websites doorgelinkt.";
+"Paragraph_1.3" = "Deze uniformiteit helpt voorkomen dat de gebruiker zelf een clubwebsite moet zien te vinden en vervolgens moet navigeren binnen iedere unieke website. Dit wordt overigens vergemakkelijkt doordat de app alleen bedoeld is om de foto's tot hun recht te laten komen. Voor andere clubinformatie (zoals mededelingen of een vergaderagenda) wordt de gebruiker naar de websites doorgelinkt.";
 
 /* Fourth paragraph in Waalre section of Readme page */
 "Paragraph_1.4" = "Oorspronkelijk heette deze app _Fotogroep Waalre_ naar een fotoclub in de buurt van Eindhoven. Het woord _Hub_ (ofwel 'trefplaats') in de nieuwe naam benadrukt dat de app in de huidige versie meerdere fotoclubs tegelijk kan ondersteunen en de ambitie om de banden tussen de aangesloten fotoclubs, de fotografen en hun publiek te versterken.";
 
 /* Fifth paragraph in Waalre section of Readme page */
-"Paragraph_1.5" = "Het ondersteunen van meerdere fotoclubs gebeurt deels door de foto's te groeperen per clublid, en de clubleden te groeperen per club. Dit is echter niet voldoende...";
+"Paragraph_1.5" = "Het ondersteunen van meerdere fotoclubs gebeurt deels door de foto's te groeperen per clublid, en de clubleden te groeperen per club. Er is echter meer voor nodig...";
 
 /* Sixth paragraph in Waalre section of Readme page */
-"Paragraph_1.6" = "Voor toepasbaarheid op grotere schaal moet het voor iedere club eenvoudig mogelijk zijn om hun ledeninformatie en de lijsten met geselecteerde foto's in de app in te voeren en bij te werken. De huidige werkwijze en de plannen om deze te verbeteren zijn te vinden op de [GitHub softwaresite](https://GitHub.com/vdhamer/Photo-Club-Hub#readme).";
+"Paragraph_1.6" = "Voor toepasbaarheid op grotere schaal moet het voor de afzonderlijke club eenvoudig zijn om hun ledeninformatie en de lijsten met geselecteerde foto's in de app in te voeren en bij te werken. De huidige werkwijze en de plannen om deze te verbeteren zijn te vinden op de [GitHub softwaresite](https://GitHub.com/vdhamer/Photo-Club-Hub#readme).";
 
 /* First paragraph in The App on Readme page */
 "Paragraph_2.1" = "Het doel van deze app is, zoals gezegd, om geselecteerd werk te tonen van clubleden van fotoclubs.";
