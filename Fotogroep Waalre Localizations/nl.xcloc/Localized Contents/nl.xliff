@@ -120,24 +120,34 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
         <note>Section title on Readme page.</note>
       </trans-unit>
       <trans-unit id="Paragraph_1.1" xml:space="preserve">
-        <source>This app showcases photos shared by members of photography clubs.</source>
-        <target>Deze app is bedoeld om foto's gemaakt door leden van fotoclubs met een breder publiek te delen.</target>
+        <source>This app showcases selected photos by the members of photo clubs. Ex-members of photo clubs can optionally also be included.</source>
+        <target>Deze app is bedoeld om foto's gemaakt door leden van fotoclubs te delen met een breed publiek.</target>
         <note>First paragraph in Waalre section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_1.2" xml:space="preserve">
-        <source>This app presents selected images by the members of supported photo clubs. It does this in a uniform way across the photographers and clubs to avoid the hassle of having to find the various websites and discovering how to navigate each one. Simplicity is further achieved by focusing on one goal: to present the images with minimal distraction. The app thus will not (and cannot)  replace websites. Instead, it actually provides links to each club's website in case the user needs other types of information.</source>
-        <target>De app pesenteert op een uniforme wijze het werk van alle clubleden van alle ondersteunde fotoclubs. Die uniformiteit helpt voorkomen dat de gebruiker zelf de clubwebsites moet zien te vinden en vervolgens moet navigeren binnen iedere unieke website. Dit wordt overigens vergemakkelijkt doordat de app alleen bedoeld is om de foto's tot hun recht te laten komen. Voor andere clubinformatie (zoals mededelingen of een vergaderagenda) wordt de gebruiker naar de websites doorgelinkt.</target>
+        <source>It does this in a _uniform_ way across all these photographers and participating clubs. For the target audience, this uniformity avoids having to find the websites and discovering how to navigate each unique site.</source>
+        <target>De app pesenteert op een uniforme wijze het werk van alle clubleden van alle ondersteunde fotoclubs.</target>
         <note>Second paragraph in Waalre section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_1.3" xml:space="preserve">
-        <source>This app was originally named _Fotogroep (Photo Club) Waalre_ after one single photo club in The Netherlands. The word 'Hub' in the new name reflects the hope that the app can help stengthen the bonds between the clubs.</source>
-        <target>Oorspronkelijk heette deze app _Fotogroep Waalre_ naar een fotoclub in de buurt van Eindhoven. Het woord _Hub_ (ofwel 'trefplaats') in de nieuwe naam benadrukt dat de app in de huidige versie meerdere fotoclubs tegelijk kan ondersteunen en wellicht de verbindingen tussen de aangesloten fotoclubs kan bevorderen.</target>
+        <source>The app does not try to replace individual or club _websites_, or try to replace invididual or club social media presence: its only focus is to present all the images in an easily accesible way with minimal distraction. The app can display links to external sites for additional information.</source>
+        <target>Deze uniformiteit helpt voorkomen dat de gebruiker zelf een clubwebsite moet zien te vinden en vervolgens moet navigeren binnen iedere unieke website. Dit wordt overigens vergemakkelijkt doordat de app alleen bedoeld is om de foto's tot hun recht te laten komen. Voor andere clubinformatie (zoals mededelingen of een vergaderagenda) wordt de gebruiker naar de websites doorgelinkt.</target>
         <note>Third paragraph in Waalre section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_1.4" xml:space="preserve">
-        <source>At a pragmatic level, supporting multiple photo clubs requires more than the ability to display a list of clubs, their members and the selected photos per member. Clubs need to be able to provide that information and update it whenever needed without central support or programming skills. The app's [GitHub site](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) explains the current status and sketches plans how to further improve this.</source>
-        <target>Dit ondersteunen van meerdere fotoclubs gebeurt deels door de foto's te groeperen per clublid, en de clubleden te groeperen per club. Voor toepasbaarheid op grotere schaal moet het echter voor iedere club ook eenvoudig mogelijk zijn om hun ledeninformatie en de lijsten met geselecteerde foto's in de app in te voeren en bij te houden. De huidige werkwijze en de plannen om deze te verbeteren zijn te vinden op de [GitHub softwaresite](https://GitHub.com/vdhamer/Photo-Club-Hub#readme).</target>
+        <source>The app was originally named _Fotogroep (Photo Club) Waalre_ after an eponymous 20-person photo club in The Netherlands. The word 'Hub' in the new name stresses the app's current support for _multiple_ photo clubs, and the hope that the app can strengthen ties between clubs, and photographers by making their work easier to discover.</source>
+        <target>Oorspronkelijk heette deze app _Fotogroep Waalre_ naar een fotoclub in de buurt van Eindhoven. Het woord _Hub_ (ofwel 'trefplaats') in de nieuwe naam benadrukt dat de app in de huidige versie meerdere fotoclubs tegelijk kan ondersteunen en de ambitie om de banden tussen de aangesloten fotoclubs, de fotografen en hun publiek te versterken.</target>
         <note>Fourth paragraph in Waalre section of Readme page</note>
+      </trans-unit>
+      <trans-unit id="Paragraph_1.5" xml:space="preserve">
+        <source>Support for multiple photo clubs requires the ability to display a list of clubs, their members and a series of selected photos per member.</source>
+        <target>Het ondersteunen van meerdere fotoclubs gebeurt deels door de foto's te groeperen per clublid, en de clubleden te groeperen per club. Er is echter meer voor nodig...</target>
+        <note>Fifth paragraph in Waalre section of Readme page</note>
+      </trans-unit>
+      <trans-unit id="Paragraph_1.6" xml:space="preserve">
+        <source>Multi-club support also implies that individual clubs do their _data maintenance_: providing and maintaining the images and the associated lists. We believe that central support should be limited to maintaining the app only - leaving the maintenance of the data to the clubs that provide the images. The app's [GitHub site](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) explains the interim approach for onboardng clubs and the plans how to enable the clubs to do this themselves with minimal software expertise.</source>
+        <target>Voor toepasbaarheid op grotere schaal moet het voor de afzonderlijke club eenvoudig zijn om hun ledeninformatie en de lijsten met geselecteerde foto's in de app in te voeren en bij te werken. De huidige werkwijze en de plannen om deze te verbeteren zijn te vinden op de [GitHub softwaresite](https://GitHub.com/vdhamer/Photo-Club-Hub#readme).</target>
+        <note>Sixth paragraph in Waalre section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_2.1" xml:space="preserve">
         <source>As mentioned, the goal of this app is to showcase curated work of members of photo clubs.</source>
@@ -299,6 +309,11 @@ Iedere ***PhotoClub*** heeft ***Members*** van diverse soorten (b.v. huidige led
         <target>Tel:</target>
         <note>Telephone number (usually invisible)</note>
       </trans-unit>
+      <trans-unit id="Photo Club Hub" xml:space="preserve">
+        <source>Photo Club Hub</source>
+        <target>Fotoclub Hub</target>
+        <note>Name of the app shown in PreludeView when app is started</note>
+      </trans-unit>
       <trans-unit id="Photo Clubs" xml:space="preserve">
         <source>Photo Clubs</source>
         <target>Fotogroepen</target>
@@ -343,8 +358,8 @@ Iedere ***PhotoClub*** heeft ***Members*** van diverse soorten (b.v. huidige led
       <trans-unit id="Search names" xml:space="preserve">
         <source>Search names</source>
         <target>Zoek op naam</target>
-        <note>Field at top of Photographers page that allows the user to filter the photographers based on either given- and family name.
-Field at top of Members page that allows the user to filter the members based on either given- and family name.</note>
+        <note>Field at top of Members page that allows the user to filter the members based on either given- and family name.
+Field at top of Photographers page that allows the user to filter the photographers based on either given- and family name.</note>
       </trans-unit>
       <trans-unit id="Show aspiring members" xml:space="preserve">
         <source>Show aspiring members</source>
@@ -469,8 +484,8 @@ Field at top of Members page that allows the user to filter the members based on
       <trans-unit id="member" xml:space="preserve">
         <source>member</source>
         <target>lid</target>
-        <note>Statistics at end of section of FilteredMemberPortfoliosView
-Default status of member within a club. Used in concatenations.</note>
+        <note>Default status of member within a club. Used in concatenations.
+Statistics at end of section of FilteredMemberPortfoliosView</note>
       </trans-unit>
       <trans-unit id="members" xml:space="preserve">
         <source>members</source>
