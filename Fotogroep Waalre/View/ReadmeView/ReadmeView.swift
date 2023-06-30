@@ -25,22 +25,23 @@ struct ReadmeView: View {
                             SectionHeader(String(localized: "The app", comment: "Section title on Readme page"),
                                           geo: geo)
 
-                            Paragraph("1.1", comment: "First paragraph in Waalre section of Readme page", geo: geo)
-                            Paragraph("1.2", comment: "Second paragraph in Waalre section of Readme page", geo: geo)
-                            Paragraph("1.3", comment: "Third paragraph in Waalre section of Readme page", geo: geo)
+                            Paragraph("1.1", comment: "First paragraph in The-app section of Readme page", geo: geo)
+                            Paragraph("1.2", comment: "Second paragraph in The-app section of Readme page", geo: geo)
+                            Paragraph("1.3", comment: "Third paragraph in The-app section of Readme page", geo: geo)
 
                             Image("2017_ExpoAppPoster_001")
                                 .resizable()
                                 .border(.gray, width: 1)
                                 .scaledToFit()
                                 .frame(width: 265, height: 375, alignment: .center)
-                            Text("Poster for a photo club exposition\n")
+                            Text("Poster for a photo club exposition\n",
+                                 comment: "Caption of an image on the Readme page")
                                 .font(.callout.italic())
                                 .frame(width: geo.size.width, alignment: .center)
 
-                            Paragraph("1.4", comment: "Fourth paragraph in Waalre section of Readme page", geo: geo)
-                            Paragraph("1.5", comment: "Fifth paragraph in Waalre section of Readme page", geo: geo)
-                            Paragraph("1.6", comment: "Sixth paragraph in Waalre section of Readme page", geo: geo)
+                            Paragraph("1.4", comment: "Fourth paragraph in The-app section of Readme page", geo: geo)
+                            Paragraph("1.5", comment: "Fifth paragraph in The-app section of Readme page", geo: geo)
+                            Paragraph("1.6", comment: "Sixth paragraph in The-app section of Readme page", geo: geo)
                         }
 
                         VStack {
@@ -63,20 +64,16 @@ struct ReadmeView: View {
                             }
 
                             Group { // can have max 10 views within a container view
-                                Paragraph("2.1",
-                                          comment: "First paragraph in Concept section of Readme page", geo: geo)
-                                Paragraph("2.2",
-                                          comment: "Second paragraph in Concept section of Readme page", geo: geo)
-                                Paragraph("2.3",
-                                          comment: "Third paragraph in Concept section of Readme page", geo: geo)
-                                Paragraph("2.4",
-                                          comment: "Fourth paragraph in Concept section of Readme page", geo: geo)
-                                Paragraph("2.5",
-                                          comment: "Fifth paragraph in Concept section of Readme page", geo: geo)
-                                Paragraph("2.6",
-                                          comment: "Sixth paragraph in Concept section of Readme page", geo: geo)
-                                Paragraph("2.7",
-                                          comment: "Seventh paragraph in Concept section of Readme page", geo: geo)
+                                Paragraph("2.1", comment: "First paragraph in Concept section of Readme page", geo: geo)
+                                Paragraph("2.2", comment: "Second paragraph in Concept section of Readme page",
+                                          geo: geo)
+                                Paragraph("2.3", comment: "Third paragraph in Concept section of Readme page", geo: geo)
+                                Paragraph("2.4", comment: "Fourth paragraph in Concept section of Readme page",
+                                          geo: geo)
+                                Paragraph("2.5", comment: "Fifth paragraph in Concept section of Readme page", geo: geo)
+                                Paragraph("2.6", comment: "Sixth paragraph in Concept section of Readme page", geo: geo)
+                                Paragraph("2.7", comment: "Seventh paragraph in Concept section of Readme page",
+                                          geo: geo)
                             }
                         }
 
@@ -101,10 +98,9 @@ struct ReadmeView: View {
                                 .frame(width: geo.size.width, alignment: .center)
                                 Text("")
 
-                                Paragraph("3.2",
-                                          comment: "Second paragraph in The Features section of Readme page", geo: geo)
-                                Paragraph("3.3",
-                                          comment: "Third paragraph in The Features section of Readme page",
+                                Paragraph("3.2", comment: "Second paragraph in The Features section of Readme page",
+                                          geo: geo)
+                                Paragraph("3.3", comment: "Third paragraph in The Features section of Readme page",
                                           geo: geo, bottomPaddingAmount: 10)
                             }
 
@@ -128,11 +124,11 @@ struct ReadmeView: View {
                                     })
                                 Spacer()
                             }
+ */
 
-                            Paragraph("3.4",
-                                      comment: "Fourth paragraph in The Features section of Readme page",
+                            Paragraph("3.4", comment: "Fourth paragraph in The Features section of Readme page",
                                       geo: geo)
-*/
+
                         }
 
                         VStack {
