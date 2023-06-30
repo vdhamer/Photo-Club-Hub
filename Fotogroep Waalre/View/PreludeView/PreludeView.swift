@@ -129,7 +129,10 @@ struct PreludeView: View {
                                 debugPanelVisible: $debugPanelVisible,
                                 crosshairsVisible: $crosshairsVisible)
 
-                    Text(verbatim: "WAALRE")
+                    Text(isDebug() ? String(localized: "In debug mode",
+                                            comment: "Shown instead of app name in PreludeView when app is started") :
+                                     String(localized: "Photo Club Hub", // was "Waalre"
+                                            comment: "Name of the app shown in PreludeView when app is started"))
                         .foregroundColor(.black)
                         .font(Font.custom("Gill Sans", size: 105*(min(geo.size.width, geo.size.height)/800)))
                         .kerning((140/3)*(min(geo.size.width, geo.size.height)/800))

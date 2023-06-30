@@ -61,6 +61,9 @@
 /* Relationship status of member within a club. Used in concatenations. */
 "honorary member" = "erelid";
 
+/* No comment provided by engineer. */
+"In debug mode" = "Test versie";
+
 /* Shown in gray at the bottom of the Photographers page. */
 "Information about a photographer's links to a photo club can be found on the Portfolio page. This page contains club-independent information such as a link to the photographer's own photography website." = "Deze pagina geeft een overzicht van alle fotografen die in deze app voorkomen. De beelden van een fotograaf die vertoond zijn in een specifieke fotoclub zijn te vinden op respectievelijke Portfolio paginas.";
 

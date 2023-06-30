@@ -1,17 +1,27 @@
 ### 2.3.7 (Github commit ???????) ??-07-23
 
 This is build #4592 in Apple's App Store
+    * Bumped version number to 2.4.0 because of the new app name
+Prelude screen
+    * Adapted logo to new app name, Photo Club Hub
+Roadmap screen
+    * Re-enabled the Roadmap Screen (with some related changes)
+Maintenance
+    * Upgraded and tested with iOS 17.0 beta 2 (21A5268h), XCode 14.0 beta 2, Swift 5.9 and SwiftLint 0.52.3
+    * Removed fatalError() from shipping code
+    
+*In Apple's App Store, the release notes of 2.3.6 and 2.4.0 are combined.*
 ---------------------------------------------------------------------------
 ### 2.3.6 (Github commit 4ccc917) 21-06-23
 
-This is build #4591 in Apple's App Store
+This is build #4591, which was _not_ released in Apple's App Store
     * Changed user-visible app name to Photo Club Hub (NL: Fotoclub Hub)
 Settings screen
     * By default "Former members" are now shown. The user can change this behavior in the Preferences screen.
 Readme screen
     * Textual changes and a new figure
 Maintenance
-    * Upgraded and tested with iOS 17.0 beta (21A5248u), XCode 14.0 beta 1, Swift 5.9
+    * Upgraded and tested with iOS 17.0 beta 1 (21A5248u), XCode 14.0 beta 1, Swift 5.9
     * Temporarily set new ENABLE_USER_SCRIPT_SANDBOXING = NO (swiftlint reading non-swift files)
     * Reduced priority of Fotogroepw Waalre from 3 to 1 to ensure basic alphabetical order
 ---------------------------------------------------------------------------
