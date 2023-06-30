@@ -134,9 +134,9 @@ struct PreludeView: View {
                                      String(localized: "Photo Club Hub", // was "Waalre"
                                             comment: "Name of the app shown in PreludeView when app is started"))
                         .foregroundColor(.black)
-                        .font(Font.custom("Gill Sans", size: 105*(min(geo.size.width, geo.size.height)/800)))
-                        .kerning((140/3)*(min(geo.size.width, geo.size.height)/800))
-                        .offset(x: (60/3)*(min(geo.size.width, geo.size.height)/800))
+                        .font(Font.custom("Gill Sans", size: 105*(min(geo.size.width, geo.size.height)/800))) // was 105
+                        .kerning((0/3)*(min(geo.size.width, geo.size.height)/800)) // was 140/3
+                        .offset(x: (0/3)*(min(geo.size.width, geo.size.height)/800)) // was 60/3
                         .opacity(logScale == 0  ? 0 : 1)
                         .frame(width: geo.size.width, height: geo.size.height)
                         .onTapGesture { location in
