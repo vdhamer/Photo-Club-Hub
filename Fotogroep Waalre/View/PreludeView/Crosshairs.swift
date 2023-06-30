@@ -36,11 +36,12 @@ struct CrossHairs: Shape { // InsettableShape {
 }
 
 struct Crosshairs_Previews: PreviewProvider {
-    static let crossHairsWidth: CGFloat = 1
+    static let crossHairsWidth: CGFloat = 2
+    static let crossHairsColor: Color = Color(UIColor(white: 0.5, alpha: 0.5))
 
     static var previews: some View {
         CrossHairs(hidden: false, circleScaling: 0.5)
-            .stroke(.purple, lineWidth: crossHairsWidth)
+            .stroke(crossHairsColor, lineWidth: crossHairsWidth)
             .blendMode(.normal)
     }
 }

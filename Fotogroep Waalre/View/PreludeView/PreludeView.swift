@@ -13,13 +13,14 @@ struct PreludeView: View {
     static let maxCellRepeat: Double = 32 // max number of cells horizontally and vertically
     private static let log2CellRepeat: Double = log2(maxCellRepeat) // typically log2(32) = 5
     private static let squareSize = 5.5 / 18 // size of single colored square compared to pitch (0.3055555)
-    private let crossHairsWidth: CGFloat = 1
+    private let crossHairsWidth: CGFloat = 2
+    private let crossHairsColor: Color = Color(UIColor(white: 0.5, alpha: 0.5))
 
     // MARK: - State variables
     @State private var offsetInCells = OffsetVectorInCells(x: 8, y: 6) // number of cell units left/above image center
     @State private var logScale = log2CellRepeat // value driving the animation
     @State private var willMoveToNextScreen = false // used to navigate to next screen
-    @State private var crosshairsVisible = false // displays Crosshairs view, can be toggled via keyboard "c" character
+    @State private var crosshairsVisible = true // displays Crosshairs view, can be toggled via keyboard "c" character
     @State private var debugPanelVisible = false // displays DebugPanel view, can be toggled via keyboard "d" character
     @State private var debugLocation = CGPoint(x: 0, y: 0)
     @Environment(\.horizontalSizeClass) var horSizeClass
@@ -119,7 +120,7 @@ struct PreludeView: View {
                     }
 
                     CrossHairs(hidden: !crosshairsVisible)
-                        .stroke(.purple, lineWidth: crossHairsWidth)
+                        .stroke(crossHairsColor, lineWidth: crossHairsWidth)
                         .blendMode(.normal)
 
                     EscapeHatch(willMoveToNextScreen: $willMoveToNextScreen,

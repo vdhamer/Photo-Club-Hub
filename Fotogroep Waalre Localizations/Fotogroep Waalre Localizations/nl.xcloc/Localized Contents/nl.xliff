@@ -84,7 +84,7 @@
       </trans-unit>
       <trans-unit id="In debug mode" xml:space="preserve">
         <source>In debug mode</source>
-        <target>Test versie</target>
+        <target>Test versie van app</target>
         <note>Shown instead of app name in PreludeView when app is started</note>
       </trans-unit>
       <trans-unit id="Information about a photographer's links to a photo club can be found on the Portfolio page. This page contains club-independent information such as a link to the photographer's own photography website." xml:space="preserve">
