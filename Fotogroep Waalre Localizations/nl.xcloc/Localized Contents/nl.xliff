@@ -311,7 +311,7 @@ Iedere ***PhotoClub*** heeft ***Members*** van diverse soorten (b.v. huidige led
       </trans-unit>
       <trans-unit id="Photo Club Hub" xml:space="preserve">
         <source>Photo Club Hub</source>
-        <target>Fotoclub Hub</target>
+        <target state="translated">Fotoclub Hub</target>
         <note>Name of the app shown in PreludeView when app is started</note>
       </trans-unit>
       <trans-unit id="Photo Clubs" xml:space="preserve">
@@ -338,7 +338,7 @@ Iedere ***PhotoClub*** heeft ***Members*** van diverse soorten (b.v. huidige led
 </source>
         <target>Poster voor een club expositie
 </target>
-        <note>No comment provided by engineer.</note>
+        <note>Caption of an image on the Readme page</note>
       </trans-unit>
       <trans-unit id="Preferences" xml:space="preserve">
         <source>Preferences</source>

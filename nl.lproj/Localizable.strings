@@ -61,7 +61,7 @@
 /* Relationship status of member within a club. Used in concatenations. */
 "honorary member" = "erelid";
 
-/* No comment provided by engineer. */
+/* Shown instead of app name in PreludeView when app is started */
 "In debug mode" = "Test versie";
 
 /* Shown in gray at the bottom of the Photographers page. */
@@ -203,6 +203,9 @@ Default status of member within a club. Used in concatenations. */
 /* Telephone number (usually invisible) */
 "Phone:" = "Tel:";
 
+/* Name of the app shown in PreludeView when app is started */
+"Photo Club Hub" = "Fotoclub Hub";
+
 /* Title of page with clubs and maps */
 "Photo Clubs" = "Fotogroepen";
 
@@ -212,7 +215,7 @@ Default status of member within a club. Used in concatenations. */
 /* Title of page showing member portfolios */
 "Portfolios" = "Portfolio's";
 
-/* No comment provided by engineer. */
+/* Caption of an image on the Readme page */
 "Poster for a photo club exposition\n" = "Poster voor een club expositie\n";
 
 /* Title of screen with toggles to adjust preferences */
@@ -227,8 +230,8 @@ Default status of member within a club. Used in concatenations. */
 /* Title of Readme screen */
 "Readme" = "Over deze app";
 
-/* Field at top of Photographers page that allows the user to filter the photographers based on either given- and family name.
-Field at top of Members page that allows the user to filter the members based on either given- and family name. */
+/* Field at top of Members page that allows the user to filter the members based on either given- and family name.
+Field at top of Photographers page that allows the user to filter the photographers based on either given- and family name. */
 "Search names" = "Zoek op naam";
 
 /* Administrative role of member within a club. Used as part of concatenations. */
