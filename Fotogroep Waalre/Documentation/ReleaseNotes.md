@@ -1,4 +1,4 @@
-### 2.3.7 (Github commit ???????) ??-07-23
+### 2.4.0 (Github commit ???????) ??-06-23
 
 This is build #4592 in Apple's App Store
     * Bumped version number to 2.4.0 because of the new app name
