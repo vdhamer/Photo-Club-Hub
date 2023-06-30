@@ -157,7 +157,7 @@ struct PreludeView: View {
 
                 } // GeometryReader
                 .compositingGroup() // This triggers use of Metal framework
-//                .drawingGroup() // This triggers use of Metal framework but gives fopen() warnings on first run
+                // .drawingGroup() would also trigger use of Metal framework but gives fopen() warnings on first run
                 .padding()
 
             }
