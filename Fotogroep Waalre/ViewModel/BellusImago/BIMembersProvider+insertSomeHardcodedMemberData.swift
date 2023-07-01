@@ -68,7 +68,9 @@ extension BIMembersProvider { // fill with some initial hard-coded content
                 }
                 ifDebugPrint("\(clubNickname): completed insertSomeHardcodedMemberData()")
             } catch {
-                fatalError("\(clubNickname): ERROR - failed to save changes to Core Data")
+                ifDebugFatalError("\(clubNickname): ERROR - failed to save changes to Core Data",
+                                  file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
+                // in release mode, the failed database update is only logged. App doesn't stop.
             }
         }
 
