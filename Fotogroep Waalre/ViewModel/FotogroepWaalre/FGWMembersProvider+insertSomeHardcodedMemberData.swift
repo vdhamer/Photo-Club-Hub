@@ -75,7 +75,9 @@ extension FGWMembersProvider { // fill with some initial hard-coded content
                     try fgwBackgroundContext.save() // commit all changes
                 }
             } catch {
-                fatalError("Fotogroep Waalre: ERROR - failed to save changes to Core Data")
+                ifDebugFatalError("Fotogroep Waalre: ERROR - failed to save changes to Core Data",
+                                  file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
+                // in release mode, the failed database inserts are only logged. App doesn't stop.
             }
         }
 
