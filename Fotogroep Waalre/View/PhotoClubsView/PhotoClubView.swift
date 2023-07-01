@@ -139,8 +139,6 @@ struct PhotoClubView: View {
                     try viewContext.save()
                 }
             } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // You should not use this function in a shipping application
                 let nsError = error as NSError
                 ifDebugFatalError("Unresolved error \(nsError), \(nsError.userInfo)",
                                   file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0

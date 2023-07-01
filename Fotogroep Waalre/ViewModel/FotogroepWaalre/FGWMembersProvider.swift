@@ -39,7 +39,9 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
                 )
             }
         } else {
-            fatalError("Could not convert \(urlString) to a URL.")
+            ifDebugFatalError("Could not convert \(urlString) to a URL.",
+                              file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
+            // in release mode, the call to the website is skipped, and this logged. App doesn't stop.
         }
 
     }
@@ -162,7 +164,7 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
                                 .prospective: self.isProspectiveMember(name: personName.fullName)
                             ]
                         ),
-                        memberWebsite: self.generateInternalURL(
+                          memberWebsite: self.generateInternalURL(
                             using: "\(personName.givenName) \(personName.familyName)"
                         )
                     )
@@ -253,12 +255,12 @@ extension FGWMembersProvider { // private utitity functions
         }
     }
 
-    private func generateInternalURL(using name: String) -> URL? { // for URLs we want basic latin alphabet
-        // "Peter van den Hamer" -> "https://www.fotogroepwaalre.nl/fotos/Peter_van_den_Hamer"
-        // "Henriëtte van Ekert" -> "https://www.fotogroepwaalre.nl/fotos/Henriette_van_Ekert"
-        // "José_Daniëls" -> "https://www.fotogroepwaalre.nl/fotos/Jose_Daniels"
-        // "Ekin Özbiçer" -> "https://www.fotogroepwaalre.nl/fotos/Ekin_" // app doesn't substitute the Ö yet
-        let baseURL = "https://www.fotogroepwaalre.nl/fotos/"
+    private func generateInternalURL(using name: String) -> URL? { // for URLs we want basic ASCII A...Z,a...z only
+        // "Peter van den Hamer" -> "<baseURL>/Peter_van_den_Hamer"
+        // "Henriëtte van Ekert" -> "<baseURL>/Henriette_van_Ekert"
+        // "José_Daniëls" -> "<baseURL>/Jose_Daniels"
+        // "Ekin Özbiçer" -> "<baseURL>/Ekin_" // app doesn't substitute the Ö yet
+        let baseURL = "https://www.fotogroepwaalre.nl/fotos"
         var tweakedName = name.replacingOccurrences(of: " ", with: "_")
         tweakedName = tweakedName.replacingOccurrences(of: "á", with: "a") // István_Nagy
         tweakedName = tweakedName.replacingOccurrences(of: "é", with: "e") // José_Daniëls
@@ -284,11 +286,14 @@ extension FGWMembersProvider { // private utitity functions
                 let (_, first) = match.output
                 tweakedName = String(first) // shorten name up to first weird character
             } else {
-                fatalError("Error in generateInternalURL()")
+                ifDebugFatalError("Error in generateInternalURL()",
+                                  file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
+                // in release mode, the call to the website is skipped, and this logged. App doesn't stop.
+                tweakedName = "Peter_van_den_Hamer" // fallback if all other options fail
             }
         }
 
-        return URL(string: baseURL + tweakedName + "/") // "/" not strictly needed (link works without)
+        return URL(string: baseURL + "/" + tweakedName + "/") // final "/" not strictly needed (link works without)
     }
 
     private func toDate(from dateString: String) -> Date? {
