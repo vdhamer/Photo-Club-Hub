@@ -58,7 +58,9 @@ extension TestClubAmsterdamMembersProvider { // fill with some initial hard-code
                 }
                 ifDebugPrint("Photo Club TestAmsterdam: completed insertSomeHardcodedMemberData()")
             } catch {
-                fatalError("Failed to save changes for TestAmsterdam")
+                ifDebugFatalError("Failed to save changes for Test Amsterdam",
+                                  file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
+                // in release mode, failing to store the data is only logged. And the app doesn't stop.
             }
         }
 

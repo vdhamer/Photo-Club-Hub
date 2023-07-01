@@ -55,9 +55,9 @@ extension TestClubDenHaagMembersProvider { // fill with some initial hard-coded 
                 if testDenHaagBackgroundContext.hasChanges { // is this necessary? sometimes save() done earlier
                     try testDenHaagBackgroundContext.save() // commit all changes
                 }
-                ifDebugPrint("Photo Club TestDenHaag: completed insertSomeHardcodedMemberData()")
+                ifDebugPrint("Photo Club Test DenHaag: completed insertSomeHardcodedMemberData()")
             } catch {
-                fatalError("Failed to save changes for TestDenHaag")
+                fatalError("Failed to save changes for Test DenHaag")
             }
         }
 
