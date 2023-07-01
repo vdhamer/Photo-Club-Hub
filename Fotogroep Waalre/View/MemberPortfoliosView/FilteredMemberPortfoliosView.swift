@@ -186,7 +186,9 @@ struct FilteredMemberPortfoliosView: View {
             }
         } catch {
             let nsError = error as NSError
-            fatalError("Unresolved error deleting members \(nsError), \(nsError.userInfo)")
+            ifDebugFatalError("Unresolved error deleting members \(nsError), \(nsError.userInfo)",
+                              file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
+            // in release mode, the failed deletion is only logged. App doesn't stop.
         }
     }
 

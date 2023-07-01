@@ -58,7 +58,9 @@ extension TestClubRotterdamMembersProvider { // fill with some initial hard-code
                 }
                 ifDebugPrint("Photo Club Test Rdam: completed insertSomeHardcodedMemberData()")
             } catch {
-                fatalError("Failed to save changes for Test Rdam")
+                ifDebugFatalError("Failed to save changes for Test Rotterdam",
+                                  file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
+                // in release mode, failing to store the data is only logged. And the app doesn't stop.
             }
         }
 

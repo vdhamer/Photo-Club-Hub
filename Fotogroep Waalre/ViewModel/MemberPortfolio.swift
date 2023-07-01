@@ -54,7 +54,7 @@ extension MemberPortfolio { // computed properties (some related to handling opt
         if let photoClub = photoClub_ {
             return photoClub
         } else {
-            fatalError("Error because photoClub is nil")
+            fatalError("Error because photoClub is nil") // something is fundamentally wrong if this happens
         }
 	}
 
@@ -62,7 +62,7 @@ extension MemberPortfolio { // computed properties (some related to handling opt
         if let photographer = photographer_ {
             return photographer
         } else {
-            fatalError("Error because photographer is nil")
+            fatalError("Error because photographer is nil") // something is fundamentally wrong if this happens
         }
 	}
 
@@ -279,8 +279,10 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
                                     "to \(String(describing: latestImage?.absoluteString))")
                 }
 			} catch {
-                fatalError("Update failed for member \(memberPortfolio.photographer.fullName) " +
-                           "in club \(memberPortfolio.photoClub.fullName): \(error)")
+                ifDebugFatalError("Update failed for member \(memberPortfolio.photographer.fullName) " +
+                                  "in club \(memberPortfolio.photoClub.fullName): \(error)",
+                                  file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
+                // in release mode, failure to update this data is only logged. And the app doesn't stop.
 			}
 		}
 

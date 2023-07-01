@@ -8,7 +8,7 @@ Roadmap screen
     * Re-enabled the Roadmap Screen (with some related changes)
 Maintenance
     * Upgraded and tested with iOS 17.0 beta 2 (21A5268h), XCode 14.0 beta 2, Swift 5.9 and SwiftLint 0.52.3
-    * Removed fatalError() from shipping code
+    * Removed fatalError() wherever possible from shipping code
     
 *In Apple's App Store, the release notes of 2.3.6 and 2.4.0 are combined.*
 ---------------------------------------------------------------------------

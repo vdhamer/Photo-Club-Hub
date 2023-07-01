@@ -55,9 +55,11 @@ extension TestClubDenHaagMembersProvider { // fill with some initial hard-coded 
                 if testDenHaagBackgroundContext.hasChanges { // is this necessary? sometimes save() done earlier
                     try testDenHaagBackgroundContext.save() // commit all changes
                 }
-                ifDebugPrint("Photo Club TestDenHaag: completed insertSomeHardcodedMemberData()")
+                ifDebugPrint("Photo Club Test Den Haag: completed insertSomeHardcodedMemberData()")
             } catch {
-                fatalError("Failed to save changes for TestDenHaag")
+                ifDebugFatalError("Failed to save changes for Test Den Haag",
+                                  file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
+                // in release mode, failing to store the data is only logged. And the app doesn't stop.
             }
         }
 

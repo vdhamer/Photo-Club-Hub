@@ -30,7 +30,9 @@ extension FGWMembersProvider {
             let (_, date) = match.output
             birthDate = date
         } else {
-            fatalError("Failed to decode date from \(taggedString) because RegEx didn't trigger")
+            ifDebugFatalError("Failed to decode date from \(taggedString) because RegEx didn't trigger",
+                              file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
+            birthDate = Date() // in release mode, a bad date is replaced by today's date. And the app doesn't stop.
         }
 
         return birthDate

@@ -13,18 +13,19 @@ func ifDebugPrint(_ string: String) {
 
 func ifDebugFatalError(_ string: String) {
     #if DEBUG
-    fatalError(string)
+        fatalError(string)
     #else
         // not sure anybody can see this
         print("UnFatal error in RELEASE mode: \(string)")
     #endif
 }
 
-// normally file should equal #file and line should equal #line
+// normally the value passed for file should be #fileID (and line should receive #line)
+// Note that in Swift 6.0, #fileID may be deprecated (and code needs to use #file instead)
 // no point in providing defaults for file & line (would be this file)
 func ifDebugFatalError(_ string: String, file: StaticString, line: UInt) {
     #if DEBUG
-    fatalError(string, file: file, line: line)
+        fatalError(string, file: file, line: line)
     #else
         // not sure anybody can see this
         print("UnFatal error in RELEASE mode: \(string) in line #\(line) of \(file)")

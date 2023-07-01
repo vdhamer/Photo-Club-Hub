@@ -77,16 +77,18 @@ extension Photographer {
                       memberRolesAndStatus: memberRolesAndStatus,
                       phoneNumber: phoneNumber, eMail: eMail,
                       photographerWebsite: photographerWebsite, bornDT: bornDT) {
-                print("Updated info for photographer \(photographer.fullName)")
+                print("Sucessfully updated info for photographer \(photographer.fullName)")
             }
             return photographer
         } else {
             let photographer = Photographer(context: context) // new record in database
             photographer.givenName = givenName
             photographer.familyName = familyName
-            _ = update(context: context, photographer: photographer, memberRolesAndStatus: memberRolesAndStatus,
-                       phoneNumber: phoneNumber, eMail: eMail, photographerWebsite: photographerWebsite, bornDT: bornDT)
-            print("Created new photographer \(photographer.fullName)")
+            let success = update(context: context, photographer: photographer,
+                                 memberRolesAndStatus: memberRolesAndStatus,
+                                 phoneNumber: phoneNumber, eMail: eMail,
+                                 photographerWebsite: photographerWebsite, bornDT: bornDT)
+            if success { print("Successfully created new photographer \(photographer.fullName)") }
             return photographer
         }
     }
@@ -128,7 +130,10 @@ extension Photographer {
 			do {
 				try context.save()
 			} catch {
-                fatalError("Update failed for photographer \(photographer.fullName)")
+                ifDebugFatalError("Update failed for photographer \(photographer.fullName)",
+                                  file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
+                // in release mode, if the data cannot be saved, log this and continue.
+                modified = false
 			}
 		}
         return modified

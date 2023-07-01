@@ -106,8 +106,10 @@ extension PhotoClub {
 
 		let photoClubs: [PhotoClub] = (try? context.fetch(request)) ?? [] // nil means absolute failure
         if photoClubs.count > 1 {
-            fatalError("Query returned \(photoClubs.count) photoclub(s) named " +
-                       "\(photoClubIdPlus.fullName) in \(photoClubIdPlus.town)")
+            ifDebugFatalError("Query returned \(photoClubs.count) photoclub(s) named " +
+                              "\(photoClubIdPlus.fullName) in \(photoClubIdPlus.town)",
+                              file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
+            // in release mode, log that there are multiple clubs, but continue using the first one.
         }
 
 		if let photoClub = photoClubs.first { // already exists, so make sure secondary attributes are up to date
@@ -175,7 +177,10 @@ extension PhotoClub {
 			do {
 				try context.save()
  			} catch {
-                fatalError("Update failed for photo club \(photoClub.fullName)")
+                ifDebugFatalError("Update failed for photo club \(photoClub.fullName)",
+                                  file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
+                // in release mode, if save() fails, just continue
+                return false
 			}
 		}
         return modified
@@ -189,7 +194,9 @@ extension PhotoClub {
 //        do {
 //            try context.save()
 //        } catch {
-//            fatalError("Failed to delete members photo club \(self.name)")
+//            ifDebugFatalError(Failed to delete members photo club \(self.name)",
+//                              file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
+//            /* in release mode, if deleting all members fails, just continue */
 //        }
     }
 
