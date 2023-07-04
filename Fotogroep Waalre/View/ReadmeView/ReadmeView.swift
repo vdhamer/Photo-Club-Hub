@@ -51,7 +51,7 @@ struct ReadmeView: View {
                             Image("Waalre_AppIcon")
                                 .resizable()
                                 .scaledToFit()
-                                .frame(width: geo.size.width * 0.2, alignment: .center)
+                                .frame(width: geo.size.width * 0.4, alignment: .center)
                                 .border(.gray, width: 1)
                             if let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
                                 if let build = Bundle.main.infoDictionary?["CFBundleVersion"] as? String {
