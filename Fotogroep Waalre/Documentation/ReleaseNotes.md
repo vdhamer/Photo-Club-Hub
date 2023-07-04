@@ -2,10 +2,13 @@
 
 This is build #4592 in Apple's App Store
     * Bumped version number to 2.4.0 because of the new app name
+    * Updated app icon (using only one 1024x1024 image)
 Prelude screen
     * Adapted logo to new app name, Photo Club Hub
 Roadmap screen
     * Re-enabled the Roadmap Screen (with some related changes)
+Readme screen
+    * Changed app icon as shown in readme and on iOS home screen
 Maintenance
     * Upgraded and tested with iOS 17.0 beta 2 (21A5268h), XCode 14.0 beta 2, Swift 5.9 and SwiftLint 0.52.3
     * Removed fatalError() wherever possible from shipping code
