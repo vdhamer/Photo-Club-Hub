@@ -33,9 +33,9 @@ struct FotogroepWaalreApp: App {
                 .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext) // main queue!
                 .onAppear {
                     _ = FGWMembersProvider() // default: load members of Fotogroep Waalre
-//                    _ = TestClubDenHaagMembersProvider() // default: and load 3 imaginary photo clubs for demo reasons
-//                    _ = TestClubAmsterdamMembersProvider()
-//                    _ = TestClubRotterdamMembersProvider()
+                    _ = TestClubDenHaagMembersProvider() // default: and load 3 imaginary photo clubs for demo reasons
+                    _ = TestClubAmsterdamMembersProvider()
+                    _ = TestClubRotterdamMembersProvider()
                     // other groups can be added here by calling, for example, BIMembersProvider()
                     // They can so be loaded manually using pull-to-refresh on the Photo Clubs screen.
                 }
