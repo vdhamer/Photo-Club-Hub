@@ -92,7 +92,7 @@ extension BIMembersProvider { // fill with some initial hard-coded content
                                                          photographerWebsite: photographerWebsite,
                                                          bornDT: bornDT)
 
-        _ = MemberPortfolio.findCreateUpdate(context: bgContext, photoClub: photoClub, photographer: photographer,
+        _ = MemberPortfolio.findCreateUpdate(bgContext: bgContext, photoClub: photoClub, photographer: photographer,
                                              memberRolesAndStatus: memberRolesAndStatus,
                                              memberWebsite: memberWebsite,
                                              latestImage: latestImage)

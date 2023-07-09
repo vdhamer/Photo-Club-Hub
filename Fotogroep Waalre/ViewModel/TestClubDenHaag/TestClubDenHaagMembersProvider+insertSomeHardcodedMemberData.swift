@@ -37,7 +37,7 @@ extension TestClubDenHaagMembersProvider { // fill with some initial hard-coded 
                                                 )
         clubTestDenHaag.hasHardCodedMemberData = true // store in database that we ran insertSomeHardcodedMembers...
 
-        addMember(context: testDenHaagBackgroundContext,
+        addMember(bgContext: bgContext,
                   givenName: "Peter",
                   familyName: "van den Hamer",
                   photoClub: clubTestDenHaag,
@@ -51,8 +51,8 @@ extension TestClubDenHaagMembersProvider { // fill with some initial hard-coded 
 
         if commit {
             do {
-                if testDenHaagBackgroundContext.hasChanges { // is this necessary? sometimes save() done earlier
-                    try testDenHaagBackgroundContext.save() // commit all changes
+                if bgContext.hasChanges { // is this necessary? sometimes save() done earlier
+                    try bgContext.save() // commit all changes
                 }
                 ifDebugPrint("Photo Club Test Den Haag: completed insertSomeHardcodedMemberData()")
             } catch {
@@ -64,7 +64,7 @@ extension TestClubDenHaagMembersProvider { // fill with some initial hard-coded 
 
     }
 
-    private func addMember(context: NSManagedObjectContext,
+    private func addMember(bgContext: NSManagedObjectContext,
                            givenName: String,
                            familyName: String,
                            bornDT: Date? = nil,
@@ -75,12 +75,12 @@ extension TestClubDenHaagMembersProvider { // fill with some initial hard-coded 
                            phoneNumber: String? = nil,
                            eMail: String? = nil) {
         let photographer = Photographer.findCreateUpdate(
-                            bgContext: context, givenName: givenName, familyName: familyName, // TODO - check MOC
+                            bgContext: bgContext, givenName: givenName, familyName: familyName, // TODO - check MOC
                             memberRolesAndStatus: memberRolesAndStatus,
                             bornDT: bornDT )
 
         _ = MemberPortfolio.findCreateUpdate(
-                            context: context, photoClub: photoClub, photographer: photographer,
+                            bgContext: bgContext, photoClub: photoClub, photographer: photographer,
                             memberRolesAndStatus: memberRolesAndStatus,
                             memberWebsite: memberWebsite,
                             latestImage: latestImage)

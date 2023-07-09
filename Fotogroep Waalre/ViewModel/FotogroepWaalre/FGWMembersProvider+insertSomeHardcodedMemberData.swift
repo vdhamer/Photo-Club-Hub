@@ -29,50 +29,35 @@ extension FGWMembersProvider { // fill with some initial hard-coded content
                                                      priority: 1)
         clubWaalre.hasHardCodedMemberData = true // store in database that we ran insertSomeHardcodedMembers...
 
-        addMember(context: bgContext,
-                  givenName: "Bart", familyName: "van Stekelenburg", photoClub: clubWaalre,
+        addMember(bgContext: bgContext, givenName: "Bart", familyName: "van Stekelenburg", photoClub: clubWaalre,
                   memberRolesAndStatus: MemberRolesAndStatus(role: [ .chairman: false ]))
 
-        addMember(context: bgContext,
-                  givenName: "Miek", familyName: "Kerkhoven", photoClub: clubWaalre,
+        addMember(bgContext: bgContext, givenName: "Miek", familyName: "Kerkhoven", photoClub: clubWaalre,
                   memberRolesAndStatus: MemberRolesAndStatus(role: [ .chairman: true ]))
 
-        addMember(context: bgContext,
-                  givenName: "Bettina", familyName: "de Graaf", photoClub: clubWaalre,
+        addMember(bgContext: bgContext, givenName: "Bettina", familyName: "de Graaf", photoClub: clubWaalre,
                   memberRolesAndStatus: MemberRolesAndStatus(role: [ .viceChairman: false ]))
 
-        addMember(context: bgContext,
-                  givenName: "Erik", familyName: "van Geest", photoClub: clubWaalre,
+        addMember(bgContext: bgContext, givenName: "Erik", familyName: "van Geest", photoClub: clubWaalre,
                   memberRolesAndStatus: MemberRolesAndStatus(role: [ .admin: true ]))
 
-        addMember(context: bgContext,
-                  givenName: "Greetje", familyName: "van Son", photoClub: clubWaalre,
+        addMember(bgContext: bgContext, givenName: "Greetje", familyName: "van Son", photoClub: clubWaalre,
                   memberRolesAndStatus: MemberRolesAndStatus(role: [ .viceChairman: false ], stat: [:]))
 
-        addMember(context: bgContext,
-                  givenName: "Carel", familyName: "Bullens", photoClub: clubWaalre,
+        addMember(bgContext: bgContext, givenName: "Carel", familyName: "Bullens", photoClub: clubWaalre,
                   memberRolesAndStatus: MemberRolesAndStatus(role: [ .viceChairman: true ], stat: [:]))
 
-        addMember(context: bgContext,
-                  givenName: "Jos", familyName: "Jansen", photoClub: clubWaalre,
+        addMember(bgContext: bgContext, givenName: "Jos", familyName: "Jansen", photoClub: clubWaalre,
                   memberRolesAndStatus: MemberRolesAndStatus(role: [ .treasurer: true ]))
 
-        addMember(context: bgContext,
-                  givenName: "Marijke", familyName: "Gallas", photoClub: clubWaalre,
+        addMember(bgContext: bgContext, givenName: "Marijke", familyName: "Gallas", photoClub: clubWaalre,
                   memberRolesAndStatus: MemberRolesAndStatus(role: [:], stat: [ .honorary: true ]))
 
-        addMember(context: bgContext,
-                  givenName: "Peter", familyName: "van den Hamer", photoClub: clubWaalre,
+        addMember(bgContext: bgContext, givenName: "Peter", familyName: "van den Hamer", photoClub: clubWaalre,
                   memberRolesAndStatus: MemberRolesAndStatus(role: [ .admin: false, .secretary: false ]))
 
-        addMember(context: bgContext,
-                  givenName: "Kees", familyName: "van Gemert", photoClub: clubWaalre,
+        addMember(bgContext: bgContext, givenName: "Kees", familyName: "van Gemert", photoClub: clubWaalre,
                   memberRolesAndStatus: MemberRolesAndStatus(role: [ .secretary: true ]))
-
-        addMember(context: bgContext,
-                  givenName: "Bettina", familyName: "de Graaf", photoClub: clubWaalre,
-                  memberRolesAndStatus: MemberRolesAndStatus( stat: [ .former: true ])
-        )
 
         if commit {
             do {
@@ -88,7 +73,7 @@ extension FGWMembersProvider { // fill with some initial hard-coded content
 
     }
 
-    private func addMember(context: NSManagedObjectContext,
+    private func addMember(bgContext: NSManagedObjectContext,
                            givenName: String,
                            familyName: String,
                            bornDT: Date? = nil,
@@ -97,12 +82,12 @@ extension FGWMembersProvider { // fill with some initial hard-coded content
                            memberWebsite: URL? = nil,
                            latestImage: URL? = nil) {
         let photographer = Photographer.findCreateUpdate(
-                           bgContext: context, givenName: givenName, familyName: familyName,
+                           bgContext: bgContext, givenName: givenName, familyName: familyName,
                            memberRolesAndStatus: memberRolesAndStatus,
                            bornDT: bornDT )
 
         _ = MemberPortfolio.findCreateUpdate(
-                            context: context, photoClub: photoClub, photographer: photographer,
+                            bgContext: bgContext, photoClub: photoClub, photographer: photographer,
                             memberRolesAndStatus: memberRolesAndStatus,
                             memberWebsite: memberWebsite,
                             latestImage: latestImage)

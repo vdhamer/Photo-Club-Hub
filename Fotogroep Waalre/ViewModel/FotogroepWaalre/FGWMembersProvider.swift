@@ -18,7 +18,6 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
 //    static let shared = FotogroepWaalreMembersProvider()
 
     init(bgContext: NSManagedObjectContext) {
-//        let fgwBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
         // following is asynchronous, but not documented as such using async/await
         insertSomeHardcodedMemberData(bgContext: bgContext, commit: true)
 
@@ -42,7 +41,7 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
             ifDebugFatalError("Could not convert \(urlString) to a URL.",
                               file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
             // in release mode, a bad URL skips the file loading. This is logged, but the app doesn't stop.
-        }
+        } // TODO - uncomment
 
     }
 
@@ -156,7 +155,7 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
                     )
 
                     _ = MemberPortfolio.findCreateUpdate(
-                        context: backgroundContext, photoClub: photoClub, photographer: photographer,
+                        bgContext: backgroundContext, photoClub: photoClub, photographer: photographer,
                         memberRolesAndStatus: MemberRolesAndStatus(
                             role: [:],
                             stat: [

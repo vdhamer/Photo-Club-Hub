@@ -180,7 +180,7 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
 
 	// Find existing object or create a new object
 	// Update existing attributes or fill the new object
-    static func findCreateUpdate(context: NSManagedObjectContext,
+    static func findCreateUpdate(bgContext: NSManagedObjectContext,
                                  // identifying attributes of a Member
                                  photoClub: PhotoClub, photographer: Photographer,
                                  // other attributes of a Member
@@ -192,10 +192,10 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
         let predicateFormat: String = "photoClub_ = %@ AND photographer_ = %@" // avoid localization
         let request = fetchRequest(predicate: NSPredicate(format: predicateFormat, photoClub, photographer))
 
-		let memberPortfolios: [MemberPortfolio] = (try? context.fetch(request)) ?? [] // nil means absolute failure
+		let memberPortfolios: [MemberPortfolio] = (try? bgContext.fetch(request)) ?? [] // nil means absolute failure
 
 		if let memberPortfolio = memberPortfolios.first { // already exists, so make sure secondary attributes are up to date
-            if update(context: context, memberPortfolio: memberPortfolio,
+            if update(bgContext: bgContext, memberPortfolio: memberPortfolio,
                       memberRolesAndStatus: memberRolesAndStatus,
                       dateInterval: dateInterval,
                       memberWebsite: memberWebsite,
@@ -205,10 +205,10 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
             }
  			return memberPortfolio
 		} else {
-			let memberPortfolio = MemberPortfolio(context: context) // create new Member object
+			let memberPortfolio = MemberPortfolio() // create new Member object // TODO - check MOC
 			memberPortfolio.photoClub_ = photoClub
 			memberPortfolio.photographer_ = photographer
-            _ = update(context: context, memberPortfolio: memberPortfolio,
+            _ = update(bgContext: bgContext, memberPortfolio: memberPortfolio,
                        memberRolesAndStatus: memberRolesAndStatus,
                        dateInterval: dateInterval,
                        memberWebsite: memberWebsite,
@@ -221,14 +221,14 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
 
 	// Update non-identifying attributes/properties within existing instance of class MemberPortfolio
     // swiftlint:disable:next function_parameter_count
-    private static func update(context: NSManagedObjectContext, memberPortfolio: MemberPortfolio,
+    private static func update(bgContext: NSManagedObjectContext, memberPortfolio: MemberPortfolio,
                                memberRolesAndStatus: MemberRolesAndStatus,
                                dateInterval: DateInterval?,
                                memberWebsite: URL?,
                                latestImage: URL?) -> Bool {
 		var needsSaving: Bool = false
 
-        context.mergePolicy = NSMergePolicy.mergeByPropertyStoreTrump // not sure about this, prevents error
+        bgContext.mergePolicy = NSMergePolicy.mergeByPropertyStoreTrump // not sure about this, prevents error
 
         // function only works for non-optional Types.
         // If optional support needed, create variant with "inout Type?" instead of "inout Type"
@@ -270,7 +270,7 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
 
 		if needsSaving {
 			do {
-				try context.save()
+				try bgContext.save()
                 if changed1 { print("Changed roles for \(memberPortfolio.photographer.fullName)") }
                 if changed2 { print("Changed start date for \(memberPortfolio.photographer.fullName)") }
                 if changed3 { print("Changed end date for \(memberPortfolio.photographer.fullName)") }

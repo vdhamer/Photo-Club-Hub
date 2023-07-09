@@ -40,7 +40,7 @@ struct PersistenceController {
                                                             latitude: 51.39184 + Double.random(in: -2.0 ... 2.0),
                                                             longitude: 5.46144 + Double.random(in: -2.0 ... 1.0)),
                                                        priority: Int16(11-index)) // low number gets high priority
-			let memberPortfolio = MemberPortfolio.findCreateUpdate(context: viewContext,
+			let memberPortfolio = MemberPortfolio.findCreateUpdate(bgContext: viewContext,
                                                  photoClub: photoClub, photographer: photographer,
                                                  memberRolesAndStatus: memberRolesAndStatus
             )

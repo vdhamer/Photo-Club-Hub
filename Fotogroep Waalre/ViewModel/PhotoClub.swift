@@ -124,7 +124,7 @@ extension PhotoClub {
             }
 			return photoClub
 		} else {
-            let photoClub = PhotoClub(context: bgContext) // create new PhotoClub object // TODO: check MOC
+            let photoClub = PhotoClub() // create new PhotoClub object // TODO: check MOC
             photoClub.fullName = photoClubIdPlus.fullName // first part of ID
             photoClub.town = photoClubIdPlus.town // second part of ID
             _ = update(bgContext: bgContext, photoClub: photoClub,
