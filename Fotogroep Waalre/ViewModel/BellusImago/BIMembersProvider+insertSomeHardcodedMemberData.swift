@@ -15,20 +15,19 @@ extension BIMembersProvider { // fill with some initial hard-coded content
                                                                     town: "Veldhoven",
                                                                     nickname: "FC BellusImago")
 
-    func insertSomeHardcodedMemberData(biBackgroundContext: NSManagedObjectContext) {
+    func insertSomeHardcodedMemberData(bgContext: NSManagedObjectContext) {
         let clubNickname = BIMembersProvider.photoClubBellusImagoIdPlus.nickname
-        biBackgroundContext.perform {
+        bgContext.perform {
             ifDebugPrint("\(clubNickname): starting insertSomeHardcodedMemberData() in background")
-            self.insertSomeHardcodedMemberDataCommon(biBackgroundContext: biBackgroundContext, commit: true)
+            self.insertSomeHardcodedMemberDataCommon(bgContext: bgContext, commit: true)
         }
     }
 
-    private func insertSomeHardcodedMemberDataCommon(biBackgroundContext: NSManagedObjectContext,
-                                                     commit: Bool) {
+    private func insertSomeHardcodedMemberDataCommon(bgContext: NSManagedObjectContext, commit: Bool) {
 
         // add Bellus Imago to Photo Clubs (if needed)
         let clubBellusImago = PhotoClub.findCreateUpdate(
-                                                         context: biBackgroundContext,
+                                                         bgContext: bgContext,
                                                          photoClubIdPlus: Self.photoClubBellusImagoIdPlus,
                                                          photoClubWebsite: BIMembersProvider.bellusImagoURL,
                                                          fotobondNumber: 1671, kvkNumber: nil,
@@ -38,7 +37,7 @@ extension BIMembersProvider { // fill with some initial hard-coded content
                                                         )
         clubBellusImago.hasHardCodedMemberData = true // store in database that we ran insertSomeHardcodedMembers...
 
-        addMember(context: biBackgroundContext, // add Rico to Photographers and member of Bellus (if needed)
+        addMember(bgContext: bgContext, // add Rico to Photographers and member of Bellus (if needed)
                   givenName: "Rico",
                   familyName: "Coolen",
                   photographerWebsite: URL(string: "https://www.ricoco.nl"),
@@ -49,7 +48,7 @@ extension BIMembersProvider { // fill with some initial hard-coded content
                   eMail: "info@ricoco.nl"
         )
 
-        addMember(context: biBackgroundContext, // add Loek to Photographers and member of Bellus (if needed)
+        addMember(bgContext: bgContext, // add Loek to Photographers and member of Bellus (if needed)
                   givenName: "Loek",
                   familyName: "Dirkx",
                   photoClub: clubBellusImago,
@@ -63,8 +62,8 @@ extension BIMembersProvider { // fill with some initial hard-coded content
             let clubNickname = BIMembersProvider.photoClubBellusImagoIdPlus.nickname
 
             do {
-                if biBackgroundContext.hasChanges {
-                    try biBackgroundContext.save() // commit all changes
+                if bgContext.hasChanges {
+                    try bgContext.save() // commit all changes
                 }
                 ifDebugPrint("\(clubNickname): completed insertSomeHardcodedMemberData()")
             } catch {
@@ -87,12 +86,13 @@ extension BIMembersProvider { // fill with some initial hard-coded content
                            latestImage: URL? = nil,
                            phoneNumber: String? = nil,
                            eMail: String? = nil) {
-        let photographer = Photographer.findCreateUpdate(context: context, givenName: givenName, familyName: familyName,
+        let photographer = Photographer.findCreateUpdate(bgContext: bgContext,
+                                                         givenName: givenName, familyName: familyName,
                                                          memberRolesAndStatus: memberRolesAndStatus,
                                                          photographerWebsite: photographerWebsite,
                                                          bornDT: bornDT)
 
-        _ = MemberPortfolio.findCreateUpdate(context: context, photoClub: photoClub, photographer: photographer,
+        _ = MemberPortfolio.findCreateUpdate(context: bgContext, photoClub: photoClub, photographer: photographer,
                                              memberRolesAndStatus: memberRolesAndStatus,
                                              memberWebsite: memberWebsite,
                                              latestImage: latestImage)

@@ -61,7 +61,7 @@ extension Photographer {
 
     // Find existing object and otherwise create a new object
     // Update existing attributes or fill the new object
-    static func findCreateUpdate(context: NSManagedObjectContext,
+    static func findCreateUpdate(bgContext: NSManagedObjectContext, // check MOC
                                  givenName: String, familyName: String,
                                  memberRolesAndStatus: MemberRolesAndStatus = MemberRolesAndStatus(role: [:],
                                                                                                    stat: [:]),
@@ -70,10 +70,10 @@ extension Photographer {
         let predicateFormat: String = "givenName_ = %@ AND familyName_ = %@" // avoid localization
         let request = fetchRequest(predicate: NSPredicate(format: predicateFormat, givenName, familyName))
 
-        let photographers: [Photographer] = (try? context.fetch(request)) ?? [] // nil means absolute failure
+        let photographers: [Photographer] = (try? bgContext.fetch(request)) ?? [] // nil means absolute failure
 
         if let photographer = photographers.first { // already exists, so make sure secondary attributes are up to date
-            if update(context: context, photographer: photographer,
+            if update(bgContext: bgContext, photographer: photographer,
                       memberRolesAndStatus: memberRolesAndStatus,
                       phoneNumber: phoneNumber, eMail: eMail,
                       photographerWebsite: photographerWebsite, bornDT: bornDT) {
@@ -81,10 +81,10 @@ extension Photographer {
             }
             return photographer
         } else {
-            let photographer = Photographer(context: context) // new record in database
+            let photographer = Photographer() // will become a new record in database // TODO - check MOC
             photographer.givenName = givenName
             photographer.familyName = familyName
-            let success = update(context: context, photographer: photographer,
+            let success = update(bgContext: bgContext, photographer: photographer, // TODO - check MOC
                                  memberRolesAndStatus: memberRolesAndStatus,
                                  phoneNumber: phoneNumber, eMail: eMail,
                                  photographerWebsite: photographerWebsite, bornDT: bornDT)
@@ -94,7 +94,7 @@ extension Photographer {
     }
 
 	// Update non-identifying attributes/properties within existing instance of class PhotoClub
-    static func update(context: NSManagedObjectContext, photographer: Photographer,
+    static func update(bgContext: NSManagedObjectContext, photographer: Photographer, // TODO - check MOC
                        memberRolesAndStatus: MemberRolesAndStatus,
                        phoneNumber: String? = nil, eMail: String? = nil,
                        photographerWebsite: URL? = nil, bornDT: Date? = nil) -> Bool {
@@ -128,7 +128,7 @@ extension Photographer {
 
 		if modified {
 			do {
-				try context.save()
+				try bgContext.save()
 			} catch {
                 ifDebugFatalError("Update failed for photographer \(photographer.fullName)",
                                   file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0

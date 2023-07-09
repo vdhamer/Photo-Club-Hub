@@ -32,10 +32,18 @@ struct FotogroepWaalreApp: App {
             PreludeView()
                 .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext) // main queue!
                 .onAppear {
-                    _ = FGWMembersProvider() // default: load members of Fotogroep Waalre
-//                    _ = TestClubDenHaagMembersProvider() // default: and load 3 imaginary photo clubs for demo reasons
-//                    _ = TestClubAmsterdamMembersProvider()
-//                    _ = TestClubRotterdamMembersProvider()
+                    // load current/former members of Fotogroep Waalre
+                    let fgwBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+                    _ = FGWMembersProvider(bgContext: fgwBackgroundContext)
+
+                    // load a few test members for 3 non-existent photo clubs (to demo multi-club support)
+//                    let tdBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+//                    _ = TestClubDenHaagMembersProvider(bgContext: tdBackgroundContext)
+//                    let taBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+//                    _ = TestClubAmsterdamMembersProvider(bgContext: taBackgroundContext)
+//                    let trBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+//                    _ = TestClubRotterdamMembersProvider(bgContext: trBackgroundContext)
+
                     // other groups can be added here by calling, for example, BIMembersProvider()
                     // They can so be loaded manually using pull-to-refresh on the Photo Clubs screen.
                 }

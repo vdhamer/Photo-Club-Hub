@@ -40,7 +40,8 @@ struct MemberPortfolioListView: View {
             FilteredMemberPortfoliosView(predicate: model.preferences.memberPredicate, searchText: $searchText)
         }
         .listStyle(.plain)
-        .refreshable { _ = FGWMembersProvider() } // for pull-to-refresh
+        .refreshable { _ = FGWMembersProvider(bgContext: // for pull-to-refresh
+                                                PersistenceController.shared.container.newBackgroundContext()) }
         .keyboardType(.namePhonePad)
         .autocapitalization(.none)
         .submitLabel(.done) // currently only works with text fields?

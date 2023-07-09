@@ -15,20 +15,18 @@ extension TestClubAmsterdamMembersProvider { // fill with some initial hard-code
                                                               town: "Amsterdam", // Rotterdam also has a "Test Fotoclub"
                                                               nickname: "FC Test Adam")
 
-    func insertSomeHardcodedMemberData(testAmsterdamBackgroundContext: NSManagedObjectContext) {
-        testAmsterdamBackgroundContext.perform {
+    func insertSomeHardcodedMemberData(bgContext: NSManagedObjectContext) {
+        bgContext.perform {
             ifDebugPrint("Photo Club Test Adam: starting insertSomeHardcodedMemberData() in background")
-            self.insertSomeHardcodedMemberDataCommon(testAmsterdamBackgroundContext: testAmsterdamBackgroundContext,
-                                                     commit: true)
+            self.insertSomeHardcodedMemberDataCommon(bgContext: bgContext, commit: true)
         }
     }
 
-    private func insertSomeHardcodedMemberDataCommon(testAmsterdamBackgroundContext: NSManagedObjectContext,
-                                                     commit: Bool) {
+    private func insertSomeHardcodedMemberDataCommon(bgContext: NSManagedObjectContext, commit: Bool) {
 
         // add photo club to Photo Clubs (if needed)
         let clubTestAmsterdam = PhotoClub.findCreateUpdate(
-                                                 context: testAmsterdamBackgroundContext,
+                                                 bgContext: bgContext,
                                                  photoClubIdPlus: Self.photoClubTestAmsterdamIdPlus,
                                                  photoClubWebsite: TestClubAmsterdamMembersProvider.testAmsterdamURL,
                                                  fotobondNumber: nil, kvkNumber: nil,
@@ -38,7 +36,7 @@ extension TestClubAmsterdamMembersProvider { // fill with some initial hard-code
                                                 )
         clubTestAmsterdam.hasHardCodedMemberData = true // store in database that we ran insertSomeHardcodedMembers...
 
-        addMember(context: testAmsterdamBackgroundContext,
+        addMember(context: bgContext,
                   givenName: "Peter",
                   familyName: "van den Hamer",
                   photoClub: clubTestAmsterdam,
@@ -53,8 +51,8 @@ extension TestClubAmsterdamMembersProvider { // fill with some initial hard-code
 
         if commit {
             do {
-                if testAmsterdamBackgroundContext.hasChanges { // is this necessary? sometimes save() done earlier
-                    try testAmsterdamBackgroundContext.save() // commit all changes
+                if bgContext.hasChanges { // is this necessary? sometimes save() done earlier
+                    try bgContext.save() // commit all changes
                 }
                 ifDebugPrint("Photo Club TestAmsterdam: completed insertSomeHardcodedMemberData()")
             } catch {
@@ -77,7 +75,8 @@ extension TestClubAmsterdamMembersProvider { // fill with some initial hard-code
                            phoneNumber: String? = nil,
                            eMail: String? = nil) {
         let photographer = Photographer.findCreateUpdate(
-                            context: context, givenName: givenName, familyName: familyName,
+                            bgContext: context, // TODO - check MOC
+                            givenName: givenName, familyName: familyName,
                             memberRolesAndStatus: memberRolesAndStatus,
                             bornDT: bornDT )
 
