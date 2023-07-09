@@ -5,16 +5,15 @@
 //  Created by Peter van den Hamer on 02/04/2022.
 //
 
+import CoreData // for NSManagedObjectContext
+
 class TestClubRotterdamMembersProvider {
 
-    init() {
-
-        // used by TestClubRotterdamMembersProvider only
-        let testRotterdamBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+    init(bgContext: NSManagedObjectContext) {
 
         // Photo club Test doesn't currently support loading member data from an online site.
         // So we only insert a member or two from info hardcoded in insertSomeHardcodedMemberData()
-        insertSomeHardcodedMemberData(testRotterdamBackgroundContext: testRotterdamBackgroundContext)
+        insertSomeHardcodedMemberData(bgContext: bgContext)
     }
 
 }

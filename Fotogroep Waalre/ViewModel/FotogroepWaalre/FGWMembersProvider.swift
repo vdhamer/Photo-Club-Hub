@@ -17,13 +17,13 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
 //    /// A shared member provider for use within the main app bundle.
 //    static let shared = FotogroepWaalreMembersProvider()
 
-    init() {
-        let fgwBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+    init(bgContext: NSManagedObjectContext) {
+//        let fgwBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
         // following is asynchronous, but not documented as such using async/await
-        insertSomeHardcodedMemberData(fgwBackgroundContext: fgwBackgroundContext, commit: true)
+        insertSomeHardcodedMemberData(bgContext: bgContext, commit: true)
 
         // can't rely on async (!) insertSomeHardcodedMemberData() to return managed photoClub object in time
-        let clubWaalre = PhotoClub.findCreateUpdate( context: fgwBackgroundContext,
+        let clubWaalre = PhotoClub.findCreateUpdate( bgContext: bgContext,
                                                      photoClubIdPlus: FGWMembersProvider.photoClubWaalreIdPlus )
 
         let urlString = getFileAsString(nameEncryptedFile: "FGWPrivateMembersURL2.txt",
@@ -32,7 +32,7 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
         if let privateURL = URL(string: urlString) {
             clubWaalre.memberListURL = privateURL
             Task {
-                await loadPrivateMembersFromWebsite( backgroundContext: fgwBackgroundContext,
+                await loadPrivateMembersFromWebsite( backgroundContext: bgContext,
                                                      privateMemberURL: privateURL,
                                                      photoClubIdPlus: FGWMembersProvider.photoClubWaalreIdPlus,
                                                      commit: true
@@ -41,7 +41,7 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
         } else {
             ifDebugFatalError("Could not convert \(urlString) to a URL.",
                               file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
-            // in release mode, the call to the website is skipped, and this logged. App doesn't stop.
+            // in release mode, a bad URL skips the file loading. This is logged, but the app doesn't stop.
         }
 
     }
@@ -120,7 +120,7 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
         var eMail = "", phoneNumber: String?, externalURL: String = ""
         var birthDate = toDate(from: "1/1/9999") // dummy value that is overwritten later
 
-        let photoClub: PhotoClub = PhotoClub.findCreateUpdate(context: backgroundContext,
+        let photoClub: PhotoClub = PhotoClub.findCreateUpdate(bgContext: backgroundContext,
                                                               photoClubIdPlus: photoClubIdPlus)
 
         htmlContent.enumerateLines { (line, _ stop) -> Void in
@@ -147,7 +147,8 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
                     birthDate = self.extractBirthDate(taggedString: line)
 
                     let photographer = Photographer.findCreateUpdate(
-                        context: backgroundContext, givenName: personName.givenName, familyName: personName.familyName,
+                        bgContext: backgroundContext,
+                        givenName: personName.givenName, familyName: personName.familyName,
                         memberRolesAndStatus: MemberRolesAndStatus(role: [:], stat: [
                             .deceased: !self.isStillAlive(phone: phoneNumber) ]),
                         phoneNumber: phoneNumber, eMail: eMail,

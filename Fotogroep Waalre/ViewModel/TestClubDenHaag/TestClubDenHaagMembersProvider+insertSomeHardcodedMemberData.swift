@@ -15,20 +15,19 @@ extension TestClubDenHaagMembersProvider { // fill with some initial hard-coded 
                                                               town: "Den Haag", // Rotterdam also has a "Test Fotoclub"
                                                               nickname: "FC Test DenHaag")
 
-    func insertSomeHardcodedMemberData(testDenHaagBackgroundContext: NSManagedObjectContext) {
-        testDenHaagBackgroundContext.perform {
+    func insertSomeHardcodedMemberData(bgContext: NSManagedObjectContext) {
+        bgContext.perform {
             ifDebugPrint("Photo Club Test Adam: starting insertSomeHardcodedMemberData() in background")
-            self.insertSomeHardcodedMemberDataCommon(testDenHaagBackgroundContext: testDenHaagBackgroundContext,
-                                                     commit: true)
+            self.insertSomeHardcodedMemberDataCommon(bgContext: bgContext, commit: true)
         }
     }
 
-    private func insertSomeHardcodedMemberDataCommon(testDenHaagBackgroundContext: NSManagedObjectContext,
+    private func insertSomeHardcodedMemberDataCommon(bgContext: NSManagedObjectContext,
                                                      commit: Bool) {
 
         // add photo club to Photo Clubs (if needed)
         let clubTestDenHaag = PhotoClub.findCreateUpdate(
-                                                 context: testDenHaagBackgroundContext,
+                                                 bgContext: bgContext,
                                                  photoClubIdPlus: Self.photoClubTestDenHaagIdPlus,
                                                  photoClubWebsite: TestClubDenHaagMembersProvider.testDenHaagURL,
                                                  fotobondNumber: nil, kvkNumber: nil,
@@ -76,7 +75,7 @@ extension TestClubDenHaagMembersProvider { // fill with some initial hard-coded 
                            phoneNumber: String? = nil,
                            eMail: String? = nil) {
         let photographer = Photographer.findCreateUpdate(
-                            context: context, givenName: givenName, familyName: familyName,
+                            bgContext: context, givenName: givenName, familyName: familyName, // TODO - check MOC
                             memberRolesAndStatus: memberRolesAndStatus,
                             bornDT: bornDT )
 

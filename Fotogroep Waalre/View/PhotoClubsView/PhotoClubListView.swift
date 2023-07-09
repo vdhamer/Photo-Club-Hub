@@ -45,11 +45,14 @@ struct PhotoClubListView: View {
             }
             .listStyle(.plain)
             .refreshable { // for pull-to-refresh
-                _ = FGWMembersProvider()
-                _ = BIMembersProvider()
-                _ = TestClubRotterdamMembersProvider()
-                _ = TestClubAmsterdamMembersProvider()
-                _ = TestClubDenHaagMembersProvider()
+                _ = FGWMembersProvider(bgContext: PersistenceController.shared.container.newBackgroundContext())
+                _ = BIMembersProvider(bgContext: PersistenceController.shared.container.newBackgroundContext())
+                _ = TestClubRotterdamMembersProvider(bgContext:
+                                                        PersistenceController.shared.container.newBackgroundContext())
+                _ = TestClubAmsterdamMembersProvider(bgContext:
+                                                        PersistenceController.shared.container.newBackgroundContext())
+                _ = TestClubDenHaagMembersProvider(bgContext:
+                                                    PersistenceController.shared.container.newBackgroundContext())
             }
         }
         .navigationTitle(navigationTitle)
