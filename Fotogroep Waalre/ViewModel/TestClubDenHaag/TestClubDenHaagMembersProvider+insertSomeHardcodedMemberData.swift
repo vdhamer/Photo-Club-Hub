@@ -29,7 +29,7 @@ extension TestClubDenHaagMembersProvider { // fill with some initial hard-coded 
         let clubTestDenHaag = PhotoClub.findCreateUpdate(
                                                  bgContext: bgContext,
                                                  photoClubIdPlus: Self.photoClubTestDenHaagIdPlus,
-                                                 photoClubWebsite: TestClubDenHaagMembersProvider.testDenHaagURL,
+                                                 photoClubWebsite: Self.testDenHaagURL,
                                                  fotobondNumber: nil, kvkNumber: nil,
                                                  coordinates: CLLocationCoordinate2D(latitude: 52.090556,
                                                                                      longitude: 4.279722),
