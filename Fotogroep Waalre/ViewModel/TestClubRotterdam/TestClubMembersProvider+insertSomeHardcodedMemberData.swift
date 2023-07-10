@@ -12,7 +12,7 @@ extension TestClubRotterdamMembersProvider { // fill with some initial hard-code
 
     private static let testRotterdamURL = URL(string: "https://www.nederlandsfotomuseum.nl")
     static let photoClubTestRotterdamIdPlus = PhotoClubIdPlus(fullName: "Test Fotoclub",
-                                                              town: "Rotterdam", // Amsterdam also has a "Test Fotoclub"
+                                                              town: "Rotterdam",
                                                               nickname: "FC Test Rdam")
 
     func insertSomeHardcodedMemberData(bgContext: NSManagedObjectContext) {
