@@ -11,7 +11,7 @@ class TestClubDenHaagMembersProvider {
 
     init(bgContext: NSManagedObjectContext) {
 
-        // Photo club Test Adam doesn't currently support loading member data from an online site.
+        // Photo club Test Den Haag doesn't support loading member data from an online site.
         // So we only insert a member or two from info hardcoded in insertSomeHardcodedMemberData()
         insertSomeHardcodedMemberData(bgContext: bgContext)
     }

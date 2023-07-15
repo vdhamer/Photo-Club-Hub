@@ -1,6 +1,6 @@
 //
 //  FGWMembersProvider.swift
-//  FGWMembersProvider
+//  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 17/07/2021.
 //
@@ -13,9 +13,6 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
     static let photoClubWaalreIdPlus = PhotoClubIdPlus(fullName: "Fotogroep Waalre",
                                                        town: "Waalre",
                                                        nickname: "FG Waalre")
-
-//    /// A shared member provider for use within the main app bundle.
-//    static let shared = FotogroepWaalreMembersProvider()
 
     init(bgContext: NSManagedObjectContext) {
         // following is asynchronous, but not documented as such using async/await
@@ -40,7 +37,8 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
         } else {
             ifDebugFatalError("Could not convert \(urlString) to a URL.",
                               file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
-            // in release mode, a bad URL skips the file loading. This is logged, but the app doesn't stop.
+            // In release mode, an incorrect URL causes the file loading to skip.
+            // In release mode this is logged, but the app doesn't stop.
         } // TODO - uncomment
 
     }

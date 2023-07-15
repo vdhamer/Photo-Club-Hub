@@ -36,8 +36,9 @@ struct FotogroepWaalreApp: App {
 //                    let fgwBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
 //                    _ = FGWMembersProvider(bgContext: fgwBackgroundContext)
 
-                    // load a few test members for 3 imaginary photo clubs
-                    // This demos multi-club support, but also tests support for clubs with same name in different towns
+                    // Load a few test members for 3 non-existent photo clubs.
+                    // This demos multi-club support.
+                    // But this also tests support for clubs with same name in different towns
 //                    let tdBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
 //                    _ = TestClubDenHaagMembersProvider(bgContext: tdBackgroundContext)
 
