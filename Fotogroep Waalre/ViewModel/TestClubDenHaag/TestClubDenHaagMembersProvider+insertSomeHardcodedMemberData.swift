@@ -16,8 +16,8 @@ extension TestClubDenHaagMembersProvider { // fill with some initial hard-coded 
                                                               nickname: "FC Test DenHaag")
 
     func insertSomeHardcodedMemberData(bgContext: NSManagedObjectContext) {
-        bgContext.perform {
-            ifDebugPrint("Photo Club Test Adam: starting insertSomeHardcodedMemberData() in background")
+        bgContext.perform { // from here on, we are running on a background thread
+            ifDebugPrint("Photo Club Test Den Haag: starting insertSomeHardcodedMemberData() in background")
             self.insertSomeHardcodedMemberDataCommon(bgContext: bgContext, commit: true)
         }
     }

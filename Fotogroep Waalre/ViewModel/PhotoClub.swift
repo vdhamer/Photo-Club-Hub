@@ -124,7 +124,9 @@ extension PhotoClub {
             }
 			return photoClub
 		} else {
-            let photoClub = PhotoClub() // create new PhotoClub object // TODO: check MOC
+            // cannot use PhotoClub() initializer because we must use bgContext
+            let entity = NSEntityDescription.entity(forEntityName: "PhotoClub", in: bgContext)!
+            let photoClub = PhotoClub(entity: entity, insertInto: bgContext)
             photoClub.fullName = photoClubIdPlus.fullName // first part of ID
             photoClub.town = photoClubIdPlus.town // second part of ID
             _ = update(bgContext: bgContext, photoClub: photoClub,
@@ -134,7 +136,7 @@ extension PhotoClub {
                                         kvkNumber: kvkNumber),
                        coordinates: coordinates,
                        priority: priority)
-            print("Created new photo club \(photoClub.fullName) in \(photoClub.town), \(photoClub.country)")
+            print("Created new photo club <\(photoClub.fullName)> based in \(photoClub.town), \(photoClub.country)")
 			return photoClub
 		}
 	}

@@ -39,8 +39,8 @@ struct FotogroepWaalreApp: App {
                     // Load a few test members for 3 non-existent photo clubs.
                     // This demos multi-club support.
                     // But this also tests support for clubs with same name in different towns
-//                    let tdBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-//                    _ = TestClubDenHaagMembersProvider(bgContext: tdBackgroundContext)
+                    let tdBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+                    _ = TestClubDenHaagMembersProvider(bgContext: tdBackgroundContext)
 
 //                    let taBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
 //                    _ = TestClubAmsterdamMembersProvider(bgContext: taBackgroundContext)
