@@ -1,6 +1,6 @@
 ### 2.4.0 (Github commit ???????) ??-07-23
 
-This is build #4592 in Apple's App Store
+This is build #4593 in Apple's App Store
     * Bumped version number to 2.4.0 because of the new app name
     * Updated app icon (using only one 1024x1024 image)
 Prelude screen
@@ -10,7 +10,8 @@ Roadmap screen
 Readme screen
     * Changed app icon as shown in readme and on iOS home screen
 Maintenance
-    * Upgraded and tested with iOS 17.0 beta 2 (21A5268h), XCode 14.0 beta 2, Swift 5.9 and SwiftLint 0.52.3
+    * Upgraded and tested with iOS 17.0 beta 3 (21A5268h), XCode 14.0 beta 4, Swift 5.9 and SwiftLint 0.52.3
+    * turned on CoreData debugging for Run schema (https://useyourloaf.com/blog/debugging-core-data/)
     * Removed fatalError() wherever possible from shipping code
     * Moved BdG from member to former member (manually - file still needs adjustment)
     
