@@ -205,7 +205,8 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
             }
  			return memberPortfolio
 		} else {
-			let memberPortfolio = MemberPortfolio() // create new Member object // TODO - check MOC
+            let entity = NSEntityDescription.entity(forEntityName: "MemberPortfolio", in: bgContext)!
+            let memberPortfolio = MemberPortfolio(entity: entity, insertInto: bgContext) // bg needs special .init()
 			memberPortfolio.photoClub_ = photoClub
 			memberPortfolio.photographer_ = photographer
             _ = update(bgContext: bgContext, memberPortfolio: memberPortfolio,

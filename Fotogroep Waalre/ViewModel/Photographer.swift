@@ -81,14 +81,19 @@ extension Photographer {
             }
             return photographer
         } else {
-            let photographer = Photographer() // will become a new record in database // TODO - check MOC
+            let entity = NSEntityDescription.entity(forEntityName: "Photographer", in: bgContext)!
+            let photographer = Photographer(entity: entity, insertInto: bgContext) // background: use special .init()
             photographer.givenName = givenName
             photographer.familyName = familyName
             let success = update(bgContext: bgContext, photographer: photographer, // TODO - check MOC
                                  memberRolesAndStatus: memberRolesAndStatus,
                                  phoneNumber: phoneNumber, eMail: eMail,
                                  photographerWebsite: photographerWebsite, bornDT: bornDT)
-            if success { print("Successfully created new photographer \(photographer.fullName)") }
+            if success {
+                print("Successfully created new photographer \(photographer.fullName)")
+            } else {
+                print("Failed to creat new photographer \(photographer.fullName)")
+            }
             return photographer
         }
     }

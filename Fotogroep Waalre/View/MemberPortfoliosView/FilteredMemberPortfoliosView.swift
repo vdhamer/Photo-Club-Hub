@@ -210,7 +210,7 @@ struct FilteredMemberPortfoliosView: View {
         for portfolio in filteredPortfolios {
             Task {
                 FotogroepWaalreApp.antiZombiePinningOfMemberPortfolios.insert(portfolio)
-                await portfolio.refreshFirstImage() // is await really needed?
+//                await portfolio.refreshFirstImage() // is await really needed? TODO do we need this for-loop??
             }
         }
         return filteredPortfolios
