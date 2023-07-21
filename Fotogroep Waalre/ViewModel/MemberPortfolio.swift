@@ -276,9 +276,8 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
                 if changed2 { print("Changed start date for \(memberPortfolio.photographer.fullName)") }
                 if changed3 { print("Changed end date for \(memberPortfolio.photographer.fullName)") }
                 if changed4 { print("Changed club website for \(memberPortfolio.photographer.fullName)") }
-                if changed5 { print("Changed latest image for \(memberPortfolio.photographer.fullName) " +
-                                    "to \(String(describing: latestImage?.absoluteString))")
-                }
+                if changed5 { print("Changed latest image for \(memberPortfolio.photographer.fullName) to " +
+                                    "\(latestImage?.absoluteString ?? "<noLatestImage>")")}
 			} catch {
                 ifDebugFatalError("Update failed for member \(memberPortfolio.photographer.fullName) " +
                                   "in club \(memberPortfolio.photoClub.fullName): \(error)",

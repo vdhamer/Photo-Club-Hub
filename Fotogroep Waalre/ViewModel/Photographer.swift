@@ -73,11 +73,14 @@ extension Photographer {
         let photographers: [Photographer] = (try? bgContext.fetch(request)) ?? [] // nil means absolute failure
 
         if let photographer = photographers.first { // already exists, so make sure secondary attributes are up to date
-            if update(bgContext: bgContext, photographer: photographer,
-                      memberRolesAndStatus: memberRolesAndStatus,
-                      phoneNumber: phoneNumber, eMail: eMail,
-                      photographerWebsite: photographerWebsite, bornDT: bornDT) {
-                print("Sucessfully updated info for photographer \(photographer.fullName)")
+            let success = update(bgContext: bgContext, photographer: photographer,
+                                 memberRolesAndStatus: memberRolesAndStatus,
+                                 phoneNumber: phoneNumber, eMail: eMail,
+                                 photographerWebsite: photographerWebsite, bornDT: bornDT)
+            if success {
+                print("Sucessfully updated info for photographer <\(photographer.fullName)>")
+            } else {
+                print("Failed to updated info for photographer <\(photographer.fullName)>")
             }
             return photographer
         } else {
@@ -85,20 +88,21 @@ extension Photographer {
             let photographer = Photographer(entity: entity, insertInto: bgContext) // background: use special .init()
             photographer.givenName = givenName
             photographer.familyName = familyName
-            let success = update(bgContext: bgContext, photographer: photographer, // TODO - check MOC
-                                 memberRolesAndStatus: memberRolesAndStatus,
-                                 phoneNumber: phoneNumber, eMail: eMail,
-                                 photographerWebsite: photographerWebsite, bornDT: bornDT)
-            if success {
-                print("Successfully created new photographer \(photographer.fullName)")
+            let nonDefault = update(bgContext: bgContext, photographer: photographer, // TODO - check MOC
+                                    memberRolesAndStatus: memberRolesAndStatus,
+                                    phoneNumber: phoneNumber, eMail: eMail,
+                                    photographerWebsite: photographerWebsite, bornDT: bornDT)
+            if nonDefault {
+                print("Successfully created new photographer <\(photographer.fullName)> and set some values")
             } else {
-                print("Failed to creat new photographer \(photographer.fullName)")
+                print("Successfully created new photographer <\(photographer.fullName)>")
             }
             return photographer
         }
     }
 
-	// Update non-identifying attributes/properties within existing instance of class PhotoClub
+	// Update non-identifying properties within existing instance of class Photographer
+    // Returns whether any of the non-identifying properties were set to non-default value.
     static func update(bgContext: NSManagedObjectContext, photographer: Photographer, // TODO - check MOC
                        memberRolesAndStatus: MemberRolesAndStatus,
                        phoneNumber: String? = nil, eMail: String? = nil,
@@ -135,7 +139,7 @@ extension Photographer {
 			do {
 				try bgContext.save()
 			} catch {
-                ifDebugFatalError("Update failed for photographer \(photographer.fullName)",
+                ifDebugFatalError("Update failed for photographer <\(photographer.fullName)>",
                                   file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
                 // in release mode, if the data cannot be saved, log this and continue.
                 modified = false
