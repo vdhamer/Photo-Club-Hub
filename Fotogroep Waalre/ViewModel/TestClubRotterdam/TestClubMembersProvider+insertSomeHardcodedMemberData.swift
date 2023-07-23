@@ -17,7 +17,10 @@ extension TestClubRotterdamMembersProvider { // fill with some initial hard-code
 
     func insertSomeHardcodedMemberData(bgContext: NSManagedObjectContext) {
         bgContext.perform {
-            ifDebugPrint("Photo Club Test Rdam: starting insertSomeHardcodedMemberData() in background")
+            ifDebugPrint("""
+                         \(Self.photoClubTestRotterdamIdPlus.fullNameCommaTown): \
+                         starting insertSomeHardcodedMemberData() in background
+                         """)
             self.insertSomeHardcodedMemberDataCommon(bgContext: bgContext, commit: true)
         }
     }
@@ -54,7 +57,10 @@ extension TestClubRotterdamMembersProvider { // fill with some initial hard-code
                 if bgContext.hasChanges {
                     try bgContext.save() // commit all changes
                 }
-                ifDebugPrint("Photo Club Test Rdam: completed insertSomeHardcodedMemberData()")
+                ifDebugPrint("""
+                             \(Self.photoClubTestRotterdamIdPlus.fullNameCommaTown): \
+                             completed insertSomeHardcodedMemberData()
+                             """)
             } catch {
                 ifDebugFatalError("Failed to save changes for Test Rotterdam",
                                   file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0

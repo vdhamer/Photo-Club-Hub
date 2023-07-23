@@ -28,6 +28,7 @@ struct PhotoClubIdPlus { // PhotoClubID plus non-identifying nickname
     // convenience functions
     var fullName: String { id.fullName }
     var town: String { id.town }
+    var fullNameCommaTown: String { fullName + ", " + town}
 }
 
 public struct PhotoClubId: Hashable { // hashable because PhotoClubId is used as dictionary key

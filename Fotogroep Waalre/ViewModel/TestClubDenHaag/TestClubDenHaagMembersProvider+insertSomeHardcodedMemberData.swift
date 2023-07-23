@@ -17,7 +17,10 @@ extension TestClubDenHaagMembersProvider { // fill with some initial hard-coded 
 
     func insertSomeHardcodedMemberData(bgContext: NSManagedObjectContext) {
         bgContext.perform { // from here on, we are running on a background thread
-            ifDebugPrint("Photo Club Test Den Haag: starting insertSomeHardcodedMemberData() in background")
+            ifDebugPrint("""
+                         \(Self.photoClubTestDenHaagIdPlus.fullNameCommaTown): \
+                         starting insertSomeHardcodedMemberData() in background
+                         """)
             self.insertSomeHardcodedMemberDataCommon(bgContext: bgContext, commit: true)
         }
     }
@@ -54,7 +57,10 @@ extension TestClubDenHaagMembersProvider { // fill with some initial hard-coded 
                 if bgContext.hasChanges { // is this necessary? sometimes save() done earlier
                     try bgContext.save() // commit all changes
                 }
-                ifDebugPrint("Photo Club Test Den Haag: completed insertSomeHardcodedMemberData()")
+                ifDebugPrint("""
+                             \(Self.photoClubTestDenHaagIdPlus.fullNameCommaTown): \
+                             completed insertSomeHardcodedMemberData()
+                             """)
             } catch {
                 ifDebugFatalError("Failed to save changes for Test Den Haag",
                                   file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0

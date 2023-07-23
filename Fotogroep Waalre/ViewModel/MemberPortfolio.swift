@@ -221,7 +221,7 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
 	}
 
 	// Update non-identifying attributes/properties within existing instance of class MemberPortfolio
-    // swiftlint:disable:next function_parameter_count
+    // swiftlint:disable:next function_parameter_count function_body_length
     private static func update(bgContext: NSManagedObjectContext, memberPortfolio: MemberPortfolio,
                                memberRolesAndStatus: MemberRolesAndStatus,
                                dateInterval: DateInterval?,
@@ -272,15 +272,30 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
 		if needsSaving {
 			do {
 				try bgContext.save()
-                if changed1 { print("Changed roles for \(memberPortfolio.photographer.fullName)") }
-                if changed2 { print("Changed start date for \(memberPortfolio.photographer.fullName)") }
-                if changed3 { print("Changed end date for \(memberPortfolio.photographer.fullName)") }
-                if changed4 { print("Changed club website for \(memberPortfolio.photographer.fullName)") }
-                if changed5 { print("Changed latest image for \(memberPortfolio.photographer.fullName) to " +
-                                    "\(latestImage?.absoluteString ?? "<noLatestImage>")")}
+                if changed1 { print("""
+                                    \(memberPortfolio.photoClub.fullNameCommaTown): \
+                                    Changed roles for \(memberPortfolio.photographer.fullName)
+                                    """) }
+                if changed2 { print("""
+                                    \(memberPortfolio.photoClub.fullNameCommaTown): \
+                                    Changed start date for \(memberPortfolio.photographer.fullName)
+                                    """) }
+                if changed3 { print("""
+                                    \(memberPortfolio.photoClub.fullNameCommaTown): \
+                                    Changed end date for \(memberPortfolio.photographer.fullName)
+                                    """) }
+                if changed4 { print("""
+                                    \(memberPortfolio.photoClub.fullNameCommaTown): \
+                                    Changed club website for \(memberPortfolio.photographer.fullName)
+                                    """) }
+                if changed5 { print("""
+                                    \(memberPortfolio.photoClub.fullNameCommaTown): \
+                                    Changed latest image for \(memberPortfolio.photographer.fullName) \
+                                    to \(latestImage?.absoluteString ?? "<noLatestImage>")
+                                    """)}
 			} catch {
                 ifDebugFatalError("Update failed for member \(memberPortfolio.photographer.fullName) " +
-                                  "in club \(memberPortfolio.photoClub.fullName): \(error)",
+                                  "in club \(memberPortfolio.photoClub.fullNameCommaTown): \(error)",
                                   file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
                 // in release mode, failure to update this data is only logged. And the app doesn't stop.
 			}

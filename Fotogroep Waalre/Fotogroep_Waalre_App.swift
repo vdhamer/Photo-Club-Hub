@@ -45,8 +45,8 @@ struct FotogroepWaalreApp: App {
                     let tdBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
                     _ = TestClubDenHaagMembersProvider(bgContext: tdBackgroundContext)
 
-//                    let trBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-//                    _ = TestClubRotterdamMembersProvider(bgContext: trBackgroundContext)
+                    let trBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+                    _ = TestClubRotterdamMembersProvider(bgContext: trBackgroundContext)
 
                     // More groups can be added here like BIMembersProvider()
                     // They can so be loaded manually using pull-to-refresh on the Photo Clubs screen.

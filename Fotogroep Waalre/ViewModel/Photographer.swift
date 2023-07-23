@@ -80,7 +80,7 @@ extension Photographer {
             if success {
                 print("Sucessfully updated info for photographer <\(photographer.fullName)>")
             } else {
-                print("Failed to updated info for photographer <\(photographer.fullName)>")
+                print("Failed to update info for photographer <\(photographer.fullName)>")
             }
             return photographer
         } else {
