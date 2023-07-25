@@ -16,9 +16,11 @@ extension BIMembersProvider { // fill with some initial hard-coded content
                                                                     nickname: "FC BellusImago")
 
     func insertSomeHardcodedMemberData(bgContext: NSManagedObjectContext) {
-        let clubNickname = BIMembersProvider.photoClubBellusImagoIdPlus.nickname
-        bgContext.perform {
-            ifDebugPrint("\(clubNickname): starting insertSomeHardcodedMemberData() in background")
+        bgContext.perform { // from here on, we are running on a background thread
+            ifDebugPrint("""
+                         \(Self.photoClubBellusImagoIdPlus.fullNameTown): \
+                         Starting insertSomeHardcodedMemberData() in background
+                         """)
             self.insertSomeHardcodedMemberDataCommon(bgContext: bgContext, commit: true)
         }
     }
@@ -65,7 +67,10 @@ extension BIMembersProvider { // fill with some initial hard-coded content
                 if bgContext.hasChanges {
                     try bgContext.save() // commit all changes
                 }
-                ifDebugPrint("\(clubNickname): completed insertSomeHardcodedMemberData()")
+                ifDebugPrint("""
+                             \(Self.photoClubBellusImagoIdPlus.fullNameTown): \
+                             Completed insertSomeHardcodedMemberData() in background
+                             """)
             } catch {
                 ifDebugFatalError("\(clubNickname): ERROR - failed to save changes to Core Data",
                                   file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0

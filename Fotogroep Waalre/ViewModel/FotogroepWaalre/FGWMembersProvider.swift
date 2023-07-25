@@ -82,7 +82,7 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
                                         photoClubIdPlus: PhotoClubIdPlus,
                                         commit: Bool ) async {
 
-        ifDebugPrint("Fotogroep Waalre: starting loadPrivateMembersFromWebsite() in background")
+        ifDebugPrint("\(photoClubIdPlus.fullNameCommaTown): starting loadPrivateMembersFromWebsite() in background")
         var results: (utfContent: Data?, urlResponse: URLResponse?)? = (nil, nil)
         results = try? await URLSession.shared.data(from: privateMemberURL)
         if results != nil, results?.utfContent != nil {

@@ -12,9 +12,15 @@ extension FGWMembersProvider { // fill with some initial hard-coded content
 
     func insertSomeHardcodedMemberData(bgContext: NSManagedObjectContext, commit: Bool) {
         bgContext.performAndWait { // done asynchronously by CoreData (.perform also works)
-            ifDebugPrint("Fotogroep Waalre: starting insertSomeHardcodedMemberData() in background")
+            ifDebugPrint("""
+                         \(Self.photoClubWaalreIdPlus.fullNameTown): \
+                         Starting insertSomeHardcodedMemberData() in background
+                         """)
             insertSomeHardcodedMemberDataCommon(bgContext: bgContext, commit: commit)
-            ifDebugPrint("Fotogroep Waalre: completed insertSomeHardcodedMemberData() in background")
+            ifDebugPrint("""
+                         \(Self.photoClubWaalreIdPlus.fullNameTown): \
+                         Completed insertSomeHardcodedMemberData() in background
+                         """)
         }
     }
 
@@ -82,7 +88,8 @@ extension FGWMembersProvider { // fill with some initial hard-coded content
                            memberWebsite: URL? = nil,
                            latestImage: URL? = nil) {
         let photographer = Photographer.findCreateUpdate(
-                           bgContext: bgContext, givenName: givenName, familyName: familyName,
+                           bgContext: bgContext,
+                           givenName: givenName, familyName: familyName,
                            memberRolesAndStatus: memberRolesAndStatus,
                            bornDT: bornDT )
 

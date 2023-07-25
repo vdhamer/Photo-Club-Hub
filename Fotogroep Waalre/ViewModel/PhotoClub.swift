@@ -29,8 +29,8 @@ extension PhotoClub {
 		set { name_ = newValue }
 	}
 
-    @objc var fullNameCommaTown: String { // objc needed for SectionedFetchRequest's sectionIdentifier
-        fullName + ", " + town
+    @objc var fullNameTown: String { // objc needed for SectionedFetchRequest's sectionIdentifier
+        "\(fullName) (\(town))"
     }
 
     public var id: PhotoClubId { // public because needed for Identifiable protocol
@@ -136,7 +136,10 @@ extension PhotoClub {
                                         kvkNumber: kvkNumber),
                        coordinates: coordinates,
                        priority: priority)
-            print("Created new photo club <\(photoClub.fullName)> based in \(photoClub.town), \(photoClub.country)")
+            print("""
+                  \(photoClubIdPlus.fullNameTown): \
+                  Created new photo club
+                  """)
 			return photoClub
 		}
 	}
