@@ -61,7 +61,7 @@ extension Photographer {
 
     // Find existing object and otherwise create a new object
     // Update existing attributes or fill the new object
-    static func findCreateUpdate(bgContext: NSManagedObjectContext, // check MOC
+    static func findCreateUpdate(bgContext: NSManagedObjectContext, // check MOC TODO
                                  givenName: String, familyName: String,
                                  memberRolesAndStatus: MemberRolesAndStatus = MemberRolesAndStatus(role: [:],
                                                                                                    stat: [:]),
