@@ -33,8 +33,8 @@ extension TestClubRotterdamMembersProvider { // fill with some initial hard-code
                                              photoClubIdPlus: Self.photoClubTestRotterdamIdPlus,
                                              photoClubWebsite: TestClubRotterdamMembersProvider.testRotterdamURL,
                                              fotobondNumber: nil, kvkNumber: nil,
-                                             coordinates: CLLocationCoordinate2D(latitude: 51.905292,
-                                                                                 longitude: 4.486934),
+                                             coordinates: CLLocationCoordinate2D(latitude: 51.90296,
+                                                                                 longitude: 4.49504),
                                              priority: 1
                                             )
         clubTestRotterdam.hasHardCodedMemberData = true // store in database that we ran insertSomeHardcodedMembers...
