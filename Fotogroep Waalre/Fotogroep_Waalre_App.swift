@@ -39,17 +39,17 @@ struct FotogroepWaalreApp: App {
                     // Load a few test members for 3 non-existent photo clubs.
                     // This demos multi-club support.
                     // But this also tests support for clubs with same name in different towns
-                    let taBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-                    _ = TestClubAmsterdamMembersProvider(bgContext: taBackgroundContext)
+//                    let taBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+                    _ = TestClubAmsterdamMembersProvider(bgContext: fgwBackgroundContext)
 
-                    let tdBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-                    _ = TestClubDenHaagMembersProvider(bgContext: tdBackgroundContext)
+//                    let tdBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+                    _ = TestClubDenHaagMembersProvider(bgContext: fgwBackgroundContext)
 
-                    let trBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-                    _ = TestClubRotterdamMembersProvider(bgContext: trBackgroundContext)
+//                    let trBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+                    _ = TestClubRotterdamMembersProvider(bgContext: fgwBackgroundContext)
 
-                    let biBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-                    _ = BIMembersProvider(bgContext: biBackgroundContext)
+//                    let biBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+                    _ = BIMembersProvider(bgContext: fgwBackgroundContext)
 
                     // More groups can be added here like BIMembersProvider()
                     // They can so be loaded manually using pull-to-refresh on the Photo Clubs screen.
