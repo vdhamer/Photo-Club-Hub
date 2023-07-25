@@ -10,9 +10,10 @@ Roadmap screen
 Readme screen
     * Changed app icon as shown in readme and on iOS home screen
 Maintenance
-    * Upgraded and tested with iOS 17.0 beta 3 (21A5268h), XCode 14.0 beta 4, Swift 5.9 and SwiftLint 0.52.3
-    * turned on CoreData debugging for Run schema (https://useyourloaf.com/blog/debugging-core-data/)
+    * Upgraded and tested with iOS 17.0 beta 4 (21A5291g), XCode 14.0 beta 5, Swift 5.9 and SwiftLint 0.52.3
+    * Turned on CoreData debugging for Run schema (https://useyourloaf.com/blog/debugging-core-data/)
     * Removed fatalError() wherever possible from shipping code
+    * Changed GPS coordinates of Test Photo Club Rotterdam (the museum plans to move)
     
 *In Apple's App Store, the release notes of 2.3.6 and 2.4.0 are combined.*
 ---------------------------------------------------------------------------
