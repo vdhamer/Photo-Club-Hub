@@ -33,7 +33,7 @@ struct FotogroepWaalreApp: App {
                 .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext) // main queue!
                 .onAppear {
                     // load current/former members of Fotogroep Waalre
-//                    let fgwBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+                    let fgwBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
 //                    _ = FGWMembersProvider(bgContext: fgwBackgroundContext)
 
                     // Load a few test members for 3 non-existent photo clubs.

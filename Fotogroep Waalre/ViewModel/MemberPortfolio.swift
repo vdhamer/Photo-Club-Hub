@@ -67,7 +67,7 @@ extension MemberPortfolio { // computed properties (some related to handling opt
 	}
 
     public var id: String {
-        return photographer.fullName + " in " + photoClub.fullNameCommaTown
+        return photographer.fullName + " in " + photoClub.fullNameTown
     }
 
     var memberWebsite: URL {
@@ -214,8 +214,10 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
                        dateInterval: dateInterval,
                        memberWebsite: memberWebsite,
                        latestImage: latestImage)
-            print("Created new membership for \(memberPortfolio.photographer.fullName) " +
-                  "in \(memberPortfolio.photoClub.fullName) of \(memberPortfolio.photoClub.town)")
+            print("""
+                  \(memberPortfolio.photoClub.fullNameTown): \
+                  Created new membership for \(memberPortfolio.photographer.fullName)
+                  """)
 			return memberPortfolio
 		}
 	}
@@ -273,29 +275,29 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
 			do {
 				try bgContext.save()
                 if changed1 { print("""
-                                    \(memberPortfolio.photoClub.fullNameCommaTown): \
+                                    \(memberPortfolio.photoClub.fullNameTown): \
                                     Changed roles for \(memberPortfolio.photographer.fullName)
                                     """) }
                 if changed2 { print("""
-                                    \(memberPortfolio.photoClub.fullNameCommaTown): \
+                                    \(memberPortfolio.photoClub.fullNameTown): \
                                     Changed start date for \(memberPortfolio.photographer.fullName)
                                     """) }
                 if changed3 { print("""
-                                    \(memberPortfolio.photoClub.fullNameCommaTown): \
+                                    \(memberPortfolio.photoClub.fullNameTown): \
                                     Changed end date for \(memberPortfolio.photographer.fullName)
                                     """) }
                 if changed4 { print("""
-                                    \(memberPortfolio.photoClub.fullNameCommaTown): \
+                                    \(memberPortfolio.photoClub.fullNameTown): \
                                     Changed club website for \(memberPortfolio.photographer.fullName)
                                     """) }
                 if changed5 { print("""
-                                    \(memberPortfolio.photoClub.fullNameCommaTown): \
+                                    \(memberPortfolio.photoClub.fullNameTown): \
                                     Changed latest image for \(memberPortfolio.photographer.fullName) \
-                                    to \(latestImage?.absoluteString ?? "<noLatestImage>")
+                                    to \(latestImage?.lastPathComponent ?? "<noLatestImage>")
                                     """)}
 			} catch {
                 ifDebugFatalError("Update failed for member \(memberPortfolio.photographer.fullName) " +
-                                  "in club \(memberPortfolio.photoClub.fullNameCommaTown): \(error)",
+                                  "in club \(memberPortfolio.photoClub.fullNameTown): \(error)",
                                   file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
                 // in release mode, failure to update this data is only logged. And the app doesn't stop.
 			}

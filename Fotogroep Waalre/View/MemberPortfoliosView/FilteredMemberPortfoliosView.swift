@@ -12,7 +12,7 @@ struct FilteredMemberPortfoliosView: View {
     @Environment(\.managedObjectContext) private var viewContext
 
     @SectionedFetchRequest<String, MemberPortfolio>(
-        sectionIdentifier: \.photoClub_!.fullNameCommaTown,
+        sectionIdentifier: \.photoClub_!.fullNameTown,
         sortDescriptors: [],
         predicate: NSPredicate.none
     ) private var sectionedPortfolios: SectionedFetchResults<String, MemberPortfolio>
@@ -32,7 +32,7 @@ struct FilteredMemberPortfoliosView: View {
             SortDescriptor(\MemberPortfolio.photographer_!.familyName_, order: .forward)
         ]
         _sectionedPortfolios = SectionedFetchRequest(
-            sectionIdentifier: \.photoClub_!.fullNameCommaTown,
+            sectionIdentifier: \.photoClub_!.fullNameTown,
             sortDescriptors: sortDescriptors,
             predicate: predicate,
             animation: .default)

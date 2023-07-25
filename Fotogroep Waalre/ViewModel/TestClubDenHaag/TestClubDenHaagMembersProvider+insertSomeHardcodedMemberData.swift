@@ -18,8 +18,8 @@ extension TestClubDenHaagMembersProvider { // fill with some initial hard-coded 
     func insertSomeHardcodedMemberData(bgContext: NSManagedObjectContext) {
         bgContext.perform { // from here on, we are running on a background thread
             ifDebugPrint("""
-                         \(Self.photoClubTestDenHaagIdPlus.fullNameCommaTown): \
-                         starting insertSomeHardcodedMemberData() in background
+                         \(Self.photoClubTestDenHaagIdPlus.fullNameTown): \
+                         Starting insertSomeHardcodedMemberData() in background
                          """)
             self.insertSomeHardcodedMemberDataCommon(bgContext: bgContext, commit: true)
         }
@@ -58,8 +58,8 @@ extension TestClubDenHaagMembersProvider { // fill with some initial hard-coded 
                     try bgContext.save() // commit all changes
                 }
                 ifDebugPrint("""
-                             \(Self.photoClubTestDenHaagIdPlus.fullNameCommaTown): \
-                             completed insertSomeHardcodedMemberData()
+                             \(Self.photoClubTestDenHaagIdPlus.fullNameTown): \
+                             Completed insertSomeHardcodedMemberData() in background
                              """)
             } catch {
                 ifDebugFatalError("Failed to save changes for Test Den Haag",
@@ -81,7 +81,8 @@ extension TestClubDenHaagMembersProvider { // fill with some initial hard-coded 
                            phoneNumber: String? = nil,
                            eMail: String? = nil) {
         let photographer = Photographer.findCreateUpdate(
-                            bgContext: bgContext, givenName: givenName, familyName: familyName, // TODO - check MOC
+                            bgContext: bgContext,
+                            givenName: givenName, familyName: familyName, // TODO - check MOC
                             memberRolesAndStatus: memberRolesAndStatus,
                             bornDT: bornDT )
 

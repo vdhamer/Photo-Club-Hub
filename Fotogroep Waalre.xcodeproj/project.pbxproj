@@ -27,6 +27,7 @@
 		D06754A02942B23F00C0AB08 /* FGWMembersProvide+enumHTMLPageLoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D067549F2942B23F00C0AB08 /* FGWMembersProvide+enumHTMLPageLoadingState.swift */; };
 		D06BE9332A4F870B0055B3B1 /* ifDebugUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06BE9322A4F870B0055B3B1 /* ifDebugUtils.swift */; };
 		D0795CEC294FCCC200FA62A8 /* ShapeStyle+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0795CEB294FCCC200FA62A8 /* ShapeStyle+Colors.swift */; };
+		D07A47E12A6DE1FE00419D1C /* Fotogroep_Waalre_2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D0831A3C277F72B70049AB84 /* Fotogroep_Waalre_2.xcdatamodeld */; };
 		D081655F278616930078AB16 /* SinglePortfolioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D081655E278616930078AB16 /* SinglePortfolioView.swift */; };
 		D08281312959C6F400D9C232 /* FGWMembersProvider+extractPhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08281302959C6F400D9C232 /* FGWMembersProvider+extractPhone.swift */; };
 		D08281332959C7EA00D9C232 /* FGWMembersProvider+extractEMail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08281322959C7EA00D9C232 /* FGWMembersProvider+extractEMail.swift */; };
@@ -70,7 +71,6 @@
 		D0C6E95529577921001E5CE9 /* DebugPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C6E95429577921001E5CE9 /* DebugPanel.swift */; };
 		D0C8DD472933EBB000658C58 /* portfolios.png in Resources */ = {isa = PBXBuildFile; fileRef = D0C8DD462933EBB000658C58 /* portfolios.png */; };
 		D0D18C78296E1F6A00B334DB /* PhotoClubID.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D18C77296E1F6A00B334DB /* PhotoClubID.swift */; };
-		D0D5B58E28E4918F00244F34 /* Fotogroep_Waalre_2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D0831A3C277F72B70049AB84 /* Fotogroep_Waalre_2.xcdatamodeld */; };
 		D0D5B58F28E4921700244F34 /* MemberListSections.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0B52498277F9A4B00927BCA /* MemberListSections.strings */; };
 		D0DE02772789D1B30062738C /* RoleIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DE02762789D1B30062738C /* RoleIconView.swift */; };
 		D0E2235427DE9139002A8600 /* PreludeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E2235327DE9139002A8600 /* PreludeView.swift */; };
@@ -777,7 +777,6 @@
 				D0831A45277F731C0049AB84 /* String+Capitalize.swift in Sources */,
 				D0831A1F277F72270049AB84 /* FilteredMemberPortfoliosView.swift in Sources */,
 				D08281332959C7EA00D9C232 /* FGWMembersProvider+extractEMail.swift in Sources */,
-				D0D5B58E28E4918F00244F34 /* Fotogroep_Waalre_2.xcdatamodeld in Sources */,
 				D0A4E6F529871DE700333D7B /* TestClubDenHaagMembersProvider+insertSomeHardcodedMemberData.swift in Sources */,
 				D0831A34277F72590049AB84 /* BIMembersProvider.swift in Sources */,
 				D0ADF4AE27922DCA00535432 /* MemberRolesAndStatus.swift in Sources */,
@@ -818,6 +817,7 @@
 				D0831A32277F72590049AB84 /* Photographer.swift in Sources */,
 				D044646527FCE7C100990613 /* UIDevice+IsIPad.swift in Sources */,
 				D05E451E27EF2A2C00D31327 /* ReadmeView.swift in Sources */,
+				D07A47E12A6DE1FE00419D1C /* Fotogroep_Waalre_2.xcdatamodeld in Sources */,
 				D01D2B6227D3BBDC00E2FE41 /* View+Navigate.swift in Sources */,
 				D06754A02942B23F00C0AB08 /* FGWMembersProvide+enumHTMLPageLoadingState.swift in Sources */,
 				D082BE912957806800FF0812 /* LogoPath.swift in Sources */,
@@ -1027,8 +1027,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIStatusBarStyle = "";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1066,8 +1066,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIStatusBarStyle = "";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

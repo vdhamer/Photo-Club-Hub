@@ -18,8 +18,8 @@ extension TestClubAmsterdamMembersProvider { // fill with some initial hard-code
     func insertSomeHardcodedMemberData(bgContext: NSManagedObjectContext) {
         bgContext.perform {
             ifDebugPrint("""
-                         \(Self.photoClubTestAmsterdamIdPlus.fullNameCommaTown): \
-                         starting insertSomeHardcodedMemberData() in background
+                         \(Self.photoClubTestAmsterdamIdPlus.fullNameTown): \
+                         Starting insertSomeHardcodedMemberData() in background
                          """)
             self.insertSomeHardcodedMemberDataCommon(bgContext: bgContext, commit: true)
         }
@@ -58,8 +58,8 @@ extension TestClubAmsterdamMembersProvider { // fill with some initial hard-code
                     try bgContext.save() // commit all changes
                 }
                 ifDebugPrint("""
-                             \(Self.photoClubTestAmsterdamIdPlus.fullNameCommaTown) \
-                             completed insertSomeHardcodedMemberData()
+                             \(Self.photoClubTestAmsterdamIdPlus.fullNameTown) \
+                             Completed insertSomeHardcodedMemberData() in background
                              """)
             } catch {
                 ifDebugFatalError("Failed to save changes for Test Amsterdam",
