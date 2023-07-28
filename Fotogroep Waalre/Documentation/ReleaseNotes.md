@@ -14,6 +14,7 @@ Maintenance
     * Turned on CoreData debugging for Run schema (https://useyourloaf.com/blog/debugging-core-data/)
     * Removed fatalError() wherever possible from shipping code
     * Changed GPS coordinates of Test Photo Club Rotterdam (the museum plans to move)
+    * Cleanup of model (schema) versions
     
 *In Apple's App Store, the release notes of 2.3.6 and 2.4.0 are combined.*
 ---------------------------------------------------------------------------

@@ -73,14 +73,12 @@ extension Photographer {
         let photographers: [Photographer] = (try? bgContext.fetch(request)) ?? [] // nil means absolute failure
 
         if let photographer = photographers.first { // already exists, so make sure secondary attributes are up to date
-            let success = update(bgContext: bgContext, photographer: photographer,
+            let wasUpdated = update(bgContext: bgContext, photographer: photographer,
                                  memberRolesAndStatus: memberRolesAndStatus,
                                  phoneNumber: phoneNumber, eMail: eMail,
                                  photographerWebsite: photographerWebsite, bornDT: bornDT)
-            if success {
+            if wasUpdated {
                 print("Sucessfully updated info for photographer <\(photographer.fullName)>")
-            } else {
-                print("Failed to update info for photographer <\(photographer.fullName)>")
             }
             return photographer
         } else {
