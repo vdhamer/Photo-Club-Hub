@@ -120,6 +120,7 @@
 		D0443D35290595C700935C7D /* Fotogroep_Waalre_2_2_3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fotogroep_Waalre_2_2_3.xcdatamodel; sourceTree = "<group>"; };
 		D044646427FCE7C100990613 /* UIDevice+IsIPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+IsIPad.swift"; sourceTree = "<group>"; };
 		D04EA9952905BFF5005AA96C /* Fotogroep_Waalre_2_2_4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fotogroep_Waalre_2_2_4.xcdatamodel; sourceTree = "<group>"; };
+		D05C5E072A73D1EC00E39F77 /* Fotogroep_Waalre_2_4_0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fotogroep_Waalre_2_4_0.xcdatamodel; sourceTree = "<group>"; };
 		D05E451D27EF2A2C00D31327 /* ReadmeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeView.swift; sourceTree = "<group>"; };
 		D06061E728A0453F00A675A7 /* FGWPrivateMembersURL2.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = FGWPrivateMembersURL2.txt; sourceTree = "<group>"; };
 		D06061E928A0456C00A675A7 /* FGWPrivateMembersURL3.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = FGWPrivateMembersURL3.txt; sourceTree = "<group>"; };
@@ -1228,6 +1229,7 @@
 		D0831A3C277F72B70049AB84 /* Fotogroep_Waalre_2.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				D05C5E072A73D1EC00E39F77 /* Fotogroep_Waalre_2_4_0.xcdatamodel */,
 				D0C06F672A322AC10042B072 /* Fotogroep_Waalre_2_3_6.xcdatamodel */,
 				D08E076429D9DD3B00EBEFB6 /* Fotogroep_Waalre_2_3_5.xcdatamodel */,
 				D0B38C2929C7B85E00AF76BF /* Fotogroep_Waalre_2_3_3.xcdatamodel */,
@@ -1256,7 +1258,7 @@
 				D0B1EDBA279771A500D37431 /* Fotogroep_Waalre_2_0_2.xcdatamodel */,
 				D0831A3D277F72B70049AB84 /* Fotogroep_Waalre.xcdatamodel */,
 			);
-			currentVersion = D0C06F672A322AC10042B072 /* Fotogroep_Waalre_2_3_6.xcdatamodel */;
+			currentVersion = D05C5E072A73D1EC00E39F77 /* Fotogroep_Waalre_2_4_0.xcdatamodel */;
 			path = Fotogroep_Waalre_2.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
