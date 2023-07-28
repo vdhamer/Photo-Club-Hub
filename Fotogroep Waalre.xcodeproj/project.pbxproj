@@ -20,6 +20,7 @@
 		D0416282295BBA7700ED073A /* CoreLocation+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0416281295BBA7700ED073A /* CoreLocation+Equatable.swift */; };
 		D044646527FCE7C100990613 /* UIDevice+IsIPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = D044646427FCE7C100990613 /* UIDevice+IsIPad.swift */; };
 		D05AF1B229EF44530079AE77 /* Roadmap in Frameworks */ = {isa = PBXBuildFile; productRef = D05AF1B129EF44530079AE77 /* Roadmap */; };
+		D05C5E0A2A73D4E100E39F77 /* Fotogroep_Waalre_2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D0831A3C277F72B70049AB84 /* Fotogroep_Waalre_2.xcdatamodeld */; };
 		D05E451E27EF2A2C00D31327 /* ReadmeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05E451D27EF2A2C00D31327 /* ReadmeView.swift */; };
 		D06061E828A0453F00A675A7 /* FGWPrivateMembersURL2.txt in Resources */ = {isa = PBXBuildFile; fileRef = D06061E728A0453F00A675A7 /* FGWPrivateMembersURL2.txt */; };
 		D06061EA28A0456C00A675A7 /* FGWPrivateMembersURL3.txt in Resources */ = {isa = PBXBuildFile; fileRef = D06061E928A0456C00A675A7 /* FGWPrivateMembersURL3.txt */; };
@@ -27,7 +28,6 @@
 		D06754A02942B23F00C0AB08 /* FGWMembersProvide+enumHTMLPageLoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D067549F2942B23F00C0AB08 /* FGWMembersProvide+enumHTMLPageLoadingState.swift */; };
 		D06BE9332A4F870B0055B3B1 /* ifDebugUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06BE9322A4F870B0055B3B1 /* ifDebugUtils.swift */; };
 		D0795CEC294FCCC200FA62A8 /* ShapeStyle+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0795CEB294FCCC200FA62A8 /* ShapeStyle+Colors.swift */; };
-		D07A47E12A6DE1FE00419D1C /* Fotogroep_Waalre_2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D0831A3C277F72B70049AB84 /* Fotogroep_Waalre_2.xcdatamodeld */; };
 		D081655F278616930078AB16 /* SinglePortfolioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D081655E278616930078AB16 /* SinglePortfolioView.swift */; };
 		D08281312959C6F400D9C232 /* FGWMembersProvider+extractPhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08281302959C6F400D9C232 /* FGWMembersProvider+extractPhone.swift */; };
 		D08281332959C7EA00D9C232 /* FGWMembersProvider+extractEMail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08281322959C7EA00D9C232 /* FGWMembersProvider+extractEMail.swift */; };
@@ -818,7 +818,7 @@
 				D0831A32277F72590049AB84 /* Photographer.swift in Sources */,
 				D044646527FCE7C100990613 /* UIDevice+IsIPad.swift in Sources */,
 				D05E451E27EF2A2C00D31327 /* ReadmeView.swift in Sources */,
-				D07A47E12A6DE1FE00419D1C /* Fotogroep_Waalre_2.xcdatamodeld in Sources */,
+				D05C5E0A2A73D4E100E39F77 /* Fotogroep_Waalre_2.xcdatamodeld in Sources */,
 				D01D2B6227D3BBDC00E2FE41 /* View+Navigate.swift in Sources */,
 				D06754A02942B23F00C0AB08 /* FGWMembersProvide+enumHTMLPageLoadingState.swift in Sources */,
 				D082BE912957806800FF0812 /* LogoPath.swift in Sources */,
