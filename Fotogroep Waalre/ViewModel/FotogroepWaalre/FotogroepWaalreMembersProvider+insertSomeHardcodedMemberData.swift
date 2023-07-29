@@ -11,7 +11,7 @@ import MapKit // for CLLocationCoordinate2D
 extension FotogroepWaalreMembersProvider { // fill with some initial hard-coded content
 
     func insertSomeHardcodedMemberData(bgContext: NSManagedObjectContext) {
-        bgContext.perform { // done asynchronously by CoreData (.perform also works)
+        bgContext.perform { // done asynchronously by CoreData
             ifDebugPrint("""
                          \(Self.photoClubWaalreIdPlus.fullNameTown): \
                          Starting insertSomeHardcodedMemberData() in background
