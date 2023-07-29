@@ -100,9 +100,8 @@ extension PhotoClub {
                                  priority: Int16? = nil
                                 ) -> PhotoClub {
         let predicateFormat: String = "name_ = %@ AND town_ = %@" // avoid localization
-        let request: NSFetchRequest = fetchRequest(predicate: NSPredicate(format: predicateFormat,
-                                                                          photoClubIdPlus.fullName,
-                                                                          photoClubIdPlus.town))
+        let request = fetchRequest(predicate: NSPredicate(format: predicateFormat, photoClubIdPlus.fullName,
+                                                                                   photoClubIdPlus.town))
 
 		let photoClubs: [PhotoClub] = (try? bgContext.fetch(request)) ?? [] // nil means absolute failure
         if photoClubs.count > 1 {

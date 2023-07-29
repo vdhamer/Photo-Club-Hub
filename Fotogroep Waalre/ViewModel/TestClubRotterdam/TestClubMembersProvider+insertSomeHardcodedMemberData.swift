@@ -21,11 +21,11 @@ extension TestClubRotterdamMembersProvider { // fill with some initial hard-code
                          \(Self.photoClubTestRotterdamIdPlus.fullNameTown): \
                          Starting insertSomeHardcodedMemberData() in background
                          """)
-            self.insertSomeHardcodedMemberDataCommon(bgContext: bgContext, commit: true)
+            self.insertSomeHardcodedMemberDataCommon(bgContext: bgContext)
         }
     }
 
-    private func insertSomeHardcodedMemberDataCommon(bgContext: NSManagedObjectContext, commit: Bool) {
+    private func insertSomeHardcodedMemberDataCommon(bgContext: NSManagedObjectContext) {
 
         // add photo club to Photo Clubs (if needed)
         let clubTestRotterdam = PhotoClub.findCreateUpdate(
@@ -52,20 +52,18 @@ extension TestClubRotterdamMembersProvider { // fill with some initial hard-code
                   eMail: "foobarR@vdhamer.com"
         )
 
-        if commit {
-            do {
-                if bgContext.hasChanges {
-                    try bgContext.save() // commit all changes
-                }
-                ifDebugPrint("""
-                             \(Self.photoClubTestRotterdamIdPlus.fullNameTown): \
-                             Completed insertSomeHardcodedMemberData() in background
-                             """)
-            } catch {
-                ifDebugFatalError("Failed to save changes for Test Rotterdam",
-                                  file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
-                // in release mode, failing to store the data is only logged. And the app doesn't stop.
+        do {
+            if bgContext.hasChanges {
+                try bgContext.save() // commit all changes
             }
+            ifDebugPrint("""
+                         \(Self.photoClubTestRotterdamIdPlus.fullNameTown): \
+                         Completed insertSomeHardcodedMemberData() in background
+                         """)
+        } catch {
+            ifDebugFatalError("Failed to save changes for Test Rotterdam",
+                              file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
+            // in release mode, failing to store the data is only logged. And the app doesn't stop.
         }
 
     }
