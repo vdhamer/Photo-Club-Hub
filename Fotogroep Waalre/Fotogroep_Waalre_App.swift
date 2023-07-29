@@ -35,10 +35,10 @@ struct FotogroepWaalreApp: App {
 
                     // Load a few test members for an existent photo clubs.
                     // This helps demo multi-club support.
-                    let biBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-                    biBackgroundContext.name = "Bellus Imago"
-                    biBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-                    _ = BellusImagoMembersProvider(bgContext: biBackgroundContext)
+//                    let biBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+//                    biBackgroundContext.name = "Bellus Imago"
+//                    biBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+//                    _ = BellusImagoMembersProvider(bgContext: biBackgroundContext)
 
                     // load all current/former members of Fotogroep Waalre
                     let fgwBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
