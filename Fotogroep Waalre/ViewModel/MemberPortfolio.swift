@@ -231,7 +231,7 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
                                latestImage: URL?) -> Bool {
 		var needsSaving: Bool = false
 
-        bgContext.mergePolicy = NSMergePolicy.mergeByPropertyStoreTrump // not sure about this, prevents error TODO
+//        bgContext.mergePolicy = NSMergePolicy.mergeByPropertyStoreTrump // not sure about this, prevents error TODO
 
         // function only works for non-optional Types.
         // If optional support needed, create variant with "inout Type?" instead of "inout Type"

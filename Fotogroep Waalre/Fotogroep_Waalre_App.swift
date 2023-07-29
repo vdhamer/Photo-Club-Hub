@@ -17,7 +17,7 @@ struct FotogroepWaalreApp: App {
         // Core Data settings
         let persistenceController = PersistenceController.shared // for Core Data
         let viewContext = persistenceController.container.viewContext // "associated with the main application queue"
-        viewContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
+        viewContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         viewContext.undoManager = nil // nil by default on iOS
         viewContext.shouldDeleteInaccessibleFaults = true
 
