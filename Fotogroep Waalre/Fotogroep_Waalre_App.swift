@@ -36,7 +36,7 @@ struct FotogroepWaalreApp: App {
                     let fgwBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
                     fgwBackgroundContext.name = "Fotogroep Waalre"
                     fgwBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-//                    _ = FGWMembersProvider(bgContext: fgwBackgroundContext)
+                    _ = FGWMembersProvider(bgContext: fgwBackgroundContext)
 
                     // Load a few test members for 3 non-existent photo clubs.
                     // This demos multi-club support.
