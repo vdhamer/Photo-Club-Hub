@@ -21,11 +21,11 @@ extension BellusImagoMembersProvider { // fill with some initial hard-coded cont
                          \(Self.photoClubBellusImagoIdPlus.fullNameTown): \
                          Starting insertSomeHardcodedMemberData() in background
                          """)
-            self.insertSomeHardcodedMemberDataCommon(bgContext: bgContext, commit: true)
+            self.insertSomeHardcodedMemberDataCommon(bgContext: bgContext)
         }
     }
 
-    private func insertSomeHardcodedMemberDataCommon(bgContext: NSManagedObjectContext, commit: Bool) {
+    private func insertSomeHardcodedMemberDataCommon(bgContext: NSManagedObjectContext) {
 
         // add Bellus Imago to Photo Clubs (if needed)
         let clubBellusImago = PhotoClub.findCreateUpdate(
@@ -60,22 +60,20 @@ extension BellusImagoMembersProvider { // fill with some initial hard-coded cont
                      "https://www.fotoclubbellusimago.nl/uploads/5/5/1/2/55129719/vrijwerk-loek-1_2_orig.jpg")
         )
 
-        if commit {
-            let clubNickname = BellusImagoMembersProvider.photoClubBellusImagoIdPlus.nickname
+        let clubNickname = BellusImagoMembersProvider.photoClubBellusImagoIdPlus.nickname
 
-            do {
-                if bgContext.hasChanges {
-                    try bgContext.save() // commit all changes
-                }
-                ifDebugPrint("""
-                             \(Self.photoClubBellusImagoIdPlus.fullNameTown): \
-                             Completed insertSomeHardcodedMemberData() in background
-                             """)
-            } catch {
-                ifDebugFatalError("\(clubNickname): ERROR - failed to save changes to Core Data",
-                                  file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
-                // in release mode, the failed database update is only logged. App doesn't stop.
+        do {
+            if bgContext.hasChanges {
+                try bgContext.save() // commit all changes
             }
+            ifDebugPrint("""
+                         \(Self.photoClubBellusImagoIdPlus.fullNameTown): \
+                         Completed insertSomeHardcodedMemberData() in background
+                         """)
+        } catch {
+            ifDebugFatalError("\(clubNickname): ERROR - failed to save changes to Core Data",
+                              file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
+            // in release mode, the failed database update is only logged. App doesn't stop.
         }
 
     }
