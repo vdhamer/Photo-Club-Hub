@@ -32,14 +32,21 @@ struct FotogroepWaalreApp: App {
             PreludeView()
                 .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext) // main queue!
                 .onAppear {
-                    // load current/former members of Fotogroep Waalre
+
+                    // Load a few test members for an existent photo clubs.
+                    // This helps demo multi-club support.
+                    let biBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+                    biBackgroundContext.name = "Bellus Imago"
+                    biBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+                    _ = BellusImagoMembersProvider(bgContext: biBackgroundContext)
+
+                    // load all current/former members of Fotogroep Waalre
                     let fgwBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
                     fgwBackgroundContext.name = "Fotogroep Waalre"
                     fgwBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
                     _ = FotogroepWaalreMembersProvider(bgContext: fgwBackgroundContext)
 
                     // Load a few test members for 3 non-existent photo clubs.
-                    // This demos multi-club support.
                     // But this also tests support for clubs with same name in different towns
                     let taBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
                     taBackgroundContext.name = "Amsterdam"
@@ -55,11 +62,6 @@ struct FotogroepWaalreApp: App {
                     trBackgroundContext.name = "Rotterdam"
                     trBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
                     _ = TestClubRotterdamMembersProvider(bgContext: trBackgroundContext)
-
-                    let biBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-                    biBackgroundContext.name = "Bellus Imago"
-                    biBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-                    _ = BIMembersProvider(bgContext: biBackgroundContext)
 
                     // More groups can be added here like BIMembersProvider()
                     // They can so be loaded manually using pull-to-refresh on the Photo Clubs screen.

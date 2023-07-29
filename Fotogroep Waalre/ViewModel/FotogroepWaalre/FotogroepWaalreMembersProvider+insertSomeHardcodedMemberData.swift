@@ -1,6 +1,6 @@
 //
-//  FGWMembersProvider+insertSomeHardcodedMemberData.swift
-//  FGWMembersProvider+insertSomeHardcodedMemberData
+//  FotogroepWaalreMembersProvider+insertSomeHardcodedMemberData.swift
+//  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 01/08/2021.
 //

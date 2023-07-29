@@ -1,13 +1,13 @@
 //
-//  BIMembersProvider.swift
-//  BIMembersProvider
+//  BellusImagoMembersProvider.swift
+//  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 17/07/2021.
 //
 
 import CoreData // for PersistenceController
 
-class BIMembersProvider {
+class BellusImagoMembersProvider {
 
     init(bgContext: NSManagedObjectContext) {
 

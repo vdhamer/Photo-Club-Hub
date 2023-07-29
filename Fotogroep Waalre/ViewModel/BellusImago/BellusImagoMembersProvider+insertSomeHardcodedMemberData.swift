@@ -1,6 +1,6 @@
 //
-//  BIMembersProvider+insertSomeHardcodedMemberData.swift
-//  BIMembersProvider+insertSomeHardcodedMemberData
+//  BellusImagoMembersProvider+insertSomeHardcodedMemberData.swift
+//  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 01/08/2021.
 //
@@ -8,7 +8,7 @@
 import CoreData // for NSManagedObjectContext
 import MapKit // for CLLocationCoordinate2D
 
-extension BIMembersProvider { // fill with some initial hard-coded content
+extension BellusImagoMembersProvider { // fill with some initial hard-coded content
 
     private static let bellusImagoURL = URL(string: "https://www.fotoClubBellusImago.nl")
     private static let photoClubBellusImagoIdPlus = PhotoClubIdPlus(fullName: "Fotoclub Bellus Imago",
@@ -31,7 +31,7 @@ extension BIMembersProvider { // fill with some initial hard-coded content
         let clubBellusImago = PhotoClub.findCreateUpdate(
                                                          bgContext: bgContext,
                                                          photoClubIdPlus: Self.photoClubBellusImagoIdPlus,
-                                                         photoClubWebsite: BIMembersProvider.bellusImagoURL,
+                                                         photoClubWebsite: BellusImagoMembersProvider.bellusImagoURL,
                                                          fotobondNumber: 1671, kvkNumber: nil,
                                                          coordinates: CLLocationCoordinate2D(latitude: 51.425410,
                                                                                              longitude: 5.387560),
@@ -61,7 +61,7 @@ extension BIMembersProvider { // fill with some initial hard-coded content
         )
 
         if commit {
-            let clubNickname = BIMembersProvider.photoClubBellusImagoIdPlus.nickname
+            let clubNickname = BellusImagoMembersProvider.photoClubBellusImagoIdPlus.nickname
 
             do {
                 if bgContext.hasChanges {
