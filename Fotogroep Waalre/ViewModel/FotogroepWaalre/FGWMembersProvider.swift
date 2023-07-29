@@ -16,7 +16,7 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
 
     init(bgContext: NSManagedObjectContext) {
         // following is asynchronous, but not documented as such using async/await
-        insertSomeHardcodedMemberData(bgContext: bgContext, commit: true)
+        insertSomeHardcodedMemberData(bgContext: bgContext)
 
         // can't rely on async (!) insertSomeHardcodedMemberData() to return managed photoClub object in time
         let clubWaalre = PhotoClub.findCreateUpdate( bgContext: bgContext,

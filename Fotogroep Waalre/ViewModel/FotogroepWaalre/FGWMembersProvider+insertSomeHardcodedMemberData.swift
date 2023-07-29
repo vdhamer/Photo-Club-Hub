@@ -10,13 +10,13 @@ import MapKit // for CLLocationCoordinate2D
 
 extension FGWMembersProvider { // fill with some initial hard-coded content
 
-    func insertSomeHardcodedMemberData(bgContext: NSManagedObjectContext, commit: Bool) {
-        bgContext.performAndWait { // done asynchronously by CoreData (.perform also works)
+    func insertSomeHardcodedMemberData(bgContext: NSManagedObjectContext) {
+        bgContext.perform { // done asynchronously by CoreData (.perform also works)
             ifDebugPrint("""
                          \(Self.photoClubWaalreIdPlus.fullNameTown): \
                          Starting insertSomeHardcodedMemberData() in background
                          """)
-            insertSomeHardcodedMemberDataCommon(bgContext: bgContext, commit: commit)
+            self.insertSomeHardcodedMemberDataCommon(bgContext: bgContext)
             ifDebugPrint("""
                          \(Self.photoClubWaalreIdPlus.fullNameTown): \
                          Completed insertSomeHardcodedMemberData() in background
@@ -24,7 +24,7 @@ extension FGWMembersProvider { // fill with some initial hard-coded content
         }
     }
 
-    private func insertSomeHardcodedMemberDataCommon(bgContext: NSManagedObjectContext, commit: Bool) {
+    private func insertSomeHardcodedMemberDataCommon(bgContext: NSManagedObjectContext) {
 
         let clubWaalre = PhotoClub.findCreateUpdate( bgContext: bgContext,
                                                      photoClubIdPlus: FGWMembersProvider.photoClubWaalreIdPlus,
@@ -65,16 +65,14 @@ extension FGWMembersProvider { // fill with some initial hard-coded content
         addMember(bgContext: bgContext, givenName: "Kees", familyName: "van Gemert", photoClub: clubWaalre,
                   memberRolesAndStatus: MemberRolesAndStatus(role: [ .secretary: true ]))
 
-        if commit {
-            do {
-                if bgContext.hasChanges {
-                    try bgContext.save() // commit all changes
-                }
-            } catch {
-                ifDebugFatalError("Fotogroep Waalre: ERROR - failed to save changes to Core Data",
-                                  file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
-                // in release mode, the failed database inserts are only logged. App doesn't stop.
+        do {
+            if bgContext.hasChanges {
+                try bgContext.save() // commit all changes
             }
+        } catch {
+            ifDebugFatalError("Fotogroep Waalre: ERROR - failed to save changes to Core Data",
+                              file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
+            // in release mode, the failed database inserts are only logged. App doesn't stop.
         }
 
     }
