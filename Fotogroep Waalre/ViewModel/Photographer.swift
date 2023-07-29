@@ -66,84 +66,86 @@ extension Photographer {
                                  memberRolesAndStatus: MemberRolesAndStatus = MemberRolesAndStatus(role: [:],
                                                                                                    stat: [:]),
                                  phoneNumber: String? = nil, eMail: String? = nil,
-                                 photographerWebsite: URL? = nil, bornDT: Date? = nil) -> Photographer {
+                                 photographerWebsite: URL? = nil, bornDT: Date? = nil,
+                                 photoClub: PhotoClub? = nil) -> Photographer { // photoClub only shown on console
         let predicateFormat: String = "givenName_ = %@ AND familyName_ = %@" // avoid localization
         let request = fetchRequest(predicate: NSPredicate(format: predicateFormat, givenName, familyName))
 
         let photographers: [Photographer] = (try? bgContext.fetch(request)) ?? [] // nil means absolute failure
+        let photoClubPref = "\(photoClub?.fullNameTown ?? "No photo club provided"):"
 
-        if let photographer = photographers.first { // already exists, so make sure secondary attributes are up to date
+        if let photographer = photographers.first {
+            // already exists, so make sure secondary attributes are up to date
             let wasUpdated = update(bgContext: bgContext, photographer: photographer,
-                                 memberRolesAndStatus: memberRolesAndStatus,
-                                 phoneNumber: phoneNumber, eMail: eMail,
-                                 photographerWebsite: photographerWebsite, bornDT: bornDT)
+                                    memberRolesAndStatus: memberRolesAndStatus,
+                                    phoneNumber: phoneNumber, eMail: eMail,
+                                    photographerWebsite: photographerWebsite, bornDT: bornDT)
             if wasUpdated {
-                print("Sucessfully updated info for photographer <\(photographer.fullName)>")
+                print("\(photoClubPref) Updated info for photographer <\(photographer.fullName)>")
+            } else {
+                print("\(photoClubPref) No changes for photographer <\(photographer.fullName)>")
             }
             return photographer
         } else {
+            // doesn't exist yet, so add new photographer
             let entity = NSEntityDescription.entity(forEntityName: "Photographer", in: bgContext)!
             let photographer = Photographer(entity: entity, insertInto: bgContext) // background: use special .init()
             photographer.givenName = givenName
             photographer.familyName = familyName
-            let nonDefault = update(bgContext: bgContext, photographer: photographer, // TODO - check MOC
-                                    memberRolesAndStatus: memberRolesAndStatus,
-                                    phoneNumber: phoneNumber, eMail: eMail,
-                                    photographerWebsite: photographerWebsite, bornDT: bornDT)
-            if nonDefault {
-                print("Successfully created new photographer <\(photographer.fullName)> and set some values")
-            } else {
-                print("Successfully created new photographer <\(photographer.fullName)>")
-            }
+            _ = update(bgContext: bgContext, photographer: photographer, // TODO - check MOC
+                       memberRolesAndStatus: memberRolesAndStatus,
+                       phoneNumber: phoneNumber, eMail: eMail,
+                       photographerWebsite: photographerWebsite, bornDT: bornDT)
+            print("\(photoClubPref) Successfully created new photographer <\(photographer.fullName)>") // ignore updated
             return photographer
         }
     }
 
 	// Update non-identifying properties within existing instance of class Photographer
-    // Returns whether any of the non-identifying properties were set to non-default value.
+    // Returns whether any of the non-identifying properties were updated.
     static func update(bgContext: NSManagedObjectContext, photographer: Photographer, // TODO - check MOC
                        memberRolesAndStatus: MemberRolesAndStatus,
                        phoneNumber: String? = nil, eMail: String? = nil,
                        photographerWebsite: URL? = nil, bornDT: Date? = nil) -> Bool {
 
-		var modified: Bool = false
+		var wasUpdated: Bool = false
 
         if let isDeceased = memberRolesAndStatus.stat[.deceased], photographer.isDeceased != isDeceased {
             photographer.memberRolesAndStatus.stat[.deceased] = isDeceased
-			modified = true
+            wasUpdated = true
 		}
 
         if let bornDT, photographer.bornDT != bornDT {
 			photographer.bornDT = bornDT
-			modified = true
+            wasUpdated = true
 		}
 
         if let phoneNumber, photographer.phoneNumber != phoneNumber {
             photographer.phoneNumber = phoneNumber
-            modified = true
+            wasUpdated = true
         }
 
         if let eMail, photographer.eMail != eMail {
             photographer.eMail = eMail
-            modified = true
+            wasUpdated = true
         }
 
         if let photographerWebsite, photographer.photographerWebsite != photographerWebsite {
             photographer.photographerWebsite = photographerWebsite
-            modified = true
+            wasUpdated = true
         }
 
-		if modified {
+		if wasUpdated {
 			do {
 				try bgContext.save()
 			} catch {
                 ifDebugFatalError("Update failed for photographer <\(photographer.fullName)>",
                                   file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
                 // in release mode, if the data cannot be saved, log this and continue.
-                modified = false
+                wasUpdated = false
 			}
 		}
-        return modified
+        return wasUpdated
 	}
 
 }

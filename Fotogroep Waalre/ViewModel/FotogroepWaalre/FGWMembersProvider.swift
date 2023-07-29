@@ -149,7 +149,8 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
                         memberRolesAndStatus: MemberRolesAndStatus(role: [:], stat: [
                             .deceased: !self.isStillAlive(phone: phoneNumber) ]),
                         phoneNumber: phoneNumber, eMail: eMail,
-                        photographerWebsite: URL(string: externalURL), bornDT: birthDate
+                        photographerWebsite: URL(string: externalURL),
+                        bornDT: birthDate
                     )
 
                     _ = MemberPortfolio.findCreateUpdate(

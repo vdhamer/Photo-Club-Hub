@@ -91,7 +91,8 @@ extension FGWMembersProvider { // fill with some initial hard-coded content
                            bgContext: bgContext,
                            givenName: givenName, familyName: familyName,
                            memberRolesAndStatus: memberRolesAndStatus,
-                           bornDT: bornDT )
+                           bornDT: bornDT,
+                           photoClub: photoClub)
 
         _ = MemberPortfolio.findCreateUpdate(
                             bgContext: bgContext, photoClub: photoClub, photographer: photographer,

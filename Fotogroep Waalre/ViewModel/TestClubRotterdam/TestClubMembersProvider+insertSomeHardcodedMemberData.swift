@@ -84,7 +84,8 @@ extension TestClubRotterdamMembersProvider { // fill with some initial hard-code
                             bgContext: bgContext,
                             givenName: givenName, familyName: familyName, // TODO - check MOC
                             memberRolesAndStatus: memberRolesAndStatus,
-                            bornDT: bornDT )
+                            bornDT: bornDT,
+                            photoClub: photoClub)
 
         _ = MemberPortfolio.findCreateUpdate(
                             bgContext: bgContext, photoClub: photoClub, photographer: photographer,
