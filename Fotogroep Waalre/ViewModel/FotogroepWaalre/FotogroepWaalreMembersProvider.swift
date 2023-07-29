@@ -1,5 +1,5 @@
 //
-//  FGWMembersProvider.swift
+//  FotogroepWaalreMembersProvider.swift
 //  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 17/07/2021.
@@ -8,7 +8,7 @@
 import CoreData // for NSManagedObjectContext
 import RegexBuilder
 
-class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
+class FotogroepWaalreMembersProvider { // WWDC21 Earthquakes also uses a Class here
 
     static let photoClubWaalreIdPlus = PhotoClubIdPlus(fullName: "Fotogroep Waalre",
                                                        town: "Waalre",
@@ -177,7 +177,7 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
     }
 }
 
-extension FGWMembersProvider { // private utitity functions
+extension FotogroepWaalreMembersProvider { // private utitity functions
 
     private func isStillAlive(phone: String?) -> Bool {
         return phone != "[overleden]"

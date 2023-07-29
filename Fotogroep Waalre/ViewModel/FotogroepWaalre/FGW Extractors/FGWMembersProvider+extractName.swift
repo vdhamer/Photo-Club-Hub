@@ -8,7 +8,7 @@
 import Foundation // for PersonNameComponents
 import RegexBuilder
 
-extension FGWMembersProvider {
+extension FotogroepWaalreMembersProvider {
 
     struct PersonName {
         let fullName: String

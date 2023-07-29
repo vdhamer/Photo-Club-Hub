@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension FGWMembersProvider { // private utitity functions
+extension FotogroepWaalreMembersProvider { // private utitity functions
 
     ///////////////////////////////////////////////////////////////////////////////////////////
     // MARK: - Load members/ex-members/mentors from password-protected website page

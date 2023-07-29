@@ -8,7 +8,7 @@
 import CoreData // for NSManagedObjectContext
 import MapKit // for CLLocationCoordinate2D
 
-extension FGWMembersProvider { // fill with some initial hard-coded content
+extension FotogroepWaalreMembersProvider { // fill with some initial hard-coded content
 
     func insertSomeHardcodedMemberData(bgContext: NSManagedObjectContext) {
         bgContext.perform { // done asynchronously by CoreData (.perform also works)
@@ -26,13 +26,14 @@ extension FGWMembersProvider { // fill with some initial hard-coded content
 
     private func insertSomeHardcodedMemberDataCommon(bgContext: NSManagedObjectContext) {
 
-        let clubWaalre = PhotoClub.findCreateUpdate( bgContext: bgContext,
-                                                     photoClubIdPlus: FGWMembersProvider.photoClubWaalreIdPlus,
-                                                     photoClubWebsite: URL(string: "https://www.fotogroepwaalre.nl"),
-                                                     fotobondNumber: 1634, kvkNumber: 17261693,
-                                                     coordinates: CLLocationCoordinate2D(latitude: 51.39184,
-                                                                                         longitude: 5.46144),
-                                                     priority: 1)
+        let clubWaalre = PhotoClub.findCreateUpdate(
+                                        bgContext: bgContext,
+                                        photoClubIdPlus: FotogroepWaalreMembersProvider.photoClubWaalreIdPlus,
+                                        photoClubWebsite: URL(string: "https://www.fotogroepwaalre.nl"),
+                                        fotobondNumber: 1634, kvkNumber: 17261693,
+                                        coordinates: CLLocationCoordinate2D(latitude: 51.39184,
+                                                                            longitude: 5.46144),
+                                        priority: 1)
         clubWaalre.hasHardCodedMemberData = true // store in database that we ran insertSomeHardcodedMembers...
 
         addMember(bgContext: bgContext, givenName: "Bart", familyName: "van Stekelenburg", photoClub: clubWaalre,
