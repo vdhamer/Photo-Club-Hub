@@ -31,12 +31,11 @@ class FotogroepWaalreMembersProvider { // WWDC21 Earthquakes also uses a Class h
             if let privateURL = URL(string: urlString) {
                 clubWaalre.memberListURL = privateURL
                 try? bgContext.save()
-//                Task {
-                /*await*/ self.loadPrivateMembersFromWebsite( backgroundContext: bgContext,
+
+                self.loadPrivateMembersFromWebsite( backgroundContext: bgContext,
                                                               privateMemberURL: privateURL,
                                                               photoClubIdPlus: FotogroepWaalreMembersProvider
                                                                                                .photoClubWaalreIdPlus)
-//                }
             } else {
                 ifDebugFatalError("Could not convert \(urlString) to a URL.",
                                   file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
@@ -100,7 +99,10 @@ class FotogroepWaalreMembersProvider { // WWDC21 Earthquakes also uses a Class h
             do {
                 if backgroundContext.hasChanges {
                     try backgroundContext.save()
-                    ifDebugPrint("Fotogroep Waalre: completed loadPrivateMembersFromWebsite() in background")
+                    ifDebugPrint("""
+                                 \(photoClubIdPlus.fullNameTown): \
+                                 completed loadPrivateMembersFromWebsite() in background")
+                                 """)
                 }
              } catch {
                 print("Fotogroep Waalre: ERROR - could not save backgroundContext to Core Data " +

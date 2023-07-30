@@ -200,8 +200,10 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
                       dateInterval: dateInterval,
                       memberWebsite: memberWebsite,
                       latestImage: latestImage) {
-                print("Updated info for member \(memberPortfolio.photographer.fullName) " +
-                      "in club \(memberPortfolio.photoClub.fullName)")
+                print("""
+                      \(memberPortfolio.photoClub.fullName): \
+                      Updated info for member \(memberPortfolio.photographer.fullName)
+                      """)
             }
  			return memberPortfolio
 		} else {
@@ -329,23 +331,23 @@ extension MemberPortfolio { // convenience function
 extension MemberPortfolio {
 
     func refreshFirstImage() async {
-        let photoClub: String = self.photoClub.fullName
-        guard photoClub == "Fotogroep Waalre" else { return } // code needs closure per photo club (see issue)
+        let photoClubTown: String = self.photoClub.fullNameTown
+        guard photoClubTown == "Fotogroep Waalre (Waalre)" else { return } // code needs closure per photo club
 
         if let urlIndex = URL(string: self.memberWebsite.absoluteString + "config.xml") { // assume JuiceBox Pro
-            ifDebugPrint("\(photoClub): starting refreshFirstImage() \(urlIndex.absoluteString) in background")
+            ifDebugPrint("\(photoClubTown): starting refreshFirstImage() \(urlIndex.absoluteString) in background")
 
             var results: (utfContent: Data?, urlResponse: URLResponse?)? = (nil, nil)
             results = try? await URLSession.shared.data(from: urlIndex)
             guard results != nil && results!.utfContent != nil else {
-                print("\(photoClub): ERROR - loading refreshFirstImage() \(urlIndex.absoluteString) failed")
+                print("\(photoClubTown): ERROR - loading refreshFirstImage() \(urlIndex.absoluteString) failed")
                 return
             }
 
             let xmlContent = String(data: results!.utfContent! as Data,
                                     encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue))!
             parseXMLContent(xmlContent: xmlContent, member: self)
-            ifDebugPrint("\(photoClub): completed refreshFirstImage() \(urlIndex.absoluteString)")
+            ifDebugPrint("\(photoClubTown): completed refreshFirstImage() \(urlIndex.absoluteString)")
         }
     }
 
