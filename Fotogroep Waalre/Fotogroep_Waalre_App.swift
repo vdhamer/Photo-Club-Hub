@@ -40,11 +40,6 @@ struct FotogroepWaalreApp: App {
 //                    biBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
 //                    _ = BellusImagoMembersProvider(bgContext: biBackgroundContext)
 
-                    let trBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-                    trBackgroundContext.name = "Rotterdam"
-                    trBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-                    _ = TestClubRotterdamMembersProvider(bgContext: trBackgroundContext)
-
                     // load all current/former members of Fotogroep Waalre
                     let fgwBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
                     fgwBackgroundContext.name = "Fotogroep Waalre"
@@ -63,10 +58,10 @@ struct FotogroepWaalreApp: App {
                     tdBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
                     _ = TestClubDenHaagMembersProvider(bgContext: tdBackgroundContext)
 
-//                    let trBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-//                    trBackgroundContext.name = "Rotterdam"
-//                    trBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-//                    _ = TestClubRotterdamMembersProvider(bgContext: trBackgroundContext)
+                    let trBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+                    trBackgroundContext.name = "Rotterdam"
+                    trBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+                    _ = TestClubRotterdamMembersProvider(bgContext: trBackgroundContext)
 
                     // More groups can be added here like BIMembersProvider()
                     // They can so be loaded manually using pull-to-refresh on the Photo Clubs screen.
