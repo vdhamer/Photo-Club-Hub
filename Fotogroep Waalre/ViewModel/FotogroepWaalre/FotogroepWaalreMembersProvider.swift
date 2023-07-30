@@ -17,32 +17,32 @@ class FotogroepWaalreMembersProvider { // WWDC21 Earthquakes also uses a Class h
     init(bgContext: NSManagedObjectContext) {
         // following is asynchronous, but not documented as such using async/await
         bgContext.perform { // done asynchronously by CoreData
-//            self.insertSomeHardcodedMemberData(bgContext: bgContext) TODO
+            self.insertSomeHardcodedMemberData(bgContext: bgContext)
 
-            // can't rely on async (!) insertSomeHardcodedMemberData() to return managed photoClub object in time
-            let clubWaalre = PhotoClub.findCreateUpdate(
-                bgContext: bgContext, // parameters just don't fit on a 120 char line
-                photoClubIdPlus: FotogroepWaalreMembersProvider.photoClubWaalreIdPlus
-            )
-
-            let urlString = self.getFileAsString(nameEncryptedFile: "FGWPrivateMembersURL2.txt",
-                                                 nameUnencryptedFile: "FGWPrivateMembersURL3.txt",
-                                                 allowUseEncryptedFile: true) // set to false only for testing purposes
-            if let privateURL = URL(string: urlString) {
-                clubWaalre.memberListURL = privateURL
-                try? bgContext.save()
-                Task {
-                    await self.loadPrivateMembersFromWebsite( backgroundContext: bgContext,
-                                                              privateMemberURL: privateURL,
-                                                              photoClubIdPlus: FotogroepWaalreMembersProvider
-                                                                                                .photoClubWaalreIdPlus)
-                }
-            } else {
-                ifDebugFatalError("Could not convert \(urlString) to a URL.",
-                                  file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
-                // In release mode, an incorrect URL causes the file loading to skip.
-                // In release mode this is logged, but the app doesn't stop.
-            }
+//            // can't rely on async (!) insertSomeHardcodedMemberData() to return managed photoClub object in time
+//            let clubWaalre = PhotoClub.findCreateUpdate(
+//                bgContext: bgContext, // parameters just don't fit on a 120 char line
+//                photoClubIdPlus: FotogroepWaalreMembersProvider.photoClubWaalreIdPlus
+//            )
+//
+//            let urlString = self.getFileAsString(nameEncryptedFile: "FGWPrivateMembersURL2.txt",
+//                                                 nameUnencryptedFile: "FGWPrivateMembersURL3.txt",
+//                                                 allowUseEncryptedFile: true) // set to false only for testing purposes
+//            if let privateURL = URL(string: urlString) {
+//                clubWaalre.memberListURL = privateURL
+//                try? bgContext.save()
+//                Task {
+//                    await self.loadPrivateMembersFromWebsite( backgroundContext: bgContext,
+//                                                              privateMemberURL: privateURL,
+//                                                              photoClubIdPlus: FotogroepWaalreMembersProvider
+//                                                                                                .photoClubWaalreIdPlus)
+//                }
+//            } else {
+//                ifDebugFatalError("Could not convert \(urlString) to a URL.",
+//                                  file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
+//                // In release mode, an incorrect URL causes the file loading to skip.
+//                // In release mode this is logged, but the app doesn't stop.
+//            }
         }
 
     }

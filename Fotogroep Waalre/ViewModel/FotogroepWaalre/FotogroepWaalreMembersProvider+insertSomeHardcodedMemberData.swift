@@ -33,7 +33,8 @@ extension FotogroepWaalreMembersProvider { // fill with some initial hard-coded 
                   memberRolesAndStatus: MemberRolesAndStatus(role: [ .chairman: true ]))
 
         addMember(bgContext: bgContext, givenName: "Bettina", familyName: "de Graaf", photoClub: clubWaalre,
-                  memberRolesAndStatus: MemberRolesAndStatus(role: [ .viceChairman: false ]))
+                  memberRolesAndStatus: MemberRolesAndStatus(role: [ .viceChairman: false ],
+                                                             stat: [.former: true]))
 
         addMember(bgContext: bgContext, givenName: "Erik", familyName: "van Geest", photoClub: clubWaalre,
                   memberRolesAndStatus: MemberRolesAndStatus(role: [ .admin: true ]))
@@ -51,7 +52,8 @@ extension FotogroepWaalreMembersProvider { // fill with some initial hard-coded 
                   memberRolesAndStatus: MemberRolesAndStatus(role: [:], stat: [ .honorary: true ]))
 
         addMember(bgContext: bgContext, givenName: "Peter", familyName: "van den Hamer", photoClub: clubWaalre,
-                  memberRolesAndStatus: MemberRolesAndStatus(role: [ .admin: false, .secretary: false ]))
+                  memberRolesAndStatus: MemberRolesAndStatus(role: [ .admin: false, .secretary: false ],
+                                                             stat: [.former: true]))
 
         addMember(bgContext: bgContext, givenName: "Kees", familyName: "van Gemert", photoClub: clubWaalre,
                   memberRolesAndStatus: MemberRolesAndStatus(role: [ .secretary: true ]))
