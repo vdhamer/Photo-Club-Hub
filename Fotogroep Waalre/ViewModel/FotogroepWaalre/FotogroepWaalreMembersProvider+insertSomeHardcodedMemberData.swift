@@ -11,20 +11,10 @@ import MapKit // for CLLocationCoordinate2D
 extension FotogroepWaalreMembersProvider { // fill with some initial hard-coded content
 
     func insertSomeHardcodedMemberData(bgContext: NSManagedObjectContext) {
-        bgContext.perform { // done asynchronously by CoreData
-            ifDebugPrint("""
-                         \(Self.photoClubWaalreIdPlus.fullNameTown): \
-                         Starting insertSomeHardcodedMemberData() in background
-                         """)
-            self.insertSomeHardcodedMemberDataCommon(bgContext: bgContext)
-            ifDebugPrint("""
-                         \(Self.photoClubWaalreIdPlus.fullNameTown): \
-                         Completed insertSomeHardcodedMemberData() in background
-                         """)
-        }
-    }
-
-    private func insertSomeHardcodedMemberDataCommon(bgContext: NSManagedObjectContext) {
+        ifDebugPrint("""
+                     \(Self.photoClubWaalreIdPlus.fullNameTown): \
+                     Starting insertSomeHardcodedMemberData() in background
+                     """)
 
         let clubWaalre = PhotoClub.findCreateUpdate(
                                         bgContext: bgContext,
@@ -67,9 +57,13 @@ extension FotogroepWaalreMembersProvider { // fill with some initial hard-coded 
                   memberRolesAndStatus: MemberRolesAndStatus(role: [ .secretary: true ]))
 
         do {
-            if bgContext.hasChanges {
+//            if bgContext.hasChanges {
                 try bgContext.save() // commit all changes
-            }
+//            }
+            ifDebugPrint("""
+                         \(Self.photoClubWaalreIdPlus.fullNameTown): \
+                         Completed insertSomeHardcodedMemberData() in background
+                         """)
         } catch {
             ifDebugFatalError("Fotogroep Waalre: ERROR - failed to save changes to Core Data",
                               file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0

@@ -16,30 +16,34 @@ class FotogroepWaalreMembersProvider { // WWDC21 Earthquakes also uses a Class h
 
     init(bgContext: NSManagedObjectContext) {
         // following is asynchronous, but not documented as such using async/await
-        insertSomeHardcodedMemberData(bgContext: bgContext)
+        bgContext.perform { // done asynchronously by CoreData
+//            self.insertSomeHardcodedMemberData(bgContext: bgContext) TODO
 
-        // can't rely on async (!) insertSomeHardcodedMemberData() to return managed photoClub object in time
-//        let clubWaalre = PhotoClub.findCreateUpdate( bgContext: bgContext,
-//                                                     photoClubIdPlus: FGWMembersProvider.photoClubWaalreIdPlus )
-//
-//        let urlString = getFileAsString(nameEncryptedFile: "FGWPrivateMembersURL2.txt",
-//                                        nameUnencryptedFile: "FGWPrivateMembersURL3.txt",
-//                                        allowUseEncryptedFile: true) // set to false only for testing purposes
-//        if let privateURL = URL(string: urlString) {
-//            clubWaalre.memberListURL = privateURL
-//            Task {
-//                await loadPrivateMembersFromWebsite( backgroundContext: bgContext,
-//                                                     privateMemberURL: privateURL,
-//                                                     photoClubIdPlus: FGWMembersProvider.photoClubWaalreIdPlus,
-//                                                     commit: true
-//                )
-//            }
-//        } else {
-//            ifDebugFatalError("Could not convert \(urlString) to a URL.",
-//                              file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
-//            // In release mode, an incorrect URL causes the file loading to skip.
-//            // In release mode this is logged, but the app doesn't stop.
-//        } // TODO - uncomment
+            // can't rely on async (!) insertSomeHardcodedMemberData() to return managed photoClub object in time
+            let clubWaalre = PhotoClub.findCreateUpdate(
+                bgContext: bgContext, // parameters just don't fit on a 120 char line
+                photoClubIdPlus: FotogroepWaalreMembersProvider.photoClubWaalreIdPlus
+            )
+
+            let urlString = self.getFileAsString(nameEncryptedFile: "FGWPrivateMembersURL2.txt",
+                                                 nameUnencryptedFile: "FGWPrivateMembersURL3.txt",
+                                                 allowUseEncryptedFile: true) // set to false only for testing purposes
+            if let privateURL = URL(string: urlString) {
+                clubWaalre.memberListURL = privateURL
+                try? bgContext.save()
+                Task {
+                    await self.loadPrivateMembersFromWebsite( backgroundContext: bgContext,
+                                                              privateMemberURL: privateURL,
+                                                              photoClubIdPlus: FotogroepWaalreMembersProvider
+                                                                                                .photoClubWaalreIdPlus)
+                }
+            } else {
+                ifDebugFatalError("Could not convert \(urlString) to a URL.",
+                                  file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
+                // In release mode, an incorrect URL causes the file loading to skip.
+                // In release mode this is logged, but the app doesn't stop.
+            }
+        }
 
     }
 
@@ -79,28 +83,31 @@ class FotogroepWaalreMembersProvider { // WWDC21 Earthquakes also uses a Class h
 
     func loadPrivateMembersFromWebsite( backgroundContext: NSManagedObjectContext,
                                         privateMemberURL: URL,
-                                        photoClubIdPlus: PhotoClubIdPlus,
-                                        commit: Bool ) async {
+                                        photoClubIdPlus: PhotoClubIdPlus ) async {
 
         ifDebugPrint("\(photoClubIdPlus.fullNameCommaTown): starting loadPrivateMembersFromWebsite() in background")
         var results: (utfContent: Data?, urlResponse: URLResponse?)? = (nil, nil)
-        results = try? await URLSession.shared.data(from: privateMemberURL)
+        do {
+            results = try await URLSession.shared.data(from: privateMemberURL)
+        } catch {
+            ifDebugFatalError("Could not fetch data in URLSession \(privateMemberURL.lastPathComponent)")
+            return
+        }
+
         if results != nil, results?.utfContent != nil {
             let htmlContent = String(data: results!.utfContent! as Data,
                                      encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue))!
             parseHTMLContent(backgroundContext: backgroundContext,
                              htmlContent: htmlContent,
                              photoClubIdPlus: photoClubIdPlus)
-            if commit {
-                do {
-                    if backgroundContext.hasChanges {
-                        try backgroundContext.save()
-                        ifDebugPrint("Fotogroep Waalre: completed loadPrivateMembersFromWebsite() in background")
-                    }
-                 } catch {
-                    print("Fotogroep Waalre: ERROR - could not save backgroundContext to Core Data " +
-                          "in loadPrivateMembersFromWebsite()")
+            do {
+                if backgroundContext.hasChanges {
+                    try backgroundContext.save()
+                    ifDebugPrint("Fotogroep Waalre: completed loadPrivateMembersFromWebsite() in background")
                 }
+             } catch {
+                print("Fotogroep Waalre: ERROR - could not save backgroundContext to Core Data " +
+                      "in loadPrivateMembersFromWebsite()")
             }
         } else { // careful - we are likely running on a background thread (but print() is ok)
                 print("Fotogroep Waalre: ERROR - loading from \(privateMemberURL) " +
