@@ -19,30 +19,30 @@ class FotogroepWaalreMembersProvider { // WWDC21 Earthquakes also uses a Class h
         bgContext.perform { // done asynchronously by CoreData
             self.insertSomeHardcodedMemberData(bgContext: bgContext)
 
-//            // can't rely on async (!) insertSomeHardcodedMemberData() to return managed photoClub object in time
-//            let clubWaalre = PhotoClub.findCreateUpdate(
-//                bgContext: bgContext, // parameters just don't fit on a 120 char line
-//                photoClubIdPlus: FotogroepWaalreMembersProvider.photoClubWaalreIdPlus
-//            )
-//
-//            let urlString = self.getFileAsString(nameEncryptedFile: "FGWPrivateMembersURL2.txt",
-//                                                 nameUnencryptedFile: "FGWPrivateMembersURL3.txt",
-//                                                 allowUseEncryptedFile: true) // set to false only for testing purposes
-//            if let privateURL = URL(string: urlString) {
-//                clubWaalre.memberListURL = privateURL
-//                try? bgContext.save()
+            // can't rely on async (!) insertSomeHardcodedMemberData() to return managed photoClub object in time
+            let clubWaalre = PhotoClub.findCreateUpdate(
+                bgContext: bgContext, // parameters just don't fit on a 120 char line
+                photoClubIdPlus: FotogroepWaalreMembersProvider.photoClubWaalreIdPlus
+            )
+
+            let urlString = self.getFileAsString(nameEncryptedFile: "FGWPrivateMembersURL2.txt",
+                                                 nameUnencryptedFile: "FGWPrivateMembersURL3.txt",
+                                                 allowUseEncryptedFile: true) // set to false only for testing purposes
+            if let privateURL = URL(string: urlString) {
+                clubWaalre.memberListURL = privateURL
+                try? bgContext.save()
 //                Task {
-//                    await self.loadPrivateMembersFromWebsite( backgroundContext: bgContext,
-//                                                              privateMemberURL: privateURL,
-//                                                              photoClubIdPlus: FotogroepWaalreMembersProvider
-//                                                                                                .photoClubWaalreIdPlus)
+                /*await*/ self.loadPrivateMembersFromWebsite( backgroundContext: bgContext,
+                                                              privateMemberURL: privateURL,
+                                                              photoClubIdPlus: FotogroepWaalreMembersProvider
+                                                                                               .photoClubWaalreIdPlus)
 //                }
-//            } else {
-//                ifDebugFatalError("Could not convert \(urlString) to a URL.",
-//                                  file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
-//                // In release mode, an incorrect URL causes the file loading to skip.
-//                // In release mode this is logged, but the app doesn't stop.
-//            }
+            } else {
+                ifDebugFatalError("Could not convert \(urlString) to a URL.",
+                                  file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
+                // In release mode, an incorrect URL causes the file loading to skip.
+                // In release mode this is logged, but the app doesn't stop.
+            }
         }
 
     }
@@ -83,16 +83,13 @@ class FotogroepWaalreMembersProvider { // WWDC21 Earthquakes also uses a Class h
 
     func loadPrivateMembersFromWebsite( backgroundContext: NSManagedObjectContext,
                                         privateMemberURL: URL,
-                                        photoClubIdPlus: PhotoClubIdPlus ) async {
+                                        photoClubIdPlus: PhotoClubIdPlus ) {
 
         ifDebugPrint("\(photoClubIdPlus.fullNameCommaTown): starting loadPrivateMembersFromWebsite() in background")
-        var results: (utfContent: Data?, urlResponse: URLResponse?)? = (nil, nil)
-        do {
-            results = try await URLSession.shared.data(from: privateMemberURL)
-        } catch {
-            ifDebugFatalError("Could not fetch data in URLSession \(privateMemberURL.lastPathComponent)")
-            return
-        }
+
+        // swiftlint:disable:next large_tuple
+        var results: (utfContent: Data?, urlResponse: URLResponse?, error: (any Error)?)? = (nil, nil, nil)
+        results = URLSession.shared.synchronousDataTask(from: privateMemberURL)
 
         if results != nil, results?.utfContent != nil {
             let htmlContent = String(data: results!.utfContent! as Data,

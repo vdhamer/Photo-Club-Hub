@@ -59,7 +59,7 @@ extension FotogroepWaalreMembersProvider { // fill with some initial hard-coded 
                   memberRolesAndStatus: MemberRolesAndStatus(role: [ .secretary: true ]))
 
         do {
-//            if bgContext.hasChanges {
+//            if bgContext.hasChanges { // optimization
                 try bgContext.save() // commit all changes
 //            }
             ifDebugPrint("""
