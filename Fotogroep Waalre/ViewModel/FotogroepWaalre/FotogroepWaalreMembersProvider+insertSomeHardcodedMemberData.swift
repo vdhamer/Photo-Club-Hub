@@ -10,7 +10,7 @@ import MapKit // for CLLocationCoordinate2D
 
 extension FotogroepWaalreMembersProvider { // fill with some initial hard-coded content
 
-    func insertSomeHardcodedMemberData(bgContext: NSManagedObjectContext) {
+    func insertSomeHardcodedMemberData(bgContext: NSManagedObjectContext) { // runs on a background thread
         ifDebugPrint("""
                      \(Self.photoClubWaalreIdPlus.fullNameTown): \
                      Starting insertSomeHardcodedMemberData() in background

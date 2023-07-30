@@ -207,12 +207,12 @@ struct FilteredMemberPortfoliosView: View {
         }
 
         // loosely related task: asynchronously update the thumbnail of any shown photographer
-        for portfolio in filteredPortfolios {
-            Task {
-                FotogroepWaalreApp.antiZombiePinningOfMemberPortfolios.insert(portfolio)
-                await portfolio.refreshFirstImage() // is await really needed? TODO do we need this for-loop??
-            }
-        }
+//        for portfolio in filteredPortfolios {
+//            Task {
+//                FotogroepWaalreApp.antiZombiePinningOfMemberPortfolios.insert(portfolio)
+//                await portfolio.refreshFirstImage() // is await really needed? TODO
+//            }
+//        }
         return filteredPortfolios
     }
 
