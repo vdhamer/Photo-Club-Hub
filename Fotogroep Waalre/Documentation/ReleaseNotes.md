@@ -9,9 +9,12 @@ Roadmap screen
     * Re-enabled the Roadmap Screen (with some related changes)
 Readme screen
     * Changed app icon as shown in readme and on iOS home screen
+Concurrency
+    * Used com.apple.CoreData.concurrencyDebug = 1 to find concurrence errors around Core Data
+    * All photoclub data is fetched on a background thread
+    * Fetching info about thumbnails moved from foreground to background thread
 Maintenance
     * Upgraded and tested with iOS 17.0 beta 4 (21A5291g), XCode 14.0 beta 5, Swift 5.9 and SwiftLint 0.52.3
-    * Turned on CoreData debugging for Run schema (https://useyourloaf.com/blog/debugging-core-data/)
     * Removed fatalError() wherever possible from shipping code
     * Changed GPS coordinates of Test Photo Club Rotterdam (the museum plans to move)
     * Cleanup of model (schema) versions
