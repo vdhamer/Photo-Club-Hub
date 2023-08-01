@@ -328,15 +328,16 @@ extension MemberPortfolio { // convenience function
 
 extension MemberPortfolio {
 
-    func refreshFirstImage() async {
+    func refreshFirstImage() {
         let photoClubTown: String = self.photoClub.fullNameTown
         guard photoClubTown == "Fotogroep Waalre (Waalre)" else { return } // code needs closure per photo club
 
         if let urlIndex = URL(string: self.memberWebsite.absoluteString + "config.xml") { // assume JuiceBox Pro
             ifDebugPrint("\(photoClubTown): starting refreshFirstImage() \(urlIndex.absoluteString) in background")
 
-            var results: (utfContent: Data?, urlResponse: URLResponse?)? = (nil, nil)
-            results = try? await URLSession.shared.data(from: urlIndex)
+            // swiftlint:disable:next large_tuple
+            var results: (utfContent: Data?, urlResponse: URLResponse?, error: (any Error)?)? = (nil, nil, nil)
+            results = URLSession.shared.synchronousDataTask(from: urlIndex)
             guard results != nil && results!.utfContent != nil else {
                 print("\(photoClubTown): ERROR - loading refreshFirstImage() \(urlIndex.absoluteString) failed")
                 return

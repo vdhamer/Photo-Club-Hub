@@ -93,11 +93,32 @@ extension FotogroepWaalreMembersProvider {
                                  completed loadPrivateMembersFromWebsite() in background")
                                  """)
                 }
-             } catch {
+            } catch {
                 print("Fotogroep Waalre: ERROR - could not save backgroundContext to Core Data " +
                       "in loadPrivateMembersFromWebsite()")
             }
-        } else { // careful - we are likely running on a background thread (but print() is ok)
+
+            // https://www.advancedswift.com/core-data-background-fetch-save-create/
+            do {
+                let fetchRequest: NSFetchRequest<MemberPortfolio>
+                fetchRequest = MemberPortfolio.fetchRequest()
+                fetchRequest.predicate = NSPredicate(format: """
+                                                             photoClub_.name_ = %@ && \
+                                                             photoClub_.town_ = %@
+                                                             """,
+                             argumentArray: ["Fotogroep Waalre", "Waalre", "Jan"])
+                let portfoliosInClub = try backgroundContext.fetch(fetchRequest)
+
+                for portfolio in portfoliosInClub {
+                    // FotogroepWaalreApp.antiZombiePinningOfMemberPortfolios.insert(portfolio)
+                    portfolio.refreshFirstImage()
+                }
+                try backgroundContext.save()
+            } catch let error {
+                fatalError(error.localizedDescription)
+            }
+
+        } else { // careful - we are running on a background thread (but print() is ok)
                 print("Fotogroep Waalre: ERROR - loading from \(privateMemberURL) " +
                       "in loadPrivateMembersFromWebsite() failed")
         }
