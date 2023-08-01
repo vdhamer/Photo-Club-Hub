@@ -7,7 +7,7 @@
 
 import RegexBuilder
 
-extension FGWMembersProvider {
+extension FotogroepWaalreMembersProvider {
 
     func extractPhone(taggedString: String) -> String? {
         let regex = Regex {

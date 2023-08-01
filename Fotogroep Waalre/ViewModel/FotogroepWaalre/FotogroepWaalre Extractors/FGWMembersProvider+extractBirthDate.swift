@@ -8,7 +8,7 @@
 import Foundation // for Date
 import RegexBuilder
 
-extension FGWMembersProvider {
+extension FotogroepWaalreMembersProvider {
 
     func extractBirthDate(taggedString: String) -> Date? {
         // <td>2001-12-31</td> is Dec 31st 2001

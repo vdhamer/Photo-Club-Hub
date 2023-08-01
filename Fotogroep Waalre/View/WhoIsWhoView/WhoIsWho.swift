@@ -35,8 +35,9 @@ struct WhoIsWho: View {
                     .foregroundColor(.gray)
             }
             .refreshable { // for pull-to-refresh
-                _ = FGWMembersProvider()
-            }
+//                _ = FGWMembersProvider(bgContext: PersistenceController.shared.container.newBackgroundContext())
+            } // TODO: check MOC context: receiving fgContext here?!?
+            // TODO: uncomment
         }
         .keyboardType(.namePhonePad)
         .autocapitalization(.none)

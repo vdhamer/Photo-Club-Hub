@@ -67,7 +67,7 @@ extension MemberPortfolio { // computed properties (some related to handling opt
 	}
 
     public var id: String {
-        return photographer.fullName + " in " + photoClub.fullNameCommaTown
+        return photographer.fullName + " in " + photoClub.fullNameTown
     }
 
     var memberWebsite: URL {
@@ -180,7 +180,7 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
 
 	// Find existing object or create a new object
 	// Update existing attributes or fill the new object
-    static func findCreateUpdate(context: NSManagedObjectContext,
+    static func findCreateUpdate(bgContext: NSManagedObjectContext,
                                  // identifying attributes of a Member
                                  photoClub: PhotoClub, photographer: Photographer,
                                  // other attributes of a Member
@@ -192,43 +192,46 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
         let predicateFormat: String = "photoClub_ = %@ AND photographer_ = %@" // avoid localization
         let request = fetchRequest(predicate: NSPredicate(format: predicateFormat, photoClub, photographer))
 
-		let memberPortfolios: [MemberPortfolio] = (try? context.fetch(request)) ?? [] // nil means absolute failure
+		let memberPortfolios: [MemberPortfolio] = (try? bgContext.fetch(request)) ?? [] // nil means absolute failure
 
 		if let memberPortfolio = memberPortfolios.first { // already exists, so make sure secondary attributes are up to date
-            if update(context: context, memberPortfolio: memberPortfolio,
+            if update(bgContext: bgContext, memberPortfolio: memberPortfolio,
                       memberRolesAndStatus: memberRolesAndStatus,
                       dateInterval: dateInterval,
                       memberWebsite: memberWebsite,
                       latestImage: latestImage) {
-                print("Updated info for member \(memberPortfolio.photographer.fullName) " +
-                      "in club \(memberPortfolio.photoClub.fullName)")
+                print("""
+                      \(memberPortfolio.photoClub.fullName): \
+                      Updated info for member \(memberPortfolio.photographer.fullName)
+                      """)
             }
  			return memberPortfolio
 		} else {
-			let memberPortfolio = MemberPortfolio(context: context) // create new Member object
+            let entity = NSEntityDescription.entity(forEntityName: "MemberPortfolio", in: bgContext)!
+            let memberPortfolio = MemberPortfolio(entity: entity, insertInto: bgContext) // bg needs special .init()
 			memberPortfolio.photoClub_ = photoClub
 			memberPortfolio.photographer_ = photographer
-            _ = update(context: context, memberPortfolio: memberPortfolio,
+            _ = update(bgContext: bgContext, memberPortfolio: memberPortfolio,
                        memberRolesAndStatus: memberRolesAndStatus,
                        dateInterval: dateInterval,
                        memberWebsite: memberWebsite,
                        latestImage: latestImage)
-            print("Created new membership for \(memberPortfolio.photographer.fullName) " +
-                  "in \(memberPortfolio.photoClub.fullName) of \(memberPortfolio.photoClub.town)")
+            print("""
+                  \(memberPortfolio.photoClub.fullNameTown): \
+                  Created new membership for \(memberPortfolio.photographer.fullName)
+                  """)
 			return memberPortfolio
 		}
 	}
 
 	// Update non-identifying attributes/properties within existing instance of class MemberPortfolio
-    // swiftlint:disable:next function_parameter_count
-    private static func update(context: NSManagedObjectContext, memberPortfolio: MemberPortfolio,
+    // swiftlint:disable:next function_parameter_count function_body_length
+    private static func update(bgContext: NSManagedObjectContext, memberPortfolio: MemberPortfolio,
                                memberRolesAndStatus: MemberRolesAndStatus,
                                dateInterval: DateInterval?,
                                memberWebsite: URL?,
                                latestImage: URL?) -> Bool {
 		var needsSaving: Bool = false
-
-        context.mergePolicy = NSMergePolicy.mergeByPropertyStoreTrump // not sure about this, prevents error
 
         // function only works for non-optional Types.
         // If optional support needed, create variant with "inout Type?" instead of "inout Type"
@@ -270,17 +273,31 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
 
 		if needsSaving {
 			do {
-				try context.save()
-                if changed1 { print("Changed roles for \(memberPortfolio.photographer.fullName)") }
-                if changed2 { print("Changed start date for \(memberPortfolio.photographer.fullName)") }
-                if changed3 { print("Changed end date for \(memberPortfolio.photographer.fullName)") }
-                if changed4 { print("Changed club website for \(memberPortfolio.photographer.fullName)") }
-                if changed5 { print("Changed latest image for \(memberPortfolio.photographer.fullName) " +
-                                    "to \(String(describing: latestImage?.absoluteString))")
-                }
+				try bgContext.save()
+                if changed1 { print("""
+                                    \(memberPortfolio.photoClub.fullNameTown): \
+                                    Changed roles for \(memberPortfolio.photographer.fullName)
+                                    """) }
+                if changed2 { print("""
+                                    \(memberPortfolio.photoClub.fullNameTown): \
+                                    Changed start date for \(memberPortfolio.photographer.fullName)
+                                    """) }
+                if changed3 { print("""
+                                    \(memberPortfolio.photoClub.fullNameTown): \
+                                    Changed end date for \(memberPortfolio.photographer.fullName)
+                                    """) }
+                if changed4 { print("""
+                                    \(memberPortfolio.photoClub.fullNameTown): \
+                                    Changed club website for \(memberPortfolio.photographer.fullName)
+                                    """) }
+                if changed5 { print("""
+                                    \(memberPortfolio.photoClub.fullNameTown): \
+                                    Changed latest image for \(memberPortfolio.photographer.fullName) \
+                                    to \(latestImage?.lastPathComponent ?? "<noLatestImage>")
+                                    """)}
 			} catch {
                 ifDebugFatalError("Update failed for member \(memberPortfolio.photographer.fullName) " +
-                                  "in club \(memberPortfolio.photoClub.fullName): \(error)",
+                                  "in club \(memberPortfolio.photoClub.fullNameTown): \(error)",
                                   file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
                 // in release mode, failure to update this data is only logged. And the app doesn't stop.
 			}
@@ -311,24 +328,25 @@ extension MemberPortfolio { // convenience function
 
 extension MemberPortfolio {
 
-    func refreshFirstImage() async {
-        let photoClub: String = self.photoClub.fullName
-        guard photoClub == "Fotogroep Waalre" else { return } // code needs closure per photo club (see issue)
+    func refreshFirstImage() {
+        let photoClubTown: String = self.photoClub.fullNameTown
+        guard photoClubTown == "Fotogroep Waalre (Waalre)" else { return } // code needs closure per photo club
 
         if let urlIndex = URL(string: self.memberWebsite.absoluteString + "config.xml") { // assume JuiceBox Pro
-            ifDebugPrint("\(photoClub): starting refreshFirstImage() \(urlIndex.absoluteString) in background")
+            ifDebugPrint("\(photoClubTown): starting refreshFirstImage() \(urlIndex.absoluteString) in background")
 
-            var results: (utfContent: Data?, urlResponse: URLResponse?)? = (nil, nil)
-            results = try? await URLSession.shared.data(from: urlIndex)
+            // swiftlint:disable:next large_tuple
+            var results: (utfContent: Data?, urlResponse: URLResponse?, error: (any Error)?)? = (nil, nil, nil)
+            results = URLSession.shared.synchronousDataTask(from: urlIndex)
             guard results != nil && results!.utfContent != nil else {
-                print("\(photoClub): ERROR - loading refreshFirstImage() \(urlIndex.absoluteString) failed")
+                print("\(photoClubTown): ERROR - loading refreshFirstImage() \(urlIndex.absoluteString) failed")
                 return
             }
 
             let xmlContent = String(data: results!.utfContent! as Data,
                                     encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue))!
             parseXMLContent(xmlContent: xmlContent, member: self)
-            ifDebugPrint("\(photoClub): completed refreshFirstImage() \(urlIndex.absoluteString)")
+            ifDebugPrint("\(photoClubTown): completed refreshFirstImage() \(urlIndex.absoluteString)")
         }
     }
 

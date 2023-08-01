@@ -17,7 +17,7 @@ struct FotogroepWaalreApp: App {
         // Core Data settings
         let persistenceController = PersistenceController.shared // for Core Data
         let viewContext = persistenceController.container.viewContext // "associated with the main application queue"
-        viewContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
+        viewContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         viewContext.undoManager = nil // nil by default on iOS
         viewContext.shouldDeleteInaccessibleFaults = true
 
@@ -25,18 +25,38 @@ struct FotogroepWaalreApp: App {
         UserDefaults.standard.set(Bundle.main.fullVersion, forKey: "version_preference")
     }
 
-    static var antiZombiePinningOfMemberPortfolios: Set<MemberPortfolio> = [] // hack to avoid zombies, global scope
+//    static var antiZombiePinningOfMemberPortfolios: Set<MemberPortfolio> = [] // hack to avoid zombies, needed? TODO
 
     var body: some Scene {
         WindowGroup {
             PreludeView()
                 .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext) // main queue!
                 .onAppear {
-                    _ = FGWMembersProvider() // default: load members of Fotogroep Waalre
-                    _ = TestClubDenHaagMembersProvider() // default: and load 3 imaginary photo clubs for demo reasons
-                    _ = TestClubAmsterdamMembersProvider()
-                    _ = TestClubRotterdamMembersProvider()
-                    // other groups can be added here by calling, for example, BIMembersProvider()
+
+                    // load all current/former members of Fotogroep Waalre
+                    let fgwBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+                    fgwBackgroundContext.name = "Fotogroep Waalre"
+                    fgwBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+                    _ = FotogroepWaalreMembersProvider(bgContext: fgwBackgroundContext)
+
+                    // Load a few test members for 3 non-existent photo clubs.
+                    // But this also tests support for clubs with same name in different towns
+                    let taBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+                    taBackgroundContext.name = "Amsterdam"
+                    taBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+                    _ = TestClubAmsterdamMembersProvider(bgContext: taBackgroundContext)
+
+                    let tdBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+                    tdBackgroundContext.name = "Den Haag"
+                    tdBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+                    _ = TestClubDenHaagMembersProvider(bgContext: tdBackgroundContext)
+
+                    let trBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+                    trBackgroundContext.name = "Rotterdam"
+                    trBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+                    _ = TestClubRotterdamMembersProvider(bgContext: trBackgroundContext)
+
+                    // More groups can be added here like BIMembersProvider()
                     // They can so be loaded manually using pull-to-refresh on the Photo Clubs screen.
                 }
         }

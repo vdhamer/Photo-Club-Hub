@@ -7,7 +7,7 @@
 
 import RegexBuilder
 
-extension FGWMembersProvider {
+extension FotogroepWaalreMembersProvider {
 
     func extractEMail(taggedString: String) -> String {
         let regex: Regex = Regex {

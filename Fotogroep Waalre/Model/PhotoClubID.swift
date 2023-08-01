@@ -19,7 +19,7 @@ struct PhotoClubIdPlus { // PhotoClubID plus non-identifying nickname
         self.nickname = nickname
     }
 
-    init(id: PhotoClubId, // initionalizer exposes PhotoClubId level
+    init(id: PhotoClubId, // initializer exposes PhotoClubId level
          nickname: String) {
         self.id = id
         self.nickname = nickname
@@ -28,6 +28,8 @@ struct PhotoClubIdPlus { // PhotoClubID plus non-identifying nickname
     // convenience functions
     var fullName: String { id.fullName }
     var town: String { id.town }
+    var fullNameCommaTown: String { fullName + ", " + town}
+    var fullNameTown: String { "\(fullName) (\(town))" }
 }
 
 public struct PhotoClubId: Hashable { // hashable because PhotoClubId is used as dictionary key

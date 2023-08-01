@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21513" systemVersion="22D68" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22203.2" systemVersion="22G74" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="MemberPortfolio" representedClassName="MemberPortfolio" elementID="Member" syncable="YES" codeGenerationType="class">
         <attribute name="dateIntervalEnd_" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="dateIntervalStart_" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
@@ -15,8 +15,14 @@
         <attribute name="latestImageSeen" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="latestImageURL" optional="YES" attributeType="URI" elementID="latestImage_"/>
         <attribute name="memberWebsite_" optional="YES" attributeType="URI"/>
-        <relationship name="photoClub_" maxCount="1" deletionRule="Nullify" destinationEntity="PhotoClub" inverseName="members_" inverseEntity="PhotoClub"/>
-        <relationship name="photographer_" maxCount="1" deletionRule="Nullify" destinationEntity="Photographer" inverseName="memberships_" inverseEntity="Photographer"/>
+        <relationship name="photoClub_" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PhotoClub" inverseName="members_" inverseEntity="PhotoClub"/>
+        <relationship name="photographer_" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Photographer" inverseName="memberships_" inverseEntity="Photographer"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="photoClub_"/>
+                <constraint value="photographer_"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
     </entity>
     <entity name="PhotoClub" representedClassName="PhotoClub" syncable="YES" codeGenerationType="class">
         <attribute name="country_" attributeType="String" defaultValueString="Nederland"/>
@@ -34,6 +40,12 @@
         <attribute name="shortName_" optional="YES" attributeType="String"/>
         <attribute name="town_" attributeType="String" defaultValueString="DefaultTown"/>
         <relationship name="members_" toMany="YES" deletionRule="Cascade" destinationEntity="MemberPortfolio" inverseName="photoClub_" inverseEntity="MemberPortfolio"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="name_"/>
+                <constraint value="town_"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
     </entity>
     <entity name="Photographer" representedClassName="Photographer" syncable="YES" codeGenerationType="class">
         <attribute name="bornDT" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
@@ -44,5 +56,11 @@
         <attribute name="phoneNumber_" optional="YES" attributeType="String"/>
         <attribute name="photographerWebsite" optional="YES" attributeType="URI"/>
         <relationship name="memberships_" toMany="YES" deletionRule="Cascade" destinationEntity="MemberPortfolio" inverseName="photographer_" inverseEntity="MemberPortfolio"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="familyName_"/>
+                <constraint value="givenName_"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
     </entity>
 </model>

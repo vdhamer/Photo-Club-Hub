@@ -37,7 +37,7 @@ struct MemberPortfolioRow: View {
                         ))
                     Group {
                         if showPhotoClub {
-                            Text(verbatim: "\(member.roleDescription) \(of2) \(member.photoClub.fullNameCommaTown)")
+                            Text(verbatim: "\(member.roleDescription) \(of2) \(member.photoClub.fullNameTown)")
                         } else {
                             Text(verbatim: "\(member.roleDescription)")
                         }

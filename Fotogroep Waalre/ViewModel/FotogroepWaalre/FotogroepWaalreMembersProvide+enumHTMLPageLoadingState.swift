@@ -1,5 +1,5 @@
 //
-//  FGWMembersProvide+enumHTMLPageLoadingState.swift
+//  FotogroepWaalreMembersProvide+enumHTMLPageLoadingState.swift
 //  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 09/12/2022.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension FGWMembersProvider { // private utitity functions
+extension FotogroepWaalreMembersProvider { // private utitity functions
 
     ///////////////////////////////////////////////////////////////////////////////////////////
     // MARK: - Load members/ex-members/mentors from password-protected website page

@@ -15,22 +15,24 @@ extension TestClubDenHaagMembersProvider { // fill with some initial hard-coded 
                                                               town: "Den Haag", // Rotterdam also has a "Test Fotoclub"
                                                               nickname: "FC Test DenHaag")
 
-    func insertSomeHardcodedMemberData(testDenHaagBackgroundContext: NSManagedObjectContext) {
-        testDenHaagBackgroundContext.perform {
-            ifDebugPrint("Photo Club Test Adam: starting insertSomeHardcodedMemberData() in background")
-            self.insertSomeHardcodedMemberDataCommon(testDenHaagBackgroundContext: testDenHaagBackgroundContext,
-                                                     commit: true)
+    func insertSomeHardcodedMemberData(bgContext: NSManagedObjectContext) {
+        bgContext.perform { // from here on, we are running on a background thread
+            ifDebugPrint("""
+                         \(Self.photoClubTestDenHaagIdPlus.fullNameTown): \
+                         Starting insertSomeHardcodedMemberData() in background
+                         """)
+            self.insertSomeHardcodedMemberDataCommon(bgContext: bgContext, commit: true)
         }
     }
 
-    private func insertSomeHardcodedMemberDataCommon(testDenHaagBackgroundContext: NSManagedObjectContext,
+    private func insertSomeHardcodedMemberDataCommon(bgContext: NSManagedObjectContext,
                                                      commit: Bool) {
 
         // add photo club to Photo Clubs (if needed)
         let clubTestDenHaag = PhotoClub.findCreateUpdate(
-                                                 context: testDenHaagBackgroundContext,
+                                                 bgContext: bgContext,
                                                  photoClubIdPlus: Self.photoClubTestDenHaagIdPlus,
-                                                 photoClubWebsite: TestClubDenHaagMembersProvider.testDenHaagURL,
+                                                 photoClubWebsite: Self.testDenHaagURL,
                                                  fotobondNumber: nil, kvkNumber: nil,
                                                  coordinates: CLLocationCoordinate2D(latitude: 52.090556,
                                                                                      longitude: 4.279722),
@@ -38,7 +40,7 @@ extension TestClubDenHaagMembersProvider { // fill with some initial hard-coded 
                                                 )
         clubTestDenHaag.hasHardCodedMemberData = true // store in database that we ran insertSomeHardcodedMembers...
 
-        addMember(context: testDenHaagBackgroundContext,
+        addMember(bgContext: bgContext,
                   givenName: "Peter",
                   familyName: "van den Hamer",
                   photoClub: clubTestDenHaag,
@@ -52,10 +54,13 @@ extension TestClubDenHaagMembersProvider { // fill with some initial hard-coded 
 
         if commit {
             do {
-                if testDenHaagBackgroundContext.hasChanges { // is this necessary? sometimes save() done earlier
-                    try testDenHaagBackgroundContext.save() // commit all changes
+                if bgContext.hasChanges { // is this necessary? sometimes save() done earlier
+                    try bgContext.save() // commit all changes
                 }
-                ifDebugPrint("Photo Club Test Den Haag: completed insertSomeHardcodedMemberData()")
+                ifDebugPrint("""
+                             \(Self.photoClubTestDenHaagIdPlus.fullNameTown): \
+                             Completed insertSomeHardcodedMemberData() in background
+                             """)
             } catch {
                 ifDebugFatalError("Failed to save changes for Test Den Haag",
                                   file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
@@ -65,7 +70,7 @@ extension TestClubDenHaagMembersProvider { // fill with some initial hard-coded 
 
     }
 
-    private func addMember(context: NSManagedObjectContext,
+    private func addMember(bgContext: NSManagedObjectContext,
                            givenName: String,
                            familyName: String,
                            bornDT: Date? = nil,
@@ -76,12 +81,14 @@ extension TestClubDenHaagMembersProvider { // fill with some initial hard-coded 
                            phoneNumber: String? = nil,
                            eMail: String? = nil) {
         let photographer = Photographer.findCreateUpdate(
-                            context: context, givenName: givenName, familyName: familyName,
+                            bgContext: bgContext,
+                            givenName: givenName, familyName: familyName, // TODO - check MOC
                             memberRolesAndStatus: memberRolesAndStatus,
-                            bornDT: bornDT )
+                            bornDT: bornDT,
+                            photoClub: photoClub)
 
         _ = MemberPortfolio.findCreateUpdate(
-                            context: context, photoClub: photoClub, photographer: photographer,
+                            bgContext: bgContext, photoClub: photoClub, photographer: photographer,
                             memberRolesAndStatus: memberRolesAndStatus,
                             memberWebsite: memberWebsite,
                             latestImage: latestImage)

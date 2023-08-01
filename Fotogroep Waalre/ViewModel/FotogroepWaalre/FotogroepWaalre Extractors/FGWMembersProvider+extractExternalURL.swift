@@ -8,7 +8,7 @@
 import Foundation
 import RegexBuilder
 
-extension FGWMembersProvider {
+extension FotogroepWaalreMembersProvider {
 
     func extractExternalURL(taggedString: String) -> String {
         // <td><a title="Ariejan van Twisk fotografie" href="https://www.domain.com" target="_blank">extern</a></td>

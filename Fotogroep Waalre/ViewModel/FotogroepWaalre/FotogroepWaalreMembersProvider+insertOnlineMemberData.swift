@@ -1,54 +1,43 @@
 //
-//  FGWMembersProvider.swift
-//  FGWMembersProvider
+//  FotogroepWaalreMembersProvider+insertOnlineMemberData.swift
+//  Photo Club Hub
 //
-//  Created by Peter van den Hamer on 17/07/2021.
+//  Created by Peter van den Hamer on 30/07/2023.
 //
 
-import CoreData // for NSManagedObjectContext
+import CoreData
 import RegexBuilder
 
-class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
+extension FotogroepWaalreMembersProvider {
 
-    static let photoClubWaalreIdPlus = PhotoClubIdPlus(fullName: "Fotogroep Waalre",
-                                                       town: "Waalre",
-                                                       nickname: "FG Waalre")
-
-//    /// A shared member provider for use within the main app bundle.
-//    static let shared = FotogroepWaalreMembersProvider()
-
-    init() {
-        let fgwBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-        // following is asynchronous, but not documented as such using async/await
-        insertSomeHardcodedMemberData(fgwBackgroundContext: fgwBackgroundContext, commit: true)
-
+    func insertOnlineMemberData(bgContext: NSManagedObjectContext) { // runs on a background thread
         // can't rely on async (!) insertSomeHardcodedMemberData() to return managed photoClub object in time
-        let clubWaalre = PhotoClub.findCreateUpdate( context: fgwBackgroundContext,
-                                                     photoClubIdPlus: FGWMembersProvider.photoClubWaalreIdPlus )
+        let clubWaalre = PhotoClub.findCreateUpdate(
+            bgContext: bgContext, // parameters just don't fit on a 120 char line
+            photoClubIdPlus: FotogroepWaalreMembersProvider.photoClubWaalreIdPlus
+        )
 
-        let urlString = getFileAsString(nameEncryptedFile: "FGWPrivateMembersURL2.txt",
-                                        nameUnencryptedFile: "FGWPrivateMembersURL3.txt",
-                                        allowUseEncryptedFile: true) // set to false only for testing purposes
+        let urlString = self.getFileAsString(nameEncryptedFile: "FGWPrivateMembersURL2.txt",
+                                             nameUnencryptedFile: "FGWPrivateMembersURL3.txt",
+                                             allowUseEncryptedFile: true) // set to false only for testing purposes
         if let privateURL = URL(string: urlString) {
             clubWaalre.memberListURL = privateURL
-            Task {
-                await loadPrivateMembersFromWebsite( backgroundContext: fgwBackgroundContext,
-                                                     privateMemberURL: privateURL,
-                                                     photoClubIdPlus: FGWMembersProvider.photoClubWaalreIdPlus,
-                                                     commit: true
-                )
-            }
+            try? bgContext.save()
+
+            self.loadPrivateMembersFromWebsite( backgroundContext: bgContext,
+                                                privateMemberURL: privateURL,
+                                                photoClubIdPlus: FotogroepWaalreMembersProvider.photoClubWaalreIdPlus )
         } else {
             ifDebugFatalError("Could not convert \(urlString) to a URL.",
                               file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
-            // in release mode, the call to the website is skipped, and this logged. App doesn't stop.
+            // In release mode, an incorrect URL causes the file loading to skip.
+            // In release mode this is logged, but the app doesn't stop.
         }
-
     }
 
-    private func getFileAsString(nameEncryptedFile: String,
-                                 nameUnencryptedFile: String,
-                                 allowUseEncryptedFile: Bool = true) -> String {
+    fileprivate func getFileAsString(nameEncryptedFile: String,
+                                     nameUnencryptedFile: String,
+                                     allowUseEncryptedFile: Bool = true) -> String {
         if let secret = readURLFromLocalFile(fileNameWithExtension: nameEncryptedFile), allowUseEncryptedFile {
             ifDebugPrint("Fotogroep Waalre: will use confidential version of Private member data file.")
             return secret
@@ -63,7 +52,7 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
         }
     }
 
-    private func readURLFromLocalFile(fileNameWithExtension: String) -> String? {
+    fileprivate func readURLFromLocalFile(fileNameWithExtension: String) -> String? {
         let fileName = fileNameWithExtension.fileName()
         let fileExtension = fileNameWithExtension.fileExtension()
         if let filepath = Bundle.main.path(forResource: fileName, ofType: fileExtension) {
@@ -80,47 +69,71 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
         }
     }
 
-    func loadPrivateMembersFromWebsite( backgroundContext: NSManagedObjectContext,
-                                        privateMemberURL: URL,
-                                        photoClubIdPlus: PhotoClubIdPlus,
-                                        commit: Bool ) async {
+    fileprivate func loadPrivateMembersFromWebsite( backgroundContext: NSManagedObjectContext,
+                                                    privateMemberURL: URL,
+                                                    photoClubIdPlus: PhotoClubIdPlus ) {
 
-        ifDebugPrint("Fotogroep Waalre: starting loadPrivateMembersFromWebsite() in background")
-        var results: (utfContent: Data?, urlResponse: URLResponse?)? = (nil, nil)
-        results = try? await URLSession.shared.data(from: privateMemberURL)
+        ifDebugPrint("\(photoClubIdPlus.fullNameCommaTown): starting loadPrivateMembersFromWebsite() in background")
+
+        // swiftlint:disable:next large_tuple
+        var results: (utfContent: Data?, urlResponse: URLResponse?, error: (any Error)?)? = (nil, nil, nil)
+        results = URLSession.shared.synchronousDataTask(from: privateMemberURL)
+
         if results != nil, results?.utfContent != nil {
             let htmlContent = String(data: results!.utfContent! as Data,
                                      encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue))!
             parseHTMLContent(backgroundContext: backgroundContext,
                              htmlContent: htmlContent,
                              photoClubIdPlus: photoClubIdPlus)
-            if commit {
-                do {
-                    if backgroundContext.hasChanges {
-                        try backgroundContext.save()
-                        ifDebugPrint("Fotogroep Waalre: completed loadPrivateMembersFromWebsite() in background")
-                    }
-                 } catch {
-                    print("Fotogroep Waalre: ERROR - could not save backgroundContext to Core Data " +
-                          "in loadPrivateMembersFromWebsite()")
+            do {
+                if backgroundContext.hasChanges {
+                    try backgroundContext.save()
+                    ifDebugPrint("""
+                                 \(photoClubIdPlus.fullNameTown): \
+                                 completed loadPrivateMembersFromWebsite() in background")
+                                 """)
                 }
+            } catch {
+                print("Fotogroep Waalre: ERROR - could not save backgroundContext to Core Data " +
+                      "in loadPrivateMembersFromWebsite()")
             }
-        } else { // careful - we are likely running on a background thread (but print() is ok)
+
+            // https://www.advancedswift.com/core-data-background-fetch-save-create/
+            do {
+                let fetchRequest: NSFetchRequest<MemberPortfolio>
+                fetchRequest = MemberPortfolio.fetchRequest()
+                fetchRequest.predicate = NSPredicate(format: """
+                                                             photoClub_.name_ = %@ && \
+                                                             photoClub_.town_ = %@
+                                                             """,
+                             argumentArray: ["Fotogroep Waalre", "Waalre", "Jan"])
+                let portfoliosInClub = try backgroundContext.fetch(fetchRequest)
+
+                for portfolio in portfoliosInClub {
+                    // FotogroepWaalreApp.antiZombiePinningOfMemberPortfolios.insert(portfolio)
+                    portfolio.refreshFirstImage()
+                }
+                try backgroundContext.save()
+            } catch let error {
+                fatalError(error.localizedDescription)
+            }
+
+        } else { // careful - we are running on a background thread (but print() is ok)
                 print("Fotogroep Waalre: ERROR - loading from \(privateMemberURL) " +
                       "in loadPrivateMembersFromWebsite() failed")
         }
     }
 
-    private func parseHTMLContent(backgroundContext: NSManagedObjectContext,
-                                  htmlContent: String,
-                                  photoClubIdPlus: PhotoClubIdPlus) {
+    fileprivate func parseHTMLContent(backgroundContext: NSManagedObjectContext,
+                                      htmlContent: String,
+                                      photoClubIdPlus: PhotoClubIdPlus) {
         var targetState: HTMLPageLoadingState = .tableStart        // initial entry point on loop of states
 
         var personName = PersonName(fullName: "", givenName: "", familyName: "")
         var eMail = "", phoneNumber: String?, externalURL: String = ""
         var birthDate = toDate(from: "1/1/9999") // dummy value that is overwritten later
 
-        let photoClub: PhotoClub = PhotoClub.findCreateUpdate(context: backgroundContext,
+        let photoClub: PhotoClub = PhotoClub.findCreateUpdate(bgContext: backgroundContext,
                                                               photoClubIdPlus: photoClubIdPlus)
 
         htmlContent.enumerateLines { (line, _ stop) -> Void in
@@ -147,15 +160,17 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
                     birthDate = self.extractBirthDate(taggedString: line)
 
                     let photographer = Photographer.findCreateUpdate(
-                        context: backgroundContext, givenName: personName.givenName, familyName: personName.familyName,
+                        bgContext: backgroundContext,
+                        givenName: personName.givenName, familyName: personName.familyName,
                         memberRolesAndStatus: MemberRolesAndStatus(role: [:], stat: [
                             .deceased: !self.isStillAlive(phone: phoneNumber) ]),
                         phoneNumber: phoneNumber, eMail: eMail,
-                        photographerWebsite: URL(string: externalURL), bornDT: birthDate
+                        photographerWebsite: URL(string: externalURL),
+                        bornDT: birthDate
                     )
 
                     _ = MemberPortfolio.findCreateUpdate(
-                        context: backgroundContext, photoClub: photoClub, photographer: photographer,
+                        bgContext: backgroundContext, photoClub: photoClub, photographer: photographer,
                         memberRolesAndStatus: MemberRolesAndStatus(
                             role: [:],
                             stat: [
@@ -176,86 +191,8 @@ class FGWMembersProvider { // WWDC21 Earthquakes also uses a Class here
         }
 
     }
-}
 
-extension FGWMembersProvider { // private utitity functions
-
-    private func isStillAlive(phone: String?) -> Bool {
-        return phone != "[overleden]"
-    }
-
-    private func isCurrentMember(name: String, includeCandidates: Bool) -> Bool {
-        // "Guido Steger" -> false
-        // "Bart van Stekelenburg (lid)" -> true
-        // "Zoë Aspirant (aspirantlid)" -> depends on includeCandidates param
-        // "Hans Zoete (mentor)" -> false
-        let regex = Regex {
-            ZeroOrMore(.any)
-            OneOrMore(.horizontalWhitespace)
-            Capture {
-                ChoiceOf {
-                    "(lid)" // NL
-                    "(member)" // not via localization because input file can have different language setting than app
-                }
-            }
-        }
-
-        if (try? regex.wholeMatch(in: name)) != nil {
-            return true
-        } else if !includeCandidates {
-            return false
-        } else {
-            return isProspectiveMember(name: name)
-        }
-    }
-
-    private func isMentor(name: String) -> Bool {
-        // "Guido Steger" -> false
-        // "Bart van Stekelenburg (lid)" -> false
-        // "Zoë Aspirant (aspirantlid)" -> false
-        // "Hans Zoete (mentor)" -> true
-        let regex = Regex {
-            ZeroOrMore(.any)
-            OneOrMore(.horizontalWhitespace)
-            Capture {
-                ChoiceOf {
-                    "(mentor)" // NL
-                    "(coach)" // EN
-                }
-            }
-        }
-
-        if (try? regex.wholeMatch(in: name)) != nil {
-            return true
-        } else {
-            return false
-        }
-    }
-
-    private func isProspectiveMember(name: String) -> Bool {
-        // "Bart van Stekelenburg (lid)" -> false
-        // "Zoë Aspirant (aspirantlid)" -> true
-        // "Guido Steger" -> false
-        // "Hans Zoete (mentor)" -> false
-        let regex = Regex {
-            ZeroOrMore(.any)
-            OneOrMore(.horizontalWhitespace)
-            Capture {
-                ChoiceOf {
-                    "(aspirantlid)" // NL
-                    "(aspiring)" // EN
-                }
-            }
-        }
-
-        if (try? regex.wholeMatch(in: name)) != nil {
-            return true
-        } else {
-            return false
-        }
-    }
-
-    private func generateInternalURL(using name: String) -> URL? { // for URLs we want basic ASCII A...Z,a...z only
+    fileprivate func generateInternalURL(using name: String) -> URL? { // for URLs we want basic ASCII A...Z,a...z only
         // "Peter van den Hamer" -> "<baseURL>/Peter_van_den_Hamer"
         // "Henriëtte van Ekert" -> "<baseURL>/Henriette_van_Ekert"
         // "José_Daniëls" -> "<baseURL>/Jose_Daniels"
@@ -296,7 +233,7 @@ extension FGWMembersProvider { // private utitity functions
         return URL(string: baseURL + "/" + tweakedName + "/") // final "/" not strictly needed (link works without)
     }
 
-    private func toDate(from dateString: String) -> Date? {
+    fileprivate func toDate(from dateString: String) -> Date? {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd/MM/yyyy"
         return dateFormatter.date(from: dateString)

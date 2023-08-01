@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="20G527" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21754" systemVersion="22F82" minimumToolsVersion="Xcode 11.0" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Member" representedClassName="Member" syncable="YES" codeGenerationType="class">
         <attribute name="dateIntervalEnd_" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="dateIntervalStart_" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
@@ -39,9 +39,4 @@
         <attribute name="photographerWebsite" optional="YES" attributeType="URI"/>
         <relationship name="memberships_" toMany="YES" deletionRule="Cascade" destinationEntity="Member" inverseName="photographer_" inverseEntity="Member"/>
     </entity>
-    <elements>
-        <element name="Member" positionX="-222.5982666015625" positionY="-32.8890380859375" width="128" height="239"/>
-        <element name="PhotoClub" positionX="-49.90740966796875" positionY="128.9934692382812" width="128" height="179"/>
-        <element name="Photographer" positionX="-393.9984130859375" positionY="149.3863525390625" width="128" height="164"/>
-    </elements>
 </model>

@@ -29,8 +29,8 @@ extension PhotoClub {
 		set { name_ = newValue }
 	}
 
-    @objc var fullNameCommaTown: String { // objc needed for SectionedFetchRequest's sectionIdentifier
-        fullName + ", " + town
+    @objc var fullNameTown: String { // objc needed for SectionedFetchRequest's sectionIdentifier
+        "\(fullName) (\(town))"
     }
 
     public var id: PhotoClubId { // public because needed for Identifiable protocol
@@ -93,18 +93,17 @@ extension PhotoClub {
 
 	// Find existing object or create a new object
 	// Update existing attributes or fill the new object
-    static func findCreateUpdate(context: NSManagedObjectContext,
+    static func findCreateUpdate(bgContext: NSManagedObjectContext, // TODO - check MOC, always background?
                                  photoClubIdPlus: PhotoClubIdPlus,
                                  photoClubWebsite: URL? = nil, fotobondNumber: Int16? = nil, kvkNumber: Int32? = nil,
                                  coordinates: CLLocationCoordinate2D? = nil,
                                  priority: Int16? = nil
                                 ) -> PhotoClub {
         let predicateFormat: String = "name_ = %@ AND town_ = %@" // avoid localization
-        let request: NSFetchRequest = fetchRequest(predicate: NSPredicate(format: predicateFormat,
-                                                                          photoClubIdPlus.fullName,
-                                                                          photoClubIdPlus.town))
+        let request = fetchRequest(predicate: NSPredicate(format: predicateFormat, photoClubIdPlus.fullName,
+                                                                                   photoClubIdPlus.town))
 
-		let photoClubs: [PhotoClub] = (try? context.fetch(request)) ?? [] // nil means absolute failure
+		let photoClubs: [PhotoClub] = (try? bgContext.fetch(request)) ?? [] // nil means absolute failure
         if photoClubs.count > 1 {
             ifDebugFatalError("Query returned \(photoClubs.count) photoclub(s) named " +
                               "\(photoClubIdPlus.fullName) in \(photoClubIdPlus.town)",
@@ -113,7 +112,7 @@ extension PhotoClub {
         }
 
 		if let photoClub = photoClubs.first { // already exists, so make sure secondary attributes are up to date
-            if update(context: context, photoClub: photoClub,
+            if update(bgContext: bgContext, photoClub: photoClub,
                       shortName: photoClubIdPlus.nickname,
                       optionalFields: (photoClubWebsite: photoClubWebsite,
                                        fotobondNumber: fotobondNumber,
@@ -124,24 +123,29 @@ extension PhotoClub {
             }
 			return photoClub
 		} else {
-			let photoClub = PhotoClub(context: context) // create new PhotoClub object
+            // cannot use PhotoClub() initializer because we must use bgContext
+            let entity = NSEntityDescription.entity(forEntityName: "PhotoClub", in: bgContext)!
+            let photoClub = PhotoClub(entity: entity, insertInto: bgContext)
             photoClub.fullName = photoClubIdPlus.fullName // first part of ID
             photoClub.town = photoClubIdPlus.town // second part of ID
-            _ = update(context: context, photoClub: photoClub,
+            _ = update(bgContext: bgContext, photoClub: photoClub,
                        shortName: photoClubIdPlus.nickname,
                        optionalFields: (photoClubWebsite: photoClubWebsite,
                                         fotobondNumber: fotobondNumber,
                                         kvkNumber: kvkNumber),
                        coordinates: coordinates,
                        priority: priority)
-            print("Created new photo club \(photoClub.fullName) in \(photoClub.town), \(photoClub.country)")
+            print("""
+                  \(photoClubIdPlus.fullNameTown): \
+                  Created new photo club
+                  """)
 			return photoClub
 		}
 	}
 
 	// Update non-identifying attributes/properties within existing instance of class PhotoClub
     // swiftlint:disable:next function_parameter_count
-    static func update(context: NSManagedObjectContext, photoClub: PhotoClub, shortName: String,
+    static func update(bgContext: NSManagedObjectContext, photoClub: PhotoClub, shortName: String,
                        // swiftlint:disable:next large_tuple
                        optionalFields: (photoClubWebsite: URL?, fotobondNumber: Int16?, kvkNumber: Int32?),
                        coordinates: CLLocationCoordinate2D?, priority: Int16?) -> Bool {
@@ -175,7 +179,7 @@ extension PhotoClub {
         }
 		if modified {
 			do {
-				try context.save()
+				try bgContext.save()
  			} catch {
                 ifDebugFatalError("Update failed for photo club \(photoClub.fullName)",
                                   file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0

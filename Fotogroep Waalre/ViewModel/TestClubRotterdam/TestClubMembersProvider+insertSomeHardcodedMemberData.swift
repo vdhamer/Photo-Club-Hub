@@ -12,33 +12,34 @@ extension TestClubRotterdamMembersProvider { // fill with some initial hard-code
 
     private static let testRotterdamURL = URL(string: "https://www.nederlandsfotomuseum.nl")
     static let photoClubTestRotterdamIdPlus = PhotoClubIdPlus(fullName: "Test Fotoclub",
-                                                              town: "Rotterdam", // Amsterdam also has a "Test Fotoclub"
+                                                              town: "Rotterdam",
                                                               nickname: "FC Test Rdam")
 
-    func insertSomeHardcodedMemberData(testRotterdamBackgroundContext: NSManagedObjectContext) {
-        testRotterdamBackgroundContext.perform {
-            ifDebugPrint("Photo Club Test Rdam: starting insertSomeHardcodedMemberData() in background")
-            self.insertSomeHardcodedMemberDataCommon(testRotterdamBackgroundContext: testRotterdamBackgroundContext,
-                                                     commit: true)
+    func insertSomeHardcodedMemberData(bgContext: NSManagedObjectContext) {
+        bgContext.perform {
+            ifDebugPrint("""
+                         \(Self.photoClubTestRotterdamIdPlus.fullNameTown): \
+                         Starting insertSomeHardcodedMemberData() in background
+                         """)
+            self.insertSomeHardcodedMemberDataCommon(bgContext: bgContext)
         }
     }
 
-    private func insertSomeHardcodedMemberDataCommon(testRotterdamBackgroundContext: NSManagedObjectContext,
-                                                     commit: Bool) {
+    private func insertSomeHardcodedMemberDataCommon(bgContext: NSManagedObjectContext) {
 
         // add photo club to Photo Clubs (if needed)
         let clubTestRotterdam = PhotoClub.findCreateUpdate(
-                                             context: testRotterdamBackgroundContext,
+                                             bgContext: bgContext,
                                              photoClubIdPlus: Self.photoClubTestRotterdamIdPlus,
                                              photoClubWebsite: TestClubRotterdamMembersProvider.testRotterdamURL,
                                              fotobondNumber: nil, kvkNumber: nil,
-                                             coordinates: CLLocationCoordinate2D(latitude: 51.905292,
-                                                                                 longitude: 4.486934),
+                                             coordinates: CLLocationCoordinate2D(latitude: 51.90296,
+                                                                                 longitude: 4.49504),
                                              priority: 1
                                             )
         clubTestRotterdam.hasHardCodedMemberData = true // store in database that we ran insertSomeHardcodedMembers...
 
-        addMember(context: testRotterdamBackgroundContext,
+        addMember(bgContext: bgContext,
                   givenName: "Peter",
                   familyName: "van den Hamer",
                   photoClub: clubTestRotterdam,
@@ -51,22 +52,23 @@ extension TestClubRotterdamMembersProvider { // fill with some initial hard-code
                   eMail: "foobarR@vdhamer.com"
         )
 
-        if commit {
-            do {
-                if testRotterdamBackgroundContext.hasChanges {
-                    try testRotterdamBackgroundContext.save() // commit all changes
-                }
-                ifDebugPrint("Photo Club Test Rdam: completed insertSomeHardcodedMemberData()")
-            } catch {
-                ifDebugFatalError("Failed to save changes for Test Rotterdam",
-                                  file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
-                // in release mode, failing to store the data is only logged. And the app doesn't stop.
+        do {
+            if bgContext.hasChanges {
+                try bgContext.save() // commit all changes
             }
+            ifDebugPrint("""
+                         \(Self.photoClubTestRotterdamIdPlus.fullNameTown): \
+                         Completed insertSomeHardcodedMemberData() in background
+                         """)
+        } catch {
+            ifDebugFatalError("Failed to save changes for Test Rotterdam",
+                              file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
+            // in release mode, failing to store the data is only logged. And the app doesn't stop.
         }
 
     }
 
-    private func addMember(context: NSManagedObjectContext,
+    private func addMember(bgContext: NSManagedObjectContext,
                            givenName: String,
                            familyName: String,
                            bornDT: Date? = nil,
@@ -77,12 +79,14 @@ extension TestClubRotterdamMembersProvider { // fill with some initial hard-code
                            phoneNumber: String? = nil,
                            eMail: String? = nil) {
         let photographer = Photographer.findCreateUpdate(
-                            context: context, givenName: givenName, familyName: familyName,
+                            bgContext: bgContext,
+                            givenName: givenName, familyName: familyName, // TODO - check MOC
                             memberRolesAndStatus: memberRolesAndStatus,
-                            bornDT: bornDT )
+                            bornDT: bornDT,
+                            photoClub: photoClub)
 
         _ = MemberPortfolio.findCreateUpdate(
-                            context: context, photoClub: photoClub, photographer: photographer,
+                            bgContext: bgContext, photoClub: photoClub, photographer: photographer,
                             memberRolesAndStatus: memberRolesAndStatus,
                             memberWebsite: memberWebsite,
                             latestImage: latestImage)

@@ -12,7 +12,7 @@ struct FilteredMemberPortfoliosView: View {
     @Environment(\.managedObjectContext) private var viewContext
 
     @SectionedFetchRequest<String, MemberPortfolio>(
-        sectionIdentifier: \.photoClub_!.fullNameCommaTown,
+        sectionIdentifier: \.photoClub_!.fullNameTown,
         sortDescriptors: [],
         predicate: NSPredicate.none
     ) private var sectionedPortfolios: SectionedFetchResults<String, MemberPortfolio>
@@ -32,7 +32,7 @@ struct FilteredMemberPortfoliosView: View {
             SortDescriptor(\MemberPortfolio.photographer_!.familyName_, order: .forward)
         ]
         _sectionedPortfolios = SectionedFetchRequest(
-            sectionIdentifier: \.photoClub_!.fullNameCommaTown,
+            sectionIdentifier: \.photoClub_!.fullNameTown,
             sortDescriptors: sortDescriptors,
             predicate: predicate,
             animation: .default)
@@ -207,12 +207,12 @@ struct FilteredMemberPortfoliosView: View {
         }
 
         // loosely related task: asynchronously update the thumbnail of any shown photographer
-        for portfolio in filteredPortfolios {
-            Task {
-                FotogroepWaalreApp.antiZombiePinningOfMemberPortfolios.insert(portfolio)
-                await portfolio.refreshFirstImage() // is await really needed?
-            }
-        }
+//        for portfolio in filteredPortfolios {
+//            Task {
+//                FotogroepWaalreApp.antiZombiePinningOfMemberPortfolios.insert(portfolio)
+//                await portfolio.refreshFirstImage() // is await really needed? TODO
+//            }
+//        }
         return filteredPortfolios
     }
 

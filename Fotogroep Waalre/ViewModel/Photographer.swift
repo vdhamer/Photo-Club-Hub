@@ -61,82 +61,91 @@ extension Photographer {
 
     // Find existing object and otherwise create a new object
     // Update existing attributes or fill the new object
-    static func findCreateUpdate(context: NSManagedObjectContext,
+    static func findCreateUpdate(bgContext: NSManagedObjectContext, // check MOC TODO
                                  givenName: String, familyName: String,
                                  memberRolesAndStatus: MemberRolesAndStatus = MemberRolesAndStatus(role: [:],
                                                                                                    stat: [:]),
                                  phoneNumber: String? = nil, eMail: String? = nil,
-                                 photographerWebsite: URL? = nil, bornDT: Date? = nil) -> Photographer {
+                                 photographerWebsite: URL? = nil, bornDT: Date? = nil,
+                                 photoClub: PhotoClub? = nil) -> Photographer { // photoClub only shown on console
         let predicateFormat: String = "givenName_ = %@ AND familyName_ = %@" // avoid localization
         let request = fetchRequest(predicate: NSPredicate(format: predicateFormat, givenName, familyName))
 
-        let photographers: [Photographer] = (try? context.fetch(request)) ?? [] // nil means absolute failure
+        let photographers: [Photographer] = (try? bgContext.fetch(request)) ?? [] // nil means absolute failure
+        let photoClubPref = "\(photoClub?.fullNameTown ?? "No photo club provided"):"
 
-        if let photographer = photographers.first { // already exists, so make sure secondary attributes are up to date
-            if update(context: context, photographer: photographer,
-                      memberRolesAndStatus: memberRolesAndStatus,
-                      phoneNumber: phoneNumber, eMail: eMail,
-                      photographerWebsite: photographerWebsite, bornDT: bornDT) {
-                print("Sucessfully updated info for photographer \(photographer.fullName)")
+        if let photographer = photographers.first {
+            // already exists, so make sure secondary attributes are up to date
+            let wasUpdated = update(bgContext: bgContext, photographer: photographer,
+                                    memberRolesAndStatus: memberRolesAndStatus,
+                                    phoneNumber: phoneNumber, eMail: eMail,
+                                    photographerWebsite: photographerWebsite, bornDT: bornDT)
+            if wasUpdated {
+                print("\(photoClubPref) Updated info for photographer <\(photographer.fullName)>")
+            } else {
+                print("\(photoClubPref) No changes for photographer <\(photographer.fullName)>")
             }
             return photographer
         } else {
-            let photographer = Photographer(context: context) // new record in database
+            // doesn't exist yet, so add new photographer
+            let entity = NSEntityDescription.entity(forEntityName: "Photographer", in: bgContext)!
+            let photographer = Photographer(entity: entity, insertInto: bgContext) // background: use special .init()
             photographer.givenName = givenName
             photographer.familyName = familyName
-            let success = update(context: context, photographer: photographer,
-                                 memberRolesAndStatus: memberRolesAndStatus,
-                                 phoneNumber: phoneNumber, eMail: eMail,
-                                 photographerWebsite: photographerWebsite, bornDT: bornDT)
-            if success { print("Successfully created new photographer \(photographer.fullName)") }
+            _ = update(bgContext: bgContext, photographer: photographer, // TODO - check MOC
+                       memberRolesAndStatus: memberRolesAndStatus,
+                       phoneNumber: phoneNumber, eMail: eMail,
+                       photographerWebsite: photographerWebsite, bornDT: bornDT)
+            print("\(photoClubPref) Successfully created new photographer <\(photographer.fullName)>") // ignore updated
             return photographer
         }
     }
 
-	// Update non-identifying attributes/properties within existing instance of class PhotoClub
-    static func update(context: NSManagedObjectContext, photographer: Photographer,
+	// Update non-identifying properties within existing instance of class Photographer
+    // Returns whether any of the non-identifying properties were updated.
+    static func update(bgContext: NSManagedObjectContext, photographer: Photographer, // TODO - check MOC
                        memberRolesAndStatus: MemberRolesAndStatus,
                        phoneNumber: String? = nil, eMail: String? = nil,
                        photographerWebsite: URL? = nil, bornDT: Date? = nil) -> Bool {
 
-		var modified: Bool = false
+		var wasUpdated: Bool = false
 
         if let isDeceased = memberRolesAndStatus.stat[.deceased], photographer.isDeceased != isDeceased {
             photographer.memberRolesAndStatus.stat[.deceased] = isDeceased
-			modified = true
+            wasUpdated = true
 		}
 
         if let bornDT, photographer.bornDT != bornDT {
 			photographer.bornDT = bornDT
-			modified = true
+            wasUpdated = true
 		}
 
         if let phoneNumber, photographer.phoneNumber != phoneNumber {
             photographer.phoneNumber = phoneNumber
-            modified = true
+            wasUpdated = true
         }
 
         if let eMail, photographer.eMail != eMail {
             photographer.eMail = eMail
-            modified = true
+            wasUpdated = true
         }
 
         if let photographerWebsite, photographer.photographerWebsite != photographerWebsite {
             photographer.photographerWebsite = photographerWebsite
-            modified = true
+            wasUpdated = true
         }
 
-		if modified {
+		if wasUpdated {
 			do {
-				try context.save()
+				try bgContext.save()
 			} catch {
-                ifDebugFatalError("Update failed for photographer \(photographer.fullName)",
+                ifDebugFatalError("Update failed for photographer <\(photographer.fullName)>",
                                   file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
                 // in release mode, if the data cannot be saved, log this and continue.
-                modified = false
+                wasUpdated = false
 			}
 		}
-        return modified
+        return wasUpdated
 	}
 
 }

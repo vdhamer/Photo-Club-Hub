@@ -1,6 +1,6 @@
 //
-//  BIMembersProvider+insertSomeHardcodedMemberData.swift
-//  BIMembersProvider+insertSomeHardcodedMemberData
+//  BellusImagoMembersProvider+insertSomeHardcodedMemberData.swift
+//  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 01/08/2021.
 //
@@ -8,29 +8,30 @@
 import CoreData // for NSManagedObjectContext
 import MapKit // for CLLocationCoordinate2D
 
-extension BIMembersProvider { // fill with some initial hard-coded content
+extension BellusImagoMembersProvider { // fill with some initial hard-coded content
 
     private static let bellusImagoURL = URL(string: "https://www.fotoClubBellusImago.nl")
     private static let photoClubBellusImagoIdPlus = PhotoClubIdPlus(fullName: "Fotoclub Bellus Imago",
                                                                     town: "Veldhoven",
                                                                     nickname: "FC BellusImago")
 
-    func insertSomeHardcodedMemberData(biBackgroundContext: NSManagedObjectContext) {
-        let clubNickname = BIMembersProvider.photoClubBellusImagoIdPlus.nickname
-        biBackgroundContext.perform {
-            ifDebugPrint("\(clubNickname): starting insertSomeHardcodedMemberData() in background")
-            self.insertSomeHardcodedMemberDataCommon(biBackgroundContext: biBackgroundContext, commit: true)
+    func insertSomeHardcodedMemberData(bgContext: NSManagedObjectContext) {
+        bgContext.perform { // from here on, we are running on a background thread
+            ifDebugPrint("""
+                         \(Self.photoClubBellusImagoIdPlus.fullNameTown): \
+                         Starting insertSomeHardcodedMemberData() in background
+                         """)
+            self.insertSomeHardcodedMemberDataCommon(bgContext: bgContext)
         }
     }
 
-    private func insertSomeHardcodedMemberDataCommon(biBackgroundContext: NSManagedObjectContext,
-                                                     commit: Bool) {
+    private func insertSomeHardcodedMemberDataCommon(bgContext: NSManagedObjectContext) {
 
         // add Bellus Imago to Photo Clubs (if needed)
         let clubBellusImago = PhotoClub.findCreateUpdate(
-                                                         context: biBackgroundContext,
+                                                         bgContext: bgContext,
                                                          photoClubIdPlus: Self.photoClubBellusImagoIdPlus,
-                                                         photoClubWebsite: BIMembersProvider.bellusImagoURL,
+                                                         photoClubWebsite: BellusImagoMembersProvider.bellusImagoURL,
                                                          fotobondNumber: 1671, kvkNumber: nil,
                                                          coordinates: CLLocationCoordinate2D(latitude: 51.425410,
                                                                                              longitude: 5.387560),
@@ -38,7 +39,7 @@ extension BIMembersProvider { // fill with some initial hard-coded content
                                                         )
         clubBellusImago.hasHardCodedMemberData = true // store in database that we ran insertSomeHardcodedMembers...
 
-        addMember(context: biBackgroundContext, // add Rico to Photographers and member of Bellus (if needed)
+        addMember(bgContext: bgContext, // add Rico to Photographers and member of Bellus (if needed)
                   givenName: "Rico",
                   familyName: "Coolen",
                   photographerWebsite: URL(string: "https://www.ricoco.nl"),
@@ -49,7 +50,7 @@ extension BIMembersProvider { // fill with some initial hard-coded content
                   eMail: "info@ricoco.nl"
         )
 
-        addMember(context: biBackgroundContext, // add Loek to Photographers and member of Bellus (if needed)
+        addMember(bgContext: bgContext, // add Loek to Photographers and member of Bellus (if needed)
                   givenName: "Loek",
                   familyName: "Dirkx",
                   photoClub: clubBellusImago,
@@ -59,24 +60,25 @@ extension BIMembersProvider { // fill with some initial hard-coded content
                      "https://www.fotoclubbellusimago.nl/uploads/5/5/1/2/55129719/vrijwerk-loek-1_2_orig.jpg")
         )
 
-        if commit {
-            let clubNickname = BIMembersProvider.photoClubBellusImagoIdPlus.nickname
+        let clubNickname = BellusImagoMembersProvider.photoClubBellusImagoIdPlus.nickname
 
-            do {
-                if biBackgroundContext.hasChanges {
-                    try biBackgroundContext.save() // commit all changes
-                }
-                ifDebugPrint("\(clubNickname): completed insertSomeHardcodedMemberData()")
-            } catch {
-                ifDebugFatalError("\(clubNickname): ERROR - failed to save changes to Core Data",
-                                  file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
-                // in release mode, the failed database update is only logged. App doesn't stop.
+        do {
+            if bgContext.hasChanges {
+                try bgContext.save() // commit all changes
             }
+            ifDebugPrint("""
+                         \(Self.photoClubBellusImagoIdPlus.fullNameTown): \
+                         Completed insertSomeHardcodedMemberData() in background
+                         """)
+        } catch {
+            ifDebugFatalError("\(clubNickname): ERROR - failed to save changes to Core Data",
+                              file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
+            // in release mode, the failed database update is only logged. App doesn't stop.
         }
 
     }
 
-    private func addMember(context: NSManagedObjectContext,
+    private func addMember(bgContext: NSManagedObjectContext,
                            givenName: String,
                            familyName: String,
                            photographerWebsite: URL? = nil,
@@ -87,12 +89,14 @@ extension BIMembersProvider { // fill with some initial hard-coded content
                            latestImage: URL? = nil,
                            phoneNumber: String? = nil,
                            eMail: String? = nil) {
-        let photographer = Photographer.findCreateUpdate(context: context, givenName: givenName, familyName: familyName,
+        let photographer = Photographer.findCreateUpdate(bgContext: bgContext,
+                                                         givenName: givenName, familyName: familyName,
                                                          memberRolesAndStatus: memberRolesAndStatus,
                                                          photographerWebsite: photographerWebsite,
-                                                         bornDT: bornDT)
+                                                         bornDT: bornDT,
+                                                         photoClub: photoClub)
 
-        _ = MemberPortfolio.findCreateUpdate(context: context, photoClub: photoClub, photographer: photographer,
+        _ = MemberPortfolio.findCreateUpdate(bgContext: bgContext, photoClub: photoClub, photographer: photographer,
                                              memberRolesAndStatus: memberRolesAndStatus,
                                              memberWebsite: memberWebsite,
                                              latestImage: latestImage)
