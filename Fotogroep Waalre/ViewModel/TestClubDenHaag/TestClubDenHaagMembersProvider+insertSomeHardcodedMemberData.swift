@@ -30,7 +30,7 @@ extension TestClubDenHaagMembersProvider { // fill with some initial hard-coded 
 
         // add photo club to Photo Clubs (if needed)
         let clubTestDenHaag = PhotoClub.findCreateUpdate(
-                                                 bgContext: bgContext,
+                                                 context: bgContext,
                                                  photoClubIdPlus: Self.photoClubTestDenHaagIdPlus,
                                                  photoClubWebsite: Self.testDenHaagURL,
                                                  fotobondNumber: nil, kvkNumber: nil,
@@ -81,7 +81,7 @@ extension TestClubDenHaagMembersProvider { // fill with some initial hard-coded 
                            phoneNumber: String? = nil,
                            eMail: String? = nil) {
         let photographer = Photographer.findCreateUpdate(
-                            bgContext: bgContext,
+                            context: bgContext,
                             givenName: givenName, familyName: familyName, // TODO - check MOC
                             memberRolesAndStatus: memberRolesAndStatus,
                             bornDT: bornDT,

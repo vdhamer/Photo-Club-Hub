@@ -13,7 +13,7 @@ extension FotogroepWaalreMembersProvider {
     func insertOnlineMemberData(bgContext: NSManagedObjectContext) { // runs on a background thread
         // can't rely on async (!) insertSomeHardcodedMemberData() to return managed photoClub object in time
         let clubWaalre = PhotoClub.findCreateUpdate(
-            bgContext: bgContext, // parameters just don't fit on a 120 char line
+            context: bgContext, // parameters just don't fit on a 120 char line
             photoClubIdPlus: FotogroepWaalreMembersProvider.photoClubWaalreIdPlus
         )
 
@@ -133,7 +133,7 @@ extension FotogroepWaalreMembersProvider {
         var eMail = "", phoneNumber: String?, externalURL: String = ""
         var birthDate = toDate(from: "1/1/9999") // dummy value that is overwritten later
 
-        let photoClub: PhotoClub = PhotoClub.findCreateUpdate(bgContext: backgroundContext,
+        let photoClub: PhotoClub = PhotoClub.findCreateUpdate(context: backgroundContext,
                                                               photoClubIdPlus: photoClubIdPlus)
 
         htmlContent.enumerateLines { (line, _ stop) -> Void in
@@ -160,7 +160,7 @@ extension FotogroepWaalreMembersProvider {
                     birthDate = self.extractBirthDate(taggedString: line)
 
                     let photographer = Photographer.findCreateUpdate(
-                        bgContext: backgroundContext,
+                        context: backgroundContext,
                         givenName: personName.givenName, familyName: personName.familyName,
                         memberRolesAndStatus: MemberRolesAndStatus(role: [:], stat: [
                             .deceased: !self.isStillAlive(phone: phoneNumber) ]),

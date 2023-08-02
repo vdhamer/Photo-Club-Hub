@@ -17,7 +17,7 @@ extension FotogroepWaalreMembersProvider { // fill with some initial hard-coded 
                      """)
 
         let clubWaalre = PhotoClub.findCreateUpdate(
-                                        bgContext: bgContext,
+                                        context: bgContext,
                                         photoClubIdPlus: FotogroepWaalreMembersProvider.photoClubWaalreIdPlus,
                                         photoClubWebsite: URL(string: "https://www.fotogroepwaalre.nl"),
                                         fotobondNumber: 1634, kvkNumber: 17261693,
@@ -83,7 +83,7 @@ extension FotogroepWaalreMembersProvider { // fill with some initial hard-coded 
                            memberWebsite: URL? = nil,
                            latestImage: URL? = nil) {
         let photographer = Photographer.findCreateUpdate(
-                           bgContext: bgContext,
+                           context: bgContext,
                            givenName: givenName, familyName: familyName,
                            memberRolesAndStatus: memberRolesAndStatus,
                            bornDT: bornDT,

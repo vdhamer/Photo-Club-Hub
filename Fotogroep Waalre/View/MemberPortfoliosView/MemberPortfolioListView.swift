@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoreData // for .refreshable code
 
 struct MemberPortfolioListView: View {
     @Environment(\.managedObjectContext) private var viewContext
@@ -41,8 +42,12 @@ struct MemberPortfolioListView: View {
         }
         .listStyle(.plain)
         .refreshable { // for pull-to-refresh
-//            _ = FGWMembersProvider(bgContext: PersistenceController.shared.container.newBackgroundContext())
-        } // TODO: uncomment
+            // load all current/former members of Fotogroep Waalre
+            let fgwBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+            fgwBackgroundContext.name = "Fotogroep Waalre refresh"
+            fgwBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+            _ = FotogroepWaalreMembersProvider(bgContext: fgwBackgroundContext)
+        }
         .keyboardType(.namePhonePad)
         .autocapitalization(.none)
         .submitLabel(.done) // currently only works with text fields?

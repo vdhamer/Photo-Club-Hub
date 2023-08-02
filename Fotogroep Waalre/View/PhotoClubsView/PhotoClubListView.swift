@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoreData // for implementing .refreshable
 
 struct PhotoClubListView: View {
     @Environment(\.managedObjectContext) private var viewContext
@@ -45,16 +46,34 @@ struct PhotoClubListView: View {
             }
             .listStyle(.plain)
             .refreshable { // for pull-to-refresh
-//                _ = FGWMembersProvider(bgContext: PersistenceController.shared.container.newBackgroundContext())
-//                _ = BIMembersProvider(bgContext: PersistenceController.shared.container.newBackgroundContext())
-//
-//                _ = TestClubAmsterdamMembersProvider(bgContext:
-//                                                     PersistenceController.shared.container.newBackgroundContext())
-//                _ = TestClubDenHaagMembersProvider(bgContext:
-//                                                     PersistenceController.shared.container.newBackgroundContext())
-//                _ = TestClubRotterdamMembersProvider(bgContext:
-//                                                     PersistenceController.shared.container.newBackgroundContext())
-            } // TODO: uncomment
+                let biBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+                biBackgroundContext.name = "Bellus Imago refresh"
+                biBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+                _ = BellusImagoMembersProvider(bgContext: biBackgroundContext)
+
+                // load all current/former members of Fotogroep Waalre
+                let fgwBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+                fgwBackgroundContext.name = "Fotogroep Waalre refresh"
+                fgwBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+                _ = FotogroepWaalreMembersProvider(bgContext: fgwBackgroundContext)
+
+                // Load a few test members for 3 non-existent photo clubs.
+                // But this also tests support for clubs with same name in different towns
+                let taBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+                taBackgroundContext.name = "Amsterdam refresh"
+                taBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+                _ = TestClubAmsterdamMembersProvider(bgContext: taBackgroundContext)
+
+                let tdBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+                tdBackgroundContext.name = "Den Haag refresh"
+                tdBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+                _ = TestClubDenHaagMembersProvider(bgContext: tdBackgroundContext)
+
+                let trBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+                trBackgroundContext.name = "Rotterdam refresh"
+                trBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+                _ = TestClubRotterdamMembersProvider(bgContext: trBackgroundContext)
+            }
         }
         .navigationTitle(navigationTitle)
     }

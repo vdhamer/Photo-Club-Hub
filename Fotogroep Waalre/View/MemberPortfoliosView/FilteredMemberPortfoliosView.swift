@@ -206,13 +206,6 @@ struct FilteredMemberPortfoliosView: View {
                 memberPortfolio.photographer.fullName.localizedCaseInsensitiveContains(searchText.wrappedValue) }
         }
 
-        // loosely related task: asynchronously update the thumbnail of any shown photographer
-//        for portfolio in filteredPortfolios {
-//            Task {
-//                FotogroepWaalreApp.antiZombiePinningOfMemberPortfolios.insert(portfolio)
-//                await portfolio.refreshFirstImage() // is await really needed? TODO
-//            }
-//        }
         return filteredPortfolios
     }
 

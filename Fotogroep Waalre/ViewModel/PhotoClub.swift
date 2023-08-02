@@ -93,7 +93,7 @@ extension PhotoClub {
 
 	// Find existing object or create a new object
 	// Update existing attributes or fill the new object
-    static func findCreateUpdate(bgContext: NSManagedObjectContext, // TODO - check MOC, always background?
+    static func findCreateUpdate(context: NSManagedObjectContext, // can be foreground of background context
                                  photoClubIdPlus: PhotoClubIdPlus,
                                  photoClubWebsite: URL? = nil, fotobondNumber: Int16? = nil, kvkNumber: Int32? = nil,
                                  coordinates: CLLocationCoordinate2D? = nil,
@@ -103,7 +103,7 @@ extension PhotoClub {
         let request = fetchRequest(predicate: NSPredicate(format: predicateFormat, photoClubIdPlus.fullName,
                                                                                    photoClubIdPlus.town))
 
-		let photoClubs: [PhotoClub] = (try? bgContext.fetch(request)) ?? [] // nil means absolute failure
+		let photoClubs: [PhotoClub] = (try? context.fetch(request)) ?? [] // nil means absolute failure
         if photoClubs.count > 1 {
             ifDebugFatalError("Query returned \(photoClubs.count) photoclub(s) named " +
                               "\(photoClubIdPlus.fullName) in \(photoClubIdPlus.town)",
@@ -112,7 +112,7 @@ extension PhotoClub {
         }
 
 		if let photoClub = photoClubs.first { // already exists, so make sure secondary attributes are up to date
-            if update(bgContext: bgContext, photoClub: photoClub,
+            if update(bgContext: context, photoClub: photoClub,
                       shortName: photoClubIdPlus.nickname,
                       optionalFields: (photoClubWebsite: photoClubWebsite,
                                        fotobondNumber: fotobondNumber,
@@ -124,11 +124,11 @@ extension PhotoClub {
 			return photoClub
 		} else {
             // cannot use PhotoClub() initializer because we must use bgContext
-            let entity = NSEntityDescription.entity(forEntityName: "PhotoClub", in: bgContext)!
-            let photoClub = PhotoClub(entity: entity, insertInto: bgContext)
+            let entity = NSEntityDescription.entity(forEntityName: "PhotoClub", in: context)!
+            let photoClub = PhotoClub(entity: entity, insertInto: context)
             photoClub.fullName = photoClubIdPlus.fullName // first part of ID
             photoClub.town = photoClubIdPlus.town // second part of ID
-            _ = update(bgContext: bgContext, photoClub: photoClub,
+            _ = update(bgContext: context, photoClub: photoClub,
                        shortName: photoClubIdPlus.nickname,
                        optionalFields: (photoClubWebsite: photoClubWebsite,
                                         fotobondNumber: fotobondNumber,

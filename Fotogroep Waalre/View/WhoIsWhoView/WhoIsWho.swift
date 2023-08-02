@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct WhoIsWho: View {
     @Environment(\.managedObjectContext) private var viewContext
@@ -35,9 +36,12 @@ struct WhoIsWho: View {
                     .foregroundColor(.gray)
             }
             .refreshable { // for pull-to-refresh
-//                _ = FGWMembersProvider(bgContext: PersistenceController.shared.container.newBackgroundContext())
-            } // TODO: check MOC context: receiving fgContext here?!?
-            // TODO: uncomment
+                // load all current/former members of Fotogroep Waalre
+                let fgwBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+                fgwBackgroundContext.name = "Fotogroep Waalre reload"
+                fgwBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+                _ = FotogroepWaalreMembersProvider(bgContext: fgwBackgroundContext)
+            }
         }
         .keyboardType(.namePhonePad)
         .autocapitalization(.none)

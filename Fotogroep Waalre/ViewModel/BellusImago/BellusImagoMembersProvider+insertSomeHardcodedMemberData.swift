@@ -29,7 +29,7 @@ extension BellusImagoMembersProvider { // fill with some initial hard-coded cont
 
         // add Bellus Imago to Photo Clubs (if needed)
         let clubBellusImago = PhotoClub.findCreateUpdate(
-                                                         bgContext: bgContext,
+                                                         context: bgContext,
                                                          photoClubIdPlus: Self.photoClubBellusImagoIdPlus,
                                                          photoClubWebsite: BellusImagoMembersProvider.bellusImagoURL,
                                                          fotobondNumber: 1671, kvkNumber: nil,
@@ -89,7 +89,7 @@ extension BellusImagoMembersProvider { // fill with some initial hard-coded cont
                            latestImage: URL? = nil,
                            phoneNumber: String? = nil,
                            eMail: String? = nil) {
-        let photographer = Photographer.findCreateUpdate(bgContext: bgContext,
+        let photographer = Photographer.findCreateUpdate(context: bgContext,
                                                          givenName: givenName, familyName: familyName,
                                                          memberRolesAndStatus: memberRolesAndStatus,
                                                          photographerWebsite: photographerWebsite,

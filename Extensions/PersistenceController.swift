@@ -21,7 +21,7 @@ struct PersistenceController {
                                                                      .former: ((index % 4) == 1)]
             )
 			let photographer = Photographer.findCreateUpdate(
-                bgContext: viewContext, // TODO: check MOC choice
+                context: viewContext, // on main thread
                 givenName: "Jan", familyName: "D'Eau\(index)",
                 memberRolesAndStatus: memberRolesAndStatus,
                 phoneNumber: "06-12345678",
@@ -29,7 +29,7 @@ struct PersistenceController {
                 photographerWebsite: URL(string: "https://www.example.com/JanDEau\(index)"),
                 bornDT: Date() - Double.random(in: 365*24*3600 ... 75*365*24*3600)
             )
-            let photoClub = PhotoClub.findCreateUpdate(bgContext: viewContext, // TODO: check MOC choice
+            let photoClub = PhotoClub.findCreateUpdate(context: viewContext, // on main thread
                                                        photoClubIdPlus: PhotoClubIdPlus(fullName: "PhotoClub\(index)",
                                                                                         town: "Town\(index)",
                                                                                         nickname: "ClubNick\(index)"),
@@ -65,8 +65,9 @@ struct PersistenceController {
 
         // https://beckyhansmeyer.com/tag/core-data/ and https://developer.apple.com/videos/play/wwdc2021/10017
         guard let description = container.persistentStoreDescriptions.first else {
-                fatalError("###\(#function): Failed to retrieve a persistent store description.")
-            }
+            ifDebugFatalError("###\(#function): Failed to retrieve a persistent store description.")
+            return
+        }
         description.setOption(true as NSNumber, forKey: NSPersistentHistoryTrackingKey)
         description.setOption(true as NSNumber, forKey: NSPersistentStoreRemoteChangeNotificationPostOptionKey)
 

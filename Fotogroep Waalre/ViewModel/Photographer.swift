@@ -61,7 +61,7 @@ extension Photographer {
 
     // Find existing object and otherwise create a new object
     // Update existing attributes or fill the new object
-    static func findCreateUpdate(bgContext: NSManagedObjectContext, // check MOC TODO
+    static func findCreateUpdate(context: NSManagedObjectContext, // foreground or background context
                                  givenName: String, familyName: String,
                                  memberRolesAndStatus: MemberRolesAndStatus = MemberRolesAndStatus(role: [:],
                                                                                                    stat: [:]),
@@ -71,12 +71,12 @@ extension Photographer {
         let predicateFormat: String = "givenName_ = %@ AND familyName_ = %@" // avoid localization
         let request = fetchRequest(predicate: NSPredicate(format: predicateFormat, givenName, familyName))
 
-        let photographers: [Photographer] = (try? bgContext.fetch(request)) ?? [] // nil means absolute failure
+        let photographers: [Photographer] = (try? context.fetch(request)) ?? [] // nil means absolute failure
         let photoClubPref = "\(photoClub?.fullNameTown ?? "No photo club provided"):"
 
         if let photographer = photographers.first {
             // already exists, so make sure secondary attributes are up to date
-            let wasUpdated = update(bgContext: bgContext, photographer: photographer,
+            let wasUpdated = update(bgContext: context, photographer: photographer,
                                     memberRolesAndStatus: memberRolesAndStatus,
                                     phoneNumber: phoneNumber, eMail: eMail,
                                     photographerWebsite: photographerWebsite, bornDT: bornDT)
@@ -88,11 +88,11 @@ extension Photographer {
             return photographer
         } else {
             // doesn't exist yet, so add new photographer
-            let entity = NSEntityDescription.entity(forEntityName: "Photographer", in: bgContext)!
-            let photographer = Photographer(entity: entity, insertInto: bgContext) // background: use special .init()
+            let entity = NSEntityDescription.entity(forEntityName: "Photographer", in: context)!
+            let photographer = Photographer(entity: entity, insertInto: context) // background: use special .init()
             photographer.givenName = givenName
             photographer.familyName = familyName
-            _ = update(bgContext: bgContext, photographer: photographer, // TODO - check MOC
+            _ = update(bgContext: context, photographer: photographer, // TODO - check MOC
                        memberRolesAndStatus: memberRolesAndStatus,
                        phoneNumber: phoneNumber, eMail: eMail,
                        photographerWebsite: photographerWebsite, bornDT: bornDT)
