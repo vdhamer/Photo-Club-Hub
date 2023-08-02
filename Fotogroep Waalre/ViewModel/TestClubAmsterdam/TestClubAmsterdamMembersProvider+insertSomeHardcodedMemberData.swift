@@ -78,7 +78,7 @@ extension TestClubAmsterdamMembersProvider { // fill with some initial hard-code
                            phoneNumber: String? = nil,
                            eMail: String? = nil) {
         let photographer = Photographer.findCreateUpdate(
-                            context: bgContext, // TODO - check MOC
+                            context: bgContext,
                             givenName: givenName, familyName: familyName,
                             memberRolesAndStatus: memberRolesAndStatus,
                             bornDT: bornDT,
