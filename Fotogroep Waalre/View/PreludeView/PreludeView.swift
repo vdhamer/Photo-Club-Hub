@@ -132,7 +132,7 @@ struct PreludeView: View {
 
                     Text(isDebug() ? String(localized: "In debug mode",
                                             comment: "Shown instead of app name in PreludeView when app is started") :
-                                     String(localized: "Photo Club Hub", // was "Waalre"
+                                     String(localized: "Photo Club Hub",
                                             comment: "Name of the app shown in PreludeView when app is started"))
                         .foregroundColor(.black)
                         .font(Font.custom("Gill Sans", size: 105*(min(geo.size.width, geo.size.height)/800))) // was 105
