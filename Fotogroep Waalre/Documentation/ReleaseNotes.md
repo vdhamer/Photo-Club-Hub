@@ -1,14 +1,11 @@
-### 2.4.0 (Github commit ???????) ??-07-23
+### 2.4.0 (Github commit [t b d] 4-08-23
 
 This is build #4593 in Apple's App Store
-    * Bumped version number to 2.4.0 because of the new app name
-    * Updated app icon (using only one 1024x1024 image)
+    * Bumped version number to 2.4.0 because of the new app name.
 Prelude screen
-    * Adapted logo to new app name, Photo Club Hub
-Roadmap screen
-    * Re-enabled the Roadmap Screen (with some related changes)
+    * Adapted logo to new app name, Photo Club Hub.
 Readme screen
-    * Changed app icon as shown in readme and on iOS home screen
+    * Changed app icon as shown in Readme screen and iOS home screen
 Concurrency
     * Used com.apple.CoreData.concurrencyDebug = 1 to find concurrence errors around Core Data
     * All photoclub data is fetched on a background thread
