@@ -29,12 +29,12 @@ extension FotogroepWaalreMembersProvider { // fill with some initial hard-coded 
         addMember(bgContext: bgContext, givenName: "Bart", familyName: "van Stekelenburg", photoClub: clubWaalre,
                   memberRolesAndStatus: MemberRolesAndStatus(role: [ .chairman: false ]))
 
-        addMember(bgContext: bgContext, givenName: "Miek", familyName: "Kerkhoven", photoClub: clubWaalre,
-                  memberRolesAndStatus: MemberRolesAndStatus(role: [ .chairman: true ]))
-
         addMember(bgContext: bgContext, givenName: "Bettina", familyName: "de Graaf", photoClub: clubWaalre,
                   memberRolesAndStatus: MemberRolesAndStatus(role: [ .viceChairman: false ],
                                                              stat: [.former: true]))
+
+        addMember(bgContext: bgContext, givenName: "Carel", familyName: "Bullens", photoClub: clubWaalre,
+                  memberRolesAndStatus: MemberRolesAndStatus(role: [ .viceChairman: true ], stat: [:]))
 
         addMember(bgContext: bgContext, givenName: "Erik", familyName: "van Geest", photoClub: clubWaalre,
                   memberRolesAndStatus: MemberRolesAndStatus(role: [ .admin: true ]))
@@ -42,22 +42,24 @@ extension FotogroepWaalreMembersProvider { // fill with some initial hard-coded 
         addMember(bgContext: bgContext, givenName: "Greetje", familyName: "van Son", photoClub: clubWaalre,
                   memberRolesAndStatus: MemberRolesAndStatus(role: [ .viceChairman: false ], stat: [:]))
 
-        addMember(bgContext: bgContext, givenName: "Carel", familyName: "Bullens", photoClub: clubWaalre,
-                  memberRolesAndStatus: MemberRolesAndStatus(role: [ .viceChairman: true ], stat: [:]))
+        addMember(bgContext: bgContext, givenName: "Henriëtte", familyName: "van Ekert", photoClub: clubWaalre,
+                  memberRolesAndStatus: MemberRolesAndStatus(role: [ .admin: true ]))
 
         addMember(bgContext: bgContext, givenName: "Jos", familyName: "Jansen", photoClub: clubWaalre,
                   memberRolesAndStatus: MemberRolesAndStatus(role: [ .treasurer: true ]))
 
+        addMember(bgContext: bgContext, givenName: "Kees", familyName: "van Gemert", photoClub: clubWaalre,
+                  memberRolesAndStatus: MemberRolesAndStatus(role: [ .secretary: true ]))
+
         addMember(bgContext: bgContext, givenName: "Marijke", familyName: "Gallas", photoClub: clubWaalre,
                   memberRolesAndStatus: MemberRolesAndStatus(role: [:], stat: [ .honorary: true ]))
+
+        addMember(bgContext: bgContext, givenName: "Miek", familyName: "Kerkhoven", photoClub: clubWaalre,
+                  memberRolesAndStatus: MemberRolesAndStatus(role: [ .chairman: true ]))
 
         addMember(bgContext: bgContext, givenName: "Peter", familyName: "van den Hamer", photoClub: clubWaalre,
                   memberRolesAndStatus: MemberRolesAndStatus(role: [ .admin: false, .secretary: false ],
                                                              stat: [.former: true]))
-
-        addMember(bgContext: bgContext, givenName: "Kees", familyName: "van Gemert", photoClub: clubWaalre,
-                  memberRolesAndStatus: MemberRolesAndStatus(role: [ .secretary: true ]))
-
         do {
 //            if bgContext.hasChanges { // optimization
                 try bgContext.save() // commit all changes
