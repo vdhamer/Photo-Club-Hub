@@ -19,7 +19,6 @@
 		D0416280295BB9DF00ED073A /* NSPredicate+all.swift in Sources */ = {isa = PBXBuildFile; fileRef = D041627F295BB9DF00ED073A /* NSPredicate+all.swift */; };
 		D0416282295BBA7700ED073A /* CoreLocation+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0416281295BBA7700ED073A /* CoreLocation+Equatable.swift */; };
 		D044646527FCE7C100990613 /* UIDevice+IsIPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = D044646427FCE7C100990613 /* UIDevice+IsIPad.swift */; };
-		D050E2792A7E89D800B84081 /* Portfolios.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D050E2782A7E89D800B84081 /* Portfolios.jpg */; };
 		D05AF1B229EF44530079AE77 /* Roadmap in Frameworks */ = {isa = PBXBuildFile; productRef = D05AF1B129EF44530079AE77 /* Roadmap */; };
 		D05C5E282A73D86B00E39F77 /* Fotogroep_Waalre_2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D05C5E0B2A73D86B00E39F77 /* Fotogroep_Waalre_2.xcdatamodeld */; };
 		D05E451E27EF2A2C00D31327 /* ReadmeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05E451D27EF2A2C00D31327 /* ReadmeView.swift */; };
@@ -114,7 +113,7 @@
 		D041627F295BB9DF00ED073A /* NSPredicate+all.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSPredicate+all.swift"; sourceTree = "<group>"; };
 		D0416281295BBA7700ED073A /* CoreLocation+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreLocation+Equatable.swift"; sourceTree = "<group>"; };
 		D044646427FCE7C100990613 /* UIDevice+IsIPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+IsIPad.swift"; sourceTree = "<group>"; };
-		D050E2782A7E89D800B84081 /* Portfolios.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Portfolios.jpg; sourceTree = "<group>"; };
+		D050E27A2A7E8BF700B84081 /* portfolios.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = portfolios.jpeg; sourceTree = "<group>"; };
 		D05C5E0C2A73D86B00E39F77 /* Fotogroep_Waalre_2_2_0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fotogroep_Waalre_2_2_0.xcdatamodel; sourceTree = "<group>"; };
 		D05C5E0D2A73D86B00E39F77 /* Fotogroep_Waalre_2_2_9.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fotogroep_Waalre_2_2_9.xcdatamodel; sourceTree = "<group>"; };
 		D05C5E0E2A73D86B00E39F77 /* Fotogroep_Waalre_2_0_2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fotogroep_Waalre_2_0_2.xcdatamodel; sourceTree = "<group>"; };
@@ -550,7 +549,7 @@
 		D0F2F2F32873A19F009DDD2A /* images */ = {
 			isa = PBXGroup;
 			children = (
-				D050E2782A7E89D800B84081 /* Portfolios.jpg */,
+				D050E27A2A7E8BF700B84081 /* portfolios.jpeg */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -684,7 +683,6 @@
 				D0831A56277F82460049AB84 /* nl.xcloc in Resources */,
 				D06061EA28A0456C00A675A7 /* FGWPrivateMembersURL3.txt in Resources */,
 				D0B52497277F9A4B00927BCA /* Localizable.strings in Resources */,
-				D050E2792A7E89D800B84081 /* Portfolios.jpg in Resources */,
 				D0831A51277F73C00049AB84 /* Preview Assets.xcassets in Resources */,
 				D0B52494277F9A4B00927BCA /* Fotogroep-Waalre-InfoPlist.strings in Resources */,
 				D06061E828A0453F00A675A7 /* FGWPrivateMembersURL2.txt in Resources */,
