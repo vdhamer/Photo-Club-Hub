@@ -113,7 +113,7 @@
 		D041627F295BB9DF00ED073A /* NSPredicate+all.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSPredicate+all.swift"; sourceTree = "<group>"; };
 		D0416281295BBA7700ED073A /* CoreLocation+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreLocation+Equatable.swift"; sourceTree = "<group>"; };
 		D044646427FCE7C100990613 /* UIDevice+IsIPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+IsIPad.swift"; sourceTree = "<group>"; };
-		D050E27A2A7E8BF700B84081 /* portfolios.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = portfolios.jpeg; sourceTree = "<group>"; };
+		D050E27A2A7E8BF700B84081 /* portfolios.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = portfolios.jpg; sourceTree = "<group>"; };
 		D05C5E0C2A73D86B00E39F77 /* Fotogroep_Waalre_2_2_0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fotogroep_Waalre_2_2_0.xcdatamodel; sourceTree = "<group>"; };
 		D05C5E0D2A73D86B00E39F77 /* Fotogroep_Waalre_2_2_9.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fotogroep_Waalre_2_2_9.xcdatamodel; sourceTree = "<group>"; };
 		D05C5E0E2A73D86B00E39F77 /* Fotogroep_Waalre_2_0_2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fotogroep_Waalre_2_0_2.xcdatamodel; sourceTree = "<group>"; };
@@ -549,7 +549,7 @@
 		D0F2F2F32873A19F009DDD2A /* images */ = {
 			isa = PBXGroup;
 			children = (
-				D050E27A2A7E8BF700B84081 /* portfolios.jpeg */,
+				D050E27A2A7E8BF700B84081 /* portfolios.jpg */,
 			);
 			path = images;
 			sourceTree = "<group>";
