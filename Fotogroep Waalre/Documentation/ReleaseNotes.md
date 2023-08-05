@@ -1,9 +1,19 @@
+### 2.4.1 (Github commit 276c9f3) ??-08-23
+
+Portfolio screen
+    * Henriëtte shown as admin for FGWaalre
+
+This is build #4594 in Apple's App Store
+---------------------------------------------------------------------------
 ### 2.4.0 (Github commit 276c9f3) 4-08-23
 
 This is build #4593 in Apple's App Store
     * Bumped version number to 2.4.0 because of the new app name.
 Prelude screen
     * Adapted logo to new app name, Photo Club Hub.
+Portfolio screen
+    * Replaced images for former FGWaalre coach Theo van Waas
+    * Moved Bettina from members to ex-members for FGWaalre
 Readme screen
     * Changed app icon as shown in Readme screen and iOS home screen
 Concurrency
