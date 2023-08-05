@@ -662,7 +662,5 @@ Project Link: [https://github.com/vdhamer/PhotoClubWaalre](https://github.com/vd
 [issues-url]: https://github.com/vdhamer/PhotoClubWaalre/issues
 [license-shield]: https://img.shields.io/github/license/vdhamer/PhotoClubWaalre.svg?style=for-the-badge
 [license-url]: https://github.com/vdhamer/PhotoClubWaalre/blob/main/.github/LICENSE.md
-[portfolios-screenshot]: images/portfolios.png
+[portfolios-screenshot]: images/portfolios.jpg
 [product-schema]: ../Assets.xcassets/images/Schema.imageset/Schema.png
-
-
