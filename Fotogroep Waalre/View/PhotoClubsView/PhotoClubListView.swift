@@ -13,7 +13,7 @@ struct PhotoClubListView: View {
     @StateObject var model = PreferencesViewModel()
 
     @FetchRequest(
-        sortDescriptors: [SortDescriptor(\.priority_, order: .reverse), // highest priority first
+        sortDescriptors: [SortDescriptor(\.pinned, order: .reverse), // pinned club at top of list
                           SortDescriptor(\.name_, order: .forward), // photo clubs are identified by (name, town)
                           SortDescriptor(\.town_, order: .forward)], // just to make it repeatable
         animation: .default)

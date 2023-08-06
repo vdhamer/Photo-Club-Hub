@@ -29,13 +29,13 @@ extension BellusImagoMembersProvider { // fill with some initial hard-coded cont
 
         // add Bellus Imago to Photo Clubs (if needed)
         let clubBellusImago = PhotoClub.findCreateUpdate(
-                                                         context: bgContext,
-                                                         photoClubIdPlus: Self.photoClubBellusImagoIdPlus,
-                                                         photoClubWebsite: BellusImagoMembersProvider.bellusImagoURL,
-                                                         fotobondNumber: 1671, kvkNumber: nil,
-                                                         coordinates: CLLocationCoordinate2D(latitude: 51.425410,
-                                                                                             longitude: 5.387560),
-                                                         priority: 2
+                                                        context: bgContext,
+                                                        photoClubIdPlus: Self.photoClubBellusImagoIdPlus,
+                                                        photoClubWebsite: BellusImagoMembersProvider.bellusImagoURL,
+                                                        fotobondNumber: 1671, kvkNumber: nil,
+                                                        coordinates: CLLocationCoordinate2D(latitude: 51.425410,
+                                                                                            longitude: 5.387560),
+                                                        pinned: false
                                                         )
         clubBellusImago.hasHardCodedMemberData = true // store in database that we ran insertSomeHardcodedMembers...
 

@@ -23,7 +23,8 @@ extension FotogroepWaalreMembersProvider { // fill with some initial hard-coded 
                                         fotobondNumber: 1634, kvkNumber: 17261693,
                                         coordinates: CLLocationCoordinate2D(latitude: 51.39184,
                                                                             longitude: 5.46144),
-                                        priority: 1)
+                                        pinned: true // TODO
+                                        )
         clubWaalre.hasHardCodedMemberData = true // store in database that we ran insertSomeHardcodedMembers...
 
         addMember(bgContext: bgContext, givenName: "Bart", familyName: "van Stekelenburg", photoClub: clubWaalre,

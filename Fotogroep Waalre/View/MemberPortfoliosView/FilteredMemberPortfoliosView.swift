@@ -20,12 +20,13 @@ struct FilteredMemberPortfoliosView: View {
     let searchText: Binding<String>
 
     // regenerate Section using current FetchRequest with current filters and sorting
-    init(predicate: NSPredicate, searchText: Binding<String>) {
+    init(memberPredicate: NSPredicate, searchText: Binding<String>) {
     // https://developer.apple.com/documentation/SwiftUI/SectionedFetchRequest
     // When you need to dynamically change the section identifier, predicate, or sort descriptors,
     // access the request’s SectionedFetchRequest.Configuration structure, either directly or with a binding.
 
         let sortDescriptors = [ // XCode had problems parsing this array
+            SortDescriptor(\MemberPortfolio.photoClub_!.pinned, order: .reverse), // TODO
             SortDescriptor(\MemberPortfolio.photoClub_!.name_, order: .forward),
             SortDescriptor(\MemberPortfolio.photoClub_!.town_, order: .forward),
             SortDescriptor(\MemberPortfolio.photographer_!.givenName_, order: .forward),
@@ -34,7 +35,7 @@ struct FilteredMemberPortfoliosView: View {
         _sectionedPortfolios = SectionedFetchRequest(
             sectionIdentifier: \.photoClub_!.fullNameTown,
             sortDescriptors: sortDescriptors,
-            predicate: predicate,
+            predicate: memberPredicate,
             animation: .default)
         self.searchText = searchText
     }
@@ -212,12 +213,12 @@ struct FilteredMemberPortfoliosView: View {
 }
 
 struct FilteredMemberPortfolios_Previews: PreviewProvider {
-    static let predicate = NSPredicate(format: "photographer_.givenName_ = %@", argumentArray: ["Jan"])
+    static let memberPredicate = NSPredicate(format: "photographer_.givenName_ = %@", argumentArray: ["Jan"])
     @State static var searchText: String = ""
 
     static var previews: some View {
         List { // lists are "Lazy" automatically
-            FilteredMemberPortfoliosView(predicate: predicate, searchText: $searchText)
+            FilteredMemberPortfoliosView(memberPredicate: memberPredicate, searchText: $searchText)
                 .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
         }
         .navigationBarTitle(Text(String("FilteredMemberPortfoliosView"))) // prevent localization
