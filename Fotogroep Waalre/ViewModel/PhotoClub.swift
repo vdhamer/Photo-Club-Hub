@@ -96,8 +96,10 @@ extension PhotoClub {
                                  pinned: Bool = false
                                 ) -> PhotoClub {
         let predicateFormat: String = "name_ = %@ AND town_ = %@" // avoid localization
-        let request = fetchRequest(predicate: NSPredicate(format: predicateFormat, photoClubIdPlus.fullName,
-                                                                                   photoClubIdPlus.town))
+        let request = fetchRequest(predicate: NSPredicate( format: predicateFormat,
+                                                           argumentArray: [photoClubIdPlus.fullName,
+                                                                          photoClubIdPlus.town] )
+                                  )
 
 		let photoClubs: [PhotoClub] = (try? context.fetch(request)) ?? [] // nil means absolute failure
         if photoClubs.count > 1 {
@@ -204,7 +206,7 @@ extension PhotoClub {
 
 extension PhotoClub { // convenience function
 
-	static func fetchRequest(predicate: NSPredicate) -> NSFetchRequest<PhotoClub> { // convert to SortDescriptor TODO
+	static func fetchRequest(predicate: NSPredicate) -> NSFetchRequest<PhotoClub> {
 		let request = NSFetchRequest<PhotoClub>(entityName: "PhotoClub")
 		request.predicate = predicate // WHERE part of the SQL query
 		request.sortDescriptors = [NSSortDescriptor(key: "pinned", ascending: true)] // ORDER BY part of the SQL query
