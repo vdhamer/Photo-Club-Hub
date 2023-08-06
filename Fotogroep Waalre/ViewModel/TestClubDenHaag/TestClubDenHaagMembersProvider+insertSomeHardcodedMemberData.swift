@@ -30,13 +30,12 @@ extension TestClubDenHaagMembersProvider { // fill with some initial hard-coded 
 
         // add photo club to Photo Clubs (if needed)
         let clubTestDenHaag = PhotoClub.findCreateUpdate(
-                                                 context: bgContext,
-                                                 photoClubIdPlus: Self.photoClubTestDenHaagIdPlus,
-                                                 photoClubWebsite: Self.testDenHaagURL,
-                                                 fotobondNumber: nil, kvkNumber: nil,
-                                                 coordinates: CLLocationCoordinate2D(latitude: 52.090556,
-                                                                                     longitude: 4.279722),
-                                                 priority: 1
+                                                context: bgContext,
+                                                photoClubIdPlus: Self.photoClubTestDenHaagIdPlus,
+                                                photoClubWebsite: Self.testDenHaagURL,
+                                                fotobondNumber: nil, kvkNumber: nil,
+                                                coordinates: CLLocationCoordinate2D(latitude: 52.090556,
+                                                                                    longitude: 4.279722)
                                                 )
         clubTestDenHaag.hasHardCodedMemberData = true // store in database that we ran insertSomeHardcodedMembers...
 

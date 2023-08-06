@@ -2,6 +2,9 @@
 
 Portfolio screen
     * Henriëtte shown as admin for FGWaalre
+Maintenance
+    * Updated screenshot used on Github
+    * replaced `priority` Int of a PhotoClub by `pinned` Bool
 
 This is build #4594 in Apple's App Store
 ---------------------------------------------------------------------------

@@ -24,7 +24,7 @@ struct PhotoClubView: View {
     // regenerate Section using dynamic FetchRequest with dynamic predicate and dynamic sortDescriptor
     init(predicate: NSPredicate) {
         _fetchRequest = FetchRequest<PhotoClub>(sortDescriptors: // replaces previous fetchRequest
-                                                    [SortDescriptor(\.priority_, order: .reverse), // highest prio first
+                                                    [SortDescriptor(\.pinned, order: .reverse), // pinned clubs first
                                                      SortDescriptor(\.name_, order: .forward), // photoclubID=name&town
                                                      SortDescriptor(\.town_, order: .forward)],
                                                 predicate: predicate,

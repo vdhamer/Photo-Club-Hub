@@ -36,7 +36,7 @@
         <attribute name="memberListURL_" optional="YES" attributeType="URI"/>
         <attribute name="name_" attributeType="String" defaultValueString="DefaultPhotoClubName"/>
         <attribute name="photoClubWebsite" optional="YES" attributeType="URI"/>
-        <attribute name="priority_" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="pinned" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="shortName_" optional="YES" attributeType="String"/>
         <attribute name="town_" attributeType="String" defaultValueString="DefaultTown"/>
         <relationship name="members_" toMany="YES" deletionRule="Cascade" destinationEntity="MemberPortfolio" inverseName="photoClub_" inverseEntity="MemberPortfolio"/>

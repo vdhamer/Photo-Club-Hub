@@ -8,6 +8,7 @@
 import CoreData // needed for NSSet
 import CoreLocation // needed for coordinate translation
 import SwiftUI
+import Foundation
 
 extension PhotoClub: Comparable {
 
@@ -78,11 +79,6 @@ extension PhotoClub {
         set { memberListURL_ = newValue }
     }
 
-    var priority: Int16 {
-        get { return priority_ }
-        set { priority_ = newValue}
-    }
-
     var coordinates: CLLocationCoordinate2D {
         get { return CLLocationCoordinate2D(latitude: latitude_, longitude: longitude_) }
         set {
@@ -97,7 +93,7 @@ extension PhotoClub {
                                  photoClubIdPlus: PhotoClubIdPlus,
                                  photoClubWebsite: URL? = nil, fotobondNumber: Int16? = nil, kvkNumber: Int32? = nil,
                                  coordinates: CLLocationCoordinate2D? = nil,
-                                 priority: Int16? = nil
+                                 pinned: Bool = false
                                 ) -> PhotoClub {
         let predicateFormat: String = "name_ = %@ AND town_ = %@" // avoid localization
         let request = fetchRequest(predicate: NSPredicate(format: predicateFormat, photoClubIdPlus.fullName,
@@ -118,7 +114,7 @@ extension PhotoClub {
                                        fotobondNumber: fotobondNumber,
                                        kvkNumber: kvkNumber),
                       coordinates: coordinates,
-                      priority: priority) {
+                      pinned: pinned) {
                             print("Updated info for photo club \(photoClub.fullName)")
             }
 			return photoClub
@@ -134,7 +130,7 @@ extension PhotoClub {
                                         fotobondNumber: fotobondNumber,
                                         kvkNumber: kvkNumber),
                        coordinates: coordinates,
-                       priority: priority)
+                       pinned: pinned)
             print("""
                   \(photoClubIdPlus.fullNameTown): \
                   Created new photo club
@@ -148,7 +144,7 @@ extension PhotoClub {
     static func update(bgContext: NSManagedObjectContext, photoClub: PhotoClub, shortName: String,
                        // swiftlint:disable:next large_tuple
                        optionalFields: (photoClubWebsite: URL?, fotobondNumber: Int16?, kvkNumber: Int32?),
-                       coordinates: CLLocationCoordinate2D?, priority: Int16?) -> Bool {
+                       coordinates: CLLocationCoordinate2D?, pinned: Bool) -> Bool {
 
 		var modified: Bool = false
 
@@ -173,8 +169,8 @@ extension PhotoClub {
             photoClub.latitude_ = coordinates.latitude
 			modified = true
 		}
-        if let priority, photoClub.priority != priority {
-            photoClub.priority_ = priority
+        if photoClub.pinned != pinned {
+            photoClub.pinned = pinned
             modified = true
         }
 		if modified {
@@ -208,10 +204,10 @@ extension PhotoClub {
 
 extension PhotoClub { // convenience function
 
-	static func fetchRequest(predicate: NSPredicate) -> NSFetchRequest<PhotoClub> {
+	static func fetchRequest(predicate: NSPredicate) -> NSFetchRequest<PhotoClub> { // convert to SortDescriptor TODO
 		let request = NSFetchRequest<PhotoClub>(entityName: "PhotoClub")
 		request.predicate = predicate // WHERE part of the SQL query
-		request.sortDescriptors = [NSSortDescriptor(key: "priority_", ascending: true)] // ORDER BY part of the SQL query
+		request.sortDescriptors = [NSSortDescriptor(key: "pinned", ascending: true)] // ORDER BY part of the SQL query
 		return request
 	}
 

@@ -24,7 +24,7 @@ struct MemberPortfolioListView: View {
     private var photographers: FetchedResults<Photographer>
 
     @FetchRequest(
-        sortDescriptors: [SortDescriptor(\.priority_, order: .reverse), // highest priority first
+        sortDescriptors: [SortDescriptor(\.pinned, order: .reverse), // pinned first
                           SortDescriptor(\.name_, order: .forward), // photo clubs are identified by (name, town)
                           SortDescriptor(\.town_, order: .forward)],
         animation: .default)
@@ -38,7 +38,7 @@ struct MemberPortfolioListView: View {
 
     var body: some View {
         List { // lists are automatically "Lazy"
-            FilteredMemberPortfoliosView(predicate: model.preferences.memberPredicate, searchText: $searchText)
+            FilteredMemberPortfoliosView(memberPredicate: model.preferences.memberPredicate, searchText: $searchText)
         }
         .listStyle(.plain)
         .refreshable { // for pull-to-refresh
