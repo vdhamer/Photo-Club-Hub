@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import CoreData // for mergePolicy
+import CoreData // for ManagedObjectContext
 
 @main
 struct FotogroepWaalreApp: App {
