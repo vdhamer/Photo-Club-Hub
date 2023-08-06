@@ -68,11 +68,20 @@ extension Photographer {
                                  phoneNumber: String? = nil, eMail: String? = nil,
                                  photographerWebsite: URL? = nil, bornDT: Date? = nil,
                                  photoClub: PhotoClub? = nil) -> Photographer { // photoClub only shown on console
-        let predicateFormat: String = "givenName_ = %@ AND familyName_ = %@" // avoid localization
-        let request = fetchRequest(predicate: NSPredicate(format: predicateFormat, givenName, familyName))
-
-        let photographers: [Photographer] = (try? context.fetch(request)) ?? [] // nil means absolute failure
         let photoClubPref = "\(photoClub?.fullNameTown ?? "No photo club provided"):"
+
+        let predicateFormat: String = "givenName_ = %@ AND familyName_ = %@" // avoid localization
+        let predicate = NSPredicate(format: predicateFormat, argumentArray: [givenName, familyName])
+        let fetchRequest: NSFetchRequest<Photographer> = Photographer.fetchRequest()
+        fetchRequest.predicate = predicate
+        let photographers: [Photographer] = (try? context.fetch(fetchRequest)) ?? [] // nil means absolute failure
+
+        if photographers.count > 1 { // there is actually a Core Data constraint to prevent this
+            ifDebugFatalError("Query returned \(photographers.count) photographers named " +
+                              "\(givenName) \(familyName)",
+                              file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
+            // in release mode, log that there are multiple photographers, but continue using the first one.
+        }
 
         if let photographer = photographers.first {
             // already exists, so make sure secondary attributes are up to date
@@ -146,18 +155,6 @@ extension Photographer {
 			}
 		}
         return wasUpdated
-	}
-
-}
-
-extension Photographer { // convenience function
-
-	static func fetchRequest(predicate: NSPredicate) -> NSFetchRequest<Photographer> {
-		let request = NSFetchRequest<Photographer>(entityName: "Photographer")
-		request.predicate = predicate // WHERE part of the SQL query
-		request.sortDescriptors = [NSSortDescriptor(key: "givenName_", ascending: true),
-								   NSSortDescriptor(key: "familyName_", ascending: true)]
-		return request
 	}
 
 }

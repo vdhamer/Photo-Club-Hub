@@ -7,8 +7,7 @@
 
 import CoreData // needed for NSSet
 import CoreLocation // needed for coordinate translation
-import SwiftUI
-import Foundation
+import SwiftUI // for UserInterfaceSizeClass
 
 extension PhotoClub: Comparable {
 
@@ -102,8 +101,8 @@ extension PhotoClub {
                                   )
 
 		let photoClubs: [PhotoClub] = (try? context.fetch(request)) ?? [] // nil means absolute failure
-        if photoClubs.count > 1 {
-            ifDebugFatalError("Query returned \(photoClubs.count) photoclub(s) named " +
+        if photoClubs.count > 1 { // there is actually a Core Data constraint to prevent this
+            ifDebugFatalError("Query returned \(photoClubs.count) photoclubs named " +
                               "\(photoClubIdPlus.fullName) in \(photoClubIdPlus.town)",
                               file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
             // in release mode, log that there are multiple clubs, but continue using the first one.

@@ -5,6 +5,8 @@ Portfolio screen
 Maintenance
     * Updated screenshot used on Github
     * replaced `priority` Int of a PhotoClub by `pinned` Bool
+Maintenance
+    * Upgraded and tested with iOS 17.0 beta 5 (21A5303c), XCode 14.0 beta 6
 
 This is build #4594 in Apple's App Store
 ---------------------------------------------------------------------------

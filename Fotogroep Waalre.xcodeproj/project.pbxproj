@@ -244,6 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				D02082AE296F6ED7009493C4 /* TestClubAmsterdamMembersProvider.swift */,
+				D0831A2B277F72590049AB84 /* FotogroepWaalreMembersProvider+insertSomeHardcodedMemberData.swift */,
 				D02082B0296F6F60009493C4 /* TestClubAmsterdamMembersProvider+insertSomeHardcodedMemberData.swift */,
 			);
 			path = TestClubAmsterdam;
@@ -420,7 +421,6 @@
 			children = (
 				D0831A2C277F72590049AB84 /* FotogroepWaalreMembersProvider.swift */,
 				D067549F2942B23F00C0AB08 /* FotogroepWaalreMembersProvide+enumHTMLPageLoadingState.swift */,
-				D0831A2B277F72590049AB84 /* FotogroepWaalreMembersProvider+insertSomeHardcodedMemberData.swift */,
 				D0968F652A76F8A00096987A /* FotogroepWaalreMembersProvider+insertOnlineMemberData.swift */,
 				D08281342959C9D800D9C232 /* FotogroepWaalre Extractors */,
 				D06061E728A0453F00A675A7 /* FGWPrivateMembersURL2.txt */,
