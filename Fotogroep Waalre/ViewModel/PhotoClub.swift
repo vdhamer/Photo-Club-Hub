@@ -94,13 +94,15 @@ extension PhotoClub {
                                  coordinates: CLLocationCoordinate2D? = nil,
                                  pinned: Bool = false
                                 ) -> PhotoClub {
-        let predicateFormat: String = "name_ = %@ AND town_ = %@" // avoid localization
-        let request = fetchRequest(predicate: NSPredicate( format: predicateFormat,
-                                                           argumentArray: [photoClubIdPlus.fullName,
-                                                                          photoClubIdPlus.town] )
-                                  )
 
-		let photoClubs: [PhotoClub] = (try? context.fetch(request)) ?? [] // nil means absolute failure
+        let predicateFormat: String = "name_ = %@ AND town_ = %@" // avoid localization
+        let predicate = NSPredicate(format: predicateFormat,
+                                    argumentArray: [photoClubIdPlus.fullName,
+                                                    photoClubIdPlus.town] )
+        let fetchRequest: NSFetchRequest<PhotoClub> = PhotoClub.fetchRequest()
+        fetchRequest.predicate = predicate
+		let photoClubs: [PhotoClub] = (try? context.fetch(fetchRequest)) ?? [] // nil means absolute failure
+
         if photoClubs.count > 1 { // there is actually a Core Data constraint to prevent this
             ifDebugFatalError("Query returned \(photoClubs.count) photoclubs named " +
                               "\(photoClubIdPlus.fullName) in \(photoClubIdPlus.town)",
@@ -200,16 +202,5 @@ extension PhotoClub {
 //            /* in release mode, if deleting all members fails, just continue */
 //        }
     }
-
-}
-
-extension PhotoClub { // convenience function
-
-	static func fetchRequest(predicate: NSPredicate) -> NSFetchRequest<PhotoClub> {
-		let request = NSFetchRequest<PhotoClub>(entityName: "PhotoClub")
-		request.predicate = predicate // WHERE part of the SQL query
-		request.sortDescriptors = [NSSortDescriptor(key: "pinned", ascending: true)] // ORDER BY part of the SQL query
-		return request
-	}
 
 }

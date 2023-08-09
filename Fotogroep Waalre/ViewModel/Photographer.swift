@@ -67,7 +67,8 @@ extension Photographer {
                                                                                                    stat: [:]),
                                  phoneNumber: String? = nil, eMail: String? = nil,
                                  photographerWebsite: URL? = nil, bornDT: Date? = nil,
-                                 photoClub: PhotoClub? = nil) -> Photographer { // photoClub only shown on console
+                                 photoClub: PhotoClub? = nil // photoClub only shown on console for debug purposes
+                                ) -> Photographer {
         let photoClubPref = "\(photoClub?.fullNameTown ?? "No photo club provided"):"
 
         let predicateFormat: String = "givenName_ = %@ AND familyName_ = %@" // avoid localization
