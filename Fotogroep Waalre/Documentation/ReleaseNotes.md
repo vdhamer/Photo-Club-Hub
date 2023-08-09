@@ -1,12 +1,13 @@
 ### 2.4.1 (Github commit 276c9f3) ??-08-23
 
 Portfolio screen
-    * Henriëtte shown as admin for FGWaalre
+    * Added a 2nd admin for FGWaalre
+Photo Clubs screen
+    * Fixed concurrency bug that initially showed blue-only map for 2nd photo club.
 Maintenance
     * Updated screenshot used on Github
-    * replaced `priority` Int of a PhotoClub by `pinned` Bool
-Maintenance
-    * Upgraded and tested with iOS 17.0 beta 5 (21A5303c), XCode 14.0 beta 6
+    * Replaced `priority: Int` sorting param for photo clubs by `pinned: Bool`.
+    * Upgraded and tested with iOS 17.0 beta 5 (21A5303c), XCode 14.0 beta 6.
 
 This is build #4594 in Apple's App Store
 ---------------------------------------------------------------------------
