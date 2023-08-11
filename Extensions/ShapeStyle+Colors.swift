@@ -1,6 +1,6 @@
 //
 //  ShapeStyle+Colors.swift
-//  Moonshot
+//  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 05/02/2022.
 //
