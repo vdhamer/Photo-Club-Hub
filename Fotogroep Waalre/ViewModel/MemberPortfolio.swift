@@ -12,8 +12,8 @@ import RegexBuilder
 extension MemberPortfolio: Comparable {
 
 	public static func < (lhs: MemberPortfolio, rhs: MemberPortfolio) -> Bool {
-        if lhs.photographer.fullName != rhs.photographer.fullName {
-                return (lhs.photographer.fullName < rhs.photographer.fullName) // primary sorting criterium
+        if lhs.photographer.fullNameFirstLast != rhs.photographer.fullNameFirstLast {
+                return (lhs.photographer.fullNameFirstLast < rhs.photographer.fullNameFirstLast) // main sorting order
         } else {
             return (lhs.photoClub.fullName < rhs.photoClub.fullName) // secondary sorting criterium
         }
@@ -34,7 +34,7 @@ extension MemberPortfolio { // computed properties (some related to handling opt
 		set { dateIntervalEnd_ = newValue
             if newValue < Date() && !isFormerMember { // no longer a member
                 isFormerMember = true
-                print("Overruling former membership flag for member \(self.photographer.fullName)")
+                print("Overruling former membership flag for member \(self.photographer.fullNameFirstLast)")
             }
         }
 	}
@@ -67,7 +67,7 @@ extension MemberPortfolio { // computed properties (some related to handling opt
 	}
 
     public var id: String {
-        return photographer.fullName + " in " + photoClub.fullNameTown
+        return photographer.fullNameFirstLast + " in " + photoClub.fullNameTown
     }
 
     var memberWebsite: URL {
@@ -200,7 +200,7 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
 
         if memberPortfolios.count > 1 { // there is actually a Core Data constraint to prevent this
             ifDebugFatalError("Query returned multiple (\(memberPortfolios.count)) memberPortfolios for " +
-                              "\(photographer.fullName) in \(photoClub.fullNameTown)",
+                              "\(photographer.fullNameFirstLast) in \(photoClub.fullNameTown)",
                               file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
             // in release mode, log that there are multiple clubs, but continue using the first one.
         }
@@ -213,7 +213,7 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
                       latestImage: latestImage) {
                 print("""
                       \(memberPortfolio.photoClub.fullName): \
-                      Updated info for member \(memberPortfolio.photographer.fullName)
+                      Updated info for member \(memberPortfolio.photographer.fullNameFirstLast)
                       """)
             }
  			return memberPortfolio
@@ -229,7 +229,7 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
                        latestImage: latestImage)
             print("""
                   \(memberPortfolio.photoClub.fullNameTown): \
-                  Created new membership for \(memberPortfolio.photographer.fullName)
+                  Created new membership for \(memberPortfolio.photographer.fullNameFirstLast)
                   """)
 			return memberPortfolio
 		}
@@ -287,27 +287,27 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
 				try bgContext.save()
                 if changed1 { print("""
                                     \(memberPortfolio.photoClub.fullNameTown): \
-                                    Changed roles for \(memberPortfolio.photographer.fullName)
+                                    Changed roles for \(memberPortfolio.photographer.fullNameFirstLast)
                                     """) }
                 if changed2 { print("""
                                     \(memberPortfolio.photoClub.fullNameTown): \
-                                    Changed start date for \(memberPortfolio.photographer.fullName)
+                                    Changed start date for \(memberPortfolio.photographer.fullNameFirstLast)
                                     """) }
                 if changed3 { print("""
                                     \(memberPortfolio.photoClub.fullNameTown): \
-                                    Changed end date for \(memberPortfolio.photographer.fullName)
+                                    Changed end date for \(memberPortfolio.photographer.fullNameFirstLast)
                                     """) }
                 if changed4 { print("""
                                     \(memberPortfolio.photoClub.fullNameTown): \
-                                    Changed club website for \(memberPortfolio.photographer.fullName)
+                                    Changed club website for \(memberPortfolio.photographer.fullNameFirstLast)
                                     """) }
                 if changed5 { print("""
                                     \(memberPortfolio.photoClub.fullNameTown): \
-                                    Changed latest image for \(memberPortfolio.photographer.fullName) \
+                                    Changed latest image for \(memberPortfolio.photographer.fullNameFirstLast) \
                                     to \(latestImage?.lastPathComponent ?? "<noLatestImage>")
                                     """)}
 			} catch {
-                ifDebugFatalError("Update failed for member \(memberPortfolio.photographer.fullName) " +
+                ifDebugFatalError("Update failed for member \(memberPortfolio.photographer.fullNameFirstLast) " +
                                   "in club \(memberPortfolio.photoClub.fullNameTown): \(error)",
                                   file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
                 // in release mode, failure to update this data is only logged. And the app doesn't stop.
@@ -378,7 +378,7 @@ extension MemberPortfolio {
 
         guard let match = try? regex.firstMatch(in: xmlContent) else {
             print("\(photoClub.fullName): ERROR - could not find image in parseXMLContent() " +
-                  "for \(member.photographer.fullName) in \(member.photoClub.fullName)")
+                  "for \(member.photographer.fullNameFirstLast) in \(member.photoClub.fullName)")
             return
         }
         let (_, _, thumbSuffix) = match.output

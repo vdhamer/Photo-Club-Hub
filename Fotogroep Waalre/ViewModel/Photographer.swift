@@ -10,7 +10,7 @@ import CoreData // needed for NSSet
 extension Photographer: Comparable {
 
 	public static func < (lhs: Photographer, rhs: Photographer) -> Bool {
-		return (lhs.fullName < rhs.fullName)
+		return (lhs.fullNameFirstLast < rhs.fullNameFirstLast)
 	}
 
 }
@@ -32,8 +32,12 @@ extension Photographer {
 		set { familyName_ = newValue }
 	}
 
-    var fullName: String {
+    var fullNameFirstLast: String {
         return givenName + " " + familyName
+    }
+
+    var fullNameLastFirst: String {
+        return familyName + ", " + givenName
     }
 
     var memberRolesAndStatus: MemberRolesAndStatus {
@@ -91,9 +95,9 @@ extension Photographer {
                                     phoneNumber: phoneNumber, eMail: eMail,
                                     photographerWebsite: photographerWebsite, bornDT: bornDT)
             if wasUpdated {
-                print("\(photoClubPref) Updated info for photographer <\(photographer.fullName)>")
+                print("\(photoClubPref) Updated info for photographer <\(photographer.fullNameFirstLast)>")
             } else {
-                print("\(photoClubPref) No changes for photographer <\(photographer.fullName)>")
+                print("\(photoClubPref) No changes for photographer <\(photographer.fullNameFirstLast)>")
             }
             return photographer
         } else {
@@ -106,7 +110,8 @@ extension Photographer {
                        memberRolesAndStatus: memberRolesAndStatus,
                        phoneNumber: phoneNumber, eMail: eMail,
                        photographerWebsite: photographerWebsite, bornDT: bornDT)
-            print("\(photoClubPref) Successfully created new photographer <\(photographer.fullName)>") // ignore updated
+            // don't log whether attribbutes have been updated if it is a new photographer
+            print("\(photoClubPref) Successfully created new photographer <\(photographer.fullNameFirstLast)>")
             return photographer
         }
     }
@@ -149,7 +154,7 @@ extension Photographer {
 			do {
 				try bgContext.save()
 			} catch {
-                ifDebugFatalError("Update failed for photographer <\(photographer.fullName)>",
+                ifDebugFatalError("Update failed for photographer <\(photographer.fullNameFirstLast)>",
                                   file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
                 // in release mode, if the data cannot be saved, log this and continue.
                 wasUpdated = false

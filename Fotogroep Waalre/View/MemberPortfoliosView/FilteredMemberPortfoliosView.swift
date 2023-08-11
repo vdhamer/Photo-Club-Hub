@@ -204,7 +204,8 @@ struct FilteredMemberPortfoliosView: View {
             filteredPortfolios = unFilteredPortfolios.filter { _ in true } // to convert types
         } else {
             filteredPortfolios = unFilteredPortfolios.filter { memberPortfolio in
-                memberPortfolio.photographer.fullName.localizedCaseInsensitiveContains(searchText.wrappedValue) }
+                memberPortfolio.photographer.fullNameFirstLast
+                    .localizedCaseInsensitiveContains(searchText.wrappedValue) }
         }
 
         return filteredPortfolios

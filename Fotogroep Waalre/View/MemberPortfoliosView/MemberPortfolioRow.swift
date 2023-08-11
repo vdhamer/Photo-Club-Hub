@@ -18,7 +18,7 @@ struct MemberPortfolioRow: View {
     var body: some View {
         NavigationLink(destination: SinglePortfolioView(url: member.memberWebsite,
                                                         webView: wkWebView)
-                                        .navigationTitle((member.photographer.fullName +
+                                        .navigationTitle((member.photographer.fullNameFirstLast +
                                                   " @ " + member.photoClub.nameOrShortName(horSizeClass: horSizeClass)))
                                         .navigationBarTitleDisplayMode(NavigationBarItem.TitleDisplayMode.inline)) {
             HStack(alignment: .center) {
@@ -27,7 +27,7 @@ struct MemberPortfolioRow: View {
                     .imageScale(.large)
                     .offset(x: -5, y: 0)
                 VStack(alignment: .leading) {
-                    Text(verbatim: "\(member.photographer.fullName)")
+                    Text(verbatim: "\(member.photographer.fullNameFirstLast)")
                         .font(UIDevice.isIPad ? .title : .title2)
                         .tracking(1)
                         .allowsTightening(true)

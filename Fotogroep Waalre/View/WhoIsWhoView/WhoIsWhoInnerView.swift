@@ -19,8 +19,8 @@ struct WhoIsWhoInnerView: View {
     // regenerate Section using current FetchRequest with current filters and sorting
     init(predicate: NSPredicate, searchText: Binding<String>) {
         _fetchRequest = FetchRequest<Photographer>(sortDescriptors: [ // replaces previous fetchRequest
-                                                SortDescriptor(\.givenName_, order: .forward),
-                                                SortDescriptor(\.familyName_, order: .forward)
+                                                SortDescriptor(\.familyName_, order: .forward),
+                                                SortDescriptor(\.givenName_, order: .forward)
                                             ],
                                              predicate: predicate,
                                              animation: .default)
@@ -41,7 +41,7 @@ struct WhoIsWhoInnerView: View {
                     VStack(alignment: .leading) {
                         let alive = filteredPhotographer.isDeceased ? " - " + MemberStatus.deceased.localizedString()
                                                                     : ""
-                        Text(verbatim: "\(filteredPhotographer.fullName)\(alive)")
+                        Text(verbatim: "\(filteredPhotographer.fullNameLastFirst)\(alive)")
                             .font(.title3)
                             .tracking(1)
                             .foregroundColor(chooseColor(accentColor: .accentColor,
@@ -107,7 +107,7 @@ struct WhoIsWhoInnerView: View {
             }
         } else {
             return fetchRequest.filter { photographer in
-                photographer.fullName.localizedCaseInsensitiveContains(searchText.wrappedValue) }
+                photographer.fullNameFirstLast.localizedCaseInsensitiveContains(searchText.wrappedValue) }
         }
     }
 
@@ -117,7 +117,7 @@ struct WhoIsWhoInnerView: View {
 
     private func deletePhotographers(offsets: IndexSet) {
         guard isDeletePhotographersEnabled else { return }
-        let fullName: String = offsets.map { fetchRequest[$0] }.first?.fullName ?? "noName"
+        let fullName: String = offsets.map { fetchRequest[$0] }.first?.fullNameFirstLast ?? "noName"
         offsets.map { fetchRequest[$0] }.forEach( viewContext.delete )
 
         do {

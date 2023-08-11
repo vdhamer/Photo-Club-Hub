@@ -4,11 +4,14 @@ Portfolio screen
     * Added a 2nd admin for FGWaalre
 Photo Clubs screen
     * Fixed (on some devices??) bug that initially displays blue ocean map for 2nd photo club in list.
+Who's Who screen
+    *
 Maintenance
     * Updated screenshot used on Github readme
     * Replaced `priority: Int` sorting param for photo clubs by `pinned: Bool`.
     * Upgraded and tested with iOS 17.0 beta 5 (21A5303c), XCode 14.0 beta 6.
     * Replaced NSSortDescriptor by newer SortDescriptor (in ViewModel files)
+    * Renamed PhotogroepWaalreApp.swift file
 
 This is build #4594 in Apple's App Store
 ---------------------------------------------------------------------------
