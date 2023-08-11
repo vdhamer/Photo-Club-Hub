@@ -181,18 +181,29 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
 	// Find existing object or create a new object
 	// Update existing attributes or fill the new object
     static func findCreateUpdate(bgContext: NSManagedObjectContext,
-                                 // identifying attributes of a Member
+                                 // identifying attributes of a Member:
                                  photoClub: PhotoClub, photographer: Photographer,
-                                 // other attributes of a Member
+                                 // non-identifying attributes of a Member:
                                  memberRolesAndStatus: MemberRolesAndStatus,
                                  dateInterval: DateInterval? = nil,
                                  memberWebsite: URL? = nil,
                                  latestImage: URL? = nil
                                 ) -> MemberPortfolio {
-        let predicateFormat: String = "photoClub_ = %@ AND photographer_ = %@" // avoid localization
-        let request = fetchRequest(predicate: NSPredicate(format: predicateFormat, photoClub, photographer))
 
-		let memberPortfolios: [MemberPortfolio] = (try? bgContext.fetch(request)) ?? [] // nil means absolute failure
+        let predicateFormat: String = "photoClub_ = %@ AND photographer_ = %@" // avoid localization
+        let predicate = NSPredicate(format: predicateFormat,
+                                    argumentArray: [photoClub, photographer]
+                                   )
+        let fetchRequest: NSFetchRequest<MemberPortfolio> = MemberPortfolio.fetchRequest()
+        fetchRequest.predicate = predicate
+		let memberPortfolios: [MemberPortfolio] = (try? bgContext.fetch(fetchRequest)) ?? [] // nil means absolute failure
+
+        if memberPortfolios.count > 1 { // there is actually a Core Data constraint to prevent this
+            ifDebugFatalError("Query returned multiple (\(memberPortfolios.count)) memberPortfolios for " +
+                              "\(photographer.fullName) in \(photoClub.fullNameTown)",
+                              file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
+            // in release mode, log that there are multiple clubs, but continue using the first one.
+        }
 
 		if let memberPortfolio = memberPortfolios.first { // already exists, so make sure secondary attributes are up to date
             if update(bgContext: bgContext, memberPortfolio: memberPortfolio,
@@ -304,24 +315,6 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
 		}
 
         return needsSaving
-	}
-
-}
-
-extension MemberPortfolio { // convenience function
-
-	static func fetchRequest(predicate: NSPredicate) -> NSFetchRequest<MemberPortfolio> { // pre-iOS 15 version
-		let request = NSFetchRequest<MemberPortfolio>(entityName: "MemberPortfolio")
-
-		request.predicate = predicate // WHERE part of the SQL query
-        request.sortDescriptors =
-            [
-                NSSortDescriptor(keyPath: \MemberPortfolio.photographer_?.givenName_, ascending: true),
-                NSSortDescriptor(keyPath: \MemberPortfolio.photographer_?.familyName_, ascending: true),
-                NSSortDescriptor(keyPath: \MemberPortfolio.photoClub_?.name_, ascending: true),
-                NSSortDescriptor(keyPath: \MemberPortfolio.photoClub_?.town_, ascending: true)
-            ]
-		return request
 	}
 
 }
