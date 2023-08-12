@@ -52,19 +52,25 @@
     </details>
     <details><summary><a href="#the-app-architecture">The App's Architecture</a></summary>
            <ul>
-            <li><a href="#role-of-the-database">Role of the Database</a></li>
+               <li><a href="#role-of-the-database">Role of the Database</a></li>
                <li><a href="#the-data-model">The Data Model</a></li>
-                <ul>
+               <ul>
                      <li><a href="#photoclub">PhotoClub</a></li>
                      <li><a href="#photographer">Photographer</a></li>
                      <li><a href="#memberportfolio">MemberPortfolio</a></li>
-                </ul>
-            <li><a href="#how-the-data-is-loaded">How the Data is Loaded</a></li>
-                <ul>
+               </ul>
+               <li><a href="#how-the-data-is-loaded">How the Data is Loaded</a></li>
+               <ul>
                     <li><a href="#the-current-approach">The Current Approach</a></li>
                     <li><a href="#a-better-approach">A Better Approach</a></li>
-                </ul>
-        </ul>
+               </ul>
+               <li><a href="#when-the-data-is-loaded">When the Data is Loaded</a></li>
+               <ul>
+                    <li><a href="#the-current-approach">Background Threads</a></li>
+                    <li><a href="#core-data-contexts">Core Data Contexts</a></li>
+                    <li><a href="#comparison-to-sql-transactions">Comparison to SQL transactions</a></li>
+              </ul>
+           </ul>
     </details>
     <details><summary><a href="#administrative">Administrative</a></summary>
         <ul>  
