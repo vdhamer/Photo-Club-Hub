@@ -644,13 +644,13 @@ In the former (and more formal) case, the club can have some kind of approval or
 
 </summary>
 
-Club member lists are loaded into Core Data using a dedicated background thread per club.
-So if ten clubs are loaded, there will be a main thread for the UI plus ten additional background threads.
-These background threads cease to exist when the club’s membership data has loaded.
+Club member lists are loaded into Core Data using one dedicated background thread per club.
+So if, for example, 10 clubs are loaded, there will be a main thread for SwiftUI plus 10 temporary background threads.
+These background threads disappear when the club’s membership data has loaded.
 
-These threads are start immediately once the app is launched (in `Foto_Club_Hub_Waalre_App.swift`).
-This means the background loading of membership data already runs during the Prelude View and that 
-some of the slow background threads might complete after the list of members is displayed in the Portfolio View.
+These threads start immediately once the app is launched (in `Foto_Club_Hub_Waalre_App.swift`).
+This means that background loading of membership data already starts while the Prelude View is displayed.
+It also means that some of the slow background threads might complete after the list of members is displayed in the Portfolio View.
 
 The background loading may cause an update of the membership lists in the Portfolio View.
 This will seldom be seen by the user because the Portfolio View displays data from the Core Data database,
