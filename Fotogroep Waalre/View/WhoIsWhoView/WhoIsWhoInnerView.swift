@@ -19,11 +19,11 @@ struct WhoIsWhoInnerView: View {
     // regenerate Section using current FetchRequest with current filters and sorting
     init(predicate: NSPredicate, searchText: Binding<String>) {
         _fetchRequest = FetchRequest<Photographer>(sortDescriptors: [ // replaces previous fetchRequest
-                                                SortDescriptor(\.familyName_, order: .forward),
-                                                SortDescriptor(\.givenName_, order: .forward)
-                                            ],
-                                             predicate: predicate,
-                                             animation: .default)
+                                                        SortDescriptor(\.familyName_, order: .forward),
+                                                        SortDescriptor(\.givenName_, order: .forward)
+                                                   ],
+                                                   predicate: predicate,
+                                                   animation: .default)
 
         dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd MMMM" // used here for birthdays only, so year is hidden
