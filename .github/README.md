@@ -627,27 +627,39 @@ In the former (and more formal) case, the club can have some kind of approval or
 </details></ul>
 </details></ul>
 
-<ul><details><summary
+<ul><details><summary>
 
 ### When the Data is Loaded
 
 </summary>
-<ul><details><summary
+<ul><details><summary>
 
 #### Background Threads
 
 </summary>
-<details>
 
-Club member lists are loaded into Core Data using a dedicated background thread per club. So if 10 clubs are loaded, there will be a main thread for the UI plus 10 additional background threads. These background threads disappear when the club’s membership data has loaded.
+Club member lists are loaded into Core Data using a dedicated background thread per club.
+So if 10 clubs are loaded, there will be a main thread for the UI plus 10 additional background threads.
+These background threads disappear when the club’s membership data has loaded.
 
-These threads are start immediately once the app is launched (in `Foto_Club_Hub_Waalre_App.swift`). This means the background loading of membership data already runs during the Prelude View and that some of the slow background threads might complete after the list of members is displayed in the Portfolio View.
+These threads are start immediately once the app is launched (in `Foto_Club_Hub_Waalre_App.swift`).
+This means the background loading of membership data already runs during the Prelude View and that 
+some of the slow background threads might complete after the list of members is displayed in the Portfolio View.
 
-The background loading may cause an update of the membership lists in the Portfolio View. This will seldom be seen by the user because the Portfolio View displays data from the Core Data database, and thus contains persistent data from a preceding run. So you will typically only see updates, and may in fact never see the updating occur unless you have a lot of clubs or a slow network connection.
+The background loading may cause an update of the membership lists in the Portfolio View.
+This will seldom be seen by the user because the Portfolio View displays data from the Core Data database,
+and thus contains persistent data from a preceding run. So you will typically only see updates, and may in fact
+never see the updating occur unless you have a lot of clubs or a slow network connection.
+</details></ul>
+<ul><details><summary>
 
 #### Core Data Contexts
 
-Each thread is associated with a Core Data `ManagedObjectContext`. In fact, the thread is started using `backgroundContext.perform()`. The trick to use Core Data in a multi-threaded app is to ensure that all database fetches/inserts/updates are performed within the Core Data `ManagedObjectContext` along with the associated iOS thread.
+</summary>
+Each thread is associated with a Core Data `ManagedObjectContext`.
+In fact, the thread is started using `backgroundContext.perform()`.
+The trick to using Core Data in a multi-threaded app is to ensure that all database fetches/inserts/updates 
+are performed within the Core Data `ManagedObjectContext` along with the associated iOS thread.
 
 * create `ManagedObjectContext` of type Background. CoreData feature..
    * create thread using context.perform(). CoreData feature.
@@ -658,8 +670,13 @@ Each thread is associated with a Core Data `ManagedObjectContext`. In fact, the 
 * context object disappears when it is no longer used. Swift feature.
 
 The magic happens within context.save(). During the `context.save()` the tentative changes are committed to the database so that other threads can now see changes made to the database. But the `context.save()` function can throw an exception if there are inconsistencies such as data merge conflicts, or violations of database constraints.
+</details></ul>
+
+<ul><details><summary>
 
 #### Comparison to SQL transactions
+
+</summary>
 Core Data’s `ManagedObjectContext` can be seen as a counterpart to SQL transactions.
 
 * create thread. OS/language feature.
@@ -668,6 +685,9 @@ Core Data’s `ManagedObjectContext` can be seen as a counterpart to SQL transac
        * end transaction (commit or rollback). SQL feature.
    * can start a next transaction (begin transaction > operations > commit transaction)
 * end thread. OS/language feature.
+
+</details></ul>
+</details></ul>
     
 <p align="right">(<a href="#top">back to top</a>)</p>
 
