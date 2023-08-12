@@ -67,8 +67,9 @@
                <li><a href="#when-data-is-loaded">When Data is Loaded</a></li>
                <ul>
                     <li><a href="#the-current-approach">Background Threads</a></li>
+                    <li><a href="#swiftui-view-updates">SwiftUI View Updates</a></li>
                     <li><a href="#core-data-contexts">Core Data Contexts</a></li>
-                    <li><a href="#comparison-to-sql-transactions">Comparison to SQL transactions</a></li>
+                    <li><a href="#comparison-to-sql-transactions">Comparison to SQL Transactions</a></li>
               </ul>
            </ul>
     </details>
@@ -646,17 +647,24 @@ In the former (and more formal) case, the club can have some kind of approval or
 
 Membership lists are loaded into Core Data using one dedicated background thread per photo club.
 So if, for example, 10 clubs are loaded, there will be a main thread for SwiftUI plus 10 temporary background threads.
-Each background thread first reads optional data stored inside the app itself, and then reads optional data stored online.
+For now, each background thread first reads optional data stored inside the app itself, and then reads optional data that it fetched online.
 A club's background thread disappears as soon as the club’s membership data is fully loaded.
 
 These threads start immediately once the app is launched (in `Foto_Club_Hub_Waalre_App.swift`).
 This means that background loading of membership data already starts while the Prelude View is displayed.
 
+</details></ul>
+<ul><details><summary>
+
+#### SwiftUI View Updates
+
+</summary>
+
 It also means that slow background threads might complete after the list of members is displayed in
 the Portfolio View. This may cause an update of the membership lists in the Portfolio View.
 This will be rarely noticed because the Portfolio View displays data from the Core Data database,
-and thus contains persistent data from a preceding run. 
-So you might see updates found in the online data or updates when the app is  run for the first time.
+and thus usually arleady contains data persisted from a preceding run. But you might see updates
+found within the online data or updates when the app is run for the first time.
 </details></ul>
 <ul><details><summary>
 
@@ -686,7 +694,7 @@ inconsistencies such as data merge conflicts, or violations of database constrai
 
 <ul><details><summary>
 
-#### Comparison to SQL transactions
+#### Comparison to SQL Transactions
 
 </summary>
 A Core Data `NSManagedObjectContext` can be seen as a counterpart to an SQL transactions.<P>
