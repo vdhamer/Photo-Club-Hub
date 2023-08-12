@@ -625,12 +625,19 @@ Depending on local preference, this level can be managed by a club volunteer, or
 individual club members. In the latter case, a portfolio can be updated whenever a member wants.
 In the former (and more formal) case, the club can have some kind of approval or rating system in place.
 </details></ul>
+</details></ul>
 
-</ul>
+<ul><details><summary
 
 ### When the Data is Loaded
 
+</summary>
+<ul><details><summary
+
 #### Background Threads
+
+</summary>
+<details>
 
 Club member lists are loaded into Core Data using a dedicated background thread per club. So if 10 clubs are loaded, there will be a main thread for the UI plus 10 additional background threads. These background threads disappear when the club’s membership data has loaded.
 
