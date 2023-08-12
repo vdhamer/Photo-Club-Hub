@@ -12,6 +12,7 @@ Maintenance
     * Upgraded and tested with iOS 17.0 beta 5 (21A5303c), XCode 14.0 beta 6.
     * Replaced NSSortDescriptor by newer SortDescriptor (in ViewModel files)
     * Renamed PhotogroepWaalreApp.swift file
+    * Updated documentation on GitHub README.md to cover concurrency approach
 
 This is build #4594 in Apple's App Store
 ---------------------------------------------------------------------------
