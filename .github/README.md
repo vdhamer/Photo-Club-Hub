@@ -663,12 +663,12 @@ So you might see updates found in the online data or updates when the app is  ru
 #### Core Data Contexts
 
 </summary>
-Each thread is associated with a Core Data `[NSManagedObjectContext](https://developer.apple.com/documentation/coredata/nsmanagedobjectcontext)`.
+Each thread is associated with a Core Data [NSManagedObjectContext](https://developer.apple.com/documentation/coredata/nsmanagedobjectcontext).
 In fact, the thread is started using `backgroundContext.perform()`.
 The trick to using Core Data in a multi-threaded app is to ensure that all database fetches/inserts/updates 
-are performed within the Core Data `ManagedObjectContext` along with the associated iOS thread.<P>
+are performed within the Core Data `NSManagedObjectContext` along with the associated iOS thread.<P>
 
-- create `ManagedObjectContext` of type Background. CoreData feature..
+- create `NSManagedObjectContext` of type Background. CoreData feature..
   - create thread using context.perform(). CoreData feature.
     - perform database operations from within thread while passing this CoreData `context`
     - commit data to database using `context.save()` CoreData feature.
