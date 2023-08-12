@@ -664,23 +664,23 @@ So you might see updates found in the online data or updates when the app is  ru
 
 </summary>
 
-Each thread is associated with a Core Data `[NSManagedObjectContext](https://developer.apple.com/documentation/coredata/nsmanagedobjectcontext/)`.
-In fact, the thread is started using `backgroundContext.perform()`.
+Each thread is associated with a Core Data `NSManagedObjectContext]`.
+In fact, the thread is started using `myContext.perform()`.
 The trick to using Core Data in a multi-threaded app is to ensure that all database fetches/inserts/updates 
-are performed within the Core Data `NSManagedObjectContext` along with the associated iOS thread.<P>
+are performed using the Core Data `NSManagedObjectContext` while running the associated thread. Schematically:<P>
 
-- create `NSManagedObjectContext` of type Background. CoreData feature..
-  - create thread using context.perform(). CoreData feature.
-    - perform database operations from within thread while passing this CoreData `context`
-    - commit data to database using `context.save()` CoreData feature.
-    - can do more operations ended by additional `context.save()`
-  - end thread. Swift feature.
-- context object disappears when it is no longer used. Swift feature.
+- create `NSManagedObjectContext` of type Background. A CoreData feature.
+  - create thread using myContext.perform(). A CoreData feature using an OS feature.
+    - perform database operations from within the thread while passing this CoreData context. A CoreData feature.
+    - commit data to database using `myContext.save()`. A CoreData feature.
+    - do any other required operations ended by additional `myContext.save()`. A CoreData feature.
+  - end usage of the thread. The thread will disappear. A Swift feature.
+- the `myContext` object disappears when it is no longer used. A Swift feature.
 
-</P>The magic happens within context.save().
-During the `context.save()` the tentative changes are committed to the database 
-so that other threads can now see changes made to the database.
-But the `context.save()` function can throw an exception if there are 
+</P>The magic happens within `myContext.save()`.
+During the `myContext.save()` any changes are committed to the database 
+so that other threads can now see those changes and the changes are persistently stored.
+Note that `myContext.save()` can throw an exception - especially if there are 
 inconsistencies such as data merge conflicts, or violations of database constraints.
 </details></ul>
 
@@ -689,14 +689,14 @@ inconsistencies such as data merge conflicts, or violations of database constrai
 #### Comparison to SQL transactions
 
 </summary>
-Core Data’s `ManagedObjectContext` can be seen as a counterpart to SQL transactions.<P>
+A Core Data `NSManagedObjectContext` can be seen as a counterpart to an SQL transactions.<P>
 
-- create thread. OS/language feature.
-  - start transaction. SQL feature.
-    - perform SQL operations from within thread (implicitly in the context of this transaction)
+- create thread. An OS/language feature.
+  - start transaction. An SQL feature.
+    - perform SQL operations from within a thread. This is implicitly within the transaction context. An SQL feature.
     - end transaction (commit or rollback). SQL feature.
-  - can start a next transaction (begin transaction > operations > commit transaction)
-- end thread. OS/language feature.</P>
+  - optionally start a next transaction (begin transaction > SQL operations > commit transaction)
+- end thread. An OS/language feature.</P>
 
 </details></ul>
 </details></ul>
