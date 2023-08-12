@@ -59,12 +59,12 @@
                      <li><a href="#photographer">Photographer</a></li>
                      <li><a href="#memberportfolio">MemberPortfolio</a></li>
                </ul>
-               <li><a href="#how-the-data-is-loaded">How the Data is Loaded</a></li>
+               <li><a href="#how-data-is-loaded">How Data is Loaded</a></li>
                <ul>
                     <li><a href="#the-current-approach">The Current Approach</a></li>
                     <li><a href="#a-better-approach">A Better Approach</a></li>
                </ul>
-               <li><a href="#when-the-data-is-loaded">When the Data is Loaded</a></li>
+               <li><a href="#when-data-is-loaded">When Data is Loaded</a></li>
                <ul>
                     <li><a href="#the-current-approach">Background Threads</a></li>
                     <li><a href="#core-data-contexts">Core Data Contexts</a></li>
@@ -558,7 +558,7 @@ modelled using once concept (aka table) instead of two. We named that `MemberPor
     
 <ul><details><summary>
 
-### How the Data is Loaded
+### How Data is Loaded
 
 </summary>
 <ul><details><summary>
@@ -635,7 +635,7 @@ In the former (and more formal) case, the club can have some kind of approval or
 
 <ul><details><summary>
 
-### When the Data is Loaded
+### When Data is Loaded
 
 </summary>
 <ul><details><summary>
@@ -645,8 +645,8 @@ In the former (and more formal) case, the club can have some kind of approval or
 </summary>
 
 Club member lists are loaded into Core Data using a dedicated background thread per club.
-So if 10 clubs are loaded, there will be a main thread for the UI plus 10 additional background threads.
-These background threads disappear when the club’s membership data has loaded.
+So if ten clubs are loaded, there will be a main thread for the UI plus ten additional background threads.
+These background threads cease to exist when the club’s membership data has loaded.
 
 These threads are start immediately once the app is launched (in `Foto_Club_Hub_Waalre_App.swift`).
 This means the background loading of membership data already runs during the Prelude View and that 
