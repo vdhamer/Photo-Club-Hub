@@ -644,25 +644,26 @@ In the former (and more formal) case, the club can have some kind of approval or
 
 </summary>
 
-Club member lists are loaded into Core Data using one dedicated background thread per club.
+Membership lists are loaded into Core Data using one dedicated background thread per photo club.
 So if, for example, 10 clubs are loaded, there will be a main thread for SwiftUI plus 10 temporary background threads.
-These background threads disappear when the club’s membership data has loaded.
+Each background thread first reads optional data stored inside the app itself, and then reads optional data stored online.
+A club's background thread disappears as soon as the club’s membership data is fully loaded.
 
 These threads start immediately once the app is launched (in `Foto_Club_Hub_Waalre_App.swift`).
 This means that background loading of membership data already starts while the Prelude View is displayed.
-It also means that some of the slow background threads might complete after the list of members is displayed in the Portfolio View.
 
-The background loading may cause an update of the membership lists in the Portfolio View.
-This will seldom be seen by the user because the Portfolio View displays data from the Core Data database,
-and thus contains persistent data from a preceding run. So you will typically only see updates, and may in fact
-never see the updating occur unless you have a lot of clubs or a slow network connection.
+It also means that slow background threads might complete after the list of members is displayed in
+the Portfolio View. This may cause an update of the membership lists in the Portfolio View.
+This will be rarely noticed because the Portfolio View displays data from the Core Data database,
+and thus contains persistent data from a preceding run. 
+So you might see updates found in the online data or updates when the app is  run for the first time.
 </details></ul>
 <ul><details><summary>
 
 #### Core Data Contexts
 
 </summary>
-Each thread is associated with a Core Data `ManagedObjectContext`.
+Each thread is associated with a Core Data [`NSManagedObjectContext`](https://developer.apple.com/documentation/coredata/nsmanagedobjectcontext).
 In fact, the thread is started using `backgroundContext.perform()`.
 The trick to using Core Data in a multi-threaded app is to ensure that all database fetches/inserts/updates 
 are performed within the Core Data `ManagedObjectContext` along with the associated iOS thread.<P>
