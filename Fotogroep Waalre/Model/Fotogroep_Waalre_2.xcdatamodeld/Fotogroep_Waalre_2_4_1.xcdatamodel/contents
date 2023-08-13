@@ -52,7 +52,7 @@
         <attribute name="eMail_" optional="YES" attributeType="String"/>
         <attribute name="familyName_" attributeType="String" defaultValueString="DefaultPhotographerFamilyName"/>
         <attribute name="givenName_" attributeType="String" defaultValueString="DefaultPhotographerGivenName"/>
-        <attribute name="infixName_" attributeType="String" defaultValueString=""/>
+        <attribute name="infixName_" attributeType="String" defaultValueString="UnknownInFix"/>
         <attribute name="isDeceased" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="phoneNumber_" optional="YES" attributeType="String"/>
         <attribute name="photographerWebsite" optional="YES" attributeType="URI"/>
