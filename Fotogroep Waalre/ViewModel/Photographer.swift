@@ -32,12 +32,19 @@ extension Photographer {
 		set { familyName_ = newValue }
 	}
 
-    var fullNameFirstLast: String {
-        return givenName + " " + familyName
+    private(set) var infixName: String { // "van" in names like "Jan van Doesburg"
+        get { return infixName_ ?? "MissingInfixName" }
+        set { familyName_ = newValue }
     }
 
-    var fullNameLastFirst: String {
-        return familyName + ", " + givenName
+    var fullNameFirstLast: String { // "John Doe" or "Jan van Doesburg"
+        let infixName = self.infixName.isEmpty ? " " : " \(self.infixName) " // " van " in names like "Jan van Doesburg"
+        return givenName + infixName + familyName
+    }
+
+    var fullNameLastFirst: String { // "Doe, John" or "Doesburg, Jan van"
+        let infixName = self.infixName.isEmpty ? "" : "\(self.infixName)" // "van" in names like "Jan van Doesburg"
+        return familyName + ", " + givenName + infixName
     }
 
     var memberRolesAndStatus: MemberRolesAndStatus {
@@ -66,7 +73,9 @@ extension Photographer {
     // Find existing object and otherwise create a new object
     // Update existing attributes or fill the new object
     static func findCreateUpdate(context: NSManagedObjectContext, // foreground or background context
-                                 givenName: String, familyName: String,
+                                 givenName: String,
+                                 infixName: String = "",
+                                 familyName: String,
                                  memberRolesAndStatus: MemberRolesAndStatus = MemberRolesAndStatus(role: [:],
                                                                                                    stat: [:]),
                                  phoneNumber: String? = nil, eMail: String? = nil,
@@ -75,8 +84,8 @@ extension Photographer {
                                 ) -> Photographer {
         let photoClubPref = "\(photoClub?.fullNameTown ?? "No photo club provided"):"
 
-        let predicateFormat: String = "givenName_ = %@ AND familyName_ = %@" // avoid localization
-        let predicate = NSPredicate(format: predicateFormat, argumentArray: [givenName, familyName])
+        let predicateFormat: String = "givenName_ = %@ AND infixName_ = %@ AND familyName_ = %@" // avoid localization
+        let predicate = NSPredicate(format: predicateFormat, argumentArray: [givenName, infixName, familyName])
         let fetchRequest: NSFetchRequest<Photographer> = Photographer.fetchRequest()
         fetchRequest.predicate = predicate
         let photographers: [Photographer] = (try? context.fetch(fetchRequest)) ?? [] // nil means absolute failure
@@ -105,6 +114,7 @@ extension Photographer {
             let entity = NSEntityDescription.entity(forEntityName: "Photographer", in: context)!
             let photographer = Photographer(entity: entity, insertInto: context) // background: use special .init()
             photographer.givenName = givenName
+            photographer.infixName = infixName
             photographer.familyName = familyName
             _ = update(bgContext: context, photographer: photographer,
                        memberRolesAndStatus: memberRolesAndStatus,

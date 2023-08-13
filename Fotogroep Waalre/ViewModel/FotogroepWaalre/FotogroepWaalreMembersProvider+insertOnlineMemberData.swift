@@ -129,7 +129,7 @@ extension FotogroepWaalreMembersProvider {
                                       photoClubIdPlus: PhotoClubIdPlus) {
         var targetState: HTMLPageLoadingState = .tableStart        // initial entry point on loop of states
 
-        var personName = PersonName(fullName: "", givenName: "", familyName: "")
+        var personName = PersonName(fullName: "", givenName: "", infixName: "", familyName: "")
         var eMail = "", phoneNumber: String?, externalURL: String = ""
         var birthDate = toDate(from: "1/1/9999") // dummy value that is overwritten later
 
@@ -161,7 +161,8 @@ extension FotogroepWaalreMembersProvider {
 
                     let photographer = Photographer.findCreateUpdate(
                         context: backgroundContext,
-                        givenName: personName.givenName, familyName: personName.familyName,
+                        givenName: personName.givenName,
+                        infixName: personName.givenName, familyName: personName.familyName,
                         memberRolesAndStatus: MemberRolesAndStatus(role: [:], stat: [
                             .deceased: !self.isStillAlive(phone: phoneNumber) ]),
                         phoneNumber: phoneNumber, eMail: eMail,

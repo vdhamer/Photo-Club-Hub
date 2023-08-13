@@ -40,7 +40,7 @@ extension TestClubAmsterdamMembersProvider { // fill with some initial hard-code
 
         addMember(bgContext: bgContext,
                   givenName: "Peter",
-                  familyName: "van den Hamer",
+                  infixName: "van den", familyName: "Hamer",
                   photoClub: clubTestAmsterdam,
                   memberRolesAndStatus: MemberRolesAndStatus(role: [ .secretary: true ], stat: [ .former: false]),
                   memberWebsite: URL(string: "https://www.fotogroepwaalre.nl/fotos/Peter_van_den_Hamer_testA")!,
@@ -68,6 +68,7 @@ extension TestClubAmsterdamMembersProvider { // fill with some initial hard-code
 
     private func addMember(bgContext: NSManagedObjectContext,
                            givenName: String,
+                           infixName: String,
                            familyName: String,
                            bornDT: Date? = nil,
                            photoClub: PhotoClub,
@@ -78,7 +79,7 @@ extension TestClubAmsterdamMembersProvider { // fill with some initial hard-code
                            eMail: String? = nil) {
         let photographer = Photographer.findCreateUpdate(
                             context: bgContext,
-                            givenName: givenName, familyName: familyName,
+                            givenName: givenName, infixName: infixName, familyName: familyName,
                             memberRolesAndStatus: memberRolesAndStatus,
                             bornDT: bornDT,
                             photoClub: photoClub)
