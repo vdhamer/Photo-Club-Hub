@@ -639,7 +639,7 @@ In the former (and more formal) case, the club can have some kind of approval or
 ### When Data is Loaded
 
 </summary>
-<ul><details><summary>
+<ul><details open><summary>
 
 #### Background Threads
 
