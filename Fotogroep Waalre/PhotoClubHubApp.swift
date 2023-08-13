@@ -42,7 +42,7 @@ struct FotogroepWaalreApp: App {
                     let taBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
                     taBackgroundContext.name = "Amsterdam"
                     taBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-                    _ = TestClubAmsterdamMembersProvider(bgContext: taBackgroundContext) // TODO comment
+                    _ = TestClubAmsterdamMembersProvider(bgContext: taBackgroundContext)
 
 //                    let tdBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
 //                    tdBackgroundContext.name = "Den Haag"
