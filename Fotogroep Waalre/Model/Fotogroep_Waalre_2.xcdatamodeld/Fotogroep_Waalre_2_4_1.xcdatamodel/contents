@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22203.2" systemVersion="22G74" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22213.2" systemVersion="22G74" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="MemberPortfolio" representedClassName="MemberPortfolio" elementID="Member" syncable="YES" codeGenerationType="class">
         <attribute name="dateIntervalEnd_" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="dateIntervalStart_" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
@@ -52,6 +52,7 @@
         <attribute name="eMail_" optional="YES" attributeType="String"/>
         <attribute name="familyName_" attributeType="String" defaultValueString="DefaultPhotographerFamilyName"/>
         <attribute name="givenName_" attributeType="String" defaultValueString="DefaultPhotographerGivenName"/>
+        <attribute name="infixName_" attributeType="String" defaultValueString=""/>
         <attribute name="isDeceased" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="phoneNumber_" optional="YES" attributeType="String"/>
         <attribute name="photographerWebsite" optional="YES" attributeType="URI"/>
