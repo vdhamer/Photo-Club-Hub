@@ -60,6 +60,7 @@
         <uniquenessConstraints>
             <uniquenessConstraint>
                 <constraint value="familyName_"/>
+                <constraint value="infixName_"/>
                 <constraint value="givenName_"/>
             </uniquenessConstraint>
         </uniquenessConstraints>
