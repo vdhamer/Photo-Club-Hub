@@ -39,10 +39,10 @@ struct FotogroepWaalreApp: App {
 
                     // Load a few test members for 3 non-existent photo clubs.
                     // But this also tests support for clubs with same name in different towns
-//                    let taBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-//                    taBackgroundContext.name = "Amsterdam"
-//                    taBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-//                    _ = TestClubAmsterdamMembersProvider(bgContext: taBackgroundContext) // TODO comment
+                    let taBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+                    taBackgroundContext.name = "Amsterdam"
+                    taBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+                    _ = TestClubAmsterdamMembersProvider(bgContext: taBackgroundContext) // TODO comment
 
 //                    let tdBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
 //                    tdBackgroundContext.name = "Den Haag"
