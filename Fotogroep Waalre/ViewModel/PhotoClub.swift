@@ -111,6 +111,7 @@ extension PhotoClub {
         }
 
 		if let photoClub = photoClubs.first { // already exists, so make sure secondary attributes are up to date
+            print("\(photoClubIdPlus.fullNameTown): Will try to updated info for photo club \(photoClub.fullName)")
             if update(bgContext: context, photoClub: photoClub,
                       shortName: photoClubIdPlus.nickname,
                       optionalFields: (photoClubWebsite: photoClubWebsite,
@@ -118,10 +119,11 @@ extension PhotoClub {
                                        kvkNumber: kvkNumber),
                       coordinates: coordinates,
                       pinned: pinned) {
-                            print("Updated info for photo club \(photoClub.fullName)")
+                            print("\(photoClubIdPlus.fullNameTown): Updated info for photo club \(photoClub.fullName)")
             }
 			return photoClub
 		} else {
+            print("\(photoClubIdPlus.fullNameTown): Will try to created new photo club")
             // cannot use PhotoClub() initializer because we must use bgContext
             let entity = NSEntityDescription.entity(forEntityName: "PhotoClub", in: context)!
             let photoClub = PhotoClub(entity: entity, insertInto: context)
@@ -134,10 +136,7 @@ extension PhotoClub {
                                         kvkNumber: kvkNumber),
                        coordinates: coordinates,
                        pinned: pinned)
-            print("""
-                  \(photoClubIdPlus.fullNameTown): \
-                  Created new photo club
-                  """)
+            print("\(photoClubIdPlus.fullNameTown): Created new photo club")
 			return photoClub
 		}
 	}

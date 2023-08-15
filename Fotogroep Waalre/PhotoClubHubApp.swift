@@ -32,17 +32,17 @@ struct FotogroepWaalreApp: App {
                 .onAppear {
 
                     // load all current/former members of Fotogroep Waalre
-//                    let fgwBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-//                    fgwBackgroundContext.name = "Fotogroep Waalre"
-//                    fgwBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-//                    _ = FotogroepWaalreMembersProvider(bgContext: fgwBackgroundContext) // TODO comment
+                    let fgwBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+                    fgwBackgroundContext.name = "Fotogroep Waalre"
+                    fgwBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+                    _ = FotogroepWaalreMembersProvider(bgContext: fgwBackgroundContext) // TODO comment
 
                     // Load a few test members for 3 non-existent photo clubs.
                     // But this also tests support for clubs with same name in different towns
-                    let taBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-                    taBackgroundContext.name = "Amsterdam"
-                    taBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-                    _ = TestClubAmsterdamMembersProvider(bgContext: taBackgroundContext)
+//                    let taBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+//                    taBackgroundContext.name = "Amsterdam"
+//                    taBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+//                    _ = TestClubAmsterdamMembersProvider(bgContext: taBackgroundContext)
 
 //                    let tdBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
 //                    tdBackgroundContext.name = "Den Haag"

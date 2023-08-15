@@ -100,5 +100,8 @@ extension FotogroepWaalreMembersProvider { // fill with some initial hard-coded 
                             memberRolesAndStatus: memberRolesAndStatus,
                             memberWebsite: memberWebsite,
                             latestImage: latestImage)
+//        do {
+//            try? bgContext.save() // TODO
+//        }
     }
 }
