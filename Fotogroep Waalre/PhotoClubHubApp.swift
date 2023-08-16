@@ -35,24 +35,24 @@ struct FotogroepWaalreApp: App {
                     let fgwBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
                     fgwBackgroundContext.name = "Fotogroep Waalre"
                     fgwBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-                    _ = FotogroepWaalreMembersProvider(bgContext: fgwBackgroundContext) // TODO comment
+                    _ = FotogroepWaalreMembersProvider(bgContext: fgwBackgroundContext)
 
                     // Load a few test members for 3 non-existent photo clubs.
                     // But this also tests support for clubs with same name in different towns
-//                    let taBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-//                    taBackgroundContext.name = "Amsterdam"
-//                    taBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-//                    _ = TestClubAmsterdamMembersProvider(bgContext: taBackgroundContext)
+                    let taBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+                    taBackgroundContext.name = "Amsterdam"
+                    taBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+                    _ = TestClubAmsterdamMembersProvider(bgContext: taBackgroundContext)
 
-//                    let tdBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-//                    tdBackgroundContext.name = "Den Haag"
-//                    tdBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-//                    _ = TestClubDenHaagMembersProvider(bgContext: tdBackgroundContext) // TODO comment
+                    let tdBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+                    tdBackgroundContext.name = "Den Haag"
+                    tdBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+                    _ = TestClubDenHaagMembersProvider(bgContext: tdBackgroundContext)
 
-//                    let trBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-//                    trBackgroundContext.name = "Rotterdam"
-//                    trBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-//                    _ = TestClubRotterdamMembersProvider(bgContext: trBackgroundContext) // TODO comment
+                    let trBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+                    trBackgroundContext.name = "Rotterdam"
+                    trBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+                    _ = TestClubRotterdamMembersProvider(bgContext: trBackgroundContext)
 
                     // More groups can be added here like BIMembersProvider()
                     // They can so be loaded manually using pull-to-refresh on the Photo Clubs screen.
