@@ -53,6 +53,7 @@ extension FotogroepWaalreMembersProvider {
     // This is done in 2 stages using regular expressions because I couldn't get it to work in a single stage.
     // Further more Dutch (and maybe more languages someday) infix prepositions like "van den" are supported.
 
+    // swiftlint:disable function_body_length
     private func componentizePersonName(fullName: String, printName: Bool = false) -> PersonName {
         // "José Daniëls" -> ("José","","Daniëls") - former member
         // "Bart van Stekelenburg (lid)" -> ("Bart","van","Steklenburg") - member
@@ -60,16 +61,25 @@ extension FotogroepWaalreMembersProvider {
         // "Hans Zoete (mentor)" -> ("Hans","","Zoete") - coach
         let regex = Regex {
             Capture {
-                OneOrMore(.any, .reluctant) // reluctant prevents capturing the " "
+                OneOrMore(.word, .eager) // not sure about given names like "Eric-Jan", but need to stop on a space
             } transform: { givenName in String(givenName) }
-            " "
+            Optionally {
+                " "
+            }
             Capture {
                 OneOrMore(
-                    ChoiceOf {
-                        "van " // NL
-                        "de " // NL
-                        "den " // NL
-                        "der " // NL
+                    ChoiceOf { // https://www.van-diemen-de-jel.nl/Genea/Spelling.html
+                        "van" // NL
+                        "den" // NL
+                        "der" // NL
+                        "de" // NL
+                        "het" // NL
+                        "ter" // NL
+                        "ten" // NL
+                        "te" // NL
+                        "D'"// FR
+                        "von" // DE
+                        " " // doesn't count as infix, but needed with or without infix
                     }
                 )
             } transform: { infixName in String(infixName) } // reluctant prevents capturing the optional ChoiceOf
@@ -111,5 +121,6 @@ extension FotogroepWaalreMembersProvider {
                               familyName: "errorInFamilyName")
         }
     }
+    // swiftlint:enable function_body_length
 
 }

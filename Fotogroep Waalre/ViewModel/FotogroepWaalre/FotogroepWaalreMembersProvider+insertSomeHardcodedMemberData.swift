@@ -100,8 +100,6 @@ extension FotogroepWaalreMembersProvider { // fill with some initial hard-coded 
                             memberRolesAndStatus: memberRolesAndStatus,
                             memberWebsite: memberWebsite,
                             latestImage: latestImage)
-//        do {
-//            try? bgContext.save() // TODO
-//        }
+        // do not need to bgContext.save() because a series of added members will be saved simultaneously
     }
 }

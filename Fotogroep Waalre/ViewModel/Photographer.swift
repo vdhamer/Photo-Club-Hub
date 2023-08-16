@@ -33,8 +33,8 @@ extension Photographer {
 	}
 
     private(set) var infixName: String { // "van" in names like "Jan van Doesburg"
-        get { return infixName_ ?? "MissingInfixName" }
-        set { familyName_ = newValue }
+        get { return infixName_ ?? "MissingInfixName" } // Should never happen. CoreData defaults to empty string.
+        set { infixName_ = newValue }
     }
 
     var fullNameFirstLast: String { // "John Doe" or "Jan van Doesburg"
@@ -74,7 +74,7 @@ extension Photographer {
     // Update existing attributes or fill the new object
     static func findCreateUpdate(context: NSManagedObjectContext, // foreground or background context
                                  givenName: String,
-                                 infixName: String = "",
+                                 infixName: String, // no default as this an identifying attribute for Photographer
                                  familyName: String,
                                  memberRolesAndStatus: MemberRolesAndStatus = MemberRolesAndStatus(role: [:],
                                                                                                    stat: [:]),
@@ -90,9 +90,14 @@ extension Photographer {
         fetchRequest.predicate = predicate
         let photographers: [Photographer] = (try? context.fetch(fetchRequest)) ?? [] // nil means absolute failure
 
+        if photographers.count == 0 {
+            print("Query could not find a photographer named " +
+                  "\(givenName) \(infixName.isEmpty ? "" : "\(infixName) ")\(familyName)")
+        }
+
         if photographers.count > 1 { // there is actually a Core Data constraint to prevent this
             ifDebugFatalError("Query returned \(photographers.count) photographers named " +
-                              "\(givenName) \(familyName)",
+                              "\(givenName) \(infixName.isEmpty ? "" : "\(infixName) ")\(familyName)",
                               file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
             // in release mode, log that there are multiple photographers, but continue using the first one.
         }

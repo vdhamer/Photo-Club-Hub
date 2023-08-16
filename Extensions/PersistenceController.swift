@@ -22,7 +22,7 @@ struct PersistenceController {
             )
 			let photographer = Photographer.findCreateUpdate(
                 context: viewContext, // on main thread
-                givenName: "Jan", familyName: "D'Eau\(index)",
+                givenName: "Jan", infixName: "D'", familyName: "Eau\(index)",
                 memberRolesAndStatus: memberRolesAndStatus,
                 phoneNumber: "06-12345678",
                 eMail: "Jan.D.Eau\(index)@example.com",

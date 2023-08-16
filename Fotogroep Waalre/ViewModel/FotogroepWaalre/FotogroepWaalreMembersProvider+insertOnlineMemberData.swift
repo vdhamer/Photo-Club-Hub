@@ -162,7 +162,8 @@ extension FotogroepWaalreMembersProvider {
                     let photographer = Photographer.findCreateUpdate(
                         context: backgroundContext,
                         givenName: personName.givenName,
-                        infixName: personName.givenName, familyName: personName.familyName,
+                        infixName: personName.infixName,
+                        familyName: personName.familyName,
                         memberRolesAndStatus: MemberRolesAndStatus(role: [:], stat: [
                             .deceased: !self.isStillAlive(phone: phoneNumber) ]),
                         phoneNumber: phoneNumber, eMail: eMail,
@@ -174,15 +175,11 @@ extension FotogroepWaalreMembersProvider {
                         bgContext: backgroundContext, photoClub: photoClub, photographer: photographer,
                         memberRolesAndStatus: MemberRolesAndStatus(
                             role: [:],
-                            stat: [
-                                .former: !self.isCurrentMember(name: personName.fullName, includeCandidates: true),
-                                .coach: self.isMentor(name: personName.fullName),
-                                .prospective: self.isProspectiveMember(name: personName.fullName)
-                            ]
+                            stat: [ .former: !self.isCurrentMember(name: personName.fullName, includeCandidates: true),
+                                    .coach: self.isMentor(name: personName.fullName),
+                                    .prospective: self.isProspectiveMember(name: personName.fullName) ]
                         ),
-                          memberWebsite: self.generateInternalURL(
-                            using: "\(personName.givenName) \(personName.familyName)"
-                        )
+                          memberWebsite: self.generateInternalURL(using: personName.fullName)
                     )
 
                 }

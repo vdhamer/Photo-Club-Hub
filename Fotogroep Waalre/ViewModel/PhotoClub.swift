@@ -111,7 +111,7 @@ extension PhotoClub {
         }
 
 		if let photoClub = photoClubs.first { // already exists, so make sure secondary attributes are up to date
-            print("\(photoClubIdPlus.fullNameTown): Will try to updated info for photo club \(photoClub.fullName)")
+            print("\(photoClubIdPlus.fullNameTown): Will try to update info for photo club \(photoClub.fullName)")
             if update(bgContext: context, photoClub: photoClub,
                       shortName: photoClubIdPlus.nickname,
                       optionalFields: (photoClubWebsite: photoClubWebsite,
