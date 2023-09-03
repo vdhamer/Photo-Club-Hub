@@ -3,17 +3,17 @@
 Portfolio screen
     * Added a 2nd admin for FGWaalre
 Photo Clubs screen
-    * Fixed (on some devices??) bug that initially displays blue ocean map for 2nd photo club in list.
+    * Partial fix of bug that initially displays a blue map for 2nd photo club shown. The bug remains on device types.
 Who's Who screen
-    * Display name in "familyName, givenName" format.
-    * Uses Dutch convention of sorting "Jan van Doesburg" under the D of Doesburg
+    * Display name in "familyName, givenName infixName" format.
+    * Supports Dutch convention of sorting names like "Jan van Doesburg" under the D (Doesburg) rather than the V (van).
 Maintenance
     * Updated screenshot used on Github readme
-    * Replaced `priority: Int` sorting param for photo clubs by `pinned: Bool`.
-    * Upgraded and tested with iOS 17.0 beta 5 (21A5303c), XCode 14.0 beta 6.
-    * Replaced NSSortDescriptor by newer SortDescriptor (in ViewModel files)
-    * Renamed PhotogroepWaalreApp.swift file
-    * Updated documentation on GitHub README.md to cover concurrency approach
+    * Changed sorting of photo clugs from `priority: Int` to `pinned: Bool`.
+    * Upgraded and tested with iOS 17.0 beta 8 (21A5325a), XCode 14.0 beta 8.
+    * Replaced NSSortDescriptor by newer SortDescriptor (in ViewModel files).
+    * Renamed PhotogroepWaalreApp.swift file.
+    * Updated documentation on GitHub README.md to cover concurrency approach.
 
 This is build #4594 in Apple's App Store
 ---------------------------------------------------------------------------
