@@ -83,16 +83,6 @@ extension FotogroepWaalreMembersProvider {
                     }
                 )
             } transform: { infixName in String(infixName) } // reluctant prevents capturing the optional ChoiceOf
-//            Capture {
-//                OneOrMore(
-//                    ChoiceOf {
-//                        "van " // NL
-//                        "de " // NL
-//                        "den " // NL
-//                        "der " // NL
-//                    }
-//                )
-//            } transform: { infixName in String(infixName) } // reluctant prevents capturing the optional ChoiceOf
             Capture {
                 OneOrMore(.any, .reluctant)
             } transform: { familyName in String(familyName) } // reluctant prevents capturing the optional ChoiceOf
@@ -112,7 +102,7 @@ extension FotogroepWaalreMembersProvider {
             let (_, givenName, infixNameSpace, familyName) = match.output
 
             let infixName = (infixNameSpace.last == " ") ? String(infixNameSpace.dropLast()) :  infixNameSpace
-            let reconstructedFullName = "\(givenName) \(infixNameSpace)\(familyName)"
+            let reconstructedFullName = "\(givenName) \(infixNameSpace != " " ? infixNameSpace : "")\(familyName)"
             if printName { print("Name found: \(reconstructedFullName)") }
             return PersonName(fullName: reconstructedFullName, // removed suffix like " (lid)"
                               givenName: givenName, infixName: infixName, familyName: familyName)
