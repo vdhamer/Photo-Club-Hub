@@ -24,10 +24,10 @@ extension FotogroepWaalreMembersProvider {
     // Returns fullName String by stripping off certain HTML tags
 
     private func removeTags(taggedString: String) -> String {
-        // "<td>José Daniëls</td>"
-        // "<td>Bart van Stekelenburg (lid)</td>"
-        // "<td>Zoë Aspirant (aspirantlid)</td>"
-        // "<td>Hans Zoete (mentor)</td>"
+        // "<td>José Daniëls</td>" -> "José Daniëls"
+        // "<td>Bart van Stekelenburg (lid)</td>" -> "Bart van Stekelenburg (lid)"
+        // "<td>Zoë Aspirant (aspirantlid)</td>" -> "Zoë Aspirant (aspirantlid)"
+        // "<td>Hans Zoete (mentor)</td>" -> "Hans Zoete (mentor)"
         let regex = Regex {
             "<td>"
             Capture {
@@ -110,18 +110,11 @@ extension FotogroepWaalreMembersProvider {
 
         if let match = try? regex.wholeMatch(in: fullName) {
             let (_, givenName, infixNameSpace, familyName) = match.output
-            let infixName: String
-            if infixNameSpace.last == " " {
-                infixName = String(infixNameSpace.dropLast())
-            } else {
-                infixName = infixNameSpace
-            }
 
-            if printName {
-                let infixNameWithOptionalSpace = infixName.isEmpty ? infixName : "\(infixName) "
-                print("Name found: \(givenName) \(infixNameWithOptionalSpace)\(familyName)")
-            }
-            return PersonName(fullName: fullName,
+            let infixName = (infixNameSpace.last == " ") ? String(infixNameSpace.dropLast()) :  infixNameSpace
+            let reconstructedFullName = "\(givenName) \(infixNameSpace)\(familyName)"
+            if printName { print("Name found: \(reconstructedFullName)") }
+            return PersonName(fullName: reconstructedFullName, // removed suffix like " (lid)"
                               givenName: givenName, infixName: infixName, familyName: familyName)
         } else {
             print("Error: problem in componentizePersonName() <\(fullName)>")

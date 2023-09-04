@@ -190,19 +190,22 @@ extension FotogroepWaalreMembersProvider {
 
     }
 
-    fileprivate func generateInternalURL(using name: String) -> URL? { // for URLs we want basic ASCII A...Z,a...z only
-        // "Peter van den Hamer" -> "<baseURL>/Peter_van_den_Hamer"
-        // "Henriëtte van Ekert" -> "<baseURL>/Henriette_van_Ekert"
-        // "José_Daniëls" -> "<baseURL>/Jose_Daniels"
-        // "Ekin Özbiçer" -> "<baseURL>/Ekin_" // app doesn't substitute the Ö yet
+    fileprivate func generateInternalURL(using name: String) -> URL? { // only use standard ASCII A...Z,a...z in URLs
+        // spaces are replaced by underscores:
+        //      "Peter van den Hamer" -> "<baseURL>/Peter_van_den_Hamer"
+        // cases with one or more replacements:
+        //      "Henriëtte van Ekert" -> "<baseURL>/Henriette_van_Ekert"
+        //      "José_Daniëls" -> "<baseURL>/Jose_Daniels"
+        // case if there is a replacement needed, that is not defined yet
+        //      "Ekin Özbiçer" -> "<baseURL>/Ekin_" // because app doesn't substitute the Ö yet
         let baseURL = "https://www.fotogroepwaalre.nl/fotos"
         var tweakedName = name.replacingOccurrences(of: " ", with: "_")
-        tweakedName = tweakedName.replacingOccurrences(of: "á", with: "a") // István_Nagy
-        tweakedName = tweakedName.replacingOccurrences(of: "é", with: "e") // José_Daniëls
-        tweakedName = tweakedName.replacingOccurrences(of: "ë", with: "e") // José_Daniëls and Henriëtte_van_Ekert
-        tweakedName = tweakedName.replacingOccurrences(of: "ç", with: "c") // François_Hermans
+                              .replacingOccurrences(of: "á", with: "a") // affects István_Nagy
+                              .replacingOccurrences(of: "ç", with: "c") // affects François_Hermans
+                              .replacingOccurrences(of: "ë", with: "e") // affects Henriëtte_van_Ekert
+                              .replacingOccurrences(of: "é", with: "e") // affects José_Daniëls
 
-        let regex = Regex { // check if tweakedName consists of only clean ASCII characters
+        let regex = Regex { // check if tweakedName only consists of standard ASCII characters
             Capture {
                 OneOrMore {
                     CharacterClass(
