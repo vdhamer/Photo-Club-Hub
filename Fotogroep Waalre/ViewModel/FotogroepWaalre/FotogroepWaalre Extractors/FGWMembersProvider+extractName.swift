@@ -83,6 +83,16 @@ extension FotogroepWaalreMembersProvider {
                     }
                 )
             } transform: { infixName in String(infixName) } // reluctant prevents capturing the optional ChoiceOf
+//            Capture {
+//                OneOrMore(
+//                    ChoiceOf {
+//                        "van " // NL
+//                        "de " // NL
+//                        "den " // NL
+//                        "der " // NL
+//                    }
+//                )
+//            } transform: { infixName in String(infixName) } // reluctant prevents capturing the optional ChoiceOf
             Capture {
                 OneOrMore(.any, .reluctant)
             } transform: { familyName in String(familyName) } // reluctant prevents capturing the optional ChoiceOf
