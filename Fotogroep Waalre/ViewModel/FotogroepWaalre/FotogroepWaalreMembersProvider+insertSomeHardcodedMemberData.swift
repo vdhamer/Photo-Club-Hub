@@ -49,7 +49,7 @@ extension FotogroepWaalreMembersProvider { // fill with some initial hard-coded 
         addMember(bgContext: bgContext, givenName: "Jos", infixName: "", familyName: "Jansen",
                   photoClub: clubWaalre, memberRolesAndStatus: MemberRolesAndStatus(role: [ .treasurer: true ]))
 
-        addMember(bgContext: bgContext, givenName: "Kees", infixName: "van", familyName: "van Gemert",
+        addMember(bgContext: bgContext, givenName: "Kees", infixName: "van", familyName: "Gemert",
                   photoClub: clubWaalre, memberRolesAndStatus: MemberRolesAndStatus(role: [ .secretary: true ]))
 
         addMember(bgContext: bgContext, givenName: "Marijke", infixName: "", familyName: "Gallas",
