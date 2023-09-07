@@ -59,7 +59,7 @@ struct PersistenceController {
 	let container: NSPersistentContainer
 
 	init(inMemory: Bool = false) {
-		container = NSPersistentContainer(name: "Fotogroep_Waalre_2") // name of .xcdatamodel
+		container = NSPersistentContainer(name: "Photo_Club_Hub") // name of .xcdatamodel
 		if inMemory {
 			container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
 		}

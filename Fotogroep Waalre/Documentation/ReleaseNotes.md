@@ -1,4 +1,4 @@
-### 2.4.1 (Github commit 276c9f3) ??-08-23
+### 2.4.1 (Github commit 276c9f3) ??-09-23
 
 Portfolio screen
     * Added a 2nd admin for FGWaalre
@@ -7,6 +7,7 @@ Photo Clubs screen
 Who's Who screen
     * Display name in "familyName, givenName infixName" format.
     * Supports Dutch convention of sorting names like "Jan van Doesburg" under the D (Doesburg) rather than the V (van).
+    * A trick to avoid a mix between the old and new member name formats when migrating data from older releases.
 Maintenance
     * Updated screenshot used on Github readme
     * Changed sorting of photo clugs from `priority: Int` to `pinned: Bool`.
@@ -14,6 +15,7 @@ Maintenance
     * Replaced NSSortDescriptor by newer SortDescriptor (in ViewModel files).
     * Renamed PhotogroepWaalreApp.swift file.
     * Updated documentation on GitHub README.md to cover concurrency approach.
+    * Changed the name of the CoreData model to reflect the name change of the app.
 
 This is build #4594 in Apple's App Store
 ---------------------------------------------------------------------------
