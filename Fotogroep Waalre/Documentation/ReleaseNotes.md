@@ -1,9 +1,13 @@
-### 2.4.1 (Github commit 276c9f3) ??-09-23
+### 2.4.2 (Github commit ???????) ?-09-23
+Maintenance
+    * Upgraded and tested with MacOS 13.5.2
+    
+This is build #4595 in Apple's App Store
+---------------------------------------------------------------------------
+### 2.4.1 (Github commit 2ee61a1) 9-09-23
 
 Portfolio screen
     * Added a 2nd admin for FGWaalre
-Photo Clubs screen
-    * Partial fix of bug that initially displays a blue map for 2nd photo club shown. The bug remains on device types.
 Who's Who screen
     * Display name in "familyName, givenName infixName" format.
     * Supports Dutch convention of sorting names like "Jan van Doesburg" under the D (Doesburg) rather than the V (van).
