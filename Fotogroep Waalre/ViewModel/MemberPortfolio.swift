@@ -112,9 +112,9 @@ extension MemberPortfolio { // computed properties (some related to handling opt
         }
 
         for (index, element) in suffixList.enumerated() {
-            result.append(element + " ")
+            result.append(element + " ") // example "secretary "
             if index < suffixList.count-1 {
-                result.append(andLocalized + " ")
+                result.append(andLocalized + " ") // example "secretary and " unless there are no elements left
             }
         }
         return result.trimmingCharacters(in: .whitespacesAndNewlines).capitalizingFirstLetter()
