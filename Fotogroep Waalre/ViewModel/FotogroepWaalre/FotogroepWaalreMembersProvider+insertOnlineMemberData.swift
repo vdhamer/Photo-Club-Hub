@@ -175,7 +175,8 @@ extension FotogroepWaalreMembersProvider {
                         bgContext: backgroundContext, photoClub: photoClub, photographer: photographer,
                         memberRolesAndStatus: MemberRolesAndStatus(
                             role: [:],
-                            stat: [ .former: !self.isCurrentMember(name: personName.fullName, includeCandidates: true),
+                            stat: [ .former: !self.isCurrentMember(name: personName.fullName,
+                                                                   includeProspectiveMembers: true),
                                     .coach: self.isMentor(name: personName.fullName),
                                     .prospective: self.isProspectiveMember(name: personName.fullName) ]
                         ),
