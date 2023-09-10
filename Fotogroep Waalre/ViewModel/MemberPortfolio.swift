@@ -83,6 +83,7 @@ extension MemberPortfolio { // computed properties (some related to handling opt
     }
 
     var roleDescription: String {
+        print("member <\(photographer.fullNameLastFirst)> is \(isFormerMember ? "Former " : "")member of \(photoClub.shortName)") // TODO remove comment
         var prefixList = [String]()
         var suffixList = [String]()
         var result: String = ""

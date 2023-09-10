@@ -30,7 +30,7 @@ extension FotogroepWaalreMembersProvider { // private utitity functions
         return phone != "[overleden]"
     }
 
-    func isCurrentMember(name: String, includeCandidates: Bool) -> Bool {
+    func isCurrentMember(name: String, includeProspectiveMembers: Bool) -> Bool {
         // "Guido Steger" -> false
         // "Bart van Stekelenburg (lid)" -> true
         // "Zoë Aspirant (aspirantlid)" -> depends on includeCandidates param
@@ -47,12 +47,11 @@ extension FotogroepWaalreMembersProvider { // private utitity functions
         }
 
         if (try? regex.wholeMatch(in: name)) != nil {
-            return true
-        } else if !includeCandidates {
-            return false
-        } else {
-            return isProspectiveMember(name: name)
+            return true // "Bart van Stekelenburg (lid)"
+        } else if includeProspectiveMembers {
+            return isProspectiveMember(name: name) // "Zoë Aspirant (aspirantlid)"
         }
+        return false // "Guido Steger" and "Hans Zoete (mentor)" -> false
     }
 
     func isMentor(name: String) -> Bool {
