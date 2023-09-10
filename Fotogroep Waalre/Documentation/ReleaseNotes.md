@@ -1,6 +1,6 @@
 ### 2.4.2 (Github commit ???????) ?-09-23
 Maintenance
-    * Upgraded and tested with MacOS 13.5.2
+    * Upgraded and tested with MacOS 13.5.2, SwiftLint 0.52.4
     
 This is build #4595 in Apple's App Store
 ---------------------------------------------------------------------------
