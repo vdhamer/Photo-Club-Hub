@@ -120,7 +120,7 @@ Default status of member within a club. Used in concatenations. */
 "Paragraph_2.2" = "De app heeft een hiërarchische structuur. Op het hoogste niveau vindt men de ***fotoclubs***. Binnen een fotoclubs treft men de ***portfolio's*** aan van de clubleden. Een portfolio bevat tenslotte de ***foto's*** van dat lid - althans die foto's van die betrekking hebben op de fotoclub.";
 
 /* Third paragraph in The App on Readme page */
-"Paragraph_2.3" = "Een fotograaf kan meerdere portfolios hebben door lid te zijn (of geweest zijn) van meerdere fotoclubs. Een portfolio bevat dus alleen werk van een fotograaf dat besproken of geëxposeerde is bij één fotoclub. In principe kan een foto overigens in meerdere portfolios van die fotograaf voorkomen.";
+"Paragraph_2.3" = "Een fotograaf kan meerdere portfolios hebben door lid te zijn (of geweest zijn) van meerdere fotoclubs. Een portfolio bevat dus alleen werk van een fotograaf dat besproken of geëxposeerd is bij één fotoclub. In principe kan een foto overigens in meerdere portfolios van die fotograaf voorkomen.";
 
 /* Fourth paragraph in The App on Readme page */
 "Paragraph_2.4" = "De beelden in een portfolio staan in chronologische volgorde: van nieuw naar oud. Een portfolio bestrijkt namelijk vaak een periode van vele jaren.";
