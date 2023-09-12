@@ -10,15 +10,43 @@ import RegexBuilder
 extension FotogroepWaalreMembersProvider {
 
     struct PersonName {
-        let fullName: String // "John Doe" or "Jan van Doesburg"
+        let fullNameWithParenthesizedRole: String // "John Doe (lid)" or "Jan van Doesburg"
         let givenName: String // "John" or "Jan"
         let infixName: String // "" or "van"
         let familyName: String // "Doe" or "Doesburg"
+
+        var fullNameWithoutParenthesizedRole: String {
+            removeParenthesizedRole(fullNameWithParenthesizedRole: fullNameWithParenthesizedRole)
+        }
+
+        private func removeParenthesizedRole(fullNameWithParenthesizedRole: String) -> String {
+            // "José Daniëls" -> "José Daniëls" - former member
+            // "Bart van Stekelenburg (lid)" -> "Bart van Stekelenburg" - member
+            // "Zoë Aspirant (aspirantlid)" -> "Zoë Aspirant" - aspiring member
+            // "Hans Zoete (mentor)" -> "Hans Zoete" - coach
+            let regex = Regex {
+                Capture {
+                    OneOrMore(.any, .reluctant)
+                } transform: { fullName in String(fullName) }
+                Optionally {
+                    " (" // e.g. " (lid)"
+                    OneOrMore(.any)
+                }
+            }
+
+            if let match = try? regex.wholeMatch(in: fullNameWithParenthesizedRole) {
+                let (_, fullName) = match.output
+                return fullName
+            } else {
+                ifDebugFatalError("Error: problem performing removeParenthesizedRole(\(fullNameWithParenthesizedRole))")
+                return fullNameWithParenthesizedRole
+            }
+        }
     }
 
     func extractName(taggedString: String) -> PersonName {
         let fullName = removeTags(taggedString: taggedString)
-        return componentizePersonName(fullName: fullName, printName: false)
+        return componentizePersonName(fullNameWithParenthesizedRole: fullName, printName: false)
     }
 
     // Returns fullName String by stripping off certain HTML tags
@@ -37,8 +65,9 @@ extension FotogroepWaalreMembersProvider {
         }
 
         if let match = try? regex.firstMatch(in: taggedString) { // is a bit more robust than .wholeMatch
-            let (_, name) = match.output
-            return String(name)
+            let (_, nameSubstring) = match.output
+            let name = String(nameSubstring) // debugger has problems showing value of nameSubString type
+            return name
         } else {
             let error = "Badly tagged name: \(taggedString)"
             print(error)
@@ -51,10 +80,10 @@ extension FotogroepWaalreMembersProvider {
     // formatter.personNameComponents() function to handle last names like firstname=Henny lastname=Looren de Jong
     // An optional suffix like (lid), (aspirantlid) or (mentor) is also removed.
     // This is done in 2 stages using regular expressions because I couldn't get it to work in a single stage.
-    // Further more Dutch (and maybe more languages someday) infix prepositions like "van den" are supported.
+    // Furthermore Dutch (and maybe more languages someday) infix prepositions like "van den" are supported.
 
     // swiftlint:disable function_body_length
-    private func componentizePersonName(fullName: String, printName: Bool = false) -> PersonName {
+    private func componentizePersonName(fullNameWithParenthesizedRole: String, printName: Bool = false) -> PersonName {
         // "José Daniëls" -> ("José","","Daniëls") - former member
         // "Bart van Stekelenburg (lid)" -> ("Bart","van","Steklenburg") - member
         // "Zoë Aspirant (aspirantlid)" -> ("Zoë","","Aspirant") - aspiring member
@@ -98,17 +127,16 @@ extension FotogroepWaalreMembersProvider {
             }
         }
 
-        if let match = try? regex.wholeMatch(in: fullName) {
+        if let match = try? regex.wholeMatch(in: fullNameWithParenthesizedRole) {
             let (_, givenName, infixNameSpace, familyName) = match.output
 
-            let infixName = (infixNameSpace.last == " ") ? String(infixNameSpace.dropLast()) :  infixNameSpace
-            let reconstructedFullName = "\(givenName) \(infixNameSpace != " " ? infixNameSpace : "")\(familyName)"
-            if printName { print("Name found: \(reconstructedFullName)") }
-            return PersonName(fullName: reconstructedFullName, // removed suffix like " (lid)"
+            let infixName = (infixNameSpace.last == " ") ? String(infixNameSpace.dropLast()) : infixNameSpace
+            if printName { print("Name found: \(fullNameWithParenthesizedRole)") }
+            return PersonName(fullNameWithParenthesizedRole: fullNameWithParenthesizedRole,
                               givenName: givenName, infixName: infixName, familyName: familyName)
         } else {
-            print("Error: problem in componentizePersonName() <\(fullName)>")
-            return PersonName(fullName: "errorInFullName",
+            ifDebugFatalError("Error: problem in componentizePersonName(\(fullNameWithParenthesizedRole))")
+            return PersonName(fullNameWithParenthesizedRole: "errorInFullName",
                               givenName: "errorInGivenName",
                               infixName: "errorInInfixName",
                               familyName: "errorInFamilyName")

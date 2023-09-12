@@ -99,7 +99,7 @@ extension FotogroepWaalreMembersProvider {
             }
 
             // https://www.advancedswift.com/core-data-background-fetch-save-create/
-            do {
+            do { // fill or update or check refreshFirstImage()
                 let fetchRequest: NSFetchRequest<MemberPortfolio>
                 fetchRequest = MemberPortfolio.fetchRequest()
                 fetchRequest.predicate = NSPredicate(format: """
@@ -129,7 +129,7 @@ extension FotogroepWaalreMembersProvider {
                                       photoClubIdPlus: PhotoClubIdPlus) {
         var targetState: HTMLPageLoadingState = .tableStart        // initial entry point on loop of states
 
-        var personName = PersonName(fullName: "", givenName: "", infixName: "", familyName: "")
+        var personName = PersonName(fullNameWithParenthesizedRole: "", givenName: "", infixName: "", familyName: "")
         var eMail = "", phoneNumber: String?, externalURL: String = ""
         var birthDate = toDate(from: "1/1/9999") // dummy value that is overwritten later
 
@@ -175,12 +175,14 @@ extension FotogroepWaalreMembersProvider {
                         bgContext: backgroundContext, photoClub: photoClub, photographer: photographer,
                         memberRolesAndStatus: MemberRolesAndStatus(
                             role: [:],
-                            stat: [ .former: !self.isCurrentMember(name: personName.fullName,
-                                                                   includeProspectiveMembers: true),
-                                    .coach: self.isMentor(name: personName.fullName),
-                                    .prospective: self.isProspectiveMember(name: personName.fullName) ]
+                            stat: [
+                                .former: !self.isCurrentMember(name: personName.fullNameWithParenthesizedRole,
+                                                               includeProspectiveMembers: true),
+                                .coach: self.isMentor(name: personName.fullNameWithParenthesizedRole),
+                                .prospective: self.isProspectiveMember(name: personName.fullNameWithParenthesizedRole)
+                            ]
                         ),
-                          memberWebsite: self.generateInternalURL(using: personName.fullName)
+                          memberWebsite: self.generateInternalURL(using: personName.fullNameWithoutParenthesizedRole)
                     )
 
                 }
