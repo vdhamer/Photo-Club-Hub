@@ -1,8 +1,12 @@
-### 2.4.2 (Github commit ???????) ?-09-23
+### 2.4.2 (Github commit 3548647) 13-09-23
+Portfolio screen
+    * Fixed bug where users were incorrectly labelled "former member". This release is to fix this bug.
+Readme screen
+    * Fixed a typo in Dutch language version
 Maintenance
     * Upgraded and tested with MacOS 13.5.2, SwiftLint 0.52.4
     
-This is build #4595 in Apple's App Store
+This is build #4596 in Apple's App Store
 ---------------------------------------------------------------------------
 ### 2.4.1 (Github commit 2ee61a1) 9-09-23
 
