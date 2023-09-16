@@ -58,7 +58,7 @@ struct FotogroepWaalreApp: App {
                     // They can so be loaded manually using pull-to-refresh on the Photo Clubs screen.
                 }
         }
-        .onChange(of: scenePhase) { _ in
+        .onChange(of: scenePhase) { // pre-iOS 17 there was 1 param. Since iOS 17 it is 0 or 2.
             PersistenceController.shared.save() // when app moves to background
         }
     }
