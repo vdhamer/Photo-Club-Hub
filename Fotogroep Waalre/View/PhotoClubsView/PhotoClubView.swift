@@ -81,12 +81,17 @@ struct PhotoClubView: View {
                         )
                         .buttonStyle(.plain) // to avoid entire List element to be clickable
                     }
+//                    Map(coordinateRegion: binding(for: filteredPhotoClub.id),
+//                        interactionModes: filteredPhotoClub.isScrollLocked ? [] : [.pan, .zoom],
+//                        showsUserLocation: false, // userTrackingMode: binding(for: mapUserTrackingMode,
+//                        annotationItems: fetchRequest, annotationContent: annotation(photoclub: PhotoClub))
+// following Map() gives 2 warnings about deprecation in iOS 17
                     Map(coordinateRegion: binding(for: filteredPhotoClub.id),
                         interactionModes: filteredPhotoClub.isScrollLocked ? [] : [.pan, .zoom],
                         annotationItems: fetchRequest) { photoClub in
-                        MapMarker( coordinate: photoClub.coordinates,
-                                   tint: photoClub == filteredPhotoClub ? .photoClubColor : .blue )
-                    }
+                            MapMarker( coordinate: photoClub.coordinates,
+                                       tint: photoClub == filteredPhotoClub ? .photoClubColor : .blue )
+                        }
                         .frame(minHeight: 300, idealHeight: 500, maxHeight: .infinity)
                 }
                 .task {
@@ -100,6 +105,12 @@ struct PhotoClubView: View {
             } // Section
         } // ForEach
         .onDelete(perform: deletePhotoClubs)
+    }
+
+    private func annotation(for photoClub: PhotoClub) -> Annotation<Text, Text> { // label, content
+        return Annotation(photoClub.shortName, coordinate: photoClub.coordinates) {
+            Text("dummy view") // TODO
+        }
     }
 
     private func initializeCoordinateRegion(photoClub: PhotoClub) {
