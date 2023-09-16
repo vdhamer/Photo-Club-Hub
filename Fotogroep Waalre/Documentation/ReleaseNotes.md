@@ -1,10 +1,20 @@
+### 2.5.0 (Github commit ???????) ??-09-23
+
+Who's Who screen
+    * tbd
+Maintenance
+    * Requires iOS 17+
+    * Upgraded and tested with Xcode 15.0
+    
+This is build #4597 in Apple's App Store
+---------------------------------------------------------------------------
 ### 2.4.2 (Github commit 3548647) 13-09-23
 Portfolio screen
     * Fixed bug where users were incorrectly labelled "former member". This release is to fix this bug.
 Readme screen
     * Fixed a typo in Dutch language version
 Maintenance
-    * Upgraded and tested with MacOS 13.5.2, SwiftLint 0.52.4
+    * Upgraded and tested with MacOS 13.5.2, SwiftLint 0.52.4, Xcode 15.0 RC1
     
 This is build #4596 in Apple's App Store
 ---------------------------------------------------------------------------
