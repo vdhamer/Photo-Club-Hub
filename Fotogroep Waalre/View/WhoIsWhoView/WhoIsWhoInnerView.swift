@@ -57,13 +57,13 @@ struct WhoIsWhoInnerView: View {
                             let locPhone = String(localized: "Phone:", comment: "Telephone number (usually invisible)")
                             Text(verbatim: "\(locPhone): \(filteredPhotographer.phoneNumber)")
                                 .font(.subheadline)
-                                .foregroundColor(.primary) // we don't show phone numbers for deceased people
+                                .foregroundColor(.primary) // don't show phone numbers for deceased people
                         }
                         if filteredPhotographer.eMail != "",
                            showPhoneMail, !filteredPhotographer.isDeceased {
                             Text(verbatim: "mailto://\(filteredPhotographer.eMail)")
                                 .font(.subheadline)
-                                .foregroundColor(.primary) // we don't show phone numbers for deceased people
+                                .foregroundColor(.primary) // don't show e-mail addresses for deceased people
                         }
                         if let url: URL = filteredPhotographer.photographerWebsite {
                             Link(destination: url, label: {
