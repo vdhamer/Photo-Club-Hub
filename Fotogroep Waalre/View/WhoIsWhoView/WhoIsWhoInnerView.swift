@@ -33,56 +33,75 @@ struct WhoIsWhoInnerView: View {
     var body: some View {
         Section {
             ForEach(filteredPhotographers, id: \.id) { filteredPhotographer in
-                HStack(alignment: .center) {
-                    PhotographerImage(isDeceased: filteredPhotographer.isDeceased)
-                        .foregroundStyle(.photographerColor, .gray, .red) // red tertiary color should not show up
-                        .font(.title3)
-                        .padding([.trailing], 5)
-                    VStack(alignment: .leading) {
-                        let alive = filteredPhotographer.isDeceased ? " - " + MemberStatus.deceased.localizedString()
-                                                                    : ""
-                        Text(verbatim: "\(filteredPhotographer.fullNameLastFirst)\(alive)")
+                VStack {
+                    HStack(alignment: .center) {
+                        PhotographerImage(isDeceased: filteredPhotographer.isDeceased)
+                            .foregroundStyle(.photographerColor, .gray, .red) // red tertiary color should not show up
                             .font(.title3)
-                            .tracking(1)
-                            .foregroundColor(chooseColor(accentColor: .accentColor,
-                                                         isDeceased: filteredPhotographer.isDeceased))
-                        if let date: Date = filteredPhotographer.bornDT {
-                            let locBirthday = String(localized: "Birthday:",
-                                            comment: "Birthday of member (without year). Date not currently localized?")
-                            Text(verbatim: "\(locBirthday) \(dateFormatter.string(from: date))")
-                                .font(.subheadline)
-                                .foregroundColor(filteredPhotographer.isDeceased ? .deceasedColor : .primary)
+                            .padding([.trailing], 5)
+                        VStack(alignment: .leading) {
+                            let alive = filteredPhotographer.isDeceased ?
+                                " - " + MemberStatus.deceased.localizedString() : ""
+                            Text(verbatim: "\(filteredPhotographer.fullNameLastFirst)\(alive)")
+                                .font(.title3)
+                                .tracking(1)
+                                .foregroundColor(chooseColor(accentColor: .accentColor,
+                                                             isDeceased: filteredPhotographer.isDeceased))
+                            if let date: Date = filteredPhotographer.bornDT {
+                                let locBirthday = String(localized: "Birthday:",
+                                                         comment: """
+                                                                  Birthday of member (without year). \
+                                                                  Date not currently localized?
+                                                                  """)
+                                Text(verbatim: "\(locBirthday) \(dateFormatter.string(from: date))")
+                                    .font(.subheadline)
+                                    .foregroundColor(filteredPhotographer.isDeceased ? .deceasedColor : .primary)
+                            }
+                            if filteredPhotographer.phoneNumber != "", showPhoneMail, !filteredPhotographer.isDeceased {
+                                let locPhone = String(localized: "Phone:",
+                                                      comment: "Telephone number (usually invisible)")
+                                Text(verbatim: "\(locPhone): \(filteredPhotographer.phoneNumber)")
+                                    .font(.subheadline)
+                                    .foregroundColor(.primary) // don't show phone numbers for deceased people
+                            }
+                            if filteredPhotographer.eMail != "",
+                               showPhoneMail, !filteredPhotographer.isDeceased {
+                                Text(verbatim: "mailto://\(filteredPhotographer.eMail)")
+                                    .font(.subheadline)
+                                    .foregroundColor(.primary) // don't show e-mail addresses for deceased people
+                            }
+                            if let url: URL = filteredPhotographer.photographerWebsite {
+                                Link(destination: url, label: {
+                                    Text(url.absoluteString)
+                                        .lineLimit(1)
+                                        .truncationMode(.middle)
+                                        .font(.subheadline)
+                                        .foregroundColor(.linkColor)
+                                })
+                                .buttonStyle(.plain) // to avoid entire List element to be clickable
+                            }
+                            ScrollView(.horizontal, showsIndicators: true) {
+                                HStack {
+                                    ForEach(filteredPhotographer.memberships.sorted(), id: \.id) { membership in
+                                        Link(destination: membership.memberWebsite, label: {
+                                            Text(verbatim: "\(membership.photoClub.fullNameTown)")
+                                                .lineLimit(1)
+                                                .truncationMode(.middle)
+                                                .font(.subheadline)
+                                                .foregroundColor(.linkColor)
+                                        })
+                                    }
+                                }
+                            }
                         }
-                        if filteredPhotographer.phoneNumber != "", showPhoneMail, !filteredPhotographer.isDeceased {
-                            let locPhone = String(localized: "Phone:", comment: "Telephone number (usually invisible)")
-                            Text(verbatim: "\(locPhone): \(filteredPhotographer.phoneNumber)")
-                                .font(.subheadline)
-                                .foregroundColor(.primary) // don't show phone numbers for deceased people
-                        }
-                        if filteredPhotographer.eMail != "",
-                           showPhoneMail, !filteredPhotographer.isDeceased {
-                            Text(verbatim: "mailto://\(filteredPhotographer.eMail)")
-                                .font(.subheadline)
-                                .foregroundColor(.primary) // don't show e-mail addresses for deceased people
-                        }
+                        Spacer()
                         if let url: URL = filteredPhotographer.photographerWebsite {
                             Link(destination: url, label: {
-                                Text(url.absoluteString)
-                                    .lineLimit(1)
-                                    .truncationMode(.middle)
-                                    .font(.subheadline)
+                                Image(systemName: "link")
                                     .foregroundColor(.linkColor)
                             })
                             .buttonStyle(.plain) // to avoid entire List element to be clickable
                         }
-                    }
-                    Spacer()
-                    if let url: URL = filteredPhotographer.photographerWebsite {
-                        Link(destination: url, label: {
-                            Image(systemName: "link")
-                                .foregroundColor(.linkColor)
-                        })
-                        .buttonStyle(.plain) // to avoid entire List element to be clickable
                     }
                 }
                 .accentColor(.photographerColor)
