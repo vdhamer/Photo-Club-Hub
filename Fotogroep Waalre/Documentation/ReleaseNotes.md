@@ -5,7 +5,7 @@ Who's Who screen (early proto of this functionality, for now in a separate featu
     * Clicking on these photoclubs brings you to the images for that portfolio.
 Maintenance
     * Requires iOS 17.0 or higher
-    * Upgraded and tested with MacOS 13.6, Xcode 15.0 and iOS 17.0.1
+    * Upgraded and tested with MacOS 13.6, Xcode 15.0 and iOS 17.0.2
     
 This is build #4597 in Apple's App Store
 ---------------------------------------------------------------------------
