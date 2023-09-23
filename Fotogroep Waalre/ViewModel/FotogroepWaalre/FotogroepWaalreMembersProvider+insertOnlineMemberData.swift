@@ -19,7 +19,8 @@ extension FotogroepWaalreMembersProvider {
 
         let urlString = self.getFileAsString(nameEncryptedFile: "FGWPrivateMembersURL2.txt",
                                              nameUnencryptedFile: "FGWPrivateMembersURL3.txt",
-                                             allowUseEncryptedFile: true) // set to false only for testing purposes
+                                             allowUseEncryptedFile: true, // set to false only for testing purposes
+                                             photoClub: clubWaalre) // used for error messages only
         if let privateURL = URL(string: urlString) {
             clubWaalre.memberListURL = privateURL
             try? bgContext.save()
@@ -37,16 +38,19 @@ extension FotogroepWaalreMembersProvider {
 
     fileprivate func getFileAsString(nameEncryptedFile: String,
                                      nameUnencryptedFile: String,
-                                     allowUseEncryptedFile: Bool = true) -> String {
+                                     allowUseEncryptedFile: Bool = true,
+                                     photoClub: PhotoClub) // used for error messages only
+                                     -> String {
+        let photoClubTown = photoClub.fullNameTown
         if let secret = readURLFromLocalFile(fileNameWithExtension: nameEncryptedFile), allowUseEncryptedFile {
-            ifDebugPrint("Fotogroep Waalre: will use confidential version of Private member data file.")
+            ifDebugPrint("\(photoClubTown): will use confidential version of Private member data file.")
             return secret
         } else {
             if let unsecret = readURLFromLocalFile(fileNameWithExtension: nameUnencryptedFile) {
-                ifDebugPrint("Fotogroep Waalre: will use non-confidential version of Private member data file.")
+                ifDebugPrint("\(photoClubTown): will use non-confidential version of Private member data file.")
                 return unsecret
             } else {
-                print("Fotogroep Waalre: ERROR - problem accessing either version of Private member data file.")
+                print("\(photoClubTown): ERROR - problem accessing either version of Private member data file.")
                 return "Internal error: file \(nameUnencryptedFile) looks encrypted"
             }
         }
@@ -73,7 +77,7 @@ extension FotogroepWaalreMembersProvider {
                                                     privateMemberURL: URL,
                                                     photoClubIdPlus: PhotoClubIdPlus ) {
 
-        ifDebugPrint("\(photoClubIdPlus.fullNameCommaTown): starting loadPrivateMembersFromWebsite() in background")
+        ifDebugPrint("\(photoClubIdPlus.fullNameTown): starting loadPrivateMembersFromWebsite() in background")
 
         // swiftlint:disable:next large_tuple
         var results: (utfContent: Data?, urlResponse: URLResponse?, error: (any Error)?)? = (nil, nil, nil)
