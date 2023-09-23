@@ -146,18 +146,22 @@ struct WhoIsWhoInnerView: View {
     }
 }
 
-struct PhotographersInnerView_Previews: PreviewProvider {
-    static let predicate = NSPredicate(format: "familyName_ = %@ || familyName_ = %@ || familyName_ = %@",
-                                       argumentArray: ["D'Eau1", "D'Eau2", "D'Eau10"])
-    @State static var searchText: String = "Eau1"
+struct WhoIsWhoInnerViewWrapper: View {
+    var body: some View {
+        let predicate = NSPredicate(format: "familyName_ = %@ || familyName_ = %@ || familyName_ = %@",
+                                    argumentArray: ["Eau1", "Eau2", "Eau10"])
+        @State var searchText: String = "Eau1"
 
-    static var previews: some View {
-        NavigationStack {
-            List {
-                WhoIsWhoInnerView(predicate: predicate, searchText: $searchText)
-                    .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
-            }
-            .navigationBarTitle(Text(String("PhotographersInnerView"))) // prevent localization
+        return WhoIsWhoInnerView(predicate: predicate, searchText: $searchText)
+            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+    }
+}
+
+#Preview {
+    NavigationStack {
+        List {
+            WhoIsWhoInnerViewWrapper()
         }
     }
+    .searchable(text: .constant("Name"))
 }
