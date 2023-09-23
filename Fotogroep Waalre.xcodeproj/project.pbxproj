@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D008D2AA28739167007A7BE2 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = D008D2A928739167007A7BE2 /* .gitignore */; };
+		D016CF342ABF982100EDAD4C /* FotoClubHubLineCount.xlsx in Resources */ = {isa = PBXBuildFile; fileRef = D016CF332ABF982100EDAD4C /* FotoClubHubLineCount.xlsx */; };
 		D01D2B6227D3BBDC00E2FE41 /* View+Navigate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01D2B6127D3BBDC00E2FE41 /* View+Navigate.swift */; };
 		D02082AF296F6ED7009493C4 /* TestClubAmsterdamMembersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02082AE296F6ED7009493C4 /* TestClubAmsterdamMembersProvider.swift */; };
 		D02082B1296F6F60009493C4 /* TestClubAmsterdamMembersProvider+insertSomeHardcodedMemberData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02082B0296F6F60009493C4 /* TestClubAmsterdamMembersProvider+insertSomeHardcodedMemberData.swift */; };
@@ -100,6 +101,7 @@
 /* Begin PBXFileReference section */
 		D008D2A928739167007A7BE2 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		D01526BC278B91BA004DBD19 /* Fotogroep Waalre.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Fotogroep Waalre.entitlements"; sourceTree = "<group>"; };
+		D016CF332ABF982100EDAD4C /* FotoClubHubLineCount.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = FotoClubHubLineCount.xlsx; sourceTree = "<group>"; };
 		D01D2B6127D3BBDC00E2FE41 /* View+Navigate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Navigate.swift"; sourceTree = "<group>"; };
 		D01DFAA627E778BD007BABFA /* offsets.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = offsets.md; sourceTree = "<group>"; };
 		D02082AE296F6ED7009493C4 /* TestClubAmsterdamMembersProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestClubAmsterdamMembersProvider.swift; sourceTree = "<group>"; };
@@ -156,7 +158,6 @@
 		D0831A41277F731C0049AB84 /* String+Capitalize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Capitalize.swift"; sourceTree = "<group>"; };
 		D0831A43277F731C0049AB84 /* PersistenceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		D0831A49277F736C0049AB84 /* Version2Changes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Version2Changes.md; sourceTree = "<group>"; };
-		D0831A4A277F736C0049AB84 /* FotoClubHubLineCount.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = FotoClubHubLineCount.xlsx; sourceTree = "<group>"; };
 		D0831A4B277F736C0049AB84 /* ReleaseNotes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = ReleaseNotes.md; sourceTree = "<group>"; };
 		D0831A50277F73C00049AB84 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D0831A54277F82460049AB84 /* nl.xcloc */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = nl.xcloc; sourceTree = "<group>"; };
@@ -440,8 +441,8 @@
 			children = (
 				D0831A4B277F736C0049AB84 /* ReleaseNotes.md */,
 				D0831A49277F736C0049AB84 /* Version2Changes.md */,
+				D016CF332ABF982100EDAD4C /* FotoClubHubLineCount.xlsx */,
 				D0C6E10B282B18B700388A33 /* Readme FotogroepWaalre App EN.docx */,
-				D0831A4A277F736C0049AB84 /* FotoClubHubLineCount.xlsx */,
 				D07A1E2E28314EA600C77F66 /* SwiftUIEnvironmentValues.png */,
 				D01DFAA627E778BD007BABFA /* offsets.md */,
 			);
@@ -662,6 +663,7 @@
 				D0B52497277F9A4B00927BCA /* Localizable.strings in Resources */,
 				D0831A51277F73C00049AB84 /* Preview Assets.xcassets in Resources */,
 				D0B52494277F9A4B00927BCA /* Fotogroep-Waalre-InfoPlist.strings in Resources */,
+				D016CF342ABF982100EDAD4C /* FotoClubHubLineCount.xlsx in Resources */,
 				D06061E828A0453F00A675A7 /* FGWPrivateMembersURL2.txt in Resources */,
 				D0D5B58F28E4921700244F34 /* MemberListSections.strings in Resources */,
 				D08319EB277F70A40049AB84 /* Assets.xcassets in Resources */,
