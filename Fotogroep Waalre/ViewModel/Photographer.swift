@@ -73,31 +73,38 @@ extension Photographer {
     // Find existing object and otherwise create a new object
     // Update existing attributes or fill the new object
     static func findCreateUpdate(context: NSManagedObjectContext, // foreground or background context
-                                 givenName: String,
-                                 infixName: String, // no default as this an identifying attribute for Photographer
-                                 familyName: String,
+                                 personName: PersonName,
                                  memberRolesAndStatus: MemberRolesAndStatus = MemberRolesAndStatus(role: [:],
                                                                                                    stat: [:]),
                                  phoneNumber: String? = nil, eMail: String? = nil,
                                  photographerWebsite: URL? = nil, bornDT: Date? = nil,
-                                 photoClub: PhotoClub? = nil // photoClub only shown on console for debug purposes
+                                 photoClub: PhotoClub // photoClub is only shown on console for debug purposes
                                 ) -> Photographer {
-        let photoClubPref = "\(photoClub?.fullNameTown ?? "No photo club provided"):"
+        let photoClubPref = "\(photoClub.fullNameTown):"
 
         let predicateFormat: String = "givenName_ = %@ AND infixName_ = %@ AND familyName_ = %@" // avoid localization
-        let predicate = NSPredicate(format: predicateFormat, argumentArray: [givenName, infixName, familyName])
+        let predicate = NSPredicate(format: predicateFormat, argumentArray: [
+                                                                              personName.givenName,
+                                                                              personName.infixName,
+                                                                              personName.familyName
+                                                                            ]
+                                   )
         let fetchRequest: NSFetchRequest<Photographer> = Photographer.fetchRequest()
         fetchRequest.predicate = predicate
         let photographers: [Photographer] = (try? context.fetch(fetchRequest)) ?? [] // nil means absolute failure
 
         if photographers.count == 0 {
             print("Query could not find a photographer named " +
-                  "\(givenName) \(infixName.isEmpty ? "" : "\(infixName) ")\(familyName)")
+                  "\(personName.givenName) " +
+                  "\(personName.infixName.isEmpty ? "" : "\(personName.infixName) ")\(personName.familyName)")
         }
 
         if photographers.count > 1 { // there is actually a Core Data constraint to prevent this
+            let givenName = personName.givenName
+            let infixName = personName.infixName
+            let familyName = personName.familyName
             ifDebugFatalError("Query returned \(photographers.count) photographers named " +
-                              "\(givenName) \(infixName.isEmpty ? "" : "\(infixName) ")\(familyName)",
+                              "\(givenName) " + "\(infixName.isEmpty ? "" : "\(infixName) ")\(familyName)",
                               file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
             // in release mode, log that there are multiple photographers, but continue using the first one.
         }
@@ -118,9 +125,9 @@ extension Photographer {
             // doesn't exist yet, so add new photographer
             let entity = NSEntityDescription.entity(forEntityName: "Photographer", in: context)!
             let photographer = Photographer(entity: entity, insertInto: context) // background: use special .init()
-            photographer.givenName = givenName
-            photographer.infixName = infixName
-            photographer.familyName = familyName
+            photographer.givenName = personName.givenName
+            photographer.infixName = personName.infixName
+            photographer.familyName = personName.familyName
             _ = update(bgContext: context, photographer: photographer,
                        memberRolesAndStatus: memberRolesAndStatus,
                        phoneNumber: phoneNumber, eMail: eMail,
