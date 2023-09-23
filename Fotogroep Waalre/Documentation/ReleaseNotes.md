@@ -5,6 +5,7 @@ Who's Who screen
 Maintenance
     * Requires iOS 17+
     * Upgraded and tested with Xcode 15.0
+    * Cleaned up logging and passing of PersonName structs
     
 This is build #4597 in Apple's App Store
 ---------------------------------------------------------------------------
