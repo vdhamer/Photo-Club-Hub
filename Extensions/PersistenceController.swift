@@ -20,15 +20,6 @@ struct PersistenceController {
                                                               stat: [.deceased: ((index % 4) == 0),
                                                                      .former: ((index % 4) == 1)]
             )
-			let photographer = Photographer.findCreateUpdate(
-                context: viewContext, // on main thread
-                givenName: "Jan", infixName: "D'", familyName: "Eau\(index)",
-                memberRolesAndStatus: memberRolesAndStatus,
-                phoneNumber: "06-12345678",
-                eMail: "Jan.D.Eau\(index)@example.com",
-                photographerWebsite: URL(string: "https://www.example.com/JanDEau\(index)"),
-                bornDT: Date() - Double.random(in: 365*24*3600 ... 75*365*24*3600)
-            )
             let photoClub = PhotoClub.findCreateUpdate(context: viewContext, // on main thread
                                                        photoClubIdPlus: PhotoClubIdPlus(fullName: "PhotoClub\(index)",
                                                                                         town: "Town\(index)",
@@ -41,6 +32,16 @@ struct PersistenceController {
                                                             longitude: 5.46144 + Double.random(in: -2.0 ... 1.0)),
                                                        pinned: (index % 4 == 0)
                                                        )
+            let photographer = Photographer.findCreateUpdate(
+                context: viewContext, // on main thread
+                personName: PersonName(givenName: "Jan", infixName: "D'", familyName: "Eau\(index)"),
+                memberRolesAndStatus: memberRolesAndStatus,
+                phoneNumber: "06-12345678",
+                eMail: "Jan.D.Eau\(index)@example.com",
+                photographerWebsite: URL(string: "https://www.example.com/JanDEau\(index)"),
+                bornDT: Date() - Double.random(in: 365*24*3600 ... 75*365*24*3600),
+                photoClub: photoClub
+            )
 			let memberPortfolio = MemberPortfolio.findCreateUpdate(bgContext: viewContext,
                                                  photoClub: photoClub, photographer: photographer,
                                                  memberRolesAndStatus: memberRolesAndStatus

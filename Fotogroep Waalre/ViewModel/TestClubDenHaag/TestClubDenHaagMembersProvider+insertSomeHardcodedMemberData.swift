@@ -40,8 +40,7 @@ extension TestClubDenHaagMembersProvider { // fill with some initial hard-coded 
         clubTestDenHaag.hasHardCodedMemberData = true // store in database that we ran insertSomeHardcodedMembers...
 
         addMember(bgContext: bgContext,
-                  givenName: "Peter",
-                  infixName: "van den", familyName: "Hamer",
+                  personName: PersonName(givenName: "Peter", infixName: "van den", familyName: "Hamer"),
                   photoClub: clubTestDenHaag,
                   memberRolesAndStatus: MemberRolesAndStatus(role: [ .viceChairman: true ], stat: [ .former: false]),
                   memberWebsite: URL(string: "https://www.fotogroepwaalre.nl/fotos/Peter_van_den_Hamer_testDH")!,
@@ -70,9 +69,7 @@ extension TestClubDenHaagMembersProvider { // fill with some initial hard-coded 
     }
 
     private func addMember(bgContext: NSManagedObjectContext,
-                           givenName: String,
-                           infixName: String,
-                           familyName: String,
+                           personName: PersonName,
                            bornDT: Date? = nil,
                            photoClub: PhotoClub,
                            memberRolesAndStatus: MemberRolesAndStatus = MemberRolesAndStatus(role: [:], stat: [:]),
@@ -82,7 +79,7 @@ extension TestClubDenHaagMembersProvider { // fill with some initial hard-coded 
                            eMail: String? = nil) {
         let photographer = Photographer.findCreateUpdate(
                             context: bgContext,
-                            givenName: givenName, infixName: infixName, familyName: familyName,
+                            personName: personName,
                             memberRolesAndStatus: memberRolesAndStatus,
                             bornDT: bornDT,
                             photoClub: photoClub)

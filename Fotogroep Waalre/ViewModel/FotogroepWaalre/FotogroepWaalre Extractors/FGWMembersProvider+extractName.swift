@@ -9,41 +9,6 @@ import RegexBuilder
 
 extension FotogroepWaalreMembersProvider {
 
-    struct PersonName {
-        let fullNameWithParenthesizedRole: String // "John Doe (lid)" or "Jan van Doesburg"
-        let givenName: String // "John" or "Jan"
-        let infixName: String // "" or "van"
-        let familyName: String // "Doe" or "Doesburg"
-
-        var fullNameWithoutParenthesizedRole: String {
-            removeParenthesizedRole(fullNameWithParenthesizedRole: fullNameWithParenthesizedRole)
-        }
-
-        private func removeParenthesizedRole(fullNameWithParenthesizedRole: String) -> String {
-            // "José Daniëls" -> "José Daniëls" - former member
-            // "Bart van Stekelenburg (lid)" -> "Bart van Stekelenburg" - member
-            // "Zoë Aspirant (aspirantlid)" -> "Zoë Aspirant" - aspiring member
-            // "Hans Zoete (mentor)" -> "Hans Zoete" - coach
-            let regex = Regex {
-                Capture {
-                    OneOrMore(.any, .reluctant)
-                } transform: { fullName in String(fullName) }
-                Optionally {
-                    " (" // e.g. " (lid)"
-                    OneOrMore(.any)
-                }
-            }
-
-            if let match = try? regex.wholeMatch(in: fullNameWithParenthesizedRole) {
-                let (_, fullName) = match.output
-                return fullName
-            } else {
-                ifDebugFatalError("Error: problem performing removeParenthesizedRole(\(fullNameWithParenthesizedRole))")
-                return fullNameWithParenthesizedRole
-            }
-        }
-    }
-
     func extractName(taggedString: String) -> PersonName {
         let fullName = removeTags(taggedString: taggedString)
         return componentizePersonName(fullNameWithParenthesizedRole: fullName, printName: false)

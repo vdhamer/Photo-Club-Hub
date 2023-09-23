@@ -161,14 +161,13 @@ extension FotogroepWaalreMembersProvider {
 
                     let photographer = Photographer.findCreateUpdate(
                         context: backgroundContext,
-                        givenName: personName.givenName,
-                        infixName: personName.infixName,
-                        familyName: personName.familyName,
+                        personName: personName,
                         memberRolesAndStatus: MemberRolesAndStatus(role: [:], stat: [
                             .deceased: !self.isStillAlive(phone: phoneNumber) ]),
                         phoneNumber: phoneNumber, eMail: eMail,
                         photographerWebsite: URL(string: externalURL),
-                        bornDT: birthDate
+                        bornDT: birthDate,
+                        photoClub: photoClub
                     )
 
                     _ = MemberPortfolio.findCreateUpdate(

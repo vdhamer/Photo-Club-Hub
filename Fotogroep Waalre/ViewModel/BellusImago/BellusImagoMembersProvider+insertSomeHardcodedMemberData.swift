@@ -39,7 +39,7 @@ extension BellusImagoMembersProvider { // fill with some initial hard-coded cont
         clubBellusImago.hasHardCodedMemberData = true // store in database that we ran insertSomeHardcodedMembers...
 
         addMember(bgContext: bgContext, // add Rico to Photographers and member of Bellus (if needed)
-                  givenName: "Rico", infixName: "", familyName: "Coolen",
+                  personName: PersonName(givenName: "Rico", infixName: "", familyName: "Coolen"),
                   photographerWebsite: URL(string: "https://www.ricoco.nl"),
                   photoClub: clubBellusImago,
                   memberWebsite: URL(string: "https://www.fotoclubbellusimago.nl/rico.html")!,
@@ -49,9 +49,7 @@ extension BellusImagoMembersProvider { // fill with some initial hard-coded cont
         )
 
         addMember(bgContext: bgContext, // add Loek to Photographers and member of Bellus (if needed)
-                  givenName: "Loek",
-                  infixName: "",
-                  familyName: "Dirkx",
+                  personName: PersonName(givenName: "Loek", infixName: "", familyName: "Dirkx"),
                   photoClub: clubBellusImago,
                   memberRolesAndStatus: MemberRolesAndStatus(role: [ .chairman: true ]),
                   memberWebsite: URL(string: "https://www.fotoclubbellusimago.nl/loek.html")!,
@@ -78,9 +76,7 @@ extension BellusImagoMembersProvider { // fill with some initial hard-coded cont
     }
 
     private func addMember(bgContext: NSManagedObjectContext,
-                           givenName: String,
-                           infixName: String,
-                           familyName: String,
+                           personName: PersonName,
                            photographerWebsite: URL? = nil,
                            bornDT: Date? = nil,
                            photoClub: PhotoClub,
@@ -90,9 +86,7 @@ extension BellusImagoMembersProvider { // fill with some initial hard-coded cont
                            phoneNumber: String? = nil,
                            eMail: String? = nil) {
         let photographer = Photographer.findCreateUpdate(context: bgContext,
-                                                         givenName: givenName,
-                                                         infixName: infixName,
-                                                         familyName: familyName,
+                                                         personName: personName,
                                                          memberRolesAndStatus: memberRolesAndStatus,
                                                          photographerWebsite: photographerWebsite,
                                                          bornDT: bornDT,

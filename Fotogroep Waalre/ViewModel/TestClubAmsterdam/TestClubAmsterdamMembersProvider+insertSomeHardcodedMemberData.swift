@@ -39,8 +39,8 @@ extension TestClubAmsterdamMembersProvider { // fill with some initial hard-code
         clubTestAmsterdam.hasHardCodedMemberData = true // store in database that we ran insertSomeHardcodedMembers...
 
         addMember(bgContext: bgContext,
-                  givenName: "Peter",
-                  infixName: "van den", familyName: "Hamer",
+                  personName: PersonName(givenName: "Peter",
+                                         infixName: "van den", familyName: "Hamer"),
                   photoClub: clubTestAmsterdam,
                   memberRolesAndStatus: MemberRolesAndStatus(role: [ .secretary: true ], stat: [ .former: false]),
                   memberWebsite: URL(string: "https://www.fotogroepwaalre.nl/fotos/Peter_van_den_Hamer_testA")!,
@@ -55,7 +55,7 @@ extension TestClubAmsterdamMembersProvider { // fill with some initial hard-code
                 try bgContext.save() // commit all changes
             }
             ifDebugPrint("""
-                         \(Self.photoClubTestAmsterdamIdPlus.fullNameTown) \
+                         \(Self.photoClubTestAmsterdamIdPlus.fullNameTown): \
                          Completed insertSomeHardcodedMemberData() in background
                          """)
         } catch {
@@ -67,9 +67,7 @@ extension TestClubAmsterdamMembersProvider { // fill with some initial hard-code
     }
 
     private func addMember(bgContext: NSManagedObjectContext,
-                           givenName: String,
-                           infixName: String,
-                           familyName: String,
+                           personName: PersonName,
                            bornDT: Date? = nil,
                            photoClub: PhotoClub,
                            memberRolesAndStatus: MemberRolesAndStatus = MemberRolesAndStatus(role: [:], stat: [:]),
@@ -79,7 +77,7 @@ extension TestClubAmsterdamMembersProvider { // fill with some initial hard-code
                            eMail: String? = nil) {
         let photographer = Photographer.findCreateUpdate(
                             context: bgContext,
-                            givenName: givenName, infixName: infixName, familyName: familyName,
+                            personName: personName,
                             memberRolesAndStatus: memberRolesAndStatus,
                             bornDT: bornDT,
                             photoClub: photoClub)
