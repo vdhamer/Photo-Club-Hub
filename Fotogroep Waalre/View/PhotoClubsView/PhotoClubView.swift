@@ -109,7 +109,7 @@ struct PhotoClubView: View {
 
     private func annotation(for photoClub: PhotoClub) -> Annotation<Text, Text> { // label, content
         return Annotation(photoClub.shortName, coordinate: photoClub.coordinates) {
-            Text("dummy view") // TODO
+            Text(verbatim: "dummy view") // TODO no need to localize
         }
     }
 

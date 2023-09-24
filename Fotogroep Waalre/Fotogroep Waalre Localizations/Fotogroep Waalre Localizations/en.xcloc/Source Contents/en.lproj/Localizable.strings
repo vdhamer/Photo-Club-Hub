@@ -38,7 +38,7 @@
 "Paragraph_2.3" = "Each portfolio thus covers the subset of the photographer's work that is associated with that photo club. A photographer could have more than one portfolio in this app, if the photographer was (at some point in time) a member of multiple photo clubs.";
 
 /* Fourth paragraph in The App on Readme page */
-"Paragraph_2.4" = "Each portfolio is shown in chronological order, with the latest work shown first, and typical spans multiple years.";
+"Paragraph_2.4" = "Each portfolio is shown in chronological order, with the latest work shown first, and typically spans multiple years.";
 
 /* Fifth paragraph in The App on Readme page */
 "Paragraph_2.5" = "We try to show the portfolios with **minimal distraction**. Web sites are often less optimal for this because they need to show browser controls (e.g., an address bar or tabs) and serve multiple purposes (e.g., show club news or contact information).";
