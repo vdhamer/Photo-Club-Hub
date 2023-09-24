@@ -1,11 +1,12 @@
 ### 2.5.0 (Github commit ???????) ??-09-23
 
-Who's Who screen
-    * tbd
+Who's Who screen (early proto of this functionality, for now in a separate feature branch)
+    * Shows the photo club(s) to which every photographer is or was affiliated.
+    * Clicking on these photoclubs brings you to the images for that portfolio.
 Maintenance
-    * Requires iOS 17+
-    * Upgraded and tested with Xcode 15.0
+    * Requires iOS 17.0 or higher
     * Cleaned up logging and passing of PersonName structs
+    * Upgraded and tested with MacOS 13.6, Xcode 15.0 and iOS 17.0.2
     
 This is build #4597 in Apple's App Store
 ---------------------------------------------------------------------------
