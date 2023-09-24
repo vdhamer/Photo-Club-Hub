@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		D008D2AA28739167007A7BE2 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = D008D2A928739167007A7BE2 /* .gitignore */; };
-		D016CF342ABF982100EDAD4C /* FotoClubHubLineCount.xlsx in Resources */ = {isa = PBXBuildFile; fileRef = D016CF332ABF982100EDAD4C /* FotoClubHubLineCount.xlsx */; };
 		D01D2B6227D3BBDC00E2FE41 /* View+Navigate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01D2B6127D3BBDC00E2FE41 /* View+Navigate.swift */; };
 		D02082AF296F6ED7009493C4 /* TestClubAmsterdamMembersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02082AE296F6ED7009493C4 /* TestClubAmsterdamMembersProvider.swift */; };
 		D02082B1296F6F60009493C4 /* TestClubAmsterdamMembersProvider+insertSomeHardcodedMemberData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02082B0296F6F60009493C4 /* TestClubAmsterdamMembersProvider+insertSomeHardcodedMemberData.swift */; };
