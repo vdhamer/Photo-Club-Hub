@@ -3,10 +3,13 @@
 Who's Who screen (early proto of this functionality, for now in a separate feature branch)
     * Shows the photo club(s) to which every photographer is or was affiliated.
     * Clicking on these photoclubs brings you to the images for that portfolio.
+    * Club names shown as "Photo Club Waalre (Waalre)" are now shown as "Photo Club Waalre"
+Portfolios screen
+    * Club names shown as "Photo Club Waalre (Waalre)" are now shown as "Photo Club Waalre"
 Maintenance
     * Requires iOS 17.0 or higher
     * Cleaned up logging and passing of PersonName structs
-    * Upgraded and tested with MacOS 13.6, Xcode 15.0 and iOS 17.0.2
+    * Upgraded and tested with MacOS 14.0, Xcode 15.0 and iOS 17.0.2
     
 This is build #4597 in Apple's App Store
 ---------------------------------------------------------------------------
