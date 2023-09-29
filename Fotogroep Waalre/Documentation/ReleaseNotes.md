@@ -4,6 +4,8 @@ Who's Who screen (early proto of this functionality, for now in a separate featu
     * Shows the photo club(s) to which every photographer is or was affiliated.
     * Clicking on these photoclubs brings you to the images for that portfolio.
     * Club names shown as "Photo Club Waalre (Waalre)" are now shown as "Photo Club Waalre"
+Photo Clubs screen
+    * Added Fotogroep de Gender (with one member) for demo purposes. Drag down this screen to add this club.
 Portfolios screen
     * Club names shown as "Photo Club Waalre (Waalre)" are now shown as "Photo Club Waalre"
 Maintenance

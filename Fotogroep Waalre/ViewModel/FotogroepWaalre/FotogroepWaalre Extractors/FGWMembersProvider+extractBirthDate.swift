@@ -18,7 +18,7 @@ extension FotogroepWaalreMembersProvider {
         let regex = Regex {
             "<td>"
             ChoiceOf {
-                One("?") // can probably be made stricter: <td>?2001-12-31</td> is interpred as 2001-12-31
+                One("?") // can probably be made stricter: <td>?2001-12-31</td> is interpreted as 2001-12-31
                 Capture(.date(format: "\(year: .defaultDigits)-\(month: .twoDigits)-\(day: .twoDigits)",
                               locale: Locale.autoupdatingCurrent,
                               timeZone: TimeZone.autoupdatingCurrent))

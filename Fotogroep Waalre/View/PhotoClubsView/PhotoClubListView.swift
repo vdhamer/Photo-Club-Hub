@@ -51,6 +51,11 @@ struct PhotoClubListView: View {
                 biBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
                 _ = BellusImagoMembersProvider(bgContext: biBackgroundContext)
 
+                let dgBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+                dgBackgroundContext.name = "De Gender refresh"
+                dgBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+                _ = FotogroepDeGenderMembersProvider(bgContext: dgBackgroundContext)
+
                 // load all current/former members of Fotogroep Waalre
                 let fgwBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
                 fgwBackgroundContext.name = "Fotogroep Waalre refresh"
