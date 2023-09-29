@@ -356,8 +356,8 @@ By clicking on the above button you can (anonymously) vote for improvements you 
       <trans-unit id="Search names" xml:space="preserve">
         <source>Search names</source>
         <target>Search names</target>
-        <note>Field at top of Members page that allows the user to filter the members based on either given- and family name.
-Field at top of Photographers page that allows the user to filter the photographers based on either given- and family name.</note>
+        <note>Field at top of Photographers page that allows the user to filter the photographers based on either given- and family name.
+Field at top of Members page that allows the user to filter the members based on either given- and family name.</note>
       </trans-unit>
       <trans-unit id="Show aspiring members" xml:space="preserve">
         <source>Show aspiring members</source>
@@ -482,8 +482,8 @@ Field at top of Photographers page that allows the user to filter the photograph
       <trans-unit id="member" xml:space="preserve">
         <source>member</source>
         <target>member</target>
-        <note>Statistics at end of section of FilteredMemberPortfoliosView
-Default status of member within a club. Used in concatenations.</note>
+        <note>Default status of member within a club. Used in concatenations.
+Statistics at end of section of FilteredMemberPortfoliosView</note>
       </trans-unit>
       <trans-unit id="members" xml:space="preserve">
         <source>members</source>

@@ -29,8 +29,18 @@ extension PhotoClub {
 		set { name_ = newValue }
 	}
 
-    @objc var fullNameTown: String { // objc needed for SectionedFetchRequest's sectionIdentifier
-        "\(fullName) (\(town))"
+    // appends " \(town)" to fullName unless `town` is already included as a word in fullName
+    // "Fotogroep Waalre" and "Aalst" returns "Fotogroep Waalre (Aalst)"
+    // "Fotogroep Waalre" and "Waalre" returns "Fotogroep Waalre"
+    // "Fotogroep Waalre" and "waalre" returns "Fotogroep Waalre"
+    // "Fotogroep Waalre" and "to" returns "Fotogroep Waalre (to)"
+    // "Fotogroep Waalre" and "Waal" returns "Fotogroep Waalre (Waal)" if you use NLP-based word matching
+    @objc var fullNameTown: String { // @objc needed for SectionedFetchRequest's sectionIdentifier
+        if fullName.containsWordUsingNLP(targetWord: town) {
+            fullName // fullname "Fotogroep Waalre" and town "Waalre" returns "Fotogroep Waalre"
+        } else {
+            "\(fullName) (\(town))" // fullname "Fotogroep Aalst" with "Waalre" returns "Fotogroep Aalst (Waalre)"
+        }
     }
 
     public var id: PhotoClubId { // public because needed for Identifiable protocol
