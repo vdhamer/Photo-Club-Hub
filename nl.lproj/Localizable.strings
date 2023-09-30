@@ -64,14 +64,11 @@
 /* Shown instead of app name in PreludeView when app is started */
 "In debug mode" = "Test versie";
 
-/* Shown in gray at the bottom of the Photographers page. */
-"Information about a photographer's links to a photo club can be found on the Portfolio page. This page contains club-independent information such as a link to the photographer's own photography website." = "Deze pagina geeft een overzicht van alle fotografen die in deze app voorkomen. De beelden van een fotograaf die vertoond zijn in een specifieke fotoclub zijn te vinden op respectievelijke Portfolio paginas.";
-
 /* Caption of Localizations image on Readme page */
 "List of supported languages" = "De beschikbare talen";
 
-/* Statistics at end of section of FilteredMemberPortfoliosView
-Default status of member within a club. Used in concatenations. */
+/* Default status of member within a club. Used in concatenations.
+Statistics at end of section of FilteredMemberPortfoliosView */
 "member" = "lid";
 
 /* In Preferences, above toggles like "Show former members" */
@@ -99,7 +96,7 @@ Default status of member within a club. Used in concatenations. */
 "Paragraph_1.1" = "Deze app is bedoeld om foto's gemaakt door leden van fotoclubs te delen met een breed publiek.";
 
 /* Second paragraph in Waalre section of Readme page */
-"Paragraph_1.2" = "De app pesenteert op een uniforme wijze het werk van alle clubleden van alle ondersteunde fotoclubs.";
+"Paragraph_1.2" = "De app presenteert op een uniforme wijze het werk van alle clubleden van alle ondersteunde fotoclubs.";
 
 /* Third paragraph in Waalre section of Readme page */
 "Paragraph_1.3" = "Deze uniformiteit helpt voorkomen dat de gebruiker zelf een clubwebsite moet zien te vinden en vervolgens moet navigeren binnen iedere unieke website. Dit wordt overigens vergemakkelijkt doordat de app alleen bedoeld is om de foto's tot hun recht te laten komen. Voor andere clubinformatie (zoals mededelingen of een vergaderagenda) wordt de gebruiker naar de websites doorgelinkt.";
@@ -275,6 +272,9 @@ Field at top of Photographers page that allows the user to filter the photograph
 
 /* Section title on Readme page */
 "The Prelude" = "Prelude";
+
+/* Shown in gray at the bottom of the Photographers page. */
+"This page lists the photographers that the Photo Club Hub app knows about. A photographer has one or more clickable image thumbnails. Clicking on a thumbnail brings you to the photographer's image portfolio for one particular club. The thumbnails can be scrolled horizontally if needed." = "Deze lijst bevat de fotografen die in deze app voorkomen. Per fotograaf is er één of meer miniatuurfoto's. Door op een foto te klikken komt men bij de verzameling beelden van de fotograaf die horen bij één enkel fotoclub. Bij een fotograaf verbonden met meerdere clubs, kan men horizontaal door de diverse miniatuurfoto's heen scrollen. ";
 
 /* Hint to the user if the database returns zero Members with Search filter in use. */
 "To see names here, please adapt the Search filter or enable additional categories on the Preferences page." = "Deze lijst is leeg doordat de Zoek filter niets vindt in de gekozen ledencategorieën. Pas dus de Zoek filter aan of voeg categorieën toe (bij Instellingen).";

@@ -8,10 +8,12 @@ Photo Clubs screen
     * Added Fotogroep de Gender (with one member) for demo purposes. Drag down this screen to add this club.
 Portfolios screen
     * Club names shown as "Photo Club Waalre (Waalre)" are now shown as "Photo Club Waalre"
+    * Changed text (footer) at bottom of list
 Maintenance
     * Requires iOS 17.0 or higher
     * Cleaned up logging and passing of PersonName structs
     * Upgraded and tested with MacOS 14.0, Xcode 15.0 and iOS 17.0.2
+    * Cleaned up the translation state of all localized strings
     
 This is build #4597 in Apple's App Store
 ---------------------------------------------------------------------------

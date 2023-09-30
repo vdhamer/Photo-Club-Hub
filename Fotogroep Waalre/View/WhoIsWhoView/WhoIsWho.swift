@@ -29,9 +29,10 @@ struct WhoIsWho: View {
             List { // lists are automatically "Lazy"
                 WhoIsWhoInnerView(predicate: model.preferences.photographerPredicate, searchText: searchText)
                 Text("""
-                     Information about a photographer's links to a photo club \
-                     can be found on the Portfolio page. This page contains club-independent information \
-                     such as a link to the photographer's own photography website.
+                     This page lists the photographers that the Photo Club Hub app knows about. \
+                     A photographer has one or more clickable image thumbnails. \
+                     Clicking on a thumbnail brings you to the photographer's image portfolio for one particular club. \
+                     The thumbnails can be scrolled horizontally if needed.
                      """, comment: "Shown in gray at the bottom of the Photographers page.")
                     .foregroundColor(.gray)
             }

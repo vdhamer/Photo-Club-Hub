@@ -87,11 +87,6 @@
         <target>In debug mode</target>
         <note>Shown instead of app name in PreludeView when app is started</note>
       </trans-unit>
-      <trans-unit id="Information about a photographer's links to a photo club can be found on the Portfolio page. This page contains club-independent information such as a link to the photographer's own photography website." xml:space="preserve">
-        <source>Information about a photographer's links to a photo club can be found on the Portfolio page. This page contains club-independent information such as a link to the photographer's own photography website.</source>
-        <target>Information about a photographer's links to a photo club can be found on the Portfolio page. This page contains club-independent information such as a link to the photographer's own photography website.</target>
-        <note>Shown in gray at the bottom of the Photographers page.</note>
-      </trans-unit>
       <trans-unit id="List of supported languages" xml:space="preserve">
         <source>List of supported languages</source>
         <target>List of supported languages</target>
@@ -419,6 +414,11 @@ Field at top of Members page that allows the user to filter the members based on
         <target>The concept</target>
         <note>Section title on Readme page</note>
       </trans-unit>
+      <trans-unit id="This page lists the photographers that the Photo Club Hub app knows about. A photographer has one or more clickable image thumbnails. Clicking on a thumbnail brings you to the photographer's image portfolio for one particular club. The thumbnails can be scrolled horizontally if needed." xml:space="preserve">
+        <source>This page lists the photographers that the Photo Club Hub app knows about. A photographer has one or more clickable image thumbnails. Clicking on a thumbnail brings you to the photographer's image portfolio for one particular club. The thumbnails can be scrolled horizontally if needed.</source>
+        <target>This page lists the photographers that the Photo Club Hub app knows about. A photographer has one or more clickable image thumbnails. Clicking on a thumbnail brings you to the photographer's image portfolio for one particular club. The thumbnails can be scrolled horizontally if needed.</target>
+        <note>Shown in gray at the bottom of the Photographers page.</note>
+      </trans-unit>
       <trans-unit id="To see names here, please adapt the Search filter or enable additional categories on the Preferences page." xml:space="preserve">
         <source>To see names here, please adapt the Search filter or enable additional categories on the Preferences page.</source>
         <target>To see names here, please adapt the Search filter or enable additional categories on the Preferences page.</target>
@@ -482,8 +482,8 @@ Field at top of Members page that allows the user to filter the members based on
       <trans-unit id="member" xml:space="preserve">
         <source>member</source>
         <target>member</target>
-        <note>Default status of member within a club. Used in concatenations.
-Statistics at end of section of FilteredMemberPortfoliosView</note>
+        <note>Statistics at end of section of FilteredMemberPortfoliosView
+Default status of member within a club. Used in concatenations.</note>
       </trans-unit>
       <trans-unit id="members" xml:space="preserve">
         <source>members</source>
