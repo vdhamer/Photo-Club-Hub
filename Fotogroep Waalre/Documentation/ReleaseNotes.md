@@ -1,7 +1,7 @@
 ### 2.5.0 (Github commit ???????) ??-09-23
 
 Who's Who screen (early proto of this functionality, for now in a separate feature branch)
-    * Shows the photo club(s) to which every photographer is or was affiliated.
+    * Shows thumbnails for every photo club to which a photographer is (or was) affiliated.
     * Clicking on these photoclubs brings you to the images for that portfolio.
     * Club names shown as "Photo Club Waalre (Waalre)" are now shown as "Photo Club Waalre"
 Photo Clubs screen
