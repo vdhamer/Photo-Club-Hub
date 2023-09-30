@@ -13,7 +13,6 @@ Maintenance
     * Requires iOS 17.0 or higher
     * Cleaned up logging and passing of PersonName structs
     * Upgraded and tested with MacOS 14.0, Xcode 15.0 and iOS 17.0.2
-    * Cleaned up the translation state of all localized strings
     
 This is build #4597 in Apple's App Store
 ---------------------------------------------------------------------------

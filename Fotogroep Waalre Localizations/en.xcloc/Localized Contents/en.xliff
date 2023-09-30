@@ -351,8 +351,8 @@ By clicking on the above button you can (anonymously) vote for improvements you 
       <trans-unit id="Search names" xml:space="preserve">
         <source>Search names</source>
         <target>Search names</target>
-        <note>Field at top of Photographers page that allows the user to filter the photographers based on either given- and family name.
-Field at top of Members page that allows the user to filter the members based on either given- and family name.</note>
+        <note>Field at top of Members page that allows the user to filter the members based on either given- and family name.
+Field at top of Photographers page that allows the user to filter the photographers based on either given- and family name.</note>
       </trans-unit>
       <trans-unit id="Show aspiring members" xml:space="preserve">
         <source>Show aspiring members</source>
@@ -414,9 +414,9 @@ Field at top of Members page that allows the user to filter the members based on
         <target>The concept</target>
         <note>Section title on Readme page</note>
       </trans-unit>
-      <trans-unit id="This page lists the photographers that the Photo Club Hub app knows about. A photographer has one or more clickable image thumbnails. Clicking on a thumbnail brings you to the photographer's image portfolio for one particular club. The thumbnails can be scrolled horizontally if needed." xml:space="preserve">
-        <source>This page lists the photographers that the Photo Club Hub app knows about. A photographer has one or more clickable image thumbnails. Clicking on a thumbnail brings you to the photographer's image portfolio for one particular club. The thumbnails can be scrolled horizontally if needed.</source>
-        <target>This page lists the photographers that the Photo Club Hub app knows about. A photographer has one or more clickable image thumbnails. Clicking on a thumbnail brings you to the photographer's image portfolio for one particular club. The thumbnails can be scrolled horizontally if needed.</target>
+      <trans-unit id="This page lists all the photographers that this app knows about. A photographer has one or more clickable image thumbnails below the photographer's name. Clicking on any thumbnail leads to the images associated with one particular photo club. The thumbnails can be scrolled horizontally (if there are many of them on one line)." xml:space="preserve">
+        <source>This page lists all the photographers that this app knows about. A photographer has one or more clickable image thumbnails below the photographer's name. Clicking on any thumbnail leads to the images associated with one particular photo club. The thumbnails can be scrolled horizontally (if there are many of them on one line).</source>
+        <target>This page lists all the photographers that this app knows about. A photographer has one or more clickable image thumbnails below the photographer's name. Clicking on any thumbnail leads to the images associated with one particular photo club. The thumbnails can be scrolled horizontally (if there are many of them on one line).</target>
         <note>Shown in gray at the bottom of the Photographers page.</note>
       </trans-unit>
       <trans-unit id="To see names here, please adapt the Search filter or enable additional categories on the Preferences page." xml:space="preserve">
@@ -482,8 +482,8 @@ Field at top of Members page that allows the user to filter the members based on
       <trans-unit id="member" xml:space="preserve">
         <source>member</source>
         <target>member</target>
-        <note>Statistics at end of section of FilteredMemberPortfoliosView
-Default status of member within a club. Used in concatenations.</note>
+        <note>Default status of member within a club. Used in concatenations.
+Statistics at end of section of FilteredMemberPortfoliosView</note>
       </trans-unit>
       <trans-unit id="members" xml:space="preserve">
         <source>members</source>

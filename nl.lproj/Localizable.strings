@@ -67,8 +67,8 @@
 /* Caption of Localizations image on Readme page */
 "List of supported languages" = "De beschikbare talen";
 
-/* Default status of member within a club. Used in concatenations.
-Statistics at end of section of FilteredMemberPortfoliosView */
+/* Statistics at end of section of FilteredMemberPortfoliosView
+Default status of member within a club. Used in concatenations. */
 "member" = "lid";
 
 /* In Preferences, above toggles like "Show former members" */
@@ -274,7 +274,7 @@ Field at top of Photographers page that allows the user to filter the photograph
 "The Prelude" = "Prelude";
 
 /* Shown in gray at the bottom of the Photographers page. */
-"This page lists the photographers that the Photo Club Hub app knows about. A photographer has one or more clickable image thumbnails. Clicking on a thumbnail brings you to the photographer's image portfolio for one particular club. The thumbnails can be scrolled horizontally if needed." = "Deze lijst bevat de fotografen die in deze app voorkomen. Per fotograaf is er één of meer miniatuurfoto's. Door op een foto te klikken komt men bij de verzameling beelden van de fotograaf die horen bij één enkel fotoclub. Bij een fotograaf verbonden met meerdere clubs, kan men horizontaal door de diverse miniatuurfoto's heen scrollen. ";
+"This page lists all the photographers that this app knows about. A photographer has one or more clickable image thumbnails below the photographer's name. Clicking on any thumbnail leads to the images associated with one particular photo club. The thumbnails can be scrolled horizontally (if there are many of them on one line)." = "Deze lijst bevat de fotografen die in deze app voorkomen. Per fotograaf is er één of meer miniatuurfoto's. Door op een foto te klikken komt men bij de verzameling beelden van de fotograaf die horen bij één enkel fotoclub. Bij een fotograaf verbonden met meerdere clubs, kan men horizontaal door de diverse miniatuurfoto's heen scrollen. ";
 
 /* Hint to the user if the database returns zero Members with Search filter in use. */
 "To see names here, please adapt the Search filter or enable additional categories on the Preferences page." = "Deze lijst is leeg doordat de Zoek filter niets vindt in de gekozen ledencategorieën. Pas dus de Zoek filter aan of voeg categorieën toe (bij Instellingen).";

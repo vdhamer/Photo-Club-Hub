@@ -29,10 +29,10 @@ struct WhoIsWho: View {
             List { // lists are automatically "Lazy"
                 WhoIsWhoInnerView(predicate: model.preferences.photographerPredicate, searchText: searchText)
                 Text("""
-                     This page lists the photographers that the Photo Club Hub app knows about. \
-                     A photographer has one or more clickable image thumbnails. \
-                     Clicking on a thumbnail brings you to the photographer's image portfolio for one particular club. \
-                     The thumbnails can be scrolled horizontally if needed.
+                     This page lists all the photographers that this app knows about. \
+                     A photographer has one or more clickable image thumbnails below the photographer's name. \
+                     Clicking on any thumbnail leads to the images associated with one particular photo club. \
+                     The thumbnails can be scrolled horizontally (if there are many of them on one line).
                      """, comment: "Shown in gray at the bottom of the Photographers page.")
                     .foregroundColor(.gray)
             }
