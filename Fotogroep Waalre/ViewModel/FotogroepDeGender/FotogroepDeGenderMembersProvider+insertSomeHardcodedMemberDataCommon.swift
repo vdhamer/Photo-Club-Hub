@@ -52,7 +52,7 @@ extension FotogroepDeGenderMembersProvider { // fill with some initial hard-code
                   memberRolesAndStatus: MemberRolesAndStatus(role: [ .chairman: true ]),
                   memberWebsite: URL(string: "https://www.fcdegender.nl/wp-content/uploads/Expositie%202023/Mariet/")!,
                   latestImage: URL(string:
-                     "https://www.fcdegender.nl/wp-content/uploads/Expositie%202023/Mariet/slides/Mariet%203.html")
+                     "https://www.fcdegender.nl/wp-content/uploads/Expositie%202023/Mariet/slides/Mariet%203.jpg")
         )
 
         let clubNickname = FotogroepDeGenderMembersProvider.fotogroepDeGenderIdPlus.nickname
