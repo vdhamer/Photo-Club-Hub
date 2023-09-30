@@ -47,6 +47,7 @@ struct WhoIsWhoInnerView: View {
                                 .tracking(1)
                                 .foregroundColor(chooseColor(accentColor: .accentColor,
                                                              isDeceased: filteredPhotographer.isDeceased))
+
                             if let date: Date = filteredPhotographer.bornDT {
                                 let locBirthday = String(localized: "Birthday:",
                                                          comment: """
@@ -57,6 +58,7 @@ struct WhoIsWhoInnerView: View {
                                     .font(.subheadline)
                                     .foregroundColor(filteredPhotographer.isDeceased ? .deceasedColor : .primary)
                             }
+
                             if filteredPhotographer.phoneNumber != "", showPhoneMail, !filteredPhotographer.isDeceased {
                                 let locPhone = String(localized: "Phone:",
                                                       comment: "Telephone number (usually invisible)")
@@ -64,12 +66,13 @@ struct WhoIsWhoInnerView: View {
                                     .font(.subheadline)
                                     .foregroundColor(.primary) // don't show phone numbers for deceased people
                             }
-                            if filteredPhotographer.eMail != "",
-                               showPhoneMail, !filteredPhotographer.isDeceased {
+
+                            if filteredPhotographer.eMail != "", showPhoneMail, !filteredPhotographer.isDeceased {
                                 Text(verbatim: "mailto://\(filteredPhotographer.eMail)")
                                     .font(.subheadline)
                                     .foregroundColor(.primary) // don't show e-mail addresses for deceased people
                             }
+
                             if let url: URL = filteredPhotographer.photographerWebsite {
                                 Link(destination: url, label: {
                                     Text(url.absoluteString)
@@ -78,17 +81,43 @@ struct WhoIsWhoInnerView: View {
                                         .font(.subheadline)
                                         .foregroundColor(.linkColor)
                                 })
-                                .buttonStyle(.plain) // to avoid entire List element to be clickable
+                                .buttonStyle(.plain) // prevents entire List element from becoming clickable
                             }
+
                             ScrollView(.horizontal, showsIndicators: true) {
                                 HStack {
                                     ForEach(filteredPhotographer.memberships.sorted(), id: \.id) { membership in
                                         Link(destination: membership.memberWebsite, label: {
-                                            Text(verbatim: "\(membership.photoClub.fullNameTown)")
-                                                .lineLimit(1)
-                                                .truncationMode(.middle)
-                                                .font(.subheadline)
-                                                .foregroundColor(.linkColor)
+//                                            Text(verbatim: "\(membership.photoClub.fullNameTown)")
+//                                                .lineLimit(1)
+//                                                .truncationMode(.middle)
+//                                                .font(.subheadline)
+//                                                .foregroundColor(.linkColor)
+                                            AsyncImage(url: membership.latestImageURL) { phase in
+                                                if let image = phase.image {
+                                                    image // Displays the loaded image
+                                                        .resizable()
+                                                        .aspectRatio(contentMode: .fill)
+                                                } else if phase.error != nil ||
+                                                            membership.latestImageURL == nil {
+                                                    Image("Question-mark") // Show image indicating an error occurred
+                                                        .resizable()
+                                                        .aspectRatio(contentMode: .fit)
+                                                } else {
+                                                    ZStack {
+                                                        Image("Embarrassed-snail") // Displays placeholder while loading
+                                                            .resizable()
+                                                            .aspectRatio(contentMode: .fit)
+                                                            .opacity(0.4)
+                                                        ProgressView()
+                                                            .scaleEffect(x: 2, y: 2, anchor: .center)
+                                                            .blendMode(BlendMode.difference)
+                                                    }
+                                                }
+                                            }
+                                            .frame(width: 160, height: 80)
+                                            .clipped()
+                                            .border(TintShapeStyle() )
                                         })
                                     }
                                 }
