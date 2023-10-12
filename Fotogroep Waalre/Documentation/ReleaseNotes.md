@@ -12,7 +12,7 @@ Portfolios screen
 Maintenance
     * Requires iOS 17.0 or higher
     * Cleaned up logging and passing of PersonName structs
-    * Upgraded and tested with MacOS 14.0, Xcode 15.1 Beta and iOS 17.0.2
+    * Upgraded and tested with MacOS 14.0, Xcode 15.1 Beta and iOS 17.0.3
     
 This is build #4597 in Apple's App Store
 ---------------------------------------------------------------------------
