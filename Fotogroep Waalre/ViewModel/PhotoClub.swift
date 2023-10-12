@@ -133,7 +133,7 @@ extension PhotoClub {
             }
 			return photoClub
 		} else {
-            print("\(photoClubIdPlus.fullNameTown): Will try to created new photo club")
+            print("\(photoClubIdPlus.fullNameTown): Will try to create new photo club")
             // cannot use PhotoClub() initializer because we must use bgContext
             let entity = NSEntityDescription.entity(forEntityName: "PhotoClub", in: context)!
             let photoClub = PhotoClub(entity: entity, insertInto: context)
