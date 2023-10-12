@@ -323,7 +323,7 @@ extension MemberPortfolio {
 
     func refreshFirstImage() {
         let photoClubTown: String = self.photoClub.fullNameTown
-        guard photoClubTown == "Fotogroep Waalre (Waalre)" else { return } // code needs closure per photo club
+        guard photoClubTown == "Fotogroep Waalre" else { return }
 
         if let urlIndex = URL(string: self.memberWebsite.absoluteString + "config.xml") { // assume JuiceBox Pro
             ifDebugPrint("\(photoClubTown): starting refreshFirstImage() \(urlIndex.absoluteString) in background")
