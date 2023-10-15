@@ -7,6 +7,7 @@ Who's Who screen (early proto of this functionality, for now in a separate featu
 Photo Clubs screen
     * Added Fotogroep de Gender (with one member) for demo purposes. Drag down Photo Clubs screen to load this.
 Portfolios screen
+    * Some graphical design changes (e.g. separator lines)
     * Club names like "Photo Club Waalre (Waalre)" are now shown as "Photo Club Waalre" (if town is part of name).
     * Changed text (footer) at bottom of list.
 Maintenance

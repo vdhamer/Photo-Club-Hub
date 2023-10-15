@@ -34,20 +34,23 @@ struct WhoIsWhoInnerView: View {
         Section {
             ForEach(filteredPhotographers, id: \.id) { filteredPhotographer in
                 VStack {
-                    HStack(alignment: .center) {
-                        PhotographerImage(isDeceased: filteredPhotographer.isDeceased)
+                    HStack(alignment: .top) {
+                        PhotographerIconView(isDeceased: filteredPhotographer.isDeceased)
                             .foregroundStyle(.photographerColor, .gray, .red) // red tertiary color should not show up
                             .font(.title3)
-                            .padding([.trailing], 5)
+                            .padding(EdgeInsets(top: 3, leading: 0, bottom: 0, trailing: 5))
                         VStack(alignment: .leading) {
-                            let alive = filteredPhotographer.isDeceased ?
-                                " - " + MemberStatus.deceased.localizedString() : ""
+
+                            // first green line with icon and name of photographer
+                            let alive: String = filteredPhotographer.isDeceased ? // generate name suffix
+                            (" - " + MemberStatus.deceased.localizedString()) : ""
                             Text(verbatim: "\(filteredPhotographer.fullNameLastFirst)\(alive)")
                                 .font(.title3)
                                 .tracking(1)
                                 .foregroundColor(chooseColor(accentColor: .accentColor,
                                                              isDeceased: filteredPhotographer.isDeceased))
 
+                            // birthday if available (year of birth is not shown)
                             if let date: Date = filteredPhotographer.bornDT {
                                 let locBirthday = String(localized: "Birthday:",
                                                          comment: """
@@ -59,6 +62,7 @@ struct WhoIsWhoInnerView: View {
                                     .foregroundColor(filteredPhotographer.isDeceased ? .deceasedColor : .primary)
                             }
 
+                            // phone number if available (and allowed)
                             if filteredPhotographer.phoneNumber != "", showPhoneMail, !filteredPhotographer.isDeceased {
                                 let locPhone = String(localized: "Phone:",
                                                       comment: "Telephone number (usually invisible)")
@@ -67,12 +71,14 @@ struct WhoIsWhoInnerView: View {
                                     .foregroundColor(.primary) // don't show phone numbers for deceased people
                             }
 
+                            // phone number if available (and allowed)
                             if filteredPhotographer.eMail != "", showPhoneMail, !filteredPhotographer.isDeceased {
                                 Text(verbatim: "mailto://\(filteredPhotographer.eMail)")
                                     .font(.subheadline)
                                     .foregroundColor(.primary) // don't show e-mail addresses for deceased people
                             }
 
+                            // personal (not club-related) web site if available
                             if let url: URL = filteredPhotographer.photographerWebsite {
                                 Link(destination: url, label: {
                                     Text(url.absoluteString)
@@ -84,40 +90,55 @@ struct WhoIsWhoInnerView: View {
                                 .buttonStyle(.plain) // prevents entire List element from becoming clickable
                             }
 
-                            ScrollView(.horizontal, showsIndicators: true) {
+                            ScrollView(.horizontal, showsIndicators: false) {
                                 HStack {
                                     ForEach(filteredPhotographer.memberships.sorted(), id: \.id) { membership in
                                         Link(destination: membership.memberWebsite, label: {
-//                                            Text(verbatim: "\(membership.photoClub.fullNameTown)")
-//                                                .lineLimit(1)
-//                                                .truncationMode(.middle)
-//                                                .font(.subheadline)
-//                                                .foregroundColor(.linkColor)
-                                            AsyncImage(url: membership.latestImageURL) { phase in
-                                                if let image = phase.image {
-                                                    image // Displays the loaded image
-                                                        .resizable()
-                                                        .aspectRatio(contentMode: .fill)
-                                                } else if phase.error != nil ||
-                                                            membership.latestImageURL == nil {
-                                                    Image("Question-mark") // Show image indicating an error occurred
-                                                        .resizable()
-                                                        .aspectRatio(contentMode: .fit)
-                                                } else {
-                                                    ZStack {
-                                                        Image("Embarrassed-snail") // Displays placeholder while loading
+                                            ZStack { // needed TODO
+                                                AsyncImage(url: membership.latestImageURL) { phase in
+                                                    if let image = phase.image {
+                                                        ZStack(alignment: .bottom) {
+                                                            image // Displays the loaded image
+                                                                .resizable()
+                                                                .aspectRatio(contentMode: .fill)
+                                                                .frame(width: 160, height: 160)
+                                                            Text(verbatim: "\(membership.roleDescriptionOfClubTown)")
+                                                                .font(.caption)
+                                                                .padding(EdgeInsets(top: 3,
+                                                                                    leading: 5,
+                                                                                    bottom: 3,
+                                                                                    trailing: 5))
+                                                                .lineLimit(3)
+                                                                .truncationMode(.middle)
+                                                                .background(.ultraThinMaterial)
+                                                                .foregroundColor(.black)
+                                                                .frame(width: 160)
+                                                        }
+                                                        .frame(height: 160)
+                                                    } else if phase.error != nil ||
+                                                                membership.latestImageURL == nil {
+                                                        Image("Question-mark") // image indicates an error occurred
                                                             .resizable()
                                                             .aspectRatio(contentMode: .fit)
-                                                            .opacity(0.4)
-                                                        ProgressView()
-                                                            .scaleEffect(x: 2, y: 2, anchor: .center)
-                                                            .blendMode(BlendMode.difference)
+                                                    } else {
+                                                        ZStack {
+                                                            Image("Embarrassed-snail") // placeholder while loading
+                                                                .resizable()
+                                                                .aspectRatio(contentMode: .fit)
+                                                                .opacity(0.4)
+                                                            ProgressView()
+                                                                .scaleEffect(x: 2, y: 2, anchor: .center)
+                                                                .blendMode(BlendMode.difference)
+                                                        }
                                                     }
                                                 }
+                                                .frame(height: 160)
+                                                .clipped()
+                                                .border(TintShapeStyle()) // what's this good for?
                                             }
-                                            .frame(width: 160, height: 80)
-                                            .clipped()
-                                            .border(TintShapeStyle() )
+                                            .frame(width: 160)
+                                            .clipShape(RoundedRectangle(cornerRadius: 25))
+                                            .shadow(color: .accentColor.opacity(0.5), radius: 3)
                                         })
                                     }
                                 }
@@ -181,7 +202,7 @@ struct WhoIsWhoInnerView: View {
         }
     }
 
-    private struct PhotographerImage: View {
+    private struct PhotographerIconView: View {
         let isDeceased: Bool
 
         var body: some View {

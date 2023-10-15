@@ -120,6 +120,11 @@ extension MemberPortfolio { // computed properties (some related to handling opt
         return result.trimmingCharacters(in: .whitespacesAndNewlines).capitalizingFirstLetter()
     }
 
+    var roleDescriptionOfClubTown: String {
+        let of2 = String(localized: "of2", comment: "<person> of <photo club>")
+        return "\(roleDescription) \(of2) \(self.photoClub.fullNameTown)"
+    }
+
     var memberRolesAndStatus: MemberRolesAndStatus {
         get { // conversion from Bool to dictionary
             var memberRS = MemberRolesAndStatus(role: [:], stat: [:])
