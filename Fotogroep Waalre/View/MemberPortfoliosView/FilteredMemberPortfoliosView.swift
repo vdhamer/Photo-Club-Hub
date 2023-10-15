@@ -43,25 +43,25 @@ struct FilteredMemberPortfoliosView: View {
     var body: some View {
         let sectionedPortfoliosResults = sectionedPortfolios // copy results to avoid recomputation
         ForEach(sectionedPortfoliosResults) {section in
-//            VStack {
-                Section {
-                    ForEach(filterPortfolios(unFilteredPortfolios: section), id: \.id) { filteredMember in
-                        MemberPortfolioRow(member: filteredMember, showPhotoClub: true)
-                    }
-                    .onDelete(perform: { indexSet in
-                        deleteMembers(section: Array(section), indexSet: indexSet)
-                    })
-                    .accentColor(.memberPortfolioColor)
-                } header: {
-                    Header(title: section.id) // String used to group the elements into Sections
-                } footer: {
-                    Footer(filtCount: filterPortfolios(unFilteredPortfolios: section).count,
-                           unfiltCount: section.endIndex,
-                           listName: section.id,
-                           photoClub: section.first?.photoClub
-                    )
-                }// }
-                .listRowSeparator(.hidden)
+            Section {
+                ForEach(filterPortfolios(unFilteredPortfolios: section), id: \.id) { filteredMember in
+                    MemberPortfolioRow(member: filteredMember)
+                        .listRowSeparator(.visible)
+                }
+                .onDelete(perform: { indexSet in
+                    deleteMembers(section: Array(section), indexSet: indexSet)
+                })
+                .accentColor(.memberPortfolioColor)
+            } header: {
+                Header(title: section.id) // String used to group the elements into Sections
+            } footer: {
+                Footer(filtCount: filterPortfolios(unFilteredPortfolios: section).count,
+                       unfiltCount: section.endIndex,
+                       listName: section.id,
+                       photoClub: section.first?.photoClub
+                )
+            }
+            .listRowSeparator(.hidden) // prevents a separator below the footer.
 //                .padding() // disabled because it doesn't work in combination with sectioning
 //                .background(Color(.secondarySystemBackground)) // compatible with light and dark mode
 //                .clipShape(RoundedRectangle(cornerSize: CGSize(width: 25.0, height: 25.0)))

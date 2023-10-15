@@ -10,7 +10,6 @@ import WebKit // for wkWebView
 
 struct MemberPortfolioRow: View {
     var member: MemberPortfolio
-    var showPhotoClub: Bool // not strictly needed now that Portfolios screen has section titles
     @Environment(\.horizontalSizeClass) var horSizeClass
     private let wkWebView = WKWebView()
     private let of2 = String(localized: "of2", comment: "<person> of <photo club>")
@@ -21,11 +20,10 @@ struct MemberPortfolioRow: View {
                                         .navigationTitle((member.photographer.fullNameFirstLast +
                                                   " @ " + member.photoClub.nameOrShortName(horSizeClass: horSizeClass)))
                                         .navigationBarTitleDisplayMode(NavigationBarItem.TitleDisplayMode.inline)) {
-            HStack(alignment: .center) {
+            HStack(alignment: .top) {
                 RoleStatusIconView(memberRolesAndStatus: member.memberRolesAndStatus)
                     .foregroundStyle(.memberPortfolioColor, .gray, .red) // red color is not used
                     .imageScale(.large)
-                    .offset(x: -5, y: 0)
                 VStack(alignment: .leading) {
                     Text(verbatim: "\(member.photographer.fullNameFirstLast)")
                         .font(UIDevice.isIPad ? .title : .title2)
@@ -35,18 +33,12 @@ struct MemberPortfolioRow: View {
                             defaultColor: .accentColor,
                             isDeceased: member.photographer.isDeceased
                         ))
-                    Group {
-                        if showPhotoClub {
-                            Text(verbatim: "\(member.roleDescription) \(of2) \(member.photoClub.fullNameTown)")
-                        } else {
-                            Text(verbatim: "\(member.roleDescription)")
-                        }
-                    }
-                    .truncationMode(.tail)
-                    .lineLimit(2)
-                    .font(UIDevice.isIPad ? .headline : .subheadline)
-                    .foregroundColor(member.photographer.isDeceased ?
-                        .deceasedColor : .primary)
+                    Text(verbatim: "\(member.roleDescriptionOfClubTown)")
+                        .truncationMode(.tail)
+                        .lineLimit(2)
+                        .font(UIDevice.isIPad ? .headline : .subheadline)
+                        .foregroundColor(member.photographer.isDeceased ?
+                            .deceasedColor : .primary)
                 }
                 Spacer()
                 AsyncImage(url: member.latestImageURL) { phase in
