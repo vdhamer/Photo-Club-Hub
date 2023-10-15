@@ -1,20 +1,20 @@
 ### 2.5.0 (Github commit ???????) ??-09-23
 
 Who's Who screen (early proto of this functionality, for now in a separate feature branch)
-    * Shows thumbnails for every photo club to which a photographer is (or was) affiliated.
-    * Clicking on these photoclubs brings you to the images for that portfolio.
-    * Club names shown as "Photo Club Waalre (Waalre)" are now shown as "Photo Club Waalre"
+    * Shows thumbnails for every photo club to which a photographer is (or was ) affiliated.
+    * Clicking on a thumbnail brings you to the images for that portfolio.
+    * Club names like "Photo Club Waalre (Waalre)" are now shown as "Photo Club Waalre" (if town is part of name).
 Photo Clubs screen
-    * Added Fotogroep de Gender (with one member) for demo purposes. Drag down this screen to add this club.
+    * Added Fotogroep de Gender (with one member) for demo purposes. Drag down Photo Clubs screen to load this.
 Portfolios screen
-    * Club names shown as "Photo Club Waalre (Waalre)" are now shown as "Photo Club Waalre"
-    * Changed text (footer) at bottom of list
+    * Club names like "Photo Club Waalre (Waalre)" are now shown as "Photo Club Waalre" (if town is part of name).
+    * Changed text (footer) at bottom of list.
 Maintenance
-    * Requires iOS 17.0 or higher
-    * Cleaned up logging and passing of PersonName structs
-    * Upgraded and tested with MacOS 14.0, Xcode 15.1 Beta and iOS 17.0.3
+    * Requires iOS 17.0 or higher.
+    * Cleaned up logging and passing of PersonName structs.
+    * Upgraded and tested with MacOS 14.0, Xcode 15.1 Beta and iOS 17.0.3.
     
-This is build #4597 in Apple's App Store
+This is build #46?? in Apple's App Store
 ---------------------------------------------------------------------------
 ### 2.4.2 (Github commit 3548647) 13-09-23
 Portfolio screen
