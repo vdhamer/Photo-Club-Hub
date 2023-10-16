@@ -94,49 +94,43 @@ struct WhoIsWhoInnerView: View {
                                 HStack {
                                     ForEach(filteredPhotographer.memberships.sorted(), id: \.id) { membership in
                                         Link(destination: membership.memberWebsite, label: {
-                                            ZStack { // needed TODO
-                                                AsyncImage(url: membership.latestImageURL) { phase in
-                                                    if let image = phase.image {
-                                                        ZStack(alignment: .bottom) {
-                                                            image // Displays the loaded image
-                                                                .resizable()
-                                                                .aspectRatio(contentMode: .fill)
-                                                                .frame(width: 160, height: 160)
-                                                            Text(verbatim: "\(membership.roleDescriptionOfClubTown)")
-                                                                .font(.caption)
-                                                                .padding(EdgeInsets(top: 3,
-                                                                                    leading: 5,
-                                                                                    bottom: 3,
-                                                                                    trailing: 5))
-                                                                .lineLimit(3)
-                                                                .truncationMode(.middle)
-                                                                .background(.ultraThinMaterial)
-                                                                .foregroundColor(.black)
-                                                                .frame(width: 160)
-                                                        }
-                                                        .frame(height: 160)
-                                                    } else if phase.error != nil ||
-                                                                membership.latestImageURL == nil {
-                                                        Image("Question-mark") // image indicates an error occurred
+                                            AsyncImage(url: membership.latestImageURL) { phase in
+                                                if let image = phase.image {
+                                                    ZStack(alignment: .bottom) {
+                                                        image // Displays the loaded image
+                                                            .resizable()
+                                                            .aspectRatio(contentMode: .fill)
+                                                            .frame(height: 160)
+                                                        Text(verbatim: "\(membership.roleDescriptionOfClubTown)")
+                                                            .font(.caption)
+                                                            .padding(EdgeInsets(top: 3,
+                                                                                leading: 5,
+                                                                                bottom: 3,
+                                                                                trailing: 5))
+                                                            .lineLimit(3)
+                                                            .truncationMode(.middle)
+                                                            .background(.thinMaterial)
+                                                            .foregroundColor(.black)
+                                                            .frame(width: 160)
+                                                    }
+                                                } else if phase.error != nil ||
+                                                            membership.latestImageURL == nil {
+                                                    Image("Question-mark") // image indicates an error occurred
+                                                        .resizable()
+                                                        .aspectRatio(contentMode: .fit)
+                                                } else {
+                                                    ZStack {
+                                                        Image("Embarrassed-snail") // placeholder while loading
                                                             .resizable()
                                                             .aspectRatio(contentMode: .fit)
-                                                    } else {
-                                                        ZStack {
-                                                            Image("Embarrassed-snail") // placeholder while loading
-                                                                .resizable()
-                                                                .aspectRatio(contentMode: .fit)
-                                                                .opacity(0.4)
-                                                            ProgressView()
-                                                                .scaleEffect(x: 2, y: 2, anchor: .center)
-                                                                .blendMode(BlendMode.difference)
-                                                        }
+                                                            .opacity(0.4)
+                                                        ProgressView()
+                                                            .scaleEffect(x: 2, y: 2, anchor: .center)
+                                                            .blendMode(BlendMode.difference)
                                                     }
                                                 }
-                                                .frame(height: 160)
-                                                .clipped()
-                                                .border(TintShapeStyle()) // what's this good for?
                                             }
-                                            .frame(width: 160)
+                                            .frame(width: 160, height: 160)
                                             .clipShape(RoundedRectangle(cornerRadius: 25))
                                             .shadow(color: .accentColor.opacity(0.5), radius: 3)
                                         })
