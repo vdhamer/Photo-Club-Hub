@@ -109,8 +109,8 @@ struct WhoIsWhoInnerView: View {
                                                                                 trailing: 5))
                                                             .lineLimit(3)
                                                             .truncationMode(.middle)
-                                                            .background(.thinMaterial)
-                                                            .foregroundColor(.black)
+                                                            .background(.ultraThinMaterial)
+                                                            .foregroundColor(.primary)
                                                             .frame(width: 160)
                                                     }
                                                 } else if phase.error != nil ||
