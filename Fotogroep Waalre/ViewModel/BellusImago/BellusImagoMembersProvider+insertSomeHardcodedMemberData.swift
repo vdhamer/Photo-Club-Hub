@@ -42,7 +42,7 @@ extension BellusImagoMembersProvider { // fill with some initial hard-coded cont
                   personName: PersonName(givenName: "Rico", infixName: "", familyName: "Coolen"),
                   photographerWebsite: URL(string: "https://www.ricoco.nl"),
                   photoClub: clubBellusImago,
-                  memberWebsite: URL(string: "https://www.fotoclubbellusimago.nl/rico.html")!,
+                  memberWebsite: URL(string: "https://www.fotoclubbellusimago.nl/rico.html"),
                   latestImage: URL(string:
                      "https://www.fotoclubbellusimago.nl/uploads/5/5/1/2/55129719/vrijwerk-rico-3_orig.jpg"),
                   eMail: "info@ricoco.nl"
@@ -52,7 +52,7 @@ extension BellusImagoMembersProvider { // fill with some initial hard-coded cont
                   personName: PersonName(givenName: "Loek", infixName: "", familyName: "Dirkx"),
                   photoClub: clubBellusImago,
                   memberRolesAndStatus: MemberRolesAndStatus(role: [ .chairman: true ]),
-                  memberWebsite: URL(string: "https://www.fotoclubbellusimago.nl/loek.html")!,
+                  memberWebsite: URL(string: "https://www.fotoclubbellusimago.nl/loek.html"),
                   latestImage: URL(string:
                      "https://www.fotoclubbellusimago.nl/uploads/5/5/1/2/55129719/vrijwerk-loek-1_2_orig.jpg")
         )
@@ -83,8 +83,10 @@ extension BellusImagoMembersProvider { // fill with some initial hard-coded cont
                            memberRolesAndStatus: MemberRolesAndStatus = MemberRolesAndStatus(role: [:], stat: [:]),
                            memberWebsite: URL? = nil,
                            latestImage: URL? = nil,
+                           latestThumbnail: URL? = nil,
                            phoneNumber: String? = nil,
                            eMail: String? = nil) {
+
         let photographer = Photographer.findCreateUpdate(context: bgContext,
                                                          personName: personName,
                                                          memberRolesAndStatus: memberRolesAndStatus,
@@ -92,10 +94,13 @@ extension BellusImagoMembersProvider { // fill with some initial hard-coded cont
                                                          bornDT: bornDT,
                                                          photoClub: photoClub)
 
+        let image = latestImage ?? latestThumbnail // if image not available, use thumbnail (which might also be nil)
+        let thumb = latestThumbnail ?? latestImage // if thumb not available, use image (which might also be nil)
         _ = MemberPortfolio.findCreateUpdate(bgContext: bgContext, photoClub: photoClub, photographer: photographer,
                                              memberRolesAndStatus: memberRolesAndStatus,
                                              memberWebsite: memberWebsite,
-                                             latestImage: latestImage)
+                                             latestImage: image,
+                                             latestThumbnail: thumb)
     }
 
 }

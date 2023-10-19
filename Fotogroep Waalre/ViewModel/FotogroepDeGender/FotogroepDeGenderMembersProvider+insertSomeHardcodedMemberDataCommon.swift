@@ -49,7 +49,7 @@ extension FotogroepDeGenderMembersProvider { // fill with some initial hard-code
                   photographerWebsite: URL(string: "https://www.m3w.nl"),
                   bornDT: bornDT,
                   photoClub: clubDeGender,
-                  memberWebsite: URL(string: "https://www.fcdegender.nl/wp-content/uploads/Expositie%202023/Mariet/")!,
+                  memberWebsite: URL(string: "https://www.fcdegender.nl/wp-content/uploads/Expositie%202023/Mariet/"),
                   latestImage: URL(string:
                      "https://www.fcdegender.nl/wp-content/uploads/Expositie%202023/Mariet/slides/Mariet%203.jpg")
         )
@@ -80,6 +80,7 @@ extension FotogroepDeGenderMembersProvider { // fill with some initial hard-code
                            memberRolesAndStatus: MemberRolesAndStatus = MemberRolesAndStatus(role: [:], stat: [:]),
                            memberWebsite: URL? = nil,
                            latestImage: URL? = nil,
+                           latestThumbnail: URL? = nil,
                            phoneNumber: String? = nil,
                            eMail: String? = nil) {
         let photographer = Photographer.findCreateUpdate(context: bgContext,
@@ -89,10 +90,13 @@ extension FotogroepDeGenderMembersProvider { // fill with some initial hard-code
                                                          bornDT: bornDT,
                                                          photoClub: photoClub)
 
+        let image = latestImage ?? latestThumbnail // if image not available, use thumbnail (which might also be nil)
+        let thumb = latestThumbnail ?? latestImage // if thumb not available, use image (which might also be nil)
         _ = MemberPortfolio.findCreateUpdate(bgContext: bgContext, photoClub: photoClub, photographer: photographer,
                                              memberRolesAndStatus: memberRolesAndStatus,
                                              memberWebsite: memberWebsite,
-                                             latestImage: latestImage)
+                                             latestImage: image,
+                                             latestThumbnail: thumb)
     }
 
 }

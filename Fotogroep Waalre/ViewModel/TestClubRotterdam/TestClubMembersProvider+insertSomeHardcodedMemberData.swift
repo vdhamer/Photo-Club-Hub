@@ -44,7 +44,7 @@ extension TestClubRotterdamMembersProvider { // fill with some initial hard-code
                   memberWebsite: URL(string: "https://www.fotogroepwaalre.nl/fotos/Peter_van_den_Hamer_testR")!,
                   latestImage: URL(string:
                      "https://www.fotogroepwaalre.nl/fotos/Peter_van_den_Hamer_testR/" +
-		                                    "thumbs/2015_Madeira_RX1r_064.jpg")!,
+		                                    "thumbs/2015_Madeira_RX1r_064.jpg"),
                   phoneNumber: nil,
                   eMail: "foobarR@vdhamer.com"
         )
@@ -72,8 +72,10 @@ extension TestClubRotterdamMembersProvider { // fill with some initial hard-code
                            memberRolesAndStatus: MemberRolesAndStatus = MemberRolesAndStatus(role: [:], stat: [:]),
                            memberWebsite: URL? = nil,
                            latestImage: URL? = nil,
+                           latestThumbnail: URL? = nil,
                            phoneNumber: String? = nil,
                            eMail: String? = nil) {
+
         let photographer = Photographer.findCreateUpdate(
                             context: bgContext,
                             personName: personName,
@@ -81,11 +83,14 @@ extension TestClubRotterdamMembersProvider { // fill with some initial hard-code
                             bornDT: bornDT,
                             photoClub: photoClub)
 
+        let image = latestImage ?? latestThumbnail // if image not available, use thumbnail (which might also be nil)
+        let thumb = latestThumbnail ?? latestImage // if thumb not available, use image (which might also be nil)
         _ = MemberPortfolio.findCreateUpdate(
                             bgContext: bgContext, photoClub: photoClub, photographer: photographer,
                             memberRolesAndStatus: memberRolesAndStatus,
                             memberWebsite: memberWebsite,
-                            latestImage: latestImage)
+                            latestImage: image,
+                            latestThumbnail: thumb)
     }
 
 }

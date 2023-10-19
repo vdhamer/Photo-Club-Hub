@@ -41,13 +41,13 @@ struct MemberPortfolioRow: View {
                             .deceasedColor : .primary)
                 }
                 Spacer()
-                AsyncImage(url: member.latestImageURL) { phase in
+                AsyncImage(url: member.latestThumbURL) { phase in
                     if let image = phase.image {
                         image // Displays the loaded image
                             .resizable()
                             .aspectRatio(contentMode: .fill)
                     } else if phase.error != nil ||
-                                member.latestImageURL == nil {
+                                member.latestThumbURL == nil {
                         Image("Question-mark") // Displays image indicating an error occurred
                             .resizable()
                             .aspectRatio(contentMode: .fit)

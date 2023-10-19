@@ -43,10 +43,10 @@ extension TestClubDenHaagMembersProvider { // fill with some initial hard-coded 
                   personName: PersonName(givenName: "Peter", infixName: "van den", familyName: "Hamer"),
                   photoClub: clubTestDenHaag,
                   memberRolesAndStatus: MemberRolesAndStatus(role: [ .viceChairman: true ], stat: [ .former: false]),
-                  memberWebsite: URL(string: "https://www.fotogroepwaalre.nl/fotos/Peter_van_den_Hamer_testDH")!,
+                  memberWebsite: URL(string: "https://www.fotogroepwaalre.nl/fotos/Peter_van_den_Hamer_testDH"),
                   latestImage: URL(string:
                      "https://www.fotogroepwaalre.nl/fotos/Peter_van_den_Hamer_testDH/" +
-                                                    "thumbs/2010_Barcelona_95.jpg")!,
+                                                    "thumbs/2010_Barcelona_95.jpg"),
                   eMail: "foobarDH@vdhamer.com"
         )
 
@@ -75,8 +75,10 @@ extension TestClubDenHaagMembersProvider { // fill with some initial hard-coded 
                            memberRolesAndStatus: MemberRolesAndStatus = MemberRolesAndStatus(role: [:], stat: [:]),
                            memberWebsite: URL? = nil,
                            latestImage: URL? = nil,
+                           latestThumbnail: URL? = nil,
                            phoneNumber: String? = nil,
                            eMail: String? = nil) {
+
         let photographer = Photographer.findCreateUpdate(
                             context: bgContext,
                             personName: personName,
@@ -84,11 +86,14 @@ extension TestClubDenHaagMembersProvider { // fill with some initial hard-coded 
                             bornDT: bornDT,
                             photoClub: photoClub)
 
+        let image = latestImage ?? latestThumbnail // if image not available, use thumbnail (which might also be nil)
+        let thumb = latestThumbnail ?? latestImage // if thumb not available, use image (which might also be nil)
         _ = MemberPortfolio.findCreateUpdate(
                             bgContext: bgContext, photoClub: photoClub, photographer: photographer,
                             memberRolesAndStatus: memberRolesAndStatus,
                             memberWebsite: memberWebsite,
-                            latestImage: latestImage)
+                            latestImage: image,
+                            latestThumbnail: thumb)
     }
 
 }

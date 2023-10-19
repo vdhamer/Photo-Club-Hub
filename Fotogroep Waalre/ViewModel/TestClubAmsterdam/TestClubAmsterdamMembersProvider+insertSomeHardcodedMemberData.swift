@@ -46,7 +46,7 @@ extension TestClubAmsterdamMembersProvider { // fill with some initial hard-code
                   memberWebsite: URL(string: "https://www.fotogroepwaalre.nl/fotos/Peter_van_den_Hamer_testA")!,
                   latestImage: URL(string:
                      "https://www.fotogroepwaalre.nl/fotos/Peter_van_den_Hamer_testA/" +
-                                                    "thumbs/2022_Iceland_R5_013.jpg")!,
+                                                    "thumbs/2022_Iceland_R5_013.jpg"),
                   eMail: "foobarA@vdhamer.com"
         )
 
@@ -73,6 +73,7 @@ extension TestClubAmsterdamMembersProvider { // fill with some initial hard-code
                            memberRolesAndStatus: MemberRolesAndStatus = MemberRolesAndStatus(role: [:], stat: [:]),
                            memberWebsite: URL? = nil,
                            latestImage: URL? = nil,
+                           latestThumbnail: URL? = nil,
                            phoneNumber: String? = nil,
                            eMail: String? = nil) {
         let photographer = Photographer.findCreateUpdate(
@@ -82,11 +83,14 @@ extension TestClubAmsterdamMembersProvider { // fill with some initial hard-code
                             bornDT: bornDT,
                             photoClub: photoClub)
 
+        let image = latestImage ?? latestThumbnail // if image not available, use thumbnail (which might also be nil)
+        let thumb = latestThumbnail ?? latestImage // if thumb not available, use image (which might also be nil)
         _ = MemberPortfolio.findCreateUpdate(
                             bgContext: bgContext, photoClub: photoClub, photographer: photographer,
                             memberRolesAndStatus: memberRolesAndStatus,
                             memberWebsite: memberWebsite,
-                            latestImage: latestImage)
+                            latestImage: image,
+                            latestThumbnail: thumb)
     }
 
 }

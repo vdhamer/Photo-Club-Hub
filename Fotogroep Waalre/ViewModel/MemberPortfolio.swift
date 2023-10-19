@@ -192,7 +192,8 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
                                  memberRolesAndStatus: MemberRolesAndStatus,
                                  dateInterval: DateInterval? = nil,
                                  memberWebsite: URL? = nil,
-                                 latestImage: URL? = nil
+                                 latestImage: URL? = nil,
+                                 latestThumbnail: URL? = nil
                                 ) -> MemberPortfolio {
 
         let predicateFormat: String = "photoClub_ = %@ AND photographer_ = %@" // avoid localization
@@ -215,7 +216,8 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
                       memberRolesAndStatus: memberRolesAndStatus,
                       dateInterval: dateInterval,
                       memberWebsite: memberWebsite,
-                      latestImage: latestImage) {
+                      latestImage: latestImage,
+                      latestThumbnail: latestThumbnail) {
                 print("""
                       \(memberPortfolio.photoClub.fullName): \
                       Updated info for member \(memberPortfolio.photographer.fullNameFirstLast)
@@ -231,7 +233,8 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
                        memberRolesAndStatus: memberRolesAndStatus,
                        dateInterval: dateInterval,
                        memberWebsite: memberWebsite,
-                       latestImage: latestImage)
+                       latestImage: latestImage,
+                       latestThumbnail: latestThumbnail)
             print("""
                   \(memberPortfolio.photoClub.fullNameTown): \
                   Created new membership for \(memberPortfolio.photographer.fullNameFirstLast)
@@ -246,7 +249,8 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
                                memberRolesAndStatus: MemberRolesAndStatus,
                                dateInterval: DateInterval?,
                                memberWebsite: URL?,
-                               latestImage: URL?) -> Bool {
+                               latestImage: URL?,
+                               latestThumbnail: URL?) -> Bool {
 		var needsSaving: Bool = false
 
         // function only works for non-optional Types.
@@ -285,6 +289,7 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
         let changed3 = updateIfChanged(update: &memberPortfolio.dateIntervalEnd, with: dateInterval?.end)
         let changed4 = updateIfChanged(update: &memberPortfolio.memberWebsite, with: memberWebsite)
         let changed5 = updateIfChangedOptional(update: &memberPortfolio.latestImageURL, with: latestImage)
+        let changed6 = updateIfChangedOptional(update: &memberPortfolio.latestThumbURL, with: latestThumbnail)
         needsSaving = changed1 || changed2 || changed3 || changed4 || changed5 // forces execution of updateIfChanged()
 
 		if needsSaving {
@@ -311,7 +316,12 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
                                     Changed latest image for \(memberPortfolio.photographer.fullNameFirstLast) \
                                     to \(latestImage?.lastPathComponent ?? "<noLatestImage>")
                                     """)}
-			} catch {
+                if changed6 { print("""
+                                    \(memberPortfolio.photoClub.fullNameTown): \
+                                    Changed latest thumbnail for \(memberPortfolio.photographer.fullNameFirstLast) \
+                                    to \(latestThumbnail?.lastPathComponent ?? "<noLatestThumbnail>")
+                                    """)}
+            } catch {
                 ifDebugFatalError("Update failed for member \(memberPortfolio.photographer.fullNameFirstLast) " +
                                   "in club \(memberPortfolio.photoClub.fullNameTown): \(error)",
                                   file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
@@ -386,11 +396,16 @@ extension MemberPortfolio {
                   "for \(member.photographer.fullNameFirstLast) in \(member.photoClub.fullName)")
             return
         }
-        let (_, _, thumbSuffix) = match.output
+        let (_, imageSuffix, thumbSuffix) = match.output
+        let imageURL = URL(string: self.memberWebsite.absoluteString + imageSuffix)
         let thumbURL = URL(string: self.memberWebsite.absoluteString + thumbSuffix)
 
-        if member.latestImageURL != thumbURL && thumbURL != nil {
-            member.latestImageURL = thumbURL // this is where it happens. Note that there is context.save()
+        if member.latestImageURL != imageURL && imageURL != nil {
+            member.latestImageURL = imageURL // this is where it happens. Note that there is context.save()
+            print("\(photoClub.fullName): found new image \(imageURL!)")
+        }
+        if member.latestThumbURL != thumbURL && thumbURL != nil {
+            member.latestThumbURL = thumbURL // this is where it happens. Note that there is context.save()
             print("\(photoClub.fullName): found new thumbnail \(thumbURL!)")
         }
     }
