@@ -192,7 +192,8 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
         let changed4 = updateIfChanged(update: &memberPortfolio.memberWebsite, with: memberWebsite)
         let changed5 = updateIfChangedOptional(update: &memberPortfolio.latestImageURL, with: latestImage)
         let changed6 = updateIfChangedOptional(update: &memberPortfolio.latestThumbURL, with: latestThumbnail)
-        needsSaving = changed1 || changed2 || changed3 || changed4 || changed5 // forces execution of updateIfChanged()
+        needsSaving = changed1 || changed2 || changed3 ||
+                      changed4 || changed5 || changed6 // forces execution of updateIfChanged()
 
 		if needsSaving {
 			do {
