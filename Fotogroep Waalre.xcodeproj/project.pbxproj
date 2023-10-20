@@ -31,7 +31,7 @@
 		D0621E812AE2D7DE000FFADB /* MemberPortfolio+roles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0621E802AE2D7DE000FFADB /* MemberPortfolio+roles.swift */; };
 		D0621E852AE2E085000FFADB /* MemberPortfolio+updating.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0621E842AE2E085000FFADB /* MemberPortfolio+updating.swift */; };
 		D0621E872AE2E22D000FFADB /* TestClubDenHaagMembersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0621E862AE2E22D000FFADB /* TestClubDenHaagMembersProvider.swift */; };
-		D0621E892AE2E47B000FFADB /* MemberPortfolio+refreshFirstImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0621E882AE2E47B000FFADB /* MemberPortfolio+refreshFirstImage.swift */; };
+		D0621E892AE2E47B000FFADB /* MemberPortfolio+firstImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0621E882AE2E47B000FFADB /* MemberPortfolio+firstImage.swift */; };
 		D06754A02942B23F00C0AB08 /* FotogroepWaalreMembersProvide+enumHTMLPageLoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D067549F2942B23F00C0AB08 /* FotogroepWaalreMembersProvide+enumHTMLPageLoadingState.swift */; };
 		D06BE9332A4F870B0055B3B1 /* ifDebugUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06BE9322A4F870B0055B3B1 /* ifDebugUtils.swift */; };
 		D0795CEC294FCCC200FA62A8 /* ShapeStyle+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0795CEB294FCCC200FA62A8 /* ShapeStyle+Colors.swift */; };
@@ -133,7 +133,7 @@
 		D0621E802AE2D7DE000FFADB /* MemberPortfolio+roles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MemberPortfolio+roles.swift"; sourceTree = "<group>"; };
 		D0621E842AE2E085000FFADB /* MemberPortfolio+updating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MemberPortfolio+updating.swift"; sourceTree = "<group>"; };
 		D0621E862AE2E22D000FFADB /* TestClubDenHaagMembersProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestClubDenHaagMembersProvider.swift; sourceTree = "<group>"; };
-		D0621E882AE2E47B000FFADB /* MemberPortfolio+refreshFirstImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MemberPortfolio+refreshFirstImage.swift"; sourceTree = "<group>"; };
+		D0621E882AE2E47B000FFADB /* MemberPortfolio+firstImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MemberPortfolio+firstImage.swift"; sourceTree = "<group>"; };
 		D067549F2942B23F00C0AB08 /* FotogroepWaalreMembersProvide+enumHTMLPageLoadingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FotogroepWaalreMembersProvide+enumHTMLPageLoadingState.swift"; sourceTree = "<group>"; };
 		D06BE9322A4F870B0055B3B1 /* ifDebugUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ifDebugUtils.swift; sourceTree = "<group>"; };
 		D0795CEB294FCCC200FA62A8 /* ShapeStyle+Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ShapeStyle+Colors.swift"; sourceTree = "<group>"; };
@@ -270,7 +270,7 @@
 				D0831A24277F72590049AB84 /* MemberPortfolio.swift */,
 				D0621E802AE2D7DE000FFADB /* MemberPortfolio+roles.swift */,
 				D0621E842AE2E085000FFADB /* MemberPortfolio+updating.swift */,
-				D0621E882AE2E47B000FFADB /* MemberPortfolio+refreshFirstImage.swift */,
+				D0621E882AE2E47B000FFADB /* MemberPortfolio+firstImage.swift */,
 			);
 			path = MemberPortfolio;
 			sourceTree = "<group>";
@@ -830,7 +830,7 @@
 				D0621E872AE2E22D000FFADB /* TestClubDenHaagMembersProvider.swift in Sources */,
 				D0EB533C295775240061613B /* Crosshairs.swift in Sources */,
 				D0831A36277F72590049AB84 /* FotogroepWaalreMembersProvider+insertSomeHardcodedMemberData.swift in Sources */,
-				D0621E892AE2E47B000FFADB /* MemberPortfolio+refreshFirstImage.swift in Sources */,
+				D0621E892AE2E47B000FFADB /* MemberPortfolio+firstImage.swift in Sources */,
 				D0831A20277F72270049AB84 /* PhotoClubView.swift in Sources */,
 				D0E2235427DE9139002A8600 /* PreludeView.swift in Sources */,
 				D0621E812AE2D7DE000FFADB /* MemberPortfolio+roles.swift in Sources */,
