@@ -28,7 +28,7 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
                                    )
         let fetchRequest: NSFetchRequest<MemberPortfolio> = MemberPortfolio.fetchRequest()
         fetchRequest.predicate = predicate
-        let memberPortfolios: [MemberPortfolio] = (try? bgContext.fetch(fetchRequest)) ?? [] // nil means absolute failure
+        let memberPortfolios: [MemberPortfolio] = (try? bgContext.fetch(fetchRequest)) ?? [] // nil = absolute failure
 
         if memberPortfolios.count > 1 { // there is actually a Core Data constraint to prevent this
             ifDebugFatalError("Query returned multiple (\(memberPortfolios.count)) memberPortfolios for " +
@@ -37,7 +37,8 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
             // in release mode, log that there are multiple clubs, but continue using the first one.
         }
 
-        if let memberPortfolio = memberPortfolios.first { // already exists, so make sure secondary attributes are up to date
+        if let memberPortfolio = memberPortfolios.first {
+            // already exists, so make sure secondary attributes are up to date
             if update(bgContext: bgContext, memberPortfolio: memberPortfolio,
                       memberRolesAndStatus: memberRolesAndStatus,
                       dateInterval: dateInterval,

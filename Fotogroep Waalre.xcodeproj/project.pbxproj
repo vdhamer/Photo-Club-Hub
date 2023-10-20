@@ -29,6 +29,9 @@
 		D06061EA28A0456C00A675A7 /* FGWPrivateMembersURL3.txt in Resources */ = {isa = PBXBuildFile; fileRef = D06061E928A0456C00A675A7 /* FGWPrivateMembersURL3.txt */; };
 		D06061ED28A05D4600A675A7 /* String+Paths.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06061EC28A05D4600A675A7 /* String+Paths.swift */; };
 		D0621E812AE2D7DE000FFADB /* MemberPortfolio+roles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0621E802AE2D7DE000FFADB /* MemberPortfolio+roles.swift */; };
+		D0621E852AE2E085000FFADB /* MemberPortfolio+updating.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0621E842AE2E085000FFADB /* MemberPortfolio+updating.swift */; };
+		D0621E872AE2E22D000FFADB /* TestClubDenHaagMembersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0621E862AE2E22D000FFADB /* TestClubDenHaagMembersProvider.swift */; };
+		D0621E892AE2E47B000FFADB /* MemberPortfolio+firstImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0621E882AE2E47B000FFADB /* MemberPortfolio+firstImage.swift */; };
 		D06754A02942B23F00C0AB08 /* FotogroepWaalreMembersProvide+enumHTMLPageLoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D067549F2942B23F00C0AB08 /* FotogroepWaalreMembersProvide+enumHTMLPageLoadingState.swift */; };
 		D06BE9332A4F870B0055B3B1 /* ifDebugUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06BE9322A4F870B0055B3B1 /* ifDebugUtils.swift */; };
 		D0795CEC294FCCC200FA62A8 /* ShapeStyle+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0795CEB294FCCC200FA62A8 /* ShapeStyle+Colors.swift */; };
@@ -67,7 +70,6 @@
 		D0A0884C27F8C697002CC8E1 /* TestClubMembersProvider+insertSomeHardcodedMemberData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A0884A27F8C697002CC8E1 /* TestClubMembersProvider+insertSomeHardcodedMemberData.swift */; };
 		D0A0B6852AA930E90078DE9A /* Photo_Club_Hub.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D0A0B6832AA930E90078DE9A /* Photo_Club_Hub.xcdatamodeld */; };
 		D0A4E6F529871DE700333D7B /* TestClubDenHaagMembersProvider+insertSomeHardcodedMemberData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A4E6F429871DE700333D7B /* TestClubDenHaagMembersProvider+insertSomeHardcodedMemberData.swift */; };
-		D0A4E6F829871E9300333D7B /* TestClubDenHaagMembersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A4E6F729871E9300333D7B /* TestClubDenHaagMembersProvider.swift */; };
 		D0ADF4AE27922DCA00535432 /* MemberRolesAndStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ADF4AD27922DCA00535432 /* MemberRolesAndStatus.swift */; };
 		D0AE1B7527889E8600E0100E /* PhotoClubListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AE1B7427889E8600E0100E /* PhotoClubListView.swift */; };
 		D0AE1B782788A19500E0100E /* WhoIsWho.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AE1B772788A19500E0100E /* WhoIsWho.swift */; };
@@ -129,6 +131,9 @@
 		D06061E928A0456C00A675A7 /* FGWPrivateMembersURL3.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = FGWPrivateMembersURL3.txt; sourceTree = "<group>"; };
 		D06061EC28A05D4600A675A7 /* String+Paths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Paths.swift"; sourceTree = "<group>"; };
 		D0621E802AE2D7DE000FFADB /* MemberPortfolio+roles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MemberPortfolio+roles.swift"; sourceTree = "<group>"; };
+		D0621E842AE2E085000FFADB /* MemberPortfolio+updating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MemberPortfolio+updating.swift"; sourceTree = "<group>"; };
+		D0621E862AE2E22D000FFADB /* TestClubDenHaagMembersProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestClubDenHaagMembersProvider.swift; sourceTree = "<group>"; };
+		D0621E882AE2E47B000FFADB /* MemberPortfolio+firstImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MemberPortfolio+firstImage.swift"; sourceTree = "<group>"; };
 		D067549F2942B23F00C0AB08 /* FotogroepWaalreMembersProvide+enumHTMLPageLoadingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FotogroepWaalreMembersProvide+enumHTMLPageLoadingState.swift"; sourceTree = "<group>"; };
 		D06BE9322A4F870B0055B3B1 /* ifDebugUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ifDebugUtils.swift; sourceTree = "<group>"; };
 		D0795CEB294FCCC200FA62A8 /* ShapeStyle+Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ShapeStyle+Colors.swift"; sourceTree = "<group>"; };
@@ -176,7 +181,6 @@
 		D0A0B6842AA930E90078DE9A /* Photo_Club_Hub.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub.xcdatamodel; sourceTree = "<group>"; };
 		D0A0B6872AA932A10078DE9A /* Photo_Club_Hub_2_4_1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_4_1.xcdatamodel; sourceTree = "<group>"; };
 		D0A4E6F429871DE700333D7B /* TestClubDenHaagMembersProvider+insertSomeHardcodedMemberData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TestClubDenHaagMembersProvider+insertSomeHardcodedMemberData.swift"; sourceTree = "<group>"; };
-		D0A4E6F729871E9300333D7B /* TestClubDenHaagMembersProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TestClubDenHaagMembersProvider.swift; path = "Fotogroep Waalre/ViewModel/TestClubDenHaag/TestClubDenHaagMembersProvider.swift"; sourceTree = SOURCE_ROOT; };
 		D0ADF4AD27922DCA00535432 /* MemberRolesAndStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberRolesAndStatus.swift; sourceTree = "<group>"; };
 		D0AE1B7427889E8600E0100E /* PhotoClubListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoClubListView.swift; sourceTree = "<group>"; };
 		D0AE1B772788A19500E0100E /* WhoIsWho.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhoIsWho.swift; sourceTree = "<group>"; };
@@ -258,6 +262,30 @@
 				D05E451D27EF2A2C00D31327 /* ReadmeView.swift */,
 			);
 			path = ReadmeView;
+			sourceTree = "<group>";
+		};
+		D0621E822AE2DF1B000FFADB /* MemberPortfolio */ = {
+			isa = PBXGroup;
+			children = (
+				D0831A24277F72590049AB84 /* MemberPortfolio.swift */,
+				D0621E802AE2D7DE000FFADB /* MemberPortfolio+roles.swift */,
+				D0621E842AE2E085000FFADB /* MemberPortfolio+updating.swift */,
+				D0621E882AE2E47B000FFADB /* MemberPortfolio+firstImage.swift */,
+			);
+			path = MemberPortfolio;
+			sourceTree = "<group>";
+		};
+		D0621E832AE2DF8E000FFADB /* IndividualClubs */ = {
+			isa = PBXGroup;
+			children = (
+				D0A0884827F8C697002CC8E1 /* TestClubRotterdam */,
+				D0A4E6F629871E2100333D7B /* TestClubDenHaag */,
+				D02082AD296F6E61009493C4 /* TestClubAmsterdam */,
+				D0831A2A277F72590049AB84 /* FotogroepWaalre */,
+				D0831A26277F72590049AB84 /* BellusImago */,
+				D05414F52AC7496000D899D8 /* FotogroepDeGender */,
+			);
+			path = IndividualClubs;
 			sourceTree = "<group>";
 		};
 		D0795CE9294FCAC000FA62A8 /* String extensions */ = {
@@ -388,16 +416,10 @@
 		D0831A23277F72340049AB84 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				D05414F52AC7496000D899D8 /* FotogroepDeGender */,
-				D0831A26277F72590049AB84 /* BellusImago */,
-				D0831A2A277F72590049AB84 /* FotogroepWaalre */,
-				D02082AD296F6E61009493C4 /* TestClubAmsterdam */,
-				D0A4E6F629871E2100333D7B /* TestClubDenHaag */,
-				D0A0884827F8C697002CC8E1 /* TestClubRotterdam */,
-				D0831A24277F72590049AB84 /* MemberPortfolio.swift */,
-				D0621E802AE2D7DE000FFADB /* MemberPortfolio+roles.swift */,
+				D0621E832AE2DF8E000FFADB /* IndividualClubs */,
 				D0831A2D277F72590049AB84 /* PhotoClub.swift */,
 				D0831A25277F72590049AB84 /* Photographer.swift */,
+				D0621E822AE2DF1B000FFADB /* MemberPortfolio */,
 				D0831A29277F72590049AB84 /* PreferencesViewModel.swift */,
 				D0C53BDC2ABF3ADF000722A1 /* PersonName.swift */,
 			);
@@ -497,7 +519,7 @@
 		D0A4E6F629871E2100333D7B /* TestClubDenHaag */ = {
 			isa = PBXGroup;
 			children = (
-				D0A4E6F729871E9300333D7B /* TestClubDenHaagMembersProvider.swift */,
+				D0621E862AE2E22D000FFADB /* TestClubDenHaagMembersProvider.swift */,
 				D0A4E6F429871DE700333D7B /* TestClubDenHaagMembersProvider+insertSomeHardcodedMemberData.swift */,
 			);
 			path = TestClubDenHaag;
@@ -799,13 +821,16 @@
 				D0416282295BBA7700ED073A /* CoreLocation+Equatable.swift in Sources */,
 				D032944A283F9D1D0044C70C /* Bundle+VersionBuild.swift in Sources */,
 				D02082B1296F6F60009493C4 /* TestClubAmsterdamMembersProvider+insertSomeHardcodedMemberData.swift in Sources */,
+				D0621E852AE2E085000FFADB /* MemberPortfolio+updating.swift in Sources */,
 				D0831A44277F731C0049AB84 /* Published+UserDefaults.swift in Sources */,
 				D0968F662A76F8A00096987A /* FotogroepWaalreMembersProvider+insertOnlineMemberData.swift in Sources */,
 				D024F11628423BE60055021B /* Sounds.swift in Sources */,
 				D08281362959CA7000D9C232 /* FGWMembersProvider+extractExternalURL.swift in Sources */,
 				D0795CEC294FCCC200FA62A8 /* ShapeStyle+Colors.swift in Sources */,
+				D0621E872AE2E22D000FFADB /* TestClubDenHaagMembersProvider.swift in Sources */,
 				D0EB533C295775240061613B /* Crosshairs.swift in Sources */,
 				D0831A36277F72590049AB84 /* FotogroepWaalreMembersProvider+insertSomeHardcodedMemberData.swift in Sources */,
+				D0621E892AE2E47B000FFADB /* MemberPortfolio+firstImage.swift in Sources */,
 				D0831A20277F72270049AB84 /* PhotoClubView.swift in Sources */,
 				D0E2235427DE9139002A8600 /* PreludeView.swift in Sources */,
 				D0621E812AE2D7DE000FFADB /* MemberPortfolio+roles.swift in Sources */,
@@ -820,7 +845,6 @@
 				D0BAB01D2A76CED300387E63 /* URLSession+synchronous.swift in Sources */,
 				D05414F72AC7499000D899D8 /* FotogroepDeGenderMembersProvider.swift in Sources */,
 				D0B260B72958FC2D00B73E1A /* FGWMembersProvider+extractName.swift in Sources */,
-				D0A4E6F829871E9300333D7B /* TestClubDenHaagMembersProvider.swift in Sources */,
 				D08281382959CB5000D9C232 /* FGWMembersProvider+extractBirthDate.swift in Sources */,
 				D0D18C78296E1F6A00B334DB /* PhotoClubID.swift in Sources */,
 				D0831A1E277F72270049AB84 /* PreferencesView.swift in Sources */,
