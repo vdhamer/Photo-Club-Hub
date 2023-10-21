@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import WebKit // for WebView
 
 struct WhoIsWhoInnerView: View {
 
@@ -15,6 +16,8 @@ struct WhoIsWhoInnerView: View {
     @State private var showPhoneMail = false
     private let isDeletePhotographersEnabled = false // disables .delete() functionality for this section
     let searchText: Binding<String>
+    private let wkWebView = WKWebView()
+    @Environment(\.horizontalSizeClass) var horSizeClass
 
     // regenerate Section using current FetchRequest with current filters and sorting
     init(predicate: NSPredicate, searchText: Binding<String>) {
@@ -93,7 +96,11 @@ struct WhoIsWhoInnerView: View {
                             ScrollView(.horizontal, showsIndicators: false) {
                                 HStack {
                                     ForEach(filteredPhotographer.memberships.sorted(), id: \.id) { membership in
-                                        Link(destination: membership.memberWebsite, label: {
+                                        NavigationLink(destination: SinglePortfolioView(url: membership.memberWebsite,
+                                                                                        webView: wkWebView)
+                                            .navigationTitle((membership.photographer.fullNameFirstLast +
+                                                              " @ " + membership.photoClub.nameOrShortName(horSizeClass: horSizeClass)))
+                                            .navigationBarTitleDisplayMode(NavigationBarItem.TitleDisplayMode.inline)) {
                                             AsyncImage(url: membership.latestImageURL) { phase in
                                                 if let image = phase.image {
                                                     ZStack(alignment: .bottom) {
@@ -133,7 +140,7 @@ struct WhoIsWhoInnerView: View {
                                             .frame(width: 160, height: 160)
                                             .clipShape(RoundedRectangle(cornerRadius: 25))
                                             .shadow(color: .accentColor.opacity(0.5), radius: 3)
-                                        })
+                                        }
                                     }
                                 }
                             }
