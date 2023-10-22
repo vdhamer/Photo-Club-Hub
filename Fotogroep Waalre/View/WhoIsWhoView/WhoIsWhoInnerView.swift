@@ -5,8 +5,7 @@
 //  Created by Peter van den Hamer on 30/12/2021.
 //
 
-import SwiftUI
-import WebKit // for WebView
+import SwiftUI // for View
 
 struct WhoIsWhoInnerView: View {
 
@@ -16,8 +15,6 @@ struct WhoIsWhoInnerView: View {
     @State private var showPhoneMail = false
     private let isDeletePhotographersEnabled = false // disables .delete() functionality for this section
     let searchText: Binding<String>
-    private let wkWebView = WKWebView()
-    @Environment(\.horizontalSizeClass) var horSizeClass
 
     // regenerate Section using current FetchRequest with current filters and sorting
     init(predicate: NSPredicate, searchText: Binding<String>) {
@@ -96,11 +93,7 @@ struct WhoIsWhoInnerView: View {
                             ScrollView(.horizontal, showsIndicators: false) {
                                 HStack {
                                     ForEach(filteredPhotographer.memberships.sorted(), id: \.id) { membership in
-                                        NavigationLink(destination: SinglePortfolioView(url: membership.memberWebsite,
-                                                                                        webView: wkWebView)
-                                            .navigationTitle((membership.photographer.fullNameFirstLast +
-                                                              " @ " + membership.photoClub.nameOrShortName(horSizeClass: horSizeClass)))
-                                            .navigationBarTitleDisplayMode(NavigationBarItem.TitleDisplayMode.inline)) {
+                                        SinglePortfolioLinkView(destPortfolio: membership) {
                                             AsyncImage(url: membership.latestImageURL) { phase in
                                                 if let image = phase.image {
                                                     ZStack(alignment: .bottom) {

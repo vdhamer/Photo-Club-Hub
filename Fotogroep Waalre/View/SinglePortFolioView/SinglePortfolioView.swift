@@ -1,6 +1,6 @@
 //
 //  SinglePortfolioView.swift
-//  WKWebView+SwiftUI
+//  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 03/01/2022.
 //

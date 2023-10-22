@@ -52,12 +52,6 @@ extension PhotoClub {
         set { shortName_ = newValue }
     }
 
-    func nameOrShortName(horSizeClass: UserInterfaceSizeClass?) -> String {
-        // full photo club name on iPad and iPhone 14 Plus or Pro Max only
-        guard horSizeClass != nil else { return shortName } // don't know size of display
-        return (horSizeClass! == UserInterfaceSizeClass.compact) ? shortName : fullName
-    }
-
 	var town: String {
 		get { return town_ ?? "DefaultPhotoClubTown" }  // nil shouldn't occur, but it does?
 		set { town_ = newValue }

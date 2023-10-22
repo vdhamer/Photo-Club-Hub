@@ -65,6 +65,7 @@
 		D0831A51277F73C00049AB84 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0831A50277F73C00049AB84 /* Preview Assets.xcassets */; };
 		D0831A56277F82460049AB84 /* nl.xcloc in Resources */ = {isa = PBXBuildFile; fileRef = D0831A54277F82460049AB84 /* nl.xcloc */; };
 		D0831A57277F82460049AB84 /* en.xcloc in Resources */ = {isa = PBXBuildFile; fileRef = D0831A55277F82460049AB84 /* en.xcloc */; };
+		D08DC6062AE57294008DBD68 /* SinglePortfolioLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08DC6052AE57294008DBD68 /* SinglePortfolioLinkView.swift */; };
 		D0968F662A76F8A00096987A /* FotogroepWaalreMembersProvider+insertOnlineMemberData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0968F652A76F8A00096987A /* FotogroepWaalreMembersProvider+insertOnlineMemberData.swift */; };
 		D0A0884B27F8C697002CC8E1 /* TestClubRotterdamMembersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A0884927F8C697002CC8E1 /* TestClubRotterdamMembersProvider.swift */; };
 		D0A0884C27F8C697002CC8E1 /* TestClubMembersProvider+insertSomeHardcodedMemberData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A0884A27F8C697002CC8E1 /* TestClubMembersProvider+insertSomeHardcodedMemberData.swift */; };
@@ -175,6 +176,7 @@
 		D0831A50277F73C00049AB84 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D0831A54277F82460049AB84 /* nl.xcloc */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = nl.xcloc; sourceTree = "<group>"; };
 		D0831A55277F82460049AB84 /* en.xcloc */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = en.xcloc; sourceTree = "<group>"; };
+		D08DC6052AE57294008DBD68 /* SinglePortfolioLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePortfolioLinkView.swift; sourceTree = "<group>"; };
 		D0968F652A76F8A00096987A /* FotogroepWaalreMembersProvider+insertOnlineMemberData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FotogroepWaalreMembersProvider+insertOnlineMemberData.swift"; sourceTree = "<group>"; };
 		D0A0884927F8C697002CC8E1 /* TestClubRotterdamMembersProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestClubRotterdamMembersProvider.swift; sourceTree = "<group>"; };
 		D0A0884A27F8C697002CC8E1 /* TestClubMembersProvider+insertSomeHardcodedMemberData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TestClubMembersProvider+insertSomeHardcodedMemberData.swift"; sourceTree = "<group>"; };
@@ -405,6 +407,7 @@
 				D081655C278612470078AB16 /* MemberPortfoliosView */,
 				D0AE1B7327889D6700E0100E /* PhotoClubsView */,
 				D0AE1B762788A14500E0100E /* WhoIsWhoView */,
+				D08DC6042AE57222008DBD68 /* SinglePortfolioLinkView */,
 				D081655D278616710078AB16 /* SinglePortFolioView */,
 				D05E451B27EF286B00D31327 /* SettingsView */,
 				D05E451C27EF297100D31327 /* ReadmeView */,
@@ -505,6 +508,14 @@
 				D0831A55277F82460049AB84 /* en.xcloc */,
 			);
 			path = "Fotogroep Waalre Localizations";
+			sourceTree = "<group>";
+		};
+		D08DC6042AE57222008DBD68 /* SinglePortfolioLinkView */ = {
+			isa = PBXGroup;
+			children = (
+				D08DC6052AE57294008DBD68 /* SinglePortfolioLinkView.swift */,
+			);
+			path = SinglePortfolioLinkView;
 			sourceTree = "<group>";
 		};
 		D0A0884827F8C697002CC8E1 /* TestClubRotterdam */ = {
@@ -798,6 +809,7 @@
 				D040566D29A0287200CB64B8 /* MemberPortfolioRow.swift in Sources */,
 				D0416280295BB9DF00ED073A /* NSPredicate+all.swift in Sources */,
 				D0DE02772789D1B30062738C /* RoleIconView.swift in Sources */,
+				D08DC6062AE57294008DBD68 /* SinglePortfolioLinkView.swift in Sources */,
 				D0C6E95529577921001E5CE9 /* DebugPanel.swift in Sources */,
 				D0831A33277F72590049AB84 /* BellusImagoMembersProvider+insertSomeHardcodedMemberData.swift in Sources */,
 				D0831A45277F731C0049AB84 /* String+Capitalize.swift in Sources */,

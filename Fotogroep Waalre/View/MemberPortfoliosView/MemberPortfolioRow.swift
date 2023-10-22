@@ -15,11 +15,7 @@ struct MemberPortfolioRow: View {
     private let of2 = String(localized: "of2", comment: "<person> of <photo club>")
 
     var body: some View {
-        NavigationLink(destination: SinglePortfolioView(url: member.memberWebsite,
-                                                        webView: wkWebView)
-                                        .navigationTitle((member.photographer.fullNameFirstLast +
-                                                  " @ " + member.photoClub.nameOrShortName(horSizeClass: horSizeClass)))
-                                        .navigationBarTitleDisplayMode(NavigationBarItem.TitleDisplayMode.inline)) {
+        SinglePortfolioLinkView(destPortfolio: member) {
             HStack(alignment: .top) {
                 RoleStatusIconView(memberRolesAndStatus: member.memberRolesAndStatus)
                     .foregroundStyle(.memberPortfolioColor, .gray, .red) // red color is not used
