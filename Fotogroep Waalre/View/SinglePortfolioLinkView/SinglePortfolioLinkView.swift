@@ -33,9 +33,9 @@ struct SinglePortfolioLinkView<Content: View>: View {
     }
 }
 
-// #Preview {
-//     let destPortfolio: MemberPortfolio
-//     SinglePortfolioLinkView(destPortfolio: destPortfolio) {
-//         Text(verbatim: "Test Link")
-//     }
-// }
+ #Preview { // doesn't really work?
+     let destPortfolio: MemberPortfolio = MemberPortfolio()
+     return SinglePortfolioLinkView(destPortfolio: destPortfolio) {
+         Text(verbatim: "Test Link")
+     }
+ }

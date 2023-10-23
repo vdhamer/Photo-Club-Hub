@@ -112,6 +112,8 @@ struct WhoIsWhoInnerView: View {
                                                             .background(.ultraThinMaterial)
                                                             .foregroundColor(.primary)
                                                             .frame(width: 160)
+                                                            .dynamicTypeSize( // constrain impact of large dynamic type
+                                                                ...DynamicTypeSize.xLarge)
                                                     }
                                                 } else if phase.error != nil ||
                                                             membership.latestImageURL == nil {
