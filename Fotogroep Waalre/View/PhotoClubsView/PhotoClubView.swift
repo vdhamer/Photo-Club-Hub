@@ -86,7 +86,7 @@ struct PhotoClubView: View {
 //                        showsUserLocation: false, // userTrackingMode: binding(for: mapUserTrackingMode,
 //                        annotationItems: fetchRequest, annotationContent: annotation(photoclub: PhotoClub))
 // following Map() gives 2 warnings about deprecation in iOS 17
-                    Map(coordinateRegion: binding(for: filteredPhotoClub.id),
+                    Map(coordinateRegion: regionBinding(for: filteredPhotoClub.id),
                         interactionModes: filteredPhotoClub.isScrollLocked ? [] : [.pan, .zoom],
                         annotationItems: fetchRequest) { photoClub in
                             MapMarker( coordinate: photoClub.coordinates,
@@ -120,16 +120,16 @@ struct PhotoClubView: View {
             span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
     }
 
-    private func binding(for key: PhotoClubId) -> Binding<MKCoordinateRegion> {
+    private func regionBinding(for key: PhotoClubId) -> Binding<MKCoordinateRegion> {
         let defaultCoordinateRegion = MKCoordinateRegion( // used as a default if region is not found
-                    center: CLLocationCoordinate2D(latitude: 0, longitude: 0), // equator, off shore of W. Africa
+                    center: CLLocationCoordinate2D(latitude: 0, longitude: 0), // equator, off shore of West Africa
                     span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
 
         // https://stackoverflow.com/questions/68430007/how-to-use-state-with-dictionary
         // https://forums.swift.org/t/swiftui-how-to-use-dictionary-as-binding/34967
-        return .init( // a bit ackward, but the geter does return a binding. Not sure about the setter.
+        return .init( // a bit ackward, but the geter does return a binding
             get: { return coordinateRegions[key] ?? defaultCoordinateRegion },
-            set: { newValue in coordinateRegions[key] = newValue } // set is not used, but has to be defined
+            set: { newValue in coordinateRegions[key] = newValue } // is this working correctly?
         )
 
     }
