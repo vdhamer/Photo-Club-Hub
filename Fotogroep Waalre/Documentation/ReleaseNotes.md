@@ -7,6 +7,7 @@ Who's Who screen
     * Club names like "Photo Club Waalre (Waalre)" are now automatically shortened to "Photo Club Waalre".
 Photo Clubs screen
     * Added Fotogroep De Gender (with a single test member) for testing. Drag down Photo Clubs screen to load this data.
+    * Added Fotogroep Anders (with a single test member) for testing. Drag down Photo Clubs screen to load this data.
 Portfolios screen
     * Some graphical design changes (e.g. separator lines)
     * Club names like "Photo Club Waalre (Waalre)" are now shown as "Photo Club Waalre" (when town is part of name).
@@ -14,7 +15,7 @@ Portfolios screen
 Maintenance
     * Requires iOS 17.0 or higher.
     * Cleaned up logging and passing of PersonName structs.
-    * Upgraded and tested with MacOS 14.1, Xcode 15.1 Beta and iOS 17.1.
+    * Upgraded and tested with MacOS 14.1, Xcode 15.1 Beta 2 and iOS 17.1.
     
 This is build #4602 in Apple's App Store
 ---------------------------------------------------------------------------
