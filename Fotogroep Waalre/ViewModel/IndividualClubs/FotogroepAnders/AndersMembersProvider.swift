@@ -1,13 +1,13 @@
 //
-//  FotogroepDeGenderMembersProvider.swift
-//  Photo Club Hub
+//  AndersMembersProvider.swift
+//  Fotogroep Waalre
 //
-//  Created by Peter van den Hamer on 29/09/2023.
+//  Created by Peter van den Hamer on 29/10/2023.
 //
 
-import CoreData // for PersistenceController
+import CoreData // for NSManagedObjectContext
 
-class FotogroepDeGenderMembersProvider {
+class AndersMembersProvider {
 
     init(bgContext: NSManagedObjectContext) {
 

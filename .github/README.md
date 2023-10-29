@@ -313,7 +313,7 @@ But that data is still encrypted by a private encryption key that is not provide
 - [ ] MemberGaleryView: replace use of WebKit by SwiftUI equivalent
 - [ ] Support onboarding of clubs without any code changes. A really large change, see below.
 - [ ] Notifications when new images are published. An intermediate step towards the previous item.
-- [ ] Migrate from CoreData to SwiftData (iOS 17)
+- [ ] Migrate from CoreData to SwiftData (iOS 17+)
 
 See the [open issues](https://github.com/vdhamer/PhotoClubWaalre/issues) for a list of
 proposed enhancements and known limitations.
