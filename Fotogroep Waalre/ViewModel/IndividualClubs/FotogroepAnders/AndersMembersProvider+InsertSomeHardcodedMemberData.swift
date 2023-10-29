@@ -14,7 +14,7 @@ extension AndersMembersProvider { // fill with some initial hard-coded content
     private static let andersURL = URL(string: "https://nl.qrcodechimp.com/page/a6d3r7?v=chk1697032881")
     private static let fotogroepAndersIdPlus = PhotoClubIdPlus(fullName: "Fotogroep Anders",
                                                                  town: "Eindhoven",
-                                                                 nickname: "Anders")
+                                                                 nickname: "FG Anders")
 
     func insertSomeHardcodedMemberData(bgContext: NSManagedObjectContext) {
         bgContext.perform { // from here on, we are running on a background thread

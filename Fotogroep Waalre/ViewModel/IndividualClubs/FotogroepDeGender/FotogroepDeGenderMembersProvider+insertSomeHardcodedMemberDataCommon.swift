@@ -14,7 +14,7 @@ extension FotogroepDeGenderMembersProvider { // fill with some initial hard-code
     private static let deGenerURL = URL(string: "https://www.fcdegender.nl")
     private static let fotogroepDeGenderIdPlus = PhotoClubIdPlus(fullName: "Fotogroep de Gender",
                                                                  town: "Eindhoven",
-                                                                 nickname: "de Gender")
+                                                                 nickname: "FG deGender")
 
     func insertSomeHardcodedMemberData(bgContext: NSManagedObjectContext) {
         bgContext.perform { // from here on, we are running on a background thread
