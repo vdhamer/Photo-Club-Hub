@@ -26,6 +26,7 @@ extension AndersMembersProvider { // fill with some initial hard-coded content
         }
     }
 
+    // swiftlint:disable:next function_body_length
     private func insertSomeHardcodedMemberDataCommon(bgContext: NSManagedObjectContext) {
 
         // add De Gender to Photo Clubs (if needed)
@@ -51,7 +52,44 @@ extension AndersMembersProvider { // fill with some initial hard-coded content
                                            """)
         )
 
-        let clubNickname = AndersMembersProvider.fotogroepAndersIdPlus.nickname
+        addMember(bgContext: bgContext, // add Loek to Photographers and member of Bellus (if needed)
+                  personName: PersonName(givenName: "Mirjam", infixName: "", familyName: "Evers"),
+                  photoClub: clubAnders,
+                  memberWebsite: URL(string: "https://me4photo.jimdosite.com/portfolio/"),
+                  latestImage: URL(string: """
+                                           https://jimdo-storage.freetls.fastly.net/\
+                                           image/bf4d707f-ff72-4e16-8f2f-63680e7a8f91.jpg\
+                                           ?format=pjpg&quality=80,90&auto=webp&disable=upscale&width=2560&height=2559
+                                           """)
+        )
+
+        addMember(bgContext: bgContext, // add Loek to Photographers and member of Bellus (if needed)
+                  personName: PersonName(givenName: "Lotte", infixName: "", familyName: "Vrij"),
+                  photoClub: clubAnders,
+                  memberWebsite: URL(string: "https://lotte-vrij-fotografie.jimdofree.com"),
+                  latestImage: URL(string: """
+                                           https://image.jimcdn.com/app/cms/image/transf/none/path/\
+                                           sb2e92183adfb60fb/image/ie69f110f416b6822/version/1678882175/image.jpg
+                                           """),
+                  latestThumbnail: URL(string: """
+                                               https://image.jimcdn.com/app/cms/image/transf/\
+                                               dimension=150x150:mode=crop:format=jpg/path/\
+                                               sb2e92183adfb60fb/image/ie69f110f416b6822/version/1678882175/image.jpg
+                                               """)
+        )
+
+        addMember(bgContext: bgContext, // add Loek to Photographers and member of Bellus (if needed)
+                  personName: PersonName(givenName: "Dennis", infixName: "", familyName: "Verbruggen"),
+                  photoClub: clubAnders,
+                  memberWebsite: URL(string: "https://www.facebook.com/SunKissedArt"),
+                  latestImage: URL(string: """
+                                           https://scontent-ams2-1.xx.fbcdn.net/v/t39.30808-6/\
+                                           306601740_404754861850108_4479122800810872862_n.jpg\
+                                           ?_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_ohc\
+                                           =fcx-eGASwkIAX8xw4iW&_nc_ht=scontent-ams2-1.xx\
+                                           &oh=00_AfA599W9dkXwDz80SkRsKY93z5oNbp9gnTdgoscjrQyecA&oe=65475497
+                                           """)
+        )
 
         do {
             if bgContext.hasChanges {
@@ -62,6 +100,8 @@ extension AndersMembersProvider { // fill with some initial hard-coded content
                          Completed insertSomeHardcodedMemberData() in background
                          """)
         } catch {
+            let clubNickname = AndersMembersProvider.fotogroepAndersIdPlus.nickname
+
             ifDebugFatalError("\(clubNickname): ERROR - failed to save changes to Core Data",
                               file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
             // in release mode, the failed database update is only logged. App doesn't stop.

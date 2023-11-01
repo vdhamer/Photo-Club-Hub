@@ -1,13 +1,13 @@
-### 2.5.0 (Github commit ???????) ??-09-23
+### 2.5.0 (Github commit ???????) 1-11-23
 
 Who's Who screen
     * Shows large high-res thumbnails for (photographer|club) combination.
     * Each thumbnail has a text overlay explaining the photographer's role in that club.
     * Clicking on one of these thumbnails brings you to the images in that portfolio.
-    * Club names like "Photo Club Waalre (Waalre)" are now automatically shortened to "Photo Club Waalre".
+    * Club names like "Photo Club Waalre (Waalre)" are now shortened to "Photo Club Waalre".
 Photo Clubs screen
     * Added Fotogroep De Gender (with a single test member) for testing. Drag down Photo Clubs screen to load this data.
-    * Added Fotogroep Anders (with a single test member) for testing. Drag down Photo Clubs screen to load this data.
+    * Added Fotogroep Anders (with all 4 members) for testing. Drag down Photo Clubs screen to load this data.
 Portfolios screen
     * Some graphical design changes (e.g. separator lines)
     * Club names like "Photo Club Waalre (Waalre)" are now shown as "Photo Club Waalre" (when town is part of name).
