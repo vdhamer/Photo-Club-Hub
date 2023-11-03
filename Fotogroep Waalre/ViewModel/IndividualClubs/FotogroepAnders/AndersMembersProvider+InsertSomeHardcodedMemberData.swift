@@ -13,15 +13,11 @@ extension AndersMembersProvider { // fill with some initial hard-coded content
 
     private static let andersURL = URL(string: "https://nl.qrcodechimp.com/page/a6d3r7?v=chk1697032881")
     private static let fotogroepAndersIdPlus = PhotoClubIdPlus(fullName: "Fotogroep Anders",
-                                                                 town: "Eindhoven",
-                                                                 nickname: "FG Anders")
+                                                               town: "Eindhoven",
+                                                               nickname: "FG Anders")
 
     func insertSomeHardcodedMemberData(bgContext: NSManagedObjectContext) {
         bgContext.perform { // from here on, we are running on a background thread
-            ifDebugPrint("""
-                         \(Self.fotogroepAndersIdPlus.fullNameTown): \
-                         Starting insertSomeHardcodedMemberData() in background
-                         """)
             self.insertSomeHardcodedMemberDataCommon(bgContext: bgContext)
         }
     }
@@ -39,6 +35,11 @@ extension AndersMembersProvider { // fill with some initial hard-coded content
                                                     coordinates: CLLocationCoordinate2D(latitude: 51.44297,
                                                                                         longitude: 5.51527)
                                                    )
+
+        ifDebugPrint("""
+                     \(clubAnders.fullNameTown): \
+                     Starting insertSomeHardcodedMemberData() in background
+                     """)
         clubAnders.hasHardCodedMemberData = true // store in database that we ran insertSomeHardcodedMembers...
 
         addMember(bgContext: bgContext, // add Loek to Photographers and member of Bellus (if needed)
@@ -97,7 +98,7 @@ extension AndersMembersProvider { // fill with some initial hard-coded content
                 try bgContext.save() // commit all changes
             }
             ifDebugPrint("""
-                         \(Self.fotogroepAndersIdPlus.fullNameTown): \
+                         \(clubAnders.fullNameTown): \
                          Completed insertSomeHardcodedMemberData() in background
                          """)
         } catch {

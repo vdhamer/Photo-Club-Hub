@@ -17,10 +17,6 @@ extension BellusImagoMembersProvider { // fill with some initial hard-coded cont
 
     func insertSomeHardcodedMemberData(bgContext: NSManagedObjectContext) {
         bgContext.perform { // from here on, we are running on a background thread
-            ifDebugPrint("""
-                         \(Self.photoClubBellusImagoIdPlus.fullNameTown): \
-                         Starting insertSomeHardcodedMemberData() in background
-                         """)
             self.insertSomeHardcodedMemberDataCommon(bgContext: bgContext)
         }
     }
@@ -36,6 +32,11 @@ extension BellusImagoMembersProvider { // fill with some initial hard-coded cont
                                                         coordinates: CLLocationCoordinate2D(latitude: 51.425410,
                                                                                             longitude: 5.387560)
                                                         )
+
+        ifDebugPrint("""
+                     \(clubBellusImago.fullNameTown): \
+                     Starting insertSomeHardcodedMemberData() in background
+                     """)
         clubBellusImago.hasHardCodedMemberData = true // store in database that we ran insertSomeHardcodedMembers...
 
         addMember(bgContext: bgContext, // add Rico to Photographers and member of Bellus (if needed)
@@ -64,7 +65,7 @@ extension BellusImagoMembersProvider { // fill with some initial hard-coded cont
                 try bgContext.save() // commit all changes
             }
             ifDebugPrint("""
-                         \(Self.photoClubBellusImagoIdPlus.fullNameTown): \
+                         \(clubBellusImago.fullNameTown): \
                          Completed insertSomeHardcodedMemberData() in background
                          """)
         } catch {

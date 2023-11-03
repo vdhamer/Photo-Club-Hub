@@ -115,7 +115,7 @@ extension PhotoClub {
         }
 
 		if let photoClub = photoClubs.first { // already exists, so make sure secondary attributes are up to date
-            print("\(photoClubIdPlus.fullNameTown): Will try to update info for photo club \(photoClub.fullName)")
+            print("\(photoClub.fullNameTown): Will try to update info for photo club \(photoClub.fullName)")
             if update(bgContext: context, photoClub: photoClub,
                       shortName: photoClubIdPlus.nickname,
                       optionalFields: (photoClubWebsite: photoClubWebsite,
@@ -123,16 +123,16 @@ extension PhotoClub {
                                        kvkNumber: kvkNumber),
                       coordinates: coordinates,
                       pinned: pinned) {
-                            print("\(photoClubIdPlus.fullNameTown): Updated info for photo club \(photoClub.fullName)")
+                print("\(photoClub.fullNameTown): Updated info for photo club \(photoClub.fullName)")
             }
 			return photoClub
 		} else {
-            print("\(photoClubIdPlus.fullNameTown): Will try to create new photo club")
             // cannot use PhotoClub() initializer because we must use bgContext
             let entity = NSEntityDescription.entity(forEntityName: "PhotoClub", in: context)!
             let photoClub = PhotoClub(entity: entity, insertInto: context)
             photoClub.fullName = photoClubIdPlus.fullName // first part of ID
             photoClub.town = photoClubIdPlus.town // second part of ID
+            print("\(photoClub.fullNameTown): Will try to create new photo club")
             _ = update(bgContext: context, photoClub: photoClub,
                        shortName: photoClubIdPlus.nickname,
                        optionalFields: (photoClubWebsite: photoClubWebsite,
@@ -140,7 +140,7 @@ extension PhotoClub {
                                         kvkNumber: kvkNumber),
                        coordinates: coordinates,
                        pinned: pinned)
-            print("\(photoClubIdPlus.fullNameTown): Created new photo club")
+            print("\(photoClub.fullNameTown): Created new photo club")
 			return photoClub
 		}
 	}

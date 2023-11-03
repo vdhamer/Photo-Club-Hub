@@ -17,10 +17,6 @@ extension TestClubRotterdamMembersProvider { // fill with some initial hard-code
 
     func insertSomeHardcodedMemberData(bgContext: NSManagedObjectContext) {
         bgContext.perform {
-            ifDebugPrint("""
-                         \(Self.photoClubTestRotterdamIdPlus.fullNameTown): \
-                         Starting insertSomeHardcodedMemberData() in background
-                         """)
             self.insertSomeHardcodedMemberDataCommon(bgContext: bgContext)
         }
     }
@@ -35,6 +31,11 @@ extension TestClubRotterdamMembersProvider { // fill with some initial hard-code
                                             fotobondNumber: nil, kvkNumber: nil,
                                             coordinates: CLLocationCoordinate2D(latitude: 51.90296, longitude: 4.49504)
                                             )
+
+        ifDebugPrint("""
+                     \(clubTestRotterdam.fullNameTown): \
+                     Starting insertSomeHardcodedMemberData() in background
+                     """)
         clubTestRotterdam.hasHardCodedMemberData = true // store in database that we ran insertSomeHardcodedMembers...
 
         addMember(bgContext: bgContext,
@@ -54,7 +55,7 @@ extension TestClubRotterdamMembersProvider { // fill with some initial hard-code
                 try bgContext.save() // commit all changes
             }
             ifDebugPrint("""
-                         \(Self.photoClubTestRotterdamIdPlus.fullNameTown): \
+                         \(clubTestRotterdam.fullNameTown): \
                          Completed insertSomeHardcodedMemberData() in background
                          """)
         } catch {

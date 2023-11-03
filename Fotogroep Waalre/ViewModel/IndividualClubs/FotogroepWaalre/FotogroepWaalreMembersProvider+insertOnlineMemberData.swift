@@ -27,6 +27,7 @@ extension FotogroepWaalreMembersProvider {
 
             self.loadPrivateMembersFromWebsite( backgroundContext: bgContext,
                                                 privateMemberURL: privateURL,
+                                                photoClub: clubWaalre,
                                                 photoClubIdPlus: FotogroepWaalreMembersProvider.photoClubWaalreIdPlus )
         } else {
             ifDebugFatalError("Could not convert \(urlString) to a URL.",
@@ -75,9 +76,10 @@ extension FotogroepWaalreMembersProvider {
 
     fileprivate func loadPrivateMembersFromWebsite( backgroundContext: NSManagedObjectContext,
                                                     privateMemberURL: URL,
+                                                    photoClub: PhotoClub,
                                                     photoClubIdPlus: PhotoClubIdPlus ) {
 
-        ifDebugPrint("\(photoClubIdPlus.fullNameTown): starting loadPrivateMembersFromWebsite() in background")
+        ifDebugPrint("\(photoClub.fullNameTown): starting loadPrivateMembersFromWebsite() in background")
 
         // swiftlint:disable:next large_tuple
         var results: (utfContent: Data?, urlResponse: URLResponse?, error: (any Error)?)? = (nil, nil, nil)
@@ -93,7 +95,7 @@ extension FotogroepWaalreMembersProvider {
                 if backgroundContext.hasChanges {
                     try backgroundContext.save()
                     ifDebugPrint("""
-                                 \(photoClubIdPlus.fullNameTown): \
+                                 \(photoClub.fullNameTown): \
                                  completed loadPrivateMembersFromWebsite() in background")
                                  """)
                 }

@@ -12,11 +12,6 @@ extension FotogroepWaalreMembersProvider { // fill with some initial hard-coded 
 
     // swiftlint:disable:next function_body_length
     func insertSomeHardcodedMemberData(bgContext: NSManagedObjectContext) { // runs on a background thread
-        ifDebugPrint("""
-                     \(Self.photoClubWaalreIdPlus.fullNameTown): \
-                     Starting insertSomeHardcodedMemberData() in background
-                     """)
-
         let clubWaalre = PhotoClub.findCreateUpdate(
                                         context: bgContext,
                                         photoClubIdPlus: FotogroepWaalreMembersProvider.photoClubWaalreIdPlus,
@@ -24,6 +19,10 @@ extension FotogroepWaalreMembersProvider { // fill with some initial hard-coded 
                                         fotobondNumber: 1634, kvkNumber: 17261693,
                                         coordinates: CLLocationCoordinate2D(latitude: 51.39184, longitude: 5.46144)
                                         )
+        ifDebugPrint("""
+                     \(clubWaalre.fullNameTown): \
+                     Starting insertSomeHardcodedMemberData() in background
+                     """)
         clubWaalre.hasHardCodedMemberData = true // store in database that we ran insertSomeHardcodedMembers...
 
         addMember(bgContext: bgContext,
@@ -80,7 +79,7 @@ extension FotogroepWaalreMembersProvider { // fill with some initial hard-coded 
                 try bgContext.save() // commit all changes
 //            }
             ifDebugPrint("""
-                         \(Self.photoClubWaalreIdPlus.fullNameTown): \
+                         \(clubWaalre.fullNameTown): \
                          Completed insertSomeHardcodedMemberData() in background
                          """)
         } catch {

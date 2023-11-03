@@ -17,10 +17,6 @@ extension TestClubDenHaagMembersProvider { // fill with some initial hard-coded 
 
     func insertSomeHardcodedMemberData(bgContext: NSManagedObjectContext) {
         bgContext.perform { // from here on, we are running on a background thread
-            ifDebugPrint("""
-                         \(Self.photoClubTestDenHaagIdPlus.fullNameTown): \
-                         Starting insertSomeHardcodedMemberData() in background
-                         """)
             self.insertSomeHardcodedMemberDataCommon(bgContext: bgContext, commit: true)
         }
     }
@@ -37,6 +33,10 @@ extension TestClubDenHaagMembersProvider { // fill with some initial hard-coded 
                                                 coordinates: CLLocationCoordinate2D(latitude: 52.090556,
                                                                                     longitude: 4.279722)
                                                 )
+        ifDebugPrint("""
+                     \(clubTestDenHaag.fullNameTown): \
+                     Starting insertSomeHardcodedMemberData() in background
+                     """)
         clubTestDenHaag.hasHardCodedMemberData = true // store in database that we ran insertSomeHardcodedMembers...
 
         addMember(bgContext: bgContext,
@@ -56,7 +56,7 @@ extension TestClubDenHaagMembersProvider { // fill with some initial hard-coded 
                     try bgContext.save() // commit all changes
                 }
                 ifDebugPrint("""
-                             \(Self.photoClubTestDenHaagIdPlus.fullNameTown): \
+                             \(clubTestDenHaag.fullNameTown): \
                              Completed insertSomeHardcodedMemberData() in background
                              """)
             } catch {

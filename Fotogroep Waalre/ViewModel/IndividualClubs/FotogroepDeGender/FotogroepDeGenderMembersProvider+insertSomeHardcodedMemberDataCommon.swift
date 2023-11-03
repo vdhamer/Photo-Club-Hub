@@ -18,10 +18,6 @@ extension FotogroepDeGenderMembersProvider { // fill with some initial hard-code
 
     func insertSomeHardcodedMemberData(bgContext: NSManagedObjectContext) {
         bgContext.perform { // from here on, we are running on a background thread
-            ifDebugPrint("""
-                         \(Self.fotogroepDeGenderIdPlus.fullNameTown): \
-                         Starting insertSomeHardcodedMemberData() in background
-                         """)
             self.insertSomeHardcodedMemberDataCommon(bgContext: bgContext)
         }
     }
@@ -37,6 +33,10 @@ extension FotogroepDeGenderMembersProvider { // fill with some initial hard-code
                                                         coordinates: CLLocationCoordinate2D(latitude: 51.42398,
                                                                                             longitude: 5.45010)
                                                      )
+        ifDebugPrint("""
+                     \(clubDeGender.fullNameTown): \
+                     Starting insertSomeHardcodedMemberData() in background
+                     """)
         clubDeGender.hasHardCodedMemberData = true // store in database that we ran insertSomeHardcodedMembers...
 
         let isoDate = "1954-10-09T00:12:00.000000Z"
@@ -61,7 +61,7 @@ extension FotogroepDeGenderMembersProvider { // fill with some initial hard-code
                 try bgContext.save() // commit all changes
             }
             ifDebugPrint("""
-                         \(Self.fotogroepDeGenderIdPlus.fullNameTown): \
+                         \(clubDeGender.fullNameTown): \
                          Completed insertSomeHardcodedMemberData() in background
                          """)
         } catch {
