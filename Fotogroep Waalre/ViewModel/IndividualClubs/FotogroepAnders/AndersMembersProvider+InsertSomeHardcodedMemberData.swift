@@ -35,8 +35,9 @@ extension AndersMembersProvider { // fill with some initial hard-coded content
                                                     photoClubIdPlus: Self.fotogroepAndersIdPlus,
                                                     photoClubWebsite: AndersMembersProvider.andersURL,
                                                     fotobondNumber: nil, kvkNumber: nil,
-                                                    coordinates: CLLocationCoordinate2D(latitude: 51.441850, // temp
-                                                                                        longitude: 5.480055) // temp
+                                                    // location is Kruisruimte, Generaal Bothastraat, Eindhoven
+                                                    coordinates: CLLocationCoordinate2D(latitude: 51.442974321,
+                                                                                        longitude: 5.515272481)
                                                    )
         clubAnders.hasHardCodedMemberData = true // store in database that we ran insertSomeHardcodedMembers...
 

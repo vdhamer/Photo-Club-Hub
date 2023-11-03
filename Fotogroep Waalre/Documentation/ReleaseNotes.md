@@ -8,6 +8,7 @@ Who's Who screen
 Photo Clubs screen
     * Added Fotogroep De Gender (with a single test member) for testing. Drag down Photo Clubs screen to load this data.
     * Added Fotogroep Anders (with all 4 members) for testing. Drag down Photo Clubs screen to load this data.
+    But feature is temp commented out in file PhotoClubListView.swift
 Portfolios screen
     * Some graphical design changes (e.g. separator lines)
     * Club names like "Photo Club Waalre (Waalre)" are now shown as "Photo Club Waalre" (when town is part of name).
@@ -17,7 +18,7 @@ Maintenance
     * Cleaned up logging and passing of PersonName structs.
     * Upgraded and tested with MacOS 14.1, Xcode 15.1 Beta 2 and iOS 17.1.
     
-This is build #4602 in Apple's App Store
+This is build #4603 in Apple's App Store
 ---------------------------------------------------------------------------
 ### 2.4.2 (Github commit 3548647) 13-09-23
 Portfolio screen
