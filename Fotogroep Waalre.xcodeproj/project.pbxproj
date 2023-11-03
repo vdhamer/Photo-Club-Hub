@@ -111,6 +111,7 @@
 		D008D2A928739167007A7BE2 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		D01526BC278B91BA004DBD19 /* Fotogroep Waalre.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Fotogroep Waalre.entitlements"; sourceTree = "<group>"; };
 		D01D2B6127D3BBDC00E2FE41 /* View+Navigate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Navigate.swift"; sourceTree = "<group>"; };
+		D01DDD962AF5A11F00F98906 /* Photo_Club_Hub_2_5_1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_5_1.xcdatamodel; sourceTree = "<group>"; };
 		D01DFAA627E778BD007BABFA /* offsets.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = offsets.md; sourceTree = "<group>"; };
 		D02082AE296F6ED7009493C4 /* TestClubAmsterdamMembersProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestClubAmsterdamMembersProvider.swift; sourceTree = "<group>"; };
 		D02082B0296F6F60009493C4 /* TestClubAmsterdamMembersProvider+insertSomeHardcodedMemberData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TestClubAmsterdamMembersProvider+insertSomeHardcodedMemberData.swift"; sourceTree = "<group>"; };
@@ -1078,7 +1079,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Fotogroep Waalre/Fotogroep Waalre.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4603;
+				CURRENT_PROJECT_VERSION = 4604;
 				DEVELOPMENT_ASSET_PATHS = "\"Fotogroep Waalre/Preview Content\"";
 				DEVELOPMENT_TEAM = YDEWPN9GZ6;
 				ENABLE_PREVIEWS = YES;
@@ -1098,7 +1099,7 @@
 					"@executable_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 2.5.0;
+				MARKETING_VERSION = 2.5.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vdhamer.Fotogroep-Waalre";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -1117,7 +1118,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Fotogroep Waalre/Fotogroep Waalre.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4603;
+				CURRENT_PROJECT_VERSION = 4604;
 				DEVELOPMENT_ASSET_PATHS = "\"Fotogroep Waalre/Preview Content\"";
 				DEVELOPMENT_TEAM = YDEWPN9GZ6;
 				ENABLE_PREVIEWS = YES;
@@ -1137,7 +1138,7 @@
 					"@executable_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 2.5.0;
+				MARKETING_VERSION = 2.5.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vdhamer.Fotogroep-Waalre";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -1291,12 +1292,13 @@
 		D0A0B6832AA930E90078DE9A /* Photo_Club_Hub.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				D01DDD962AF5A11F00F98906 /* Photo_Club_Hub_2_5_1.xcdatamodel */,
 				D0E673BA2AE1C1A100A4DC95 /* Photo_Club_Hub_2_5_0.xcdatamodel */,
 				D0F999502AACE217005FA0FF /* Photo_Club_Hub_2_4_2.xcdatamodel */,
 				D0A0B6872AA932A10078DE9A /* Photo_Club_Hub_2_4_1.xcdatamodel */,
 				D0A0B6842AA930E90078DE9A /* Photo_Club_Hub.xcdatamodel */,
 			);
-			currentVersion = D0E673BA2AE1C1A100A4DC95 /* Photo_Club_Hub_2_5_0.xcdatamodel */;
+			currentVersion = D01DDD962AF5A11F00F98906 /* Photo_Club_Hub_2_5_1.xcdatamodel */;
 			path = Photo_Club_Hub.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
