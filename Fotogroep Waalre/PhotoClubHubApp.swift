@@ -31,6 +31,24 @@ struct FotogroepWaalreApp: App {
                 .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext) // main queue!
                 .onAppear {
 
+                    // load test member(s) of Fotogroep Bellus Imago TODO remove
+                   let biBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+                    biBackgroundContext.name = "Bellus Imago refresh"
+                    biBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+                    _ = BellusImagoMembersProvider(bgContext: biBackgroundContext)
+
+                    // load test member(s) of Fotogroep De Gender TODO remove
+                    let dgBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+                    dgBackgroundContext.name = "De Gender refresh"
+                    dgBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+                    _ = FotogroepDeGenderMembersProvider(bgContext: dgBackgroundContext)
+
+                    // load all current members of Fotogroep Anders TODO remove
+                    let andersBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+                    andersBackgroundContext.name = "Anders refresh"
+                    andersBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+                    _ = AndersMembersProvider(bgContext: andersBackgroundContext)
+
                     // load all current/former members of Fotogroep Waalre
                     let fgwBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
                     fgwBackgroundContext.name = "Fotogroep Waalre"

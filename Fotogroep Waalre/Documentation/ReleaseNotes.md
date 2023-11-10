@@ -1,3 +1,12 @@
+### 2.5.1 (Github commit ???????) ??-11-23
+
+Photo Clubs screen
+    * Added Fotogroep Anders (Eindhoven).
+Maintenance
+    * Tested with MacOS 14.1.1 and iOS 17.1.1.
+    
+This is build #4604 in Apple's App Store ???
+---------------------------------------------------------------------------
 ### 2.5.0 (Github commit beafb53) 3-11-23
 
 Portfolios screen

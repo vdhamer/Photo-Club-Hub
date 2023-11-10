@@ -46,20 +46,23 @@ struct PhotoClubListView: View {
             }
             .listStyle(.plain)
             .refreshable { // for pull-to-refresh
-                let biBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+                // load test member(s) of Fotogroep Bellus Imago
+               let biBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
                 biBackgroundContext.name = "Bellus Imago refresh"
                 biBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
                 _ = BellusImagoMembersProvider(bgContext: biBackgroundContext)
 
+                // load test member(s) of Fotogroep De Gender
                 let dgBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
                 dgBackgroundContext.name = "De Gender refresh"
                 dgBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
                 _ = FotogroepDeGenderMembersProvider(bgContext: dgBackgroundContext)
 
+                // load all current members of Fotogroep Anders
                 let andersBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
                 andersBackgroundContext.name = "Anders refresh"
                 andersBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-                // _ = AndersMembersProvider(bgContext: andersBackgroundContext) TODO re-enable here and add at startup
+                _ = AndersMembersProvider(bgContext: andersBackgroundContext) // TODO
 
                 // load all current/former members of Fotogroep Waalre
                 let fgwBackgroundContext = PersistenceController.shared.container.newBackgroundContext()

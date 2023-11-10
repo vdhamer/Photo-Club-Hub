@@ -84,13 +84,7 @@ extension AndersMembersProvider { // fill with some initial hard-coded content
                   personName: PersonName(givenName: "Dennis", infixName: "", familyName: "Verbruggen"),
                   photoClub: clubAnders,
                   memberWebsite: URL(string: "https://www.facebook.com/SunKissedArt"),
-                  latestImage: URL(string: """
-                                           https://scontent-ams2-1.xx.fbcdn.net/v/t39.30808-6/\
-                                           306601740_404754861850108_4479122800810872862_n.jpg\
-                                           ?_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_ohc\
-                                           =fcx-eGASwkIAX8xw4iW&_nc_ht=scontent-ams2-1.xx\
-                                           &oh=00_AfA599W9dkXwDz80SkRsKY93z5oNbp9gnTdgoscjrQyecA&oe=65475497
-                                           """)
+                  latestImage: URL(string: "http://www.vdhamer.com/wp-content/uploads/2023/11/DennisVerbruggen.jpeg")
         )
 
         do {
