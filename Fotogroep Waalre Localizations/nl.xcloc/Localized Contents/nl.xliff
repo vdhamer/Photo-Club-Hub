@@ -183,28 +183,26 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
         <source>__Web sites__
 We regularly add features to the app. This requires some care, because we still want to maintain our focus on providing an optimal viewing experience. The app therefore explicitly does _not_ aim to replace existing websites, but instead provides links to these websites.</source>
         <target>__Websites__
-Het hoofddoel van de app is om de portfolio's via een strakke presentatie tot hun recht te laten komen. Wij proberen dus _niet_ om websites te vervangen met deze app. Daarom verwijst de app de gebruiker via links desgewenst door naar clubwebsites.</target>
+Het hoofddoel van de app is om de portfolio's via een strakke presentatie tot hun recht te laten komen. Wij streven er dus _niet_ naar dat de app een website kan vervangen. Daarom verwijst de app de gebruiker via links desgewenst door naar de websites van de clubs.</target>
         <note>First paragraph in The Features section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.2" xml:space="preserve">
         <source>__Languages__
 The app supports English and Dutch. iOS automatically selects the app's language based on your device’s language settings (_Settings &gt; General &gt; Language &amp; Region &gt; Preferred Language Order_). iOS also allows you to overrule this choice per app (_Settings &gt; Photo Club Waalre &gt; Language_).</source>
         <target>__Meertalig__
-De app ondersteunt de Nederlands de Engelse taal. De taal van de app past zich automatisch aan op de taalinstelling van het apparaat (_Instellingen → Algemeen → Taal en regio → Volgorde voorkeurstalen_). Als alternatief kan een gebruiker de taalkeuze alleen voor deze app aanpassen (_Instellingen → Fotogroep Waalre → Voorkeurstaal_).</target>
+De app ondersteunt zowel Nederlands als Engels. De taal van de app past zich automatisch aan op de taalinstelling van het apparaat (_Instellingen → Algemeen → Taal en regio → Volgorde voorkeurstalen_). Als alternatief kan een gebruiker de taalkeuze alleen voor deze app aanpassen (_Instellingen → Fotogroep Waalre → Voorkeurstaal_).</target>
         <note>Second paragraph in The Features section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.3" xml:space="preserve">
         <source>__Deleting__
 On the Portfolio page, you can swipe to ***Delete*** a member from the list. Don't worry - if the person is still a club member, that person will reappear the next time the app synchronizes its local data with online data. This swiping can be useful to remove members who are no longer on the online data members lists. In any case, swipe as much as you like (after all, it just might be therapeutical).</source>
         <target>__Wissen__
-De gebruiker kan op de Portfolio pagina leden verwijderen door hun naam naar links te vegen. Dat verwijderen is slechts tijdelijk indien het lid nog op de online ledenlijst van de club staat: bij opnieuw synchroniseren komt dat lid automatisch weer terug. Maar dit "wegvegen" kan nuttig zijn als bijvoorbeeld een kandidaat-lid vertrekt zonder lid te worden. Hiermee verwijder je iemand uit de locale database die niet meer voorkomt in de online ledenlijst. Als alternatief kan men ook de app verwijderen en opnieuw installeren. Hiermee wordt de locale database gewist en opnieuw gevuld.</target>
+De gebruiker kan op de Portfolio pagina leden verwijderen door hun naam naar links te vegen. Dat verwijderen is slechts tijdelijk indien het lid nog op de online ledenlijst van de club staat: bij opnieuw synchroniseren komt de naam dan automatisch weer terug. Maar dit "wegvegen" kan nuttig zijn als bijvoorbeeld een kandidaat-lid vertrekt zonder lid te worden. Hiermee verwijder je iemand uit de locale database die niet meer voorkomt in de online ledenlijst. Als alternatief kan men ook de app verwijderen en opnieuw installeren.</target>
         <note>Third paragraph in The Features section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.4" xml:space="preserve">
         <source>__Roadmap__
 By clicking on the above button you can (anonymously) vote for improvements you would like in future versions of this app. You can only vote once for any particular improvement.</source>
-        <target>__Roadmap__
-Via de blauwe knop kunt U (anoniem) stemmen op mogelijke toekomstige uitbreiding. U kan op meer dan één optie stemmen.</target>
         <note>Fourth paragraph in The Features section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_4.1" xml:space="preserve">
@@ -224,7 +222,6 @@ Via de blauwe knop kunt U (anoniem) stemmen op mogelijke toekomstige uitbreiding
       </trans-unit>
       <trans-unit id="Paragraph_5.1" xml:space="preserve">
         <source>The app runs on iPhone and iPad and requires iOS 16.4 or higher. Most iOS users tend to upgrade to the latest possible iOS version, which means that the app supports devices made in the last 5 or 6 years.</source>
-        <target>De app ondersteunt de iPhone de iPad mits deze iOS 16.4 of hoger draaien. iOS gebruikers gaan doorgaans vrij snel over op nieuwe versies, en Apple heeft de gewoonte om apparaten minstens voor 5 jaar in de nieuwste iOS te ondersteunen. Oudere apparaten worden op de Apple App Store automatisch doorverwezen naar een oudere versie van deze app.</target>
         <note>First paragraph SupportedPlatforms section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_5.2" xml:space="preserve">
@@ -484,8 +481,8 @@ Field at top of Members page that allows the user to filter the members based on
       <trans-unit id="member" xml:space="preserve">
         <source>member</source>
         <target>lid</target>
-        <note>Default status of member within a club. Used in concatenations.
-Statistics at end of section of FilteredMemberPortfoliosView</note>
+        <note>Statistics at end of section of FilteredMemberPortfoliosView
+Default status of member within a club. Used in concatenations.</note>
       </trans-unit>
       <trans-unit id="members" xml:space="preserve">
         <source>members</source>

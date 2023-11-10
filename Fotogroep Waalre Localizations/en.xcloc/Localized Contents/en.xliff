@@ -482,8 +482,8 @@ Field at top of Members page that allows the user to filter the members based on
       <trans-unit id="member" xml:space="preserve">
         <source>member</source>
         <target>member</target>
-        <note>Default status of member within a club. Used in concatenations.
-Statistics at end of section of FilteredMemberPortfoliosView</note>
+        <note>Statistics at end of section of FilteredMemberPortfoliosView
+Default status of member within a club. Used in concatenations.</note>
       </trans-unit>
       <trans-unit id="members" xml:space="preserve">
         <source>members</source>
