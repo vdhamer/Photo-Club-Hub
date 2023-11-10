@@ -132,16 +132,13 @@ Default status of member within a club. Used in concatenations. */
 "Paragraph_2.7" = "Clubs met belangstelling om deel te nemen kunnen contact opnemen via github@vdhamer.com.";
 
 /* First paragraph in The Features section of Readme page */
-"Paragraph_3.1" = "__Websites__\nHet hoofddoel van de app is om de portfolio's via een strakke presentatie tot hun recht te laten komen. Wij proberen dus _niet_ om websites te vervangen met deze app. Daarom verwijst de app de gebruiker via links desgewenst door naar clubwebsites.";
+"Paragraph_3.1" = "__Websites__\nHet hoofddoel van de app is om de portfolio's via een strakke presentatie tot hun recht te laten komen. Wij streven er dus _niet_ naar dat de app een website kan vervangen. Daarom verwijst de app de gebruiker via links desgewenst door naar de websites van de clubs.";
 
 /* Second paragraph in The Features section of Readme page */
-"Paragraph_3.2" = "__Meertalig__\nDe app ondersteunt de Nederlands de Engelse taal. De taal van de app past zich automatisch aan op de taalinstelling van het apparaat (_Instellingen → Algemeen → Taal en regio → Volgorde voorkeurstalen_). Als alternatief kan een gebruiker de taalkeuze alleen voor deze app aanpassen (_Instellingen → Fotogroep Waalre → Voorkeurstaal_).";
+"Paragraph_3.2" = "__Meertalig__\nDe app ondersteunt zowel Nederlands als Engels. De taal van de app past zich automatisch aan op de taalinstelling van het apparaat (_Instellingen → Algemeen → Taal en regio → Volgorde voorkeurstalen_). Als alternatief kan een gebruiker de taalkeuze alleen voor deze app aanpassen (_Instellingen → Fotogroep Waalre → Voorkeurstaal_).";
 
 /* Third paragraph in The Features section of Readme page */
-"Paragraph_3.3" = "__Wissen__\nDe gebruiker kan op de Portfolio pagina leden verwijderen door hun naam naar links te vegen. Dat verwijderen is slechts tijdelijk indien het lid nog op de online ledenlijst van de club staat: bij opnieuw synchroniseren komt dat lid automatisch weer terug. Maar dit \"wegvegen\" kan nuttig zijn als bijvoorbeeld een kandidaat-lid vertrekt zonder lid te worden. Hiermee verwijder je iemand uit de locale database die niet meer voorkomt in de online ledenlijst. Als alternatief kan men ook de app verwijderen en opnieuw installeren. Hiermee wordt de locale database gewist en opnieuw gevuld.";
-
-/* Fourth paragraph in The Features section of Readme page */
-"Paragraph_3.4" = "__Roadmap__\nVia de blauwe knop kunt U (anoniem) stemmen op mogelijke toekomstige uitbreiding. U kan op meer dan één optie stemmen.";
+"Paragraph_3.3" = "__Wissen__\nDe gebruiker kan op de Portfolio pagina leden verwijderen door hun naam naar links te vegen. Dat verwijderen is slechts tijdelijk indien het lid nog op de online ledenlijst van de club staat: bij opnieuw synchroniseren komt de naam dan automatisch weer terug. Maar dit \"wegvegen\" kan nuttig zijn als bijvoorbeeld een kandidaat-lid vertrekt zonder lid te worden. Hiermee verwijder je iemand uit de locale database die niet meer voorkomt in de online ledenlijst. Als alternatief kan men ook de app verwijderen en opnieuw installeren.";
 
 /* First paragraph in Prelude section of Readme page */
 "Paragraph_4.1" = "Bij het opstarten van de app, wordt een grote versie van het logo van de app zichtbaar. Dit is een interactief speeltje. Door ***binnen het beeld*** te klikken zoomt het beeld langzaam uit tot en vierkante versie van bovenstaande foto.";
@@ -151,9 +148,6 @@ Default status of member within a club. Used in concatenations. */
 
 /* Third paragraph in Prelude section of Readme page */
 "Paragraph_4.3" = "Nogmaals klikken op het beeld maakt het mogelijk om verschillende delen van het beeld-met-vlakjes te bekijken. Klik ***buiten het beeld*** om de animatie te beëindigen. De prelude is opnieuw te zien door de app volledig af te sluiten en dan opnieuw op te starten.";
-
-/* First paragraph SupportedPlatforms section of Readme page */
-"Paragraph_5.1" = "De app ondersteunt de iPhone de iPad mits deze iOS 16.4 of hoger draaien. iOS gebruikers gaan doorgaans vrij snel over op nieuwe versies, en Apple heeft de gewoonte om apparaten minstens voor 5 jaar in de nieuwste iOS te ondersteunen. Oudere apparaten worden op de Apple App Store automatisch doorverwezen naar een oudere versie van deze app.";
 
 /* Second paragraph SupportedPlatforms section of Readme page */
 "Paragraph_5.2" = "De app maakt intern gebruik van diverse __Apple__ software technologieën: Swift (een programmeertaal), SwiftUI (voor schermontwerp), Core Data (lokale dataopslag), Metal (versnelt de animatie), Concurrency (laden van data), en Animations (gebruikersinteractie).";
@@ -207,7 +201,7 @@ Default status of member within a club. Used in concatenations. */
 "Photo Clubs" = "Fotogroepen";
 
 /* Shown in gray at the bottom of the Photo Club page. */
-"PhotoClubs_Caption" = "① Het slotje kan gebruikt worden om deze landkaarten sleepbaar en inzoombaar/uitzoombaar te maken.\n② Men kan enkele testfotogroepen (voor demo doeleinden) toevoegen door de bovenkant van deze pagina omlaag te slepen en los te laten (*pull to refresh*).\n③ Een fotogroep kan verwijderd worden door eerst alle betrokken Portfolio's te verwijden (*swipe left*) en dan de fotoclub zelf te verwijderen (*swipe left*).";
+"PhotoClubs_Caption" = "① Het slotje kan gebruikt worden om deze landkaarten sleepbaar en inzoombaar/uitzoombaar te maken.\n② Men kan enkele testfotogroepen (voor demo doeleinden) toevoegen door de bovenkant van deze pagina omlaag te slepen en los te laten (*pull to refresh*).\n③ Een fotogroep kan verwijderd worden door eerst alle betrokken Portfolio's te verwijderen (*swipe left*) en dan de fotoclub zelf te verwijderen (*swipe left*).";
 
 /* Title of page showing member portfolios */
 "Portfolios" = "Portfolio's";
@@ -227,8 +221,8 @@ Default status of member within a club. Used in concatenations. */
 /* Title of Readme screen */
 "Readme" = "Over deze app";
 
-/* Field at top of Members page that allows the user to filter the members based on either given- and family name.
-Field at top of Photographers page that allows the user to filter the photographers based on either given- and family name. */
+/* Field at top of Who's Who page that allows the user to filter the photographers based on either given- and family name.
+Field at top of Members page that allows the user to filter the members based on either given- and family name. */
 "Search names" = "Zoek op naam";
 
 /* Administrative role of member within a club. Used as part of concatenations. */
