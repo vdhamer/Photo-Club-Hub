@@ -71,7 +71,7 @@
 "Paragraph_4.3" = "Tapping ***inside*** the image allows you to zoom in or out to your heart's content. Tapping ***outside*** the image area ends the animation. You can trigger the animation again by restarting the app. A single tap ***outside*** the image allows you to skip the animation entirely.";
 
 /* First paragraph SupportedPlatforms section of Readme page */
-"Paragraph_5.1" = "The app runs on iPhone and iPad and requires iOS 16.4 or higher. Most iOS users tend to upgrade to the latest possible iOS version, which means that the app supports devices made in the last 5 or 6 years.";
+"Paragraph_5.1" = "The app runs on iPhone and iPad and requires iOS 17.0 or higher. Most iOS users tend to upgrade to the latest possible iOS version, which means that the app supports devices made in the last 5 or 6 years.";
 
 /* Second paragraph SupportedPlatforms section of Readme page */
 "Paragraph_5.2" = "The app uses various Apple software technologies including Swift (a programming language), SwiftUI (a user interface framework), Core Data (local data storage), Metal (graphics acceleration), concurrency (for fetching data), and animations.";

@@ -140,6 +140,9 @@ Default status of member within a club. Used in concatenations. */
 /* Third paragraph in The Features section of Readme page */
 "Paragraph_3.3" = "__Wissen__\nDe gebruiker kan op de Portfolio pagina leden verwijderen door hun naam naar links te vegen. Dat verwijderen is slechts tijdelijk indien het lid nog op de online ledenlijst van de club staat: bij opnieuw synchroniseren komt de naam dan automatisch weer terug. Maar dit \"wegvegen\" kan nuttig zijn als bijvoorbeeld een kandidaat-lid vertrekt zonder lid te worden. Hiermee verwijder je iemand uit de locale database die niet meer voorkomt in de online ledenlijst. Als alternatief kan men ook de app verwijderen en opnieuw installeren.";
 
+/* Fourth paragraph in The Features section of Readme page */
+"Paragraph_3.4" = "__Roadmap__\nVia bovenstaande knop kunt U (anoniem) stemmen op welke toekomstige uitbreidingen het nuttigst zijn. U kunt maximaal één stem uitbrengen per uitbreiding."
+
 /* First paragraph in Prelude section of Readme page */
 "Paragraph_4.1" = "Bij het opstarten van de app, wordt een grote versie van het logo van de app zichtbaar. Dit is een interactief speeltje. Door ***binnen het beeld*** te klikken zoomt het beeld langzaam uit tot en vierkante versie van bovenstaande foto.";
 
@@ -148,6 +151,9 @@ Default status of member within a club. Used in concatenations. */
 
 /* Third paragraph in Prelude section of Readme page */
 "Paragraph_4.3" = "Nogmaals klikken op het beeld maakt het mogelijk om verschillende delen van het beeld-met-vlakjes te bekijken. Klik ***buiten het beeld*** om de animatie te beëindigen. De prelude is opnieuw te zien door de app volledig af te sluiten en dan opnieuw op te starten.";
+
+/* First paragraph SupportedPlatforms section of Readme page */
+"Paragraph_5.1" = "De app vereist minimaal iOS 17.0 (of iPadOS 17.0). Dit betekent dat apparaatmodellen ongeveer 7 jaar lang met nieuwe app versies ondersteund worden. Apparaten met bijvoorbeeld iOS 16 krijgen in de App Store alleen oudere app versies te zien.";
 
 /* Second paragraph SupportedPlatforms section of Readme page */
 "Paragraph_5.2" = "De app maakt intern gebruik van diverse __Apple__ software technologieën: Swift (een programmeertaal), SwiftUI (voor schermontwerp), Core Data (lokale dataopslag), Metal (versnelt de animatie), Concurrency (laden van data), en Animations (gebruikersinteractie).";
