@@ -104,7 +104,8 @@ struct ReadmeView: View {
                                           geo: geo, bottomPaddingAmount: 10)
                             }
 
-/*                            HStack {
+/*
+                            HStack {
                                 Spacer()
                                 Button {
                                     showingRoadmap = true
@@ -124,10 +125,10 @@ struct ReadmeView: View {
                                     })
                                 Spacer()
                             }
- */
 
                             Paragraph("3.4", comment: "Fourth paragraph in The Features section of Readme page",
                                       geo: geo)
+ */
 
                         }
 
