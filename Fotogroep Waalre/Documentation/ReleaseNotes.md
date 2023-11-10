@@ -2,6 +2,9 @@
 
 Photo Clubs screen
     * Added Fotogroep Anders (Eindhoven).
+Readme screen
+    * Removed deprecated text about Roadmap voting (temporarily disabled)
+    * Fixed text that 17.0 (rather than 16.4) is required
 Maintenance
     * Tested with MacOS 14.1.1 and iOS 17.1.1.
     

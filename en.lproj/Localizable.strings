@@ -1,11 +1,93 @@
+/* Shown when "Show club officers" entry is missing in Preferences */
+"“Current members” includes “club officers”" = "“Current members” includes “club officers”";
+
+/* Shown when "Show deceased members" entry is missing in Preferences */
+"“Former members” includes “deceased members”" = "“Former members” includes “deceased members”";
+
+/* <count> members (including all types of members) within photo club */
+"%lld members (inc. ex-members)" = "%lld members (inc. ex-members)";
+
+/* Header of section of Who's Who screen */
+"%lld photographers" = "%lld photographers";
+
+/* Administrative role of member within a club. Used as part of concatenations. */
+"admin" = "admin";
+
+/* To generate strings like "secretary and admin" */
+"and" = "and";
+
+/* Shown on Readme page. */
+"App version %@ (build %@)" = "App version %@ (build %@)";
+
+/* Name of the fruit, not the company. */
+"Apple" = "Apple";
+
+/* Birthday of member (without year). Date not currently localized? */
+"Birthday:" = "Birthday:";
+
+/* Administrative role of member within a club. Used as part of concatenations. */
+"chairman" = "chairman";
+
 /* Section title on Readme page */
 "Concept" = "The concept";
+
+/* Section footer text Portfolios screen */
+"Data source: %@://%@%@/" = "Data source: %@://%@%@/";
+
+/* Section footer text Portfolios screen */
+"Data source: in-app member data." = "Data source: in-app member data.";
+
+/* Relationship status of member within a club. Used as prefix. */
+"deceased" = "deceased";
+
+/* Section title on Readme page */
+"Developers wanted" = "Developers wanted";
+
+/* Relationship status of member within a club. Used in concatenations. */
+"external coach" = "external coach";
+
+/* Section title on Readme page */
+"Features and tips" = "Features and tips";
+
+/* Relationship status of member within a club. Used as prefex. */
+"former" = "former";
+
+/* Caption for image on Readme page */
+"Fragment of the Swift source code" = "Fragment of the Swift source code";
+
+/* Used in DebugPanel. I couldn't avoid localization here. Just use original as translation */
+"frameSize = [%@,%@]" = "frameSize = [%@,%@]";
+
+/* Relationship status of member within a club. Used in concatenations. */
+"honorary member" = "honorary member";
+
+/* Shown instead of app name in PreludeView when app is started */
+"In debug mode" = "In debug mode";
+
+/* Caption of Localizations image on Readme page */
+"List of supported languages" = "List of supported languages";
+
+/* Statistics at end of section of FilteredMemberPortfoliosView
+Default status of member within a club. Used in concatenations. */
+"member" = "member";
+
+/* In Preferences, above toggles like "Show former members" */
+"Member categories" = "Member categories";
+
+/* Statistics at end of section of FilteredMemberPortfoliosView */
+"members" = "members";
+
+/* Hint to the user if the database returns zero PhotoClubs. */
+"No photo clubs seem to be currently loaded.\nTry dragging down the Photo Clubs screen to reload the default clubs." = "No photo clubs seem to be currently loaded.\nTry dragging down the Photo Clubs screen to reload the default clubs.";
 
 /* X of Y portfolio(s) shown (due to various forms of filtering) */
 "of1" = "of";
 
 /* <person> of <photo club> */
 "of2" = "of";
+
+/* Header of section of Who's Who screen */
+"One photographer" = "One photographer";
 
 /* Section title on Readme page. */
 "Open Source" = "Developers";
@@ -112,9 +194,102 @@
 /* Second paragraph Model section of Readme page */
 "Paragraph_7.2" = "The model: every **PhotoClub** has **Members** of various types (current, former, etc.), while some Members have a formal role like chairman within the PhotoClub. Some of **Photographer**'s data (like name and birthday) are unrelated to being a Member of a PhotoClub. **Portfolios** represent the body of work of a Photographer in the context of a PhotoClub. A Portfolio contains **Images**, but an Image could be in multiple Portfolios depending on where the Image was shared. Member and Portfolio can technically be considered synonyms from a modeling perspective: we create exactly one Portfolio for each PhotoClub that a Photographer joined. They are thus a single table in the database.";
 
+/* Caption for image on Readme page */
+"Partial model" = "Partial model";
+
+/* Telephone number (usually invisible) */
+"Phone:" = "Phone:";
+
+/* Name of the app shown in PreludeView when app is started */
+"Photo Club Hub" = "Photo Club Hub";
+
+/* Title of page with clubs and maps */
+"Photo Clubs" = "Photo Clubs";
+
 /* Shown in gray at the bottom of the Photo Club page. */
 "PhotoClubs_Caption" = "① You can unlock/lock a map's scrolling and panning features using the Lock icon.\n② To add extra photo clubs for testing purposes, drag down and release the top of the page.\n③ An individiual photo club can be deleted by first deleting (swipe left) all linked Portfolios on the Portfolio page, and then deleting (swipe left) the photo club itself on this page.";
+
+/* Title of page showing member portfolios */
+"Portfolios" = "Portfolios";
+
+/* Caption of an image on the Readme page */
+"Poster for a photo club exposition\n" = "Poster for a photo club exposition\n";
+
+/* Title of screen with toggles to adjust preferences */
+"Preferences" = "Preferences";
+
+/* Title of the opening animation screen */
+"Prelude" = "Prelude";
+
+/* Relationship status of member within a club. Used in concatenations. */
+"prospective member" = "prospective member";
+
+/* Title of Readme screen */
+"Readme" = "Readme";
+
+/* Field at top of Who's Who page that allows the user to filter the photographers based on either given- and family name.
+Field at top of Members page that allows the user to filter the members based on either given- and family name. */
+"Search names" = "Search names";
+
+/* Administrative role of member within a club. Used as part of concatenations. */
+"secretary" = "secretary";
+
+/* Label of toggle in Preferences */
+"Show aspiring members" = "Show aspiring members";
+
+/* Label of toggle in Preferences */
+"Show club officers" = "Show club officers";
+
+/* Label of toggle in Preferences */
+"Show current members" = "Show current members";
+
+/* Label of toggle in Preferences */
+"Show deceased members" = "Show deceased members";
+
+/* Label of toggle in Preferences */
+"Show external coaches" = "Show external coaches";
+
+/* Label of toggle in Preferences */
+"Show former members" = "Show former members";
+
+/* Label of toggle in Preferences */
+"Show honorary members" = "Show honorary members";
+
+/* X member(s) shown (due to various forms of filtering) */
+"shown" = "shown";
 
 /* Section title on Readme page. */
 "Supported Platforms" = "iOS, iPadOS";
 
+/* Section title on Readme page */
+"The app" = "The app";
+
+/* Section title on Readme page */
+"The concept" = "The concept";
+
+/* Section title on Readme page */
+"The Model" = "The Model";
+
+/* Section title on Readme page */
+"The Prelude" = "The Prelude";
+
+/* Shown in gray at the bottom of the Photographers page. */
+"This page lists all the photographers that this app knows about. A photographer has one or more clickable image thumbnails below the photographer's name. Clicking on any thumbnail leads to the images associated with one particular photo club. The thumbnails can be scrolled horizontally (if there are many of them on one line)." = "This page lists all the photographers that this app knows about. A photographer has one or more clickable image thumbnails below the photographer's name. Clicking on any thumbnail leads to the images associated with one particular photo club. The thumbnails can be scrolled horizontally (if there are many of them on one line).";
+
+/* Hint to the user if the database returns zero Members with Search filter in use. */
+"To see names here, please adapt the Search filter or enable additional categories on the Preferences page." = "To see names here, please adapt the Search filter or enable additional categories on the Preferences page.";
+
+/* Hint to the user if the database returns zero Members with empty Search filter. */
+"To see names here, please enable additional categories on the Preferences page." = "To see names here, please enable additional categories on the Preferences page.";
+
+/* Administrative role of member within a club. Used as part of concatenations. */
+"treasurer" = "treasurer";
+
+/* Administrative role of member within a club. Used as part of concatenations. */
+"vice-chairman" = "vice-chairman";
+
+/* Hint to the user if all of the Preference toggles are disabled. */
+"Warning: all member categories on the Preferences page are disabled. Please enable one or more options in Preferences." = "Warning: all member categories on the Preferences page are disabled. Please enable one or more options in Preferences.";
+
+/* Title of page with list of photographers */
+"Who's Who" = "Who's Who";
