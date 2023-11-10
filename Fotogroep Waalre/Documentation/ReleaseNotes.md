@@ -7,6 +7,7 @@ Readme screen
     * Fixed text that 17.0 (rather than 16.4) is required
 Maintenance
     * Tested with MacOS 14.1.1 and iOS 17.1.1.
+    * Completed English list of localizable strings (also for cases where no translation is necessary).
     
 This is build #46?? in Apple's App Store.
 ---------------------------------------------------------------------------
