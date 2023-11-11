@@ -8,6 +8,7 @@ Readme screen
 Maintenance
     * Tested with MacOS 14.1.1 and iOS 17.1.1.
     * Completed English list of localizable strings (also for cases where no translation is necessary).
+    * Set ITSAppUsesNonExemptEncryption to false in info.plist (to avoid question during releasing)
     
 This is build #46?? in Apple's App Store.
 ---------------------------------------------------------------------------

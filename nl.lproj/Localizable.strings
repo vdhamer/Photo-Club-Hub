@@ -35,7 +35,7 @@
 "Data source: %@://%@%@/" = "Bron: %@://%@%@/";
 
 /* Section footer text Portfolios screen */
-"Data source: in-app member data." = "Bron: partiële in-app ledenlijst.";
+"Data source: in-app member data." = "Bron: in-app ledenlijst.";
 
 /* Relationship status of member within a club. Used as prefix. */
 "deceased" = "overleden";
@@ -293,3 +293,4 @@ Field at top of Members page that allows the user to filter the members based on
 
 /* Title of page with list of photographers */
 "Who's Who" = "Namenlijst";
+
