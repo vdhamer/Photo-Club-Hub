@@ -12,11 +12,17 @@ import CoreData
 struct PhotoClubView: View {
 
     @Environment(\.managedObjectContext) private var viewContext // may not be correct
+    @Environment(\.layoutDirection) var layoutDirection // .leftToRight or .rightToLeft
+
     @FetchRequest var fetchRequest: FetchedResults<PhotoClub>
     private let permitDeletionOfPhotoClubs = true // disables .delete() functionality for this screen
-    @Environment(\.layoutDirection) var layoutDirection // .leftToRight or .rightToLeft
     let accentColor: Color = .accentColor // needed to solve a typing issue
-    @State private var coordinateRegions: [PhotoClubId: MKCoordinateRegion] = [:]
+//    @State private var coordinateRegions: [PhotoClubId: MKCoordinateRegion] = [:]
+
+    @State private var cameraPositions: [PhotoClubId: MapCameraPosition] = [:] // location of camera per club
+    let interactionModes: MapInteractionModes = [.pan, .zoom, .rotate, .pitch]
+    @State private var mapSelection: MKMapItem? // selected Anotation, if any
+
     private let defaultCoordRegion = MKCoordinateRegion( // used as a default if region is not found
                 center: CLLocationCoordinate2D(latitude: 48.858222, longitude: 2.2945), // Eifel Tower, Paris
                 span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
@@ -81,22 +87,27 @@ struct PhotoClubView: View {
                         )
                         .buttonStyle(.plain) // to avoid entire List element to be clickable
                     }
-//                    Map(coordinateRegion: binding(for: filteredPhotoClub.id),
-//                        interactionModes: filteredPhotoClub.isScrollLocked ? [] : [.pan, .zoom],
-//                        showsUserLocation: false, // userTrackingMode: binding(for: mapUserTrackingMode,
-//                        annotationItems: fetchRequest, annotationContent: annotation(photoclub: PhotoClub))
-// following Map() gives 2 warnings about deprecation in iOS 17
-                    Map(coordinateRegion: regionBinding(for: filteredPhotoClub.id),
+                    Map(position: cameraPositionBinding(for: filteredPhotoClub.id),
                         interactionModes: filteredPhotoClub.isScrollLocked ? [] : [.pan, .zoom],
-                        annotationItems: fetchRequest) { photoClub in
-                            MapMarker( coordinate: photoClub.coordinates,
-                                       tint: photoClub == filteredPhotoClub ? .photoClubColor : .blue )
-                        }
+                        selection: $mapSelection) {
+
+                    }
+
+//                      showsUserLocation: false, // userTrackingMode: binding(for: mapUserTrackingMode,
+//                      annotationItems: fetchRequest, annotationContent: annotation(photoclub: PhotoClub))
+
+//                    Map(coordinateRegion: regionBinding(for: filteredPhotoClub.id),
+//                        interactionModes: filteredPhotoClub.isScrollLocked ? [] : [.pan, .zoom],
+//                        annotationItems: fetchRequest) { photoClub in
+//                            MapMarker( coordinate: photoClub.coordinates,
+//                                       tint: photoClub == filteredPhotoClub ? .photoClubColor : .blue )
+//                        }
+
                         .frame(minHeight: 300, idealHeight: 500, maxHeight: .infinity)
-                }
-                .task {
-                    initializeCoordinateRegion(photoClub: filteredPhotoClub) // works better than .onAppear(perform:)?
                 } // VStack
+                .task {
+                    initializeCameraPosition(photoClub: filteredPhotoClub) // works better than .onAppear(perform:)?
+                }
                 .onDisappear(perform: { try? viewContext.save() }) // store map scroll-lock states in database
                 .accentColor(.photoClubColor)
                 .listRowSeparator(.hidden)
@@ -113,25 +124,29 @@ struct PhotoClubView: View {
         }
     }
 
-    private func initializeCoordinateRegion(photoClub: PhotoClub) {
-        coordinateRegions[photoClub.id] = MKCoordinateRegion(
+    private func initializeCameraPosition(photoClub: PhotoClub) { // TODO currently unused!
+        let mapCameraPosition: MapCameraPosition
+
+        mapCameraPosition = MapCameraPosition.region(MKCoordinateRegion(
             center: CLLocationCoordinate2D( latitude: photoClub.latitude_,
                                             longitude: photoClub.longitude_),
-            span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
+            latitudinalMeters: 10000, longitudinalMeters: 10000) // 10 km
+        )
+        cameraPositions[photoClub.id] = mapCameraPosition // return MapCameraPosition and don't use input param
     }
 
-    private func regionBinding(for key: PhotoClubId) -> Binding<MKCoordinateRegion> {
-        let defaultCoordinateRegion = MKCoordinateRegion( // used as a default if region is not found
-                    center: CLLocationCoordinate2D(latitude: 0, longitude: 0), // equator, off shore of West Africa
-                    span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
+    private func cameraPositionBinding(for key: PhotoClubId) -> Binding<MapCameraPosition> {
+        let defaultCameraPosition = MapCameraPosition.region(MKCoordinateRegion(
+                    center: CLLocationCoordinate2D(latitude: 0, longitude: 6,52396), // island on the equator
+                    latitudinalMeters: 100000, longitudinalMeters: 100000)
+        )
 
         // https://stackoverflow.com/questions/68430007/how-to-use-state-with-dictionary
         // https://forums.swift.org/t/swiftui-how-to-use-dictionary-as-binding/34967
         return .init( // a bit ackward, but the geter does return a binding
-            get: { return coordinateRegions[key] ?? defaultCoordinateRegion },
-            set: { newValue in coordinateRegions[key] = newValue } // is this working correctly?
+            get: { return cameraPositions[key] ?? defaultCameraPosition },
+            set: { newValue in cameraPositions[key] = newValue } // is this working correctly?
         )
-
     }
 
     private func deletePhotoClubs(offsets: IndexSet) {
@@ -159,6 +174,18 @@ struct PhotoClubView: View {
 
     }
 
+}
+
+extension PhotoClubView {
+
+    static var userLocation: CLLocationCoordinate2D {
+        CLLocationCoordinate2D(latitude: 51.39184, longitude: 5.46144) // Waalre
+    }
+
+    static var userRegion: MKCoordinateRegion {
+        MKCoordinateRegion(center: PhotoClubView.userLocation,
+                           latitudinalMeters: 10000, longitudinalMeters: 10000)
+    }
 }
 
 struct PhotoClubsInner_Previews: PreviewProvider {
