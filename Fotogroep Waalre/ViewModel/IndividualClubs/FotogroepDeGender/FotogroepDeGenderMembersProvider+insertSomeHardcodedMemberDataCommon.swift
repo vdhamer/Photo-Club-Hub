@@ -22,6 +22,7 @@ extension FotogroepDeGenderMembersProvider { // fill with some initial hard-code
         }
     }
 
+    // swiftlint:disable:next function_body_length
     private func insertSomeHardcodedMemberDataCommon(bgContext: NSManagedObjectContext) {
 
         // add De Gender to Photo Clubs (if needed)
@@ -44,14 +45,31 @@ extension FotogroepDeGenderMembersProvider { // fill with some initial hard-code
         dateFormatter.formatOptions = [.withInternetDateTime, .withFractionalSeconds]
         let bornDT = dateFormatter.date(from: isoDate)!
 
-        addMember(bgContext: bgContext, // add Loek to Photographers and member of Bellus (if needed)
+        addMember(bgContext: bgContext, // add Mariet to members of de Gender
                   personName: PersonName(givenName: "Mariet", infixName: "", familyName: "Wielders"),
                   photographerWebsite: URL(string: "https://www.m3w.nl"),
                   bornDT: bornDT,
                   photoClub: clubDeGender,
+                  memberRolesAndStatus: MemberRolesAndStatus(role: [.chairman: true]),
                   memberWebsite: URL(string: "https://www.fcdegender.nl/wp-content/uploads/Expositie%202023/Mariet/"),
                   latestImage: URL(string:
                      "https://www.fcdegender.nl/wp-content/uploads/Expositie%202023/Mariet/slides/Mariet%203.jpg")
+        )
+
+        addMember(bgContext: bgContext, // add Peter to members of de Gender
+                  personName: PersonName(givenName: "Peter", infixName: "van den", familyName: "Hamer"),
+                  photoClub: clubDeGender,
+                  memberRolesAndStatus: MemberRolesAndStatus(stat: [.prospective: true]),
+                  latestImage: URL(string:
+                     "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg")
+        )
+
+        addMember(bgContext: bgContext, // add Peter to members of de Gender
+                  personName: PersonName(givenName: "Bettina", infixName: "de", familyName: "Graaf"),
+                  photoClub: clubDeGender,
+                  memberRolesAndStatus: MemberRolesAndStatus(stat: [.prospective: true]),
+                  latestImage: URL(string:
+                     "http://www.vdhamer.com/wp-content/uploads/2023/11/BettinaDeGraaf.jpeg")
         )
 
         let clubNickname = FotogroepDeGenderMembersProvider.fotogroepDeGenderIdPlus.nickname

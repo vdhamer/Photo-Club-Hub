@@ -14,7 +14,7 @@ struct PhotoClubView: View {
     @Environment(\.managedObjectContext) private var viewContext // may not be correct
     @Environment(\.layoutDirection) var layoutDirection // .leftToRight or .rightToLeft
 
-    @FetchRequest var fetchRequest: FetchedResults<PhotoClub>
+    @FetchRequest var fetchedPhotoClubs: FetchedResults<PhotoClub>
     private let permitDeletionOfPhotoClubs = true // disables .delete() functionality for this screen
     let accentColor: Color = .accentColor // needed to solve a typing issue
 //    @State private var coordinateRegions: [PhotoClubId: MKCoordinateRegion] = [:]
@@ -29,7 +29,7 @@ struct PhotoClubView: View {
 
     // regenerate Section using dynamic FetchRequest with dynamic predicate and dynamic sortDescriptor
     init(predicate: NSPredicate) {
-        _fetchRequest = FetchRequest<PhotoClub>(sortDescriptors: // replaces previous fetchRequest
+        _fetchedPhotoClubs = FetchRequest<PhotoClub>(sortDescriptors: // replaces previous fetchRequest
                                                     [SortDescriptor(\.pinned, order: .reverse), // pinned clubs first
                                                      SortDescriptor(\.name_, order: .forward), // photoclubID=name&town
                                                      SortDescriptor(\.town_, order: .forward)],
@@ -38,7 +38,7 @@ struct PhotoClubView: View {
     }
 
     var body: some View {
-        ForEach(fetchRequest, id: \.id) { filteredPhotoClub in
+        ForEach(fetchedPhotoClubs, id: \.id) { filteredPhotoClub in
             Section {
                 VStack {
                     HStack(alignment: .center) {
@@ -90,19 +90,16 @@ struct PhotoClubView: View {
                     Map(position: cameraPositionBinding(for: filteredPhotoClub.id),
                         interactionModes: filteredPhotoClub.isScrollLocked ? [] : [.pan, .zoom],
                         selection: $mapSelection) {
-
+                        ForEach(fetchedPhotoClubs, id: \.self) { photoClub in
+                            let coordinate = CLLocationCoordinate2D(latitude: photoClub.latitude_,
+                                                                    longitude: photoClub.longitude_)
+                            let placemark = MKPlacemark(coordinate: coordinate)
+                            Marker(photoClub.shortName,
+                                   systemImage: "camera",
+                                   coordinate: placemark.coordinate)
+                            .tint(photoClub == filteredPhotoClub ? .photoClubColor : .blue)
+                        }
                     }
-
-//                      showsUserLocation: false, // userTrackingMode: binding(for: mapUserTrackingMode,
-//                      annotationItems: fetchRequest, annotationContent: annotation(photoclub: PhotoClub))
-
-//                    Map(coordinateRegion: regionBinding(for: filteredPhotoClub.id),
-//                        interactionModes: filteredPhotoClub.isScrollLocked ? [] : [.pan, .zoom],
-//                        annotationItems: fetchRequest) { photoClub in
-//                            MapMarker( coordinate: photoClub.coordinates,
-//                                       tint: photoClub == filteredPhotoClub ? .photoClubColor : .blue )
-//                        }
-
                         .frame(minHeight: 300, idealHeight: 500, maxHeight: .infinity)
                 } // VStack
                 .task {
@@ -118,13 +115,7 @@ struct PhotoClubView: View {
         .onDelete(perform: deletePhotoClubs)
     }
 
-    private func annotation(for photoClub: PhotoClub) -> Annotation<Text, Text> { // label, content
-        return Annotation(photoClub.shortName, coordinate: photoClub.coordinates) {
-            Text(verbatim: "dummy view") // TODO no need to localize
-        }
-    }
-
-    private func initializeCameraPosition(photoClub: PhotoClub) { // TODO currently unused!
+    private func initializeCameraPosition(photoClub: PhotoClub) {
         let mapCameraPosition: MapCameraPosition
 
         mapCameraPosition = MapCameraPosition.region(MKCoordinateRegion(
@@ -137,7 +128,7 @@ struct PhotoClubView: View {
 
     private func cameraPositionBinding(for key: PhotoClubId) -> Binding<MapCameraPosition> {
         let defaultCameraPosition = MapCameraPosition.region(MKCoordinateRegion(
-                    center: CLLocationCoordinate2D(latitude: 0, longitude: 6,52396), // island on the equator
+            center: CLLocationCoordinate2D(latitude: 0, longitude: 6.52396), // island on the equator
                     latitudinalMeters: 100000, longitudinalMeters: 100000)
         )
 
@@ -151,14 +142,14 @@ struct PhotoClubView: View {
 
     private func deletePhotoClubs(offsets: IndexSet) {
         guard permitDeletionOfPhotoClubs else { return } // to turn off the feature
-        if let photoClub = (offsets.map { fetchRequest[$0] }.first) { // unwrap first PhotoClub to be deleted
+        if let photoClub = (offsets.map { fetchedPhotoClubs[$0] }.first) { // unwrap first PhotoClub to be deleted
             photoClub.deleteAllMembers(context: viewContext)
             guard photoClub.members.count == 0 else { // safety: will crash if member.photoClub == nil
                 print("Could not delete photo club \(photoClub.fullName) " +
                       "because it still has \(photoClub.members.count) members.")
                 return
             }
-            offsets.map { fetchRequest[$0] }.forEach( viewContext.delete )
+            offsets.map { fetchedPhotoClubs[$0] }.forEach( viewContext.delete )
 
             do {
                 if viewContext.hasChanges {
