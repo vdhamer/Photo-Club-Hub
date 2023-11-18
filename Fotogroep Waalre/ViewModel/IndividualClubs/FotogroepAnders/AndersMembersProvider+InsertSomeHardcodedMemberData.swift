@@ -85,7 +85,7 @@ extension AndersMembersProvider { // fill with some initial hard-coded content
                   personName: PersonName(givenName: "Dennis", infixName: "", familyName: "Verbruggen"),
                   photoClub: clubAnders,
                   memberWebsite: URL(string: "https://www.fotogroepwaalre.nl/fotos/Empty_Website/"),
-//                  memberWebsite: URL(string: "https://www.facebook.com/SunKissedArt"),
+//                  memberWebsite: URL(string: "https://www.facebook.com/SunKissedArt"), TODO fix Dennis/Lotte website
                   latestImage: URL(string: "http://www.vdhamer.com/wp-content/uploads/2023/11/DennisVerbruggen.jpeg")
         )
 

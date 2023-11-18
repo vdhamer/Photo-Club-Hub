@@ -89,14 +89,12 @@ struct PhotoClubView: View {
                     Map(position: cameraPositionBinding(for: filteredPhotoClub.id),
                         interactionModes: filteredPhotoClub.isScrollLocked ? [] : [.pan, .zoom],
                         selection: $mapSelection) {
-                        ForEach(fetchedPhotoClubs, id: \.self) { photoClub in
-                            let coordinate = CLLocationCoordinate2D(latitude: photoClub.latitude_,
-                                                                    longitude: photoClub.longitude_)
-                            let placemark = MKPlacemark(coordinate: coordinate)
-                            Marker(photoClub.shortName,
+                        ForEach(toMapItems(photoClubs: fetchedPhotoClubs), id: \.self) { mapItem in
+                            Marker(isEqual(mapItemLHS: mapItem, mapItemRHS: mapSelection) ?
+                                        mapItem.placemark.title! : String(""),
                                    systemImage: "camera",
-                                   coordinate: placemark.coordinate)
-                            .tint(photoClub == filteredPhotoClub ? .photoClubColor : .blue)
+                                   coordinate: mapItem.placemark.coordinate)
+                                .tint(isEqual(mapItem: mapItem, photoclub: filteredPhotoClub) ? .photoClubColor : .blue)
                         }
                     }
                         .frame(minHeight: 300, idealHeight: 500, maxHeight: .infinity)
@@ -112,6 +110,38 @@ struct PhotoClubView: View {
             } // Section
         } // ForEach
         .onDelete(perform: deletePhotoClubs)
+    }
+
+    private func isEqual(mapItem: MKMapItem, photoclub: PhotoClub) -> Bool {
+        // a little bit scary to compare two floats for equality
+        if mapItem.placemark.coordinate.latitude != photoclub.coordinates.latitude {
+            return false
+        } else {
+            return mapItem.placemark.coordinate.longitude == photoclub.coordinates.longitude
+        }
+    }
+
+    private func isEqual(mapItemLHS: MKMapItem, mapItemRHS: MKMapItem?) -> Bool {
+        // a little bit scary to compare two floats for equality
+        if mapItemLHS.placemark.coordinate.latitude != mapItemRHS?.placemark.coordinate.latitude {
+            return false
+        } else {
+            return mapItemLHS.placemark.coordinate.longitude == mapItemRHS?.placemark.coordinate.longitude
+        }
+    }
+
+    // conversion to [MKMapItems] is needed to make Placemarks touch (and mouse) sensitive
+    private func toMapItems(photoClubs: FetchedResults<PhotoClub>) -> [MKMapItem] {
+        var mapItems: [MKMapItem] = []
+        for photoClub in photoClubs {
+            let coordinates = CLLocationCoordinate2D(latitude: photoClub.latitude_,
+                                                     longitude: photoClub.longitude_)
+            let placemark = MKPlacemark(coordinate: coordinates)
+            let mapItem = MKMapItem(placemark: placemark)
+//            mapItem.placemark.title = photoClub.fullName TODO
+            mapItems.append(mapItem)
+        }
+        return mapItems
     }
 
     private func initializeCameraPosition(photoClub: PhotoClub) {
