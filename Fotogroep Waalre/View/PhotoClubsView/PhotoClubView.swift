@@ -17,7 +17,6 @@ struct PhotoClubView: View {
     @FetchRequest var fetchedPhotoClubs: FetchedResults<PhotoClub>
     private let permitDeletionOfPhotoClubs = true // disables .delete() functionality for this screen
     let accentColor: Color = .accentColor // needed to solve a typing issue
-//    @State private var coordinateRegions: [PhotoClubId: MKCoordinateRegion] = [:]
 
     @State private var cameraPositions: [PhotoClubId: MapCameraPosition] = [:] // location of camera per club
     let interactionModes: MapInteractionModes = [.pan, .zoom, .rotate, .pitch]
@@ -33,8 +32,8 @@ struct PhotoClubView: View {
                                                     [SortDescriptor(\.pinned, order: .reverse), // pinned clubs first
                                                      SortDescriptor(\.name_, order: .forward), // photoclubID=name&town
                                                      SortDescriptor(\.town_, order: .forward)],
-                                                predicate: predicate,
-                                                animation: .default)
+                                                     predicate: predicate,
+                                                     animation: .bouncy)
     }
 
     var body: some View {
