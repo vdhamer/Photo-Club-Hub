@@ -1,19 +1,21 @@
 ### 2.5.1 (Github commit ???????) ??-11-23
 
 Photo Clubs screen
-    * Added Fotogroep Anders (Eindhoven) and Bellus Imago (partial) and Fotogroep de Gender (partial).
-    * Fixed that a 2nd map could initially be displayed empty (defaulted to blue piece of ocean).
-    * Markers on map show a camera icon and the (short) name of the club.
+    * Added Fotogroep Anders (Eindhoven), Bellus Imago (partial), and Fotogroep de Gender (partial).
+    * Bug fix: the 2nd map from top could initially be displayed at default coordinates (lots of ocean blue). 
+    * Markers on map show a camera icon.
+    * Markers on the map show name of the club if you select them (touch).
+    * Minor layout changes.
 Readme screen
-    * Removed deprecated text about Roadmap voting (temporarily disabled)
-    * Fixed text that 17.0 (rather than 16.4) is required
+    * Removed deprecated text about ability to vote for Roadmap features (has been disabled for a while).
+    * Fixed text that now iOS 17.0 (rather than 16.4) is required,
 Maintenance
+    * Replaced deprecated API Map calls by newer SwiftUI MapKit equivalent. This fixed 3 compiler warnings.
     * Tested with MacOS 14.1.1, Xcode 15.1 Beta 3 and iOS 17.1.1.
     * Completed English list of localizable strings (also for cases where no translation is necessary).
-    * Set ITSAppUsesNonExemptEncryption to false in info.plist (to avoid question during releasing).
-    * Replaced deprecated API Map calls by newer SwiftUI MapKit equivalent. This solved 3 compiler warnings.
+    * Set ITSAppUsesNonExemptEncryption to false in info.plist (to automate answer to question during releasing).
     
-This is build #46?? in Apple's App Store.
+This is build #4607 in Apple's App Store.
 ---------------------------------------------------------------------------
 ### 2.5.0 (Github commit beafb53) 3-11-23
 

@@ -50,7 +50,7 @@ struct LockAnimationView: View {
                     .foregroundColor(.secondary)
 
             }
-            .offset(x: 7, y: -7)
+            .offset(x: 7, y: -9) // shifted slightly upwards from previous .offset(x: 7, y: -7)
             .rotationEffect(.degrees(locked ? 0 : 15))
             .animation(Animation.easeInOut(duration: 0.3), value: locked)
         }

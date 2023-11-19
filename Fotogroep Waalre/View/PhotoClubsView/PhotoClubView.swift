@@ -22,9 +22,9 @@ struct PhotoClubView: View {
     let interactionModes: MapInteractionModes = [.pan, .zoom, .rotate, .pitch]
     @State private var mapSelection: MKMapItem? // selected Anotation, if any
 
-    private let defaultCoordRegion = MKCoordinateRegion( // used as a default if region is not found
-                center: CLLocationCoordinate2D(latitude: 48.858222, longitude: 2.2945), // Eifel Tower, Paris
-                span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
+//    private let defaultCoordRegion = MKCoordinateRegion( // used as a default if region is not found
+//                center: CLLocationCoordinate2D(latitude: 48.858222, longitude: 2.2945), // Eifel Tower, Paris
+//                span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
 
     // regenerate Section using dynamic FetchRequest with dynamic predicate and dynamic sortDescriptor
     init(predicate: NSPredicate) {
@@ -39,19 +39,19 @@ struct PhotoClubView: View {
     var body: some View {
         ForEach(fetchedPhotoClubs, id: \.id) { filteredPhotoClub in
             Section {
-                VStack {
-                    HStack(alignment: .center) {
-                        Image(systemName: "mappin.circle.fill")
-                            .foregroundStyle(.white, .yellow, accentColor ) // yellow secondary color shouldn't show up
+                VStack(alignment: .leading) {
+                    Text(verbatim: "\(filteredPhotoClub.fullName)")
+                        .font(UIDevice.isIPad ? .title : .title2)
+                        .tracking(1)
+                        .foregroundColor(.photoClubColor)
+//                        .border(.red)
+                    HStack(alignment: .center, spacing: 0) {
+                        Image(systemName: "camera.circle.fill")
+                            .foregroundStyle(.white, .yellow, accentColor ) // secondary = yellow color not really used
                             .symbolRenderingMode(.palette)
-                            .foregroundColor(.accentColor)
-                            .font(.title)
-                            .padding([.trailing], 5)
+                            .font(.largeTitle)
+                            .padding(.horizontal, 5)
                         VStack(alignment: .leading) {
-                            Text(verbatim: "\(filteredPhotoClub.fullName)")
-                                .font(.title3)
-                                .tracking(1)
-                                .foregroundColor(.photoClubColor)
                             Text(verbatim: layoutDirection == .leftToRight ?
                                  "\(filteredPhotoClub.town), \(filteredPhotoClub.country)" : // English, Dutch
                                  "\(filteredPhotoClub.country) ,\(filteredPhotoClub.town)") // Hebrew, Arabic
@@ -70,7 +70,7 @@ struct PhotoClubView: View {
                                 .buttonStyle(.plain) // to avoid entire List element to be clickable
                             }
                         }
-                        Spacer()
+                        Spacer() // push Button to trailing/right side
                         Button(
                             action: {
                                 openCloseSound(openClose: filteredPhotoClub.isScrollLocked ? .close : .open)
@@ -82,17 +82,20 @@ struct PhotoClubView: View {
                                 }
                                 .frame(maxWidth: 60, maxHeight: 60)
                                 .contentShape(Rectangle())
+//                                .border(.red)
                             }
                         )
                         .buttonStyle(.plain) // to avoid entire List element to be clickable
                     }
+                    .padding(.all, 0)
+//                    .border(.blue)
                     Map(position: cameraPositionBinding(for: filteredPhotoClub.id),
                         interactionModes: filteredPhotoClub.isScrollLocked ? [] : [.pan, .zoom],
                         selection: $mapSelection) {
                         ForEach(toMapItems(photoClubs: fetchedPhotoClubs), id: \.self) { mapItem in
                             Marker(isEqual(mapItemLHS: mapItem, mapItemRHS: mapSelection) ?
                                 mapItem.name ?? "NoName??" : String(""),
-                                   systemImage: "camera",
+                                   systemImage: "camera.fill",
                                    coordinate: mapItem.placemark.coordinate)
                                 .tint(isEqual(mapItem: mapItem, photoclub: filteredPhotoClub) ? .photoClubColor : .blue)
                         }
@@ -106,6 +109,7 @@ struct PhotoClubView: View {
                 .accentColor(.photoClubColor)
                 .listRowSeparator(.hidden)
                 .padding()
+                .border(Color(.darkGray), width: 0.5)
                 .background(Color(.secondarySystemBackground)) // compatible with light and dark mode
             } // Section
         } // ForEach
