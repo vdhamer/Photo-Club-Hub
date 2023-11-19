@@ -70,7 +70,7 @@ struct PhotoClubView: View {
                                 .buttonStyle(.plain) // to avoid entire List element to be clickable
                             }
                         }
-                        Spacer() // push Button to trailing/right side
+                        Spacer() // moved Button to trailing/right side
                         Button(
                             action: {
                                 openCloseSound(openClose: filteredPhotoClub.isScrollLocked ? .close : .open)
