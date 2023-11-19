@@ -91,7 +91,7 @@ struct PhotoClubView: View {
                         selection: $mapSelection) {
                         ForEach(toMapItems(photoClubs: fetchedPhotoClubs), id: \.self) { mapItem in
                             Marker(isEqual(mapItemLHS: mapItem, mapItemRHS: mapSelection) ?
-                                        mapItem.placemark.title! : String(""),
+                                mapItem.name ?? "NoName??" : String(""),
                                    systemImage: "camera",
                                    coordinate: mapItem.placemark.coordinate)
                                 .tint(isEqual(mapItem: mapItem, photoclub: filteredPhotoClub) ? .photoClubColor : .blue)
@@ -138,7 +138,7 @@ struct PhotoClubView: View {
                                                      longitude: photoClub.longitude_)
             let placemark = MKPlacemark(coordinate: coordinates)
             let mapItem = MKMapItem(placemark: placemark)
-//            mapItem.placemark.title = photoClub.fullName TODO
+            mapItem.name = photoClub.fullName
             mapItems.append(mapItem)
         }
         return mapItems
