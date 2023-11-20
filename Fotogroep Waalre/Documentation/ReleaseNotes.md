@@ -1,4 +1,4 @@
-### 2.5.1 (Github commit ???????) ??-11-23
+### 2.5.1 (Github commit e5915da) 20-11-23
 
 Photo Clubs screen
     * Added Fotogroep Anders (Eindhoven), Bellus Imago (partial), and Fotogroep de Gender (partial).
