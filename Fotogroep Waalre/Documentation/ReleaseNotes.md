@@ -1,8 +1,9 @@
-### 2.5.1 (Github commit e5915da) 20-11-23
+### 2.5.1 (Github commit ???????) 22-11-23
 
 Photo Clubs screen
     * Added Fotogroep Anders (Eindhoven), Bellus Imago (partial), and Fotogroep de Gender (partial).
-    * Bug fix: the 2nd map from top could initially be displayed at default coordinates (lots of ocean blue). 
+    * Bug fix: the 2nd map from top could initially be displayed at default coordinates (lots of ocean blue).
+    * Maps have a few new features like rotate, 3D, compas, and scale. For some you need to zoom in. For compas you need to rotate. 
     * Markers on map show a camera icon.
     * Markers on the map show name of the club if you select them (touch).
     * Minor layout changes.
@@ -15,7 +16,7 @@ Maintenance
     * Completed English list of localizable strings (also for cases where no translation is necessary).
     * Set ITSAppUsesNonExemptEncryption to false in info.plist (to automate answer to question during releasing).
     
-This is build #4607 in Apple's App Store.
+This is build #4608 in Apple's App Store.
 ---------------------------------------------------------------------------
 ### 2.5.0 (Github commit beafb53) 3-11-23
 

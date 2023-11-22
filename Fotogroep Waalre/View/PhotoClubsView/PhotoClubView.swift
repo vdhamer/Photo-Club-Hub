@@ -22,10 +22,6 @@ struct PhotoClubView: View {
     let interactionModes: MapInteractionModes = [.pan, .zoom, .rotate, .pitch]
     @State private var mapSelection: MKMapItem? // selected Anotation, if any
 
-//    private let defaultCoordRegion = MKCoordinateRegion( // used as a default if region is not found
-//                center: CLLocationCoordinate2D(latitude: 48.858222, longitude: 2.2945), // Eifel Tower, Paris
-//                span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
-
     // regenerate Section using dynamic FetchRequest with dynamic predicate and dynamic sortDescriptor
     init(predicate: NSPredicate) {
         _fetchedPhotoClubs = FetchRequest<PhotoClub>(sortDescriptors: // replaces previous fetchRequest
@@ -90,7 +86,10 @@ struct PhotoClubView: View {
                     .padding(.all, 0)
 //                    .border(.blue)
                     Map(position: cameraPositionBinding(for: filteredPhotoClub.id),
-                        interactionModes: filteredPhotoClub.isScrollLocked ? [] : [.pan, .zoom],
+                        interactionModes: filteredPhotoClub.isScrollLocked ? [] : [
+                            .rotate, // automatically enables the compas button when rotated
+                            .pitch, // switch to 3D view if zoomed in far enough
+                            .pan, .zoom],
                         selection: $mapSelection) {
                         ForEach(toMapItems(photoClubs: fetchedPhotoClubs), id: \.self) { mapItem in
                             Marker(isEqual(mapItemLHS: mapItem, mapItemRHS: mapSelection) ?
@@ -111,6 +110,12 @@ struct PhotoClubView: View {
                 .padding()
                 .border(Color(.darkGray), width: 0.5)
                 .background(Color(.secondarySystemBackground)) // compatible with light and dark mode
+                .mapControls {
+                    MapCompass() // map Compass shown if rotation differs from North on top
+                        .mapControlVisibility(.visible)
+                    MapPitchToggle() // switch between 2D and 3D
+                    MapScaleView() // distance scale
+                }
             } // Section
         } // ForEach
         .onDelete(perform: deletePhotoClubs)
