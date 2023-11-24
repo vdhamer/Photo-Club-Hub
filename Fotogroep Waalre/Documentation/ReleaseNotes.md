@@ -1,4 +1,8 @@
-### 2.5.1 (Github commit ???????) 22-11-23
+### 2.5.2 (Github commit ???????) ??-11-23
+ 
+This is build #46?? in Apple's App Store.
+---------------------------------------------------------------------------
+### 2.5.1 (Github commit 51501f7) 22-11-23
 
 Photo Clubs screen
     * Added Fotogroep Anders (Eindhoven), Bellus Imago (partial), and Fotogroep de Gender (partial).
