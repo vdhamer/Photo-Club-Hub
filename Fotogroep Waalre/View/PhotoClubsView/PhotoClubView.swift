@@ -112,10 +112,10 @@ struct PhotoClubView: View {
                 .background(Color(.secondarySystemBackground)) // compatible with light and dark mode
                 .mapControls {
                     MapCompass() // map Compass shown if rotation differs from North on top
-                        .mapControlVisibility(.visible)
                     MapPitchToggle() // switch between 2D and 3D
                     MapScaleView() // distance scale
-                }
+//                    MapUserLocationButton() TODO
+                } .mapControlVisibility(filteredPhotoClub.isScrollLocked ? .hidden : .automatic)
             } // Section
         } // ForEach
         .onDelete(perform: deletePhotoClubs)
