@@ -11,6 +11,7 @@ import CoreData // for implementing .refreshable
 struct PhotoClubListView: View {
     @Environment(\.managedObjectContext) private var viewContext
     @StateObject var model = PreferencesViewModel()
+    @State var locationManager = LocationManager()
 
     @FetchRequest(
         sortDescriptors: [SortDescriptor(\.pinned, order: .reverse), // pinned club at top of list
@@ -45,6 +46,11 @@ struct PhotoClubListView: View {
                     .foregroundColor(.gray)
             }
             .listStyle(.plain)
+            .task {
+                try? await locationManager.requestUserAuthorization()
+                try? await locationManager.startCurrentLocationUpdates()
+                // remember that nothing will run here until the for try await loop finishes
+            }
             .refreshable { // for pull-to-refresh
                 // load test member(s) of Fotogroep Bellus Imago
                let biBackgroundContext = PersistenceController.shared.container.newBackgroundContext()

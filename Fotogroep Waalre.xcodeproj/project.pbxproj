@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D006BA7E2B115FB1002E555B /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D006BA7D2B115FB1002E555B /* LocationManager.swift */; };
 		D008D2AA28739167007A7BE2 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = D008D2A928739167007A7BE2 /* .gitignore */; };
 		D01D2B6227D3BBDC00E2FE41 /* View+Navigate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01D2B6127D3BBDC00E2FE41 /* View+Navigate.swift */; };
 		D02082AF296F6ED7009493C4 /* TestClubAmsterdamMembersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02082AE296F6ED7009493C4 /* TestClubAmsterdamMembersProvider.swift */; };
@@ -109,6 +110,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D006BA7D2B115FB1002E555B /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		D008D2A928739167007A7BE2 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		D01526BC278B91BA004DBD19 /* Fotogroep Waalre.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Fotogroep Waalre.entitlements"; sourceTree = "<group>"; };
 		D01D2B6127D3BBDC00E2FE41 /* View+Navigate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Navigate.swift"; sourceTree = "<group>"; };
@@ -483,6 +485,7 @@
 		D0831A3F277F731C0049AB84 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				D006BA7D2B115FB1002E555B /* LocationManager.swift */,
 				D0329449283F9D1D0044C70C /* Bundle+VersionBuild.swift */,
 				D06BE9322A4F870B0055B3B1 /* ifDebugUtils.swift */,
 				D0416281295BBA7700ED073A /* CoreLocation+Equatable.swift */,
@@ -869,6 +872,7 @@
 				D02C273C2AEE6F870005F957 /* AndersMembersProvider.swift in Sources */,
 				D0362A872AC3A21200F87378 /* String+containsWordUsingNLP.swift in Sources */,
 				D0AE1B782788A19500E0100E /* WhoIsWho.swift in Sources */,
+				D006BA7E2B115FB1002E555B /* LocationManager.swift in Sources */,
 				D0831A21277F72270049AB84 /* WhoIsWhoInnerView.swift in Sources */,
 				D0831A35277F72590049AB84 /* PreferencesViewModel.swift in Sources */,
 				D081655F278616930078AB16 /* SinglePortfolioView.swift in Sources */,

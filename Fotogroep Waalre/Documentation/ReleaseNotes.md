@@ -1,5 +1,9 @@
 ### 2.5.2 (Github commit ???????) ??-11-23
- 
+
+Photo Clubs screen
+    * Map controls are hidden when map is locked. In version 2.5.0 they were disabled, but not hidden.
+    * User location is shown on map.
+
 This is build #46?? in Apple's App Store.
 ---------------------------------------------------------------------------
 ### 2.5.1 (Github commit 51501f7) 22-11-23

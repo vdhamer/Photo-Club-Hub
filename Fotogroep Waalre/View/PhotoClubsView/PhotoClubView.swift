@@ -114,7 +114,7 @@ struct PhotoClubView: View {
                     MapCompass() // map Compass shown if rotation differs from North on top
                     MapPitchToggle() // switch between 2D and 3D
                     MapScaleView() // distance scale
-//                    MapUserLocationButton() TODO
+                    MapUserLocationButton()
                 } .mapControlVisibility(filteredPhotoClub.isScrollLocked ? .hidden : .automatic)
             } // Section
         } // ForEach
