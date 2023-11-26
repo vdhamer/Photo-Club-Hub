@@ -5,6 +5,7 @@ Photo Clubs screen
     * User location is shown on map when user presses a new MapUserLocationButton() control.
 Maintenance
     * Tested with iOS 17.2 beta.
+    * Updated screenshot (portfolios.jpg) used in Github README.md
 
 This is build #46?? in Apple's App Store.
 ---------------------------------------------------------------------------

@@ -178,39 +178,40 @@ Usage of the various screens in the user interface:
 - The `Prelude` screen shows an opening animation.
   Clicking outside the central image brings you to the central `Portfolios` screen.
 
-- The `Portfolios` screen lists the available portfolios
-  (see above definition of `portfolio`).
-  Clicking on a portfolio shows a screen with the "detailed" contents of that portfolio.
-  Swiping left deletes an entry, but this is not normally needed and is currently harmless.
-  The `Search` bar filters the list using the photographer's full name.
+- The `Portfolios` screen lists all the photo clubs featured by the app.
+  It allows you to first select a photo club and then select the portfolio of one of its members.
+  The `Search` bar filters the lists of club members using the photographer's full name.
+  Swiping left deletes an entry, but this is not normally needed and is not permanent (yet)).
 
-- The `individual portfolio` screen shows the portfolio of a user-selected photographer.
-  The title at the top of the screen shows the photographer's name and club affiation: "Robert Capa @ Magnum Photos".
+- The `Who's Who` screen lists all the photographers known to the app.
+  It allows you to first select the photographer and then select that person's club-specific portfolio.
+  If available, club-independent information (like birthdays) for that photographer is displayed here.
+  The `Search` bar filters on photographer names.
+
+- The `Photo Clubs` screen lists the photo clubs that are known to the app.
+  Each entry mainly contains a map showing where the club is located. 
+  A button with a lock icon toggles whether the map is interactive (scroll, zoom, rotate, 3D).
+  By default, the maps are not interactive to allow scrolling of the clubs list rather than scrolling of the map.
+  A _purple_ pin on the map shows where the club is based (e.g., a school or municipal building).
+  A _blue_ pin shows the location of any other photo club that happens to be visible on that map.
+  
+- The `Preferences` screen allows you to configure which types of portfolios you want to include in the
+  Portfolios screen. You can, for example, choose whether to include former members.
+  The `Preferences` screen probably should also filter the `Who's Who` screen - but it doesn't yet.
+
+- The `Readme` screen contains background information on the app and info on app usage.
+
+- The `individual portfolio` screen can be reached by tapping on a `portfolio` in either the
+  `Portfolios` or the `Who's Who` screen.
+  The title at the top of the screen shows the selected photographer and selected club affiation:
+  "Jane Doe @ Club F/8".
 
   Images are shown in present-to-past order, based on the images's _capture_ date.
   For Fotogroep Waalre, the year the image was made is shown in the caption.
 
   You can _swipe_ left or right to manually move backwards or forwards through the portfolio.
   There is also an _autoplay_ mode for an automatic slide show. This screen is (for Fotogroep Waalre)
-  currently based on a commercial Javascript module (Juicebox Pro) that is normally used on websites.
-
-- The `Preferences` screen allows you to configure which types of portfolios you want to include in the
-  Portfolios screen. You can, for example, choose to include former members in addition to
-  the default of current members.
-
-- The `Readme` screen contains information about the app.
-
-- The `Photo Clubs` screen lists the photo clubs that are currently loaded.
-  A button with a lock icon toggles whether the map can be dragged-and-pinched.
-  Interactive maps are powerful, but can be inconvenient if you need to scroll to other photo clubs.
-  A _purple_ pin on the map shows where the club is based (e.g., a school or municipal building).
-  A _blue_ pin shows the location of any other photo club that are visible on that map.
-
-- The `Who's Who` screen lists the photographers that can be found in the app.
-  It shows information that is club-independent.
-  Whenever available, it displays birthdays or clickable links to personal
-  (club-independent) photography websites.
-  The `Search` bar filters the list of photographers.
+  currently based on a Javascript plug-in (`Juicebox Pro`) that is normally used in website creation.
 
 </detail></ul></detail>
 </ul>
