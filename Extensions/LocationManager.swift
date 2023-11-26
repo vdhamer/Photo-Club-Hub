@@ -8,6 +8,8 @@
 import Foundation
 import CoreLocation
 
+// TODO: should this be tied to the MainActor like in WWDC23 location tracking sample code??
+
 @Observable
 class LocationManager {
     var location: CLLocation?
@@ -19,10 +21,13 @@ class LocationManager {
     }
 
     func startCurrentLocationUpdates() async throws {
-        for try await locationUpdate in CLLocationUpdate.liveUpdates() {
-            guard let location = locationUpdate.location else { return }
-
-            self.location = location
+        for try await update in CLLocationUpdate.liveUpdates(.default   ) {
+            if let location = update.location {
+                self.location = location
+            } else {
+                print("LOCATION update failed")
+                return
+            }
         }
     }
 }
