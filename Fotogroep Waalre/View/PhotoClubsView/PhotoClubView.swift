@@ -41,6 +41,7 @@ struct PhotoClubView: View {
                         .tracking(1)
                         .foregroundColor(.photoClubColor)
 //                        .border(.red)
+
                     HStack(alignment: .center, spacing: 0) {
                         Image(systemName: "camera.circle.fill")
                             .foregroundStyle(.white, .yellow, accentColor ) // secondary = yellow color not really used
@@ -89,7 +90,8 @@ struct PhotoClubView: View {
                         interactionModes: filteredPhotoClub.isScrollLocked ? [] : [
                             .rotate, // automatically enables the compas button when rotated
                             .pitch, // switch to 3D view if zoomed in far enough
-                            .pan, .zoom],
+                            .pan, .zoom], // actually .all is the default
+//                        userTrackingMode: .constant(.follow),
                         selection: $mapSelection) {
                         ForEach(toMapItems(photoClubs: fetchedPhotoClubs), id: \.self) { mapItem in
                             Marker(isEqual(mapItemLHS: mapItem, mapItemRHS: mapSelection) ?
