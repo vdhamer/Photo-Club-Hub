@@ -4,8 +4,9 @@ Photo Clubs screen
     * Map controls are hidden when map is locked. In version 2.5.0 they were disabled, but not hidden.
     * User location is shown on map when user presses a new MapUserLocationButton() control.
 Maintenance
-    * Tested with iOS 17.2 beta.
+    * Tested with with MacOS 14.1.2 and iOS 17.2 beta.
     * Updated text of README.md and portfolios.jpg screenshot.
+    * Changed status of Bettina in FG de Gender
 
 This is build #46?? in Apple's App Store.
 ---------------------------------------------------------------------------
@@ -85,7 +86,7 @@ Prelude screen
     * Adapted logo to new app name, Photo Club Hub.
 Portfolio screen
     * Replaced images for former FGWaalre coach Theo van Waas
-    * Moved Bettina from members to ex-members for FGWaalre
+    * Moved Bettina from member to ex-member of FGWaalre
 Readme screen
     * Changed app icon as shown in Readme screen and iOS home screen
 Concurrency
