@@ -59,6 +59,7 @@ extension FotogroepDeGenderMembersProvider { // fill with some initial hard-code
         addMember(bgContext: bgContext, // add Peter to members of de Gender
                   personName: PersonName(givenName: "Peter", infixName: "van den", familyName: "Hamer"),
                   photoClub: clubDeGender,
+                  memberRolesAndStatus: MemberRolesAndStatus(stat: [.prospective: false]),
                   latestImage: URL(string:
                      "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg")
         )
