@@ -24,6 +24,7 @@
 		D0416282295BBA7700ED073A /* CoreLocation+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0416281295BBA7700ED073A /* CoreLocation+Equatable.swift */; };
 		D044646527FCE7C100990613 /* UIDevice+IsIPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = D044646427FCE7C100990613 /* UIDevice+IsIPad.swift */; };
 		D04A2B122AC0958C003ED113 /* LineCount.xlsx in Resources */ = {isa = PBXBuildFile; fileRef = D04A2B112AC0958C003ED113 /* LineCount.xlsx */; };
+		D04B1A072B1A708300EB3817 /* portfolios.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D04B1A062B1A708300EB3817 /* portfolios.jpg */; };
 		D05414F72AC7499000D899D8 /* FotogroepDeGenderMembersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05414F62AC7499000D899D8 /* FotogroepDeGenderMembersProvider.swift */; };
 		D05414F92AC749EC00D899D8 /* FotogroepDeGenderMembersProvider+insertSomeHardcodedMemberDataCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05414F82AC749EC00D899D8 /* FotogroepDeGenderMembersProvider+insertSomeHardcodedMemberDataCommon.swift */; };
 		D05AF1B229EF44530079AE77 /* Roadmap in Frameworks */ = {isa = PBXBuildFile; productRef = D05AF1B129EF44530079AE77 /* Roadmap */; };
@@ -68,7 +69,6 @@
 		D0831A51277F73C00049AB84 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0831A50277F73C00049AB84 /* Preview Assets.xcassets */; };
 		D0831A56277F82460049AB84 /* nl.xcloc in Resources */ = {isa = PBXBuildFile; fileRef = D0831A54277F82460049AB84 /* nl.xcloc */; };
 		D0831A57277F82460049AB84 /* en.xcloc in Resources */ = {isa = PBXBuildFile; fileRef = D0831A55277F82460049AB84 /* en.xcloc */; };
-		D085474D2B139BF9007AD73C /* portfolios.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D085474C2B139BF8007AD73C /* portfolios.jpg */; };
 		D08DC6062AE57294008DBD68 /* SinglePortfolioLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08DC6052AE57294008DBD68 /* SinglePortfolioLinkView.swift */; };
 		D0968F662A76F8A00096987A /* FotogroepWaalreMembersProvider+insertOnlineMemberData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0968F652A76F8A00096987A /* FotogroepWaalreMembersProvider+insertOnlineMemberData.swift */; };
 		D0A0884B27F8C697002CC8E1 /* TestClubRotterdamMembersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A0884927F8C697002CC8E1 /* TestClubRotterdamMembersProvider.swift */; };
@@ -133,6 +133,7 @@
 		D0416281295BBA7700ED073A /* CoreLocation+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreLocation+Equatable.swift"; sourceTree = "<group>"; };
 		D044646427FCE7C100990613 /* UIDevice+IsIPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+IsIPad.swift"; sourceTree = "<group>"; };
 		D04A2B112AC0958C003ED113 /* LineCount.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = LineCount.xlsx; sourceTree = "<group>"; };
+		D04B1A062B1A708300EB3817 /* portfolios.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = portfolios.jpg; path = ../../../../../../Desktop/portfolios.jpg; sourceTree = "<group>"; };
 		D05414F62AC7499000D899D8 /* FotogroepDeGenderMembersProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FotogroepDeGenderMembersProvider.swift; sourceTree = "<group>"; };
 		D05414F82AC749EC00D899D8 /* FotogroepDeGenderMembersProvider+insertSomeHardcodedMemberDataCommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FotogroepDeGenderMembersProvider+insertSomeHardcodedMemberDataCommon.swift"; sourceTree = "<group>"; };
 		D05E451D27EF2A2C00D31327 /* ReadmeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeView.swift; sourceTree = "<group>"; };
@@ -184,7 +185,6 @@
 		D0831A50277F73C00049AB84 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D0831A54277F82460049AB84 /* nl.xcloc */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = nl.xcloc; sourceTree = "<group>"; };
 		D0831A55277F82460049AB84 /* en.xcloc */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = en.xcloc; sourceTree = "<group>"; };
-		D085474C2B139BF8007AD73C /* portfolios.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = portfolios.jpg; sourceTree = "<group>"; };
 		D08DC6052AE57294008DBD68 /* SinglePortfolioLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePortfolioLinkView.swift; sourceTree = "<group>"; };
 		D0968F652A76F8A00096987A /* FotogroepWaalreMembersProvider+insertOnlineMemberData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FotogroepWaalreMembersProvider+insertOnlineMemberData.swift"; sourceTree = "<group>"; };
 		D0A0884927F8C697002CC8E1 /* TestClubRotterdamMembersProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestClubRotterdamMembersProvider.swift; sourceTree = "<group>"; };
@@ -602,7 +602,7 @@
 		D0F2F2F32873A19F009DDD2A /* images */ = {
 			isa = PBXGroup;
 			children = (
-				D085474C2B139BF8007AD73C /* portfolios.jpg */,
+				D04B1A062B1A708300EB3817 /* portfolios.jpg */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -734,10 +734,10 @@
 				D0396075278CF6550035F750 /* Settings.bundle in Resources */,
 				D0831A57277F82460049AB84 /* en.xcloc in Resources */,
 				D0831A56277F82460049AB84 /* nl.xcloc in Resources */,
-				D085474D2B139BF9007AD73C /* portfolios.jpg in Resources */,
 				D06061EA28A0456C00A675A7 /* FGWPrivateMembersURL3.txt in Resources */,
 				D0B52497277F9A4B00927BCA /* Localizable.strings in Resources */,
 				D0831A51277F73C00049AB84 /* Preview Assets.xcassets in Resources */,
+				D04B1A072B1A708300EB3817 /* portfolios.jpg in Resources */,
 				D0B52494277F9A4B00927BCA /* Fotogroep-Waalre-InfoPlist.strings in Resources */,
 				D04A2B122AC0958C003ED113 /* LineCount.xlsx in Resources */,
 				D06061E828A0453F00A675A7 /* FGWPrivateMembersURL2.txt in Resources */,
