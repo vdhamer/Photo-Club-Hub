@@ -10,7 +10,7 @@ import MapKit // for CLLocationCoordinate2D
 
 extension TestClubDenHaagMembersProvider { // fill with some initial hard-coded content
 
-    private static let testDenHaagURL = URL(string: "https://www.km21.nl")
+    private static let testDenHaagURL = URL(string: "https://www.fotomuseumdenhaag.nl/")
     static let photoClubTestDenHaagIdPlus = PhotoClubIdPlus(fullName: "Test Fotoclub",
                                                               town: "Den Haag", // Rotterdam also has a "Test Fotoclub"
                                                               nickname: "FC Test DenHaag")
