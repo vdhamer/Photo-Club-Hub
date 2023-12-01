@@ -6,7 +6,7 @@ Photo Clubs screen
 Maintenance
     * Tested with with MacOS 14.1.2 and iOS 17.2 beta.
     * Updated text of README.md and portfolios.jpg screenshot.
-    * Changed status of Bettina in FG de Gender
+    * Updated status of BdG within FG de Gender
 
 This is build #46?? in Apple's App Store.
 ---------------------------------------------------------------------------

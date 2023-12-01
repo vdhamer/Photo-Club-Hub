@@ -93,6 +93,8 @@ struct PhotoClubView: View {
                             .pan, .zoom], // actually .all is the default
 //                        userTrackingMode: .constant(.follow),
                         selection: $mapSelection) {
+
+                        // show markers
                         ForEach(toMapItems(photoClubs: fetchedPhotoClubs), id: \.self) { mapItem in
                             Marker(isEqual(mapItemLHS: mapItem, mapItemRHS: mapSelection) ?
                                 mapItem.name ?? "NoName??" : String(""),
@@ -100,6 +102,8 @@ struct PhotoClubView: View {
                                    coordinate: mapItem.placemark.coordinate)
                                 .tint(isEqual(mapItem: mapItem, photoclub: filteredPhotoClub) ? .photoClubColor : .blue)
                         }
+
+                        UserAnnotation() // show user's location on map
                     }
                         .frame(minHeight: 300, idealHeight: 500, maxHeight: .infinity)
                 } // VStack
@@ -119,7 +123,7 @@ struct PhotoClubView: View {
                     MapUserLocationButton()
                 } .mapControlVisibility(filteredPhotoClub.isScrollLocked ? .hidden : .automatic)
             } // Section
-        } // ForEach
+        } // outer ForEach (PhotoClub)
         .onDelete(perform: deletePhotoClubs)
     }
 
