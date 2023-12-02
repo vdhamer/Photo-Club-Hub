@@ -1,0 +1,145 @@
+[
+  {
+    "idPlus": {
+      "town": "Amsterdam",
+      "fullName": "Test Fotoclub",
+      "nickName": "FC Test Adam"
+    },
+    "website": "https://www.foam.org",
+    "coordinates": {
+      "latitude": 52.364217, "longitude": 4.893370
+    }
+  },
+  {
+    "idPlus": {
+      "town": "Berlin",
+      "fullName": "Museum für Fotografie",
+      "nickName": "???"
+    },
+    "website": "https://www.smb.museum/museen-einrichtungen/museum-fuer-fotografie/home/",
+    "coordinates": {
+      "latitude": 52.507778, "longitude": 13.331667
+    }
+  },
+  {
+    "idPlus": {
+      "town": "Den Haag",
+      "fullName": "Test Fotoclub",
+      "nickName": "FC Test DenHaag"
+    },
+    "website": "https://www.fotomuseumdenhaag.nl/",
+    "coordinates": {
+      "latitude": 52.090556, "longitude": 4.279722
+    }
+  },
+  {
+    "idPlus": {
+      "town": "Lianzhou",
+      "fullName": "Lianzhou Museum of Photography",
+      "nickName": "LMP Lianzhou"
+    },
+    "website": "http://www.lmop.org.cn",
+    "coordinates": {
+      "latitude": 24.78468116365775, "longitude": 112.38391654232916
+    }
+  },
+  {
+    "idPlus": {
+      "town": "London",
+      "fullName": "The Photographers’ Gallery",
+      "nickName": "TPG London"
+    },
+    "website": "http://thephotographersgallery.org.uk/",
+    "coordinates": {
+      "latitude": 51.5148, "longitude": -0.1389
+    }
+  },
+  {
+    "idPlus": {
+      "town": "Madrid",
+      "fullName": "Sala Canal Isabel II",
+      "nickName": ""
+    },
+    "website": "https://www.comunidad.madrid/centros/sala-canal-isabel-ii",
+    "coordinates": {
+      "latitude": 40.43948, "longitude": -3.70135
+    }
+  },
+  {
+    "idPlus": {
+      "town": "New York City",
+      "fullName": "International Center of Photography Museum",
+      "nickName": "ICP New York"
+    },
+    "website": "https://www.icp.org",
+    "coordinates": {
+      "latitude": 40.718028, "longitude": -73.988611
+    }
+  },
+  {
+    "idPlus": {
+      "town": "New York",
+      "fullName": "Fotografiska New York",
+      "nickName": "Fotografiska NYC"
+    },
+    "website": "https://www.fotografiska.com/nyc/",
+    "coordinates": {
+      "latitude": 40.739278, "longitude": -73.986722
+    }
+  },
+  {
+    "idPlus": {
+      "town": "Paris",
+      "fullName": "Les Douches la Galerie",
+      "nickName": "Les Douches Paris"
+    },
+    "website": "https://www.lesdoucheslagalerie.com",
+    "coordinates": {
+      "latitude": 48.87228204998275, "longitude": 2.361759049706068
+    }
+  },
+  {
+    "idPlus": {
+      "town": "Porto",
+      "fullName": "Portuguese Centre of Photography",
+      "nickName": "CPF Porto"
+    },
+    "website": "https://cpf.pt",
+    "coordinates": {
+      "latitude": 41.144656, "longitude": -8.615778
+    }
+  },
+  {
+    "idPlus": {
+      "town": "Rotterdam",
+      "fullName": "Test Fotoclub",
+      "nickName": "FC Test Rdam"
+    },
+    "website": "https://www.nederlandsfotomuseum.nl",
+    "coordinates": {
+      "latitude": 51.90296, "longitude": 4.49504
+    }
+  },
+  {
+    "idPlus": {
+      "town": "Thessaloniki",
+      "fullName": "Thessaloniki Museum of Photography",
+      "nickName": "MOMus Greece"
+    },
+    "website": "https://momus.gr/en/museum/thessaloniki-museum-photography#museum",
+    "coordinates": {
+      "latitude": 40.63295, "longitude": 22.935467
+    }
+  },
+  {
+    "idPlus": {
+      "town": "Tokyo",
+      "fullName": "Tokyo Photographic Art Museum",
+      "nickName": "TOP Tokyo"
+    },
+    "website": "http://topmuseum.jp",
+    "coordinates": {
+      "latitude": 35.6417, "longitude": 139.7132
+    }
+  }
+]

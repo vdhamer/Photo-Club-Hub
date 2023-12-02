@@ -8,6 +8,7 @@ Maintenance
     * Updated text of README.md and portfolios.jpg screenshot.
     * Updated status of BdG and PvdH within FG de Gender
     * Updated screenshot used on Github's README.md
+    * Corrected URL Fotomuseum Den Haag
 
 This is build #46?? in Apple's App Store.
 ---------------------------------------------------------------------------
