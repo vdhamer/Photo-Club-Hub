@@ -1,4 +1,4 @@
-### 2.5.2 (Github commit ???????) ??-11-23
+### 2.5.2 (Github commit ???????) ??-12-23
 
 Photo Clubs screen
     * Map controls are hidden when map is locked. In version 2.5.0 they were disabled, but not hidden.
@@ -7,10 +7,9 @@ Maintenance
     * Tested with with MacOS 14.1.2 and iOS 17.2 beta.
     * Updated text of README.md and portfolios.jpg screenshot.
     * Updated status of BdG and PvdH within FG de Gender
-    * Updated screenshot used on Github's README.md
     * Corrected URL Fotomuseum Den Haag
 
-This is build #46?? in Apple's App Store.
+This is build #4610 - and not distributed via Apple's App Store.
 ---------------------------------------------------------------------------
 ### 2.5.1 (Github commit 51501f7) 22-11-23
 
