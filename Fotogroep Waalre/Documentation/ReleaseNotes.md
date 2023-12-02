@@ -1,8 +1,8 @@
 ### 2.5.2 (Github commit ???????) ??-12-23
 
 Photo Clubs screen
-    * Map controls are hidden when map is locked. In version 2.5.0 they were disabled, but not hidden.
     * User location is shown on map when user presses a new MapUserLocationButton() control.
+    * Map controls are hidden when map is locked. In version 2.5.0 they were disabled, but not hidden.
 Maintenance
     * Tested with with MacOS 14.1.2 and iOS 17.2 beta.
     * Updated text of README.md and portfolios.jpg screenshot.
