@@ -4,7 +4,7 @@ Photo Clubs screen
     * User location is shown on map when user presses a new MapUserLocationButton() control.
     * Map controls are hidden when map is locked. In version 2.5.0 they were disabled, but not hidden.
 Maintenance
-    * Tested with with MacOS 14.1.2, Xcode 14.1 RC and iOS 17.2 beta.
+    * Tested with with MacOS 14.1.2, Xcode 14.1 RC, swiftlint 0.53.0 (there are issues with 0.54.0) and iOS 17.2 beta.
     * Updated text of README.md and portfolios.jpg screenshot.
     * Updated status of BdG and PvdH within FG de Gender
     * Corrected URL Fotomuseum Den Haag
