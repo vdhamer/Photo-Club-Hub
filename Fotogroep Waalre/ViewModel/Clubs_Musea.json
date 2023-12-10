@@ -11,8 +11,8 @@
                 "longitude": 5.51527
             },
             "website": "https://nl.qrcodechimp.com/page/a6d3r7?v=chk1697032881",
-            "memberList": ""
-       },
+            "memberList": "https://www.example.com/fgAndersMemberList.json"
+        },
         {
             "idPlus": {
                 "town": "Eindhoven",
@@ -24,23 +24,63 @@
                 "longitude": 5.45010
             },
             "website": "https://www.fcdegender.nl",
-            "memberList": ""
+            "memberList": "https://www.example.com/deGenderMemberList.json"
         }
     ],
-    "musea": [
+    "museums": [
         {
             "idPlus": {
                 "town": "Amsterdam",
-                "fullName": "Test Fotoclub",
-                "nickName": "FC Test Adam"
+                "fullName": "Foam Amsterdam",
+                "nickName": "Foam"
             },
             "coordinates": {
                 "latitude": 52.364217,
                 "longitude": 4.89337
             },
             "website": "https://www.foam.org",
-            "wikipedia": "",
-            "image": ""
+            "wikipedia": "https://en.wikipedia.org/wiki/Foam_Fotografiemuseum_Amsterdam",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/4/47/Keizersgracht_609%2C_Amsterdam.JPG"
+        },
+        {
+            "idPlus": {
+                "town": "Amsterdam",
+                "fullName": "Huis Marseille",
+                "nickName": "Marseille Adam"
+            },
+            "coordinates": {
+                "latitude": 52.367561,
+                "longitude": 4.884878
+            },
+            "website": "https://www.huismarseille.nl/",
+            "wikipedia": "https://nl.wikipedia.org/wiki/Huis_Marseille",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/f/f6/HuisMarseille-Amsterdam-SjoerdMartens.png"
+        },
+        {
+            "idPlus": {
+                "town": "Antwerpen",
+                "fullName": "Fotomuseum Antwerpen",
+                "nickName": "FOMU"
+            },
+            "coordinates": {
+                "latitude": 51.209167,
+                "longitude": 4.3875
+            },
+            "website": "https://www.fotomuseum.be/",
+            "wikipedia": "https://nl.wikipedia.org/wiki/Fotomuseum_Antwerpen",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Fotomuseum_FOMU_Antwerpen.jpg"
+        },
+        {
+            "idPlus": {
+                "town": "Axel",
+                "fullName": "Witte’s Museum voor Fotografie en Radio",
+                "nickName": "Witte’s Museum"
+            },
+            "coordinates": {
+                "latitude": 51.269286,
+                "longitude": 3.909453
+            },
+            "website": "https://www.wittesmuseum.nl"
         },
         {
             "idPlus": {
@@ -53,22 +93,36 @@
                 "longitude": 13.331667
             },
             "website": "https://www.smb.museum/museen-einrichtungen/museum-fuer-fotografie/home/",
-            "wikipedia": "",
-            "image": ""
+            "wikipedia": "https://en.wikipedia.org/wiki/Museum_of_Photography,_Berlin",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Museum_fuer_fotografie_berlin_landwehrkasino_dec_2004.jpg"
         },
         {
             "idPlus": {
                 "town": "Den Haag",
-                "fullName": "Test Fotoclub",
-                "nickName": "FC Test DenHaag"
+                "fullName": "Fotomuseum Den Haag",
+                "nickName": "FM Den Haag"
             },
             "coordinates": {
                 "latitude": 52.090556,
                 "longitude": 4.279722
             },
             "website": "https://www.fotomuseumdenhaag.nl/",
-            "wikipedia": "",
-            "image": ""
+            "wikipedia": "https://en.wikipedia.org/wiki/Fotomuseum_Den_Haag",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/8/80/Photo_Museum_The_Hague%2C_Main_entrance.jpg"
+        },
+        {
+            "idPlus": {
+                "town": "Hilversum",
+                "fullName": "Museum Hilversum",
+                "nickName": "Museum Hilversum"
+            },
+            "coordinates": {
+                "latitude": 52.224097,
+                "longitude": 5.17145
+            },
+            "website": "http://www.museumhilversum.nl",
+            "wikipedia": "https://nl.wikipedia.org/wiki/Museum_Hilversum",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/7/71/Museum_Hilversum.jpg"
         },
         {
             "idPlus": {
@@ -80,9 +134,7 @@
                 "latitude": 24.78468,
                 "longitude": 112.38392
             },
-            "website": "http://www.lmop.org.cn",
-            "wikipedia": "",
-            "image": ""
+            "website": "http://www.lmop.org.cn"
         },
         {
             "idPlus": {
@@ -95,8 +147,22 @@
                 "longitude": -0.1389
             },
             "website": "http://thephotographersgallery.org.uk/",
-            "wikipedia": "",
-            "image": ""
+            "wikipedia": "https://en.wikipedia.org/wiki/The_Photographers%27_Gallery",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/c/cd/The_Photographers%27_Gallery%2C_London.jpg"
+        },
+        {
+            "idPlus": {
+                "town": "Maastricht",
+                "fullName": "Fotomuseum aan het Vrijthof",
+                "nickName": "F/M Vrijthof"
+            },
+            "coordinates": {
+                "latitude": 50.848333,
+                "longitude": 5.688611
+            },
+            "website": "http://www.museumaanhetvrijthof.nl",
+            "wikipedia": "https://nl.wikipedia.org/wiki/Fotomuseum_aan_het_Vrijthof",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/8/87/Museum_aan_het_Vrijthof_-_Exterieur_2012.jpg"
         },
         {
             "idPlus": {
@@ -109,22 +175,21 @@
                 "longitude": -3.70135
             },
             "website": "https://www.comunidad.madrid/centros/sala-canal-isabel-ii",
-            "wikipedia": "",
-            "image": ""
+            "image": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Dep%C3%B3sito_de_agua_de_Santa_Engracia.JPG"
         },
         {
             "idPlus": {
                 "town": "New York City",
                 "fullName": "International Center of Photography Museum",
-                "nickName": "ICP New York"
+                "nickName": "ICP NYC"
             },
             "coordinates": {
                 "latitude": 40.718028,
                 "longitude": -73.988611
             },
             "website": "https://www.icp.org",
-            "wikipedia": "",
-            "image": ""
+            "wikipedia": "https://en.wikipedia.org/wiki/International_Center_of_Photography",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/9/99/International_Center_of_Photography_at_79_Essex_Street.jpg"
         },
         {
             "idPlus": {
@@ -138,7 +203,7 @@
             },
             "website": "https://www.fotografiska.com/nyc/",
             "wikipedia": "https://en.wikipedia.org/wiki/Fotografiska_New_York",
-            "image": "https://commons.wikimedia.org/wiki/File:Fotografiska_New_York_(51710073919).jpg"
+            "image": "https://upload.wikimedia.org/wikipedia/commons/7/76/Fotografiska_New_York_%2851710073919%29.jpg"
         },
         {
             "idPlus": {
@@ -150,9 +215,7 @@
                 "latitude": 48.87228,
                 "longitude": 2.361759
             },
-            "website": "https://www.lesdoucheslagalerie.com",
-            "wikipedia": "",
-            "image": ""
+            "website": "https://www.lesdoucheslagalerie.com"
         },
         {
             "idPlus": {
@@ -165,22 +228,22 @@
                 "longitude": -8.615778
             },
             "website": "https://cpf.pt",
-            "wikipedia": "",
-            "image": ""
+            "wikipedia": "https://en.wikipedia.org/wiki/Portuguese_Centre_of_Photography",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Centro_Portugu%C3%A9s_de_Fotograf%C3%ADa%2C_Oporto%2C_Portugal%2C_2012-05-09%2C_DD_01.JPG"
         },
         {
             "idPlus": {
                 "town": "Rotterdam",
-                "fullName": "Test Fotoclub",
-                "nickName": "FC Test Rdam"
+                "fullName": "Nederlands Fotomuseum",
+                "nickName": "NFM Rdam"
             },
             "coordinates": {
                 "latitude": 51.90296,
                 "longitude": 4.49504
             },
             "website": "https://www.nederlandsfotomuseum.nl",
-            "wikipedia": "",
-            "image": ""
+            "wikipedia": "https://en.wikipedia.org/wiki/Netherlands_Photo_Museum",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/3/31/Nederlands_Fotomuseum_%2811192247676%29.jpg"
         },
         {
             "idPlus": {
@@ -193,13 +256,13 @@
                 "longitude": 22.935467
             },
             "website": "https://momus.gr/en/museum/thessaloniki-museum-photography#museum",
-            "wikipedia": "",
-            "image": ""
+            "wikipedia": "https://en.wikipedia.org/wiki/MOMus–Thessaloniki_Museum_of_Photography",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/8/83/Biennale_photo_09388.JPG"
         },
         {
             "idPlus": {
                 "town": "Tokyo",
-                "fullName": "Tokyo Photographic Art Museum",
+                "fullName": "Tokyo Museum of Photography",
                 "nickName": "TOP Tokyo"
             },
             "coordinates": {
@@ -207,8 +270,33 @@
                 "longitude": 139.7132
             },
             "website": "http://topmuseum.jp/e/contents/index.html",
-            "wikipedia": "",
-            "image": ""
+            "wikipedia": "https://en.wikipedia.org/wiki/Tokyo_Photographic_Art_Museum",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/3/38/Tokyo_Metropolitan_Museum_of_Photography_entrance_2011_January.jpg"
+        },
+        {
+            "idPlus": {
+                "town": "Utrecht",
+                "fullName": "FOTODOK in Utrecht",
+                "nickName": "Fotodok"
+            },
+            "coordinates": {
+                "latitude": 52.088824,
+                "longitude": 5.122775
+            },
+            "website": "https://www.fotodok.org",
+            "wikipedia": "https://nl.wikipedia.org/wiki/Rob_Hornstra#FOTODOK"
+        },
+        {
+            "idPlus": {
+                "town": "Zierikzee",
+                "fullName": "Cameramuseum Zierikzee",
+                "nickName": "CM Zierikzee"
+            },
+            "coordinates": {
+                "latitude": 51.65010,
+                "longitude": 3.91938
+            },
+            "website": "https://www.cameramuseum.nl"
         }
     ]
 }
