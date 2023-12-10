@@ -616,7 +616,7 @@ having to modify the source code for every extra club, extra member or extra pho
 The basic idea is to store the required information in a hierarchical, distributed way.
 This allows the app to load the information in a three step process:
 
-1. Load photo clubs (central)
+_1. Load photo clubs (central)_
 
 The app loads a list of photo clubs from a fixed location. Because the file is kept separate
 from the app, it can be updated without having to release an update of the app.
@@ -625,7 +625,7 @@ The file notably includes the location of next-level indices.
 
 ##### List 1 JSON syntax
 
-...
+```
 {
     "clubs": [
         {
@@ -656,9 +656,9 @@ The file notably includes the location of next-level indices.
         }
     ]
 }
-...
+```
 
-2. Lists of club members (decentral)
+_2. Lists of club members (decentral)_
 
 Each list defines the current (and optionally former) members of one club.
 For each member, a URL is stored to the final list level (portfolio per member).
@@ -666,7 +666,7 @@ Currently level 2 also includes the URL of one image used as thumbnail.
 Membership list can be stored and managed on the club's own server. The file needs to be in
 a standardized data format (e.g., JSON) and may require an editing tool to ensure syntactic consistency.
 
-3. List of images per club member (decentral)
+_3. Image portfolio per club member (decentral)_
 
 The index of images (per club member) is fetched only when a portfolio is selected for viewing.
 There is thus no need to prefetch the entire 3-level tree (root/memberlist/imagelist).
