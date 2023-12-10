@@ -9,6 +9,7 @@ Maintenance
     * Updated status of BdG and PvdH within FG de Gender
     * Corrected URL Fotomuseum Den Haag
     * Fixed compiler warning about compound uniqueness constraint not being SwiftData compatible (yet?)
+    * Added package dependency for SwiftyJSon 5.0.1
 
 This is build #4610 - and not distributed via Apple's App Store.
 ---------------------------------------------------------------------------

@@ -61,7 +61,7 @@
                </ul>
                <li><a href="#how-data-is-loaded">How Data is Loaded</a></li>
                <ul>
-                    <li><a href="#the-current-approach">The Current Approach</a></li>
+                    <li><a href="#the-new-approach">The New Approach</a></li>
                     <li><a href="#a-better-approach">A Better Approach</a></li>
                </ul>
                <li><a href="#when-data-is-loaded">When Data is Loaded</a></li>
@@ -601,37 +601,48 @@ choice of directory) only need to be configured once per portfolio (=member).
 
 <ul><details><summary>
 
-#### A Better Approach
+#### The New Approach
 
 </summary>
 A major design goal for the near future is to provide a clean,
 standardized interface to retrieve data per photo club.
-That interface is needed to load the data, but also to keeps the data up to date.
-This is needed because membership data and portfolios change every few weeks.
+This is needed to load the data into the CoreData database.
+It is also needed to keep the CoreData database up to date whenever
+membership lists or portfolios change.
 The current interface is essentially a plug-in design with an adaptor per photo club.
 This needs to be replaced by a standard data interface to avoid
-having to modify the source code whenever a new club comes onboard.
+having to modify the source code for every extra club, extra member or extra photo.
 
 The basic idea is to store the required information in a hierarchical, distributed way.
-This allows the app to load the information in a sequence of steps:
-1. Index of clubs (central)
-The app loads an index of photo clubs from a fixed location. Because the file is kept separate
-from the app, it can be updated without releasing a new version of the app. The file is in a
-predetermined format (e.g., JSON) and contains the list of supported photo clubs. 
+This allows the app to load the information in a 3-step process:
+
+1. Load photo clubs (central)
+
+The app loads a list of photo clubs from a fixed location. Because the file is kept separate
+from the app, it can be updated without having to release an update of the app.
+The file is in a fixed JSON syntax and contains a list of supported photo clubs. 
 The file notably includes the location of next-level indices.
-2. Index of members (per club)
-The index per photo club lists the members of each club, notably including the location of the final level indices.
-Currently this level also includes the location of one image used as thumbnail.
+
+2. Lists of club members (decentral)
+
+Each list defines the current (and optionally former) members of one club.
+For each member, a URL is stored to the final list level (portfolio per member).
+Currently level 2 also includes the URL of one image used as thumbnail.
 Membership list can be stored and managed on the club's own server. The file needs to be in
 a standardized data format (e.g., JSON) and may require an editing tool to ensure syntactic consistency.
-3. Index of images (per member, per club)
-The index of images (per club member) is fetched only when a portfolio is selected for viewing. There is thus
-no need to prefetch the entire 3-level tree (root/memberlist/imagelist). Again, this index needs to be in
-a fixed format, and thus will possibly require an editing tool to guard the syntax. Currently this tool already exists:
+
+3. List of images per club member (decentral)
+
+The index of images (per club member) is fetched only when a portfolio is selected for viewing.
+There is thus no need to prefetch the entire 3-level tree (root/memberlist/imagelist).
+Again, this index needs to be in a fixed format, and thus will possibly 
+require an editing tool to guard the syntax. Currently this tool already exists:
 index and files are exported from Lightroom using a Web plug-in.
-Depending on local preference, this level can be managed by a club volunteer, or distributed across the
-individual club members. In the latter case, a portfolio can be updated whenever a member wants.
-In the former (and more formal) case, the club can have some kind of approval or rating system in place.
+Depending on local preference, this level can be managed by a club volunteer, 
+or distributed across the individual club members. 
+In the latter case, a portfolio can be updated whenever a member wants.
+In the former (and more formal) case, the club can have some kind of approval 
+or rating system in place.
 </details></ul>
 </details></ul>
 
@@ -730,6 +741,7 @@ Project Link: [https://github.com/vdhamer/PhotoClubWaalre](https://github.com/vd
 * The opening Prelude screen uses a photo of colorful building by Greetje van Son.
 * One file with club member data is encrypted using [git-crypt](https://github.com/AGWA/git-crypt).
 * The interactive Roadmap screen uses the [AvdLee/Roadmap](https://github.com/AvdLee/Roadmap) package.
+* JSON parsing uses the [SwiftyJSON/SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON) package.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
