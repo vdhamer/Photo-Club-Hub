@@ -63,6 +63,11 @@
                <ul>
                     <li>The Old Approach</li>
                     <li>The New Approach</li>
+                    <ul>
+                        <li>ClubList: central list of photo clubs</li>
+                        <li>MemberList: local lists of photo club members</li>
+                        <li>ImageList: local image portfolios per club member</li>
+                    </ul>
                </ul>
                <li><a href="#when-data-is-loaded">When Data is Loaded</a></li>
                <ul>
@@ -616,7 +621,7 @@ having to modify the source code for every extra club, extra member or extra pho
 The basic idea is to store the required information in a hierarchical, distributed way.
 This allows the app to load the information in a three step process:
 
-__ClubList: central list of photo clubs__
+##### ClubList: central list of photo clubs
 
 The app loads a list of photo clubs from a fixed location. Because the file is kept separate
 from the app, it can be updated without having to release an update of the app.
@@ -658,7 +663,7 @@ __ClubList example__
 }
 ```
 
-__MemberList: local lists of photo club members__
+##### MemberList: local lists of photo club members
 
 Each list defines the current (and optionally former) members of one club.
 For each member, a URL is stored to the final list level (portfolio per member).
@@ -666,7 +671,7 @@ Currently level 2 also includes the URL of one image used as thumbnail.
 Membership list can be stored and managed on the club's own server. The file needs to be in
 a standardized data format (e.g., JSON) and may require an editing tool to ensure syntactic consistency.
 
-__ImageList. local image portfolios per club member__
+##### ImageList: local image portfolios per club member
 
 The list of images (per club member) is fetched only when a portfolio is selected for viewing.
 There is thus no need to prefetch the entire 3-level tree (root/memberlist/imagelist).
