@@ -628,21 +628,20 @@ from the app, it can be updated without having to release an update of the app.
 The file is in a fixed JSON syntax and contains a list of supported photo clubs. 
 The file notably includes the location of next-level indices.
 
-__ClubList example__
-
+Here is a ClubList example containing only a single photo club and single museum:
 ```json
 {
     "clubs": [
         {
             "idPlus": {
                 "town": "Eindhoven",
-                "fullName": "Fotogroep Anders",
-                "nickName": "FG Anders"
+                "fullName": "Fotogroep de Gender",
+                "nickName": "FG deGender"
             },
-            "website": "https://nl.qrcodechimp.com/page/a6d3r7?v=chk1697032881",
+            "website": "https://www.fcdegender.nl",
             "coordinates": {
-                "latitude": 51.44297,
-                "longitude": 5.51527
+                "latitude": 51.42398,
+                "longitude": 5.45010
             }
         }
     ],
