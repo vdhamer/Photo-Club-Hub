@@ -625,7 +625,7 @@ The file notably includes the location of next-level indices.
 
 __List 1 JSON syntax__
 
-```
+```json
 {
     "clubs": [
         {
