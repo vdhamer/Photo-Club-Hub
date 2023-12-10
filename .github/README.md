@@ -30,7 +30,7 @@
             <li><a href="#roadmap">Roadmap</a></li>
             <li><a href="#data-privacy">Data Privacy</a></li>
                 <ul>
-                    <li><a href="#encryption-details">Encryption Details</a></li>
+                    <li>Encryption Details</li>
                 </ul>
         </ul>
     </details>
@@ -41,7 +41,7 @@
                <li><a href="#code-signing">Code Signing</a></li>
                <li><a href="#upgrading-the-app">Upgrading the App</a></li>
                <ul>
-                    <li><a href="#schema-migration">Schema Migration</a></li>
+                    <li>Schema Migration</li>
                </ul>
          </ul>
     </details>
@@ -55,21 +55,21 @@
                <li><a href="#role-of-the-database">Role of the Database</a></li>
                <li><a href="#the-data-model">The Data Model</a></li>
                <ul>
-                     <li><a href="#photoclub">PhotoClub</a></li>
-                     <li><a href="#photographer">Photographer</a></li>
-                     <li><a href="#memberportfolio">MemberPortfolio</a></li>
+                     <li>PhotoClub</li>
+                     <li>Photographer</li>
+                     <li>MemberPortfolio</li>
                </ul>
                <li><a href="#how-data-is-loaded">How Data is Loaded</a></li>
                <ul>
-                    <li><a href="#the-old-approach">The Old Approach</a></li>
-                    <li><a href="#the-new-approach">The New Approach</a></li>
+                    <li>The Old Approach</li>
+                    <li>The New Approach</li>
                </ul>
                <li><a href="#when-data-is-loaded">When Data is Loaded</a></li>
                <ul>
-                    <li><a href="#the-current-approach">Background Threads</a></li>
-                    <li><a href="#swiftui-view-updates">SwiftUI View Updates</a></li>
-                    <li><a href="#core-data-contexts">Core Data Contexts</a></li>
-                    <li><a href="#comparison-to-sql-transactions">Comparison to SQL Transactions</a></li>
+                    <li>Background Threads</li>
+                    <li>SwiftUI View Updates</li>
+                    <li>Core Data Contexts</li>
+                    <li>Comparison to SQL Transactions</li>
               </ul>
            </ul>
     </details>
@@ -616,14 +616,14 @@ having to modify the source code for every extra club, extra member or extra pho
 The basic idea is to store the required information in a hierarchical, distributed way.
 This allows the app to load the information in a three step process:
 
-__1. Central list of photo clubs__
+__ClubList: central list of photo clubs__
 
 The app loads a list of photo clubs from a fixed location. Because the file is kept separate
 from the app, it can be updated without having to release an update of the app.
 The file is in a fixed JSON syntax and contains a list of supported photo clubs. 
 The file notably includes the location of next-level indices.
 
-__List 1 JSON syntax__
+__ClubList example__
 
 ```json
 {
@@ -658,7 +658,7 @@ __List 1 JSON syntax__
 }
 ```
 
-__2. Local lists of photo club members__
+__MemberList: local lists of photo club members__
 
 Each list defines the current (and optionally former) members of one club.
 For each member, a URL is stored to the final list level (portfolio per member).
@@ -666,9 +666,9 @@ Currently level 2 also includes the URL of one image used as thumbnail.
 Membership list can be stored and managed on the club's own server. The file needs to be in
 a standardized data format (e.g., JSON) and may require an editing tool to ensure syntactic consistency.
 
-__3. Local image portfolios per club member__
+__ImageList. local image portfolios per club member__
 
-The index of images (per club member) is fetched only when a portfolio is selected for viewing.
+The list of images (per club member) is fetched only when a portfolio is selected for viewing.
 There is thus no need to prefetch the entire 3-level tree (root/memberlist/imagelist).
 Again, this index needs to be in a fixed format, and thus will possibly 
 require an editing tool to guard the syntax. Currently this tool already exists:
