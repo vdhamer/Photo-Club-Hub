@@ -614,7 +614,7 @@ This needs to be replaced by a standard data interface to avoid
 having to modify the source code for every extra club, extra member or extra photo.
 
 The basic idea is to store the required information in a hierarchical, distributed way.
-This allows the app to load the information in a 3-step process:
+This allows the app to load the information in a three step process:
 
 1. Load photo clubs (central)
 
@@ -622,6 +622,41 @@ The app loads a list of photo clubs from a fixed location. Because the file is k
 from the app, it can be updated without having to release an update of the app.
 The file is in a fixed JSON syntax and contains a list of supported photo clubs. 
 The file notably includes the location of next-level indices.
+
+##### List 1 JSON syntax
+
+...
+{
+    "clubs": [
+        {
+            "idPlus": {
+                "town": "Eindhoven",
+                "fullName": "Fotogroep Anders",
+                "nickName": "FG Anders"
+            },
+            "website": "https://nl.qrcodechimp.com/page/a6d3r7?v=chk1697032881",
+            "coordinates": {
+                "latitude": 51.44297,
+                "longitude": 5.51527
+            }
+        }
+    ],
+    "musea": [
+        {
+            "idPlus": {
+                "town": "Berlin",
+                "fullName": "Museum für Fotografie",
+                "nickName": "MfürF Berlin"
+            },
+            "website": "https://www.smb.museum/museen-einrichtungen/museum-fuer-fotografie/home/",
+            "coordinates": {
+                "latitude": 52.507778,
+                "longitude": 13.331667
+            }
+        }
+    ]
+}
+...
 
 2. Lists of club members (decentral)
 
