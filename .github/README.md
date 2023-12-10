@@ -639,25 +639,28 @@ Here is a sample ClubList with a single photo club and single museum:
                 "fullName": "Fotogroep de Gender",
                 "nickName": "FG deGender"
             },
-            "website": "https://www.fcdegender.nl",
             "coordinates": {
                 "latitude": 51.42398,
                 "longitude": 5.45010
             }
+            "website": "https://www.fcdegender.nl",
+            "memberList": "https://www.example.com/deGenderMemberList.json"
         }
     ],
-    "musea": [
+    "museums": [
         {
             "idPlus": {
                 "town": "New York",
                 "fullName": "Fotografiska New York",
                 "nickName": "Fotografiska NYC"
             },
-            "website": "https://www.fotografiska.com/nyc/",
             "coordinates": {
                 "latitude": 40.739278,
                 "longitude": -73.986722
             }
+            "website": "https://www.fotografiska.com/nyc/",
+            "wikipedia": "https://en.wikipedia.org/wiki/Fotografiska_New_York"
+            "image": "https://commons.wikimedia.org/wiki/File:Fotografiska_New_York_(51710073919).jpg"
         }
     ]
 }
