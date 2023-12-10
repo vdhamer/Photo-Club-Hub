@@ -628,7 +628,8 @@ from the app, it can be updated without having to release an update of the app.
 The file is in a fixed JSON syntax and contains a list of supported photo clubs. 
 The file notably includes the location of next-level indices.
 
-Here is a ClubList example containing only a single photo club and single museum:
+Here is a sample ClubList with a single photo club and single museum:
+
 ```json
 {
     "clubs": [
@@ -648,14 +649,14 @@ Here is a ClubList example containing only a single photo club and single museum
     "musea": [
         {
             "idPlus": {
-                "town": "Berlin",
-                "fullName": "Museum für Fotografie",
-                "nickName": "MfürF Berlin"
+                "town": "New York",
+                "fullName": "Fotografiska New York",
+                "nickName": "Fotografiska NYC"
             },
-            "website": "https://www.smb.museum/museen-einrichtungen/museum-fuer-fotografie/home/",
+            "website": "https://www.fotografiska.com/nyc/",
             "coordinates": {
-                "latitude": 52.507778,
-                "longitude": 13.331667
+                "latitude": 40.739278,
+                "longitude": -73.986722
             }
         }
     ]
