@@ -41,7 +41,7 @@
                <li><a href="#code-signing">Code Signing</a></li>
                <li><a href="#upgrading-the-app">Upgrading the App</a></li>
                <ul>
-                    <li><a href="schema-migration">Schema Migration</a></li>
+                    <li><a href="#schema-migration">Schema Migration</a></li>
                </ul>
          </ul>
     </details>
