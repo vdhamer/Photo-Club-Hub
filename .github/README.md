@@ -61,8 +61,8 @@
                </ul>
                <li><a href="#how-data-is-loaded">How Data is Loaded</a></li>
                <ul>
+                    <li><a href="#the-old-approach">The Old Approach</a></li>
                     <li><a href="#the-new-approach">The New Approach</a></li>
-                    <li><a href="#a-better-approach">A Better Approach</a></li>
                </ul>
                <li><a href="#when-data-is-loaded">When Data is Loaded</a></li>
                <ul>
@@ -565,7 +565,7 @@ modelled using once concept (aka table) instead of two. We named that `MemberPor
 </summary>
 <ul><details><summary>
 
-#### The Current Approach
+#### The Old Approach
 
 </summary>
 The app currently uses a software module per club. This means a club can
