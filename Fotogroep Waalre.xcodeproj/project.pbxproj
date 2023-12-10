@@ -14,6 +14,7 @@
 		D02082B1296F6F60009493C4 /* TestClubAmsterdamMembersProvider+insertSomeHardcodedMemberData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02082B0296F6F60009493C4 /* TestClubAmsterdamMembersProvider+insertSomeHardcodedMemberData.swift */; };
 		D024F11628423BE60055021B /* Sounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = D024F11528423BE60055021B /* Sounds.swift */; };
 		D0275F5527E3E21F002FA4FE /* View+OnTapGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0275F5427E3E21F002FA4FE /* View+OnTapGesture.swift */; };
+		D02802D32B2653E7008FCD8C /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D02802D22B2653E7008FCD8C /* SwiftyJSON */; };
 		D02C273C2AEE6F870005F957 /* AndersMembersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02C273B2AEE6F870005F957 /* AndersMembersProvider.swift */; };
 		D02C273E2AEE6FCD0005F957 /* AndersMembersProvider+InsertSomeHardcodedMemberData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02C273D2AEE6FCD0005F957 /* AndersMembersProvider+InsertSomeHardcodedMemberData.swift */; };
 		D032944A283F9D1D0044C70C /* Bundle+VersionBuild.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0329449283F9D1D0044C70C /* Bundle+VersionBuild.swift */; };
@@ -223,6 +224,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D02802D32B2653E7008FCD8C /* SwiftyJSON in Frameworks */,
 				D05AF1B229EF44530079AE77 /* Roadmap in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -640,6 +642,7 @@
 			name = "Fotogroep Waalre";
 			packageProductDependencies = (
 				D05AF1B129EF44530079AE77 /* Roadmap */,
+				D02802D22B2653E7008FCD8C /* SwiftyJSON */,
 			);
 			productName = "Fotogroep Waalre 2";
 			productReference = D08319E3277F70A30049AB84 /* Fotogroep Waalre.app */;
@@ -716,6 +719,7 @@
 			mainGroup = D08319DA277F70A30049AB84;
 			packageReferences = (
 				D05AF1B029EF44530079AE77 /* XCRemoteSwiftPackageReference "Roadmap" */,
+				D02802D12B2653E7008FCD8C /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 			);
 			productRefGroup = D08319E4277F70A30049AB84 /* Products */;
 			projectDirPath = "";
@@ -1285,6 +1289,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		D02802D12B2653E7008FCD8C /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
 		D05AF1B029EF44530079AE77 /* XCRemoteSwiftPackageReference "Roadmap" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/AvdLee/Roadmap";
@@ -1296,6 +1308,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		D02802D22B2653E7008FCD8C /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D02802D12B2653E7008FCD8C /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
 		D05AF1B129EF44530079AE77 /* Roadmap */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D05AF1B029EF44530079AE77 /* XCRemoteSwiftPackageReference "Roadmap" */;
