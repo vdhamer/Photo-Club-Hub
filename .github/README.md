@@ -659,7 +659,7 @@ Here is a sample ClubList with a single photo club and single museum:
                 "longitude": -73.986722
             }
             "website": "https://www.fotografiska.com/nyc/",
-            "wikipedia": "https://en.wikipedia.org/wiki/Fotografiska_New_York"
+            "wikipedia": "https://en.wikipedia.org/wiki/Fotografiska_New_York",
             "image": "https://commons.wikimedia.org/wiki/File:Fotografiska_New_York_(51710073919).jpg"
         }
     ]
