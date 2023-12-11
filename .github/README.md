@@ -264,6 +264,16 @@ This loads a little bit of additional data to demo the feature.
 
 <details><summary>
 
+### Photo Musea on the Maps
+
+</summary>
+Since version 2.6, the maps that show the locations of photography clubs can also show the locations of photography musea. The markers used for both are different. A museum is not really a photo club: it doesn't have club members who generate image portfolios. Showing musea is a bonus that may interest the same target audience.
+
+You are welcome to add data on your local or favorite photo musea via a Github PR. The file fromat is documented below under Architecture.
+</details>
+
+<details><summary>
+
 ### Data Privacy
 
 </summary>
