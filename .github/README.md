@@ -665,7 +665,7 @@ Here is a sample ClubList containing a single photo club and single museum:
     ]
 }
 ```
-Note that the properties within `idPlus` and `coorinates` are manditory. The remaining fields are optional.
+Note that the properties within `idPlus` and `coordinates` are manditory. The remaining fields are optional.
 
 ##### MemberList: local lists of photo club members
 
