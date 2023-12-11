@@ -665,7 +665,9 @@ Here is a sample ClubList containing a single photo club and single museum:
     ]
 }
 ```
-Note that the properties within `idPlus` and `coordinates` are manditory. The remaining fields are optional.
+Note that:
+- the fields within `idPlus` and `coordinates` must be provided while the other fields are optional.
+- the `memberList` field for clubs allows the app to find the next level list with membership data. 
 
 ##### MemberList: local lists of photo club members
 
