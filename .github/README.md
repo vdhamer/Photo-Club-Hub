@@ -666,7 +666,8 @@ Here is a sample ClubList containing a single photo club and single museum:
 }
 ```
 Note that:
-- the fields within `idPlus` and `coordinates` must be provided while the other fields are optional.
+- all fields within `idPlus` and `coordinates` must be provided. Other lines can be omitted if the data is not available or not applicable. `idPlus` serves to differentiate clubs or museum from others. `coordinates` is used to draw the club on the map.
+- the `coordinates` field is used to draw the club or museum on the maps. The values must be numbers between -90 and +90 degrees. Negative `latitude` means below the Equator. Negative `longitude` means West of Greenich in London. This is a common format and is used by Apple's MapKit APIs.
 - the `memberList` field for clubs allows the app to find the next level list with membership data. 
 
 ##### MemberList: local lists of photo club members
