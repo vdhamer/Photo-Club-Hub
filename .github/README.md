@@ -27,6 +27,7 @@
         <ul>
             <li><a href="#opening-animation">Opening Animation</a></li>
             <li><a href="#multi-club-support">Multi-club Support</a></li>
+            <li><a href="">#photo-musea-on-the-maps</a></li>
             <li><a href="#roadmap">Roadmap</a></li>
             <li><a href="#data-privacy">Data Privacy</a></li>
                 <ul>
