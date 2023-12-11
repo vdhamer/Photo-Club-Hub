@@ -247,8 +247,8 @@ You will see the Prelude animation again whenever you shut down and restart the 
 On wide screens (iPad, iPhone Pro Max) there is a navigation button that allows you to go back.
 
 Why provide such a fancy opening screen? Well, it was partly a nice challenge to make (it actually runs
-on the GPU cores). But it also helps explain the app's logo: the Bayer filter array indeed consists of one red,
-one blue, and _two_ green pixels.
+on the GPU cores). But it also helps explain the app's logo: the Bayer filter array indeed consists of
+one red, one blue, and _two_ green pixels.
 
 </details>
 
@@ -268,9 +268,14 @@ This loads a little bit of additional data to demo the feature.
 ### Photo Musea on the Maps
 
 </summary>
-Since version 2.6, the maps that show the locations of photography clubs can also show the locations of photography musea. The markers used for both are different. A museum is not really a photo club: it doesn't have club members who generate image portfolios. Showing musea is a bonus that may interest the same target audience.
+Since version 2.6, the maps that show the locations of photography clubs can also show the locations
+of photography musea. The markers used for both are different.
+A museum is not really a photo club: it doesn't have club members who generate image portfolios.
+Showing musea is a bonus that may interest the same target audience.
 
-You are welcome to add data on your local or favorite photo musea via a Github PR. The file fromat is documented below under Architecture.
+You are welcome to add data on your local or favorite photo musea via a Github PR.
+The file fromat is documented below under Architecture.
+
 </details>
 
 <details><summary>
