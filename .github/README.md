@@ -628,12 +628,12 @@ choice of directory) only need to be configured once per portfolio (=member).
 </summary>
 A major design goal for the near future is to provide a clean,
 standardized interface to retrieve data per photo club.
-This is needed to load the data into the CoreData database.
+This data is then loaded into into the in-app CoreData database.
 It is also needed to keep the CoreData database up to date whenever
-membership lists or portfolios change.
-The current interface is essentially a plug-in design with an adaptor per photo club.
-This needs to be replaced by a standard data interface to avoid
-having to modify the source code for every extra club, extra member or extra photo.
+clubs, members or images are added.
+The old approach is essentially a plug-in design with an adaptor per photo club.
+The new approach replaces this by a standard data interface to avoid
+having to modify the source code to add (or modify/remove) clubs, members or images.
 
 The basic idea is to store the required information in a hierarchical, distributed way.
 This allows the app to load the information in a three step process:
