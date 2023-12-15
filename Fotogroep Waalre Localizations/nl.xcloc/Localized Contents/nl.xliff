@@ -2,7 +2,7 @@
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
   <file original="en.lproj/Fotogroep-Waalre-InfoPlist.strings" source-language="en" target-language="nl" datatype="plaintext">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="15.1" build-num="15C5059c"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="15.1" build-num="15C65"/>
     </header>
     <body>
       <trans-unit id="CFBundleDisplayName" xml:space="preserve">
@@ -20,11 +20,15 @@
         <target>Fotoclub Hub</target>
         <note>used for text-to-speech</note>
       </trans-unit>
+      <trans-unit id="NSLocationWhenInUseUsageDescription" xml:space="preserve">
+        <source>User's location is shown on the maps.</source>
+        <note>Privacy - Location When In Use Usage Description</note>
+      </trans-unit>
     </body>
   </file>
   <file original="en.lproj/Localizable.strings" source-language="en" target-language="nl" datatype="plaintext">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="15.1" build-num="15C5059c"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="15.1" build-num="15C65"/>
     </header>
     <body>
       <trans-unit id="%lld members (inc. ex-members)" xml:space="preserve">
@@ -431,6 +435,18 @@ Field at top of Members page that allows the user to filter the members based on
         <target>Deze lijst is vermoedelijk leeg omdat er onvoldoende ledencategorieën geselecteerd zijn op het Instellingen scherm.</target>
         <note>Hint to the user if the database returns zero Members with empty Search filter.</note>
       </trans-unit>
+      <trans-unit id="VStack1" xml:space="preserve">
+        <source>VStack1</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="VStack2" xml:space="preserve">
+        <source>VStack2</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="VStack3" xml:space="preserve">
+        <source>VStack3</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
       <trans-unit id="Warning: all member categories on the Preferences page are disabled. Please enable one or more options in Preferences." xml:space="preserve">
         <source>Warning: all member categories on the Preferences page are disabled. Please enable one or more options in Preferences.</source>
         <target>Waarschuwing: op de Instellingen pagina staan alle soorten leden op “niet weergeven“. Hierdoor is deze lijst leeg.</target>
@@ -541,7 +557,7 @@ Default status of member within a club. Used in concatenations.</note>
   </file>
   <file original="Settings.bundle/en.lproj/Root.strings" source-language="en" target-language="nl" datatype="plaintext">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="15.1" build-num="15C5059c"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="15.1" build-num="15C65"/>
     </header>
     <body>
       <trans-unit id="About" xml:space="preserve">

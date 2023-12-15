@@ -40,9 +40,9 @@ struct SimplifiedPhotoClubView: View {
                         .border(.red)
                     HStack(alignment: .center, spacing: 0) {
                         VStack {
-                            Text("VStack1")
-                            Text("VStack2")
-                            Text("VStack3")
+                            Text(verbatim: "VStack1")
+                            Text(verbatim: "VStack2")
+                            Text(verbatim: "VStack3")
                         }.border(.red)
                         Spacer() // push Button to trailing/right side
                         Button(
