@@ -645,7 +645,7 @@ from the app, it can be updated without having to release an update of the app.
 The file is in a fixed JSON syntax and contains a list of supported photo clubs. 
 The file notably includes the location of next-level indices.
 
-Here is an example of the ClubList format containing a single photo club and single museum:
+Here is an example of the format of the ClubList, here containing a single photo club and single museum:
 
 ```json
 {
