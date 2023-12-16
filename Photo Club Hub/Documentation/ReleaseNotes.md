@@ -1,4 +1,4 @@
-### 2.5.2 (Github commit ???????) ??-12-23
+### 2.5.2 (Github commit 18ad97b) 16-12-23
 
 Photo Clubs screen
     * User location is shown on map when user presses a new MapUserLocationButton() control.

@@ -25,7 +25,7 @@
 		D044646527FCE7C100990613 /* UIDevice+IsIPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = D044646427FCE7C100990613 /* UIDevice+IsIPad.swift */; };
 		D04A2B122AC0958C003ED113 /* LineCount.xlsx in Resources */ = {isa = PBXBuildFile; fileRef = D04A2B112AC0958C003ED113 /* LineCount.xlsx */; };
 		D04B1A092B1A9D2500EB3817 /* portfolios.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D04B1A082B1A9D2500EB3817 /* portfolios.jpg */; };
-		D04B1A0C2B1AA06300EB3817 /* Clubs_Musea.json in Resources */ = {isa = PBXBuildFile; fileRef = D04B1A0B2B1AA06300EB3817 /* Clubs_Musea.json */; };
+		D04B1A0C2B1AA06300EB3817 /* ClubList.json in Resources */ = {isa = PBXBuildFile; fileRef = D04B1A0B2B1AA06300EB3817 /* ClubList.json */; };
 		D05414F72AC7499000D899D8 /* FotogroepDeGenderMembersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05414F62AC7499000D899D8 /* FotogroepDeGenderMembersProvider.swift */; };
 		D05414F92AC749EC00D899D8 /* FotogroepDeGenderMembersProvider+insertSomeHardcodedMemberDataCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05414F82AC749EC00D899D8 /* FotogroepDeGenderMembersProvider+insertSomeHardcodedMemberDataCommon.swift */; };
 		D05AF1B229EF44530079AE77 /* Roadmap in Frameworks */ = {isa = PBXBuildFile; productRef = D05AF1B129EF44530079AE77 /* Roadmap */; };
@@ -129,7 +129,7 @@
 		D044646427FCE7C100990613 /* UIDevice+IsIPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+IsIPad.swift"; sourceTree = "<group>"; };
 		D04A2B112AC0958C003ED113 /* LineCount.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = LineCount.xlsx; sourceTree = "<group>"; };
 		D04B1A082B1A9D2500EB3817 /* portfolios.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = portfolios.jpg; sourceTree = "<group>"; };
-		D04B1A0B2B1AA06300EB3817 /* Clubs_Musea.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Clubs_Musea.json; sourceTree = "<group>"; };
+		D04B1A0B2B1AA06300EB3817 /* ClubList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ClubList.json; sourceTree = "<group>"; };
 		D05414F62AC7499000D899D8 /* FotogroepDeGenderMembersProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FotogroepDeGenderMembersProvider.swift; sourceTree = "<group>"; };
 		D05414F82AC749EC00D899D8 /* FotogroepDeGenderMembersProvider+insertSomeHardcodedMemberDataCommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FotogroepDeGenderMembersProvider+insertSomeHardcodedMemberDataCommon.swift"; sourceTree = "<group>"; };
 		D05E451D27EF2A2C00D31327 /* ReadmeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeView.swift; sourceTree = "<group>"; };
@@ -385,6 +385,7 @@
 				D0831A23277F72340049AB84 /* ViewModel */,
 				D0831A3B277F727E0049AB84 /* Model */,
 				D0831A48277F736C0049AB84 /* Documentation */,
+				D0CEAECF2B2E1FCB005AE47D /* JsonFiles */,
 				D0831A4F277F73C00049AB84 /* Preview Content */,
 			);
 			path = "Photo Club Hub";
@@ -409,7 +410,6 @@
 		D0831A23277F72340049AB84 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				D04B1A0B2B1AA06300EB3817 /* Clubs_Musea.json */,
 				D0621E832AE2DF8E000FFADB /* IndividualClubs */,
 				D0831A2D277F72590049AB84 /* PhotoClub.swift */,
 				D0831A25277F72590049AB84 /* Photographer.swift */,
@@ -548,6 +548,14 @@
 				D0DF0F442B2CFA3800E9FEC8 /* Photo Club Hub Localizations */,
 			);
 			path = Localization;
+			sourceTree = "<group>";
+		};
+		D0CEAECF2B2E1FCB005AE47D /* JsonFiles */ = {
+			isa = PBXGroup;
+			children = (
+				D04B1A0B2B1AA06300EB3817 /* ClubList.json */,
+			);
+			path = JsonFiles;
 			sourceTree = "<group>";
 		};
 		D0E2235227DE9139002A8600 /* PreludeView */ = {
@@ -707,7 +715,7 @@
 				D008D2AA28739167007A7BE2 /* .gitignore in Resources */,
 				D0CEAECB2B2E0FDE005AE47D /* Photo-Club-Hub-InfoPlist.strings in Resources */,
 				D0DF0F452B2CFA3800E9FEC8 /* Photo Club Hub Localizations in Resources */,
-				D04B1A0C2B1AA06300EB3817 /* Clubs_Musea.json in Resources */,
+				D04B1A0C2B1AA06300EB3817 /* ClubList.json in Resources */,
 				D04B1A092B1A9D2500EB3817 /* portfolios.jpg in Resources */,
 				D06061EA28A0456C00A675A7 /* FGWPrivateMembersURL3.txt in Resources */,
 				D0B52497277F9A4B00927BCA /* Localizable.strings in Resources */,
