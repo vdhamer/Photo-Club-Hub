@@ -19,7 +19,6 @@
 		D02C273E2AEE6FCD0005F957 /* AndersMembersProvider+InsertSomeHardcodedMemberData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02C273D2AEE6FCD0005F957 /* AndersMembersProvider+InsertSomeHardcodedMemberData.swift */; };
 		D032944A283F9D1D0044C70C /* Bundle+VersionBuild.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0329449283F9D1D0044C70C /* Bundle+VersionBuild.swift */; };
 		D0362A872AC3A21200F87378 /* String+containsWordUsingNLP.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0362A862AC3A21200F87378 /* String+containsWordUsingNLP.swift */; };
-		D0396075278CF6550035F750 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D0396074278CF6550035F750 /* Settings.bundle */; };
 		D040566D29A0287200CB64B8 /* MemberPortfolioRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D040566C29A0287200CB64B8 /* MemberPortfolioRow.swift */; };
 		D0416280295BB9DF00ED073A /* NSPredicate+all.swift in Sources */ = {isa = PBXBuildFile; fileRef = D041627F295BB9DF00ED073A /* NSPredicate+all.swift */; };
 		D0416282295BBA7700ED073A /* CoreLocation+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0416281295BBA7700ED073A /* CoreLocation+Equatable.swift */; };
@@ -77,17 +76,14 @@
 		D0AE1B782788A19500E0100E /* WhoIsWho.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AE1B772788A19500E0100E /* WhoIsWho.swift */; };
 		D0B260B72958FC2D00B73E1A /* FGWMembersProvider+extractName.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B260B62958FC2D00B73E1A /* FGWMembersProvider+extractName.swift */; };
 		D0B3BD212B0A80ED0045072A /* SimplifiedPhotoClubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B3BD202B0A80ED0045072A /* SimplifiedPhotoClubView.swift */; };
-		D0B52494277F9A4B00927BCA /* Fotogroep-Waalre-InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0B52492277F9A4B00927BCA /* Fotogroep-Waalre-InfoPlist.strings */; };
 		D0B52497277F9A4B00927BCA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0B52495277F9A4B00927BCA /* Localizable.strings */; };
 		D0BAB01D2A76CED300387E63 /* URLSession+synchronous.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BAB01C2A76CED300387E63 /* URLSession+synchronous.swift */; };
 		D0C53BDD2ABF3ADF000722A1 /* PersonName.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C53BDC2ABF3ADF000722A1 /* PersonName.swift */; };
 		D0C6E95529577921001E5CE9 /* DebugPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C6E95429577921001E5CE9 /* DebugPanel.swift */; };
+		D0CEAECB2B2E0FDE005AE47D /* Photo-Club-Hub-InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0CEAEC92B2E0FDE005AE47D /* Photo-Club-Hub-InfoPlist.strings */; };
 		D0D18C78296E1F6A00B334DB /* PhotoClubID.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D18C77296E1F6A00B334DB /* PhotoClubID.swift */; };
-		D0D5B58F28E4921700244F34 /* MemberListSections.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0B52498277F9A4B00927BCA /* MemberListSections.strings */; };
 		D0DE02772789D1B30062738C /* RoleIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DE02762789D1B30062738C /* RoleIconView.swift */; };
 		D0DF0F452B2CFA3800E9FEC8 /* Photo Club Hub Localizations in Resources */ = {isa = PBXBuildFile; fileRef = D0DF0F442B2CFA3800E9FEC8 /* Photo Club Hub Localizations */; };
-		D0DF0F4A2B2D00E900E9FEC8 /* PhotoClubHubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DF0F492B2D00E900E9FEC8 /* PhotoClubHubTests.swift */; };
-		D0DF0F4E2B2D031000E9FEC8 /* PhotoClubHubUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DF0F4D2B2D031000E9FEC8 /* PhotoClubHubUITests.swift */; };
 		D0E2235427DE9139002A8600 /* PreludeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E2235327DE9139002A8600 /* PreludeView.swift */; };
 		D0E694C927EF9B450054D634 /* LockAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E694C827EF9B450054D634 /* LockAnimationView.swift */; };
 		D0EB533C295775240061613B /* Crosshairs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EB533B295775240061613B /* Crosshairs.swift */; };
@@ -127,7 +123,6 @@
 		D02C35F12880C3D6008C671A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D0329449283F9D1D0044C70C /* Bundle+VersionBuild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+VersionBuild.swift"; sourceTree = "<group>"; };
 		D0362A862AC3A21200F87378 /* String+containsWordUsingNLP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+containsWordUsingNLP.swift"; sourceTree = "<group>"; };
-		D0396074278CF6550035F750 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		D040566C29A0287200CB64B8 /* MemberPortfolioRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberPortfolioRow.swift; sourceTree = "<group>"; };
 		D041627F295BB9DF00ED073A /* NSPredicate+all.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSPredicate+all.swift"; sourceTree = "<group>"; };
 		D0416281295BBA7700ED073A /* CoreLocation+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreLocation+Equatable.swift"; sourceTree = "<group>"; };
@@ -150,7 +145,6 @@
 		D0795CEB294FCCC200FA62A8 /* ShapeStyle+Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ShapeStyle+Colors.swift"; sourceTree = "<group>"; };
 		D07A1E2E28314EA600C77F66 /* SwiftUIEnvironmentValues.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SwiftUIEnvironmentValues.png; sourceTree = "<group>"; };
 		D081655E278616930078AB16 /* SinglePortfolioView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SinglePortfolioView.swift; sourceTree = "<group>"; };
-		D08267C6277FA2E200598C24 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = "en.lproj/Fotogroep-Waalre-InfoPlist.strings"; sourceTree = "<group>"; };
 		D08281302959C6F400D9C232 /* FGWMembersProvider+extractPhone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FGWMembersProvider+extractPhone.swift"; sourceTree = "<group>"; };
 		D08281322959C7EA00D9C232 /* FGWMembersProvider+extractEMail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FGWMembersProvider+extractEMail.swift"; sourceTree = "<group>"; };
 		D08281352959CA7000D9C232 /* FGWMembersProvider+extractExternalURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FGWMembersProvider+extractExternalURL.swift"; sourceTree = "<group>"; };
@@ -193,19 +187,17 @@
 		D0AE1B772788A19500E0100E /* WhoIsWho.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhoIsWho.swift; sourceTree = "<group>"; };
 		D0B260B62958FC2D00B73E1A /* FGWMembersProvider+extractName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FGWMembersProvider+extractName.swift"; sourceTree = "<group>"; };
 		D0B3BD202B0A80ED0045072A /* SimplifiedPhotoClubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimplifiedPhotoClubView.swift; sourceTree = "<group>"; };
-		D0B52493277F9A4B00927BCA /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = "nl.lproj/Fotogroep-Waalre-InfoPlist.strings"; sourceTree = "<group>"; };
 		D0B52496277F9A4B00927BCA /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
-		D0B52499277F9A4B00927BCA /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/MemberListSections.strings; sourceTree = "<group>"; };
 		D0BAB01C2A76CED300387E63 /* URLSession+synchronous.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+synchronous.swift"; sourceTree = "<group>"; };
 		D0C53BDC2ABF3ADF000722A1 /* PersonName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonName.swift; sourceTree = "<group>"; };
 		D0C6E95429577921001E5CE9 /* DebugPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugPanel.swift; sourceTree = "<group>"; };
 		D0CB581228149D18005D496F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D0CEAECA2B2E0FDE005AE47D /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = "nl.lproj/Photo-Club-Hub-InfoPlist.strings"; sourceTree = "<group>"; };
+		D0CEAECE2B2E1134005AE47D /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		D0D18C77296E1F6A00B334DB /* PhotoClubID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoClubID.swift; sourceTree = "<group>"; };
 		D0D4860D2B0EC18A00ED0542 /* Photo_Club_Hub_2_5_2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_5_2.xcdatamodel; sourceTree = "<group>"; };
 		D0DE02762789D1B30062738C /* RoleIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleIconView.swift; sourceTree = "<group>"; };
 		D0DF0F442B2CFA3800E9FEC8 /* Photo Club Hub Localizations */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Photo Club Hub Localizations"; sourceTree = "<group>"; };
-		D0DF0F492B2D00E900E9FEC8 /* PhotoClubHubTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoClubHubTests.swift; sourceTree = "<group>"; };
-		D0DF0F4D2B2D031000E9FEC8 /* PhotoClubHubUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoClubHubUITests.swift; sourceTree = "<group>"; };
 		D0E2235327DE9139002A8600 /* PreludeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreludeView.swift; sourceTree = "<group>"; };
 		D0E673BA2AE1C1A100A4DC95 /* Photo_Club_Hub_2_5_0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_5_0.xcdatamodel; sourceTree = "<group>"; };
 		D0E694C827EF9B450054D634 /* LockAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockAnimationView.swift; sourceTree = "<group>"; };
@@ -366,15 +358,10 @@
 				D08319E5277F70A30049AB84 /* Photo Club Hub */,
 				D0831A17277F71340049AB84 /* Photo-Club-Hub-Info.plist */,
 				D0831A3F277F731C0049AB84 /* Extensions */,
-				D0B52498277F9A4B00927BCA /* MemberListSections.strings */,
-				D0B52495277F9A4B00927BCA /* Localizable.strings */,
-				D0B52492277F9A4B00927BCA /* Fotogroep-Waalre-InfoPlist.strings */,
+				D0CEAECD2B2E1120005AE47D /* Localization */,
 				D08319EA277F70A40049AB84 /* Assets.xcassets */,
 				D008D2A928739167007A7BE2 /* .gitignore */,
 				D0F2F2F22873A19F009DDD2A /* .github */,
-				D0DF0F442B2CFA3800E9FEC8 /* Photo Club Hub Localizations */,
-				D0DF0F4B2B2D010E00E9FEC8 /* Testing */,
-				D0396074278CF6550035F750 /* Settings.bundle */,
 				D08319E4277F70A30049AB84 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -552,29 +539,15 @@
 			path = WhoIsWhoView;
 			sourceTree = "<group>";
 		};
-		D0DF0F482B2D007400E9FEC8 /* Photo Club Hub Tests */ = {
+		D0CEAECD2B2E1120005AE47D /* Localization */ = {
 			isa = PBXGroup;
 			children = (
-				D0DF0F492B2D00E900E9FEC8 /* PhotoClubHubTests.swift */,
+				D0CEAEC92B2E0FDE005AE47D /* Photo-Club-Hub-InfoPlist.strings */,
+				D0B52495277F9A4B00927BCA /* Localizable.strings */,
+				D0CEAECE2B2E1134005AE47D /* Settings.bundle */,
+				D0DF0F442B2CFA3800E9FEC8 /* Photo Club Hub Localizations */,
 			);
-			path = "Photo Club Hub Tests";
-			sourceTree = "<group>";
-		};
-		D0DF0F4B2B2D010E00E9FEC8 /* Testing */ = {
-			isa = PBXGroup;
-			children = (
-				D0DF0F4C2B2D023A00E9FEC8 /* Photo Club Hub UITests */,
-				D0DF0F482B2D007400E9FEC8 /* Photo Club Hub Tests */,
-			);
-			path = Testing;
-			sourceTree = "<group>";
-		};
-		D0DF0F4C2B2D023A00E9FEC8 /* Photo Club Hub UITests */ = {
-			isa = PBXGroup;
-			children = (
-				D0DF0F4D2B2D031000E9FEC8 /* PhotoClubHubUITests.swift */,
-			);
-			path = "Photo Club Hub UITests";
+			path = Localization;
 			sourceTree = "<group>";
 		};
 		D0E2235227DE9139002A8600 /* PreludeView */ = {
@@ -732,17 +705,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				D008D2AA28739167007A7BE2 /* .gitignore in Resources */,
-				D0396075278CF6550035F750 /* Settings.bundle in Resources */,
+				D0CEAECB2B2E0FDE005AE47D /* Photo-Club-Hub-InfoPlist.strings in Resources */,
 				D0DF0F452B2CFA3800E9FEC8 /* Photo Club Hub Localizations in Resources */,
 				D04B1A0C2B1AA06300EB3817 /* Clubs_Musea.json in Resources */,
 				D04B1A092B1A9D2500EB3817 /* portfolios.jpg in Resources */,
 				D06061EA28A0456C00A675A7 /* FGWPrivateMembersURL3.txt in Resources */,
 				D0B52497277F9A4B00927BCA /* Localizable.strings in Resources */,
 				D0831A51277F73C00049AB84 /* Preview Assets.xcassets in Resources */,
-				D0B52494277F9A4B00927BCA /* Fotogroep-Waalre-InfoPlist.strings in Resources */,
 				D04A2B122AC0958C003ED113 /* LineCount.xlsx in Resources */,
 				D06061E828A0453F00A675A7 /* FGWPrivateMembersURL2.txt in Resources */,
-				D0D5B58F28E4921700244F34 /* MemberListSections.strings in Resources */,
 				D08319EB277F70A40049AB84 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -904,7 +875,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0DF0F4A2B2D00E900E9FEC8 /* PhotoClubHubTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -912,7 +882,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0DF0F4E2B2D031000E9FEC8 /* PhotoClubHubUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -932,15 +901,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D0B52492277F9A4B00927BCA /* Fotogroep-Waalre-InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D0B52493277F9A4B00927BCA /* nl */,
-				D08267C6277FA2E200598C24 /* en */,
-			);
-			name = "Fotogroep-Waalre-InfoPlist.strings";
-			sourceTree = "<group>";
-		};
 		D0B52495277F9A4B00927BCA /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -950,12 +910,12 @@
 			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
-		D0B52498277F9A4B00927BCA /* MemberListSections.strings */ = {
+		D0CEAEC92B2E0FDE005AE47D /* Photo-Club-Hub-InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D0B52499277F9A4B00927BCA /* nl */,
+				D0CEAECA2B2E0FDE005AE47D /* nl */,
 			);
-			name = MemberListSections.strings;
+			name = "Photo-Club-Hub-InfoPlist.strings";
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1115,7 +1075,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1154,7 +1114,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1172,7 +1132,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.vdhamer.Fotogroep-Waalre-2Tests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vdhamer.Fotogroep-Waalre-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -1192,7 +1152,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.vdhamer.Fotogroep-Waalre-2Tests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vdhamer.Fotogroep-Waalre-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -1211,7 +1171,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.vdhamer.Fotogroep-Waalre-2UITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vdhamer.Fotogroep-Waalre-UITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -1230,7 +1190,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.vdhamer.Fotogroep-Waalre-2UITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vdhamer.Fotogroep-Waalre-UITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
