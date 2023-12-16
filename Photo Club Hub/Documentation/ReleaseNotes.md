@@ -13,7 +13,7 @@ Maintenance
     * Localized NSLocationWhenInUseUsageDescription from EN to NL
     * Renamed source directories and file names named "Fotogroep Waalre" (old app name)
 
-This is build #4610 - and not distributed via Apple's App Store.
+This is build #4610 in Apple's App Store.
 ---------------------------------------------------------------------------
 ### 2.5.1 (Github commit 51501f7) 22-11-23
 
