@@ -683,8 +683,8 @@ Here is an example of the ClubList format containing a single photo club and sin
 }
 ```
 Note that:
-- all fields within `idPlus` and `coordinates` must be provided. Other lines can be omitted if the data is not available or not applicable. `idPlus` serves to differentiate clubs or museum from others. `coordinates` is used to draw the club on the map.
-- the `coordinates` field is used to draw the club or museum on the maps. The values must be numbers between -90 and +90 degrees. Negative `latitude` means south of the Equator. Negative `longitude` means west of Greenwich, London.
+- all fields within `idPlus` and `coordinates` are required. Other lines can be omitted if the data is not available or not applicable. `idPlus` serves to differentiate clubs or museum from others. `coordinates` is used to draw the club on the map.
+- the `coordinates` field is used to draw the club or museum on the maps. Latitudes are in the range [-90.0, +90.0] where negative `latitude` means south of the Equator. Longitude values are in the range [-180.0, +180.0] where negative `longitude` means west of Greenwich in London.
 - the `memberList` field for clubs allows the app to find the next level list with membership data. 
 
 ##### MemberList: local lists of photo club members
