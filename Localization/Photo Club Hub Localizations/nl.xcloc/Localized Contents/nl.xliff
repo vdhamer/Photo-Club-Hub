@@ -20,11 +20,6 @@
         <target>Fotoclub Hub</target>
         <note>used for text-to-speech</note>
       </trans-unit>
-      <trans-unit id="NSLocationWhenInUseUsageDescription" xml:space="preserve">
-        <source>User's location is shown on the maps.</source>
-        <target>Om huidige locatie weer te geven op de landkaarten.</target>
-        <note>Privacy - Location When In Use Usage Description</note>
-      </trans-unit>
     </body>
   </file>
   <file original="en.lproj/Localizable.strings" source-language="en" target-language="nl" datatype="plaintext">
@@ -541,6 +536,28 @@ Default status of member within a club. Used in concatenations.</note>
         <source>“Former members” includes “deceased members”</source>
         <target>De optie “ex-leden“ bevat “overleden leden“</target>
         <note>Shown when "Show deceased members" entry is missing in Preferences</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="en.lproj/Photo-Club-Hub-InfoPlist.strings" datatype="plaintext" source-language="en" target-language="nl">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="15.1" build-num="15C65"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleDisplayName" xml:space="preserve">
+        <source>Photo Club Hub</source>
+        <target state="translated">Fotoclub Hub</target>
+        <note>Bundle display name</note>
+      </trans-unit>
+      <trans-unit id="CFBundleName" xml:space="preserve">
+        <source>Photo Club Hub</source>
+        <target state="translated">Fotoclub Hub</target>
+        <note>Bundle name</note>
+      </trans-unit>
+      <trans-unit id="NSLocationWhenInUseUsageDescription" xml:space="preserve">
+        <source>User's location is shown on the maps.</source>
+        <target state="translated">Om huidige locatie weer te geven op de landkaarten.</target>
+        <note>Privacy - Location When In Use Usage Description</note>
       </trans-unit>
     </body>
   </file>

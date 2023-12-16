@@ -4,9 +4,6 @@
 /* Bundle name */
 "CFBundleName" = "Fotoclub Hub";
 
-/* used for text-to-speech */
-"CFBundleSpokenName" = "Fotoclub Hub";
-
 /* Privacy - Location When In Use Usage Description */
 "NSLocationWhenInUseUsageDescription" = "Om huidige locatie weer te geven op de landkaarten.";
 
