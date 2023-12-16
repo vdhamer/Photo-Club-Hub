@@ -196,6 +196,7 @@
 		D0CEAECA2B2E0FDE005AE47D /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = "nl.lproj/Photo-Club-Hub-InfoPlist.strings"; sourceTree = "<group>"; };
 		D0CEAECE2B2E1134005AE47D /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		D0CEAED12B2E4F0A005AE47D /* ClubList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubList.swift; sourceTree = "<group>"; };
+		D0CEAED32B2E5847005AE47D /* Photo_Club_Hub_2_5_3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_5_3.xcdatamodel; sourceTree = "<group>"; };
 		D0D18C77296E1F6A00B334DB /* PhotoClubID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoClubID.swift; sourceTree = "<group>"; };
 		D0D4860D2B0EC18A00ED0542 /* Photo_Club_Hub_2_5_2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_5_2.xcdatamodel; sourceTree = "<group>"; };
 		D0DE02762789D1B30062738C /* RoleIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleIconView.swift; sourceTree = "<group>"; };
@@ -1139,7 +1140,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4610;
+				CURRENT_PROJECT_VERSION = 4611;
 				DEVELOPMENT_TEAM = YDEWPN9GZ6;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
@@ -1159,7 +1160,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4610;
+				CURRENT_PROJECT_VERSION = 4611;
 				DEVELOPMENT_TEAM = YDEWPN9GZ6;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
@@ -1178,7 +1179,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4610;
+				CURRENT_PROJECT_VERSION = 4611;
 				DEVELOPMENT_TEAM = YDEWPN9GZ6;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
@@ -1197,7 +1198,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4610;
+				CURRENT_PROJECT_VERSION = 4611;
 				DEVELOPMENT_TEAM = YDEWPN9GZ6;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
@@ -1288,6 +1289,7 @@
 		D0A0B6832AA930E90078DE9A /* Photo_Club_Hub.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				D0CEAED32B2E5847005AE47D /* Photo_Club_Hub_2_5_3.xcdatamodel */,
 				D0D4860D2B0EC18A00ED0542 /* Photo_Club_Hub_2_5_2.xcdatamodel */,
 				D01DDD962AF5A11F00F98906 /* Photo_Club_Hub_2_5_1.xcdatamodel */,
 				D0E673BA2AE1C1A100A4DC95 /* Photo_Club_Hub_2_5_0.xcdatamodel */,
@@ -1295,7 +1297,7 @@
 				D0A0B6872AA932A10078DE9A /* Photo_Club_Hub_2_4_1.xcdatamodel */,
 				D0A0B6842AA930E90078DE9A /* Photo_Club_Hub.xcdatamodel */,
 			);
-			currentVersion = D0D4860D2B0EC18A00ED0542 /* Photo_Club_Hub_2_5_2.xcdatamodel */;
+			currentVersion = D0CEAED32B2E5847005AE47D /* Photo_Club_Hub_2_5_3.xcdatamodel */;
 			path = Photo_Club_Hub.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
