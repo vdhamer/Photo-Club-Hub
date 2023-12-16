@@ -11,6 +11,7 @@ Maintenance
     * Fixed compiler warning about compound uniqueness constraint not being SwiftData compatible (yet?)
     * Added package dependency for SwiftyJSon 5.0.1
     * Localized NSLocationWhenInUseUsageDescription from EN to NL
+    * Renamed source directories and file names named "Fotogroep Waalre" (old app name)
 
 This is build #4610 - and not distributed via Apple's App Store.
 ---------------------------------------------------------------------------
