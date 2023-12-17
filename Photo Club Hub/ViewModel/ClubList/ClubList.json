@@ -25,6 +25,32 @@
             },
             "website": "https://www.fcdegender.nl",
             "memberList": "https://www.example.com/deGenderMemberList.json"
+        },
+        {
+            "idPlus": {
+                "town": "Asten",
+                "fullName": "Fotokring Beeldhoek",
+                "nickName": "FK Beeldhoek"
+            },
+            "coordinates": {
+                "latitude": 51.405814,
+                "longitude": 5.7467431
+            },
+            "website": "https://www.fotokringbeeldhoek.nl"
+            "memberList": "https://www.example.com/FK_Beeldhoek.json"
+        },
+        {
+            "idPlus": {
+                "town": "Berlicum",
+                "fullName": "FFC Shot71",
+                "nickName": "FFC Shot71"
+            },
+            "coordinates": {
+                "latitude": 51.6630705,
+                "longitude": 5.4181855
+            },
+            "website": "https://www.shot71.nl"
+            "memberList": "https://www.example.com/FFC_Shot71.json"
         }
     ],
     "museums": [
