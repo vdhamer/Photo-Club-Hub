@@ -33,8 +33,8 @@
                 "nickName": "FK Beeldhoek"
             },
             "coordinates": {
-                "latitude": 51.405814,
-                "longitude": 5.7467431
+                "latitude": 51.402345,
+                "longitude": 5.744756
             },
             "website": "https://www.fotokringbeeldhoek.nl",
             "memberList": "https://www.example.com/FK_Beeldhoek.json"
@@ -46,8 +46,8 @@
                 "nickName": "FFC Shot71"
             },
             "coordinates": {
-                "latitude": 51.6630705,
-                "longitude": 5.4181855
+                "latitude": 51.663059,
+                "longitude": 5.4182475
             },
             "website": "https://www.shot71.nl",
             "memberList": "https://www.example.com/FFC_Shot71.json"

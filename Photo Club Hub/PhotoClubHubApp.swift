@@ -59,7 +59,7 @@ struct FotogroepWaalreApp: App {
                     let clBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
                     clBackgroundContext.name = "ClubList"
                     clBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-                    _ = ClubList(bgContext: fgwBackgroundContext)
+                    _ = ClubList(bgContext: fgwBackgroundContext) // read ClubList.json file
                 }
         }
         .onChange(of: scenePhase) { // pre-iOS 17 there was 1 param. Since iOS 17 it is 0 or 2.
