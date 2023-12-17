@@ -96,11 +96,21 @@
 
 </summary>
 
-This iOS app showcases selected work of current (and optionally former) members of amateur photography clubs. It thus serves as a more-or-less permanent exposition or gallery of the photographer's work.
+This iOS app showcases selected work of current (and optionally former) members of photography clubs.
+It can thus serve as a permanent online exposition or gallery of the photographer's selected work.
 
-The app originally supported a _single_ photo club in Waalre in the Netherlands. Since version 2.0, the app is stepwise being modified to support _multiple_ photo clubs. This enables a user to view photos from multiple clubs without the hassle of having to find each club's website or finding their way within each of these websites. Because of this scope change, the app's name was changed from _Photo Club Waalre_ to _Photo Club Hub_.</p> 
+Version 1 of the app supported a _single_ photo club in Waalre in the Netherlands.
+Version 2 supports _multiple_ photo clubs. This enables viewers to see photos from multiple clubs 
+without the hassle of finding a club's website and finding how to navigate to- and among the member photos. 
+To reflect this scope change, the app name was changed from _Photo Club Waalre_ to _Photo Club Hub_ since version 2.0.</p> 
     
-The app fetches membership lists and lists of photos from a server. This ensures that changes in club membership and any new photos appear without requiring a software update. The app has been localized and supports both English and Dutch. Contributions in the form of code, testing and suggestions are highly appreciated.
+The app fetches software readable lists of photo clubs, their members and their curated photos from servers on the Internet. 
+This ensures that clubs, members and photos can be added without updating the app.
+See the [Architecture](#the-app-architecture) section for more details.
+
+The app has been fully localized and currently English (EN) and Dutch (NL).
+
+Help in the form of coding, testing and suggestions is highly appreciated. See [section](#contributing) on contributing below.
 
 </details>
 
