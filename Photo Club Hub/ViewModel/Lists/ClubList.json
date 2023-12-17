@@ -11,7 +11,7 @@
                 "longitude": 5.51527
             },
             "website": "https://nl.qrcodechimp.com/page/a6d3r7?v=chk1697032881",
-            "memberList": "https://www.example.com/fgAndersMemberList.json"
+            "memberList": "https://www.example.com/fgAnders.memberList.json"
         },
         {
             "idPlus": {
@@ -24,7 +24,7 @@
                 "longitude": 5.45010
             },
             "website": "https://www.fcdegender.nl",
-            "memberList": "https://www.example.com/deGenderMemberList.json"
+            "memberList": "https://www.example.com/deGender.memberList.json"
         },
         {
             "idPlus": {
@@ -37,7 +37,7 @@
                 "longitude": 5.744756
             },
             "website": "https://www.fotokringbeeldhoek.nl",
-            "memberList": "https://www.example.com/FK_Beeldhoek.json"
+            "memberList": "https://www.example.com/FK_Beeldhoek.memberlist.json"
         },
         {
             "idPlus": {
@@ -50,7 +50,7 @@
                 "longitude": 5.4182475
             },
             "website": "https://www.shot71.nl",
-            "memberList": "https://www.example.com/FFC_Shot71.json"
+            "memberList": "https://www.example.com/FFC_Shot71.memberlist.json"
         }
     ],
     "museums": [
