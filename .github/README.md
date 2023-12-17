@@ -101,14 +101,12 @@ It can thus serve as a permanent online exposition or gallery with selected work
 
 Version 1 of the app supported a _single_ photo club in Waalre in the Netherlands.
 Version 2 introduced support for _multiple_ photo clubs. This enables viewers to see photos from multiple clubs without
-the inconveniende of having to find the club's website and finding how to navigate to- and between the member photos. 
-To reflect this scope change, the app name was changed from _Photo Club Waalre_ to _Photo Club Hub_ since version 2.0.</p> 
+the inconvenience of having to find the club's website and finding how to navigate to- and between the member photos. 
+To reflect this scope change, the app name was changed from _Photo Club Waalre_ to _Photo Club Hub_ since version 2.0. 
     
 The app fetches software-readable lists of photo clubs, their members and their curated photos from online servers. 
-This ensures that clubs, members and photos can be added without updating the app itself.
+This ensures that additional clubs, members and photos can be added or updated without releasing an update to the app
 See the [Architecture](#the-app-architecture) section for more details.
-
-The app has been fully localized and currently English (EN) and Dutch (NL).
 
 Help in the form of coding, testing and suggestions is highly appreciated.
 See [section](#contributing) on contributing below.
