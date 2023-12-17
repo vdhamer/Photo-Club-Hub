@@ -60,7 +60,7 @@ extension PhotoClub {
     var country: String {
         /*
             This currently reads the value from the Core Data store.
-            That value should be non-nill because of a default.
+            That value should be non-nil because of a default.
             Idea is to use Core Location to look up coordinates (if available) and overwrite
             the value in the database. This CL functionality is asynchronous.
             The functionality can be triggered by a static function PhotoClub.RefreshCountries, but that
