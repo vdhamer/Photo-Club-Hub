@@ -556,8 +556,8 @@
 		D0CEAED02B2E4EA4005AE47D /* ClubList */ = {
 			isa = PBXGroup;
 			children = (
-				D0CEAED12B2E4F0A005AE47D /* ClubList.swift */,
 				D04B1A0B2B1AA06300EB3817 /* ClubList.json */,
+				D0CEAED12B2E4F0A005AE47D /* ClubList.swift */,
 			);
 			path = ClubList;
 			sourceTree = "<group>";
