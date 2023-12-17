@@ -55,8 +55,11 @@ struct FotogroepWaalreApp: App {
                     fgwBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
                     _ = FotogroepWaalreMembersProvider(bgContext: fgwBackgroundContext)
 
-                    // More groups can be added here like BIMembersProvider()
-                    // They can so be loaded manually using pull-to-refresh on the Photo Clubs screen.
+                    // load list of photo clubs from ClubList.json file
+                    let clBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+                    clBackgroundContext.name = "ClubList"
+                    clBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+                    _ = ClubList(bgContext: fgwBackgroundContext)
                 }
         }
         .onChange(of: scenePhase) { // pre-iOS 17 there was 1 param. Since iOS 17 it is 0 or 2.
