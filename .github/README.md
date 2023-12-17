@@ -96,20 +96,21 @@
 
 </summary>
 
-This iOS app showcases selected work of current (and optionally former) members of photography clubs. It can thus serve as a permanent online exposition or gallery of the photographer's best work.
+This iOS app showcases selected work of current (and optionally former) members of photography clubs.
+It can thus serve as a permanent online exposition or gallery of the photographer's selected work.
 
-The app started off supporting a _single_ photo club in Waalre in the Netherlands.
-Version 2.0 of the app supports _multiple_ photo clubs.
-Version 2 enables viewers to see photos from multiple clubs without the hassle of finding a club's website
-and finding your way to the member photos once you are inside these websites. 
-To reflect this scope change, the app name was changed since version 2 from _Photo Club Waalre_ to _Photo Club Hub_.</p> 
+Version 1 of the app supported a _single_ photo club in Waalre in the Netherlands.
+Version 2 supports _multiple_ photo clubs. This enables viewers to see photos from multiple clubs 
+without the hassle of finding a club's website and finding how to navigate to- and among the member photos. 
+To reflect this scope change, the app name was changed from _Photo Club Waalre_ to _Photo Club Hub_ since version 2.0.</p> 
     
-The app fetches lists of photo clubs, their membership lists and their lists of selected from servers on the Internet. 
+The app fetches software readable lists of photo clubs, their members and their curated photos from servers on the Internet. 
 This ensures that clubs, members and photos can be added without updating the app.
+See the [Architecture](#the-app-architecture) section for more details.
 
-The app has been fully localized and currently supports English (EN) and Dutch (NL). 
+The app has been fully localized and currently English (EN) and Dutch (NL).
 
-Contributions in the form of code, testing and suggestions are highly appreciated.
+Help in the form of coding, testing and suggestions is highly appreciated. See [section](#contributing) on contributing below.
 
 </details>
 
