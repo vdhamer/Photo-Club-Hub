@@ -744,6 +744,7 @@ Here is an example of the (draft) format of the MemberList of a photo club with 
 ```
 
 Notes about the "club" section:
+
 - the "club" section is the same as one object/record in the ClubList. It documents the club that the MemberList is for.
 - the "town" and "fullName" fields are required.
 - "town" and "fullName" must exactly match the corresponding fields in the ClubList.json file.
@@ -751,6 +752,7 @@ Notes about the "club" section:
 - a club's "nickName", "latitude", "longitude", and "website" can overrule the corresponding ClubList fields if needed.
 
 Notes about the "members" section:
+
 - a member's "givenName", "infixName" and "familyName" "fields are used to uniquely identify the photographer.
 - "givenName" and familyName" are required. An omitted "infixName" is equivalent to "infixName" = "".
 - "infixName" will often be empty. It enables correctly sorting European surnames: "van Aalst" sorts like "Aalst".
