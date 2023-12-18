@@ -750,6 +750,7 @@ Notes about the `club` section:
 - the `memberList` field can be provided, but it's value is generally overruled by the ClubList's "memberList" value.
 - a club's `nickName`, `latitude`, `longitude`, and `website` can overrule the corresponding ClubList fields if needed.
 
+
 Notes about the `members` section:
 - a member's `givenName`, `infixName` and `familyName` are used to uniquely identify the photographer.
 - `givenName` and `familyName` are required. An omitted "infixName" is equivalent to "infixName" = "".
