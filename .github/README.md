@@ -698,13 +698,14 @@ Note that:
 
 ##### MemberList: local lists of photo club members
 
-Each list defines the current (and optionally former) members of one club.
-For each member, a URL is stored to the final list level (portfolio per member).
-Currently level 2 also includes the URL of one image used as thumbnail.
-Membership list can be stored and managed on the club's own server. The file needs to be in
-a standardized data format (e.g., JSON) and may require an editing tool to ensure syntactic consistency.
+Each MemberList defines the current (and optionally former) members of a single club.
+For each member, a URL is stored pointing to the final list level (portfolio per member).
+MemberList also includes the URL of an image used as thumbnail for that member.
+MemberList can be stored and managed on the club's own server. The file needs to be in
+a JSON format to allow the app to interpret it correctly.
+A future editing tool (app or web-based) would help ensure syntactic and schema consistency.
 
-Here is an example of the format of the MemberList of a photo club with a single member:
+Here is an example of the (draft) format of the MemberList of a photo club with a single member:
 
 ``` json
 {
@@ -743,16 +744,17 @@ Here is an example of the format of the MemberList of a photo club with a single
 ```
 
 Notes about the "club" section:
+- the "club" section is the same as one object/record in the ClubList. It documents the club that the MemberList is for.
 - the "town" and "fullName" fields are required.
-- "town" and "fullName" must match the corresponding fields in the ClubList.json file or other MemberList.json files
-- "memberList" can be provided, but it's value is generally ignored. It is overruled by a ClubList "memberList" value.
-- a club's "nickName", "latitude", "longitude", and "website" can be used to overrule the corresponding ClubList fields.
+- "town" and "fullName" must exactly match the corresponding fields in the ClubList.json file.
+- the "memberList" field can be provided, but it's value is generally overruled by the ClubList's "memberList" value.
+- a club's "nickName", "latitude", "longitude", and "website" can overrule the corresponding ClubList fields if needed.
 
 Notes about the "members" section:
 - a member's "givenName", "infixName" and "familyName" "fields are used to uniquely identify the photographer.
-- "givenName" and familyName" are required. Missing "infixName" and "infixName" = "" are equivalent.
-- "infixName" will often be empty. It serves to correctly sort European surnames: "van Aalst" sorts as "Aalst".
-- the `imageList` field allows the app to find the next level list about the selected images per member. 
+- "givenName" and familyName" are required. An omitted "infixName" is equivalent to "infixName" = "".
+- "infixName" will often be empty. It enables correctly sorting European surnames: "van Aalst" sorts like "Aalst".
+- the `imageList` field allows the app to find the next level list about the selected images per member.
 
 ##### ImageList: local image portfolios per club member
 
