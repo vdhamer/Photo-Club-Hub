@@ -748,8 +748,7 @@ Notes about the `club` section:
 - the `town` and `fullName` fields are required.
 - `town` and `fullName` must exactly match the corresponding fields in the ClubList.json file.
 - the `memberList` field can be provided, but it's value is generally overruled by the ClubList's "memberList" value.
-- a club's `nickName`, `latitude`, `longitude`, and `website` can overrule the corresponding ClubList fields if needed.
-
+- a club's `nickName`, `latitude`, `longitude`, and `website` can overrule the corresponding ClubList fields if needed.</p>
 
 Notes about the `members` section:
 - a member's `givenName`, `infixName` and `familyName` are used to uniquely identify the photographer.
