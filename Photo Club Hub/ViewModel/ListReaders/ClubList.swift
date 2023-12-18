@@ -13,7 +13,7 @@ let dataSourceURL: String = """
                             https://raw.githubusercontent.com/\
                             vdhamer/Photo-Club-Hub/\
                             main/\
-                            Photo%20Club%20Hub/ViewModel/ClubList/ClubList.json
+                            Photo%20Club%20Hub/Lists/ClubList.json
                             """
 
 /* Example of basic ClubList.json content

@@ -656,7 +656,7 @@ The file notably includes the location of next-level indices.
 
 Here is an example of the format of the ClubList, here containing a single photo club and single museum:
 
-```json
+``` json
 {
     "clubs": [
         {
@@ -703,6 +703,56 @@ For each member, a URL is stored to the final list level (portfolio per member).
 Currently level 2 also includes the URL of one image used as thumbnail.
 Membership list can be stored and managed on the club's own server. The file needs to be in
 a standardized data format (e.g., JSON) and may require an editing tool to ensure syntactic consistency.
+
+Here is an example of the format of the MemberList of a photo club with a single member:
+
+``` json
+{
+    "club": [
+        {
+            "idPlus": {
+                "town": "Eindhoven",
+                "fullName": "Fotogroep de Gender",
+                "nickName": "FG deGender"
+            },
+            "coordinates": {
+                "latitude": 51.42398,
+                "longitude": 5.45010
+            }
+            "website": "https://www.fcdegender.nl",
+            "memberList": "https://www.example.com/deGender.memberList.json"
+        }
+    ],
+    "members": [
+        {
+            "name": {
+                "givenName": "Peter",
+                "infixName": "van den",
+                "familyName": "Hamer"
+            },
+            "roles": {
+                "admin": true
+            },
+            "birthday": "9999-10-18T00:00:00.000Z",
+            "website": "https://glass.photo/vdhamer",
+            "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg",
+            "imageList": "https://www.example.com/FG_deGender/Peter_van_den_Hamer.imagelist.json"
+        },
+    ]
+}
+```
+
+Notes about the "club" section:
+- the "town" and "fullName" fields are required.
+- "town" and "fullName" must match the corresponding fields in the ClubList.json file or other MemberList.json files
+- "memberList" can be provided, but it's value is generally ignored. It is overruled by a ClubList "memberList" value.
+- a club's "nickName", "latitude", "longitude", and "website" can be used to overrule the corresponding ClubList fields.
+
+Notes about the "members" section:
+- a member's "givenName", "infixName" and "familyName" "fields are used to uniquely identify the photographer.
+- "givenName" and familyName" are required. Missing "infixName" and "infixName" = "" are equivalent.
+- "infixName" will often be empty. It serves to correctly sort European surnames: "van Aalst" sorts as "Aalst".
+- the `imageList` field allows the app to find the next level list about the selected images per member. 
 
 ##### ImageList: local image portfolios per club member
 

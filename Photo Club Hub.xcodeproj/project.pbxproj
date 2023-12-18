@@ -65,6 +65,7 @@
 		D0831A45277F731C0049AB84 /* String+Capitalize.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A41277F731C0049AB84 /* String+Capitalize.swift */; };
 		D0831A47277F731C0049AB84 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A43277F731C0049AB84 /* PersistenceController.swift */; };
 		D0831A51277F73C00049AB84 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0831A50277F73C00049AB84 /* Preview Assets.xcassets */; };
+		D08416932B2FAEB1000F316D /* FG_deGender.memberlist.json in Resources */ = {isa = PBXBuildFile; fileRef = D08416922B2FAEB1000F316D /* FG_deGender.memberlist.json */; };
 		D08DC6062AE57294008DBD68 /* SinglePortfolioLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08DC6052AE57294008DBD68 /* SinglePortfolioLinkView.swift */; };
 		D0968F662A76F8A00096987A /* FotogroepWaalreMembersProvider+insertOnlineMemberData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0968F652A76F8A00096987A /* FotogroepWaalreMembersProvider+insertOnlineMemberData.swift */; };
 		D0A0884B27F8C697002CC8E1 /* TestClubRotterdamMembersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A0884927F8C697002CC8E1 /* TestClubRotterdamMembersProvider.swift */; };
@@ -176,6 +177,8 @@
 		D0831A49277F736C0049AB84 /* Version2Changes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Version2Changes.md; sourceTree = "<group>"; };
 		D0831A4B277F736C0049AB84 /* ReleaseNotes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = ReleaseNotes.md; sourceTree = "<group>"; };
 		D0831A50277F73C00049AB84 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D08416912B2FA3C2000F316D /* FG_Anders.memberlist.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = FG_Anders.memberlist.json; sourceTree = "<group>"; };
+		D08416922B2FAEB1000F316D /* FG_deGender.memberlist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FG_deGender.memberlist.json; sourceTree = "<group>"; };
 		D08DC6052AE57294008DBD68 /* SinglePortfolioLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePortfolioLinkView.swift; sourceTree = "<group>"; };
 		D0968F652A76F8A00096987A /* FotogroepWaalreMembersProvider+insertOnlineMemberData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FotogroepWaalreMembersProvider+insertOnlineMemberData.swift"; sourceTree = "<group>"; };
 		D0A0884927F8C697002CC8E1 /* TestClubRotterdamMembersProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestClubRotterdamMembersProvider.swift; sourceTree = "<group>"; };
@@ -412,7 +415,8 @@
 		D0831A23277F72340049AB84 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				D0CEAED02B2E4EA4005AE47D /* ClubList */,
+				D08416952B2FC07F000F316D /* Lists */,
+				D08416942B2FC061000F316D /* ListReaders */,
 				D0621E832AE2DF8E000FFADB /* IndividualClubs */,
 				D0831A2D277F72590049AB84 /* PhotoClub.swift */,
 				D0831A25277F72590049AB84 /* Photographer.swift */,
@@ -496,6 +500,24 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		D08416942B2FC061000F316D /* ListReaders */ = {
+			isa = PBXGroup;
+			children = (
+				D0CEAED12B2E4F0A005AE47D /* ClubList.swift */,
+			);
+			path = ListReaders;
+			sourceTree = "<group>";
+		};
+		D08416952B2FC07F000F316D /* Lists */ = {
+			isa = PBXGroup;
+			children = (
+				D04B1A0B2B1AA06300EB3817 /* ClubList.json */,
+				D08416912B2FA3C2000F316D /* FG_Anders.memberlist.json */,
+				D08416922B2FAEB1000F316D /* FG_deGender.memberlist.json */,
+			);
+			path = Lists;
+			sourceTree = "<group>";
+		};
 		D08DC6042AE57222008DBD68 /* SinglePortfolioLinkView */ = {
 			isa = PBXGroup;
 			children = (
@@ -551,15 +573,6 @@
 				D0DF0F442B2CFA3800E9FEC8 /* Photo Club Hub Localizations */,
 			);
 			path = Localization;
-			sourceTree = "<group>";
-		};
-		D0CEAED02B2E4EA4005AE47D /* ClubList */ = {
-			isa = PBXGroup;
-			children = (
-				D04B1A0B2B1AA06300EB3817 /* ClubList.json */,
-				D0CEAED12B2E4F0A005AE47D /* ClubList.swift */,
-			);
-			path = ClubList;
 			sourceTree = "<group>";
 		};
 		D0E2235227DE9139002A8600 /* PreludeView */ = {
@@ -727,6 +740,7 @@
 				D04A2B122AC0958C003ED113 /* LineCount.xlsx in Resources */,
 				D06061E828A0453F00A675A7 /* FGWPrivateMembersURL2.txt in Resources */,
 				D08319EB277F70A40049AB84 /* Assets.xcassets in Resources */,
+				D08416932B2FAEB1000F316D /* FG_deGender.memberlist.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
