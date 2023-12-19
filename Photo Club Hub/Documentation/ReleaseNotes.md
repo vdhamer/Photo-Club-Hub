@@ -1,3 +1,10 @@
+### 2.5.3 (Github commit 51501f7) ??-00-24
+
+Maintenance
+    * Tested with with iOS 17.2.1 and MacOS 14.2.1
+
+This is build #4611 in Apple's App Store.
+---------------------------------------------------------------------------
 ### 2.5.2 (Github commit 7cc0780) 16-12-23
 
 Photo Clubs screen
