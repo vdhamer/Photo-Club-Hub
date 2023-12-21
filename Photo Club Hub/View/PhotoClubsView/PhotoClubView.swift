@@ -113,7 +113,12 @@ struct PhotoClubView: View {
                 .onAppear(perform: {
                     Task {
                         let (town, country) = try await reverseGeocode(coordinates: filteredPhotoClub.coordinates)
-                        print("Location: \(town ?? "nil"), \(country ?? "nil")") // TODO write locations to database
+                         if town != nil || country != nil {
+                            print("Location: \(town ?? "nil"), \(country ?? "nil")")
+                            if let town { filteredPhotoClub.town = town }
+                            if let country { filteredPhotoClub.country = country}
+                            try? viewContext.save() // TODO correct MoC??
+                        }
                     }
                 })
                 .onDisappear(perform: { try? viewContext.save() }) // store map scroll-lock states in database
