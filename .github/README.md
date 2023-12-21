@@ -96,18 +96,19 @@
 
 </summary>
 
-This iOS app showcases work of members of photography clubs.
-It thus serves as a permanent online exposition or gallery with selected work of these photographers.
+This iOS app showcases photographs made by members of photography clubs.
+It thus provides a permanent online exposition or gallery with selected work of these photographers.
 
-Version 1 of the app supported a _single_ photo club in a town called Waalre in the Netherlands.
-Version 2 enables support for _multiple_ photo clubs. This allows viewers to see images from multiple clubs in a single app. It also provides a degree of standardization, thus sparing the user the small inconveniences of having to find each club's website, 
-discovering  how to navigate within each site and how to browse the member images. 
-Since version 2 the app name was therfore changed from _Photo Club Waalre_ to _Photo Club Hub_. 
+Version 1 of the app only supported a _single_ photo club in a town called Waalre in the Netherlands.
+Version 2 enables support for _multiple_ photo clubs. This allows viewers to see images from multiple clubs within a single app.
+It also provides a degree of standardization, thus sparing the user from having to find each club's website, 
+discovering how to navigate within each unique site and how to browse the images. 
+Starting in version 2 the app's name was changed from _Photo Club Waalre_ to _Photo Club Hub_. 
     
-The app fetches software-readable lists of photo clubs, their members and their curated images from online servers. 
-This ensures that additional clubs, members and images can be added or updated without having to update the app itself.
+To do this, the app fetches software-readable lists of photo clubs, their members and their curated images from online servers. 
+This ensures that additional clubs, club members and member images can be added or removed without waiting for a new software release.
 
-See the [Architecture](#the-app-architecture) section for details how this control information is managed and configured.
+See the [Architecture](#the-app-architecture) section for how this information is distributed and managed.
 Help in the form of coding, testing and suggestions is highly appreciated. See [section](#contributing) on contributing below.
 
 </details>
@@ -120,7 +121,8 @@ Help in the form of coding, testing and suggestions is highly appreciated. See [
 
 > The app showcases curated images made by members of photo clubs.
 
-Since release 2.3.0, the app organizes images in a 3-level hierarchy or tree structure. A schematic example:
+Since release 2.3.0, the app organizes images in a 3-level hierarchy or tree structure. 
+A schematic representation of the main ("Portfolios") screen:
 
 * photo clubA (hosted on siteA)
   * portfolio1 of photographer1
@@ -136,15 +138,21 @@ Since release 2.3.0, the app organizes images in a 3-level hierarchy or tree str
 
 <a/></p>
 
-The `portfolio` level holds the images that are associated with one particular photo club.
-The `photo club` level is the higher level at which 
-1. a club's membership list is maintained,
-2. portfolios are maintained for each club member ("curated images"),
-3. the actual images in the portfolios are hosted 
+An alternative navigation path is provided in the "Who's Who" screen.
+This allows the user to find a known photographer without knowing the club associations:
 
-<a/></p>
+* photographer1
+  * photo club A
+      * images of photographer 1 in context of club A
+  * photo club B (optional)
+      * images of photographer 1 in context of club B     
 
-For comparison, this is what a typical photographer's website looks like (using the same notation):
+* photographer2
+  * photo club A (or B or whatever)
+      * images of photographer 2 in context of club A 
+
+Both views of the data thus emphasise images in the context of membership of clubs.
+For comparison, a photographer's personal website stresses the photographer's images, but without associations to clubs:
     
 * website for photographer1 (hosted on site1)
   * photo galleryA (e.g. portraits)
