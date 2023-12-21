@@ -149,7 +149,12 @@ This allows the user to find a known photographer without knowing the club assoc
 
 * photographer2
   * photo club A (or B or whatever)
-      * images of photographer 2 in context of club A 
+      * images of photographer 2 in context of club A
+
+* photographer3
+  * :
+
+<a/></p>
 
 Both views of the data thus emphasise images in the context of membership of clubs.
 For comparison, a photographer's personal website stresses the photographer's images, but without associations to clubs:
