@@ -1,5 +1,11 @@
 ### 2.5.3 (Github commit 51501f7) ??-00-24
 
+Photo Clubs screen
+    * Maps can display several international photography musea.
+    * Additional photo clubs (and musea) can be loaded from an online JSON ClubList data file.
+    * Country where a photoclub (or museum) is located is automatically determined based on provided GSP coordinates.
+    * Town and Country are localized to English (e.g., Paris, France) and Dutch (e.g. Parijs, Frankrijk).
+    * Musea are showed as new type of marker pin.
 Maintenance
     * Tested with with iOS 17.2.1 and MacOS 14.2.1
 
