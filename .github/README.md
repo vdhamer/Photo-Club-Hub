@@ -290,12 +290,13 @@ This loads a little bit of additional data to demo the feature.
 </summary>
 
 Since version 2.6, the maps for showing the locations of photography clubs also show the locations
-of major photography musea. The markers used for both are different.
-A museum is not really a photo club: it doesn't have club members who generate image portfolios for
-their museum. Showing musea is basically a small bonus that may interest some users.
+of certain photography musea. 
+A museum is not a photo club: it doesn't have club members who generate image portfolios for
+their museum. Musea are thus shown using a different marker icon than photo clubs.
+Showing musea is basically a small bonus that may interest some users.
 
 You are welcome to add data on your local or favorite photo musea via a Github PR.
-The file fromat is documented below under Architecture.
+The file format is documented below under [How Data is Loaded / The New Approach](#the-new-approach).
 
 </details>
 
