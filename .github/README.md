@@ -170,7 +170,6 @@ For comparison, a photographer's personal website stresses the photographer's im
     * :
 
 <a/></p>
-Here each photographer determines which images to display, how to host them, and how to present them.
 
 <ul><details><summary>
         
