@@ -296,7 +296,7 @@ their museum. Musea are thus shown using a different marker icon than photo club
 Showing musea is basically a small bonus that may interest some users.
 
 You are welcome to add data on your local or favorite photo musea via a Github PR.
-The file format is documented below under [How Data is Loaded / The New Approach](#the-new-approach).
+The file format is documented below under [How Data is Loaded / The New Approach](#how-data-is-loaded).
 
 </details>
 
