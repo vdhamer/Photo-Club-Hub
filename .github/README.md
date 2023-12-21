@@ -99,17 +99,16 @@
 This iOS app showcases work of members of photography clubs.
 It thus serves as a permanent online exposition or gallery with selected work of these photographers.
 
-Version 1 of the app supported a _single_ photo club in Waalre in the Netherlands.
-Version 2 introduced support for _multiple_ photo clubs. This enables viewers to see photos from multiple clubs without
-the inconvenience of having to find the club's website and finding how to navigate to- and between the member photos. 
-To reflect this scope change, the app name was changed from _Photo Club Waalre_ to _Photo Club Hub_ since version 2.0. 
+Version 1 of the app supported a _single_ photo club in a town called Waalre in the Netherlands.
+Version 2 enables support for _multiple_ photo clubs. This allows viewers to see images from multiple clubs in a single app. It also provides a degree of standardization, thus sparing the user the small inconveniences of having to find each club's website, 
+discovering  how to navigate within each site and how to browse the member images. 
+Since version 2 the app name was therfore changed from _Photo Club Waalre_ to _Photo Club Hub_. 
     
-The app fetches software-readable lists of photo clubs, their members and their curated photos from online servers. 
-This ensures that additional clubs, members and photos can be added or updated without releasing an update to the app
-See the [Architecture](#the-app-architecture) section for more details.
+The app fetches software-readable lists of photo clubs, their members and their curated images from online servers. 
+This ensures that additional clubs, members and images can be added or updated without having to update the app itself.
 
-Help in the form of coding, testing and suggestions is highly appreciated.
-See [section](#contributing) on contributing below.
+See the [Architecture](#the-app-architecture) section for details how this control information is managed and configured.
+Help in the form of coding, testing and suggestions is highly appreciated. See [section](#contributing) on contributing below.
 
 </details>
 
