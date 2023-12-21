@@ -96,7 +96,7 @@
 
 </summary>
 
-This iOS app showcases work of current (and optionally former) members of photography clubs.
+This iOS app showcases work of members of photography clubs.
 It can thus serve as a permanent online exposition or gallery with selected work of the photographer.
 
 Version 1 of the app supported a _single_ photo club in Waalre in the Netherlands.
