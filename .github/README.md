@@ -96,20 +96,20 @@
 
 </summary>
 
-This iOS app showcases work of current (and optionally former) members of photography clubs.
-It can thus serve as a permanent online exposition or gallery with selected work of the photographer.
+This iOS app showcases photographs made by members of photography clubs.
+It thus provides a permanent online exposition or gallery with selected work of these photographers.
 
-Version 1 of the app supported a _single_ photo club in Waalre in the Netherlands.
-Version 2 introduced support for _multiple_ photo clubs. This enables viewers to see photos from multiple clubs without
-the inconvenience of having to find the club's website and finding how to navigate to- and between the member photos. 
-To reflect this scope change, the app name was changed from _Photo Club Waalre_ to _Photo Club Hub_ since version 2.0. 
+Version 1 of the app only supported a _single_ photo club in a town called Waalre in the Netherlands.
+Version 2 enables support for _multiple_ photo clubs. This allows viewers to see images from multiple clubs within a single app.
+It also provides a degree of standardization, thus sparing the user from having to find each club's website, 
+discovering how to navigate within each unique site and how to browse the images. 
+Starting in version 2 the app's name was changed from _Photo Club Waalre_ to _Photo Club Hub_. 
     
-The app fetches software-readable lists of photo clubs, their members and their curated photos from online servers. 
-This ensures that additional clubs, members and photos can be added or updated without releasing an update to the app
-See the [Architecture](#the-app-architecture) section for more details.
+To do this, the app fetches software-readable lists of photo clubs, their members and their curated images from online servers. 
+This ensures that additional clubs, club members and member images can be added or removed without waiting for a new software release.
 
-Help in the form of coding, testing and suggestions is highly appreciated.
-See [section](#contributing) on contributing below.
+See the [Architecture](#the-app-architecture) section for how this information is distributed and managed.
+Help in the form of coding, testing and suggestions is highly appreciated. See [section](#contributing) on contributing below.
 
 </details>
 
@@ -121,7 +121,8 @@ See [section](#contributing) on contributing below.
 
 > The app showcases curated images made by members of photo clubs.
 
-Since release 2.3.0, the app organizes images in a 3-level hierarchy or tree structure. A schematic example:
+Since release 2.3.0, the app organizes images in a 3-level hierarchy or tree structure. 
+A schematic representation of the main ("Portfolios") screen:
 
 * photo clubA (hosted on siteA)
   * portfolio1 of photographer1
@@ -137,15 +138,26 @@ Since release 2.3.0, the app organizes images in a 3-level hierarchy or tree str
 
 <a/></p>
 
-The `portfolio` level holds the images that are associated with one particular photo club.
-The `photo club` level is the higher level at which 
-1. a club's membership list is maintained,
-2. portfolios are maintained for each club member ("curated images"),
-3. the actual images in the portfolios are hosted 
+An alternative navigation path is provided in the "Who's Who" screen.
+This allows the user to find a known photographer without knowing the club associations:
+
+* photographer1
+  * photo club A
+      * images of photographer 1 in context of club A
+  * photo club B (optional)
+      * images of photographer 1 in context of club B     
+
+* photographer2
+  * photo club A (or B or whatever)
+      * images of photographer 2 in context of club A
+
+* photographer3
+  * :
 
 <a/></p>
 
-For comparison, this is what a typical photographer's website looks like (using the same notation):
+Both views of the data thus emphasise images in the context of membership of clubs.
+For comparison, a photographer's personal website stresses the photographer's images, but without associations to clubs:
     
 * website for photographer1 (hosted on site1)
   * photo galleryA (e.g. portraits)
@@ -158,7 +170,6 @@ For comparison, this is what a typical photographer's website looks like (using 
     * :
 
 <a/></p>
-Here each photographer determines which images to display, how to host them, and how to present them.
 
 <ul><details><summary>
         
@@ -279,12 +290,13 @@ This loads a little bit of additional data to demo the feature.
 </summary>
 
 Since version 2.6, the maps for showing the locations of photography clubs also show the locations
-of major photography musea. The markers used for both are different.
-A museum is not really a photo club: it doesn't have club members who generate image portfolios for
-their museum. Showing musea is basically a small bonus that may interest some users.
+of certain photography musea. 
+A museum is not a photo club: it doesn't have club members who generate image portfolios for
+their museum. Musea are thus shown using a different marker icon than photo clubs.
+Showing musea is basically a small bonus that may interest some users.
 
 You are welcome to add data on your local or favorite photo musea via a Github PR.
-The file fromat is documented below under Architecture.
+The file format is documented below under [How Data is Loaded / The New Approach](#how-data-is-loaded).
 
 </details>
 
