@@ -139,7 +139,7 @@ A schematic representation of the main ("Portfolios") screen:
 <a/></p>
 
 An alternative navigation path is provided in the "Who's Who" screen.
-This allows the user to find a known photographer without knowing the club associations:
+This allows the user to find a photographer directly:
 
 * photographer1
   * photo club A
