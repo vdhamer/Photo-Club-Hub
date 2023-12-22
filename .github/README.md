@@ -353,10 +353,8 @@ But that data is still encrypted by a private encryption key that is not provide
     - [x] Handle private data about members in a secure way
     - [ ] Publish article in Dutch photo club [organization](https://fotobond.nl)
 - [x] MemberPortfoliosView: show thumbnails of most recent photos.
-- [ ] MemberPortfoliosView: automatically remove members who are no longer on the online membership lists.
+- [x] Support onboarding of clubs without any code changes. A really large change, see below.
 - [ ] MemberGaleryView: replace use of WebKit by SwiftUI equivalent
-- [ ] Support onboarding of clubs without any code changes. A really large change, see below.
-- [ ] Notifications when new images are published. An intermediate step towards the previous item.
 - [ ] Migrate from CoreData to SwiftData (iOS 17+)
 
 See the [open issues](https://github.com/vdhamer/PhotoClubWaalre/issues) for a list of

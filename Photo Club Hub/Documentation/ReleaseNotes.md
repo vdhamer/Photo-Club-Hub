@@ -7,7 +7,7 @@ Photo Clubs screen
     * Town and Country are localized to English (e.g., Paris, France) or Dutch (e.g. Parijs, Frankrijk).
     * Musea are displayed using a new type of marker pin.
 Portfolios screen
-    * Name of the Town where a photo club meets up is now localized. Example: "Den Haag" vs "The Hague".
+    * Name of the Town where each photo club meets is now localized. Example: "Den Haag" (NL) vs "The Hague" (EN).
 Maintenance
     * Tested with with iOS 17.2.1 and MacOS 14.2.1
 
