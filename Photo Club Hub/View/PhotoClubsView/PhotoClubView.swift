@@ -217,8 +217,8 @@ extension PhotoClubView { // reverse GeoCoding
 
         let town = placemark.locality
         let country = placemark.country
-        print("\(placemark.locality ?? "No Town")")
-        print("\(placemark.country ?? "No Country")")
+//        print("\(placemark.locality ?? "No Town")")
+//        print("\(placemark.country ?? "No Country")")
         return (town, country)
     }
 
