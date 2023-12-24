@@ -1,13 +1,13 @@
 ### 2.5.3 (Github commit 51501f7) ??-00-24
 
 Photo Clubs screen
-    * Maps can display about 15 photography musea in various countries.
+    * Maps can display about 15 photography musea in various countries. _not completed yet_
     * Additional photo clubs (and musea) can be loaded from an online ClubList.json data file.
-    * Country where a photoclub (or museum) is located is automatically determined based on its GPS coordinates.
-    * Town and Country are localized to English (e.g., Paris, France) or Dutch (e.g. Parijs, Frankrijk).
-    * Musea are displayed using a new type of marker pin.
+    * Country where a photoclub (or museum) is located is automatically found using its GPS coordinates.
+    * Town and Country are localized to both English (e.g., Paris, France) and Dutch (e.g. Parijs, Frankrijk).
+    * Musea are displayed using a new type of marker pin. _not implemented yet_
 Portfolios screen
-    * Name of the Town where each photo club meets is now localized. Example: "Den Haag" (NL) vs "The Hague" (EN).
+    * Name of towns are now localized if applicable. Example: "Den Haag" (NL) <> "The Hague" (EN)
 Maintenance
     * Tested with with iOS 17.2.1 and MacOS 14.2.1
 
