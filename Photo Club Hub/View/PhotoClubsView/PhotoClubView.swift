@@ -250,8 +250,6 @@ extension PhotoClubView { // reverse GeoCoding
 
         let town = placemark.locality
         let country = placemark.country
-//        print("\(placemark.locality ?? "No Town")")
-//        print("\(placemark.country ?? "No Country")")
         return (town, country)
     }
 
@@ -291,7 +289,7 @@ extension PhotoClubView { // tests for equality
 
 }
 
-struct PhotoClubsInner_Previews: PreviewProvider {
+struct PhotoClubsView_Previews: PreviewProvider {
     static let predicate = NSPredicate(format: "name_ = %@ || name_ = %@ || name_ = %@",
                                        argumentArray: ["PhotoClub2", "PhotoClub1", "PhotoClub3"])
 
