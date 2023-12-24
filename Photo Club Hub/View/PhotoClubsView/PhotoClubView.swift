@@ -110,17 +110,14 @@ struct PhotoClubView: View {
                 .task {
                     initializeCameraPosition(photoClub: filteredPhotoClub) // works better than .onAppear(perform:)?
                 }
-                .onAppear(perform: {
-                    Task {
-                        let (town, country) = try await reverseGeocode(coordinates: filteredPhotoClub.coordinates)
-                         if town != nil || country != nil {
-                            print("Location: \(town ?? "nil"), \(country ?? "nil")")
-                            if let town { filteredPhotoClub.town = town }
-                            if let country { filteredPhotoClub.country = country}
-                            try? viewContext.save() // TODO correct MoC??
-                        }
+                .onAppear {
+                    let backgroundContext = PersistenceController.shared.container.newBackgroundContext()
+                    backgroundContext.name = "reverseGeocode \(filteredPhotoClub.fullName)"
+                    backgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+                    backgroundContext.perform { // executes on background thread created for backgroundContext
+                        updateTownCountry(photoClub: filteredPhotoClub, bgContext: backgroundContext)
                     }
-                })
+                }
                 .onDisappear(perform: { try? viewContext.save() }) // store map scroll-lock states in database
                 .accentColor(.photoClubColor)
                 .listRowSeparator(.hidden)
@@ -136,6 +133,42 @@ struct PhotoClubView: View {
             } // Section
         } // outer ForEach (PhotoClub)
         .onDelete(perform: deletePhotoClubs)
+    }
+
+    private func updateTownCountry(photoClub: PhotoClub, bgContext: NSManagedObjectContext) {
+        var town: String? // initialize to nil
+        var country: String? // initialize to nil
+        Task { // not sure about this TODO
+            let coord = photoClub.coordinates
+            do {
+                let (locality, nation) = try await reverseGeocode(coordinates: coord)
+                town = locality
+                country = nation
+            } catch {
+                print("Could not reverseGeocode \(photoClub.fullName)'s at (\(coord.latitude), \(coord.longitude))")
+            }
+
+            if town != nil || country != nil {
+                print("Location: \(photoClub.town), \(photoClub.country)")
+                if let town { photoClub.town = town }
+                if let country { photoClub.country = country}
+                do {
+                    try bgContext.save()
+                } catch {
+                    print("ERROR: could not save \(town ?? "nil"), \(country ?? "nil") to CoreData")
+                }
+            }
+        }
+        if town != nil || country != nil { // TODO duplicate
+            print("Location: \(photoClub.town), \(photoClub.country)")
+            if let town { photoClub.town = town }
+            if let country { photoClub.country = country}
+            do {
+                try bgContext.save() // TODO this save triggers exception if com.apple.CoreData.ConcurrencyDebug = 1
+            } catch {
+                print("ERROR: could not save \(town ?? "nil"), \(country ?? "nil") to CoreData")
+            }
+        }
     }
 
     // conversion to [MKMapItems] is needed to make Placemarks touch (and mouse) sensitive
