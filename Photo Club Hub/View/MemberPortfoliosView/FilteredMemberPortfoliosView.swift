@@ -152,6 +152,8 @@ struct FilteredMemberPortfoliosView: View {
                     }
                 }
                     .font(.subheadline)
+                    .dynamicTypeSize( // constrain impact of large dynamic type
+                        ...DynamicTypeSize.large) // this is just supposed to be a footer, so don't want it too big
                     .lineLimit(2)
                     .foregroundColor(.secondary)
                 Spacer()
