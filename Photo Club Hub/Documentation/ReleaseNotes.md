@@ -8,7 +8,7 @@ Photo Clubs screen
     * Musea are displayed using a new type of marker pin. _not implemented yet_
 Portfolios screen
     * Name of towns are now localized if applicable. Example: "Den Haag" (NL) <> "The Hague" (EN)
-    * Limited size of footers if user uses a large font (request by BvdB)
+    * Limited the font size of the footers if user uses a large font using DynamicType.
 Maintenance
     * Tested with with iOS 17.2.1 and MacOS 14.2.1
 
