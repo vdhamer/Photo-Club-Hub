@@ -291,7 +291,7 @@ extension PhotoClubView { // tests for equality
 
 }
 
-struct PhotoClubsInner_Previews: PreviewProvider {
+struct PhotoClubsView_Previews: PreviewProvider {
     static let predicate = NSPredicate(format: "name_ = %@ || name_ = %@ || name_ = %@",
                                        argumentArray: ["PhotoClub2", "PhotoClub1", "PhotoClub3"])
 
