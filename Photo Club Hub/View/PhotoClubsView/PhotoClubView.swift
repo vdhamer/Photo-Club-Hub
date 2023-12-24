@@ -110,6 +110,14 @@ struct PhotoClubView: View {
                 .task {
                     initializeCameraPosition(photoClub: filteredPhotoClub) // works better than .onAppear(perform:)?
                 }
+                .onAppear {
+                    let backgroundContext = PersistenceController.shared.container.newBackgroundContext()
+                    backgroundContext.name = "reverseGeocode \(filteredPhotoClub.fullName)"
+                    backgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+                    backgroundContext.perform { // executes on background thread created for backgroundContext
+                        updateTownCountry(photoClub: filteredPhotoClub, bgContext: backgroundContext)
+                    }
+                }
                 .onDisappear(perform: { try? viewContext.save() }) // store map scroll-lock states in database
                 .accentColor(.photoClubColor)
                 .listRowSeparator(.hidden)
@@ -127,21 +135,39 @@ struct PhotoClubView: View {
         .onDelete(perform: deletePhotoClubs)
     }
 
-    private func isEqual(mapItem: MKMapItem, photoclub: PhotoClub) -> Bool {
-        // a little bit scary to compare two floats for equality
-        if mapItem.placemark.coordinate.latitude != photoclub.coordinates.latitude {
-            return false
-        } else {
-            return mapItem.placemark.coordinate.longitude == photoclub.coordinates.longitude
-        }
-    }
+    private func updateTownCountry(photoClub: PhotoClub, bgContext: NSManagedObjectContext) {
+        var town: String? // initialize to nil
+        var country: String? // initialize to nil
+        Task { // not sure about this TODO
+            let coord = photoClub.coordinates
+            do {
+                let (locality, nation) = try await reverseGeocode(coordinates: coord)
+                town = locality
+                country = nation
+            } catch {
+                print("Could not reverseGeocode \(photoClub.fullName)'s at (\(coord.latitude), \(coord.longitude))")
+            }
 
-    private func isEqual(mapItemLHS: MKMapItem, mapItemRHS: MKMapItem?) -> Bool {
-        // a little bit scary to compare two floats for equality
-        if mapItemLHS.placemark.coordinate.latitude != mapItemRHS?.placemark.coordinate.latitude {
-            return false
-        } else {
-            return mapItemLHS.placemark.coordinate.longitude == mapItemRHS?.placemark.coordinate.longitude
+            if town != nil || country != nil {
+                print("Location: \(photoClub.town), \(photoClub.country)")
+                if let town { photoClub.town = town }
+                if let country { photoClub.country = country}
+                do {
+                    try bgContext.save()
+                } catch {
+                    print("ERROR: could not save \(town ?? "nil"), \(country ?? "nil") to CoreData")
+                }
+            }
+        }
+        if town != nil || country != nil { // TODO duplicate
+            print("Location: \(photoClub.town), \(photoClub.country)")
+            if let town { photoClub.town = town }
+            if let country { photoClub.country = country}
+            do {
+                try bgContext.save() // TODO this save triggers exception if com.apple.CoreData.ConcurrencyDebug = 1
+            } catch {
+                print("ERROR: could not save \(town ?? "nil"), \(country ?? "nil") to CoreData")
+            }
         }
     }
 
@@ -211,6 +237,26 @@ struct PhotoClubView: View {
 
 }
 
+extension PhotoClubView { // reverse GeoCoding
+
+    func reverseGeocode(coordinates: CLLocationCoordinate2D) async throws -> (city: String?, country: String?) {
+        let geocoder = CLGeocoder()
+        let location = CLLocation(latitude: coordinates.latitude,
+                                  longitude: coordinates.longitude)
+
+        guard let placemark = try await geocoder.reverseGeocodeLocation(location).first else {
+            throw CLError(.geocodeFoundNoResult)
+        }
+
+        let town = placemark.locality
+        let country = placemark.country
+//        print("\(placemark.locality ?? "No Town")")
+//        print("\(placemark.country ?? "No Country")")
+        return (town, country)
+    }
+
+}
+
 extension PhotoClubView {
 
     static var userLocation: CLLocationCoordinate2D {
@@ -221,6 +267,28 @@ extension PhotoClubView {
         MKCoordinateRegion(center: PhotoClubView.userLocation,
                            latitudinalMeters: 10000, longitudinalMeters: 10000)
     }
+}
+
+extension PhotoClubView { // tests for equality
+
+    private func isEqual(mapItem: MKMapItem, photoclub: PhotoClub) -> Bool {
+        // a little bit scary to compare two floats for equality, but for now it only affects the color of the marker
+        if mapItem.placemark.coordinate.latitude != photoclub.coordinates.latitude {
+            return false
+        } else {
+            return mapItem.placemark.coordinate.longitude == photoclub.coordinates.longitude
+        }
+    }
+
+    private func isEqual(mapItemLHS: MKMapItem, mapItemRHS: MKMapItem?) -> Bool {
+        // a little bit scary to compare two floats for equality
+        if mapItemLHS.placemark.coordinate.latitude != mapItemRHS?.placemark.coordinate.latitude {
+            return false
+        } else {
+            return mapItemLHS.placemark.coordinate.longitude == mapItemRHS?.placemark.coordinate.longitude
+        }
+    }
+
 }
 
 struct PhotoClubsInner_Previews: PreviewProvider {

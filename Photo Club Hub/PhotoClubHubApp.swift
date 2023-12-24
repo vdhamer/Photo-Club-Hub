@@ -32,7 +32,7 @@ struct FotogroepWaalreApp: App {
                 .onAppear {
 
                     // load test member(s) of Fotogroep Bellus Imago
-                   let biBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+                    let biBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
                     biBackgroundContext.name = "Bellus Imago refresh"
                     biBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
                     _ = BellusImagoMembersProvider(bgContext: biBackgroundContext)

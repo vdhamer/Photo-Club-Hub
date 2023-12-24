@@ -70,31 +70,6 @@ extension PhotoClub {
         set { country_ = newValue}
     }
 
-    var country2: String { // TODO
-        get {
-            var country = "UnknownCountry"
-            let geocoder = CLGeocoder()
-
-            let location = CLLocation(latitude: coordinates.latitude, longitude: coordinates.longitude)
-            geocoder.reverseGeocodeLocation(location, completionHandler: {(placemarks, error) -> Void in
-                if error != nil {
-                    print("Failed to retrieve address: \(error!)")
-                    return
-                }
-
-                if let placemarks, let placemark = placemarks.first, let country = placemark.country {
-                    print(placemark.address!)
-                    self.country = placemark.country!
-                    return
-                } else {
-                    print("No Matching Address Found")
-                    return
-                }
-            })
-            return country
-        }
-    }
-
     var memberListURL: URL? { // use memberListURL for display only (memberListURL_ is the real source of truth)
         get {
             if let urlString = memberListURL_?.absoluteString {

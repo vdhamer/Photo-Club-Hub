@@ -77,7 +77,7 @@ class ClubList {
                 let idPlus = PhotoClubIdPlus(fullName: jsonClub["idPlus"]["fullName"].stringValue,
                                              town: jsonClub["idPlus"]["town"].stringValue,
                                              nickname: jsonClub["idPlus"]["nickName"].stringValue)
-                ifDebugPrint("Adding Club# \(idPlus.fullName), \(idPlus.town), aka \(idPlus.nickname)")
+                ifDebugPrint("Adding club \(idPlus.fullName), \(idPlus.town), aka \(idPlus.nickname)")
                 let coordinates = CLLocationCoordinate2D(latitude: jsonClub["coordinates"]["latitude"].doubleValue,
                                                          longitude: jsonClub["coordinates"]["longitude"].doubleValue)
                 let photoClubWebsite = URL(string: jsonClub["website"].stringValue)
