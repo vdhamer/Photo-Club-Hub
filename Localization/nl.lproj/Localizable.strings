@@ -28,6 +28,9 @@
 /* Administrative role of member within a club. Used as part of concatenations. */
 "chairman" = "voorzitter";
 
+/* Title of page with maps of clubs and musea */
+"Clubs" = "Clubs";
+
 /* Section title on Readme page */
 "Concept" = "Het concept";
 

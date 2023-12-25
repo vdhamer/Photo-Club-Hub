@@ -1,11 +1,12 @@
 ### 2.5.3 (Github commit 51501f7) ??-00-24
 
 Photo Clubs screen
+    * Renamed screen to Clubs (NL Clubs)to save space for future mode toggle or button.
     * Maps can display about 15 photography musea in various countries. _not completed yet_
     * Additional photo clubs (and musea) can be loaded from an online ClubList.json data file.
     * Country where a photoclub (or museum) is located is automatically found using its GPS coordinates.
     * Town and Country are localized to both English (e.g., Paris, France) and Dutch (e.g. Parijs, Frankrijk).
-    * Changed order of footnotes at bottom of screen. 3rd footnote is hidden after feature is triggered once by user.
+    * Changed order of footnotes at bottom of screen. 3rd footnote is dimmed if feature has already been used once.
     * Musea are displayed using a new type of marker pin. _not implemented yet_
 Portfolios screen
     * Name of towns are now localized if applicable. Example: "Den Haag" (NL) <> "The Hague" (EN)

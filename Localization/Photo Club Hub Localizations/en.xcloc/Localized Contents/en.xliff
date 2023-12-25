@@ -52,6 +52,11 @@
         <target>Birthday:</target>
         <note>Birthday of member (without year). Date not currently localized?</note>
       </trans-unit>
+      <trans-unit id="Clubs" xml:space="preserve">
+        <source>Clubs</source>
+        <target>Clubs</target>
+        <note>Title of page with maps of clubs and musea</note>
+      </trans-unit>
       <trans-unit id="Concept" xml:space="preserve">
         <source>The concept</source>
         <target>The concept</target>

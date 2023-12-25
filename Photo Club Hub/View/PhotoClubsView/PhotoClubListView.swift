@@ -21,7 +21,7 @@ struct PhotoClubListView: View {
     private var photoClubs: FetchedResults<PhotoClub>
 
     private var predicate: NSPredicate = NSPredicate.all
-    private var navigationTitle = String(localized: "Photo Clubs", comment: "Title of page with clubs and maps")
+    private var navigationTitle = String(localized: "Clubs", comment: "Title of page with maps of clubs and musea")
 
     init(predicate: NSPredicate? = nil,
          navigationTitle: String? = nil) {
