@@ -206,8 +206,14 @@ Default status of member within a club. Used in concatenations. */
 /* Title of page with clubs and maps */
 "Photo Clubs" = "Photo Clubs";
 
-/* Shown in gray at the bottom of the Photo Club page. */
-"PhotoClubs_Caption" = "① You can unlock/lock a map's scrolling and panning features using the Lock icon.\n② To add extra photo clubs for testing purposes, drag down and release the top of the page.\n③ An individiual photo club can be deleted by first deleting (swipe left) all linked Portfolios on the Portfolio page, and then deleting (swipe left) the photo club itself on this page.";
+/* Shown in gray at the bottom of the Photo Club page (1/3).*/
+"PhotoClubs_Caption_1" = "① You can unlock/lock a map's scrolling and panning features using the Lock icon.";
+
+/* Shown in gray at the bottom of the Photo Club page (2/3).*/
+"PhotoClubs_Caption_2" = "② An individiual photo club can be deleted by first deleting (swipe left) all linked Portfolios on the Portfolio page, and then deleting (swipe left) the photo club itself on this page.";
+
+/* Shown in gray at the bottom of the Photo Club page (3/3).*/
+"PhotoClubs_Caption_3" = "③ To add extra photo clubs for testing purposes, drag down and release the top of the page.";
 
 /* Title of page showing member portfolios */
 "Portfolios" = "Portfolios";

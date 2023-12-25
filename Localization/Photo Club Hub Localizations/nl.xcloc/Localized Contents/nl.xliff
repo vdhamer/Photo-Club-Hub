@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
-  <file original="en.lproj/Fotogroep-Waalre-InfoPlist.strings" source-language="en" target-language="nl" datatype="plaintext">
+  <file original="en.lproj/Photo-Club-Hub-InfoPlist.strings" source-language="en" target-language="nl" datatype="plaintext">
     <header>
       <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="15.1" build-num="15C65"/>
     </header>
@@ -15,14 +15,14 @@
         <target>Fotoclub Hub</target>
         <note>Bundle name</note>
       </trans-unit>
-      <trans-unit id="CFBundleSpokenName" xml:space="preserve">
-        <source>Photo Club Hub</source>
-        <target>Fotoclub Hub</target>
-        <note>used for text-to-speech</note>
+      <trans-unit id="NSLocationWhenInUseUsageDescription" xml:space="preserve">
+        <source>User's location is shown on the maps.</source>
+        <target>Voor het weergeven van huidige locatie op de landkaarten.</target>
+        <note>Privacy - Location When In Use Usage Description</note>
       </trans-unit>
     </body>
   </file>
-  <file original="en.lproj/Localizable.strings" source-language="en" target-language="nl" datatype="plaintext">
+  <file original="Localization/en.lproj/Localizable.strings" source-language="en" target-language="nl" datatype="plaintext">
     <header>
       <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="15.1" build-num="15C65"/>
     </header>
@@ -314,14 +314,20 @@ Iedere ***PhotoClub*** heeft ***Members*** van diverse soorten (b.v. huidige led
         <target>Fotogroepen</target>
         <note>Title of page with clubs and maps</note>
       </trans-unit>
-      <trans-unit id="PhotoClubs_Caption" xml:space="preserve">
-        <source>① You can unlock/lock a map's scrolling and panning features using the Lock icon.
-② To add extra photo clubs for testing purposes, drag down and release the top of the page.
-③ An individiual photo club can be deleted by first deleting (swipe left) all linked Portfolios on the Portfolio page, and then deleting (swipe left) the photo club itself on this page.</source>
-        <target>① Het slotje kan gebruikt worden om deze landkaarten sleepbaar en inzoombaar/uitzoombaar te maken.
-② Men kan enkele testfotogroepen (voor demo doeleinden) toevoegen door de bovenkant van deze pagina omlaag te slepen en los te laten (*pull to refresh*).
-③ Een fotogroep kan verwijderd worden door eerst alle betrokken Portfolio's te verwijderen (*swipe left*) en dan de fotoclub zelf te verwijderen (*swipe left*).</target>
-        <note>Shown in gray at the bottom of the Photo Club page.</note>
+      <trans-unit id="PhotoClubs_Caption_1" xml:space="preserve">
+        <source>① You can unlock/lock a map's scrolling and panning features using the Lock icon.</source>
+        <target>① Het slotje kan gebruikt worden om deze landkaarten sleepbaar en inzoombaar/uitzoombaar te maken.</target>
+        <note>Shown in gray at the bottom of the Photo Club page (1/3).</note>
+      </trans-unit>
+      <trans-unit id="PhotoClubs_Caption_2" xml:space="preserve">
+        <source>② An individiual photo club can be deleted by first deleting (swipe left) all linked Portfolios on the Portfolio page, and then deleting (swipe left) the photo club itself on this page.</source>
+        <target>② Een fotogroep kan verwijderd worden door eerst alle betrokken Portfolio's te verwijderen (*swipe left*) en dan de fotoclub zelf te verwijderen (*swipe left*).</target>
+        <note>Shown in gray at the bottom of the Photo Club page (2/3).</note>
+      </trans-unit>
+      <trans-unit id="PhotoClubs_Caption_3" xml:space="preserve">
+        <source>③ To add extra photo clubs for testing purposes, drag down and release the top of the page.</source>
+        <target>③ Men kan enkele testfotogroepen (voor demo doeleinden) toevoegen door de bovenkant van deze pagina omlaag te slepen en los te laten (*pull to refresh*).</target>
+        <note>Shown in gray at the bottom of the Photo Club page (3/3).</note>
       </trans-unit>
       <trans-unit id="Portfolios" xml:space="preserve">
         <source>Portfolios</source>
@@ -536,50 +542,6 @@ Default status of member within a club. Used in concatenations.</note>
         <source>“Former members” includes “deceased members”</source>
         <target>De optie “ex-leden“ bevat “overleden leden“</target>
         <note>Shown when "Show deceased members" entry is missing in Preferences</note>
-      </trans-unit>
-    </body>
-  </file>
-  <file original="en.lproj/Photo-Club-Hub-InfoPlist.strings" datatype="plaintext" source-language="en" target-language="nl">
-    <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="15.1" build-num="15C65"/>
-    </header>
-    <body>
-      <trans-unit id="CFBundleDisplayName" xml:space="preserve">
-        <source>Photo Club Hub</source>
-        <target state="translated">Fotoclub Hub</target>
-        <note>Bundle display name</note>
-      </trans-unit>
-      <trans-unit id="CFBundleName" xml:space="preserve">
-        <source>Photo Club Hub</source>
-        <target state="translated">Fotoclub Hub</target>
-        <note>Bundle name</note>
-      </trans-unit>
-      <trans-unit id="NSLocationWhenInUseUsageDescription" xml:space="preserve">
-        <source>User's location is shown on the maps.</source>
-        <target state="translated">Om huidige locatie weer te geven op de landkaarten.</target>
-        <note>Privacy - Location When In Use Usage Description</note>
-      </trans-unit>
-    </body>
-  </file>
-  <file original="Settings.bundle/en.lproj/Root.strings" source-language="en" target-language="nl" datatype="plaintext">
-    <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="15.1" build-num="15C65"/>
-    </header>
-    <body>
-      <trans-unit id="About" xml:space="preserve">
-        <source>About</source>
-        <target>Over deze app</target>
-        <note/>
-      </trans-unit>
-      <trans-unit id="Copyright" xml:space="preserve">
-        <source>Copyright</source>
-        <target>Auteursrecht</target>
-        <note/>
-      </trans-unit>
-      <trans-unit id="Version" xml:space="preserve">
-        <source>Version</source>
-        <target>Versie</target>
-        <note/>
       </trans-unit>
     </body>
   </file>

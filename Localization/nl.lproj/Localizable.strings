@@ -206,8 +206,14 @@ Default status of member within a club. Used in concatenations. */
 /* Title of page with clubs and maps */
 "Photo Clubs" = "Fotogroepen";
 
-/* Shown in gray at the bottom of the Photo Club page. */
-"PhotoClubs_Caption" = "① Het slotje kan gebruikt worden om deze landkaarten sleepbaar en inzoombaar/uitzoombaar te maken.\n② Men kan enkele testfotogroepen (voor demo doeleinden) toevoegen door de bovenkant van deze pagina omlaag te slepen en los te laten (*pull to refresh*).\n③ Een fotogroep kan verwijderd worden door eerst alle betrokken Portfolio's te verwijderen (*swipe left*) en dan de fotoclub zelf te verwijderen (*swipe left*).";
+/* Shown in gray at the bottom of the Photo Club page (1/3). */
+"PhotoClubs_Caption_1" = "① Het slotje kan gebruikt worden om deze landkaarten sleepbaar en inzoombaar/uitzoombaar te maken.";
+
+/* Shown in gray at the bottom of the Photo Club page (2/3). */
+"PhotoClubs_Caption_2" = "② Een fotogroep kan verwijderd worden door eerst alle betrokken Portfolio's te verwijderen (*swipe left*) en dan de fotoclub zelf te verwijderen (*swipe left*).";
+
+/* Shown in gray at the bottom of the Photo Club page (3/3). */
+"PhotoClubs_Caption_3" = "③ Men kan enkele testfotogroepen (voor demo doeleinden) toevoegen door de bovenkant van deze pagina omlaag te slepen en los te laten (*pull to refresh*).";
 
 /* Title of page showing member portfolios */
 "Portfolios" = "Portfolio's";

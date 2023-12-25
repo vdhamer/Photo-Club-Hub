@@ -1,8 +1,0 @@
-/* Bundle name */
-"CFBundleName" = "Photo Club Hub";
-
-/* Bundle display name */
-"CFBundleDisplayName" = "Photo Club Hub";
-
-/* used for text-to-speech */
-"CFBundleSpokenName" = "Photo Club Hub";

@@ -42,8 +42,16 @@ struct PhotoClubListView: View {
                 if photoClubs.isEmpty {
                     NoClubsText()
                 }
-                Text("PhotoClubs_Caption", comment: "Shown in gray at the bottom of the Photo Club page.")
+                Text("PhotoClubs_Caption_1", comment: "Shown in gray at the bottom of the Photo Club page (1/3).")
                     .foregroundColor(.gray)
+                Text("PhotoClubs_Caption_2", comment: "Shown in gray at the bottom of the Photo Club page (2/3).")
+                    .foregroundColor(.gray)
+                if !UserDefaults.standard.bool(forKey: "ClubListPageRefreshed") {
+                    // Hide footnote if the ".refreshable" option has already been used in release 2.5.3 or later.
+                    // If the page has been force refreshed before then, footnote disappears after 1 pull down swipe.
+                    Text("PhotoClubs_Caption_3", comment: "Shown in gray at the bottom of the Photo Club page (3/3).")
+                        .foregroundColor(.gray)
+                }
             }
             .listStyle(.plain)
             .task {
@@ -52,8 +60,10 @@ struct PhotoClubListView: View {
                 // remember that nothing will run here until the for try await loop finishes
             }
             .refreshable { // for pull-to-refresh
+                UserDefaults.standard.set(true, forKey: "ClubListPageRefreshed")
+
                 // load test member(s) of Fotogroep Bellus Imago
-               let biBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+                let biBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
                 biBackgroundContext.name = "Bellus Imago refresh"
                 biBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
                 _ = BellusImagoMembersProvider(bgContext: biBackgroundContext)
