@@ -42,16 +42,13 @@ struct PhotoClubListView: View {
                 if photoClubs.isEmpty {
                     NoClubsText()
                 }
-                Text("PhotoClubs_Caption_1", comment: "Shown in gray at the bottom of the Photo Club page (1/3).")
-                    .foregroundColor(.gray)
-                Text("PhotoClubs_Caption_2", comment: "Shown in gray at the bottom of the Photo Club page (2/3).")
-                    .foregroundColor(.gray)
-                if !UserDefaults.standard.bool(forKey: "ClubListPageRefreshed") {
-                    // Hide footnote if the ".refreshable" option has already been used in release 2.5.3 or later.
-                    // If the page has been force refreshed before then, footnote disappears after 1 pull down swipe.
+                Group {
+                    Text("PhotoClubs_Caption_1", comment: "Shown in gray at the bottom of the Photo Club page (1/3).")
+                    Text("PhotoClubs_Caption_2", comment: "Shown in gray at the bottom of the Photo Club page (2/3).")
+                    // If the page has been force refreshed before then dim text of third item.
                     Text("PhotoClubs_Caption_3", comment: "Shown in gray at the bottom of the Photo Club page (3/3).")
-                        .foregroundColor(.gray)
-                }
+                        .opacity(UserDefaults.standard.bool(forKey: "ClubListPageRefreshed") ? 0.3 : 1)
+                } .foregroundColor(Color.primary)
             }
             .listStyle(.plain)
             .task {
