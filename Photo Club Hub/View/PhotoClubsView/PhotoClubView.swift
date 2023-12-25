@@ -111,19 +111,21 @@ struct PhotoClubView: View {
                     initializeCameraPosition(photoClub: filteredPhotoClub) // works better than .onAppear(perform:)?
                 }
                 .onAppear {
-                    // on main queue
+                    // on main queue (avoid accessing NSManagedObjects on background thread!)
                     let clubName = filteredPhotoClub.fullName
-                    let oldTown = filteredPhotoClub.town // old = before translation
+                    let town = filteredPhotoClub.town // untranslated
                     let coordinates = filteredPhotoClub.coordinates
 
                     Task.detached { // other (non-bgContext) background thread to access 2 async functions
-                        var newTown: String?
-                        var newCountry: String?
+                        var localizedTown: String?
+                        var localizedCountry: String?
                         do {
                             let (locality, nation) =
                                 try await reverseGeocode(coordinates: coordinates)
-                            newTown = locality
-                            newCountry = nation
+                            localizedTown = locality
+                            localizedCountry = nation
+                            await updateTownCountry(clubName: clubName, town: town,
+                                                    localizedTown: localizedTown, localizedCountry: localizedCountry)
                         } catch {
                             print("""
                                   ERROR: could not reverseGeocode (\
@@ -131,8 +133,6 @@ struct PhotoClubView: View {
                                   \(filteredPhotoClub.coordinates.longitude))
                                   """)
                         }
-                        await updateTownCountry(clubName: clubName, oldTown: oldTown,
-                                                newTown: newTown, newCountry: newCountry)
                     }
                 }
                 .onDisappear(perform: { try? viewContext.save() }) // store map scroll-lock states in database
@@ -153,10 +153,10 @@ struct PhotoClubView: View {
     }
 
     // find PhotoClub using identifier (clubName,oldTown) and fill (newTown,newCountry) in CoreData database
-    private func updateTownCountry(clubName: String, oldTown: String,
-                                   newTown: String?, newCountry: String?) async {
+    private func updateTownCountry(clubName: String, town: String,
+                                   localizedTown: String?, localizedCountry: String?) async {
 
-        guard (newTown != nil) || (newCountry != nil) else { return } // nothing to update
+        guard (localizedTown != nil) || (localizedCountry != nil) else { return } // nothing to update
 
         let bgContext = PersistenceController.shared.container.newBackgroundContext() // background thread
         bgContext.name = "reverseGeocode \(clubName)"
@@ -167,11 +167,11 @@ struct PhotoClubView: View {
             fetchRequest = PhotoClub.fetchRequest()
 
             // Create the component predicates
-            let namePredicate = NSPredicate(format: "name_ = %@", clubName)
-            let townPredicate = NSPredicate(format: "town_ = %@", oldTown)
+            let clubPredicate = NSPredicate(format: "name_ = %@", clubName)
+            let townPredicate = NSPredicate(format: "town_ = %@", town)
 
             fetchRequest.predicate = NSCompoundPredicate(
-                andPredicateWithSubpredicates: [namePredicate, townPredicate]
+                andPredicateWithSubpredicates: [clubPredicate, townPredicate]
             )
 
             let photoClub = try? bgContext.fetch(fetchRequest).first
@@ -182,15 +182,19 @@ struct PhotoClubView: View {
 
             print("""
                   Photo Club: \(photoClub.fullName), \(photoClub.town) -> \
-                  \(String(describing: newTown)), \(String(describing: newCountry))
+                  \(String(describing: localizedTown)), \(String(describing: localizedCountry))
                   """)
 
-            if let newTown { photoClub.localizedTown = newTown }
-            if let newCountry { photoClub.localizedCountry = newCountry}
+            if let localizedTown { photoClub.localizedTown = localizedTown }
+            if let localizedCountry { photoClub.localizedCountry = localizedCountry}
             do {
                 try bgContext.save() // com.apple.CoreData.ConcurrencyDebug exposes problems
             } catch {
-                print("ERROR: could not save \(newTown ?? "nil"), \(newCountry ?? "nil") for \(clubName) to CoreData")
+                print("""
+                      ERROR: could not save \
+                      \(localizedTown ?? "nil"), \(localizedCountry ?? "nil") \
+                      for \(clubName) to CoreData
+                      """)
             }
         }
     }
