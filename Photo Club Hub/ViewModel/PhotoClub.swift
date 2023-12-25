@@ -57,17 +57,28 @@ extension PhotoClub {
 		set { town_ = newValue }
 	}
 
-    var country: String {
+    var localizedTown: String {
         /*
-            This currently reads the value from the Core Data store.
-            That value should be non-nil because of a default.
-            Idea is to use Core Location to look up coordinates (if available) and overwrite
-            the value in the database. This CL functionality is asynchronous.
-            The functionality can be triggered by a static function PhotoClub.RefreshCountries, but that
-            would need to await completion to avoid overlapping calls to Core Location.
-         */
-        get { return country_ ?? "ErrorCountry" }
-        set { country_ = newValue}
+            LocalizedCountry is retrieved from the CoreData database, where it is not optional.
+            It is calculated using the mandatory GPS coordinates using reverseGeolocation.
+            During this reverseGeolocation, the string is automatically adapted to the current locale.
+            Example: Paris returns localizedTown="Paris" if the device is set to Dutch.
+            The value of Town is not localized and is the original value provided by the user.
+            Localization may return a slightly different town: Tokyo -> suburb of Tokyo (because "Tokyo" is not used).
+        */
+        get { return localizedTown_ ?? "ErrorTown" }
+        set { localizedTown_ = newValue}
+    }
+
+    var localizedCountry: String {
+        /*
+            LocalizedCountry is retrieved from the CoreData database, where it is not optional.
+            It is calculated using the mandatory GPS coordinates using reverseGeolocation.
+            During this reverseGeolocation, the string is automatically adapted to the current locale.
+            Example: Paris returns localizedCountry="Frankrijk" if the device is set to Dutch.
+        */
+        get { return localizedCountry_ ?? "ErrorCountry" }
+        set { localizedCountry_ = newValue}
     }
 
     var memberListURL: URL? { // use memberListURL for display only (memberListURL_ is the real source of truth)
