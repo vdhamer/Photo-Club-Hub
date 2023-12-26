@@ -1,5 +1,5 @@
 //
-//  LocationType.swift
+//  OrganizationType.swift
 //  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 26/12/2023.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum LocationType { // enum rawValue feature not used because string needs localization
+enum OrganizationType { // enum rawValue feature not used because string needs localization
     case clubs
     case musea
 
@@ -27,7 +27,7 @@ enum LocationType { // enum rawValue feature not used because string needs local
                           comment: "Mode for the Clubs page: show photo clubs as sections.")
         case .musea:
             return String(localized: "musea",
-                          comment: "Mode for the Clubs page: show photo clubs as sections.")
+                          comment: "Mode for the Clubs page: show musea as sections.")
         }
     }
 }

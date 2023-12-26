@@ -56,12 +56,12 @@ class ClubList {
 
     init(bgContext: NSManagedObjectContext) {
 
-        bgContext.perform {
-            self.readJSONClubList(bgContext: bgContext, locationTypes: [.clubs, .musea]) // move to background thread
+        bgContext.perform { // move to background thread
+            self.readJSONClubList(bgContext: bgContext, organizationTypes: [.clubs, .musea])
         }
     }
 
-    private func readJSONClubList(bgContext: NSManagedObjectContext, locationTypes: [LocationType]) {
+    private func readJSONClubList(bgContext: NSManagedObjectContext, organizationTypes: [OrganizationType]) {
 
         ifDebugPrint("Starting readJSONClubList() in background")
 
@@ -70,27 +70,24 @@ class ClubList {
             let jsonRoot = JSON(parseJSON: data) // call to SwiftyJSON
 
             // extract the Clubs part of JSON string
-            for locationType in locationTypes { // TODO cleanup
-                let jsonClubs: [JSON] = jsonRoot[locationType.unlocalizedString].arrayValue
-                ifDebugPrint("Found \(jsonClubs.count) \(locationType.unlocalizedString) in file.")
+            for organizationType in organizationTypes {
+                let jsonOrganizations: [JSON] = jsonRoot[organizationType.unlocalizedString].arrayValue
+                ifDebugPrint("Found \(jsonOrganizations.count) \(organizationType.unlocalizedString) in file.")
 
-                for jsonClub in jsonClubs {
-                    let idPlus = PhotoClubIdPlus(fullName: jsonClub["idPlus"]["fullName"].stringValue,
-                                                 town: jsonClub["idPlus"]["town"].stringValue,
-                                                 nickname: jsonClub["idPlus"]["nickName"].stringValue)
-                    ifDebugPrint("Adding club \(idPlus.fullName), \(idPlus.town), aka \(idPlus.nickname)")
-                    let jsonCoordinates = jsonClub["coordinates"]
+                for jsonOrganization in jsonOrganizations {
+                    let idPlus = PhotoClubIdPlus(fullName: jsonOrganization["idPlus"]["fullName"].stringValue,
+                                                 town: jsonOrganization["idPlus"]["town"].stringValue,
+                                                 nickname: jsonOrganization["idPlus"]["nickName"].stringValue)
+                    ifDebugPrint("Adding organization \(idPlus.fullName), \(idPlus.town), aka \(idPlus.nickname)")
+                    let jsonCoordinates = jsonOrganization["coordinates"]
                     let coordinates = CLLocationCoordinate2D(latitude: jsonCoordinates["latitude"].doubleValue,
                                                              longitude: jsonCoordinates["longitude"].doubleValue)
-                    let photoClubWebsite = URL(string: jsonClub["website"].stringValue)
-                    let club = PhotoClub.findCreateUpdate(
-                                                          context: bgContext,
-                                                          photoClubIdPlus: idPlus,
-                                                          photoClubWebsite: photoClubWebsite,
-                                                          fotobondNumber: nil, kvkNumber: nil,
-                                                          coordinates: coordinates
-                                                         )
-                    club.hasHardCodedMemberData = true // TODO needed?
+                    let photoClubWebsite = URL(string: jsonOrganization["website"].stringValue)
+                    let _ = PhotoClub.findCreateUpdate(context: bgContext,
+                                                       photoClubIdPlus: idPlus,
+                                                       photoClubWebsite: photoClubWebsite,
+                                                       fotobondNumber: nil, kvkNumber: nil,
+                                                       coordinates: coordinates)
                 }
                 do {
                     if bgContext.hasChanges {
