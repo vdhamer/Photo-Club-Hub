@@ -17,6 +17,7 @@
 		D02802D32B2653E7008FCD8C /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D02802D22B2653E7008FCD8C /* SwiftyJSON */; };
 		D02C273C2AEE6F870005F957 /* AndersMembersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02C273B2AEE6F870005F957 /* AndersMembersProvider.swift */; };
 		D02C273E2AEE6FCD0005F957 /* AndersMembersProvider+InsertSomeHardcodedMemberData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02C273D2AEE6FCD0005F957 /* AndersMembersProvider+InsertSomeHardcodedMemberData.swift */; };
+		D030CD652B3AE2E800A12E90 /* LocationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D030CD642B3AE2E800A12E90 /* LocationType.swift */; };
 		D032944A283F9D1D0044C70C /* Bundle+VersionBuild.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0329449283F9D1D0044C70C /* Bundle+VersionBuild.swift */; };
 		D0362A872AC3A21200F87378 /* String+containsWordUsingNLP.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0362A862AC3A21200F87378 /* String+containsWordUsingNLP.swift */; };
 		D040566D29A0287200CB64B8 /* MemberPortfolioRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D040566C29A0287200CB64B8 /* MemberPortfolioRow.swift */; };
@@ -122,6 +123,7 @@
 		D02C273B2AEE6F870005F957 /* AndersMembersProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AndersMembersProvider.swift; sourceTree = "<group>"; };
 		D02C273D2AEE6FCD0005F957 /* AndersMembersProvider+InsertSomeHardcodedMemberData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AndersMembersProvider+InsertSomeHardcodedMemberData.swift"; sourceTree = "<group>"; };
 		D02C35F12880C3D6008C671A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D030CD642B3AE2E800A12E90 /* LocationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationType.swift; sourceTree = "<group>"; };
 		D0329449283F9D1D0044C70C /* Bundle+VersionBuild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+VersionBuild.swift"; sourceTree = "<group>"; };
 		D0362A862AC3A21200F87378 /* String+containsWordUsingNLP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+containsWordUsingNLP.swift"; sourceTree = "<group>"; };
 		D040566C29A0287200CB64B8 /* MemberPortfolioRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberPortfolioRow.swift; sourceTree = "<group>"; };
@@ -424,6 +426,7 @@
 				D0621E822AE2DF1B000FFADB /* MemberPortfolio */,
 				D0831A29277F72590049AB84 /* PreferencesViewModel.swift */,
 				D0C53BDC2ABF3ADF000722A1 /* PersonName.swift */,
+				D030CD642B3AE2E800A12E90 /* LocationType.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -888,6 +891,7 @@
 				D0831A1E277F72270049AB84 /* PreferencesView.swift in Sources */,
 				D02C273E2AEE6FCD0005F957 /* AndersMembersProvider+InsertSomeHardcodedMemberData.swift in Sources */,
 				D0831A37277F72590049AB84 /* FotogroepWaalreMembersProvider.swift in Sources */,
+				D030CD652B3AE2E800A12E90 /* LocationType.swift in Sources */,
 				D0831A31277F72590049AB84 /* MemberPortfolio.swift in Sources */,
 				D0831A32277F72590049AB84 /* Photographer.swift in Sources */,
 				D044646527FCE7C100990613 /* UIDevice+IsIPad.swift in Sources */,

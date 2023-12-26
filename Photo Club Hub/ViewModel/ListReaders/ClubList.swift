@@ -57,11 +57,11 @@ class ClubList {
     init(bgContext: NSManagedObjectContext) {
 
         bgContext.perform {
-            self.readJSONClubList(bgContext: bgContext) // move to background thread
+            self.readJSONClubList(bgContext: bgContext, locationTypes: [.clubs, .musea]) // move to background thread
         }
     }
 
-    private func readJSONClubList(bgContext: NSManagedObjectContext) {
+    private func readJSONClubList(bgContext: NSManagedObjectContext, locationTypes: [LocationType]) {
 
         ifDebugPrint("Starting readJSONClubList() in background")
 
@@ -70,35 +70,38 @@ class ClubList {
             let jsonRoot = JSON(parseJSON: data) // call to SwiftyJSON
 
             // extract the Clubs part of JSON string
-            let jsonClubs: [JSON] = jsonRoot["clubs"].arrayValue
-            ifDebugPrint("Found \(jsonClubs.count) clubs in file.")
+            for locationType in locationTypes { // TODO cleanup
+                let jsonClubs: [JSON] = jsonRoot[locationType.unlocalizedString].arrayValue
+                ifDebugPrint("Found \(jsonClubs.count) \(locationType.unlocalizedString) in file.")
 
-            for jsonClub in jsonClubs {
-                let idPlus = PhotoClubIdPlus(fullName: jsonClub["idPlus"]["fullName"].stringValue,
-                                             town: jsonClub["idPlus"]["town"].stringValue,
-                                             nickname: jsonClub["idPlus"]["nickName"].stringValue)
-                ifDebugPrint("Adding club \(idPlus.fullName), \(idPlus.town), aka \(idPlus.nickname)")
-                let coordinates = CLLocationCoordinate2D(latitude: jsonClub["coordinates"]["latitude"].doubleValue,
-                                                         longitude: jsonClub["coordinates"]["longitude"].doubleValue)
-                let photoClubWebsite = URL(string: jsonClub["website"].stringValue)
-                let club = PhotoClub.findCreateUpdate(
-                                                      context: bgContext,
-                                                      photoClubIdPlus: idPlus,
-                                                      photoClubWebsite: photoClubWebsite,
-                                                      fotobondNumber: nil, kvkNumber: nil,
-                                                      coordinates: coordinates
-                                                     )
-                club.hasHardCodedMemberData = true // TODO needed?
-            }
-            do {
-                if bgContext.hasChanges {
-                    try bgContext.save() // commit all changes
+                for jsonClub in jsonClubs {
+                    let idPlus = PhotoClubIdPlus(fullName: jsonClub["idPlus"]["fullName"].stringValue,
+                                                 town: jsonClub["idPlus"]["town"].stringValue,
+                                                 nickname: jsonClub["idPlus"]["nickName"].stringValue)
+                    ifDebugPrint("Adding club \(idPlus.fullName), \(idPlus.town), aka \(idPlus.nickname)")
+                    let jsonCoordinates = jsonClub["coordinates"]
+                    let coordinates = CLLocationCoordinate2D(latitude: jsonCoordinates["latitude"].doubleValue,
+                                                             longitude: jsonCoordinates["longitude"].doubleValue)
+                    let photoClubWebsite = URL(string: jsonClub["website"].stringValue)
+                    let club = PhotoClub.findCreateUpdate(
+                                                          context: bgContext,
+                                                          photoClubIdPlus: idPlus,
+                                                          photoClubWebsite: photoClubWebsite,
+                                                          fotobondNumber: nil, kvkNumber: nil,
+                                                          coordinates: coordinates
+                                                         )
+                    club.hasHardCodedMemberData = true // TODO needed?
                 }
-                ifDebugPrint("Completed inserting/updated JSON ClubList in background")
-            } catch {
-                ifDebugFatalError("Failed to save changes to Core Data",
-                                  file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
-                // in release mode, the failed database update is only logged. App doesn't stop.
+                do {
+                    if bgContext.hasChanges {
+                        try bgContext.save() // commit all changes
+                    }
+                    ifDebugPrint("Completed inserting/updated JSON ClubList in background")
+                } catch {
+                    ifDebugFatalError("Failed to save changes to Core Data",
+                                      file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
+                    // in release mode, the failed database update is only logged. App doesn't stop.
+                }
             }
         } else {
             ifDebugFatalError("Please check URL \(dataSourceURL)")

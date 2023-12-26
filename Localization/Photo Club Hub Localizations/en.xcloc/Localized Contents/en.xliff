@@ -465,6 +465,11 @@ Field at top of Members page that allows the user to filter the members based on
         <target>chairman</target>
         <note>Administrative role of member within a club. Used as part of concatenations.</note>
       </trans-unit>
+      <trans-unit id="clubs" xml:space="preserve">
+        <source>clubs</source>
+        <target>clubs</target>
+        <note>Mode for the Clubs page: show photo clubs as sections.</note>
+      </trans-unit>
       <trans-unit id="deceased" xml:space="preserve">
         <source>deceased</source>
         <target>deceased</target>
@@ -500,6 +505,11 @@ Default status of member within a club. Used in concatenations.</note>
         <source>members</source>
         <target>members</target>
         <note>Statistics at end of section of FilteredMemberPortfoliosView</note>
+      </trans-unit>
+      <trans-unit id="musea" xml:space="preserve">
+        <source>musea</source>
+        <target>musea</target>
+        <note>Mode for the Clubs page: show photo clubs as sections.</note>
       </trans-unit>
       <trans-unit id="of1" xml:space="preserve">
         <source>of</source>
