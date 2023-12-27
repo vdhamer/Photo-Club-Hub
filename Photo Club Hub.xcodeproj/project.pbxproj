@@ -17,6 +17,7 @@
 		D02802D32B2653E7008FCD8C /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D02802D22B2653E7008FCD8C /* SwiftyJSON */; };
 		D02C273C2AEE6F870005F957 /* AndersMembersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02C273B2AEE6F870005F957 /* AndersMembersProvider.swift */; };
 		D02C273E2AEE6FCD0005F957 /* AndersMembersProvider+InsertSomeHardcodedMemberData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02C273D2AEE6FCD0005F957 /* AndersMembersProvider+InsertSomeHardcodedMemberData.swift */; };
+		D030CD652B3AE2E800A12E90 /* OrganizationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D030CD642B3AE2E800A12E90 /* OrganizationType.swift */; };
 		D032944A283F9D1D0044C70C /* Bundle+VersionBuild.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0329449283F9D1D0044C70C /* Bundle+VersionBuild.swift */; };
 		D0362A872AC3A21200F87378 /* String+containsWordUsingNLP.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0362A862AC3A21200F87378 /* String+containsWordUsingNLP.swift */; };
 		D040566D29A0287200CB64B8 /* MemberPortfolioRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D040566C29A0287200CB64B8 /* MemberPortfolioRow.swift */; };
@@ -86,7 +87,6 @@
 		D0DF0F452B2CFA3800E9FEC8 /* Photo Club Hub Localizations in Resources */ = {isa = PBXBuildFile; fileRef = D0DF0F442B2CFA3800E9FEC8 /* Photo Club Hub Localizations */; };
 		D0E2235427DE9139002A8600 /* PreludeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E2235327DE9139002A8600 /* PreludeView.swift */; };
 		D0E694C927EF9B450054D634 /* LockAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E694C827EF9B450054D634 /* LockAnimationView.swift */; };
-		D0EAEB312B3C9E1700EC05B6 /* OrganizationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EAEB302B3C9E1700EC05B6 /* OrganizationType.swift */; };
 		D0EAEB332B3CA6D300EC05B6 /* OrganizationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EAEB322B3CA6D300EC05B6 /* OrganizationList.swift */; };
 		D0EB533C295775240061613B /* Crosshairs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EB533B295775240061613B /* Crosshairs.swift */; };
 /* End PBXBuildFile section */
@@ -123,6 +123,7 @@
 		D02C273B2AEE6F870005F957 /* AndersMembersProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AndersMembersProvider.swift; sourceTree = "<group>"; };
 		D02C273D2AEE6FCD0005F957 /* AndersMembersProvider+InsertSomeHardcodedMemberData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AndersMembersProvider+InsertSomeHardcodedMemberData.swift"; sourceTree = "<group>"; };
 		D02C35F12880C3D6008C671A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D030CD642B3AE2E800A12E90 /* OrganizationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationType.swift; sourceTree = "<group>"; };
 		D0329449283F9D1D0044C70C /* Bundle+VersionBuild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+VersionBuild.swift"; sourceTree = "<group>"; };
 		D0362A862AC3A21200F87378 /* String+containsWordUsingNLP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+containsWordUsingNLP.swift"; sourceTree = "<group>"; };
 		D040566C29A0287200CB64B8 /* MemberPortfolioRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberPortfolioRow.swift; sourceTree = "<group>"; };
@@ -208,7 +209,6 @@
 		D0E2235327DE9139002A8600 /* PreludeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreludeView.swift; sourceTree = "<group>"; };
 		D0E673BA2AE1C1A100A4DC95 /* Photo_Club_Hub_2_5_0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_5_0.xcdatamodel; sourceTree = "<group>"; };
 		D0E694C827EF9B450054D634 /* LockAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockAnimationView.swift; sourceTree = "<group>"; };
-		D0EAEB302B3C9E1700EC05B6 /* OrganizationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganizationType.swift; sourceTree = "<group>"; };
 		D0EAEB322B3CA6D300EC05B6 /* OrganizationList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganizationList.swift; sourceTree = "<group>"; };
 		D0EB533B295775240061613B /* Crosshairs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crosshairs.swift; sourceTree = "<group>"; };
 		D0F999502AACE217005FA0FF /* Photo_Club_Hub_2_4_2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_4_2.xcdatamodel; sourceTree = "<group>"; };
@@ -426,8 +426,8 @@
 				D0831A2D277F72590049AB84 /* PhotoClub.swift */,
 				D0831A25277F72590049AB84 /* Photographer.swift */,
 				D0831A29277F72590049AB84 /* PreferencesViewModel.swift */,
-				D0EAEB302B3C9E1700EC05B6 /* OrganizationType.swift */,
 				D0C53BDC2ABF3ADF000722A1 /* PersonName.swift */,
+				D030CD642B3AE2E800A12E90 /* OrganizationType.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -844,7 +844,6 @@
 				D05414F92AC749EC00D899D8 /* FotogroepDeGenderMembersProvider+insertSomeHardcodedMemberDataCommon.swift in Sources */,
 				D0831A1F277F72270049AB84 /* FilteredMemberPortfoliosView.swift in Sources */,
 				D08281332959C7EA00D9C232 /* FGWMembersProvider+extractEMail.swift in Sources */,
-				D0EAEB312B3C9E1700EC05B6 /* OrganizationType.swift in Sources */,
 				D0A4E6F529871DE700333D7B /* TestClubDenHaagMembersProvider+insertSomeHardcodedMemberData.swift in Sources */,
 				D0831A34277F72590049AB84 /* BellusImagoMembersProvider.swift in Sources */,
 				D0C53BDD2ABF3ADF000722A1 /* PersonName.swift in Sources */,
@@ -893,6 +892,7 @@
 				D0831A1E277F72270049AB84 /* PreferencesView.swift in Sources */,
 				D02C273E2AEE6FCD0005F957 /* AndersMembersProvider+InsertSomeHardcodedMemberData.swift in Sources */,
 				D0831A37277F72590049AB84 /* FotogroepWaalreMembersProvider.swift in Sources */,
+				D030CD652B3AE2E800A12E90 /* OrganizationType.swift in Sources */,
 				D0831A31277F72590049AB84 /* MemberPortfolio.swift in Sources */,
 				D0831A32277F72590049AB84 /* Photographer.swift in Sources */,
 				D0EAEB332B3CA6D300EC05B6 /* OrganizationList.swift in Sources */,

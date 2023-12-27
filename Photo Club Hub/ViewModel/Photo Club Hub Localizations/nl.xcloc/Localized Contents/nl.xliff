@@ -469,7 +469,6 @@ Field at top of Members page that allows the user to filter the members based on
       </trans-unit>
       <trans-unit id="clubs" xml:space="preserve">
         <source>clubs</source>
-        <target state="translated">clubs</target>
         <note>Mode for the Clubs page: show photo clubs as sections.</note>
       </trans-unit>
       <trans-unit id="deceased" xml:space="preserve">
@@ -508,9 +507,8 @@ Default status of member within a club. Used in concatenations.</note>
         <target>leden</target>
         <note>Statistics at end of section of FilteredMemberPortfoliosView</note>
       </trans-unit>
-      <trans-unit id="musea" xml:space="preserve">
-        <source>musea</source>
-        <target state="translated">musea</target>
+      <trans-unit id="museums" xml:space="preserve">
+        <source>museums</source>
         <note>Mode for the Clubs page: show photo clubs as sections.</note>
       </trans-unit>
       <trans-unit id="of1" xml:space="preserve">

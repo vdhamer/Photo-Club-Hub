@@ -28,6 +28,9 @@
 /* Administrative role of member within a club. Used as part of concatenations. */
 "chairman" = "voorzitter";
 
+/* Mode for the Clubs page: show photo clubs as sections. */
+"clubs" = "clubs";
+
 /* Title of page with maps of clubs and musea */
 "Clubs" = "Clubs";
 
@@ -79,6 +82,9 @@ Default status of member within a club. Used in concatenations. */
 
 /* Statistics at end of section of FilteredMemberPortfoliosView */
 "members" = "leden";
+
+/* Mode for the Clubs page: show photo clubs as sections. */
+"musea" = "musea";
 
 /* Hint to the user if the database returns zero PhotoClubs. */
 "No photo clubs seem to be currently loaded.\nTry dragging down the Photo Clubs screen to reload the default clubs." = "Er zijn geen Fotogroepen momenteel geladen.\nDoor dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorbeeldclubs geladen. ";
