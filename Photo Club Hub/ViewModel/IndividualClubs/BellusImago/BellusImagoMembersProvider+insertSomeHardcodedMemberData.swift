@@ -26,6 +26,7 @@ extension BellusImagoMembersProvider { // fill with some initial hard-coded cont
         // add Bellus Imago to Photo Clubs (if needed)
         let clubBellusImago = PhotoClub.findCreateUpdate(
                                                         context: bgContext,
+                                                        organizationType: .club,
                                                         photoClubIdPlus: Self.photoClubBellusImagoIdPlus,
                                                         photoClubWebsite: BellusImagoMembersProvider.bellusImagoURL,
                                                         fotobondNumber: 1671, kvkNumber: nil,

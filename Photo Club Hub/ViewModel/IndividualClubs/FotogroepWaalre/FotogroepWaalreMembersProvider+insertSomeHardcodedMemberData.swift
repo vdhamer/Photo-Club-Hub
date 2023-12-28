@@ -14,6 +14,7 @@ extension FotogroepWaalreMembersProvider { // fill with some initial hard-coded 
     func insertSomeHardcodedMemberData(bgContext: NSManagedObjectContext) { // runs on a background thread
         let clubWaalre = PhotoClub.findCreateUpdate(
                                         context: bgContext,
+                                        organizationType: .club,
                                         photoClubIdPlus: FotogroepWaalreMembersProvider.photoClubWaalreIdPlus,
                                         photoClubWebsite: URL(string: "https://www.fotogroepwaalre.nl"),
                                         fotobondNumber: 1634, kvkNumber: 17261693,

@@ -28,6 +28,7 @@ extension FotogroepDeGenderMembersProvider { // fill with some initial hard-code
         // add De Gender to Photo Clubs (if needed)
         let clubDeGender = PhotoClub.findCreateUpdate(
                                                         context: bgContext,
+                                                        organizationType: .club,
                                                         photoClubIdPlus: Self.fotogroepDeGenderIdPlus,
                                                         photoClubWebsite: FotogroepDeGenderMembersProvider.deGenerURL,
                                                         fotobondNumber: 1620, kvkNumber: nil,

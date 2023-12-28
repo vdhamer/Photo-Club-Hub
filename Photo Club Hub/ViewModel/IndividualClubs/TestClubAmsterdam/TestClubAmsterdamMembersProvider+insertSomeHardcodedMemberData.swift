@@ -26,6 +26,7 @@ extension TestClubAmsterdamMembersProvider { // fill with some initial hard-code
         // add photo club to Photo Clubs (if needed)
         let clubTestAmsterdam = PhotoClub.findCreateUpdate(
                                                 context: bgContext,
+                                                organizationType: .club,
                                                 photoClubIdPlus: Self.photoClubTestAmsterdamIdPlus,
                                                 photoClubWebsite: TestClubAmsterdamMembersProvider.testAmsterdamURL,
                                                 fotobondNumber: nil, kvkNumber: nil,

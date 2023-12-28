@@ -19,6 +19,8 @@ extension PhotoClub: Comparable {
 
 extension PhotoClub {
 
+    // MARK: - getters and setters
+
 	var members: Set<MemberPortfolio> {
 		get { (members_ as? Set<MemberPortfolio>) ?? [] }
 		set { members_ = newValue as NSSet }
@@ -104,6 +106,7 @@ extension PhotoClub {
 	// Find existing object or create a new object
 	// Update existing attributes or fill the new object
     static func findCreateUpdate(context: NSManagedObjectContext, // can be foreground of background context
+                                 organizationType: OrganizationTypeEnum,
                                  photoClubIdPlus: PhotoClubIdPlus,
                                  photoClubWebsite: URL? = nil, fotobondNumber: Int16? = nil, kvkNumber: Int32? = nil,
                                  coordinates: CLLocationCoordinate2D? = nil,
@@ -116,49 +119,52 @@ extension PhotoClub {
                                                     photoClubIdPlus.town] )
         let fetchRequest: NSFetchRequest<PhotoClub> = PhotoClub.fetchRequest()
         fetchRequest.predicate = predicate
-		let photoClubs: [PhotoClub] = (try? context.fetch(fetchRequest)) ?? [] // nil means absolute failure
+		let organizations: [PhotoClub] = (try? context.fetch(fetchRequest)) ?? [] // nil means absolute failure
 
-        if photoClubs.count > 1 { // there is actually a Core Data constraint to prevent this
-            ifDebugFatalError("Query returned \(photoClubs.count) photoclubs named " +
+        if organizations.count > 1 { // there is actually a Core Data constraint to prevent this
+            ifDebugFatalError("Query returned \(organizations.count) organizations named " +
                               "\(photoClubIdPlus.fullName) in \(photoClubIdPlus.town)",
                               file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
             // in release mode, log that there are multiple clubs, but continue using the first one.
         }
 
-		if let photoClub = photoClubs.first { // already exists, so make sure secondary attributes are up to date
-            print("\(photoClub.fullNameTown): Will try to update info for photo club \(photoClub.fullName)")
-            if update(bgContext: context, photoClub: photoClub,
-                      shortName: photoClubIdPlus.nickname,
+		if let organization = organizations.first { // already exists, so make sure secondary attributes are up to date
+            print("\(organization.fullNameTown): Will try to update info for organization \(organization.fullName)")
+            if update(bgContext: context, organizationType: organizationType,
+                      photoClub: organization, shortName: photoClubIdPlus.nickname,
                       optionalFields: (photoClubWebsite: photoClubWebsite,
                                        fotobondNumber: fotobondNumber,
                                        kvkNumber: kvkNumber),
                       coordinates: coordinates,
                       pinned: pinned) {
-                print("\(photoClub.fullNameTown): Updated info for photo club \(photoClub.fullName)")
+                print("\(organization.fullNameTown): Updated info for organization \(organization.fullName)")
             }
-			return photoClub
+			return organization
 		} else {
             // cannot use PhotoClub() initializer because we must use bgContext
             let entity = NSEntityDescription.entity(forEntityName: "PhotoClub", in: context)!
-            let photoClub = PhotoClub(entity: entity, insertInto: context)
-            photoClub.fullName = photoClubIdPlus.fullName // first part of ID
-            photoClub.town = photoClubIdPlus.town // second part of ID
-            print("\(photoClub.fullNameTown): Will try to create new photo club")
-            _ = update(bgContext: context, photoClub: photoClub,
-                       shortName: photoClubIdPlus.nickname,
+            let organization = PhotoClub(entity: entity, insertInto: context)
+            organization.fullName = photoClubIdPlus.fullName // first part of ID
+            organization.town = photoClubIdPlus.town // second part of ID
+            print("\(organization.fullNameTown): Will try to create new organization \(organization.fullName)")
+            _ = update(bgContext: context, organizationType: organizationType,
+                       photoClub: organization, shortName: photoClubIdPlus.nickname,
                        optionalFields: (photoClubWebsite: photoClubWebsite,
                                         fotobondNumber: fotobondNumber,
                                         kvkNumber: kvkNumber),
                        coordinates: coordinates,
                        pinned: pinned)
-            print("\(photoClub.fullNameTown): Created new photo club")
-			return photoClub
+            print("\(organization.fullNameTown): Created new photo club")
+			return organization
 		}
 	}
 
+    // MARK: - update
+
 	// Update non-identifying attributes/properties within existing instance of class PhotoClub
     // swiftlint:disable:next function_parameter_count
-    static func update(bgContext: NSManagedObjectContext, photoClub: PhotoClub, shortName: String,
+    static func update(bgContext: NSManagedObjectContext, organizationType: OrganizationTypeEnum,
+                       photoClub: PhotoClub, shortName: String,
                        // swiftlint:disable:next large_tuple
                        optionalFields: (photoClubWebsite: URL?, fotobondNumber: Int16?, kvkNumber: Int32?),
                        coordinates: CLLocationCoordinate2D?, pinned: Bool) -> Bool {
