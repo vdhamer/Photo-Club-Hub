@@ -65,7 +65,7 @@
                     <li>The Old Approach</li>
                     <li>The New Approach</li>
                     <ul>
-                        <li>ClubList: central list of photo clubs</li>
+                        <li>OrganizationList: central list of photo clubs</li>
                         <li>MemberList: local lists of photo club members</li>
                         <li>ImageList: local image portfolios per club member</li>
                     </ul>
@@ -660,14 +660,14 @@ having to modify the source code to add (or modify/remove) clubs, members or ima
 The basic idea is to store the required information in a hierarchical, distributed way.
 This allows the app to load the information in a three step process:
 
-##### ClubList: central list of photo clubs
+##### OrganizationList: central list of photo clubs
 
 The app loads a list of photo clubs from a fixed location. Because the file is kept separate
 from the app, it can be updated without having to release an update of the app.
 The file is in a fixed JSON syntax and contains a list of supported photo clubs. 
 The file notably includes the location of next-level indices.
 
-Here is an example of the format of the ClubList, here containing a single photo club and single museum:
+Here is an example of the format of the OrganizationList, here containing a single photo club and single museum:
 
 ``` json
 {
@@ -758,11 +758,11 @@ Here is an example of the (draft) format of the MemberList of a photo club with 
 ```
 
 Notes about the `club` section:
-- `club` is the same as one object/record in the ClubList. It documents the club that the MemberList is for.
+- `club` is the same as one object/record in the OrganizationList. It documents the club that the MemberList is for.
 - the `town` and `fullName` fields are required.
-- `town` and `fullName` must exactly match the corresponding fields in the ClubList.json file.
-- the `memberList` field can be provided, but it's value is generally overruled by the ClubList's "memberList" value.
-- a club's `nickName`, `latitude`, `longitude`, and `website` can overrule the corresponding ClubList fields if needed.</p>
+- `town` and `fullName` must exactly match the corresponding fields in the OrganizationList.json file.
+- the `memberList` field can be provided, but it's value is generally overruled by the OrganizationList's "memberList" value.
+- a club's `nickName`, `latitude`, `longitude`, and `website` can overrule the corresponding OrganizationList fields if needed.</p>
 
 Notes about the `members` section:
 - a member's `givenName`, `infixName` and `familyName` are used to uniquely identify the photographer.
