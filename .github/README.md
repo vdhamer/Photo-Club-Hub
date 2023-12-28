@@ -662,12 +662,13 @@ This allows the app to load the information in a three step process:
 
 ##### OrganizationList: central list of photo clubs
 
-The app loads a list of photo clubs from a fixed location. Because the file is kept separate
-from the app, it can be updated without having to release an update of the app.
-The file is in a fixed JSON syntax and contains a list of supported photo clubs. 
-The file notably includes the location of next-level indices.
+The app loads a list of photo clubs from a fixed location (URL). Because the file is kept outside
+the actual app, the list can be updated without requiring app update.
+The file is in a fixed JSON syntax and contains a list of supported photo clubs, 
+and as a bonus a list of featured photography musea. The properties of clubs and musea largely overlap.
+But a photo club can include the location (URL) of the next-level list with members. A museum cannot.
 
-Here is an example of the format of the OrganizationList, here containing a single photo club and single museum:
+Here is an example of the format of the OrganizationList. The example contains a single photo club and single museum:
 
 ``` json
 {
