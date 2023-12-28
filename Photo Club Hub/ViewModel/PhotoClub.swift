@@ -114,6 +114,8 @@ extension PhotoClub {
                                 ) -> PhotoClub {
 
         let predicateFormat: String = "name_ = %@ AND town_ = %@" // avoid localization
+        // Note that organizationType is not an identifying attribute.
+        // This implies that you cannot have 2 organizations with the same Name and Town, but of a different type.
         let predicate = NSPredicate(format: predicateFormat,
                                     argumentArray: [photoClubIdPlus.fullName,
                                                     photoClubIdPlus.town] )
