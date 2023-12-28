@@ -214,12 +214,14 @@ Usage of the various screens in the user interface:
   If available, club-independent information (like birthdays) for that photographer is displayed here.
   The `Search` bar filters on photographer names.
 
-- The `Photo Clubs` screen lists the photo clubs that are known to the app.
-  Each entry mainly contains a map showing where the club is located. 
-  A button with a lock icon toggles whether the map is interactive (scroll, zoom, rotate, 3D).
-  By default, the maps are not interactive to allow scrolling of the clubs list rather than scrolling of the map.
-  A _purple_ pin on the map shows where the club is based (e.g., a school or municipal building).
-  A _blue_ pin shows the location of any other photo club that happens to be visible on that map.
+- The `Clubs and Musea` screen lists all photo clubs that are known to the app.
+  Each entry predominantly contains a map showing where the club is located and optionally your current location.
+  A button with a lock icon toggles whether the map is can be controlled interactively (scroll, zoom, rotate, 3D).
+  By default, the maps are not interactive. This mode helps scroll through the list of clubs rather than scrolling within a map.
+  A _purple_ pin on the map shows where the selected club is based (e.g., a school or municipal building).
+  A _blue_ pin shows the location of any other photo club that happens to be in the displayed region.
+  The screen can also show any photo musea that happen to be in sight. These have different markers than the photo clubs.
+  The plan is that the screen can switch between listing all photo clubs and listing all photo musea.
   
 - The `Preferences` screen allows you to configure which types of portfolios you want to include in the
   Portfolios screen. You can, for example, choose whether to include former members.
