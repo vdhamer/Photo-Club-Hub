@@ -9,7 +9,7 @@ import CoreData
 
 extension OrganizationType {
 
-    private static var objectIDs: [OrganizationTypeEnum: NSManagedObjectID] = [:]
+    static var objectIDs: [OrganizationTypeEnum: NSManagedObjectID] = [:]
 
     static func initConstants() {
         guard Thread.isMainThread else { fatalError("OrganizationType.initConstants() must be on main thread") }
@@ -24,7 +24,6 @@ extension OrganizationType {
                 name: type.unlocalizedSingular
             )
             OrganizationType.objectIDs[type] = organizationType.objectID // to access managed objects from bg threads
-            print("\(type.rawValue): \(OrganizationType.objectIDs[type]!)") // TODO
         }
     }
 

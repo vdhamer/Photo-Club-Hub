@@ -165,13 +165,28 @@ extension PhotoClub {
 
 	// Update non-identifying attributes/properties within existing instance of class PhotoClub
     // swiftlint:disable:next function_parameter_count
-    static func update(bgContext: NSManagedObjectContext, organizationType: OrganizationTypeEnum,
+    static func update(bgContext: NSManagedObjectContext,
+                       organizationType: OrganizationTypeEnum,
                        photoClub: PhotoClub, shortName: String,
                        // swiftlint:disable:next large_tuple
                        optionalFields: (photoClubWebsite: URL?, fotobondNumber: Int16?, kvkNumber: Int32?),
                        coordinates: CLLocationCoordinate2D?, pinned: Bool) -> Bool {
 
 		var modified: Bool = false
+
+        if let organizationTypeObjectID = OrganizationType.objectIDs[organizationType] {
+            let managedObject: NSManagedObject = bgContext.object(with: organizationTypeObjectID)
+            // swiftlint:disable:next force_cast
+            let organizationType: OrganizationType = managedObject as! OrganizationType
+            if photoClub.organisationType != nil, photoClub.organisationType != organizationType { // toggling value??
+                ifDebugFatalError("An organization's 'type' should only be initialized once")
+            }
+        } else { // this shouldn't fail...
+            ifDebugFatalError("Failed to retrieve organizationType from within background thread.")
+            // ...and not sure this will save the day, but give all records type .club to prevent a crash in PRD code
+            photoClub.organisationType = OrganizationType.findCreateUpdate(context: bgContext,
+                                                                           name: OrganizationTypeEnum.club.rawValue)
+        }
 
         if photoClub.shortName != shortName {
             photoClub.shortName = shortName
