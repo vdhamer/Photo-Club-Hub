@@ -382,6 +382,7 @@ If you just want to install the binary version of the app, just get it from Appl
 * [Adobe Lightroom Classic](https://www.adobe.com/products/photoshop-lightroom.html) maintaining the portfolios (so far Fotogroep Waalre only)
 * a low cost [JuiceBox Pro](https://www.juicebox.net) JavaScript plugin for exporting from Adobe Lightroom (so far Fotogroep Waalre only)
 * the [GitCrypt](https://github.com/AGWA/git-crypt) framework for encrypting selected files in a Git repository
+* GitHub's [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON) package for accessing JSON content via paths (dictionaries that recursively contain dictionaries)
 </details>
 
 <details><summary>
