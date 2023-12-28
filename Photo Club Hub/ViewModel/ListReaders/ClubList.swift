@@ -83,11 +83,11 @@ class ClubList {
                     let coordinates = CLLocationCoordinate2D(latitude: jsonCoordinates["latitude"].doubleValue,
                                                              longitude: jsonCoordinates["longitude"].doubleValue)
                     let photoClubWebsite = URL(string: jsonOrganization["website"].stringValue)
-                    let _ = PhotoClub.findCreateUpdate(context: bgContext,
-                                                       photoClubIdPlus: idPlus,
-                                                       photoClubWebsite: photoClubWebsite,
-                                                       fotobondNumber: nil, kvkNumber: nil,
-                                                       coordinates: coordinates)
+                    _ = PhotoClub.findCreateUpdate(context: bgContext,
+                                                   photoClubIdPlus: idPlus,
+                                                   photoClubWebsite: photoClubWebsite,
+                                                   fotobondNumber: nil, kvkNumber: nil,
+                                                   coordinates: coordinates)
                 }
                 do {
                     if bgContext.hasChanges {

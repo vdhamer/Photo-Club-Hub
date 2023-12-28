@@ -21,6 +21,8 @@ struct FotogroepWaalreApp: App {
         viewContext.undoManager = nil // nil by default on iOS
         viewContext.shouldDeleteInaccessibleFaults = true
 
+        OrganizationType.initConstants() // insert contant records into OrganizationType table if needed
+
         // update version number shown in iOS Settings app
         UserDefaults.standard.set(Bundle.main.fullVersion, forKey: "version_preference")
     }
@@ -32,10 +34,10 @@ struct FotogroepWaalreApp: App {
                 .onAppear {
 
                     // load test member(s) of Fotogroep Bellus Imago
-                    let biBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-                    biBackgroundContext.name = "Bellus Imago refresh"
-                    biBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-                    _ = BellusImagoMembersProvider(bgContext: biBackgroundContext)
+//                    let biBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+//                    biBackgroundContext.name = "Bellus Imago refresh"
+//                    biBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+//                    _ = BellusImagoMembersProvider(bgContext: biBackgroundContext)
 
                     // load test member(s) of Fotogroep De Gender
                     let dgBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
@@ -44,22 +46,22 @@ struct FotogroepWaalreApp: App {
                     _ = FotogroepDeGenderMembersProvider(bgContext: dgBackgroundContext)
 
                     // load all current members of Fotogroep Anders
-                    let andersBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-                    andersBackgroundContext.name = "Anders refresh"
-                    andersBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-                    _ = AndersMembersProvider(bgContext: andersBackgroundContext)
+//                    let andersBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+//                    andersBackgroundContext.name = "Anders refresh"
+//                    andersBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+//                    _ = AndersMembersProvider(bgContext: andersBackgroundContext)
 
                     // load all current/former members of Fotogroep Waalre
-                    let fgwBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-                    fgwBackgroundContext.name = "Fotogroep Waalre"
-                    fgwBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-                    _ = FotogroepWaalreMembersProvider(bgContext: fgwBackgroundContext)
+//                    let fgwBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+//                    fgwBackgroundContext.name = "Fotogroep Waalre"
+//                    fgwBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+//                    _ = FotogroepWaalreMembersProvider(bgContext: fgwBackgroundContext)
 
                     // load list of photo clubs from ClubList.json file
-                    let clBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-                    clBackgroundContext.name = "ClubList"
-                    clBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-                    _ = OrganizationList(bgContext: fgwBackgroundContext) // read ClubList.json file
+//                    let clBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+//                    clBackgroundContext.name = "ClubList"
+//                    clBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+//                    _ = OrganizationList(bgContext: fgwBackgroundContext) // read ClubList.json file
                 }
         }
         .onChange(of: scenePhase) { // pre-iOS 17 there was 1 param. Since iOS 17 it is 0 or 2.

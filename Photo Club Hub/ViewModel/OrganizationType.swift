@@ -55,9 +55,9 @@ extension OrganizationType {
         }
 
         if let organizationType = organizationTypes.first { // already exists, so update non-identifying attributes
-            print("Will try to update info for organisation type \(organizationType.name)")
+            print("Will try to update info for organization type \"\(organizationType.name)\"")
             if update(context: context, organizationType: organizationType, dummy: "dummy string #2") {
-                print("Updated info for organisation type \(organizationType.name)")
+                print("Updated info for organization type \"\(organizationType.name)\"")
             }
             return organizationType
         } else {
