@@ -72,7 +72,7 @@ class ClubList {
             // extract the Clubs part of JSON string
             for organizationType in organizationTypes {
                 let jsonOrganizations: [JSON] = jsonRoot[organizationType.unlocalizedString].arrayValue
-                ifDebugPrint("Found \(jsonOrganizations.count) \(organizationType.unlocalizedString) in file.")
+                ifDebugPrint("Found \(jsonOrganizations.count) \(organizationType.unlocalizedString)s in file.")
 
                 for jsonOrganization in jsonOrganizations {
                     let idPlus = PhotoClubIdPlus(fullName: jsonOrganization["idPlus"]["fullName"].stringValue,
