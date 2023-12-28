@@ -103,8 +103,8 @@ extension PhotoClub {
         }
     }
 
-	// Find existing object or create a new object
-	// Update existing attributes or fill the new object
+	// Find existing organization or create a new one
+	// Update new or existing organization's attributes
     static func findCreateUpdate(context: NSManagedObjectContext, // can be foreground of background context
                                  organizationType: OrganizationTypeEnum,
                                  photoClubIdPlus: PhotoClubIdPlus,

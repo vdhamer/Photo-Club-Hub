@@ -17,8 +17,8 @@ extension FotogroepDeGenderMembersProvider { // fill with some initial hard-code
                                                                  nickname: "FG deGender")
 
     func insertSomeHardcodedMemberData(bgContext: NSManagedObjectContext) {
-        bgContext.perform { // from here on, we are running on a background thread
-            self.insertSomeHardcodedMemberDataCommon(bgContext: bgContext)
+        bgContext.perform {
+            self.insertSomeHardcodedMemberDataCommon(bgContext: bgContext) // perform inserts on a background thread
         }
     }
 

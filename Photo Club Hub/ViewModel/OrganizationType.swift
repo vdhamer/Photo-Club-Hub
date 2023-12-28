@@ -24,6 +24,7 @@ extension OrganizationType {
                 name: type.unlocalizedSingular
             )
             OrganizationType.objectIDs[type] = organizationType.objectID // to access managed objects from bg threads
+            print("\(type.rawValue): \(OrganizationType.objectIDs[type]!)") // TODO
         }
     }
 
