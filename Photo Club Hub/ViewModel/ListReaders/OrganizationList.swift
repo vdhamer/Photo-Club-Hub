@@ -74,7 +74,7 @@ class OrganizationList {
 
         // extract the Clubs part of JSON string
         for organizationType in organizationTypes {
-            let jsonOrganizations: [JSON] = jsonRoot[organizationType.unlocalizedSingular].arrayValue
+            let jsonOrganizations: [JSON] = jsonRoot[organizationType.unlocalizedPlural].arrayValue
             ifDebugPrint("Found \(jsonOrganizations.count) \(organizationType.unlocalizedSingular) in file.")
 
             for jsonOrganization in jsonOrganizations {

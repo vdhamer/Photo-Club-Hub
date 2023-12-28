@@ -102,17 +102,21 @@ enum OrganizationTypeEnum: String, CaseIterable {
     case club // rawValue automatically set to "club"
     case museum
 
-    var unlocalizedSingular: String {
+    var unlocalizedSingular: String { // "museum" as passed around using `OrganizationType.name: String`
         self.rawValue
     }
 
-    var localizedPlural: String { // cannot simply using String(localized: unlocalizedString)
+    var unlocalizedPlural: String {
+        self.rawValue + "s" // "museums" as used in parsing OrganizationList.json
+    }
+
+    var localizedPlural: String { // "musea" as used in user interface (e.g. NavigationBar.title)
         switch self {
         case .club:
-            return String(localized: "clubs",
+            return String(localized: "clubs", // can't convert using unlocalizedSingular because of type isues
                           comment: "Mode for the Clubs page: show photo clubs as sections.")
         case .museum:
-            return String(localized: "musea",
+            return String(localized: "musea", // "musea" because it is used in external interfaces
                           comment: "Mode for the Clubs page: show musea as sections.")
         }
     }
