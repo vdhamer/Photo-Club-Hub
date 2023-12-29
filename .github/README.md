@@ -106,8 +106,7 @@ discovering how to navigate within each unique site and how to browse the images
 Starting in version 2 the app's name was changed from _Photo Club Waalre_ to _Photo Club Hub_. 
     
 To achieve this, the app fetches software-readable lists of photo clubs, their members and their curated images from online servers. 
-This ensures that photo clubs, club members and member images can be added or removed without waiting for a new software release. 
-The same incidentally hold for photo musea.
+This ensures that photo clubs, club members and member images can be added or removed without waiting for a new software release.
 
 See the [Architecture](#the-app-architecture) section for how this information is distributed and managed.
 Help in the form of coding, testing and suggestions is highly appreciated. See the [section](#contributing) on contributing below.
