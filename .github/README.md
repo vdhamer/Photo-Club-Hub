@@ -27,7 +27,7 @@
         <ul>
             <li><a href="#opening-animation">Opening Animation</a></li>
             <li><a href="#multi-club-support">Multi-club Support</a></li>
-            <li><a href="#photo-musea-on-the-maps">Photo Musea on the Maps</a></li>
+            <li><a href="#photo-musea-on-the-maps">Photo Musea</a></li>
             <li><a href="#roadmap">Roadmap</a></li>
             <li><a href="#data-privacy">Data Privacy</a></li>
                 <ul>
@@ -65,7 +65,7 @@
                     <li>The Old Approach</li>
                     <li>The New Approach</li>
                     <ul>
-                        <li>ClubList: central list of photo clubs</li>
+                        <li>OrganizationList: central list of photo clubs</li>
                         <li>MemberList: local lists of photo club members</li>
                         <li>ImageList: local image portfolios per club member</li>
                     </ul>
@@ -99,17 +99,17 @@
 This iOS app showcases photographs made by members of photography clubs.
 It thus provides a permanent online exposition or gallery with selected work of these photographers.
 
-Version 1 of the app only supported a _single_ photo club in a town called Waalre in the Netherlands.
+Version 1 of the app only supported a _single_ photo club in Waalre, a smallish town called in the Netherlands.
 Version 2 enables support for _multiple_ photo clubs. This allows viewers to see images from multiple clubs within a single app.
 It also provides a degree of standardization, thus sparing the user from having to find each club's website, 
 discovering how to navigate within each unique site and how to browse the images. 
 Starting in version 2 the app's name was changed from _Photo Club Waalre_ to _Photo Club Hub_. 
     
-To do this, the app fetches software-readable lists of photo clubs, their members and their curated images from online servers. 
-This ensures that additional clubs, club members and member images can be added or removed without waiting for a new software release.
+To achieve this, the app fetches software-readable lists of photo clubs, their members and their curated images from online servers. 
+This ensures that photo clubs, club members and member images can be added or removed without waiting for a new software release.
 
 See the [Architecture](#the-app-architecture) section for how this information is distributed and managed.
-Help in the form of coding, testing and suggestions is highly appreciated. See [section](#contributing) on contributing below.
+Help in the form of coding, testing and suggestions is highly appreciated. See the [section](#contributing) on contributing below.
 
 </details>
 
@@ -214,12 +214,14 @@ Usage of the various screens in the user interface:
   If available, club-independent information (like birthdays) for that photographer is displayed here.
   The `Search` bar filters on photographer names.
 
-- The `Photo Clubs` screen lists the photo clubs that are known to the app.
-  Each entry mainly contains a map showing where the club is located. 
-  A button with a lock icon toggles whether the map is interactive (scroll, zoom, rotate, 3D).
-  By default, the maps are not interactive to allow scrolling of the clubs list rather than scrolling of the map.
-  A _purple_ pin on the map shows where the club is based (e.g., a school or municipal building).
-  A _blue_ pin shows the location of any other photo club that happens to be visible on that map.
+- The `Clubs and Musea` screen lists all photo clubs that are known to the app.
+  Each entry predominantly contains a map showing where the club is located and optionally your current location.
+  A button with a lock icon toggles whether the map is can be controlled interactively (scroll, zoom, rotate, 3D).
+  By default, the maps are not interactive. This mode helps scroll through the list of clubs rather than scrolling within a map.
+  A _purple_ pin on the map shows where the selected club is based (e.g., a school or municipal building).
+  A _blue_ pin shows the location of any other photo club that happens to be in the displayed region.
+  The screen can also show any photo musea that happen to be in sight. These have different markers than the photo clubs.
+  The plan is that the screen can switch between listing all photo clubs and listing all photo musea.
   
 - The `Preferences` screen allows you to configure which types of portfolios you want to include in the
   Portfolios screen. You can, for example, choose whether to include former members.
@@ -285,17 +287,17 @@ This loads a little bit of additional data to demo the feature.
 
 <details><summary>
 
-### Photo Musea on the Maps
+### Photo Musea
 
 </summary>
 
-Since version 2.6, the maps for showing the locations of photography clubs also show the locations
-of certain photography musea. 
-A museum is not a photo club: it doesn't have club members who generate image portfolios for
-their museum. Musea are thus shown using a different marker icon than photo clubs.
-Showing musea is basically a small bonus that may interest some users.
+Since version 2.6, the maps showing the location of photo clubs also show the locations
+of certain photo musea. 
+A photo museum is not photo clubs and are dispplayed on the maps using a dedicated amrker.
+More fundamentally, the app also doesn't allow musea to have "members" that share images with the museum.
+Consider the showing of musea a bonus that may interest various users.
 
-You are welcome to add data on your local or favorite photo musea via a Github PR.
+You are welcome to add data on your favorite photo musea via a Github Pull Request.
 The file format is documented below under [How Data is Loaded / The New Approach](#how-data-is-loaded).
 
 </details>
@@ -382,6 +384,7 @@ If you just want to install the binary version of the app, just get it from Appl
 * [Adobe Lightroom Classic](https://www.adobe.com/products/photoshop-lightroom.html) maintaining the portfolios (so far Fotogroep Waalre only)
 * a low cost [JuiceBox Pro](https://www.juicebox.net) JavaScript plugin for exporting from Adobe Lightroom (so far Fotogroep Waalre only)
 * the [GitCrypt](https://github.com/AGWA/git-crypt) framework for encrypting selected files in a Git repository
+* GitHub's [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON) package for accessing JSON content via paths (dictionaries that recursively contain dictionaries)
 </details>
 
 <details><summary>
@@ -657,14 +660,15 @@ having to modify the source code to add (or modify/remove) clubs, members or ima
 The basic idea is to store the required information in a hierarchical, distributed way.
 This allows the app to load the information in a three step process:
 
-##### ClubList: central list of photo clubs
+##### OrganizationList: central list of photo clubs
 
-The app loads a list of photo clubs from a fixed location. Because the file is kept separate
-from the app, it can be updated without having to release an update of the app.
-The file is in a fixed JSON syntax and contains a list of supported photo clubs. 
-The file notably includes the location of next-level indices.
+The app loads a list of photo clubs from a fixed location (URL). Because the file is kept outside
+the actual app, the list can be updated without requiring app update.
+The file is in a fixed JSON syntax and contains a list of supported photo clubs, 
+and as a bonus a list of featured photography musea. The properties of clubs and musea largely overlap.
+But a photo club can include the location (URL) of the next-level list with members. A museum cannot.
 
-Here is an example of the format of the ClubList, here containing a single photo club and single museum:
+Here is an example of the format of the OrganizationList. The example contains a single photo club and single museum:
 
 ``` json
 {
@@ -755,11 +759,11 @@ Here is an example of the (draft) format of the MemberList of a photo club with 
 ```
 
 Notes about the `club` section:
-- `club` is the same as one object/record in the ClubList. It documents the club that the MemberList is for.
+- `club` is the same as one object/record in the OrganizationList. It documents the club that the MemberList is for.
 - the `town` and `fullName` fields are required.
-- `town` and `fullName` must exactly match the corresponding fields in the ClubList.json file.
-- the `memberList` field can be provided, but it's value is generally overruled by the ClubList's "memberList" value.
-- a club's `nickName`, `latitude`, `longitude`, and `website` can overrule the corresponding ClubList fields if needed.</p>
+- `town` and `fullName` must exactly match the corresponding fields in the OrganizationList.json file.
+- the `memberList` field can be provided, but it's value is generally overruled by the OrganizationList's "memberList" value.
+- a club's `nickName`, `latitude`, `longitude`, and `website` can overrule the corresponding OrganizationList fields if needed.</p>
 
 Notes about the `members` section:
 - a member's `givenName`, `infixName` and `familyName` are used to uniquely identify the photographer.

@@ -1,16 +1,16 @@
-### 2.5.3 (Github commit 51501f7) ??-00-24
+### 2.5.3 (Github commit ???????) ??-01-24
 
-Photo Clubs screen
-    * Renamed screen to Clubs (NL Clubs)to save space for future mode toggle or button.
-    * Maps can display about 15 photography musea in various countries. _not completed yet_
-    * Additional photo clubs (and musea) can be loaded from an online ClubList.json data file.
-    * Country where a photoclub (or museum) is located is automatically found using its GPS coordinates.
-    * Town and Country are localized to both English (e.g., Paris, France) and Dutch (e.g. Parijs, Frankrijk).
-    * Changed order of footnotes at bottom of screen. 3rd footnote is dimmed if feature has already been used once.
-    * Musea are displayed using a new type of marker pin. _not implemented yet_
+Clubs and Musea screen
+    * Renamed from `Photo Clubs` to save space for future mode picker widget.
+    * Each map displays 15 photography-focussed musea in various countries.
+    * Additional photo clubs (and musea) can be loaded from an online OrganizationList.json file.
+    * The country where a photoclub (or museum) is located is automatically established using the organization's GPS coordinates.
+    * Town and Country names are localized. Examples: Paris (EN) vs Parijs (NL), France (EN) vs Frankrijk (NL).
+    * Changed order of footnotes at bottom of screen. 3rd footnote is dimmed if feature has already been used triggered.
+    * Musea are rendered on the map using a special type of marker pin.
 Portfolios screen
-    * Name of towns are now localized if applicable. Example: "Den Haag" (NL) <> "The Hague" (EN)
-    * Limited the font size of the footers if user uses a large font using DynamicType.
+    * Name of towns are now localized if applicable. Example: Den Haag" (NL) vs The Hague (EN)
+    * Limited the font size of the footers if user increased the the device's text display size in Settings.
 Maintenance
     * Tested with with iOS 17.2.1 and MacOS 14.2.1
 
