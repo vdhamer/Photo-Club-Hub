@@ -33,17 +33,17 @@ struct FotogroepWaalreApp: App {
                 .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext) // main queue!
                 .onAppear {
 
-                    // load test member(s) of Fotogroep Bellus Imago TODO 4 photo clubs temp commented out
-                    let biBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-                    biBackgroundContext.name = "Bellus Imago refresh"
-                    biBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-                    _ = BellusImagoMembersProvider(bgContext: biBackgroundContext)
+                    // load test member(s) of Fotogroep Bellus Imago
+                    let bellusBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+                    bellusBackgroundContext.name = "Bellus Imago refresh"
+                    bellusBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+                    _ = BellusImagoMembersProvider(bgContext: bellusBackgroundContext)
 
                     // load test member(s) of Fotogroep De Gender
-                    let dgBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-                    dgBackgroundContext.name = "De Gender refresh"
-                    dgBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-                    _ = FotogroepDeGenderMembersProvider(bgContext: dgBackgroundContext)
+                    let genderBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+                    genderBackgroundContext.name = "De Gender refresh"
+                    genderBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+                    _ = FotogroepDeGenderMembersProvider(bgContext: genderBackgroundContext)
 
                     // load all current members of Fotogroep Anders
                     let andersBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
@@ -52,16 +52,16 @@ struct FotogroepWaalreApp: App {
                     _ = AndersMembersProvider(bgContext: andersBackgroundContext)
 
                     // load all current/former members of Fotogroep Waalre
-                    let fgwBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-                    fgwBackgroundContext.name = "Fotogroep Waalre"
-                    fgwBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-                    _ = FotogroepWaalreMembersProvider(bgContext: fgwBackgroundContext)
+                    let waalreBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+                    waalreBackgroundContext.name = "Fotogroep Waalre"
+                    waalreBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+                    _ = FotogroepWaalreMembersProvider(bgContext: waalreBackgroundContext)
 
                     // load list of photo clubs from OrganizationList.json file
-                    let olBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-                    olBackgroundContext.name = "ClubList"
-                    olBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-                    _ = OrganizationList(bgContext: olBackgroundContext) // read OrganizationList.json file
+//                    let olBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+//                    olBackgroundContext.name = "ClubList"
+//                    olBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+//                    _ = OrganizationList(bgContext: olBackgroundContext) // read OrganizationList.json file
                 }
         }
         .onChange(of: scenePhase) { // pre-iOS 17 there was 1 param. Since iOS 17 it is 0 or 2.
