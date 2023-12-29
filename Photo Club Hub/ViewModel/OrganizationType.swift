@@ -25,6 +25,8 @@ extension OrganizationType {
             )
             OrganizationType.objectIDs[type] = organizationType.objectID // to access managed objects from bg threads
         }
+
+        try? viewContext.save() // persist organizationType using main thread ManagedObjectContext
     }
 
     // MARK: - getters and setters
@@ -84,7 +86,7 @@ extension OrganizationType {
 
         if modified {
             do {
-                try context.save()
+                try context.save() // update modified properties of an OrganizationType object
              } catch {
                 ifDebugFatalError("Update failed for OrganizationType \(organizationType.name)",
                                   file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0

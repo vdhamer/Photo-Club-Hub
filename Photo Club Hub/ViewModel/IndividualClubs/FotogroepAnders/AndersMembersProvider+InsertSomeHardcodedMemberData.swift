@@ -90,9 +90,10 @@ extension AndersMembersProvider { // fill with some initial hard-coded content
         )
 
         do {
-            if bgContext.hasChanges {
-                try bgContext.save() // commit all changes
-            }
+//            if bgContext.hasChanges {
+                try bgContext.save() // persist FG Anders and its members
+                print("*** Updating *** SAVING instance=\"\(clubAnders.fullName)\"")
+//            }
             ifDebugPrint("""
                          \(clubAnders.fullNameTown): \
                          Completed insertSomeHardcodedMemberData() in background

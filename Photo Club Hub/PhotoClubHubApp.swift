@@ -65,7 +65,8 @@ struct FotogroepWaalreApp: App {
                 }
         }
         .onChange(of: scenePhase) { // pre-iOS 17 there was 1 param. Since iOS 17 it is 0 or 2.
-            PersistenceController.shared.save() // when app moves to background
+            // TODO this probably doesn't do much because it only persists the foreground context
+            PersistenceController.shared.save() // persist data when app moves to background
         }
     }
 

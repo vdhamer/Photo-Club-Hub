@@ -62,9 +62,10 @@ extension BellusImagoMembersProvider { // fill with some initial hard-coded cont
         let clubNickname = BellusImagoMembersProvider.photoClubBellusImagoIdPlus.nickname
 
         do {
-            if bgContext.hasChanges {
-                try bgContext.save() // commit all changes
-            }
+//            if bgContext.hasChanges {
+                try bgContext.save() // persist FG Bellus Imago and its members
+                print("*** Updating *** SAVING instance=\"\(clubBellusImago.fullName)\"")
+//            }
             ifDebugPrint("""
                          \(clubBellusImago.fullNameTown): \
                          Completed insertSomeHardcodedMemberData() in background

@@ -187,13 +187,13 @@ struct WhoIsWhoInnerView: View {
 
         do {
             if viewContext.hasChanges {
-                try viewContext.save()
+                try viewContext.save() // persist deletion of photographer
                 print("Deleted photographer \(fullName) and any associated memberships")
             }
         } catch {
             let nsError = error as NSError
             ifDebugFatalError("Unresolved error deleting photographer \(fullName): \(nsError), \(nsError.userInfo)",
-                              file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
+                              file: #fileID, line: #line) // expect deprecation of #fileID in Swift 6.0
             // in release mode, the failed deletion is only logged. App doesn't stop.
         }
     }

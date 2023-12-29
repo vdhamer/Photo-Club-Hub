@@ -76,9 +76,10 @@ extension FotogroepDeGenderMembersProvider { // fill with some initial hard-code
         let clubNickname = FotogroepDeGenderMembersProvider.fotogroepDeGenderIdPlus.nickname
 
         do {
-            if bgContext.hasChanges {
-                try bgContext.save() // commit all changes
-            }
+//            if bgContext.hasChanges {
+                try bgContext.save() // persist Fotogroep de Gender and its members
+                print("*** Updating *** SAVING instance=\"\(clubDeGender.fullName)\"")
+//            }
             ifDebugPrint("""
                          \(clubDeGender.fullNameTown): \
                          Completed insertSomeHardcodedMemberData() in background

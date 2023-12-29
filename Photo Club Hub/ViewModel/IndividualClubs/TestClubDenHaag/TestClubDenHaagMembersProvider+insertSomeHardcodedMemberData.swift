@@ -53,9 +53,9 @@ extension TestClubDenHaagMembersProvider { // fill with some initial hard-coded 
 
         if commit {
             do {
-                if bgContext.hasChanges { // is this necessary? sometimes save() done earlier
-                    try bgContext.save() // commit all changes
-                }
+//                if bgContext.hasChanges { // is this necessary? sometimes save() done earlier
+                    try bgContext.save() // persist Test Club Den Haag and its members
+//                }
                 ifDebugPrint("""
                              \(clubTestDenHaag.fullNameTown): \
                              Completed insertSomeHardcodedMemberData() in background

@@ -122,7 +122,7 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
 
         if needsSaving {
             do {
-                try bgContext.save()
+                try bgContext.save() // persist just to be sure?
                 if changed1 { print("""
                                     \(memberPortfolio.photoClub.fullNameTown): \
                                     Changed roles for \(memberPortfolio.photographer.fullNameFirstLast)

@@ -138,7 +138,7 @@ struct PhotoClubView: View {
                         }
                     }
                 }
-                .onDisappear(perform: { try? viewContext.save() }) // store map scroll-lock states in database
+                .onDisappear(perform: { try? viewContext.save() }) // persist map scroll-lock states when leaving page
                 .accentColor(.photoClubColor)
                 .listRowSeparator(.hidden)
                 .padding()
@@ -152,14 +152,14 @@ struct PhotoClubView: View {
                 } .mapControlVisibility(filteredPhotoClub.isScrollLocked ? .hidden : .automatic)
             } // Section
         } // outer ForEach (PhotoClub)
-        .onDelete(perform: deletePhotoClubs)
+        .onDelete(perform: deleteOrganizations)
     }
 
     // find PhotoClub using identifier (clubName,oldTown) and fill (newTown,newCountry) in CoreData database
     private func updateTownCountry(clubName: String, town: String,
                                    localizedTown: String?, localizedCountry: String?) async {
 
-        guard (localizedTown != nil) || (localizedCountry != nil) else { return } // nothing to update
+        guard (localizedTown != nil) && (localizedCountry != nil) else { return } // nothing to update
 
         let bgContext = PersistenceController.shared.container.newBackgroundContext() // background thread
         bgContext.name = "reverseGeocode \(clubName)"
@@ -191,7 +191,7 @@ struct PhotoClubView: View {
             if let localizedTown { photoClub.localizedTown = localizedTown }
             if let localizedCountry { photoClub.localizedCountry = localizedCountry}
             do {
-                try bgContext.save() // com.apple.CoreData.ConcurrencyDebug exposes problems
+                try bgContext.save() // persist Town, Country or both for an organization
             } catch {
                 print("""
                       ERROR: could not save \
@@ -241,7 +241,7 @@ struct PhotoClubView: View {
         )
     }
 
-    private func deletePhotoClubs(offsets: IndexSet) {
+    private func deleteOrganizations(offsets: IndexSet) {
         guard permitDeletionOfPhotoClubs else { return } // to turn off the feature
         if let photoClub = (offsets.map { fetchedPhotoClubs[$0] }.first) { // unwrap first PhotoClub to be deleted
             photoClub.deleteAllMembers(context: viewContext)
@@ -254,7 +254,7 @@ struct PhotoClubView: View {
 
             do {
                 if viewContext.hasChanges {
-                    try viewContext.save()
+                    try viewContext.save() // persist deletion of organization
                 }
             } catch {
                 let nsError = error as NSError

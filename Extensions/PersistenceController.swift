@@ -50,7 +50,7 @@ struct PersistenceController {
 		}
 
 		do {
-			try viewContext.save()
+			try viewContext.save() // persist sample data in persistence controller
 		} catch {
 			let nsError = error as NSError
 			fatalError("Unresolved error \(nsError), \(nsError.userInfo)") // preview cannot occur in shipping code

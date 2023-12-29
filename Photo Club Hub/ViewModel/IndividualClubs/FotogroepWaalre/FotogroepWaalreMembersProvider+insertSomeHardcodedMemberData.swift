@@ -77,7 +77,8 @@ extension FotogroepWaalreMembersProvider { // fill with some initial hard-coded 
                                                              stat: [.former: true]))
         do {
 //            if bgContext.hasChanges { // optimization
-                try bgContext.save() // commit all changes
+                try bgContext.save() // persist FotoGroep Waalre and its online member data
+                print("*** Updating *** SAVING instance=\"\(clubWaalre.fullName)\"")
 //            }
             ifDebugPrint("""
                          \(clubWaalre.fullNameTown): \
@@ -112,6 +113,6 @@ extension FotogroepWaalreMembersProvider { // fill with some initial hard-coded 
                             memberRolesAndStatus: memberRolesAndStatus,
                             memberWebsite: memberWebsite,
                             latestImage: latestImage)
-        // do not need to bgContext.save() because a series of added members will be saved simultaneously
+        // do not need to bgContext.save() because a series of hardcoded members will be saved simultaneously
     }
 }

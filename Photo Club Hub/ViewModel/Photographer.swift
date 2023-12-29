@@ -174,7 +174,7 @@ extension Photographer {
 
 		if wasUpdated {
 			do {
-				try bgContext.save()
+				try bgContext.save() // persist updated information about a photographer
 			} catch {
                 ifDebugFatalError("Update failed for photographer <\(photographer.fullNameFirstLast)>",
                                   file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0

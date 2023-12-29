@@ -52,9 +52,9 @@ extension TestClubRotterdamMembersProvider { // fill with some initial hard-code
         )
 
         do {
-            if bgContext.hasChanges {
-                try bgContext.save() // commit all changes
-            }
+//            if bgContext.hasChanges {
+                try bgContext.save() // // persist Test Club Rotterdam and its memberss
+//            }
             ifDebugPrint("""
                          \(clubTestRotterdam.fullNameTown): \
                          Completed insertSomeHardcodedMemberData() in background

@@ -91,7 +91,7 @@ class ClubList {
                 }
                 do {
                     if bgContext.hasChanges {
-                        try bgContext.save() // commit all changes
+                        try bgContext.save() // persist contents of OrganizationList.json (this file is unused?)
                     }
                     ifDebugPrint("Completed inserting/updated JSON ClubList in background")
                 } catch {

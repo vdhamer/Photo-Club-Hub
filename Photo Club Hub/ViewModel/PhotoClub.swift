@@ -174,6 +174,8 @@ extension PhotoClub {
 
 		var modified: Bool = false
 
+        print("*** Updating *** type=\(organizationType.rawValue) instance=\"\(photoClub.fullName)\"")
+
         if let organizationTypeObjectID = OrganizationType.objectIDs[organizationType] {
             let managedObject: NSManagedObject = bgContext.object(with: organizationTypeObjectID)
             // swiftlint:disable:next force_cast
@@ -219,7 +221,7 @@ extension PhotoClub {
         }
 		if modified {
 			do {
-				try bgContext.save()
+				try bgContext.save() // persist modifications in PhotoClub record
  			} catch {
                 ifDebugFatalError("Update failed for photo club \(photoClub.fullName)",
                                   file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0

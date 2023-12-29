@@ -23,7 +23,7 @@ extension FotogroepWaalreMembersProvider {
                                              photoClub: clubWaalre) // used for error messages only
         if let privateURL = URL(string: urlString) {
             clubWaalre.memberListURL = privateURL
-            try? bgContext.save()
+            try? bgContext.save() // persist Fotogroep Waalre and its online member data
 
             self.loadPrivateMembersFromWebsite( backgroundContext: bgContext,
                                                 privateMemberURL: privateURL,
@@ -93,12 +93,12 @@ extension FotogroepWaalreMembersProvider {
                              photoClubIdPlus: photoClubIdPlus)
             do {
                 if backgroundContext.hasChanges {
-                    try backgroundContext.save()
-                    ifDebugPrint("""
-                                 \(photoClub.fullNameTown): \
-                                 completed loadPrivateMembersFromWebsite() in background")
-                                 """)
+                    try backgroundContext.save() // persist member data for Fotogroep Waalre
                 }
+                ifDebugPrint("""
+                             \(photoClub.fullNameTown): \
+                             completed loadPrivateMembersFromWebsite() in background")
+                             """)
             } catch {
                 print("Fotogroep Waalre: ERROR - could not save backgroundContext to Core Data " +
                       "in loadPrivateMembersFromWebsite()")
@@ -119,7 +119,7 @@ extension FotogroepWaalreMembersProvider {
                     // FotogroepWaalreApp.antiZombiePinningOfMemberPortfolios.insert(portfolio)
                     portfolio.refreshFirstImage()
                 }
-                try backgroundContext.save()
+                try backgroundContext.save() // persist first images for Fotogroep Waalre
             } catch let error {
                 fatalError(error.localizedDescription)
             }
