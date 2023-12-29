@@ -43,7 +43,10 @@ struct PhotoClubView: View {
 //                        .border(.red)
 
                     HStack(alignment: .center, spacing: 0) {
-                        Image(systemName: "camera.circle.fill")
+//                        Image(systemName: "camera.circle.fill") TODO remove comment
+                        Image(systemName: systemName(organizationType: filteredPhotoClub.organizationType,
+                                                     circleNeeded: true) // TODO -> organizationType_
+                        )
                             .foregroundStyle(.white, .yellow, accentColor ) // secondary = yellow color not really used
                             .symbolRenderingMode(.palette)
                             .font(.largeTitle)
@@ -261,6 +264,30 @@ struct PhotoClubView: View {
             }
         }
 
+    }
+
+}
+
+extension PhotoClubView { // TODO return Image
+
+    func systemName(organizationType: OrganizationType?, circleNeeded: Bool) -> String { // for SanFrancisco symbols
+        guard let organizationType else { return "questionmark.circle.fill" }
+
+        var result: String
+
+        switch organizationType.name {
+        case OrganizationTypeEnum.museum.rawValue:
+            result = "building.columns.fill"
+        default:
+            result = "camera.fill"
+        }
+
+        if circleNeeded {
+            result = result.replacing(".fill", with: ".circle.fill")
+        }
+//    Image(systemName: filteredPhotoClub.organizationType.name == OrganizationTypeEnum.club.rawValue ?
+//          "camera.circle.fill" : "building.columns.circle.fill" // use function for more options
+        return result
     }
 
 }

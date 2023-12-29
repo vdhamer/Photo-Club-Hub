@@ -178,14 +178,18 @@ extension PhotoClub {
             let managedObject: NSManagedObject = bgContext.object(with: organizationTypeObjectID)
             // swiftlint:disable:next force_cast
             let organizationType: OrganizationType = managedObject as! OrganizationType
-            if photoClub.organisationType != nil, photoClub.organisationType != organizationType { // toggling value??
+            if photoClub.organizationType != nil, photoClub.organizationType != organizationType { // toggling value??
                 ifDebugFatalError("An organization's 'type' should only be initialized once")
             }
+            photoClub.organizationType = OrganizationType.findCreateUpdate(context: bgContext,
+                                                                           name: OrganizationTypeEnum.club.rawValue
+            )
         } else { // this shouldn't fail...
             ifDebugFatalError("Failed to retrieve organizationType from within background thread.")
             // ...and not sure this will save the day, but give all records type .club to prevent a crash in PRD code
-            photoClub.organisationType = OrganizationType.findCreateUpdate(context: bgContext,
-                                                                           name: OrganizationTypeEnum.club.rawValue)
+            photoClub.organizationType = OrganizationType.findCreateUpdate(context: bgContext,
+                                                                           name: OrganizationTypeEnum.club.rawValue
+            )
         }
 
         if photoClub.shortName != shortName {

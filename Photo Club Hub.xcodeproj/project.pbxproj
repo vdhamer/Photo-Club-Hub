@@ -192,7 +192,6 @@
 		D0AE1B7427889E8600E0100E /* PhotoClubListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoClubListView.swift; sourceTree = "<group>"; };
 		D0AE1B772788A19500E0100E /* WhoIsWho.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhoIsWho.swift; sourceTree = "<group>"; };
 		D0B260B62958FC2D00B73E1A /* FGWMembersProvider+extractName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FGWMembersProvider+extractName.swift"; sourceTree = "<group>"; };
-		D0B3BD202B0A80ED0045072A /* SimplifiedPhotoClubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimplifiedPhotoClubView.swift; sourceTree = "<group>"; };
 		D0B52496277F9A4B00927BCA /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D0BAB01C2A76CED300387E63 /* URLSession+synchronous.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+synchronous.swift"; sourceTree = "<group>"; };
 		D0C53BDC2ABF3ADF000722A1 /* PersonName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonName.swift; sourceTree = "<group>"; };
@@ -555,7 +554,6 @@
 			children = (
 				D0AE1B7427889E8600E0100E /* PhotoClubListView.swift */,
 				D0831A1B277F72270049AB84 /* PhotoClubView.swift */,
-				D0B3BD202B0A80ED0045072A /* SimplifiedPhotoClubView.swift */,
 				D0E694C827EF9B450054D634 /* LockAnimationView.swift */,
 			);
 			path = PhotoClubsView;
