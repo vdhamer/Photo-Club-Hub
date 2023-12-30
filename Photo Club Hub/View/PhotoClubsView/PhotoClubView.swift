@@ -98,31 +98,13 @@ struct PhotoClubView: View {
                                    systemImage: systemName(organizationType: photoClub.organizationType,
                                                            circleNeeded: false),
                                    coordinate: photoClub.coordinates)
-
-//                            Marker(isEqual(mapItemLHS: mapItem, mapItemRHS: mapSelection) ?
-//                                mapItem.name ?? "NoName??" : String(""),
-//                                   systemImage: systemName(organizationType: filteredPhotoClub.organizationType,
-//                                                           circleNeeded: false),
-//                                   coordinate: mapItem.placemark.coordinate)
                             .tint(isEqual(photoClubLHS: photoClub,
                                           photoClubRHS: filteredPhotoClub) ? .photoClubColor : .blue)
-                        }
-
-//                        // show markers
-//                        ForEach(toMapItems(photoClubs: fetchedPhotoClubs), id: \.self) { mapItem in
-//                            Marker(isEqual(mapItemLHS: mapItem, mapItemRHS: mapSelection) ?
-//                                mapItem.name ?? "NoName??" : String(""),
-//                                   systemImage: systemName(organizationType: filteredPhotoClub.organizationType,
-//                                                           circleNeeded: false),
-//                                   coordinate: mapItem.placemark.coordinate)
-//                                .tint(isEqual(mapItem: mapItem, photoclub: 
-//                                                                         filteredPhotoClub) ? .photoClubColor : .blue)
-//                        }
-
+                        } // Marker loop
                         UserAnnotation() // show user's location on map
-                    }
+                    } // render Map
                         .frame(minHeight: 300, idealHeight: 500, maxHeight: .infinity)
-                } // VStack
+                } // PhotoClub loop
                 .task {
                     initializeCameraPosition(photoClub: filteredPhotoClub) // works better than .onAppear(perform:)?
                 }
