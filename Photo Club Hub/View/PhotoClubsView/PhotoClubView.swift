@@ -42,7 +42,6 @@ struct PhotoClubView: View {
                         .foregroundColor(.photoClubColor)
 
                     HStack(alignment: .center, spacing: 0) {
-//                        Image(systemName: "camera.circle.fill") TODO remove comment
                         Image(systemName: systemName(organizationType: filteredPhotoClub.organizationType,
                                                      circleNeeded: true)
                         )
@@ -93,15 +92,32 @@ struct PhotoClubView: View {
                             .pan, .zoom], // actually .all is the default
                         selection: $mapSelection) {
 
-                        // show markers
-                        ForEach(toMapItems(photoClubs: fetchedPhotoClubs), id: \.self) { mapItem in
-                            Marker(isEqual(mapItemLHS: mapItem, mapItemRHS: mapSelection) ?
-                                mapItem.name ?? "NoName??" : String(""),
-                                   systemImage: systemName(organizationType: filteredPhotoClub.organizationType,
+                        // show markers of all organizations on map
+                        ForEach(fetchedPhotoClubs, id: \.self) { photoClub in
+                            Marker(photoClub.fullName,
+                                   systemImage: systemName(organizationType: photoClub.organizationType,
                                                            circleNeeded: false),
-                                   coordinate: mapItem.placemark.coordinate)
-                                .tint(isEqual(mapItem: mapItem, photoclub: filteredPhotoClub) ? .photoClubColor : .blue)
+                                   coordinate: photoClub.coordinates)
+
+//                            Marker(isEqual(mapItemLHS: mapItem, mapItemRHS: mapSelection) ?
+//                                mapItem.name ?? "NoName??" : String(""),
+//                                   systemImage: systemName(organizationType: filteredPhotoClub.organizationType,
+//                                                           circleNeeded: false),
+//                                   coordinate: mapItem.placemark.coordinate)
+                            .tint(isEqual(photoClubLHS: photoClub,
+                                          photoClubRHS: filteredPhotoClub) ? .photoClubColor : .blue)
                         }
+
+//                        // show markers
+//                        ForEach(toMapItems(photoClubs: fetchedPhotoClubs), id: \.self) { mapItem in
+//                            Marker(isEqual(mapItemLHS: mapItem, mapItemRHS: mapSelection) ?
+//                                mapItem.name ?? "NoName??" : String(""),
+//                                   systemImage: systemName(organizationType: filteredPhotoClub.organizationType,
+//                                                           circleNeeded: false),
+//                                   coordinate: mapItem.placemark.coordinate)
+//                                .tint(isEqual(mapItem: mapItem, photoclub: 
+//                                                                         filteredPhotoClub) ? .photoClubColor : .blue)
+//                        }
 
                         UserAnnotation() // show user's location on map
                     }
@@ -341,7 +357,7 @@ extension PhotoClubView {
 
 extension PhotoClubView { // tests for equality
 
-    private func isEqual(mapItem: MKMapItem, photoclub: PhotoClub) -> Bool {
+    private func isEqual(mapItem: MKMapItem, photoclub: PhotoClub) -> Bool { // TODO needed?
         // a little bit scary to compare two floats for equality, but for now it only affects the color of the marker
         if mapItem.placemark.coordinate.latitude != photoclub.coordinates.latitude {
             return false
@@ -350,7 +366,11 @@ extension PhotoClubView { // tests for equality
         }
     }
 
-    private func isEqual(mapItemLHS: MKMapItem, mapItemRHS: MKMapItem?) -> Bool {
+    private func isEqual(photoClubLHS: PhotoClub, photoClubRHS: PhotoClub) -> Bool {
+        return (photoClubLHS.fullName == photoClubRHS.fullName) && (photoClubLHS.town == photoClubRHS.town)
+    }
+
+    private func isEqual(mapItemLHS: MKMapItem, mapItemRHS: MKMapItem?) -> Bool { // TODO needed?
         // a little bit scary to compare two floats for equality
         if mapItemLHS.placemark.coordinate.latitude != mapItemRHS?.placemark.coordinate.latitude {
             return false
