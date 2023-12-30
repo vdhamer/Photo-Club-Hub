@@ -12,7 +12,7 @@ Portfolios screen
     * Name of towns are now localized if applicable. Example: Den Haag" (NL) vs The Hague (EN)
     * Limited the font size of the footers if user increased the the device's text display size in Settings.
 Maintenance
-    * Tested with with iOS 17.2.1 and MacOS 14.2.1
+    * Tested with with iOS 17.2.1, MacOS 14.2.1, GitCrypt 0.7.0.1
 
 This is build #4611 in Apple's App Store.
 ---------------------------------------------------------------------------

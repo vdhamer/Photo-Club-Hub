@@ -13,7 +13,7 @@ let dataSourceURL: String = """
                             https://raw.githubusercontent.com/\
                             vdhamer/Photo-Club-Hub/\
                             main/\
-                            Photo%20Club%20Hub/ViewModel/Lists/ClubList.json
+                            Photo%20Club%20Hub/ViewModel/Lists/OrganizationList.json
                             """
 
 /* Example of basic OrganizationList.json content
@@ -68,7 +68,7 @@ class OrganizationList {
         ifDebugPrint("Starting readJSONOrganizationList() in background")
 
         guard let data = try? String(contentsOf: URL(string: dataSourceURL)!) else {
-            fatalError("Please check URL \(dataSourceURL)") // fatalError is ok here because URL string is defined above
+            fatalError("Please check URL \(dataSourceURL)") // calling fatalError is ok for a constant URL (see above)
         }
         // give the data to SwiftyJSON to parse
         let jsonRoot = JSON(parseJSON: data) // call to SwiftyJSON
