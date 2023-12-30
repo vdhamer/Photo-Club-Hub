@@ -32,6 +32,7 @@ struct FotogroepWaalreApp: App {
             PreludeView()
                 .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext) // main queue!
                 .onAppear {
+                    let foregroundContext = PersistenceController.shared.container.viewContext // UI context = main
 
                     // load test member(s) of Fotogroep Bellus Imago
                     let bellusBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
@@ -58,10 +59,12 @@ struct FotogroepWaalreApp: App {
                     _ = FotogroepWaalreMembersProvider(bgContext: waalreBackgroundContext)
 
                     // load list of photo clubs from OrganizationList.json file
-//                    let olBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-//                    olBackgroundContext.name = "ClubList"
-//                    olBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-//                    _ = OrganizationList(bgContext: olBackgroundContext) // read OrganizationList.json file
+                    let olBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+                    olBackgroundContext.name = "ClubList"
+                    olBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+                    _ = OrganizationList(bgContext: olBackgroundContext) // read OrganizationList.json file
+
+                    try? foregroundContext.save() // moves data to persistent store (needed?)
                 }
         }
         .onChange(of: scenePhase) { // pre-iOS 17 there was 1 param. Since iOS 17 it is 0 or 2.

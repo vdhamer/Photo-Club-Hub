@@ -26,6 +26,44 @@ extension PhotoClub {
 		set { members_ = newValue as NSSet }
 	}
 
+    var organizationType: OrganizationType {
+        get { // TODO remove printing
+            let organizationType: OrganizationType
+            var hack = false
+
+            if organizationType_ != nil {
+                organizationType = organizationType_! // not nil, should be the case
+            } else if Thread.isMainThread { // frantic hack to avoid fatal error
+                let persistenceController = PersistenceController.shared // for Core Data
+                let viewContext = persistenceController.container.viewContext
+                let museumObjectID: NSManagedObjectID = OrganizationType.objectIDs[OrganizationTypeEnum.museum]!
+                // swiftlint:disable:next force_cast
+                organizationType = viewContext.object(with: museumObjectID) as! OrganizationType
+                hack = true
+            } else {
+                fatalError( "Cannot Fetch organizationType object", file: #file, line: #line )
+                // only way to avoid fatalError at this point is to
+            }
+            print("""
+                  ORGANIZATIONTYPE: getter for \(self.shortName). \
+                  Returning \(organizationType.name) \
+                  on Thread = \(Thread.isMainThread ? "MAIN" : "Background")\
+                  \(hack ? " after applying hack ;-())" : "")
+                  """)
+            return organizationType
+        } // TODO replace force unwrap
+        set {
+            print("""
+                  ORGANIZATIONTYPE: setter for \(self.shortName). \
+                  New value = \(newValue.name) \
+                  on Thread = \(Thread.isMainThread ? "MAIN" : "Background")
+                  """)
+            if organizationType_ != newValue { // avoid unnecessarily dirtying context
+                organizationType_ = newValue
+            }
+        }
+    }
+
 	var fullName: String {
 		get { return name_ ?? "DefaultPhotoClubName" }
 		set { name_ = newValue }
@@ -180,7 +218,7 @@ extension PhotoClub {
             let managedObject: NSManagedObject = bgContext.object(with: organizationTypeObjectID)
             // swiftlint:disable:next force_cast
             let organizationType: OrganizationType = managedObject as! OrganizationType
-            if photoClub.organizationType != nil, photoClub.organizationType != organizationType { // toggling value??
+            if photoClub.organizationType_ != nil, photoClub.organizationType != organizationType { // toggling value??
                 ifDebugFatalError("An organization's 'type' should only be initialized once")
             }
             photoClub.organizationType = OrganizationType.findCreateUpdate(context: bgContext,

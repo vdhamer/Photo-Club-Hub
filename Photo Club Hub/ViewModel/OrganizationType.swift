@@ -15,8 +15,7 @@ extension OrganizationType {
         guard Thread.isMainThread else { fatalError("OrganizationType.initConstants() must be on main thread") }
         guard OrganizationType.objectIDs.isEmpty else { fatalError("Repeated call to OrganizationalType.initConstants")}
 
-        let persistenceController = PersistenceController.shared // for Core Data
-        let viewContext = persistenceController.container.viewContext // foreground context
+        let viewContext = PersistenceController.shared.container.viewContext // foreground context
 
         for type in OrganizationTypeEnum.allCases { // type is simple enum
             let organizationType = OrganizationType.findCreateUpdate( // organizationType is CoreData NSManagedObject
@@ -26,7 +25,13 @@ extension OrganizationType {
             OrganizationType.objectIDs[type] = organizationType.objectID // to access managed objects from bg threads
         }
 
-        try? viewContext.save() // persist organizationType using main thread ManagedObjectContext
+        do {
+            try viewContext.save() // persist organizationType using main thread ManagedObjectContext
+        } catch {
+            ifDebugFatalError("Couldn't initialize both organizationType records",
+                              file: #fileID, line: #line)
+        }
+
     }
 
     // MARK: - getters and setters

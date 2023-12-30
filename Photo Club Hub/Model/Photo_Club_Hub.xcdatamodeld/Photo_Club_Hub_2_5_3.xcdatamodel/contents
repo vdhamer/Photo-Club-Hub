@@ -28,7 +28,7 @@
     <entity name="OrganizationType" representedClassName="OrganizationType" syncable="YES" codeGenerationType="class">
         <attribute name="dummy" optional="YES" attributeType="String"/>
         <attribute name="name_" optional="YES" attributeType="String"/>
-        <relationship name="photoclubs_" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PhotoClub" inverseName="organizationType" inverseEntity="PhotoClub"/>
+        <relationship name="photoclubs_" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PhotoClub" inverseName="organizationType_" inverseEntity="PhotoClub"/>
         <uniquenessConstraints>
             <uniquenessConstraint>
                 <constraint value="name_"/>
@@ -52,7 +52,7 @@
         <attribute name="shortName_" optional="YES" attributeType="String"/>
         <attribute name="town_" attributeType="String" defaultValueString="DefaultTown"/>
         <relationship name="members_" toMany="YES" deletionRule="Cascade" destinationEntity="MemberPortfolio" inverseName="photoClub_" inverseEntity="MemberPortfolio"/>
-        <relationship name="organizationType" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="OrganizationType" inverseName="photoclubs_" inverseEntity="OrganizationType"/>
+        <relationship name="organizationType_" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="OrganizationType" inverseName="photoclubs_" inverseEntity="OrganizationType"/>
         <uniquenessConstraints>
             <uniquenessConstraint>
                 <constraint value="name_"/>

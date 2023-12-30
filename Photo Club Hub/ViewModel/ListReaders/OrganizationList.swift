@@ -57,7 +57,8 @@ class OrganizationList {
     init(bgContext: NSManagedObjectContext) {
 
         bgContext.perform { // move to background thread
-            self.readJSONOrganizationList(bgContext: bgContext, organizationTypes: [.club, .museum]) // load entire file
+            self.readJSONOrganizationList(bgContext: bgContext,
+                                          organizationTypes: [.club, .museum]) // load entire file
         }
     }
 
@@ -94,9 +95,9 @@ class OrganizationList {
                                                coordinates: coordinates)
             }
             do {
-                if bgContext.hasChanges {
+ //               if bgContext.hasChanges { // TODO
                     try bgContext.save() // persist contents of OrganizationList.json
-                }
+ //               }
                 ifDebugPrint("Completed inserting/updated JSON ClubList in background")
             } catch {
                 ifDebugFatalError("Failed to save changes to Core Data",

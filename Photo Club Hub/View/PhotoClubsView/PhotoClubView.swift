@@ -40,12 +40,11 @@ struct PhotoClubView: View {
                         .font(UIDevice.isIPad ? .title : .title2)
                         .tracking(1)
                         .foregroundColor(.photoClubColor)
-//                        .border(.red)
 
                     HStack(alignment: .center, spacing: 0) {
 //                        Image(systemName: "camera.circle.fill") TODO remove comment
                         Image(systemName: systemName(organizationType: filteredPhotoClub.organizationType,
-                                                     circleNeeded: true) // TODO -> organizationType_
+                                                     circleNeeded: true)
                         )
                             .foregroundStyle(.white, .yellow, accentColor ) // secondary = yellow color not really used
                             .symbolRenderingMode(.palette)
@@ -82,13 +81,11 @@ struct PhotoClubView: View {
                                 }
                                 .frame(maxWidth: 60, maxHeight: 60)
                                 .contentShape(Rectangle())
-//                                .border(.red)
                             }
                         )
                         .buttonStyle(.plain) // to avoid entire List element to be clickable
                     }
                     .padding(.all, 0)
-//                    .border(.blue)
                     Map(position: cameraPositionBinding(for: filteredPhotoClub.id),
                         interactionModes: filteredPhotoClub.isScrollLocked ? [] : [
                             .rotate, // automatically enables the compas button when rotated
@@ -101,7 +98,8 @@ struct PhotoClubView: View {
                         ForEach(toMapItems(photoClubs: fetchedPhotoClubs), id: \.self) { mapItem in
                             Marker(isEqual(mapItemLHS: mapItem, mapItemRHS: mapSelection) ?
                                 mapItem.name ?? "NoName??" : String(""),
-                                   systemImage: "camera.fill",
+                                   systemImage: systemName(organizationType: filteredPhotoClub.organizationType,
+                                                           circleNeeded: false),
                                    coordinate: mapItem.placemark.coordinate)
                                 .tint(isEqual(mapItem: mapItem, photoclub: filteredPhotoClub) ? .photoClubColor : .blue)
                         }
