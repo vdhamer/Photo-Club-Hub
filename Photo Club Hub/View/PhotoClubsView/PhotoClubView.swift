@@ -91,7 +91,6 @@ struct PhotoClubView: View {
                             .rotate, // automatically enables the compas button when rotated
                             .pitch, // switch to 3D view if zoomed in far enough
                             .pan, .zoom], // actually .all is the default
-//                        userTrackingMode: .constant(.follow),
                         selection: $mapSelection) {
 
                         // show markers
@@ -295,8 +294,6 @@ extension PhotoClubView {
         if circleNeeded {
             result = result.replacing(".fill", with: ".circle.fill")
         }
-//    Image(systemName: filteredPhotoClub.organizationType.name == OrganizationTypeEnum.club.rawValue ?
-//          "camera.circle.fill" : "building.columns.circle.fill" // use function for more options
         return result
     }
 
