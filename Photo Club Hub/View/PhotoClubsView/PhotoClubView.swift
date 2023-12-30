@@ -213,6 +213,16 @@ struct PhotoClubView: View {
         return mapItems
     }
 
+//    // conversion to [MKMapItems] is needed to make Placemarks touch (and mouse) sensitive
+//    private func toMapItem(photoClub: PhotoClub) -> MKMapItem {
+//        let coordinates = CLLocationCoordinate2D(latitude: photoClub.latitude_,
+//                                                 longitude: photoClub.longitude_)
+//        let placemark = MKPlacemark(coordinate: coordinates)
+//        let mapItem = MKMapItem(placemark: placemark)
+//        mapItem.name = photoClub.fullName
+//        return mapItem
+//    }
+
     private func initializeCameraPosition(photoClub: PhotoClub) {
         let mapCameraPosition: MapCameraPosition
 
