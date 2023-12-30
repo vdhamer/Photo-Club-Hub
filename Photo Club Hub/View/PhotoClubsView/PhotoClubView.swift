@@ -266,7 +266,17 @@ struct PhotoClubView: View {
 
 }
 
-extension PhotoClubView { // TODO return Image
+extension PhotoClubView {
+
+//    func tint(mapItem: MapItem, selectedClub: PhotoClub) -> Color { // TODO
+//        if isEqual(mapItem: mapItem, photoclub: selectedClub) {
+//            .photoClubColor
+//        } else if mapItem {
+//            mapItem
+//        } else {
+//            .blue
+//        }
+//    }
 
     func systemName(organizationType: OrganizationType?, circleNeeded: Bool) -> String { // for SanFrancisco symbols
         guard let organizationType else { return "questionmark.circle.fill" }
@@ -276,8 +286,10 @@ extension PhotoClubView { // TODO return Image
         switch organizationType.name {
         case OrganizationTypeEnum.museum.rawValue:
             result = "building.columns.fill"
-        default:
+        case OrganizationTypeEnum.club.rawValue:
             result = "camera.fill"
+        default:
+            result = "location.fill"
         }
 
         if circleNeeded {

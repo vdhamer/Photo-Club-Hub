@@ -108,6 +108,7 @@ enum OrganizationTypeEnum: String, CaseIterable {
 
     case club // rawValue automatically set to "club"
     case museum
+    case unknown
 
     var unlocalizedSingular: String { // "museum" as passed around using `OrganizationType.name: String`
         self.rawValue
@@ -125,6 +126,9 @@ enum OrganizationTypeEnum: String, CaseIterable {
         case .museum:
             return String(localized: "musea", // "musea" because it is used in external interfaces
                           comment: "Mode for the Clubs page: show musea as sections.")
+        default:
+            return String(localized: "unknowns", // "musea" because it is used in external interfaces
+                          comment: "Organization type is not known. Used for debugging.")
         }
     }
 }

@@ -36,7 +36,7 @@ extension PhotoClub {
             } else if Thread.isMainThread { // frantic hack to avoid fatal error
                 let persistenceController = PersistenceController.shared // for Core Data
                 let viewContext = persistenceController.container.viewContext
-                let museumObjectID: NSManagedObjectID = OrganizationType.objectIDs[OrganizationTypeEnum.museum]!
+                let museumObjectID: NSManagedObjectID = OrganizationType.objectIDs[OrganizationTypeEnum.unknown]!
                 // swiftlint:disable:next force_cast
                 organizationType = viewContext.object(with: museumObjectID) as! OrganizationType
                 hack = true
