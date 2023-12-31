@@ -275,7 +275,7 @@ struct PhotoClubView: View {
 extension PhotoClubView {
 
     func selectMarkerTint(photoClub: PhotoClub, selectedClub: PhotoClub) -> Color {
-        if photoClub.organizationType.name == OrganizationTypeEnum.unknown.rawValue {
+        if photoClub.organizationType.isUnknown {
             .red // for .unknown organization type (has higher priority than other rules)
         } else if isEqual(photoClubLHS: photoClub, photoClubRHS: selectedClub) {
             .photoClubColor // this is the organization centered on this particular map

@@ -82,22 +82,11 @@ struct PhotoClubListView: View {
                 fgwBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
                 _ = FotogroepWaalreMembersProvider(bgContext: fgwBackgroundContext)
 
-                // Load a few test members for 3 non-existent photo clubs.
-                // But this also tests support for clubs with same name in different towns
-                let taBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-                taBackgroundContext.name = "Amsterdam refresh"
-                taBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-                _ = TestClubAmsterdamMembersProvider(bgContext: taBackgroundContext)
-
-                let tdBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-                tdBackgroundContext.name = "Den Haag refresh"
-                tdBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-                _ = TestClubDenHaagMembersProvider(bgContext: tdBackgroundContext)
-
-                let trBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-                trBackgroundContext.name = "Rotterdam refresh"
-                trBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-                _ = TestClubRotterdamMembersProvider(bgContext: trBackgroundContext)
+                // load list of photo clubs from OrganizationList.json file
+                let olBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+                olBackgroundContext.name = "ClubList refresh"
+                olBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+                _ = OrganizationList(bgContext: olBackgroundContext) // read OrganizationList.json file
             }
         }
         .navigationTitle(navigationTitle)
