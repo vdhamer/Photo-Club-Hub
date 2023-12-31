@@ -226,9 +226,9 @@ extension PhotoClub {
             )
         } else { // this shouldn't fail...
             ifDebugFatalError("Failed to retrieve organizationType from within background thread.")
-            // ...and not sure this will save the day, but give all records type .club to prevent a crash in PRD code
+            // ...and not sure this will save the day, but give all records a type .club to prevent a crash in PRD code
             photoClub.organizationType = OrganizationType.findCreateUpdate(context: bgContext,
-                                                                           name: OrganizationTypeEnum.club.rawValue
+                                                                           name: OrganizationTypeEnum.unknown.rawValue
             )
         }
 
