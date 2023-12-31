@@ -27,7 +27,7 @@ extension PhotoClub {
 	}
 
     var organizationType: OrganizationType {
-        get { // TODO remove printing
+        get {
             let organizationType: OrganizationType
             var hack = false
 
@@ -51,7 +51,7 @@ extension PhotoClub {
                   \(hack ? " after applying hack ;-())" : "")
                   """)
             return organizationType
-        } // TODO replace force unwrap
+        }
         set {
             print("""
                   ORGANIZATIONTYPE: setter for \(self.shortName). \
@@ -208,11 +208,10 @@ extension PhotoClub {
                        photoClub: PhotoClub, shortName: String,
                        // swiftlint:disable:next large_tuple
                        optionalFields: (photoClubWebsite: URL?, fotobondNumber: Int16?, kvkNumber: Int32?),
-                       coordinates: CLLocationCoordinate2D?, pinned: Bool) -> Bool {
+                       coordinates: CLLocationCoordinate2D?,
+                       pinned: Bool) -> Bool {
 
 		var modified: Bool = false
-
-        print("*** Updating *** type=\(organizationType.rawValue) instance=\"\(photoClub.fullName)\"")
 
         if let organizationTypeObjectID = OrganizationType.objectIDs[organizationType] {
             let managedObject: NSManagedObject = bgContext.object(with: organizationTypeObjectID)
@@ -234,30 +233,30 @@ extension PhotoClub {
 
         if photoClub.shortName != shortName {
             photoClub.shortName = shortName
-            modified = true
-        }
+            modified = true }
+
         if let website = optionalFields.photoClubWebsite, photoClub.photoClubWebsite != website {
-			photoClub.photoClubWebsite = website
-			modified = true
-		}
+            photoClub.photoClubWebsite = website
+            modified = true }
+
         if let fotobondNumber = optionalFields.fotobondNumber, photoClub.fotobondNumber != fotobondNumber {
-			photoClub.fotobondNumber = fotobondNumber
-			modified = true
-		}
+            photoClub.fotobondNumber = fotobondNumber
+            modified = true }
+
         if let kvkNumber = optionalFields.kvkNumber, photoClub.kvkNumber != kvkNumber {
-			photoClub.kvkNumber = kvkNumber
-			modified = true
-		}
+            photoClub.kvkNumber = kvkNumber
+            modified = true }
+
         if let coordinates, photoClub.coordinates != coordinates {
             photoClub.longitude_ = coordinates.longitude
             photoClub.latitude_ = coordinates.latitude
-			modified = true
-		}
+			modified = true }
+
         if photoClub.pinned != pinned {
             photoClub.pinned = pinned
-            modified = true
-        }
-		if modified {
+            modified = true }
+
+        if modified {
 			do {
 				try bgContext.save() // persist modifications in PhotoClub record
  			} catch {

@@ -16,7 +16,6 @@ struct PhotoClubView: View {
 
     @FetchRequest var fetchedPhotoClubs: FetchedResults<PhotoClub>
     private let permitDeletionOfPhotoClubs = true // disables .delete() functionality for this screen
-    let accentColor: Color = .accentColor // needed to solve a typing issue TODO needed?
 
     @State private var cameraPositions: [PhotoClubId: MapCameraPosition] = [:] // location of camera per club
     let interactionModes: MapInteractionModes = [.pan, .zoom, .rotate, .pitch]
@@ -340,26 +339,8 @@ extension PhotoClubView {
 
 extension PhotoClubView { // tests for equality
 
-    private func isEqual(mapItem: MKMapItem, photoclub: PhotoClub) -> Bool { // TODO needed?
-        // a little bit scary to compare two floats for equality, but for now it only affects the color of the marker
-        if mapItem.placemark.coordinate.latitude != photoclub.coordinates.latitude {
-            return false
-        } else {
-            return mapItem.placemark.coordinate.longitude == photoclub.coordinates.longitude
-        }
-    }
-
     private func isEqual(photoClubLHS: PhotoClub, photoClubRHS: PhotoClub) -> Bool {
         return (photoClubLHS.fullName == photoClubRHS.fullName) && (photoClubLHS.town == photoClubRHS.town)
-    }
-
-    private func isEqual(mapItemLHS: MKMapItem, mapItemRHS: MKMapItem?) -> Bool { // TODO needed?
-        // a little bit scary to compare two floats for equality
-        if mapItemLHS.placemark.coordinate.latitude != mapItemRHS?.placemark.coordinate.latitude {
-            return false
-        } else {
-            return mapItemLHS.placemark.coordinate.longitude == mapItemRHS?.placemark.coordinate.longitude
-        }
     }
 
 }

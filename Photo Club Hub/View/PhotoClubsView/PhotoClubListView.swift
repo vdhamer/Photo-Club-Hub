@@ -19,9 +19,7 @@ struct PhotoClubListView: View {
                           SortDescriptor(\.town_, order: .forward)], // just to make it repeatable
         animation: .default)
     private var photoClubs: FetchedResults<PhotoClub>
-
     private var predicate: NSPredicate = NSPredicate.all
-    // TODO make mode dependent at some point (using OrganizationTypeEnum.localizedPlural)
     private var navigationTitle = String(localized: "Clubs", comment: "Title of page with maps of clubs and musea")
 
     init(predicate: NSPredicate? = nil,
