@@ -1,20 +1,20 @@
-### 2.5.3 (Github commit ???????) ??-01-24
+### 2.5.3 (Github commit 91e547e) 31-12-23
 
 Clubs and Musea screen
-    * Renamed from `Photo Clubs` to save space for future mode picker widget.
-    * Each map displays 15 photography-focussed musea in various countries.
-    * Additional photo clubs (and musea) can be loaded from an online OrganizationList.json file.
-    * The country where a photoclub (or museum) is located is automatically established using the organization's GPS coordinates.
-    * Town and Country names are localized. Examples: Paris (EN) vs Parijs (NL), France (EN) vs Frankrijk (NL).
-    * Changed order of footnotes at bottom of screen. 3rd footnote is dimmed if feature has already been used triggered.
-    * Musea are rendered on the map using a special type of marker pin.
+    * Renamed screen from `Photo Clubs` to `Clubs` to save space (for future mode picker).
+    * Each map displays 20 photography-focussed musea in various countries.
+    * Additional photo clubs (and musea) can be loaded from an data file (OrganizationList.json at Github).
+    * The country where a photoclub (or museum) is located is automatically established using its GPS coordinates.
+    * Town and Country names are localized. Examples: Frankrijk (NL) vs France (EN).
+    * Changed order of footnotes at bottom of screen. 3rd footnote is dimmed if feature has already been triggered.
+    * Musea are rendered on the map using a different type of marker pin (_not working reliably yet!_).
 Portfolios screen
-    * Name of towns are now localized if applicable. Example: Den Haag" (NL) vs The Hague (EN)
-    * Limited the font size of the footers if user increased the the device's text display size in Settings.
+    * Name of towns are now localized if applicable. Example: Den Haag (NL) vs The Hague (EN).
+    * Limited the font size of the footers in case the device's text display size was increased (in Settings).
 Maintenance
     * Tested with with iOS 17.2.1, MacOS 14.2.1, GitCrypt 0.7.0.1
 
-This is build #4611 in Apple's App Store.
+This is build #4611, but is NOT available in Apple's App Store.
 ---------------------------------------------------------------------------
 ### 2.5.2 (Github commit 7cc0780) 16-12-23
 
