@@ -3,7 +3,7 @@
 Clubs and Musea screen
     * Renamed screen from `Photo Clubs` to `Clubs` to save space (for future mode picker).
     * Each map displays 20 photography-focussed musea in various countries.
-    * Additional photo clubs (and musea) can be loaded from an data file (OrganizationList.json at Github).
+    * Additional photo clubs (and musea) can be loaded from a data file (OrganizationList.json at Github).
     * The country where a photoclub (or museum) is located is automatically established using its GPS coordinates.
     * Town and Country names are localized. Examples: Frankrijk (NL) vs France (EN).
     * Changed order of footnotes at bottom of screen. 3rd footnote is dimmed if feature has already been triggered.
@@ -14,7 +14,7 @@ Portfolios screen
 Maintenance
     * Tested with with iOS 17.2.1, MacOS 14.2.1, GitCrypt 0.7.0.1
 
-This is build #4611, but is NOT available in Apple's App Store.
+This is build #4611, and was sent out to Apple Testflight users.
 ---------------------------------------------------------------------------
 ### 2.5.2 (Github commit 7cc0780) 16-12-23
 
