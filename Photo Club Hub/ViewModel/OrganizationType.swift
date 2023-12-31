@@ -102,6 +102,18 @@ extension OrganizationType {
         return modified
     }
 
+    var isUnknown: Bool { // convenience function
+        return self.name == OrganizationTypeEnum.unknown.rawValue
+    }
+
+    var isClub: Bool { // convenience function
+        return self.name == OrganizationTypeEnum.club.rawValue
+    }
+
+    var isMuseum: Bool { // convenience function
+        return self.name == OrganizationTypeEnum.museum.rawValue
+    }
+
 }
 
 enum OrganizationTypeEnum: String, CaseIterable {

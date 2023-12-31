@@ -221,7 +221,7 @@ extension PhotoClub {
                 ifDebugFatalError("An organization's 'type' should only be initialized once")
             }
             photoClub.organizationType = OrganizationType.findCreateUpdate(context: bgContext,
-                                                                           name: OrganizationTypeEnum.club.rawValue
+                                                                           name: OrganizationTypeEnum.club.rawValue // TODO check me
             )
         } else { // this shouldn't fail...
             ifDebugFatalError("Failed to retrieve organizationType from within background thread.")

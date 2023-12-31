@@ -45,8 +45,7 @@ struct PhotoClubView: View {
                                                      circleNeeded: true)
                         )
                             .foregroundStyle(.white, .yellow, // .yellow (secondary color) not actually used
-                                filteredPhotoClub.organizationType.name == OrganizationTypeEnum.unknown.rawValue ?
-                                    .red : .accentColor)
+                                filteredPhotoClub.organizationType.isUnknown ? .red : .accentColor)
                             .symbolRenderingMode(.palette)
                             .font(.largeTitle)
                             .padding(.horizontal, 5)
