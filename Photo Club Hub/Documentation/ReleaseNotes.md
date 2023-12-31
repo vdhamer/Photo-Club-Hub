@@ -11,6 +11,7 @@ Clubs and Musea screen
 Portfolios screen
     * Name of towns are now localized if applicable. Example: Den Haag (NL) vs The Hague (EN).
     * Limited the font size of the footers in case the device's text display size was increased (in Settings).
+    * Removed Test Fotoclub (3 of them: Amsterdam, The Hague, Rotterdam). They are now treated as musea.
 Maintenance
     * Tested with with iOS 17.2.1, MacOS 14.2.1, GitCrypt 0.7.0.1
 
