@@ -36,7 +36,7 @@ extension PhotoClub {
             } else if Thread.isMainThread { // frantic hack to avoid fatal error
                 let persistenceController = PersistenceController.shared // for Core Data
                 let viewContext = persistenceController.container.viewContext
-                let museumObjectID: NSManagedObjectID = OrganizationType.objectIDs[OrganizationTypeEnum.unknown]!
+                let museumObjectID: NSManagedObjectID = OrganizationType.enum2objectID[OrganizationTypeEnum.unknown]!
                 // swiftlint:disable:next force_cast
                 organizationType = viewContext.object(with: museumObjectID) as! OrganizationType
                 hack = true
@@ -170,7 +170,7 @@ extension PhotoClub {
 
 		if let organization = organizations.first { // already exists, so make sure secondary attributes are up to date
             print("\(organization.fullNameTown): Will try to update info for organization \(organization.fullName)")
-            if update(bgContext: context, organizationType: organizationType,
+            if update(bgContext: context, organizationTypeEnum: organizationType,
                       photoClub: organization, shortName: photoClubIdPlus.nickname,
                       optionalFields: (photoClubWebsite: photoClubWebsite,
                                        fotobondNumber: fotobondNumber,
@@ -187,7 +187,7 @@ extension PhotoClub {
             organization.fullName = photoClubIdPlus.fullName // first part of ID
             organization.town = photoClubIdPlus.town // second part of ID
             print("\(organization.fullNameTown): Will try to create new organization \(organization.fullName)")
-            _ = update(bgContext: context, organizationType: organizationType,
+            _ = update(bgContext: context, organizationTypeEnum: organizationType,
                        photoClub: organization, shortName: photoClubIdPlus.nickname,
                        optionalFields: (photoClubWebsite: photoClubWebsite,
                                         fotobondNumber: fotobondNumber,
@@ -204,7 +204,7 @@ extension PhotoClub {
 	// Update non-identifying attributes/properties within existing instance of class PhotoClub
     // swiftlint:disable:next function_parameter_count
     static func update(bgContext: NSManagedObjectContext,
-                       organizationType: OrganizationTypeEnum,
+                       organizationTypeEnum: OrganizationTypeEnum,
                        photoClub: PhotoClub, shortName: String,
                        // swiftlint:disable:next large_tuple
                        optionalFields: (photoClubWebsite: URL?, fotobondNumber: Int16?, kvkNumber: Int32?),
@@ -213,15 +213,15 @@ extension PhotoClub {
 
 		var modified: Bool = false
 
-        if let organizationTypeObjectID = OrganizationType.objectIDs[organizationType] {
+        if let organizationTypeObjectID = OrganizationType.enum2objectID[organizationTypeEnum] {
             let managedObject: NSManagedObject = bgContext.object(with: organizationTypeObjectID)
             // swiftlint:disable:next force_cast
             let organizationType: OrganizationType = managedObject as! OrganizationType
             if photoClub.organizationType_ != nil, photoClub.organizationType != organizationType { // toggling value??
                 ifDebugFatalError("An organization's 'type' should only be initialized once")
             }
-            photoClub.organizationType = OrganizationType.findCreateUpdate(context: bgContext,
-                                                                           name: OrganizationTypeEnum.club.rawValue // TODO check me
+            photoClub.organizationType = OrganizationType.findCreateUpdate(context: bgContext, // TODO check me
+                                                                           name: organizationTypeEnum.rawValue
             )
         } else { // this shouldn't fail...
             ifDebugFatalError("Failed to retrieve organizationType from within background thread.")

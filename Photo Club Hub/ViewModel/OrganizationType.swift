@@ -9,11 +9,13 @@ import CoreData
 
 extension OrganizationType {
 
-    static var objectIDs: [OrganizationTypeEnum: NSManagedObjectID] = [:]
+    static var enum2objectID: [OrganizationTypeEnum: NSManagedObjectID] = [:]
 
     static func initConstants() {
         guard Thread.isMainThread else { fatalError("OrganizationType.initConstants() must be on main thread") }
-        guard OrganizationType.objectIDs.isEmpty else { fatalError("Repeated call to OrganizationalType.initConstants")}
+        guard OrganizationType.enum2objectID.isEmpty else {
+            fatalError("Repeated call to OrganizationalType.initConstants")
+        }
 
         let viewContext = PersistenceController.shared.container.viewContext // foreground context
 
@@ -22,7 +24,7 @@ extension OrganizationType {
                 context: viewContext,
                 name: type.unlocalizedSingular
             )
-            OrganizationType.objectIDs[type] = organizationType.objectID // to access managed objects from bg threads
+            OrganizationType.enum2objectID[type] = organizationType.objectID // access NSManagedObjects from bg threads
         }
 
         do {
