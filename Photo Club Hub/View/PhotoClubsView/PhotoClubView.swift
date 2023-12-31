@@ -16,7 +16,7 @@ struct PhotoClubView: View {
 
     @FetchRequest var fetchedPhotoClubs: FetchedResults<PhotoClub>
     private let permitDeletionOfPhotoClubs = true // disables .delete() functionality for this screen
-    let accentColor: Color = .accentColor // needed to solve a typing issue
+    let accentColor: Color = .accentColor // needed to solve a typing issue TODO needed?
 
     @State private var cameraPositions: [PhotoClubId: MapCameraPosition] = [:] // location of camera per club
     let interactionModes: MapInteractionModes = [.pan, .zoom, .rotate, .pitch]
@@ -45,7 +45,9 @@ struct PhotoClubView: View {
                         Image(systemName: systemName(organizationType: filteredPhotoClub.organizationType,
                                                      circleNeeded: true)
                         )
-                            .foregroundStyle(.white, .yellow, accentColor ) // secondary = yellow color not really used
+                            .foregroundStyle(.white, .yellow, // .yellow (secondary color) not actually used
+                                filteredPhotoClub.organizationType.name == OrganizationTypeEnum.unknown.rawValue ?
+                                    .red : .accentColor)
                             .symbolRenderingMode(.palette)
                             .font(.largeTitle)
                             .padding(.horizontal, 5)
@@ -98,8 +100,7 @@ struct PhotoClubView: View {
                                    systemImage: systemName(organizationType: photoClub.organizationType,
                                                            circleNeeded: false),
                                    coordinate: photoClub.coordinates)
-                            .tint(isEqual(photoClubLHS: photoClub,
-                                          photoClubRHS: filteredPhotoClub) ? .photoClubColor : .blue)
+                            .tint(selectMarkerTint(photoClub: photoClub, selectedClub: filteredPhotoClub))
                         } // Marker loop
                         UserAnnotation() // show user's location on map
                     } // render Map
@@ -275,15 +276,15 @@ struct PhotoClubView: View {
 
 extension PhotoClubView {
 
-//    func tint(mapItem: MapItem, selectedClub: PhotoClub) -> Color { // TODO
-//        if isEqual(mapItem: mapItem, photoclub: selectedClub) {
-//            .photoClubColor
-//        } else if mapItem {
-//            mapItem
-//        } else {
-//            .blue
-//        }
-//    }
+    func selectMarkerTint(photoClub: PhotoClub, selectedClub: PhotoClub) -> Color {
+        if photoClub.organizationType.name == OrganizationTypeEnum.unknown.rawValue {
+            .red // for .unknown organization type (has higher priority than other rules)
+        } else if isEqual(photoClubLHS: photoClub, photoClubRHS: selectedClub) {
+            .photoClubColor // this is the organization centered on this particular map
+        } else {
+            .blue // for .museum and .club (and future) organization types (this should be the normal case)
+        }
+    }
 
     func systemName(organizationType: OrganizationType?, circleNeeded: Bool) -> String { // for SanFrancisco symbols
         guard let organizationType else { return "questionmark.circle.fill" }
