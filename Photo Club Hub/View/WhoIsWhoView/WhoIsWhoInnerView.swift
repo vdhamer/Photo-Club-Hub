@@ -155,7 +155,7 @@ struct WhoIsWhoInnerView: View {
             .onDelete(perform: deletePhotographers) // can be disabled using isDeletedPhotographerEnabled flag
         } header: {
             Text(makeHeaderString(count: filteredPhotographers.count))
-                .textCase(nil) // arguably a bug
+                .textCase(nil) // https://sarunw.com/posts/swiftui-list-section-header-textcase/
         }
     }
 

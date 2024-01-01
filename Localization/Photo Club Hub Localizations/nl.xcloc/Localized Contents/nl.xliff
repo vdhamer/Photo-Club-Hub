@@ -27,6 +27,11 @@
       <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="15.1" build-num="15C65"/>
     </header>
     <body>
+      <trans-unit id="%lld entries" xml:space="preserve">
+        <source>%lld entries</source>
+        <target>%lld stuks</target>
+        <note>number of records displayed at top of Clubs screen</note>
+      </trans-unit>
       <trans-unit id="%lld members (inc. ex-members)" xml:space="preserve">
         <source>%lld members (inc. ex-members)</source>
         <target>%lld leden (incl. ex-leden)</target>
@@ -469,7 +474,7 @@ Field at top of Members page that allows the user to filter the members based on
       </trans-unit>
       <trans-unit id="clubs" xml:space="preserve">
         <source>clubs</source>
-        <target state="translated">clubs</target>
+        <target>clubs</target>
         <note>Mode for the Clubs page: show photo clubs as sections.</note>
       </trans-unit>
       <trans-unit id="deceased" xml:space="preserve">
@@ -510,8 +515,8 @@ Default status of member within a club. Used in concatenations.</note>
       </trans-unit>
       <trans-unit id="musea" xml:space="preserve">
         <source>musea</source>
-        <target state="translated">musea</target>
-        <note>Mode for the Clubs page: show photo clubs as sections.</note>
+        <target>musea</target>
+        <note>Mode for the Clubs page: show musea as sections.</note>
       </trans-unit>
       <trans-unit id="of1" xml:space="preserve">
         <source>of</source>
@@ -542,6 +547,11 @@ Default status of member within a club. Used in concatenations.</note>
         <source>treasurer</source>
         <target>penningmeester</target>
         <note>Administrative role of member within a club. Used as part of concatenations.</note>
+      </trans-unit>
+      <trans-unit id="unknowns" xml:space="preserve">
+        <source>unknowns</source>
+        <target>onbekenden</target>
+        <note>Organization type is not known. Used for debugging.</note>
       </trans-unit>
       <trans-unit id="vice-chairman" xml:space="preserve">
         <source>vice-chairman</source>
