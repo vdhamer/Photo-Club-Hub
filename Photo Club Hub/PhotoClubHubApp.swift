@@ -74,10 +74,10 @@ extension FotogroepWaalreApp {
 //        _ = FotogroepWaalreMembersProvider(bgContext: waalreBackgroundContext)
 
         // load list of photo clubs from OrganizationList.json file
-//        let olBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-//        olBackgroundContext.name = "ClubList"
-//        olBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-//        _ = OrganizationList(bgContext: olBackgroundContext) // read OrganizationList.json file
+        let olBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+        olBackgroundContext.name = "ClubList"
+        olBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+        _ = OrganizationList(bgContext: olBackgroundContext) // read OrganizationList.json file
 
     }
 
