@@ -36,13 +36,12 @@ extension PhotoClub {
             } else if Thread.isMainThread { // frantic hack to avoid fatal error
                 let persistenceController = PersistenceController.shared // for Core Data
                 let viewContext = persistenceController.container.viewContext
-                let museumObjectID: NSManagedObjectID = OrganizationType.enum2objectID[OrganizationTypeEnum.unknown]!
+                let orgTypeObjectID: NSManagedObjectID = OrganizationType.enum2objectID[OrganizationTypeEnum.unknown]!
                 // swiftlint:disable:next force_cast
-                organizationType = viewContext.object(with: museumObjectID) as! OrganizationType
+                organizationType = viewContext.object(with: orgTypeObjectID) as! OrganizationType
                 hack = true
             } else {
-                fatalError( "Cannot Fetch organizationType object", file: #file, line: #line )
-                // only way to avoid fatalError at this point is to
+                fatalError( "Cannot Fetch organizationType object", file: #file, line: #line ) // TODO crash site
             }
             print("""
                   ORGANIZATIONTYPE: getter for \(self.shortName). \
@@ -194,7 +193,7 @@ extension PhotoClub {
                                         kvkNumber: kvkNumber),
                        coordinates: coordinates,
                        pinned: pinned)
-            print("\(organization.fullNameTown): Created new photo club")
+            print("\(organization.fullNameTown): Successfully created new photo club")
 			return organization
 		}
 	}

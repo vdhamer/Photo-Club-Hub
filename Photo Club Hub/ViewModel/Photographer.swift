@@ -140,7 +140,8 @@ extension Photographer {
 
 	// Update non-identifying properties within existing instance of class Photographer
     // Returns whether any of the non-identifying properties were updated.
-    static func update(bgContext: NSManagedObjectContext, photographer: Photographer,
+    static func update(bgContext: NSManagedObjectContext,
+                       photographer: Photographer,
                        memberRolesAndStatus: MemberRolesAndStatus,
                        phoneNumber: String? = nil, eMail: String? = nil,
                        photographerWebsite: URL? = nil, bornDT: Date? = nil) -> Bool {
