@@ -56,37 +56,8 @@ struct PhotoClubListView: View {
                 // remember that nothing will run here until the for try await loop finishes
             }
             .refreshable { // for pull-to-refresh
-                UserDefaults.standard.set(true, forKey: "ClubListPageRefreshed")
-
-                // load test member(s) of Fotogroep Bellus Imago
-                let biBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-                biBackgroundContext.name = "Bellus Imago refresh"
-                biBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-                _ = BellusImagoMembersProvider(bgContext: biBackgroundContext)
-
-                // load test member(s) of Fotogroep De Gender
-//                let dgBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-//                dgBackgroundContext.name = "De Gender refresh"
-//                dgBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-//                _ = FotogroepDeGenderMembersProvider(bgContext: dgBackgroundContext)
-
-                // load all current members of Fotogroep Anders
-//                let andersBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-//                andersBackgroundContext.name = "Anders refresh"
-//                andersBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-//                _ = AndersMembersProvider(bgContext: andersBackgroundContext)
-
-                // load all current/former members of Fotogroep Waalre
-//                let fgwBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-//                fgwBackgroundContext.name = "Fotogroep Waalre refresh"
-//                fgwBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-//                _ = FotogroepWaalreMembersProvider(bgContext: fgwBackgroundContext) TODO
-
-                // load list of photo clubs from OrganizationList.json file
-//                let olBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-//                olBackgroundContext.name = "ClubList refresh"
-//                olBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-//                _ = OrganizationList(bgContext: olBackgroundContext) // read OrganizationList.json file TODO
+                UserDefaults.standard.set(true, forKey: "ClubListPageRefreshed") // used to control footer/remark #3
+                FotogroepWaalreApp.loadClubsAndMembers()
             }
         }
         .navigationTitle(navigationTitle)

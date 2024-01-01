@@ -42,11 +42,8 @@ struct MemberPortfolioListView: View {
         }
         .listStyle(.plain)
         .refreshable { // for pull-to-refresh
-            // load all current/former members of Fotogroep Waalre
-            let fgwBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-            fgwBackgroundContext.name = "Fotogroep Waalre refresh"
-            fgwBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-            _ = FotogroepWaalreMembersProvider(bgContext: fgwBackgroundContext)
+            // UserDefaults.standard.set(true, forKey: "PortfoliosPageRefreshed") // not really used
+            FotogroepWaalreApp.loadClubsAndMembers()
         }
         .keyboardType(.namePhonePad)
         .autocapitalization(.none)

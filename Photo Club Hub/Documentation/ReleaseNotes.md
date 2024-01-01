@@ -14,6 +14,7 @@ Portfolios screen
     * Removed Test Fotoclub (3 of them: Amsterdam, The Hague, Rotterdam). They are now treated as musea.
 Maintenance
     * Tested with with iOS 17.2.1, MacOS 14.2.1, GitCrypt 0.7.0.1
+    * Centralized code for loading and refreshing of data (file: PhotoClubHubApp). They now work the same.
 
 This is build #4611, and was sent out to Apple Testflight users.
 ---------------------------------------------------------------------------
