@@ -32,44 +32,53 @@ struct FotogroepWaalreApp: App {
             PreludeView()
                 .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext) // main queue!
                 .onAppear {
+                    FotogroepWaalreApp.loadClubsAndMembers()
+
                     let foregroundContext = PersistenceController.shared.container.viewContext // UI context = main
-
-//                    // load test member(s) of Fotogroep Bellus Imago
-//                    let bellusBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-//                    bellusBackgroundContext.name = "Bellus Imago refresh"
-//                    bellusBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-//                    _ = BellusImagoMembersProvider(bgContext: bellusBackgroundContext)
-//
-//                    // load test member(s) of Fotogroep De Gender
-//                    let genderBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-//                    genderBackgroundContext.name = "De Gender refresh"
-//                    genderBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-//                    _ = FotogroepDeGenderMembersProvider(bgContext: genderBackgroundContext)
-//
-//                    // load all current members of Fotogroep Anders
-//                    let andersBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-//                    andersBackgroundContext.name = "Anders refresh"
-//                    andersBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-//                    _ = AndersMembersProvider(bgContext: andersBackgroundContext)
-//
-//                    // load all current/former members of Fotogroep Waalre
-//                    let waalreBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-//                    waalreBackgroundContext.name = "Fotogroep Waalre"
-//                    waalreBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-//                    _ = FotogroepWaalreMembersProvider(bgContext: waalreBackgroundContext)
-//
-//                    // load list of photo clubs from OrganizationList.json file
-//                    let olBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-//                    olBackgroundContext.name = "ClubList"
-//                    olBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-//                    _ = OrganizationList(bgContext: olBackgroundContext) // read OrganizationList.json file
-
                     try? foregroundContext.save() // moves data to persistent store  TODO needed?
                 }
         }
         .onChange(of: scenePhase) { // pre-iOS 17 there was 1 param. Since iOS 17 it is 0 or 2.
             PersistenceController.shared.save() // persist data when app moves to background
         }
+    }
+
+}
+
+extension FotogroepWaalreApp {
+
+    static func loadClubsAndMembers() {
+
+        // load test member(s) of Fotogroep Bellus Imago
+        let bellusBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+        bellusBackgroundContext.name = "Bellus Imago refresh"
+        bellusBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+        _ = BellusImagoMembersProvider(bgContext: bellusBackgroundContext)
+
+        // load test member(s) of Fotogroep De Gender
+//        let genderBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+//        genderBackgroundContext.name = "De Gender refresh"
+//        genderBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+//        _ = FotogroepDeGenderMembersProvider(bgContext: genderBackgroundContext)
+
+        // load all current members of Fotogroep Anders
+//        let andersBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+//        andersBackgroundContext.name = "Anders refresh"
+//        andersBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+//        _ = AndersMembersProvider(bgContext: andersBackgroundContext)
+
+        // load all current/former members of Fotogroep Waalre
+//        let waalreBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+//        waalreBackgroundContext.name = "Fotogroep Waalre"
+//        waalreBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+//        _ = FotogroepWaalreMembersProvider(bgContext: waalreBackgroundContext)
+
+        // load list of photo clubs from OrganizationList.json file
+//        let olBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+//        olBackgroundContext.name = "ClubList"
+//        olBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+//        _ = OrganizationList(bgContext: olBackgroundContext) // read OrganizationList.json file
+
     }
 
 }

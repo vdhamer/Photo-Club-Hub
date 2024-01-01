@@ -34,26 +34,23 @@ struct WhoIsWho: View {
                      Clicking on any thumbnail leads to the images associated with one particular photo club. \
                      The thumbnails can be scrolled horizontally (if there are many of them on one line).
                      """, comment: "Shown in gray at the bottom of the Photographers page.")
-                    .foregroundColor(.gray)
+                .foregroundColor(.gray)
             }
             .refreshable { // for pull-to-refresh
-                // load all current/former members of Fotogroep Waalre
-                let fgwBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-                fgwBackgroundContext.name = "Fotogroep Waalre reload"
-                fgwBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-                _ = FotogroepWaalreMembersProvider(bgContext: fgwBackgroundContext)
+                // UserDefaults.standard.set(true, forKey: "WhosWhoPageRefreshed") // not really used
+                FotogroepWaalreApp.loadClubsAndMembers()
             }
         }
         .keyboardType(.namePhonePad)
         .autocapitalization(.none)
         .submitLabel(.done) // currently only works with text fields?
         .searchable(text: searchText, placement: .automatic,
-                    prompt: Text("Search names", comment:
-                                 """
-                                 Field at top of Photographers page that allows the user to \
-                                 filter the photographers based on either given- and family name.
-                                 """
-                                 ))
+                    prompt: Text("Search names",
+                                 comment: """
+                                          Field at top of Photographers page that allows the user to \
+                                          filter the photographers based on either given- and family name.
+                                          """)
+        )
         .disableAutocorrection(true)
         .navigationTitle(navigationTitle)
     }
