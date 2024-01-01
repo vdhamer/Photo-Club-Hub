@@ -8,6 +8,7 @@ Clubs and Musea screen
     * Town and Country names are localized. Examples: Frankrijk (NL) vs France (EN).
     * Changed order of footnotes at bottom of screen. 3rd footnote is dimmed if feature has already been triggered.
     * Musea are rendered on the map using a different type of marker pin (_not working reliably yet!_).
+    * Displayed size of list at top of screen (e.g. 25 organizations) (_not working entirely propertly_)
 Portfolios screen
     * Name of towns are now localized if applicable. Example: Den Haag (NL) vs The Hague (EN).
     * Limited the font size of the footers in case the device's text display size was increased (in Settings).

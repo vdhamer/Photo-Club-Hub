@@ -35,8 +35,13 @@ struct PhotoClubListView: View {
     }
 
     var body: some View {
-        Group {
+        VStack {
             List { // lists are "Lazy" automatically
+                HStack {
+                    Spacer() // allign to right
+                    Text("\(photoClubs.count) entries", comment: "number of records displayed at top of Clubs screen")
+                        .textCase(.lowercase) // otherwise becomes CAPITALIZED for some reason
+                }
                 PhotoClubView(predicate: model.preferences.photoClubPredicate)
                 if photoClubs.isEmpty {
                     NoClubsText()

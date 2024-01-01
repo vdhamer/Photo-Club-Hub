@@ -4,6 +4,9 @@
 /* Shown when "Show deceased members" entry is missing in Preferences */
 "“Former members” includes “deceased members”" = "De optie “ex-leden“ bevat “overleden leden“";
 
+/* number of records displayed at top of Clubs screen */
+"%lld entries" = "%lld stuks";
+
 /* <count> members (including all types of members) within photo club */
 "%lld members (inc. ex-members)" = "%lld leden (incl. ex-leden)";
 
@@ -83,7 +86,7 @@ Default status of member within a club. Used in concatenations. */
 /* Statistics at end of section of FilteredMemberPortfoliosView */
 "members" = "leden";
 
-/* Mode for the Clubs page: show photo clubs as sections. */
+/* Mode for the Clubs page: show musea as sections. */
 "musea" = "musea";
 
 /* Hint to the user if the database returns zero PhotoClubs. */
@@ -299,6 +302,9 @@ Field at top of Members page that allows the user to filter the members based on
 
 /* Administrative role of member within a club. Used as part of concatenations. */
 "treasurer" = "penningmeester";
+
+/* Organization type is not known. Used for debugging. */
+"unknowns" = "onbekenden";
 
 /* Administrative role of member within a club. Used as part of concatenations. */
 "vice-chairman" = "vicevoorzitter";
