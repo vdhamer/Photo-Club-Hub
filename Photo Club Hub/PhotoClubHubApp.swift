@@ -75,7 +75,7 @@ extension FotogroepWaalreApp {
 
         // load list of photo clubs from OrganizationList.json file
         let olBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-        olBackgroundContext.name = "ClubList"
+        olBackgroundContext.name = "OrganizationList"
         olBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         _ = OrganizationList(bgContext: olBackgroundContext) // read OrganizationList.json file
 

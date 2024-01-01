@@ -110,6 +110,21 @@
         },
         {
             "idPlus": {
+                "town": "Ballarat",
+                "fullName": "National Centre for Photography",
+                "nickName": "NCfP Au"
+            },
+            "coordinates": {
+                "latitude": -37.5624,
+                "longitude": 143.8574
+            },
+            "website": "https://ballaratfoto.org",
+            "wikipedia": "https://en.wikipedia.org/wiki/National_Centre_for_Photography",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Union_Bank_Building%2C_Ballarat%2C_1870s.png",
+            "comment": "Linked to the Ballarat photography festival. Not clear if the building is finished yet."
+        },
+        {
+            "idPlus": {
                 "town": "Berlin",
                 "fullName": "Museum für Fotografie",
                 "nickName": "MfürF Berlin"
@@ -135,6 +150,35 @@
             "website": "https://www.fotomuseumdenhaag.nl/",
             "wikipedia": "https://en.wikipedia.org/wiki/Fotomuseum_Den_Haag",
             "image": "https://upload.wikimedia.org/wikipedia/commons/8/80/Photo_Museum_The_Hague%2C_Main_entrance.jpg"
+        },
+        {
+            "idPlus": {
+                "town": "Dublin",
+                "fullName": "National Photographic Archive",
+                "nickName": "NLI Dublin"
+            },
+            "coordinates": {
+                "latitude": 53.345279,
+                "longitude": -6.265375
+            },
+            "website": "",
+            "wikipedia": "https://en.wikipedia.org/wiki/National_Photographic_Archive",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/c/ca/National_Photographic_Archive%2C_Dublin.JPG",
+            "comment": "An archive that also hosts exhibitions. Part of the National Library of Ireland."
+        },
+        {
+            "idPlus": {
+                "town": "Gurugram",
+                "fullName": "Museo Camera Centre for the Photographic Arts",
+                "nickName": "Museo Camera"
+            },
+            "coordinates": {
+                "latitude": 28.46969,
+                "longitude": 77.08042
+            },
+            "website": "https://www.museocamera.org/",
+            "wikipedia": "https://en.wikipedia.org/wiki/Museo_Camera",
+            "comment": "Original focus was cameras."
         },
         {
             "idPlus": {
@@ -233,6 +277,21 @@
         },
         {
             "idPlus": {
+                "town": "Melbourne",
+                "fullName": "Centre for Contemporary Photography",
+                "nickName": "CCP Melbourne"
+            },
+            "coordinates": {
+                "latitude": -37.797222,
+                "longitude": 144.9825
+            },
+            "website": "http://ccp.org.au/",
+            "wikipedia": "https://en.wikipedia.org/wiki/Centre_for_Contemporary_Photography",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Centre_for_Contemporary_Photography_Fitzroy.jpg",
+            "comment": "Fitzroy is located in Melbourne."
+        },
+        {
+            "idPlus": {
                 "town": "New York City",
                 "fullName": "International Center of Photography Museum",
                 "nickName": "ICP NY"
@@ -271,7 +330,23 @@
             },
             "website": "https://www.moma.org",
             "wikipedia": "https://en.wikipedia.org/wiki/Museum_of_Modern_Art",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/8/8b/MoMa_NY_USA_1.jpg"        },
+            "image": "https://upload.wikimedia.org/wikipedia/commons/8/8b/MoMa_NY_USA_1.jpg"
+        },
+        {
+            "idPlus": {
+                "town": "Ottawa",
+                "fullName": "Canadian Photography Institute",
+                "nickName": "CPI"
+            },
+            "coordinates": {
+                "latitude": 45.4297173,
+                "longitude": -75.69899
+            },
+            "website": "https://www.gallery.ca/cpi",
+            "wikipedia": "https://en.wikipedia.org/wiki/National_Gallery_of_Canada",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/1/10/Ottawa_-_ON_-_National_Gallery_of_Canada.jpg",
+            "comment": "Part of National Gallery of Canada. Formerly Canadian Museum of Contemporary Photography."
+        },
         {
             "idPlus": {
                 "town": "Paris",
@@ -286,6 +361,21 @@
         },
         {
             "idPlus": {
+                "town": "Paris",
+                "fullName": "Henri Cartier-Bresson Foundation",
+                "nickName": "Fondation HCB"
+            },
+            "coordinates": {
+                "latitude": 48.8629,
+                "longitude": 2.36009
+            },
+            "website": "http://www.henricartierbresson.org/en/",
+            "wikipedia": "https://en.wikipedia.org/wiki/Henri_Cartier-Bresson_Foundation",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Rue_des_Archives_79_Cour.jpg",
+            "comment": "Foundation's mission is to preserve the archives of Henri Cartier-Bresson and Martine Franck."
+        },
+        {
+            "idPlus": {
                 "town": "Porto",
                 "fullName": "Portuguese Centre of Photography",
                 "nickName": "CPF Porto"
@@ -297,6 +387,21 @@
             "website": "https://cpf.pt",
             "wikipedia": "https://en.wikipedia.org/wiki/Portuguese_Centre_of_Photography",
             "image": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Centro_Portugu%C3%A9s_de_Fotograf%C3%ADa%2C_Oporto%2C_Portugal%2C_2012-05-09%2C_DD_01.JPG"
+        },
+        {
+            "idPlus": {
+                "town": "Riverside",
+                "fullName": "UCR/California Museum of Photography",
+                "nickName": "UCR/CMP"
+            },
+            "coordinates": {
+                "latitude": 33.9816,
+                "longitude": -117.3746
+            },
+            "website": "http://www.cmp.ucr.edu/",
+            "wikipedia": "https://en.wikipedia.org/wiki/UCR/California_Museum_of_Photography",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/c/c3/California_Museum_of_Photography.jpg",
+            "comment": "The museum is owned and operated by the University of California, Riverside (LA area)."
         },
         {
             "idPlus": {
@@ -324,7 +429,37 @@
             },
             "website": "https://www.nederlandsfotomuseum.nl",
             "wikipedia": "https://en.wikipedia.org/wiki/Netherlands_Photo_Museum",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/3/31/Nederlands_Fotomuseum_%2811192247676%29.jpg"
+            "image": "https://upload.wikimedia.org/wikipedia/commons/3/31/Nederlands_Fotomuseum_%2811192247676%29.jpg",
+            "comment": "The museum is about to relocate to a new building, but both sites are in walking distance."
+        },
+        {
+            "idPlus": {
+                "town": "Sakata",
+                "fullName": "Ken Domon Museum of Photography",
+                "nickName": "土門拳記念館"
+            },
+            "coordinates": {
+                "latitude": 38.891299,
+                "longitude": 139.823716
+            },
+            "website": "http://www.domonken-kinenkan.jp/",
+            "wikipedia": "https://en.wikipedia.org/wiki/Ken_Domon_Museum_of_Photography",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Ken_Domon_Museum_of_Photography%2C_22_September_2009%2C_002.jpg",
+            "comment": "Named after Japanese photographer Ken Domon, who was born in Sakata."
+        },
+        {
+            "idPlus": {
+                "town": "Sidney",
+                "fullName": "Australian Centre for Photography",
+                "nickName": "ACP Sidney"
+            },
+            "coordinates": {
+                "latitude": -33.8788,
+                "longitude": 151.21502
+            },
+            "website": "http://acp.org.au/",
+            "wikipedia": "https://en.wikipedia.org/wiki/Australian_Centre_for_Photography",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Australian_Centre_For_Photography.jpg"
         },
         {
             "idPlus": {
@@ -366,6 +501,20 @@
             },
             "website": "https://www.fotodok.org",
             "wikipedia": "https://nl.wikipedia.org/wiki/Rob_Hornstra#FOTODOK"
+        },
+        {
+            "idPlus": {
+                "town": "Washington D.C.",
+                "fullName": "National Geographic Museum",
+                "nickName": ""
+            },
+            "coordinates": {
+                "latitude": 38.90503,
+                "longitude": -77.03817
+            },
+            "website": "https://www.nationalgeographic.org/society/visit-base-camp/",
+            "wikipedia": "https://en.wikipedia.org/wiki/National_Geographic_Society#National_Geographic_Museum",
+            "comment": "The National Geographic Museum is (was?) temporarily closed."
         },
         {
             "idPlus": {
