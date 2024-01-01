@@ -212,23 +212,10 @@ extension PhotoClub {
 
 		var modified: Bool = false
 
-        if let organizationTypeObjectID = OrganizationType.enum2objectID[organizationTypeEnum] {
-            let managedObject: NSManagedObject = bgContext.object(with: organizationTypeObjectID)
-            // swiftlint:disable:next force_cast
-            let organizationType: OrganizationType = managedObject as! OrganizationType
-            if photoClub.organizationType_ != nil, photoClub.organizationType != organizationType { // toggling value??
-                ifDebugFatalError("An organization's 'type' should only be initialized once")
-            }
-            photoClub.organizationType = OrganizationType.findCreateUpdate(context: bgContext, // TODO check me
-                                                                           name: organizationTypeEnum.rawValue
-            )
-        } else { // this shouldn't fail...
-            ifDebugFatalError("Failed to retrieve organizationType from within background thread.")
-            // ...and not sure this will save the day, but give all records a type .club to prevent a crash in PRD code
-            photoClub.organizationType = OrganizationType.findCreateUpdate(context: bgContext,
-                                                                           name: OrganizationTypeEnum.unknown.rawValue
-            )
-        }
+        let organizationType = enum2type(bgContext: bgContext, organizationTypeEnum: organizationTypeEnum)
+        if photoClub.organizationType != organizationType { // TODO compare strings instead of objects?
+            photoClub.organizationType = organizationType
+            modified = true }
 
         if photoClub.shortName != shortName {
             photoClub.shortName = shortName
@@ -267,6 +254,23 @@ extension PhotoClub {
 		}
         return modified
 	}
+
+    private static func enum2type(bgContext: NSManagedObjectContext, // carefull to stay on calling thread
+                                  organizationTypeEnum: OrganizationTypeEnum) -> OrganizationType {
+        let organizationTypeObjectID = OrganizationType.enum2objectID[organizationTypeEnum]
+
+        guard organizationTypeObjectID != nil else {
+            ifDebugFatalError("Failed to retrieve organizationType from within background thread.")
+            // in non-Debug mode, return organizationType for OrganizationalTypeEnum.unknown just in case
+            return OrganizationType.findCreateUpdate(context: bgContext, name: OrganizationTypeEnum.unknown.rawValue)
+        }
+
+        let managedObject: NSManagedObject = bgContext.object(with: organizationTypeObjectID!) // on supplied thread
+        // swiftlint:disable:next force_cast
+        return managedObject as! OrganizationType // SwiftLint unaware that it can't be any other type
+//         return OrganizationType.findCreateUpdate(context: bgContext,
+//                                                  name: organizationTypeEnum.rawValue) TODO cleanup
+    }
 
     func deleteAllMembers(context: NSManagedObjectContext) { // doesn't work ;-(
 //        for member in members {
