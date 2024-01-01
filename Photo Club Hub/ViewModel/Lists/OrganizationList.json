@@ -178,6 +178,34 @@
         },
         {
             "idPlus": {
+                "town": "London",
+                "fullName": "Royal Institute of British Architects",
+                "nickName": "RIBA London"
+            },
+            "coordinates": {
+                "latitude": 51.521283,
+                "longitude": -0.14508
+            },
+            "website": "https://www.architecture.com/",
+            "wikipedia": "https://en.wikipedia.org/wiki/Royal_Institute_of_British_Architects",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/9/90/Cmglee_Royal_Institute_of_British_Architects.jpg"
+        },
+        {
+            "idPlus": {
+                "town": "London",
+                "fullName": "The Victoria & Albert Museum",
+                "nickName": "V&A London"
+            },
+            "coordinates": {
+                "latitude": 51.496389,
+                "longitude": -0.171944
+            },
+            "website": "https://www.vam.ac.uk/",
+            "wikipedia": "https://en.wikipedia.org/wiki/Victoria_and_Albert_Museum",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Victoria_%26_Albert_Museum_Entrance%2C_London%2C_UK_-_Diliff.jpg"
+        },
+        {
+            "idPlus": {
                 "town": "Maastricht",
                 "fullName": "Fotomuseum aan het Vrijthof",
                 "nickName": "F/M Vrijthof"
@@ -207,7 +235,7 @@
             "idPlus": {
                 "town": "New York City",
                 "fullName": "International Center of Photography Museum",
-                "nickName": "ICP NYC"
+                "nickName": "ICP NY"
             },
             "coordinates": {
                 "latitude": 40.718028,
@@ -221,7 +249,7 @@
             "idPlus": {
                 "town": "New York",
                 "fullName": "Fotografiska New York",
-                "nickName": "Fotografiska NYC"
+                "nickName": "Fotografiska NY"
             },
             "coordinates": {
                 "latitude": 40.739278,
@@ -231,6 +259,19 @@
             "wikipedia": "https://en.wikipedia.org/wiki/Fotografiska_New_York",
             "image": "https://upload.wikimedia.org/wikipedia/commons/7/76/Fotografiska_New_York_%2851710073919%29.jpg"
         },
+        {
+            "idPlus": {
+                "town": "New York",
+                "fullName": "Museum of Modern Art New York",
+                "nickName": "MoMA NY"
+            },
+            "coordinates": {
+                "latitude": 40.761667,
+                "longitude": -73.9775
+            },
+            "website": "https://www.moma.org",
+            "wikipedia": "https://en.wikipedia.org/wiki/Museum_of_Modern_Art",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/8/8b/MoMa_NY_USA_1.jpg"        },
         {
             "idPlus": {
                 "town": "Paris",
@@ -256,6 +297,20 @@
             "website": "https://cpf.pt",
             "wikipedia": "https://en.wikipedia.org/wiki/Portuguese_Centre_of_Photography",
             "image": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Centro_Portugu%C3%A9s_de_Fotograf%C3%ADa%2C_Oporto%2C_Portugal%2C_2012-05-09%2C_DD_01.JPG"
+        },
+        {
+            "idPlus": {
+                "town": "Rochester",
+                "fullName": "George Eastman Museum",
+                "nickName": "George Eastman House"
+            },
+            "coordinates": {
+                "latitude": 43.152147,
+                "longitude": -77.580278
+            },
+            "website": "https://www.eastman.org/",
+            "wikipedia": "https://en.wikipedia.org/wiki/George_Eastman_Museum",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/d/d8/George-Eastman-House%3DExterior.JPG"
         },
         {
             "idPlus": {

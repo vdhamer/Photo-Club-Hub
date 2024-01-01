@@ -15,6 +15,7 @@ Portfolios screen
 Maintenance
     * Tested with with iOS 17.2.1, MacOS 14.2.1, GitCrypt 0.7.0.1
     * Centralized code for loading and refreshing of data (file: PhotoClubHubApp). They now work the same.
+    * Added 4 musea from https://www.sybariscollection.com/top-5-museums-with-impressive-photography-collections/
 
 This is build #4611, and was sent out to Apple Testflight users.
 ---------------------------------------------------------------------------
