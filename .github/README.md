@@ -709,7 +709,7 @@ Note that:
 - All fields within `idPlus` and `coordinates` are required. Other lines can be omitted if the data is not available or not applicable. `idPlus` serves to differentiate clubs or museum from others. `coordinates` is used to draw the club on the map.
 - The `coordinates` field is used to draw the club or museum on the maps. Latitudes are in the range [-90.0, +90.0] where negative `latitude` means south of the Equator. Longitude values are in the range [-180.0, +180.0] where negative `longitude` means west of Greenwich in London.
 - The `memberList` field for clubs allows the app to find the next level list with membership data.
-- The `country` field is automatically determined using the provided `coordinates` (reverse geolocation).
+- The `country` field is automatically determined using the provided `coordinates` (reverse geolocation).,/p.
 
 2. MemberList: local lists of photo club members
 
@@ -769,7 +769,7 @@ Notes about the `members` section:
 - a member's `givenName`, `infixName` and `familyName` are used to uniquely identify the photographer.
 - `givenName` and `familyName` are required. An omitted "infixName" is equivalent to "infixName" = "".
 - `infixName` will often be empty. It enables correctly sorting European surnames: "van Aalst" sorts like "Aalst".
-- the `imageList` field allows the app to find the next level list about the selected images per member.
+- the `imageList` field allows the app to find the next level list about the selected images per member.</p>
 
 3. ImageList: local image portfolios per club member
 
