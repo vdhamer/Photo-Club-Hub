@@ -660,7 +660,7 @@ having to modify the source code to add (or modify/remove) clubs, members or ima
 The basic idea is to store the required information in a hierarchical, distributed way.
 This allows the app to load the information in a three step process:
 
-1. OrganizationList: central list of photo clubs
+__1. OrganizationList: central list of photo clubs__</p>
 
 The app loads a list of photo clubs from a fixed location (URL). Because the file is kept outside
 the actual app, the list can be updated without requiring app update.
