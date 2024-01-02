@@ -9,12 +9,12 @@
 [![Portfolios Screen Shot][portfolios-screenshot]](https://github.com/vdhamer/PhotoClubWaalre)
 
 <!-- TABLE OF CONTENTS -->
-## Table of Contents
+## Table of [Contents
 <ul>
     <details><summary><a href="#about-the-project">About the Project</a></summary>
           <ul>
             <li><a href="#the-app">The App</a></li>
-            <li><a href="#the-portfolio-concept">The Portfolio Concept</a></li>
+            <li><a href="#the-portfolio-concept](https://stackoverflow.com/questions/29642922/why-can-i-only-reverse-geocode-location-that-are-inside-china)">The Portfolio Concept</a></li>
             <li><a href="#implications-of-portfolios">Implications of Portfolios</a>
           </ul>
     </details>
@@ -660,7 +660,7 @@ having to modify the source code to add (or modify/remove) clubs, members or ima
 The basic idea is to store the required information in a hierarchical, distributed way.
 This allows the app to load the information in a three step process:
 
-##### OrganizationList: central list of photo clubs
+1. OrganizationList: central list of photo clubs
 
 The app loads a list of photo clubs from a fixed location (URL). Because the file is kept outside
 the actual app, the list can be updated without requiring app update.
@@ -711,7 +711,7 @@ Note that:
 - The `memberList` field for clubs allows the app to find the next level list with membership data.
 - The `country` field is automatically determined using the provided `coordinates` (reverse geolocation).
 
-##### MemberList: local lists of photo club members
+2. MemberList: local lists of photo club members
 
 Each MemberList defines the current (and optionally former) members of a single club.
 For each member, a URL is stored pointing to the final list level (portfolio per member).
@@ -771,7 +771,7 @@ Notes about the `members` section:
 - `infixName` will often be empty. It enables correctly sorting European surnames: "van Aalst" sorts like "Aalst".
 - the `imageList` field allows the app to find the next level list about the selected images per member.
 
-##### ImageList: local image portfolios per club member
+3. ImageList: local image portfolios per club member
 
 The list of images (per club member) is fetched only when a portfolio is selected for viewing.
 There is thus no need to prefetch the entire 3-level tree (root/memberlist/imagelist).
