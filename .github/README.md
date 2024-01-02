@@ -711,7 +711,7 @@ Note that:
 - The `memberList` field for clubs allows the app to find the next level list with membership data.
 - The `country` field is automatically determined using the provided `coordinates` (reverse geolocation).</p>
 
-2. __MemberList: local lists of photo club members__</p>
+__2. MemberList: local lists of photo club members__</p>
 
 Each MemberList defines the current (and optionally former) members of a single club.
 For each member, a URL is stored pointing to the final list level (portfolio per member).
@@ -771,7 +771,7 @@ Notes about the `members` section:
 - `infixName` will often be empty. It enables correctly sorting European surnames: "van Aalst" sorts like "Aalst".
 - the `imageList` field allows the app to find the next level list about the selected images per member.</p>
 
-3. __ImageList: local image portfolios per club member__</p>
+__3. ImageList: local image portfolios per club member__</p>
 
 The list of images (per club member) is fetched only when a portfolio is selected for viewing.
 There is thus no need to prefetch the entire 3-level tree (root/memberlist/imagelist).
