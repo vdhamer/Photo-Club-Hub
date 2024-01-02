@@ -27,7 +27,7 @@ extension PhotoClub {
 	}
 
     var organizationType: OrganizationType {
-        get {
+        get { // careful: cannot read organizationType on background thread if database still contains nil
             let organizationType: OrganizationType
             var hack = false
 
@@ -158,9 +158,9 @@ extension PhotoClub {
                                                     photoClubIdPlus.town] )
         let fetchRequest: NSFetchRequest<PhotoClub> = PhotoClub.fetchRequest()
         fetchRequest.predicate = predicate
-		let organizations: [PhotoClub] = (try? context.fetch(fetchRequest)) ?? [] // nil means absolute failure
+		let organizations: [PhotoClub] = (try? context.fetch(fetchRequest)) ?? [] // EXC_BAD_ACCESS (code=1, address=0x100)
 
-        if organizations.count > 1 { // there is actually a Core Data constraint to prevent this
+        if organizations.count > 1 { // organization exists, but there shouldn't be multiple that satify the predicate
             ifDebugFatalError("Query returned \(organizations.count) organizations named " +
                               "\(photoClubIdPlus.fullName) in \(photoClubIdPlus.town)",
                               file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
@@ -182,7 +182,7 @@ extension PhotoClub {
 		} else {
             // cannot use PhotoClub() initializer because we must use bgContext
             let entity = NSEntityDescription.entity(forEntityName: "PhotoClub", in: context)!
-            let organization = PhotoClub(entity: entity, insertInto: context)
+            let organization = PhotoClub(entity: entity, insertInto: context) // create new organization
             organization.fullName = photoClubIdPlus.fullName // first part of ID
             organization.town = photoClubIdPlus.town // second part of ID
             print("\(organization.fullNameTown): Will try to create new organization \(organization.fullName)")
@@ -212,8 +212,11 @@ extension PhotoClub {
 
 		var modified: Bool = false
 
-        let organizationType = enum2type(bgContext: bgContext, organizationTypeEnum: organizationTypeEnum)
-        if photoClub.organizationType != organizationType { // TODO compare strings instead of objects?
+        // some fancy footwork because organization type info originated from other context
+        let organizationType = OrganizationType.findCreateUpdate(context: bgContext,
+                                                                 name: organizationTypeEnum.rawValue)
+
+        if photoClub.organizationType_ != organizationType { // TODO compare strings instead of objects?
             photoClub.organizationType = organizationType
             modified = true }
 
@@ -254,23 +257,6 @@ extension PhotoClub {
 		}
         return modified
 	}
-
-    private static func enum2type(bgContext: NSManagedObjectContext, // carefull to stay on calling thread
-                                  organizationTypeEnum: OrganizationTypeEnum) -> OrganizationType {
-        let organizationTypeObjectID = OrganizationType.enum2objectID[organizationTypeEnum]
-
-        guard organizationTypeObjectID != nil else {
-            ifDebugFatalError("Failed to retrieve organizationType from within background thread.")
-            // in non-Debug mode, return organizationType for OrganizationalTypeEnum.unknown just in case
-            return OrganizationType.findCreateUpdate(context: bgContext, name: OrganizationTypeEnum.unknown.rawValue)
-        }
-
-        let managedObject: NSManagedObject = bgContext.object(with: organizationTypeObjectID!) // on supplied thread
-        // swiftlint:disable:next force_cast
-        return managedObject as! OrganizationType // SwiftLint unaware that it can't be any other type
-//         return OrganizationType.findCreateUpdate(context: bgContext,
-//                                                  name: organizationTypeEnum.rawValue) TODO cleanup
-    }
 
     func deleteAllMembers(context: NSManagedObjectContext) { // doesn't work ;-(
 //        for member in members {
