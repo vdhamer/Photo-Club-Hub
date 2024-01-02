@@ -654,21 +654,21 @@ This data is then loaded into into the in-app CoreData database.
 It is also needed to keep the CoreData database up to date whenever
 clubs, members or images are added.
 The old approach is essentially a plug-in design with an adaptor per photo club.
-The new approach replaces this by a standard data interface to avoid
-having to modify the source code to add (or modify/remove) clubs, members or images.
 
-The basic idea is to store the required information in a hierarchical, distributed way.
+The new approach replaces this by a standardizable data interface to avoid
+having to modify the source code to add (or modify/remove) clubs, members or images.
+The basic idea here is to store the required information in a hierarchical, distributed way.
 This allows the app to load the information in a three step process:
 
 __1. OrganizationList: central list of photo clubs__</p>
 
-The app loads a list of photo clubs from a fixed location (URL). Because the file is kept outside
-the actual app, the list can be updated without requiring app update.
-The file is in a fixed JSON syntax and contains a list of supported photo clubs, 
-and as a bonus a list of featured photography musea. The properties of clubs and musea largely overlap.
-But a photo club can include the location (URL) of the next-level list with members. A museum cannot.
+The app loads a list of photo clubs from a fixed location (URL). Because the file is kept external to
+the actual app, the list can be updated without requiring an app software update.
+The file is in a fixed JSON syntax and contains a list of supported photo clubs 
+and - as a bonus - a list of photography musea. The properties of clubs and musea largely overlap.
+But a photo club can include the location (URL) of the MemberList.json data while a museum cannot.
 
-Here is an example of the format of the OrganizationList. The example contains a single photo club and single museum:
+Here is an example of the format of the OrganizationList. The example contains just one photo club and one museum:
 
 ``` json
 {
