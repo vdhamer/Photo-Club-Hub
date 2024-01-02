@@ -9,12 +9,12 @@
 [![Portfolios Screen Shot][portfolios-screenshot]](https://github.com/vdhamer/PhotoClubWaalre)
 
 <!-- TABLE OF CONTENTS -->
-## Table of Contents
+## Table of [Contents
 <ul>
     <details><summary><a href="#about-the-project">About the Project</a></summary>
           <ul>
             <li><a href="#the-app">The App</a></li>
-            <li><a href="#the-portfolio-concept">The Portfolio Concept</a></li>
+            <li><a href="#the-portfolio-concept](https://stackoverflow.com/questions/29642922/why-can-i-only-reverse-geocode-location-that-are-inside-china)">The Portfolio Concept</a></li>
             <li><a href="#implications-of-portfolios">Implications of Portfolios</a>
           </ul>
     </details>
@@ -654,21 +654,22 @@ This data is then loaded into into the in-app CoreData database.
 It is also needed to keep the CoreData database up to date whenever
 clubs, members or images are added.
 The old approach is essentially a plug-in design with an adaptor per photo club.
-The new approach replaces this by a standard data interface to avoid
-having to modify the source code to add (or modify/remove) clubs, members or images.
 
-The basic idea is to store the required information in a hierarchical, distributed way.
+The new approach replaces this by a standardizable data interface to avoid
+having to modify the source code to add (or modify/remove) clubs, members or images.
+The basic idea here is to store the required information in a hierarchical, distributed way.
 This allows the app to load the information in a three step process:
 
-##### OrganizationList: central list of photo clubs
+__1. OrganizationList: central list of photo clubs__</p>
 
-The app loads a list of photo clubs from a fixed location (URL). Because the file is kept outside
-the actual app, the list can be updated without requiring app update.
-The file is in a fixed JSON syntax and contains a list of supported photo clubs, 
-and as a bonus a list of featured photography musea. The properties of clubs and musea largely overlap.
-But a photo club can include the location (URL) of the next-level list with members. A museum cannot.
+The app loads a list of photo clubs from a fixed location (URL). Because the file is kept external to the actual app,
+the list can be updated without requiring an app software update.
+The file is in a fixed JSON syntax and contains a list of supported photo clubs.
 
-Here is an example of the format of the OrganizationList. The example contains a single photo club and single museum:
+As a bonus, the list can also contain information about photography musea. The properties of clubs and musea largely overlap,
+but a photo club _can_ notably include the location (URL) of a MemberList.json data source while a museum _cannot_.
+
+Here is an example of the format of the OrganizationList. This minimal example contains one photo club and one photo museum:
 
 ``` json
 {
@@ -700,20 +701,25 @@ Here is an example of the format of the OrganizationList. The example contains a
             }
             "website": "https://www.fotografiska.com/nyc/",
             "wikipedia": "https://en.wikipedia.org/wiki/Fotografiska_New_York",
-            "image": "https://commons.wikimedia.org/wiki/File:Fotografiska_New_York_(51710073919).jpg"
+            "image": "https://commons.wikimedia.org/wiki/File:Fotografiska_New_York_(51710073919).jpg",
+            "descriptionEN": "Fotografiska New York is a branch of the Swedish Fotografiska museum.",
+            "descriptionNL": "Fotografiskia New York is een dependance van het Fotografiska museum in Stockholm."
         }
     ]
 }
 ```
 Note that:
-- All fields within `idPlus` and `coordinates` are required. Other lines can be omitted if the data is not available or not applicable. `idPlus` serves to differentiate clubs or museum from others. `coordinates` is used to draw the club on the map.
-- The `coordinates` field is used to draw the club or museum on the maps. Latitudes are in the range [-90.0, +90.0] where negative `latitude` means south of the Equator. Longitude values are in the range [-180.0, +180.0] where negative `longitude` means west of Greenwich in London.
-- The `memberList` field for clubs allows the app to find the next level list with membership data.
-- The `country` field is automatically determined using the provided `coordinates` (reverse geolocation).
+- All fields within `idPlus` and `coordinates` are required. All other fields can be omitted if the data is not available or not applicable.
+- `idPlus.town` and `idPlus.fullName` together serve to differentiate clubs or musea from others. Try to avoid changing these strings. 
+- `coordinates` is used to draw the club on the map and to [generate](http://www.vdhamer.com/reversegeocoding-for-localizing-towns-and-countries/) localized versions of town and country names. Latitudes are in the range [-90.0, +90.0] where negative `latitude` means south of the Equator. Longitude values are in the range [-180.0, +180.0] where negative `longitude` means west of Greenwich London.
+- The `memberList` field (for clubs only) allows the app to find the next level list with membership data. It is reserved for future use.
+- The `image` field contains a public domain image of the outside of the venue. It is reserved for future use.
+- The `descriptionXX` fields contain a short description of the item. These are the only fields that can be localized (EN is English, NL is Dutch). These fields are reserved for future use.
+</p>
 
-##### MemberList: local lists of photo club members
+__2. MemberList: local lists of photo club members__</p>
 
-Each MemberList defines the current (and optionally former) members of a single club.
+Each MemberList defines the current (and potentially former) members of a single club.
 For each member, a URL is stored pointing to the final list level (portfolio per member).
 MemberList also includes the URL of an image used as thumbnail for that member.
 MemberList can be stored and managed on the club's own server. The file needs to be in
@@ -769,9 +775,9 @@ Notes about the `members` section:
 - a member's `givenName`, `infixName` and `familyName` are used to uniquely identify the photographer.
 - `givenName` and `familyName` are required. An omitted "infixName" is equivalent to "infixName" = "".
 - `infixName` will often be empty. It enables correctly sorting European surnames: "van Aalst" sorts like "Aalst".
-- the `imageList` field allows the app to find the next level list about the selected images per member.
+- the `imageList` field allows the app to find the next level list about the selected images per member.</p>
 
-##### ImageList: local image portfolios per club member
+__3. ImageList: local image portfolios per club member__</p>
 
 The list of images (per club member) is fetched only when a portfolio is selected for viewing.
 There is thus no need to prefetch the entire 3-level tree (root/memberlist/imagelist).
