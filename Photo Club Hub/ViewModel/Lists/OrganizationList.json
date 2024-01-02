@@ -66,12 +66,13 @@
             },
             "website": "https://www.foam.org",
             "wikipedia": "https://en.wikipedia.org/wiki/Foam_Fotografiemuseum_Amsterdam",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/4/47/Keizersgracht_609%2C_Amsterdam.JPG"
+            "image": "https://upload.wikimedia.org/wikipedia/commons/4/47/Keizersgracht_609%2C_Amsterdam.JPG",
+            "descriptionEN": "The two adjacent Amsterdam canal mansions house a museum orignally named after its founder (Carel Joseph) Fodor."
         },
         {
             "idPlus": {
                 "town": "Amsterdam",
-                "fullName": "Huis Marseille",
+                "fullName": "Huis Marseille, Museum for Photography",
                 "nickName": "Marseille Adam"
             },
             "coordinates": {
@@ -80,7 +81,8 @@
             },
             "website": "https://www.huismarseille.nl/",
             "wikipedia": "https://nl.wikipedia.org/wiki/Huis_Marseille",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/f/f6/HuisMarseille-Amsterdam-SjoerdMartens.png"
+            "image": "https://upload.wikimedia.org/wikipedia/commons/f/f6/HuisMarseille-Amsterdam-SjoerdMartens.png",
+            "descriptionEN": "The two adjacent Amsterdam canal mansions house the oldest photography museum in the Netherlands."
         },
         {
             "idPlus": {
@@ -94,7 +96,8 @@
             },
             "website": "https://www.fotomuseum.be/",
             "wikipedia": "https://nl.wikipedia.org/wiki/Fotomuseum_Antwerpen",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Fotomuseum_FOMU_Antwerpen.jpg"
+            "image": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Fotomuseum_FOMU_Antwerpen.jpg",
+            "descriptionEN": "The museum in a former warehouse holds photo exhibitijons, but started off with the Agfa-Gevaert camera archive."
         },
         {
             "idPlus": {
@@ -106,7 +109,8 @@
                 "latitude": 51.269286,
                 "longitude": 3.909453
             },
-            "website": "https://www.wittesmuseum.nl"
+            "website": "https://www.wittesmuseum.nl/fotografie/",
+            "descriptionEN": "The museum incorporates vintage cameras collected by Jan and Maarten Witte."
         },
         {
             "idPlus": {
@@ -121,7 +125,7 @@
             "website": "https://ballaratfoto.org",
             "wikipedia": "https://en.wikipedia.org/wiki/National_Centre_for_Photography",
             "image": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Union_Bank_Building%2C_Ballarat%2C_1870s.png",
-            "comment": "Linked to the Ballarat photography festival. Not clear if the building is finished yet."
+            "descriptionEN": "Linked to the Ballarat Internation Foto Biennale festival. Unclear if the building is finished yet."
         },
         {
             "idPlus": {
@@ -135,7 +139,8 @@
             },
             "website": "https://www.smb.museum/museen-einrichtungen/museum-fuer-fotografie/home/",
             "wikipedia": "https://en.wikipedia.org/wiki/Museum_of_Photography,_Berlin",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Museum_fuer_fotografie_berlin_landwehrkasino_dec_2004.jpg"
+            "image": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Museum_fuer_fotografie_berlin_landwehrkasino_dec_2004.jpg",
+            "descriptionEN": "The museum houses the Helmut Newton Foundation."
         },
         {
             "idPlus": {
@@ -149,7 +154,8 @@
             },
             "website": "https://www.fotomuseumdenhaag.nl/",
             "wikipedia": "https://en.wikipedia.org/wiki/Fotomuseum_Den_Haag",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/8/80/Photo_Museum_The_Hague%2C_Main_entrance.jpg"
+            "image": "https://upload.wikimedia.org/wikipedia/commons/8/80/Photo_Museum_The_Hague%2C_Main_entrance.jpg",
+            "descriptionEN": "The museum is afiliated with the older and adjacent art museum Kunstmuseum Den Haag."
         },
         {
             "idPlus": {
@@ -164,7 +170,7 @@
             "website": "",
             "wikipedia": "https://en.wikipedia.org/wiki/National_Photographic_Archive",
             "image": "https://upload.wikimedia.org/wikipedia/commons/c/ca/National_Photographic_Archive%2C_Dublin.JPG",
-            "comment": "An archive that also hosts exhibitions. Part of the National Library of Ireland."
+            "descriptionEN": "Part of the National Library of Ireland. The archive also hosts photography exhibitions. "
         },
         {
             "idPlus": {
@@ -178,7 +184,7 @@
             },
             "website": "https://www.museocamera.org/",
             "wikipedia": "https://en.wikipedia.org/wiki/Museo_Camera",
-            "comment": "Original focus was cameras."
+            "descriptionEN": "Original focus of this museum was a collection of vintage cameras."
         },
         {
             "idPlus": {
@@ -192,7 +198,8 @@
             },
             "website": "http://www.museumhilversum.nl",
             "wikipedia": "https://nl.wikipedia.org/wiki/Museum_Hilversum",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/7/71/Museum_Hilversum.jpg"
+            "image": "https://upload.wikimedia.org/wikipedia/commons/7/71/Museum_Hilversum.jpg",
+            "descriptionEN": "This museum hosten a 2023 show, Het Perfecte Plaatje, about photography on Dutch television."
         },
         {
             "idPlus": {
@@ -204,7 +211,8 @@
                 "latitude": 24.78468,
                 "longitude": 112.38392
             },
-            "website": "http://www.lmop.org.cn"
+            "website": "http://www.lmop.org.cn",
+            "descriptionEN": "The museum's URL and GPS coordinates don't currently work correctly, but the museum is in Lianzhou, China."
         },
         {
             "idPlus": {
@@ -218,21 +226,8 @@
             },
             "website": "http://thephotographersgallery.org.uk/",
             "wikipedia": "https://en.wikipedia.org/wiki/The_Photographers%27_Gallery",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/c/cd/The_Photographers%27_Gallery%2C_London.jpg"
-        },
-        {
-            "idPlus": {
-                "town": "London",
-                "fullName": "Royal Institute of British Architects",
-                "nickName": "RIBA London"
-            },
-            "coordinates": {
-                "latitude": 51.521283,
-                "longitude": -0.14508
-            },
-            "website": "https://www.architecture.com/",
-            "wikipedia": "https://en.wikipedia.org/wiki/Royal_Institute_of_British_Architects",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/9/90/Cmglee_Royal_Institute_of_British_Architects.jpg"
+            "image": "https://upload.wikimedia.org/wikipedia/commons/c/cd/The_Photographers%27_Gallery%2C_London.jpg",
+            "descriptionEN": "The gallery has three exhibition spaces and a commercial gallery where prints are sold."
         },
         {
             "idPlus": {
@@ -244,9 +239,10 @@
                 "latitude": 51.496389,
                 "longitude": -0.171944
             },
-            "website": "https://www.vam.ac.uk/",
+            "website": "https://www.vam.ac.uk/info/photography-centre",
             "wikipedia": "https://en.wikipedia.org/wiki/Victoria_and_Albert_Museum",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Victoria_%26_Albert_Museum_Entrance%2C_London%2C_UK_-_Diliff.jpg"
+            "image": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Victoria_%26_Albert_Museum_Entrance%2C_London%2C_UK_-_Diliff.jpg",
+            "descriptionEN": "The museum describes its Photography Centre as 'the largest space in the UK dedicated to a permanent photography collection'."
         },
         {
             "idPlus": {
@@ -260,7 +256,8 @@
             },
             "website": "http://www.museumaanhetvrijthof.nl",
             "wikipedia": "https://nl.wikipedia.org/wiki/Fotomuseum_aan_het_Vrijthof",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/8/87/Museum_aan_het_Vrijthof_-_Exterieur_2012.jpg"
+            "image": "https://upload.wikimedia.org/wikipedia/commons/8/87/Museum_aan_het_Vrijthof_-_Exterieur_2012.jpg",
+            "descriptionEN": "The museum is privately owned and funded by admission fees and donations."
         },
         {
             "idPlus": {
@@ -273,7 +270,8 @@
                 "longitude": -3.70135
             },
             "website": "https://www.comunidad.madrid/centros/sala-canal-isabel-ii",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Dep%C3%B3sito_de_agua_de_Santa_Engracia.JPG"
+            "image": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Dep%C3%B3sito_de_agua_de_Santa_Engracia.JPG",
+            "descriptionEN": "The museum is located in a former water tower, and named after the next door canal."
         },
         {
             "idPlus": {
@@ -288,7 +286,7 @@
             "website": "http://ccp.org.au/",
             "wikipedia": "https://en.wikipedia.org/wiki/Centre_for_Contemporary_Photography",
             "image": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Centre_for_Contemporary_Photography_Fitzroy.jpg",
-            "comment": "Fitzroy is located in Melbourne."
+            "descriptionEN": "The locality Fitzroy is located in Melbourne, Australia."
         },
         {
             "idPlus": {
@@ -302,7 +300,8 @@
             },
             "website": "https://www.icp.org",
             "wikipedia": "https://en.wikipedia.org/wiki/International_Center_of_Photography",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/9/99/International_Center_of_Photography_at_79_Essex_Street.jpg"
+            "image": "https://upload.wikimedia.org/wikipedia/commons/9/99/International_Center_of_Photography_at_79_Essex_Street.jpg",
+            "descriptionEN": "The museum and school was founded by Cornell Capa, the younger brother of Robert Capa."
         },
         {
             "idPlus": {
@@ -316,7 +315,8 @@
             },
             "website": "https://www.fotografiska.com/nyc/",
             "wikipedia": "https://en.wikipedia.org/wiki/Fotografiska_New_York",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/7/76/Fotografiska_New_York_%2851710073919%29.jpg"
+            "image": "https://upload.wikimedia.org/wikipedia/commons/7/76/Fotografiska_New_York_%2851710073919%29.jpg",
+            "descriptionEN": "Fotografiska New York is a branch of the Swedish Fotografiska museum."
         },
         {
             "idPlus": {
@@ -328,9 +328,10 @@
                 "latitude": 40.761667,
                 "longitude": -73.9775
             },
-            "website": "https://www.moma.org",
+            "website": "https://www.moma.org/about/curatorial-departments/photography",
             "wikipedia": "https://en.wikipedia.org/wiki/Museum_of_Modern_Art",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/8/8b/MoMa_NY_USA_1.jpg"
+            "image": "https://upload.wikimedia.org/wikipedia/commons/8/8b/MoMa_NY_USA_1.jpg",
+            "descriptionEN": "This department within the Museum of Modern art describes itself as 'one of the most important collections of modern and contemporary photography in the world'."
         },
         {
             "idPlus": {
@@ -345,19 +346,7 @@
             "website": "https://www.gallery.ca/cpi",
             "wikipedia": "https://en.wikipedia.org/wiki/National_Gallery_of_Canada",
             "image": "https://upload.wikimedia.org/wikipedia/commons/1/10/Ottawa_-_ON_-_National_Gallery_of_Canada.jpg",
-            "comment": "Part of National Gallery of Canada. Formerly Canadian Museum of Contemporary Photography."
-        },
-        {
-            "idPlus": {
-                "town": "Paris",
-                "fullName": "Les Douches la Galerie",
-                "nickName": "Les Douches Paris"
-            },
-            "coordinates": {
-                "latitude": 48.87228,
-                "longitude": 2.361759
-            },
-            "website": "https://www.lesdoucheslagalerie.com"
+            "descriptionEN": "The former Canadian Museum of Contemporary Photography is now part of the National Gallery of Canada. "
         },
         {
             "idPlus": {
@@ -372,7 +361,7 @@
             "website": "http://www.henricartierbresson.org/en/",
             "wikipedia": "https://en.wikipedia.org/wiki/Henri_Cartier-Bresson_Foundation",
             "image": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Rue_des_Archives_79_Cour.jpg",
-            "comment": "Foundation's mission is to preserve the archives of Henri Cartier-Bresson and Martine Franck."
+            "descriptionEN": "The museum's mission is to preserve the archives of Henri Cartier-Bresson and his wife, photographer Martine Franck."
         },
         {
             "idPlus": {
@@ -386,7 +375,8 @@
             },
             "website": "https://cpf.pt",
             "wikipedia": "https://en.wikipedia.org/wiki/Portuguese_Centre_of_Photography",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Centro_Portugu%C3%A9s_de_Fotograf%C3%ADa%2C_Oporto%2C_Portugal%2C_2012-05-09%2C_DD_01.JPG"
+            "image": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Centro_Portugu%C3%A9s_de_Fotograf%C3%ADa%2C_Oporto%2C_Portugal%2C_2012-05-09%2C_DD_01.JPG",
+            "descriptionEN": "The museum/archive's website is currently only available in Portuguese."
         },
         {
             "idPlus": {
@@ -401,7 +391,7 @@
             "website": "http://www.cmp.ucr.edu/",
             "wikipedia": "https://en.wikipedia.org/wiki/UCR/California_Museum_of_Photography",
             "image": "https://upload.wikimedia.org/wikipedia/commons/c/c3/California_Museum_of_Photography.jpg",
-            "comment": "The museum is owned and operated by the University of California, Riverside (LA area)."
+            "descriptionEN": "The museum (near Los Angeles) is owned and operated by the University of California, Riverside."
         },
         {
             "idPlus": {
@@ -415,7 +405,8 @@
             },
             "website": "https://www.eastman.org/",
             "wikipedia": "https://en.wikipedia.org/wiki/George_Eastman_Museum",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/d/d8/George-Eastman-House%3DExterior.JPG"
+            "image": "https://upload.wikimedia.org/wikipedia/commons/d/d8/George-Eastman-House%3DExterior.JPG",
+            "descriptionEN": "This is the oldest photography museum in the world. George Eastman founded Kodak."
         },
         {
             "idPlus": {
@@ -430,7 +421,7 @@
             "website": "https://www.nederlandsfotomuseum.nl",
             "wikipedia": "https://en.wikipedia.org/wiki/Netherlands_Photo_Museum",
             "image": "https://upload.wikimedia.org/wikipedia/commons/3/31/Nederlands_Fotomuseum_%2811192247676%29.jpg",
-            "comment": "The museum is about to relocate to a new building, but both sites are in walking distance."
+            "descriptionEN": "The museum will relocate to this new building in the coming years, but the old site is in walking distance."
         },
         {
             "idPlus": {
@@ -445,7 +436,7 @@
             "website": "http://www.domonken-kinenkan.jp/",
             "wikipedia": "https://en.wikipedia.org/wiki/Ken_Domon_Museum_of_Photography",
             "image": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Ken_Domon_Museum_of_Photography%2C_22_September_2009%2C_002.jpg",
-            "comment": "Named after Japanese photographer Ken Domon, who was born in Sakata."
+            "descriptionEN": "Named after the Japanese photographer Ken Domon who was born in Sakata, Japan."
         },
         {
             "idPlus": {
@@ -463,8 +454,23 @@
         },
         {
             "idPlus": {
+                "town": "Stockholm",
+                "fullName": "Fotografiska",
+                "nickName": "Fotografiska_SE"
+            },
+            "coordinates": {
+                "latitude": 59.317786,
+                "longitude": 18.084722
+            },
+            "website": "http://www.fotografiska.com/",
+            "wikipedia": "https://en.wikipedia.org/wiki/Fotografiska",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Fotografiska_2010a.jpg",
+            "descriptionEN": "Fotografiska has subsidiaries in New York, Talinn and Berlin."
+        },
+        {
+            "idPlus": {
                 "town": "Thessaloniki",
-                "fullName": "Thessaloniki Museum of Photography",
+                "fullName": "MOMus–Thessaloniki Museum of Photography",
                 "nickName": "MOMus Thessaloniki"
             },
             "coordinates": {
@@ -473,7 +479,8 @@
             },
             "website": "https://momus.gr/en/museum/thessaloniki-museum-photography#museum",
             "wikipedia": "https://en.wikipedia.org/wiki/MOMus–Thessaloniki_Museum_of_Photography",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/8/83/Biennale_photo_09388.JPG"
+            "image": "https://upload.wikimedia.org/wikipedia/commons/8/83/Biennale_photo_09388.JPG",
+            "descriptionEN": "The museum is housed in a former warehouse and orgaizes the Thassaloniki Photobiennale."
         },
         {
             "idPlus": {
@@ -487,7 +494,8 @@
             },
             "website": "http://topmuseum.jp/e/contents/index.html",
             "wikipedia": "https://en.wikipedia.org/wiki/Tokyo_Photographic_Art_Museum",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/3/38/Tokyo_Metropolitan_Museum_of_Photography_entrance_2011_January.jpg"
+            "image": "https://upload.wikimedia.org/wikipedia/commons/3/38/Tokyo_Metropolitan_Museum_of_Photography_entrance_2011_January.jpg",
+            "descriptionEN": "The museum is formally located in Meguro, on the outskirts of Tokyo."
         },
         {
             "idPlus": {
@@ -500,7 +508,8 @@
                 "longitude": 5.122775
             },
             "website": "https://www.fotodok.org",
-            "wikipedia": "https://nl.wikipedia.org/wiki/Rob_Hornstra#FOTODOK"
+            "wikipedia": "https://nl.wikipedia.org/wiki/Rob_Hornstra#FOTODOK",
+            "descriptionEN": "The museum focusses on documentary photography and was founded by photographer Rob Hornstra."
         },
         {
             "idPlus": {
@@ -514,7 +523,7 @@
             },
             "website": "https://www.nationalgeographic.org/society/visit-base-camp/",
             "wikipedia": "https://en.wikipedia.org/wiki/National_Geographic_Society#National_Geographic_Museum",
-            "comment": "The National Geographic Museum is (was?) temporarily closed."
+            "descriptionEN": "The National Geographic Museum is (early 2024) temporarily closed."
         },
         {
             "idPlus": {
@@ -526,7 +535,8 @@
                 "latitude": 51.65010,
                 "longitude": 3.91938
             },
-            "website": "https://www.cameramuseum.nl"
+            "website": "https://www.cameramuseum.nl",
+            "descriptionEN": "This small museum is mainly about classical cameras, but also covers regional photographers."
         }
     ]
 }
