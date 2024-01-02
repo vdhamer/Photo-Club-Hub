@@ -700,13 +700,15 @@ Here is an example of the format of the OrganizationList. The example contains a
             }
             "website": "https://www.fotografiska.com/nyc/",
             "wikipedia": "https://en.wikipedia.org/wiki/Fotografiska_New_York",
-            "image": "https://commons.wikimedia.org/wiki/File:Fotografiska_New_York_(51710073919).jpg"
+            "image": "https://commons.wikimedia.org/wiki/File:Fotografiska_New_York_(51710073919).jpg",
+            "descriptionEN": "Fotografiska New York is a branch of the Swedish Fotografiska museum.",
+            "descriptionNL": "Fotografiskia New York is een dependance van het Fotografiska museum in Stockholm."
         }
     ]
 }
 ```
 Note that:
-- All fields within `idPlus` and `coordinates` are required. Other lines can be omitted if the data is not available or not applicable. `idPlus` serves to differentiate clubs or museum from others. `coordinates` is used to draw the club on the map.
+- All fields within `idPlus` and `coordinates` are required. All other fields can be omitted if the data is not available or not applicable. `idPlus` serves to differentiate clubs or museum from others. `coordinates` is used to draw the club on the map.
 - The `coordinates` field is used to draw the club or museum on the maps. Latitudes are in the range [-90.0, +90.0] where negative `latitude` means south of the Equator. Longitude values are in the range [-180.0, +180.0] where negative `longitude` means west of Greenwich in London.
 - The `memberList` field for clubs allows the app to find the next level list with membership data.
 - The `country` field is automatically determined using the provided `coordinates` (reverse geolocation).</p>
