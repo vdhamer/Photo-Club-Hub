@@ -193,7 +193,7 @@ extension PhotoClub {
                                         kvkNumber: kvkNumber),
                        coordinates: coordinates,
                        pinned: pinned)
-            print("\(organization.fullNameTown): Successfully created new photo club")
+            print("\(organization.fullNameTown): Successfully created new \(organizationType.rawValue)")
 			return organization
 		}
 	}
