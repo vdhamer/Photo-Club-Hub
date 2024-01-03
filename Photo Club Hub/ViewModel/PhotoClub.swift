@@ -185,7 +185,7 @@ extension PhotoClub {
             let organization = PhotoClub(entity: entity, insertInto: context) // create new organization
             organization.fullName = photoClubIdPlus.fullName // first part of ID
             organization.town = photoClubIdPlus.town // second part of ID
-            print("\(organization.fullNameTown): Will try to create new organization \(organization.fullName)")
+            print("\(organization.fullNameTown): Will try to create this new organization")
             _ = update(bgContext: context, organizationTypeEnum: organizationType,
                        photoClub: organization, shortName: photoClubIdPlus.nickname,
                        optionalFields: (photoClubWebsite: photoClubWebsite,

@@ -11,7 +11,7 @@ extension OrganizationType {
 
     static var enum2objectID: [OrganizationTypeEnum: NSManagedObjectID] = [:]
 
-    static func initConstants() {
+    static func initConstants() { // called on main thread
         guard Thread.isMainThread else { fatalError("OrganizationType.initConstants() must be on main thread") }
         guard OrganizationType.enum2objectID.isEmpty else {
             fatalError("Repeated call to OrganizationalType.initConstants")
@@ -75,19 +75,19 @@ extension OrganizationType {
             let organizationType = OrganizationType(entity: entity, insertInto: context)
             organizationType.name = name
             print("\(organizationType.name): Will try to create new OrganizationType")
-            _ = update(context: context, organizationType: organizationType, dummy: "dummy string #1")
+            _ = update(context: context, organizationType: organizationType, dummy: "dummy string #1") // TODO ForceSave Here!!!
             print("\(organizationType.name): Created new OrganizationType called \"\(name)\"")
             return organizationType
         }
     }
 
     // Update non-identifying attributes/properties within existing instance of class OrganizationType
-    static func update(context: NSManagedObjectContext, organizationType: OrganizationType, dummy: String) -> Bool {
+    static func update(context: NSManagedObjectContext, organizationType: OrganizationType, dummy dumby: String) -> Bool {
 
         var modified: Bool = false
 
-        if organizationType.dummy != dummy {
-            organizationType.dummy = dummy
+        if organizationType.dummy != dumby {
+            organizationType.dummy = dumby // TODO should be dummy, but debugger mixes up values?
             modified = true
         }
 

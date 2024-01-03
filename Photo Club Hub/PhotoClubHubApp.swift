@@ -23,7 +23,7 @@ struct FotogroepWaalreApp: App {
 
         OrganizationType.initConstants() // insert contant records into OrganizationType table if needed
 
-        // update version number shown in iOS Settings app
+        // update version number shown in iOS Settings
         UserDefaults.standard.set(Bundle.main.fullVersion, forKey: "version_preference")
     }
 
