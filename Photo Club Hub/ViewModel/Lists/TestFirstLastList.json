@@ -1,0 +1,60 @@
+{
+    "clubs": [
+        {
+            "idPlus": {
+                "town": "Eindhoven",
+                "fullName": "Fotogroep First",
+                "nickName": "FG Anders"
+            },
+            "coordinates": {
+                "latitude": 51.44297,
+                "longitude": 5.51527
+            },
+            "website": "https://nl.qrcodechimp.com/page/a6d3r7?v=chk1697032881",
+            "memberList": "https://www.example.com/fgAnders.memberList.json"
+        },
+        {
+            "idPlus": {
+                "town": "Berlicum",
+                "fullName": "Fotogroep Last",
+                "nickName": "FFC Shot71"
+            },
+            "coordinates": {
+                "latitude": 51.663059,
+                "longitude": 5.4182475
+            },
+            "website": "https://www.shot71.nl",
+            "memberList": "https://www.example.com/FFC_Shot71.memberlist.json"
+        }
+    ],
+    "museums": [
+        {
+            "idPlus": {
+                "town": "Amsterdam",
+                "fullName": "Museum First",
+                "nickName": "Foam"
+            },
+            "coordinates": {
+                "latitude": 52.364217,
+                "longitude": 4.89337
+            },
+            "website": "https://www.foam.org",
+            "wikipedia": "https://en.wikipedia.org/wiki/Foam_Fotografiemuseum_Amsterdam",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/4/47/Keizersgracht_609%2C_Amsterdam.JPG",
+            "descriptionEN": "The two adjacent Amsterdam canal mansions house a museum orignally named after its founder (Carel Joseph) Fodor."
+        },
+        {
+            "idPlus": {
+                "town": "Zierikzee",
+                "fullName": "Museum Last",
+                "nickName": "CM Zierikzee"
+            },
+            "coordinates": {
+                "latitude": 51.65010,
+                "longitude": 3.91938
+            },
+            "website": "https://www.cameramuseum.nl",
+            "descriptionEN": "This small museum is mainly about classical cameras, but also covers regional photographers."
+        }
+    ]
+}

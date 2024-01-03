@@ -58,12 +58,12 @@ class OrganizationList {
 
         bgContext.perform { // move to background thread
             self.readJSONOrganizationList(bgContext: bgContext,
-                                          organizationTypes: [.club, .museum]) // load entire file
+                                          for: [.club, .museum]) // load entire file
         }
     }
 
     private func readJSONOrganizationList(bgContext: NSManagedObjectContext,
-                                          organizationTypes: [OrganizationTypeEnum]) {
+                                          for organizationTypes: [OrganizationTypeEnum]) {
 
         ifDebugPrint("Starting readJSONOrganizationList() in background")
 
@@ -73,10 +73,10 @@ class OrganizationList {
         // give the data to SwiftyJSON to parse
         let jsonRoot = JSON(parseJSON: data) // call to SwiftyJSON
 
-        // extract the Clubs part of JSON string
+        // extract the requested organizationType one-by-one from the json file
         for organizationType in organizationTypes {
             let jsonOrganizations: [JSON] = jsonRoot[organizationType.unlocalizedPlural].arrayValue
-            ifDebugPrint("Found \(jsonOrganizations.count) \(organizationType.unlocalizedSingular) in file.")
+            ifDebugPrint("Found \(jsonOrganizations.count) \(organizationType.unlocalizedPlural) in file.")
 
             for jsonOrganization in jsonOrganizations {
                 let idPlus = PhotoClubIdPlus(fullName: jsonOrganization["idPlus"]["fullName"].stringValue,
