@@ -38,12 +38,13 @@ extension PhotoClub {
             } else if Thread.isMainThread { // frantic hack to avoid fatal error
                 let persistenceController = PersistenceController.shared // for Core Data
                 let viewContext = persistenceController.container.viewContext
-                let orgTypeObjectID: NSManagedObjectID = OrganizationType.enum2objectID[PhotoClub.hackOrganizationTypeEnum]!
+                let orgTypeObjectID: NSManagedObjectID =
+                    OrganizationType.enum2objectID[PhotoClub.hackOrganizationTypeEnum]!
                 // swiftlint:disable:next force_cast
                 organizationType = viewContext.object(with: orgTypeObjectID) as! OrganizationType
                 hack = true
             } else {
-                fatalError( "Cannot Fetch organizationType object", file: #file, line: #line ) // TODO crash site
+                fatalError( "Cannot Fetch organizationType object", file: #file, line: #line )
             }
             print("""
                   ORGANIZATIONTYPE: getter for \(self.shortName). \

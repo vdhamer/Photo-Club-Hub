@@ -77,7 +77,6 @@ extension PhotoClubHubApp {
         let olBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
         olBackgroundContext.name = "OrganizationList"
         olBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-        print("Default pushes down \(olBackgroundContext.automaticallyMergesChangesFromParent)") // TODO temp
         olBackgroundContext.automaticallyMergesChangesFromParent = true // needed to push ObjectTypes down to bgContext?
         _ = OrganizationList(bgContext: olBackgroundContext) // read OrganizationList.json file
 

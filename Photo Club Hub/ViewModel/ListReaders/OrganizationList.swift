@@ -16,7 +16,7 @@ let dataSourcePath: String = """
                             Photo%20Club%20Hub/ViewModel/Lists/
                             """
 let dataSourceFile: String = "TestFirstLastList.json"
-//let dataSourceFile: String = "OrganizationList.json"
+// let dataSourceFile: String = "OrganizationList.json"
 
 /* Example of basic OrganizationList.json content
 {
@@ -60,14 +60,14 @@ class OrganizationList {
 
         bgContext.perform { // move to background thread
             self.readJSONOrganizationList(bgContext: bgContext,
-                                          for: [.club /*, .museum*/]) // load entire file
+                                          for: [.club, .museum]) // load entire file TODO
         }
     }
 
     private func readJSONOrganizationList(bgContext: NSManagedObjectContext,
                                           for organizationTypes: [OrganizationTypeEnum]) {
 
-        ifDebugPrint("Starting readJSONOrganizationList() in background")
+        ifDebugPrint("\nStarting readJSONOrganizationList() in background")
 
         guard let data = try? String(contentsOf: URL(string: dataSourcePath+dataSourceFile)!) else {
             // calling fatalError is ok for a compile-time constant (as defined above)
@@ -81,7 +81,8 @@ class OrganizationList {
             PhotoClub.hackOrganizationTypeEnum = organizationType
 
             let jsonOrganizations: [JSON] = jsonRoot[organizationType.unlocalizedPlural].arrayValue
-            ifDebugPrint("Found \(jsonOrganizations.count) \(organizationType.unlocalizedPlural) in file.")
+            ifDebugPrint("\nFound \(jsonOrganizations.count) \(organizationType.unlocalizedPlural) " +
+                         "in \(dataSourceFile).")
 
             for jsonOrganization in jsonOrganizations {
                 let idPlus = PhotoClubIdPlus(fullName: jsonOrganization["idPlus"]["fullName"].stringValue,

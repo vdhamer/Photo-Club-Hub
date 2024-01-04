@@ -64,9 +64,9 @@ extension OrganizationType {
         }
 
         if let organizationType = organizationTypes.first { // already exists, so update non-identifying attributes
-            print("Will try to update info for organization type \"\(organizationType.name)\"")
             if update(context: context, organizationType: organizationType, dummy: "dummy string #2") {
                 print("Updated info for organization type \"\(organizationType.name)\"")
+                save(context: context, organizationType: organizationType, create: false)
             }
             return organizationType
         } else {
@@ -74,20 +74,21 @@ extension OrganizationType {
             let entity = NSEntityDescription.entity(forEntityName: "OrganizationType", in: context)!
             let organizationType = OrganizationType(entity: entity, insertInto: context)
             organizationType.name = name
-            print("\(organizationType.name): Will try to create new OrganizationType")
-            _ = update(context: context, organizationType: organizationType, dummy: "dummy string #1") // TODO ForceSave Here!!!
+            _ = update(context: context, organizationType: organizationType, dummy: "dummy string #1")
+            save(context: context, organizationType: organizationType, create: true)
             print("\(organizationType.name): Created new OrganizationType called \"\(name)\"")
             return organizationType
         }
     }
 
     // Update non-identifying attributes/properties within existing instance of class OrganizationType
-    static func update(context: NSManagedObjectContext, organizationType: OrganizationType, dummy dumby: String) -> Bool {
+    static func update(context: NSManagedObjectContext,
+                       organizationType: OrganizationType, dummy dumby: String) -> Bool {
 
         var modified: Bool = false
 
         if organizationType.dummy != dumby {
-            organizationType.dummy = dumby // TODO should be dummy, but debugger mixes up values?
+            organizationType.dummy = dumby // think I saw debugger mix up param and property, so changed the name
             modified = true
         }
 
@@ -114,6 +115,18 @@ extension OrganizationType {
 
     var isMuseum: Bool { // convenience function
         return self.name == OrganizationTypeEnum.museum.rawValue
+    }
+
+    private static func save(context: NSManagedObjectContext, organizationType: OrganizationType, create: Bool) {
+        do {
+            try context.save()
+        } catch {
+            if create {
+                ifDebugFatalError("Could not save created OrganizationType \(organizationType.name)")
+            } else {
+                ifDebugFatalError("Could not save updateds property of OrganizationType \(organizationType.name)")
+            }
+        }
     }
 
 }
