@@ -59,8 +59,6 @@ class OrganizationList {
         bgContext.perform { // move to background thread
             self.readJSONOrganizationList(bgContext: bgContext,
                                           for: [.club /*, .museum*/]) // load entire file
-            self.readJSONOrganizationList(bgContext: bgContext,
-                                          for: [.club, .museum]) // load entire file
         }
     }
 

@@ -59,6 +59,15 @@ extension PhotoClub {
                   New value = \(newValue.name) \
                   on Thread = \(Thread.isMainThread ? "MAIN" : "Background")
                   """)
+            if newValue.name != PhotoClub.hackOrganizationTypeEnum.rawValue {
+                print("""
+                      ORGANIZATIONTYPE: setter for \(self.shortName). \
+                      Unexpected new value = \(newValue.name) \
+                      (\(PhotoClub.hackOrganizationTypeEnum.rawValue) expected) \
+                      on Thread = \(Thread.isMainThread ? "MAIN" : "Background")
+                      """)
+                ifDebugFatalError("Unexpected value for setter for organizationtype (see console)")
+            }
             if organizationType_ != newValue { // avoid unnecessarily dirtying context
                 organizationType_ = newValue
             }
