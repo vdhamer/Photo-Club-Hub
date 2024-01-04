@@ -9,7 +9,7 @@ import SwiftUI
 import CoreData // for ManagedObjectContext
 
 @main
-struct FotogroepWaalreApp: App {
+struct PhotoClubHubApp: App {
 
     @Environment(\.scenePhase) var scenePhase
 
@@ -32,7 +32,7 @@ struct FotogroepWaalreApp: App {
             PreludeView()
                 .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext) // main queue!
                 .onAppear {
-                    FotogroepWaalreApp.loadClubsAndMembers()
+                    PhotoClubHubApp.loadClubsAndMembers()
 
                     let foregroundContext = PersistenceController.shared.container.viewContext // UI context = main
                     try? foregroundContext.save() // moves data to persistent store  TODO needed?
@@ -45,7 +45,7 @@ struct FotogroepWaalreApp: App {
 
 }
 
-extension FotogroepWaalreApp {
+extension PhotoClubHubApp {
 
     static func loadClubsAndMembers() {
 
@@ -77,6 +77,8 @@ extension FotogroepWaalreApp {
         let olBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
         olBackgroundContext.name = "OrganizationList"
         olBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+        print("Default pushes down \(olBackgroundContext.automaticallyMergesChangesFromParent)") // TODO temp
+        olBackgroundContext.automaticallyMergesChangesFromParent = true // needed to push ObjectTypes down to bgContext?
         _ = OrganizationList(bgContext: olBackgroundContext) // read OrganizationList.json file
 
     }

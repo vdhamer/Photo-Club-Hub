@@ -92,7 +92,7 @@ struct PersistenceController {
             do {
                 try context.save()
             } catch {
-                // Show some error here
+                ifDebugFatalError("Core Data save() failed on main thread.")
             }
         }
     }

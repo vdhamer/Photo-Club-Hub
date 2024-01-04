@@ -26,6 +26,8 @@ extension PhotoClub {
 		set { members_ = newValue as NSSet }
 	}
 
+    static var hackOrganizationTypeEnum: OrganizationTypeEnum = OrganizationTypeEnum.club
+
     var organizationType: OrganizationType {
         get { // careful: cannot read organizationType on background thread if database still contains nil
             let organizationType: OrganizationType
@@ -36,7 +38,7 @@ extension PhotoClub {
             } else if Thread.isMainThread { // frantic hack to avoid fatal error
                 let persistenceController = PersistenceController.shared // for Core Data
                 let viewContext = persistenceController.container.viewContext
-                let orgTypeObjectID: NSManagedObjectID = OrganizationType.enum2objectID[OrganizationTypeEnum.unknown]!
+                let orgTypeObjectID: NSManagedObjectID = OrganizationType.enum2objectID[PhotoClub.hackOrganizationTypeEnum]!
                 // swiftlint:disable:next force_cast
                 organizationType = viewContext.object(with: orgTypeObjectID) as! OrganizationType
                 hack = true

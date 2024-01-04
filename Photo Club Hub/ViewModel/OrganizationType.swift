@@ -28,7 +28,7 @@ extension OrganizationType {
         }
 
         do {
-            try viewContext.save() // persist organizationType using main thread ManagedObjectContext
+            try viewContext.save() // persist all organizationTypes using main thread ManagedObjectContext
         } catch {
             ifDebugFatalError("Couldn't initialize both organizationType records",
                               file: #fileID, line: #line)

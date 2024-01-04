@@ -62,7 +62,7 @@ struct PhotoClubListView: View {
             }
             .refreshable { // for pull-to-refresh
                 UserDefaults.standard.set(true, forKey: "ClubListPageRefreshed") // used to control footer/remark #3
-                FotogroepWaalreApp.loadClubsAndMembers()
+                PhotoClubHubApp.loadClubsAndMembers()
             }
         }
         .navigationTitle(navigationTitle)

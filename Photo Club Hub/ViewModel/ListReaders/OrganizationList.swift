@@ -58,6 +58,8 @@ class OrganizationList {
 
         bgContext.perform { // move to background thread
             self.readJSONOrganizationList(bgContext: bgContext,
+                                          for: [.club /*, .museum*/]) // load entire file
+            self.readJSONOrganizationList(bgContext: bgContext,
                                           for: [.club, .museum]) // load entire file
         }
     }
@@ -75,6 +77,8 @@ class OrganizationList {
 
         // extract the requested organizationType one-by-one from the json file
         for organizationType in organizationTypes {
+            PhotoClub.hackOrganizationTypeEnum = organizationType
+
             let jsonOrganizations: [JSON] = jsonRoot[organizationType.unlocalizedPlural].arrayValue
             ifDebugPrint("Found \(jsonOrganizations.count) \(organizationType.unlocalizedPlural) in file.")
 

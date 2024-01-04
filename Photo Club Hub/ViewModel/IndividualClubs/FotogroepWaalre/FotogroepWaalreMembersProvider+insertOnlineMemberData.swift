@@ -116,7 +116,7 @@ extension FotogroepWaalreMembersProvider {
                 let portfoliosInClub = try backgroundContext.fetch(fetchRequest)
 
                 for portfolio in portfoliosInClub {
-                    // FotogroepWaalreApp.antiZombiePinningOfMemberPortfolios.insert(portfolio)
+                    // PhotoClubHubApp.antiZombiePinningOfMemberPortfolios.insert(portfolio)
                     portfolio.refreshFirstImage()
                 }
                 try backgroundContext.save() // persist first images for Fotogroep Waalre

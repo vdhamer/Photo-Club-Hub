@@ -38,7 +38,7 @@ struct WhoIsWho: View {
             }
             .refreshable { // for pull-to-refresh
                 // UserDefaults.standard.set(true, forKey: "WhosWhoPageRefreshed") // not really used
-                FotogroepWaalreApp.loadClubsAndMembers()
+                PhotoClubHubApp.loadClubsAndMembers()
             }
         }
         .keyboardType(.namePhonePad)
