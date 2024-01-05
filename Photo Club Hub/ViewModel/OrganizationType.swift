@@ -45,7 +45,7 @@ extension OrganizationType {
 
     // MARK: - find or create
 
-    // Find existing object or create a new object
+    // Find OrganizationType object (or create a new object - used at start of app)
     // Update existing attributes or fill the new object
     static func findCreateUpdate(context: NSManagedObjectContext, // can be foreground of background context
                                  name: String

@@ -56,7 +56,7 @@ extension PhotoClub {
         }
         set {
             print("""
-                  ORGANIZATIONTYPE: setter for \(self.shortName). \
+                  ORGANIZATIONTYPE: setter for \(self.fullName). \
                   New value = \(newValue.name) \
                   on Thread = \(Thread.isMainThread ? "MAIN" : "Background")
                   """)
@@ -155,7 +155,7 @@ extension PhotoClub {
 	// Find existing organization or create a new one
 	// Update new or existing organization's attributes
     static func findCreateUpdate(context: NSManagedObjectContext, // can be foreground of background context
-                                 organizationType: OrganizationTypeEnum,
+                                 organizationTypeEum: OrganizationTypeEnum,
                                  photoClubIdPlus: PhotoClubIdPlus,
                                  photoClubWebsite: URL? = nil, fotobondNumber: Int16? = nil, kvkNumber: Int32? = nil,
                                  coordinates: CLLocationCoordinate2D? = nil,
@@ -181,7 +181,7 @@ extension PhotoClub {
 
 		if let organization = organizations.first { // already exists, so make sure secondary attributes are up to date
             print("\(organization.fullNameTown): Will try to update info for organization \(organization.fullName)")
-            if update(bgContext: context, organizationTypeEnum: organizationType,
+            if update(bgContext: context, organizationTypeEnum: organizationTypeEum,
                       photoClub: organization, shortName: photoClubIdPlus.nickname,
                       optionalFields: (photoClubWebsite: photoClubWebsite,
                                        fotobondNumber: fotobondNumber,
@@ -198,14 +198,14 @@ extension PhotoClub {
             organization.fullName = photoClubIdPlus.fullName // first part of ID
             organization.town = photoClubIdPlus.town // second part of ID
             print("\(organization.fullNameTown): Will try to create this new organization")
-            _ = update(bgContext: context, organizationTypeEnum: organizationType,
+            _ = update(bgContext: context, organizationTypeEnum: organizationTypeEum,
                        photoClub: organization, shortName: photoClubIdPlus.nickname,
                        optionalFields: (photoClubWebsite: photoClubWebsite,
                                         fotobondNumber: fotobondNumber,
                                         kvkNumber: kvkNumber),
                        coordinates: coordinates,
                        pinned: pinned)
-            print("\(organization.fullNameTown): Successfully created new \(organizationType.rawValue)")
+            print("\(organization.fullNameTown): Successfully created new \(organizationTypeEum.rawValue)")
 			return organization
 		}
 	}

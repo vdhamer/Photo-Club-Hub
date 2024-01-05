@@ -17,7 +17,7 @@ private let dataSourcePath: String = """
                                      """
 private let dataSourceFile: String = "Test2Club2MuseumList.json"
 // let dataSourceFile: String = "OrganizationList.json"
-private let organizationTypesToLoad: [OrganizationTypeEnum] = [.unknown]
+private let organizationTypesToLoad: [OrganizationTypeEnum] = [.club]
 
 /* Example of basic OrganizationList.json content
 {
@@ -65,7 +65,7 @@ class OrganizationList {
     }
 
     private func readJSONOrganizationList(bgContext: NSManagedObjectContext,
-                                          for organizationTypesToLoad: [OrganizationTypeEnum]) {
+                                          for organizationTypeEnumsToLoad: [OrganizationTypeEnum]) {
 
         ifDebugPrint("\nStarting readJSONOrganizationList() in background")
 
@@ -77,14 +77,14 @@ class OrganizationList {
         let jsonRoot = JSON(parseJSON: data) // call to SwiftyJSON
 
         // extract the requested organizationType one-by-one from the json file
-        for organizationType in organizationTypesToLoad {
-            PhotoClub.hackOrganizationTypeEnum = organizationType
+        for organizationTypeEnum in organizationTypeEnumsToLoad {
+            PhotoClub.hackOrganizationTypeEnum = organizationTypeEnum
 
-            let jsonOrganizations: [JSON] = jsonRoot[organizationType.unlocalizedPlural].arrayValue
-            ifDebugPrint("\nFound \(jsonOrganizations.count) \(organizationType.unlocalizedPlural) " +
+            let jsonOrganizationsOfOneType: [JSON] = jsonRoot[organizationTypeEnum.unlocalizedPlural].arrayValue
+            ifDebugPrint("Found \(jsonOrganizationsOfOneType.count) \(organizationTypeEnum.unlocalizedPlural) " +
                          "in \(dataSourceFile).")
 
-            for jsonOrganization in jsonOrganizations {
+            for jsonOrganization in jsonOrganizationsOfOneType {
                 let idPlus = PhotoClubIdPlus(fullName: jsonOrganization["idPlus"]["fullName"].stringValue,
                                              town: jsonOrganization["idPlus"]["town"].stringValue,
                                              nickname: jsonOrganization["idPlus"]["nickName"].stringValue)
@@ -94,7 +94,7 @@ class OrganizationList {
                                                          longitude: jsonCoordinates["longitude"].doubleValue)
                 let photoClubWebsite = URL(string: jsonOrganization["website"].stringValue)
                 _ = PhotoClub.findCreateUpdate(context: bgContext,
-                                               organizationType: organizationType,
+                                               organizationTypeEum: organizationTypeEnum,
                                                photoClubIdPlus: idPlus,
                                                photoClubWebsite: photoClubWebsite,
                                                fotobondNumber: nil, kvkNumber: nil,
@@ -104,7 +104,7 @@ class OrganizationList {
  //               if bgContext.hasChanges { // TODO save only if there are souls to save
                     try bgContext.save() // persist contents of OrganizationList.json
  //               }
-                ifDebugPrint("Completed saving of JSON ClubList items in background")
+                ifDebugPrint("Completed readJSONOrganizationList() in background")
             } catch {
                 ifDebugFatalError("Failed to save changes to Core Data",
                                   file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0

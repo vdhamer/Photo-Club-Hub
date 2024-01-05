@@ -13,7 +13,7 @@ extension FotogroepWaalreMembersProvider {
     func insertOnlineMemberData(bgContext: NSManagedObjectContext) { // runs on a background thread
         // can't rely on async (!) insertSomeHardcodedMemberData() to return managed photoClub object in time
         let clubWaalre = PhotoClub.findCreateUpdate(
-            context: bgContext, organizationType: .club,
+            context: bgContext, organizationTypeEum: .club,
             photoClubIdPlus: FotogroepWaalreMembersProvider.photoClubWaalreIdPlus
         )
 
@@ -140,7 +140,7 @@ extension FotogroepWaalreMembersProvider {
         var birthDate = toDate(from: "1/1/9999") // dummy value that is overwritten later
 
         let photoClub: PhotoClub = PhotoClub.findCreateUpdate(context: backgroundContext,
-                                                              organizationType: .club,
+                                                              organizationTypeEum: .club,
                                                               photoClubIdPlus: photoClubIdPlus)
 
         htmlContent.enumerateLines { (line, _ stop) -> Void in
