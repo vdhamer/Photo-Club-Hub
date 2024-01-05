@@ -22,7 +22,8 @@ extension OrganizationType {
         for type in OrganizationTypeEnum.allCases { // type is simple enum
             let organizationType = OrganizationType.findCreateUpdate( // organizationType is CoreData NSManagedObject
                 context: viewContext,
-                name: type.unlocalizedSingular
+                name: type.unlocalizedSingular,
+                allowMainThread: true
             )
             OrganizationType.enum2objectID[type] = organizationType.objectID // access NSManagedObjects from bg threads
         }
@@ -48,8 +49,12 @@ extension OrganizationType {
     // Find OrganizationType object (or create a new object - used at start of app)
     // Update existing attributes or fill the new object
     static func findCreateUpdate(context: NSManagedObjectContext, // can be foreground of background context
-                                 name: String
+                                 name: String,
+                                 allowMainThread: Bool = false // TODO still needed?
                                 ) -> OrganizationType {
+        if allowMainThread == false && Thread.isMainThread == true {
+            ifDebugFatalError("OrganizationType.findCreateUpdate() expected on bground thread")
+        }
 
         let predicateFormat: String = "name_ = %@" // avoid localization
         let predicate = NSPredicate(format: predicateFormat, argumentArray: [name])

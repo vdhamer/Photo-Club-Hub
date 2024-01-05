@@ -62,7 +62,7 @@ extension PhotoClub {
                   """)
             if newValue.name != PhotoClub.hackOrganizationTypeEnum.rawValue {
                 print("""
-                      ORGANIZATIONTYPE: setter for \(self.shortName). \
+                      ORGANIZATIONTYPE: setter for \(self.fullName). \
                       Unexpected new value = \(newValue.name) \
                       (\(PhotoClub.hackOrganizationTypeEnum.rawValue) expected) \
                       on Thread = \(Thread.isMainThread ? "MAIN" : "Background")

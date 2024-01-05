@@ -14,7 +14,7 @@ struct PhotoClubView: View {
     @Environment(\.managedObjectContext) private var viewContext // may not be correct
     @Environment(\.layoutDirection) var layoutDirection // .leftToRight or .rightToLeft
 
-    @FetchRequest var fetchedPhotoClubs: FetchedResults<PhotoClub>
+    @FetchRequest var fetchedOrganizations: FetchedResults<PhotoClub>
     private let permitDeletionOfPhotoClubs = true // disables .delete() functionality for this screen
 
     @State private var cameraPositions: [PhotoClubId: MapCameraPosition] = [:] // location of camera per club
@@ -23,7 +23,7 @@ struct PhotoClubView: View {
 
     // regenerate Section using dynamic FetchRequest with dynamic predicate and dynamic sortDescriptor
     init(predicate: NSPredicate) {
-        _fetchedPhotoClubs = FetchRequest<PhotoClub>(sortDescriptors: // replaces previous fetchRequest
+        _fetchedOrganizations = FetchRequest<PhotoClub>(sortDescriptors: // replaces previous fetchRequest
                                                     [SortDescriptor(\.pinned, order: .reverse), // pinned clubs first
                                                      SortDescriptor(\.name_, order: .forward), // photoclubID=name&town
                                                      SortDescriptor(\.town_, order: .forward)],
@@ -32,7 +32,7 @@ struct PhotoClubView: View {
     }
 
     var body: some View {
-        ForEach(fetchedPhotoClubs, id: \.id) { filteredPhotoClub in
+        ForEach(fetchedOrganizations, id: \.id) { filteredPhotoClub in
             Section {
                 VStack(alignment: .leading) {
                     Text(verbatim: "\(filteredPhotoClub.fullName)")
@@ -93,16 +93,26 @@ struct PhotoClubView: View {
                         selection: $mapSelection) {
 
                         // show markers of all organizations on map
-                        ForEach(fetchedPhotoClubs, id: \.self) { photoClub in
-                            Marker(photoClub.fullName,
-                                   systemImage: systemName(organizationType: photoClub.organizationType,
+                        ForEach(fetchedOrganizations, id: \.self) { organization in
+                            Marker(organization.fullName,
+                                   systemImage: systemName(organizationType: organization.organizationType,
                                                            circleNeeded: false),
-                                   coordinate: photoClub.coordinates)
-                            .tint(selectMarkerTint(photoClub: photoClub, selectedClub: filteredPhotoClub))
+                                   coordinate: organization.coordinates)
+                            .tint(selectMarkerTint(photoClub: organization, selectedClub: filteredPhotoClub))
                         } // Marker loop
                         UserAnnotation() // show user's location on map
                     } // render Map
                         .frame(minHeight: 300, idealHeight: 500, maxHeight: .infinity)
+                    List { // TODO just for debugging
+                        ForEach(fetchedOrganizations, id: \.self) { organization in
+                            Text(verbatim: """
+                                           \(organization.fullName) | \
+                                           in \(organization.town) | \
+                                           of type \(organization.organizationType.name.capitalized) \
+                                           in db \(organization.organizationType_?.name.capitalized ?? "nil")
+                                           """)
+                        }
+                    } .frame(minHeight: 200, idealHeight: 400, maxHeight: .infinity)
                 } // PhotoClub loop
                 .task {
                     initializeCameraPosition(photoClub: filteredPhotoClub) // works better than .onAppear(perform:)?
@@ -247,14 +257,14 @@ struct PhotoClubView: View {
 
     private func deleteOrganizations(offsets: IndexSet) {
         guard permitDeletionOfPhotoClubs else { return } // to turn off the feature
-        if let photoClub = (offsets.map { fetchedPhotoClubs[$0] }.first) { // unwrap first PhotoClub to be deleted
+        if let photoClub = (offsets.map { fetchedOrganizations[$0] }.first) { // unwrap first PhotoClub to be deleted
             photoClub.deleteAllMembers(context: viewContext)
             guard photoClub.members.count == 0 else { // safety: will crash if member.photoClub == nil
                 print("Could not delete photo club \(photoClub.fullName) " +
                       "because it still has \(photoClub.members.count) members.")
                 return
             }
-            offsets.map { fetchedPhotoClubs[$0] }.forEach( viewContext.delete )
+            offsets.map { fetchedOrganizations[$0] }.forEach( viewContext.delete )
 
             do {
                 if viewContext.hasChanges {
