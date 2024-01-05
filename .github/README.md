@@ -703,7 +703,7 @@ Here is an example of the format of the OrganizationList. This minimal example c
             "wikipedia": "https://en.wikipedia.org/wiki/Fotografiska_New_York",
             "image": "https://commons.wikimedia.org/wiki/File:Fotografiska_New_York_(51710073919).jpg",
             "descriptionEN": "Fotografiska New York is a branch of the Swedish Fotografiska museum.",
-            "descriptionNL": "Fotografiskia New York is een dependance van het Fotografiska museum in Stockholm."
+            "descriptionNL": "Fotografiska New York is een dependance van het Fotografiska museum in Stockholm."
         }
     ]
 }
