@@ -94,13 +94,15 @@ class OrganizationList {
                                                          longitude: jsonCoordinates["longitude"].doubleValue)
                 let photoClubWebsite = URL(string: jsonOrganization["website"].stringValue)
                 let descriptionEN = jsonOrganization["descriptionEN"].stringValue
+                let descriptionNL = jsonOrganization["descriptionNL"].stringValue
                 _ = PhotoClub.findCreateUpdate(context: bgContext,
                                                organizationTypeEum: organizationTypeEnum,
                                                photoClubIdPlus: idPlus,
                                                photoClubWebsite: photoClubWebsite,
                                                fotobondNumber: nil, kvkNumber: nil,
                                                coordinates: coordinates,
-                                               descriptionEN: descriptionEN)
+                                               descriptionEN: descriptionEN,
+                                               descriptionNL: descriptionNL)
             }
             do {
  //               if bgContext.hasChanges { // TODO save only if there are souls to save

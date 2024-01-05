@@ -160,7 +160,8 @@ extension PhotoClub {
                                  photoClubWebsite: URL? = nil, fotobondNumber: Int16? = nil, kvkNumber: Int32? = nil,
                                  coordinates: CLLocationCoordinate2D? = nil,
                                  pinned: Bool = false,
-                                 descriptionEN: String? = nil
+                                 descriptionEN: String? = nil,
+                                 descriptionNL: String? = nil
                                 ) -> PhotoClub {
 
         let predicateFormat: String = "name_ = %@ AND town_ = %@" // avoid localization
@@ -189,7 +190,8 @@ extension PhotoClub {
                                        kvkNumber: kvkNumber),
                       coordinates: coordinates,
                       pinned: pinned,
-                      descriptionEN: descriptionEN) {
+                      descriptionEN: descriptionEN,
+                      descriptionNL: descriptionNL) {
                 print("\(organization.fullNameTown): Updated info for organization \(organization.fullName)")
             }
 			return organization
@@ -207,7 +209,8 @@ extension PhotoClub {
                                         kvkNumber: kvkNumber),
                        coordinates: coordinates,
                        pinned: pinned,
-                       descriptionEN: descriptionEN)
+                       descriptionEN: descriptionEN,
+                       descriptionNL: descriptionNL)
             print("\(organization.fullNameTown): Successfully created new \(organizationTypeEum.rawValue)")
 			return organization
 		}
@@ -224,7 +227,7 @@ extension PhotoClub {
                        optionalFields: (photoClubWebsite: URL?, fotobondNumber: Int16?, kvkNumber: Int32?),
                        coordinates: CLLocationCoordinate2D?,
                        pinned: Bool,
-                       descriptionEN: String?) -> Bool {
+                       descriptionEN: String?, descriptionNL: String?) -> Bool {
 
 		var modified: Bool = false
 
@@ -263,6 +266,10 @@ extension PhotoClub {
 
         if photoClub.descriptionEN != descriptionEN {
             photoClub.descriptionEN = descriptionEN
+            modified = true }
+
+        if photoClub.descriptionNL != descriptionNL {
+            photoClub.descriptionNL = descriptionNL
             modified = true }
 
         if modified {
