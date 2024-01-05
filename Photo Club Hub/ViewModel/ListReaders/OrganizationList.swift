@@ -9,14 +9,15 @@ import SwiftyJSON
 import CoreData // for NSManagedObjectContext
 import CoreLocation // for CLLocationCoordinate2D
 
-let dataSourcePath: String = """
-                            https://raw.githubusercontent.com/\
-                            vdhamer/Photo-Club-Hub/\
-                            main/\
-                            Photo%20Club%20Hub/ViewModel/Lists/
-                            """
-let dataSourceFile: String = "TestFirstLastList.json"
+private let dataSourcePath: String = """
+                                     https://raw.githubusercontent.com/\
+                                     vdhamer/Photo-Club-Hub/\
+                                     main/\
+                                     Photo%20Club%20Hub/ViewModel/Lists/
+                                     """
+private let dataSourceFile: String = "Test2Club2MuseumList.json"
 // let dataSourceFile: String = "OrganizationList.json"
+private let organizationTypesToLoad: [OrganizationTypeEnum] = [.unknown]
 
 /* Example of basic OrganizationList.json content
 {
@@ -59,13 +60,12 @@ class OrganizationList {
     init(bgContext: NSManagedObjectContext) {
 
         bgContext.perform { // move to background thread
-            self.readJSONOrganizationList(bgContext: bgContext,
-                                          for: [.club, .museum]) // load entire file TODO
+            self.readJSONOrganizationList(bgContext: bgContext, for: organizationTypesToLoad)
         }
     }
 
     private func readJSONOrganizationList(bgContext: NSManagedObjectContext,
-                                          for organizationTypes: [OrganizationTypeEnum]) {
+                                          for organizationTypesToLoad: [OrganizationTypeEnum]) {
 
         ifDebugPrint("\nStarting readJSONOrganizationList() in background")
 
@@ -77,7 +77,7 @@ class OrganizationList {
         let jsonRoot = JSON(parseJSON: data) // call to SwiftyJSON
 
         // extract the requested organizationType one-by-one from the json file
-        for organizationType in organizationTypes {
+        for organizationType in organizationTypesToLoad {
             PhotoClub.hackOrganizationTypeEnum = organizationType
 
             let jsonOrganizations: [JSON] = jsonRoot[organizationType.unlocalizedPlural].arrayValue
