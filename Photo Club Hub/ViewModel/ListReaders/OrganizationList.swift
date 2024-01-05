@@ -93,12 +93,14 @@ class OrganizationList {
                 let coordinates = CLLocationCoordinate2D(latitude: jsonCoordinates["latitude"].doubleValue,
                                                          longitude: jsonCoordinates["longitude"].doubleValue)
                 let photoClubWebsite = URL(string: jsonOrganization["website"].stringValue)
-                let organization = PhotoClub.findCreateUpdate(context: bgContext,
-                                                              organizationTypeEum: organizationTypeEnum,
-                                                              photoClubIdPlus: idPlus,
-                                                              photoClubWebsite: photoClubWebsite,
-                                                              fotobondNumber: nil, kvkNumber: nil,
-                                                              coordinates: coordinates)
+                let descriptionEN = jsonOrganization["descriptionEN"].stringValue
+                _ = PhotoClub.findCreateUpdate(context: bgContext,
+                                               organizationTypeEum: organizationTypeEnum,
+                                               photoClubIdPlus: idPlus,
+                                               photoClubWebsite: photoClubWebsite,
+                                               fotobondNumber: nil, kvkNumber: nil,
+                                               coordinates: coordinates,
+                                               descriptionEN: descriptionEN)
             }
             do {
  //               if bgContext.hasChanges { // TODO save only if there are souls to save

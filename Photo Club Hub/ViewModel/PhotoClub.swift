@@ -159,7 +159,8 @@ extension PhotoClub {
                                  photoClubIdPlus: PhotoClubIdPlus,
                                  photoClubWebsite: URL? = nil, fotobondNumber: Int16? = nil, kvkNumber: Int32? = nil,
                                  coordinates: CLLocationCoordinate2D? = nil,
-                                 pinned: Bool = false
+                                 pinned: Bool = false,
+                                 descriptionEN: String? = nil
                                 ) -> PhotoClub {
 
         let predicateFormat: String = "name_ = %@ AND town_ = %@" // avoid localization
@@ -187,7 +188,8 @@ extension PhotoClub {
                                        fotobondNumber: fotobondNumber,
                                        kvkNumber: kvkNumber),
                       coordinates: coordinates,
-                      pinned: pinned) {
+                      pinned: pinned,
+                      descriptionEN: descriptionEN) {
                 print("\(organization.fullNameTown): Updated info for organization \(organization.fullName)")
             }
 			return organization
@@ -204,7 +206,8 @@ extension PhotoClub {
                                         fotobondNumber: fotobondNumber,
                                         kvkNumber: kvkNumber),
                        coordinates: coordinates,
-                       pinned: pinned)
+                       pinned: pinned,
+                       descriptionEN: descriptionEN)
             print("\(organization.fullNameTown): Successfully created new \(organizationTypeEum.rawValue)")
 			return organization
 		}
@@ -220,7 +223,8 @@ extension PhotoClub {
                        // swiftlint:disable:next large_tuple
                        optionalFields: (photoClubWebsite: URL?, fotobondNumber: Int16?, kvkNumber: Int32?),
                        coordinates: CLLocationCoordinate2D?,
-                       pinned: Bool) -> Bool {
+                       pinned: Bool,
+                       descriptionEN: String?) -> Bool {
 
 		var modified: Bool = false
 
@@ -255,6 +259,10 @@ extension PhotoClub {
 
         if photoClub.pinned != pinned {
             photoClub.pinned = pinned
+            modified = true }
+
+        if photoClub.descriptionEN != descriptionEN {
+            photoClub.descriptionEN = descriptionEN
             modified = true }
 
         if modified {

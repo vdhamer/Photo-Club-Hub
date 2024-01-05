@@ -103,16 +103,9 @@ struct PhotoClubView: View {
                         UserAnnotation() // show user's location on map
                     } // render Map
                         .frame(minHeight: 300, idealHeight: 500, maxHeight: .infinity)
-                    List { // TODO just for debugging
-                        ForEach(fetchedOrganizations, id: \.self) { organization in
-                            Text(verbatim: """
-                                           \(organization.fullName) | \
-                                           in \(organization.town) | \
-                                           of type \(organization.organizationType.name.capitalized) \
-                                           in db \(organization.organizationType_?.name.capitalized ?? "nil")
-                                           """)
-                        }
-                    } .frame(minHeight: 200, idealHeight: 400, maxHeight: .infinity)
+                    if filteredPhotoClub.descriptionEN != nil {
+                        Text(filteredPhotoClub.descriptionEN!)
+                    }
                 } // PhotoClub loop
                 .task {
                     initializeCameraPosition(photoClub: filteredPhotoClub) // works better than .onAppear(perform:)?

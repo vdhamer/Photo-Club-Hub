@@ -7,8 +7,9 @@ Clubs and Musea screen
     * The country where a photoclub (or museum) is located is automatically computed (using an Apple service) from its GPS coordinates.
     * Town and Country names are localized. Examples: "Frankrijk" (NL) or "France" (EN).
     * Changed order of footnotes at bottom of screen. 3rd footnote is dimmed if feature has already been triggered.
-    * Musea are rendered on the map using a different type of marker pin (_not working correctly yet!_).
+    * Musea are rendered on the map using a different type of marker pin.
     * Size of list displayed at top of screen (e.g. "25 items")
+    * Single line description shown below each map.
 Portfolios screen
     * Name of towns are now localized if applicable. Example: "Den Haag" (NL) or "The Hague" (EN).
     * Limited the font size of the footers in case the device's text display size was increased (in Settings).

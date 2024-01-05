@@ -36,6 +36,8 @@
         </uniquenessConstraints>
     </entity>
     <entity name="PhotoClub" representedClassName="PhotoClub" syncable="YES" codeGenerationType="class">
+        <attribute name="descriptionEN" optional="YES" attributeType="String"/>
+        <attribute name="descriptionNL" optional="YES" attributeType="String"/>
         <attribute name="fotobondNumber" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="hasHardCodedMemberData" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="isScrollLocked" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES"/>
