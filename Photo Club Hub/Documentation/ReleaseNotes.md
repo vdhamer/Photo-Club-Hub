@@ -4,18 +4,18 @@ Clubs and Musea screen
     * Renamed screen from `Photo Clubs` to `Clubs` to save space (for future mode picker).
     * Each map displays 20 photography-focussed musea in various countries.
     * Additional photo clubs (and musea) can be loaded from a data file (OrganizationList.json at Github).
-    * The country where a photoclub (or museum) is located is automatically established using its GPS coordinates.
-    * Town and Country names are localized. Examples: Frankrijk (NL) vs France (EN).
+    * The country where a photoclub (or museum) is located is automatically computed (using an Apple service) from its GPS coordinates.
+    * Town and Country names are localized. Examples: "Frankrijk" (NL) or "France" (EN).
     * Changed order of footnotes at bottom of screen. 3rd footnote is dimmed if feature has already been triggered.
-    * Musea are rendered on the map using a different type of marker pin (_not working reliably yet!_).
-    * Displayed size of list at top of screen (e.g. 25 organizations) (_not working entirely propertly_)
+    * Musea are rendered on the map using a different type of marker pin (_not working correctly yet!_).
+    * Size of list displayed at top of screen (e.g. "25 items")
 Portfolios screen
-    * Name of towns are now localized if applicable. Example: Den Haag (NL) vs The Hague (EN).
+    * Name of towns are now localized if applicable. Example: "Den Haag" (NL) or "The Hague" (EN).
     * Limited the font size of the footers in case the device's text display size was increased (in Settings).
     * Removed Test Fotoclub (3 of them: Amsterdam, The Hague, Rotterdam). They are now treated as musea.
 Maintenance
     * Tested with with iOS 17.2.1, MacOS 14.2.1, GitCrypt 0.7.0.1
-    * Centralized code for loading and refreshing of data (file: PhotoClubHubApp). They now work the same.
+    * Centralized code for loading and of input data (file: `PhotoClubHubApp`).
     * Added 14 additional photography musea.
 
 This is build #4611, and was sent out to Apple Testflight users.
