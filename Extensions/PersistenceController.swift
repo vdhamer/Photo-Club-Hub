@@ -11,53 +11,6 @@ import CoreLocation // needed for coordinate translation
 struct PersistenceController {
 	static let shared = PersistenceController()
 
-	static var preview: PersistenceController = {
-		let result = PersistenceController(inMemory: true)
-		let viewContext = result.container.viewContext
-		for index in 1...10 {
-            let memberRolesAndStatus =  MemberRolesAndStatus( role: [.chairman: (index==1),
-                                                                     .treasurer: (index==2)],
-                                                              stat: [.deceased: ((index % 4) == 0),
-                                                                     .former: ((index % 4) == 1)]
-            )
-            let photoClub = PhotoClub.findCreateUpdate(context: viewContext, // on main thread
-                                                       organizationType: .club,
-                                                       photoClubIdPlus: PhotoClubIdPlus(fullName: "PhotoClub\(index)",
-                                                                                        town: "Town\(index)",
-                                                                                        nickname: "ClubNick\(index)"),
-                                                       photoClubWebsite: URL(string: "http://www.example.com/\(index)"),
-                                                       fotobondNumber: Int16(index*1111),
-                                                       kvkNumber: Int32(100+index),
-                                                       coordinates: CLLocationCoordinate2D( // spread around BeNeLux
-                                                            latitude: 51.39184 + Double.random(in: -2.0 ... 2.0),
-                                                            longitude: 5.46144 + Double.random(in: -2.0 ... 1.0)),
-                                                       pinned: (index % 4 == 0)
-                                                       )
-            let photographer = Photographer.findCreateUpdate(
-                context: viewContext, // on main thread
-                personName: PersonName(givenName: "Jan", infixName: "D'", familyName: "Eau\(index)"),
-                memberRolesAndStatus: memberRolesAndStatus,
-                phoneNumber: "06-12345678",
-                eMail: "Jan.D.Eau\(index)@example.com",
-                photographerWebsite: URL(string: "https://www.example.com/JanDEau\(index)"),
-                bornDT: Date() - Double.random(in: 365*24*3600 ... 75*365*24*3600),
-                photoClub: photoClub
-            )
-			let memberPortfolio = MemberPortfolio.findCreateUpdate(bgContext: viewContext,
-                                                 photoClub: photoClub, photographer: photographer,
-                                                 memberRolesAndStatus: memberRolesAndStatus
-            )
-		}
-
-		do {
-			try viewContext.save() // persist sample data in persistence controller
-		} catch {
-			let nsError = error as NSError
-			fatalError("Unresolved error \(nsError), \(nsError.userInfo)") // preview cannot occur in shipping code
-		}
-		return result
-	}()
-
 	let container: NSPersistentContainer
 
 	init(inMemory: Bool = false) {
@@ -96,4 +49,52 @@ struct PersistenceController {
             }
         }
     }
+
+    static var preview: PersistenceController = {
+        let result = PersistenceController(inMemory: true)
+        let viewContext = result.container.viewContext
+        for index in 1...10 {
+            let memberRolesAndStatus =  MemberRolesAndStatus( role: [.chairman: (index==1),
+                                                                     .treasurer: (index==2)],
+                                                              stat: [.deceased: ((index % 4) == 0),
+                                                                     .former: ((index % 4) == 1)]
+            )
+            let photoClub = PhotoClub.findCreateUpdate(context: viewContext, // on main thread
+                                                       organizationType: .club,
+                                                       photoClubIdPlus: PhotoClubIdPlus(fullName: "PhotoClub\(index)",
+                                                                                        town: "Town\(index)",
+                                                                                        nickname: "ClubNick\(index)"),
+                                                       photoClubWebsite: URL(string: "http://www.example.com/\(index)"),
+                                                       fotobondNumber: Int16(index*1111),
+                                                       kvkNumber: Int32(100+index),
+                                                       coordinates: CLLocationCoordinate2D( // spread around BeNeLux
+                                                            latitude: 51.39184 + Double.random(in: -2.0 ... 2.0),
+                                                            longitude: 5.46144 + Double.random(in: -2.0 ... 1.0)),
+                                                       pinned: (index % 4 == 0)
+                                                       )
+            let photographer = Photographer.findCreateUpdate(
+                context: viewContext, // on main thread
+                personName: PersonName(givenName: "Jan", infixName: "D'", familyName: "Eau\(index)"),
+                memberRolesAndStatus: memberRolesAndStatus,
+                phoneNumber: "06-12345678",
+                eMail: "Jan.D.Eau\(index)@example.com",
+                photographerWebsite: URL(string: "https://www.example.com/JanDEau\(index)"),
+                bornDT: Date() - Double.random(in: 365*24*3600 ... 75*365*24*3600),
+                photoClub: photoClub
+            )
+            let memberPortfolio = MemberPortfolio.findCreateUpdate(bgContext: viewContext,
+                                                 photoClub: photoClub, photographer: photographer,
+                                                 memberRolesAndStatus: memberRolesAndStatus
+            )
+        }
+
+        do {
+            try viewContext.save() // persist sample data in persistence controller
+        } catch {
+            let nsError = error as NSError
+            fatalError("Unresolved error \(nsError), \(nsError.userInfo)") // preview cannot occur in shipping code
+        }
+        return result
+    }()
+
 }
