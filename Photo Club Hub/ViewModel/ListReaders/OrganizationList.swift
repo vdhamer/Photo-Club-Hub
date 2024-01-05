@@ -104,13 +104,13 @@ class OrganizationList {
  //               if bgContext.hasChanges { // TODO save only if there are souls to save
                     try bgContext.save() // persist contents of OrganizationList.json
  //               }
-                ifDebugPrint("Completed inserting/updated JSON ClubList in background")
+                ifDebugPrint("Completed saving of JSON ClubList items in background")
             } catch {
                 ifDebugFatalError("Failed to save changes to Core Data",
                                   file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
                 // in release mode, the failed database update is only logged. App doesn't stop.
+                ifDebugPrint("Failed to save JSON ClubList items in background")
             }
-            ifDebugPrint("Completed inserting/updated JSON ClubList in background")
         }
     }
 
