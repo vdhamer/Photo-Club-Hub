@@ -41,7 +41,16 @@
             "website": "https://www.foam.org",
             "wikipedia": "https://en.wikipedia.org/wiki/Foam_Fotografiemuseum_Amsterdam",
             "image": "https://upload.wikimedia.org/wikipedia/commons/4/47/Keizersgracht_609%2C_Amsterdam.JPG",
-            "descriptionEN": "The two adjacent Amsterdam canal mansions house a museum orignally named after its founder (Carel Joseph) Fodor."
+            "description": [
+                {
+                    "language": "EN",
+                    "value": "The two adjacent Amsterdam canal mansions house a museum orignally named after its founder (Carel Joseph) Fodor."
+                },
+                {
+                    "language": "NL",
+                    "value": "Het museum, gehuisvest in twee aangrenzende panden aan de Keizersgracht, was oorspronkelijk genoemd naar de oprichter Carel Joseph Fodor."
+                }
+            ]
         },
         {
             "idPlus": {
@@ -54,7 +63,16 @@
                 "longitude": 3.91938
             },
             "website": "https://www.cameramuseum.nl",
-            "descriptionEN": "This small museum is mainly about classical cameras, but also covers regional photographers."
+            "description": [
+                {
+                    "language": "EN",
+                    "value": "This small museum is mainly about classic cameras. It also covers regional photographers."
+                },
+                {
+                    "language": "NL",
+                    "value": "Dit museumpje heet een collectie klassieke cameras, maar bevat ook werk van Zeeuwse fotografen."
+                }
+            ]
         }
     ]
 }
