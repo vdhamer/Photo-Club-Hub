@@ -219,7 +219,7 @@ extension PhotoClub {
     // MARK: - update
 
 	// Update non-identifying attributes/properties within existing instance of class PhotoClub
-    // swiftlint:disable:next function_parameter_count
+    // swiftlint:disable:next function_parameter_count cyclomatic_complexity
     static func update(bgContext: NSManagedObjectContext,
                        organizationTypeEnum: OrganizationTypeEnum,
                        photoClub: PhotoClub, shortName: String,
