@@ -184,7 +184,7 @@
             },
             "website": "https://www.museocamera.org/",
             "wikipedia": "https://en.wikipedia.org/wiki/Museo_Camera",
-            "descriptionEN": "Original focus of this museum was a collection of vintage cameras."
+            "descriptionEN": "The focus of this museum was originally a collection of vintage cameras."
         },
         {
             "idPlus": {
@@ -199,7 +199,7 @@
             "website": "http://www.museumhilversum.nl",
             "wikipedia": "https://nl.wikipedia.org/wiki/Museum_Hilversum",
             "image": "https://upload.wikimedia.org/wikipedia/commons/7/71/Museum_Hilversum.jpg",
-            "descriptionEN": "This museum hosten a 2023 show, Het Perfecte Plaatje, about photography on Dutch television."
+            "descriptionEN": "This museum hosted a 2023 Dutch reality show, 'Het Perfecte Plaatje', about aspiring photographers."
         },
         {
             "idPlus": {
@@ -212,7 +212,7 @@
                 "longitude": 112.38392
             },
             "website": "http://www.lmop.org.cn",
-            "descriptionEN": "The museum's URL and GPS coordinates don't currently work correctly, but the museum is in Lianzhou, China."
+            "descriptionEN": "The museum's URL and even GPS coordinates don't currently work, but the museum is in Lianzhou, China."
         },
         {
             "idPlus": {
@@ -227,7 +227,7 @@
             "website": "http://thephotographersgallery.org.uk/",
             "wikipedia": "https://en.wikipedia.org/wiki/The_Photographers%27_Gallery",
             "image": "https://upload.wikimedia.org/wikipedia/commons/c/cd/The_Photographers%27_Gallery%2C_London.jpg",
-            "descriptionEN": "The gallery has three exhibition spaces and a commercial gallery where prints are sold."
+            "descriptionEN": "The gallery has three exhibition spaces and a commercial gallery where photo prints are sold."
         },
         {
             "idPlus": {
@@ -257,7 +257,7 @@
             "website": "http://www.museumaanhetvrijthof.nl",
             "wikipedia": "https://nl.wikipedia.org/wiki/Fotomuseum_aan_het_Vrijthof",
             "image": "https://upload.wikimedia.org/wikipedia/commons/8/87/Museum_aan_het_Vrijthof_-_Exterieur_2012.jpg",
-            "descriptionEN": "The museum is privately owned and funded by admission fees and donations."
+            "descriptionEN": "The museum is privately owned and is entirely funded by admission fees and donations."
         },
         {
             "idPlus": {
@@ -271,7 +271,7 @@
             },
             "website": "https://www.comunidad.madrid/centros/sala-canal-isabel-ii",
             "image": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Dep%C3%B3sito_de_agua_de_Santa_Engracia.JPG",
-            "descriptionEN": "The museum is located in a former water tower, and named after the next door canal."
+            "descriptionEN": "The museum is located in a former water tower, and named after the nearby canal."
         },
         {
             "idPlus": {
@@ -286,7 +286,7 @@
             "website": "http://ccp.org.au/",
             "wikipedia": "https://en.wikipedia.org/wiki/Centre_for_Contemporary_Photography",
             "image": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Centre_for_Contemporary_Photography_Fitzroy.jpg",
-            "descriptionEN": "The locality Fitzroy is located in Melbourne, Australia."
+            "descriptionEN": "The town Fitzroy is part of Melbourne, Australia."
         },
         {
             "idPlus": {
@@ -301,7 +301,7 @@
             "website": "https://www.icp.org",
             "wikipedia": "https://en.wikipedia.org/wiki/International_Center_of_Photography",
             "image": "https://upload.wikimedia.org/wikipedia/commons/9/99/International_Center_of_Photography_at_79_Essex_Street.jpg",
-            "descriptionEN": "The museum and school was founded by Cornell Capa, the younger brother of Robert Capa."
+            "descriptionEN": "The museum and school were founded by Cornell Capa, the younger brother of Magnum photographer Robert Capa."
         },
         {
             "idPlus": {
@@ -510,7 +510,7 @@
             },
             "website": "https://www.fotodok.org",
             "wikipedia": "https://nl.wikipedia.org/wiki/Rob_Hornstra#FOTODOK",
-            "descriptionEN": "The museum focusses on documentary photography and was founded by photographer Rob Hornstra."
+            "descriptionEN": "The museum focusses on documentary photography and was founded by a Dutch photographer Rob Hornstra."
         },
         {
             "idPlus": {
@@ -524,7 +524,7 @@
             },
             "website": "https://www.nationalgeographic.org/society/visit-base-camp/",
             "wikipedia": "https://en.wikipedia.org/wiki/National_Geographic_Society#National_Geographic_Museum",
-            "descriptionEN": "The National Geographic Museum is (early 2024) temporarily closed."
+            "descriptionEN": "The National Geographic Museum is currently (early 2024) temporarily closed for renovation."
         },
         {
             "idPlus": {
@@ -537,7 +537,7 @@
                 "longitude": 3.91938
             },
             "website": "https://www.cameramuseum.nl",
-            "descriptionEN": "This small museum is mainly about classical cameras, but also covers regional photographers."
+            "descriptionEN": "This small museum is mainly about classic cameras. It also covers regional photographers."
         }
     ]
 }
