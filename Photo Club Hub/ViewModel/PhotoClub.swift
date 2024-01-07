@@ -153,6 +153,27 @@ extension PhotoClub {
         }
     }
 
+    // Priority system to choose a language for the item's description.
+    // The choice depends on the current language settings of the device, and on available translations.
+    var localizedDescription: String {
+        let currentLangID = Locale.current.language.languageCode?.identifier // 2 (occasionally 3) letter ISO 639 code
+
+        // first support request for language X if language X is simply available. Give them what they want.
+        if currentLangID?.lowercased() == "en" && descriptionEN != nil { return descriptionEN! }
+        if currentLangID?.lowercased() == "nl" && descriptionNL != nil { return descriptionNL! }
+
+        // now we are configured to another language (e.g. "fr"), for which there is no translation.
+        if descriptionEN != nil { return descriptionEN! } // then use English if available
+        if descriptionNL != nil { return descriptionNL! } // as a last resort, use Dutch (nl)
+
+        return String(localized: "No description available.",
+                      comment: "Shown below map if there is no usable description in the OrganzationList.json file.")
+        // Actually there could be a description (from the json file) in a language other than "en" or "nl",
+        // but the app doesn't store any other language yet. This may change when fixing GitHub issue #272.
+    }
+
+    // MARK: - findCreateUpdate
+
 	// Find existing organization or create a new one
 	// Update new or existing organization's attributes
     static func findCreateUpdate(context: NSManagedObjectContext, // can be foreground of background context
@@ -214,18 +235,16 @@ extension PhotoClub {
 		}
 	}
 
-    // MARK: - update
-
 	// Update non-identifying attributes/properties within existing instance of class PhotoClub
     // swiftlint:disable:next function_parameter_count cyclomatic_complexity
-    static func update(bgContext: NSManagedObjectContext,
-                       organizationTypeEnum: OrganizationTypeEnum,
-                       photoClub: PhotoClub, shortName: String,
-                       // swiftlint:disable:next large_tuple
-                       optionalFields: (photoClubWebsite: URL?, fotobondNumber: Int16?, kvkNumber: Int32?),
-                       coordinates: CLLocationCoordinate2D?,
-                       pinned: Bool,
-                       localizedDescriptions: [JSON] ) -> Bool {
+    private static func update(bgContext: NSManagedObjectContext,
+                               organizationTypeEnum: OrganizationTypeEnum,
+                               photoClub: PhotoClub, shortName: String,
+                               // swiftlint:disable:next large_tuple
+                               optionalFields: (photoClubWebsite: URL?, fotobondNumber: Int16?, kvkNumber: Int32?),
+                               coordinates: CLLocationCoordinate2D?,
+                               pinned: Bool,
+                               localizedDescriptions: [JSON] ) -> Bool {
 
 		var modified: Bool = false
 

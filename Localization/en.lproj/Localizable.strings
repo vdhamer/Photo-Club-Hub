@@ -80,6 +80,9 @@ Default status of member within a club. Used in concatenations. */
 /* Statistics at end of section of FilteredMemberPortfoliosView */
 "members" = "members";
 
+/* Shown below map if there is no usable description in the OrganzationList.json file. */
+"No description available." = "No description available.";
+
 /* Hint to the user if the database returns zero PhotoClubs. */
 "No photo clubs seem to be currently loaded.\nTry dragging down the Photo Clubs screen to reload the default clubs." = "No photo clubs seem to be currently loaded.\nTry dragging down the Photo Clubs screen to reload the default clubs.";
 

@@ -15,8 +15,8 @@ private let dataSourcePath: String = """
                                      main/\
                                      Photo%20Club%20Hub/ViewModel/Lists/
                                      """
-// private let dataSourceFile: String = "Test2Club2MuseumList.json"
-private let dataSourceFile: String = "OrganizationList.json"
+ private let dataSourceFile: String = "Test2Club2MuseumList.json"
+// private let dataSourceFile: String = "OrganizationList.json"
 private let organizationTypesToLoad: [OrganizationTypeEnum] = [.club, .museum]
 
 /* Example of basic OrganizationList.json content

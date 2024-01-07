@@ -103,11 +103,12 @@ struct PhotoClubView: View {
                         UserAnnotation() // show user's location on map
                     } // Map ends here
                         .frame(minHeight: 300, idealHeight: 500, maxHeight: .infinity)
-                    if filteredPhotoClub.descriptionEN != nil { // TODO move to function
-                        Text(filteredPhotoClub.descriptionEN!)
-                    } else if filteredPhotoClub.descriptionNL != nil {
-                        Text(filteredPhotoClub.descriptionNL!)
-                    }
+                    Text(filteredPhotoClub.localizedDescription)
+//                    if filteredPhotoClub.descriptionEN != nil { // TODO move to function
+//                        Text(filteredPhotoClub.descriptionEN!)
+//                    } else if filteredPhotoClub.descriptionNL != nil {
+//                        Text(filteredPhotoClub.descriptionNL!)
+//                    }
                 } // PhotoClub loop
                 .task {
                     initializeCameraPosition(photoClub: filteredPhotoClub) // works better than .onAppear(perform:)?
@@ -327,18 +328,6 @@ extension PhotoClubView { // reverse GeoCoding
         return (town, country)
     }
 
-}
-
-extension PhotoClubView {
-
-    static var userLocation: CLLocationCoordinate2D {
-        CLLocationCoordinate2D(latitude: 51.39184, longitude: 5.46144) // Waalre
-    }
-
-    static var userRegion: MKCoordinateRegion {
-        MKCoordinateRegion(center: PhotoClubView.userLocation,
-                           latitudinalMeters: 10000, longitudinalMeters: 10000)
-    }
 }
 
 extension PhotoClubView { // tests for equality

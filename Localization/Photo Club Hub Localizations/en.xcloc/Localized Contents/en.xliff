@@ -107,6 +107,11 @@
         <target>Member categories</target>
         <note>In Preferences, above toggles like "Show former members"</note>
       </trans-unit>
+      <trans-unit id="No description available." xml:space="preserve">
+        <source>No description available.</source>
+        <target>No description available.</target>
+        <note>Shown below map if there is no usable description in the OrganzationList.json file.</note>
+      </trans-unit>
       <trans-unit id="No photo clubs seem to be currently loaded.&#10;Try dragging down the Photo Clubs screen to reload the default clubs." xml:space="preserve">
         <source>No photo clubs seem to be currently loaded.
 Try dragging down the Photo Clubs screen to reload the default clubs.</source>
