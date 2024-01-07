@@ -15,9 +15,9 @@ private let dataSourcePath: String = """
                                      main/\
                                      Photo%20Club%20Hub/ViewModel/Lists/
                                      """
-private let dataSourceFile: String = "Test2Club2MuseumList.json"
-// private let dataSourceFile: String = "OrganizationList.json"
-private let organizationTypesToLoad: [OrganizationTypeEnum] = [.museum] // TODO
+// private let dataSourceFile: String = "Test2Club2MuseumList.json"
+private let dataSourceFile: String = "OrganizationList.json"
+private let organizationTypesToLoad: [OrganizationTypeEnum] = [.club, .museum]
 
 /* Example of basic OrganizationList.json content
 {
@@ -90,6 +90,7 @@ class OrganizationList {
             ifDebugPrint("Found \(jsonOrganizationsOfOneType.count) \(organizationTypeEnum.unlocalizedPlural) " +
                          "in \(dataSourceFile).")
 
+            // extract the requested items (clubs, musea) of that organizationType one-by-one from the json file
             for jsonOrganization in jsonOrganizationsOfOneType {
                 let idPlus = PhotoClubIdPlus(fullName: jsonOrganization["idPlus"]["fullName"].stringValue,
                                              town: jsonOrganization["idPlus"]["town"].stringValue,
@@ -99,16 +100,14 @@ class OrganizationList {
                 let coordinates = CLLocationCoordinate2D(latitude: jsonCoordinates["latitude"].doubleValue,
                                                          longitude: jsonCoordinates["longitude"].doubleValue)
                 let photoClubWebsite = URL(string: jsonOrganization["website"].stringValue)
-                let descriptionEN = jsonOrganization["descriptionEN"].stringValue
-                let descriptionNL = jsonOrganization["descriptionNL"].stringValue
+                let localizedDescriptions = jsonOrganization["description"].arrayValue
                 _ = PhotoClub.findCreateUpdate(context: bgContext,
                                                organizationTypeEum: organizationTypeEnum,
                                                photoClubIdPlus: idPlus,
                                                photoClubWebsite: photoClubWebsite,
                                                fotobondNumber: nil, kvkNumber: nil,
                                                coordinates: coordinates,
-                                               descriptionEN: descriptionEN,
-                                               descriptionNL: descriptionNL)
+                                               localizedDescriptions: localizedDescriptions)
             }
             do {
  //               if bgContext.hasChanges { // TODO save only if there are souls to save
