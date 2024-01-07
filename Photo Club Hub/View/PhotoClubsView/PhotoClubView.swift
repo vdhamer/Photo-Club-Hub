@@ -101,10 +101,12 @@ struct PhotoClubView: View {
                             .tint(selectMarkerTint(photoClub: organization, selectedClub: filteredPhotoClub))
                         } // Marker loop
                         UserAnnotation() // show user's location on map
-                    } // render Map
+                    } // Map ends here
                         .frame(minHeight: 300, idealHeight: 500, maxHeight: .infinity)
-                    if filteredPhotoClub.descriptionEN != nil {
+                    if filteredPhotoClub.descriptionEN != nil { // TODO move to function
                         Text(filteredPhotoClub.descriptionEN!)
+                    } else if filteredPhotoClub.descriptionNL != nil {
+                        Text(filteredPhotoClub.descriptionNL!)
                     }
                 } // PhotoClub loop
                 .task {

@@ -14,8 +14,12 @@
             "memberList": "https://www.example.com/fgAnders.memberList.json",
             "description": [
                 {
+                    "language": "EN",
+                    "value": "Fotogroep Anders is so small, that the members can meet in their own homes."
+                }
+                {
                     "language": "NL",
-                    "value": "FG Anders is zo klein dat bijeenkomsten bij leden thuis gehouden worden. Exposities zijn in de Kruisruimte in Einhoven."
+                    "value": "FG Anders is klein genoeg dat de bijeenkomsten bij leden thuis gehouden worden. Exposities zijn in de Kruisruimte, Einhoven."
                 }
             ]
         },
@@ -34,7 +38,7 @@
             "description": [
                 {
                     "language": "NL",
-                    "value": "Opgelet: Fotogroep de Gender heeft als domeinnaam fcdegender.nl (van Fotoclub)."
+                    "value": "Opgelet: Fotogroep de Gender gebruikt nog een oude domeinnaam fcdegender.nl (fc = Fotoclub)."
                 }
             ]
         },

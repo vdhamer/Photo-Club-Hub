@@ -8,6 +8,7 @@
 import CoreData // needed for NSSet
 import CoreLocation // needed for coordinate translation
 import SwiftUI // for UserInterfaceSizeClass
+import SwiftyJSON // for JSON type
 
 extension PhotoClub: Comparable {
 
@@ -160,8 +161,7 @@ extension PhotoClub {
                                  photoClubWebsite: URL? = nil, fotobondNumber: Int16? = nil, kvkNumber: Int32? = nil,
                                  coordinates: CLLocationCoordinate2D? = nil,
                                  pinned: Bool = false,
-                                 descriptionEN: String? = nil,
-                                 descriptionNL: String? = nil
+                                 localizedDescriptions: [JSON] = []
                                 ) -> PhotoClub {
 
         let predicateFormat: String = "name_ = %@ AND town_ = %@" // avoid localization
@@ -190,15 +190,14 @@ extension PhotoClub {
                                        kvkNumber: kvkNumber),
                       coordinates: coordinates,
                       pinned: pinned,
-                      descriptionEN: descriptionEN,
-                      descriptionNL: descriptionNL) {
+                      localizedDescriptions: localizedDescriptions) {
                 print("\(organization.fullNameTown): Updated info for organization \(organization.fullName)")
             }
 			return organization
-		} else {
+		} else { // have to create PhotoClub object because it doesn't exist yet
             // cannot use PhotoClub() initializer because we must use bgContext
             let entity = NSEntityDescription.entity(forEntityName: "PhotoClub", in: context)!
-            let organization = PhotoClub(entity: entity, insertInto: context) // create new organization
+            let organization = PhotoClub(entity: entity, insertInto: context) // create new Club or Museum
             organization.fullName = photoClubIdPlus.fullName // first part of ID
             organization.town = photoClubIdPlus.town // second part of ID
             print("\(organization.fullNameTown): Will try to create this new organization")
@@ -209,8 +208,7 @@ extension PhotoClub {
                                         kvkNumber: kvkNumber),
                        coordinates: coordinates,
                        pinned: pinned,
-                       descriptionEN: descriptionEN,
-                       descriptionNL: descriptionNL)
+                       localizedDescriptions: localizedDescriptions)
             print("\(organization.fullNameTown): Successfully created new \(organizationTypeEum.rawValue)")
 			return organization
 		}
@@ -227,7 +225,7 @@ extension PhotoClub {
                        optionalFields: (photoClubWebsite: URL?, fotobondNumber: Int16?, kvkNumber: Int32?),
                        coordinates: CLLocationCoordinate2D?,
                        pinned: Bool,
-                       descriptionEN: String?, descriptionNL: String?) -> Bool {
+                       localizedDescriptions: [JSON] ) -> Bool {
 
 		var modified: Bool = false
 
@@ -264,13 +262,21 @@ extension PhotoClub {
             photoClub.pinned = pinned
             modified = true }
 
-        if photoClub.descriptionEN != descriptionEN {
-            photoClub.descriptionEN = descriptionEN
-            modified = true }
-
-        if photoClub.descriptionNL != descriptionNL {
-            photoClub.descriptionNL = descriptionNL
-            modified = true }
+        for localizedDescription in localizedDescriptions {
+            if localizedDescription["language"].stringValue == "EN" {
+                let descriptionEN = localizedDescription["value"].stringValue
+                if photoClub.descriptionEN != descriptionEN {
+                    photoClub.descriptionEN = descriptionEN
+                    modified = true
+                }
+            } else if localizedDescription["language"].stringValue == "NL" {
+                let descriptionNL = localizedDescription["value"].stringValue
+                if photoClub.descriptionNL != descriptionNL {
+                    photoClub.descriptionNL = descriptionNL
+                    modified = true
+                }
+            }
+        }
 
         if modified {
 			do {
