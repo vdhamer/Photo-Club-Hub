@@ -99,7 +99,7 @@
 This iOS app showcases photographs made by members of photography clubs.
 It thus provides a permanent online exposition or gallery with selected work of these photographers.
 
-Version 1 of the app only supported a _single_ photo club in Waalre, a smallish town called in the Netherlands.
+Version 1 of the app only supported a _single_ photo club in Waalre, a smallish town in the Netherlands.
 Version 2 enables support for _multiple_ photo clubs. This allows viewers to see images from multiple clubs within a single app.
 It also provides a degree of standardization, thus sparing the user from having to find each club's website, 
 discovering how to navigate within each unique site and how to browse the images. 
