@@ -35,7 +35,7 @@ struct PhotoClubHubApp: App {
                     PhotoClubHubApp.loadClubsAndMembers()
 
                     let foregroundContext = PersistenceController.shared.container.viewContext // UI context = main
-                    try? foregroundContext.save() // moves data to persistent store  TODO needed?
+//                    try? foregroundContext.save() // moves data to persistent store  TODO needed?
                 }
         }
         .onChange(of: scenePhase) { // pre-iOS 17 there was 1 param. Since iOS 17 it is 0 or 2.

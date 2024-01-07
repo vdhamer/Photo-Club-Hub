@@ -104,11 +104,7 @@ struct PhotoClubView: View {
                     } // Map ends here
                         .frame(minHeight: 300, idealHeight: 500, maxHeight: .infinity)
                     Text(filteredPhotoClub.localizedDescription)
-//                    if filteredPhotoClub.descriptionEN != nil { // TODO move to function
-//                        Text(filteredPhotoClub.descriptionEN!)
-//                    } else if filteredPhotoClub.descriptionNL != nil {
-//                        Text(filteredPhotoClub.descriptionNL!)
-//                    }
+                        .padding(.top, 5)
                 } // PhotoClub loop
                 .task {
                     initializeCameraPosition(photoClub: filteredPhotoClub) // works better than .onAppear(perform:)?

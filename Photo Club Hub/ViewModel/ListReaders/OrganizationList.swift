@@ -110,9 +110,9 @@ class OrganizationList {
                                                localizedDescriptions: localizedDescriptions)
             }
             do {
- //               if bgContext.hasChanges { // TODO save only if there are souls to save
+                if bgContext.hasChanges { // optimization recommended by Apple
                     try bgContext.save() // persist contents of OrganizationList.json
- //               }
+                }
                 ifDebugPrint("Completed readJSONOrganizationList() in background")
             } catch {
                 ifDebugFatalError("Failed to save changes to Core Data",

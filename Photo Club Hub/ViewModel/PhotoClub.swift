@@ -254,7 +254,7 @@ extension PhotoClub {
         let organizationType = OrganizationType.findCreateUpdate(context: bgContext,
                                                                  name: organizationTypeEnum.rawValue)
 
-        if photoClub.organizationType_ != organizationType { // TODO compare strings instead of objects?
+        if photoClub.organizationType_ != organizationType {
             photoClub.organizationType = organizationType
             modified = true }
 
