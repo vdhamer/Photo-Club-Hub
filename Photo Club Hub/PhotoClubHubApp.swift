@@ -50,32 +50,32 @@ extension PhotoClubHubApp {
     static func loadClubsAndMembers() {
 
         // load test member(s) of Fotogroep Bellus Imago
-//        let bellusBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-//        bellusBackgroundContext.name = "Bellus Imago refresh"
-//        bellusBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-//        bellusBackgroundContext.automaticallyMergesChangesFromParent = true
-//        _ = BellusImagoMembersProvider(bgContext: bellusBackgroundContext)
-//
-//        // load test member(s) of Fotogroep De Gender
-//        let genderBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-//        genderBackgroundContext.name = "De Gender refresh"
-//        genderBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-//        genderBackgroundContext.automaticallyMergesChangesFromParent = true
-//        _ = FotogroepDeGenderMembersProvider(bgContext: genderBackgroundContext)
-//
-//        // load all current members of Fotogroep Anders
-//        let andersBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-//        andersBackgroundContext.name = "Anders refresh"
-//        andersBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-//        andersBackgroundContext.automaticallyMergesChangesFromParent = true
-//        _ = AndersMembersProvider(bgContext: andersBackgroundContext)
-//
-//        // load all current/former members of Fotogroep Waalre
-//        let waalreBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-//        waalreBackgroundContext.name = "Fotogroep Waalre"
-//        waalreBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-//        waalreBackgroundContext.automaticallyMergesChangesFromParent = true
-//        _ = FotogroepWaalreMembersProvider(bgContext: waalreBackgroundContext)
+        let bellusBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+        bellusBackgroundContext.name = "Bellus Imago refresh"
+        bellusBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+        bellusBackgroundContext.automaticallyMergesChangesFromParent = true
+        _ = BellusImagoMembersProvider(bgContext: bellusBackgroundContext)
+
+        // load test member(s) of Fotogroep De Gender
+        let genderBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+        genderBackgroundContext.name = "De Gender refresh"
+        genderBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+        genderBackgroundContext.automaticallyMergesChangesFromParent = true
+        _ = FotogroepDeGenderMembersProvider(bgContext: genderBackgroundContext)
+
+        // load all current members of Fotogroep Anders
+        let andersBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+        andersBackgroundContext.name = "Anders refresh"
+        andersBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+        andersBackgroundContext.automaticallyMergesChangesFromParent = true
+        _ = AndersMembersProvider(bgContext: andersBackgroundContext)
+
+        // load all current/former members of Fotogroep Waalre
+        let waalreBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+        waalreBackgroundContext.name = "Fotogroep Waalre"
+        waalreBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+        waalreBackgroundContext.automaticallyMergesChangesFromParent = true
+        _ = FotogroepWaalreMembersProvider(bgContext: waalreBackgroundContext)
 
         // load list of photo clubs from OrganizationList.json file
         let olBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
