@@ -100,15 +100,16 @@ This iOS app showcases photographs made by members of photography clubs.
 It thus provides a permanent online exposition or gallery with selected work of these photographers.
 
 Version 1 of the app only supported a _single_ photo club in Waalre, a smallish town in the Netherlands.
-Version 2 enables support for _multiple_ photo clubs. This allows viewers to see images from multiple clubs within a single app.
-It also provides a degree of standardization, thus sparing the user from having to find each club's website, 
-discovering how to navigate within each unique site and how to browse the images. 
+Version 2 added support for _multiple_ photo clubs. This allows viewers to see images from multiple clubs within a single app.
+It also provides a degree of uniformity, thus sparing the user from having to find each club's website, 
+discovering how to navigate within each site and how to browse through the individual images. 
 Starting in version 2 the app's name was changed from _Photo Club Waalre_ to _Photo Club Hub_. 
     
-To achieve this, the app fetches software-readable lists of photo clubs, their members and their curated images from online servers. 
-This ensures that photo clubs, club members and member images can be added or removed without waiting for a new software release.
+To achieve this, the app retrieves software-readable lists of photo clubs, their
+lists of members and their curated images from one or more servers. 
+This ensures that photo clubs, club members and member images can be added or chanaged without requiring a new release of the app.
 
-See the [Architecture](#the-app-architecture) section for how this information is distributed and managed.
+See the [Architecture](#the-app-architecture) section for how this information is structured and distributed.
 Help in the form of coding, testing and suggestions is highly appreciated. See the [section](#contributing) on contributing below.
 
 </details>
@@ -121,8 +122,8 @@ Help in the form of coding, testing and suggestions is highly appreciated. See t
 
 > The app showcases curated images made by members of photo clubs.
 
-Since release 2.3.0, the app organizes images in a 3-level hierarchy or tree structure. 
-A schematic representation of the main ("Portfolios") screen:
+Since release 2.3.0, the app structures the information in a 3-level hierarchy.
+Here is a schematic representation of the ("Portfolios") view that essentially puts photo clubs first:
 
 * photo clubA (hosted on siteA)
   * portfolio1 of photographer1
@@ -138,8 +139,8 @@ A schematic representation of the main ("Portfolios") screen:
 
 <a/></p>
 
-An alternative navigation path is provided in the "Who's Who" screen.
-This allows the user to find a photographer directly:
+An alternative navigation path is provided by the "Who's Who" view.
+This view puts the photographer first, thus allowing you to find a person without knowing the name of their club:
 
 * photographer1
   * photo club A
@@ -156,8 +157,7 @@ This allows the user to find a photographer directly:
 
 <a/></p>
 
-Both views of the data thus emphasise images in the context of membership of clubs.
-For comparison, a photographer's personal website stresses the photographer's images, but without associations to clubs:
+For comparison, traditional personal websites stress the photographer's images, without any reference to clubs:
     
 * website for photographer1 (hosted on site1)
   * photo galleryA (e.g. portraits)
