@@ -178,10 +178,11 @@ For comparison, traditional personal websites stress the photographer's images, 
 </summary>
 
 If a photographer joined *multiple* photo clubs, the app can show *multiple* portfolios (with independent
-content) for that photographer - one per photo club. This happens when the photographer is simultaneously 
-a member of _two_ clubs. But it also happens if a photographer left one club and joined another club.
-Other variants are also thinkable.
-In all cases, the `portfolio` concept groups the images both by photographer and by photo club.</p>
+content) for that photographer - one per photo club. This could mean that the photographer is currently 
+a member of _two_ different clubs. But it could also mean that a photographer left one club and joined another club.
+Or variations of these scenarios.
+
+> In all cases, the `portfolio` concept groups the images both by photographer and by photo club. </p>
 
 The app is thus not intended as a personal website replacement, but it can have links to a photographer's personal website.
 Furthermore, nothing prevents you from supporting an online group of photography friends - assuming
