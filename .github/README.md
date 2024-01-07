@@ -685,7 +685,10 @@ Here is an example of the format of the OrganizationList. This minimal example c
                 "longitude": 5.45010
             }
             "website": "https://www.fcdegender.nl",
-            "memberList": "https://www.example.com/deGenderMemberList.json"
+            "memberList": "https://www.example.com/deGenderMemberList.json",
+            "description": [
+                { "language": "NL", "value": "Opgelet: Fotogroep de Gender gebruikt als domeinnaam nog altijd fcdegender.nl (van Fotoclub)." }
+            ]
         }
     ],
     "museums": [
