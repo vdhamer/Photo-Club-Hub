@@ -15,9 +15,9 @@ private let dataSourcePath: String = """
                                      main/\
                                      Photo%20Club%20Hub/ViewModel/Lists/
                                      """
-// private let dataSourceFile: String = "Test2Club2MuseumList.json"
-private let dataSourceFile: String = "OrganizationList.json"
-private let organizationTypesToLoad: [OrganizationTypeEnum] = [.club, .museum]
+private let dataSourceFile: String = "Test2Club2MuseumList.json"
+// private let dataSourceFile: String = "OrganizationList.json"
+private let organizationTypesToLoad: [OrganizationTypeEnum] = [.museum] // TODO
 
 /* Example of basic OrganizationList.json content
 {
@@ -50,6 +50,12 @@ private let organizationTypesToLoad: [OrganizationTypeEnum] = [.club, .museum]
             "website": "https://www.fotografiska.com/nyc/",
             "wikipedia": "https://en.wikipedia.org/wiki/Fotografiska_New_York",
             "image": "https://commons.wikimedia.org/wiki/File:Fotografiska_New_York_(51710073919).jpg"
+            "description": [
+                {
+                    "language": "EN",
+                    "value": "Associated with the original Fotografiska Museum in Stockholm"
+                }
+            ]
         }
     ]
 }
@@ -59,7 +65,7 @@ class OrganizationList {
 
     init(bgContext: NSManagedObjectContext) {
 
-        bgContext.perform { // move to background thread
+        bgContext.perform { // switch to supplied background thread
             self.readJSONOrganizationList(bgContext: bgContext, for: organizationTypesToLoad)
         }
     }
