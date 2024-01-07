@@ -702,8 +702,10 @@ Here is an example of the format of the OrganizationList. This minimal example c
             "website": "https://www.fotografiska.com/nyc/",
             "wikipedia": "https://en.wikipedia.org/wiki/Fotografiska_New_York",
             "image": "https://commons.wikimedia.org/wiki/File:Fotografiska_New_York_(51710073919).jpg",
-            "descriptionEN": "Fotografiska New York is a branch of the Swedish Fotografiska museum.",
-            "descriptionNL": "Fotografiska New York is een dependance van het Fotografiska museum in Stockholm."
+            "description": [
+                { "language": "EN", "value": "Fotografiska New York is a branch of the Swedish Fotografiska museum." }
+                { "language": "NL", "value": "Fotografiska New York is een dependance van het Fotografiska museum in Stockholm." }
+            ]
         }
     ]
 }
@@ -714,7 +716,7 @@ Note that:
 - `coordinates` is used to draw the club on the map and to [generate](http://www.vdhamer.com/reversegeocoding-for-localizing-towns-and-countries/) localized versions of town and country names. Latitudes are in the range [-90.0, +90.0] where negative `latitude` means south of the Equator. Longitude values are in the range [-180.0, +180.0] where negative `longitude` means west of Greenwich London.
 - The `memberList` field (for clubs only) allows the app to find the next level list with membership data. It is reserved for future use.
 - The `image` field contains a public domain image of the outside of the venue. It is reserved for future use.
-- The `descriptionXX` fields contain a short description of the item. These are the only fields that can be localized (EN is English, NL is Dutch). These fields are reserved for future use.
+- The optional `description` field contain a brief remark about the item. The `description` contains an array of alternative strings in multiple languages. The app selects which language to use based on the device's language settings.
 </p>
 
 __2. MemberList: local lists of photo club members__</p>
