@@ -163,7 +163,9 @@ extension PhotoClub {
         if currentLangID?.lowercased() == "nl" && descriptionNL != nil { return descriptionNL! }
 
         // now we are configured to another language (e.g. "fr"), for which there is no translation.
-        if descriptionEN != nil { return descriptionEN! } // then use English if available
+        let apology: StringLiteralType = " [nog geen Nederlandse vertaling beschikbaar]"
+        // then use English if available (and apologize to the Dutch)
+        if descriptionEN != nil { return descriptionEN! + apology }
         if descriptionNL != nil { return descriptionNL! } // as a last resort, use Dutch (nl)
 
         return String(localized: "No description available.",
