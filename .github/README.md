@@ -292,13 +292,12 @@ This loads a little bit of additional data to demo the feature.
 
 </summary>
 
-Since version 2.6, the maps showing the location of photo clubs also show the locations
-of certain photo musea. 
-A photo museum is not photo clubs and are dispplayed on the maps using a dedicated amrker.
-More fundamentally, the app also doesn't allow musea to have "members" that share images with the museum.
-Consider the showing of musea a bonus that may interest various users.
+The maps showing the location of photo clubs can also show the locations of selected photo musea.
+A photo museum is not a photo club and is displayed on the maps using a dedicated marker.
+Techncially, the app doesn't allow musea to have "members" that share images with the museum.
 
-You are welcome to add data on your favorite photo musea via a Github Pull Request.
+Consider the showing of musea a bonus that may interest some users.
+You are welcome to add a favorite photo musea via a Github Pull Request. It only requires extending a JSON file.
 The file format is documented below under [How Data is Loaded / The New Approach](#how-data-is-loaded).
 
 </details>
