@@ -11,7 +11,12 @@
                 "longitude": 5.51527
             },
             "website": "https://nl.qrcodechimp.com/page/a6d3r7?v=chk1697032881",
-            "memberList": "https://www.example.com/fgAnders.memberList.json"
+            "memberList": "https://www.example.com/fgAnders.memberList.json",
+            "description": [
+                {
+                    "language": "NL",
+                    "value": "FG Anders is klein. Bijeenkomsten worden dus bij leden thuis gehouden. Exposities zijn in de Kruisruimte in Einhoven."
+                }
         },
         {
             "idPlus": {
@@ -24,7 +29,13 @@
                 "longitude": 5.45010
             },
             "website": "https://www.fcdegender.nl",
-            "memberList": "https://www.example.com/deGender.memberList.json"
+            "memberList": "https://www.example.com/deGender.memberList.json",
+            "description": [
+                {
+                    "language": "NL",
+                    "value": "Opgelet: Fotogroep de Gender heeft als domeinnaam fcdegender.nl (van Fotoclub)."
+                }
+            ]
         },
         {
             "idPlus": {
