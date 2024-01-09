@@ -14,7 +14,7 @@
     <details><summary><a href="#about-the-project">About the Project</a></summary>
           <ul>
             <li><a href="#the-app">The App</a></li>
-            <li><a href="#the-portfolio-concept](https://stackoverflow.com/questions/29642922/why-can-i-only-reverse-geocode-location-that-are-inside-china)">The Portfolio Concept</a></li>
+            <li><a href="#photo-clubs]">Photo Clubs</a></li>
             <li><a href="#implications-of-portfolios">Implications of Portfolios</a>
           </ul>
     </details>
@@ -116,14 +116,14 @@ Help in the form of coding, testing and suggestions is highly appreciated. See t
 
 <details open><summary>
     
-### The Portfolio Concept
+### Photo Clubs
 
 </summary>
 
 > The app showcases curated images made by members of photo clubs.
 
 Since release 2.3.0, the app structures the information in a 3-level hierarchy.
-Here is a schematic representation of the ("Portfolios") view that essentially puts photo clubs first:
+Here is a schematic representation of the "Portfolios" view that essentially puts photo clubs first:
 
 * photo clubA (hosted on siteA)
   * portfolio1 of photographer1
