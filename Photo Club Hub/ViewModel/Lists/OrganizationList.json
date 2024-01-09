@@ -68,6 +68,16 @@
             "website": "https://www.shot71.nl",
             "memberList": "https://www.example.com/FFC_Shot71.memberlist.json"
         }
+        "description": [
+            {
+                "language": "EN",
+                "value": "The club was founded in 1971, and has separate meetups for photography, video, and audiovisual presentations."
+            },
+            {
+                "language": "NL",
+                "value": "De club is opgericht in 1971 en bestrijkt fotografie, film en AV presentaties."
+            }
+        ]
     ],
     "museums": [
         {
