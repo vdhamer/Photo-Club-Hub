@@ -1,25 +1,24 @@
-### 2.5.3 (Github commit 91e547e) 31-12-23
+### 2.5.3 (Github commit 365d115) 7-1-24
 
 Clubs and Musea screen
     * Renamed screen from `Photo Clubs` to `Clubs` to save space (for future mode picker).
-    * Map can displays 20 photography-focussed musea in various countries.
-    * Additional photo clubs (and musea) can be loaded from a data file (OrganizationList.json at Github).
-    * The country where a photoclub (or museum) is located is automatically computed (using an Apple service) using its GPS coordinates.
-    * Town and Country names are localized. Examples: "Frankrijk" (NL) or "France" (EN).
+    * Maps can display various photography musea (example: 3 in Manhattan, NYC).
+    * Additional photo clubs (and musea) can be loaded from a data file (OrganizationList.json hosted on Github).
+    * The country where a photoclub (or museum) is located is determined (using Apple's mapping service) from its GPS coordinates.
+    * Town and Country names are localized. Examples: "Frankrijk" (NL) = "France" (EN).
     * Changed order of footnotes at bottom of screen. 3rd footnote is dimmed if feature has already been triggered.
     * Musea are rendered on the map using a different type of marker pin.
     * Top of screen shows how long the list is (e.g. "25 items").
-    * Single line custom remark shown per club/museum. This brief description can be shown in different languages (EN or NL).
+    * Single line remark can be provided for any club/museum. That text is shown in appropriate language if the translation is available.
 Portfolios screen
-    * Name of towns are now shown in the correct language. Often they don't need translation, but it happens: "Den Haag" (NL) or "The Hague" (EN).
+    * Name of towns are now shown in the correct language. Often they don't need translation. Example: "Den Haag" (NL) or "The Hague" (EN).
     * Limited the font size of the footers in case the device's text display size was increased (in Settings).
-    * Removed Test Fotoclub (3 of them: Amsterdam, The Hague, Rotterdam). They are now treated as musea.
+    * Removed the 3 Test Fotoclubs (Amsterdam, The Hague, Rotterdam). They are now musea rather than imaginary clubs.
 Maintenance
-    * Tested with with iOS 17.2.1, MacOS 14.2.1, GitCrypt 0.7.0.1
+    * Tested with with iOS 17.2.1, MacOS 14.2.1, GitCrypt 0.7.0.1, Xcode 14.2
     * Centralized code for loading and of input data (file: `PhotoClubHubApp`).
-    * Added 14 additional photography musea.
 
-This is build #4611, and was sent out to Apple Testflight users.
+This is build #4612, and was sent out to Apple Testflight users.
 ---------------------------------------------------------------------------
 ### 2.5.2 (Github commit 7cc0780) 16-12-23
 
