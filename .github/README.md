@@ -56,7 +56,7 @@
                <li><a href="#role-of-the-database">Role of the Database</a></li>
                <li><a href="#the-data-model">The Data Model</a></li>
                <ul>
-                     <li>PhotoClub</li>
+                     <li>PhotoClub aka Organization</li>
                      <li>Photographer</li>
                      <li>MemberPortfolio</li>
                </ul>
@@ -551,18 +551,14 @@ a string value such as "Unknown town".
 
 <ul><details><summary>
     
-#### PhotoClub
+#### PhotoClub aka Organization
 
 </summary>
 A `PhotoClub` is uniquely identified by its `name` *and* a `town`. Including the town helps when two towns happen to have a photo club with the same name.
 
-A `PhotoClub` has a rough address down to the `town` level and GPS coordinates. The GPS coordinates can precisely representing where the club meets (say at the address level). The GPS coordinates are used to insert markers on a map.
+Since late 2023, photo musea are also supported (mainly to show them on the maps). These musea are stored in the same `PhotoClub` table, which will be renamed to `Organization`. Photo clubs and musea have many common properites and can thus be seen as specializations of this base class `Organization`. The clubs and musea are distinguished by a reference to a seperate table called `OrganizationType`. Currently `OrganizationType` (essentially an enum) has only two allowed values: club and museum. But, for example, photo festivals could also be added in the future.
 
-> A minor bug: `town` and `country` are not currently localized because they are stored in the database rather than the source code itself.
-> Thus "Nederland" should be labelled "The Netherlands" if your device setting is set to English. The same applies to major cities.
-> This could be fixed by recognizing "supported" locations, and then using iOS facilities to localize strings. But this would
-> go against the vision of configuring club information without requiring any updates to the software. So the best solution is
-> to do a reverse geolocation lookup (GPS --> localized strings), thus replacing the stored `town` and `country` strings in the database.
+An `Organization` has a rough address down to the `town` level and GPS coordinates. The GPS coordinates can precisely indicate where the club meets (say at the address level). The GPS coordinates are used to insert markers on a map. The GPS coordinates are also used to localize `town` and `country` names by asking the mapping service to convert GPS coordinates into a textual address, using the device's current location.
 </details></ul>
 
 <ul><details><summary>
