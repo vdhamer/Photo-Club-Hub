@@ -9,10 +9,6 @@ import SwiftUI // for ShapeStyle
 
 extension ShapeStyle where Self == Color {
 
-    static var buttonColor: Color {
-        Color("_ButtonColor") // from asset catalog
-    }
-
     static var memberPortfolioColor: Color {
         Color("_MemberPortfolioColor") // from asset catalog
     }
