@@ -15,7 +15,7 @@
           <ul>
             <li><a href="#the-app">The App</a></li>
             <li><a href="#photo-clubs]">Photo Clubs</a></li>
-            <li><a href="#implications-of-portfolios">Implications of Portfolios</a>
+            <li><a href="#implications">Implications of Portfolios</a>
           </ul>
     </details>
     <details><summary><a href="#screens">Screens</a></summary>
@@ -173,7 +173,7 @@ For comparison, traditional personal websites stress the photographer's images, 
 
 <ul><details><summary>
         
-### Implications of Portfolios
+### Implications
     
 </summary>
 
