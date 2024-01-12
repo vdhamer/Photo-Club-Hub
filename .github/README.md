@@ -538,12 +538,12 @@ Some of these gaps are addressed [below](#a-better-approach).
 ### The Data Model
 
 </summary>
-Here are the three entities managed by the app's internal Core Data database. These are tables in database terminology.</p>
+Here are the entities managed by the app's internal Core Data database. The entities (rounded boxes) and arrows are tables and relationships in the underlying SQLite database.</p>
 
-![Data model](images/dataModel.png)
+![Data model](images/dataModel.png "The data model)
 
-Note that the tables are fully "normalized" in the relational database sense,
-This means that redundancy in the stored data is minimized via referencing. 
+Note that the tables are fully "normalized" in the relational database sense.
+This means that redundancy in all stored data is minimized via referencing. 
 
 Optional properties in the database with names like `PhotoClub.town_` have a corresponding computed
 property that is non-optional like `PhotoClub.town`. This allows `PhotoClub.town` to always return
