@@ -538,7 +538,7 @@ Some of these gaps are addressed [below](#a-better-approach).
 ### The Data Model
 
 </summary>
-Here are the three central concepts (also know as database entities or tables or struct types).
+Here are the three entities managed by the app's internal Core Data database. These are tables in database terminology.</p>
 
 ![Data model](images/dataModel.png)
 
