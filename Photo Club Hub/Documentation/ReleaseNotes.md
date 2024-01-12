@@ -2,22 +2,22 @@
 
 Clubs and Musea screen
     * Renamed screen from `Photo Clubs` to `Clubs` to save space (for future mode picker).
-    * Maps can display various photography musea (example: 3 in Manhattan, NYC).
+    * Maps can display various photography musea (example: there are three in Manhattan, NYC).
     * Additional photo clubs (and musea) can be loaded from a data file (OrganizationList.json hosted on Github).
-    * The country where a photoclub (or museum) is located is determined (using Apple's mapping service) from its GPS coordinates.
-    * Town and Country names are localized. Examples: "Frankrijk" (NL) = "France" (EN).
+    * A photoclub's (or museum)'s country is determined from its GPS coordinates. This handles localization: "Frankrijk" (NL) = "France" (EN).
+    * Town names are also translated if applicable: "Den Haag" (NL) = "The Hague" (EN).
     * Changed order of footnotes at bottom of screen. 3rd footnote is dimmed if feature has already been triggered.
-    * Musea are rendered on the map using a different type of marker pin.
+    * Musea are rendered on maps using a special marker pin.
     * Top of screen shows how long the list is (e.g. "25 items").
-    * Single line remark can be provided for any club/museum. That text is shown in appropriate language if the translation is available.
+    * Single line remark can be provided per club/museum. That text is shown translated if the translation is available.
 Portfolios screen
-    * Name of towns are now shown in the correct language. Often they don't need translation. Example: "Den Haag" (NL) or "The Hague" (EN).
+    * Name of towns are now shown in the correct language.
     * Limited the font size of the footers in case the device's text display size was increased (in Settings).
-    * Removed the 3 Test Fotoclubs (Amsterdam, The Hague, Rotterdam). They are now musea rather than imaginary clubs.
+    * Removed the 3 Test Fotoclubs. They are now shown correctly as musea.
 Maintenance
     * Tested with with iOS 17.2.1, MacOS 14.2.1, GitCrypt 0.7.0.1, Xcode 14.2
     * Centralized code for loading and of input data (file: `PhotoClubHubApp`).
-    * Updated data model image in GitHub README.md
+    * Updated data model image in GitHub README file.
 
 This is build #4612, and was sent out to Apple Testflight users.
 ---------------------------------------------------------------------------
