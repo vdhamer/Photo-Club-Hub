@@ -119,6 +119,7 @@
 		D030CD642B3AE2E800A12E90 /* OrganizationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationType.swift; sourceTree = "<group>"; };
 		D0329449283F9D1D0044C70C /* Bundle+VersionBuild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+VersionBuild.swift"; sourceTree = "<group>"; };
 		D0362A862AC3A21200F87378 /* String+containsWordUsingNLP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+containsWordUsingNLP.swift"; sourceTree = "<group>"; };
+		D036A9B02B51445C00DC36EB /* dataModel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dataModel.png; sourceTree = "<group>"; };
 		D040566C29A0287200CB64B8 /* MemberPortfolioRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberPortfolioRow.swift; sourceTree = "<group>"; };
 		D041627F295BB9DF00ED073A /* NSPredicate+all.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSPredicate+all.swift"; sourceTree = "<group>"; };
 		D0416281295BBA7700ED073A /* CoreLocation+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreLocation+Equatable.swift"; sourceTree = "<group>"; };
@@ -562,6 +563,7 @@
 		D0F2F2F32873A19F009DDD2A /* images */ = {
 			isa = PBXGroup;
 			children = (
+				D036A9B02B51445C00DC36EB /* dataModel.png */,
 				D04B1A082B1A9D2500EB3817 /* portfolios.jpg */,
 			);
 			path = images;

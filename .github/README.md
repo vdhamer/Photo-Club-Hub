@@ -547,7 +547,7 @@ Optional properties in the database with names like `PhotoClub.town_` have a cor
 property that is non-optional like `PhotoClub.town`. This allows `PhotoClub.town` to always return
 a string value such as "Unknown town".
 
-[![Product schema][product-schema]](https://github.com/vdhamer/PhotoClubWaalre/blob/main/Assets.xcassets/images/Schema.imageset/Schema.png)
+[![Data model][data-model]](images/portfolios.jpg)
 
 <ul><details><summary>
     
@@ -905,4 +905,3 @@ Project Link: [https://github.com/vdhamer/PhotoClubWaalre](https://github.com/vd
 [license-shield]: https://img.shields.io/github/license/vdhamer/PhotoClubWaalre.svg?style=for-the-badge
 [license-url]: https://github.com/vdhamer/PhotoClubWaalre/blob/main/.github/LICENSE.md
 [portfolios-screenshot]: images/portfolios.jpg
-[product-schema]: ../Assets.xcassets/images/Schema.imageset/Schema.png
