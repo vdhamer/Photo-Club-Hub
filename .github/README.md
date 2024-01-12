@@ -6,7 +6,7 @@
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 
-[![Portfolios Screen Shot][portfolios-screenshot]](https://github.com/vdhamer/PhotoClubWaalre)
+![Portfolios Screen](images/portfoliosScreen.png "Portfolios Screen")
 
 <!-- TABLE OF CONTENTS -->
 ## Table of [Contents
@@ -913,4 +913,3 @@ Project Link: [https://github.com/vdhamer/PhotoClubWaalre](https://github.com/vd
 [issues-url]: https://github.com/vdhamer/PhotoClubWaalre/issues
 [license-shield]: https://img.shields.io/github/license/vdhamer/PhotoClubWaalre.svg?style=for-the-badge
 [license-url]: https://github.com/vdhamer/PhotoClubWaalre/blob/main/.github/LICENSE.md
-[portfolios-screenshot]: images/portfolios.jpg
