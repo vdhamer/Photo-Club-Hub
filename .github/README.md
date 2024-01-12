@@ -210,6 +210,8 @@ Usage of the various screens in the user interface:
   The `Search` bar filters the lists of club members using the photographer's full name.
   Swiping left deletes an entry, but this is not normally needed and is not permanent (yet)).
 
+  ![Portfolios Screen](images/portfoliosScreen.png "Portfolios Screen")
+
 - The `Who's Who` screen lists all the photographers known to the app.
   It allows you to first select the photographer and then select that person's club-specific portfolio.
   If available, club-independent information (like birthdays) for that photographer is displayed here.
