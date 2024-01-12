@@ -17,7 +17,7 @@ Portfolios screen
 Maintenance
     * Tested with with iOS 17.2.1, MacOS 14.2.1, GitCrypt 0.7.0.1, Xcode 14.2
     * Centralized code for loading and of input data (file: `PhotoClubHubApp`).
-    * Updated data model image in GitHub README file.
+    * Updated data model picture in GitHub README.md file.
 
 This is build #4612, and was sent out to Apple Testflight users.
 ---------------------------------------------------------------------------
