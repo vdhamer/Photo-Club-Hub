@@ -540,7 +540,7 @@ Some of these gaps are addressed [below](#a-better-approach).
 </summary>
 Here are the entities managed by the app's internal Core Data database. The entities (rounded boxes) and arrows are tables and relationships in the underlying SQLite database.</p>
 
-![Data model](images/dataModel.png "The data model)
+![Data model](images/dataModel.png "The data model")
 
 Note that the tables are fully "normalized" in the relational database sense.
 This means that redundancy in all stored data is minimized via referencing. 
