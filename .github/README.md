@@ -538,16 +538,16 @@ Some of these gaps are addressed [below](#a-better-approach).
 ### The Data Model
 
 </summary>
-Here are the three central concepts (also know as database entities or tables or struct types).
+Here are the entities managed by the app's internal Core Data database. The entities (rounded boxes) and arrows are tables and relationships in the underlying SQLite database.</p>
 
-Note that the tables are fully "normalized" in the relational database sense,
-This means that redundancy in the stored data is minimized via references. 
+![Data model](images/dataModel.png "The data model")
+
+Note that the tables are fully "normalized" in the relational database sense.
+This means that redundancy in all stored data is minimized via referencing. 
 
 Optional properties in the database with names like `PhotoClub.town_` have a corresponding computed
-property that is non-optional like `PhotoClub.town`. This allows `PhotoClub.town` to always return
-a string value such as "Unknown town".
-
-[![Data model][data-model]](images/dataModel.png)
+property that is non-optional named `PhotoClub.town`. This allows `PhotoClub.town` to always return
+a `String` value such as "Unknown town" rather than an optional `String?` value.
 
 <ul><details><summary>
     
@@ -556,9 +556,18 @@ a string value such as "Unknown town".
 </summary>
 A `PhotoClub` is uniquely identified by its `name` *and* a `town`. Including the town helps when two towns happen to have a photo club with the same name.
 
-Since late 2023, photo musea are also supported (mainly to show them on the maps). These musea are stored in the same `PhotoClub` table, which will be renamed to `Organization`. Photo clubs and musea have many common properites and can thus be seen as specializations of this base class `Organization`. The clubs and musea are distinguished by a reference to a seperate table called `OrganizationType`. Currently `OrganizationType` (essentially an enum) has only two allowed values: club and museum. But, for example, photo festivals could also be added in the future.
+Since late 2023, photo musea are also supported (mainly to show them on the maps).
+These musea are stored in the same `PhotoClub` table, which will be renamed to `Organization`. 
+Photo clubs and musea have many common properites and can thus be seen as specializations of this base class `Organization`.
+The clubs and musea are distinguished by a reference to a seperate table called `OrganizationType`. 
+Currently `OrganizationType` (essentially an enum) has only two allowed values: club and museum.
+But, for example, photo festivals could also be added in the future.
 
-An `Organization` has a rough address down to the `town` level and GPS coordinates. The GPS coordinates can precisely indicate where the club meets (say at the address level). The GPS coordinates are used to insert markers on a map. The GPS coordinates are also used to localize `town` and `country` names by asking the mapping service to convert GPS coordinates into a textual address, using the device's current location.
+An `Organization` has a rough address down to the `town` level and GPS coordinates.
+The GPS coordinates can precisely indicate where the club meets (say at the address level). 
+The GPS coordinates are used to insert markers on a map. 
+The GPS coordinates are also used to localize `town` and `country` names by asking the mapping 
+service to convert GPS coordinates into a textual address, using the device's current location.
 </details></ul>
 
 <ul><details><summary>
