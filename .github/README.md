@@ -546,8 +546,8 @@ Note that the tables are fully "normalized" in the relational database sense.
 This means that redundancy in all stored data is minimized via referencing. 
 
 Optional properties in the database with names like `PhotoClub.town_` have a corresponding computed
-property that is non-optional like `PhotoClub.town`. This allows `PhotoClub.town` to always return
-a string value such as "Unknown town".
+property that is non-optional named `PhotoClub.town`. This allows `PhotoClub.town` to always return
+a `String` value such as "Unknown town" rather than an optional `String?` value.
 
 <ul><details><summary>
     
