@@ -54,6 +54,16 @@
             },
             "website": "https://www.fotokringbeeldhoek.nl",
             "memberList": "https://www.example.com/FK_Beeldhoek.memberlist.json"
+            "description": [
+                {
+                    "language": "EN",
+                    "value": "Fotokring Beeldhoek has two meetups per month: one is for photo critiques, the other about the technical side of photography."
+                },
+                {
+                    "language": "NL",
+                    "value": "Fotokring Beeldhoek organiseert twee bijeenkomsten per maand: één voor fotobesprekingen, de andere over fototechniek."
+                }
+            ]
         },
         {
             "idPlus": {
