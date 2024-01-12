@@ -547,7 +547,7 @@ Optional properties in the database with names like `PhotoClub.town_` have a cor
 property that is non-optional like `PhotoClub.town`. This allows `PhotoClub.town` to always return
 a string value such as "Unknown town".
 
-[![Data model][data-model]](images/portfolios.jpg)
+![Data model][data-model](images/dataModel.png)
 
 <ul><details><summary>
     
