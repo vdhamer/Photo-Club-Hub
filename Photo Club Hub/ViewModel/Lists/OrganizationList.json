@@ -2,6 +2,52 @@
     "clubs": [
         {
             "idPlus": {
+                "town": "Asten",
+                "fullName": "Fotokring Beeldhoek",
+                "nickName": "FK Beeldhoek"
+            },
+            "coordinates": {
+                "latitude": 51.402345,
+                "longitude": 5.744756
+            },
+            "website": "https://www.fotokringbeeldhoek.nl",
+            "memberList": "https://www.example.com/FK_Beeldhoek.memberlist.json",
+            "description": [
+                {
+                    "language": "EN",
+                    "value": "Fotokring Beeldhoek has two meetups per month: one is for photo critiques, the other about the technical side of photography."
+                },
+                {
+                    "language": "NL",
+                    "value": "Fotokring Beeldhoek organiseert twee bijeenkomsten per maand: één voor fotobesprekingen, de andere over fototechniek."
+                }
+            ]
+        },
+        {
+            "idPlus": {
+                "town": "Berlicum",
+                "fullName": "FFC Shot71",
+                "nickName": "FFC Shot71"
+            },
+            "coordinates": {
+                "latitude": 51.663059,
+                "longitude": 5.4182475
+            },
+            "website": "https://www.shot71.nl",
+            "memberList": "https://www.example.com/FFC_Shot71.memberlist.json",
+            "description": [
+                {
+                    "language": "EN",
+                    "value": "The club was founded in 1971, and has separate meetups for photography, video, and audiovisual presentations."
+                },
+                {
+                    "language": "NL",
+                    "value": "De club is opgericht in 1971 en bestrijkt fotografie, film en AV presentaties."
+                }
+            ]
+        },
+        {
+            "idPlus": {
                 "town": "Eindhoven",
                 "fullName": "Fotogroep Anders",
                 "nickName": "FG Anders"
@@ -31,7 +77,7 @@
             },
             "coordinates": {
                 "latitude": 51.42398,
-                "longitude": 5.45010
+                "longitude": 5.4501
             },
             "website": "https://www.fcdegender.nl",
             "memberList": "https://www.example.com/deGender.memberList.json",
@@ -41,53 +87,7 @@
                     "value": "Opgelet: Fotogroep de Gender gebruikt nog een oude domeinnaam fcdegender.nl (fc = Fotoclub)."
                 }
             ]
-        },
-        {
-            "idPlus": {
-                "town": "Asten",
-                "fullName": "Fotokring Beeldhoek",
-                "nickName": "FK Beeldhoek"
-            },
-            "coordinates": {
-                "latitude": 51.402345,
-                "longitude": 5.744756
-            },
-            "website": "https://www.fotokringbeeldhoek.nl",
-            "memberList": "https://www.example.com/FK_Beeldhoek.memberlist.json"
-            "description": [
-                {
-                    "language": "EN",
-                    "value": "Fotokring Beeldhoek has two meetups per month: one is for photo critiques, the other about the technical side of photography."
-                },
-                {
-                    "language": "NL",
-                    "value": "Fotokring Beeldhoek organiseert twee bijeenkomsten per maand: één voor fotobesprekingen, de andere over fototechniek."
-                }
-            ]
-        },
-        {
-            "idPlus": {
-                "town": "Berlicum",
-                "fullName": "FFC Shot71",
-                "nickName": "FFC Shot71"
-            },
-            "coordinates": {
-                "latitude": 51.663059,
-                "longitude": 5.4182475
-            },
-            "website": "https://www.shot71.nl",
-            "memberList": "https://www.example.com/FFC_Shot71.memberlist.json"
         }
-        "description": [
-            {
-                "language": "EN",
-                "value": "The club was founded in 1971, and has separate meetups for photography, video, and audiovisual presentations."
-            },
-            {
-                "language": "NL",
-                "value": "De club is opgericht in 1971 en bestrijkt fotografie, film en AV presentaties."
-            }
-        ]
     ],
     "museums": [
         {
@@ -170,7 +170,7 @@
                     "language": "EN",
                     "value": "The museum incorporates vintage cameras collected by Jan and Maarten Witte."
                 }
-            ]            
+            ]
         },
         {
             "idPlus": {
@@ -190,7 +190,7 @@
                     "language": "EN",
                     "value": "The museum is associated with the Ballarat International Foto Biennale festival. The building may not be finished yet."
                 }
-            ]   
+            ]
         },
         {
             "idPlus": {
@@ -210,7 +210,7 @@
                     "language": "EN",
                     "value": "The museum houses the Helmut Newton Foundation."
                 }
-            ]   
+            ]
         },
         {
             "idPlus": {
@@ -230,7 +230,7 @@
                     "language": "EN",
                     "value": "The museum is afiliated with the older and adjacent art museum Kunstmuseum Den Haag."
                 }
-            ]  
+            ]
         },
         {
             "idPlus": {
@@ -731,7 +731,7 @@
                 "nickName": "CM Zierikzee"
             },
             "coordinates": {
-                "latitude": 51.65010,
+                "latitude": 51.6501,
                 "longitude": 3.91938
             },
             "website": "https://www.cameramuseum.nl",
