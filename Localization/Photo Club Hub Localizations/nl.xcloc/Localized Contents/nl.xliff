@@ -1,30 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
-  <file original="en.lproj/Photo-Club-Hub-InfoPlist.strings" source-language="en" target-language="nl" datatype="plaintext">
+  <file original="en.lproj/Photo-Club-Hub-InfoPlist.strings" datatype="plaintext" source-language="en" target-language="nl">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="15.1" build-num="15C65"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="15.2" build-num="15C500b"/>
     </header>
     <body>
       <trans-unit id="CFBundleDisplayName" xml:space="preserve">
         <source>Photo Club Hub</source>
-        <target>Fotoclub Hub</target>
         <note>Bundle display name</note>
       </trans-unit>
       <trans-unit id="CFBundleName" xml:space="preserve">
         <source>Photo Club Hub</source>
-        <target>Fotoclub Hub</target>
         <note>Bundle name</note>
       </trans-unit>
       <trans-unit id="NSLocationWhenInUseUsageDescription" xml:space="preserve">
         <source>User's location is shown on the maps.</source>
-        <target>Voor het weergeven van huidige locatie op de landkaarten.</target>
         <note>Privacy - Location When In Use Usage Description</note>
       </trans-unit>
     </body>
   </file>
   <file original="Localization/en.lproj/Localizable.strings" source-language="en" target-language="nl" datatype="plaintext">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="15.1" build-num="15C65"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="15.2" build-num="15C500b"/>
     </header>
     <body>
       <trans-unit id="%lld entries" xml:space="preserve">
@@ -109,7 +106,7 @@
       </trans-unit>
       <trans-unit id="No description available." xml:space="preserve">
         <source>No description available.</source>
-        <target state="translated">Er is geen omschrijving beschikbaar.</target>
+        <target>Er is geen omschrijving beschikbaar.</target>
         <note>Shown below map if there is no usable description in the OrganzationList.json file.</note>
       </trans-unit>
       <trans-unit id="No photo clubs seem to be currently loaded.&#10;Try dragging down the Photo Clubs screen to reload the default clubs." xml:space="preserve">
@@ -130,33 +127,33 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
         <note>Section title on Readme page.</note>
       </trans-unit>
       <trans-unit id="Paragraph_1.1" xml:space="preserve">
-        <source>This app showcases selected photos by the members of photo clubs. Ex-members of photo clubs can optionally also be included.</source>
-        <target>Deze app is bedoeld om foto's gemaakt door leden van fotoclubs te delen met een breed publiek.</target>
+        <source>This app showcases selected photos by members of photo clubs. Former members can also be included.</source>
+        <target>Deze app dient om foto's gemaakt door leden van fotoclubs te delen met een breed publiek.</target>
         <note>First paragraph in Waalre section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_1.2" xml:space="preserve">
-        <source>It does this in a _uniform_ way across all these photographers and participating clubs. For the target audience, this uniformity avoids having to find the websites and discovering how to navigate each unique site.</source>
-        <target>De app presenteert op een uniforme wijze het werk van alle clubleden van alle ondersteunde fotoclubs.</target>
+        <source>It does this in a _consistent_ way across all participating photographers and clubs. For the app's users, this consistency avoids having to find each club's website and discovering how to use it to find and browse the images.</source>
+        <target>De app presenteert op een _consistente_ wijze het werk van alle clubleden van de ondersteunde fotoclubs. Hiermee hoef je als gebruiker de website van een club niet zelf te vinden. En je hoeft ook niet voor ieder club te ontdekken hoe die specifieke website werkt.  </target>
         <note>Second paragraph in Waalre section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_1.3" xml:space="preserve">
-        <source>The app does not try to replace individual or club _websites_, or try to replace invididual or club social media presence: its only focus is to present all the images in an easily accesible way with minimal distraction. The app can display links to external sites for additional information.</source>
-        <target>Deze uniformiteit helpt voorkomen dat de gebruiker zelf een clubwebsite moet zien te vinden en vervolgens moet navigeren binnen iedere unieke website. Dit wordt overigens vergemakkelijkt doordat de app alleen bedoeld is om de foto's tot hun recht te laten komen. Voor andere clubinformatie (zoals mededelingen of een vergaderagenda) wordt de gebruiker naar de websites doorgelinkt.</target>
+        <source>The app does _not_ try to replace either photographer web sites or club web sites. It also doesn't try to replace social media presence. The app's focus is to present the images in a consistent, easy to access way with minimal distractions. The app can be used to find to extra information via links to club and photographer web sites.</source>
+        <target>Dit wordt vergemakkelijkt doordat de app alleen bedoeld is om de foto's tot hun recht te laten komen. Voor andere clubinformatie (zoals mededelingen of vergaderschema) wordt de gebruiker naar de websites doorgelinkt. De app probeert dus nadrukkelijk _niet_ om websites of social media aanwezigheid te vervangen. Het is hier complementair aan.</target>
         <note>Third paragraph in Waalre section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_1.4" xml:space="preserve">
-        <source>The app was originally named _Fotogroep (Photo Club) Waalre_ after an eponymous 20-person photo club in The Netherlands. The word 'Hub' in the new name stresses the app's current support for _multiple_ photo clubs, and the hope that the app can strengthen ties between clubs, and photographers by making their work easier to discover.</source>
-        <target>Oorspronkelijk heette deze app _Fotogroep Waalre_ naar een fotoclub in de buurt van Eindhoven. Het woord _Hub_ (ofwel 'trefplaats') in de nieuwe naam benadrukt dat de app in de huidige versie meerdere fotoclubs tegelijk kan ondersteunen en de ambitie om de banden tussen de aangesloten fotoclubs, de fotografen en hun publiek te versterken.</target>
+        <source>The app was originally named _Photo Club Waalre_ after a 15-person photo club in the Netherlands. The word __hub__ in the newer name stresses the app's support for _multiple_ photo clubs, and the app's ambition to strengthen the ties between clubs by making their work easier to access.</source>
+        <target>Oorspronkelijk heette deze app _Fotogroep Waalre_ naar de fotoclub in de buurt van Eindhoven. Het woord __hub__ (ofwel 'trefplaats') in de naam benadrukt dat de app in de huidige versie meerdere fotoclubs tegelijk kan ondersteunen. En het benadrukt de ambitie om de banden tussen fotoclubs, fotografen en hun publiek te versterken.</target>
         <note>Fourth paragraph in Waalre section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_1.5" xml:space="preserve">
-        <source>Support for multiple photo clubs requires the ability to display a list of clubs, their members and a series of selected photos per member.</source>
-        <target>Het ondersteunen van meerdere fotoclubs gebeurt deels door de foto's te groeperen per clublid, en de clubleden te groeperen per club. Er is echter meer voor nodig...</target>
+        <source>Support for multiple photo clubs requires the ability to display a list of clubs, their members and the selected photos per member.</source>
+        <target>Het ondersteunen van meerdere fotoclubs gebeurt deels door de foto's te groeperen per clublid, en de clubleden te groeperen per club.</target>
         <note>Fifth paragraph in Waalre section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_1.6" xml:space="preserve">
-        <source>Multi-club support also implies that individual clubs do their _data maintenance_: providing and maintaining the images and the associated lists. We believe that central support should be limited to maintaining the app only - leaving the maintenance of the data to the clubs that provide the images. The app's [GitHub site](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) explains the interim approach for onboardng clubs and the plans how to enable the clubs to do this themselves with minimal software expertise.</source>
-        <target>Voor toepasbaarheid op grotere schaal moet het voor de afzonderlijke club eenvoudig zijn om hun ledeninformatie en de lijsten met geselecteerde foto's in de app in te voeren en bij te werken. De huidige werkwijze en de plannen om deze te verbeteren zijn te vinden op de [GitHub softwaresite](https://GitHub.com/vdhamer/Photo-Club-Hub#readme).</target>
+        <source>Supporting many clubs also implies that individual clubs should be able to maintain their own data. This means the ability to provide and maintain the images, but also the club's membership list. Central support should focus on maintaining the app. The app's [GitHub site](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) explains the strategy for allowing clubs to maintain their data without any need for software expertise.</source>
+        <target>Er is echter meer hiervoor voor nodig: voor toepasbaarheid op grotere schaal moet het voor de individuele club eenvoudig zijn om hun ledeninformatie en de lijsten met geselecteerde foto's in de app zelf in te voeren en te onderhouden. Deze aanpak is geschreven op de [GitHub softwaresite](https://GitHub.com/vdhamer/Photo-Club-Hub#readme).</target>
         <note>Sixth paragraph in Waalre section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_2.1" xml:space="preserve">

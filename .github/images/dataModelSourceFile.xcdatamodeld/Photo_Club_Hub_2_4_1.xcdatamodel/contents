@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model minimumToolsVersion="Automatic" systemVersion="23B92" sourceLanguage="Swift" userDefinedModelVersionIdentifier="" lastSavedToolsVersion="22522" documentVersion="1.0" type="com.apple.IDECoreDataModeler.DataModel" >
+    <entity syncable="YES" codeGenerationType="class" elementID="Member" representedClassName="MemberPortfolio" name="MemberPortfolio" >
+        <relationship name="photoClub_" inverseEntity="PhotoClub" destinationEntity="PhotoClub" deletionRule="Nullify" inverseName="members_" maxCount="1" optional="YES" />
+        <relationship maxCount="1" inverseEntity="Photographer" destinationEntity="Photographer" inverseName="memberships_" deletionRule="Nullify" optional="YES" name="photographer_" />
+        <attribute usesScalarValueType="NO" attributeType="Date" optional="YES" name="dateIntervalEnd_" />
+        <attribute usesScalarValueType="NO" attributeType="Date" name="dateIntervalStart_" optional="YES" />
+        <attribute usesScalarValueType="YES" attributeType="Boolean" name="isAdmin" defaultValueString="NO" />
+        <attribute attributeType="Boolean" usesScalarValueType="YES" name="isChairman" defaultValueString="NO" />
+        <attribute usesScalarValueType="YES" attributeType="Boolean" name="isFormerMember" defaultValueString="NO" />
+        <attribute defaultValueString="NO" attributeType="Boolean" name="isHonoraryMember" usesScalarValueType="YES" />
+        <attribute usesScalarValueType="YES" defaultValueString="NO" name="isMentor" attributeType="Boolean" />
+        <attribute attributeType="Boolean" usesScalarValueType="YES" name="isProspectiveMember" defaultValueString="NO" />
+        <attribute defaultValueString="NO" usesScalarValueType="YES" name="isSecretary" attributeType="Boolean" />
+        <attribute attributeType="Boolean" usesScalarValueType="YES" name="isTreasurer" defaultValueString="NO" />
+        <attribute usesScalarValueType="YES" defaultValueString="NO" attributeType="Boolean" name="isViceChairman" />
+        <attribute defaultValueString="NO" name="latestImageSeen" usesScalarValueType="YES" attributeType="Boolean" optional="YES" />
+        <attribute optional="YES" name="latestImageURL" elementID="latestImage_" attributeType="URI" />
+        <attribute name="memberWebsite_" attributeType="URI" optional="YES" />
+    </entity>
+    <entity codeGenerationType="class" syncable="YES" name="PhotoClub" representedClassName="PhotoClub" >
+        <attribute defaultValueString="Nederland" attributeType="String" name="country_" />
+        <attribute name="fotobondNumber" optional="YES" usesScalarValueType="YES" attributeType="Integer 16" defaultValueString="0" />
+        <attribute usesScalarValueType="YES" name="hasHardCodedMemberData" defaultValueString="NO" attributeType="Boolean" />
+        <attribute attributeType="Boolean" name="isScrollLocked" usesScalarValueType="YES" defaultValueString="YES" />
+        <attribute name="kvkNumber" optional="YES" defaultValueString="0" attributeType="Integer 32" usesScalarValueType="YES" />
+        <attribute usesScalarValueType="YES" name="latitude_" defaultValueString="0.0" optional="YES" attributeType="Double" />
+        <attribute attributeType="Boolean" name="lockedMap" defaultValueString="NO" usesScalarValueType="YES" />
+        <attribute attributeType="Double" defaultValueString="0.0" optional="YES" name="longitude_" usesScalarValueType="YES" />
+        <attribute name="memberListURL_" attributeType="URI" optional="YES" />
+        <attribute defaultValueString="DefaultPhotoClubName" name="name_" attributeType="String" />
+        <attribute name="photoClubWebsite" optional="YES" attributeType="URI" />
+        <attribute defaultValueString="NO" usesScalarValueType="YES" attributeType="Boolean" name="pinned" />
+        <attribute optional="YES" attributeType="String" name="shortName_" />
+        <attribute defaultValueString="DefaultTown" name="town_" attributeType="String" />
+        <relationship inverseName="photoClub_" toMany="YES" destinationEntity="MemberPortfolio" inverseEntity="MemberPortfolio" name="members_" deletionRule="Cascade" />
+    </entity>
+    <entity syncable="YES" representedClassName="Photographer" name="Photographer" codeGenerationType="class" >
+        <attribute usesScalarValueType="NO" name="bornDT" attributeType="Date" optional="YES" />
+        <attribute attributeType="String" optional="YES" name="eMail_" />
+        <attribute attributeType="String" name="familyName_" defaultValueString="DefaultPhotographerFamilyName" />
+        <attribute name="givenName_" attributeType="String" defaultValueString="DefaultPhotographerGivenName" />
+        <attribute defaultValueString="" attributeType="String" name="infixName_" />
+        <attribute attributeType="Boolean" usesScalarValueType="YES" defaultValueString="NO" name="isDeceased" />
+        <attribute name="phoneNumber_" attributeType="String" optional="YES" />
+        <attribute attributeType="URI" optional="YES" name="photographerWebsite" />
+        <relationship inverseName="photographer_" deletionRule="Cascade" destinationEntity="MemberPortfolio" inverseEntity="MemberPortfolio" toMany="YES" name="memberships_" />
+    </entity>
+</model>

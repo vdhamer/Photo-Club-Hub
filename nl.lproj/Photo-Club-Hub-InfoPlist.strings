@@ -2,8 +2,7 @@
 "CFBundleDisplayName" = "Fotoclub Hub";
 
 /* Bundle name */
-"CFBundleName" = "Fotoclub Hub";
+"CFBundleName" = "Photo Club Hub";
 
 /* Privacy - Location When In Use Usage Description */
-"NSLocationWhenInUseUsageDescription" = "Om huidige locatie weer te geven op de landkaarten.";
-
+"NSLocationWhenInUseUsageDescription" = "Om de huidige locatie weer te geven op de landkaarten.";
