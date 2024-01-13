@@ -1,0 +1,35 @@
+{
+  "information" : {
+    "selectedModelKey" : "Photo_Club_Hub_2_5_3.xcdatamodel"
+  },
+  "entitiesPositions" : {
+    "OrganizationType" : [
+      438,
+      241
+    ],
+    "MemberPortfolio" : [
+      430,
+      542
+    ],
+    "Language" : [
+      957,
+      305
+    ],
+    "Photographer" : [
+      168,
+      311
+    ],
+    "Canvas...Position" : [
+      -110,
+      -233
+    ],
+    "PhotoClub" : [
+      700,
+      306
+    ],
+    "LocalizedDescription" : [
+      958,
+      422
+    ]
+  }
+}

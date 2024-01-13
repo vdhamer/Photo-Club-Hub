@@ -99,22 +99,22 @@ Default status of member within a club. Used in concatenations. */
 "Open Source" = "Developers";
 
 /* First paragraph in Waalre section of Readme page */
-"Paragraph_1.1" = "This app showcases selected photos by the members of photo clubs. Ex-members of photo clubs can optionally also be included.";
+"Paragraph_1.1" = "This app showcases selected photos by members of photo clubs. Former members can also be included.";
 
 /* Second paragraph in Waalre section of Readme page */
-"Paragraph_1.2" = "It does this in a _uniform_ way across all these photographers and participating clubs. For the target audience, this uniformity avoids having to find the websites and discovering how to navigate each unique site.";
+"Paragraph_1.2" = "It does this in a _consistent_ way across all participating photographers and clubs. For the app's users, this consistency avoids having to find each club's website and discovering how to use it to find and browse the images.";
 
 /* Third paragraph in Waalre section of Readme page */
-"Paragraph_1.3" = "The app does not try to replace individual or club _websites_, or try to replace invididual or club social media presence: its only focus is to present all the images in an easily accesible way with minimal distraction. The app can display links to external sites for additional information.";
+"Paragraph_1.3" = "The app does _not_ try to replace either photographer web sites or club web sites. It also doesn't try to replace social media presence. The app's focus is to present the images in a consistent, easy to access way with minimal distractions. The app can be used to find to extra information via links to club and photographer web sites.";
 
 /* Fourth paragraph in Waalre section of Readme page */
-"Paragraph_1.4" = "The app was originally named _Fotogroep (Photo Club) Waalre_ after an eponymous 20-person photo club in The Netherlands. The word 'Hub' in the new name stresses the app's current support for _multiple_ photo clubs, and the hope that the app can strengthen ties between clubs, and photographers by making their work easier to discover.";
+"Paragraph_1.4" = "The app was originally named _Photo Club Waalre_ after a 15-person photo club in the Netherlands. The word __hub__ in the newer name stresses the app's support for _multiple_ photo clubs, and the app's ambition to strengthen the ties between clubs by making their work easier to access.";
 
 /* Fifth paragraph in Waalre section of Readme page */
-"Paragraph_1.5" = "Support for multiple photo clubs requires the ability to display a list of clubs, their members and a series of selected photos per member.";
+"Paragraph_1.5" = "Support for multiple photo clubs requires the ability to display a list of clubs, their members and the selected photos per member.";
 
 /* Sixth paragraph in Waalre section of Readme page */
-"Paragraph_1.6" = "Multi-club support also implies that individual clubs do their _data maintenance_: providing and maintaining the images and the associated lists. We believe that central support should be limited to maintaining the app only - leaving the maintenance of the data to the clubs that provide the images. The app's [GitHub site](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) explains the interim approach for onboardng clubs and the plans how to enable the clubs to do this themselves with minimal software expertise.";
+"Paragraph_1.6" = "Supporting many clubs also implies that individual clubs should be able to maintain their own data. This means the ability to provide and maintain the images, but also the club's membership list. Central support should focus on maintaining the app. The app's [GitHub site](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) explains the strategy for allowing clubs to maintain their data without any need for software expertise.";
 
 /* First paragraph in The App on Readme page */
 "Paragraph_2.1" = "As mentioned, the goal of this app is to showcase curated work of members of photo clubs.";
@@ -212,13 +212,13 @@ Default status of member within a club. Used in concatenations. */
 /* Title of page with clubs and maps */
 "Photo Clubs" = "Photo Clubs";
 
-/* Shown in gray at the bottom of the Photo Club page (1/3).*/
+/* Shown in gray at the bottom of the Photo Club page (1/3). */
 "PhotoClubs_Caption_1" = "① You can unlock/lock a map's scrolling and panning features using the Lock icon.";
 
-/* Shown in gray at the bottom of the Photo Club page (2/3).*/
+/* Shown in gray at the bottom of the Photo Club page (2/3). */
 "PhotoClubs_Caption_2" = "② An individiual photo club can be deleted by first deleting (swipe left) all linked Portfolios on the Portfolio page, and then deleting (swipe left) the photo club itself on this page.";
 
-/* Shown in gray at the bottom of the Photo Club page (3/3).*/
+/* Shown in gray at the bottom of the Photo Club page (3/3). */
 "PhotoClubs_Caption_3" = "③ To add extra photo clubs for testing purposes, drag down and release the top of the page.";
 
 /* Title of page showing member portfolios */
