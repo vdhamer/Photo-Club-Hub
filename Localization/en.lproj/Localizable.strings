@@ -168,22 +168,22 @@ Default status of member within a club. Used in concatenations. */
 "Paragraph_4.3" = "Tapping ***inside*** the image allows you to zoom in or out to your heart's content. Tapping ***outside*** the image area ends the animation. A single tap ***outside*** the image allows you to skip the animation entirely.";
 
 /* First paragraph SupportedPlatforms section of Readme page */
-"Paragraph_5.1" = "The app runs on iPhone and iPad and requires iOS 17.0 or higher. Most iOS users tend to upgrade to the latest possible iOS version, which means that the app supports devices made in the last 5 or 6 years.";
+"Paragraph_5.1" = "The app runs on iPhone and iPad and requires iOS 17.0 or higher. As most iOS users upgrade to the latest iOS version, this means that the latest app version can support devices made in the last 6 or so years.";
 
 /* Second paragraph SupportedPlatforms section of Readme page */
-"Paragraph_5.2" = "The app uses various Apple software technologies including Swift (a programming language), SwiftUI (a user interface framework), Core Data (local data storage), Metal (graphics acceleration), concurrency (for fetching data), and animations.";
+"Paragraph_5.2" = "The app depends heavily on various Apple software technologies. These include Swift (a programming language), SwiftUI (a user interface framework), Core Data (local data storage), Metal (graphics acceleration), and so-called _structured\" concurrency_ (for data fetching), Xcode (development environment), and obviously iOS itself.";
 
 /* Third paragraph SupportedPlatforms section of Readme page */
-"Paragraph_5.3" = "The benefit of an iOS focus is that it allows the developers to focus on functionality rather than cross-platform and cross-version interoperability issues.";
+"Paragraph_5.3" = "The benefit of an iOS focus is that it allows the app developers to focus on functionality rather than cross-platform compatibility.";
 
 /* Fourth paragraph SupportedPlatforms section of Readme page */
-"Paragraph_5.4" = "The drawback, however, is the lack of Android support, because the Android universe has its own set of software technologies. Apps that choose to support multiple platforms require more development effort and often contain more technical compromises.";
+"Paragraph_5.4" = "The drawback, however, is the lack of Android support (for now). This is  because the Android world has its own set of software technologies and tends to have more internal diversity. Apps that choose to support multiple platforms require more effort or more technical compromises.";
 
 /* Fifth paragraph SupportedPlatforms section of Readme page */
-"Paragraph_5.5" = "There is another perspective on not targeting Android anytime soon: it implies the app cannot contain any essentially functionality for which there is no alternative. So, again, the app cannot replace a club's website.";
+"Paragraph_5.5" = "To put this into perspective, the top-6 software \"platforms\" are (largest to smaller): web, Android, Windows, iOS, iPadOS, and MacOS. Only the very largest apps (like Word, Twitter, Minecraft, Chrome) cover the full range. Other famous apps cover only half: Photoshop (Windows, MacOS, iPadOS), WhatsApp (iPhone, Android, web - kind of), Pokémon Go (Android, iOS, iPadOS - kind of).";
 
 /* Sixth paragraph SupportedPlatforms section of Readme page */
-"Paragraph_5.6" = "To put the app's device support into perspective, consider the top-6 software environments. The top-6 platforms are, in [largest-first order](https://www.youtube.com/watch?v=7S9PBgS8HS8): web, Android, Windows, iOS, iPadOS. Only the very largest apps (like MS Word, Twitter, Minecraft, Chrome) manage to cover the full range. But many well-known apps choose to focus their resources: Photoshop (Windows, MacOS, iPadOS), WhatsApp (iOS, Android, web - kind of), Pokémon Go (Android, iOS, iPadOS - kind of). So, covering three of the top-six is a decent enough score for now.";
+"Paragraph_5.6" = "The roadmap for additional future platform support will depend on uptake and support from the software community. MacOS and VisionOS both more or less work already. Apple's tvOS could be technically doable, if needed. However, a promising future step would be to support the automatic generation of web site pages using the same data sources used by the app. This would indirectly cover Android, PC, and more. And would benefit the cubs that need to keep the information up to date.";
 
 /* First paragraph Developers section of Readme page */
 "Paragraph_6.1" = "You can find this app on GitHub. This allows other software developers to contribute. Getting more developers speeds things up somewhat, but also gives fresh ideas and promotes continuity.";

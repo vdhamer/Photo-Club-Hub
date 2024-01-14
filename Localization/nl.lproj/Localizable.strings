@@ -177,22 +177,22 @@ Default status of member within a club. Used in concatenations. */
 "Paragraph_4.3" = "Door te klikken ***binnen*** het vierkante beeld kan men verschillende delen van het beeld-met-vlakjes van dichtbij bekijken. Klik ***buiten*** het vierkante beeld om de animatie af te stoppen.";
 
 /* First paragraph SupportedPlatforms section of Readme page */
-"Paragraph_5.1" = "De app vereist minimaal iOS 17.0 (of iPadOS 17.0). Dit betekent dat apparaatmodellen ongeveer 7 jaar lang met nieuwe app versies ondersteund worden. Apparaten met bijvoorbeeld iOS 16 krijgen in de App Store alleen oudere app versies te zien.";
+"Paragraph_5.1" = "De app vereist minimaal iOS 17.0 (of iPadOS 17.0). Dit betekent dat apparaat modellen ongeveer 7 jaar lang met nieuwe app versies ondersteund worden. Voor apparaten met bijvoorbeeld iOS 16 heeft de App Store oudere versies van de app nog beschikbaar.";
 
 /* Second paragraph SupportedPlatforms section of Readme page */
-"Paragraph_5.2" = "De app maakt intern gebruik van diverse __Apple__ software technologieën: Swift (een programmeertaal), SwiftUI (voor schermontwerp), Core Data (lokale dataopslag), Metal (versnelt de animatie), Concurrency (laden van data), en Animations (gebruikersinteractie).";
+"Paragraph_5.2" = "De app maakt intern zwaar gebruik van diverse __Apple__ software technologieën: Swift (een programmeertaal), SwiftUI (voor schermontwerp), Core Data (lokale dataopslag), Metal (snelle complexe animaties), \"Structured Concurrency\" (laden van data), en uiteraard iOS zelf.";
 
 /* Third paragraph SupportedPlatforms section of Readme page */
-"Paragraph_5.3" = "Door alleen Apple technologie te ondersteunen, kan het ontwikkelen van de app zich richten op functionaliteit in plaats van op het ondersteunen van diverse apparaten of het ondersteunen van oudere versies van het besturingssysteem.";
+"Paragraph_5.3" = "Door vooralsnog alleen Apple technologie te ondersteunen, kan het ontwikkelen van de app zich richten op functionaliteit in plaats van op het ondersteunen van diverse apparaat soorten en OS versies.";
 
 /* Fourth paragraph SupportedPlatforms section of Readme page */
-"Paragraph_5.4" = "Dit heeft uiteraard wel het nadeel dat er niet gauw een __Android__ versie van deze app beschikbaar zal komen. De bekendste apps doen dit wel om de gehele mobiele markt te kunnen bedienen, maar dit vereist veel meer werk om de voortvloeiende technische beperkingen te omzeilen.";
+"Paragraph_5.4" = "Dit heeft uiteraard wel het nadeel dat er niet gauw een __Android__ versie van deze app beschikbaar zal komen. De bekendste apps doen dit wel om de gehele mobiele markt te kunnen bedienen, maar dit vereist veel werk en technische compromissen.";
 
 /* Fifth paragraph SupportedPlatforms section of Readme page */
-"Paragraph_5.5" = "De keus om Android vooralsnog te negeren heeft ook een ander gevolg: de app mag eigenlijk geen essentiële functionaliteit bevatten waarvoor geen alternatief voorhanden is. En met \"alternatief\" denken we dus vooral aan een website.";
+"Paragraph_5.5" = "De keus om Android vooralsnog te negeren heeft ook een ander gevolg: de app kan geen essentiële functionaliteit bevatten waarvoor geen goed alternatief voorhanden is. En met \"alternatief\" denken we dus vooral aan een website. Die website is bijvoorbeeld ook nodig voor PC gebruikers. En voor functionaliteit die deze app niet afdekt (zoals clubnieuws en vergaderschema).";
 
 /* Sixth paragraph SupportedPlatforms section of Readme page */
-"Paragraph_5.6" = "Overigens, zelfs als er een Android versie van de app bestond, dan heeft een club nog altijd een website nodig voor bijvoorbeeld PC gebruikers. En voor het verlenen van andere diensten zoals clubnieuws, vergaderschema of archiveren van jaarverslagen.";
+"Paragraph_5.6" = "Een veelbelovende uitbreiding zou het automatisch aanmaken van website pagina's zijn. Die pagina's kunnen op dezelfde manier van data voorzien worden als de app. Hiermee steun je bijvoorbeeld Android en PC gebruikers, maar vereenvoudig je ook het actueel houden van de data.   ";
 
 /* First paragraph Developers section of Readme page */
 "Paragraph_6.1" = "De broncode van deze app is te vinden op GitHub. Mede omdat wij mede-ontwikkelaars zoeken om hun steentjes bij te dragen. Dit levert meer voortgang, bevordert frisse ideeën en bevordert de continuïteit.";

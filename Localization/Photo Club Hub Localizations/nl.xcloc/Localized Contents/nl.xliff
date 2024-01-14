@@ -255,33 +255,33 @@ Via bovenstaande knop kunt U (anoniem) stemmen op welke toekomstige uitbreidinge
         <note>Third paragraph in Prelude section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_5.1" xml:space="preserve">
-        <source>The app runs on iPhone and iPad and requires iOS 17.0 or higher. Most iOS users tend to upgrade to the latest possible iOS version, which means that the app supports devices made in the last 5 or 6 years.</source>
-        <target>De app vereist minimaal iOS 17.0 (of iPadOS 17.0). Dit betekent dat apparaatmodellen ongeveer 7 jaar lang met nieuwe app versies ondersteund worden. Apparaten met bijvoorbeeld iOS 16 krijgen in de App Store alleen oudere app versies te zien.</target>
+        <source>The app runs on iPhone and iPad and requires iOS 17.0 or higher. As most iOS users upgrade to the latest iOS version, this means that the latest app version can support devices made in the last 6 or so years.</source>
+        <target>De app vereist minimaal iOS 17.0 (of iPadOS 17.0). Dit betekent dat apparaat modellen ongeveer 7 jaar lang met nieuwe app versies ondersteund worden. Voor apparaten met bijvoorbeeld iOS 16 heeft de App Store oudere versies van de app nog beschikbaar.</target>
         <note>First paragraph SupportedPlatforms section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_5.2" xml:space="preserve">
-        <source>The app uses various Apple software technologies including Swift (a programming language), SwiftUI (a user interface framework), Core Data (local data storage), Metal (graphics acceleration), concurrency (for fetching data), and animations.</source>
-        <target>De app maakt intern gebruik van diverse __Apple__ software technologieën: Swift (een programmeertaal), SwiftUI (voor schermontwerp), Core Data (lokale dataopslag), Metal (versnelt de animatie), Concurrency (laden van data), en Animations (gebruikersinteractie).</target>
+        <source>The app depends heavily on various Apple software technologies. These include Swift (a programming language), SwiftUI (a user interface framework), Core Data (local data storage), Metal (graphics acceleration), and so-called _structured" concurrency_ (for data fetching), Xcode (development environment), and obviously iOS itself.</source>
+        <target>De app maakt intern zwaar gebruik van diverse __Apple__ software technologieën: Swift (een programmeertaal), SwiftUI (voor schermontwerp), Core Data (lokale dataopslag), Metal (snelle complexe animaties), "Structured Concurrency" (laden van data), en uiteraard iOS zelf.</target>
         <note>Second paragraph SupportedPlatforms section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_5.3" xml:space="preserve">
-        <source>The benefit of an iOS focus is that it allows the developers to focus on functionality rather than cross-platform and cross-version interoperability issues.</source>
-        <target>Door alleen Apple technologie te ondersteunen, kan het ontwikkelen van de app zich richten op functionaliteit in plaats van op het ondersteunen van diverse apparaten of het ondersteunen van oudere versies van het besturingssysteem.</target>
+        <source>The benefit of an iOS focus is that it allows the app developers to focus on functionality rather than cross-platform compatibility.</source>
+        <target>Door vooralsnog alleen Apple technologie te ondersteunen, kan het ontwikkelen van de app zich richten op functionaliteit in plaats van op het ondersteunen van diverse apparaat soorten en OS versies.</target>
         <note>Third paragraph SupportedPlatforms section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_5.4" xml:space="preserve">
-        <source>The drawback, however, is the lack of Android support, because the Android universe has its own set of software technologies. Apps that choose to support multiple platforms require more development effort and often contain more technical compromises.</source>
-        <target>Dit heeft uiteraard wel het nadeel dat er niet gauw een __Android__ versie van deze app beschikbaar zal komen. De bekendste apps doen dit wel om de gehele mobiele markt te kunnen bedienen, maar dit vereist veel meer werk om de voortvloeiende technische beperkingen te omzeilen.</target>
+        <source>The drawback, however, is the lack of Android support (for now). This is  because the Android world has its own set of software technologies and tends to have more internal diversity. Apps that choose to support multiple platforms require more effort or more technical compromises.</source>
+        <target>Dit heeft uiteraard wel het nadeel dat er niet gauw een __Android__ versie van deze app beschikbaar zal komen. De bekendste apps doen dit wel om de gehele mobiele markt te kunnen bedienen, maar dit vereist veel werk en technische compromissen.</target>
         <note>Fourth paragraph SupportedPlatforms section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_5.5" xml:space="preserve">
-        <source>There is another perspective on not targeting Android anytime soon: it implies the app cannot contain any essentially functionality for which there is no alternative. So, again, the app cannot replace a club's website.</source>
-        <target>De keus om Android vooralsnog te negeren heeft ook een ander gevolg: de app mag eigenlijk geen essentiële functionaliteit bevatten waarvoor geen alternatief voorhanden is. En met "alternatief" denken we dus vooral aan een website.</target>
+        <source>To put this into perspective, the top-6 software "platforms" are (largest to smaller): web, Android, Windows, iOS, iPadOS, and MacOS. Only the very largest apps (like Word, Twitter, Minecraft, Chrome) cover the full range. Other famous apps cover only half: Photoshop (Windows, MacOS, iPadOS), WhatsApp (iPhone, Android, web - kind of), Pokémon Go (Android, iOS, iPadOS - kind of).</source>
+        <target>De keus om Android vooralsnog te negeren heeft ook een ander gevolg: de app kan geen essentiële functionaliteit bevatten waarvoor geen goed alternatief voorhanden is. En met "alternatief" denken we dus vooral aan een website. Die website is bijvoorbeeld ook nodig voor PC gebruikers. En voor functionaliteit die deze app niet afdekt (zoals clubnieuws en vergaderschema).</target>
         <note>Fifth paragraph SupportedPlatforms section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_5.6" xml:space="preserve">
-        <source>To put the app's device support into perspective, consider the top-6 software environments. The top-6 platforms are, in [largest-first order](https://www.youtube.com/watch?v=7S9PBgS8HS8): web, Android, Windows, iOS, iPadOS. Only the very largest apps (like MS Word, Twitter, Minecraft, Chrome) manage to cover the full range. But many well-known apps choose to focus their resources: Photoshop (Windows, MacOS, iPadOS), WhatsApp (iOS, Android, web - kind of), Pokémon Go (Android, iOS, iPadOS - kind of). So, covering three of the top-six is a decent enough score for now.</source>
-        <target>Overigens, zelfs als er een Android versie van de app bestond, dan heeft een club nog altijd een website nodig voor bijvoorbeeld PC gebruikers. En voor het verlenen van andere diensten zoals clubnieuws, vergaderschema of archiveren van jaarverslagen.</target>
+        <source>The roadmap for additional future platform support will depend on uptake and support from the software community. MacOS and VisionOS both more or less work already. Apple's tvOS could be technically doable, if needed. However, a promising future step would be to support the automatic generation of web site pages using the same data sources used by the app. This would indirectly cover Android, PC, and more. And would benefit the cubs that need to keep the information up to date.</source>
+        <target>Een veelbelovende uitbreiding zou het automatisch aanmaken van website pagina's zijn. Die pagina's kunnen op dezelfde manier van data voorzien worden als de app. Hiermee steun je bijvoorbeeld Android en PC gebruikers, maar vereenvoudig je ook het actueel houden van de data.   </target>
         <note>Sixth paragraph SupportedPlatforms section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_6.1" xml:space="preserve">
