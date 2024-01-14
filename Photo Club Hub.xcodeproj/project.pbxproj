@@ -344,7 +344,6 @@
 			children = (
 				D08319E5277F70A30049AB84 /* Photo Club Hub */,
 				D0831A17277F71340049AB84 /* Photo-Club-Hub-Info.plist */,
-				D04DFD892B39FD19006EF297 /* Photo-Club-Hub-InfoPlist.strings */,
 				D0831A3F277F731C0049AB84 /* Extensions */,
 				D0CEAECD2B2E1120005AE47D /* Localization */,
 				D08319EA277F70A40049AB84 /* Assets.xcassets */,
@@ -532,6 +531,7 @@
 		D0CEAECD2B2E1120005AE47D /* Localization */ = {
 			isa = PBXGroup;
 			children = (
+				D04DFD892B39FD19006EF297 /* Photo-Club-Hub-InfoPlist.strings */,
 				D0B52495277F9A4B00927BCA /* Localizable.strings */,
 				D0CEAECE2B2E1134005AE47D /* Settings.bundle */,
 				D0DF0F442B2CFA3800E9FEC8 /* Photo Club Hub Localizations */,
