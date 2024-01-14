@@ -42,6 +42,11 @@
         <target>%lld fotografen</target>
         <note>Header of section of Who's Who screen</note>
       </trans-unit>
+      <trans-unit id="Amsterdam has two musea dedicated to photography" xml:space="preserve">
+        <source>Amsterdam has two musea dedicated to photography</source>
+        <target>De twee fotomusea aan de Keizersgracht in Amsterdam</target>
+        <note>Caption of Musea image on Readme page</note>
+      </trans-unit>
       <trans-unit id="App version %@ (build %@)" xml:space="preserve">
         <source>App version %@ (build %@)</source>
         <target>App versie %@ (build %@)</target>
@@ -81,6 +86,11 @@
         <source>Developers wanted</source>
         <target>Ontwikkelaars in de zaal?</target>
         <note>Section title on Readme page</note>
+      </trans-unit>
+      <trans-unit id="Example of a link to a club web site" xml:space="preserve">
+        <source>Example of a link to a club web site</source>
+        <target>Voorbeeld van een Link naar een club website</target>
+        <note>Caption of Websites image on Readme page</note>
       </trans-unit>
       <trans-unit id="Features and tips" xml:space="preserve">
         <source>Features and tips</source>
@@ -197,30 +207,37 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
       <trans-unit id="Paragraph_3.1" xml:space="preserve">
         <source>__Web sites__
 We regularly add features to the app. This requires some care, because we still want to maintain our focus on providing an optimal viewing experience. The app therefore explicitly does _not_ aim to replace existing websites, but instead provides links to these websites.</source>
-        <target state="translated">__Websites__
+        <target>__Websites__
 Het hoofddoel van de app is om de portfolio's via een strakke presentatie tot hun recht te laten komen. Wij streven er dus _niet_ naar dat de app een website kan vervangen. Daarom verwijst de app de gebruiker via links door naar de websites van de clubs.</target>
         <note>First paragraph in The Features section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.2" xml:space="preserve">
         <source>__Languages__
 The app supports English and Dutch. iOS automatically selects the app's language based on your device’s language settings (_Settings &gt; General &gt; Language &amp; Region &gt; Preferred Language Order_). iOS also allows you to overrule this choice per app (_Settings &gt; Photo Club Waalre &gt; Language_).</source>
-        <target state="translated">__Meertalig__
+        <target>__Meertalig__
 De app ondersteunt zowel Nederlands als Engels. De taal van de app past zich automatisch aan op de taalinstelling van het apparaat (_Instellingen → Algemeen → Taal en regio → Volgorde voorkeurstalen_). Als alternatief kan een gebruiker de taalkeuze alleen voor deze app aanpassen (_Instellingen → Fotoclub Hub → Voorkeurstaal_).</target>
         <note>Second paragraph in The Features section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.3" xml:space="preserve">
         <source>__Deleting__
 On the Portfolio page, you can swipe to ***Delete*** a member from the list. Don't worry - if the person is still a club member, that person will reappear the next time the app synchronizes its local data with online data. This swiping can be useful to remove members who are no longer on the online data members lists. In any case, swipe as much as you like (after all, it just might be therapeutical).</source>
-        <target state="translated">__Wissen__
+        <target>__Wissen__
 De gebruiker kan op de Portfolio pagina leden verwijderen door hun naam naar links te vegen. Dat verwijderen is tijdelijk indien het lid nog op de online ledenlijst van de club staat: bij opnieuw synchroniseren komt de naam dan automatisch weer terug. Maar dit "wegvegen" kan nuttig zijn als bijvoorbeeld een kandidaat-lid vertrekt zonder lid te worden. Hiermee verwijder je iemand uit de locale ledenlijst die niet meer voorkomt in de online ledenlijst. Als alternatief kan men ook de app zelf verwijderen en opnieuw installeren.</target>
         <note>Third paragraph in The Features section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.4" xml:space="preserve">
+        <source>__Musea__
+The app also contains the names and locations of a few dozen photo musea. These show up on the maps of the Clubs and Musea screen if you zoom out enough to encounter them.</source>
+        <target>__Musea__
+Als een soort toegift kan de app ook diverse fotomusea op de landkaarten tonen. Deze zijn te vinden door voldoende uit te zoomen.</target>
+        <note>Fourth paragraph in The Features section of Readme page</note>
+      </trans-unit>
+      <trans-unit id="Paragraph_3.5" xml:space="preserve">
         <source>__Roadmap__
 By clicking on the above button you can (anonymously) vote for improvements you would like in future versions of this app. You can only vote once for any particular improvement.</source>
         <target>__Roadmap__
 Via bovenstaande knop kunt U (anoniem) stemmen op welke toekomstige uitbreidingen het nuttigst zijn. U kunt maximaal één stem uitbrengen per uitbreiding.</target>
-        <note>Fourth paragraph in The Features section of Readme page</note>
+        <note>Fifth paragraph in The Features section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_4.1" xml:space="preserve">
         <source>When the app opens, it shows a large image corresponding to the app’s icon. If you tap somewhere ***inside*** the image, it zooms out to show the full image representing how digital cameras see color.</source>

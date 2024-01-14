@@ -42,6 +42,11 @@
         <target>%lld photographers</target>
         <note>Header of section of Who's Who screen</note>
       </trans-unit>
+      <trans-unit id="Amsterdam has two musea dedicated to photography" xml:space="preserve">
+        <source>Amsterdam has two musea dedicated to photography</source>
+        <target>Amsterdam has two musea dedicated to photography</target>
+        <note>Caption of Musea image on Readme page</note>
+      </trans-unit>
       <trans-unit id="App version %@ (build %@)" xml:space="preserve">
         <source>App version %@ (build %@)</source>
         <target>App version %@ (build %@)</target>
@@ -81,6 +86,11 @@
         <source>Developers wanted</source>
         <target>Developers wanted</target>
         <note>Section title on Readme page</note>
+      </trans-unit>
+      <trans-unit id="Example of a link to a club web site" xml:space="preserve">
+        <source>Example of a link to a club web site</source>
+        <target>Example of a link to a club web site</target>
+        <note>Caption of Websites image on Readme page</note>
       </trans-unit>
       <trans-unit id="Features and tips" xml:space="preserve">
         <source>Features and tips</source>
@@ -216,11 +226,18 @@ On the Portfolio page, you can swipe to ***Delete*** a member from the list. Don
         <note>Third paragraph in The Features section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.4" xml:space="preserve">
+        <source>__Musea__
+The app also contains the names and locations of a few dozen photo musea. These show up on the maps of the Clubs and Musea screen if you zoom out enough to encounter them.</source>
+        <target>__Musea__
+The app also contains the names and locations of a few dozen photo musea. These show up on the maps of the Clubs and Musea screen if you zoom out enough to encounter them.</target>
+        <note>Fourth paragraph in The Features section of Readme page</note>
+      </trans-unit>
+      <trans-unit id="Paragraph_3.5" xml:space="preserve">
         <source>__Roadmap__
 By clicking on the above button you can (anonymously) vote for improvements you would like in future versions of this app. You can only vote once for any particular improvement.</source>
         <target>__Roadmap__
 By clicking on the above button you can (anonymously) vote for improvements you would like in future versions of this app. You can only vote once for any particular improvement.</target>
-        <note>Fourth paragraph in The Features section of Readme page</note>
+        <note>Fifth paragraph in The Features section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_4.1" xml:space="preserve">
         <source>When the app opens, it shows a large image corresponding to the app’s icon. If you tap somewhere ***inside*** the image, it zooms out to show the full image representing how digital cameras see color.</source>

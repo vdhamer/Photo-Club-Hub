@@ -13,6 +13,9 @@
 /* Administrative role of member within a club. Used as part of concatenations. */
 "admin" = "admin";
 
+/* Caption of Musea image on Readme page */
+"Amsterdam has two musea dedicated to photography" = "Amsterdam has two musea dedicated to photography";
+
 /* To generate strings like "secretary and admin" */
 "and" = "and";
 
@@ -45,6 +48,9 @@
 
 /* Section title on Readme page */
 "Developers wanted" = "Developers wanted";
+
+/* Caption of Websites image on Readme page */
+"Example of a link to a club web site" = "Example of a link to a club web site";
 
 /* Relationship status of member within a club. Used in concatenations. */
 "external coach" = "external coach";
@@ -147,7 +153,10 @@ Default status of member within a club. Used in concatenations. */
 "Paragraph_3.3" = "__Deleting__\nOn the Portfolio page, you can swipe to ***Delete*** a member from the list. Don't worry - if the person is still a club member, that person will reappear the next time the app synchronizes its local data with online data. This swiping can be useful to remove members who are no longer on the online data members lists. In any case, swipe as much as you like (after all, it just might be therapeutical).";
 
 /* Fourth paragraph in The Features section of Readme page */
-"Paragraph_3.4" = "__Roadmap__\nBy clicking on the above button you can (anonymously) vote for improvements you would like in future versions of this app. You can only vote once for any particular improvement.";
+"Paragraph_3.4" = "__Musea__\nThe app also contains the names and locations of a few dozen photo musea. These show up on the maps of the Clubs and Musea screen if you zoom out enough to encounter them.";
+
+/* Fifth paragraph in The Features section of Readme page */
+"Paragraph_3.5" = "__Roadmap__\nBy clicking on the above button you can (anonymously) vote for improvements you would like in future versions of this app. You can only vote once for any particular improvement.";
 
 /* First paragraph in Prelude section of Readme page */
 "Paragraph_4.1" = "When the app opens, it shows a large image corresponding to the app’s icon. If you tap somewhere ***inside*** the image, it zooms out to show the full image representing how digital cameras see color.";

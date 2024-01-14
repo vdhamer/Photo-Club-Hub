@@ -87,6 +87,17 @@ struct ReadmeView: View {
                                           comment: "First paragraph in The Features section of Readme page",
                                           geo: geo, bottomPaddingAmount: 10)
 
+                                Image("Website")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .border(.gray, width: 1)
+                                    .frame(width: geo.size.width * 0.8, alignment: .center)
+                                Text("Example of a link to a club web site",
+                                     comment: "Caption of Websites image on Readme page")
+                                .font(.callout.italic())
+                                .frame(width: geo.size.width, alignment: .center)
+                                Text("")
+
                                 Paragraph("3.2", comment: "Second paragraph in The Features section of Readme page",
                                           geo: geo)
 
@@ -103,6 +114,20 @@ struct ReadmeView: View {
 
                                 Paragraph("3.3", comment: "Third paragraph in The Features section of Readme page",
                                           geo: geo, bottomPaddingAmount: 10)
+
+                                Paragraph("3.4", comment: "Fourth paragraph in The Features section of Readme page",
+                                          geo: geo, bottomPaddingAmount: 10)
+
+                                Image("Maps")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .border(.gray, width: 1)
+                                    .frame(width: geo.size.width * 0.8, alignment: .center)
+                                Text("Amsterdam has two musea dedicated to photography",
+                                     comment: "Caption of Musea image on Readme page")
+                                .font(.callout.italic())
+                                .frame(width: geo.size.width, alignment: .center)
+                                Text("")
                             }
 
 /*
@@ -127,10 +152,9 @@ struct ReadmeView: View {
                                 Spacer()
                             }
 
-                            Paragraph("3.4", comment: "Fourth paragraph in The Features section of Readme page",
+                            Paragraph("3.5", comment: "Fifth paragraph in The Features section of Readme page",
                                       geo: geo)
- */
-
+*/
                         }
 
                         VStack {

@@ -16,6 +16,9 @@
 /* Administrative role of member within a club. Used as part of concatenations. */
 "admin" = "admin";
 
+/* Caption of Musea image on Readme page */
+"Amsterdam has two musea dedicated to photography" = "De twee fotomusea aan de Keizersgracht in Amsterdam";
+
 /* To generate strings like "secretary and admin" */
 "and" = "en";
 
@@ -51,6 +54,9 @@
 
 /* Section title on Readme page */
 "Developers wanted" = "Ontwikkelaars in de zaal?";
+
+/* Caption of Websites image on Readme page */
+"Example of a link to a club web site" = "Voorbeeld van een Link naar een club website";
 
 /* Relationship status of member within a club. Used in concatenations. */
 "external coach" = "mentor";
@@ -156,7 +162,10 @@ Default status of member within a club. Used in concatenations. */
 "Paragraph_3.3" = "__Wissen__\nDe gebruiker kan op de Portfolio pagina leden verwijderen door hun naam naar links te vegen. Dat verwijderen is tijdelijk indien het lid nog op de online ledenlijst van de club staat: bij opnieuw synchroniseren komt de naam dan automatisch weer terug. Maar dit \"wegvegen\" kan nuttig zijn als bijvoorbeeld een kandidaat-lid vertrekt zonder lid te worden. Hiermee verwijder je iemand uit de locale ledenlijst die niet meer voorkomt in de online ledenlijst. Als alternatief kan men ook de app zelf verwijderen en opnieuw installeren.";
 
 /* Fourth paragraph in The Features section of Readme page */
-"Paragraph_3.4" = "__Roadmap__\nVia bovenstaande knop kunt U (anoniem) stemmen op welke toekomstige uitbreidingen het nuttigst zijn. U kunt maximaal één stem uitbrengen per uitbreiding.";
+"Paragraph_3.4" = "__Musea__\nAls een soort toegift kan de app ook diverse fotomusea op de landkaarten tonen. Deze zijn te vinden door voldoende uit te zoomen.";
+
+/* Fifth paragraph in The Features section of Readme page */
+"Paragraph_3.5" = "__Roadmap__\nVia bovenstaande knop kunt U (anoniem) stemmen op welke toekomstige uitbreidingen het nuttigst zijn. U kunt maximaal één stem uitbrengen per uitbreiding.";
 
 /* First paragraph in Prelude section of Readme page */
 "Paragraph_4.1" = "Bij het opstarten van de app, wordt een grote versie van het logo van de app zichtbaar. Dit is een interactief speeltje. Door ***binnen het beeld*** te klikken zoomt het beeld langzaam uit tot en vierkante versie van bovenstaande foto.";
