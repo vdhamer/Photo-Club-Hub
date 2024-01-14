@@ -25,6 +25,7 @@
 		D04A2B122AC0958C003ED113 /* LineCount.xlsx in Resources */ = {isa = PBXBuildFile; fileRef = D04A2B112AC0958C003ED113 /* LineCount.xlsx */; };
 		D04B1A0C2B1AA06300EB3817 /* OrganizationList.json in Resources */ = {isa = PBXBuildFile; fileRef = D04B1A0B2B1AA06300EB3817 /* OrganizationList.json */; };
 		D04DFD882B39F788006EF297 /* Published+UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A40277F731C0049AB84 /* Published+UserDefaults.swift */; };
+		D053F23D2B54430C00662EF8 /* Photo-Club-Hub-InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D053F23B2B54430C00662EF8 /* Photo-Club-Hub-InfoPlist.strings */; };
 		D05414F72AC7499000D899D8 /* FotogroepDeGenderMembersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05414F62AC7499000D899D8 /* FotogroepDeGenderMembersProvider.swift */; };
 		D05414F92AC749EC00D899D8 /* FotogroepDeGenderMembersProvider+insertSomeHardcodedMemberDataCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05414F82AC749EC00D899D8 /* FotogroepDeGenderMembersProvider+insertSomeHardcodedMemberDataCommon.swift */; };
 		D05AF1B229EF44530079AE77 /* Roadmap in Frameworks */ = {isa = PBXBuildFile; productRef = D05AF1B129EF44530079AE77 /* Roadmap */; };
@@ -127,6 +128,7 @@
 		D04A2B112AC0958C003ED113 /* LineCount.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = LineCount.xlsx; sourceTree = "<group>"; };
 		D04B1A0B2B1AA06300EB3817 /* OrganizationList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = OrganizationList.json; sourceTree = "<group>"; };
 		D04DFD8A2B39FD19006EF297 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = "nl.lproj/Photo-Club-Hub-InfoPlist.strings"; sourceTree = "<group>"; };
+		D053F23C2B54430C00662EF8 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = "nl.lproj/Photo-Club-Hub-InfoPlist.strings"; sourceTree = "<group>"; };
 		D05414F62AC7499000D899D8 /* FotogroepDeGenderMembersProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FotogroepDeGenderMembersProvider.swift; sourceTree = "<group>"; };
 		D05414F82AC749EC00D899D8 /* FotogroepDeGenderMembersProvider+insertSomeHardcodedMemberDataCommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FotogroepDeGenderMembersProvider+insertSomeHardcodedMemberDataCommon.swift"; sourceTree = "<group>"; };
 		D05E451D27EF2A2C00D31327 /* ReadmeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeView.swift; sourceTree = "<group>"; };
@@ -344,6 +346,7 @@
 			children = (
 				D08319E5277F70A30049AB84 /* Photo Club Hub */,
 				D0831A17277F71340049AB84 /* Photo-Club-Hub-Info.plist */,
+				D053F23B2B54430C00662EF8 /* Photo-Club-Hub-InfoPlist.strings */,
 				D0831A3F277F731C0049AB84 /* Extensions */,
 				D0CEAECD2B2E1120005AE47D /* Localization */,
 				D08319EA277F70A40049AB84 /* Assets.xcassets */,
@@ -702,6 +705,7 @@
 				D0B52497277F9A4B00927BCA /* Localizable.strings in Resources */,
 				D0831A51277F73C00049AB84 /* Preview Assets.xcassets in Resources */,
 				D04A2B122AC0958C003ED113 /* LineCount.xlsx in Resources */,
+				D053F23D2B54430C00662EF8 /* Photo-Club-Hub-InfoPlist.strings in Resources */,
 				D0FB814D2B51A53B00A5EAF4 /* portfoliosScreen.png in Resources */,
 				D0BA1F222B519D0800C39130 /* dataModel.png in Resources */,
 				D097FF692B52FF9C0045EE5C /* dataModelSourceFile.xcdatamodeld.zip in Resources */,
@@ -894,6 +898,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				D04DFD8A2B39FD19006EF297 /* nl */,
+			);
+			name = "Photo-Club-Hub-InfoPlist.strings";
+			sourceTree = "<group>";
+		};
+		D053F23B2B54430C00662EF8 /* Photo-Club-Hub-InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D053F23C2B54430C00662EF8 /* nl */,
 			);
 			name = "Photo-Club-Hub-InfoPlist.strings";
 			sourceTree = "<group>";

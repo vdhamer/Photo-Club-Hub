@@ -87,6 +87,9 @@ struct ReadmeView: View {
                                           comment: "First paragraph in The Features section of Readme page",
                                           geo: geo, bottomPaddingAmount: 10)
 
+                                Paragraph("3.2", comment: "Second paragraph in The Features section of Readme page",
+                                          geo: geo)
+
                                 Image("Localizations")
                                     .resizable()
                                     .frame(width: 315, height: 64, alignment: .center)
@@ -98,8 +101,6 @@ struct ReadmeView: View {
                                 .frame(width: geo.size.width, alignment: .center)
                                 Text("")
 
-                                Paragraph("3.2", comment: "Second paragraph in The Features section of Readme page",
-                                          geo: geo)
                                 Paragraph("3.3", comment: "Third paragraph in The Features section of Readme page",
                                           geo: geo, bottomPaddingAmount: 10)
                             }

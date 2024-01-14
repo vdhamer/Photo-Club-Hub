@@ -160,23 +160,23 @@ Try dragging down the Photo Clubs screen to reload the default clubs.</target>
         <note>Sixth paragraph in Waalre section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_2.1" xml:space="preserve">
-        <source>As mentioned, the goal of this app is to showcase curated work of members of photo clubs.</source>
-        <target>As mentioned, the goal of this app is to showcase curated work of members of photo clubs.</target>
+        <source>Photo clubs play a central role in this app. The Portfolios screen shows a list of photo clubs.</source>
+        <target>Photo clubs play a central role in this app. The Portfolios screen shows a list of photo clubs.</target>
         <note>First paragraph in The App on Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_2.2" xml:space="preserve">
-        <source>The main screen of the app shown a series of ***photo clubs***. Each photo club, in turn, contains a series of member ***portfolios***. The portfolios contain the actual images.</source>
-        <target>The main screen of the app shown a series of ***photo clubs***. Each photo club, in turn, contains a series of member ***portfolios***. The portfolios contain the actual images.</target>
+        <source>Each photo club, in turn, contains a series of member ***portfolios*** containing the actual images.</source>
+        <target>Each photo club, in turn, contains a series of member ***portfolios*** containing the actual images.</target>
         <note>Second paragraph in The App on Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_2.3" xml:space="preserve">
-        <source>Each portfolio thus covers the subset of the photographer's work that is associated with that photo club. A photographer could have more than one portfolio in this app, if the photographer was (at some point in time) a member of multiple photo clubs.</source>
-        <target>Each portfolio thus covers the subset of the photographer's work that is associated with that photo club. A photographer could have more than one portfolio in this app, if the photographer was (at some point in time) a member of multiple photo clubs.</target>
+        <source>Each portfolio thus covers the subset of the photographer's work _that is associated with that photo club_. Some photographers may have multiple portfolios in the app if the photographer is (or was at some point) associated with more than one photo club.</source>
+        <target>Each portfolio thus covers the subset of the photographer's work _that is associated with that photo club_. Some photographers may have multiple portfolios in the app if the photographer is (or was at some point) associated with more than one photo club.</target>
         <note>Third paragraph in The App on Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_2.4" xml:space="preserve">
-        <source>Each portfolio is shown in chronological order, with the latest work shown first, and typically spans multiple years.</source>
-        <target>Each portfolio is shown in chronological order, with the latest work shown first, and typically spans multiple years.</target>
+        <source>Each portfolio is shown in chronological order, with the latest work shown first, and often spans multiple years. Just like painters, styles may change on that time scale.</source>
+        <target>Each portfolio is shown in chronological order, with the latest work shown first, and often spans multiple years. Just like painters, styles may change on that time scale.</target>
         <note>Fourth paragraph in The App on Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_2.5" xml:space="preserve">
@@ -185,13 +185,13 @@ Try dragging down the Photo Clubs screen to reload the default clubs.</target>
         <note>Fifth paragraph in The App on Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_2.6" xml:space="preserve">
-        <source>For Photo Club Waalre, we chose to also include the work of former club members. By default, former members are not visible, but you can configure the app to show them.</source>
-        <target>For Photo Club Waalre, we chose to also include the work of former club members. By default, former members are not visible, but you can configure the app to show them.</target>
+        <source>For Photo Club Waalre, we chose to also include the work of former club members. By default, former members are not visible, but you can enable displaying them in the Preferences screen.</source>
+        <target>For Photo Club Waalre, we chose to also include the work of former club members. By default, former members are not visible, but you can enable displaying them in the Preferences screen.</target>
         <note>Sixth paragraph in the App on Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_2.7" xml:space="preserve">
-        <source>Contact us (github@vdhamer.com) if you are interested in adding support for your photo club.</source>
-        <target>Contact us (github@vdhamer.com) if you are interested in adding support for your photo club.</target>
+        <source>Contact us (e.g. via Github, Facebook or LinkedIn) if you are interested in adding support for your photo club.</source>
+        <target>Contact us (e.g. via Github, Facebook or LinkedIn) if you are interested in adding support for your photo club.</target>
         <note>Seventh paragraph in the App on Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.1" xml:space="preserve">

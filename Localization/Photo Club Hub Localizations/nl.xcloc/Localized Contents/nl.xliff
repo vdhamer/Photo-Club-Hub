@@ -1,20 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
-  <file original="en.lproj/Photo-Club-Hub-InfoPlist.strings" datatype="plaintext" source-language="en" target-language="nl">
+  <file original="en.lproj/Photo-Club-Hub-InfoPlist.strings" source-language="en" target-language="nl" datatype="plaintext">
     <header>
       <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="15.2" build-num="15C500b"/>
     </header>
     <body>
       <trans-unit id="CFBundleDisplayName" xml:space="preserve">
         <source>Photo Club Hub</source>
+        <target>Fotoclub Hub</target>
         <note>Bundle display name</note>
       </trans-unit>
       <trans-unit id="CFBundleName" xml:space="preserve">
         <source>Photo Club Hub</source>
+        <target>Photo Club Hub</target>
         <note>Bundle name</note>
       </trans-unit>
       <trans-unit id="NSLocationWhenInUseUsageDescription" xml:space="preserve">
         <source>User's location is shown on the maps.</source>
+        <target>Om de huidige locatie weer te geven op de landkaarten.</target>
         <note>Privacy - Location When In Use Usage Description</note>
       </trans-unit>
     </body>
@@ -133,7 +136,7 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
       </trans-unit>
       <trans-unit id="Paragraph_1.2" xml:space="preserve">
         <source>It does this in a _consistent_ way across all participating photographers and clubs. For the app's users, this consistency avoids having to find each club's website and discovering how to use it to find and browse the images.</source>
-        <target state="translated">De app presenteert op een _consistente_ wijze het werk van alle clubleden van de ondersteunde fotoclubs. Hiermee hoef je als gebruiker de website van een club niet zelf te vinden. En je hoeft ook niet voor ieder club te ontdekken hoe die specifieke website werkt.  </target>
+        <target>De app presenteert op een _consistente_ wijze het werk van alle clubleden van de ondersteunde fotoclubs. Hiermee hoef je als gebruiker de website van een club niet zelf te vinden. En je hoeft ook niet voor ieder club te ontdekken hoe die specifieke website werkt.  </target>
         <note>Second paragraph in Waalre section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_1.3" xml:space="preserve">
@@ -143,7 +146,7 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
       </trans-unit>
       <trans-unit id="Paragraph_1.4" xml:space="preserve">
         <source>The app was originally named _Photo Club Waalre_ after a 15-person photo club in the Netherlands. The word __hub__ in the newer name stresses the app's support for _multiple_ photo clubs, and the app's ambition to strengthen the ties between clubs by making their work easier to access.</source>
-        <target state="translated">Oorspronkelijk heette deze app _Fotogroep Waalre_ naar de fotoclub in de buurt van Eindhoven. Het woord __hub__ (ofwel 'trefplaats') in de naam benadrukt dat de app in de huidige versie meerdere fotoclubs tegelijk kan ondersteunen. En het benadrukt de ambitie om de banden tussen fotoclubs, fotografen en hun publiek te versterken.</target>
+        <target>Oorspronkelijk heette deze app _Fotogroep Waalre_ naar de fotoclub in de buurt van Eindhoven. Het woord __hub__ (ofwel 'trefplaats') in de naam benadrukt dat de app in de huidige versie meerdere fotoclubs tegelijk kan ondersteunen. En het benadrukt de ambitie om de banden tussen fotoclubs, fotografen en hun publiek te versterken.</target>
         <note>Fourth paragraph in Waalre section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_1.5" xml:space="preserve">
@@ -153,63 +156,63 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
       </trans-unit>
       <trans-unit id="Paragraph_1.6" xml:space="preserve">
         <source>Supporting many clubs also implies that individual clubs should be able to maintain their own data. This means the ability to provide and maintain the images, but also the club's membership list. Central support should focus on maintaining the app. The app's [GitHub site](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) explains the strategy for allowing clubs to maintain their data without any need for software expertise.</source>
-        <target state="translated">Er is echter meer hiervoor voor nodig: voor toepasbaarheid op grotere schaal moet het voor de individuele club eenvoudig zijn om hun ledeninformatie en de lijsten met geselecteerde foto's in de app zelf in te voeren en te onderhouden. Deze aanpak is geschreven op de [GitHub softwaresite](https://GitHub.com/vdhamer/Photo-Club-Hub#readme).</target>
+        <target>Er is echter meer hiervoor voor nodig: voor toepasbaarheid op grotere schaal moet het voor de individuele club eenvoudig zijn om hun ledeninformatie en de lijsten met geselecteerde foto's in de app zelf in te voeren en te onderhouden. Deze aanpak is geschreven op de [GitHub softwaresite](https://GitHub.com/vdhamer/Photo-Club-Hub#readme).</target>
         <note>Sixth paragraph in Waalre section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_2.1" xml:space="preserve">
-        <source>As mentioned, the goal of this app is to showcase curated work of members of photo clubs.</source>
-        <target>Het doel van deze app is, zoals gezegd, om geselecteerd werk te tonen van clubleden van fotoclubs.</target>
+        <source>Photo clubs play a central role in this app. The Portfolios screen shows a list of photo clubs.</source>
+        <target>Het doel van deze app is om geselecteerd werk te tonen van clubleden van fotoclubs. Fotoclubs spelen hierdoor een centrale rol in deze app.</target>
         <note>First paragraph in The App on Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_2.2" xml:space="preserve">
-        <source>The main screen of the app shown a series of ***photo clubs***. Each photo club, in turn, contains a series of member ***portfolios***. The portfolios contain the actual images.</source>
-        <target>De app heeft een hiërarchische structuur. Op het hoogste niveau vindt men de ***fotoclubs***. Binnen een fotoclubs treft men de ***portfolio's*** aan van de clubleden. Een portfolio bevat tenslotte de ***foto's*** van dat lid - althans die foto's van die betrekking hebben op de fotoclub.</target>
+        <source>Each photo club, in turn, contains a series of member ***portfolios*** containing the actual images.</source>
+        <target>Men vindt  de ***fotoclubs*** Op het hoogste niveau in het Porfolio's scherm. Binnen een fotoclub treft men de ***portfolio's*** aan van de clubleden. Een portfolio bevat de ***foto's*** van dat lid - althans die foto's die betrekking hebben op de fotoclub.</target>
         <note>Second paragraph in The App on Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_2.3" xml:space="preserve">
-        <source>Each portfolio thus covers the subset of the photographer's work that is associated with that photo club. A photographer could have more than one portfolio in this app, if the photographer was (at some point in time) a member of multiple photo clubs.</source>
-        <target>Een fotograaf kan meerdere portfolios hebben door lid te zijn (of geweest zijn) van meerdere fotoclubs. Een portfolio bevat dus alleen werk van een fotograaf dat besproken of geëxposeerd is bij één fotoclub. In principe kan een foto overigens in meerdere portfolios van die fotograaf voorkomen.</target>
+        <source>Each portfolio thus covers the subset of the photographer's work _that is associated with that photo club_. Some photographers may have multiple portfolios in the app if the photographer is (or was at some point) associated with more than one photo club.</source>
+        <target>Een fotograaf kan eventueel meerdere portfolios hebben door lid te zijn (of geweest te zijn) van meerdere fotoclubs. Een portfolio bevat dus alleen werk van een fotograaf dat besproken of geëxposeerd is bij één fotoclub. Een foto kan overigens in meerdere portfolios van een fotograaf voorkomen.</target>
         <note>Third paragraph in The App on Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_2.4" xml:space="preserve">
-        <source>Each portfolio is shown in chronological order, with the latest work shown first, and typically spans multiple years.</source>
-        <target>De beelden in een portfolio staan in chronologische volgorde: van nieuw naar oud. Een portfolio bestrijkt namelijk vaak een periode van vele jaren.</target>
+        <source>Each portfolio is shown in chronological order, with the latest work shown first, and often spans multiple years. Just like painters, styles may change on that time scale.</source>
+        <target>De beelden in een portfolio staan gerangschikt van nieuw naar oud. Een portfolio bestrijkt namelijk vaak een periode van vele jaren, en in die periode kan de stijl van een fotograaf veranderen.</target>
         <note>Fourth paragraph in The App on Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_2.5" xml:space="preserve">
         <source>We try to show the portfolios with **minimal distraction**. Web sites are often less optimal for this because they need to show browser controls (e.g., an address bar or tabs) and serve multiple purposes (e.g., show club news or contact information).</source>
-        <target>Net als bij een tentoonstelling is het belangrijk om een portfolio zonder afleiding te kunnen bekijken. Webpagina's zijn hiervoor vaak iets te druk wegens de bedieningselementen van de browser (zoals de adresbalk), en omdat een clubwebsite vaak ook andere doeleinden dient (bijvoorbeeld het tonen van clubnieuws).</target>
+        <target>Net als bij een tentoonstelling is het belangrijk om een portfolio zonder afleiding te kunnen bekijken. Webpagina's zijn hiervoor vaak iets te druk vanwege bedieningselementen zoals de adresbalk, maar ook omdat een clubwebsite vaak meerdere doeleinden moet dienen (bijvoorbeeld het tonen van clubnieuws).</target>
         <note>Fifth paragraph in The App on Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_2.6" xml:space="preserve">
-        <source>For Photo Club Waalre, we chose to also include the work of former club members. By default, former members are not visible, but you can configure the app to show them.</source>
-        <target>De app kan, indien een club daarvoor kiest, ook de portfolio's van *voormalige* clubleden tonen. De gebruiker kan bepalen of beschikbare portfolio's van ex-leden zichtbaar zijn.</target>
+        <source>For Photo Club Waalre, we chose to also include the work of former club members. By default, former members are not visible, but you can enable displaying them in the Preferences screen.</source>
+        <target>De app kan, indien een club daarvoor kiest, ook de portfolio's van *voormalige* clubleden tonen. De gebruiker kan zelf bepalen of beschikbare portfolio's van ex-leden zichtbaar zijn (via Instellingen).</target>
         <note>Sixth paragraph in the App on Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_2.7" xml:space="preserve">
-        <source>Contact us (github@vdhamer.com) if you are interested in adding support for your photo club.</source>
-        <target>Clubs met belangstelling om deel te nemen kunnen contact opnemen via github@vdhamer.com.</target>
+        <source>Contact us (e.g. via Github, Facebook or LinkedIn) if you are interested in adding support for your photo club.</source>
+        <target>Clubs met belangstelling om deel te nemen kunnen contact opnemen via Github, Facebook of LinkedIn.</target>
         <note>Seventh paragraph in the App on Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.1" xml:space="preserve">
         <source>__Web sites__
 We regularly add features to the app. This requires some care, because we still want to maintain our focus on providing an optimal viewing experience. The app therefore explicitly does _not_ aim to replace existing websites, but instead provides links to these websites.</source>
-        <target>__Websites__
-Het hoofddoel van de app is om de portfolio's via een strakke presentatie tot hun recht te laten komen. Wij streven er dus _niet_ naar dat de app een website kan vervangen. Daarom verwijst de app de gebruiker via links desgewenst door naar de websites van de clubs.</target>
+        <target state="translated">__Websites__
+Het hoofddoel van de app is om de portfolio's via een strakke presentatie tot hun recht te laten komen. Wij streven er dus _niet_ naar dat de app een website kan vervangen. Daarom verwijst de app de gebruiker via links door naar de websites van de clubs.</target>
         <note>First paragraph in The Features section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.2" xml:space="preserve">
         <source>__Languages__
 The app supports English and Dutch. iOS automatically selects the app's language based on your device’s language settings (_Settings &gt; General &gt; Language &amp; Region &gt; Preferred Language Order_). iOS also allows you to overrule this choice per app (_Settings &gt; Photo Club Waalre &gt; Language_).</source>
-        <target>__Meertalig__
-De app ondersteunt zowel Nederlands als Engels. De taal van de app past zich automatisch aan op de taalinstelling van het apparaat (_Instellingen → Algemeen → Taal en regio → Volgorde voorkeurstalen_). Als alternatief kan een gebruiker de taalkeuze alleen voor deze app aanpassen (_Instellingen → Fotogroep Waalre → Voorkeurstaal_).</target>
+        <target state="translated">__Meertalig__
+De app ondersteunt zowel Nederlands als Engels. De taal van de app past zich automatisch aan op de taalinstelling van het apparaat (_Instellingen → Algemeen → Taal en regio → Volgorde voorkeurstalen_). Als alternatief kan een gebruiker de taalkeuze alleen voor deze app aanpassen (_Instellingen → Fotoclub Hub → Voorkeurstaal_).</target>
         <note>Second paragraph in The Features section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.3" xml:space="preserve">
         <source>__Deleting__
 On the Portfolio page, you can swipe to ***Delete*** a member from the list. Don't worry - if the person is still a club member, that person will reappear the next time the app synchronizes its local data with online data. This swiping can be useful to remove members who are no longer on the online data members lists. In any case, swipe as much as you like (after all, it just might be therapeutical).</source>
-        <target>__Wissen__
-De gebruiker kan op de Portfolio pagina leden verwijderen door hun naam naar links te vegen. Dat verwijderen is slechts tijdelijk indien het lid nog op de online ledenlijst van de club staat: bij opnieuw synchroniseren komt de naam dan automatisch weer terug. Maar dit "wegvegen" kan nuttig zijn als bijvoorbeeld een kandidaat-lid vertrekt zonder lid te worden. Hiermee verwijder je iemand uit de locale database die niet meer voorkomt in de online ledenlijst. Als alternatief kan men ook de app verwijderen en opnieuw installeren.</target>
+        <target state="translated">__Wissen__
+De gebruiker kan op de Portfolio pagina leden verwijderen door hun naam naar links te vegen. Dat verwijderen is tijdelijk indien het lid nog op de online ledenlijst van de club staat: bij opnieuw synchroniseren komt de naam dan automatisch weer terug. Maar dit "wegvegen" kan nuttig zijn als bijvoorbeeld een kandidaat-lid vertrekt zonder lid te worden. Hiermee verwijder je iemand uit de locale ledenlijst die niet meer voorkomt in de online ledenlijst. Als alternatief kan men ook de app zelf verwijderen en opnieuw installeren.</target>
         <note>Third paragraph in The Features section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.4" xml:space="preserve">
