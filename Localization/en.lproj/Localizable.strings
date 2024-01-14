@@ -144,16 +144,16 @@ Default status of member within a club. Used in concatenations. */
 "Paragraph_2.7" = "Contact us (e.g. via Github, Facebook or LinkedIn) if you are interested in adding support for your photo club.";
 
 /* First paragraph in The Features section of Readme page */
-"Paragraph_3.1" = "__Web sites__\nWe regularly add features to the app. This requires some care, because we still want to maintain our focus on providing an optimal viewing experience. The app therefore explicitly does _not_ aim to replace existing websites, but instead provides links to these websites.";
+"Paragraph_3.1" = "__Web sites__\nThe app does not try to replace club web sites: web sites have more uses than just presenting photos. Because we consider web sites and this app to be _complementary_, the app provides clickable links to club web sites as well as to photographer websites.";
 
 /* Second paragraph in The Features section of Readme page */
-"Paragraph_3.2" = "__Languages__\nThe app supports English and Dutch. iOS automatically selects the app's language based on your device’s language settings (_Settings > General > Language & Region > Preferred Language Order_). iOS also allows you to overrule this choice per app (_Settings > Photo Club Waalre > Language_).";
+"Paragraph_3.2" = "__Languages__\nThe app currently supports English and Dutch. iOS automatically selects the app's language based on your device’s language settings (_Settings > General > Language & Region > Preferred Language Order_). iOS also allows you to overrule this choice per individual app (_Settings > Photo Club Hub > Language_).";
 
 /* Third paragraph in The Features section of Readme page */
-"Paragraph_3.3" = "__Deleting__\nOn the Portfolio page, you can swipe to ***Delete*** a member from the list. Don't worry - if the person is still a club member, that person will reappear the next time the app synchronizes its local data with online data. This swiping can be useful to remove members who are no longer on the online data members lists. In any case, swipe as much as you like (after all, it just might be therapeutical).";
+"Paragraph_3.3" = "__Deleting__\nOn the Portfolio page, you can swipe to ***Delete*** a member from the list. Don't worry - if the person is still a club member, that person will reappear the next time the app synchronises with online data. This swiping can be useful to remove members who are no longer on the online data members lists. In any case, swipe as much as you like (who knows, it just be therapeutical).";
 
 /* Fourth paragraph in The Features section of Readme page */
-"Paragraph_3.4" = "__Musea__\nThe app also contains the names and locations of a few dozen photo musea. These show up on the maps of the Clubs and Musea screen if you zoom out enough to encounter them.";
+"Paragraph_3.4" = "__Musea__\nThe app also contains the names and locations of a few dozen photo musea. These show up on the maps on the Clubs screen if you zoom out enough.";
 
 /* Fifth paragraph in The Features section of Readme page */
 "Paragraph_3.5" = "__Roadmap__\nBy clicking on the above button you can (anonymously) vote for improvements you would like in future versions of this app. You can only vote once for any particular improvement.";
@@ -162,10 +162,10 @@ Default status of member within a club. Used in concatenations. */
 "Paragraph_4.1" = "When the app opens, it shows a large image corresponding to the app’s icon. If you tap somewhere ***inside*** the image, it zooms out to show the full image representing how digital cameras see color.";
 
 /* Second paragraph in Prelude section of Readme page */
-"Paragraph_4.2" = "This involves a [Bayer color filter array](https://en.wikipedia.org/wiki/Bayer_filter) that filters the light per pixel. The filter array is shown here superimposed on a colorful photo.";
+"Paragraph_4.2" = "This involves a [Bayer color filter array](https://en.wikipedia.org/wiki/Bayer_filter) that adds a color filter on top of each sensor cell. The filter array is shown here superimposed on a colorful photo.";
 
 /* Third paragraph in Prelude section of Readme page */
-"Paragraph_4.3" = "Tapping ***inside*** the image allows you to zoom in or out to your heart's content. Tapping ***outside*** the image area ends the animation. You can trigger the animation again by restarting the app. A single tap ***outside*** the image allows you to skip the animation entirely.";
+"Paragraph_4.3" = "Tapping ***inside*** the image allows you to zoom in or out to your heart's content. Tapping ***outside*** the image area ends the animation. A single tap ***outside*** the image allows you to skip the animation entirely.";
 
 /* First paragraph SupportedPlatforms section of Readme page */
 "Paragraph_5.1" = "The app runs on iPhone and iPad and requires iOS 17.0 or higher. Most iOS users tend to upgrade to the latest possible iOS version, which means that the app supports devices made in the last 5 or 6 years.";

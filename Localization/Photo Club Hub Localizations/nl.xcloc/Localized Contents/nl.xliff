@@ -206,28 +206,28 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
       </trans-unit>
       <trans-unit id="Paragraph_3.1" xml:space="preserve">
         <source>__Web sites__
-We regularly add features to the app. This requires some care, because we still want to maintain our focus on providing an optimal viewing experience. The app therefore explicitly does _not_ aim to replace existing websites, but instead provides links to these websites.</source>
+The app does not try to replace club web sites: web sites have more uses than just presenting photos. Because we consider web sites and this app to be _complementary_, the app provides clickable links to club web sites as well as to photographer websites.</source>
         <target>__Websites__
 Het hoofddoel van de app is om de portfolio's via een strakke presentatie tot hun recht te laten komen. Wij streven er dus _niet_ naar dat de app een website kan vervangen. Daarom verwijst de app de gebruiker via links door naar de websites van de clubs.</target>
         <note>First paragraph in The Features section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.2" xml:space="preserve">
         <source>__Languages__
-The app supports English and Dutch. iOS automatically selects the app's language based on your device’s language settings (_Settings &gt; General &gt; Language &amp; Region &gt; Preferred Language Order_). iOS also allows you to overrule this choice per app (_Settings &gt; Photo Club Waalre &gt; Language_).</source>
+The app currently supports English and Dutch. iOS automatically selects the app's language based on your device’s language settings (_Settings &gt; General &gt; Language &amp; Region &gt; Preferred Language Order_). iOS also allows you to overrule this choice per individual app (_Settings &gt; Photo Club Hub &gt; Language_).</source>
         <target>__Meertalig__
 De app ondersteunt zowel Nederlands als Engels. De taal van de app past zich automatisch aan op de taalinstelling van het apparaat (_Instellingen → Algemeen → Taal en regio → Volgorde voorkeurstalen_). Als alternatief kan een gebruiker de taalkeuze alleen voor deze app aanpassen (_Instellingen → Fotoclub Hub → Voorkeurstaal_).</target>
         <note>Second paragraph in The Features section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.3" xml:space="preserve">
         <source>__Deleting__
-On the Portfolio page, you can swipe to ***Delete*** a member from the list. Don't worry - if the person is still a club member, that person will reappear the next time the app synchronizes its local data with online data. This swiping can be useful to remove members who are no longer on the online data members lists. In any case, swipe as much as you like (after all, it just might be therapeutical).</source>
+On the Portfolio page, you can swipe to ***Delete*** a member from the list. Don't worry - if the person is still a club member, that person will reappear the next time the app synchronises with online data. This swiping can be useful to remove members who are no longer on the online data members lists. In any case, swipe as much as you like (who knows, it just be therapeutical).</source>
         <target>__Wissen__
 De gebruiker kan op de Portfolio pagina leden verwijderen door hun naam naar links te vegen. Dat verwijderen is tijdelijk indien het lid nog op de online ledenlijst van de club staat: bij opnieuw synchroniseren komt de naam dan automatisch weer terug. Maar dit "wegvegen" kan nuttig zijn als bijvoorbeeld een kandidaat-lid vertrekt zonder lid te worden. Hiermee verwijder je iemand uit de locale ledenlijst die niet meer voorkomt in de online ledenlijst. Als alternatief kan men ook de app zelf verwijderen en opnieuw installeren.</target>
         <note>Third paragraph in The Features section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.4" xml:space="preserve">
         <source>__Musea__
-The app also contains the names and locations of a few dozen photo musea. These show up on the maps of the Clubs and Musea screen if you zoom out enough to encounter them.</source>
+The app also contains the names and locations of a few dozen photo musea. These show up on the maps on the Clubs screen if you zoom out enough.</source>
         <target>__Musea__
 Als een soort toegift kan de app ook diverse fotomusea op de landkaarten tonen. Deze zijn te vinden door voldoende uit te zoomen.</target>
         <note>Fourth paragraph in The Features section of Readme page</note>
@@ -241,17 +241,17 @@ Via bovenstaande knop kunt U (anoniem) stemmen op welke toekomstige uitbreidinge
       </trans-unit>
       <trans-unit id="Paragraph_4.1" xml:space="preserve">
         <source>When the app opens, it shows a large image corresponding to the app’s icon. If you tap somewhere ***inside*** the image, it zooms out to show the full image representing how digital cameras see color.</source>
-        <target>Bij het opstarten van de app, wordt een grote versie van het logo van de app zichtbaar. Dit is een interactief speeltje. Door ***binnen het beeld*** te klikken zoomt het beeld langzaam uit tot en vierkante versie van bovenstaande foto.</target>
+        <target>Bij het opstarten van de app, wordt een grote versie van het applogo zichtbaar. Dit is een interactief speeltje. Door ***binnen het beeld*** te klikken zoomt het beeld langzaam uit tot een verkante versie van deze foto.</target>
         <note>First paragraph in Prelude section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_4.2" xml:space="preserve">
-        <source>This involves a [Bayer color filter array](https://en.wikipedia.org/wiki/Bayer_filter) that filters the light per pixel. The filter array is shown here superimposed on a colorful photo.</source>
-        <target>De daarop aangebrachte gekleurde vlakjes tonen hoe de kleurenfilters in een digitale camera werken. Deze [Bayer kleurenfilters](https://en.wikipedia.org/wiki/Bayer_filter) komen in vrijwel alle digitale camera's voor. Iedere kleurenfilter zorgt ervoor dat de afgedekte fotocel ("pixel") vooral gevoelig is voor licht van die ene hoofdkleur.</target>
+        <source>This involves a [Bayer color filter array](https://en.wikipedia.org/wiki/Bayer_filter) that adds a color filter on top of each sensor cell. The filter array is shown here superimposed on a colorful photo.</source>
+        <target>De daarop aangebrachte gekleurde vlakjes tonen hoe de kleurenfilters in een digitale camera werken. Deze [Bayer kleurenfilters](https://en.wikipedia.org/wiki/Bayer_filter) komen in vrijwel alle digitale camera's voor. Iedere kleurenfilter zorgt ervoor dat de afgedekte fotocel ("pixel") vooral gevoelig is voor groen, rood of blauw licht.</target>
         <note>Second paragraph in Prelude section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_4.3" xml:space="preserve">
-        <source>Tapping ***inside*** the image allows you to zoom in or out to your heart's content. Tapping ***outside*** the image area ends the animation. You can trigger the animation again by restarting the app. A single tap ***outside*** the image allows you to skip the animation entirely.</source>
-        <target>Nogmaals klikken op het beeld maakt het mogelijk om verschillende delen van het beeld-met-vlakjes te bekijken. Klik ***buiten het beeld*** om de animatie te beëindigen. De prelude is opnieuw te zien door de app volledig af te sluiten en dan opnieuw op te starten.</target>
+        <source>Tapping ***inside*** the image allows you to zoom in or out to your heart's content. Tapping ***outside*** the image area ends the animation. A single tap ***outside*** the image allows you to skip the animation entirely.</source>
+        <target>Door te klikken ***binnen*** het vierkante beeld kan men verschillende delen van het beeld-met-vlakjes van dichtbij bekijken. Klik ***buiten*** het vierkante beeld om de animatie af te stoppen.</target>
         <note>Third paragraph in Prelude section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_5.1" xml:space="preserve">
