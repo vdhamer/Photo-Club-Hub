@@ -123,7 +123,7 @@ struct ReadmeView: View {
                                     .scaledToFit()
                                     .border(.gray, width: 1)
                                     .frame(width: geo.size.width * 0.8, alignment: .center)
-                                Text("Amsterdam has two musea dedicated to photography",
+                                Text("Amsterdam has two photography musea",
                                      comment: "Caption of Musea image on Readme page")
                                 .font(.callout.italic())
                                 .frame(width: geo.size.width, alignment: .center)
@@ -221,29 +221,29 @@ struct ReadmeView: View {
                             Paragraph("6.2", comment: "Second paragraph in OpenSource section of Readme page", geo: geo)
                             Paragraph("6.3", comment: "Third paragraph in OpenSource section of Readme page", geo: geo)
                             Paragraph("6.4", comment: "Fourth paragraph in OpenSource section of Readme page", geo: geo)
-                            Paragraph("6.5", comment: "Sixth paragraph in OpenSource section of Readme page", geo: geo)
-                            Paragraph("6.6", comment: "Fifth paragraph in OpenSource section of Readme page", geo: geo)
+                            Paragraph("6.5", comment: "Fifth paragraph in OpenSource section of Readme page", geo: geo)
+                            Paragraph("6.6", comment: "Sixth paragraph in OpenSource section of Readme page", geo: geo)
                         }
 
-                        VStack {
-                            SectionHeader(String(localized: "The Model", comment: "Section title on Readme page"),
-                                          geo: geo)
-
-                            VStack {
-                                Image("Schema")
-                                    .resizable()
-                                    .border(.gray, width: 1)
-                                    .scaledToFit()
-                                    .frame(width: 350, alignment: .center)
-                                Text("Partial model", comment: "Caption for image on Readme page")
-                                    .font(.callout.italic())
-                                    .frame(width: geo.size.width, alignment: .center)
-                                Text("")
-                            }
-
-                            Paragraph("7.1", comment: "First paragraph in Model section of Readme page", geo: geo)
-                            Paragraph("7.2", comment: "Second paragraph in Model section of Readme page", geo: geo)
-                        }
+//                        VStack {
+//                            SectionHeader(String(localized: "The Model", comment: "Section title on Readme page"),
+//                                          geo: geo)
+//
+//                            VStack {
+//                                Image("Schema")
+//                                    .resizable()
+//                                    .border(.gray, width: 1)
+//                                    .scaledToFit()
+//                                    .frame(width: 350, alignment: .center)
+//                                Text("Partial model", comment: "Caption for image on Readme page")
+//                                    .font(.callout.italic())
+//                                    .frame(width: geo.size.width, alignment: .center)
+//                                Text("")
+//                            }
+//
+//                            Paragraph("7.1", comment: "First paragraph in Model section of Readme page", geo: geo)
+//                            Paragraph("7.2", comment: "Second paragraph in Model section of Readme page", geo: geo)
+//                        }
 
                         SectionHeader("", geo: geo)
 

@@ -16,9 +16,6 @@
 /* Administrative role of member within a club. Used as part of concatenations. */
 "admin" = "admin";
 
-/* Caption of Musea image on Readme page */
-"Amsterdam has two musea dedicated to photography" = "De twee fotomusea aan de Keizersgracht in Amsterdam";
-
 /* To generate strings like "secretary and admin" */
 "and" = "en";
 

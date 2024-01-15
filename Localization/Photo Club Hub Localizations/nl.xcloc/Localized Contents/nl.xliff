@@ -42,9 +42,8 @@
         <target>%lld fotografen</target>
         <note>Header of section of Who's Who screen</note>
       </trans-unit>
-      <trans-unit id="Amsterdam has two musea dedicated to photography" xml:space="preserve">
-        <source>Amsterdam has two musea dedicated to photography</source>
-        <target>De twee fotomusea aan de Keizersgracht in Amsterdam</target>
+      <trans-unit id="Amsterdam has two photography musea" xml:space="preserve">
+        <source>Amsterdam has two photography musea</source>
         <note>Caption of Musea image on Readme page</note>
       </trans-unit>
       <trans-unit id="App version %@ (build %@)" xml:space="preserve">

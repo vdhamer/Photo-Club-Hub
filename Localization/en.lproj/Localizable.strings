@@ -14,7 +14,7 @@
 "admin" = "admin";
 
 /* Caption of Musea image on Readme page */
-"Amsterdam has two musea dedicated to photography" = "Amsterdam has two musea dedicated to photography";
+"Amsterdam has two photography musea" = "Amsterdam has two photography musea";
 
 /* To generate strings like "secretary and admin" */
 "and" = "and";
