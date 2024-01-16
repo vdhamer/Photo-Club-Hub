@@ -15,7 +15,7 @@ Portfolios screen
     * Limited the font size of the footers in case the device's text display size was increased (in Settings).
     * Removed the 3 Test Fotoclubs. They are now shown correctly as musea.
 Readme screen
-    * Significant updates
+    * Significant text updates and extra pictures.
 Maintenance
     * Tested with with iOS 17.2.1, MacOS 14.2.1, GitCrypt 0.7.0.1, Xcode 14.2
     * Centralized code for loading and of input data (file: `PhotoClubHubApp`).
