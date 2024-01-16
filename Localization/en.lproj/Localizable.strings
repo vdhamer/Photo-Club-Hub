@@ -14,7 +14,7 @@
 "admin" = "admin";
 
 /* Caption of Musea image on Readme page */
-"Amsterdam has two photography musea" = "Amsterdam has two photography musea";
+"Amsterdam has two photography musea." = "Amsterdam has two photography musea.";
 
 /* To generate strings like "secretary and admin" */
 "and" = "and";
@@ -73,9 +73,6 @@
 /* Shown instead of app name in PreludeView when app is started */
 "In debug mode" = "In debug mode";
 
-/* Caption of Localizations image on Readme page */
-"List of supported languages" = "List of supported languages";
-
 /* Statistics at end of section of FilteredMemberPortfoliosView
 Default status of member within a club. Used in concatenations. */
 "member" = "member";
@@ -108,10 +105,10 @@ Default status of member within a club. Used in concatenations. */
 "Paragraph_1.1" = "This app showcases selected photos by members of photo clubs. Former members can also be included.";
 
 /* Second paragraph in Waalre section of Readme page */
-"Paragraph_1.2" = "It does this in a _consistent_ way across all participating photographers and clubs. For the app's users, this consistency avoids having to find each club's website and discovering how to use it to find and browse the images.";
+"Paragraph_1.2" = "It does this in a _consistent_ way across all participating photographers and clubs. For the app's users, this consistency avoids having to find each club's website and discovering how to use it to locate and browse the images.";
 
 /* Third paragraph in Waalre section of Readme page */
-"Paragraph_1.3" = "The app does _not_ try to replace either photographer web sites or club web sites. It also doesn't try to replace social media presence. The app's focus is to present the images in a consistent, easy to access way with minimal distractions. The app can be used to find to extra information via links to club and photographer web sites.";
+"Paragraph_1.3" = "The app does _not_ try to replace either club or photographer web sites. It also doesn't try to replace social media presence. The app's focus is to present the images in a consistent, easy to access way with minimal distractions. The app can help find extra information via links to club and photographer web sites.";
 
 /* Fourth paragraph in Waalre section of Readme page */
 "Paragraph_1.4" = "The app was originally named _Photo Club Waalre_ after a 15-person photo club in the Netherlands. The word __hub__ in the newer name stresses the app's support for _multiple_ photo clubs, and the app's ambition to strengthen the ties between clubs by making their work easier to access.";
@@ -120,7 +117,7 @@ Default status of member within a club. Used in concatenations. */
 "Paragraph_1.5" = "Support for multiple photo clubs requires the ability to display a list of clubs, their members and the selected photos per member.";
 
 /* Sixth paragraph in Waalre section of Readme page */
-"Paragraph_1.6" = "Supporting many clubs also implies that individual clubs should be able to maintain their own data. This means the ability to provide and maintain the images, but also the club's membership list. Central support should focus on maintaining the app. The app's [GitHub site](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) explains the strategy for allowing clubs to maintain their data without any need for software expertise.";
+"Paragraph_1.6" = "Supporting many clubs also implies that individual clubs should be able to maintain their own data. This means the ability to provide and maintain the images, but also the club's membership list. Central support should be limited to maintaining the app. The app's [GitHub site](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) explains the strategy for allowing clubs to maintain their data without requiring any real software expertise.";
 
 /* First paragraph in The App on Readme page */
 "Paragraph_2.1" = "Photo clubs play a central role in this app. The Portfolios screen shows a list of photo clubs.";
@@ -138,19 +135,19 @@ Default status of member within a club. Used in concatenations. */
 "Paragraph_2.5" = "We try to show the portfolios with **minimal distraction**. Web sites are often less optimal for this because they need to show browser controls (e.g., an address bar or tabs) and serve multiple purposes (e.g., show club news or contact information).";
 
 /* Sixth paragraph in the App on Readme page */
-"Paragraph_2.6" = "For Photo Club Waalre, we chose to also include the work of former club members. By default, former members are not visible, but you can enable displaying them in the Preferences screen.";
+"Paragraph_2.6" = "For Photo Club Waalre, for example, we chose to also include the work of former club members. By default, former members are not visible, but you can enable displaying them in the Preferences screen.";
 
 /* Seventh paragraph in the App on Readme page */
 "Paragraph_2.7" = "Contact us (e.g. via Github, Facebook or LinkedIn) if you are interested in adding support for your photo club.";
 
 /* First paragraph in The Features section of Readme page */
-"Paragraph_3.1" = "__Web sites__\nThe app does not try to replace club web sites: web sites have more uses than just presenting photos. Because we consider web sites and this app to be _complementary_, the app provides clickable links to club web sites as well as to photographer websites.";
+"Paragraph_3.1" = "__Web sites__\nThe app does not try to replace club web sites: web sites have more uses than just presenting photos. Because we consider web sites and this app to be _complementary_, the app provides clickable links to club web sites as well as to photographer web sites.";
 
 /* Second paragraph in The Features section of Readme page */
 "Paragraph_3.2" = "__Languages__\nThe app currently supports English and Dutch. iOS automatically selects the app's language based on your device’s language settings (_Settings > General > Language & Region > Preferred Language Order_). iOS also allows you to overrule this choice per individual app (_Settings > Photo Club Hub > Language_).";
 
 /* Third paragraph in The Features section of Readme page */
-"Paragraph_3.3" = "__Deleting__\nOn the _Portfolio_ page, you can swipe to ***Delete*** a member from the list. Don't worry - if the person is still a club member, that person will reappear the next time the app synchronises with online data. This swiping can be useful to remove members who are no longer on the online data members lists. In any case, swipe as much as you like (who knows, it just be therapeutical).";
+"Paragraph_3.3" = "__Deletion__\nOn the _Portfolio_ page, you can swipe to delete a member from the list. Don't worry - if the person is still a club member, that person will reappear the next time the app synchronises with online data. This swiping can be useful to remove members who are no longer on the online data members lists. In any case, swipe as much as you like (who knows, it just might be therapeutical).";
 
 /* Fourth paragraph in The Features section of Readme page */
 "Paragraph_3.4" = "__Musea__\nThe app also contains the names and locations of a few dozen photo musea. These show up on the maps on the Clubs screen if you zoom out enough.";
@@ -159,46 +156,46 @@ Default status of member within a club. Used in concatenations. */
 "Paragraph_3.5" = "__Roadmap__\nBy clicking on the above button you can (anonymously) vote for improvements you would like in future versions of this app. You can only vote once for any particular improvement.";
 
 /* First paragraph in Prelude section of Readme page */
-"Paragraph_4.1" = "When the app opens, it shows a large image corresponding to the app’s icon. If you tap somewhere ***inside*** the image, it zooms out to show the full image representing how digital cameras see color.";
+"Paragraph_4.1" = "When the app opens, it shows an image corresponding to the app’s icon. If you tap somewhere ***inside*** the image, it zooms out to show the full image representing how digital cameras see color.";
 
 /* Second paragraph in Prelude section of Readme page */
-"Paragraph_4.2" = "This involves a [Bayer color filter array](https://en.wikipedia.org/wiki/Bayer_filter) that adds a color filter on top of each sensor cell. The filter array is shown here superimposed on a colorful photo.";
+"Paragraph_4.2" = "This involves a [Bayer color filter array](https://en.wikipedia.org/wiki/Bayer_filter) that adds a color filter on top of each sensor cell. This filter array is shown here superimposed on a colorful photo.";
 
 /* Third paragraph in Prelude section of Readme page */
-"Paragraph_4.3" = "Tapping ***inside*** the image allows you to zoom in or out to your heart's content. Tapping ***outside*** the image area ends the animation. A single tap ***outside*** the image allows you to skip the animation entirely.";
+"Paragraph_4.3" = "Tapping ***inside*** the image allows you to zoom in or out to your heart's content. Tapping ***outside*** the image area ends the animation. A single tap ***outside*** the image allows you to skip the animation.";
 
 /* First paragraph SupportedPlatforms section of Readme page */
-"Paragraph_5.1" = "The app runs on iPhone and iPad and requires iOS 17.0 or higher. As most iOS users upgrade to the latest iOS version, this means that the latest app version can support devices made in the last 6 or so years.";
+"Paragraph_5.1" = "The app runs on iPhone and iPad and requires iOS 17.0 or higher. As most iOS users upgrade to the most recent iOS version possible, this means that the latest app version can support devices made in the last 6 or so years.";
 
 /* Second paragraph SupportedPlatforms section of Readme page */
-"Paragraph_5.2" = "The app depends heavily on various Apple software technologies. These include Swift (a programming language), SwiftUI (a user interface framework), Core Data (local data storage), Metal (graphics acceleration), and so-called _structured\" concurrency_ (for data fetching), Xcode (development environment), and obviously iOS itself.";
+"Paragraph_5.2" = "The app depends heavily on various Apple software technologies. These include Swift (a programming language), SwiftUI (a user interface framework), Core Data (local data storage), Metal (graphics acceleration), and so-called _structured concurrency_ (for data fetching), Xcode (development tooling), and iOS itself.";
 
 /* Third paragraph SupportedPlatforms section of Readme page */
-"Paragraph_5.3" = "The benefit of an iOS focus is that it allows the app developers to focus on functionality rather than cross-platform compatibility.";
+"Paragraph_5.3" = "The benefit of an iOS focus is that it allows the app's developers to focus on functionality rather than cross-platform compatibility.";
 
 /* Fourth paragraph SupportedPlatforms section of Readme page */
-"Paragraph_5.4" = "The drawback, however, is the lack of Android support (for now). This is  because the Android world has its own set of software technologies and tends to have more internal diversity. Apps that choose to support multiple platforms require more effort or more technical compromises.";
+"Paragraph_5.4" = "The drawback, however, is the lack of Android support (for now). This is  because the Android world has its own set of software technologies and tends to have more internal diversity. Apps that choose to support multiple platforms require more effort or require more technical compromises.";
 
 /* Fifth paragraph SupportedPlatforms section of Readme page */
-"Paragraph_5.5" = "To put this into perspective, the top-6 software \"platforms\" are (largest to smaller): web, Android, Windows, iOS, iPadOS, and MacOS. Only the very largest apps (like Word, Twitter, Minecraft, Chrome) cover the full range. Other famous apps cover only half: Photoshop (Windows, MacOS, iPadOS), WhatsApp (iPhone, Android, web - kind of), Pokémon Go (Android, iOS, iPadOS - kind of).";
+"Paragraph_5.5" = "To put this into perspective, the top-6 software \"platforms\" are (largest first): web, Android, Windows, iOS, iPadOS, and MacOS. Only the very largest apps (like Word, Twitter, Minecraft, Chrome) cover the full range. Other famous apps cover only half: Photoshop (Windows, MacOS, iPadOS), WhatsApp (iPhone, Android, web - kind of), Pokémon Go (Android, iOS, iPadOS - kind of).";
 
 /* Sixth paragraph SupportedPlatforms section of Readme page */
-"Paragraph_5.6" = "The roadmap for additional future platform support will depend on uptake and support from the software community. MacOS and VisionOS both more or less work already. Apple's tvOS could be technically doable, if needed. However, a promising future step would be to support the automatic generation of web site pages using the same data sources used by the app. This would indirectly cover Android, PC, and more. And would benefit the cubs that need to keep the information up to date.";
+"Paragraph_5.6" = "The roadmap for additional future platform support will depend on uptake and help from the software community. MacOS and VisionOS both more or less work already. Support for Apple's tvOS is possible. However, a promising future step would be to support the automatic generation of web site pages using the same data sources used by the app. This would indirectly cover Android, PC, and more. And would benefit the clubs that need to maintain their lists.";
 
 /* First paragraph Developers section of Readme page */
-"Paragraph_6.1" = "You can find this app on [GitHub](https://github.com/vdhamer/Photo-Club-Hub). This allows other software developers to contribute. Getting more developers speeds things up, but also provides fresh ideas and ultimately longer term continuity.";
+"Paragraph_6.1" = "You can find this app on [GitHub](https://github.com/vdhamer/Photo-Club-Hub). This allows other software developers to contribute. Getting more developers involved will speed things up, but also provides fresh ideas and ultimately improve continuity.";
 
 /* Second paragraph Developers section of Readme page */
 "Paragraph_6.2" = "Welcome contributions include adding features, code improvements, ideas on architecture and interface definition, and possibly server-side functionality.";
 
 /* Third paragraph Developers section of Readme page */
-"Paragraph_6.3" = "Contributions that do not require coding are also welcome: beta testing via [TestFlight](https://apps.apple.com/us/app/testflight/id899247664), feature requests, translations, SVG icons, sound effects, and (maybe above all) adding support for more clubs and musea.";
+"Paragraph_6.3" = "Contributions that _do not require coding_ are also welcome: beta testing via [TestFlight](https://apps.apple.com/us/app/testflight/id899247664), feature requests, translations, and - above all - adding support for more clubs.";
 
 /* Fourth paragraph Developers section of Readme page */
-"Paragraph_6.4" = "There is a major ongoing transition to provide a clean, standardised interface to retrieve data per photo club. That interface is needed to load the data, but also keeps the data up to date. After all, membership data and portfolios change regularly. The original interface was a plug-in design with an adaptor per photo club. This is being replaced by a standard JSON-based interface to avoid having to extend the source code whenever a new club comes aboard.";
+"Paragraph_6.4" = "There is a major ongoing transition to provide a clean, standardised interface to retrieve data per photo club. Such an interface is needed to load the data, but also to keep the data up to date. After all, membership data and portfolios change regularly. The original interface was a plug-in design with an adaptor per photo club. This is being replaced by a standard JSON-based interface to avoid having to update the source in order to onboard additional clubs.";
 
 /* Fifth paragraph Developers section of Readme page */
-"Paragraph_6.5" = "For Photo Club Waalre, an early prototype of this approach to loading data is already in use. The existence of the club is stored in an online JSON file. That file points to a membership list that is read from a HTML table on a password protected part of the club’s [website](https://www.FotogroepWaalre.nl). The portfolios are read from XML files generated by an inexpensive Lightroom Web plug-in called [JuiceBox-Pro](https://www.juicebox.net/tour/). This allows the club to manage the portfolios per member using Lightroom (as a LR collection). These collections can then be uploaded (ftp'ed) to the webserver via the Lightroom _Upload_ button. The image list uploaded to the server is then downloaded by the app when needed.";
+"Paragraph_6.5" = "For Photo Club Waalre, an early prototype of this approach to loading data is already in use. The fact that the club exists is stored in a central (JSON) file. That file points to a membership list that is read from a HTML table on the club’s [website](https://www.FotogroepWaalre.nl). The portfolios are read from XML files generated by an Adobe Lightroom plug-in called [JuiceBox-Pro](https://www.juicebox.net/tour/). This plug-in allows the club to manage the portfolios per member using Lightroom (as a Lightroom \"collection\"). These collections can then be uploaded (ftp'ed) to the webserver via the Lightroom _Upload_ button. The uploaded information can then be downloaded from the web site when it is needed.";
 
 /* Sixth paragraph Developers section of Readme page */
 "Paragraph_6.6" = "Software developers or other volunteers who are interested to help out can contact us via GitHub, Facebook PM or LinkedIn.";
@@ -281,6 +278,9 @@ Field at top of Members page that allows the user to filter the members based on
 
 /* Section title on Readme page. */
 "Supported Platforms" = "iOS, iPadOS";
+
+/* Caption of Localizations image on Readme page */
+"Supporting multiple languages" = "Supporting multiple languages";
 
 /* Section title on Readme page */
 "The app" = "The app";

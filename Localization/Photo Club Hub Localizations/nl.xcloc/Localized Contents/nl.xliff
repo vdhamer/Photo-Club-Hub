@@ -42,9 +42,9 @@
         <target>%lld fotografen</target>
         <note>Header of section of Who's Who screen</note>
       </trans-unit>
-      <trans-unit id="Amsterdam has two photography musea" xml:space="preserve">
-        <source>Amsterdam has two photography musea</source>
-        <target>De beide fotomusea aan de Keizersgracht (A'dam).</target>
+      <trans-unit id="Amsterdam has two photography musea." xml:space="preserve">
+        <source>Amsterdam has two photography musea.</source>
+        <target state="translated">Fotomusea aan de Keizersgracht in Amsterdam.</target>
         <note>Caption of Musea image on Readme page</note>
       </trans-unit>
       <trans-unit id="App version %@ (build %@)" xml:space="preserve">
@@ -107,11 +107,6 @@
         <target>Test versie</target>
         <note>Shown instead of app name in PreludeView when app is started</note>
       </trans-unit>
-      <trans-unit id="List of supported languages" xml:space="preserve">
-        <source>List of supported languages</source>
-        <target>De momenteel beschikbare talen</target>
-        <note>Caption of Localizations image on Readme page</note>
-      </trans-unit>
       <trans-unit id="Member categories" xml:space="preserve">
         <source>Member categories</source>
         <target>Lidmaatschapstypen</target>
@@ -145,12 +140,12 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
         <note>First paragraph in Waalre section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_1.2" xml:space="preserve">
-        <source>It does this in a _consistent_ way across all participating photographers and clubs. For the app's users, this consistency avoids having to find each club's website and discovering how to use it to find and browse the images.</source>
+        <source>It does this in a _consistent_ way across all participating photographers and clubs. For the app's users, this consistency avoids having to find each club's website and discovering how to use it to locate and browse the images.</source>
         <target>De app presenteert op een consistente wijze het werk van alle clubleden van de ondersteunde fotoclubs. Hiermee hoef je niet meer als gebruiker de website van een club zelf te vinden. En je hoeft ook niet voor ieder club te ontdekken hoe die specifieke website werkt.  </target>
         <note>Second paragraph in Waalre section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_1.3" xml:space="preserve">
-        <source>The app does _not_ try to replace either photographer web sites or club web sites. It also doesn't try to replace social media presence. The app's focus is to present the images in a consistent, easy to access way with minimal distractions. The app can be used to find to extra information via links to club and photographer web sites.</source>
+        <source>The app does _not_ try to replace either club or photographer web sites. It also doesn't try to replace social media presence. The app's focus is to present the images in a consistent, easy to access way with minimal distractions. The app can help find extra information via links to club and photographer web sites.</source>
         <target>Dit wordt vergemakkelijkt doordat de app vooral bedoeld is om de foto's tot hun recht te laten komen. Voor andere clubinformatie (zoals mededelingen of vergaderschemas) wordt de gebruiker naar de websites doorgelinkt. De app probeert dus nadrukkelijk _niet_ om de websites of social media aanwezigheid van clubs te vervangen. Het is daar complementair aan.</target>
         <note>Third paragraph in Waalre section of Readme page</note>
       </trans-unit>
@@ -165,7 +160,7 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
         <note>Fifth paragraph in Waalre section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_1.6" xml:space="preserve">
-        <source>Supporting many clubs also implies that individual clubs should be able to maintain their own data. This means the ability to provide and maintain the images, but also the club's membership list. Central support should focus on maintaining the app. The app's [GitHub site](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) explains the strategy for allowing clubs to maintain their data without any need for software expertise.</source>
+        <source>Supporting many clubs also implies that individual clubs should be able to maintain their own data. This means the ability to provide and maintain the images, but also the club's membership list. Central support should be limited to maintaining the app. The app's [GitHub site](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) explains the strategy for allowing clubs to maintain their data without requiring any real software expertise.</source>
         <target>Voor toepasbaarheid op grotere schaal moet het echter ook voor de clubs eenvoudig zijn om hun eigen ledeninformatie en hun eigen lijsten met geselecteerde foto's in de app zelf in te voeren en te onderhouden. Deze aanpak is in meer detail te vinden op de [GitHub site](https://GitHub.com/vdhamer/Photo-Club-Hub#readme).</target>
         <note>Sixth paragraph in Waalre section of Readme page</note>
       </trans-unit>
@@ -195,7 +190,7 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
         <note>Fifth paragraph in The App on Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_2.6" xml:space="preserve">
-        <source>For Photo Club Waalre, we chose to also include the work of former club members. By default, former members are not visible, but you can enable displaying them in the Preferences screen.</source>
+        <source>For Photo Club Waalre, for example, we chose to also include the work of former club members. By default, former members are not visible, but you can enable displaying them in the Preferences screen.</source>
         <target>De app kan, indien een club daarvoor kiest, ook de portfolio's van *voormalige* clubleden tonen. De gebruiker kan zelf kiezen of beschikbare portfolio's van ex-leden zichtbaar zijn (via Instellingen).</target>
         <note>Sixth paragraph in the App on Readme page</note>
       </trans-unit>
@@ -206,7 +201,7 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
       </trans-unit>
       <trans-unit id="Paragraph_3.1" xml:space="preserve">
         <source>__Web sites__
-The app does not try to replace club web sites: web sites have more uses than just presenting photos. Because we consider web sites and this app to be _complementary_, the app provides clickable links to club web sites as well as to photographer websites.</source>
+The app does not try to replace club web sites: web sites have more uses than just presenting photos. Because we consider web sites and this app to be _complementary_, the app provides clickable links to club web sites as well as to photographer web sites.</source>
         <target>__Websites__
 Het hoofddoel van de app is om portfolio's van clubleden via een strakke presentatie tot hun recht te laten komen. Wij streven er dus _niet_ naar dat de app een website kan vervangen. Daarom verwijst de app de gebruiker via links door naar de clubwebsites.</target>
         <note>First paragraph in The Features section of Readme page</note>
@@ -219,8 +214,8 @@ De app ondersteunt zowel Nederlands als Engels. De taal van de app past zich aut
         <note>Second paragraph in The Features section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.3" xml:space="preserve">
-        <source>__Deleting__
-On the _Portfolio_ page, you can swipe to ***Delete*** a member from the list. Don't worry - if the person is still a club member, that person will reappear the next time the app synchronises with online data. This swiping can be useful to remove members who are no longer on the online data members lists. In any case, swipe as much as you like (who knows, it just be therapeutical).</source>
+        <source>__Deletion__
+On the _Portfolio_ page, you can swipe to delete a member from the list. Don't worry - if the person is still a club member, that person will reappear the next time the app synchronises with online data. This swiping can be useful to remove members who are no longer on the online data members lists. In any case, swipe as much as you like (who knows, it just might be therapeutical).</source>
         <target>__Wissen__
 De gebruiker kan op het _Portfolio_ scherm leden verwijderen door hun naam naar links te vegen. Het verwijderen is tijdelijk indien het lid nog steeds op de online ledenlijst van de club voorkomt: bij opnieuw synchroniseren komt de naam dan automatisch weer terug. Dit "wegvegen" kan nodig zijn als bijvoorbeeld een kandidaat-lid uit de club vertrekt zonder lid te worden. Hiermee verwijder je iemand uit de locale ledenlijst die inmiddels niet meer voorkomt op de online ledenlijst. Als alternatief kan men de app geheel verwijderen en opnieuw installeren. Hierdoor worden de interne lijsten opnieuw opgebouwd.</target>
         <note>Third paragraph in The Features section of Readme page</note>
@@ -433,6 +428,11 @@ Field at top of Members page that allows the user to filter the members based on
         <source>iOS, iPadOS</source>
         <target>iOS, iPadOS</target>
         <note>Section title on Readme page.</note>
+      </trans-unit>
+      <trans-unit id="Supporting multiple languages" xml:space="preserve">
+        <source>Supporting multiple languages</source>
+        <target>Ondersteuning voor engels en nederlands</target>
+        <note>Caption of Localizations image on Readme page</note>
       </trans-unit>
       <trans-unit id="The Model" xml:space="preserve">
         <source>The Model</source>

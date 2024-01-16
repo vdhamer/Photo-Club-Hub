@@ -42,9 +42,9 @@
         <target>%lld photographers</target>
         <note>Header of section of Who's Who screen</note>
       </trans-unit>
-      <trans-unit id="Amsterdam has two photography musea" xml:space="preserve">
-        <source>Amsterdam has two photography musea</source>
-        <target>Amsterdam has two photography musea</target>
+      <trans-unit id="Amsterdam has two photography musea." xml:space="preserve">
+        <source>Amsterdam has two photography musea.</source>
+        <target>Amsterdam has two photography musea.</target>
         <note>Caption of Musea image on Readme page</note>
       </trans-unit>
       <trans-unit id="App version %@ (build %@)" xml:space="preserve">
@@ -107,11 +107,6 @@
         <target>In debug mode</target>
         <note>Shown instead of app name in PreludeView when app is started</note>
       </trans-unit>
-      <trans-unit id="List of supported languages" xml:space="preserve">
-        <source>List of supported languages</source>
-        <target>List of supported languages</target>
-        <note>Caption of Localizations image on Readme page</note>
-      </trans-unit>
       <trans-unit id="Member categories" xml:space="preserve">
         <source>Member categories</source>
         <target>Member categories</target>
@@ -145,13 +140,13 @@ Try dragging down the Photo Clubs screen to reload the default clubs.</target>
         <note>First paragraph in Waalre section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_1.2" xml:space="preserve">
-        <source>It does this in a _consistent_ way across all participating photographers and clubs. For the app's users, this consistency avoids having to find each club's website and discovering how to use it to find and browse the images.</source>
-        <target>It does this in a _consistent_ way across all participating photographers and clubs. For the app's users, this consistency avoids having to find each club's website and discovering how to use it to find and browse the images.</target>
+        <source>It does this in a _consistent_ way across all participating photographers and clubs. For the app's users, this consistency avoids having to find each club's website and discovering how to use it to locate and browse the images.</source>
+        <target>It does this in a _consistent_ way across all participating photographers and clubs. For the app's users, this consistency avoids having to find each club's website and discovering how to use it to locate and browse the images.</target>
         <note>Second paragraph in Waalre section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_1.3" xml:space="preserve">
-        <source>The app does _not_ try to replace either photographer web sites or club web sites. It also doesn't try to replace social media presence. The app's focus is to present the images in a consistent, easy to access way with minimal distractions. The app can be used to find to extra information via links to club and photographer web sites.</source>
-        <target>The app does _not_ try to replace either photographer web sites or club web sites. It also doesn't try to replace social media presence. The app's focus is to present the images in a consistent, easy to access way with minimal distractions. The app can be used to find to extra information via links to club and photographer web sites.</target>
+        <source>The app does _not_ try to replace either club or photographer web sites. It also doesn't try to replace social media presence. The app's focus is to present the images in a consistent, easy to access way with minimal distractions. The app can help find extra information via links to club and photographer web sites.</source>
+        <target>The app does _not_ try to replace either club or photographer web sites. It also doesn't try to replace social media presence. The app's focus is to present the images in a consistent, easy to access way with minimal distractions. The app can help find extra information via links to club and photographer web sites.</target>
         <note>Third paragraph in Waalre section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_1.4" xml:space="preserve">
@@ -165,8 +160,8 @@ Try dragging down the Photo Clubs screen to reload the default clubs.</target>
         <note>Fifth paragraph in Waalre section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_1.6" xml:space="preserve">
-        <source>Supporting many clubs also implies that individual clubs should be able to maintain their own data. This means the ability to provide and maintain the images, but also the club's membership list. Central support should focus on maintaining the app. The app's [GitHub site](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) explains the strategy for allowing clubs to maintain their data without any need for software expertise.</source>
-        <target>Supporting many clubs also implies that individual clubs should be able to maintain their own data. This means the ability to provide and maintain the images, but also the club's membership list. Central support should focus on maintaining the app. The app's [GitHub site](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) explains the strategy for allowing clubs to maintain their data without any need for software expertise.</target>
+        <source>Supporting many clubs also implies that individual clubs should be able to maintain their own data. This means the ability to provide and maintain the images, but also the club's membership list. Central support should be limited to maintaining the app. The app's [GitHub site](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) explains the strategy for allowing clubs to maintain their data without requiring any real software expertise.</source>
+        <target>Supporting many clubs also implies that individual clubs should be able to maintain their own data. This means the ability to provide and maintain the images, but also the club's membership list. Central support should be limited to maintaining the app. The app's [GitHub site](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) explains the strategy for allowing clubs to maintain their data without requiring any real software expertise.</target>
         <note>Sixth paragraph in Waalre section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_2.1" xml:space="preserve">
@@ -195,8 +190,8 @@ Try dragging down the Photo Clubs screen to reload the default clubs.</target>
         <note>Fifth paragraph in The App on Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_2.6" xml:space="preserve">
-        <source>For Photo Club Waalre, we chose to also include the work of former club members. By default, former members are not visible, but you can enable displaying them in the Preferences screen.</source>
-        <target>For Photo Club Waalre, we chose to also include the work of former club members. By default, former members are not visible, but you can enable displaying them in the Preferences screen.</target>
+        <source>For Photo Club Waalre, for example, we chose to also include the work of former club members. By default, former members are not visible, but you can enable displaying them in the Preferences screen.</source>
+        <target>For Photo Club Waalre, for example, we chose to also include the work of former club members. By default, former members are not visible, but you can enable displaying them in the Preferences screen.</target>
         <note>Sixth paragraph in the App on Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_2.7" xml:space="preserve">
@@ -206,9 +201,9 @@ Try dragging down the Photo Clubs screen to reload the default clubs.</target>
       </trans-unit>
       <trans-unit id="Paragraph_3.1" xml:space="preserve">
         <source>__Web sites__
-The app does not try to replace club web sites: web sites have more uses than just presenting photos. Because we consider web sites and this app to be _complementary_, the app provides clickable links to club web sites as well as to photographer websites.</source>
+The app does not try to replace club web sites: web sites have more uses than just presenting photos. Because we consider web sites and this app to be _complementary_, the app provides clickable links to club web sites as well as to photographer web sites.</source>
         <target>__Web sites__
-The app does not try to replace club web sites: web sites have more uses than just presenting photos. Because we consider web sites and this app to be _complementary_, the app provides clickable links to club web sites as well as to photographer websites.</target>
+The app does not try to replace club web sites: web sites have more uses than just presenting photos. Because we consider web sites and this app to be _complementary_, the app provides clickable links to club web sites as well as to photographer web sites.</target>
         <note>First paragraph in The Features section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.2" xml:space="preserve">
@@ -219,10 +214,10 @@ The app currently supports English and Dutch. iOS automatically selects the app'
         <note>Second paragraph in The Features section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.3" xml:space="preserve">
-        <source>__Deleting__
-On the _Portfolio_ page, you can swipe to ***Delete*** a member from the list. Don't worry - if the person is still a club member, that person will reappear the next time the app synchronises with online data. This swiping can be useful to remove members who are no longer on the online data members lists. In any case, swipe as much as you like (who knows, it just be therapeutical).</source>
-        <target>__Deleting__
-On the _Portfolio_ page, you can swipe to ***Delete*** a member from the list. Don't worry - if the person is still a club member, that person will reappear the next time the app synchronises with online data. This swiping can be useful to remove members who are no longer on the online data members lists. In any case, swipe as much as you like (who knows, it just be therapeutical).</target>
+        <source>__Deletion__
+On the _Portfolio_ page, you can swipe to delete a member from the list. Don't worry - if the person is still a club member, that person will reappear the next time the app synchronises with online data. This swiping can be useful to remove members who are no longer on the online data members lists. In any case, swipe as much as you like (who knows, it just might be therapeutical).</source>
+        <target>__Deletion__
+On the _Portfolio_ page, you can swipe to delete a member from the list. Don't worry - if the person is still a club member, that person will reappear the next time the app synchronises with online data. This swiping can be useful to remove members who are no longer on the online data members lists. In any case, swipe as much as you like (who knows, it just might be therapeutical).</target>
         <note>Third paragraph in The Features section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.4" xml:space="preserve">
@@ -241,52 +236,52 @@ By clicking on the above button you can (anonymously) vote for improvements you 
       </trans-unit>
       <trans-unit id="Paragraph_4.1" xml:space="preserve">
         <source>When the app opens, it shows a large image corresponding to the app’s icon. If you tap somewhere ***inside*** the image, it zooms out to show the full image representing how digital cameras see color.</source>
-        <target>When the app opens, it shows a large image corresponding to the app’s icon. If you tap somewhere ***inside*** the image, it zooms out to show the full image representing how digital cameras see color.</target>
+        <target state="translated">When the app opens, it shows an image corresponding to the app’s icon. If you tap somewhere ***inside*** the image, it zooms out to show the full image representing how digital cameras see color.</target>
         <note>First paragraph in Prelude section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_4.2" xml:space="preserve">
         <source>This involves a [Bayer color filter array](https://en.wikipedia.org/wiki/Bayer_filter) that adds a color filter on top of each sensor cell. The filter array is shown here superimposed on a colorful photo.</source>
-        <target>This involves a [Bayer color filter array](https://en.wikipedia.org/wiki/Bayer_filter) that adds a color filter on top of each sensor cell. The filter array is shown here superimposed on a colorful photo.</target>
+        <target state="translated">This involves a [Bayer color filter array](https://en.wikipedia.org/wiki/Bayer_filter) that adds a color filter on top of each sensor cell. This filter array is shown here superimposed on a colorful photo.</target>
         <note>Second paragraph in Prelude section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_4.3" xml:space="preserve">
         <source>Tapping ***inside*** the image allows you to zoom in or out to your heart's content. Tapping ***outside*** the image area ends the animation. A single tap ***outside*** the image allows you to skip the animation entirely.</source>
-        <target>Tapping ***inside*** the image allows you to zoom in or out to your heart's content. Tapping ***outside*** the image area ends the animation. A single tap ***outside*** the image allows you to skip the animation entirely.</target>
+        <target state="translated">Tapping ***inside*** the image allows you to zoom in or out to your heart's content. Tapping ***outside*** the image area ends the animation. A single tap ***outside*** the image allows you to skip the animation.</target>
         <note>Third paragraph in Prelude section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_5.1" xml:space="preserve">
         <source>The app runs on iPhone and iPad and requires iOS 17.0 or higher. As most iOS users upgrade to the latest iOS version, this means that the latest app version can support devices made in the last 6 or so years.</source>
-        <target>The app runs on iPhone and iPad and requires iOS 17.0 or higher. As most iOS users upgrade to the latest iOS version, this means that the latest app version can support devices made in the last 6 or so years.</target>
+        <target state="translated">The app runs on iPhone and iPad and requires iOS 17.0 or higher. As most iOS users upgrade to the most recent iOS version possible, this means that the latest app version can support devices made in the last 6 or so years.</target>
         <note>First paragraph SupportedPlatforms section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_5.2" xml:space="preserve">
         <source>The app depends heavily on various Apple software technologies. These include Swift (a programming language), SwiftUI (a user interface framework), Core Data (local data storage), Metal (graphics acceleration), and so-called _structured" concurrency_ (for data fetching), Xcode (development environment), and obviously iOS itself.</source>
-        <target>The app depends heavily on various Apple software technologies. These include Swift (a programming language), SwiftUI (a user interface framework), Core Data (local data storage), Metal (graphics acceleration), and so-called _structured" concurrency_ (for data fetching), Xcode (development environment), and obviously iOS itself.</target>
+        <target state="translated">The app depends heavily on various Apple software technologies. These include Swift (a programming language), SwiftUI (a user interface framework), Core Data (local data storage), Metal (graphics acceleration), and so-called _structured concurrency_ (for data fetching), Xcode (development tooling), and iOS itself.</target>
         <note>Second paragraph SupportedPlatforms section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_5.3" xml:space="preserve">
         <source>The benefit of an iOS focus is that it allows the app developers to focus on functionality rather than cross-platform compatibility.</source>
-        <target>The benefit of an iOS focus is that it allows the app developers to focus on functionality rather than cross-platform compatibility.</target>
+        <target state="translated">The benefit of an iOS focus is that it allows the app's developers to focus on functionality rather than cross-platform compatibility.</target>
         <note>Third paragraph SupportedPlatforms section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_5.4" xml:space="preserve">
         <source>The drawback, however, is the lack of Android support (for now). This is  because the Android world has its own set of software technologies and tends to have more internal diversity. Apps that choose to support multiple platforms require more effort or more technical compromises.</source>
-        <target>The drawback, however, is the lack of Android support (for now). This is  because the Android world has its own set of software technologies and tends to have more internal diversity. Apps that choose to support multiple platforms require more effort or more technical compromises.</target>
+        <target state="translated">The drawback, however, is the lack of Android support (for now). This is  because the Android world has its own set of software technologies and tends to have more internal diversity. Apps that choose to support multiple platforms require more effort or require more technical compromises.</target>
         <note>Fourth paragraph SupportedPlatforms section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_5.5" xml:space="preserve">
         <source>To put this into perspective, the top-6 software "platforms" are (largest to smaller): web, Android, Windows, iOS, iPadOS, and MacOS. Only the very largest apps (like Word, Twitter, Minecraft, Chrome) cover the full range. Other famous apps cover only half: Photoshop (Windows, MacOS, iPadOS), WhatsApp (iPhone, Android, web - kind of), Pokémon Go (Android, iOS, iPadOS - kind of).</source>
-        <target>To put this into perspective, the top-6 software "platforms" are (largest to smaller): web, Android, Windows, iOS, iPadOS, and MacOS. Only the very largest apps (like Word, Twitter, Minecraft, Chrome) cover the full range. Other famous apps cover only half: Photoshop (Windows, MacOS, iPadOS), WhatsApp (iPhone, Android, web - kind of), Pokémon Go (Android, iOS, iPadOS - kind of).</target>
+        <target state="translated">To put this into perspective, the top-6 software "platforms" are (largest first): web, Android, Windows, iOS, iPadOS, and MacOS. Only the very largest apps (like Word, Twitter, Minecraft, Chrome) cover the full range. Other famous apps cover only half: Photoshop (Windows, MacOS, iPadOS), WhatsApp (iPhone, Android, web - kind of), Pokémon Go (Android, iOS, iPadOS - kind of).</target>
         <note>Fifth paragraph SupportedPlatforms section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_5.6" xml:space="preserve">
         <source>The roadmap for additional future platform support will depend on uptake and support from the software community. MacOS and VisionOS both more or less work already. Apple's tvOS could be technically doable, if needed. However, a promising future step would be to support the automatic generation of web site pages using the same data sources used by the app. This would indirectly cover Android, PC, and more. And would benefit the cubs that need to keep the information up to date.</source>
-        <target>The roadmap for additional future platform support will depend on uptake and support from the software community. MacOS and VisionOS both more or less work already. Apple's tvOS could be technically doable, if needed. However, a promising future step would be to support the automatic generation of web site pages using the same data sources used by the app. This would indirectly cover Android, PC, and more. And would benefit the cubs that need to keep the information up to date.</target>
+        <target state="translated">The roadmap for additional future platform support will depend on uptake and help from the software community. MacOS and VisionOS both more or less work already. Support for Apple's tvOS is possible. However, a promising future step would be to support the automatic generation of web site pages using the same data sources used by the app. This would indirectly cover Android, PC, and more. And would benefit the clubs that need to maintain their lists.</target>
         <note>Sixth paragraph SupportedPlatforms section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_6.1" xml:space="preserve">
         <source>You can find this app on [GitHub](https://github.com/vdhamer/Photo-Club-Hub). This allows other software developers to contribute. Getting more developers speeds things up, but also provides fresh ideas and ultimately longer term continuity.</source>
-        <target>You can find this app on [GitHub](https://github.com/vdhamer/Photo-Club-Hub). This allows other software developers to contribute. Getting more developers speeds things up, but also provides fresh ideas and ultimately longer term continuity.</target>
+        <target state="translated">You can find this app on [GitHub](https://github.com/vdhamer/Photo-Club-Hub). This allows other software developers to contribute. Getting more developers involved will speed things up, but also provides fresh ideas and ultimately improve continuity.</target>
         <note>First paragraph Developers section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_6.2" xml:space="preserve">
@@ -296,17 +291,17 @@ By clicking on the above button you can (anonymously) vote for improvements you 
       </trans-unit>
       <trans-unit id="Paragraph_6.3" xml:space="preserve">
         <source>Contributions that do not require coding are also welcome: beta testing via [TestFlight](https://apps.apple.com/us/app/testflight/id899247664), feature requests, translations, SVG icons, sound effects, and (maybe above all) adding support for more clubs and musea.</source>
-        <target>Contributions that do not require coding are also welcome: beta testing via [TestFlight](https://apps.apple.com/us/app/testflight/id899247664), feature requests, translations, SVG icons, sound effects, and (maybe above all) adding support for more clubs and musea.</target>
+        <target state="translated">Contributions that _do not require coding_ are also welcome: beta testing via [TestFlight](https://apps.apple.com/us/app/testflight/id899247664), feature requests, translations, and - above all - adding support for more clubs.</target>
         <note>Third paragraph Developers section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_6.4" xml:space="preserve">
         <source>There is a major ongoing transition to provide a clean, standardised interface to retrieve data per photo club. That interface is needed to load the data, but also keeps the data up to date. After all, membership data and portfolios change regularly. The original interface was a plug-in design with an adaptor per photo club. This is being replaced by a standard JSON-based interface to avoid having to extend the source code whenever a new club comes aboard.</source>
-        <target>There is a major ongoing transition to provide a clean, standardised interface to retrieve data per photo club. That interface is needed to load the data, but also keeps the data up to date. After all, membership data and portfolios change regularly. The original interface was a plug-in design with an adaptor per photo club. This is being replaced by a standard JSON-based interface to avoid having to extend the source code whenever a new club comes aboard.</target>
+        <target state="translated">There is a major ongoing transition to provide a clean, standardised interface to retrieve data per photo club. Such an interface is needed to load the data, but also to keep the data up to date. After all, membership data and portfolios change regularly. The original interface was a plug-in design with an adaptor per photo club. This is being replaced by a standard JSON-based interface to avoid having to update the source in order to onboard additional clubs.</target>
         <note>Fourth paragraph Developers section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_6.5" xml:space="preserve">
         <source>For Photo Club Waalre, an early prototype of this approach to loading data is already in use. The existence of the club is stored in an online JSON file. That file points to a membership list that is read from a HTML table on a password protected part of the club’s [website](https://www.FotogroepWaalre.nl). The portfolios are read from XML files generated by an inexpensive Lightroom Web plug-in called [JuiceBox-Pro](https://www.juicebox.net/tour/). This allows the club to manage the portfolios per member using Lightroom (as a LR collection). These collections can then be uploaded (ftp'ed) to the webserver via the Lightroom _Upload_ button. The image list uploaded to the server is then downloaded by the app when needed.</source>
-        <target>For Photo Club Waalre, an early prototype of this approach to loading data is already in use. The existence of the club is stored in an online JSON file. That file points to a membership list that is read from a HTML table on a password protected part of the club’s [website](https://www.FotogroepWaalre.nl). The portfolios are read from XML files generated by an inexpensive Lightroom Web plug-in called [JuiceBox-Pro](https://www.juicebox.net/tour/). This allows the club to manage the portfolios per member using Lightroom (as a LR collection). These collections can then be uploaded (ftp'ed) to the webserver via the Lightroom _Upload_ button. The image list uploaded to the server is then downloaded by the app when needed.</target>
+        <target state="translated">For Photo Club Waalre, an early prototype of this approach to loading data is already in use. The fact that the club exists is stored in a central (JSON) file. That file points to a membership list that is read from a HTML table on the club’s [website](https://www.FotogroepWaalre.nl). The portfolios are read from XML files generated by an Adobe Lightroom plug-in called [JuiceBox-Pro](https://www.juicebox.net/tour/). This plug-in allows the club to manage the portfolios per member using Lightroom (as a Lightroom "collection"). These collections can then be uploaded (_ftp_) to the webserver via the Lightroom _Upload_ button. The uploaded information can then be downloaded from the web site when it is needed.</target>
         <note>Fifth paragraph Developers section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_6.6" xml:space="preserve">
@@ -431,6 +426,11 @@ Field at top of Members page that allows the user to filter the members based on
         <source>iOS, iPadOS</source>
         <target>iOS, iPadOS</target>
         <note>Section title on Readme page.</note>
+      </trans-unit>
+      <trans-unit id="Supporting multiple languages" xml:space="preserve">
+        <source>Supporting multiple languages</source>
+        <target>Supporting multiple languages</target>
+        <note>Caption of Localizations image on Readme page</note>
       </trans-unit>
       <trans-unit id="The Model" xml:space="preserve">
         <source>The Model</source>

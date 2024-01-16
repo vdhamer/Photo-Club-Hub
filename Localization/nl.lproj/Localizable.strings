@@ -17,7 +17,7 @@
 "admin" = "admin";
 
 /* Caption of Musea image on Readme page */
-"Amsterdam has two photography musea" = "De beide fotomusea aan de Keizersgracht (A'dam).";
+"Amsterdam has two photography musea." = "Fotomusea aan de Keizersgracht in Amsterdam.";
 
 /* To generate strings like "secretary and admin" */
 "and" = "en";
@@ -78,9 +78,6 @@
 
 /* Shown instead of app name in PreludeView when app is started */
 "In debug mode" = "Test versie";
-
-/* Caption of Localizations image on Readme page */
-"List of supported languages" = "De momenteel beschikbare talen";
 
 /* Statistics at end of section of FilteredMemberPortfoliosView
 Default status of member within a club. Used in concatenations. */
@@ -290,6 +287,9 @@ Field at top of Members page that allows the user to filter the members based on
 
 /* Section title on Readme page. */
 "Supported Platforms" = "iOS, iPadOS";
+
+/* Caption of Localizations image on Readme page */
+"Supporting multiple languages" = "Ondersteuning voor engels en nederlands";
 
 /* Section title on Readme page */
 "The app" = "De app";
