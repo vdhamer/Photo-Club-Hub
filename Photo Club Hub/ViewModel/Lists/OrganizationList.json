@@ -22,7 +22,10 @@
                     "language": "NL",
                     "value": "Fotokring Beeldhoek organiseert twee bijeenkomsten per maand: één voor fotobesprekingen, de andere over fototechniek."
                 }
-            ]
+            ],
+            "nlSpecific": {
+                "fotobondNumber": 1641
+            }
         },
 
         {
@@ -46,7 +49,10 @@
                     "language": "NL",
                     "value": "De club is opgericht in 1971 en bestrijkt fotografie, film en AV presentaties."
                 }
-            ]
+            ],
+            "nlSpecific": {
+                "fotobondNumber": 1623
+            }
         },
 
         {
