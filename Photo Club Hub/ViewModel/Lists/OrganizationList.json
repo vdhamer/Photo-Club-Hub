@@ -1,5 +1,6 @@
 {
     "clubs": [
+
         {
             "idPlus": {
                 "town": "Asten",
@@ -23,6 +24,7 @@
                 }
             ]
         },
+
         {
             "idPlus": {
                 "town": "Berlicum",
@@ -46,6 +48,7 @@
                 }
             ]
         },
+
         {
             "idPlus": {
                 "town": "Eindhoven",
@@ -69,6 +72,7 @@
                 }
             ]
         },
+
         {
             "idPlus": {
                 "town": "Eindhoven",
@@ -148,8 +152,10 @@
                 "kvkNumber": 17261693
             }
         }
+
     ],
     "museums": [
+
         {
             "idPlus": {
                 "town": "Amsterdam",
@@ -174,6 +180,7 @@
                 }
             ]
         },
+
         {
             "idPlus": {
                 "town": "Amsterdam",
@@ -194,6 +201,7 @@
                 }
             ]
         },
+
         {
             "idPlus": {
                 "town": "Antwerpen",
@@ -214,6 +222,7 @@
                 }
             ]
         },
+
         {
             "idPlus": {
                 "town": "Axel",
@@ -232,6 +241,7 @@
                 }
             ]
         },
+
         {
             "idPlus": {
                 "town": "Ballarat",
@@ -252,6 +262,7 @@
                 }
             ]
         },
+
         {
             "idPlus": {
                 "town": "Berlin",
@@ -272,6 +283,7 @@
                 }
             ]
         },
+
         {
             "idPlus": {
                 "town": "Den Haag",
@@ -292,6 +304,7 @@
                 }
             ]
         },
+
         {
             "idPlus": {
                 "town": "Dublin",
@@ -312,6 +325,7 @@
                 }
             ]
         },
+
         {
             "idPlus": {
                 "town": "Gurugram",
@@ -331,6 +345,7 @@
                 }
             ]
         },
+
         {
             "idPlus": {
                 "town": "Hilversum",
@@ -351,6 +366,7 @@
                 }
             ]
         },
+
         {
             "idPlus": {
                 "town": "Lianzhou",
@@ -369,6 +385,7 @@
                 }
             ]
         },
+
         {
             "idPlus": {
                 "town": "London",
@@ -389,6 +406,7 @@
                 }
             ]
         },
+
         {
             "idPlus": {
                 "town": "London",
@@ -409,6 +427,7 @@
                 }
             ]
         },
+
         {
             "idPlus": {
                 "town": "Maastricht",
@@ -429,6 +448,7 @@
                 }
             ]
         },
+
         {
             "idPlus": {
                 "town": "Madrid",
@@ -448,6 +468,7 @@
                 }
             ]
         },
+
         {
             "idPlus": {
                 "town": "Melbourne",
@@ -468,6 +489,7 @@
                 }
             ]
         },
+
         {
             "idPlus": {
                 "town": "New York City",
@@ -488,6 +510,7 @@
                 }
             ]
         },
+
         {
             "idPlus": {
                 "town": "New York",
@@ -512,6 +535,7 @@
                 }
             ]
         },
+
         {
             "idPlus": {
                 "town": "New York",
@@ -532,6 +556,7 @@
                 }
             ]
         },
+
         {
             "idPlus": {
                 "town": "Ottawa",
@@ -552,6 +577,7 @@
                 }
             ]
         },
+
         {
             "idPlus": {
                 "town": "Paris",
@@ -572,6 +598,7 @@
                 }
             ]
         },
+
         {
             "idPlus": {
                 "town": "Porto",
@@ -592,6 +619,7 @@
                 }
             ]
         },
+
         {
             "idPlus": {
                 "town": "Riverside",
@@ -612,6 +640,7 @@
                 }
             ]
         },
+
         {
             "idPlus": {
                 "town": "Rochester",
@@ -632,6 +661,7 @@
                 }
             ]
         },
+
         {
             "idPlus": {
                 "town": "Rotterdam",
@@ -652,6 +682,7 @@
                 }
             ]
         },
+
         {
             "idPlus": {
                 "town": "Sakata",
@@ -672,6 +703,7 @@
                 }
             ]
         },
+
         {
             "idPlus": {
                 "town": "Sidney",
@@ -686,6 +718,7 @@
             "wikipedia": "https://en.wikipedia.org/wiki/Australian_Centre_for_Photography",
             "image": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Australian_Centre_For_Photography.jpg"
         },
+
         {
             "idPlus": {
                 "town": "Stockholm",
@@ -706,6 +739,7 @@
                 }
             ]
         },
+
         {
             "idPlus": {
                 "town": "Thessaloniki",
@@ -726,6 +760,7 @@
                 }
             ]
         },
+
         {
             "idPlus": {
                 "town": "Tokyo",
@@ -746,6 +781,7 @@
                 }
             ]
         },
+
         {
             "idPlus": {
                 "town": "Utrecht",
@@ -765,6 +801,7 @@
                 }
             ]
         },
+
         {
             "idPlus": {
                 "town": "Washington D.C.",
@@ -784,6 +821,7 @@
                 }
             ]
         },
+
         {
             "idPlus": {
                 "town": "Zierikzee",
@@ -806,5 +844,6 @@
                 }
             ]
         }
+        
     ]
 }

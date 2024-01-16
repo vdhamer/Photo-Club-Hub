@@ -29,12 +29,12 @@ extension AndersMembersProvider { // fill with some initial hard-coded content
         let clubAnders = PhotoClub.findCreateUpdate(
                                                     context: bgContext,
                                                     organizationTypeEum: .club,
-                                                    photoClubIdPlus: Self.fotogroepAndersIdPlus,
-                                                    photoClubWebsite: AndersMembersProvider.andersURL,
-                                                    fotobondNumber: nil, kvkNumber: nil,
+                                                    photoClubIdPlus: Self.fotogroepAndersIdPlus // ,
+//                                                    photoClubWebsite: AndersMembersProvider.andersURL,
+//                                                    fotobondNumber: nil, kvkNumber: nil,
                                                     // coordinates point to Kruisruimte, Generaal Bothastraat, Eindhoven
-                                                    coordinates: CLLocationCoordinate2D(latitude: 51.44297,
-                                                                                        longitude: 5.51527)
+//                                                    coordinates: CLLocationCoordinate2D(latitude: 51.44297,
+//                                                                                        longitude: 5.51527)
                                                    )
 
         ifDebugPrint("""

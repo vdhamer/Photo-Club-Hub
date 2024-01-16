@@ -15,10 +15,10 @@ extension FotogroepWaalreMembersProvider { // fill with some initial hard-coded 
         let clubWaalre = PhotoClub.findCreateUpdate(
                                         context: bgContext,
                                         organizationTypeEum: .club,
-                                        photoClubIdPlus: FotogroepWaalreMembersProvider.photoClubWaalreIdPlus,
-                                        photoClubWebsite: URL(string: "https://www.fotogroepwaalre.nl"),
-                                        fotobondNumber: 1634, kvkNumber: 17261693,
-                                        coordinates: CLLocationCoordinate2D(latitude: 51.39184, longitude: 5.46144)
+                                        photoClubIdPlus: FotogroepWaalreMembersProvider.photoClubWaalreIdPlus // ,
+//                                        photoClubWebsite: URL(string: "https://www.fotogroepwaalre.nl"),
+//                                        fotobondNumber: 1634, kvkNumber: 17261693,
+//                                        coordinates: CLLocationCoordinate2D(latitude: 51.39184, longitude: 5.46144)
                                         )
         ifDebugPrint("""
                      \(clubWaalre.fullNameTown): \
