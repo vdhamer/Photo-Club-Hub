@@ -44,6 +44,7 @@
       </trans-unit>
       <trans-unit id="Amsterdam has two photography musea" xml:space="preserve">
         <source>Amsterdam has two photography musea</source>
+        <target>De beide fotomusea aan de Keizersgracht (A'dam).</target>
         <note>Caption of Musea image on Readme page</note>
       </trans-unit>
       <trans-unit id="App version %@ (build %@)" xml:space="preserve">
@@ -88,7 +89,7 @@
       </trans-unit>
       <trans-unit id="Example of a link to a club web site" xml:space="preserve">
         <source>Example of a link to a club web site</source>
-        <target>Voorbeeld van een Link naar een club website</target>
+        <target>Voorbeeld van een link naar een club website</target>
         <note>Caption of Websites image on Readme page</note>
       </trans-unit>
       <trans-unit id="Features and tips" xml:space="preserve">
@@ -108,7 +109,7 @@
       </trans-unit>
       <trans-unit id="List of supported languages" xml:space="preserve">
         <source>List of supported languages</source>
-        <target>De beschikbare talen</target>
+        <target>De momenteel beschikbare talen</target>
         <note>Caption of Localizations image on Readme page</note>
       </trans-unit>
       <trans-unit id="Member categories" xml:space="preserve">
@@ -145,42 +146,42 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
       </trans-unit>
       <trans-unit id="Paragraph_1.2" xml:space="preserve">
         <source>It does this in a _consistent_ way across all participating photographers and clubs. For the app's users, this consistency avoids having to find each club's website and discovering how to use it to find and browse the images.</source>
-        <target>De app presenteert op een _consistente_ wijze het werk van alle clubleden van de ondersteunde fotoclubs. Hiermee hoef je als gebruiker de website van een club niet zelf te vinden. En je hoeft ook niet voor ieder club te ontdekken hoe die specifieke website werkt.  </target>
+        <target>De app presenteert op een consistente wijze het werk van alle clubleden van de ondersteunde fotoclubs. Hiermee hoef je niet meer als gebruiker de website van een club zelf te vinden. En je hoeft ook niet voor ieder club te ontdekken hoe die specifieke website werkt.  </target>
         <note>Second paragraph in Waalre section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_1.3" xml:space="preserve">
         <source>The app does _not_ try to replace either photographer web sites or club web sites. It also doesn't try to replace social media presence. The app's focus is to present the images in a consistent, easy to access way with minimal distractions. The app can be used to find to extra information via links to club and photographer web sites.</source>
-        <target>Dit wordt vergemakkelijkt doordat de app alleen bedoeld is om de foto's tot hun recht te laten komen. Voor andere clubinformatie (zoals mededelingen of vergaderschema) wordt de gebruiker naar de websites doorgelinkt. De app probeert dus nadrukkelijk _niet_ om websites of social media aanwezigheid te vervangen. Het is hier complementair aan.</target>
+        <target>Dit wordt vergemakkelijkt doordat de app vooral bedoeld is om de foto's tot hun recht te laten komen. Voor andere clubinformatie (zoals mededelingen of vergaderschemas) wordt de gebruiker naar de websites doorgelinkt. De app probeert dus nadrukkelijk _niet_ om de websites of social media aanwezigheid van clubs te vervangen. Het is daar complementair aan.</target>
         <note>Third paragraph in Waalre section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_1.4" xml:space="preserve">
         <source>The app was originally named _Photo Club Waalre_ after a 15-person photo club in the Netherlands. The word __hub__ in the newer name stresses the app's support for _multiple_ photo clubs, and the app's ambition to strengthen the ties between clubs by making their work easier to access.</source>
-        <target>Oorspronkelijk heette deze app _Fotogroep Waalre_ naar de fotoclub in de buurt van Eindhoven. Het woord __hub__ (ofwel 'trefplaats') in de naam benadrukt dat de app in de huidige versie meerdere fotoclubs tegelijk kan ondersteunen. En het benadrukt de ambitie om de banden tussen fotoclubs, fotografen en hun publiek te versterken.</target>
+        <target>Oorspronkelijk heette deze app _Fotogroep Waalre_ naar de fotoclub in de buurt van Eindhoven. Het woord __hub__ (ofwel 'trefplaats') in de nieuwe naam benadrukt dat de app inmiddels meerdere fotoclubs tegelijk kan ondersteunen. En het benadrukt de ambitie om de banden tussen fotoclubs, fotografen en hun publiek te versterken.</target>
         <note>Fourth paragraph in Waalre section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_1.5" xml:space="preserve">
         <source>Support for multiple photo clubs requires the ability to display a list of clubs, their members and the selected photos per member.</source>
-        <target>Het ondersteunen van meerdere fotoclubs gebeurt deels door de foto's te groeperen per clublid, en de clubleden te groeperen per club.</target>
+        <target>Het ondersteunen van fotoclubs gebeurt deels door de foto's te presenteren per club.</target>
         <note>Fifth paragraph in Waalre section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_1.6" xml:space="preserve">
         <source>Supporting many clubs also implies that individual clubs should be able to maintain their own data. This means the ability to provide and maintain the images, but also the club's membership list. Central support should focus on maintaining the app. The app's [GitHub site](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) explains the strategy for allowing clubs to maintain their data without any need for software expertise.</source>
-        <target>Er is echter meer hiervoor voor nodig: voor toepasbaarheid op grotere schaal moet het voor de individuele club eenvoudig zijn om hun ledeninformatie en de lijsten met geselecteerde foto's in de app zelf in te voeren en te onderhouden. Deze aanpak is geschreven op de [GitHub softwaresite](https://GitHub.com/vdhamer/Photo-Club-Hub#readme).</target>
+        <target>Voor toepasbaarheid op grotere schaal moet het echter ook voor de clubs eenvoudig zijn om hun eigen ledeninformatie en hun eigen lijsten met geselecteerde foto's in de app zelf in te voeren en te onderhouden. Deze aanpak is in meer detail te vinden op de [GitHub site](https://GitHub.com/vdhamer/Photo-Club-Hub#readme).</target>
         <note>Sixth paragraph in Waalre section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_2.1" xml:space="preserve">
         <source>Photo clubs play a central role in this app. The Portfolios screen shows a list of photo clubs.</source>
-        <target>Het doel van deze app is om geselecteerd werk te tonen van clubleden van fotoclubs. Fotoclubs spelen hierdoor een centrale rol in deze app.</target>
+        <target>Het doel van deze app is om geselecteerd werk te tonen van clubleden van fotoclubs. Fotoclubs spelen dus hierbij een centrale rol.</target>
         <note>First paragraph in The App on Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_2.2" xml:space="preserve">
         <source>Each photo club, in turn, contains a series of member ***portfolios*** containing the actual images.</source>
-        <target>Men vindt  de ***fotoclubs*** Op het hoogste niveau in het Porfolio's scherm. Binnen een fotoclub treft men de ***portfolio's*** aan van de clubleden. Een portfolio bevat de ***foto's*** van dat lid - althans die foto's die betrekking hebben op de fotoclub.</target>
+        <target>Men vindt  de ***fotoclubs*** op het hoogste niveau in het Porfolio's scherm. Binnen een fotoclub treft men de ***portfolio's*** aan van de clubleden. Een portfolio bevat vervolgens de ***foto's*** van dat lid - althans die foto's die betrekking hebben op die fotoclub.</target>
         <note>Second paragraph in The App on Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_2.3" xml:space="preserve">
         <source>Each portfolio thus covers the subset of the photographer's work _that is associated with that photo club_. Some photographers may have multiple portfolios in the app if the photographer is (or was at some point) associated with more than one photo club.</source>
-        <target>Een fotograaf kan eventueel meerdere portfolios hebben door lid te zijn (of geweest te zijn) van meerdere fotoclubs. Een portfolio bevat dus alleen werk van een fotograaf dat besproken of geëxposeerd is bij één fotoclub. Een foto kan overigens in meerdere portfolios van een fotograaf voorkomen.</target>
+        <target>Een fotograaf kan eventueel meerdere portfolios hebben door lid te zijn (of geweest te zijn) van meerdere fotoclubs. Een portfolio bevat dus alleen werk van een fotograaf dat besproken of geëxposeerd is bij één fotoclub. Een foto kan overigens in meerdere portfolios van de fotograaf voorkomen.</target>
         <note>Third paragraph in The App on Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_2.4" xml:space="preserve">
@@ -190,12 +191,12 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
       </trans-unit>
       <trans-unit id="Paragraph_2.5" xml:space="preserve">
         <source>We try to show the portfolios with **minimal distraction**. Web sites are often less optimal for this because they need to show browser controls (e.g., an address bar or tabs) and serve multiple purposes (e.g., show club news or contact information).</source>
-        <target>Net als bij een tentoonstelling is het belangrijk om een portfolio zonder afleiding te kunnen bekijken. Webpagina's zijn hiervoor vaak iets te druk vanwege bedieningselementen zoals de adresbalk, maar ook omdat een clubwebsite vaak meerdere doeleinden moet dienen (bijvoorbeeld het tonen van clubnieuws).</target>
+        <target>Net als bij een tentoonstelling is het belangrijk om een portfolio _zonder afleiding_ te kunnen bekijken. Webpagina's zijn hiervoor vaak iets te druk vanwege bedieningselementen zoals de adresbalk of tabbladen, maar ook omdat een clubwebsite vaak meerdere doeleinden dient (bijvoorbeeld het verspreiden van clubnieuws).</target>
         <note>Fifth paragraph in The App on Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_2.6" xml:space="preserve">
         <source>For Photo Club Waalre, we chose to also include the work of former club members. By default, former members are not visible, but you can enable displaying them in the Preferences screen.</source>
-        <target>De app kan, indien een club daarvoor kiest, ook de portfolio's van *voormalige* clubleden tonen. De gebruiker kan zelf bepalen of beschikbare portfolio's van ex-leden zichtbaar zijn (via Instellingen).</target>
+        <target>De app kan, indien een club daarvoor kiest, ook de portfolio's van *voormalige* clubleden tonen. De gebruiker kan zelf kiezen of beschikbare portfolio's van ex-leden zichtbaar zijn (via Instellingen).</target>
         <note>Sixth paragraph in the App on Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_2.7" xml:space="preserve">
@@ -207,7 +208,7 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
         <source>__Web sites__
 The app does not try to replace club web sites: web sites have more uses than just presenting photos. Because we consider web sites and this app to be _complementary_, the app provides clickable links to club web sites as well as to photographer websites.</source>
         <target>__Websites__
-Het hoofddoel van de app is om de portfolio's via een strakke presentatie tot hun recht te laten komen. Wij streven er dus _niet_ naar dat de app een website kan vervangen. Daarom verwijst de app de gebruiker via links door naar de websites van de clubs.</target>
+Het hoofddoel van de app is om portfolio's van clubleden via een strakke presentatie tot hun recht te laten komen. Wij streven er dus _niet_ naar dat de app een website kan vervangen. Daarom verwijst de app de gebruiker via links door naar de clubwebsites.</target>
         <note>First paragraph in The Features section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.2" xml:space="preserve">
@@ -219,9 +220,9 @@ De app ondersteunt zowel Nederlands als Engels. De taal van de app past zich aut
       </trans-unit>
       <trans-unit id="Paragraph_3.3" xml:space="preserve">
         <source>__Deleting__
-On the Portfolio page, you can swipe to ***Delete*** a member from the list. Don't worry - if the person is still a club member, that person will reappear the next time the app synchronises with online data. This swiping can be useful to remove members who are no longer on the online data members lists. In any case, swipe as much as you like (who knows, it just be therapeutical).</source>
+On the _Portfolio_ page, you can swipe to ***Delete*** a member from the list. Don't worry - if the person is still a club member, that person will reappear the next time the app synchronises with online data. This swiping can be useful to remove members who are no longer on the online data members lists. In any case, swipe as much as you like (who knows, it just be therapeutical).</source>
         <target>__Wissen__
-De gebruiker kan op de Portfolio pagina leden verwijderen door hun naam naar links te vegen. Dat verwijderen is tijdelijk indien het lid nog op de online ledenlijst van de club staat: bij opnieuw synchroniseren komt de naam dan automatisch weer terug. Maar dit "wegvegen" kan nuttig zijn als bijvoorbeeld een kandidaat-lid vertrekt zonder lid te worden. Hiermee verwijder je iemand uit de locale ledenlijst die niet meer voorkomt in de online ledenlijst. Als alternatief kan men ook de app zelf verwijderen en opnieuw installeren.</target>
+De gebruiker kan op het _Portfolio_ scherm leden verwijderen door hun naam naar links te vegen. Het verwijderen is tijdelijk indien het lid nog steeds op de online ledenlijst van de club voorkomt: bij opnieuw synchroniseren komt de naam dan automatisch weer terug. Dit "wegvegen" kan nodig zijn als bijvoorbeeld een kandidaat-lid uit de club vertrekt zonder lid te worden. Hiermee verwijder je iemand uit de locale ledenlijst die inmiddels niet meer voorkomt op de online ledenlijst. Als alternatief kan men de app geheel verwijderen en opnieuw installeren. Hierdoor worden de interne lijsten opnieuw opgebouwd.</target>
         <note>Third paragraph in The Features section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.4" xml:space="preserve">
@@ -240,7 +241,7 @@ Via bovenstaande knop kunt U (anoniem) stemmen op welke toekomstige uitbreidinge
       </trans-unit>
       <trans-unit id="Paragraph_4.1" xml:space="preserve">
         <source>When the app opens, it shows a large image corresponding to the app’s icon. If you tap somewhere ***inside*** the image, it zooms out to show the full image representing how digital cameras see color.</source>
-        <target>Bij het opstarten van de app, wordt een grote versie van het applogo zichtbaar. Dit is een interactief speeltje. Door ***binnen het beeld*** te klikken zoomt het beeld langzaam uit tot een verkante versie van deze foto.</target>
+        <target>Bij het opstarten van de app, wordt een grote versie van het applogo zichtbaar. Dit is een interactief speeltje. Door ***binnen het beeld*** te klikken zoomt het beeld langzaam uit tot een vierkante versie van bovenstaande foto.</target>
         <note>First paragraph in Prelude section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_4.2" xml:space="preserve">
@@ -250,67 +251,67 @@ Via bovenstaande knop kunt U (anoniem) stemmen op welke toekomstige uitbreidinge
       </trans-unit>
       <trans-unit id="Paragraph_4.3" xml:space="preserve">
         <source>Tapping ***inside*** the image allows you to zoom in or out to your heart's content. Tapping ***outside*** the image area ends the animation. A single tap ***outside*** the image allows you to skip the animation entirely.</source>
-        <target>Door te klikken ***binnen*** het vierkante beeld kan men verschillende delen van het beeld-met-vlakjes van dichtbij bekijken. Klik ***buiten*** het vierkante beeld om de animatie af te stoppen.</target>
+        <target>Door te klikken ***binnen*** het vierkante beeld kan men verschillende delen van het beeld vergroot bekijken. Klik ***buiten*** het vierkante beeld om de animatie te stoppen.</target>
         <note>Third paragraph in Prelude section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_5.1" xml:space="preserve">
         <source>The app runs on iPhone and iPad and requires iOS 17.0 or higher. As most iOS users upgrade to the latest iOS version, this means that the latest app version can support devices made in the last 6 or so years.</source>
-        <target>De app vereist minimaal iOS 17.0 (of iPadOS 17.0). Dit betekent dat apparaat modellen ongeveer 7 jaar lang met nieuwe app versies ondersteund worden. Voor apparaten met bijvoorbeeld iOS 16 heeft de App Store oudere versies van de app nog beschikbaar.</target>
+        <target>De app vereist minimaal iOS 17.0 (of iPadOS 17.0). Dit betekent dat apparaat modellen ongeveer 7 jaar lang met nieuwe app versies ondersteund worden. Voor apparaten met bijvoorbeeld iOS 16 heeft de App Store oudere versies van de app beschikbaar.</target>
         <note>First paragraph SupportedPlatforms section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_5.2" xml:space="preserve">
         <source>The app depends heavily on various Apple software technologies. These include Swift (a programming language), SwiftUI (a user interface framework), Core Data (local data storage), Metal (graphics acceleration), and so-called _structured" concurrency_ (for data fetching), Xcode (development environment), and obviously iOS itself.</source>
-        <target>De app maakt intern zwaar gebruik van diverse __Apple__ software technologieën: Swift (een programmeertaal), SwiftUI (voor schermontwerp), Core Data (lokale dataopslag), Metal (snelle complexe animaties), "Structured Concurrency" (laden van data), en uiteraard iOS zelf.</target>
+        <target>De app maakt intern zwaar gebruik van diverse __Apple__ software technologieën: Swift (een programmeertaal), SwiftUI (voor schermontwerp), Core Data (lokale dataopslag), Metal (bewegende animaties), "Structured Concurrency" (laden van data), en iOS zelf.</target>
         <note>Second paragraph SupportedPlatforms section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_5.3" xml:space="preserve">
         <source>The benefit of an iOS focus is that it allows the app developers to focus on functionality rather than cross-platform compatibility.</source>
-        <target>Door vooralsnog alleen Apple technologie te ondersteunen, kan het ontwikkelen van de app zich richten op functionaliteit in plaats van op het ondersteunen van diverse apparaat soorten en OS versies.</target>
+        <target>Door vooralsnog alleen Apple producten te ondersteunen, kan het ontwikkelen van de app zich richten op functionaliteit in plaats van op het ondersteunen van diverse apparaatsoorten en versies van besturingsystemen.</target>
         <note>Third paragraph SupportedPlatforms section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_5.4" xml:space="preserve">
         <source>The drawback, however, is the lack of Android support (for now). This is  because the Android world has its own set of software technologies and tends to have more internal diversity. Apps that choose to support multiple platforms require more effort or more technical compromises.</source>
-        <target>Dit heeft uiteraard wel het nadeel dat er niet gauw een __Android__ versie van deze app beschikbaar zal komen. De bekendste apps doen dit wel om de gehele mobiele markt te kunnen bedienen, maar dit vereist veel werk en technische compromissen.</target>
+        <target>Dit heeft uiteraard wel het nadeel dat er niet gauw een __Android__ versie van deze app beschikbaar zal komen. De bekendste apps doen dit wel om de gehele mobiele markt te kunnen bedienen, maar dit vereist veel extra werk en technische compromissen.</target>
         <note>Fourth paragraph SupportedPlatforms section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_5.5" xml:space="preserve">
         <source>To put this into perspective, the top-6 software "platforms" are (largest to smaller): web, Android, Windows, iOS, iPadOS, and MacOS. Only the very largest apps (like Word, Twitter, Minecraft, Chrome) cover the full range. Other famous apps cover only half: Photoshop (Windows, MacOS, iPadOS), WhatsApp (iPhone, Android, web - kind of), Pokémon Go (Android, iOS, iPadOS - kind of).</source>
-        <target>De keus om Android vooralsnog te negeren heeft ook een ander gevolg: de app kan geen essentiële functionaliteit bevatten waarvoor geen goed alternatief voorhanden is. En met "alternatief" denken we dus vooral aan een website. Die website is bijvoorbeeld ook nodig voor PC gebruikers. En voor functionaliteit die deze app niet afdekt (zoals clubnieuws en vergaderschema).</target>
+        <target>De keus om Android vooralsnog te negeren heeft ook een ander gevolg: de app kan geen essentiële functionaliteit bevatten waarvoor geen goed alternatief voorhanden is. En met "alternatief" denken we dus vooral aan een website. Een website is bijvoorbeeld ook nodig voor PC gebruikers. En voor functionaliteit die deze app niet afdekt (zoals clubnieuws en vergaderschemas).</target>
         <note>Fifth paragraph SupportedPlatforms section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_5.6" xml:space="preserve">
         <source>The roadmap for additional future platform support will depend on uptake and support from the software community. MacOS and VisionOS both more or less work already. Apple's tvOS could be technically doable, if needed. However, a promising future step would be to support the automatic generation of web site pages using the same data sources used by the app. This would indirectly cover Android, PC, and more. And would benefit the cubs that need to keep the information up to date.</source>
-        <target>Een veelbelovende uitbreiding zou het automatisch aanmaken van website pagina's zijn. Die pagina's kunnen op dezelfde manier van data voorzien worden als de app. Hiermee steun je bijvoorbeeld Android en PC gebruikers, maar vereenvoudig je ook het actueel houden van de data.   </target>
+        <target>Een veelbelovende uitbreiding zou het automatisch aanmaken van website pagina's zijn. Die pagina's kunnen op dezelfde manier van data voorzien worden als de app. Hiermee ondersteun je zowel Android als PC gebruikers, maar vereenvoudig je ook het actueel houden van de data.   </target>
         <note>Sixth paragraph SupportedPlatforms section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_6.1" xml:space="preserve">
         <source>You can find this app on [GitHub](https://github.com/vdhamer/Photo-Club-Hub). This allows other software developers to contribute. Getting more developers speeds things up, but also provides fresh ideas and ultimately longer term continuity.</source>
-        <target>De broncode van deze app is te vinden op [GitHub](https://github.com/vdhamer/Photo-Club-Hub). Hiermee kunnen andere ontwikkelaars hun steentjes bijdragen. Dit levert meer voortgang, maar bevordert ook frisse ideeën en de continuïteit van het project.</target>
+        <target>De broncode van deze app is te vinden op [GitHub](https://github.com/vdhamer/Photo-Club-Hub). Hiermee kunnen meer ontwikkelaars hun steentjes bijdragen. Dit levert meer voortgang, maar bevordert ook frisse ideeën en de continuïteit van het project.</target>
         <note>First paragraph Developers section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_6.2" xml:space="preserve">
         <source>Welcome contributions include adding features, code improvements, ideas on architecture and interface definition, and possibly server-side functionality.</source>
-        <target>Enkele mogelijkheden om als __software ontwikkelaar__ bij te dragen zijn: nieuwe functionaliteit, meedenken over de architectuur en de nieuwe interfaces, en mogelijk server ondersteuning.</target>
+        <target>Enkele mogelijkheden om als __software ontwikkelaar__ bij te dragen zijn: nieuwe functionaliteit, correcties, meedenken over de architectuur en de nieuwe interfaces, en wellicht server ondersteuning.</target>
         <note>Second paragraph Developers section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_6.3" xml:space="preserve">
         <source>Contributions that do not require coding are also welcome: beta testing via [TestFlight](https://apps.apple.com/us/app/testflight/id899247664), feature requests, translations, SVG icons, sound effects, and (maybe above all) adding support for more clubs and musea.</source>
-        <target>Bijdragen __zonder programmeerwerk__ zijn ook welkom: testen via TestFlight](https://apps.apple.com/us/app/testflight/id899247664), ideeën, vertalingen, en vooral ondersteuning voor het toevoegen van meer clubs.</target>
+        <target>Bijdragen __zonder programmeerwerk__ zijn ook welkom: testen via [TestFlight](https://apps.apple.com/us/app/testflight/id899247664), ideeën, vertalingen, en vooral ondersteuning bij het toevoegen van meer clubs.</target>
         <note>Third paragraph Developers section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_6.4" xml:space="preserve">
         <source>There is a major ongoing transition to provide a clean, standardised interface to retrieve data per photo club. That interface is needed to load the data, but also keeps the data up to date. After all, membership data and portfolios change regularly. The original interface was a plug-in design with an adaptor per photo club. This is being replaced by a standard JSON-based interface to avoid having to extend the source code whenever a new club comes aboard.</source>
-        <target>Wij zijn momenteel druk bezig om de manier om clubs aan de app toe te voegen sterk te vereenvoudigen. Dit vergt een gestandaardiseerde en gedistribueerde manier om de benodigde lijsten (van clubs, van leden, van beelden) in te voeren en te onderhouden. Dit vervangt een eerdere aanpak met een plug-in per fotoclub. Met de nieuwe aanpak kan je bijvoorbeeld een club, een clublid of een foto toevoegen of wijzigen zonder dat de software aangepast wordt. </target>
+        <target>Wij zijn momenteel druk bezig om de manier om clubs aan de app toe te voegen sterk te vereenvoudigen. Dit vergt een gestandaardiseerde en gedistribueerde manier om de benodigde lijsten (van clubs, van leden, van beelden) in te voeren en te onderhouden. Dit vervangt een eerdere aanpak met een plug-in per fotoclub. Met de nieuwe aanpak kan je bijvoorbeeld een club, een clublid of een foto toevoegen of wijzigen _zonder_ een nieuwe softwareversie uit te brengen. </target>
         <note>Fourth paragraph Developers section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_6.5" xml:space="preserve">
         <source>For Photo Club Waalre, an early prototype of this approach to loading data is already in use. The existence of the club is stored in an online JSON file. That file points to a membership list that is read from a HTML table on a password protected part of the club’s [website](https://www.FotogroepWaalre.nl). The portfolios are read from XML files generated by an inexpensive Lightroom Web plug-in called [JuiceBox-Pro](https://www.juicebox.net/tour/). This allows the club to manage the portfolios per member using Lightroom (as a LR collection). These collections can then be uploaded (ftp'ed) to the webserver via the Lightroom _Upload_ button. The image list uploaded to the server is then downloaded by the app when needed.</source>
-        <target>Voor Fotogroep Waalre hebben we al een werkend prototype hiervoor getest. De  naam en URL van de club is te vinden in een centraal databestand. Dat is een JSON lijst met clubs (en musea). Die lijst wijst vervolgens naar een lokaal bestand (HTML tabel) met de ledenlijst. Die ledenlijst wijst vervolgens door naar de portfolio's (XML lijst met foto's) per lid. De XML lijst met foto's en het uploaden van de eigenlijke foto's is overigens ook zichtbaar op de website zelf. En de XML lijst en het uploaden van de eigenlijke foto's naar de lokale website gebeurt met behulp van Adobe Lightroom Classic en een eenvoudige plug-in ([JuiceBox-Pro](https://www.juicebox.net)). Hierdoor zijn de portfolio's aan te maken als standaard Lightroom _collecties_ en kan een portfolio met een druk op de LR Upload knop naar de website gestuurd worden. De app leest op zijn beurt de vereiste clubinformatie vanaf de club website zodra dat nodig is.</target>
+        <target>Bij Fotogroep Waalre hebben we destijds al een werkend prototype hiervoor getest. Hierbij is de  naam en URL van een club is te vinden in een centraal JSON databestand. Die centrale lijst met clubs wijst door naar een lokaal bestand (bijvoorbeeld een HTML tabel) met de ledenlijst. Die ledenlijst wijst vervolgens door naar de portfolio's (XML lijsten met foto's) per clublid. Deze XML lijsten en de ge-uploadde foto's worden overigens ook - los van deze app - op de website zelf gebruikt. De XML lijsten aanmaken en het uploaden van de eigenlijke foto's naar de clubwebsite gebeurt met Adobe Lightroom Classic en een plug-in ([JuiceBox-Pro](https://www.juicebox.net)). Hierdoor zijn de portfolio's aan te maken als standaard Lightroom _collecties_ en kan een portfolio met een druk op de Lightroom Upload knop op de clubwebsite gezet worden. De app leest op zijn beurt de vereiste clubinformatie vanaf de clubwebsite.</target>
         <note>Fifth paragraph Developers section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_6.6" xml:space="preserve">
         <source>Software developers or other volunteers who are interested to help out can contact us via GitHub, Facebook PM or LinkedIn.</source>
-        <target>Samenvattend: wij zoeken vrijwilligers die mee willen helpen. Voor het meeprogrammeren zoeken wij mensen die eerder een eigen app gemaakt hebben op basis van SwiftUI. Of ervaren programmeurs die serieus bezig zijn met een SwiftUI cursus (b.v. [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/) van _Hacking With Swift_, of het college [CS193p](https://cs193p.sites.stanford.edu) dat Stanford University online hield ivm de pandemie). Vragen over de mogelijkheden om bij te dragen graag sturen naar github@vdhamer.com.</target>
+        <target>Vrijwilligers die mee willen helpen kunnen ons bereiken via GitHub, Facebook PM of LinkedIn.</target>
         <note>Sixth paragraph Developers section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_7.1" xml:space="preserve">
@@ -437,6 +438,11 @@ Field at top of Members page that allows the user to filter the members based on
         <source>The Model</source>
         <target>Voer voor nerds</target>
         <note>Section title on Readme page</note>
+      </trans-unit>
+      <trans-unit id="The Preferences screen." xml:space="preserve">
+        <source>The Preferences screen.</source>
+        <target>Het Instellingen scherm.</target>
+        <note>Caption of an image on the Readme page</note>
       </trans-unit>
       <trans-unit id="The Prelude" xml:space="preserve">
         <source>The Prelude</source>

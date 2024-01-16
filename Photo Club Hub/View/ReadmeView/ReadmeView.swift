@@ -72,6 +72,18 @@ struct ReadmeView: View {
                                           geo: geo)
                                 Paragraph("2.5", comment: "Fifth paragraph in Concept section of Readme page", geo: geo)
                                 Paragraph("2.6", comment: "Sixth paragraph in Concept section of Readme page", geo: geo)
+
+                                Image("Preferences")
+                                    .resizable()
+                                    .border(.gray, width: 1)
+                                    .scaledToFit()
+                                    .frame(width: geo.size.width * 0.8, height: 300, alignment: .center)
+                                Text("The Preferences screen.",
+                                     comment: "Caption of an image on the Readme page")
+                                    .font(.callout.italic())
+                                    .frame(width: geo.size.width * 0.8, alignment: .center)
+                                Text("")
+
                                 Paragraph("2.7", comment: "Seventh paragraph in Concept section of Readme page",
                                           geo: geo)
                             }

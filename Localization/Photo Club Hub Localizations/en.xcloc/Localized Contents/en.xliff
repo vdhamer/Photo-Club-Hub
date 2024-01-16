@@ -220,9 +220,9 @@ The app currently supports English and Dutch. iOS automatically selects the app'
       </trans-unit>
       <trans-unit id="Paragraph_3.3" xml:space="preserve">
         <source>__Deleting__
-On the Portfolio page, you can swipe to ***Delete*** a member from the list. Don't worry - if the person is still a club member, that person will reappear the next time the app synchronises with online data. This swiping can be useful to remove members who are no longer on the online data members lists. In any case, swipe as much as you like (who knows, it just be therapeutical).</source>
+On the _Portfolio_ page, you can swipe to ***Delete*** a member from the list. Don't worry - if the person is still a club member, that person will reappear the next time the app synchronises with online data. This swiping can be useful to remove members who are no longer on the online data members lists. In any case, swipe as much as you like (who knows, it just be therapeutical).</source>
         <target>__Deleting__
-On the Portfolio page, you can swipe to ***Delete*** a member from the list. Don't worry - if the person is still a club member, that person will reappear the next time the app synchronises with online data. This swiping can be useful to remove members who are no longer on the online data members lists. In any case, swipe as much as you like (who knows, it just be therapeutical).</target>
+On the _Portfolio_ page, you can swipe to ***Delete*** a member from the list. Don't worry - if the person is still a club member, that person will reappear the next time the app synchronises with online data. This swiping can be useful to remove members who are no longer on the online data members lists. In any case, swipe as much as you like (who knows, it just be therapeutical).</target>
         <note>Third paragraph in The Features section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.4" xml:space="preserve">
@@ -436,6 +436,11 @@ Field at top of Members page that allows the user to filter the members based on
         <source>The Model</source>
         <target>The Model</target>
         <note>Section title on Readme page</note>
+      </trans-unit>
+      <trans-unit id="The Preferences screen." xml:space="preserve">
+        <source>The Preferences screen.</source>
+        <target>The Preferences screen.</target>
+        <note>Caption of an image on the Readme page</note>
       </trans-unit>
       <trans-unit id="The Prelude" xml:space="preserve">
         <source>The Prelude</source>

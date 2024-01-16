@@ -150,7 +150,7 @@ Default status of member within a club. Used in concatenations. */
 "Paragraph_3.2" = "__Languages__\nThe app currently supports English and Dutch. iOS automatically selects the app's language based on your device’s language settings (_Settings > General > Language & Region > Preferred Language Order_). iOS also allows you to overrule this choice per individual app (_Settings > Photo Club Hub > Language_).";
 
 /* Third paragraph in The Features section of Readme page */
-"Paragraph_3.3" = "__Deleting__\nOn the Portfolio page, you can swipe to ***Delete*** a member from the list. Don't worry - if the person is still a club member, that person will reappear the next time the app synchronises with online data. This swiping can be useful to remove members who are no longer on the online data members lists. In any case, swipe as much as you like (who knows, it just be therapeutical).";
+"Paragraph_3.3" = "__Deleting__\nOn the _Portfolio_ page, you can swipe to ***Delete*** a member from the list. Don't worry - if the person is still a club member, that person will reappear the next time the app synchronises with online data. This swiping can be useful to remove members who are no longer on the online data members lists. In any case, swipe as much as you like (who knows, it just be therapeutical).";
 
 /* Fourth paragraph in The Features section of Readme page */
 "Paragraph_3.4" = "__Musea__\nThe app also contains the names and locations of a few dozen photo musea. These show up on the maps on the Clubs screen if you zoom out enough.";
@@ -290,6 +290,9 @@ Field at top of Members page that allows the user to filter the members based on
 
 /* Section title on Readme page */
 "The Model" = "The Model";
+
+/* Caption of an image on the Readme page */
+"The Preferences screen." = "The Preferences screen.";
 
 /* Section title on Readme page */
 "The Prelude" = "The Prelude";
