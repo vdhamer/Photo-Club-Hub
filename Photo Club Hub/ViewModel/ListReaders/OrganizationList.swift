@@ -101,11 +101,14 @@ class OrganizationList {
                                                          longitude: jsonCoordinates["longitude"].doubleValue)
                 let photoClubWebsite = URL(string: jsonOrganization["website"].stringValue)
                 let localizedDescriptions = jsonOrganization["description"].arrayValue
+                let fotobondNumber = jsonOrganization["nlSpecific"]["fotobondNumber"].int16Value
+                let kvkNumber = jsonOrganization["nlSpecific"]["kvkNumber"].int32Value
                 _ = PhotoClub.findCreateUpdate(context: bgContext,
                                                organizationTypeEum: organizationTypeEnum,
                                                photoClubIdPlus: idPlus,
                                                photoClubWebsite: photoClubWebsite,
-                                               fotobondNumber: nil, kvkNumber: nil,
+                                               fotobondNumber: fotobondNumber, // int16
+                                               kvkNumber: kvkNumber, // int32
                                                coordinates: coordinates,
                                                localizedDescriptions: localizedDescriptions)
             }

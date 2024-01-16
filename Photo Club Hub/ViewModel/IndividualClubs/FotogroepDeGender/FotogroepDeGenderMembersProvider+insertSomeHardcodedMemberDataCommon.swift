@@ -11,7 +11,7 @@ import MapKit // for CLLocationCoordinate2D
 
 extension FotogroepDeGenderMembersProvider { // fill with some initial hard-coded content
 
-    private static let deGenerURL = URL(string: "https://www.fcdegender.nl")
+    private static let deGenderURL = URL(string: "https://www.fcdegender.nl")
     private static let fotogroepDeGenderIdPlus = PhotoClubIdPlus(fullName: "Fotogroep de Gender",
                                                                  town: "Eindhoven",
                                                                  nickname: "FG deGender")
@@ -30,7 +30,7 @@ extension FotogroepDeGenderMembersProvider { // fill with some initial hard-code
                                                         context: bgContext,
                                                         organizationTypeEum: .club,
                                                         photoClubIdPlus: Self.fotogroepDeGenderIdPlus,
-                                                        photoClubWebsite: FotogroepDeGenderMembersProvider.deGenerURL,
+                                                        photoClubWebsite: FotogroepDeGenderMembersProvider.deGenderURL,
                                                         fotobondNumber: 1620, kvkNumber: nil,
                                                         coordinates: CLLocationCoordinate2D(latitude: 51.42398,
                                                                                             longitude: 5.45010)

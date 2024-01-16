@@ -83,10 +83,70 @@
             "memberList": "https://www.example.com/deGender.memberList.json",
             "description": [
                 {
+                    "language": "EN",
+                    "value": "Note that Fotogroep de Gender is abbreviated fcdegender.nl for historical reasons."
+                },
+                {
                     "language": "NL",
                     "value": "Opgelet: Fotogroep de Gender gebruikt nog een oude domeinnaam fcdegender.nl (fc = Fotoclub)."
                 }
-            ]
+            ],
+            "nlSpecific": {
+                "fotobondNumber": 1620
+            }
+        },
+        {
+            "idPlus": {
+                "town": "Veldhoven",
+                "fullName": "Fotoclub Bellus Imago",
+                "nickName": "FC BellusImago"
+            },
+            "coordinates": {
+                "latitude": 51.425410,
+                "longitude": 5.387560
+            },
+            "website": "https://www.fotoClubBellusImago.nl",
+            "memberList": "https://www.example.com/bellusImago.memberList.json",
+            "description": [
+                {
+                    "language": "EN",
+                    "value": "The club's name (kind of) means Beautiful Image in Latin."
+                },
+                {
+                    "language": "NL",
+                    "value": "De naam is (meer of minder) Latijn voor Mooi Beeld."
+                }
+            ],
+            "nlSpecific": {
+                "fotobondNumber": 1671
+            }
+        },
+        {
+            "idPlus": {
+                "town": "Waalre",
+                "fullName": "Fotogroep Waalre",
+                "nickName": "FG Waalre"
+            },
+            "coordinates": {
+                "latitude": 51.39184,
+                "longitude": 5.46144
+            },
+            "website": "https://www.fotogroepwaalre.nl",
+            "memberList": "https://www.example.com/fgWaalre.memberList.json",
+            "description": [
+                {
+                    "language": "EN",
+                    "value": "The club is named after its home town Waalre, near Eindhoven."
+                },
+                {
+                    "language": "NL",
+                    "value": "Fotogroep Waalre vergadert en exposeert jaarlijks in het gemeentehuis van Waalre."
+                }
+            ],
+            "nlSpecific": {
+                "fotobondNumber": 1634,
+                "kvkNumber": 17261693
+            }
         }
     ],
     "museums": [
