@@ -9,20 +9,20 @@ Clubs and Musea screen
     * No footnote anymore about pull-to-refresh.
     * Musea are rendered on maps using a special marker pin.
     * Top of screen shows how long the list is (e.g. "25 items").
-    * Single line remark can be provided per club/museum. That text is shown translated if the translation is available.
+    * Single line remark can be provided per club/museum. That text is localized if the translation is available.
 Portfolios screen
     * Name of towns are now shown in the correct language.
     * Limited the font size of the footers in case the device's text display size was increased (in Settings).
     * Removed the 3 Test Fotoclubs. They are now shown correctly as musea.
 Readme screen
-    * Significant text updates and extra pictures.
+    * Significant text updates and added new pictures. Removed section on data model. It's on github readme.
 Maintenance
     * Tested with with iOS 17.2.1, MacOS 14.2.1, GitCrypt 0.7.0.1, Xcode 14.2
     * Centralized code for loading and of input data (file: `PhotoClubHubApp`).
     * Updated data model picture in GitHub README.md file.
-    * Removed .xcloc localization files from Photo Club Hub target
+    * .xcloc localization files are no longer included in the Photo Club Hub target (not used in bundle).
 
-This is build #4612, and was sent out to Apple Testflight users.
+This is build #4613, and was sent out to Apple Testflight users.
 ---------------------------------------------------------------------------
 ### 2.5.2 (Github commit 7cc0780) 16-12-23
 
