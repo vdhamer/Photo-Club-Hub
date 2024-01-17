@@ -224,9 +224,6 @@ Default status of member within a club. Used in concatenations. */
 /* Shown in gray at the bottom of the Photo Club page (2/3). */
 "PhotoClubs_Caption_2" = "② An individiual photo club can be deleted by first deleting (swipe left) all linked Portfolios on the Portfolio page, and then deleting (swipe left) the photo club itself on this page.";
 
-/* Shown in gray at the bottom of the Photo Club page (3/3). */
-"PhotoClubs_Caption_3" = "③ To add extra photo clubs for testing purposes, drag down and release the top of the page.";
-
 /* Title of page showing member portfolios */
 "Portfolios" = "Portfolios";
 
