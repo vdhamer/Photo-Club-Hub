@@ -1,4 +1,4 @@
-### 2.5.3 (Github commit 365d115) 7-1-24
+### 2.5.3 (Github commit 365d115) ??-1-24
 
 Clubs and Musea screen
     * Renamed screen from `Photo Clubs` to `Clubs` to save space (for future mode picker).
@@ -6,7 +6,7 @@ Clubs and Musea screen
     * Additional photo clubs (and musea) can be loaded from a data file (OrganizationList.json hosted on Github).
     * A photoclub's (or museum)'s country is determined from its GPS coordinates. This handles localization: "Frankrijk" (NL) = "France" (EN).
     * Town names are also translated if applicable: "Den Haag" (NL) = "The Hague" (EN).
-    * Changed order of footnotes at bottom of screen. 3rd footnote is dimmed if feature has already been triggered.
+    * No footnote anymore about pull-to-refresh.
     * Musea are rendered on maps using a special marker pin.
     * Top of screen shows how long the list is (e.g. "25 items").
     * Single line remark can be provided per club/museum. That text is shown translated if the translation is available.
@@ -20,6 +20,7 @@ Maintenance
     * Tested with with iOS 17.2.1, MacOS 14.2.1, GitCrypt 0.7.0.1, Xcode 14.2
     * Centralized code for loading and of input data (file: `PhotoClubHubApp`).
     * Updated data model picture in GitHub README.md file.
+    * Removed .xcloc localization files from Photo Club Hub target
 
 This is build #4612, and was sent out to Apple Testflight users.
 ---------------------------------------------------------------------------
