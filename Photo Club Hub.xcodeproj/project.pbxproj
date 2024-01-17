@@ -80,7 +80,6 @@
 		D0C6E95529577921001E5CE9 /* DebugPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C6E95429577921001E5CE9 /* DebugPanel.swift */; };
 		D0D18C78296E1F6A00B334DB /* PhotoClubID.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D18C77296E1F6A00B334DB /* PhotoClubID.swift */; };
 		D0DE02772789D1B30062738C /* RoleIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DE02762789D1B30062738C /* RoleIconView.swift */; };
-		D0DF0F452B2CFA3800E9FEC8 /* Photo Club Hub Localizations in Resources */ = {isa = PBXBuildFile; fileRef = D0DF0F442B2CFA3800E9FEC8 /* Photo Club Hub Localizations */; };
 		D0E2235427DE9139002A8600 /* PreludeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E2235327DE9139002A8600 /* PreludeView.swift */; };
 		D0E694C927EF9B450054D634 /* LockAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E694C827EF9B450054D634 /* LockAnimationView.swift */; };
 		D0EAEB332B3CA6D300EC05B6 /* OrganizationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EAEB322B3CA6D300EC05B6 /* OrganizationList.swift */; };
@@ -699,7 +698,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D008D2AA28739167007A7BE2 /* .gitignore in Resources */,
-				D0DF0F452B2CFA3800E9FEC8 /* Photo Club Hub Localizations in Resources */,
 				D04B1A0C2B1AA06300EB3817 /* OrganizationList.json in Resources */,
 				D06061EA28A0456C00A675A7 /* FGWPrivateMembersURL3.txt in Resources */,
 				D0B52497277F9A4B00927BCA /* Localizable.strings in Resources */,

@@ -233,9 +233,6 @@ Default status of member within a club. Used in concatenations. */
 /* Shown in gray at the bottom of the Photo Club page (2/3). */
 "PhotoClubs_Caption_2" = "② Een fotogroep kan verwijderd worden door eerst alle betrokken Portfolio's te verwijderen (*swipe left*) en dan de fotoclub zelf te verwijderen (*swipe left*).";
 
-/* Shown in gray at the bottom of the Photo Club page (3/3). */
-"PhotoClubs_Caption_3" = "③ Men kan enkele testfotogroepen (voor demo doeleinden) toevoegen door de bovenkant van deze pagina omlaag te slepen en los te laten (*pull to refresh*).";
-
 /* Title of page showing member portfolios */
 "Portfolios" = "Portfolio's";
 

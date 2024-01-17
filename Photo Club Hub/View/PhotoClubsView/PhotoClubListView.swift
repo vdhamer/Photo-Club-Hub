@@ -49,9 +49,6 @@ struct PhotoClubListView: View {
                 Group {
                     Text("PhotoClubs_Caption_1", comment: "Shown in gray at the bottom of the Photo Club page (1/3).")
                     Text("PhotoClubs_Caption_2", comment: "Shown in gray at the bottom of the Photo Club page (2/3).")
-                    // If the page has been force refreshed before then dim text of third item.
-                    Text("PhotoClubs_Caption_3", comment: "Shown in gray at the bottom of the Photo Club page (3/3).")
-                        .opacity(UserDefaults.standard.bool(forKey: "ClubListPageRefreshed") ? 0.3 : 1)
                 } .foregroundColor(Color.primary)
             }
             .listStyle(.plain)
@@ -61,7 +58,6 @@ struct PhotoClubListView: View {
                 // remember that nothing will run here until the for try await loop finishes
             }
             .refreshable { // for pull-to-refresh
-                UserDefaults.standard.set(true, forKey: "ClubListPageRefreshed") // used to control footer/remark #3
                 PhotoClubHubApp.loadClubsAndMembers()
             }
         }
