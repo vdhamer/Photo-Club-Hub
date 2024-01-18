@@ -15,9 +15,9 @@ private let dataSourcePath: String = """
                                      main/\
                                      Photo%20Club%20Hub/ViewModel/Lists/
                                      """
-// private let dataSourceFile: String = "Test2Club2MuseumList.json"
-private let dataSourceFile: String = "OrganizationList.json"
-private let organizationTypesToLoad: [OrganizationTypeEnum] = [.club, .museum]
+private let dataSourceFile: String = "Test2Club2MuseumList.json"
+// private let dataSourceFile: String = "OrganizationList.json"
+private let organizationTypesToLoad: [OrganizationTypeEnum] = [.museum] // TODO musea<>clubs
 
 /* Example of basic OrganizationList.json content
 {
@@ -73,7 +73,7 @@ class OrganizationList {
     private func readJSONOrganizationList(bgContext: NSManagedObjectContext,
                                           for organizationTypeEnumsToLoad: [OrganizationTypeEnum]) {
 
-        ifDebugPrint("\nStarting readJSONOrganizationList() in background")
+        ifDebugPrint("\nStarting readJSONOrganizationList(\(dataSourceFile)) in background")
 
         guard let data = try? String(contentsOf: URL(string: dataSourcePath+dataSourceFile)!) else {
             // calling fatalError is ok for a compile-time constant (as defined above)

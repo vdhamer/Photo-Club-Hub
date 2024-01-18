@@ -32,32 +32,32 @@ struct PhotoClubView: View {
     }
 
     var body: some View {
-        ForEach(fetchedOrganizations, id: \.id) { filteredPhotoClub in
+        ForEach(fetchedOrganizations, id: \.id) { filteredOrganization in
             Section {
                 VStack(alignment: .leading) {
-                    Text(verbatim: "\(filteredPhotoClub.fullName)")
+                    Text(verbatim: "\(filteredOrganization.fullName)")
                         .font(UIDevice.isIPad ? .title : .title2)
                         .tracking(1)
                         .foregroundColor(.photoClubColor)
 
                     HStack(alignment: .center, spacing: 0) {
-                        Image(systemName: systemName(organizationType: filteredPhotoClub.organizationType,
+                        Image(systemName: systemName(organizationType: filteredOrganization.organizationType,
                                                      circleNeeded: true)
                         )
                             .foregroundStyle(.white, .yellow, // .yellow (secondary color) not actually used
-                                filteredPhotoClub.organizationType.isUnknown ? .red : .accentColor)
+                                             filteredOrganization.organizationType.isUnknown ? .red : .accentColor)
                             .symbolRenderingMode(.palette)
                             .font(.largeTitle)
                             .padding(.horizontal, 5)
                         VStack(alignment: .leading) {
                             Text(verbatim: layoutDirection == .leftToRight ?
-                                 "\(filteredPhotoClub.localizedTown), \(filteredPhotoClub.localizedCountry)" : // EN, NL
-                                 "\(filteredPhotoClub.localizedCountry) ,\(filteredPhotoClub.localizedTown)") // HE, AR
+                                 "\(filteredOrganization.localizedTown), \(filteredOrganization.localizedCountry)" :
+                                 "\(filteredOrganization.localizedCountry) ,\(filteredOrganization.localizedTown)")
                             .font(.subheadline)
-                            Text("\(filteredPhotoClub.members.count) members (inc. ex-members)",
+                            Text("\(filteredOrganization.members.count) members (inc. ex-members)",
                                  comment: "<count> members (including all types of members) within photo club")
                             .font(.subheadline)
-                            if let url: URL = filteredPhotoClub.photoClubWebsite {
+                            if let url: URL = filteredOrganization.photoClubWebsite {
                                 Link(destination: url, label: {
                                     Text(url.absoluteString)
                                         .lineLimit(1)
@@ -71,12 +71,12 @@ struct PhotoClubView: View {
                         Spacer() // moved Button to trailing/right side
                         Button(
                             action: {
-                                openCloseSound(openClose: filteredPhotoClub.isScrollLocked ? .close : .open)
-                                filteredPhotoClub.isScrollLocked.toggle()
+                                openCloseSound(openClose: filteredOrganization.isScrollLocked ? .close : .open)
+                                filteredOrganization.isScrollLocked.toggle()
                             },
                             label: {
                                 HStack { // to make background color clickable too
-                                    LockAnimationView(locked: filteredPhotoClub.isScrollLocked)
+                                    LockAnimationView(locked: filteredOrganization.isScrollLocked)
                                 }
                                 .frame(maxWidth: 60, maxHeight: 60)
                                 .contentShape(Rectangle())
@@ -85,8 +85,8 @@ struct PhotoClubView: View {
                         .buttonStyle(.plain) // to avoid entire List element to be clickable
                     }
                     .padding(.all, 0)
-                    Map(position: cameraPositionBinding(for: filteredPhotoClub.id),
-                        interactionModes: filteredPhotoClub.isScrollLocked ? [] : [
+                    Map(position: cameraPositionBinding(for: filteredOrganization.id),
+                        interactionModes: filteredOrganization.isScrollLocked ? [] : [
                             .rotate, // automatically enables the compas button when rotated
                             .pitch, // switch to 3D view if zoomed in far enough
                             .pan, .zoom], // actually .all is the default
@@ -98,22 +98,22 @@ struct PhotoClubView: View {
                                    systemImage: systemName(organizationType: organization.organizationType,
                                                            circleNeeded: false),
                                    coordinate: organization.coordinates)
-                            .tint(selectMarkerTint(photoClub: organization, selectedClub: filteredPhotoClub))
+                            .tint(selectMarkerTint(photoClub: organization, selectedClub: filteredOrganization))
                         } // Marker loop
                         UserAnnotation() // show user's location on map
                     } // Map ends here
                         .frame(minHeight: 300, idealHeight: 500, maxHeight: .infinity)
-                    Text(filteredPhotoClub.localizedDescription)
+                    Text(filteredOrganization.localizedDescription)
                         .padding(.top, 5)
                 } // PhotoClub loop
                 .task {
-                    initializeCameraPosition(photoClub: filteredPhotoClub) // works better than .onAppear(perform:)?
+                    initializeCameraPosition(photoClub: filteredOrganization) // works better than .onAppear(perform:)?
                 }
                 .onAppear {
                     // on main queue (avoid accessing NSManagedObjects on background thread!)
-                    let clubName = filteredPhotoClub.fullName
-                    let town = filteredPhotoClub.town // untranslated
-                    let coordinates = filteredPhotoClub.coordinates
+                    let clubName = filteredOrganization.fullName
+                    let town = filteredOrganization.town // untranslated
+                    let coordinates = filteredOrganization.coordinates
 
                     Task.detached { // other (non-bgContext) background thread to access 2 async functions
                         var localizedTown: String?
@@ -128,8 +128,8 @@ struct PhotoClubView: View {
                         } catch {
                             print("""
                                   ERROR: could not reverseGeocode (\
-                                  \(filteredPhotoClub.coordinates.latitude), \
-                                  \(filteredPhotoClub.coordinates.longitude))
+                                  \(filteredOrganization.coordinates.latitude), \
+                                  \(filteredOrganization.coordinates.longitude))
                                   """)
                         }
                     }
@@ -145,7 +145,7 @@ struct PhotoClubView: View {
                     MapPitchToggle() // switch between 2D and 3D
                     MapScaleView() // distance scale
                     MapUserLocationButton()
-                } .mapControlVisibility(filteredPhotoClub.isScrollLocked ? .hidden : .automatic)
+                } .mapControlVisibility(filteredOrganization.isScrollLocked ? .hidden : .automatic)
             } // Section
         } // outer ForEach (PhotoClub)
         .onDelete(perform: deleteOrganizations)

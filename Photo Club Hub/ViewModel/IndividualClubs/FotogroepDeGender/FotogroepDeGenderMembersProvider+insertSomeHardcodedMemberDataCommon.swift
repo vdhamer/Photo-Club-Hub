@@ -28,11 +28,7 @@ extension FotogroepDeGenderMembersProvider { // fill with some initial hard-code
         let clubDeGender = PhotoClub.findCreateUpdate(
                                                         context: bgContext,
                                                         organizationTypeEum: .club,
-                                                        photoClubIdPlus: Self.fotogroepDeGenderIdPlus // ,
-//                                                        photoClubWebsite: FotogroepDeGenderMembersProvider.deGenderURL,
-//                                                        fotobondNumber: 1620, kvkNumber: nil,
-//                                                        coordinates: CLLocationCoordinate2D(latitude: 51.42398,
-//                                                                                            longitude: 5.45010)
+                                                        photoClubIdPlus: Self.fotogroepDeGenderIdPlus
                                                      )
         ifDebugPrint("""
                      \(clubDeGender.fullNameTown): \
