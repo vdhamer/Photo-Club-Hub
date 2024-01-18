@@ -15,8 +15,8 @@ private let dataSourcePath: String = """
                                      main/\
                                      Photo%20Club%20Hub/ViewModel/Lists/
                                      """
-private let dataSourceFile: String = "Test2Club2MuseumList.json" // TODO
-// private let dataSourceFile: String = "OrganizationList.json"
+// private let dataSourceFile: String = "Test2Club2MuseumList.json"
+private let dataSourceFile: String = "OrganizationList.json"
 private let organizationTypesToLoad: [OrganizationTypeEnum] = [.club, .museum]
 
 /* Example of basic OrganizationList.json content
@@ -34,6 +34,12 @@ private let organizationTypesToLoad: [OrganizationTypeEnum] = [.club, .museum]
             }
             "website": "https://www.fcdegender.nl",
             "memberList": "https://www.example.com/deGenderMemberList.json"
+            "description": [
+                {
+                    "language": "NL",
+                    "value": "In dit museum zijn scenes van het TV programma 'Het Perfecte Plaatje' opgenomen."
+                }
+            ]
         }
     ],
     "museums": [
