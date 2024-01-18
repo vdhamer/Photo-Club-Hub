@@ -112,14 +112,14 @@ struct PhotoClubView: View {
                 .onAppear {
                     // on main queue (avoid accessing NSManagedObjects on background thread!)
                     let clubName = filteredOrganization.fullName
-                    let town = filteredOrganization.town // untranslated
+                    let town = filteredOrganization.town // unlocalized
                     let coordinates = filteredOrganization.coordinates
 
                     Task.detached { // other (non-bgContext) background thread to access 2 async functions
                         var localizedTown: String?
                         var localizedCountry: String?
                         do {
-                            let (locality, nation) =
+                            let (locality, nation) = // can be (nil, nil) for Chinese location or Chinese user location
                                 try await reverseGeocode(coordinates: coordinates)
                             localizedTown = locality
                             localizedCountry = nation
@@ -151,14 +151,14 @@ struct PhotoClubView: View {
         .onDelete(perform: deleteOrganizations)
     }
 
-    // find PhotoClub using identifier (clubName,oldTown) and fill (newTown,newCountry) in CoreData database
+    // find PhotoClub using identifier (clubName,oldTown) and then fill (newTown,newCountry) in CoreData database
     private func updateTownCountry(clubName: String, town: String,
                                    localizedTown: String?, localizedCountry: String?) async {
 
         guard (localizedTown != nil) && (localizedCountry != nil) else { return } // nothing to update
 
         let bgContext = PersistenceController.shared.container.newBackgroundContext() // background thread
-        bgContext.name = "reverseGeocode \(clubName)"
+        bgContext.name = "save reverseGeocode \(clubName)"
         bgContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
 
         bgContext.performAndWait { // block must be synchronous and CoreData operations must occur on bgContext thread
@@ -175,7 +175,7 @@ struct PhotoClubView: View {
 
             let photoClub = try? bgContext.fetch(fetchRequest).first
             guard let photoClub else {
-                print("ERROR: couldn't find photo club in CordeData query")
+                print("ERROR: couldn't find photo club in CoreData query")
                 return
             }
 
