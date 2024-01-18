@@ -116,13 +116,13 @@ struct PhotoClubView: View {
                     let coordinates = filteredOrganization.coordinates
 
                     Task.detached { // other (non-bgContext) background thread to access 2 async functions
-                        var localizedTown: String?
+                        var localizedTown: String
                         var localizedCountry: String?
                         do {
                             let (locality, nation) = // can be (nil, nil) for Chinese location or Chinese user location
                                 try await reverseGeocode(coordinates: coordinates)
-                            localizedTown = locality
-                            localizedCountry = nation
+                            localizedTown = locality ?? town // unlocalized as fallback for localized -> String
+                            localizedCountry = nation // optional String
                             await updateTownCountry(clubName: clubName, town: town,
                                                     localizedTown: localizedTown, localizedCountry: localizedCountry)
                         } catch {
@@ -153,9 +153,7 @@ struct PhotoClubView: View {
 
     // find PhotoClub using identifier (clubName,oldTown) and then fill (newTown,newCountry) in CoreData database
     private func updateTownCountry(clubName: String, town: String,
-                                   localizedTown: String?, localizedCountry: String?) async {
-
-        guard (localizedTown != nil) && (localizedCountry != nil) else { return } // nothing to update
+                                   localizedTown: String, localizedCountry: String?) async {
 
         let bgContext = PersistenceController.shared.container.newBackgroundContext() // background thread
         bgContext.name = "save reverseGeocode \(clubName)"
@@ -184,15 +182,13 @@ struct PhotoClubView: View {
                   \(String(describing: localizedTown)), \(String(describing: localizedCountry))
                   """)
 
-            if let localizedTown { photoClub.localizedTown = localizedTown }
+            photoClub.localizedTown = localizedTown
             if let localizedCountry { photoClub.localizedCountry = localizedCountry}
             do {
                 try bgContext.save() // persist Town, Country or both for an organization
             } catch {
                 print("""
-                      ERROR: could not save \
-                      \(localizedTown ?? "nil"), \(localizedCountry ?? "nil") \
-                      for \(clubName) to CoreData
+                      ERROR: could not save \(localizedTown), \(localizedCountry ?? "nil") for \(clubName) to CoreData
                       """)
             }
         }
