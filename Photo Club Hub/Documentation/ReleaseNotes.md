@@ -1,4 +1,8 @@
-### 2.5.3 (Github commit 365d115) ??-1-24
+### 2.5.3 (Github commit ???????) ??-01-24
+
+This is build #4614, and was sent out to Apple Testflight users.
+---------------------------------------------------------------------------
+### 2.5.3 (Github commit 02e860a) 19-01-24
 
 Clubs and Musea screen
     * Renamed screen from `Photo Clubs` to `Clubs` to save space (for future mode picker).
