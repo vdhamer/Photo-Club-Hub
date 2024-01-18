@@ -1,5 +1,6 @@
 {
     "clubs": [
+        
         {
             "idPlus": {
                 "town": "Eindhoven",
@@ -23,6 +24,7 @@
                 }
             ]
         },
+
         {
             "idPlus": {
                 "town": "Berlicum",
@@ -36,32 +38,28 @@
             "website": "https://www.shot71.nl",
             "memberList": "https://www.example.com/FFC_Shot71.memberlist.json"
         }
+
     ],
     "museums": [
         {
             "idPlus": {
-                "town": "Amsterdam",
-                "fullName": "Museum First",
-                "nickName": "Foam"
+                "town": "Lianzhou",
+                "fullName": "Lianzhou Museum of Photography",
+                "nickName": "LMoP Lianzhou"
             },
             "coordinates": {
-                "latitude": 52.364217,
-                "longitude": 4.89337
+                "latitude": 24.78468,
+                "longitude": 112.38392
             },
-            "website": "https://www.foam.org",
-            "wikipedia": "https://en.wikipedia.org/wiki/Foam_Fotografiemuseum_Amsterdam",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/4/47/Keizersgracht_609%2C_Amsterdam.JPG",
+            "website": "http://www.lmop.org.cn",
             "description": [
                 {
                     "language": "EN",
-                    "value": "The two adjacent Amsterdam canal mansions house a museum orignally named after its founder (Carel Joseph) Fodor."
-                },
-                {
-                    "language": "NL",
-                    "value": "Het museum, gehuisvest in twee aangrenzende panden aan de Keizersgracht, was oorspronkelijk genoemd naar de oprichter Carel Joseph Fodor."
+                    "value": "The museum's URL and even GPS coordinates don't currently work, but the museum is in Lianzhou, China."
                 }
             ]
         },
+
         {
             "idPlus": {
                 "town": "Zierikzee",
@@ -84,5 +82,6 @@
                 }
             ]
         }
+
     ]
 }
