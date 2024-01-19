@@ -54,10 +54,22 @@ struct PhotoClubView: View {
                                  "\(filteredOrganization.localizedTown), \(filteredOrganization.localizedCountry)" :
                                  "\(filteredOrganization.localizedCountry) ,\(filteredOrganization.localizedTown)")
                             .font(.subheadline)
-                            Text("\(filteredOrganization.members.count) members (inc. ex-members)",
-                                 comment: "<count> members (including all types of members) within photo club")
-                            .font(.subheadline)
+                            if filteredOrganization.members.count > 0 { // hide for musea and clubs with no member data
+                                Text("\(filteredOrganization.members.count) members (inc. ex-members)",
+                                     comment: "<count> members (including all types of members) within photo club")
+                                .font(.subheadline)
+                            }
                             if let url: URL = filteredOrganization.photoClubWebsite {
+                                Link(destination: url, label: {
+                                    Text(url.absoluteString)
+                                        .lineLimit(1)
+                                        .truncationMode(.middle)
+                                        .font(.subheadline)
+                                        .foregroundColor(.linkColor)
+                                })
+                                .buttonStyle(.plain) // to avoid entire List element to be clickable
+                            }
+                            if let url: URL = filteredOrganization.wikipedia {
                                 Link(destination: url, label: {
                                     Text(url.absoluteString)
                                         .lineLimit(1)

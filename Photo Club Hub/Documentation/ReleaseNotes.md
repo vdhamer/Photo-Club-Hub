@@ -1,5 +1,9 @@
 ### 2.5.3 (Github commit ???????) ??-01-24
 
+Clubs and Musea screen
+    * Removed member count for photo musea and clubs with no available member data
+    * Show wikipedia URL for musea (if the data is available). Data comes from JSON file.
+
 This is build #4614, and was sent out to Apple Testflight users.
 ---------------------------------------------------------------------------
 ### 2.5.3 (Github commit 02e860a) 19-01-24

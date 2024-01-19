@@ -27,11 +27,7 @@ extension BellusImagoMembersProvider { // fill with some initial hard-coded cont
         let clubBellusImago = PhotoClub.findCreateUpdate(
                                                         context: bgContext,
                                                         organizationTypeEum: .club,
-                                                        photoClubIdPlus: Self.photoClubBellusImagoIdPlus // ,
-//                                                        photoClubWebsite: BellusImagoMembersProvider.bellusImagoURL,
-//                                                        fotobondNumber: 1671, kvkNumber: nil,
-//                                                        coordinates: CLLocationCoordinate2D(latitude: 51.425410,
-//                                                                                            longitude: 5.387560)
+                                                        photoClubIdPlus: Self.photoClubBellusImagoIdPlus
                                                         )
 
         ifDebugPrint("""

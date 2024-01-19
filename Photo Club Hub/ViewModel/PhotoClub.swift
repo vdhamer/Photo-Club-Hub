@@ -181,7 +181,9 @@ extension PhotoClub {
     static func findCreateUpdate(context: NSManagedObjectContext, // can be foreground of background context
                                  organizationTypeEum: OrganizationTypeEnum,
                                  photoClubIdPlus: PhotoClubIdPlus,
-                                 photoClubWebsite: URL? = nil, fotobondNumber: Int16? = nil, kvkNumber: Int32? = nil,
+                                 photoClubWebsite: URL? = nil,
+                                 wikipediaURL: URL? = nil,
+                                 fotobondNumber: Int16? = nil, kvkNumber: Int32? = nil,
                                  coordinates: CLLocationCoordinate2D? = nil,
                                  pinned: Bool = false,
                                  localizedDescriptions: [JSON] = []
@@ -209,6 +211,7 @@ extension PhotoClub {
             if update(bgContext: context, organizationTypeEnum: organizationTypeEum,
                       photoClub: organization, shortName: photoClubIdPlus.nickname,
                       optionalFields: (photoClubWebsite: photoClubWebsite,
+                                       wikipediaURL: wikipediaURL,
                                        fotobondNumber: fotobondNumber,
                                        kvkNumber: kvkNumber),
                       coordinates: coordinates,
@@ -227,6 +230,7 @@ extension PhotoClub {
             _ = update(bgContext: context, organizationTypeEnum: organizationTypeEum,
                        photoClub: organization, shortName: photoClubIdPlus.nickname,
                        optionalFields: (photoClubWebsite: photoClubWebsite,
+                                        wikipediaURL: wikipediaURL,
                                         fotobondNumber: fotobondNumber,
                                         kvkNumber: kvkNumber),
                        coordinates: coordinates,
@@ -238,12 +242,13 @@ extension PhotoClub {
 	}
 
 	// Update non-identifying attributes/properties within existing instance of class PhotoClub
-    // swiftlint:disable:next function_parameter_count cyclomatic_complexity
+    // swiftlint:disable:next function_body_length function_parameter_count cyclomatic_complexity
     private static func update(bgContext: NSManagedObjectContext,
                                organizationTypeEnum: OrganizationTypeEnum,
                                photoClub: PhotoClub, shortName: String,
                                // swiftlint:disable:next large_tuple
-                               optionalFields: (photoClubWebsite: URL?, fotobondNumber: Int16?, kvkNumber: Int32?),
+                               optionalFields: (photoClubWebsite: URL?, wikipediaURL: URL?,
+                                                fotobondNumber: Int16?, kvkNumber: Int32?),
                                coordinates: CLLocationCoordinate2D?,
                                pinned: Bool,
                                localizedDescriptions: [JSON] ) -> Bool {
@@ -264,6 +269,10 @@ extension PhotoClub {
 
         if let website = optionalFields.photoClubWebsite, photoClub.photoClubWebsite != website {
             photoClub.photoClubWebsite = website
+            modified = true }
+
+        if let wikiURL = optionalFields.wikipediaURL, photoClub.wikipedia != wikiURL {
+            photoClub.wikipedia = wikiURL
             modified = true }
 
         if let fotobondNumber = optionalFields.fotobondNumber, photoClub.fotobondNumber != fotobondNumber {
