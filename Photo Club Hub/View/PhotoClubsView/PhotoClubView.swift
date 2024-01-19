@@ -59,9 +59,9 @@ struct PhotoClubView: View {
                                      comment: "<count> members (including all types of members) within photo club")
                                 .font(.subheadline)
                             }
-                            if let url: URL = filteredOrganization.photoClubWebsite {
-                                Link(destination: url, label: {
-                                    Text(url.absoluteString)
+                            if let website: URL = filteredOrganization.photoClubWebsite {
+                                Link(destination: website, label: {
+                                    Text(website.absoluteString)
                                         .lineLimit(1)
                                         .truncationMode(.middle)
                                         .font(.subheadline)
@@ -69,9 +69,9 @@ struct PhotoClubView: View {
                                 })
                                 .buttonStyle(.plain) // to avoid entire List element to be clickable
                             }
-                            if let url: URL = filteredOrganization.wikipedia {
-                                Link(destination: url, label: {
-                                    Text(url.absoluteString)
+                            if let wikipedia: URL = filteredOrganization.wikipedia {
+                                Link(destination: wikipedia, label: {
+                                    Text(wikipedia.absoluteString)
                                         .lineLimit(1)
                                         .truncationMode(.middle)
                                         .font(.subheadline)

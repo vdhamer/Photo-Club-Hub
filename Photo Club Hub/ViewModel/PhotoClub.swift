@@ -182,7 +182,7 @@ extension PhotoClub {
                                  organizationTypeEum: OrganizationTypeEnum,
                                  photoClubIdPlus: PhotoClubIdPlus,
                                  photoClubWebsite: URL? = nil,
-                                 wikipediaURL: URL? = nil,
+                                 wikipedia: URL? = nil,
                                  fotobondNumber: Int16? = nil, kvkNumber: Int32? = nil,
                                  coordinates: CLLocationCoordinate2D? = nil,
                                  pinned: Bool = false,
@@ -210,10 +210,8 @@ extension PhotoClub {
             print("\(organization.fullNameTown): Will try to update info for organization \(organization.fullName)")
             if update(bgContext: context, organizationTypeEnum: organizationTypeEum,
                       photoClub: organization, shortName: photoClubIdPlus.nickname,
-                      optionalFields: (photoClubWebsite: photoClubWebsite,
-                                       wikipediaURL: wikipediaURL,
-                                       fotobondNumber: fotobondNumber,
-                                       kvkNumber: kvkNumber),
+                      optionalFields: (photoClubWebsite: photoClubWebsite, wikipedia: wikipedia,
+                                       fotobondNumber: fotobondNumber, kvkNumber: kvkNumber),
                       coordinates: coordinates,
                       pinned: pinned,
                       localizedDescriptions: localizedDescriptions) {
@@ -229,10 +227,8 @@ extension PhotoClub {
             print("\(organization.fullNameTown): Will try to create this new organization")
             _ = update(bgContext: context, organizationTypeEnum: organizationTypeEum,
                        photoClub: organization, shortName: photoClubIdPlus.nickname,
-                       optionalFields: (photoClubWebsite: photoClubWebsite,
-                                        wikipediaURL: wikipediaURL,
-                                        fotobondNumber: fotobondNumber,
-                                        kvkNumber: kvkNumber),
+                       optionalFields: (photoClubWebsite: photoClubWebsite, wikipedia: wikipedia,
+                                        fotobondNumber: fotobondNumber, kvkNumber: kvkNumber),
                        coordinates: coordinates,
                        pinned: pinned,
                        localizedDescriptions: localizedDescriptions)
@@ -247,7 +243,7 @@ extension PhotoClub {
                                organizationTypeEnum: OrganizationTypeEnum,
                                photoClub: PhotoClub, shortName: String,
                                // swiftlint:disable:next large_tuple
-                               optionalFields: (photoClubWebsite: URL?, wikipediaURL: URL?,
+                               optionalFields: (photoClubWebsite: URL?, wikipedia: URL?,
                                                 fotobondNumber: Int16?, kvkNumber: Int32?),
                                coordinates: CLLocationCoordinate2D?,
                                pinned: Bool,
@@ -271,7 +267,7 @@ extension PhotoClub {
             photoClub.photoClubWebsite = website
             modified = true }
 
-        if let wikiURL = optionalFields.wikipediaURL, photoClub.wikipedia != wikiURL {
+        if let wikiURL = optionalFields.wikipedia, photoClub.wikipedia != wikiURL {
             photoClub.wikipedia = wikiURL
             modified = true }
 
