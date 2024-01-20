@@ -903,7 +903,7 @@ Project Link: [https://github.com/vdhamer/PhotoClubWaalre](https://github.com/vd
 
 * The opening Prelude screen uses a photo of colorful building by Greetje van Son.
 * One file with club member data is encrypted using [git-crypt](https://github.com/AGWA/git-crypt).
-* The interactive Roadmap screen uses the [AvdLee/Roadmap](https://github.com/AvdLee/Roadmap) package.
+* The interactive Roadmap screen uses the [AvdLee/Roadmap](https://github.com/AvdLee/Roadmap) package. The screen is currently disabled because the backend provider of Roadmap stopped supporting it.
 * JSON parsing uses the [SwiftyJSON/SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON) package.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
