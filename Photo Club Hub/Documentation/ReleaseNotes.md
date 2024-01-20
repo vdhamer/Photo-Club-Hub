@@ -3,6 +3,9 @@
 Clubs and Musea screen
     * Removed member count for photo musea and clubs with no available member data
     * Show wikipedia URL for musea (if the data is available). Data comes from JSON file.
+Maintenance
+    * Renamed PhotoClub table to Organization table (because it can now contain musea)
+
 
 This is build #4614, and was sent out to Apple Testflight users.
 ---------------------------------------------------------------------------
