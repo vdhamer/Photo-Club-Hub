@@ -16,7 +16,8 @@
             "description": [
                 {
                     "language": "EN",
-                    "value": "Fotokring Beeldhoek has two meetups per month: one is for photo critiques, the other about the technical side of photography."
+                    "value": "Fotokring Beeldhoek has two meetups per month: one is for photo critiques, 
+                    the other about the technical side of photography."
                 },
                 {
                     "language": "NL",
@@ -224,7 +225,7 @@
             "description": [
                 {
                     "language": "EN",
-                    "value": "The museum in a former warehouse holds photo exhibitijons, but started off with the Agfa-Gevaert camera archive."
+                    "value": "The museum in a former warehouse holds photo exhibitions, but started off with the Agfa-Gevaert camera archive."
                 }
             ]
         },
