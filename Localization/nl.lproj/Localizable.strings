@@ -114,7 +114,7 @@ Default status of member within a club. Used in concatenations. */
 "Paragraph_1.1" = "Deze app dient om foto's gemaakt door leden van fotoclubs te delen met een breed publiek.";
 
 /* Second paragraph in Waalre section of Readme page */
-"Paragraph_1.2" = "De app presenteert op een consistente wijze het werk van alle clubleden van de ondersteunde fotoclubs. Als gebruiker hoef je nu niet meer de website van de club zelf te zoeken. En je hoeft ook niet voor ieder club te ontdekken hoe die specifieke website werkt.  ";
+"Paragraph_1.2" = "De app presenteert op een consistente wijze het werk van alle clubleden van de ondersteunde fotoclubs. Als gebruiker hoef je nu niet meer zelf de website van de club te zoeken. En je hoeft ook niet voor ieder club te ontdekken hoe die specifieke website werkt.  ";
 
 /* Third paragraph in Waalre section of Readme page */
 "Paragraph_1.3" = " De app is vooral bedoeld om de foto’s tot hun recht te laten komen. Voor andere clubinformatie (zoals mededelingen of vergaderschema's) wordt de gebruiker naar de websites doorgelinkt. De app probeert dus nadrukkelijk _niet_ om de websites of social media aanwezigheid van clubs te vervangen. Het is daar complementair aan.";
