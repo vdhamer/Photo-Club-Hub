@@ -141,17 +141,17 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
       </trans-unit>
       <trans-unit id="Paragraph_1.2" xml:space="preserve">
         <source>It does this in a _consistent_ way across all participating photographers and clubs. For the app's users, this consistency avoids having to find each club's website and discovering how to use it to locate and browse the images.</source>
-        <target>De app presenteert op een consistente wijze het werk van alle clubleden van de ondersteunde fotoclubs. Hiermee hoef je niet meer als gebruiker de website van een club zelf te vinden. En je hoeft ook niet voor ieder club te ontdekken hoe die specifieke website werkt.  </target>
+        <target>De app presenteert op een consistente wijze het werk van alle clubleden van de ondersteunde fotoclubs. Als gebruiker hoef je nu niet meer de website van de club zelf te zoeken. En je hoeft ook niet voor ieder club te ontdekken hoe die specifieke website werkt.  </target>
         <note>Second paragraph in Waalre section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_1.3" xml:space="preserve">
         <source>The app does _not_ try to replace either club or photographer web sites. It also doesn't try to replace social media presence. The app's focus is to present the images in a consistent, easy to access way with minimal distractions. The app can help find extra information via links to club and photographer web sites.</source>
-        <target>Dit wordt vergemakkelijkt doordat de app vooral bedoeld is om de foto's tot hun recht te laten komen. Voor andere clubinformatie (zoals mededelingen of vergaderschemas) wordt de gebruiker naar de websites doorgelinkt. De app probeert dus nadrukkelijk _niet_ om de websites of social media aanwezigheid van clubs te vervangen. Het is daar complementair aan.</target>
+        <target> De app is vooral bedoeld om de foto’s tot hun recht te laten komen. Voor andere clubinformatie (zoals mededelingen of vergaderschema's) wordt de gebruiker naar de websites doorgelinkt. De app probeert dus nadrukkelijk _niet_ om de websites of social media aanwezigheid van clubs te vervangen. Het is daar complementair aan.</target>
         <note>Third paragraph in Waalre section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_1.4" xml:space="preserve">
         <source>The app was originally named _Photo Club Waalre_ after a 15-person photo club in the Netherlands. The word __hub__ in the newer name stresses the app's support for _multiple_ photo clubs, and the app's ambition to strengthen the ties between clubs by making their work easier to access.</source>
-        <target>Oorspronkelijk heette deze app _Fotogroep Waalre_ naar de fotoclub in de buurt van Eindhoven. Het woord __hub__ (ofwel 'trefplaats') in de nieuwe naam benadrukt dat de app inmiddels meerdere fotoclubs tegelijk kan ondersteunen. En het benadrukt de ambitie om de banden tussen fotoclubs, fotografen en hun publiek te versterken.</target>
+        <target>Oorspronkelijk heette deze app _Fotogroep Waalre_, naar de fotoclub in de buurt van Eindhoven. Het woord __hub__ (ofwel 'trefplaats') in de nieuwe naam benadrukt dat de app inmiddels meerdere fotoclubs tegelijk kan ondersteunen. En het benadrukt de ambitie om de banden tussen fotoclubs, fotografen en hun publiek te versterken.</target>
         <note>Fourth paragraph in Waalre section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_1.5" xml:space="preserve">
@@ -271,7 +271,7 @@ Via bovenstaande knop kunt U (anoniem) stemmen op welke toekomstige uitbreidinge
       </trans-unit>
       <trans-unit id="Paragraph_5.5" xml:space="preserve">
         <source>To put this into perspective, the top-6 software "platforms" are (largest first): web, Android, Windows, iOS, iPadOS, and MacOS. Only the very largest apps (like Word, Twitter, Minecraft, Chrome) cover the full range. Other famous apps cover only half: Photoshop (Windows, MacOS, iPadOS), WhatsApp (iPhone, Android, web - kind of), Pokémon Go (Android, iOS, iPadOS - kind of).</source>
-        <target>De keus om Android vooralsnog te negeren heeft ook een ander gevolg: de app kan geen essentiële functionaliteit bevatten waarvoor geen goed alternatief voorhanden is. En met "alternatief" denken we dus vooral aan een website. Een website is bijvoorbeeld ook nodig voor PC gebruikers. En voor functionaliteit die deze app niet afdekt (zoals clubnieuws en vergaderschemas).</target>
+        <target>De keus om Android vooralsnog te negeren heeft ook een ander gevolg: de app kan geen essentiële functionaliteit bevatten waarvoor geen goed alternatief voorhanden is. En met "alternatief" denken we dus vooral aan een website. Een website is bijvoorbeeld ook nodig voor PC gebruikers. En voor functionaliteit die deze app niet afdekt (zoals clubnieuws en vergaderschema's).</target>
         <note>Fifth paragraph SupportedPlatforms section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_5.6" xml:space="preserve">

@@ -114,13 +114,13 @@ Default status of member within a club. Used in concatenations. */
 "Paragraph_1.1" = "Deze app dient om foto's gemaakt door leden van fotoclubs te delen met een breed publiek.";
 
 /* Second paragraph in Waalre section of Readme page */
-"Paragraph_1.2" = "De app presenteert op een consistente wijze het werk van alle clubleden van de ondersteunde fotoclubs. Hiermee hoef je niet meer als gebruiker de website van een club zelf te vinden. En je hoeft ook niet voor ieder club te ontdekken hoe die specifieke website werkt.  ";
+"Paragraph_1.2" = "De app presenteert op een consistente wijze het werk van alle clubleden van de ondersteunde fotoclubs. Als gebruiker hoef je nu niet meer de website van de club zelf te zoeken. En je hoeft ook niet voor ieder club te ontdekken hoe die specifieke website werkt.  ";
 
 /* Third paragraph in Waalre section of Readme page */
-"Paragraph_1.3" = "Dit wordt vergemakkelijkt doordat de app vooral bedoeld is om de foto's tot hun recht te laten komen. Voor andere clubinformatie (zoals mededelingen of vergaderschemas) wordt de gebruiker naar de websites doorgelinkt. De app probeert dus nadrukkelijk _niet_ om de websites of social media aanwezigheid van clubs te vervangen. Het is daar complementair aan.";
+"Paragraph_1.3" = " De app is vooral bedoeld om de foto’s tot hun recht te laten komen. Voor andere clubinformatie (zoals mededelingen of vergaderschema's) wordt de gebruiker naar de websites doorgelinkt. De app probeert dus nadrukkelijk _niet_ om de websites of social media aanwezigheid van clubs te vervangen. Het is daar complementair aan.";
 
 /* Fourth paragraph in Waalre section of Readme page */
-"Paragraph_1.4" = "Oorspronkelijk heette deze app _Fotogroep Waalre_ naar de fotoclub in de buurt van Eindhoven. Het woord __hub__ (ofwel 'trefplaats') in de nieuwe naam benadrukt dat de app inmiddels meerdere fotoclubs tegelijk kan ondersteunen. En het benadrukt de ambitie om de banden tussen fotoclubs, fotografen en hun publiek te versterken.";
+"Paragraph_1.4" = "Oorspronkelijk heette deze app _Fotogroep Waalre_, naar de fotoclub in de buurt van Eindhoven. Het woord __hub__ (ofwel 'trefplaats') in de nieuwe naam benadrukt dat de app inmiddels meerdere fotoclubs tegelijk kan ondersteunen. En het benadrukt de ambitie om de banden tussen fotoclubs, fotografen en hun publiek te versterken.";
 
 /* Fifth paragraph in Waalre section of Readme page */
 "Paragraph_1.5" = "Het ondersteunen van fotoclubs gebeurt deels door de foto's te presenteren per club.";
@@ -186,7 +186,7 @@ Default status of member within a club. Used in concatenations. */
 "Paragraph_5.4" = "Dit heeft uiteraard wel het nadeel dat er niet gauw een __Android__ versie van deze app beschikbaar zal komen. De bekendste apps doen dit wel om de gehele mobiele markt te kunnen bedienen, maar dit vereist veel extra werk en technische compromissen.";
 
 /* Fifth paragraph SupportedPlatforms section of Readme page */
-"Paragraph_5.5" = "De keus om Android vooralsnog te negeren heeft ook een ander gevolg: de app kan geen essentiële functionaliteit bevatten waarvoor geen goed alternatief voorhanden is. En met \"alternatief\" denken we dus vooral aan een website. Een website is bijvoorbeeld ook nodig voor PC gebruikers. En voor functionaliteit die deze app niet afdekt (zoals clubnieuws en vergaderschemas).";
+"Paragraph_5.5" = "De keus om Android vooralsnog te negeren heeft ook een ander gevolg: de app kan geen essentiële functionaliteit bevatten waarvoor geen goed alternatief voorhanden is. En met \"alternatief\" denken we dus vooral aan een website. Een website is bijvoorbeeld ook nodig voor PC gebruikers. En voor functionaliteit die deze app niet afdekt (zoals clubnieuws en vergaderschema's).";
 
 /* Sixth paragraph SupportedPlatforms section of Readme page */
 "Paragraph_5.6" = "Een veelbelovende uitbreiding zou het automatisch aanmaken van website pagina's zijn. Die pagina's kunnen op dezelfde manier van data voorzien worden als de app. Hiermee ondersteun je zowel Android als PC gebruikers, maar vereenvoudig je ook het actueel houden van de data.   ";
