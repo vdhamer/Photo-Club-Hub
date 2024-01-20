@@ -78,9 +78,9 @@ extension Photographer {
                                                                                                    stat: [:]),
                                  phoneNumber: String? = nil, eMail: String? = nil,
                                  photographerWebsite: URL? = nil, bornDT: Date? = nil,
-                                 photoClub: PhotoClub // photoClub is only shown on console for debug purposes
+                                 organization: Organization // organization is only shown on console for debug purposes
                                 ) -> Photographer {
-        let photoClubPref = "\(photoClub.fullNameTown):"
+        let photoClubPref = "\(organization.fullNameTown):"
 
         let predicateFormat: String = "givenName_ = %@ AND infixName_ = %@ AND familyName_ = %@" // avoid localization
         let predicate = NSPredicate(format: predicateFormat, argumentArray: [

@@ -12,7 +12,7 @@ extension FotogroepWaalreMembersProvider {
 
     func insertOnlineMemberData(bgContext: NSManagedObjectContext) { // runs on a background thread
         // can't rely on async (!) insertSomeHardcodedMemberData() to return managed photoClub object in time
-        let clubWaalre = PhotoClub.findCreateUpdate(
+        let clubWaalre = Organization.findCreateUpdate(
             context: bgContext, organizationTypeEum: .club,
             photoClubIdPlus: FotogroepWaalreMembersProvider.photoClubWaalreIdPlus
         )
@@ -20,14 +20,14 @@ extension FotogroepWaalreMembersProvider {
         let urlString = self.getFileAsString(nameEncryptedFile: "FGWPrivateMembersURL2.txt",
                                              nameUnencryptedFile: "FGWPrivateMembersURL3.txt",
                                              allowUseEncryptedFile: true, // set to false only for testing purposes
-                                             photoClub: clubWaalre) // used for error messages only
+                                             organization: clubWaalre) // used for error messages only
         if let privateURL = URL(string: urlString) {
             clubWaalre.memberListURL = privateURL
             try? bgContext.save() // persist Fotogroep Waalre and its online member data
 
             self.loadPrivateMembersFromWebsite( backgroundContext: bgContext,
                                                 privateMemberURL: privateURL,
-                                                photoClub: clubWaalre,
+                                                organization: clubWaalre,
                                                 photoClubIdPlus: FotogroepWaalreMembersProvider.photoClubWaalreIdPlus )
         } else {
             ifDebugFatalError("Could not convert \(urlString) to a URL.",
@@ -40,18 +40,18 @@ extension FotogroepWaalreMembersProvider {
     fileprivate func getFileAsString(nameEncryptedFile: String,
                                      nameUnencryptedFile: String,
                                      allowUseEncryptedFile: Bool = true,
-                                     photoClub: PhotoClub) // used for error messages only
+                                     organization: Organization) // used for error messages only
                                      -> String {
-        let photoClubTown = photoClub.fullNameTown
+        let organizationTown = organization.fullNameTown
         if let secret = readURLFromLocalFile(fileNameWithExtension: nameEncryptedFile), allowUseEncryptedFile {
-            ifDebugPrint("\(photoClubTown): will use confidential version of Private member data file.")
+            ifDebugPrint("\(organizationTown): will use confidential version of Private member data file.")
             return secret
         } else {
             if let unsecret = readURLFromLocalFile(fileNameWithExtension: nameUnencryptedFile) {
-                ifDebugPrint("\(photoClubTown): will use non-confidential version of Private member data file.")
+                ifDebugPrint("\(organizationTown): will use non-confidential version of Private member data file.")
                 return unsecret
             } else {
-                print("\(photoClubTown): ERROR - problem accessing either version of Private member data file.")
+                print("\(organizationTown): ERROR - problem accessing either version of Private member data file.")
                 return "Internal error: file \(nameUnencryptedFile) looks encrypted"
             }
         }
@@ -76,10 +76,10 @@ extension FotogroepWaalreMembersProvider {
 
     fileprivate func loadPrivateMembersFromWebsite( backgroundContext: NSManagedObjectContext,
                                                     privateMemberURL: URL,
-                                                    photoClub: PhotoClub,
+                                                    organization: Organization,
                                                     photoClubIdPlus: PhotoClubIdPlus ) {
 
-        ifDebugPrint("\(photoClub.fullNameTown): starting loadPrivateMembersFromWebsite() in background")
+        ifDebugPrint("\(organization.fullNameTown): starting loadPrivateMembersFromWebsite() in background")
 
         // swiftlint:disable:next large_tuple
         var results: (utfContent: Data?, urlResponse: URLResponse?, error: (any Error)?)? = (nil, nil, nil)
@@ -96,7 +96,7 @@ extension FotogroepWaalreMembersProvider {
                     try backgroundContext.save() // persist member data for Fotogroep Waalre
                 }
                 ifDebugPrint("""
-                             \(photoClub.fullNameTown): \
+                             \(organization.fullNameTown): \
                              completed loadPrivateMembersFromWebsite() in background")
                              """)
             } catch {
@@ -109,8 +109,8 @@ extension FotogroepWaalreMembersProvider {
                 let fetchRequest: NSFetchRequest<MemberPortfolio>
                 fetchRequest = MemberPortfolio.fetchRequest()
                 fetchRequest.predicate = NSPredicate(format: """
-                                                             photoClub_.name_ = %@ && \
-                                                             photoClub_.town_ = %@
+                                                             organization_.name_ = %@ && \
+                                                             organization_.town_ = %@
                                                              """,
                              argumentArray: ["Fotogroep Waalre", "Waalre", "Jan"])
                 let portfoliosInClub = try backgroundContext.fetch(fetchRequest)
@@ -139,9 +139,9 @@ extension FotogroepWaalreMembersProvider {
         var eMail = "", phoneNumber: String?, externalURL: String = ""
         var birthDate = toDate(from: "1/1/9999") // dummy value that is overwritten later
 
-        let photoClub: PhotoClub = PhotoClub.findCreateUpdate(context: backgroundContext,
-                                                              organizationTypeEum: .club,
-                                                              photoClubIdPlus: photoClubIdPlus)
+        let organization: Organization = Organization.findCreateUpdate(context: backgroundContext,
+                                                                       organizationTypeEum: .club,
+                                                                       photoClubIdPlus: photoClubIdPlus)
 
         htmlContent.enumerateLines { (line, _ stop) -> Void in
             if line.contains(targetState.targetString()) {
@@ -174,11 +174,11 @@ extension FotogroepWaalreMembersProvider {
                         phoneNumber: phoneNumber, eMail: eMail,
                         photographerWebsite: URL(string: externalURL),
                         bornDT: birthDate,
-                        photoClub: photoClub
+                        organization: organization
                     )
 
                     _ = MemberPortfolio.findCreateUpdate(
-                        bgContext: backgroundContext, photoClub: photoClub, photographer: photographer,
+                        bgContext: backgroundContext, organization: organization, photographer: photographer,
                         memberRolesAndStatus: MemberRolesAndStatus(
                             role: [:],
                             stat: [

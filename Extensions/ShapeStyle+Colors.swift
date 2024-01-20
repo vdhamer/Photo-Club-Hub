@@ -17,8 +17,8 @@ extension ShapeStyle where Self == Color {
         Color("_PhotographerColor") // from asset catalog
     }
 
-    static var photoClubColor: Color {
-        Color("_PhotoClubColor") // from asset catalog
+    static var organizationColor: Color {
+        Color("_OrganizationColor") // from asset catalog
     }
 
     static var deceasedColor: Color {

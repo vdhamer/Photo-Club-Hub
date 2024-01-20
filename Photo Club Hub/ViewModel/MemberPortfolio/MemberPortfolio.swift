@@ -13,7 +13,7 @@ extension MemberPortfolio: Comparable {
         if lhs.photographer.fullNameFirstLast != rhs.photographer.fullNameFirstLast {
                 return (lhs.photographer.fullNameFirstLast < rhs.photographer.fullNameFirstLast) // main sorting order
         } else {
-            return (lhs.photoClub.fullName < rhs.photoClub.fullName) // secondary sorting criterium
+            return (lhs.organization.fullName < rhs.organization.fullName) // secondary sorting criterium
         }
 	}
 
@@ -48,11 +48,11 @@ extension MemberPortfolio { // expose computed properties (some related to handl
         set { dateIntervalStart_ = newValue }
     }
 
-    var photoClub: PhotoClub {
-        if let photoClub = photoClub_ {
-            return photoClub
+    var organization: Organization {
+        if let organization = organization_ {
+            return organization
         } else {
-            fatalError("Error because photoClub is nil") // something is fundamentally wrong if this happens
+            fatalError("Error because organization is nil") // something is fundamentally wrong if this happens
         }
 	}
 
@@ -65,7 +65,7 @@ extension MemberPortfolio { // expose computed properties (some related to handl
 	}
 
     public var id: String {
-        return photographer.fullNameFirstLast + " in " + photoClub.fullNameTown
+        return photographer.fullNameFirstLast + " in " + organization.fullNameTown
     }
 
     var memberWebsite: URL {

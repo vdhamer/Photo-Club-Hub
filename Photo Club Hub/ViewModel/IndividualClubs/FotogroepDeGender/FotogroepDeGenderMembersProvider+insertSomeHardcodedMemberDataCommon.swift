@@ -25,7 +25,7 @@ extension FotogroepDeGenderMembersProvider { // fill with some initial hard-code
     private func insertSomeHardcodedMemberDataCommon(bgContext: NSManagedObjectContext) {
 
         // add De Gender to Photo Clubs (if needed)
-        let clubDeGender = PhotoClub.findCreateUpdate(
+        let clubDeGender = Organization.findCreateUpdate(
                                                         context: bgContext,
                                                         organizationTypeEum: .club,
                                                         photoClubIdPlus: Self.fotogroepDeGenderIdPlus
@@ -45,7 +45,7 @@ extension FotogroepDeGenderMembersProvider { // fill with some initial hard-code
                   personName: PersonName(givenName: "Mariet", infixName: "", familyName: "Wielders"),
                   photographerWebsite: URL(string: "https://www.m3w.nl"),
                   bornDT: bornDT,
-                  photoClub: clubDeGender,
+                  organization: clubDeGender,
                   memberRolesAndStatus: MemberRolesAndStatus(role: [.chairman: true]),
                   memberWebsite: URL(string: "https://www.fcdegender.nl/wp-content/uploads/Expositie%202023/Mariet/"),
                   latestImage: URL(string:
@@ -54,7 +54,7 @@ extension FotogroepDeGenderMembersProvider { // fill with some initial hard-code
 
         addMember(bgContext: bgContext, // add Peter to members of de Gender
                   personName: PersonName(givenName: "Peter", infixName: "van den", familyName: "Hamer"),
-                  photoClub: clubDeGender,
+                  organization: clubDeGender,
                   memberRolesAndStatus: MemberRolesAndStatus(stat: [.prospective: false]),
                   latestImage: URL(string:
                      "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg")
@@ -62,7 +62,7 @@ extension FotogroepDeGenderMembersProvider { // fill with some initial hard-code
 
         addMember(bgContext: bgContext, // add Peter to members of de Gender
                   personName: PersonName(givenName: "Bettina", infixName: "de", familyName: "Graaf"),
-                  photoClub: clubDeGender,
+                  organization: clubDeGender,
                   memberRolesAndStatus: MemberRolesAndStatus(stat: [.prospective: false]),
                   latestImage: URL(string:
                      "http://www.vdhamer.com/wp-content/uploads/2023/11/BettinaDeGraaf.jpeg")
@@ -91,7 +91,7 @@ extension FotogroepDeGenderMembersProvider { // fill with some initial hard-code
                            personName: PersonName,
                            photographerWebsite: URL? = nil,
                            bornDT: Date? = nil,
-                           photoClub: PhotoClub,
+                           organization: Organization,
                            memberRolesAndStatus: MemberRolesAndStatus = MemberRolesAndStatus(role: [:], stat: [:]),
                            memberWebsite: URL? = nil,
                            latestImage: URL? = nil,
@@ -103,11 +103,12 @@ extension FotogroepDeGenderMembersProvider { // fill with some initial hard-code
                                                          memberRolesAndStatus: memberRolesAndStatus,
                                                          photographerWebsite: photographerWebsite,
                                                          bornDT: bornDT,
-                                                         photoClub: photoClub)
+                                                         organization: organization)
 
         let image = latestImage ?? latestThumbnail // if image not available, use thumbnail (which might also be nil)
         let thumb = latestThumbnail ?? latestImage // if thumb not available, use image (which might also be nil)
-        _ = MemberPortfolio.findCreateUpdate(bgContext: bgContext, photoClub: photoClub, photographer: photographer,
+        _ = MemberPortfolio.findCreateUpdate(bgContext: bgContext,
+                                             organization: organization, photographer: photographer,
                                              memberRolesAndStatus: memberRolesAndStatus,
                                              memberWebsite: memberWebsite,
                                              latestImage: image,

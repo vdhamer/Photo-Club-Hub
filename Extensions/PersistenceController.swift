@@ -59,7 +59,7 @@ struct PersistenceController {
                                                               stat: [.deceased: ((index % 4) == 0),
                                                                      .former: ((index % 4) == 1)]
             )
-            let photoClub = PhotoClub.findCreateUpdate(context: viewContext, // on main thread
+            let organization = Organization.findCreateUpdate(context: viewContext, // on main thread
                                                        organizationTypeEum: .club,
                                                        photoClubIdPlus: PhotoClubIdPlus(fullName: "PhotoClub\(index)",
                                                                                         town: "Town\(index)",
@@ -80,10 +80,10 @@ struct PersistenceController {
                 eMail: "Jan.D.Eau\(index)@example.com",
                 photographerWebsite: URL(string: "https://www.example.com/JanDEau\(index)"),
                 bornDT: Date() - Double.random(in: 365*24*3600 ... 75*365*24*3600),
-                photoClub: photoClub
+                organization: organization
             )
             let memberPortfolio = MemberPortfolio.findCreateUpdate(bgContext: viewContext,
-                                                 photoClub: photoClub, photographer: photographer,
+                                                 organization: organization, photographer: photographer,
                                                  memberRolesAndStatus: memberRolesAndStatus
             )
         }

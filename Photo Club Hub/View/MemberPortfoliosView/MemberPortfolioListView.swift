@@ -28,7 +28,7 @@ struct MemberPortfolioListView: View {
                           SortDescriptor(\.name_, order: .forward), // photo clubs are identified by (name, town)
                           SortDescriptor(\.town_, order: .forward)],
         animation: .default)
-    private var photoClubs: FetchedResults<PhotoClub>
+    private var organizations: FetchedResults<Organization>
 
     @StateObject var model = PreferencesViewModel()
 
@@ -90,11 +90,11 @@ struct MemberPortfolioListView: View {
             ToolbarItemGroup(placement: toolbarItemPlacement) {
 
                 NavigationLink(destination: {
-                    PhotoClubListView(predicate: NSPredicate.all)
+                    OrganizationListView(predicate: NSPredicate.all)
                 }, label: {
                     Image("mappin.ellipse.rectangle")
                         .font(.title)
-                        .foregroundStyle(.photoClubColor, .gray, .red)
+                        .foregroundStyle(.organizationColor, .gray, .red)
                 })
                 .offset(x: 5)
 

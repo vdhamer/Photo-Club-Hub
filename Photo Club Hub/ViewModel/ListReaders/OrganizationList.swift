@@ -90,7 +90,7 @@ class OrganizationList {
 
         // extract the requested organizationType one-by-one from the json file
         for organizationTypeEnum in organizationTypeEnumsToLoad {
-            PhotoClub.hackOrganizationTypeEnum = organizationTypeEnum
+            Organization.hackOrganizationTypeEnum = organizationTypeEnum
 
             let jsonOrganizationsOfOneType: [JSON] = jsonRoot[organizationTypeEnum.unlocalizedPlural].arrayValue
             ifDebugPrint("Found \(jsonOrganizationsOfOneType.count) \(organizationTypeEnum.unlocalizedPlural) " +
@@ -110,15 +110,15 @@ class OrganizationList {
                 let localizedDescriptions = jsonOrganization["description"].arrayValue
                 let fotobondNumber = jsonOrganization["nlSpecific"]["fotobondNumber"].int16Value
                 let kvkNumber = jsonOrganization["nlSpecific"]["kvkNumber"].int32Value
-                _ = PhotoClub.findCreateUpdate(context: bgContext,
-                                               organizationTypeEum: organizationTypeEnum,
-                                               photoClubIdPlus: idPlus,
-                                               website: website,
-                                               wikipedia: wikipedia,
-                                               fotobondNumber: fotobondNumber, // int16
-                                               kvkNumber: kvkNumber, // int32
-                                               coordinates: coordinates,
-                                               localizedDescriptions: localizedDescriptions)
+                _ = Organization.findCreateUpdate(context: bgContext,
+                                                  organizationTypeEum: organizationTypeEnum,
+                                                  photoClubIdPlus: idPlus,
+                                                  website: website,
+                                                  wikipedia: wikipedia,
+                                                  fotobondNumber: fotobondNumber, // int16
+                                                  kvkNumber: kvkNumber, // int32
+                                                  coordinates: coordinates,
+                                                  localizedDescriptions: localizedDescriptions)
             }
             do {
                 if bgContext.hasChanges { // optimization recommended by Apple

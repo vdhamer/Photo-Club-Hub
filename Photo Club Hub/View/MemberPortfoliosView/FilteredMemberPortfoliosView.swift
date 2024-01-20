@@ -12,7 +12,7 @@ struct FilteredMemberPortfoliosView: View {
     @Environment(\.managedObjectContext) private var viewContext
 
     @SectionedFetchRequest<String, MemberPortfolio>(
-        sectionIdentifier: \.photoClub_!.fullNameTown,
+        sectionIdentifier: \.organization_!.fullNameTown,
         sortDescriptors: [],
         predicate: NSPredicate.none
     ) private var sectionedPortfolios: SectionedFetchResults<String, MemberPortfolio>
@@ -26,14 +26,14 @@ struct FilteredMemberPortfoliosView: View {
     // access the request’s SectionedFetchRequest.Configuration structure, either directly or with a binding.
 
         let sortDescriptors = [ // XCode had problems parsing this array
-            SortDescriptor(\MemberPortfolio.photoClub_!.pinned, order: .reverse),
-            SortDescriptor(\MemberPortfolio.photoClub_!.name_, order: .forward),
-            SortDescriptor(\MemberPortfolio.photoClub_!.town_, order: .forward),
+            SortDescriptor(\MemberPortfolio.organization_!.pinned, order: .reverse),
+            SortDescriptor(\MemberPortfolio.organization_!.name_, order: .forward),
+            SortDescriptor(\MemberPortfolio.organization_!.town_, order: .forward),
             SortDescriptor(\MemberPortfolio.photographer_!.givenName_, order: .forward),
             SortDescriptor(\MemberPortfolio.photographer_!.familyName_, order: .forward)
         ]
         _sectionedPortfolios = SectionedFetchRequest(
-            sectionIdentifier: \.photoClub_!.fullNameTown,
+            sectionIdentifier: \.organization_!.fullNameTown,
             sortDescriptors: sortDescriptors,
             predicate: memberPredicate,
             animation: .default)
@@ -58,13 +58,10 @@ struct FilteredMemberPortfoliosView: View {
                 Footer(filtCount: filterPortfolios(unFilteredPortfolios: section).count,
                        unfiltCount: section.endIndex,
                        listName: section.id,
-                       photoClub: section.first?.photoClub
+                       organization: section.first?.organization
                 )
             }
             .listRowSeparator(.hidden) // prevents a separator below the footer.
-//                .padding() // disabled because it doesn't work in combination with sectioning
-//                .background(Color(.secondarySystemBackground)) // compatible with light and dark mode
-//                .clipShape(RoundedRectangle(cornerSize: CGSize(width: 25.0, height: 25.0)))
         }
         if sectionedPortfoliosResults.nsPredicate == NSPredicate.none {
             Text("""
@@ -112,7 +109,7 @@ struct FilteredMemberPortfoliosView: View {
         var filtCount: Int // // number of items in filtered list
         var unfiltCount: Int // number of items in unfiltered list
         var listName: String
-        var photoClub: PhotoClub? // optional because we copy this from first member in the photoClub collection
+        var organization: Organization? // optional because we copy this from first member in the photoClub collection
         let member = String(localized: "member",
                                comment: "Statistics at end of section of FilteredMemberPortfoliosView")
         let members = String(localized: "members",
@@ -133,18 +130,18 @@ struct FilteredMemberPortfoliosView: View {
                         Text(verbatim:
                              "\(unfiltCount) \(unfiltCount==1 ? member : members) \(shown).")
                     }
-                    if let photoClub, photoClub.hasHardCodedMemberData {
+                    if let organization, organization.hasHardCodedMemberData {
                         Text("Data source: in-app member data.", comment: "Section footer text Portfolios screen")
                     }
-                    if photoClub != nil,
-                       photoClub!.memberListURL != nil,
-                       photoClub!.memberListURL!.host != nil,
-                       photoClub!.memberListURL!.scheme != nil {
+                    if organization != nil,
+                       organization!.memberListURL != nil,
+                       organization!.memberListURL!.host != nil,
+                       organization!.memberListURL!.scheme != nil {
                             Text(String(localized:
                                 """
-                                Data source: \(photoClub!.memberListURL!.scheme!)://\
-                                \(photoClub!.memberListURL!.host!)\
-                                \(photoClub!.memberListURL!.path)/
+                                Data source: \(organization!.memberListURL!.scheme!)://\
+                                \(organization!.memberListURL!.host!)\
+                                \(organization!.memberListURL!.path)/
                                 """,
                                 comment: "Section footer text Portfolios screen"))
                             .lineLimit(1)

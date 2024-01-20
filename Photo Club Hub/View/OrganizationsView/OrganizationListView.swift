@@ -1,5 +1,5 @@
 //
-//  PhotoClubListView.swift
+//  OrganizationListView.swift
 //  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 07/01/2022.
@@ -8,7 +8,7 @@
 import SwiftUI
 import CoreData // for implementing .refreshable
 
-struct PhotoClubListView: View {
+struct OrganizationListView: View {
     @Environment(\.managedObjectContext) private var viewContext
     @StateObject var model = PreferencesViewModel()
     @State var locationManager = LocationManager()
@@ -18,7 +18,7 @@ struct PhotoClubListView: View {
                           SortDescriptor(\.name_, order: .forward), // photo clubs are identified by (name, town)
                           SortDescriptor(\.town_, order: .forward)], // just to make it repeatable
         animation: .default)
-    private var photoClubs: FetchedResults<PhotoClub>
+    private var organizations: FetchedResults<Organization>
     private var predicate: NSPredicate = NSPredicate.all
     private var navigationTitle = String(localized: "Clubs", comment: "Title of page with maps of clubs and musea")
 
@@ -39,11 +39,12 @@ struct PhotoClubListView: View {
             List { // lists are "Lazy" automatically
                 HStack {
                     Spacer() // allign to right
-                    Text("\(photoClubs.count) entries", comment: "number of records displayed at top of Clubs screen")
+                    Text("\(organizations.count) entries",
+                         comment: "number of records displayed at top of Clubs screen")
                         .textCase(.lowercase) // otherwise becomes CAPITALIZED for some reason
                 }
-                PhotoClubView(predicate: model.preferences.photoClubPredicate)
-                if photoClubs.isEmpty {
+                OrganizationView(predicate: model.preferences.photoClubPredicate)
+                if organizations.isEmpty {
                     NoClubsText()
                 }
                 Group {
@@ -81,7 +82,7 @@ struct PhotoClubListView_Previews: PreviewProvider {
 
     static var previews: some View {
         NavigationStack {
-            PhotoClubListView(predicate: predicate, navigationTitle: String("PhotoClubView"))
+            OrganizationListView(predicate: predicate, navigationTitle: String("PhotoClubView"))
                 .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
         }
     }

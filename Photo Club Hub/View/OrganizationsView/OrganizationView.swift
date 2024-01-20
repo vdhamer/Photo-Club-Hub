@@ -1,5 +1,5 @@
 //
-//  PhotoClubView.swift
+//  OrganizationView.swift
 //  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 30/12/2021.
@@ -9,12 +9,12 @@ import SwiftUI
 import MapKit
 import CoreData
 
-struct PhotoClubView: View {
+struct OrganizationView: View {
 
     @Environment(\.managedObjectContext) private var viewContext // may not be correct
     @Environment(\.layoutDirection) var layoutDirection // .leftToRight or .rightToLeft
 
-    @FetchRequest var fetchedOrganizations: FetchedResults<PhotoClub>
+    @FetchRequest var fetchedOrganizations: FetchedResults<Organization>
     private let permitDeletionOfPhotoClubs = true // disables .delete() functionality for this screen
 
     @State private var cameraPositions: [PhotoClubId: MapCameraPosition] = [:] // location of camera per club
@@ -23,12 +23,16 @@ struct PhotoClubView: View {
 
     // regenerate Section using dynamic FetchRequest with dynamic predicate and dynamic sortDescriptor
     init(predicate: NSPredicate) {
-        _fetchedOrganizations = FetchRequest<PhotoClub>(sortDescriptors: // replaces previous fetchRequest
-                                                    [SortDescriptor(\.pinned, order: .reverse), // pinned clubs first
-                                                     SortDescriptor(\.name_, order: .forward), // photoclubID=name&town
-                                                     SortDescriptor(\.town_, order: .forward)],
-                                                     predicate: predicate,
-                                                     animation: .bouncy)
+        _fetchedOrganizations = FetchRequest<Organization>(
+            sortDescriptors: // replaces previous fetchRequest
+                [
+                 SortDescriptor(\.pinned, order: .reverse), // pinned clubs first
+                 SortDescriptor(\.name_, order: .forward), // photoclubID=name&town
+                 SortDescriptor(\.town_, order: .forward)
+                ],
+            predicate: predicate,
+            animation: .bouncy
+        )
     }
 
     var body: some View {
@@ -38,7 +42,7 @@ struct PhotoClubView: View {
                     Text(verbatim: "\(filteredOrganization.fullName)")
                         .font(UIDevice.isIPad ? .title : .title2)
                         .tracking(1)
-                        .foregroundColor(.photoClubColor)
+                        .foregroundColor(.organizationColor)
 
                     HStack(alignment: .center, spacing: 0) {
                         Image(systemName: systemName(organizationType: filteredOrganization.organizationType,
@@ -110,16 +114,17 @@ struct PhotoClubView: View {
                                    systemImage: systemName(organizationType: organization.organizationType,
                                                            circleNeeded: false),
                                    coordinate: organization.coordinates)
-                            .tint(selectMarkerTint(photoClub: organization, selectedClub: filteredOrganization))
+                            .tint(selectMarkerTint(organization: organization,
+                                                   selectedOrganization: filteredOrganization))
                         } // Marker loop
                         UserAnnotation() // show user's location on map
                     } // Map ends here
                         .frame(minHeight: 300, idealHeight: 500, maxHeight: .infinity)
                     Text(filteredOrganization.localizedDescription)
                         .padding(.top, 5)
-                } // PhotoClub loop
+                } // Organization loop
                 .task {
-                    initializeCameraPosition(photoClub: filteredOrganization) // works better than .onAppear(perform:)?
+                    initializeCameraPosition(organization: filteredOrganization) // better than .onAppear(perform:)?
                 }
                 .onAppear {
                     // on main queue (avoid accessing NSManagedObjects on background thread!)
@@ -147,7 +152,7 @@ struct PhotoClubView: View {
                     }
                 }
                 .onDisappear(perform: { try? viewContext.save() }) // persist map scroll-lock states when leaving page
-                .accentColor(.photoClubColor)
+                .accentColor(.organizationColor)
                 .listRowSeparator(.hidden)
                 .padding()
                 .border(Color(.darkGray), width: 0.5)
@@ -172,8 +177,8 @@ struct PhotoClubView: View {
         bgContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
 
         bgContext.performAndWait { // block must be synchronous and CoreData operations must occur on bgContext thread
-            let fetchRequest: NSFetchRequest<PhotoClub>
-            fetchRequest = PhotoClub.fetchRequest()
+            let fetchRequest: NSFetchRequest<Organization>
+            fetchRequest = Organization.fetchRequest()
 
             // Create the component predicates
             let clubPredicate = NSPredicate(format: "name_ = %@", clubName)
@@ -207,38 +212,38 @@ struct PhotoClubView: View {
     }
 
     // conversion to [MKMapItems] is needed to make Placemarks touch (and mouse) sensitive
-    private func toMapItems(photoClubs: FetchedResults<PhotoClub>) -> [MKMapItem] {
+    private func toMapItems(organizations: FetchedResults<Organization>) -> [MKMapItem] {
         var mapItems: [MKMapItem] = []
-        for photoClub in photoClubs {
-            let coordinates = CLLocationCoordinate2D(latitude: photoClub.latitude_,
-                                                     longitude: photoClub.longitude_)
+        for organization in organizations {
+            let coordinates = CLLocationCoordinate2D(latitude: organization.latitude_,
+                                                     longitude: organization.longitude_)
             let placemark = MKPlacemark(coordinate: coordinates)
             let mapItem = MKMapItem(placemark: placemark)
-            mapItem.name = photoClub.fullName
+            mapItem.name = organization.fullName
             mapItems.append(mapItem)
         }
         return mapItems
     }
 
 //    // conversion to [MKMapItems] is needed to make Placemarks touch (and mouse) sensitive
-//    private func toMapItem(photoClub: PhotoClub) -> MKMapItem {
-//        let coordinates = CLLocationCoordinate2D(latitude: photoClub.latitude_,
-//                                                 longitude: photoClub.longitude_)
+//    private func toMapItem(organization: PhotoClub) -> MKMapItem {
+//        let coordinates = CLLocationCoordinate2D(latitude: organization.latitude_,
+//                                                 longitude: organization.longitude_)
 //        let placemark = MKPlacemark(coordinate: coordinates)
 //        let mapItem = MKMapItem(placemark: placemark)
-//        mapItem.name = photoClub.fullName
+//        mapItem.name = organization.fullName
 //        return mapItem
 //    }
 
-    private func initializeCameraPosition(photoClub: PhotoClub) {
+    private func initializeCameraPosition(organization: Organization) {
         let mapCameraPosition: MapCameraPosition
 
         mapCameraPosition = MapCameraPosition.region(MKCoordinateRegion(
-            center: CLLocationCoordinate2D( latitude: photoClub.latitude_,
-                                            longitude: photoClub.longitude_),
+            center: CLLocationCoordinate2D( latitude: organization.latitude_,
+                                            longitude: organization.longitude_),
             latitudinalMeters: 10000, longitudinalMeters: 10000) // 10 km
         )
-        cameraPositions[photoClub.id] = mapCameraPosition // return MapCameraPosition and don't use input param
+        cameraPositions[organization.id] = mapCameraPosition // return MapCameraPosition and don't use input param
     }
 
     private func cameraPositionBinding(for key: PhotoClubId) -> Binding<MapCameraPosition> {
@@ -259,7 +264,7 @@ struct PhotoClubView: View {
         guard permitDeletionOfPhotoClubs else { return } // to turn off the feature
         if let photoClub = (offsets.map { fetchedOrganizations[$0] }.first) { // unwrap first PhotoClub to be deleted
             photoClub.deleteAllMembers(context: viewContext)
-            guard photoClub.members.count == 0 else { // safety: will crash if member.photoClub == nil
+            guard photoClub.members.count == 0 else { // safety: will crash if member.organization == nil
                 print("Could not delete photo club \(photoClub.fullName) " +
                       "because it still has \(photoClub.members.count) members.")
                 return
@@ -282,13 +287,13 @@ struct PhotoClubView: View {
 
 }
 
-extension PhotoClubView {
+extension OrganizationView {
 
-    func selectMarkerTint(photoClub: PhotoClub, selectedClub: PhotoClub) -> Color {
-        if photoClub.organizationType.isUnknown {
+    func selectMarkerTint(organization: Organization, selectedOrganization: Organization) -> Color {
+        if organization.organizationType.isUnknown {
             .red // for .unknown organization type (has higher priority than other rules)
-        } else if isEqual(photoClubLHS: photoClub, photoClubRHS: selectedClub) {
-            .photoClubColor // this is the organization centered on this particular map
+        } else if isEqual(organizationLHS: organization, organizationRHS: selectedOrganization) {
+            .organizationColor // this is the organization centered on this particular map
         } else {
             .blue // for .museum and .club (and future) organization types (this should be the normal case)
         }
@@ -316,7 +321,7 @@ extension PhotoClubView {
 
 }
 
-extension PhotoClubView { // reverse GeoCoding
+extension OrganizationView { // reverse GeoCoding
 
     func reverseGeocode(coordinates: CLLocationCoordinate2D) async throws -> (city: String?, country: String?) {
         let geocoder = CLGeocoder()
@@ -334,22 +339,22 @@ extension PhotoClubView { // reverse GeoCoding
 
 }
 
-extension PhotoClubView { // tests for equality
+extension OrganizationView { // tests for equality
 
-    private func isEqual(photoClubLHS: PhotoClub, photoClubRHS: PhotoClub) -> Bool {
-        return (photoClubLHS.fullName == photoClubRHS.fullName) && (photoClubLHS.town == photoClubRHS.town)
+    private func isEqual(organizationLHS: Organization, organizationRHS: Organization) -> Bool {
+        return (organizationLHS.fullName == organizationRHS.fullName) && (organizationLHS.town == organizationRHS.town)
     }
 
 }
 
-struct PhotoClubsView_Previews: PreviewProvider {
+struct OrganizationView_Previews: PreviewProvider {
     static let predicate = NSPredicate(format: "name_ = %@ || name_ = %@ || name_ = %@",
                                        argumentArray: ["PhotoClub2", "PhotoClub1", "PhotoClub3"])
 
     static var previews: some View {
         NavigationStack {
             List { // lists are "Lazy" automatically
-                PhotoClubView(predicate: predicate)
+                OrganizationView(predicate: predicate)
                     .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
             }
             .navigationBarTitle(Text(String("PhotoClubInnerView"))) // prevent localization

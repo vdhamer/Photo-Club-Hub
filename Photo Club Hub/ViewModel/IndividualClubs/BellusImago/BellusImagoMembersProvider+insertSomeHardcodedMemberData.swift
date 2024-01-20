@@ -24,11 +24,11 @@ extension BellusImagoMembersProvider { // fill with some initial hard-coded cont
     private func insertSomeHardcodedMemberDataCommon(bgContext: NSManagedObjectContext) {
 
         // add Bellus Imago to Photo Clubs (if needed)
-        let clubBellusImago = PhotoClub.findCreateUpdate(
-                                                        context: bgContext,
-                                                        organizationTypeEum: .club,
-                                                        photoClubIdPlus: Self.photoClubBellusImagoIdPlus
-                                                        )
+        let clubBellusImago = Organization.findCreateUpdate(
+                                                            context: bgContext,
+                                                            organizationTypeEum: .club,
+                                                            photoClubIdPlus: Self.photoClubBellusImagoIdPlus
+                                                           )
 
         ifDebugPrint("""
                      \(clubBellusImago.fullNameTown): \
@@ -39,7 +39,7 @@ extension BellusImagoMembersProvider { // fill with some initial hard-coded cont
         addMember(bgContext: bgContext, // add Rico to Photographers and member of Bellus (if needed)
                   personName: PersonName(givenName: "Rico", infixName: "", familyName: "Coolen"),
                   photographerWebsite: URL(string: "https://www.ricoco.nl"),
-                  photoClub: clubBellusImago,
+                  organization: clubBellusImago,
                   memberWebsite: URL(string: "https://www.fotoclubbellusimago.nl/rico.html"),
                   latestImage: URL(string:
                      "https://www.fotoclubbellusimago.nl/uploads/5/5/1/2/55129719/vrijwerk-rico-3_orig.jpg"),
@@ -48,7 +48,7 @@ extension BellusImagoMembersProvider { // fill with some initial hard-coded cont
 
         addMember(bgContext: bgContext, // add Loek to Photographers and member of Bellus (if needed)
                   personName: PersonName(givenName: "Loek", infixName: "", familyName: "Dirkx"),
-                  photoClub: clubBellusImago,
+                  organization: clubBellusImago,
                   memberRolesAndStatus: MemberRolesAndStatus(role: [ .chairman: true ]),
                   memberWebsite: URL(string: "https://www.fotoclubbellusimago.nl/loek.html"),
                   latestImage: URL(string:
@@ -78,7 +78,7 @@ extension BellusImagoMembersProvider { // fill with some initial hard-coded cont
                            personName: PersonName,
                            photographerWebsite: URL? = nil,
                            bornDT: Date? = nil,
-                           photoClub: PhotoClub,
+                           organization: Organization,
                            memberRolesAndStatus: MemberRolesAndStatus = MemberRolesAndStatus(role: [:], stat: [:]),
                            memberWebsite: URL? = nil,
                            latestImage: URL? = nil,
@@ -91,11 +91,12 @@ extension BellusImagoMembersProvider { // fill with some initial hard-coded cont
                                                          memberRolesAndStatus: memberRolesAndStatus,
                                                          photographerWebsite: photographerWebsite,
                                                          bornDT: bornDT,
-                                                         photoClub: photoClub)
+                                                         organization: organization)
 
         let image = latestImage ?? latestThumbnail // if image not available, use thumbnail (which might also be nil)
         let thumb = latestThumbnail ?? latestImage // if thumb not available, use image (which might also be nil)
-        _ = MemberPortfolio.findCreateUpdate(bgContext: bgContext, photoClub: photoClub, photographer: photographer,
+        _ = MemberPortfolio.findCreateUpdate(bgContext: bgContext,
+                                             organization: organization, photographer: photographer,
                                              memberRolesAndStatus: memberRolesAndStatus,
                                              memberWebsite: memberWebsite,
                                              latestImage: image,

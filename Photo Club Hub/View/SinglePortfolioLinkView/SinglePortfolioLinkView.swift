@@ -15,7 +15,7 @@ struct SinglePortfolioLinkView<Content: View>: View {
 
     @Environment(\.horizontalSizeClass) private var horSizeClass
     private let wkWebView = WKWebView() // TODO create once per image?? static not allowed. Pass as param?
-    var photoClub: PhotoClub { destPortfolio.photoClub }
+    var organization: Organization { destPortfolio.organization }
 
     var body: some View {
         NavigationLink(destination: SinglePortfolioView(url: destPortfolio.memberWebsite, webView: wkWebView)
@@ -28,8 +28,8 @@ struct SinglePortfolioLinkView<Content: View>: View {
 
     func nameOrShortName(horSizeClass: UserInterfaceSizeClass?) -> String {
         // full photo club name on iPad and iPhone 14 Plus or Pro Max only
-        guard horSizeClass != nil else { return photoClub.shortName } // don't know size of display
-        return (horSizeClass! == UserInterfaceSizeClass.compact) ? photoClub.shortName : photoClub.fullName
+        guard horSizeClass != nil else { return organization.shortName } // don't know size of display
+        return (horSizeClass! == UserInterfaceSizeClass.compact) ? organization.shortName : organization.fullName
     }
 }
 

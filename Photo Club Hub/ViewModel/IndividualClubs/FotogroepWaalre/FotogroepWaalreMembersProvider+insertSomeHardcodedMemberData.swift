@@ -12,7 +12,7 @@ extension FotogroepWaalreMembersProvider { // fill with some initial hard-coded 
 
     // swiftlint:disable:next function_body_length
     func insertSomeHardcodedMemberData(bgContext: NSManagedObjectContext) { // runs on a background thread
-        let clubWaalre = PhotoClub.findCreateUpdate(
+        let clubWaalre = Organization.findCreateUpdate(
                                         context: bgContext,
                                         organizationTypeEum: .club,
                                         photoClubIdPlus: FotogroepWaalreMembersProvider.photoClubWaalreIdPlus
@@ -25,51 +25,51 @@ extension FotogroepWaalreMembersProvider { // fill with some initial hard-coded 
 
         addMember(bgContext: bgContext,
                   personName: PersonName(givenName: "Bart", infixName: "van", familyName: "Stekelenburg"),
-                  photoClub: clubWaalre, memberRolesAndStatus: MemberRolesAndStatus(role: [ .chairman: false ]))
+                  organization: clubWaalre, memberRolesAndStatus: MemberRolesAndStatus(role: [ .chairman: false ]))
 
         addMember(bgContext: bgContext,
                   personName: PersonName(givenName: "Bettina", infixName: "de", familyName: "Graaf"),
-                  photoClub: clubWaalre, memberRolesAndStatus: MemberRolesAndStatus(role: [ .viceChairman: false ],
+                  organization: clubWaalre, memberRolesAndStatus: MemberRolesAndStatus(role: [ .viceChairman: false ],
                                                              stat: [.former: true]))
 
         addMember(bgContext: bgContext,
                   personName: PersonName(givenName: "Carel", infixName: "", familyName: "Bullens"),
-                  photoClub: clubWaalre,
+                  organization: clubWaalre,
                   memberRolesAndStatus: MemberRolesAndStatus(role: [ .viceChairman: true ], stat: [:]))
 
         addMember(bgContext: bgContext,
                   personName: PersonName(givenName: "Erik", infixName: "van", familyName: "Geest"),
-                  photoClub: clubWaalre, memberRolesAndStatus: MemberRolesAndStatus(role: [ .admin: true ]))
+                  organization: clubWaalre, memberRolesAndStatus: MemberRolesAndStatus(role: [ .admin: true ]))
 
         addMember(bgContext: bgContext,
                   personName: PersonName(givenName: "Greetje", infixName: "van", familyName: "Son"),
-                  photoClub: clubWaalre,
+                  organization: clubWaalre,
                   memberRolesAndStatus: MemberRolesAndStatus(role: [ .viceChairman: false ], stat: [:]))
 
         addMember(bgContext: bgContext,
                   personName: PersonName(givenName: "Henriëtte", infixName: "van", familyName: "Ekert"),
-                  photoClub: clubWaalre, memberRolesAndStatus: MemberRolesAndStatus(role: [ .admin: true ]))
+                  organization: clubWaalre, memberRolesAndStatus: MemberRolesAndStatus(role: [ .admin: true ]))
 
         addMember(bgContext: bgContext,
                   personName: PersonName(givenName: "Jos", infixName: "", familyName: "Jansen"),
-                  photoClub: clubWaalre, memberRolesAndStatus: MemberRolesAndStatus(role: [ .treasurer: true ]))
+                  organization: clubWaalre, memberRolesAndStatus: MemberRolesAndStatus(role: [ .treasurer: true ]))
 
         addMember(bgContext: bgContext,
                   personName: PersonName(givenName: "Kees", infixName: "van", familyName: "Gemert"),
-                  photoClub: clubWaalre, memberRolesAndStatus: MemberRolesAndStatus(role: [ .secretary: true ]))
+                  organization: clubWaalre, memberRolesAndStatus: MemberRolesAndStatus(role: [ .secretary: true ]))
 
         addMember(bgContext: bgContext,
                   personName: PersonName(givenName: "Marijke", infixName: "", familyName: "Gallas"),
-                  photoClub: clubWaalre,
+                  organization: clubWaalre,
                   memberRolesAndStatus: MemberRolesAndStatus(role: [:], stat: [ .honorary: true ]))
 
         addMember(bgContext: bgContext,
                   personName: PersonName(givenName: "Miek", infixName: "", familyName: "Kerkhoven"),
-                  photoClub: clubWaalre, memberRolesAndStatus: MemberRolesAndStatus(role: [ .chairman: true ]))
+                  organization: clubWaalre, memberRolesAndStatus: MemberRolesAndStatus(role: [ .chairman: true ]))
 
         addMember(bgContext: bgContext,
                   personName: PersonName(givenName: "Peter", infixName: "van den", familyName: "Hamer"),
-                  photoClub: clubWaalre,
+                  organization: clubWaalre,
                   memberRolesAndStatus: MemberRolesAndStatus(role: [ .admin: false, .secretary: false ],
                                                              stat: [.former: true]))
         do {
@@ -92,7 +92,7 @@ extension FotogroepWaalreMembersProvider { // fill with some initial hard-coded 
     private func addMember(bgContext: NSManagedObjectContext,
                            personName: PersonName,
                            bornDT: Date? = nil,
-                           photoClub: PhotoClub,
+                           organization: Organization,
                            memberRolesAndStatus: MemberRolesAndStatus = MemberRolesAndStatus(role: [:], stat: [:]),
                            memberWebsite: URL? = nil,
                            latestImage: URL? = nil) {
@@ -103,10 +103,10 @@ extension FotogroepWaalreMembersProvider { // fill with some initial hard-coded 
                                                   familyName: personName.familyName),
                            memberRolesAndStatus: memberRolesAndStatus,
                            bornDT: bornDT,
-                           photoClub: photoClub)
+                           organization: organization)
 
         _ = MemberPortfolio.findCreateUpdate(
-                            bgContext: bgContext, photoClub: photoClub, photographer: photographer,
+                            bgContext: bgContext, organization: organization, photographer: photographer,
                             memberRolesAndStatus: memberRolesAndStatus,
                             memberWebsite: memberWebsite,
                             latestImage: latestImage)

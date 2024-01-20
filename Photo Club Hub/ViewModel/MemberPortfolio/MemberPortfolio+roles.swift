@@ -47,7 +47,7 @@ extension MemberPortfolio { // computed properties related to roles of members i
 
     var roleDescriptionOfClubTown: String {
         let of2 = String(localized: "of2", comment: "<person> of <photo club>")
-        return "\(roleDescription) \(of2) \(self.photoClub.fullNameTown)"
+        return "\(roleDescription) \(of2) \(self.organization.fullNameTown)"
     }
 
     var memberRolesAndStatus: MemberRolesAndStatus {

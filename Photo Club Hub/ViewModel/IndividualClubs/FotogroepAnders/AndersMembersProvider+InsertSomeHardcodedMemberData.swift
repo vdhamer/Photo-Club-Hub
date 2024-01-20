@@ -26,7 +26,7 @@ extension AndersMembersProvider { // fill with some initial hard-coded content
     private func insertSomeHardcodedMemberDataCommon(bgContext: NSManagedObjectContext) {
 
         // add De Gender to Photo Clubs (if needed)
-        let clubAnders = PhotoClub.findCreateUpdate(
+        let clubAnders = Organization.findCreateUpdate(
                                                     context: bgContext,
                                                     organizationTypeEum: .club,
                                                     photoClubIdPlus: Self.fotogroepAndersIdPlus
@@ -40,7 +40,7 @@ extension AndersMembersProvider { // fill with some initial hard-coded content
 
         addMember(bgContext: bgContext, // add Loek to Photographers and member of Bellus (if needed)
                   personName: PersonName(givenName: "Helga", infixName: "", familyName: "Nuchelmans"),
-                  photoClub: clubAnders,
+                  organization: clubAnders,
                   memberWebsite: URL(string: "https://helganuchelmans.nl"),
                   latestImage: URL(string: """
                                            https://cdn.myportfolio.com/\
@@ -52,7 +52,7 @@ extension AndersMembersProvider { // fill with some initial hard-coded content
 
         addMember(bgContext: bgContext, // add Loek to Photographers and member of Bellus (if needed)
                   personName: PersonName(givenName: "Mirjam", infixName: "", familyName: "Evers"),
-                  photoClub: clubAnders,
+                  organization: clubAnders,
                   memberWebsite: URL(string: "https://me4photo.jimdosite.com/portfolio/"),
                   latestImage: URL(string: """
                                            https://jimdo-storage.freetls.fastly.net/\
@@ -63,7 +63,7 @@ extension AndersMembersProvider { // fill with some initial hard-coded content
 
         addMember(bgContext: bgContext, // add Loek to Photographers and member of Bellus (if needed)
                   personName: PersonName(givenName: "Lotte", infixName: "", familyName: "Vrij"),
-                  photoClub: clubAnders,
+                  organization: clubAnders,
 //                  memberWebsite: URL(string: "https://lotte-vrij-fotografie.jimdofree.com"),
                   memberWebsite: URL(string: "https://www.fotogroepwaalre.nl/fotos/Empty_Website/"),
                   latestImage: URL(string: """
@@ -79,7 +79,7 @@ extension AndersMembersProvider { // fill with some initial hard-coded content
 
         addMember(bgContext: bgContext, // add Loek to Photographers and member of Bellus (if needed)
                   personName: PersonName(givenName: "Dennis", infixName: "", familyName: "Verbruggen"),
-                  photoClub: clubAnders,
+                  organization: clubAnders,
                   memberWebsite: URL(string: "https://www.fotogroepwaalre.nl/fotos/Empty_Website/"),
                   latestImage: URL(string: "http://www.vdhamer.com/wp-content/uploads/2023/11/DennisVerbruggen.jpeg")
         )
@@ -107,7 +107,7 @@ extension AndersMembersProvider { // fill with some initial hard-coded content
                            personName: PersonName,
                            photographerWebsite: URL? = nil,
                            bornDT: Date? = nil,
-                           photoClub: PhotoClub,
+                           organization: Organization,
                            memberRolesAndStatus: MemberRolesAndStatus = MemberRolesAndStatus(role: [:], stat: [:]),
                            memberWebsite: URL? = nil,
                            latestImage: URL? = nil,
@@ -119,11 +119,12 @@ extension AndersMembersProvider { // fill with some initial hard-coded content
                                                          memberRolesAndStatus: memberRolesAndStatus,
                                                          photographerWebsite: photographerWebsite,
                                                          bornDT: bornDT,
-                                                         photoClub: photoClub)
+                                                         organization: organization)
 
         let image = latestImage ?? latestThumbnail // if image not available, use thumbnail (which might also be nil)
         let thumb = latestThumbnail ?? latestImage // if thumb not available, use image (which might also be nil)
-        _ = MemberPortfolio.findCreateUpdate(bgContext: bgContext, photoClub: photoClub, photographer: photographer,
+        _ = MemberPortfolio.findCreateUpdate(bgContext: bgContext,
+                                             organization: organization, photographer: photographer,
                                              memberRolesAndStatus: memberRolesAndStatus,
                                              memberWebsite: memberWebsite,
                                              latestImage: image,

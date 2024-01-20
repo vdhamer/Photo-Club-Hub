@@ -16,26 +16,16 @@
         <attribute name="latestImageURL" optional="YES" attributeType="URI" elementID="latestImage_"/>
         <attribute name="latestThumbURL" optional="YES" attributeType="URI"/>
         <attribute name="memberWebsite_" optional="YES" attributeType="URI"/>
-        <relationship name="photoClub_" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PhotoClub" inverseName="members_" inverseEntity="PhotoClub"/>
+        <relationship name="organization_" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Organization" inverseName="members_" inverseEntity="Organization" elementID="photoClub_"/>
         <relationship name="photographer_" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Photographer" inverseName="memberships_" inverseEntity="Photographer"/>
         <uniquenessConstraints>
             <uniquenessConstraint>
-                <constraint value="photoClub_"/>
+                <constraint value="organization_"/>
                 <constraint value="photographer_"/>
             </uniquenessConstraint>
         </uniquenessConstraints>
     </entity>
-    <entity name="OrganizationType" representedClassName="OrganizationType" syncable="YES" codeGenerationType="class">
-        <attribute name="dummy" optional="YES" attributeType="String"/>
-        <attribute name="name_" optional="YES" attributeType="String"/>
-        <relationship name="photoclubs_" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PhotoClub" inverseName="organizationType_" inverseEntity="PhotoClub"/>
-        <uniquenessConstraints>
-            <uniquenessConstraint>
-                <constraint value="name_"/>
-            </uniquenessConstraint>
-        </uniquenessConstraints>
-    </entity>
-    <entity name="PhotoClub" representedClassName="PhotoClub" syncable="YES" codeGenerationType="class">
+    <entity name="Organization" representedClassName="Organization" elementID="PhotoClub" syncable="YES" codeGenerationType="class">
         <attribute name="descriptionEN" optional="YES" attributeType="String"/>
         <attribute name="descriptionNL" optional="YES" attributeType="String"/>
         <attribute name="fotobondNumber" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
@@ -54,12 +44,22 @@
         <attribute name="town_" attributeType="String" defaultValueString="DefaultTown"/>
         <attribute name="website" optional="YES" attributeType="URI" elementID="photoClubWebsite"/>
         <attribute name="wikipedia" optional="YES" attributeType="URI"/>
-        <relationship name="members_" toMany="YES" deletionRule="Cascade" destinationEntity="MemberPortfolio" inverseName="photoClub_" inverseEntity="MemberPortfolio"/>
-        <relationship name="organizationType_" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="OrganizationType" inverseName="photoclubs_" inverseEntity="OrganizationType"/>
+        <relationship name="members_" toMany="YES" deletionRule="Cascade" destinationEntity="MemberPortfolio" inverseName="organization_" inverseEntity="MemberPortfolio"/>
+        <relationship name="organizationType_" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="OrganizationType" inverseName="organizations_" inverseEntity="OrganizationType"/>
         <uniquenessConstraints>
             <uniquenessConstraint>
                 <constraint value="name_"/>
                 <constraint value="town_"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="OrganizationType" representedClassName="OrganizationType" syncable="YES" codeGenerationType="class">
+        <attribute name="dummy" optional="YES" attributeType="String"/>
+        <attribute name="name_" optional="YES" attributeType="String"/>
+        <relationship name="organizations_" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Organization" inverseName="organizationType_" inverseEntity="Organization"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="name_"/>
             </uniquenessConstraint>
         </uniquenessConstraints>
     </entity>

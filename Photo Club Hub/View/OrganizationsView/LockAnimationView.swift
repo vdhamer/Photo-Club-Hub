@@ -11,7 +11,7 @@ struct LockAnimationView: View {
     // https://github.com/amosgyamfi/swiftui-animation-library/blob/master/unlock.zip
     var locked: Bool
     var lineWidth: Double = 2.3
-    var lineColor: Color = .photoClubColor
+    var lineColor: Color = .organizationColor
 
     var body: some View {
         GeometryReader { geo in

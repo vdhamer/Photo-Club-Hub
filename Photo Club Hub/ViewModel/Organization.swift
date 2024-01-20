@@ -10,15 +10,15 @@ import CoreLocation // needed for coordinate translation
 import SwiftUI // for UserInterfaceSizeClass
 import SwiftyJSON // for JSON type
 
-extension PhotoClub: Comparable {
+extension Organization: Comparable {
 
-	public static func < (lhs: PhotoClub, rhs: PhotoClub) -> Bool {
+	public static func < (lhs: Organization, rhs: Organization) -> Bool {
 		return lhs.fullName < rhs.fullName
 	}
 
 }
 
-extension PhotoClub {
+extension Organization {
 
     // MARK: - getters and setters
 
@@ -40,7 +40,7 @@ extension PhotoClub {
                 let persistenceController = PersistenceController.shared // for Core Data
                 let viewContext = persistenceController.container.viewContext
                 let orgTypeObjectID: NSManagedObjectID =
-                    OrganizationType.enum2objectID[PhotoClub.hackOrganizationTypeEnum]!
+                    OrganizationType.enum2objectID[Organization.hackOrganizationTypeEnum]!
                 // swiftlint:disable:next force_cast
                 organizationType = viewContext.object(with: orgTypeObjectID) as! OrganizationType
                 hack = true
@@ -61,11 +61,11 @@ extension PhotoClub {
                   New value = \(newValue.name) \
                   on Thread = \(Thread.isMainThread ? "MAIN" : "Background")
                   """)
-            if newValue.name != PhotoClub.hackOrganizationTypeEnum.rawValue {
+            if newValue.name != Organization.hackOrganizationTypeEnum.rawValue {
                 print("""
                       ORGANIZATIONTYPE: setter for \(self.fullName). \
                       Unexpected new value = \(newValue.name) \
-                      (\(PhotoClub.hackOrganizationTypeEnum.rawValue) expected) \
+                      (\(Organization.hackOrganizationTypeEnum.rawValue) expected) \
                       on Thread = \(Thread.isMainThread ? "MAIN" : "Background")
                       """)
                 ifDebugFatalError("Unexpected value for setter for organizationtype (see console)")
@@ -187,7 +187,7 @@ extension PhotoClub {
                                  coordinates: CLLocationCoordinate2D? = nil,
                                  pinned: Bool = false,
                                  localizedDescriptions: [JSON] = []
-                                ) -> PhotoClub {
+                                ) -> Organization {
 
         let predicateFormat: String = "name_ = %@ AND town_ = %@" // avoid localization
         // Note that organizationType is not an identifying attribute.
@@ -195,9 +195,9 @@ extension PhotoClub {
         let predicate = NSPredicate(format: predicateFormat,
                                     argumentArray: [photoClubIdPlus.fullName,
                                                     photoClubIdPlus.town] )
-        let fetchRequest: NSFetchRequest<PhotoClub> = PhotoClub.fetchRequest()
+        let fetchRequest: NSFetchRequest<Organization> = Organization.fetchRequest()
         fetchRequest.predicate = predicate
-		let organizations: [PhotoClub] = (try? context.fetch(fetchRequest)) ?? [] // EXC_BAD_ACCESS (code=1, address=0x100)
+		let organizations: [Organization] = (try? context.fetch(fetchRequest)) ?? [] // EXC_BAD_ACCESS (code=1, address=0x100)
 
         if organizations.count > 1 { // organization exists, but there shouldn't be multiple that satify the predicate
             ifDebugFatalError("Query returned \(organizations.count) organizations named " +
@@ -221,7 +221,7 @@ extension PhotoClub {
 		} else { // have to create PhotoClub object because it doesn't exist yet
             // cannot use PhotoClub() initializer because we must use bgContext
             let entity = NSEntityDescription.entity(forEntityName: "PhotoClub", in: context)!
-            let organization = PhotoClub(entity: entity, insertInto: context) // create new Club or Museum
+            let organization = Organization(entity: entity, insertInto: context) // create new Club or Museum
             organization.fullName = photoClubIdPlus.fullName // first part of ID
             organization.town = photoClubIdPlus.town // second part of ID
             print("\(organization.fullNameTown): Will try to create this new organization")
@@ -241,7 +241,7 @@ extension PhotoClub {
     // swiftlint:disable:next function_body_length function_parameter_count cyclomatic_complexity
     private static func update(bgContext: NSManagedObjectContext,
                                organizationTypeEnum: OrganizationTypeEnum,
-                               photoClub: PhotoClub, shortName: String,
+                               photoClub: Organization, shortName: String,
                                // swiftlint:disable:next large_tuple
                                optionalFields: (website: URL?, wikipedia: URL?,
                                                 fotobondNumber: Int16?, kvkNumber: Int32?),

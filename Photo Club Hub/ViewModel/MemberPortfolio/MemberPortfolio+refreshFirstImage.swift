@@ -11,24 +11,24 @@ import RegexBuilder // for OneOrMore, Capture, etc
 extension MemberPortfolio {
 
     func refreshFirstImage() {
-        let photoClubTown: String = self.photoClub.fullNameTown
-        guard photoClubTown == "Fotogroep Waalre" else { return }
+        let organizationTown: String = self.organization.fullNameTown
+        guard organizationTown == "Fotogroep Waalre" else { return }
 
         if let urlIndex = URL(string: self.memberWebsite.absoluteString + "config.xml") { // assume JuiceBox Pro
-            ifDebugPrint("\(photoClubTown): starting refreshFirstImage() \(urlIndex.absoluteString) in background")
+            ifDebugPrint("\(organizationTown): starting refreshFirstImage() \(urlIndex.absoluteString) in background")
 
             // swiftlint:disable:next large_tuple
             var results: (utfContent: Data?, urlResponse: URLResponse?, error: (any Error)?)? = (nil, nil, nil)
             results = URLSession.shared.synchronousDataTask(from: urlIndex)
             guard results != nil && results!.utfContent != nil else {
-                print("\(photoClubTown): ERROR - loading refreshFirstImage() \(urlIndex.absoluteString) failed")
+                print("\(organizationTown): ERROR - loading refreshFirstImage() \(urlIndex.absoluteString) failed")
                 return
             }
 
             let xmlContent = String(data: results!.utfContent! as Data,
                                     encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue))!
             parseXMLContent(xmlContent: xmlContent, member: self)
-            ifDebugPrint("\(photoClubTown): completed refreshFirstImage() \(urlIndex.absoluteString)")
+            ifDebugPrint("\(organizationTown): completed refreshFirstImage() \(urlIndex.absoluteString)")
         }
     }
 
@@ -66,8 +66,8 @@ extension MemberPortfolio {
         }
 
         guard let match = try? regex.firstMatch(in: xmlContent) else {
-            print("\(photoClub.fullName): ERROR - could not find image in parseXMLContent() " +
-                  "for \(member.photographer.fullNameFirstLast) in \(member.photoClub.fullName)")
+            print("\(organization.fullName): ERROR - could not find image in parseXMLContent() " +
+                  "for \(member.photographer.fullNameFirstLast) in \(member.organization.fullName)")
             return
         }
         let (_, imageSuffix, thumbSuffix) = match.output
@@ -76,11 +76,11 @@ extension MemberPortfolio {
 
         if member.latestImageURL != imageURL && imageURL != nil {
             member.latestImageURL = imageURL // this is where it happens. Note that there is context.save()
-            print("\(photoClub.fullName): found new image \(imageURL!)")
+            print("\(organization.fullName): found new image \(imageURL!)")
         }
         if member.latestThumbURL != thumbURL && thumbURL != nil {
             member.latestThumbURL = thumbURL // this is where it happens. Note that there is context.save()
-            print("\(photoClub.fullName): found new thumbnail \(thumbURL!)")
+            print("\(organization.fullName): found new thumbnail \(thumbURL!)")
         }
     }
 
