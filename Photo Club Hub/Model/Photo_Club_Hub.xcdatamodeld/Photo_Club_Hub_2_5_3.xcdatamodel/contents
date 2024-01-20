@@ -49,10 +49,10 @@
         <attribute name="longitude_" optional="YES" attributeType="Double" usesScalarValueType="YES"/>
         <attribute name="memberListURL_" optional="YES" attributeType="URI"/>
         <attribute name="name_" attributeType="String" defaultValueString="DefaultPhotoClubName"/>
-        <attribute name="photoClubWebsite" optional="YES" attributeType="URI"/>
         <attribute name="pinned" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="shortName_" optional="YES" attributeType="String"/>
         <attribute name="town_" attributeType="String" defaultValueString="DefaultTown"/>
+        <attribute name="website" optional="YES" attributeType="URI" elementID="photoClubWebsite"/>
         <attribute name="wikipedia" optional="YES" attributeType="URI"/>
         <relationship name="members_" toMany="YES" deletionRule="Cascade" destinationEntity="MemberPortfolio" inverseName="photoClub_" inverseEntity="MemberPortfolio"/>
         <relationship name="organizationType_" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="OrganizationType" inverseName="photoclubs_" inverseEntity="OrganizationType"/>

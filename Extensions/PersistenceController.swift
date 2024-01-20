@@ -64,7 +64,7 @@ struct PersistenceController {
                                                        photoClubIdPlus: PhotoClubIdPlus(fullName: "PhotoClub\(index)",
                                                                                         town: "Town\(index)",
                                                                                         nickname: "ClubNick\(index)"),
-                                                       photoClubWebsite: URL(string: "http://www.example.com/\(index)"),
+                                                       website: URL(string: "http://www.example.com/\(index)"),
                                                        fotobondNumber: Int16(index*1111),
                                                        kvkNumber: Int32(100+index),
                                                        coordinates: CLLocationCoordinate2D( // spread around BeNeLux

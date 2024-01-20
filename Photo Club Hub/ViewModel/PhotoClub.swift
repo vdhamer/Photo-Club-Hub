@@ -181,7 +181,7 @@ extension PhotoClub {
     static func findCreateUpdate(context: NSManagedObjectContext, // can be foreground of background context
                                  organizationTypeEum: OrganizationTypeEnum,
                                  photoClubIdPlus: PhotoClubIdPlus,
-                                 photoClubWebsite: URL? = nil,
+                                 website: URL? = nil,
                                  wikipedia: URL? = nil,
                                  fotobondNumber: Int16? = nil, kvkNumber: Int32? = nil,
                                  coordinates: CLLocationCoordinate2D? = nil,
@@ -210,7 +210,7 @@ extension PhotoClub {
             print("\(organization.fullNameTown): Will try to update info for organization \(organization.fullName)")
             if update(bgContext: context, organizationTypeEnum: organizationTypeEum,
                       photoClub: organization, shortName: photoClubIdPlus.nickname,
-                      optionalFields: (photoClubWebsite: photoClubWebsite, wikipedia: wikipedia,
+                      optionalFields: (website: website, wikipedia: wikipedia,
                                        fotobondNumber: fotobondNumber, kvkNumber: kvkNumber),
                       coordinates: coordinates,
                       pinned: pinned,
@@ -227,7 +227,7 @@ extension PhotoClub {
             print("\(organization.fullNameTown): Will try to create this new organization")
             _ = update(bgContext: context, organizationTypeEnum: organizationTypeEum,
                        photoClub: organization, shortName: photoClubIdPlus.nickname,
-                       optionalFields: (photoClubWebsite: photoClubWebsite, wikipedia: wikipedia,
+                       optionalFields: (website: website, wikipedia: wikipedia,
                                         fotobondNumber: fotobondNumber, kvkNumber: kvkNumber),
                        coordinates: coordinates,
                        pinned: pinned,
@@ -243,7 +243,7 @@ extension PhotoClub {
                                organizationTypeEnum: OrganizationTypeEnum,
                                photoClub: PhotoClub, shortName: String,
                                // swiftlint:disable:next large_tuple
-                               optionalFields: (photoClubWebsite: URL?, wikipedia: URL?,
+                               optionalFields: (website: URL?, wikipedia: URL?,
                                                 fotobondNumber: Int16?, kvkNumber: Int32?),
                                coordinates: CLLocationCoordinate2D?,
                                pinned: Bool,
@@ -263,8 +263,8 @@ extension PhotoClub {
             photoClub.shortName = shortName
             modified = true }
 
-        if let website = optionalFields.photoClubWebsite, photoClub.photoClubWebsite != website {
-            photoClub.photoClubWebsite = website
+        if let website = optionalFields.website, photoClub.website != website {
+            photoClub.website = website
             modified = true }
 
         if let wikiURL = optionalFields.wikipedia, photoClub.wikipedia != wikiURL {

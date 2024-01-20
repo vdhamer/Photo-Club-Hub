@@ -105,7 +105,7 @@ class OrganizationList {
                 let jsonCoordinates = jsonOrganization["coordinates"]
                 let coordinates = CLLocationCoordinate2D(latitude: jsonCoordinates["latitude"].doubleValue,
                                                          longitude: jsonCoordinates["longitude"].doubleValue)
-                let photoClubWebsite = URL(string: jsonOrganization["website"].stringValue)
+                let website = URL(string: jsonOrganization["website"].stringValue)
                 let wikipedia = URL(string: jsonOrganization["wikipedia"].stringValue)
                 let localizedDescriptions = jsonOrganization["description"].arrayValue
                 let fotobondNumber = jsonOrganization["nlSpecific"]["fotobondNumber"].int16Value
@@ -113,7 +113,7 @@ class OrganizationList {
                 _ = PhotoClub.findCreateUpdate(context: bgContext,
                                                organizationTypeEum: organizationTypeEnum,
                                                photoClubIdPlus: idPlus,
-                                               photoClubWebsite: photoClubWebsite,
+                                               website: website,
                                                wikipedia: wikipedia,
                                                fotobondNumber: fotobondNumber, // int16
                                                kvkNumber: kvkNumber, // int32

@@ -57,7 +57,7 @@
 * PhotoClub
 	* name = id
 	* GPS coordinates, kvk_nr, fotobond_nr
-    * photoclubWebsite
+    * website
     
 ## Schema and tables (to do)
 * Photo

@@ -59,7 +59,7 @@ struct PhotoClubView: View {
                                      comment: "<count> members (including all types of members) within photo club")
                                 .font(.subheadline)
                             }
-                            if let website: URL = filteredOrganization.photoClubWebsite {
+                            if let website: URL = filteredOrganization.website {
                                 Link(destination: website, label: {
                                     Text(website.absoluteString)
                                         .lineLimit(1)
