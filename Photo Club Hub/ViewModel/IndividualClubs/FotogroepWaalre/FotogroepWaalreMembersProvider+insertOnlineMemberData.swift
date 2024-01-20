@@ -14,7 +14,7 @@ extension FotogroepWaalreMembersProvider {
         // can't rely on async (!) insertSomeHardcodedMemberData() to return managed photoClub object in time
         let clubWaalre = Organization.findCreateUpdate(
             context: bgContext, organizationTypeEum: .club,
-            photoClubIdPlus: FotogroepWaalreMembersProvider.photoClubWaalreIdPlus
+            idPlus: FotogroepWaalreMembersProvider.photoClubWaalreIdPlus
         )
 
         let urlString = self.getFileAsString(nameEncryptedFile: "FGWPrivateMembersURL2.txt",
@@ -28,7 +28,7 @@ extension FotogroepWaalreMembersProvider {
             self.loadPrivateMembersFromWebsite( backgroundContext: bgContext,
                                                 privateMemberURL: privateURL,
                                                 organization: clubWaalre,
-                                                photoClubIdPlus: FotogroepWaalreMembersProvider.photoClubWaalreIdPlus )
+                                                idPlus: FotogroepWaalreMembersProvider.photoClubWaalreIdPlus )
         } else {
             ifDebugFatalError("Could not convert \(urlString) to a URL.",
                               file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
@@ -77,7 +77,7 @@ extension FotogroepWaalreMembersProvider {
     fileprivate func loadPrivateMembersFromWebsite( backgroundContext: NSManagedObjectContext,
                                                     privateMemberURL: URL,
                                                     organization: Organization,
-                                                    photoClubIdPlus: OrganizationIdPlus ) {
+                                                    idPlus: OrganizationIdPlus ) {
 
         ifDebugPrint("\(organization.fullNameTown): starting loadPrivateMembersFromWebsite() in background")
 
@@ -90,7 +90,7 @@ extension FotogroepWaalreMembersProvider {
                                      encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue))!
             parseHTMLContent(backgroundContext: backgroundContext,
                              htmlContent: htmlContent,
-                             photoClubIdPlus: photoClubIdPlus)
+                             idPlus: idPlus)
             do {
                 if backgroundContext.hasChanges {
                     try backgroundContext.save() // persist member data for Fotogroep Waalre
@@ -132,7 +132,7 @@ extension FotogroepWaalreMembersProvider {
 
     fileprivate func parseHTMLContent(backgroundContext: NSManagedObjectContext,
                                       htmlContent: String,
-                                      photoClubIdPlus: OrganizationIdPlus) {
+                                      idPlus: OrganizationIdPlus) {
         var targetState: HTMLPageLoadingState = .tableStart        // initial entry point on loop of states
 
         var personName = PersonName(fullNameWithParenthesizedRole: "", givenName: "", infixName: "", familyName: "")
@@ -141,7 +141,7 @@ extension FotogroepWaalreMembersProvider {
 
         let organization: Organization = Organization.findCreateUpdate(context: backgroundContext,
                                                                        organizationTypeEum: .club,
-                                                                       photoClubIdPlus: photoClubIdPlus)
+                                                                       idPlus: idPlus)
 
         htmlContent.enumerateLines { (line, _ stop) -> Void in
             if line.contains(targetState.targetString()) {

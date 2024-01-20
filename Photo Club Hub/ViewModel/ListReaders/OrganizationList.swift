@@ -112,7 +112,7 @@ class OrganizationList {
                 let kvkNumber = jsonOrganization["nlSpecific"]["kvkNumber"].int32Value
                 _ = Organization.findCreateUpdate(context: bgContext,
                                                   organizationTypeEum: organizationTypeEnum,
-                                                  photoClubIdPlus: idPlus,
+                                                  idPlus: idPlus,
                                                   website: website,
                                                   wikipedia: wikipedia,
                                                   fotobondNumber: fotobondNumber, // int16

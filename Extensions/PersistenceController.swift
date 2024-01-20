@@ -61,7 +61,7 @@ struct PersistenceController {
             )
             let organization = Organization.findCreateUpdate(context: viewContext, // on main thread
                                                        organizationTypeEum: .club,
-                                                       photoClubIdPlus: OrganizationIdPlus(
+                                                       idPlus: OrganizationIdPlus(
                                                             fullName: "PhotoClub\(index)",
                                                             town: "Town\(index)",
                                                             nickname: "ClubNick\(index)"

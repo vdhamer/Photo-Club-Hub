@@ -180,7 +180,7 @@ extension Organization {
 	// Update new or existing organization's attributes
     static func findCreateUpdate(context: NSManagedObjectContext, // can be foreground of background context
                                  organizationTypeEum: OrganizationTypeEnum,
-                                 photoClubIdPlus: OrganizationIdPlus,
+                                 idPlus: OrganizationIdPlus,
                                  website: URL? = nil,
                                  wikipedia: URL? = nil,
                                  fotobondNumber: Int16? = nil, kvkNumber: Int32? = nil,
@@ -193,15 +193,15 @@ extension Organization {
         // Note that organizationType is not an identifying attribute.
         // This implies that you cannot have 2 organizations with the same Name and Town, but of a different type.
         let predicate = NSPredicate(format: predicateFormat,
-                                    argumentArray: [photoClubIdPlus.fullName,
-                                                    photoClubIdPlus.town] )
+                                    argumentArray: [idPlus.fullName,
+                                                    idPlus.town] )
         let fetchRequest: NSFetchRequest<Organization> = Organization.fetchRequest()
         fetchRequest.predicate = predicate
 		let organizations: [Organization] = (try? context.fetch(fetchRequest)) ?? [] // EXC_BAD_ACCESS (code=1, address=0x100)
 
         if organizations.count > 1 { // organization exists, but there shouldn't be multiple that satify the predicate
             ifDebugFatalError("Query returned \(organizations.count) organizations named " +
-                              "\(photoClubIdPlus.fullName) in \(photoClubIdPlus.town)",
+                              "\(idPlus.fullName) in \(idPlus.town)",
                               file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
             // in release mode, log that there are multiple clubs, but continue using the first one.
         }
@@ -209,7 +209,7 @@ extension Organization {
 		if let organization = organizations.first { // already exists, so make sure secondary attributes are up to date
             print("\(organization.fullNameTown): Will try to update info for organization \(organization.fullName)")
             if update(bgContext: context, organizationTypeEnum: organizationTypeEum,
-                      photoClub: organization, shortName: photoClubIdPlus.nickname,
+                      photoClub: organization, shortName: idPlus.nickname,
                       optionalFields: (website: website, wikipedia: wikipedia,
                                        fotobondNumber: fotobondNumber, kvkNumber: kvkNumber),
                       coordinates: coordinates,
@@ -222,11 +222,11 @@ extension Organization {
             // cannot use PhotoClub() initializer because we must use bgContext
             let entity = NSEntityDescription.entity(forEntityName: "PhotoClub", in: context)!
             let organization = Organization(entity: entity, insertInto: context) // create new Club or Museum
-            organization.fullName = photoClubIdPlus.fullName // first part of ID
-            organization.town = photoClubIdPlus.town // second part of ID
+            organization.fullName = idPlus.fullName // first part of ID
+            organization.town = idPlus.town // second part of ID
             print("\(organization.fullNameTown): Will try to create this new organization")
             _ = update(bgContext: context, organizationTypeEnum: organizationTypeEum,
-                       photoClub: organization, shortName: photoClubIdPlus.nickname,
+                       photoClub: organization, shortName: idPlus.nickname,
                        optionalFields: (website: website, wikipedia: wikipedia,
                                         fotobondNumber: fotobondNumber, kvkNumber: kvkNumber),
                        coordinates: coordinates,

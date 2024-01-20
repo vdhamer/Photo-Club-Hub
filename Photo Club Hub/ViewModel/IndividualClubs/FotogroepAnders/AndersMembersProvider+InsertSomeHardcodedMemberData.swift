@@ -29,7 +29,7 @@ extension AndersMembersProvider { // fill with some initial hard-coded content
         let clubAnders = Organization.findCreateUpdate(
                                                     context: bgContext,
                                                     organizationTypeEum: .club,
-                                                    photoClubIdPlus: Self.fotogroepAndersIdPlus
+                                                    idPlus: Self.fotogroepAndersIdPlus
                                                    )
 
         ifDebugPrint("""

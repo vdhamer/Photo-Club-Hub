@@ -28,7 +28,7 @@ extension FotogroepDeGenderMembersProvider { // fill with some initial hard-code
         let clubDeGender = Organization.findCreateUpdate(
                                                         context: bgContext,
                                                         organizationTypeEum: .club,
-                                                        photoClubIdPlus: Self.fotogroepDeGenderIdPlus
+                                                        idPlus: Self.fotogroepDeGenderIdPlus
                                                      )
         ifDebugPrint("""
                      \(clubDeGender.fullNameTown): \
