@@ -11,9 +11,9 @@ import MapKit // for CLLocationCoordinate2D
 extension BellusImagoMembersProvider { // fill with some initial hard-coded content
 
     private static let bellusImagoURL = URL(string: "https://www.fotoClubBellusImago.nl")
-    private static let photoClubBellusImagoIdPlus = PhotoClubIdPlus(fullName: "Fotoclub Bellus Imago",
-                                                                    town: "Veldhoven",
-                                                                    nickname: "FC BellusImago")
+    private static let photoClubBellusImagoIdPlus = OrganizationIdPlus(fullName: "Fotoclub Bellus Imago",
+                                                                       town: "Veldhoven",
+                                                                       nickname: "FC BellusImago")
 
     func insertSomeHardcodedMemberData(bgContext: NSManagedObjectContext) {
         bgContext.perform { // from here on, we are running on a background thread

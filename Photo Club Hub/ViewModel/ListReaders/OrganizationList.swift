@@ -98,9 +98,9 @@ class OrganizationList {
 
             // extract the requested items (clubs, musea) of that organizationType one-by-one from the json file
             for jsonOrganization in jsonOrganizationsOfOneType {
-                let idPlus = PhotoClubIdPlus(fullName: jsonOrganization["idPlus"]["fullName"].stringValue,
-                                             town: jsonOrganization["idPlus"]["town"].stringValue,
-                                             nickname: jsonOrganization["idPlus"]["nickName"].stringValue)
+                let idPlus = OrganizationIdPlus(fullName: jsonOrganization["idPlus"]["fullName"].stringValue,
+                                                town: jsonOrganization["idPlus"]["town"].stringValue,
+                                                nickname: jsonOrganization["idPlus"]["nickName"].stringValue)
                 ifDebugPrint("Adding organization \(idPlus.fullName), \(idPlus.town), aka \(idPlus.nickname)")
                 let jsonCoordinates = jsonOrganization["coordinates"]
                 let coordinates = CLLocationCoordinate2D(latitude: jsonCoordinates["latitude"].doubleValue,

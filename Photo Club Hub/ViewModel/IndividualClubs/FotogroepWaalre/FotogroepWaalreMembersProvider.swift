@@ -10,9 +10,9 @@ import RegexBuilder // for Regex struct
 
 class FotogroepWaalreMembersProvider { // WWDC21 Earthquakes also uses a Class here
 
-    static let photoClubWaalreIdPlus = PhotoClubIdPlus(fullName: "Fotogroep Waalre",
-                                                       town: "Waalre",
-                                                       nickname: "FG Waalre")
+    static let photoClubWaalreIdPlus = OrganizationIdPlus(fullName: "Fotogroep Waalre",
+                                                          town: "Waalre",
+                                                          nickname: "FG Waalre")
 
     init(bgContext: NSManagedObjectContext) {
         // following is asynchronous, but not documented as such using async/await

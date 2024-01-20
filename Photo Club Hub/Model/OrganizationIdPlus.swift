@@ -1,5 +1,5 @@
 //
-//  PhotoClubID.swift
+//  OrganizationIdPlus.swift
 //  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 10/01/2023.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct PhotoClubIdPlus { // PhotoClubID plus non-identifying nickname
+struct OrganizationIdPlus { // PhotoClubID plus non-identifying nickname
     var id: PhotoClubId
     var nickname: String
 

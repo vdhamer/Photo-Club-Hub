@@ -12,9 +12,9 @@ import MapKit // for CLLocationCoordinate2D
 extension FotogroepDeGenderMembersProvider { // fill with some initial hard-coded content
 
     private static let deGenderURL = URL(string: "https://www.fcdegender.nl")
-    private static let fotogroepDeGenderIdPlus = PhotoClubIdPlus(fullName: "Fotogroep de Gender",
-                                                                 town: "Eindhoven",
-                                                                 nickname: "FG deGender")
+    private static let fotogroepDeGenderIdPlus = OrganizationIdPlus(fullName: "Fotogroep de Gender",
+                                                                    town: "Eindhoven",
+                                                                    nickname: "FG deGender")
 
     func insertSomeHardcodedMemberData(bgContext: NSManagedObjectContext) {
         bgContext.perform {

@@ -77,7 +77,7 @@ extension FotogroepWaalreMembersProvider {
     fileprivate func loadPrivateMembersFromWebsite( backgroundContext: NSManagedObjectContext,
                                                     privateMemberURL: URL,
                                                     organization: Organization,
-                                                    photoClubIdPlus: PhotoClubIdPlus ) {
+                                                    photoClubIdPlus: OrganizationIdPlus ) {
 
         ifDebugPrint("\(organization.fullNameTown): starting loadPrivateMembersFromWebsite() in background")
 
@@ -132,7 +132,7 @@ extension FotogroepWaalreMembersProvider {
 
     fileprivate func parseHTMLContent(backgroundContext: NSManagedObjectContext,
                                       htmlContent: String,
-                                      photoClubIdPlus: PhotoClubIdPlus) {
+                                      photoClubIdPlus: OrganizationIdPlus) {
         var targetState: HTMLPageLoadingState = .tableStart        // initial entry point on loop of states
 
         var personName = PersonName(fullNameWithParenthesizedRole: "", givenName: "", infixName: "", familyName: "")

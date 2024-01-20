@@ -180,7 +180,7 @@ extension Organization {
 	// Update new or existing organization's attributes
     static func findCreateUpdate(context: NSManagedObjectContext, // can be foreground of background context
                                  organizationTypeEum: OrganizationTypeEnum,
-                                 photoClubIdPlus: PhotoClubIdPlus,
+                                 photoClubIdPlus: OrganizationIdPlus,
                                  website: URL? = nil,
                                  wikipedia: URL? = nil,
                                  fotobondNumber: Int16? = nil, kvkNumber: Int32? = nil,

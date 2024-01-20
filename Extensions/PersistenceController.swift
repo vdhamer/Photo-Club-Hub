@@ -61,9 +61,11 @@ struct PersistenceController {
             )
             let organization = Organization.findCreateUpdate(context: viewContext, // on main thread
                                                        organizationTypeEum: .club,
-                                                       photoClubIdPlus: PhotoClubIdPlus(fullName: "PhotoClub\(index)",
-                                                                                        town: "Town\(index)",
-                                                                                        nickname: "ClubNick\(index)"),
+                                                       photoClubIdPlus: OrganizationIdPlus(
+                                                            fullName: "PhotoClub\(index)",
+                                                            town: "Town\(index)",
+                                                            nickname: "ClubNick\(index)"
+                                                       ),
                                                        website: URL(string: "http://www.example.com/\(index)"),
                                                        fotobondNumber: Int16(index*1111),
                                                        kvkNumber: Int32(100+index),
