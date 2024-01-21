@@ -39,11 +39,27 @@ struct OrganizationView: View {
         ForEach(fetchedOrganizations, id: \.id) { filteredOrganization in
             Section {
                 VStack(alignment: .leading) {
-                    Text(verbatim: "\(filteredOrganization.fullName)")
-                        .font(UIDevice.isIPad ? .title : .title2)
-                        .tracking(1)
-                        .foregroundColor(.organizationColor)
-
+                    HStack {
+                        Text(verbatim: "\(filteredOrganization.fullName)")
+                            .font(UIDevice.isIPad ? .title : .title2)
+                            .tracking(1)
+                            .lineLimit(3)
+                            .truncationMode(.tail)
+                            .foregroundColor(.organizationColor)
+                        Spacer()
+                        if let wikipedia: URL = filteredOrganization.wikipedia {
+                            Link(destination: wikipedia, label: {
+                                Image("Wikipedia", label: Text(verbatim: "Wikipedia"))
+                                    .resizable()
+                                    .aspectRatio(1.0, contentMode: .fit)
+                                    .frame(width: 40, height: 40)
+                                    .padding(.trailing, 5)
+                            })
+                            .buttonStyle(.plain) // to avoid entire List element to be clickable
+                        }
+                    }
+                        .fixedSize(horizontal: false, vertical: true)
+                        .frame(maxHeight: 100)
                     HStack(alignment: .center, spacing: 0) {
                         Image(systemName: systemName(organizationType: filteredOrganization.organizationType,
                                                      circleNeeded: true)
@@ -66,16 +82,6 @@ struct OrganizationView: View {
                             if let website: URL = filteredOrganization.website {
                                 Link(destination: website, label: {
                                     Text(website.absoluteString)
-                                        .lineLimit(1)
-                                        .truncationMode(.middle)
-                                        .font(.subheadline)
-                                        .foregroundColor(.linkColor)
-                                })
-                                .buttonStyle(.plain) // to avoid entire List element to be clickable
-                            }
-                            if let wikipedia: URL = filteredOrganization.wikipedia {
-                                Link(destination: wikipedia, label: {
-                                    Text(wikipedia.absoluteString)
                                         .lineLimit(1)
                                         .truncationMode(.middle)
                                         .font(.subheadline)

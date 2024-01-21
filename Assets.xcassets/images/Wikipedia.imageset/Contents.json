@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "W_in_circle.png",
+      "filename" : "wikipedia_purple_light.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -12,7 +12,7 @@
           "value" : "dark"
         }
       ],
-      "filename" : "W_in_circle 1.png",
+      "filename" : "wikipedia_purple_dark.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
