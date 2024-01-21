@@ -220,7 +220,7 @@ extension Organization {
 			return organization
 		} else { // have to create PhotoClub object because it doesn't exist yet
             // cannot use PhotoClub() initializer because we must use bgContext
-            let entity = NSEntityDescription.entity(forEntityName: "PhotoClub", in: context)!
+            let entity = NSEntityDescription.entity(forEntityName: "Organization", in: context)!
             let organization = Organization(entity: entity, insertInto: context) // create new Club or Museum
             organization.fullName = idPlus.fullName // first part of ID
             organization.town = idPlus.town // second part of ID
