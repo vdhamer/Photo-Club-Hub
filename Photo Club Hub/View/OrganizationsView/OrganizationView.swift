@@ -59,7 +59,6 @@ struct OrganizationView: View {
                         }
                     }
                         .fixedSize(horizontal: false, vertical: true)
-                        .frame(maxHeight: 100)
                     HStack(alignment: .center, spacing: 0) {
                         Image(systemName: systemName(organizationType: filteredOrganization.organizationType,
                                                      circleNeeded: true)
