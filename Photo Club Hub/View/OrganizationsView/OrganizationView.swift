@@ -74,7 +74,7 @@ struct OrganizationView: View {
                                  "\(filteredOrganization.localizedTown), \(filteredOrganization.localizedCountry)" :
                                  "\(filteredOrganization.localizedCountry) ,\(filteredOrganization.localizedTown)")
                             .font(.subheadline)
-                            if filteredOrganization.members.count > 0 { // hide for musea and clubs with no member data
+                            if filteredOrganization.members.count > 0 { // hide for museums and clubs without members
                                 Text("\(filteredOrganization.members.count) members (inc. ex-members)",
                                      comment: "<count> members (including all types of members) within photo club")
                                 .font(.subheadline)

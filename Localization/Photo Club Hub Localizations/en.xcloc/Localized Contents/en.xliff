@@ -42,10 +42,10 @@
         <target>%lld photographers</target>
         <note>Header of section of Who's Who screen</note>
       </trans-unit>
-      <trans-unit id="Amsterdam has two photography musea." xml:space="preserve">
-        <source>Amsterdam has two photography musea.</source>
-        <target>Amsterdam has two photography musea.</target>
-        <note>Caption of Musea image on Readme page</note>
+      <trans-unit id="Amsterdam has two photography museums." xml:space="preserve">
+        <source>Amsterdam has two photography museums.</source>
+        <target>Amsterdam has two photography museums.</target>
+        <note>Caption of Museums image on Readme page</note>
       </trans-unit>
       <trans-unit id="App version %@ (build %@)" xml:space="preserve">
         <source>App version %@ (build %@)</source>
@@ -65,7 +65,7 @@
       <trans-unit id="Clubs" xml:space="preserve">
         <source>Clubs</source>
         <target>Clubs</target>
-        <note>Title of page with maps of clubs and musea</note>
+        <note>Title of page with maps of clubs and museums</note>
       </trans-unit>
       <trans-unit id="Concept" xml:space="preserve">
         <source>The concept</source>
@@ -137,67 +137,67 @@ Try dragging down the Photo Clubs screen to reload the default clubs.</target>
       <trans-unit id="Paragraph_1.1" xml:space="preserve">
         <source>This app showcases selected photos by members of photo clubs. Former members can also be included.</source>
         <target>This app showcases selected photos by members of photo clubs. Former members can also be included.</target>
-        <note>First paragraph in Waalre section of Readme page</note>
+        <note>First paragraph in The App section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_1.2" xml:space="preserve">
         <source>It does this in a _consistent_ way across all participating photographers and clubs. For the app's users, this consistency avoids having to find each club's website and discovering how to use it to locate and browse the images.</source>
         <target>It does this in a _consistent_ way across all participating photographers and clubs. For the app's users, this consistency avoids having to find each club's website and discovering how to use it to locate and browse the images.</target>
-        <note>Second paragraph in Waalre section of Readme page</note>
+        <note>Second paragraph in The App section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_1.3" xml:space="preserve">
         <source>The app does _not_ try to replace either club or photographer web sites. It also doesn't try to replace social media presence. The app's focus is to present the images in a consistent, easy to access way with minimal distractions. The app can help find extra information via links to club and photographer web sites.</source>
         <target>The app does _not_ try to replace either club or photographer web sites. It also doesn't try to replace social media presence. The app's focus is to present the images in a consistent, easy to access way with minimal distractions. The app can help find extra information via links to club and photographer web sites.</target>
-        <note>Third paragraph in Waalre section of Readme page</note>
+        <note>Third paragraph in The App section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_1.4" xml:space="preserve">
         <source>The app was originally named _Photo Club Waalre_ after a 15-person photo club in the Netherlands. The word __hub__ in the newer name stresses the app's support for _multiple_ photo clubs, and the app's ambition to strengthen the ties between clubs by making their work easier to access.</source>
         <target>The app was originally named _Photo Club Waalre_ after a 15-person photo club in the Netherlands. The word __hub__ in the newer name stresses the app's support for _multiple_ photo clubs, and the app's ambition to strengthen the ties between clubs by making their work easier to access.</target>
-        <note>Fourth paragraph in Waalre section of Readme page</note>
+        <note>Fourth paragraph in The App section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_1.5" xml:space="preserve">
-        <source>Support for multiple photo clubs requires the ability to display a list of clubs, their members and the selected photos per member.</source>
-        <target>Support for multiple photo clubs requires the ability to display a list of clubs, their members and the selected photos per member.</target>
-        <note>Fifth paragraph in Waalre section of Readme page</note>
+        <source>Support for multiple photo clubs requires the ability to display a list of clubs, their members, and the selected photos per member.</source>
+        <target>Support for multiple photo clubs requires the ability to display a list of clubs, their members, and the selected photos per member.</target>
+        <note>Fifth paragraph in The App section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_1.6" xml:space="preserve">
         <source>Supporting many clubs also implies that individual clubs should be able to maintain their own data. This means the ability to provide and maintain the images, but also the club's membership list. Central support should be limited to maintaining the app. The app's [GitHub site](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) explains the strategy for allowing clubs to maintain their data without requiring any real software expertise.</source>
         <target>Supporting many clubs also implies that individual clubs should be able to maintain their own data. This means the ability to provide and maintain the images, but also the club's membership list. Central support should be limited to maintaining the app. The app's [GitHub site](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) explains the strategy for allowing clubs to maintain their data without requiring any real software expertise.</target>
-        <note>Sixth paragraph in Waalre section of Readme page</note>
+        <note>Sixth paragraph in The App section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_2.1" xml:space="preserve">
         <source>Photo clubs play a central role in this app. The Portfolios screen shows a list of photo clubs.</source>
         <target>Photo clubs play a central role in this app. The Portfolios screen shows a list of photo clubs.</target>
-        <note>First paragraph in The App on Readme page</note>
+        <note>First paragraph in The Concept on Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_2.2" xml:space="preserve">
         <source>Each photo club, in turn, contains a series of member ***portfolios*** containing the actual images.</source>
         <target>Each photo club, in turn, contains a series of member ***portfolios*** containing the actual images.</target>
-        <note>Second paragraph in The App on Readme page</note>
+        <note>Second paragraph in The Concept on Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_2.3" xml:space="preserve">
         <source>Each portfolio thus covers the subset of the photographer's work _that is associated with that photo club_. Some photographers may have multiple portfolios in the app if the photographer is (or was at some point) associated with more than one photo club.</source>
         <target>Each portfolio thus covers the subset of the photographer's work _that is associated with that photo club_. Some photographers may have multiple portfolios in the app if the photographer is (or was at some point) associated with more than one photo club.</target>
-        <note>Third paragraph in The App on Readme page</note>
+        <note>Third paragraph in The Concept on Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_2.4" xml:space="preserve">
         <source>Each portfolio is shown in chronological order, with the latest work shown first, and often spans multiple years. Just like painters, styles may change on that time scale.</source>
         <target>Each portfolio is shown in chronological order, with the latest work shown first, and often spans multiple years. Just like painters, styles may change on that time scale.</target>
-        <note>Fourth paragraph in The App on Readme page</note>
+        <note>Fourth paragraph in The Concept on Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_2.5" xml:space="preserve">
         <source>We try to show the portfolios with **minimal distraction**. Web sites are often less optimal for this because they need to show browser controls (e.g., an address bar or tabs) and serve multiple purposes (e.g., show club news or contact information).</source>
         <target>We try to show the portfolios with **minimal distraction**. Web sites are often less optimal for this because they need to show browser controls (e.g., an address bar or tabs) and serve multiple purposes (e.g., show club news or contact information).</target>
-        <note>Fifth paragraph in The App on Readme page</note>
+        <note>Fifth paragraph in The Concept on Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_2.6" xml:space="preserve">
         <source>For Photo Club Waalre, for example, we chose to also include the work of former club members. By default, former members are not visible, but you can enable displaying them in the Preferences screen.</source>
         <target>For Photo Club Waalre, for example, we chose to also include the work of former club members. By default, former members are not visible, but you can enable displaying them in the Preferences screen.</target>
-        <note>Sixth paragraph in the App on Readme page</note>
+        <note>Sixth paragraph in The Concept on Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_2.7" xml:space="preserve">
         <source>Contact us (e.g. via Github, Facebook or LinkedIn) if you are interested in adding support for your photo club.</source>
         <target>Contact us (e.g. via Github, Facebook or LinkedIn) if you are interested in adding support for your photo club.</target>
-        <note>Seventh paragraph in the App on Readme page</note>
+        <note>Seventh paragraph in The Concept on Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.1" xml:space="preserve">
         <source>__Web sites__
@@ -221,10 +221,10 @@ On the _Portfolio_ page, you can swipe to delete a member from the list. Don't w
         <note>Third paragraph in The Features section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.4" xml:space="preserve">
-        <source>__Musea__
-The app also contains the names and locations of a few dozen photo musea. These show up on the maps on the Clubs screen if you zoom out enough.</source>
-        <target>__Musea__
-The app also contains the names and locations of a few dozen photo musea. These show up on the maps on the Clubs screen if you zoom out enough.</target>
+        <source>__Museums__
+The app also contains the names and locations of a few dozen photo museums. These show up on the maps on the Clubs screen if you zoom out enough.</source>
+        <target>__Museums__
+The app also contains the names and locations of a few dozen photo museums. These show up on the maps on the Clubs screen if you zoom out enough.</target>
         <note>Fourth paragraph in The Features section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.5" xml:space="preserve">
@@ -265,8 +265,8 @@ By clicking on the above button you can (anonymously) vote for improvements you 
         <note>Third paragraph SupportedPlatforms section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_5.4" xml:space="preserve">
-        <source>The drawback, however, is the lack of Android support (for now). This is  because the Android world has its own set of software technologies and tends to have more internal diversity. Apps that choose to support multiple platforms require more effort or require more technical compromises.</source>
-        <target>The drawback, however, is the lack of Android support (for now). This is  because the Android world has its own set of software technologies and tends to have more internal diversity. Apps that choose to support multiple platforms require more effort or require more technical compromises.</target>
+        <source>The drawback, however, is the lack of Android support (for now). This is because the Android world has its own set of software technologies and tends to have more internal diversity. Apps that choose to support multiple platforms require more effort or require more technical compromises.</source>
+        <target>The drawback, however, is the lack of Android support (for now). This is because the Android world has its own set of software technologies and tends to have more internal diversity. Apps that choose to support multiple platforms require more effort or require more technical compromises.</target>
         <note>Fourth paragraph SupportedPlatforms section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_5.5" xml:space="preserve">
@@ -305,8 +305,8 @@ By clicking on the above button you can (anonymously) vote for improvements you 
         <note>Fifth paragraph Developers section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_6.6" xml:space="preserve">
-        <source>Software developers or other volunteers who are interested to help out can contact us via GitHub, Facebook PM or LinkedIn.</source>
-        <target>Software developers or other volunteers who are interested to help out can contact us via GitHub, Facebook PM or LinkedIn.</target>
+        <source>Software developers or other volunteers who are interested to help can contact us via GitHub, Facebook PM or LinkedIn.</source>
+        <target>Software developers or other volunteers who are interested to help can contact us via GitHub, Facebook PM or LinkedIn.</target>
         <note>Sixth paragraph Developers section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_7.1" xml:space="preserve">
@@ -533,10 +533,10 @@ Default status of member within a club. Used in concatenations.</note>
         <target>members</target>
         <note>Statistics at end of section of FilteredMemberPortfoliosView</note>
       </trans-unit>
-      <trans-unit id="musea" xml:space="preserve">
-        <source>musea</source>
-        <target>musea</target>
-        <note>Mode for the Clubs page: show musea as sections.</note>
+      <trans-unit id="museums" xml:space="preserve">
+        <source>museums</source>
+        <target>museums</target>
+        <note>Mode for the Clubs page: show museums as sections.</note>
       </trans-unit>
       <trans-unit id="of1" xml:space="preserve">
         <source>of</source>

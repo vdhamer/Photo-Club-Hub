@@ -35,7 +35,7 @@
 "Clubs" = "Clubs";
 
 /* Section title on Readme page */
-"Concept" = "The Concept";
+"Concept" = "The concept";
 
 /* Section footer text Portfolios screen */
 "Data source: %@://%@%@/" = "Data source: %@://%@%@/";
@@ -101,43 +101,43 @@ Default status of member within a club. Used in concatenations. */
 /* Section title on Readme page. */
 "Open Source" = "Developers";
 
-/* First paragraph in The App section of Readme page */
+/* First paragraph in The-app section of Readme page */
 "Paragraph_1.1" = "This app showcases selected photos by members of photo clubs. Former members can also be included.";
 
-/* Second paragraph in The App section of Readme page */
+/* Second paragraph in The-app section of Readme page */
 "Paragraph_1.2" = "It does this in a _consistent_ way across all participating photographers and clubs. For the app's users, this consistency avoids having to find each club's website and discovering how to use it to locate and browse the images.";
 
-/* Third paragraph in The App section of Readme page */
+/* Third paragraph in The-app section of Readme page */
 "Paragraph_1.3" = "The app does _not_ try to replace either club or photographer web sites. It also doesn't try to replace social media presence. The app's focus is to present the images in a consistent, easy to access way with minimal distractions. The app can help find extra information via links to club and photographer web sites.";
 
-/* Fourth paragraph in The App section of Readme page */
+/* Fourth paragraph in The-app section of Readme page */
 "Paragraph_1.4" = "The app was originally named _Photo Club Waalre_ after a 15-person photo club in the Netherlands. The word __hub__ in the newer name stresses the app's support for _multiple_ photo clubs, and the app's ambition to strengthen the ties between clubs by making their work easier to access.";
 
-/* Fifth paragraph in The App section of Readme page */
-"Paragraph_1.5" = "Support for multiple photo clubs requires the ability to display a list of clubs, their members, and the selected photos per member.";
+/* Fifth paragraph in The-app section of Readme page */
+"Paragraph_1.5" = "Support for multiple photo clubs requires the ability to display a list of clubs, their members and the selected photos per member.";
 
-/* Sixth paragraph in The App section of Readme page */
+/* Sixth paragraph in The-app section of Readme page */
 "Paragraph_1.6" = "Supporting many clubs also implies that individual clubs should be able to maintain their own data. This means the ability to provide and maintain the images, but also the club's membership list. Central support should be limited to maintaining the app. The app's [GitHub site](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) explains the strategy for allowing clubs to maintain their data without requiring any real software expertise.";
 
-/* First paragraph in The Concept on Readme page */
+/* First paragraph in The-App on Readme page */
 "Paragraph_2.1" = "Photo clubs play a central role in this app. The Portfolios screen shows a list of photo clubs.";
 
-/* Second paragraph in The Concept on Readme page */
+/* Second paragraph in The App on Readme page */
 "Paragraph_2.2" = "Each photo club, in turn, contains a series of member ***portfolios*** containing the actual images.";
 
-/* Third paragraph in The Concept on Readme page */
+/* Third paragraph in The App on Readme page */
 "Paragraph_2.3" = "Each portfolio thus covers the subset of the photographer's work _that is associated with that photo club_. Some photographers may have multiple portfolios in the app if the photographer is (or was at some point) associated with more than one photo club.";
 
-/* Fourth paragraph in The Concept on Readme page */
+/* Fourth paragraph in The App on Readme page */
 "Paragraph_2.4" = "Each portfolio is shown in chronological order, with the latest work shown first, and often spans multiple years. Just like painters, styles may change on that time scale.";
 
-/* Fifth paragraph in The Concept on Readme page */
+/* Fifth paragraph in The App on Readme page */
 "Paragraph_2.5" = "We try to show the portfolios with **minimal distraction**. Web sites are often less optimal for this because they need to show browser controls (e.g., an address bar or tabs) and serve multiple purposes (e.g., show club news or contact information).";
 
-/* Sixth paragraph in The Concept on Readme page */
+/* Sixth paragraph in the App on Readme page */
 "Paragraph_2.6" = "For Photo Club Waalre, for example, we chose to also include the work of former club members. By default, former members are not visible, but you can enable displaying them in the Preferences screen.";
 
-/* Seventh paragraph in The Concept on Readme page */
+/* Seventh paragraph in the App on Readme page */
 "Paragraph_2.7" = "Contact us (e.g. via Github, Facebook or LinkedIn) if you are interested in adding support for your photo club.";
 
 /* First paragraph in The Features section of Readme page */
@@ -174,7 +174,7 @@ Default status of member within a club. Used in concatenations. */
 "Paragraph_5.3" = "The benefit of an iOS focus is that it allows the app's developers to focus on functionality rather than cross-platform compatibility.";
 
 /* Fourth paragraph SupportedPlatforms section of Readme page */
-"Paragraph_5.4" = "The drawback, however, is the lack of Android support (for now). This is because the Android world has its own set of software technologies and tends to have more internal diversity. Apps that choose to support multiple platforms require more effort or require more technical compromises.";
+"Paragraph_5.4" = "The drawback, however, is the lack of Android support (for now). This is  because the Android world has its own set of software technologies and tends to have more internal diversity. Apps that choose to support multiple platforms require more effort or require more technical compromises.";
 
 /* Fifth paragraph SupportedPlatforms section of Readme page */
 "Paragraph_5.5" = "To put this into perspective, the top-6 software \"platforms\" are (largest first): web, Android, Windows, iOS, iPadOS, and MacOS. Only the very largest apps (like Word, Twitter, Minecraft, Chrome) cover the full range. Other famous apps cover only half: Photoshop (Windows, MacOS, iPadOS), WhatsApp (iPhone, Android, web - kind of), Pokémon Go (Android, iOS, iPadOS - kind of).";
@@ -198,7 +198,7 @@ Default status of member within a club. Used in concatenations. */
 "Paragraph_6.5" = "For Photo Club Waalre, an early prototype of this approach to loading data is already in use. The fact that the club exists is stored in a central (JSON) file. That file points to a membership list that is read from a HTML table on the club’s [website](https://www.FotogroepWaalre.nl). The portfolios are read from XML files generated by an Adobe Lightroom plug-in called [JuiceBox-Pro](https://www.juicebox.net/tour/). This plug-in allows the club to manage the portfolios per member using Lightroom (as a Lightroom \"collection\"). These collections can then be uploaded (ftp'ed) to the webserver via the Lightroom _Upload_ button. The uploaded information can then be downloaded from the web site when it is needed.";
 
 /* Sixth paragraph Developers section of Readme page */
-"Paragraph_6.6" = "Software developers or other volunteers who are interested to help can contact us via GitHub, Facebook PM or LinkedIn.";
+"Paragraph_6.6" = "Software developers or other volunteers who are interested to help out can contact us via GitHub, Facebook PM or LinkedIn.";
 
 /* First paragraph Model section of Readme page */
 "Paragraph_7.1" = "As an intro for developers, here is an informal tour of the ***model***. The model is a [schema](https://en.wikipedia.org/wiki/Database_schema) or information model in the database sense, or “Model“ in the sense of the [Model-View-ViewModel](https://www.hackingwithswift.com/books/ios-swiftui/introducing-mvvm-into-your-swiftui-project) design pattern. The app uses a Swift-style MVVM design, meaning model data is stored in structs rather than in classes.";

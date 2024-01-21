@@ -16,8 +16,8 @@
 /* Administrative role of member within a club. Used as part of concatenations. */
 "admin" = "admin";
 
-/* Caption of Musea image on Readme page */
-"Amsterdam has two photography musea." = "Fotomusea aan de Keizersgracht in Amsterdam.";
+/* Caption of Museums image on Readme page */
+"Amsterdam has two photography museums." = "Fotomusea aan de Keizersgracht in Amsterdam.";
 
 /* To generate strings like "secretary and admin" */
 "and" = "en";
@@ -37,7 +37,7 @@
 /* Mode for the Clubs page: show photo clubs as sections. */
 "clubs" = "clubs";
 
-/* Title of page with maps of clubs and musea */
+/* Title of page with maps of clubs and museums */
 "Clubs" = "Clubs";
 
 /* Section title on Readme page */
@@ -89,8 +89,8 @@ Default status of member within a club. Used in concatenations. */
 /* Statistics at end of section of FilteredMemberPortfoliosView */
 "members" = "leden";
 
-/* Mode for the Clubs page: show musea as sections. */
-"musea" = "musea";
+/* Mode for the Clubs page: show museums as sections. */
+"museums" = "musea";
 
 /* Shown below map if there is no usable description in the OrganzationList.json file. */
 "No description available." = "Er is geen omschrijving beschikbaar.";
@@ -110,44 +110,44 @@ Default status of member within a club. Used in concatenations. */
 /* Section title on Readme page. */
 "Open Source" = "Ontwikkelaars gezocht";
 
-/* First paragraph in Waalre section of Readme page */
+/* First paragraph in The App section of Readme page */
 "Paragraph_1.1" = "Deze app dient om foto's gemaakt door leden van fotoclubs te delen met een breed publiek.";
 
-/* Second paragraph in Waalre section of Readme page */
+/* Second paragraph in The App section of Readme page */
 "Paragraph_1.2" = "De app presenteert op een consistente wijze het werk van alle clubleden van de ondersteunde fotoclubs. Als gebruiker hoef je nu niet meer zelf de website van de club te zoeken. En je hoeft ook niet voor ieder club te ontdekken hoe die specifieke website werkt.  ";
 
-/* Third paragraph in Waalre section of Readme page */
+/* Third paragraph in The App section of Readme page */
 "Paragraph_1.3" = " De app is vooral bedoeld om de foto’s tot hun recht te laten komen. Voor andere clubinformatie (zoals mededelingen of vergaderschema's) wordt de gebruiker naar de websites doorgelinkt. De app probeert dus nadrukkelijk _niet_ om de websites of social media aanwezigheid van clubs te vervangen. Het is daar complementair aan.";
 
-/* Fourth paragraph in Waalre section of Readme page */
+/* Fourth paragraph in The App section of Readme page */
 "Paragraph_1.4" = "Oorspronkelijk heette deze app _Fotogroep Waalre_, naar de fotoclub in de buurt van Eindhoven. Het woord __hub__ (ofwel 'trefplaats') in de nieuwe naam benadrukt dat de app inmiddels meerdere fotoclubs tegelijk kan ondersteunen. En het benadrukt de ambitie om de banden tussen fotoclubs, fotografen en hun publiek te versterken.";
 
-/* Fifth paragraph in Waalre section of Readme page */
+/* Fifth paragraph in The App section of Readme page */
 "Paragraph_1.5" = "Het ondersteunen van fotoclubs gebeurt deels door de foto's te presenteren per club.";
 
-/* Sixth paragraph in Waalre section of Readme page */
+/* Sixth paragraph in The App section of Readme page */
 "Paragraph_1.6" = "Voor toepasbaarheid op grotere schaal moet het echter ook voor de clubs eenvoudig zijn om hun eigen ledeninformatie en hun eigen lijsten met geselecteerde foto's in de app zelf in te voeren en te onderhouden. Deze aanpak is in meer detail te vinden op de [GitHub site](https://GitHub.com/vdhamer/Photo-Club-Hub#readme).";
 
-/* First paragraph in The App on Readme page */
+/* First paragraph in The Concept on Readme page */
 "Paragraph_2.1" = "Het doel van deze app is om geselecteerd werk te tonen van clubleden van fotoclubs. Fotoclubs spelen dus hierbij een centrale rol.";
 
-/* Second paragraph in The App on Readme page */
+/* Second paragraph in The Concept on Readme page */
 "Paragraph_2.2" = "Men vindt  de ***fotoclubs*** op het hoogste niveau in het Porfolio's scherm. Binnen een fotoclub treft men de ***portfolio's*** aan van de clubleden. Een portfolio bevat vervolgens de ***foto's*** van dat lid - althans die foto's die betrekking hebben op die fotoclub.";
 
-/* Third paragraph in The App on Readme page */
+/* Third paragraph in The Concept on Readme page */
 "Paragraph_2.3" = "Een fotograaf kan eventueel meerdere portfolios hebben door lid te zijn (of geweest te zijn) van meerdere fotoclubs. Een portfolio bevat dus alleen werk van een fotograaf dat besproken of geëxposeerd is bij één fotoclub. Een foto kan overigens in meerdere portfolios van de fotograaf voorkomen.";
 
-/* Fourth paragraph in The App on Readme page */
+/* Fourth paragraph in The Concept on Readme page */
 "Paragraph_2.4" = "De beelden in een portfolio staan gerangschikt van nieuw naar oud. Een portfolio bestrijkt namelijk vaak een periode van vele jaren, en in die periode kan de stijl van een fotograaf veranderen.";
 
-/* Fifth paragraph in The App on Readme page */
+/* Fifth paragraph in The Concept on Readme page */
 "Paragraph_2.5" = "Net als bij een tentoonstelling is het belangrijk om een portfolio _zonder afleiding_ te kunnen bekijken. Webpagina's zijn hiervoor vaak iets te druk vanwege bedieningselementen zoals de adresbalk of tabbladen, maar ook omdat een clubwebsite vaak meerdere doeleinden dient (bijvoorbeeld het verspreiden van clubnieuws).";
 
-/* Sixth paragraph in the App on Readme page */
+/* Sixth paragraph in The Concept on Readme page */
 "Paragraph_2.6" = "De app kan, indien een club daarvoor kiest, ook de portfolio's van *voormalige* clubleden tonen. De gebruiker kan zelf kiezen of beschikbare portfolio's van ex-leden zichtbaar zijn (via Instellingen).";
 
-/* Seventh paragraph in the App on Readme page */
-"Paragraph_2.7" = "Clubs met belangstelling om deel te nemen kunnen contact opnemen via Github, Facebook of LinkedIn.";
+/* Seventh paragraph in The Concept on Readme page */
+"Paragraph_2.7" = "Clubs met belangstelling om deel te nemen kunnen contact opnemen via GitHub, Facebook of LinkedIn.";
 
 /* First paragraph in The Features section of Readme page */
 "Paragraph_3.1" = "__Websites__\nHet hoofddoel van de app is om portfolio's van clubleden via een strakke presentatie tot hun recht te laten komen. Wij streven er dus _niet_ naar dat de app een website kan vervangen. Daarom verwijst de app de gebruiker via links door naar de clubwebsites.";

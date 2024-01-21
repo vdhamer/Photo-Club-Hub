@@ -135,8 +135,8 @@ struct ReadmeView: View {
                                     .scaledToFit()
                                     .frame(width: geo.size.width * 0.8, alignment: .center)
                                     .border(.gray, width: 1)
-                                Text("Amsterdam has two photography musea.",
-                                     comment: "Caption of Musea image on Readme page")
+                                Text("Amsterdam has two photography museums.",
+                                     comment: "Caption of Museums image on Readme page")
                                 .font(.callout.italic())
                                 .frame(width: geo.size.width, alignment: .center)
                                 Text("")

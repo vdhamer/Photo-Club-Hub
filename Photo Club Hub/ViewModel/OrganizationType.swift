@@ -151,10 +151,10 @@ enum OrganizationTypeEnum: String, CaseIterable {
             return String(localized: "clubs", // can't convert using unlocalizedSingular because of type isues
                           comment: "Mode for the Clubs page: show photo clubs as sections.")
         case .museum:
-            return String(localized: "musea", // "musea" because it is used in external interfaces
-                          comment: "Mode for the Clubs page: show musea as sections.")
+            return String(localized: "museums",
+                          comment: "Mode for the Clubs page: show museums as sections.")
         default:
-            return String(localized: "unknowns", // "musea" because it is used in external interfaces
+            return String(localized: "unknowns",
                           comment: "Organization type is not known. Used for debugging.")
         }
     }

@@ -96,7 +96,7 @@ class OrganizationList {
             ifDebugPrint("Found \(jsonOrganizationsOfOneType.count) \(organizationTypeEnum.unlocalizedPlural) " +
                          "in \(dataSourceFile).")
 
-            // extract the requested items (clubs, musea) of that organizationType one-by-one from the json file
+            // extract the requested items (clubs, museums) of that organizationType one-by-one from the json file
             for jsonOrganization in jsonOrganizationsOfOneType {
                 let idPlus = OrganizationIdPlus(fullName: jsonOrganization["idPlus"]["fullName"].stringValue,
                                                 town: jsonOrganization["idPlus"]["town"].stringValue,
