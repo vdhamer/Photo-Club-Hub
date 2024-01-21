@@ -27,7 +27,7 @@
         <ul>
             <li><a href="#opening-animation">Opening Animation</a></li>
             <li><a href="#multi-club-support">Multi-club Support</a></li>
-            <li><a href="#photo-musea-on-the-maps">Photo Musea</a></li>
+            <li><a href="#photo-museums-on-the-maps">Photo Museums</a></li>
             <li><a href="#roadmap">Roadmap</a></li>
             <li><a href="#data-privacy">Data Privacy</a></li>
                 <ul>
@@ -217,14 +217,14 @@ Usage of the various screens in the user interface:
   If available, club-independent information (like birthdays) for that photographer is displayed here.
   The `Search` bar filters on photographer names.
 
-- The `Clubs and Musea` screen lists all photo clubs that are known to the app.
+- The `Clubs and Museums` screen lists all photo clubs that are known to the app.
   Each entry predominantly contains a map showing where the club is located and optionally your current location.
   A button with a lock icon toggles whether the map is can be controlled interactively (scroll, zoom, rotate, 3D).
   By default, the maps are not interactive. This mode helps scroll through the list of clubs rather than scrolling within a map.
   A _purple_ pin on the map shows where the selected club is based (e.g., a school or municipal building).
   A _blue_ pin shows the location of any other photo club that happens to be in the displayed region.
-  The screen can also show any photo musea that happen to be in sight. These have different markers than the photo clubs.
-  The plan is that the screen can switch between listing all photo clubs and listing all photo musea.
+  The screen can also show any photo museums that happen to be in sight. These have different markers than the photo clubs.
+  The plan is that the screen can switch between listing all photo clubs and listing all photo museums.
   
 - The `Preferences` screen allows you to configure which types of portfolios you want to include in the
   Portfolios screen. You can, for example, choose whether to include former members.
@@ -290,16 +290,16 @@ This loads a little bit of additional data to demo the feature.
 
 <details><summary>
 
-### Photo Musea
+### Photo Museums
 
 </summary>
 
-The maps showing the location of photo clubs can also show the locations of selected photo musea.
+The maps showing the location of photo clubs can also show the locations of selected photo museums.
 A photo museum is not a photo club and is displayed on the maps using a dedicated marker.
-Techncially, the app doesn't allow musea to have "members" that share images with the museum.
+Techncially, the app doesn't allow museums to have "members" that share images with the museum.
 
-Consider the showing of musea a bonus that may interest some users.
-You are welcome to add a favorite photo musea via a Github Pull Request. It only requires extending a JSON file.
+Consider the showing of museums a bonus that may interest some users.
+You are welcome to add a favorite photo museum via a GitHub Pull Request. It only requires extending a JSON file.
 The file format is documented below under [How Data is Loaded / The New Approach](#how-data-is-loaded).
 
 </details>
@@ -311,7 +311,7 @@ The file format is documented below under [How Data is Loaded / The New Approach
 </summary>
 The phone numbers, e-mail addresses and ages of members of Fotogroep Waalre may not be public information.
 They are read by the app, but not actually shown or used at present. For good measure, the data is stored
-in encrypted form and decryted by the version of the app in the Apple App Store. The Github version
+in encrypted form and decryted by the version of the app in the Apple App Store. The GitHub version
 circumvents the encrypted data altogether, which - although a detail - turns out to be tricky to do reliably.
 
 <ul><details><summary>
@@ -342,7 +342,7 @@ The app might try to check a hash of the provided password.
 But a simple source code modification then gives access to the encrypted version of the web page.
 Actually, not quite 🤓. Bypassing the password via a code modification, would allow the app to
 fetch the encrypted data rather than the unencrypted dummy data. 
-But that data is still encrypted by a private encryption key that is not provided on Github.
+But that data is still encrypted by a private encryption key that is not provided on GitHub.
 
 </details></ul>
 </details>
@@ -361,7 +361,7 @@ But that data is still encrypted by a private encryption key that is not provide
 - [ ] MemberGaleryView: replace use of WebKit by SwiftUI equivalent
 - [ ] Migrate from CoreData to SwiftData (iOS 17+)
 
-See the [open issues](https://github.com/vdhamer/PhotoClubWaalre/issues) for a list of
+See the [open issues](https://GitHub.com/vdhamer/PhotoClubWaalre/issues) for a list of
 proposed enhancements and known limitations.
 
 </ul></detail>
@@ -385,8 +385,8 @@ If you just want to install the binary version of the app, just get it from Appl
 * Apple's [Core Data](https://developer.apple.com/documentation/coredata) framework for persistent storage ("database")
 * [Adobe Lightroom Classic](https://www.adobe.com/products/photoshop-lightroom.html) maintaining the portfolios (so far Fotogroep Waalre only)
 * a low cost [JuiceBox Pro](https://www.juicebox.net) JavaScript plugin for exporting from Adobe Lightroom (so far Fotogroep Waalre only)
-* the [GitCrypt](https://github.com/AGWA/git-crypt) framework for encrypting selected files in a Git repository
-* GitHub's [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON) package for accessing JSON content via paths (dictionaries that recursively contain dictionaries)
+* the [GitCrypt](https://GitHub.com/AGWA/git-crypt) framework for encrypting selected files in a Git repository
+* GitHub's [SwiftyJSON](https://GitHub.com/SwiftyJSON/SwiftyJSON) package for accessing JSON content via paths (dictionaries that recursively contain dictionaries)
 </details>
 
 <details><summary>
@@ -444,7 +444,7 @@ so that Core Data can track, for example, renamed struct types or renamed proper
 ## Contributing
 Bug fixes and new features are welcome.
 Before investing effort in designing, coding testing, and refining features, it is best to first describe
-the idea or functional change within a new or existing Github `Issue`.
+the idea or functional change within a new or existing GitHub `Issue`.
 That allows for some upfront discussion and prevents wasted effort due to overlapping initiatives.
 
 You can submit an `Issue` with a tag like ”enhancement" or “bug” without commiting to make the code changes yourself.
@@ -485,12 +485,12 @@ model's data automatically trigger the required updates to
 - the intermediate class-based `ViewModel` layer translates between the `Model` and `View` layers.
 
 Each of the layers has its own directory (found at the linked locations):
-- [Model](https://github.com/vdhamer/PhotoClubWaalre/tree/main/Fotogroep%20Waalre/Model) contains the data model.
+- [Model](https://GitHub.com/vdhamer/PhotoClubWaalre/tree/main/Fotogroep%20Waalre/Model) contains the data model.
   It contains the current version of the database model as well as older versions _as separate files_. 
   This form of versioning is un-Git-like and is still used to support install-time schema migration.
-- [View](https://github.com/vdhamer/PhotoClubWaalre/tree/main/Fotogroep%20Waalre/View) only
+- [View](https://GitHub.com/vdhamer/PhotoClubWaalre/tree/main/Fotogroep%20Waalre/View) only
   contains SwiftUI views, which are at the Swift level structs that adhere to SwiftUI's View `protocol`.
-- [ViewModel](https://github.com/vdhamer/PhotoClubWaalre/tree/main/Fotogroep%20Waalre/ViewModel) includes
+- [ViewModel](https://GitHub.com/vdhamer/PhotoClubWaalre/tree/main/Fotogroep%20Waalre/ViewModel) includes
   the code that populates and updates the database content ("model"). 
   This layer is currently implemented _per photo club_, and stored a subdirectory per club.
 
@@ -528,7 +528,7 @@ but because it usually works well enough, a user typically won't notice:
    iterates through the online membership list. This is simply because those names/records are
    _not_ on the online list anymore!
 4. in the case of Fotogoep Waalre, some member data is not yet available online in a machine-readable
-   form and is thus added programmatically instead. This is done in [this file](https://github.com/vdhamer/PhotoClubWaalre/blob/main/Fotogroep%20Waalre/ViewModel/FotogroepWaalre/FGWMembersProvider%2BinsertSomeHardcodedMemberData.swift).
+   form and is thus added programmatically instead. This is done in [this file](https://GitHub.com/vdhamer/PhotoClubWaalre/blob/main/Fotogroep%20Waalre/ViewModel/FotogroepWaalre/FGWMembersProvider%2BinsertSomeHardcodedMemberData.swift).
    This hardcoded data include the member's formal roles (e.g. chairman, treasurer).
 5. Photo club data is minimal (name, town/country, GPS, website), but is currently still hardcoded.
 
@@ -558,10 +558,10 @@ a `String` value such as "Unknown town" rather than an optional `String?` value.
 </summary>
 A `PhotoClub` is uniquely identified by its `name` *and* a `town`. Including the town helps when two towns happen to have a photo club with the same name.
 
-Since late 2023, photo musea are also supported (mainly to show them on the maps).
-These musea are stored in the same `PhotoClub` table, which will be renamed to `Organization`. 
-Photo clubs and musea have many common properites and can thus be seen as specializations of this base class `Organization`.
-The clubs and musea are distinguished by a reference to a seperate table called `OrganizationType`. 
+Since late 2023, photo museums are also supported (mainly to show them on the maps).
+These museums are stored in the same `PhotoClub` table, which will be renamed to `Organization`. 
+Photo clubs and museums have many common properites and can thus be seen as specializations of this base class `Organization`.
+The clubs and museums are distinguished by a reference to a seperate table called `OrganizationType`. 
 Currently `OrganizationType` (essentially an enum) has only two allowed values: club and museum.
 But, for example, photo festivals could also be added in the future.
 
@@ -637,7 +637,7 @@ for the club's website.
 
 In the case of Photo Club Waalre, the membership list is password protected in Wordpress and the app bypasses that password 
 using a long key and the Wordpress [Post Password Token](https://wordpress.org/plugins/post-password-plugin/) plugin. 
-The Github version uses a (redacted) copy of the membership list in order to show real data. Details about these details
+The GitHub version uses a (redacted) copy of the membership list in order to show real data. Details about these details
 can be found above.
     
 The __image lists__ or `portfolios` use a more robust and easier to maintain approach: 
@@ -673,7 +673,7 @@ The app loads a list of photo clubs from a fixed location (URL). Because the fil
 the list can be updated without requiring an app software update.
 The file is in a fixed JSON syntax and contains a list of supported photo clubs.
 
-As a bonus, the list can also contain information about photography musea. The properties of clubs and musea largely overlap,
+As a bonus, the list can also contain information about photography museums. The properties of clubs and museums largely overlap,
 but a photo club _can_ notably include the location (URL) of a MemberList.json data source while a museum _cannot_.
 
 Here is an example of the format of the OrganizationList. This minimal example contains one photo club and one photo museum:
@@ -726,7 +726,7 @@ Here is an example of the format of the OrganizationList. This minimal example c
 ```
 Note that:
 - All fields within `idPlus` and `coordinates` are required. All other fields can be omitted if the data is not available or not applicable.
-- `idPlus.town` and `idPlus.fullName` together serve to differentiate clubs or musea from others. Try to avoid changing these strings. 
+- `idPlus.town` and `idPlus.fullName` together serve to differentiate clubs or museums from others. Try to avoid changing these strings. 
 - `coordinates` is used to draw the club on the map and to [generate](http://www.vdhamer.com/reversegeocoding-for-localizing-towns-and-countries/) localized versions of town and country names. Latitudes are in the range [-90.0, +90.0] where negative `latitude` means south of the Equator. Longitude values are in the range [-180.0, +180.0] where negative `longitude` means west of Greenwich London.
 - The `memberList` field (for clubs only) allows the app to find the next level list with membership data. It is reserved for future use.
 - The `image` field contains a public domain image of the outside of the venue. It is reserved for future use.
@@ -897,27 +897,27 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Peter van den Hamer - vdhamer@gmail.com
 
-Project Link: [https://github.com/vdhamer/PhotoClubWaalre](https://github.com/vdhamer/PhotoClubWaalre)
+Project Link: [https://GitHub.com/vdhamer/PhotoClubWaalre](https://GitHub.com/vdhamer/PhotoClubWaalre)
 
 ### Acknowledgments
 
 * The opening Prelude screen uses a photo of colorful building by Greetje van Son.
-* One file with club member data is encrypted using [git-crypt](https://github.com/AGWA/git-crypt).
-* The interactive Roadmap screen uses the [AvdLee/Roadmap](https://github.com/AvdLee/Roadmap) package. The screen is currently disabled because the backend provider of Roadmap stopped supporting it.
-* The diagram with Core Data entities was generated using [Core Data Model Editor](https://github.com/Mini-Stef/Core-Data-Model-Editor) by Stéphane Millet.
-* JSON parsing uses the [SwiftyJSON/SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON) package.
+* One file with club member data is encrypted using [git-crypt](https://GitHub.com/AGWA/git-crypt).
+* The interactive Roadmap screen uses the [AvdLee/Roadmap](https://GitHub.com/AvdLee/Roadmap) package. The screen is currently disabled because the backend provider of Roadmap stopped supporting it.
+* The diagram with Core Data entities was generated using [Core Data Model Editor](https://GitHub.com/Mini-Stef/Core-Data-Model-Editor) by Stéphane Millet.
+* JSON parsing uses the [SwiftyJSON/SwiftyJSON](https://GitHub.com/SwiftyJSON/SwiftyJSON) package.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/vdhamer/PhotoClubWaalre.svg?style=for-the-badge
-[contributors-url]: https://github.com/vdhamer/PhotoClubWaalre/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/vdhamer/PhotoClubWaalre.svg?style=for-the-badge
-[forks-url]: https://github.com/vdhamer/PhotoClubWaalre/network/members
-[stars-shield]: https://img.shields.io/github/stars/vdhamer/PhotoClubWaalre.svg?style=for-the-badge
-[stars-url]: https://github.com/vdhamer/PhotoClubWaalre/stargazers
-[issues-shield]: https://img.shields.io/github/issues/vdhamer/PhotoClubWaalre.svg?style=for-the-badge
-[issues-url]: https://github.com/vdhamer/PhotoClubWaalre/issues
-[license-shield]: https://img.shields.io/github/license/vdhamer/PhotoClubWaalre.svg?style=for-the-badge
-[license-url]: https://github.com/vdhamer/PhotoClubWaalre/blob/main/.github/LICENSE.md
+[contributors-shield]: https://img.shields.io/GitHub/contributors/vdhamer/PhotoClubWaalre.svg?style=for-the-badge
+[contributors-url]: https://GitHub.com/vdhamer/PhotoClubWaalre/graphs/contributors
+[forks-shield]: https://img.shields.io/GitHub/forks/vdhamer/PhotoClubWaalre.svg?style=for-the-badge
+[forks-url]: https://GitHub.com/vdhamer/PhotoClubWaalre/network/members
+[stars-shield]: https://img.shields.io/GitHub/stars/vdhamer/PhotoClubWaalre.svg?style=for-the-badge
+[stars-url]: https://GitHub.com/vdhamer/PhotoClubWaalre/stargazers
+[issues-shield]: https://img.shields.io/GitHub/issues/vdhamer/PhotoClubWaalre.svg?style=for-the-badge
+[issues-url]: https://GitHub.com/vdhamer/PhotoClubWaalre/issues
+[license-shield]: https://img.shields.io/GitHub/license/vdhamer/PhotoClubWaalre.svg?style=for-the-badge
+[license-url]: https://GitHub.com/vdhamer/PhotoClubWaalre/blob/main/.GitHub/LICENSE.md

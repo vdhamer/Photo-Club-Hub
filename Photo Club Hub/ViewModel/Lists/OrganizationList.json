@@ -16,8 +16,7 @@
             "description": [
                 {
                     "language": "EN",
-                    "value": "Fotokring Beeldhoek has two meetups per month: one is for photo critiques, 
-                    the other about the technical side of photography."
+                    "value": "Fotokring Beeldhoek has two meetups per month: one is for photo critiques, the other about the technical side of photography."
                 },
                 {
                     "language": "NL",
@@ -374,7 +373,7 @@
                 {
                     "language": "NL",
                     "value": "In dit museum zijn scenes van het TV programma 'Het Perfecte Plaatje' opgenomen."
-                },
+                }
             ]
         },
 
