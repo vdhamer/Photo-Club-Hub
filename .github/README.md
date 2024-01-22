@@ -284,6 +284,7 @@ one red, one blue, and _two_ green pixels.
 </summary>
 Version 1 of the app only supported Photo Club Waalre (known as *Fotogroep Waalre* in Dutch).
 Version 2 added support for multiple photo clubs. This means:
+
 - all clubs in the system are technically handled in the same way (although some may have provided more data)
 - users can find all supported clubs on the provided maps
 - a photographer is shown associated with multiple clubs if applicable (e.g., former club, current club)
