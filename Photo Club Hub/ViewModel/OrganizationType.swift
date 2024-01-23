@@ -64,7 +64,7 @@ extension OrganizationType {
         }
 
         if let organizationType = organizationTypes.first { // already exists, so update non-identifying attributes
-            if update(context: context, organizationType: organizationType, dummy: "dummy string #2") {
+            if update(context: context, organizationType: organizationType) {
                 print("Updated info for organization type \"\(organizationType.name)\"")
                 save(context: context, organizationType: organizationType, create: false)
             }
@@ -74,7 +74,7 @@ extension OrganizationType {
             let entity = NSEntityDescription.entity(forEntityName: "OrganizationType", in: context)!
             let organizationType = OrganizationType(entity: entity, insertInto: context)
             organizationType.name = name
-            _ = update(context: context, organizationType: organizationType, dummy: "dummy string #1")
+            _ = update(context: context, organizationType: organizationType)
             save(context: context, organizationType: organizationType, create: true)
             print("\(organizationType.name): Created new OrganizationType called \"\(name)\"")
             return organizationType
@@ -83,25 +83,26 @@ extension OrganizationType {
 
     // Update non-identifying attributes/properties within existing instance of class OrganizationType
     static func update(context: NSManagedObjectContext,
-                       organizationType: OrganizationType, dummy dumby: String) -> Bool {
+                       organizationType: OrganizationType /*, dummy dumby: String*/) -> Bool {
 
-        var modified: Bool = false
+        let modified: Bool = false // change to var as soon as it is really used (let to suppress SwiftLint warning)
 
-        if organizationType.dummy != dumby {
-            organizationType.dummy = dumby // think I saw debugger mix up param and property, so changed the name
-            modified = true
-        }
+//        if organizationType.dummy != dumby {
+//            organizationType.dummy = dumby // think I saw debugger mix up param and property, so changed the name
+//            modified = true
+//        }
 
-        if modified {
-            do {
-                try context.save() // update modified properties of an OrganizationType object
-             } catch {
-                ifDebugFatalError("Update failed for OrganizationType \(organizationType.name)",
-                                  file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
-                // in release mode, if save() fails, just continue
-                return false
-            }
-        }
+//        if modified {
+//            do {
+//                try context.save() // update modified properties of an OrganizationType object
+//             } catch {
+//                ifDebugFatalError("Update failed for OrganizationType \(organizationType.name)",
+//                                  file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
+//                // in release mode, if save() fails, just continue
+//                return false
+//            }
+//        }
+
         return modified
     }
 
