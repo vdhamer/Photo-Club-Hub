@@ -283,9 +283,13 @@ one red, one blue, and _two_ green pixels.
 
 </summary>
 Version 1 of the app only supported Photo Club Waalre (known as *Fotogroep Waalre* in Dutch).
-Version 2 added support for multiple photo clubs.
-For a preview of how that works, drag down (“pull to refresh”) the Photo Clubs page.
-This loads a little bit of additional data to demo the feature.
+Version 2 added support for multiple photo clubs. This means:
+
+- all clubs in the system are technically handled in the same way (although some may have provided more data)
+- users can find all supported clubs on the provided maps
+- a photographer is shown associated with multiple clubs if applicable (e.g., former club, current club)
+- the app is stepwise being prepared for larger amounts of data (data is distributed over sites)
+- the app is starting to enable that clubs can manage their own data (data "within" a club is managed by the club)
 </details>
 
 <details><summary>
@@ -904,7 +908,7 @@ Project Link: [https://GitHub.com/vdhamer/PhotoClubWaalre](https://GitHub.com/vd
 * The opening Prelude screen uses a photo of colorful building by Greetje van Son.
 * One file with club member data is encrypted using [git-crypt](https://GitHub.com/AGWA/git-crypt).
 * The interactive Roadmap screen uses the [AvdLee/Roadmap](https://GitHub.com/AvdLee/Roadmap) package. The screen is currently disabled because the backend provider of Roadmap stopped supporting it.
-* The diagram with Core Data entities was generated using [Core Data Model Editor](https://GitHub.com/Mini-Stef/Core-Data-Model-Editor) by Stéphane Millet.
+* The diagram with Core Data entities was generated using the [Core Data Model Editor](https://GitHub.com/Mini-Stef/Core-Data-Model-Editor) tool by Stéphane Millet.
 * JSON parsing uses the [SwiftyJSON/SwiftyJSON](https://GitHub.com/SwiftyJSON/SwiftyJSON) package.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
