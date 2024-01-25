@@ -710,6 +710,10 @@
                 {
                     "language": "EN",
                     "value": "The museum is named after the Japanese photographer Ken Domon who was born in Sakata, Japan."
+                },
+                {
+                    "language": "NL",
+                    "value": "Het museum draagt de naam van de Japanese fotograaf Ken Domon, die in Sakata, Japan geboren is."
                 }
             ]
         },
@@ -726,7 +730,17 @@
             },
             "website": "https://acp.org.au/",
             "wikipedia": "https://en.wikipedia.org/wiki/Australian_Centre_for_Photography",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Australian_Centre_For_Photography.jpg"
+            "image": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Australian_Centre_For_Photography.jpg",
+            description": [
+                {
+                    "language": "EN",
+                    "value": "Following financial difficulties in 2020, the museum is now part of Powerhouse, the largest museum group in Australia."
+                },
+                {
+                    "language": "NL",
+                    "value": "Na financiële problemen in 2020, is het ACP inmiddels als Powerhouse Photography opgenomen in een Australische Powerhouse museumcollectief."
+                }
+            ]
         },
 
         {
