@@ -9,8 +9,7 @@
 /* Begin PBXBuildFile section */
 		D006BA7E2B115FB1002E555B /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D006BA7D2B115FB1002E555B /* LocationManager.swift */; };
 		D008D2AA28739167007A7BE2 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = D008D2A928739167007A7BE2 /* .gitignore */; };
-		D01793F32B63FF6300095E8C /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D01793F22B63FF6300095E8C /* SwiftyJSON */; };
-		D01793F62B64001800095E8C /* Roadmap in Frameworks */ = {isa = PBXBuildFile; productRef = D01793F52B64001800095E8C /* Roadmap */; };
+		D01793FE2B6404ED00095E8C /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01793FD2B6404ED00095E8C /* SwiftyJSON.swift */; };
 		D01D2B6227D3BBDC00E2FE41 /* View+Navigate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01D2B6127D3BBDC00E2FE41 /* View+Navigate.swift */; };
 		D024F11628423BE60055021B /* Sounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = D024F11528423BE60055021B /* Sounds.swift */; };
 		D0275F5527E3E21F002FA4FE /* View+OnTapGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0275F5427E3E21F002FA4FE /* View+OnTapGesture.swift */; };
@@ -108,6 +107,7 @@
 		D006BA7D2B115FB1002E555B /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		D008D2A928739167007A7BE2 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		D01526BC278B91BA004DBD19 /* PhotoClubHub.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PhotoClubHub.entitlements; sourceTree = "<group>"; };
+		D01793FD2B6404ED00095E8C /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		D01D2B6127D3BBDC00E2FE41 /* View+Navigate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Navigate.swift"; sourceTree = "<group>"; };
 		D01DDD962AF5A11F00F98906 /* Photo_Club_Hub_2_5_1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_5_1.xcdatamodel; sourceTree = "<group>"; };
 		D01DFAA627E778BD007BABFA /* offsets.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = offsets.md; sourceTree = "<group>"; };
@@ -212,8 +212,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D01793F32B63FF6300095E8C /* SwiftyJSON in Frameworks */,
-				D01793F62B64001800095E8C /* Roadmap in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,6 +445,7 @@
 		D0831A3F277F731C0049AB84 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				D01793FD2B6404ED00095E8C /* SwiftyJSON.swift */,
 				D006BA7D2B115FB1002E555B /* LocationManager.swift */,
 				D0329449283F9D1D0044C70C /* Bundle+VersionBuild.swift */,
 				D06BE9322A4F870B0055B3B1 /* ifDebugUtils.swift */,
@@ -601,8 +600,6 @@
 			);
 			name = "Photo Club Hub";
 			packageProductDependencies = (
-				D01793F22B63FF6300095E8C /* SwiftyJSON */,
-				D01793F52B64001800095E8C /* Roadmap */,
 			);
 			productName = "Fotogroep Waalre 2";
 			productReference = D08319E3277F70A30049AB84 /* Photo Club Hub.app */;
@@ -678,8 +675,6 @@
 			);
 			mainGroup = D08319DA277F70A30049AB84;
 			packageReferences = (
-				D01793F12B63FF6300095E8C /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
-				D01793F42B64001800095E8C /* XCRemoteSwiftPackageReference "Roadmap" */,
 			);
 			productRefGroup = D08319E4277F70A30049AB84 /* Products */;
 			projectDirPath = "";
@@ -830,6 +825,7 @@
 				D0831A36277F72590049AB84 /* FotogroepWaalreMembersProvider+insertSomeHardcodedMemberData.swift in Sources */,
 				D0621E892AE2E47B000FFADB /* MemberPortfolio+refreshFirstImage.swift in Sources */,
 				D0831A20277F72270049AB84 /* OrganizationView.swift in Sources */,
+				D01793FE2B6404ED00095E8C /* SwiftyJSON.swift in Sources */,
 				D0E2235427DE9139002A8600 /* PreludeView.swift in Sources */,
 				D0621E812AE2D7DE000FFADB /* MemberPortfolio+roles.swift in Sources */,
 				D02C273C2AEE6F870005F957 /* AndersMembersProvider.swift in Sources */,
@@ -1244,38 +1240,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		D01793F12B63FF6300095E8C /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.1;
-			};
-		};
-		D01793F42B64001800095E8C /* XCRemoteSwiftPackageReference "Roadmap" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/AvdLee/Roadmap";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		D01793F22B63FF6300095E8C /* SwiftyJSON */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D01793F12B63FF6300095E8C /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
-			productName = SwiftyJSON;
-		};
-		D01793F52B64001800095E8C /* Roadmap */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D01793F42B64001800095E8C /* XCRemoteSwiftPackageReference "Roadmap" */;
-			productName = Roadmap;
-		};
-/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		D0A0B6832AA930E90078DE9A /* Photo_Club_Hub.xcdatamodeld */ = {
