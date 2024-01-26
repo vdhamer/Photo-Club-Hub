@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22522" systemVersion="23D56" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22750.1" systemVersion="23D56" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Language" syncable="YES">
+        <attribute name="code" attributeType="String"/>
+        <attribute name="name" attributeType="String"/>
+        <relationship name="localizedDescriptions_" toMany="YES" deletionRule="Cascade" destinationEntity="LocalizedDescription" inverseName="language_" inverseEntity="LocalizedDescription"/>
+    </entity>
+    <entity name="LocalizedDescription">
+        <attribute name="localizedString" optional="YES" attributeType="String"/>
+        <relationship name="language_" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Language" inverseName="localizedDescriptions_" inverseEntity="Language"/>
+        <relationship name="organization_" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Organization" inverseName="localizedDescriptions_" inverseEntity="Organization"/>
+        <userInfo/>
+    </entity>
     <entity name="MemberPortfolio" representedClassName="MemberPortfolio" elementID="Member" syncable="YES" codeGenerationType="class">
         <attribute name="dateIntervalEnd_" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="dateIntervalStart_" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
@@ -44,6 +55,7 @@
         <attribute name="town_" attributeType="String" defaultValueString="DefaultTown"/>
         <attribute name="website" optional="YES" attributeType="URI" elementID="photoClubWebsite"/>
         <attribute name="wikipedia" optional="YES" attributeType="URI"/>
+        <relationship name="localizedDescriptions_" toMany="YES" deletionRule="Cascade" destinationEntity="LocalizedDescription" inverseName="organization_" inverseEntity="LocalizedDescription"/>
         <relationship name="members_" toMany="YES" deletionRule="Cascade" destinationEntity="MemberPortfolio" inverseName="organization_" inverseEntity="MemberPortfolio"/>
         <relationship name="organizationType_" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="OrganizationType" inverseName="organizations_" inverseEntity="OrganizationType"/>
         <uniquenessConstraints>
@@ -80,4 +92,14 @@
             </uniquenessConstraint>
         </uniquenessConstraints>
     </entity>
+    <configuration name="Localization">
+        <memberEntity name="Language"/>
+        <memberEntity name="LocalizedDescription"/>
+    </configuration>
+    <configuration name="MainEntities">
+        <memberEntity name="MemberPortfolio"/>
+        <memberEntity name="Organization"/>
+        <memberEntity name="Photographer"/>
+        <memberEntity name="OrganizationType"/>
+    </configuration>
 </model>
