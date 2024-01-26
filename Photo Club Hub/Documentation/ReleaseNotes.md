@@ -6,7 +6,7 @@ Clubs and Museums screen
 Maintenance
     * Renamed PhotoClub table to Organization table (because it can now contain museums)
     * Replaced musea -> museums in English text.
-    * Tested with with iOS 17.3, MacOS 14.3, Xcode 14.?
+    * Tested with with iOS 17.3, MacOS 14.3, Xcode 14.3 beta
 
 This is build #4614, and was sent out to Apple Testflight users.
 ---------------------------------------------------------------------------
