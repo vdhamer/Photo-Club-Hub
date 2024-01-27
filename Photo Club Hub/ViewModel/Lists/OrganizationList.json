@@ -28,6 +28,35 @@
             }
         },
 
+
+        {
+            "idPlus": {
+                "town": "Beek en Donk",
+                "fullName": "Fotoclub Objectief",
+                "nickName": "FC Objectief"
+            },
+            "coordinates": {
+                "latitude": 51.53557,
+                "longitude": 5.62722
+            },
+            "website": "https://www.fcobjectief.nl",
+            "memberList": "https://www.example.com/FC_Objectief.memberlist.json",
+            "description": [
+                {
+                    "language": "EN",
+                    "value": "The club meets monthly and has thematic subgroups, and organizes excursions and a yearly exposition. "
+                },
+                {
+                    "language": "NL",
+                    "value": "De fotogroep telt maximaal 35 leden, en doet aan besprekingen, themagroepen, excursies en exposities."
+                }
+            ],
+            "nlSpecific": {
+                "fotobondNumber": 1608,
+                "kvkNumber": 40240185
+            }
+        },
+
         {
             "idPlus": {
                 "town": "Berlicum",
