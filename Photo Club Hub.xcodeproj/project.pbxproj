@@ -345,6 +345,7 @@
 				D0831A17277F71340049AB84 /* Photo-Club-Hub-Info.plist */,
 				D053F23B2B54430C00662EF8 /* Photo-Club-Hub-InfoPlist.strings */,
 				D0831A3F277F731C0049AB84 /* Extensions */,
+				D0DC7A4D2B647CAA00971288 /* SwiftyJSON */,
 				D0CEAECD2B2E1120005AE47D /* Localization */,
 				D08319EA277F70A40049AB84 /* Assets.xcassets */,
 				D008D2A928739167007A7BE2 /* .gitignore */,
@@ -445,7 +446,6 @@
 		D0831A3F277F731C0049AB84 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				D01793FD2B6404ED00095E8C /* SwiftyJSON.swift */,
 				D006BA7D2B115FB1002E555B /* LocationManager.swift */,
 				D0329449283F9D1D0044C70C /* Bundle+VersionBuild.swift */,
 				D06BE9322A4F870B0055B3B1 /* ifDebugUtils.swift */,
@@ -538,6 +538,14 @@
 				D0DF0F442B2CFA3800E9FEC8 /* Photo Club Hub Localizations */,
 			);
 			path = Localization;
+			sourceTree = "<group>";
+		};
+		D0DC7A4D2B647CAA00971288 /* SwiftyJSON */ = {
+			isa = PBXGroup;
+			children = (
+				D01793FD2B6404ED00095E8C /* SwiftyJSON.swift */,
+			);
+			path = SwiftyJSON;
 			sourceTree = "<group>";
 		};
 		D0E2235227DE9139002A8600 /* PreludeView */ = {

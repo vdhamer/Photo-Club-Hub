@@ -3,10 +3,12 @@
 Clubs and Museums screen
     * Removed member count for photo museums and clubs with no available member data
     * Show wikipedia URL for museums (clickable "W" icon if link is available). Data comes from JSON file.
+    * Added some Dutch translations.
 Maintenance
     * Renamed PhotoClub table to Organization table (because it can now contain museums)
     * Replaced musea -> museums in English text.
     * Tested with with iOS 17.3, MacOS 14.3, Xcode 14.3 beta
+    * Converted SwiftyJSON from package to file (as a temp workaround)
 
 This is build #4614, and was sent out to Apple Testflight users.
 ---------------------------------------------------------------------------

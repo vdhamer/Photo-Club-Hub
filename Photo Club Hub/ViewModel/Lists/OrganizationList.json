@@ -203,7 +203,11 @@
             "description": [
                 {
                     "language": "EN",
-                    "value": "TThe two adjacent Amsterdam canal mansions house the oldest photography museum in the Netherlands."
+                    "value": "The two adjacent Amsterdam canal mansions house the oldest photography museum in the Netherlands."
+                },
+                {
+                    "language": "NL",
+                    "value": "Huis Marseille ligt aan de Keizersgracht en is het oudste fotografiemuseum in Nederland."
                 }
             ]
         },
@@ -225,6 +229,10 @@
                 {
                     "language": "EN",
                     "value": "The museum in a former warehouse holds photo exhibitions, but started off with the Agfa-Gevaert camera archive."
+                },
+                {
+                    "language": "NL",
+                    "value": "Dit museum in een voormalig pakhuis omvat onder andere het Agfa-Gevaert camera archief."
                 }
             ]
         },
@@ -244,6 +252,10 @@
                 {
                     "language": "EN",
                     "value": "The museum incorporates vintage cameras collected by Jan and Maarten Witte."
+                },
+                {
+                    "language": "NL",
+                    "value": "De nadruk van dit museum is een collectie klassieke camera's van Jan and Maarten Witte."
                 }
             ]
         },
@@ -265,6 +277,10 @@
                 {
                     "language": "EN",
                     "value": "The museum is associated with the Ballarat International Foto Biennale festival. The building may not be finished yet."
+                },
+                {
+                    "language": "NL",
+                    "value": "Het museum is verbonden met het twee-jaarlijkse Ballarat fotofestival. Er is (was?) een grote verbouwing gaande."
                 }
             ]
         },
@@ -286,6 +302,10 @@
                 {
                     "language": "EN",
                     "value": "The museum houses the Helmut Newton Foundation."
+                },
+                {
+                    "language": "NL",
+                    "value": "Het museum beheert de fotografische nalatenschap van Helmut Newton."
                 }
             ]
         },
@@ -734,7 +754,7 @@
             "description": [
                 {
                     "language": "EN",
-                    "value": "Following financial difficulties in 2020, the museum is now part of Powerhouse, the largest museum group in Australia."
+                    "value": "After financial issues in 2020, the museum is now part of Powerhouse, a museum group in Australia."
                 },
                 {
                     "language": "NL",
