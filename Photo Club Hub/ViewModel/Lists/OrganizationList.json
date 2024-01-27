@@ -120,7 +120,7 @@
             "description": [
                 {
                     "language": "EN",
-                    "value": "The club's name (kind of) means Beautiful Image in Latin."
+                    "value": "The club's name (almost) means Beautiful Image in Latin."
                 },
                 {
                     "language": "NL",
@@ -174,7 +174,6 @@
             },
             "website": "https://www.foam.org",
             "wikipedia": "https://en.wikipedia.org/wiki/Foam_Fotografiemuseum_Amsterdam",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/4/47/Keizersgracht_609%2C_Amsterdam.JPG",
             "description": [
                 {
                     "language": "EN",
@@ -199,7 +198,6 @@
             },
             "website": "https://www.huismarseille.nl/",
             "wikipedia": "https://nl.wikipedia.org/wiki/Huis_Marseille",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/f/f6/HuisMarseille-Amsterdam-SjoerdMartens.png",
             "description": [
                 {
                     "language": "EN",
@@ -224,7 +222,6 @@
             },
             "website": "https://www.fotomuseum.be/",
             "wikipedia": "https://nl.wikipedia.org/wiki/Fotomuseum_Antwerpen",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Fotomuseum_FOMU_Antwerpen.jpg",
             "description": [
                 {
                     "language": "EN",
@@ -272,7 +269,6 @@
             },
             "website": "https://ballaratfoto.org",
             "wikipedia": "https://en.wikipedia.org/wiki/National_Centre_for_Photography",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Union_Bank_Building%2C_Ballarat%2C_1870s.png",
             "description": [
                 {
                     "language": "EN",
@@ -297,7 +293,6 @@
             },
             "website": "https://www.smb.museum/museen-einrichtungen/museum-fuer-fotografie/home/",
             "wikipedia": "https://en.wikipedia.org/wiki/Museum_of_Photography,_Berlin",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Museum_fuer_fotografie_berlin_landwehrkasino_dec_2004.jpg",
             "description": [
                 {
                     "language": "EN",
@@ -322,7 +317,6 @@
             },
             "website": "https://www.fotomuseumdenhaag.nl/",
             "wikipedia": "https://en.wikipedia.org/wiki/Fotomuseum_Den_Haag",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/8/80/Photo_Museum_The_Hague%2C_Main_entrance.jpg",
             "description": [
                 {
                     "language": "EN",
@@ -343,7 +337,6 @@
             },
             "website": "",
             "wikipedia": "https://en.wikipedia.org/wiki/National_Photographic_Archive",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/c/ca/National_Photographic_Archive%2C_Dublin.JPG",
             "description": [
                 {
                     "language": "EN",
@@ -384,7 +377,6 @@
             },
             "website": "http://www.museumhilversum.nl",
             "wikipedia": "https://nl.wikipedia.org/wiki/Museum_Hilversum",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/7/71/Museum_Hilversum.jpg",
             "description": [
                 {
                     "language": "EN",
@@ -428,7 +420,6 @@
             },
             "website": "http://thephotographersgallery.org.uk/",
             "wikipedia": "https://en.wikipedia.org/wiki/The_Photographers%27_Gallery",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/c/cd/The_Photographers%27_Gallery%2C_London.jpg",
             "description": [
                 {
                     "language": "EN",
@@ -449,7 +440,6 @@
             },
             "website": "https://www.vam.ac.uk/info/photography-centre",
             "wikipedia": "https://en.wikipedia.org/wiki/Victoria_and_Albert_Museum",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Victoria_%26_Albert_Museum_Entrance%2C_London%2C_UK_-_Diliff.jpg",
             "description": [
                 {
                     "language": "EN",
@@ -470,7 +460,6 @@
             },
             "website": "http://www.museumaanhetvrijthof.nl",
             "wikipedia": "https://nl.wikipedia.org/wiki/Fotomuseum_aan_het_Vrijthof",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/8/87/Museum_aan_het_Vrijthof_-_Exterieur_2012.jpg",
             "description": [
                 {
                     "language": "EN",
@@ -490,7 +479,6 @@
                 "longitude": -3.70135
             },
             "website": "https://www.comunidad.madrid/centros/sala-canal-isabel-ii",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Dep%C3%B3sito_de_agua_de_Santa_Engracia.JPG",
             "description": [
                 {
                     "language": "EN",
@@ -511,7 +499,6 @@
             },
             "website": "http://ccp.org.au/",
             "wikipedia": "https://en.wikipedia.org/wiki/Centre_for_Contemporary_Photography",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Centre_for_Contemporary_Photography_Fitzroy.jpg",
             "description": [
                 {
                     "language": "EN",
@@ -532,7 +519,6 @@
             },
             "website": "https://www.icp.org",
             "wikipedia": "https://en.wikipedia.org/wiki/International_Center_of_Photography",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/9/99/International_Center_of_Photography_at_79_Essex_Street.jpg",
             "description": [
                 {
                     "language": "EN",
@@ -553,7 +539,6 @@
             },
             "website": "https://www.fotografiska.com/nyc/",
             "wikipedia": "https://en.wikipedia.org/wiki/Fotografiska_New_York",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/7/76/Fotografiska_New_York_%2851710073919%29.jpg",
             "description": [
                 {
                     "language": "EN",
@@ -578,7 +563,6 @@
             },
             "website": "https://www.moma.org/about/curatorial-departments/photography",
             "wikipedia": "https://en.wikipedia.org/wiki/Museum_of_Modern_Art",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/8/8b/MoMa_NY_USA_1.jpg",
             "description": [
                 {
                     "language": "EN",
@@ -599,7 +583,6 @@
             },
             "website": "https://www.gallery.ca/cpi",
             "wikipedia": "https://en.wikipedia.org/wiki/National_Gallery_of_Canada",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/1/10/Ottawa_-_ON_-_National_Gallery_of_Canada.jpg",
             "description": [
                 {
                     "language": "EN",
@@ -620,7 +603,6 @@
             },
             "website": "http://www.henricartierbresson.org/en/",
             "wikipedia": "https://en.wikipedia.org/wiki/Henri_Cartier-Bresson_Foundation",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Rue_des_Archives_79_Cour.jpg",
             "description": [
                 {
                     "language": "EN",
@@ -641,7 +623,6 @@
             },
             "website": "https://cpf.pt",
             "wikipedia": "https://en.wikipedia.org/wiki/Portuguese_Centre_of_Photography",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Centro_Portugu%C3%A9s_de_Fotograf%C3%ADa%2C_Oporto%2C_Portugal%2C_2012-05-09%2C_DD_01.JPG",
             "description": [
                 {
                     "language": "EN",
@@ -662,7 +643,6 @@
             },
             "website": "http://www.cmp.ucr.edu/",
             "wikipedia": "https://en.wikipedia.org/wiki/UCR/California_Museum_of_Photography",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/c/c3/California_Museum_of_Photography.jpg",
             "description": [
                 {
                     "language": "EN",
@@ -683,7 +663,6 @@
             },
             "website": "https://www.eastman.org/",
             "wikipedia": "https://en.wikipedia.org/wiki/George_Eastman_Museum",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/d/d8/George-Eastman-House%3DExterior.JPG",
             "description": [
                 {
                     "language": "EN",
@@ -704,7 +683,6 @@
             },
             "website": "https://www.nederlandsfotomuseum.nl",
             "wikipedia": "https://en.wikipedia.org/wiki/Netherlands_Photo_Museum",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/3/31/Nederlands_Fotomuseum_%2811192247676%29.jpg",
             "description": [
                 {
                     "language": "EN",
@@ -725,7 +703,6 @@
             },
             "website": "http://www.domonken-kinenkan.jp/",
             "wikipedia": "https://en.wikipedia.org/wiki/Ken_Domon_Museum_of_Photography",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Ken_Domon_Museum_of_Photography%2C_22_September_2009%2C_002.jpg",
             "description": [
                 {
                     "language": "EN",
@@ -750,7 +727,6 @@
             },
             "website": "https://acp.org.au/",
             "wikipedia": "https://en.wikipedia.org/wiki/Australian_Centre_for_Photography",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Australian_Centre_For_Photography.jpg",
             "description": [
                 {
                     "language": "EN",
@@ -775,7 +751,6 @@
             },
             "website": "http://www.fotografiska.com/",
             "wikipedia": "https://en.wikipedia.org/wiki/Fotografiska",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Fotografiska_2010a.jpg",
             "description": [
                 {
                     "language": "EN",
@@ -796,7 +771,6 @@
             },
             "website": "https://momus.gr/en/museum/thessaloniki-museum-photography#museum",
             "wikipedia": "https://en.wikipedia.org/wiki/MOMus–Thessaloniki_Museum_of_Photography",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/8/83/Biennale_photo_09388.JPG",
             "description": [
                 {
                     "language": "EN",
@@ -817,7 +791,6 @@
             },
             "website": "http://topmuseum.jp/e/contents/index.html",
             "wikipedia": "https://en.wikipedia.org/wiki/Tokyo_Photographic_Art_Museum",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/3/38/Tokyo_Metropolitan_Museum_of_Photography_entrance_2011_January.jpg",
             "description": [
                 {
                     "language": "EN",
