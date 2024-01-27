@@ -557,23 +557,23 @@ a `String` value such as "Unknown town" rather than an optional `String?` value.
 
 <ul><details><summary>
     
-#### PhotoClub aka Organization
+#### Organization
 
 </summary>
-A `PhotoClub` is uniquely identified by its `name` *and* a `town`. Including the town helps when two towns happen to have a photo club with the same name.
+This table contains both photo clubs and musea. Many properties apply to both.
+The relationship to `OrganizationType` is used to distinguish betweene both.
+Currently `OrganizationType` (essentially an enum) has only two allowed values: `club` and `museum`.
+But, for example,`festivals` could also be added in the future.
 
-Since late 2023, photo museums are also supported (mainly to show them on the maps).
-These museums are stored in the same `PhotoClub` table, which will be renamed to `Organization`. 
-Photo clubs and museums have many common properites and can thus be seen as specializations of this base class `Organization`.
-The clubs and museums are distinguished by a reference to a seperate table called `OrganizationType`. 
-Currently `OrganizationType` (essentially an enum) has only two allowed values: club and museum.
-But, for example, photo festivals could also be added in the future.
+An organization is uniquely identified by its `name` *and* a `town`.
+Including the town is necessary because two towns might have local photo clubs that happen to have the same name.
+This is unlikely for musea, but the same approach is used just in case.
 
-An `Organization` has a rough address down to the `town` level and GPS coordinates.
-The GPS coordinates can precisely indicate where the club meets (say at the address level). 
+An `Organization` has a rough address down to the `town` level and GPS `coordinates`.
+The GPS coordinates can precisely indicate where the club meets (often good enough for navigation purposes). 
 The GPS coordinates are used to insert markers on a map. 
-The GPS coordinates are also used to localize `town` and `country` names by asking the mapping 
-service to convert GPS coordinates into a textual address, using the device's current location.
+The GPS coordinates are also used to localize `town` and `country` names by asking an online mapping 
+service to convert GPS coordinates into a textual address, using the device's current location as input.
 </details></ul>
 
 <ul><details><summary>
@@ -610,6 +610,54 @@ And every `Member` of a `PhotoClub` has exactly one `Portfolio` - even if it sti
 because this is needed to store information about this membership.
 This one-to-one relationship between `Member` and `Portfolio` allows them to be 
 modelled using once concept (aka table) instead of two. We named that `MemberPortfolio`.
+</details></ul>
+
+<ul><details><summary>
+
+#### OrganizationType
+
+</summary>
+This is a tiny table used to hold the supported types of `Organization` records.
+It could be used someday to drive a picker in a data editing tool.
+For now, it ensures that each `Organization` belong to exactly one of the supported `OrganizationTypes`.
+And it could be used to generate statistics about how man `Organizations` per `OrganizationType` are supported.
+</details></ul>
+
+<ul><details><summary>
+
+#### Language
+
+</summary>
+The `Language` table is a tiny table to hold the languages supported by the OrganizationList.json file.
+For now, it is intended only to support the `LocalizedDescription` table. 
+It is not in use yet (Jan 2024).
+Initially a hardcoded equivalent is used to load localized descriptions from OrganizationList.json.
+
+By storing it in the database, the set of supported `Languages` in OrganizationList.json can be opended.
+For example, a museum in Portugal may have an English and a Portugues description, 
+even when the user interface is only localized to English and Dutch.
+This allows the app to display Portuguese text for the local museum if the device is set to Portuguese,
+while the user interface will be shown in English as long as Portuguese is not supported.
+
+A side benefit of this approach is that localized descriptions can be provided without having to wait until
+the app provides full support for a language. 
+
+<ul><details><summary>
+
+#### LocalizedDescription
+
+</summary>
+The `LocalizedDescription` table holds very brief descriptions of an `Organization` in zero or more `Languages`. 
+Descriptions are optional, but are recommended. The `LocalizedDescription` table, but is not filled yet.
+Instead the localized description texts are temporarily stored in hard-coded property fields
+(`descriptionEN`, `descriptionNL`) in the `Organization` table.
+
+An `Organization` record can be linked to 0, 1, 2 or more `Languages` regardless of whether the app fully supports that language.
+The ISO 2 or 3-letter code of the language and a readable name are stored in `Language`.
+The actual text shown in the user interface is shown in the `LocalizedDescription` table.
+
+If the device is configured at the iOS level to use e.g. FR for French, the app will give priority to displaying `LocalizedDescriptions` in French if encountered.
+Otherwise it defaults to English, if available. If preferred langugages are not available, it will use a less suitable language if available.
 </details></ul>
 </details></ul>
     
@@ -719,7 +767,6 @@ Here is an example of the format of the OrganizationList. This minimal example c
             }
             "website": "https://www.fotografiska.com/nyc/",
             "wikipedia": "https://en.wikipedia.org/wiki/Fotografiska_New_York",
-            "image": "https://commons.wikimedia.org/wiki/File:Fotografiska_New_York_(51710073919).jpg",
             "description": [
                 { "language": "EN", "value": "Fotografiska New York is a branch of the Swedish Fotografiska museum." }
                 { "language": "NL", "value": "Fotografiska New York is een dependance van het Fotografiska museum in Stockholm." }
@@ -733,7 +780,7 @@ Note that:
 - `idPlus.town` and `idPlus.fullName` together serve to differentiate clubs or museums from others. Try to avoid changing these strings. 
 - `coordinates` is used to draw the club on the map and to [generate](http://www.vdhamer.com/reversegeocoding-for-localizing-towns-and-countries/) localized versions of town and country names. Latitudes are in the range [-90.0, +90.0] where negative `latitude` means south of the Equator. Longitude values are in the range [-180.0, +180.0] where negative `longitude` means west of Greenwich London.
 - The `memberList` field (for clubs only) allows the app to find the next level list with membership data. It is reserved for future use.
-- The `image` field contains a public domain image of the outside of the venue. It is reserved for future use.
+- The `wikipedia` field contains a link to a Wikipedia page for a museum. It is unlikely that a photo club will have a page in Wikipedia, but it would work.
 - The `description` field contain a brief (optional) remark about the item. The `description` contains an array of alternative strings in multiple languages. The app selects which language to use based on the device's language settings.
 - The `nlSpecific` container has some optional fields that are only relevant for clubs in the Netherlands. `fotobondNumber` and `kvkNumber` are ID numbers respectively assigned by the national photo club federation and by the Dutch chamber of commerce (kvk).
 </p>
