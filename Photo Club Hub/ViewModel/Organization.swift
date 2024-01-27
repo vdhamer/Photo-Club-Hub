@@ -146,7 +146,7 @@ extension Organization {
     }
 
     var coordinates: CLLocationCoordinate2D {
-        get { return CLLocationCoordinate2D(latitude: latitude_, longitude: longitude_) }
+        get { return CLLocationCoordinate2D(latitude: latitude_, longitude: longitude_) } // TODO EXC_Breakpoint here
         set {
             latitude_ = newValue.latitude
             longitude_ = newValue.longitude
