@@ -55,7 +55,6 @@ private let organizationTypesToLoad: [OrganizationTypeEnum] = [.club, .museum]
             }
             "website": "https://www.fotografiska.com/nyc/",
             "wikipedia": "https://en.wikipedia.org/wiki/Fotografiska_New_York",
-            "image": "https://commons.wikimedia.org/wiki/File:Fotografiska_New_York_(51710073919).jpg"
             "description": [
                 {
                     "language": "EN",
