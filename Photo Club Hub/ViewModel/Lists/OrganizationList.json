@@ -86,6 +86,115 @@
 
         {
             "idPlus": {
+                "town": "Boekel",
+                "fullName": "Fotogroep Focus KBO Boekel",
+                "nickName": "FG Focus"
+            },
+            "coordinates": {
+                "latitude": 51.60421,
+                "longitude": 5.67780
+            },
+            "website": "https://www.fotogroep-focus.nl",
+            "memberList": "https://www.example.com/FG_Focus.memberlist.json",
+            "description": [
+                {
+                    "language": "EN",
+                    "value": "The club meets every 3 weeks in a local community building, and holds a yearly exposition around March."
+                },
+                {
+                    "language": "NL",
+                    "value": "De clubleden komen elke 3 weken bijeen in verenigingsgebouw Boszicht in Boekel."
+                }
+            ],
+            "nlSpecific": {
+                "fotobondNumber": 1684
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Duerne",
+                "fullName": "Fotoclub Optika",
+                "nickName": "FC Optika"
+            },
+            "coordinates": {
+                "latitude": 51.45032,
+                "longitude": 5.81069 
+            },
+            "website": "https://www.optika.nl",
+            "memberList": "https://www.example.com/FC_Optika.memberlist.json",
+            "description": [
+                {
+                    "language": "EN",
+                    "value": "The club meets in the canteen of their local sports club. Emphasis is on the resulting images, rather than the required techniques."
+                },
+                {
+                    "language": "NL",
+                    "value": "De club komt bijeen een het clubhuis van SV Deurne. De nadruk ligt primair op de foto's zelf, en secondair op fototechniek."
+                }
+            ],
+            "nlSpecific": {
+                "fotobondNumber": 1636
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Duizel",
+                "fullName": "Fotoclub Kemfodia",
+                "nickName": "FC Kemfodia"
+            },
+            "coordinates": {
+                "latitude": 51.36821,
+                "longitude": 5.29926 
+            },
+            "website": "https://www.kemfodia.nl/",
+            "memberList": "https://www.example.com/FC_Kemfodia.memberlist.json",
+            "description": [
+                {
+                    "language": "EN",
+                    "value": "The club meets in the vilage's community centre. Apart from excursions and expositions, part of the work is based on a yearly theme."
+                },
+                {
+                    "language": "NL",
+                    "value": "De club heeft onder andere een jaarthema, maar er wordt ook vrij werk besproken. Verder zijn er excursies en een jaarlijkse tentoonstelling."
+                }
+            ],
+            "nlSpecific": {
+                "fotobondNumber": 1616
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Eersel",
+                "fullName": "Fotoclub Lucifer",
+                "nickName": "FC Lucifer"
+            },
+            "coordinates": {
+                "latitude": 51.41766,
+                "longitude": 5.28909
+            },
+            "website": "https://fotoclublucifer.nl",
+            "memberList": "https://www.example.com/fcLucifer.memberList.json",
+            "description": [
+                {
+                    "language": "EN",
+                    "value": "The club leans towards experimental and creative photography, but does honor a long-standing tradition of closing each year with an exposition on the day after Christmas."
+                },
+                {
+                    "language": "NL",
+                    "value": "Volgens traditie houdt Lucifer hun eindejaarstentoonstelling op 2e kerstdag. Het werk van de club heeft volgens de club vaak een experimenteel karakter."
+                }
+            ],
+            "nlSpecific": {
+                "fotobondNumber": 1679
+            }
+        },
+
+
+        {
+            "idPlus": {
                 "town": "Eindhoven",
                 "fullName": "Fotogroep Anders",
                 "nickName": "FG Anders"
