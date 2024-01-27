@@ -192,6 +192,33 @@
             }
         },
 
+        {
+            "idPlus": {
+                "town": "Eindhoven",
+                "fullName": "Fotoclub Ericamera",
+                "nickName": "Ericamera"
+            },
+            "coordinates": {
+                "latitude": 51.45403,
+                "longitude": 5.46288
+            },
+            "website": "https://www.ericamera.nl/",
+            "memberList": "https://www.example.com/fcEricamera.memberList.json",
+            "description": [
+                {
+                    "language": "EN",
+                    "value": "Ericamera has its own YouTube channel, and can sometimes also be found on the YouTube channel of CKE which sponsors the club."
+                },
+                {
+                    "language": "NL",
+                    "value": "Ericamera heeft een eigen YouTube kanaal, en werkt samen met Centrum voor de Kunsten (CKE) in Eindhoven."
+                }
+            ],
+            "nlSpecific": {
+                "fotobondNumber": 1674
+            }
+        },
+
 
         {
             "idPlus": {
@@ -243,6 +270,88 @@
                 "fotobondNumber": 1620
             }
         },
+
+        {
+            "idPlus": {
+                "town": "Eindhoven",
+                "fullName": "Fotoclub Debuut",
+                "nickName": "fcDebuut"
+            },
+            "coordinates": {
+                "latitude": 51.44297,
+                "longitude": 5.51527
+            },
+            "website": "https://debuut.jimdofree.com",
+            "memberList": "https://www.example.com/fcDebuut.memberList.json",
+            "description": [
+                {
+                    "language": "EN",
+                    "value": "A small club where 'anything goes, like out-of-focus, crooked and grainy - as long as it results in an unique image that conveys an message.'"
+                },
+                {
+                    "language": "NL",
+                    "value": "Een 7-mans club waar 'alles mag, van onscherp, scheef tot grove korrel als het maar leidt tot een eigenzinnig beeld dat communiceert.'"
+                }
+            ],
+            "nlSpecific": {
+                "fotobondNumber": 1659
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Eindhoven",
+                "fullName": "Fotoclub Rapenland",
+                "nickName": "fcRapenland"
+            },
+            "coordinates": {
+                "latitude": 51.46101,
+                "longitude": 5.47689
+            },
+            "website": "https://www.fotoclubrapenland.nl/",
+            "memberList": "https://www.example.com/fcRapenland.memberList.json",
+            "description": [
+                {
+                    "language": "EN",
+                    "value": "The club meets in a community centre in Eindhoven. The yearly exposition is in March."
+                },
+                {
+                    "language": "NL",
+                    "value": "De club komt bijeen in Gemeenshapshuis De Uitwijk, Eindhoven. De jaarlijkse expo valt in maart."
+                }
+            ],
+            "nlSpecific": {
+                "fotobondNumber": 1626
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Eindhoven",
+                "fullName": "Fotoclub 't Karregat'",
+                "nickName": "fcKarregat"
+            },
+            "coordinates": {
+                "latitude": 51.44798,
+                "longitude": 5.51988
+            },
+            "website": "https://www.fotoclubkarregat.nl/",
+            "memberList": "https://www.example.com/fcKarregat.memberList.json",
+            "description": [
+                {
+                    "language": "EN",
+                    "value": "The club with up to 25 members meets in the former town hall of municipality that is now part of Eindhoven."
+                },
+                {
+                    "language": "NL",
+                    "value": "Citaat: 'Elk jaar wordt er tijdens de ALV een thema vastgelegd, waar we in het lopende jaar onder begeleiding van een mentor aan werken.'"
+                }
+            ],
+            "nlSpecific": {
+                "fotobondNumber": 1643
+            }
+        },
+
         {
             "idPlus": {
                 "town": "Veldhoven",
@@ -269,6 +378,7 @@
                 "fotobondNumber": 1671
             }
         },
+
         {
             "idPlus": {
                 "town": "Waalre",
@@ -298,6 +408,7 @@
         }
 
     ],
+
     "museums": [
 
         {
