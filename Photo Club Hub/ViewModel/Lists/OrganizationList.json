@@ -278,8 +278,8 @@
                 "nickName": "fcDebuut"
             },
             "coordinates": {
-                "latitude": 51.44297,
-                "longitude": 5.51527
+                "latitude": 51.4429,
+                "longitude": 5.5152
             },
             "website": "https://debuut.jimdofree.com",
             "memberList": "https://www.example.com/fcDebuut.memberList.json",
@@ -295,6 +295,33 @@
             ],
             "nlSpecific": {
                 "fotobondNumber": 1659
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Eindhoven",
+                "fullName": "Fotogroep Klick",
+                "nickName": "fgKlick"
+            },
+            "coordinates": {
+                "latitude": 51.48048,
+                "longitude": 5.42879
+            },
+            "website": "https://www.fotogroepklick.nl/",
+            "memberList": "https://www.example.com/fgKlick.memberList.json",
+            "description": [
+                {
+                    "language": "EN",
+                    "value": "The club was founded in 2010 after a number of participants of a photography workshop decided to continue on together as a club."
+                },
+                {
+                    "language": "NL",
+                    "value": "Citaat: 'Fotogroep Klick is in 2010 na het beëindigen van een fotografiecursus door een aantal enthousiaste fotoamateurs opgericht.'"
+                }
+            ],
+            "nlSpecific": {
+                "fotobondNumber": 1672
             }
         },
 
@@ -328,7 +355,7 @@
         {
             "idPlus": {
                 "town": "Eindhoven",
-                "fullName": "Fotoclub 't Karregat'",
+                "fullName": "Fotoclub 't Karregat",
                 "nickName": "fcKarregat"
             },
             "coordinates": {
@@ -340,7 +367,7 @@
             "description": [
                 {
                     "language": "EN",
-                    "value": "The club with up to 25 members meets in the former town hall of municipality that is now part of Eindhoven."
+                    "value": "The club with up to 25 members meets in the former town hall of a municipality that is now part of Eindhoven."
                 },
                 {
                     "language": "NL",
@@ -349,6 +376,33 @@
             ],
             "nlSpecific": {
                 "fotobondNumber": 1643
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Gemert",
+                "fullName": "Foto Expressie Groep Gemert",
+                "nickName": "FEGG"
+            },
+            "coordinates": {
+                "latitude": 51.56025,
+                "longitude": 5.68508
+            },
+            "website": "http://www.fotoclubgemert.nl/",
+            "memberList": "https://www.example.com/fcGemert.memberList.json",
+            "description": [
+                {
+                    "language": "EN",
+                    "value": "The club was founded in 1980 as an initiative by the local photographer/artist Piet Kuppens who gave photography lessons."
+                },
+                {
+                    "language": "NL",
+                    "value": "De club is in 1980 opgericht door de dorpsfotograaf/kunstschilder Piet Kuppens als een soort fotografieschool. Het woord Expressie in de naam de de club stamt uit die periode."
+                }
+            ],
+            "nlSpecific": {
+                "fotobondNumber": 1632
             }
         },
 
