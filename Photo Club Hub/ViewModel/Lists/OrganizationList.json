@@ -408,6 +408,86 @@
 
         {
             "idPlus": {
+                "town": "Nuland",
+                "fullName": "Fotoclub Nuland",
+                "nickName": "fcNuland"
+            },
+            "coordinates": {
+                "latitude": 51.72799,
+                "longitude": 5.43271
+            },
+            "website": "https://www.fotoclubnuland.nl/",
+            "memberList": "https://www.example.com/fcNuland.memberList.json",
+            "description": [
+                {
+                    "language": "EN",
+                    "value": "In 2023, FC Nuland and two nearby clubs generated a photographic 'The Chain' whereby each member created an image inspired by the previous photo in the chain."
+                },
+                {
+                    "language": "NL",
+                    "value": "In 2023 heeft de club met twee naburige clubs een fotoketting gemaakt waarbij ieder binnen een week fotografisch reageerde op een foto van een voorganger."
+                }
+            ],
+            "nlSpecific": {
+                "fotobondNumber": 1680
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Oirschot",
+                "fullName": "Fotogroep Oirschot",
+                "nickName": "fgOirschot"
+            },
+            "coordinates": {
+                "latitude": 51.46785,
+                "longitude": 5.25568
+            },
+            "website": "http:s//fotogroepoirschot.nl/",
+            "memberList": "https://www.example.com/fgOirschot.memberList.json",
+            "description": [
+                {
+                    "language": "EN",
+                    "value": "At a club meeting, the work of 3 of the members is discussed. Each of these 3 members selects one 'photo of the month' for an in depth discussion."
+                },
+                {
+                    "language": "NL",
+                    "value": "Op een forumavond wordt het werk van 3 van de leden besproken, waarbij één foto per lid zeer uitvoerig 'volgens het boekje' besproken wordt."
+                }
+            ],
+            "nlSpecific": {
+                "fotobondNumber": 1607
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Riethoven",
+                "fullName": "Fotokring Riethoven",
+                "nickName": "fgRiethoven"
+            },
+            "coordinates": {
+                "latitude": 51.35436,
+                "longitude": 5.38736
+            },
+            "memberList": "https://www.example.com/fgRiethoven.memberList.json",
+            "description": [
+                {
+                    "language": "EN",
+                    "value": "This club doesn't have a website."
+                },
+                {
+                    "language": "NL",
+                    "value": "Voor zover bekend heeft Fotokring Riethoven geen eigen web site."
+                }
+            ],
+            "nlSpecific": {
+                "fotobondNumber": 1627
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Veldhoven",
                 "fullName": "Fotoclub Bellus Imago",
                 "nickName": "FC BellusImago"

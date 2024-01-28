@@ -10,6 +10,7 @@ Maintenance
     * Tested with with iOS 17.3, MacOS 14.3, Xcode 14.3 beta
     * Converted SwiftyJSON from package to file (as a temp workaround)
     * Added basic info about dozens of nearby photo clubs (as an example, and for screenshots)
+    * Removed image property in OrganizationList.json. User can see an image of the building via the Wikipedia link.
 
 This is build #4614, and was sent out to Apple Testflight users.
 ---------------------------------------------------------------------------
