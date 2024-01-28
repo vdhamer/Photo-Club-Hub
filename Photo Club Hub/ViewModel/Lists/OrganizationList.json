@@ -425,11 +425,38 @@
                 },
                 {
                     "language": "NL",
-                    "value": "In 2023 heeft de club met twee naburige clubs een fotoketting gemaakt waarbij ieder binnen een week fotografisch reageerde op een foto van een voorganger."
+                    "value": "In 2023 heeft de club met twee clubs in Rosmalen een fotoketting gemaakt waarbij ieder binnen een week fotografisch reageerde op een foto van een voorganger."
                 }
             ],
             "nlSpecific": {
                 "fotobondNumber": 1680
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Oeffelt",
+                "fullName": "Fotografieclub-BGC",
+                "nickName": "fcBGC"
+            },
+            "coordinates": {
+                "latitude": 51.71029,
+                "longitude": 5.91486
+            },
+            "website": "https://www.fotografieclub-bgc.nl",
+            "memberList": "https://www.example.com/fcBGC.memberList.json",
+            "description": [
+                {
+                    "language": "EN",
+                    "value": "BGC is the abbreviation of three neighboring villages: Boxmeer, Gennep, and Cuijk."
+                },
+                {
+                    "language": "NL",
+                    "value": "De afkorting BGC in de naam van de club duidt op drie dorpen in het Land van Cuijk en Maasduinen: Boxmeer, Gennep en Cuijk."
+                }
+            ],
+            "nlSpecific": {
+                "fotobondNumber": 1676
             }
         },
 
