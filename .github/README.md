@@ -619,7 +619,8 @@ This allows the app to display Portuguese text for the local museum if the devic
 while the user interface will be shown in English as long as Portuguese is not supported.
 
 A side benefit of this approach is that localized descriptions can be provided without having to wait until
-the app provides full support for a language. 
+the app provides full support for a language.
+</details></ul>
 
 <ul><details><summary>
 
