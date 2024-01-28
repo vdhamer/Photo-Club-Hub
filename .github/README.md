@@ -28,7 +28,6 @@
             <li><a href="#opening-animation">Opening Animation</a></li>
             <li><a href="#multi-club-support">Multi-club Support</a></li>
             <li><a href="#photo-museums-on-the-maps">Photo Museums</a></li>
-            <li><a href="#roadmap">Roadmap</a></li>
             <li><a href="#data-privacy">Data Privacy</a></li>
                 <ul>
                     <li>Encryption Details</li>
@@ -351,27 +350,7 @@ But that data is still encrypted by a private encryption key that is not provide
 </details></ul>
 </details>
 
-<details><summary>
-
-### Roadmap
-
-</summary>
-
-- [x] Put the app's source code on GitHub.
-    - [x] Handle private data about members in a secure way
-    - [ ] Publish article in Dutch photo club [organization](https://fotobond.nl)
-- [x] MemberPortfoliosView: show thumbnails of most recent photos.
-- [x] Support onboarding of clubs without any code changes. A really large change, see below.
-- [ ] MemberGaleryView: replace use of WebKit by SwiftUI equivalent
-- [ ] Migrate from CoreData to SwiftData (iOS 17+)
-
-See the [open issues](https://GitHub.com/vdhamer/PhotoClubWaalre/issues) for a list of
-proposed enhancements and known limitations.
-
-</ul></detail>
-
 <p align="right">(<a href="#top">back to top</a>)</p>
-
 
 ## Installation
 
@@ -640,7 +619,8 @@ This allows the app to display Portuguese text for the local museum if the devic
 while the user interface will be shown in English as long as Portuguese is not supported.
 
 A side benefit of this approach is that localized descriptions can be provided without having to wait until
-the app provides full support for a language. 
+the app provides full support for a language.
+</details></ul>
 
 <ul><details><summary>
 
