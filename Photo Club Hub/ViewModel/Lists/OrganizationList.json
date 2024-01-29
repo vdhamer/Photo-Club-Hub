@@ -113,6 +113,86 @@
 
         {
             "idPlus": {
+                "town": "Den Bosch",
+                "fullName": "Fotogroep Argus",
+                "nickName": "fgArgus"
+            },
+            "coordinates": {
+                "latitude": 51.68806,
+                "longitude": 5.3075
+            },
+            "website": "https://argusfoto.nl/",
+            "memberList": "https://www.example.com/Argusfoto.memberlist.json",
+            "description": [
+                {
+                    "language": "EN",
+                    "value": "The group is relatively small (7, but wants to grow a bit), so a photo review session lead by an external coach can be held in one of the homes."
+                },
+                {
+                    "language": "NL",
+                    "value": "De groep heeft 7 leden (met de ambitie om iets te groeien). Voor fotobesprekingen komt de groep en een mentor bijeen in een van de huiskamers."
+                }
+            ],
+            "nlSpecific": {
+                "fotobondNumber": 1681
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Den Bosch",
+                "fullName": "Fotoclub Den Bosch AFC 68",
+                "nickName": "AFC68"
+            },
+            "coordinates": {
+                "latitude": 51.69440,
+                "longitude": 5.26535
+            },
+            "website": "https://fotoclubdenbosch.nl/",
+            "memberList": "https://www.example.com/denBosch.memberlist.json",
+            "description": [
+                {
+                    "language": "EN",
+                    "value": "In a national competition with 133 clubs in 2023, AFC68 reached an impressive 4th place."
+                },
+                {
+                    "language": "NL",
+                    "value": "Tijdens de Bondsfotowedstrijd 2023 met 133 deelnemende clubs, eindigde AFC68 op de 4e plaats. Op het binnenplein van zorgcentrum Antoniegaarde exposeert de club vrijwel continue."
+                }
+            ],
+            "nlSpecific": {
+                "fotobondNumber": 1611
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Den Bosch",
+                "fullName": "Fotocollectief ISO 2016",
+                "nickName": "iso2016"
+            },
+            "coordinates": {
+                "latitude": 51.65823,
+                "longitude": 5.29832
+            },
+            "memberList": "https://www.example.com/iso2016.memberlist.json",
+            "description": [
+                {
+                    "language": "EN",
+                    "value": "The club ISO 2016 in Den Bosch ('s Hertogenbosch) does not currently have a website."
+                },
+                {
+                    "language": "NL",
+                    "value": "ISO2016 heeft geen eigen website."
+                }
+            ],
+            "nlSpecific": {
+                "fotobondNumber": 1682
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Duerne",
                 "fullName": "Fotoclub Optika",
                 "nickName": "FC Optika"
