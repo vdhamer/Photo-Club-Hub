@@ -761,7 +761,7 @@ Note that:
 - `coordinates` is used to draw the club on the map and to [generate](http://www.vdhamer.com/reversegeocoding-for-localizing-towns-and-countries/) localized versions of town and country names. Latitudes are in the range [-90.0, +90.0] where negative `latitude` means south of the Equator. Longitude values are in the range [-180.0, +180.0] where negative `longitude` means west of Greenwich London.
 - The `memberList` field (for clubs only) allows the app to find the next level list with membership data. It is reserved for future use.
 - The `wikipedia` field contains a link to a Wikipedia page for a museum. It is unlikely that a photo club will have a page in Wikipedia, but it would work.
-- The `description` field contain a brief (optional) remark about the item. The `description` contains an array of alternative strings in multiple languages. The app selects which language to use based on the device's language settings.
+- The `description` field contain a brief remark about something worth knowing about the item. The `description` contains an array of alternative strings in multiple languages. The app selects which language to use based on the device's language settings.
 - The `nlSpecific` container has some optional fields that are only relevant for clubs in the Netherlands. `fotobondNumber` and `kvkNumber` are ID numbers respectively assigned by the national photo club federation and by the Dutch chamber of commerce (kvk).
 </p>
 
