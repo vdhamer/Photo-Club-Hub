@@ -523,7 +523,7 @@ Some of these gaps are addressed [below](#a-better-approach).
 ### The Data Model
 
 </summary>
-Here are the entities managed by the app's internal Core Data database. The entities (rounded boxes) and arrows are tables and relationships in the underlying SQLite database.</p>
+Here are the entities managed by the app's internal Core Data database. The entities (rounded boxes) are tables and arrows are relationships in the underlying SQLite database.</p>
 
 ![Data model](images/dataModel.png "The data model")
 
