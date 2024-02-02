@@ -488,6 +488,33 @@
 
         {
             "idPlus": {
+                "town": "Grave",
+                "fullName": "Fotoclub De Soos",
+                "nickName": "fcDeSoos"
+            },
+            "coordinates": {
+                "latitude": 51.75897,
+                "longitude": 5.73862
+            },
+            "website": "https://www.fotoclubdesoos.nl",
+            "memberList": "https://www.example.com/fcDeSoos.memberList.json",
+            "description": [
+                {
+                    "language": "EN",
+                    "value": "Club members are required to join the parent organization Sociëteit in Grave. Photo club membership then costs a bit extra."
+                },
+                {
+                    "language": "NL",
+                    "value": "Om lid te worden van de fotoclub moet men tevens lid zijn van de Sociëteit in Grave, waar de fotoclub deel van uitmaakt."
+                }
+            ],
+            "nlSpecific": {
+                "fotobondNumber": 1688
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Nuland",
                 "fullName": "Fotoclub Nuland",
                 "nickName": "fcNuland"
@@ -856,6 +883,33 @@
 
         {
             "idPlus": {
+                "town": "Vught",
+                "fullName": "Fotogroep Vught",
+                "nickName": "fgVucht"
+            },
+            "coordinates": {
+                "latitude": 51.64007,
+                "longitude": 5.28902
+            },
+            "website": "https://www.fotogroepvught.nl",
+            "memberList": "https://www.example.com/fgVught.memberList.json",
+            "description": [
+                {
+                    "language": "EN",
+                    "value": "The yearly exposition is held in the repurposed monumental church of Vught."
+                },
+                {
+                    "language": "NL",
+                    "value": "The jaarlijkse expositie wordt gehouden De Petrus, een grote voormalige kerk die van binnen geheel verbouwd is tot ontmoetingscentrum."
+                }
+            ],
+            "nlSpecific": {
+                "fotobondNumber": 1661
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Waalre",
                 "fullName": "Fotogroep Waalre",
                 "nickName": "FG Waalre"
@@ -877,8 +931,88 @@
                 }
             ],
             "nlSpecific": {
-                "fotobondNumber": 1634,
-                "kvkNumber": 17261693
+                "fotobondNumber": 1634
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Waalwijk",
+                "fullName": "Collectief Brabant",
+                "nickName": "fcBrabant"
+            },
+            "coordinates": {
+                "latitude": 51.6825,
+                "longitude": 5.069444
+            },
+            "website": "https://www.collectiefbrabant.nl",
+            "memberList": "https://www.example.com/Brabant.memberList.json",
+            "description": [
+                {
+                    "language": "EN",
+                    "value": "We suspect that this club is not geographically centered around Waalwijk or any single town in Brabant."
+                },
+                {
+                    "language": "NL",
+                    "value": "De naam en website van de club doen vermoeden dat de clubleden over een groter gebied van Brabant-Oost verspreid zijn."
+                }
+            ],
+            "nlSpecific": {
+                "fotobondNumber": 1678
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Wanroy",
+                "fullName": "Fotoclub Kiekus",
+                "nickName": "fcKiekus"
+            },
+            "coordinates": {
+                "latitude": 51.65597,
+                "longitude": 5.82020
+            },
+            "website": "https://www.fotoclubkiekus.nl",
+            "memberList": "https://www.example.com/fcKiekus.memberList.json",
+            "description": [
+                {
+                    "language": "EN",
+                    "value": "The club explicitly writes that they also welcome beginning amateur photographers."
+                },
+                {
+                    "language": "NL",
+                    "value": "De club geeft expliciet aan dat ze ook voor beginnende fotografen openstaan."
+                }
+            ],
+            "nlSpecific": {
+                "fotobondNumber": 1618
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Zaltbommel",
+                "fullName": "Fotoclub Bommelerwaard",
+                "nickName": "fcBommelerwaard"
+            },
+            "coordinates": {
+                "latitude": 51.81156,
+                "longitude": 5.25076
+            },
+            "website": "",
+            "memberList": "https://www.example.com/?.memberList.json",
+            "description": [
+                {
+                    "language": "EN",
+                    "value": "Photos are mostly done based on matted prints. In special cases a beamer is used."
+                },
+                {
+                    "language": "NL",
+                    "value": "Fotobesprekingen worden meestal gedaan aan de hand van een afgedrukte foto in passepartout, maar er is ook een beamer beschikbaar."
+                }
+            ],
+            "nlSpecific": {
+                "fotobondNumber": 1665
             }
         },
 
