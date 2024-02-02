@@ -13,7 +13,7 @@
             },
             "website": "https://nl.qrcodechimp.com/page/a6d3r7?v=chk1697032881",
             "memberList": "https://www.example.com/fgAnders.memberList.json",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "Fotogroep Anders is so small, that the members can meet in their own homes."
@@ -52,7 +52,7 @@
                 "longitude": 112.38392
             },
             "website": "http://www.lmop.org.cn",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "The museum's URL and even GPS coordinates don't currently work, but the museum is in Lianzhou, China."
@@ -71,7 +71,7 @@
                 "longitude": 3.91938
             },
             "website": "https://www.cameramuseum.nl",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "This small museum is mainly about classic cameras. It also covers regional photographers."
