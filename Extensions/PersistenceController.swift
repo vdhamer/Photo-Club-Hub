@@ -68,7 +68,6 @@ struct PersistenceController {
                                                        ),
                                                        website: URL(string: "http://www.example.com/\(index)"),
                                                        fotobondNumber: Int16(index*1111),
-                                                       kvkNumber: Int32(100+index),
                                                        coordinates: CLLocationCoordinate2D( // spread around BeNeLux
                                                             latitude: 51.39184 + Double.random(in: -2.0 ... 2.0),
                                                             longitude: 5.46144 + Double.random(in: -2.0 ... 1.0)),

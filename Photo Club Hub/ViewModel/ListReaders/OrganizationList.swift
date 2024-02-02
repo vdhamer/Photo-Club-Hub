@@ -108,14 +108,12 @@ class OrganizationList {
                 let wikipedia = URL(string: jsonOrganization["wikipedia"].stringValue)
                 let localizedDescriptions = jsonOrganization["description"].arrayValue
                 let fotobondNumber = jsonOrganization["nlSpecific"]["fotobondNumber"].int16Value
-                let kvkNumber = jsonOrganization["nlSpecific"]["kvkNumber"].int32Value
                 _ = Organization.findCreateUpdate(context: bgContext,
                                                   organizationTypeEum: organizationTypeEnum,
                                                   idPlus: idPlus,
                                                   website: website,
                                                   wikipedia: wikipedia,
                                                   fotobondNumber: fotobondNumber, // int16
-                                                  kvkNumber: kvkNumber, // int32
                                                   coordinates: coordinates,
                                                   localizedDescriptions: localizedDescriptions)
             }

@@ -183,7 +183,7 @@ extension Organization {
                                  idPlus: OrganizationIdPlus,
                                  website: URL? = nil,
                                  wikipedia: URL? = nil,
-                                 fotobondNumber: Int16? = nil, kvkNumber: Int32? = nil,
+                                 fotobondNumber: Int16? = nil,
                                  coordinates: CLLocationCoordinate2D? = nil,
                                  pinned: Bool = false,
                                  localizedDescriptions: [JSON] = []
@@ -211,7 +211,7 @@ extension Organization {
             if update(bgContext: context, organizationTypeEnum: organizationTypeEum,
                       photoClub: organization, shortName: idPlus.nickname,
                       optionalFields: (website: website, wikipedia: wikipedia,
-                                       fotobondNumber: fotobondNumber, kvkNumber: kvkNumber),
+                                       fotobondNumber: fotobondNumber),
                       coordinates: coordinates,
                       pinned: pinned,
                       localizedDescriptions: localizedDescriptions) {
@@ -228,7 +228,7 @@ extension Organization {
             _ = update(bgContext: context, organizationTypeEnum: organizationTypeEum,
                        photoClub: organization, shortName: idPlus.nickname,
                        optionalFields: (website: website, wikipedia: wikipedia,
-                                        fotobondNumber: fotobondNumber, kvkNumber: kvkNumber),
+                                        fotobondNumber: fotobondNumber),
                        coordinates: coordinates,
                        pinned: pinned,
                        localizedDescriptions: localizedDescriptions)
@@ -244,7 +244,7 @@ extension Organization {
                                photoClub: Organization, shortName: String,
                                // swiftlint:disable:next large_tuple
                                optionalFields: (website: URL?, wikipedia: URL?,
-                                                fotobondNumber: Int16?, kvkNumber: Int32?),
+                                                fotobondNumber: Int16?),
                                coordinates: CLLocationCoordinate2D?,
                                pinned: Bool,
                                localizedDescriptions: [JSON] ) -> Bool {
@@ -273,10 +273,6 @@ extension Organization {
 
         if let fotobondNumber = optionalFields.fotobondNumber, photoClub.fotobondNumber != fotobondNumber {
             photoClub.fotobondNumber = fotobondNumber
-            modified = true }
-
-        if let kvkNumber = optionalFields.kvkNumber, photoClub.kvkNumber != kvkNumber {
-            photoClub.kvkNumber = kvkNumber
             modified = true }
 
         if let coordinates, photoClub.coordinates != coordinates {

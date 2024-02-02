@@ -53,7 +53,6 @@
         <attribute name="fotobondNumber" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="hasHardCodedMemberData" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="isScrollLocked" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES"/>
-        <attribute name="kvkNumber" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="latitude_" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="localizedCountry_" attributeType="String" defaultValueString="Country?"/>
         <attribute name="localizedTown_" attributeType="String" defaultValueString="Town?"/>
@@ -104,13 +103,12 @@
         </uniquenessConstraints>
     </entity>
     <configuration name="Localization">
-        <memberEntity name="Language"/>
-        <memberEntity name="LocalizedDescription"/>
-    </configuration>
-    <configuration name="MainEntities">
         <memberEntity name="MemberPortfolio"/>
         <memberEntity name="Organization"/>
         <memberEntity name="Photographer"/>
-        <memberEntity name="OrganizationType"/>
+    </configuration>
+    <configuration name="Configuration_2">
+        <memberEntity name="Language"/>
+        <memberEntity name="LocalizedDescription"/>
     </configuration>
 </model>

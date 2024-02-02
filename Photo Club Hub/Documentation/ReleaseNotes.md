@@ -4,6 +4,7 @@ Clubs and Museums screen
     * Removed member count for photo museums and clubs with no available member data
     * Show wikipedia URL for museums (clickable "W" icon if link is available). Data comes from JSON file.
     * Added some Dutch translations.
+    * Removed support for kvkNumber. It worked, but is Netherlands only, and not very relevant.
 Maintenance
     * Renamed PhotoClub table to Organization table (because it can now contain museums)
     * Replaced musea -> museums in English text.
