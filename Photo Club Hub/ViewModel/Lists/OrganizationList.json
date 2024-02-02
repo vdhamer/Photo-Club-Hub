@@ -751,16 +751,67 @@
 
         {
             "idPlus": {
+                "town": "Uden",
+                "fullName": "Udense Amateurfotografen F/8",
+                "nickName": "f/8"
+            },
+            "coordinates": {
+                "latitude": 51.66519,
+                "longitude": 5.62025
+            },
+            "website": "https://www.f8-uden.nl",
+            "memberList": "https://www.example.com/f8Uden.memberList.json",
+            "description": [
+                {
+                    "language": "EN",
+                    "value": "Their website states that due to Covid they haven't had meetings in years, but that text probably needs updating."
+                },
+                {
+                    "language": "NL",
+                    "value": "De website vermeldt dat er de afgelopen jaren wegens corona geen activiteiten waren, maar dit bericht is hopelijk niet meer actueel."
+                }
+            ],
+            "nlSpecific": {
+                "fotobondNumber": 1619
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Uden",
+                "fullName": "Fotohobbygroep Beeldspraak Uden",
+                "nickName": "fcBeeldspraakU"
+            },
+            "coordinates": {
+                "latitude": 51.65971,
+                "longitude": 5.60938
+            },
+            "website": "",
+            "memberList": "https://www.example.com/fcBeeldspraakU.memberList.json",
+            "description": [
+                {
+                    "language": "EN",
+                    "value": "Don't confuse this club with FC Beeldspraak in Groningen."
+                },
+                {
+                    "language": "NL",
+                    "value": "Niet te verwarren met FC Beeldspraak in Glimmen in Groningen."
+                }
+            ]
+        },
+
+        {
+            "idPlus": {
                 "town": "Veldhoven",
                 "fullName": "Fotoclub Bellus Imago",
-                "nickName": "FC BellusImago"
+                "nickName": "fcBellusImago"
             },
             "coordinates": {
                 "latitude": 51.425410,
                 "longitude": 5.387560
             },
             "website": "https://www.fotoClubBellusImago.nl",
-            "memberList": "https://www.example.com/bellusImago.memberList.json",
+            "memberList": "https://www.example.com/fcBellusImago.memberList.json",
             "description": [
                 {
                     "language": "EN",
@@ -773,6 +824,33 @@
             ],
             "nlSpecific": {
                 "fotobondNumber": 1671
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Veldhoven",
+                "fullName": "Fotogroep Veldhoven",
+                "nickName": "fgVeldhoven"
+            },
+            "coordinates": {
+                "latitude": 51.41246,
+                "longitude": 5.39656
+            },
+            "website": "https://www.fotogroepveldhoven.nl",
+            "memberList": "https://www.example.com/fgVeldhoven.memberList.json",
+            "description": [
+                {
+                    "language": "EN",
+                    "value": "In total the group meets about 25 times per year."
+                },
+                {
+                    "language": "NL",
+                    "value": "Er zijn ongeveer 25 bijeenkomsten per jaar, waaronder forumavonden, thema-avonden en demo/doeavonden."
+                }
+            ],
+            "nlSpecific": {
+                "fotobondNumber": 1637
             }
         },
 
@@ -802,6 +880,30 @@
                 "fotobondNumber": 1634,
                 "kvkNumber": 17261693
             }
+        },
+
+        {
+            "idPlus": {
+                "town": "Zeeland",
+                "fullName": "Fotoclub Objectief Zeeland",
+                "nickName": "fcObjectiefZ"
+            },
+            "coordinates": {
+                "latitude": 51.69694,
+                "longitude": 5.67461
+            },
+            "website": "www.facebook.com/ObjectiefZeeland",
+            "memberList": "https://www.example.com/???.memberList.json",
+            "description": [
+                {
+                    "language": "EN",
+                    "value": "The club has over 20 frames in various locations in the village, forming a permanent but changing exposition of the club's work."
+                },
+                {
+                    "language": "NL",
+                    "value": "Op ruim 20 locaties in het dorp hangen er wissellijsten van de club waarmee wisselend werk van clubleden te zien is."
+                }
+            ]
         }
 
     ],
