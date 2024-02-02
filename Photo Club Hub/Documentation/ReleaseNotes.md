@@ -11,6 +11,7 @@ Maintenance
     * Converted SwiftyJSON from package to file (as a temp workaround)
     * Added basic info about dozens of nearby photo clubs (as an example, and for screenshots)
     * Removed image property in OrganizationList.json. User can see an image of the building via the Wikipedia link.
+    * fgDeGender has a new chairman. This info doesn't come from a json file yet.
 
 This is build #4614, and was sent out to Apple Testflight users.
 ---------------------------------------------------------------------------
@@ -19,7 +20,7 @@ This is build #4614, and was sent out to Apple Testflight users.
 Clubs and Museums screen
     * Renamed screen from `Photo Clubs` to `Clubs` to save space (for future mode picker).
     * Maps can display various photography museums (example: there are three in Manhattan, NYC).
-    * Additional photo clubs (and museums) can be loaded from a data file (OrganizationList.json hosted on GitHub).
+    * Additional photo clubs (and museums) are loaded from a data file (OrganizationList.json hosted on GitHub).
     * A photoclub's (or museum)'s country is determined from its GPS coordinates. This handles localization: "Frankrijk" (NL) = "France" (EN).
     * Town names are also translated if applicable: "Den Haag" (NL) = "The Hague" (EN).
     * No footnote anymore about pull-to-refresh.

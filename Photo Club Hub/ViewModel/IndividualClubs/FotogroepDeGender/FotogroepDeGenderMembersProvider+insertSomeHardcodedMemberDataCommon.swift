@@ -46,7 +46,7 @@ extension FotogroepDeGenderMembersProvider { // fill with some initial hard-code
                   photographerWebsite: URL(string: "https://www.m3w.nl"),
                   bornDT: bornDT,
                   organization: clubDeGender,
-                  memberRolesAndStatus: MemberRolesAndStatus(role: [.chairman: true]),
+                  memberRolesAndStatus: MemberRolesAndStatus(role: [.chairman: false]),
                   memberWebsite: URL(string: "https://www.fcdegender.nl/wp-content/uploads/Expositie%202023/Mariet/"),
                   latestImage: URL(string:
                      "https://www.fcdegender.nl/wp-content/uploads/Expositie%202023/Mariet/slides/Mariet%203.jpg")
