@@ -3,17 +3,17 @@
     <entity name="Language" syncable="YES">
         <attribute name="isoCode" attributeType="String"/>
         <attribute name="name" attributeType="String"/>
-        <relationship name="localizedDescriptions_" toMany="YES" deletionRule="Cascade" destinationEntity="LocalizedDescription" inverseName="language_" inverseEntity="LocalizedDescription"/>
+        <relationship name="localizedRemarks_" toMany="YES" deletionRule="Cascade" destinationEntity="LocalizedRemark" inverseName="language_" inverseEntity="LocalizedRemark"/>
         <uniquenessConstraints>
             <uniquenessConstraint>
                 <constraint value="isoCode"/>
             </uniquenessConstraint>
         </uniquenessConstraints>
     </entity>
-    <entity name="LocalizedDescription">
+    <entity name="LocalizedRemark">
         <attribute name="localizedString" optional="YES" attributeType="String"/>
-        <relationship name="language_" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Language" inverseName="localizedDescriptions_" inverseEntity="Language"/>
-        <relationship name="organization_" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Organization" inverseName="localizedDescriptions_" inverseEntity="Organization"/>
+        <relationship name="language_" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Language" inverseName="localizedRemarks_" inverseEntity="Language"/>
+        <relationship name="organization_" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Organization" inverseName="localizedRemarks_" inverseEntity="Organization"/>
         <uniquenessConstraints>
             <uniquenessConstraint>
                 <constraint value="language_"/>
@@ -48,8 +48,6 @@
         </uniquenessConstraints>
     </entity>
     <entity name="Organization" representedClassName="Organization" elementID="PhotoClub" syncable="YES" codeGenerationType="class">
-        <attribute name="descriptionEN" optional="YES" attributeType="String"/>
-        <attribute name="descriptionNL" optional="YES" attributeType="String"/>
         <attribute name="fotobondNumber" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="hasHardCodedMemberData" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="isScrollLocked" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES"/>
@@ -61,11 +59,13 @@
         <attribute name="memberListURL_" optional="YES" attributeType="URI"/>
         <attribute name="name_" attributeType="String" defaultValueString="DefaultPhotoClubName"/>
         <attribute name="pinned" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="remarkEN" optional="YES" attributeType="String" elementID="descriptionEN"/>
+        <attribute name="remarkNL" optional="YES" attributeType="String" elementID="descriptionNL"/>
         <attribute name="shortName_" optional="YES" attributeType="String"/>
         <attribute name="town_" attributeType="String" defaultValueString="DefaultTown"/>
         <attribute name="website" optional="YES" attributeType="URI" elementID="photoClubWebsite"/>
         <attribute name="wikipedia" optional="YES" attributeType="URI"/>
-        <relationship name="localizedDescriptions_" toMany="YES" deletionRule="Cascade" destinationEntity="LocalizedDescription" inverseName="organization_" inverseEntity="LocalizedDescription"/>
+        <relationship name="localizedRemarks_" toMany="YES" deletionRule="Cascade" destinationEntity="LocalizedRemark" inverseName="organization_" inverseEntity="LocalizedRemark"/>
         <relationship name="members_" toMany="YES" deletionRule="Cascade" destinationEntity="MemberPortfolio" inverseName="organization_" inverseEntity="MemberPortfolio"/>
         <relationship name="organizationType_" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="OrganizationType" inverseName="organizations_" inverseEntity="OrganizationType"/>
         <uniquenessConstraints>
@@ -102,13 +102,13 @@
             </uniquenessConstraint>
         </uniquenessConstraints>
     </entity>
+    <configuration name="Configuration_2">
+        <memberEntity name="Language"/>
+        <memberEntity name="LocalizedRemark"/>
+    </configuration>
     <configuration name="Localization">
         <memberEntity name="MemberPortfolio"/>
         <memberEntity name="Organization"/>
         <memberEntity name="Photographer"/>
-    </configuration>
-    <configuration name="Configuration_2">
-        <memberEntity name="Language"/>
-        <memberEntity name="LocalizedDescription"/>
     </configuration>
 </model>

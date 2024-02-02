@@ -153,24 +153,24 @@ extension Organization {
         }
     }
 
-    // Priority system to choose a language for the item's description.
+    // Priority system to choose an item's remark in the appropriate language.
     // The choice depends on the current language settings of the device, and on available translations.
-    var localizedDescription: String {
+    var localizedRemark: String {
         let currentLangID = Locale.current.language.languageCode?.identifier // 2 (occasionally 3) letter ISO 639 code
 
         // first support request for language X if language X is simply available. Give them what they want.
-        if currentLangID?.lowercased() == "en" && descriptionEN != nil { return descriptionEN! }
-        if currentLangID?.lowercased() == "nl" && descriptionNL != nil { return descriptionNL! }
+        if currentLangID?.lowercased() == "en" && remarkEN != nil { return remarkEN! }
+        if currentLangID?.lowercased() == "nl" && remarkNL != nil { return remarkNL! }
 
         // now we are configured to another language (e.g. "fr"), for which there is no translation.
         let apology: StringLiteralType = " [nog geen Nederlandse vertaling beschikbaar]"
         // then use English if available (and apologize to the Dutch)
-        if descriptionEN != nil { return descriptionEN! + apology }
-        if descriptionNL != nil { return descriptionNL! } // as a last resort, use Dutch (nl)
+        if remarkEN != nil { return remarkEN! + apology }
+        if remarkNL != nil { return remarkNL! } // as a last resort, use Dutch (nl)
 
-        return String(localized: "No description available.",
-                      comment: "Shown below map if there is no usable description in the OrganzationList.json file.")
-        // Actually there could be a description (from the json file) in a language other than "en" or "nl",
+        return String(localized: "No remark available.",
+                      comment: "Shown below map if there is no usable remark in the OrganzationList.json file.")
+        // Actually there could be a remark (from the json file) in a language other than "en" or "nl",
         // but the app doesn't store any other language yet. This may change when fixing GitHub issue #272.
     }
 
@@ -186,7 +186,7 @@ extension Organization {
                                  fotobondNumber: Int16? = nil,
                                  coordinates: CLLocationCoordinate2D? = nil,
                                  pinned: Bool = false,
-                                 localizedDescriptions: [JSON] = []
+                                 localizedRemarks: [JSON] = []
                                 ) -> Organization {
 
         let predicateFormat: String = "name_ = %@ AND town_ = %@" // avoid localization
@@ -214,7 +214,7 @@ extension Organization {
                                        fotobondNumber: fotobondNumber),
                       coordinates: coordinates,
                       pinned: pinned,
-                      localizedDescriptions: localizedDescriptions) {
+                      localizedRemarks: localizedRemarks) {
                 print("\(organization.fullNameTown): Updated info for organization \(organization.fullName)")
             }
 			return organization
@@ -231,14 +231,14 @@ extension Organization {
                                         fotobondNumber: fotobondNumber),
                        coordinates: coordinates,
                        pinned: pinned,
-                       localizedDescriptions: localizedDescriptions)
+                       localizedRemarks: localizedRemarks)
             print("\(organization.fullNameTown): Successfully created new \(organizationTypeEum.rawValue)")
 			return organization
 		}
 	}
 
 	// Update non-identifying attributes/properties within existing instance of class PhotoClub
-    // swiftlint:disable:next function_body_length function_parameter_count cyclomatic_complexity
+    // swiftlint:disable:next function_parameter_count cyclomatic_complexity
     private static func update(bgContext: NSManagedObjectContext,
                                organizationTypeEnum: OrganizationTypeEnum,
                                photoClub: Organization, shortName: String,
@@ -247,7 +247,7 @@ extension Organization {
                                                 fotobondNumber: Int16?),
                                coordinates: CLLocationCoordinate2D?,
                                pinned: Bool,
-                               localizedDescriptions: [JSON] ) -> Bool {
+                               localizedRemarks: [JSON] ) -> Bool {
 
 		var modified: Bool = false
 
@@ -284,17 +284,17 @@ extension Organization {
             photoClub.pinned = pinned
             modified = true }
 
-        for localizedDescription in localizedDescriptions {
-            if localizedDescription["language"].stringValue == "EN" {
-                let descriptionEN = localizedDescription["value"].stringValue
-                if photoClub.descriptionEN != descriptionEN {
-                    photoClub.descriptionEN = descriptionEN
+        for localizedRemark in localizedRemarks {
+            if localizedRemark["language"].stringValue == "EN" {
+                let remarkEN = localizedRemark["value"].stringValue
+                if photoClub.remarkEN != remarkEN {
+                    photoClub.remarkEN = remarkEN
                     modified = true
                 }
-            } else if localizedDescription["language"].stringValue == "NL" {
-                let descriptionNL = localizedDescription["value"].stringValue
-                if photoClub.descriptionNL != descriptionNL {
-                    photoClub.descriptionNL = descriptionNL
+            } else if localizedRemark["language"].stringValue == "NL" {
+                let remarkNL = localizedRemark["value"].stringValue
+                if photoClub.remarkNL != remarkNL {
+                    photoClub.remarkNL = remarkNL
                     modified = true
                 }
             }

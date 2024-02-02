@@ -125,7 +125,7 @@ struct OrganizationView: View {
                         UserAnnotation() // show user's location on map
                     } // Map ends here
                         .frame(minHeight: 300, idealHeight: 500, maxHeight: .infinity)
-                    Text(filteredOrganization.localizedDescription)
+                    Text(filteredOrganization.localizedRemark)
                         .padding(.top, 5)
                 } // Organization loop
                 .task {

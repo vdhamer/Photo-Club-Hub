@@ -608,36 +608,38 @@ And it could be used to generate statistics about how man `Organizations` per `O
 
 </summary>
 The `Language` table is a tiny table to hold the languages supported by the OrganizationList.json file.
-For now, it is intended only to support the `LocalizedDescription` table. 
+For now, it is intended only to support the `LocalizedRemark` table. 
 It is not in use yet (Jan 2024).
-Initially a hardcoded equivalent is used to load localized descriptions from OrganizationList.json.
+Initially a hardcoded equivalent is used to load localized remarks from OrganizationList.json.
 
 By storing it in the database, the set of supported `Languages` in OrganizationList.json can be opended.
-For example, a museum in Portugal may have an English and a Portugues description, 
+For example, a museum in Portugal may have an English and a Portugues remark, 
 even when the user interface is only localized to English and Dutch.
 This allows the app to display Portuguese text for the local museum if the device is set to Portuguese,
 while the user interface will be shown in English as long as Portuguese is not supported.
 
-A side benefit of this approach is that localized descriptions can be provided without having to wait until
+A side benefit of this approach is that localized remarks can be provided without having to wait until
 the app provides full support for a language.
 </details></ul>
 
 <ul><details><summary>
 
-#### LocalizedDescription
+#### LocalizedRemark
 
 </summary>
-The `LocalizedDescription` table holds very brief descriptions of an `Organization` in zero or more `Languages`. 
-Descriptions are optional, but are recommended. The `LocalizedDescription` table, but is not filled yet.
-Instead the localized description texts are temporarily stored in hard-coded property fields
-(`descriptionEN`, `descriptionNL`) in the `Organization` table.
+The `LocalizedRemark` table holds brief remarks about an `Organization` in zero or more `Languages`. 
+Remarks are optional, but we recommend providing them. The `LocalizedRemark` table is not filled yet.
+Instead the localized remark texts are temporarily stored in hard-coded property fields
+(`remarkEN`, `remarkNL`) in the `Organization` table.
 
 An `Organization` record can be linked to 0, 1, 2 or more `Languages` regardless of whether the app fully supports that language.
 The ISO 2 or 3-letter code of the language and a readable name are stored in `Language`.
-The actual text shown in the user interface is shown in the `LocalizedDescription` table.
+The actual text shown in the user interface is shown in the `LocalizedRemark` table.
 
-If the device is configured at the iOS level to use e.g. FR for French, the app will give priority to displaying `LocalizedDescriptions` in French if encountered.
-Otherwise it defaults to English, if available. If preferred langugages are not available, it will use a less suitable language if available.
+If the device is configured at the iOS level to use e.g. FR for French,
+the app will give priority to displaying `LocalizedRemarks` in French if encountered.
+Otherwise it defaults to English, if available. 
+If the preferred langugages are not available, it will use a non-preferred language if available.
 </details></ul>
 </details></ul>
     

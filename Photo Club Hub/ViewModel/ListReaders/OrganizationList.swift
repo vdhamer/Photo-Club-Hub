@@ -34,7 +34,7 @@ private let organizationTypesToLoad: [OrganizationTypeEnum] = [.club, .museum]
             }
             "website": "https://www.fcdegender.nl",
             "memberList": "https://www.example.com/deGenderMemberList.json"
-            "description": [
+            "remark": [
                 {
                     "language": "NL",
                     "value": "In dit museum zijn scenes van het TV programma 'Het Perfecte Plaatje' opgenomen."
@@ -55,7 +55,7 @@ private let organizationTypesToLoad: [OrganizationTypeEnum] = [.club, .museum]
             }
             "website": "https://www.fotografiska.com/nyc/",
             "wikipedia": "https://en.wikipedia.org/wiki/Fotografiska_New_York",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "Associated with the original Fotografiska Museum in Stockholm"
@@ -106,7 +106,7 @@ class OrganizationList {
                                                          longitude: jsonCoordinates["longitude"].doubleValue)
                 let website = URL(string: jsonOrganization["website"].stringValue)
                 let wikipedia = URL(string: jsonOrganization["wikipedia"].stringValue)
-                let localizedDescriptions = jsonOrganization["description"].arrayValue
+                let localizedRemarks = jsonOrganization["remark"].arrayValue
                 let fotobondNumber = jsonOrganization["nlSpecific"]["fotobondNumber"].int16Value
                 _ = Organization.findCreateUpdate(context: bgContext,
                                                   organizationTypeEum: organizationTypeEnum,
@@ -115,7 +115,7 @@ class OrganizationList {
                                                   wikipedia: wikipedia,
                                                   fotobondNumber: fotobondNumber, // int16
                                                   coordinates: coordinates,
-                                                  localizedDescriptions: localizedDescriptions)
+                                                  localizedRemarks: localizedRemarks)
             }
             do {
                 if bgContext.hasChanges { // optimization recommended by Apple
