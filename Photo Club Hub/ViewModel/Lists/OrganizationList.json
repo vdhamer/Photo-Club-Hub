@@ -13,7 +13,7 @@
             },
             "website": "https://www.fotokringbeeldhoek.nl",
             "memberList": "https://www.example.com/FK_Beeldhoek.memberlist.json",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "Fotokring Beeldhoek has two meetups per month: one is for photo critiques, the other about the technical side of photography."
@@ -41,7 +41,7 @@
             },
             "website": "https://www.fcobjectief.nl",
             "memberList": "https://www.example.com/FC_Objectief.memberlist.json",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "The club meets monthly and has thematic subgroups, and organizes excursions and a yearly exposition. "
@@ -68,7 +68,7 @@
             },
             "website": "https://www.shot71.nl",
             "memberList": "https://www.example.com/FFC_Shot71.memberlist.json",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "The club was founded in 1971, and has separate meetups for photography, video, and audiovisual presentations."
@@ -95,7 +95,7 @@
             },
             "website": "https://www.fotogroep-focus.nl",
             "memberList": "https://www.example.com/FG_Focus.memberlist.json",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "The club meets every 3 weeks in a local community building, and holds a yearly exposition around March."
@@ -122,7 +122,7 @@
             },
             "website": "https://argusfoto.nl/",
             "memberList": "https://www.example.com/Argusfoto.memberlist.json",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "The group is relatively small (7, but wants to grow a bit), so a photo review session lead by an external coach can be held in one of the homes."
@@ -149,7 +149,7 @@
             },
             "website": "https://fotoclubdenbosch.nl/",
             "memberList": "https://www.example.com/denBosch.memberlist.json",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "In a national competition with 133 clubs in 2023, AFC68 reached an impressive 4th place."
@@ -175,7 +175,7 @@
                 "longitude": 5.29832
             },
             "memberList": "https://www.example.com/iso2016.memberlist.json",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "The club ISO 2016 in Den Bosch ('s Hertogenbosch) does not currently have a website."
@@ -202,7 +202,7 @@
             },
             "website": "https://www.optika.nl",
             "memberList": "https://www.example.com/FC_Optika.memberlist.json",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "The club meets in the canteen of their local sports club. Emphasis is on the resulting images, rather than the required techniques."
@@ -229,7 +229,7 @@
             },
             "website": "https://www.kemfodia.nl/",
             "memberList": "https://www.example.com/FC_Kemfodia.memberlist.json",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "The club meets in the vilage's community centre. Apart from excursions and expositions, part of the work is based on a yearly theme."
@@ -256,7 +256,7 @@
             },
             "website": "https://fotoclublucifer.nl",
             "memberList": "https://www.example.com/fcLucifer.memberList.json",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "The club leans towards experimental and creative photography, but does honor a long-standing tradition of closing each year with an exposition on the day after Christmas."
@@ -283,7 +283,7 @@
             },
             "website": "https://www.ericamera.nl/",
             "memberList": "https://www.example.com/fcEricamera.memberList.json",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "Ericamera has its own YouTube channel, and can sometimes also be found on the YouTube channel of CKE which sponsors the club."
@@ -311,7 +311,7 @@
             },
             "website": "https://nl.qrcodechimp.com/page/a6d3r7?v=chk1697032881",
             "memberList": "https://www.example.com/fgAnders.memberList.json",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "Fotogroep Anders is nice and small. Members thus meet in their own homes."
@@ -335,7 +335,7 @@
             },
             "website": "https://www.fcdegender.nl",
             "memberList": "https://www.example.com/deGender.memberList.json",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "Note that Fotogroep de Gender is abbreviated fcdegender.nl for historical reasons."
@@ -362,7 +362,7 @@
             },
             "website": "https://debuut.jimdofree.com",
             "memberList": "https://www.example.com/fcDebuut.memberList.json",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "A small club where 'anything goes, like out-of-focus, crooked and grainy - as long as it results in an unique image that conveys an message.'"
@@ -389,7 +389,7 @@
             },
             "website": "https://www.fotogroepklick.nl/",
             "memberList": "https://www.example.com/fgKlick.memberList.json",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "The club was founded in 2010 after a number of participants of a photography workshop decided to continue on together as a club."
@@ -416,7 +416,7 @@
             },
             "website": "https://www.fotoclubrapenland.nl/",
             "memberList": "https://www.example.com/fcRapenland.memberList.json",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "The club meets in a community centre in Eindhoven. The yearly exposition is in March."
@@ -443,7 +443,7 @@
             },
             "website": "https://www.fotoclubkarregat.nl/",
             "memberList": "https://www.example.com/fcKarregat.memberList.json",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "The club with up to 25 members meets in the former town hall of a municipality that is now part of Eindhoven."
@@ -470,7 +470,7 @@
             },
             "website": "http://www.fotoclubgemert.nl/",
             "memberList": "https://www.example.com/fcGemert.memberList.json",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "The club was founded in 1980 as an initiative by the local photographer/artist Piet Kuppens who gave photography lessons."
@@ -497,7 +497,7 @@
             },
             "website": "https://www.fotoclubdesoos.nl",
             "memberList": "https://www.example.com/fcDeSoos.memberList.json",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "Club members are required to join the parent organization Sociëteit in Grave. Photo club membership then costs a bit extra."
@@ -524,7 +524,7 @@
             },
             "website": "https://www.fotoclubnuland.nl/",
             "memberList": "https://www.example.com/fcNuland.memberList.json",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "In 2023, FC Nuland and two nearby clubs generated a photographic 'The Chain' whereby each member created an image inspired by the previous photo in the chain."
@@ -551,7 +551,7 @@
             },
             "website": "https://www.fotografieclub-bgc.nl",
             "memberList": "https://www.example.com/fcBGC.memberList.json",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "BGC stands for three neighboring villages (Boxmeer, Gennep, and Cuijk) along the Maas/Meuse river."
@@ -578,7 +578,7 @@
             },
             "website": "http:s//fotogroepoirschot.nl/",
             "memberList": "https://www.example.com/fgOirschot.memberList.json",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "At a club meeting, the work of 3 of the members is discussed. Each of these 3 members selects one 'photo of the month' for an in depth discussion."
@@ -604,7 +604,7 @@
                 "longitude": 5.38736
             },
             "memberList": "https://www.example.com/fgRiethoven.memberList.json",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "This club doesn't have a website."
@@ -631,7 +631,7 @@
             },
             "website": "https://fotoclubtspectrum.nl",
             "memberList": "https://www.example.com/fcSpectrum.memberList.json",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "Fotoclub 't Spectrum (with among other FC Nuland) generated a photographic 'The Chain 2023' whereby each member created an image inspired by the previous photo in the chain."
@@ -658,7 +658,7 @@
             },
             "website": "https://hefotoclub.nl",
             "memberList": "https://www.example.com/hefoto.memberList.json",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "Fotoclub Hefoto (with among other FC 't Spectrum) generated a photographic 'The Chain 2023' whereby each member created an image inspired by the previous photo in the chain."
@@ -682,7 +682,7 @@
             },
             "website": "https://www.fotoclubschijndel.nl",
             "memberList": "https://www.example.com/fcSchijndel.memberList.json",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "fcSchijndel coordinates it yearly exposition with 3 other nearby clubs (fcRooi, Zoomm, fcVeghel)."
@@ -709,7 +709,7 @@
             },
             "website": "http://www.fotoclubrooi.nl/",
             "memberList": "https://www.example.com/fcRooi.memberList.json",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "fcRooi coordinates it yearly exposition with 3 other nearby clubs (fcSchijndel, Zoomm, fcVeghel)"
@@ -736,7 +736,7 @@
             },
             "website": "https://fotoclubveghel.nl",
             "memberList": "https://www.example.com/fcVeghel.memberList.json",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "fcVeghel coordinates it yearly exposition with 3 other nearby clubs (fcSchijndel, Zoomm, fcRooi)"
@@ -763,7 +763,7 @@
             },
             "website": "https://www.facebook.com/FotofestijnMeierijstad/",
             "memberList": "https://www.example.com/fgZoomm.memberList.json",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "fgZoom coordinates it yearly exposition with 3 other nearby clubs (fcSchijndel, fcVeghel, fcRooi)"
@@ -787,7 +787,7 @@
             },
             "website": "https://www.f8-uden.nl",
             "memberList": "https://www.example.com/f8Uden.memberList.json",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "Their website states that due to Covid they haven't had meetings in years, but that text probably needs updating."
@@ -814,7 +814,7 @@
             },
             "website": "",
             "memberList": "https://www.example.com/fcBeeldspraakU.memberList.json",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "Don't confuse this club with FC Beeldspraak in Groningen."
@@ -838,7 +838,7 @@
             },
             "website": "https://www.fotoClubBellusImago.nl",
             "memberList": "https://www.example.com/fcBellusImago.memberList.json",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "The club's name (almost) means Beautiful Image in Latin."
@@ -865,7 +865,7 @@
             },
             "website": "https://www.fotogroepveldhoven.nl",
             "memberList": "https://www.example.com/fgVeldhoven.memberList.json",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "In total the group meets about 25 times per year."
@@ -892,7 +892,7 @@
             },
             "website": "https://www.fotogroepvught.nl",
             "memberList": "https://www.example.com/fgVught.memberList.json",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "The yearly exposition is held in the repurposed monumental church of Vught."
@@ -919,7 +919,7 @@
             },
             "website": "https://www.fotogroepwaalre.nl",
             "memberList": "https://www.example.com/fgWaalre.memberList.json",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "The club is named after its home town Waalre, near Eindhoven."
@@ -946,7 +946,7 @@
             },
             "website": "https://www.collectiefbrabant.nl",
             "memberList": "https://www.example.com/Brabant.memberList.json",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "We think that members of this club are not especially centered around Waalwijk: expositions are held in Eindhoven (50 km away)."
@@ -973,7 +973,7 @@
             },
             "website": "https://www.fotoclubkiekus.nl",
             "memberList": "https://www.example.com/fcKiekus.memberList.json",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "The club explicitly writes that they also welcome beginning amateur photographers."
@@ -1000,7 +1000,7 @@
             },
             "website": "",
             "memberList": "https://www.example.com/?.memberList.json",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "Photos are mostly done based on matted prints. In special cases a beamer is used."
@@ -1027,7 +1027,7 @@
             },
             "website": "www.facebook.com/ObjectiefZeeland",
             "memberList": "https://www.example.com/???.memberList.json",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "The club has over 20 frames in various locations in the village, forming a permanent but changing exposition of the club's work."
@@ -1055,7 +1055,7 @@
             },
             "website": "https://www.foam.org",
             "wikipedia": "https://en.wikipedia.org/wiki/Foam_Fotografiemuseum_Amsterdam",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "The two adjacent Amsterdam canal mansions house a museum orignally named after its founder (Carel Joseph) Fodor."
@@ -1079,7 +1079,7 @@
             },
             "website": "https://www.huismarseille.nl/",
             "wikipedia": "https://nl.wikipedia.org/wiki/Huis_Marseille",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "The two adjacent Amsterdam canal mansions house the oldest photography museum in the Netherlands."
@@ -1103,7 +1103,7 @@
             },
             "website": "https://www.fotomuseum.be/",
             "wikipedia": "https://nl.wikipedia.org/wiki/Fotomuseum_Antwerpen",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "The museum in a former warehouse holds photo exhibitions, but started off with the Agfa-Gevaert camera archive."
@@ -1126,7 +1126,7 @@
                 "longitude": 3.909453
             },
             "website": "https://www.wittesmuseum.nl/fotografie/",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "The museum incorporates vintage cameras collected by Jan and Maarten Witte."
@@ -1150,7 +1150,7 @@
             },
             "website": "https://ballaratfoto.org",
             "wikipedia": "https://en.wikipedia.org/wiki/National_Centre_for_Photography",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "The museum is associated with the Ballarat International Foto Biennale festival. The building may not be finished yet."
@@ -1174,7 +1174,7 @@
             },
             "website": "https://www.smb.museum/museen-einrichtungen/museum-fuer-fotografie/home/",
             "wikipedia": "https://en.wikipedia.org/wiki/Museum_of_Photography,_Berlin",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "The museum houses the Helmut Newton Foundation."
@@ -1198,7 +1198,7 @@
             },
             "website": "https://www.fotomuseumdenhaag.nl/",
             "wikipedia": "https://en.wikipedia.org/wiki/Fotomuseum_Den_Haag",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "The museum is afiliated with the older and adjacent art museum Kunstmuseum Den Haag."
@@ -1218,7 +1218,7 @@
             },
             "website": "",
             "wikipedia": "https://en.wikipedia.org/wiki/National_Photographic_Archive",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "Part of the National Library of Ireland. The archive also hosts photography exhibitions."
@@ -1238,7 +1238,7 @@
             },
             "website": "https://www.museocamera.org/",
             "wikipedia": "https://en.wikipedia.org/wiki/Museo_Camera",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "The focus of this museum was originally a collection of vintage cameras."
@@ -1258,7 +1258,7 @@
             },
             "website": "http://www.museumhilversum.nl",
             "wikipedia": "https://nl.wikipedia.org/wiki/Museum_Hilversum",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "This museum hosted a 2023 Dutch reality show, 'Het Perfecte Plaatje', about aspiring photographers."
@@ -1281,7 +1281,7 @@
                 "longitude": 112.38392
             },
             "website": "http://www.lmop.org.cn",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "The museum's URL and even GPS coordinates don't currently work, but the museum is in Lianzhou, China."
@@ -1301,7 +1301,7 @@
             },
             "website": "http://thephotographersgallery.org.uk/",
             "wikipedia": "https://en.wikipedia.org/wiki/The_Photographers%27_Gallery",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "The gallery has three exhibition spaces and a commercial gallery where photo prints are sold."
@@ -1321,7 +1321,7 @@
             },
             "website": "https://www.vam.ac.uk/info/photography-centre",
             "wikipedia": "https://en.wikipedia.org/wiki/Victoria_and_Albert_Museum",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "The museum describes its Photography Centre as 'the largest space in the UK dedicated to a permanent photography collection'."
@@ -1341,7 +1341,7 @@
             },
             "website": "http://www.museumaanhetvrijthof.nl",
             "wikipedia": "https://nl.wikipedia.org/wiki/Fotomuseum_aan_het_Vrijthof",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "The museum is privately owned and is entirely funded by admission fees and donations."
@@ -1360,7 +1360,7 @@
                 "longitude": -3.70135
             },
             "website": "https://www.comunidad.madrid/centros/sala-canal-isabel-ii",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "The museum is located in a former water tower, and named after the nearby canal."
@@ -1380,7 +1380,7 @@
             },
             "website": "http://ccp.org.au/",
             "wikipedia": "https://en.wikipedia.org/wiki/Centre_for_Contemporary_Photography",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "The town Fitzroy is part of Melbourne, Australia."
@@ -1400,7 +1400,7 @@
             },
             "website": "https://www.icp.org",
             "wikipedia": "https://en.wikipedia.org/wiki/International_Center_of_Photography",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "The museum and school were founded by Cornell Capa, the younger brother of Magnum photographer Robert Capa."
@@ -1420,7 +1420,7 @@
             },
             "website": "https://www.fotografiska.com/nyc/",
             "wikipedia": "https://en.wikipedia.org/wiki/Fotografiska_New_York",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "Fotografiska New York is a branch of the Swedish Fotografiska museum."
@@ -1444,7 +1444,7 @@
             },
             "website": "https://www.moma.org/about/curatorial-departments/photography",
             "wikipedia": "https://en.wikipedia.org/wiki/Museum_of_Modern_Art",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "This department within the Museum of Modern art describes itself as 'one of the most important collections of modern and contemporary photography in the world'."
@@ -1464,7 +1464,7 @@
             },
             "website": "https://www.gallery.ca/cpi",
             "wikipedia": "https://en.wikipedia.org/wiki/National_Gallery_of_Canada",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "The former Canadian Museum of Contemporary Photography is now part of the National Gallery of Canada."
@@ -1484,7 +1484,7 @@
             },
             "website": "http://www.henricartierbresson.org/en/",
             "wikipedia": "https://en.wikipedia.org/wiki/Henri_Cartier-Bresson_Foundation",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "The museum's mission is to preserve the archives of Henri Cartier-Bresson and his wife, photographer Martine Franck."
@@ -1504,7 +1504,7 @@
             },
             "website": "https://cpf.pt",
             "wikipedia": "https://en.wikipedia.org/wiki/Portuguese_Centre_of_Photography",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "The museum/archive's website is currently only available in Portuguese."
@@ -1524,7 +1524,7 @@
             },
             "website": "http://www.cmp.ucr.edu/",
             "wikipedia": "https://en.wikipedia.org/wiki/UCR/California_Museum_of_Photography",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "The museum (near Los Angeles) is owned and operated by the University of California, Riverside."
@@ -1544,7 +1544,7 @@
             },
             "website": "https://www.eastman.org/",
             "wikipedia": "https://en.wikipedia.org/wiki/George_Eastman_Museum",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "This is the oldest photography museum in the world. George Eastman founded Kodak."
@@ -1564,7 +1564,7 @@
             },
             "website": "https://www.nederlandsfotomuseum.nl",
             "wikipedia": "https://en.wikipedia.org/wiki/Netherlands_Photo_Museum",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "The museum will relocate to this new building in the coming years, but the old site is in walking distance."
@@ -1584,7 +1584,7 @@
             },
             "website": "http://www.domonken-kinenkan.jp/",
             "wikipedia": "https://en.wikipedia.org/wiki/Ken_Domon_Museum_of_Photography",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "The museum is named after the Japanese photographer Ken Domon who was born in Sakata, Japan."
@@ -1608,7 +1608,7 @@
             },
             "website": "https://acp.org.au/",
             "wikipedia": "https://en.wikipedia.org/wiki/Australian_Centre_for_Photography",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "After financial issues in 2020, the museum is now part of Powerhouse, a museum group in Australia."
@@ -1632,7 +1632,7 @@
             },
             "website": "http://www.fotografiska.com/",
             "wikipedia": "https://en.wikipedia.org/wiki/Fotografiska",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "Fotografiska has subsidiaries in New York, Talinn and Berlin."
@@ -1652,7 +1652,7 @@
             },
             "website": "https://momus.gr/en/museum/thessaloniki-museum-photography#museum",
             "wikipedia": "https://en.wikipedia.org/wiki/MOMus–Thessaloniki_Museum_of_Photography",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "The museum is housed in a former warehouse and organizes the Thassaloniki Photobiennale."
@@ -1672,7 +1672,7 @@
             },
             "website": "http://topmuseum.jp/e/contents/index.html",
             "wikipedia": "https://en.wikipedia.org/wiki/Tokyo_Photographic_Art_Museum",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "The museum is formally located in Meguro, on the outskirts of Tokyo."
@@ -1692,7 +1692,7 @@
             },
             "website": "https://www.fotodok.org",
             "wikipedia": "https://nl.wikipedia.org/wiki/Rob_Hornstra#FOTODOK",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "The museum focusses on documentary photography and was founded by a Dutch photographer Rob Hornstra."
@@ -1712,7 +1712,7 @@
             },
             "website": "https://www.nationalgeographic.org/society/visit-base-camp/",
             "wikipedia": "https://en.wikipedia.org/wiki/National_Geographic_Society#National_Geographic_Museum",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "The National Geographic Museum is currently (early 2024) temporarily closed for renovation."
@@ -1731,7 +1731,7 @@
                 "longitude": 3.91938
             },
             "website": "https://www.cameramuseum.nl",
-            "description": [
+            "remark": [
                 {
                     "language": "EN",
                     "value": "This small museum is mainly about classic cameras. It also covers regional photographers."
