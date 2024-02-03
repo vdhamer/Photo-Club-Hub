@@ -103,12 +103,12 @@
         </uniquenessConstraints>
     </entity>
     <configuration name="Configuration_2">
-        <memberEntity name="Language"/>
-        <memberEntity name="LocalizedRemark"/>
-    </configuration>
-    <configuration name="Localization">
         <memberEntity name="MemberPortfolio"/>
         <memberEntity name="Organization"/>
         <memberEntity name="Photographer"/>
+    </configuration>
+    <configuration name="Configuration_2">
+        <memberEntity name="Language"/>
+        <memberEntity name="LocalizedRemark"/>
     </configuration>
 </model>

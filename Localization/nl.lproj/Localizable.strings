@@ -92,11 +92,11 @@ Default status of member within a club. Used in concatenations. */
 /* Mode for the Clubs page: show museums as sections. */
 "museums" = "musea";
 
-/* Shown below map if there is no usable remark in the OrganzationList.json file. */
-"No remark available." = "Er is geen opmerking beschikbaar.";
-
 /* Hint to the user if the database returns zero PhotoClubs. */
 "No photo clubs seem to be currently loaded.\nTry dragging down the Photo Clubs screen to reload the default clubs." = "Er zijn geen Fotogroepen momenteel geladen.\nDoor dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorbeeldclubs geladen. ";
+
+/* Shown below map if there is no usable remark in the OrganzationList.json file. */
+"No remark available." = "Er is geen opmerking beschikbaar.";
 
 /* X of Y portfolio(s) shown (due to various forms of filtering) */
 "of1" = "van";

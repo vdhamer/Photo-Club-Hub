@@ -2,7 +2,7 @@
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
   <file original="en.lproj/Photo-Club-Hub-InfoPlist.strings" source-language="en" target-language="nl" datatype="plaintext">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="15.2" build-num="15C500b"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="15.3" build-num="15E5178i"/>
     </header>
     <body>
       <trans-unit id="CFBundleDisplayName" xml:space="preserve">
@@ -24,7 +24,7 @@
   </file>
   <file original="Localization/en.lproj/Localizable.strings" source-language="en" target-language="nl" datatype="plaintext">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="15.2" build-num="15C500b"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="15.3" build-num="15E5178i"/>
     </header>
     <body>
       <trans-unit id="%lld entries" xml:space="preserve">
@@ -112,17 +112,17 @@
         <target>Lidmaatschapstypen</target>
         <note>In Preferences, above toggles like "Show former members"</note>
       </trans-unit>
-      <trans-unit id="No description available." xml:space="preserve">
-        <source>No description available.</source>
-        <target>Er is geen omschrijving beschikbaar.</target>
-        <note>Shown below map if there is no usable description in the OrganzationList.json file.</note>
-      </trans-unit>
       <trans-unit id="No photo clubs seem to be currently loaded.&#10;Try dragging down the Photo Clubs screen to reload the default clubs." xml:space="preserve">
         <source>No photo clubs seem to be currently loaded.
 Try dragging down the Photo Clubs screen to reload the default clubs.</source>
         <target>Er zijn geen Fotogroepen momenteel geladen.
 Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorbeeldclubs geladen. </target>
         <note>Hint to the user if the database returns zero PhotoClubs.</note>
+      </trans-unit>
+      <trans-unit id="No remark available." xml:space="preserve">
+        <source>No remark available.</source>
+        <target>Er is geen opmerking beschikbaar.</target>
+        <note>Shown below map if there is no usable remark in the OrganzationList.json file.</note>
       </trans-unit>
       <trans-unit id="One photographer" xml:space="preserve">
         <source>One photographer</source>
@@ -187,7 +187,7 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
       <trans-unit id="Paragraph_2.5" xml:space="preserve">
         <source>We try to show the portfolios with **minimal distraction**. Web sites are often less optimal for this because they need to show browser controls (e.g., an address bar or tabs) and serve multiple purposes (e.g., show club news or contact information).</source>
         <target>Net als bij een tentoonstelling is het belangrijk om een portfolio _zonder afleiding_ te kunnen bekijken. Webpagina's zijn hiervoor vaak iets te druk vanwege bedieningselementen zoals de adresbalk of tabbladen, maar ook omdat een clubwebsite vaak meerdere doeleinden dient (bijvoorbeeld het verspreiden van clubnieuws).</target>
-        <note>Fifth paragraph in The-Concept on Readme page</note>
+        <note>Fifth paragraph in The Concept on Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_2.6" xml:space="preserve">
         <source>For Photo Club Waalre, for example, we chose to also include the work of former club members. By default, former members are not visible, but you can enable displaying them in the Preferences screen.</source>
@@ -195,8 +195,8 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
         <note>Sixth paragraph in The Concept on Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_2.7" xml:space="preserve">
-        <source>Contact us (e.g. via Github, Facebook or LinkedIn) if you are interested in adding support for your photo club.</source>
-        <target>Clubs met belangstelling om deel te nemen kunnen contact opnemen via Github, Facebook of LinkedIn.</target>
+        <source>Contact us (e.g. via GitHub, Facebook or LinkedIn) if you are interested in adding support for your photo club.</source>
+        <target>Clubs met belangstelling om deel te nemen kunnen contact opnemen via GitHub, Facebook of LinkedIn.</target>
         <note>Seventh paragraph in The Concept on Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.1" xml:space="preserve">

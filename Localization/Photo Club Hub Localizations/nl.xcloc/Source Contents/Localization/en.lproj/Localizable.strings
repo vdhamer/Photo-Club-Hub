@@ -83,8 +83,8 @@ Default status of member within a club. Used in concatenations. */
 /* Statistics at end of section of FilteredMemberPortfoliosView */
 "members" = "members";
 
-/* Shown below map if there is no usable description in the OrganzationList.json file. */
-"No description available." = "No description available.";
+/* Shown below map if there is no usable remark in the OrganzationList.json file. */
+"No remark available." = "No remark available.";
 
 /* Hint to the user if the database returns zero PhotoClubs. */
 "No photo clubs seem to be currently loaded.\nTry dragging down the Photo Clubs screen to reload the default clubs." = "No photo clubs seem to be currently loaded.\nTry dragging down the Photo Clubs screen to reload the default clubs.";
@@ -138,7 +138,7 @@ Default status of member within a club. Used in concatenations. */
 "Paragraph_2.6" = "For Photo Club Waalre, for example, we chose to also include the work of former club members. By default, former members are not visible, but you can enable displaying them in the Preferences screen.";
 
 /* Seventh paragraph in The Concept on Readme page */
-"Paragraph_2.7" = "Contact us (e.g. via Github, Facebook or LinkedIn) if you are interested in adding support for your photo club.";
+"Paragraph_2.7" = "Contact us (e.g. via GitHub, Facebook or LinkedIn) if you are interested in adding support for your photo club.";
 
 /* First paragraph in The Features section of Readme page */
 "Paragraph_3.1" = "__Web sites__\nThe app does not try to replace club web sites: web sites have more uses than just presenting photos. Because we consider web sites and this app to be _complementary_, the app provides clickable links to club web sites as well as to photographer web sites.";
