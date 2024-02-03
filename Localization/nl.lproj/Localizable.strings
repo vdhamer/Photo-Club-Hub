@@ -40,6 +40,9 @@
 /* Title of page with maps of clubs and museums */
 "Clubs" = "Clubs";
 
+/* Title of page with maps of clubs and museums */
+"Clubs & Museums" = "Clubs en Musea";
+
 /* Section title on Readme page */
 "Concept" = "Het concept";
 

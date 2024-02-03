@@ -12,15 +12,13 @@ struct OrganizationListView: View {
     @Environment(\.managedObjectContext) private var viewContext
     @StateObject var model = PreferencesViewModel()
     @State var locationManager = LocationManager()
-
     @FetchRequest(
-        sortDescriptors: [SortDescriptor(\.pinned, order: .reverse), // pinned club at top of list
-                          SortDescriptor(\.name_, order: .forward), // photo clubs are identified by (name, town)
-                          SortDescriptor(\.town_, order: .forward)], // just to make it repeatable
+        sortDescriptors: [], // organizations is only used for counting, so sorting doesn't matter
         animation: .default)
     private var organizations: FetchedResults<Organization>
     private var predicate: NSPredicate = NSPredicate.all
-    private var navigationTitle = String(localized: "Clubs", comment: "Title of page with maps of clubs and museums")
+    private var navigationTitle = String(localized: "Clubs & Museums",
+                                         comment: "Title of page with club and museum maps")
 
     init(predicate: NSPredicate? = nil,
          navigationTitle: String? = nil) {

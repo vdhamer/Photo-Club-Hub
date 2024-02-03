@@ -67,6 +67,11 @@
         <target>Clubs</target>
         <note>Title of page with maps of clubs and museums</note>
       </trans-unit>
+      <trans-unit id="Clubs &amp; Museums" xml:space="preserve">
+        <source>Clubs &amp; Museums</source>
+        <target>Clubs &amp; Museums</target>
+        <note>Title of page with maps of clubs and museums</note>
+      </trans-unit>
       <trans-unit id="Concept" xml:space="preserve">
         <source>The concept</source>
         <target>The concept</target>

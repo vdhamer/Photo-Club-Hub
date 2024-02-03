@@ -21,17 +21,19 @@ struct OrganizationView: View {
     let interactionModes: MapInteractionModes = [.pan, .zoom, .rotate, .pitch]
     @State private var mapSelection: MKMapItem? // selected Anotation, if any
 
+    let sortDescriptors: [SortDescriptor] = [
+        SortDescriptor(\Organization.pinned, order: .reverse), // pinned clubs first
+        SortDescriptor(\Organization.organizationType_?.name_, order: .forward),
+        SortDescriptor(\Organization.name_, order: .forward), // photoclubID=name&town
+        SortDescriptor(\Organization.town_, order: .forward)
+    ]
+
     // regenerate Section using dynamic FetchRequest with dynamic predicate and dynamic sortDescriptor
     init(predicate: NSPredicate) {
         _fetchedOrganizations = FetchRequest<Organization>(
-            sortDescriptors: // replaces previous fetchRequest
-                [
-                 SortDescriptor(\.pinned, order: .reverse), // pinned clubs first
-                 SortDescriptor(\.name_, order: .forward), // photoclubID=name&town
-                 SortDescriptor(\.town_, order: .forward)
-                ],
+            sortDescriptors: sortDescriptors, // replaces previous fetchRequest
             predicate: predicate,
-            animation: .bouncy
+            animation: .easeIn
         )
     }
 
