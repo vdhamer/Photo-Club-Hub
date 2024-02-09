@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// swiftlint:disable:next type_body_length
 struct ReadmeView: View {
 
     private static let paddingAmount: CGFloat = 20
@@ -22,7 +23,7 @@ struct ReadmeView: View {
                 ScrollView(.vertical, showsIndicators: true) {
                     VStack {
                         VStack { // extra hierarchy level because container View can handle max 10 Views
-                            SectionHeader(String(localized: "The app", comment: "Section title on Readme page"),
+                            SectionHeader(String(localized: "The App", comment: "Section title on Readme page"),
                                           geo: geo)
 
                             Paragraph("1.1", comment: "First paragraph in The-app section of Readme page", geo: geo)
@@ -45,8 +46,18 @@ struct ReadmeView: View {
                         }
 
                         VStack {
-                            SectionHeader(String(localized: "The concept", comment: "Section title on Readme page"),
+                            SectionHeader(String(localized: "The Concept", comment: "Section title on Readme page"),
                                                  geo: geo)
+
+                            Group { // can have max 10 views within a container view
+                                Paragraph("2.1", comment: "First paragraph in Concept section of Readme page", geo: geo)
+                                Paragraph("2.2", comment: "Second paragraph in Concept section of Readme page",
+                                          geo: geo)
+                                Paragraph("2.3", comment: "Third paragraph in Concept section of Readme page", geo: geo)
+                                Paragraph("2.4", comment: "Fourth paragraph in Concept section of Readme page",
+                                          geo: geo)
+                                Paragraph("2.5", comment: "Fifth paragraph in Concept section of Readme page", geo: geo)
+                            }
 
                             Image("Waalre_AppIcon")
                                 .resizable()
@@ -62,42 +73,71 @@ struct ReadmeView: View {
                                     Text("")
                                 }
                             }
-
-                            Group { // can have max 10 views within a container view
-                                Paragraph("2.1", comment: "First paragraph in Concept section of Readme page", geo: geo)
-                                Paragraph("2.2", comment: "Second paragraph in Concept section of Readme page",
-                                          geo: geo)
-                                Paragraph("2.3", comment: "Third paragraph in Concept section of Readme page", geo: geo)
-                                Paragraph("2.4", comment: "Fourth paragraph in Concept section of Readme page",
-                                          geo: geo)
-                                Paragraph("2.5", comment: "Fifth paragraph in Concept section of Readme page", geo: geo)
-                                Paragraph("2.6", comment: "Sixth paragraph in Concept section of Readme page", geo: geo)
-
-                                Image("Preferences")
-                                    .resizable()
-                                    .border(.gray, width: 1)
-                                    .scaledToFit()
-                                    .frame(width: geo.size.width * 0.8, height: 300, alignment: .center)
-                                Text("The Preferences screen.",
-                                     comment: "Caption of an image on the Readme page")
-                                    .font(.callout.italic())
-                                    .frame(width: geo.size.width * 0.8, alignment: .center)
-                                Text("")
-
-                                Paragraph("2.7", comment: "Seventh paragraph in Concept section of Readme page",
-                                          geo: geo)
-                            }
                         }
 
                         VStack {
-                            SectionHeader(String(localized: "Features and tips",
+                            SectionHeader(String(localized: "Features and Tips",
                                                  comment: "Section title on Readme page"),
                                           geo: geo)
 
                             Group { // can have max 10 views within a container view
+
                                 Paragraph("3.1",
                                           comment: "First paragraph in The Features section of Readme page",
                                           geo: geo, bottomPaddingAmount: 10)
+
+                                Image("Localizations") // belongs to Paragraph 3.1
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: geo.size.width * 0.8, alignment: .center)
+                                    .border(.gray, width: 1)
+                                Text("Supporting multiple languages",
+                                     comment: "Caption of Localizations image on Readme page")
+                                .font(.callout.italic())
+                                .frame(width: geo.size.width, alignment: .center)
+                                Text("")
+
+                                Paragraph("3.2", comment: "Second paragraph in The Features section of Readme page",
+                                          geo: geo, bottomPaddingAmount: 10)
+
+                                Image("3D_map") // belongs to Paragraph 3.2
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: geo.size.width * 0.8, alignment: .center)
+                                    .border(.gray, width: 1)
+                                Text("Maps can be viewed in 3D",
+                                     comment: "Caption of 3D image on Readme page")
+                                .font(.callout.italic())
+                                .frame(width: geo.size.width, alignment: .center)
+                                Text("")
+
+                                Paragraph("3.3", comment: "Third paragraph in The Features section of Readme page",
+                                          geo: geo, bottomPaddingAmount: 10)
+
+                                Paragraph("3.4", comment: "Fourth paragraph in The Features section of Readme page",
+                                          geo: geo, bottomPaddingAmount: 10)
+                            }
+
+                            Group {
+                                Paragraph("3.5",
+                                          comment: "Fifth paragraph in The Features section of Readme page", geo: geo)
+
+                                Image("Maps") // belongs to Paragraph 3.5
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: geo.size.width * 0.8, alignment: .center)
+                                    .border(.gray, width: 1)
+                                Text("Amsterdam has two photography museums.",
+                                     comment: "Caption of Museums image on Readme page")
+                                .font(.callout.italic())
+                                .frame(width: geo.size.width, alignment: .center)
+                                Text("")
+
+                                Paragraph("3.6",
+                                          comment: "Sixth paragraph in The Features section of Readme page", geo: geo)
+
+                                Paragraph("3.7",
+                                          comment: "Seventh paragraph in The Features section of Readme page", geo: geo)
 
                                 Image("Website")
                                     .resizable()
@@ -110,83 +150,32 @@ struct ReadmeView: View {
                                 .frame(width: geo.size.width, alignment: .center)
                                 Text("")
 
-                                Paragraph("3.2", comment: "Second paragraph in The Features section of Readme page",
-                                          geo: geo)
-
-                                Image("Localizations")
+                                Paragraph("3.8",
+                                          comment: "Eighth paragraph in The Features section of Readme page", geo: geo)
+                                Image("2021_FotogroepWaalre_058")
                                     .resizable()
-                                    .scaledToFit()
-                                    .frame(width: geo.size.width * 0.8, alignment: .center)
+                                    .frame(width: 250, height: 375, alignment: .center)
+                                    .scaledToFill()
                                     .border(.gray, width: 1)
-                                Text("Supporting multiple languages",
-                                     comment: "Caption of Localizations image on Readme page")
-                                .font(.callout.italic())
-                                .frame(width: geo.size.width, alignment: .center)
-                                Text("")
+                                    .frame(width: geo.size.width, alignment: .center)
+                                Text(verbatim: "© 2021 Greetje van Son\n")
+                                    .font(.callout.italic())
+                                    .frame(width: geo.size.width, alignment: .center)
 
-                                Paragraph("3.3", comment: "Third paragraph in The Features section of Readme page",
-                                          geo: geo, bottomPaddingAmount: 10)
+                                Paragraph("3.9",
+                                          comment: "Ninth paragraph in The Features section of Readme page", geo: geo)
 
-                                Paragraph("3.4", comment: "Fourth paragraph in The Features section of Readme page",
-                                          geo: geo, bottomPaddingAmount: 10)
-
-                                Image("Maps")
+                                Image("Preferences")
                                     .resizable()
-                                    .scaledToFit()
-                                    .frame(width: geo.size.width * 0.8, alignment: .center)
                                     .border(.gray, width: 1)
-                                Text("Amsterdam has two photography museums.",
-                                     comment: "Caption of Museums image on Readme page")
-                                .font(.callout.italic())
-                                .frame(width: geo.size.width, alignment: .center)
+                                    .scaledToFit()
+                                    .frame(width: geo.size.width * 0.8, height: 300, alignment: .center)
+                                Text("The Preferences screen.",
+                                     comment: "Caption of an image on the Readme page")
+                                    .font(.callout.italic())
+                                    .frame(width: geo.size.width * 0.8, alignment: .center)
                                 Text("")
                             }
-
-/*
-                            HStack {
-                                Spacer()
-                                Button {
-                                    showingRoadmap = true
-                                } label: {
-                                    Label(String(localized: "Vote on roadmap items",
-                                                 comment: "Button leading to Roadmap voting screen"),
-                                          systemImage: "circle.square.fill")
-                                }
-                                    .buttonStyle(.borderedProminent)
-                                    .buttonBorderShape(.roundedRectangle(radius: 10))
-                                    .multilineTextAlignment(.center)
-                                    .sheet(isPresented: $showingRoadmap, content: {
-                                        VoteOnRoadmapView(useOnlineList: true)
-                                        // the detents don't do anything on an iPad
-                                            .presentationDetents([.large], selection: $selectedRoadmapDetent)
-                                            .presentationDragIndicator(.visible) // show drag indicator
-                                    })
-                                Spacer()
-                            }
-
-                            Paragraph("3.5", comment: "Fifth paragraph in The Features section of Readme page",
-                                      geo: geo)
-*/
-                        }
-
-                        VStack {
-                            SectionHeader(String(localized: "The Prelude", comment: "Section title on Readme page"),
-                                          geo: geo)
-
-                            Paragraph("4.1", comment: "First paragraph in Prelude section of Readme page", geo: geo)
-
-                            Image("2021_FotogroepWaalre_058")
-                                .resizable()
-                                .frame(width: 250, height: 375, alignment: .center)
-                                .scaledToFill()
-                                .border(.gray, width: 1)
-                                .frame(width: geo.size.width, alignment: .center)
-                            Text(verbatim: "© 2021 Greetje van Son\n")
-                                .font(.callout.italic())
-                                .frame(width: geo.size.width, alignment: .center)
-
-                            Paragraph("4.2", comment: "Second paragraph in Prelude section of Readme page", geo: geo)
-                            Paragraph("4.3", comment: "Third paragraph in Prelude section of Readme page", geo: geo)
                         }
 
                         VStack {
@@ -205,12 +194,12 @@ struct ReadmeView: View {
                                 .frame(width: geo.size.width, alignment: .center)
                             Text("")
 
-                            Paragraph("5.1", comment: "First paragraph in Platforms section of Readme page", geo: geo)
-                            Paragraph("5.2", comment: "Second paragraph in Platforms section of Readme page", geo: geo)
-                            Paragraph("5.3", comment: "Third paragraph in Platforms section of Readme page", geo: geo)
-                            Paragraph("5.4", comment: "Fourth paragraph in Platforms section of Readme page", geo: geo)
-                            Paragraph("5.5", comment: "Fifth paragraph in Platforms section of Readme page", geo: geo)
-                            Paragraph("5.6", comment: "Sixth paragraph in Platforms section of Readme page", geo: geo)
+                            Paragraph("4.1", comment: "First paragraph in Platforms section of Readme page", geo: geo)
+                            Paragraph("4.2", comment: "Second paragraph in Platforms section of Readme page", geo: geo)
+                            Paragraph("4.3", comment: "Third paragraph in Platforms section of Readme page", geo: geo)
+                            Paragraph("4.4", comment: "Fourth paragraph in Platforms section of Readme page", geo: geo)
+                            Paragraph("4.5", comment: "Fifth paragraph in Platforms section of Readme page", geo: geo)
+                            Paragraph("4.6", comment: "Sixth paragraph in Platforms section of Readme page", geo: geo)
                         }
 
                         VStack {
@@ -230,12 +219,12 @@ struct ReadmeView: View {
                                 Text("")
                             }
 
-                            Paragraph("6.1", comment: "First paragraph in OpenSource section of Readme page", geo: geo)
-                            Paragraph("6.2", comment: "Second paragraph in OpenSource section of Readme page", geo: geo)
-                            Paragraph("6.3", comment: "Third paragraph in OpenSource section of Readme page", geo: geo)
-                            Paragraph("6.4", comment: "Fourth paragraph in OpenSource section of Readme page", geo: geo)
-                            Paragraph("6.5", comment: "Fifth paragraph in OpenSource section of Readme page", geo: geo)
-                            Paragraph("6.6", comment: "Sixth paragraph in OpenSource section of Readme page", geo: geo)
+                            Paragraph("5.1", comment: "First paragraph in OpenSource section of Readme page", geo: geo)
+                            Paragraph("5.2", comment: "Second paragraph in OpenSource section of Readme page", geo: geo)
+                            Paragraph("5.3", comment: "Third paragraph in OpenSource section of Readme page", geo: geo)
+                            Paragraph("5.4", comment: "Fourth paragraph in OpenSource section of Readme page", geo: geo)
+                            Paragraph("5.5", comment: "Fifth paragraph in OpenSource section of Readme page", geo: geo)
+                            Paragraph("5.6", comment: "Sixth paragraph in OpenSource section of Readme page", geo: geo)
                         }
 
                         SectionHeader("", geo: geo)

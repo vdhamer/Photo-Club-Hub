@@ -38,10 +38,7 @@
 "clubs" = "clubs";
 
 /* Title of page with maps of clubs and museums */
-"Clubs" = "Clubs";
-
-/* Title of page with maps of clubs and museums */
-"Clubs & Museums" = "Clubs en Musea";
+"Clubs and Museums" = "Clubs en Musea";
 
 /* Section title on Readme page */
 "Concept" = "Het concept";
@@ -65,7 +62,7 @@
 "external coach" = "mentor";
 
 /* Section title on Readme page */
-"Features and tips" = "Functionaliteit en tips";
+"Features and Tips" = "Functionaliteit en Tips";
 
 /* Relationship status of member within a club. Used as prefex. */
 "former" = "voormalig";
@@ -81,6 +78,9 @@
 
 /* Shown instead of app name in PreludeView when app is started */
 "In debug mode" = "Test versie";
+
+/* Caption of 3D map in Readme section */
+"Maps can be viewed in 3D" = "Landkaart met museum in 3D";
 
 /* Statistics at end of section of FilteredMemberPortfoliosView
 Default status of member within a club. Used in concatenations. */
@@ -114,109 +114,79 @@ Default status of member within a club. Used in concatenations. */
 "Open Source" = "Ontwikkelaars gezocht";
 
 /* First paragraph in The App section of Readme page */
-"Paragraph_1.1" = "Deze app dient om foto's gemaakt door leden van fotoclubs te delen met een breed publiek.";
+"Paragraph_1.1" = "De app _Fotoclub Hub_ dient om banden tussen fotoclubs te versterken en om foto's gemaakt door leden van fotoclubs makkelijker toegankelijk te maken.";
 
 /* Second paragraph in The App section of Readme page */
-"Paragraph_1.2" = "De app presenteert op een consistente wijze het werk van alle clubleden van de ondersteunde fotoclubs. Als gebruiker hoef je nu niet meer zelf de website van de club te zoeken. En je hoeft ook niet voor ieder club te ontdekken hoe die specifieke website werkt.  ";
+"Paragraph_1.2" = "De app presenteert geselecteerd werk van  clubleden. De foto's zijn eenvoudig en op consistente wijze, en zonder afleiding te bekijken.";
 
 /* Third paragraph in The App section of Readme page */
-"Paragraph_1.3" = " De app is vooral bedoeld om de foto’s tot hun recht te laten komen. Voor andere clubinformatie (zoals mededelingen of vergaderschema's) wordt de gebruiker naar de websites doorgelinkt. De app probeert dus nadrukkelijk _niet_ om de websites of social media aanwezigheid van clubs te vervangen. Het is daar complementair aan.";
+"Paragraph_1.3" = "Door de foto's consist te presenteren, hoeft de gebruiker de website van de club niet te zoeken om vervolgens te moeten ontdekken hoe de foto's te bekijken. De app probeert nadrukkelijk __niet__ om de websites of social media kanalen van clubs te vervangen. Het beoogt alleen clubs en hun leden onder de aandacht te brengen bij een breed publiek.";
 
 /* Fourth paragraph in The App section of Readme page */
-"Paragraph_1.4" = "Oorspronkelijk heette deze app _Fotogroep Waalre_, naar de fotoclub in de buurt van Eindhoven. Het woord __hub__ (ofwel 'trefplaats') in de nieuwe naam benadrukt dat de app inmiddels meerdere fotoclubs tegelijk kan ondersteunen. En het benadrukt de ambitie om de banden tussen fotoclubs, fotografen en hun publiek te versterken.";
+"Paragraph_1.4" = "Oorspronkelijk heette deze app _Fotogroep Waalre_, naar een fotoclub in Brabant. Het woord __hub__ (trefplaats) in de nieuwe naam benadrukt dat de app __meerdere__ fotoclubs ondersteunt.";
 
 /* Fifth paragraph in The App section of Readme page */
-"Paragraph_1.5" = "Het ondersteunen van fotoclubs gebeurt deels door de foto's te presenteren per club.";
+"Paragraph_1.5" = "Het ondersteunen van een groot aantal clubs vereist dat iedere club zijn eigen gegevens beheert. Dit bestaat vooral uit het aanleveren van foto's en onderhouden van de ledenlijst. Hiervoor is geen bijzondere software kennis nodig.";
 
 /* Sixth paragraph in The App section of Readme page */
-"Paragraph_1.6" = "Voor toepasbaarheid op grotere schaal moet het echter ook voor de clubs eenvoudig zijn om hun eigen ledeninformatie en hun eigen lijsten met geselecteerde foto's in de app zelf in te voeren en te onderhouden. Deze aanpak is in meer detail te vinden op de [GitHub site](https://GitHub.com/vdhamer/Photo-Club-Hub#readme).";
+"Paragraph_1.6" = "Heb je belangstelling om de foto's van jouw club in de app te krijgen? Neem dan contact op via [GitHub](https://github.com/vdhamer/Photo-Club-Hub), [Facebook](https://www.facebook.com/vdhamer) of [LinkedIn](https://www.linkedin.com/in/vdhamer/). Dit vereist slechts het leveren van de benodigde informatie. Op [GitHub](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) staat een uitleg over de aanpak en procedures. Wij helpen graag, dus neem bij vragen gerust contact op.";
 
 /* First paragraph in The Concept on Readme page */
-"Paragraph_2.1" = "Het doel van deze app is om geselecteerd werk te tonen van clubleden van fotoclubs. Fotoclubs spelen dus hierbij een centrale rol.";
+"Paragraph_2.1" = "Fotoclubs spelen een centrale rol in deze app. Het _Portfolio's_ scherm bevat een lijst van fotoclubs.";
 
 /* Second paragraph in The Concept on Readme page */
-"Paragraph_2.2" = "Men vindt  de ***fotoclubs*** op het hoogste niveau in het Porfolio's scherm. Binnen een fotoclub treft men de ***portfolio's*** aan van de clubleden. Een portfolio bevat vervolgens de ***foto's*** van dat lid - althans die foto's die betrekking hebben op die fotoclub.";
+"Paragraph_2.2" = "Iedere club heeft een lijst van __portfolio's__ van hun leden. Deze portfolio's bevatten de foto's.";
 
 /* Third paragraph in The Concept on Readme page */
-"Paragraph_2.3" = "Een fotograaf kan eventueel meerdere portfolios hebben door lid te zijn (of geweest te zijn) van meerdere fotoclubs. Een portfolio bevat dus alleen werk van een fotograaf dat besproken of geëxposeerd is bij één fotoclub. Een foto kan overigens in meerdere portfolios van de fotograaf voorkomen.";
+"Paragraph_2.3" = "Een portfolio bestrijkt het werk van een fotograaf dat hoort bij één club. Een fotograaf kan meerdere portfolio's in de app hebben indien de fotograaf lid is of was van meerdere fotoclubs.";
 
 /* Fourth paragraph in The Concept on Readme page */
-"Paragraph_2.4" = "De beelden in een portfolio staan gerangschikt van nieuw naar oud. Een portfolio bestrijkt namelijk vaak een periode van vele jaren, en in die periode kan de stijl van een fotograaf veranderen.";
+"Paragraph_2.4" = "Net als een schilder, kan een fotograaf in de loop van tijd van stijl en onderwerpen veranderen. Daarom is ieder portfolio op tijdsvolgorde gesorteerd (met het nieuwste werk eerst).";
 
 /* Fifth paragraph in The Concept on Readme page */
-"Paragraph_2.5" = "Net als bij een tentoonstelling is het belangrijk om een portfolio _zonder afleiding_ te kunnen bekijken. Webpagina's zijn hiervoor vaak iets te druk vanwege bedieningselementen zoals de adresbalk of tabbladen, maar ook omdat een clubwebsite vaak meerdere doeleinden dient (bijvoorbeeld het verspreiden van clubnieuws).";
-
-/* Sixth paragraph in The Concept on Readme page */
-"Paragraph_2.6" = "De app kan, indien een club daarvoor kiest, ook de portfolio's van *voormalige* clubleden tonen. De gebruiker kan zelf kiezen of beschikbare portfolio's van ex-leden zichtbaar zijn (via Instellingen).";
-
-/* Seventh paragraph in The Concept on Readme page */
-"Paragraph_2.7" = "Clubs met belangstelling om deel te nemen kunnen contact opnemen via GitHub, Facebook of LinkedIn.";
+"Paragraph_2.5" = "Net als bij een tentoonstelling is het belangrijk om een portfolio _zonder afleiding_ te kunnen bekijken. Webpagina's zijn hiervoor vaak iets te druk vanwege hun bedieningselementen, maar ook omdat ze meerdere soorten informatie bevatten, zoals club nieuws of vergaderschemas.";
 
 /* First paragraph in The Features section of Readme page */
-"Paragraph_3.1" = "__Websites__\nHet hoofddoel van de app is om portfolio's van clubleden via een strakke presentatie tot hun recht te laten komen. Wij streven er dus _niet_ naar dat de app een website kan vervangen. Daarom verwijst de app de gebruiker via links door naar de clubwebsites.";
+"Paragraph_3.1" = "__Tweetalig___Fotoclub Hub_ kiest een taal op basis van de taal die ingesteld is op het apparaat. Momenteel worden Nederlands en Engels ondersteund. Je kan de taalinstelling aanpassen onder _Instellingen → Algemeen → Taal en regio → Volgorde voorkeurstalen_. Als alternatief kan men de taalkeuze voor alleen deze app aanpassen via _Instellingen → Fotoclub Hub → Voorkeurstaal_.";
 
 /* Second paragraph in The Features section of Readme page */
-"Paragraph_3.2" = "__Meertalig__\nDe app ondersteunt zowel Nederlands als Engels. De taal van de app past zich automatisch aan op de taalinstelling van het apparaat (_Instellingen → Algemeen → Taal en regio → Volgorde voorkeurstalen_). Als alternatief kan een gebruiker de taalkeuze alleen voor deze app aanpassen (_Instellingen → Fotoclub Hub → Voorkeurstaal_).";
+"Paragraph_3.2" = "__3D kaarten__\\n\\nWanneer men voldoende inzoomt op één van de landkaarten, verschijnt er een knop om de kaart in 3D weer te geven. Dit vereist dat de kaart interactief is (slotje open). Probeer het maar in gebieden zoals New York met zijn hoge gebouwen.";
 
 /* Third paragraph in The Features section of Readme page */
-"Paragraph_3.3" = "__Wissen__\nDe gebruiker kan op het _Portfolio_ scherm leden verwijderen door hun naam naar links te vegen. Het verwijderen is tijdelijk indien het lid nog steeds op de online ledenlijst van de club voorkomt: bij opnieuw synchroniseren komt de naam dan automatisch weer terug. Dit \"wegvegen\" kan nodig zijn als bijvoorbeeld een kandidaat-lid uit de club vertrekt zonder lid te worden. Hiermee verwijder je iemand uit de locale ledenlijst die inmiddels niet meer voorkomt op de online ledenlijst. Als alternatief kan men de app geheel verwijderen en opnieuw installeren. Hierdoor worden de interne lijsten opnieuw opgebouwd.";
+"Paragraph_3.3" = "__Eigen locatie weergeven__\\n\\nDe landkaarten kunnen de huidige locatie van de gebruiker weergeven als paarse stip - mits die locatie binnen het bereik van de kaart valt. Indien de kaart van slot is, verschijnt er een pijlvormige knop waarmee de kaart gecentreerd wordt ten opzichte van de huidige locatie.\\n\\nDit weergeven vereist dat de gebruiker desgevraagd toestemming verleent aan de app om de locatie gegevens te bepalen. Deze informatie wordt niet door de app opgeslagen of gedeeld.";
 
 /* Fourth paragraph in The Features section of Readme page */
-"Paragraph_3.4" = "__Musea__\nAls een soort toegift kan de app ook diverse fotomusea op de landkaarten tonen. Deze zijn te vinden door voldoende uit te zoomen.";
+"Paragraph_3.4" = "__Toevoegen van clubs__\\n\\nDe app bevat momenteel alle clubs in de Fotobond regio Brabant-Oost evenals een aantal clubs die niet bij de Nederlandse Fotobond aangesloten zijn. Het is mogelijk om clubs (waar ook ter wereld) zelf voor alle app gebruikers toe te voegen.\\n\\nDit maakt gebruikt van een online lijst (in .json formaat). U kunt een club toevoegen aan de centrale lijst door ons de clubnaam met enkele gegevens over waar de club bijeenkomt (gemeente en GPS coordinaten) te sturen. Indien mogelijk, ontvangen wij ook een webadres en iets vermeldenswaardig (max 140 karakters) over de club. Een engelstalige [Readme bestand](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) on GitHub bevat voorbeelden.\\n\\nIn een toekomstige versie van de app komt er ook de mogelijkheid om de __ledenlijst__ van een fotoclub aan te bieden. Ledenlijst bestanden kunnen op de clubwebsite staan.";
 
 /* Fifth paragraph in The Features section of Readme page */
-"Paragraph_3.5" = "__Roadmap__\nVia bovenstaande knop kunt U (anoniem) stemmen op welke toekomstige uitbreidingen het nuttigst zijn. U kunt maximaal één stem uitbrengen per uitbreiding.";
+"Paragraph_3.5" = "__Fotomusea__\\n\\nDe landkaarten tonen ook een aantal fotomusea in diverse landen zoals Nederland, België, maar ook bijvoorbeeld Japan, Australië en de Verenigde Staten. Om ze te zien moet een kaart van slot zijn (=interactief) en kan de gebruiker voldoende uitzoomen totdat ze in beeld komen.\\n\\nHet toevoegen van een fotomuseum gaat op een vergelijkbare manier als het toevoegen van een fotoclub. Uiteraard zal een fotomusea geen clubleden met bijbehorende portfolio's hebben.";
 
-/* First paragraph in Prelude section of Readme page */
-"Paragraph_4.1" = "Bij het opstarten van de app, wordt een grote versie van het applogo zichtbaar. Dit is een interactief speeltje. Door ***binnen het beeld*** te klikken zoomt het beeld langzaam uit tot een vierkante versie van bovenstaande foto.";
+/* Sixth paragraph in The Features section of Readme page */
+"Paragraph_3.6" = "__Clubleden (en meer) verwijderen__\\n\\nOp de _Portfolio's_ pagina kan men een clublid verwijderen door deze naar links te vegen. Op andere pagina's kan met fotografen en clubs verwijderen. Verwijderen heeft _alleen_ blijvend effect als dat clublid ook verwijderd is uit de online versie van die ledenlijst. In alle gevallen kan dit verwijderen geen kwaad. Als alternatief kan met de app verwijderen (waardoor de interne data van de app gewist wordt) en opnieuw installeren.";
 
-/* Second paragraph in Prelude section of Readme page */
-"Paragraph_4.2" = "De daarop aangebrachte gekleurde vlakjes tonen hoe de kleurenfilters in een digitale camera werken. Deze [Bayer kleurenfilters](https://en.wikipedia.org/wiki/Bayer_filter) komen in vrijwel alle digitale camera's voor. Iedere kleurenfilter zorgt ervoor dat de afgedekte fotocel (\"pixel\") vooral gevoelig is voor groen, rood of blauw licht.";
+/* Seventh paragraph in Prelude section of Readme page */
+"Paragraph_3.7" = "__Websites__\\n\\nOmdat de websites van fotoclubs meer informatie bevatten dan alleen de foto's van hun leden, bevat de _Fotoclub Hub_ app klikbare verwijzingen naar deze websites. De app bevat ook links naar eventuele persoonlijke websites van fotografen (mits die sites over fotografie gaan) en links naar websites van en over musea.";
 
-/* Third paragraph in Prelude section of Readme page */
-"Paragraph_4.3" = "Door te klikken ***binnen*** het vierkante beeld kan men verschillende delen van het beeld vergroot bekijken. Klik ***buiten*** het vierkante beeld om de animatie te stoppen.";
+/* Eighth paragraph in Prelude section of Readme page */
+"Paragraph_3.8" = "__Het openingsbeeld__\\n\\nNa het opstarten van de app verschijnt er een beeld (\"_prelude_\") dat afgeleid is van het logo van de app. Door herhaaldelijk binnen het centrale beeld te klikken, zoomt men in of uit. Uitgezoomd blijkt het beeld een foto te zijn met een laag kleurenfilters.\\n\\nDit geheel geeft aan hoe digitale camera's kleur zien. Technisch heet dit een [Bayer kleurenfilter](https://nl.wikipedia.org/wiki/Bayerfilter). Per lichtgevoelige cel worden vooral bepaalde kleuren doorgelaten. Een 24 MPixel camera bevat doorgaans 24 miljoen minuscule kleurfilters volgens deze uitvinding van Bryce E. Bayer van Kodak.\\n\\nEr is een knop rechtsonder waarmee men de animatie overslaat of afbreekt. Eigenlijk werkt het aanraken van iedere plek buiten de grote vierkant net zo goed.\\n\\nVoor de liefhebbers: de getoonde animatie maakt gebruikt van de beschikbare GPU cores in uw apparaat voor de rekenintensieve animatie. Het is dus geen video (en men kan de animatie zelf aansturen).";
 
-/* First paragraph SupportedPlatforms section of Readme page */
-"Paragraph_5.1" = "De app vereist minimaal iOS 17.0 (of iPadOS 17.0). Dit betekent dat apparaat modellen ongeveer 7 jaar lang met nieuwe app versies ondersteund worden. Voor apparaten met bijvoorbeeld iOS 16 heeft de App Store oudere versies van de app beschikbaar.";
-
-/* Second paragraph SupportedPlatforms section of Readme page */
-"Paragraph_5.2" = "De app maakt intern zwaar gebruik van diverse __Apple__ software technologieën: Swift (een programmeertaal), SwiftUI (voor schermontwerp), Core Data (lokale dataopslag), Metal (bewegende animaties), \"Structured Concurrency\" (laden van data), en iOS zelf.";
-
-/* Third paragraph SupportedPlatforms section of Readme page */
-"Paragraph_5.3" = "Door vooralsnog alleen Apple producten te ondersteunen, kan het ontwikkelen van de app zich richten op functionaliteit in plaats van op het ondersteunen van diverse apparaatsoorten en versies van besturingsystemen.";
-
-/* Fourth paragraph SupportedPlatforms section of Readme page */
-"Paragraph_5.4" = "Dit heeft uiteraard wel het nadeel dat er niet gauw een __Android__ versie van deze app beschikbaar zal komen. De bekendste apps doen dit wel om de gehele mobiele markt te kunnen bedienen, maar dit vereist veel extra werk en technische compromissen.";
-
-/* Fifth paragraph SupportedPlatforms section of Readme page */
-"Paragraph_5.5" = "De keus om Android vooralsnog te negeren heeft ook een ander gevolg: de app kan geen essentiële functionaliteit bevatten waarvoor geen goed alternatief voorhanden is. En met \"alternatief\" denken we dus vooral aan een website. Een website is bijvoorbeeld ook nodig voor PC gebruikers. En voor functionaliteit die deze app niet afdekt (zoals clubnieuws en vergaderschema's).";
-
-/* Sixth paragraph SupportedPlatforms section of Readme page */
-"Paragraph_5.6" = "Een veelbelovende uitbreiding zou het automatisch aanmaken van website pagina's zijn. Die pagina's kunnen op dezelfde manier van data voorzien worden als de app. Hiermee ondersteun je zowel Android als PC gebruikers, maar vereenvoudig je ook het actueel houden van de data.   ";
-
-/* First paragraph Developers section of Readme page */
-"Paragraph_6.1" = "De broncode van deze app is te vinden op [GitHub](https://github.com/vdhamer/Photo-Club-Hub). Hiermee kunnen meer ontwikkelaars hun steentjes bijdragen. Dit levert meer voortgang, maar bevordert ook frisse ideeën en de continuïteit van het project.";
+/* Ninth paragraph in Prelude section of Readme page */
+"Paragraph_3.9" = "__Ex-leden__\\n\\nDe app kan ook voormalige clubleden tonen. Deze worden standaard niet getoond, maar dit is instelbaar onder _Instellingen_.\\n\\nEen praktische manier om recente ex-leden in de app te krijgen is om hun gegevens en portfolio's eenvoudigweg niet te verwijderen bij vertrek. In de komende online ledenlijsten wordt is het straks ondermeer mogelijk om aan te geven of iemand ex-lid is.";
 
 /* Second paragraph Developers section of Readme page */
-"Paragraph_6.2" = "Enkele mogelijkheden om als __software ontwikkelaar__ bij te dragen zijn: nieuwe functionaliteit, correcties, meedenken over de architectuur en de nieuwe interfaces, en wellicht server ondersteuning.";
+"Paragraph_5.2" = "De app maakt intern zwaar gebruik van diverse __Apple__ software technologieën: Swift (een programmeertaal), SwiftUI (voor schermontwerp), Core Data (lokale dataopslag), Metal (bewegende animaties), \"Structured Concurrency\" (laden van data), en iOS zelf.";
 
 /* Third paragraph Developers section of Readme page */
-"Paragraph_6.3" = "Bijdragen __zonder programmeerwerk__ zijn ook welkom: testen via [TestFlight](https://apps.apple.com/us/app/testflight/id899247664), ideeën, vertalingen, en vooral ondersteuning bij het toevoegen van meer clubs.";
+"Paragraph_5.3" = "Door vooralsnog alleen Apple producten te ondersteunen, kan het ontwikkelen van de app zich richten op functionaliteit in plaats van op het ondersteunen van diverse apparaatsoorten en versies van besturingsystemen.";
 
 /* Fourth paragraph Developers section of Readme page */
-"Paragraph_6.4" = "Wij zijn momenteel druk bezig om de manier om clubs aan de app toe te voegen sterk te vereenvoudigen. Dit vergt een gestandaardiseerde en gedistribueerde manier om de benodigde lijsten (van clubs, van leden, van beelden) in te voeren en te onderhouden. Dit vervangt een eerdere aanpak met een plug-in per fotoclub. Met de nieuwe aanpak kan je bijvoorbeeld een club, een clublid of een foto toevoegen of wijzigen _zonder_ een nieuwe softwareversie uit te brengen. ";
+"Paragraph_5.4" = "Dit heeft uiteraard wel het nadeel dat er niet gauw een __Android__ versie van deze app beschikbaar zal komen. De bekendste apps doen dit wel om de gehele mobiele markt te kunnen bedienen, maar dit vereist veel extra werk en technische compromissen.";
 
 /* Fifth paragraph Developers section of Readme page */
-"Paragraph_6.5" = "Bij Fotogroep Waalre hebben we destijds al een werkend prototype hiervoor getest. Hierbij is de  naam en URL van een club is te vinden in een centraal JSON databestand. Die centrale lijst met clubs wijst door naar een lokaal bestand (bijvoorbeeld een HTML tabel) met de ledenlijst. Die ledenlijst wijst vervolgens door naar de portfolio's (XML lijsten met foto's) per clublid. Deze XML lijsten en de ge-uploadde foto's worden overigens ook - los van deze app - op de website zelf gebruikt. De XML lijsten aanmaken en het uploaden van de eigenlijke foto's naar de clubwebsite gebeurt met Adobe Lightroom Classic en een plug-in ([JuiceBox-Pro](https://www.juicebox.net)). Hierdoor zijn de portfolio's aan te maken als standaard Lightroom _collecties_ en kan een portfolio met een druk op de Lightroom Upload knop op de clubwebsite gezet worden. De app leest op zijn beurt de vereiste clubinformatie vanaf de clubwebsite.";
+"Paragraph_5.5" = "De keus om Android vooralsnog te negeren heeft ook een ander gevolg: de app kan geen essentiële functionaliteit bevatten waarvoor geen goed alternatief voorhanden is. En met \"alternatief\" denken we dus vooral aan een website. Een website is bijvoorbeeld ook nodig voor PC gebruikers. En voor functionaliteit die deze app niet afdekt (zoals clubnieuws en vergaderschema's).";
 
 /* Sixth paragraph Developers section of Readme page */
-"Paragraph_6.6" = "Vrijwilligers die mee willen helpen kunnen ons bereiken via GitHub, Facebook PM of LinkedIn.";
-
-/* First paragraph Model section of Readme page */
-"Paragraph_7.1" = "Tenslotte een snelle tour langs het onderliggende informatiemodel danwel [MVVM](https://www.hackingwithswift.com/books/ios-swiftui/introducing-mvvm-into-your-swiftui-project) “model”. In de SwiftUI wereld betekent dat de entiteiten in de Modellaag als _structs_ gedefinieerd worden. De Swift taal ondersteunt als moderne programmeertaal uiteraard _klassen_, maar maakt ook veel gebruik van [_structs_](https://www.avanderlee.com/swift/struct-class-differences/) en [_protocollen_](https://docs.swift.org/swift-book/LanguageGuide/Protocols.html).";
-
-/* Second paragraph Model section of Readme page */
-"Paragraph_7.2" = "Hier volgt het model, inclusief de engelstalige entiteitnamen:\n\nIedere ***PhotoClub*** heeft ***Members*** van diverse soorten (b.v. huidige leden, ex-leden). Sommige Members hebben een bestuursfunctie (b.v. voorzitter, penningmeester) binnen de PhotoClub. Members zijn eigenlijk ***Photographers***. Member is _geen_ subklasse van Photographer, omdat een Photographer lid kan zijn van meerdere PhotoClubs. Sommige informatie over Photographers (zoals naam en verjaardag) staat los van hun banden met PhotoClubs. Een Portfolio bevat het werk een Member, maar eigenlijk zijn Portfolio en Member model-technisch synoniemen. Een Portfolio is dus een chronologische reeks ***Images***. Een Image kan echter voorkomen in meerdere Portfolio's, namelijk als het in meerdere PhotoClubs besproken of geëxposeerd is.";
+"Paragraph_5.6" = "Een veelbelovende uitbreiding zou het automatisch aanmaken van website pagina's zijn. Die pagina's kunnen op dezelfde manier van data voorzien worden als de app. Hiermee ondersteun je zowel Android als PC gebruikers, maar vereenvoudig je ook het actueel houden van de data.   ";
 
 /* Caption for image on Readme page */
 "Partial model" = "Model (onvolledig)";
@@ -292,13 +262,13 @@ Field at top of Members page that allows the user to filter the members based on
 "Supporting multiple languages" = "Ondersteuning voor engels en nederlands";
 
 /* Section title on Readme page */
-"The app" = "De app";
+"The App" = "De App";
 
 /* Section title on Readme page */
-"The concept" = "Het concept";
+"The Concept" = "Het Concept";
 
 /* Section title on Readme page */
-"The Model" = "Voer voor nerds";
+"The Model" = "Voer voor Nerds";
 
 /* Caption of an image on the Readme page */
 "The Preferences screen." = "Het Instellingen scherm.";

@@ -175,6 +175,7 @@
 		D0831A50277F73C00049AB84 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D08416912B2FA3C2000F316D /* FG_Anders.memberlist.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = FG_Anders.memberlist.json; sourceTree = "<group>"; };
 		D08416922B2FAEB1000F316D /* FG_deGender.memberlist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FG_deGender.memberlist.json; sourceTree = "<group>"; };
+		D08845C42B6F060600D2991D /* PhotoClubHubReadMeEN.pages */ = {isa = PBXFileReference; lastKnownFileType = file; path = PhotoClubHubReadMeEN.pages; sourceTree = "<group>"; };
 		D08DC6052AE57294008DBD68 /* SinglePortfolioLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePortfolioLinkView.swift; sourceTree = "<group>"; };
 		D0968F652A76F8A00096987A /* FotogroepWaalreMembersProvider+insertOnlineMemberData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FotogroepWaalreMembersProvider+insertOnlineMemberData.swift"; sourceTree = "<group>"; };
 		D097FF682B52FF9C0045EE5C /* dataModelSourceFile.xcdatamodeld.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = dataModelSourceFile.xcdatamodeld.zip; sourceTree = "<group>"; };
@@ -262,6 +263,7 @@
 		D05E451C27EF297100D31327 /* ReadmeView */ = {
 			isa = PBXGroup;
 			children = (
+				D08845C42B6F060600D2991D /* PhotoClubHubReadMeEN.pages */,
 				D05E451D27EF2A2C00D31327 /* ReadmeView.swift */,
 			);
 			path = ReadmeView;

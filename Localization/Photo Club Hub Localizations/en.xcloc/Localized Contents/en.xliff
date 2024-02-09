@@ -62,14 +62,9 @@
         <target>Birthday:</target>
         <note>Birthday of member (without year). Date not currently localized?</note>
       </trans-unit>
-      <trans-unit id="Clubs" xml:space="preserve">
-        <source>Clubs</source>
-        <target>Clubs</target>
-        <note>Title of page with maps of clubs and museums</note>
-      </trans-unit>
-      <trans-unit id="Clubs &amp; Museums" xml:space="preserve">
-        <source>Clubs &amp; Museums</source>
-        <target>Clubs &amp; Museums</target>
+      <trans-unit id="Clubs and Museums" xml:space="preserve">
+        <source>Clubs and Museums</source>
+        <target>Clubs and Museums</target>
         <note>Title of page with maps of clubs and museums</note>
       </trans-unit>
       <trans-unit id="Concept" xml:space="preserve">
@@ -97,9 +92,9 @@
         <target>Example of a link to a club web site</target>
         <note>Caption of Websites image on Readme page</note>
       </trans-unit>
-      <trans-unit id="Features and tips" xml:space="preserve">
-        <source>Features and tips</source>
-        <target>Features and tips</target>
+      <trans-unit id="Features and Tips" xml:space="preserve">
+        <source>Features and Tips</source>
+        <target>Features and Tips</target>
         <note>Section title on Readme page</note>
       </trans-unit>
       <trans-unit id="Fragment of the Swift source code" xml:space="preserve">
@@ -111,6 +106,11 @@
         <source>In debug mode</source>
         <target>In debug mode</target>
         <note>Shown instead of app name in PreludeView when app is started</note>
+      </trans-unit>
+      <trans-unit id="Maps can be viewed in 3D" xml:space="preserve">
+        <source>Maps can be viewed in 3D</source>
+        <target>Maps can be viewed in 3D</target>
+        <note>Caption of 3D map in Readme section</note>
       </trans-unit>
       <trans-unit id="Member categories" xml:space="preserve">
         <source>Member categories</source>
@@ -140,189 +140,164 @@ Try dragging down the Photo Clubs screen to reload the default clubs.</target>
         <note>Section title on Readme page.</note>
       </trans-unit>
       <trans-unit id="Paragraph_1.1" xml:space="preserve">
-        <source>This app showcases selected photos by members of photo clubs. Former members can also be included.</source>
-        <target>This app showcases selected photos by members of photo clubs. Former members can also be included.</target>
+        <source>Our ambitions in creating _Photo Club Hub_ were to strengthen ties between photography clubs, and making the work of members easier to access.</source>
+        <target>Our ambitions in creating _Photo Club Hub_ were to strengthen ties between photography clubs, and making the work of members easier to access.</target>
         <note>First paragraph in The App section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_1.2" xml:space="preserve">
-        <source>It does this in a _consistent_ way across all participating photographers and clubs. For the app's users, this consistency avoids having to find each club's website and discovering how to use it to locate and browse the images.</source>
-        <target>It does this in a _consistent_ way across all participating photographers and clubs. For the app's users, this consistency avoids having to find each club's website and discovering how to use it to locate and browse the images.</target>
+        <source>_Photo Club Hub_ showcases selected photos by members of participating clubs. The photos are displayed in a consistent, easy to access way, with minimal distractions.</source>
+        <target>_Photo Club Hub_ showcases selected photos by members of participating clubs. The photos are displayed in a consistent, easy to access way, with minimal distractions.</target>
         <note>Second paragraph in The App section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_1.3" xml:space="preserve">
-        <source>The app does _not_ try to replace either club or photographer web sites. It also doesn't try to replace social media presence. The app's focus is to present the images in a consistent, easy to access way with minimal distractions. The app can help find extra information via links to club and photographer web sites.</source>
-        <target>The app does _not_ try to replace either club or photographer web sites. It also doesn't try to replace social media presence. The app's focus is to present the images in a consistent, easy to access way with minimal distractions. The app can help find extra information via links to club and photographer web sites.</target>
+        <source>This consistent presentation of photographs avoids having to find each club's website, and then figuring out how to locate and browse the images. The app does not try to replace either club web sites, photographer web sites. or social media use. Instead, it facilitates clubs and their members in reaching other clubs, other photographers, and a general audience.</source>
+        <target>This consistent presentation of photographs avoids having to find each club's website, and then figuring out how to locate and browse the images. The app does not try to replace either club web sites, photographer web sites. or social media use. Instead, it facilitates clubs and their members in reaching other clubs, other photographers, and a general audience.</target>
         <note>Third paragraph in The App section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_1.4" xml:space="preserve">
-        <source>The app was originally named _Photo Club Waalre_ after a 15-person photo club in the Netherlands. The word __hub__ in the newer name stresses the app's support for _multiple_ photo clubs, and the app's ambition to strengthen the ties between clubs by making their work easier to access.</source>
-        <target>The app was originally named _Photo Club Waalre_ after a 15-person photo club in the Netherlands. The word __hub__ in the newer name stresses the app's support for _multiple_ photo clubs, and the app's ambition to strengthen the ties between clubs by making their work easier to access.</target>
+        <source>The app was originally named _Photo Club Waalre_ after a 15-person photo club in the Netherlands. The word __hub__ in the new name stresses the app's support for __multiple__ photo clubs.</source>
+        <target>The app was originally named _Photo Club Waalre_ after a 15-person photo club in the Netherlands. The word __hub__ in the new name stresses the app's support for __multiple__ photo clubs.</target>
         <note>Fourth paragraph in The App section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_1.5" xml:space="preserve">
-        <source>Support for multiple photo clubs requires the ability to display a list of clubs, their members, and the selected photos per member.</source>
-        <target>Support for multiple photo clubs requires the ability to display a list of clubs, their members, and the selected photos per member.</target>
+        <source>Supporting many clubs requires that individual clubs maintain their own data. This includes providing images, and maintaining club membership lists. Adding a club to _Photo Club Hub_ does not require software expertise.</source>
+        <target>Supporting many clubs requires that individual clubs maintain their own data. This includes providing images, and maintaining club membership lists. Adding a club to _Photo Club Hub_ does not require software expertise.</target>
         <note>Fifth paragraph in The App section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_1.6" xml:space="preserve">
-        <source>Supporting many clubs also implies that individual clubs should be able to maintain their own data. This means the ability to provide and maintain the images, but also the club's membership list. Central support should be limited to maintaining the app. The app's [GitHub site](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) explains the strategy for allowing clubs to maintain their data without requiring any real software expertise.</source>
-        <target>Supporting many clubs also implies that individual clubs should be able to maintain their own data. This means the ability to provide and maintain the images, but also the club's membership list. Central support should be limited to maintaining the app. The app's [GitHub site](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) explains the strategy for allowing clubs to maintain their data without requiring any real software expertise.</target>
+        <source>Interested in adding support for your photo club? Contact us via [GitHub](https://github.com/vdhamer/Photo-Club-Hub), [Facebook](https://www.facebook.com/vdhamer) or [LinkedIn](https://www.linkedin.com/in/vdhamer/). Adding your club only involves maintaining your data in a way that the app can read it. The app's [GitHub site](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) explains the strategy and approach. We are here to help if you have any questions.</source>
+        <target>Interested in adding support for your photo club? Contact us via [GitHub](https://github.com/vdhamer/Photo-Club-Hub), [Facebook](https://www.facebook.com/vdhamer) or [LinkedIn](https://www.linkedin.com/in/vdhamer/). Adding your club only involves maintaining your data in a way that the app can read it. The app's [GitHub site](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) explains the strategy and approach. We are here to help if you have any questions.</target>
         <note>Sixth paragraph in The App section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_2.1" xml:space="preserve">
-        <source>Photo clubs play a central role in this app. The Portfolios screen shows a list of photo clubs.</source>
-        <target>Photo clubs play a central role in this app. The Portfolios screen shows a list of photo clubs.</target>
+        <source>Photo clubs play a central role in this app. The _Portfolios_ screen shows a list of photo clubs.</source>
+        <target>Photo clubs play a central role in this app. The _Portfolios_ screen shows a list of photo clubs.</target>
         <note>First paragraph in The Concept on Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_2.2" xml:space="preserve">
-        <source>Each photo club, in turn, contains a series of member ***portfolios*** containing the actual images.</source>
-        <target>Each photo club, in turn, contains a series of member ***portfolios*** containing the actual images.</target>
+        <source>Each photo club contains a series of member portfolios holding the actual images.</source>
+        <target>Each photo club contains a series of member portfolios holding the actual images.</target>
         <note>Second paragraph in The Concept on Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_2.3" xml:space="preserve">
-        <source>Each portfolio thus covers the subset of the photographer's work _that is associated with that photo club_. Some photographers may have multiple portfolios in the app if the photographer is (or was at some point) associated with more than one photo club.</source>
-        <target>Each portfolio thus covers the subset of the photographer's work _that is associated with that photo club_. Some photographers may have multiple portfolios in the app if the photographer is (or was at some point) associated with more than one photo club.</target>
+        <source>Each portfolio covers the photographer's photos that are associated with that photo club. A photographer may have multiple portfolios in the app in case the photographer is (or was) associated with more than one photo club.</source>
+        <target>Each portfolio covers the photographer's photos that are associated with that photo club. A photographer may have multiple portfolios in the app in case the photographer is (or was) associated with more than one photo club.</target>
         <note>Third paragraph in The Concept on Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_2.4" xml:space="preserve">
-        <source>Each portfolio is shown in chronological order, with the latest work shown first, and often spans multiple years. Just like painters, styles may change on that time scale.</source>
-        <target>Each portfolio is shown in chronological order, with the latest work shown first, and often spans multiple years. Just like painters, styles may change on that time scale.</target>
+        <source>Just like a painter, a photographer’s style may change over the years. Each portfolio is therefore shown in chronological order, with the latest work first.</source>
+        <target>Just like a painter, a photographer’s style may change over the years. Each portfolio is therefore shown in chronological order, with the latest work first.</target>
         <note>Fourth paragraph in The Concept on Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_2.5" xml:space="preserve">
-        <source>We try to show the portfolios with **minimal distraction**. Web sites are often less optimal for this because they need to show browser controls (e.g., an address bar or tabs) and serve multiple purposes (e.g., show club news or contact information).</source>
-        <target>We try to show the portfolios with **minimal distraction**. Web sites are often less optimal for this because they need to show browser controls (e.g., an address bar or tabs) and serve multiple purposes (e.g., show club news or contact information).</target>
+        <source>We aim to show the portfolios with minimal distraction, just like an exposition at a museum or gallery. Web sites tend to be less optimal for this, because they are cluttered by browser controls—an address bar or tabs—and have to serve multiple purposes, like displaying club news or meeting dates.</source>
+        <target>We aim to show the portfolios with minimal distraction, just like an exposition at a museum or gallery. Web sites tend to be less optimal for this, because they are cluttered by browser controls—an address bar or tabs—and have to serve multiple purposes, like displaying club news or meeting dates.</target>
         <note>Fifth paragraph in The Concept on Readme page</note>
       </trans-unit>
-      <trans-unit id="Paragraph_2.6" xml:space="preserve">
-        <source>For Photo Club Waalre, for example, we chose to also include the work of former club members. By default, former members are not visible, but you can enable displaying them in the Preferences screen.</source>
-        <target>For Photo Club Waalre, for example, we chose to also include the work of former club members. By default, former members are not visible, but you can enable displaying them in the Preferences screen.</target>
-        <note>Sixth paragraph in The Concept on Readme page</note>
-      </trans-unit>
-      <trans-unit id="Paragraph_2.7" xml:space="preserve">
-        <source>Contact us (e.g. via GitHub, Facebook or LinkedIn) if you are interested in adding support for your photo club.</source>
-        <target>Contact us (e.g. via GitHub, Facebook or LinkedIn) if you are interested in adding support for your photo club.</target>
-        <note>Seventh paragraph in The Concept on Readme page</note>
-      </trans-unit>
       <trans-unit id="Paragraph_3.1" xml:space="preserve">
-        <source>__Web sites__
-The app does not try to replace club web sites: web sites have more uses than just presenting photos. Because we consider web sites and this app to be _complementary_, the app provides clickable links to club web sites as well as to photographer web sites.</source>
-        <target>__Web sites__
-The app does not try to replace club web sites: web sites have more uses than just presenting photos. Because we consider web sites and this app to be _complementary_, the app provides clickable links to club web sites as well as to photographer web sites.</target>
+        <source>__Languages__\n\n_Photo Club Hub_ automatically selects its language based on your device’s language settings. It currently supports English and Dutch. You can change language using _Settings &gt; General &gt; Language &amp; Region &gt; Preferred Language Order_ or by overruling this setting for this app only (_Settings &gt; Photo Club Hub &gt; Language_).</source>
+        <target>__Languages__\n\n_Photo Club Hub_ automatically selects its language based on your device’s language settings. It currently supports English and Dutch. You can change language using _Settings &gt; General &gt; Language &amp; Region &gt; Preferred Language Order_ or by overruling this setting for this app only (_Settings &gt; Photo Club Hub &gt; Language_).</target>
         <note>First paragraph in The Features section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.2" xml:space="preserve">
-        <source>__Languages__
-The app currently supports English and Dutch. iOS automatically selects the app's language based on your device’s language settings (_Settings &gt; General &gt; Language &amp; Region &gt; Preferred Language Order_). iOS also allows you to overrule this choice per individual app (_Settings &gt; Photo Club Hub &gt; Language_).</source>
-        <target>__Languages__
-The app currently supports English and Dutch. iOS automatically selects the app's language based on your device’s language settings (_Settings &gt; General &gt; Language &amp; Region &gt; Preferred Language Order_). iOS also allows you to overrule this choice per individual app (_Settings &gt; Photo Club Hub &gt; Language_).</target>
+        <source>__3D maps__\n\nIf you zoom in enough on any map, a button appears that allows you do view building heights. In this mode you can rotate the map.</source>
+        <target>__3D maps__\n\nIf you zoom in enough on any map, a button appears that allows you do view building heights. In this mode you can rotate the map.</target>
         <note>Second paragraph in The Features section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.3" xml:space="preserve">
-        <source>__Deletion__
-On the _Portfolio_ page, you can swipe to delete a member from the list. Don't worry - if the person is still a club member, that person will reappear the next time the app synchronises with online data. This swiping can be useful to remove members who are no longer on the online data members lists. In any case, swipe as much as you like (who knows, it just might be therapeutical).</source>
-        <target>__Deletion__
-On the _Portfolio_ page, you can swipe to delete a member from the list. Don't worry - if the person is still a club member, that person will reappear the next time the app synchronises with online data. This swiping can be useful to remove members who are no longer on the online data members lists. In any case, swipe as much as you like (who knows, it just might be therapeutical).</target>
+        <source>__Live location__\n\nMaps can show you your live location as a purple dot when it’s in range of the map. This can help navigate to a club or to estimate distances. If the map is unlocked/interactive, a arrow button can re-center the map around your current location.\n\nLive location requires granting the app __permission__ to access your location while in the app. The app doesn’t store or share location information with anyone or anything.</source>
+        <target>__Live location__\n\nMaps can show you your live location as a purple dot when it’s in range of the map. This can help navigate to a club or to estimate distances. If the map is unlocked/interactive, a arrow button can re-center the map around your current location.\n\nLive location requires granting the app __permission__ to access your location while in the app. The app doesn’t store or share location information with anyone or anything.</target>
         <note>Third paragraph in The Features section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.4" xml:space="preserve">
-        <source>__Museums__
-The app also contains the names and locations of a few dozen photo museums. These show up on the maps on the Clubs screen if you zoom out enough.</source>
-        <target>__Museums__
-The app also contains the names and locations of a few dozen photo museums. These show up on the maps on the Clubs screen if you zoom out enough.</target>
+        <source>__Adding photo clubs__\n\nThe app contains a set of initial photo clubs. Those photo clubs are so far all in one region of the Netherlands. Clubs anywhere in the world can can be added country, regardless whether they are part of some larger photo club federation.\n\nThis requires extending an online (.json) file. For now this involves sending us the club’s name, town, latitude, and longitude. And, if possible, providing a web address and a remark in one or more languages (140 char each) on anything noteworthy about the club. There examples in an extended [Readme](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) on GitHub.\n\nAdding and maintaining membership lists for a photo club is a feature for a __future__ app update. These “memberList” files can be hosted on your __own__ website. There will be instructions by then on how to do this for WordPress users, but anything that results in a URL to a valid memberList (JSON) file will work.</source>
+        <target>__Adding photo clubs__\n\nThe app contains a set of initial photo clubs. Those photo clubs are so far all in one region of the Netherlands. Clubs anywhere in the world can can be added country, regardless whether they are part of some larger photo club federation.\n\nThis requires extending an online (.json) file. For now this involves sending us the club’s name, town, latitude, and longitude. And, if possible, providing a web address and a remark in one or more languages (140 char each) on anything noteworthy about the club. There examples in an extended [Readme](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) on GitHub.\n\nAdding and maintaining membership lists for a photo club is a feature for a __future__ app update. These “memberList” files can be hosted on your __own__ website. There will be instructions by then on how to do this for WordPress users, but anything that results in a URL to a valid memberList (JSON) file will work.</target>
         <note>Fourth paragraph in The Features section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.5" xml:space="preserve">
-        <source>__Roadmap__
-By clicking on the above button you can (anonymously) vote for improvements you would like in future versions of this app. You can only vote once for any particular improvement.</source>
-        <target>__Roadmap__
-By clicking on the above button you can (anonymously) vote for improvements you would like in future versions of this app. You can only vote once for any particular improvement.</target>
+        <source>__Photo museums__\n\nThe maps can show various photo museums throughout the world. They have a different icon than photo clubs. Museums show up if you zoom out any map far enough that they come into view.\n\nAdding a photo museum works the same way as adding a photo club - except that a museum doesn’t have members and member portfolios.</source>
+        <target>__Photo museums__\n\nThe maps can show various photo museums throughout the world. They have a different icon than photo clubs. Museums show up if you zoom out any map far enough that they come into view.\n\nAdding a photo museum works the same way as adding a photo club - except that a museum doesn’t have members and member portfolios.</target>
         <note>Fifth paragraph in The Features section of Readme page</note>
       </trans-unit>
+      <trans-unit id="Paragraph_3.6" xml:space="preserve">
+        <source>__Deleting members (and more)__\n\nOn the _Portfolios_ screen you can delete a club member by swiping the row to the left. Other screens have similar functionality for removing individual photographers and clubs.\n\nDeletion of an arbitrary member will generally be __temporary__ because the member is still on the club's online membership lists. Deletion does have effect if the row has been deleted from these online lists. The feature will be automated at some point, and is only useful in special circumstances (like when a typo in a member's name is corrected).\n\nSo just remember that swiping left is harmless, and if you need to clean up a list you can alternatively just uninstall and reinstall the app to clean up the app's internal data.</source>
+        <target>__Deleting members (and more)__\n\nOn the _Portfolios_ screen you can delete a club member by swiping the row to the left. Other screens have similar functionality for removing individual photographers and clubs.\n\nDeletion of an arbitrary member will generally be __temporary__ because the member is still on the club's online membership lists. Deletion does have effect if the row has been deleted from these online lists. The feature will be automated at some point, and is only useful in special circumstances (like when a typo in a member's name is corrected).\n\nSo just remember that swiping left is harmless, and if you need to clean up a list you can alternatively just uninstall and reinstall the app to clean up the app's internal data.</target>
+        <note>Sixth paragraph in The Features section of Readme page</note>
+      </trans-unit>
+      <trans-unit id="Paragraph_3.7" xml:space="preserve">
+        <source>__Web sites__\n\nThis app is complimentary to your club’s web site. Because web sites have more uses than just presenting photos, _Photo Club Hub_ includes clickable links to club and photographer web sites.</source>
+        <target>__Web sites__\n\nThis app is complimentary to your club’s web site. Because web sites have more uses than just presenting photos, _Photo Club Hub_ includes clickable links to club and photographer web sites.</target>
+        <note>Seventh paragraph in Prelude section of Readme page</note>
+      </trans-unit>
+      <trans-unit id="Paragraph_3.8" xml:space="preserve">
+        <source>__The opening image__\n\nWhen the app opens, it shows an image (“Prelude”) corresponding to the app’s icon. If you tap somewhere __inside__ the image, it zooms out to show the full image representing how digital cameras see color.\n\nThis involves a [Bayer color filter array](https://en.wikipedia.org/wiki/Bayer_filter) that adds a color filter on top of each sensor cell. This filter array is shown superimposed on a colorful photo.\n\nTapping __inside__ the image allows you to zoom in or out to your heart's content. Tapping __outside__ the image area ends the animation. A single tap __outside__ the image allows you to skip the animation.\n\nThe animation incidentally uses GPU core acceleration using the [Metal software framework](https://browser.geekbench.com/ios-benchmarks#metal).</source>
+        <target>__The opening image__\n\nWhen the app opens, it shows an image (“Prelude”) corresponding to the app’s icon. If you tap somewhere __inside__ the image, it zooms out to show the full image representing how digital cameras see color.\n\nThis involves a [Bayer color filter array](https://en.wikipedia.org/wiki/Bayer_filter) that adds a color filter on top of each sensor cell. This filter array is shown superimposed on a colorful photo.\n\nTapping __inside__ the image allows you to zoom in or out to your heart's content. Tapping __outside__ the image area ends the animation. A single tap __outside__ the image allows you to skip the animation.\n\nThe animation incidentally uses GPU core acceleration using the [Metal software framework](https://browser.geekbench.com/ios-benchmarks#metal).</target>
+        <note>Eighth paragraph in Prelude section of Readme page</note>
+      </trans-unit>
+      <trans-unit id="Paragraph_3.9" xml:space="preserve">
+        <source>__Former Members__\n\nThe app can include the work of former club members. By default, former members are not shown, but you can enable displaying them in the _Preferences_ screen.\n\nAn easy way to get recent ex-members in the app is to simply keep their portfolio when they leave, but only mark the member as ex-member in the membership list.</source>
+        <target>__Former Members__\n\nThe app can include the work of former club members. By default, former members are not shown, but you can enable displaying them in the _Preferences_ screen.\n\nAn easy way to get recent ex-members in the app is to simply keep their portfolio when they leave, but only mark the member as ex-member in the membership list.</target>
+        <note>Ninth paragraph in Prelude section of Readme page</note>
+      </trans-unit>
       <trans-unit id="Paragraph_4.1" xml:space="preserve">
-        <source>When the app opens, it shows an image corresponding to the app’s icon. If you tap somewhere ***inside*** the image, it zooms out to show the full image representing how digital cameras see color.</source>
-        <target>When the app opens, it shows an image corresponding to the app’s icon. If you tap somewhere ***inside*** the image, it zooms out to show the full image representing how digital cameras see color.</target>
-        <note>First paragraph in Prelude section of Readme page</note>
-      </trans-unit>
-      <trans-unit id="Paragraph_4.2" xml:space="preserve">
-        <source>This involves a [Bayer color filter array](https://en.wikipedia.org/wiki/Bayer_filter) that adds a color filter on top of each sensor cell. This filter array is shown here superimposed on a colorful photo.</source>
-        <target>This involves a [Bayer color filter array](https://en.wikipedia.org/wiki/Bayer_filter) that adds a color filter on top of each sensor cell. This filter array is shown here superimposed on a colorful photo.</target>
-        <note>Second paragraph in Prelude section of Readme page</note>
-      </trans-unit>
-      <trans-unit id="Paragraph_4.3" xml:space="preserve">
-        <source>Tapping ***inside*** the image allows you to zoom in or out to your heart's content. Tapping ***outside*** the image area ends the animation. A single tap ***outside*** the image allows you to skip the animation.</source>
-        <target>Tapping ***inside*** the image allows you to zoom in or out to your heart's content. Tapping ***outside*** the image area ends the animation. A single tap ***outside*** the image allows you to skip the animation.</target>
-        <note>Third paragraph in Prelude section of Readme page</note>
-      </trans-unit>
-      <trans-unit id="Paragraph_5.1" xml:space="preserve">
         <source>The app runs on iPhone and iPad and requires iOS 17.0 or higher. As most iOS users upgrade to the most recent iOS version possible, this means that the latest app version can support devices made in the last 6 or so years.</source>
         <target>The app runs on iPhone and iPad and requires iOS 17.0 or higher. As most iOS users upgrade to the most recent iOS version possible, this means that the latest app version can support devices made in the last 6 or so years.</target>
         <note>First paragraph SupportedPlatforms section of Readme page</note>
       </trans-unit>
-      <trans-unit id="Paragraph_5.2" xml:space="preserve">
+      <trans-unit id="Paragraph_4.2" xml:space="preserve">
         <source>The app depends heavily on various Apple software technologies. These include Swift (a programming language), SwiftUI (a user interface framework), Core Data (local data storage), Metal (graphics acceleration), and so-called _structured concurrency_ (for data fetching), Xcode (development tooling), and iOS itself.</source>
         <target>The app depends heavily on various Apple software technologies. These include Swift (a programming language), SwiftUI (a user interface framework), Core Data (local data storage), Metal (graphics acceleration), and so-called _structured concurrency_ (for data fetching), Xcode (development tooling), and iOS itself.</target>
         <note>Second paragraph SupportedPlatforms section of Readme page</note>
       </trans-unit>
-      <trans-unit id="Paragraph_5.3" xml:space="preserve">
+      <trans-unit id="Paragraph_4.3" xml:space="preserve">
         <source>The benefit of an iOS focus is that it allows the app's developers to focus on functionality rather than cross-platform compatibility.</source>
         <target>The benefit of an iOS focus is that it allows the app's developers to focus on functionality rather than cross-platform compatibility.</target>
         <note>Third paragraph SupportedPlatforms section of Readme page</note>
       </trans-unit>
-      <trans-unit id="Paragraph_5.4" xml:space="preserve">
+      <trans-unit id="Paragraph_4.4" xml:space="preserve">
         <source>The drawback, however, is the lack of Android support (for now). This is because the Android world has its own set of software technologies and tends to have more internal diversity. Apps that choose to support multiple platforms require more effort or require more technical compromises.</source>
         <target>The drawback, however, is the lack of Android support (for now). This is because the Android world has its own set of software technologies and tends to have more internal diversity. Apps that choose to support multiple platforms require more effort or require more technical compromises.</target>
         <note>Fourth paragraph SupportedPlatforms section of Readme page</note>
       </trans-unit>
-      <trans-unit id="Paragraph_5.5" xml:space="preserve">
+      <trans-unit id="Paragraph_4.5" xml:space="preserve">
         <source>To put this into perspective, the top-6 software "platforms" are (largest first): web, Android, Windows, iOS, iPadOS, and MacOS. Only the very largest apps (like Word, Twitter, Minecraft, Chrome) cover the full range. Other famous apps cover only half: Photoshop (Windows, MacOS, iPadOS), WhatsApp (iPhone, Android, web - kind of), Pokémon Go (Android, iOS, iPadOS - kind of).</source>
         <target>To put this into perspective, the top-6 software "platforms" are (largest first): web, Android, Windows, iOS, iPadOS, and MacOS. Only the very largest apps (like Word, Twitter, Minecraft, Chrome) cover the full range. Other famous apps cover only half: Photoshop (Windows, MacOS, iPadOS), WhatsApp (iPhone, Android, web - kind of), Pokémon Go (Android, iOS, iPadOS - kind of).</target>
         <note>Fifth paragraph SupportedPlatforms section of Readme page</note>
       </trans-unit>
-      <trans-unit id="Paragraph_5.6" xml:space="preserve">
+      <trans-unit id="Paragraph_4.6" xml:space="preserve">
         <source>The roadmap for additional future platform support will depend on uptake and help from the software community. MacOS and VisionOS both more or less work already. Support for Apple's tvOS is possible. However, a promising future step would be to support the automatic generation of web site pages using the same data sources used by the app. This would indirectly cover Android, PC, and more. And would benefit the clubs that need to maintain their lists.</source>
         <target>The roadmap for additional future platform support will depend on uptake and help from the software community. MacOS and VisionOS both more or less work already. Support for Apple's tvOS is possible. However, a promising future step would be to support the automatic generation of web site pages using the same data sources used by the app. This would indirectly cover Android, PC, and more. And would benefit the clubs that need to maintain their lists.</target>
         <note>Sixth paragraph SupportedPlatforms section of Readme page</note>
       </trans-unit>
-      <trans-unit id="Paragraph_6.1" xml:space="preserve">
+      <trans-unit id="Paragraph_5.1" xml:space="preserve">
         <source>You can find this app on [GitHub](https://github.com/vdhamer/Photo-Club-Hub). This allows other software developers to contribute. Getting more developers involved will speed things up, but also provides fresh ideas and ultimately improve continuity.</source>
         <target>You can find this app on [GitHub](https://github.com/vdhamer/Photo-Club-Hub). This allows other software developers to contribute. Getting more developers involved will speed things up, but also provides fresh ideas and ultimately improve continuity.</target>
         <note>First paragraph Developers section of Readme page</note>
       </trans-unit>
-      <trans-unit id="Paragraph_6.2" xml:space="preserve">
+      <trans-unit id="Paragraph_5.2" xml:space="preserve">
         <source>Welcome contributions include adding features, code improvements, ideas on architecture and interface definition, and possibly server-side functionality.</source>
         <target>Welcome contributions include adding features, code improvements, ideas on architecture and interface definition, and possibly server-side functionality.</target>
         <note>Second paragraph Developers section of Readme page</note>
       </trans-unit>
-      <trans-unit id="Paragraph_6.3" xml:space="preserve">
+      <trans-unit id="Paragraph_5.3" xml:space="preserve">
         <source>Contributions that _do not require coding_ are also welcome: beta testing via [TestFlight](https://apps.apple.com/us/app/testflight/id899247664), feature requests, translations, and - above all - adding support for more clubs.</source>
         <target>Contributions that _do not require coding_ are also welcome: beta testing via [TestFlight](https://apps.apple.com/us/app/testflight/id899247664), feature requests, translations, and - above all - adding support for more clubs.</target>
         <note>Third paragraph Developers section of Readme page</note>
       </trans-unit>
-      <trans-unit id="Paragraph_6.4" xml:space="preserve">
+      <trans-unit id="Paragraph_5.4" xml:space="preserve">
         <source>There is a major ongoing transition to provide a clean, standardised interface to retrieve data per photo club. Such an interface is needed to load the data, but also to keep the data up to date. After all, membership data and portfolios change regularly. The original interface was a plug-in design with an adaptor per photo club. This is being replaced by a standard JSON-based interface to avoid having to update the source in order to onboard additional clubs.</source>
         <target>There is a major ongoing transition to provide a clean, standardised interface to retrieve data per photo club. Such an interface is needed to load the data, but also to keep the data up to date. After all, membership data and portfolios change regularly. The original interface was a plug-in design with an adaptor per photo club. This is being replaced by a standard JSON-based interface to avoid having to update the source in order to onboard additional clubs.</target>
         <note>Fourth paragraph Developers section of Readme page</note>
       </trans-unit>
-      <trans-unit id="Paragraph_6.5" xml:space="preserve">
+      <trans-unit id="Paragraph_5.5" xml:space="preserve">
         <source>For Photo Club Waalre, an early prototype of this approach to loading data is already in use. The fact that the club exists is stored in a central (JSON) file. That file points to a membership list that is read from a HTML table on the club’s [website](https://www.FotogroepWaalre.nl). The portfolios are read from XML files generated by an Adobe Lightroom plug-in called [JuiceBox-Pro](https://www.juicebox.net/tour/). This plug-in allows the club to manage the portfolios per member using Lightroom (as a Lightroom "collection"). These collections can then be uploaded (ftp'ed) to the webserver via the Lightroom _Upload_ button. The uploaded information can then be downloaded from the web site when it is needed.</source>
         <target>For Photo Club Waalre, an early prototype of this approach to loading data is already in use. The fact that the club exists is stored in a central (JSON) file. That file points to a membership list that is read from a HTML table on the club’s [website](https://www.FotogroepWaalre.nl). The portfolios are read from XML files generated by an Adobe Lightroom plug-in called [JuiceBox-Pro](https://www.juicebox.net/tour/). This plug-in allows the club to manage the portfolios per member using Lightroom (as a Lightroom "collection"). These collections can then be uploaded (ftp'ed) to the webserver via the Lightroom _Upload_ button. The uploaded information can then be downloaded from the web site when it is needed.</target>
         <note>Fifth paragraph Developers section of Readme page</note>
       </trans-unit>
-      <trans-unit id="Paragraph_6.6" xml:space="preserve">
+      <trans-unit id="Paragraph_5.6" xml:space="preserve">
         <source>Software developers or other volunteers who are interested to help can contact us via GitHub, Facebook PM or LinkedIn.</source>
         <target>Software developers or other volunteers who are interested to help can contact us via GitHub, Facebook PM or LinkedIn.</target>
         <note>Sixth paragraph Developers section of Readme page</note>
-      </trans-unit>
-      <trans-unit id="Paragraph_7.1" xml:space="preserve">
-        <source>As an intro for developers, here is an informal tour of the ***model***. The model is a [schema](https://en.wikipedia.org/wiki/Database_schema) or information model in the database sense, or “Model“ in the sense of the [Model-View-ViewModel](https://www.hackingwithswift.com/books/ios-swiftui/introducing-mvvm-into-your-swiftui-project) design pattern. The app uses a Swift-style MVVM design, meaning model data is stored in structs rather than in classes.</source>
-        <target>As an intro for developers, here is an informal tour of the ***model***. The model is a [schema](https://en.wikipedia.org/wiki/Database_schema) or information model in the database sense, or “Model“ in the sense of the [Model-View-ViewModel](https://www.hackingwithswift.com/books/ios-swiftui/introducing-mvvm-into-your-swiftui-project) design pattern. The app uses a Swift-style MVVM design, meaning model data is stored in structs rather than in classes.</target>
-        <note>First paragraph Model section of Readme page</note>
-      </trans-unit>
-      <trans-unit id="Paragraph_7.2" xml:space="preserve">
-        <source>The model: every **PhotoClub** has **Members** of various types (current, former, etc.), while some Members have a formal role like chairman within the PhotoClub. Some of **Photographer**'s data (like name and birthday) are unrelated to being a Member of a PhotoClub. **Portfolios** represent the body of work of a Photographer in the context of a PhotoClub. A Portfolio contains **Images**, but an Image could be in multiple Portfolios depending on where the Image was shared. Member and Portfolio can technically be considered synonyms from a modeling perspective: we create exactly one Portfolio for each PhotoClub that a Photographer joined. They are thus a single table in the database.</source>
-        <target>The model: every **PhotoClub** has **Members** of various types (current, former, etc.), while some Members have a formal role like chairman within the PhotoClub. Some of **Photographer**'s data (like name and birthday) are unrelated to being a Member of a PhotoClub. **Portfolios** represent the body of work of a Photographer in the context of a PhotoClub. A Portfolio contains **Images**, but an Image could be in multiple Portfolios depending on where the Image was shared. Member and Portfolio can technically be considered synonyms from a modeling perspective: we create exactly one Portfolio for each PhotoClub that a Photographer joined. They are thus a single table in the database.</target>
-        <note>Second paragraph Model section of Readme page</note>
       </trans-unit>
       <trans-unit id="Partial model" xml:space="preserve">
         <source>Partial model</source>
@@ -432,6 +407,16 @@ Field at top of Members page that allows the user to filter the members based on
         <target>Supporting multiple languages</target>
         <note>Caption of Localizations image on Readme page</note>
       </trans-unit>
+      <trans-unit id="The App" xml:space="preserve">
+        <source>The App</source>
+        <target>The App</target>
+        <note>Section title on Readme page</note>
+      </trans-unit>
+      <trans-unit id="The Concept" xml:space="preserve">
+        <source>The Concept</source>
+        <target>The Concept</target>
+        <note>Section title on Readme page</note>
+      </trans-unit>
       <trans-unit id="The Model" xml:space="preserve">
         <source>The Model</source>
         <target>The Model</target>
@@ -445,16 +430,6 @@ Field at top of Members page that allows the user to filter the members based on
       <trans-unit id="The Prelude" xml:space="preserve">
         <source>The Prelude</source>
         <target>The Prelude</target>
-        <note>Section title on Readme page</note>
-      </trans-unit>
-      <trans-unit id="The app" xml:space="preserve">
-        <source>The app</source>
-        <target>The app</target>
-        <note>Section title on Readme page</note>
-      </trans-unit>
-      <trans-unit id="The concept" xml:space="preserve">
-        <source>The concept</source>
-        <target>The concept</target>
         <note>Section title on Readme page</note>
       </trans-unit>
       <trans-unit id="This page lists all the photographers that this app knows about. A photographer has one or more clickable image thumbnails below the photographer's name. Clicking on any thumbnail leads to the images associated with one particular photo club. The thumbnails can be scrolled horizontally (if there are many of them on one line)." xml:space="preserve">

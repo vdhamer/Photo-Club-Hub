@@ -17,7 +17,7 @@ struct OrganizationListView: View {
         animation: .default)
     private var organizations: FetchedResults<Organization>
     private var predicate: NSPredicate = NSPredicate.all
-    private var navigationTitle = String(localized: "Clubs & Museums",
+    private var navigationTitle = String(localized: "Clubs and Museums",
                                          comment: "Title of page with club and museum maps")
 
     init(predicate: NSPredicate? = nil,

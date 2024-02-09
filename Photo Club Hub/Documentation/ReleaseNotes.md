@@ -6,10 +6,12 @@ Clubs and Museums screen
     * Added some Dutch translations.
     * Removed support for kvkNumber. It worked, but is Netherlands only, and not very relevant.
     * Clubs are shown before Museums.
+Readme screen
+    * Significant text updates. Stored ReleaseNotesEN.pages in git repository.
 Maintenance
     * Renamed PhotoClub table to Organization table (because it can now contain museums)
     * Replaced musea -> museums in English text.
-    * Tested with with iOS 17.3, MacOS 14.3, Xcode 14.3 beta, VisionOS 1.0 beta 2
+    * Tested with with iOS 17.4 beta 2, MacOS 14.3, Xcode 14.3 beta 2, VisionOS 1.1 beta
     * Converted SwiftyJSON from package to file (as a temp workaround)
     * Added basic info about dozens of nearby photo clubs (as an example, and for screenshots)
     * Removed image property in OrganizationList.json. User can see an image of the building via the Wikipedia link.
