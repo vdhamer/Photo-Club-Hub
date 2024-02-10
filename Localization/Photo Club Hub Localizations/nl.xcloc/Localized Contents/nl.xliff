@@ -196,7 +196,7 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
       </trans-unit>
       <trans-unit id="Paragraph_3.1" xml:space="preserve">
         <source>__Languages__\n\n_Photo Club Hub_ automatically selects its language based on your device’s language settings. It currently supports English and Dutch. You can change language using _Settings &gt; General &gt; Language &amp; Region &gt; Preferred Language Order_ or by overruling this setting for this app only (_Settings &gt; Photo Club Hub &gt; Language_).</source>
-        <target state="translated">__Tweetalig__\n\n_Fotoclub Hub_ kiest een taal op basis van de taal die ingesteld is op het apparaat. Momenteel worden Nederlands en Engels ondersteund. Je kan de taalinstelling aanpassen onder _Instellingen → Algemeen → Taal en regio → Volgorde voorkeurstalen_. Als alternatief kan men de taalkeuze voor alleen deze app aanpassen via _Instellingen → Fotoclub Hub → Voorkeurstaal_.</target>
+        <target>__Tweetalig__\n\n_Fotoclub Hub_ kiest een taal op basis van de taal die ingesteld is op het apparaat. Momenteel worden Nederlands en Engels ondersteund. Je kan de taalinstelling aanpassen onder _Instellingen → Algemeen → Taal en regio → Volgorde voorkeurstalen_. Als alternatief kan men de taalkeuze voor alleen deze app aanpassen via _Instellingen → Fotoclub Hub → Voorkeurstaal_.</target>
         <note>First paragraph in The Features section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.2" xml:space="preserve">
@@ -240,57 +240,40 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
         <note>Ninth paragraph in Prelude section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_4.1" xml:space="preserve">
-        <source>The app runs on iPhone and iPad and requires iOS 17.0 or higher. As most iOS users upgrade to the most recent iOS version possible, this means that the latest app version can support devices made in the last 6 or so years.</source>
+        <source>Photo Club Hub requires the latest major version of iOS. This allows us to keep up to date technology-wise. This means that the latest version of the app can run on devices released in the last 7 or so years. Older devices can generally still run older versions of the app.</source>
         <note>First paragraph SupportedPlatforms section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_4.2" xml:space="preserve">
-        <source>The app depends heavily on various Apple software technologies. These include Swift (a programming language), SwiftUI (a user interface framework), Core Data (local data storage), Metal (graphics acceleration), and so-called _structured concurrency_ (for data fetching), Xcode (development tooling), and iOS itself.</source>
+        <source>For practical reasons, the app is optimised for __iOS__ and __iPadOS__. The app can also run on MacOS the new VisionOS as an iPad app.</source>
         <note>Second paragraph SupportedPlatforms section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_4.3" xml:space="preserve">
-        <source>The benefit of an iOS focus is that it allows the app's developers to focus on functionality rather than cross-platform compatibility.</source>
+        <source>Although there is presently no native support for __Android__ or other non-Apple phone platforms, we plan to provide support by automatically generating website pages from the same online lists that the app uses. This helps keep club web sites up to date, and allows viewing of clubs, members, and images in a web browsers on a wide range of platforms  including Android, Windows, and more.</source>
         <note>Third paragraph SupportedPlatforms section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_4.4" xml:space="preserve">
-        <source>The drawback, however, is the lack of Android support (for now). This is because the Android world has its own set of software technologies and tends to have more internal diversity. Apps that choose to support multiple platforms require more effort or require more technical compromises.</source>
+        <source>These and other ideas will depend on uptake and help from volunteers from the software community. If you are interested in helping, see the next section.</source>
         <note>Fourth paragraph SupportedPlatforms section of Readme page</note>
       </trans-unit>
-      <trans-unit id="Paragraph_4.5" xml:space="preserve">
-        <source>To put this into perspective, the top-6 software "platforms" are (largest first): web, Android, Windows, iOS, iPadOS, and MacOS. Only the very largest apps (like Word, Twitter, Minecraft, Chrome) cover the full range. Other famous apps cover only half: Photoshop (Windows, MacOS, iPadOS), WhatsApp (iPhone, Android, web - kind of), Pokémon Go (Android, iOS, iPadOS - kind of).</source>
-        <note>Fifth paragraph SupportedPlatforms section of Readme page</note>
-      </trans-unit>
-      <trans-unit id="Paragraph_4.6" xml:space="preserve">
-        <source>The roadmap for additional future platform support will depend on uptake and help from the software community. MacOS and VisionOS both more or less work already. Support for Apple's tvOS is possible. However, a promising future step would be to support the automatic generation of web site pages using the same data sources used by the app. This would indirectly cover Android, PC, and more. And would benefit the clubs that need to maintain their lists.</source>
-        <note>Sixth paragraph SupportedPlatforms section of Readme page</note>
-      </trans-unit>
       <trans-unit id="Paragraph_5.1" xml:space="preserve">
-        <source>You can find this app on [GitHub](https://github.com/vdhamer/Photo-Club-Hub). This allows other software developers to contribute. Getting more developers involved will speed things up, but also provides fresh ideas and ultimately improve continuity.</source>
+        <source>The source code of this app is on [GitHub](https://github.com/vdhamer/Photo-Club-Hub). We are hoping for support from the community.</source>
         <note>First paragraph Developers section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_5.2" xml:space="preserve">
-        <source>Welcome contributions include adding features, code improvements, ideas on architecture and interface definition, and possibly server-side functionality.</source>
-        <target>De app maakt intern zwaar gebruik van diverse __Apple__ software technologieën: Swift (een programmeertaal), SwiftUI (voor schermontwerp), Core Data (lokale dataopslag), Metal (bewegende animaties), "Structured Concurrency" (laden van data), en iOS zelf.</target>
+        <source>Additional software developers will increase development speed, bring in fresh ideas and ultimately improve continuity. Examples of contributions include adding features, code improvements, ideas, interface reviews, optimal MacOS support, and possibly server-side functionality.</source>
         <note>Second paragraph Developers section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_5.3" xml:space="preserve">
-        <source>Contributions that _do not require coding_ are also welcome: beta testing via [TestFlight](https://apps.apple.com/us/app/testflight/id899247664), feature requests, translations, and - above all - adding support for more clubs.</source>
-        <target>Door vooralsnog alleen Apple producten te ondersteunen, kan het ontwikkelen van de app zich richten op functionaliteit in plaats van op het ondersteunen van diverse apparaatsoorten en versies van besturingsystemen.</target>
+        <source>Contributions that __don’t require coding__ include beta testing via [TestFlight](https://apps.apple.com/us/app/testflight/id899247664), feature requests, translations, App Store reviews, and—above all—connecting up your own photo club.</source>
         <note>Third paragraph Developers section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_5.4" xml:space="preserve">
-        <source>There is a major ongoing transition to provide a clean, standardised interface to retrieve data per photo club. Such an interface is needed to load the data, but also to keep the data up to date. After all, membership data and portfolios change regularly. The original interface was a plug-in design with an adaptor per photo club. This is being replaced by a standard JSON-based interface to avoid having to update the source in order to onboard additional clubs.</source>
-        <target>Dit heeft uiteraard wel het nadeel dat er niet gauw een __Android__ versie van deze app beschikbaar zal komen. De bekendste apps doen dit wel om de gehele mobiele markt te kunnen bedienen, maar dit vereist veel extra werk en technische compromissen.</target>
+        <source>The app is undergoing a major transition to provide a clean, standardized interface to pull in photo club data. This enables the app to load up-to-date club membership data and portfolios. The original interface was a plug-in design with a custom software module per club. It thus was very flexible, but required a lot of work to add another club.</source>
         <note>Fourth paragraph Developers section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_5.5" xml:space="preserve">
-        <source>For Photo Club Waalre, an early prototype of this approach to loading data is already in use. The fact that the club exists is stored in a central (JSON) file. That file points to a membership list that is read from a HTML table on the club’s [website](https://www.FotogroepWaalre.nl). The portfolios are read from XML files generated by an Adobe Lightroom plug-in called [JuiceBox-Pro](https://www.juicebox.net/tour/). This plug-in allows the club to manage the portfolios per member using Lightroom (as a Lightroom "collection"). These collections can then be uploaded (ftp'ed) to the webserver via the Lightroom _Upload_ button. The uploaded information can then be downloaded from the web site when it is needed.</source>
-        <target>De keus om Android vooralsnog te negeren heeft ook een ander gevolg: de app kan geen essentiële functionaliteit bevatten waarvoor geen goed alternatief voorhanden is. En met "alternatief" denken we dus vooral aan een website. Een website is bijvoorbeeld ook nodig voor PC gebruikers. En voor functionaliteit die deze app niet afdekt (zoals clubnieuws en vergaderschema's).</target>
+        <source>Software developers or other volunteers who are interested to help can contact us via GitHub, Facebook PM or LinkedIn. More information about the way the app works can be found on [GitHub](https://github.com/vdhamer/Photo-Club-Hub).</source>
         <note>Fifth paragraph Developers section of Readme page</note>
-      </trans-unit>
-      <trans-unit id="Paragraph_5.6" xml:space="preserve">
-        <source>Software developers or other volunteers who are interested to help can contact us via GitHub, Facebook PM or LinkedIn.</source>
-        <target>Een veelbelovende uitbreiding zou het automatisch aanmaken van website pagina's zijn. Die pagina's kunnen op dezelfde manier van data voorzien worden als de app. Hiermee ondersteun je zowel Android als PC gebruikers, maar vereenvoudig je ook het actueel houden van de data.   </target>
-        <note>Sixth paragraph Developers section of Readme page</note>
       </trans-unit>
       <trans-unit id="Partial model" xml:space="preserve">
         <source>Partial model</source>

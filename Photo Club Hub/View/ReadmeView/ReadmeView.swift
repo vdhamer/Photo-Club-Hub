@@ -198,8 +198,6 @@ struct ReadmeView: View {
                             Paragraph("4.2", comment: "Second paragraph in Platforms section of Readme page", geo: geo)
                             Paragraph("4.3", comment: "Third paragraph in Platforms section of Readme page", geo: geo)
                             Paragraph("4.4", comment: "Fourth paragraph in Platforms section of Readme page", geo: geo)
-                            Paragraph("4.5", comment: "Fifth paragraph in Platforms section of Readme page", geo: geo)
-                            Paragraph("4.6", comment: "Sixth paragraph in Platforms section of Readme page", geo: geo)
                         }
 
                         VStack {
@@ -224,7 +222,6 @@ struct ReadmeView: View {
                             Paragraph("5.3", comment: "Third paragraph in OpenSource section of Readme page", geo: geo)
                             Paragraph("5.4", comment: "Fourth paragraph in OpenSource section of Readme page", geo: geo)
                             Paragraph("5.5", comment: "Fifth paragraph in OpenSource section of Readme page", geo: geo)
-                            Paragraph("5.6", comment: "Sixth paragraph in OpenSource section of Readme page", geo: geo)
                         }
 
                         SectionHeader("", geo: geo)
