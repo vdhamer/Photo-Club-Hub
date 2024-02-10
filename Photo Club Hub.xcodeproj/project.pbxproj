@@ -29,7 +29,7 @@
 		D053F23D2B54430C00662EF8 /* Photo-Club-Hub-InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D053F23B2B54430C00662EF8 /* Photo-Club-Hub-InfoPlist.strings */; };
 		D05414F72AC7499000D899D8 /* FotogroepDeGenderMembersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05414F62AC7499000D899D8 /* FotogroepDeGenderMembersProvider.swift */; };
 		D05414F92AC749EC00D899D8 /* FotogroepDeGenderMembersProvider+insertSomeHardcodedMemberDataCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05414F82AC749EC00D899D8 /* FotogroepDeGenderMembersProvider+insertSomeHardcodedMemberDataCommon.swift */; };
-		D05E451E27EF2A2C00D31327 /* ReadmeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05E451D27EF2A2C00D31327 /* ReadmeView.swift */; };
+		D05E451E27EF2A2C00D31327 /* ReadmeViewEN.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05E451D27EF2A2C00D31327 /* ReadmeViewEN.swift */; };
 		D06061E828A0453F00A675A7 /* FGWPrivateMembersURL2.txt in Resources */ = {isa = PBXBuildFile; fileRef = D06061E728A0453F00A675A7 /* FGWPrivateMembersURL2.txt */; };
 		D06061EA28A0456C00A675A7 /* FGWPrivateMembersURL3.txt in Resources */ = {isa = PBXBuildFile; fileRef = D06061E928A0456C00A675A7 /* FGWPrivateMembersURL3.txt */; };
 		D06061ED28A05D4600A675A7 /* String+Paths.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06061EC28A05D4600A675A7 /* String+Paths.swift */; };
@@ -131,7 +131,7 @@
 		D053F23C2B54430C00662EF8 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = "nl.lproj/Photo-Club-Hub-InfoPlist.strings"; sourceTree = "<group>"; };
 		D05414F62AC7499000D899D8 /* FotogroepDeGenderMembersProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FotogroepDeGenderMembersProvider.swift; sourceTree = "<group>"; };
 		D05414F82AC749EC00D899D8 /* FotogroepDeGenderMembersProvider+insertSomeHardcodedMemberDataCommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FotogroepDeGenderMembersProvider+insertSomeHardcodedMemberDataCommon.swift"; sourceTree = "<group>"; };
-		D05E451D27EF2A2C00D31327 /* ReadmeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeView.swift; sourceTree = "<group>"; };
+		D05E451D27EF2A2C00D31327 /* ReadmeViewEN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeViewEN.swift; sourceTree = "<group>"; };
 		D06061E728A0453F00A675A7 /* FGWPrivateMembersURL2.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = FGWPrivateMembersURL2.txt; sourceTree = "<group>"; };
 		D06061E928A0456C00A675A7 /* FGWPrivateMembersURL3.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = FGWPrivateMembersURL3.txt; sourceTree = "<group>"; };
 		D06061EC28A05D4600A675A7 /* String+Paths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Paths.swift"; sourceTree = "<group>"; };
@@ -264,7 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				D08845C42B6F060600D2991D /* PhotoClubHubReadMeEN.pages */,
-				D05E451D27EF2A2C00D31327 /* ReadmeView.swift */,
+				D05E451D27EF2A2C00D31327 /* ReadmeViewEN.swift */,
 			);
 			path = ReadmeView;
 			sourceTree = "<group>";
@@ -861,7 +861,7 @@
 				D0831A32277F72590049AB84 /* Photographer.swift in Sources */,
 				D0EAEB332B3CA6D300EC05B6 /* OrganizationList.swift in Sources */,
 				D044646527FCE7C100990613 /* UIDevice+IsIPad.swift in Sources */,
-				D05E451E27EF2A2C00D31327 /* ReadmeView.swift in Sources */,
+				D05E451E27EF2A2C00D31327 /* ReadmeViewEN.swift in Sources */,
 				D01D2B6227D3BBDC00E2FE41 /* View+Navigate.swift in Sources */,
 				D06754A02942B23F00C0AB08 /* FotogroepWaalreMembersProvide+enumHTMLPageLoadingState.swift in Sources */,
 				D082BE912957806800FF0812 /* LogoPath.swift in Sources */,

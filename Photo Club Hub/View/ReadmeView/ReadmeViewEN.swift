@@ -90,7 +90,6 @@ struct ReadmeView: View {
                                     .resizable()
                                     .scaledToFit()
                                     .frame(width: geo.size.width * 0.8, alignment: .center)
-                                    .border(.gray, width: 1)
                                 Text("Supporting multiple languages",
                                      comment: "Caption of Localizations image on Readme page")
                                 .font(.callout.italic())
