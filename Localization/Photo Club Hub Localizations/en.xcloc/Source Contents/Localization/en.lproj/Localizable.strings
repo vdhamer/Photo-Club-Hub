@@ -165,7 +165,7 @@ Default status of member within a club. Used in concatenations. */
 "Paragraph_3.9" = "__Former Members__\\n\\nThe app can include the work of former club members. By default, former members are not shown, but you can enable displaying them in the _Preferences_ screen.\\n\\nAn easy way to get recent ex-members in the app is to simply keep their portfolio when they leave, but only mark the member as ex-member in the membership list.";
 
 /* First paragraph SupportedPlatforms section of Readme page */
-"Paragraph_4.1" = "Photo Club Hub requires the latest major version of iOS. This allows us to keep up to date technology-wise. This means that the latest version of the app can run on devices released in the last 7 or so years. Older devices can generally still run older versions of the app.";
+"Paragraph_4.1" = "_Photo Club Hub_ requires the latest major version of iOS. This allows us to keep up to date technology-wise. This means that the latest version of the app can run on devices released in the last 6 or 7 years.";
 
 /* Second paragraph SupportedPlatforms section of Readme page */
 "Paragraph_4.2" = "For practical reasons, the app is optimised for __iOS__ and __iPadOS__. The app can also run on MacOS the new VisionOS as an iPad app.";
@@ -190,9 +190,6 @@ Default status of member within a club. Used in concatenations. */
 
 /* Fifth paragraph Developers section of Readme page */
 "Paragraph_5.5" = "Software developers or other volunteers who are interested to help can contact us via GitHub, Facebook PM or LinkedIn. More information about the way the app works can be found on [GitHub](https://github.com/vdhamer/Photo-Club-Hub).";
-
-/* Caption for image on Readme page */
-"Partial model" = "Partial model";
 
 /* Telephone number (usually invisible) */
 "Phone:" = "Phone:";

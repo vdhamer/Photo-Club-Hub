@@ -240,8 +240,8 @@ Try dragging down the Photo Clubs screen to reload the default clubs.</target>
         <note>Ninth paragraph in Prelude section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_4.1" xml:space="preserve">
-        <source>Photo Club Hub requires the latest major version of iOS. This allows us to keep up to date technology-wise. This means that the latest version of the app can run on devices released in the last 7 or so years. Older devices can generally still run older versions of the app.</source>
-        <target>Photo Club Hub requires the latest major version of iOS. This allows us to keep up to date technology-wise. This means that the latest version of the app can run on devices released in the last 7 or so years. Older devices can generally still run older versions of the app.</target>
+        <source>_Photo Club Hub_ requires the latest major version of iOS. This allows us to keep up to date technology-wise. This means that the latest version of the app can run on devices released in the last 6 or 7 years.</source>
+        <target>_Photo Club Hub_ requires the latest major version of iOS. This allows us to keep up to date technology-wise. This means that the latest version of the app can run on devices released in the last 6 or 7 years.</target>
         <note>First paragraph SupportedPlatforms section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_4.2" xml:space="preserve">
@@ -283,11 +283,6 @@ Try dragging down the Photo Clubs screen to reload the default clubs.</target>
         <source>Software developers or other volunteers who are interested to help can contact us via GitHub, Facebook PM or LinkedIn. More information about the way the app works can be found on [GitHub](https://github.com/vdhamer/Photo-Club-Hub).</source>
         <target>Software developers or other volunteers who are interested to help can contact us via GitHub, Facebook PM or LinkedIn. More information about the way the app works can be found on [GitHub](https://github.com/vdhamer/Photo-Club-Hub).</target>
         <note>Fifth paragraph Developers section of Readme page</note>
-      </trans-unit>
-      <trans-unit id="Partial model" xml:space="preserve">
-        <source>Partial model</source>
-        <target>Partial model</target>
-        <note>Caption for image on Readme page</note>
       </trans-unit>
       <trans-unit id="Phone:" xml:space="preserve">
         <source>Phone:</source>
