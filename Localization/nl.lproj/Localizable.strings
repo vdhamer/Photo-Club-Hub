@@ -211,7 +211,7 @@ Default status of member within a club. Used in concatenations. */
 "Paragraph_5.2" = "Hulp vanuit de software gemeenschap komt niet alleen de ontwikkelsnelheid ten goede. Het verhoogt ook de kwaliteit en borgt de continuïteit. Enkele voorbeelden van softwarehulp zijn: punten uit de GitHub to-do lijst, werken aan grotere wijzigingen, kleinere code verbeteringen, helpen met specificaties, en verfijning van Mac en Vision Pro ondersteuning.";
 
 /* Third paragraph Developers section of Readme page */
-"Paragraph_5.3" = "Hulp van enthousiaste gebruikers is ook welkom. Voorbeelden: testen via [TestFlight](https://apps.apple.com/us/app/testflight/id899247664), suggesties, vertalingen, recensies op de App Store en (hoogste prioriteit) het stapsgewijs ondersteunen van een bevriende fotoclub.";
+"Paragraph_5.3" = "Hulp van enthousiaste gebruikers is ook welkom. Voorbeelden: testen via [TestFlight](https://apps.apple.com/us/app/testflight/id899247664), suggesties, vertalingen, recensies op de App Store en (hoogste prioriteit) het stapsgewijs ondersteunen van een jouw fotoclub.";
 
 /* Fourth paragraph Developers section of Readme page */
 "Paragraph_5.4" = "Momenteel is er een vrij grote verandering in de app onderweg. Het einddoel is dat een club __zichzelf__ kan toevoegen zonder aanpassing van de code, en met maximale controle van de club over hun eigen gegevens. Dit gaat uit van JSON bestanden die door de clubs aangemaakt, gehost en bijgewerkt worden. Bijvoorbeeld een JSON record die kerngegevens van de club bevat, een JSON lijst met alle leden en hun rollen/status, en iets vergelijkbaars voor de eigenlijke portfolio's.";
