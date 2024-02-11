@@ -189,7 +189,7 @@ Default status of member within a club. Used in concatenations. */
 
 /* Ninth paragraph in Prelude section of Readme page */
 "Paragraph_3.9.a" = "__Voormalige leden__";
-"Paragraph_3.9.b" = "De app kan het werk van voormalig clubleden tonen. Dit werk is standaard onzichtbaar, maar kan in het _Instellingen_ aangezet worden.";
+"Paragraph_3.9.b" = "De app kan het werk van voormalig clubleden tonen. Dit werk is standaard onzichtbaar, maar kan bij _Instellingen_ aangezet worden.";
 "Paragraph_3.9.c" = "Een makkelijk manier om recente ex-leden binnen de app te houden is om ze niet te wissen zodra ze vertrekken. In de ledenlijst kan aangegeven worden of iemand lid of ex-lid is.";
 
 /* First paragraph SupportedPlatforms section of Readme page */
