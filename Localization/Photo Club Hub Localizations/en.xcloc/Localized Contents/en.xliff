@@ -241,7 +241,7 @@ Try dragging down the Photo Clubs screen to reload the default clubs.</target>
       </trans-unit>
       <trans-unit id="Paragraph_3.4.c" xml:space="preserve">
         <source>This requires extending an online (.json) file. For now this involves sending us the club’s name, town, latitude, and longitude. And, if possible, providing a web address and a remark in one or more languages (140 char each) on anything noteworthy about the club. There examples in an extended [Readme](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) on GitHub.</source>
-        <target>This requires extending an online (.json) file. For now this involves sending us the club’s name, town, latitude, and longitude. And, if possible, providing a web address and a remark in one or more languages (140 char each) on anything noteworthy about the club. There examples in an extended [Readme](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) on GitHub.</target>
+        <target>This requires extending an online (.json) file. For now this involves sending us the club’s name, town, latitude, and longitude. And, if possible, providing a web address and a remark in one or more languages (140 char each) on anything noteworthy about the club. There are examples in an extended [Readme](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) on GitHub.</target>
         <note>(No Comment)</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.4.d" xml:space="preserve">
