@@ -205,7 +205,7 @@ Default status of member within a club. Used in concatenations. */
 "Paragraph_4.4" = "De komst van dit soort uitbreidingen zal afhangen van de belangstelling in de app en van hulp vanuit de Open Source gemeenschap. Vragen hierover beantwoorden wij graag.";
 
 /* First paragraph Developers section of Readme page */
-"Paragraph_5.1" = "De broncode van de app is als Xcode project te vinden op [GitHub](https://github.com/vdhamer/Photo-Club-Hub).";
+"Paragraph_5.1" = "De broncode van de app is als Apple _Xcode_ project te vinden op [GitHub](https://github.com/vdhamer/Photo-Club-Hub).";
 
 /* Second paragraph Developers section of Readme page */
 "Paragraph_5.2" = "Hulp vanuit de software gemeenschap komt niet alleen de ontwikkelsnelheid ten goede. Het verhoogt ook de kwaliteit en borgt de continuïteit. Enkele voorbeelden van softwarehulp zijn: punten uit de GitHub to-do lijst, werken aan grotere wijzigingen, code verbeteringen, helpen met specificaties, en verfijning van Mac en Vision Pro ondersteuning.";
