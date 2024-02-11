@@ -296,9 +296,9 @@ struct ReadmeView: View {
         var bottomPaddingAmount: CGFloat // defaults to value of horizontal padding
 
         // explicit init() used here just to suppress localizedStringKey argument label
-        init(_ localizedStringKeySuffix: String, 
+        init(_ localizedStringKeySuffix: String,
              comment: StaticString,
-             geo: GeometryProxy, 
+             geo: GeometryProxy,
              bottomPaddingAmount: CGFloat = paddingConstant) {
             let localizedStringKey: String = "Paragraph_" + localizedStringKeySuffix
             self.localizedStringKey = LocalizedStringKey(localizedStringKey)

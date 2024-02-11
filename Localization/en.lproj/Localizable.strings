@@ -137,88 +137,88 @@ Default status of member within a club. Used in concatenations. */
 /* Fifth paragraph in The Concept on Readme page */
 "Paragraph_2.5" = "We try to show the portfolios with minimal distraction, just like an exposition at a museum or gallery. Web sites tend to be less optimal for this, because they are cluttered by browser controls (e.g., an address bar or tabs), and have to display multiple types of information (e.g., club news or schedules).";
 
-/* First paragraph in The Features section of Readme page */
+/* Paragraph 3.1.a of the Readme screen */
 "Paragraph_3.1.a" = "__Languages__";
 
-/* (No Comment) */
+/* Paragraph 3.1.b of the Readme screen */
 "Paragraph_3.1.b" = "_Photo Club Hub_ automatically selects its language based on your device’s language settings. It currently supports English and Dutch. You can change language using _Settings > General > Language & Region > Preferred Language Order_ or by overruling this setting for this app only (_Settings > Photo Club Hub > Language_).";
 
-/* Second paragraph in The Features section of Readme page */
+/* Paragraph 3.2.a of the Readme screen */
 "Paragraph_3.2.a" = "__3D maps__";
 
-/* (No Comment) */
+/* Paragraph 3.2.ba of the Readme screen */
 "Paragraph_3.2.b" = "If you zoom in enough on any map, a button appears that allows you do view building heights. In this mode you can rotate the map.";
 
-/* Third paragraph in The Features section of Readme page */
+/* Paragraph 3.3.a of the Readme screen */
 "Paragraph_3.3.a" = "__Live location__";
 
-/* (No Comment) */
+/* Paragraph 3.3.b of the Readme screen */
 "Paragraph_3.3.b" = "Maps can show you your live location as a purple dot when it’s in range of the map. This can help navigate to a club or to estimate distances. If the map is unlocked/interactive, a arrow button can re-center the map around your current location.";
 
-/* (No Comment) */
+/* Paragraph 3.3.c of the Readme screen */
 "Paragraph_3.3.c" = "Live location requires granting the app __permission__ to access your location while in the app. The app doesn’t store or share location information with anyone or anything.";
 
-/* Fourth paragraph in The Features section of Readme page */
+/* Paragraph 3.4.a of the Readme screen */
 "Paragraph_3.4.a" = "__Adding photo clubs__";
 
-/* (No Comment) */
+/* Paragraph 3.4.b of the Readme screen */
 "Paragraph_3.4.b" = "The app contains a set of initial photo clubs. Those photo clubs are so far all in one region of the Netherlands. Clubs anywhere in the world can be added, regardless whether they are part of some larger photo club federation.";
 
-/* (No Comment) */
+/* Paragraph 3.4.c of the Readme screen */
 "Paragraph_3.4.c" = "This requires extending an online (.json) file. For now this involves sending us the club’s name, town, latitude, and longitude. And, if possible, providing a web address and a remark in one or more languages (140 char each) on anything noteworthy about the club. There are examples in an extended [Readme](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) on GitHub.";
 
-/* (No Comment) */
+/* Paragraph 3.4.d of the Readme screen */
 "Paragraph_3.4.d" = "Adding and maintaining membership lists for a photo club is a feature for a __future__ app update. These “memberList” files can be hosted on your __own__ website. There will be instructions by then on how to do this for WordPress users, but anything that results in a URL to a valid memberList (JSON) file will work.";
 
-/* Fifth paragraph in The Features section of Readme page */
+/* Paragraph 3.5.a of the Readme screen */
 "Paragraph_3.5.a" = "__Photo museums__";
 
-/* (No Comment) */
+/* Paragraph 3.5.b of the Readme screen */
 "Paragraph_3.5.b" = "The maps can show various photo museums throughout the world. They have a different icon than photo clubs. Museums show up if you zoom out any map far enough that they come into view.";
 
-/* (No Comment) */
+/* Paragraph 3.5.c of the Readme screen */
 "Paragraph_3.5.c" = "Adding a photo museum works the same way as adding a photo club - except that a museum doesn’t have members and member portfolios.";
 
-/* Sixth paragraph in The Features section of Readme page */
+/* Paragraph 3.6.a of the Readme screen */
 "Paragraph_3.6.a" = "__Deleting members (and more)__";
 
-/* (No Comment) */
+/* Paragraph 3.6.b of the Readme screen */
 "Paragraph_3.6.b" = "On the _Portfolios_ screen you can delete a club member by swiping the row to the left. Other screens have similar functionality for removing individual photographers and clubs.";
 
-/* (No Comment) */
+/* Paragraph 3.6.c of the Readme screen */
 "Paragraph_3.6.c" = "Deletion of an arbitrary member will generally be __temporary__ because the member is still on the club's online membership lists. Deletion does have effect if the row has been deleted from these online lists. The feature will be automated at some point, and is only useful in special circumstances (like when a typo in a member's name is corrected).";
 
-/* (No Comment) */
+/* Paragraph 3.6.d of the Readme screen */
 "Paragraph_3.6.d" = "So just remember that swiping left is harmless, and if you need to clean up a list you can alternatively just uninstall and reinstall the app to clean up the app's internal data.";
 
-/* Seventh paragraph in Prelude section of Readme page */
+/* Paragraph 3.7.a of the Readme screen */
 "Paragraph_3.7.a" = "__Web sites__";
 
-/* (No Comment) */
+/* Paragraph 3.7.b of the Readme scree */
 "Paragraph_3.7.b" = "This app is complimentary to your club’s web site. Because web sites have more uses than just presenting photos, _Photo Club Hub_ includes clickable links to club and photographer web sites.";
 
-/* Eighth paragraph in Prelude section of Readme page */
+/* Paragraph 3.8.a of the Readme screen */
 "Paragraph_3.8.a" = "__The opening image__";
 
-/* (No Comment) */
+/* Paragraph 3.8.b of the Readme screen */
 "Paragraph_3.8.b" = "When the app opens, it shows an image (“Prelude”) corresponding to the app’s icon. If you tap somewhere __inside__ the image, it zooms out to show the full image representing how digital cameras see color.";
 
-/* (No Comment) */
+/* Paragraph 3.8.c of the Readme screen */
 "Paragraph_3.8.c" = "This involves a [Bayer color filter array](https://en.wikipedia.org/wiki/Bayer_filter) that adds a color filter on top of each sensor cell. This filter array is shown superimposed on a colorful photo.";
 
-/* (No Comment) */
+/* Paragraph 3.8.d of the Readme screen */
 "Paragraph_3.8.d" = "Tapping __inside__ the image allows you to zoom in or out to your heart's content. Tapping __outside__ the image area ends the animation. A single tap __outside__ the image allows you to skip the animation.";
 
-/* (No Comment) */
+/* Paragraph 3.8.e of the Readme screen */
 "Paragraph_3.8.e" = "The animation incidentally uses GPU core acceleration using the [Metal software framework](https://browser.geekbench.com/ios-benchmarks#metal).";
 
-/* Ninth paragraph in Prelude section of Readme page */
+/* Paragraph 3.9.a of the Readme screen */
 "Paragraph_3.9.a" = "__Former Members__";
 
-/* (No Comment) */
+/* Paragraph 3.9.b of the Readme screen */
 "Paragraph_3.9.b" = "The app can include the work of former club members. By default, former members are not shown, but you can enable displaying them in the _Preferences_ screen.";
 
-/* (No Comment) */
+/* Paragraph 3.9.c of the Readme screen */
 "Paragraph_3.9.c" = "An easy way to get recent ex-members in the app is to simply keep their portfolio when they leave, but only mark the member as ex-member in the membership list.";
 
 /* First paragraph SupportedPlatforms section of Readme page */

@@ -146,50 +146,88 @@ Default status of member within a club. Used in concatenations. */
 /* Fifth paragraph in The Concept on Readme page */
 "Paragraph_2.5" = "Net als bij een tentoonstelling is het belangrijk om een portfolio _zonder afleiding_ te kunnen bekijken. Webpagina's zijn hiervoor vaak iets te druk vanwege allerlei bedieningselementen, maar ook omdat ze vaak meerdere soorten informatie moeten tonen, zoals club nieuws of vergaderschemas.";
 
-/* First paragraph in The Features section of Readme page */
+/* Paragraph 3.1.a of the Readme screen */
 "Paragraph_3.1.a" = "__Tweetalig__";
+
+/* Paragraph 3.1.b of the Readme screen */
 "Paragraph_3.1.b" = "_Fotoclub Hub_ kiest een taal op basis van de taal die ingesteld is op het apparaat. Momenteel worden Nederlands en Engels volledig ondersteund. Je kan de taalinstelling aanpassen onder _Instellingen → Algemeen → Taal en regio → Volgorde voorkeurstalen_. Als alternatief kan men de taalkeuze voor alleen deze app aanpassen via _Instellingen → Fotoclub Hub → Voorkeurstaal_.";
 
-/* Second paragraph in The Features section of Readme page */
+/* Paragraph 3.2.a of the Readme screen */
 "Paragraph_3.2.a" = "__3D kaarten__";
+
+/* Paragraph 3.2.b of the Readme screen */
 "Paragraph_3.2.b" = "Wanneer men voldoende inzoomt op een landkaart, verschijnt er een knop om de kaart in 3D weer te geven. Dit vereist dat de kaart interactief is (slotje open). Probeer het bijvoorbeeld uit met New York met zijn hoge gebouwen.";
 
-/* Third paragraph in The Features section of Readme page */
+/* Paragraph 3.3.a of the Readme screen */
 "Paragraph_3.3.a" = "__Locatie weergave__";
+
+/* Paragraph 3.3.b of the Readme screen */
 "Paragraph_3.3.b" = "De landkaarten kunnen de huidige locatie van de gebruiker weergeven als paarse stip - mits die locatie binnen het bereik van de kaart valt. Indien de kaart van slot is, verschijnt er een pijlvormige knop waarmee de kaart gecentreerd kan worden ten opzichte van de huidige locatie.";
+
+/* Paragraph 3.3.c of the Readme screen */
 "Paragraph_3.3.c" = "Locatie weergave vereist dat de gebruiker desgevraagd toestemming verleent aan de app om de locatie gegevens te bepalen. Deze informatie wordt _niet_ door de app opgeslagen of gedeeld.";
 
-/* Fourth paragraph in The Features section of Readme page */
+/* Paragraph 3.4.a of the Readme screen */
 "Paragraph_3.4.a" = "__Toevoegen van clubs__";
+
+/* Paragraph 3.4.b of the Readme screen */
 "Paragraph_3.4.b" = "De app bevat momenteel alle clubs in de Fotobond regio Noord Brabant Oost plus enkele clubs die niet bij de Nederlandse Fotobond aangesloten zijn. Het is mogelijk om clubs (waar ook ter wereld) aan de app toe te voegen.";
+
+/* Paragraph 3.4.c of the Readme screen */
 "Paragraph_3.4.c" = "Dit maakt gebruikt van een online lijst (in .json formaat). U kunt een club toevoegen aan de centrale lijst door ons de clubnaam met wat gegevens over waar de club samenkomt (gemeente, GPS coordinaten) te sturen. Liefst ontvangen wij ook de website en iets vermeldenswaardig (max 140 karakters) over de club. Een engelstalige [Readme bestand](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) op GitHub bevat voorbeelden.";
+
+/* Paragraph 3.4.d of the Readme screen */
 "Paragraph_3.4.d" = "In een toekomstige versie van de app komt er ook de mogelijkheid om de __ledenlijst__ van een fotoclub aan te bieden. Ledenlijst bestanden kunnen op de clubwebsite bewaard worden.";
 
-/* Fifth paragraph in The Features section of Readme page */
+/* Paragraph 3.5.a of the Readme screen */
 "Paragraph_3.5.a" = "__Fotomusea__";
+
+/* Paragraph 3.5.b of the Readme screen */
 "Paragraph_3.5.b" = "De landkaarten tonen ook een aantal fotomusea in diverse landen zoals Nederland, VK, VS, Japan en Australië. Om ze te zien moet een kaart van slot zijn (=interactief) en kan de gebruiker voldoende uitzoomen totdat ze in beeld komen.";
+
+/* Paragraph 3.5.c of the Readme screen */
 "Paragraph_3.5.c" = "Het toevoegen van een fotomuseum gaat op een vergelijkbare manier als het toevoegen van een fotoclub.";
 
-/* Sixth paragraph in The Features section of Readme page */
+/* Paragraph 3.6.a of the Readme screen */
 "Paragraph_3.6.a" = "__Clubleden (en meer) verwijderen__";
+
+/* Paragraph 3.6.b of the Readme screen */
 "Paragraph_3.6.b" = "Op de _Portfolio's_ pagina kan men een clublid verwijderen door deze naar links te vegen. Op andere pagina's kan met fotografen en clubs verwijderen.";
+
+/* Paragraph 3.6.c of the Readme screen */
 "Paragraph_3.6.c" = "Verwijderen heeft _alleen_ blijvend effect als dit clublid ook verwijderd is uit de online versie van de ledenlijst. In alle gevallen kan verwijderen dus geen kwaad.";
+
+/* Paragraph 3.6.d of the Readme screen */
 "Paragraph_3.6.d" = "Als alternatief kan met de app ontinstalleren (waardoor de interne data van de app gewist wordt) en opnieuw installeren.";
 
-/* Seventh paragraph in Prelude section of Readme page */
+/* Paragraph 3.7.a of the Readme screen */
 "Paragraph_3.7.a" =  "__Websites__";
+
+/* Paragraph 3.7.b of the Readme screen */
 "Paragraph_3.7.b" =  "Omdat de websites van fotoclubs allerlei nuttige informatie bevatten, heeft de _Fotoclub Hub_ app klikbare links naar dergelijke websites. De app ondersteunt ook links naar eventuele eigen websites van fotografen (voor zover die over fotografie gaan).";
 
-/* Eighth paragraph in Prelude section of Readme page */
+/* Paragraph 3.8.a of the Readme screen */
 "Paragraph_3.8.a" = "__Het openingsbeeld__";
+
+/* Paragraph 3.8.b of the Readme screen */
 "Paragraph_3.8.b" = "Na het opstarten van de app verschijnt er een beeld (\"_prelude_\") dat afgeleid is van de app logo. Door herhaaldelijk binnen het centrale beeld te klikken, zoomt men in of uit. Uitgezoomd blijkt het beeld een foto te zijn met een laag kleurenfilters.";
+
+/* Paragraph 3.8.c of the Readme screen */
 "Paragraph_3.8.c" = "Dit geheel geeft aan hoe digitale camera's kleur zien. Technisch heet dit een [Bayer kleurenfilter](https://nl.wikipedia.org/wiki/Bayerfilter). Per lichtgevoelige cel worden vooral bepaalde kleuren doorgelaten. Een 24 MPixel camera bevat dus doorgaans 24 miljoen minuscule kleurfilters.";
+
+/* Paragraph 3.8.d of the Readme screen */
 "Paragraph_3.8.d" = "Er is een knop rechtsonder waarmee men de animatie overslaat of afbreekt. Het aanraken van iedere andere plek buiten de grote vierkant werkt ook.";
+
+/* Paragraph 3.8.e of the Readme screen */
 "Paragraph_3.8.e" = "De getoonde animatie maakt overigens gebruikt van de beschikbare GPU cores in uw apparaat voor het benodigde rekenwerk. Het is dus geen video: men kan de lopende animatie onderweg bijsturen.";
 
-/* Ninth paragraph in Prelude section of Readme page */
+/* Paragraph 3.9.a of the Readme screen */
 "Paragraph_3.9.a" = "__Voormalige leden__";
+
+/* Paragraph 3.9.b of the Readme screen */
 "Paragraph_3.9.b" = "De app kan het werk van voormalig clubleden tonen. Dit werk is standaard onzichtbaar, maar kan bij _Instellingen_ aangezet worden.";
+
+/* Paragraph 3.9.c of the Readme screen */
 "Paragraph_3.9.c" = "Een makkelijk manier om recente ex-leden binnen de app te houden is om ze niet te wissen zodra ze vertrekken. In de ledenlijst kan aangegeven worden of iemand lid of ex-lid is.";
 
 /* First paragraph SupportedPlatforms section of Readme page */
