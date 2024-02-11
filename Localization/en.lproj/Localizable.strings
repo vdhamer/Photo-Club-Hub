@@ -165,7 +165,7 @@ Default status of member within a club. Used in concatenations. */
 "Paragraph_3.4.b" = "The app contains a set of initial photo clubs. Those photo clubs are so far all in one region of the Netherlands. Clubs anywhere in the world can be added, regardless whether they are part of some larger photo club federation.";
 
 /* (No Comment) */
-"Paragraph_3.4.c" = "This requires extending an online (.json) file. For now this involves sending us the club’s name, town, latitude, and longitude. And, if possible, providing a web address and a remark in one or more languages (140 char each) on anything noteworthy about the club. There examples in an extended [Readme](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) on GitHub.";
+"Paragraph_3.4.c" = "This requires extending an online (.json) file. For now this involves sending us the club’s name, town, latitude, and longitude. And, if possible, providing a web address and a remark in one or more languages (140 char each) on anything noteworthy about the club. There are examples in an extended [Readme](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) on GitHub.";
 
 /* (No Comment) */
 "Paragraph_3.4.d" = "Adding and maintaining membership lists for a photo club is a feature for a __future__ app update. These “memberList” files can be hosted on your __own__ website. There will be instructions by then on how to do this for WordPress users, but anything that results in a URL to a valid memberList (JSON) file will work.";

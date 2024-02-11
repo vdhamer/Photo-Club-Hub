@@ -2,7 +2,7 @@
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
   <file original="en.lproj/Photo-Club-Hub-InfoPlist.strings" source-language="en" target-language="en" datatype="plaintext">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="15.2" build-num="15C500b"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="15.3" build-num="15E5178i"/>
     </header>
     <body>
       <trans-unit id="CFBundleDisplayName" xml:space="preserve">
@@ -24,7 +24,7 @@
   </file>
   <file original="Localization/en.lproj/Localizable.strings" source-language="en" target-language="en" datatype="plaintext">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="15.2" build-num="15C500b"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="15.3" build-num="15E5178i"/>
     </header>
     <body>
       <trans-unit id="%lld entries" xml:space="preserve">
@@ -240,7 +240,7 @@ Try dragging down the Photo Clubs screen to reload the default clubs.</target>
         <note>(No Comment)</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.4.c" xml:space="preserve">
-        <source>This requires extending an online (.json) file. For now this involves sending us the club’s name, town, latitude, and longitude. And, if possible, providing a web address and a remark in one or more languages (140 char each) on anything noteworthy about the club. There examples in an extended [Readme](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) on GitHub.</source>
+        <source>This requires extending an online (.json) file. For now this involves sending us the club’s name, town, latitude, and longitude. And, if possible, providing a web address and a remark in one or more languages (140 char each) on anything noteworthy about the club. There are examples in an extended [Readme](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) on GitHub.</source>
         <target>This requires extending an online (.json) file. For now this involves sending us the club’s name, town, latitude, and longitude. And, if possible, providing a web address and a remark in one or more languages (140 char each) on anything noteworthy about the club. There are examples in an extended [Readme](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) on GitHub.</target>
         <note>(No Comment)</note>
       </trans-unit>
@@ -345,8 +345,8 @@ Try dragging down the Photo Clubs screen to reload the default clubs.</target>
         <note>Second paragraph SupportedPlatforms section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_4.3" xml:space="preserve">
-        <source>Although there is presently no native support for __Android__ or other non-Apple phone platforms, we plan to provide support by automatically generating website pages from the same online lists that the app uses. This helps keep club web sites up to date, and allows viewing of clubs, members, and images in a web browsers on a wide range of platforms  including Android, Windows, and more.</source>
-        <target>Although there is presently no native support for __Android__ or other non-Apple phone platforms, we plan to provide support by automatically generating website pages from the same online lists that the app uses. This helps keep club web sites up to date, and allows viewing of clubs, members, and images in a web browsers on a wide range of platforms  including Android, Windows, and more.</target>
+        <source>Although there is presently no native support for __Android__ or other non-Apple phone platforms, we plan to provide support by automatically generating website pages from the same online lists that the app uses. This helps keep club web sites up to date, and allows viewing of clubs, members, and images in a web browsers on a wide range of platforms including Android, Windows, and more.</source>
+        <target>Although there is presently no native support for __Android__ or other non-Apple phone platforms, we plan to provide support by automatically generating website pages from the same online lists that the app uses. This helps keep club web sites up to date, and allows viewing of clubs, members, and images in a web browsers on a wide range of platforms including Android, Windows, and more.</target>
         <note>Third paragraph SupportedPlatforms section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_4.4" xml:space="preserve">
@@ -360,8 +360,8 @@ Try dragging down the Photo Clubs screen to reload the default clubs.</target>
         <note>First paragraph Developers section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_5.2" xml:space="preserve">
-        <source>Additional software developers will increase development speed, bring in fresh ideas and ultimately improve continuity. Examples of contributions include adding features, code improvements, ideas, interface reviews, optimal MacOS support, and possibly server-side functionality.</source>
-        <target>Additional software developers will increase development speed, bring in fresh ideas and ultimately improve continuity. Examples of contributions include adding features, code improvements, ideas, interface reviews, optimal MacOS support, and possibly server-side functionality.</target>
+        <source>Additional __software developers__ will increase development speed, bring in fresh ideas and ultimately improve continuity. Examples of contributions include adding features, code improvements, ideas, interface reviews, optimal MacOS support, and possibly server-side functionality.</source>
+        <target>Additional __software developers__ will increase development speed, bring in fresh ideas and ultimately improve continuity. Examples of contributions include adding features, code improvements, ideas, interface reviews, optimal MacOS support, and possibly server-side functionality.</target>
         <note>Second paragraph Developers section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_5.3" xml:space="preserve">

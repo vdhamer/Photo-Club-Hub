@@ -2,7 +2,7 @@
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
   <file original="en.lproj/Photo-Club-Hub-InfoPlist.strings" source-language="en" target-language="nl" datatype="plaintext">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="15.2" build-num="15C500b"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="15.3" build-num="15E5178i"/>
     </header>
     <body>
       <trans-unit id="CFBundleDisplayName" xml:space="preserve">
@@ -24,7 +24,7 @@
   </file>
   <file original="Localization/en.lproj/Localizable.strings" source-language="en" target-language="nl" datatype="plaintext">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="15.2" build-num="15C500b"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="15.3" build-num="15E5178i"/>
     </header>
     <body>
       <trans-unit id="%lld entries" xml:space="preserve">
@@ -151,7 +151,7 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
       </trans-unit>
       <trans-unit id="Paragraph_1.3" xml:space="preserve">
         <source>This consistency avoids having to find each club's website yourself, and then figuring out how to locate and browse the photos on that site. The app does __not__ try to replace club web sites, photographer web sites. or social media channels. Instead, it supports clubs and their members who try to reach out to other clubs, other photographers, and a general audience.</source>
-        <target>Door de foto's consist te presenteren, hoeft de gebruiker de website van de club niet te zoeken om vervolgens te moeten ontdekken hoe de foto's te bekijken. De app probeert nadrukkelijk __niet__ om de websites of social media kanalen van clubs te vervangen. Het beoogt alleen clubs en hun leden onder de aandacht te brengen bij een breed publiek.</target>
+        <target>Door de foto's op een consistente manier te presenteren, hoeft de gebruiker de website van de club niet te zoeken om vervolgens te moeten ontdekken hoe de foto's te bekijken. De app probeert nadrukkelijk __niet__ om de websites of social media kanalen van clubs te vervangen. Het beoogt alleen clubs en hun leden onder de aandacht te brengen bij een breed publiek.</target>
         <note>Third paragraph in The App section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_1.4" xml:space="preserve">
@@ -236,12 +236,12 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
       </trans-unit>
       <trans-unit id="Paragraph_3.4.b" xml:space="preserve">
         <source>The app contains a set of initial photo clubs. Those photo clubs are so far all in one region of the Netherlands. Clubs anywhere in the world can be added, regardless whether they are part of some larger photo club federation.</source>
-        <target>De app bevat momenteel alle clubs in de Fotobond regio Brabant-Oost plus een aantal clubs die niet bij de Nederlandse Fotobond aangesloten zijn. Het is mogelijk om clubs (waar ook ter wereld) zelf voor aan de app toe te voegen.</target>
+        <target>De app bevat momenteel alle clubs in de Fotobond regio Noord Brabant Oost plus enkele clubs die niet bij de Nederlandse Fotobond aangesloten zijn. Het is mogelijk om clubs (waar ook ter wereld) aan de app toe te voegen.</target>
         <note>(No Comment)</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.4.c" xml:space="preserve">
-        <source>This requires extending an online (.json) file. For now this involves sending us the club’s name, town, latitude, and longitude. And, if possible, providing a web address and a remark in one or more languages (140 char each) on anything noteworthy about the club. There examples in an extended [Readme](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) on GitHub.</source>
-        <target>Dit maakt gebruikt van een online lijst (in .json formaat). U kunt een club toevoegen aan de centrale lijst door ons de clubnaam met wat gegevens over waar de club samenkomt (gemeente, GPS coordinaten) te sturen. Liefst ontvangen wij ook de website en iets vermeldenswaardig (max 140 karakters) over de club. Een engelstalige [Readme bestand](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) on GitHub bevat voorbeelden.</target>
+        <source>This requires extending an online (.json) file. For now this involves sending us the club’s name, town, latitude, and longitude. And, if possible, providing a web address and a remark in one or more languages (140 char each) on anything noteworthy about the club. There are examples in an extended [Readme](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) on GitHub.</source>
+        <target>Dit maakt gebruikt van een online lijst (in .json formaat). U kunt een club toevoegen aan de centrale lijst door ons de clubnaam met wat gegevens over waar de club samenkomt (gemeente, GPS coordinaten) te sturen. Liefst ontvangen wij ook de website en iets vermeldenswaardig (max 140 karakters) over de club. Een engelstalige [Readme bestand](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) op GitHub bevat voorbeelden.</target>
         <note>(No Comment)</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.4.d" xml:space="preserve">
@@ -316,7 +316,7 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
       </trans-unit>
       <trans-unit id="Paragraph_3.8.e" xml:space="preserve">
         <source>The animation incidentally uses GPU core acceleration using the [Metal software framework](https://browser.geekbench.com/ios-benchmarks#metal).</source>
-        <target>De getoonde animatie maakt overigens gebruikt van de beschikbare GPU cores in uw apparaat voor benodigde rekenwerk. Het is dus geen video: men kan de lopende animatie onderweg bijsturen.</target>
+        <target>De getoonde animatie maakt overigens gebruikt van de beschikbare GPU cores in uw apparaat voor het benodigde rekenwerk. Het is dus geen video: men kan de lopende animatie onderweg bijsturen.</target>
         <note>(No Comment)</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.9.a" xml:space="preserve">
@@ -326,7 +326,7 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
       </trans-unit>
       <trans-unit id="Paragraph_3.9.b" xml:space="preserve">
         <source>The app can include the work of former club members. By default, former members are not shown, but you can enable displaying them in the _Preferences_ screen.</source>
-        <target>De app kan het werk van voormalig clubleden tonen. Dit werk is standaard onzichtbaar, maar kan in het _Instellingen_ aangezet worden.</target>
+        <target>De app kan het werk van voormalig clubleden tonen. Dit werk is standaard onzichtbaar, maar kan bij _Instellingen_ aangezet worden.</target>
         <note>(No Comment)</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.9.c" xml:space="preserve">
@@ -345,8 +345,8 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
         <note>Second paragraph SupportedPlatforms section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_4.3" xml:space="preserve">
-        <source>Although there is presently no native support for __Android__ or other non-Apple phone platforms, we plan to provide support by automatically generating website pages from the same online lists that the app uses. This helps keep club web sites up to date, and allows viewing of clubs, members, and images in a web browsers on a wide range of platforms  including Android, Windows, and more.</source>
-        <target>Ofschoon de app vooralsnog geen directe ondersteuning heeft voor __Android__ of andere niet-Apple telefoons, overwegen wij om ondersteuning te bieden voor het automatisch genereren van website pagina's vanuit dezelfde informatie die de app gebruikt. Dit help om club websites bijgewerkt te houden, maar maakt het ook mogelijk om de clublijst, ledenlijst en portfolio's in een web browser te bekijken op mobile apparaten, Windows en meer.</target>
+        <source>Although there is presently no native support for __Android__ or other non-Apple phone platforms, we plan to provide support by automatically generating website pages from the same online lists that the app uses. This helps keep club web sites up to date, and allows viewing of clubs, members, and images in a web browsers on a wide range of platforms including Android, Windows, and more.</source>
+        <target>Ofschoon de app vooralsnog geen directe ondersteuning heeft voor __Android__ of andere niet-Apple telefoons, overwegen wij om ondersteuning te bieden voor het automatisch genereren van website pagina's vanuit dezelfde informatie die de app gebruikt. Dit help om club websites bijgewerkt te houden, maar maakt het ook mogelijk om de clublijst, ledenlijst en portfolio's in een web browser te bekijken op mobile apparaten, laptops, en desktops.</target>
         <note>Third paragraph SupportedPlatforms section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_4.4" xml:space="preserve">
@@ -356,17 +356,17 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
       </trans-unit>
       <trans-unit id="Paragraph_5.1" xml:space="preserve">
         <source>The source code of this app is on [GitHub](https://github.com/vdhamer/Photo-Club-Hub). We are hoping for support from the community.</source>
-        <target>De broncode van de app is als Xcode project te vinden op [GitHub](https://github.com/vdhamer/Photo-Club-Hub).</target>
+        <target>De broncode van de app is als Apple _Xcode_ project te vinden op [GitHub](https://github.com/vdhamer/Photo-Club-Hub).</target>
         <note>First paragraph Developers section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_5.2" xml:space="preserve">
-        <source>Additional software developers will increase development speed, bring in fresh ideas and ultimately improve continuity. Examples of contributions include adding features, code improvements, ideas, interface reviews, optimal MacOS support, and possibly server-side functionality.</source>
-        <target>Hulp vanuit de software gemeenschap komt niet alleen de ontwikkelsnelheid ten goede. Het verhoogt ook de kwaliteit en borgt de continuïteit. Enkele voorbeelden van softwarehulp zijn: punten uit de GitHub to-do lijst, werken aan grotere wijzigingen, code verbeteringen, helpen met specificaties, en verfijning van Mac en Vision Pro ondersteuning.</target>
+        <source>Additional __software developers__ will increase development speed, bring in fresh ideas and ultimately improve continuity. Examples of contributions include adding features, code improvements, ideas, interface reviews, optimal MacOS support, and possibly server-side functionality.</source>
+        <target>Hulp vanuit de software gemeenschap komt niet alleen de ontwikkelsnelheid ten goede. Het verhoogt ook de kwaliteit en borgt de continuïteit. Enkele voorbeelden van softwarehulp zijn: punten uit de GitHub to-do lijst, werken aan grotere wijzigingen, kleinere code verbeteringen, helpen met specificaties, en verfijning van Mac en Vision Pro ondersteuning.</target>
         <note>Second paragraph Developers section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_5.3" xml:space="preserve">
         <source>Contributions that __don’t require coding__ include beta testing via [TestFlight](https://apps.apple.com/us/app/testflight/id899247664), feature requests, translations, App Store reviews, and—above all—connecting up your own photo club.</source>
-        <target>Hulp van enthousiaste gebruikers is ook welkom. Voorbeelden: testen via [TestFlight](https://apps.apple.com/us/app/testflight/id899247664), suggesties, vertalingen, recensies op de App Store en (hoogste prioriteit) het stapsgewijs ondersteunen van een bevriende fotoclub.</target>
+        <target>Hulp van enthousiaste gebruikers is ook welkom. Voorbeelden: testen via [TestFlight](https://apps.apple.com/us/app/testflight/id899247664), suggesties, vertalingen, recensies op de App Store en (hoogste prioriteit) het stapsgewijs ondersteunen van een jouw fotoclub.</target>
         <note>Third paragraph Developers section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_5.4" xml:space="preserve">

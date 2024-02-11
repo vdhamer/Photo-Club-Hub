@@ -10,7 +10,7 @@ import SwiftUI
 // swiftlint:disable:next type_body_length
 struct ReadmeView: View {
 
-    private static let paddingAmount: CGFloat = 20
+    private static let paddingConstant: CGFloat = 20
     private let title = String(localized: "Readme", comment: "Title of Readme screen")
     @Environment(\.dismiss) var dismiss: DismissAction // \.dismiss requires iOS 15
     @State private var showingRoadmap = false // controls visibility of Preferences screen
@@ -284,7 +284,7 @@ struct ReadmeView: View {
                 }
             }
             .frame(width: geo.size.width * 0.9, height: 50, alignment: .center)
-            .padding(Edge.Set([.horizontal]), paddingAmount)
+            .padding(Edge.Set([.horizontal]), paddingConstant)
         }
     }
 
@@ -296,8 +296,10 @@ struct ReadmeView: View {
         var bottomPaddingAmount: CGFloat // defaults to value of horizontal padding
 
         // explicit init() used here just to suppress localizedStringKey argument label
-        init(_ localizedStringKeySuffix: String, comment: StaticString,
-             geo: GeometryProxy, bottomPaddingAmount: CGFloat = paddingAmount) {
+        init(_ localizedStringKeySuffix: String, 
+             comment: StaticString,
+             geo: GeometryProxy, 
+             bottomPaddingAmount: CGFloat = paddingConstant) {
             let localizedStringKey: String = "Paragraph_" + localizedStringKeySuffix
             self.localizedStringKey = LocalizedStringKey(localizedStringKey)
             self.comment = comment
@@ -307,7 +309,7 @@ struct ReadmeView: View {
 
         var body: some View {
             Text(localizedStringKey, comment: comment)
-                .padding([.horizontal], paddingAmount)
+                .padding([.horizontal], paddingConstant)
                 .padding([.bottom], bottomPaddingAmount)
                 .frame(width: geo.size.width, alignment: .leading)
                 .fixedSize() // magic to get Text to wrap
