@@ -237,7 +237,7 @@ Default status of member within a club. Used in concatenations. */
 "Paragraph_5.1" = "The source code of this app is on [GitHub](https://github.com/vdhamer/Photo-Club-Hub). We are hoping for support from the community.";
 
 /* Second paragraph Developers section of Readme page */
-"Paragraph_5.2" = "Additional software developers will increase development speed, bring in fresh ideas and ultimately improve continuity. Examples of contributions include adding features, code improvements, ideas, interface reviews, optimal MacOS support, and possibly server-side functionality.";
+"Paragraph_5.2" = "Additional __software developers__ will increase development speed, bring in fresh ideas and ultimately improve continuity. Examples of contributions include adding features, code improvements, ideas, interface reviews, optimal MacOS support, and possibly server-side functionality.";
 
 /* Third paragraph Developers section of Readme page */
 "Paragraph_5.3" = "Contributions that __don’t require coding__ include beta testing via [TestFlight](https://apps.apple.com/us/app/testflight/id899247664), feature requests, translations, App Store reviews, and—above all—connecting up your own photo club.";
