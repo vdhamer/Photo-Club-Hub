@@ -185,7 +185,7 @@ Default status of member within a club. Used in concatenations. */
 "Paragraph_3.8.b" = "Na het opstarten van de app verschijnt er een beeld (\"_prelude_\") dat afgeleid is van de app logo. Door herhaaldelijk binnen het centrale beeld te klikken, zoomt men in of uit. Uitgezoomd blijkt het beeld een foto te zijn met een laag kleurenfilters.";
 "Paragraph_3.8.c" = "Dit geheel geeft aan hoe digitale camera's kleur zien. Technisch heet dit een [Bayer kleurenfilter](https://nl.wikipedia.org/wiki/Bayerfilter). Per lichtgevoelige cel worden vooral bepaalde kleuren doorgelaten. Een 24 MPixel camera bevat dus doorgaans 24 miljoen minuscule kleurfilters.";
 "Paragraph_3.8.d" = "Er is een knop rechtsonder waarmee men de animatie overslaat of afbreekt. Het aanraken van iedere andere plek buiten de grote vierkant werkt ook.";
-"Paragraph_3.8.e" = "De getoonde animatie maakt overigens gebruikt van de beschikbare GPU cores in uw apparaat voor benodigde rekenwerk. Het is dus geen video: men kan de lopende animatie onderweg bijsturen.";
+"Paragraph_3.8.e" = "De getoonde animatie maakt overigens gebruikt van de beschikbare GPU cores in uw apparaat voor het benodigde rekenwerk. Het is dus geen video: men kan de lopende animatie onderweg bijsturen.";
 
 /* Ninth paragraph in Prelude section of Readme page */
 "Paragraph_3.9.a" = "__Voormalige leden__";
