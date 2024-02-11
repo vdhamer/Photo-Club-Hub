@@ -120,7 +120,7 @@ Default status of member within a club. Used in concatenations. */
 "Paragraph_1.2" = "De app presenteert geselecteerd werk van  clubleden. De foto's zijn op een consistente wijze, en zonder afleiding te bekijken. Men kan de app dus als een permanente online expositie zien.";
 
 /* Third paragraph in The App section of Readme page */
-"Paragraph_1.3" = "Door de foto's consist te presenteren, hoeft de gebruiker de website van de club niet te zoeken om vervolgens te moeten ontdekken hoe de foto's te bekijken. De app probeert nadrukkelijk __niet__ om de websites of social media kanalen van clubs te vervangen. Het beoogt alleen clubs en hun leden onder de aandacht te brengen bij een breed publiek.";
+"Paragraph_1.3" = "Door de foto's op een consistente manier te presenteren, hoeft de gebruiker de website van de club niet te zoeken om vervolgens te moeten ontdekken hoe de foto's te bekijken. De app probeert nadrukkelijk __niet__ om de websites of social media kanalen van clubs te vervangen. Het beoogt alleen clubs en hun leden onder de aandacht te brengen bij een breed publiek.";
 
 /* Fourth paragraph in The App section of Readme page */
 "Paragraph_1.4" = "Oorspronkelijk heette deze app _Fotogroep Waalre_, naar een fotoclub bij Eindhoven. Het woord __hub__ (trefplaats) in de nieuwe naam benadrukt dat de app inmiddels __meerdere__ fotoclubs ondersteunt.";
