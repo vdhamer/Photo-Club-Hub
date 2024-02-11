@@ -228,7 +228,7 @@ Default status of member within a club. Used in concatenations. */
 "Paragraph_4.2" = "For practical reasons, the app is optimised for __iOS__ and __iPadOS__. The app can also run on MacOS or VisionOS as an iPad app.";
 
 /* Third paragraph SupportedPlatforms section of Readme page */
-"Paragraph_4.3" = "Although there is presently no native support for __Android__ or other non-Apple phone platforms, we plan to provide support by automatically generating website pages from the same online lists that the app uses. This helps keep club web sites up to date, and allows viewing of clubs, members, and images in a web browsers on a wide range of platforms  including Android, Windows, and more.";
+"Paragraph_4.3" = "Although there is presently no native support for __Android__ or other non-Apple phone platforms, we plan to provide support by automatically generating website pages from the same online lists that the app uses. This helps keep club web sites up to date, and allows viewing of clubs, members, and images in a web browsers on a wide range of platforms including Android, Windows, and more.";
 
 /* Fourth paragraph SupportedPlatforms section of Readme page */
 "Paragraph_4.4" = "These and other ideas will depend on uptake and help from volunteers from the software community. If you are interested in helping, see the next section.";
