@@ -199,7 +199,7 @@ Default status of member within a club. Used in concatenations. */
 "Paragraph_4.2" = "Om praktische redenen is de app geoptimaliseerd voor __iPhones__ en __iPads__. De iPad versie van de app kan echter ook draaien onder MacOS en VisionOS.";
 
 /* Third paragraph SupportedPlatforms section of Readme page */
-"Paragraph_4.3" = "Ofschoon de app vooralsnog geen directe ondersteuning heeft voor __Android__ of andere niet-Apple telefoons, overwegen wij om ondersteuning te bieden voor het automatisch genereren van website pagina's vanuit dezelfde informatie die de app gebruikt. Dit help om club websites bijgewerkt te houden, maar maakt het ook mogelijk om de clublijst, ledenlijst en portfolio's in een web browser te bekijken op mobile apparaten, Windows en meer.";
+"Paragraph_4.3" = "Ofschoon de app vooralsnog geen directe ondersteuning heeft voor __Android__ of andere niet-Apple telefoons, overwegen wij om ondersteuning te bieden voor het automatisch genereren van website pagina's vanuit dezelfde informatie die de app gebruikt. Dit help om club websites bijgewerkt te houden, maar maakt het ook mogelijk om de clublijst, ledenlijst en portfolio's in een web browser te bekijken op mobile apparaten, laptops, en desktops.";
 
 /* Fourth paragraph SupportedPlatforms section of Readme page */
 "Paragraph_4.4" = "De komst van dit soort uitbreidingen zal afhangen van de belangstelling in de app en van hulp vanuit de Open Source gemeenschap. Vragen hierover beantwoorden wij graag.";
