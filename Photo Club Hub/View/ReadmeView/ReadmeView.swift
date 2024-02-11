@@ -82,9 +82,8 @@ struct ReadmeView: View {
 
                             Group { // can have max 10 views within a container view
 
-                                Paragraph("3.1",
-                                          comment: "First paragraph in The Features section of Readme page",
-                                          geo: geo, bottomPaddingAmount: 10)
+                                Paragraph("3.1.a", comment: "Paragraph 3.1.a of the Readme screen", geo: geo)
+                                Paragraph("3.1.b", comment: "Paragraph 3.1.b of the Readme screen", geo: geo)
 
                                 Image("Localizations") // belongs to Paragraph 3.1
                                     .resizable()
@@ -95,9 +94,10 @@ struct ReadmeView: View {
                                 .font(.callout.italic())
                                 .frame(width: geo.size.width, alignment: .center)
                                 Text("")
+                                Text("")
 
-                                Paragraph("3.2", comment: "Second paragraph in The Features section of Readme page",
-                                          geo: geo, bottomPaddingAmount: 10)
+                                Paragraph("3.2.a", comment: "Paragraph 3.2.a of the Readme screen", geo: geo)
+                                Paragraph("3.2.b", comment: "Paragraph 3.2.b of the Readme screen", geo: geo)
 
                                 Image("3D_map") // belongs to Paragraph 3.2
                                     .resizable()
@@ -110,16 +110,20 @@ struct ReadmeView: View {
                                 .frame(width: geo.size.width, alignment: .center)
                                 Text("")
 
-                                Paragraph("3.3", comment: "Third paragraph in The Features section of Readme page",
-                                          geo: geo, bottomPaddingAmount: 10)
+                                Paragraph("3.3.a", comment: "Paragraph 3.3.a of the Readme screen", geo: geo)
+                                Paragraph("3.3.b", comment: "Paragraph 3.3.b of the Readme screen", geo: geo)
+                                Paragraph("3.3.c", comment: "Paragraph 3.3.c of the Readme screen", geo: geo)
 
-                                Paragraph("3.4", comment: "Fourth paragraph in The Features section of Readme page",
-                                          geo: geo, bottomPaddingAmount: 10)
+                                Paragraph("3.4.a", comment: "Paragraph 3.4.a of the Readme screen", geo: geo)
+                                Paragraph("3.4.b", comment: "Paragraph 3.4.b of the Readme screen", geo: geo)
+                                Paragraph("3.4.c", comment: "Paragraph 3.4.c of the Readme screen", geo: geo)
+                                Paragraph("3.4.d", comment: "Paragraph 3.4.d of the Readme screen", geo: geo)
                             }
 
                             Group {
-                                Paragraph("3.5",
-                                          comment: "Fifth paragraph in The Features section of Readme page", geo: geo)
+                                Paragraph("3.5.a", comment: "Paragraph 3.5.a of the Readme screen", geo: geo)
+                                Paragraph("3.5.b", comment: "Paragraph 3.5.b of the Readme screen", geo: geo)
+                                Paragraph("3.5.c", comment: "Paragraph 3.5.b of the Readme screen", geo: geo)
 
                                 Image("Maps") // belongs to Paragraph 3.5
                                     .resizable()
@@ -132,11 +136,13 @@ struct ReadmeView: View {
                                 .frame(width: geo.size.width, alignment: .center)
                                 Text("")
 
-                                Paragraph("3.6",
-                                          comment: "Sixth paragraph in The Features section of Readme page", geo: geo)
+                                Paragraph("3.6.a", comment: "Paragraph 3.6.a of the Readme screen", geo: geo)
+                                Paragraph("3.6.b", comment: "Paragraph 3.6.b of the Readme screen", geo: geo)
+                                Paragraph("3.6.c", comment: "Paragraph 3.6.c of the Readme screen", geo: geo)
+                                Paragraph("3.6.d", comment: "Paragraph 3.6.d of the Readme screen", geo: geo)
 
-                                Paragraph("3.7",
-                                          comment: "Seventh paragraph in The Features section of Readme page", geo: geo)
+                                Paragraph("3.7.a", comment: "Paragraph 3.7.a of the Readme screen", geo: geo)
+                                Paragraph("3.7.b", comment: "Paragraph 3.7.b of the Readme screen", geo: geo)
 
                                 Image("Website")
                                     .resizable()
@@ -149,8 +155,12 @@ struct ReadmeView: View {
                                 .frame(width: geo.size.width, alignment: .center)
                                 Text("")
 
-                                Paragraph("3.8",
-                                          comment: "Eighth paragraph in The Features section of Readme page", geo: geo)
+                                Paragraph("3.8.a", comment: "Paragraph 3.8.a of the Readme screen", geo: geo)
+                                Paragraph("3.8.b", comment: "Paragraph 3.8.b of the Readme screen", geo: geo)
+                                Paragraph("3.8.c", comment: "Paragraph 3.8.c of the Readme screen", geo: geo)
+                                Paragraph("3.8.d", comment: "Paragraph 3.8.d of the Readme screen", geo: geo)
+                                Paragraph("3.8.e", comment: "Paragraph 3.8.e of the Readme screen", geo: geo)
+
                                 Image("2021_FotogroepWaalre_058")
                                     .resizable()
                                     .frame(width: 250, height: 375, alignment: .center)
@@ -161,8 +171,9 @@ struct ReadmeView: View {
                                     .font(.callout.italic())
                                     .frame(width: geo.size.width, alignment: .center)
 
-                                Paragraph("3.9",
-                                          comment: "Ninth paragraph in The Features section of Readme page", geo: geo)
+                                Paragraph("3.9.a", comment: "Paragraph 3.9.a of the Readme screen", geo: geo)
+                                Paragraph("3.9.b", comment: "Paragraph 3.9.b of the Readme screen", geo: geo)
+                                Paragraph("3.9.c", comment: "Paragraph 3.9.b of the Readme screen", geo: geo)
 
                                 Image("Preferences")
                                     .resizable()
