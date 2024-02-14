@@ -1,4 +1,11 @@
-### 2.5.3 (GitHub commit ???????) ??-01-24
+### 2.5.4 (GitHub commit ???????) ??-01-24
+
+Maintenance
+    * Tested with with iOS 17.4 beta 3, MacOS 14.3, Xcode 14.3 beta 3, VisionOS 1.1 beta 2
+
+This is build #4615
+---------------------------------------------------------------------------
+### 2.5.3 (GitHub commit 83a9e0c) 12-02-24
 
 Clubs and Museums screen
     * Removed member count for photo museums and clubs with no available member data
@@ -16,8 +23,9 @@ Maintenance
     * Added basic info about dozens of nearby photo clubs (as an example, and for screenshots)
     * Removed image property in OrganizationList.json. User can see an image of the building via the Wikipedia link.
     * fgDeGender has a new chairman. This info doesn't come from a json file yet.
+    * Refreshed screenshots on Apple App Store
 
-This is build #4614, and was sent out to Apple Testflight users.
+This is build #4614, and was sent out to Apple App Store (with the changes in build #4613)
 ---------------------------------------------------------------------------
 ### 2.5.3 (GitHub commit 02e860a) 19-01-24
 
@@ -43,7 +51,7 @@ Maintenance
     * Updated data model picture in GitHub README.md file.
     * .xcloc localization files are no longer included in the Photo Club Hub target (not used in bundle).
 
-This is build #4613, and was sent out to Apple Testflight users.
+This is build #4613, and was sent out to Apple Testflight users only.
 ---------------------------------------------------------------------------
 ### 2.5.2 (GitHub commit 7cc0780) 16-12-23
 
