@@ -1176,6 +1176,10 @@
             "wikipedia": "https://en.wikipedia.org/wiki/Museum_of_Photography,_Berlin",
             "remark": [
                 {
+                    "language": "DE",
+                    "value": "Das Museum beinhaltet den fotografischen Nachlas von Helmut Newton."
+                },
+                {
                     "language": "EN",
                     "value": "The museum houses the Helmut Newton Foundation."
                 },
