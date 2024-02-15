@@ -1636,6 +1636,10 @@
                 {
                     "language": "EN",
                     "value": "Fotografiska has subsidiaries in New York, Talinn and Berlin."
+                },
+                {
+                    "language": "NL",
+                    "value": "Fotografiska heeft dependences in New York, Talinn en Berlijn."
                 }
             ]
         },
@@ -1656,6 +1660,10 @@
                 {
                     "language": "EN",
                     "value": "The museum is housed in a former warehouse and organizes the Thassaloniki Photobiennale."
+                },
+                {
+                    "language": "NL",
+                    "value": "Het museum is gehuisvest in een voormalig pakhuis. Het organizeert de Thassaloniki Photobiennale tentoonstelling."
                 }
             ]
         },
