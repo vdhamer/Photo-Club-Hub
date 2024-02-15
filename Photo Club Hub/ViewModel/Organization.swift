@@ -158,15 +158,19 @@ extension Organization {
     var localizedRemark: String {
         let currentLangID = Locale.current.language.languageCode?.identifier // 2 (occasionally 3) letter ISO 639 code
 
-        // first support request for language X if language X is simply available. Give them what they want.
-        if currentLangID?.lowercased() == "en" && remarkEN != nil { return remarkEN! }
-        if currentLangID?.lowercased() == "nl" && remarkNL != nil { return remarkNL! }
+        // We may be configured to another language (e.g. "de"), for which there is no translation.
+        // Or we may be looking for EN or NL, but that one is not available.
+        if currentLangID?.lowercased() == "nl" {
+            if remarkNL != nil { return remarkNL! }
 
-        // now we are configured to another language (e.g. "fr"), for which there is no translation.
-        let apology: StringLiteralType = " [nog geen Nederlandse vertaling beschikbaar]"
-        // then use English if available (and apologize to the Dutch)
-        if remarkEN != nil { return remarkEN! + apology }
-        if remarkNL != nil { return remarkNL! } // as a last resort, use Dutch (nl)
+            let apologyNL: StringLiteralType = " [nog geen Nederlandse vertaling beschikbaar]"
+            if remarkEN != nil { return remarkEN! + apologyNL}
+        } else {
+            if remarkEN != nil { return remarkEN! }
+
+            let apologyEN: StringLiteralType = " [no English translation available yet]"
+            if remarkNL != nil { return remarkNL! + apologyEN} // as a last resort, use Dutch (nl)
+        }
 
         return String(localized: "No remark available.",
                       comment: "Shown below map if there is no usable remark in the OrganzationList.json file.")
