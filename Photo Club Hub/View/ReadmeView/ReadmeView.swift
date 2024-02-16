@@ -22,7 +22,7 @@ struct ReadmeView: View {
             NavigationStack {
                 ScrollView(.vertical, showsIndicators: true) {
                     VStack {
-                        VStack { // extra hierarchy level because container View can handle max 10 Views
+                        Group {
                             SectionHeader(String(localized: "The App", comment: "Section title on Readme page"),
                                           geo: geo)
 
@@ -45,19 +45,15 @@ struct ReadmeView: View {
                             Paragraph("1.6", comment: "Sixth paragraph in The-app section of Readme page", geo: geo)
                         }
 
-                        VStack {
+                        Group {
                             SectionHeader(String(localized: "The Concept", comment: "Section title on Readme page"),
                                                  geo: geo)
 
-                            Group { // can have max 10 views within a container view
-                                Paragraph("2.1", comment: "First paragraph in Concept section of Readme page", geo: geo)
-                                Paragraph("2.2", comment: "Second paragraph in Concept section of Readme page",
-                                          geo: geo)
-                                Paragraph("2.3", comment: "Third paragraph in Concept section of Readme page", geo: geo)
-                                Paragraph("2.4", comment: "Fourth paragraph in Concept section of Readme page",
-                                          geo: geo)
-                                Paragraph("2.5", comment: "Fifth paragraph in Concept section of Readme page", geo: geo)
-                            }
+                            Paragraph("2.1", comment: "First paragraph in Concept section of Readme page", geo: geo)
+                            Paragraph("2.2", comment: "Second paragraph in Concept section of Readme page", geo: geo)
+                            Paragraph("2.3", comment: "Third paragraph in Concept section of Readme page", geo: geo)
+                            Paragraph("2.4", comment: "Fourth paragraph in Concept section of Readme page", geo: geo)
+                            Paragraph("2.5", comment: "Fifth paragraph in Concept section of Readme page", geo: geo)
 
                             Image("Waalre_AppIcon")
                                 .resizable()
@@ -75,120 +71,130 @@ struct ReadmeView: View {
                             }
                         }
 
-                        VStack {
+                        Group {
                             SectionHeader(String(localized: "Features and Tips",
                                                  comment: "Section title on Readme page"),
                                           geo: geo)
 
-                            Group { // can have max 10 views within a container view
+                            Paragraph("3.1.a", comment: "Paragraph 3.1.a of the Readme screen", geo: geo)
+                            Paragraph("3.1.b", comment: "Paragraph 3.1.b of the Readme screen", geo: geo)
 
-                                Paragraph("3.1.a", comment: "Paragraph 3.1.a of the Readme screen", geo: geo)
-                                Paragraph("3.1.b", comment: "Paragraph 3.1.b of the Readme screen", geo: geo)
+                            Image("Localizations") // belongs to Paragraph 3.1
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: geo.size.width * 0.8, alignment: .center)
+                            Text("Supporting multiple languages",
+                                 comment: "Caption of Localizations image on Readme page")
+                            .font(.callout.italic())
+                            .frame(width: geo.size.width, alignment: .center)
+                            Text("")
+                            Text("")
 
-                                Image("Localizations") // belongs to Paragraph 3.1
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: geo.size.width * 0.8, alignment: .center)
-                                Text("Supporting multiple languages",
-                                     comment: "Caption of Localizations image on Readme page")
+                            Paragraph("3.2.a", comment: "Paragraph 3.2.a of the Readme screen", geo: geo)
+                            Paragraph("3.2.b", comment: "Paragraph 3.2.b of the Readme screen", geo: geo)
+
+                            Image("3D_map") // belongs to Paragraph 3.2
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: geo.size.width * 0.8, alignment: .center)
+                                .border(.gray, width: 1)
+                            Text("Maps can be viewed in 3D",
+                                 comment: "Caption of 3D image on Readme page")
+                            .font(.callout.italic())
+                            .frame(width: geo.size.width, alignment: .center)
+                            Text("")
+
+                            Paragraph("3.3.a", comment: "Paragraph 3.3.a of the Readme screen", geo: geo)
+                            Paragraph("3.3.b", comment: "Paragraph 3.3.b of the Readme screen", geo: geo)
+                            Paragraph("3.3.c", comment: "Paragraph 3.3.c of the Readme screen", geo: geo)
+
+                            Paragraph("3.4.a", comment: "Paragraph 3.4.a of the Readme screen", geo: geo)
+                            Paragraph("3.4.b", comment: "Paragraph 3.4.b of the Readme screen", geo: geo)
+                            Paragraph("3.4.c", comment: "Paragraph 3.4.c of the Readme screen", geo: geo)
+                            Paragraph("3.4.d", comment: "Paragraph 3.4.d of the Readme screen", geo: geo)
+
+                            Paragraph("3.5.a", comment: "Paragraph 3.5.a of the Readme screen", geo: geo)
+                            Paragraph("3.5.b", comment: "Paragraph 3.5.b of the Readme screen", geo: geo)
+                            Paragraph("3.5.c", comment: "Paragraph 3.5.b of the Readme screen", geo: geo)
+
+                            Image("Maps") // belongs to Paragraph 3.5
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: geo.size.width * 0.8, alignment: .center)
+                                .border(.gray, width: 1)
+                            Text("Amsterdam has two photography museums.",
+                                 comment: "Caption of Museums image on Readme page")
+                            .font(.callout.italic())
+                            .frame(width: geo.size.width, alignment: .center)
+                            Text("")
+
+                            Paragraph("3.6.a", comment: "Paragraph 3.6.a of the Readme screen", geo: geo)
+                            Paragraph("3.6.b", comment: "Paragraph 3.6.b of the Readme screen", geo: geo)
+                            Paragraph("3.6.c", comment: "Paragraph 3.6.c of the Readme screen", geo: geo)
+                            Paragraph("3.6.d", comment: "Paragraph 3.6.d of the Readme screen", geo: geo)
+
+                            Paragraph("3.7.a", comment: "Paragraph 3.7.a of the Readme screen", geo: geo)
+                            Paragraph("3.7.b", comment: "Paragraph 3.7.b of the Readme screen", geo: geo)
+
+                            Image("Website")
+                                .resizable()
+                                .scaledToFit()
+                                .border(.gray, width: 1)
+                                .frame(width: geo.size.width * 0.8, alignment: .center)
+                            Text("Example of a link to a club web site",
+                                 comment: "Caption of Websites image on Readme page")
+                            .font(.callout.italic())
+                            .frame(width: geo.size.width, alignment: .center)
+                            Text("")
+
+                            Paragraph("3.8.a", comment: "Paragraph 3.8.a of the Readme screen", geo: geo)
+                            Paragraph("3.8.b", comment: "Paragraph 3.8.b of the Readme screen", geo: geo)
+                            Paragraph("3.8.c", comment: "Paragraph 3.8.c of the Readme screen", geo: geo)
+                            Paragraph("3.8.d", comment: "Paragraph 3.8.d of the Readme screen", geo: geo)
+                            Paragraph("3.8.e", comment: "Paragraph 3.8.e of the Readme screen", geo: geo)
+
+                            Image("2021_FotogroepWaalre_058")
+                                .resizable()
+                                .frame(width: 250, height: 375, alignment: .center)
+                                .scaledToFill()
+                                .border(.gray, width: 1)
+                                .frame(width: geo.size.width, alignment: .center)
+                            Text(verbatim: "© 2021 Greetje van Son\n")
                                 .font(.callout.italic())
                                 .frame(width: geo.size.width, alignment: .center)
-                                Text("")
-                                Text("")
 
-                                Paragraph("3.2.a", comment: "Paragraph 3.2.a of the Readme screen", geo: geo)
-                                Paragraph("3.2.b", comment: "Paragraph 3.2.b of the Readme screen", geo: geo)
+                            Paragraph("3.9.a", comment: "Paragraph 3.9.a of the Readme screen", geo: geo)
+                            Paragraph("3.9.b", comment: "Paragraph 3.9.b of the Readme screen", geo: geo)
+                            Paragraph("3.9.c", comment: "Paragraph 3.9.b of the Readme screen", geo: geo)
 
-                                Image("3D_map") // belongs to Paragraph 3.2
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: geo.size.width * 0.8, alignment: .center)
-                                    .border(.gray, width: 1)
-                                Text("Maps can be viewed in 3D",
-                                     comment: "Caption of 3D image on Readme page")
-                                .font(.callout.italic())
-                                .frame(width: geo.size.width, alignment: .center)
-                                Text("")
+                            Image("Preferences")
+                                .resizable()
+                                .border(.gray, width: 1)
+                                .scaledToFit()
+                                .frame(width: geo.size.width * 0.8, height: 300, alignment: .center)
+                            Text("The Preferences screen.",
+                                 comment: "Caption of an image on the Readme page")
+                            .font(.callout.italic())
+                            .frame(width: geo.size.width * 0.8, alignment: .center)
+                            Text("")
 
-                                Paragraph("3.3.a", comment: "Paragraph 3.3.a of the Readme screen", geo: geo)
-                                Paragraph("3.3.b", comment: "Paragraph 3.3.b of the Readme screen", geo: geo)
-                                Paragraph("3.3.c", comment: "Paragraph 3.3.c of the Readme screen", geo: geo)
+                            Paragraph("3.10.a", comment: "Paragraph 3.10.a of the Readme screen", geo: geo)
+                            Paragraph("3.10.b", comment: "Paragraph 3.10.b of the Readme screen", geo: geo)
+                            Paragraph("3.10.c", comment: "Paragraph 3.10.c of the Readme screen", geo: geo)
 
-                                Paragraph("3.4.a", comment: "Paragraph 3.4.a of the Readme screen", geo: geo)
-                                Paragraph("3.4.b", comment: "Paragraph 3.4.b of the Readme screen", geo: geo)
-                                Paragraph("3.4.c", comment: "Paragraph 3.4.c of the Readme screen", geo: geo)
-                                Paragraph("3.4.d", comment: "Paragraph 3.4.d of the Readme screen", geo: geo)
-                            }
-
-                            Group {
-                                Paragraph("3.5.a", comment: "Paragraph 3.5.a of the Readme screen", geo: geo)
-                                Paragraph("3.5.b", comment: "Paragraph 3.5.b of the Readme screen", geo: geo)
-                                Paragraph("3.5.c", comment: "Paragraph 3.5.b of the Readme screen", geo: geo)
-
-                                Image("Maps") // belongs to Paragraph 3.5
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: geo.size.width * 0.8, alignment: .center)
-                                    .border(.gray, width: 1)
-                                Text("Amsterdam has two photography museums.",
-                                     comment: "Caption of Museums image on Readme page")
-                                .font(.callout.italic())
-                                .frame(width: geo.size.width, alignment: .center)
-                                Text("")
-
-                                Paragraph("3.6.a", comment: "Paragraph 3.6.a of the Readme screen", geo: geo)
-                                Paragraph("3.6.b", comment: "Paragraph 3.6.b of the Readme screen", geo: geo)
-                                Paragraph("3.6.c", comment: "Paragraph 3.6.c of the Readme screen", geo: geo)
-                                Paragraph("3.6.d", comment: "Paragraph 3.6.d of the Readme screen", geo: geo)
-
-                                Paragraph("3.7.a", comment: "Paragraph 3.7.a of the Readme screen", geo: geo)
-                                Paragraph("3.7.b", comment: "Paragraph 3.7.b of the Readme screen", geo: geo)
-
-                                Image("Website")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .border(.gray, width: 1)
-                                    .frame(width: geo.size.width * 0.8, alignment: .center)
-                                Text("Example of a link to a club web site",
-                                     comment: "Caption of Websites image on Readme page")
-                                .font(.callout.italic())
-                                .frame(width: geo.size.width, alignment: .center)
-                                Text("")
-
-                                Paragraph("3.8.a", comment: "Paragraph 3.8.a of the Readme screen", geo: geo)
-                                Paragraph("3.8.b", comment: "Paragraph 3.8.b of the Readme screen", geo: geo)
-                                Paragraph("3.8.c", comment: "Paragraph 3.8.c of the Readme screen", geo: geo)
-                                Paragraph("3.8.d", comment: "Paragraph 3.8.d of the Readme screen", geo: geo)
-                                Paragraph("3.8.e", comment: "Paragraph 3.8.e of the Readme screen", geo: geo)
-
-                                Image("2021_FotogroepWaalre_058")
-                                    .resizable()
-                                    .frame(width: 250, height: 375, alignment: .center)
-                                    .scaledToFill()
-                                    .border(.gray, width: 1)
-                                    .frame(width: geo.size.width, alignment: .center)
-                                Text(verbatim: "© 2021 Greetje van Son\n")
-                                    .font(.callout.italic())
-                                    .frame(width: geo.size.width, alignment: .center)
-
-                                Paragraph("3.9.a", comment: "Paragraph 3.9.a of the Readme screen", geo: geo)
-                                Paragraph("3.9.b", comment: "Paragraph 3.9.b of the Readme screen", geo: geo)
-                                Paragraph("3.9.c", comment: "Paragraph 3.9.b of the Readme screen", geo: geo)
-
-                                Image("Preferences")
-                                    .resizable()
-                                    .border(.gray, width: 1)
-                                    .scaledToFit()
-                                    .frame(width: geo.size.width * 0.8, height: 300, alignment: .center)
-                                Text("The Preferences screen.",
-                                     comment: "Caption of an image on the Readme page")
-                                    .font(.callout.italic())
-                                    .frame(width: geo.size.width * 0.8, alignment: .center)
-                                Text("")
-                            }
+                            Image("Play-button")
+                                .resizable()
+                                .border(.gray, width: 1)
+                                .scaledToFit()
+                                .frame(width: geo.size.width * 0.8, height: 300, alignment: .center)
+                            Text("Button for automatic slide show",
+                                 comment: "Caption about Play button on the Readme page")
+                            .font(.callout.italic())
+                            .frame(width: geo.size.width * 0.8, alignment: .center)
+                            Text("")
                         }
 
-                        VStack {
+                        Group {
                             SectionHeader(String(localized: "Supported Platforms",
                                                  comment: "Section title on Readme page"),
                                           geo: geo)
@@ -210,7 +216,7 @@ struct ReadmeView: View {
                             Paragraph("4.4", comment: "Fourth paragraph in Platforms section of Readme page", geo: geo)
                         }
 
-                        VStack {
+                        Group {
                             SectionHeader(String(localized: "Developers wanted",
                                                  comment: "Section title on Readme page"),
                                           geo: geo)

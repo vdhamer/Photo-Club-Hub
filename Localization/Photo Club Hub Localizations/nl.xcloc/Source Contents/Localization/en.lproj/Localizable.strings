@@ -28,6 +28,9 @@
 /* Birthday of member (without year). Date not currently localized? */
 "Birthday:" = "Birthday:";
 
+/* Caption about Play button on the Readme page */
+"Button for automatic slide show" = "Button for automatic slide show";
+
 /* Administrative role of member within a club. Used as part of concatenations. */
 "chairman" = "chairman";
 
@@ -220,6 +223,15 @@ Default status of member within a club. Used in concatenations. */
 
 /* Paragraph 3.9.c of the Readme screen */
 "Paragraph_3.9.c" = "An easy way to get recent ex-members in the app is to simply keep their portfolio when they leave, but only mark the member as ex-member in the membership list.";
+
+/* Paragraph 3.10.a of the Readme screen */
+"Paragraph_3.10.a" = "__Automatic Slide Shows__";
+
+/* Paragraph 3.10.b of the Readme screen */
+"Paragraph_3.10.b" = "Some portfolios have an automatical slide show option. This is controlled by one of the buttons that appear when you tap on an image (tapping not needed on iPad).";
+
+/* Paragraph 3.10.c of the Readme screen */
+"Paragraph_3.10.c" = "This option is available on portfolios that were generated using the Juicebox plug-in for Lightroom Classic (see the various members of Fotogroep Waalre).";
 
 /* First paragraph SupportedPlatforms section of Readme page */
 "Paragraph_4.1" = "_Photo Club Hub_ requires the latest major version of iOS. This allows us to keep up to date technology-wise. This means that the latest version of the app can run on devices released in the last 6 or 7 years.";

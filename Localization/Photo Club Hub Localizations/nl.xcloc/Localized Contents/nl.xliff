@@ -2,7 +2,7 @@
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
   <file original="en.lproj/Photo-Club-Hub-InfoPlist.strings" source-language="en" target-language="nl" datatype="plaintext">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="15.2" build-num="15C500b"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="15.3" build-num="15E5194e"/>
     </header>
     <body>
       <trans-unit id="CFBundleDisplayName" xml:space="preserve">
@@ -24,7 +24,7 @@
   </file>
   <file original="Localization/en.lproj/Localizable.strings" source-language="en" target-language="nl" datatype="plaintext">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="15.2" build-num="15C500b"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="15.3" build-num="15E5194e"/>
     </header>
     <body>
       <trans-unit id="%lld entries" xml:space="preserve">
@@ -61,6 +61,10 @@
         <source>Birthday:</source>
         <target>Verjaardag:</target>
         <note>Birthday of member (without year). Date not currently localized?</note>
+      </trans-unit>
+      <trans-unit id="Button for automatic slide show" xml:space="preserve">
+        <source>Button for automatic slide show</source>
+        <note>Caption about Play button on the Readme page</note>
       </trans-unit>
       <trans-unit id="Clubs and Museums" xml:space="preserve">
         <source>Clubs and Museums</source>
@@ -333,6 +337,21 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
         <source>An easy way to get recent ex-members in the app is to simply keep their portfolio when they leave, but only mark the member as ex-member in the membership list.</source>
         <target>Een makkelijk manier om recente ex-leden binnen de app te houden is om ze niet te wissen zodra ze vertrekken. In de ledenlijst kan aangegeven worden of iemand lid of ex-lid is.</target>
         <note>Paragraph 3.9.c of the Readme screen</note>
+      </trans-unit>
+      <trans-unit id="Paragraph_3.10.a" xml:space="preserve">
+        <source>__Automatic Slide Shows__</source>
+        <target>__Automatische Diavoorstelling__</target>
+        <note>Paragraph 3.10.a of the Readme screen</note>
+      </trans-unit>
+      <trans-unit id="Paragraph_3.10.b" xml:space="preserve">
+        <source>Some portfolios have an automatical slide show option. This is controlled by one of the buttons that appear when you tap on an image (tapping not needed on iPad).</source>
+        <target>Sommige portfolio's kunnen automatisch afgespeeld worden via een driehoekige afspeelknop. Soms moet je eerste de foto aanraken om de knop te zien.</target>
+        <note>Paragraph 3.10.b of the Readme screen</note>
+      </trans-unit>
+      <trans-unit id="Paragraph_3.10.c" xml:space="preserve">
+        <source>This option is available on portfolios that were generated using the Juicebox plug-in for Lightroom Classic (see the various members of Fotogroep Waalre).</source>
+        <target>Deze knop is deel van portfolio's die gegenereerd zijn vanuit de _Juicebox Pro_ plug-in voor _Lightroom Classic_. Zie bijvoorbeeld de portfolio's van leden van Fotogroep Waalre.</target>
+        <note>Paragraph 3.10.c of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_4.1" xml:space="preserve">
         <source>_Photo Club Hub_ requires the latest major version of iOS. This allows us to keep up to date technology-wise. This means that the latest version of the app can run on devices released in the last 6 or 7 years.</source>

@@ -1,5 +1,7 @@
 ### 2.5.4 (GitHub commit ???????) ??-01-24
 
+Readme screen
+    * Added text on automatic slide show button.
 Maintenance
     * Tested with with iOS 17.4 beta 3, MacOS 14.3, Xcode 14.3 beta 3, VisionOS 1.1 beta 2
 

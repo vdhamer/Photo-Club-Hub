@@ -155,7 +155,7 @@ Default status of member within a club. Used in concatenations. */
 /* Paragraph 3.2.a of the Readme screen */
 "Paragraph_3.2.a" = "__3D kaarten__";
 
-/* Paragraph 3.2.b of the Readme screen */
+/* Paragraph 3.2.ba of the Readme screen */
 "Paragraph_3.2.b" = "Wanneer men voldoende inzoomt op een landkaart, verschijnt er een knop om de kaart in 3D weer te geven. Dit vereist dat de kaart interactief is (slotje open). Probeer het bijvoorbeeld uit met New York met zijn hoge gebouwen.";
 
 /* Paragraph 3.3.a of the Readme screen */
@@ -201,10 +201,10 @@ Default status of member within a club. Used in concatenations. */
 "Paragraph_3.6.d" = "Als alternatief kan met de app ontinstalleren (waardoor de interne data van de app gewist wordt) en opnieuw installeren.";
 
 /* Paragraph 3.7.a of the Readme screen */
-"Paragraph_3.7.a" =  "__Websites__";
+"Paragraph_3.7.a" = "__Websites__";
 
-/* Paragraph 3.7.b of the Readme screen */
-"Paragraph_3.7.b" =  "Omdat de websites van fotoclubs allerlei nuttige informatie bevatten, heeft de _Fotoclub Hub_ app klikbare links naar dergelijke websites. De app ondersteunt ook links naar eventuele eigen websites van fotografen (voor zover die over fotografie gaan).";
+/* Paragraph 3.7.b of the Readme scree */
+"Paragraph_3.7.b" = "Omdat de websites van fotoclubs allerlei nuttige informatie bevatten, heeft de _Fotoclub Hub_ app klikbare links naar dergelijke websites. De app ondersteunt ook links naar eventuele eigen websites van fotografen (voor zover die over fotografie gaan).";
 
 /* Paragraph 3.8.a of the Readme screen */
 "Paragraph_3.8.a" = "__Het openingsbeeld__";
@@ -229,6 +229,15 @@ Default status of member within a club. Used in concatenations. */
 
 /* Paragraph 3.9.c of the Readme screen */
 "Paragraph_3.9.c" = "Een makkelijk manier om recente ex-leden binnen de app te houden is om ze niet te wissen zodra ze vertrekken. In de ledenlijst kan aangegeven worden of iemand lid of ex-lid is.";
+
+/* Paragraph 3.10.a of the Readme screen */
+"Paragraph_3.10.a" = "__Automatische Diavoorstelling__";
+
+/* Paragraph 3.10.b of the Readme screen */
+"Paragraph_3.10.b" = "Sommige portfolio's kunnen automatisch afgespeeld worden via een driehoekige afspeelknop. Soms moet je eerste de foto aanraken om de knop te zien.";
+
+/* Paragraph 3.10.c of the Readme screen */
+"Paragraph_3.10.c" = "Deze knop is deel van portfolio's die gegenereerd zijn vanuit de _Juicebox Pro_ plug-in voor _Lightroom Classic_. Zie bijvoorbeeld de portfolio's van leden van Fotogroep Waalre.";
 
 /* First paragraph SupportedPlatforms section of Readme page */
 "Paragraph_4.1" = "_Fotoclub Hub_ draait op een recente versie van iOS. Hierdoor kan de app nieuwe software ontwikkelingen in iOS relatief snel benutten. In de praktijk betekent dit dat toestellen die niet ouder zijn dan een jaar of 6 de nieuwe app versies kunnen draaien. Oudere toestellen krijgen in de App Store oudere versies te zien.";
