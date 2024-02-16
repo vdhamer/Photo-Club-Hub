@@ -344,8 +344,7 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
         <note>Paragraph 3.10.a of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.10.b" xml:space="preserve">
-        <source>Some portfolios have an automatical slide show option. This is controlled by one of the buttons that appear when you tap on an image (tapping not needed on iPad).</source>
-        <target>Sommige portfolio's kunnen automatisch afgespeeld worden via een driehoekige afspeelknop. Soms moet je eerste de foto aanraken om de knop te zien.</target>
+        <source>Some portfolios have an automatic slide show option. This is controlled by one of the buttons that appear when you tap on an image (tapping not needed on iPad).</source>
         <note>Paragraph 3.10.b of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.10.c" xml:space="preserve">

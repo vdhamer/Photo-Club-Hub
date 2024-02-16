@@ -233,9 +233,6 @@ Default status of member within a club. Used in concatenations. */
 /* Paragraph 3.10.a of the Readme screen */
 "Paragraph_3.10.a" = "__Automatische Diavoorstelling__";
 
-/* Paragraph 3.10.b of the Readme screen */
-"Paragraph_3.10.b" = "Sommige portfolio's kunnen automatisch afgespeeld worden via een driehoekige afspeelknop. Soms moet je eerste de foto aanraken om de knop te zien.";
-
 /* Paragraph 3.10.c of the Readme screen */
 "Paragraph_3.10.c" = "Deze knop is deel van portfolio's die gegenereerd zijn vanuit de _Juicebox Pro_ plug-in voor _Lightroom Classic_. Zie bijvoorbeeld de portfolio's van leden van Fotogroep Waalre.";
 

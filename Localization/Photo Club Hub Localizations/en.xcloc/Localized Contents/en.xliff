@@ -345,8 +345,8 @@ Try dragging down the Photo Clubs screen to reload the default clubs.</target>
         <note>Paragraph 3.10.a of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.10.b" xml:space="preserve">
-        <source>Some portfolios have an automatical slide show option. This is controlled by one of the buttons that appear when you tap on an image (tapping not needed on iPad).</source>
-        <target>Some portfolios have an automatical slide show option. This is controlled by one of the buttons that appear when you tap on an image (tapping not needed on iPad).</target>
+        <source>Some portfolios have an automatic slide show option. This is controlled by one of the buttons that appear when you tap on an image (tapping not needed on iPad).</source>
+        <target>Some portfolios have an automatic slide show option. This is controlled by one of the buttons that appear when you tap on an image (tapping not needed on iPad).</target>
         <note>Paragraph 3.10.b of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.10.c" xml:space="preserve">

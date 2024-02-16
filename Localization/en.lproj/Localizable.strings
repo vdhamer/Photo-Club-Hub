@@ -228,7 +228,7 @@ Default status of member within a club. Used in concatenations. */
 "Paragraph_3.10.a" = "__Automatic Slide Shows__";
 
 /* Paragraph 3.10.b of the Readme screen */
-"Paragraph_3.10.b" = "Some portfolios have an automatical slide show option. This is controlled by one of the buttons that appear when you tap on an image (tapping not needed on iPad).";
+"Paragraph_3.10.b" = "Some portfolios have an automatic slide show option. This is controlled by one of the buttons that appear when you tap on an image (tapping not needed on iPad).";
 
 /* Paragraph 3.10.c of the Readme screen */
 "Paragraph_3.10.c" = "This option is available on portfolios that were generated using the Juicebox plug-in for Lightroom Classic (see the various members of Fotogroep Waalre).";
