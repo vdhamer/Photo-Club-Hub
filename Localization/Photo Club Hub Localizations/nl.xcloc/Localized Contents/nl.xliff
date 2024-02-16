@@ -224,7 +224,7 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
         <note>Paragraph 3.3.a of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.3.b" xml:space="preserve">
-        <source>Maps can show you your live location as a purple dot when it’s in range of the map. This can help navigate to a club or to estimate distances. If the map is unlocked/interactive, a arrow button can re-center the map around your current location.</source>
+        <source>Maps can show you your live location as a purple dot when it’s in range of the map. This can help navigate to a club or to estimate distances. If the map is unlocked/interactive, an arrow button can re-center the map around your current location.</source>
         <target>De landkaarten kunnen de huidige locatie van de gebruiker weergeven als paarse stip - mits die locatie binnen het bereik van de kaart valt. Indien de kaart van slot is, verschijnt er een pijlvormige knop waarmee de kaart gecentreerd kan worden ten opzichte van de huidige locatie.</target>
         <note>Paragraph 3.3.b of the Readme screen</note>
       </trans-unit>

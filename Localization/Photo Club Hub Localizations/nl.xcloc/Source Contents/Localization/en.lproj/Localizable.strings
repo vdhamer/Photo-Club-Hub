@@ -156,7 +156,7 @@ Default status of member within a club. Used in concatenations. */
 "Paragraph_3.3.a" = "__Live location__";
 
 /* Paragraph 3.3.b of the Readme screen */
-"Paragraph_3.3.b" = "Maps can show you your live location as a purple dot when it’s in range of the map. This can help navigate to a club or to estimate distances. If the map is unlocked/interactive, a arrow button can re-center the map around your current location.";
+"Paragraph_3.3.b" = "Maps can show you your live location as a purple dot when it’s in range of the map. This can help navigate to a club or to estimate distances. If the map is unlocked/interactive, an arrow button can re-center the map around your current location.";
 
 /* Paragraph 3.3.c of the Readme screen */
 "Paragraph_3.3.c" = "Live location requires granting the app __permission__ to access your location while in the app. The app doesn’t store or share location information with anyone or anything.";

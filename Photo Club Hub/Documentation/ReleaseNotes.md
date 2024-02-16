@@ -2,8 +2,10 @@
 
 Readme screen
     * Added text on automatic slide show button.
+    * Fixed typo in English version.
 Maintenance
     * Tested with with iOS 17.4 beta 3, MacOS 14.3, Xcode 14.3 beta 3, VisionOS 1.1 beta 2
+    * Created a .pages version of English Readme screen for proof reading.
 
 This is build #4615
 ---------------------------------------------------------------------------
