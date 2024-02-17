@@ -1,8 +1,8 @@
 {
   "images" : [
     {
-      "filename" : "Screenshot 2024-01-14 at 18.04.18.png",
       "idiom" : "universal",
+      "filename" : "RocketSim_Screenshot_iPhone_15_6.1_2024-02-17_01.14.57 1.jpeg",
       "scale" : "1x"
     },
     {
@@ -12,7 +12,7 @@
           "value" : "dark"
         }
       ],
-      "filename" : "Screenshot 2024-01-14 at 18.05.06.png",
+      "filename" : "RocketSim_Screenshot_iPhone_15_6.1_2024-02-17_01.14.33 1.jpeg",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -21,13 +21,13 @@
       "scale" : "2x"
     },
     {
+      "idiom" : "universal",
       "appearances" : [
         {
           "appearance" : "luminosity",
           "value" : "dark"
         }
       ],
-      "idiom" : "universal",
       "scale" : "2x"
     },
     {
@@ -35,6 +35,106 @@
       "scale" : "3x"
     },
     {
+      "idiom" : "universal",
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "scale" : "3x"
+    },
+    {
+      "locale" : "nl",
+      "idiom" : "universal",
+      "filename" : "RocketSim_Screenshot_iPhone_15_6.1_2024-02-17_01.11.17.jpeg",
+      "scale" : "1x"
+    },
+    {
+      "locale" : "nl",
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "RocketSim_Screenshot_iPhone_15_6.1_2024-02-17_01.12.04.jpeg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "locale" : "nl",
+      "scale" : "2x"
+    },
+    {
+      "locale" : "nl",
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "locale" : "nl",
+      "scale" : "3x"
+    },
+    {
+      "locale" : "nl",
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "idiom" : "universal",
+      "scale" : "3x"
+    },
+    {
+      "locale" : "en",
+      "idiom" : "universal",
+      "filename" : "RocketSim_Screenshot_iPhone_15_6.1_2024-02-17_01.14.57.jpeg",
+      "scale" : "1x"
+    },
+    {
+      "locale" : "en",
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "RocketSim_Screenshot_iPhone_15_6.1_2024-02-17_01.14.33.jpeg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "locale" : "en",
+      "scale" : "2x"
+    },
+    {
+      "locale" : "en",
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "locale" : "en",
+      "scale" : "3x"
+    },
+    {
+      "locale" : "en",
       "appearances" : [
         {
           "appearance" : "luminosity",
@@ -46,7 +146,10 @@
     }
   ],
   "info" : {
-    "author" : "xcode",
-    "version" : 1
+    "version" : 1,
+    "author" : "xcode"
+  },
+  "properties" : {
+    "localizable" : true
   }
 }
