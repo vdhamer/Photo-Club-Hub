@@ -85,6 +85,30 @@
 
         {
             "idPlus": {
+                "town": "Best",
+                "fullName": "Fotogroep Best",
+                "nickName": "fgBest"
+            },
+            "coordinates": {
+                "latitude": 51.51651,
+                "longitude": 5.38724
+            },
+            "website": "https://www.fotogroepbest.nl",
+            "memberList": "https://www.example.com/fgBest.memberlist.json",
+            "remark": [
+                {
+                    "language": "EN",
+                    "value": "At the yearly expo, visitors are challenged to find 'fragments' hidden in the images."
+                },
+                {
+                    "language": "NL",
+                    "value": "Tijdens de expo kunnen bezoekers speuren naar 'fragmenten die verstopt zijn' in de foto's."
+                }
+            ]
+        },
+
+        {
+            "idPlus": {
                 "town": "Boekel",
                 "fullName": "Fotogroep Focus KBO Boekel",
                 "nickName": "FG Focus"
