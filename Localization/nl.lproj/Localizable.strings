@@ -56,7 +56,7 @@
 "deceased" = "overleden";
 
 /* Section title on Readme page */
-"Developers wanted" = "Ontwikkelaars in de zaal?";
+"Developers wanted" = "Ontwikkelaars in de Zaal?";
 
 /* Caption of Websites image on Readme page */
 "Example of a link to a club web site" = "Voorbeeld van een link naar een club website";
@@ -83,7 +83,7 @@
 "In debug mode" = "Test versie";
 
 /* Caption of 3D map in Readme section */
-"Maps can be viewed in 3D" = "Omgeving van een museum in 3D";
+"Maps can be viewed in 3D" = "Omgeving van een fotomuseum in 3D";
 
 /* Statistics at end of section of FilteredMemberPortfoliosView
 Default status of member within a club. Used in concatenations. */
@@ -120,7 +120,7 @@ Default status of member within a club. Used in concatenations. */
 "Paragraph_1.1" = "De app _Fotoclub Hub_ dient om banden tussen fotoclubs te versterken en om foto's die gemaakt zijn door de clubleden eenvoudig toegankelijk te maken.";
 
 /* Second paragraph in The App section of Readme page */
-"Paragraph_1.2" = "De app presenteert geselecteerd werk van  clubleden. De foto's zijn op een consistente wijze, en zonder afleiding te bekijken. Men kan de app dus als een permanente online expositie zien.";
+"Paragraph_1.2" = "De app presenteert geselecteerd werk van  clubleden. De foto's zijn op een consistente wijze, en zonder afleiding te bekijken. Men kan de app dus ondermeer benutten als een permanente online expositie.";
 
 /* Third paragraph in The App section of Readme page */
 "Paragraph_1.3" = "Door de foto's op een consistente manier te presenteren, hoeft de gebruiker de website van de club niet te zoeken om vervolgens te moeten ontdekken hoe de foto's te bekijken. De app probeert nadrukkelijk __niet__ om de websites of social media kanalen van clubs te vervangen. Het beoogt alleen clubs en hun leden onder de aandacht te brengen bij een breed publiek.";
@@ -147,13 +147,13 @@ Default status of member within a club. Used in concatenations. */
 "Paragraph_2.4" = "Net als een schilder, kan een fotograaf na verloop van tijd van onderwerpen en stijl veranderen. Daarom is ieder portfolio op tijdsvolgorde gesorteerd (met het nieuwste werk eerst).";
 
 /* Fifth paragraph in The Concept on Readme page */
-"Paragraph_2.5" = "Net als bij een tentoonstelling is het belangrijk om een portfolio _zonder afleiding_ te kunnen bekijken. Webpagina's zijn hiervoor vaak iets te druk vanwege allerlei bedieningselementen, maar ook omdat ze vaak meerdere soorten informatie moeten tonen, zoals club nieuws of vergaderschemas.";
+"Paragraph_2.5" = "Net als bij een tentoonstelling is het belangrijk om een portfolio _zonder afleiding_ te kunnen bekijken. Webpagina's zijn hier vaak iets te druk voor vanwege allerlei bedieningselementen, maar ook omdat ze vaak meerdere soorten informatie tonen, zoals clubnieuws of vergaderschemas.";
 
 /* Paragraph 3.1.a of the Readme screen */
 "Paragraph_3.1.a" = "__Tweetalig__";
 
 /* Paragraph 3.1.b of the Readme screen */
-"Paragraph_3.1.b" = "_Fotoclub Hub_ kiest een taal op basis van de taal die ingesteld is op het apparaat. Momenteel worden Nederlands en Engels volledig ondersteund. Je kan de taalinstelling aanpassen onder _Instellingen → Algemeen → Taal en regio → Volgorde voorkeurstalen_. Als alternatief kan men de taalkeuze voor alleen deze app aanpassen via _Instellingen → Fotoclub Hub → Voorkeurstaal_.";
+"Paragraph_3.1.b" = "_Fotoclub Hub_ kiest een taal op basis van de taal die ingesteld is op het apparaat. Momenteel worden Nederlands en Engels ondersteund. Je kan de taalinstelling aanpassen onder _Instellingen → Algemeen → Taal en regio → Volgorde voorkeurstalen_. Als alternatief kan men de taalkeuze voor alleen deze app aanpassen via _Instellingen → Fotoclub Hub → Voorkeurstaal_.";
 
 /* Paragraph 3.2.a of the Readme screen */
 "Paragraph_3.2.a" = "__3D kaarten__";
@@ -165,10 +165,10 @@ Default status of member within a club. Used in concatenations. */
 "Paragraph_3.3.a" = "__Locatie weergave__";
 
 /* Paragraph 3.3.b of the Readme screen */
-"Paragraph_3.3.b" = "De landkaarten kunnen de huidige locatie van de gebruiker weergeven als paarse stip - mits die locatie binnen het bereik van de kaart valt. Indien de kaart van slot is, verschijnt er een pijlvormige knop waarmee de kaart gecentreerd kan worden ten opzichte van de huidige locatie.";
+"Paragraph_3.3.b" = "De landkaarten kunnen de huidige locatie van de gebruiker weergeven als paarse stip - mits die locatie binnen het bereik van de kaart valt. Indien de kaart van slot is, verschijnt er een pijlvormige knop waarmee de kaart gecentreerd kan worden rondom de huidige locatie.";
 
 /* Paragraph 3.3.c of the Readme screen */
-"Paragraph_3.3.c" = "Locatie weergave vereist dat de gebruiker desgevraagd __toestemming__ verleent aan de app om de locatie gegevens te bepalen. Deze informatie wordt niet door de app opgeslagen of gedeeld.";
+"Paragraph_3.3.c" = "Locatie weergave vereist dat de gebruiker desgevraagd __toestemming__ verleent aan de app om locatiegegevens uit te lezen. Deze informatie wordt niet door de app opgeslagen of gedeeld.";
 
 /* Paragraph 3.4.a of the Readme screen */
 "Paragraph_3.4.a" = "__Toevoegen van clubs__";
@@ -177,31 +177,31 @@ Default status of member within a club. Used in concatenations. */
 "Paragraph_3.4.b" = "De app bevat momenteel alle clubs in de Fotobond regio Noord Brabant Oost plus enkele clubs die niet bij de Nederlandse Fotobond aangesloten zijn. Het is mogelijk om clubs (waar ook ter wereld) aan de app toe te voegen.";
 
 /* Paragraph 3.4.c of the Readme screen */
-"Paragraph_3.4.c" = "Dit maakt gebruikt van een online lijst (in .json formaat). U kunt een club toevoegen aan de centrale lijst door ons de clubnaam met wat gegevens over waar de club samenkomt (gemeente, GPS coordinaten) te sturen. Liefst ontvangen wij ook de website en iets vermeldenswaardig (max 140 karakters) over de club. Een engelstalige [Readme bestand](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) op GitHub bevat voorbeelden.";
+"Paragraph_3.4.c" = "Dit maakt gebruikt van een online lijst (in .json formaat). U kunt een club toevoegen aan de centrale lijst door ons de clubnaam met wat gegevens te sturen over waar de club samenkomt (gemeente, GPS coordinaten). Zo mogelijk ontvangen wij ook de website en iets vermeldenswaardig (max 140 karakters) over de club. Een engelstalige [Readme bestand](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) op GitHub bevat voorbeelden.";
 
 /* Paragraph 3.4.d of the Readme screen */
-"Paragraph_3.4.d" = "In een toekomstige versie van de app komt er ook de mogelijkheid om de __ledenlijst__ van een fotoclub aan te bieden. Ledenlijst bestanden kunnen op de clubwebsite bewaard worden.";
+"Paragraph_3.4.d" = "In een toekomstige versie van de app komt er ook de mogelijkheid om de __ledenlijst__ van een fotoclub aan te bieden. Ledenlijst bestanden kunnen op de clubwebsite bewaard worden om beheer te vergemakkelijken.";
 
 /* Paragraph 3.5.a of the Readme screen */
 "Paragraph_3.5.a" = "__Fotomusea__";
 
 /* Paragraph 3.5.b of the Readme screen */
-"Paragraph_3.5.b" = "De landkaarten tonen ook een aantal fotomusea in diverse landen zoals Nederland, VK, VS, Japan en Australië. Om ze te zien moet een kaart van slot zijn (=interactief) en kan de gebruiker voldoende uitzoomen totdat ze in beeld komen.";
+"Paragraph_3.5.b" = "De landkaarten tonen ook een aantal bekendere fotomusea in landen zoals Nederland, VK, VS, Japan en Australië. Om ze te zien moet een kaart van slot zijn (=interactief) en helpt het om voldoende uit te zoomen totdat ze in zicht komen.";
 
 /* Paragraph 3.5.c of the Readme screen */
 "Paragraph_3.5.c" = "Het toevoegen van een fotomuseum gaat op een vergelijkbare manier als het toevoegen van een fotoclub.";
 
 /* Paragraph 3.6.a of the Readme screen */
-"Paragraph_3.6.a" = "__Clubleden (en meer) verwijderen__";
+"Paragraph_3.6.a" = "__Clubleden, clubs en fotografen verwijderen__";
 
 /* Paragraph 3.6.b of the Readme screen */
-"Paragraph_3.6.b" = "Op de _Portfolio's_ pagina kan men een clublid verwijderen door deze naar links te vegen. Op andere pagina's kan met fotografen en clubs verwijderen.";
+"Paragraph_3.6.b" = "Op de _Portfolio's_ pagina kan men een clublid verwijderen door deze naar links te vegen. Op andere pagina's kan men door naar links te vegen fotografen en clubs verwijderen.";
 
 /* Paragraph 3.6.c of the Readme screen */
 "Paragraph_3.6.c" = "Verwijderen heeft _alleen_ blijvend effect als dit clublid ook verwijderd is uit de online versie van de ledenlijst. In alle gevallen kan verwijderen dus geen kwaad.";
 
 /* Paragraph 3.6.d of the Readme screen */
-"Paragraph_3.6.d" = "Als alternatief kan met de app verwijderen en opnieuw installeren (waardoor de interne data van de app gewist en opnieuw geladen wordt).";
+"Paragraph_3.6.d" = "Als alternatief kan met de app zelf verwijderen en opnieuw installeren (waardoor de interne data van de app gewist en opnieuw geladen wordt).";
 
 /* Paragraph 3.7.a of the Readme screen */
 "Paragraph_3.7.a" = "__Websites__";
@@ -213,16 +213,16 @@ Default status of member within a club. Used in concatenations. */
 "Paragraph_3.8.a" = "__Het openingsbeeld__";
 
 /* Paragraph 3.8.b of the Readme screen */
-"Paragraph_3.8.b" = "Na het opstarten van de app verschijnt er een beeld (\"_Prelude_\") dat afgeleid is van de app logo. Door herhaaldelijk binnen het centrale beeld te klikken, zoomt men in of uit. Uitgezoomd blijkt het beeld een foto te zijn met een laag kleurenfilters.";
+"Paragraph_3.8.b" = "Na het opstarten van de app verschijnt er een beeld (\"_Prelude_\") dat afgeleid is van de app logo. Door herhaaldelijk binnen het centrale beeld te klikken, zoomt men in of uit. Uitgezoomd blijkt het beeld een foto te zijn met een laag kleurenfiltertjes erop.";
 
 /* Paragraph 3.8.c of the Readme screen */
-"Paragraph_3.8.c" = "Dit geheel geeft aan hoe digitale camera's kleur zien. Technisch heet dit een [Bayer kleurenfilter](https://nl.wikipedia.org/wiki/Bayerfilter). Per lichtgevoelige cel worden vooral bepaalde kleuren doorgelaten. Een 24 MPixel camera bevat dus doorgaans 24 miljoen minuscule kleurfilters.";
+"Paragraph_3.8.c" = "Dit geheel geeft aan hoe digitale camera's kleur zien. Technisch heet dit een [Bayer kleurenfilter](https://en.wikipedia.org/wiki/Bayer_filter). Per lichtgevoelige cel worden bepaalde kleuren selectief tegengehouden. Een 24 MPixel camera bevat dus bijvoorbeeld een raster van 4000 x 6000 minuscule kleurfilters.";
 
 /* Paragraph 3.8.d of the Readme screen */
 "Paragraph_3.8.d" = "Er is een knop rechtsonder waarmee men de animatie overslaat of afbreekt. Het aanraken van iedere andere plek buiten de grote vierkant werkt ook.";
 
 /* Paragraph 3.8.e of the Readme screen */
-"Paragraph_3.8.e" = "De getoonde animatie wordt overigens uitgerekend op beschikbare GPU cores in uw apparaat. De animatie is geen video: men kan de lopende animatie onderweg bijsturen.";
+"Paragraph_3.8.e" = "De getoonde animatie wordt overigens uitgerekend op beschikbare GPU cores in uw apparaat. De animatie is geen video: men kan de lopende animatie bijsturen.";
 
 /* Paragraph 3.9.a of the Readme screen */
 "Paragraph_3.9.a" = "__Voormalige leden__";
@@ -243,28 +243,28 @@ Default status of member within a club. Used in concatenations. */
 "Paragraph_3.10.c" = "Deze knop is deel van portfolio's die gegenereerd zijn vanuit de _Juicebox Pro_ plug-in voor _Lightroom Classic_. Zie bijvoorbeeld de portfolio's van leden van _Fotogroep Waalre_.";
 
 /* First paragraph SupportedPlatforms section of Readme page */
-"Paragraph_4.1" = "_Fotoclub Hub_ draait op een recente versie van iOS. Hierdoor kan de app nieuwe software ontwikkelingen in iOS relatief snel benutten. In de praktijk betekent dit dat toestellen die niet ouder zijn dan een jaar of 6 de nieuwe app versies kunnen draaien.";
+"Paragraph_4.1" = "_Fotoclub Hub_ draait op een recente versie van iOS. In de praktijk betekent dit dat toestellen die niet ouder zijn dan een jaar of 6 de nieuwe app versies kunnen draaien.";
 
 /* Second paragraph SupportedPlatforms section of Readme page */
 "Paragraph_4.2" = "Om praktische redenen is de app geoptimaliseerd voor __iPhones__ en __iPads__. De iPad versie van de app kan echter ook draaien onder MacOS en VisionOS.";
 
 /* Third paragraph SupportedPlatforms section of Readme page */
-"Paragraph_4.3" = "Ofschoon de app vooralsnog geen ondersteuning heeft voor __Android__ of andere niet-Apple telefoons, overwegen wij om ondersteuning te bieden voor het automatisch genereren van website pagina's vanuit dezelfde informatie die de app gebruikt. Dit help om club websites bijgewerkt te houden, maar maakt het ook mogelijk om de clublijst, ledenlijst en portfolio's in een web browser te bekijken op mobile apparaten, laptops en desktops.";
+"Paragraph_4.3" = "Ofschoon de app vooralsnog geen ondersteuning heeft voor __Android__ of andere niet-Apple telefoons, overwegen wij om ondersteuning te bieden voor het automatisch genereren van website pagina's vanuit dezelfde informatie die de app gebruikt. Dit help om club websites bijgewerkt te houden, maar maakt het ook mogelijk om de clublijst, ledenlijst en portfolio's in een web browser te bekijken op mobile apparaten, laptops en desktops (bijvoorbeeld met Microsoft Windows).";
 
 /* Fourth paragraph SupportedPlatforms section of Readme page */
 "Paragraph_4.4" = "De komst van dit soort uitbreidingen zal afhangen van de belangstelling in de app en van hulp vanuit de Open Source gemeenschap. Vragen hierover beantwoorden wij graag.";
 
 /* First paragraph Developers section of Readme page */
-"Paragraph_5.1" = "De broncode van de app is als Apple _Xcode_ project te vinden op [GitHub](https://github.com/vdhamer/Photo-Club-Hub).";
+"Paragraph_5.1" = "De broncode van de app is te vinden op [GitHub](https://github.com/vdhamer/Photo-Club-Hub).";
 
 /* Second paragraph Developers section of Readme page */
-"Paragraph_5.2" = "Hulp vanuit de __software gemeenschap__ komt niet alleen de ontwikkelsnelheid ten goede. Het verhoogt ook de kwaliteit en borgt de continuïteit. Enkele voorbeelden van softwarehulp zijn: punten uit de GitHub to-do lijst, werken aan grotere wijzigingen, kleinere code verbeteringen, helpen met specificaties, en verfijning van Mac en Vision Pro ondersteuning.";
+"Paragraph_5.2" = "Hulp vanuit de __software gemeenschap__ komt niet alleen de ontwikkelsnelheid ten goede. Het verhoogt ook de kwaliteit en borgt de continuïteit. Enkele voorbeelden van softwarehulp zijn: punten uit de GitHub to-do lijst, werken aan kleinere of grotere verbeteringen, helpen met specificaties, en oppoetsen van de Mac of Vision Pro ondersteuning.";
 
 /* Third paragraph Developers section of Readme page */
-"Paragraph_5.3" = "Hulp van enthousiaste __gebruikers__ is ook welkom. Voorbeelden: testen via [TestFlight](https://apps.apple.com/us/app/testflight/id899247664), suggesties, vertalingen, recensies op de App Store en (hoogste prioriteit) het stapsgewijs toevoegen van jouw fotoclub.";
+"Paragraph_5.3" = "Hulp van enthousiaste __gebruikers__ is ook welkom. Voorbeelden: testen via [TestFlight](https://apps.apple.com/us/app/testflight/id899247664), suggesties, vertalingen, recensies op de App Store en vooral het toevoegen van jouw fotoclub.";
 
 /* Fourth paragraph Developers section of Readme page */
-"Paragraph_5.4" = "Momenteel is er een vrij grote verandering in de app onderweg. Het einddoel is dat een club __zichzelf__ kan toevoegen zonder aanpassing van de code, en met maximale controle van de club over hun eigen gegevens. Dit gaat uit van JSON bestanden die door de clubs aangemaakt, gehost en bijgewerkt worden. Bijvoorbeeld een JSON record die kerngegevens van de club bevat, een JSON lijst met alle leden en hun rollen/status, en iets vergelijkbaars voor de eigenlijke portfolio's.";
+"Paragraph_5.4" = "Momenteel is er een vrij grote verandering in de app onderweg. Het einddoel is dat een club __zichzelf__ kan toevoegen zonder aanpassing van de code, en met maximale controle van de club over hun eigen gegevens. Dit gaat uit van JSON bestanden die door de clubs aangemaakt, gehost en bijgewerkt worden. Bijvoorbeeld een JSON lijst met gegevens over de club en de namen van de leden, en iets vergelijkbaars voor de foto's in de diverse portfolio's.";
 
 /* Fifth paragraph Developers section of Readme page */
 "Paragraph_5.5" = "Geïnteresseerden kunnen ons bereiken via [GitHub](https://github.com/vdhamer/Photo-Club-Hub), [Facebook](https://www.facebook.com/vdhamer) of [LinkedIn](https://www.linkedin.com/in/vdhamer/). Meer informatie is te vinden in een [uitgebreidere Readme](https://github.com/vdhamer/Photo-Club-Hub/blob/main/.github/README.md) op GitHub.";
@@ -337,7 +337,7 @@ Field at top of Members page that allows the user to filter the members based on
 "Supported Platforms" = "iOS, iPadOS";
 
 /* Caption of Localizations image on Readme page */
-"Supporting multiple languages" = "Ondersteuning voor engels en nederlands";
+"Supporting multiple languages" = "Ondersteuning voor Engels en Nederlands";
 
 /* Section title on Readme page */
 "The App" = "De App";
