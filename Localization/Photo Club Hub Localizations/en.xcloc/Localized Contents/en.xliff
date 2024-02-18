@@ -155,8 +155,8 @@ Try dragging down the Photo Clubs screen to reload the default clubs.</target>
         <note>Second paragraph in The App section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_1.3" xml:space="preserve">
-        <source>This consistency avoids having to find each club's website yourself, and then figuring out how to locate and browse the photos on that site. The app does __not__ try to replace club web sites, photographer web sites. or social media channels. Instead, it supports clubs and their members who try to reach out to other clubs, other photographers, and a general audience.</source>
-        <target>This consistency avoids having to find each club's website yourself, and then figuring out how to locate and browse the photos on that site. The app does __not__ try to replace club web sites, photographer web sites. or social media channels. Instead, it supports clubs and their members who try to reach out to other clubs, other photographers, and a general audience.</target>
+        <source>This consistency avoids having to find each club's website yourself, and then figuring out how to locate and browse the photos on that site. The app does __not__ try to replace club web sites, photographer web sites, or social media channels. Instead, it supports clubs and their members who try to reach out to other clubs, other photographers, and a general audience.</source>
+        <target>This consistency avoids having to find each club's website yourself, and then figuring out how to locate and browse the photos on that site. The app does __not__ try to replace club web sites, photographer web sites, or social media channels. Instead, it supports clubs and their members who try to reach out to other clubs, other photographers, and a general audience.</target>
         <note>Third paragraph in The App section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_1.4" xml:space="preserve">
@@ -170,8 +170,8 @@ Try dragging down the Photo Clubs screen to reload the default clubs.</target>
         <note>Fifth paragraph in The App section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_1.6" xml:space="preserve">
-        <source>Interested in adding support for your club? Contact us via [GitHub](https://github.com/vdhamer/Photo-Club-Hub), [Facebook](https://www.facebook.com/vdhamer) or [LinkedIn](https://www.linkedin.com/in/vdhamer/). Adding your club only involves providing and updating the data in a way that the app can understand. The app's [GitHub site](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) explains the strategy and approach. We are here to help if you have any questions.</source>
-        <target>Interested in adding support for your club? Contact us via [GitHub](https://github.com/vdhamer/Photo-Club-Hub), [Facebook](https://www.facebook.com/vdhamer) or [LinkedIn](https://www.linkedin.com/in/vdhamer/). Adding your club only involves providing and updating the data in a way that the app can understand. The app's [GitHub site](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) explains the strategy and approach. We are here to help if you have any questions.</target>
+        <source>Interested in adding support for your club? Contact us via [GitHub](https://github.com/vdhamer/Photo-Club-Hub), [Facebook](https://www.facebook.com/vdhamer) or [LinkedIn](https://www.linkedin.com/in/vdhamer/). Adding your club only involves providing and updating club data in a way that the app can understand. The app's [GitHub site](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) explains the strategy and approach in more detail. We are here to help if you have any questions.</source>
+        <target>Interested in adding support for your club? Contact us via [GitHub](https://github.com/vdhamer/Photo-Club-Hub), [Facebook](https://www.facebook.com/vdhamer) or [LinkedIn](https://www.linkedin.com/in/vdhamer/). Adding your club only involves providing and updating club data in a way that the app can understand. The app's [GitHub site](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) explains the strategy and approach in more detail. We are here to help if you have any questions.</target>
         <note>Sixth paragraph in The App section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_2.1" xml:space="preserve">
@@ -180,8 +180,8 @@ Try dragging down the Photo Clubs screen to reload the default clubs.</target>
         <note>First paragraph in The Concept on Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_2.2" xml:space="preserve">
-        <source>Each photo club contains a series of member __portfolios__ with the actual images. Each portfolio covers the photographer's photos that are associated with that photo club.</source>
-        <target>Each photo club contains a series of member __portfolios__ with the actual images. Each portfolio covers the photographer's photos that are associated with that photo club.</target>
+        <source>Each photo club contains a series of member __portfolios__ that hold the actual images. Each portfolio covers the photographer's photos that are associated with that photo club.</source>
+        <target>Each photo club contains a series of member __portfolios__ that hold the actual images. Each portfolio covers the photographer's photos that are associated with that photo club.</target>
         <note>Second paragraph in The Concept on Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_2.3" xml:space="preserve">
@@ -205,8 +205,8 @@ Try dragging down the Photo Clubs screen to reload the default clubs.</target>
         <note>Paragraph 3.1.a of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.1.b" xml:space="preserve">
-        <source>_Photo Club Hub_ automatically selects its language based on your device’s language settings. It currently supports English and Dutch. You can change language using _Settings &gt; General &gt; Language &amp; Region &gt; Preferred Language Order_ or by overruling this setting for this app only (_Settings &gt; Photo Club Hub &gt; Language_).</source>
-        <target>_Photo Club Hub_ automatically selects its language based on your device’s language settings. It currently supports English and Dutch. You can change language using _Settings &gt; General &gt; Language &amp; Region &gt; Preferred Language Order_ or by overruling this setting for this app only (_Settings &gt; Photo Club Hub &gt; Language_).</target>
+        <source>_Photo Club Hub_ automatically selects its language based on your device’s language settings. It currently supports English and Dutch. You can change language using _Settings &gt; General &gt; Language &amp; Region &gt; Preferred Language Order_. Alternatively you can overrule this setting for this app only (_Settings &gt; Photo Club Hub &gt; Language_).</source>
+        <target>_Photo Club Hub_ automatically selects its language based on your device’s language settings. It currently supports English and Dutch. You can change language using _Settings &gt; General &gt; Language &amp; Region &gt; Preferred Language Order_. Alternatively you can overrule this setting for this app only (_Settings &gt; Photo Club Hub &gt; Language_).</target>
         <note>Paragraph 3.1.b of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.2.a" xml:space="preserve">
@@ -215,8 +215,8 @@ Try dragging down the Photo Clubs screen to reload the default clubs.</target>
         <note>Paragraph 3.2.a of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.2.b" xml:space="preserve">
-        <source>If you zoom in enough on any map, a button appears that allows you do view building heights. In this mode you can rotate the map.</source>
-        <target>If you zoom in enough on any map, a button appears that allows you do view building heights. In this mode you can rotate the map.</target>
+        <source>If you zoom in enough on any map, a button appears that allows you do view the scene in three dimensions. In this mode you can rotate the map.</source>
+        <target>If you zoom in enough on any map, a button appears that allows you do view the scene in three dimensions. In this mode you can rotate the map.</target>
         <note>Paragraph 3.2.ba of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.3.a" xml:space="preserve">
@@ -225,8 +225,8 @@ Try dragging down the Photo Clubs screen to reload the default clubs.</target>
         <note>Paragraph 3.3.a of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.3.b" xml:space="preserve">
-        <source>Maps can show you your live location as a purple dot when it’s in range of the map. This can help navigate to a club or to estimate distances. If the map is unlocked/interactive, an arrow button can re-center the map around your current location.</source>
-        <target>Maps can show you your live location as a purple dot when it’s in range of the map. This can help navigate to a club or to estimate distances. If the map is unlocked/interactive, an arrow button can re-center the map around your current location.</target>
+        <source>Maps can highlight your own location as a purple dot providing that it is in range of the map. This can help navigate to a club or to estimate distances. If the map is unlocked/interactive, an arrow button let you re-center the map around your current location.</source>
+        <target>Maps can highlight your own location as a purple dot providing that it is in range of the map. This can help navigate to a club or to estimate distances. If the map is unlocked/interactive, an arrow button let you re-center the map around your current location.</target>
         <note>Paragraph 3.3.b of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.3.c" xml:space="preserve">
@@ -240,18 +240,18 @@ Try dragging down the Photo Clubs screen to reload the default clubs.</target>
         <note>Paragraph 3.4.a of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.4.b" xml:space="preserve">
-        <source>The app contains a set of initial photo clubs. Those photo clubs are so far all in one region of the Netherlands. Clubs anywhere in the world can be added, regardless whether they are part of some larger photo club federation.</source>
-        <target>The app contains a set of initial photo clubs. Those photo clubs are so far all in one region of the Netherlands. Clubs anywhere in the world can be added, regardless whether they are part of some larger photo club federation.</target>
+        <source>The app contains a set of initial photo clubs. Those clubs are all in one area of the Netherlands. Clubs anywhere in the world, regardless whether they are part of some official photo club federation, can be added.</source>
+        <target>The app contains a set of initial photo clubs. Those clubs are all in one area of the Netherlands. Clubs anywhere in the world, regardless whether they are part of some official photo club federation, can be added.</target>
         <note>Paragraph 3.4.b of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.4.c" xml:space="preserve">
-        <source>This requires extending an online (.json) file. For now this involves sending us the club’s name, town, latitude, and longitude. And, if possible, providing a web address and a remark in one or more languages (140 char each) on anything noteworthy about the club. There are examples in an extended [Readme](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) on GitHub.</source>
-        <target>This requires extending an online (.json) file. For now this involves sending us the club’s name, town, latitude, and longitude. And, if possible, providing a web address and a remark in one or more languages (140 char each) on anything noteworthy about the club. There are examples in an extended [Readme](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) on GitHub.</target>
+        <source>This requires extending an online text/.json file. For now this involves sending us the club’s name, town, latitude, and longitude. And, if possible, providing a web address and a remark in one or more languages (max 140 char each) on anything noteworthy about the club. There are examples in the extended [Readme](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) on GitHub.</source>
+        <target>This requires extending an online text/.json file. For now this involves sending us the club’s name, town, latitude, and longitude. And, if possible, providing a web address and a remark in one or more languages (max 140 char each) on anything noteworthy about the club. There are examples in the extended [Readme](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) on GitHub.</target>
         <note>Paragraph 3.4.c of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.4.d" xml:space="preserve">
-        <source>Adding and maintaining membership lists for a photo club is a feature for a __future__ app update. These “memberList” files can be hosted on your __own__ website. There will be instructions by then on how to do this for WordPress users, but anything that results in a URL to a valid memberList (JSON) file will work.</source>
-        <target>Adding and maintaining membership lists for a photo club is a feature for a __future__ app update. These “memberList” files can be hosted on your __own__ website. There will be instructions by then on how to do this for WordPress users, but anything that results in a URL to a valid memberList (JSON) file will work.</target>
+        <source>Adding and maintaining membership lists for a photo club will be supported in a __future__ app update. These “memberList” files can be hosted on your __own__ website. We will add instructions on how to do this for WordPress users, but anything that results in a URL to a valid memberList (JSON) file will work.</source>
+        <target>Adding and maintaining membership lists for a photo club will be supported in a __future__ app update. These “memberList” files can be hosted on your __own__ website. We will add instructions on how to do this for WordPress users, but anything that results in a URL to a valid memberList (JSON) file will work.</target>
         <note>Paragraph 3.4.d of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.5.a" xml:space="preserve">
@@ -260,8 +260,8 @@ Try dragging down the Photo Clubs screen to reload the default clubs.</target>
         <note>Paragraph 3.5.a of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.5.b" xml:space="preserve">
-        <source>The maps can show various photo museums throughout the world. They have a different icon than photo clubs. Museums show up if you zoom out any map far enough that they come into view.</source>
-        <target>The maps can show various photo museums throughout the world. They have a different icon than photo clubs. Museums show up if you zoom out any map far enough that they come into view.</target>
+        <source>The maps can show various photo museums throughout the world. Museums and photo clubs are distinguished by different symbols on the map. Museums show up if you zoom out any map far enough that they come into view.</source>
+        <target>The maps can show various photo museums throughout the world. Museums and photo clubs are distinguished by different symbols on the map. Museums show up if you zoom out any map far enough that they come into view.</target>
         <note>Paragraph 3.5.b of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.5.c" xml:space="preserve">
@@ -275,18 +275,18 @@ Try dragging down the Photo Clubs screen to reload the default clubs.</target>
         <note>Paragraph 3.6.a of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.6.b" xml:space="preserve">
-        <source>On the _Portfolios_ screen you can delete a club member by swiping the row to the left. Other screens have similar functionality for removing individual photographers and clubs.</source>
-        <target>On the _Portfolios_ screen you can delete a club member by swiping the row to the left. Other screens have similar functionality for removing individual photographers and clubs.</target>
+        <source>On the _Portfolios_ screen you can delete a club member by swiping a row to the left. Other screens have similar functionality for removing individual photographers and clubs.</source>
+        <target>On the _Portfolios_ screen you can delete a club member by swiping a row to the left. Other screens have similar functionality for removing individual photographers and clubs.</target>
         <note>Paragraph 3.6.b of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.6.c" xml:space="preserve">
-        <source>Deletion of an arbitrary member will generally be __temporary__ because the member is still on the club's online membership lists. Deletion does have effect if the row has been deleted from these online lists. The feature will be automated at some point, and is only useful in special circumstances (like when a typo in a member's name is corrected).</source>
-        <target>Deletion of an arbitrary member will generally be __temporary__ because the member is still on the club's online membership lists. Deletion does have effect if the row has been deleted from these online lists. The feature will be automated at some point, and is only useful in special circumstances (like when a typo in a member's name is corrected).</target>
+        <source>Deletion of a member will generally be __temporary__ because the member is still on the club's online membership lists. Deletion does have effect if the entry has been removed from these online lists. The feature will be automated at some point, and is only useful in special circumstances (like when a typo in a member's name is corrected).</source>
+        <target>Deletion of a member will generally be __temporary__ because the member is still on the club's online membership lists. Deletion does have effect if the entry has been removed from these online lists. The feature will be automated at some point, and is only useful in special circumstances (like when a typo in a member's name is corrected).</target>
         <note>Paragraph 3.6.c of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.6.d" xml:space="preserve">
-        <source>So just remember that swiping left is harmless, and if you need to clean up a list you can alternatively just uninstall and reinstall the app to clean up the app's internal data.</source>
-        <target>So just remember that swiping left is harmless, and if you need to clean up a list you can alternatively just uninstall and reinstall the app to clean up the app's internal data.</target>
+        <source>So just remember that swiping left is harmless, and if you need to clean up a list you can alternatively simply uninstall and reinstall the app to clean up the app's internal data.</source>
+        <target>So just remember that swiping left is harmless, and if you need to clean up a list you can alternatively simply uninstall and reinstall the app to clean up the app's internal data.</target>
         <note>Paragraph 3.6.d of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.7.a" xml:space="preserve">
@@ -295,8 +295,8 @@ Try dragging down the Photo Clubs screen to reload the default clubs.</target>
         <note>Paragraph 3.7.a of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.7.b" xml:space="preserve">
-        <source>This app is complimentary to your club’s web site. Because web sites have more uses than just presenting photos, _Photo Club Hub_ includes clickable links to club and photographer web sites.</source>
-        <target>This app is complimentary to your club’s web site. Because web sites have more uses than just presenting photos, _Photo Club Hub_ includes clickable links to club and photographer web sites.</target>
+        <source>This app is complimentary to your club’s web site. Because web sites have more uses than just presenting photos, _Photo Club Hub_ includes clickable links to club- and photographer web sites.</source>
+        <target>This app is complimentary to your club’s web site. Because web sites have more uses than just presenting photos, _Photo Club Hub_ includes clickable links to club- and photographer web sites.</target>
         <note>Paragraph 3.7.b of the Readme scree</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.8.a" xml:space="preserve">
@@ -335,8 +335,8 @@ Try dragging down the Photo Clubs screen to reload the default clubs.</target>
         <note>Paragraph 3.9.b of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.9.c" xml:space="preserve">
-        <source>An easy way to get recent ex-members in the app is to simply keep their portfolio when they leave, but only mark the member as ex-member in the membership list.</source>
-        <target>An easy way to get recent ex-members in the app is to simply keep their portfolio when they leave, but only mark the member as ex-member in the membership list.</target>
+        <source>An easy way to get recent ex-members in the app is to simply keep their portfolio when they leave, and instead mark the member as ex-member in the membership list.</source>
+        <target>An easy way to get recent ex-members in the app is to simply keep their portfolio when they leave, and instead mark the member as ex-member in the membership list.</target>
         <note>Paragraph 3.9.c of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.10.a" xml:space="preserve">
@@ -345,23 +345,23 @@ Try dragging down the Photo Clubs screen to reload the default clubs.</target>
         <note>Paragraph 3.10.a of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.10.b" xml:space="preserve">
-        <source>Some portfolios have an automatic slide show option. This is controlled by one of the buttons that appear when you tap on an image (tapping not needed on iPad).</source>
-        <target>Some portfolios have an automatic slide show option. This is controlled by one of the buttons that appear when you tap on an image (tapping not needed on iPad).</target>
+        <source>Some portfolios have an automatic slide show option. This is controlled by one of the buttons that appear when you tap on an image (this tapping is not needed on an iPad).</source>
+        <target>Some portfolios have an automatic slide show option. This is controlled by one of the buttons that appear when you tap on an image (this tapping is not needed on an iPad).</target>
         <note>Paragraph 3.10.b of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.10.c" xml:space="preserve">
-        <source>This option is available on portfolios that were generated using the Juicebox plug-in for Lightroom Classic (see the various members of Fotogroep Waalre).</source>
-        <target>This option is available on portfolios that were generated using the Juicebox plug-in for Lightroom Classic (see the various members of Fotogroep Waalre).</target>
+        <source>This option is available on portfolios that were generated using the _Juicebox_ plug-in for _Lightroom Classic_ (see the portfolios of Fotogroep Waalre).</source>
+        <target>This option is available on portfolios that were generated using the _Juicebox_ plug-in for _Lightroom Classic_ (see the portfolios of Fotogroep Waalre).</target>
         <note>Paragraph 3.10.c of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_4.1" xml:space="preserve">
-        <source>_Photo Club Hub_ requires the latest major version of iOS. This allows us to keep up to date technology-wise. This means that the latest version of the app can run on devices released in the last 6 or 7 years.</source>
-        <target>_Photo Club Hub_ requires the latest major version of iOS. This allows us to keep up to date technology-wise. This means that the latest version of the app can run on devices released in the last 6 or 7 years.</target>
+        <source>_Photo Club Hub_ requires the latest major version of iOS. This allows us to keep up to date technology-wise. The latest app version can run on devices released in the last 6 or 7 years.</source>
+        <target>_Photo Club Hub_ requires the latest major version of iOS. This allows us to keep up to date technology-wise. The latest app version can run on devices released in the last 6 or 7 years.</target>
         <note>First paragraph SupportedPlatforms section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_4.2" xml:space="preserve">
-        <source>For practical reasons, the app is optimised for __iOS__ and __iPadOS__. The app can also run on MacOS or VisionOS as an iPad app.</source>
-        <target>For practical reasons, the app is optimised for __iOS__ and __iPadOS__. The app can also run on MacOS or VisionOS as an iPad app.</target>
+        <source>For practical reasons, the app is optimized for __iOS__ and __iPadOS__. The app can also run on MacOS or VisionOS as an iPad app.</source>
+        <target>For practical reasons, the app is optimized for __iOS__ and __iPadOS__. The app can also run on MacOS or VisionOS as an iPad app.</target>
         <note>Second paragraph SupportedPlatforms section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_4.3" xml:space="preserve">
@@ -375,18 +375,18 @@ Try dragging down the Photo Clubs screen to reload the default clubs.</target>
         <note>Fourth paragraph SupportedPlatforms section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_5.1" xml:space="preserve">
-        <source>The source code of this app is on [GitHub](https://github.com/vdhamer/Photo-Club-Hub). We are hoping for support from the community.</source>
-        <target>The source code of this app is on [GitHub](https://github.com/vdhamer/Photo-Club-Hub). We are hoping for support from the community.</target>
+        <source>The source code of this app is on [GitHub](https://github.com/vdhamer/Photo-Club-Hub). We are targeting to get support from the community.</source>
+        <target>The source code of this app is on [GitHub](https://github.com/vdhamer/Photo-Club-Hub). We are targeting to get support from the community.</target>
         <note>First paragraph Developers section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_5.2" xml:space="preserve">
-        <source>Additional __software developers__ will increase development speed, bring in fresh ideas and ultimately improve continuity. Examples of contributions include adding features, code improvements, ideas, interface reviews, optimal MacOS support, and possibly server-side functionality.</source>
-        <target>Additional __software developers__ will increase development speed, bring in fresh ideas and ultimately improve continuity. Examples of contributions include adding features, code improvements, ideas, interface reviews, optimal MacOS support, and possibly server-side functionality.</target>
+        <source>Additional __software developers__ will increase development speed, bring in fresh ideas and ultimately improve continuity. Examples of contributions include new features, code improvements, ideas, interface reviews, optimized MacOS and VisionOS support, and maybe a backend of some sort.</source>
+        <target>Additional __software developers__ will increase development speed, bring in fresh ideas and ultimately improve continuity. Examples of contributions include new features, code improvements, ideas, interface reviews, optimized MacOS and VisionOS support, and maybe a backend of some sort.</target>
         <note>Second paragraph Developers section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_5.3" xml:space="preserve">
-        <source>Contributions that __don’t require coding__ include beta testing via [TestFlight](https://apps.apple.com/us/app/testflight/id899247664), feature requests, translations, App Store reviews, and—above all—connecting up your own photo club.</source>
-        <target>Contributions that __don’t require coding__ include beta testing via [TestFlight](https://apps.apple.com/us/app/testflight/id899247664), feature requests, translations, App Store reviews, and—above all—connecting up your own photo club.</target>
+        <source>Contributions that __don’t require coding__ include beta testing via [TestFlight](https://apps.apple.com/us/app/testflight/id899247664), feature requests, translations, App Store reviews, and —above all— connecting up your photo club.</source>
+        <target>Contributions that __don’t require coding__ include beta testing via [TestFlight](https://apps.apple.com/us/app/testflight/id899247664), feature requests, translations, App Store reviews, and —above all— connecting up your photo club.</target>
         <note>Third paragraph Developers section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_5.4" xml:space="preserve">

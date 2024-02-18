@@ -89,7 +89,7 @@
       </trans-unit>
       <trans-unit id="Developers wanted" xml:space="preserve">
         <source>Developers wanted</source>
-        <target state="translated">Ontwikkelaars in de Zaal?</target>
+        <target>Ontwikkelaars in de Zaal?</target>
         <note>Section title on Readme page</note>
       </trans-unit>
       <trans-unit id="Example of a link to a club web site" xml:space="preserve">
@@ -114,7 +114,7 @@
       </trans-unit>
       <trans-unit id="Maps can be viewed in 3D" xml:space="preserve">
         <source>Maps can be viewed in 3D</source>
-        <target state="translated">Omgeving van een fotomuseum in 3D</target>
+        <target>Omgeving van een fotomuseum in 3D</target>
         <note>Caption of 3D map in Readme section</note>
       </trans-unit>
       <trans-unit id="Member categories" xml:space="preserve">
@@ -151,11 +151,11 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
       </trans-unit>
       <trans-unit id="Paragraph_1.2" xml:space="preserve">
         <source>_Photo Club Hub_ showcases selected photos by members of participating clubs. The photos are displayed in a consistent, easy to access way, with minimal distractions.</source>
-        <target state="translated">De app presenteert geselecteerd werk van  clubleden. De foto's zijn op een consistente wijze, en zonder afleiding te bekijken. Men kan de app dus ondermeer benutten als een permanente online expositie.</target>
+        <target>De app presenteert geselecteerd werk van  clubleden. De foto's zijn op een consistente wijze, en zonder afleiding te bekijken. Men kan de app dus ondermeer benutten als een permanente online expositie.</target>
         <note>Second paragraph in The App section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_1.3" xml:space="preserve">
-        <source>This consistency avoids having to find each club's website yourself, and then figuring out how to locate and browse the photos on that site. The app does __not__ try to replace club web sites, photographer web sites. or social media channels. Instead, it supports clubs and their members who try to reach out to other clubs, other photographers, and a general audience.</source>
+        <source>This consistency avoids having to find each club's website yourself, and then figuring out how to locate and browse the photos on that site. The app does __not__ try to replace club web sites, photographer web sites, or social media channels. Instead, it supports clubs and their members who try to reach out to other clubs, other photographers, and a general audience.</source>
         <target>Door de foto's op een consistente manier te presenteren, hoeft de gebruiker de website van de club niet te zoeken om vervolgens te moeten ontdekken hoe de foto's te bekijken. De app probeert nadrukkelijk __niet__ om de websites of social media kanalen van clubs te vervangen. Het beoogt alleen clubs en hun leden onder de aandacht te brengen bij een breed publiek.</target>
         <note>Third paragraph in The App section of Readme page</note>
       </trans-unit>
@@ -170,7 +170,7 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
         <note>Fifth paragraph in The App section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_1.6" xml:space="preserve">
-        <source>Interested in adding support for your club? Contact us via [GitHub](https://github.com/vdhamer/Photo-Club-Hub), [Facebook](https://www.facebook.com/vdhamer) or [LinkedIn](https://www.linkedin.com/in/vdhamer/). Adding your club only involves providing and updating the data in a way that the app can understand. The app's [GitHub site](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) explains the strategy and approach. We are here to help if you have any questions.</source>
+        <source>Interested in adding support for your club? Contact us via [GitHub](https://github.com/vdhamer/Photo-Club-Hub), [Facebook](https://www.facebook.com/vdhamer) or [LinkedIn](https://www.linkedin.com/in/vdhamer/). Adding your club only involves providing and updating club data in a way that the app can understand. The app's [GitHub site](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) explains the strategy and approach in more detail. We are here to help if you have any questions.</source>
         <target>Heb je belangstelling om de foto's van jouw club in de app te krijgen? Neem dan contact op via [GitHub](https://github.com/vdhamer/Photo-Club-Hub), [Facebook](https://www.facebook.com/vdhamer) of [LinkedIn](https://www.linkedin.com/in/vdhamer/). Op [GitHub](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) staat gedetailleerde uitleg over hoe dit gaat. Wij helpen graag, dus neem bij vragen gerust contact op.</target>
         <note>Sixth paragraph in The App section of Readme page</note>
       </trans-unit>
@@ -180,7 +180,7 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
         <note>First paragraph in The Concept on Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_2.2" xml:space="preserve">
-        <source>Each photo club contains a series of member __portfolios__ with the actual images. Each portfolio covers the photographer's photos that are associated with that photo club.</source>
+        <source>Each photo club contains a series of member __portfolios__ that hold the actual images. Each portfolio covers the photographer's photos that are associated with that photo club.</source>
         <target>Iedere club heeft een lijst van __portfolio's__ van hun leden. Deze portfolio's bevatten de foto's.</target>
         <note>Second paragraph in The Concept on Readme page</note>
       </trans-unit>
@@ -196,7 +196,7 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
       </trans-unit>
       <trans-unit id="Paragraph_2.5" xml:space="preserve">
         <source>We try to show the portfolios with minimal distraction, just like an exposition at a museum or gallery. Web sites tend to be less optimal for this, because they are cluttered by browser controls (e.g., an address bar or tabs), and have to display multiple types of information (e.g., club news or schedules).</source>
-        <target state="translated">Net als bij een tentoonstelling is het belangrijk om een portfolio _zonder afleiding_ te kunnen bekijken. Webpagina's zijn hier vaak iets te druk voor vanwege allerlei bedieningselementen, maar ook omdat ze vaak meerdere soorten informatie tonen, zoals clubnieuws of vergaderschemas.</target>
+        <target>Net als bij een tentoonstelling is het belangrijk om een portfolio _zonder afleiding_ te kunnen bekijken. Webpagina's zijn hier vaak iets te druk voor vanwege allerlei bedieningselementen, maar ook omdat ze vaak meerdere soorten informatie tonen, zoals clubnieuws of vergaderschemas.</target>
         <note>Fifth paragraph in The Concept on Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.1.a" xml:space="preserve">
@@ -205,8 +205,8 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
         <note>Paragraph 3.1.a of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.1.b" xml:space="preserve">
-        <source>_Photo Club Hub_ automatically selects its language based on your device’s language settings. It currently supports English and Dutch. You can change language using _Settings &gt; General &gt; Language &amp; Region &gt; Preferred Language Order_ or by overruling this setting for this app only (_Settings &gt; Photo Club Hub &gt; Language_).</source>
-        <target state="translated">_Fotoclub Hub_ kiest een taal op basis van de taal die ingesteld is op het apparaat. Momenteel worden Nederlands en Engels ondersteund. Je kan de taalinstelling aanpassen onder _Instellingen → Algemeen → Taal en regio → Volgorde voorkeurstalen_. Als alternatief kan men de taalkeuze voor alleen deze app aanpassen via _Instellingen → Fotoclub Hub → Voorkeurstaal_.</target>
+        <source>_Photo Club Hub_ automatically selects its language based on your device’s language settings. It currently supports English and Dutch. You can change language using _Settings &gt; General &gt; Language &amp; Region &gt; Preferred Language Order_. Alternatively you can overrule this setting for this app only (_Settings &gt; Photo Club Hub &gt; Language_).</source>
+        <target>_Fotoclub Hub_ kiest een taal op basis van de taal die ingesteld is op het apparaat. Momenteel worden Nederlands en Engels ondersteund. Je kan de taalinstelling aanpassen onder _Instellingen → Algemeen → Taal en regio → Volgorde voorkeurstalen_. Als alternatief kan men de taalkeuze voor alleen deze app aanpassen via _Instellingen → Fotoclub Hub → Voorkeurstaal_.</target>
         <note>Paragraph 3.1.b of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.2.a" xml:space="preserve">
@@ -215,7 +215,7 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
         <note>Paragraph 3.2.a of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.2.b" xml:space="preserve">
-        <source>If you zoom in enough on any map, a button appears that allows you do view building heights. In this mode you can rotate the map.</source>
+        <source>If you zoom in enough on any map, a button appears that allows you do view the scene in three dimensions. In this mode you can rotate the map.</source>
         <target>Wanneer men voldoende inzoomt op een landkaart, verschijnt er een knop om de kaart in 3D weer te geven. Dit vereist dat de kaart interactief is (slotje open). Probeer het bijvoorbeeld uit met New York met zijn hoge gebouwen.</target>
         <note>Paragraph 3.2.ba of the Readme screen</note>
       </trans-unit>
@@ -225,13 +225,13 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
         <note>Paragraph 3.3.a of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.3.b" xml:space="preserve">
-        <source>Maps can show you your live location as a purple dot when it’s in range of the map. This can help navigate to a club or to estimate distances. If the map is unlocked/interactive, an arrow button can re-center the map around your current location.</source>
-        <target state="translated">De landkaarten kunnen de huidige locatie van de gebruiker weergeven als paarse stip - mits die locatie binnen het bereik van de kaart valt. Indien de kaart van slot is, verschijnt er een pijlvormige knop waarmee de kaart gecentreerd kan worden rondom de huidige locatie.</target>
+        <source>Maps can highlight your own location as a purple dot providing that it is in range of the map. This can help navigate to a club or to estimate distances. If the map is unlocked/interactive, an arrow button let you re-center the map around your current location.</source>
+        <target>De landkaarten kunnen de huidige locatie van de gebruiker weergeven als paarse stip - mits die locatie binnen het bereik van de kaart valt. Indien de kaart van slot is, verschijnt er een pijlvormige knop waarmee de kaart gecentreerd kan worden rondom de huidige locatie.</target>
         <note>Paragraph 3.3.b of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.3.c" xml:space="preserve">
         <source>Live location requires granting the app __permission__ to access your location while in the app. The app doesn’t store or share location information with anyone or anything.</source>
-        <target state="translated">Locatie weergave vereist dat de gebruiker desgevraagd __toestemming__ verleent aan de app om locatiegegevens uit te lezen. Deze informatie wordt niet door de app opgeslagen of gedeeld.</target>
+        <target>Locatie weergave vereist dat de gebruiker desgevraagd __toestemming__ verleent aan de app om locatiegegevens uit te lezen. Deze informatie wordt niet door de app opgeslagen of gedeeld.</target>
         <note>Paragraph 3.3.c of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.4.a" xml:space="preserve">
@@ -240,18 +240,18 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
         <note>Paragraph 3.4.a of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.4.b" xml:space="preserve">
-        <source>The app contains a set of initial photo clubs. Those photo clubs are so far all in one region of the Netherlands. Clubs anywhere in the world can be added, regardless whether they are part of some larger photo club federation.</source>
+        <source>The app contains a set of initial photo clubs. Those clubs are all in one area of the Netherlands. Clubs anywhere in the world, regardless whether they are part of some official photo club federation, can be added.</source>
         <target>De app bevat momenteel alle clubs in de Fotobond regio Noord Brabant Oost plus enkele clubs die niet bij de Nederlandse Fotobond aangesloten zijn. Het is mogelijk om clubs (waar ook ter wereld) aan de app toe te voegen.</target>
         <note>Paragraph 3.4.b of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.4.c" xml:space="preserve">
-        <source>This requires extending an online (.json) file. For now this involves sending us the club’s name, town, latitude, and longitude. And, if possible, providing a web address and a remark in one or more languages (140 char each) on anything noteworthy about the club. There are examples in an extended [Readme](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) on GitHub.</source>
-        <target state="translated">Dit maakt gebruikt van een online lijst (in .json formaat). U kunt een club toevoegen aan de centrale lijst door ons de clubnaam met wat gegevens te sturen over waar de club samenkomt (gemeente, GPS coordinaten). Zo mogelijk ontvangen wij ook de website en iets vermeldenswaardig (max 140 karakters) over de club. Een engelstalige [Readme bestand](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) op GitHub bevat voorbeelden.</target>
+        <source>This requires extending an online text/.json file. For now this involves sending us the club’s name, town, latitude, and longitude. And, if possible, providing a web address and a remark in one or more languages (max 140 char each) on anything noteworthy about the club. There are examples in the extended [Readme](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) on GitHub.</source>
+        <target>Dit maakt gebruikt van een online lijst (in .json formaat). U kunt een club toevoegen aan de centrale lijst door ons de clubnaam met wat gegevens te sturen over waar de club samenkomt (gemeente, GPS coordinaten). Zo mogelijk ontvangen wij ook de website en iets vermeldenswaardig (max 140 karakters) over de club. Een engelstalige [Readme bestand](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) op GitHub bevat voorbeelden.</target>
         <note>Paragraph 3.4.c of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.4.d" xml:space="preserve">
-        <source>Adding and maintaining membership lists for a photo club is a feature for a __future__ app update. These “memberList” files can be hosted on your __own__ website. There will be instructions by then on how to do this for WordPress users, but anything that results in a URL to a valid memberList (JSON) file will work.</source>
-        <target state="translated">In een toekomstige versie van de app komt er ook de mogelijkheid om de __ledenlijst__ van een fotoclub aan te bieden. Ledenlijst bestanden kunnen op de clubwebsite bewaard worden om beheer te vergemakkelijken.</target>
+        <source>Adding and maintaining membership lists for a photo club will be supported in a __future__ app update. These “memberList” files can be hosted on your __own__ website. We will add instructions on how to do this for WordPress users, but anything that results in a URL to a valid memberList (JSON) file will work.</source>
+        <target>In een toekomstige versie van de app komt er ook de mogelijkheid om de __ledenlijst__ van een fotoclub aan te bieden. Ledenlijst bestanden kunnen op de clubwebsite bewaard worden om beheer te vergemakkelijken.</target>
         <note>Paragraph 3.4.d of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.5.a" xml:space="preserve">
@@ -260,8 +260,8 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
         <note>Paragraph 3.5.a of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.5.b" xml:space="preserve">
-        <source>The maps can show various photo museums throughout the world. They have a different icon than photo clubs. Museums show up if you zoom out any map far enough that they come into view.</source>
-        <target state="translated">De landkaarten tonen ook een aantal bekendere fotomusea in landen zoals Nederland, VK, VS, Japan en Australië. Om ze te zien moet een kaart van slot zijn (=interactief) en helpt het om voldoende uit te zoomen totdat ze in zicht komen.</target>
+        <source>The maps can show various photo museums throughout the world. Museums and photo clubs are distinguished by different symbols on the map. Museums show up if you zoom out any map far enough that they come into view.</source>
+        <target>De landkaarten tonen ook een aantal bekendere fotomusea in landen zoals Nederland, VK, VS, Japan en Australië. Om ze te zien moet een kaart van slot zijn (=interactief) en helpt het om voldoende uit te zoomen totdat ze in zicht komen.</target>
         <note>Paragraph 3.5.b of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.5.c" xml:space="preserve">
@@ -271,22 +271,22 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
       </trans-unit>
       <trans-unit id="Paragraph_3.6.a" xml:space="preserve">
         <source>__Deleting members (and more)__</source>
-        <target state="translated">__Clubleden, clubs en fotografen verwijderen__</target>
+        <target>__Clubleden, clubs en fotografen verwijderen__</target>
         <note>Paragraph 3.6.a of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.6.b" xml:space="preserve">
-        <source>On the _Portfolios_ screen you can delete a club member by swiping the row to the left. Other screens have similar functionality for removing individual photographers and clubs.</source>
-        <target state="translated">Op de _Portfolio's_ pagina kan men een clublid verwijderen door deze naar links te vegen. Op andere pagina's kan men door naar links te vegen fotografen en clubs verwijderen.</target>
+        <source>On the _Portfolios_ screen you can delete a club member by swiping a row to the left. Other screens have similar functionality for removing individual photographers and clubs.</source>
+        <target>Op de _Portfolio's_ pagina kan men een clublid verwijderen door deze naar links te vegen. Op andere pagina's kan men door naar links te vegen fotografen en clubs verwijderen.</target>
         <note>Paragraph 3.6.b of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.6.c" xml:space="preserve">
-        <source>Deletion of an arbitrary member will generally be __temporary__ because the member is still on the club's online membership lists. Deletion does have effect if the row has been deleted from these online lists. The feature will be automated at some point, and is only useful in special circumstances (like when a typo in a member's name is corrected).</source>
+        <source>Deletion of a member will generally be __temporary__ because the member is still on the club's online membership lists. Deletion does have effect if the entry has been removed from these online lists. The feature will be automated at some point, and is only useful in special circumstances (like when a typo in a member's name is corrected).</source>
         <target>Verwijderen heeft _alleen_ blijvend effect als dit clublid ook verwijderd is uit de online versie van de ledenlijst. In alle gevallen kan verwijderen dus geen kwaad.</target>
         <note>Paragraph 3.6.c of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.6.d" xml:space="preserve">
-        <source>So just remember that swiping left is harmless, and if you need to clean up a list you can alternatively just uninstall and reinstall the app to clean up the app's internal data.</source>
-        <target state="translated">Als alternatief kan met de app zelf verwijderen en opnieuw installeren (waardoor de interne data van de app gewist en opnieuw geladen wordt).</target>
+        <source>So just remember that swiping left is harmless, and if you need to clean up a list you can alternatively simply uninstall and reinstall the app to clean up the app's internal data.</source>
+        <target>Als alternatief kan met de app zelf verwijderen en opnieuw installeren (waardoor de interne data van de app gewist en opnieuw geladen wordt).</target>
         <note>Paragraph 3.6.d of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.7.a" xml:space="preserve">
@@ -295,7 +295,7 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
         <note>Paragraph 3.7.a of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.7.b" xml:space="preserve">
-        <source>This app is complimentary to your club’s web site. Because web sites have more uses than just presenting photos, _Photo Club Hub_ includes clickable links to club and photographer web sites.</source>
+        <source>This app is complimentary to your club’s web site. Because web sites have more uses than just presenting photos, _Photo Club Hub_ includes clickable links to club- and photographer web sites.</source>
         <target>Omdat de websites van fotoclubs allerlei nuttige informatie bevatten, heeft de _Fotoclub Hub_ app links om dergelijke websites in Safari te openen. De app ondersteunt ook links naar eventuele eigen websites van fotografen (voor zover die over fotografie gaan).</target>
         <note>Paragraph 3.7.b of the Readme scree</note>
       </trans-unit>
@@ -306,12 +306,12 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
       </trans-unit>
       <trans-unit id="Paragraph_3.8.b" xml:space="preserve">
         <source>When the app opens, it shows an image (“Prelude”) corresponding to the app’s icon. If you tap somewhere __inside__ the image, it zooms out to show the full image representing how digital cameras see color.</source>
-        <target state="translated">Na het opstarten van de app verschijnt er een beeld ("_Prelude_") dat afgeleid is van de app logo. Door herhaaldelijk binnen het centrale beeld te klikken, zoomt men in of uit. Uitgezoomd blijkt het beeld een foto te zijn met een laag kleurenfiltertjes erop.</target>
+        <target>Na het opstarten van de app verschijnt er een beeld ("_Prelude_") dat afgeleid is van de app logo. Door herhaaldelijk binnen het centrale beeld te klikken, zoomt men in of uit. Uitgezoomd blijkt het beeld een foto te zijn met een laag kleurenfiltertjes erop.</target>
         <note>Paragraph 3.8.b of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.8.c" xml:space="preserve">
         <source>This involves a [Bayer color filter array](https://en.wikipedia.org/wiki/Bayer_filter) that adds a color filter on top of each sensor cell. This filter array is shown superimposed on a colorful photo.</source>
-        <target state="translated">Dit geheel geeft aan hoe digitale camera's kleur zien. Technisch heet dit een [Bayer kleurenfilter](https://en.wikipedia.org/wiki/Bayer_filter). Per lichtgevoelige cel worden bepaalde kleuren selectief tegengehouden. Een 24 MPixel camera bevat dus bijvoorbeeld een raster van 4000 x 6000 minuscule kleurfilters.</target>
+        <target>Dit geheel geeft aan hoe digitale camera's kleur zien. Technisch heet dit een [Bayer kleurenfilter](https://en.wikipedia.org/wiki/Bayer_filter). Per lichtgevoelige cel worden bepaalde kleuren selectief tegengehouden. Een 24 MPixel camera bevat dus bijvoorbeeld een raster van 4000 x 6000 minuscule kleurfilters.</target>
         <note>Paragraph 3.8.c of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.8.d" xml:space="preserve">
@@ -321,7 +321,7 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
       </trans-unit>
       <trans-unit id="Paragraph_3.8.e" xml:space="preserve">
         <source>The animation incidentally uses GPU core acceleration using the [Metal software framework](https://browser.geekbench.com/ios-benchmarks#metal).</source>
-        <target state="translated">De getoonde animatie wordt overigens uitgerekend op beschikbare GPU cores in uw apparaat. De animatie is geen video: men kan de lopende animatie bijsturen.</target>
+        <target>De getoonde animatie wordt overigens uitgerekend op beschikbare GPU cores in uw apparaat. De animatie is geen video: men kan de lopende animatie bijsturen.</target>
         <note>Paragraph 3.8.e of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.9.a" xml:space="preserve">
@@ -335,7 +335,7 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
         <note>Paragraph 3.9.b of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.9.c" xml:space="preserve">
-        <source>An easy way to get recent ex-members in the app is to simply keep their portfolio when they leave, but only mark the member as ex-member in the membership list.</source>
+        <source>An easy way to get recent ex-members in the app is to simply keep their portfolio when they leave, and instead mark the member as ex-member in the membership list.</source>
         <target>Een makkelijk manier om recente ex-leden binnen de app te houden is om ze niet te wissen zodra ze vertrekken. In de ledenlijst kan aangegeven worden of iemand lid of ex-lid is.</target>
         <note>Paragraph 3.9.c of the Readme screen</note>
       </trans-unit>
@@ -345,28 +345,28 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
         <note>Paragraph 3.10.a of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.10.b" xml:space="preserve">
-        <source>Some portfolios have an automatic slide show option. This is controlled by one of the buttons that appear when you tap on an image (tapping not needed on iPad).</source>
+        <source>Some portfolios have an automatic slide show option. This is controlled by one of the buttons that appear when you tap on an image (this tapping is not needed on an iPad).</source>
         <target>Sommige portfolio's kunnen automatisch afgespeeld worden via een driehoekige afspeelknop. Soms moet je eerst de foto aanraken om de know te zien.</target>
         <note>Paragraph 3.10.b of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.10.c" xml:space="preserve">
-        <source>This option is available on portfolios that were generated using the Juicebox plug-in for Lightroom Classic (see the various members of Fotogroep Waalre).</source>
+        <source>This option is available on portfolios that were generated using the _Juicebox_ plug-in for _Lightroom Classic_ (see the portfolios of Fotogroep Waalre).</source>
         <target>Deze knop is deel van portfolio's die gegenereerd zijn vanuit de _Juicebox Pro_ plug-in voor _Lightroom Classic_. Zie bijvoorbeeld de portfolio's van leden van _Fotogroep Waalre_.</target>
         <note>Paragraph 3.10.c of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_4.1" xml:space="preserve">
-        <source>_Photo Club Hub_ requires the latest major version of iOS. This allows us to keep up to date technology-wise. This means that the latest version of the app can run on devices released in the last 6 or 7 years.</source>
-        <target state="translated">_Fotoclub Hub_ draait op een recente versie van iOS. In de praktijk betekent dit dat toestellen die niet ouder zijn dan een jaar of 6 de nieuwe app versies kunnen draaien.</target>
+        <source>_Photo Club Hub_ requires the latest major version of iOS. This allows us to keep up to date technology-wise. The latest app version can run on devices released in the last 6 or 7 years.</source>
+        <target>_Fotoclub Hub_ draait op een recente versie van iOS. In de praktijk betekent dit dat toestellen die niet ouder zijn dan een jaar of 6 de nieuwe app versies kunnen draaien.</target>
         <note>First paragraph SupportedPlatforms section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_4.2" xml:space="preserve">
-        <source>For practical reasons, the app is optimised for __iOS__ and __iPadOS__. The app can also run on MacOS or VisionOS as an iPad app.</source>
+        <source>For practical reasons, the app is optimized for __iOS__ and __iPadOS__. The app can also run on MacOS or VisionOS as an iPad app.</source>
         <target>Om praktische redenen is de app geoptimaliseerd voor __iPhones__ en __iPads__. De iPad versie van de app kan echter ook draaien onder MacOS en VisionOS.</target>
         <note>Second paragraph SupportedPlatforms section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_4.3" xml:space="preserve">
         <source>Although there is presently no native support for __Android__ or other non-Apple phone platforms, we plan to provide support by automatically generating website pages from the same online lists that the app uses. This helps keep club web sites up to date, and allows viewing of clubs, members, and images in a web browsers on a wide range of platforms including Android, Windows, and more.</source>
-        <target state="translated">Ofschoon de app vooralsnog geen ondersteuning heeft voor __Android__ of andere niet-Apple telefoons, overwegen wij om ondersteuning te bieden voor het automatisch genereren van website pagina's vanuit dezelfde informatie die de app gebruikt. Dit help om club websites bijgewerkt te houden, maar maakt het ook mogelijk om de clublijst, ledenlijst en portfolio's in een web browser te bekijken op mobile apparaten, laptops en desktops (bijvoorbeeld met Microsoft Windows).</target>
+        <target>Ofschoon de app vooralsnog geen ondersteuning heeft voor __Android__ of andere niet-Apple telefoons, overwegen wij om ondersteuning te bieden voor het automatisch genereren van website pagina's vanuit dezelfde informatie die de app gebruikt. Dit help om club websites bijgewerkt te houden, maar maakt het ook mogelijk om de clublijst, ledenlijst en portfolio's in een web browser te bekijken op mobile apparaten, laptops en desktops (bijvoorbeeld met Microsoft Windows).</target>
         <note>Third paragraph SupportedPlatforms section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_4.4" xml:space="preserve">
@@ -375,23 +375,23 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
         <note>Fourth paragraph SupportedPlatforms section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_5.1" xml:space="preserve">
-        <source>The source code of this app is on [GitHub](https://github.com/vdhamer/Photo-Club-Hub). We are hoping for support from the community.</source>
-        <target state="translated">De broncode van de app is te vinden op [GitHub](https://github.com/vdhamer/Photo-Club-Hub).</target>
+        <source>The source code of this app is on [GitHub](https://github.com/vdhamer/Photo-Club-Hub). We are targeting to get support from the community.</source>
+        <target>De broncode van de app is te vinden op [GitHub](https://github.com/vdhamer/Photo-Club-Hub).</target>
         <note>First paragraph Developers section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_5.2" xml:space="preserve">
-        <source>Additional __software developers__ will increase development speed, bring in fresh ideas and ultimately improve continuity. Examples of contributions include adding features, code improvements, ideas, interface reviews, optimal MacOS support, and possibly server-side functionality.</source>
-        <target state="translated">Hulp vanuit de __software gemeenschap__ komt niet alleen de ontwikkelsnelheid ten goede. Het verhoogt ook de kwaliteit en borgt de continuïteit. Enkele voorbeelden van softwarehulp zijn: punten uit de GitHub to-do lijst, werken aan kleinere of grotere verbeteringen, helpen met specificaties, en oppoetsen van de Mac of Vision Pro ondersteuning.</target>
+        <source>Additional __software developers__ will increase development speed, bring in fresh ideas and ultimately improve continuity. Examples of contributions include new features, code improvements, ideas, interface reviews, optimized MacOS and VisionOS support, and maybe a backend of some sort.</source>
+        <target>Hulp vanuit de __software gemeenschap__ komt niet alleen de ontwikkelsnelheid ten goede. Het verhoogt ook de kwaliteit en borgt de continuïteit. Enkele voorbeelden van softwarehulp zijn: punten uit de GitHub to-do lijst, werken aan kleinere of grotere verbeteringen, helpen met specificaties, en oppoetsen van de Mac of Vision Pro ondersteuning.</target>
         <note>Second paragraph Developers section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_5.3" xml:space="preserve">
-        <source>Contributions that __don’t require coding__ include beta testing via [TestFlight](https://apps.apple.com/us/app/testflight/id899247664), feature requests, translations, App Store reviews, and—above all—connecting up your own photo club.</source>
-        <target state="translated">Hulp van enthousiaste __gebruikers__ is ook welkom. Voorbeelden: testen via [TestFlight](https://apps.apple.com/us/app/testflight/id899247664), suggesties, vertalingen, recensies op de App Store en vooral het toevoegen van jouw fotoclub.</target>
+        <source>Contributions that __don’t require coding__ include beta testing via [TestFlight](https://apps.apple.com/us/app/testflight/id899247664), feature requests, translations, App Store reviews, and —above all— connecting up your photo club.</source>
+        <target>Hulp van enthousiaste __gebruikers__ is ook welkom. Voorbeelden: testen via [TestFlight](https://apps.apple.com/us/app/testflight/id899247664), suggesties, vertalingen, recensies op de App Store en vooral het toevoegen van jouw fotoclub.</target>
         <note>Third paragraph Developers section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_5.4" xml:space="preserve">
         <source>The app is undergoing a major transition to provide a clean, standardized interface to pull in photo club data. This enables the app to load up-to-date club membership data and portfolios. The original interface was a plug-in design with a custom software module per club. It thus was very flexible, but required a lot of work to add another club.</source>
-        <target state="translated">Momenteel is er een vrij grote verandering in de app onderweg. Het einddoel is dat een club __zichzelf__ kan toevoegen zonder aanpassing van de code, en met maximale controle van de club over hun eigen gegevens. Dit gaat uit van JSON bestanden die door de clubs aangemaakt, gehost en bijgewerkt worden. Bijvoorbeeld een JSON lijst met gegevens over de club en de namen van de leden, en iets vergelijkbaars voor de foto's in de diverse portfolio's.</target>
+        <target>Momenteel is er een vrij grote verandering in de app onderweg. Het einddoel is dat een club __zichzelf__ kan toevoegen zonder aanpassing van de code, en met maximale controle van de club over hun eigen gegevens. Dit gaat uit van JSON bestanden die door de clubs aangemaakt, gehost en bijgewerkt worden. Bijvoorbeeld een JSON lijst met gegevens over de club en de namen van de leden, en iets vergelijkbaars voor de foto's in de diverse portfolio's.</target>
         <note>Fourth paragraph Developers section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_5.5" xml:space="preserve">
@@ -499,7 +499,7 @@ Field at top of Members page that allows the user to filter the members based on
       </trans-unit>
       <trans-unit id="Supporting multiple languages" xml:space="preserve">
         <source>Supporting multiple languages</source>
-        <target state="translated">Ondersteuning voor Engels en Nederlands</target>
+        <target>Ondersteuning voor Engels en Nederlands</target>
         <note>Caption of Localizations image on Readme page</note>
       </trans-unit>
       <trans-unit id="The App" xml:space="preserve">

@@ -114,7 +114,7 @@ Default status of member within a club. Used in concatenations. */
 "Paragraph_1.2" = "_Photo Club Hub_ showcases selected photos by members of participating clubs. The photos are displayed in a consistent, easy to access way, with minimal distractions.";
 
 /* Third paragraph in The App section of Readme page */
-"Paragraph_1.3" = "This consistency avoids having to find each club's website yourself, and then figuring out how to locate and browse the photos on that site. The app does __not__ try to replace club web sites, photographer web sites. or social media channels. Instead, it supports clubs and their members who try to reach out to other clubs, other photographers, and a general audience.";
+"Paragraph_1.3" = "This consistency avoids having to find each club's website yourself, and then figuring out how to locate and browse the photos on that site. The app does __not__ try to replace club web sites, photographer web sites, or social media channels. Instead, it supports clubs and their members who try to reach out to other clubs, other photographers, and a general audience.";
 
 /* Fourth paragraph in The App section of Readme page */
 "Paragraph_1.4" = "The app was originally named _Photo Club Waalre_ after a 15-person photo club in the southern Netherlands. The word __hub__ in the new name stresses the app's support for __multiple__ photo clubs.";
@@ -123,13 +123,13 @@ Default status of member within a club. Used in concatenations. */
 "Paragraph_1.5" = "Supporting dozens or even hundreds of clubs requires that each club manages its own data. This includes providing images, and maintaining lists of club members. Adding a club to _Photo Club Hub_ does not require software expertise.";
 
 /* Sixth paragraph in The App section of Readme page */
-"Paragraph_1.6" = "Interested in adding support for your club? Contact us via [GitHub](https://github.com/vdhamer/Photo-Club-Hub), [Facebook](https://www.facebook.com/vdhamer) or [LinkedIn](https://www.linkedin.com/in/vdhamer/). Adding your club only involves providing and updating the data in a way that the app can understand. The app's [GitHub site](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) explains the strategy and approach. We are here to help if you have any questions.";
+"Paragraph_1.6" = "Interested in adding support for your club? Contact us via [GitHub](https://github.com/vdhamer/Photo-Club-Hub), [Facebook](https://www.facebook.com/vdhamer) or [LinkedIn](https://www.linkedin.com/in/vdhamer/). Adding your club only involves providing and updating club data in a way that the app can understand. The app's [GitHub site](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) explains the strategy and approach in more detail. We are here to help if you have any questions.";
 
 /* First paragraph in The Concept on Readme page */
 "Paragraph_2.1" = "Photo clubs play a central role in this app. The _Portfolios_ screen shows a list of photo clubs.";
 
 /* Second paragraph in The Concept on Readme page */
-"Paragraph_2.2" = "Each photo club contains a series of member __portfolios__ with the actual images. Each portfolio covers the photographer's photos that are associated with that photo club.";
+"Paragraph_2.2" = "Each photo club contains a series of member __portfolios__ that hold the actual images. Each portfolio covers the photographer's photos that are associated with that photo club.";
 
 /* Third paragraph in The Concept on Readme page */
 "Paragraph_2.3" = "A photographer may have multiple portfolios in the app in case the photographer is (or was) associated with more than one photo club.";
@@ -144,19 +144,19 @@ Default status of member within a club. Used in concatenations. */
 "Paragraph_3.1.a" = "__Languages__";
 
 /* Paragraph 3.1.b of the Readme screen */
-"Paragraph_3.1.b" = "_Photo Club Hub_ automatically selects its language based on your device’s language settings. It currently supports English and Dutch. You can change language using _Settings > General > Language & Region > Preferred Language Order_ or by overruling this setting for this app only (_Settings > Photo Club Hub > Language_).";
+"Paragraph_3.1.b" = "_Photo Club Hub_ automatically selects its language based on your device’s language settings. It currently supports English and Dutch. You can change language using _Settings > General > Language & Region > Preferred Language Order_. Alternatively you can overrule this setting for this app only (_Settings > Photo Club Hub > Language_).";
 
 /* Paragraph 3.2.a of the Readme screen */
 "Paragraph_3.2.a" = "__3D maps__";
 
 /* Paragraph 3.2.ba of the Readme screen */
-"Paragraph_3.2.b" = "If you zoom in enough on any map, a button appears that allows you do view building heights. In this mode you can rotate the map.";
+"Paragraph_3.2.b" = "If you zoom in enough on any map, a button appears that allows you do view the scene in three dimensions. In this mode you can rotate the map.";
 
 /* Paragraph 3.3.a of the Readme screen */
 "Paragraph_3.3.a" = "__Live location__";
 
 /* Paragraph 3.3.b of the Readme screen */
-"Paragraph_3.3.b" = "Maps can show you your live location as a purple dot when it’s in range of the map. This can help navigate to a club or to estimate distances. If the map is unlocked/interactive, an arrow button can re-center the map around your current location.";
+"Paragraph_3.3.b" = "Maps can highlight your own location as a purple dot providing that it is in range of the map. This can help navigate to a club or to estimate distances. If the map is unlocked/interactive, an arrow button let you re-center the map around your current location.";
 
 /* Paragraph 3.3.c of the Readme screen */
 "Paragraph_3.3.c" = "Live location requires granting the app __permission__ to access your location while in the app. The app doesn’t store or share location information with anyone or anything.";
@@ -165,19 +165,19 @@ Default status of member within a club. Used in concatenations. */
 "Paragraph_3.4.a" = "__Adding photo clubs__";
 
 /* Paragraph 3.4.b of the Readme screen */
-"Paragraph_3.4.b" = "The app contains a set of initial photo clubs. Those photo clubs are so far all in one region of the Netherlands. Clubs anywhere in the world can be added, regardless whether they are part of some larger photo club federation.";
+"Paragraph_3.4.b" = "The app contains a set of initial photo clubs. Those clubs are all in one area of the Netherlands. Clubs anywhere in the world, regardless whether they are part of some official photo club federation, can be added.";
 
 /* Paragraph 3.4.c of the Readme screen */
-"Paragraph_3.4.c" = "This requires extending an online (.json) file. For now this involves sending us the club’s name, town, latitude, and longitude. And, if possible, providing a web address and a remark in one or more languages (140 char each) on anything noteworthy about the club. There are examples in an extended [Readme](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) on GitHub.";
+"Paragraph_3.4.c" = "This requires extending an online text/.json file. For now this involves sending us the club’s name, town, latitude, and longitude. And, if possible, providing a web address and a remark in one or more languages (max 140 char each) on anything noteworthy about the club. There are examples in the extended [Readme](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) on GitHub.";
 
 /* Paragraph 3.4.d of the Readme screen */
-"Paragraph_3.4.d" = "Adding and maintaining membership lists for a photo club is a feature for a __future__ app update. These “memberList” files can be hosted on your __own__ website. There will be instructions by then on how to do this for WordPress users, but anything that results in a URL to a valid memberList (JSON) file will work.";
+"Paragraph_3.4.d" = "Adding and maintaining membership lists for a photo club will be supported in a __future__ app update. These “memberList” files can be hosted on your __own__ website. We will add instructions on how to do this for WordPress users, but anything that results in a URL to a valid memberList (JSON) file will work.";
 
 /* Paragraph 3.5.a of the Readme screen */
 "Paragraph_3.5.a" = "__Photo museums__";
 
 /* Paragraph 3.5.b of the Readme screen */
-"Paragraph_3.5.b" = "The maps can show various photo museums throughout the world. They have a different icon than photo clubs. Museums show up if you zoom out any map far enough that they come into view.";
+"Paragraph_3.5.b" = "The maps can show various photo museums throughout the world. Museums and photo clubs are distinguished by different symbols on the map. Museums show up if you zoom out any map far enough that they come into view.";
 
 /* Paragraph 3.5.c of the Readme screen */
 "Paragraph_3.5.c" = "Adding a photo museum works the same way as adding a photo club - except that a museum doesn’t have members and member portfolios.";
@@ -186,19 +186,19 @@ Default status of member within a club. Used in concatenations. */
 "Paragraph_3.6.a" = "__Deleting members (and more)__";
 
 /* Paragraph 3.6.b of the Readme screen */
-"Paragraph_3.6.b" = "On the _Portfolios_ screen you can delete a club member by swiping the row to the left. Other screens have similar functionality for removing individual photographers and clubs.";
+"Paragraph_3.6.b" = "On the _Portfolios_ screen you can delete a club member by swiping a row to the left. Other screens have similar functionality for removing individual photographers and clubs.";
 
 /* Paragraph 3.6.c of the Readme screen */
-"Paragraph_3.6.c" = "Deletion of an arbitrary member will generally be __temporary__ because the member is still on the club's online membership lists. Deletion does have effect if the row has been deleted from these online lists. The feature will be automated at some point, and is only useful in special circumstances (like when a typo in a member's name is corrected).";
+"Paragraph_3.6.c" = "Deletion of a member will generally be __temporary__ because the member is still on the club's online membership lists. Deletion does have effect if the entry has been removed from these online lists. The feature will be automated at some point, and is only useful in special circumstances (like when a typo in a member's name is corrected).";
 
 /* Paragraph 3.6.d of the Readme screen */
-"Paragraph_3.6.d" = "So just remember that swiping left is harmless, and if you need to clean up a list you can alternatively just uninstall and reinstall the app to clean up the app's internal data.";
+"Paragraph_3.6.d" = "So just remember that swiping left is harmless, and if you need to clean up a list you can alternatively simply uninstall and reinstall the app to clean up the app's internal data.";
 
 /* Paragraph 3.7.a of the Readme screen */
 "Paragraph_3.7.a" = "__Web sites__";
 
 /* Paragraph 3.7.b of the Readme scree */
-"Paragraph_3.7.b" = "This app is complimentary to your club’s web site. Because web sites have more uses than just presenting photos, _Photo Club Hub_ includes clickable links to club and photographer web sites.";
+"Paragraph_3.7.b" = "This app is complimentary to your club’s web site. Because web sites have more uses than just presenting photos, _Photo Club Hub_ includes clickable links to club- and photographer web sites.";
 
 /* Paragraph 3.8.a of the Readme screen */
 "Paragraph_3.8.a" = "__The opening image__";
@@ -222,22 +222,22 @@ Default status of member within a club. Used in concatenations. */
 "Paragraph_3.9.b" = "The app can include the work of former club members. By default, former members are not shown, but you can enable displaying them in the _Preferences_ screen.";
 
 /* Paragraph 3.9.c of the Readme screen */
-"Paragraph_3.9.c" = "An easy way to get recent ex-members in the app is to simply keep their portfolio when they leave, but only mark the member as ex-member in the membership list.";
+"Paragraph_3.9.c" = "An easy way to get recent ex-members in the app is to simply keep their portfolio when they leave, and instead mark the member as ex-member in the membership list.";
 
 /* Paragraph 3.10.a of the Readme screen */
 "Paragraph_3.10.a" = "__Automatic Slide Shows__";
 
 /* Paragraph 3.10.b of the Readme screen */
-"Paragraph_3.10.b" = "Some portfolios have an automatic slide show option. This is controlled by one of the buttons that appear when you tap on an image (tapping not needed on iPad).";
+"Paragraph_3.10.b" = "Some portfolios have an automatic slide show option. This is controlled by one of the buttons that appear when you tap on an image (this tapping is not needed on an iPad).";
 
 /* Paragraph 3.10.c of the Readme screen */
-"Paragraph_3.10.c" = "This option is available on portfolios that were generated using the Juicebox plug-in for Lightroom Classic (see the various members of Fotogroep Waalre).";
+"Paragraph_3.10.c" = "This option is available on portfolios that were generated using the _Juicebox_ plug-in for _Lightroom Classic_ (see the portfolios of Fotogroep Waalre).";
 
 /* First paragraph SupportedPlatforms section of Readme page */
-"Paragraph_4.1" = "_Photo Club Hub_ requires the latest major version of iOS. This allows us to keep up to date technology-wise. This means that the latest version of the app can run on devices released in the last 6 or 7 years.";
+"Paragraph_4.1" = "_Photo Club Hub_ requires the latest major version of iOS. This allows us to keep up to date technology-wise. The latest app version can run on devices released in the last 6 or 7 years.";
 
 /* Second paragraph SupportedPlatforms section of Readme page */
-"Paragraph_4.2" = "For practical reasons, the app is optimised for __iOS__ and __iPadOS__. The app can also run on MacOS or VisionOS as an iPad app.";
+"Paragraph_4.2" = "For practical reasons, the app is optimized for __iOS__ and __iPadOS__. The app can also run on MacOS or VisionOS as an iPad app.";
 
 /* Third paragraph SupportedPlatforms section of Readme page */
 "Paragraph_4.3" = "Although there is presently no native support for __Android__ or other non-Apple phone platforms, we plan to provide support by automatically generating website pages from the same online lists that the app uses. This helps keep club web sites up to date, and allows viewing of clubs, members, and images in a web browsers on a wide range of platforms including Android, Windows, and more.";
@@ -246,13 +246,13 @@ Default status of member within a club. Used in concatenations. */
 "Paragraph_4.4" = "These and other ideas will depend on uptake and help from volunteers from the software community. If you are interested in helping, see the next section.";
 
 /* First paragraph Developers section of Readme page */
-"Paragraph_5.1" = "The source code of this app is on [GitHub](https://github.com/vdhamer/Photo-Club-Hub). We are hoping for support from the community.";
+"Paragraph_5.1" = "The source code of this app is on [GitHub](https://github.com/vdhamer/Photo-Club-Hub). We are targeting to get support from the community.";
 
 /* Second paragraph Developers section of Readme page */
-"Paragraph_5.2" = "Additional __software developers__ will increase development speed, bring in fresh ideas and ultimately improve continuity. Examples of contributions include adding features, code improvements, ideas, interface reviews, optimal MacOS support, and possibly server-side functionality.";
+"Paragraph_5.2" = "Additional __software developers__ will increase development speed, bring in fresh ideas and ultimately improve continuity. Examples of contributions include new features, code improvements, ideas, interface reviews, optimized MacOS and VisionOS support, and maybe a backend of some sort.";
 
 /* Third paragraph Developers section of Readme page */
-"Paragraph_5.3" = "Contributions that __don’t require coding__ include beta testing via [TestFlight](https://apps.apple.com/us/app/testflight/id899247664), feature requests, translations, App Store reviews, and—above all—connecting up your own photo club.";
+"Paragraph_5.3" = "Contributions that __don’t require coding__ include beta testing via [TestFlight](https://apps.apple.com/us/app/testflight/id899247664), feature requests, translations, App Store reviews, and —above all— connecting up your photo club.";
 
 /* Fourth paragraph Developers section of Readme page */
 "Paragraph_5.4" = "The app is undergoing a major transition to provide a clean, standardized interface to pull in photo club data. This enables the app to load up-to-date club membership data and portfolios. The original interface was a plug-in design with a custom software module per club. It thus was very flexible, but required a lot of work to add another club.";
