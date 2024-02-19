@@ -944,7 +944,7 @@ Project Link: [https://GitHub.com/vdhamer/PhotoClubWaalre](https://GitHub.com/vd
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[stable-version]: https://img.shields.io/github/v/release/vdhamer/Photo-Club-Hub
+[stable-version]: https://img.shields.io/github/v/release/vdhamer/Photo-Club-Hub.svg?style=for-the-badge
 [version-url]: https://github.com/vdhamer/Photo-Club-Hub/releases
 
 [contributors-shield]: https://img.shields.io/github/contributors/vdhamer/Photo-Club-Hub.svg?style=for-the-badge
