@@ -2,11 +2,12 @@
 
 Readme screen
     * Mentioned automatic slide show button under Features & Tips.
-    * Fixed typos in English and Dutch versions.
+    * Fixed typos and other minor improvements to English and Dutch versions.
     * Replaced image of links to club web sites.
 Maintenance
     * Tested with with iOS 17.4 beta 3, MacOS 14.3, Xcode 14.3 beta 3, VisionOS 1.1 beta 2
     * Created a .pages version of English Readme screen for proof reading.
+    * Added Fotogroep Best to list.
 
 This is build #4615
 ---------------------------------------------------------------------------
