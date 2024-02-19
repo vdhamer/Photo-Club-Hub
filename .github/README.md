@@ -5,6 +5,7 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
+[![Discussions][discussions-shield]][discussions-url]
 [![MIT License][license-shield]][license-url]
 
 ![Portfolios Screen](images/portfoliosScreen.png "Portfolios Screen")
@@ -944,20 +945,23 @@ Project Link: [https://GitHub.com/vdhamer/PhotoClubWaalre](https://GitHub.com/vd
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[stable-version]: https://img.shields.io/github/v/release/vdhamer/Photo-Club-Hub?style=for-the-badge&color=violet
+[stable-version]: https://img.shields.io/github/v/release/vdhamer/Photo-Club-Hub?style=plastic&color=violet
 [version-url]: https://github.com/vdhamer/Photo-Club-Hub/releases
 
-[contributors-shield]: https://img.shields.io/github/contributors/vdhamer/Photo-Club-Hub?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/vdhamer/Photo-Club-Hub?style=plastic
 [contributors-url]: https://github.com/vdhamer/Photo-Club-Hub/graphs/contributors
 
-[forks-shield]: https://img.shields.io/github/forks/vdhamer/Photo-Club-Hub?style=for-the-badge
+[forks-shield]: https://img.shields.io/github/forks/vdhamer/Photo-Club-Hub?style=plastic&color=teal
 [forks-url]: https://github.com/vdhamer/Photo-Club-Hub/network/members
 
-[stars-shield]: https://img.shields.io/github/stars/vdhamer/Photo-Club-Hub?style=for-the-badge
+[stars-shield]: https://img.shields.io/github/stars/vdhamer/Photo-Club-Hub?style=plastic
 [stars-url]: https://github.com/vdhamer/Photo-Club-Hub/stargazers
 
-[issues-shield]: https://img.shields.io/github/issues/vdhamer/Photo-Club-Hub?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/vdhamer/Photo-Club-Hub?style=plastic
 [issues-url]: https://github.com/vdhamer/Photo-Club-Hub/issues
 
-[license-shield]: https://img.shields.io/github/license/vdhamer/Photo-Club-Hub?style=for-the-badge
+[discussions-shield]: https://img.shields.io/github/discussions/vdhamer/Photo-Club-Hub?style=fplastic
+[discussions-url]: https://github.com/vdhamer/Photo-Club-Hub/discussions
+
+[license-shield]: https://img.shields.io/github/license/vdhamer/Photo-Club-Hub?style=plastic
 [license-url]: https://github.com/vdhamer/Photo-Club-Hub/blob/main/.github/LICENSE.md
