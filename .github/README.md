@@ -951,5 +951,5 @@ Project Link: [https://GitHub.com/vdhamer/PhotoClubWaalre](https://GitHub.com/vd
 [stars-url]: https://GitHub.com/vdhamer/Photo-Club-Hub/stargazers
 [issues-shield]: https://img.shields.io/GitHub/issues/vdhamer/Photo-Club-Hub.svg?style=for-the-badge
 [issues-url]: https://GitHub.com/vdhamer/Photo-Club-Hub/issues
-[license-shield]: https://img.shields.io/GitHub/license/vdhamer/Photo-Club-Hub.svg?style=for-the-badge
-[license-url]: https://GitHub.com/vdhamer/Photo-Club-Hub/blob/main/.GitHub/LICENSE.md
+[license-shield]: https://img.shields.io/github/license/vdhamer/Photo-Club-Hub.svg?style=for-the-badge
+[license-url]: https://GitHub.com/vdhamer/Photo-Club-Hub/blob/main/.github/LICENSE.md
