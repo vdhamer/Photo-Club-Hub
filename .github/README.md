@@ -944,20 +944,20 @@ Project Link: [https://GitHub.com/vdhamer/PhotoClubWaalre](https://GitHub.com/vd
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[stable-version]: https://img.shields.io/github/v/release/vdhamer/Photo-Club-Hub.svg?style=for-the-badge
+[stable-version]: https://img.shields.io/github/v/release/vdhamer/Photo-Club-Hub?style=plastic&color=violet
 [version-url]: https://github.com/vdhamer/Photo-Club-Hub/releases
 
-[contributors-shield]: https://img.shields.io/github/contributors/vdhamer/Photo-Club-Hub.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/vdhamer/Photo-Club-Hub?style=for-the-badge
 [contributors-url]: https://github.com/vdhamer/Photo-Club-Hub/graphs/contributors
 
-[forks-shield]: https://img.shields.io/github/forks/vdhamer/Photo-Club-Hub.svg?style=for-the-badge
+[forks-shield]: https://img.shields.io/github/forks/vdhamer/Photo-Club-Hub?style=for-the-badge
 [forks-url]: https://github.com/vdhamer/Photo-Club-Hub/network/members
 
-[stars-shield]: https://img.shields.io/github/stars/vdhamer/Photo-Club-Hub.svg?style=for-the-badge
+[stars-shield]: https://img.shields.io/github/stars/vdhamer/Photo-Club-Hub?style=for-the-badge
 [stars-url]: https://github.com/vdhamer/Photo-Club-Hub/stargazers
 
-[issues-shield]: https://img.shields.io/github/issues/vdhamer/Photo-Club-Hub.svg?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/vdhamer/Photo-Club-Hub?style=for-the-badge
 [issues-url]: https://github.com/vdhamer/Photo-Club-Hub/issues
 
-[license-shield]: https://img.shields.io/github/license/vdhamer/Photo-Club-Hub.svg?style=for-the-badge
+[license-shield]: https://img.shields.io/github/license/vdhamer/Photo-Club-Hub?style=for-the-badge
 [license-url]: https://github.com/vdhamer/Photo-Club-Hub/blob/main/.github/LICENSE.md
