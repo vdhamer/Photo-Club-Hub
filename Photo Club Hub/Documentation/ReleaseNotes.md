@@ -8,6 +8,7 @@ Maintenance
     * Tested with with iOS 17.4 beta 3, MacOS 14.3, Xcode 14.3 beta 3, VisionOS 1.1 beta 2
     * Created a .pages version of English Readme screen for proof reading.
     * Added Fotogroep Best to list.
+    * Fixed broken shields in GitHub README.md
 
 This is build #4615
 ---------------------------------------------------------------------------
