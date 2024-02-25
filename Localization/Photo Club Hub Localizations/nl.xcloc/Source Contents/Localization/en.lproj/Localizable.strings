@@ -165,13 +165,13 @@ Default status of member within a club. Used in concatenations. */
 "Paragraph_3.4.a" = "__Adding photo clubs__";
 
 /* Paragraph 3.4.b of the Readme screen */
-"Paragraph_3.4.b" = "The app contains a set of initial photo clubs. Those clubs are all in one area of the Netherlands. Clubs anywhere in the world, regardless whether they are part of some official photo club federation, can be added.";
+"Paragraph_3.4.b" = "The app contains a set of 40+ initial photo clubs. Those clubs are currently all in one area of the Netherlands. The app, however, can support clubs anywhere in the world.";
 
 /* Paragraph 3.4.c of the Readme screen */
-"Paragraph_3.4.c" = "This requires extending an online text/.json file. For now this involves sending us the club’s name, town, latitude, and longitude. And, if possible, providing a web address and a remark in one or more languages (max 140 char each) on anything noteworthy about the club. There are examples in the extended [Readme](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) on GitHub.";
+"Paragraph_3.4.c" = "For a club to be supported, it needs to provide some basic information like its name and location (“Level 1”), making an app-readable list of the club’s members (“Level 2”) and sharing the image portfolios of club members (“Level 3”). More details on this can be found below.";
 
 /* Paragraph 3.4.d of the Readme screen */
-"Paragraph_3.4.d" = "Adding and maintaining membership lists for a photo club will be supported in a __future__ app update. These “memberList” files can be hosted on your __own__ website. We will add instructions on how to do this for WordPress users, but anything that results in a URL to a valid memberList (JSON) file will work.";
+"Paragraph_3.4.d" = "Similarly, the app contains 30+ photo museums in various countries. The museum list can also be extended by users without updating the app itself.";
 
 /* Paragraph 3.5.a of the Readme screen */
 "Paragraph_3.5.a" = "__Photo museums__";
