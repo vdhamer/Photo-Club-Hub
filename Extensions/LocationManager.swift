@@ -8,8 +8,6 @@
 import Foundation
 import CoreLocation
 
-// TODO: should this be tied to the MainActor like in WWDC23 location tracking sample code??
-
 @Observable
 class LocationManager {
     var location: CLLocation?
