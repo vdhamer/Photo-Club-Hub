@@ -6,6 +6,7 @@
 //
 
 import SwiftUI // for View
+import WebKit // for WKWebView
 
 struct WhoIsWhoInnerView: View {
 
@@ -15,9 +16,10 @@ struct WhoIsWhoInnerView: View {
     @State private var showPhoneMail = false
     private let isDeletePhotographersEnabled = false // disables .delete() functionality for this section
     let searchText: Binding<String>
+    let wkWebView: WKWebView
 
     // regenerate Section using current FetchRequest with current filters and sorting
-    init(predicate: NSPredicate, searchText: Binding<String>) {
+    init(predicate: NSPredicate, searchText: Binding<String>, wkWebView: WKWebView) {
         _fetchRequest = FetchRequest<Photographer>(sortDescriptors: [ // replaces previous fetchRequest
                                                         SortDescriptor(\.familyName_, order: .forward),
                                                         SortDescriptor(\.givenName_, order: .forward)
@@ -28,6 +30,7 @@ struct WhoIsWhoInnerView: View {
         dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd MMMM" // used here for birthdays only, so year is hidden
         self.searchText = searchText
+        self.wkWebView = wkWebView
     }
 
     var body: some View {
@@ -93,7 +96,7 @@ struct WhoIsWhoInnerView: View {
                             ScrollView(.horizontal, showsIndicators: false) {
                                 HStack {
                                     ForEach(filteredPhotographer.memberships.sorted(), id: \.id) { membership in
-                                        SinglePortfolioLinkView(destPortfolio: membership) {
+                                        SinglePortfolioLinkView(destPortfolio: membership, wkWebView: wkWebView) {
                                             AsyncImage(url: membership.latestImageURL) { phase in
                                                 if let image = phase.image {
                                                     ZStack(alignment: .bottom) {
@@ -216,8 +219,9 @@ struct WhoIsWhoInnerViewWrapper: View {
         let predicate = NSPredicate(format: "familyName_ = %@ || familyName_ = %@ || familyName_ = %@",
                                     argumentArray: ["Eau1", "Eau2", "Eau10"])
         @State var searchText: String = "Eau1"
+        let wkWebView = WKWebView()
 
-        return WhoIsWhoInnerView(predicate: predicate, searchText: $searchText)
+        return WhoIsWhoInnerView(predicate: predicate, searchText: $searchText, wkWebView: wkWebView)
             .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

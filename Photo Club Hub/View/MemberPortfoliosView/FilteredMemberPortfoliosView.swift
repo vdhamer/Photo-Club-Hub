@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import WebKit // for wkWebView
 
 struct FilteredMemberPortfoliosView: View {
 
@@ -18,6 +19,7 @@ struct FilteredMemberPortfoliosView: View {
     ) private var sectionedPortfolios: SectionedFetchResults<String, MemberPortfolio>
 
     let searchText: Binding<String>
+    let wkWebView = WKWebView()
 
     // regenerate Section using current FetchRequest with current filters and sorting
     init(memberPredicate: NSPredicate, searchText: Binding<String>) {
@@ -45,7 +47,7 @@ struct FilteredMemberPortfoliosView: View {
         ForEach(sectionedPortfoliosResults) {section in
             Section {
                 ForEach(filterPortfolios(unFilteredPortfolios: section), id: \.id) { filteredMember in
-                    MemberPortfolioRow(member: filteredMember)
+                    MemberPortfolioRow(member: filteredMember, wkWebView: wkWebView)
                         .listRowSeparator(.visible)
                 }
                 .onDelete(perform: { indexSet in

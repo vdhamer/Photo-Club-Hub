@@ -11,10 +11,11 @@ import WebKit // for WKWebView
 struct SinglePortfolioLinkView<Content: View>: View {
     // https://www.hackingwithswift.com/books/ios-swiftui/custom-containers
     let destPortfolio: MemberPortfolio // portfolio to link to
+    let wkWebView: WKWebView // pass as param to avoid creating this lots of times
     let content: () -> Content // what to show for this link
 
     @Environment(\.horizontalSizeClass) private var horSizeClass
-    private let wkWebView = WKWebView() // TODO create once per image?? static not allowed. Pass as param?
+//    private let wkWebView = WKWebView()
     var organization: Organization { destPortfolio.organization }
 
     var body: some View {
@@ -35,7 +36,8 @@ struct SinglePortfolioLinkView<Content: View>: View {
 
  #Preview { // doesn't really work?
      let destPortfolio: MemberPortfolio = MemberPortfolio()
-     return SinglePortfolioLinkView(destPortfolio: destPortfolio) {
+     let wkWebView = WKWebView()
+     return SinglePortfolioLinkView(destPortfolio: destPortfolio, wkWebView: wkWebView) {
          Text(verbatim: "Test Link")
      }
  }
