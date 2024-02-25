@@ -7,12 +7,14 @@
 
 import SwiftUI
 import CoreData
+import WebKit // for wkWebView
 
 struct WhoIsWho: View {
     @Environment(\.managedObjectContext) private var viewContext
     @State private var showingPhotoClubs = false
     @State private var showingMembers = false
     var searchText: Binding<String>
+    let wkWebView: WKWebView
 
     @StateObject var model = PreferencesViewModel()
     private var navigationTitle = String(localized: "Who's Who", comment: "Title of page with list of photographers")
@@ -22,12 +24,15 @@ struct WhoIsWho: View {
         if let navigationTitle {
             self.navigationTitle = navigationTitle
         }
+        self.wkWebView = WKWebView()
     }
 
     var body: some View {
         VStack {
             List { // lists are automatically "Lazy"
-                WhoIsWhoInnerView(predicate: model.preferences.photographerPredicate, searchText: searchText)
+                WhoIsWhoInnerView(predicate: model.preferences.photographerPredicate,
+                                  searchText: searchText,
+                                  wkWebView: wkWebView)
                 Text("""
                      This page lists all the photographers that this app knows about. \
                      A photographer has one or more clickable image thumbnails below the photographer's name. \

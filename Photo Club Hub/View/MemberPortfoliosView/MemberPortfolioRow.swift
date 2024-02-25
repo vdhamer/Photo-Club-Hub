@@ -11,11 +11,11 @@ import WebKit // for wkWebView
 struct MemberPortfolioRow: View {
     var member: MemberPortfolio
     @Environment(\.horizontalSizeClass) var horSizeClass
-    private let wkWebView = WKWebView()
+    let wkWebView: WKWebView
     private let of2 = String(localized: "of2", comment: "<person> of <photo club>")
 
     var body: some View {
-        SinglePortfolioLinkView(destPortfolio: member) {
+        SinglePortfolioLinkView(destPortfolio: member, wkWebView: wkWebView) {
             HStack(alignment: .top) {
                 RoleStatusIconView(memberRolesAndStatus: member.memberRolesAndStatus)
                     .foregroundStyle(.memberPortfolioColor, .gray, .red) // red color is not used
