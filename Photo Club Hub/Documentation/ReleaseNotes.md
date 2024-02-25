@@ -3,12 +3,15 @@
 Readme screen
     * Mentioned automatic slide show button under Features & Tips.
     * Fixed typos and other minor improvements to English and Dutch versions.
-    * Replaced image of links to club web sites.
+    * Replaced image with an example of a link to a club web site.
 Maintenance
-    * Tested with with iOS 17.4 beta 3, MacOS 14.3, Xcode 14.3 beta 3, VisionOS 1.1 beta 2
+    * Tested with with iOS 17.4 beta 3, MacOS 14.3, Xcode 14.3 beta 3, VisionOS 1.1 beta 2.
     * Created a .pages version of English Readme screen for proof reading.
-    * Added Fotogroep Best to list.
-    * Fixed broken shields in GitHub README.md
+    * Added Fotogroep Best to Organizationlist.json.
+    * Fixed broken shields in GitHub README.md.
+    * Removed empty targets for testing and UI testing.
+    * Removed Version2Changes.md file (no longer being updated).
+    * Reduced calls to WkWebView() from once per thumbnail to once per screen.
 
 This is build #4615
 ---------------------------------------------------------------------------
