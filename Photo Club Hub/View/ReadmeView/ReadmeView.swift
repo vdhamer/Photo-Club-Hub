@@ -217,9 +217,28 @@ struct ReadmeView: View {
                         }
 
                         Group {
-                            SectionHeader(String(localized: "Developers wanted",
+                            SectionHeader(String(localized: "How you can help",
                                                  comment: "Section title on Readme page"),
                                           geo: geo)
+
+                            Paragraph("5.1", comment: "First paragraph in OpenSource section of Readme page", geo: geo)
+                            Paragraph("5.2", comment: "Second paragraph in OpenSource section of Readme page", geo: geo)
+
+                            VStack {
+                                Image("Bellus_Imago_Level_1")
+                                    .resizable()
+                                    .border(.gray, width: 1)
+                                    .scaledToFit()
+                                    .frame(width: geo.size.width * 0.8, alignment: .center)
+                                Text("Level 1 support for a Dutch photo club", comment: "Caption for image on Readme page")
+                                    .font(.callout.italic())
+                                    .frame(width: geo.size.width, alignment: .center)
+                                Text("")
+                            }
+
+                            Paragraph("5.3", comment: "Third paragraph in OpenSource section of Readme page", geo: geo)
+                            Paragraph("5.4", comment: "Fourth paragraph in OpenSource section of Readme page", geo: geo)
+                            Paragraph("5.5", comment: "Fifth paragraph in OpenSource section of Readme page", geo: geo)
 
                             VStack {
                                 Image("Swift_enum")
@@ -232,12 +251,6 @@ struct ReadmeView: View {
                                     .frame(width: geo.size.width, alignment: .center)
                                 Text("")
                             }
-
-                            Paragraph("5.1", comment: "First paragraph in OpenSource section of Readme page", geo: geo)
-                            Paragraph("5.2", comment: "Second paragraph in OpenSource section of Readme page", geo: geo)
-                            Paragraph("5.3", comment: "Third paragraph in OpenSource section of Readme page", geo: geo)
-                            Paragraph("5.4", comment: "Fourth paragraph in OpenSource section of Readme page", geo: geo)
-                            Paragraph("5.5", comment: "Fifth paragraph in OpenSource section of Readme page", geo: geo)
                         }
 
                         SectionHeader("", geo: geo)

@@ -174,7 +174,10 @@ Default status of member within a club. Used in concatenations. */
 "Paragraph_3.4.a" = "__Toevoegen van clubs__";
 
 /* Paragraph 3.4.b of the Readme screen */
-"Paragraph_3.4.b" = "Momenteel kent de app ongeveer 40 fotoclubs in oost Brabant. De app is overigens voorbereid om clubs in alle landen te kunnen ondersteunen.";
+"Paragraph_3.4.b" = "Momenteel kent de app ongeveer 40 fotoclubs in oost Brabant. De app is overigens voorbereid om clubs in alle landen te";
+
+/* Paragraph 3.4.c of the Readme screen */
+"Paragraph_3.4.c" = "Om het werk van een club te ondersteunen, heeft het basisinformatie nodig over de naam en ligging van de club (__Niveau 1__), een lijst met alle clubleden (__Niveau 2__) en de inhoud van de portfolio’s van deze leden (__Niveau 3__). Verderop  komen wij hierop terug.";
 
 /* Paragraph 3.4.d of the Readme screen */
 "Paragraph_3.4.d" = "De lijst met ongeveer 30 fotomusea kan eveneens uitgebreid worden zonder de app zelf aan te hoeven passen.";

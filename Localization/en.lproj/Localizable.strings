@@ -165,13 +165,13 @@ Default status of member within a club. Used in concatenations. */
 "Paragraph_3.4.a" = "__Adding photo clubs__";
 
 /* Paragraph 3.4.b of the Readme screen */
-"Paragraph_3.4.b" = "The app contains a set of 40+ initial photo clubs. Those clubs are currently all in one area of the Netherlands. The app, however, can support clubs anywhere in the world.";
+"Paragraph_3.4.b" = "The app initially contains a set of 40+ initial photo clubs. Those clubs are currently all in one part of the Netherlands. The app, however, can support clubs anywhere in the world and the list can be extended by the users.";
 
 /* Paragraph 3.4.c of the Readme screen */
-"Paragraph_3.4.c" = "For a club to be supported, it needs to provide some basic information like its name and location (__Level 1__), making an app-readable list of the club’s members (__Level 2__) and sharing the image portfolios of club members (__Level 3__). More details on this can be found below.";
+"Paragraph_3.4.c" = "For a club to be included, the app needs basic information like the club’s name and location (Level 1), a list of its members (Level 2) and links to image portfolios (Level 3). More details on extending the various lists are provided below and on GitHub.";
 
 /* Paragraph 3.4.d of the Readme screen */
-"Paragraph_3.4.d" = "Similarly, the app contains 30+ photo museums in various countries. The museum list can also be extended by users without updating the app itself.";
+"Paragraph_3.4.d" = "Similarly, the initial list of 30+ photo museums in various countries can also be extended by users without updating the app itself.";
 
 /* Paragraph 3.5.a of the Readme screen */
 "Paragraph_3.5.a" = "__Photo museums__";
