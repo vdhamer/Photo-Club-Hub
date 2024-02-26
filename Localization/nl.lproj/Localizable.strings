@@ -174,13 +174,10 @@ Default status of member within a club. Used in concatenations. */
 "Paragraph_3.4.a" = "__Toevoegen van clubs__";
 
 /* Paragraph 3.4.b of the Readme screen */
-"Paragraph_3.4.b" = "De app bevat momenteel alle clubs in de Fotobond regio Noord Brabant Oost plus enkele clubs die niet bij de Nederlandse Fotobond aangesloten zijn. Het is mogelijk om clubs (waar ook ter wereld) aan de app toe te voegen.";
-
-/* Paragraph 3.4.c of the Readme screen */
-"Paragraph_3.4.c" = "Dit maakt gebruikt van een online lijst (in .json formaat). U kunt een club toevoegen aan de centrale lijst door ons de clubnaam met wat gegevens te sturen over waar de club samenkomt (gemeente, GPS coordinaten). Zo mogelijk ontvangen wij ook de website en iets vermeldenswaardig (max 140 karakters) over de club. Een engelstalige [Readme bestand](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) op GitHub bevat voorbeelden.";
+"Paragraph_3.4.b" = "Momenteel kent de app ongeveer 40 fotoclubs in oost Brabant. De app is overigens voorbereid om clubs in alle landen te kunnen ondersteunen.";
 
 /* Paragraph 3.4.d of the Readme screen */
-"Paragraph_3.4.d" = "In een toekomstige versie van de app komt er ook de mogelijkheid om de __ledenlijst__ van een fotoclub aan te bieden. Ledenlijst bestanden kunnen op de clubwebsite bewaard worden om beheer te vergemakkelijken.";
+"Paragraph_3.4.d" = "De lijst met ongeveer 30 fotomusea kan eveneens uitgebreid worden zonder de app zelf aan te hoeven passen.";
 
 /* Paragraph 3.5.a of the Readme screen */
 "Paragraph_3.5.a" = "__Fotomusea__";

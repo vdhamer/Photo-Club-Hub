@@ -245,8 +245,8 @@ Try dragging down the Photo Clubs screen to reload the default clubs.</target>
         <note>Paragraph 3.4.b of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.4.c" xml:space="preserve">
-        <source>For a club to be supported, it needs to provide some basic information like its name and location (“Level 1”), making an app-readable list of the club’s members (“Level 2”) and sharing the image portfolios of club members (“Level 3”). More details on this can be found below.</source>
-        <target>For a club to be supported, it needs to provide some basic information like its name and location (“Level 1”), making an app-readable list of the club’s members (“Level 2”) and sharing the image portfolios of club members (“Level 3”). More details on this can be found below.</target>
+        <source>For a club to be supported, it needs to provide some basic information like its name and location (__Level 1__), making an app-readable list of the club’s members (__Level 2__) and sharing the image portfolios of club members (__Level 3__). More details on this can be found below.</source>
+        <target>For a club to be supported, it needs to provide some basic information like its name and location (__Level 1__), making an app-readable list of the club’s members (__Level 2__) and sharing the image portfolios of club members (__Level 3__). More details on this can be found below.</target>
         <note>Paragraph 3.4.c of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.4.d" xml:space="preserve">
