@@ -240,18 +240,18 @@ Try dragging down the Photo Clubs screen to reload the default clubs.</target>
         <note>Paragraph 3.4.a of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.4.b" xml:space="preserve">
-        <source>The app initially contains a set of 40+ initial photo clubs. Those clubs are currently all in one part of the Netherlands. The app, however, can support clubs anywhere in the world and the list can be extended by the users.</source>
-        <target>The app initially contains a set of 40+ initial photo clubs. Those clubs are currently all in one part of the Netherlands. The app, however, can support clubs anywhere in the world and the list can be extended by the users.</target>
+        <source>The app contains a set of 40+ initial photo clubs. Those clubs are currently all in one area of the Netherlands. The app, however, can support clubs anywhere in the world.</source>
+        <target state="translated">The app initially contains a set of 40+ initial photo clubs. Those clubs are currently all in one part of the Netherlands. The app, however, can support clubs anywhere in the world and the list can be extended by the users.</target>
         <note>Paragraph 3.4.b of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.4.c" xml:space="preserve">
-        <source>For a club to be included, the app needs basic information like the club’s name and location (Level 1), a list of its members (Level 2) and links to image portfolios (Level 3). More details on extending the various lists are provided below and on GitHub.</source>
-        <target>For a club to be included, the app needs basic information like the club’s name and location (Level 1), a list of its members (Level 2) and links to image portfolios (Level 3). More details on extending the various lists are provided below and on GitHub.</target>
+        <source>For a club to be supported, it needs to provide some basic information like its name and location (__Level 1__), making an app-readable list of the club’s members (__Level 2__) and sharing the image portfolios of club members (__Level 3__). More details on this can be found below.</source>
+        <target state="translated">For a club to be included, the app needs basic information like the club’s name and location (Level 1), a list of its members (Level 2) and links to image portfolios (Level 3). More details on extending the various lists are provided below and on GitHub.</target>
         <note>Paragraph 3.4.c of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.4.d" xml:space="preserve">
-        <source>Similarly, the initial list of 30+ photo museums in various countries can also be extended by users without updating the app itself.</source>
-        <target>Similarly, the initial list of 30+ photo museums in various countries can also be extended by users without updating the app itself.</target>
+        <source>Similarly, the app contains 30+ photo museums in various countries. The museum list can also be extended by users without updating the app itself.</source>
+        <target state="translated">Similarly, the initial list of 30+ photo museums in various countries can also be extended by users without updating the app itself.</target>
         <note>Paragraph 3.4.d of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.5.a" xml:space="preserve">
