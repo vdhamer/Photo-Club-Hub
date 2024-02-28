@@ -49,9 +49,6 @@
 /* Relationship status of member within a club. Used as prefix. */
 "deceased" = "deceased";
 
-/* Section title on Readme page */
-"Developers wanted" = "Developers wanted";
-
 /* Caption of Websites image on Readme page */
 "Example of a link to a club web site" = "Example of a link to a club web site";
 
@@ -246,19 +243,19 @@ Default status of member within a club. Used in concatenations. */
 "Paragraph_4.4" = "These and other ideas will depend on uptake and help from volunteers from the software community. If you are interested in helping, see the next section.";
 
 /* First paragraph Developers section of Readme page */
-"Paragraph_5.1" = "The source code of this app is on [GitHub](https://github.com/vdhamer/Photo-Club-Hub). We are targeting to get support from the community.";
+"Paragraph_5.1" = "The app needs information in order to __cover your local photo club(s)__. This involves three so-called Levels. You can pause on any level before proceeding to a next level. See the app’s README file on GitHub for more details.";
 
 /* Second paragraph Developers section of Readme page */
-"Paragraph_5.2" = "Additional __software developers__ will increase development speed, bring in fresh ideas and ultimately improve continuity. Examples of contributions include new features, code improvements, ideas, interface reviews, optimized MacOS and VisionOS support, and maybe a backend of some sort.";
+"Paragraph_5.2" = "__Level 1__ requires providing the club’s name, location and a few links. As a result, the club is listed on the _Clubs and Museums_ screen and shown on its maps. If you send us the Level 1 information, we will add it to the app’s online list of clubs. Alternatively, you can submit that information (and any future updates) in the form a [GitHub “pull request”](https://www.youtube.com/watch?v=BCQHnlnPusY&list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV&index=1).";
 
 /* Third paragraph Developers section of Readme page */
-"Paragraph_5.3" = "Contributions that __don’t require coding__ include beta testing via [TestFlight](https://apps.apple.com/us/app/testflight/id899247664), feature requests, translations, App Store reviews, and —above all— connecting up your photo club.";
+"Paragraph_5.3" = "__Level 2__ requires providing a list of the names of current (and maybe former) club members as a text file with a specific format. This file can be stored anywhere you like as long as it can be read via a web address (URL). For example, you can store it in the _Media_ section of your club’s _Wordpress_ web site. With Level 2, the membership lists shows up on the _Portfolios_ screen. _Fotogroep Anders_ in the Netherlands is an example of a Level 2 club. We are currently simplifying Level 2 support.";
 
 /* Fourth paragraph Developers section of Readme page */
-"Paragraph_5.4" = "The app is undergoing a major transition to provide a clean, standardized interface to pull in photo club data. This enables the app to load up-to-date club membership data and portfolios. The original interface was a plug-in design with a custom software module per club. It thus was very flexible, but required a lot of work to add another club.";
+"Paragraph_5.4" = "__Level 3__ requires providing links to the online images in member portfolios. _Fotogroep Waalre_ in the Netherlands is an example of Level 3 club: you can view their portfolios via the _Portfolios_ screen. Because a club with, for example, 20 members will have hundreds of images, we have a way to automate generate portfolios using _Lightroom_ (instructions on how this works will be provided later).";
 
 /* Fifth paragraph Developers section of Readme page */
-"Paragraph_5.5" = "Software developers or other volunteers who are interested to help can contact us via GitHub, Facebook PM or LinkedIn. More information about the way the app works can be found on [GitHub](https://github.com/vdhamer/Photo-Club-Hub).";
+"Paragraph_5.5" = "Apart from onboarding clubs, there are more ways in which you can help out. Examples of __non-technical__ help include testing, writing a review for Apple’s App Store, creating user guides, and improvement ideas. Last, and certainly not least, __software development__ support will help speed up development, get fresh ideas and ensure app continuity. Example contributions include code improvement of all sorts (via  [GitHub](https://github.com/vdhamer/Photo-Club-Hub), tracking down bugs, and contributing to discussions on functionality, implementation and interfaces.\n";
 
 /* Telephone number (usually invisible) */
 "Phone:" = "Phone:";
