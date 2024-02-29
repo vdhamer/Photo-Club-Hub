@@ -333,9 +333,6 @@ Field at top of Members page that allows the user to filter the members based on
 /* Section title on Readme page */
 "The Concept" = "The Concept";
 
-/* Section title on Readme page */
-"The Model" = "The Model";
-
 /* Caption of an image on the Readme page */
 "The Preferences screen." = "The Preferences screen.";
 
