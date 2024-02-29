@@ -99,12 +99,12 @@
       </trans-unit>
       <trans-unit id="Fragment of the Swift source code" xml:space="preserve">
         <source>Fragment of the Swift source code</source>
-        <target>Stukje Swift code uit de app</target>
+        <target>Swift codefragment</target>
         <note>Caption for image on Readme page</note>
       </trans-unit>
       <trans-unit id="How you can help" xml:space="preserve">
         <source>How you can help</source>
-        <target>Wij hebben jullie hulp nodig</target>
+        <target>App zoekt hulp</target>
         <note>Section title on Readme page</note>
       </trans-unit>
       <trans-unit id="In debug mode" xml:space="preserve">
@@ -381,23 +381,28 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
       </trans-unit>
       <trans-unit id="Paragraph_5.1" xml:space="preserve">
         <source>The app needs information in order to __cover your local photo club(s)__. This involves three so-called Levels. You can pause on any level before proceeding to a next level. See the app’s README file on GitHub for more details.</source>
+        <target>Om zelf een __fotoclub aan _Fotoclub Hub_ toe te voegen__ zijn bepaalde gegevens nodig. Dit gaat in drie __Niveaus__ die men kan zien als etages in een trappenhuis: een club kan een tijd op bijvoorbeeld Niveau 1 verblijven om pas later naar het volgende niveau te gaan. Op GitHub staat een uitgebreider [README](https://github.com/vdhamer/Photo-Club-Hub/blob/main/.github/README.md) bestand.</target>
         <note>First paragraph Developers section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_5.2" xml:space="preserve">
         <source>__Level 1__ requires providing the club’s name, location and a few links. As a result, the club is listed on the _Clubs and Museums_ screen and shown on its maps. If you send us the Level 1 information, we will add it to the app’s online list of clubs. Alternatively, you can submit that information (and any future updates) in the form a [GitHub “pull request”](https://www.youtube.com/watch?v=BCQHnlnPusY&amp;list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV&amp;index=1).</source>
+        <target>__Niveau 1__ informatie bevat vooral de naamgeving en locatie van de club. Zodra Niveau 1 gegevens beschikbaar zijn wordt de club zichtbaar in de clublijst op het _Clubs en Musea_ scherm. Verder wordt de club hier letterlijk “op de kaart gezet”. _Fotoclub de Soos_ in Grave is een voorbeeld van een Niveau 1 club. Wij kunnen deze gegevens voor een club handmatig aan de centrale clublijst toevoegen (nadat U ons die gegevens stuurt). Wij zien echter liever dat een club of misschien zelfs een _Fotobond_ regio deze gegevens via een GitHub “pull request” aanbiedt. GitHub is weliswaar voor de meesten een nieuw kunstje, maar dit zorgt dat clubs hun invoer en latere wijzigingen in eigen hand houden. Dit verkleint de kans op misverstanden, vergissingen en vertragingen.</target>
         <note>Second paragraph Developers section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_5.3" xml:space="preserve">
         <source>__Level 2__ requires providing a list of the names of current (and maybe former) club members as a text file with a specific format. This file can be stored anywhere you like as long as it can be read via a web address (URL). For example, you can store it in the _Media_ section of your club’s _Wordpress_ web site. With Level 2, the membership lists shows up on the _Portfolios_ screen. _Fotogroep Anders_ in the Netherlands is an example of a Level 2 club. We are currently simplifying Level 2 support.</source>
+        <target>__Niveau 2__ bestaat uit het beschikbaar maken van een __ledenlijst__ in de vorm van een JSON tekstbestand. Het ledenbestand kan op een willekeurige plek online gezet worden. De app kan het bestand daar ophalen via een URL/webadres. Wij zijn bezig met Niveau 2 te stroomlijnen. Wij zijn bezig met het Niveau 2 proces te stroomlijnen. Wij zullen documenteren hoe men de ledenlijst kan aanbieden via een _Wordpress_ club website. _Fotogroep Anders_ in Eindhoven is een goed voorbeeld van een Niveau 2 club: het Portfolio’s scherm laat de vier clubleden zien.</target>
         <note>Third paragraph Developers section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_5.4" xml:space="preserve">
         <source>__Level 3__ requires providing links to the online images in member portfolios. _Fotogroep Waalre_ in the Netherlands is an example of Level 3 club: you can view their portfolios via the _Portfolios_ screen. Because a club with, for example, 20 members will have hundreds of images, we have a way to automate generate portfolios using _Lightroom_ (instructions on how this works will be provided later).</source>
+        <target>__Niveau 3__ bestaat uit het beschikbaar stellen van de portfolio’s van de leden. Een goed voorbeeld van een Niveau 3 club is _Fotogroep Waalre_: de portfolio’s van leden en recente ex-leden zijn via het _Portfolio’s_ scherm bereikbaar. Omdat een club met tientallen leden vaak honderden foto’s wil laten zien, is het genereren van online portfolio's vanuit _Lightroom_ geautomatiseerd. Gedetailleerde instructies hierover staan in de uitgebreidere [README](https://github.com/vdhamer/Photo-Club-Hub/blob/main/.github/README.md).</target>
         <note>Fourth paragraph Developers section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_5.5" xml:space="preserve">
         <source>Apart from onboarding clubs, there are more ways in which you can help out. Examples of __non-technical__ help include testing, writing a review for Apple’s App Store, creating user guides, and improvement ideas. Last, and certainly not least, __software development__ support will help speed up development, get fresh ideas and ensure app continuity. Example contributions include code improvement of all sorts (via  [GitHub](https://github.com/vdhamer/Photo-Club-Hub), tracking down bugs, and contributing to discussions on functionality, implementation and interfaces.
 </source>
+        <target>Afgezien van het toevoegen van clubs, kunnen wij andere hulp heel goed gebruiken. Voorbeelden van __niet-technische hulp__ zijn het testen van de app, schrijven van FAQs en instructies, en uiteraard ideeën. De app is open source (via [GitHub](https://github.com/vdhamer/Photo-Club-Hub)) om __hulp bij de softwareontwikkeling__ mogelijk te maken. Voorbeelden zijn uitbreidingen, bugs oplossen, technisch meedenken, of zelfs aanvullende programma’s (b.v. om gegevensinvoer simpeler te maken).</target>
         <note>Fifth paragraph Developers section of Readme page</note>
       </trans-unit>
       <trans-unit id="Phone:" xml:space="preserve">

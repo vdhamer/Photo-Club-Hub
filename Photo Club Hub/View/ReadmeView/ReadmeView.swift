@@ -230,7 +230,7 @@ struct ReadmeView: View {
                                     .border(.gray, width: 1)
                                     .scaledToFit()
                                     .frame(width: geo.size.width * 0.8, alignment: .center)
-                                Text("Level 1 support for a Dutch photo club", 
+                                Text("Level 1 support for a Dutch photo club",
                                      comment: "Caption for image on Readme page")
                                     .font(.callout.italic())
                                     .frame(width: geo.size.width, alignment: .center)

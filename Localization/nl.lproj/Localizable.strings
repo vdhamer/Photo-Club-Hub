@@ -68,7 +68,7 @@
 "former" = "voormalig";
 
 /* Caption for image on Readme page */
-"Fragment of the Swift source code" = "Stukje Swift code uit de app";
+"Fragment of the Swift source code" = "Swift codefragment";
 
 /* Used in DebugPanel. I couldn't avoid localization here. Just use original as translation */
 "frameSize = [%@,%@]" = "frameSize = [%@,%@]";
@@ -77,7 +77,7 @@
 "honorary member" = "erelid";
 
 /* Section title on Readme page */
-"How you can help" = "Wij hebben jullie hulp nodig";
+"How you can help" = "App zoekt hulp";
 
 /* Shown instead of app name in PreludeView when app is started */
 "In debug mode" = "Test versie";
@@ -256,6 +256,21 @@ Default status of member within a club. Used in concatenations. */
 
 /* Fourth paragraph SupportedPlatforms section of Readme page */
 "Paragraph_4.4" = "De komst van dit soort uitbreidingen zal afhangen van de belangstelling in de app en van hulp vanuit de Open Source gemeenschap. Vragen hierover beantwoorden wij graag.";
+
+/* First paragraph Developers section of Readme page */
+"Paragraph_5.1" = "Om zelf een __fotoclub aan _Fotoclub Hub_ toe te voegen__ zijn bepaalde gegevens nodig. Dit gaat in drie __Niveaus__ die men kan zien als etages in een trappenhuis: een club kan een tijd op bijvoorbeeld Niveau 1 verblijven om pas later naar het volgende niveau te gaan. Op GitHub staat een uitgebreider [README](https://github.com/vdhamer/Photo-Club-Hub/blob/main/.github/README.md) bestand.";
+
+/* Second paragraph Developers section of Readme page */
+"Paragraph_5.2" = "__Niveau 1__ informatie bevat vooral de naamgeving en locatie van de club. Zodra Niveau 1 gegevens beschikbaar zijn wordt de club zichtbaar in de clublijst op het _Clubs en Musea_ scherm. Verder wordt de club hier letterlijk “op de kaart gezet”. _Fotoclub de Soos_ in Grave is een voorbeeld van een Niveau 1 club. Wij kunnen deze gegevens voor een club handmatig aan de centrale clublijst toevoegen (nadat U ons die gegevens stuurt). Wij zien echter liever dat een club of misschien zelfs een _Fotobond_ regio deze gegevens via een GitHub “pull request” aanbiedt. GitHub is weliswaar voor de meesten een nieuw kunstje, maar dit zorgt dat clubs hun invoer en latere wijzigingen in eigen hand houden. Dit verkleint de kans op misverstanden, vergissingen en vertragingen.";
+
+/* Third paragraph Developers section of Readme page */
+"Paragraph_5.3" = "__Niveau 2__ bestaat uit het beschikbaar maken van een __ledenlijst__ in de vorm van een JSON tekstbestand. Het ledenbestand kan op een willekeurige plek online gezet worden. De app kan het bestand daar ophalen via een URL/webadres. Wij zijn bezig met Niveau 2 te stroomlijnen. Wij zijn bezig met het Niveau 2 proces te stroomlijnen. Wij zullen documenteren hoe men de ledenlijst kan aanbieden via een _Wordpress_ club website. _Fotogroep Anders_ in Eindhoven is een goed voorbeeld van een Niveau 2 club: het Portfolio’s scherm laat de vier clubleden zien.";
+
+/* Fourth paragraph Developers section of Readme page */
+"Paragraph_5.4" = "__Niveau 3__ bestaat uit het beschikbaar stellen van de portfolio’s van de leden. Een goed voorbeeld van een Niveau 3 club is _Fotogroep Waalre_: de portfolio’s van leden en recente ex-leden zijn via het _Portfolio’s_ scherm bereikbaar. Omdat een club met tientallen leden vaak honderden foto’s wil laten zien, is het genereren van online portfolio's vanuit _Lightroom_ geautomatiseerd. Gedetailleerde instructies hierover staan in de uitgebreidere [README](https://github.com/vdhamer/Photo-Club-Hub/blob/main/.github/README.md).";
+
+/* Fifth paragraph Developers section of Readme page */
+"Paragraph_5.5" = "Afgezien van het toevoegen van clubs, kunnen wij andere hulp heel goed gebruiken. Voorbeelden van __niet-technische hulp__ zijn het testen van de app, schrijven van FAQs en instructies, en uiteraard ideeën. De app is open source (via [GitHub](https://github.com/vdhamer/Photo-Club-Hub)) om __hulp bij de softwareontwikkeling__ mogelijk te maken. Voorbeelden zijn uitbreidingen, bugs oplossen, technisch meedenken, of zelfs aanvullende programma’s (b.v. om gegevensinvoer simpeler te maken).";
 
 /* Telephone number (usually invisible) */
 "Phone:" = "Tel:";
