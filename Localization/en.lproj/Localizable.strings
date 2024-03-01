@@ -50,7 +50,7 @@
 "deceased" = "deceased";
 
 /* Caption of Websites image on Readme page */
-"Example of a link to a club web site" = "Example of a link to a club web site";
+"Link (in blue) to a club web site" = "Link (in blue) to a club web site";
 
 /* Relationship status of member within a club. Used in concatenations. */
 "external coach" = "external coach";
@@ -325,7 +325,7 @@ Field at top of Members page that allows the user to filter the members based on
 "Supported Platforms" = "iOS, iPadOS";
 
 /* Caption of Localizations image on Readme page */
-"Supporting multiple languages" = "Supporting multiple languages";
+"Translating English phrases into Dutch" = "Translating English phrases into Dutch";
 
 /* Section title on Readme page */
 "The App" = "The App";

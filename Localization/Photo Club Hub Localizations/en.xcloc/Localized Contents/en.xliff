@@ -117,6 +117,11 @@
         <target>Level 1 support for a Dutch photo club</target>
         <note>Caption for image on Readme page</note>
       </trans-unit>
+      <trans-unit id="Link (in blue) to a club web site" xml:space="preserve">
+        <source>Link (in blue) to a club web site</source>
+        <target>Link (in blue) to a club web site</target>
+        <note>Caption of Websites image on Readme page</note>
+      </trans-unit>
       <trans-unit id="Maps can be viewed in 3D" xml:space="preserve">
         <source>Maps can be viewed in 3D</source>
         <target>Maps can be viewed in 3D</target>
@@ -504,11 +509,6 @@ Field at top of Members page that allows the user to filter the members based on
         <target>iOS, iPadOS</target>
         <note>Section title on Readme page.</note>
       </trans-unit>
-      <trans-unit id="Supporting multiple languages" xml:space="preserve">
-        <source>Supporting multiple languages</source>
-        <target>Supporting multiple languages</target>
-        <note>Caption of Localizations image on Readme page</note>
-      </trans-unit>
       <trans-unit id="The App" xml:space="preserve">
         <source>The App</source>
         <target>The App</target>
@@ -517,11 +517,6 @@ Field at top of Members page that allows the user to filter the members based on
       <trans-unit id="The Concept" xml:space="preserve">
         <source>The Concept</source>
         <target>The Concept</target>
-        <note>Section title on Readme page</note>
-      </trans-unit>
-      <trans-unit id="The Model" xml:space="preserve">
-        <source>The Model</source>
-        <target>The Model</target>
         <note>Section title on Readme page</note>
       </trans-unit>
       <trans-unit id="The Preferences screen." xml:space="preserve">
@@ -548,6 +543,11 @@ Field at top of Members page that allows the user to filter the members based on
         <source>To see names here, please enable additional categories on the Preferences page.</source>
         <target>To see names here, please enable additional categories on the Preferences page.</target>
         <note>Hint to the user if the database returns zero Members with empty Search filter.</note>
+      </trans-unit>
+      <trans-unit id="Translating English phrases into Dutch" xml:space="preserve">
+        <source>Translating English phrases into Dutch</source>
+        <target>Translating English phrases into Dutch</target>
+        <note>Caption of Localizations image on Readme page</note>
       </trans-unit>
       <trans-unit id="Warning: all member categories on the Preferences page are disabled. Please enable one or more options in Preferences." xml:space="preserve">
         <source>Warning: all member categories on the Preferences page are disabled. Please enable one or more options in Preferences.</source>
