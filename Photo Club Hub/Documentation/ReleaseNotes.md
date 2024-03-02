@@ -1,19 +1,25 @@
-### 2.5.4 (GitHub commit ???????) ??-01-24
+### 2.5.5 (GitHub commit ???????) ??-02-24
+
+This is build #4616.
+---------------------------------------------------------------------------
+### 2.5.4 (GitHub commit 769676c) 02-02-24
 
 Readme screen
-    * Mentioned automatic slide show button under Features & Tips.
-    * Fixed typos and other minor improvements to English and Dutch versions.
-    * Replaced image with an example of a link to a club web site.
+    * Many changes to the English and Dutch versions of the built-in Readme text.
+    * Added description of how to add a photo club or museum to the app.
+    * Created a .pages version of English and Dutch Readme screen for reviewing.
+Portfolios screen
+    * performance improvement: fewer calls to WkWebView(): from once per thumbnail to once per screen.
+Who's Who screen
+    * performance improvement: fewer calls to WkWebView(): from once per thumbnail to once per screen.
 Maintenance
     * Tested with with iOS 17.4 RC, MacOS 14.3, Xcode 14.3 RC, VisionOS 1.1 beta 4.
-    * Created a .pages version of English and Dutch Readme screen for reviewing.
-    * Added Fotogroep Best to Organizationlist.json.
+    * Added Fotogroep Best as a Level 1 supported photo club.
     * Fixed broken shields in GitHub README.md.
     * Removed empty targets for testing and UI testing.
     * Removed Version2Changes.md file (no longer being updated).
-    * There are now fewer calls to WkWebView(): from once per thumbnail to once per screen.
 
-This is build #4615
+This is build #4615, and was sent for review to Apple App Store.
 ---------------------------------------------------------------------------
 ### 2.5.3 (GitHub commit 83a9e0c) 12-02-24
 
@@ -35,7 +41,7 @@ Maintenance
     * fgDeGender has a new chairman. This info doesn't come from a json file yet.
     * Refreshed screenshots on Apple App Store
 
-This is build #4614, and was sent out to Apple App Store (with the changes in build #4613)
+This is build #4614, and was published on the Apple App Store (with the changes in build #4613)
 ---------------------------------------------------------------------------
 ### 2.5.3 (GitHub commit 02e860a) 19-01-24
 
