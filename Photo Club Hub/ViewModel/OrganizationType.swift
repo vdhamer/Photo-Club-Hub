@@ -70,7 +70,7 @@ extension OrganizationType {
             }
             return organizationType
         } else {
-            // cannot use OrganizationType() initializer because we must use bgContext
+            // cannot use OrganizationType() initializer because we must use supplied context
             let entity = NSEntityDescription.entity(forEntityName: "OrganizationType", in: context)!
             let organizationType = OrganizationType(entity: entity, insertInto: context)
             organizationType.name = name
@@ -81,11 +81,11 @@ extension OrganizationType {
         }
     }
 
-    // Update non-identifying attributes/properties within existing instance of class OrganizationType
-    static func update(context: NSManagedObjectContext,
-                       organizationType: OrganizationType /*, dummy dumby: String*/) -> Bool {
+    // Update non-identifying attributes/properties within an existing instance of class OrganizationType
+    private static func update(context: NSManagedObjectContext,
+                               organizationType: OrganizationType /*, dummy dumby: String*/) -> Bool {
 
-        let modified: Bool = false // change to var as soon as it is really used (let to suppress SwiftLint warning)
+//        var modified: Bool = false
 
 //        if organizationType.dummy != dumby {
 //            organizationType.dummy = dumby // think I saw debugger mix up param and property, so changed the name
@@ -99,11 +99,11 @@ extension OrganizationType {
 //                ifDebugFatalError("Update failed for OrganizationType \(organizationType.name)",
 //                                  file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
 //                // in release mode, if save() fails, just continue
-//                return false
+//                modified = false
 //            }
 //        }
 
-        return modified
+        return false // change to `return modified` if there is something to modify
     }
 
     var isUnknown: Bool { // convenience function
@@ -125,7 +125,7 @@ extension OrganizationType {
             if create {
                 ifDebugFatalError("Could not save created OrganizationType \(organizationType.name)")
             } else {
-                ifDebugFatalError("Could not save updateds property of OrganizationType \(organizationType.name)")
+                ifDebugFatalError("Could not save updated property of OrganizationType \(organizationType.name)")
             }
         }
     }

@@ -1300,6 +1300,30 @@
 
         {
             "idPlus": {
+                "town": "Lausanne",
+                "fullName": "Photo Elysée",
+                "nickName": "Photo Elysée"
+            },
+            "coordinates": {
+                "latitude": 46.5098,
+                "longitude": 6.6328
+            },
+            "website": "https://elysee.ch",
+            "wikipedia": "https://en.wikipedia.org/wiki/Photo_Élysée",
+            "remark": [
+                {
+                    "language": "EN",
+                    "value": "The museum houses among others the photo collection of Charlie Chaplin with ten thousand images."
+                },
+                {
+                    "language": "NL",
+                    "value": "Het museum bevat ondermeer de verzameling van Charlie Chaplin met tienduizend foto's."
+                }
+            ]
+        },
+
+        {
+            "idPlus": {
                 "town": "Lianzhou",
                 "fullName": "Lianzhou Museum of Photography",
                 "nickName": "LMoP Lianzhou"
