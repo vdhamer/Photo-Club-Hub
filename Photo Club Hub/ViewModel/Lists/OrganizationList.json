@@ -136,6 +136,30 @@
 
         {
             "idPlus": {
+                "town": "Boxtel",
+                "fullName": "Fotoclub Boxtel Ontspant",
+                "nickName": "BoxtelOntspant"
+            },
+            "coordinates": {
+                "latitude": 51.59673,
+                "longitude": 5.31682
+            },
+            "website": "https://boxtelontspant.nl",
+            "memberList": "https://www.example.com/boxtelontspant.memberlist.json",
+            "remark": [
+                {
+                    "language": "EN",
+                    "value": "Each monthly session involves both reviewing photos and an informative presentation."
+                },
+                {
+                    "language": "NL",
+                    "value": "De maandelijkse clubbijeenkomst zijn deels fotobespreking, deels informatieve lezing."
+                }
+            ]
+        },
+
+        {
+            "idPlus": {
                 "town": "Den Bosch",
                 "fullName": "Fotogroep Argus",
                 "nickName": "fgArgus"
@@ -298,6 +322,30 @@
         {
             "idPlus": {
                 "town": "Eindhoven",
+                "fullName": "De FotoSchouw",
+                "nickName": "FotoSchouw"
+            },
+            "coordinates": {
+                "latitude": 51.41884,
+                "longitude": 5.44177
+            },
+            "website": "https://www.fotoschouw.nl",
+            "memberList": "https://www.example.com/fotoschouw.memberList.json",
+            "remark": [
+                {
+                    "language": "EN",
+                    "value": "The required minimum age is 50, and the meetings start in the morning."
+                },
+                {
+                    "language": "NL",
+                    "value": "\"een fotoclub enthousiaste amateurfotografen die 50 jaar en ouder zijn\"."
+                }
+            ]
+        },
+
+        {
+            "idPlus": {
+                "town": "Eindhoven",
                 "fullName": "Fotoclub Ericamera",
                 "nickName": "Ericamera"
             },
@@ -321,7 +369,6 @@
                 "fotobondNumber": 1674
             }
         },
-
 
         {
             "idPlus": {

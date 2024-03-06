@@ -1,5 +1,10 @@
 ### 2.5.5 (GitHub commit ???????) ??-02-24
 
+Maintenance
+    * Tested with with iOS 17.4, MacOS 14.3, Xcode 14.3, VisionOS 1.1 beta 4.
+    * Added the Photo Elysée museum in Lausanne.
+    * Added two local photo clubs: Boxtel, De Fotoschouw
+
 This is build #4616.
 ---------------------------------------------------------------------------
 ### 2.5.4 (GitHub commit 769676c) 02-02-24
