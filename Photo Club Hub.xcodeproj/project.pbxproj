@@ -79,7 +79,7 @@
 		D0DE02772789D1B30062738C /* RoleIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DE02762789D1B30062738C /* RoleIconView.swift */; };
 		D0E02F9B2B80191300D67CDA /* Readme_NL_2_5_4.pages in Resources */ = {isa = PBXBuildFile; fileRef = D0E02F972B80191300D67CDA /* Readme_NL_2_5_4.pages */; };
 		D0E2235427DE9139002A8600 /* PreludeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E2235327DE9139002A8600 /* PreludeView.swift */; };
-		D0E2D6062B9B9577008D1F7A /* Test1Club.json in Resources */ = {isa = PBXBuildFile; fileRef = D0E2D6032B9B9568008D1F7A /* Test1Club.json */; };
+		D0E2D6062B9B9577008D1F7A /* Test1ClubList.json in Resources */ = {isa = PBXBuildFile; fileRef = D0E2D6032B9B9568008D1F7A /* Test1ClubList.json */; };
 		D0E694C927EF9B450054D634 /* LockAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E694C827EF9B450054D634 /* LockAnimationView.swift */; };
 		D0EAEB332B3CA6D300EC05B6 /* OrganizationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EAEB322B3CA6D300EC05B6 /* OrganizationList.swift */; };
 		D0EB533C295775240061613B /* Crosshairs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EB533B295775240061613B /* Crosshairs.swift */; };
@@ -180,7 +180,7 @@
 		D0E02F942B7FA33200D67CDA /* Readme_EN_2_5_4.pages */ = {isa = PBXFileReference; lastKnownFileType = file; path = Readme_EN_2_5_4.pages; sourceTree = "<group>"; };
 		D0E02F972B80191300D67CDA /* Readme_NL_2_5_4.pages */ = {isa = PBXFileReference; lastKnownFileType = file; path = Readme_NL_2_5_4.pages; sourceTree = "<group>"; };
 		D0E2235327DE9139002A8600 /* PreludeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreludeView.swift; sourceTree = "<group>"; };
-		D0E2D6032B9B9568008D1F7A /* Test1Club.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Test1Club.json; sourceTree = "<group>"; };
+		D0E2D6032B9B9568008D1F7A /* Test1ClubList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Test1ClubList.json; sourceTree = "<group>"; };
 		D0E673BA2AE1C1A100A4DC95 /* Photo_Club_Hub_2_5_0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_5_0.xcdatamodel; sourceTree = "<group>"; };
 		D0E694C827EF9B450054D634 /* LockAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockAnimationView.swift; sourceTree = "<group>"; };
 		D0EAEB322B3CA6D300EC05B6 /* OrganizationList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganizationList.swift; sourceTree = "<group>"; };
@@ -463,7 +463,7 @@
 		D08416952B2FC07F000F316D /* Lists */ = {
 			isa = PBXGroup;
 			children = (
-				D0E2D6032B9B9568008D1F7A /* Test1Club.json */,
+				D0E2D6032B9B9568008D1F7A /* Test1ClubList.json */,
 				D04B1A0B2B1AA06300EB3817 /* OrganizationList.json */,
 				D0A5B7EE2B45F67E001FAD59 /* Test2Club2MuseumList.json */,
 				D08416912B2FA3C2000F316D /* FG_Anders.memberlist.json */,
@@ -625,7 +625,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D008D2AA28739167007A7BE2 /* .gitignore in Resources */,
-				D0E2D6062B9B9577008D1F7A /* Test1Club.json in Resources */,
+				D0E2D6062B9B9577008D1F7A /* Test1ClubList.json in Resources */,
 				D0E02F9B2B80191300D67CDA /* Readme_NL_2_5_4.pages in Resources */,
 				D06061EA28A0456C00A675A7 /* FGWPrivateMembersURL3.txt in Resources */,
 				D018682E2B6DB34700CF1629 /* dataModel.png in Resources */,
