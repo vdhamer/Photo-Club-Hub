@@ -31,65 +31,6 @@
                     "value": "Remark XX"
                 }
             ]
-        },
-
-        {
-            "idPlus": {
-                "town": "Berlicum",
-                "fullName": "Fotogroep Last",
-                "nickName": "FFC Shot71"
-            },
-            "coordinates": {
-                "latitude": 51.663059,
-                "longitude": 5.4182475
-            },
-            "website": "https://www.shot71.nl",
-            "memberList": "https://www.example.com/FFC_Shot71.memberlist.json"
         }
-
-    ],
-    "museums": [
-        {
-            "idPlus": {
-                "town": "Lianzhou",
-                "fullName": "Lianzhou Museum of Photography",
-                "nickName": "LMoP Lianzhou"
-            },
-            "coordinates": {
-                "latitude": 24.78468,
-                "longitude": 112.38392
-            },
-            "website": "http://www.lmop.org.cn",
-            "remark": [
-                {
-                    "language": "EN",
-                    "value": "The museum's URL and even GPS coordinates don't currently work, but the museum is in Lianzhou, China."
-                }
-            ]
-        },
-
-        {
-            "idPlus": {
-                "town": "Zierikzee",
-                "fullName": "Museum Last",
-                "nickName": "CM Zierikzee"
-            },
-            "coordinates": {
-                "latitude": 51.65010,
-                "longitude": 3.91938
-            },
-            "website": "https://www.cameramuseum.nl",
-            "remark": [
-                {
-                    "language": "EN",
-                    "value": "This small museum is mainly about classic cameras. It also covers regional photographers."
-                },
-                {
-                    "language": "NL",
-                    "value": "Dit museumpje heet een collectie klassieke cameras, maar bevat ook werk van Zeeuwse fotografen."
-                }
-            ]
-        }
-
     ]
 }
