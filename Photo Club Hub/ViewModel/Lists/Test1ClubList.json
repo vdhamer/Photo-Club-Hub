@@ -29,35 +29,6 @@
                     "value": "Remark1 XX"
                 }
             ]
-        },
-        {
-            "idPlus": {
-                "town": "Eindhoven",
-                "fullName": "Fotogroep Second",
-                "nickName": "fgSecond"
-            },
-            "coordinates": {
-                "latitude": 51.444,
-                "longitude": 5.516
-            },
-            "remark": [
-                {
-                    "language": "EN",
-                    "value": "Remark2 EN"
-                },
-                {
-                    "language": "NL",
-                    "value": "Remark2 NL"
-                },
-                {
-                    "language": "DE",
-                    "value": "Remark2 DE"
-                },
-                {
-                    "language": "XX",
-                    "value": "Remark2 XX"
-                }
-            ]
         }
     ]
 }
