@@ -1,6 +1,6 @@
 {
     "clubs": [
-        
+
         {
             "idPlus": {
                 "town": "Eindhoven",
@@ -11,24 +11,44 @@
                 "latitude": 51.44297,
                 "longitude": 5.51527
             },
+            "website": "https://nl.qrcodechimp.com/page/a6d3r7?v=chk1697032881",
+            "memberList": "https://www.example.com/fgAnders.memberList.json"
+        }
+    ],
+
+    "unknown": [
+
+        {
+            "idPlus": {
+                "town": "Eindhoven",
+                "fullName": "Fotogroep First",
+                "nickName": "fgFirst"
+            },
+            "coordinates": {
+                "latitude": 51.44297,
+                "longitude": 5.51527
+            },
+            "website": "https://nl.qrcodechimp.com/page/a6d3r7?v=chk1697032881",
+            "memberList": "https://www.example.com/fgAnders.memberList.json",
             "remark": [
                 {
                     "language": "EN",
-                    "value": "Remark1 EN"
+                    "value": "Remark EN"
                 },
                 {
                     "language": "NL",
-                    "value": "Remark1 NL"
+                    "value": "Remark NL"
                 },
                 {
                     "language": "DE",
-                    "value": "Remark1 DE"
+                    "value": "Remark DE"
                 },
                 {
                     "language": "XX",
-                    "value": "Remark1 XX"
+                    "value": "Remark XX"
                 }
             ]
         }
     ]
 }
+
