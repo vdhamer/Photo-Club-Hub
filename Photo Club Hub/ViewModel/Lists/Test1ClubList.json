@@ -10,7 +10,13 @@
             "coordinates": {
                 "latitude": 51.44,
                 "longitude": 5.51
-            }
+            },
+            "remark": [
+                {
+                    "language": "EN",
+                    "value": "Remark in English"
+                }
+            ]
         },
 
         {
@@ -22,13 +28,7 @@
             "coordinates": {
                 "latitude": 51.45,
                 "longitude": 5.52
-            },
-            "remark": [
-                {
-                    "language": "EN",
-                    "value": "Remark in English"
-                }
-            ]
+            }
         }
     ]
 }
