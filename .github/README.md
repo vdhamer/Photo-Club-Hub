@@ -141,7 +141,7 @@ first find a photo club before you get to club's members and their images:
 
 <a/></p>
 
-An alternative navigation view is provided by the "Who's Who" screen.
+An alternative navigation path is provided by the "Who's Who" screen.
 This view puts the photographer first, thus allowing you to find a photographer directly
 and then seeing which club(s) the photographer is associated with:
 
