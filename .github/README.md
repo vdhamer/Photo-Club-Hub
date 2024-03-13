@@ -108,7 +108,7 @@ Starting in version 2 the app's name was changed from _Photo Club Waalre_ to _Ph
     
 To achieve this, the app retrieves software-readable lists of photo clubs, their
 lists of members and their curated images from one or more servers. 
-This ensures that photo clubs, club members and member images can be added or chanaged without requiring a new release of the app.
+This ensures that photo clubs, club members and member images can be added or changed without requiring a new release of the app.
 
 See the [Architecture](#the-app-architecture) section for how this information is structured and distributed.
 Help in the form of coding, testing and suggestions is highly appreciated. See the [section](#contributing) on contributing below.
