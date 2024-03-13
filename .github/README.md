@@ -123,8 +123,9 @@ Help in the form of coding, testing and suggestions is highly appreciated. See t
 
 > The app showcases curated images made by members of photo clubs.
 
-Since release 2.3.0, the app structures the information in a 3-level hierarchy.
-Here is a schematic representation of the "Portfolios" view that essentially puts photo clubs first:
+The app structures the information in two hierarchical views of the data.
+Here is a schematic representation of the "Portfolios" screen that lets you
+first find a photo club before you get to club members and their images:
 
 * photo clubA (hosted on siteA)
   * portfolio1 of photographer1
@@ -140,8 +141,9 @@ Here is a schematic representation of the "Portfolios" view that essentially put
 
 <a/></p>
 
-An alternative navigation path is provided by the "Who's Who" view.
-This view puts the photographer first, thus allowing you to find a person without knowing the name of their club:
+An alternative navigation view is provided by the "Who's Who" screen.
+This view puts the photographer first, thus allowing you to find a photographer directly
+and then seeing which club(s) the photographer is associated with:
 
 * photographer1
   * photo club A
