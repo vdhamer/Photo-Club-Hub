@@ -125,7 +125,7 @@ Help in the form of coding, testing and suggestions is highly appreciated. See t
 
 The app structures the information in two hierarchical views of the data.
 Here is a schematic representation of the "Portfolios" screen that lets you
-first find a photo club before you get to club members and their images:
+first find a photo club before you get to club's members and their images:
 
 * photo clubA (hosted on siteA)
   * portfolio1 of photographer1
