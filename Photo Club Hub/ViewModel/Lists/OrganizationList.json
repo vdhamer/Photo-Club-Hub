@@ -334,11 +334,11 @@
             "remark": [
                 {
                     "language": "EN",
-                    "value": "The required minimum age is 50, and the meetings start in the morning."
+                    "value": "Members are required to be at least 50 years old."
                 },
                 {
                     "language": "NL",
-                    "value": "\"een fotoclub enthousiaste amateurfotografen die 50 jaar en ouder zijn\"."
+                    "value": "De club schrijft \"een fotoclub enthousiaste amateurfotografen die 50 jaar en ouder zijn\"."
                 }
             ]
         },
@@ -1074,7 +1074,7 @@
             "remark": [
                 {
                     "language": "EN",
-                    "value": "Photos are mostly done based on matted prints. In special cases a beamer is used."
+                    "value": "Photos are mostly reviewed as matted prints but, in special cases, a beamer is available."
                 },
                 {
                     "language": "NL",
@@ -1277,6 +1277,10 @@
                 {
                     "language": "EN",
                     "value": "The museum is afiliated with the older and adjacent art museum Kunstmuseum Den Haag."
+                },
+                {
+                    "language": "NL",
+                    "value": "Het museum is organisatorisch verbonden met het naastliggende Kunstmuseum Den Haag."
                 }
             ]
         },
@@ -1297,6 +1301,10 @@
                 {
                     "language": "EN",
                     "value": "Part of the National Library of Ireland. The archive also hosts photography exhibitions."
+                },
+                {
+                    "language": "NL",
+                    "value": "Het archief, dat deel uitmaakt van de Nationale Bibliotheek van Ierland, organiseert ook tentoonstellingen."
                 }
             ]
         },
@@ -1317,6 +1325,10 @@
                 {
                     "language": "EN",
                     "value": "The focus of this museum was originally a collection of vintage cameras."
+                },
+                {
+                    "language": "NL",
+                    "value": "Oorspronkelijk richtte dit museum zich vooral op klassieke camera's."
                 }
             ]
         },
@@ -1360,11 +1372,11 @@
             "remark": [
                 {
                     "language": "EN",
-                    "value": "The museum houses among others the photo collection of Charlie Chaplin with ten thousand images."
+                    "value": "The museum is specialized in conserving large photo collections, including that of Charlie Chaplin."
                 },
                 {
                     "language": "NL",
-                    "value": "Het museum bevat ondermeer de verzameling van Charlie Chaplin met tienduizend foto's."
+                    "value": "Het museum is gespecializeerd in het conserveren van grote fotocollecties, waaronder die van Charlie Chaplin."
                 }
             ]
         },
@@ -1384,6 +1396,10 @@
                 {
                     "language": "EN",
                     "value": "The museum's URL and even GPS coordinates don't currently work, but the museum is in Lianzhou, China."
+                },
+                {
+                    "language": "NL",
+                    "value": "Het webadres en zelfs de lengte en breedtegraad van het in Lianzhou gelegen museum geven soms problemen."
                 }
             ]
         },
@@ -1404,6 +1420,10 @@
                 {
                     "language": "EN",
                     "value": "The gallery has three exhibition spaces and a commercial gallery where photo prints are sold."
+                },
+                {
+                    "language": "NL",
+                    "value": "De Gallery heeft drie expositieruimtes, plus een commerciële ruimte waar afdrukken te koop zijn."
                 }
             ]
         },
@@ -1424,6 +1444,10 @@
                 {
                     "language": "EN",
                     "value": "The museum describes its Photography Centre as 'the largest space in the UK dedicated to a permanent photography collection'."
+                },
+                {
+                    "language": "NL",
+                    "value": "Het Photography Center van het museum is de grootste permanente expositieruimte voor fotografie in het Verenigd Koninkrijk."
                 }
             ]
         },
@@ -1444,6 +1468,10 @@
                 {
                     "language": "EN",
                     "value": "The museum is privately owned and is entirely funded by admission fees and donations."
+                },
+                {
+                    "language": "NL",
+                    "value": "Het museum is in particulier bezit en wordt bekostigd door schenkingen en entreegeld."
                 }
             ]
         },
@@ -1463,6 +1491,10 @@
                 {
                     "language": "EN",
                     "value": "The museum is located in a former water tower, and named after the nearby canal."
+                },
+                {
+                    "language": "NL",
+                    "value": "Het museum was vroeger een watertoren. De naam van het museum verwijst naar een naastliggend kanaal."
                 }
             ]
         },
@@ -1483,6 +1515,10 @@
                 {
                     "language": "EN",
                     "value": "The town Fitzroy is part of Melbourne, Australia."
+                },
+                {
+                    "language": "NL",
+                    "value": "Fitzroy is een voorstad van Melbourne, Australië."
                 }
             ]
         },
@@ -1503,6 +1539,10 @@
                 {
                     "language": "EN",
                     "value": "The museum and school were founded by Cornell Capa, the younger brother of Magnum photographer Robert Capa."
+                },
+                {
+                    "language": "NL",
+                    "value": "Het museum en bijbehorden school zijn gesticht door Cornell Capa, een broer van Robert Capa, de bekende Magnum fotograaaf."
                 }
             ]
         },
@@ -1546,7 +1586,11 @@
             "remark": [
                 {
                     "language": "EN",
-                    "value": "This department within the Museum of Modern art describes itself as 'one of the most important collections of modern and contemporary photography in the world'."
+                    "value": "This department within the Museum of Modern Art describes itself as 'one of the most important collections of modern and contemporary photography in the world'."
+                },
+                {
+                    "language": "NL",
+                    "value": "De fotografie tak van het Museum of Modern Art omschrijft zichzelf als \"een van de belangrijkste verzameling van moderne en eigentijdse fotografie ter wereld\"."
                 }
             ]
         },
@@ -1567,6 +1611,10 @@
                 {
                     "language": "EN",
                     "value": "The former Canadian Museum of Contemporary Photography is now part of the National Gallery of Canada."
+                },
+                {
+                    "language": "NL",
+                    "value": "Het voormalige Canadian Museum of Contemporary Photography maakt inmiddels deel uit van de National Gallery of Canada."
                 }
             ]
         },
@@ -1587,6 +1635,10 @@
                 {
                     "language": "EN",
                     "value": "The museum's mission is to preserve the archives of Henri Cartier-Bresson and his wife, photographer Martine Franck."
+                },
+                {
+                    "language": "NL",
+                    "value": "Het museum beheert de foto archieven van Henri Cartier-Bresson en diens echtgenote, de fotograaf Martine Franck."
                 }
             ]
         },
@@ -1607,6 +1659,10 @@
                 {
                     "language": "EN",
                     "value": "The museum/archive's website is currently only available in Portuguese."
+                },
+                {
+                    "language": "NL",
+                    "value": "Momenteel is de website van het museum alleen in het Portugees beschikbaar."
                 }
             ]
         },
@@ -1627,6 +1683,10 @@
                 {
                     "language": "EN",
                     "value": "The museum (near Los Angeles) is owned and operated by the University of California, Riverside."
+                },
+                {
+                    "language": "NL",
+                    "value": "Dit museum in de buurt van Los Angeles is eigendom van de Riverside vestiging van de Universiteit van Californië."
                 }
             ]
         },
@@ -1647,6 +1707,10 @@
                 {
                     "language": "EN",
                     "value": "This is the oldest photography museum in the world. George Eastman founded Kodak."
+                },
+                {
+                    "language": "NL",
+                    "value": "Dit is het oudste fotografiemuseum ter wereld. George Eastman was de oprichter van Eastman Kodak."
                 }
             ]
         },
@@ -1666,7 +1730,11 @@
             "remark": [
                 {
                     "language": "EN",
-                    "value": "The museum will relocate to this new building in the coming years, but the old site is in walking distance."
+                    "value": "The museum will relocate to a new building in the coming years, Both sites are in walking distance of each other."
+                },
+                {
+                    "language": "NL",
+                    "value": "Het museum heeft het plan aangekondigd om te verhuizen naar de nabijgelegen voormalig koffiepakhuis Santos aan de Rijnhaven."
                 }
             ]
         },
@@ -1783,6 +1851,10 @@
                 {
                     "language": "EN",
                     "value": "The museum is formally located in Meguro, on the outskirts of Tokyo."
+                },
+                {
+                    "language": "NL",
+                    "value": "Strikt genomen valt het museum onder Meguro, een randgemeente van Tokyo."
                 }
             ]
         },
@@ -1803,6 +1875,10 @@
                 {
                     "language": "EN",
                     "value": "The museum focusses on documentary photography and was founded by a Dutch photographer Rob Hornstra."
+                },
+                {
+                    "language": "NL",
+                    "value": "Het museum is opgericht door de Nederlandse fotograaf Rob Hornstra, en richt zich op documentaire fotografie."
                 }
             ]
         },
@@ -1823,6 +1899,10 @@
                 {
                     "language": "EN",
                     "value": "The National Geographic Museum is currently (early 2024) temporarily closed for renovation."
+                },
+                {
+                    "language": "NL",
+                    "value": "Het National Geographic Museum is (begin 2024) dicht wegens een renovatie."
                 }
             ]
         },

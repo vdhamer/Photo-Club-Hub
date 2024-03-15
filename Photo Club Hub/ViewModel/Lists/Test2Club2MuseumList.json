@@ -40,7 +40,9 @@
         }
 
     ],
+
     "museums": [
+        
         {
             "idPlus": {
                 "town": "Lianzhou",
@@ -78,7 +80,7 @@
                 },
                 {
                     "language": "NL",
-                    "value": "Dit museumpje heet een collectie klassieke cameras, maar bevat ook werk van Zeeuwse fotografen."
+                    "value": "Dit museumpje heeft een collectie klassieke cameras, maar bevat ook werk van Zeeuwse fotografen."
                 }
             ]
         }
