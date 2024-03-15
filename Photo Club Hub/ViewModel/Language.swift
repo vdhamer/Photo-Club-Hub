@@ -9,41 +9,27 @@ import CoreData
 
 extension Language {
 
-    static func initConstants() { // called on main thread
-        guard Thread.isMainThread else { fatalError("OrganizationType.initConstants() must be on main thread") }
-        guard OrganizationType.enum2objectID.isEmpty else {
-            fatalError("Repeated call to OrganizationalType.initConstants")
-        }
-
-        let viewContext = PersistenceController.shared.container.viewContext // foreground context
-
-        for type in OrganizationTypeEnum.allCases { // type is simple enum
-            let organizationType = OrganizationType.findCreateUpdate( // organizationType is CoreData NSManagedObject
-                context: viewContext,
-                name: type.unlocalizedSingular
-            )
-            OrganizationType.enum2objectID[type] = organizationType.objectID // access NSManagedObjects from bg threads
-        }
-
-        do {
-            try viewContext.save() // persist all organizationTypes using main thread ManagedObjectContext
-        } catch {
-            ifDebugFatalError("Couldn't initialize both organizationType records",
-                              file: #fileID, line: #line)
-        }
-
+    private static var code2Name: [String: String] {
+        [
+            "DE": "Deutsch",
+            "EN": "English",
+            "ES": "Español",
+            "FR": "Français",
+            "NL": "Nederlands",
+            "PL": "Polski"
+        ]
     }
 
     // MARK: - getters and setters
 
-    var isoCode: String {
-        get { return isoCode_ ?? "??"}
-        set { isoCode_ = newValue }
+    var isoCodeCaps: String {
+        get { return isoCode_?.uppercased() ?? "??"} // e.g. NL
+        set { isoCode_ = newValue.uppercased() }
     }
 
     var name: String {
-        get { return name_ ?? "NoNameForLangauge\(self.isoCode)" }
-        set { name_ = newValue }
+        get { return (name_ ?? isoCodeCaps).capitalized } // e.g. Nederlands or Nl
+        set { name_ = newValue.capitalized }
     }
 
     // MARK: - find or create
@@ -52,10 +38,11 @@ extension Language {
     // Update existing attributes or fill the new object
     static func findCreateUpdate(context: NSManagedObjectContext, // can be foreground of background context
                                  isoCode: String,
-                                 name inputName: String?
+                                 name inputName: String? = nil
                                 ) -> Language {
 
-        let predicateFormat: String = "name_ = %@" // avoid localization
+        let name = inputName ?? code2Name[isoCode] // fill in name if no name provided and dictionary contains name
+        let predicateFormat: String = "isoCode_ = %@" // avoid localization
         let predicate = NSPredicate(format: predicateFormat, argumentArray: [isoCode])
         let fetchRequest: NSFetchRequest<Language> = Language.fetchRequest()
         fetchRequest.predicate = predicate
@@ -68,9 +55,9 @@ extension Language {
         }
 
         if let language = languages.first { // already exists, so update non-identifying attributes
-            if let name = inputName {
+            if let name {
                 if update(context: context, language: language, name: name) {
-                    print("Updated info for organization type \"\(language.name)\"")
+                    print("Updated info for language \"\(language.name)\"")
                     save(context: context, language: language, create: false)
                 }
             }
@@ -79,12 +66,10 @@ extension Language {
             // cannot use Language() initializer because we must use supplied context
             let entity = NSEntityDescription.entity(forEntityName: "Language", in: context)!
             let language = Language(entity: entity, insertInto: context)
-            if let inputName {
-                language.name = inputName
-            }
-            _ = update(context: context, language: language, name: inputName)
+            language.isoCodeCaps = isoCode
+            _ = update(context: context, language: language, name: name)
             save(context: context, language: language, create: true)
-            print("Created new Language for code \(language.isoCode) named \(language.name)")
+            print("Created new Language for code \(language.isoCodeCaps) named \(language.name)")
             return language
         }
     }
@@ -105,7 +90,7 @@ extension Language {
             do {
                 try context.save() // update modified properties of a Language object
              } catch {
-                 ifDebugFatalError("Update failed for Language \(language.isoCode) aka \(language.name)",
+                 ifDebugFatalError("Update failed for Language \(language.isoCodeCaps) aka \(language.name)",
                                   file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
                 // in release mode, if save() fails, just continue
                 modified = true
@@ -120,9 +105,9 @@ extension Language {
             try context.save()
         } catch {
             if create {
-                ifDebugFatalError("Could not save created Language \(language.isoCode)")
+                ifDebugFatalError("Could not save created Language \(language.isoCodeCaps)")
             } else {
-                ifDebugFatalError("Could not save updated property of Language \(language.isoCode)")
+                ifDebugFatalError("Could not save updated property of Language \(language.isoCodeCaps)")
             }
         }
     }
