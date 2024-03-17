@@ -46,6 +46,15 @@ extension PhotoClubHubApp {
 
     static func loadClubsAndMembers() {
 
+        // load list of photo clubs from OrganizationList.json file
+        let olBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+        olBackgroundContext.name = "OrganizationList"
+        olBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+        olBackgroundContext.automaticallyMergesChangesFromParent = true // needed to push ObjectTypes down to bgContext?
+        _ = OrganizationList(bgContext: olBackgroundContext, useOnlyFile: false) // read OrganizationList.json file
+
+        // warning: following clubs rely on Level 1 file for GPS coordiantes
+
         // load test member(s) of Fotogroep Bellus Imago
         let bellusBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
         bellusBackgroundContext.name = "Bellus Imago"
@@ -73,13 +82,6 @@ extension PhotoClubHubApp {
         waalreBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         waalreBackgroundContext.automaticallyMergesChangesFromParent = true
         _ = FotogroepWaalreMembersProvider(bgContext: waalreBackgroundContext)
-
-        // load list of photo clubs from OrganizationList.json file
-        let olBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-        olBackgroundContext.name = "OrganizationList"
-        olBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-        olBackgroundContext.automaticallyMergesChangesFromParent = true // needed to push ObjectTypes down to bgContext?
-        _ = OrganizationList(bgContext: olBackgroundContext) // read OrganizationList.json file
 
     }
 

@@ -16,10 +16,12 @@ private let dataSourcePath: String = """
                                      Photo%20Club%20Hub/ViewModel/Lists/
                                      """
 // private let dataSourceFile: String = "Test2Club2MuseumList.json"
-private let dataSourceFile: String = "OrganizationList.json"
+private let dataSourceFile: String = "OrganizationList"
+private let fileType = "json"
+// private let dataSourceFile: String = "OrganizationList.json"
 private let organizationTypesToLoad: [OrganizationTypeEnum] = [.club, .museum]
 
-/* Example of basic OrganizationList.json content
+/* Example of basic OrganizationList.json (Level 1) content
 {
     "clubs": [
         {
@@ -68,22 +70,38 @@ private let organizationTypesToLoad: [OrganizationTypeEnum] = [.club, .museum]
 
 class OrganizationList {
 
-    init(bgContext: NSManagedObjectContext) {
+    init(bgContext: NSManagedObjectContext, useOnlyFile: Bool = false) {
 
         bgContext.perform { // switch to supplied background thread
-            self.readJSONOrganizationList(bgContext: bgContext, for: organizationTypesToLoad)
+            self.readJSONOrganizationList(bgContext: bgContext,
+                                          data: getData(
+                                                    fileURL: URL(string: dataSourcePath+dataSourceFile+"."+fileType)!,
+                                                    filePath: Bundle.main.path(forResource: dataSourceFile,
+                                                                               ofType: fileType)!
+                                          ),
+                                          for: organizationTypesToLoad)
+        }
+
+        func getData(fileURL: URL,
+                     filePath: String) -> String {
+            if let urlData = try? String(contentsOf: fileURL), !useOnlyFile {
+                return urlData
+            }
+            print("Could not access online file \(fileURL.relativeString). Trying local file instead.")
+            if let fileData = try? String(contentsOfFile: filePath) {
+                return fileData
+            }
+            // calling fatalError is ok for a compile-time constant (as defined above)
+            fatalError("Cannot load Level 1 file \(filePath)")
         }
     }
 
     private func readJSONOrganizationList(bgContext: NSManagedObjectContext,
+                                          data: String,
                                           for organizationTypeEnumsToLoad: [OrganizationTypeEnum]) {
 
-        ifDebugPrint("\nStarting readJSONOrganizationList(\(dataSourceFile)) in background")
+        ifDebugPrint("\nGoing to read Level 1 file (\(dataSourceFile)) with a list of organizations - in background.")
 
-        guard let data = try? String(contentsOf: URL(string: dataSourcePath+dataSourceFile)!) else {
-            // calling fatalError is ok for a compile-time constant (as defined above)
-            fatalError("Please check URL \(dataSourcePath+dataSourceFile)")
-        }
         // give the data to SwiftyJSON to parse
         let jsonRoot = JSON(parseJSON: data) // call to SwiftyJSON
 
@@ -121,14 +139,15 @@ class OrganizationList {
                 if bgContext.hasChanges { // optimization recommended by Apple
                     try bgContext.save() // persist contents of OrganizationList.json
                 }
-                ifDebugPrint("Completed readJSONOrganizationList() in background")
             } catch {
                 ifDebugFatalError("Failed to save changes to Core Data",
                                   file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
                 // in release mode, the failed database update is only logged. App doesn't stop.
                 ifDebugPrint("Failed to save JSON ClubList items in background")
+                return
             }
-        }
+        } // end of loop that scans organizationTypeEnumsToLoad
+        ifDebugPrint("Completed readJSONOrganizationList() in background")
     }
 
 }

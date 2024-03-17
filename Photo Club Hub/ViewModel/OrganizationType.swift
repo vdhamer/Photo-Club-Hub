@@ -76,7 +76,7 @@ extension OrganizationType {
             organizationType.name = name
             _ = update(context: context, organizationType: organizationType)
             save(context: context, organizationType: organizationType, create: true)
-            print("\(organizationType.name): Created new OrganizationType called \"\(name)\"")
+            print("Created new OrganizationType called \"\(name)\"")
             return organizationType
         }
     }

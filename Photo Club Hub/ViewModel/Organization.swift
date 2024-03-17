@@ -153,29 +153,36 @@ extension Organization {
         }
     }
 
+    var localizedRemarks: Set<LocalizedRemark> {
+        (localizedRemarks_ as? Set<LocalizedRemark>) ?? []
+    }
+
     // Priority system to choose an item's remark in the appropriate language.
     // The choice depends on the current language settings of the device, and on available translations.
     var localizedRemark: String {
-        let currentLangID = Locale.current.language.languageCode?.identifier // 2 (occasionally 3) letter ISO 639 code
+        // don't use Locale.current.language.languageCode because this only returns languages supported by the app
+        let currentLangID = Locale.preferredLanguages.first?.split(separator: "-").first?.uppercased() ?? "EN"
 
-        // We may be configured to another language (e.g. "de"), for which there is no translation.
-        // Or we may be looking for EN or NL, but that one is not available.
-        if currentLangID?.lowercased() == "nl" {
-            if remarkNL != nil { return remarkNL! }
+        // can we find the current language?
+        for localRemark in localizedRemarks where localRemark.language.isoCodeCaps == currentLangID {
+            if localRemark.localizedString != nil {
+                return localRemark.localizedString!
+            }
+         }
 
-            let apologyNL: StringLiteralType = " [nog geen Nederlandse vertaling beschikbaar]"
-            if remarkEN != nil { return remarkEN! + apologyNL}
-        } else {
-            if remarkEN != nil { return remarkEN! }
-
-            let apologyEN: StringLiteralType = " [no English translation available yet]"
-            if remarkNL != nil { return remarkNL! + apologyEN} // as a last resort, use Dutch (nl)
+        for localizedRemark in localizedRemarks where localizedRemark.language.isoCodeCaps == "EN" {
+            if localizedRemark.localizedString != nil {
+                return localizedRemark.localizedString!
+            }
         }
 
-        return String(localized: "No remark available.",
+        // just use any language
+        if localizedRemarks.first != nil, localizedRemarks.first!.localizedString != nil {
+            return "\(localizedRemarks.first!.localizedString!) [\(localizedRemarks.first!.language.isoCodeCaps)]"
+        }
+
+        return String(localized: "No remark available for \(organizationType.name) \(fullName).",
                       comment: "Shown below map if there is no usable remark in the OrganzationList.json file.")
-        // Actually there could be a remark (from the json file) in a language other than "en" or "nl",
-        // but the app doesn't store any other language yet. This may change when fixing GitHub issue #272.
     }
 
     // MARK: - findCreateUpdate
@@ -213,7 +220,7 @@ extension Organization {
 		if let organization = organizations.first { // already exists, so make sure secondary attributes are up to date
             print("\(organization.fullNameTown): Will try to update info for organization \(organization.fullName)")
             if update(bgContext: context, organizationTypeEnum: organizationTypeEum,
-                      photoClub: organization, shortName: idPlus.nickname,
+                      organization: organization, shortName: idPlus.nickname,
                       optionalFields: (website: website, wikipedia: wikipedia,
                                        fotobondNumber: fotobondNumber),
                       coordinates: coordinates,
@@ -228,9 +235,15 @@ extension Organization {
             let organization = Organization(entity: entity, insertInto: context) // create new Club or Museum
             organization.fullName = idPlus.fullName // first part of ID
             organization.town = idPlus.town // second part of ID
-            print("\(organization.fullNameTown): Will try to create this new organization")
+            do { // robustness in the (illegal?) case of a new organization without any non-identifying attributes
+                try context.save() // persist modifications in PhotoClub record
+             } catch {
+                ifDebugFatalError("Creation failed for club or museum \(idPlus.fullName)",
+                                  file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
+            }
+            print("\(organization.fullNameTown): Will try to fill fields for this new organization")
             _ = update(bgContext: context, organizationTypeEnum: organizationTypeEum,
-                       photoClub: organization, shortName: idPlus.nickname,
+                       organization: organization, shortName: idPlus.nickname,
                        optionalFields: (website: website, wikipedia: wikipedia,
                                         fotobondNumber: fotobondNumber),
                        coordinates: coordinates,
@@ -245,7 +258,7 @@ extension Organization {
     // swiftlint:disable:next function_parameter_count cyclomatic_complexity
     private static func update(bgContext: NSManagedObjectContext,
                                organizationTypeEnum: OrganizationTypeEnum,
-                               photoClub: Organization, shortName: String,
+                               organization: Organization, shortName: String,
                                // swiftlint:disable:next large_tuple
                                optionalFields: (website: URL?, wikipedia: URL?,
                                                 fotobondNumber: Int16?),
@@ -259,48 +272,47 @@ extension Organization {
         let organizationType = OrganizationType.findCreateUpdate(context: bgContext,
                                                                  name: organizationTypeEnum.rawValue)
 
-        if photoClub.organizationType_ != organizationType {
-            photoClub.organizationType = organizationType
+        if organization.organizationType_ != organizationType {
+            organization.organizationType = organizationType
             modified = true }
 
-        if photoClub.shortName != shortName {
-            photoClub.shortName = shortName
+        if organization.shortName != shortName {
+            organization.shortName = shortName
             modified = true }
 
-        if let website = optionalFields.website, photoClub.website != website {
-            photoClub.website = website
+        if let website = optionalFields.website, organization.website != website {
+            organization.website = website
             modified = true }
 
-        if let wikiURL = optionalFields.wikipedia, photoClub.wikipedia != wikiURL {
-            photoClub.wikipedia = wikiURL
+        if let wikiURL = optionalFields.wikipedia, organization.wikipedia != wikiURL {
+            organization.wikipedia = wikiURL
             modified = true }
 
-        if let fotobondNumber = optionalFields.fotobondNumber, photoClub.fotobondNumber != fotobondNumber {
-            photoClub.fotobondNumber = fotobondNumber
+        if let fotobondNumber = optionalFields.fotobondNumber, organization.fotobondNumber != fotobondNumber {
+            organization.fotobondNumber = fotobondNumber
             modified = true }
 
-        if let coordinates, photoClub.coordinates != coordinates {
-            photoClub.longitude_ = coordinates.longitude
-            photoClub.latitude_ = coordinates.latitude
+        if let coordinates, organization.coordinates != coordinates {
+            organization.longitude_ = coordinates.longitude
+            organization.latitude_ = coordinates.latitude
 			modified = true }
 
-        if photoClub.pinned != pinned {
-            photoClub.pinned = pinned
+        if organization.pinned != pinned {
+            organization.pinned = pinned
             modified = true }
 
-        for localizedRemark in localizedRemarks {
-            if localizedRemark["language"].stringValue == "EN" {
-                let remarkEN = localizedRemark["value"].stringValue
-                if photoClub.remarkEN != remarkEN {
-                    photoClub.remarkEN = remarkEN
-                    modified = true
-                }
-            } else if localizedRemark["language"].stringValue == "NL" {
-                let remarkNL = localizedRemark["value"].stringValue
-                if photoClub.remarkNL != remarkNL {
-                    photoClub.remarkNL = remarkNL
-                    modified = true
-                }
+        for localizedRemark in localizedRemarks { // load localizedRemarks for all provided languages
+            let isoCode: String? = localizedRemark["language"].stringValue.uppercased() // e.g. "NL" or "DE" or "PDC"
+            let localizedRemarkValueNew: String? = localizedRemark["value"].stringValue
+            if isoCode != nil && localizedRemarkValueNew != nil { // nil could happens if JSON file not schema compliant
+                let language = Language.findCreateUpdate(context: bgContext, isoCode: isoCode!) // find or construct
+                let localizedRemark = LocalizedRemark.findCreateUpdate(bgContext: bgContext, // create object
+                                                                       organization: organization,
+                                                                       language: language)
+                let needsSaving = LocalizedRemark.update(bgContext: bgContext,
+                                                         localizedRemark: localizedRemark,
+                                                         localizedString: localizedRemarkValueNew!)
+                if needsSaving { modified = true }
             }
         }
 
@@ -308,7 +320,7 @@ extension Organization {
 			do {
 				try bgContext.save() // persist modifications in PhotoClub record
  			} catch {
-                ifDebugFatalError("Update failed for photo club \(photoClub.fullName)",
+                ifDebugFatalError("Update failed for club or museum \(organization.fullName)",
                                   file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
                 // in release mode, if save() fails, just continue
                 return false
