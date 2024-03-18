@@ -59,8 +59,6 @@
         <attribute name="memberListURL_" optional="YES" attributeType="URI"/>
         <attribute name="name_" attributeType="String" defaultValueString="DefaultPhotoClubName"/>
         <attribute name="pinned" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
-        <attribute name="remarkEN" optional="YES" attributeType="String" elementID="descriptionEN"/>
-        <attribute name="remarkNL" optional="YES" attributeType="String" elementID="descriptionNL"/>
         <attribute name="shortName_" optional="YES" attributeType="String"/>
         <attribute name="town_" attributeType="String" defaultValueString="DefaultTown"/>
         <attribute name="website" optional="YES" attributeType="URI" elementID="photoClubWebsite"/>
