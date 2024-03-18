@@ -2,7 +2,7 @@
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
   <file original="en.lproj/Photo-Club-Hub-InfoPlist.strings" source-language="en" target-language="nl" datatype="plaintext">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="15.3" build-num="15E5202a"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="15.3" build-num="15E204a"/>
     </header>
     <body>
       <trans-unit id="CFBundleDisplayName" xml:space="preserve">
@@ -24,7 +24,7 @@
   </file>
   <file original="Localization/en.lproj/Localizable.strings" source-language="en" target-language="nl" datatype="plaintext">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="15.3" build-num="15E5202a"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="15.3" build-num="15E204a"/>
     </header>
     <body>
       <trans-unit id="%lld entries" xml:space="preserve">
@@ -139,9 +139,9 @@ Try dragging down the Photo Clubs screen to reload the default clubs.</source>
 Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorbeeldclubs geladen. </target>
         <note>Hint to the user if the database returns zero PhotoClubs.</note>
       </trans-unit>
-      <trans-unit id="No remark available." xml:space="preserve">
-        <source>No remark available.</source>
-        <target>Er is geen opmerking beschikbaar.</target>
+      <trans-unit id="No remark available for %@ %@." xml:space="preserve">
+        <source>No remark available for %@ %@.</source>
+        <target>Geen bijzonderheid bekend voor %@ %@.</target>
         <note>Shown below map if there is no usable remark in the OrganzationList.json file.</note>
       </trans-unit>
       <trans-unit id="One photographer" xml:space="preserve">
