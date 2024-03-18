@@ -106,7 +106,7 @@
         <memberEntity name="Photographer"/>
     </configuration>
     <configuration name="Configuration_2">
-        <memberEntity name="Language"/>
         <memberEntity name="LocalizedRemark"/>
+        <memberEntity name="Language"/>
     </configuration>
 </model>
