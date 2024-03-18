@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22757" systemVersion="23E214" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Language" representedClassName="Language" syncable="YES" codeGenerationType="class">
-        <attribute name="isoCode_" attributeType="String"/>
-        <attribute name="name_" attributeType="String"/>
+        <attribute name="isoCode" attributeType="String"/>
+        <attribute name="name" attributeType="String"/>
         <relationship name="localizedRemarks_" toMany="YES" deletionRule="Cascade" destinationEntity="LocalizedRemark" inverseName="language_" inverseEntity="LocalizedRemark"/>
         <uniquenessConstraints>
             <uniquenessConstraint>
-                <constraint value="isoCode_"/>
+                <constraint value="isoCode"/>
             </uniquenessConstraint>
         </uniquenessConstraints>
     </entity>
