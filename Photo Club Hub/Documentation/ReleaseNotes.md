@@ -1,14 +1,14 @@
-### 2.5.5 (GitHub commit ???????) ??-03-24
+### 2.5.5 (GitHub commit cffe1e4) 20-03-24
 
 Clubs and Museums screen
     * Remarks can now be shown in any language (rather than just English and Dutch).
 Maintenance
-    * Tested with with iOS 17.4, MacOS 14.4, Xcode 14.3, VisionOS 1.1 beta 4.
+    * Tested with iOS 17.4, MacOS 14.4, Xcode 14.3, VisionOS 1.1 beta 4.
     * Added the Photo Elysée museum in Lausanne.
     * Added two local photo clubs: Boxtel, De Fotoschouw.
     * Added Dutch translations for remarks for all museums.
 
-This is build #4616.
+This is build #4616, as provided for TestFlight beta testing.
 ---------------------------------------------------------------------------
 ### 2.5.4 (GitHub commit 769676c) 02-03-24
 
@@ -21,7 +21,7 @@ Portfolios screen
 Who's Who screen
     * performance improvement: fewer calls to WkWebView(): from once per thumbnail to once per screen.
 Maintenance
-    * Tested with with iOS 17.4 RC, MacOS 14.3, Xcode 14.3 RC, VisionOS 1.1 beta 4.
+    * Tested with iOS 17.4 RC, MacOS 14.3, Xcode 14.3 RC, VisionOS 1.1 beta 4.
     * Added Fotogroep Best as a Level 1 supported photo club.
     * Fixed broken shields in GitHub README.md.
     * Removed empty targets for testing and UI testing.
