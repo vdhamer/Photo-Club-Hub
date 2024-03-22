@@ -8,7 +8,7 @@
 [![Discussions][discussions-shield]][discussions-url]
 [![MIT License][license-shield]][license-url]
 
-![Portfolios Screen](images/portfoliosScreen.png "Portfolios Screen")
+![Screenshots of 3 screens](images/app_screenshots_EN.jpg "Screenshots of app")
 
 <!-- TABLE OF CONTENTS -->
 ## Table of [Contents

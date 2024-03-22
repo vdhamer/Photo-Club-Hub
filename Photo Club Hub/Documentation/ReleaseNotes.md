@@ -3,7 +3,7 @@
 Clubs and Museums screen
     * Remarks can now be shown in any language (rather than just English and Dutch).
 Maintenance
-    * Tested with iOS 17.4, MacOS 14.4, Xcode 14.3, VisionOS 1.1 beta 4.
+    * Tested with iOS 17.4.1, MacOS 14.4, Xcode 14.3, VisionOS 1.1 beta 4.
     * Added the Photo Elysée museum in Lausanne.
     * Added two local photo clubs: Boxtel, De Fotoschouw.
     * Added Dutch translations for remarks for all museums.
