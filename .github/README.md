@@ -91,11 +91,9 @@
 
 ## About the Project
 
-<ul><details open><summary>
-
 ### The App
-
-</summary>
+<ul><details open>
+<summary>Click to hide/unhide</summary>
 
 This iOS app showcases photographs made by members of photography clubs.
 It thus provides a permanent online exposition or gallery with selected work of these photographers.
