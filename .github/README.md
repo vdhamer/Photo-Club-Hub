@@ -111,13 +111,11 @@ This ensures that photo clubs, club members and member images can be added or ch
 See the [Architecture](#the-app-architecture) section for how this information is structured and distributed.
 Help in the form of coding, testing and suggestions is highly appreciated. See the [section](#contributing) on contributing below.
 
-</details>
+</details></ul>
 
-<details open><summary>
-    
 ### Photo Clubs
-
-</summary>
+<ul><details open>
+<summary>Click to expand</summary>
 
 > The app showcases curated images made by members of photo clubs.
 
@@ -170,13 +168,11 @@ For comparison, traditional personal websites stress the photographer's images, 
   * photo galleryC (e.g. macro)
     * :
 
-<a/></p>
+<a/></p></ul>
 
-<ul><details><summary>
-        
 ### Implications
-    
-</summary>
+<ul><details>
+<summary>Click to expand</summary>
 
 If a photographer joined *multiple* photo clubs, the app can show *multiple* portfolios (with independent
 content) for that photographer - one per photo club. This could mean that the photographer is currently 
