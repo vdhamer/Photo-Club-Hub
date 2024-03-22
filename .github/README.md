@@ -19,11 +19,12 @@
             <li><a href="#photo-clubs">Photo Clubs</a></li>
             <li><a href="#implications">Implications of Portfolios</a>
           </ul>
-    <details><summary><a href="#screens">Screens</a></summary>
+    </p>
+    <a href="#the-user-interface-screens">The User Interface Screens</a
           <ul>
-            <li><a href="#the-user-interface-screens">The User Interface Screens</a></li>
+            <li><a href="#foobar">Foobar</a></li>
           </ul>
-    </details>
+    </ps>
     <details><summary><a href="#features">Features</a></summary>
         <ul>
             <li><a href="#opening-animation">Opening Animation</a></li>
