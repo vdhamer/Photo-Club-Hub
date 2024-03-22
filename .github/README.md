@@ -28,6 +28,7 @@
             <li><a href="#the-clubs-and-musea-screen">The Clubs and Musea Screen</a></li>
             <li><a href="#the-preferences-screen">The Preferences Screen</a></li>
             <li><a href="#the-readme-screen">The Readme Screen</a></li>
+            <li><a href="#the-images-screen">The Images Screen</a></li>
           </ul>
     </p>
     <details><summary><a href="#features">Features</a></summary>
@@ -243,19 +244,21 @@ The `Preferences` screen probably should also filter the `Who's Who` screen - bu
 
 ### The Readme Screen
 
-- The `Readme` screen contains background information on the app and info on app usage.
+The `Readme` screen contains background information on the app and info on app usage.
 
-- The `individual portfolio` screen can be reached by tapping on a `portfolio` in either the
-  `Portfolios` or the `Who's Who` screen.
-  The title at the top of the screen shows the selected photographer and selected club affiation:
-  "Jane Doe @ Club F/8".
+### The Images Screen
 
-  Images are shown in present-to-past order, based on the images's _capture_ date.
-  For Fotogroep Waalre, the year the image was made is shown in the caption.
+The `images` screen displays one portfolio (of one photographer associated with one club.
+It can be reached by tapping on a `portfolio` in either the `Portfolios` or the `Who's Who` screen.
+The title at the top of the screen shows the selected photographer and selected club affiation:
+"Jane Doe @ Club F/8".
 
-  You can _swipe_ left or right to manually move backwards or forwards through the portfolio.
-  There is also an _autoplay_ mode for an automatic slide show. This screen is (for Fotogroep Waalre)
-  currently based on a Javascript plug-in (`Juicebox Pro`) that is normally used in website creation.
+Images are shown in present-to-past order, based on the images's _capture_ date.
+For Fotogroep Waalre, the year the image was made is shown in the caption.
+
+You can _swipe_ left or right to manually move backwards or forwards through the portfolio.
+There is also an _autoplay_ mode for an automatic slide show. This screen is (for Fotogroep Waalre)
+currently based on a Javascript plug-in (`Juicebox Pro`) that is normally used in website creation.
 
 </detail></ul></detail>
 </ul>
