@@ -22,7 +22,7 @@
     </p>
     <a href="#the-user-interface-screens">The User Interface Screens</a>
           <ul>
-            <li><a href="#prelude">The Prelude Screen</a></li>
+            <li><a href="#the-prelude-screen">The Prelude Screen</a></li>
           </ul>
     </p>
     <details><summary><a href="#features">Features</a></summary>
