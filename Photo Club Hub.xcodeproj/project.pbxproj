@@ -130,7 +130,7 @@
 		D06588E52BAE31AE000FD7F3 /* imagesScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imagesScreen.png; sourceTree = "<group>"; };
 		D06588E62BAE3E41000FD7F3 /* preferencesScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = preferencesScreen.png; sourceTree = "<group>"; };
 		D06588E72BAE3E49000FD7F3 /* readmeScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = readmeScreen.png; sourceTree = "<group>"; };
-		D06588E82BAE46FF000FD7F3 /* photographersScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photographersScreen.png; sourceTree = "<group>"; };
+		D06588E82BAE46FF000FD7F3 /* whosWhoScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whosWhoScreen.png; sourceTree = "<group>"; };
 		D067549F2942B23F00C0AB08 /* FotogroepWaalreMembersProvide+enumHTMLPageLoadingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FotogroepWaalreMembersProvide+enumHTMLPageLoadingState.swift"; sourceTree = "<group>"; };
 		D06BE9322A4F870B0055B3B1 /* ifDebugUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ifDebugUtils.swift; sourceTree = "<group>"; };
 		D06E91E72B939C1B00D05BC0 /* Photo_Club_Hub_2_5_4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_5_4.xcdatamodel; sourceTree = "<group>"; };
@@ -557,7 +557,7 @@
 				D036591D2BADAD340014F266 /* app_screenshots_EN.jpg */,
 				D06588E52BAE31AE000FD7F3 /* imagesScreen.png */,
 				D06588E62BAE3E41000FD7F3 /* preferencesScreen.png */,
-				D06588E82BAE46FF000FD7F3 /* photographersScreen.png */,
+				D06588E82BAE46FF000FD7F3 /* whosWhoScreen.png */,
 				D06588E72BAE3E49000FD7F3 /* readmeScreen.png */,
 				D06588E42BAE31A0000FD7F3 /* clubsMuseumsScreen.png */,
 				D06588E32BAE2F24000FD7F3 /* portfoliosScreen.png */,
