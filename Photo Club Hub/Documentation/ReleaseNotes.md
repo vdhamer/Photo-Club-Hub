@@ -1,7 +1,7 @@
 ### 2.5.6 (GitHub commit ???????) ??-04-24
 
 Maintenance
-    * x
+    * Improved the README text on GitHub.
 
 This is build #4617.
 ---------------------------------------------------------------------------
