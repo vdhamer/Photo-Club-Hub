@@ -270,6 +270,8 @@ The `Search` bar filters on photographer names.
 The `Prelude` screen shows an opening animation.
 Clicking outside the central image brings you to the central `Portfolios` screen.
 
+![Prelude Screen](images/preludeScreen.png "Prelude Screen")
+
 </detail></ul></detail>
 </ul>
 <p align="right">(<a href="#top">back to top</a>)</p>
