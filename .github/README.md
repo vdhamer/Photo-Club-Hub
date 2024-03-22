@@ -11,7 +11,7 @@
 ![Screenshots of 3 screens](images/app_screenshots_EN.jpg "Screenshots of app")
 
 <!-- TABLE OF CONTENTS -->
-## Table of [Contents
+## Table of Contents
 <ul>
     <details><summary><a href="#about-the-project">About the Project</a></summary>
           <ul>
