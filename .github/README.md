@@ -24,7 +24,7 @@
           <ul>
             <li><a href="#foobar">Foobar</a></li>
           </ul>
-    </ps>
+    </p>
     <details><summary><a href="#features">Features</a></summary>
         <ul>
             <li><a href="#opening-animation">Opening Animation</a></li>
@@ -193,7 +193,7 @@ of this non-club are willing to align (e.g. maintain the list of portfolios=phot
 </ul>
 <p align="right">(<a href="#top">back to top</a>)</p>
  
-## Screens
+## The user interface screens
 
 Usage of the various screens in the user interface:
 <ul>
