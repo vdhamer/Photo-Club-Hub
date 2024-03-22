@@ -225,7 +225,6 @@ The screen can also show any photo museums that happen to be in sight. These hav
 The plan is that the screen can switch between listing all photo clubs and listing all photo museums.
 
 ![Clubs and Museums Screen](images/clubsMuseumsScreen.png "Clubs and Museums Screen")
-  
 
 ### The Images Screen
 
@@ -249,9 +248,13 @@ The `Preferences` screen allows you to configure which types of portfolios you w
 Portfolios screen. You can, for example, choose whether to include former members.
 The `Preferences` screen probably should also filter the `Who's Who` screen - but it doesn't yet.
 
+![Preferences Screen](images/preferencesScreen.png "Preferences Screen")
+
 ### The Readme Screen
 
 The `Readme` screen contains background information on the app and info on app usage.
+
+![Readme Screen](images/readmeScreen.png "Readme Screen")
 
 ### The Who's Who Screen
 
