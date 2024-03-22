@@ -93,7 +93,7 @@
 
 ### The App
 <ul><details open>
-<summary>Click to hide/unhide</summary>
+<summary>Click to hide/expand</summary>
 
 </p>This iOS app showcases photographs made by members of photography clubs.
 It thus provides a permanent online exposition or gallery with selected work of these photographers.
@@ -115,7 +115,7 @@ Help in the form of coding, testing and suggestions is highly appreciated. See t
 
 ### Photo Clubs
 <ul><details open>
-<summary>Click to expand</summary>
+<summary>Click to hide/expand</summary></p>
 
 > The app showcases curated images made by members of photo clubs.
 
@@ -174,7 +174,7 @@ For comparison, traditional personal websites stress the photographer's images, 
 <ul><details>
 <summary>Click to expand</summary>
 
-If a photographer joined *multiple* photo clubs, the app can show *multiple* portfolios (with independent
+</p>If a photographer joined *multiple* photo clubs, the app can show *multiple* portfolios (with independent
 content) for that photographer - one per photo club. This could mean that the photographer is currently 
 a member of _two_ different clubs. But it could also mean that a photographer left one club and joined another club.
 Or variations of these scenarios.
