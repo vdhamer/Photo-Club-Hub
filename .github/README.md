@@ -20,7 +20,7 @@
             <li><a href="#implications">Implications of Portfolios</a>
           </ul>
     </p>
-    <a href="#the-user-interface-screens">The User Interface Screens</a
+    <a href="#the-user-interface-screens">The User Interface Screens</a>
           <ul>
             <li><a href="#foobar">Foobar</a></li>
           </ul>
