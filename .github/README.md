@@ -248,7 +248,7 @@ The `Readme` screen contains background information on the app and info on app u
 
 ### The Images Screen
 
-The `images` screen displays one portfolio (of one photographer associated with one club.
+The `Images` screen displays one portfolio (of one photographer associated with one club.
 It can be reached by tapping on a `portfolio` in either the `Portfolios` or the `Who's Who` screen.
 The title at the top of the screen shows the selected photographer and selected club affiation:
 "Jane Doe @ Club F/8".
