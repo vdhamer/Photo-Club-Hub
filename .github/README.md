@@ -25,7 +25,7 @@
             <li><a href="#the-prelude-screen">The Prelude Screen</a></li>
             <li><a href="#the-portfolios-screen">The Portfolios Screen</a></li>
             <li><a href="#the-whos-who-screen">The Who's Who Screen</a></li>
-            <li><a href="#the-clubs-and-musea-screen">The Clubs and Musea Screen</a></li>
+            <li><a href="#the-clubs-and-museums-screen">The Clubs and Museums Screen</a></li>
             <li><a href="#the-preferences-screen">The Preferences Screen</a></li>
             <li><a href="#the-readme-screen">The Readme Screen</a></li>
             <li><a href="#the-images-screen">The Images Screen</a></li>
@@ -225,7 +225,7 @@ It allows you to first select the photographer and then select that person's clu
 If available, club-independent information (like birthdays) for that photographer is displayed here.
 The `Search` bar filters on photographer names.
 
-### The Clubs and Musea Screen
+### The Clubs and Museums Screen
 
 The `Clubs and Museums` screen lists all photo clubs that are known to the app.
 Each entry predominantly contains a map showing where the club is located and optionally your current location.
@@ -235,6 +235,8 @@ A _purple_ pin on the map shows where the selected club is based (e.g., a school
 A _blue_ pin shows the location of any other photo club that happens to be in the displayed region.
 The screen can also show any photo museums that happen to be in sight. These have different markers than the photo clubs.
 The plan is that the screen can switch between listing all photo clubs and listing all photo museums.
+
+![Clubs and Museums Screen](images/clubsMuseumsScreen.png "Clubs and Museums Screen")
   
 ### The Preferences Screen
 
