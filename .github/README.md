@@ -198,8 +198,9 @@ of this non-club are willing to align (e.g. maintain the list of portfolios=phot
 Usage of the various screens in the user interface:
 <ul>
 ### The Prelude Screen
-- The `Prelude` screen shows an opening animation.
-  Clicking outside the central image brings you to the central `Portfolios` screen.
+
+The `Prelude` screen shows an opening animation.
+Clicking outside the central image brings you to the central `Portfolios` screen.
 
 - The `Portfolios` screen lists all the photo clubs featured by the app.
   It allows you to first select a photo club and then select the portfolio of one of its members.
