@@ -16,7 +16,7 @@
     <details><summary><a href="#about-the-project">About the Project</a></summary>
           <ul>
             <li><a href="#the-app">The App</a></li>
-            <li><a href="#photo-clubs]">Photo Clubs</a></li>
+            <li><a href="#photo-clubs">Photo Clubs</a></li>
             <li><a href="#implications">Implications of Portfolios</a>
           </ul>
     </details>
