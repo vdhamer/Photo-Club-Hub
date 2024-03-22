@@ -24,7 +24,7 @@
           <ul>
             <li><a href="#the-prelude-screen">The Prelude Screen</a></li>
             <li><a href="#the-portfolios-screen">The Portfolios Screen</a></li>
-            <li><a href="#the-who-s-who-screen">The Who's Who Screen</a></li>
+            <li><a href="#the-who's-who-screen">The Who's Who Screen</a></li>
             <li><a href="#the-clubs-and-musea-screen">The Clubs and Musea Screen</a></li>
             <li><a href="#the-foobar-screen">The Foobar Screen</a></li>
             <li><a href="#the-foobar-screen">The Foobar Screen</a></li>
