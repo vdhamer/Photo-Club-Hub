@@ -13,13 +13,12 @@
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
 <ul>
-    <details><summary><a href="#about-the-project">About the Project</a></summary>
+    <a href="#about-the-project">About the Project</a>
           <ul>
             <li><a href="#the-app">The App</a></li>
             <li><a href="#photo-clubs">Photo Clubs</a></li>
             <li><a href="#implications">Implications of Portfolios</a>
           </ul>
-    </details>
     <details><summary><a href="#screens">Screens</a></summary>
           <ul>
             <li><a href="#the-user-interface-screens">The User Interface Screens</a></li>
