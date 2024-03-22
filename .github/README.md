@@ -263,6 +263,8 @@ It allows you to first select the photographer and then select that person's clu
 If available, club-independent information (like birthdays) for that photographer is displayed here.
 The `Search` bar filters on photographer names.
 
+![Who's Who Screen](images/whosWhoScreen.png "Who's Who Screen")
+
 ### The Prelude Screen
 
 The `Prelude` screen shows an opening animation.
