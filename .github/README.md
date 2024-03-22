@@ -177,7 +177,7 @@ For comparison, traditional personal websites stress the photographer's images, 
 </p>If a photographer joined *multiple* photo clubs, the app can show *multiple* portfolios (with independent
 content) for that photographer - one per photo club. This could mean that the photographer is currently 
 a member of _two_ different clubs. But it could also mean that a photographer left one club and joined another club.
-Or variations of these scenarios.
+Or variations of these scenarios.</p>
 
 > In all cases, the `portfolio` concept groups the images both by photographer and by photo club. </p>
 
