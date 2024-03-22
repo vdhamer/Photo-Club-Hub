@@ -255,6 +255,8 @@ It can be reached by tapping on a `portfolio` in either the `Portfolios` or the 
 The title at the top of the screen shows the selected photographer and selected club affiation:
 "Jane Doe @ Club F/8".
 
+![Images Screen](images/imagesScreen.png "Images Screen")
+
 Images are shown in present-to-past order, based on the images's _capture_ date.
 For Fotogroep Waalre, the year the image was made is shown in the caption.
 
