@@ -22,7 +22,7 @@
     </p>
     <a href="#the-user-interface-screens">The User Interface Screens</a>
           <ul>
-            <li><a href="#foobar">Foobar</a></li>
+            <li><a href="#prelude">The Prelude Screen</a></li>
           </ul>
     </p>
     <details><summary><a href="#features">Features</a></summary>
@@ -197,7 +197,7 @@ of this non-club are willing to align (e.g. maintain the list of portfolios=phot
 
 Usage of the various screens in the user interface:
 <ul>
-
+### The Prelude Screen
 - The `Prelude` screen shows an opening animation.
   Clicking outside the central image brings you to the central `Portfolios` screen.
 
