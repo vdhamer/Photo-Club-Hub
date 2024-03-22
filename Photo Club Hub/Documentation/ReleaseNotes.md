@@ -1,7 +1,8 @@
 ### 2.5.6 (GitHub commit ???????) ??-04-24
 
 Maintenance
-    * Improved the README text on GitHub.
+    * Improved the layout of README text on GitHub.
+    * Added screenshots of all app screens to README text on GitHub.
 
 This is build #4617.
 ---------------------------------------------------------------------------
