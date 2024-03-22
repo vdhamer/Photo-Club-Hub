@@ -92,8 +92,7 @@
 ## About the Project
 
 ### The App
-<ul><details open>
-<summary>Click to hide/expand</summary>
+<ul>
 
 </p>This iOS app showcases photographs made by members of photography clubs.
 It thus provides a permanent online exposition or gallery with selected work of these photographers.
@@ -111,11 +110,11 @@ This ensures that photo clubs, club members and member images can be added or ch
 See the [Architecture](#the-app-architecture) section for how this information is structured and distributed.
 Help in the form of coding, testing and suggestions is highly appreciated. See the [section](#contributing) on contributing below.
 
-</details></ul>
+</ul>
 
 ### Photo Clubs
-<ul><details open>
-<summary>Click to hide/expand</summary></p>
+<ul><details>
+<summary>Details (click to expand)</summary></p>
 
 > The app showcases curated images made by members of photo clubs.
 
@@ -172,7 +171,7 @@ For comparison, traditional personal websites stress the photographer's images, 
 
 ### Implications
 <ul><details>
-<summary>Click to expand</summary>
+<summary>Details (click to expand)</summary>
 
 </p>If a photographer joined *multiple* photo clubs, the app can show *multiple* portfolios (with independent
 content) for that photographer - one per photo club. This could mean that the photographer is currently 
