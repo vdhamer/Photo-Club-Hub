@@ -1,14 +1,22 @@
+### 2.5.6 (GitHub commit ???????) ??-04-24
+
+Maintenance
+    * x
+
+This is build #4617.
+---------------------------------------------------------------------------
 ### 2.5.5 (GitHub commit cffe1e4) 20-03-24
 
 Clubs and Museums screen
     * Remarks can now be shown in any language (rather than just English and Dutch).
 Maintenance
-    * Tested with iOS 17.4.1, MacOS 14.4, Xcode 14.3, VisionOS 1.1 beta 4.
+    * Tested on iOS/iPadOS 17.4.1, MacOS 14.4, Xcode 14.3, VisionOS 1.1 beta 4.
     * Added the Photo Elysée museum in Lausanne.
     * Added two local photo clubs: Boxtel, De Fotoschouw.
     * Added Dutch translations for remarks for all museums.
+    * Updated opening image of README on GitHub.
 
-This is build #4616, as provided for TestFlight beta testing.
+This is build #4616, and was submitted as release 2.5.5 on the Apple App Store.
 ---------------------------------------------------------------------------
 ### 2.5.4 (GitHub commit 769676c) 02-03-24
 
@@ -27,7 +35,7 @@ Maintenance
     * Removed empty targets for testing and UI testing.
     * Removed Version2Changes.md file (no longer being updated).
 
-This is build #4615, and was sent for review to Apple App Store.
+This is build #4615, and is available as release 2.5.4 on the Apple App Store.
 ---------------------------------------------------------------------------
 ### 2.5.3 (GitHub commit 83a9e0c) 12-02-24
 
