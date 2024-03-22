@@ -197,6 +197,7 @@ of this non-club are willing to align (e.g. maintain the list of portfolios=phot
 
 Usage of the various screens in the user interface:
 <ul>
+
 ### The Prelude Screen
 
 The `Prelude` screen shows an opening animation.
