@@ -24,9 +24,9 @@
           <ul>
             <li><a href="#the-portfolios-screen">The Portfolios Screen</a></li>
             <li><a href="#the-clubs-and-museums-screen">The Clubs and Museums Screen</a></li>
+            <li><a href="#the-images-screen">The Images Screen</a></li>
             <li><a href="#the-preferences-screen">The Preferences Screen</a></li>
             <li><a href="#the-readme-screen">The Readme Screen</a></li>
-            <li><a href="#the-images-screen">The Images Screen</a></li>
             <li><a href="#the-whos-who-screen">The Who's Who Screen</a></li>
             <li><a href="#the-prelude-screen">The Prelude Screen</a></li>
           </ul>
@@ -226,15 +226,6 @@ The plan is that the screen can switch between listing all photo clubs and listi
 
 ![Clubs and Museums Screen](images/clubsMuseumsScreen.png "Clubs and Museums Screen")
   
-### The Preferences Screen
-
-The `Preferences` screen allows you to configure which types of portfolios you want to include in the
-Portfolios screen. You can, for example, choose whether to include former members.
-The `Preferences` screen probably should also filter the `Who's Who` screen - but it doesn't yet.
-
-### The Readme Screen
-
-The `Readme` screen contains background information on the app and info on app usage.
 
 ### The Images Screen
 
@@ -251,6 +242,16 @@ For Fotogroep Waalre, the year the image was made is shown in the caption.
 You can _swipe_ left or right to manually move backwards or forwards through the portfolio.
 There is also an _autoplay_ mode for an automatic slide show. This screen is (for Fotogroep Waalre)
 currently based on a Javascript plug-in (`Juicebox Pro`) that is normally used in website creation.
+
+### The Preferences Screen
+
+The `Preferences` screen allows you to configure which types of portfolios you want to include in the
+Portfolios screen. You can, for example, choose whether to include former members.
+The `Preferences` screen probably should also filter the `Who's Who` screen - but it doesn't yet.
+
+### The Readme Screen
+
+The `Readme` screen contains background information on the app and info on app usage.
 
 ### The Who's Who Screen
 
