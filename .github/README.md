@@ -373,7 +373,7 @@ fetch the encrypted data rather than the unencrypted dummy data.
 But that data is still encrypted by a private encryption key that is not provided on GitHub.
 
 </details></ul>
-</details>
+</details></ul>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
