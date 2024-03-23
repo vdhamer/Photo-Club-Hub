@@ -1,8 +1,8 @@
 ### 2.5.6 (GitHub commit ???????) ??-04-24
 
 Maintenance
-    * Improved the layout of README text on GitHub.
-    * Added screenshots of all app screens to README text on GitHub.
+    * Fixed a problem in the layout of README.md text on GitHub (`detail`/`summary`).
+    * Added screenshots of all screens to README.md text on GitHub.
 
 This is build #4617.
 ---------------------------------------------------------------------------
@@ -143,6 +143,7 @@ Maintenance
 This is build #4603 in Apple's App Store.
 ---------------------------------------------------------------------------
 ### 2.4.2 (GitHub commit 3548647) 13-09-23
+
 Portfolio screen
     * Fixed bug where users were incorrectly labelled "former member". This release is to fix this bug.
 Readme screen

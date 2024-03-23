@@ -169,7 +169,6 @@
 		D08416922B2FAEB1000F316D /* FG_deGender.memberlist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FG_deGender.memberlist.json; sourceTree = "<group>"; };
 		D08DC6052AE57294008DBD68 /* SinglePortfolioLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePortfolioLinkView.swift; sourceTree = "<group>"; };
 		D0968F652A76F8A00096987A /* FotogroepWaalreMembersProvider+insertOnlineMemberData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FotogroepWaalreMembersProvider+insertOnlineMemberData.swift"; sourceTree = "<group>"; };
-		D097FF682B52FF9C0045EE5C /* dataModelSourceFile.xcdatamodeld.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = dataModelSourceFile.xcdatamodeld.zip; sourceTree = "<group>"; };
 		D09C90642BA8F171005FA3D6 /* Photo_Club_Hub_2_5_5a.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_5_5a.xcdatamodel; sourceTree = "<group>"; };
 		D0A0B6842AA930E90078DE9A /* Photo_Club_Hub.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub.xcdatamodel; sourceTree = "<group>"; };
 		D0A0B6872AA932A10078DE9A /* Photo_Club_Hub_2_4_1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_4_1.xcdatamodel; sourceTree = "<group>"; };
@@ -556,15 +555,14 @@
 			isa = PBXGroup;
 			children = (
 				D036591D2BADAD340014F266 /* app_screenshots_EN.jpg */,
-				D06588E52BAE31AE000FD7F3 /* imagesScreen.png */,
-				D06588E92BAE4948000FD7F3 /* whosWhoScreen.png */,
-				D06588E62BAE3E41000FD7F3 /* preferencesScreen.png */,
-				D06588EA2BAE5071000FD7F3 /* preludeScreen.png */,
-				D06588E72BAE3E49000FD7F3 /* readmeScreen.png */,
-				D06588E42BAE31A0000FD7F3 /* clubsMuseumsScreen.png */,
 				D06588E32BAE2F24000FD7F3 /* portfoliosScreen.png */,
+				D06588E42BAE31A0000FD7F3 /* clubsMuseumsScreen.png */,
+				D06588E52BAE31AE000FD7F3 /* imagesScreen.png */,
+				D06588E62BAE3E41000FD7F3 /* preferencesScreen.png */,
+				D06588E72BAE3E49000FD7F3 /* readmeScreen.png */,
+				D06588E92BAE4948000FD7F3 /* whosWhoScreen.png */,
+				D06588EA2BAE5071000FD7F3 /* preludeScreen.png */,
 				D018682D2B6DB34700CF1629 /* dataModel.png */,
-				D097FF682B52FF9C0045EE5C /* dataModelSourceFile.xcdatamodeld.zip */,
 			);
 			path = images;
 			sourceTree = "<group>";
