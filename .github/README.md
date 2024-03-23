@@ -301,11 +301,8 @@ red, blue, and _two_ green pixels.
 ## Features
 <ul>
 
-<details open><summary>
- 
 ### Multi-club Support
 
-</summary>
 Version 1 of the app only supported Photo Club Waalre (known as *Fotogroep Waalre* in Dutch).
 Version 2 added support for multiple photo clubs. This means:
 
@@ -314,13 +311,10 @@ Version 2 added support for multiple photo clubs. This means:
 - a photographer is shown associated with multiple clubs if applicable (e.g., former club, current club)
 - the app is stepwise being prepared for larger amounts of data (data is distributed over sites)
 - the app is starting to enable that clubs can manage their own data (data "within" a club is managed by the club)
-</details>
-
-<details><summary>
 
 ### Photo Museums
 
-</summary>
+<details><summary>Details (click to expand)</summary>
 
 The maps showing the location of photo clubs can also show the locations of selected photo museums.
 A photo museum is not a photo club and is displayed on the maps using a dedicated marker.
@@ -332,11 +326,10 @@ The file format is documented below under [How Data is Loaded / The New Approach
 
 </details>
 
-<details><summary>
-
 ### Data Privacy
 
-</summary>
+<details><summary>Details (click to expand)</summary>
+
 The phone numbers, e-mail addresses and ages of members of Fotogroep Waalre may not be public information.
 They are read by the app, but not actually shown or used at present. For good measure, the data is stored
 in encrypted form and decryted by the version of the app in the Apple App Store. The GitHub version
