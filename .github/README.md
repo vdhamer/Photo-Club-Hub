@@ -102,12 +102,12 @@
 </p>This iOS app showcases photographs made by members of photography clubs.
 It thus provides a permanent online exposition or gallery with selected work of these photographers.
 
-Version 1 of the app only supported a _single_ photo club in Waalre, a smallish town in the Netherlands.
+</p><Version 1 of the app only supported a _single_ photo club in Waalre, a smallish town in the Netherlands.
 Version 2 added support for _multiple_ photo clubs. This allows viewers to see images from multiple clubs within a single app.
 It also provides a degree of uniformity, thus sparing the user from having to find each club's website, 
 discovering how to navigate within each site and how to browse through the individual images. 
 Starting in version 2 the app's name was changed from _Photo Club Waalre_ to _Photo Club Hub_. 
-    
+   
 To achieve this, the app retrieves software-readable lists of photo clubs, their
 lists of members and their curated images from one or more servers. 
 This ensures that photo clubs, club members and member images can be added or changed without requiring a new release of the app.
