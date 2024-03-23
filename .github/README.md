@@ -198,7 +198,7 @@ of this non-club are willing to align (e.g. maintain the list of portfolios=phot
 </ul>
 <p align="right">(<a href="#top">back to top</a>)</p>
  
-## The user interface screens
+## The User Interface Screens
 
 Usage of the various screens in the user interface:
 <ul>
