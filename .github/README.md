@@ -249,7 +249,7 @@ The `Preferences` screen probably should also filter the `Who's Who` screen - bu
 
 ![Preferences Screen](images/preferencesScreen.png "Preferences Screen")
 
-### The Readme Screen
+### The `Readme` Screen
 
 The `Readme` screen contains background information on the app and info on app usage.
 
