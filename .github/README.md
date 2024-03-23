@@ -371,7 +371,7 @@ But that data is still encrypted by a private encryption key that is not provide
 
 ## Installation
 
-If you just want to install the binary version of the app, just get it from Apple's app store ([link](https://apps.apple.com/nl/app/photo-club-waalre/id1178324330?l=en)).
+If you just want to install the binary version of the app, just get it from Apple's app store ([link](https://apps.apple.com/nl/app/photo-club-hub/id1178324330?l=en)).
 
 <ul>
 <details><summary>
