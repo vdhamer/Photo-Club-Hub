@@ -344,7 +344,7 @@ But encryption code can draw a lot of attention, so we are explaining it here
 mainly so you don't waste time trying to figure our what's going on or whether
 you consider that secure enough. It simply isn't a big deal :nerd_face:.
 
-<\p>So... one tiny data file in the repository is encrypted. 
+</p>So... one tiny data file in the repository is encrypted. 
 As you will expect, the key needed to decrypt the file is *not* provided.
 The file, in its decrypted form, gives access to a password-protected HTML page on a server.
 The HTML page contains telephone numbers and e-mail addresses of members of Photo Club Waalre. 
@@ -353,11 +353,11 @@ Apart from the fact that the data is of little interest, this has no impact beca
   which doesn't give access to any sensitive data about members: it contains dummy data.
 - phone numbers and e-mail addresses (real or dummy) are not used yet by the app.
 
-<\p>So, all this hasstle is just so that a future App Store version *could* allow club members to
+</p>So, all this hasstle is just so that a future App Store version *could* allow club members to
 unlock extra functionality using a club-specific password,
 but without leaking the supposedly sensitive data to non-members via GitHub.
 
-<\p>But how would this future club-specific password be protected?
+</p>But how would this future club-specific password be protected?
 The app might try to check a hash of the provided password.
 But a simple source code modification then gives access to the encrypted version of the web page.
 Actually, not quite 🤓. Bypassing the password via a code modification, would allow the app to
