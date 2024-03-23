@@ -108,7 +108,7 @@ It also provides a degree of uniformity, thus sparing the user from having to fi
 discovering how to navigate within each site and how to browse through the individual images. 
 Starting in version 2 the app's name was changed from _Photo Club Waalre_ to _Photo Club Hub_. 
    
-To achieve this, the app retrieves software-readable lists of photo clubs, their
+</p>To achieve this, the app retrieves software-readable lists of photo clubs, their
 lists of members and their curated images from one or more servers. 
 This ensures that photo clubs, club members and member images can be added or changed without requiring a new release of the app.
 
