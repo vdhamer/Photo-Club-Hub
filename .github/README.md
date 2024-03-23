@@ -203,7 +203,7 @@ of this non-club are willing to align (e.g. maintain the list of portfolios=phot
 Usage of the various screens in the user interface:
 <ul>
 
-### The Portfolios Screen
+### The `Portfolios` Screen
 
 The `Portfolios` screen lists all the photo clubs featured by the app.
 It allows you to first select a photo club and then select the portfolio of one of its members.
@@ -212,7 +212,7 @@ Swiping left deletes an entry, but this is not normally needed and is not perman
 
 ![Portfolios Screen](images/portfoliosScreen.png "Portfolios Screen")
 
-### The Clubs and Museums Screen
+### The `Clubs and Museums` Screen
 
 The `Clubs and Museums` screen lists all photo clubs that are known to the app.
 Each entry predominantly contains a map showing where the club is located and optionally your current location.
@@ -225,7 +225,7 @@ The plan is that the screen can switch between listing all photo clubs and listi
 
 ![Clubs and Museums Screen](images/clubsMuseumsScreen.png "Clubs and Museums Screen")
 
-### The Images Screen
+### The `Images` Screen
 
 The `Images` screen displays one portfolio (of one photographer associated with one club.
 It can be reached by tapping on a `portfolio` in either the `Portfolios` or the `Who's Who` screen.
@@ -241,7 +241,7 @@ You can _swipe_ left or right to manually move backwards or forwards through the
 There is also an _autoplay_ mode for an automatic slide show. This screen is (for Fotogroep Waalre)
 currently based on a Javascript plug-in (`Juicebox Pro`) that is normally used in website creation.
 
-### The Preferences Screen
+### The `Preferences` Screen
 
 The `Preferences` screen allows you to configure which types of portfolios you want to include in the
 Portfolios screen. You can, for example, choose whether to include former members.
@@ -255,7 +255,7 @@ The `Readme` screen contains background information on the app and info on app u
 
 ![Readme Screen](images/readmeScreen.png "Readme Screen")
 
-### The Who's Who Screen
+### The `Who's Who` Screen
 
 The `Who's Who` screen lists all the photographers known to the app.
 It allows you to first select the photographer and then select that person's club-specific portfolio.
@@ -264,7 +264,7 @@ The `Search` bar filters on photographer names.
 
 ![Who's Who Screen](images/whosWhoScreen.png "Who's Who Screen")
 
-### The Prelude Screen
+### The `Prelude` Screen
 
 The `Prelude` screen shows an opening animation.
 Clicking outside the central image brings you to the central `Portfolios` screen.
