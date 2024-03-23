@@ -244,7 +244,7 @@ currently based on a Javascript plug-in (`Juicebox Pro`) that is normally used i
 ### The `Preferences` Screen
 
 The `Preferences` screen allows you to configure which types of portfolios you want to include in the
-Portfolios screen. You can, for example, choose whether to include former members.
+`Portfolios` screen. You can, for example, choose whether to include former members.
 The `Preferences` screen probably should also filter the `Who's Who` screen - but it doesn't yet.
 
 ![Preferences Screen](images/preferencesScreen.png "Preferences Screen")
@@ -285,7 +285,7 @@ Tapping on the icon turns it into an interactive image illustrating how most dig
 > pixel: the two missing color channels for that pixel are estimated using color information from surrounding pixels.
 
 Tapping *inside* the image allows you to zoom in or out to your heart's content.
-Tapping *outside* the image brings you to the central screen of the app: the Portfolios screen.
+Tapping *outside* the image brings you to the central screen of the app: the `Portfolios` screen.
 
 You will see the Prelude animation after you shut down and restart the app.
 On wide screens (iPad, iPhone Pro Max) you can see the animation again using an extra navigation button at the top of the screen.
@@ -522,7 +522,7 @@ That data might be a bit outdated, but is should be accurate enough to start off
 
 To handle any data updates, asynchrous calls fetch fresher data over the network. 
 And the MVVM architecture uses this to update the user interface `Views` as soon as the requested data arrives.
-So occasionally, maybe one or two seconds after the app launches, the user may see the Portfolios screen update. 
+So occasionally, maybe one or two seconds after the app launches, the user may see the `Portfolios` screen update. 
 This can happen, for example if a club's online member list changed since the previous session.
 
 To be precise, the above is the target architecture. Right now there are still a few gaps -
