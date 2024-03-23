@@ -33,9 +33,8 @@
     </p>
     <details><summary><a href="#features">Features</a></summary>
         <ul>
-            <li><a href="#opening-animation">Opening Animation</a></li>
             <li><a href="#multi-club-support">Multi-club Support</a></li>
-            <li><a href="#photo-museums-on-the-maps">Photo Museums</a></li>
+            <li><a href="#photo-museums">Photo Museums</a></li>
             <li><a href="#data-privacy">Data Privacy</a></li>
                 <ul>
                     <li>Encryption Details</li>
@@ -272,38 +271,35 @@ Clicking outside the central image brings you to the central `Portfolios` screen
 
 ![Prelude Screen](images/preludeScreen.png "Prelude Screen")
 
-</detail></ul></detail>
-</ul>
-<p align="right">(<a href="#top">back to top</a>)</p>
- 
-## Features
-<ul>
-<details><summary>
+<ul><details>
+<summary>Details about Prelude screen (click to expand)</summary>
 
-### Opening Animation
-
-</summary>
-When the app launches, it shows a large version of the app’s icon. 
+</p>When the app launches, it shows a large version of the app’s icon. 
 Tapping on the icon turns it into an interactive image illustrating how most digital cameras detect color.</p>
 
 > This involves a [Bayer color filter array](https://en.wikipedia.org/wiki/Bayer_filter)
 > that filters the light reaching each photocell or pixel.
 > In a 24 MPixel camera, the image sensor typically consist of an array of 4000 by 6000 photocells.
-> Each photocell on the chip is not color-sensitive. But by placing a miniscule red, green of blue color filter on
+> Each photocell on the chip itself is not color-sensitive. But by placing a miniscule red, green of blue color filter on
 > cop, it because best at seeing one specific color range. Thus in most cameras, only one color is measured per
 > pixel: the two missing color channels for that pixel are estimated using color information from surrounding pixels.
 
 Tapping *inside* the image allows you to zoom in or out to your heart's content.
-Tapping *outside* the image brings you to the central screen of the app: a list of Portfolios.
+Tapping *outside* the image brings you to the central screen of the app: the Portfolios screen.
 
-You will see the Prelude animation again whenever you shut down and restart the app.
-On wide screens (iPad, iPhone Pro Max) there is a navigation button that allows you to go back.
+You will see the Prelude animation after you shut down and restart the app.
+On wide screens (iPad, iPhone Pro Max) you can see the animation again using an extra navigation button at the top of the screen.
 
 Why provide such a fancy opening screen? Well, it was partly a nice challenge to make (it actually runs
-on the GPU cores). But it also helps explain the app's logo: the Bayer filter array indeed consists of
-one red, one blue, and _two_ green pixels.
-
+on your device's GPU cores). But it also helps explain the app's logo: the Bayer filter array indeed consists of an array of repeated
+red, blue, and _two_ green pixels.
 </details>
+    
+</ul></ul>
+<p align="right">(<a href="#top">back to top</a>)</p>
+ 
+## Features
+<ul>
 
 <details open><summary>
  
