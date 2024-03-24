@@ -35,10 +35,11 @@
         <ul>
             <li><a href="#multi-club-support">Multi-club Support</a></li>
             <li><a href="#photo-museums">Photo Museums</a></li>
-            <li><a href="#data-privacy">Data Privacy</a></li>
+            <details><summary><li><a href="#data-privacy">Data Privacy</a></li></summary>
                 <ul>
                     <li>Encryption Details</li>
                 </ul>
+            </details>
         </ul>
     </details>
     <details open><summary><a href="#installation">Installation</a></summary>
@@ -46,10 +47,11 @@
                <li><a href="#built-with">Built-With</a></li>
                <li><a href="#cloning-the-repository">Cloning the Repository</a></li>
                <li><a href="#code-signing">Code Signing</a></li>
-               <li><a href="#upgrading-the-app">Upgrading the App</a></li>
-               <ul>
-                    <li>Schema Migration</li>
-               </ul>
+               <details><summary><li><a href="#upgrading-the-app">Upgrading the App</a></li></summary>
+                   <ul>
+                       <li>Schema Migration</li>
+                   </ul>
+               </details>
          </ul>
     </details>
     <a href="#contributing">Contributing</a>
