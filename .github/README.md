@@ -370,9 +370,8 @@ But that data is still encrypted by a private encryption key that is not provide
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Installation
-<ul>
 
-If you simly want to install the binary version of the app, just install it from Apple's app store ([link](https://apps.apple.com/nl/app/photo-club-hub/id1178324330?l=en)).
+<ul>If you simly want to install the binary version of the app, just install it from Apple's app store ([link](https://apps.apple.com/nl/app/photo-club-hub/id1178324330?l=en)).
 
 ### Built-With
 
@@ -426,7 +425,8 @@ If you remove and reinstall the app, the Core Data database is lost, but this is
 database so far doesn't contain any user data.
 Schema migration is standard feature of Apple's Core Data framework, although the app does its bit
 so that Core Data can track, for example, renamed struct types or renamed properties.
-</details></ul>
+</details>
+</ul>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
