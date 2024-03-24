@@ -377,33 +377,35 @@ But that data is still encrypted by a private encryption key that is not provide
 
 To add a club to the app, the app needs information provided in multiple steps:
 
-- the club’s name and location (`Level 1`),
-- a list of the club's members (`Level 2`), and
-- links to the member's portfolios (`Level 3`). 
+- `Level 1` provides the club’s name and location.
+- `Level 2` adds a list of the club's members.
+- `Level 3` adds links to the member's portfolios. 
 
-These steps are called `Levels` because they need to be done in order and 
-because you can __pause__ as long as necessary at one level before proceeding to the next.
-As the level of a club increases, the app provides more functionality.
+These steps are called `Levels` because they need to be done in order and, 
+as the level of a club increases, the app provides additional functionality.
+A club can wait as long as needed before proceeding to the next level.
+This means that the app will support a mix of clubs at various levels.
 
-Museums are added in a similar way, although museums don't use `Level 2` or `Level 3`.
+Museums are added in a similar way, although museums don't need `Level 2 or 3`.
 
 ![Screenshots of 3 screens](images/app_screenshots_EN.jpg "Screenshots of app")
 
 When a club is at `Level 1`, it shows up as a marker on the maps (left screenshot).
 This is because the app knows club's location and name.
 
-When a club reaches `Level 2`, the app is aware of the names and roles of club members.
-As illustrated in the center screenshot, the club and its members now show up in the `Portfolio` and `Who's Who` screens.
-Clubs are _not_ visible in either of these screens until they reach `Level 2`.
+When a club reaches `Level 2`, the app knows the names and roles of club members.
+As illustrated in the center screenshot, the club and its members are now shown on the `Portfolio` and `Who's Who` screens.
+Clubs with zero (known) members are _not_ shown on these screens.
 
 When a club reaches `Level 3`, the app is aware of the image portfolio per club member (right screenshot), 
-and allows an app user to browse through that club member's photos.
+and allows app users to browse through member photos.
 Strictly speaking some club members could have portfolios while other's don't. 
-Attempting to see the portfolio of a club member with no (available) portfolio results in a placeholder message of some sort.
+Attempting to reach the portfolio of a club member without an available portfolio results in a placeholder of some sort.
 
 ### Level 1. Adding Clubs
 
-Adding photo clubs (or museums) at `Level 1` requires providing the items name, location and several optional URLs. The enables the app to list the item on the `Clubs and Museums` screen and display its location on maps by adding a graphical marker.
+Adding photo clubs (or museums) at `Level 1` requires providing the items name, location and several optional URLs. 
+The enables the app to list the item on the `Clubs and Museums` screen and display its location on maps by adding a graphical marker.
 
 `Level 1` data is stored in a _single_ central online `OrganizationList.json` 
 [file](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/ViewModel/Lists/OrganizationList.json) 
