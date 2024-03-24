@@ -40,9 +40,9 @@
     <details open><summary><a href="#adding-photo-clubs">Adding Photo Clubs</a></summary>
         <ul>
             <li><a href="#three-levels">Three Levels</a></li>
-            <li><a href="#level-1:-adding-clubs-and-musea">Level 1: Adding Clubs and Musea</a></li>
-            <li><a href="#level-2:-adding-members">Level 2: Adding Members</a></li>
-            <li><a href="#level-3:-adding-images">Level 3: Adding Images</a>
+            <li><a href="#level-1--adding-clubs-and-musea">Level 1: Adding Clubs and Musea</a></li>
+            <li><a href="#level-2--adding-members">Level 2: Adding Members</a></li>
+            <li><a href="#level-3--adding-images">Level 3: Adding Images</a>
         </ul>
     </details>
     <details open><summary><a href="#installation">Installation</a></summary>
