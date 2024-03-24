@@ -470,8 +470,9 @@ Note that:
 - The `wikipedia` field contains a link to a Wikipedia page for a museum. It can be used for photo clubs, but it unlikely that a photo club will have an entry in Wikipedia.
 - The `remark` field contain a brief note with something worth knowing about the club or museum. The `remark` contains an array of alternative strings in multiple languages. The app chooses a language to display based on the device's language setting.
     - `language` is the two or three letter [ISO-639](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes) code for a language. `EN` is English, `FI` is Finnish.
-    - `value` is the text to display for that particular language 
-- The `nlSpecific` container has optional fields that are only relevant for clubs in the Netherlands. `fotobondNumber` is an ID number assigned by the Dutch national federation of photo clubs.
+    - `value` is the text to display for that particular language
+    - If the device's preferred language doesn't match any of the provided languages, the app will default to EN, if available. If EN is unavailable, it will use an arbitrary language.
+- The `nlSpecific` container holds fields that are only relevant for clubs in the Netherlands. `fotobondNumber` is an ID number assigned by the Dutch national federation of photo clubs.
 </details></p>
 
 ### Level 2. Adding Members
