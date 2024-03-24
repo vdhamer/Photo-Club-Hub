@@ -375,13 +375,17 @@ But that data is still encrypted by a private encryption key that is not provide
 
 ## Adding Photo Club Data
 
-For a club to be included in the app, the app needs basic information like the club’s name and location (`Level 1`),
-a list of its members (`Level 2`) and links to image portfolios (`Level 3`). 
-Museaums are added in a similar way, although museums don't have a `Level 2` or `Level 3`.
+To add a club to the app, the app needs information provided in multiple steps:
 
-These 3 stages of adding information are called `Levels` because they should be done in order and 
-because you can __pause__ as long as necessary at `Level 1` or `Level 2` before proceeding to the next level.
-This means the app can contain a mix of clubs that are respectively at `Level 1`, `Level 2`, and `Level 3`.
+- the club’s name and location (`Level 1`),
+- a list of the club's members (`Level 2`), and
+- links to the member's portfolios (`Level 3`). 
+
+These steps are called `Levels` because they need to be done in order and 
+because you can __pause__ as long as necessary at one level before proceeding to the next.
+As the level of a club increases, the app provides more functionality.
+
+Museums are added in a similar way, although museums don't use `Level 2` or `Level 3`.
 
 ![Screenshots of 3 screens](images/app_screenshots_EN.jpg "Screenshots of app")
 
