@@ -31,7 +31,7 @@
             <li><a href="#the-prelude-screen">The Prelude Screen</a></li>
           </ul>
     </p>
-    <details><summary><a href="#features">Features</a></summary>
+    <details open><summary><a href="#features">Features</a></summary>
         <ul>
             <li><a href="#multi-club-support">Multi-club Support</a></li>
             <li><a href="#photo-museums">Photo Museums</a></li>
@@ -41,7 +41,7 @@
                 </ul>
         </ul>
     </details>
-    <details><summary><a href="#installation">Installation</a></summary>
+    <details open><summary><a href="#installation">Installation</a></summary>
          <ul>
                <li><a href="#built-with">Built-With</a></li>
                <li><a href="#cloning-the-repository">Cloning the Repository</a></li>
