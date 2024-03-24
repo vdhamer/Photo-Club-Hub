@@ -39,7 +39,7 @@
     </details>
     <details open><summary><a href="#adding-photo-clubs">Adding Photo Clubs</a></summary>
         <ul>
-            <li><a href="#level-1-adding-clubs-and-musea">Level 1. Adding Clubs and Musea</a></li>
+            <li><a href="#level-1-adding-clubs">Level 1. Adding Clubs</a></li>
             <li><a href="#level-2-adding-members">Level 2. Adding Members</a></li>
             <li><a href="#level-3-adding-images">Level 3. Adding Images</a>
         </ul>
@@ -373,16 +373,28 @@ But that data is still encrypted by a private encryption key that is not provide
 </details></ul>
 </details></ul>
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 ## Adding Photo Clubs
 
 ![Screenshots of 3 screens](images/app_screenshots_EN.jpg "Screenshots of app")
 
-For a club to be included, the app needs basic information like the club’s name and location (`Level 1`),
-a list of its members (`Level 2`) and links to image portfolios (`Level 3`).
+For a club to be included in the app, the app needs basic information like the club’s name and location (`Level 1`),
+a list of its members (`Level 2`) and links to image portfolios (`Level 3`). 
+Adding musea are handled in the same way, although this only involves `Level 1` because a museum has no members with image portfolios.
 
-### Level 1. Adding Clubs and Musea
+These 3 steps are called `Levels` because you can __pause__ as long as you like on any level before upgrading a club to the next level.
+This means the app can contain a mix of `Level 1`, `Level 2`, and `Level 3` clubs.
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+When a club is (temporarily or permanently) at `Level 1`, it is visible as a marker on the maps (left screenshot).
+The app thus knows the name and location of the club (and a bit more, see below).
+
+When a club is (temporarily or permanently) at `Level 2`, the app is then aware of the names and roles (e.g. `former`, `chairman`) of club members.
+As illustrated in the center screenshot, the club and its members then then show up in the `Portfolio` and `Who's Who` screens.
+
+When a club is at the final `Level 3`, the app can find the selected images per club member (right screenshot), allowing a user to browse these images.  
+
+### Level 1. Adding Clubs
 
 <details><Summary>Level 1 details (click to expand)</Summary>
     
