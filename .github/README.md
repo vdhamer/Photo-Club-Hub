@@ -456,8 +456,6 @@ translations, and icon design improvements.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-</ul>
-
 ## The App Architecture
 
 The app uses a [SwiftUI-based MVVM](https://www.hackingwithswift.com/books/ios-swiftui/introducing-mvvm-into-your-swiftui-project)
