@@ -439,15 +439,13 @@ You can submit an `Issue` with a tag like ”enhancement" or “bug” without c
 Essentially that is an idea, bug, or feature request, rather than an offer to help.
 </ul>
 
-<ul><details><summary>
-
 ### Areas for Contribution
 
-</summary>
+<ul><details><summary>Details(click to expand)</summary>
 Possible contributions include adding features, code improvements, ideas on architecture and interface
 specifications, and possibly even a dedicated backend server.
 
-Contributions that do not involve coding include beta testing, thoughtful and detailed feature requests,
+<\p>Contributions that do not involve coding include beta testing, thoughtful and detailed feature requests,
 translations, and icon design improvements.
 </details></ul>
 
