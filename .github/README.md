@@ -467,8 +467,6 @@ Note the comma's delimiting the array elements - the JSON format is picky about 
 You can check the basic syntax of JSON files using an online JSON validator.
 </details>
 
-#### Level 1 Fields
-
 <details><Summary>Level 1 fields (click to expand)</Summary></p>
 
 - **Mandatory** fields
@@ -510,7 +508,7 @@ MemberList also includes the URL of an image used as thumbnail for that member.
 MemberList can be stored and managed on the club's own server. The file needs to be in a JSON format to allow the app to interpret it correctly.
 A future editing tool (app or web-based) would help ensure syntactic and schema consistency.</p>
 
-<details><Summary>Level 2 details (click to expand)</Summary></p>
+<details><Summary>Level 2 example (click to expand)</Summary></p>
 
 Here is an example of the (draft) format of a MemberList of a photo club. This shortened list contains only one member:
 
@@ -549,8 +547,9 @@ Here is an example of the (draft) format of a MemberList of a photo club. This s
     ]
 }
 ```
+</detail>
 
-#### Level 2 Fields
+<details><Summary>Level 2 example (click to expand)</Summary></p>
 
 - **Mandatory** fields
     - `club` is the same as one object/record in the OrganizationList. It documents the club that the MemberList is for.
