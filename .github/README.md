@@ -311,10 +311,11 @@ Version 2 added support for multiple photo clubs. This means:
 
 ### Photo Museums
 
+</p>The maps showing the location of photo clubs also show the locations of selected photo museums.
+
 <details><summary>Details (click to expand)</summary>
 
-</p>The maps showing the location of photo clubs can also show the locations of selected photo museums.
-A photo museum is not a photo club and is displayed on the maps using a dedicated marker.
+</p>A photo museum is not a photo club and is displayed on the maps using a dedicated marker.
 Techncially, the app doesn't allow museums to have "members" that share images with the museum.
 
 </p>Consider the showing of museums a bonus that may interest some users.
