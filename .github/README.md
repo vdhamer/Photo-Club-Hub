@@ -397,11 +397,12 @@ Xcode covers the installation of the binary on a physical device or on an Xcode 
 ### Code Signing
 
 <details><summary>Details (click to expand)</summary>
-During the build you may be prompted to provide a developer license (personal or commercial)
+
+</p>During the build you may be prompted to provide a developer license (personal or commercial)
 when you want to install the app on a physical device. This is a standard Apple iOS policy
 rather than something specific to this app.
 
-<\p>Starting with iOS 16.0 you will also need to configure physical devices to allow them to run apps
+</p>Starting with iOS 16.0 you will also need to configure physical devices to allow them to run apps
 that have _not_ been distributed via the Apple App Store. This configuration requires enabling
 `Developer Mode` on the device using `Settings` > `Privacy & Security` > `Developer Mode`.
 Again, this is a standard Apple iOS policy. This doesn't apply to MacOS.
@@ -411,7 +412,7 @@ Again, this is a standard Apple iOS policy. This doesn't apply to MacOS.
 
 <details><summary>Details (click to expand)</summary>
 
-If you update to a newer build of the app, all app data stored in the device's internal data storage 
+</p>If you update to a newer build of the app, all app data stored in the device's internal data storage 
 will remain available. If you choose to remove and reinstall the app, the database content will be lost.
 Fortunately, this has no real implications for the user as the data storage doesn't contain any relevant user data (so far).
 </details>
@@ -419,7 +420,8 @@ Fortunately, this has no real implications for the user as the data storage does
 #### Schema Migration
 
 <ul><details><summary>Details (click to expand)</summary>
-If the data structure has changed from one version to a later version,
+
+</p>If the data structure has changed from one version to a later version,
 Core Data will automatically perform a so-called schema migration.
 If you remove and reinstall the app, the Core Data database is lost, but this isn't an issue as the 
 database so far doesn't contain any user data.
@@ -431,22 +433,24 @@ so that Core Data can track, for example, renamed struct types or renamed proper
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Contributing
-Bug fixes and new features are welcome.
+
+</p>Bug fixes and new features are welcome.
 Before investing effort in designing, coding testing, and refining features, it is best to first describe
 the idea or functional change within a new or existing GitHub `Issue`.
 That allows for some upfront discussion and prevents wasted effort due to overlapping initiatives.
 
-You can submit an `Issue` with a tag like ”enhancement" or “bug” without commiting to make the code changes yourself.
+</p>You can submit an `Issue` with a tag like ”enhancement" or “bug” without commiting to make the code changes yourself.
 Essentially that is an idea, bug, or feature request, rather than an offer to help.
 </ul>
 
 ### Areas for Contribution
 
 <ul><details><summary>Details(click to expand)</summary>
-Possible contributions include adding features, code improvements, ideas on architecture and interface
+
+</p>Possible contributions include adding features, code improvements, ideas on architecture and interface
 specifications, and possibly even a dedicated backend server.
 
-<\p>Contributions that do not involve coding include beta testing, thoughtful and detailed feature requests,
+</p>Contributions that do not involve coding include beta testing, thoughtful and detailed feature requests,
 translations, and icon design improvements.
 </details></ul>
 
