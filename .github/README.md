@@ -381,19 +381,19 @@ But that data is still encrypted by a private encryption key that is not provide
 ![Screenshots of 3 screens](images/app_screenshots_EN.jpg "Screenshots of app")
 <ul>
 
-#### Three levels
+### Three levels
 
 <ul></ul>
 
-#### Level 1 - Adding Clubs or Musea
+### Level 1 - Adding Clubs or Musea
 
 <ul></ul>
 
-#### Level 2 - Adding Members
+### Level 2 - Adding Members
 
 <ul></ul>
 
-#### Level 3 - Adding Images
+### Level 3 - Adding Images
 
 <ul></ul>
 </ul>
