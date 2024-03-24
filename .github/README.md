@@ -376,8 +376,8 @@ But that data is still encrypted by a private encryption key that is not provide
 ### Built-With
 
 <details><summary>Details (click to expand)</summary>
-
 </p>
+
 * the [Swift](https://www.swift.org) programming language
 * Apple's [SwiftUI](https://developer.apple.com/xcode/swiftui/) user interface framework
 * Apple's [Core Data](https://developer.apple.com/documentation/coredata) framework for persistent storage ("database")
