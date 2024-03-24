@@ -468,7 +468,7 @@ Note that:
     - `town` and `fullName` together serve to identify clubs or museums.
         - It is thus possible to have two clubs with the same name in different cities. But you can't have two clubs with the same name in the same town.
         - Try to avoid changing these two strings. Because the app doesn't associate the new ID with the previous ID, this result in two different clubs.
-        - `nickName` is a short version of `fullName` to displaying in confined spaces such as screen headers or map pins.
+        - `nickName` is a short version of `fullName` to display in confined spaces such as screen headers or map pins. It doesn't need to be unique.
     - `coordinates` is used to draw the club on the map and to [generate](http://www.vdhamer.com/reversegeocoding-for-localizing-towns-and-countries/) localized versions of town and country names.
         - `latitude` should be in the range [-90.0, +90.0] where negative means Sounthern hemisphere.
         - `longitude` should be in the range [-180.0, +180.0] where negative means Western hemisphere.
