@@ -409,7 +409,7 @@ We then only need to review the change (for technical correctness) and can merge
 This prevents overlooking a request, or administrative errors merging the data.
 </details>
 
-<details><Summary>Level 1 details (click to expand)</Summary></details>p>
+<details><Summary>Level 1 details (click to expand)</Summary></details></p>
 
 Here is an example of the format of the OrganizationList. This example contains one photo club and one photo museum:
 
