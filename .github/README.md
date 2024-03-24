@@ -74,9 +74,9 @@
                     <li>The Old Approach</li>
                     <li>The New Approach</li>
                     <ul>
-                        <li>OrganizationList: central list of photo clubs</li>
-                        <li>MemberList: local lists of photo club members</li>
-                        <li>ImageList: local image portfolios per club member</li>
+                        <li>Level 1: central list of photo clubs</li>
+                        <li>Level 2: local lists of photo club members</li>
+                        <li>Level 3: local image portfolios per club member</li>
                     </ul>
                </ul>
                <li><a href="#when-data-is-loaded">When Data is Loaded</a></li>
@@ -431,7 +431,7 @@ Here is an example of the format of the `OrganizationList.json`. This example co
                 "longitude": 5.45010
             }
             "website": "https://www.fcdegender.nl",
-            "memberList": "https://www.example.com/deGenderMemberList.json",
+            "level2URL": "https://www.example.com/fgDeGender.level2.json",
             "remark": [
                 { "language": "NL", "value": "Opgelet: Fotogroep de Gender gebruikt als domeinnaam nog altijd fcdegender.nl (van Fotoclub)." }
             ],
@@ -483,7 +483,7 @@ You can check the basic syntax of JSON files using an online JSON validator.
         - `longitude` should be in the range [-180.0, +180.0] where negative means Western hemisphere.
 - **Optional** fields
     - `website` holds a URL to the club's general purpose website. It can be displayed by the app (in a browser).
-    - `memberList` (for clubs only) holds a URL that allows the app to find the `Level 2` data on membership. It is not used yet (Mar 24).
+    - `level2URL` (for clubs only) holds the address of the `Level 2` membership list. It is not used yet (Mar 24).
     - `wikipedia` contains a URL to a Wikipedia page for a museum. It _can_ be used for photo clubs - but a photo club with an entry in Wikipedia sounds unlikely.
     - `remark` contains a brief note with something worth knowing about the club or museum. The `remark` contains an array of alternative strings in multiple languages. The app chooses one of the provided languages to display based on the device's language setting.
         - `language` is the two or three letter [ISO-639](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes) code for a language. `EN` is English, `FI` is Finnish.
@@ -502,15 +502,15 @@ For example, you can store it in the Media section of your club’s Wordpress we
 With `Level 2`, the membership lists shows up on the Portfolios screen.
 Fotogroep Anders in the Netherlands is an example of a `Level 2` club. We are currently simplifying `Level 2` support.
 
-</p>Each MemberList defines the current (and potentially former) members of a single club.
+</p>Each `Level 2` list defines the current (and potentially former) members of a single club.
 For each member, a URL is stored pointing to the `Level 3` file (portfolio per member).
-MemberList also includes the URL of an image used as thumbnail for that member.
-MemberList can be stored and managed on the club's own server. The file needs to be in a JSON format to allow the app to interpret it correctly.
+`Level 2` lists also includes the URL of an image used as thumbnail for that member.
+`Level 2` lists can be stored and managed on the club's own server. The file needs to be in a JSON format to allow the app to interpret it correctly.
 A future editing tool (app or web-based) would help ensure syntactic and schema consistency.</p>
 
 <details><Summary>Level 2 example (click to expand)</Summary></p>
 
-Here is an example of the (draft) format of a MemberList of a photo club. This shortened list contains only one member:
+Here is an example of the (draft) format of a `Level 2` list for a photo club. This shortened list contains only one member:
 
 ``` json
 {
@@ -525,7 +525,7 @@ Here is an example of the (draft) format of a MemberList of a photo club. This s
             "longitude": 5.45010
         }
         "website": "https://www.fcdegender.nl",
-        "memberList": "https://www.example.com/deGender.memberList.json"
+        "level2URL": "https://www.example.com/fgDeGender.level2.json"
     },
     "members": [
         {
@@ -550,14 +550,14 @@ Here is an example of the (draft) format of a MemberList of a photo club. This s
 <details><Summary>Level 2 fields (click to expand)</Summary></p>
 
 - **Mandatory** fields
-    - `club` is the same as one object/record in the OrganizationList. It documents the club that the MemberList is for.
+    - `club` is the same as one object/record in the OrganizationList. It indicates the club that the `Level 2` list describes.
         - the `town` and `fullName` fields are required.
         - `town` and `fullName` must exactly match the corresponding fields in the OrganizationList.json file.
     - `members` is a container for one or more member records. Technically these correspond to the `MemberPortfolio` class in the database.
 - **Optional** fields
     - `club`
         - a club's `nickName`, `latitude`, `longitude`, and `website` can overrule the corresponding OrganizationList fields if needed.</p>
-        - the `memberList` field can be provided, but it's value is generally overruled by the OrganizationList's "memberList" value.
+        - the `level2URL` field can be provided, but it's value is generally overruled by the OrganizationList's `level2URL` value.
     - `members`
         - `givenName`, `infixName` and `familyName` are used to uniquely identify the photographer.
         - `infixName` will often be empty. It enables correctly sorting European surnames: "van Aalst" sorts like "Aalst".
@@ -918,28 +918,28 @@ having to modify the source code to add (or modify/remove) clubs, members or ima
 The basic idea here is to store the required information in a hierarchical, distributed way.
 This allows the app to load the information in a three step process:</p>
 
-1. __OrganizationList: central list of photo clubs__</p>
+1. __Level 1: central list of photo clubs__</p>
 
 The app loads a list of photo clubs from a fixed location (URL). Because the file is kept external to the actual app,
 the list can be updated without requiring an app software update.
 The file is in a fixed JSON syntax and contains a list of supported photo clubs.</p>
 
 As a bonus, the list can also contain information about photography museums. The properties of clubs and museums largely overlap,
-but a photo club _can_ notably include the location (URL) of a MemberList.json data source while a museum _cannot_.</p>
+but a photo club _can_ notably include the location (URL) of a level2.json data source while a museum _cannot_.</p>
 
-2. __MemberList: local lists of photo club members__</p>
+2. __Level 2: local lists of photo club members__</p>
 
-</p>Each MemberList defines the current (and potentially former) members of a single club.
+</p>Each `Level 2` list defines the current (and potentially former) members of a single club.
 For each member, a URL is stored pointing to the final list level (portfolio per member).
-MemberList also includes the URL of an image used as thumbnail for that member.
-MemberList can be stored and managed on the club's own server. The file needs to be in
+`Level 2` lists also include the URL of an image used as thumbnail for that member.
+`Level 2` lists can be stored and managed on the club's own server. The file needs to be in
 a JSON format to allow the app to interpret it correctly.
 A future editing tool (app or web-based) would help ensure syntactic and schema consistency.</p>
 
-3. __ImageList: local image portfolios per club member__</p>
+3. __Level 3: local image portfolios per club member__</p>
 
 The list of images (per club member) is fetched only when a portfolio is selected for viewing.
-There is thus no need to prefetch the entire 3-level tree (root/memberlist/imagelist).
+There is thus no need to prefetch the entire 3-level tree (Level 1 / Level 2 / Level 3).
 Again, this index needs to be in a fixed format, and thus will possibly 
 require an editing tool to guard the syntax. Currently this tool already exists:
 index and files are exported from Lightroom using a Web plug-in.

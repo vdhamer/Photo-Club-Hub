@@ -34,7 +34,7 @@ private let organizationTypesToLoad: [OrganizationTypeEnum] = [.club, .museum]
                 "longitude": 5.45010
             }
             "website": "https://www.fcdegender.nl",
-            "memberList": "https://www.example.com/fgDeGender.level2.json"
+            "level2URL": "https://www.example.com/fgDeGender.level2.json"
             "remark": [
                 {
                     "language": "NL",
