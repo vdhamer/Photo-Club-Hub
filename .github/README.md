@@ -320,7 +320,7 @@ Techncially, the app doesn't allow museums to have "members" that share images w
 
 </p>Consider the showing of museums a bonus that may interest some users.
 You are welcome to add a favorite photo museum via a GitHub Pull Request. It only requires extending a JSON file.
-The file format is documented below under [How Data is Loaded / The New Approach](#how-data-is-loaded).
+The file format is documented below under [How Data is Loaded](#how-data-is-loaded).
 
 </details>
 
