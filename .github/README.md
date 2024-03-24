@@ -530,7 +530,8 @@ but because it usually works well enough, a user typically won't notice:
 ![Data model](images/dataModel.png "The data model")
 
 <ul><details><summary>Details (click to expand)</summary>
-Here are the entities managed by the app's internal Core Data database.
+
+</p>Here are the entities managed by the app's internal Core Data database.
 The entities (rounded boxes) are tables and arrows are relationships in the underlying SQLite database.</p>
 
 </p>Note that the tables are fully "normalized" in the relational database sense.
