@@ -54,7 +54,8 @@
     </details>
     <a href="#contributing">Contributing</a>
            <ul>
-                <li><a href="#areas-for-contribution">Areas for Contribution</a></li> 
+                <li><a href="#developer-contribution">Developer contributionsn</a></li>
+                <li><a href="#other-contribution">Other contributionsn</a></li> 
            </ul>
     </p><details><summary><a href="#the-app-architecture">The App's Architecture</a></summary>
            <ul>
@@ -442,12 +443,16 @@ That allows for some upfront discussion and prevents wasted effort due to overla
 </p>You can submit an `Issue` with a tag like ”enhancement" or “bug” without commiting to make the code changes yourself.
 Essentially that is an idea, bug, or feature request, rather than an offer to help.
 
-### Areas for Contribution
+### Developer contributions
 
 <ul><details><summary>Details(click to expand)</summary>
 
 </p>Possible contributions include adding features, code improvements, ideas on architecture and interface
 specifications, and possibly even a dedicated backend server.
+
+### Other contributions
+
+<ul><details><summary>Details(click to expand)</summary>
 
 </p>Contributions that do not involve coding include beta testing, thoughtful and detailed feature requests,
 translations, and icon design improvements.
