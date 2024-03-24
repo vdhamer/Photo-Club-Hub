@@ -379,12 +379,13 @@ For a club to be included in the app, the app needs basic information like the c
 a list of its members (`Level 2`) and links to image portfolios (`Level 3`). 
 Museaums are added in a similar way, although museums don't have a `Level 2` or `Level 3`.
 
-These 3 stages of adding information are called `Levels` because you can __pause__ as long as necessary before proceeding to the next level.
-This means the app can contain a mix of clubs at `Level 1`, `Level 2`, and `Level 3`.
+These 3 stages of adding information are called `Levels` because they should be done in order and 
+because you can __pause__ as long as necessary at `Level 1` or `Level 2` before proceeding to the next level.
+This means the app can contain a mix of clubs that are respectively at `Level 1`, `Level 2`, and `Level 3`.
 
 ![Screenshots of 3 screens](images/app_screenshots_EN.jpg "Screenshots of app")
 
-When a club is (temporarily or permanently) at `Level 1`, it shows up as a marker on the maps (left screenshot).
+When a club is at `Level 1`, it shows up as a marker on the maps (left screenshot).
 This is because the app knows club's location and name.
 
 When a club reaches `Level 2`, the app is aware of the names and roles of club members.
@@ -461,7 +462,11 @@ Here is an example of the format of the OrganizationList. This example contains 
 
 ### Level 2. Adding Members
 
-`Level 2` requires providing a list of the names of current (and maybe former) club members as a text file with a specific format. This file can be stored anywhere you like as long as it can be read via a web address (URL). For example, you can store it in the Media section of your club’s Wordpress web site. With `Level 2`, the membership lists shows up on the Portfolios screen. Fotogroep Anders in the Netherlands is an example of a `Level 2` club. We are currently simplifying `Level 2` support.
+`Level 2` requires providing a list of the names of current (and maybe former) club members as a JSON file.
+This file can be stored anywhere you like as long as it can be read via a web address (URL).
+For example, you can store it in the Media section of your club’s Wordpress web site.
+With `Level 2`, the membership lists shows up on the Portfolios screen.
+Fotogroep Anders in the Netherlands is an example of a `Level 2` club. We are currently simplifying `Level 2` support.
 
 <details><Summary>Level 2 details (click to expand)</Summary>
     
@@ -469,7 +474,10 @@ Here is an example of the format of the OrganizationList. This example contains 
 
 ### Level 3. Adding Images
 
-`Level 3` requires providing links to the online images in member portfolios. Fotogroep Waalre in the Netherlands is an example of `Level 3` club: you can view their portfolios via the Portfolios screen. Because a club with, for example, 20 members will have hundreds of images, we have a way to automate generate portfolios using Lightroom (instructions on how this works will be provided later).
+`Level 3` requires providing links to the online images in member portfolios. 
+Fotogroep Waalre in the Netherlands is an example of `Level 3` club: you can view their portfolios via the Portfolios screen.
+Because a club with, for example, 20 members will have hundreds of images, we have a way to automate generate portfolios 
+using Lightroom (instructions on how this works will be provided later).
 
 <details><Summary>Level 3 details (click to expand)</Summary>
     
