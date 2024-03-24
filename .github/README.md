@@ -377,6 +377,7 @@ But that data is still encrypted by a private encryption key that is not provide
 
 <details><summary>Details (click to expand)</summary>
 
+</p>
 * the [Swift](https://www.swift.org) programming language
 * Apple's [SwiftUI](https://developer.apple.com/xcode/swiftui/) user interface framework
 * Apple's [Core Data](https://developer.apple.com/documentation/coredata) framework for persistent storage ("database")
@@ -389,7 +390,8 @@ But that data is still encrypted by a private encryption key that is not provide
 ### Cloning the Repository
 
 <details><summary>Details (click to expand)</summary>
-To install the source code locally, it is easiest to use GitHub’s `Open with Xcode` feature.
+
+</p>To install the source code locally, it is easiest to use GitHub’s `Open with Xcode` feature.
 Developers used to running Git from the command line should manage on their own.
 Xcode covers the installation of the binary on a physical device or on an Xcode iPhone/iPad simulator.
 </details>
@@ -415,7 +417,7 @@ Again, this is a standard Apple iOS policy. This doesn't apply to MacOS.
 </p>If you update to a newer build of the app, all app data stored in the device's internal data storage 
 will remain available. If you choose to remove and reinstall the app, the database content will be lost.
 Fortunately, this has no real implications for the user as the data storage doesn't contain any relevant user data (so far).
-</details>
+</details></ul>
     
 #### Schema Migration
 
