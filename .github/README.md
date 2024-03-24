@@ -119,7 +119,7 @@ Help in the form of coding, testing and suggestions is highly appreciated. See t
 
 Photo clubs are the distinguishing feature of this app. You either look up a photo club and then find its members
 (the `Portfolio` screen) or you look up a photographer and then find the associated photo club
-(the `Who's Who` screen). Once you have chosen a club-and-member combination or person-and-club combination,
+(the `Who's Who` screen). Once you have chosen a club-and-member combination or a person-and-club combination,
 you can view the image portfolio for that club member.
 
 <ul><details><summary>Details (click to expand)</summary></p>
