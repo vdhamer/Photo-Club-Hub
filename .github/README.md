@@ -461,13 +461,17 @@ Here is an example of the format of the OrganizationList. This example contains 
 
 Note that:
 
-- All fields within `idPlus` and `coordinates` are required. All other fields can be omitted if the data is not available or not applicable.
-- `idPlus.town` and `idPlus.fullName` together serve to differentiate clubs or museums from others. Try to avoid changing these strings. 
-- `coordinates` is used to draw the club on the map and to [generate](http://www.vdhamer.com/reversegeocoding-for-localizing-towns-and-countries/) localized versions of town and country names. Latitudes are in the range [-90.0, +90.0] where negative `latitude` means south of the Equator. Longitude values are in the range [-180.0, +180.0] where negative `longitude` means west of Greenwich London.
-- The `memberList` field (for clubs only) allows the app to find the next level list with membership data. It is reserved for future use.
-- The `wikipedia` field contains a link to a Wikipedia page for a museum. It is unlikely that a photo club will have a page in Wikipedia, but it would work.
-- The `remark` field contain a brief remark note withy something worth knowing about the item. The `remark` contains an array of alternative strings in multiple languages. The app selects which language to use based on the device's language settings.
-- The `nlSpecific` container has optional fields that are only relevant for clubs in the Netherlands. `fotobondNumber` is an ID number assigned by the national federation of photo clubs.
+- All fields within `idPlus` and `coordinates` are **required**. All other fields can be omitted if the data is not available or not applicable.
+- `idPlus.town` and `idPlus.fullName` together serve to differentiate clubs or museums from others. Try to avoid changing these two strings. 
+- `coordinates` is used to draw the club on the map and to [generate](http://www.vdhamer.com/reversegeocoding-for-localizing-towns-and-countries/) localized versions of town and country names.
+    - Latitudes are in the range [-90.0, +90.0] where negative `latitude` means south of the Equator.
+    - Longitude values are in the range [-180.0, +180.0] where negative `longitude` means west of Greenwich London.
+- The `memberList` field (for clubs only) allows the app to find the next level list with membership data. It will be used to link to a separate file with `Level 2` data.
+- The `wikipedia` field contains a link to a Wikipedia page for a museum. It can be used for photo clubs, but it unlikely that a photo club will have an entry in Wikipedia.
+- The `remark` field contain a brief note with something worth knowing about the club or museum. The `remark` contains an array of alternative strings in multiple languages. The app chooses a language to display based on the device's language setting.
+    - `language` is the two or three letter [ISO-639](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes) code for a language. `EN` is English, `FI` is Finnish.
+    - `value` is the text to display for that particular language 
+- The `nlSpecific` container has optional fields that are only relevant for clubs in the Netherlands. `fotobondNumber` is an ID number assigned by the Dutch national federation of photo clubs.
 </details></p>
 
 ### Level 2. Adding Members
