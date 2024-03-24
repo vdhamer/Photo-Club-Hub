@@ -399,15 +399,14 @@ Attempting to see the portfolio of a club member with no (available) portfolio r
 
 ### Level 1. Adding Clubs
 
-Level 1 requires providing the club’s name, location and a few links. As a result, the club is listed on the `Clubs and Museums` screen and shows up on the maps.
+Level 1 requires providing the club’s name, location and possibly adding a few URLs. As a result, the club is listed on the `Clubs and Museums` screen and shows up on the maps.
 
 The `Level 1` data is implemented as a single online `OrganizationList.json` file hosted on GitHub.
-The app reads this file whenever it launches and merges the data into its in-app database.
+At launch, the app reads this file and merges this data into the data already in its in-app (CoreData) database.
 
-If you send us a club's required (and preferably optional) `Level 1` information, we can add it to the app’s online list of clubs. 
-Whenever possible, please provide that information (and future updates) as GitHub _pull requests_.
-We then only need to review the change (for technical correctness) and can merge it. 
-This prevents overlooking a request, or administrative errors merging the data.
+If you send us a club's `Level 1` information, we can then integrate it for you.
+However, if possible, please provide this information (and any future updates) as GitHub _pull requests_.
+This reduces the amount of work required centrally, and reduces the chance of administrative errors if this needs to be done often.
 </details>
 
 <details><Summary>Level 1 details (click to expand)</Summary></p>
