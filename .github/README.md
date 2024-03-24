@@ -493,8 +493,65 @@ For example, you can store it in the Media section of your club’s Wordpress we
 With `Level 2`, the membership lists shows up on the Portfolios screen.
 Fotogroep Anders in the Netherlands is an example of a `Level 2` club. We are currently simplifying `Level 2` support.
 
+</p>Each MemberList defines the current (and potentially former) members of a single club.
+For each member, a URL is stored pointing to the `Level 3` file (portfolio per member).
+MemberList also includes the URL of an image used as thumbnail for that member.
+MemberList can be stored and managed on the club's own server. The file needs to be in a JSON format to allow the app to interpret it correctly.
+A future editing tool (app or web-based) would help ensure syntactic and schema consistency.</p>
+
 <details><Summary>Level 2 details (click to expand)</Summary>
-    
+Here is an example of the (draft) format of the MemberList of a photo club with a single member:
+
+``` json
+{
+    "club": [
+        {
+            "idPlus": {
+                "town": "Eindhoven",
+                "fullName": "Fotogroep de Gender",
+                "nickName": "FG deGender"
+            },
+            "coordinates": {
+                "latitude": 51.42398,
+                "longitude": 5.45010
+            }
+            "website": "https://www.fcdegender.nl",
+            "memberList": "https://www.example.com/deGender.memberList.json"
+        }
+    ],
+    "members": [
+        {
+            "name": {
+                "givenName": "Peter",
+                "infixName": "van den",
+                "familyName": "Hamer"
+            },
+            "roles": {
+                "admin": true
+            },
+            "birthday": "9999-10-18T00:00:00.000Z",
+            "website": "https://glass.photo/vdhamer",
+            "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg",
+            "imageList": "https://www.example.com/FG_deGender/Peter_van_den_Hamer.imagelist.json"
+        },
+    ]
+}
+```
+
+Notes about the `club` section:
+
+- `club` is the same as one object/record in the OrganizationList. It documents the club that the MemberList is for.
+- the `town` and `fullName` fields are required.
+- `town` and `fullName` must exactly match the corresponding fields in the OrganizationList.json file.
+- the `memberList` field can be provided, but it's value is generally overruled by the OrganizationList's "memberList" value.
+- a club's `nickName`, `latitude`, `longitude`, and `website` can overrule the corresponding OrganizationList fields if needed.</p>
+
+Notes about the `members` section:
+
+- a member's `givenName`, `infixName` and `familyName` are used to uniquely identify the photographer.
+- `givenName` and `familyName` are required. An omitted "infixName" is equivalent to "infixName" = "".
+- `infixName` will often be empty. It enables correctly sorting European surnames: "van Aalst" sorts like "Aalst".
+- the `imageList` field allows the app to find the next level list about the selected images per member.</p>
 </details>
 
 ### Level 3. Adding Images
@@ -855,53 +912,6 @@ The file is in a fixed JSON syntax and contains a list of supported photo clubs.
 As a bonus, the list can also contain information about photography museums. The properties of clubs and museums largely overlap,
 but a photo club _can_ notably include the location (URL) of a MemberList.json data source while a museum _cannot_.</p>
 
-Here is an example of the format of the OrganizationList. This minimal example contains one photo club and one photo museum:
-
-``` json
-{
-    "clubs": [
-        {
-            "idPlus": {
-                "town": "Eindhoven",
-                "fullName": "Fotogroep de Gender",
-                "nickName": "FG deGender"
-            },
-            "coordinates": {
-                "latitude": 51.42398,
-                "longitude": 5.45010
-            }
-            "website": "https://www.fcdegender.nl",
-            "memberList": "https://www.example.com/deGenderMemberList.json",
-            "remark": [
-                { "language": "NL", "value": "Opgelet: Fotogroep de Gender gebruikt als domeinnaam nog altijd fcdegender.nl (van Fotoclub)." }
-            ],
-            "nlSpecific": {
-                "fotobondNumber": 1620
-            }
-        }
-    ],
-    "museums": [
-        {
-            "idPlus": {
-                "town": "New York",
-                "fullName": "Fotografiska New York",
-                "nickName": "Fotografiska NYC"
-            },
-            "coordinates": {
-                "latitude": 40.739278,
-                "longitude": -73.986722
-            }
-            "website": "https://www.fotografiska.com/nyc/",
-            "wikipedia": "https://en.wikipedia.org/wiki/Fotografiska_New_York",
-            "remark": [
-                { "language": "EN", "value": "Fotografiska New York is a branch of the Swedish Fotografiska museum." }
-                { "language": "NL", "value": "Fotografiska New York is een dependance van het Fotografiska museum in Stockholm." }
-            ]
-        }
-    ]
-}
-```
-
 2. __MemberList: local lists of photo club members__</p>
 
 </p>Each MemberList defines the current (and potentially former) members of a single club.
@@ -910,59 +920,6 @@ MemberList also includes the URL of an image used as thumbnail for that member.
 MemberList can be stored and managed on the club's own server. The file needs to be in
 a JSON format to allow the app to interpret it correctly.
 A future editing tool (app or web-based) would help ensure syntactic and schema consistency.</p>
-
-Here is an example of the (draft) format of the MemberList of a photo club with a single member:
-
-``` json
-{
-    "club": [
-        {
-            "idPlus": {
-                "town": "Eindhoven",
-                "fullName": "Fotogroep de Gender",
-                "nickName": "FG deGender"
-            },
-            "coordinates": {
-                "latitude": 51.42398,
-                "longitude": 5.45010
-            }
-            "website": "https://www.fcdegender.nl",
-            "memberList": "https://www.example.com/deGender.memberList.json"
-        }
-    ],
-    "members": [
-        {
-            "name": {
-                "givenName": "Peter",
-                "infixName": "van den",
-                "familyName": "Hamer"
-            },
-            "roles": {
-                "admin": true
-            },
-            "birthday": "9999-10-18T00:00:00.000Z",
-            "website": "https://glass.photo/vdhamer",
-            "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg",
-            "imageList": "https://www.example.com/FG_deGender/Peter_van_den_Hamer.imagelist.json"
-        },
-    ]
-}
-```
-
-Notes about the `club` section:
-
-- `club` is the same as one object/record in the OrganizationList. It documents the club that the MemberList is for.
-- the `town` and `fullName` fields are required.
-- `town` and `fullName` must exactly match the corresponding fields in the OrganizationList.json file.
-- the `memberList` field can be provided, but it's value is generally overruled by the OrganizationList's "memberList" value.
-- a club's `nickName`, `latitude`, `longitude`, and `website` can overrule the corresponding OrganizationList fields if needed.</p>
-
-Notes about the `members` section:
-
-- a member's `givenName`, `infixName` and `familyName` are used to uniquely identify the photographer.
-- `givenName` and `familyName` are required. An omitted "infixName" is equivalent to "infixName" = "".
-- `infixName` will often be empty. It enables correctly sorting European surnames: "van Aalst" sorts like "Aalst".
-- the `imageList` field allows the app to find the next level list about the selected images per member.</p>
 
 3. __ImageList: local image portfolios per club member__</p>
 
