@@ -93,22 +93,22 @@
 ## About the Project
 
 ### The App
-<ul>
+<ul></p>
 
-</p>This iOS app showcases photographs made by members of photography clubs.
-It thus provides a permanent online exposition or gallery with selected work of these photographers.
+This iOS app showcases photographs made by members of photography clubs.
+It thus provides a permanent online exposition or gallery with selected work of these photographers.</p>
 
-</p>Version 1 of the app only supported a _single_ photo club in Waalre, a smallish town in the Netherlands.
+Version 1 of the app only supported a _single_ photo club in Waalre, a smallish town in the Netherlands.
 Version 2 added support for _multiple_ photo clubs. This allows viewers to see images from multiple clubs within a single app.
 It also provides a degree of uniformity, thus sparing the user from having to find each club's website, 
 discovering how to navigate within each site and how to browse through the individual images. 
-Starting in version 2 the app's name was changed from _Photo Club Waalre_ to _Photo Club Hub_. 
+Starting in version 2 the app's name was changed from _Photo Club Waalre_ to _Photo Club Hub_. </p>
    
-</p>To achieve this, the app retrieves software-readable lists of photo clubs, their
+To achieve this, the app retrieves software-readable lists of photo clubs, their
 lists of members and their curated images from one or more servers. 
-This ensures that photo clubs, club members and member images can be added or changed without requiring a new release of the app.
+This ensures that photo clubs, club members and member images can be added or changed without requiring a new release of the app.</p>
 
-</p>See the [Architecture](#the-app-architecture) section for how this information is structured and distributed.
+See the [Architecture](#the-app-architecture) section for how this information is structured and distributed.
 Help in the form of coding, testing and suggestions is highly appreciated. See the [section](#contributing) on contributing below.
 
 </ul>
@@ -174,9 +174,9 @@ For comparison, traditional personal websites stress the photographer's images, 
 
 ### Implications
 <ul><details>
-<summary>Details (click to expand)</summary>
+<summary>Details (click to expand)</summary></p>
 
-</p>If a photographer joined *multiple* photo clubs, the app can show *multiple* portfolios (with independent
+If a photographer joined *multiple* photo clubs, the app can show *multiple* portfolios (with independent
 content) for that photographer - one per photo club. This could mean that the photographer is currently 
 a member of _two_ different clubs. But it could also mean that a photographer left one club and joined another club.
 Or variations of these scenarios.</p>
@@ -270,9 +270,9 @@ Clicking outside the central image brings you to the central `Portfolios` screen
 ![Prelude Screen](images/preludeScreen.png "Prelude Screen")
 
 <ul><details>
-<summary>Details about Prelude screen (click to expand)</summary>
+<summary>Details about Prelude screen (click to expand)</summary></p>
 
-</p>When the app launches, it shows a large version of the app’s icon. 
+When the app launches, it shows a large version of the app’s icon. 
 Tapping on the icon turns it into an interactive image illustrating how most digital cameras detect color.</p>
 
 > This involves a [Bayer color filter array](https://en.wikipedia.org/wiki/Bayer_filter)
@@ -314,12 +314,12 @@ Version 2 added support for multiple photo clubs. This means:
 
 </p>The maps showing the location of photo clubs also show the locations of selected photo museums.</p>
 
-<details><summary>Details (click to expand)</summary>
+<details><summary>Details (click to expand)</summary></p>
 
-</p>A photo museum is not a photo club and is displayed on the maps using a dedicated marker.
-Techncially, the app doesn't allow museums to have "members" that share images with the museum.
+A photo museum is not a photo club and is displayed on the maps using a dedicated marker.
+Techncially, the app doesn't allow museums to have "members" that share images with the museum.</p>
 
-</p>Consider the showing of museums a bonus that may interest some users.
+Consider the showing of museums a bonus that may interest some users.
 You are welcome to add a favorite photo museum via a GitHub Pull Request. It only requires extending a JSON file.
 The file format is documented below under [How Data is Loaded](#how-data-is-loaded).
 
@@ -327,55 +327,54 @@ The file format is documented below under [How Data is Loaded](#how-data-is-load
 
 ### Data Privacy
 
-<details><summary>Details (click to expand)</summary>
+<details><summary>Details (click to expand)</summary></p>
 
-</p>The phone numbers, e-mail addresses and ages of members of Fotogroep Waalre may not be public information.
+The phone numbers, e-mail addresses and ages of members of Fotogroep Waalre may not be public information.
 They are read by the app, but not actually shown or used at present. For good measure, the data is stored
 in encrypted form and decryted by the version of the app in the Apple App Store. The GitHub version
 circumvents the encrypted data altogether, which - although a detail - turns out to be tricky to do reliably.
 
 #### Encryption details
 
-<details><summary>Details (click to expand)</summary>
+<details><summary>Details (click to expand)</summary></p>
 
-</p>The repo contains a 1 tiny file with encrypted data.
+The repo contains a 1 tiny file with encrypted data.
 But encryption code can draw a lot of attention, so we are explaining it here
 mainly so you don't waste time trying to figure our what's going on or whether
-you consider that secure enough. It simply isn't a big deal :nerd_face:.
+you consider that secure enough. It simply isn't a big deal :nerd_face:.</p>
 
-</p>So... one tiny data file in the repository is encrypted. 
+So... one tiny data file in the repository is encrypted. 
 As you will expect, the key needed to decrypt the file is *not* provided.
 The file, in its decrypted form, gives access to a password-protected HTML page on a server.
 The HTML page contains telephone numbers and e-mail addresses of members of Photo Club Waalre. 
 Apart from the fact that the data is of little interest, this has no impact because: 
 - if the file is found to be encrypted, it is automatically substituted by another non-encrypted file 
   which doesn't give access to any sensitive data about members: it contains dummy data.
-- phone numbers and e-mail addresses (real or dummy) are not used yet by the app.
+- phone numbers and e-mail addresses (real or dummy) are not used yet by the app.</p>
 
-</p>So, all this hasstle is just so that a future App Store version *could* allow club members to
+So, all this hasstle is just so that a future App Store version *could* allow club members to
 unlock extra functionality using a club-specific password,
-but without leaking the supposedly sensitive data to non-members via GitHub.
+but without leaking the supposedly sensitive data to non-members via GitHub.</p>
 
-</p>But how would this future club-specific password be protected?
+But how would this future club-specific password be protected?
 The app might try to check a hash of the provided password.
 But a simple source code modification then gives access to the encrypted version of the web page.
 Actually, not quite 🤓. Bypassing the password via a code modification, would allow the app to
 fetch the encrypted data rather than the unencrypted dummy data. 
-But that data is still encrypted by a private encryption key that is not provided on GitHub.
+But that data is still encrypted by a private encryption key that is not provided on GitHub.</p>
 
 </details></ul>
 </details></ul>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## Installation
+## Installation</p>
 
-<ul>If you simly want to install the binary version of the app, just install it from Apple's app store ([link](https://apps.apple.com/nl/app/photo-club-hub/id1178324330?l=en)).
+If you simly want to install the binary version of the app, just install it from Apple's app store ([link](https://apps.apple.com/nl/app/photo-club-hub/id1178324330?l=en)).
 
 ### Built-With
 
-<details><summary>Details (click to expand)</summary>
-</p>
+<details><summary>Details (click to expand)</summary></p>
 
 * the [Swift](https://www.swift.org) programming language
 * Apple's [SwiftUI](https://developer.apple.com/xcode/swiftui/) user interface framework
@@ -388,22 +387,22 @@ But that data is still encrypted by a private encryption key that is not provide
 
 ### Cloning the Repository
 
-<details><summary>Details (click to expand)</summary>
+<details><summary>Details (click to expand)</summary></p>
 
-</p>To install the source code locally, it is easiest to use GitHub’s `Open with Xcode` feature.
+To install the source code locally, it is easiest to use GitHub’s `Open with Xcode` feature.
 Developers used to running Git from the command line should manage on their own.
 Xcode covers the installation of the binary on a physical device or on an Xcode iPhone/iPad simulator.
 </details>
 
 ### Code Signing
 
-<details><summary>Details (click to expand)</summary>
+<details><summary>Details (click to expand)</summary></p>
 
-</p>During the build you may be prompted to provide a developer license (personal or commercial)
+During the build you may be prompted to provide a developer license (personal or commercial)
 when you want to install the app on a physical device. This is a standard Apple iOS policy
-rather than something specific to this app.
+rather than something specific to this app.</p>
 
-</p>Starting with iOS 16.0 you will also need to configure physical devices to allow them to run apps
+Starting with iOS 16.0 you will also need to configure physical devices to allow them to run apps
 that have _not_ been distributed via the Apple App Store. This configuration requires enabling
 `Developer Mode` on the device using `Settings` > `Privacy & Security` > `Developer Mode`.
 Again, this is a standard Apple iOS policy. This doesn't apply to MacOS.
@@ -411,17 +410,17 @@ Again, this is a standard Apple iOS policy. This doesn't apply to MacOS.
 
 ### Updating the App
 
-<details><summary>Details (click to expand)</summary>
+<details><summary>Details (click to expand)</summary></p>
 
-</p>If you update to a newer build of the app, all app data stored in the device's internal data storage 
+If you update to a newer build of the app, all app data stored in the device's internal data storage 
 will remain available. If you choose to remove and reinstall the app, the database content will be lost.
 Fortunately, this has no real implications for the user as the data storage doesn't contain any relevant user data (so far).
     
 #### Schema Migration
 
-<ul><details><summary>Details (click to expand)</summary>
+<ul><details><summary>Details (click to expand)</summary></p>
 
-</p>If the data structure has changed from one version to a later version,
+If the data structure has changed from one version to a later version,
 Core Data will automatically perform a so-called schema migration.
 If you remove and reinstall the app, the Core Data database is lost, but this isn't an issue as the 
 database so far doesn't contain any user data.
@@ -432,29 +431,29 @@ so that Core Data can track, for example, renamed struct types or renamed proper
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## Contributing
+## Contributing</p>
 
-</p>Bug fixes and new features are welcome.
+Bug fixes and new features are welcome.
 Before investing effort in designing, coding testing, and refining features, it is best to first describe
 the idea or functional change within a new or existing GitHub `Issue`.
-That allows for some upfront discussion and prevents wasted effort due to overlapping initiatives.
+That allows for some upfront discussion and prevents wasted effort due to overlapping initiatives.</p>
 
-</p>You can submit an `Issue` with a tag like ”enhancement" or “bug” without commiting to make the code changes yourself.
+You can submit an `Issue` with a tag like ”enhancement" or “bug” without commiting to make the code changes yourself.
 Essentially that is an idea, bug, or feature request, rather than an offer to help.
 
 ### Developer contributions
 
-<ul><details><summary>Details(click to expand)</summary>
+<ul><details><summary>Details(click to expand)</summary></p>
 
-</p>Possible contributions include adding features, code improvements, ideas on architecture and interface
+Possible contributions include adding features, code improvements, ideas on architecture and interface
 specifications, and possibly even a dedicated backend server.
 </details></ul>
 
 ### Other contributions
 
-<ul><details><summary>Details(click to expand)</summary>
+<ul><details><summary>Details(click to expand)</summary></p>
 
-</p>Contributions that do not involve coding include beta testing, thoughtful and detailed feature requests,
+Contributions that do not involve coding include beta testing, thoughtful and detailed feature requests,
 translations, and icon design improvements.
 </details></ul>
 
@@ -467,17 +466,17 @@ architecture pattern.
 
 ### MVVM Layers
 
-<ul><details><summary>Details (click to expand)</summary>
+<ul><details><summary>Details (click to expand)</summary></p>
 
-</p>The use of a SwiftUI-based MVVM architecture implies that
+The use of a SwiftUI-based MVVM architecture implies that
 
 - the `model`'s data is stored in 
 lightweight _structs_ rather than in _classes_. It also implies that any changes to the
 model's data automatically trigger the required updates to 
 - the SwiftUI's struct-based `Views`, while
-- the intermediate class-based `ViewModel` layer translates between the `Model` and `View` layers.
+- the intermediate class-based `ViewModel` layer translates between the `Model` and `View` layers.</p>
 
-</p>Each of the layers has its own directory (found at the linked locations):
+Each of the layers has its own directory (found at the linked locations):
 
 - [Model](https://GitHub.com/vdhamer/PhotoClubWaalre/tree/main/Fotogroep%20Waalre/Model) contains the data model.
   It contains the current version of the database model as well as older versions _as separate files_. 
@@ -524,18 +523,18 @@ but because it usually works well enough, a user typically won't notice:
 4. in the case of Fotogoep Waalre, some member data is not yet available online in a machine-readable
    form and is thus added programmatically instead. This is done in [this file](https://GitHub.com/vdhamer/PhotoClubWaalre/blob/main/Fotogroep%20Waalre/ViewModel/FotogroepWaalre/FGWMembersProvider%2BinsertSomeHardcodedMemberData.swift).
    This hardcoded data include the member's formal roles (e.g. chairman, treasurer).
-5. Photo club data is minimal (name, town/country, GPS, website), but is currently still hardcoded.
+5. Photo club data is minimal (name, town/country, GPS, website), but is currently still hardcoded.</p>
 
-</p>Some of these gaps are addressed [below](#a-better-approach).
+Some of these gaps are addressed [below](#a-better-approach).
 </details></ul>
 
 ### The Data Model
 
 ![Data model](images/dataModel.png "The data model")
 
-<ul><details><summary>Details (click to expand)</summary>
+<ul><details><summary>Details (click to expand)</summary></p>
 
-</p>Here are the entities managed by the app's internal Core Data database.
+Here are the entities managed by the app's internal Core Data database.
 The entities (rounded boxes) are tables and arrows are relationships in the underlying SQLite database.</p>
 
 Note that the tables are fully "normalized" in the relational database sense.
@@ -759,6 +758,7 @@ Here is an example of the format of the OrganizationList. This minimal example c
 ```
 
 Note that:
+
 - All fields within `idPlus` and `coordinates` are required. All other fields can be omitted if the data is not available or not applicable.
 - `idPlus.town` and `idPlus.fullName` together serve to differentiate clubs or museums from others. Try to avoid changing these strings. 
 - `coordinates` is used to draw the club on the map and to [generate](http://www.vdhamer.com/reversegeocoding-for-localizing-towns-and-countries/) localized versions of town and country names. Latitudes are in the range [-90.0, +90.0] where negative `latitude` means south of the Equator. Longitude values are in the range [-180.0, +180.0] where negative `longitude` means west of Greenwich London.
@@ -815,6 +815,7 @@ Here is an example of the (draft) format of the MemberList of a photo club with 
 ```
 
 Notes about the `club` section:
+
 - `club` is the same as one object/record in the OrganizationList. It documents the club that the MemberList is for.
 - the `town` and `fullName` fields are required.
 - `town` and `fullName` must exactly match the corresponding fields in the OrganizationList.json file.
@@ -822,6 +823,7 @@ Notes about the `club` section:
 - a club's `nickName`, `latitude`, `longitude`, and `website` can overrule the corresponding OrganizationList fields if needed.</p>
 
 Notes about the `members` section:
+
 - a member's `givenName`, `infixName` and `familyName` are used to uniquely identify the photographer.
 - `givenName` and `familyName` are required. An omitted "infixName" is equivalent to "infixName" = "".
 - `infixName` will often be empty. It enables correctly sorting European surnames: "van Aalst" sorts like "Aalst".
