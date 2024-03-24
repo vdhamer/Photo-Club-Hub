@@ -549,7 +549,7 @@ Here is an example of the (draft) format of a MemberList of a photo club. This s
 ```
 </details>
 
-<details><Summary>Level 2 example (click to expand)</Summary></p>
+<details><Summary>Level 2 fields (click to expand)</Summary></p>
 
 - **Mandatory** fields
     - `club` is the same as one object/record in the OrganizationList. It documents the club that the MemberList is for.
@@ -575,8 +575,12 @@ Fotogroep Waalre in the Netherlands is an example of `Level 3` club: you can vie
 Because a club with, for example, 20 members will have hundreds of images, we have a way to automate generate portfolios 
 using Lightroom (instructions on how this works will be provided later).
 
-<details><Summary>Level 3 details (click to expand)</Summary>
-    
+<details><Summary>Level 3 example (click to expand)</Summary>
+To do
+</details>
+
+<details><Summary>Level 2 fields (click to expand)</Summary></p>
+To do
 </details>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
