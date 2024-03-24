@@ -39,7 +39,6 @@
     </details>
     <details open><summary><a href="#adding-photo-clubs">Adding Photo Clubs</a></summary>
         <ul>
-            <li><a href="#three-levels">Three Levels</a></li>
             <li><a href="#level-1-adding-clubs-and-musea">Level 1. Adding Clubs and Musea</a></li>
             <li><a href="#level-2-adding-members">Level 2. Adding Members</a></li>
             <li><a href="#level-3-adding-images">Level 3. Adding Images</a>
@@ -379,24 +378,27 @@ But that data is still encrypted by a private encryption key that is not provide
 ## Adding Photo Clubs
 
 ![Screenshots of 3 screens](images/app_screenshots_EN.jpg "Screenshots of app")
-<ul>
 
-### Three levels
-
-<ul></ul>
+For a club to be included, the app needs basic information like the club’s name and location (`Level 1`),
+a list of its members (`Level 2`) and links to image portfolios (`Level 3`).
 
 ### Level 1. Adding Clubs and Musea
 
-<ul></ul>
+<details><Summary>Level 1 details (click to expand)</Summary>
+    
+</details>
 
 ### Level 2. Adding Members
 
-<ul></ul>
+<details><Summary>Level 2 details (click to expand)</Summary>
+    
+</details>
 
 ### Level 3. Adding Images
 
-<ul></ul>
-</ul>
+<details><Summary>Level 3 details (click to expand)</Summary>
+    
+</details>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
