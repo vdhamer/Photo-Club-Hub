@@ -461,21 +461,27 @@ Here is an example of the format of the OrganizationList. This example contains 
 
 Note that:
 
-- All fields within `idPlus` and `coordinates` are **required**. All other fields can be omitted if the data is not available or not applicable.
-    - `idPlus.town` and `idPlus.fullName` together serve to differentiate clubs or museums from others. It is thus possible to have two clubs with the same name in different cities.
-    - Try to avoid changing these two strings. Because the app doesn't associate the new ID with the previous ID, this result in two different clubs.
-    - `nickName` is a short version of `fullName` to displaying in confined spaces
-- `coordinates` is used to draw the club on the map and to [generate](http://www.vdhamer.com/reversegeocoding-for-localizing-towns-and-countries/) localized versions of town and country names.
-    - Latitudes are in the range [-90.0, +90.0] where negative `latitude` means south of the Equator.
-    - Longitude values are in the range [-180.0, +180.0] where negative `longitude` means west of Greenwich London.
-- The `memberList` field (for clubs only) is a URL that allows the app to find the `Level 2` data on membership. It is not used yet (Mar 24).
-- The `wikipedia` field contains a link to a Wikipedia page for a museum. It _can_ be used for photo clubs - but a photo club with an entry in Wikipedia sounds unlikely.
-- The `remark` field contain a brief note with something worth knowing about the club or museum. The `remark` contains an array of alternative strings in multiple languages. The app chooses one of the provided languages to display based on the device's language setting.
-    - `language` is the two or three letter [ISO-639](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes) code for a language. `EN` is English, `FI` is Finnish.
-    - `value` is the text to display for that particular remark in that language.
-    - If the device's preferred language doesn't match any of the provided languages, the app will default to EN, if available. If EN is unavailable, it will select one of the available languages.
-- The `nlSpecific` container holds fields that are only relevant for clubs in the Netherlands.
-    - `fotobondNumber` is an ID number assigned by the Dutch national federation of photo clubs.
+- **mandatory fields**
+    - `town` can be a city (London) or smaller location (Land's End)
+        - `town` can be replaced on the screen by a (language localized) name generated using the `coordinates`. A museum in Den Haag may be displayed as The Hague.
+        - Similarly, the user interface may display a (language localized) country name that is automatically generated using the provided `coordinates`.
+    - `town` and `fullName` together serve to identify clubs or museums.
+        - It is thus possible to have two clubs with the same name in different cities. But you can't have two clubs with the same name in the same town.
+        - Try to avoid changing these two strings. Because the app doesn't associate the new ID with the previous ID, this result in two different clubs.
+        - `nickName` is a short version of `fullName` to displaying in confined spaces such as screen headers or map pins.
+    - `coordinates` is used to draw the club on the map and to [generate](http://www.vdhamer.com/reversegeocoding-for-localizing-towns-and-countries/) localized versions of town and country names.
+        - `latitude` should be in the range [-90.0, +90.0] where negative means Sounthern hemisphere.
+        - `longitude` should be in the range [-180.0, +180.0] where negative means Western hemisphere.
+- **optional fields**
+    - `website` holds a URL to the club's general purpose website. It can be displayed by the app (in a browser).
+    - The `memberList` field (for clubs only) is a URL that allows the app to find the `Level 2` data on membership. It is not used yet (Mar 24).
+    - The `wikipedia` field contains a link to a Wikipedia page for a museum. It _can_ be used for photo clubs - but a photo club with an entry in Wikipedia sounds unlikely.
+    - The `remark` field contain a brief note with something worth knowing about the club or museum. The `remark` contains an array of alternative strings in multiple languages. The app chooses one of the provided languages to display based on the device's language setting.
+        - `language` is the two or three letter [ISO-639](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes) code for a language. `EN` is English, `FI` is Finnish.
+        - `value` is the text to display for that particular remark in that language.
+        - If the device's preferred language doesn't match any of the provided languages, the app will default to EN, if available. If EN is unavailable, it will select one of the available languages.
+    - The `nlSpecific` container holds fields that are only relevant for clubs in the Netherlands.
+        - `fotobondNumber` is an ID number assigned by the Dutch national federation of photo clubs.
 </details></p>
 
 ### Level 2. Adding Members
