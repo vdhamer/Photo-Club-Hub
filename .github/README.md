@@ -311,7 +311,7 @@ Version 2 added support for multiple photo clubs. This means:
 
 ### Photo Museums
 
-</p>The maps showing the location of photo clubs also show the locations of selected photo museums.
+</p>The maps showing the location of photo clubs also show the locations of selected photo museums.</p>
 
 <details><summary>Details (click to expand)</summary>
 
