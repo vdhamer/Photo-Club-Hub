@@ -547,7 +547,7 @@ Here is an example of the (draft) format of a MemberList of a photo club. This s
     ]
 }
 ```
-</detail>
+</details>
 
 <details><Summary>Level 2 example (click to expand)</Summary></p>
 
