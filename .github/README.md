@@ -399,16 +399,16 @@ Attempting to see the portfolio of a club member with no (available) portfolio r
 
 ### Level 1. Adding Clubs
 
-Level 1 requires providing the club’s name, location and several optional URLs. The enables the app to list the club on the `Clubs and Museums` screen and display its location using an extra pin on the maps.
+`Level 1` requires providing the club’s name, location and several optional URLs. The enables the app to list the club on the `Clubs and Museums` screen and display its location on maps using an extra pin marker.
 
-The `Level 1` data is implemented as a single online `OrganizationList.json` file centrally-hosted on GitHub.
-At launch, the app reads this file and merges this data into the data already in its in-app (CoreData) database.
+`Level 1` data is stored in a _single_ online `OrganizationList.json` file that is centrally-hosted on GitHub.
+Whenver the app is launched, it reads this file and merges its data into the data in its in-app (CoreData) database.
 
-If you send us a club's `Level 1` information, we can then integrate it for you.
-However, if possible, please provide this extension (and any future updates) as a GitHub _pull request_.
-This reduces the amount of work required centrally, and reduces the chance of administrative errors if this needs to be done often.
+If you send us a club's `Level 1` information, we can add it to the file for you.
+However, if possible, please provide this change (and any future updates) as a GitHub _pull request_.
+This reduces the effort required if there are a lot of updates, and reduces the associated risk of administrative errors.
 
-The same applies if you want to add a photo museum to the same `OrganizationList.json` file.
+The same applies if you want to add a photo museum to the `OrganizationList.json` file.
 </details>
 
 <details><Summary>Level 1 details (click to expand)</Summary></p>
@@ -460,12 +460,14 @@ Here is an example of the format of the `OrganizationList.json`. This example co
 }
 ```
 
-The real `OrganizationList.json` file contains many Club and Museum records within their respective arrays (delimited using `[{},{},{}}].
-Note the comma's between the array elements - the JSON format is very picky about missing or extra comments. You can validate the syntax of your JSON file using an online JSON validator.
+The actual `OrganizationList.json` file contains many club and museum records within their respective sections (delimited using `[{},{},{}}]`).
+Note the comma's delimiting the array elements - the JSON format is picky about missing comma's and extra comma's.
+You can check the basic syntax of JSON files using an online JSON validator.
 
 #### Level 1 Fields
 
 - **Mandatory** fields
+    - `clubs` and `museums` are required to mark which list is about Photo Clubs and which is about Photo Museums. In the app's internal database these determine the `OrganizationType` (`club` or `museum`) for a particular `Organization`, which in turn determines which graphic marker to use on maps.
     - `town` can be a city (London) or smaller location (Land's End)
         - `town` can be replaced on the screen by a (language localized) name generated using the `coordinates`. A museum in Den Haag may be displayed as The Hague.
         - Similarly, the user interface may display a (language localized) country name that is automatically generated using the provided `coordinates`.
