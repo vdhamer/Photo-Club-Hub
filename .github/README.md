@@ -54,8 +54,8 @@
     </details>
     <a href="#contributing">Contributing</a>
            <ul>
-                <li><a href="#developer-contribution">Developer contributions</a></li>
-                <li><a href="#other-contribution">Other contributions</a></li> 
+                <li><a href="#developer-contributions">Developer contributions</a></li>
+                <li><a href="#other-contributions">Other contributions</a></li> 
            </ul>
     </p><details><summary><a href="#the-app-architecture">The App's Architecture</a></summary>
            <ul>
