@@ -37,7 +37,7 @@
             <li><a href="#data-privacy">Data Privacy</a>
         </ul>
     </details>
-    <details open><summary><a href="#adding-photo-clubs">Adding Photo Clubs</a></summary>
+    <details open><summary><a href="#adding-photo-club-data">Adding Photo Club Data</a></summary>
         <ul>
             <li><a href="#level-1-adding-clubs">Level 1. Adding Clubs</a></li>
             <li><a href="#level-2-adding-members">Level 2. Adding Members</a></li>
