@@ -44,14 +44,14 @@
     </details>
     <details open><summary><a href="#installation">Installation</a></summary>
          <ul>
-               <li><a href="#built-with">Built-With</a></li>
-               <li><a href="#cloning-the-repository">Cloning the Repository</a></li>
-               <li><a href="#code-signing">Code Signing</a></li>
-               <details><summary><li><a href="#upgrading-the-app">Upgrading the App</a></li></summary>
-                   <ul>
-                       <li>Schema Migration</li>
-                   </ul>
-               </details>
+            <li><a href="#built-with">Built-With</a></li>
+            <li><a href="#cloning-the-repository">Cloning the Repository</a></li>
+            <li><a href="#code-signing">Code Signing</a></li>
+            <details><summary><li><a href="#upgrading-the-app">Upgrading the App</a></li></summary>
+                <ul>
+                    <li>Schema Migration</li>
+                </ul>
+            </details>
          </ul>
     </details>
     <a href="#contributing">Contributing</a>
