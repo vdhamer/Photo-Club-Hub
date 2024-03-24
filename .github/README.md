@@ -467,9 +467,9 @@ You can check the basic syntax of JSON files using an online JSON validator.
 #### Level 1 Fields
 
 - **Mandatory** fields
-    - `clubs` and `museums` are required to mark which list is about Photo Clubs and which is about Photo Museums. In the app's internal database these determine the `OrganizationType` (`club` or `museum`) for a particular `Organization`, which in turn determines which graphic marker to use on maps.
-    - `town` can be a city (London) or smaller location (Land's End)
-        - `town` can be replaced on the screen by a (language localized) name generated using the `coordinates`. A museum in Den Haag may be displayed as The Hague.
+    - `clubs` and `museums` are required to distinguish photo clubs from photo museums. In the app's internal database these determine the `OrganizationType` (`club` or `museum`) of an `Organization` object, which in turn determines which visual marker to use maps.
+    - `town` can be a city (London) or smaller locality (Land's End)
+        - `town` is not shown in the user interface, although it may look that way. The user interface displays a (language localized) name generated using the `coordinates`. That may be the same as `town`, or a translation of `town`, or a somewhat larger or smaller geographical entity. `town` is used to ensure that there is a unique ID for a club or museum. And it serves to document the record in the `organizationList.json` file: it is clearer to say "Victoria and Albert Museum (London)" than to say "Victoria and Albert Museum" and hand you the coordinates. 
         - Similarly, the user interface may display a (language localized) country name that is automatically generated using the provided `coordinates`.
     - `town` and `fullName` together serve to identify clubs or museums.
         - It is thus possible to have two clubs with the same name in different cities. But you can't have two clubs with the same name in the same town.
