@@ -3,6 +3,7 @@
 Maintenance
     * Fixed a problem in the layout of README.md text on GitHub (`detail`/`summary`).
     * Added screenshots of all screens to README.md text on GitHub.
+    * Improved documentation of JSON file formats in README.md
 
 This is build #4617.
 ---------------------------------------------------------------------------
