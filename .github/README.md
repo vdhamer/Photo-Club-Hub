@@ -499,8 +499,9 @@ MemberList also includes the URL of an image used as thumbnail for that member.
 MemberList can be stored and managed on the club's own server. The file needs to be in a JSON format to allow the app to interpret it correctly.
 A future editing tool (app or web-based) would help ensure syntactic and schema consistency.</p>
 
-<details><Summary>Level 2 details (click to expand)</Summary>
-Here is an example of the (draft) format of the MemberList of a photo club with a single member:
+<details><Summary>Level 2 details (click to expand)</Summary></p>
+
+Here is an example of the (draft) format of a MemberList of a photo club. This shortened list contains only one member:
 
 ``` json
 {
@@ -538,20 +539,23 @@ Here is an example of the (draft) format of the MemberList of a photo club with 
 }
 ```
 
-Notes about the `club` section:
+#### Level 2 Fields
 
-- `club` is the same as one object/record in the OrganizationList. It documents the club that the MemberList is for.
-- the `town` and `fullName` fields are required.
-- `town` and `fullName` must exactly match the corresponding fields in the OrganizationList.json file.
-- the `memberList` field can be provided, but it's value is generally overruled by the OrganizationList's "memberList" value.
-- a club's `nickName`, `latitude`, `longitude`, and `website` can overrule the corresponding OrganizationList fields if needed.</p>
-
-Notes about the `members` section:
-
-- a member's `givenName`, `infixName` and `familyName` are used to uniquely identify the photographer.
-- `givenName` and `familyName` are required. An omitted "infixName" is equivalent to "infixName" = "".
-- `infixName` will often be empty. It enables correctly sorting European surnames: "van Aalst" sorts like "Aalst".
-- the `imageList` field allows the app to find the next level list about the selected images per member.</p>
+- **Mandatory** fields
+    - `club` is the same as one object/record in the OrganizationList. It documents the club that the MemberList is for.
+        - the `town` and `fullName` fields are required.
+        - `town` and `fullName` must exactly match the corresponding fields in the OrganizationList.json file.
+    - `members`
+        -  
+- **Optional fields**
+    - `club`
+        - a club's `nickName`, `latitude`, `longitude`, and `website` can overrule the corresponding OrganizationList fields if needed.</p>
+        - the `memberList` field can be provided, but it's value is generally overruled by the OrganizationList's "memberList" value.
+    - `members`
+        - `givenName`, `infixName` and `familyName` are used to uniquely identify the photographer.
+        - `infixName` will often be empty. It enables correctly sorting European surnames: "van Aalst" sorts like "Aalst".
+            - An omitted "infixName" is equivalent to "infixName" = "".
+        - the `imageList` field allows the app to find the next level list about the selected images per member.</p>
 </details>
 
 ### Level 3. Adding Images
