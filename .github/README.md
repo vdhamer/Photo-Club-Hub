@@ -375,8 +375,6 @@ But that data is still encrypted by a private encryption key that is not provide
 
 ## Adding Photo Club Data
 
-![Screenshots of 3 screens](images/app_screenshots_EN.jpg "Screenshots of app")
-
 For a club to be included in the app, the app needs basic information like the club’s name and location (`Level 1`),
 a list of its members (`Level 2`) and links to image portfolios (`Level 3`). 
 Museaums are added in a similar way, although museums don't have a `Level 2` or `Level 3`.
@@ -384,16 +382,19 @@ Museaums are added in a similar way, although museums don't have a `Level 2` or 
 These 3 stages of adding information are called `Levels` because you can __pause__ as long as necessary before proceeding to the next level.
 This means the app can contain a mix of clubs at `Level 1`, `Level 2`, and `Level 3`.
 
+![Screenshots of 3 screens](images/app_screenshots_EN.jpg "Screenshots of app")
+
 When a club is (temporarily or permanently) at `Level 1`, it shows up as a marker on the maps (left screenshot).
 This is because the app knows club's location and name.
 
-When a club reaches `Level 2`, the app is aware of the names (and roles) of club members.
+When a club reaches `Level 2`, the app is aware of the names and roles of club members.
 As illustrated in the center screenshot, the club and its members now show up in the `Portfolio` and `Who's Who` screens.
+Clubs are _not_ visible in either of these screens until they reach `Level 2`.
 
-When a club is at the final `Level 3`, the app can find the selected images per club member (right screenshot), 
-allowing a user of the app to browse through that club member's `portfolio`.
-Strictly speaking some club members may have portfolios while other's don't. 
-Any club member without a portfolio will display a placeholder message instead of the real portfolio.
+When a club reaches `Level 3`, the app is aware of the image portfolio per club member (right screenshot), 
+and allows an app user to browse through that club member's photos.
+Strictly speaking some club members could have portfolios while other's don't. 
+Attempting to see the portfolio of a club member with no (available) portfolio results in a placeholder message of some sort.
 
 ### Level 1. Adding Clubs
 
