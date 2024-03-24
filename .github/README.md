@@ -514,21 +514,19 @@ Here is an example of the (draft) format of a MemberList of a photo club. This s
 
 ``` json
 {
-    "club": [
-        {
-            "idPlus": {
-                "town": "Eindhoven",
-                "fullName": "Fotogroep de Gender",
-                "nickName": "FG deGender"
-            },
-            "coordinates": {
-                "latitude": 51.42398,
-                "longitude": 5.45010
-            }
-            "website": "https://www.fcdegender.nl",
-            "memberList": "https://www.example.com/deGender.memberList.json"
+    "club": {
+        "idPlus": {
+            "town": "Eindhoven",
+            "fullName": "Fotogroep de Gender",
+            "nickName": "FG deGender"
+        },
+        "coordinates": {
+            "latitude": 51.42398,
+            "longitude": 5.45010
         }
-    ],
+        "website": "https://www.fcdegender.nl",
+        "memberList": "https://www.example.com/deGender.memberList.json"
+    },
     "members": [
         {
             "name": {
