@@ -56,7 +56,7 @@
            <ul>
                 <li><a href="#areas-for-contribution">Areas for Contribution</a></li> 
            </ul>
-    <details><summary><a href="#the-app-architecture">The App's Architecture</a></summary>
+    </p><details><summary><a href="#the-app-architecture">The App's Architecture</a></summary>
            <ul>
                <li><a href="#role-of-the-database">Role of the Database</a></li>
                <li><a href="#the-data-model">The Data Model</a></li>
