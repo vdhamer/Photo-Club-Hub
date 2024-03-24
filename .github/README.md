@@ -399,19 +399,21 @@ Attempting to see the portfolio of a club member with no (available) portfolio r
 
 ### Level 1. Adding Clubs
 
-Level 1 requires providing the club’s name, location and possibly adding a few URLs. As a result, the club is listed on the `Clubs and Museums` screen and shows up on the maps.
+Level 1 requires providing the club’s name, location and a few optional URLs. The enables the app to list the club on the `Clubs and Museums` screen and to show its location on the maps.
 
-The `Level 1` data is implemented as a single online `OrganizationList.json` file hosted on GitHub.
+The `Level 1` data is implemented as a single online `OrganizationList.json` file centrally-hosted on GitHub.
 At launch, the app reads this file and merges this data into the data already in its in-app (CoreData) database.
 
 If you send us a club's `Level 1` information, we can then integrate it for you.
-However, if possible, please provide this information (and any future updates) as GitHub _pull requests_.
+However, if possible, please provide this extension (and any future updates) as a GitHub _pull request_.
 This reduces the amount of work required centrally, and reduces the chance of administrative errors if this needs to be done often.
+
+The same applies if you want to add a photo museum to the same `OrganizationList.json` file.
 </details>
 
 <details><Summary>Level 1 details (click to expand)</Summary></p>
 
-Here is an example of the format of the OrganizationList. This example contains one photo club and one photo museum:
+Here is an example of the format of the `OrganizationList.json`. This example contains one photo club and one photo museum.
 
 ``` json
 {
@@ -457,6 +459,9 @@ Here is an example of the format of the OrganizationList. This example contains 
     ]
 }
 ```
+
+The real `OrganizationList.json` file contains many Club and Museum records within their respective arrays (delimited using `[{},{},{}}].
+Note the comma's between the array elements - the JSON format is very picky about missing or extra comments. You can validate the syntax of your JSON file using an online JSON validator.
 
 #### Level 1 Fields
 
