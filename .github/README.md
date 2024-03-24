@@ -37,6 +37,14 @@
             <li><a href="#data-privacy">Data Privacy</a>
         </ul>
     </details>
+    <details open><summary><a href="#adding-photo-clubs">Adding Photo Clubs</a></summary>
+        <ul>
+            <li><a href="#three-levels">Three Levels</a></li>
+            <li><a href="#level-1-adding-clubs-and-musea">Level 1: Adding Clubs and Musea</a></li>
+            <li><a href="#level-2-adding-members">Level 2: Adding Members</a></li>
+            <li><a href="#level-3-adding-images">Level 3: Adding Images</a>
+        </ul>
+    </details>
     <details open><summary><a href="#installation">Installation</a></summary>
          <ul>
             <li><a href="#built-with">Built-With</a></li>
@@ -365,6 +373,27 @@ But that data is still encrypted by a private encryption key that is not provide
 
 </details></ul>
 </details></ul>
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Adding Photo Clubs
+
+![Screenshots of 3 screens](images/app_screenshots_EN.jpg "Screenshots of app")
+<ul>
+
+#### Three levels
+<ul>
+</ul>
+#### Level 1 - Adding Clubs or Musea
+<ul>
+</ul>
+#### Level 2 - Adding Members
+<ul>
+</ul>
+#### Level 3 - Adding Images
+<ul>
+</ul>
+</ul>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
