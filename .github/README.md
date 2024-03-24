@@ -417,7 +417,6 @@ Again, this is a standard Apple iOS policy. This doesn't apply to MacOS.
 </p>If you update to a newer build of the app, all app data stored in the device's internal data storage 
 will remain available. If you choose to remove and reinstall the app, the database content will be lost.
 Fortunately, this has no real implications for the user as the data storage doesn't contain any relevant user data (so far).
-</details></ul>
     
 #### Schema Migration
 
@@ -429,8 +428,8 @@ If you remove and reinstall the app, the Core Data database is lost, but this is
 database so far doesn't contain any user data.
 Schema migration is standard feature of Apple's Core Data framework, although the app does its bit
 so that Core Data can track, for example, renamed struct types or renamed properties.
-</details>
-</ul>
+</details></ul>
+</details></ul>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
