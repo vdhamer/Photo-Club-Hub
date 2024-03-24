@@ -468,7 +468,8 @@ architecture pattern.
 
 <ul><details><summary>Details (click to expand)</summary>
 
-</p>The use of a SwiftUI-based MVVM architecture implies that 
+</p>The use of a SwiftUI-based MVVM architecture implies that
+
 - the `model`'s data is stored in 
 lightweight _structs_ rather than in _classes_. It also implies that any changes to the
 model's data automatically trigger the required updates to 
@@ -476,6 +477,7 @@ model's data automatically trigger the required updates to
 - the intermediate class-based `ViewModel` layer translates between the `Model` and `View` layers.
 
 </p>Each of the layers has its own directory (found at the linked locations):
+
 - [Model](https://GitHub.com/vdhamer/PhotoClubWaalre/tree/main/Fotogroep%20Waalre/Model) contains the data model.
   It contains the current version of the database model as well as older versions _as separate files_. 
   This form of versioning is un-Git-like and is still used to support install-time schema migration.
