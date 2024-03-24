@@ -398,7 +398,6 @@ Attempting to see the portfolio of a club member with no (available) portfolio r
 
 ### Level 1. Adding Clubs
 
-<details><Summary>Level 1 details (click to expand)</Summary>
 Level 1 requires providing the club’s name, location and a few links. As a result, the club is listed on the `Clubs and Museums` screen and shows up on the maps.
 
 The `Level 1` data is implemented as a single online `OrganizationList.json` file hosted on GitHub.
@@ -409,6 +408,8 @@ Whenever possible, please provide that information (and future updates) as GitHu
 We then only need to review the change (for technical correctness) and can merge it. 
 This prevents overlooking a request, or administrative errors merging the data.
 </details>
+
+<details><Summary>Level 1 details (click to expand)</Summary></details>p>
 
 Here is an example of the format of the OrganizationList. This example contains one photo club and one photo museum:
 
