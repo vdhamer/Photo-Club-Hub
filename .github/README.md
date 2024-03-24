@@ -401,7 +401,9 @@ Attempting to see the portfolio of a club member with no (available) portfolio r
 
 Adding photo clubs (or museums) at `Level 1` requires providing the items name, location and several optional URLs. The enables the app to list the item on the `Clubs and Museums` screen and display its location on maps by adding a graphical marker.
 
-`Level 1` data is stored in a _single_ online `OrganizationList.json` file that is centrally-hosted on GitHub.
+`Level 1` data is stored in a _single_ central online `OrganizationList.json` 
+[file](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/ViewModel/Lists/OrganizationList.json) 
+that is hosted on GitHub.
 Whenver the app is launched, it reads this file and merges its data into the data in its in-app (CoreData) database.
 
 If you send us a club's `Level 1` information, we can add it to the file for you.
