@@ -114,13 +114,17 @@ Help in the form of coding, testing and suggestions is highly appreciated. See t
 </ul>
 
 ### Photo Clubs
-<ul><details>
-<summary>Details (click to expand)</summary></p>
 
 > The app showcases curated images made by members of photo clubs.
 
-The app structures the information in two hierarchical views of the data.
-Here is a schematic representation of the "Portfolios" screen that lets you
+Photo clubs are the distinguishing feature of this app. You either look up a photo club and then find its members
+(the `Portfolio` screen) or you look up a photographer and then find the associated photo club
+(the `Who's Who` screen). Once you have chosen a club-and-member combination or person-and-club combination,
+you can view the image portfolio for that club member.
+
+<ul><details><summary>Details (click to expand)</summary></p>
+
+Here is a schematic representation of the `Portfolios` screen that lets you
 first find a photo club before you get to club's members and their images:
 
 * photo clubA (hosted on siteA)
