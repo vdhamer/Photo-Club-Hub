@@ -459,7 +459,7 @@ Here is an example of the format of the OrganizationList. This example contains 
 }
 ```
 
-Note that:
+#### Level 1 Fields
 
 - **Mandatory** fields
     - `town` can be a city (London) or smaller location (Land's End)
