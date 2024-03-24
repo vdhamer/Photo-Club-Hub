@@ -461,11 +461,15 @@ Here is an example of the format of the OrganizationList. This example contains 
 
 ### Level 2. Adding Members
 
+`Level 2` requires providing a list of the names of current (and maybe former) club members as a text file with a specific format. This file can be stored anywhere you like as long as it can be read via a web address (URL). For example, you can store it in the Media section of your club’s Wordpress web site. With `Level 2`, the membership lists shows up on the Portfolios screen. Fotogroep Anders in the Netherlands is an example of a `Level 2` club. We are currently simplifying `Level 2` support.
+
 <details><Summary>Level 2 details (click to expand)</Summary>
     
 </details>
 
 ### Level 3. Adding Images
+
+`Level 3` requires providing links to the online images in member portfolios. Fotogroep Waalre in the Netherlands is an example of `Level 3` club: you can view their portfolios via the Portfolios screen. Because a club with, for example, 20 members will have hundreds of images, we have a way to automate generate portfolios using Lightroom (instructions on how this works will be provided later).
 
 <details><Summary>Level 3 details (click to expand)</Summary>
     
