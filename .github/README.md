@@ -449,6 +449,7 @@ Essentially that is an idea, bug, or feature request, rather than an offer to he
 
 </p>Possible contributions include adding features, code improvements, ideas on architecture and interface
 specifications, and possibly even a dedicated backend server.
+</details></ul>
 
 ### Other contributions
 
