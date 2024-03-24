@@ -469,7 +469,7 @@ You can check the basic syntax of JSON files using an online JSON validator.
 
 #### Level 1 Fields
 
-<details><Summary>Level 1 example (click to expand)</Summary></p>
+<details><Summary>Level 1 fields (click to expand)</Summary></p>
 
 - **Mandatory** fields
     - `clubs` and `museums` are required to distinguish photo clubs from photo museums. In the app's internal database these determine the `OrganizationType` (`club` or `museum`) of an `Organization` object, which in turn determines which visual marker to use maps.
