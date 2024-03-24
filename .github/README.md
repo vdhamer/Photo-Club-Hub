@@ -17,7 +17,6 @@
           <ul>
             <li><a href="#the-app">The App</a></li>
             <li><a href="#photo-clubs">Photo Clubs</a></li>
-            <li><a href="#implications">Implications of Portfolios</a>
           </ul>
     </p>
     <a href="#the-user-interface-screens">The User Interface Screens</a>
@@ -169,8 +168,6 @@ For comparison, traditional personal websites stress the photographer's images, 
   * photo galleryC (e.g. macro)
     * :
 
-<a/></p></ul>
-
 ### Implications
 <ul><details>
 <summary>Details (click to expand)</summary>
@@ -189,7 +186,7 @@ that they are interested in organizing this together.
 You could even consider yourself a one-person club and put your images in a single portfolio below that club.
 Or you could use the club level to group a few individual photographers (by region or interest) as long as the members
 of this non-club are willing to align (e.g. maintain the list of portfolios=photographers who are then a member of a loosely-knit club).
-
+<a/></p></ul>
 </detail></ul></detail>
 
 </ul>
