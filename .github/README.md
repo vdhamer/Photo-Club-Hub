@@ -474,14 +474,15 @@ Here is an example of the format of the OrganizationList. This example contains 
         - `longitude` should be in the range [-180.0, +180.0] where negative means Western hemisphere.
 - **Optional** fields
     - `website` holds a URL to the club's general purpose website. It can be displayed by the app (in a browser).
-    - The `memberList` field (for clubs only) is a URL that allows the app to find the `Level 2` data on membership. It is not used yet (Mar 24).
-    - The `wikipedia` field contains a link to a Wikipedia page for a museum. It _can_ be used for photo clubs - but a photo club with an entry in Wikipedia sounds unlikely.
-    - The `remark` field contain a brief note with something worth knowing about the club or museum. The `remark` contains an array of alternative strings in multiple languages. The app chooses one of the provided languages to display based on the device's language setting.
+    - `memberList` (for clubs only) holds a URL that allows the app to find the `Level 2` data on membership. It is not used yet (Mar 24).
+    - `wikipedia` contains a URL to a Wikipedia page for a museum. It _can_ be used for photo clubs - but a photo club with an entry in Wikipedia sounds unlikely.
+    - `remark` contains a brief note with something worth knowing about the club or museum. The `remark` contains an array of alternative strings in multiple languages. The app chooses one of the provided languages to display based on the device's language setting.
         - `language` is the two or three letter [ISO-639](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes) code for a language. `EN` is English, `FI` is Finnish.
         - `value` is the text to display for that particular remark in that language.
         - If the device's preferred language doesn't match any of the provided languages, the app will default to EN, if available. If EN is unavailable, it will select one of the available languages.
-    - The `nlSpecific` container holds fields that are only relevant for clubs in the Netherlands.
+    - `nlSpecific` is a container for fields that are only relevant for clubs in the Netherlands.
         - `fotobondNumber` is an ID number assigned by the Dutch national federation of photo clubs.
+        - There used to be a `kvkNumber` as well (Chamber of Commerce) but that was removed because it wasn't worth the effort.
 </details></p>
 
 ### Level 2. Adding Members
