@@ -35,10 +35,10 @@
         <ul>
             <li><a href="#multi-club-support">Multi-club Support</a></li>
             <li><a href="#photo-museums">Photo Museums</a></li>
-            <details><summary><li><a href="#data-privacy">Data Privacy</a></li></summary>
+            <details><summary><li><a href="#data-privacy">Data Privacy</a></summary>
                 <ul>
                     <li>Encryption Details</li>
-                </ul>
+                </ul></li>
             </details>
         </ul>
     </details>
