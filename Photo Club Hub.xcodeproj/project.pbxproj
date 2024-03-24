@@ -63,10 +63,11 @@
 		D0831A45277F731C0049AB84 /* String+Capitalize.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A41277F731C0049AB84 /* String+Capitalize.swift */; };
 		D0831A47277F731C0049AB84 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A43277F731C0049AB84 /* PersistenceController.swift */; };
 		D0831A51277F73C00049AB84 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0831A50277F73C00049AB84 /* Preview Assets.xcassets */; };
-		D08416932B2FAEB1000F316D /* FG_deGender.memberlist.json in Resources */ = {isa = PBXBuildFile; fileRef = D08416922B2FAEB1000F316D /* FG_deGender.memberlist.json */; };
+		D08416932B2FAEB1000F316D /* fgDeGender.level2.json in Resources */ = {isa = PBXBuildFile; fileRef = D08416922B2FAEB1000F316D /* fgDeGender.level2.json */; };
 		D08DC6062AE57294008DBD68 /* SinglePortfolioLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08DC6052AE57294008DBD68 /* SinglePortfolioLinkView.swift */; };
 		D0968F662A76F8A00096987A /* FotogroepWaalreMembersProvider+insertOnlineMemberData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0968F652A76F8A00096987A /* FotogroepWaalreMembersProvider+insertOnlineMemberData.swift */; };
 		D0A0B6852AA930E90078DE9A /* Photo_Club_Hub.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D0A0B6832AA930E90078DE9A /* Photo_Club_Hub.xcdatamodeld */; };
+		D0A30FB82BB0BB33009A9A6E /* root.level1.json in Resources */ = {isa = PBXBuildFile; fileRef = D0A30FB72BB0BB33009A9A6E /* root.level1.json */; };
 		D0ADF4AE27922DCA00535432 /* MemberRolesAndStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ADF4AD27922DCA00535432 /* MemberRolesAndStatus.swift */; };
 		D0AE1B7527889E8600E0100E /* OrganizationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AE1B7427889E8600E0100E /* OrganizationListView.swift */; };
 		D0AE1B782788A19500E0100E /* WhoIsWho.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AE1B772788A19500E0100E /* WhoIsWho.swift */; };
@@ -79,7 +80,7 @@
 		D0DE02772789D1B30062738C /* RoleIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DE02762789D1B30062738C /* RoleIconView.swift */; };
 		D0E02F9B2B80191300D67CDA /* Readme_NL_2_5_4.pages in Resources */ = {isa = PBXBuildFile; fileRef = D0E02F972B80191300D67CDA /* Readme_NL_2_5_4.pages */; };
 		D0E2235427DE9139002A8600 /* PreludeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E2235327DE9139002A8600 /* PreludeView.swift */; };
-		D0E2D6062B9B9577008D1F7A /* Test1ClubList.json in Resources */ = {isa = PBXBuildFile; fileRef = D0E2D6032B9B9568008D1F7A /* Test1ClubList.json */; };
+		D0E2D6062B9B9577008D1F7A /* test1Club.level1.json in Resources */ = {isa = PBXBuildFile; fileRef = D0E2D6032B9B9568008D1F7A /* test1Club.level1.json */; };
 		D0E694C927EF9B450054D634 /* LockAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E694C827EF9B450054D634 /* LockAnimationView.swift */; };
 		D0EAEB332B3CA6D300EC05B6 /* OrganizationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EAEB322B3CA6D300EC05B6 /* OrganizationList.swift */; };
 		D0EB533C295775240061613B /* Crosshairs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EB533B295775240061613B /* Crosshairs.swift */; };
@@ -165,14 +166,15 @@
 		D0831A43277F731C0049AB84 /* PersistenceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		D0831A4B277F736C0049AB84 /* ReleaseNotes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = ReleaseNotes.md; sourceTree = "<group>"; };
 		D0831A50277F73C00049AB84 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		D08416912B2FA3C2000F316D /* FG_Anders.memberlist.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = FG_Anders.memberlist.json; sourceTree = "<group>"; };
-		D08416922B2FAEB1000F316D /* FG_deGender.memberlist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FG_deGender.memberlist.json; sourceTree = "<group>"; };
+		D08416912B2FA3C2000F316D /* fgAnders.level2.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = fgAnders.level2.json; sourceTree = "<group>"; };
+		D08416922B2FAEB1000F316D /* fgDeGender.level2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fgDeGender.level2.json; sourceTree = "<group>"; };
 		D08DC6052AE57294008DBD68 /* SinglePortfolioLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePortfolioLinkView.swift; sourceTree = "<group>"; };
 		D0968F652A76F8A00096987A /* FotogroepWaalreMembersProvider+insertOnlineMemberData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FotogroepWaalreMembersProvider+insertOnlineMemberData.swift"; sourceTree = "<group>"; };
 		D09C90642BA8F171005FA3D6 /* Photo_Club_Hub_2_5_5a.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_5_5a.xcdatamodel; sourceTree = "<group>"; };
 		D0A0B6842AA930E90078DE9A /* Photo_Club_Hub.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub.xcdatamodel; sourceTree = "<group>"; };
 		D0A0B6872AA932A10078DE9A /* Photo_Club_Hub_2_4_1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_4_1.xcdatamodel; sourceTree = "<group>"; };
-		D0A5B7EE2B45F67E001FAD59 /* Test2Club2MuseumList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Test2Club2MuseumList.json; sourceTree = "<group>"; };
+		D0A30FB72BB0BB33009A9A6E /* root.level1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = root.level1.json; sourceTree = "<group>"; };
+		D0A5B7EE2B45F67E001FAD59 /* test2Club2Museum.level1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test2Club2Museum.level1.json; sourceTree = "<group>"; };
 		D0ADF4AD27922DCA00535432 /* MemberRolesAndStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberRolesAndStatus.swift; sourceTree = "<group>"; };
 		D0AE1B7427889E8600E0100E /* OrganizationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationListView.swift; sourceTree = "<group>"; };
 		D0AE1B772788A19500E0100E /* WhoIsWho.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhoIsWho.swift; sourceTree = "<group>"; };
@@ -191,7 +193,7 @@
 		D0E02F942B7FA33200D67CDA /* Readme_EN_2_5_4.pages */ = {isa = PBXFileReference; lastKnownFileType = file; path = Readme_EN_2_5_4.pages; sourceTree = "<group>"; };
 		D0E02F972B80191300D67CDA /* Readme_NL_2_5_4.pages */ = {isa = PBXFileReference; lastKnownFileType = file; path = Readme_NL_2_5_4.pages; sourceTree = "<group>"; };
 		D0E2235327DE9139002A8600 /* PreludeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreludeView.swift; sourceTree = "<group>"; };
-		D0E2D6032B9B9568008D1F7A /* Test1ClubList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Test1ClubList.json; sourceTree = "<group>"; };
+		D0E2D6032B9B9568008D1F7A /* test1Club.level1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test1Club.level1.json; sourceTree = "<group>"; };
 		D0E673BA2AE1C1A100A4DC95 /* Photo_Club_Hub_2_5_0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_5_0.xcdatamodel; sourceTree = "<group>"; };
 		D0E694C827EF9B450054D634 /* LockAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockAnimationView.swift; sourceTree = "<group>"; };
 		D0EAEB322B3CA6D300EC05B6 /* OrganizationList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganizationList.swift; sourceTree = "<group>"; };
@@ -475,11 +477,12 @@
 		D08416952B2FC07F000F316D /* Lists */ = {
 			isa = PBXGroup;
 			children = (
-				D0E2D6032B9B9568008D1F7A /* Test1ClubList.json */,
+				D0E2D6032B9B9568008D1F7A /* test1Club.level1.json */,
 				D04B1A0B2B1AA06300EB3817 /* OrganizationList.json */,
-				D0A5B7EE2B45F67E001FAD59 /* Test2Club2MuseumList.json */,
-				D08416912B2FA3C2000F316D /* FG_Anders.memberlist.json */,
-				D08416922B2FAEB1000F316D /* FG_deGender.memberlist.json */,
+				D0A30FB72BB0BB33009A9A6E /* root.level1.json */,
+				D0A5B7EE2B45F67E001FAD59 /* test2Club2Museum.level1.json */,
+				D08416912B2FA3C2000F316D /* fgAnders.level2.json */,
+				D08416922B2FAEB1000F316D /* fgDeGender.level2.json */,
 			);
 			path = Lists;
 			sourceTree = "<group>";
@@ -643,17 +646,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				D008D2AA28739167007A7BE2 /* .gitignore in Resources */,
-				D0E2D6062B9B9577008D1F7A /* Test1ClubList.json in Resources */,
+				D0E2D6062B9B9577008D1F7A /* test1Club.level1.json in Resources */,
 				D0E02F9B2B80191300D67CDA /* Readme_NL_2_5_4.pages in Resources */,
 				D06061EA28A0456C00A675A7 /* FGWPrivateMembersURL3.txt in Resources */,
 				D0B52497277F9A4B00927BCA /* Localizable.strings in Resources */,
+				D0A30FB82BB0BB33009A9A6E /* root.level1.json in Resources */,
 				D0831A51277F73C00049AB84 /* Preview Assets.xcassets in Resources */,
 				D0FC30C92BA78F2E0051AFB6 /* OrganizationList.json in Resources */,
 				D04A2B122AC0958C003ED113 /* LineCount.xlsx in Resources */,
 				D053F23D2B54430C00662EF8 /* Photo-Club-Hub-InfoPlist.strings in Resources */,
 				D06061E828A0453F00A675A7 /* FGWPrivateMembersURL2.txt in Resources */,
 				D08319EB277F70A40049AB84 /* Assets.xcassets in Resources */,
-				D08416932B2FAEB1000F316D /* FG_deGender.memberlist.json in Resources */,
+				D08416932B2FAEB1000F316D /* fgDeGender.level2.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

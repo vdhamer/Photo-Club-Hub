@@ -1,9 +1,12 @@
 ### 2.5.6 (GitHub commit ???????) ??-04-24
 
+Clubs and Museums screen
+    * renamed OrganizationList.json to root.level1.json
 Maintenance
     * Fixed a problem in the layout of README.md text on GitHub (`detail`/`summary`).
     * Added screenshots of all screens to README.md text on GitHub.
     * Improved documentation of JSON file formats in README.md
+    * Improved error message if root.level1.json file not found
 
 This is build #4617.
 ---------------------------------------------------------------------------

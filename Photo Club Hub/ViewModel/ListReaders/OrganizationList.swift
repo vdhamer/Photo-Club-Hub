@@ -15,10 +15,9 @@ private let dataSourcePath: String = """
                                      main/\
                                      Photo%20Club%20Hub/ViewModel/Lists/
                                      """
-// private let dataSourceFile: String = "Test2Club2MuseumList.json"
-private let dataSourceFile: String = "OrganizationList"
+// private let dataSourceFile: String = "test2Club2Museum.level1.json"
+private let dataSourceFile: String = "root.level1" // level1 is part of file name, not the extension
 private let fileType = "json"
-// private let dataSourceFile: String = "OrganizationList.json"
 private let organizationTypesToLoad: [OrganizationTypeEnum] = [.club, .museum]
 
 /* Example of basic OrganizationList.json (Level 1) content
@@ -35,15 +34,14 @@ private let organizationTypesToLoad: [OrganizationTypeEnum] = [.club, .museum]
                 "longitude": 5.45010
             }
             "website": "https://www.fcdegender.nl",
-            "memberList": "https://www.example.com/deGenderMemberList.json"
+            "memberList": "https://www.example.com/fgDeGender.level2.json"
             "remark": [
                 {
                     "language": "NL",
                     "value": "In dit museum zijn scenes van het TV programma 'Het Perfecte Plaatje' opgenomen."
                 }
             ]
-        }
-    ],
+        },
     "museums": [
         {
             "idPlus": {
@@ -73,11 +71,13 @@ class OrganizationList {
     init(bgContext: NSManagedObjectContext, useOnlyFile: Bool = false) {
 
         bgContext.perform { // switch to supplied background thread
+            guard let filePath = Bundle.main.path(forResource: dataSourceFile, ofType: fileType) else {
+                fatalError("Internal file \(dataSourceFile + "." + fileType) not found. Check file name.")
+            }
             self.readJSONOrganizationList(bgContext: bgContext,
                                           data: getData(
                                                     fileURL: URL(string: dataSourcePath+dataSourceFile+"."+fileType)!,
-                                                    filePath: Bundle.main.path(forResource: dataSourceFile,
-                                                                               ofType: fileType)!
+                                                    filePath: filePath
                                           ),
                                           for: organizationTypesToLoad)
         }
@@ -87,7 +87,7 @@ class OrganizationList {
             if let urlData = try? String(contentsOf: fileURL), !useOnlyFile {
                 return urlData
             }
-            print("Could not access online file \(fileURL.relativeString). Trying local file instead.")
+            print("Could not access online file \(fileURL.relativeString). Trying local file \(filePath) instead.")
             if let fileData = try? String(contentsOfFile: filePath) {
                 return fileData
             }
