@@ -557,7 +557,7 @@ Here is an example of the (draft) format of a MemberList of a photo club. This s
         - `town` and `fullName` must exactly match the corresponding fields in the OrganizationList.json file.
     - `members`
         -  
-- **Optional fields**
+- **Optional** fields
     - `club`
         - a club's `nickName`, `latitude`, `longitude`, and `website` can overrule the corresponding OrganizationList fields if needed.</p>
         - the `memberList` field can be provided, but it's value is generally overruled by the OrganizationList's "memberList" value.
