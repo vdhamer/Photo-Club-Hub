@@ -490,27 +490,28 @@ model's data automatically trigger the required updates to
 
 ### Role of the Database 
 
-<ul><details><summary>Details (click to expand)</summary>
+<ul><details><summary>Details (click to expand)</summary></p>
 
-</p>The model's data is loaded and updated via the internet, and is stored in an on-device database. 
+The model's data is loaded and updated via the internet, and is stored in an on-device database. 
 Internally the database is [SQLite](https://en.wikipedia.org/wiki/SQLite), but that is invisible because
-it is wrapped inside Apple's Core Data framework.
+it is wrapped inside Apple's Core Data framework.</p>
 
-</p>Because the data in the app's local database is available online,
+>Because the data in the app's local database is available online,
 the app *could* have chosen to fetch that data over the network each time the app is launched.
 By using a database, however, the app launches faster: on startup, the app 
-can already display the content of the on-device database.
+can already display the content of the on-device database.</p>
 
-</p>This implies showing the state of the data as it was at the end of the previous session.
-That data might be a bit outdated, but is should be accurate enough to start off with. 
+This implies showing the state of the data as it was at the end of the previous session.
+That data might be a bit outdated, but is should be accurate enough to start off with.</p>
 
-</p>To handle any data updates, asynchrous calls fetch fresher data over the network. 
+To handle any data updates, asynchrous calls fetch fresher data over the network. 
 And the MVVM architecture uses this to update the user interface `Views` as soon as the requested data arrives.
 So occasionally, maybe one or two seconds after the app launches, the user may see the `Portfolios` screen update. 
-This can happen, for example if a club's online member list changed since the previous session.
+This can happen, for example if a club's online member list changed since the previous session.</p>
 
-</p>To be precise, the above is the target architecture. Right now there are still a few gaps -
+To be precise, the above is the target architecture. Right now there are still a few gaps -
 but because it usually works well enough, a user typically won't notice:
+
 1. the lists of images per portfolio are *not* stored in the database yet.
    These images are also not cached. Image caching is a roadmap item.
 2. the image thumbnail per portfolio is stored in the database as a URL.
@@ -536,27 +537,27 @@ but because it usually works well enough, a user typically won't notice:
 </p>Here are the entities managed by the app's internal Core Data database.
 The entities (rounded boxes) are tables and arrows are relationships in the underlying SQLite database.</p>
 
-</p>Note that the tables are fully "normalized" in the relational database sense.
-This means that redundancy in all stored data is minimized via referencing. 
+Note that the tables are fully "normalized" in the relational database sense.
+This means that redundancy in all stored data is minimized via referencing.</p>
 
-</p>Optional properties in the database with names like `PhotoClub.town_` have a corresponding computed
+Optional properties in the database with names like `PhotoClub.town_` have a corresponding computed
 property that is non-optional named `PhotoClub.town`. This allows `PhotoClub.town` to always return
 a `String` value such as "Unknown town" rather than an optional `String?` value.
 
 #### Organization
 
-<ul><details><summary>Details (click to expand)</summary>
+<ul><details><summary>Details (click to expand)</summary></p>
 
-</p>This table contains both photo clubs and musea. Many properties apply to both.
+This table contains both photo clubs and musea. Many properties apply to both.
 The relationship to `OrganizationType` is used to distinguish betweene both.
 Currently `OrganizationType` (essentially an enum) has only two allowed values: `club` and `museum`.
-But, for example,`festivals` could also be added in the future.
+But, for example,`festivals` could also be added in the future.</p>
 
-</p>An organization is uniquely identified by its `name` *and* a `town`.
+An organization is uniquely identified by its `name` *and* a `town`.
 Including the town is necessary because two towns might have local photo clubs that happen to have the same name.
-This is unlikely for musea, but the same approach is used just in case.
+This is unlikely for musea, but the same approach is used just in case.</p>
 
-</p>An `Organization` has a rough address down to the `town` level and GPS `coordinates`.
+An `Organization` has a rough address down to the `town` level and GPS `coordinates`.
 The GPS coordinates can precisely indicate where the club meets (often good enough for navigation purposes). 
 The GPS coordinates are used to insert markers on a map. 
 The GPS coordinates are also used to localize `town` and `country` names by asking an online mapping 
@@ -565,7 +566,8 @@ service to convert GPS coordinates into a textual address, using the device's cu
 
 #### Photographer
 
-<ul><details><summary>Details (click to expand)</summary>
+<ul><details><summary>Details (click to expand)</summary></p>
+
 Some basic information about a `Photographer` (name, date of birth, personal website, ...) is
 related to the `Photographer` as an individual, rather to the `Photographer's` membership of any
 specific `PhotoClub`. This club-independent information is stored in the individual's `Photographer`
@@ -574,21 +576,21 @@ struct/record.
 
 #### MemberPortfolio
 
-<ul><details><summary>Details (click to expand)</summary>
+<ul><details><summary>Details (click to expand)</summary></p>
 
-</p>Every `PhotoClub` has (zero or more) `Members` who can have various roles (`isChairman`, `isAdmin`, ...)
+Every `PhotoClub` has (zero or more) `Members` who can have various roles (`isChairman`, `isAdmin`, ...)
 representing the tasks they perform in the photo club. A `Member` may have multiple roles within one
-`PhotoClub` (e.g., members is both `isSecretary` and `isAdmin`).
+`PhotoClub` (e.g., members is both `isSecretary` and `isAdmin`).</p>
 
-</p>Members also have a status, the implicit default being `isCurrent` membership.
-Explicit status values include `isFormer`, `isAspiring`, `isHonorary` and `isMentor`.
+Members also have a status, the implicit default being `isCurrent` membership.
+Explicit status values include `isFormer`, `isAspiring`, `isHonorary` and `isMentor`.</p>
 
-</p>`Portfolio` represents the work of one `Photographer` in the context of one `PhotoClub`.
+`Portfolio` represents the work of one `Photographer` in the context of one `PhotoClub`.
 A `Portfolio` contains `Images` (the list is not stored in the database yet). 
 An `Image` can show up in multiple `Portfolios` if the `Photographer` presented the same photo within
-multiple `PhotoClubs`.
+multiple `PhotoClubs`.</p>
 
-</p>`Member` and `Portfolio` can be considered *synonyms* from a modeling perspective:
+`Member` and `Portfolio` can be considered *synonyms* from a modeling perspective:
 we create exactly one `Portfolio` for each `PhotoClub` that a `Photographer` became a `Member` of.
 And every `Member` of a `PhotoClub` has exactly one `Portfolio` - even if it still contains zero images - 
 because this is needed to store information about this membership.
@@ -598,9 +600,9 @@ modelled using once concept (aka table) instead of two. We named that `MemberPor
 
 #### OrganizationType
 
-<ul><details><summary>Details (click to expand)</summary>
+<ul><details><summary>Details (click to expand)</summary></p>
 
-</p>This is a tiny table used to hold the supported types of `Organization` records.
+This is a tiny table used to hold the supported types of `Organization` records.
 It could be used someday to drive a picker in a data editing tool.
 For now, it ensures that each `Organization` belong to exactly one of the supported `OrganizationTypes`.
 And it could be used to generate statistics about how man `Organizations` per `OrganizationType` are supported.
@@ -608,36 +610,36 @@ And it could be used to generate statistics about how man `Organizations` per `O
 
 #### Language
 
-<ul><details><summary>Details (click to expand)</summary>
+<ul><details><summary>Details (click to expand)</summary></p>
 
-</p>The `Language` table is a tiny table to hold the languages supported by the OrganizationList.json file.
+The `Language` table is a tiny table to hold the languages supported by the `OrganizationList.json` file.
 For now, it is intended only to support the `LocalizedRemark` table. 
-Initially a hardcoded equivalent is used to load localized remarks from OrganizationList.json.
+Initially a hardcoded equivalent is used to load localized remarks from `OrganizationList.json`.</p>
 
-</p>By storing it in the database, the set of supported `Languages` in OrganizationList.json can be opended.
+By storing it in the database, the set of supported `Languages` in OrganizationList.json can be opended.
 For example, a museum in Portugal may have an English and a Portugues remark, 
 even when the user interface is only localized to English and Dutch.
 This allows the app to display Portuguese text for the local museum if the device is set to Portuguese,
-while the user interface will be shown in English as long as Portuguese is not supported.
+while the user interface will be shown in English as long as Portuguese is not supported.</p>
 
-</p>A side benefit of this approach is that localized remarks can be provided without having to wait until
+A side benefit of this approach is that localized remarks can be provided without having to wait until
 the app provides full support for a language.
 </details></ul>
 
 #### LocalizedRemark
 
-<ul><details><summary>Details (click to expand)</summary>
+<ul><details><summary>Details (click to expand)</summary></p>
 
-</p>The `LocalizedRemark` table holds brief remarks about an `Organization` in zero or more `Languages`. 
+The `LocalizedRemark` table holds brief remarks about an `Organization` in zero or more `Languages`. 
 Remarks are optional, but we recommend providing them. The `LocalizedRemark` table is not filled yet.
 Instead the localized remark texts are temporarily stored in hard-coded property fields
-(`remarkEN`, `remarkNL`) in the `Organization` table.
+(`remarkEN`, `remarkNL`) in the `Organization` table.</p>
 
-</p>An `Organization` record can be linked to 0, 1, 2 or more `Languages` regardless of whether the app fully supports that language.
+An `Organization` record can be linked to 0, 1, 2 or more `Languages` regardless of whether the app fully supports that language.
 The ISO 2 or 3-letter code of the language and a readable name are stored in `Language`.
-The actual text shown in the user interface is shown in the `LocalizedRemark` table.
+The actual text shown in the user interface is shown in the `LocalizedRemark` table.</p>
 
-</p>If the device is configured at the iOS level to use e.g. FR for French,
+If the device is configured at the iOS level to use e.g. FR for French,
 the app will give priority to displaying `LocalizedRemarks` in French if encountered.
 Otherwise it defaults to English, if available. 
 If the preferred langugages are not available, it will use a non-preferred language if available.
@@ -650,30 +652,30 @@ If the preferred langugages are not available, it will use a non-preferred langu
     
 #### The Old Approach
 
-<ul><details><summary>Details (click to expand)</summary>
+<ul><details><summary>Details (click to expand)</summary></p>
 
-</p>The app currently uses a software module per club. This means a club can
+The app currently uses a software module per club. This means a club can
 concievably store their online list of members (`MemberPortfolios`) in any format.
 It is then up to the software module to convert it to the app's internal data representation.
 Similarly, a club could store their list of `Images` per member (`MemberPortfolio`) in any
-conceivable format as long as the software module does the conversion.
+conceivable format as long as the software module does the conversion.</p>
 
-</p>Thus, the software module per photo club loads membership and portfolio data across the network.
+Thus, the software module per photo club loads membership and portfolio data across the network.
 The data will likely be stored on the club’s website somewhere, presumable in a simple file format.
 That data is then loaded into the in-app database, but also used to updated the database.
 This updating is done (on a background thread) whenever the app lauches,
-and thus takes care of changed membership lists as well as changed image portfolios.
+and thus takes care of changed membership lists as well as changed image portfolios.</p>
 
-</p>For Photo Club Waalre, the __membership list__ is read from an HTML table on a
+For Photo Club Waalre, the __membership list__ is read from an HTML table on a
 page on the club’s website. HTML is messy to parse, but also serves as a web page
-for the club's website.
+for the club's website.</p>
 
-</p>In the case of Photo Club Waalre, the membership list is password protected in Wordpress and the app bypasses that password 
+In the case of Photo Club Waalre, the membership list is password protected in Wordpress and the app bypasses that password 
 using a long key and the Wordpress [Post Password Token](https://wordpress.org/plugins/post-password-plugin/) plugin. 
 The GitHub version uses a (redacted) copy of the membership list in order to show real data. Details about these details
-can be found above.
+can be found above.</p>
     
-</p>The __image lists__ or `portfolios` use a more robust and easier to maintain approach: 
+The __image lists__ or `portfolios` use a more robust and easier to maintain approach: 
 for Photo Club Waalre, portfolios are read from XML files generated by an Adobe Lightroom
 Web plug-in called [JuiceBox-Pro](https://www.juicebox.net/). 
 Thus portfolios are created and maintained within a Lightroom Classic catalog as a set of 
@@ -685,30 +687,30 @@ choice of directory) only need to be configured once per portfolio (=member).
 
 #### The New Approach
 
-<ul><details><summary>Details (click to expand)</summary>
+<ul><details><summary>Details (click to expand)</summary></p>
 
-</p>A major design goal for the near future is to provide a clean,
+A major design goal for the near future is to provide a clean,
 standardized interface to retrieve data per photo club.
 This data is then loaded into into the in-app CoreData database.
 It is also needed to keep the CoreData database up to date whenever
 clubs, members or images are added.
-The old approach is essentially a plug-in design with an adaptor per photo club.
+The old approach is essentially a plug-in design with an adaptor per photo club.</p>
 
-</p>The new approach replaces this by a standardizable data interface to avoid
+The new approach replaces this by a standardizable data interface to avoid
 having to modify the source code to add (or modify/remove) clubs, members or images.
 The basic idea here is to store the required information in a hierarchical, distributed way.
-This allows the app to load the information in a three step process:
+This allows the app to load the information in a three step process:</p>
 
-</p>1. __OrganizationList: central list of photo clubs__</p>
+1. __OrganizationList: central list of photo clubs__</p>
 
-</p>The app loads a list of photo clubs from a fixed location (URL). Because the file is kept external to the actual app,
+The app loads a list of photo clubs from a fixed location (URL). Because the file is kept external to the actual app,
 the list can be updated without requiring an app software update.
-The file is in a fixed JSON syntax and contains a list of supported photo clubs.
+The file is in a fixed JSON syntax and contains a list of supported photo clubs.</p>
 
-</p>As a bonus, the list can also contain information about photography museums. The properties of clubs and museums largely overlap,
-but a photo club _can_ notably include the location (URL) of a MemberList.json data source while a museum _cannot_.
+As a bonus, the list can also contain information about photography museums. The properties of clubs and museums largely overlap,
+but a photo club _can_ notably include the location (URL) of a MemberList.json data source while a museum _cannot_.</p>
 
-</p>Here is an example of the format of the OrganizationList. This minimal example contains one photo club and one photo museum:
+Here is an example of the format of the OrganizationList. This minimal example contains one photo club and one photo museum:
 
 ``` json
 {
@@ -754,25 +756,26 @@ but a photo club _can_ notably include the location (URL) of a MemberList.json d
     ]
 }
 ```
-</p>Note that:
+
+Note that:
 - All fields within `idPlus` and `coordinates` are required. All other fields can be omitted if the data is not available or not applicable.
 - `idPlus.town` and `idPlus.fullName` together serve to differentiate clubs or museums from others. Try to avoid changing these strings. 
 - `coordinates` is used to draw the club on the map and to [generate](http://www.vdhamer.com/reversegeocoding-for-localizing-towns-and-countries/) localized versions of town and country names. Latitudes are in the range [-90.0, +90.0] where negative `latitude` means south of the Equator. Longitude values are in the range [-180.0, +180.0] where negative `longitude` means west of Greenwich London.
 - The `memberList` field (for clubs only) allows the app to find the next level list with membership data. It is reserved for future use.
 - The `wikipedia` field contains a link to a Wikipedia page for a museum. It is unlikely that a photo club will have a page in Wikipedia, but it would work.
 - The `remark` field contain a brief remark note withy something worth knowing about the item. The `remark` contains an array of alternative strings in multiple languages. The app selects which language to use based on the device's language settings.
-- The `nlSpecific` container has optional fields that are only relevant for clubs in the Netherlands. `fotobondNumber` is an ID number assigned by the national federation of photo clubs.
+- The `nlSpecific` container has optional fields that are only relevant for clubs in the Netherlands. `fotobondNumber` is an ID number assigned by the national federation of photo clubs.</p>
 
-</p>2. __MemberList: local lists of photo club members__</p>
+2. __MemberList: local lists of photo club members__</p>
 
 </p>Each MemberList defines the current (and potentially former) members of a single club.
 For each member, a URL is stored pointing to the final list level (portfolio per member).
 MemberList also includes the URL of an image used as thumbnail for that member.
 MemberList can be stored and managed on the club's own server. The file needs to be in
 a JSON format to allow the app to interpret it correctly.
-A future editing tool (app or web-based) would help ensure syntactic and schema consistency.
+A future editing tool (app or web-based) would help ensure syntactic and schema consistency.</p>
 
-</p>Here is an example of the (draft) format of the MemberList of a photo club with a single member:
+Here is an example of the (draft) format of the MemberList of a photo club with a single member:
 
 ``` json
 {
@@ -810,22 +813,22 @@ A future editing tool (app or web-based) would help ensure syntactic and schema 
 }
 ```
 
-</p>Notes about the `club` section:
+Notes about the `club` section:
 - `club` is the same as one object/record in the OrganizationList. It documents the club that the MemberList is for.
 - the `town` and `fullName` fields are required.
 - `town` and `fullName` must exactly match the corresponding fields in the OrganizationList.json file.
 - the `memberList` field can be provided, but it's value is generally overruled by the OrganizationList's "memberList" value.
 - a club's `nickName`, `latitude`, `longitude`, and `website` can overrule the corresponding OrganizationList fields if needed.</p>
 
-</p>Notes about the `members` section:
+Notes about the `members` section:
 - a member's `givenName`, `infixName` and `familyName` are used to uniquely identify the photographer.
 - `givenName` and `familyName` are required. An omitted "infixName" is equivalent to "infixName" = "".
 - `infixName` will often be empty. It enables correctly sorting European surnames: "van Aalst" sorts like "Aalst".
 - the `imageList` field allows the app to find the next level list about the selected images per member.</p>
 
-</p>3. __ImageList: local image portfolios per club member__</p>
+3. __ImageList: local image portfolios per club member__</p>
 
-</p>The list of images (per club member) is fetched only when a portfolio is selected for viewing.
+The list of images (per club member) is fetched only when a portfolio is selected for viewing.
 There is thus no need to prefetch the entire 3-level tree (root/memberlist/imagelist).
 Again, this index needs to be in a fixed format, and thus will possibly 
 require an editing tool to guard the syntax. Currently this tool already exists:
@@ -844,23 +847,23 @@ or rating system in place.
 
 #### Background Threads
 
-<ul><details><summary>Details (click to expand)</summary>
+<ul><details><summary>Details (click to expand)</summary></p>
 
-</p>Membership lists are loaded into Core Data using a dedicated background thread per photo club.
+Membership lists are loaded into Core Data using a dedicated background thread per photo club.
 So if, for example, 10 clubs are loaded, there will be a main thread for SwiftUI, 
 a few predefined lower priority threads, plus 10 temporary background threads (one per club).
 Each background thread reads optional data stored inside the app itself, and then reads optional online data.
 A club's background thread disappears as soon as the club’s membership data is fully loaded.
 
-</p>These threads start immediately once the app is launched (in `Foto_Club_Hub_Waalre_App.swift`).
+These threads start immediately once the app is launched (in `Foto_Club_Hub_Waalre_App.swift`).
 This means that background loading of membership data already starts while the Prelude View is displayed.
 </details></ul>
 
 #### SwiftUI View Updates
 
-<ul><details><summary>Details (click to expand)</summary>
+<ul><details><summary>Details (click to expand)</summary></p>
 
-</p>It also means that slow background threads might complete after the list of members is displayed in
+It also means that slow background threads might complete after the list of members is displayed in
 the Portfolio View. This may cause an update of the membership lists in the Portfolio View.
 This will be rarely noticed because the Portfolio View displays data from the Core Data database,
 and thus usually arleady contains data persisted from a preceding run. But you might see updates
@@ -869,9 +872,9 @@ found within the online data or updates when the app is run for the first time.
 
 #### Core Data Contexts
 
-<ul><details><summary>Details (click to expand)</summary>
+<ul><details><summary>Details (click to expand)</summary></p>
 
-</p>Each thread is associated with a Core Data `NSManagedObjectContext]`.
+Each thread is associated with a Core Data `NSManagedObjectContext]`.
 In fact, the thread is started using `myContext.perform()`.
 The trick to using Core Data in a multi-threaded app is to ensure that all database fetches/inserts/updates 
 are performed using the Core Data `NSManagedObjectContext` while running the associated thread. Schematically:</p>
@@ -882,9 +885,9 @@ are performed using the Core Data `NSManagedObjectContext` while running the ass
     - commit data to database using `myContext.save()`. A CoreData feature.
     - do any other required operations ended by additional `myContext.save()`. A CoreData feature.
   - end usage of the thread. The thread will disappear. A Swift feature.
-- the `myContext` object disappears when it is no longer used. A Swift feature.
+- the `myContext` object disappears when it is no longer used. A Swift feature.</p>
 
-</P>The magic happens within `myContext.save()`.
+The magic happens within `myContext.save()`.
 During the `myContext.save()` any changes are committed to the database 
 so that other threads can now see those changes and the changes are persistently stored.
 Note that `myContext.save()` can throw an exception - especially if there are 
@@ -893,9 +896,9 @@ inconsistencies such as data merge conflicts, or violations of database constrai
 
 #### Comparison to SQL Transactions
 
-<ul><details><summary>Details (click to expand)</summary>
+<ul><details><summary>Details (click to expand)</summary></p>
 
-</p>A Core Data `NSManagedObjectContext` can be seen as a counterpart to an SQL transactions.</p>
+A Core Data `NSManagedObjectContext` can be seen as a counterpart to an SQL transactions.</p>
 
 - create thread. An OS/language feature.
   - start transaction. An SQL feature.
