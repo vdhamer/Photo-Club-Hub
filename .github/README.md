@@ -387,54 +387,44 @@ If you simly want to install the binary version of the app, just install it from
 * GitHub's [SwiftyJSON](https://GitHub.com/SwiftyJSON/SwiftyJSON) package for accessing JSON content via paths (dictionaries that recursively contain dictionaries)
 </details>
 
-<details><summary>
-
 ### Cloning the Repository
 
-</summary>
+<details><summary>Details (click to expand)</summary>
 To install the source code locally, it is easiest to use GitHub’s `Open with Xcode` feature.
 Developers used to running Git from the command line should manage on their own.
 Xcode covers the installation of the binary on a physical device or on an Xcode iPhone/iPad simulator.
-
 </details>
-
-<details><summary>
 
 ### Code Signing
 
-</summary>
+<details><summary>Details (click to expand)</summary>
 During the build you may be prompted to provide a developer license (personal or commercial)
 when you want to install the app on a physical device. This is a standard Apple iOS policy
 rather than something specific to this app.
 
-Starting with iOS 16.0 you will also need to configure physical devices to allow them to run apps
+<\p>Starting with iOS 16.0 you will also need to configure physical devices to allow them to run apps
 that have _not_ been distributed via the Apple App Store. This configuration requires enabling
 `Developer Mode` on the device using `Settings` > `Privacy & Security` > `Developer Mode`.
 Again, this is a standard Apple iOS policy. This doesn't apply to MacOS.
 </details>
 
-<details><summary>
-
 ### Updating the App
 
-</summary>
+<details><summary>Details (click to expand)</summary>
 
 If you update to a newer build of the app, all app data stored in the device's internal data storage 
 will remain available. If you choose to remove and reinstall the app, the database content will be lost.
 Fortunately, this has no real implications for the user as the data storage doesn't contain any relevant user data (so far).
     
-<ul><details><summary>
-    
 #### Schema Migration
-    
-</summary>
+
+<ul><details><summary>Details (click to expand)</summary>
 If the data structure has changed from one version to a later version,
 Core Data will automatically perform a so-called schema migration.
 If you remove and reinstall the app, the Core Data database is lost, but this isn't an issue as the 
 database so far doesn't contain any user data.
 Schema migration is standard feature of Apple's Core Data framework, although the app does its bit
 so that Core Data can track, for example, renamed struct types or renamed properties.
-</details>
 </details></ul>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
