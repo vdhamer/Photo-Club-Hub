@@ -555,8 +555,7 @@ Here is an example of the (draft) format of a MemberList of a photo club. This s
     - `club` is the same as one object/record in the OrganizationList. It documents the club that the MemberList is for.
         - the `town` and `fullName` fields are required.
         - `town` and `fullName` must exactly match the corresponding fields in the OrganizationList.json file.
-    - `members`
-        -  
+    - `members` is a container for one or more member records. Technically these correspond to the `MemberPortfolio` class in the database.
 - **Optional** fields
     - `club`
         - a club's `nickName`, `latitude`, `longitude`, and `website` can overrule the corresponding OrganizationList fields if needed.</p>
