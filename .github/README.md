@@ -373,26 +373,27 @@ But that data is still encrypted by a private encryption key that is not provide
 </details></ul>
 </details></ul>
 
-## Adding Photo Clubs
+## Adding Photo Club Data
 
 ![Screenshots of 3 screens](images/app_screenshots_EN.jpg "Screenshots of app")
 
 For a club to be included in the app, the app needs basic information like the club’s name and location (`Level 1`),
 a list of its members (`Level 2`) and links to image portfolios (`Level 3`). 
-Adding musea are handled in the same way, although this only involves `Level 1` because a museum has no members with image portfolios.
+Museaums are added in a similar way, although museums don't have a `Level 2` or `Level 3`.
 
-These 3 steps are called `Levels` because you can __pause__ as long as you like on any level before upgrading a club to the next level.
-This means the app can contain a mix of `Level 1`, `Level 2`, and `Level 3` clubs.
+These 3 stages of adding information are called `Levels` because you can __pause__ as long as necessary before proceeding to the next level.
+This means the app can contain a mix of clubs at `Level 1`, `Level 2`, and `Level 3`.
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+When a club is (temporarily or permanently) at `Level 1`, it shows up as a marker on the maps (left screenshot).
+This is because the app knows club's location and name.
 
-When a club is (temporarily or permanently) at `Level 1`, it is visible as a marker on the maps (left screenshot).
-The app thus knows the name and location of the club (and a bit more, see below).
+When a club reaches `Level 2`, the app is aware of the names (and roles) of club members.
+As illustrated in the center screenshot, the club and its members now show up in the `Portfolio` and `Who's Who` screens.
 
-When a club is (temporarily or permanently) at `Level 2`, the app is then aware of the names and roles (e.g. `former`, `chairman`) of club members.
-As illustrated in the center screenshot, the club and its members then then show up in the `Portfolio` and `Who's Who` screens.
-
-When a club is at the final `Level 3`, the app can find the selected images per club member (right screenshot), allowing a user to browse these images.  
+When a club is at the final `Level 3`, the app can find the selected images per club member (right screenshot), 
+allowing a user of the app to browse through that club member's `portfolio`.
+Strictly speaking some club members may have portfolios while other's don't. 
+Any club member without a portfolio will display a placeholder message instead of the real portfolio.
 
 ### Level 1. Adding Clubs
 
