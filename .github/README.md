@@ -697,7 +697,7 @@ having to modify the source code to add (or modify/remove) clubs, members or ima
 The basic idea here is to store the required information in a hierarchical, distributed way.
 This allows the app to load the information in a three step process:
 
-</p>__1. OrganizationList: central list of photo clubs__</p>
+</p>1. __OrganizationList: central list of photo clubs__</p>
 
 </p>The app loads a list of photo clubs from a fixed location (URL). Because the file is kept external to the actual app,
 the list can be updated without requiring an app software update.
@@ -761,7 +761,7 @@ but a photo club _can_ notably include the location (URL) of a MemberList.json d
 - The `remark` field contain a brief remark note withy something worth knowing about the item. The `remark` contains an array of alternative strings in multiple languages. The app selects which language to use based on the device's language settings.
 - The `nlSpecific` container has optional fields that are only relevant for clubs in the Netherlands. `fotobondNumber` is an ID number assigned by the national federation of photo clubs.
 
-</p>__2. MemberList: local lists of photo club members__</p>
+</p>2. __MemberList: local lists of photo club members__</p>
 
 </p>Each MemberList defines the current (and potentially former) members of a single club.
 For each member, a URL is stored pointing to the final list level (portfolio per member).
@@ -821,7 +821,7 @@ A future editing tool (app or web-based) would help ensure syntactic and schema 
 - `infixName` will often be empty. It enables correctly sorting European surnames: "van Aalst" sorts like "Aalst".
 - the `imageList` field allows the app to find the next level list about the selected images per member.</p>
 
-</p>__3. ImageList: local image portfolios per club member__</p>
+</p>3. __ImageList: local image portfolios per club member__</p>
 
 </p>The list of images (per club member) is fetched only when a portfolio is selected for viewing.
 There is thus no need to prefetch the entire 3-level tree (root/memberlist/imagelist).
