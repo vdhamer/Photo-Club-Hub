@@ -43,7 +43,7 @@
             <li><a href="#built-with">Built-With</a></li>
             <li><a href="#cloning-the-repository">Cloning the Repository</a></li>
             <li><a href="#code-signing">Code Signing</a></li>
-            <li><a href="#upgrading-the-app">Upgrading the App</a></li>
+            <li><a href="#updating-the-app">Updating the App</a></li>
          </ul>
     </details>
     <a href="#contributing">Contributing</a>
