@@ -56,9 +56,12 @@
                <li><a href="#role-of-the-database">Role of the Database</a></li>
                <li><a href="#the-data-model">The Data Model</a></li>
                <ul>
-                     <li>PhotoClub aka Organization</li>
+                     <li>Organization</li>
                      <li>Photographer</li>
                      <li>MemberPortfolio</li>
+                     <li>OrganizationType</li>
+                     <li>Language</li>
+                     <li>LocalizedRemark</li>
                </ul>
                <li><a href="#how-data-is-loaded">How Data is Loaded</a></li>
                <ul>
@@ -523,10 +526,11 @@ but because it usually works well enough, a user typically won't notice:
 
 ### The Data Model
 
-<ul><details><summary>Details (click to expand)</summary>
-Here are the entities managed by the app's internal Core Data database. The entities (rounded boxes) are tables and arrows are relationships in the underlying SQLite database.</p>
-
 ![Data model](images/dataModel.png "The data model")
+
+<ul><details><summary>Details (click to expand)</summary>
+Here are the entities managed by the app's internal Core Data database.
+The entities (rounded boxes) are tables and arrows are relationships in the underlying SQLite database.</p>
 
 </p>Note that the tables are fully "normalized" in the relational database sense.
 This means that redundancy in all stored data is minimized via referencing. 
