@@ -579,7 +579,7 @@ using Lightroom (instructions on how this works will be provided later).
 To do
 </details>
 
-<details><Summary>Level 2 fields (click to expand)</Summary></p>
+<details><Summary>Level 3 fields (click to expand)</Summary></p>
 To do
 </details>
 
