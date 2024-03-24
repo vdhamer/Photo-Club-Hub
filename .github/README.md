@@ -415,6 +415,7 @@ Again, this is a standard Apple iOS policy. This doesn't apply to MacOS.
 If you update to a newer build of the app, all app data stored in the device's internal data storage 
 will remain available. If you choose to remove and reinstall the app, the database content will be lost.
 Fortunately, this has no real implications for the user as the data storage doesn't contain any relevant user data (so far).
+</details>
     
 #### Schema Migration
 
