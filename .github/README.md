@@ -385,7 +385,7 @@ But that data is still encrypted by a private encryption key that is not provide
 
 <ul></ul>
 
-### Level 1 - Adding Clubs or Musea
+### Level 1 - Adding Clubs and Musea
 
 <ul></ul>
 
