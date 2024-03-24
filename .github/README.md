@@ -461,7 +461,7 @@ Here is an example of the format of the OrganizationList. This example contains 
 
 Note that:
 
-- **mandatory fields**
+- **Mandatory** fields
     - `town` can be a city (London) or smaller location (Land's End)
         - `town` can be replaced on the screen by a (language localized) name generated using the `coordinates`. A museum in Den Haag may be displayed as The Hague.
         - Similarly, the user interface may display a (language localized) country name that is automatically generated using the provided `coordinates`.
@@ -472,7 +472,7 @@ Note that:
     - `coordinates` is used to draw the club on the map and to [generate](http://www.vdhamer.com/reversegeocoding-for-localizing-towns-and-countries/) localized versions of town and country names.
         - `latitude` should be in the range [-90.0, +90.0] where negative means Sounthern hemisphere.
         - `longitude` should be in the range [-180.0, +180.0] where negative means Western hemisphere.
-- **optional fields**
+- **Optional** fields
     - `website` holds a URL to the club's general purpose website. It can be displayed by the app (in a browser).
     - The `memberList` field (for clubs only) is a URL that allows the app to find the `Level 2` data on membership. It is not used yet (Mar 24).
     - The `wikipedia` field contains a link to a Wikipedia page for a museum. It _can_ be used for photo clubs - but a photo club with an entry in Wikipedia sounds unlikely.
