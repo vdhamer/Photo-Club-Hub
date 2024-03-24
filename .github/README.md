@@ -399,8 +399,63 @@ Attempting to see the portfolio of a club member with no (available) portfolio r
 ### Level 1. Adding Clubs
 
 <details><Summary>Level 1 details (click to expand)</Summary>
-    
+Level 1 requires providing the club’s name, location and a few links. As a result, the club is listed on the `Clubs and Museums` screen and shows up on the maps.
+
+The `Level 1` data is implemented as a single online `OrganizationList.json` file hosted on GitHub.
+The app reads this file whenever it launches and merges the data into its in-app database.
+
+If you send us a club's required (and preferably optional) `Level 1` information, we can add it to the app’s online list of clubs. 
+Whenever possible, please provide that information (and future updates) as GitHub _pull requests_.
+We then only need to review the change (for technical correctness) and can merge it. 
+This prevents overlooking a request, or administrative errors merging the data.
 </details>
+
+Here is an example of the format of the OrganizationList. This example contains one photo club and one photo museum:
+
+``` json
+{
+    "clubs": [
+        {
+            "idPlus": {
+                "town": "Eindhoven",
+                "fullName": "Fotogroep de Gender",
+                "nickName": "FG deGender"
+            },
+            "coordinates": {
+                "latitude": 51.42398,
+                "longitude": 5.45010
+            }
+            "website": "https://www.fcdegender.nl",
+            "memberList": "https://www.example.com/deGenderMemberList.json",
+            "remark": [
+                { "language": "NL", "value": "Opgelet: Fotogroep de Gender gebruikt als domeinnaam nog altijd fcdegender.nl (van Fotoclub)." }
+            ],
+            "nlSpecific": {
+                "fotobondNumber": 1620
+            }
+        }
+    ],
+    "museums": [
+        {
+            "idPlus": {
+                "town": "New York",
+                "fullName": "Fotografiska New York",
+                "nickName": "Fotografiska NYC"
+            },
+            "coordinates": {
+                "latitude": 40.739278,
+                "longitude": -73.986722
+            }
+            "website": "https://www.fotografiska.com/nyc/",
+            "wikipedia": "https://en.wikipedia.org/wiki/Fotografiska_New_York",
+            "remark": [
+                { "language": "EN", "value": "Fotografiska New York is a branch of the Swedish Fotografiska museum." }
+                { "language": "NL", "value": "Fotografiska New York is een dependance van het Fotografiska museum in Stockholm." }
+            ]
+        }
+    ]
+}
+```
 
 ### Level 2. Adding Members
 
