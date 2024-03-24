@@ -534,7 +534,7 @@ Here is an example of the (draft) format of a MemberList of a photo club. This s
             "website": "https://glass.photo/vdhamer",
             "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg",
             "imageList": "https://www.example.com/FG_deGender/Peter_van_den_Hamer.imagelist.json"
-        },
+        }
     ]
 }
 ```
