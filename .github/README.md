@@ -373,7 +373,7 @@ But that data is still encrypted by a private encryption key that is not provide
 </details></ul>
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## Adding More Photo Club
+## Adding More Photo Clubs
 
 To add a club to the app, the app needs information provided in multiple steps:
 
