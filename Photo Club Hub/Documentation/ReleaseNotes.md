@@ -8,6 +8,7 @@ Maintenance
     * Improved documentation of JSON file formats in README.md
     * Improved error message if root.level1.json file not found
     * Renamed memberList field in level1.json files to level2URL
+    * Tested on MacOS 14.4.1
 
 This is build #4617.
 ---------------------------------------------------------------------------
