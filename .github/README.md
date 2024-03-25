@@ -380,7 +380,7 @@ To add a club to the app, the app needs information provided in multiple steps:
 
 - `Level 1` provides the club’s name and location.
 - `Level 2` adds a list of the club's members.
-- `Level 3` adds links to the member's portfolios. 
+- `Level 3` adds links to the member's portfolios.</p>
 
 These steps are called `Levels` because they need to be done in order and, 
 as the `Level` of a club increases, additional app features become available for that club.
