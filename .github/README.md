@@ -375,13 +375,18 @@ But that data is still encrypted by a private encryption key that is not provide
 
 ## Adding More Photo Clubs
 
-To add a club to the app, the app needs information provided in multiple steps:
+The app is designed so that the required information about photo clubs is provided
+and maintained by the clubs themselves. This makes the project scaleable to more clubs and more data.
+It also ensures that clubs have control over the displayed data: only a club knows that a new
+member has joined or which images the members want for their portfolios.
 
-- `Level 1` provides the club’s name and location.
+To add a club to the app, the required information is provided in 3 layers:
+
+- `Level 1` covers the club’s name and location.
 - `Level 2` adds a list of the club's members.
 - `Level 3` adds links to the member's portfolios.</p>
 
-These steps are called `Levels` because they need to be done in order and, 
+These layers are called `Levels` because they need to be provided in that order and, 
 as the `Level` of a club increases, additional app features become available for that club.
 A club can take as long as needed before proceeding to the next `Level`.
 This means that the app will support a mix of clubs at various `Levels`.
