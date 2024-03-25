@@ -486,7 +486,7 @@ You can check the basic syntax of JSON files using an online JSON validator.
         - `nickName` is a short version of `fullName` to display in confined spaces such as screen headers or map pins. It doesn't need to be unique.
     - `coordinates` is used to draw the club on the map and to [generate](http://www.vdhamer.com/reversegeocoding-for-localizing-towns-and-countries/) localized versions of town and country names.
         - `latitude` should be in the range [-90.0, +90.0] where negative means Sounthern hemisphere.
-        - `longitude` should be in the range [-180.0, +180.0] where negative means Western hemisphere.
+        - `longitude` should be in the range [-180.0, +180.0] where negative means Western hemisphere.</p>
 - **Optional** fields
     - `website` holds a URL to the club's general purpose website. It can be displayed by the app (in a browser).
     - `level2URL` (for clubs only) holds the address of the `Level 2` membership list. It is not used yet (Mar 24).
@@ -559,7 +559,7 @@ Here is an example of the format of a `Level 2` list for a photo club. This exam
     - `club` is the same as one object/record in the OrganizationList. It indicates the club that the `Level 2` list describes.
         - the `town` and `fullName` fields are required.
         - `town` and `fullName` must exactly match the corresponding fields in the OrganizationList.json file.
-    - `members` is a container for one or more member records. Technically these correspond to the `MemberPortfolio` class in the database.
+    - `members` is a container for one or more member records. Technically these correspond to the `MemberPortfolio` class in the database.</p>
 - **Optional** fields
     - `club`
         - a club's `nickName`, `latitude`, `longitude`, and `website` can overrule the corresponding OrganizationList fields if needed.</p>
