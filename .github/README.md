@@ -37,7 +37,7 @@
             <li><a href="#data-privacy">Data Privacy</a>
         </ul>
     </details>
-    <details open><summary><a href="#adding-photo-club-data">Adding Photo Club Data</a></summary>
+    <details open><summary><a href="#adding-more-photo-clubs">Adding More Photo Clubs</a></summary>
         <ul>
             <li><a href="#level-1-adding-clubs">Level 1. Adding Clubs</a></li>
             <li><a href="#level-2-adding-members">Level 2. Adding Members</a></li>
@@ -373,7 +373,7 @@ But that data is still encrypted by a private encryption key that is not provide
 </details></ul>
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## Adding Photo Club Data
+## Adding More Photo Club
 
 To add a club to the app, the app needs information provided in multiple steps:
 
