@@ -378,22 +378,24 @@ But that data is still encrypted by a private encryption key that is not provide
 > The app is designed so that the required information about photo clubs is provided
 and maintained by the clubs themselves. 
 
-This makes the project scaleable to more clubs and more data.
-It also ensures that clubs have control over the displayed data: only a club knows that a new
-member has joined or which images the members want for their portfolios.
+This allows the project to support more clubs and larger data sets.
+It also ensures that clubs have **control** over the displayed information:
+the club is best aware of new members, or which photos to display in the portfolios.
 
-To add a club to the app, the required information is provided in 3 layers:
+To add a club to the app, the required information is split into 3 levels of information:
 
 - `Level 1` covers the club’s name and location.
 - `Level 2` adds a list of the club's members.
 - `Level 3` adds links to the member's portfolios.</p>
 
 These layers are called `Levels` because they need to be provided in that order and, 
-as the `Level` of a club increases, additional app features become available for that club.
-A club can take as long as needed before proceeding to the next `Level`.
-This means that the app will support a mix of clubs at various `Levels`.
+whenever the `Level` of a club increases, additional app features are automatically enabled for that club.
+A club can take as long as needed to progress to a next level.
 
-Museums are added in a similar way, although museums don't need `Level 2 or 3`.
+This means that an app user will encounter clubs at different `Levels` in the app.
+To the user this simply means that some clubs have more viewable information than other. 
+
+Museums are added in a similar way, although only `Level 1` applies there.
 
 ![Screenshots of 3 screens](images/app_screenshots_EN.jpg "Screenshots of app")
 
