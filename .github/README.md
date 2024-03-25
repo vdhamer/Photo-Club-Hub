@@ -417,11 +417,11 @@ If you send us a club's `Level 1` information, we can add it to the file for you
 However, it is better to provide the change (and any future updates) as a GitHub _pull request_.
 This reduces the work required to handle many updates, and reduces the risk of administrative errors.
 
-The same applies if you want to add a photo museum to the `OrganizationList.json` file.
+The same applies if you want to add a photo museum to the `root.level1.json` file.
 
 <ul><details><Summary>Level 1 example (click to expand)</Summary></p>
 
-Here is an example of the format of the `OrganizationList.json`. This example contains one photo club and one photo museum.
+Here is an example of the format of the `root.level1.json` file containing only one photo club and one photo museum.
 
 ``` json
 {
@@ -468,7 +468,7 @@ Here is an example of the format of the `OrganizationList.json`. This example co
 }
 ```
 
-The actual `OrganizationList.json` file contains many club and museum records within their respective sections (delimited using `[{},{},{}}]`).
+The actual `root.level1.json` file contains many club and museum records within their respective sections (delimited using `[{},{},{}}]`).
 Note the comma's delimiting the array elements - the JSON format is picky about missing comma's and extra comma's.
 You can check the basic syntax of JSON files using an online JSON validator.
 </details></ul>
@@ -478,7 +478,7 @@ You can check the basic syntax of JSON files using an online JSON validator.
 - **Mandatory** fields
     - `clubs` and `museums` are required to distinguish photo clubs from photo museums. In the app's internal database these determine the `OrganizationType` (`club` or `museum`) of an `Organization` object, which in turn determines which visual marker to use maps.
     - `town` can be a city (London) or smaller locality (Land's End)
-        - `town` is not shown in the user interface, although it may look that way. The user interface displays a (language localized) name generated using the `coordinates`. That may be the same as `town`, or a translation of `town`, or a somewhat larger or smaller geographical entity. `town` is used to ensure that there is a unique ID for a club or museum. And it serves to document the record in the `organizationList.json` file: it is clearer to say "Victoria and Albert Museum (London)" than to say "Victoria and Albert Museum" and hand you the coordinates. 
+        - `town` is not shown in the user interface, although it may look that way. The user interface displays a (language localized) name generated using the `coordinates`. That may be the same as `town`, or a translation of `town`, or a somewhat larger or smaller geographical entity. `town` is used to ensure that there is a unique ID for a club or museum. And it serves to document the record in the `root.level1.json` file: it is clearer to say "Victoria and Albert Museum (London)" than to say "Victoria and Albert Museum" and hand you the coordinates. 
         - Similarly, the user interface may display a (language localized) country name that is automatically generated using the provided `coordinates`.
     - `town` and `fullName` together serve to identify clubs or museums.
         - It is thus possible to have two clubs with the same name in different cities. But you can't have two clubs with the same name in the same town.
@@ -556,14 +556,14 @@ Here is an example of the format of a `Level 2` list for a photo club. This exam
 <ul><details><Summary>Level 2 fields (click to expand)</Summary></p>
 
 - **Mandatory** fields
-    - `club` is the same as one object/record in the OrganizationList. It indicates the club that the `Level 2` list describes.
+    - `club` has the same structure as one club record in the `root.level1.json` file. It shows the club that the `Level 2` list describes.
         - the `town` and `fullName` fields are required.
-        - `town` and `fullName` must exactly match the corresponding fields in the OrganizationList.json file.
+        - `town` and `fullName` must exactly match the corresponding fields in the `root.level1.json` file.
     - `members` is a container for one or more member records. Technically these correspond to the `MemberPortfolio` class in the database.</p>
 - **Optional** fields
     - `club`
-        - a club's `nickName`, `latitude`, `longitude`, and `website` can overrule the corresponding OrganizationList fields if needed.</p>
-        - the `level2URL` field can be provided, but it's value is generally overruled by the OrganizationList's `level2URL` value.
+        - a club's `nickName`, `latitude`, `longitude`, and `website` can overrule the corresponding`root.level1.json` fields if needed.</p>
+        - the `level2URL` field can be provided, but it's value is generally overruled by the `root.level1.json`'s `level2URL` value.
     - `members`
         - `givenName`, `infixName` and `familyName` are used to uniquely identify the photographer.
         - `infixName` will often be empty. It enables correctly sorting European surnames: "van Aalst" sorts like "Aalst".
@@ -835,11 +835,11 @@ And it could be used to generate statistics about how man `Organizations` per `O
 
 <ul><details><summary>Details (click to expand)</summary></p>
 
-The `Language` table is a tiny table to hold the languages supported by the `OrganizationList.json` file.
+The `Language` table is a tiny table to hold the languages supported by the `root.level1.json` file.
 For now, it is intended only to support the `LocalizedRemark` table. 
-Initially a hardcoded equivalent is used to load localized remarks from `OrganizationList.json`.</p>
+Initially a hardcoded equivalent is used to load localized remarks from `root.level1.json`.</p>
 
-By storing it in the database, the set of supported `Languages` in OrganizationList.json can be opended.
+By storing it in the database, the set of supported `Languages` in `root.level1.json` can be opened.
 For example, a museum in Portugal may have an English and a Portugues remark, 
 even when the user interface is only localized to English and Dutch.
 This allows the app to display Portuguese text for the local museum if the device is set to Portuguese,
