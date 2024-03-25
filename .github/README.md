@@ -382,25 +382,25 @@ To add a club to the app, the app needs information provided in multiple steps:
 - `Level 3` adds links to the member's portfolios. 
 
 These steps are called `Levels` because they need to be done in order and, 
-as the level of a club increases, the app provides additional functionality.
-A club can wait as long as needed before proceeding to the next level.
-This means that the app will support a mix of clubs at various levels.
+as the `Level` of a club increases, additional app features become available for that club.
+A club can take as long as needed before proceeding to the next `Level`.
+This means that the app will support a mix of clubs at various `Levels`.
 
 Museums are added in a similar way, although museums don't need `Level 2 or 3`.
 
 ![Screenshots of 3 screens](images/app_screenshots_EN.jpg "Screenshots of app")
 
-When a club is at `Level 1`, it shows up as a marker on the maps (left screenshot).
-This is because the app knows club's location and name.
+When a club is at `Level 1`, it shows up as a marker on the maps (leftmost screenshot).
+This is because the app knows club's name and the latitude/longitude where it is based.
 
-When a club reaches `Level 2`, the app knows the names and roles of club members.
+When a club reaches `Level 2`, the app also knows the names and roles of club members.
 As illustrated in the center screenshot, the club and its members are now shown on the `Portfolio` and `Who's Who` screens.
-Clubs with zero (known) members are _not_ shown on these screens.
+Clubs with zero members (as far as the app is concerned) are _not_ shown on these two screens.
 
-When a club reaches `Level 3`, the app is aware of the image portfolio per club member (right screenshot), 
-and allows app users to browse through member photos.
-Strictly speaking some club members could have portfolios while other's don't. 
-Attempting to reach the portfolio of a club member without an available portfolio results in a placeholder of some sort.
+When a club reaches `Level 3`, the app is aware of the image portfolios of club member (rightmost screenshot), 
+and allows app users to browse member photos.
+Strictly speaking different club members don't need to switch to `Level 3` at the same time. 
+Attempting to view a portfolio of a club member without an available portfolio displays a placeholder of some sort.
 
 ### Level 1. Adding Clubs
 
