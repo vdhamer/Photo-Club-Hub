@@ -329,7 +329,6 @@ Techncially, the app doesn't allow museums to have "members" that share images w
 Consider the showing of museums a bonus that may interest some users.
 You are welcome to add a favorite photo museum via a GitHub Pull Request. It only requires extending a JSON file.
 The file format is documented below under [How Data is Loaded](#how-data-is-loaded).
-
 </details>
 
 ### Data Privacy
@@ -372,8 +371,10 @@ But that data is still encrypted by a private encryption key that is not provide
 
 </details></ul>
 </details></ul>
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Adding Photo Club Data
+<ul></ul>
 
 To add a club to the app, the app needs information provided in multiple steps:
 
@@ -583,7 +584,7 @@ To do
 
 <details><Summary>Level 3 fields (click to expand)</Summary></p>
 To do
-</details>
+</details></ul>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
