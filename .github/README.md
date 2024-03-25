@@ -516,7 +516,7 @@ A future editing tool (app or web-based) would help ensure syntactic and schema 
 
 <details><Summary>Level 2 example (click to expand)</Summary></p>
 
-Here is an example of the (draft) format of a `Level 2` list for a photo club. This shortened list contains only one member:
+Here is an example of the format of a `Level 2` list for a photo club. This example contains only one member:
 
 ``` json
 {
