@@ -374,7 +374,6 @@ But that data is still encrypted by a private encryption key that is not provide
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Adding Photo Club Data
-<ul>
 
 To add a club to the app, the app needs information provided in multiple steps:
 
@@ -402,6 +401,7 @@ When a club reaches `Level 3`, the app is aware of the image portfolios of club 
 and allows app users to browse member photos.
 Strictly speaking different club members don't need to switch to `Level 3` at the same time. 
 Attempting to view a portfolio of a club member without an available portfolio displays a placeholder of some sort.
+<ul>
 
 ### Level 1. Adding Clubs
 
@@ -419,7 +419,7 @@ This reduces the work required to handle many updates, and reduces the risk of a
 
 The same applies if you want to add a photo museum to the `OrganizationList.json` file.
 
-<details><Summary>Level 1 example (click to expand)</Summary></p>
+<ul><details><Summary>Level 1 example (click to expand)</Summary></p>
 
 Here is an example of the format of the `OrganizationList.json`. This example contains one photo club and one photo museum.
 
@@ -471,9 +471,9 @@ Here is an example of the format of the `OrganizationList.json`. This example co
 The actual `OrganizationList.json` file contains many club and museum records within their respective sections (delimited using `[{},{},{}}]`).
 Note the comma's delimiting the array elements - the JSON format is picky about missing comma's and extra comma's.
 You can check the basic syntax of JSON files using an online JSON validator.
-</details>
+</details></ul>
 
-<details><Summary>Level 1 fields (click to expand)</Summary></p>
+<ul><details><Summary>Level 1 fields (click to expand)</Summary></p>
 
 - **Mandatory** fields
     - `clubs` and `museums` are required to distinguish photo clubs from photo museums. In the app's internal database these determine the `OrganizationType` (`club` or `museum`) of an `Organization` object, which in turn determines which visual marker to use maps.
@@ -498,7 +498,7 @@ You can check the basic syntax of JSON files using an online JSON validator.
     - `nlSpecific` is a container for fields that are only relevant for clubs in the Netherlands.
         - `fotobondNumber` is an ID number assigned by the Dutch national federation of photo clubs.
         - There used to be a `kvkNumber` as well (Chamber of Commerce) but that was removed because it wasn't worth the effort.
-</details></p>
+</details></ul></p>
 
 ### Level 2. Adding Members
 
@@ -514,7 +514,7 @@ For each member, a URL is stored pointing to the `Level 3` file (portfolio per m
 `Level 2` lists can be stored and managed on the club's own server. The file needs to be in a JSON format to allow the app to interpret it correctly.
 A future editing tool (app or web-based) would help ensure syntactic and schema consistency.</p>
 
-<details><Summary>Level 2 example (click to expand)</Summary></p>
+<ul><details><Summary>Level 2 example (click to expand)</Summary></p>
 
 Here is an example of the format of a `Level 2` list for a photo club. This example contains only one member:
 
@@ -551,9 +551,9 @@ Here is an example of the format of a `Level 2` list for a photo club. This exam
     ]
 }
 ```
-</details>
+</details></ul>
 
-<details><Summary>Level 2 fields (click to expand)</Summary></p>
+<ul><details><Summary>Level 2 fields (click to expand)</Summary></p>
 
 - **Mandatory** fields
     - `club` is the same as one object/record in the OrganizationList. It indicates the club that the `Level 2` list describes.
@@ -569,7 +569,7 @@ Here is an example of the format of a `Level 2` list for a photo club. This exam
         - `infixName` will often be empty. It enables correctly sorting European surnames: "van Aalst" sorts like "Aalst".
             - An omitted "infixName" is equivalent to "infixName" = "".
         - the `imageList` field allows the app to find the next level list about the selected images per member.</p>
-</details>
+</details></ul>
 
 ### Level 3. Adding Images
 
@@ -578,13 +578,13 @@ Fotogroep Waalre in the Netherlands is an example of `Level 3` club: you can vie
 Because a club with, for example, 20 members will have hundreds of images, we have a way to automate generate portfolios 
 using Lightroom (instructions on how this works will be provided later).
 
-<details><Summary>Level 3 example (click to expand)</Summary>
-To do
-</details>
-
-<details><Summary>Level 3 fields (click to expand)</Summary></p>
+<ul><details><Summary>Level 3 example (click to expand)</Summary>
 To do
 </details></ul>
+
+<ul><details><Summary>Level 3 fields (click to expand)</Summary></p>
+To do
+</details></ul></ul>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
