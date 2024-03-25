@@ -375,8 +375,10 @@ But that data is still encrypted by a private encryption key that is not provide
 
 ## Adding More Photo Clubs
 
-The app is designed so that the required information about photo clubs is provided
-and maintained by the clubs themselves. This makes the project scaleable to more clubs and more data.
+> The app is designed so that the required information about photo clubs is provided
+and maintained by the clubs themselves. 
+
+This makes the project scaleable to more clubs and more data.
 It also ensures that clubs have control over the displayed data: only a club knows that a new
 member has joined or which images the members want for their portfolios.
 
