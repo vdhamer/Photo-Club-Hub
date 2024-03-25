@@ -404,20 +404,19 @@ Attempting to view a portfolio of a club member without an available portfolio d
 
 ### Level 1. Adding Clubs
 
-Adding photo clubs (or museums) at `Level 1` requires providing the items name, location and several optional URLs. 
+Adding photo clubs (or museums) at `Level 1` requires providing the item's name, location and a few optional URLs. 
 The enables the app to list the item on the `Clubs and Museums` screen and display its location on maps by adding a graphical marker.
 
-`Level 1` data is stored in a _single_ central online `OrganizationList.json` 
-[file](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/ViewModel/Lists/OrganizationList.json) 
-that is hosted on GitHub.
-Whenver the app is launched, it reads this file and merges its data into the data in its in-app (CoreData) database.
+`Level 1` data is stored in a _single_ central online `root.level1.json` 
+[file](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/ViewModel/Lists/root.level1.json)
+file that is hosted on GitHub.
+Whenver the app is launched, it reads this file and merges its data into the data in its on-device (CoreData) database.
 
 If you send us a club's `Level 1` information, we can add it to the file for you.
-However, if possible, please provide this change (and any future updates) as a GitHub _pull request_.
-This reduces the effort required if there are a lot of updates, and reduces the associated risk of administrative errors.
+However, it is better to provide the change (and any future updates) as a GitHub _pull request_.
+This reduces the work required to handle many updates, and reduces the risk of administrative errors.
 
 The same applies if you want to add a photo museum to the `OrganizationList.json` file.
-</details>
 
 <details><Summary>Level 1 example (click to expand)</Summary></p>
 
