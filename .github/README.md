@@ -115,7 +115,7 @@ To achieve this, the app fetches online software-readable lists of photo clubs, 
 This ensures that photo clubs, club members and member images can be added or changed without requiring an app update.
 It also allows the clubs to manage their own data.</p>
 
-See the the <a href=""#adding-more-photo-clubs">chapter</a> on how the data to add a club (or museum) information is split
+See the the <a href="#adding-more-photo-clubs">chapter</a> on how the data to add a club (or museum) information is split
 into 3 stages or `Levels`.
 
 </ul>
