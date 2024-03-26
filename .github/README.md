@@ -100,7 +100,6 @@
 ## About the Project
 
 ### The App
-<ul></p>
 
 This iOS app showcases photographs made by members of photography clubs.
 It thus provides a permanent online exposition or gallery with selected work of these photographers.</p>
@@ -117,8 +116,6 @@ It also allows the clubs to manage their own data.</p>
 
 See the the <a href="#adding-more-photo-clubs">chapter</a> on how the data to add a club (or museum) information is split
 into 3 stages or `Levels`.
-
-</ul>
 
 ### Photo Clubs
 
