@@ -100,25 +100,22 @@
 ## About the Project
 
 ### The App
-<ul></p>
 
 This iOS app showcases photographs made by members of photography clubs.
 It thus provides a permanent online exposition or gallery with selected work of these photographers.</p>
 
-Version 1 of the app only supported a _single_ photo club in Waalre, a smallish town in the Netherlands.
+Version 1 of the app supported a single photo club in Waalre, a town in the south of the Netherlands.
 Version 2 added support for _multiple_ photo clubs. This allows viewers to see images from multiple clubs within a single app.
-It also provides a degree of uniformity, thus sparing the user from having to find each club's website, 
-discovering how to navigate within each site and how to browse through the individual images. 
-Starting in version 2 the app's name was changed from _Photo Club Waalre_ to _Photo Club Hub_. </p>
+It aims to provide a degree of uniformity, thus sparing the user from having to find each club's website, 
+discovering how to navigate each site and how to browse through the individual images within a site. 
+Starting in version 2 the app's name was changed from _Photo Club Waalre_ to _Photo Club Hub_ to emphasize the multi-club aspect.</p>
    
-To achieve this, the app retrieves software-readable lists of photo clubs, their
-lists of members and their curated images from one or more servers. 
-This ensures that photo clubs, club members and member images can be added or changed without requiring a new release of the app.</p>
+To achieve this, the app fetches online software-readable lists of photo clubs, their lists of members and their curated images. 
+This ensures that photo clubs, club members and member images can be added or changed without requiring an app update.
+It also allows the clubs to manage their own data.</p>
 
-See the [Architecture](#the-app-architecture) section for how this information is structured and distributed.
-Help in the form of coding, testing and suggestions is highly appreciated. See the [section](#contributing) on contributing below.
-
-</ul>
+See the the <a href="#adding-more-photo-clubs">chapter</a> on how the data to add a club (or museum) information is split
+into 3 stages or `Levels`.
 
 ### Photo Clubs
 
