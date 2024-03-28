@@ -42,6 +42,11 @@ extension FotogroepWaalreMembersProvider { // fill with some initial hard-coded 
                   organization: clubWaalre, memberRolesAndStatus: MemberRolesAndStatus(role: [ .admin: true ]))
 
         addMember(bgContext: bgContext,
+                  personName: PersonName(givenName: "Germa", infixName: "van de", familyName: "Kamp"),
+                  organization: clubWaalre,
+                  memberRolesAndStatus: MemberRolesAndStatus(stat: [.prospective: false]))
+
+        addMember(bgContext: bgContext,
                   personName: PersonName(givenName: "Greetje", infixName: "van", familyName: "Son"),
                   organization: clubWaalre,
                   memberRolesAndStatus: MemberRolesAndStatus(role: [ .viceChairman: false ], stat: [:]))
