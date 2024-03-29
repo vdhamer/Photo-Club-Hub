@@ -49,7 +49,7 @@
 		D08319EB277F70A40049AB84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D08319EA277F70A40049AB84 /* Assets.xcassets */; };
 		D0831A1E277F72270049AB84 /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A19277F72270049AB84 /* PreferencesView.swift */; };
 		D0831A1F277F72270049AB84 /* FilteredMemberPortfoliosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A1A277F72270049AB84 /* FilteredMemberPortfoliosView.swift */; };
-		D0831A20277F72270049AB84 /* OrganizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A1B277F72270049AB84 /* OrganizationView.swift */; };
+		D0831A20277F72270049AB84 /* FilteredOrganizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A1B277F72270049AB84 /* FilteredOrganizationView.swift */; };
 		D0831A21277F72270049AB84 /* WhoIsWhoInnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A1C277F72270049AB84 /* WhoIsWhoInnerView.swift */; };
 		D0831A22277F72270049AB84 /* MemberPortfolioListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A1D277F72270049AB84 /* MemberPortfolioListView.swift */; };
 		D0831A31277F72590049AB84 /* MemberPortfolio.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A24277F72590049AB84 /* MemberPortfolio.swift */; };
@@ -150,7 +150,7 @@
 		D0831A17277F71340049AB84 /* Photo-Club-Hub-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Photo-Club-Hub-Info.plist"; sourceTree = SOURCE_ROOT; };
 		D0831A19277F72270049AB84 /* PreferencesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
 		D0831A1A277F72270049AB84 /* FilteredMemberPortfoliosView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilteredMemberPortfoliosView.swift; sourceTree = "<group>"; };
-		D0831A1B277F72270049AB84 /* OrganizationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganizationView.swift; sourceTree = "<group>"; };
+		D0831A1B277F72270049AB84 /* FilteredOrganizationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilteredOrganizationView.swift; sourceTree = "<group>"; };
 		D0831A1C277F72270049AB84 /* WhoIsWhoInnerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhoIsWhoInnerView.swift; sourceTree = "<group>"; };
 		D0831A1D277F72270049AB84 /* MemberPortfolioListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberPortfolioListView.swift; sourceTree = "<group>"; };
 		D0831A24277F72590049AB84 /* MemberPortfolio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberPortfolio.swift; sourceTree = "<group>"; };
@@ -499,7 +499,7 @@
 			isa = PBXGroup;
 			children = (
 				D0AE1B7427889E8600E0100E /* OrganizationListView.swift */,
-				D0831A1B277F72270049AB84 /* OrganizationView.swift */,
+				D0831A1B277F72270049AB84 /* FilteredOrganizationView.swift */,
 				D0E694C827EF9B450054D634 /* LockAnimationView.swift */,
 			);
 			path = OrganizationsView;
@@ -764,7 +764,7 @@
 				D0EB533C295775240061613B /* Crosshairs.swift in Sources */,
 				D0831A36277F72590049AB84 /* FotogroepWaalreMembersProvider+insertSomeHardcodedMemberData.swift in Sources */,
 				D0621E892AE2E47B000FFADB /* MemberPortfolio+refreshFirstImage.swift in Sources */,
-				D0831A20277F72270049AB84 /* OrganizationView.swift in Sources */,
+				D0831A20277F72270049AB84 /* FilteredOrganizationView.swift in Sources */,
 				D01793FE2B6404ED00095E8C /* SwiftyJSON.swift in Sources */,
 				D0E2235427DE9139002A8600 /* PreludeView.swift in Sources */,
 				D0621E812AE2D7DE000FFADB /* MemberPortfolio+roles.swift in Sources */,

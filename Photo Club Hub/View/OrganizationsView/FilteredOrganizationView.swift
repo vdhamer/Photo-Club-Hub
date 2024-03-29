@@ -1,5 +1,5 @@
 //
-//  OrganizationView.swift
+//  FilteredOrganizationView.swift
 //  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 30/12/2021.
@@ -9,13 +9,15 @@ import SwiftUI
 import MapKit
 import CoreData
 
-struct OrganizationView: View {
+struct FilteredOrganizationView: View {
 
     @Environment(\.managedObjectContext) private var viewContext // may not be correct
     @Environment(\.layoutDirection) var layoutDirection // .leftToRight or .rightToLeft
 
     @FetchRequest var fetchedOrganizations: FetchedResults<Organization>
     private let permitDeletionOfPhotoClubs = true // disables .delete() functionality for this screen
+
+    let searchText: Binding<String>
 
     @State private var cameraPositions: [PhotoClubId: MapCameraPosition] = [:] // location of camera per club
     let interactionModes: MapInteractionModes = [.pan, .zoom, .rotate, .pitch]
@@ -29,16 +31,17 @@ struct OrganizationView: View {
     ]
 
     // regenerate Section using dynamic FetchRequest with dynamic predicate and dynamic sortDescriptor
-    init(predicate: NSPredicate) {
+    init(predicate: NSPredicate, searchText: Binding<String>) {
         _fetchedOrganizations = FetchRequest<Organization>(
             sortDescriptors: sortDescriptors, // replaces previous fetchRequest
             predicate: predicate,
             animation: .easeIn
         )
+        self.searchText = searchText
     }
 
     var body: some View {
-        ForEach(fetchedOrganizations, id: \.id) { filteredOrganization in
+        ForEach(filteredOrganizations, id: \.id) { filteredOrganization in
             Section {
                 VStack(alignment: .leading) {
                     HStack {
@@ -60,20 +63,20 @@ struct OrganizationView: View {
                             .buttonStyle(.plain) // to avoid entire List element to be clickable
                         }
                     }
-                        .fixedSize(horizontal: false, vertical: true)
+                    .fixedSize(horizontal: false, vertical: true)
                     HStack(alignment: .center, spacing: 0) {
                         Image(systemName: systemName(organizationType: filteredOrganization.organizationType,
                                                      circleNeeded: true)
                         )
-                            .foregroundStyle(.white, .yellow, // .yellow (secondary color) not actually used
-                                             filteredOrganization.organizationType.isUnknown ? .red : .accentColor)
-                            .symbolRenderingMode(.palette)
-                            .font(.largeTitle)
-                            .padding(.horizontal, 5)
+                        .foregroundStyle(.white, .yellow, // .yellow (secondary color) not actually used
+                                         filteredOrganization.organizationType.isUnknown ? .red : .accentColor)
+                        .symbolRenderingMode(.palette)
+                        .font(.largeTitle)
+                        .padding(.horizontal, 5)
                         VStack(alignment: .leading) {
                             Text(verbatim: layoutDirection == .leftToRight ?
                                  "\(filteredOrganization.localizedTown), \(filteredOrganization.localizedCountry)" :
-                                 "\(filteredOrganization.localizedCountry) ,\(filteredOrganization.localizedTown)")
+                                    "\(filteredOrganization.localizedCountry) ,\(filteredOrganization.localizedTown)")
                             .font(.subheadline)
                             if filteredOrganization.members.count > 0 { // hide for museums and clubs without members
                                 Text("\(filteredOrganization.members.count) members (inc. ex-members)",
@@ -144,7 +147,7 @@ struct OrganizationView: View {
                         var localizedCountry: String?
                         do {
                             let (locality, nation) = // can be (nil, nil) for Chinese location or Chinese user location
-                                try await reverseGeocode(coordinates: coordinates)
+                            try await reverseGeocode(coordinates: coordinates)
                             localizedTown = locality ?? town // unlocalized as fallback for localized -> String
                             localizedCountry = nation // optional String
                             await updateTownCountry(clubName: clubName, town: town,
@@ -289,12 +292,22 @@ struct OrganizationView: View {
                 // in release mode, the failed deletion is only logged. App doesn't stop.
             }
         }
+    }
 
+    private var filteredOrganizations: [Organization] {
+        if searchText.wrappedValue.isEmpty {
+            return fetchedOrganizations.filter { _ in
+                true
+            }
+        } else {
+            return fetchedOrganizations.filter { organization in
+                organization.fullNameTown.localizedCaseInsensitiveContains(searchText.wrappedValue) }
+        }
     }
 
 }
 
-extension OrganizationView {
+extension FilteredOrganizationView {
 
     func selectMarkerTint(organization: Organization, selectedOrganization: Organization) -> Color {
         if organization.organizationType.isUnknown {
@@ -328,7 +341,7 @@ extension OrganizationView {
 
 }
 
-extension OrganizationView { // reverse GeoCoding
+extension FilteredOrganizationView { // reverse GeoCoding
 
     func reverseGeocode(coordinates: CLLocationCoordinate2D) async throws -> (city: String?, country: String?) {
         let geocoder = CLGeocoder()
@@ -346,7 +359,7 @@ extension OrganizationView { // reverse GeoCoding
 
 }
 
-extension OrganizationView { // tests for equality
+extension FilteredOrganizationView { // tests for equality
 
     private func isEqual(organizationLHS: Organization, organizationRHS: Organization) -> Bool {
         return (organizationLHS.fullName == organizationRHS.fullName) && (organizationLHS.town == organizationRHS.town)
@@ -354,17 +367,19 @@ extension OrganizationView { // tests for equality
 
 }
 
-struct OrganizationView_Previews: PreviewProvider {
-    static let predicate = NSPredicate(format: "name_ = %@ || name_ = %@ || name_ = %@",
-                                       argumentArray: ["PhotoClub2", "PhotoClub1", "PhotoClub3"])
+struct FilteredOrganizationView_Previews: PreviewProvider {
+    static let organizationPredicate = NSPredicate(format: "name_ = %@ || name_ = %@ || name_ = %@",
+                                                   argumentArray: ["PhotoClub2", "PhotoClub1", "PhotoClub3"])
+    @State static var searchText: String = ""
 
     static var previews: some View {
         NavigationStack {
             List { // lists are "Lazy" automatically
-                OrganizationView(predicate: predicate)
+                FilteredOrganizationView(predicate: organizationPredicate, searchText: $searchText)
                     .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
             }
             .navigationBarTitle(Text(String("PhotoClubInnerView"))) // prevent localization
+            .searchable(text: $searchText, placement: .toolbar, prompt: Text("Search names and towns"))
         }
     }
 }

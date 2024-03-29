@@ -468,6 +468,12 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
         <note>Field at top of Who's Who page that allows the user to filter the photographers based on either given- and family name.
 Field at top of Members page that allows the user to filter the members based on either given- and family name.</note>
       </trans-unit>
+      <trans-unit id="Search names and towns" xml:space="preserve">
+        <source>Search names and towns</source>
+        <target>Zoek op naam of gemeente</target>
+        <note>Field at top of Clubs and Museums page that allows the user to filter the members
+based on a fragment of the organization name.</note>
+      </trans-unit>
       <trans-unit id="Show aspiring members" xml:space="preserve">
         <source>Show aspiring members</source>
         <target>Toon aspirant-leden</target>

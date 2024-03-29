@@ -12,10 +12,13 @@ struct OrganizationListView: View {
     @Environment(\.managedObjectContext) private var viewContext
     @StateObject var model = PreferencesViewModel()
     @State var locationManager = LocationManager()
+    @State private var searchText: String = "" // bindable string with content of Search bar
+
     @FetchRequest(
         sortDescriptors: [], // organizations is only used for counting, so sorting doesn't matter
         animation: .default)
     private var organizations: FetchedResults<Organization>
+
     private var predicate: NSPredicate = NSPredicate.all
     private var navigationTitle = String(localized: "Clubs and Museums",
                                          comment: "Title of page with club and museum maps")
@@ -41,7 +44,7 @@ struct OrganizationListView: View {
                          comment: "number of records displayed at top of Clubs screen")
                         .textCase(.lowercase) // otherwise becomes CAPITALIZED for some reason
                 }
-                OrganizationView(predicate: model.preferences.photoClubPredicate)
+                FilteredOrganizationView(predicate: model.preferences.photoClubPredicate, searchText: $searchText)
                 if organizations.isEmpty {
                     NoClubsText()
                 }
@@ -61,8 +64,23 @@ struct OrganizationListView: View {
             }
         }
         .navigationTitle(navigationTitle)
+        .searchable(text: $searchText, placement: .automatic,
+                    // .automatic
+                    // .toolbar The search field is placed in the toolbar. To right of person.text.rect.cust
+                    // .sidebar The search field is placed in the sidebar of a navigation view. not on iPad
+                    // .navigationBarDrawer The search field is placed in an drawer of the navigation bar. OK
+                    prompt: Text("Search names and towns", comment:
+                                    """
+                                    Field at top of Clubs and Museums page that allows the user to \
+                                    filter the members based on a fragment of the organization name.
+                                    """
+                                ))
+        .disableAutocorrection(true)
     }
 
+    private let toolbarItemPlacement: ToolbarItemPlacement = UIDevice.isIPad ?
+        .destructiveAction : // iPad: Search field in toolbar
+        .navigationBarTrailing // iPhone: Search field in drawer
 }
 
 struct NoClubsText: View {

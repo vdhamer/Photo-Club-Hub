@@ -312,6 +312,10 @@ Default status of member within a club. Used in concatenations. */
 Field at top of Members page that allows the user to filter the members based on either given- and family name. */
 "Search names" = "Zoek op naam";
 
+/* Field at top of Clubs and Museums page that allows the user to filter the members
+based on a fragment of the organization name. */
+"Search names and towns" = "Zoek op naam of gemeente";
+
 /* Administrative role of member within a club. Used as part of concatenations. */
 "secretary" = "secretaris";
 

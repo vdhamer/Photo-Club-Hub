@@ -294,6 +294,10 @@ Default status of member within a club. Used in concatenations. */
 Field at top of Members page that allows the user to filter the members based on either given- and family name. */
 "Search names" = "Search names";
 
+/* Field at top of Clubs and Museums page that allows the user to filter the members
+based on a fragment of the organization name. */
+"Search names and towns" = "Search names and towns";
+
 /* Administrative role of member within a club. Used as part of concatenations. */
 "secretary" = "secretary";
 
