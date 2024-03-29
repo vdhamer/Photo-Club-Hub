@@ -69,7 +69,7 @@ struct PhotographersView_Previews: PreviewProvider {
                 WhoIsWho(searchText: $searchText,
                                   navigationTitle: String("PhotographerListView")
                 )
-                    .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+                .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
         }
     }
 }

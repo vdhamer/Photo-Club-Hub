@@ -38,12 +38,6 @@ struct OrganizationListView: View {
     var body: some View {
         VStack {
             List { // lists are "Lazy" automatically
-                HStack {
-                    Spacer() // allign to right
-                    Text("\(organizations.count) entries",
-                         comment: "number of records displayed at top of Clubs screen")
-                        .textCase(.lowercase) // otherwise becomes CAPITALIZED for some reason
-                }
                 FilteredOrganizationView(predicate: model.preferences.photoClubPredicate, searchText: $searchText)
                 if organizations.isEmpty {
                     NoClubsText()

@@ -30,7 +30,7 @@
       <trans-unit id="%lld entries" xml:space="preserve">
         <source>%lld entries</source>
         <target>%lld entries</target>
-        <note>number of records displayed at top of Clubs screen</note>
+        <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="%lld members (inc. ex-members)" xml:space="preserve">
         <source>%lld members (inc. ex-members)</source>
@@ -41,6 +41,11 @@
         <source>%lld photographers</source>
         <target>%lld photographers</target>
         <note>Header of section of Who's Who screen</note>
+      </trans-unit>
+      <trans-unit id="(of %lld)" xml:space="preserve">
+        <source>(of %lld)</source>
+        <target>(of %lld)</target>
+        <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Amsterdam has two photography museums." xml:space="preserve">
         <source>Amsterdam has two photography museums.</source>
@@ -143,6 +148,11 @@ Try dragging down the Photo Clubs screen to reload the default clubs.</target>
         <source>No remark available for %@ %@.</source>
         <target>No remark available for %@ %@.</target>
         <note>Shown below map if there is no usable remark in the OrganzationList.json file.</note>
+      </trans-unit>
+      <trans-unit id="One entry" xml:space="preserve">
+        <source>One entry</source>
+        <target>One entry</target>
+        <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="One photographer" xml:space="preserve">
         <source>One photographer</source>

@@ -4,9 +4,6 @@
 /* Shown when "Show deceased members" entry is missing in Preferences */
 "“Former members” includes “deceased members”" = "De optie “ex-leden“ bevat “overleden leden“";
 
-/* number of records displayed at top of Clubs screen */
-"%lld entries" = "%lld stuks";
-
 /* <count> members (including all types of members) within photo club */
 "%lld members (inc. ex-members)" = "%lld leden (incl. ex-leden)";
 
@@ -115,6 +112,9 @@ Default status of member within a club. Used in concatenations. */
 
 /* <person> of <photo club> */
 "of2" = "van";
+
+/* Header of section in Clubs and Museums screen */
+"One organization" = "Één organisatie";
 
 /* Header of section of Who's Who screen */
 "One photographer" = "Één fotograaf";

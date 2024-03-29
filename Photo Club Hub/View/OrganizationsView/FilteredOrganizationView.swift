@@ -41,6 +41,7 @@ struct FilteredOrganizationView: View {
     }
 
     var body: some View {
+        StatsView(filteredCount: filteredOrganizations.count, unfilteredCount: fetchedOrganizations.count)
         ForEach(filteredOrganizations, id: \.id) { filteredOrganization in
             Section {
                 VStack(alignment: .leading) {
@@ -173,9 +174,9 @@ struct FilteredOrganizationView: View {
                     MapScaleView() // distance scale
                     MapUserLocationButton()
                 } .mapControlVisibility(filteredOrganization.isScrollLocked ? .hidden : .automatic)
+//                .onDelete(perform: deleteOrganizations)
             } // Section
-        } // outer ForEach (PhotoClub)
-        .onDelete(perform: deleteOrganizations)
+        } // outer ForEach (Organization)
     }
 
     // find PhotoClub using identifier (clubName,oldTown) and then fill (newTown,newCountry) in CoreData database
@@ -234,16 +235,6 @@ struct FilteredOrganizationView: View {
         }
         return mapItems
     }
-
-//    // conversion to [MKMapItems] is needed to make Placemarks touch (and mouse) sensitive
-//    private func toMapItem(organization: PhotoClub) -> MKMapItem {
-//        let coordinates = CLLocationCoordinate2D(latitude: organization.latitude_,
-//                                                 longitude: organization.longitude_)
-//        let placemark = MKPlacemark(coordinate: coordinates)
-//        let mapItem = MKMapItem(placemark: placemark)
-//        mapItem.name = organization.fullName
-//        return mapItem
-//    }
 
     private func initializeCameraPosition(organization: Organization) {
         let mapCameraPosition: MapCameraPosition
@@ -307,7 +298,7 @@ struct FilteredOrganizationView: View {
 
 }
 
-extension FilteredOrganizationView {
+extension FilteredOrganizationView { // graphic representation
 
     func selectMarkerTint(organization: Organization, selectedOrganization: Organization) -> Color {
         if organization.organizationType.isUnknown {
@@ -381,5 +372,28 @@ struct FilteredOrganizationView_Previews: PreviewProvider {
             .navigationBarTitle(Text(String("PhotoClubInnerView"))) // prevent localization
             .searchable(text: $searchText, placement: .toolbar, prompt: Text("Search names and towns"))
         }
+    }
+}
+
+struct StatsView: View { // display right-aligned string like "12 entries (of 123)" or "123 entries"
+
+    let filteredCount: Int
+    let unfilteredCount: Int
+
+    var body: some View {
+        HStack {
+            Spacer() // allign to right
+            let comment = StaticString("number of records displayed at top of Clubs and Museums screen")
+            if filteredCount == 1 {
+                Text("One entry", comment: comment)
+            } else {
+                Text("\(filteredCount) entries", comment: comment)
+            }
+            if filteredCount != unfilteredCount {
+                Text("(of \(unfilteredCount) shown)", comment: comment)
+            }
+        }
+        .padding(.horizontal, 0)
+        .font(.callout) // small font for both parts of the concatenated Text view
     }
 }

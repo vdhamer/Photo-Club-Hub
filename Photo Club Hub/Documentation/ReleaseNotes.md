@@ -2,6 +2,8 @@
 
 Clubs and Museums screen
     * renamed OrganizationList.json to root.level1.json
+    * added a search bar for filtering on organization's' name and town
+    * disable deletion because it didn't work
 Maintenance
     * Fixed a problem in the layout of README.md text on GitHub (`detail`/`summary`).
     * Added screenshots of all screens to README.md text on GitHub.
