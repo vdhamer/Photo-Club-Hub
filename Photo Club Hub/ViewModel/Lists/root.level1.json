@@ -611,33 +611,6 @@
 
         {
             "idPlus": {
-                "town": "Oeffelt",
-                "fullName": "Fotografieclub-BGC",
-                "nickName": "fcBGC"
-            },
-            "coordinates": {
-                "latitude": 51.71029,
-                "longitude": 5.91486
-            },
-            "website": "https://www.fotografieclub-bgc.nl",
-            "level2URL": "https://www.example.com/fcBGC.level2.json",
-            "remark": [
-                {
-                    "language": "EN",
-                    "value": "BGC stands for three neighboring villages (Boxmeer, Gennep, and Cuijk) along the Maas/Meuse river."
-                },
-                {
-                    "language": "NL",
-                    "value": "De afkorting BGC in de naam van de club duidt op drie naburige plaatsen aan de Maas: Boxmeer, Gennep en Cuijk."
-                }
-            ],
-            "nlSpecific": {
-                "fotobondNumber": 1676
-            }
-        },
-
-        {
-            "idPlus": {
                 "town": "Oirschot",
                 "fullName": "Fotogroep Oirschot",
                 "nickName": "fgOirschot"
@@ -767,6 +740,33 @@
             }
         },
 
+        {
+            "idPlus": {
+                "town": "Sint Agatha",
+                "fullName": "Fotografieclub-BGC",
+                "nickName": "fcBGC"
+            },
+            "coordinates": {
+                "latitude": 51.71029,
+                "longitude": 5.91486
+            },
+            "website": "https://www.fotografieclub-bgc.nl",
+            "level2URL": "https://www.example.com/fcBGC.level2.json",
+            "remark": [
+                {
+                    "language": "EN",
+                    "value": "BGC stands for three neighboring villages (Boxmeer, Gennep, and Cuijk) along the Maas/Meuse river."
+                },
+                {
+                    "language": "NL",
+                    "value": "De afkorting BGC in de naam van de club duidt op drie naburige plaatsen aan de Maas: Boxmeer, Gennep en Cuijk."
+                }
+            ],
+            "nlSpecific": {
+                "fotobondNumber": 1676
+            }
+        },
+        
         {
             "idPlus": {
                 "town": "Sint-Oedenrode",
