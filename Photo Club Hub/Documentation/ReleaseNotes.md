@@ -2,7 +2,7 @@
 
 Clubs and Museums screen
 * renamed OrganizationList.json to root.level1.json
-* added a search bar for filtering on organization's' name and town
+* added a Search bar for filtering on organization's' name and town
 * disable deletion because it didn't work
 
 Maintenance
