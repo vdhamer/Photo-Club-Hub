@@ -317,22 +317,24 @@ Version 2 added support for multiple photo clubs. This means:
 
 ### Searching Lists
 
-</p>The three screens with long lists (`Portfolios`. `Clubs and Museums`. `Who's Who`) each have a search bar
-to narrow down the list to the items you are looking for.</p>
+The three screens with long lists (`Portfolios`. `Clubs and Museums`. `Who's Who`) each have a search bar
+to help find a particular item.</p>
 
 <details><summary>Details (click to expand)</summary></p>
 
-On an iPad, the search field is constantly visible at the top of the screen. 
-On an iPhone until you reach the top of the screen. This is standard iOS behavior for the search bar.
+On an iPad, the search field is always visible at the top of the screen. 
+On an iPhone, scroll up until you hit the top of the screen.
 
-What you type into the search bar is matched (case-insensitive) to the identifying fields of the items.
+The text you type in the search bar is matched (case-insensitive) to the identifying fields of the items in the list.
 
 - In the `Portfolios` screen, searches try to match the photographer's full name.
-  Searching on `jan` might match `Jan Stege`, `Ariejan van Twisk` and `Jos Jansen`.
+  Searching on `Jan` might match `Jan Stege`, `Ariejan van Twisk` and `Jos Jansen`.
+  Searching on this creen does _not_ match against club names.
 - In the `Clubs and Museums` screen, searches try to match a concatenation of the organization's name and town.
-  Searching on `waal` might match `Collectief Brabant (Waalwijk)` and `Fotogroep Waalre (Waalre)`.
+  Searching on `Ber` might match `FFC Shot71 (Berlicum)` and `Museum für Fotografie (Berlin)` and `The Victoria & Albert Museum (London)`.
+  Note that the town is the location specified in the `root.level1.json` file and _not_ its localized version, which might be different.
 - In the `Who's Who` screen, searches try to match the photographer's full name.
-  Searching on `jan` might match `Jan Stege`, `Ariejan van Twisk` and `Jos Jansen`.
+  Searching on `Jan` might match `Jan Stege`, `Ariejan van Twisk` and `Jos Jansen`.
 </details>
 
 ### Photo Museums
