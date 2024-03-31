@@ -1,5 +1,5 @@
 //
-//  PhotographersInner.swift
+//  FilteredWhoIsWhoView.swift
 //  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 30/12/2021.
@@ -8,7 +8,7 @@
 import SwiftUI // for View
 import WebKit // for WKWebView
 
-struct WhoIsWhoInnerView: View {
+struct FilteredWhoIsWhoView: View {
 
     @Environment(\.managedObjectContext) private var viewContext // may not be correct
     @FetchRequest var fetchRequest: FetchedResults<Photographer>
@@ -210,14 +210,14 @@ struct WhoIsWhoInnerView: View {
     }
 }
 
-struct WhoIsWhoInnerViewWrapper: View {
+struct FilteredWhoIsWhoViewWrapper: View {
     var body: some View {
         let predicate = NSPredicate(format: "familyName_ = %@ || familyName_ = %@ || familyName_ = %@",
                                     argumentArray: ["Eau1", "Eau2", "Eau10"])
         @State var searchText: String = "Eau1"
         let wkWebView = WKWebView()
 
-        return WhoIsWhoInnerView(predicate: predicate, searchText: $searchText, wkWebView: wkWebView)
+        return FilteredWhoIsWhoView(predicate: predicate, searchText: $searchText, wkWebView: wkWebView)
             .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }
@@ -225,7 +225,7 @@ struct WhoIsWhoInnerViewWrapper: View {
 #Preview {
     NavigationStack {
         List {
-            WhoIsWhoInnerViewWrapper()
+            FilteredWhoIsWhoViewWrapper()
         }
     }
     .searchable(text: .constant("Name"))

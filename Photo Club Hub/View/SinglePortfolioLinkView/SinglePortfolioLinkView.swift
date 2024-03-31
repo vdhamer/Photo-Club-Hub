@@ -15,7 +15,6 @@ struct SinglePortfolioLinkView<Content: View>: View {
     let content: () -> Content // what to show for this link
 
     @Environment(\.horizontalSizeClass) private var horSizeClass
-//    private let wkWebView = WKWebView()
     var organization: Organization { destPortfolio.organization }
 
     var body: some View {

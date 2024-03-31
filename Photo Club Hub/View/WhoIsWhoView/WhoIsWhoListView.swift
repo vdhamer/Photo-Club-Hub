@@ -1,5 +1,5 @@
 //
-//  PhotographersView.swift
+//  WhoIsWhoListView.swift
 //  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 07/01/2022.
@@ -9,7 +9,7 @@ import SwiftUI
 import CoreData
 import WebKit // for wkWebView
 
-struct WhoIsWho: View {
+struct WhoIsWhoListView: View {
     @Environment(\.managedObjectContext) private var viewContext
     @State private var showingPhotoClubs = false
     @State private var showingMembers = false
@@ -30,9 +30,9 @@ struct WhoIsWho: View {
     var body: some View {
         VStack {
             List { // lists are automatically "Lazy"
-                WhoIsWhoInnerView(predicate: model.preferences.photographerPredicate,
-                                  searchText: searchText,
-                                  wkWebView: wkWebView)
+                FilteredWhoIsWhoView(predicate: model.preferences.photographerPredicate,
+                                     searchText: searchText,
+                                     wkWebView: wkWebView)
                 Text("""
                      This page lists all the photographers that this app knows about. \
                      A photographer has one or more clickable image thumbnails below the photographer's name. \
@@ -66,8 +66,8 @@ struct PhotographersView_Previews: PreviewProvider {
     @State static var searchText = "D'Eau1"
     static var previews: some View {
         NavigationStack {
-                WhoIsWho(searchText: $searchText,
-                                  navigationTitle: String("PhotographerListView")
+            WhoIsWhoListView(searchText: $searchText,
+                             navigationTitle: String("PhotographerListView")
                 )
                 .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
         }
