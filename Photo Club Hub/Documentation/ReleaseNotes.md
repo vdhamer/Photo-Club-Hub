@@ -16,6 +16,7 @@ Maintenance
 * Added FC Den Dungen
 
 This is build #4617.
+
 ---------------------------------------------------------------------------
 ### 2.5.5 (GitHub commit cffe1e4) 20-03-24
 
@@ -30,6 +31,7 @@ Maintenance
 * Updated opening image of README on GitHub.
 
 This is build #4616, and was submitted as release 2.5.5 on the Apple App Store.
+
 ---------------------------------------------------------------------------
 ### 2.5.4 (GitHub commit 769676c) 02-03-24
 
@@ -52,6 +54,7 @@ Maintenance
 * Removed Version2Changes.md file (no longer being updated).
 
 This is build #4615, and is available as release 2.5.4 on the Apple App Store.
+
 ---------------------------------------------------------------------------
 ### 2.5.3 (GitHub commit 83a9e0c) 12-02-24
 
@@ -76,6 +79,7 @@ Maintenance
 * Refreshed screenshots on Apple App Store
 
 This is build #4614, and was published on the Apple App Store (with the changes in build #4613)
+
 ---------------------------------------------------------------------------
 ### 2.5.3 (GitHub commit 02e860a) 19-01-24
 
@@ -105,6 +109,7 @@ Maintenance
 * .xcloc localization files are no longer included in the Photo Club Hub target (not used in bundle).
 
 This is build #4613, and was sent out to Apple Testflight users only.
+
 ---------------------------------------------------------------------------
 ### 2.5.2 (GitHub commit 7cc0780) 16-12-23
 
@@ -123,6 +128,7 @@ Maintenance
 * Renamed source directories and file names named "Fotogroep Waalre" (old app name)
 
 This is build #4610 in Apple's App Store.
+
 ---------------------------------------------------------------------------
 ### 2.5.1 (GitHub commit 51501f7) 22-11-23
 
@@ -145,6 +151,7 @@ Maintenance
 * Set ITSAppUsesNonExemptEncryption to false in info.plist (to automate answer to question during releasing).
     
 This is build #4608 in Apple's App Store.
+
 ---------------------------------------------------------------------------
 ### 2.5.0 (GitHub commit beafb53) 3-11-23
 
@@ -167,6 +174,7 @@ Maintenance
 * Upgraded and tested with MacOS 14.1, Xcode 15.1 Beta 2 and iOS 17.1.
     
 This is build #4603 in Apple's App Store.
+
 ---------------------------------------------------------------------------
 ### 2.4.2 (GitHub commit 3548647) 13-09-23
 
@@ -180,6 +188,7 @@ Maintenance
 * Upgraded and tested with MacOS 13.5.2, SwiftLint 0.52.4, Xcode 15.0 RC1
     
 This is build #4596 in Apple's App Store.
+
 ---------------------------------------------------------------------------
 ### 2.4.1 (GitHub commit 2ee61a1) 9-09-23
 
@@ -201,6 +210,7 @@ Maintenance
 * Changed the name of the CoreData model to reflect the name change of the app.
 
 This is build #4594 in Apple's App Store.
+
 ---------------------------------------------------------------------------
 ### 2.4.0 (GitHub commit 276c9f3) 4-08-23
 
@@ -228,7 +238,8 @@ Maintenance
 * Changed GPS coordinates of Test Photo Club Rotterdam (the museum plans to move)
 * Cleanup of model (schema) versions
     
-*In Apple's App Store, the release notes of 2.3.6 and 2.4.0 are combined.*
+In Apple's App Store, the release notes of 2.3.6 and 2.4.0 are combined.*
+
 ---------------------------------------------------------------------------
 ### 2.3.6 (GitHub commit 4ccc917) 21-06-23
 
@@ -264,6 +275,7 @@ Maintenance
 * Upgraded and tested with iOS 16.5, MacOS 13.4, XCode 13.4.1 RC, Swift 5.8.1 and SwiftLint 0.52.2
     
 This is build #4590 in Apple's App Store.
+
 ---------------------------------------------------------------------------
 ### 2.3.4 (GitHub commit 5c3e710) 02-04-23
 
@@ -278,8 +290,9 @@ Maintenance
 * Cleaned all references to Preferences screen (was a mix of Settings and Preferences)
 * Removed minor unused `anythingVisible` computed property.
 
-This is build #4589 in Apple's App Store
-*In Apple's App Store, the release notes of 2.3.3 and 2.3.4 are combined.*
+This is build #4589 in Apple's App Store.
+In Apple's App Store, the release notes of 2.3.3 and 2.3.4 are combined.
+
 ---------------------------------------------------------------------------
 ### 2.3.3 (GitHub commit 26092a4) 25-03-23
 
@@ -296,6 +309,7 @@ Maintenance
 * Disabled support for running the iPad version on MacOS (because Maps crashed in Photo Clubs screen)
 
 This is build #4588 (didn't make it to Apple's App Store)
+
 ---------------------------------------------------------------------------
 ### 2.3.2 (GitHub commit ef445ca) 19-03-23
 
@@ -311,6 +325,7 @@ Maintenance
 * Tested against XCode 14.3 beta 3
 
 This is build #4587 in Apple's App Store.
+
 ---------------------------------------------------------------------------
 ### 2.3.1 (GitHub commit 1793262) 05-03-23
 
@@ -329,7 +344,8 @@ Maintenance
 * Improved Readme.md text on GitHub
 
 This is build #4586 in Apple's App Store.
-*In Apple's App Store, the release notes of 2.3.0 and 2.3.1 are combined.*
+In Apple's App Store, the release notes of 2.3.0 and 2.3.1 are combined.
+
 ---------------------------------------------------------------------------
 ### 2.3.0 (GitHub commit 8d35bd6) 02-03-23
 
@@ -358,6 +374,7 @@ Maintenance
 * "?" is now a supported placeholder when birthdate is unknown
 
 This is build #4585 (didn't make it to Apple's App Store).
+
 ---------------------------------------------------------------------------
 ### 2.2.10 (GitHub commit 09212fb) 06-02-23
 
@@ -367,7 +384,8 @@ Photo Clubs screen
 * Photo club name displayed as section header
 
 This is build #4583 in Apple's App Store.
-*In Apple's App Store, the release notes of 2.2.10 and 2.2.9 are combined.*
+In Apple's App Store, the release notes of 2.2.10 and 2.2.9 are combined.
+
 ---------------------------------------------------------------------------
 ### 2.2.9 (GitHub commit 21a6cd6) 05-02-23
 
@@ -388,6 +406,7 @@ Maintenance
 * Updated .gitignore file.
 
 This is build #4582 (didn't make to Apple's App Store).
+
 ---------------------------------------------------------------------------
 ### 2.2.8 (GitHub commit 426c09c) 22-01-23
 
@@ -409,6 +428,7 @@ Maintainability
 * Hardcoded photographer info can now contain photograperWebsite URL.
 
 This is build #4581 in Apple's App Store.
+
 ---------------------------------------------------------------------------
 ### 2.2.7 (GitHub commit 0130c45) 01-01-23
 
@@ -425,6 +445,7 @@ Maintainability
 * Logging message cleanup. Focus on which photo club. And ERROR in caps.
 
 This is build #4580 in Apple's App Store.
+
 ---------------------------------------------------------------------------
 ### 2.2.6 (GitHub commit e763662) 25-12-22
 
@@ -439,6 +460,7 @@ Prelude screen (formerly known as Animation screen)
 * pressing "c" toggles crosshairs to identify indicate exact location of center of screen
 
 This is build #4579 in Apple's App Store.
+
 ---------------------------------------------------------------------------
 ### 2.2.5 (GitHub commit 6f40286) 10-12-22
 
@@ -457,6 +479,7 @@ Refactoring
 * Deleted unused source control branches
 
 This is build #4578 in Apple's App Store.
+
 ---------------------------------------------------------------------------
 ### 2.2.4 (GitHub commit 15c87ab) 2-12-22
 
@@ -472,6 +495,7 @@ Refactoring
 * Removed file DeviceOwnership.swift (it was not part of the build, but SwiftLint was checking it)
 
 This is build #4577 in Apple's App Store.
+
 ---------------------------------------------------------------------------
 ### 2.2.3 (GitHub commit 9d1dfed) 23-10-22
 
@@ -481,6 +505,7 @@ Portfolios screen
 * Yellow question mark is no longer used (replaced by orange question mark stored internally) 
 
 This is build #4576 in Apple's App Store.
+
 ---------------------------------------------------------------------------
 ### 2.2.2 (GitHub commit 2462bf9) 23-10-22
 
@@ -503,6 +528,7 @@ Refactoring
 * Built with Xcode 14.1
 
 This is build #4575 that didn't end up in Apple's App Store (forgot to merge a branch).
+
 ---------------------------------------------------------------------------
 ### 2.2.1 (GitHub commit 71b3b84) 09-10-22
 
@@ -512,6 +538,7 @@ Preferences screen
 * Bug fix (iPad only): incorrect attachment point at top of screen. Cosmetic flaw.
 
 This is build #4574 in Apple's App Store.
+
 -------------------------------------------------------------------------
 ### 2.2.0 (GitHub commit c9f0d16) 08-10-22
 
@@ -538,6 +565,7 @@ Preferences screen
 * Minor text change (single to double quotes)
 
 This is build #4573 (but it was rejected Apple's App Store because the screenshots showed device bezels).
+
 ---------------------------------------------------------------------------
 ### 2.1.1 (GitHub commit 4974461) 11-09-22
 
@@ -552,6 +580,7 @@ Refactoring
 * Now all Previews of all Views work again
 
 This is build #4381 in Apple's App Store.
+
 ---------------------------------------------------------------------------
 ### 2.1.0 (GitHub commit a658b52) 17-08-22
 
@@ -571,6 +600,7 @@ Robustness
 * Added .mp4 "App Preview" video to App Store
 
 This is build #4379 in Apple's App Store.
+
 ---------------------------------------------------------------------------
 ### 2.0.10 (not on GitHub) 1-06-22
 
@@ -582,6 +612,7 @@ Preferences screen
 * Minor text changes
 
 This is build #4303 in Apple's App Store.
+
 ---------------------------------------------------------------------------
 ### 2.0.9 (not on GitHub) 23-05-22
 
@@ -592,6 +623,7 @@ Animimation screen
 * Used @EnvironmentObject to distribute deviceOwnership
 
 This is build #4299 in Apple's App Store/
+
 ---------------------------------------------------------------------------
 ### 2.0.8 (not on GitHub) 09-05-22
 
@@ -610,6 +642,7 @@ Who's who screen
 * dark mode version of app icon
 
 This is build #4298 in Apple's App Store.
+
 ---------------------------------------------------------------------------
 ### 2.0.7 (not on GitHub) 01-05-22
 
@@ -631,6 +664,7 @@ Readme screen
 * added scroll bar to the Readme page (it's fairly long)
 
 This is build #4294 in Apple's App Store.
+
 ---------------------------------------------------------------------------
 ### 2.0.6 (not on GitHub) 03-04-22
 
@@ -644,6 +678,7 @@ This is build #4294 in Apple's App Store.
 * prevented largest DynamicType setting from causing WAALRE to wrap in Prelude animation
 
 This is build #3982 in Apple's App Store.
+
 ---------------------------------------------------------------------------
 ### 2.0.5 (not on GitHub) 24-03-22
 
@@ -653,6 +688,7 @@ This is build #3982 in Apple's App Store.
 * scrolling and panning of maps can be locked by toggling a lock/unlock icon
 
 This is build #3976 in Apple's App Store.
+
 ---------------------------------------------------------------------------
 ### 2.0.4 (not on GitHub) 13-03-22
 
@@ -662,6 +698,7 @@ This is build #3976 in Apple's App Store.
 * updated App Store screenshots (to do)
 
 This is build #3974 in Apple's App Store.
+
 ---------------------------------------------------------------------------
 ### 2.0.3 (not on GitHub) 29-01-22
 
@@ -673,6 +710,7 @@ This is build #3974 in Apple's App Store.
 * internal: removed test code for non-existent photo club "Old Vic" in Reykjavík
 
 This is build #3966 in Apple's App Store.
+
 ---------------------------------------------------------------------------
 ### 2.0.2 (not on GitHub) 20-01-22
 
@@ -687,6 +725,7 @@ This is build #3966 in Apple's App Store.
 * And member roles converted to enums for robustness.
 
 This is build #3956 in Apple's App Store.
+
 ---------------------------------------------------------------------------
 ### 2.0.1 (not on GitHub) 09-01-22
 
@@ -703,6 +742,7 @@ This is build #3956 in Apple's App Store.
 * added 3000 to build number to allow shipping as Fotogroep Waalre bundel
 
 This is build #3566 in Apple's App Store.
+
 ---------------------------------------------------------------------------
 ### 2.0.0 (not on GitHub) 01-01-22
 
@@ -710,4 +750,5 @@ This is build #3566 in Apple's App Store.
 * First version designed to support more than one photo club.
 
 This is build #31, but it didn't reach Apple's' App Store, because app was too website-like.
+
 ---------------------------------------------------------------------------
