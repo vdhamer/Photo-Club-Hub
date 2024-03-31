@@ -14,6 +14,7 @@ Maintenance
 * Tested on MacOS 14.4.1
 * Updated Level 2 (HTML)file for Fotogroep Waalre (oops: requires more than a data file change because of database persistence)
 * Added FC Den Dungen
+* Cleanup of ReleaseNotes.md (for better Markdown compliance)
 
 This is build #4617.
 
