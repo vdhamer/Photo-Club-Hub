@@ -12,6 +12,7 @@ Maintenance
     * Renamed memberList field in level1.json files to level2URL
     * Tested on MacOS 14.4.1
     * Updated Level 2 (HTML)file for Fotogroep Waalre (oops: requires more than a data file change because of database persistence)
+    * Added FC Den Dungen
 
 This is build #4617.
 ---------------------------------------------------------------------------
