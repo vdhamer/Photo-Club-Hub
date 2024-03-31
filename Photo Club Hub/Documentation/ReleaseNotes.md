@@ -1,18 +1,19 @@
 ### 2.5.6 (GitHub commit ???????) ??-04-24
 
 Clubs and Museums screen
-    * renamed OrganizationList.json to root.level1.json
-    * added a search bar for filtering on organization's' name and town
-    * disable deletion because it didn't work
+* renamed OrganizationList.json to root.level1.json
+* added a search bar for filtering on organization's' name and town
+* disable deletion because it didn't work
+
 Maintenance
-    * Fixed a problem in the layout of README.md text on GitHub (`detail`/`summary`).
-    * Added screenshots of all screens to README.md text on GitHub.
-    * Improved documentation of JSON file formats in README.md
-    * Improved error message if root.level1.json file not found
-    * Renamed memberList field in level1.json files to level2URL
-    * Tested on MacOS 14.4.1
-    * Updated Level 2 (HTML)file for Fotogroep Waalre (oops: requires more than a data file change because of database persistence)
-    * Added FC Den Dungen
+* Fixed a problem in the layout of README.md text on GitHub (`detail`/`summary`).
+* Added screenshots of all screens to README.md text on GitHub.
+* Improved documentation of JSON file formats in README.md
+* Improved error message if root.level1.json file not found
+* Renamed memberList field in level1.json files to level2URL
+* Tested on MacOS 14.4.1
+* Updated Level 2 (HTML)file for Fotogroep Waalre (oops: requires more than a data file change because of database persistence)
+* Added FC Den Dungen
 
 This is build #4617.
 ---------------------------------------------------------------------------
