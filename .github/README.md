@@ -552,7 +552,7 @@ Here is an example of the format of a `Level 2` list for a photo club. This exam
             "birthday": "9999-10-18T00:00:00.000Z",
             "website": "https://glass.photo/vdhamer",
             "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg",
-            "imageList": "https://www.example.com/FG_deGender/Peter_van_den_Hamer.imagelist.json"
+            "level3URL": "https://www.example.com/FG_deGender/Peter_van_den_Hamer.imagelist.json"
         }
     ]
 }
@@ -562,19 +562,19 @@ Here is an example of the format of a `Level 2` list for a photo club. This exam
 <ul><details><Summary>Level 2 fields (click to expand)</Summary></p>
 
 - **Mandatory** fields
-    - `club` has the same structure as one club record in the `root.level1.json` file. It shows the club that the `Level 2` list describes.
+    - `club` has the same structure as a single `club` record from the `root.level1.json` file. It serves to label the file with the club that it describes.
         - the `town` and `fullName` fields are required.
         - `town` and `fullName` must exactly match the corresponding fields in the `root.level1.json` file.
-    - `members` is a container for one or more member records. Technically these correspond to the `MemberPortfolio` class in the database.</p>
+    - `members` is a container for information about current and past members. Technically these correspond to the `MemberPortfolio` class in the CoreData database.</p>
 - **Optional** fields
     - `club`
-        - a club's `nickName`, `latitude`, `longitude`, and `website` can overrule the corresponding`root.level1.json` fields if needed.</p>
-        - the `level2URL` field can be provided, but it's value is generally overruled by the `root.level1.json`'s `level2URL` value.
+        - a club's `nickName`, `latitude`, `longitude`, and `website` overrule the corresponding`root.level1.json` fields if needed. This allows a club to _correct_ centrally provided information.</p>
+        - the `level2URL` field can be included, but it's value does _not_ overrule the `level2URL` value in `root.level1.json` for safety reasons.
     - `members`
         - `givenName`, `infixName` and `familyName` are used to uniquely identify the photographer.
         - `infixName` will often be empty. It enables correctly sorting European surnames: "van Aalst" sorts like "Aalst".
             - An omitted "infixName" is equivalent to "infixName" = "".
-        - the `imageList` field allows the app to find the next level list about the selected images per member.</p>
+        - the `level3URL` field allows the app to find the next level list about the selected images per member.</p>
 </details></ul>
 
 ### Level 3. Adding Images
