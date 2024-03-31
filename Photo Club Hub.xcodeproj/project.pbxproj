@@ -248,8 +248,6 @@
 		D05E451C27EF297100D31327 /* ReadmeView */ = {
 			isa = PBXGroup;
 			children = (
-				D0E02F942B7FA33200D67CDA /* Readme_EN_2_5_4.pages */,
-				D0E02F972B80191300D67CDA /* Readme_NL_2_5_4.pages */,
 				D05E451D27EF2A2C00D31327 /* ReadmeView.swift */,
 			);
 			path = ReadmeView;
@@ -456,6 +454,8 @@
 			isa = PBXGroup;
 			children = (
 				D0831A4B277F736C0049AB84 /* ReleaseNotes.md */,
+				D0E02F942B7FA33200D67CDA /* Readme_EN_2_5_4.pages */,
+				D0E02F972B80191300D67CDA /* Readme_NL_2_5_4.pages */,
 				D07A1E2E28314EA600C77F66 /* SwiftUIEnvironmentValues.png */,
 				D01DFAA627E778BD007BABFA /* offsets.md */,
 				D04A2B112AC0958C003ED113 /* LineCount.xlsx */,
