@@ -3,7 +3,7 @@
 Clubs and Museums screen
 * renamed OrganizationList.json to root.level1.json
 * added a Search bar for filtering on organization's' name and town
-* disable deletion because it didn't work
+* disable deletion of a single organization because it (temporarily) deleted all clubs
 
 Maintenance
 * Fixed a problem in the layout of README.md text on GitHub (`detail`/`summary`).
@@ -15,6 +15,7 @@ Maintenance
 * Updated Level 2 (HTML)file for Fotogroep Waalre (oops: requires more than a data file change because of database persistence)
 * Added FC Den Dungen
 * Cleanup of ReleaseNotes.md (for better Markdown compliance)
+* Cleaned up string localization warnings (e.g. multiple occurrences of same string)
 
 This is build #4617.
 
