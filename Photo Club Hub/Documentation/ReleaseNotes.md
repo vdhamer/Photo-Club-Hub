@@ -12,6 +12,7 @@ Maintenance
     * Renamed memberList field in level1.json files to level2URL
     * Tested on MacOS 14.4.1
     * Updated Level 2 (HTML)file for Fotogroep Waalre (oops: requires more than a data file change because of database persistence)
+    * Cleaned up string localization warnings (e.g. multiple occurrences of same string)
 
 This is build #4617.
 ---------------------------------------------------------------------------

@@ -1,0 +1,29 @@
+{
+  "images" : [
+    {
+      "locale" : "nl",
+      "idiom" : "universal",
+      "filename" : "RocketSim_Screenshot_iPhone_15_6.1_2024-02-17_01.11.17.jpeg",
+      "scale" : "1x"
+    },
+    {
+      "locale" : "nl",
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "RocketSim_Screenshot_iPhone_15_6.1_2024-02-17_01.12.04.jpeg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  },
+  "properties" : {
+    "localizable" : true
+  }
+}

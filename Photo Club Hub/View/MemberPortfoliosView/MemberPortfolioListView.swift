@@ -114,9 +114,9 @@ struct MemberPortfolioListView: View {
                     // .toolbar The search field is placed in the toolbar. To right of person.text.rect.cust
                     // .sidebar The search field is placed in the sidebar of a navigation view. not on iPad
                     // .navigationBarDrawer The search field is placed in an drawer of the navigation bar. OK
-                    prompt: Text("Search names", comment:
+                    prompt: Text("Search_names_m", comment:
                                     """
-                                    Field at top of Members page that allows the user to \
+                                    Field at top of MemberPortfolios page that allows the user to \
                                     filter the members based on either given- and family name.
                                     """
                                 ))

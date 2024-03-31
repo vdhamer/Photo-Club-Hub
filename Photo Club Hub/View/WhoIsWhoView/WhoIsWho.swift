@@ -50,9 +50,9 @@ struct WhoIsWho: View {
         .autocapitalization(.none)
         .submitLabel(.done) // currently only works with text fields?
         .searchable(text: searchText, placement: .automatic,
-                    prompt: Text("Search names",
+                    prompt: Text("Search_names_p",
                                  comment: """
-                                          Field at top of Photographers page that allows the user to \
+                                          Field at top of Who's Who page that allows the user to \
                                           filter the photographers based on either given- and family name.
                                           """)
         )

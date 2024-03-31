@@ -157,15 +157,11 @@ struct WhoIsWhoInnerView: View {
             }
             .onDelete(perform: deletePhotographers) // can be disabled using isDeletedPhotographerEnabled flag
         } header: {
-            Text(makeHeaderString(count: filteredPhotographers.count))
-                .textCase(nil) // https://sarunw.com/posts/swiftui-list-section-header-textcase/
+            ItemFilterStatsView(filteredCount: filteredPhotographers.count,
+                                unfilteredCount: fetchRequest.count,
+                                elementType: ItemFilterStatsEnum.photographer)
+            .textCase(nil) // https://sarunw.com/posts/swiftui-list-section-header-textcase/
         }
-    }
-
-    private func makeHeaderString(count: Int) -> String {
-        let singular = String(localized: "One photographer", comment: "Header of section of Who's Who screen")
-        let plural = String(localized: "\(count) photographers", comment: "Header of section of Who's Who screen")
-        return count==1 ? singular : plural
     }
 
     private var filteredPhotographers: [Photographer] {

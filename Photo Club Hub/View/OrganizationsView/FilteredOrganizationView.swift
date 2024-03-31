@@ -41,141 +41,141 @@ struct FilteredOrganizationView: View {
     }
 
     var body: some View {
-        StatsView(filteredCount: filteredOrganizations.count, unfilteredCount: fetchedOrganizations.count)
+        ItemFilterStatsView(filteredCount: filteredOrganizations.count,
+                            unfilteredCount: fetchedOrganizations.count,
+                            elementType: ItemFilterStatsEnum.organization)
         ForEach(filteredOrganizations, id: \.id) { filteredOrganization in
-            Section {
-                VStack(alignment: .leading) {
-                    HStack {
-                        Text(verbatim: "\(filteredOrganization.fullName)")
-                            .font(UIDevice.isIPad ? .title : .title2)
-                            .tracking(1)
-                            .lineLimit(3)
-                            .truncationMode(.tail)
-                            .foregroundColor(.organizationColor)
-                        Spacer()
-                        if let wikipedia: URL = filteredOrganization.wikipedia {
-                            Link(destination: wikipedia, label: {
-                                Image("Wikipedia", label: Text(verbatim: "Wikipedia"))
-                                    .resizable()
-                                    .aspectRatio(1.0, contentMode: .fit)
-                                    .frame(width: 40, height: 40)
-                                    .padding(.trailing, 5)
+            VStack(alignment: .leading) {
+                HStack {
+                    Text(verbatim: "\(filteredOrganization.fullName)")
+                        .font(UIDevice.isIPad ? .title : .title2)
+                        .tracking(1)
+                        .lineLimit(3)
+                        .truncationMode(.tail)
+                        .foregroundColor(.organizationColor)
+                    Spacer()
+                    if let wikipedia: URL = filteredOrganization.wikipedia {
+                        Link(destination: wikipedia, label: {
+                            Image("Wikipedia", label: Text(verbatim: "Wikipedia"))
+                                .resizable()
+                                .aspectRatio(1.0, contentMode: .fit)
+                                .frame(width: 40, height: 40)
+                                .padding(.trailing, 5)
+                        })
+                        .buttonStyle(.plain) // to avoid entire List element to be clickable
+                    }
+                }
+                .fixedSize(horizontal: false, vertical: true)
+                HStack(alignment: .center, spacing: 0) {
+                    Image(systemName: systemName(organizationType: filteredOrganization.organizationType,
+                                                 circleNeeded: true)
+                    )
+                    .foregroundStyle(.white, .yellow, // .yellow (secondary color) not actually used
+                                     filteredOrganization.organizationType.isUnknown ? .red : .accentColor)
+                    .symbolRenderingMode(.palette)
+                    .font(.largeTitle)
+                    .padding(.horizontal, 5)
+                    VStack(alignment: .leading) {
+                        Text(verbatim: layoutDirection == .leftToRight ?
+                             "\(filteredOrganization.localizedTown), \(filteredOrganization.localizedCountry)" :
+                                "\(filteredOrganization.localizedCountry) ,\(filteredOrganization.localizedTown)")
+                        .font(.subheadline)
+                        if filteredOrganization.members.count > 0 { // hide for museums and clubs without members
+                            Text("\(filteredOrganization.members.count) members (inc. ex-members)",
+                                 comment: "<count> members (including all types of members) within photo club")
+                            .font(.subheadline)
+                        }
+                        if let website: URL = filteredOrganization.website {
+                            Link(destination: website, label: {
+                                Text(website.absoluteString)
+                                    .lineLimit(1)
+                                    .truncationMode(.middle)
+                                    .font(.subheadline)
+                                    .foregroundColor(.linkColor)
                             })
                             .buttonStyle(.plain) // to avoid entire List element to be clickable
                         }
                     }
-                    .fixedSize(horizontal: false, vertical: true)
-                    HStack(alignment: .center, spacing: 0) {
-                        Image(systemName: systemName(organizationType: filteredOrganization.organizationType,
-                                                     circleNeeded: true)
-                        )
-                        .foregroundStyle(.white, .yellow, // .yellow (secondary color) not actually used
-                                         filteredOrganization.organizationType.isUnknown ? .red : .accentColor)
-                        .symbolRenderingMode(.palette)
-                        .font(.largeTitle)
-                        .padding(.horizontal, 5)
-                        VStack(alignment: .leading) {
-                            Text(verbatim: layoutDirection == .leftToRight ?
-                                 "\(filteredOrganization.localizedTown), \(filteredOrganization.localizedCountry)" :
-                                    "\(filteredOrganization.localizedCountry) ,\(filteredOrganization.localizedTown)")
-                            .font(.subheadline)
-                            if filteredOrganization.members.count > 0 { // hide for museums and clubs without members
-                                Text("\(filteredOrganization.members.count) members (inc. ex-members)",
-                                     comment: "<count> members (including all types of members) within photo club")
-                                .font(.subheadline)
+                    Spacer() // moved Button to trailing/right side
+                    Button(
+                        action: {
+                            openCloseSound(openClose: filteredOrganization.isScrollLocked ? .close : .open)
+                            filteredOrganization.isScrollLocked.toggle()
+                        },
+                        label: {
+                            HStack { // to make background color clickable too
+                                LockAnimationView(locked: filteredOrganization.isScrollLocked)
                             }
-                            if let website: URL = filteredOrganization.website {
-                                Link(destination: website, label: {
-                                    Text(website.absoluteString)
-                                        .lineLimit(1)
-                                        .truncationMode(.middle)
-                                        .font(.subheadline)
-                                        .foregroundColor(.linkColor)
-                                })
-                                .buttonStyle(.plain) // to avoid entire List element to be clickable
-                            }
+                            .frame(maxWidth: 60, maxHeight: 60)
+                            .contentShape(Rectangle())
                         }
-                        Spacer() // moved Button to trailing/right side
-                        Button(
-                            action: {
-                                openCloseSound(openClose: filteredOrganization.isScrollLocked ? .close : .open)
-                                filteredOrganization.isScrollLocked.toggle()
-                            },
-                            label: {
-                                HStack { // to make background color clickable too
-                                    LockAnimationView(locked: filteredOrganization.isScrollLocked)
-                                }
-                                .frame(maxWidth: 60, maxHeight: 60)
-                                .contentShape(Rectangle())
-                            }
-                        )
-                        .buttonStyle(.plain) // to avoid entire List element to be clickable
-                    }
-                    .padding(.all, 0)
-                    Map(position: cameraPositionBinding(for: filteredOrganization.id),
-                        interactionModes: filteredOrganization.isScrollLocked ? [] : [
-                            .rotate, // automatically enables the compas button when rotated
-                            .pitch, // switch to 3D view if zoomed in far enough
-                            .pan, .zoom], // actually .all is the default
-                        selection: $mapSelection) {
-
-                        // show markers of all organizations on map
-                        ForEach(fetchedOrganizations, id: \.self) { organization in
-                            Marker(organization.fullName,
-                                   systemImage: systemName(organizationType: organization.organizationType,
-                                                           circleNeeded: false),
-                                   coordinate: organization.coordinates)
-                            .tint(selectMarkerTint(organization: organization,
-                                                   selectedOrganization: filteredOrganization))
-                        } // Marker loop
-                        UserAnnotation() // show user's location on map
-                    } // Map ends here
-                        .frame(minHeight: 300, idealHeight: 500, maxHeight: .infinity)
-                    Text(filteredOrganization.localizedRemark) // display remark in preferred language (if possible)
-                        .padding(.top, 5)
-                } // Organization loop
-                .task {
-                    initializeCameraPosition(organization: filteredOrganization) // better than .onAppear(perform:)?
+                    )
+                    .buttonStyle(.plain) // to avoid entire List element to be clickable
                 }
-                .onAppear {
-                    // on main queue (avoid accessing NSManagedObjects on background thread!)
-                    let clubName = filteredOrganization.fullName
-                    let town = filteredOrganization.town // unlocalized
-                    let coordinates = filteredOrganization.coordinates
+                .padding(.all, 0)
+                Map(position: cameraPositionBinding(for: filteredOrganization.id),
+                    interactionModes: filteredOrganization.isScrollLocked ? [] : [
+                        .rotate, // automatically enables the compas button when rotated
+                        .pitch, // switch to 3D view if zoomed in far enough
+                        .pan, .zoom], // actually .all is the default
+                    selection: $mapSelection) {
 
-                    Task.detached { // other (non-bgContext) background thread to access 2 async functions
-                        var localizedTown: String
-                        var localizedCountry: String?
-                        do {
-                            let (locality, nation) = // can be (nil, nil) for Chinese location or Chinese user location
-                            try await reverseGeocode(coordinates: coordinates)
-                            localizedTown = locality ?? town // unlocalized as fallback for localized -> String
-                            localizedCountry = nation // optional String
-                            await updateTownCountry(clubName: clubName, town: town,
-                                                    localizedTown: localizedTown, localizedCountry: localizedCountry)
-                        } catch {
-                            print("""
+                    // show markers of all organizations on map
+                    ForEach(fetchedOrganizations, id: \.self) { organization in
+                        Marker(organization.fullName,
+                               systemImage: systemName(organizationType: organization.organizationType,
+                                                       circleNeeded: false),
+                               coordinate: organization.coordinates)
+                        .tint(selectMarkerTint(organization: organization,
+                                               selectedOrganization: filteredOrganization))
+                    } // Marker loop
+                    UserAnnotation() // show user's location on map
+                } // Map ends here
+                    .frame(minHeight: 300, idealHeight: 500, maxHeight: .infinity)
+                Text(filteredOrganization.localizedRemark) // display remark in preferred language (if possible)
+                    .padding(.top, 5)
+            } // Organization loop
+            .task {
+                initializeCameraPosition(organization: filteredOrganization) // better than .onAppear(perform:)?
+            }
+            .onAppear {
+                // on main queue (avoid accessing NSManagedObjects on background thread!)
+                let clubName = filteredOrganization.fullName
+                let town = filteredOrganization.town // unlocalized
+                let coordinates = filteredOrganization.coordinates
+
+                Task.detached { // other (non-bgContext) background thread to access 2 async functions
+                    var localizedTown: String
+                    var localizedCountry: String?
+                    do {
+                        let (locality, nation) = // can be (nil, nil) for Chinese location or Chinese user location
+                        try await reverseGeocode(coordinates: coordinates)
+                        localizedTown = locality ?? town // unlocalized as fallback for localized -> String
+                        localizedCountry = nation // optional String
+                        await updateTownCountry(clubName: clubName, town: town,
+                                                localizedTown: localizedTown, localizedCountry: localizedCountry)
+                    } catch {
+                        print("""
                                   ERROR: could not reverseGeocode (\
                                   \(filteredOrganization.coordinates.latitude), \
                                   \(filteredOrganization.coordinates.longitude))
                                   """)
-                        }
                     }
                 }
-                .onDisappear(perform: { try? viewContext.save() }) // persist map scroll-lock states when leaving page
-                .accentColor(.organizationColor)
-                .listRowSeparator(.hidden)
-                .padding()
-                .border(Color(.darkGray), width: 0.5)
-                .background(Color(.secondarySystemBackground)) // compatible with light and dark mode
-                .mapControls {
-                    MapCompass() // map Compass shown if rotation differs from North on top
-                    MapPitchToggle() // switch between 2D and 3D
-                    MapScaleView() // distance scale
-                    MapUserLocationButton()
-                } .mapControlVisibility(filteredOrganization.isScrollLocked ? .hidden : .automatic)
-//                .onDelete(perform: deleteOrganizations)
-            } // Section
+            }
+            .onDisappear(perform: { try? viewContext.save() }) // persist map scroll-lock states when leaving page
+            .accentColor(.organizationColor)
+            .listRowSeparator(.hidden)
+            .padding()
+            .border(Color(.darkGray), width: 0.5)
+            .background(Color(.secondarySystemBackground)) // compatible with light and dark mode
+            .mapControls {
+                MapCompass() // map Compass shown if rotation differs from North on top
+                MapPitchToggle() // switch between 2D and 3D
+                MapScaleView() // distance scale
+                MapUserLocationButton()
+            } .mapControlVisibility(filteredOrganization.isScrollLocked ? .hidden : .automatic)
+            //                .onDelete(perform: deleteOrganizations)
         } // outer ForEach (Organization)
     }
 
@@ -372,28 +372,5 @@ struct FilteredOrganizationView_Previews: PreviewProvider {
             .navigationBarTitle(Text(String("PhotoClubInnerView"))) // prevent localization
             .searchable(text: $searchText, placement: .toolbar, prompt: Text("Search names and towns"))
         }
-    }
-}
-
-struct StatsView: View { // display right-aligned string like "12 entries (of 123)" or "123 entries"
-
-    let filteredCount: Int
-    let unfilteredCount: Int
-
-    var body: some View {
-        HStack {
-            Spacer() // allign to right
-            let comment = StaticString("number of records displayed at top of Clubs and Museums screen")
-            if filteredCount == 1 {
-                Text("One entry", comment: comment)
-            } else {
-                Text("\(filteredCount) entries", comment: comment)
-            }
-            if filteredCount != unfilteredCount {
-                Text("(of \(unfilteredCount) shown)", comment: comment)
-            }
-        }
-        .padding(.horizontal, 0)
-        .font(.callout) // small font for both parts of the concatenated Text view
     }
 }

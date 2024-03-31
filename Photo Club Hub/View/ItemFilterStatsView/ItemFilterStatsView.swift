@@ -12,7 +12,19 @@ struct ItemFilterStatsView: View { // display right-aligned string like "12 entr
     let filteredCount: Int
     let unfilteredCount: Int
     let elementType: ItemFilterStatsEnum
-    let comment: StaticString = "Stats header displayed at top of Clubs and Museums screen"
+    let comment: StaticString
+
+    init(filteredCount: Int, unfilteredCount: Int, elementType: ItemFilterStatsEnum) {
+        self.filteredCount = filteredCount
+        self.unfilteredCount = unfilteredCount
+        self.elementType = elementType
+
+        if elementType == ItemFilterStatsEnum.organization {
+            comment = "Stats header displayed at top of Clubs and Museums screen"
+        } else {
+            comment = "Stats header displayed at top of Who's who screen"
+        }
+    }
 
     var body: some View {
         HStack {

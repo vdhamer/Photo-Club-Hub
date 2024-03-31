@@ -112,14 +112,14 @@ struct FilteredMemberPortfoliosView: View {
         var unfiltCount: Int // number of items in unfiltered list
         var listName: String
         var organization: Organization? // optional because we copy this from first member in the photoClub collection
-        let member = String(localized: "member",
+        let member = String(localized: "member_",
                                comment: "Statistics at end of section of FilteredMemberPortfoliosView")
         let members = String(localized: "members",
                                 comment: "Statistics at end of section of FilteredMemberPortfoliosView")
         let shown = String(localized: "shown",
                            comment: "X member(s) shown (due to various forms of filtering)")
         let of1 = String(localized: "of1",
-                           comment: "X of Y member(s) shown (due to various forms of filtering)")
+                         comment: "X of Y portfolio(s) shown (due to various forms of filtering)")
 
         var body: some View {
             HStack {
@@ -224,6 +224,6 @@ struct FilteredMemberPortfolios_Previews: PreviewProvider {
                 .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
         }
         .navigationBarTitle(Text(String("FilteredMemberPortfoliosView"))) // prevent localization
-        .searchable(text: $searchText, placement: .toolbar, prompt: Text("Search names"))
+        .searchable(text: $searchText, placement: .toolbar, prompt: Text(verbatim: "Search names (preview)"))
     }
 }

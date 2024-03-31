@@ -21,7 +21,7 @@ struct OrganizationListView: View {
 
     private var predicate: NSPredicate = NSPredicate.all
     private var navigationTitle = String(localized: "Clubs and Museums",
-                                         comment: "Title of page with club and museum maps")
+                                         comment: "Title of page with maps for Clubs and Museums")
 
     init(predicate: NSPredicate? = nil,
          navigationTitle: String? = nil) {
@@ -43,8 +43,10 @@ struct OrganizationListView: View {
                     NoClubsText()
                 }
                 Group {
-                    Text("PhotoClubs_Caption_1", comment: "Shown in gray at the bottom of the Photo Club page (1/3).")
-                    Text("PhotoClubs_Caption_2", comment: "Shown in gray at the bottom of the Photo Club page (2/3).")
+                    Text("PhotoClubs_Caption_1",
+                         comment: "Shown in gray at the bottom of the Clubs and Museums page (1/3).")
+                    Text("PhotoClubs_Caption_2",
+                         comment: "Shown in gray at the bottom of the Clubs and Museums page (2/3).")
                 } .foregroundColor(Color.primary)
             }
             .listStyle(.plain)
