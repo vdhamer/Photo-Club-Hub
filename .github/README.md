@@ -33,6 +33,7 @@
     <details open><summary><a href="#features">Features</a></summary>
         <ul>
             <li><a href="#multi-club-support">Multi-club Support</a></li>
+            <li><a href="searching-lists#">Searching Lists</a></li>
             <li><a href="#photo-museums">Photo Museums</a></li>
             <li><a href="#data-privacy">Data Privacy</a>
         </ul>
@@ -313,6 +314,26 @@ Version 2 added support for multiple photo clubs. This means:
 - a photographer is shown associated with multiple clubs if applicable (e.g., former club, current club)
 - the app is stepwise being prepared for larger amounts of data (data is distributed over sites)
 - the app is starting to enable that clubs can manage their own data (data "within" a club is managed by the club)
+
+### Searching Lists
+
+</p>The three screens with long lists (`Portfolios`. `Clubs and Museums`. `Who's Who`) each have a search bar
+to narrow down the list to the items you are looking for.</p>
+
+<details><summary>Details (click to expand)</summary></p>
+
+On an iPad, the search field is constantly visible at the top of the screen. 
+On an iPhone until you reach the top of the screen. This is standard iOS behavior for the search bar.
+
+What you type into the search bar is matched (case-insensitive) to the identifying fields of the items.
+
+- In the `Portfolios` screen, searches try to match the photographer's full name.
+  Searching on `jan` might match `Jan Stege`, `Ariejan van Twisk` and `Jos Jansen`.
+- In the `Clubs and Museums` screen, searches try to match a concatenation of the organization's name and town.
+  Searching on `waal` might match `Collectief Brabant (Waalwijk)` and `Fotogroep Waalre (Waalre)`.
+- In the `Who's Who` screen, searches try to match the photographer's full name.
+  Searching on `jan` might match `Jan Stege`, `Ariejan van Twisk` and `Jos Jansen`.
+</details>
 
 ### Photo Museums
 
