@@ -1,27 +1,29 @@
-### 2.5.6 (GitHub commit ???????) 31-03-24
+### 2.5.6 (GitHub commit b7f46f7) 31-03-24
 
 Clubs and Museums screen
-* added a Search bar for filtering on organization's name and town
-* added statistics at top of screen to show strings like "2 organizations (of 78)" when filtering used
-* disable deletion of a single organization because it (temporarily) deleted all clubs
+* Added a Search bar for filtering organizations on name and town (at top of screen).
+* Shows stats at top of screen ("77 organizations", "2 organizations (of 77)"
+* Disable deletion of a individual organizations because it deleted them all. Bug had no lasting impact.
 
 Who's Who screen
-* adapted statistics at top of screen to match stats at top of Clubs and Museums screen
+* Shows stats that match stats of Clubs and Museums screen
+
+Documentation
+* Fixed a layout problem in the layout of `README.md` text on GitHub (`detail`/`summary`).
+* Added screenshots of all screens to `README.md` text on GitHub.
+* Improved documentation of JSON file formats in `README.md`
+* Cleanup of `ReleaseNotes.md` (for better Markdown compliance)
 
 Maintenance
-* renamed OrganizationList.json to root.level1.json
-* Fixed a problem in the layout of README.md text on GitHub (`detail`/`summary`).
-* Added screenshots of all screens to README.md text on GitHub.
-* Improved documentation of JSON file formats in README.md
-* Improved error message if root.level1.json file not found
-* Renamed memberList field in level1.json files to level2URL
+* Renamed `OrganizationList.json` to `root.level1.json` (OrganizationList.json is still supported)
+* Improved error message if `root.level1.json` file not found
+* Renamed `memberList` field in `level1.json` files to `level2URL`
+* Updated Level 2 (HTML) file for Fotogroep Waalre (GvdK)
+* Added a Dutch photo club (FC Den Dungen)
+* Cleaned up string translation issues
 * Tested on MacOS 14.4.1
-* Updated Level 2 (HTML)file for Fotogroep Waalre (oops: requires more than a data file change because of database persistence)
-* Added FC Den Dungen
-* Cleanup of ReleaseNotes.md (for better Markdown compliance)
-* Cleaned up string localization warnings (e.g. multiple occurrences of same string)
 
-This is build #4617 and was sent out to Apple Testflight users only.
+This is build #4617 and was sent out to Apple Testflight users.
 
 ---------------------------------------------------------------------------
 ### 2.5.5 (GitHub commit cffe1e4) 20-03-24
