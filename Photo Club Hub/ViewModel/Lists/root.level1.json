@@ -239,6 +239,30 @@
 
         {
             "idPlus": {
+                "town": "Den Dungen",
+                "fullName": "Fotoclub den Dungen",
+                "nickName": "fcdDungen"
+            },
+            "coordinates": {
+                "latitude": 51.66214,
+                "longitude": 5.37097
+            },
+            "website": "https://www.fotoclubdendungen.nl",
+            "level2URL": "https://www.example.com/fcdDungen.level2.json",
+            "remark": [
+                {
+                    "language": "EN",
+                    "value": "The club tries to avoid postprocessing images, and aim to get the straight-out-of-camera image right."
+                },
+                {
+                    "language": "NL",
+                    "value": "De leden hebben afgesproken om foto's zo min mogelijk te bewerken, om zo te concentreren op de oorspronkelijk opname."
+                }
+            ]
+        },
+
+        {
+            "idPlus": {
                 "town": "Duerne",
                 "fullName": "Fotoclub Optika",
                 "nickName": "FC Optika"
@@ -611,33 +635,6 @@
 
         {
             "idPlus": {
-                "town": "Oeffelt",
-                "fullName": "Fotografieclub-BGC",
-                "nickName": "fcBGC"
-            },
-            "coordinates": {
-                "latitude": 51.71029,
-                "longitude": 5.91486
-            },
-            "website": "https://www.fotografieclub-bgc.nl",
-            "level2URL": "https://www.example.com/fcBGC.level2.json",
-            "remark": [
-                {
-                    "language": "EN",
-                    "value": "BGC stands for three neighboring villages (Boxmeer, Gennep, and Cuijk) along the Maas/Meuse river."
-                },
-                {
-                    "language": "NL",
-                    "value": "De afkorting BGC in de naam van de club duidt op drie naburige plaatsen aan de Maas: Boxmeer, Gennep en Cuijk."
-                }
-            ],
-            "nlSpecific": {
-                "fotobondNumber": 1676
-            }
-        },
-
-        {
-            "idPlus": {
                 "town": "Oirschot",
                 "fullName": "Fotogroep Oirschot",
                 "nickName": "fgOirschot"
@@ -767,6 +764,33 @@
             }
         },
 
+        {
+            "idPlus": {
+                "town": "Sint Agatha",
+                "fullName": "Fotografieclub-BGC",
+                "nickName": "fcBGC"
+            },
+            "coordinates": {
+                "latitude": 51.71029,
+                "longitude": 5.91486
+            },
+            "website": "https://www.fotografieclub-bgc.nl",
+            "level2URL": "https://www.example.com/fcBGC.level2.json",
+            "remark": [
+                {
+                    "language": "EN",
+                    "value": "BGC stands for three neighboring villages (Boxmeer, Gennep, and Cuijk) along the Maas/Meuse river."
+                },
+                {
+                    "language": "NL",
+                    "value": "De afkorting BGC in de naam van de club duidt op drie naburige plaatsen aan de Maas: Boxmeer, Gennep en Cuijk."
+                }
+            ],
+            "nlSpecific": {
+                "fotobondNumber": 1676
+            }
+        },
+        
         {
             "idPlus": {
                 "town": "Sint-Oedenrode",
