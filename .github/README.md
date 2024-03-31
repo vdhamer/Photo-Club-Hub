@@ -329,7 +329,7 @@ The text you type in the search bar is matched (case-insensitive) to the identif
 
 - In the `Portfolios` screen, searches try to match the photographer's full name.
   Searching on `Jan` might match `Jan Stege`, `Ariejan van Twisk` and `Jos Jansen`.
-  Searching on this creen does _not_ match against club names.
+  Searching on this screen does _not_ match against club names.
 - In the `Clubs and Museums` screen, searches try to match a concatenation of the organization's name and town.
   Searching on `Ber` might match `FFC Shot71 (Berlicum)` and `Museum für Fotografie (Berlin)` and `The Victoria & Albert Museum (London)`.
   Note that the town is the location specified in the `root.level1.json` file and _not_ its localized version, which might be different.
