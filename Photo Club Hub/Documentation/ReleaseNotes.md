@@ -1,3 +1,11 @@
+### 2.5.6 (GitHub commit ???????) 1-04-24
+
+Maintenance
+* Renamed 2 views used for WhoIsWho screen (for consistency with other views)
+
+This is build #4618.
+
+---------------------------------------------------------------------------
 ### 2.5.6 (GitHub commit b7f46f7) 31-03-24
 
 Clubs and Museums screen
