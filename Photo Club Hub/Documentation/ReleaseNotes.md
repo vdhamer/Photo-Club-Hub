@@ -1,11 +1,15 @@
-### 2.5.6 (GitHub commit ???????) ??-04-24
+### 2.5.6 (GitHub commit ???????) 31-03-24
 
 Clubs and Museums screen
-* renamed OrganizationList.json to root.level1.json
-* added a Search bar for filtering on organization's' name and town
+* added a Search bar for filtering on organization's name and town
+* added statistics at top of screen to show strings like "2 organizations (of 78)" when filtering used
 * disable deletion of a single organization because it (temporarily) deleted all clubs
 
+Who's Who screen
+* adapted statistics at top of screen to match stats at top of Clubs and Museums screen
+
 Maintenance
+* renamed OrganizationList.json to root.level1.json
 * Fixed a problem in the layout of README.md text on GitHub (`detail`/`summary`).
 * Added screenshots of all screens to README.md text on GitHub.
 * Improved documentation of JSON file formats in README.md
@@ -17,7 +21,7 @@ Maintenance
 * Cleanup of ReleaseNotes.md (for better Markdown compliance)
 * Cleaned up string localization warnings (e.g. multiple occurrences of same string)
 
-This is build #4617.
+This is build #4617 and was sent out to Apple Testflight users only.
 
 ---------------------------------------------------------------------------
 ### 2.5.5 (GitHub commit cffe1e4) 20-03-24
