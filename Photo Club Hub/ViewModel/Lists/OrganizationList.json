@@ -12,7 +12,7 @@
                 "longitude": 5.744756
             },
             "website": "https://www.fotokringbeeldhoek.nl",
-            "memberList": "https://www.example.com/FK_Beeldhoek.memberlist.json",
+            "level2URL": "https://www.example.com/FK_Beeldhoek.level2.json",
             "remark": [
                 {
                     "language": "EN",
@@ -39,7 +39,7 @@
                 "longitude": 5.62722
             },
             "website": "https://www.fcobjectief.nl",
-            "memberList": "https://www.example.com/FC_Objectief.memberlist.json",
+            "level2URL": "https://www.example.com/FC_Objectief.level2.json",
             "remark": [
                 {
                     "language": "EN",
@@ -66,7 +66,7 @@
                 "longitude": 5.4182475
             },
             "website": "https://www.shot71.nl",
-            "memberList": "https://www.example.com/FFC_Shot71.memberlist.json",
+            "level2URL": "https://www.example.com/FFC_Shot71.level2.json",
             "remark": [
                 {
                     "language": "EN",
@@ -93,7 +93,7 @@
                 "longitude": 5.38724
             },
             "website": "https://www.fotogroepbest.nl",
-            "memberList": "https://www.example.com/fgBest.memberlist.json",
+            "level2URL": "https://www.example.com/fgBest.level2.json",
             "remark": [
                 {
                     "language": "EN",
@@ -117,7 +117,7 @@
                 "longitude": 5.67780
             },
             "website": "https://www.fotogroep-focus.nl",
-            "memberList": "https://www.example.com/FG_Focus.memberlist.json",
+            "level2URL": "https://www.example.com/FG_Focus.level2.json",
             "remark": [
                 {
                     "language": "EN",
@@ -144,7 +144,7 @@
                 "longitude": 5.31682
             },
             "website": "https://boxtelontspant.nl",
-            "memberList": "https://www.example.com/boxtelontspant.memberlist.json",
+            "level2URL": "https://www.example.com/boxtelontspant.level2.json",
             "remark": [
                 {
                     "language": "EN",
@@ -168,7 +168,7 @@
                 "longitude": 5.3075
             },
             "website": "https://argusfoto.nl/",
-            "memberList": "https://www.example.com/Argusfoto.memberlist.json",
+            "level2URL": "https://www.example.com/Argusfoto.level2.json",
             "remark": [
                 {
                     "language": "EN",
@@ -195,7 +195,7 @@
                 "longitude": 5.26535
             },
             "website": "https://fotoclubdenbosch.nl/",
-            "memberList": "https://www.example.com/denBosch.memberlist.json",
+            "level2URL": "https://www.example.com/denBosch.level2.json",
             "remark": [
                 {
                     "language": "EN",
@@ -221,7 +221,7 @@
                 "latitude": 51.65823,
                 "longitude": 5.29832
             },
-            "memberList": "https://www.example.com/iso2016.memberlist.json",
+            "level2URL": "https://www.example.com/iso2016.level2.json",
             "remark": [
                 {
                     "language": "EN",
@@ -239,16 +239,40 @@
 
         {
             "idPlus": {
+                "town": "Den Dungen",
+                "fullName": "Fotoclub den Dungen",
+                "nickName": "fcdDungen"
+            },
+            "coordinates": {
+                "latitude": 51.66214,
+                "longitude": 5.37097
+            },
+            "website": "https://www.fotoclubdendungen.nl",
+            "level2URL": "https://www.example.com/fcdDungen.level2.json",
+            "remark": [
+                {
+                    "language": "EN",
+                    "value": "The club tries to avoid postprocessing images, and aim to get the straight-out-of-camera image right."
+                },
+                {
+                    "language": "NL",
+                    "value": "De leden hebben afgesproken om foto's zo min mogelijk te bewerken, om zo te concentreren op de oorspronkelijk opname."
+                }
+            ]
+        },
+
+        {
+            "idPlus": {
                 "town": "Duerne",
                 "fullName": "Fotoclub Optika",
                 "nickName": "FC Optika"
             },
             "coordinates": {
                 "latitude": 51.45032,
-                "longitude": 5.81069 
+                "longitude": 5.81069
             },
             "website": "https://www.optika.nl",
-            "memberList": "https://www.example.com/FC_Optika.memberlist.json",
+            "level2URL": "https://www.example.com/FC_Optika.level2.json",
             "remark": [
                 {
                     "language": "EN",
@@ -272,10 +296,10 @@
             },
             "coordinates": {
                 "latitude": 51.36821,
-                "longitude": 5.29926 
+                "longitude": 5.29926
             },
             "website": "https://www.kemfodia.nl/",
-            "memberList": "https://www.example.com/FC_Kemfodia.memberlist.json",
+            "level2URL": "https://www.example.com/FC_Kemfodia.level2.json",
             "remark": [
                 {
                     "language": "EN",
@@ -302,7 +326,7 @@
                 "longitude": 5.28909
             },
             "website": "https://fotoclublucifer.nl",
-            "memberList": "https://www.example.com/fcLucifer.memberList.json",
+            "level2URL": "https://www.example.com/fcLucifer.level2.json",
             "remark": [
                 {
                     "language": "EN",
@@ -329,7 +353,7 @@
                 "longitude": 5.44177
             },
             "website": "https://www.fotoschouw.nl",
-            "memberList": "https://www.example.com/fotoschouw.memberList.json",
+            "level2URL": "https://www.example.com/fotoschouw.level2.json",
             "remark": [
                 {
                     "language": "EN",
@@ -353,7 +377,7 @@
                 "longitude": 5.46288
             },
             "website": "https://www.ericamera.nl/",
-            "memberList": "https://www.example.com/fcEricamera.memberList.json",
+            "level2URL": "https://www.example.com/fcEricamera.level2.json",
             "remark": [
                 {
                     "language": "EN",
@@ -380,7 +404,7 @@
                 "longitude": 5.51527
             },
             "website": "https://nl.qrcodechimp.com/page/a6d3r7?v=chk1697032881",
-            "memberList": "https://www.example.com/fgAnders.memberList.json",
+            "level2URL": "https://www.example.com/fgAnders.level2.json",
             "remark": [
                 {
                     "language": "EN",
@@ -404,7 +428,7 @@
                 "longitude": 5.4501
             },
             "website": "https://www.fcdegender.nl",
-            "memberList": "https://www.example.com/deGender.memberList.json",
+            "level2URL": "https://www.example.com/deGender.level2.json",
             "remark": [
                 {
                     "language": "EN",
@@ -431,7 +455,7 @@
                 "longitude": 5.5152
             },
             "website": "https://debuut.jimdofree.com",
-            "memberList": "https://www.example.com/fcDebuut.memberList.json",
+            "level2URL": "https://www.example.com/fcDebuut.level2.json",
             "remark": [
                 {
                     "language": "EN",
@@ -458,7 +482,7 @@
                 "longitude": 5.42879
             },
             "website": "https://www.fotogroepklick.nl/",
-            "memberList": "https://www.example.com/fgKlick.memberList.json",
+            "level2URL": "https://www.example.com/fgKlick.level2.json",
             "remark": [
                 {
                     "language": "EN",
@@ -485,7 +509,7 @@
                 "longitude": 5.47689
             },
             "website": "https://www.fotoclubrapenland.nl/",
-            "memberList": "https://www.example.com/fcRapenland.memberList.json",
+            "level2URL": "https://www.example.com/fcRapenland.level2.json",
             "remark": [
                 {
                     "language": "EN",
@@ -512,7 +536,7 @@
                 "longitude": 5.51988
             },
             "website": "https://www.fotoclubkarregat.nl/",
-            "memberList": "https://www.example.com/fcKarregat.memberList.json",
+            "level2URL": "https://www.example.com/fcKarregat.level2.json",
             "remark": [
                 {
                     "language": "EN",
@@ -539,7 +563,7 @@
                 "longitude": 5.68508
             },
             "website": "http://www.fotoclubgemert.nl/",
-            "memberList": "https://www.example.com/fcGemert.memberList.json",
+            "level2URL": "https://www.example.com/fcGemert.level2.json",
             "remark": [
                 {
                     "language": "EN",
@@ -566,7 +590,7 @@
                 "longitude": 5.73862
             },
             "website": "https://www.fotoclubdesoos.nl",
-            "memberList": "https://www.example.com/fcDeSoos.memberList.json",
+            "level2URL": "https://www.example.com/fcDeSoos.level2.json",
             "remark": [
                 {
                     "language": "EN",
@@ -593,7 +617,7 @@
                 "longitude": 5.43271
             },
             "website": "https://www.fotoclubnuland.nl/",
-            "memberList": "https://www.example.com/fcNuland.memberList.json",
+            "level2URL": "https://www.example.com/fcNuland.level2.json",
             "remark": [
                 {
                     "language": "EN",
@@ -611,33 +635,6 @@
 
         {
             "idPlus": {
-                "town": "Oeffelt",
-                "fullName": "Fotografieclub-BGC",
-                "nickName": "fcBGC"
-            },
-            "coordinates": {
-                "latitude": 51.71029,
-                "longitude": 5.91486
-            },
-            "website": "https://www.fotografieclub-bgc.nl",
-            "memberList": "https://www.example.com/fcBGC.memberList.json",
-            "remark": [
-                {
-                    "language": "EN",
-                    "value": "BGC stands for three neighboring villages (Boxmeer, Gennep, and Cuijk) along the Maas/Meuse river."
-                },
-                {
-                    "language": "NL",
-                    "value": "De afkorting BGC in de naam van de club duidt op drie naburige plaatsen aan de Maas: Boxmeer, Gennep en Cuijk."
-                }
-            ],
-            "nlSpecific": {
-                "fotobondNumber": 1676
-            }
-        },
-
-        {
-            "idPlus": {
                 "town": "Oirschot",
                 "fullName": "Fotogroep Oirschot",
                 "nickName": "fgOirschot"
@@ -647,7 +644,7 @@
                 "longitude": 5.25568
             },
             "website": "http:s//fotogroepoirschot.nl/",
-            "memberList": "https://www.example.com/fgOirschot.memberList.json",
+            "level2URL": "https://www.example.com/fgOirschot.level2.json",
             "remark": [
                 {
                     "language": "EN",
@@ -673,7 +670,7 @@
                 "latitude": 51.35436,
                 "longitude": 5.38736
             },
-            "memberList": "https://www.example.com/fgRiethoven.memberList.json",
+            "level2URL": "https://www.example.com/fgRiethoven.level2.json",
             "remark": [
                 {
                     "language": "EN",
@@ -700,7 +697,7 @@
                 "longitude": 5.37042
             },
             "website": "https://fotoclubtspectrum.nl",
-            "memberList": "https://www.example.com/fcSpectrum.memberList.json",
+            "level2URL": "https://www.example.com/fcSpectrum.level2.json",
             "remark": [
                 {
                     "language": "EN",
@@ -727,7 +724,7 @@
                 "longitude": 5.35491
             },
             "website": "https://hefotoclub.nl",
-            "memberList": "https://www.example.com/hefoto.memberList.json",
+            "level2URL": "https://www.example.com/hefoto.level2.json",
             "remark": [
                 {
                     "language": "EN",
@@ -751,7 +748,7 @@
                 "longitude": 5.44888
             },
             "website": "https://www.fotoclubschijndel.nl",
-            "memberList": "https://www.example.com/fcSchijndel.memberList.json",
+            "level2URL": "https://www.example.com/fcSchijndel.level2.json",
             "remark": [
                 {
                     "language": "EN",
@@ -769,6 +766,33 @@
 
         {
             "idPlus": {
+                "town": "Sint Agatha",
+                "fullName": "Fotografieclub-BGC",
+                "nickName": "fcBGC"
+            },
+            "coordinates": {
+                "latitude": 51.71029,
+                "longitude": 5.91486
+            },
+            "website": "https://www.fotografieclub-bgc.nl",
+            "level2URL": "https://www.example.com/fcBGC.level2.json",
+            "remark": [
+                {
+                    "language": "EN",
+                    "value": "BGC stands for three neighboring villages (Boxmeer, Gennep, and Cuijk) along the Maas/Meuse river."
+                },
+                {
+                    "language": "NL",
+                    "value": "De afkorting BGC in de naam van de club duidt op drie naburige plaatsen aan de Maas: Boxmeer, Gennep en Cuijk."
+                }
+            ],
+            "nlSpecific": {
+                "fotobondNumber": 1676
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Sint-Oedenrode",
                 "fullName": "Fotoclub Rooi",
                 "nickName": "fcRooi"
@@ -778,7 +802,7 @@
                 "longitude": 5.45787
             },
             "website": "http://www.fotoclubrooi.nl/",
-            "memberList": "https://www.example.com/fcRooi.memberList.json",
+            "level2URL": "https://www.example.com/fcRooi.level2.json",
             "remark": [
                 {
                     "language": "EN",
@@ -805,7 +829,7 @@
                 "longitude": 5.55930
             },
             "website": "https://fotoclubveghel.nl",
-            "memberList": "https://www.example.com/fcVeghel.memberList.json",
+            "level2URL": "https://www.example.com/fcVeghel.level2.json",
             "remark": [
                 {
                     "language": "EN",
@@ -832,7 +856,7 @@
                 "longitude": 5.54782
             },
             "website": "https://www.facebook.com/FotofestijnMeierijstad/",
-            "memberList": "https://www.example.com/fgZoomm.memberList.json",
+            "level2URL": "https://www.example.com/fgZoomm.level2.json",
             "remark": [
                 {
                     "language": "EN",
@@ -856,7 +880,7 @@
                 "longitude": 5.62025
             },
             "website": "https://www.f8-uden.nl",
-            "memberList": "https://www.example.com/f8Uden.memberList.json",
+            "level2URL": "https://www.example.com/f8Uden.level2.json",
             "remark": [
                 {
                     "language": "EN",
@@ -883,7 +907,7 @@
                 "longitude": 5.60938
             },
             "website": "",
-            "memberList": "https://www.example.com/fcBeeldspraakU.memberList.json",
+            "level2URL": "https://www.example.com/fcBeeldspraakU.level2.json",
             "remark": [
                 {
                     "language": "EN",
@@ -907,7 +931,7 @@
                 "longitude": 5.387560
             },
             "website": "https://www.fotoClubBellusImago.nl",
-            "memberList": "https://www.example.com/fcBellusImago.memberList.json",
+            "level2URL": "https://www.example.com/fcBellusImago.level2.json",
             "remark": [
                 {
                     "language": "EN",
@@ -934,7 +958,7 @@
                 "longitude": 5.39656
             },
             "website": "https://www.fotogroepveldhoven.nl",
-            "memberList": "https://www.example.com/fgVeldhoven.memberList.json",
+            "level2URL": "https://www.example.com/fgVeldhoven.level2.json",
             "remark": [
                 {
                     "language": "EN",
@@ -961,7 +985,7 @@
                 "longitude": 5.28902
             },
             "website": "https://www.fotogroepvught.nl",
-            "memberList": "https://www.example.com/fgVught.memberList.json",
+            "level2URL": "https://www.example.com/fgVught.level2.json",
             "remark": [
                 {
                     "language": "EN",
@@ -988,7 +1012,7 @@
                 "longitude": 5.46144
             },
             "website": "https://www.fotogroepwaalre.nl",
-            "memberList": "https://www.example.com/fgWaalre.memberList.json",
+            "level2URL": "https://www.example.com/fgWaalre.level2.json",
             "remark": [
                 {
                     "language": "EN",
@@ -1015,7 +1039,7 @@
                 "longitude": 5.069444
             },
             "website": "https://www.collectiefbrabant.nl",
-            "memberList": "https://www.example.com/Brabant.memberList.json",
+            "level2URL": "https://www.example.com/Brabant.level2.json",
             "remark": [
                 {
                     "language": "EN",
@@ -1042,7 +1066,7 @@
                 "longitude": 5.82020
             },
             "website": "https://www.fotoclubkiekus.nl",
-            "memberList": "https://www.example.com/fcKiekus.memberList.json",
+            "level2URL": "https://www.example.com/fcKiekus.level2.json",
             "remark": [
                 {
                     "language": "EN",
@@ -1069,7 +1093,7 @@
                 "longitude": 5.25076
             },
             "website": "",
-            "memberList": "https://www.example.com/?.memberList.json",
+            "level2URL": "https://www.example.com/?.level2.json",
             "remark": [
                 {
                     "language": "EN",
@@ -1096,7 +1120,7 @@
                 "longitude": 5.67461
             },
             "website": "www.facebook.com/ObjectiefZeeland",
-            "memberList": "https://www.example.com/???.memberList.json",
+            "level2URL": "https://www.example.com/???.level2.json",
             "remark": [
                 {
                     "language": "EN",
@@ -1928,6 +1952,7 @@
                 }
             ]
         }
-        
+
     ]
 }
+
