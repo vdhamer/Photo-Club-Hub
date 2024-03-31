@@ -320,7 +320,7 @@ Version 2 added support for multiple photo clubs. This means:
 The three screens with long lists (`Portfolios`. `Clubs and Museums`. `Who's Who`) each have a search bar
 to help find a particular item.</p>
 
-<details><summary>Details (click to expand)</summary></p>
+<details><summary>Details on Searching(click to expand)</summary></p>
 
 On an iPad, the search field is always visible at the top of the screen. 
 On an iPhone, scroll up until you hit the top of the screen.
@@ -341,7 +341,7 @@ The text you type in the search bar is matched (case-insensitive) to the identif
 
 </p>The maps showing the location of photo clubs also show the locations of selected photo museums.</p>
 
-<details><summary>Details (click to expand)</summary></p>
+<details><summary>Details on Museums (click to expand)</summary></p>
 
 A photo museum is not a photo club and is displayed on the maps using a dedicated marker.
 Techncially, the app doesn't allow museums to have "members" that share images with the museum.</p>
@@ -353,7 +353,7 @@ The file format is documented below under [How Data is Loaded](#how-data-is-load
 
 ### Data Privacy
 
-<details><summary>Details (click to expand)</summary></p>
+<details><summary>Details on Privacy(click to expand)</summary></p>
 
 The phone numbers, e-mail addresses and ages of members of Fotogroep Waalre may not be public information.
 They are read by the app, but not actually shown or used at present. For good measure, the data is stored
