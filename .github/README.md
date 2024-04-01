@@ -33,7 +33,7 @@
     <details open><summary><a href="#features">Features</a></summary>
         <ul>
             <li><a href="#multi-club-support">Multi-club Support</a></li>
-            <li><a href="#searching-lists">Searching Lists</a></li>
+            <li><a href="#searchable-lists">Searchable Lists</a></li>
             <li><a href="#photo-museums">Photo Museums</a></li>
             <li><a href="#data-privacy">Data Privacy</a>
         </ul>
@@ -315,12 +315,12 @@ Version 2 added support for multiple photo clubs. This means:
 - the app is stepwise being prepared for larger amounts of data (data is distributed over sites)
 - the app is starting to enable that clubs can manage their own data (data "within" a club is managed by the club)
 
-### Searching Lists
+### Searchable Lists
 
 The three screens with long lists (`Portfolios`. `Clubs and Museums`. `Who's Who`) each have a search bar
 to help find a particular item.</p>
 
-<details><summary>Details on Searching(click to expand)</summary></p>
+<details><summary>Details on the Search Bar(click to expand)</summary></p>
 
 On an iPad, the search field is always visible at the top of the screen. 
 On an iPhone, scroll up until you hit the top of the screen.
