@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "Screenshot 2024-01-16 at 00.23.48 2.png",
+      "filename" : "SearchBar_EN 1.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -12,7 +12,7 @@
           "value" : "dark"
         }
       ],
-      "filename" : "Screenshot 2024-01-16 at 00.22.42 1.png",
+      "filename" : "SearchBar_EN_dark 1.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -45,7 +45,7 @@
       "scale" : "3x"
     },
     {
-      "filename" : "Screenshot 2024-01-16 at 00.54.45.png",
+      "filename" : "SearchBar_NL.png",
       "idiom" : "universal",
       "locale" : "nl",
       "scale" : "1x"
@@ -57,7 +57,7 @@
           "value" : "dark"
         }
       ],
-      "filename" : "Screenshot 2024-01-16 at 00.55.27.png",
+      "filename" : "SearchBar_NL_dark.png",
       "idiom" : "universal",
       "locale" : "nl",
       "scale" : "1x"
