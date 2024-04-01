@@ -192,6 +192,23 @@ struct ReadmeView: View {
                             .font(.callout.italic())
                             .frame(width: geo.size.width * 0.8, alignment: .center)
                             Text("")
+
+                            Paragraph("3.11.a", comment: "Paragraph 3.11.a of the Readme screen", geo: geo)
+                            Paragraph("3.11.b", comment: "Paragraph 3.11.b of the Readme screen", geo: geo,
+                                      bottomPaddingAmount: 0)
+
+                            Image("Search-bar")
+                                .resizable()
+                                .border(.gray, width: 1)
+                                .scaledToFit()
+                                .frame(width: geo.size.width * 0.8, height: 260, alignment: .center)
+                            Text("Search bar at the top of _Portfolios_ screen",
+                                 comment: "Caption about Search Bar on the Readme page")
+                            .font(.callout.italic())
+                            .frame(width: geo.size.width * 0.8, alignment: .center)
+                            Text("")
+
+                            Paragraph("3.11.c", comment: "Paragraph 3.11.c of the Readme screen", geo: geo)
                         }
 
                         Group {

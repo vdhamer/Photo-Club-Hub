@@ -1,0 +1,17 @@
+{
+  "images" : [
+    {
+      "locale" : "nl",
+      "idiom" : "universal",
+      "filename" : "SearchBar_NL.png",
+      "scale" : "1x"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  },
+  "properties" : {
+    "localizable" : true
+  }
+}

@@ -4,32 +4,32 @@
 /* Shown when "Show deceased members" entry is missing in Preferences */
 "“Former members” includes “deceased members”" = "“Former members” includes “deceased members”";
 
-/* Stats header displayed at top of Clubs and Museums screen */
-"1 organization" = "1 organization";
+/* <count> members (including all types of members) within photo club */
+"%lld members (inc. ex-members)" = "%lld members (inc. ex-members)";
 
 /* Stats header displayed at top of Clubs and Museums screen */
 "%lld organizations" = "%lld organizations";
 
 /* Stats header displayed at top of Clubs and Museums screen */
-"1 organization (of %lld)" = "1 organization (of %lld)";
-
-/* Stats header displayed at top of Clubs and Museums screen */
 "%lld organizations (of %lld)" = "%lld organizations (of %lld)";
-
-/* <count> members (including all types of members) within photo club */
-"%lld members (inc. ex-members)" = "%lld members (inc. ex-members)";
-
-/* Header of section of Who's Who screen */
-"1 photographer" = "1 photographer";
 
 /* Header of section of Who's Who screen */
 "%lld photographers" = "%lld photographers";
 
 /* Header of section of Who's Who screen */
-"1 photographer (of %lld)" = "1 photographer (of %lld)";
+"%lld photographers (of %lld)" = "%lld photographers (of %lld)";
+
+/* Stats header displayed at top of Clubs and Museums screen */
+"1 organization" = "1 organization";
+
+/* Stats header displayed at top of Clubs and Museums screen */
+"1 organization (of %lld)" = "1 organization (of %lld)";
 
 /* Header of section of Who's Who screen */
-"%lld photographers (of %lld)" = "%lld photographers (of %lld)";
+"1 photographer" = "1 photographer";
+
+/* Header of section of Who's Who screen */
+"1 photographer (of %lld)" = "1 photographer (of %lld)";
 
 /* Administrative role of member within a club. Used as part of concatenations. */
 "admin" = "admin";
@@ -108,6 +108,9 @@
 
 /* In Preferences, above toggles like "Show former members" */
 "Member categories" = "Member categories";
+
+/* Statistics at end of section of FilteredMemberPortfoliosView */
+"member_" = "member";
 
 /* Statistics at end of section of FilteredMemberPortfoliosView */
 "members" = "members";
@@ -253,6 +256,15 @@
 /* Paragraph 3.10.c of the Readme screen */
 "Paragraph_3.10.c" = "This option is available on portfolios that were generated using the _Juicebox_ plug-in for _Lightroom Classic_ (see the portfolios of Fotogroep Waalre).";
 
+/* Paragraph 3.11.a of the Readme screen */
+"Paragraph_3.11.a" = "__Searching__";
+
+/* Paragraph 3.11.b of the Readme screen */
+"Paragraph_3.11.b" = "There is a search bar at the top of all screens that display long lists. On an iPhone you may need to scroll back to the top of the list in order to see it.";
+
+/* Paragraph 3.11.c of the Readme screen */
+"Paragraph_3.11.c" = "Entering part of person’s name (for the _Portfolios_ and _Who’s Who_ screens) will find photographers with that name. The _Clubs and Museums_ screen is searched simultaneously on organization name and its town (location).";
+
 /* First paragraph SupportedPlatforms section of Readme page */
 "Paragraph_4.1" = "_Photo Club Hub_ requires the latest major version of iOS. This allows us to keep up to date technology-wise. The latest app version can run on devices released in the last 6 or 7 years.";
 
@@ -313,14 +325,17 @@
 /* Title of Readme screen */
 "Readme" = "Readme";
 
+/* Caption about Search Bar on the Readme page */
+"Search bar at the top of _Portfolios_ screen" = "Search bar at the top of Portfolios screen";
+
+/* Field at top of Clubs and Museums page that allows the user to filter the members based on a fragment of the organization name. */
+"Search names and towns" = "Search names and towns";
+
 /* Field at top of MemberPortfolios page that allows the user to filter the members based on either given- and family name. */
 "Search_names_m" = "Search names";
 
 /* Field at top of Who's Who page that allows the user to filter the photographers based on either given- and family name. */
 "Search_names_p" = "Search names";
-
-/* Field at top of Clubs and Museums page that allows the user to filter the members based on a fragment of the organization name. */
-"Search names and towns" = "Search names and towns";
 
 /* Administrative role of member within a club. Used as part of concatenations. */
 "secretary" = "secretary";
@@ -352,9 +367,6 @@
 /* Section title on Readme page */
 "Supported Platforms" = "iOS, iPadOS";
 
-/* Caption of Localizations image on Readme page */
-"Translating English phrases into Dutch" = "Translating English phrases into Dutch";
-
 /* Section title on Readme page */
 "The App" = "The App";
 
@@ -375,6 +387,9 @@
 
 /* Hint to the user if the database returns zero Members with empty Search filter. */
 "To see names here, please enable additional categories on the Preferences page." = "To see names here, please enable additional categories on the Preferences page.";
+
+/* Caption of Localizations image on Readme page */
+"Translating English phrases into Dutch" = "Translating English phrases into Dutch";
 
 /* Administrative role of member within a club. Used as part of concatenations. */
 "treasurer" = "treasurer";

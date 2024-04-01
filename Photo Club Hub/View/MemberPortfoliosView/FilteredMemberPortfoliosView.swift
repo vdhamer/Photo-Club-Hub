@@ -113,9 +113,9 @@ struct FilteredMemberPortfoliosView: View {
         var listName: String
         var organization: Organization? // optional because we copy this from first member in the photoClub collection
         let member = String(localized: "member_",
-                               comment: "Statistics at end of section of FilteredMemberPortfoliosView")
+                            comment: "Statistics at end of section of FilteredMemberPortfoliosView")
         let members = String(localized: "members",
-                                comment: "Statistics at end of section of FilteredMemberPortfoliosView")
+                             comment: "Statistics at end of section of FilteredMemberPortfoliosView")
         let shown = String(localized: "shown",
                            comment: "X member(s) shown (due to various forms of filtering)")
         let of1 = String(localized: "of1",
@@ -127,7 +127,7 @@ struct FilteredMemberPortfoliosView: View {
                 VStack {
                     if filtCount < unfiltCount {
                         Text(verbatim: // verbatim keeps these pretty empty strings out of the localized Strings
-                             "\(filtCount) (\(of1) \(unfiltCount)) \(filtCount==1 ? member : members) \(shown).")
+                             "\(filtCount) \(filtCount==1 ? member : members) (\(of1) \(unfiltCount)) \(shown).")
                     } else {
                         Text(verbatim:
                              "\(unfiltCount) \(unfiltCount==1 ? member : members) \(shown).")

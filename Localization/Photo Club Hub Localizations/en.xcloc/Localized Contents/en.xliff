@@ -384,6 +384,21 @@ Try dragging down the Photo Clubs screen to reload the default clubs.</target>
         <target>This option is available on portfolios that were generated using the _Juicebox_ plug-in for _Lightroom Classic_ (see the portfolios of Fotogroep Waalre).</target>
         <note>Paragraph 3.10.c of the Readme screen</note>
       </trans-unit>
+      <trans-unit id="Paragraph_3.11.a" xml:space="preserve">
+        <source>__Searching__</source>
+        <target>__Searching__</target>
+        <note>Paragraph 3.11.a of the Readme screen</note>
+      </trans-unit>
+      <trans-unit id="Paragraph_3.11.b" xml:space="preserve">
+        <source>There is a search bar at the top of all screens that display long lists. On an iPhone you may need to scroll back to the top of the list in order to see it.</source>
+        <target>There is a search bar at the top of all screens that display long lists. On an iPhone you may need to scroll back to the top of the list in order to see it.</target>
+        <note>Paragraph 3.11.b of the Readme screen</note>
+      </trans-unit>
+      <trans-unit id="Paragraph_3.11.c" xml:space="preserve">
+        <source>Entering part of person’s name (for the _Portfolios_ and _Who’s Who_ screens) will find photographers with that name. The _Clubs and Museums_ screen is searched simultaneously on organization name and its town (location).</source>
+        <target>Entering part of person’s name (for the _Portfolios_ and _Who’s Who_ screens) will find photographers with that name. The _Clubs and Museums_ screen is searched simultaneously on organization name and its town (location).</target>
+        <note>Paragraph 3.11.c of the Readme screen</note>
+      </trans-unit>
       <trans-unit id="Paragraph_4.1" xml:space="preserve">
         <source>_Photo Club Hub_ requires the latest major version of iOS. This allows us to keep up to date technology-wise. The latest app version can run on devices released in the last 6 or 7 years.</source>
         <target>_Photo Club Hub_ requires the latest major version of iOS. This allows us to keep up to date technology-wise. The latest app version can run on devices released in the last 6 or 7 years.</target>
@@ -482,6 +497,11 @@ Try dragging down the Photo Clubs screen to reload the default clubs.</target>
         <source>Readme</source>
         <target>Readme</target>
         <note>Title of Readme screen</note>
+      </trans-unit>
+      <trans-unit id="Search bar at the top of _Portfolios_ screen" xml:space="preserve">
+        <source>Search bar at the top of Portfolios screen</source>
+        <target>Search bar at the top of Portfolios screen</target>
+        <note>Caption about Search Bar on the Readme page</note>
       </trans-unit>
       <trans-unit id="Search names and towns" xml:space="preserve">
         <source>Search names and towns</source>
@@ -639,8 +659,8 @@ Try dragging down the Photo Clubs screen to reload the default clubs.</target>
         <note>Default status of member within a club. Used in concatenations.</note>
       </trans-unit>
       <trans-unit id="member_" xml:space="preserve">
-        <source>member_</source>
-        <target>member_</target>
+        <source>member</source>
+        <target>member</target>
         <note>Statistics at end of section of FilteredMemberPortfoliosView</note>
       </trans-unit>
       <trans-unit id="members" xml:space="preserve">

@@ -1,7 +1,14 @@
 ### 2.5.6 (GitHub commit ???????) 1-04-24
 
+Readme screen
+* Listed the Search Bar as one of the app's features
+
+Documentation
+* Added the search bar to the EN and NL readme.pages files
+* Added the search bar to the GitHub README.md file
+
 Maintenance
-* Renamed 2 views used for WhoIsWho screen (for consistency with other views)
+* Renamed 2 source files used for WhoIsWho screen (for consistency with other views)
 
 This is build #4618.
 

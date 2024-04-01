@@ -262,6 +262,18 @@
 /* Paragraph 3.10.c of the Readme screen */
 "Paragraph_3.10.c" = "Deze knop is deel van portfolio's die gegenereerd zijn vanuit de _Juicebox Pro_ plug-in voor _Lightroom Classic_. Zie bijvoorbeeld de portfolio's van leden van _Fotogroep Waalre_.";
 
+/* Paragraph 3.11.a of the Readme screen */
+"Paragraph_3.11.a" = "__Zoekfunctie__";
+
+/* Paragraph 3.11.b of the Readme screen */
+"Paragraph_3.11.b" = "Bovenaan schermen met lijsten is er een invoerveld om binnen de lijst snel te kunnen zoeken. Op een iPhone wordt het _Zoeken_ invoerveld pas getoond zodra men helemaal naar de bovenkant van de lijst gaat.";
+
+/* Paragraph 3.11.c of the Readme screen */
+"Paragraph_3.11.c" = "Op de _Portfolio's_ en _Namenlijst_ schermen wordt er op de naam van fotografen gezocht. Op het _Clubs en Musea_ scherm wordt er gelijktijdig op clubnaam, museumnaam en locatie gezocht.";
+
+/* Caption about Search Bar on the Readme page */
+"Search bar at the top of _Portfolios_ screen" = "Zoekfunctie bovenaan het Portfolio’s scherm";
+
 /* First paragraph SupportedPlatforms section of Readme page */
 "Paragraph_4.1" = "_Fotoclub Hub_ vereist een recente versie van iOS. In de praktijk betekent dit dat toestellen die niet ouder zijn dan een jaar of 6 de nieuwste app versies kunnen draaien.";
 

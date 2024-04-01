@@ -384,6 +384,21 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
         <target>Deze knop is deel van portfolio's die gegenereerd zijn vanuit de _Juicebox Pro_ plug-in voor _Lightroom Classic_. Zie bijvoorbeeld de portfolio's van leden van _Fotogroep Waalre_.</target>
         <note>Paragraph 3.10.c of the Readme screen</note>
       </trans-unit>
+      <trans-unit id="Paragraph_3.11.a" xml:space="preserve">
+        <source>__Searching__</source>
+        <target>__Zoekfunctie__</target>
+        <note>Paragraph 3.11.a of the Readme screen</note>
+      </trans-unit>
+      <trans-unit id="Paragraph_3.11.b" xml:space="preserve">
+        <source>There is a search bar at the top of all screens that display long lists. On an iPhone you may need to scroll back to the top of the list in order to see it.</source>
+        <target>Bovenaan schermen met lijsten is er een invoerveld om binnen de lijst snel te kunnen zoeken. Op een iPhone wordt het _Zoeken_ invoerveld pas getoond zodra men helemaal naar de bovenkant van de lijst gaat.</target>
+        <note>Paragraph 3.11.b of the Readme screen</note>
+      </trans-unit>
+      <trans-unit id="Paragraph_3.11.c" xml:space="preserve">
+        <source>Entering part of person’s name (for the _Portfolios_ and _Who’s Who_ screens) will find photographers with that name. The _Clubs and Museums_ screen is searched simultaneously on organization name and its town (location).</source>
+        <target>Op de _Portfolio's_ en _Namenlijst_ schermen wordt er op de naam van fotografen gezocht. Op het _Clubs en Musea_ scherm wordt er gelijktijdig op clubnaam, museumnaam en locatie gezocht.</target>
+        <note>Paragraph 3.11.c of the Readme screen</note>
+      </trans-unit>
       <trans-unit id="Paragraph_4.1" xml:space="preserve">
         <source>_Photo Club Hub_ requires the latest major version of iOS. This allows us to keep up to date technology-wise. The latest app version can run on devices released in the last 6 or 7 years.</source>
         <target>_Fotoclub Hub_ vereist een recente versie van iOS. In de praktijk betekent dit dat toestellen die niet ouder zijn dan een jaar of 6 de nieuwste app versies kunnen draaien.</target>
@@ -481,6 +496,11 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
         <source>Readme</source>
         <target>Over deze app</target>
         <note>Title of Readme screen</note>
+      </trans-unit>
+      <trans-unit id="Search bar at the top of _Portfolios_ screen" xml:space="preserve">
+        <source>Search bar at the top of Portfolios screen</source>
+        <target>Zoekfunctie bovenaan het Portfolio’s scherm</target>
+        <note>Caption about Search Bar on the Readme page</note>
       </trans-unit>
       <trans-unit id="Search names and towns" xml:space="preserve">
         <source>Search names and towns</source>
@@ -638,7 +658,7 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
         <note>Default status of member within a club. Used in concatenations.</note>
       </trans-unit>
       <trans-unit id="member_" xml:space="preserve">
-        <source>member_</source>
+        <source>member</source>
         <target>lid</target>
         <note>Statistics at end of section of FilteredMemberPortfoliosView</note>
       </trans-unit>
