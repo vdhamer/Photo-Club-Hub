@@ -21,9 +21,9 @@ struct FilteredWhoIsWhoView: View {
     // regenerate Section using current FetchRequest with current filters and sorting
     init(predicate: NSPredicate, searchText: Binding<String>, wkWebView: WKWebView) {
         _fetchRequest = FetchRequest<Photographer>(sortDescriptors: [ // replaces previous fetchRequest
-                                                        SortDescriptor(\.familyName_, order: .forward),
-                                                        SortDescriptor(\.givenName_, order: .forward)
-                                                   ],
+            SortDescriptor(\.familyName_, order: .forward),
+            SortDescriptor(\.givenName_, order: .forward)
+                                                                    ],
                                                    predicate: predicate,
                                                    animation: .default)
 
@@ -36,133 +36,135 @@ struct FilteredWhoIsWhoView: View {
     var body: some View {
         Section {
             ForEach(filteredPhotographers, id: \.id) { filteredPhotographer in
-                VStack {
-                    HStack(alignment: .top) {
-                        PhotographerIconView(isDeceased: filteredPhotographer.isDeceased)
-                            .foregroundStyle(.photographerColor, .gray, .red) // red tertiary color should not show up
-                            .font(.title3)
-                            .padding(EdgeInsets(top: 3, leading: 0, bottom: 0, trailing: 5))
-                        VStack(alignment: .leading) {
+                HStack(alignment: .top) { // to place PhotographerIconView at left edge of everything else
+                    PhotographerIconView(isDeceased: filteredPhotographer.isDeceased)
+                        .foregroundStyle(.photographerColor, .gray, .red) // red tertiary color should not show up
+                        .font(.title3)
+                        .padding(EdgeInsets(top: 3, leading: 0, bottom: 0, trailing: 5))
+                    VStack(alignment: .leading) { // to place texts above scrolling iamges
+                        HStack(alignment: .top) { // to place the URL icon to right of everything
+                            VStack(alignment: .leading) {
+                                // first green line with icon and name of photographer
+                                let alive: String = filteredPhotographer.isDeceased ? // generate name suffix
+                                (" - " + MemberStatus.deceased.localizedString()) : ""
+                                Text(verbatim: "\(filteredPhotographer.fullNameLastFirst)\(alive)")
+                                    .font(.title3)
+                                    .tracking(1)
+                                    .foregroundColor(chooseColor(accentColor: .accentColor,
+                                                                 isDeceased: filteredPhotographer.isDeceased))
 
-                            // first green line with icon and name of photographer
-                            let alive: String = filteredPhotographer.isDeceased ? // generate name suffix
-                            (" - " + MemberStatus.deceased.localizedString()) : ""
-                            Text(verbatim: "\(filteredPhotographer.fullNameLastFirst)\(alive)")
-                                .font(.title3)
-                                .tracking(1)
-                                .foregroundColor(chooseColor(accentColor: .accentColor,
-                                                             isDeceased: filteredPhotographer.isDeceased))
+                                // birthday if available (year of birth is not shown)
+                                if let date: Date = filteredPhotographer.bornDT {
+                                    let locBirthday = String(localized: "Birthday:",
+                                                             comment: """
+                                                                      Birthday of member (without year). \
+                                                                      Date not currently localized?
+                                                                      """)
+                                    Text(verbatim: "\(locBirthday) \(dateFormatter.string(from: date))")
+                                        .font(.subheadline)
+                                        .foregroundColor(filteredPhotographer.isDeceased ? .deceasedColor : .primary)
+                                }
 
-                            // birthday if available (year of birth is not shown)
-                            if let date: Date = filteredPhotographer.bornDT {
-                                let locBirthday = String(localized: "Birthday:",
-                                                         comment: """
-                                                                  Birthday of member (without year). \
-                                                                  Date not currently localized?
-                                                                  """)
-                                Text(verbatim: "\(locBirthday) \(dateFormatter.string(from: date))")
-                                    .font(.subheadline)
-                                    .foregroundColor(filteredPhotographer.isDeceased ? .deceasedColor : .primary)
+                                // phone number if available (and allowed)
+                                if filteredPhotographer.phoneNumber != "", showPhoneMail, filteredPhotographer.isAlive {
+                                    let locPhone = String(localized: "Phone:",
+                                                          comment: "Telephone number (usually invisible)")
+                                    Text(verbatim: "\(locPhone): \(filteredPhotographer.phoneNumber)")
+                                        .font(.subheadline)
+                                        .foregroundColor(.primary) // don't show phone numbers for deceased people
+                                }
+
+                                // phone number if available (and allowed)
+                                if filteredPhotographer.eMail != "", showPhoneMail, !filteredPhotographer.isDeceased {
+                                    Text(verbatim: "mailto://\(filteredPhotographer.eMail)")
+                                        .font(.subheadline)
+                                        .foregroundColor(.primary) // don't show e-mail addresses for deceased people
+                                }
+
+                                // personal (not club-related) web site if available
+                                if let url: URL = filteredPhotographer.photographerWebsite {
+                                    Link(destination: url, label: {
+                                        Text(url.absoluteString)
+                                            .lineLimit(1)
+                                            .truncationMode(.middle)
+                                            .font(.subheadline)
+                                            .foregroundColor(.linkColor)
+                                    })
+                                    .buttonStyle(.plain) // prevents entire List element from becoming clickable
+                                }
                             }
-
-                            // phone number if available (and allowed)
-                            if filteredPhotographer.phoneNumber != "", showPhoneMail, !filteredPhotographer.isDeceased {
-                                let locPhone = String(localized: "Phone:",
-                                                      comment: "Telephone number (usually invisible)")
-                                Text(verbatim: "\(locPhone): \(filteredPhotographer.phoneNumber)")
-                                    .font(.subheadline)
-                                    .foregroundColor(.primary) // don't show phone numbers for deceased people
-                            }
-
-                            // phone number if available (and allowed)
-                            if filteredPhotographer.eMail != "", showPhoneMail, !filteredPhotographer.isDeceased {
-                                Text(verbatim: "mailto://\(filteredPhotographer.eMail)")
-                                    .font(.subheadline)
-                                    .foregroundColor(.primary) // don't show e-mail addresses for deceased people
-                            }
-
-                            // personal (not club-related) web site if available
+                            Spacer()
                             if let url: URL = filteredPhotographer.photographerWebsite {
                                 Link(destination: url, label: {
-                                    Text(url.absoluteString)
-                                        .lineLimit(1)
-                                        .truncationMode(.middle)
-                                        .font(.subheadline)
+                                    Image(systemName: "link")
                                         .foregroundColor(.linkColor)
                                 })
-                                .buttonStyle(.plain) // prevents entire List element from becoming clickable
+                                .buttonStyle(.plain) // to avoid entire List element to be clickable
                             }
+                        } // to place link icon to right of everything
 
-                            ScrollView(.horizontal, showsIndicators: false) {
-                                HStack {
-                                    ForEach(filteredPhotographer.memberships.sorted(), id: \.id) { membership in
-                                        SinglePortfolioLinkView(destPortfolio: membership, wkWebView: wkWebView) {
-                                            AsyncImage(url: membership.latestImageURL) { phase in
-                                                if let image = phase.image {
-                                                    ZStack(alignment: .bottom) {
-                                                        image // Displays the loaded image
-                                                            .resizable()
-                                                            .aspectRatio(contentMode: .fill)
-                                                            .frame(height: 160)
-                                                        Text(verbatim: "\(membership.roleDescriptionOfClubTown)")
-                                                            .font(.caption)
-                                                            .padding(EdgeInsets(top: 3,
-                                                                                leading: 5,
-                                                                                bottom: 3,
-                                                                                trailing: 5))
-                                                            .lineLimit(3)
-                                                            .truncationMode(.middle)
-                                                            .background(.ultraThinMaterial)
-                                                            .foregroundColor(.primary)
-                                                            .frame(width: 160)
-                                                            .dynamicTypeSize( // constrain impact of large dynamic type
-                                                                ...DynamicTypeSize.xLarge)
-                                                    }
-                                                } else if phase.error != nil ||
-                                                            membership.latestImageURL == nil {
-                                                    Image("Question-mark") // image indicates an error occurred
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            HStack {
+                                ForEach(filteredPhotographer.memberships.sorted(), id: \.id) { membership in
+                                    SinglePortfolioLinkView(destPortfolio: membership, wkWebView: wkWebView) {
+                                        AsyncImage(url: membership.latestImageURL) { phase in
+                                            if let image = phase.image {
+                                                ZStack(alignment: .bottom) {
+                                                    image // Displays the loaded image
+                                                        .resizable()
+                                                        .aspectRatio(contentMode: .fill)
+                                                        .frame(height: 160)
+                                                    Text(verbatim: "\(membership.roleDescriptionOfClubTown)")
+                                                        .font(.caption)
+                                                        .padding(EdgeInsets(top: 3,
+                                                                            leading: 5,
+                                                                            bottom: 3,
+                                                                            trailing: 5))
+                                                        .lineLimit(3)
+                                                        .truncationMode(.middle)
+                                                        .background(.ultraThinMaterial)
+                                                        .foregroundColor(.primary)
+                                                        .frame(width: 160)
+                                                        .dynamicTypeSize( // constrain impact of large dynamic type
+                                                            ...DynamicTypeSize.xLarge)
+                                                }
+                                            } else if phase.error != nil ||
+                                                        membership.latestImageURL == nil {
+                                                Image("Question-mark") // image indicates an error occurred
+                                                    .resizable()
+                                                    .aspectRatio(contentMode: .fit)
+                                            } else {
+                                                ZStack {
+                                                    Image("Embarrassed-snail") // placeholder while loading
                                                         .resizable()
                                                         .aspectRatio(contentMode: .fit)
-                                                } else {
-                                                    ZStack {
-                                                        Image("Embarrassed-snail") // placeholder while loading
-                                                            .resizable()
-                                                            .aspectRatio(contentMode: .fit)
-                                                            .opacity(0.4)
-                                                        ProgressView()
-                                                            .scaleEffect(x: 2, y: 2, anchor: .center)
-                                                            .blendMode(BlendMode.difference)
-                                                    }
+                                                        .opacity(0.4)
+                                                    ProgressView()
+                                                        .scaleEffect(x: 2, y: 2, anchor: .center)
+                                                        .blendMode(BlendMode.difference)
                                                 }
                                             }
-                                            .frame(width: 160, height: 160)
-                                            .clipShape(RoundedRectangle(cornerRadius: 25))
-                                            .shadow(color: .accentColor.opacity(0.5), radius: 3)
                                         }
+                                        .frame(width: 160, height: 160)
+                                        .clipShape(RoundedRectangle(cornerRadius: 25))
+                                        .shadow(color: .accentColor.opacity(0.5), radius: 3)
+                                        .padding(.trailing, 10)
                                     }
                                 }
                             }
-                        }
-                        Spacer()
-                        if let url: URL = filteredPhotographer.photographerWebsite {
-                            Link(destination: url, label: {
-                                Image(systemName: "link")
-                                    .foregroundColor(.linkColor)
-                            })
-                            .buttonStyle(.plain) // to avoid entire List element to be clickable
-                        }
-                    }
-                }
+                        } // ScrollView
+                    } // VStack
+                } // HStack
                 .accentColor(.photographerColor)
-            }
+            } // ForEach
             .onDelete(perform: deletePhotographers) // can be disabled using isDeletedPhotographerEnabled flag
-        } header: {
+        } header: { // Section gets a header
             ItemFilterStatsView(filteredCount: filteredPhotographers.count,
                                 unfilteredCount: fetchRequest.count,
                                 elementType: ItemFilterStatsEnum.photographer)
             .textCase(nil) // https://sarunw.com/posts/swiftui-list-section-header-textcase/
-        }
-    }
+        } // header
+    } // body
 
     private var filteredPhotographers: [Photographer] {
         if searchText.wrappedValue.isEmpty {

@@ -57,7 +57,7 @@ extension FotogroepDeGenderMembersProvider { // fill with some initial hard-code
                   organization: clubDeGender,
                   memberRolesAndStatus: MemberRolesAndStatus(stat: [.prospective: false]),
                   latestImage: URL(string:
-                     "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg")
+                     "http://www.vdhamer.com/wp-content/uploads/2024/04/2023_Cornwall_R5_581-Pano.jpg")
         )
 
         addMember(bgContext: bgContext, // add Peter to members of de Gender
