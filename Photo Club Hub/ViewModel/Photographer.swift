@@ -70,6 +70,10 @@ extension Photographer {
         set { eMail_ = newValue}
     }
 
+    var isAlive: Bool {
+        !isDeceased
+    }
+
     // Find existing object and otherwise create a new object
     // Update existing attributes or fill the new object
     static func findCreateUpdate(context: NSManagedObjectContext, // foreground or background context

@@ -3,6 +3,9 @@
 Readme screen
 * Listed the Search Bar as one of the app's features
 
+Who's Who screen
+* Fixed layout bug (for photographers with a website link and multiple portfolios)
+
 Documentation
 * Added the search bar to the EN and NL readme.pages files
 * Added the search bar to the GitHub README.md file
