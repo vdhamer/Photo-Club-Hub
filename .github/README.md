@@ -317,24 +317,26 @@ Version 2 added support for multiple photo clubs. This means:
 
 ### Searchable Lists
 
-The three screens with long lists (`Portfolios`. `Clubs and Museums`. `Who's Who`) each have a search bar
-to help find a particular item.</p>
+The three screens with long lists (`Portfolios`, `Clubs and Museums`, `Who's Who`) each have a Search Bar
+where you can enter what you are looking for. This reduces the list to items that match that filter criterion.</p>
 
 <details><summary>Details on the Search Bar(click to expand)</summary></p>
 
-On an iPad, the search field is always visible at the top of the screen. 
-On an iPhone, scroll up until you hit the top of the screen.
+On an iPad, the search bar is always visible and at the top of the screen. 
+On an iPhone, scroll up rapidly until you hit the top of the list.
 
-The text you type in the search bar is matched (case-insensitive) to the identifying fields of the items in the list.
+The text you type inside the search bar is matched against key fields for the records shown in the list.
 
-- In the `Portfolios` screen, searches try to match the photographer's full name.
-  Searching on `Jan` might match `Jan Stege`, `Ariejan van Twisk` and `Jos Jansen`.
-  Searching on this screen does _not_ match against club names.
-- In the `Clubs and Museums` screen, searches try to match a concatenation of the organization's name and town.
+- In the `Portfolios` screen, a search scans photographers' full names.
+  Searching on `Jan` might return `Jan Stege`, `Ariejan van Twisk` and `Jos Jansen`.
+  If you need to search on club names, go to the `Clubs and Museums` screen.
+- In the `Clubs and Museums` screen, searches try to match against the organization names and towns.
   Searching on `Ber` might match `FFC Shot71 (Berlicum)` and `Museum für Fotografie (Berlin)` and `The Victoria & Albert Museum (London)`.
-  Note that the town is the location specified in the `root.level1.json` file and _not_ its localized version, which might be different.
+  Note that the town is the location specified in the `root.level1.json` file and _not_ its translated version, which can be different.
 - In the `Who's Who` screen, searches try to match the photographer's full name.
-  Searching on `Jan` might match `Jan Stege`, `Ariejan van Twisk` and `Jos Jansen`.
+  Searching on `Jan` might return `Jan Stege`, `Ariejan van Twisk` and `Jos Jansen`.
+
+Design detail: Search Bar filtering is done in the app's user interface and not by the CoreData database.
 </details>
 
 ### Photo Museums
