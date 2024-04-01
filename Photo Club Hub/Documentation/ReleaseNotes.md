@@ -5,6 +5,8 @@ Readme screen
 
 Who's Who screen
 * Fixed layout bug (for photographers with a website link and multiple portfolios)
+* Updated one of the thumbnails
+* More horizontal space between thumbnails
 
 Documentation
 * Added the search bar to the EN and NL readme.pages files
