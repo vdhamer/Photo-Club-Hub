@@ -574,7 +574,18 @@ Here is an example of the format of a `Level 2` list for a photo club. This exam
                 "familyName": "Hamer"
             },
             "roles": {
-                "admin": true
+                "isChairman": false,
+                "isViceChairman": false,
+                "isTreasurer": false,
+                "isSecretary": false,
+                "isAdmin": true
+            },
+            "stat": {
+                "isDeceased": false,
+                "isFormerMember": false,
+                "isHonoraryMember": false,
+                "isMentor": false,
+                "isPropectiveMember": false
             },
             "birthday": "9999-10-18T00:00:00.000Z",
             "website": "https://glass.photo/vdhamer",
