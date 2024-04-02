@@ -18,18 +18,18 @@ struct SinglePortfolioLinkView<Content: View>: View {
     var organization: Organization { destPortfolio.organization }
 
     var body: some View {
-        NavigationLink(destination: SinglePortfolioView(url: destPortfolio.memberWebsite, webView: wkWebView)
+        NavigationLink(destination: SinglePortfolioView(url: destPortfolio.website, webView: wkWebView)
             .navigationTitle(destPortfolio.photographer.fullNameFirstLast +
-                             " @ " + nameOrShortName(horSizeClass: horSizeClass))
+                             " @ " + fullNameOrNickName(horSizeClass: horSizeClass))
                 .navigationBarTitleDisplayMode(NavigationBarItem.TitleDisplayMode.inline)) {
             content()
         }
     }
 
-    func nameOrShortName(horSizeClass: UserInterfaceSizeClass?) -> String {
+    func fullNameOrNickName(horSizeClass: UserInterfaceSizeClass?) -> String {
         // full photo club name on iPad and iPhone 14 Plus or Pro Max only
-        guard horSizeClass != nil else { return organization.shortName } // don't know size of display
-        return (horSizeClass! == UserInterfaceSizeClass.compact) ? organization.shortName : organization.fullName
+        guard horSizeClass != nil else { return organization.nickName } // don't know size of display
+        return (horSizeClass! == UserInterfaceSizeClass.compact) ? organization.nickName : organization.fullName
     }
 }
 

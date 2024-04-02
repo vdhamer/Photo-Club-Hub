@@ -1,39 +1,39 @@
 {
-  "information" : {
-    "selectedModelKey" : "Photo_Club_Hub_2_5_5a.xcdatamodel"
-  },
   "entitiesPositions" : {
-    "Language" : [
-      983,
-      556
-    ],
-    "Canvas...Position" : [
-      -103.03500000000102,
-      135.97000000000023
-    ],
-    "Organization" : [
+    "OrganizationType" : [
       686,
-      554
+      444
     ],
-    "Photographer" : [
-      137,
-      554
+    "MemberPortfolio" : [
+      404,
+      725
     ],
     "LocalizedRemark" : [
       980,
       693
     ],
-    "OrganizationType" : [
+    "Canvas...Position" : [
+      -141.035000000001,
+      130.97000000000025
+    ],
+    "Organization" : [
       686,
-      444
+      554
     ],
     "LocalizedDescription" : [
       981,
       688
     ],
-    "MemberPortfolio" : [
-      404,
-      725
+    "Photographer" : [
+      137,
+      554
+    ],
+    "Language" : [
+      983,
+      556
     ]
+  },
+  "information" : {
+    "selectedModelKey" : "Photo_Club_Hub_2_5_6.xcdatamodel"
   }
 }

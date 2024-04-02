@@ -64,7 +64,7 @@ extension AndersMembersProvider { // fill with some initial hard-coded content
         addMember(bgContext: bgContext, // add Loek to Photographers and member of Bellus (if needed)
                   personName: PersonName(givenName: "Lotte", infixName: "", familyName: "Vrij"),
                   organization: clubAnders,
-//                  memberWebsite: URL(string: "https://lotte-vrij-fotografie.jimdofree.com"),
+//                  website: URL(string: "https://lotte-vrij-fotografie.jimdofree.com"),
                   memberWebsite: URL(string: "https://www.fotogroepwaalre.nl/fotos/Empty_Website/"),
                   latestImage: URL(string: """
                                            https://image.jimcdn.com/app/cms/image/transf/none/path/\

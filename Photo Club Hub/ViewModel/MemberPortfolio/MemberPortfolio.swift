@@ -68,15 +68,15 @@ extension MemberPortfolio { // expose computed properties (some related to handl
         return photographer.fullNameFirstLast + " in " + organization.fullNameTown
     }
 
-    var memberWebsite: URL {
+    var website: URL {
         get {
-            if memberWebsite_ == nil {
-                memberWebsite_ = URL(string: "https://www.fotogroepwaalre.nl/fotos/Empty_Website/")!
+            if website_ == nil {
+                website_ = URL(string: "https://www.fotogroepwaalre.nl/fotos/Empty_Website/")!
             }
-            return memberWebsite_!
+            return website_!
         }
         set {
-            memberWebsite_ = newValue
+            website_ = newValue
         }
     }
 
