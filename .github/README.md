@@ -624,7 +624,7 @@ Here is an example of the format of a `Level 2` list for a photo club. This exam
     - `featuredImage` is a link to a single image shown beside the member's name in the membership list.
     - `level3URL` is URL to a file containing selected images of this particular member. The app may support multiple formats for this file (like `level3.json` and `XML`).</p>
  
-> The `birthday` and `website` fields are special because a single photographer _could_ have multiple level2.json files (e.g. a former photo club and the current photo club). This is tricky because, e.g., both `birthday` fields _could_ contain conflicting dates (e.g. `1980-1-2` versus `9999-2-1`). For now, this rare complication can be prevented by omitting both fields in one of the two `Level 2` files. Possibly asking the "old" photoclub to remove `website` (so that it can be kept up to date by the "new" photo club).
+> The `birthday` and `website` fields are special because a single photographer _could_ have multiple level2.json files (e.g. a former photo club and the current photo club). This is tricky because, e.g., both `birthday` fields _could_ contain conflicting dates (e.g. `1980-1-2` versus `9999-2-1`). This rare complication can be prevented by only including these fields in one photo club's `Level 2` file.
 
 </details></ul>
 
