@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22757" systemVersion="23E214" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22757" systemVersion="23E224" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Language" representedClassName="Language" syncable="YES" codeGenerationType="class">
         <attribute name="isoCode_" attributeType="String"/>
         <attribute name="name_" attributeType="String"/>
@@ -52,11 +52,11 @@
         <attribute name="hasHardCodedMemberData" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="isScrollLocked" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES"/>
         <attribute name="latitude_" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="level2URL_" optional="YES" attributeType="URI" elementID="memberListURL_"/>
         <attribute name="localizedCountry_" attributeType="String" defaultValueString="Country?"/>
         <attribute name="localizedTown_" attributeType="String" defaultValueString="Town?"/>
         <attribute name="lockedMap" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="longitude_" optional="YES" attributeType="Double" usesScalarValueType="YES"/>
-        <attribute name="memberListURL_" optional="YES" attributeType="URI"/>
         <attribute name="name_" attributeType="String" defaultValueString="DefaultPhotoClubName"/>
         <attribute name="pinned" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="shortName_" optional="YES" attributeType="String"/>

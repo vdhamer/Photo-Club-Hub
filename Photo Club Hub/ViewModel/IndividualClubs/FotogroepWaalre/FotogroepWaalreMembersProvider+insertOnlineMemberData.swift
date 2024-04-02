@@ -22,7 +22,7 @@ extension FotogroepWaalreMembersProvider {
                                              allowUseEncryptedFile: true, // set to false only for testing purposes
                                              organization: clubWaalre) // used for error messages only
         if let privateURL = URL(string: urlString) {
-            clubWaalre.memberListURL = privateURL
+            clubWaalre.level2URL = privateURL
             try? bgContext.save() // persist Fotogroep Waalre and its online member data
 
             self.loadPrivateMembersFromWebsite( backgroundContext: bgContext,

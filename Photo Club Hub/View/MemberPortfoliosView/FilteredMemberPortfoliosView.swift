@@ -136,14 +136,14 @@ struct FilteredMemberPortfoliosView: View {
                         Text("Data source: in-app member data.", comment: "Section footer text Portfolios screen")
                     }
                     if organization != nil,
-                       organization!.memberListURL != nil,
-                       organization!.memberListURL!.host != nil,
-                       organization!.memberListURL!.scheme != nil {
+                       organization!.level2URL != nil,
+                       organization!.level2URL!.host != nil,
+                       organization!.level2URL!.scheme != nil {
                             Text(String(localized:
                                 """
-                                Data source: \(organization!.memberListURL!.scheme!)://\
-                                \(organization!.memberListURL!.host!)\
-                                \(organization!.memberListURL!.path)/
+                                Data source: \(organization!.level2URL!.scheme!)://\
+                                \(organization!.level2URL!.host!)\
+                                \(organization!.level2URL!.path)/
                                 """,
                                 comment: "Section footer text Portfolios screen"))
                             .lineLimit(1)
