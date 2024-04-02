@@ -400,7 +400,7 @@ But that data is still encrypted by a private encryption key that is not provide
 > The app is designed so that the required information about photo clubs is provided
 and maintained by the clubs themselves. 
 
-This is important because bhis allows the project to **support more clubs** and larger data sets.
+This is important because this allows the project to **support more clubs** and larger data sets.
 It also ensures that clubs have **control** over the displayed information:
 the club is best aware of new members, or which photos to display in the portfolios.
 
