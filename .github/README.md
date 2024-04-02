@@ -574,12 +574,23 @@ Here is an example of the format of a `Level 2` list for a photo club. This exam
                 "familyName": "Hamer"
             },
             "roles": {
-                "admin": true
+                "isChairman": false,
+                "isViceChairman": false,
+                "isTreasurer": false,
+                "isSecretary": false,
+                "isAdmin": true
+            },
+            "stat": {
+                "isDeceased": false,
+                "isFormerMember": false,
+                "isHonoraryMember": false,
+                "isMentor": false,
+                "isPropectiveMember": false
             },
             "birthday": "9999-10-18T00:00:00.000Z",
             "website": "https://glass.photo/vdhamer",
             "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg",
-            "level3URL": "https://www.example.com/FG_deGender/Peter_van_den_Hamer.imagelist.json"
+            "level3URL": "https://www.example.com/fgDeGender.Peter_van_den_Hamer.level3.json"
         }
     ]
 }
@@ -593,15 +604,28 @@ Here is an example of the format of a `Level 2` list for a photo club. This exam
         - the `town` and `fullName` fields are required.
         - `town` and `fullName` must exactly match the corresponding fields in the `root.level1.json` file.
     - `members` is a container for information about current and past members. Technically these correspond to the `MemberPortfolio` class in the CoreData database.</p>
-- **Optional** fields
-    - `club`
-        - a club's `nickName`, `latitude`, `longitude`, and `website` overrule the corresponding`root.level1.json` fields if needed. This allows a club to _correct_ centrally provided information.</p>
+- **Optional** fields (that are ignored)
         - the `level2URL` field can be included, but it's value does _not_ overrule the `level2URL` value in `root.level1.json` for safety reasons.
-    - `members`
-        - `givenName`, `infixName` and `familyName` are used to uniquely identify the photographer.
-        - `infixName` will often be empty. It enables correctly sorting European surnames: "van Aalst" sorts like "Aalst".
-            - An omitted "infixName" is equivalent to "infixName" = "".
-        - the `level3URL` field allows the app to find the next level list about the selected images per member.</p>
+- **Optional** fields (that are used)
+    - `club`
+        - a club's `nickName`, `latitude`, `longitude`, and `website` overrule the corresponding `root.level1.json` fields if needed. This allows a club to _correct_ centrally provided information.</p>
+    - `givenName`, `infixName` and `familyName` are used to uniquely identify the photographer.
+    - `infixName` will often be empty. It enables correctly sorting European surnames: "van Aalst" sorts like "Aalst".
+        - An omitted "infixName" is equivalent to "infixName" = "".
+    - the `level3URL` field allows the app to find the next level list about the selected images per member.</p>
+    - the `roles` field indicate whether a member fullfills a role as officer (e.g. chairman) of the club. If a given `role` is not mentioned, the default value of `false` is used. So most `members` may not have any `role` or even a `roles` section.
+    - the `stat` entries indicate the members status w.r.t. this club. If `stat` is missing, all values default to `false'.
+    - `isFormerMember` can be set to true if the person left the club and the club wants to keep that member's Portfolio visible.
+    - `isHonaryMember` can be used if the person is a special member and for example doesn't pay dues anymore.
+    - `isMentor` is for coaches who coach or previously (`isFormerMember` to `true`) coached the club. They can have a Portfolio (e.g. with pictures of them or pictures of their own work).
+    - `isProspectiveMember` is a candidate future member who already participates in some of the club activities, but is formally not a member yet.
+    - `birthday` can be the full date of birth, but the year can also be left at 9999 to mask out the actual age.
+    - `website` is a website about that member's photography. The app can link to that site.
+    - `featuredImage` is a link to a single image shown beside the member's name in the membership list.
+    - `level3URL` is URL to a file containing selected images of this particular member. The app may support multiple formats for this file (like `level3.json` and `XML`).</p>
+ 
+> The `birthday` and `website` fields are special because a single photographer _could_ have multiple level2.json files (e.g. a former photo club and the current photo club). This is tricky because, e.g., both `birthday` fields _could_ contain conflicting dates (e.g. `1980-1-2` versus `9999-2-1`). This rare complication can be prevented by only including these fields in one photo club's `Level 2` file.
+
 </details></ul>
 
 ### Level 3. Adding Images
