@@ -89,7 +89,7 @@ struct NoClubsText: View {
 }
 
 struct PhotoClubListView_Previews: PreviewProvider {
-    static let predicate = NSPredicate(format: "name_ = %@ || name_ = %@ || name_ = %@",
+    static let predicate = NSPredicate(format: "fullName_ = %@ || fullName_ = %@ || fullName_ = %@",
                                        argumentArray: ["PhotoClub2", "PhotoClub1", "PhotoClub3"])
 
     static var previews: some View {

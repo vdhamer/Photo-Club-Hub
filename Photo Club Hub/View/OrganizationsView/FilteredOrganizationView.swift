@@ -25,8 +25,8 @@ struct FilteredOrganizationView: View {
 
     let sortDescriptors: [SortDescriptor] = [
         SortDescriptor(\Organization.pinned, order: .reverse), // pinned clubs first
-        SortDescriptor(\Organization.organizationType_?.name_, order: .forward),
-        SortDescriptor(\Organization.name_, order: .forward), // photoclubID=name&town
+        SortDescriptor(\Organization.organizationType_?.organizationTypeName_, order: .forward),
+        SortDescriptor(\Organization.fullName_, order: .forward), // photoclubID=name&town
         SortDescriptor(\Organization.town_, order: .forward)
     ]
 
@@ -192,7 +192,7 @@ struct FilteredOrganizationView: View {
             fetchRequest = Organization.fetchRequest()
 
             // Create the component predicates
-            let clubPredicate = NSPredicate(format: "name_ = %@", clubName)
+            let clubPredicate = NSPredicate(format: "fullName_ = %@", clubName)
             let townPredicate = NSPredicate(format: "town_ = %@", town)
 
             fetchRequest.predicate = NSCompoundPredicate(
@@ -315,7 +315,7 @@ extension FilteredOrganizationView { // graphic representation
 
         var result: String
 
-        switch organizationType.name {
+        switch organizationType.organizationTypeName {
         case OrganizationTypeEnum.museum.rawValue:
             result = "building.columns.fill"
         case OrganizationTypeEnum.club.rawValue:
@@ -359,7 +359,7 @@ extension FilteredOrganizationView { // tests for equality
 }
 
 struct FilteredOrganizationView_Previews: PreviewProvider {
-    static let organizationPredicate = NSPredicate(format: "name_ = %@ || name_ = %@ || name_ = %@",
+    static let organizationPredicate = NSPredicate(format: "fullName_ = %@ || fullName_ = %@ || fullName_ = %@",
                                                    argumentArray: ["PhotoClub2", "PhotoClub1", "PhotoClub3"])
     @State static var searchText: String = ""
 

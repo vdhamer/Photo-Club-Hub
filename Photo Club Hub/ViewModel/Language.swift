@@ -28,8 +28,8 @@ extension Language {
     }
 
     var name: String {
-        get { return (name_ ?? isoCodeCaps).capitalized } // e.g. Nederlands or Nl
-        set { name_ = newValue.capitalized }
+        get { return (languageName_ ?? isoCodeCaps).capitalized } // e.g. Nederlands or Nl
+        set { languageName_ = newValue.capitalized }
     }
 
     // MARK: - find or create

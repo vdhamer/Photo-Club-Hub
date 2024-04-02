@@ -48,8 +48,8 @@ extension Organization {
                 fatalError( "Cannot Fetch organizationType object", file: #file, line: #line )
             }
             print("""
-                  ORGANIZATIONTYPE: getter for \(self.shortName). \
-                  Returning \(organizationType.name) \
+                  ORGANIZATIONTYPE: getter for \(self.nickName). \
+                  Returning \(organizationType.organizationTypeName) \
                   on Thread = \(Thread.isMainThread ? "MAIN" : "Background")\
                   \(hack ? " after applying hack ;-())" : "")
                   """)
@@ -58,13 +58,13 @@ extension Organization {
         set {
             print("""
                   ORGANIZATIONTYPE: setter for \(self.fullName). \
-                  New value = \(newValue.name) \
+                  New value = \(newValue.organizationTypeName) \
                   on Thread = \(Thread.isMainThread ? "MAIN" : "Background")
                   """)
-            if newValue.name != Organization.hackOrganizationTypeEnum.rawValue {
+            if newValue.organizationTypeName != Organization.hackOrganizationTypeEnum.rawValue {
                 print("""
                       ORGANIZATIONTYPE: setter for \(self.fullName). \
-                      Unexpected new value = \(newValue.name) \
+                      Unexpected new value = \(newValue.organizationTypeName) \
                       (\(Organization.hackOrganizationTypeEnum.rawValue) expected) \
                       on Thread = \(Thread.isMainThread ? "MAIN" : "Background")
                       """)
@@ -77,8 +77,8 @@ extension Organization {
     }
 
 	var fullName: String {
-		get { return name_ ?? "DefaultPhotoClubName" }
-		set { name_ = newValue }
+		get { return fullName_ ?? "DefaultPhotoClubName" }
+		set { fullName_ = newValue }
 	}
 
     // appends " \(town)" to fullName unless `town` is already included as a word in fullName
@@ -99,9 +99,9 @@ extension Organization {
         PhotoClubId(fullName: self.fullName, town: self.town)
     }
 
-    var shortName: String {
-        get { return shortName_ ?? "Name?" }
-        set { shortName_ = newValue }
+    var nickName: String {
+        get { return nickName_ ?? "Name?" }
+        set { nickName_ = newValue }
     }
 
 	var town: String {
@@ -181,7 +181,7 @@ extension Organization {
             return "\(localizedRemarks.first!.localizedString!) [\(localizedRemarks.first!.language.isoCodeCaps)]"
         }
 
-        return String(localized: "No remark available for \(organizationType.name) \(fullName).",
+        return String(localized: "No remark available for \(organizationType.organizationTypeName) \(fullName).",
                       comment: "Shown below map if there is no usable remark in the OrganzationList.json file.")
     }
 
@@ -200,7 +200,7 @@ extension Organization {
                                  localizedRemarks: [JSON] = []
                                 ) -> Organization {
 
-        let predicateFormat: String = "name_ = %@ AND town_ = %@" // avoid localization
+        let predicateFormat: String = "fullName_ = %@ AND town_ = %@" // avoid localization
         // Note that organizationType is not an identifying attribute.
         // This implies that you cannot have 2 organizations with the same Name and Town, but of a different type.
         let predicate = NSPredicate(format: predicateFormat,
@@ -220,7 +220,7 @@ extension Organization {
 		if let organization = organizations.first { // already exists, so make sure secondary attributes are up to date
             print("\(organization.fullNameTown): Will try to update info for organization \(organization.fullName)")
             if update(bgContext: context, organizationTypeEnum: organizationTypeEum,
-                      organization: organization, shortName: idPlus.nickname,
+                      organization: organization, nickName: idPlus.nickname,
                       optionalFields: (website: website, wikipedia: wikipedia,
                                        fotobondNumber: fotobondNumber),
                       coordinates: coordinates,
@@ -243,7 +243,7 @@ extension Organization {
             }
             print("\(organization.fullNameTown): Will try to fill fields for this new organization")
             _ = update(bgContext: context, organizationTypeEnum: organizationTypeEum,
-                       organization: organization, shortName: idPlus.nickname,
+                       organization: organization, nickName: idPlus.nickname,
                        optionalFields: (website: website, wikipedia: wikipedia,
                                         fotobondNumber: fotobondNumber),
                        coordinates: coordinates,
@@ -258,7 +258,7 @@ extension Organization {
     // swiftlint:disable:next function_parameter_count cyclomatic_complexity
     private static func update(bgContext: NSManagedObjectContext,
                                organizationTypeEnum: OrganizationTypeEnum,
-                               organization: Organization, shortName: String,
+                               organization: Organization, nickName: String,
                                // swiftlint:disable:next large_tuple
                                optionalFields: (website: URL?, wikipedia: URL?,
                                                 fotobondNumber: Int16?),
@@ -270,14 +270,14 @@ extension Organization {
 
         // some fancy footwork because organization type info originated from other context
         let organizationType = OrganizationType.findCreateUpdate(context: bgContext,
-                                                                 name: organizationTypeEnum.rawValue)
+                                                                 organizationTypeName: organizationTypeEnum.rawValue)
 
         if organization.organizationType_ != organizationType {
             organization.organizationType = organizationType
             modified = true }
 
-        if organization.shortName != shortName {
-            organization.shortName = shortName
+        if organization.nickName != nickName {
+            organization.nickName = nickName
             modified = true }
 
         if let website = optionalFields.website, organization.website != website {

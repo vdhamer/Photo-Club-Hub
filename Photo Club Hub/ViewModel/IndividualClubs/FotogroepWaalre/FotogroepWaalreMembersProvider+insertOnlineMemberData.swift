@@ -109,7 +109,7 @@ extension FotogroepWaalreMembersProvider {
                 let fetchRequest: NSFetchRequest<MemberPortfolio>
                 fetchRequest = MemberPortfolio.fetchRequest()
                 fetchRequest.predicate = NSPredicate(format: """
-                                                             organization_.name_ = %@ && \
+                                                             organization_.fullName_ = %@ && \
                                                              organization_.town_ = %@
                                                              """,
                              argumentArray: ["Fotogroep Waalre", "Waalre", "Jan"])

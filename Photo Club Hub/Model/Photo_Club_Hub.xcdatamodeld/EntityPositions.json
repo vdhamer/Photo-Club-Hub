@@ -1,19 +1,15 @@
 {
   "information" : {
-    "selectedModelKey" : "Photo_Club_Hub_2_5_5a.xcdatamodel"
+    "selectedModelKey" : "Photo_Club_Hub_2_5_6.xcdatamodel"
   },
   "entitiesPositions" : {
     "Language" : [
       983,
       556
     ],
-    "Canvas...Position" : [
-      -103.03500000000102,
-      135.97000000000023
-    ],
-    "Organization" : [
+    "OrganizationType" : [
       686,
-      554
+      444
     ],
     "Photographer" : [
       137,
@@ -23,10 +19,6 @@
       980,
       693
     ],
-    "OrganizationType" : [
-      686,
-      444
-    ],
     "LocalizedDescription" : [
       981,
       688
@@ -34,6 +26,14 @@
     "MemberPortfolio" : [
       404,
       725
+    ],
+    "Organization" : [
+      686,
+      554
+    ],
+    "Canvas...Position" : [
+      -141.035000000001,
+      130.97000000000025
     ]
   }
 }

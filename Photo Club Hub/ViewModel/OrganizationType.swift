@@ -22,7 +22,7 @@ extension OrganizationType {
         for type in OrganizationTypeEnum.allCases { // type is simple enum
             let organizationType = OrganizationType.findCreateUpdate( // organizationType is CoreData NSManagedObject
                 context: viewContext,
-                name: type.unlocalizedSingular
+                organizationTypeName: type.unlocalizedSingular
             )
             OrganizationType.enum2objectID[type] = organizationType.objectID // access NSManagedObjects from bg threads
         }
@@ -38,9 +38,9 @@ extension OrganizationType {
 
     // MARK: - getters and setters
 
-    var name: String {
-        get { return name_ ?? "Missing OrganizationType.name_" }
-        set { name_ = newValue }
+    var organizationTypeName: String {
+        get { return organizationTypeName_ ?? "Missing OrganizationType.name_" }
+        set { organizationTypeName_ = newValue }
     }
 
     // MARK: - find or create
@@ -48,24 +48,27 @@ extension OrganizationType {
     // Find OrganizationType object (or create a new object - used at start of app)
     // Update existing attributes or fill the new object
     static func findCreateUpdate(context: NSManagedObjectContext, // can be foreground of background context
-                                 name: String
+                                 organizationTypeName: String
                                 ) -> OrganizationType {
 
-        let predicateFormat: String = "name_ = %@" // avoid localization
-        let predicate = NSPredicate(format: predicateFormat, argumentArray: [name])
+        let predicateFormat: String = "organizationTypeName_ = %@" // avoid localization
+        let predicate = NSPredicate(format: predicateFormat, argumentArray: [organizationTypeName])
         let fetchRequest: NSFetchRequest<OrganizationType> = OrganizationType.fetchRequest()
         fetchRequest.predicate = predicate
         let organizationTypes: [OrganizationType] = (try? context.fetch(fetchRequest)) ?? [] // nil = absolute failure
 
         if organizationTypes.count > 1 { // there is actually a Core Data constraint to prevent this
-            ifDebugFatalError("Query returned multiple (\(organizationTypes.count)) OrganizationTypes named \(name)",
+            ifDebugFatalError("""
+                              Query returned multiple (\(organizationTypes.count)) OrganizationTypes \
+                              named \(organizationTypeName)
+                              """,
                               file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
             // in release mode, log that there are multiple clubs, but continue using the first one.
         }
 
         if let organizationType = organizationTypes.first { // already exists, so update non-identifying attributes
             if update(context: context, organizationType: organizationType) {
-                print("Updated info for organization type \"\(organizationType.name)\"")
+                print("Updated info for organization type \"\(organizationType.organizationTypeName)\"")
                 save(context: context, organizationType: organizationType, create: false)
             }
             return organizationType
@@ -73,10 +76,10 @@ extension OrganizationType {
             // cannot use OrganizationType() initializer because we must use supplied context
             let entity = NSEntityDescription.entity(forEntityName: "OrganizationType", in: context)!
             let organizationType = OrganizationType(entity: entity, insertInto: context)
-            organizationType.name = name
+            organizationType.organizationTypeName = organizationTypeName
             _ = update(context: context, organizationType: organizationType)
             save(context: context, organizationType: organizationType, create: true)
-            print("Created new OrganizationType called \"\(name)\"")
+            print("Created new OrganizationType called \"\(organizationTypeName)\"")
             return organizationType
         }
     }
@@ -107,15 +110,15 @@ extension OrganizationType {
     }
 
     var isUnknown: Bool { // convenience function
-        return self.name == OrganizationTypeEnum.unknown.rawValue
+        return self.organizationTypeName == OrganizationTypeEnum.unknown.rawValue
     }
 
     var isClub: Bool { // convenience function
-        return self.name == OrganizationTypeEnum.club.rawValue
+        return self.organizationTypeName == OrganizationTypeEnum.club.rawValue
     }
 
     var isMuseum: Bool { // convenience function
-        return self.name == OrganizationTypeEnum.museum.rawValue
+        return self.organizationTypeName == OrganizationTypeEnum.museum.rawValue
     }
 
     private static func save(context: NSManagedObjectContext, organizationType: OrganizationType, create: Bool) {
@@ -123,9 +126,12 @@ extension OrganizationType {
             try context.save()
         } catch {
             if create {
-                ifDebugFatalError("Could not save created OrganizationType \(organizationType.name)")
+                ifDebugFatalError("Could not save created OrganizationType \(organizationType.organizationTypeName)")
             } else {
-                ifDebugFatalError("Could not save updated property of OrganizationType \(organizationType.name)")
+                ifDebugFatalError("""
+                                  Could not save updated property of OrganizationType \
+                                  \(organizationType.organizationTypeName)
+                                  """)
             }
         }
     }

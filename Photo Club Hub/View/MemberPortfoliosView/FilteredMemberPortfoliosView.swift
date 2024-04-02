@@ -29,7 +29,7 @@ struct FilteredMemberPortfoliosView: View {
 
         let sortDescriptors = [ // XCode had problems parsing this array
             SortDescriptor(\MemberPortfolio.organization_!.pinned, order: .reverse),
-            SortDescriptor(\MemberPortfolio.organization_!.name_, order: .forward),
+            SortDescriptor(\MemberPortfolio.organization_!.fullName_, order: .forward),
             SortDescriptor(\MemberPortfolio.organization_!.town_, order: .forward),
             SortDescriptor(\MemberPortfolio.photographer_!.givenName_, order: .forward),
             SortDescriptor(\MemberPortfolio.photographer_!.familyName_, order: .forward)

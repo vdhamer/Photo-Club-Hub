@@ -25,7 +25,7 @@ struct MemberPortfolioListView: View {
 
     @FetchRequest(
         sortDescriptors: [SortDescriptor(\.pinned, order: .reverse), // pinned first
-                          SortDescriptor(\.name_, order: .forward), // photo clubs are identified by (name, town)
+                          SortDescriptor(\.fullName_, order: .forward), // photo clubs are identified by (name, town)
                           SortDescriptor(\.town_, order: .forward)],
         animation: .default)
     private var organizations: FetchedResults<Organization>
