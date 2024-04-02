@@ -590,7 +590,7 @@ Here is an example of the format of a `Level 2` list for a photo club. This exam
             "birthday": "9999-10-18T00:00:00.000Z",
             "website": "https://glass.photo/vdhamer",
             "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg",
-            "level3URL": "https://www.example.com/fgDeGender.Peter_van_den_Hamer.level2.json"
+            "level3URL": "https://www.example.com/fgDeGender.Peter_van_den_Hamer.level3.json"
         }
     ]
 }
@@ -622,7 +622,7 @@ Here is an example of the format of a `Level 2` list for a photo club. This exam
     - `birthday` can be the full date of birth, but the year can also be left at 9999 to mask out the actual age.
     - `website` is a website about that member's photography. The app can link to that site.
     - `featuredImage` is a link to a single image shown beside the member's name in the membership list.
-    - `level3URL` is link to a file containing selected images of this particular member.
+    - `level3URL` is URL to a file containing selected images of this particular member. The app may support multiple formats for this file (like `level3.json` and `XML`).
 </details></ul>
 
 ### Level 3. Adding Images
