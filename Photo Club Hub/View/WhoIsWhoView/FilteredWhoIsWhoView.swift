@@ -107,7 +107,7 @@ struct FilteredWhoIsWhoView: View {
                             HStack {
                                 ForEach(filteredPhotographer.memberships.sorted(), id: \.id) { membership in
                                     SinglePortfolioLinkView(destPortfolio: membership, wkWebView: wkWebView) {
-                                        AsyncImage(url: membership.latestImageURL) { phase in
+                                        AsyncImage(url: membership.featuredImage) { phase in
                                             if let image = phase.image {
                                                 ZStack(alignment: .bottom) {
                                                     image // Displays the loaded image
@@ -129,7 +129,7 @@ struct FilteredWhoIsWhoView: View {
                                                             ...DynamicTypeSize.xLarge)
                                                 }
                                             } else if phase.error != nil ||
-                                                        membership.latestImageURL == nil {
+                                                        membership.featuredImage == nil {
                                                 Image("Question-mark") // image indicates an error occurred
                                                     .resizable()
                                                     .aspectRatio(contentMode: .fit)

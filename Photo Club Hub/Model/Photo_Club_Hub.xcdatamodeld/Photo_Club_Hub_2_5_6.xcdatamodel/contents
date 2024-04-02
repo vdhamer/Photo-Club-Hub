@@ -25,6 +25,8 @@
     <entity name="MemberPortfolio" representedClassName="MemberPortfolio" elementID="Member" syncable="YES" codeGenerationType="class">
         <attribute name="dateIntervalEnd_" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="dateIntervalStart_" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="featuredImage" optional="YES" attributeType="URI" elementID="latestImage_"/>
+        <attribute name="featuredImageThumbnail" optional="YES" attributeType="URI" elementID="latestThumbURL"/>
         <attribute name="isAdmin" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="isChairman" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="isFormerMember" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
@@ -35,8 +37,6 @@
         <attribute name="isTreasurer" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="isViceChairman" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="latestImageSeen" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
-        <attribute name="latestImageURL" optional="YES" attributeType="URI" elementID="latestImage_"/>
-        <attribute name="latestThumbURL" optional="YES" attributeType="URI"/>
         <attribute name="level3URL" optional="YES" attributeType="URI"/>
         <attribute name="website_" optional="YES" attributeType="URI" elementID="memberWebsite_"/>
         <relationship name="organization_" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Organization" inverseName="members_" inverseEntity="Organization" elementID="photoClub_"/>
@@ -101,17 +101,4 @@
             </uniquenessConstraint>
         </uniquenessConstraints>
     </entity>
-    <configuration name="Configuration_2">
-        <memberEntity name="MemberPortfolio"/>
-        <memberEntity name="Organization"/>
-        <memberEntity name="Photographer"/>
-    </configuration>
-    <configuration name="Configuration_2">
-        <memberEntity name="LocalizedRemark"/>
-        <memberEntity name="Language"/>
-    </configuration>
-    <configuration name="Configuration_2">
-        <memberEntity name="LocalizedRemark"/>
-        <memberEntity name="Language"/>
-    </configuration>
 </model>
