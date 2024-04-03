@@ -172,7 +172,7 @@ extension FotogroepWaalreMembersProvider {
                         memberRolesAndStatus: MemberRolesAndStatus(role: [:], stat: [
                             .deceased: !self.isStillAlive(phone: phoneNumber) ]),
                         phoneNumber: phoneNumber, eMail: eMail,
-                        photographerWebsite: URL(string: externalURL),
+                        website: URL(string: externalURL),
                         bornDT: birthDate,
                         organization: organization
                     )

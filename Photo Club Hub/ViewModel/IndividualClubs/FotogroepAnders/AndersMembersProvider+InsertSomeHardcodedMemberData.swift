@@ -105,7 +105,7 @@ extension AndersMembersProvider { // fill with some initial hard-coded content
 
     private func addMember(bgContext: NSManagedObjectContext,
                            personName: PersonName,
-                           photographerWebsite: URL? = nil,
+                           website: URL? = nil,
                            bornDT: Date? = nil,
                            organization: Organization,
                            memberRolesAndStatus: MemberRolesAndStatus = MemberRolesAndStatus(role: [:], stat: [:]),
@@ -117,7 +117,7 @@ extension AndersMembersProvider { // fill with some initial hard-coded content
         let photographer = Photographer.findCreateUpdate(context: bgContext,
                                                          personName: personName,
                                                          memberRolesAndStatus: memberRolesAndStatus,
-                                                         photographerWebsite: photographerWebsite,
+                                                         website: website,
                                                          bornDT: bornDT,
                                                          organization: organization)
 

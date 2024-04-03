@@ -38,7 +38,7 @@ extension BellusImagoMembersProvider { // fill with some initial hard-coded cont
 
         addMember(bgContext: bgContext, // add Rico to Photographers and member of Bellus (if needed)
                   personName: PersonName(givenName: "Rico", infixName: "", familyName: "Coolen"),
-                  photographerWebsite: URL(string: "https://www.ricoco.nl"),
+                  website: URL(string: "https://www.ricoco.nl"),
                   organization: clubBellusImago,
                   memberWebsite: URL(string: "https://www.fotoclubbellusimago.nl/rico.html"),
                   latestImage: URL(string:
@@ -76,7 +76,7 @@ extension BellusImagoMembersProvider { // fill with some initial hard-coded cont
 
     private func addMember(bgContext: NSManagedObjectContext,
                            personName: PersonName,
-                           photographerWebsite: URL? = nil,
+                           website: URL? = nil,
                            bornDT: Date? = nil,
                            organization: Organization,
                            memberRolesAndStatus: MemberRolesAndStatus = MemberRolesAndStatus(role: [:], stat: [:]),
@@ -89,7 +89,7 @@ extension BellusImagoMembersProvider { // fill with some initial hard-coded cont
         let photographer = Photographer.findCreateUpdate(context: bgContext,
                                                          personName: personName,
                                                          memberRolesAndStatus: memberRolesAndStatus,
-                                                         photographerWebsite: photographerWebsite,
+                                                         website: website,
                                                          bornDT: bornDT,
                                                          organization: organization)
 

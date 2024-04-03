@@ -82,7 +82,7 @@ struct FilteredWhoIsWhoView: View {
                                 }
 
                                 // personal (not club-related) web site if available
-                                if let url: URL = filteredPhotographer.photographerWebsite {
+                                if let url: URL = filteredPhotographer.website {
                                     Link(destination: url, label: {
                                         Text(url.absoluteString)
                                             .lineLimit(1)
@@ -94,7 +94,7 @@ struct FilteredWhoIsWhoView: View {
                                 }
                             }
                             Spacer()
-                            if let url: URL = filteredPhotographer.photographerWebsite {
+                            if let url: URL = filteredPhotographer.website {
                                 Link(destination: url, label: {
                                     Image(systemName: "link")
                                         .foregroundColor(.linkColor)

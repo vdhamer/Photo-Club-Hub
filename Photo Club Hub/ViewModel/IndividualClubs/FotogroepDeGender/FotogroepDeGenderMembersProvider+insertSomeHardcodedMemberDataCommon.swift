@@ -43,7 +43,7 @@ extension FotogroepDeGenderMembersProvider { // fill with some initial hard-code
 
         addMember(bgContext: bgContext, // add Mariet to members of de Gender
                   personName: PersonName(givenName: "Mariet", infixName: "", familyName: "Wielders"),
-                  photographerWebsite: URL(string: "https://www.m3w.nl"),
+                  website: URL(string: "https://www.m3w.nl"),
                   bornDT: bornDT,
                   organization: clubDeGender,
                   memberRolesAndStatus: MemberRolesAndStatus(role: [.chairman: false]),
@@ -89,7 +89,7 @@ extension FotogroepDeGenderMembersProvider { // fill with some initial hard-code
 
     private func addMember(bgContext: NSManagedObjectContext,
                            personName: PersonName,
-                           photographerWebsite: URL? = nil,
+                           website: URL? = nil,
                            bornDT: Date? = nil,
                            organization: Organization,
                            memberRolesAndStatus: MemberRolesAndStatus = MemberRolesAndStatus(role: [:], stat: [:]),
@@ -101,7 +101,7 @@ extension FotogroepDeGenderMembersProvider { // fill with some initial hard-code
         let photographer = Photographer.findCreateUpdate(context: bgContext,
                                                          personName: personName,
                                                          memberRolesAndStatus: memberRolesAndStatus,
-                                                         photographerWebsite: photographerWebsite,
+                                                         website: website,
                                                          bornDT: bornDT,
                                                          organization: organization)
 

@@ -1,22 +1,23 @@
 ### 2.5.6 (GitHub commit ???????) 1-04-24
 
 Readme screen
-* Listed the Search Bar as one of the app's features
+* Mentioned the Search Bar as one of the app's features (because it may be overlooked).
 
 Who's Who screen
-* Fixed layout bug (for photographers with a website link and multiple portfolios)
-* Updated one of the thumbnails
-* More space between horizontal scrolling thumbnails
+* Fixed layout bug (for photographers with a website link and multiple portfolios).
+* Updated one of the thumbnails.
+* More space between horizontal scrolling thumbnails.
 
 Documentation
-* Added the search bar to the EN and NL readme.pages files
-* Added the search bar to the GitHub README.md file
+* Added the search bar to the EN and NL readme.pages files.
+* Added the search bar to the GitHub README.md file.
 
 Maintenance
-* Renamed 2 source files used for WhoIsWho screen (for consistency with other views)
+* Renamed 2 source files used for WhoIsWho screen (for consistency with other views).
 * Moved both Readme_XX_2_5_5.pages files to Documentation directory.
 * Removed unneeded EN screenshots for readme. Reduces package size somewhat.
-* Renamed OrganizationList.swift to RootLevel1JsonReader.swift (and updated some comment text)
+* Renamed OrganizationList.swift to RootLevel1JsonReader.swift (and updated some comment text).
+* Renamed Photographer.photographerWebsite to website.
 
 This is build #4618.
 

@@ -81,7 +81,7 @@ extension Photographer {
                                  memberRolesAndStatus: MemberRolesAndStatus = MemberRolesAndStatus(role: [:],
                                                                                                    stat: [:]),
                                  phoneNumber: String? = nil, eMail: String? = nil,
-                                 photographerWebsite: URL? = nil, bornDT: Date? = nil,
+                                 website: URL? = nil, bornDT: Date? = nil,
                                  organization: Organization // organization is only shown on console for debug purposes
                                 ) -> Photographer {
         let photoClubPref = "\(organization.fullNameTown):"
@@ -118,7 +118,7 @@ extension Photographer {
             let wasUpdated = update(bgContext: context, photographer: photographer,
                                     memberRolesAndStatus: memberRolesAndStatus,
                                     phoneNumber: phoneNumber, eMail: eMail,
-                                    photographerWebsite: photographerWebsite, bornDT: bornDT)
+                                    website: website, bornDT: bornDT)
             if wasUpdated {
                 print("\(photoClubPref) Updated info for photographer <\(photographer.fullNameFirstLast)>")
             } else {
@@ -135,7 +135,7 @@ extension Photographer {
             _ = update(bgContext: context, photographer: photographer,
                        memberRolesAndStatus: memberRolesAndStatus,
                        phoneNumber: phoneNumber, eMail: eMail,
-                       photographerWebsite: photographerWebsite, bornDT: bornDT)
+                       website: website, bornDT: bornDT)
             // don't log whether attribbutes have been updated if it is a new photographer
             print("\(photoClubPref) Successfully created new photographer <\(photographer.fullNameFirstLast)>")
             return photographer
@@ -148,7 +148,7 @@ extension Photographer {
                        photographer: Photographer,
                        memberRolesAndStatus: MemberRolesAndStatus,
                        phoneNumber: String? = nil, eMail: String? = nil,
-                       photographerWebsite: URL? = nil, bornDT: Date? = nil) -> Bool {
+                       website: URL? = nil, bornDT: Date? = nil) -> Bool {
 
 		var wasUpdated: Bool = false
 
@@ -172,8 +172,8 @@ extension Photographer {
             wasUpdated = true
         }
 
-        if let photographerWebsite, photographer.photographerWebsite != photographerWebsite {
-            photographer.photographerWebsite = photographerWebsite
+        if let website, photographer.website != website {
+            photographer.website = website
             wasUpdated = true
         }
 
