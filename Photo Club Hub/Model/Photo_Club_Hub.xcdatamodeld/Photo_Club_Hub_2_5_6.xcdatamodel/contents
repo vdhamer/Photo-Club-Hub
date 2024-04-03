@@ -101,4 +101,13 @@
             </uniquenessConstraint>
         </uniquenessConstraints>
     </entity>
+    <configuration name="Configuration_0">
+        <memberEntity name="Photographer"/>
+        <memberEntity name="MemberPortfolio"/>
+        <memberEntity name="Organization"/>
+    </configuration>
+    <configuration name="Configuration_2">
+        <memberEntity name="LocalizedRemark"/>
+        <memberEntity name="Language"/>
+    </configuration>
 </model>
