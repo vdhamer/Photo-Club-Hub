@@ -424,7 +424,7 @@ Museums are added in the same way, although `Level 2` and `Level 3` are not appl
 ![Screenshots of 3 screens](images/app_screenshots_EN.jpg "Screenshots of app")
 
 When a club is at `Level 1`, it shows up as a marker on the maps (leftmost screenshot).
-This is because the app knows club's name and the latitude/longitude where it is based.
+This is because the app knows the club's name and the latitude/longitude where it is based.
 
 When a club reaches `Level 2`, the app also knows the names and roles of club members.
 As illustrated in the center screenshot, the club and its members are now shown on the `Portfolio` and `Who's Who` screens.
