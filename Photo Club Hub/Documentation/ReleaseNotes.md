@@ -1,4 +1,10 @@
-### 2.5.6 (GitHub commit ???????) 1-04-24
+### 2.5.7 (GitHub commit ???????) ??-04-24
+
+
+This is build #4619
+
+---------------------------------------------------------------------------
+### 2.5.6 (GitHub commit 74a487d) 4-04-24
 
 Readme screen
 * Mentioned the Search Bar as one of the app's features (because it may be overlooked).
@@ -18,8 +24,9 @@ Maintenance
 * Removed unneeded EN screenshots for readme. Reduces package size somewhat.
 * Renamed OrganizationList.swift to RootLevel1JsonReader.swift (and updated some comment text).
 * Renamed Photographer.photographerWebsite to website.
+* Tested on the short-leved iOS/iPadOS 14.4.1 build 21E237
 
-This is build #4618.
+This is build #4618 and will be released as v2.5.6 on the Apple App Store.
 
 ---------------------------------------------------------------------------
 ### 2.5.6 (GitHub commit b7f46f7) 31-03-24
@@ -47,7 +54,7 @@ Maintenance
 * Cleaned up string translation issues
 * Tested on MacOS 14.4.1
 
-This is build #4617 and was sent out to Apple Testflight users.
+This is build #4617 and was sent out to Apple Testflight users only.
 
 ---------------------------------------------------------------------------
 ### 2.5.5 (GitHub commit cffe1e4) 20-03-24
