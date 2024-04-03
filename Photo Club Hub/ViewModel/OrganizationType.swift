@@ -149,7 +149,7 @@ enum OrganizationTypeEnum: String, CaseIterable {
     }
 
     var unlocalizedPlural: String {
-        self.rawValue + "s" // "museums" as used in parsing OrganizationList.json
+        self.rawValue + "s" // "museums" as used in parsing root.level1.json file
     }
 
     var localizedPlural: String { // "musea" as used in user interface (e.g. NavigationBar.title)

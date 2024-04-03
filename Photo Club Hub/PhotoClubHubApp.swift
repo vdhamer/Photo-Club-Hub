@@ -46,12 +46,12 @@ extension PhotoClubHubApp {
 
     static func loadClubsAndMembers() {
 
-        // load list of photo clubs from OrganizationList.json file
+        // load list of photo clubs and museums from root.Level1.json file
         let olBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-        olBackgroundContext.name = "OrganizationList"
+        olBackgroundContext.name = "root.level1.json"
         olBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         olBackgroundContext.automaticallyMergesChangesFromParent = true // needed to push ObjectTypes down to bgContext?
-        _ = OrganizationList(bgContext: olBackgroundContext, useOnlyFile: false) // read OrganizationList.json file
+        _ = RootLevel1JsonReader(bgContext: olBackgroundContext, useOnlyFile: false) // read root.Level1.json file
 
         // warning: following clubs rely on Level 1 file for GPS coordiantes
 

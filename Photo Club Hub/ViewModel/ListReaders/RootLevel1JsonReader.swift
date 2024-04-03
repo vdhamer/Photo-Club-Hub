@@ -1,5 +1,5 @@
 //
-//  OrganizationList.swift
+//  RootLevel1JsonReader.swift
 //  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 16/12/2023.
@@ -20,7 +20,7 @@ private let dataSourceFile: String = "root.level1" // level1 is part of file nam
 private let fileType = "json"
 private let organizationTypesToLoad: [OrganizationTypeEnum] = [.club, .museum]
 
-/* Example of basic OrganizationList.json (Level 1) content
+/* Example of minimal root.level1.json file content
 {
     "clubs": [
         {
@@ -66,7 +66,7 @@ private let organizationTypesToLoad: [OrganizationTypeEnum] = [.club, .museum]
 }
 */
 
-class OrganizationList {
+class RootLevel1JsonReader {
 
     init(bgContext: NSManagedObjectContext, useOnlyFile: Bool = false) {
 
@@ -74,7 +74,7 @@ class OrganizationList {
             guard let filePath = Bundle.main.path(forResource: dataSourceFile, ofType: fileType) else {
                 fatalError("Internal file \(dataSourceFile + "." + fileType) not found. Check file name.")
             }
-            self.readJSONOrganizationList(bgContext: bgContext,
+            self.readRootLevel1Json(bgContext: bgContext,
                                           data: getData(
                                                     fileURL: URL(string: dataSourcePath+dataSourceFile+"."+fileType)!,
                                                     filePath: filePath
@@ -96,9 +96,9 @@ class OrganizationList {
         }
     }
 
-    private func readJSONOrganizationList(bgContext: NSManagedObjectContext,
-                                          data: String,
-                                          for organizationTypeEnumsToLoad: [OrganizationTypeEnum]) {
+    private func readRootLevel1Json(bgContext: NSManagedObjectContext,
+                                    data: String,
+                                    for organizationTypeEnumsToLoad: [OrganizationTypeEnum]) {
 
         ifDebugPrint("\nGoing to read Level 1 file (\(dataSourceFile)) with a list of organizations - in background.")
 
@@ -137,7 +137,7 @@ class OrganizationList {
             }
             do {
                 if bgContext.hasChanges { // optimization recommended by Apple
-                    try bgContext.save() // persist contents of OrganizationList.json
+                    try bgContext.save() // persist contents of root.Level1.json file
                 }
             } catch {
                 ifDebugFatalError("Failed to save changes to Core Data",
@@ -147,7 +147,7 @@ class OrganizationList {
                 return
             }
         } // end of loop that scans organizationTypeEnumsToLoad
-        ifDebugPrint("Completed readJSONOrganizationList() in background")
+        ifDebugPrint("Completed readRootLevel1Json() in background")
     }
 
 }

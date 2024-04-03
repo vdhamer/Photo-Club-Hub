@@ -16,6 +16,7 @@ Maintenance
 * Renamed 2 source files used for WhoIsWho screen (for consistency with other views)
 * Moved both Readme_XX_2_5_5.pages files to Documentation directory.
 * Removed unneeded EN screenshots for readme. Reduces package size somewhat.
+* Renamed OrganizationList.swift to RootLevel1JsonReader.swift (and updated some comment text)
 
 This is build #4618.
 
