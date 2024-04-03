@@ -601,7 +601,7 @@ Here is an example of the format of a `Level 2` list for a photo club. This exam
 <ul><details><Summary>Level 2 fields (click to expand)</Summary></p>
 
 - **Mandatory** fields
-    - `club` has the same structure as a single `club` record from the `root.level1.json` file. It serves to label the file with the club that it describes.
+    - `club` has the same structure as a single `club` record from the `root.level1.json` file. It serves to label the file so you can tell which club it describes.
         - the `town` and `fullName` fields are required.
         - `town` and `fullName` must exactly match the corresponding fields in the `root.level1.json` file.
     - `members` is a container for information about current and past members. Technically these correspond to the `MemberPortfolio` class in the CoreData database.</p>
