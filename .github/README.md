@@ -432,25 +432,25 @@ Clubs with zero members (as far as the app is concerned) are _not_ shown on thes
 
 When a club reaches `Level 3`, the app is aware of the image portfolios of club member (rightmost screenshot), 
 and allows app users to browse member photos.
-Strictly speaking different club members don't need to switch to `Level 3` at the same time. 
-Attempting to view a portfolio of a club member without an available portfolio displays a placeholder of some sort.
+Different club members don't need to reach `Level 3` at the same time. 
+Attempting to view a portfolio of a club member without an available portfolio will display a placeholder message.
 <ul>
 
 ### Level 1. Adding Clubs
 
 Adding photo clubs (or museums) at `Level 1` requires providing the item's name, location and a few optional URLs. 
-This enables the app to list the item on the `Clubs and Museums` screen and display its location on maps by adding a graphical marker.
+This enables the app to list the item on the `Clubs and Museums` screen and display its location on maps by adding a marker.
 
 `Level 1` data is stored in a _single_ central online `root.level1.json` 
 [file](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/ViewModel/Lists/root.level1.json)
-file that is hosted on GitHub.
-Whenver the app is launched, it reads this file and merges its data into the data in its on-device (CoreData) database.
+that happens to be hosted on GitHub.
+Whenver the app is launched, it reads this file and merges that data into the already known data in its on-device (`CoreData`) database.
 
-If you send us a club's `Level 1` information, we can add it to the file for you.
-However, it is better to provide the change (and any future updates) as a GitHub _pull request_.
+If you send us a club's `Level 1` information, we will add it to the central `root.level1.json` file for you.
+However, it is recommended to provide the change (and any future updates) as a GitHub _pull request_.
 This reduces the work required to handle many updates, and reduces the risk of administrative errors.
 
-The same applies if you want to add a photo museum to the `root.level1.json` file.
+The same applies if you want to add a missing photo museum to the central `root.level1.json` file.
 
 <ul><details><Summary>Level 1 example (click to expand)</Summary></p>
 
@@ -463,7 +463,7 @@ Here is an example of the format of the `root.level1.json` file containing only 
             "idPlus": {
                 "town": "Eindhoven",
                 "fullName": "Fotogroep de Gender",
-                "nickName": "FG deGender"
+                "nickName": "fgDeGender"
             },
             "coordinates": {
                 "latitude": 51.42398,
@@ -502,8 +502,9 @@ Here is an example of the format of the `root.level1.json` file containing only 
 ```
 
 The actual `root.level1.json` file contains many club and museum records within their respective sections (delimited using `[{},{},{}}]`).
-Note the comma's delimiting the array elements - the JSON format is picky about missing comma's and extra comma's.
-You can check the basic syntax of JSON files using an online JSON validator.
+Note the comma's delimiting the array elements - the JSON format is very picky about missing comma's and extra comma's.
+You can indentally validate the basic syntax of JSON files using any of the online JSON validators
+([example](https://jsonlint.com)).
 </details></ul>
 
 <ul><details><Summary>Level 1 fields (click to expand)</Summary></p>
