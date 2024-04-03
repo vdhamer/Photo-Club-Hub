@@ -18,7 +18,7 @@ struct SinglePortfolioLinkView<Content: View>: View {
     var organization: Organization { destPortfolio.organization }
 
     var body: some View {
-        NavigationLink(destination: SinglePortfolioView(url: destPortfolio.website, webView: wkWebView)
+        NavigationLink(destination: SinglePortfolioView(url: destPortfolio.level3URL, webView: wkWebView)
             .navigationTitle(destPortfolio.photographer.fullNameFirstLast +
                              " @ " + fullNameOrNickName(horSizeClass: horSizeClass))
                 .navigationBarTitleDisplayMode(NavigationBarItem.TitleDisplayMode.inline)) {

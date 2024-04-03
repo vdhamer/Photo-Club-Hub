@@ -14,7 +14,7 @@ extension MemberPortfolio {
         let organizationTown: String = self.organization.fullNameTown
         guard organizationTown == "Fotogroep Waalre" else { return }
 
-        if let urlIndex = URL(string: self.website.absoluteString + "config.xml") { // assume JuiceBox Pro
+        if let urlIndex = URL(string: self.level3URL.absoluteString + "config.xml") { // assume JuiceBox Pro
             ifDebugPrint("\(organizationTown): starting refreshFirstImage() \(urlIndex.absoluteString) in background")
 
             // swiftlint:disable:next large_tuple
@@ -71,8 +71,8 @@ extension MemberPortfolio {
             return
         }
         let (_, imageSuffix, thumbSuffix) = match.output
-        let imageURL = URL(string: self.website.absoluteString + imageSuffix)
-        let thumbURL = URL(string: self.website.absoluteString + thumbSuffix)
+        let imageURL = URL(string: self.level3URL.absoluteString + imageSuffix)
+        let thumbURL = URL(string: self.level3URL.absoluteString + thumbSuffix)
 
         if member.featuredImage != imageURL && imageURL != nil {
             member.featuredImage = imageURL // this is where it happens. Note that there is context.save()

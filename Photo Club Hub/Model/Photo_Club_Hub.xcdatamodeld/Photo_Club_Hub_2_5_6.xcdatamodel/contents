@@ -38,8 +38,7 @@
         <attribute name="isTreasurer" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="isViceChairman" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="latestImageSeen" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
-        <attribute name="level3URL" optional="YES" attributeType="URI"/>
-        <attribute name="website_" optional="YES" attributeType="URI" elementID="memberWebsite_"/>
+        <attribute name="level3URL_" optional="YES" attributeType="URI" elementID="level3URL"/>
         <relationship name="organization_" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Organization" inverseName="members_" inverseEntity="Organization" elementID="photoClub_"/>
         <relationship name="photographer_" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Photographer" inverseName="memberships_" inverseEntity="Photographer"/>
         <uniquenessConstraints>
