@@ -512,19 +512,19 @@ You can indentally validate the basic syntax of JSON files using any of the onli
 - **Mandatory** fields
     - `clubs` and `museums` are required to distinguish photo clubs from photo museums. In the app's internal database these determine the `OrganizationType` (`club` or `museum`) of an `Organization` object, which in turn determines which marker type to show on maps.
     - `town` can be a city (London) or smaller locality (Land's End)
-        - `town` is not shown in the user interface, although it may look that way. The user interface displays a (language localized) name generated using the `coordinates`. That may be the same as `town`, or a translation of `town`, or a somewhat larger or smaller geographical entity. `town` is used to ensure that there is a unique ID for a club or museum. And it serves to document the record in the `root.level1.json` file: it is clearer to say "Victoria and Albert Museum (London)" than to say "Victoria and Albert Museum" and hand you the coordinates. 
-        - Similarly, the user interface may display a (language localized) country name that is automatically generated using the provided `coordinates`.
+        - `town` is _not_ directy visible in the user interface, although it may look that way. The user interface displays a language- localized name generated using the `coordinates`. This co-called `localizedTown` may contain the same string as `town`, or be a translation of `town`, or may even hold larger or smaller geographical entity. The file's `town` field is used to ensure that there is a unique ID for a club or museum. So `Fotoclub Lucifer` in `Vessem` would be considered unrelated to a `Fotoclub Lucifer` in `Eersel`. The `town` field also serves to document the record in the `root.level1.json` file: it is clearer to say "Victoria and Albert Museum (London)" than to say "Victoria and Albert Museum" and let you figure out the location using its `coordinates`.
+        - Similarly, the user interface can display a computed `localizedCountry` name that is automatically generated using the provided `coordinates`. The Level 1 data thus does not need or include a `country` attribute. This is convenient because country names commonly get translated into local languages (`Italia`, `Italy`, `İtalya`, etc.).
     - `town` and `fullName` together serve to identify clubs or museums.
-        - It is thus possible to have two clubs with the same name in different cities. But you can't have two clubs with the same name in the same town.
+        - It is thus possible to have two clubs with the same name in different cities. Two separate clubs or museums with an identical name in the same town would be confusing, and would be treated as a single entity by the app.
         - Try to avoid changing these two strings. Because the app doesn't associate the new ID with the previous ID, this result in two different clubs.
-        - `nickName` is a short version of `fullName` to display in confined spaces such as screen headers or map pins. It doesn't need to be unique.
-    - `coordinates` is used to draw the club on the map and to [generate](http://www.vdhamer.com/reversegeocoding-for-localizing-towns-and-countries/) localized versions of town and country names.
-        - `latitude` should be in the range [-90.0, +90.0] where negative means Sounthern hemisphere.
-        - `longitude` should be in the range [-180.0, +180.0] where negative means Western hemisphere.</p>
+        - `nickName` is a short version of `fullName` that is displayed in confined spaces such as on maps. It can be any string, but please keep it short.
+    - `coordinates` is used to draw the club on the map and to [generate](http://www.vdhamer.com/reversegeocoding-for-localizing-towns-and-countries/) localized versions of the names of towns and countries.
+        - `latitude` should be in the range [-90.0, +90.0] where negative values are used for the Sounthern hemisphere (e.g., Australia).
+        - `longitude` should be in the range [-180.0, +180.0] where negative values are used for the Western hemisphere (e.g., USA).</p>
 - **Optional** fields
-    - `website` holds a URL to the club's general purpose website. It can be displayed by the app (in a browser).
-    - `level2URL` (for clubs only) holds the address of the `Level 2` membership list. It is not used yet (Mar 24).
-    - `wikipedia` contains a URL to a Wikipedia page for a museum. It _can_ be used for photo clubs - but a photo club with an entry in Wikipedia sounds unlikely.
+    - `website` holds a URL to the club's general purpose website. It can be opened by the app in a separate browser window.
+    - `level2URL` (for clubs only) holds the address of the `Level 2` membership list. It is not used yet (Mar 2024).
+    - `wikipedia` contains a URL to a Wikipedia page for a museum. It _could_ be used for photo clubs - but such Wikipedia pages may not exist yet (is Magnum a photo club??).
     - `remark` contains a brief note with something worth knowing about the club or museum. The `remark` contains an array of alternative strings in multiple languages. The app chooses one of the provided languages to display based on the device's language setting.
         - `language` is the two or three letter [ISO-639](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes) code for a language. `EN` is English, `FI` is Finnish.
         - `value` is the text to display for that particular remark in that language.
