@@ -264,14 +264,14 @@ struct FilteredOrganizationView: View {
     private func deleteOrganizations(offsets: IndexSet) { // normally deletes just one, but this is how .delete works
         guard permitDeletionOfPhotoClubs else { return } // exit if feature is disabled
 
-        if let photoClub = (offsets.map { fetchedOrganizations[$0] }.first) { // unwrap first PhotoClub to be deleted
+        if let photoClub = (offsets.map { filteredOrganizations[$0] }.first) { // unwrap first PhotoClub to be deleted
             photoClub.deleteAllMembers(context: viewContext) // currently disabled!
             guard photoClub.members.count == 0 else { // safety: will crash if member.organization == nil
                 print("Could not delete photo club \(photoClub.fullName) " +
                       "because it still has \(photoClub.members.count) members.")
                 return
             }
-            offsets.map { fetchedOrganizations[$0] }.forEach( viewContext.delete )
+            offsets.map { filteredOrganizations[$0] }.forEach( viewContext.delete ) // TODO forEach???
 
             do {
                 if viewContext.hasChanges {
