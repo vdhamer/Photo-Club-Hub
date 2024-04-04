@@ -134,7 +134,7 @@ struct FilteredOrganizationView: View {
                     .frame(minHeight: 300, idealHeight: 500, maxHeight: .infinity)
                 Text(filteredOrganization.localizedRemark) // display remark in preferred language (if possible)
                     .padding(.top, 5)
-            } // Organization loop
+            } // VStack
             .task {
                 initializeCameraPosition(organization: filteredOrganization) // better than .onAppear(perform:)?
             }
@@ -175,8 +175,8 @@ struct FilteredOrganizationView: View {
                 MapScaleView() // distance scale
                 MapUserLocationButton()
             } .mapControlVisibility(filteredOrganization.isScrollLocked ? .hidden : .automatic)
-            //                .onDelete(perform: deleteOrganizations)
-        } // outer ForEach (Organization)
+        } // outer ForEach (filteredOrganization)
+        .onDelete(perform: deleteOrganizations) // TODO
     }
 
     // find PhotoClub using identifier (clubName,oldTown) and then fill (newTown,newCountry) in CoreData database
@@ -261,10 +261,11 @@ struct FilteredOrganizationView: View {
         )
     }
 
-    private func deleteOrganizations(offsets: IndexSet) {
-        guard permitDeletionOfPhotoClubs else { return } // to turn off the feature
+    private func deleteOrganizations(offsets: IndexSet) { // normally deletes just one, but this is how .delete works
+        guard permitDeletionOfPhotoClubs else { return } // exit if feature is disabled
+
         if let photoClub = (offsets.map { fetchedOrganizations[$0] }.first) { // unwrap first PhotoClub to be deleted
-            photoClub.deleteAllMembers(context: viewContext)
+            photoClub.deleteAllMembers(context: viewContext) // currently disabled!
             guard photoClub.members.count == 0 else { // safety: will crash if member.organization == nil
                 print("Could not delete photo club \(photoClub.fullName) " +
                       "because it still has \(photoClub.members.count) members.")

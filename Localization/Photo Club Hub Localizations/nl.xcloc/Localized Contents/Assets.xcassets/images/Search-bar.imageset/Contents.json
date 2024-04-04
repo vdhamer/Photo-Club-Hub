@@ -5,6 +5,18 @@
       "idiom" : "universal",
       "filename" : "SearchBar_NL.png",
       "scale" : "1x"
+    },
+    {
+      "locale" : "nl",
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "SearchBar_NL_dark.png",
+      "idiom" : "universal",
+      "scale" : "1x"
     }
   ],
   "info" : {
