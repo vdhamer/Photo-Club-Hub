@@ -3,7 +3,19 @@
     {
       "locale" : "en",
       "idiom" : "universal",
-      "filename" : "SearchBar_EN.png",
+      "filename" : "SearchBar_EN 1_en.png",
+      "scale" : "1x"
+    },
+    {
+      "locale" : "en",
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "idiom" : "universal",
+      "filename" : "SearchBar_EN_dark 1_en.png",
       "scale" : "1x"
     }
   ],

@@ -156,7 +156,7 @@ struct FilteredWhoIsWhoView: View {
                     } // VStack
                 } // HStack
                 .accentColor(.photographerColor)
-            } // ForEach
+            } // ForEach filteredPhotographer
             .onDelete(perform: deletePhotographers) // can be disabled using isDeletedPhotographerEnabled flag
         } header: { // Section gets a header
             ItemFilterStatsView(filteredCount: filteredPhotographers.count,
@@ -182,7 +182,8 @@ struct FilteredWhoIsWhoView: View {
     }
 
     private func deletePhotographers(offsets: IndexSet) {
-        guard isDeletePhotographersEnabled else { return }
+        guard isDeletePhotographersEnabled else { return } // exit if feature is disabled
+
         let fullName: String = offsets.map { fetchRequest[$0] }.first?.fullNameFirstLast ?? "noName"
         offsets.map { fetchRequest[$0] }.forEach( viewContext.delete )
 
