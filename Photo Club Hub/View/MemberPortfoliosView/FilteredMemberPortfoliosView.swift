@@ -18,6 +18,7 @@ struct FilteredMemberPortfoliosView: View {
         predicate: NSPredicate.none
     ) private var sectionedPortfolios: SectionedFetchResults<String, MemberPortfolio>
 
+    private let isDeleteMemberPortfolioPermitted = true // disables .delete() functionality for this screen
     let searchText: Binding<String>
     let wkWebView = WKWebView()
 
@@ -176,6 +177,8 @@ struct FilteredMemberPortfoliosView: View {
     }
 
     private func deleteMembers(section: [MemberPortfolio], indexSet: IndexSet) { // only temporarily deletes a member
+        guard isDeleteMemberPortfolioPermitted else { return } // exit if feature is disabled
+
         for index in indexSet {
             let memberPortfolio = section[index] // could use map()
             viewContext.delete(memberPortfolio)

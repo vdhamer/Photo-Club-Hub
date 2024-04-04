@@ -15,7 +15,7 @@ struct FilteredOrganizationView: View {
     @Environment(\.layoutDirection) var layoutDirection // .leftToRight or .rightToLeft
 
     @FetchRequest var fetchedOrganizations: FetchedResults<Organization>
-    private let permitDeletionOfPhotoClubs = true // disables .delete() functionality for this screen
+    private let isDeleteOrganizationPermitted = true // disables .delete() functionality for this screen
 
     let searchText: Binding<String>
 
@@ -262,7 +262,7 @@ struct FilteredOrganizationView: View {
     }
 
     private func deleteOrganizations(offsets: IndexSet) { // normally deletes just one, but this is how .delete works
-        guard permitDeletionOfPhotoClubs else { return } // exit if feature is disabled
+        guard isDeleteOrganizationPermitted else { return } // exit if feature is disabled
 
         if let photoClub = (offsets.map { filteredOrganizations[$0] }.first) { // unwrap first PhotoClub to be deleted
             photoClub.deleteAllMembers(context: viewContext) // currently disabled!
