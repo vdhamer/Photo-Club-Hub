@@ -18,6 +18,8 @@
 		D030CD652B3AE2E800A12E90 /* OrganizationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D030CD642B3AE2E800A12E90 /* OrganizationType.swift */; };
 		D032944A283F9D1D0044C70C /* Bundle+VersionBuild.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0329449283F9D1D0044C70C /* Bundle+VersionBuild.swift */; };
 		D0362A872AC3A21200F87378 /* String+containsWordUsingNLP.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0362A862AC3A21200F87378 /* String+containsWordUsingNLP.swift */; };
+		D03AB6AC2BBEBD3700F33E74 /* fgAnders.level2.json in Resources */ = {isa = PBXBuildFile; fileRef = D08416912B2FA3C2000F316D /* fgAnders.level2.json */; };
+		D03AB6AD2BBEBD3C00F33E74 /* test2Club2Museum.level1.json in Resources */ = {isa = PBXBuildFile; fileRef = D0A5B7EE2B45F67E001FAD59 /* test2Club2Museum.level1.json */; };
 		D040566D29A0287200CB64B8 /* MemberPortfolioRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D040566C29A0287200CB64B8 /* MemberPortfolioRow.swift */; };
 		D0416280295BB9DF00ED073A /* NSPredicate+all.swift in Sources */ = {isa = PBXBuildFile; fileRef = D041627F295BB9DF00ED073A /* NSPredicate+all.swift */; };
 		D0416282295BBA7700ED073A /* CoreLocation+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0416281295BBA7700ED073A /* CoreLocation+Equatable.swift */; };
@@ -483,9 +485,9 @@
 		D08416952B2FC07F000F316D /* Lists */ = {
 			isa = PBXGroup;
 			children = (
-				D0E2D6032B9B9568008D1F7A /* test1Club.level1.json */,
 				D04B1A0B2B1AA06300EB3817 /* OrganizationList.json */,
 				D0A30FB72BB0BB33009A9A6E /* root.level1.json */,
+				D0E2D6032B9B9568008D1F7A /* test1Club.level1.json */,
 				D0A5B7EE2B45F67E001FAD59 /* test2Club2Museum.level1.json */,
 				D08416912B2FA3C2000F316D /* fgAnders.level2.json */,
 				D08416922B2FAEB1000F316D /* fgDeGender.level2.json */,
@@ -664,10 +666,12 @@
 				D0E2D6062B9B9577008D1F7A /* test1Club.level1.json in Resources */,
 				D0E02F9B2B80191300D67CDA /* Readme_NL_2_5_6.pages in Resources */,
 				D06061EA28A0456C00A675A7 /* FGWPrivateMembersURL3.txt in Resources */,
+				D03AB6AC2BBEBD3700F33E74 /* fgAnders.level2.json in Resources */,
 				D0B52497277F9A4B00927BCA /* Localizable.strings in Resources */,
 				D0A30FB82BB0BB33009A9A6E /* root.level1.json in Resources */,
 				D0831A51277F73C00049AB84 /* Preview Assets.xcassets in Resources */,
 				D0FC30C92BA78F2E0051AFB6 /* OrganizationList.json in Resources */,
+				D03AB6AD2BBEBD3C00F33E74 /* test2Club2Museum.level1.json in Resources */,
 				D04A2B122AC0958C003ED113 /* LineCount.xlsx in Resources */,
 				D053F23D2B54430C00662EF8 /* Photo-Club-Hub-InfoPlist.strings in Resources */,
 				D06061E828A0453F00A675A7 /* FGWPrivateMembersURL2.txt in Resources */,
