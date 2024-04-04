@@ -68,14 +68,14 @@ extension PhotoClubHubApp {
 //        genderBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
 //        genderBackgroundContext.automaticallyMergesChangesFromParent = true
 //        _ = FotogroepDeGenderMembersProvider(bgContext: genderBackgroundContext)
-//
-//        // load all current members of Fotogroep Anders
-//        let andersBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-//        andersBackgroundContext.name = "FG Anders"
-//        andersBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-//        andersBackgroundContext.automaticallyMergesChangesFromParent = true
-//        _ = AndersMembersProvider(bgContext: andersBackgroundContext)
-//
+
+        // load all current members of Fotogroep Anders
+        let andersBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+        andersBackgroundContext.name = "FG Anders"
+        andersBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+        andersBackgroundContext.automaticallyMergesChangesFromParent = true
+        _ = AndersMembersProvider(bgContext: andersBackgroundContext)
+
 //        // load all current/former members of Fotogroep Waalre
 //        let waalreBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
 //        waalreBackgroundContext.name = "Fotogroep Waalre"
