@@ -4,6 +4,17 @@
       "idiom" : "universal",
       "filename" : "SearchBar_EN 1.png",
       "scale" : "1x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "SearchBar_EN_dark 1.png",
+      "idiom" : "universal",
+      "scale" : "1x"
     }
   ],
   "info" : {
