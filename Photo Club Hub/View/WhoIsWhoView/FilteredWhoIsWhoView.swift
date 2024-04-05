@@ -51,8 +51,6 @@ struct FilteredWhoIsWhoView: View {
                                 Text(verbatim: "\(filteredPhotographer.fullNameLastFirst)\(alive)")
                                     .font(.title3)
                                     .tracking(1)
-                                    .foregroundColor(chooseColor(accentColor: .accentColor,
-                                                                 isDeceased: filteredPhotographer.isDeceased))
 
                                 // birthday if available (year of birth is not shown)
                                 if let date: Date = filteredPhotographer.bornDT {
@@ -108,58 +106,58 @@ struct FilteredWhoIsWhoView: View {
                             HStack {
                                 ForEach(filteredPhotographer.memberships.sorted(), id: \.id) { membership in
                                     SinglePortfolioLinkView(destPortfolio: membership, wkWebView: wkWebView) {
-                                        AsyncImage(url: membership.featuredImage) { phase in
-                                            if let image = phase.image {
-                                                ZStack(alignment: .bottom) {
-                                                    image // Displays the loaded image
-                                                        .resizable()
-                                                        .aspectRatio(contentMode: .fill)
-                                                        .frame(height: 160)
-                                                    Text(verbatim: "\(membership.roleDescriptionOfClubTown)")
-                                                        .font(.caption)
-                                                        .padding(EdgeInsets(top: 3,
-                                                                            leading: 5,
-                                                                            bottom: 3,
-                                                                            trailing: 5))
-                                                        .lineLimit(3)
-                                                        .truncationMode(.middle)
-                                                        .background(.ultraThinMaterial)
-                                                        .foregroundColor(.primary)
-                                                        .frame(width: 160)
-                                                        .dynamicTypeSize( // constrain impact of large dynamic type
-                                                            ...DynamicTypeSize.xLarge)
-                                                }
-                                            } else if phase.error != nil ||
-                                                        membership.featuredImage == nil {
-                                                Image("Question-mark") // image indicates an error occurred
-                                                    .resizable()
-                                                    .aspectRatio(contentMode: .fit)
-                                            } else {
-                                                ZStack {
-                                                    Image("Embarrassed-snail") // placeholder while loading
+                                        VStack {
+                                            AsyncImage(url: membership.featuredImage) { phase in
+                                                if let image = phase.image {
+                                                    ZStack(alignment: .bottom) {
+                                                        image // Displays the loaded image
+                                                            .resizable()
+                                                            .aspectRatio(contentMode: .fill)
+                                                            .frame(height: 160)
+
+                                                    }
+                                                } else if phase.error != nil ||
+                                                            membership.featuredImage == nil {
+                                                    Image("Question-mark") // image indicates an error occurred
                                                         .resizable()
                                                         .aspectRatio(contentMode: .fit)
-                                                        .opacity(0.4)
-                                                    ProgressView()
-                                                        .scaleEffect(x: 2, y: 2, anchor: .center)
-                                                        .blendMode(BlendMode.difference)
+                                                } else {
+                                                    ZStack {
+                                                        Image("Embarrassed-snail") // placeholder while loading
+                                                            .resizable()
+                                                            .aspectRatio(contentMode: .fit)
+                                                            .opacity(0.4)
+                                                        ProgressView()
+                                                            .scaleEffect(x: 2, y: 2, anchor: .center)
+                                                            .blendMode(BlendMode.difference)
+                                                    }
                                                 }
                                             }
+                                            .frame(width: 160, height: 160) // square
+                                            .clipShape(RoundedRectangle(cornerRadius: 25))
+                                            .shadow(color: .accentColor.opacity(0.5), radius: 3)
+
+                                            Text(verbatim: "\(membership.roleDescriptionOfClubTown)")
+                                                .frame(width: 160, height: 35)
+                                                .font(.caption)
+                                                .lineLimit(2)
+                                                .truncationMode(.middle)
+                                                .dynamicTypeSize( // constrain impact of large dynamic type
+                                                    ...DynamicTypeSize.xLarge)
                                         }
-                                        .frame(width: 160, height: 160)
-                                        .clipShape(RoundedRectangle(cornerRadius: 25))
-                                        .shadow(color: .accentColor.opacity(0.5), radius: 3)
                                         .padding(.trailing, 10)
                                     }
-                                }
-                            }
+                                } // ForEach
+                            } // HStack
                         } // ScrollView
                     } // VStack
                 } // HStack
                 .accentColor(.photographerColor)
+                .foregroundColor(chooseColor(accentColor: .accentColor,
+                                             isDeceased: filteredPhotographer.isDeceased))
             } // ForEach filteredPhotographer
             .onDelete(perform: deletePhotographers) // can be disabled using isDeletedPhotographerEnabled flag
-        } header: { // Section gets a header
+        } header: { // Table has only one section and it gets a header
             ItemFilterStatsView(filteredCount: filteredPhotographers.count,
                                 unfilteredCount: fetchRequest.count,
                                 elementType: ItemFilterStatsEnum.photographer)

@@ -4,6 +4,7 @@ Portfolio screen
 * Delete caused app to terminate (bug) when deleting last member of a club (id).
 
 Who's Who screen
+* Captions are now below each image.
 * Deletion of photographers was disabled in previous releases.
 * Deleting a photographer automatically deletes all associated memberships (cascade).
 * Updated instructions in footer (delete_related).
