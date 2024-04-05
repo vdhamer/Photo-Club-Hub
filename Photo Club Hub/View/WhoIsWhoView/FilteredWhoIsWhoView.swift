@@ -14,7 +14,8 @@ struct FilteredWhoIsWhoView: View {
     @FetchRequest var fetchRequest: FetchedResults<Photographer>
     private let dateFormatter: DateFormatter
     @State private var showPhoneMail = false
-    private let isDeletePhotographersEnabled = false // disables .delete() functionality for this section
+
+    private let isDeletePhotographersPermitted = true // disables .delete() functionality for this screen
     let searchText: Binding<String>
     let wkWebView: WKWebView
 
@@ -182,10 +183,10 @@ struct FilteredWhoIsWhoView: View {
     }
 
     private func deletePhotographers(offsets: IndexSet) {
-        guard isDeletePhotographersEnabled else { return } // exit if feature is disabled
+        guard isDeletePhotographersPermitted else { return } // exit if feature is disabled
 
-        let fullName: String = offsets.map { fetchRequest[$0] }.first?.fullNameFirstLast ?? "noName"
-        offsets.map { fetchRequest[$0] }.forEach( viewContext.delete )
+        let fullName: String = offsets.map { filteredPhotographers[$0] }.first?.fullNameFirstLast ?? "noName"
+        offsets.map { filteredPhotographers[$0] }.forEach( viewContext.delete )
 
         do {
             if viewContext.hasChanges {

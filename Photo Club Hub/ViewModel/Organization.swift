@@ -329,18 +329,4 @@ extension Organization {
         return modified
 	}
 
-    func deleteAllMembers(context: NSManagedObjectContext) { // doesn't work ;-(
-//        for member in members {
-//            print("Deleting member \(member.photographer.fullName) of photo club \(self.name)")
-//            context.delete(member)
-//        }
-//        do {
-//            try context.save()
-//        } catch {
-//            ifDebugFatalError(Failed to delete members photo club \(self.name)",
-//                              file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
-//            /* in release mode, if deleting all members fails, just continue */
-//        }
-    }
-
 }

@@ -64,10 +64,6 @@ extension MemberPortfolio { // expose computed properties (some related to handl
         }
 	}
 
-    public var id: String {
-        return photographer.fullNameFirstLast + " in " + organization.fullNameTown
-    }
-
     var level3URL: URL {
         get {
             if level3URL_ == nil {

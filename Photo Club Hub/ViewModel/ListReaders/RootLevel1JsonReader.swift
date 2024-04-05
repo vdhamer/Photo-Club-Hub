@@ -15,8 +15,9 @@ private let dataSourcePath: String = """
                                      main/\
                                      Photo%20Club%20Hub/ViewModel/Lists/
                                      """
-// private let dataSourceFile: String = "test2Club2Museum.level1.json"
-private let dataSourceFile: String = "root.level1" // level1 is part of file name, not the extension
+// private let dataSourceFile: String = "test2Club2Museum" // alternative file for testing purposes
+private let dataSourceFile: String = "root"
+private let fileSubType = "level1" // level1 is part of file name, not the extension
 private let fileType = "json"
 private let organizationTypesToLoad: [OrganizationTypeEnum] = [.club, .museum]
 
@@ -71,12 +72,17 @@ class RootLevel1JsonReader {
     init(bgContext: NSManagedObjectContext, useOnlyFile: Bool = false) {
 
         bgContext.perform { // switch to supplied background thread
-            guard let filePath = Bundle.main.path(forResource: dataSourceFile, ofType: fileType) else {
-                fatalError("Internal file \(dataSourceFile + "." + fileType) not found. Check file name.")
+            guard let filePath = Bundle.main.path(forResource: dataSourceFile + "." + fileSubType,
+                                                  ofType: fileType) else {
+                fatalError("""
+                           Internal file \(dataSourceFile + "." + fileSubType + "." + fileType) \
+                           not found. Check file name.
+                           """)
             }
             self.readRootLevel1Json(bgContext: bgContext,
                                           data: getData(
-                                                    fileURL: URL(string: dataSourcePath+dataSourceFile+"."+fileType)!,
+                                                    fileURL: URL(string: dataSourcePath + dataSourceFile + "." +
+                                                                         fileSubType + "." + fileType)!,
                                                     filePath: filePath
                                           ),
                                           for: organizationTypesToLoad)
