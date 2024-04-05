@@ -1,5 +1,14 @@
 ### 2.5.7 (GitHub commit ???????) ??-04-24
 
+Portfolio screen
+* Bug: Delete caused app to stop when deleting last member in a club (id))
+
+Who's Who screen
+* Deletion of photographers was disabled in previous releases
+* Deleting a photographer automatically deletes all associated memberships (cascade)
+
+* Clubs and Museums screen
+* Deleting a club or museum now works. Deleting a club removes all members, but leaves them on the Who's Who screen.
 
 This is build #4619
 

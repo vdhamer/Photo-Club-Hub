@@ -15,8 +15,8 @@ private let dataSourcePath: String = """
                                      main/\
                                      Photo%20Club%20Hub/ViewModel/Lists/
                                      """
-private let dataSourceFile: String = "test2Club2Museum" // alternative file for testing TODO
-// private let dataSourceFile: String = "root"
+// private let dataSourceFile: String = "test2Club2Museum" // alternative file for testing purposes
+private let dataSourceFile: String = "root"
 private let fileSubType = "level1" // level1 is part of file name, not the extension
 private let fileType = "json"
 private let organizationTypesToLoad: [OrganizationTypeEnum] = [.club, .museum]

@@ -12,8 +12,8 @@
     </entity>
     <entity name="LocalizedRemark" representedClassName="LocalizedRemark" codeGenerationType="class">
         <attribute name="localizedString" optional="YES" attributeType="String"/>
-        <relationship name="language_" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Language" inverseName="localizedRemarks_" inverseEntity="Language"/>
-        <relationship name="organization_" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Organization" inverseName="localizedRemarks_" inverseEntity="Organization"/>
+        <relationship name="language_" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Language" inverseName="localizedRemarks_" inverseEntity="Language"/>
+        <relationship name="organization_" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Organization" inverseName="localizedRemarks_" inverseEntity="Organization"/>
         <uniquenessConstraints>
             <uniquenessConstraint>
                 <constraint value="language_"/>
@@ -66,7 +66,7 @@
         <attribute name="wikipedia" optional="YES" attributeType="URI"/>
         <relationship name="localizedRemarks_" toMany="YES" deletionRule="Cascade" destinationEntity="LocalizedRemark" inverseName="organization_" inverseEntity="LocalizedRemark"/>
         <relationship name="members_" toMany="YES" deletionRule="Cascade" destinationEntity="MemberPortfolio" inverseName="organization_" inverseEntity="MemberPortfolio"/>
-        <relationship name="organizationType_" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="OrganizationType" inverseName="organizations_" inverseEntity="OrganizationType"/>
+        <relationship name="organizationType_" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="OrganizationType" inverseName="organizations_" inverseEntity="OrganizationType"/>
         <uniquenessConstraints>
             <uniquenessConstraint>
                 <constraint value="fullName_"/>
@@ -76,7 +76,7 @@
     </entity>
     <entity name="OrganizationType" representedClassName="OrganizationType" syncable="YES" codeGenerationType="class">
         <attribute name="organizationTypeName_" optional="YES" attributeType="String" elementID="name_"/>
-        <relationship name="organizations_" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Organization" inverseName="organizationType_" inverseEntity="Organization"/>
+        <relationship name="organizations_" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Organization" inverseName="organizationType_" inverseEntity="Organization"/>
         <uniquenessConstraints>
             <uniquenessConstraint>
                 <constraint value="organizationTypeName_"/>
