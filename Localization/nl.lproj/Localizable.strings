@@ -271,9 +271,6 @@
 /* Paragraph 3.11.c of the Readme screen */
 "Paragraph_3.11.c" = "Op de _Portfolio's_ en _Namenlijst_ schermen wordt er op de naam van fotografen gezocht. Op het _Clubs en Musea_ scherm wordt er gelijktijdig op clubnaam, museumnaam en locatie gezocht.";
 
-/* Caption about Search Bar on the Readme page */
-"Search bar at the top of _Portfolios_ screen" = "Zoekfunctie bovenaan het Portfolio’s scherm";
-
 /* First paragraph SupportedPlatforms section of Readme page */
 "Paragraph_4.1" = "_Fotoclub Hub_ vereist een recente versie van iOS. In de praktijk betekent dit dat toestellen die niet ouder zijn dan een jaar of 6 de nieuwste app versies kunnen draaien.";
 
@@ -314,7 +311,7 @@
 "PhotoClubs_Caption_1" = "① Het slotje kan gebruikt worden om deze landkaarten sleepbaar en inzoombaar/uitzoombaar te maken.";
 
 /* Shown in gray at the bottom of the Clubs and Museums page (2/3). */
-"PhotoClubs_Caption_2" = "② Een fotogroep kan verwijderd worden door eerst alle betrokken Portfolio's te verwijderen (*swipe left*) en dan de fotoclub zelf te verwijderen (*swipe left*).";
+"PhotoClubs_Caption_2" = "② Een fotogroep of museum kan verwijderd worden door deze naar links te `swipen`. Bij fotoclubs worden ook de bijbehorende leden en portfolio's verwijderd. Verwijderingen verschijnen vanzelf weer als de verwijderde informatie nog online aanwezig is.";
 
 /* Title of page showing member portfolios */
 "Portfolios" = "Portfolio's";
@@ -333,6 +330,9 @@
 
 /* Title of Readme screen */
 "Readme" = "Over deze app";
+
+/* Caption about Search Bar on the Readme page */
+"Search bar at the top of _Portfolios_ screen" = "Zoekfunctie bovenaan het Portfolio’s scherm";
 
 /* Field at top of Clubs and Museums page that allows the user to filter the members based on a fragment of the organization name. */
 "Search names and towns" = "Zoek op naam of gemeente";
@@ -386,7 +386,7 @@
 "The Prelude" = "Prelude";
 
 /* Shown in gray at the bottom of the Photographers page. */
-"This page lists all the photographers that this app knows about. A photographer has one or more clickable image thumbnails below the photographer's name. Clicking on any thumbnail leads to the images associated with one particular photo club. The thumbnails can be scrolled horizontally (if there are many of them on one line)." = "Deze lijst bevat de fotografen die in deze app voorkomen. Per fotograaf is er één of meer miniatuurfoto's. Door op een foto te klikken komt men bij de verzameling beelden van de fotograaf die horen bij één enkel fotoclub. Bij een fotograaf verbonden met meerdere clubs, kan men horizontaal door de diverse miniatuurfoto's heen scrollen. ";
+"This page lists all the photographers known to the app. A photographer has one or more clickable image thumbnails below the photographer's name. Clicking on a thumbnail brings you to the image portfolio for that potographer/club combination. The thumbnails can be scrolled horizontally. Photographers can be deleted using swipe-left." = "Deze lijst bevat de fotografen die in deze app voorkomen. Per fotograaf is er normaal één of meer miniatuurfoto's. Deze zijn horizontaal door te bladeren. Klik op een foto een portfolio te bekijken. De fotograaf kan verwijderd worden door de naam naar links te vegen.";
 
 /* Hint to the user if the database returns zero Members with Search filter in use. */
 "To see names here, please adapt the Search filter or enable additional categories on the Preferences page." = "Deze lijst is leeg doordat de Zoek filter niets vindt in de gekozen ledencategorieën. Pas dus de Zoek filter aan of voeg categorieën toe (bij Instellingen).";

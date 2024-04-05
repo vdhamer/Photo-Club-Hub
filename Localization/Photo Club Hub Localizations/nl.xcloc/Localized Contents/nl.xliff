@@ -466,8 +466,8 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
         <note>Shown in gray at the bottom of the Clubs and Museums page (1/3).</note>
       </trans-unit>
       <trans-unit id="PhotoClubs_Caption_2" xml:space="preserve">
-        <source>② An individiual photo club can be deleted by first deleting (swipe left) all linked Portfolios on the Portfolio page, and then deleting (swipe left) the photo club itself on this page.</source>
-        <target>② Een fotogroep kan verwijderd worden door eerst alle betrokken Portfolio's te verwijderen (*swipe left*) en dan de fotoclub zelf te verwijderen (*swipe left*).</target>
+        <source>② A photo club or museum can be deleted using swiping-left. For a photo club, this also removes its members and associated portfolios. Deleted items will reappear if the deleted items are still present online.</source>
+        <target>② Een fotogroep of museum kan verwijderd worden door deze naar links te `swipen`. Bij fotoclubs worden ook de bijbehorende leden en portfolio's verwijderd. Verwijderingen verschijnen vanzelf weer als de verwijderde informatie nog online aanwezig is.</target>
         <note>Shown in gray at the bottom of the Clubs and Museums page (2/3).</note>
       </trans-unit>
       <trans-unit id="Portfolios" xml:space="preserve">
@@ -577,9 +577,9 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
         <target>Prelude</target>
         <note>Section title on Readme page</note>
       </trans-unit>
-      <trans-unit id="This page lists all the photographers that this app knows about. A photographer has one or more clickable image thumbnails below the photographer's name. Clicking on any thumbnail leads to the images associated with one particular photo club. The thumbnails can be scrolled horizontally (if there are many of them on one line)." xml:space="preserve">
-        <source>This page lists all the photographers that this app knows about. A photographer has one or more clickable image thumbnails below the photographer's name. Clicking on any thumbnail leads to the images associated with one particular photo club. The thumbnails can be scrolled horizontally (if there are many of them on one line).</source>
-        <target>Deze lijst bevat de fotografen die in deze app voorkomen. Per fotograaf is er één of meer miniatuurfoto's. Door op een foto te klikken komt men bij de verzameling beelden van de fotograaf die horen bij één enkel fotoclub. Bij een fotograaf verbonden met meerdere clubs, kan men horizontaal door de diverse miniatuurfoto's heen scrollen. </target>
+      <trans-unit id="This page lists all the photographers known to the app. A photographer has one or more clickable image thumbnails below the photographer's name. Clicking on a thumbnail brings you to the image portfolio for that potographer/club combination. The thumbnails can be scrolled horizontally. Photographers can be deleted using swipe-left." xml:space="preserve">
+        <source>This page lists all the photographers known to the app. A photographer has one or more clickable image thumbnails below the photographer's name. Clicking on a thumbnail brings you to the image portfolio for that potographer/club combination. The thumbnails can be scrolled horizontally. Photographers can be deleted using swipe-left.</source>
+        <target>Deze lijst bevat de fotografen die in deze app voorkomen. Per fotograaf is er normaal één of meer miniatuurfoto's. Deze zijn horizontaal door te bladeren. Klik op een foto een portfolio te bekijken. De fotograaf kan verwijderd worden door de naam naar links te vegen.</target>
         <note>Shown in gray at the bottom of the Photographers page.</note>
       </trans-unit>
       <trans-unit id="To see names here, please adapt the Search filter or enable additional categories on the Preferences page." xml:space="preserve">

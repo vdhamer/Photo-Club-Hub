@@ -30,16 +30,19 @@ struct WhoIsWhoListView: View {
     var body: some View {
         VStack {
             List { // lists are automatically "Lazy"
+
                 FilteredWhoIsWhoView(predicate: model.preferences.photographerPredicate,
                                      searchText: searchText,
                                      wkWebView: wkWebView)
+
                 Text("""
-                     This page lists all the photographers that this app knows about. \
+                     This page lists all the photographers known to the app. \
                      A photographer has one or more clickable image thumbnails below the photographer's name. \
-                     Clicking on any thumbnail leads to the images associated with one particular photo club. \
-                     The thumbnails can be scrolled horizontally (if there are many of them on one line).
-                     """, comment: "Shown in gray at the bottom of the Photographers page.")
+                     Clicking on a thumbnail brings you to the image portfolio for that potographer/club combination. \
+                     The thumbnails can be scrolled horizontally. Photographers can be deleted using swipe-left.
+                     """, comment: "Shown in gray at the bottom of the Photographers page.") // footer
                 .foregroundColor(.gray)
+
             }
             .refreshable { // for pull-to-refresh
                 // UserDefaults.standard.set(true, forKey: "WhosWhoPageRefreshed") // not really used

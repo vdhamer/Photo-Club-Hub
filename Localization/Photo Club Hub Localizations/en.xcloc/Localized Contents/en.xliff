@@ -467,8 +467,8 @@ Try dragging down the Photo Clubs screen to reload the default clubs.</target>
         <note>Shown in gray at the bottom of the Clubs and Museums page (1/3).</note>
       </trans-unit>
       <trans-unit id="PhotoClubs_Caption_2" xml:space="preserve">
-        <source>② An individiual photo club can be deleted by first deleting (swipe left) all linked Portfolios on the Portfolio page, and then deleting (swipe left) the photo club itself on this page.</source>
-        <target>② An individiual photo club can be deleted by first deleting (swipe left) all linked Portfolios on the Portfolio page, and then deleting (swipe left) the photo club itself on this page.</target>
+        <source>② A photo club or museum can be deleted using swiping-left. For a photo club, this also removes its members and associated portfolios. Deleted items will reappear if the deleted items are still present online.</source>
+        <target>② A photo club or museum can be deleted using swiping-left. For a photo club, this also removes its members and associated portfolios. Deleted items will reappear if the deleted items are still present online.</target>
         <note>Shown in gray at the bottom of the Clubs and Museums page (2/3).</note>
       </trans-unit>
       <trans-unit id="Portfolios" xml:space="preserve">
@@ -578,9 +578,9 @@ Try dragging down the Photo Clubs screen to reload the default clubs.</target>
         <target>The Prelude</target>
         <note>Section title on Readme page</note>
       </trans-unit>
-      <trans-unit id="This page lists all the photographers that this app knows about. A photographer has one or more clickable image thumbnails below the photographer's name. Clicking on any thumbnail leads to the images associated with one particular photo club. The thumbnails can be scrolled horizontally (if there are many of them on one line)." xml:space="preserve">
-        <source>This page lists all the photographers that this app knows about. A photographer has one or more clickable image thumbnails below the photographer's name. Clicking on any thumbnail leads to the images associated with one particular photo club. The thumbnails can be scrolled horizontally (if there are many of them on one line).</source>
-        <target>This page lists all the photographers that this app knows about. A photographer has one or more clickable image thumbnails below the photographer's name. Clicking on any thumbnail leads to the images associated with one particular photo club. The thumbnails can be scrolled horizontally (if there are many of them on one line).</target>
+      <trans-unit id="This page lists all the photographers known to the app. A photographer has one or more clickable image thumbnails below the photographer's name. Clicking on a thumbnail brings you to the image portfolio for that potographer/club combination. The thumbnails can be scrolled horizontally. Photographers can be deleted using swipe-left." xml:space="preserve">
+        <source>This page lists all the photographers known to the app. A photographer has one or more clickable image thumbnails below the photographer's name. Clicking on a thumbnail brings you to the image portfolio for that potographer/club combination. The thumbnails can be scrolled horizontally. Photographers can be deleted using swipe-left.</source>
+        <target>This page lists all the photographers known to the app. A photographer has one or more clickable image thumbnails below the photographer's name. Clicking on a thumbnail brings you to the image portfolio for that potographer/club combination. The thumbnails can be scrolled horizontally. Photographers can be deleted using swipe-left.</target>
         <note>Shown in gray at the bottom of the Photographers page.</note>
       </trans-unit>
       <trans-unit id="To see names here, please adapt the Search filter or enable additional categories on the Preferences page." xml:space="preserve">

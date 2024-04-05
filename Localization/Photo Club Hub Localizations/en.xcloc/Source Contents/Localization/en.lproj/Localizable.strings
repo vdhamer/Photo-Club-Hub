@@ -305,7 +305,7 @@
 "PhotoClubs_Caption_1" = "① You can unlock/lock a map's scrolling and panning features using the Lock icon.";
 
 /* Shown in gray at the bottom of the Clubs and Museums page (2/3). */
-"PhotoClubs_Caption_2" = "② An individiual photo club can be deleted by first deleting (swipe left) all linked Portfolios on the Portfolio page, and then deleting (swipe left) the photo club itself on this page.";
+"PhotoClubs_Caption_2" = "② A photo club or museum can be deleted using swiping-left. For a photo club, this also removes its members and associated portfolios. Deleted items will reappear if the deleted items are still present online.";
 
 /* Title of page showing member portfolios */
 "Portfolios" = "Portfolios";
@@ -380,7 +380,7 @@
 "The Prelude" = "The Prelude";
 
 /* Shown in gray at the bottom of the Photographers page. */
-"This page lists all the photographers that this app knows about. A photographer has one or more clickable image thumbnails below the photographer's name. Clicking on any thumbnail leads to the images associated with one particular photo club. The thumbnails can be scrolled horizontally (if there are many of them on one line)." = "This page lists all the photographers that this app knows about. A photographer has one or more clickable image thumbnails below the photographer's name. Clicking on any thumbnail leads to the images associated with one particular photo club. The thumbnails can be scrolled horizontally (if there are many of them on one line).";
+"This page lists all the photographers known to the app. A photographer has one or more clickable image thumbnails below the photographer's name. Clicking on a thumbnail brings you to the image portfolio for that potographer/club combination. The thumbnails can be scrolled horizontally. Photographers can be deleted using swipe-left." = "This page lists all the photographers known to the app. A photographer has one or more clickable image thumbnails below the photographer's name. Clicking on a thumbnail brings you to the image portfolio for that potographer/club combination. The thumbnails can be scrolled horizontally. Photographers can be deleted using swipe-left.";
 
 /* Hint to the user if the database returns zero Members with Search filter in use. */
 "To see names here, please adapt the Search filter or enable additional categories on the Preferences page." = "To see names here, please adapt the Search filter or enable additional categories on the Preferences page.";
