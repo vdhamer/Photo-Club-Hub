@@ -35,6 +35,7 @@
             <li><a href="#multi-club-support">Multi-club Support</a></li>
             <li><a href="#searchable-lists">Searchable Lists</a></li>
             <li><a href="#photo-museums">Photo Museums</a></li>
+            <li><a href="#swipe-to-delete">Swipe to Delete</a></li>
             <li><a href="#data-privacy">Data Privacy</a>
         </ul>
     </details>
@@ -352,6 +353,37 @@ Techncially, the app doesn't allow museums to have "members" that share images w
 Consider the showing of museums a bonus that may interest some users.
 You are welcome to add a favorite photo museum via a GitHub Pull Request. It only requires extending a JSON file.
 The file format is documented below under [How Data is Loaded](#how-data-is-loaded).
+</details>
+
+### Swipe to Delete
+
+</p>Items on the `Portfolios`, `Clubs and Museums` and `Who's Who` lists can be deleted by swiping them to the left.</p>
+
+<details><summary>Details on Deletion (click to expand)</summary></p>
+Every time the app launches it fetches up to data information from online sources. This ensures that the app
+stays up to data with respect to the current list of photo clubs (`Level 1`), their members (`Level 2`) and their portfolio images (`Level 3`).
+
+This fresh online data is merged with an on-device (`CoreData`) database which contains a copy of the data received during previous runs of the app.
+This (mostly) keeps the database up to date. 
+The database incidentally is used to display information while the update processes run in the background. 
+Any background updates to the database cause the user interface of the app to automatically refresh.
+
+This means that deleting local data will normally be temporary: the next time the online data is merged into the local
+database, the app discovers that certain local records are missing and will reload them from the online source.
+On the one hand, this behaviour could surprise the user. But on the other
+hand, it ensures that a device's local data stays up to date compared to the online data.
+
+A problem (currently) occurs when an online item (e.g. club, member, museum, photographer) is entirely removed. 
+This could happen if say a club terminates itself, and is removed from the Level 1 list.
+But it can also happen if the club's name or town changes: because these are identifying attributes,
+the app no longer encounters it on the Level 1 list, and instead finds a new club on the list.
+The "new" club will be loaded, but the "old" club will stay in the database. So you will see two clubs instead of one.
+For now the workaround is to delete at least the old club. In the future this should be automated by detecting items that
+are in the local database, but are no longer on the online lists.
+
+Although you could use swipe-to-delete to get local and online data back in sync, a user may prefer to uninstall and
+reinstall the app. Which ends up causing local data to be lost, and be reloaded from online data.
+
 </details>
 
 ### Data Privacy
