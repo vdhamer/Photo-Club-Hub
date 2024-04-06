@@ -360,29 +360,27 @@ The file format is documented below under [How Data is Loaded](#how-data-is-load
 </p>Items on the `Portfolios`, `Clubs and Museums` and `Who's Who` lists can be deleted by swiping them to the left.</p>
 
 <details><summary>Details on Deletion (click to expand)</summary></p>
-Whenever the app is launched, it fetches up to data information from online sources. This ensures that the app
-stays up to data with respect to the current list of photo clubs (`Level 1`), their members (`Level 2`) and their portfolio images (`Level 3`).
+Whenever the app is launched, it fetches up-to-data information from its online sources/servers. This ensures that the app
+stays up-to-data with respect to the list of clubs and museums (`Level 1`), club members (`Level 2`) and member portfolios (`Level 3`).
 
-This fresh online data is merged with an on-device (`CoreData`) database which contains a copy of the data received during previous runs of the app.
-This (mostly) keeps the database up to date. 
-The database incidentally is used to display information while the update processes run in the background. 
-Any background updates to the database cause the user interface of the app to automatically refresh.
+This fresh online data is merged with an on-device (`CoreData`) database which contains a copy of the data as received during previous app runs.
+The merging updates the database. 
+The database incidentally allows the app to display information without having to wait for the update processes to complete. 
+Any background updates to the database cause the app's user interface to immediately update.
 
-This means that deleting local data will normally be temporary: the next time the online data is merged into the local
-database, the app discovers that certain local records are missing and will reload them from the online source.
-On the one hand, this behaviour could surprise the user. But on the other
-hand, it ensures that a device's local data stays up to date compared to the online data.
+This means that deletion of local data will typically be temporary: the next time the app launches, it finds and reloads the missing local records.
 
-A problem (currently) occurs when an online item (e.g. club, member, museum, photographer) is entirely removed. 
-This could happen if say a club terminates itself, and is removed from the Level 1 list.
-But it can also happen if the club's name or town changes: because these are identifying attributes,
-the app no longer encounters it on the Level 1 list, and instead finds a new club on the list.
-The "new" club will be loaded, but the "old" club will stay in the database. So you will see two clubs instead of one.
-For now the workaround is to delete at least the old club. In the future this should be automated by detecting items that
-are in the local database, but are no longer on the online lists.
+A problem (currently) occurs when an item (e.g. club, member, museum, photographer) is deleted in the online version of the information. 
+This could happen if a club terminates itself, and someone decides to remove the club from the `Level 1` list.
+But it can also happen if the club's name or town changes (e.g. due to a typo); these are identifying attributes.
+Therefore the app no longer finds the "old" club in the online list, and instead finds a "new" club on the list.
+The app currently has now way of knowing that one is a replacement of the other.
+The "new" club will be loaded, but the "old" club will stay in the database. Resulting in two clubs instead of one.
+For now the workaround is to delete the old and unwanted club. In the future this can be automated by detecting items that
+are in the local database, but are no longer on the online lists. With this automation, the swipe-to-delete function can also be removed.
 
-Although you could use swipe-to-delete to get local and online data back in sync, a user may prefer to uninstall and
-reinstall the app. Which ends up causing local data to be lost, and be reloaded from online data.
+Although you _can_ use swipe-to-delete to get the local data to match the online data, a user may prefer to uninstall and
+reinstall the app.
 
 </details>
 
