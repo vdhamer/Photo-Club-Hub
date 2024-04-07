@@ -1,5 +1,12 @@
 ### 2.5.7 (GitHub commit ???????) ??-04-24
 
+
+This is build #4619
+
+---------------------------------------------------------------------------
+
+### 2.5.7 (GitHub commit fcd8918) 7-04-24
+
 Portfolio screen
 * Delete caused app to terminate (bug) when deleting last member of a club (id).
 * Changed the icon shown while loading an image. It's a tortoise, generated using AI (DiffusionBee))
@@ -14,9 +21,6 @@ Who's Who screen
 * Deleting a photographer automatically deletes all associated memberships (cascade).
 * Updated instructions in footer (delete_related).
 * Changed the icon shown while loading an image. It's a tortoise, generated using AI (DiffusionBee))
-
-Documentation
-* Documented swipe-to-delete in GitHub readme.
 
 Documentation
 * Documented swipe-to-delete in GitHub readme.
