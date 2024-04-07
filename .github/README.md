@@ -368,20 +368,21 @@ The merging updates the database.
 The database incidentally allows the app to display information without having to wait for the update processes to complete. 
 The app's user interface immediately reflects any background updates to the database.</p>
 
-This means that deletion of local data will typically be temporary: the next time the app launches, it finds and reloads the missing local records.</p>
+This means that deletion of local data will typically be temporary: the next time the app launches, it finds and reloads the records that are missing in the local database.</p>
 
 A problem (currently) occurs when an item (e.g. club, member, museum, photographer) is deleted in the online version of the information. 
-This could happen if a club terminates itself, and someone decides to remove the club from the `Level 1` list.
-But it can also happen if the club's name or town changes (e.g. due to a typo); these are identifying attributes.
-Therefore the app no longer finds the "old" club in the online list, and instead finds a "new" club on the list.
-The app currently has now way of knowing that one is a replacement of the other.
-The "new" club will be loaded, but the "old" club will stay in the database. Resulting in two clubs instead of one.
-For now the workaround is to delete the old and unwanted club. In the future this can be automated by detecting items that
-are in the local database, but are no longer on the online lists. With this automation, the swipe-to-delete function can also be removed.</p>
+This could happen if a club terminates itself, and the club is removed from the `Level 1` list (instead of changing all members to `former` members).
+A similar problem occurs if a club's `fullName` or `town` fields change (e.g. fixing a typo); these are identifying attributes.
+Therefore the app no longer finds the "old" club on the online list, and finds a "new" club instead.
+The app has now way of knowing that one club is a replacement for the other.
+So the "new" club will be loaded correctly, without (in the current code) removing the "old" club in the database.
+This resulting in having two clubs with similar naming instead of one.</p>
 
-Although you _can_ use swipe-to-delete to get the local data to match the online data, a user may prefer to uninstall and
-reinstall the app.
+A temporary workaround is to manually delete the old/incorrect club. In the future this can be automated by detecting items that
+are in the local database, but are no present anymore inn the online lists.</p>
 
+Although swipe-to-delete can get the local database back in sync with the online data, a user may prefer a simpler brute force route:
+simply uninstall the app (thus deleting its local database), reinstall the app and then let it automatically load the online data.
 </details>
 
 ### Data Privacy
