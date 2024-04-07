@@ -366,7 +366,7 @@ stays up-to-date with respect to the latest lists of clubs/museums (`Level 1`), 
 This fresh online data is merged with an on-device (`CoreData`) database which contains a copy of the data as received during previous app runs.
 The merging updates the database. 
 The database incidentally allows the app to display information without having to wait for the update processes to complete. 
-Any background updates to the database cause the app's user interface to immediately update.</p>
+The app's user interface immediately reflects any background updates to the database.</p>
 
 This means that deletion of local data will typically be temporary: the next time the app launches, it finds and reloads the missing local records.</p>
 
