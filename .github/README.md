@@ -361,14 +361,14 @@ The file format is documented below under [How Data is Loaded](#how-data-is-load
 
 <details><summary>Details on Deletion (click to expand)</summary></p>
 Whenever the app is launched, it fetches up-to-data information from its online sources/servers. This ensures that the app
-stays up-to-data with respect to the list of clubs and museums (`Level 1`), club members (`Level 2`) and member portfolios (`Level 3`).
+stays up-to-data with respect to the list of clubs and museums (`Level 1`), club members (`Level 2`) and member portfolios (`Level 3`).</p>
 
 This fresh online data is merged with an on-device (`CoreData`) database which contains a copy of the data as received during previous app runs.
 The merging updates the database. 
 The database incidentally allows the app to display information without having to wait for the update processes to complete. 
-Any background updates to the database cause the app's user interface to immediately update.
+Any background updates to the database cause the app's user interface to immediately update.</p>
 
-This means that deletion of local data will typically be temporary: the next time the app launches, it finds and reloads the missing local records.
+This means that deletion of local data will typically be temporary: the next time the app launches, it finds and reloads the missing local records.</p>
 
 A problem (currently) occurs when an item (e.g. club, member, museum, photographer) is deleted in the online version of the information. 
 This could happen if a club terminates itself, and someone decides to remove the club from the `Level 1` list.
@@ -377,7 +377,7 @@ Therefore the app no longer finds the "old" club in the online list, and instead
 The app currently has now way of knowing that one is a replacement of the other.
 The "new" club will be loaded, but the "old" club will stay in the database. Resulting in two clubs instead of one.
 For now the workaround is to delete the old and unwanted club. In the future this can be automated by detecting items that
-are in the local database, but are no longer on the online lists. With this automation, the swipe-to-delete function can also be removed.
+are in the local database, but are no longer on the online lists. With this automation, the swipe-to-delete function can also be removed.</p>
 
 Although you _can_ use swipe-to-delete to get the local data to match the online data, a user may prefer to uninstall and
 reinstall the app.
