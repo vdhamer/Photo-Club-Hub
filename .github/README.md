@@ -358,7 +358,7 @@ The file format is documented below under [How Data is Loaded](#how-data-is-load
 ### Swipe to Delete
 
 </p>Items on the `Portfolios`, `Clubs and Museums` and `Who's Who` lists can be deleted by swiping them to the left.
-This is seldom needed, but is harmless becaused all key data gets reloaded from online servers regularly.
+This is seldom needed, but is harmless because all key data gets reloaded from online servers regularly.
 </p>
 
 <details><summary>Details on Deletion (click to expand)</summary></p>
