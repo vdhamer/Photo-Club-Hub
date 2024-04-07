@@ -18,6 +18,9 @@ Who's Who screen
 Documentation
 * Documented swipe-to-delete in GitHub readme.
 
+Documentation
+* Documented swipe-to-delete in GitHub readme.
+
 This is build #4619
 
 ---------------------------------------------------------------------------
