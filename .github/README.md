@@ -360,7 +360,7 @@ The file format is documented below under [How Data is Loaded](#how-data-is-load
 </p>Items on the `Portfolios`, `Clubs and Museums` and `Who's Who` lists can be deleted by swiping them to the left.</p>
 
 <details><summary>Details on Deletion (click to expand)</summary></p>
-Whenever the app is launched, it fetches up-to-data information from its online sources/servers. This ensures that the app
+Whenever the app is launched, it fetches up-to-date information from its online sources/servers. This ensures that the app
 stays up-to-data with respect to the list of clubs and museums (`Level 1`), club members (`Level 2`) and member portfolios (`Level 3`).</p>
 
 This fresh online data is merged with an on-device (`CoreData`) database which contains a copy of the data as received during previous app runs.
