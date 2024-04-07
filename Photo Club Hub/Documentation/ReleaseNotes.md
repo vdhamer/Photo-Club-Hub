@@ -13,6 +13,9 @@ Clubs and Museums screen
 * Deleting a club or museum now works. Deleting a club removes all members, but leaves them on the Who's Who screen.
 * Updated instructions in footer (delete-related).
 
+Documentation
+* Documented swipe-to-delete in GitHub readme.
+
 This is build #4619
 
 ---------------------------------------------------------------------------

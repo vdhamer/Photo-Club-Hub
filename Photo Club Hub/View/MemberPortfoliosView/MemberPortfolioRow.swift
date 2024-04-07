@@ -49,7 +49,7 @@ struct MemberPortfolioRow: View {
                             .aspectRatio(contentMode: .fit)
                     } else {
                         ZStack {
-                            Image("Embarrassed-snail") // Displays placeholder while loading
+                            Image("Test") // Displays placeholder while loading
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .opacity(0.4)

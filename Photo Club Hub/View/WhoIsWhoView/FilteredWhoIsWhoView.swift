@@ -123,7 +123,7 @@ struct FilteredWhoIsWhoView: View {
                                                         .aspectRatio(contentMode: .fit)
                                                 } else {
                                                     ZStack {
-                                                        Image("Embarrassed-snail") // placeholder while loading
+                                                        Image("Test") // placeholder while loading
                                                             .resizable()
                                                             .aspectRatio(contentMode: .fit)
                                                             .opacity(0.4)
