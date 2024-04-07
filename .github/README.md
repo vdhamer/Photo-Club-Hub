@@ -357,7 +357,9 @@ The file format is documented below under [How Data is Loaded](#how-data-is-load
 
 ### Swipe to Delete
 
-</p>Items on the `Portfolios`, `Clubs and Museums` and `Who's Who` lists can be deleted by swiping them to the left.</p>
+</p>Items on the `Portfolios`, `Clubs and Museums` and `Who's Who` lists can be deleted by swiping them to the left.
+This is seldom needed, but is harmless becaused all key data gets reloaded from online servers regularly.
+</p>
 
 <details><summary>Details on Deletion (click to expand)</summary></p>
 Whenever the app is launched, it fetches up-to-date information from online servers. The use of online data ensures that the app
