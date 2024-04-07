@@ -215,13 +215,13 @@
 "Paragraph_3.6.a" = "__Clubleden, clubs en fotografen verwijderen__";
 
 /* Paragraph 3.6.b of the Readme screen */
-"Paragraph_3.6.b" = "Op de _Portfolio's_ pagina kan men een clublid verwijderen door deze naar links te vegen. Op andere pagina's kan men fotografen en clubs verwijderen.";
+"Paragraph_3.6.b" = "Op het _Portfolio's_ scherm kan men een clublid en diens portfolio verwijderen door deze naar links te vegen. Op andere schermen kan men fotografen en zelfs complete fotoclubs verwijderen.";
 
 /* Paragraph 3.6.c of the Readme screen */
-"Paragraph_3.6.c" = "Verwijderen heeft _alleen_ blijvend effect als dit clublid (fotograaf of club) ook verwijderd is uit de respectievelijk online lijst.";
+"Paragraph_3.6.c" = "Verwijderen heeft alleen blijvend effect als het clublid (of fotograaf of fotoclub) ook verwijderd is uit de respectievelijk online lijst.";
 
 /* Paragraph 3.6.d of the Readme screen */
-"Paragraph_3.6.d" = "In alle gevallen kan lokaal verwijderen geen kwaad. Als alternatief kan met de app zelf verwijderen en opnieuw installeren. Hiermee wordt de interne appdata verwijderd en vanzelf opnieuw geladen.";
+"Paragraph_3.6.d" = "In ieder geval kan lokaal verwijderen van informatie geen kwaad. Als alternatief kan met de app verwijderen en opnieuw installeren. Hiermee wordt de interne appdata verwijderd en bij opstarten van de app opnieuw geladen.";
 
 /* Paragraph 3.7.a of the Readme screen */
 "Paragraph_3.7.a" = "__Websites__";

@@ -215,7 +215,7 @@
 "Paragraph_3.6.c" = "Deletion of a member will generally be __temporary__ because the member is still on the club's online membership lists. Deletion does have effect if the entry has been removed from these online lists. The feature will be automated at some point, and is only useful in special circumstances (like when a typo in a member's name is corrected).";
 
 /* Paragraph 3.6.d of the Readme screen */
-"Paragraph_3.6.d" = "So just remember that swiping left is harmless, and if you need to clean up a list you can alternatively simply uninstall and reinstall the app to clean up the app's internal data.";
+"Paragraph_3.6.d" = "So just remember that swiping to delete is harmless. And if you need to clean up a list you can alternatively simply uninstall and reinstall the app to clean up the app's internal data.";
 
 /* Paragraph 3.7.a of the Readme screen */
 "Paragraph_3.7.a" = "__Web sites__";

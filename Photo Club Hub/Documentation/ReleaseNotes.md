@@ -2,16 +2,21 @@
 
 Portfolio screen
 * Delete caused app to terminate (bug) when deleting last member of a club (id).
+* Changed the icon shown while loading an image. It's a tortoise, generated using AI (DiffusionBee))
+
+Clubs and Museums screen
+* Deleting a club or museum now works. Deleting a club removes all members, but leaves them on the Who's Who screen.
+* Updated instructions in footer (delete-related).
 
 Who's Who screen
 * Captions are now below each image.
 * Deletion of photographers was disabled in previous releases.
 * Deleting a photographer automatically deletes all associated memberships (cascade).
 * Updated instructions in footer (delete_related).
+* Changed the icon shown while loading an image. It's a tortoise, generated using AI (DiffusionBee))
 
-Clubs and Museums screen
-* Deleting a club or museum now works. Deleting a club removes all members, but leaves them on the Who's Who screen.
-* Updated instructions in footer (delete-related).
+Documentation
+* Documented swipe-to-delete in GitHub readme.
 
 This is build #4619
 
