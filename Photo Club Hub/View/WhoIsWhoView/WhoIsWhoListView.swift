@@ -28,26 +28,31 @@ struct WhoIsWhoListView: View {
     }
 
     var body: some View {
-        VStack {
-            List { // lists are automatically "Lazy"
-
+        ScrollView(.vertical) { // lists are automatically "Lazy"
+            LazyVStack {
                 FilteredWhoIsWhoView(predicate: model.preferences.photographerPredicate,
                                      searchText: searchText,
                                      wkWebView: wkWebView)
-
-                Text("""
-                     This page lists all the photographers known to the app. \
-                     A photographer has one or more clickable image thumbnails below the photographer's name. \
-                     Clicking on a thumbnail brings you to the image portfolio for that potographer/club combination. \
-                     The thumbnails can be scrolled horizontally. Photographers can be deleted using swipe-left.
-                     """, comment: "Shown in gray at the bottom of the Photographers page.") // footer
-                .foregroundColor(.gray)
-
-            }
-            .refreshable { // for pull-to-refresh
-                // UserDefaults.standard.set(true, forKey: "WhosWhoPageRefreshed") // not really used
-                PhotoClubHubApp.loadClubsAndMembers()
-            }
+                                    .frame(height: 275)
+           }
+            .scrollTargetLayout() // unit of vertical "smart" scrolling
+            Text("""
+                 This page lists all the photographers known to the app. \
+                 A photographer has one or more clickable image thumbnails below the photographer's name. \
+                 Clicking on a thumbnail brings you to the image portfolio \
+                 for that potographer/club combination. \
+                 The thumbnails can be scrolled horizontally. \
+                 Photographers can be deleted using swipe-left.
+                 """,
+                 comment: "Shown in gray at the bottom of the Photographers page.") // footer
+            .foregroundColor(.gray)
+            .padding(.top)
+        } // ScrollView
+        .padding(.horizontal)
+        .scrollTargetBehavior(.viewAligned) // iOS 17 smart scrolling
+        .refreshable { // for pull-to-refresh
+            // UserDefaults.standard.set(true, forKey: "WhosWhoPageRefreshed") // not really used
+            PhotoClubHubApp.loadClubsAndMembers()
         }
         .keyboardType(.namePhonePad)
         .autocapitalization(.none)

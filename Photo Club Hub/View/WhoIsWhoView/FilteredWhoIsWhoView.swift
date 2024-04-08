@@ -103,10 +103,10 @@ struct FilteredWhoIsWhoView: View {
                         } // to place link icon to right of everything
 
                         ScrollView(.horizontal, showsIndicators: false) {
-                            HStack {
+                            HStack { // to support multiple portfolio previews in one row
                                 ForEach(filteredPhotographer.memberships.sorted(), id: \.id) { membership in
                                     SinglePortfolioLinkView(destPortfolio: membership, wkWebView: wkWebView) {
-                                        VStack {
+                                        VStack { // to combine image and caption
                                             AsyncImage(url: membership.featuredImage) { phase in
                                                 if let image = phase.image {
                                                     ZStack(alignment: .bottom) {
@@ -146,10 +146,12 @@ struct FilteredWhoIsWhoView: View {
                                                     ...DynamicTypeSize.xLarge)
                                         }
                                         .padding(.trailing, 10)
-                                    }
+                                    } // VStack to combine image and caption
                                 } // ForEach
-                            } // HStack
+                            } // HStack to support multiple portfolio previews in one row
+                            .scrollTargetLayout() // unit of scrolling
                         } // ScrollView
+                        .scrollTargetBehavior(.viewAligned(limitBehavior: .always)) // iOS 17 smart scrolling
                     } // VStack
                 } // HStack
                 .accentColor(.photographerColor)
@@ -157,12 +159,13 @@ struct FilteredWhoIsWhoView: View {
                                              isDeceased: filteredPhotographer.isDeceased))
             } // ForEach filteredPhotographer
             .onDelete(perform: deletePhotographers) // can be disabled using isDeletedPhotographerEnabled flag
-        } header: { // Table has only one section and it gets a header
+        } /* header: { // Table has only one section and it gets a header
             ItemFilterStatsView(filteredCount: filteredPhotographers.count,
                                 unfilteredCount: fetchRequest.count,
                                 elementType: ItemFilterStatsEnum.photographer)
             .textCase(nil) // https://sarunw.com/posts/swiftui-list-section-header-textcase/
         } // header
+           */
     } // body
 
     private var filteredPhotographers: [Photographer] {
