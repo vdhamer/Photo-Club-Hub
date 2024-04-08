@@ -29,6 +29,7 @@ struct WhoIsWhoListView: View {
 
     var body: some View {
         ScrollView(.vertical) { // lists are automatically "Lazy"
+
             LazyVStack {
                 FilteredWhoIsWhoView(predicate: model.preferences.photographerPredicate,
                                      searchText: searchText,
@@ -36,6 +37,7 @@ struct WhoIsWhoListView: View {
                                     .frame(height: 275)
            }
             .scrollTargetLayout() // unit of vertical "smart" scrolling
+
             Text("""
                  This page lists all the photographers known to the app. \
                  A photographer has one or more clickable image thumbnails below the photographer's name. \
@@ -47,6 +49,7 @@ struct WhoIsWhoListView: View {
                  comment: "Shown in gray at the bottom of the Photographers page.") // footer
             .foregroundColor(.gray)
             .padding(.top)
+
         } // ScrollView
         .padding(.horizontal)
         .scrollTargetBehavior(.viewAligned) // iOS 17 smart scrolling
