@@ -153,13 +153,15 @@ struct FilteredWhoIsWhoView: View {
                         } // ScrollView
                         .scrollTargetBehavior(.viewAligned(limitBehavior: .always)) // iOS 17 smart scrolling
                     } // VStack
+
                 } // HStack
                 .accentColor(.photographerColor)
                 .foregroundColor(chooseColor(accentColor: .accentColor,
                                              isDeceased: filteredPhotographer.isDeceased))
             } // ForEach filteredPhotographer
             .onDelete(perform: deletePhotographers) // can be disabled using isDeletedPhotographerEnabled flag
-        } /* header: { // Table has only one section and it gets a header
+        } // Section
+        /* header: { // Table has only one section and it gets a header
             ItemFilterStatsView(filteredCount: filteredPhotographers.count,
                                 unfilteredCount: fetchRequest.count,
                                 elementType: ItemFilterStatsEnum.photographer)
