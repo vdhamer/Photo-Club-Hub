@@ -66,6 +66,8 @@
 		D0831A47277F731C0049AB84 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A43277F731C0049AB84 /* PersistenceController.swift */; };
 		D0831A51277F73C00049AB84 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0831A50277F73C00049AB84 /* Preview Assets.xcassets */; };
 		D08416932B2FAEB1000F316D /* fgDeGender.level2.json in Resources */ = {isa = PBXBuildFile; fileRef = D08416922B2FAEB1000F316D /* fgDeGender.level2.json */; };
+		D087540A2BC5E9FD00FCBDB3 /* WhoIsWhoTextInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08754092BC5E9FD00FCBDB3 /* WhoIsWhoTextInfo.swift */; };
+		D087540C2BC5EE3700FCBDB3 /* WhoIsWhoThumbnails.swift in Sources */ = {isa = PBXBuildFile; fileRef = D087540B2BC5EE3700FCBDB3 /* WhoIsWhoThumbnails.swift */; };
 		D08DC6062AE57294008DBD68 /* SinglePortfolioLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08DC6052AE57294008DBD68 /* SinglePortfolioLinkView.swift */; };
 		D0968F662A76F8A00096987A /* FotogroepWaalreMembersProvider+insertOnlineMemberData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0968F652A76F8A00096987A /* FotogroepWaalreMembersProvider+insertOnlineMemberData.swift */; };
 		D0A0B6852AA930E90078DE9A /* Photo_Club_Hub.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D0A0B6832AA930E90078DE9A /* Photo_Club_Hub.xcdatamodeld */; };
@@ -172,6 +174,8 @@
 		D0831A50277F73C00049AB84 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D08416912B2FA3C2000F316D /* fgAnders.level2.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = fgAnders.level2.json; sourceTree = "<group>"; };
 		D08416922B2FAEB1000F316D /* fgDeGender.level2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fgDeGender.level2.json; sourceTree = "<group>"; };
+		D08754092BC5E9FD00FCBDB3 /* WhoIsWhoTextInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhoIsWhoTextInfo.swift; sourceTree = "<group>"; };
+		D087540B2BC5EE3700FCBDB3 /* WhoIsWhoThumbnails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhoIsWhoThumbnails.swift; sourceTree = "<group>"; };
 		D08DC6052AE57294008DBD68 /* SinglePortfolioLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePortfolioLinkView.swift; sourceTree = "<group>"; };
 		D0968F652A76F8A00096987A /* FotogroepWaalreMembersProvider+insertOnlineMemberData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FotogroepWaalreMembersProvider+insertOnlineMemberData.swift"; sourceTree = "<group>"; };
 		D09C90642BA8F171005FA3D6 /* Photo_Club_Hub_2_5_5a.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_5_5a.xcdatamodel; sourceTree = "<group>"; };
@@ -518,6 +522,8 @@
 			children = (
 				D0AE1B772788A19500E0100E /* WhoIsWhoListView.swift */,
 				D0831A1C277F72270049AB84 /* FilteredWhoIsWhoView.swift */,
+				D08754092BC5E9FD00FCBDB3 /* WhoIsWhoTextInfo.swift */,
+				D087540B2BC5EE3700FCBDB3 /* WhoIsWhoThumbnails.swift */,
 			);
 			path = WhoIsWhoView;
 			sourceTree = "<group>";
@@ -754,6 +760,7 @@
 				D0DE02772789D1B30062738C /* RoleIconView.swift in Sources */,
 				D08DC6062AE57294008DBD68 /* SinglePortfolioLinkView.swift in Sources */,
 				D0C6E95529577921001E5CE9 /* DebugPanel.swift in Sources */,
+				D087540C2BC5EE3700FCBDB3 /* WhoIsWhoThumbnails.swift in Sources */,
 				D0831A33277F72590049AB84 /* BellusImagoMembersProvider+insertSomeHardcodedMemberData.swift in Sources */,
 				D0831A45277F731C0049AB84 /* String+Capitalize.swift in Sources */,
 				D05414F92AC749EC00D899D8 /* FotogroepDeGenderMembersProvider+insertSomeHardcodedMemberDataCommon.swift in Sources */,
@@ -811,6 +818,7 @@
 				D0831A31277F72590049AB84 /* MemberPortfolio.swift in Sources */,
 				D0831A32277F72590049AB84 /* Photographer.swift in Sources */,
 				D0EAEB332B3CA6D300EC05B6 /* RootLevel1JsonReader.swift in Sources */,
+				D087540A2BC5E9FD00FCBDB3 /* WhoIsWhoTextInfo.swift in Sources */,
 				D044646527FCE7C100990613 /* UIDevice+IsIPad.swift in Sources */,
 				D05E451E27EF2A2C00D31327 /* ReadmeView.swift in Sources */,
 				D01D2B6227D3BBDC00E2FE41 /* View+Navigate.swift in Sources */,

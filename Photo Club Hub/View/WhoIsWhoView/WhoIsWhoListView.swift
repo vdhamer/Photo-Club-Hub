@@ -28,14 +28,15 @@ struct WhoIsWhoListView: View {
     }
 
     var body: some View {
-        ScrollView(.vertical) { // lists are automatically "Lazy"
+        ScrollView(.vertical) {
 
             LazyVStack {
                 FilteredWhoIsWhoView(predicate: model.preferences.photographerPredicate,
                                      searchText: searchText,
                                      wkWebView: wkWebView)
-                                    .frame(height: 275)
-           }
+                                    .frame(height: 300)
+                                    .border(.red)
+            }
             .scrollTargetLayout() // unit of vertical "smart" scrolling
 
             Text("""
