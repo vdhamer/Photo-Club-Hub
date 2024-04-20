@@ -29,7 +29,7 @@ struct SinglePortfolioView: UIViewRepresentable {
 // only visible when canvas is simulating/running
 struct SinglePortfolioView_Previews: PreviewProvider {
     static var webView = WKWebView()
-    static var url: URL = URL(string: "https://www.fotogroepwaalre.nl/fotos/Peter_van_den_Hamer/")!
+    static var url: URL = URL(string: FotogroepWaalreMembersProvider.baseURL + "Peter_van_den_Hamer/")!
 
     static var previews: some View {
         NavigationStack {

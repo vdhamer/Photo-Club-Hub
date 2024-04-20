@@ -12,7 +12,7 @@ class FotogroepWaalreMembersProvider { // WWDC21 Earthquakes also uses a Class h
 
     static let photoClubWaalreIdPlus = OrganizationIdPlus(fullName: "Fotogroep Waalre",
                                                           town: "Waalre",
-                                                          nickname: "FG Waalre")
+                                                          nickname: "fgWaalre")
 
     init(bgContext: NSManagedObjectContext) {
         // following is asynchronous, but not documented as such using async/await
