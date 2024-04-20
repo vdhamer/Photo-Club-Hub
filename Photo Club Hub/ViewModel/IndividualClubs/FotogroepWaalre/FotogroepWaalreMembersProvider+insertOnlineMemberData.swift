@@ -10,6 +10,8 @@ import RegexBuilder
 
 extension FotogroepWaalreMembersProvider {
 
+    public static let baseURL = "http://www.vdHamer.com/fgWaalre/"
+
     func insertOnlineMemberData(bgContext: NSManagedObjectContext) { // runs on a background thread
         // can't rely on async (!) insertSomeHardcodedMemberData() to return managed photoClub object in time
         let clubWaalre = Organization.findCreateUpdate(
@@ -17,10 +19,10 @@ extension FotogroepWaalreMembersProvider {
             idPlus: FotogroepWaalreMembersProvider.photoClubWaalreIdPlus
         )
 
-        let urlString = self.getFileAsString(nameEncryptedFile: "FGWPrivateMembersURL2.txt",
-                                             nameUnencryptedFile: "FGWPrivateMembersURL3.txt",
-                                             allowUseEncryptedFile: true, // set to false only for testing purposes
-                                             organization: clubWaalre) // used for error messages only
+        let urlString = self.getFileNameAsString(nameEncryptedFile: "FGWPrivateMembersURL2.txt",
+                                                 nameUnencryptedFile: "FGWPrivateMembersURL3.txt",
+                                                 allowUseEncryptedFile: true, // false used only for testing
+                                                 organization: clubWaalre) // used for error messages only
         if let privateURL = URL(string: urlString) {
             clubWaalre.level2URL = privateURL
             try? bgContext.save() // persist Fotogroep Waalre and its online member data
@@ -37,12 +39,12 @@ extension FotogroepWaalreMembersProvider {
         }
     }
 
-    fileprivate func getFileAsString(nameEncryptedFile: String,
-                                     nameUnencryptedFile: String,
-                                     allowUseEncryptedFile: Bool = true,
-                                     organization: Organization) // used for error messages only
-                                     -> String {
-        let organizationTown = organization.fullNameTown
+    fileprivate func getFileNameAsString(nameEncryptedFile: String,
+                                         nameUnencryptedFile: String,
+                                         allowUseEncryptedFile: Bool = true,
+                                         organization: Organization) // used for error messages only
+                                        -> String {
+        let organizationTown = organization.fullNameTown // Town is optional if it part of the fullName
         if let secret = readURLFromLocalFile(fileNameWithExtension: nameEncryptedFile), allowUseEncryptedFile {
             ifDebugPrint("\(organizationTown): will use confidential version of Private member data file.")
             return secret
@@ -207,7 +209,6 @@ extension FotogroepWaalreMembersProvider {
         //      "José_Daniëls" -> "<baseURL>/Jose_Daniels"
         // case if there is a replacement needed, that is not defined yet
         //      "Ekin Özbiçer" -> "<baseURL>/Ekin_" // because app doesn't substitute the Ö yet
-        let baseURL = "https://www.fotogroepwaalre.nl/fotos"
         var tweakedName = name.replacingOccurrences(of: " ", with: "_")
                               .replacingOccurrences(of: "á", with: "a") // affects István_Nagy
                               .replacingOccurrences(of: "ç", with: "c") // affects François_Hermans
@@ -240,7 +241,8 @@ extension FotogroepWaalreMembersProvider {
             }
         }
 
-        return URL(string: baseURL + "/" + tweakedName + "/") // final "/" not strictly needed (link works without)
+        // final "/" not strictly needed (link works without)
+        return URL(string: FotogroepWaalreMembersProvider.baseURL + "/" + tweakedName + "/")
     }
 
     fileprivate func toDate(from dateString: String) -> Date? {

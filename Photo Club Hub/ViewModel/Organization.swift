@@ -133,15 +133,8 @@ extension Organization {
         set { localizedCountry_ = newValue}
     }
 
-    var level2URL: URL? { // use memberListURL for display only (memberListURL_ is the real source of truth)
-        get {
-            if let level2URLString = level2URL_?.absoluteString {
-                if let url = level2URL_, level2URLString.lowercased().contains("vdhamer.com/leden2") { // site mirroring
-                    return URL(string: "https://www.fotogroepwaalre.nl" + url.path + "/")
-                }
-            }
-            return level2URL_
-        }
+    var level2URL: URL? {
+        get { level2URL_ }
         set { level2URL_ = newValue }
     }
 

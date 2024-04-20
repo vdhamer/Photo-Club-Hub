@@ -65,7 +65,7 @@ extension AndersMembersProvider { // fill with some initial hard-coded content
                   personName: PersonName(givenName: "Lotte", infixName: "", familyName: "Vrij"),
                   organization: clubAnders,
 //                  website: URL(string: "https://lotte-vrij-fotografie.jimdofree.com"),
-                  memberWebsite: URL(string: "https://www.fotogroepwaalre.nl/fotos/Empty_Website/"),
+                  memberWebsite: URL(string: FotogroepWaalreMembersProvider.baseURL + "Empty_Website/"),
                   latestImage: URL(string: """
                                            https://image.jimcdn.com/app/cms/image/transf/none/path/\
                                            sb2e92183adfb60fb/image/ie69f110f416b6822/version/1678882175/image.jpg
@@ -80,7 +80,7 @@ extension AndersMembersProvider { // fill with some initial hard-coded content
         addMember(bgContext: bgContext, // add Loek to Photographers and member of Bellus (if needed)
                   personName: PersonName(givenName: "Dennis", infixName: "", familyName: "Verbruggen"),
                   organization: clubAnders,
-                  memberWebsite: URL(string: "https://www.fotogroepwaalre.nl/fotos/Empty_Website/"),
+                  memberWebsite: URL(string: FotogroepWaalreMembersProvider.baseURL + "/Empty_Website/"),
                   latestImage: URL(string: "http://www.vdhamer.com/wp-content/uploads/2023/11/DennisVerbruggen.jpeg")
         )
 

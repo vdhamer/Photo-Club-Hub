@@ -30,10 +30,7 @@ extension FotogroepDeGenderMembersProvider { // fill with some initial hard-code
                                                         organizationTypeEum: .club,
                                                         idPlus: Self.fotogroepDeGenderIdPlus
                                                      )
-        ifDebugPrint("""
-                     \(clubDeGender.fullNameTown): \
-                     Starting insertSomeHardcodedMemberData() in background
-                     """)
+        ifDebugPrint("\(clubDeGender.fullNameTown): Starting insertSomeHardcodedMemberData() in background")
         clubDeGender.hasHardCodedMemberData = true // store in database that we ran insertSomeHardcodedMembers...
 
         let isoDate = "1954-10-09T00:12:00.000000Z"
@@ -56,6 +53,7 @@ extension FotogroepDeGenderMembersProvider { // fill with some initial hard-code
                   personName: PersonName(givenName: "Peter", infixName: "van den", familyName: "Hamer"),
                   organization: clubDeGender,
                   memberRolesAndStatus: MemberRolesAndStatus(stat: [.prospective: false]),
+                  memberWebsite: URL(string: FotogroepWaalreMembersProvider.baseURL + "Empty_Website/"),
                   latestImage: URL(string:
                      "http://www.vdhamer.com/wp-content/uploads/2024/04/2023_Cornwall_R5_581-Pano.jpg")
         )
@@ -64,6 +62,7 @@ extension FotogroepDeGenderMembersProvider { // fill with some initial hard-code
                   personName: PersonName(givenName: "Bettina", infixName: "de", familyName: "Graaf"),
                   organization: clubDeGender,
                   memberRolesAndStatus: MemberRolesAndStatus(stat: [.prospective: false]),
+                  memberWebsite: URL(string: FotogroepWaalreMembersProvider.baseURL + "Empty_Website/"),
                   latestImage: URL(string:
                      "http://www.vdhamer.com/wp-content/uploads/2023/11/BettinaDeGraaf.jpeg")
         )

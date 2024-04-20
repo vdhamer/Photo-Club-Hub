@@ -1,7 +1,10 @@
-### 2.5.7 (GitHub commit ???????) ??-04-24
+### 2.6.0 (GitHub commit ???????) ??-04-24
 
+Maintenance
+* Major: the fotogroepwaalre.nl http site got damaged. Fixed by transferring the portfolios to a new host.
+* Tested on Xcode 15.4 beta, iOS 17.5 beta 2 (21F5058e), visionOS 1.2 beta 2 (21O5565d)
 
-This is build #4619
+This is build #4620 and will be released as v2.6.0 via the Apple App Store.
 
 ---------------------------------------------------------------------------
 
@@ -25,7 +28,7 @@ Who's Who screen
 Documentation
 * Documented swipe-to-delete in GitHub readme.
 
-This is build #4619
+This is build #4619 and was distributed to TestFlight users only.
 
 ---------------------------------------------------------------------------
 ### 2.5.6 (GitHub commit 74a487d) 4-04-24
@@ -48,9 +51,9 @@ Maintenance
 * Removed unneeded EN screenshots for readme. Reduces package size somewhat.
 * Renamed OrganizationList.swift to RootLevel1JsonReader.swift (and updated some comment text).
 * Renamed Photographer.photographerWebsite to website.
-* Tested on the short-leved iOS/iPadOS 14.4.1 build 21E237
+* Tested on the short-leved iOS/iPadOS 17.4.1 build 21E237
 
-This is build #4618 and will be released as v2.5.6 on the Apple App Store.
+This is build #4618 and was released as v2.5.6 on the Apple App Store.
 
 ---------------------------------------------------------------------------
 ### 2.5.6 (GitHub commit b7f46f7) 31-03-24

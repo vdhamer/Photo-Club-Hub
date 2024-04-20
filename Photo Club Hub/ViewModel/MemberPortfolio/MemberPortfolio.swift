@@ -67,7 +67,7 @@ extension MemberPortfolio { // expose computed properties (some related to handl
     var level3URL: URL {
         get {
             if level3URL_ == nil {
-                level3URL_ = URL(string: "https://www.fotogroepwaalre.nl/fotos/Empty_Website/")!
+                level3URL_ = URL(string: FotogroepWaalreMembersProvider.baseURL + "Empty_Website/")!
             }
             return level3URL_!
         }
