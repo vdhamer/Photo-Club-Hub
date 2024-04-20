@@ -55,7 +55,7 @@ struct FilteredWhoIsWhoView: View {
                         }
 
                     }
-                    .border(.green)
+                    .border(.gray, width: 1)
 
                     Spacer()
                     WhoIsWhoThumbnails(photographer: filteredPhotographer, wkWebView: wkWebView)

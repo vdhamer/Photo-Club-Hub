@@ -1,7 +1,10 @@
 ### 2.6.0 (GitHub commit ???????) ??-04-24
 
+Who's Who screen
+* Introduced smart scrolling (scrolling stops aligned with item boundaries)
+
 Maintenance
-* Major: the fotogroepwaalre.nl http site got damaged. Fixed by transferring the portfolios to a new host.
+* Major: the fotogroepwaalre.nl http directories got damaged. Fixed by regenerating the portfolios on elsewhere.
 * Tested on Xcode 15.4 beta, iOS 17.5 beta 2 (21F5058e), visionOS 1.2 beta 2 (21O5565d)
 * Fixed ability to directly build GitHub (FGWPrivateMemberURL2 was missing)
 

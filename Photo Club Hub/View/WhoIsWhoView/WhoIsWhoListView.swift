@@ -35,7 +35,6 @@ struct WhoIsWhoListView: View {
                                      searchText: searchText,
                                      wkWebView: wkWebView)
                                     .frame(height: 300)
-                                    .border(.red)
             }
             .scrollTargetLayout() // unit of vertical "smart" scrolling
 

@@ -68,7 +68,7 @@ struct WhoIsWhoTextInfo: View {
                 })
                 .buttonStyle(.plain) // prevents entire List element from becoming clickable
             }
-        } .background(.yellow)
+        }
     }
 }
 
