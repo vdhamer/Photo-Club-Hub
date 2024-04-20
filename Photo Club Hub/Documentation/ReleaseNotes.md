@@ -3,6 +3,7 @@
 Maintenance
 * Major: the fotogroepwaalre.nl http site got damaged. Fixed by transferring the portfolios to a new host.
 * Tested on Xcode 15.4 beta, iOS 17.5 beta 2 (21F5058e), visionOS 1.2 beta 2 (21O5565d)
+* Fixed ability to directly build GitHub (FGWPrivateMemberURL2 was missing)
 
 This is build #4620 and will be released as v2.6.0 via the Apple App Store.
 
