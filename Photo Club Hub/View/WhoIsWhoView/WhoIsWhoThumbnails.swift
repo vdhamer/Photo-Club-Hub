@@ -55,7 +55,6 @@ struct WhoIsWhoThumbnails: View {
                                 .dynamicTypeSize( // constrain impact of large dynamic type
                                     ...DynamicTypeSize.xLarge)
                         }
-                        .border(.blue)
                     } // VStack to combine image and caption
                 } // ForEach
             } // HStack to support multiple portfolio previews in one row

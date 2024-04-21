@@ -55,13 +55,13 @@ struct FilteredWhoIsWhoView: View {
                         }
 
                     }
-                    .border(.gray, width: 1)
 
                     Spacer()
                     WhoIsWhoThumbnails(photographer: filteredPhotographer, wkWebView: wkWebView)
                     Spacer()
 
                 } // VStack
+                .border(.separator, width: 1)
                 .accentColor(.photographerColor)
                 .foregroundColor(chooseColor(accentColor: .accentColor,
                                              isDeceased: filteredPhotographer.isDeceased))
