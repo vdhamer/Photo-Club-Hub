@@ -1,6 +1,10 @@
 ### 2.6.1 (GitHub commit ???????) ??-04-24
 
-This is build #4621.
+Maintenance
+
+* Removed external URL for Hans Zoete.
+
+This is build #4622.
 
 ---------------------------------------------------------------------------
 
