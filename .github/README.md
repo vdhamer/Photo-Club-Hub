@@ -730,8 +730,8 @@ will remain available.
 
 <details><summary>Details (click to expand)</summary></p>
 
-If you choose to remove and reinstall the app, the database content will be lost.
-Fortunately, this has no real implications for the user as the data storage doesn't contain any relevant user data (so far).
+If you instead choose to remove and reinstall the app, the locally stored database content will be lost. This is how iOS works.
+Fortunately, this has no real implications for the user as the data storage doesn't presently contain any relevant user data. So essentially you can regard the database as a cache: it lets the app launch quicker without waiting for content that has alread been fetched during a previous session.
     
 #### Schema Migration
 
