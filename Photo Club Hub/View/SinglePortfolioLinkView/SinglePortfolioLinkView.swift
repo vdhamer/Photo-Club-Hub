@@ -21,9 +21,9 @@ struct SinglePortfolioLinkView<Content: View>: View {
         NavigationLink(destination: SinglePortfolioView(url: destPortfolio.level3URL, webView: wkWebView)
             .navigationTitle(destPortfolio.photographer.fullNameFirstLast +
                              " @ " + fullNameOrNickName(horSizeClass: horSizeClass))
-                .navigationBarTitleDisplayMode(NavigationBarItem.TitleDisplayMode.inline)) {
-            content()
-        }
+            .navigationBarTitleDisplayMode(NavigationBarItem.TitleDisplayMode.inline)) {
+                content()
+            }
     }
 
     func fullNameOrNickName(horSizeClass: UserInterfaceSizeClass?) -> String {
@@ -33,10 +33,10 @@ struct SinglePortfolioLinkView<Content: View>: View {
     }
 }
 
- #Preview { // doesn't really work?
-     let destPortfolio: MemberPortfolio = MemberPortfolio()
-     let wkWebView = WKWebView()
-     return SinglePortfolioLinkView(destPortfolio: destPortfolio, wkWebView: wkWebView) {
-         Text(verbatim: "Test Link")
-     }
- }
+#Preview { // doesn't really work
+    let destPortfolio: MemberPortfolio = MemberPortfolio()
+    let wkWebView = WKWebView()
+    return SinglePortfolioLinkView(destPortfolio: destPortfolio, wkWebView: wkWebView) {
+        Text(verbatim: "Test Link")
+    }
+}

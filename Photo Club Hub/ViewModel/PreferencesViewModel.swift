@@ -93,7 +93,7 @@ struct PreferencesStruct: Codable { // order in which they are shown on Preferen
     }
 
     var photographerPredicate: NSPredicate {
-        return NSPredicate.all // for now, we show all Photographers
+        return NSPredicate.all // for now, we show all Photographers because filtering is done in View
     }
 
     var photoClubPredicate: NSPredicate {

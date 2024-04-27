@@ -1,5 +1,11 @@
 ### 2.6.1 (GitHub commit ???????) ??-04-24
 
+Who's Who screen
+* Cleaned up vertical smart scrolling (scrolling stops on item boundaries)
+* Horizontal scrolling disabled if there is only one thumbnmail
+* Always show birthday and URL info (to get fixed vertical view size)
+* Display horizontal scroll indicator where applicable
+
 Maintenance
 
 * Removed external URL for Hans Zoete.
@@ -15,7 +21,7 @@ Who's Who screen
 
 Maintenance
 * Major: the Fotogroep Waalre portfolios were no longer accessible. Fixed by regenerating them on my own server.
-* Tested on Xcode 15.4 beta, iOS 17.5 beta 2 (21F5058e), visionOS 1.2 beta 2 (21O5565d)
+* Tested on Xcode 15.4 beta 1, iOS 17.5 beta 2 (21F5058e), visionOS 1.2 beta 2 (21O5565d)
 * Fixed ability to directly build GitHub (FGWPrivateMemberURL2 was missing)
 
 This is build #4621 and will be released (with build #4619 changes) as v2.6.0 via the Apple App Store.

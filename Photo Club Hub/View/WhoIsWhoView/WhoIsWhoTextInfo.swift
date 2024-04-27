@@ -7,6 +7,14 @@
 
 import SwiftUI
 
+// Implements a few lines of text at top of each photographer card, containing:
+//     * an icon (with a special icon if the photographer is deceased)
+//     * photographer's name (last name first)
+//     * optionally a link icon that leads to the phototographer's own website
+//     * some textual information
+//     * a horizontally scrolling list of thumbnails representing portfolios
+// Preview is commented out (doesn't work yet).
+
 struct WhoIsWhoTextInfo: View {
     var photographer: Photographer
     private let dateFormatter: DateFormatter
@@ -24,24 +32,28 @@ struct WhoIsWhoTextInfo: View {
         VStack(alignment: .leading) { // lines of text with different pieces of information
             // first green line with icon and name of photographer
             let alive: String = photographer.isDeceased ? // generate name suffix
-            (" - " + MemberStatus.deceased.localizedString()) : ""
-            Text(verbatim: "\(photographer.fullNameLastFirst)\(alive)")
-                .font(.title3)
-                .tracking(1)
+                (" - " + MemberStatus.deceased.localizedString()) : ""
+                Text(verbatim: "\(photographer.fullNameLastFirst)\(alive)")
+                    .font(.title3)
+                    .tracking(1)
 
-            // birthday if available (year of birth is not shown)
+            let locBirthday = String(localized: "Birthday", // birthday if available (year of birth is not shown)
+                                     comment: """
+                                              Birthday of member (without year). \
+                                              Date not currently localized?
+                                              """)
             if let date: Date = photographer.bornDT {
-                let locBirthday = String(localized: "Birthday:",
-                                         comment: """
-                                                          Birthday of member (without year). \
-                                                          Date not currently localized?
-                                                          """)
-                Text(verbatim: "\(locBirthday) \(dateFormatter.string(from: date))")
+                Text(verbatim: "\(locBirthday): \(dateFormatter.string(from: date))")
                     .font(.subheadline)
-                    .foregroundColor(photographer.isDeceased ? .deceasedColor : .primary)
+                    .foregroundStyle(photographer.isDeceased ? .deceasedColor : .primary)
+            } else {
+                Text("Birthday unknown", comment: "If photographer's birthday info is unavailable (Who's Who screen).")
+                    .font(.subheadline)
+                    .foregroundStyle(photographer.isDeceased ? .deceasedColor : .gray)
             }
 
             // phone number if available (and allowed)
+            /*
             if photographer.phoneNumber != "", showPhoneMail, photographer.isAlive {
                 let locPhone = String(localized: "Phone:",
                                       comment: "Telephone number (usually invisible)")
@@ -56,6 +68,7 @@ struct WhoIsWhoTextInfo: View {
                     .font(.subheadline)
                     .foregroundColor(.primary) // don't show e-mail addresses for deceased people
             }
+            */
 
             // personal (not club-related) web site if available
             if let url: URL = photographer.website {
@@ -67,14 +80,29 @@ struct WhoIsWhoTextInfo: View {
                         .foregroundColor(.linkColor)
                 })
                 .buttonStyle(.plain) // prevents entire List element from becoming clickable
+            } else {
+                Text("No known personal website",
+                     comment: "Shown on Who's Who screen If photographer has no personal website.")
+                    .font(.subheadline)
+                    .foregroundColor(.gray)
             }
         }
     }
 }
 
 // #Preview {
-//    let photographer = Photographer.findCreateUpdate(context: <#T##NSManagedObjectContext#>,
-//                                                     personName: <#T##PersonName#>, organization: <#T##Organization#>)
+//     let context = PersistenceController.shared.container.viewContext
+//     let photographer = Photographer.findCreateUpdate(context: context,
+//                                                      personName: PersonName(givenName: "John",
+//                                                                             infixName: "", familyName: "Doe"),
+//                                                      organization: Organization.findCreateUpdate(
+//                                                          context: context,
+//                                                          organizationTypeEum: .club,
+//                                                          idPlus: OrganizationIdPlus(fullName: "Happy Clickers",
+//                                                                                     town: "Notown",
+//                                                                                     nickname: "happyClckrs")
+//                                                     )
+//    )
 //
-//    WhoIsWhoTexts(photographer: photographer)
+//    _ = WhoIsWhoTextInfo(photographer: photographer)
 // }

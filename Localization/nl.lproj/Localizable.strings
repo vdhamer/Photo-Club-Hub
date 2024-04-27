@@ -47,7 +47,10 @@
 "Apple" = "Appel";
 
 /* Birthday of member (without year). Date not currently localized? */
-"Birthday:" = "Verjaardag:";
+"Birthday" = "Verjaardag";
+
+/* If photographer's birthday info is unavailable (Who's Who screen). */
+"Birthday unknown" = "Onbekende verjaardag";
 
 /* Caption about Play button on the Readme page */
 "Button for automatic slide show" = "De knop om beelden automatisch af te spelen";
@@ -120,6 +123,9 @@
 
 /* Mode for the Clubs page: show museums as sections. */
 "museums" = "musea";
+
+/* If photographer has no personal website (Who's Who screen). */
+"No known personal website" = "Geen fotografie website";
 
 /* Hint to the user if the database returns zero PhotoClubs. */
 "No photo clubs seem to be currently loaded.\nTry dragging down the Photo Clubs screen to reload the default clubs." = "Er zijn geen Fotogroepen momenteel geladen.\nDoor dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorbeeldclubs geladen. ";

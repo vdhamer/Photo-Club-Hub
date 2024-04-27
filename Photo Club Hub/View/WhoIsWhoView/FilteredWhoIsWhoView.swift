@@ -8,74 +8,78 @@
 import SwiftUI // for View
 import WebKit // for WKWebView
 
+// Implements list of photographer cards including
+//      * defining fetchRequest to get list of photographers sorted on last name
+//      * filtering the photographer list based on search bar string
+//      * per photographer card, it displays
+//          - an icon (with a special icon if the photographer is deceased)
+//          - photographer's name (last name first)
+//          - optionally a link icon that leads to the phototographer's own website
+//          - some textual information
+//          - a horizontally scrolling list of thumbnails representing portfolios
+// Preview unfortunately doesn't work.
+
 struct FilteredWhoIsWhoView: View {
 
     @Environment(\.managedObjectContext) private var viewContext // may not be correct
     @FetchRequest var fetchRequest: FetchedResults<Photographer>
 
-    private let isDeletePhotographersPermitted = true // disables .delete() functionality for this screen
+    private let isDeletePhotographersPermitted = true // enable/disable .delete() functionality for this screen
     let searchText: Binding<String>
     let wkWebView: WKWebView
 
     // regenerate Section using current FetchRequest with current filters and sorting
     init(predicate: NSPredicate, searchText: Binding<String>, wkWebView: WKWebView) {
         _fetchRequest = FetchRequest<Photographer>(sortDescriptors: [ // replaces previous fetchRequest
-            SortDescriptor(\.familyName_, order: .forward),
-            SortDescriptor(\.givenName_, order: .forward)
-                                                                    ],
+                                                        SortDescriptor(\.familyName_, order: .forward),
+                                                        SortDescriptor(\.givenName_, order: .forward)],
                                                    predicate: predicate,
                                                    animation: .default)
-
         self.searchText = searchText
         self.wkWebView = wkWebView
     }
 
     var body: some View {
-//        Section {
-            ForEach(filteredPhotographers, id: \.id) { filteredPhotographer in // each photographer's "card"
-                VStack(alignment: .leading) { // there are horizontal layers within each photographer's "card"
-                    HStack(alignment: .top) { // first row within each photographer's "card" with textual info
+        ForEach(filteredPhotographers, id: \.id) { filteredPhotographer in // each photographer's "card"
+            VStack(alignment: .leading) { // there are horizontal layers within each photographer's "card"
+                HStack(alignment: .top) { // first row within each photographer's "card" with textual info
 
-                        PhotographerIconView(isDeceased: filteredPhotographer.isDeceased)
-                            .foregroundStyle(.photographerColor, .gray, .red) // red tertiary color should not show up
-                            .font(.title3)
-                            .frame(width: 35)
-                            .padding(.top, 3)
+                    PhotographerIconView(isDeceased: filteredPhotographer.isDeceased)
+                        .foregroundStyle(.photographerColor, .gray, .red) // red tertiary color should not show up
+                        .font(.title3)
+                        .frame(width: 35)
+                        .padding(.top, 3)
 
-                        WhoIsWhoTextInfo(photographer: filteredPhotographer)
+                    WhoIsWhoTextInfo(photographer: filteredPhotographer)
 
-                        Spacer() // push WhoIsTextInfo to the left
+                    Spacer() // push WhoIsTextInfo to the left
 
-                        if let url: URL = filteredPhotographer.website {
-                            Link(destination: url, label: {
-                                Image(systemName: "link")
-                                    .foregroundColor(.linkColor)
-                            })
-                            .buttonStyle(.plain) // to avoid entire List element to be clickable
-                        }
-
+                    if let url: URL = filteredPhotographer.website {
+                        Link(destination: url, label: {
+                            Image(systemName: "link")
+                                .foregroundColor(.linkColor)
+                        })
+                        .buttonStyle(.plain) // to avoid entire List element to be clickable
                     }
 
-                    Spacer()
-                    WhoIsWhoThumbnails(photographer: filteredPhotographer, wkWebView: wkWebView)
-                    Spacer()
+                }
 
-                } // VStack
-                .border(.separator, width: 1)
-                .accentColor(.photographerColor)
-                .foregroundColor(chooseColor(accentColor: .accentColor,
-                                             isDeceased: filteredPhotographer.isDeceased))
+                WhoIsWhoThumbnails(photographer: filteredPhotographer, wkWebView: wkWebView)
 
-            } // ForEach filteredPhotographer
-            .onDelete(perform: deletePhotographers) // can be disabled using isDeletedPhotographerEnabled flag
-//        } // Section
+                Divider()
+            } // VStack
+            .accentColor(.photographerColor)
+            .foregroundColor(chooseColor(accentColor: .accentColor,
+                                         isDeceased: filteredPhotographer.isDeceased))
+        } // ForEach filteredPhotographer
+        .onDelete(perform: deletePhotographers) // can be disabled using isDeletedPhotographerEnabled flag
         /* header: { // Table has only one section and it gets a header
-            ItemFilterStatsView(filteredCount: filteredPhotographers.count,
-                                unfilteredCount: fetchRequest.count,
-                                elementType: ItemFilterStatsEnum.photographer)
-            .textCase(nil) // https://sarunw.com/posts/swiftui-list-section-header-textcase/
-        } // header
-           */
+         ItemFilterStatsView(filteredCount: filteredPhotographers.count,
+         unfilteredCount: fetchRequest.count,
+         elementType: ItemFilterStatsEnum.photographer)
+         .textCase(nil) // https://sarunw.com/posts/swiftui-list-section-header-textcase/
+         } // header
+         */
     } // body
 
     private var filteredPhotographers: [Photographer] {

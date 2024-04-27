@@ -47,7 +47,10 @@
 "Apple" = "Apple";
 
 /* Birthday of member (without year). Date not currently localized? */
-"Birthday:" = "Birthday:";
+"Birthday" = "Birthday";
+
+/* If photographer's birthday info is unavailable (Who's Who screen). */
+"Birthday unknown" = "Birthday unknown";
 
 /* Caption about Play button on the Readme page */
 "Button for automatic slide show" = "Button for automatic slide show";
@@ -114,6 +117,9 @@
 
 /* Statistics at end of section of FilteredMemberPortfoliosView */
 "members" = "members";
+
+/* If photographer has no personal website (Who's Who screen). */
+"No known personal website" = "No known personal website";
 
 /* Hint to the user if the database returns zero PhotoClubs. */
 "No photo clubs seem to be currently loaded.\nTry dragging down the Photo Clubs screen to reload the default clubs." = "No photo clubs seem to be currently loaded.\nTry dragging down the Photo Clubs screen to reload the default clubs.";

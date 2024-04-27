@@ -9,6 +9,13 @@ import SwiftUI
 import CoreData
 import WebKit // for wkWebView
 
+// Implements entire Who's Who screen including
+//     * setting navigation title,
+//     * searchbar to filter on photographer's name,
+//     * vertical (smart) scrolling photographer cards,
+//     * help text at bottom.
+// Preview unfortunately doesn't work.
+
 struct WhoIsWhoListView: View {
     @Environment(\.managedObjectContext) private var viewContext
     @State private var showingPhotoClubs = false
@@ -34,7 +41,6 @@ struct WhoIsWhoListView: View {
                 FilteredWhoIsWhoView(predicate: model.preferences.photographerPredicate,
                                      searchText: searchText,
                                      wkWebView: wkWebView)
-                                    .frame(height: 300)
             }
             .scrollTargetLayout() // unit of vertical "smart" scrolling
 
