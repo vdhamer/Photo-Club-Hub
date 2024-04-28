@@ -448,9 +448,9 @@ To add a club to the app, the app distinguishes 3 levels of information:
 These layers of information are called `Levels` here because they need to be submitted in ascending order and, 
 whenever the `Level` of a club increases, additional app features are automatically enabled for that club.
 
-A club can take as long as needed before proceeding to a next level (days, weeks, months..).
-This means that the app user will see clubs with different `Levels` throughout the app.
-To the user this simply means that some clubs have shared more types of information than others. 
+A club can take as long as needed (days, weeks, months) before proceeding to a next level.
+This means that an app user will see clubs with different `Levels` throughout the app.
+To the user this simply means that some clubs have shared more information than others. 
 
 Museums are added in the same way, although `Level 2` and `Level 3` are not applicable here.
 
