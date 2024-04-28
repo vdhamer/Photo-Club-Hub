@@ -1,5 +1,7 @@
 ### 2.6.2 (GitHub commit ???????) ??-05-24
 
+Documentation
+* Cleaned up level 1 description of README.md file on Github.
 
 This is build #4623
 
