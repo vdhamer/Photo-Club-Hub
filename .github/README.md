@@ -472,7 +472,7 @@ Attempting to view a portfolio of a club member without an available portfolio w
 ### Level 1. Adding Clubs
 
 Adding photo clubs (or museums) at `Level 1` requires providing the item's name, location and a few optional URLs. 
-This enables the app to list the item on the `Clubs and Museums` screen and display its location on maps by adding a marker.
+This enables the app to list the item on the `Clubs and Museums` screen and display its location on maps with a marker.
 
 `Level 1` data is stored in a _single_ central online `root.level1.json` 
 [file](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/ViewModel/Lists/root.level1.json)
