@@ -39,7 +39,7 @@
             <li><a href="#data-privacy">Data Privacy</a>
         </ul>
     </details>
-    <details open><summary><a href="#adding-more-photo-clubs">Adding photo clubs to the app</a></summary>
+    <details open><summary><a href="#adding-photo-clubs-to-the-app">Adding photo clubs to the app</a></summary>
         <ul>
             <li><a href="#level-1-adding-clubs">Level 1. Adding Clubs</a></li>
             <li><a href="#level-2-adding-members">Level 2. Adding Members</a></li>
