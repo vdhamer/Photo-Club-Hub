@@ -476,12 +476,12 @@ This enables the app to list the item on the `Clubs and Museums` screen and disp
 
 `Level 1` data is stored in a _single_ central online `root.level1.json` 
 [file](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/ViewModel/Lists/root.level1.json)
-that happens to be hosted on GitHub.
-Whenver the app is launched, it reads this file and merges that up-to-date data into the existing on-device (`CoreData`) data.
+that's hosted on GitHub.
+Whenever the app is launched, it reads this file and merges this (up-to-date) file data with the existing (potentially outdated) on-device data.
 
-If you send us a club's `Level 1` information, we will add it to the central `root.level1.json` file.
-However, it is recommended to provide the change (and any future updates) as a GitHub _pull request_.
-This reduces the work required to handle many updates, and reduces the risk of administrative errors.
+If you send us a club's `Level 1` information, we will add it for you to the `root.level1.json` file.
+However, we prefer if you provide the change (and any future updates) as a GitHub _pull request_.
+This reduces the work required to handle many updates, and reduces the risk of administrative errors on your side or on our side.
 
 The same applies if you want to add a missing photo museum to the central `root.level1.json` file.
 
