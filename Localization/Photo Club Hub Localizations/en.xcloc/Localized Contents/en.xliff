@@ -588,11 +588,6 @@ Try dragging down the Photo Clubs screen to reload the default clubs.</target>
         <target>The Prelude</target>
         <note>Section title on Readme page</note>
       </trans-unit>
-      <trans-unit id="This page lists all the photographers known to the app. A photographer has one or more clickable image thumbnails below the photographer's name. Clicking on a thumbnail brings you to the image portfolio for that potographer/club combination. The thumbnails can be scrolled horizontally. Photographers can be deleted using swipe-left." xml:space="preserve">
-        <source>This page lists all the photographers known to the app. A photographer has one or more clickable image thumbnails below the photographer's name. Clicking on a thumbnail brings you to the image portfolio for that potographer/club combination. The thumbnails can be scrolled horizontally. Photographers can be deleted using swipe-left.</source>
-        <target>This page lists all the photographers known to the app. A photographer has one or more clickable image thumbnails below the photographer's name. Clicking on a thumbnail brings you to the image portfolio for that potographer/club combination. The thumbnails can be scrolled horizontally. Photographers can be deleted using swipe-left.</target>
-        <note>Shown in gray at the bottom of the Photographers page.</note>
-      </trans-unit>
       <trans-unit id="To see names here, please adapt the Search filter or enable additional categories on the Preferences page." xml:space="preserve">
         <source>To see names here, please adapt the Search filter or enable additional categories on the Preferences page.</source>
         <target>To see names here, please adapt the Search filter or enable additional categories on the Preferences page.</target>
@@ -617,6 +612,21 @@ Try dragging down the Photo Clubs screen to reload the default clubs.</target>
         <source>Who's Who</source>
         <target>Who's Who</target>
         <note>Title of page with list of photographers</note>
+      </trans-unit>
+      <trans-unit id="WhosWho_Caption_1" xml:space="preserve">
+        <source>① This page lists all the photographers known to the app.</source>
+        <target>① This page lists all the photographers known to the app.</target>
+        <note>Shown in gray at the bottom of the Who's Who page (1/3).</note>
+      </trans-unit>
+      <trans-unit id="WhosWho_Caption_2" xml:space="preserve">
+        <source>② A photographer has one or more clickable image thumbnails below the photographer's name. Clicking on a thumbnail brings you to the image portfolio for that potographer/club combination.</source>
+        <target>② A photographer has one or more clickable image thumbnails below the photographer's name. Clicking on a thumbnail brings you to the image portfolio for that potographer/club combination.</target>
+        <note>Shown in gray at the bottom of the Who's Who page (2/3).</note>
+      </trans-unit>
+      <trans-unit id="WhosWho_Caption_3" xml:space="preserve">
+        <source>③ The thumbnails can be scrolled horizontally. Photographers can be deleted using swipe-left.</source>
+        <target>③ The thumbnails can be scrolled horizontally. Photographers can be deleted using swipe-left.</target>
+        <note>Shown in gray at the bottom of the Who's Who page (3/3).</note>
       </trans-unit>
       <trans-unit id="admin" xml:space="preserve">
         <source>admin</source>

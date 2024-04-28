@@ -1,5 +1,8 @@
 ### 2.6.2 (GitHub commit ???????) ??-05-24
 
+Who's Who screen
+* Cleaned up usage notes at the bottom of the screen.
+
 Documentation
 * Cleaned up level 1 description of README.md file on Github.
 
@@ -15,7 +18,6 @@ Who's Who screen
 * Always show birthday and URL info (to get fixed vertical view size)
 
 Maintenance
-
 * Removed (broken) external URL for Hans Zoete.
 
 This is build #4622, was released via TestFlight, and will be released as v2.6.1 on the App Store.

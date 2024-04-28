@@ -44,10 +44,10 @@ struct OrganizationListView: View {
                 }
                 Group {
                     Text("PhotoClubs_Caption_1",
-                         comment: "Shown in gray at the bottom of the Clubs and Museums page (1/3).")
+                         comment: "Shown in gray at the bottom of the Clubs and Museums page (1/2).")
                     Text("PhotoClubs_Caption_2",
-                         comment: "Shown in gray at the bottom of the Clubs and Museums page (2/3).")
-                } .foregroundColor(Color.primary)
+                         comment: "Shown in gray at the bottom of the Clubs and Museums page (2/2).")
+                } .foregroundColor(Color.secondary)
             }
             .listStyle(.plain)
             .task {

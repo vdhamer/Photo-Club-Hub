@@ -391,9 +391,6 @@
 /* Section title on Readme page */
 "The Prelude" = "Prelude";
 
-/* Shown in gray at the bottom of the Photographers page. */
-"This page lists all the photographers known to the app. A photographer has one or more clickable image thumbnails below the photographer's name. Clicking on a thumbnail brings you to the image portfolio for that potographer/club combination. The thumbnails can be scrolled horizontally. Photographers can be deleted using swipe-left." = "Deze lijst bevat de fotografen die in deze app voorkomen. Per fotograaf is er normaal één of meer miniatuurfoto's. Deze zijn horizontaal door te bladeren. Klik op een foto een portfolio te bekijken. De fotograaf kan verwijderd worden door de naam naar links te vegen.";
-
 /* Hint to the user if the database returns zero Members with Search filter in use. */
 "To see names here, please adapt the Search filter or enable additional categories on the Preferences page." = "Deze lijst is leeg doordat de Zoek filter niets vindt in de gekozen ledencategorieën. Pas dus de Zoek filter aan of voeg categorieën toe (bij Instellingen).";
 
@@ -418,3 +415,11 @@
 /* Title of page with list of photographers */
 "Who's Who" = "Namenlijst";
 
+/* Shown in gray at the bottom of the Who's Who page (1/3). */
+"WhosWho_Caption_1" = "① Deze lijst bevat alle fotografen die in deze app voorkomen.";
+
+/* Shown in gray at the bottom of the Who's Who page (2/3). */
+"WhosWho_Caption_2" = "② Per fotograaf is er meestal één of twee miniatuurfoto's. Klik op een foto om een portfolio te bekijken.";
+
+/* Shown in gray at the bottom of the Who's Who page (3/3). */
+"WhosWho_Caption_3" = "③ De miniatuurfoto's kunnen horizontaal verschoven worden. De fotograaf kan verwijderd worden door de tekst naar links te vegen.";

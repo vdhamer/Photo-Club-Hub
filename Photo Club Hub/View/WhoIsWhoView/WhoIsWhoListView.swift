@@ -44,16 +44,14 @@ struct WhoIsWhoListView: View {
             }
             .scrollTargetLayout() // unit of vertical "smart" scrolling
 
-            Text("""
-                 This page lists all the photographers known to the app. \
-                 A photographer has one or more clickable image thumbnails below the photographer's name. \
-                 Clicking on a thumbnail brings you to the image portfolio \
-                 for that potographer/club combination. \
-                 The thumbnails can be scrolled horizontally. \
-                 Photographers can be deleted using swipe-left.
-                 """,
-                 comment: "Shown in gray at the bottom of the Photographers page.") // footer
-            .foregroundColor(.gray)
+            Group {
+                Text("WhosWho_Caption_1",
+                     comment: "Shown in gray at the bottom of the Who's Who page (1/3).")
+                Text("WhosWho_Caption_2",
+                     comment: "Shown in gray at the bottom of the Who's Who page (2/3).")
+                Text("WhosWho_Caption_3",
+                     comment: "Shown in gray at the bottom of the Who's Who page (3/3).")
+            } .foregroundColor(Color.secondary)
             .padding(.top)
 
         } // ScrollView

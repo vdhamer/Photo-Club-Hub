@@ -49,7 +49,7 @@ struct WhoIsWhoTextInfo: View {
             } else {
                 Text("Birthday unknown", comment: "If photographer's birthday info is unavailable (Who's Who screen).")
                     .font(.subheadline)
-                    .foregroundStyle(photographer.isDeceased ? .deceasedColor : .gray)
+                    .foregroundStyle(photographer.isDeceased ? .deceasedColor : .secondary)
             }
 
             // phone number if available (and allowed)
@@ -84,7 +84,7 @@ struct WhoIsWhoTextInfo: View {
                 Text("No known personal website",
                      comment: "Shown on Who's Who screen If photographer has no personal website.")
                     .font(.subheadline)
-                    .foregroundColor(.gray)
+                    .foregroundColor(.secondary)
             }
         }
     }
