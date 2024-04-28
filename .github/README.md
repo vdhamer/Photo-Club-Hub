@@ -437,7 +437,7 @@ and maintained by the clubs themselves.
 This is important because this allows the app to **support more clubs**.
 But is also also necessary in order to give clubs **control** over their own data:
 a club knows best what to mention regarding the club, who the current members are,
-who the club officers are, and - maybe most significantly - which images to include in member portfolios.
+who the club officers are, and - maybe most significantly - which images the members want in their portfolios.
 
 To add a club to the app, the app distinguishes 3 levels of information:
 
