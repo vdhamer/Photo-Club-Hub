@@ -39,7 +39,7 @@
             <li><a href="#data-privacy">Data Privacy</a>
         </ul>
     </details>
-    <details open><summary><a href="#adding-photo-clubs-to-the-app">Adding photo clubs to the app</a></summary>
+    <details open><summary><a href="#adding-photo-clubs-to-the-app">Adding Photo Clubs to the App</a></summary>
         <ul>
             <li><a href="#level-1-adding-clubs">Level 1. Adding Clubs</a></li>
             <li><a href="#level-2-adding-members">Level 2. Adding Members</a></li>
@@ -429,7 +429,7 @@ But that data is still encrypted by a private encryption key that is not provide
 </details></ul>
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## Adding photo clubs to the app
+## Adding Photo Clubs to the App
 
 > The app is designed so that the required information about photo clubs is provided
 and maintained by the clubs themselves. 
@@ -637,13 +637,17 @@ Here is an example of the format of a `Level 2` list for a photo club. This exam
 ```
 </details></ul>
 
-<ul><details><Summary>Level 2 fields (click to expand)</Summary></p>
+<ul><details><Summary>Mandatory Level 2 fields (click to expand)</Summary></p>
 
-- **Mandatory** fields
     - `club` has the same structure as a single `club` record from the `root.level1.json` file. It serves to label the file so you can tell which club it describes.
         - the `town` and `fullName` fields are required.
         - `town` and `fullName` must exactly match the corresponding fields in the `root.level1.json` file.
     - `members` is a container that holds current and past members. Each `member` correspond to an instance of the `MemberPortfolio` class in the CoreData database.</p>
+
+</details></ul>
+
+<ul><details><Summary>Optional Level 2 fields (click to expand)</Summary></p>
+
 - **Optional** fields (that are ignored)
         - the `level2URL` field can be included, but it's value does _not_ overrule the `level2URL` value in `root.level1.json` for safety reasons.
 - **Optional** fields (that are used)
@@ -682,7 +686,11 @@ using Lightroom (instructions on how this works will be provided later).
 To do
 </details></ul>
 
-<ul><details><Summary>Level 3 fields (click to expand)</Summary></p>
+<ul><details><Summary>Mandatory Level 3 fields (click to expand)</Summary></p>
+To do
+</details></ul>
+
+<ul><details><Summary>Optional Level 3 fields (click to expand)</Summary></p>
 To do
 </details></ul></ul>
 
