@@ -542,14 +542,14 @@ You can indentally check the basic syntax of JSON files using online JSON valida
 [JSONLint](https://jsonlint.com).
 </details></ul>
 
-<ul><details><Summary>Level 1 fields (click to expand)</Summary></p>
+<ul><details><Summary>Manatory Level 1 fields (click to expand)</Summary></p>
 
 - **Mandatory** fields
     - `clubs` and `museums` are required to distinguish photo clubs from photo museums.
         - Syntactially either can be omitted, but then you wouldn't have photo clubs or museums in the app.
         - When loaded into the app's internal database, `clubs` and `museums` determine the `OrganizationType` (`club` or `museum`) of each `Organization` object, which for example determines which marker type is shown on maps.
     - `town` can be a city (London) or smaller locality (Land's End)
-        - `town` is _not_ directy visible in the user interface, although it may look that way. The user interface displays a language-localized name generated using the `coordinates`. This co-called `localizedTown` may contain the same string as `town`, or be a translation of `town`, or may even hold larger or smaller administrative entity. The file's `town` field is used to ensure that there is a unique ID for a club or museum. So `Fotoclub Lucifer` in `Vessem` would be considered unrelated to a `Fotoclub Lucifer` in `Eersel`. The `town` field also serves to document the record in the `root.level1.json` file: it is clearer to say "Victoria and Albert Museum (London)" than to say "Victoria and Albert Museum" and let you figure out the location using its `coordinates`.
+        - `town` is _not_ directy visible in the user interface, although it may look that way. The user interface displays a language-localized name generated using the `coordinates`. This co-called `localizedTown` may contain the same string as `town`, or be a translation of `town`, or may even hold larger or smaller administrative entity. The file's `town` field is used to ensure that there is a unique ID for a club or museum. So `Fotoclub Lucifer` in `Vessem` would be considered unrelated to a `Fotoclub Lucifer` in `Eersel`. The `town` field also serves to document the record in the `root.level1.json` file: it is clearer to say "Victoria and Albert Museum (London)" than to say just "Victoria and Albert Museum" and leave you to determine the location using its `coordinates`.
         - Similarly, the user interface can display a computed `localizedCountry` name that is automatically generated using the provided `coordinates`. The Level 1 data thus does not need or include a `country` attribute. This is convenient because country names commonly get translated into local languages (`Italia`, `Italy`, `İtalya`, etc.).
     - `town` and `fullName` together serve to identify clubs or museums.
         - It is thus possible to have two clubs with the same name in different cities. Two separate clubs or museums with an identical name in the same town would be confusing, and would be treated as a single entity by the app.
@@ -558,6 +558,9 @@ You can indentally check the basic syntax of JSON files using online JSON valida
     - `coordinates` is used to draw the club on the map and to [generate](http://www.vdhamer.com/reversegeocoding-for-localizing-towns-and-countries/) localized versions of the names of towns and countries.
         - `latitude` should be in the range [-90.0, +90.0] where negative values are used for the Sounthern hemisphere (e.g., Australia).
         - `longitude` should be in the range [-180.0, +180.0] where negative values are used for the Western hemisphere (e.g., USA).</p>
+
+<ul><details><Summary>Optional Level 1 fields (click to expand)</Summary></p>
+
 - **Optional** fields
     - `website` holds a URL to the club's general purpose website. It can be opened by the app in a separate browser window.
     - `level2URL` (for clubs only) holds the address of the `Level 2` membership list. It is not used yet (Mar 2024).
