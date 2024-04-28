@@ -471,18 +471,18 @@ Attempting to view a portfolio of a club member without an available portfolio w
 
 ### Level 1. Adding Clubs
 
-Adding photo clubs (or museums) at `Level 1` requires providing the item's name, location and a few optional URLs. 
-This enables the app to list the item on the `Clubs and Museums` screen and display its location on maps with a marker.
+Adding photo clubs (or museums) to get to `Level 1` requires providing the item's name, location and a few optional URLs. 
+This enables the app to list the items on the `Clubs and Museums` screen and display them using location markers on the maps.
 
-`Level 1` data is stored in a _single_ central online `root.level1.json` 
+`Level 1` data is technically stored in a _single_ `root.level1.json` 
 [file](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/ViewModel/Lists/root.level1.json)
-that's hosted on GitHub.
-Whenever the app is launched, it updates its potentially outdate on-device data using this central file.
-The user can already use the app during the update process: screens will get updated dynamically if necessary.
+that is hosted on GitHub.
+Whenever the app is launched, it updates any outdated on-device data by reading this cenral online file.
+The user can already use the app during the update process: screens will update dynamically when necessary.
 
-If you send us a club's `Level 1` information, we will add it for you to the `root.level1.json` file.
+If you send us a club's `Level 1` information, we are happy to add it for you to this central `root.level1.json` file.
 However, where possible, we prefer if you provide the change (and any future updates) as a GitHub _pull request_.
-This reduces the work required to handle many updates, and reduces the risk of administrative errors on your side or on our side.
+This reduces the work required to handle many updates, and reduces the risk of administrative errors.
 
 The same applies if you want to add a missing photo museum to the central `root.level1.json` file.
 
