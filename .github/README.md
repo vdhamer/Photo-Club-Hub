@@ -562,7 +562,7 @@ You can indentally check the basic syntax of JSON files using online JSON valida
 <ul><details><Summary>Optional Level 1 fields (click to expand)</Summary></p>
 
 - `website` holds a URL to the club's general purpose website. It can be opened by the app in a separate browser window.
-- `level2URL` (for clubs only) holds the address of the `Level 2` membership list. It is not used yet (Mar 2024).
+- `level2URL` (for clubs only) holds the address of the `Level 2` membership list. It is not used yet (April 2024).
 - `wikipedia` contains a URL to a Wikipedia page for a museum. It _could_ be used for photo clubs - but Wikipedia pages for photo clubs probably don't/won't exist.
 - `remark` contains a brief note with something worth knowing about the club or museum. The `remark` contains an array of alternative strings in multiple languages. The app chooses one of the provided languages to display based on the device's language setting.
   - `language` is the two or three letter [ISO-639](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes) code for a language. `EN` is English, `FI` is Finnish.
