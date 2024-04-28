@@ -39,7 +39,7 @@
             <li><a href="#data-privacy">Data Privacy</a>
         </ul>
     </details>
-    <details open><summary><a href="#adding-more-photo-clubs">Adding More Photo Clubs</a></summary>
+    <details open><summary><a href="#adding-more-photo-clubs">Adding photo clubs to the app</a></summary>
         <ul>
             <li><a href="#level-1-adding-clubs">Level 1. Adding Clubs</a></li>
             <li><a href="#level-2-adding-members">Level 2. Adding Members</a></li>
@@ -429,7 +429,7 @@ But that data is still encrypted by a private encryption key that is not provide
 </details></ul>
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## Adding More Photo Clubs
+## Adding photo clubs to the app
 
 > The app is designed so that the required information about photo clubs is provided
 and maintained by the clubs themselves. 
