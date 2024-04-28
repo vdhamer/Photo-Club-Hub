@@ -575,17 +575,18 @@ You can indentally check the basic syntax of JSON files using online JSON valida
 
 ### Level 2. Adding Members
 
-`Level 2` requires providing a list of the names of current (and maybe former) club members as a JSON file.
-This file can be stored anywhere you like as long as it can be read via a web address (URL).
-For example, you can store it in the Media section of your club’s Wordpress web site.
-With `Level 2`, the membership lists show up on the Portfolios screen.
-Fotogroep Anders in the Netherlands is an example of a `Level 2` club. We are currently simplifying `Level 2` support.<\p>
+`Level 2` requires providing a list of the names of current (and optionally former) club members as a JSON file.
+This file can be stored anywhere - providing that it can be accessed using a web address (URL).
+For example, you can store it in the Media section of your club’s Wordpress web site using Wordpress' built-in uploading capability.
+With this `Level 2` data, the club members show up in the Portfolios screen.
+_Fotogroep Anders_ in the Netherlands is a good example of a `Level 2` club. We are currently simplifying `Level 2` support.<\p>
 
-Each `Level 2` list defines the current (and potentially former) members of a single club.
+Each `Level 2` JSON file lists the current (and potentially former) members of a single club.
 For each member, a URL is stored pointing to the `Level 3` file (portfolio per member).
 `Level 2` lists also includes the URL of an image used as thumbnail for that member.
-`Level 2` lists can be stored and managed on the club's own server. The file needs to be in a JSON format to allow the app to interpret it correctly.
-A future editing tool (app or web-based) would help ensure syntactic and schema consistency.</p>
+`Level 2` lists can be stored and managed on the club's own server. The file needs to be in a JSON format so that the app can interpret the data.
+You can check the basic syntax of JSON files using online JSON validators such as
+[JSONLint](https://jsonlint.com).</p>
 
 <ul><details><Summary>Level 2 example (click to expand)</Summary></p>
 
