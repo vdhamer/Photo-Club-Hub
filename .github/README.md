@@ -639,17 +639,17 @@ Here is an example of the format of a `Level 2` list for a photo club. This exam
 
 <ul><details><Summary>Mandatory Level 2 fields (click to expand)</Summary></p>
 
-    - `club` has the same structure as a single `club` record from the `root.level1.json` file. It serves to label the file so you can tell which club it describes.
-        - the `town` and `fullName` fields are required.
-        - `town` and `fullName` must exactly match the corresponding fields in the `root.level1.json` file.
-    - `members` is a container that holds current and past members. Each `member` correspond to an instance of the `MemberPortfolio` class in the CoreData database.</p>
+- `club` has the same structure as a single `club` record from the `root.level1.json` file. It serves to label the file so you can tell which club it describes.
+  - the `town` and `fullName` fields are required.
+  - `town` and `fullName` must exactly match the corresponding fields in the `root.level1.json` file.
+- `members` is a container that holds current and past members. Each `member` correspond to an instance of the `MemberPortfolio` class in the CoreData database.</p>
 
 </details></ul>
 
 <ul><details><Summary>Optional Level 2 fields (click to expand)</Summary></p>
 
 - **Optional** fields (that are ignored)
-        - the `level2URL` field can be included, but it's value does _not_ overrule the `level2URL` value in `root.level1.json` for safety reasons.
+    - the `level2URL` field can be included, but it's value does _not_ overrule the `level2URL` value in `root.level1.json` for safety reasons.
 - **Optional** fields (that are used)
     - a club's `nickName`, `latitude`, `longitude`, and `website` overrule the corresponding `root.level1.json` fields if needed. This allows a club to _correct_ centrally-provided information with club-provided information.</p>
     - `givenName`, `infixName` and `familyName` are used to uniquely identify the photographer.
