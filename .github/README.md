@@ -558,6 +558,7 @@ You can indentally check the basic syntax of JSON files using online JSON valida
     - `coordinates` is used to draw the club on the map and to [generate](http://www.vdhamer.com/reversegeocoding-for-localizing-towns-and-countries/) localized versions of the names of towns and countries.
         - `latitude` should be in the range [-90.0, +90.0] where negative values are used for the Sounthern hemisphere (e.g., Australia).
         - `longitude` should be in the range [-180.0, +180.0] where negative values are used for the Western hemisphere (e.g., USA).</p>
+</details>
 
 <ul><details><Summary>Optional Level 1 fields (click to expand)</Summary></p>
 
