@@ -1,16 +1,22 @@
-### 2.6.1 (GitHub commit ???????) ??-04-24
+### 2.6.2 (GitHub commit ???????) ??-05-24
+
+
+This is build #4623
+
+---------------------------------------------------------------------------
+
+### 2.6.1 (GitHub commit f4d89a9) 28-04-24
 
 Who's Who screen
 * Cleaned up vertical smart scrolling (scrolling stops on item boundaries)
-* Horizontal scrolling disabled if there is only one thumbnmail
-* Always show birthday and URL info (to get fixed vertical view size)
 * Display horizontal scroll indicator where applicable
+* Always show birthday and URL info (to get fixed vertical view size)
 
 Maintenance
 
-* Removed external URL for Hans Zoete.
+* Removed (broken) external URL for Hans Zoete.
 
-This is build #4622.
+This is build #4622, was released via TestFlight, and will be released as v2.6.1 on the App Store.
 
 ---------------------------------------------------------------------------
 
