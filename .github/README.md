@@ -561,17 +561,16 @@ You can indentally check the basic syntax of JSON files using online JSON valida
 
 <ul><details><Summary>Optional Level 1 fields (click to expand)</Summary></p>
 
-- **Optional** fields
-    - `website` holds a URL to the club's general purpose website. It can be opened by the app in a separate browser window.
-    - `level2URL` (for clubs only) holds the address of the `Level 2` membership list. It is not used yet (Mar 2024).
-    - `wikipedia` contains a URL to a Wikipedia page for a museum. It _could_ be used for photo clubs - but Wikipedia pages for photo clubs probably don't/won't exist.
-    - `remark` contains a brief note with something worth knowing about the club or museum. The `remark` contains an array of alternative strings in multiple languages. The app chooses one of the provided languages to display based on the device's language setting.
-        - `language` is the two or three letter [ISO-639](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes) code for a language. `EN` is English, `FI` is Finnish.
-        - `value` is the text to display for that particular remark in that language.
-        - If the device's preferred language doesn't match any of the provided languages, the app will default to EN, if available. If EN is unavailable, it will select one of the available languages.
-    - `nlSpecific` is a container for fields that are only relevant for clubs in the Netherlands.
-        - `fotobondNumber` is an ID number assigned by the Dutch national federation of photo clubs.
-        - There used to be a `kvkNumber` as well (Chamber of Commerce) but that was removed because it wasn't worth the effort.
+- `website` holds a URL to the club's general purpose website. It can be opened by the app in a separate browser window.
+- `level2URL` (for clubs only) holds the address of the `Level 2` membership list. It is not used yet (Mar 2024).
+- `wikipedia` contains a URL to a Wikipedia page for a museum. It _could_ be used for photo clubs - but Wikipedia pages for photo clubs probably don't/won't exist.
+- `remark` contains a brief note with something worth knowing about the club or museum. The `remark` contains an array of alternative strings in multiple languages. The app chooses one of the provided languages to display based on the device's language setting.
+  - `language` is the two or three letter [ISO-639](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes) code for a language. `EN` is English, `FI` is Finnish.
+    - `value` is the text to display for that particular remark in that language.
+    - If the device's preferred language doesn't match any of the provided languages, the app will default to EN, if available. If EN is unavailable, it will select one of the available languages.
+- `nlSpecific` is a container for fields that are only relevant for clubs in the Netherlands.
+  - `fotobondNumber` is an ID number assigned by the Dutch national federation of photo clubs.
+  - There used to be a `kvkNumber` as well (Chamber of Commerce) but that was removed because it wasn't worth the effort.
 </details></ul></p>
 
 ### Level 2. Adding Members
