@@ -419,7 +419,7 @@
 "WhosWho_Caption_1" = "① Deze lijst bevat alle fotografen die in deze app voorkomen.";
 
 /* Shown in gray at the bottom of the Who's Who page (2/3). */
-"WhosWho_Caption_2" = "② Per fotograaf is er meestal één of twee miniatuurfoto's. Klik op een foto om een portfolio te bekijken.";
+"WhosWho_Caption_2" = "② Per fotograaf zijn er meestal één of twee miniatuurfoto's. Klik op een foto om een portfolio te bekijken.";
 
 /* Shown in gray at the bottom of the Who's Who page (3/3). */
 "WhosWho_Caption_3" = "③ De miniatuurfoto's kunnen horizontaal verschoven worden. De fotograaf kan verwijderd worden door de tekst naar links te vegen.";
