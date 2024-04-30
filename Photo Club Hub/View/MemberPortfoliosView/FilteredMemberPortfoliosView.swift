@@ -51,9 +51,9 @@ struct FilteredMemberPortfoliosView: View {
                     MemberPortfolioRow(member: filteredMember, wkWebView: wkWebView)
                         .listRowSeparator(.visible)
                 }
-                .onDelete(perform: { indexSet in
+                .onDelete { indexSet in
                     deleteMembers(section: Array(section), indexSet: indexSet)
-                })
+                }
                 .accentColor(.memberPortfolioColor)
             } header: {
                 Header(title: section.id) // String used to group the elements into Sections
