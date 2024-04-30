@@ -22,7 +22,7 @@ import WebKit // for WKWebView
 struct FilteredWhoIsWhoView: View {
 
     @Environment(\.managedObjectContext) private var viewContext // may not be correct
-    @FetchRequest var fetchRequest: FetchedResults<Photographer>
+    @FetchRequest var fetchedPhotographers: FetchedResults<Photographer>
 
     private let isDeletePhotographersPermitted = true // enable/disable .delete() functionality for this screen
     let searchText: Binding<String>
@@ -30,7 +30,7 @@ struct FilteredWhoIsWhoView: View {
 
     // regenerate Section using current FetchRequest with current filters and sorting
     init(predicate: NSPredicate, searchText: Binding<String>, wkWebView: WKWebView) {
-        _fetchRequest = FetchRequest<Photographer>(sortDescriptors: [ // replaces previous fetchRequest
+        _fetchedPhotographers = FetchRequest<Photographer>(sortDescriptors: [ // replaces previous fetchedPhotographers
                                                         SortDescriptor(\.familyName_, order: .forward),
                                                         SortDescriptor(\.givenName_, order: .forward)],
                                                    predicate: predicate,
@@ -62,7 +62,7 @@ struct FilteredWhoIsWhoView: View {
                         .buttonStyle(.plain) // to avoid entire List element to be clickable
                     }
 
-                }
+                } // HStack
 
                 WhoIsWhoThumbnails(photographer: filteredPhotographer, wkWebView: wkWebView)
 
@@ -84,11 +84,11 @@ struct FilteredWhoIsWhoView: View {
 
     private var filteredPhotographers: [Photographer] {
         if searchText.wrappedValue.isEmpty {
-            return fetchRequest.filter { _ in
+            return fetchedPhotographers.filter { _ in
                 true
             }
         } else {
-            return fetchRequest.filter { photographer in
+            return fetchedPhotographers.filter { photographer in
                 photographer.fullNameFirstLast.localizedCaseInsensitiveContains(searchText.wrappedValue) }
         }
     }
@@ -97,11 +97,11 @@ struct FilteredWhoIsWhoView: View {
         isDeceased ? .deceasedColor : .photographerColor
     }
 
-    private func deletePhotographers(offsets: IndexSet) {
+    private func deletePhotographers(indexSet: IndexSet) {
         guard isDeletePhotographersPermitted else { return } // exit if feature is disabled
 
-        let fullName: String = offsets.map { filteredPhotographers[$0] }.first?.fullNameFirstLast ?? "noName"
-        offsets.map { filteredPhotographers[$0] }.forEach( viewContext.delete )
+        let fullName: String = indexSet.map { filteredPhotographers[$0] }.first?.fullNameFirstLast ?? "noName"
+        indexSet.map { filteredPhotographers[$0] }.forEach( viewContext.delete )
 
         do {
             if viewContext.hasChanges {

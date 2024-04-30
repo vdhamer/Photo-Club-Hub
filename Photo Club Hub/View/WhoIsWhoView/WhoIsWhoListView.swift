@@ -10,7 +10,7 @@ import CoreData
 import WebKit // for wkWebView
 
 // Implements entire Who's Who screen including
-//     * setting navigation title,
+//     * providing the navigation title,
 //     * searchbar to filter on photographer's name,
 //     * vertical (smart) scrolling photographer cards,
 //     * help text at bottom.
