@@ -72,7 +72,10 @@ struct FilteredWhoIsWhoView: View {
             .foregroundColor(chooseColor(accentColor: .accentColor,
                                          isDeceased: filteredPhotographer.isDeceased))
         } // ForEach filteredPhotographer
-        .onDelete(perform: deletePhotographers) // can be disabled using isDeletedPhotographerEnabled flag
+        .onDelete(perform: { indexSet in
+            deletePhotographers(indexSet: indexSet) // can be disabled using isDeletedPhotographerEnabled flag
+        })
+
         /* header: { // Table has only one section and it gets a header
          ItemFilterStatsView(filteredCount: filteredPhotographers.count,
          unfilteredCount: fetchRequest.count,
