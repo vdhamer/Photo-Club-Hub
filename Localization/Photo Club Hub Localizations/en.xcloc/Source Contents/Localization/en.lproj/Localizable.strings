@@ -212,10 +212,10 @@
 "Paragraph_3.5.c" = "Adding a photo museum works the same way as adding a photo club - except that a museum doesn’t have members and member portfolios.";
 
 /* Paragraph 3.6.a of the Readme screen */
-"Paragraph_3.6.a" = "__Deleting members (and more)__";
+"Paragraph_3.6.a" = "__Deleting members, clubs and museums__";
 
 /* Paragraph 3.6.b of the Readme screen */
-"Paragraph_3.6.b" = "On the _Portfolios_ screen you can delete a club member by swiping a row to the left. Other screens have similar functionality for removing individual photographers and clubs.";
+"Paragraph_3.6.b" = "On the _Portfolios_ screen you can delete a club member by swiping a row to the left. The _Clubs and Museums_ screen has similar functionality for removing clubs or museums.";
 
 /* Paragraph 3.6.c of the Readme screen */
 "Paragraph_3.6.c" = "Deletion of a member will generally be __temporary__ because the member is still on the club's online membership lists. Deletion does have effect if the entry has been removed from these online lists. The feature will be automated at some point, and is only useful in special circumstances (like when a typo in a member's name is corrected).";
@@ -413,4 +413,4 @@
 "WhosWho_Caption_2" = "② A photographer has one or more clickable image thumbnails below the photographer's name. Clicking on a thumbnail brings you to the image portfolio for that potographer/club combination.";
 
 /* Shown in gray at the bottom of the Who's Who page (3/3). */
-"WhosWho_Caption_3" = "③ The thumbnails can be scrolled horizontally. Photographers can be deleted using swipe-left.";
+"WhosWho_Caption_3" = "③ The thumbnails can be scrolled horizontally.";

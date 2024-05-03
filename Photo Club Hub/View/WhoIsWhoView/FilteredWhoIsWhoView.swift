@@ -40,7 +40,7 @@ struct FilteredWhoIsWhoView: View {
     }
 
     var body: some View {
-//        ItemFilterStatsView(filteredCount: filteredPhotographers.count, TODO
+//        ItemFilterStatsView(filteredCount: filteredPhotographers.count,
 //                            unfilteredCount: fetchedPhotographers.count,
 //                            elementType: ItemFilterStatsEnum.photographer)
         ForEach(filteredPhotographers, id: \.id) { filteredPhotographer in // each photographer's "card"

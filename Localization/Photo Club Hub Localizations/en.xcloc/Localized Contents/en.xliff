@@ -310,13 +310,13 @@ Try dragging down the Photo Clubs screen to reload the default clubs.</target>
         <note>Paragraph 3.5.c of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.6.a" xml:space="preserve">
-        <source>__Deleting members (and more)__</source>
-        <target>__Deleting members (and more)__</target>
+        <source>__Deleting members, clubs and museums__</source>
+        <target>__Deleting members, clubs and museums__</target>
         <note>Paragraph 3.6.a of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.6.b" xml:space="preserve">
-        <source>On the _Portfolios_ screen you can delete a club member by swiping a row to the left. Other screens have similar functionality for removing individual photographers and clubs.</source>
-        <target>On the _Portfolios_ screen you can delete a club member by swiping a row to the left. Other screens have similar functionality for removing individual photographers and clubs.</target>
+        <source>On the _Portfolios_ screen you can delete a club member by swiping a row to the left. The _Clubs and Museums_ screen has similar functionality for removing clubs or museums.</source>
+        <target>On the _Portfolios_ screen you can delete a club member by swiping a row to the left. The _Clubs and Museums_ screen has similar functionality for removing clubs or museums.</target>
         <note>Paragraph 3.6.b of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.6.c" xml:space="preserve">
@@ -624,8 +624,8 @@ Try dragging down the Photo Clubs screen to reload the default clubs.</target>
         <note>Shown in gray at the bottom of the Who's Who page (2/3).</note>
       </trans-unit>
       <trans-unit id="WhosWho_Caption_3" xml:space="preserve">
-        <source>③ The thumbnails can be scrolled horizontally. Photographers can be deleted using swipe-left.</source>
-        <target>③ The thumbnails can be scrolled horizontally. Photographers can be deleted using swipe-left.</target>
+        <source>③ The thumbnails can be scrolled horizontally.</source>
+        <target>③ The thumbnails can be scrolled horizontally.</target>
         <note>Shown in gray at the bottom of the Who's Who page (3/3).</note>
       </trans-unit>
       <trans-unit id="admin" xml:space="preserve">
