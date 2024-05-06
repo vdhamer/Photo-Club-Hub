@@ -64,6 +64,7 @@ struct WhoIsWhoListView: View {
         .keyboardType(.namePhonePad)
         .autocapitalization(.none)
         .submitLabel(.done) // currently only works with text fields?
+        .navigationTitle(navigationTitle)
         .searchable(text: searchText, placement: .automatic,
                     prompt: Text("Search_names_p",
                                  comment: """
@@ -72,7 +73,6 @@ struct WhoIsWhoListView: View {
                                           """)
         )
         .disableAutocorrection(true)
-        .navigationTitle(navigationTitle)
     }
 
 }

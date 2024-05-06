@@ -310,18 +310,18 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
         <note>Paragraph 3.5.c of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.6.a" xml:space="preserve">
-        <source>__Deleting members (and more)__</source>
-        <target>__Clubleden, clubs en fotografen verwijderen__</target>
+        <source>__Deleting members, clubs and museums__</source>
+        <target>__Clubleden, clubs en musea verwijderen__</target>
         <note>Paragraph 3.6.a of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.6.b" xml:space="preserve">
-        <source>On the _Portfolios_ screen you can delete a club member by swiping a row to the left. Other screens have similar functionality for removing individual photographers and clubs.</source>
-        <target>Op het _Portfolio's_ scherm kan men een clublid en diens portfolio verwijderen door deze naar links te vegen. Op andere schermen kan men fotografen en zelfs complete fotoclubs uit de app verwijderen.</target>
+        <source>On the _Portfolios_ screen you can delete a club member by swiping a row to the left. The _Clubs and Museums_ screen has similar functionality for removing clubs or museums.</source>
+        <target>Op het _Portfolio's_ scherm kan men een clublid en diens portfolio verwijderen door deze naar links te vegen. Op het _Clubs en Musea_ scherm kan men complete fotoclubs verwijderen.</target>
         <note>Paragraph 3.6.b of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.6.c" xml:space="preserve">
         <source>Deletion of a member will generally be __temporary__ because the member is still on the club's online membership lists. Deletion does have effect if the entry has been removed from these online lists. The feature will be automated at some point, and is only useful in special circumstances (like when a typo in a member's name is corrected).</source>
-        <target>Verwijderen heeft alleen blijvend effect als het clublid (danwel fotograaf of fotoclub) ook verwijderd is uit de respectievelijk online lijst.</target>
+        <target>Verwijderen heeft alleen blijvend effect als het clublid (of fotoclub) ook verwijderd is uit de respectievelijk online lijst.</target>
         <note>Paragraph 3.6.c of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.6.d" xml:space="preserve">
@@ -619,12 +619,12 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
       </trans-unit>
       <trans-unit id="WhosWho_Caption_2" xml:space="preserve">
         <source>② A photographer has one or more clickable image thumbnails below the photographer's name. Clicking on a thumbnail brings you to the image portfolio for that potographer/club combination.</source>
-        <target>② Per fotograaf is er meestal één of twee miniatuurfoto's. Klik op een foto om een portfolio te bekijken.</target>
+        <target>② Per fotograaf zijn er meestal één of twee miniatuurfoto's. Klik op een foto om een portfolio te bekijken.</target>
         <note>Shown in gray at the bottom of the Who's Who page (2/3).</note>
       </trans-unit>
       <trans-unit id="WhosWho_Caption_3" xml:space="preserve">
-        <source>③ The thumbnails can be scrolled horizontally. Photographers can be deleted using swipe-left.</source>
-        <target>③ De miniatuurfoto's kunnen horizontaal verschoven worden. De fotograaf kan verwijderd worden door de tekst naar links te vegen.</target>
+        <source>③ The thumbnails can be scrolled horizontally.</source>
+        <target>③ De miniatuurfoto's kunnen horizontaal verschoven worden.</target>
         <note>Shown in gray at the bottom of the Who's Who page (3/3).</note>
       </trans-unit>
       <trans-unit id="admin" xml:space="preserve">

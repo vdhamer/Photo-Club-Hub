@@ -40,6 +40,9 @@ struct FilteredWhoIsWhoView: View {
     }
 
     var body: some View {
+//        ItemFilterStatsView(filteredCount: filteredPhotographers.count,
+//                            unfilteredCount: fetchedPhotographers.count,
+//                            elementType: ItemFilterStatsEnum.photographer)
         ForEach(filteredPhotographers, id: \.id) { filteredPhotographer in // each photographer's "card"
             VStack(alignment: .leading) { // there are horizontal layers within each photographer's "card"
                 HStack(alignment: .top) { // first row within each photographer's "card" with textual info
@@ -72,14 +75,9 @@ struct FilteredWhoIsWhoView: View {
             .foregroundColor(chooseColor(accentColor: .accentColor,
                                          isDeceased: filteredPhotographer.isDeceased))
         } // ForEach filteredPhotographer
-        .onDelete(perform: deletePhotographers) // can be disabled using isDeletedPhotographerEnabled flag
-        /* header: { // Table has only one section and it gets a header
-         ItemFilterStatsView(filteredCount: filteredPhotographers.count,
-         unfilteredCount: fetchRequest.count,
-         elementType: ItemFilterStatsEnum.photographer)
-         .textCase(nil) // https://sarunw.com/posts/swiftui-list-section-header-textcase/
-         } // header
-         */
+        .onDelete { indexSet in
+            deletePhotographers(indexSet: indexSet) // can be disabled using isDeletedPhotographerEnabled flag
+        }
     } // body
 
     private var filteredPhotographers: [Photographer] {

@@ -176,8 +176,10 @@ struct FilteredOrganizationView: View {
                 MapUserLocationButton()
             } .mapControlVisibility(filteredOrganization.isScrollLocked ? .hidden : .automatic)
         } // outer ForEach (filteredOrganization)
-        .onDelete(perform: deleteOrganizations)
-    }
+        .onDelete { indexSet in
+            deleteOrganizations(indexSet: indexSet)
+        }
+    } // body
 
     // find PhotoClub using identifier (clubName,oldTown) and then fill (newTown,newCountry) in CoreData database
     private func updateTownCountry(clubName: String, town: String,
