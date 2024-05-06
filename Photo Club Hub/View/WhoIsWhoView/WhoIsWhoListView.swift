@@ -44,15 +44,17 @@ struct WhoIsWhoListView: View {
             }
             .scrollTargetLayout() // unit of vertical "smart" scrolling
 
-            Group {
+            VStack(alignment: .leading) {
                 Text("WhosWho_Caption_1",
                      comment: "Shown in gray at the bottom of the Who's Who page (1/3).")
+                .padding(.bottom)
                 Text("WhosWho_Caption_2",
                      comment: "Shown in gray at the bottom of the Who's Who page (2/3).")
+                .padding(.bottom)
                 Text("WhosWho_Caption_3",
                      comment: "Shown in gray at the bottom of the Who's Who page (3/3).")
-            } .foregroundColor(Color.secondary)
-            .padding(.top)
+            }
+            .foregroundColor(Color.secondary)
 
         } // ScrollView
         .padding(.horizontal)
