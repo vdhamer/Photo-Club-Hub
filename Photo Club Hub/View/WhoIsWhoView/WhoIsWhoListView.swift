@@ -35,7 +35,7 @@ struct WhoIsWhoListView: View {
     }
 
     var body: some View {
-        ScrollView(.vertical) {
+        ScrollView(.vertical, showsIndicators: true) {
 
             LazyVStack {
                 FilteredWhoIsWhoView(predicate: model.preferences.photographerPredicate,
@@ -47,10 +47,10 @@ struct WhoIsWhoListView: View {
             VStack(alignment: .leading) {
                 Text("WhosWho_Caption_1",
                      comment: "Shown in gray at the bottom of the Who's Who page (1/3).")
-                .padding(.bottom)
+                Divider()
                 Text("WhosWho_Caption_2",
                      comment: "Shown in gray at the bottom of the Who's Who page (2/3).")
-                .padding(.bottom)
+                Divider()
                 Text("WhosWho_Caption_3",
                      comment: "Shown in gray at the bottom of the Who's Who page (3/3).")
             }
@@ -59,6 +59,7 @@ struct WhoIsWhoListView: View {
         } // ScrollView
         .padding(.horizontal)
         .scrollTargetBehavior(.viewAligned) // iOS 17 smart scrolling
+        .contentMargins(.horizontal, -5, for: .scrollIndicators) // iOS 17 smart scrolling
         .refreshable { // for pull-to-refresh
             // UserDefaults.standard.set(true, forKey: "WhosWhoPageRefreshed") // not really used
             PhotoClubHubApp.loadClubsAndMembers()
