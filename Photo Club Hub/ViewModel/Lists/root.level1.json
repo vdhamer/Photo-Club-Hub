@@ -608,6 +608,30 @@
 
         {
             "idPlus": {
+                "town": "Heeswijk",
+                "fullName": "Fotoclub Bernheze",
+                "nickName": "fcBernheze"
+            },
+            "coordinates": {
+                "latitude": 51.67952,
+                "longitude": 5.50891
+            },
+            "website": "https://www.fcbernheze.nl/",
+            "level2URL": "https://www.example.com/fcBernheze.level2.json",
+            "remark": [
+                {
+                    "language": "EN",
+                    "value": "The club's exposition is held every 2nd Sunday in May (Mother's Day) in an open air theatre in a local forest."
+                },
+                {
+                    "language": "NL",
+                    "value": "De jaarlijkse expositie wordt op moederdag gehouden in Natuurtheater Kersouwe."
+                }
+            ]
+        },
+
+        {
+            "idPlus": {
                 "town": "Nuland",
                 "fullName": "Fotoclub Nuland",
                 "nickName": "fcNuland"

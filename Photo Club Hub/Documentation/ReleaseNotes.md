@@ -6,6 +6,10 @@ Who's Who screen
 Documentation
 * Cleaned up level 1 description of README.md file on Github.
 
+Maintenance
+* Added photo club Bernheeze.
+* Tested on Xcode 15.4 RC1, iOS 17.5 RC
+
 This is build #4623
 
 ---------------------------------------------------------------------------
