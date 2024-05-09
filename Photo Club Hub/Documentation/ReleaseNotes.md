@@ -7,8 +7,8 @@ Documentation
 * Cleaned up level 1 description of README.md file on Github.
 
 Maintenance
-* Added photo club Bernheeze.
-* Tested on Xcode 15.4 RC1, iOS 17.5 RC
+* Added photo club Bernheeze to the list (`root.level1.json`).
+* Tested on Xcode 15.4 RC1 (15F31c), iOS 17.5 RC (21F79) and Vision Pro 1.2 beta 5 (21O5565d)
 
 This is build #4623
 
@@ -24,7 +24,7 @@ Who's Who screen
 Maintenance
 * Removed (broken) external URL for Hans Zoete.
 
-This is build #4622, was released via TestFlight, and will be released as v2.6.1 on the App Store.
+This is build #4622, was released via TestFlight, and was released as v2.6.1 on the App Store.
 
 ---------------------------------------------------------------------------
 
