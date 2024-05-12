@@ -434,7 +434,7 @@ But that data is still encrypted by a private encryption key that is not provide
 > The app is designed so that the required information about photo clubs is provided
 and maintained by the clubs themselves. 
 
-This is important because this allows the app to **support more clubs**.
+This is important because this allows the app to **support many clubs**.
 But is also also necessary in order to give clubs **control** over their own data:
 a club knows best what to mention regarding the club, who the current members are,
 who the club officers are, and - maybe most significantly - which images the members want in their portfolios.
