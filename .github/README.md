@@ -439,13 +439,13 @@ But is also also necessary in order to give clubs **control** over their own dat
 a club knows best what to mention regarding the club, who the current members are,
 who the club officers are, and - maybe most significantly - which images the members want in their portfolios.
 
-To add a club to the app, the app distinguishes 3 levels of information:
+To add a club to the app, the app distinguishes 3 hierarchical layers of information:
 
-- `Level 1` is basically the club’s name and location.
-- `Level 2` lists the club's members.
-- `Level 3` adds links to member portfolios.</p>
+- `Level 1` consists of the club’s name and geographic location.
+- `Level 2` lists the members per club.
+- `Level 3` links to portfolios per club member.</p>
 
-These layers of information are called `Levels` here because they need to be submitted in ascending order and, 
+We call these layers of information `Levels` because they need to be submitted in ascending order and, 
 whenever the `Level` of a club increases, additional app features are automatically enabled for that club.
 
 A club can take as long as needed (days, weeks, months) before proceeding to a next level.
