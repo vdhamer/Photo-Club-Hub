@@ -8,7 +8,7 @@ Documentation
 
 Maintenance
 * Added photo club Bernheeze to the list (`root.level1.json`).
-* Tested on MacOS 14,5, Xcode 15.4 (15F31d), iOS 17.5 and Vision Pro 1.2 beta 5 (21O5565d)
+* Tested on MacOS 14,5 (23F79), Xcode 15.4 (15F31d), iOS 17.5 and Vision Pro 1.2 beta 5 (21O5565d)
 
 This is build #4623
 
