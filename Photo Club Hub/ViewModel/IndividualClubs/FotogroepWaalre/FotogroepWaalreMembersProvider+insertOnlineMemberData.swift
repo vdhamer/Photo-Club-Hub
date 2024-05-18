@@ -145,7 +145,7 @@ extension FotogroepWaalreMembersProvider {
                                                                        organizationTypeEum: .club,
                                                                        idPlus: idPlus)
 
-        htmlContent.enumerateLines { (line, _ stop) -> Void in
+        htmlContent.enumerateLines { (line, _ stop) in
             if line.contains(targetState.targetString()) {
                 switch targetState {
 
