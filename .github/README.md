@@ -391,8 +391,8 @@ simply uninstall the app (thus deleting its local database), reinstall the app a
 
 <details><summary>Details on Privacy(click to expand)</summary></p>
 
-The phone numbers, e-mail addresses and ages of members of Fotogroep Waalre may not be public information.
-They are read by the app, but not actually shown or used at present. For good measure, the data is stored
+The phone numbers, e-mail addresses and ages of members of Fotogroep Waalre are not supposed to be public information.
+They are read by the app, but the data is currently not displayed or used in any way. For good measure, the data is stored
 in encrypted form and decryted by the version of the app in the Apple App Store. The GitHub version
 circumvents the encrypted data altogether, which - although a detail - turns out to be tricky to do reliably.
 
@@ -400,26 +400,26 @@ circumvents the encrypted data altogether, which - although a detail - turns out
 
 <details><summary>Details (click to expand)</summary></p>
 
-The repo contains a 1 tiny file with encrypted data.
+The GitHub repository contains only one encrypted file. And that file is tiny.
 But encryption code can draw a lot of attention, so we are explaining it here
 mainly so you don't waste time trying to figure our what's going on or whether
 you consider that secure enough. It simply isn't a big deal :nerd_face:.</p>
 
-So... one tiny data file in the repository is encrypted. 
-As you will expect, the key needed to decrypt the file is *not* provided.
+So... one very small data file in the repo is encrypted. 
+As you might expect, the key needed to decrypt the file is *not* provided.
 The file, in its decrypted form, gives access to a password-protected HTML page on a server.
-The HTML page contains telephone numbers and e-mail addresses of members of Photo Club Waalre. 
-Apart from the fact that the data is of little interest, this has no impact because: 
-- if the file is found to be encrypted, it is automatically substituted by another non-encrypted file 
-  which doesn't give access to any sensitive data about members: it contains dummy data.
+The HTML page contains telephone numbers and e-mail addresses of members of one single photo club (_Fotogroep Waalre_). 
+Apart from the fact that this data is of little interest, this has no impact because: 
+- if the file is found to be encrypted in the repo (as it should be), the app reverts to another non-encrypted file 
+  in which sensitive data like telephone numbers have been redacted.
 - phone numbers and e-mail addresses (real or dummy) are not used yet by the app.</p>
 
 So, all this hasstle is just so that a future App Store version *could* allow club members to
 unlock extra functionality using a club-specific password,
-but without leaking the supposedly sensitive data to non-members via GitHub.</p>
+but without leaking the slightly sensitive data to non-club-members via GitHub.</p>
 
 But how would this future club-specific password be protected?
-The app might try to check a hash of the provided password.
+The app might try to check a hash of a user-provided password.
 But a simple source code modification then gives access to the encrypted version of the web page.
 Actually, not quite 🤓. Bypassing the password via a code modification, would allow the app to
 fetch the encrypted data rather than the unencrypted dummy data. 
