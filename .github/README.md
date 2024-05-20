@@ -669,7 +669,6 @@ If you simly want to install the binary version of the app, just install it from
 * Apple's [Core Data](https://developer.apple.com/documentation/coredata) framework for persistent storage ("database")
 * [Adobe Lightroom Classic](https://www.adobe.com/products/photoshop-lightroom.html) maintaining the portfolios (so far Fotogroep Waalre only)
 * a low cost [JuiceBox Pro](https://www.juicebox.net) JavaScript plugin for exporting from Adobe Lightroom (so far Fotogroep Waalre only)
-* the [GitCrypt](https://GitHub.com/AGWA/git-crypt) framework for encrypting selected files in a Git repository
 * GitHub's [SwiftyJSON](https://GitHub.com/SwiftyJSON/SwiftyJSON) package for accessing JSON content via paths (dictionaries that recursively contain dictionaries)
 </details>
 
