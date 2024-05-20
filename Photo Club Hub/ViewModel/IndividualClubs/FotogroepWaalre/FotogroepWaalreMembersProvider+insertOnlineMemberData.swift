@@ -19,9 +19,7 @@ extension FotogroepWaalreMembersProvider {
             idPlus: FotogroepWaalreMembersProvider.photoClubWaalreIdPlus
         )
 
-        let urlString = self.getFileNameAsString(nameEncryptedFile: "FGWPrivateMembersURL2.txt",
-                                                 nameUnencryptedFile: "FGWPrivateMembersURL3.txt",
-                                                 allowUseEncryptedFile: true, // false used only for testing
+        let urlString = self.getFileNameAsString(fileName: "FGWMembersURL2.txt",
                                                  organization: clubWaalre) // used for error messages only
         if let privateURL = URL(string: urlString) {
             clubWaalre.level2URL = privateURL
@@ -39,23 +37,16 @@ extension FotogroepWaalreMembersProvider {
         }
     }
 
-    fileprivate func getFileNameAsString(nameEncryptedFile: String,
-                                         nameUnencryptedFile: String,
-                                         allowUseEncryptedFile: Bool = true,
-                                         organization: Organization) // used for error messages only
+    private func getFileNameAsString(fileName: String,
+                                     organization: Organization) // used for error messages only
                                         -> String {
-        let organizationTown = organization.fullNameTown // Town is optional if it part of the fullName
-        if let secret = readURLFromLocalFile(fileNameWithExtension: nameEncryptedFile), allowUseEncryptedFile {
-            ifDebugPrint("\(organizationTown): will use confidential version of Private member data file.")
-            return secret
+        if let urlString = readURLFromLocalFile(fileNameWithExtension: fileName) {
+            return urlString
         } else {
-            if let unsecret = readURLFromLocalFile(fileNameWithExtension: nameUnencryptedFile) {
-                ifDebugPrint("\(organizationTown): will use non-confidential version of Private member data file.")
-                return unsecret
-            } else {
-                print("\(organizationTown): ERROR - problem accessing either version of Private member data file.")
-                return "Internal error: file \(nameUnencryptedFile) looks encrypted"
-            }
+            let organizationTown = organization.fullNameTown // Town is optional if it part of the fullName
+            ifDebugFatalError("\(organizationTown): ERROR - failed to access custom Level 2 file for Fotogroep Waalre.")
+            print("\(organizationTown): ERROR - failed to access custom Level 2 file for Fotogroep Waalre.")
+            return "Internal error: problem accessing custom \(fileName) file for Fotogroep Waalre."
         }
     }
 
@@ -65,14 +56,14 @@ extension FotogroepWaalreMembersProvider {
         if let filepath = Bundle.main.path(forResource: fileName, ofType: fileExtension) {
             do {
                 let firstLine = try String(contentsOfFile: filepath).components(separatedBy: "\n")[0]
-                return firstLine // encypted version starts with hex 00 47 49 54 43 52 59 50 54 00 and is not a String
+                return firstLine
             } catch {
                 print("Fotogroep Waalre: ERROR - \(error) File is not a text file.")
                 return nil
             }
         } else {
-            print("Fotogroep Waalre: ERROR - cannot find file \(fileNameWithExtension) from bundle")
-            return("File missing!")
+            print("Fotogroep Waalre: ERROR - cannot find file \(fileNameWithExtension) in bundle")
+            return nil
         }
     }
 
