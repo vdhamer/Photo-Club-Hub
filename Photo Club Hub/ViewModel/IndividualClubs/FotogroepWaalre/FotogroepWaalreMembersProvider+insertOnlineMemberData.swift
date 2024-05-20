@@ -11,6 +11,7 @@ import RegexBuilder
 extension FotogroepWaalreMembersProvider {
 
     public static let baseURL = "http://www.vdHamer.com/fgWaalre/"
+    private static let url = "http://www.vdhamer.com/fgwaalre_level2/?ppt=f13a433cf52df1318ca04ca739867054"
 
     func insertOnlineMemberData(bgContext: NSManagedObjectContext) { // runs on a background thread
         // can't rely on async (!) insertSomeHardcodedMemberData() to return managed photoClub object in time
@@ -19,51 +20,19 @@ extension FotogroepWaalreMembersProvider {
             idPlus: FotogroepWaalreMembersProvider.photoClubWaalreIdPlus
         )
 
-        let urlString = self.getFileNameAsString(fileName: "FGWMembersURL2.txt",
-                                                 organization: clubWaalre) // used for error messages only
-        if let privateURL = URL(string: urlString) {
-            clubWaalre.level2URL = privateURL
+        if let url = URL(string: FotogroepWaalreMembersProvider.url) {
+            clubWaalre.level2URL = url
             try? bgContext.save() // persist Fotogroep Waalre and its online member data
 
             self.loadPrivateMembersFromWebsite( backgroundContext: bgContext,
-                                                privateMemberURL: privateURL,
+                                                privateMemberURL: url,
                                                 organization: clubWaalre,
                                                 idPlus: FotogroepWaalreMembersProvider.photoClubWaalreIdPlus )
         } else {
-            ifDebugFatalError("Could not convert \(urlString) to a URL.",
+            ifDebugFatalError("Could not convert string to a URL.",
                               file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
             // In release mode, an incorrect URL causes the file loading to skip.
             // In release mode this is logged, but the app doesn't stop.
-        }
-    }
-
-    private func getFileNameAsString(fileName: String,
-                                     organization: Organization) // used for error messages only
-                                        -> String {
-        if let urlString = readURLFromLocalFile(fileNameWithExtension: fileName) {
-            return urlString
-        } else {
-            let organizationTown = organization.fullNameTown // Town is optional if it part of the fullName
-            ifDebugFatalError("\(organizationTown): ERROR - failed to access custom Level 2 file for Fotogroep Waalre.")
-            print("\(organizationTown): ERROR - failed to access custom Level 2 file for Fotogroep Waalre.")
-            return "Internal error: problem accessing custom \(fileName) file for Fotogroep Waalre."
-        }
-    }
-
-    private func readURLFromLocalFile(fileNameWithExtension: String) -> String? {
-        let fileName = fileNameWithExtension.fileName()
-        let fileExtension = fileNameWithExtension.fileExtension()
-        if let filepath = Bundle.main.path(forResource: fileName, ofType: fileExtension) {
-            do {
-                let firstLine = try String(contentsOfFile: filepath).components(separatedBy: "\n")[0]
-                return firstLine
-            } catch {
-                print("Fotogroep Waalre: ERROR - \(error) File is not a text file.")
-                return nil
-            }
-        } else {
-            print("Fotogroep Waalre: ERROR - cannot find file \(fileNameWithExtension) in bundle")
-            return nil
         }
     }
 
