@@ -36,14 +36,13 @@
             <li><a href="#searchable-lists">Searchable Lists</a></li>
             <li><a href="#photo-museums">Photo Museums</a></li>
             <li><a href="#swipe-to-delete">Swipe to Delete</a></li>
-            <li><a href="#data-privacy">Data Privacy</a>
         </ul>
     </details>
     <details open><summary><a href="#adding-photo-clubs-to-the-app">Adding Photo Clubs to the App</a></summary>
         <ul>
             <li><a href="#level-1-adding-clubs">Level 1. Adding Clubs</a></li>
             <li><a href="#level-2-adding-members">Level 2. Adding Members</a></li>
-            <li><a href="#level-3-adding-images">Level 3. Adding Images</a>
+            <li><a href="#level-3-adding-images">Level 3. Adding Images</a></li>
         </ul>
     </details>
     <details open><summary><a href="#installation">Installation</a></summary>
@@ -387,46 +386,6 @@ Although swipe-to-delete can get the local database back in sync with the online
 simply uninstall the app (thus deleting its local database), reinstall the app and then let it automatically load the online data.
 </details>
 
-### Data Privacy
-
-<details><summary>Details on Privacy(click to expand)</summary></p>
-
-The phone numbers, e-mail addresses and ages of members of Fotogroep Waalre are not supposed to be public information.
-They are read by the app, but the data is currently not displayed or used in any way. For good measure, the data is stored
-in encrypted form and decryted by the version of the app in the Apple App Store. The GitHub version
-circumvents the encrypted data altogether, which - although a detail - turns out to be tricky to do reliably.
-
-#### Encryption details
-
-<details><summary>Details (click to expand)</summary></p>
-
-The GitHub repository contains only one encrypted file. And that file is tiny.
-But encryption code can draw a lot of attention, so we are explaining it here
-mainly so you don't waste time trying to figure our what's going on or whether
-you consider that secure enough. It simply isn't a big deal :nerd_face:.</p>
-
-So... one very small data file in the repo is encrypted. 
-As you might expect, the key needed to decrypt the file is *not* provided.
-The file, in its decrypted form, gives access to a password-protected HTML page on a server.
-The HTML page contains telephone numbers and e-mail addresses of members of one single photo club (_Fotogroep Waalre_). 
-Apart from the fact that this data is of little interest, this has no impact because: 
-- if the file is found to be encrypted in the repo (as it should be), the app reverts to another non-encrypted file 
-  in which sensitive data like telephone numbers have been redacted.
-- phone numbers and e-mail addresses (real or dummy) are not used yet by the app.</p>
-
-So, all this hasstle is just so that a future App Store version *could* allow club members to
-unlock extra functionality using a club-specific password,
-but without leaking the slightly sensitive data to non-club-members via GitHub.</p>
-
-But how would this future club-specific password be protected?
-The app might try to check a hash of a user-provided password.
-But a simple source code modification then gives access to the encrypted version of the web page.
-Actually, not quite 🤓. Bypassing the password via a code modification, would allow the app to
-fetch the encrypted data rather than the unencrypted dummy data. 
-But that data is still encrypted by a private encryption key that is not provided on GitHub.</p>
-
-</details></ul>
-</details></ul>
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Adding Photo Clubs to the App
