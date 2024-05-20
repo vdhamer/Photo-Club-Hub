@@ -139,7 +139,7 @@ public struct JSON {
 	
 	 - returns: The created JSON
 	 */
-    fileprivate init(jsonObject: Any) {
+    private init(jsonObject: Any) {
         object = jsonObject
     }
 
@@ -172,10 +172,10 @@ public struct JSON {
     }
 
     /**
-     Private woker function which does the actual merging
+     Private worker function which does the actual merging
      Typecheck is set to true for the first recursion level to prevent total override of the source JSON
  	*/
- 	fileprivate mutating func merge(with other: JSON, typecheck: Bool) throws {
+ 	private mutating func merge(with other: JSON, typecheck: Bool) throws {
         if type == other.type {
             switch type {
             case .dictionary:

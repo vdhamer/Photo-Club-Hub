@@ -59,7 +59,7 @@ extension FotogroepWaalreMembersProvider {
         }
     }
 
-    fileprivate func readURLFromLocalFile(fileNameWithExtension: String) -> String? {
+    private func readURLFromLocalFile(fileNameWithExtension: String) -> String? {
         let fileName = fileNameWithExtension.fileName()
         let fileExtension = fileNameWithExtension.fileExtension()
         if let filepath = Bundle.main.path(forResource: fileName, ofType: fileExtension) {
@@ -76,10 +76,10 @@ extension FotogroepWaalreMembersProvider {
         }
     }
 
-    fileprivate func loadPrivateMembersFromWebsite( backgroundContext: NSManagedObjectContext,
-                                                    privateMemberURL: URL,
-                                                    organization: Organization,
-                                                    idPlus: OrganizationIdPlus ) {
+    private func loadPrivateMembersFromWebsite(backgroundContext: NSManagedObjectContext,
+                                               privateMemberURL: URL,
+                                               organization: Organization,
+                                               idPlus: OrganizationIdPlus) {
 
         ifDebugPrint("\(organization.fullNameTown): starting loadPrivateMembersFromWebsite() in background")
 
@@ -132,9 +132,9 @@ extension FotogroepWaalreMembersProvider {
         }
     }
 
-    fileprivate func parseHTMLContent(backgroundContext: NSManagedObjectContext,
-                                      htmlContent: String,
-                                      idPlus: OrganizationIdPlus) {
+    private func parseHTMLContent(backgroundContext: NSManagedObjectContext,
+                                  htmlContent: String,
+                                  idPlus: OrganizationIdPlus) {
         var targetState: HTMLPageLoadingState = .tableStart        // initial entry point on loop of states
 
         var personName = PersonName(fullNameWithParenthesizedRole: "", givenName: "", infixName: "", familyName: "")
@@ -201,7 +201,7 @@ extension FotogroepWaalreMembersProvider {
 
     }
 
-    fileprivate func generateInternalURL(using name: String) -> URL? { // only use standard ASCII A...Z,a...z in URLs
+    private func generateInternalURL(using name: String) -> URL? { // only use standard ASCII A...Z,a...z in URLs
         // spaces are replaced by underscores:
         //      "Peter van den Hamer" -> "<baseURL>/Peter_van_den_Hamer"
         // cases with one or more replacements:
@@ -245,7 +245,7 @@ extension FotogroepWaalreMembersProvider {
         return URL(string: FotogroepWaalreMembersProvider.baseURL + "/" + tweakedName + "/")
     }
 
-    fileprivate func toDate(from dateString: String) -> Date? {
+    private func toDate(from dateString: String) -> Date? {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd/MM/yyyy"
         return dateFormatter.date(from: dateString)
