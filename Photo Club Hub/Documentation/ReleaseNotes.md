@@ -5,11 +5,13 @@ Who's Who screen
 
 Documentation
 * Cleaned up level 1 description of README.md file on Github.
+* Removed section on Privacy (as senstive info and associated encryption have been removed.
 
 Maintenance
 * Added photo club Bernheeze to the list (`root.level1.json`).
 * Tested on MacOS 14,5 (23F79), Xcode 15.4 (15F31d), SwiftLint 0.55.1, iOS 17.5 and Vision Pro 1.2 beta 5 (21O5565d).
-* Fixed a SwiftLine 0.55.1 warning about returning void.
+* Fixed a SwiftLint 0.55.1 warning about returning void.
+* Removed encryption using git-crypt. Data is now fetched directly without using an encrypted URL.
 
 This is build #4623
 
