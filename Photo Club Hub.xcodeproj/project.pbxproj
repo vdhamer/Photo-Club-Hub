@@ -1101,7 +1101,7 @@
 				D0A0B6872AA932A10078DE9A /* Photo_Club_Hub_2_4_1.xcdatamodel */,
 				D0A0B6842AA930E90078DE9A /* Photo_Club_Hub.xcdatamodel */,
 			);
-			currentVersion = D0A34EB92BFB97710077F3E0 /* Photo_Club_Hub_2_6_3.xcdatamodel */;
+			currentVersion = D06F34FB2BDE56600047B04F /* Photo_Club_Hub_2_6_2.xcdatamodel */;
 			path = Photo_Club_Hub.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
