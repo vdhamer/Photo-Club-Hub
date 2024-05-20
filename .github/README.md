@@ -385,7 +385,7 @@ are in the local database, but are no present anymore inn the online lists.</p>
 Although swipe-to-delete can get the local database back in sync with the online data, a user may prefer a simpler brute force route:
 simply uninstall the app (thus deleting its local database), reinstall the app and then let it automatically load the online data.
 </details>
-
+</ul>
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Adding Photo Clubs to the App
