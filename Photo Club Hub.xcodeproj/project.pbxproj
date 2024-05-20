@@ -180,6 +180,7 @@
 		D0A0B6842AA930E90078DE9A /* Photo_Club_Hub.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub.xcdatamodel; sourceTree = "<group>"; };
 		D0A0B6872AA932A10078DE9A /* Photo_Club_Hub_2_4_1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_4_1.xcdatamodel; sourceTree = "<group>"; };
 		D0A30FB72BB0BB33009A9A6E /* root.level1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = root.level1.json; sourceTree = "<group>"; };
+		D0A34EB92BFB97710077F3E0 /* Photo_Club_Hub_2_6_3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_6_3.xcdatamodel; sourceTree = "<group>"; };
 		D0A5B7EE2B45F67E001FAD59 /* test2Club2Museum.level1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test2Club2Museum.level1.json; sourceTree = "<group>"; };
 		D0ADF4AD27922DCA00535432 /* MemberRolesAndStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberRolesAndStatus.swift; sourceTree = "<group>"; };
 		D0AE1B7427889E8600E0100E /* OrganizationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationListView.swift; sourceTree = "<group>"; };
@@ -984,7 +985,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Photo Club Hub/PhotoClubHub.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4623;
+				CURRENT_PROJECT_VERSION = 4624;
 				DEVELOPMENT_ASSET_PATHS = "\"Photo Club Hub/Preview Content\"";
 				DEVELOPMENT_TEAM = YDEWPN9GZ6;
 				ENABLE_PREVIEWS = YES;
@@ -1025,7 +1026,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Photo Club Hub/PhotoClubHub.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4623;
+				CURRENT_PROJECT_VERSION = 4624;
 				DEVELOPMENT_ASSET_PATHS = "\"Photo Club Hub/Preview Content\"";
 				DEVELOPMENT_TEAM = YDEWPN9GZ6;
 				ENABLE_PREVIEWS = YES;
@@ -1085,6 +1086,7 @@
 		D0A0B6832AA930E90078DE9A /* Photo_Club_Hub.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				D0A34EB92BFB97710077F3E0 /* Photo_Club_Hub_2_6_3.xcdatamodel */,
 				D06F34FB2BDE56600047B04F /* Photo_Club_Hub_2_6_2.xcdatamodel */,
 				D00DC8F02BD5D85900B4A9A2 /* Photo_Club_Hub_2_6_1.xcdatamodel */,
 				D0AEDF3C2BBE0CD1003FD250 /* Photo_Club_Hub_2_5_7.xcdatamodel */,
@@ -1099,7 +1101,7 @@
 				D0A0B6872AA932A10078DE9A /* Photo_Club_Hub_2_4_1.xcdatamodel */,
 				D0A0B6842AA930E90078DE9A /* Photo_Club_Hub.xcdatamodel */,
 			);
-			currentVersion = D06F34FB2BDE56600047B04F /* Photo_Club_Hub_2_6_2.xcdatamodel */;
+			currentVersion = D0A34EB92BFB97710077F3E0 /* Photo_Club_Hub_2_6_3.xcdatamodel */;
 			path = Photo_Club_Hub.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
