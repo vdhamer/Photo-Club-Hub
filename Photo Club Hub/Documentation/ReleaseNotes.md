@@ -14,10 +14,10 @@ Documentation
 * Removed section on Privacy (because sensitive info and associated encryption have been removed).
 
 Maintenance
-* Added photo club Bernheeze to the list (`root.level1.json`).
+* Added Photo Club Bernheeze to the list (`root.level1.json`).
 * Tested on MacOS 14,5 (23F79), Xcode 15.4 (15F31d), SwiftLint 0.55.1, iOS 17.5 and Vision Pro 1.2 beta 5 (21O5565d).
-* Fixed a SwiftLint warning about returning void.
-* Removed encryption using git-crypt. Data is now fetched directly without using an encrypted URL.
+* Fixed a SwiftLint coding rule warning (function explicitly returning void).
+* Removed encryption using `git-crypt`. Member list of FGW is now fetched directly (removed data like phone numbers).
 
 This is build #4623 and was distributed to TestFlight users only.
 
