@@ -9,7 +9,7 @@ import SwiftUI
 @preconcurrency import MapKit // keep an eye on whether @preconcurrency is still needed
 import CoreData
 
-struct FilteredOrganizationView: View {
+struct FilteredOrganizationView: View, Sendable {
 
     @Environment(\.managedObjectContext) private var viewContext // may not be correct
     @Environment(\.layoutDirection) var layoutDirection // .leftToRight or .rightToLeft

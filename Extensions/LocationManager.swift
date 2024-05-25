@@ -8,6 +8,7 @@
 import Foundation
 import CoreLocation
 
+@MainActor
 @Observable
 class LocationManager {
     var location: CLLocation?
