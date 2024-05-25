@@ -9,8 +9,10 @@ import CoreData
 
 extension OrganizationType {
 
-    static var enum2objectID: [OrganizationTypeEnum: NSManagedObjectID] = [:]
+    nonisolated(unsafe) static var enum2objectID: [OrganizationTypeEnum: NSManagedObjectID] = [:]
+    // enum2objectID is safe because it called only once from the Main thread when the app launches
 
+    @MainActor
     static func initConstants() { // called on main thread
         guard Thread.isMainThread else { fatalError("OrganizationType.initConstants() must be on main thread") }
         guard OrganizationType.enum2objectID.isEmpty else {
@@ -138,7 +140,7 @@ extension OrganizationType {
 
 }
 
-enum OrganizationTypeEnum: String, CaseIterable {
+enum OrganizationTypeEnum: String, CaseIterable, Sendable, Hashable {
 
     case club // rawValue automatically set to "club"
     case museum
