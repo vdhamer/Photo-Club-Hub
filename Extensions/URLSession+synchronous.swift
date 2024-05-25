@@ -18,7 +18,7 @@ extension URLSession {
 
         let semaphore = DispatchSemaphore(value: 0)
 
-        let dataTask = self.dataTask(with: url) {
+        let dataTask = self.dataTask(with: url) { // asynchronous
             data = $0
             response = $1
             error = $2
