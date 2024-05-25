@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import MapKit
+@preconcurrency import MapKit // keep an eye on whether @preconcurrency is still needed
 import CoreData
 
 struct FilteredOrganizationView: View {
@@ -15,7 +15,7 @@ struct FilteredOrganizationView: View {
     @Environment(\.layoutDirection) var layoutDirection // .leftToRight or .rightToLeft
 
     @FetchRequest var fetchedOrganizations: FetchedResults<Organization>
-    private let isDeleteOrganizationPermitted = true // disables .delete() functionality for this screen
+    private let isDeleteOrganizationPermitted = true // disables .onDelete() functionality for this screen
 
     let searchText: Binding<String>
 
@@ -263,7 +263,7 @@ struct FilteredOrganizationView: View {
         )
     }
 
-    private func deleteOrganizations(indexSet: IndexSet) { // normally deletes just one, but this is how .delete works
+    private func deleteOrganizations(indexSet: IndexSet) { // normally deletes just one, but this is how .onDelete works
         guard isDeleteOrganizationPermitted else { return } // exit if feature is disabled
 
         if let organization = (indexSet.map {filteredOrganizations[$0]}.first) { // unwrap first PhotoClub to be deleted

@@ -18,7 +18,7 @@ struct FilteredMemberPortfoliosView: View {
         predicate: NSPredicate.none
     ) private var sectionedPortfolios: SectionedFetchResults<String, MemberPortfolio>
 
-    private let isDeleteMemberPortfolioPermitted = true // disables .delete() functionality for this screen
+    private let isDeleteMemberPortfolioPermitted = true // disables .onDelete() functionality for this screen
     let searchText: Binding<String>
     let wkWebView = WKWebView()
 

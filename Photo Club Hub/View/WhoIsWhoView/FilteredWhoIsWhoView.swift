@@ -24,7 +24,7 @@ struct FilteredWhoIsWhoView: View {
     @Environment(\.managedObjectContext) private var viewContext // may not be correct
     @FetchRequest var fetchedPhotographers: FetchedResults<Photographer>
 
-    private let isDeletePhotographersPermitted = true // enable/disable .delete() functionality for this screen
+    private let isDeletePhotographersPermitted = true // enable/disable .onDelete() functionality for this screen
     let searchText: Binding<String>
     let wkWebView: WKWebView
 
