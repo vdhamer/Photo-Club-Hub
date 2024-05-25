@@ -14,9 +14,9 @@ extension View {
     ///   - to: View to navigate to.
     ///   - when: Only navigates when this condition is `true`.
     ///   - horSizeClass: if SizeClass is .compact, hide back button to save space
-    func navigate<NewView: View>(to view: NewView,
-                                 when binding: Binding<Bool>,
-                                 horSizeClass: UserInterfaceSizeClass?) -> some View {
+    @MainActor func navigate<NewView: View>(to view: NewView,
+                                            when binding: Binding<Bool>,
+                                            horSizeClass: UserInterfaceSizeClass?) -> some View {
         NavigationStack {
             NavigationLink(value: 0) { // `value` is not used, and may cause a negligible (32 Byte) memory leak
                 self // tapping this sets off the link
