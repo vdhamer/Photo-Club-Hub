@@ -155,11 +155,7 @@ struct FilteredOrganizationView: View, Sendable {
                         await updateTownCountry(clubName: clubName, town: town,
                                                 localizedTown: localizedTown, localizedCountry: localizedCountry)
                     } catch {
-                        print("""
-                                  ERROR: could not reverseGeocode (\
-                                  \(filteredOrganization.coordinates.latitude), \
-                                  \(filteredOrganization.coordinates.longitude))
-                                  """)
+                        print("ERROR: could not reverseGeocode (\(coordinates.latitude), \(coordinates.longitude))")
                     }
                 }
             }
