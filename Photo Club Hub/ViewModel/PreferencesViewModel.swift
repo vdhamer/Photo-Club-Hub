@@ -7,9 +7,14 @@
 
 import Foundation // for @Published and ObservableObject
 import CoreData // for NSManagedObject
+import Combine // for AnyCancellable
 
+@MainActor
 class PreferencesViewModel: ObservableObject {
-    @Published("preferences") var preferences: PreferencesStruct = .defaultValue
+    static var cancellableSet: Set<AnyCancellable> = [] // not used yet: view has no OK/Cancel capabilities
+
+    @Published("preferences", cancellableSet: &cancellableSet)
+    var preferences: PreferencesStruct = .defaultValue
 }
 
 struct PreferencesStruct: Codable { // order in which they are shown on Preferences page

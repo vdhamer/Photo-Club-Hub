@@ -10,12 +10,14 @@ import Foundation // for UserDefaults
 
 // https://www.fivestars.blog/swiftui/app-scene-storage.html
 
-private var cancellableSet: Set<AnyCancellable> = []
-
+// @Published with integrated support for updating UserDefaults
 extension Published where Value: Codable {
+
     init(wrappedValue defaultValue: Value,
          _ key: String,
-         store: UserDefaults? = nil) {
+         cancellableSet: inout Set<AnyCancellable>,
+         store: UserDefaults? = nil
+        ) {
 
         let store: UserDefaults = store ?? .standard
 
