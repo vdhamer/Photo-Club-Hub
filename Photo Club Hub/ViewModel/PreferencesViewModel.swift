@@ -32,11 +32,11 @@ struct PreferencesStruct: Codable { // order in which they are shown on Preferen
     var showExternalCoaches: Bool
 
     static let defaultValue = PreferencesStruct( // has to match order of declaration
-        showCurrentMembers:  true,
-        showOfficers:        true,
+        showCurrentMembers: true,
+        showOfficers: true,
         showAspiringMembers: true,
         showHonoraryMembers: true,
-        showFormerMembers:   true,
+        showFormerMembers: true,
         showDeceasedMembers: false,
         showExternalCoaches: false
     )

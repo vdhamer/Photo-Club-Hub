@@ -13,7 +13,7 @@ import Foundation // for UserDefaults
 private var cancellableSet: Set<AnyCancellable> = []
 
 extension Published where Value: Codable {
-    init(wrappedValue defaultValue: Value, 
+    init(wrappedValue defaultValue: Value,
          _ key: String,
          store: UserDefaults? = nil) {
 
