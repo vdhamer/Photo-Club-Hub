@@ -252,7 +252,7 @@
             "remark": [
                 {
                     "language": "EN",
-                    "value": "The club tries to avoid postprocessing images, and aim to get the straight-out-of-camera image right."
+                    "value": "The club tries to avoid postprocessing images, and aims to get relatively straight-out-of-camera images."
                 },
                 {
                     "language": "NL",
@@ -269,7 +269,7 @@
             },
             "coordinates": {
                 "latitude": 51.45032,
-                "longitude": 5.81069 
+                "longitude": 5.81069
             },
             "website": "https://www.optika.nl",
             "level2URL": "https://www.example.com/FC_Optika.level2.json",
@@ -296,7 +296,7 @@
             },
             "coordinates": {
                 "latitude": 51.36821,
-                "longitude": 5.29926 
+                "longitude": 5.29926
             },
             "website": "https://www.kemfodia.nl/",
             "level2URL": "https://www.example.com/FC_Kemfodia.level2.json",
@@ -814,7 +814,7 @@
                 "fotobondNumber": 1676
             }
         },
-        
+
         {
             "idPlus": {
                 "town": "Sint-Oedenrode",
@@ -1067,7 +1067,7 @@
             "remark": [
                 {
                     "language": "EN",
-                    "value": "We think that members of this club are not especially centered around Waalwijk: expositions are held in Eindhoven (50 km away)."
+                    "value": "We suspect that members of this club are not especially Waalwijk-centric: expositions are held in Eindhoven (50 km away)."
                 },
                 {
                     "language": "NL",
@@ -1976,6 +1976,6 @@
                 }
             ]
         }
-        
+
     ]
 }

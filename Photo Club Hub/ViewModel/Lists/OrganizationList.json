@@ -608,6 +608,30 @@
 
         {
             "idPlus": {
+                "town": "Heeswijk",
+                "fullName": "Fotoclub Bernheze",
+                "nickName": "fcBernheze"
+            },
+            "coordinates": {
+                "latitude": 51.67952,
+                "longitude": 5.50891
+            },
+            "website": "https://www.fcbernheze.nl/",
+            "level2URL": "https://www.example.com/fcBernheze.level2.json",
+            "remark": [
+                {
+                    "language": "EN",
+                    "value": "The club's exposition is held every 2nd Sunday in May (Mother's Day) in an open air theatre in a local forest."
+                },
+                {
+                    "language": "NL",
+                    "value": "De jaarlijkse expositie wordt op moederdag gehouden in Natuurtheater Kersouwe."
+                }
+            ]
+        },
+
+        {
+            "idPlus": {
                 "town": "Nuland",
                 "fullName": "Fotoclub Nuland",
                 "nickName": "fcNuland"
@@ -806,7 +830,7 @@
             "remark": [
                 {
                     "language": "EN",
-                    "value": "fcRooi coordinates it yearly exposition with 3 other nearby clubs (fcSchijndel, Zoomm, fcVeghel)"
+                    "value": "fcRooi coordinates it yearly exposition with 3 other nearby clubs (fcSchijndel, Zoomm, fcVeghel)."
                 },
                 {
                     "language": "NL",
@@ -833,7 +857,7 @@
             "remark": [
                 {
                     "language": "EN",
-                    "value": "fcVeghel coordinates it yearly exposition with 3 other nearby clubs (fcSchijndel, Zoomm, fcRooi)"
+                    "value": "fcVeghel coordinates it yearly exposition with 3 other nearby clubs (fcSchijndel, Zoomm, fcRooi)."
                 },
                 {
                     "language": "NL",
@@ -860,7 +884,7 @@
             "remark": [
                 {
                     "language": "EN",
-                    "value": "fgZoom coordinates it yearly exposition with 3 other nearby clubs (fcSchijndel, fcVeghel, fcRooi)"
+                    "value": "fgZoom coordinates it yearly exposition with 3 other nearby clubs (fcSchijndel, fcVeghel, fcRooi)."
                 },
                 {
                     "language": "NL",
@@ -1005,7 +1029,7 @@
             "idPlus": {
                 "town": "Waalre",
                 "fullName": "Fotogroep Waalre",
-                "nickName": "FG Waalre"
+                "nickName": "fgWaalre"
             },
             "coordinates": {
                 "latitude": 51.39184,
