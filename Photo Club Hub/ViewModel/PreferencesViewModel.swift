@@ -48,11 +48,11 @@ struct PreferencesStruct: Codable { // order in which they are shown on Preferen
         // add members with requested special properties (duplicate members won't occur)
         if showCurrentMembers {
             format = format.predicateOrAppend(suffix: """
-                                                        (photographer_.isDeceased = FALSE AND \
-                                                         isFormerMember = FALSE AND \
-                                                         isHonoraryMember = FALSE AND \
-                                                         isProspectiveMember = FALSE AND \
-                                                         isMentor = FALSE)
+                                                      (photographer_.isDeceased = FALSE AND \
+                                                       isFormerMember = FALSE AND \
+                                                       isHonoraryMember = FALSE AND \
+                                                       isProspectiveMember = FALSE AND \
+                                                       isMentor = FALSE)
                                                       """)
         }
         if showAspiringMembers {
@@ -60,21 +60,18 @@ struct PreferencesStruct: Codable { // order in which they are shown on Preferen
         }
         if showOfficers {
             format = format.predicateOrAppend(suffix: """
-                                                        (isChairman = TRUE OR
-                                                         isViceChairman = TRUE OR
-                                                         isTreasurer = TRUE OR
-                                                         isSecretary = TRUE OR
-                                                         isAdmin = TRUE)
+                                                      (isChairman = TRUE OR
+                                                       isViceChairman = TRUE OR
+                                                       isTreasurer = TRUE OR
+                                                       isSecretary = TRUE OR
+                                                       isAdmin = TRUE)
                                                       """)
         }
         if showHonoraryMembers {
             format = format.predicateOrAppend(suffix: "(isHonoraryMember = TRUE)")
         }
         if showFormerMembers {
-            format = format.predicateOrAppend(suffix: """
-                                                        (isFormerMember = TRUE AND \
-                                                         isMentor = FALSE)
-                                                      """)
+            format = format.predicateOrAppend(suffix: "(isFormerMember = TRUE AND isMentor = FALSE)")
         }
         if showDeceasedMembers {
             format = format.predicateOrAppend(suffix: "(photographer_.isDeceased = TRUE)")
