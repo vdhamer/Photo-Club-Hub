@@ -35,7 +35,7 @@ extension Organization {
             var hack = false
 
             if organizationType_ != nil {
-                organizationType = organizationType_! // not nil, should be the case
+                organizationType = organizationType_! // cannot be nil at this point
             } else if Thread.isMainThread { // frantic hack to avoid fatal error
                 let persistenceController = PersistenceController.shared // for Core Data
                 let viewContext = persistenceController.container.viewContext
