@@ -111,7 +111,7 @@ class RootLevel1JsonReader {
         // give the data to SwiftyJSON to parse
         let jsonRoot = JSON(parseJSON: data) // call to SwiftyJSON
 
-        // extract the requested organizationType one-by-one from the json file
+        // extract the `organizationTypes` in `organizationTypeEnumsToLoad` one-by-one from `jsonRoot`
         for organizationTypeEnum in organizationTypeEnumsToLoad {
             Organization.hackOrganizationTypeEnum = organizationTypeEnum
 
