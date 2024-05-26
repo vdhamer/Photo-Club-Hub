@@ -47,11 +47,11 @@ extension PhotoClubHubApp {
     static func loadClubsAndMembers() {
 
         // load list of photo clubs and museums from root.Level1.json file
-        let olBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-        olBackgroundContext.name = "root.level1.json"
-        olBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-        olBackgroundContext.automaticallyMergesChangesFromParent = true // needed to push ObjectTypes down to bgContext?
-        _ = RootLevel1JsonReader(bgContext: olBackgroundContext, useOnlyFile: false) // read root.Level1.json file
+        let level1BackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+        level1BackgroundContext.name = "root.level1.json"
+        level1BackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+        level1BackgroundContext.automaticallyMergesChangesFromParent = true // needed to push ObjectTypes down to bgContext?
+        _ = RootLevel1JsonReader(bgContext: level1BackgroundContext, useOnlyFile: false) // read root.Level1.json file
 
         // warning: following clubs rely on Level 1 file for GPS coordiantes
 
