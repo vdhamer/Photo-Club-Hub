@@ -29,15 +29,14 @@ extension Organization {
 
     var organizationType: OrganizationType {
         get { // careful: cannot read organizationType on background thread if database still contains nil
-            let organizationType: OrganizationType
-
             if organizationType_ != nil {
-                organizationType = organizationType_! // organizationType_ cannot be nil at this point
+                return organizationType_! // organizationType_ cannot be nil at this point
             } else {
-                fatalError( "Cannot Fetch organizationType object", file: #file, line: #line )
+                // something is fundamentally wrong if this happens
+                fatalError( "Error because organization is nil", file: #file, line: #line )
             }
-            return organizationType
         }
+
         set {
             if organizationType_ != newValue { // avoid unnecessarily dirtying context
                 organizationType_ = newValue
