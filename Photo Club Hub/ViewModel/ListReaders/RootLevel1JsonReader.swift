@@ -113,7 +113,6 @@ class RootLevel1JsonReader {
 
         // extract the `organizationTypes` in `organizationTypeEnumsToLoad` one-by-one from `jsonRoot`
         for organizationTypeEnum in organizationTypeEnumsToLoad {
-            Organization.hackOrganizationTypeEnum = organizationTypeEnum
 
             let jsonOrganizationsOfOneType: [JSON] = jsonRoot[organizationTypeEnum.unlocalizedPlural].arrayValue
             ifDebugPrint("Found \(jsonOrganizationsOfOneType.count) \(organizationTypeEnum.unlocalizedPlural) " +

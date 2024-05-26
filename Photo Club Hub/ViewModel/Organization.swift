@@ -27,49 +27,18 @@ extension Organization {
 		set { members_ = newValue as NSSet }
 	}
 
-    static var hackOrganizationTypeEnum: OrganizationTypeEnum = OrganizationTypeEnum.club
-
     var organizationType: OrganizationType {
         get { // careful: cannot read organizationType on background thread if database still contains nil
             let organizationType: OrganizationType
-            var hack = false
 
             if organizationType_ != nil {
-                organizationType = organizationType_! // not nil, should be the case
-            } else if Thread.isMainThread { // frantic hack to avoid fatal error
-                let persistenceController = PersistenceController.shared // for Core Data
-                let viewContext = persistenceController.container.viewContext
-                let orgTypeObjectID: NSManagedObjectID =
-                    OrganizationType.enum2objectID[Organization.hackOrganizationTypeEnum]!
-                // swiftlint:disable:next force_cast
-                organizationType = viewContext.object(with: orgTypeObjectID) as! OrganizationType
-                hack = true
+                organizationType = organizationType_! // organizationType_ cannot be nil at this point
             } else {
                 fatalError( "Cannot Fetch organizationType object", file: #file, line: #line )
             }
-            print("""
-                  ORGANIZATIONTYPE: getter for \(self.nickName). \
-                  Returning \(organizationType.organizationTypeName) \
-                  on Thread = \(Thread.isMainThread ? "MAIN" : "Background")\
-                  \(hack ? " after applying hack ;-())" : "")
-                  """)
             return organizationType
         }
         set {
-            print("""
-                  ORGANIZATIONTYPE: setter for \(self.fullName). \
-                  New value = \(newValue.organizationTypeName) \
-                  on Thread = \(Thread.isMainThread ? "MAIN" : "Background")
-                  """)
-            if newValue.organizationTypeName != Organization.hackOrganizationTypeEnum.rawValue {
-                print("""
-                      ORGANIZATIONTYPE: setter for \(self.fullName). \
-                      Unexpected new value = \(newValue.organizationTypeName) \
-                      (\(Organization.hackOrganizationTypeEnum.rawValue) expected) \
-                      on Thread = \(Thread.isMainThread ? "MAIN" : "Background")
-                      """)
-                ifDebugFatalError("Unexpected value for setter for organizationtype (see console)")
-            }
             if organizationType_ != newValue { // avoid unnecessarily dirtying context
                 organizationType_ = newValue
             }
