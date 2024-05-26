@@ -11,9 +11,12 @@ import Foundation // for UserDefaults
 // https://www.fivestars.blog/swiftui/app-scene-storage.html
 
 private var cancellableSet: Set<AnyCancellable> = []
-
+/*
 extension Published where Value: Codable {
-    init(wrappedValue defaultValue: Value, _ key: String, store: UserDefaults? = nil) {
+    init(wrappedValue defaultValue: Value, 
+         _ key: String,
+         store: UserDefaults? = nil) {
+
         let store: UserDefaults = store ?? .standard
 
         if
@@ -30,5 +33,7 @@ extension Published where Value: Codable {
                 store.set(data, forKey: key)
             }
             .store(in: &cancellableSet)
+
     }
 }
+*/
