@@ -2,7 +2,7 @@
 
 Maintenance
 * Tested on iOS 17.5.1
-* Enabled strict ("complete") concurrency checking. Warnings for Minimal: 0, Targetted: 0, Complete: 5
+* Enabled strict ("complete") concurrency checking. Ticket #368 + #275
 
 This is build #4624
 
