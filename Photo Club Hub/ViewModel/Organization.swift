@@ -210,7 +210,7 @@ extension Organization {
             // in release mode, log that there are multiple clubs, but continue using the first one.
         }
 
-		if let organization = organizations.first { // already exists, so make sure secondary attributes are up to date
+		if let organization = organizations.first { // already exists, so make sure non-ID attributes are up to date
             print("\(organization.fullNameTown): Will try to update info for organization \(organization.fullName)")
             if update(bgContext: context, organizationTypeEnum: organizationTypeEum,
                       organization: organization, nickName: idPlus.nickname,

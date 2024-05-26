@@ -50,7 +50,7 @@ extension PhotoClubHubApp {
         let level1BackgroundContext = PersistenceController.shared.container.newBackgroundContext()
         level1BackgroundContext.name = "root.level1.json"
         level1BackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-        level1BackgroundContext.automaticallyMergesChangesFromParent = true // needed to push ObjectTypes down to bgContext?
+        level1BackgroundContext.automaticallyMergesChangesFromParent = true // needed to push ObjectTypes to bgContext?
         _ = RootLevel1JsonReader(bgContext: level1BackgroundContext, useOnlyFile: false) // read root.Level1.json file
 
         // warning: following clubs rely on Level 1 file for GPS coordiantes

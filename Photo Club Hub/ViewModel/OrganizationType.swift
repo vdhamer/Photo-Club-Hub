@@ -90,7 +90,7 @@ extension OrganizationType {
     private static func update(context: NSManagedObjectContext,
                                organizationType: OrganizationType /*, dummy dumby: String*/) -> Bool {
 
-//        var modified: Bool = false
+//        var modified: Bool = false // dummy code because OrganizationType has only identifying properties
 
 //        if organizationType.dummy != dumby {
 //            organizationType.dummy = dumby // think I saw debugger mix up param and property, so changed the name
