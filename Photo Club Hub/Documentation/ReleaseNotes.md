@@ -3,6 +3,7 @@
 Maintenance
 * Tested on iOS 17.5.1
 * Enabled strict ("complete") concurrency checking. Ticket #368 + #275
+* Cleaned up code around OrganizationType
 
 This is build #4624
 
