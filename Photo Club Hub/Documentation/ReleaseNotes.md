@@ -1,11 +1,17 @@
 ### 2.6.2 (GitHub commit ???????) ??-06-24
 
+This is build #4625.
+
+---------------------------------------------------------------------------
+
+### 2.6.2 (GitHub commit a815fbb) 28-05-24
+
 Maintenance
 * Tested on iOS 17.5.1
-* Enabled strict ("complete") concurrency checking. Ticket #368 + #275
-* Cleaned up code around OrganizationType
+* Enabled full Xcode concurrency checking. Required several code changes. In preparation of Swift 6.0.
+* Cleaned up code around OrganizationType. That code contained a temporary hack.
 
-This is build #4624
+This is build #4624 and was distributed to TestFlight users only.
 
 ---------------------------------------------------------------------------
 
