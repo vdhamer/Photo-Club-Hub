@@ -294,10 +294,11 @@ struct FilteredOrganizationView: View, Sendable {
 extension FilteredOrganizationView { // graphic representation
 
     func selectMarkerTint(organization: Organization, selectedOrganization: Organization) -> Color {
-        if organization.organizationType.isUnknown {
-            .red // for .unknown organization type (has higher priority than other rules)
-        } else if isEqual(organizationLHS: organization, organizationRHS: selectedOrganization) {
+        if isEqual(organizationLHS: organization, organizationRHS: selectedOrganization) {
             .organizationColor // this is the organization centered on this particular map
+        } else if organization.organizationType.isUnknown {
+            .red // for .unknown organization type (has higher priority than other rules)
+
         } else {
             .blue // for .museum and .club (and future) organization types (this should be the normal case)
         }
@@ -313,8 +314,10 @@ extension FilteredOrganizationView { // graphic representation
             result = "building.columns.fill"
         case OrganizationTypeEnum.club.rawValue:
             result = "camera.fill"
-        default:
-            result = "location.fill"
+        case OrganizationTypeEnum.unknown.rawValue:
+            result = "questionmark"
+        default: // not sure why default is needed
+            result = "exclamationmark"
         }
 
         if circleNeeded {
