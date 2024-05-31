@@ -2,6 +2,12 @@
 
 This is build #4625.
 
+Clubs and Museums screen
+* changed icon by which organization type (other than club or museum) is displayed on map
+
+Maintenance
+* improved robustness of OrganizationType.getter (gave crash if value was somehow missing)
+
 ---------------------------------------------------------------------------
 
 ### 2.6.2 (GitHub commit a815fbb) 28-05-24

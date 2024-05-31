@@ -10,20 +10,20 @@ import CoreData
 extension OrganizationType {
 
     nonisolated(unsafe) static var enum2objectID: [OrganizationTypeEnum: NSManagedObjectID] = [:]
-    // enum2objectID is safe because it called only once from the Main thread when the app launches
+    // enum2objectID is safe because it only written to (once) the Main thread when the app launches
+    // and has a guard statement as extra protection
 
     @MainActor
     static func initConstants() { // called on main thread
-        guard Thread.isMainThread else { fatalError("OrganizationType.initConstants() must be on main thread") }
         guard OrganizationType.enum2objectID.isEmpty else {
-            fatalError("Repeated call to OrganizationalType.initConstants")
+            fatalError("Second call to OrganizationalType.initConstants()")
         }
 
         let viewContext = PersistenceController.shared.container.viewContext // foreground context
 
         for type in OrganizationTypeEnum.allCases { // type is simple enum
             let organizationType = OrganizationType.findCreateUpdate( // organizationType is CoreData NSManagedObject
-                context: viewContext,
+                context: viewContext, // requires @MainActor
                 organizationTypeName: type.unlocalizedSingular
             )
             OrganizationType.enum2objectID[type] = organizationType.objectID // access NSManagedObjects from bg threads
@@ -35,7 +35,6 @@ extension OrganizationType {
             ifDebugFatalError("Couldn't initialize both organizationType records",
                               file: #fileID, line: #line)
         }
-
     }
 
     // MARK: - getters and setters
