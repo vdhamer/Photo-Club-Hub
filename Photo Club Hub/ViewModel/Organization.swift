@@ -37,8 +37,10 @@ extension Organization {
                 ifDebugFatalError( "Error because organization is nil", file: #file, line: #line )
                 let persistenceController = PersistenceController.shared // for Core Data
                 let viewContext = persistenceController.container.viewContext // requires @MainActor
-                // swiftlint:disable:next force_cast
-                return viewContext.registeredObject(for: OrganizationType.enum2objectID[.unknown]!) as! OrganizationType
+                return OrganizationType.findCreateUpdate( // organizationType is CoreData NSManagedObject
+                    context: viewContext, // requires @MainActor
+                    organizationTypeName: OrganizationTypeEnum.unknown.rawValue
+                )
             }
         }
 
