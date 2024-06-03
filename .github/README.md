@@ -1104,7 +1104,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Peter van den Hamer - vdhamer@gmail.com
 
-Project Link: [https://GitHub.com/vdhamer/PhotoClubWaalre](https://GitHub.com/vdhamer/PhotoClubWaalre)
+Project Link: [https://github.com/vdhamer/Photo-Club-Hub](https://github.com/vdhamer/Photo-Club-Hub)
 
 ### Acknowledgments
 
