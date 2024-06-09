@@ -25,7 +25,7 @@ struct PhotoClubHubApp: App {
         UserDefaults.standard.set(Bundle.main.fullVersion, forKey: "version_preference")
 
         let resetKey = "2.6.2 forced data reset performed"
-        if AppVersion() >= AppVersion("2.6.3")
+        if AppVersion() >= AppVersion("2.6.2")
            && !UserDefaults.standard.bool(forKey: resetKey) {
             PhotoClubHubApp.deleteAllCoreDataObjects()
         }
