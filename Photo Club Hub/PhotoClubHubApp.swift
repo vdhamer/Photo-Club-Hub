@@ -38,7 +38,7 @@ struct PhotoClubHubApp: App {
             PreludeView()
                 .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext) // main queue!
                 .onAppear {
-                    PhotoClubHubApp.loadClubsAndMembers()
+//                    PhotoClubHubApp.loadClubsAndMembers() TODO
                 }
         }
         .onChange(of: scenePhase) { // pre-iOS 17 there was 1 param. Since iOS 17 it is 0 or 2.

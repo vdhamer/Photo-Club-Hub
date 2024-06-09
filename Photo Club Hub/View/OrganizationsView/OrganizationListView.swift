@@ -50,13 +50,13 @@ struct OrganizationListView: View {
                 } .foregroundColor(Color.secondary)
             }
             .listStyle(.plain)
+            .refreshable { // for pull-to-refresh
+                PhotoClubHubApp.loadClubsAndMembers()
+            }
             .task {
                 try? await locationManager.requestUserAuthorization()
                 try? await locationManager.startCurrentLocationUpdates()
                 // remember that nothing will run here until the for try await loop finishes
-            }
-            .refreshable { // for pull-to-refresh
-                PhotoClubHubApp.loadClubsAndMembers()
             }
         }
         .navigationTitle(navigationTitle)
