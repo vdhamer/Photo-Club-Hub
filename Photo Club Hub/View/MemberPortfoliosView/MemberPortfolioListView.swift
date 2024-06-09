@@ -42,7 +42,6 @@ struct MemberPortfolioListView: View {
         }
         .listStyle(.plain)
         .refreshable { // for pull-to-refresh
-            // UserDefaults.standard.set(true, forKey: "PortfoliosPageRefreshed") // not really used
             PhotoClubHubApp.loadClubsAndMembers()
         }
         .keyboardType(.namePhonePad)
