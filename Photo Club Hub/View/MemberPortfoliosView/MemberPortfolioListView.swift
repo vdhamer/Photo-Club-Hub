@@ -42,7 +42,7 @@ struct MemberPortfolioListView: View {
         }
         .listStyle(.plain)
         .refreshable { // for pull-to-refresh
-            PhotoClubHubApp.loadClubsAndMembers()
+            PhotoClubHubApp.loadClubsAndMembers() // carefull: runs asynchronously
         }
         .keyboardType(.namePhonePad)
         .autocapitalization(.none)

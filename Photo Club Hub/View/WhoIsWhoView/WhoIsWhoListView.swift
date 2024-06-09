@@ -61,7 +61,7 @@ struct WhoIsWhoListView: View {
         .scrollTargetBehavior(.viewAligned) // iOS 17 smart scrolling
         .contentMargins(.horizontal, -5, for: .scrollIndicators) // iOS 17 smart scrolling
         .refreshable { // for pull-to-refresh
-            PhotoClubHubApp.loadClubsAndMembers()
+            PhotoClubHubApp.loadClubsAndMembers() // carefull: runs asynchronously
         }
         .keyboardType(.namePhonePad)
         .autocapitalization(.none)

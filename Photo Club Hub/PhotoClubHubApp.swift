@@ -38,7 +38,7 @@ struct PhotoClubHubApp: App {
             PreludeView()
                 .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext) // main queue!
                 .onAppear {
-//                    PhotoClubHubApp.loadClubsAndMembers() TODO
+//                    PhotoClubHubApp.loadClubsAndMembers() // TODO stopped loading all data
                 }
         }
         .onChange(of: scenePhase) { // pre-iOS 17 there was 1 param. Since iOS 17 it is 0 or 2.
@@ -52,28 +52,36 @@ extension PhotoClubHubApp {
 
     static func loadClubsAndMembers() {
 
-        // load list of photo clubs and museums from root.Level1.json file
-        let level1BackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-        level1BackgroundContext.name = "root.level1.json"
-        level1BackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-        level1BackgroundContext.automaticallyMergesChangesFromParent = true // needed to push ObjectTypes to bgContext?
-        _ = RootLevel1JsonReader(bgContext: level1BackgroundContext, useOnlyFile: false) // read root.Level1.json file
-
-        // warning: following clubs rely on Level 1 file for GPS coordiantes
-
-        // load test member(s) of Fotogroep Bellus Imago
-        let bellusBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-        bellusBackgroundContext.name = "Bellus Imago"
-        bellusBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-        bellusBackgroundContext.automaticallyMergesChangesFromParent = true
-        _ = BellusImagoMembersProvider(bgContext: bellusBackgroundContext)
-
-        // load test member(s) of Fotogroep De Gender
-        let genderBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-        genderBackgroundContext.name = "FG de Gender"
-        genderBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-        genderBackgroundContext.automaticallyMergesChangesFromParent = true
-        _ = FotogroepDeGenderMembersProvider(bgContext: genderBackgroundContext)
+//        // load list of photo clubs and museums from root.Level1.json file // TODO load only FG Anders
+//        let level1BackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+//        level1BackgroundContext.name = "root.level1.json"
+//        level1BackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+//        level1BackgroundContext.automaticallyMergesChangesFromParent = true // to push ObjectTypes to bgContext?
+//        _ = RootLevel1JsonReader(bgContext: level1BackgroundContext, useOnlyFile: false) // read root.Level1.json file
+//
+//        // warning: following clubs rely on Level 1 file for GPS coordiantes
+//
+//        // load test member(s) of Fotogroep Bellus Imago
+//        let bellusBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+//        bellusBackgroundContext.name = "Bellus Imago"
+//        bellusBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+//        bellusBackgroundContext.automaticallyMergesChangesFromParent = true
+//        _ = BellusImagoMembersProvider(bgContext: bellusBackgroundContext)
+//
+//        // load test member(s) of Fotogroep De Gender
+//        let genderBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+//        genderBackgroundContext.name = "FG de Gender"
+//        genderBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+//        genderBackgroundContext.automaticallyMergesChangesFromParent = true
+//        _ = FotogroepDeGenderMembersProvider(bgContext: genderBackgroundContext)
+//
+//
+//        // load test member(s) of Fotogroep De Gender
+//        let genderBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+//        genderBackgroundContext.name = "FG de Gender"
+//        genderBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+//        genderBackgroundContext.automaticallyMergesChangesFromParent = true
+//        _ = FotogroepDeGenderMembersProvider(bgContext: genderBackgroundContext)
 
         // load all current members of Fotogroep Anders
         let andersBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
@@ -82,12 +90,12 @@ extension PhotoClubHubApp {
         andersBackgroundContext.automaticallyMergesChangesFromParent = true
         _ = AndersMembersProvider(bgContext: andersBackgroundContext)
 
-        // load all current/former members of Fotogroep Waalre
-        let waalreBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-        waalreBackgroundContext.name = "Fotogroep Waalre"
-        waalreBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-        waalreBackgroundContext.automaticallyMergesChangesFromParent = true
-        _ = FotogroepWaalreMembersProvider(bgContext: waalreBackgroundContext)
+//        // load all current/former members of Fotogroep Waalre
+//        let waalreBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+//        waalreBackgroundContext.name = "Fotogroep Waalre"
+//        waalreBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+//        waalreBackgroundContext.automaticallyMergesChangesFromParent = true
+//        _ = FotogroepWaalreMembersProvider(bgContext: waalreBackgroundContext)
 
     }
 
@@ -107,7 +115,7 @@ extension PhotoClubHubApp {
 
             try deleteEntitiesOfOneType("OrganizationType")
             print(forcedClearing + " successful.")
-//            UserDefaults.standard.set(true, forKey: resetKey) // TODO uncomment
+//            UserDefaults.standard.set(true, forKey: resetKey) // TODO enable repeatable testing
         } catch {
             print(forcedClearing + " successful.")
         }

@@ -11,21 +11,21 @@ extension OrganizationType {
 
     @MainActor
     static func initConstants() { // called on main thread
-        let viewContext = PersistenceController.shared.container.viewContext // requires foreground context
-
-        for type in OrganizationTypeEnum.allCases { // type is simple enum
-            _ = OrganizationType.findCreateUpdate( // organizationType is CoreData NSManagedObject
-                context: viewContext, // requires @MainActor
-                organizationTypeName: type.unlocalizedSingular
-            )
-        }
-
-        do {
-            try viewContext.save() // persist all organizationTypes using main thread ManagedObjectContext
-        } catch {
-            ifDebugFatalError("Couldn't initialize both organizationType records",
-                              file: #fileID, line: #line)
-        }
+//        let viewContext = PersistenceController.shared.container.viewContext // requires foreground context
+//
+//        for type in OrganizationTypeEnum.allCases { // type is simple enum
+//            _ = OrganizationType.findCreateUpdate( // organizationType is CoreData NSManagedObject
+//                context: viewContext, // requires @MainActor
+//                organizationTypeName: type.unlocalizedSingular
+//            )
+//        }
+//
+//        do {
+//            try viewContext.save() // persist all organizationTypes using main thread ManagedObjectContext
+//        } catch {
+//            ifDebugFatalError("Couldn't initialize the three organizationType records",
+//                              file: #fileID, line: #line)
+//        } TOTO remove comments or remove function
     }
 
     // MARK: - getters and setters

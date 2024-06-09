@@ -51,7 +51,7 @@ struct OrganizationListView: View {
             }
             .listStyle(.plain)
             .refreshable { // for pull-to-refresh
-                PhotoClubHubApp.loadClubsAndMembers()
+                PhotoClubHubApp.loadClubsAndMembers() // carefull: runs asynchronously
             }
             .task {
                 try? await locationManager.requestUserAuthorization()

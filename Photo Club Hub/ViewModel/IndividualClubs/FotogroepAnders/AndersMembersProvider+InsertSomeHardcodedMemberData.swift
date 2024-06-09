@@ -38,7 +38,7 @@ extension AndersMembersProvider { // fill with some initial hard-coded content
                      """)
         clubAnders.hasHardCodedMemberData = true // store in database that we ran insertSomeHardcodedMembers...
 
-        addMember(bgContext: bgContext, // add Loek to Photographers and member of Bellus (if needed)
+        addMember(bgContext: bgContext, // add Helga to Photographers and member of Anders (if needed)
                   personName: PersonName(givenName: "Helga", infixName: "", familyName: "Nuchelmans"),
                   organization: clubAnders,
                   memberWebsite: URL(string: "https://helganuchelmans.nl"),
@@ -50,7 +50,7 @@ extension AndersMembersProvider { // fill with some initial hard-coded content
                                            """)
         )
 
-        addMember(bgContext: bgContext, // add Loek to Photographers and member of Bellus (if needed)
+        addMember(bgContext: bgContext, // add Mirjam to Photographers and member of Anders (if needed)
                   personName: PersonName(givenName: "Mirjam", infixName: "", familyName: "Evers"),
                   organization: clubAnders,
                   memberWebsite: URL(string: "https://me4photo.jimdosite.com/portfolio/"),
@@ -61,7 +61,7 @@ extension AndersMembersProvider { // fill with some initial hard-coded content
                                            """)
         )
 
-        addMember(bgContext: bgContext, // add Loek to Photographers and member of Bellus (if needed)
+        addMember(bgContext: bgContext, // add Lotte to Photographers and member of Anders (if needed)
                   personName: PersonName(givenName: "Lotte", infixName: "", familyName: "Vrij"),
                   organization: clubAnders,
 //                  website: URL(string: "https://lotte-vrij-fotografie.jimdofree.com"),
@@ -77,7 +77,7 @@ extension AndersMembersProvider { // fill with some initial hard-coded content
                                                """)
         )
 
-        addMember(bgContext: bgContext, // add Loek to Photographers and member of Bellus (if needed)
+        addMember(bgContext: bgContext, // add Dennis to Photographers and member of Anders (if needed)
                   personName: PersonName(givenName: "Dennis", infixName: "", familyName: "Verbruggen"),
                   organization: clubAnders,
                   memberWebsite: URL(string: FotogroepWaalreMembersProvider.baseURL + "/Empty_Website/"),
