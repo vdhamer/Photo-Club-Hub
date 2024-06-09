@@ -21,10 +21,16 @@ struct PhotoClubHubApp: App {
         viewContext.undoManager = nil // nil by default on iOS
         viewContext.shouldDeleteInaccessibleFaults = true
 
-        OrganizationType.initConstants() // insert contant records into OrganizationType table if needed
-
         // update version number shown in iOS Settings
         UserDefaults.standard.set(Bundle.main.fullVersion, forKey: "version_preference")
+
+        let resetKey = "2.6.2 forced data reset performed"
+        if AppVersion() >= AppVersion("2.6.3")
+           && !UserDefaults.standard.bool(forKey: resetKey) {
+            PhotoClubHubApp.deleteAllCoreDataObjects()
+        }
+
+        OrganizationType.initConstants() // insert contant records into OrganizationType table if needed
     }
 
     var body: some Scene {
@@ -85,4 +91,49 @@ extension PhotoClubHubApp {
 
     }
 
+    // returns true if successful
+    @MainActor
+    static func deleteAllCoreDataObjects() {
+        let forcedClearing = "Forced clearing of CoreData data for app version 2.6.2"
+
+        // order is important because of non-optional relationships
+        do {
+            try deleteEntitiesOfOneType("LocalizedRemark")
+            try deleteEntitiesOfOneType("Language")
+
+            try deleteEntitiesOfOneType("MemberPortfolio")
+            try deleteEntitiesOfOneType("Organization")
+            try deleteEntitiesOfOneType("Photographer")
+
+            try deleteEntitiesOfOneType("OrganizationType")
+            print(forcedClearing + " successful.")
+//            UserDefaults.standard.set(true, forKey: resetKey) // TODO uncomment
+        } catch {
+            print(forcedClearing + " successful.")
+        }
+    }
+
+}
+
+// returns true if successful
+@MainActor
+func deleteEntitiesOfOneType(_ entity: String) throws {
+    let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entity)
+    fetchRequest.returnsObjectsAsFaults = false
+    do {
+        let viewContext = PersistenceController.shared.container.viewContext // requires @MainActor
+        let results = try viewContext.fetch(fetchRequest)
+        for object in results {
+            guard let objectData = object as? NSManagedObject else {continue}
+            viewContext.delete(objectData)
+        }
+        try viewContext.save()
+        if entity == "OrganizationType" {
+            OrganizationType.initConstants() // insert contant records into OrganizationType table if needed
+        }
+
+    } catch let error { // if `entity` identifier is not found, `try` doesn't throw. Maybe a rethrow is missing.
+        print("Delete all data in \(entity) error :", error)
+        throw error
+    }
 }

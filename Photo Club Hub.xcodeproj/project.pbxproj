@@ -74,6 +74,7 @@
 		D0AE1B7527889E8600E0100E /* OrganizationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AE1B7427889E8600E0100E /* OrganizationListView.swift */; };
 		D0AE1B782788A19500E0100E /* WhoIsWhoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AE1B772788A19500E0100E /* WhoIsWhoListView.swift */; };
 		D0B260B72958FC2D00B73E1A /* FGWMembersProvider+extractName.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B260B62958FC2D00B73E1A /* FGWMembersProvider+extractName.swift */; };
+		D0B32BB32C15C51A009FF8E7 /* AppVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B32BB22C15C51A009FF8E7 /* AppVersion.swift */; };
 		D0B52497277F9A4B00927BCA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0B52495277F9A4B00927BCA /* Localizable.strings */; };
 		D0BAB01D2A76CED300387E63 /* URLSession+synchronous.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BAB01C2A76CED300387E63 /* URLSession+synchronous.swift */; };
 		D0C53BDD2ABF3ADF000722A1 /* PersonName.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C53BDC2ABF3ADF000722A1 /* PersonName.swift */; };
@@ -187,6 +188,7 @@
 		D0AE1B772788A19500E0100E /* WhoIsWhoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhoIsWhoListView.swift; sourceTree = "<group>"; };
 		D0AEDF3C2BBE0CD1003FD250 /* Photo_Club_Hub_2_5_7.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_5_7.xcdatamodel; sourceTree = "<group>"; };
 		D0B260B62958FC2D00B73E1A /* FGWMembersProvider+extractName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FGWMembersProvider+extractName.swift"; sourceTree = "<group>"; };
+		D0B32BB22C15C51A009FF8E7 /* AppVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVersion.swift; sourceTree = "<group>"; };
 		D0B52496277F9A4B00927BCA /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D0BAB01C2A76CED300387E63 /* URLSession+synchronous.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+synchronous.swift"; sourceTree = "<group>"; };
 		D0C53BDC2ABF3ADF000722A1 /* PersonName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonName.swift; sourceTree = "<group>"; };
@@ -430,6 +432,7 @@
 				D0A0B6832AA930E90078DE9A /* Photo_Club_Hub.xcdatamodeld */,
 				D0ADF4AD27922DCA00535432 /* MemberRolesAndStatus.swift */,
 				D0D18C77296E1F6A00B334DB /* OrganizationIdPlus.swift */,
+				D0B32BB22C15C51A009FF8E7 /* AppVersion.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -812,6 +815,7 @@
 				D030CD652B3AE2E800A12E90 /* OrganizationType.swift in Sources */,
 				D0831A31277F72590049AB84 /* MemberPortfolio.swift in Sources */,
 				D0831A32277F72590049AB84 /* Photographer.swift in Sources */,
+				D0B32BB32C15C51A009FF8E7 /* AppVersion.swift in Sources */,
 				D0EAEB332B3CA6D300EC05B6 /* RootLevel1JsonReader.swift in Sources */,
 				D087540A2BC5E9FD00FCBDB3 /* WhoIsWhoTextInfo.swift in Sources */,
 				D044646527FCE7C100990613 /* UIDevice+IsIPad.swift in Sources */,

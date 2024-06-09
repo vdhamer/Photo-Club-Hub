@@ -7,6 +7,7 @@ Clubs and Museums screen
 
 Maintenance
 * improved robustness of OrganizationType.getter (gave crash if value was somehow missing)
+* forced one-time reloading (from scratch) of CoreData information when release is 2.6.2 or higher
 
 ---------------------------------------------------------------------------
 
