@@ -8,7 +8,8 @@ Clubs and Museums screen
 Maintenance
 * improved robustness of OrganizationType.getter (gave crash if value was somehow missing)
 * forced one-time reloading (from scratch) of CoreData information when release is 2.6.2 or higher
-* some changes to prepare for Swift 6 language mode (and static data-race checking)
+* changes to prepare for Swift 6 language mode (with its static data-race checking)
+* no clubs mode
 
 ---------------------------------------------------------------------------
 

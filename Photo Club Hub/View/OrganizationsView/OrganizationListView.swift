@@ -84,7 +84,7 @@ struct NoClubsText: View {
     var body: some View {
         Text("""
              No photo clubs seem to be currently loaded.
-             Try dragging down the Photo Clubs screen to reload the default clubs.
+             Try dragging down the Clubs and Museums screen to reload the default clubs.
              """, comment: "Hint to the user if the database returns zero PhotoClubs.")
     }
 }

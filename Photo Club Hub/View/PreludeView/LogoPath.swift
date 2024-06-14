@@ -14,15 +14,6 @@ struct LogoPath: Shape {
     let relPixelSize: Double // value between 0.0 and 1.0
     let offsetPoint: UnitPoint
 
-//    var animatableData: Double { // TODO not sure this doesn't do anything
-//        get {
-//            logCellRepeat
-//        }
-//        set {
-//            logCellRepeat = newValue
-//        }
-//    }
-
     func path(in rect: CGRect) -> Path { // needed to conform to Shape protocol
         var path = Path()
         path.move(to: .zero)

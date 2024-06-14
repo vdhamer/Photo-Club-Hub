@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import MapKit // TODO add @preconcurrency ?
+import MapKit
 import CoreData
 
 struct FilteredOrganizationView: View, Sendable {

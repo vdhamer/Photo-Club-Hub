@@ -76,6 +76,9 @@
 /* Relationship status of member within a club. Used as prefix. */
 "deceased" = "overleden";
 
+/* Shown instead of app name in PreludeView when app is started */
+"No clubs mode" = "Lege data versie";
+
 /* Caption of Websites image on Readme page */
 "Example of a link to a club web site" = "Link (in blauw) naar een club website";
 
@@ -128,7 +131,7 @@
 "No known personal website" = "Geen fotografie website bekend";
 
 /* Hint to the user if the database returns zero PhotoClubs. */
-"No photo clubs seem to be currently loaded.\nTry dragging down the Photo Clubs screen to reload the default clubs." = "Er zijn geen Fotogroepen momenteel geladen.\nDoor dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorbeeldclubs geladen. ";
+"No photo clubs seem to be currently loaded.\nTry dragging down the Clubs and Museums screen to reload the default clubs." = "Er zijn geen Fotogroepen momenteel geladen.\nDoor dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorbeeldclubs geladen. ";
 
 /* Shown below map if there is no usable remark in the OrganzationList.json file. */
 "No remark currently available for %@ %@." = "Geen bijzonderheid bekend voor %@ %@.";
@@ -423,3 +426,4 @@
 
 /* Shown in gray at the bottom of the Who's Who page (3/3). */
 "WhosWho_Caption_3" = "③ De miniatuurfoto's kunnen horizontaal verschoven worden.";
+

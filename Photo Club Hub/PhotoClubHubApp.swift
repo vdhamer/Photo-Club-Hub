@@ -11,7 +11,9 @@ import CoreData // for ManagedObjectContext
 @main
 struct PhotoClubHubApp: App {
 
+    static let leaveEmpty = true // leaveEmpty clears the existing database and skips loading any  data on app startup
     @Environment(\.scenePhase) var scenePhase
+    private static let resetKey = "2.6.2 forced data reset performed"
 
     init() {
         // Core Data settings
@@ -24,9 +26,9 @@ struct PhotoClubHubApp: App {
         // update version number shown in iOS Settings
         UserDefaults.standard.set(Bundle.main.fullVersion, forKey: "version_preference")
 
-        let resetKey = "2.6.2 forced data reset performed"
-        if AppVersion() >= AppVersion("2.6.2")
-           && !UserDefaults.standard.bool(forKey: resetKey) {
+        if ((AppVersion() >= AppVersion("2.6.2")) // starting with release 2.6.2, erase the database
+            && (!UserDefaults.standard.bool(forKey: PhotoClubHubApp.resetKey))) // but do so only once
+            || PhotoClubHubApp.leaveEmpty { // and also ease if we are in leaveEmpty mode for testing
             PhotoClubHubApp.deleteAllCoreDataObjects()
         }
 
@@ -35,10 +37,11 @@ struct PhotoClubHubApp: App {
 
     var body: some Scene {
         WindowGroup {
-            PreludeView()
+            PreludeView(leaveEmpty: PhotoClubHubApp.leaveEmpty)
                 .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext) // main queue!
                 .onAppear {
-//                    PhotoClubHubApp.loadClubsAndMembers() // TODO stopped loading all data
+                    guard !PhotoClubHubApp.leaveEmpty else { return }
+                    PhotoClubHubApp.loadClubsAndMembers()
                 }
         }
         .onChange(of: scenePhase) { // pre-iOS 17 there was 1 param. Since iOS 17 it is 0 or 2.
@@ -52,50 +55,53 @@ extension PhotoClubHubApp {
 
     static func loadClubsAndMembers() {
 
-//        // load list of photo clubs and museums from root.Level1.json file // TODO load only FG Anders
-//        let level1BackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-//        level1BackgroundContext.name = "root.level1.json"
-//        level1BackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-//        level1BackgroundContext.automaticallyMergesChangesFromParent = true // to push ObjectTypes to bgContext?
-//        _ = RootLevel1JsonReader(bgContext: level1BackgroundContext, useOnlyFile: false) // read root.Level1.json file
-//
-//        // warning: following clubs rely on Level 1 file for GPS coordiantes
-//
-//        // load test member(s) of Fotogroep Bellus Imago
-//        let bellusBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-//        bellusBackgroundContext.name = "Bellus Imago"
-//        bellusBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-//        bellusBackgroundContext.automaticallyMergesChangesFromParent = true
-//        _ = BellusImagoMembersProvider(bgContext: bellusBackgroundContext)
-//
-//        // load test member(s) of Fotogroep De Gender
-//        let genderBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-//        genderBackgroundContext.name = "FG de Gender"
-//        genderBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-//        genderBackgroundContext.automaticallyMergesChangesFromParent = true
-//        _ = FotogroepDeGenderMembersProvider(bgContext: genderBackgroundContext)
-//
-//
-//        // load test member(s) of Fotogroep De Gender
-//        let genderBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-//        genderBackgroundContext.name = "FG de Gender"
-//        genderBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-//        genderBackgroundContext.automaticallyMergesChangesFromParent = true
-//        _ = FotogroepDeGenderMembersProvider(bgContext: genderBackgroundContext)
+        if !PhotoClubHubApp.leaveEmpty {
+            // load list of photo clubs and museums from root.Level1.json file
+            let level1BackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+            level1BackgroundContext.name = "root.level1.json"
+            level1BackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+            level1BackgroundContext.automaticallyMergesChangesFromParent = true // to push ObjectTypes to bgContext?
+            _ = RootLevel1JsonReader(bgContext: level1BackgroundContext, // read root.Level1.json file
+                                     useOnlyFile: false)
+        }
 
-        // load all current members of Fotogroep Anders
-        let andersBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-        andersBackgroundContext.name = "FG Anders"
-        andersBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-        andersBackgroundContext.automaticallyMergesChangesFromParent = true
-        _ = AndersMembersProvider(bgContext: andersBackgroundContext)
+        // warning: following clubs rely on Level 1 file for GPS coordiantes
 
-//        // load all current/former members of Fotogroep Waalre
-//        let waalreBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-//        waalreBackgroundContext.name = "Fotogroep Waalre"
-//        waalreBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-//        waalreBackgroundContext.automaticallyMergesChangesFromParent = true
-//        _ = FotogroepWaalreMembersProvider(bgContext: waalreBackgroundContext)
+        if !PhotoClubHubApp.leaveEmpty {
+            // load test member(s) of Fotogroep Bellus Imago
+            let bellusBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+            bellusBackgroundContext.name = "Bellus Imago"
+            bellusBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+            bellusBackgroundContext.automaticallyMergesChangesFromParent = true
+            _ = BellusImagoMembersProvider(bgContext: bellusBackgroundContext)
+        }
+
+        if !PhotoClubHubApp.leaveEmpty {
+            // load test member(s) of Fotogroep De Gender
+            let genderBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+            genderBackgroundContext.name = "FG de Gender"
+            genderBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+            genderBackgroundContext.automaticallyMergesChangesFromParent = true
+            _ = FotogroepDeGenderMembersProvider(bgContext: genderBackgroundContext)
+        }
+
+        if !PhotoClubHubApp.leaveEmpty {
+            // load all current/former members of Fotogroep Waalre
+            let waalreBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+            waalreBackgroundContext.name = "Fotogroep Waalre"
+            waalreBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+            waalreBackgroundContext.automaticallyMergesChangesFromParent = true
+            _ = FotogroepWaalreMembersProvider(bgContext: waalreBackgroundContext)
+        }
+
+//        if !PhotoClubHubApp.leaveEmpty {
+            // load all current members of Fotogroep Anders
+            let andersBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+            andersBackgroundContext.name = "FG Anders"
+            andersBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+            andersBackgroundContext.automaticallyMergesChangesFromParent = true
+            _ = AndersMembersProvider(bgContext: andersBackgroundContext)
+//        }
 
     }
 
@@ -115,7 +121,11 @@ extension PhotoClubHubApp {
 
             try deleteEntitiesOfOneType("OrganizationType")
             print(forcedClearing + " successful.")
-//            UserDefaults.standard.set(true, forKey: resetKey) // TODO enable repeatable testing
+            if !leaveEmpty {
+                UserDefaults.standard.set(true, forKey: resetKey)
+            } else {
+                UserDefaults.standard.removeObject(forKey: resetKey)
+            }
         } catch {
             print(forcedClearing + " successful.")
         }

@@ -125,7 +125,7 @@
 "No photo clubs seem to be currently loaded.\nTry dragging down the Photo Clubs screen to reload the default clubs." = "No photo clubs seem to be currently loaded.\nTry dragging down the Photo Clubs screen to reload the default clubs.";
 
 /* Shown below map if there is no usable remark in the OrganzationList.json file. */
-"No remark available for %@ %@." = "No remark available for %@ %@.";
+"No remark currently available for %@ %@." = "No remark currently available for %@ %@.";
 
 /* X of Y portfolio(s) shown (due to various forms of filtering) */
 "of1" = "of";

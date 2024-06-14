@@ -9,6 +9,8 @@ import SwiftUI
 
 struct PreludeView: View {
 
+    var leaveEmpty: Bool // normally false, true for certain debugging
+
     // MARK: - Constants
     static let maxCellRepeat: Double = 32 // max number of cells horizontally and vertically
     private static let log2CellRepeat: Double = log2(maxCellRepeat) // typically log2(32) = 5
@@ -24,24 +26,6 @@ struct PreludeView: View {
     @State private var debugPanelVisible = false // displays DebugPanel view, can be toggled via keyboard "d" character
     @State private var debugLocation = CGPoint(x: 0, y: 0)
     @Environment(\.horizontalSizeClass) var horSizeClass
-
-    func offset(frame rect: CGSize) -> CGSize { // used to position large image in the middle of a cell
-        guard logScale != 0 else { return .zero }
-        let shortFrameDimension: Double = min(rect.width, rect.height)
-        let cellPitchInPixels: Double = shortFrameDimension/PreludeView.maxCellRepeat
-        let offset = CGSize( width: cellPitchInPixels * Double(offsetInCells.x) * pow(2, logScale),
-                             height: cellPitchInPixels * Double(offsetInCells.y) * pow(2, logScale) )
-        return offset
-    }
-
-    func intOffset(rect: CGSize, location: CGPoint) -> OffsetVectorInCells { // used to translate tap to selected cell
-        guard logScale != 0 else { return OffsetVectorInCells(x: 0, y: 0) }
-        let shortFrameDimension = min(rect.width, rect.height)
-        let halfFrameDimension = shortFrameDimension / 2
-        let cellPitchInPixels = shortFrameDimension/PreludeView.maxCellRepeat
-        return OffsetVectorInCells( x: Int((((halfFrameDimension - location.x) / cellPitchInPixels)).rounded()),
-                                    y: Int((((halfFrameDimension - location.y) / cellPitchInPixels)).rounded()) )
-    }
 
     var body: some View {
         NavigationStack { // defines navigation structure of entire app, even though you don't see navigation bar yet
@@ -130,10 +114,7 @@ struct PreludeView: View {
                                 debugPanelVisible: $debugPanelVisible,
                                 crosshairsVisible: $crosshairsVisible)
 
-                    Text(isDebug() ? String(localized: "In debug mode",
-                                            comment: "Shown instead of app name in PreludeView when app is started") :
-                                     String(localized: "Photo Club Hub",
-                                            comment: "Name of the app shown in PreludeView when app is started"))
+                    Text(preludeText)
                         .foregroundColor(.black)
                         .font(Font.custom("Gill Sans", size: 105*(min(geo.size.width, geo.size.height)/800))) // was 105
                         .kerning((0/3)*(min(geo.size.width, geo.size.height)/800)) // was 140/3
@@ -164,6 +145,38 @@ struct PreludeView: View {
             }
             .navigationBarTitle(String(localized: "Prelude",
                                        comment: "Title of the opening animation screen"))
+        }
+
+    }
+
+    func offset(frame rect: CGSize) -> CGSize { // used to position large image in the middle of a cell
+        guard logScale != 0 else { return .zero }
+        let shortFrameDimension: Double = min(rect.width, rect.height)
+        let cellPitchInPixels: Double = shortFrameDimension/PreludeView.maxCellRepeat
+        let offset = CGSize( width: cellPitchInPixels * Double(offsetInCells.x) * pow(2, logScale),
+                             height: cellPitchInPixels * Double(offsetInCells.y) * pow(2, logScale) )
+        return offset
+    }
+
+    func intOffset(rect: CGSize, location: CGPoint) -> OffsetVectorInCells { // used to translate tap to selected cell
+        guard logScale != 0 else { return OffsetVectorInCells(x: 0, y: 0) }
+        let shortFrameDimension = min(rect.width, rect.height)
+        let halfFrameDimension = shortFrameDimension / 2
+        let cellPitchInPixels = shortFrameDimension/PreludeView.maxCellRepeat
+        return OffsetVectorInCells( x: Int((((halfFrameDimension - location.x) / cellPitchInPixels)).rounded()),
+                                    y: Int((((halfFrameDimension - location.y) / cellPitchInPixels)).rounded()) )
+    }
+
+    var preludeText: String {
+        if leaveEmpty {
+            String(localized: "No clubs mode",
+                   comment: "Shown instead of app name in PreludeView when app is started")
+        } else if isDebug() {
+            String(localized: "In debug mode",
+                   comment: "Shown instead of app name in PreludeView when app is started")
+        } else {
+            String(localized: "Photo Club Hub",
+                   comment: "Name of the app shown in PreludeView when app is started")
         }
     }
 
@@ -225,7 +238,7 @@ struct OffsetVectorInCells {
 
 struct Prelude_Previews: PreviewProvider {
     static var previews: some View {
-        PreludeView()
+        PreludeView(leaveEmpty: true)
             .previewInterfaceOrientation(.portrait)
     }
 }

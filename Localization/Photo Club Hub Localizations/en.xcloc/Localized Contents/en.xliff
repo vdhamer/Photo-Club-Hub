@@ -2,7 +2,7 @@
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
   <file original="en.lproj/Photo-Club-Hub-InfoPlist.strings" source-language="en" target-language="en" datatype="plaintext">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="15.4" build-num="15F31d"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="16.0" build-num="16A5171c"/>
     </header>
     <body>
       <trans-unit id="CFBundleDisplayName" xml:space="preserve">
@@ -24,7 +24,7 @@
   </file>
   <file original="Localization/en.lproj/Localizable.strings" source-language="en" target-language="en" datatype="plaintext">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="15.4" build-num="15F31d"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="16.0" build-num="16A5171c"/>
     </header>
     <body>
       <trans-unit id="%lld members (inc. ex-members)" xml:space="preserve">
@@ -122,6 +122,11 @@
         <target>Data source: in-app member data.</target>
         <note>Section footer text Portfolios screen</note>
       </trans-unit>
+      <trans-unit id="Empty data mode" xml:space="preserve">
+        <source>Empty data mode</source>
+        <target>Empty data mode</target>
+        <note>Shown instead of app name in PreludeView when app is started</note>
+      </trans-unit>
       <trans-unit id="Example of a link to a club web site" xml:space="preserve">
         <source>Example of a link to a club web site</source>
         <target>Example of a link to a club web site</target>
@@ -174,9 +179,9 @@ Try dragging down the Photo Clubs screen to reload the default clubs.</source>
 Try dragging down the Photo Clubs screen to reload the default clubs.</target>
         <note>Hint to the user if the database returns zero PhotoClubs.</note>
       </trans-unit>
-      <trans-unit id="No remark available for %@ %@." xml:space="preserve">
-        <source>No remark available for %@ %@.</source>
-        <target>No remark available for %@ %@.</target>
+      <trans-unit id="No remark currently available for %@ %@." xml:space="preserve">
+        <source>No remark currently available for %@ %@.</source>
+        <target>No remark currently available for %@ %@.</target>
         <note>Shown below map if there is no usable remark in the OrganzationList.json file.</note>
       </trans-unit>
       <trans-unit id="Open Source" xml:space="preserve">
