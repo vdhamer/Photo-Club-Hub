@@ -10,18 +10,18 @@ import SwiftUI
 // Draw a 2-D array of red, green, blue, green squares.
 // This is a spin-off of the logo of Fotogroep Waalre (Photo Club Waalre)
 struct LogoPath: Shape {
-    var logCellRepeat: Double
+    let logCellRepeat: Double
     let relPixelSize: Double // value between 0.0 and 1.0
     let offsetPoint: UnitPoint
 
-    var animatableData: Double {
-        get {
-            logCellRepeat
-        }
-        set {
-            logCellRepeat = newValue
-        }
-    }
+//    var animatableData: Double { // TODO not sure this doesn't do anything
+//        get {
+//            logCellRepeat
+//        }
+//        set {
+//            logCellRepeat = newValue
+//        }
+//    }
 
     func path(in rect: CGRect) -> Path { // needed to conform to Shape protocol
         var path = Path()
