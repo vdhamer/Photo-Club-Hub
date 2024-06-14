@@ -9,13 +9,14 @@ import SwiftUI
 import WebKit // for wkWebView
 
 struct FilteredMemberPortfoliosView: View {
+    static let predicateNone = NSPredicate(format: "FALSEPREDICATE")
 
     @Environment(\.managedObjectContext) private var viewContext
 
     @SectionedFetchRequest<String, MemberPortfolio>(
         sectionIdentifier: \.organization_!.fullNameTown,
         sortDescriptors: [],
-        predicate: NSPredicate.none
+        predicate: predicateNone
     ) private var sectionedPortfolios: SectionedFetchResults<String, MemberPortfolio>
 
     private let isDeleteMemberPortfolioPermitted = true // disables .onDelete() functionality for this screen
@@ -66,7 +67,7 @@ struct FilteredMemberPortfoliosView: View {
             }
             .listRowSeparator(.hidden) // prevents a separator below the footer.
         }
-        if sectionedPortfoliosResults.nsPredicate == NSPredicate.none {
+        if sectionedPortfoliosResults.nsPredicate == Self.predicateNone {
             Text("""
                  Warning: all member categories on the Preferences page are disabled. \
                  Please enable one or more options in Preferences.

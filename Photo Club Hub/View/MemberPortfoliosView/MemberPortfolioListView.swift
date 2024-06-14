@@ -89,7 +89,8 @@ struct MemberPortfolioListView: View {
             ToolbarItemGroup(placement: toolbarItemPlacement) {
 
                 NavigationLink(destination: {
-                    OrganizationListView(predicate: NSPredicate.all)
+                    let predicateAll = NSPredicate(format: "TRUEPREDICATE")
+                    OrganizationListView(predicate: predicateAll)
                 }, label: {
                     Image("mappin.ellipse.rectangle")
                         .font(.title)

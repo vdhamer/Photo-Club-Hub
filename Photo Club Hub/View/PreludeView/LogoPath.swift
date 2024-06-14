@@ -23,7 +23,7 @@ struct LogoPath: Shape {
         }
     }
 
-    func path(in rect: CGRect) -> Path {
+    func path(in rect: CGRect) -> Path { // needed to conform to Shape protocol
         var path = Path()
         path.move(to: .zero)
         let frameSize: Double = min(rect.width, rect.height)

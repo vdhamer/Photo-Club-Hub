@@ -7,9 +7,9 @@
 
 import Foundation
 
-extension NSPredicate {
+extension NSPredicate { // TODO remove file
 
-    static let all = NSPredicate(format: "TRUEPREDICATE")
-    static let none = NSPredicate(format: "FALSEPREDICATE")
+//    static let all = NSPredicate(format: "TRUEPREDICATE")
+//    static let none = NSPredicate(format: "FALSEPREDICATE")
 
 }

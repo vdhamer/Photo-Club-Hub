@@ -47,6 +47,7 @@ struct PreferencesStruct: Codable { // order in which they are shown on Preferen
     )
 
     var memberPredicate: NSPredicate {
+        let predicateNone = NSPredicate(format: "FALSEPREDICATE")
         var format = ""
         let args: [NSManagedObject] = [] // array from which to fetch the %@ values
 
@@ -89,17 +90,19 @@ struct PreferencesStruct: Codable { // order in which they are shown on Preferen
         if format != "" {
             predicate = NSPredicate(format: format, argumentArray: args)
         } else {
-            predicate = NSPredicate.none // if all toggles are disabled, we don't show anything
+            predicate = predicateNone // if all toggles are disabled, we don't show anything
         }
         return predicate
     }
 
     var photographerPredicate: NSPredicate {
-        return NSPredicate.all // for now, we show all Photographers because filtering is done in View
+        let predicateAll = NSPredicate(format: "TRUEPREDICATE")
+        return predicateAll // for now, we show all Photographers because filtering is done in View
     }
 
     var photoClubPredicate: NSPredicate {
-        return NSPredicate.all // for now, we show all Photo Clubs
+        let predicateAll = NSPredicate(format: "TRUEPREDICATE")
+        return predicateAll // for now, we show all Photo Clubs
     }
 }
 

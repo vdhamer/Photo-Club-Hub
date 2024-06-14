@@ -149,7 +149,8 @@ extension Organization {
             return "\(localizedRemarks.first!.localizedString!) [\(localizedRemarks.first!.language.isoCodeCaps)]"
         }
 
-        return String(localized: "No remark available for \(organizationType.organizationTypeName) \(fullName).",
+        let clubOrMuseum: String = organizationType.organizationTypeName
+        return String(localized: "No remark currently available for \(clubOrMuseum) \(fullName).",
                       comment: "Shown below map if there is no usable remark in the OrganzationList.json file.")
     }
 
