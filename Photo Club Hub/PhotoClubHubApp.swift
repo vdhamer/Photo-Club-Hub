@@ -11,7 +11,7 @@ import CoreData // for ManagedObjectContext
 @main
 struct PhotoClubHubApp: App {
 
-    static let leaveEmpty = true // leaveEmpty clears the existing database and skips loading any  data on app startup
+    static let leaveEmpty = false // leaveEmpty clears the existing database and skips loading any  data on app startup
     @Environment(\.scenePhase) var scenePhase
     private static let resetKey = "2.6.2 forced data reset performed"
 
