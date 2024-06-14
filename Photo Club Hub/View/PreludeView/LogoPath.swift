@@ -11,8 +11,8 @@ import SwiftUI
 // This is a spin-off of the logo of Fotogroep Waalre (Photo Club Waalre)
 struct LogoPath: Shape {
     var logCellRepeat: Double
-    var relPixelSize: Double // value between 0.0 and 1.0
-    var offsetPoint: UnitPoint
+    let relPixelSize: Double // value between 0.0 and 1.0
+    let offsetPoint: UnitPoint
 
     var animatableData: Double {
         get {

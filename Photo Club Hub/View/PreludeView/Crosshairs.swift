@@ -10,12 +10,18 @@ import SwiftUI
 // Draws 8 lines through the middle of the screen
 // with a circle around the central point, aka cell (0,0).
 // This was used to tune the Prelude screen graphics.
-struct CrossHairs: Shape { // InsettableShape {
-    var hidden: Bool
-    var circleScaling: Double = 1.13
+struct CrossHairs: Shape {
+
+    let hidden: Bool // provided when instantiating CrossHairs
+    let circleScaling: Double
 
     let rotationAdjustment = Angle.degrees(90.0)
     let clockwise = true
+
+    init(hidden: Bool, circleScaling: Double = 1.13) {
+        self.hidden = hidden
+        self.circleScaling = circleScaling
+    }
 
     func path(in rect: CGRect) -> Path {
         guard !hidden else { return Path() } // nothing gets displayed
