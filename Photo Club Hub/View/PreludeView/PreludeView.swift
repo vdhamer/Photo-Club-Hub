@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PreludeView: View {
 
-    var leaveEmpty: Bool // normally false, true for certain debugging
+    var loadData: Bool // normally false, true for certain debugging
 
     // MARK: - Constants
     static let maxCellRepeat: Double = 32 // max number of cells horizontally and vertically
@@ -168,7 +168,7 @@ struct PreludeView: View {
     }
 
     var preludeText: String {
-        if leaveEmpty {
+        if !loadData {
             String(localized: "No clubs mode",
                    comment: "Shown instead of app name in PreludeView when app is started")
         } else if isDebug() {
@@ -238,7 +238,7 @@ struct OffsetVectorInCells {
 
 struct Prelude_Previews: PreviewProvider {
     static var previews: some View {
-        PreludeView(leaveEmpty: true)
+        PreludeView(loadData: true)
             .previewInterfaceOrientation(.portrait)
     }
 }
