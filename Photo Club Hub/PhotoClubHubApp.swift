@@ -11,7 +11,8 @@ import CoreData // for ManagedObjectContext
 @main
 struct PhotoClubHubApp: App {
 
-    static let loadData = true // false clears the existing database and skips loading any data on app startup
+    static let loadData = false // false clears the existing database and skips loading any data on app startup
+                                // and displays "No clubs mode" in the Prelude startup screen.
     @Environment(\.scenePhase) var scenePhase
     private static let resetKey = "2.6.2 forced data reset performed"
 
