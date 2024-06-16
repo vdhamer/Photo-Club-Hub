@@ -23,15 +23,6 @@ extension FotogroepWaalreMembersProvider { // fill with some initial hard-coded 
         clubWaalre.hasHardCodedMemberData = true // store in database that we ran insertSomeHardcodedMembers...
 
         addMember(bgContext: bgContext,
-                  personName: PersonName(givenName: "Bart", infixName: "van", familyName: "Stekelenburg"),
-                  organization: clubWaalre, memberRolesAndStatus: MemberRolesAndStatus(role: [ .chairman: false ]))
-
-        addMember(bgContext: bgContext,
-                  personName: PersonName(givenName: "Bettina", infixName: "de", familyName: "Graaf"),
-                  organization: clubWaalre, memberRolesAndStatus: MemberRolesAndStatus(role: [ .viceChairman: false ],
-                                                             stat: [.former: true]))
-
-        addMember(bgContext: bgContext,
                   personName: PersonName(givenName: "Carel", infixName: "", familyName: "Bullens"),
                   organization: clubWaalre,
                   memberRolesAndStatus: MemberRolesAndStatus(role: [ .viceChairman: true ], stat: [:]))
@@ -39,16 +30,6 @@ extension FotogroepWaalreMembersProvider { // fill with some initial hard-coded 
         addMember(bgContext: bgContext,
                   personName: PersonName(givenName: "Erik", infixName: "van", familyName: "Geest"),
                   organization: clubWaalre, memberRolesAndStatus: MemberRolesAndStatus(role: [ .admin: true ]))
-
-        addMember(bgContext: bgContext,
-                  personName: PersonName(givenName: "Germa", infixName: "van de", familyName: "Kamp"),
-                  organization: clubWaalre,
-                  memberRolesAndStatus: MemberRolesAndStatus(stat: [.prospective: false]))
-
-        addMember(bgContext: bgContext,
-                  personName: PersonName(givenName: "Greetje", infixName: "van", familyName: "Son"),
-                  organization: clubWaalre,
-                  memberRolesAndStatus: MemberRolesAndStatus(role: [ .viceChairman: false ], stat: [:]))
 
         addMember(bgContext: bgContext,
                   personName: PersonName(givenName: "Henriëtte", infixName: "van", familyName: "Ekert"),
@@ -71,11 +52,6 @@ extension FotogroepWaalreMembersProvider { // fill with some initial hard-coded 
                   personName: PersonName(givenName: "Miek", infixName: "", familyName: "Kerkhoven"),
                   organization: clubWaalre, memberRolesAndStatus: MemberRolesAndStatus(role: [ .chairman: true ]))
 
-        addMember(bgContext: bgContext,
-                  personName: PersonName(givenName: "Peter", infixName: "van den", familyName: "Hamer"),
-                  organization: clubWaalre,
-                  memberRolesAndStatus: MemberRolesAndStatus(role: [ .admin: false, .secretary: false ],
-                                                             stat: [.former: true]))
         do {
             if bgContext.hasChanges { // optimization
                 try bgContext.save() // persist FotoGroep Waalre and its online member data
