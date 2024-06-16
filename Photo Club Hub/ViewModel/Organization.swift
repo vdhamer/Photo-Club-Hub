@@ -204,12 +204,6 @@ extension Organization {
             let organization = Organization(entity: entity, insertInto: context) // create new Club or Museum
             organization.fullName = idPlus.fullName // first part of ID
             organization.town = idPlus.town // second part of ID
-            do { // robustness in the (illegal?) case of a new organization without any non-identifying attributes
-                try context.save() // persist modifications in PhotoClub record
-             } catch {
-                ifDebugFatalError("Creation failed for club or museum \(idPlus.fullName)",
-                                  file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
-            }
             print("\(organization.fullNameTown): Will try to fill fields for this new organization")
             _ = update(bgContext: context, organizationTypeEnum: organizationTypeEum,
                        organization: organization, nickName: idPlus.nickname,

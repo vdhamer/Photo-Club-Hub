@@ -187,7 +187,7 @@ struct FilteredMemberPortfoliosView: View {
 
         do {
             if viewContext.hasChanges {
-                try viewContext.save() // persist deletion of members
+                try viewContext.save() // persist deleted members
                 print("Deleted member")
             }
         } catch {

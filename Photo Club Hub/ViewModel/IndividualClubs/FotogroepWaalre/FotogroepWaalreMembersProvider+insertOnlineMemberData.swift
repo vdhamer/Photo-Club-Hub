@@ -53,18 +53,9 @@ extension FotogroepWaalreMembersProvider {
             parseHTMLContent(backgroundContext: backgroundContext,
                              htmlContent: htmlContent,
                              idPlus: idPlus)
-            do {
-                if backgroundContext.hasChanges {
-                    try backgroundContext.save() // persist member data for Fotogroep Waalre
-                }
-                ifDebugPrint("""
-                             \(organization.fullNameTown): \
-                             completed loadPrivateMembersFromWebsite() in background")
-                             """)
-            } catch {
-                print("Fotogroep Waalre: ERROR - could not save backgroundContext to Core Data " +
-                      "in loadPrivateMembersFromWebsite()")
-            }
+
+            // We could commit here using ManagedObjectContext.save(), but this will lead to a commit
+            // of a member without a valid image. That can show up on the very first loading of Level 2 data.
 
             // https://www.advancedswift.com/core-data-background-fetch-save-create/
             do { // fill or update or check refreshFirstImage()
@@ -74,7 +65,7 @@ extension FotogroepWaalreMembersProvider {
                                                              organization_.fullName_ = %@ && \
                                                              organization_.town_ = %@
                                                              """,
-                             argumentArray: ["Fotogroep Waalre", "Waalre", "Jan"])
+                             argumentArray: ["Fotogroep Waalre", "Waalre"])
                 let portfoliosInClub = try backgroundContext.fetch(fetchRequest)
 
                 for portfolio in portfoliosInClub {
