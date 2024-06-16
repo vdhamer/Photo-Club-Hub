@@ -7,11 +7,11 @@
 
 import CoreLocation
 
-extension CLLocationCoordinate2D: @retroactive Equatable {
+// extension CLLocationCoordinate2D: @retroactive Equatable { // enable for iOS 18
+extension CLLocationCoordinate2D: Equatable {
     // https://github.com/swiftlang/swift-evolution/blob/main/proposals/0364-retroactive-conformance-warning.md
 
     public static func == (lhs: CLLocationCoordinate2D, rhs: CLLocationCoordinate2D) -> Bool {
         (lhs.longitude == rhs.longitude) && (lhs.latitude == rhs.latitude)
     }
-
 }

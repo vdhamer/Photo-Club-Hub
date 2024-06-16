@@ -1,5 +1,11 @@
 ### 2.6.2 (GitHub commit ???????) ??-06-24
 
+This is build #4626.
+
+---------------------------------------------------------------------------
+
+### 2.6.2 (GitHub commit 1536a1e) 16-06-24
+
 This is build #4625.
 
 Clubs and Museums screen
@@ -9,8 +15,10 @@ Maintenance
 * improved robustness of OrganizationType.getter (gave crash if value was somehow missing)
 * forced one-time reloading (from scratch) of CoreData information when release is 2.6.2 or higher
 * changes to prepare for Swift 6 language mode (with its static data-race checking)
-* no clubs mode
+* added "no clubs mode" (compile-time) for testing
 * removed some hard-coded member data for FGW club that was no longer needed
+
+This is build #4625 and was distributed to TestFlight users only.
 
 ---------------------------------------------------------------------------
 
