@@ -11,7 +11,7 @@ import CoreData // for ManagedObjectContext
 @main
 struct PhotoClubHubApp: App {
 
-    static let loadData = true // should normally be set to true
+    static let loadData = true // Important setting that should normally be kept true
     // Setting loadData to false clears the existing database and skips loading any data on app startup.
     // It displays "No clubs mode" in the Prelude startup screen as a warning that the mode is set.
     // The not-loaded data (clubs/museaums/members) can be loaded manually by swiping down on one of the main screens.
