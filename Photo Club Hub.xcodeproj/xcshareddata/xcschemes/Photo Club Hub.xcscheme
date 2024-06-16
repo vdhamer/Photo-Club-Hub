@@ -77,7 +77,7 @@
          <EnvironmentVariable
             key = "com.apple.CoreData.ConcurrencyDebug"
             value = "1"
-            isEnabled = "NO">
+            isEnabled = "YES">
          </EnvironmentVariable>
       </EnvironmentVariables>
    </LaunchAction>

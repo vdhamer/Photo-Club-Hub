@@ -10,7 +10,6 @@ import MapKit // for CLLocationCoordinate2D
 
 extension FotogroepWaalreMembersProvider { // fill with some initial hard-coded content
 
-    // swiftlint:disable:next function_body_length
     func insertSomeHardcodedMemberData(bgContext: NSManagedObjectContext) { // runs on a background thread
         let clubWaalre = Organization.findCreateUpdate(
                                         context: bgContext,
@@ -78,10 +77,10 @@ extension FotogroepWaalreMembersProvider { // fill with some initial hard-coded 
                   memberRolesAndStatus: MemberRolesAndStatus(role: [ .admin: false, .secretary: false ],
                                                              stat: [.former: true]))
         do {
-//            if bgContext.hasChanges { // optimization
+            if bgContext.hasChanges { // optimization
                 try bgContext.save() // persist FotoGroep Waalre and its online member data
                 print("*** Updating *** SAVING instance=\"\(clubWaalre.fullName)\"")
-//            }
+            }
             ifDebugPrint("""
                          \(clubWaalre.fullNameTown): \
                          Completed insertSomeHardcodedMemberData() in background
