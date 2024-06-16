@@ -3,13 +3,14 @@
 This is build #4625.
 
 Clubs and Museums screen
-* changed icon by which organization type (other than club or museum) is displayed on map
+* changed icon by which organization type (other than club or museum) is displayed on map. It is not normally used.
 
 Maintenance
 * improved robustness of OrganizationType.getter (gave crash if value was somehow missing)
 * forced one-time reloading (from scratch) of CoreData information when release is 2.6.2 or higher
 * changes to prepare for Swift 6 language mode (with its static data-race checking)
 * no clubs mode
+* removed some hard-coded member data for FGW club that was no longer needed
 
 ---------------------------------------------------------------------------
 
