@@ -25,11 +25,9 @@ extension FotogroepDeGenderMembersProvider { // fill with some initial hard-code
     private func insertSomeHardcodedMemberDataCommon(bgContext: NSManagedObjectContext) {
 
         // add De Gender to Photo Clubs (if needed)
-        let clubDeGender = Organization.findCreateUpdate(
-                                                        context: bgContext,
-                                                        organizationTypeEum: .club,
-                                                        idPlus: Self.fotogroepDeGenderIdPlus
-                                                     )
+        let clubDeGender = Organization.findCreateUpdate(context: bgContext,
+                                                         organizationTypeEum: .club,
+                                                         idPlus: Self.fotogroepDeGenderIdPlus)
         ifDebugPrint("\(clubDeGender.fullNameTown): Starting insertSomeHardcodedMemberData() in background")
         clubDeGender.hasHardCodedMemberData = true // store in database that we ran insertSomeHardcodedMembers...
 
@@ -70,10 +68,10 @@ extension FotogroepDeGenderMembersProvider { // fill with some initial hard-code
         let clubNickname = FotogroepDeGenderMembersProvider.fotogroepDeGenderIdPlus.nickname
 
         do {
-//            if bgContext.hasChanges {
+            if bgContext.hasChanges {
                 try bgContext.save() // persist Fotogroep de Gender and its members
                 print("*** Updating *** SAVING instance=\"\(clubDeGender.fullName)\"")
-//            }
+            }
             ifDebugPrint("""
                          \(clubDeGender.fullNameTown): \
                          Completed insertSomeHardcodedMemberData() in background
