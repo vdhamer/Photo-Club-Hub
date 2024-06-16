@@ -78,10 +78,10 @@ extension FotogroepWaalreMembersProvider { // fill with some initial hard-coded 
                   memberRolesAndStatus: MemberRolesAndStatus(role: [ .admin: false, .secretary: false ],
                                                              stat: [.former: true]))
         do {
-//            if bgContext.hasChanges { // optimization
+            if bgContext.hasChanges { // optimization
                 try bgContext.save() // persist FotoGroep Waalre and its online member data
                 print("*** Updating *** SAVING instance=\"\(clubWaalre.fullName)\"")
-//            }
+            }
             ifDebugPrint("""
                          \(clubWaalre.fullNameTown): \
                          Completed insertSomeHardcodedMemberData() in background
