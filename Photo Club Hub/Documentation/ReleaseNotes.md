@@ -1,5 +1,8 @@
 ### 2.6.2 (GitHub commit ???????) ??-06-24
 
+Maintenance
+* Updated FGW member list: former coach Hans Zoete has passed away.
+
 This is build #4626.
 
 ---------------------------------------------------------------------------
