@@ -22,8 +22,6 @@ extension FotogroepWaalreMembersProvider {
 
         if let url = URL(string: FotogroepWaalreMembersProvider.url) {
             clubWaalre.level2URL = url
-            try? bgContext.save() // persist Fotogroep Waalre and its online member data
-
             self.loadPrivateMembersFromWebsite( backgroundContext: bgContext,
                                                 privateMemberURL: url,
                                                 organization: clubWaalre,

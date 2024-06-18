@@ -19,6 +19,12 @@ class FotogroepWaalreMembersProvider { // WWDC21 Earthquakes also uses a Class h
         bgContext.perform { // done asynchronously by CoreData
             self.insertSomeHardcodedMemberData(bgContext: bgContext)
             self.insertOnlineMemberData(bgContext: bgContext)
+            do {
+                try bgContext.save() // persist Fotogroep Waalre and its online member data
+                print("Sucess loading FG Waalre member data")
+            } catch {
+                ifDebugFatalError("Could not save members of FG Waalre")
+            }
         }
     }
 
