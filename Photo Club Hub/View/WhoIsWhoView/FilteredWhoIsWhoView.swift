@@ -95,6 +95,7 @@ struct FilteredWhoIsWhoView: View {
         isDeceased ? .deceasedColor : .photographerColor
     }
 
+    @MainActor
     private func deletePhotographers(indexSet: IndexSet) {
         guard isDeletePhotographersPermitted else { return } // exit if feature is disabled
 
@@ -103,7 +104,7 @@ struct FilteredWhoIsWhoView: View {
 
         do {
             if viewContext.hasChanges {
-                try viewContext.save() // persist deletion of photographer
+                try viewContext.save() // persist deletion of photographer (on main thread)
                 print("Deleted photographer \(fullName) and any associated memberships")
             }
         } catch {

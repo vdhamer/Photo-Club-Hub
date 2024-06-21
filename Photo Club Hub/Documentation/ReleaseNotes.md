@@ -1,7 +1,17 @@
 ### 2.6.2 (GitHub commit ???????) ??-06-24
 
+Portfolio screen
+* Swiping down the top of the screen will now erase and reload stored data
+
+Clubs and Museums screen
+* Swiping down the top of the screen will now erase and reload stored data
+
+Who's Who screen
+* Swiping down the top of the screen will now erase and reload stored data
+
 Maintenance
 * Updated FGW member list: former coach Hans Zoete has passed away.
+* Reduced number of CoreData save() transactions.
 
 This is build #4626.
 

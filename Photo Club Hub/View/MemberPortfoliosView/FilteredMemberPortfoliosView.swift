@@ -177,6 +177,7 @@ struct FilteredMemberPortfoliosView: View {
         return nil
     }
 
+    @MainActor
     private func deleteMembers(section: [MemberPortfolio], indexSet: IndexSet) { // only temporarily deletes a member
         guard isDeleteMemberPortfolioPermitted else { return } // exit if feature is disabled
 
@@ -187,7 +188,7 @@ struct FilteredMemberPortfoliosView: View {
 
         do {
             if viewContext.hasChanges {
-                try viewContext.save() // persist deleted members
+                try viewContext.save() // persist deleted members (on main thread)
                 print("Deleted member")
             }
         } catch {

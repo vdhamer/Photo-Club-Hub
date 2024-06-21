@@ -41,13 +41,14 @@ struct PersistenceController {
     func save() {
         let context = container.viewContext
 
-        if context.hasChanges {
-            do {
+        do {
+            if context.hasChanges {
                 try context.save()
-            } catch {
-                ifDebugFatalError("Core Data save() failed on main thread.")
             }
+        } catch {
+            ifDebugFatalError("Core Data save() failed on main thread.")
         }
+
     }
 
     static let preview: PersistenceController = {
@@ -60,6 +61,7 @@ struct PersistenceController {
                                                                      .former: ((index % 4) == 1)]
             )
             let organization = Organization.findCreateUpdate(context: viewContext, // on main thread
+                                                       intermediateCoreDataSaves: true,
                                                        organizationTypeEum: .club,
                                                        idPlus: OrganizationIdPlus(
                                                             fullName: "PhotoClub\(index)",
@@ -75,6 +77,7 @@ struct PersistenceController {
                                                        )
             let photographer = Photographer.findCreateUpdate(
                 context: viewContext, // on main thread
+                intermediateCoreDataSaves: false,
                 personName: PersonName(givenName: "Jan", infixName: "D'", familyName: "Eau\(index)"),
                 memberRolesAndStatus: memberRolesAndStatus,
                 phoneNumber: "06-12345678",
@@ -84,8 +87,10 @@ struct PersistenceController {
                 organization: organization
             )
             let memberPortfolio = MemberPortfolio.findCreateUpdate(bgContext: viewContext,
-                                                 organization: organization, photographer: photographer,
-                                                 memberRolesAndStatus: memberRolesAndStatus
+                                                                   intermediateCoreDataSaves: false,
+                                                                   organization: organization,
+                                                                   photographer: photographer,
+                                                                   memberRolesAndStatus: memberRolesAndStatus
             )
         }
 

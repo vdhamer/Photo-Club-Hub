@@ -15,17 +15,29 @@ extension BellusImagoMembersProvider { // fill with some initial hard-coded cont
                                                                        town: "Veldhoven",
                                                                        nickname: "FC BellusImago")
 
-    func insertSomeHardcodedMemberData(bgContext: NSManagedObjectContext) {
+    func insertSomeHardcodedMemberData(bgContext: NSManagedObjectContext,
+                                       intermediateCoreDataSaves: Bool) {
         bgContext.perform { // from here on, we are running on a background thread
-            self.insertSomeHardcodedMemberDataCommon(bgContext: bgContext)
+            self.insertSomeHardcodedMemberDataCommon(bgContext: bgContext,
+                                                     intermediateCoreDataSaves: intermediateCoreDataSaves)
+            do {
+                if bgContext.hasChanges { // optimisation
+                    try bgContext.save() // persist FC Bellus Imago and its online member data
+                    print("Sucess loading persist FC Bellus Imago member data")
+                }
+            } catch {
+                ifDebugFatalError("Could not save members of persist FC Bellus Imago")
+            }
         }
     }
 
-    private func insertSomeHardcodedMemberDataCommon(bgContext: NSManagedObjectContext) {
+    private func insertSomeHardcodedMemberDataCommon(bgContext: NSManagedObjectContext,
+                                                     intermediateCoreDataSaves: Bool) {
 
         // add Bellus Imago to Photo Clubs (if needed)
         let clubBellusImago = Organization.findCreateUpdate(
                                                             context: bgContext,
+                                                            intermediateCoreDataSaves: intermediateCoreDataSaves,
                                                             organizationTypeEum: .club,
                                                             idPlus: Self.photoClubBellusImagoIdPlus
                                                            )
@@ -37,6 +49,7 @@ extension BellusImagoMembersProvider { // fill with some initial hard-coded cont
         clubBellusImago.hasHardCodedMemberData = true // store in database that we ran insertSomeHardcodedMembers...
 
         addMember(bgContext: bgContext, // add Rico to Photographers and member of Bellus (if needed)
+                  intermediateCoreDataSaves: intermediateCoreDataSaves,
                   personName: PersonName(givenName: "Rico", infixName: "", familyName: "Coolen"),
                   website: URL(string: "https://www.ricoco.nl"),
                   organization: clubBellusImago,
@@ -47,6 +60,7 @@ extension BellusImagoMembersProvider { // fill with some initial hard-coded cont
         )
 
         addMember(bgContext: bgContext, // add Loek to Photographers and member of Bellus (if needed)
+                  intermediateCoreDataSaves: intermediateCoreDataSaves,
                   personName: PersonName(givenName: "Loek", infixName: "", familyName: "Dirkx"),
                   organization: clubBellusImago,
                   memberRolesAndStatus: MemberRolesAndStatus(role: [ .chairman: true ]),
@@ -55,26 +69,10 @@ extension BellusImagoMembersProvider { // fill with some initial hard-coded cont
                      "https://www.fotoclubbellusimago.nl/uploads/5/5/1/2/55129719/vrijwerk-loek-1_2_orig.jpg")
         )
 
-        let clubNickname = BellusImagoMembersProvider.photoClubBellusImagoIdPlus.nickname
-
-        do {
-            if bgContext.hasChanges {
-                try bgContext.save() // persist FG Bellus Imago and its members
-                print("*** Updating *** SAVING instance=\"\(clubBellusImago.fullName)\"")
-            }
-            ifDebugPrint("""
-                         \(clubBellusImago.fullNameTown): \
-                         Completed insertSomeHardcodedMemberData() in background
-                         """)
-        } catch {
-            ifDebugFatalError("\(clubNickname): ERROR - failed to save changes to Core Data",
-                              file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
-            // in release mode, the failed database update is only logged. App doesn't stop.
-        }
-
     }
 
     private func addMember(bgContext: NSManagedObjectContext,
+                           intermediateCoreDataSaves: Bool,
                            personName: PersonName,
                            website: URL? = nil,
                            bornDT: Date? = nil,
@@ -87,20 +85,24 @@ extension BellusImagoMembersProvider { // fill with some initial hard-coded cont
                            eMail: String? = nil) {
 
         let photographer = Photographer.findCreateUpdate(context: bgContext,
+                                                         intermediateCoreDataSaves: intermediateCoreDataSaves,
                                                          personName: personName,
                                                          memberRolesAndStatus: memberRolesAndStatus,
                                                          website: website,
                                                          bornDT: bornDT,
-                                                         organization: organization)
+                                                         organization: organization
+                                                         )
 
         let image = latestImage ?? latestThumbnail // if image not available, use thumbnail (which might also be nil)
         let thumb = latestThumbnail ?? latestImage // if thumb not available, use image (which might also be nil)
         _ = MemberPortfolio.findCreateUpdate(bgContext: bgContext,
+                                             intermediateCoreDataSaves: intermediateCoreDataSaves,
                                              organization: organization, photographer: photographer,
                                              memberRolesAndStatus: memberRolesAndStatus,
                                              memberWebsite: memberWebsite,
                                              latestImage: image,
-                                             latestThumbnail: thumb)
+                                             latestThumbnail: thumb
+                                             )
     }
 
 }

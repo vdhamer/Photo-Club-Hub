@@ -9,11 +9,14 @@ import CoreData // for PersistenceController
 
 class FotogroepDeGenderMembersProvider {
 
-    init(bgContext: NSManagedObjectContext) {
+    init(bgContext: NSManagedObjectContext,
+         intermediateCoreDataSaves: Bool) {
 
         // Photo club Bellus Imago doesn't currently support loading member data from an online site.
         // So we only insert a member or two from info hardcoded in insertSomeHardcodedMemberData()
-        insertSomeHardcodedMemberData(bgContext: bgContext)
+        insertSomeHardcodedMemberData(bgContext: bgContext,
+                                      intermediateCoreDataSaves: intermediateCoreDataSaves)
+
     }
 
 }

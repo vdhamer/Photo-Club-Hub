@@ -159,6 +159,7 @@ extension Organization {
 	// Find existing organization or create a new one
 	// Update new or existing organization's attributes
     static func findCreateUpdate(context: NSManagedObjectContext, // can be foreground of background context
+                                 intermediateCoreDataSaves: Bool,
                                  organizationTypeEum: OrganizationTypeEnum,
                                  idPlus: OrganizationIdPlus,
                                  website: URL? = nil,
@@ -188,8 +189,8 @@ extension Organization {
 
 		if let organization = organizations.first { // already exists, so make sure non-ID attributes are up to date
             print("\(organization.fullNameTown): Will try to update info for organization \(organization.fullName)")
-            if update(bgContext: context, organizationTypeEnum: organizationTypeEum,
-                      organization: organization, nickName: idPlus.nickname,
+            if update(bgContext: context, intermediateCoreDataSaves: intermediateCoreDataSaves,
+                      organizationTypeEnum: organizationTypeEum, organization: organization, nickName: idPlus.nickname,
                       optionalFields: (website: website, wikipedia: wikipedia,
                                        fotobondNumber: fotobondNumber),
                       coordinates: coordinates,
@@ -205,8 +206,8 @@ extension Organization {
             organization.fullName = idPlus.fullName // first part of ID
             organization.town = idPlus.town // second part of ID
             print("\(organization.fullNameTown): Will try to fill fields for this new organization")
-            _ = update(bgContext: context, organizationTypeEnum: organizationTypeEum,
-                       organization: organization, nickName: idPlus.nickname,
+            _ = update(bgContext: context, intermediateCoreDataSaves: intermediateCoreDataSaves,
+                       organizationTypeEnum: organizationTypeEum, organization: organization, nickName: idPlus.nickname,
                        optionalFields: (website: website, wikipedia: wikipedia,
                                         fotobondNumber: fotobondNumber),
                        coordinates: coordinates,
@@ -218,8 +219,9 @@ extension Organization {
 	}
 
 	// Update non-identifying attributes/properties within existing instance of class PhotoClub
-    // swiftlint:disable:next function_parameter_count cyclomatic_complexity
+    // swiftlint:disable:next function_parameter_count cyclomatic_complexity function_body_length
     private static func update(bgContext: NSManagedObjectContext,
+                               intermediateCoreDataSaves: Bool,
                                organizationTypeEnum: OrganizationTypeEnum,
                                organization: Organization, nickName: String,
                                // swiftlint:disable:next large_tuple
@@ -268,11 +270,17 @@ extension Organization {
             let isoCode: String? = localizedRemark["language"].stringValue.uppercased() // e.g. "NL" or "DE" or "PDC"
             let localizedRemarkValueNew: String? = localizedRemark["value"].stringValue
             if isoCode != nil && localizedRemarkValueNew != nil { // nil could happens if JSON file not schema compliant
-                let language = Language.findCreateUpdate(context: bgContext, isoCode: isoCode!) // find or construct
-                let localizedRemark = LocalizedRemark.findCreateUpdate(bgContext: bgContext, // create object
-                                                                       organization: organization,
-                                                                       language: language)
+                let language = Language.findCreateUpdate(context: bgContext,
+                                                         intermediateCoreDataSaves: intermediateCoreDataSaves,
+                                                         isoCode: isoCode!) // find or construct
+                let localizedRemark = LocalizedRemark.findCreateUpdate(
+                    bgContext: bgContext, // create object
+                    intermediateCoreDataSaves: intermediateCoreDataSaves,
+                    organization: organization,
+                    language: language
+                )
                 let needsSaving = LocalizedRemark.update(bgContext: bgContext,
+                                                         intermediateCoreDataSaves: intermediateCoreDataSaves,
                                                          localizedRemark: localizedRemark,
                                                          localizedString: localizedRemarkValueNew!)
                 if needsSaving { modified = true }

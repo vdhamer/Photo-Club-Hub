@@ -13,10 +13,12 @@ extension FotogroepWaalreMembersProvider {
     public static let baseURL = "http://www.vdHamer.com/fgWaalre/"
     private static let url = "http://www.vdhamer.com/fgwaalre_level2/?ppt=f13a433cf52df1318ca04ca739867054"
 
-    func insertOnlineMemberData(bgContext: NSManagedObjectContext) { // runs on a background thread
+    func insertOnlineMemberData(bgContext: NSManagedObjectContext, // runs on a background thread
+                                intermediateCoreDataSaves: Bool) {
         // can't rely on async (!) insertSomeHardcodedMemberData() to return managed photoClub object in time
         let clubWaalre = Organization.findCreateUpdate(
-            context: bgContext, organizationTypeEum: .club,
+            context: bgContext, intermediateCoreDataSaves: intermediateCoreDataSaves,
+            organizationTypeEum: .club,
             idPlus: FotogroepWaalreMembersProvider.photoClubWaalreIdPlus
         )
 
@@ -25,7 +27,8 @@ extension FotogroepWaalreMembersProvider {
             self.loadPrivateMembersFromWebsite( backgroundContext: bgContext,
                                                 privateMemberURL: url,
                                                 organization: clubWaalre,
-                                                idPlus: FotogroepWaalreMembersProvider.photoClubWaalreIdPlus )
+                                                idPlus: FotogroepWaalreMembersProvider.photoClubWaalreIdPlus,
+                                                intermediateCoreDataSaves: intermediateCoreDataSaves)
         } else {
             ifDebugFatalError("Could not convert string to a URL.",
                               file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
@@ -37,7 +40,8 @@ extension FotogroepWaalreMembersProvider {
     private func loadPrivateMembersFromWebsite(backgroundContext: NSManagedObjectContext,
                                                privateMemberURL: URL,
                                                organization: Organization,
-                                               idPlus: OrganizationIdPlus) {
+                                               idPlus: OrganizationIdPlus,
+                                               intermediateCoreDataSaves: Bool) {
 
         ifDebugPrint("\(organization.fullNameTown): starting loadPrivateMembersFromWebsite() in background")
 
@@ -48,11 +52,11 @@ extension FotogroepWaalreMembersProvider {
         if results != nil, results?.utfContent != nil {
             let htmlContent = String(data: results!.utfContent! as Data,
                                      encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue))!
-            parseHTMLContent(backgroundContext: backgroundContext,
+            parseHTMLContent(backgroundContext: backgroundContext, intermediateCoreDataSaves: intermediateCoreDataSaves,
                              htmlContent: htmlContent,
                              idPlus: idPlus)
 
-            // We could commit here using ManagedObjectContext.save(), but this will lead to a commit
+            // If we would commit here using ManagedObjectContext.save(), this would lead to a commit
             // of a member without a valid image. That can show up on the very first loading of Level 2 data.
 
             // https://www.advancedswift.com/core-data-background-fetch-save-create/
@@ -81,7 +85,8 @@ extension FotogroepWaalreMembersProvider {
         }
     }
 
-    private func parseHTMLContent(backgroundContext: NSManagedObjectContext,
+    // swiftlint:disable:next function_body_length
+    private func parseHTMLContent(backgroundContext: NSManagedObjectContext, intermediateCoreDataSaves: Bool,
                                   htmlContent: String,
                                   idPlus: OrganizationIdPlus) {
         var targetState: HTMLPageLoadingState = .tableStart        // initial entry point on loop of states
@@ -90,9 +95,11 @@ extension FotogroepWaalreMembersProvider {
         var eMail = "", phoneNumber: String?, externalURL: String = ""
         var birthDate = toDate(from: "1/1/9999") // dummy value that is overwritten later
 
-        let organization: Organization = Organization.findCreateUpdate(context: backgroundContext,
-                                                                       organizationTypeEum: .club,
-                                                                       idPlus: idPlus)
+        let organization: Organization = Organization.findCreateUpdate(
+            context: backgroundContext,
+            intermediateCoreDataSaves: intermediateCoreDataSaves,
+            organizationTypeEum: .club, idPlus: idPlus
+        )
 
         htmlContent.enumerateLines { (line, _ stop) in
             if line.contains(targetState.targetString()) {
@@ -102,13 +109,13 @@ extension FotogroepWaalreMembersProvider {
                 case .tableHeader: break  // find head of table (only happens once)
                 case .rowStart: break     // find start of a table row defintion (may contain <td> or <th>)
 
-                case .personName:       // find first cell in row
+                case .personName:         // find first cell in row
                     personName = self.extractName(taggedString: line)
 
-                case .phoneNumber:                  // then find 3rd cell in row
+                case .phoneNumber:        // then find 3rd cell in row
                     phoneNumber = self.extractPhone(taggedString: line) // store url after cleanup
 
-                case .eMail:                      // then find 2nd cell in row
+                case .eMail:              // then find 2nd cell in row
                     eMail = self.extractEMail(taggedString: line) // store url after cleanup
 
                 case .externalURL:
@@ -118,18 +125,18 @@ extension FotogroepWaalreMembersProvider {
                     birthDate = self.extractBirthDate(taggedString: line)
 
                     let photographer = Photographer.findCreateUpdate(
-                        context: backgroundContext,
+                        context: backgroundContext, intermediateCoreDataSaves: intermediateCoreDataSaves,
                         personName: personName,
                         memberRolesAndStatus: MemberRolesAndStatus(role: [:], stat: [
                             .deceased: !self.isStillAlive(phone: phoneNumber) ]),
                         phoneNumber: phoneNumber, eMail: eMail,
                         website: URL(string: externalURL),
                         bornDT: birthDate,
-                        organization: organization
-                    )
+                        organization: organization)
 
                     _ = MemberPortfolio.findCreateUpdate(
-                        bgContext: backgroundContext, organization: organization, photographer: photographer,
+                        bgContext: backgroundContext, intermediateCoreDataSaves: intermediateCoreDataSaves,
+                        organization: organization, photographer: photographer,
                         memberRolesAndStatus: MemberRolesAndStatus(
                             role: [:],
                             stat: [
@@ -139,7 +146,7 @@ extension FotogroepWaalreMembersProvider {
                                 .prospective: self.isProspectiveMember(name: personName.fullNameWithParenthesizedRole)
                             ]
                         ),
-                          memberWebsite: self.generateInternalURL(using: personName.fullNameWithoutParenthesizedRole)
+                        memberWebsite: self.generateInternalURL(using: personName.fullNameWithoutParenthesizedRole)
                     )
 
                 }

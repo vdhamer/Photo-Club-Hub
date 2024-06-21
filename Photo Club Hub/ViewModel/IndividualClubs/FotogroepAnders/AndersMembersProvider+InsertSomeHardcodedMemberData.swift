@@ -16,18 +16,30 @@ extension AndersMembersProvider { // fill with some initial hard-coded content
                                                                   town: "Eindhoven",
                                                                   nickname: "FG Anders")
 
-    func insertSomeHardcodedMemberData(bgContext: NSManagedObjectContext) {
+    func insertSomeHardcodedMemberData(bgContext: NSManagedObjectContext,
+                                       intermediateCoreDataSaves: Bool) {
         bgContext.perform { // from here on, we are running on a background thread
-            self.insertSomeHardcodedMemberDataCommon(bgContext: bgContext)
+            self.insertSomeHardcodedMemberDataCommon(bgContext: bgContext,
+                                                     intermediateCoreDataSaves: intermediateCoreDataSaves)
+            do {
+                if bgContext.hasChanges { // optimisation
+                    try bgContext.save() // persist FG Anders and its online member data (on private context)
+                    print("Sucess loading FG Anders member data")
+                }
+            } catch {
+                ifDebugFatalError("Error saving members of FG Anders: \(error.localizedDescription)")
+            }
         }
     }
 
     // swiftlint:disable:next function_body_length
-    private func insertSomeHardcodedMemberDataCommon(bgContext: NSManagedObjectContext) {
+    private func insertSomeHardcodedMemberDataCommon(bgContext: NSManagedObjectContext,
+                                                     intermediateCoreDataSaves: Bool) {
 
         // add De Gender to Photo Clubs (if needed)
         let clubAnders = Organization.findCreateUpdate(
                                                     context: bgContext,
+                                                    intermediateCoreDataSaves: intermediateCoreDataSaves,
                                                     organizationTypeEum: .club,
                                                     idPlus: Self.fotogroepAndersIdPlus
                                                    )
@@ -39,6 +51,7 @@ extension AndersMembersProvider { // fill with some initial hard-coded content
         clubAnders.hasHardCodedMemberData = true // store in database that we ran insertSomeHardcodedMembers...
 
         addMember(bgContext: bgContext, // add Helga to Photographers and member of Anders (if needed)
+                  intermediateCoreDataSaves: intermediateCoreDataSaves,
                   personName: PersonName(givenName: "Helga", infixName: "", familyName: "Nuchelmans"),
                   organization: clubAnders,
                   memberWebsite: URL(string: "https://helganuchelmans.nl"),
@@ -51,6 +64,7 @@ extension AndersMembersProvider { // fill with some initial hard-coded content
         )
 
         addMember(bgContext: bgContext, // add Mirjam to Photographers and member of Anders (if needed)
+                  intermediateCoreDataSaves: intermediateCoreDataSaves,
                   personName: PersonName(givenName: "Mirjam", infixName: "", familyName: "Evers"),
                   organization: clubAnders,
                   memberWebsite: URL(string: "https://me4photo.jimdosite.com/portfolio/"),
@@ -62,9 +76,10 @@ extension AndersMembersProvider { // fill with some initial hard-coded content
         )
 
         addMember(bgContext: bgContext, // add Lotte to Photographers and member of Anders (if needed)
+                  intermediateCoreDataSaves: intermediateCoreDataSaves,
                   personName: PersonName(givenName: "Lotte", infixName: "", familyName: "Vrij"),
                   organization: clubAnders,
-//                  website: URL(string: "https://lotte-vrij-fotografie.jimdofree.com"),
+                  // website: URL(string: "https://lotte-vrij-fotografie.jimdofree.com"),
                   memberWebsite: URL(string: FotogroepWaalreMembersProvider.baseURL + "Empty_Website/"),
                   latestImage: URL(string: """
                                            https://image.jimcdn.com/app/cms/image/transf/none/path/\
@@ -78,32 +93,17 @@ extension AndersMembersProvider { // fill with some initial hard-coded content
         )
 
         addMember(bgContext: bgContext, // add Dennis to Photographers and member of Anders (if needed)
+                  intermediateCoreDataSaves: intermediateCoreDataSaves,
                   personName: PersonName(givenName: "Dennis", infixName: "", familyName: "Verbruggen"),
                   organization: clubAnders,
                   memberWebsite: URL(string: FotogroepWaalreMembersProvider.baseURL + "/Empty_Website/"),
                   latestImage: URL(string: "http://www.vdhamer.com/wp-content/uploads/2023/11/DennisVerbruggen.jpeg")
         )
 
-        do {
-            if bgContext.hasChanges {
-                try bgContext.save() // persist FG Anders and its members
-                print("*** Updating *** SAVING instance=\"\(clubAnders.fullName)\"")
-            }
-            ifDebugPrint("""
-                         \(clubAnders.fullNameTown): \
-                         Completed insertSomeHardcodedMemberData() in background
-                         """)
-        } catch {
-            let clubNickname = AndersMembersProvider.fotogroepAndersIdPlus.nickname
-
-            ifDebugFatalError("\(clubNickname): ERROR - failed to save changes to Core Data",
-                              file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
-            // in release mode, the failed database update is only logged. App doesn't stop.
-        }
-
     }
 
     private func addMember(bgContext: NSManagedObjectContext,
+                           intermediateCoreDataSaves: Bool,
                            personName: PersonName,
                            website: URL? = nil,
                            bornDT: Date? = nil,
@@ -114,21 +114,26 @@ extension AndersMembersProvider { // fill with some initial hard-coded content
                            latestThumbnail: URL? = nil,
                            phoneNumber: String? = nil,
                            eMail: String? = nil) {
+
         let photographer = Photographer.findCreateUpdate(context: bgContext,
+                                                         intermediateCoreDataSaves: intermediateCoreDataSaves,
                                                          personName: personName,
                                                          memberRolesAndStatus: memberRolesAndStatus,
                                                          website: website,
                                                          bornDT: bornDT,
-                                                         organization: organization)
+                                                         organization: organization
+                                                         )
 
         let image = latestImage ?? latestThumbnail // if image not available, use thumbnail (which might also be nil)
         let thumb = latestThumbnail ?? latestImage // if thumb not available, use image (which might also be nil)
         _ = MemberPortfolio.findCreateUpdate(bgContext: bgContext,
+                                             intermediateCoreDataSaves: intermediateCoreDataSaves,
                                              organization: organization, photographer: photographer,
                                              memberRolesAndStatus: memberRolesAndStatus,
                                              memberWebsite: memberWebsite,
                                              latestImage: image,
-                                             latestThumbnail: thumb)
+                                             latestThumbnail: thumb
+                                             )
     }
 
 }

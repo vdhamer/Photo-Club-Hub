@@ -75,11 +75,11 @@ extension MemberPortfolio {
         let thumbURL = URL(string: self.level3URL.absoluteString + thumbSuffix)
 
         if member.featuredImage != imageURL && imageURL != nil {
-            member.featuredImage = imageURL // this is where it happens. Note that there is context.save()
+            member.featuredImage = imageURL // this is where it happens.
             print("\(organization.fullName): found new image \(imageURL!)")
         }
         if member.featuredImageThumbnail != thumbURL && thumbURL != nil {
-            member.featuredImageThumbnail = thumbURL // this is where it happens. Note that there is context.save()
+            member.featuredImageThumbnail = thumbURL // this is where it happens.
             print("\(organization.fullName): found new thumbnail \(thumbURL!)")
         }
     }

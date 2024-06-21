@@ -16,16 +16,28 @@ extension FotogroepDeGenderMembersProvider { // fill with some initial hard-code
                                                                     town: "Eindhoven",
                                                                     nickname: "FG deGender")
 
-    func insertSomeHardcodedMemberData(bgContext: NSManagedObjectContext) {
+    func insertSomeHardcodedMemberData(bgContext: NSManagedObjectContext,
+                                       intermediateCoreDataSaves: Bool) {
         bgContext.perform {
-            self.insertSomeHardcodedMemberDataCommon(bgContext: bgContext) // perform inserts on a background thread
+            self.insertSomeHardcodedMemberDataCommon(bgContext: bgContext, // perform inserts on a background thread
+                                                     intermediateCoreDataSaves: intermediateCoreDataSaves)
+            do {
+                if bgContext.hasChanges { // optimisation
+                    try bgContext.save() // persist FG de Gender and its online member data
+                    print("Sucess loading FG de Gender member data")
+                }
+            } catch {
+                ifDebugFatalError("Could not save members of FG de Gender")
+            }
         }
     }
 
-    private func insertSomeHardcodedMemberDataCommon(bgContext: NSManagedObjectContext) {
+    private func insertSomeHardcodedMemberDataCommon(bgContext: NSManagedObjectContext,
+                                                     intermediateCoreDataSaves: Bool) {
 
         // add De Gender to Photo Clubs (if needed)
         let clubDeGender = Organization.findCreateUpdate(context: bgContext,
+                                                         intermediateCoreDataSaves: intermediateCoreDataSaves,
                                                          organizationTypeEum: .club,
                                                          idPlus: Self.fotogroepDeGenderIdPlus)
         ifDebugPrint("\(clubDeGender.fullNameTown): Starting insertSomeHardcodedMemberData() in background")
@@ -36,7 +48,8 @@ extension FotogroepDeGenderMembersProvider { // fill with some initial hard-code
         dateFormatter.formatOptions = [.withInternetDateTime, .withFractionalSeconds]
         let bornDT = dateFormatter.date(from: isoDate)!
 
-        addMember(bgContext: bgContext, // add Mariet to members of de Gender
+        // add Mariet to members of de Gender
+        addMember(bgContext: bgContext, intermediateCoreDataSaves: intermediateCoreDataSaves,
                   personName: PersonName(givenName: "Mariet", infixName: "", familyName: "Wielders"),
                   website: URL(string: "https://www.m3w.nl"),
                   bornDT: bornDT,
@@ -47,7 +60,8 @@ extension FotogroepDeGenderMembersProvider { // fill with some initial hard-code
                      "https://www.fcdegender.nl/wp-content/uploads/Expositie%202023/Mariet/slides/Mariet%203.jpg")
         )
 
-        addMember(bgContext: bgContext, // add Peter to members of de Gender
+        // add Peter to members of de Gender
+        addMember(bgContext: bgContext, intermediateCoreDataSaves: intermediateCoreDataSaves,
                   personName: PersonName(givenName: "Peter", infixName: "van den", familyName: "Hamer"),
                   organization: clubDeGender,
                   memberRolesAndStatus: MemberRolesAndStatus(stat: [.prospective: false]),
@@ -56,7 +70,8 @@ extension FotogroepDeGenderMembersProvider { // fill with some initial hard-code
                      "http://www.vdhamer.com/wp-content/uploads/2024/04/2023_Cornwall_R5_581-Pano.jpg")
         )
 
-        addMember(bgContext: bgContext, // add Peter to members of de Gender
+        // add Peter to members of de Gender
+        addMember(bgContext: bgContext, intermediateCoreDataSaves: intermediateCoreDataSaves,
                   personName: PersonName(givenName: "Bettina", infixName: "de", familyName: "Graaf"),
                   organization: clubDeGender,
                   memberRolesAndStatus: MemberRolesAndStatus(stat: [.prospective: false]),
@@ -65,26 +80,10 @@ extension FotogroepDeGenderMembersProvider { // fill with some initial hard-code
                      "http://www.vdhamer.com/wp-content/uploads/2023/11/BettinaDeGraaf.jpeg")
         )
 
-        let clubNickname = FotogroepDeGenderMembersProvider.fotogroepDeGenderIdPlus.nickname
-
-        do {
-            if bgContext.hasChanges {
-                try bgContext.save() // persist Fotogroep de Gender and its members
-                print("*** Updating *** SAVING instance=\"\(clubDeGender.fullName)\"")
-            }
-            ifDebugPrint("""
-                         \(clubDeGender.fullNameTown): \
-                         Completed insertSomeHardcodedMemberData() in background
-                         """)
-        } catch {
-            ifDebugFatalError("\(clubNickname): ERROR - failed to save changes to Core Data",
-                              file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
-            // in release mode, the failed database update is only logged. App doesn't stop.
-        }
-
     }
 
     private func addMember(bgContext: NSManagedObjectContext,
+                           intermediateCoreDataSaves: Bool,
                            personName: PersonName,
                            website: URL? = nil,
                            bornDT: Date? = nil,
@@ -95,16 +94,20 @@ extension FotogroepDeGenderMembersProvider { // fill with some initial hard-code
                            latestThumbnail: URL? = nil,
                            phoneNumber: String? = nil,
                            eMail: String? = nil) {
+
         let photographer = Photographer.findCreateUpdate(context: bgContext,
+                                                         intermediateCoreDataSaves: intermediateCoreDataSaves,
                                                          personName: personName,
                                                          memberRolesAndStatus: memberRolesAndStatus,
                                                          website: website,
                                                          bornDT: bornDT,
-                                                         organization: organization)
+                                                         organization: organization
+                                                         )
 
         let image = latestImage ?? latestThumbnail // if image not available, use thumbnail (which might also be nil)
         let thumb = latestThumbnail ?? latestImage // if thumb not available, use image (which might also be nil)
         _ = MemberPortfolio.findCreateUpdate(bgContext: bgContext,
+                                             intermediateCoreDataSaves: intermediateCoreDataSaves,
                                              organization: organization, photographer: photographer,
                                              memberRolesAndStatus: memberRolesAndStatus,
                                              memberWebsite: memberWebsite,

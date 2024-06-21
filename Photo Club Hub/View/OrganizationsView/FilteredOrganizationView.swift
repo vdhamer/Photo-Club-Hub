@@ -9,6 +9,7 @@ import SwiftUI
 import MapKit
 import CoreData
 
+@MainActor
 struct FilteredOrganizationView: View, Sendable {
 
     @Environment(\.managedObjectContext) private var viewContext // may not be correct
@@ -211,7 +212,7 @@ struct FilteredOrganizationView: View, Sendable {
             photoClub.localizedTown = localizedTown
             if let localizedCountry { photoClub.localizedCountry = localizedCountry}
             do {
-                try bgContext.save() // persist Town, Country or both for an organization
+                try bgContext.save() // persist Town, Country or both for an organization (on local context)
             } catch {
                 print("""
                       ERROR: could not save \(localizedTown), \(localizedCountry ?? "nil") for \(clubName) to CoreData
@@ -259,6 +260,7 @@ struct FilteredOrganizationView: View, Sendable {
         )
     }
 
+    @MainActor
     private func deleteOrganizations(indexSet: IndexSet) { // normally deletes just one, but this is how .onDelete works
         guard isDeleteOrganizationPermitted else { return } // exit if feature is disabled
 
@@ -267,7 +269,7 @@ struct FilteredOrganizationView: View, Sendable {
 
             do {
                 if viewContext.hasChanges {
-                    try viewContext.save() // persist deletion of organization
+                    try viewContext.save() // persist deletion of organization (on main thread)
                 }
             } catch {
                 let nsError = error as NSError

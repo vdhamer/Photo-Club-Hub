@@ -11,7 +11,7 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
 
     // Find existing object or create a new object
     // Update existing attributes or fill the new object
-    static func findCreateUpdate(bgContext: NSManagedObjectContext,
+    static func findCreateUpdate(bgContext: NSManagedObjectContext, intermediateCoreDataSaves: Bool,
                                  // identifying attributes of a Member:
                                  organization: Organization, photographer: Photographer,
                                  // non-identifying attributes of a Member:
@@ -44,7 +44,8 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
                       dateInterval: dateInterval,
                       memberWebsite: memberWebsite,
                       latestImage: latestImage,
-                      latestThumbnail: latestThumbnail) {
+                      latestThumbnail: latestThumbnail,
+                      intermediateCoreDataSaves: intermediateCoreDataSaves) {
                 print("""
                       \(memberPortfolio.organization.fullName): \
                       Updated info for member \(memberPortfolio.photographer.fullNameFirstLast)
@@ -61,7 +62,8 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
                        dateInterval: dateInterval,
                        memberWebsite: memberWebsite,
                        latestImage: latestImage,
-                       latestThumbnail: latestThumbnail)
+                       latestThumbnail: latestThumbnail,
+                       intermediateCoreDataSaves: intermediateCoreDataSaves)
             print("""
                   \(memberPortfolio.organization.fullNameTown): \
                   Created new membership for \(memberPortfolio.photographer.fullNameFirstLast)
@@ -77,7 +79,8 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
                                dateInterval: DateInterval?,
                                memberWebsite: URL?,
                                latestImage: URL?,
-                               latestThumbnail: URL?) -> Bool {
+                               latestThumbnail: URL?,
+                               intermediateCoreDataSaves: Bool) -> Bool {
         var needsSaving: Bool = false
 
         // function only works for non-optional Types.
@@ -120,7 +123,7 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
         needsSaving = changed1 || changed2 || changed3 ||
                       changed4 || changed5 || changed6 // forces execution of updateIfChanged()
 
-        if needsSaving {
+        if needsSaving && intermediateCoreDataSaves {
             do {
                 try bgContext.save() // persist just to be sure?
                 if changed1 { print("""

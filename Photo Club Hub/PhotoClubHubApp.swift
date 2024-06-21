@@ -15,6 +15,11 @@ struct PhotoClubHubApp: App {
     // Setting loadData to false clears the existing database and skips loading any data on app startup.
     // It displays "No clubs mode" in the Prelude startup screen as a warning that the mode is set.
     // The not-loaded data (clubs/museaums/members) can be loaded manually by swiping down on one of the main screens.
+
+    static let intermediateCoreDataSaves = false // Important setting that should normally be kept false
+    // It adds additional ManagedObjectContext.save() transactions between the absolute minimum set.
+    // It is needed for testing purposes only.
+
     @Environment(\.scenePhase) var scenePhase
     private static let resetKey = "2.6.2 forced data reset performed"
 
@@ -31,7 +36,7 @@ struct PhotoClubHubApp: App {
 
         if ((AppVersion() >= AppVersion("2.6.2")) // starting with release 2.6.2, erase the database
             && (!UserDefaults.standard.bool(forKey: PhotoClubHubApp.resetKey))) // but do so only once
-            || !PhotoClubHubApp.loadData { // and also ease if we are in leaveEmpty mode for testing
+            || !PhotoClubHubApp.loadData { // and also erase if we are in leaveEmpty mode for testing
             PhotoClubHubApp.deleteAllCoreDataObjects()
         }
 
@@ -49,7 +54,7 @@ struct PhotoClubHubApp: App {
                 }
         }
         .onChange(of: scenePhase) { // pre-iOS 17 there was 1 param. Since iOS 17 it is 0 or 2.
-            PersistenceController.shared.save() // persist data when app moves to background
+            PersistenceController.shared.save() // persist data when app moves to background (may not be needed)
         }
     }
 
@@ -65,6 +70,7 @@ extension PhotoClubHubApp {
         level1BackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         level1BackgroundContext.automaticallyMergesChangesFromParent = true // to push ObjectTypes to bgContext?
         _ = RootLevel1JsonReader(bgContext: level1BackgroundContext, // read root.Level1.json file
+                                 intermediateCoreDataSaves: intermediateCoreDataSaves,
                                  useOnlyFile: false)
 
         // warning: following clubs rely on Level 1 file for filling in their coordinates
@@ -74,28 +80,32 @@ extension PhotoClubHubApp {
         bellusBackgroundContext.name = "Bellus Imago"
         bellusBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         bellusBackgroundContext.automaticallyMergesChangesFromParent = true
-        _ = BellusImagoMembersProvider(bgContext: bellusBackgroundContext)
+        _ = BellusImagoMembersProvider(bgContext: bellusBackgroundContext,
+                                       intermediateCoreDataSaves: intermediateCoreDataSaves)
 
         // load test member(s) of Fotogroep De Gender
         let genderBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
         genderBackgroundContext.name = "FG de Gender"
         genderBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         genderBackgroundContext.automaticallyMergesChangesFromParent = true
-        _ = FotogroepDeGenderMembersProvider(bgContext: genderBackgroundContext)
+        _ = FotogroepDeGenderMembersProvider(bgContext: genderBackgroundContext,
+                                             intermediateCoreDataSaves: intermediateCoreDataSaves)
 
         // load all current/former members of Fotogroep Waalre
         let waalreBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
         waalreBackgroundContext.name = "Fotogroep Waalre"
         waalreBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         waalreBackgroundContext.automaticallyMergesChangesFromParent = true
-        _ = FotogroepWaalreMembersProvider(bgContext: waalreBackgroundContext)
+        _ = FotogroepWaalreMembersProvider(bgContext: waalreBackgroundContext,
+                                           intermediateCoreDataSaves: intermediateCoreDataSaves)
 
         // load all current members of Fotogroep Anders
         let andersBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
         andersBackgroundContext.name = "FG Anders"
         andersBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         andersBackgroundContext.automaticallyMergesChangesFromParent = true
-        _ = AndersMembersProvider(bgContext: andersBackgroundContext)
+        _ = AndersMembersProvider(bgContext: andersBackgroundContext,
+                                  intermediateCoreDataSaves: intermediateCoreDataSaves)
 
     }
 

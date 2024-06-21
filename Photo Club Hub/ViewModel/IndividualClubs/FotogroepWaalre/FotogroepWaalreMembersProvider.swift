@@ -14,16 +14,20 @@ class FotogroepWaalreMembersProvider { // WWDC21 Earthquakes also uses a Class h
                                                           town: "Waalre",
                                                           nickname: "fgWaalre")
 
-    init(bgContext: NSManagedObjectContext) {
+    init(bgContext: NSManagedObjectContext, intermediateCoreDataSaves: Bool) {
         // following is asynchronous, but not documented as such using async/await
         bgContext.perform { // done asynchronously by CoreData
-            self.insertSomeHardcodedMemberData(bgContext: bgContext)
-            self.insertOnlineMemberData(bgContext: bgContext)
+            self.insertSomeHardcodedMemberData(bgContext: bgContext,
+                                               intermediateCoreDataSaves: intermediateCoreDataSaves)
+            self.insertOnlineMemberData(bgContext: bgContext,
+                                        intermediateCoreDataSaves: intermediateCoreDataSaves)
             do {
-                try bgContext.save() // persist Fotogroep Waalre and its online member data
-                print("Sucess loading FG Waalre member data")
+                if bgContext.hasChanges { // optimisation
+                    try bgContext.save() // persist Fotogroep Waalre and its online member data
+                    print("Sucess loading FG Waalre member data")
+                }
             } catch {
-                ifDebugFatalError("Could not save members of FG Waalre")
+                ifDebugFatalError("Error saving members of FG Waalre: \(error.localizedDescription)")
             }
         }
     }
