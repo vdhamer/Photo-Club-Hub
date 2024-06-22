@@ -1,5 +1,8 @@
 ### 2.6.2 (GitHub commit ???????) ??-06-24
 
+Prelude screen
+* Changed color arangement to match app icon colors
+
 Portfolio screen
 * Swiping down the top of the screen will now erase and reload stored data
 

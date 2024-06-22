@@ -31,9 +31,9 @@ struct PreludeView: View {
         NavigationStack { // defines navigation structure of entire app, even though you don't see navigation bar yet
             ZStack {
                 AngularGradient(gradient: Gradient(colors: [.white, .fgwGreen,
-                                                            .white, .fgwRed,
-                                                            .white, .fgwGreen,
                                                             .white, .fgwBlue,
+                                                            .white, .fgwGreen,
+                                                            .white, .fgwRed,
                                                             .white]
                 ), center: .center)
                 .saturation(0.5)
@@ -63,11 +63,11 @@ struct PreludeView: View {
                                 LogoPath(logCellRepeat: PreludeView.log2CellRepeat, // upper right part of logo
                                          relPixelSize: PreludeView.squareSize,
                                          offsetPoint: .top)
-                                .fill(.fgwRed)
+                                .fill(.fgwBlue)
                                 LogoPath(logCellRepeat: PreludeView.log2CellRepeat, // lower left part of logo
                                          relPixelSize: PreludeView.squareSize,
                                          offsetPoint: .leading)
-                                .fill(.fgwBlue)
+                                .fill(.fgwRed)
                                 LogoPath(logCellRepeat: PreludeView.log2CellRepeat, // lower righ part of logo
                                          relPixelSize: PreludeView.squareSize,
                                          offsetPoint: .center)
