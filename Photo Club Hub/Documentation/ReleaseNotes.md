@@ -10,6 +10,7 @@ Who's Who screen
 * Swiping down the top of the screen will now erase and reload stored data
 
 Maintenance
+* Icon prepared for home screen dark and tinted mode.
 * Updated FGW member list: former coach Hans Zoete has passed away.
 * Reduced number of CoreData save() transactions.
 
