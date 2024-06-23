@@ -154,7 +154,7 @@
       </trans-unit>
       <trans-unit id="Manual loading" xml:space="preserve">
         <source>Manual loading</source>
-        <target state="translated">Handmatig laden</target>
+        <target>Handmatig laden</target>
         <note>Shown instead of app name in PreludeView when app is started</note>
       </trans-unit>
       <trans-unit id="Maps can be viewed in 3D" xml:space="preserve">
@@ -166,11 +166,6 @@
         <source>Member categories</source>
         <target>Lidmaatschapstypen</target>
         <note>In Preferences, above toggles like "Show former members"</note>
-      </trans-unit>
-      <trans-unit id="No clubs mode" xml:space="preserve">
-        <source>No clubs mode</source>
-        <target>Lege data versie</target>
-        <note>Shown instead of app name in PreludeView when app is started</note>
       </trans-unit>
       <trans-unit id="No known personal website" xml:space="preserve">
         <source>No known personal website</source>
@@ -751,6 +746,28 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
         <source>“Former members” includes “deceased members”</source>
         <target>De optie “ex-leden“ bevat “overleden leden“</target>
         <note>Shown when "Show deceased members" entry is missing in Preferences</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="Settings.bundle/en.lproj/Root.strings" source-language="en" target-language="nl" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="16.0" build-num="16A5171c"/>
+    </header>
+    <body>
+      <trans-unit id="About" xml:space="preserve">
+        <source>About</source>
+        <target>Over deze app</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Copyright" xml:space="preserve">
+        <source>Copyright</source>
+        <target>Auteursrecht</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Version" xml:space="preserve">
+        <source>Version</source>
+        <target>Versie</target>
+        <note/>
       </trans-unit>
     </body>
   </file>

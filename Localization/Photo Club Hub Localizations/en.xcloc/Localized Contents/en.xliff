@@ -167,11 +167,6 @@
         <target>Member categories</target>
         <note>In Preferences, above toggles like "Show former members"</note>
       </trans-unit>
-      <trans-unit id="No clubs mode" xml:space="preserve">
-        <source>No clubs mode</source>
-        <target>No clubs mode</target>
-        <note>Shown instead of app name in PreludeView when app is started</note>
-      </trans-unit>
       <trans-unit id="No known personal website" xml:space="preserve">
         <source>No known personal website</source>
         <target>No known personal website</target>
@@ -752,6 +747,28 @@ Try dragging down the Clubs and Museums screen to reload the default clubs.</tar
         <source>“Former members” includes “deceased members”</source>
         <target>“Former members” includes “deceased members”</target>
         <note>Shown when "Show deceased members" entry is missing in Preferences</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="Settings.bundle/en.lproj/Root.strings" source-language="en" target-language="en" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="16.0" build-num="16A5171c"/>
+    </header>
+    <body>
+      <trans-unit id="About" xml:space="preserve">
+        <source>About</source>
+        <target>About</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Copyright" xml:space="preserve">
+        <source>Copyright</source>
+        <target>Copyright</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Version" xml:space="preserve">
+        <source>Version</source>
+        <target>Version</target>
+        <note/>
       </trans-unit>
     </body>
   </file>

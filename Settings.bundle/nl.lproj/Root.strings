@@ -5,5 +5,13 @@
 "Copyright" = "Auteursrecht";
 
 /* (No Comment) */
-"Version" = "Versie";
+"Debug options" = "Debug instellingen";
 
+/* (No Comment) */
+"Extra saving of data" = "Gegevens vaker opslaan";
+
+/* (No Comment) */
+"Load data manually" = "Data handmatig laden";
+
+/* (No Comment) */
+"Version" = "Versie";
