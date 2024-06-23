@@ -122,11 +122,6 @@
         <target>Data source: in-app member data.</target>
         <note>Section footer text Portfolios screen</note>
       </trans-unit>
-      <trans-unit id="Empty data mode" xml:space="preserve">
-        <source>Empty data mode</source>
-        <target>Empty data mode</target>
-        <note>Shown instead of app name in PreludeView when app is started</note>
-      </trans-unit>
       <trans-unit id="Example of a link to a club web site" xml:space="preserve">
         <source>Example of a link to a club web site</source>
         <target>Example of a link to a club web site</target>
@@ -157,6 +152,11 @@
         <target>Level 1 support for a Dutch photo club</target>
         <note>Caption for image on Readme page</note>
       </trans-unit>
+      <trans-unit id="Manual loading" xml:space="preserve">
+        <source>Manual loading</source>
+        <target>Manual loading</target>
+        <note>Shown instead of app name in PreludeView when app is started</note>
+      </trans-unit>
       <trans-unit id="Maps can be viewed in 3D" xml:space="preserve">
         <source>Maps can be viewed in 3D</source>
         <target>Maps can be viewed in 3D</target>
@@ -167,16 +167,21 @@
         <target>Member categories</target>
         <note>In Preferences, above toggles like "Show former members"</note>
       </trans-unit>
+      <trans-unit id="No clubs mode" xml:space="preserve">
+        <source>No clubs mode</source>
+        <target>No clubs mode</target>
+        <note>Shown instead of app name in PreludeView when app is started</note>
+      </trans-unit>
       <trans-unit id="No known personal website" xml:space="preserve">
         <source>No known personal website</source>
         <target>No known personal website</target>
         <note>If photographer has no personal website (Who's Who screen).</note>
       </trans-unit>
-      <trans-unit id="No photo clubs seem to be currently loaded.&#10;Try dragging down the Photo Clubs screen to reload the default clubs." xml:space="preserve">
+      <trans-unit id="No photo clubs seem to be currently loaded.&#10;Try dragging down the Clubs and Museums screen to reload the default clubs." xml:space="preserve">
         <source>No photo clubs seem to be currently loaded.
-Try dragging down the Photo Clubs screen to reload the default clubs.</source>
+Try dragging down the Clubs and Museums screen to reload the default clubs.</source>
         <target>No photo clubs seem to be currently loaded.
-Try dragging down the Photo Clubs screen to reload the default clubs.</target>
+Try dragging down the Clubs and Museums screen to reload the default clubs.</target>
         <note>Hint to the user if the database returns zero PhotoClubs.</note>
       </trans-unit>
       <trans-unit id="No remark currently available for %@ %@." xml:space="preserve">

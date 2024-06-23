@@ -76,9 +76,6 @@
 /* Relationship status of member within a club. Used as prefix. */
 "deceased" = "overleden";
 
-/* Shown instead of app name in PreludeView when app is started */
-"No clubs mode" = "Lege data versie";
-
 /* Caption of Websites image on Readme page */
 "Example of a link to a club web site" = "Link (in blauw) naar een club website";
 
@@ -108,6 +105,9 @@
 
 /* Caption for image on Readme page */
 "Level 1 support for a Dutch photo club" = "Voorbeeld van Niveau 1 gegevens";
+
+/* Shown instead of app name in PreludeView when app is started */
+"Manual loading" = "Handmatig laden";
 
 /* Caption of 3D image on Readme page */
 "Maps can be viewed in 3D" = "Omgeving van een fotomuseum in 3D";

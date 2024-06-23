@@ -73,6 +73,9 @@
 /* Relationship status of member within a club. Used as prefix. */
 "deceased" = "deceased";
 
+/* Shown instead of app name in PreludeView when app is started */
+"No clubs mode" = "No clubs mode";
+
 /* Caption of Websites image on Readme page */
 "Example of a link to a club web site" = "Example of a link to a club web site";
 
@@ -122,7 +125,7 @@
 "No known personal website" = "No known personal website";
 
 /* Hint to the user if the database returns zero PhotoClubs. */
-"No photo clubs seem to be currently loaded.\nTry dragging down the Photo Clubs screen to reload the default clubs." = "No photo clubs seem to be currently loaded.\nTry dragging down the Photo Clubs screen to reload the default clubs.";
+"No photo clubs seem to be currently loaded.\nTry dragging down the Clubs and Museums screen to reload the default clubs." = "No photo clubs seem to be currently loaded.\nTry dragging down the Clubs and Museums screen to reload the default clubs.";
 
 /* Shown below map if there is no usable remark in the OrganzationList.json file. */
 "No remark currently available for %@ %@." = "No remark currently available for %@ %@.";

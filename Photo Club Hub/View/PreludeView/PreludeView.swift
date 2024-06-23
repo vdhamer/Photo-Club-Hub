@@ -9,8 +9,6 @@ import SwiftUI
 
 struct PreludeView: View {
 
-    var loadData: Bool // normally false, true for certain debugging
-
     // MARK: - Constants
     static let maxCellRepeat: Double = 32 // max number of cells horizontally and vertically
     private static let log2CellRepeat: Double = log2(maxCellRepeat) // typically log2(32) = 5
@@ -168,8 +166,8 @@ struct PreludeView: View {
     }
 
     var preludeText: String {
-        if !loadData {
-            String(localized: "No clubs mode",
+        if PhotoClubHubApp.manualDataLoading {
+            String(localized: "Manual loading",
                    comment: "Shown instead of app name in PreludeView when app is started")
         } else if isDebug() {
             String(localized: "In debug mode",
@@ -238,7 +236,7 @@ struct OffsetVectorInCells {
 
 struct Prelude_Previews: PreviewProvider {
     static var previews: some View {
-        PreludeView(loadData: true)
+        PreludeView()
             .previewInterfaceOrientation(.portrait)
     }
 }

@@ -87,6 +87,7 @@
 		D0E694C927EF9B450054D634 /* LockAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E694C827EF9B450054D634 /* LockAnimationView.swift */; };
 		D0EAEB332B3CA6D300EC05B6 /* RootLevel1JsonReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EAEB322B3CA6D300EC05B6 /* RootLevel1JsonReader.swift */; };
 		D0EB533C295775240061613B /* Crosshairs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EB533B295775240061613B /* Crosshairs.swift */; };
+		D0EEF48F2C2844290086419D /* PhotoClubHubApp+Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EEF48E2C2844290086419D /* PhotoClubHubApp+Settings.swift */; };
 		D0FC30C92BA78F2E0051AFB6 /* OrganizationList.json in Resources */ = {isa = PBXBuildFile; fileRef = D04B1A0B2B1AA06300EB3817 /* OrganizationList.json */; };
 		D0FE77E52BB9AEE900272077 /* ItemFilterStatsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE77E42BB9AEE900272077 /* ItemFilterStatsEnum.swift */; };
 /* End PBXBuildFile section */
@@ -207,6 +208,7 @@
 		D0E694C827EF9B450054D634 /* LockAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockAnimationView.swift; sourceTree = "<group>"; };
 		D0EAEB322B3CA6D300EC05B6 /* RootLevel1JsonReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootLevel1JsonReader.swift; sourceTree = "<group>"; };
 		D0EB533B295775240061613B /* Crosshairs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crosshairs.swift; sourceTree = "<group>"; };
+		D0EEF48E2C2844290086419D /* PhotoClubHubApp+Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhotoClubHubApp+Settings.swift"; sourceTree = "<group>"; };
 		D0F999502AACE217005FA0FF /* Photo_Club_Hub_2_4_2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_4_2.xcdatamodel; sourceTree = "<group>"; };
 		D0FCF2E229B5517000F31442 /* VoteOnRoadmapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteOnRoadmapView.swift; sourceTree = "<group>"; };
 		D0FCF2E529B558FE00F31442 /* Roadmap.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Roadmap.json; sourceTree = "<group>"; };
@@ -231,6 +233,15 @@
 				D02C273D2AEE6FCD0005F957 /* AndersMembersProvider+InsertSomeHardcodedMemberData.swift */,
 			);
 			path = FotogroepAnders;
+			sourceTree = "<group>";
+		};
+		D03DE5CC2C28439800130680 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				D08319E6277F70A30049AB84 /* PhotoClubHubApp.swift */,
+				D0EEF48E2C2844290086419D /* PhotoClubHubApp+Settings.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 		D05414F52AC7496000D899D8 /* FotogroepDeGender */ = {
@@ -356,7 +367,7 @@
 		D08319E5277F70A30049AB84 /* Photo Club Hub */ = {
 			isa = PBXGroup;
 			children = (
-				D08319E6277F70A30049AB84 /* PhotoClubHubApp.swift */,
+				D03DE5CC2C28439800130680 /* App */,
 				D01526BC278B91BA004DBD19 /* PhotoClubHub.entitlements */,
 				D0831A18277F72110049AB84 /* View */,
 				D0831A23277F72340049AB84 /* ViewModel */,
@@ -771,6 +782,7 @@
 				D0275F5527E3E21F002FA4FE /* View+OnTapGesture.swift in Sources */,
 				D0447C892BA510AF00982A1E /* LocalizedRemark.swift in Sources */,
 				D0A0B6852AA930E90078DE9A /* Photo_Club_Hub.xcdatamodeld in Sources */,
+				D0EEF48F2C2844290086419D /* PhotoClubHubApp+Settings.swift in Sources */,
 				D0831A22277F72270049AB84 /* MemberPortfolioListView.swift in Sources */,
 				D0C8E3A22BB81B4A00348D97 /* ItemFilterStatsView.swift in Sources */,
 				D0AE1B7527889E8600E0100E /* OrganizationListView.swift in Sources */,

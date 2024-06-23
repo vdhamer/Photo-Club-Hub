@@ -33,7 +33,7 @@ Maintenance
 * Improved robustness of OrganizationType.getter (gave crash if value was somehow missing).
 * Forced one-time reloading (from scratch) of CoreData information when release is 2.6.2 or higher.
 * Changes to prepare for Swift 6 language mode (with its static data-race checking).
-* Added "No clubs mode" (compile-time setting) for testing.
+* Added "Manual loading" mode (compile-time setting) for testing.
 * Removed some hard-coded member data for FGW club that was no longer needed.
 
 This is build #4625 and was distributed to TestFlight users only.
