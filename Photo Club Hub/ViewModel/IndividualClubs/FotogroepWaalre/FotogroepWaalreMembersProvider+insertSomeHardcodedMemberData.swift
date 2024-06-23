@@ -10,12 +10,10 @@ import MapKit // for CLLocationCoordinate2D
 
 extension FotogroepWaalreMembersProvider { // fill with some initial hard-coded content
 
-    func insertSomeHardcodedMemberData(bgContext: NSManagedObjectContext, // runs on a background thread
-                                       intermediateCoreDataSaves: Bool) {
+    func insertSomeHardcodedMemberData(bgContext: NSManagedObjectContext) { // runs on a background thread
 
         let clubWaalre = Organization.findCreateUpdate(
                                         context: bgContext,
-                                        intermediateCoreDataSaves: intermediateCoreDataSaves,
                                         organizationTypeEum: .club,
                                         idPlus: FotogroepWaalreMembersProvider.photoClubWaalreIdPlus
                                         )
@@ -25,38 +23,38 @@ extension FotogroepWaalreMembersProvider { // fill with some initial hard-coded 
                      """)
         clubWaalre.hasHardCodedMemberData = true // store in database that we ran insertSomeHardcodedMembers...
 
-        addMember(bgContext: bgContext, intermediateCoreDataSaves: intermediateCoreDataSaves,
+        addMember(bgContext: bgContext,
                   personName: PersonName(givenName: "Carel", infixName: "", familyName: "Bullens"),
                   organization: clubWaalre,
                   memberRolesAndStatus: MemberRolesAndStatus(role: [ .viceChairman: true ], stat: [:]))
 
-        addMember(bgContext: bgContext, intermediateCoreDataSaves: intermediateCoreDataSaves,
+        addMember(bgContext: bgContext,
                   personName: PersonName(givenName: "Erik", infixName: "van", familyName: "Geest"),
                   organization: clubWaalre, memberRolesAndStatus: MemberRolesAndStatus(role: [ .admin: true ]))
 
-        addMember(bgContext: bgContext, intermediateCoreDataSaves: intermediateCoreDataSaves,
+        addMember(bgContext: bgContext,
                   personName: PersonName(givenName: "Henriëtte", infixName: "van", familyName: "Ekert"),
                   organization: clubWaalre, memberRolesAndStatus: MemberRolesAndStatus(role: [ .admin: true ]))
 
-        addMember(bgContext: bgContext, intermediateCoreDataSaves: intermediateCoreDataSaves,
+        addMember(bgContext: bgContext,
                   personName: PersonName(givenName: "Jos", infixName: "", familyName: "Jansen"),
                   organization: clubWaalre, memberRolesAndStatus: MemberRolesAndStatus(role: [ .treasurer: true ]))
 
-        addMember(bgContext: bgContext, intermediateCoreDataSaves: intermediateCoreDataSaves,
+        addMember(bgContext: bgContext,
                   personName: PersonName(givenName: "Kees", infixName: "van", familyName: "Gemert"),
                   organization: clubWaalre, memberRolesAndStatus: MemberRolesAndStatus(role: [ .secretary: true ]))
 
-        addMember(bgContext: bgContext, intermediateCoreDataSaves: intermediateCoreDataSaves,
+        addMember(bgContext: bgContext,
                   personName: PersonName(givenName: "Marijke", infixName: "", familyName: "Gallas"),
                   organization: clubWaalre,
                   memberRolesAndStatus: MemberRolesAndStatus(role: [:], stat: [ .honorary: true ]))
 
-        addMember(bgContext: bgContext, intermediateCoreDataSaves: intermediateCoreDataSaves,
+        addMember(bgContext: bgContext,
                   personName: PersonName(givenName: "Miek", infixName: "", familyName: "Kerkhoven"),
                   organization: clubWaalre, memberRolesAndStatus: MemberRolesAndStatus(role: [ .chairman: true ]))
 
         do {
-            if intermediateCoreDataSaves && bgContext.hasChanges { // hasChanges is for optimization only
+            if Settings.extraCoreDataSaves && bgContext.hasChanges { // hasChanges is for optimization only
                 try bgContext.save() // persist FotoGroep Waalre and its online member data
             }
             ifDebugPrint("""
@@ -72,7 +70,6 @@ extension FotogroepWaalreMembersProvider { // fill with some initial hard-coded 
     }
 
     private func addMember(bgContext: NSManagedObjectContext,
-                           intermediateCoreDataSaves: Bool,
                            personName: PersonName,
                            bornDT: Date? = nil,
                            organization: Organization,
@@ -82,7 +79,6 @@ extension FotogroepWaalreMembersProvider { // fill with some initial hard-coded 
 
         let photographer = Photographer.findCreateUpdate(
                            context: bgContext,
-                           intermediateCoreDataSaves: intermediateCoreDataSaves,
                            personName: PersonName(givenName: personName.givenName,
                                                   infixName: personName.infixName,
                                                   familyName: personName.familyName),
@@ -91,7 +87,7 @@ extension FotogroepWaalreMembersProvider { // fill with some initial hard-coded 
                            organization: organization)
 
         _ = MemberPortfolio.findCreateUpdate(
-                            bgContext: bgContext, intermediateCoreDataSaves: intermediateCoreDataSaves,
+                            bgContext: bgContext,
                             organization: organization, photographer: photographer,
                             memberRolesAndStatus: memberRolesAndStatus,
                             memberWebsite: memberWebsite,

@@ -1,7 +1,7 @@
 ### 2.6.2 (GitHub commit ???????) ??-06-24
 
 Prelude screen
-* Changed color arangement to match app icon colors
+* Changed color ordering to match app icon colors
 
 Portfolio screen
 * Swiping down the top of the screen will now erase and reload stored data
@@ -14,6 +14,7 @@ Who's Who screen
 
 Settings App
 * Added version/build info to app's settings
+* Added debug toggles
 
 Maintenance
 * Icon prepared for home screen dark and tinted mode.

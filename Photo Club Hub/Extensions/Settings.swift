@@ -1,5 +1,5 @@
 //
-//  PhotoClubHubApp+Settings.swift
+//  Settings.swift
 //  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 23/06/2024.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension PhotoClubHubApp {
+struct Settings {
 
     static var manualDataLoading: Bool {
         // Setting this to true clears the existing database and skips loading any data on app startup.
@@ -21,8 +21,16 @@ extension PhotoClubHubApp {
         }
     }
 
-    static let intermediateCoreDataSaves = false // Important setting that should normally be kept false
-    // It adds additional ManagedObjectContext.save() transactions between the absolute minimum set.
-    // It is needed for testing purposes only.
+    static var extraCoreDataSaves: Bool {
+        // Important setting that should normally be kept false,
+        // It adds additional ManagedObjectContext.save() transactions between the absolute minimum set.
+        // It is needed for testing purposes only.
+        get {
+            UserDefaults.standard.bool(forKey: "extraCoreDataSaves") // returns false if missing
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: "extraCoreDataSaves")
+        }
+    }
 
 }

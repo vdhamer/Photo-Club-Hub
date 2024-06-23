@@ -15,11 +15,9 @@ extension BellusImagoMembersProvider { // fill with some initial hard-coded cont
                                                                        town: "Veldhoven",
                                                                        nickname: "FC BellusImago")
 
-    func insertSomeHardcodedMemberData(bgContext: NSManagedObjectContext,
-                                       intermediateCoreDataSaves: Bool) {
+    func insertSomeHardcodedMemberData(bgContext: NSManagedObjectContext) {
         bgContext.perform { // from here on, we are running on a background thread
-            self.insertSomeHardcodedMemberDataCommon(bgContext: bgContext,
-                                                     intermediateCoreDataSaves: intermediateCoreDataSaves)
+            self.insertSomeHardcodedMemberDataCommon(bgContext: bgContext)
             do {
                 if bgContext.hasChanges { // optimisation
                     try bgContext.save() // persist FC Bellus Imago and its online member data
@@ -31,13 +29,11 @@ extension BellusImagoMembersProvider { // fill with some initial hard-coded cont
         }
     }
 
-    private func insertSomeHardcodedMemberDataCommon(bgContext: NSManagedObjectContext,
-                                                     intermediateCoreDataSaves: Bool) {
+    private func insertSomeHardcodedMemberDataCommon(bgContext: NSManagedObjectContext) {
 
         // add Bellus Imago to Photo Clubs (if needed)
         let clubBellusImago = Organization.findCreateUpdate(
                                                             context: bgContext,
-                                                            intermediateCoreDataSaves: intermediateCoreDataSaves,
                                                             organizationTypeEum: .club,
                                                             idPlus: Self.photoClubBellusImagoIdPlus
                                                            )
@@ -49,7 +45,6 @@ extension BellusImagoMembersProvider { // fill with some initial hard-coded cont
         clubBellusImago.hasHardCodedMemberData = true // store in database that we ran insertSomeHardcodedMembers...
 
         addMember(bgContext: bgContext, // add Rico to Photographers and member of Bellus (if needed)
-                  intermediateCoreDataSaves: intermediateCoreDataSaves,
                   personName: PersonName(givenName: "Rico", infixName: "", familyName: "Coolen"),
                   website: URL(string: "https://www.ricoco.nl"),
                   organization: clubBellusImago,
@@ -60,7 +55,6 @@ extension BellusImagoMembersProvider { // fill with some initial hard-coded cont
         )
 
         addMember(bgContext: bgContext, // add Loek to Photographers and member of Bellus (if needed)
-                  intermediateCoreDataSaves: intermediateCoreDataSaves,
                   personName: PersonName(givenName: "Loek", infixName: "", familyName: "Dirkx"),
                   organization: clubBellusImago,
                   memberRolesAndStatus: MemberRolesAndStatus(role: [ .chairman: true ]),
@@ -72,7 +66,6 @@ extension BellusImagoMembersProvider { // fill with some initial hard-coded cont
     }
 
     private func addMember(bgContext: NSManagedObjectContext,
-                           intermediateCoreDataSaves: Bool,
                            personName: PersonName,
                            website: URL? = nil,
                            bornDT: Date? = nil,
@@ -85,7 +78,6 @@ extension BellusImagoMembersProvider { // fill with some initial hard-coded cont
                            eMail: String? = nil) {
 
         let photographer = Photographer.findCreateUpdate(context: bgContext,
-                                                         intermediateCoreDataSaves: intermediateCoreDataSaves,
                                                          personName: personName,
                                                          memberRolesAndStatus: memberRolesAndStatus,
                                                          website: website,
@@ -96,7 +88,6 @@ extension BellusImagoMembersProvider { // fill with some initial hard-coded cont
         let image = latestImage ?? latestThumbnail // if image not available, use thumbnail (which might also be nil)
         let thumb = latestThumbnail ?? latestImage // if thumb not available, use image (which might also be nil)
         _ = MemberPortfolio.findCreateUpdate(bgContext: bgContext,
-                                             intermediateCoreDataSaves: intermediateCoreDataSaves,
                                              organization: organization, photographer: photographer,
                                              memberRolesAndStatus: memberRolesAndStatus,
                                              memberWebsite: memberWebsite,

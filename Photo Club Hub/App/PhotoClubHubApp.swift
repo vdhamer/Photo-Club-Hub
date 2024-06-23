@@ -26,7 +26,7 @@ struct PhotoClubHubApp: App {
         // update version number shown in iOS Settings
         UserDefaults.standard.set(Bundle.main.fullVersion, forKey: "version_preference")
 
-        if PhotoClubHubApp.manualDataLoading ||
+        if Settings.manualDataLoading ||
                            (
                                 (AppVersion() >= AppVersion("2.6.2")) // starting with release 2.6.2, erase the database
                                 && (!UserDefaults.standard.bool(forKey: PhotoClubHubApp.resetKey)) // do so only once
@@ -42,7 +42,7 @@ struct PhotoClubHubApp: App {
             PreludeView()
                 .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext) // main queue!
                 .onAppear {
-                    if !PhotoClubHubApp.manualDataLoading {
+                    if !Settings.manualDataLoading {
                         PhotoClubHubApp.loadClubsAndMembers()
                     }
                 }
@@ -64,7 +64,6 @@ extension PhotoClubHubApp {
         level1BackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         level1BackgroundContext.automaticallyMergesChangesFromParent = true // to push ObjectTypes to bgContext?
         _ = RootLevel1JsonReader(bgContext: level1BackgroundContext, // read root.Level1.json file
-                                 intermediateCoreDataSaves: intermediateCoreDataSaves,
                                  useOnlyFile: false)
 
         // warning: following clubs rely on Level 1 file for filling in their coordinates
@@ -74,32 +73,28 @@ extension PhotoClubHubApp {
         bellusBackgroundContext.name = "Bellus Imago"
         bellusBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         bellusBackgroundContext.automaticallyMergesChangesFromParent = true
-        _ = BellusImagoMembersProvider(bgContext: bellusBackgroundContext,
-                                       intermediateCoreDataSaves: intermediateCoreDataSaves)
+        _ = BellusImagoMembersProvider(bgContext: bellusBackgroundContext)
 
         // load test member(s) of Fotogroep De Gender
         let genderBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
         genderBackgroundContext.name = "FG de Gender"
         genderBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         genderBackgroundContext.automaticallyMergesChangesFromParent = true
-        _ = FotogroepDeGenderMembersProvider(bgContext: genderBackgroundContext,
-                                             intermediateCoreDataSaves: intermediateCoreDataSaves)
+        _ = FotogroepDeGenderMembersProvider(bgContext: genderBackgroundContext)
 
         // load all current/former members of Fotogroep Waalre
         let waalreBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
         waalreBackgroundContext.name = "Fotogroep Waalre"
         waalreBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         waalreBackgroundContext.automaticallyMergesChangesFromParent = true
-        _ = FotogroepWaalreMembersProvider(bgContext: waalreBackgroundContext,
-                                           intermediateCoreDataSaves: intermediateCoreDataSaves)
+        _ = FotogroepWaalreMembersProvider(bgContext: waalreBackgroundContext)
 
         // load all current members of Fotogroep Anders
         let andersBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
         andersBackgroundContext.name = "FG Anders"
         andersBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         andersBackgroundContext.automaticallyMergesChangesFromParent = true
-        _ = AndersMembersProvider(bgContext: andersBackgroundContext,
-                                  intermediateCoreDataSaves: intermediateCoreDataSaves)
+        _ = AndersMembersProvider(bgContext: andersBackgroundContext)
 
     }
 
@@ -120,7 +115,7 @@ extension PhotoClubHubApp {
             try deleteEntitiesOfOneType("OrganizationType")
             print(forcedClearing + " successful.")
 
-            if PhotoClubHubApp.manualDataLoading {
+            if Settings.manualDataLoading {
                 UserDefaults.standard.removeObject(forKey: resetKey)
             } else {
                 UserDefaults.standard.set(true, forKey: resetKey)

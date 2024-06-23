@@ -32,7 +32,6 @@ extension LocalizedRemark { // expose computed properties (some related to handl
     // Find existing LocalizedRemark object or create a new LocalizedRemark object
     // This function does NOT update non-identifying attributes (use update() for this)
     static func findCreateUpdate(bgContext: NSManagedObjectContext,
-                                 intermediateCoreDataSaves: Bool,
                                  organization: Organization, language: Language // identifying attributes only
                                 ) -> LocalizedRemark {
 
@@ -60,7 +59,7 @@ extension LocalizedRemark { // expose computed properties (some related to handl
             localizedRemark.organization_ = organization
             localizedRemark.language_ = language
             do { // robustness in the (illegal?) case of a new localizedRemark without any non-identifying attributes
-                if bgContext.hasChanges && intermediateCoreDataSaves { // optimisation
+                if bgContext.hasChanges && Settings.extraCoreDataSaves { // optimisation
                     try bgContext.save() // persist modifications in PhotoClub record
                 }
             } catch {
@@ -73,12 +72,11 @@ extension LocalizedRemark { // expose computed properties (some related to handl
 
     // Update non-identifying attributes/properties within existing instance of class LocalizedRemark
     static func update(bgContext: NSManagedObjectContext,
-                       intermediateCoreDataSaves: Bool,
                        localizedRemark: LocalizedRemark,
                        localizedString: String) -> Bool {
         let needsSaving: Bool = localizedString != localizedRemark.localizedString
 
-        if needsSaving && intermediateCoreDataSaves {
+        if needsSaving && Settings.extraCoreDataSaves {
             do {
                 localizedRemark.localizedString = localizedString
                 try bgContext.save() // persist just to be sure?

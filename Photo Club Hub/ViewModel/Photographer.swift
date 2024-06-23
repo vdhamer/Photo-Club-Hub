@@ -77,7 +77,6 @@ extension Photographer {
     // Find existing object and otherwise create a new object
     // Update existing attributes or fill the new object
     static func findCreateUpdate(context: NSManagedObjectContext, // foreground or background context
-                                 intermediateCoreDataSaves: Bool,
                                  personName: PersonName,
                                  memberRolesAndStatus: MemberRolesAndStatus = MemberRolesAndStatus(role: [:],
                                                                                                    stat: [:]),
@@ -119,8 +118,7 @@ extension Photographer {
             let wasUpdated = update(bgContext: context, photographer: photographer,
                                     memberRolesAndStatus: memberRolesAndStatus,
                                     phoneNumber: phoneNumber, eMail: eMail,
-                                    website: website, bornDT: bornDT,
-                                    intermediateCoreDataSaves: intermediateCoreDataSaves)
+                                    website: website, bornDT: bornDT)
             if wasUpdated {
                 print("\(photoClubPref) Updated info for photographer <\(photographer.fullNameFirstLast)>")
             } else {
@@ -137,8 +135,7 @@ extension Photographer {
             _ = update(bgContext: context, photographer: photographer,
                        memberRolesAndStatus: memberRolesAndStatus,
                        phoneNumber: phoneNumber, eMail: eMail,
-                       website: website, bornDT: bornDT,
-                       intermediateCoreDataSaves: intermediateCoreDataSaves)
+                       website: website, bornDT: bornDT)
             // don't log whether attribbutes have been updated if it is a new photographer
             print("\(photoClubPref) Successfully created new photographer <\(photographer.fullNameFirstLast)>")
             return photographer
@@ -151,8 +148,7 @@ extension Photographer {
                        photographer: Photographer,
                        memberRolesAndStatus: MemberRolesAndStatus,
                        phoneNumber: String? = nil, eMail: String? = nil,
-                       website: URL? = nil, bornDT: Date? = nil,
-                       intermediateCoreDataSaves: Bool) -> Bool {
+                       website: URL? = nil, bornDT: Date? = nil) -> Bool {
 
 		var wasUpdated: Bool = false
 
@@ -181,7 +177,7 @@ extension Photographer {
             wasUpdated = true
         }
 
-		if wasUpdated && intermediateCoreDataSaves {
+        if wasUpdated && Settings.extraCoreDataSaves {
 			do {
 				try bgContext.save() // persist updated information about a photographer
 			} catch {

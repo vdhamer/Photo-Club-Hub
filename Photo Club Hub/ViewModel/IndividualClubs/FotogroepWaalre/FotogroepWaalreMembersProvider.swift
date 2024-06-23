@@ -14,13 +14,11 @@ class FotogroepWaalreMembersProvider { // WWDC21 Earthquakes also uses a Class h
                                                           town: "Waalre",
                                                           nickname: "fgWaalre")
 
-    init(bgContext: NSManagedObjectContext, intermediateCoreDataSaves: Bool) {
+    init(bgContext: NSManagedObjectContext) {
         // following is asynchronous, but not documented as such using async/await
         bgContext.perform { // done asynchronously by CoreData
-            self.insertSomeHardcodedMemberData(bgContext: bgContext,
-                                               intermediateCoreDataSaves: intermediateCoreDataSaves)
-            self.insertOnlineMemberData(bgContext: bgContext,
-                                        intermediateCoreDataSaves: intermediateCoreDataSaves)
+            self.insertSomeHardcodedMemberData(bgContext: bgContext)
+            self.insertOnlineMemberData(bgContext: bgContext)
             do {
                 if bgContext.hasChanges { // optimisation
                     try bgContext.save() // persist Fotogroep Waalre and its online member data

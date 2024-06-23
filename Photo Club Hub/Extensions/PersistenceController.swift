@@ -61,7 +61,6 @@ struct PersistenceController {
                                                                      .former: ((index % 4) == 1)]
             )
             let organization = Organization.findCreateUpdate(context: viewContext, // on main thread
-                                                       intermediateCoreDataSaves: true,
                                                        organizationTypeEum: .club,
                                                        idPlus: OrganizationIdPlus(
                                                             fullName: "PhotoClub\(index)",
@@ -77,7 +76,6 @@ struct PersistenceController {
                                                        )
             let photographer = Photographer.findCreateUpdate(
                 context: viewContext, // on main thread
-                intermediateCoreDataSaves: false,
                 personName: PersonName(givenName: "Jan", infixName: "D'", familyName: "Eau\(index)"),
                 memberRolesAndStatus: memberRolesAndStatus,
                 phoneNumber: "06-12345678",
@@ -87,7 +85,6 @@ struct PersistenceController {
                 organization: organization
             )
             let memberPortfolio = MemberPortfolio.findCreateUpdate(bgContext: viewContext,
-                                                                   intermediateCoreDataSaves: false,
                                                                    organization: organization,
                                                                    photographer: photographer,
                                                                    memberRolesAndStatus: memberRolesAndStatus

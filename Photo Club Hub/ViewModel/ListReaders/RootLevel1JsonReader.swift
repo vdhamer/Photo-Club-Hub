@@ -70,7 +70,6 @@ private let organizationTypesToLoad: [OrganizationTypeEnum] = [.club, .museum]
 class RootLevel1JsonReader {
 
     init(bgContext: NSManagedObjectContext,
-         intermediateCoreDataSaves: Bool,
          useOnlyFile: Bool = false) {
 
         bgContext.perform { // switch to supplied background thread
@@ -82,7 +81,6 @@ class RootLevel1JsonReader {
                            """)
             }
             self.readRootLevel1Json(bgContext: bgContext,
-                                    intermediateCoreDataSaves: intermediateCoreDataSaves,
                                     data: getData(
                                         fileURL: URL(string: dataSourcePath + dataSourceFile + "." +
                                                      fileSubType + "." + fileType)!,
@@ -106,7 +104,6 @@ class RootLevel1JsonReader {
     }
 
     private func readRootLevel1Json(bgContext: NSManagedObjectContext,
-                                    intermediateCoreDataSaves: Bool,
                                     data: String,
                                     for organizationTypeEnumsToLoad: [OrganizationTypeEnum]) {
 
@@ -136,7 +133,6 @@ class RootLevel1JsonReader {
                 let localizedRemarks = jsonOrganization["remark"].arrayValue
                 let fotobondNumber = jsonOrganization["nlSpecific"]["fotobondNumber"].int16Value
                 _ = Organization.findCreateUpdate(context: bgContext,
-                                                  intermediateCoreDataSaves: intermediateCoreDataSaves,
                                                   organizationTypeEum: organizationTypeEnum,
                                                   idPlus: idPlus,
                                                   website: website,

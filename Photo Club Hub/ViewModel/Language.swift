@@ -37,7 +37,6 @@ extension Language {
     // Find Language object (or create a new object - used at start of app)
     // Update existing attributes or fill the new object
     static func findCreateUpdate(context: NSManagedObjectContext, // can be foreground of background context
-                                 intermediateCoreDataSaves: Bool,
                                  isoCode: String,
                                  name inputName: String? = nil
                                 ) -> Language {
@@ -57,7 +56,7 @@ extension Language {
 
         if let language = languages.first { // already exists, so update non-identifying attributes
             if let name {
-                if update(context: context, intermediateCoreDataSaves: intermediateCoreDataSaves,
+                if update(context: context,
                           language: language, name: name) {
                     print("Updated info for language \"\(language.name)\"")
                     save(context: context, language: language, create: false)
@@ -69,7 +68,7 @@ extension Language {
             let entity = NSEntityDescription.entity(forEntityName: "Language", in: context)!
             let language = Language(entity: entity, insertInto: context)
             language.isoCodeCaps = isoCode
-            _ = update(context: context, intermediateCoreDataSaves: intermediateCoreDataSaves,
+            _ = update(context: context,
                        language: language, name: name)
             save(context: context, language: language, create: true)
             print("Created new Language for code \(language.isoCodeCaps) named \(language.name)")
@@ -79,7 +78,6 @@ extension Language {
 
     // Update non-identifying attributes/properties within an existing instance of class Language
     static func update(context: NSManagedObjectContext,
-                       intermediateCoreDataSaves: Bool,
                        language: Language,
                        name: String?) -> Bool { // change language.name if needed
 
@@ -90,7 +88,7 @@ extension Language {
             modified = true
         }
 
-        if modified && intermediateCoreDataSaves {
+        if modified && Settings.extraCoreDataSaves {
             do {
                 try context.save() // update modified properties of a Language object
              } catch {

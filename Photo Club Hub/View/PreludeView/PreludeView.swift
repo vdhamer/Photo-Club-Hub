@@ -166,7 +166,7 @@ struct PreludeView: View {
     }
 
     var preludeText: String {
-        if PhotoClubHubApp.manualDataLoading {
+        if Settings.manualDataLoading {
             String(localized: "Manual loading",
                    comment: "Shown instead of app name in PreludeView when app is started")
         } else if isDebug() {
