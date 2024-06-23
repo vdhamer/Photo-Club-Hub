@@ -12,6 +12,9 @@ Clubs and Museums screen
 Who's Who screen
 * Swiping down the top of the screen will now erase and reload stored data
 
+Settings App
+* Added version/build info to app's settings
+
 Maintenance
 * Icon prepared for home screen dark and tinted mode.
 * Updated FGW member list: former coach Hans Zoete has passed away.

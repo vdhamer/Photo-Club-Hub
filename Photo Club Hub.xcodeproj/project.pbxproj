@@ -37,6 +37,7 @@
 		D0621E892AE2E47B000FFADB /* MemberPortfolio+refreshFirstImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0621E882AE2E47B000FFADB /* MemberPortfolio+refreshFirstImage.swift */; };
 		D06754A02942B23F00C0AB08 /* FotogroepWaalreMembersProvide+enumHTMLPageLoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D067549F2942B23F00C0AB08 /* FotogroepWaalreMembersProvide+enumHTMLPageLoadingState.swift */; };
 		D06BE9332A4F870B0055B3B1 /* ifDebugUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06BE9322A4F870B0055B3B1 /* ifDebugUtils.swift */; };
+		D06D08DE2C28835D00872BC2 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D0CEAECE2B2E1134005AE47D /* Settings.bundle */; };
 		D0795CEC294FCCC200FA62A8 /* ShapeStyle+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0795CEB294FCCC200FA62A8 /* ShapeStyle+Colors.swift */; };
 		D081655F278616930078AB16 /* SinglePortfolioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D081655E278616930078AB16 /* SinglePortfolioView.swift */; };
 		D08281312959C6F400D9C232 /* FGWMembersProvider+extractPhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08281302959C6F400D9C232 /* FGWMembersProvider+extractPhone.swift */; };
@@ -350,6 +351,7 @@
 				D0DC7A4D2B647CAA00971288 /* SwiftyJSON */,
 				D0CEAECD2B2E1120005AE47D /* Localization */,
 				D08319EA277F70A40049AB84 /* Assets.xcassets */,
+				D0CEAECE2B2E1134005AE47D /* Settings.bundle */,
 				D008D2A928739167007A7BE2 /* .gitignore */,
 				D0F2F2F22873A19F009DDD2A /* .github */,
 				D08319E4277F70A30049AB84 /* Products */,
@@ -541,7 +543,6 @@
 			children = (
 				D04DFD892B39FD19006EF297 /* Photo-Club-Hub-InfoPlist.strings */,
 				D0B52495277F9A4B00927BCA /* Localizable.strings */,
-				D0CEAECE2B2E1134005AE47D /* Settings.bundle */,
 				D0DF0F442B2CFA3800E9FEC8 /* Photo Club Hub Localizations */,
 			);
 			path = Localization;
@@ -682,6 +683,7 @@
 				D03AB6AC2BBEBD3700F33E74 /* fgAnders.level2.json in Resources */,
 				D0B52497277F9A4B00927BCA /* Localizable.strings in Resources */,
 				D0A30FB82BB0BB33009A9A6E /* root.level1.json in Resources */,
+				D06D08DE2C28835D00872BC2 /* Settings.bundle in Resources */,
 				D0831A51277F73C00049AB84 /* Preview Assets.xcassets in Resources */,
 				D0FC30C92BA78F2E0051AFB6 /* OrganizationList.json in Resources */,
 				D03AB6AD2BBEBD3C00F33E74 /* test2Club2Museum.level1.json in Resources */,
@@ -697,8 +699,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		D003AA7F278F896B001D57B7 /* Run IncrementBuildNumber script */ = {
 			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 12;
+			buildActionMask = 8;
 			files = (
 			);
 			inputFileListPaths = (
@@ -710,9 +711,9 @@
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
-			shellScript = "buildNumber=$(xcodebuild -showBuildSettings | grep CURRENT_PROJECT_VERSION | tr -d 'CURRENT_PROJECT_VERSION =')\n#buildNumber=`echo $buildNumber +1|bc`\nxcrun agvtool new-version $buildNumber\n";
+			shellScript = "buildNumber=$(xcodebuild -showBuildSettings | grep CURRENT_PROJECT_VERSION | tr -d 'CURRENT_PROJECT_VERSION =')\nbuildNumber=`echo $buildNumber +1|bc`\nxcrun agvtool new-version $buildNumber\n";
 			showEnvVarsInLog = 0;
 		};
 		D05FCD28278E4573008F41D0 /* Run UpdateVersionInSettingsBundle script */ = {
