@@ -12,7 +12,7 @@ import CoreData // for ManagedObjectContext
 struct PhotoClubHubApp: App {
 
     @Environment(\.scenePhase) var scenePhase
-    private static let resetKey = "forcedDataResetExecutedAfterRelease2_6_2" // no spaces or periods in key?
+    private static let dataResetAfter262PendingKey = "dataResetAfterRel262Pending" // avoid special characters
 
     init() {
 
@@ -26,12 +26,13 @@ struct PhotoClubHubApp: App {
         // update version number shown in iOS Settings
         UserDefaults.standard.set(Bundle.main.fullVersion, forKey: "version_preference")
 
-        if Settings.manualDataLoading ||
-                           (
+        let manualDataLoading = Settings.manualDataLoading
+        if manualDataLoading || // user put app in special debug mode
+                           ( // OR this is release 2.6.2 or later (AND reset hasn't already been performed)
                                 (AppVersion() >= AppVersion("2.6.2")) // starting with release 2.6.2, erase the database
-                                && (!UserDefaults.standard.bool(forKey: PhotoClubHubApp.resetKey)) // do so only once
+                                && (UserDefaults.standard.bool(forKey: PhotoClubHubApp.dataResetAfter262PendingKey))
                            ) {
-            PhotoClubHubApp.deleteAllCoreDataObjects()
+            PhotoClubHubApp.deleteAllCoreDataObjects(dataResetAfter262Pending: manualDataLoading) // keep resetting
         }
 
         OrganizationType.initConstants() // insert contant records into OrganizationType table if needed
@@ -100,7 +101,7 @@ extension PhotoClubHubApp {
 
     // returns true if successful
     @MainActor
-    static func deleteAllCoreDataObjects() {
+    static func deleteAllCoreDataObjects(dataResetAfter262Pending: Bool) {
         let forcedClearing = "Forced clearing of CoreData data for app version 2.6.2"
 
         // order is important because of non-optional relationships
@@ -115,11 +116,9 @@ extension PhotoClubHubApp {
             try deleteEntitiesOfOneType("OrganizationType")
             print(forcedClearing + " successful.")
 
-            if Settings.manualDataLoading {
-                UserDefaults.standard.removeObject(forKey: resetKey)
-            } else {
-                UserDefaults.standard.set("YES", forKey: resetKey)
-            }
+            // Bool stored as String in UserData because it is fetched for display in Settings app via root.plist file
+            UserDefaults.standard.set(dataResetAfter262Pending ? "YES" : "NO",
+                                      forKey: dataResetAfter262PendingKey)
         } catch {
             print(forcedClearing + " failed.")
         }

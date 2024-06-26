@@ -9,7 +9,7 @@ import Foundation
 
 struct Settings {
 
-    static var manualDataLoading: Bool {
+    static var manualDataLoading: Bool { // controlled by toggle in Settings
         // Setting this to true clears the existing database and skips loading any data on app startup.
         // It displays "Manual loading" in the Prelude startup screen as a warning that the mode is set.
         // The missing club/museum/member data can be loaded manually by swiping down on e.g., the Portfolio screen.
@@ -21,7 +21,7 @@ struct Settings {
         }
     }
 
-    static var extraCoreDataSaves: Bool {
+    static var extraCoreDataSaves: Bool { // controlled by toggle in Settings
         // Important setting that should normally be kept false,
         // It adds additional ManagedObjectContext.save() transactions between the absolute minimum set.
         // It is needed for testing purposes only.
