@@ -12,7 +12,7 @@ import CoreData // for ManagedObjectContext
 struct PhotoClubHubApp: App {
 
     @Environment(\.scenePhase) var scenePhase
-    private static let resetKey = "2.6.2 forced data reset performed"
+    private static let resetKey = "forcedDataResetExecutedAfterRelease2_6_2" // no spaces or periods in key?
 
     init() {
 
@@ -118,7 +118,7 @@ extension PhotoClubHubApp {
             if Settings.manualDataLoading {
                 UserDefaults.standard.removeObject(forKey: resetKey)
             } else {
-                UserDefaults.standard.set(true, forKey: resetKey)
+                UserDefaults.standard.set("YES", forKey: resetKey)
             }
         } catch {
             print(forcedClearing + " failed.")

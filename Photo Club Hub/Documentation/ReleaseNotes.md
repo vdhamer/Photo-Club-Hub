@@ -17,6 +17,7 @@ Settings App
 * Added debug toggles
 
 Maintenance
+* Tested on iOS 18.0 beta 2 (22A5297f), and Xcode 16.0 beta 2 (16A5171r).
 * Icon prepared for home screen dark and tinted mode.
 * Updated FGW member list: former coach Hans Zoete has passed away.
 * Reduced number of CoreData save() transactions.

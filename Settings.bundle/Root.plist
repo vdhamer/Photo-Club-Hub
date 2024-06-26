@@ -7,50 +7,72 @@
 	<key>PreferenceSpecifiers</key>
 	<array>
 		<dict>
-			<key>DefaultValue</key>
-			<string>?.?.? (????)</string>
-			<key>Key</key>
-			<string>version_preference</string>
-			<key>Title</key>
-			<string>Version</string>
 			<key>Type</key>
 			<string>PSTitleValueSpecifier</string>
+			<key>Title</key>
+			<string>GitHub</string>
+			<key>DefaultValue</key>
+			<string>https://github.com/vdhamer/Photo-Club-Hub</string>
+			<key>Key</key>
+			<string>github</string>
 		</dict>
 		<dict>
-			<key>DefaultValue</key>
-			<string>© Peter van den Hamer</string>
-			<key>Key</key>
-			<string>copyright</string>
-			<key>Title</key>
-			<string>Copyright</string>
 			<key>Type</key>
 			<string>PSTitleValueSpecifier</string>
+			<key>Title</key>
+			<string>Repository owner</string>
+			<key>DefaultValue</key>
+			<string>Peter van den Hamer</string>
+			<key>Key</key>
+			<string>owner</string>
 		</dict>
 		<dict>
+			<key>Type</key>
+			<string>PSTitleValueSpecifier</string>
 			<key>Title</key>
-			<string>Debug options</string>
+			<string>License type</string>
+			<key>DefaultValue</key>
+			<string>MIT</string>
+			<key>Key</key>
+			<string>license</string>
+		</dict>
+		<dict>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
+			<key>Title</key>
+			<string>Debug options</string>
+			<key>FooterText</key>
+			<string>Turning debug options on will enable non-standard behavior. This is used for software testing purposes. See Settings.swift source file for more info.</string>
 		</dict>
 		<dict>
 			<key>Type</key>
 			<string>PSToggleSwitchSpecifier</string>
 			<key>Title</key>
 			<string>Load data manually</string>
-			<key>Key</key>
-			<string>manualDataLoading</string>
 			<key>DefaultValue</key>
 			<false/>
+			<key>Key</key>
+			<string>manualDataLoading</string>
 		</dict>
 		<dict>
 			<key>Type</key>
 			<string>PSToggleSwitchSpecifier</string>
 			<key>Title</key>
 			<string>Extra saving of data</string>
-			<key>Key</key>
-			<string>extraCoreDataSaves</string>
 			<key>DefaultValue</key>
 			<false/>
+			<key>Key</key>
+			<string>extraCoreDataSaves</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTitleValueSpecifier</string>
+			<key>Title</key>
+			<string>Forced data reset for v2.6.2</string>
+			<key>DefaultValue</key>
+			<string>NO</string>
+			<key>Key</key>
+			<string>forcedDataResetExecutedAfterRelease2_6_2</string>
 		</dict>
 	</array>
 </dict>
