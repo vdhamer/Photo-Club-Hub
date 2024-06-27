@@ -2,7 +2,7 @@
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
   <file original="en.lproj/Photo-Club-Hub-InfoPlist.strings" source-language="en" target-language="nl" datatype="plaintext">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="16.0" build-num="16A5171c"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="16.0" build-num="16A5171r"/>
     </header>
     <body>
       <trans-unit id="CFBundleDisplayName" xml:space="preserve">
@@ -24,7 +24,7 @@
   </file>
   <file original="Localization/en.lproj/Localizable.strings" source-language="en" target-language="nl" datatype="plaintext">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="16.0" build-num="16A5171c"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="16.0" build-num="16A5171r"/>
     </header>
     <body>
       <trans-unit id="%lld members (inc. ex-members)" xml:space="preserve">
@@ -751,23 +751,53 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
   </file>
   <file original="Settings.bundle/en.lproj/Root.strings" source-language="en" target-language="nl" datatype="plaintext">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="16.0" build-num="16A5171c"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="16.0" build-num="16A5171r"/>
     </header>
     <body>
-      <trans-unit id="About" xml:space="preserve">
-        <source>About</source>
-        <target>Over deze app</target>
-        <note/>
+      <trans-unit id="Data reset after r2.6.2 pending" xml:space="preserve">
+        <source>Data reset after r2.6.2 pending</source>
+        <target>Data moet nog gewist worden na r2.6.2</target>
+        <note>(No Comment)</note>
       </trans-unit>
-      <trans-unit id="Copyright" xml:space="preserve">
-        <source>Copyright</source>
-        <target>Auteursrecht</target>
-        <note/>
+      <trans-unit id="Debug options" xml:space="preserve">
+        <source>Debug options</source>
+        <target>Debug instellingen</target>
+        <note>(No Comment)</note>
+      </trans-unit>
+      <trans-unit id="Extra saving of data" xml:space="preserve">
+        <source>Extra saving of data</source>
+        <target>Gegevens vaker opslaan</target>
+        <note>(No Comment)</note>
+      </trans-unit>
+      <trans-unit id="GitHub" xml:space="preserve">
+        <source>GitHub</source>
+        <target>GitHub</target>
+        <note>(No Comment)</note>
+      </trans-unit>
+      <trans-unit id="License" xml:space="preserve">
+        <source>License</source>
+        <target>Licensie</target>
+        <note>(No Comment)</note>
+      </trans-unit>
+      <trans-unit id="Load data manually" xml:space="preserve">
+        <source>Load data manually</source>
+        <target>Data handmatig laden</target>
+        <note>(No Comment)</note>
+      </trans-unit>
+      <trans-unit id="Repository owner" xml:space="preserve">
+        <source>Repository owner</source>
+        <target>Archief eigenaar</target>
+        <note>(No Comment)</note>
+      </trans-unit>
+      <trans-unit id="Turning debug options on will enable non-standard behavior. This is used for software testing purposes. See Settings.swift source file for more info." xml:space="preserve">
+        <source>Turning debug options on will enable non-standard behavior. This is used for software testing purposes. See Settings.swift source file for more info.</source>
+        <target>Debug instellingen aanzetten leidt tot niet standaard gedrag. De instellingen zijn er voor het testen van de software. Zie Settings.swift bestand op GitHub voor nadere uitleg.</target>
+        <note>(No Comment)</note>
       </trans-unit>
       <trans-unit id="Version" xml:space="preserve">
         <source>Version</source>
         <target>Versie</target>
-        <note/>
+        <note>(No Comment)</note>
       </trans-unit>
     </body>
   </file>
