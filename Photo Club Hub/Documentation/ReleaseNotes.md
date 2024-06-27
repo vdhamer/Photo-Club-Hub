@@ -1,4 +1,10 @@
-### 2.6.2 (GitHub commit ???????) ??-06-24
+### 2.?.? (GitHub commit ???????) ??-07-24
+
+This build #4627 was distributed to TestFlight users only.
+
+---------------------------------------------------------------------------
+
+### 2.6.2 (GitHub commit 14631fa) 27-06-24
 
 Prelude screen
 * Changed color ordering to match app icon colors
@@ -17,12 +23,12 @@ Settings App
 * Added debug toggles
 
 Maintenance
-* Tested on iOS 18.0 beta 2 (22A5297f), and Xcode 16.0 beta 2 (16A5171r).
+* Tested on iOS 18.0 beta 2 (22A5297f), Xcode 16.0 beta 2 (16A5171r), Vision Pro 2.0 beta.
 * Icon prepared for home screen dark and tinted mode.
 * Updated FGW member list: former coach Hans Zoete has passed away.
 * Reduced number of CoreData save() transactions.
 
-This is build #4626.
+This build #4626 was distributed to TestFlight users only.
 
 ---------------------------------------------------------------------------
 
