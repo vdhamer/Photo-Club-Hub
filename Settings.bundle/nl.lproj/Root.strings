@@ -17,10 +17,10 @@
 "Load data manually" = "Data handmatig laden";
 
 /* (No Comment) */
-"Turning debug options on will enable non-standard behavior. This is used for software testing purposes. See Settings.swift source file for more info." = "Debug instellingen aanzetten leidt tot niet standaard gedrag. De instellingen zijn er voor het testen van de software. Zie Settings.swift bestand op GitHub voor nadere uitleg."
+"Turning debug options on will enable non-standard behavior. This is used for software testing purposes. See Settings.swift source file for more info." = "Debug instellingen aanzetten leidt tot niet standaard gedrag. De instellingen zijn er voor het testen van de software. Zie Settings.swift bestand op GitHub voor nadere uitleg.";
 
 /* (No Comment) */
 "Extra saving of data" = "Gegevens vaker opslaan";
 
 /* (No Comment) */
-"Data reset after r2.6.2 pending" = "Data reset after r2.6.2 pending"
+"Data reset after r2.6.2 pending" = "Data reset after r2.6.2 pending";
