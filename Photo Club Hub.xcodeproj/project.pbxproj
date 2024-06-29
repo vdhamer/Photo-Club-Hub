@@ -94,6 +94,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D0001E1D2C30A9FD006DB860 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = "en.lproj/Photo-Club-Hub-InfoPlist.strings"; sourceTree = "<group>"; };
 		D006BA7D2B115FB1002E555B /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		D008665C2BBDC29C0091F204 /* dataModel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dataModel.png; sourceTree = "<group>"; };
 		D008D2A928739167007A7BE2 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
@@ -850,6 +851,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				D053F23C2B54430C00662EF8 /* nl */,
+				D0001E1D2C30A9FD006DB860 /* en */,
 			);
 			name = "Photo-Club-Hub-InfoPlist.strings";
 			sourceTree = "<group>";
