@@ -23,7 +23,7 @@ Settings App
 * Added debug toggles
 
 App Store
-* Fixed outdated app name (in Dutch app store)
+* Fixed old app name on Dutch app store
 
 Maintenance
 * Tested on iOS 18.0 beta 2 (22A5297f), Xcode 16.0 beta 2 (16A5171r), Vision Pro 2.0 beta.
