@@ -22,13 +22,16 @@ Settings App
 * Added version/build info to app's settings
 * Added debug toggles
 
+App Store
+* Fixed outdated app name (in Dutch app store)
+
 Maintenance
 * Tested on iOS 18.0 beta 2 (22A5297f), Xcode 16.0 beta 2 (16A5171r), Vision Pro 2.0 beta.
 * Icon prepared for home screen dark and tinted mode.
 * Updated FGW member list: former coach Hans Zoete has passed away.
 * Reduced number of CoreData save() transactions.
 
-This build #4626 was made with Xcode 16.0 beta 2 (16A5171r) and distributed to TestFlight users only.
+This build #4627 was made with Xcode 16.0 beta 2 (16A5171r) and distributed to TestFlight users only.
 
 ---------------------------------------------------------------------------
 
