@@ -1,10 +1,10 @@
-### 2.?.? (GitHub commit ???????) ??-07-24
+### 2.7.0 (GitHub commit ???????) ??-07-24
 
-This build #4627 was distributed to TestFlight users only.
+This build #4628
 
 ---------------------------------------------------------------------------
 
-### 2.6.2 (GitHub commit 14631fa) 27-06-24
+### 2.6.2 (GitHub commit 9e14585) 30-06-24
 
 Prelude screen
 * Changed color ordering to match app icon colors
@@ -31,7 +31,7 @@ Maintenance
 * Updated FGW member list: former coach Hans Zoete has passed away.
 * Reduced number of CoreData save() transactions.
 
-This build #4627 was made with Xcode 16.0 beta 2 (16A5171r) and distributed to TestFlight users only.
+This build #4627 was made with Xcode 16.0 beta 2 (16A5171r) and distributed via the app store.
 
 ---------------------------------------------------------------------------
 
