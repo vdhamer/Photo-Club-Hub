@@ -71,6 +71,7 @@ extension LocalizedRemark { // expose computed properties (some related to handl
     }
 
     // Update non-identifying attributes/properties within existing instance of class LocalizedRemark
+    // Strange that update is a static function?
     static func update(bgContext: NSManagedObjectContext,
                        localizedRemark: LocalizedRemark,
                        localizedString: String) -> Bool {

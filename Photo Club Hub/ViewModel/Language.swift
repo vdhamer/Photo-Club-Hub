@@ -77,9 +77,9 @@ extension Language {
     }
 
     // Update non-identifying attributes/properties within an existing instance of class Language
-    static func update(context: NSManagedObjectContext,
-                       language: Language,
-                       name: String?) -> Bool { // change language.name if needed
+    private static func update(context: NSManagedObjectContext,
+                               language: Language, // TODO why static function (idem for other update() functions)
+                               name: String?) -> Bool { // change language.name if needed
 
         var modified: Bool = false
 
