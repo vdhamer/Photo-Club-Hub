@@ -1,5 +1,8 @@
 ### 2.6.3 (GitHub commit ???????) ??-07-24
 
+Clubs and Museums screen
+* Changed the Dutch text when no localized remarks are available.
+
 This is build #4628
 
 ---------------------------------------------------------------------------
