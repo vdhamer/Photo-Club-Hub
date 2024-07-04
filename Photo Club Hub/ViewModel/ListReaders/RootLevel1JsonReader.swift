@@ -141,6 +141,7 @@ class RootLevel1JsonReader {
                                                   coordinates: coordinates,
                                                   localizedRemarks: localizedRemarks)
             }
+
             do {
                 if bgContext.hasChanges { // optimization recommended by Apple
                     try bgContext.save() // persist contents of root.Level1.json file

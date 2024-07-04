@@ -102,7 +102,7 @@ extension PhotoClubHubApp {
     // returns true if successful
     @MainActor
     static func deleteAllCoreDataObjects(dataResetAfter262Pending: Bool) {
-        let forcedClearing = "Forced clearing of CoreData data for app version 2.6.2"
+        let forcedDataRefresh = "Post-v2.6.2 refresh of CoreData data performed"
 
         // order is important because of non-optional relationships
         do {
@@ -114,13 +114,13 @@ extension PhotoClubHubApp {
             try deleteEntitiesOfOneType("Photographer")
 
             try deleteEntitiesOfOneType("OrganizationType")
-            print(forcedClearing + " successful.")
+            print(forcedDataRefresh + " successful.")
 
             // Bool stored as String in UserData because it is fetched for display in Settings app via root.plist file
             UserDefaults.standard.set(dataResetAfter262Pending ? "YES" : "NO",
                                       forKey: dataResetAfter262PendingKey)
         } catch {
-            print(forcedClearing + " failed.")
+            print(forcedDataRefresh + " failed.")
         }
     }
 

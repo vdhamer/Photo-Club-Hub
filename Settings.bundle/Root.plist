@@ -114,7 +114,7 @@
 			<key>Type</key>
 			<string>PSTitleValueSpecifier</string>
 			<key>Title</key>
-			<string>Data reset after r2.6.2 pending</string>
+			<string>Post-v2.6.2 data refresh pending</string>
 			<key>DefaultValue</key>
 			<string>NO</string>
 			<key>Key</key>
