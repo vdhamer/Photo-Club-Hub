@@ -32,13 +32,15 @@ extension LocalizedRemark { // expose computed properties (some related to handl
     // Find existing LocalizedRemark object or create a new LocalizedRemark object
     // This function does NOT update non-identifying attributes (use update() for this)
     static func findCreateUpdate(bgContext: NSManagedObjectContext,
-                                 organization: Organization, language: Language // identifying attributes only
-                                ) -> LocalizedRemark {
+                                 organization: Organization,
+                                 language: Language,
+                                 localizedString: String
+                                ) -> Bool { // true if something got updated
 
+        // get remark if it is already in the database
         let predicateFormat: String = "organization_ = %@ AND language_ = %@" // avoid localization
         let predicate = NSPredicate(format: predicateFormat,
-                                    argumentArray: [organization, language]
-                                   )
+                                    argumentArray: [organization, language])
         let fetchRequest: NSFetchRequest<LocalizedRemark> = LocalizedRemark.fetchRequest()
         fetchRequest.predicate = predicate
         // TODO is this the right way to fetch on a background thread? can .fetch fail?
@@ -50,9 +52,9 @@ extension LocalizedRemark { // expose computed properties (some related to handl
             // in release mode, log that there are multiple clubs, but continue using the first one.
         }
 
-        if let localizedRemark = localizedRemarks.first {
-            // already exists, so make sure secondary attributes are up to date
-            return localizedRemark
+        if let localizedRemark = localizedRemarks.first, localizedRemark.localizedString==localizedString {
+            let changed: Bool = localizedRemark.update(bgContext: bgContext, localizedString: localizedString)
+            return changed // the record is already in CoreData, but property may have changed
         } else {
             let entity = NSEntityDescription.entity(forEntityName: "LocalizedRemark", in: bgContext)!
             let localizedRemark = LocalizedRemark(entity: entity, insertInto: bgContext) // bg needs special .init()
@@ -67,35 +69,16 @@ extension LocalizedRemark { // expose computed properties (some related to handl
                 ifDebugFatalError("Creation of remark failed for \(organization.fullName) in \(language.isoCodeCaps)",
                                   file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
             }
-            return localizedRemark
+            return true // something got updated
         }
     }
 
     // Update non-identifying attributes/properties within existing instance of class LocalizedRemark
-    // Strange that update is a static function?
-    static func update(bgContext: NSManagedObjectContext,
-                       localizedRemark: LocalizedRemark,
-                       localizedString: String) -> Bool {
-        let needsSaving: Bool = localizedString != localizedRemark.localizedString
-
-        if needsSaving && Settings.extraCoreDataSaves {
-            do {
-                localizedRemark.localizedString = localizedString
-                try bgContext.save() // persist just to be sure?
-                print("""
-                      Stored \(localizedString) \
-                      for \(localizedRemark.organization.fullNameTown) \
-                      in language \(localizedRemark.language.isoCodeCaps)
-                      """)
-            } catch {
-                ifDebugFatalError("Update failed for localizedRemark \(localizedRemark.organization.fullNameTown) " +
-                                  "in language \(localizedRemark.language.isoCodeCaps): \(error)",
-                                  file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
-                // in release mode, failure to update this data is only logged. And the app doesn't stop.
-            }
-        }
-
-        return needsSaving
+    private func update(bgContext: NSManagedObjectContext,
+                        localizedString: String) -> Bool { // true if something got updated
+        guard self.localizedString != localizedString else { return false } // nothing to change
+        self.localizedString = localizedString // update string
+        return true // indicates that there was an update
     }
 
 }

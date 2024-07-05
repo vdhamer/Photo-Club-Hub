@@ -223,8 +223,7 @@ extension Organization {
                                organizationTypeEnum: OrganizationTypeEnum,
                                organization: Organization, nickName: String,
                                // swiftlint:disable:next large_tuple
-                               optionalFields: (website: URL?, wikipedia: URL?,
-                                                fotobondNumber: Int16?),
+                               optionalFields: (website: URL?, wikipedia: URL?, fotobondNumber: Int16?),
                                coordinates: CLLocationCoordinate2D?,
                                pinned: Bool,
                                localizedRemarks: [JSON] ) -> Bool {
@@ -264,23 +263,23 @@ extension Organization {
             organization.pinned = pinned
             modified = true }
 
-        for localizedRemark in localizedRemarks { // load localizedRemarks for all provided languages
-            let isoCode: String? = localizedRemark["language"].stringValue.uppercased() // e.g. "NL" or "DE" or "PDC"
-            let localizedRemarkValueNew: String? = localizedRemark["value"].stringValue
-            if isoCode != nil && localizedRemarkValueNew != nil { // nil could happens if JSON file not schema compliant
+        for localizedRemark in localizedRemarks { // load JSON localizedRemarks for all provided languages
+            let isoCode: String? = localizedRemark["language"].stringValue.uppercased() // e.g. "NL", "DE" or "PDC"
+            let localizedRemarkNewValue: String? = localizedRemark["value"].stringValue
+
+            if isoCode != nil && localizedRemarkNewValue != nil { // nil could happens if JSON file not schema compliant
                 let language = Language.findCreateUpdate(context: bgContext,
-                                                         isoCode: isoCode!) // find or construct
-                let localizedRemark = LocalizedRemark.findCreateUpdate(
+                                                         isoCode: isoCode!) // find or construct the remark's Language
+
+                let remarkNeedsPersisting: Bool = LocalizedRemark.findCreateUpdate(
                     bgContext: bgContext, // create object
                     organization: organization,
-                    language: language
+                    language: language,
+                    localizedString: localizedRemarkNewValue!
                 )
-                let needsSaving = LocalizedRemark.update(bgContext: bgContext,
-                                                         localizedRemark: localizedRemark,
-                                                         localizedString: localizedRemarkValueNew!)
-                if needsSaving { modified = true }
+                if remarkNeedsPersisting { modified = true }
             }
-        }
+        } // end of loop over remark in all provided languages
 
         if modified {
 			do {
