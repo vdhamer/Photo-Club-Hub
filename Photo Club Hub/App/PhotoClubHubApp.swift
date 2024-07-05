@@ -114,7 +114,7 @@ extension PhotoClubHubApp {
             try deleteEntitiesOfOneType("Photographer")
 
             try deleteEntitiesOfOneType("OrganizationType")
-            print(forcedDataRefresh + " successful.")
+            print(forcedDataRefresh + " successfully.")
 
             // Bool stored as String in UserData because it is fetched for display in Settings app via root.plist file
             UserDefaults.standard.set(dataResetAfter262Pending ? "YES" : "NO",

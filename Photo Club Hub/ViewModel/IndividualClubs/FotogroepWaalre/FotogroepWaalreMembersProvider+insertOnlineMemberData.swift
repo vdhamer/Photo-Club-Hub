@@ -23,7 +23,7 @@ extension FotogroepWaalreMembersProvider {
 
         if let url = URL(string: FotogroepWaalreMembersProvider.url) {
             clubWaalre.level2URL = url
-            self.loadPrivateMembersFromWebsite( backgroundContext: bgContext,
+            self.loadPrivateMembersFromWebsite( bgContext: bgContext,
                                                 privateMemberURL: url,
                                                 organization: clubWaalre,
                                                 idPlus: FotogroepWaalreMembersProvider.photoClubWaalreIdPlus)
@@ -35,7 +35,7 @@ extension FotogroepWaalreMembersProvider {
         }
     }
 
-    private func loadPrivateMembersFromWebsite(backgroundContext: NSManagedObjectContext,
+    private func loadPrivateMembersFromWebsite(bgContext: NSManagedObjectContext,
                                                privateMemberURL: URL,
                                                organization: Organization,
                                                idPlus: OrganizationIdPlus) {
@@ -49,7 +49,7 @@ extension FotogroepWaalreMembersProvider {
         if results != nil, results?.utfContent != nil {
             let htmlContent = String(data: results!.utfContent! as Data,
                                      encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue))!
-            parseHTMLContent(backgroundContext: backgroundContext,
+            parseHTMLContent(bgContext: bgContext,
                              htmlContent: htmlContent,
                              idPlus: idPlus)
 
@@ -65,13 +65,13 @@ extension FotogroepWaalreMembersProvider {
                                                              organization_.town_ = %@
                                                              """,
                              argumentArray: ["Fotogroep Waalre", "Waalre"])
-                let portfoliosInClub = try backgroundContext.fetch(fetchRequest)
+                let portfoliosInClub = try bgContext.fetch(fetchRequest)
 
                 for portfolio in portfoliosInClub {
                     // PhotoClubHubApp.antiZombiePinningOfMemberPortfolios.insert(portfolio)
                     portfolio.refreshFirstImage()
                 }
-                try backgroundContext.save() // persist first images for Fotogroep Waalre
+                try bgContext.save() // persist first images for Fotogroep Waalre
             } catch let error {
                 fatalError(error.localizedDescription)
             }
@@ -83,7 +83,7 @@ extension FotogroepWaalreMembersProvider {
     }
 
     // swiftlint:disable:next function_body_length
-    private func parseHTMLContent(backgroundContext: NSManagedObjectContext,
+    private func parseHTMLContent(bgContext: NSManagedObjectContext,
                                   htmlContent: String,
                                   idPlus: OrganizationIdPlus) {
         var targetState: HTMLPageLoadingState = .tableStart        // initial entry point on loop of states
@@ -93,7 +93,7 @@ extension FotogroepWaalreMembersProvider {
         var birthDate = toDate(from: "1/1/9999") // dummy value that is overwritten later
 
         let organization: Organization = Organization.findCreateUpdate(
-            context: backgroundContext,
+            context: bgContext,
             organizationTypeEum: .club, idPlus: idPlus
         )
 
@@ -121,7 +121,7 @@ extension FotogroepWaalreMembersProvider {
                     birthDate = self.extractBirthDate(taggedString: line)
 
                     let photographer = Photographer.findCreateUpdate(
-                        context: backgroundContext,
+                        context: bgContext,
                         personName: personName,
                         memberRolesAndStatus: MemberRolesAndStatus(role: [:], stat: [
                             .deceased: !self.isStillAlive(phone: phoneNumber) ]),
@@ -131,7 +131,7 @@ extension FotogroepWaalreMembersProvider {
                         organization: organization)
 
                     _ = MemberPortfolio.findCreateUpdate(
-                        bgContext: backgroundContext,
+                        bgContext: bgContext,
                         organization: organization, photographer: photographer,
                         memberRolesAndStatus: MemberRolesAndStatus(
                             role: [:],
