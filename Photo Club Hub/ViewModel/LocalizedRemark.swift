@@ -43,7 +43,6 @@ extension LocalizedRemark { // expose computed properties (some related to handl
                                     argumentArray: [organization, language])
         let fetchRequest: NSFetchRequest<LocalizedRemark> = LocalizedRemark.fetchRequest()
         fetchRequest.predicate = predicate
-        // TODO is this the right way to fetch on a background thread? can .fetch fail?
         let localizedRemarks: [LocalizedRemark] = (try? bgContext.fetch(fetchRequest)) ?? [] // nil = absolute failure
         if localizedRemarks.count > 1 { // there is actually a Core Data constraint to prevent this
             ifDebugFatalError("Query returned multiple (\(localizedRemarks.count)) remarks for " +

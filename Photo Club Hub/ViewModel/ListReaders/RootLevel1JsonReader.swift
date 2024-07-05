@@ -145,9 +145,9 @@ class RootLevel1JsonReader {
         } // end of loop that scans organizationTypeEnumsToLoad
 
         do { // saving may not be necessary because every organization is saved separately
-//            if bgContext.hasChanges { // optimization recommended by Apple
+            if bgContext.hasChanges { // optimization recommended by Apple
                 try bgContext.save() // persist contents of entire root.Level1.json file
-//            } // TODO
+            }
         } catch {
             ifDebugFatalError("Failed to save changes to Core Data",
                               file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0

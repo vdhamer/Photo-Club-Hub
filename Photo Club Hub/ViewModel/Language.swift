@@ -56,8 +56,8 @@ extension Language {
 
         if let language = languages.first { // already exists, so update non-identifying attributes
             if let name {
-                if update(context: context,
-                          language: language, name: name) {
+                if language.update(context: context,
+                                   language: language, name: name) {
                     print("Updated info for language \"\(language.name)\"")
                     save(context: context, language: language, create: false)
                 }
@@ -68,8 +68,8 @@ extension Language {
             let entity = NSEntityDescription.entity(forEntityName: "Language", in: context)!
             let language = Language(entity: entity, insertInto: context)
             language.isoCodeCaps = isoCode
-            _ = update(context: context,
-                       language: language, name: name)
+            _ = language.update(context: context,
+                                language: language, name: name)
             save(context: context, language: language, create: true)
             print("Created new Language for code \(language.isoCodeCaps) named \(language.name)")
             return language
@@ -77,9 +77,9 @@ extension Language {
     }
 
     // Update non-identifying attributes/properties within an existing instance of class Language
-    private static func update(context: NSManagedObjectContext,
-                               language: Language, // TODO why static function (idem for other update() functions)
-                               name: String?) -> Bool { // change language.name if needed
+    private func update(context: NSManagedObjectContext,
+                        language: Language,
+                        name: String?) -> Bool { // change language.name if needed
 
         var modified: Bool = false
 
