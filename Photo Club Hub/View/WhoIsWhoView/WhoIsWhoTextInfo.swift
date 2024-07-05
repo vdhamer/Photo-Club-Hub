@@ -89,20 +89,3 @@ struct WhoIsWhoTextInfo: View {
         }
     }
 }
-
-// #Preview {
-//     let context = PersistenceController.shared.container.viewContext
-//     let photographer = Photographer.findCreateUpdate(context: context,
-//                                                      personName: PersonName(givenName: "John",
-//                                                                             infixName: "", familyName: "Doe"),
-//                                                      organization: Organization.findCreateUpdate(
-//                                                          context: context,
-//                                                          organizationTypeEum: .club,
-//                                                          idPlus: OrganizationIdPlus(fullName: "Happy Clickers",
-//                                                                                     town: "Notown",
-//                                                                                     nickname: "happyClckrs")
-//                                                     )
-//    )
-//
-//    _ = WhoIsWhoTextInfo(photographer: photographer)
-// }

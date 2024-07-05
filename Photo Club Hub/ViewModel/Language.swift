@@ -56,8 +56,7 @@ extension Language {
 
         if let language = languages.first { // already exists, so update non-identifying attributes
             if let name {
-                if language.update(context: context,
-                                   language: language, name: name) {
+                if language.update(context: context, name: name) {
                     print("Updated info for language \"\(language.name)\"")
                     save(context: context, language: language, create: false)
                 }
@@ -68,8 +67,7 @@ extension Language {
             let entity = NSEntityDescription.entity(forEntityName: "Language", in: context)!
             let language = Language(entity: entity, insertInto: context)
             language.isoCodeCaps = isoCode
-            _ = language.update(context: context,
-                                language: language, name: name)
+            _ = language.update(context: context, name: name)
             save(context: context, language: language, create: true)
             print("Created new Language for code \(language.isoCodeCaps) named \(language.name)")
             return language
@@ -78,13 +76,12 @@ extension Language {
 
     // Update non-identifying attributes/properties within an existing instance of class Language
     private func update(context: NSManagedObjectContext,
-                        language: Language,
                         name: String?) -> Bool { // change language.name if needed
 
         var modified: Bool = false
 
-        if let name, language.name != name {
-            language.name = name
+        if let name, self.name != name {
+            self.name = name
             modified = true
         }
 
@@ -92,10 +89,9 @@ extension Language {
             do {
                 try context.save() // update modified properties of a Language object
              } catch {
-                 ifDebugFatalError("Update failed for Language \(language.isoCodeCaps) aka \(language.name)",
+                 ifDebugFatalError("Update failed for Language \(isoCodeCaps) aka \(self.name)",
                                   file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
                 // in release mode, if save() fails, just continue
-                modified = true
             }
         }
 

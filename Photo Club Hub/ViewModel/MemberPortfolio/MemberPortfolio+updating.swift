@@ -39,12 +39,12 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
 
         if let memberPortfolio = memberPortfolios.first {
             // already exists, so make sure secondary attributes are up to date
-            if update(bgContext: bgContext, memberPortfolio: memberPortfolio,
-                      memberRolesAndStatus: memberRolesAndStatus,
-                      dateInterval: dateInterval,
-                      memberWebsite: memberWebsite,
-                      latestImage: latestImage,
-                      latestThumbnail: latestThumbnail) {
+            if memberPortfolio.update(bgContext: bgContext,
+                                      memberRolesAndStatus: memberRolesAndStatus,
+                                      dateInterval: dateInterval,
+                                      memberWebsite: memberWebsite,
+                                      latestImage: latestImage,
+                                      latestThumbnail: latestThumbnail) {
                 print("""
                       \(memberPortfolio.organization.fullName): \
                       Updated info for member \(memberPortfolio.photographer.fullNameFirstLast)
@@ -56,12 +56,12 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
             let memberPortfolio = MemberPortfolio(entity: entity, insertInto: bgContext) // bg needs special .init()
             memberPortfolio.organization_ = organization
             memberPortfolio.photographer_ = photographer
-            _ = update(bgContext: bgContext, memberPortfolio: memberPortfolio,
-                       memberRolesAndStatus: memberRolesAndStatus,
-                       dateInterval: dateInterval,
-                       memberWebsite: memberWebsite,
-                       latestImage: latestImage,
-                       latestThumbnail: latestThumbnail)
+            _ = memberPortfolio.update(bgContext: bgContext,
+                                       memberRolesAndStatus: memberRolesAndStatus,
+                                       dateInterval: dateInterval,
+                                       memberWebsite: memberWebsite,
+                                       latestImage: latestImage,
+                                       latestThumbnail: latestThumbnail)
             print("""
                   \(memberPortfolio.organization.fullNameTown): \
                   Created new membership for \(memberPortfolio.photographer.fullNameFirstLast)
@@ -72,12 +72,12 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
 
     // Update non-identifying attributes/properties within existing instance of class MemberPortfolio
     // swiftlint:disable:next function_parameter_count function_body_length
-    private static func update(bgContext: NSManagedObjectContext, memberPortfolio: MemberPortfolio,
-                               memberRolesAndStatus: MemberRolesAndStatus,
-                               dateInterval: DateInterval?,
-                               memberWebsite: URL?,
-                               latestImage: URL?,
-                               latestThumbnail: URL?) -> Bool {
+    private func update(bgContext: NSManagedObjectContext,
+                        memberRolesAndStatus: MemberRolesAndStatus,
+                        dateInterval: DateInterval?,
+                        memberWebsite: URL?,
+                        latestImage: URL?,
+                        latestThumbnail: URL?) -> Bool {
         var needsSaving: Bool = false
 
         // function only works for non-optional Types.
@@ -106,17 +106,17 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
             return false
         }
 
-        let oldMemberRolesAndStatus = memberPortfolio.memberRolesAndStatus // copy of original value
+        let oldMemberRolesAndStatus = self.memberRolesAndStatus // copy of original value
         // actually this setter does merging (overload + or += operators for this?)
-        memberPortfolio.memberRolesAndStatus = memberRolesAndStatus
-        let newMemberRolesAndStatus = memberPortfolio.memberRolesAndStatus // copy after possible changes
+        self.memberRolesAndStatus = memberRolesAndStatus
+        let newMemberRolesAndStatus = self.memberRolesAndStatus // copy after possible changes
 
         let changed1 = oldMemberRolesAndStatus != newMemberRolesAndStatus
-        let changed2 = updateIfChanged(update: &memberPortfolio.dateIntervalStart, with: dateInterval?.start)
-        let changed3 = updateIfChanged(update: &memberPortfolio.dateIntervalEnd, with: dateInterval?.end)
-        let changed4 = updateIfChanged(update: &memberPortfolio.level3URL, with: memberWebsite)
-        let changed5 = updateIfChangedOptional(update: &memberPortfolio.featuredImage, with: latestImage)
-        let changed6 = updateIfChangedOptional(update: &memberPortfolio.featuredImageThumbnail, with: latestThumbnail)
+        let changed2 = updateIfChanged(update: &self.dateIntervalStart, with: dateInterval?.start)
+        let changed3 = updateIfChanged(update: &self.dateIntervalEnd, with: dateInterval?.end)
+        let changed4 = updateIfChanged(update: &self.level3URL, with: memberWebsite)
+        let changed5 = updateIfChangedOptional(update: &self.featuredImage, with: latestImage)
+        let changed6 = updateIfChangedOptional(update: &self.featuredImageThumbnail, with: latestThumbnail)
         needsSaving = changed1 || changed2 || changed3 ||
                       changed4 || changed5 || changed6 // forces execution of updateIfChanged()
 
@@ -124,34 +124,34 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
             do {
                 try bgContext.save() // persist just to be sure?
                 if changed1 { print("""
-                                    \(memberPortfolio.organization.fullNameTown): \
-                                    Changed roles for \(memberPortfolio.photographer.fullNameFirstLast)
+                                    \(organization.fullNameTown): \
+                                    Changed roles for \(photographer.fullNameFirstLast)
                                     """) }
                 if changed2 { print("""
-                                    \(memberPortfolio.organization.fullNameTown): \
-                                    Changed start date for \(memberPortfolio.photographer.fullNameFirstLast)
+                                    \(organization.fullNameTown): \
+                                    Changed start date for \(photographer.fullNameFirstLast)
                                     """) }
                 if changed3 { print("""
-                                    \(memberPortfolio.organization.fullNameTown): \
-                                    Changed end date for \(memberPortfolio.photographer.fullNameFirstLast)
+                                    \(organization.fullNameTown): \
+                                    Changed end date for \(photographer.fullNameFirstLast)
                                     """) }
                 if changed4 { print("""
-                                    \(memberPortfolio.organization.fullNameTown): \
-                                    Changed club website for \(memberPortfolio.photographer.fullNameFirstLast)
+                                    \(organization.fullNameTown): \
+                                    Changed club website for \(photographer.fullNameFirstLast)
                                     """) }
                 if changed5 { print("""
-                                    \(memberPortfolio.organization.fullNameTown): \
-                                    Changed latest image for \(memberPortfolio.photographer.fullNameFirstLast) \
+                                    \(organization.fullNameTown): \
+                                    Changed latest image for \(photographer.fullNameFirstLast) \
                                     to \(latestImage?.lastPathComponent ?? "<noLatestImage>")
                                     """)}
                 if changed6 { print("""
-                                    \(memberPortfolio.organization.fullNameTown): \
-                                    Changed latest thumbnail for \(memberPortfolio.photographer.fullNameFirstLast) \
+                                    \(organization.fullNameTown): \
+                                    Changed latest thumbnail for \(photographer.fullNameFirstLast) \
                                     to \(latestThumbnail?.lastPathComponent ?? "<noLatestThumbnail>")
                                     """)}
             } catch {
-                ifDebugFatalError("Update failed for member \(memberPortfolio.photographer.fullNameFirstLast) " +
-                                  "in club \(memberPortfolio.organization.fullNameTown): \(error)",
+                ifDebugFatalError("Update failed for member \(photographer.fullNameFirstLast) " +
+                                  "in club \(organization.fullNameTown): \(error)",
                                   file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
                 // in release mode, failure to update this data is only logged. And the app doesn't stop.
             }
