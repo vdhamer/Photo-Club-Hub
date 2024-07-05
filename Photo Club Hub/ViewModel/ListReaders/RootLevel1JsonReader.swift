@@ -141,18 +141,21 @@ class RootLevel1JsonReader {
                                                   coordinates: coordinates,
                                                   localizedRemarks: localizedRemarks)
             }
-            do {
-                if bgContext.hasChanges { // optimization recommended by Apple
-                    try bgContext.save() // persist contents of root.Level1.json file
-                }
-            } catch {
-                ifDebugFatalError("Failed to save changes to Core Data",
-                                  file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
-                // in release mode, the failed database update is only logged. App doesn't stop.
-                ifDebugPrint("Failed to save JSON ClubList items in background")
-                return
-            }
+
         } // end of loop that scans organizationTypeEnumsToLoad
+
+        do { // saving may not be necessary because every organization is saved separately
+//            if bgContext.hasChanges { // optimization recommended by Apple
+                try bgContext.save() // persist contents of entire root.Level1.json file
+//            } // TODO
+        } catch {
+            ifDebugFatalError("Failed to save changes to Core Data",
+                              file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
+            // in release mode, the failed database update is only logged. App doesn't stop.
+            ifDebugPrint("Failed to save JSON ClubList items in background")
+            return
+        }
+
         ifDebugPrint("Completed readRootLevel1Json() in background")
     }
 
