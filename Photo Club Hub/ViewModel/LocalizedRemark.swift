@@ -30,7 +30,6 @@ extension LocalizedRemark { // expose computed properties (some related to handl
     // MARK: - find (if it exits) or create (if it doesn't)
 
     // Find existing LocalizedRemark object or create a new LocalizedRemark object
-    // This function does NOT update non-identifying attributes (use update() for this)
     static func findCreateUpdate(bgContext: NSManagedObjectContext,
                                  organization: Organization,
                                  language: Language,
