@@ -3,6 +3,9 @@
 Clubs and Museums screen
 * Changed the Dutch text when no localized remarks are available.
 
+Settings App
+* Minor text change
+
 This is build #4628
 
 ---------------------------------------------------------------------------
