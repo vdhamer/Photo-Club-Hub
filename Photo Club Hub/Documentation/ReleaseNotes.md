@@ -1,7 +1,7 @@
 ### 2.6.3 (GitHub commit ???????) ??-07-24
 
 Clubs and Museums screen
-* Changed the Dutch text when no localized remarks are available.
+* Changed the Dutch text if no localized remarks are available.
 
 Settings App
 * Minor text change
