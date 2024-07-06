@@ -1,6 +1,7 @@
 ### 2.6.3 (GitHub commit ???????) ??-07-24
 
 Clubs and Museums screen
+* Fixed bug causing remarks about clubs and museums to be missing.
 * Changed the Dutch text if no localized remarks are available.
 
 Settings App
