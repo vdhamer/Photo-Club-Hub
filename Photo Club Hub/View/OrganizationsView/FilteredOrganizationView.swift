@@ -16,15 +16,14 @@ struct FilteredOrganizationView: View, Sendable {
     @Environment(\.layoutDirection) var layoutDirection // .leftToRight or .rightToLeft
 
     @FetchRequest var fetchedOrganizations: FetchedResults<Organization>
-    private let isDeleteOrganizationPermitted = true // disables .onDelete() functionality for this screen
 
-    let searchText: Binding<String>
+    private let searchText: Binding<String>
 
     @State private var cameraPositions: [PhotoClubId: MapCameraPosition] = [:] // location of camera per club
-    let interactionModes: MapInteractionModes = [.pan, .zoom, .rotate, .pitch]
+    private let interactionModes: MapInteractionModes = [.pan, .zoom, .rotate, .pitch]
     @State private var mapSelection: MKMapItem? // selected Anotation, if any
 
-    let sortDescriptors: [SortDescriptor] = [
+    private let sortDescriptors: [SortDescriptor] = [
         SortDescriptor(\Organization.pinned, order: .reverse), // pinned clubs first
         SortDescriptor(\Organization.organizationType_?.organizationTypeName_, order: .forward),
         SortDescriptor(\Organization.fullName_, order: .forward), // photoclubID=name&town
@@ -173,9 +172,6 @@ struct FilteredOrganizationView: View, Sendable {
                 MapUserLocationButton()
             } .mapControlVisibility(filteredOrganization.isScrollLocked ? .hidden : .automatic)
         } // outer ForEach (filteredOrganization)
-        .onDelete { indexSet in
-            deleteOrganizations(indexSet: indexSet)
-        }
     } // body
 
     // find PhotoClub using identifier (clubName,oldTown) and then fill (newTown,newCountry) in CoreData database
@@ -262,7 +258,7 @@ struct FilteredOrganizationView: View, Sendable {
 
     @MainActor
     private func deleteOrganizations(indexSet: IndexSet) { // normally deletes just one, but this is how .onDelete works
-        guard isDeleteOrganizationPermitted else { return } // exit if feature is disabled
+        // This function is no longer called (replaced by pull-down-to-reload data) but is kept for possible future use.
 
         if let organization = (indexSet.map {filteredOrganizations[$0]}.first) { // unwrap first PhotoClub to be deleted
             viewContext.delete(organization)
