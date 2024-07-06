@@ -188,13 +188,13 @@ extension Organization {
 
 		if let organization = organizations.first { // already exists, so make sure non-ID attributes are up to date
             print("\(organization.fullNameTown): Will try to update info for organization \(organization.fullName)")
-            if update(bgContext: context,
-                      organizationTypeEnum: organizationTypeEum, organization: organization, nickName: idPlus.nickname,
-                      optionalFields: (website: website, wikipedia: wikipedia,
-                                       fotobondNumber: fotobondNumber),
-                      coordinates: coordinates,
-                      pinned: pinned,
-                      localizedRemarks: localizedRemarks) {
+            if organization.update(bgContext: context,
+                                   organizationTypeEnum: organizationTypeEum, nickName: idPlus.nickname,
+                                   optionalFields: (website: website, wikipedia: wikipedia,
+                                                    fotobondNumber: fotobondNumber),
+                                   coordinates: coordinates,
+                                   pinned: pinned,
+                                   localizedRemarks: localizedRemarks) {
                 print("\(organization.fullNameTown): Updated info for organization \(organization.fullName)")
             }
 			return organization
@@ -205,13 +205,13 @@ extension Organization {
             organization.fullName = idPlus.fullName // first part of ID
             organization.town = idPlus.town // second part of ID
             print("\(organization.fullNameTown): Will try to fill fields for this new organization")
-            _ = update(bgContext: context,
-                       organizationTypeEnum: organizationTypeEum, organization: organization, nickName: idPlus.nickname,
-                       optionalFields: (website: website, wikipedia: wikipedia,
-                                        fotobondNumber: fotobondNumber),
-                       coordinates: coordinates,
-                       pinned: pinned,
-                       localizedRemarks: localizedRemarks)
+            _ = organization.update(bgContext: context,
+                                    organizationTypeEnum: organizationTypeEum, nickName: idPlus.nickname,
+                                    optionalFields: (website: website, wikipedia: wikipedia,
+                                                     fotobondNumber: fotobondNumber),
+                                    coordinates: coordinates,
+                                    pinned: pinned,
+                                    localizedRemarks: localizedRemarks)
             print("\(organization.fullNameTown): Successfully created new \(organizationTypeEum.rawValue)")
 			return organization
 		}
@@ -219,14 +219,16 @@ extension Organization {
 
 	// Update non-identifying attributes/properties within existing instance of class PhotoClub
     // swiftlint:disable:next function_parameter_count cyclomatic_complexity function_body_length
-    private static func update(bgContext: NSManagedObjectContext,
-                               organizationTypeEnum: OrganizationTypeEnum,
-                               organization: Organization, nickName: String,
-                               // swiftlint:disable:next large_tuple
-                               optionalFields: (website: URL?, wikipedia: URL?, fotobondNumber: Int16?),
-                               coordinates: CLLocationCoordinate2D?,
-                               pinned: Bool,
-                               localizedRemarks: [JSON] ) -> Bool {
+    private func update(bgContext: NSManagedObjectContext,
+                        organizationTypeEnum: OrganizationTypeEnum,
+                        nickName: String,
+                        // swiftlint:disable:next large_tuple
+                        optionalFields: (website: URL?,
+                                         wikipedia: URL?,
+                                         fotobondNumber: Int16?),
+                        coordinates: CLLocationCoordinate2D?,
+                        pinned: Bool,
+                        localizedRemarks: [JSON] ) -> Bool {
 
 		var modified: Bool = false
 
@@ -234,33 +236,33 @@ extension Organization {
         let organizationType = OrganizationType.findCreateUpdate(context: bgContext,
                                                                  organizationTypeName: organizationTypeEnum.rawValue)
 
-        if organization.organizationType_ != organizationType {
-            organization.organizationType = organizationType
+        if self.organizationType_ != organizationType {
+            self.organizationType = organizationType
             modified = true }
 
-        if organization.nickName != nickName {
-            organization.nickName = nickName
+        if self.nickName != nickName {
+            self.nickName = nickName
             modified = true }
 
-        if let website = optionalFields.website, organization.website != website {
-            organization.website = website
+        if let website = optionalFields.website, self.website != website {
+            self.website = website
             modified = true }
 
-        if let wikiURL = optionalFields.wikipedia, organization.wikipedia != wikiURL {
-            organization.wikipedia = wikiURL
+        if let wikiURL = optionalFields.wikipedia, self.wikipedia != wikiURL {
+            self.wikipedia = wikiURL
             modified = true }
 
-        if let fotobondNumber = optionalFields.fotobondNumber, organization.fotobondNumber != fotobondNumber {
-            organization.fotobondNumber = fotobondNumber
+        if let fotobondNumber = optionalFields.fotobondNumber, self.fotobondNumber != fotobondNumber {
+            self.fotobondNumber = fotobondNumber
             modified = true }
 
-        if let coordinates, organization.coordinates != coordinates {
-            organization.longitude_ = coordinates.longitude
-            organization.latitude_ = coordinates.latitude
+        if let coordinates, self.coordinates != coordinates {
+            self.longitude_ = coordinates.longitude
+            self.latitude_ = coordinates.latitude
 			modified = true }
 
-        if organization.pinned != pinned {
-            organization.pinned = pinned
+        if self.pinned != pinned {
+            self.pinned = pinned
             modified = true }
 
         for localizedRemark in localizedRemarks { // load JSON localizedRemarks for all provided languages
@@ -273,7 +275,7 @@ extension Organization {
 
                 let remarkNeedsPersisting: Bool = LocalizedRemark.findCreateUpdate(
                     bgContext: bgContext, // create object
-                    organization: organization,
+                    organization: self,
                     language: language,
                     localizedString: localizedRemarkNewValue!
                 )
@@ -286,7 +288,7 @@ extension Organization {
 				try bgContext.save() // persist modifications in PhotoClub record
  			} catch {
                 print("Error: \(error)")
-                ifDebugFatalError("Update failed for club or museum \(organization.fullName)",
+                ifDebugFatalError("Update failed for club or museum \(fullName)",
                                   file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
                 // in release mode, if .save() fails, just continue
                 return false
