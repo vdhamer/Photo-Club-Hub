@@ -40,7 +40,8 @@ extension OrganizationType {
     // Find OrganizationType object (or create a new object - used at start of app)
     // Update existing attributes or fill the new object
     static func findCreateUpdate(context: NSManagedObjectContext, // can be foreground of background context
-                                 organizationTypeName: String
+                                 organizationTypeName: String,
+                                 unusedProperty: String = "foobar"
                                 ) -> OrganizationType {
 
         let predicateFormat: String = "organizationTypeName_ = %@" // avoid localization
@@ -59,7 +60,7 @@ extension OrganizationType {
         }
 
         if let organizationType = organizationTypes.first { // already exists, so update non-identifying attributes
-            if update(context: context, organizationType: organizationType) {
+            if organizationType.update(context: context, unusedProperty: unusedProperty) {
                 print("Updated info for organization type \"\(organizationType.organizationTypeName)\"")
                 save(context: context, organizationType: organizationType, create: false)
             }
@@ -69,7 +70,7 @@ extension OrganizationType {
             let entity = NSEntityDescription.entity(forEntityName: "OrganizationType", in: context)!
             let organizationType = OrganizationType(entity: entity, insertInto: context)
             organizationType.organizationTypeName = organizationTypeName
-            _ = update(context: context, organizationType: organizationType)
+            _ = organizationType.update(context: context, unusedProperty: unusedProperty)
             save(context: context, organizationType: organizationType, create: true)
             print("Created new OrganizationType called \"\(organizationTypeName)\"")
             return organizationType
@@ -77,28 +78,30 @@ extension OrganizationType {
     }
 
     // Update non-identifying attributes/properties within an existing instance of class OrganizationType
-    private static func update(context: NSManagedObjectContext,
-                               organizationType: OrganizationType /*, dummy dumby: String*/) -> Bool {
+    private func update(context: NSManagedObjectContext,
+                        unusedProperty: String) -> Bool {
+        // OrganizationType doesn't have any non-identifying properties
+        // So, to keep findCreateUpdate() and update() consistent across types, we added an unused one.
 
-//        var modified: Bool = false // dummy code because OrganizationType has only identifying properties
+        var modified: Bool = false // dummy code because OrganizationType has only identifying properties
 
-//        if organizationType.dummy != dumby {
-//            organizationType.dummy = dumby // think I saw debugger mix up param and property, so changed the name
-//            modified = true
-//        }
+        if self.unusedProperty != unusedProperty {
+            self.unusedProperty = unusedProperty
+            modified = true
+        }
 
-//        if modified {
-//            do {
-//                try context.save() // update modified properties of an OrganizationType object
-//             } catch {
-//                ifDebugFatalError("Update failed for OrganizationType \(organizationType.name)",
-//                                  file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
-//                // in release mode, if save() fails, just continue
-//                modified = false
-//            }
-//        }
+        if modified {
+            do {
+                try context.save() // update modified properties of an OrganizationType object
+             } catch {
+                ifDebugFatalError("Update failed for OrganizationType \(organizationTypeName)",
+                                  file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
+                // in release mode, if save() fails, just continue
+                modified = false
+            }
+        }
 
-        return false // change to `return modified` if there is something to modify
+        return false // change to `return modified` if there is something to save
     }
 
     var isUnknown: Bool { // convenience function

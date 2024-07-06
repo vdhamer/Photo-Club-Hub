@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22757" systemVersion="23E224" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="23173.10" systemVersion="23F79" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Language" representedClassName="Language" syncable="YES" codeGenerationType="class">
         <attribute name="isoCode_" attributeType="String"/>
         <attribute name="languageName_" attributeType="String" elementID="name_"/>
@@ -76,6 +76,7 @@
     </entity>
     <entity name="OrganizationType" representedClassName="OrganizationType" syncable="YES" codeGenerationType="class">
         <attribute name="organizationTypeName_" optional="YES" attributeType="String" elementID="name_"/>
+        <attribute name="unusedProperty" optional="YES" attributeType="String"/>
         <relationship name="organizations_" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Organization" inverseName="organizationType_" inverseEntity="Organization"/>
         <uniquenessConstraints>
             <uniquenessConstraint>
