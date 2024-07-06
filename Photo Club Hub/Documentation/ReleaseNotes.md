@@ -1,8 +1,12 @@
 ### 2.6.3 (GitHub commit ???????) ??-07-24
 
+Portfolios screen
+* Removed function to delete rows by swiping left.
+
 Clubs and Museums screen
 * Fixed bug causing remarks about clubs and museums to be missing.
 * Changed the Dutch text if no localized remarks are available.
+* Removed function to delete rows by swiping left.
 
 Settings App
 * Minor text change
@@ -16,7 +20,7 @@ This is build #4628
 Prelude screen
 * Changed color ordering to match app icon colors
 
-Portfolio screen
+Portfolios screen
 * Swiping down the top of the screen will now erase and reload stored data
 
 Clubs and Museums screen
