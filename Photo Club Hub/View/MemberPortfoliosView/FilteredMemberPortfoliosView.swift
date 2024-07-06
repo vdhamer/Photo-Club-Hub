@@ -9,7 +9,7 @@ import SwiftUI
 import WebKit // for wkWebView
 
 struct FilteredMemberPortfoliosView: View {
-    static let predicateNone = NSPredicate(format: "FALSEPREDICATE")
+    private static let predicateNone = NSPredicate(format: "FALSEPREDICATE")
 
     @Environment(\.managedObjectContext) private var viewContext
 
@@ -19,9 +19,8 @@ struct FilteredMemberPortfoliosView: View {
         predicate: predicateNone
     ) private var sectionedPortfolios: SectionedFetchResults<String, MemberPortfolio>
 
-    private let isDeleteMemberPortfolioPermitted = true // disables .onDelete() functionality for this screen
-    let searchText: Binding<String>
-    let wkWebView = WKWebView()
+    private let searchText: Binding<String>
+    private let wkWebView = WKWebView()
 
     // regenerate Section using current FetchRequest with current filters and sorting
     init(memberPredicate: NSPredicate, searchText: Binding<String>) {
@@ -51,9 +50,6 @@ struct FilteredMemberPortfoliosView: View {
                 ForEach(filterPortfolios(unFilteredPortfolios: section), id: \.id) { filteredMember in
                     MemberPortfolioRow(member: filteredMember, wkWebView: wkWebView)
                         .listRowSeparator(.visible)
-                }
-                .onDelete { indexSet in
-                    deleteMembers(section: Array(section), indexSet: indexSet)
                 }
                 .accentColor(.memberPortfolioColor)
             } header: {
@@ -179,7 +175,7 @@ struct FilteredMemberPortfoliosView: View {
 
     @MainActor
     private func deleteMembers(section: [MemberPortfolio], indexSet: IndexSet) { // only temporarily deletes a member
-        guard isDeleteMemberPortfolioPermitted else { return } // exit if feature is disabled
+        // This function is no longer called (replaced by pull-down-to-reload data) but is kept for possible future use.
 
         for index in indexSet {
             let memberPortfolio = section[index] // could use map()
