@@ -7,6 +7,7 @@ Clubs and Museums screen
 * Fixed bug causing remarks about clubs and museums to be missing.
 * Changed the Dutch text if no localized remarks are available.
 * Removed function to delete rows by swiping left.
+* Added smart scrolling with optimization for iOS 18
 
 Settings App
 * Minor text change

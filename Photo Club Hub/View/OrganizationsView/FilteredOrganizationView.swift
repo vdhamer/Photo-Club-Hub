@@ -22,6 +22,7 @@ struct FilteredOrganizationView: View, Sendable {
 
     private let searchText: Binding<String>
     private let interactionModes: MapInteractionModes = [.pan, .zoom, .rotate, .pitch]
+    private let iOS18: Bool
 
     // regenerate Section using dynamic FetchRequest with dynamic predicate and dynamic sortDescriptor
     init(predicate: NSPredicate, searchText: Binding<String>) {
@@ -38,13 +39,19 @@ struct FilteredOrganizationView: View, Sendable {
             animation: .easeIn
         )
         self.searchText = searchText
+
+        if #unavailable(iOS 18) { // used to optimize ScrollView smart scrolling under iOS 18
+            iOS18 = false
+        } else {
+            iOS18 = true
+        }
     }
 
     var body: some View {
         ItemFilterStatsView(filteredCount: filteredOrganizations.count,
                             unfilteredCount: fetchedOrganizations.count,
                             elementType: ItemFilterStatsEnum.organization)
-        ForEach(filteredOrganizations, id: \.id) { filteredOrganization in
+        ForEach(filteredOrganizations, id: \.id) { filteredOrganization in // for each club or museum...
             VStack(alignment: .leading) {
                 HStack {
                     Text(verbatim: "\(filteredOrganization.fullName)") // name of club or museum (left aligned)
@@ -136,6 +143,7 @@ struct FilteredOrganizationView: View, Sendable {
                     .frame(minHeight: 300, idealHeight: 500, maxHeight: .infinity)
                 Text(filteredOrganization.localizedRemark) // display remark in preferred language (if possible)
                     .padding(.top, 5)
+                    .frame(height: iOS18 ? nil : 70) // iOS 18 can handle variable size views for smart scrolling
             } // VStack
             .task {
                 initializeCameraPosition(organization: filteredOrganization) // better than .onAppear(perform:)?

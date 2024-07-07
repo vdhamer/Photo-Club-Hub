@@ -56,6 +56,7 @@ struct OrganizationListView: View {
                      comment: "Shown in gray at the bottom of the Clubs and Museums page (2/2).")
             }
             .foregroundColor(Color.secondary)
+            .padding(.horizontal)
         } // ScrollView
 
         .scrollTargetBehavior(.viewAligned) // iOS 17 smart scrolling
