@@ -37,28 +37,35 @@ struct OrganizationListView: View {
     }
 
     var body: some View {
-        VStack {
-            List { // lists are "Lazy" automatically
+        ScrollView(.vertical, showsIndicators: true) {
+
+            LazyVStack {
                 FilteredOrganizationView(predicate: model.preferences.photoClubPredicate, searchText: $searchText)
-                if organizations.isEmpty {
-                    NoClubsText()
-                }
-                Group {
-                    Text("PhotoClubs_Caption_1",
-                         comment: "Shown in gray at the bottom of the Clubs and Museums page (1/2).")
-                    Text("PhotoClubs_Caption_2",
-                         comment: "Shown in gray at the bottom of the Clubs and Museums page (2/2).")
-                } .foregroundColor(Color.secondary)
             }
-            .listStyle(.plain)
-            .refreshable { // for pull-to-refresh
-                PhotoClubHubApp.loadClubsAndMembers() // carefull: runs asynchronously
+            .scrollTargetLayout()
+
+            if organizations.isEmpty {
+                NoClubsText()
             }
-            .task {
-                try? await locationManager.requestUserAuthorization()
-                try? await locationManager.startCurrentLocationUpdates()
-                // remember that nothing will run here until the for try await loop finishes
+
+            VStack(alignment: .leading) {
+                Text("PhotoClubs_Caption_1",
+                     comment: "Shown in gray at the bottom of the Clubs and Museums page (1/2).")
+                Divider()
+                Text("PhotoClubs_Caption_2",
+                     comment: "Shown in gray at the bottom of the Clubs and Museums page (2/2).")
             }
+            .foregroundColor(Color.secondary)
+        } // ScrollView
+
+        .scrollTargetBehavior(.viewAligned) // iOS 17 smart scrolling
+        .refreshable { // for pull-to-refresh
+            PhotoClubHubApp.loadClubsAndMembers() // carefull: runs asynchronously
+        }
+        .task {
+            try? await locationManager.requestUserAuthorization()
+            try? await locationManager.startCurrentLocationUpdates()
+            // remember that nothing will run here until the for try await loop finishes
         }
         .navigationTitle(navigationTitle)
         .searchable(text: $searchText, placement: .automatic,

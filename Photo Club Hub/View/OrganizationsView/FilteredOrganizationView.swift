@@ -17,21 +17,21 @@ struct FilteredOrganizationView: View, Sendable {
 
     @FetchRequest var fetchedOrganizations: FetchedResults<Organization>
 
-    private let searchText: Binding<String>
-
     @State private var cameraPositions: [PhotoClubId: MapCameraPosition] = [:] // location of camera per club
-    private let interactionModes: MapInteractionModes = [.pan, .zoom, .rotate, .pitch]
     @State private var mapSelection: MKMapItem? // selected Anotation, if any
 
-    private let sortDescriptors: [SortDescriptor] = [
-        SortDescriptor(\Organization.pinned, order: .reverse), // pinned clubs first
-        SortDescriptor(\Organization.organizationType_?.organizationTypeName_, order: .forward),
-        SortDescriptor(\Organization.fullName_, order: .forward), // photoclubID=name&town
-        SortDescriptor(\Organization.town_, order: .forward)
-    ]
+    private let searchText: Binding<String>
+    private let interactionModes: MapInteractionModes = [.pan, .zoom, .rotate, .pitch]
 
     // regenerate Section using dynamic FetchRequest with dynamic predicate and dynamic sortDescriptor
     init(predicate: NSPredicate, searchText: Binding<String>) {
+        let sortDescriptors: [SortDescriptor] = [
+            SortDescriptor(\Organization.pinned, order: .reverse), // pinned clubs first
+            SortDescriptor(\Organization.organizationType_?.organizationTypeName_, order: .forward),
+            SortDescriptor(\Organization.fullName_, order: .forward), // photoclubID=name&town
+            SortDescriptor(\Organization.town_, order: .forward)
+        ]
+
         _fetchedOrganizations = FetchRequest<Organization>(
             sortDescriptors: sortDescriptors, // replaces previous fetchRequest
             predicate: predicate,
@@ -47,14 +47,14 @@ struct FilteredOrganizationView: View, Sendable {
         ForEach(filteredOrganizations, id: \.id) { filteredOrganization in
             VStack(alignment: .leading) {
                 HStack {
-                    Text(verbatim: "\(filteredOrganization.fullName)")
+                    Text(verbatim: "\(filteredOrganization.fullName)") // name of club or museum (left aligned)
                         .font(UIDevice.isIPad ? .title : .title2)
                         .tracking(1)
                         .lineLimit(3)
                         .truncationMode(.tail)
                         .foregroundColor(.organizationColor)
                     Spacer()
-                    if let wikipedia: URL = filteredOrganization.wikipedia {
+                    if let wikipedia: URL = filteredOrganization.wikipedia { // optional Wikipedia logo (right aligned)
                         Link(destination: wikipedia, label: {
                             Image("Wikipedia", label: Text(verbatim: "Wikipedia"))
                                 .resizable()
@@ -66,15 +66,17 @@ struct FilteredOrganizationView: View, Sendable {
                     }
                 }
                 .fixedSize(horizontal: false, vertical: true)
+
                 HStack(alignment: .center, spacing: 0) {
                     Image(systemName: systemName(organizationType: filteredOrganization.organizationType,
-                                                 circleNeeded: true)
+                                                 circleNeeded: true) // icon for organizationType
                     )
                     .foregroundStyle(.white, .yellow, // .yellow (secondary color) not actually used
                                      filteredOrganization.organizationType.isUnknown ? .red : .accentColor)
                     .symbolRenderingMode(.palette)
                     .font(.largeTitle)
                     .padding(.horizontal, 5)
+
                     VStack(alignment: .leading) {
                         Text(verbatim: layoutDirection == .leftToRight ?
                              "\(filteredOrganization.localizedTown), \(filteredOrganization.localizedCountry)" :
@@ -106,7 +108,7 @@ struct FilteredOrganizationView: View, Sendable {
                             HStack { // to make background color clickable too
                                 LockAnimationView(locked: filteredOrganization.isScrollLocked)
                             }
-                            .frame(maxWidth: 60, maxHeight: 60)
+                            .frame(width: 60, height: 60)
                             .contentShape(Rectangle())
                         }
                     )
