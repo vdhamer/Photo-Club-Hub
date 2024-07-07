@@ -16,8 +16,8 @@
         <note>Bundle name</note>
       </trans-unit>
       <trans-unit id="NSLocationWhenInUseUsageDescription" xml:space="preserve">
-        <source>User's location is shown on the maps.</source>
-        <target>User's location is shown on the maps.</target>
+        <source>To display your current location on the maps.</source>
+        <target>To display your current location on the maps.</target>
         <note>Privacy - Location When In Use Usage Description</note>
       </trans-unit>
     </body>
@@ -477,14 +477,19 @@ Try dragging down the Clubs and Museums screen to reload the default clubs.</tar
         <note>Title of page with clubs and maps</note>
       </trans-unit>
       <trans-unit id="PhotoClubs_Caption_1" xml:space="preserve">
-        <source>① You can unlock/lock a map's scrolling and panning features using the Lock icon.</source>
-        <target>① You can unlock/lock a map's scrolling and panning features using the Lock icon.</target>
+        <source>① This list consists of two sublists. The first shows the photo clubs, the second shows photo museums.</source>
+        <target>① This list consists of two sublists. The first shows the photo clubs, the second shows photo museums.</target>
         <note>Shown in gray at the bottom of the Clubs and Museums page (1/3).</note>
       </trans-unit>
       <trans-unit id="PhotoClubs_Caption_2" xml:space="preserve">
-        <source>② A photo club or museum can be deleted using swiping-left. For a photo club, this also removes its members and associated portfolios. Deleted items will reappear if the deleted items are still present online.</source>
-        <target>② A photo club or museum can be deleted using swiping-left. For a photo club, this also removes its members and associated portfolios. Deleted items will reappear if the deleted items are still present online.</target>
+        <source>② To find a particular club or museum, enter part of its name or town in the Search bar at the top.</source>
+        <target>② To find a particular club or museum, enter part of its name or town in the Search bar at the top.</target>
         <note>Shown in gray at the bottom of the Clubs and Museums page (2/3).</note>
+      </trans-unit>
+      <trans-unit id="PhotoClubs_Caption_3" xml:space="preserve">
+        <source>③ You can unlock/lock a map's scrolling and panning features using the Lock icon.</source>
+        <target>③ You can unlock/lock a map's scrolling and panning features using the Lock icon.</target>
+        <note>Shown in gray at the bottom of the Clubs and Museums page (3/3).</note>
       </trans-unit>
       <trans-unit id="Portfolios" xml:space="preserve">
         <source>Portfolios</source>
@@ -755,11 +760,6 @@ Try dragging down the Clubs and Museums screen to reload the default clubs.</tar
       <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="16.0" build-num="16A5171r"/>
     </header>
     <body>
-      <trans-unit id="Data reset after r2.6.2 pending" xml:space="preserve">
-        <source>Data reset after r2.6.2 pending</source>
-        <target>Data reset after r2.6.2 pending</target>
-        <note>(No Comment)</note>
-      </trans-unit>
       <trans-unit id="Debug options" xml:space="preserve">
         <source>Debug options</source>
         <target>Debug options</target>
@@ -783,6 +783,11 @@ Try dragging down the Clubs and Museums screen to reload the default clubs.</tar
       <trans-unit id="Load data manually" xml:space="preserve">
         <source>Load data manually</source>
         <target>Load data manually</target>
+        <note>(No Comment)</note>
+      </trans-unit>
+      <trans-unit id="Post-v2.6.2 data refresh pending" xml:space="preserve">
+        <source>Post-v2.6.2 data refresh pending</source>
+        <target>Post-v2.6.2 data refresh pending</target>
         <note>(No Comment)</note>
       </trans-unit>
       <trans-unit id="Repository owner" xml:space="preserve">

@@ -317,10 +317,12 @@
 "Photo Clubs" = "Fotogroepen";
 
 /* Shown in gray at the bottom of the Clubs and Museums page (1/3). */
-"PhotoClubs_Caption_1" = "① Het slotje kan gebruikt worden om deze landkaarten sleepbaar en inzoombaar/uitzoombaar te maken.";
+"PhotoClubs_Caption_1" = "① De lijst begint met alle ondersteunde fotoclubs, gevolgd door alle fotomusea.";
 
 /* Shown in gray at the bottom of the Clubs and Museums page (2/3). */
-"PhotoClubs_Caption_2" = "② Een fotogroep of museum kan verwijderd worden door deze naar links te `swipen`. Bij fotoclubs worden ook de bijbehorende leden en portfolio's verwijderd. Verwijderingen verschijnen vanzelf weer als de verwijderde informatie nog online aanwezig is.";
+"PhotoClubs_Caption_2" = "② Er is een Zoekveld bovenaan het scherm. Hiermee kunnen clubs en musea gevonden worden door hun naam of locatie in te voeren.";
+
+"PhotoClubs_Caption_3" = "③ Het slotje kan gebruikt worden om deze landkaarten sleepbaar en inzoombaar/uitzoombaar te maken.";
 
 /* Title of page showing member portfolios */
 "Portfolios" = "Portfolio's";

@@ -12,12 +12,12 @@
       </trans-unit>
       <trans-unit id="CFBundleName" xml:space="preserve">
         <source>Photo Club Hub</source>
-        <target>Photo Club Hub</target>
+        <target>Fotoclub Hub</target>
         <note>Bundle name</note>
       </trans-unit>
       <trans-unit id="NSLocationWhenInUseUsageDescription" xml:space="preserve">
-        <source>User's location is shown on the maps.</source>
-        <target>Om de huidige locatie weer te geven op de landkaarten.</target>
+        <source>To display your current location on the maps.</source>
+        <target>Om de huidige locatie van de gebruiker te tonen op de landkaarten.</target>
         <note>Privacy - Location When In Use Usage Description</note>
       </trans-unit>
     </body>
@@ -181,7 +181,7 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
       </trans-unit>
       <trans-unit id="No remark currently available for %@ %@." xml:space="preserve">
         <source>No remark currently available for %@ %@.</source>
-        <target>Geen bijzonderheid bekend voor %@ %@.</target>
+        <target>Geen bijzonderheden bekend over %@ %@.</target>
         <note>Shown below map if there is no usable remark in the OrganzationList.json file.</note>
       </trans-unit>
       <trans-unit id="Open Source" xml:space="preserve">
@@ -476,14 +476,19 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
         <note>Title of page with clubs and maps</note>
       </trans-unit>
       <trans-unit id="PhotoClubs_Caption_1" xml:space="preserve">
-        <source>① You can unlock/lock a map's scrolling and panning features using the Lock icon.</source>
-        <target>① Het slotje kan gebruikt worden om deze landkaarten sleepbaar en inzoombaar/uitzoombaar te maken.</target>
+        <source>① This list consists of two sublists. The first shows the photo clubs, the second shows photo museums.</source>
+        <target>① De lijst begint met alle ondersteunde fotoclubs, gevolgd door alle fotomusea.</target>
         <note>Shown in gray at the bottom of the Clubs and Museums page (1/3).</note>
       </trans-unit>
       <trans-unit id="PhotoClubs_Caption_2" xml:space="preserve">
-        <source>② A photo club or museum can be deleted using swiping-left. For a photo club, this also removes its members and associated portfolios. Deleted items will reappear if the deleted items are still present online.</source>
-        <target>② Een fotogroep of museum kan verwijderd worden door deze naar links te `swipen`. Bij fotoclubs worden ook de bijbehorende leden en portfolio's verwijderd. Verwijderingen verschijnen vanzelf weer als de verwijderde informatie nog online aanwezig is.</target>
+        <source>② To find a particular club or museum, enter part of its name or town in the Search bar at the top.</source>
+        <target>② Er is een Zoekveld bovenaan het scherm. Hiermee kunnen clubs en musea gevonden worden door hun naam of locatie in te voeren.</target>
         <note>Shown in gray at the bottom of the Clubs and Museums page (2/3).</note>
+      </trans-unit>
+      <trans-unit id="PhotoClubs_Caption_3" xml:space="preserve">
+        <source>③ You can unlock/lock a map's scrolling and panning features using the Lock icon.</source>
+        <target>③ Het slotje kan gebruikt worden om deze landkaarten sleepbaar en inzoombaar/uitzoombaar te maken.</target>
+        <note>Shown in gray at the bottom of the Clubs and Museums page (3/3).</note>
       </trans-unit>
       <trans-unit id="Portfolios" xml:space="preserve">
         <source>Portfolios</source>
@@ -754,11 +759,6 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
       <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="16.0" build-num="16A5171r"/>
     </header>
     <body>
-      <trans-unit id="Data reset after r2.6.2 pending" xml:space="preserve">
-        <source>Data reset after r2.6.2 pending</source>
-        <target>Data moet nog gewist worden na r2.6.2</target>
-        <note>(No Comment)</note>
-      </trans-unit>
       <trans-unit id="Debug options" xml:space="preserve">
         <source>Debug options</source>
         <target>Debug instellingen</target>
@@ -782,6 +782,11 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
       <trans-unit id="Load data manually" xml:space="preserve">
         <source>Load data manually</source>
         <target>Data handmatig laden</target>
+        <note>(No Comment)</note>
+      </trans-unit>
+      <trans-unit id="Post-v2.6.2 data refresh pending" xml:space="preserve">
+        <source>Post-v2.6.2 data refresh pending</source>
+        <target>Data moet nog gewist worden na r2.6.2</target>
         <note>(No Comment)</note>
       </trans-unit>
       <trans-unit id="Repository owner" xml:space="preserve">
