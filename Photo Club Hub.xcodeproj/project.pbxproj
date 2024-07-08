@@ -82,7 +82,7 @@
 		D0C8E3A22BB81B4A00348D97 /* ItemFilterStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C8E3A12BB81B4A00348D97 /* ItemFilterStatsView.swift */; };
 		D0D18C78296E1F6A00B334DB /* OrganizationIdPlus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D18C77296E1F6A00B334DB /* OrganizationIdPlus.swift */; };
 		D0DE02772789D1B30062738C /* RoleIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DE02762789D1B30062738C /* RoleIconView.swift */; };
-		D0E02F9B2B80191300D67CDA /* Readme_NL_2_6_2.pages in Resources */ = {isa = PBXBuildFile; fileRef = D0E02F972B80191300D67CDA /* Readme_NL_2_6_2.pages */; };
+		D0E02F9B2B80191300D67CDA /* Readme_NL_2_6_3.pages in Resources */ = {isa = PBXBuildFile; fileRef = D0E02F972B80191300D67CDA /* Readme_NL_2_6_3.pages */; };
 		D0E2235427DE9139002A8600 /* PreludeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E2235327DE9139002A8600 /* PreludeView.swift */; };
 		D0E2D6062B9B9577008D1F7A /* test1Club.level1.json in Resources */ = {isa = PBXBuildFile; fileRef = D0E2D6032B9B9568008D1F7A /* test1Club.level1.json */; };
 		D0E694C927EF9B450054D634 /* LockAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E694C827EF9B450054D634 /* LockAnimationView.swift */; };
@@ -202,8 +202,8 @@
 		D0D4860D2B0EC18A00ED0542 /* Photo_Club_Hub_2_5_2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_5_2.xcdatamodel; sourceTree = "<group>"; };
 		D0DE02762789D1B30062738C /* RoleIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleIconView.swift; sourceTree = "<group>"; };
 		D0DF0F442B2CFA3800E9FEC8 /* Photo Club Hub Localizations */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Photo Club Hub Localizations"; sourceTree = "<group>"; };
-		D0E02F942B7FA33200D67CDA /* Readme_EN_2_6_2.pages */ = {isa = PBXFileReference; lastKnownFileType = file; path = Readme_EN_2_6_2.pages; sourceTree = "<group>"; };
-		D0E02F972B80191300D67CDA /* Readme_NL_2_6_2.pages */ = {isa = PBXFileReference; lastKnownFileType = file; path = Readme_NL_2_6_2.pages; sourceTree = "<group>"; };
+		D0E02F942B7FA33200D67CDA /* Readme_EN_2_6_3.pages */ = {isa = PBXFileReference; lastKnownFileType = file; path = Readme_EN_2_6_3.pages; sourceTree = "<group>"; };
+		D0E02F972B80191300D67CDA /* Readme_NL_2_6_3.pages */ = {isa = PBXFileReference; lastKnownFileType = file; path = Readme_NL_2_6_3.pages; sourceTree = "<group>"; };
 		D0E2235327DE9139002A8600 /* PreludeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreludeView.swift; sourceTree = "<group>"; };
 		D0E2D6032B9B9568008D1F7A /* test1Club.level1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test1Club.level1.json; sourceTree = "<group>"; };
 		D0E673BA2AE1C1A100A4DC95 /* Photo_Club_Hub_2_5_0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_5_0.xcdatamodel; sourceTree = "<group>"; };
@@ -472,8 +472,8 @@
 			isa = PBXGroup;
 			children = (
 				D0831A4B277F736C0049AB84 /* ReleaseNotes.md */,
-				D0E02F942B7FA33200D67CDA /* Readme_EN_2_6_2.pages */,
-				D0E02F972B80191300D67CDA /* Readme_NL_2_6_2.pages */,
+				D0E02F942B7FA33200D67CDA /* Readme_EN_2_6_3.pages */,
+				D0E02F972B80191300D67CDA /* Readme_NL_2_6_3.pages */,
 				D07A1E2E28314EA600C77F66 /* SwiftUIEnvironmentValues.png */,
 				D01DFAA627E778BD007BABFA /* offsets.md */,
 				D04A2B112AC0958C003ED113 /* LineCount.xlsx */,
@@ -680,7 +680,7 @@
 			files = (
 				D008D2AA28739167007A7BE2 /* .gitignore in Resources */,
 				D0E2D6062B9B9577008D1F7A /* test1Club.level1.json in Resources */,
-				D0E02F9B2B80191300D67CDA /* Readme_NL_2_6_2.pages in Resources */,
+				D0E02F9B2B80191300D67CDA /* Readme_NL_2_6_3.pages in Resources */,
 				D03AB6AC2BBEBD3700F33E74 /* fgAnders.level2.json in Resources */,
 				D0B52497277F9A4B00927BCA /* Localizable.strings in Resources */,
 				D0A30FB82BB0BB33009A9A6E /* root.level1.json in Resources */,
@@ -1000,7 +1000,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Photo Club Hub/PhotoClubHub.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4627;
+				CURRENT_PROJECT_VERSION = 4628;
 				DEVELOPMENT_ASSET_PATHS = "\"Photo Club Hub/Preview Content\"";
 				DEVELOPMENT_TEAM = YDEWPN9GZ6;
 				ENABLE_PREVIEWS = YES;
@@ -1020,7 +1020,7 @@
 					"@executable_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 2.6.2;
+				MARKETING_VERSION = 2.6.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vdhamer.Fotogroep-Waalre";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1042,7 +1042,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Photo Club Hub/PhotoClubHub.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4627;
+				CURRENT_PROJECT_VERSION = 4628;
 				DEVELOPMENT_ASSET_PATHS = "\"Photo Club Hub/Preview Content\"";
 				DEVELOPMENT_TEAM = YDEWPN9GZ6;
 				ENABLE_PREVIEWS = YES;
@@ -1062,7 +1062,7 @@
 					"@executable_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 2.6.2;
+				MARKETING_VERSION = 2.6.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vdhamer.Fotogroep-Waalre";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

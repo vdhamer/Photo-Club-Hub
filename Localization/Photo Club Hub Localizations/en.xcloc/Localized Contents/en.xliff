@@ -102,6 +102,11 @@
         <target>Button for automatic slide show</target>
         <note>Caption about Play button on the Readme page</note>
       </trans-unit>
+      <trans-unit id="Buttons for the automatic slide show" xml:space="preserve">
+        <source>Buttons for the automatic slide show</source>
+        <target>Buttons for the automatic slide show</target>
+        <note>Caption about Play button on the Readme page</note>
+      </trans-unit>
       <trans-unit id="Clubs and Museums" xml:space="preserve">
         <source>Clubs and Museums</source>
         <target>Clubs and Museums</target>
@@ -111,6 +116,11 @@
         <source>The concept</source>
         <target>The concept</target>
         <note>Section title on Readme page</note>
+      </trans-unit>
+      <trans-unit id="Configuring Level 1 data for a Dutch photo club" xml:space="preserve">
+        <source>Configuring Level 1 data for a Dutch photo club</source>
+        <target>Configuring Level 1 data for a Dutch photo club</target>
+        <note>Caption for image on Readme page</note>
       </trans-unit>
       <trans-unit id="Data source: %@://%@%@/" xml:space="preserve">
         <source>Data source: %@://%@%@/</source>
@@ -200,23 +210,23 @@ Try dragging down the Clubs and Museums screen to reload the default clubs.</tar
         <note>Second paragraph in The App section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_1.3" xml:space="preserve">
-        <source>This consistency avoids having to find each club's website yourself, and then figuring out how to locate and browse the photos on that site. The app does __not__ try to replace club web sites, photographer web sites, or social media channels. Instead, it supports clubs and their members who try to reach out to other clubs, other photographers, and a general audience.</source>
-        <target>This consistency avoids having to find each club's website yourself, and then figuring out how to locate and browse the photos on that site. The app does __not__ try to replace club web sites, photographer web sites, or social media channels. Instead, it supports clubs and their members who try to reach out to other clubs, other photographers, and a general audience.</target>
+        <source>This consistency avoids having to find each club's website yourself, and then figuring out how to locate and browse the photos on that site. The app does __not__ try to replace club web sites, photographer web sites, or social media channels. Instead, it supports clubs and their members who try to reach out to other clubs, to other photographers, and to a general audience.</source>
+        <target>This consistency avoids having to find each club's website yourself, and then figuring out how to locate and browse the photos on that site. The app does __not__ try to replace club web sites, photographer web sites, or social media channels. Instead, it supports clubs and their members who try to reach out to other clubs, to other photographers, and to a general audience.</target>
         <note>Third paragraph in The App section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_1.4" xml:space="preserve">
-        <source>The app was originally named _Photo Club Waalre_ after a 15-person photo club in the southern Netherlands. The word __hub__ in the new name stresses the app's support for __multiple__ photo clubs.</source>
-        <target>The app was originally named _Photo Club Waalre_ after a 15-person photo club in the southern Netherlands. The word __hub__ in the new name stresses the app's support for __multiple__ photo clubs.</target>
+        <source>The app was originally named _Photo Club Waalre_ after a 15-person photo club in the southern Netherlands. The word __hub__ in the new name stresses the app's goals of strengthening the ties between __multiple__ photo clubs.</source>
+        <target>The app was originally named _Photo Club Waalre_ after a 15-person photo club in the southern Netherlands. The word __hub__ in the new name stresses the app's goals of strengthening the ties between __multiple__ photo clubs.</target>
         <note>Fourth paragraph in The App section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_1.5" xml:space="preserve">
-        <source>Supporting dozens or even hundreds of clubs requires that each club manages its own data. This includes providing images, and maintaining lists of club members. Adding a club to _Photo Club Hub_ does not require software expertise.</source>
-        <target>Supporting dozens or even hundreds of clubs requires that each club manages its own data. This includes providing images, and maintaining lists of club members. Adding a club to _Photo Club Hub_ does not require software expertise.</target>
+        <source>Supporting dozens or even hundreds of clubs requires that each club manages its own data. This includes providing images, and maintaining lists of club members. No software expertise is required for adding a club to Photo Club Hub.</source>
+        <target>Supporting dozens or even hundreds of clubs requires that each club manages its own data. This includes providing images, and maintaining lists of club members. No software expertise is required for adding a club to Photo Club Hub.</target>
         <note>Fifth paragraph in The App section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_1.6" xml:space="preserve">
-        <source>Interested in adding support for your club? Contact us via [GitHub](https://github.com/vdhamer/Photo-Club-Hub), [Facebook](https://www.facebook.com/vdhamer) or [LinkedIn](https://www.linkedin.com/in/vdhamer/). Adding your club only involves providing and updating club data in a way that the app can understand. The app's [GitHub site](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) explains the strategy and approach in more detail. We are here to help if you have any questions.</source>
-        <target>Interested in adding support for your club? Contact us via [GitHub](https://github.com/vdhamer/Photo-Club-Hub), [Facebook](https://www.facebook.com/vdhamer) or [LinkedIn](https://www.linkedin.com/in/vdhamer/). Adding your club only involves providing and updating club data in a way that the app can understand. The app's [GitHub site](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) explains the strategy and approach in more detail. We are here to help if you have any questions.</target>
+        <source>Interested in adding support for your club? Contact us via [GitHub](https://github.com/vdhamer/Photo-Club-Hub), [Facebook](https://www.facebook.com/vdhamer) or [LinkedIn](https://www.linkedin.com/in/vdhamer/). Adding your club only involves providing and updating club data in a way that the app can understand. The app's [GitHub site](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) explains the strategy and approach in more detail. We are here to help and to answer your questions.</source>
+        <target>Interested in adding support for your club? Contact us via [GitHub](https://github.com/vdhamer/Photo-Club-Hub), [Facebook](https://www.facebook.com/vdhamer) or [LinkedIn](https://www.linkedin.com/in/vdhamer/). Adding your club only involves providing and updating club data in a way that the app can understand. The app's [GitHub site](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) explains the strategy and approach in more detail. We are here to help and to answer your questions.</target>
         <note>Sixth paragraph in The App section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_2.1" xml:space="preserve">
@@ -235,13 +245,13 @@ Try dragging down the Clubs and Museums screen to reload the default clubs.</tar
         <note>Third paragraph in The Concept on Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_2.4" xml:space="preserve">
-        <source>Just like a painter, a photographer’s style may change over the years. Each portfolio is therefore shown in chronological order, with the latest work first.</source>
-        <target>Just like a painter, a photographer’s style may change over the years. Each portfolio is therefore shown in chronological order, with the latest work first.</target>
+        <source>Just like a painter, a photographer’s style often changes over the years. Each portfolio is therefore shown in chronological order, with the latest work first.</source>
+        <target>Just like a painter, a photographer’s style often changes over the years. Each portfolio is therefore shown in chronological order, with the latest work first.</target>
         <note>Fourth paragraph in The Concept on Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_2.5" xml:space="preserve">
-        <source>We try to show the portfolios with minimal distraction, just like an exposition at a museum or gallery. Web sites tend to be less optimal for this, because they are cluttered by browser controls (e.g., an address bar or tabs), and have to display multiple types of information (e.g., club news or schedules).</source>
-        <target>We try to show the portfolios with minimal distraction, just like an exposition at a museum or gallery. Web sites tend to be less optimal for this, because they are cluttered by browser controls (e.g., an address bar or tabs), and have to display multiple types of information (e.g., club news or schedules).</target>
+        <source>We try to show the portfolios with minimal distraction, just like an exposition at a museum or gallery. Web sites tend to be less optimal for this, because they are cluttered by browser controls (e.g., an address bar or tabs), and need to display multiple types of information (e.g., club news or schedules).</source>
+        <target>We try to show the portfolios with minimal distraction, just like an exposition at a museum or gallery. Web sites tend to be less optimal for this, because they are cluttered by browser controls (e.g., an address bar or tabs), and need to display multiple types of information (e.g., club news or schedules).</target>
         <note>Fifth paragraph in The Concept on Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.1.a" xml:space="preserve">
@@ -260,8 +270,8 @@ Try dragging down the Clubs and Museums screen to reload the default clubs.</tar
         <note>Paragraph 3.2.a of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.2.b" xml:space="preserve">
-        <source>If you zoom in enough on any map, a button appears that allows you do view the scene in three dimensions. In this mode you can rotate the map.</source>
-        <target>If you zoom in enough on any map, a button appears that allows you do view the scene in three dimensions. In this mode you can rotate the map.</target>
+        <source>If you zoom in far enough on any map, a button appears that allows you do view the area in three dimensions. In 3D mode you can rotate the map.</source>
+        <target>If you zoom in far enough on any map, a button appears that allows you do view the area in three dimensions. In 3D mode you can rotate the map.</target>
         <note>Paragraph 3.2.ba of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.3.a" xml:space="preserve">
@@ -270,13 +280,13 @@ Try dragging down the Clubs and Museums screen to reload the default clubs.</tar
         <note>Paragraph 3.3.a of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.3.b" xml:space="preserve">
-        <source>Maps can highlight your own location as a purple dot providing that it is in range of the map. This can help navigate to a club or to estimate distances. If the map is unlocked/interactive, an arrow button let you re-center the map around your current location.</source>
-        <target>Maps can highlight your own location as a purple dot providing that it is in range of the map. This can help navigate to a club or to estimate distances. If the map is unlocked/interactive, an arrow button let you re-center the map around your current location.</target>
+        <source>Maps can highlight your own location as a purple dot when it is in range of the map. This can help you navigate to a club or to estimate distances. If the map is unlocked/interactive, an arrow button let you re-center the map around your current location.</source>
+        <target>Maps can highlight your own location as a purple dot when it is in range of the map. This can help you navigate to a club or to estimate distances. If the map is unlocked/interactive, an arrow button let you re-center the map around your current location.</target>
         <note>Paragraph 3.3.b of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.3.c" xml:space="preserve">
-        <source>Live location requires granting the app __permission__ to access your location while in the app. The app doesn’t store or share location information with anyone or anything.</source>
-        <target>Live location requires granting the app __permission__ to access your location while in the app. The app doesn’t store or share location information with anyone or anything.</target>
+        <source>Live location requires granting the app __permission__ to access your location while in the app. The app doesn’t store or share your location with anyone or anything.</source>
+        <target>Live location requires granting the app __permission__ to access your location while in the app. The app doesn’t store or share your location with anyone or anything.</target>
         <note>Paragraph 3.3.c of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.4.a" xml:space="preserve">
@@ -285,8 +295,8 @@ Try dragging down the Clubs and Museums screen to reload the default clubs.</tar
         <note>Paragraph 3.4.a of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.4.b" xml:space="preserve">
-        <source>The app initially contains a set of 40+ initial photo clubs. Those clubs are currently all in one part of the Netherlands. The app, however, can support clubs anywhere in the world and the list can be extended by the users.</source>
-        <target>The app initially contains a set of 40+ initial photo clubs. Those clubs are currently all in one part of the Netherlands. The app, however, can support clubs anywhere in the world and the list can be extended by the users.</target>
+        <source>The app initially contains an initial list of 40+ photo clubs. Those clubs are currently all in one region in the Netherlands. The app, however, can support clubs anywhere in the world and the list can be extended by the users.</source>
+        <target>The app initially contains an initial list of 40+ photo clubs. Those clubs are currently all in one region in the Netherlands. The app, however, can support clubs anywhere in the world and the list can be extended by the users.</target>
         <note>Paragraph 3.4.b of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.4.c" xml:space="preserve">
@@ -295,8 +305,8 @@ Try dragging down the Clubs and Museums screen to reload the default clubs.</tar
         <note>Paragraph 3.4.c of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.4.d" xml:space="preserve">
-        <source>Similarly, the initial list of 30+ photo museums in various countries can also be extended by users without updating the app itself.</source>
-        <target>Similarly, the initial list of 30+ photo museums in various countries can also be extended by users without updating the app itself.</target>
+        <source>Similarly, the initial list of 30+ photo museums can also be extended by users without updating the app itself.</source>
+        <target>Similarly, the initial list of 30+ photo museums can also be extended by users without updating the app itself.</target>
         <note>Paragraph 3.4.d of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.5.a" xml:space="preserve">
@@ -305,34 +315,24 @@ Try dragging down the Clubs and Museums screen to reload the default clubs.</tar
         <note>Paragraph 3.5.a of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.5.b" xml:space="preserve">
-        <source>The maps can show various photo museums throughout the world. Museums and photo clubs are distinguished by different symbols on the map. Museums show up if you zoom out any map far enough that they come into view.</source>
-        <target>The maps can show various photo museums throughout the world. Museums and photo clubs are distinguished by different symbols on the map. Museums show up if you zoom out any map far enough that they come into view.</target>
+        <source>The maps can show various photo museums throughout the world. Museums and clubs are represented differently on the map.</source>
+        <target>The maps can show various photo museums throughout the world. Museums and clubs are represented differently on the map.</target>
         <note>Paragraph 3.5.b of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.5.c" xml:space="preserve">
-        <source>Adding a photo museum works the same way as adding a photo club - except that a museum doesn’t have members and member portfolios.</source>
-        <target>Adding a photo museum works the same way as adding a photo club - except that a museum doesn’t have members and member portfolios.</target>
+        <source>Adding a photo museum works the same way as adding a photo club - except that a museum doesn’t have members or member portfolios.</source>
+        <target>Adding a photo museum works the same way as adding a photo club - except that a museum doesn’t have members or member portfolios.</target>
         <note>Paragraph 3.5.c of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.6.a" xml:space="preserve">
-        <source>__Deleting members, clubs and museums__</source>
-        <target>__Deleting members, clubs and museums__</target>
+        <source>__Smart scrolling__</source>
+        <target>__Smart scrolling__</target>
         <note>Paragraph 3.6.a of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.6.b" xml:space="preserve">
-        <source>On the _Portfolios_ screen you can delete a club member by swiping a row to the left. The _Clubs and Museums_ screen has similar functionality for removing clubs or museums.</source>
-        <target>On the _Portfolios_ screen you can delete a club member by swiping a row to the left. The _Clubs and Museums_ screen has similar functionality for removing clubs or museums.</target>
+        <source>The _Clubs and Museums_ screen and the _Who’s Who_ screen feature _smart scrolling_, as introduced in iOS 17. This tries to prevent an item on a list from being partially displayed. The _Portfolios_ screen does not support smart scrolling because that is incompatible with having so-called sectioned lists.</source>
+        <target>The _Clubs and Museums_ screen and the _Who’s Who_ screen feature _smart scrolling_, as introduced in iOS 17. This tries to prevent an item on a list from being partially displayed. The _Portfolios_ screen does not support smart scrolling because that is incompatible with having so-called sectioned lists.</target>
         <note>Paragraph 3.6.b of the Readme screen</note>
-      </trans-unit>
-      <trans-unit id="Paragraph_3.6.c" xml:space="preserve">
-        <source>Deletion of a member will generally be __temporary__ because the member is still on the club's online membership lists. Deletion does have effect if the entry has been removed from these online lists. The feature will be automated at some point, and is only useful in special circumstances (like when a typo in a member's name is corrected).</source>
-        <target>Deletion of a member will generally be __temporary__ because the member is still on the club's online membership lists. Deletion does have effect if the entry has been removed from these online lists. The feature will be automated at some point, and is only useful in special circumstances (like when a typo in a member's name is corrected).</target>
-        <note>Paragraph 3.6.c of the Readme screen</note>
-      </trans-unit>
-      <trans-unit id="Paragraph_3.6.d" xml:space="preserve">
-        <source>So just remember that swiping to delete is harmless. And if you need to clean up a list you can alternatively simply uninstall and reinstall the app to clean up the app's internal data.</source>
-        <target>So just remember that swiping to delete is harmless. And if you need to clean up a list you can alternatively simply uninstall and reinstall the app to clean up the app's internal data.</target>
-        <note>Paragraph 3.6.d of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.7.a" xml:space="preserve">
         <source>__Web sites__</source>
@@ -340,8 +340,8 @@ Try dragging down the Clubs and Museums screen to reload the default clubs.</tar
         <note>Paragraph 3.7.a of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.7.b" xml:space="preserve">
-        <source>This app is complimentary to your club’s web site. Because web sites have more uses than just presenting photos, _Photo Club Hub_ includes clickable links to club- and photographer web sites.</source>
-        <target>This app is complimentary to your club’s web site. Because web sites have more uses than just presenting photos, _Photo Club Hub_ includes clickable links to club- and photographer web sites.</target>
+        <source>This app is complimentary to your club’s web site. Because web sites have more uses than just presenting photos, _Photo Club Hub_ includes clickable links that bring you to club- and photographer web sites.</source>
+        <target>This app is complimentary to your club’s web site. Because web sites have more uses than just presenting photos, _Photo Club Hub_ includes clickable links that bring you to club- and photographer web sites.</target>
         <note>Paragraph 3.7.b of the Readme scree</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.8.a" xml:space="preserve">
@@ -365,8 +365,8 @@ Try dragging down the Clubs and Museums screen to reload the default clubs.</tar
         <note>Paragraph 3.8.d of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.8.e" xml:space="preserve">
-        <source>The animation incidentally uses GPU core acceleration using the [Metal software framework](https://browser.geekbench.com/ios-benchmarks#metal).</source>
-        <target>The animation incidentally uses GPU core acceleration using the [Metal software framework](https://browser.geekbench.com/ios-benchmarks#metal).</target>
+        <source>The animation incidentally runs on your device's GPU cores using the [Metal software framework](https://browser.geekbench.com/ios-benchmarks#metal).</source>
+        <target>The animation incidentally runs on your device's GPU cores using the [Metal software framework](https://browser.geekbench.com/ios-benchmarks#metal).</target>
         <note>Paragraph 3.8.e of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.9.a" xml:space="preserve">
@@ -375,13 +375,13 @@ Try dragging down the Clubs and Museums screen to reload the default clubs.</tar
         <note>Paragraph 3.9.a of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.9.b" xml:space="preserve">
-        <source>The app can include the work of former club members. By default, former members are not shown, but you can enable displaying them in the _Preferences_ screen.</source>
-        <target>The app can include the work of former club members. By default, former members are not shown, but you can enable displaying them in the _Preferences_ screen.</target>
+        <source>The app can include the work of former club members. By default, former members are not shown, but you can be enabled on in the _Preferences_ screen.</source>
+        <target>The app can include the work of former club members. By default, former members are not shown, but you can be enabled on in the _Preferences_ screen.</target>
         <note>Paragraph 3.9.b of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.9.c" xml:space="preserve">
-        <source>An easy way to get recent ex-members in the app is to simply keep their portfolio when they leave, and instead mark the member as ex-member in the membership list.</source>
-        <target>An easy way to get recent ex-members in the app is to simply keep their portfolio when they leave, and instead mark the member as ex-member in the membership list.</target>
+        <source>An easy way to get recent ex-member data in the app is to simply not remove their portfolios when they leave. You should instead change their status to ex-member in the membership ("Level 2") list.</source>
+        <target>An easy way to get recent ex-member data in the app is to simply not remove their portfolios when they leave. You should instead change their status to ex-member in the membership ("Level 2") list.</target>
         <note>Paragraph 3.9.c of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.10.a" xml:space="preserve">
@@ -390,8 +390,8 @@ Try dragging down the Clubs and Museums screen to reload the default clubs.</tar
         <note>Paragraph 3.10.a of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.10.b" xml:space="preserve">
-        <source>Some portfolios have an automatic slide show option. This is controlled by one of the buttons that appear when you tap on an image (this tapping is not needed on an iPad).</source>
-        <target>Some portfolios have an automatic slide show option. This is controlled by one of the buttons that appear when you tap on an image (this tapping is not needed on an iPad).</target>
+        <source>Some portfolios have an automatic slide show option. This is controlled by one of the buttons that appear when you tap on an image (this tapping is only needed on an iPhone).</source>
+        <target>Some portfolios have an automatic slide show option. This is controlled by one of the buttons that appear when you tap on an image (this tapping is only needed on an iPhone).</target>
         <note>Paragraph 3.10.b of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.10.c" xml:space="preserve">
@@ -405,18 +405,18 @@ Try dragging down the Clubs and Museums screen to reload the default clubs.</tar
         <note>Paragraph 3.11.a of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.11.b" xml:space="preserve">
-        <source>There is a search bar at the top of all screens that display long lists. On an iPhone you may need to scroll back to the top of the list in order to see it.</source>
-        <target>There is a search bar at the top of all screens that display long lists. On an iPhone you may need to scroll back to the top of the list in order to see it.</target>
+        <source>There is a search bar at the top of major screens. On an iPhone you may need to scroll back to the top of the list in order to see it.</source>
+        <target>There is a search bar at the top of major screens. On an iPhone you may need to scroll back to the top of the list in order to see it.</target>
         <note>Paragraph 3.11.b of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.11.c" xml:space="preserve">
-        <source>Entering part of person’s name (for the _Portfolios_ and _Who’s Who_ screens) will find photographers with that name. The _Clubs and Museums_ screen is searched simultaneously on organization name and its town (location).</source>
-        <target>Entering part of person’s name (for the _Portfolios_ and _Who’s Who_ screens) will find photographers with that name. The _Clubs and Museums_ screen is searched simultaneously on organization name and its town (location).</target>
+        <source>Entering part of person’s name (for the _Portfolios_ and _Who’s Who_ screens) will find people with that name. The _Clubs and Museums_ screen searches both on the organization's name and on its location (town).</source>
+        <target>Entering part of person’s name (for the _Portfolios_ and _Who’s Who_ screens) will find people with that name. The _Clubs and Museums_ screen searches both on the organization's name and on its location (town).</target>
         <note>Paragraph 3.11.c of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_4.1" xml:space="preserve">
-        <source>_Photo Club Hub_ requires the latest major version of iOS. This allows us to keep up to date technology-wise. The latest app version can run on devices released in the last 6 or 7 years.</source>
-        <target>_Photo Club Hub_ requires the latest major version of iOS. This allows us to keep up to date technology-wise. The latest app version can run on devices released in the last 6 or 7 years.</target>
+        <source>_Photo Club Hub_ requires the latest major version of iOS. This allows us to keep the app technically up to date. The latest app version can run on devices released in the last 6 or 7 years.</source>
+        <target>_Photo Club Hub_ requires the latest major version of iOS. This allows us to keep the app technically up to date. The latest app version can run on devices released in the last 6 or 7 years.</target>
         <note>First paragraph SupportedPlatforms section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_4.2" xml:space="preserve">
@@ -425,8 +425,8 @@ Try dragging down the Clubs and Museums screen to reload the default clubs.</tar
         <note>Second paragraph SupportedPlatforms section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_4.3" xml:space="preserve">
-        <source>Although there is presently no native support for __Android__ or other non-Apple phone platforms, we plan to provide support by automatically generating website pages from the same online lists that the app uses. This helps keep club web sites up to date, and allows viewing of clubs, members, and images in a web browsers on a wide range of platforms including Android, Windows, and more.</source>
-        <target>Although there is presently no native support for __Android__ or other non-Apple phone platforms, we plan to provide support by automatically generating website pages from the same online lists that the app uses. This helps keep club web sites up to date, and allows viewing of clubs, members, and images in a web browsers on a wide range of platforms including Android, Windows, and more.</target>
+        <source>Although there is presently no native support for __Android__ or other non-Apple phone platforms, we plan to provide support by automatically generating website pages from the same online lists that the app uses. This helps keep club web sites up to date, and allows viewing of clubs, members, and images in a web browsers on a wide range of platforms including Android, but also platforms like Windows or Linux.</source>
+        <target>Although there is presently no native support for __Android__ or other non-Apple phone platforms, we plan to provide support by automatically generating website pages from the same online lists that the app uses. This helps keep club web sites up to date, and allows viewing of clubs, members, and images in a web browsers on a wide range of platforms including Android, but also platforms like Windows or Linux.</target>
         <note>Third paragraph SupportedPlatforms section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_4.4" xml:space="preserve">
@@ -445,19 +445,19 @@ Try dragging down the Clubs and Museums screen to reload the default clubs.</tar
         <note>Second paragraph Developers section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_5.3" xml:space="preserve">
-        <source>__Level 2__ requires providing a list of the names of current (and maybe former) club members as a text file with a specific format. This file can be stored anywhere you like as long as it can be read via a web address (URL). For example, you can store it in the _Media_ section of your club’s _Wordpress_ web site. With Level 2, the membership lists shows up on the _Portfolios_ screen. _Fotogroep Anders_ in the Netherlands is an example of a Level 2 club. We are currently simplifying Level 2 support.</source>
-        <target>__Level 2__ requires providing a list of the names of current (and maybe former) club members as a text file with a specific format. This file can be stored anywhere you like as long as it can be read via a web address (URL). For example, you can store it in the _Media_ section of your club’s _Wordpress_ web site. With Level 2, the membership lists shows up on the _Portfolios_ screen. _Fotogroep Anders_ in the Netherlands is an example of a Level 2 club. We are currently simplifying Level 2 support.</target>
+        <source>__Level 2__ requires providing a list of the names of current (and maybe former) club members as a text file with a specific format. This file can be stored anywhere you like as long as it can be fetched using a web address (URL). For example, you can store it in the _Media_ section of your club’s _Wordpress_ web site. With Level 2, the membership lists shows up on the _Portfolios_ screen. _Fotogroep Anders_ (NL) shows what a Level 2 club looks like in the user interface. We are currently simplifying data entry for Level 2.</source>
+        <target>__Level 2__ requires providing a list of the names of current (and maybe former) club members as a text file with a specific format. This file can be stored anywhere you like as long as it can be fetched using a web address (URL). For example, you can store it in the _Media_ section of your club’s _Wordpress_ web site. With Level 2, the membership lists shows up on the _Portfolios_ screen. _Fotogroep Anders_ (NL) shows what a Level 2 club looks like in the user interface. We are currently simplifying data entry for Level 2.</target>
         <note>Third paragraph Developers section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_5.4" xml:space="preserve">
-        <source>__Level 3__ requires providing links to the online images in member portfolios. _Fotogroep Waalre_ in the Netherlands is an example of Level 3 club: you can view their portfolios via the _Portfolios_ screen. Because a club with, for example, 20 members will have hundreds of images, we have a way to automate generate portfolios using _Lightroom_ (instructions on how this works will be provided later).</source>
-        <target>__Level 3__ requires providing links to the online images in member portfolios. _Fotogroep Waalre_ in the Netherlands is an example of Level 3 club: you can view their portfolios via the _Portfolios_ screen. Because a club with, for example, 20 members will have hundreds of images, we have a way to automate generate portfolios using _Lightroom_ (instructions on how this works will be provided later).</target>
+        <source>__Level 3__ requires providing links to the online images in member portfolios. _Fotogroep Waalre_ (NL) is an example of a Level 3 club: you can view their portfolios via the _Portfolios_ screen. Because a club with with dozens of members may want to show hundreds of images, we have a way to automatically generate portfolios using _Lightroom_ (step-by-step instructions for this will be provided later).</source>
+        <target>__Level 3__ requires providing links to the online images in member portfolios. _Fotogroep Waalre_ (NL) is an example of a Level 3 club: you can view their portfolios via the _Portfolios_ screen. Because a club with with dozens of members may want to show hundreds of images, we have a way to automatically generate portfolios using _Lightroom_ (step-by-step instructions for this will be provided later).</target>
         <note>Fourth paragraph Developers section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_5.5" xml:space="preserve">
-        <source>Apart from onboarding clubs, there are more ways in which you can help out. Examples of __non-technical__ help include testing, writing a review for Apple’s App Store, creating user guides, and improvement ideas. Last, and certainly not least, __software development__ support will help speed up development, get fresh ideas and ensure app continuity. Example contributions include code improvement of all sorts (via  [GitHub](https://github.com/vdhamer/Photo-Club-Hub), tracking down bugs, and contributing to discussions on functionality, implementation and interfaces.
+        <source>Apart from onboarding clubs, there are more ways in which you can help out. Examples of __non-technical__ help include testing, writing a review for Apple’s App Store, creating user guides, and improvement ideas. Last, and certainly not least, actual __software development__ support will help speed up development, come up with fresh ideas and ensure app continuity. Example contributions include code improvement of all sorts (via  [GitHub](https://github.com/vdhamer/Photo-Club-Hub), hunting down bugs, and contributing to discussions on functionality, implementation and interfaces.
 </source>
-        <target>Apart from onboarding clubs, there are more ways in which you can help out. Examples of __non-technical__ help include testing, writing a review for Apple’s App Store, creating user guides, and improvement ideas. Last, and certainly not least, __software development__ support will help speed up development, get fresh ideas and ensure app continuity. Example contributions include code improvement of all sorts (via  [GitHub](https://github.com/vdhamer/Photo-Club-Hub), tracking down bugs, and contributing to discussions on functionality, implementation and interfaces.
+        <target>Apart from onboarding clubs, there are more ways in which you can help out. Examples of __non-technical__ help include testing, writing a review for Apple’s App Store, creating user guides, and improvement ideas. Last, and certainly not least, actual __software development__ support will help speed up development, come up with fresh ideas and ensure app continuity. Example contributions include code improvement of all sorts (via  [GitHub](https://github.com/vdhamer/Photo-Club-Hub), hunting down bugs, and contributing to discussions on functionality, implementation and interfaces.
 </target>
         <note>Fifth paragraph Developers section of Readme page</note>
       </trans-unit>

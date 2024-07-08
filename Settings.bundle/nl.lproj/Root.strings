@@ -1,26 +1,27 @@
 /* (No Comment) */
-"Version" = "Versie";
-
-/* (No Comment) */
-"GitHub" = "GitHub";
-
-/* (No Comment) */
-"Repository owner" = "Archief eigenaar";
-
-/* (No Comment) */
-"License" = "Licensie";
-
-/* (No Comment) */
 "Debug options" = "Debug instellingen";
-
-/* (No Comment) */
-"Load data manually" = "Data handmatig laden";
-
-/* (No Comment) */
-"Turning debug options on will enable non-standard behavior. This is used for software testing purposes. See Settings.swift source file for more info." = "Debug instellingen aanzetten leidt tot niet standaard gedrag. De instellingen zijn er voor het testen van de software. Zie Settings.swift bestand op GitHub voor nadere uitleg.";
 
 /* (No Comment) */
 "Extra saving of data" = "Gegevens vaker opslaan";
 
 /* (No Comment) */
+"GitHub" = "GitHub";
+
+/* (No Comment) */
+"License" = "Licensie";
+
+/* (No Comment) */
+"Load data manually" = "Data handmatig laden";
+
+/* (No Comment) */
 "Post-v2.6.2 data refresh pending" = "Data moet nog gewist worden na r2.6.2";
+
+/* (No Comment) */
+"Repository owner" = "Archief eigenaar";
+
+/* (No Comment) */
+"Turning debug options on will enable non-standard behavior. This is used for software testing purposes. See Settings.swift source file for more info." = "Debug instellingen aanzetten leidt tot niet standaard gedrag. De instellingen zijn er voor het testen van de software. Zie Settings.swift bestand op GitHub voor nadere uitleg.";
+
+/* (No Comment) */
+"Version" = "Versie";
+

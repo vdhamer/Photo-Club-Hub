@@ -55,6 +55,9 @@
 /* Caption about Play button on the Readme page */
 "Button for automatic slide show" = "De knop om beelden automatisch af te spelen";
 
+/* Caption about Play button on the Readme page */
+"Buttons for the automatic slide show" = "Knopjes om de beelden automatisch te doorlopen";
+
 /* Administrative role of member within a club. Used as part of concatenations. */
 "chairman" = "voorzitter";
 
@@ -66,6 +69,9 @@
 
 /* Section title on Readme page */
 "Concept" = "Het concept";
+
+/* Caption for image on Readme page */
+"Configuring Level 1 data for a Dutch photo club" = "Sjablook voor het toevoegen van een fotoclub op Niveau 1";
 
 /* Section footer text Portfolios screen */
 "Data source: %@://%@%@/" = "Bron: %@://%@%@/";
@@ -146,37 +152,37 @@
 "Open Source" = "Ontwikkelaars gezocht";
 
 /* First paragraph in The App section of Readme page */
-"Paragraph_1.1" = "De app _Fotoclub Hub_ dient om banden tussen fotoclubs te versterken en om foto's die gemaakt zijn door de clubleden eenvoudig toegankelijk te maken.";
+"Paragraph_1.1" = "De app _Fotoclub Hub_ dient om banden tussen fotoclubs te versterken en om foto's gemaakt door de clubleden eenvoudig toegankelijk te maken.";
 
 /* Second paragraph in The App section of Readme page */
-"Paragraph_1.2" = "De app presenteert geselecteerd werk van  clubleden. De foto's zijn op een consistente wijze te bekijken. Men kan de app dus zien als een permanente online expositie.";
+"Paragraph_1.2" = "De app presenteert geselecteerd werk van clubleden. De foto's zijn op een consistente wijze te bekijken. Men kan de app dus zien als een permanente online expositie.";
 
 /* Third paragraph in The App section of Readme page */
-"Paragraph_1.3" = "Door de foto's op een consistente manier te presenteren, hoeft de gebruiker de website van de club niet te zoeken om vervolgens te moeten ontdekken hoe de foto's te bekijken. De app probeert nadrukkelijk niet om de websites of b.v. Facebook kanalen van clubs te vervangen. Het dient alleen om clubs en hun leden onder de aandacht te brengen bij een breed publiek.";
+"Paragraph_1.3" = "Door de foto's op een consistente manier te presenteren, hoeft de gebruiker de website van de club niet te zoeken om vervolgens te moeten ontdekken hoe de foto's te bekijken. De app probeert nadrukkelijk niet om de websites of social media van clubs te vervangen: het dient alleen om clubs en hun leden onder de aandacht te brengen bij een breed publiek.";
 
 /* Fourth paragraph in The App section of Readme page */
-"Paragraph_1.4" = "Oorspronkelijk heette deze app _Fotogroep Waalre_, naar een fotoclub bij Eindhoven. Het woord __hub__ (trefplaats) in de nieuwe naam benadrukt dat de app tegenwoordig __meerdere__ fotoclubs ondersteunt.";
+"Paragraph_1.4" = "Oorspronkelijk heette deze app _Fotogroep Waalre_, naar een fotoclub bij Eindhoven. Het woord __hub__ (= middelpunt, trefpunt) in de nieuwe naam benadrukt dat de huidige versie __meerdere__ fotoclubs ondersteunt.";
 
 /* Fifth paragraph in The App section of Readme page */
-"Paragraph_1.5" = "Het ondersteunen van meerdere clubs vereist dat de clubs hun eigen gegevens beheren. Het gaat hier vooral om het bijhouden van ledenlijsten en lijsten met geselecteerde foto’s. Hier is geen specifieke softwarekennis voor nodig.";
+"Paragraph_1.5" = "Het ondersteunen van meerdere clubs vereist dat de clubs hun eigen gegevens beheren. Het gaat hier vooral om het bijhouden van ledenlijsten en lijsten met geselecteerde foto’s. Hiervoor is geen specifieke softwarekennis nodig.";
 
 /* Sixth paragraph in The App section of Readme page */
-"Paragraph_1.6" = "Heb je belangstelling om de foto's van jouw club in de app te krijgen? Neem dan contact op via [GitHub](https://github.com/vdhamer/Photo-Club-Hub), [Facebook](https://www.facebook.com/vdhamer), [Mastodon](https://mastodon.social/@vdhamer) of [LinkedIn](https://www.linkedin.com/in/vdhamer/). Verderop en op [GitHub](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) staat meer uitleg hoe dit gaat. Wij helpen graag, dus neem bij vragen gerust contact op.";
+"Paragraph_1.6" = "Heb je belangstelling om jouw club in de app te krijgen? Neem dan contact op via [GitHub](https://github.com/vdhamer/Photo-Club-Hub), [Facebook](https://www.facebook.com/vdhamer), [Mastodon](https://mastodon.social/@vdhamer) of [LinkedIn](https://www.linkedin.com/in/vdhamer/). Verderop en op [GitHub](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) staat meer uitleg hoe dit gaat. Wij helpen graag, dus neem bij vragen gerust contact op.";
 
 /* First paragraph in The Concept on Readme page */
-"Paragraph_2.1" = "Fotoclubs en hun leden spelen de hoofdrol in deze app.";
+"Paragraph_2.1" = "Fotoclubs en hun leden spelen een centrale rol in deze app.";
 
 /* Second paragraph in The Concept on Readme page */
 "Paragraph_2.2" = "Het _Portfolio's_ scherm bevat een lijst van fotoclubs. Iedere club heeft een lijst van __portfolio's__ van hun leden. Deze portfolio's bevatten de foto's.";
 
 /* Third paragraph in The Concept on Readme page */
-"Paragraph_2.3" = "Een portfolio bestrijkt het werk van een fotograaf dat hoort bij één club. Een fotograaf kan meerdere portfolio's in de app hebben indien de fotograaf lid is (of was) van meerdere fotoclubs.";
+"Paragraph_2.3" = "Een portfolio vertegenwoordigt het werk van één fotograaf voor zover dat hoort bij één club. Een fotograaf kan eventueel meerdere portfolio's in de app hebben als de fotograaf lid is (of was) van meerdere fotoclubs.";
 
 /* Fourth paragraph in The Concept on Readme page */
-"Paragraph_2.4" = "Net als een schilder, kan een fotograaf na verloop van tijd van onderwerpen en stijl veranderen. Daarom is een portfolio gesorteerd op tijdsvolgorde, met het nieuwste werk eerst.";
+"Paragraph_2.4" = "Net als bij een schilder, kan een fotograaf van onderwerp of stijl veranderen. Daarom is ieder portfolio gesorteerd op tijdsvolgorde, met het nieuwste werk vooraan.";
 
 /* Fifth paragraph in The Concept on Readme page */
-"Paragraph_2.5" = "Net als bij een tentoonstelling is het belangrijk om een portfolio _zonder afleiding_ te kunnen bekijken. Webpagina's zijn hier vaak iets te druk voor vanwege allerlei bedieningselementen, maar ook omdat ze vaak meerdere soorten informatie tonen, zoals aankondigingen, contactpersonen en de vergaderagenda.";
+"Paragraph_2.5" = "Net als bij een tentoonstelling is het belangrijk om een portfolio _zonder afleiding_ te kunnen bekijken. Webpagina's zijn hier vaak iets te druk voor vanwege allerlei bedieningselementen, maar ook omdat ze vaak meerdere soorten informatie bevatten, zoals aankondigingen, contactpersonen en vergaderschema's.";
 
 /* Paragraph 3.1.a of the Readme screen */
 "Paragraph_3.1.a" = "__Tweetalig__";
@@ -188,55 +194,49 @@
 "Paragraph_3.2.a" = "__3D kaarten__";
 
 /* Paragraph 3.2.ba of the Readme screen */
-"Paragraph_3.2.b" = "Wanneer men voldoende inzoomt op een landkaart, verschijnt er een knop om de kaart in 3D weer te geven. Dit vereist dat de kaart interactief is (slotje open). Probeer het bijvoorbeeld uit met New York met zijn hoge gebouwen.";
+"Paragraph_3.2.b" = "Wanneer men voldoende inzoomt op een landkaart, verschijnt er een knop om de kaart in 3D weer te geven. Dit vereist dat de kaart interactief is (slotje in de open stand). Probeer het bijvoorbeeld uit met New York met zijn wolkenkrabbers.";
 
 /* Paragraph 3.3.a of the Readme screen */
-"Paragraph_3.3.a" = "__Locatie weergave__";
+"Paragraph_3.3.a" = "__Locatieweergave__";
 
 /* Paragraph 3.3.b of the Readme screen */
 "Paragraph_3.3.b" = "De landkaarten kunnen de huidige locatie van de gebruiker weergeven als paarse stip - mits die locatie binnen het bereik van de kaart valt. Indien de kaart van slot is, verschijnt er een pijlvormige knop waarmee de kaart gecentreerd kan worden rondom de huidige locatie.";
 
 /* Paragraph 3.3.c of the Readme screen */
-"Paragraph_3.3.c" = "Locatie weergave vereist dat de gebruiker desgevraagd __toestemming__ verleent aan de app om de locatiegegevens van iOS op te vragen. Deze informatie wordt niet door de app opgeslagen of gedeeld.";
+"Paragraph_3.3.c" = "Locatieweergave vereist dat de gebruiker desgevraagd __toestemming__ verleent aan de app om de locatiegegevens van iOS op te vragen. Deze informatie wordt niet door de app opgeslagen of gedeeld.";
 
 /* Paragraph 3.4.a of the Readme screen */
 "Paragraph_3.4.a" = "__Toevoegen van clubs__";
 
 /* Paragraph 3.4.b of the Readme screen */
-"Paragraph_3.4.b" = "Momenteel kent de app ongeveer 40 fotoclubs in Brabant Oost. De app is overigens geschikt om clubs in alle landen te ondersteunen.";
+"Paragraph_3.4.b" = "Momenteel kent de app ongeveer 40 fotoclubs in Brabant Oost. De app is ook geschikt voor andere clubs in Nederland of in het buitenland.";
 
 /* Paragraph 3.4.c of the Readme screen */
-"Paragraph_3.4.c" = "Om het werk van een club te ondersteunen, heeft het basisinformatie nodig over de naam en ligging van de club (__Niveau 1__), een ledenlijst (__Niveau 2__) en de portfolio’s met foto’s (__Niveau 3__). Verderop komen wij hierop terug.";
+"Paragraph_3.4.c" = "Om het werk van een club te ondersteunen, heeft de app basisinformatie nodig over de naam en ligging van de club (\"__Niveau 1__\"), een ledenlijst (\"__Niveau 2__\") en de portfolio’s met foto’s (\"__Niveau 3__\"). Hier komen wij later op terug.";
 
 /* Paragraph 3.4.d of the Readme screen */
-"Paragraph_3.4.d" = "De lijst met ongeveer 30 fotomusea kan eveneens uitgebreid worden zonder de app zelf aan te passen.";
+"Paragraph_3.4.d" = "Clubs, leden en foto’s toevoegen kan _zonder_ aanpassing van de app software. Dit gaat via aanpasbare online bestanden die de app vervolgens automatisch ophaalt.";
 
 /* Paragraph 3.5.a of the Readme screen */
 "Paragraph_3.5.a" = "__Fotomusea__";
 
 /* Paragraph 3.5.b of the Readme screen */
-"Paragraph_3.5.b" = "De landkaarten tonen ook een aantal fotomusea in landen zoals Nederland, VK, VS, Japan en Australië. Om ze te vinden moet de kaart van slot (=interactief) zijn zodat men kan uitzoomen.";
+"Paragraph_3.5.b" = "De landkaarten tonen ook een aantal fotomusea in landen waaronder Nederland, Engeland, America, Japan en Australië. Om ze te vinden moet de kaart van slot (=interactief) zijn zodat men kan uitzoomen.";
 
 /* Paragraph 3.5.c of the Readme screen */
-"Paragraph_3.5.c" = "Het toevoegen van een fotomuseum werkt net als het toevoegen van een Niveau 1 fotoclub.";
+"Paragraph_3.5.c" = "Het toevoegen van een fotomuseum werkt net als het toevoegen van een Niveau 1 fotoclub. Fotomusea hebben geen leden die foto's aanleveren, en hebben dus geen Niveau 2 of 3 gegevens.";
 
 /* Paragraph 3.6.a of the Readme screen */
-"Paragraph_3.6.a" = "__Clubleden, clubs en musea verwijderen__";
+"Paragraph_3.6.a" = "__Slim Scrollen__";
 
 /* Paragraph 3.6.b of the Readme screen */
-"Paragraph_3.6.b" = "Op het _Portfolio's_ scherm kan men een clublid en diens portfolio verwijderen door deze naar links te vegen. Op het _Clubs en Musea_ scherm kan men complete fotoclubs verwijderen.";
-
-/* Paragraph 3.6.c of the Readme screen */
-"Paragraph_3.6.c" = "Verwijderen heeft alleen blijvend effect als het clublid (of fotoclub) ook verwijderd is uit de respectievelijk online lijst.";
-
-/* Paragraph 3.6.d of the Readme screen */
-"Paragraph_3.6.d" = "In ieder geval kan lokaal verwijderen van informatie geen kwaad. Als alternatief kan met de app verwijderen en meteen opnieuw installeren. Hiermee wordt de interne appdata verwijderd en tijdens het opstarten van de app opnieuw geladen.";
+"Paragraph_3.6.b" = "Het _Clubs en Musea_ scherm and het _Namenlijst_ scherm ondersteunen zogenaamde _smart scrolling_. Smart scrolling is stapsgewijs uitgebracht in iOS 17 en 18. Dit voorkomt dat tijdens het scrollen, een lijst tot stilstand komt op onhandige locaties zodat men bijvoorbeeld een halve foto of landkaart ziet. Om technische redenen ondersteunt het _Portfolio’s_ scherm dit nog niet.";
 
 /* Paragraph 3.7.a of the Readme screen */
 "Paragraph_3.7.a" = "__Websites__";
 
 /* Paragraph 3.7.b of the Readme scree */
-"Paragraph_3.7.b" = "Omdat de websites van fotoclubs allerlei extra informatie bevatten, heeft de app links om dergelijke websites in een browser te openen. De app ondersteunt ook links naar eventuele eigen fotografie websites van fotografen.";
+"Paragraph_3.7.b" = "Omdat de websites van fotoclubs allerlei extra informatie bevatten, heeft de app links om dergelijke websites in de _Safari_ browser te openen. De app ondersteunt ook links naar eventuele eigen fotografie websites van fotografen.";
 
 /* Paragraph 3.8.a of the Readme screen */
 "Paragraph_3.8.a" = "__Het openingsbeeld__";
@@ -245,22 +245,22 @@
 "Paragraph_3.8.b" = "Na het opstarten van de app verschijnt er een beeld (\"_Prelude_\") dat afgeleid is van de app logo. Door herhaaldelijk binnen het centrale beeld te klikken, zoomt men in of uit. Uitgezoomd blijkt het beeld een foto te zijn met een maskerlaag met kleurenfilters.";
 
 /* Paragraph 3.8.c of the Readme screen */
-"Paragraph_3.8.c" = "Dit geheel geeft aan hoe digitale camera's kleur zien. Technisch heet dit een [Bayer kleurenfilter](https://en.wikipedia.org/wiki/Bayer_filter). Per lichtgevoelige cel worden bepaalde kleuren selectief tegengehouden. Een 24 MPixel full-frame camera heeft dus een raster van 4000 x 6000 minuscule kleurfilters.";
+"Paragraph_3.8.c" = "Dit geheel geeft aan hoe digitale camera's kleur zien. Technisch heet dit een [Bayer kleurenfilter](https://en.wikipedia.org/wiki/Bayer_filter). Per lichtgevoelige cel van de sensor worden bepaalde kleuren selectief tegengehouden. Een 24 MPixel full-frame camera heeft dus een raster van 4000 x 6000 onzichtbaar kleine kleurfiltertjes.";
 
 /* Paragraph 3.8.d of the Readme screen */
-"Paragraph_3.8.d" = "Er is een knop rechtsonder waarmee men de __animatie afbreekt of overslaat__. Het aanraken van iedere andere plek buiten de centrale vierkant werkt ook.";
+"Paragraph_3.8.d" = "Er is een knop rechtsonder waarmee men de __animatie afbreekt__. Het aanraken van iedere andere plek buiten de centrale vierkant werkt ook.";
 
 /* Paragraph 3.8.e of the Readme screen */
-"Paragraph_3.8.e" = "De getoonde animatie wordt overigens uitgerekend op beschikbare GPU cores in uw apparaat. De animatie is geen video: men kan de lopende animatie een beetje bijsturen.";
+"Paragraph_3.8.e" = "De getoonde animatie wordt overigens uitgerekend op de beschikbare GPU rekenkernen in het apparaat. De animatie is geen video: men kan de lopende animatie live beïnvloeden.";
 
 /* Paragraph 3.9.a of the Readme screen */
 "Paragraph_3.9.a" = "__Voormalige leden__";
 
 /* Paragraph 3.9.b of the Readme screen */
-"Paragraph_3.9.b" = "De app kan het werk van voormalig clubleden tonen. Dit werk is standaard onzichtbaar, maar kan bij _Instellingen_ aangezet worden.";
+"Paragraph_3.9.b" = "De app kan het werk van voormalig clubleden tonen. Ex-leden zijn standaard onzichtbaar, maar kunnen onder _Instellingen_ zichtbaar gemaakt worden.";
 
 /* Paragraph 3.9.c of the Readme screen */
-"Paragraph_3.9.c" = "Een makkelijk manier om recente ex-leden binnen de app te houden is om ze niet te wissen zodra ze vertrekken. In de ledenlijst kan aangegeven worden of iemand lid of ex-lid is.";
+"Paragraph_3.9.c" = "Een makkelijk manier om gegevens van recente ex-leden binnen de app te krijgen is om ze gewoon niet te wissen zodra deze leden vertrekken. In de ledenlijst (Niveau 2) kan aangegeven worden of iemand lid of ex-lid is.";
 
 /* Paragraph 3.10.a of the Readme screen */
 "Paragraph_3.10.a" = "__Automatische afspelen__";
@@ -275,10 +275,10 @@
 "Paragraph_3.11.a" = "__Zoekfunctie__";
 
 /* Paragraph 3.11.b of the Readme screen */
-"Paragraph_3.11.b" = "Bovenaan schermen met lijsten is er een invoerveld om binnen de lijst snel te kunnen zoeken. Op een iPhone wordt het _Zoeken_ invoerveld pas getoond zodra men helemaal naar de bovenkant van de lijst gaat.";
+"Paragraph_3.11.b" = "Bovenaan schermen met lijsten is er een invoerveld om binnen de lijst snel te kunnen zoeken. Op een iPhone wordt het invoerveld om te _Zoeken_ pas getoond als men helemaal naar de bovenkant van de lijst gaat.";
 
 /* Paragraph 3.11.c of the Readme screen */
-"Paragraph_3.11.c" = "Op de _Portfolio's_ en _Namenlijst_ schermen wordt er op de naam van fotografen gezocht. Op het _Clubs en Musea_ scherm wordt er gelijktijdig op clubnaam, museumnaam en locatie gezocht.";
+"Paragraph_3.11.c" = "Op de _Portfolio's_ en _Namenlijst_ schermen wordt er op de naam van fotografen gezocht. Op het _Clubs en Musea_ scherm wordt er gelijktijdig op clubnaam (of museumnaam) en locatie gezocht.";
 
 /* First paragraph SupportedPlatforms section of Readme page */
 "Paragraph_4.1" = "_Fotoclub Hub_ vereist een recente versie van iOS. In de praktijk betekent dit dat toestellen die niet ouder zijn dan een jaar of 6 de nieuwste app versies kunnen draaien.";
@@ -287,25 +287,25 @@
 "Paragraph_4.2" = "Om praktische redenen is de app geoptimaliseerd voor __iPhone__ en __iPad__. De app kan overigens ook draaien onder MacOS en VisionOS.";
 
 /* Third paragraph SupportedPlatforms section of Readme page */
-"Paragraph_4.3" = "Ofschoon de app vooralsnog geen ondersteuning heeft voor Android of andere niet-Apple telefoons, overwegen wij om ondersteuning te bieden voor het automatisch genereren van website pagina's vanuit dezelfde informatie die de app gebruikt. Dit help om club websites bijgewerkt te houden, maar maakt het ook mogelijk om de clublijst, ledenlijst en portfolio's in een web browser te bekijken op mobile apparaten (__Android__), PCs (__Windows__) en meer.";
+"Paragraph_4.3" = "Ofschoon de app vooralsnog geen ondersteuning heeft voor Android of andere niet-Apple telefoons, overwegen wij dit straks via een omweg te doen: het automatisch genereren van website pagina's vanuit dezelfde informatie die de app gebruikt. Dit help om club websites bijgewerkt te houden, maar maakt het ook mogelijk om de clublijst, ledenlijst en portfolio's in een web browser te bekijken op mobile apparaten (__Android__), PCs (__Windows__) of zelfs Linux.";
 
 /* Fourth paragraph SupportedPlatforms section of Readme page */
 "Paragraph_4.4" = "Dit soort uitbreidingen zal afhangen van de belangstelling in de app en van hulp vanuit de _Open Source_ gemeenschap.";
 
 /* First paragraph Developers section of Readme page */
-"Paragraph_5.1" = "Om zelf een __fotoclub toe te voegen__ (voor alle gebruikers) zijn bepaalde gegevens nodig. Dit gaat in __3 Niveaus__ die men kan zien als etages in een trappenhuis: een club kan geen niveau overslaan, maar kan een tijd op een Niveau verblijven om pas later naar het volgende Niveau te gaan. Op GitHub staat een uitgebreidere engelstalige [README](https://github.com/vdhamer/Photo-Club-Hub/blob/main/.github/README.md).";
+"Paragraph_5.1" = "Om zelf een __fotoclub toe te voegen__ aan de app zijn bepaalde gegevens nodig. Dit gaat in __3 Niveaus__ die men kan zien als etages in een trappenhuis: een club kan geen niveau overslaan, maar kan een tijd op een Niveau verblijven om pas later naar het volgende Niveau te gaan. Op GitHub staat een uitgebreide engelstalige [README](https://github.com/vdhamer/Photo-Club-Hub/blob/main/.github/README.md) met details hierover.";
 
 /* Second paragraph Developers section of Readme page */
-"Paragraph_5.2" = "__Niveau 1__ informatie dekt de naam en locatie van de club af. Zodra Niveau 1 gegevens beschikbaar zijn, wordt de club zichtbaar in de clublijst op het _Clubs en Musea_ scherm. Verder wordt de club hier letterlijk “op de kaart gezet”. _Fotoclub de Soos_ in Grave is een goed voorbeeld van een Niveau 1 club. Wij kunnen deze gegevens voor een club handmatig aan de centrale clublijst toevoegen als U ons die gegevens stuurt. Wij zien echter liever dat een club of misschien zelfs een _Fotobond_ regio deze gegevens via een GitHub “pull request” aanbiedt. GitHub is weliswaar voor de meesten een geheel nieuw kunstje, maar dit zorgt dat clubs hun invoer en latere wijzigingen in eigen hand houden. Dit verkleint de kans op misverstanden, vergissingen en vertragingen.";
+"Paragraph_5.2" = "__Niveau 1__ informatie dekt de naam en locatie van de club af. Zodra Niveau 1 gegevens beschikbaar zijn, wordt de club zichtbaar in de clublijst op het _Clubs en Musea_ scherm. Verder wordt de club hier letterlijk “op de kaart gezet”. _Fotoclub de Soos_ in Grave is een goed voorbeeld van een Niveau 1 club. Wij kunnen deze gegevens voor een club handmatig aan de centrale clublijst toevoegen als U ons die gegevens stuurt. Wij zien echter liever dat een club of misschien zelfs een _Fotobond_ regio deze gegevens via een GitHub “pull request” aanbiedt. GitHub is weliswaar voor fotografen een geheel onbekende wereld, maar dit zorgt dat clubs hun invoer en latere wijzigingen in eigen hand houden. Dit verkleint de kans op misverstanden, vergissingen en vertragingen.";
 
 /* Third paragraph Developers section of Readme page */
-"Paragraph_5.3" = "__Niveau 2__ bestaat uit de __ledenlijst__ in de vorm van een JSON tekstbestand. Het bestand kan op een willekeurige plek online gezet worden. De app haalt het bestand op via een webadres. Wij zijn bezig met het Niveau 2 proces te stroomlijnen. Wij zullen documenteren hoe men de ledenlijst kan aanbieden via een _Wordpress_ club website. _Fotogroep Anders_ in Eindhoven is een goed voorbeeld van een Niveau 2 club: het _Portfolio’s_ scherm laat alle vier clubleden zien.";
+"Paragraph_5.3" = "__Niveau 2__ bestaat uit de __ledenlijst__ in de vorm van een JSON tekstbestand. Het bestand kan op een willekeurige locatie online gezet worden. De app haalt het bestand op via een webadres. Wij zijn bezig met het Niveau 2 proces te stroomlijnen. Wij zullen documenteren hoe men de ledenlijst kan aanbieden via een _Wordpress_ club website. _Fotogroep Anders_ in Eindhoven is een goed voorbeeld van een Niveau 2 club: het _Portfolio’s_ scherm laat alle vier clubleden zien.";
 
 /* Fourth paragraph Developers section of Readme page */
-"Paragraph_5.4" = "__Niveau 3__ bestaat uit het beschikbaar stellen van de eigenlijke ledenportfolio’s. Een goed voorbeeld is _Fotogroep Waalre_: de portfolio’s van leden en recente ex-leden zijn via het _Portfolio’s_ scherm bereikbaar. Omdat een club met tientallen leden vaak honderden foto’s wil laten zien, is het genereren van online portfolio's via een _Lightroom_ plug-in geautomatiseerd. Gedetailleerde instructies hierover staan in de uitgebreidere [README](https://github.com/vdhamer/Photo-Club-Hub/blob/main/.github/README.md).";
+"Paragraph_5.4" = "__Niveau 3__ bestaat uit het beschikbaar stellen van de eigenlijke ledenportfolio’s. Een goed voorbeeld is _Fotogroep Waalre_: de portfolio’s van leden en recente ex-leden zijn via het _Portfolio’s_ scherm bereikbaar. Omdat een club met tientallen leden vaak honderden foto’s wil tonen, is het genereren van online portfolio's via een _Lightroom_ plug-in geautomatiseerd. Gedetailleerde instructies hierover staan in de uitgebreidere [README](https://github.com/vdhamer/Photo-Club-Hub/blob/main/.github/README.md).";
 
 /* Fifth paragraph Developers section of Readme page */
-"Paragraph_5.5" = "Afgezien van het toevoegen van clubs, kunnen wij andere hulp heel goed gebruiken. Voorbeelden van __niet-technische hulp__ zijn het testen van de app, schrijven van FAQs en instructies, en uiteraard ideeën. De app is open source (via [GitHub](https://github.com/vdhamer/Photo-Club-Hub)) om __hulp bij de softwareontwikkeling__ mogelijk te maken. Voorbeelden zijn uitbreidingen, bugs oplossen, technisch meedenken, of zelfs aanvullende programma’s (b.v. om gegevensinvoer simpeler te maken).";
+"Paragraph_5.5" = "Afgezien van het toevoegen van clubs, kunnen wij andere hulp heel goed gebruiken. Voorbeelden van __niet-technische hulp__ zijn het testen van de app, schrijven van FAQs en instructies, en uiteraard ideeën. De app is open source (via [GitHub](https://github.com/vdhamer/Photo-Club-Hub)) om __hulp bij de softwareontwikkeling__ mogelijk te maken. Voorbeelden van technische hulp zijn software uitbreidingen, bugs oplossen, technisch meedenken, of zelfs aanvullende programma’s (b.v. om gegevensinvoer simpeler te maken).";
 
 /* Telephone number (usually invisible) */
 "Phone:" = "Tel:";
@@ -322,6 +322,7 @@
 /* Shown in gray at the bottom of the Clubs and Museums page (2/3). */
 "PhotoClubs_Caption_2" = "② Er is een Zoekveld bovenaan het scherm. Hiermee kunnen clubs en musea gevonden worden door hun naam of locatie in te voeren.";
 
+/* Shown in gray at the bottom of the Clubs and Museums page (3/3). */
 "PhotoClubs_Caption_3" = "③ Het slotje kan gebruikt worden om deze landkaarten sleepbaar en inzoombaar/uitzoombaar te maken.";
 
 /* Title of page showing member portfolios */
@@ -382,7 +383,7 @@
 "shown" = "getoond";
 
 /* Section title on Readme page */
-"Supported Platforms" = "iOS, iPadOS";
+"Supported Platforms" = "iOS en iPadOS";
 
 /* Section title on Readme page */
 "The App" = "Overzicht";
@@ -391,7 +392,7 @@
 "The Concept" = "Het Concept";
 
 /* Caption of an image on the Readme page */
-"The Preferences screen." = "Het Instellingen scherm.";
+"The Preferences screen." = "Het Instellingen scherm in de app zelf.";
 
 /* Section title on Readme page */
 "The Prelude" = "Prelude";

@@ -10,6 +10,10 @@ Clubs and Museums screen
 * Added smart scrolling with optimization for iOS 18.
 * Updated notes at bottom of screen.
 
+Readme screen
+* Removed text about deleting elements by swiping left. 
+* General cleanup of EN and NL texts.
+
 Settings App
 * Minor text change
 

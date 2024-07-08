@@ -130,8 +130,6 @@ struct ReadmeView: View {
 
                             Paragraph("3.6.a", comment: "Paragraph 3.6.a of the Readme screen", geo: geo)
                             Paragraph("3.6.b", comment: "Paragraph 3.6.b of the Readme screen", geo: geo)
-                            Paragraph("3.6.c", comment: "Paragraph 3.6.c of the Readme screen", geo: geo)
-                            Paragraph("3.6.d", comment: "Paragraph 3.6.d of the Readme screen", geo: geo)
 
                             Paragraph("3.7.a", comment: "Paragraph 3.7.a of the Readme screen", geo: geo)
                             Paragraph("3.7.b", comment: "Paragraph 3.7.b of the Readme screen", geo: geo)
@@ -187,7 +185,7 @@ struct ReadmeView: View {
                                 .border(.gray, width: 1)
                                 .scaledToFit()
                                 .frame(width: geo.size.width * 0.8, height: 300, alignment: .center)
-                            Text("Button for automatic slide show",
+                            Text("Buttons for the automatic slide show",
                                  comment: "Caption about Play button on the Readme page")
                             .font(.callout.italic())
                             .frame(width: geo.size.width * 0.8, alignment: .center)
@@ -247,7 +245,7 @@ struct ReadmeView: View {
                                     .border(.gray, width: 1)
                                     .scaledToFit()
                                     .frame(width: geo.size.width * 0.8, alignment: .center)
-                                Text("Level 1 support for a Dutch photo club",
+                                Text("Configuring Level 1 data for a Dutch photo club",
                                      comment: "Caption for image on Readme page")
                                     .font(.callout.italic())
                                     .frame(width: geo.size.width, alignment: .center)
