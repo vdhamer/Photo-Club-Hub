@@ -53,7 +53,7 @@
 "Birthday unknown" = "Birthday unknown";
 
 /* Caption about Play button on the Readme page */
-"Button for automatic slide show" = "Button for automatic slide show";
+"Buttons for the automatic slide show" = "Buttons for the automatic slide show";
 
 /* Administrative role of member within a club. Used as part of concatenations. */
 "chairman" = "chairman";
@@ -63,6 +63,9 @@
 
 /* Section title on Readme page */
 "Concept" = "The concept";
+
+/* Caption for image on Readme page */
+"Configuring Level 1 data for a Dutch photo club" = "Configuring Level 1 data for a Dutch photo club";
 
 /* Section footer text Portfolios screen */
 "Data source: %@://%@%@/" = "Data source: %@://%@%@/";

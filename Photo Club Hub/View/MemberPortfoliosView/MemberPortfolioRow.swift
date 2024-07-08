@@ -75,8 +75,9 @@ struct MemberPortfolioRow: View {
     }
 }
 
-// struct MemberPortfolioRow_Previews: PreviewProvider {
-//    static var previews: some View {
-//        MemberPortfolioRow()
-//    }
-// }
+ struct MemberPortfolioRow_Previews: PreviewProvider {
+    static var previews: some View {
+        let member = MemberPortfolio() // compiles but doesn't really work
+        MemberPortfolioRow(member: member, wkWebView: WKWebView())
+    }
+ }

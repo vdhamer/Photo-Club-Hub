@@ -97,11 +97,6 @@
         <target>Birthday unknown</target>
         <note>If photographer's birthday info is unavailable (Who's Who screen).</note>
       </trans-unit>
-      <trans-unit id="Button for automatic slide show" xml:space="preserve">
-        <source>Button for automatic slide show</source>
-        <target>Button for automatic slide show</target>
-        <note>Caption about Play button on the Readme page</note>
-      </trans-unit>
       <trans-unit id="Buttons for the automatic slide show" xml:space="preserve">
         <source>Buttons for the automatic slide show</source>
         <target>Buttons for the automatic slide show</target>

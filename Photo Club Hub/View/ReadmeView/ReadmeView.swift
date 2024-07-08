@@ -353,7 +353,7 @@ struct ReadmeView: View {
 
 }
 
-struct ReadmeView_Previews: PreviewProvider {
+struct ReadmeView_Previews: PreviewProvider { // This preview actually works reliably (most don't, for some reason)
     @State static private var title = "Info Preview"
 
     static var previews: some View {

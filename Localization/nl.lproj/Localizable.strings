@@ -53,7 +53,7 @@
 "Birthday unknown" = "Verjaardag onbekend";
 
 /* Caption about Play button on the Readme page */
-"Button for automatic slide show" = "De knop om beelden automatisch af te spelen";
+"Buttons for the automatic slide show" = "Knoppen om beelden automatisch af te spelen";
 
 /* Caption about Play button on the Readme page */
 "Buttons for the automatic slide show" = "Knopjes om de beelden automatisch te doorlopen";
@@ -71,7 +71,7 @@
 "Concept" = "Het concept";
 
 /* Caption for image on Readme page */
-"Configuring Level 1 data for a Dutch photo club" = "Sjablook voor het toevoegen van een fotoclub op Niveau 1";
+"Configuring Level 1 data for a Dutch photo club" = "Sjabloon voor het toevoegen van een fotoclub op Niveau 1";
 
 /* Section footer text Portfolios screen */
 "Data source: %@://%@%@/" = "Bron: %@://%@%@/";

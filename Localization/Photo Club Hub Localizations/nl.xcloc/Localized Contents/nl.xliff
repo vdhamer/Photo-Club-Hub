@@ -97,11 +97,6 @@
         <target>Verjaardag onbekend</target>
         <note>If photographer's birthday info is unavailable (Who's Who screen).</note>
       </trans-unit>
-      <trans-unit id="Button for automatic slide show" xml:space="preserve">
-        <source>Button for automatic slide show</source>
-        <target>De knop om beelden automatisch af te spelen</target>
-        <note>Caption about Play button on the Readme page</note>
-      </trans-unit>
       <trans-unit id="Buttons for the automatic slide show" xml:space="preserve">
         <source>Buttons for the automatic slide show</source>
         <target>Knopjes om de beelden automatisch te doorlopen</target>
@@ -119,7 +114,7 @@
       </trans-unit>
       <trans-unit id="Configuring Level 1 data for a Dutch photo club" xml:space="preserve">
         <source>Configuring Level 1 data for a Dutch photo club</source>
-        <target>Sjablook voor het toevoegen van een fotoclub op Niveau 1</target>
+        <target>Sjabloon voor het toevoegen van een fotoclub op Niveau 1</target>
         <note>Caption for image on Readme page</note>
       </trans-unit>
       <trans-unit id="Data source: %@://%@%@/" xml:space="preserve">
