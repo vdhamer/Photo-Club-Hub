@@ -35,7 +35,7 @@
             <li><a href="#multi-club-support">Multi-club Support</a></li>
             <li><a href="#searchable-lists">Searchable Lists</a></li>
             <li><a href="#photo-museums">Photo Museums</a></li>
-            <li><a href="#swipe-to-delete">Swipe to Delete</a></li>
+            <li><a href="#Pull-down-to-refresh">Pull down to Refresh</a></li>
         </ul>
     </details>
     <details open><summary><a href="#adding-photo-clubs-to-the-app">Adding Photo Clubs to the App</a></summary>
@@ -354,36 +354,38 @@ You are welcome to add a favorite photo museum via a GitHub Pull Request. It onl
 The file format is documented below under [How Data is Loaded](#how-data-is-loaded).
 </details>
 
-### Swipe to Delete
+### Pull down to Refresh
 
-</p>Items on the `Portfolios`, `Clubs and Museums` and `Who's Who` lists can be deleted by swiping them to the left.
-This is seldom needed, but is harmless because all key data gets reloaded from online servers regularly.
+</p>The top of the `Portfolios`, `Clubs and Museums` and `Who's Who` screens can be swiped down to refresh all data in the app's database.
+This is seldom needed, but can be used to refresh the data that has been downloaded in the past. The effect is similar to closing and reopening the app, but this pull down gesture first erases all data in the database before reloading.
 </p>
 
-<details><summary>Details on Deletion (click to expand)</summary></p>
+<details><summary>Details on Refreshing data (click to expand)</summary></p>
 Whenever the app is launched, it fetches up-to-date information from online servers. The use of online data ensures that the app
 stays up-to-date with respect to the latest lists of clubs/museums (`Level 1`), club members (`Level 2`) and member portfolios (`Level 3`).</p>
 
-This fresh online data is merged with an on-device (`CoreData`) database which contains a copy of the data as received during previous app runs.
-The merging updates the database. 
-The database incidentally allows the app to display information without having to wait for the update processes to complete. 
+The newely fretched online data is merged with an on-device (`CoreData`) database which contains a copy of the data
+as received during previous app runs. The merging updates the database. 
+The database incidentally allows the app to display information while data gets updated in the background. 
 The app's user interface immediately reflects any background updates to the database.</p>
 
-This means that deletion of local data will typically be temporary: the next time the app launches, it finds and reloads the records that are missing in the local database.</p>
+A problem could occur when a club (or museum or member) is deleted in the online version of the information.
+Let's say, to be more precise, that the club's identifying name or town got edited in the Level 1 list.
+This means that the app no longer finds the club under its original name in the online list, and instead finds a new club with a different name or town.
+Unfortunately app has now way of knowing that the new club is considered the replacement of the disappeared club.
+So as far as the app is concerned the original club vanished and a new club disappared as two separate events.
+The new club will be loaded without a problem. But the app currently doesn't detect the disappearance of the orignal club record.</p>
 
-A problem (currently) occurs when an item (e.g. club, member, museum, photographer) is deleted in the online version of the information. 
-This could happen if a club terminates itself, and the club is removed from the `Level 1` list (instead of changing all members to `former` members).
-A similar problem occurs if a club's `fullName` or `town` fields change (e.g. fixing a typo); these are identifying attributes.
-Therefore the app no longer finds the "old" club on the online list, and finds a "new" club instead.
-The app has now way of knowing that one club is a replacement for the other.
-So the "new" club will be loaded correctly, without (in the current code) removing the "old" club in the database.
-This resulting in having two clubs with similar naming instead of one.</p>
+In the future we plan to add detection of clubs (or musea or members...) that were once loaded, but are now gone from the online data.</p>
 
-A temporary workaround is to manually delete the old/incorrect club. In the future this can be automated by detecting items that
-are in the local database, but are no present anymore inn the online lists.</p>
+A temporary workaround is to use the _pull down to refresh_ feature: 
+it simply deletes the entire content of the database and then reloads it -
+thereby ensuring that the device's internal (CoreData) database matches the online data without any stray records from the past.
+Alternatively, the user could delete the app entirely, download the app again.
+When the app is started it then has an empty database which gets filled from the online data.</p>
 
-Although swipe-to-delete can get the local database back in sync with the online data, a user may prefer a simpler brute force route:
-simply uninstall the app (thus deleting its local database), reinstall the app and then let it automatically load the online data.
+An alternative use of _pull down to refresh_ is to force a reload of the online data if you just edited that data.
+It saves closing and reopening the app, and ensures that is no stray data from say earlier versions of the online file.
 </details>
 </ul>
 <p align="right">(<a href="#top">back to top</a>)</p>
