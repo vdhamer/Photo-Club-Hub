@@ -365,7 +365,7 @@ but the pull down gesture erases the entire content of the database before downl
 <details><summary>Details on Refreshing data (click to expand)</summary></p>
 Whenever the app is launched, it fetches up-to-date information from online servers.
 The use of online data ensures that the app stays up-to-date with respect to the latest lists
-of clubs/museums (`Level 1`), club members (`Level 2`) and portfolio photos (`Level 3`).</p>
+of clubs/museums (`Level 1`), club members (`Level 2`) and their portfolio photos (`Level 3`).</p>
 
 The newely fretched online data is merged with an on-device (`CoreData`) database which contains a copy of the data
 as received during previous app runs. The merging updates the database. 
