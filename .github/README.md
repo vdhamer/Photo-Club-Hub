@@ -373,22 +373,23 @@ The database incidentally allows the app to display information while data gets 
 The app's user interface immediately reflects any background updates to the database.</p>
 
 A problem could occur when a club (or museum or member) is deleted in the online version of the information.
-Let's say, to be more precise, that the club's identifying name or town got edited in the Level 1 list.
-This means that the app no longer finds the club under its original name in the online list, and instead finds a new club with a different name or town.
-Unfortunately app has now way of knowing that the new club is considered the replacement of the disappeared club.
-So as far as the app is concerned the original club vanished and a new club disappared as two separate events.
-The new club will be loaded without a problem. But the app currently doesn't detect the disappearance of the orignal club record.</p>
+Let's say, for example, that the club's identifying name or town got edited in the `Level` 1 list.
+This means that the online list no longer contains the club under its original name,
+but instead contains a different club with a another name/town combination.
+Unfortunately the app has now way of knowing that the seemingly new club is actually a replacement of an older club.
+So -as far as the app is concerned- the original club vanished and a new club appeared as two separate events.
+The new club will be loaded, which is fine. But the app currently doesn't detect the disappearance of the orignal club.</p>
 
-In the future we plan to add detection of clubs (or musea or members...) that were once loaded, but are now gone from the online data.</p>
+In the future we plan to add detection of clubs (or musea or members...) 
+that were once loaded, but are now gone from the online data.</p>
 
 A temporary workaround is to use the _pull down to refresh_ feature: 
 it simply deletes the entire content of the database and then reloads it -
-thereby ensuring that the device's internal (CoreData) database matches the online data without any stray records from the past.
-Alternatively, the user could delete the app entirely, download the app again.
-When the app is started it then has an empty database which gets filled from the online data.</p>
+thereby ensuring that the device's internal (CoreData) database is again in sync with the online data.
+Alternatively, the user could delete the app and reinstall it. This also deletes the app's data and triggers reloading.</p>
 
-An alternative use of _pull down to refresh_ is to force a reload of the online data if you just edited that data.
-It saves closing and reopening the app, and ensures that is no stray data from say earlier versions of the online file.
+An alternative use of _pull down to refresh_ is to force a reload of online data if you happen to know that it just changed.
+It forces immediate resynchronization, instead of waiting until the app happens to be restarted.
 </details>
 </ul>
 <p align="right">(<a href="#top">back to top</a>)</p>
