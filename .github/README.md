@@ -616,22 +616,22 @@ Here is an example of the format of a `Level 2` list for a photo club. This exam
     - `infixName` will often be empty. It enables correctly sorting European surnames: "van Aalst" sorts like "Aalst" in the _Who's Who_ screen.
         - An omitted "infixName" is interpreted as "infixName" = "".
     - the `level3URL` field allows the app to find the Level 3 information with the selected images for this member.</p>
-    - the `roles` field indicates whether a member fullfills a role as a club officer (e.g. chairman). If a given `role` is not mentioned, the default value is `false` is used. Many `members` have an empty or even absent `roles` section. Some `members` may have multiple roles (e.g., `secretary` and `admin`).
-    - the `stat` entries indicate a member's status in the club. If `stat` is missing, all values default to `false'.
-    - `isFormerMember` can be set to true if the person left the club and the club wants to keep that member's Portfolio visible. The user interface will state `former member` where applicable. By default (see Settings) former members are not shown. When shown, users see "Former member of <club>".
-    - `isDeceased` is a special variant of `isFormerMember`. If deceased members are not removed from the level2.json list, this allows the user interface to indicate this. By default (see Settings) former and deceased members are not shown. When shown, users see "Deceased, former member of <club>" and the text is shown in a different color.
-    - `isHonaryMember` can be used if the person is no longer an active member, but is still treated as a member (e.g., after retiring) because of past achievements. Most clubs will not need this feature.
+    - the `roles` field indicates whether a member fullfills a role as a club officer (e.g. chairman). If a given `role` is not mentioned, a default value of `false` is assumed. Many `members` have an empty or even absent `roles` section. Some `members` may have multiple roles (e.g., `secretary` and `admin`).
+    - the `status` entries indicate a member's status in the club. If a given `status` is not mentioned, a default value of `false` is assumed. Many `members` have an empty or even absent `status` section. Some `members` may have multiple special statuses (e.g., `former` and `honorary`).
+    - `isFormerMember` can be set to true if the person left the club and the club wants to keep that member's Portfolio visible. The user interface will state `former member` where applicable. By default (see Preferences) former members are not shown. When shown, users see "Former member of <clubname>". The user interface can generate text for more complex cases like "Former honorary member of <clubname>".
+    - `isDeceased` is a special variant of `isFormerMember`. If deceased members are not removed from the level2.json list, this allows the user interface to indicate this. By default (see Preferences) former and deceased members are not shown. When shown, users see "Deceased, former member of <club>" and the text is shown in a different color.
+    - `isHonaryMember` can be used if the person is no longer an active member, but is still treated as a member (e.g., after retiring) because of past achievements. Most clubs won't need this feature.
     - `isMentor` is for coaches who coach or previously (`isFormerMember` to `true`) coached the club. They can have a Portfolio (e.g. with pictures of them or pictures of their own work).
-    - `isProspectiveMember` is a possible future member who is currently participating in some of the club activities, but is formally not a member yet. Most clubs will not need this feature.
+    - `isProspectiveMember` is a possible future member who is currently participating in some of the club activities, but isn't formally a member yet. Most clubs won't need this feature.
     - `birthday` can be the full date of birth but currently only the month and date are shown in the user interface. So you can provide a dummy year (like `9999`) if that is preferred.
-    - `website` is a personal photography-related website. If available, the app provides a link to the website.
-    - `featuredImage` is a URL to a single image that can be shown beside the member's name in the membership list. It is visible in the `Portfolios` screen and the `Who's Who` screen.
-    - `level3URL` is URL to a file containing selected images made by this particular member in the context of a given photo club.</p>
+    - `website` is a personal photography-related website. If the website URL is available, the app provides a link to it.
+    - `featuredImage` is a URL to a single image that can be shown beside the member's name. It is visible in the `Portfolios` screen and the `Who's Who` screen.
+    - `level3URL` is URL to a file containing the selected portfolio images made by this particular member in the context of a given photo club.</p>
  
 > Note that the `birthday`, `website`, and `isDeceased` fields are technically special because they describe the photographer - and not the photographer as a member of a particular club. 
 > Usually this doesn't matter, but it can show up if the photographer is associated with **multiple** clubs, each with its own level2.json file (for example, a former photo club and the current photo club).
-> Conceivably these multiple files may not agree on the value of `birthday`, `website` or `isDeceased`. The app currently will select the last answer it encountered.
-> The problem should be very infrequent, but a workaround is to only fill in these fields in one of the level2.json files. In the future, we could implement software rules governing which answers to use if the files don't match.
+> Conceivably these multiple files may not agree on the value of `birthday`, `website` or `isDeceased`. The app currently will use the last answer it encountered.
+> This problem should occur infrequently, but a workaround is to only fill in these fields in one of the level2.json files. In the future, we could add rules to determine what to do if there are multiple different values for these fields (e.g. membership trumps former membership).
 
 </details></ul>
 
