@@ -357,14 +357,15 @@ The file format is documented below under [How Data is Loaded](#how-data-is-load
 ### Pull down to Refresh
 
 The top of the `Portfolios`, `Clubs and Museums` and `Who's Who` screens can be swiped down to refresh all data in the app's database.
-This is seldom needed, but can be used to get rid of on-device database records that were downloaded earlier.
-The effect is similar to closing and reopening the app,
-but the pull down first erases all data in the database before re-downloading all required data from online files.
+Refreshing is seldom needed, but can be used to get rid of on-device database records that were downloaded earlier
+but are no longer required. The effect is similar to closing and reopening the app,
+but the pull down erases the entire content of the database before re-downloading all required data from online files.
 </p>
 
 <details><summary>Details on Refreshing data (click to expand)</summary></p>
-Whenever the app is launched, it fetches up-to-date information from online servers. The use of online data ensures that the app
-stays up-to-date with respect to the latest lists of clubs/museums (`Level 1`), club members (`Level 2`) and member portfolios (`Level 3`).</p>
+Whenever the app is launched, it fetches up-to-date information from online servers.
+The use of online data ensures that the ap stays up-to-date with respect to the latest lists
+of clubs/museums (`Level 1`), club members (`Level 2`) and portfolio photos (`Level 3`).</p>
 
 The newely fretched online data is merged with an on-device (`CoreData`) database which contains a copy of the data
 as received during previous app runs. The merging updates the database. 
