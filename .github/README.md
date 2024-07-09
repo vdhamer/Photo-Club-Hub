@@ -602,7 +602,7 @@ Here is an example of the format of a `Level 2` list for a photo club. This exam
 - `club` has the same structure as a single `club` record from the `root.level1.json` file. It serves to label the `Level2` file so you can tell which club it belongs to.
   - the `town` and `fullName` fields are required.
   - `town` and `fullName` must exactly match the corresponding fields in the `root.level1.json` file.
-- `members` is a container that holds current and past members. Each `member` correspond to an instance of the `MemberPortfolio` class in the CoreData database.</p>
+- `members` is a list with the club's current and optionally former members. Each `member` corresponds to an instance of the `MemberPortfolio` class in the CoreData database.</p>
 
 </details></ul>
 
