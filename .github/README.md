@@ -356,7 +356,8 @@ The file format is documented below under [How Data is Loaded](#how-data-is-load
 
 ### Pull down to Refresh
 
-</p>The top of the `Portfolios`, `Clubs and Museums` and `Who's Who` screens can be swiped down to refresh all data in the app's database.
+</p>
+The top of the `Portfolios`, `Clubs and Museums` and `Who's Who` screens can be swiped down to refresh all data in the app's database.
 This is seldom needed, but can be used to refresh the on-device data that was downloaded earlier. The effect is similar to closing and reopening the app, but the pull down first erases all data in the database before re-downloading all required data from online files.
 </p>
 
