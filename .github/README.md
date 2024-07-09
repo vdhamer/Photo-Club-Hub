@@ -538,7 +538,7 @@ You can indentally check the basic syntax of JSON files using online JSON valida
 This file can be stored anywhere - providing that it can be accessed using a web address (URL).
 For example, you can store it in the Media section of your club’s Wordpress web site using Wordpress' built-in uploading capability.
 With this `Level 2` data, the club members show up in the Portfolios screen.
-_Fotogroep Anders_ in the Netherlands is a good example of a `Level 2` club. We are currently simplifying `Level 2` support.<\p>
+_Fotogroep Anders_ in the Netherlands is a good example of a `Level 2` club. We are currently simplifying `Level 2` support.</p>
 
 Each `Level 2` JSON file lists the current (and potentially former) members of a single club.
 For each member, a URL is stored pointing to the `Level 3` file (portfolio per member).
