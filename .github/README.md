@@ -356,11 +356,11 @@ The file format is documented below under [How Data is Loaded](#how-data-is-load
 
 ### Pull down to Refresh
 
-The top of the `Portfolios` screen, `Clubs and Museums` screen and the `Who's Who` screen
-can be swiped down to refresh all data in the app's database.
-Refreshing is usually not needed, but can be used to get rid of on-device database records that were downloaded earlier
-but are no longer required. The effect is similar to closing and reopening the app,
-but the pull down gesture also erases the content of the database before downloading the database content again.
+The top of the `Portfolios` screen as well as two other screens can be dragged down to force a refresh of all app data.
+Refreshing is usually not needed, but can be used to remove database records
+that were downloaded earlier but are no longer in use.
+The feature is a fast alternative to uninstalling and reinstalling the app:
+the database gets cleared and the missing data immediately gets downloaded again.
 </p>
 
 <details><summary>Details on Refreshing data (click to expand)</summary></p>
