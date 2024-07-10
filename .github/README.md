@@ -392,7 +392,7 @@ Another application of _pull down to refresh_ is to force a reload of online dat
 
 ### Fancy scrolling
 
-The _Clubs and Museums_ and _Who's Who_ screens try to prevent showing partially visible maps or photographer information.
+The _Clubs and Museums_ and _Who's Who_ screens try to prevent showing partial maps or partial photographer info.
 </p>
 
 <details><summary>Details about smart scrolling</summary></p>
