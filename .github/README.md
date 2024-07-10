@@ -364,33 +364,29 @@ but the pull down gesture also erases the content of the database before downloa
 </p>
 
 <details><summary>Details on Refreshing data (click to expand)</summary></p>
-Whenever the app is launched, it fetches up-to-date information from online servers.
-The use of online data ensures that the app stays up-to-date with respect to the latest lists
-of clubs/museums (`Level 1`), club members (`Level 2`) and their portfolio photos (`Level 3`).</p>
+Whenever the app is launched, it fetches fresh information from online servers.
+The use of online data ensures that the app stays up-to-date with respect to the online lists
+with clubs and museums (`Level 1`), club members (`Level 2`) and portfolio photos (`Level 3`).</p>
 
-The newely fretched online data is merged with an on-device (`CoreData`) database which contains a copy of the data
-as received during previous app runs. The merging updates the database. 
-The database incidentally allows the app to display information while data gets updated in the background. 
-The app's user interface immediately reflects any background updates to the database.</p>
+This fresh online data is merged with an on-device data (`CoreData`) consisting of a persistent copy of the data
+received during earlier app runs. This data merging thus updates the on-device database.  
+The app's user interface is immediately updated whenever the database is updated.</p>
 
 A problem could occur when a club (or museum or member) is deleted in the online version of the information.
 Let's say, for example, that the club's identifying name or town got edited in the `Level` 1 list.
-This means that the online list no longer contains the club under its original name,
-but instead contains a different club with a another name/town combination.
-Unfortunately the app has now way of knowing that the seemingly new club is actually a replacement of an older club.
-So -as far as the app is concerned- the original club vanished and a new club appeared as two separate events.
-The new club will be loaded, which is fine. But the app currently doesn't detect the disappearance of the orignal club.</p>
+This means that the online list now contains a "different" club: one with another identifying name/town combination.
+Unfortunately the app has now way of knowing that this "new" club is actually the same as the club that seemingly vanished.
+So, from the app's perspective, the original club vanished and a new club appeared as two separate events.
+The new club simply need to be loaded. But the app currently doesn't detect the disappearance of the orignal club.</p>
 
-In the future we plan to add detection of clubs (or musea or members...) 
-that were once loaded, but are now gone from the online data.</p>
+There is a GitHub ticker to add future automatic detection of "disappeared" or renamed clubs. </p>
 
 A temporary workaround is to use the _pull down to refresh_ feature: 
-it simply deletes the entire content of the database and then reloads it -
-thereby ensuring that the device's internal (CoreData) database is again in sync with the online data.
-Alternatively, the user could delete the app and reinstall it. This also deletes the app's data and triggers reloading.</p>
+it simply deletes the entire content of the database and then reloads.
+This fully synchronizes the device's internal (CoreData) database with the online data.
+Alternatively, the user could delete the app and reinstall it.</p>
 
-An alternative use of _pull down to refresh_ is to force a reload of online data if you happen to know that it just changed.
-It forces immediate resynchronization, instead of waiting until the app happens to be restarted.
+Another application of _pull down to refresh_ is to force a reload of online data when you know that the online data just changed.
 </details>
 </ul>
 <p align="right">(<a href="#top">back to top</a>)</p>
