@@ -391,6 +391,17 @@ Another application of _pull down to refresh_ is to force a reload of online dat
 </ul>
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+### Title
+
+Abstract
+</p>
+
+<details><summary>Title of collapsible</summary></p>
+Details.
+</details>
+</ul>
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 ## Adding Photo Clubs to the App
 
 > The app is designed so that the required information about photo clubs is provided
