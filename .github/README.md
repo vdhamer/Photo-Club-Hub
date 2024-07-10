@@ -35,7 +35,8 @@
             <li><a href="#multi-club-support">Multi-club Support</a></li>
             <li><a href="#searchable-lists">Searchable Lists</a></li>
             <li><a href="#photo-museums">Photo Museums</a></li>
-            <li><a href="#Pull-down-to-refresh">Pull down to Refresh</a></li>
+            <li><a href="#pull-down-to-refresh">Pull down to Refresh</a></li>
+            <li><a href="#fancy-scrolling">Fancy scrolling</a></li>
         </ul>
     </details>
     <details open><summary><a href="#adding-photo-clubs-to-the-app">Adding Photo Clubs to the App</a></summary>
@@ -391,17 +392,17 @@ Another application of _pull down to refresh_ is to force a reload of online dat
 
 ### Fancy scrolling
 
-The _Clubs and Museums_ and _Who's Who_ screens try to avoid showwing partially displayed maps or descriptions of photographers.
+The _Clubs and Museums_ and _Who's Who_ screens try to prevent showing partially visible maps or photographer "cards".
 </p>
 
 <details><summary>Details about smart scrolling</summary></p>
-iOS 17 introduced `scrolltargetbehavior` for SwiftUI's ScrollViews.
+iOS 17 introduced `ScrollTargetBehavior` for SwiftUI's ScrollViews.
 It allows the app to request where a scroll gesture causes a scrolling motion to come to a stop,
 thus minimizing the display of partially visible items. </p>
     
 In iOS 17 this assumed that the screen consists of a list of items with equal height.
-In iOS 18 `ScrollTargetBehavior' appears to be able to handle lists of items with unequal height.
-We haven't found a confirmation of this change in the SwiftUI documentation (but iOS 18 is still in beta at the time of writing).
+In iOS 18 `ScrollTargetBehavior' appears to be able to handle lists of items with varying heights.
+We haven't found a confirmation of this change in the SwiftUI documentation (but iOS 18 is still in beta).
 </details>
 </ul>
 <p align="right">(<a href="#top">back to top</a>)</p>
