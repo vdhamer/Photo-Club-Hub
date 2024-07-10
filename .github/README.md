@@ -363,7 +363,7 @@ The feature is a fast alternative to uninstalling and reinstalling the app:
 the database gets cleared and the missing data immediately gets downloaded again.
 </p>
 
-<details><summary>Details on Refreshing data (click to expand)</summary></p>
+<details><summary>Details on Data Synchronization (click to expand)</summary></p>
 Whenever the app is launched, it fetches fresh information from online servers.
 The use of online data ensures that the app stays up-to-date with respect to the online lists
 with clubs and museums (`Level 1`), club members (`Level 2`) and portfolio photos (`Level 3`).</p>
@@ -389,13 +389,19 @@ Alternatively, the user could delete the app and reinstall it.</p>
 Another application of _pull down to refresh_ is to force a reload of online data when you know that the online data just changed.
 </details>
 
-### Title
+### Fancy scrolling
 
-Abstract
+The _Clubs and Museums_ and _Who's Who_ screens try to avoid showwing partially displayed maps or descriptions of photographers.
 </p>
 
-<details><summary>Title of collapsible</summary></p>
-Details.
+<details><summary>Details about smart scrolling</summary></p>
+iOS 17 introduced `scrolltargetbehavior` for SwiftUI's ScrollViews.
+It allows the app to request where a scroll gesture causes a scrolling motion to come to a stop,
+thus minimizing the display of partially visible items. </p>
+    
+In iOS 17 this assumed that the screen consists of a list of items with equal height.
+In iOS 18 `ScrollTargetBehavior' appears to be able to handle lists of items with unequal height.
+We haven't found a confirmation of this change in the SwiftUI documentation (but iOS 18 is still in beta at the time of writing).
 </details>
 </ul>
 <p align="right">(<a href="#top">back to top</a>)</p>
