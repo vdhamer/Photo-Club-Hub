@@ -388,7 +388,6 @@ Alternatively, the user could delete the app and reinstall it.</p>
 
 Another application of _pull down to refresh_ is to force a reload of online data when you know that the online data just changed.
 </details>
-</ul>
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ### Title
