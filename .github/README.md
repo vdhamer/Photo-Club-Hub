@@ -403,7 +403,7 @@ thus avoiding the display of a list section with some of the top information off
 In iOS 17 this feature assumed that the screen consists of a list of items with equal height.
 In iOS 18 `ScrollTargetBehavior' apparently can also handle lists of items with varying heights.
 We haven't found the documentation about this change yet: it just showed up during testing on iOS 18 beta.
-Because iOS 18 can do a bit fancier scrolling, the scrolling content looks slightly different in this app under iOS 18 compared to iOS 17.</p>
+Because iOS 18 can do a bit fancier scrolling, the scrolling content looks slightly different in this app under iOS 18.</p>
 
 The _Portfolios_ screen doesn't provide this fancy scrolling feature 
 because it relies on a "segmented List" view rather than on `ScrollView`.
