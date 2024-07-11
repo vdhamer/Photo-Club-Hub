@@ -403,7 +403,7 @@ thus avoiding the display of a list section with some of the top off-screen.
 </p>
     
 In iOS 17 this feature assumed that the screen consists of a list of items of equal height.
-In iOS 18 `ScrollTargetBehavior' apparently can also handle lists of items with varying heights.
+In iOS 18 `ScrollTargetBehavior` apparently can also handle lists of items with varying heights.
 We haven't found the documentation about this change yet: it just showed up during testing on iOS 18 beta.
 Because iOS 18 can do a bit fancier scrolling, the app's fancy scrolling content is slightly less refined under iOS 17.
 </p>
