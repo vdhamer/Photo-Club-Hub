@@ -398,12 +398,14 @@ The _Clubs and Museums_ and _Who's Who_ screens try to prevent showing partial m
 <details><summary>Details about smart scrolling</summary></p>
 Apple introduced `ScrollTargetBehavior` for SwiftUI's ScrollViews in iOS 17.
 It allows the app to control where on the page a scroll motion comes to a stop,
-thus avoiding the display of a list section with some of the top information off-screen.</p>
+thus avoiding the display of a list section with some of the top off-screen.
+</p>
     
-In iOS 17 this feature assumed that the screen consists of a list of items with equal height.
+In iOS 17 this feature assumed that the screen consists of a list of items of equal height.
 In iOS 18 `ScrollTargetBehavior' apparently can also handle lists of items with varying heights.
 We haven't found the documentation about this change yet: it just showed up during testing on iOS 18 beta.
-Because iOS 18 can do a bit fancier scrolling, the scrolling content looks slightly different in this app under iOS 18.</p>
+Because iOS 18 can do a bit fancier scrolling, the app's fancy scrolling content is slightly less refined under iOS 17.
+</p>
 
 The _Portfolios_ screen doesn't provide this fancy scrolling feature 
 because it relies on a "segmented List" view rather than on `ScrollView`.
