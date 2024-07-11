@@ -397,7 +397,7 @@ The _Clubs and Museums_ and _Who's Who_ screens try to prevent showing partial m
 
 <details><summary>Details about smart scrolling</summary></p>
 
-Apple introduced `ScrollTargetBehavior` for SwiftUI's `ScrollView`s in iOS 17.
+Apple introduced `ScrollTargetBehavior` for SwiftUI's `ScrollViews` in iOS 17.
 It allows the app to control where on the page a scroll motion comes to a stop,
 thus avoiding the display of a list section with some of the top off-screen.
 </p>
