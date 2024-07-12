@@ -369,8 +369,8 @@
 		D08319E5277F70A30049AB84 /* Photo Club Hub */ = {
 			isa = PBXGroup;
 			children = (
-				D03DE5CC2C28439800130680 /* App */,
 				D01526BC278B91BA004DBD19 /* PhotoClubHub.entitlements */,
+				D03DE5CC2C28439800130680 /* App */,
 				D0831A18277F72110049AB84 /* View */,
 				D0831A23277F72340049AB84 /* ViewModel */,
 				D0831A3B277F727E0049AB84 /* Model */,

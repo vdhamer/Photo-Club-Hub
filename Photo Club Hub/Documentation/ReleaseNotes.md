@@ -15,6 +15,7 @@ Readme screen
 
 Settings App
 * Minor text change
+* Settings will allow you to always choose all supported languages (UIPrefersShowingLanguageSettings).
 
 Maintenance
 * Tested on iOS 18.0 beta 3 (22A5307f), Xcode 16.0 beta 3 (16A5202i) and Vision Pro 2.0 beta 3 (22N5277g).
