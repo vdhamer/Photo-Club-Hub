@@ -11,14 +11,14 @@ Clubs and Museums screen
 * Updated notes at bottom of screen.
 
 Readme screen
-* Removed text about deleting elements by swiping left. 
-* General cleanup of EN and NL texts.
+* Removed text about deleting elements by swiping left and general cleanup.
 
 Settings App
 * Minor text change
 
 Maintenance
 * Tested on iOS 18.0 beta 3 (22A5307f), Xcode 16.0 beta 3 (16A5202i) and Vision Pro 2.0 beta 3 (22N5277g).
+* Updated README documentation on GitHub.
 
 This is build #4628
 
