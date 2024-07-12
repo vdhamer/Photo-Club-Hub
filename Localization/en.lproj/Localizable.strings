@@ -31,6 +31,9 @@
 /* Header of section of Who's Who screen */
 "1 photographer (of %lld)" = "1 photographer (of %lld)";
 
+/* In Preferences, above link to Settings */
+"Advanced" = "Advanced";
+
 /* Administrative role of member within a club. Used as part of concatenations. */
 "admin" = "admin";
 
@@ -141,6 +144,9 @@
 
 /* Section title on Readme page */
 "Open Source" = "Developers";
+
+/* Link to Photo Club Hub section in Settings */
+"Options in Settings" = "Options in Settings";
 
 /* First paragraph in The App section of Readme page */
 "Paragraph_1.1" = "Our ambitions in creating _Photo Club Hub_ were to strengthen ties between photography clubs, and making the work of club members easier to access.";

@@ -10,6 +10,9 @@ Clubs and Museums screen
 * Added smart scrolling with optimization for iOS 18.
 * Updated notes at bottom of screen.
 
+Preferences screen
+* Added button to Photo Club Hub section of Settings app for advanced settings.
+
 Readme screen
 * Removed text about deleting elements by swiping left and general cleanup.
 

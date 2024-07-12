@@ -9,6 +9,7 @@ import SwiftUI
 
 let valueOverwrittenByInit = false // dummy constant
 
+@MainActor
 struct PreferencesView: View {
 
     @Binding var preferences: PreferencesStruct
@@ -44,9 +45,9 @@ struct PreferencesView: View {
                             HStack {
                                 RoleStatusIconView(memberRole: .viceChairman)
                                     .foregroundColor(.deceasedColor)
-                                    Toggle(String(localized: "Show club officers",
-                                                  comment: "Label of toggle in Preferences"),
-                                           isOn: $localPreferences.showOfficers)
+                                Toggle(String(localized: "Show club officers",
+                                              comment: "Label of toggle in Preferences"),
+                                       isOn: $localPreferences.showOfficers)
                             }
                         } else {
                             HStack {
@@ -102,8 +103,24 @@ struct PreferencesView: View {
                                           comment: "Label of toggle in Preferences"),
                                    isOn: $localPreferences.showExternalCoaches)
                         }
+                    }) // Section
+
+                    Section(header: Text("Advanced",
+                                         comment: "In Preferences, above link to Settings"),
+                            content: {
+                                Button {
+                                    Task {
+                                        if let url = URL(string: UIApplication.openSettingsURLString) {
+                                            await UIApplication.shared.open(url)
+                                        }
+                                    }
+                                } label: {
+                                    Text("Options in Settings",
+                                         comment: "Link to Photo Club Hub section in Settings")
+                                }
                     })
-                }
+
+                } // List
                 .navigationTitle(title)
 //                .toolbar {
 //                    ToolbarItemGroup(placement: ToolbarItemPlacement.confirmationAction) {
@@ -128,7 +145,7 @@ struct PreferencesView: View {
 
 }
 
-struct PreferencesView_Previews: PreviewProvider {
+struct PreferencesView_Previews: PreviewProvider { // This preview works on iOS 18 / Xcode 16
     @State static private var title = "PreferencesView Preview"
     @State static var preferences = PreferencesStruct.defaultValue
 

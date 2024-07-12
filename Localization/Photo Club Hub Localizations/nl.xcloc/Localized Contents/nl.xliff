@@ -2,7 +2,7 @@
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
   <file original="en.lproj/Photo-Club-Hub-InfoPlist.strings" source-language="en" target-language="nl" datatype="plaintext">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="16.0" build-num="16A5171r"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="16.0" build-num="16A5202i"/>
     </header>
     <body>
       <trans-unit id="CFBundleDisplayName" xml:space="preserve">
@@ -24,7 +24,7 @@
   </file>
   <file original="Localization/en.lproj/Localizable.strings" source-language="en" target-language="nl" datatype="plaintext">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="16.0" build-num="16A5171r"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="16.0" build-num="16A5202i"/>
     </header>
     <body>
       <trans-unit id="%lld members (inc. ex-members)" xml:space="preserve">
@@ -71,6 +71,11 @@
         <source>1 photographer (of %lld)</source>
         <target>1 fotograaf (van de %lld)</target>
         <note>Header of section of Who's Who screen</note>
+      </trans-unit>
+      <trans-unit id="Advanced" xml:space="preserve">
+        <source>Advanced</source>
+        <target state="translated">Technische instellingen</target>
+        <note>In Preferences, above link to Settings</note>
       </trans-unit>
       <trans-unit id="Amsterdam has two photography museums." xml:space="preserve">
         <source>Amsterdam has two photography museums.</source>
@@ -193,6 +198,11 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
         <source>Developers</source>
         <target>Ontwikkelaars gezocht</target>
         <note>Section title on Readme page</note>
+      </trans-unit>
+      <trans-unit id="Options in Settings" xml:space="preserve">
+        <source>Options in Settings</source>
+        <target state="translated">Opties bij Instellingen</target>
+        <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Paragraph_1.1" xml:space="preserve">
         <source>Our ambitions in creating _Photo Club Hub_ were to strengthen ties between photography clubs, and making the work of club members easier to access.</source>
@@ -751,7 +761,7 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
   </file>
   <file original="Settings.bundle/en.lproj/Root.strings" source-language="en" target-language="nl" datatype="plaintext">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="16.0" build-num="16A5171r"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="16.0" build-num="16A5202i"/>
     </header>
     <body>
       <trans-unit id="Debug options" xml:space="preserve">
