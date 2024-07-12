@@ -46,9 +46,6 @@
 /* Shown on Readme page. */
 "App version %@ (build %@)" = "App versie %@ (build %@)";
 
-/* Name of the fruit, not the company. */
-"Apple" = "Appel";
-
 /* Birthday of member (without year). Date not currently localized? */
 "Birthday" = "Verjaardag";
 
@@ -69,6 +66,9 @@
 
 /* Title of page with maps for Clubs and Museums */
 "Clubs and Museums" = "Clubs en Musea";
+
+/* Caption of an image on the Readme page */
+"Clubs, their Members, and their Portfolios\n" = "Clubs, hun Leden en hun Portfolio's\n";
 
 /* Section title on Readme page */
 "Concept" = "Het concept";
@@ -333,9 +333,6 @@
 
 /* Title of page showing member portfolios */
 "Portfolios" = "Portfolio's";
-
-/* Caption of an image on the Readme page */
-"Poster for a photo club exposition\n" = "Poster voor een club expositie\n";
 
 /* Title of screen with toggles to adjust preferences */
 "Preferences" = "Instellingen";

@@ -30,12 +30,12 @@ struct ReadmeView: View {
                             Paragraph("1.2", comment: "Second paragraph in The-app section of Readme page", geo: geo)
                             Paragraph("1.3", comment: "Third paragraph in The-app section of Readme page", geo: geo)
 
-                            Image("2017_ExpoAppPoster_001")
+                            Image("app_screenshots_EN")
                                 .resizable()
                                 .border(.gray, width: 1)
                                 .scaledToFit()
-                                .frame(width: 265, height: 375, alignment: .center)
-                            Text("Poster for a photo club exposition\n",
+                                .frame(width: geo.size.width * 0.8, alignment: .center)
+                            Text("Clubs, their Members, and their Portfolios\n",
                                  comment: "Caption of an image on the Readme page")
                                 .font(.callout.italic())
                                 .frame(width: geo.size.width, alignment: .center)
@@ -138,7 +138,7 @@ struct ReadmeView: View {
                                 .resizable()
                                 .scaledToFit()
                                 .border(.gray, width: 1)
-                                .frame(width: geo.size.width * 0.8, alignment: .center)
+                                .frame(width: geo.size.width * 0.6, alignment: .center)
                             Text("Example of a link to a club web site",
                                  comment: "Caption of Websites image on Readme page")
                             .font(.callout.italic())
@@ -214,17 +214,6 @@ struct ReadmeView: View {
                                                  comment: "Section title on Readme page"),
                                           geo: geo)
 
-                            Image("2006_Stilleven_054")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(height: 375, alignment: .center)
-                                .border(.gray, width: 1)
-                                .frame(width: geo.size.width, alignment: .center)
-                            Text("Apple", comment: "Name of the fruit, not the company.")
-                                .font(.callout.italic())
-                                .frame(width: geo.size.width, alignment: .center)
-                            Text("")
-
                             Paragraph("4.1", comment: "First paragraph in Platforms section of Readme page", geo: geo)
                             Paragraph("4.2", comment: "Second paragraph in Platforms section of Readme page", geo: geo)
                             Paragraph("4.3", comment: "Third paragraph in Platforms section of Readme page", geo: geo)
@@ -254,7 +243,8 @@ struct ReadmeView: View {
 
                             Paragraph("5.3", comment: "Third paragraph in OpenSource section of Readme page", geo: geo)
                             Paragraph("5.4", comment: "Fourth paragraph in OpenSource section of Readme page", geo: geo)
-                            Paragraph("5.5", comment: "Fifth paragraph in OpenSource section of Readme page", geo: geo)
+                            Paragraph("5.5", comment: "Fifth paragraph in OpenSource section of Readme page", geo: geo,
+                                      bottomPaddingAmount: 0)
 
                             VStack {
                                 Image("Swift_enum")
