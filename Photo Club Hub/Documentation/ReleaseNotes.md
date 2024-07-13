@@ -1,12 +1,12 @@
-### 2.6.3 (GitHub commit f685a77) 13-07-24
+### 2.6.3 (GitHub commit fbeb334) 13-07-24
 
 Portfolios screen
 * Removed function to delete rows by swiping left.
 
 Clubs and Museums screen
+* Removed function to delete rows by swiping left.
 * Fixed bug causing remarks about clubs and museums to be missing.
 * Changed the Dutch text if no localized remarks are available.
-* Removed function to delete rows by swiping left.
 * Added smart scrolling with optimization for iOS 18.
 * Updated notes at bottom of screen.
 
@@ -17,8 +17,8 @@ Readme screen
 * Removed text about deleting elements by swiping left and general cleanup.
 * Changed the opening image (now shows 3 level as screenshots) and removed apple-in-glass image.
 
-Settings App
-* Minor text change
+iOS Settings
+* Minor text changes.
 * Settings will allow you to always choose all supported languages (UIPrefersShowingLanguageSettings).
 
 Maintenance
