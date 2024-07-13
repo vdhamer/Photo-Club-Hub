@@ -1,4 +1,4 @@
-### 2.6.3 (GitHub commit ???????) ??-07-24
+### 2.6.3 (GitHub commit f685a77) 13-07-24
 
 Portfolios screen
 * Removed function to delete rows by swiping left.
@@ -15,6 +15,7 @@ Preferences screen
 
 Readme screen
 * Removed text about deleting elements by swiping left and general cleanup.
+* Changed the opening image (now shows 3 level as screenshots) and removed apple-in-glass image.
 
 Settings App
 * Minor text change
@@ -24,7 +25,7 @@ Maintenance
 * Tested on iOS 18.0 beta 3 (22A5307f), Xcode 16.0 beta 3 (16A5202i) and Vision Pro 2.0 beta 3 (22N5277g).
 * Updated README documentation on GitHub.
 
-This is build #4628
+This build #4628 was made with Xcode 15.4 and was distributed via TestFlight and the App Store.
 
 ---------------------------------------------------------------------------
 
@@ -55,7 +56,7 @@ Maintenance
 * Updated FGW member list: former coach Hans Zoete has passed away.
 * Reduced number of CoreData save() transactions.
 
-This build #4627 was made with Xcode 16.0 beta 2 (16A5171r) and distributed via the app store.
+This build #4627 was made with Xcode 16.0 beta 2 (16A5171r) and distributed via the App Store.
 
 ---------------------------------------------------------------------------
 
