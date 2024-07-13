@@ -606,7 +606,7 @@ Here is an example of the format of a `Level 2` list for a photo club. This exam
                 "isSecretary": false,
                 "isAdmin": true
             },
-            "stat": {
+            "status": {
                 "isDeceased": false,
                 "isFormerMember": false,
                 "isHonoraryMember": false,
