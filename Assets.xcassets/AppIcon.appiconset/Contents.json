@@ -1,24 +1,34 @@
 {
   "images" : [
     {
-      "filename" : "PhotoClubHub_Icon_light 1.png",
+      "filename" : "PhotoClubHub_Icon_light.png",
       "idiom" : "universal",
       "platform" : "ios",
       "size" : "1024x1024"
     },
     {
-      "filename" : "PhotoClubHub_Icon_light.png",
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "PhotoClubHub_Icon_dark.png",
       "idiom" : "universal",
       "platform" : "ios",
-      "size" : "1024x1024",
-      "unassigned" : true
+      "size" : "1024x1024"
     },
     {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "tinted"
+        }
+      ],
       "filename" : "PhotoClubHub_Icon_tinted.png",
       "idiom" : "universal",
       "platform" : "ios",
-      "size" : "1024x1024",
-      "unassigned" : true
+      "size" : "1024x1024"
     }
   ],
   "info" : {
