@@ -1,5 +1,14 @@
 ### 2.6.3 (GitHub commit fbeb334) 13-07-24
 
+Maintenance
+* Added a wikipedia link for the club fgDeGender. The link is loaded from a prototype level2.json file.
+
+This build #4629 was made with Xcode 16.0.
+
+---------------------------------------------------------------------------
+
+### 2.6.3 (GitHub commit fbeb334) 13-07-24
+
 Portfolios screen
 * Removed function to delete rows by swiping left.
 

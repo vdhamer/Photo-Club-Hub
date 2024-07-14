@@ -104,6 +104,7 @@
 		D01D2B6127D3BBDC00E2FE41 /* View+Navigate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Navigate.swift"; sourceTree = "<group>"; };
 		D01DDD962AF5A11F00F98906 /* Photo_Club_Hub_2_5_1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_5_1.xcdatamodel; sourceTree = "<group>"; };
 		D01DFAA627E778BD007BABFA /* offsets.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = offsets.md; sourceTree = "<group>"; };
+		D01E4F1E2C444C27005E7D2E /* Photo_Club_Hub_2_7_0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_7_0.xcdatamodel; sourceTree = "<group>"; };
 		D024F11528423BE60055021B /* Sounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sounds.swift; sourceTree = "<group>"; };
 		D0275F5427E3E21F002FA4FE /* View+OnTapGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+OnTapGesture.swift"; sourceTree = "<group>"; };
 		D02AB3EF28A702800021BF41 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
@@ -1103,6 +1104,7 @@
 		D0A0B6832AA930E90078DE9A /* Photo_Club_Hub.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				D01E4F1E2C444C27005E7D2E /* Photo_Club_Hub_2_7_0.xcdatamodel */,
 				D0A34EB92BFB97710077F3E0 /* Photo_Club_Hub_2_6_3.xcdatamodel */,
 				D06F34FB2BDE56600047B04F /* Photo_Club_Hub_2_6_2.xcdatamodel */,
 				D00DC8F02BD5D85900B4A9A2 /* Photo_Club_Hub_2_6_1.xcdatamodel */,
@@ -1118,7 +1120,7 @@
 				D0A0B6872AA932A10078DE9A /* Photo_Club_Hub_2_4_1.xcdatamodel */,
 				D0A0B6842AA930E90078DE9A /* Photo_Club_Hub.xcdatamodel */,
 			);
-			currentVersion = D0A34EB92BFB97710077F3E0 /* Photo_Club_Hub_2_6_3.xcdatamodel */;
+			currentVersion = D01E4F1E2C444C27005E7D2E /* Photo_Club_Hub_2_7_0.xcdatamodel */;
 			path = Photo_Club_Hub.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
