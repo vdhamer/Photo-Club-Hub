@@ -17,7 +17,7 @@ extension FotogroepWaalreMembersProvider {
         // can't rely on async (!) insertSomeHardcodedMemberData() to return managed photoClub object in time
         let clubWaalre = Organization.findCreateUpdate(
             context: bgContext,
-            organizationTypeEum: .club,
+            organizationTypeEnum: .club,
             idPlus: FotogroepWaalreMembersProvider.photoClubWaalreIdPlus
         )
 
@@ -94,7 +94,7 @@ extension FotogroepWaalreMembersProvider {
 
         let organization: Organization = Organization.findCreateUpdate(
             context: bgContext,
-            organizationTypeEum: .club, idPlus: idPlus
+            organizationTypeEnum: .club, idPlus: idPlus
         )
 
         htmlContent.enumerateLines { (line, _ stop) in

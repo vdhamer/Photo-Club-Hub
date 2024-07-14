@@ -34,7 +34,7 @@ extension BellusImagoMembersProvider { // fill with some initial hard-coded cont
         // add Bellus Imago to Photo Clubs (if needed)
         let clubBellusImago = Organization.findCreateUpdate(
                                                             context: bgContext,
-                                                            organizationTypeEum: .club,
+                                                            organizationTypeEnum: .club,
                                                             idPlus: Self.photoClubBellusImagoIdPlus
                                                            )
 

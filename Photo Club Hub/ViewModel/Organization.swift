@@ -159,7 +159,7 @@ extension Organization {
 	// Find existing organization or create a new one
 	// Update new or existing organization's attributes
     static func findCreateUpdate(context: NSManagedObjectContext, // can be foreground of background context
-                                 organizationTypeEum: OrganizationTypeEnum,
+                                 organizationTypeEnum: OrganizationTypeEnum,
                                  idPlus: OrganizationIdPlus,
                                  website: URL? = nil,
                                  wikipedia: URL? = nil,
@@ -189,7 +189,7 @@ extension Organization {
 		if let organization = organizations.first { // already exists, so make sure non-ID attributes are up to date
             print("\(organization.fullNameTown): Will try to update info for organization \(organization.fullName)")
             if organization.update(bgContext: context,
-                                   organizationTypeEnum: organizationTypeEum, nickName: idPlus.nickname,
+                                   organizationTypeEnum: organizationTypeEnum, nickName: idPlus.nickname,
                                    optionalFields: (website: website, wikipedia: wikipedia,
                                                     fotobondNumber: fotobondNumber),
                                    coordinates: coordinates,
@@ -206,13 +206,13 @@ extension Organization {
             organization.town = idPlus.town // second part of ID
             print("\(organization.fullNameTown): Will try to fill fields for this new organization")
             _ = organization.update(bgContext: context,
-                                    organizationTypeEnum: organizationTypeEum, nickName: idPlus.nickname,
+                                    organizationTypeEnum: organizationTypeEnum, nickName: idPlus.nickname,
                                     optionalFields: (website: website, wikipedia: wikipedia,
                                                      fotobondNumber: fotobondNumber),
                                     coordinates: coordinates,
                                     pinned: pinned,
                                     localizedRemarks: localizedRemarks)
-            print("\(organization.fullNameTown): Successfully created new \(organizationTypeEum.rawValue)")
+            print("\(organization.fullNameTown): Successfully created new \(organizationTypeEnum.rawValue)")
 			return organization
 		}
 	}

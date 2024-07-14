@@ -34,7 +34,7 @@ extension FotogroepDeGenderMembersProvider { // fill with some initial hard-code
 
         // add De Gender to Photo Clubs (if needed)
         let clubDeGender = Organization.findCreateUpdate(context: bgContext,
-                                                         organizationTypeEum: .club,
+                                                         organizationTypeEnum: .club,
                                                          idPlus: Self.fotogroepDeGenderIdPlus)
         ifDebugPrint("\(clubDeGender.fullNameTown): Starting insertSomeHardcodedMemberData() in background")
         clubDeGender.hasHardCodedMemberData = true // store in database that we ran insertSomeHardcodedMembers...

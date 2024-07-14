@@ -61,7 +61,7 @@ struct PersistenceController {
                                                                      .former: ((index % 4) == 1)]
             )
             let organization = Organization.findCreateUpdate(context: viewContext, // on main thread
-                                                       organizationTypeEum: .club,
+                                                       organizationTypeEnum: .club,
                                                        idPlus: OrganizationIdPlus(
                                                             fullName: "PhotoClub\(index)",
                                                             town: "Town\(index)",

@@ -21,7 +21,7 @@ private let fileSubType = "level1" // level1 is part of file name, not the exten
 private let fileType = "json"
 private let organizationTypesToLoad: [OrganizationTypeEnum] = [.club, .museum]
 
-/* Example of minimal root.level1.json file content
+/* Example of a minimal level1.json file
 {
     "clubs": [
         {
@@ -133,7 +133,7 @@ class RootLevel1JsonReader {
                 let localizedRemarks = jsonOrganization["remark"].arrayValue
                 let fotobondNumber = jsonOrganization["nlSpecific"]["fotobondNumber"].int16Value
                 _ = Organization.findCreateUpdate(context: bgContext,
-                                                  organizationTypeEum: organizationTypeEnum,
+                                                  organizationTypeEnum: organizationTypeEnum,
                                                   idPlus: idPlus,
                                                   website: website,
                                                   wikipedia: wikipedia,

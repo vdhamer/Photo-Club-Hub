@@ -36,7 +36,7 @@ extension AndersMembersProvider { // fill with some initial hard-coded content
         // add De Gender to Photo Clubs (if needed)
         let clubAnders = Organization.findCreateUpdate(
                                                     context: bgContext,
-                                                    organizationTypeEum: .club,
+                                                    organizationTypeEnum: .club,
                                                     idPlus: Self.fotogroepAndersIdPlus
                                                    )
 
