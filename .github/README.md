@@ -637,7 +637,7 @@ Here is an example of the format of a `Level 2` list for a photo club. This exam
 - **Optional** fields (that are ignored)
     - the `level2URL` field can be included, but it's value does _not_ overrule the `level2URL` value in `root.level1.json` for safety reasons.
 - **Optional** fields (that are used)
-    - a club's `wikipedia`, `fotobondNumber`, `coordinates`, `website`, and `localizedRemarks` fields overrule the corresponding `root.level1.json` fields if needed. This allows a club to _correct_ centrally-provided information with club-provided information. Note that not all these optional fields are shown in the example: see the Level 1 documentation for more details.</p>
+    - a club's `wikipedia`, `fotobondNumber`, `coordinates`, `website`, and `localizedRemarks` fields overrule the corresponding `root.level1.json` fields if needed. This allows a club to _correct_ the centrally-provided information with club-provided information. Note that not all these optional fields are shown in the example: see the Level 1 documentation for more details.</p>
     - `givenName`, `infixName` and `familyName` are used to uniquely identify the photographer.
     - `infixName` will often be empty. It enables correctly sorting European surnames: "van Aalst" sorts like "Aalst" in the _Who's Who_ screen.
         - An omitted "infixName" is interpreted as "infixName" = "".
