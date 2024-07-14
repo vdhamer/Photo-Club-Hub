@@ -11,6 +11,7 @@
                 "longitude": 5.45010
             },
             "website": "https://www.fcdegender.nl",
+            "wikipedia": "https://en.wikipedia.org/wiki/Gender_(stream)",
             "level2URL": "https://www.example.com/deGender.level2.json"
         },
     "members": [
