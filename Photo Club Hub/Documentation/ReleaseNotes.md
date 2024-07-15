@@ -2,7 +2,7 @@
 
 Maintenance
 * Added a wikipedia link for the club fgDeGender. The link is loaded from a prototype level2.json file.
-* First photo club membership list loaded from a data file (`fgDeGender.level2.json`).
+* Initial ability to read list of club members from a data file (`fgDeGender.level2.json`).
 
 This build #4629 was made with Xcode 16.0.
 
