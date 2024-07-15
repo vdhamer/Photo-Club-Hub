@@ -138,15 +138,16 @@ class Level2JsonReader { // normally running on a background thread
 
         // optional fields
         if jsonClub["optional"].exists() {
-            let jsonOptionalClub: JSON = jsonClub["optional"]
+            let jsonOptional: JSON = jsonClub["optional"] // there is a second "optional" but this is the one in "club"
 
-            let website = jsonClub["website"].exists() ? URL(string: jsonClub["website"].stringValue) : nil
-            let wikipedia = jsonClub["wikipedia"].exists() ? URL(string: jsonClub["wikipedia"].stringValue) : nil
-            let fotobondNumber = jsonClub["nlSpecific"]["fotobondNumber"].exists()  ?
-                             jsonClub["nlSpecific"]["fotobondNumber"].int16Value : nil
-            let coordinates: CLLocationCoordinate2D? = jsonClub["coordinates"].exists() ?
-                             CLLocationCoordinate2D(latitude: jsonClub["coordinates"]["latitude"].doubleValue,
-                                                    longitude: jsonClub["coordinates"]["longitude"].doubleValue) : nil
+            let website = jsonOptional["website"].exists() ? URL(string: jsonOptional["website"].stringValue) : nil
+            let wikipedia = jsonOptional["wikipedia"].exists() ?
+                URL(string: jsonOptional["wikipedia"].stringValue) : nil
+            let fotobondNumber = jsonOptional["nlSpecific"]["fotobondNumber"].exists()  ?
+            jsonOptional["nlSpecific"]["fotobondNumber"].int16Value : nil
+            let coordinates: CLLocationCoordinate2D? = jsonOptional["coordinates"].exists() ?
+                 CLLocationCoordinate2D(latitude: jsonOptional["coordinates"]["latitude"].doubleValue,
+                                        longitude: jsonOptional["coordinates"]["longitude"].doubleValue) : nil
             let localizedRemarks = jsonClub["remark"].arrayValue // empty array if missing
 
             _ = Organization.findCreateUpdate(context: bgContext,
@@ -160,12 +161,14 @@ class Level2JsonReader { // normally running on a background thread
         } else {
             _ = Organization.findCreateUpdate(context: bgContext,
                                               organizationTypeEnum: OrganizationTypeEnum.club,
-                                              idPlus: idPlus,
-                                              website: nil,
-                                              wikipedia: nil,
-                                              fotobondNumber: nil,
-                                              coordinates: nil,
-                                              localizedRemarks: [JSON]()) // empty array of remarks
+                                              idPlus: idPlus
+                                              // , // following fields are filled with nil or empty array as defaults
+                                              // website: nil,
+                                              // wikipedia: nil,
+                                              // fotobondNumber: nil,
+                                              // coordinates: nil,
+                                              // localizedRemarks: [JSON]()
+                                             )
         }
 
         do { // saving may not be necessary because every organization is saved separately
