@@ -435,7 +435,7 @@ extension JSON {
 	
 	 Example:
 	
-	 ```
+	 ``` json
 	 let json = JSON[data]
 	 let path = [9,"list","person","name"]
 	 let name = json[path]
