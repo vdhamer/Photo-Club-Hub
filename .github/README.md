@@ -579,19 +579,22 @@ Here is an example of the format of a `Level 2` list for a photo club. This exam
 
 ``` json
 {
-    "club": {
-        "idPlus": {
-            "town": "Eindhoven",
-            "fullName": "Fotogroep de Gender",
-            "nickName": "FG deGender"
+    "club":
+        {
+            "idPlus": {
+                "town": "Eindhoven",
+                "fullName": "Fotogroep de Gender",
+                "nickName": "FG deGender"
+            },
+            "optional": {
+                "coordinates": {
+                    "latitude": 51.42398,
+                    "longitude": 5.45010
+                },
+                "website": "https://www.fcdegender.nl",
+                "level2URL": "https://www.example.com/deGender.level2.json"
+           }
         },
-        "coordinates": {
-            "latitude": 51.42398,
-            "longitude": 5.45010
-        }
-        "website": "https://www.fcdegender.nl",
-        "level2URL": "https://www.example.com/fgDeGender.level2.json"
-    },
     "members": [
         {
             "name": {
@@ -599,24 +602,26 @@ Here is an example of the format of a `Level 2` list for a photo club. This exam
                 "infixName": "van den",
                 "familyName": "Hamer"
             },
-            "roles": {
-                "isChairman": false,
-                "isViceChairman": false,
-                "isTreasurer": false,
-                "isSecretary": false,
-                "isAdmin": true
-            },
-            "status": {
-                "isDeceased": false,
-                "isFormerMember": false,
-                "isHonoraryMember": false,
-                "isMentor": false,
-                "isPropectiveMember": false
-            },
-            "birthday": "9999-10-18T00:00:00.000Z",
-            "website": "https://glass.photo/vdhamer",
-            "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg",
-            "level3URL": "https://www.example.com/fgDeGender.Peter_van_den_Hamer.level3.json"
+            "optional": {
+                "roles": {
+                    "isChairman": false,
+                    "isViceChairman": false,
+                    "isTreasurer": false,
+                    "isSecretary": false,
+                    "isAdmin": true
+                },
+                "status": {
+                    "isDeceased": false,
+                    "isFormerMember": false,
+                    "isHonoraryMember": false,
+                    "isMentor": false,
+                    "isPropectiveMember": false
+                },
+                "birthday": "9999-10-18T00:00:00.000Z",
+                "website": "https://glass.photo/vdhamer",
+                "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg",
+                "level3URL": "https://www.example.com/FG_deGender/Peter_van_den_Hamer.level3.json"
+            }
         }
     ]
 }

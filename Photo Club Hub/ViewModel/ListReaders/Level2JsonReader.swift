@@ -19,12 +19,14 @@ import RegexBuilder // for Regex
                  "fullName": "Fotogroep de Gender",
                  "nickName": "FG deGender"
              },
-             "coordinates": {
-                 "latitude": 51.42398,
-                 "longitude": 5.45010
-             },
-             "website": "https://www.fcdegender.nl",
-             "level2URL": "https://www.example.com/deGender.level2.json"
+             "optional": {
+                 "coordinates": {
+                     "latitude": 51.42398,
+                     "longitude": 5.45010
+                 },
+                 "website": "https://www.fcdegender.nl",
+                 "level2URL": "https://www.example.com/deGender.level2.json"
+            }
          },
      "members": [
          {
@@ -33,24 +35,26 @@ import RegexBuilder // for Regex
                  "infixName": "van den",
                  "familyName": "Hamer"
              },
-             "roles": {
-                 "isChairman": false,
-                 "isViceChairman": false,
-                 "isTreasurer": false,
-                 "isSecretary": false,
-                 "isAdmin": true
-             },
-             "status": {
-                 "isDeceased": false,
-                 "isFormerMember": false,
-                 "isHonoraryMember": false,
-                 "isMentor": false,
-                 "isPropectiveMember": false
-             },
-             "birthday": "9999-10-18T00:00:00.000Z",
-             "website": "https://glass.photo/vdhamer",
-             "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg",
-             "level3URL": "https://www.example.com/FG_deGender/Peter_van_den_Hamer.level3.json"
+             "optional": {
+                 "roles": {
+                     "isChairman": false,
+                     "isViceChairman": false,
+                     "isTreasurer": false,
+                     "isSecretary": false,
+                     "isAdmin": true
+                 },
+                 "status": {
+                     "isDeceased": false,
+                     "isFormerMember": false,
+                     "isHonoraryMember": false,
+                     "isMentor": false,
+                     "isPropectiveMember": false
+                 },
+                 "birthday": "9999-10-18T00:00:00.000Z",
+                 "website": "https://glass.photo/vdhamer",
+                 "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg",
+                 "level3URL": "https://www.example.com/FG_deGender/Peter_van_den_Hamer.level3.json"
+             }
          }
      ]
  }
