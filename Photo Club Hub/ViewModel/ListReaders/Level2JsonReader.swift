@@ -50,7 +50,7 @@ import RegexBuilder // for Regex
              "birthday": "9999-10-18T00:00:00.000Z",
              "website": "https://glass.photo/vdhamer",
              "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg",
-             "level3URL": "https://www.example.com/FG_deGender/Peter_van_den_Hamer.imagelist.json"
+             "level3URL": "https://www.example.com/FG_deGender/Peter_van_den_Hamer.level3.json"
          }
      ]
  }
@@ -123,11 +123,11 @@ class Level2JsonReader { // normally running on a background thread
 
         guard jsonRoot["club"].exists() else { return "Cannot find club keyword in \(urlComponents.shortName)" }
         let jsonClub: JSON = jsonRoot["club"]
-
         guard jsonClub["idPlus"].exists() else { return "Cannot find idPlus keyword in \(urlComponents.shortName)" }
         let jsonIdPlus: JSON = jsonClub["idPlus"]
         guard jsonIdPlus["town"].stringValue == club.town && jsonIdPlus["fullName"].stringValue == club.fullName
             else { return "Error: mismatched Name/Town for club \(club.fullNameTown) in \(urlComponents.shortName)" }
+
         let idPlus = OrganizationIdPlus(fullName: jsonIdPlus["fullName"].stringValue,
                                         town: jsonIdPlus["town"].stringValue,
                                         nickname: jsonIdPlus["nickName"].stringValue)

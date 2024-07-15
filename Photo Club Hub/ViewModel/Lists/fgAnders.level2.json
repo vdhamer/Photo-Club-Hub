@@ -21,7 +21,7 @@
                 "familyName": "Verbruggen"
             },
             "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/DennisVerbruggen.jpeg",
-            "imageList": "https://www.example.com/fgAnders/Dennis_Verbruggen.imagelist.json"
+            "level3URL": "https://www.example.com/fgAnders/Dennis_Verbruggen.level3.json"
         },
         {
             "name": {
@@ -31,7 +31,7 @@
             "birthday": "1972-06-05T00:00:00.000Z",
             "website": "https://helganuchelmans.nl",
             "featuredImage": "https://cdn.myportfolio.com/d8801b208f49ae95bc80b15c07cde6f2/902cb616-6aaf-4f1f-9d40-3487d0e1254a_rw_1200.jpg?h=7fee8b232bc10216ccf294e69a81be4c",
-            "imageList": "https://www.example.com/fgAnders/Helga_Nuchelmans.imagelist.json"
+            "level3URL": "https://www.example.com/fgAnders/Helga_Nuchelmans.level3.json"
         },
         {
             "name": {
@@ -40,7 +40,7 @@
             },
             "website": "http://www.vdhamer.com/fgWaalre/Empty_Website/",
             "featuredImage": "https://image.jimcdn.com/app/cms/image/transf/none/path/sb2e92183adfb60fb/image/ie69f110f416b6822/version/1678882175/image.jpg",
-            "imageList": "https://www.example.com/fgAnders/Lotte_Vrij.imagelist.json"
+            "level3URL": "https://www.example.com/fgAnders/Lotte_Vrij.level3.json"
         },
         {
             "name": {
@@ -51,7 +51,7 @@
             },
             "website": "https://me4photo.jimdosite.com/portfolio/",
             "featuredImage": "https://jimdo-storage.freetls.fastly.net/image/bf4d707f-ff72-4e16-8f2f-63680e7a8f91.jpg?format=pjpg&quality=80,90&auto=webp&disable=upscale&width=2560&height=2559",
-            "imageList": "https://www.example.com/fgAnders/Mirjam_Evers.imagelist.json"
+            "level3URL": "https://www.example.com/fgAnders/Mirjam_Evers.level3.json"
         }
     ]
 }
