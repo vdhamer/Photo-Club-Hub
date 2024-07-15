@@ -137,22 +137,36 @@ class Level2JsonReader { // normally running on a background thread
                                         nickname: jsonIdPlus["nickName"].stringValue)
 
         // optional fields
-        let website = jsonClub["website"].exists() ? URL(string: jsonClub["website"].stringValue) : nil
-        let wikipedia = jsonClub["wikipedia"].exists() ? URL(string: jsonClub["wikipedia"].stringValue) : nil
-        let fotobondNumber = jsonClub["nlSpecific"]["fotobondNumber"].int16Value
-        let coordinates: CLLocationCoordinate2D? = jsonClub["coordinates"].exists() ?
-            CLLocationCoordinate2D(latitude: jsonClub["coordinates"]["latitude"].doubleValue,
-                                   longitude: jsonClub["coordinates"]["longitude"].doubleValue) : nil
-        let localizedRemarks = jsonClub["remark"].arrayValue
+        if jsonClub["optional"].exists() {
+            let jsonOptionalClub: JSON = jsonClub["optional"]
 
-        _ = Organization.findCreateUpdate(context: bgContext,
-                                          organizationTypeEnum: OrganizationTypeEnum.club,
-                                          idPlus: idPlus,
-                                          website: website,
-                                          wikipedia: wikipedia,
-                                          fotobondNumber: fotobondNumber, // int16
-                                          coordinates: coordinates,
-                                          localizedRemarks: localizedRemarks)
+            let website = jsonClub["website"].exists() ? URL(string: jsonClub["website"].stringValue) : nil
+            let wikipedia = jsonClub["wikipedia"].exists() ? URL(string: jsonClub["wikipedia"].stringValue) : nil
+            let fotobondNumber = jsonClub["nlSpecific"]["fotobondNumber"].exists()  ?
+                             jsonClub["nlSpecific"]["fotobondNumber"].int16Value : nil
+            let coordinates: CLLocationCoordinate2D? = jsonClub["coordinates"].exists() ?
+                             CLLocationCoordinate2D(latitude: jsonClub["coordinates"]["latitude"].doubleValue,
+                                                    longitude: jsonClub["coordinates"]["longitude"].doubleValue) : nil
+            let localizedRemarks = jsonClub["remark"].arrayValue // empty array if missing
+
+            _ = Organization.findCreateUpdate(context: bgContext,
+                                              organizationTypeEnum: OrganizationTypeEnum.club,
+                                              idPlus: idPlus,
+                                              website: website,
+                                              wikipedia: wikipedia,
+                                              fotobondNumber: fotobondNumber,
+                                              coordinates: coordinates,
+                                              localizedRemarks: localizedRemarks)
+        } else {
+            _ = Organization.findCreateUpdate(context: bgContext,
+                                              organizationTypeEnum: OrganizationTypeEnum.club,
+                                              idPlus: idPlus,
+                                              website: nil,
+                                              wikipedia: nil,
+                                              fotobondNumber: nil,
+                                              coordinates: nil,
+                                              localizedRemarks: [JSON]()) // empty array of remarks
+        }
 
         do { // saving may not be necessary because every organization is saved separately
             if bgContext.hasChanges { // optimization recommended by Apple
