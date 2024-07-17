@@ -560,18 +560,42 @@ You can indentally check the basic syntax of JSON files using online JSON valida
 
 ### Level 2. Adding Members
 
-`Level 2` requires providing a list of the names of current (and optionally former) club members as a JSON file.
-This file can be stored anywhere - providing that it can be accessed using a web address (URL).
-For example, you can store it in the Media section of your club’s Wordpress web site using Wordpress' built-in uploading capability.
-With this `Level 2` data, the club members show up in the Portfolios screen.
-_Fotogroep Anders_ in the Netherlands is a good example of a `Level 2` club. We are currently simplifying `Level 2` support.</p>
-
-Each `Level 2` JSON file lists the current (and potentially former) members of a single club.
+`Level 2` support requires providing a list of the members as a file per club.
+A club's `Level 2` data shows up in the Portfolios screen as a list of club members.
+Each `Level 2` JSON file lists the current (and optionally former) members of a single club.
 For each member, a URL is stored pointing to the `Level 3` file (portfolio per member).
 `Level 2` lists also includes the URL of an image used as thumbnail for that member.
+</p>
+
+We are currently completing `Level 2` support.
+_Fotogroep de Gender_ in the Netherlands already uses a `.level2.json` file to host membership data.
+</p>
+
+<ul><details><Summary>Storing Level 2 data (click to expand)</Summary>
+</p>
+
 `Level 2` lists can be stored and managed on the club's own server. The file needs to be in a JSON format so that the app can interpret the data.
 You can check the basic syntax of JSON files using online JSON validators such as
-[JSONLint](https://jsonlint.com).</p>
+[JSONLint](https://jsonlint.com).
+</p>
+
+A `Level 2` file can be located anywhere online, but should by default be stored on the a club's existing website.
+You could, for example, store it inside an existing _Wordpress_ site using
+_Wordpress'_ built-in features for uploading files (called `media` or `library`).
+</p>
+
+The files are downloaded in background after app startup using a URL address found within the central `Level 1` file.
+</p>
+    
+The `Level 2` data is stored in the app's CoreData database, so that the data is already visible even before the
+data has been downloaded and the database content has been updated.
+</p>
+
+In the future, once there are hundreds or even thousands of `Level 2` files available, the app will need to become smarter about
+which clubs to preload and how often to refresh the `Level2` data.
+</p>
+
+</details></ul>
 
 <ul><details><Summary>Level 2 example (click to expand)</Summary></p>
 
@@ -668,7 +692,7 @@ Here is an example of the format of a `Level 2` list for a photo club. This exam
 
 ### Level 3. Adding Images
 
-`Level 3` requires providing links to the online images in member portfolios. 
+`Level 3` provides links to the online images in member portfolios. 
 Fotogroep Waalre in the Netherlands is an example of `Level 3` club: you can view their portfolios via the Portfolios screen.
 Because a club with, for example, 20 members will have hundreds of images, we have a way to automate generate portfolios 
 using Lightroom (instructions on how this works will be provided later).
