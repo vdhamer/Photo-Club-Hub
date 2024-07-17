@@ -561,10 +561,10 @@ You can indentally check the basic syntax of JSON files using online JSON valida
 ### Level 2. Adding Members
 
 `Level 2` requires providing a list of the names of current (and optionally former) club members as a JSON file.
-This file can be stored anywhere - providing that it can be accessed using a web address (URL).
+This file can be stored anywhere as long it can be loaded using a web address (URL).
 For example, you can store it in the Media section of your club’s Wordpress web site using Wordpress' built-in uploading capability.
-With this `Level 2` data, the club members show up in the Portfolios screen.
-_Fotogroep Anders_ in the Netherlands is a good example of a `Level 2` club. We are currently simplifying `Level 2` support.</p>
+With this `Level 2` data, the club members show up in the Portfolios screen. We are currently completing `Level 2` support.
+_Fotogroep de Gender_ in the Netherlands already uses a `.level2.json` file to host membership data.</p>
 
 Each `Level 2` JSON file lists the current (and potentially former) members of a single club.
 For each member, a URL is stored pointing to the `Level 3` file (portfolio per member).
