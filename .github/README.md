@@ -560,21 +560,10 @@ You can indentally check the basic syntax of JSON files using online JSON valida
 
 ### Level 2. Adding Members
 
-`Level 2` support requires providing a list of the members as a JSON file per club.
-Each `Level 2` file can be stored anywhere online. The files are downloaded in background after app startup using a URL.
-The `Level 2` data is stored in the app's CoreData database, so that the data is usually already visible while a data refresh
-is still ongoing. In the future, when there are many `Level 2` files available, the app will need to be more selective about
-how often it updates previously downloaded `Level 2` data.
-</p>
-
-You can store a `Level 2` file on a club’s web site, for example inside an existing _Wordpress_ site.
-_Wordpress'_ has a built-in file uploading feature (called `media` or `library`).
+`Level 2` support requires providing a list of the members as a file per club.
 A club's `Level 2` data shows up in the Portfolios screen as a list of club members.
-</p>
+<\p>
 
-We are currently completing `Level 2` support.
-_Fotogroep de Gender_ in the Netherlands already uses a `.level2.json` file to host membership data.
-</p>
 
 Each `Level 2` JSON file lists the current (and potentially former) members of a single club.
 For each member, a URL is stored pointing to the `Level 3` file (portfolio per member).
@@ -582,6 +571,26 @@ For each member, a URL is stored pointing to the `Level 3` file (portfolio per m
 `Level 2` lists can be stored and managed on the club's own server. The file needs to be in a JSON format so that the app can interpret the data.
 You can check the basic syntax of JSON files using online JSON validators such as
 [JSONLint](https://jsonlint.com).
+</p>
+
+Each `Level 2` file can be located anywhere online, but shouuld typically be stored on the a club's existing website.
+The files are downloaded in background after app startup using a URL address found within the central `Level 1` file.
+<\p>
+
+The `Level 2` data is stored in the app's CoreData database, so that the data can largely be shown even while before the
+data refresh is finished.
+</p>
+
+In the future, once there are hundreds or even thousands of `Level 2` files available, the app will need to become smarter about
+which clubs to preload and how often to refresh the `Level2` data.
+</p>
+
+You can store a `Level 2` file on a club’s web site, for example inside an existing _Wordpress_ site.
+_Wordpress'_ has a built-in file uploading feature (called `media` or `library`).
+</p>
+
+We are currently completing `Level 2` support.
+_Fotogroep de Gender_ in the Netherlands already uses a `.level2.json` file to host membership data.
 </p>
 
 <ul><details><Summary>Level 2 example (click to expand)</Summary></p>
