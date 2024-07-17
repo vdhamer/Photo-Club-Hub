@@ -569,7 +569,7 @@ _Fotogroep de Gender_ in the Netherlands already uses a `.level2.json` file to h
 </p>
 
 <ul><details><Summary>Storing Level 2 data (click to expand)</Summary></p>
-Each `Level 2` JSON file lists the current (and potentially former) members of a single club.
+Each `Level 2` JSON file lists the current (and optionally former) members of a single club.
 For each member, a URL is stored pointing to the `Level 3` file (portfolio per member).
 `Level 2` lists also includes the URL of an image used as thumbnail for that member.
 `Level 2` lists can be stored and managed on the club's own server. The file needs to be in a JSON format so that the app can interpret the data.
@@ -581,8 +581,8 @@ Each `Level 2` file can be located anywhere online, but shouuld typically be sto
 The files are downloaded in background after app startup using a URL address found within the central `Level 1` file.
 </p>
     
-The `Level 2` data is stored in the app's CoreData database, so that the data can largely be shown even while before the
-data refresh is finished.
+The `Level 2` data is stored in the app's CoreData database, so that the data is already visible even before the
+data has been downloaded and the database content has been updated.
 </p>
 
 In the future, once there are hundreds or even thousands of `Level 2` files available, the app will need to become smarter about
