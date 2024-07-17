@@ -689,7 +689,7 @@ Here is an example of the format of a `Level 2` list for a photo club. This exam
 
 ### Level 3. Adding Images
 
-`Level 3` requires providing links to the online images in member portfolios. 
+`Level 3` provides links to the online images in member portfolios. 
 Fotogroep Waalre in the Netherlands is an example of `Level 3` club: you can view their portfolios via the Portfolios screen.
 Because a club with, for example, 20 members will have hundreds of images, we have a way to automate generate portfolios 
 using Lightroom (instructions on how this works will be provided later).
