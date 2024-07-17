@@ -568,7 +568,9 @@ We are currently completing `Level 2` support.
 _Fotogroep de Gender_ in the Netherlands already uses a `.level2.json` file to host membership data.
 </p>
 
-<ul><details><Summary>Storing Level 2 data (click to expand)</Summary></p>
+<ul><details><Summary>Storing Level 2 data (click to expand)</Summary>
+</p>
+
 Each `Level 2` JSON file lists the current (and optionally former) members of a single club.
 For each member, a URL is stored pointing to the `Level 3` file (portfolio per member).
 `Level 2` lists also includes the URL of an image used as thumbnail for that member.
