@@ -560,7 +560,7 @@ You can indentally check the basic syntax of JSON files using online JSON valida
 
 ### Level 2. Adding Members
 
-`Level 2` requires providing a list of the names of current (and optionally former) club members as a JSON file.
+`Level 2` requires providing a list of the names of current club members as a JSON file.
 This file can be stored anywhere as long it can be loaded using a web address (URL).
 For example, you can store it in the Media section of your club’s Wordpress web site using Wordpress' built-in uploading capability.
 With this `Level 2` data, the club members show up in the Portfolios screen. We are currently completing `Level 2` support.
