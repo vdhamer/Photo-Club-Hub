@@ -573,7 +573,7 @@ A club's `Level 2` data shows up in the Portfolios screen as a list of club memb
 </p>
 
 We are currently completing `Level 2` support.
-_Fotogroep de Gender_ in the Netherlands already uses a `.level2.json` file to host membership data
+_Fotogroep de Gender_ in the Netherlands already uses a `.level2.json` file to host membership data.
 </p>
 
 Each `Level 2` JSON file lists the current (and potentially former) members of a single club.
