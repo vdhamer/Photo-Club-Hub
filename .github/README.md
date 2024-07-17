@@ -560,9 +560,12 @@ You can indentally check the basic syntax of JSON files using online JSON valida
 
 ### Level 2. Adding Members
 
-`Level 2` involves providing a list of the members as a JSON file per club.
-Thse files can be spread out across the network and can be stored anywhere where they can be loaded using a web address (URL).
-For example, you can store it in a club’s Wordpress web site using Wordpress' built-in file uploading feature.
+`Level 2` support requires providing a list of the members as a JSON file per club.
+Each `Level 2` file can be stored anywhere online. They where are loaded in background after app startup using a URL.
+</p>
+
+For example, you can store a `Level 2` file on a club’s existing _Wordpress_ site
+using _Wordpress'_ built-in file uploading feature (called `media` or `library`).
 After the app loads a club's `Level 2` data, the club members show up in the Portfolios screen.
 </p>
 
