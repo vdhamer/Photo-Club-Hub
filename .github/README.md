@@ -564,7 +564,11 @@ You can indentally check the basic syntax of JSON files using online JSON valida
 A club's `Level 2` data shows up in the Portfolios screen as a list of club members.
 </p>
 
+We are currently completing `Level 2` support.
+_Fotogroep de Gender_ in the Netherlands already uses a `.level2.json` file to host membership data.
+</p>
 
+<ul><details><Summary>Storing Level 2 data (click to expand)</Summary></p>
 Each `Level 2` JSON file lists the current (and potentially former) members of a single club.
 For each member, a URL is stored pointing to the `Level 3` file (portfolio per member).
 `Level 2` lists also includes the URL of an image used as thumbnail for that member.
@@ -576,7 +580,7 @@ You can check the basic syntax of JSON files using online JSON validators such a
 Each `Level 2` file can be located anywhere online, but shouuld typically be stored on the a club's existing website.
 The files are downloaded in background after app startup using a URL address found within the central `Level 1` file.
 </p>
-
+    
 The `Level 2` data is stored in the app's CoreData database, so that the data can largely be shown even while before the
 data refresh is finished.
 </p>
@@ -588,10 +592,7 @@ which clubs to preload and how often to refresh the `Level2` data.
 You can store a `Level 2` file on a club’s web site, for example inside an existing _Wordpress_ site.
 _Wordpress'_ has a built-in file uploading feature (called `media` or `library`).
 </p>
-
-We are currently completing `Level 2` support.
-_Fotogroep de Gender_ in the Netherlands already uses a `.level2.json` file to host membership data.
-</p>
+</details></ul>
 
 <ul><details><Summary>Level 2 example (click to expand)</Summary></p>
 
