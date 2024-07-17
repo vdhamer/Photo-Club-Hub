@@ -562,7 +562,7 @@ You can indentally check the basic syntax of JSON files using online JSON valida
 
 `Level 2` support requires providing a list of the members as a file per club.
 A club's `Level 2` data shows up in the Portfolios screen as a list of club members.
-<\p>
+</p>
 
 
 Each `Level 2` JSON file lists the current (and potentially former) members of a single club.
@@ -575,7 +575,7 @@ You can check the basic syntax of JSON files using online JSON validators such a
 
 Each `Level 2` file can be located anywhere online, but shouuld typically be stored on the a club's existing website.
 The files are downloaded in background after app startup using a URL address found within the central `Level 1` file.
-<\p>
+</p>
 
 The `Level 2` data is stored in the app's CoreData database, so that the data can largely be shown even while before the
 data refresh is finished.
