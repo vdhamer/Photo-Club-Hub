@@ -580,6 +580,9 @@ You can check the basic syntax of JSON files using online JSON validators such a
 </p>
 
 Each `Level 2` file can be located anywhere online, but shouuld typically be stored on the a club's existing website.
+You could, for example, store it inside an existing _Wordpress_ site using
+_Wordpress'_ built-in features for uploading files (called `media` or `library`).
+</p>
 The files are downloaded in background after app startup using a URL address found within the central `Level 1` file.
 </p>
     
@@ -591,9 +594,6 @@ In the future, once there are hundreds or even thousands of `Level 2` files avai
 which clubs to preload and how often to refresh the `Level2` data.
 </p>
 
-You can store a `Level 2` file on a club’s web site, for example inside an existing _Wordpress_ site.
-_Wordpress'_ has a built-in file uploading feature (called `media` or `library`).
-</p>
 </details></ul>
 
 <ul><details><Summary>Level 2 example (click to expand)</Summary></p>
