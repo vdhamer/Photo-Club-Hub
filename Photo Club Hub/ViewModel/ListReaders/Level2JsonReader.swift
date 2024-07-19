@@ -8,7 +8,6 @@
 // import SwiftyJSON // now used as a single file
 import CoreData // for NSManagedObjectContext
 import CoreLocation // for CLLocationCoordinate2D
-import RegexBuilder // for Regex
 
 /* Example of level2.json file with one member
  {
@@ -62,7 +61,7 @@ import RegexBuilder // for Regex
 
 class Level2JsonReader { // normally running on a background thread
 
-    // init() actually does all the work: fetches the JSON string, parses it, and updates the CoreData database
+    // init() does all the work here: it fetches the JSON data, parses it, and updates the CoreData database.
     init(bgContext: NSManagedObjectContext,
          urlComponents: UrlComponents, // what to parse
          club: Organization, // club who's data we are supposed to be receiving via this url
@@ -83,7 +82,7 @@ class Level2JsonReader { // normally running on a background thread
 
     }
 
-    // fetch the JSON content and returns it as a String. But returns `nil` if there is an error.
+    // Fetch the JSON content and returns it as a String. If there is an error, it returns `nil` instead.
     private func getJsonData(urlComponents: UrlComponents, useOnlyFile: Bool) -> String? {
 
         guard let url = URL(string: urlComponents.fullURLstring)
@@ -136,7 +135,7 @@ class Level2JsonReader { // normally running on a background thread
                                         town: jsonIdPlus["town"].stringValue,
                                         nickname: jsonIdPlus["nickName"].stringValue)
 
-        // optional fields
+        // optional fields within jsonClub
         if jsonClub["optional"].exists() {
             let jsonOptional: JSON = jsonClub["optional"] // there is a second "optional" but this is the one in "club"
 
@@ -159,6 +158,7 @@ class Level2JsonReader { // normally running on a background thread
                                               coordinates: coordinates,
                                               localizedRemarks: localizedRemarks)
         } else {
+            // no club/optional fields, so just create a basic club - for what it's worth.
             _ = Organization.findCreateUpdate(context: bgContext,
                                               organizationTypeEnum: OrganizationTypeEnum.club,
                                               idPlus: idPlus
@@ -169,6 +169,49 @@ class Level2JsonReader { // normally running on a background thread
                                               // coordinates: nil,
                                               // localizedRemarks: [JSON]()
                                              )
+        }
+
+        if jsonRoot["members"].exists() { // could conceivably be empty (although it wouldn't be too useful)
+            let members: [JSON] = jsonRoot["members"].arrayValue
+            for member in members {
+                guard member["name"].exists(),
+                      member["name"]["givenName"].exists(),
+                      member["name"]["familyName"].exists() else { // check for mandatory fields
+                    ifDebugFatalError("Missing or incomplete member/name data in \(urlComponents.shortName)")
+                    continue
+                }
+                let givenName: String = member["name"]["givenName"].stringValue
+                let infixName: String = member["name"]["infixName"].stringValue
+                let familyName: String = member["name"]["familyName"].stringValue
+                print("""
+                      Member \(givenName) \
+                      \(infixName=="" ? "" : infixName + " ")\
+                      \(familyName) \
+                      found in \(urlComponents.shortName)
+                      """)
+                let photographer = Photographer.findCreateUpdate(context: bgContext,
+                                                                 personName: PersonName(
+                                                                    givenName: givenName,
+                                                                    infixName: infixName, // may be ""
+                                                                    familyName: familyName),
+                                                                 organization: club) // club used only in print()
+                if member["optional"].exists() {
+                    let jsonOptional: JSON = member["optional"] // "optional" properties of member or photographer
+                    let birthday = jsonOptional["birthday"].exists() ? jsonOptional["birthday"].stringValue : nil
+                    _ = MemberPortfolio.findCreateUpdate(bgContext: bgContext,
+                                                         organization: club,
+                                                         photographer: photographer,
+                                                         memberRolesAndStatus: MemberRolesAndStatus(role: [:], stat: [:])
+                    )
+                } else {
+                    _ = MemberPortfolio.findCreateUpdate(bgContext: bgContext,
+                                                         organization: club,
+                                                         photographer: photographer,
+                                                         memberRolesAndStatus: MemberRolesAndStatus(role: [:], stat: [:])
+                    )
+                }
+
+            }
         }
 
         do { // saving may not be necessary because every organization is saved separately
