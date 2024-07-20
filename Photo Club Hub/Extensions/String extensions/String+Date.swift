@@ -30,7 +30,7 @@ extension String {
         } else {
             ifDebugFatalError("Failed to decode date from \(self) because RegEx didn't trigger",
                               file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
-            date = Date() // in release mode, a bad date is replaced by today's date. And the app doesn't stop.
+            return nil // in release mode, a bad date is returned as nil and the app doesn't stop.
         }
 
         return date

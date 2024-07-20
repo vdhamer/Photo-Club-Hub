@@ -263,6 +263,17 @@ class Level2JsonReader { // normally running on a background thread
         let level3URL: URL? = jsonOptionals["level3URL"].exists() ?
             URL(string: jsonOptionals["level3URL"].stringValue) : nil
 
+        // some attributes are at the Photographer level...
+        _ = Photographer.findCreateUpdate(context: bgContext,
+                                          personName: PersonName(givenName: photographer.givenName,
+                                                                 infixName: photographer.infixName,
+                                                                 familyName: photographer.familyName),
+                                          memberRolesAndStatus: MemberRolesAndStatus(role: [:], status: [:]), // TODO ??
+                                          website: website,
+                                          bornDT: birthday?.extractDate(),
+                                          organization: club ) // club is only shown on console for debug purposes
+
+        // ...while some attributes are at the Photographer as Member of club level
         _ = MemberPortfolio.findCreateUpdate(bgContext: bgContext,
                                             organization: club,
                                             photographer: photographer,
@@ -273,17 +284,6 @@ class Level2JsonReader { // normally running on a background thread
                                             latestImage: featuredImage,
                                             latestThumbnail: nil
                                            )
-
-        _ = Photographer.findCreateUpdate(context: bgContext,
-                                          personName: PersonName(givenName: photographer.givenName,
-                                                                 infixName: photographer.infixName,
-                                                                 familyName: photographer.familyName),
-                                          memberRolesAndStatus: MemberRolesAndStatus(role: [:], status: [:]), // TODO ??
-                                          // phoneNumber: nil,
-                                          // eMail: nil,
-                                          website: website,
-                                          bornDT: birthday?.extractDate(),
-                                          organization: club ) // club is only shown on console for debug purposes
 
     }
 
