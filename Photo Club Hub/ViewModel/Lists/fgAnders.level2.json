@@ -33,7 +33,7 @@
                 "familyName": "Nuggelmans"
             },
             "optional": {
-                "birthday": "1972-06-05T00:00:00.000Z",
+                "birthday": "1972-06-05",
                 "website": "https://helganuchelmans.nl",
                 "featuredImage": "https://cdn.myportfolio.com/d8801b208f49ae95bc80b15c07cde6f2/902cb616-6aaf-4f1f-9d40-3487d0e1254a_rw_1200.jpg?h=7fee8b232bc10216ccf294e69a81be4c",
                 "level3URL": "https://www.example.com/fgAnders/Helga_Nuchelmans.level3.json"
