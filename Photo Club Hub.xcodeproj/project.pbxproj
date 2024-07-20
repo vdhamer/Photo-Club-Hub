@@ -15,6 +15,7 @@
 		D0275F5527E3E21F002FA4FE /* View+OnTapGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0275F5427E3E21F002FA4FE /* View+OnTapGesture.swift */; };
 		D02C273C2AEE6F870005F957 /* AndersMembersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02C273B2AEE6F870005F957 /* AndersMembersProvider.swift */; };
 		D02C273E2AEE6FCD0005F957 /* AndersMembersProvider+InsertSomeHardcodedMemberData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02C273D2AEE6FCD0005F957 /* AndersMembersProvider+InsertSomeHardcodedMemberData.swift */; };
+		D02F88532C4C242C0043B25B /* String+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02F88522C4C242C0043B25B /* String+Date.swift */; };
 		D030CD652B3AE2E800A12E90 /* OrganizationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D030CD642B3AE2E800A12E90 /* OrganizationType.swift */; };
 		D032944A283F9D1D0044C70C /* Bundle+VersionBuild.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0329449283F9D1D0044C70C /* Bundle+VersionBuild.swift */; };
 		D0362A872AC3A21200F87378 /* String+containsWordUsingNLP.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0362A862AC3A21200F87378 /* String+containsWordUsingNLP.swift */; };
@@ -114,6 +115,7 @@
 		D02C273B2AEE6F870005F957 /* AndersMembersProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AndersMembersProvider.swift; sourceTree = "<group>"; };
 		D02C273D2AEE6FCD0005F957 /* AndersMembersProvider+InsertSomeHardcodedMemberData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AndersMembersProvider+InsertSomeHardcodedMemberData.swift"; sourceTree = "<group>"; };
 		D02C35F12880C3D6008C671A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D02F88522C4C242C0043B25B /* String+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Date.swift"; sourceTree = "<group>"; };
 		D030CD642B3AE2E800A12E90 /* OrganizationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationType.swift; sourceTree = "<group>"; };
 		D032516A2BBB6CB6005E9B32 /* whosWhoScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whosWhoScreen.png; sourceTree = "<group>"; };
 		D0329449283F9D1D0044C70C /* Bundle+VersionBuild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+VersionBuild.swift"; sourceTree = "<group>"; };
@@ -309,6 +311,7 @@
 				D0831A41277F731C0049AB84 /* String+Capitalize.swift */,
 				D06061EC28A05D4600A675A7 /* String+Paths.swift */,
 				D0362A862AC3A21200F87378 /* String+containsWordUsingNLP.swift */,
+				D02F88522C4C242C0043B25B /* String+Date.swift */,
 			);
 			path = "String extensions";
 			sourceTree = "<group>";
@@ -785,6 +788,7 @@
 				D05414F92AC749EC00D899D8 /* FotogroepDeGenderMembersProvider+insertSomeHardcodedMemberDataCommon.swift in Sources */,
 				D0831A1F277F72270049AB84 /* FilteredMemberPortfoliosView.swift in Sources */,
 				D08281332959C7EA00D9C232 /* FGWMembersProvider+extractEMail.swift in Sources */,
+				D02F88532C4C242C0043B25B /* String+Date.swift in Sources */,
 				D0831A34277F72590049AB84 /* BellusImagoMembersProvider.swift in Sources */,
 				D0FE77E52BB9AEE900272077 /* ItemFilterStatsEnum.swift in Sources */,
 				D0C53BDD2ABF3ADF000722A1 /* PersonName.swift in Sources */,

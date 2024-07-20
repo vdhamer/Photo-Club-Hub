@@ -59,7 +59,7 @@ import CoreLocation // for CLLocationCoordinate2D
                      "isMentor": false,
                      "isPropectiveMember": false
                  },
-                 "birthday": "9999-10-18T00:00:00.000Z",
+                 "birthday": "9999-10-18",
                  "website": "https://glass.photo/vdhamer",
                  "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg",
                  "level3URL": "https://www.example.com/FG_deGender/Peter_van_den_Hamer.level3.json"
@@ -230,8 +230,8 @@ class Level2JsonReader { // normally running on a background thread
                                    jsonOptionals: JSON,
                                    club: Organization) {
         let website = jsonOptionals["website"].exists() ? URL(string: jsonOptionals["website"].stringValue) : nil
-        let wikipedia = jsonOptionals["wikipedia"].exists() ?
-            URL(string: jsonOptionals["wikipedia"].stringValue) : nil
+        let wikipedia: URL? = jsonOptionals["wikipedia"].exists() ?
+            URL(string: jsonOptionals["wikipedia"].stringValue) : nil // TODO move to method
         let fotobondNumber = jsonOptionals["nlSpecific"]["fotobondNumber"].exists()  ?
         jsonOptionals["nlSpecific"]["fotobondNumber"].int16Value : nil
         let coordinates: CLLocationCoordinate2D? = jsonOptionals["coordinates"].exists() ?
@@ -255,13 +255,36 @@ class Level2JsonReader { // normally running on a background thread
                                      jsonOptionals: JSON,
                                      photographer: Photographer,
                                      club: Organization) {
-        _ = jsonOptionals["birthday"].exists() ? jsonOptionals["birthday"].stringValue : nil
+        let birthday: String? = jsonOptionals["birthday"].exists() ? jsonOptionals["birthday"].stringValue : nil
+        let website: URL? = jsonOptionals["website"].exists() ?
+            URL(string: jsonOptionals["website"].stringValue) : nil
+        let featuredImage: URL? = jsonOptionals["featuredImage"].exists() ?
+            URL(string: jsonOptionals["featuredImage"].stringValue) : nil
+        let level3URL: URL? = jsonOptionals["level3URL"].exists() ?
+            URL(string: jsonOptionals["level3URL"].stringValue) : nil
+
         _ = MemberPortfolio.findCreateUpdate(bgContext: bgContext,
-                                             organization: club,
-                                             photographer: photographer,
-                                             memberRolesAndStatus: MemberRolesAndStatus(role: [:],
-                                                                                        status: [:])
-        )
+                                            organization: club,
+                                            photographer: photographer,
+                                            memberRolesAndStatus: MemberRolesAndStatus(role: [:],
+                                                                                       status: [:]),
+                                            dateInterval: nil,
+                                            memberWebsite: nil,
+                                            latestImage: featuredImage,
+                                            latestThumbnail: nil
+                                           )
+
+        _ = Photographer.findCreateUpdate(context: bgContext,
+                                          personName: PersonName(givenName: photographer.givenName,
+                                                                 infixName: photographer.infixName,
+                                                                 familyName: photographer.familyName),
+                                          memberRolesAndStatus: MemberRolesAndStatus(role: [:], status: [:]), // TODO ??
+                                          // phoneNumber: nil,
+                                          // eMail: nil,
+                                          website: website,
+                                          bornDT: birthday?.extractDate(),
+                                          organization: club ) // club is only shown on console for debug purposes
+
     }
 
 }
