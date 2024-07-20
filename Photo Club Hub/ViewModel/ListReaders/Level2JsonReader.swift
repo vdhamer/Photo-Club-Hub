@@ -115,10 +115,11 @@ class Level2JsonReader { // normally running on a background thread
 
     }
 
+    // returned String is nil or describes error
     private func mergeLevel2Json(bgContext: NSManagedObjectContext,
                                  jsonData: String,
                                  club: Organization,
-                                 urlComponents: UrlComponents) -> String? { // string contains error
+                                 urlComponents: UrlComponents) -> String? {
 
         ifDebugPrint("Loading members of \(club.fullNameTown) from \(urlComponents.shortName) in background.")
 
@@ -137,26 +138,9 @@ class Level2JsonReader { // normally running on a background thread
 
         // optional fields within jsonClub
         if jsonClub["optional"].exists() {
-            let jsonOptional: JSON = jsonClub["optional"] // there is a second "optional" but this is the one in "club"
-
-            let website = jsonOptional["website"].exists() ? URL(string: jsonOptional["website"].stringValue) : nil
-            let wikipedia = jsonOptional["wikipedia"].exists() ?
-                URL(string: jsonOptional["wikipedia"].stringValue) : nil
-            let fotobondNumber = jsonOptional["nlSpecific"]["fotobondNumber"].exists()  ?
-            jsonOptional["nlSpecific"]["fotobondNumber"].int16Value : nil
-            let coordinates: CLLocationCoordinate2D? = jsonOptional["coordinates"].exists() ?
-                 CLLocationCoordinate2D(latitude: jsonOptional["coordinates"]["latitude"].doubleValue,
-                                        longitude: jsonOptional["coordinates"]["longitude"].doubleValue) : nil
-            let localizedRemarks = jsonClub["remark"].arrayValue // empty array if missing
-
-            _ = Organization.findCreateUpdate(context: bgContext,
-                                              organizationTypeEnum: OrganizationTypeEnum.club,
-                                              idPlus: idPlus,
-                                              website: website,
-                                              wikipedia: wikipedia,
-                                              fotobondNumber: fotobondNumber,
-                                              coordinates: coordinates,
-                                              localizedRemarks: localizedRemarks)
+            loadClubOptionals(bgContext: bgContext,
+                              jsonOptionals: jsonClub["optional"],
+                              club: club)
         } else {
             // no club/optional fields, so just create a basic club - for what it's worth.
             _ = Organization.findCreateUpdate(context: bgContext,
@@ -174,43 +158,7 @@ class Level2JsonReader { // normally running on a background thread
         if jsonRoot["members"].exists() { // could conceivably be empty (although it wouldn't be too useful)
             let members: [JSON] = jsonRoot["members"].arrayValue
             for member in members {
-                guard member["name"].exists(),
-                      member["name"]["givenName"].exists(),
-                      member["name"]["familyName"].exists() else { // check for mandatory fields
-                    ifDebugFatalError("Missing or incomplete member/name data in \(urlComponents.shortName)")
-                    continue
-                }
-                let givenName: String = member["name"]["givenName"].stringValue
-                let infixName: String = member["name"]["infixName"].stringValue
-                let familyName: String = member["name"]["familyName"].stringValue
-                print("""
-                      Member \(givenName) \
-                      \(infixName=="" ? "" : infixName + " ")\
-                      \(familyName) \
-                      found in \(urlComponents.shortName)
-                      """)
-                let photographer = Photographer.findCreateUpdate(context: bgContext,
-                                                                 personName: PersonName(
-                                                                    givenName: givenName,
-                                                                    infixName: infixName, // may be ""
-                                                                    familyName: familyName),
-                                                                 organization: club) // club used only in print()
-                if member["optional"].exists() {
-                    let jsonOptional: JSON = member["optional"] // "optional" properties of member or photographer
-                    let birthday = jsonOptional["birthday"].exists() ? jsonOptional["birthday"].stringValue : nil
-                    _ = MemberPortfolio.findCreateUpdate(bgContext: bgContext,
-                                                         organization: club,
-                                                         photographer: photographer,
-                                                         memberRolesAndStatus: MemberRolesAndStatus(role: [:], stat: [:])
-                    )
-                } else {
-                    _ = MemberPortfolio.findCreateUpdate(bgContext: bgContext,
-                                                         organization: club,
-                                                         photographer: photographer,
-                                                         memberRolesAndStatus: MemberRolesAndStatus(role: [:], stat: [:])
-                    )
-                }
-
+                loadMember(bgContext: bgContext, member: member, club: club, urlComponents: urlComponents)
             }
         }
 
@@ -228,6 +176,82 @@ class Level2JsonReader { // normally running on a background thread
 
         ifDebugPrint("Completed mergeLevel2Json() in background")
         return nil // no error
+    }
+
+    private func loadMember(bgContext: NSManagedObjectContext,
+                            member: JSON,
+                            club: Organization,
+                            urlComponents: UrlComponents) { // for error messages
+        guard member["name"].exists(),
+              member["name"]["givenName"].exists(),
+              member["name"]["familyName"].exists() else { // check for mandatory fields
+            ifDebugFatalError("Missing or incomplete member/name data in \(urlComponents.shortName)")
+            return
+        }
+        let givenName: String = member["name"]["givenName"].stringValue
+        let infixName: String = member["name"]["infixName"].stringValue
+        let familyName: String = member["name"]["familyName"].stringValue
+        print("""
+                  Member \(givenName) \
+                  \(infixName=="" ? "" : infixName + " ")\
+                  \(familyName) \
+                  found in \(urlComponents.shortName)
+                  """)
+        let photographer = Photographer.findCreateUpdate(context: bgContext,
+                                                         personName: PersonName(
+                                                            givenName: givenName,
+                                                            infixName: infixName, // may be ""
+                                                            familyName: familyName),
+                                                         organization: club) // club used only in print()
+        if member["optional"].exists() {
+            loadMemberOptionals(bgContext: bgContext,
+                                jsonOptionals: member["optional"],
+                                photographer: photographer, club: club)
+        } else {
+            _ = MemberPortfolio.findCreateUpdate(bgContext: bgContext,
+                                                 organization: club,
+                                                 photographer: photographer,
+                                                 memberRolesAndStatus: MemberRolesAndStatus(role: [:], status: [:])
+            )
+        }
+    }
+
+    private func loadClubOptionals(bgContext: NSManagedObjectContext,
+                                   jsonOptionals: JSON,
+                                   club: Organization) {
+        let website = jsonOptionals["website"].exists() ? URL(string: jsonOptionals["website"].stringValue) : nil
+        let wikipedia = jsonOptionals["wikipedia"].exists() ?
+            URL(string: jsonOptionals["wikipedia"].stringValue) : nil
+        let fotobondNumber = jsonOptionals["nlSpecific"]["fotobondNumber"].exists()  ?
+        jsonOptionals["nlSpecific"]["fotobondNumber"].int16Value : nil
+        let coordinates: CLLocationCoordinate2D? = jsonOptionals["coordinates"].exists() ?
+             CLLocationCoordinate2D(latitude: jsonOptionals["coordinates"]["latitude"].doubleValue,
+                                    longitude: jsonOptionals["coordinates"]["longitude"].doubleValue) : nil
+        let localizedRemarks = jsonOptionals["remark"].arrayValue // empty array if missing
+
+        _ = Organization.findCreateUpdate(context: bgContext,
+                                          organizationTypeEnum: OrganizationTypeEnum.club,
+                                          idPlus: OrganizationIdPlus(id: PhotoClubId(fullName: club.fullName,
+                                                                                     town: club.town),
+                                                                     nickname: club.nickName),
+                                          website: website,
+                                          wikipedia: wikipedia,
+                                          fotobondNumber: fotobondNumber,
+                                          coordinates: coordinates,
+                                          localizedRemarks: localizedRemarks)
+    }
+
+    private func loadMemberOptionals(bgContext: NSManagedObjectContext,
+                                     jsonOptionals: JSON,
+                                     photographer: Photographer,
+                                     club: Organization) {
+        _ = jsonOptionals["birthday"].exists() ? jsonOptionals["birthday"].stringValue : nil
+        _ = MemberPortfolio.findCreateUpdate(bgContext: bgContext,
+                                             organization: club,
+                                             photographer: photographer,
+                                             memberRolesAndStatus: MemberRolesAndStatus(role: [:],
+                                                                                        status: [:])
+        )
     }
 
 }
