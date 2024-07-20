@@ -87,5 +87,5 @@ extension MemberStatus: Comparable {
 
 struct MemberRolesAndStatus: Equatable {
     var role: [MemberRole: Bool?] = [:]
-    var stat: [MemberStatus: Bool?] = [:]
+    var status: [MemberStatus: Bool?] = [:]
 }

@@ -99,7 +99,7 @@ extension AndersMembersProvider { // fill with some initial hard-coded content
                            website: URL? = nil,
                            bornDT: Date? = nil,
                            organization: Organization,
-                           memberRolesAndStatus: MemberRolesAndStatus = MemberRolesAndStatus(role: [:], stat: [:]),
+                           memberRolesAndStatus: MemberRolesAndStatus = MemberRolesAndStatus(role: [:], status: [:]),
                            memberWebsite: URL? = nil,
                            latestImage: URL? = nil,
                            latestThumbnail: URL? = nil,
