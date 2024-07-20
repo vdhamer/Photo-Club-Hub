@@ -123,7 +123,7 @@ extension FotogroepWaalreMembersProvider {
                     let photographer = Photographer.findCreateUpdate(
                         context: bgContext,
                         personName: personName,
-                        memberRolesAndStatus: MemberRolesAndStatus(role: [:], stat: [
+                        memberRolesAndStatus: MemberRolesAndStatus(role: [:], status: [
                             .deceased: !self.isStillAlive(phone: phoneNumber) ]),
                         phoneNumber: phoneNumber, eMail: eMail,
                         website: URL(string: externalURL),
@@ -135,7 +135,7 @@ extension FotogroepWaalreMembersProvider {
                         organization: organization, photographer: photographer,
                         memberRolesAndStatus: MemberRolesAndStatus(
                             role: [:],
-                            stat: [
+                            status: [
                                 .former: !self.isCurrentMember(name: personName.fullNameWithParenthesizedRole,
                                                                includeProspectiveMembers: true),
                                 .coach: self.isMentor(name: personName.fullNameWithParenthesizedRole),

@@ -49,12 +49,12 @@ extension Photographer {
 
     var memberRolesAndStatus: MemberRolesAndStatus {
         get { // conversion from Bool to dictionary
-            return MemberRolesAndStatus(role: [:], stat: [
+            return MemberRolesAndStatus(role: [:], status: [
                 .deceased: isDeceased]
             )
         }
         set { // merge newValue with existing dictionary
-            if let newBool = newValue.stat[.deceased] {
+            if let newBool = newValue.status[.deceased] {
                 isDeceased = newBool!
             }
         }
@@ -79,7 +79,7 @@ extension Photographer {
     static func findCreateUpdate(context: NSManagedObjectContext, // foreground or background context
                                  personName: PersonName,
                                  memberRolesAndStatus: MemberRolesAndStatus = MemberRolesAndStatus(role: [:],
-                                                                                                   stat: [:]),
+                                                                                                   status: [:]),
                                  phoneNumber: String? = nil, eMail: String? = nil,
                                  website: URL? = nil, bornDT: Date? = nil,
                                  organization: Organization // organization is only shown on console for debug purposes
@@ -152,8 +152,8 @@ extension Photographer {
 
 		var wasUpdated: Bool = false
 
-        if let isDeceased = memberRolesAndStatus.stat[.deceased], photographer.isDeceased != isDeceased {
-            photographer.memberRolesAndStatus.stat[.deceased] = isDeceased
+        if let isDeceased = memberRolesAndStatus.status[.deceased], photographer.isDeceased != isDeceased {
+            photographer.memberRolesAndStatus.status[.deceased] = isDeceased
             wasUpdated = true
 		}
 
