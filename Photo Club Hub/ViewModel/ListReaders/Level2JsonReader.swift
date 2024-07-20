@@ -230,8 +230,7 @@ class Level2JsonReader { // normally running on a background thread
                                    jsonOptionals: JSON,
                                    club: Organization) {
         let website = jsonOptionals["website"].exists() ? URL(string: jsonOptionals["website"].stringValue) : nil
-        let wikipedia: URL? = jsonOptionals["wikipedia"].exists() ?
-            URL(string: jsonOptionals["wikipedia"].stringValue) : nil // TODO move to method
+        let wikipedia: URL? = jsonOptionalsToURL(jsonOptionals: jsonOptionals, key: "wikipedia")
         let fotobondNumber = jsonOptionals["nlSpecific"]["fotobondNumber"].exists()  ?
         jsonOptionals["nlSpecific"]["fotobondNumber"].int16Value : nil
         let coordinates: CLLocationCoordinate2D? = jsonOptionals["coordinates"].exists() ?
@@ -256,12 +255,10 @@ class Level2JsonReader { // normally running on a background thread
                                      photographer: Photographer,
                                      club: Organization) {
         let birthday: String? = jsonOptionals["birthday"].exists() ? jsonOptionals["birthday"].stringValue : nil
-        let website: URL? = jsonOptionals["website"].exists() ?
-            URL(string: jsonOptionals["website"].stringValue) : nil
-        let featuredImage: URL? = jsonOptionals["featuredImage"].exists() ?
-            URL(string: jsonOptionals["featuredImage"].stringValue) : nil
-        let level3URL: URL? = jsonOptionals["level3URL"].exists() ?
-            URL(string: jsonOptionals["level3URL"].stringValue) : nil
+
+        let website: URL? = jsonOptionalsToURL(jsonOptionals: jsonOptionals, key: "website")
+        let featuredImage: URL? = jsonOptionalsToURL(jsonOptionals: jsonOptionals, key: "featuredImage")
+        let level3URL: URL? = jsonOptionalsToURL(jsonOptionals: jsonOptionals, key: "level3URL")
 
         // some attributes are at the Photographer level...
         _ = Photographer.findCreateUpdate(context: bgContext,
@@ -285,6 +282,12 @@ class Level2JsonReader { // normally running on a background thread
                                             latestThumbnail: nil
                                            )
 
+    }
+
+    private func jsonOptionalsToURL(jsonOptionals: JSON, key: String) -> URL? {
+        guard jsonOptionals[key].exists() else { return nil }
+        guard let string = jsonOptionals[key].string else { return nil }
+        return URL(string: string) // returns nil if the string doesn’t represent a valid URL
     }
 
 }
