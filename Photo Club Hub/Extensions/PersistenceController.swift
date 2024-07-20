@@ -77,7 +77,7 @@ struct PersistenceController {
             let photographer = Photographer.findCreateUpdate(
                 context: viewContext, // on main thread
                 personName: PersonName(givenName: "Jan", infixName: "D'", familyName: "Eau\(index)"),
-                memberRolesAndStatus: memberRolesAndStatus,
+                isDeceased: memberRolesAndStatus.isDeceased(),
                 phoneNumber: "06-12345678",
                 eMail: "Jan.D.Eau\(index)@example.com",
                 website: URL(string: "https://www.example.com/JanDEau\(index)"),

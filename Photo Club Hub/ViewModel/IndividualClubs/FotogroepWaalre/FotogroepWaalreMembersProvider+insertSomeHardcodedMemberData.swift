@@ -82,7 +82,7 @@ extension FotogroepWaalreMembersProvider { // fill with some initial hard-coded 
                            personName: PersonName(givenName: personName.givenName,
                                                   infixName: personName.infixName,
                                                   familyName: personName.familyName),
-                           memberRolesAndStatus: memberRolesAndStatus,
+                           isDeceased: memberRolesAndStatus.isDeceased(),
                            bornDT: bornDT,
                            organization: organization)
 

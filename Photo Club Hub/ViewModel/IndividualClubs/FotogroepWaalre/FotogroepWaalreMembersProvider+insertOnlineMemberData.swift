@@ -82,7 +82,6 @@ extension FotogroepWaalreMembersProvider {
         }
     }
 
-    // swiftlint:disable:next function_body_length
     private func parseHTMLContent(bgContext: NSManagedObjectContext,
                                   htmlContent: String,
                                   idPlus: OrganizationIdPlus) {
@@ -123,8 +122,7 @@ extension FotogroepWaalreMembersProvider {
                     let photographer = Photographer.findCreateUpdate(
                         context: bgContext,
                         personName: personName,
-                        memberRolesAndStatus: MemberRolesAndStatus(role: [:], status: [
-                            .deceased: !self.isStillAlive(phone: phoneNumber) ]),
+                        isDeceased: !self.isStillAlive(phone: phoneNumber),
                         phoneNumber: phoneNumber, eMail: eMail,
                         website: URL(string: externalURL),
                         bornDT: birthDate,

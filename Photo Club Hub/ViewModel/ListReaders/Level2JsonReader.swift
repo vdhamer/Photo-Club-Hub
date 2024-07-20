@@ -260,12 +260,14 @@ class Level2JsonReader { // normally running on a background thread
         let featuredImage: URL? = jsonOptionalsToURL(jsonOptionals: jsonOptionals, key: "featuredImage")
         let level3URL: URL? = jsonOptionalsToURL(jsonOptionals: jsonOptionals, key: "level3URL")
 
+        let memberRolesAndStatus = MemberRolesAndStatus(role: [:], status: [:])
+
         // some attributes are at the Photographer level...
         _ = Photographer.findCreateUpdate(context: bgContext,
                                           personName: PersonName(givenName: photographer.givenName,
                                                                  infixName: photographer.infixName,
                                                                  familyName: photographer.familyName),
-                                          memberRolesAndStatus: MemberRolesAndStatus(role: [:], status: [:]), // TODO ??
+                                          isDeceased: memberRolesAndStatus.isDeceased(),
                                           website: website,
                                           bornDT: birthday?.extractDate(),
                                           organization: club ) // club is only shown on console for debug purposes

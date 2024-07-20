@@ -78,8 +78,7 @@ extension Photographer {
     // Update existing attributes or fill the new object
     static func findCreateUpdate(context: NSManagedObjectContext, // foreground or background context
                                  personName: PersonName,
-                                 memberRolesAndStatus: MemberRolesAndStatus = MemberRolesAndStatus(role: [:],
-                                                                                                   status: [:]),
+                                 isDeceased: Bool? = nil, // nil means "don't know"
                                  phoneNumber: String? = nil, eMail: String? = nil,
                                  website: URL? = nil, bornDT: Date? = nil,
                                  organization: Organization // organization is only shown on console for debug purposes
@@ -116,7 +115,7 @@ extension Photographer {
         if let photographer = photographers.first {
             // already exists, so make sure secondary attributes are up to date
             let wasUpdated = update(bgContext: context, photographer: photographer,
-                                    memberRolesAndStatus: memberRolesAndStatus,
+                                    isDeceased: isDeceased,
                                     phoneNumber: phoneNumber, eMail: eMail,
                                     website: website, bornDT: bornDT)
             if wasUpdated {
@@ -132,8 +131,9 @@ extension Photographer {
             photographer.givenName = personName.givenName
             photographer.infixName = personName.infixName
             photographer.familyName = personName.familyName
-            _ = update(bgContext: context, photographer: photographer,
-                       memberRolesAndStatus: memberRolesAndStatus,
+            _ = update(bgContext: context,
+                       photographer: photographer,
+                       isDeceased: isDeceased,
                        phoneNumber: phoneNumber, eMail: eMail,
                        website: website, bornDT: bornDT)
             // don't log whether attribbutes have been updated if it is a new photographer
@@ -144,15 +144,17 @@ extension Photographer {
 
 	// Update non-identifying properties within existing instance of class Photographer
     // Returns whether any of the non-identifying properties were updated.
-    static func update(bgContext: NSManagedObjectContext,
-                       photographer: Photographer,
-                       memberRolesAndStatus: MemberRolesAndStatus,
-                       phoneNumber: String? = nil, eMail: String? = nil,
-                       website: URL? = nil, bornDT: Date? = nil) -> Bool {
+    private static func update(bgContext: NSManagedObjectContext,
+                               photographer: Photographer,
+                               isDeceased: Bool?,
+                               phoneNumber: String? = nil,
+                               eMail: String? = nil,
+                               website: URL? = nil,
+                               bornDT: Date? = nil) -> Bool {
 
 		var wasUpdated: Bool = false
 
-        if let isDeceased = memberRolesAndStatus.status[.deceased], photographer.isDeceased != isDeceased {
+        if let isDeceased, photographer.isDeceased != isDeceased {
             photographer.memberRolesAndStatus.status[.deceased] = isDeceased
             wasUpdated = true
 		}

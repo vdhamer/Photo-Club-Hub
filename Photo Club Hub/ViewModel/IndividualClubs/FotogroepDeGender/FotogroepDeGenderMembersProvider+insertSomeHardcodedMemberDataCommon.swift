@@ -92,7 +92,7 @@ extension FotogroepDeGenderMembersProvider { // fill with some initial hard-code
 
         let photographer = Photographer.findCreateUpdate(context: bgContext,
                                                          personName: personName,
-                                                         memberRolesAndStatus: memberRolesAndStatus,
+                                                         isDeceased: memberRolesAndStatus.isDeceased(),
                                                          website: website,
                                                          bornDT: bornDT,
                                                          organization: organization
