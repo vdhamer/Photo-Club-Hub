@@ -616,8 +616,18 @@ Here is an example of the format of a `Level 2` list for a photo club. This exam
                     "longitude": 5.45010
                 },
                 "website": "https://www.fcdegender.nl",
-                "level2URL": "https://www.example.com/deGender.level2.json"
-           }
+                "wikipedia": "https://nl.wikipedia.org/wiki/Gender_(beek)",
+                "level2URL": "https://www.example.com/deGender.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Note that Fotogroep de Gender is abbreviated fcdegender.nl for historical reasons."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 1620
+                }
+            }
         },
     "members": [
         {
