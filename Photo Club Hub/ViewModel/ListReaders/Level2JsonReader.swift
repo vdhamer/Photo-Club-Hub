@@ -30,6 +30,10 @@ import CoreLocation // for CLLocationCoordinate2D
                      {
                          "language": "EN",
                          "value": "Note that Fotogroep de Gender is abbreviated fcdegender.nl for historical reasons."
+                     },
+                     {
+                         "language": "NL",
+                         "value": "Opgelet: Fotogroep de Gender heeft als domeinnaam fcdegender.nl (fc = Fotoclub)."
                      }
                  ],
                  "nlSpecific": {
