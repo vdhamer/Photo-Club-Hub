@@ -9,7 +9,7 @@
 import CoreData // for NSManagedObjectContext
 import CoreLocation // for CLLocationCoordinate2D
 
-/* Example of level2.json file with one member
+/* Example of level2.json file with one member but will a complete set of optional fields
  {
      "club":
          {
@@ -24,7 +24,17 @@ import CoreLocation // for CLLocationCoordinate2D
                      "longitude": 5.45010
                  },
                  "website": "https://www.fcdegender.nl",
-                 "level2URL": "https://www.example.com/deGender.level2.json"
+                 "wikipedia": "https://nl.wikipedia.org/wiki/Gender_(beek)",
+                 "level2URL": "https://www.example.com/deGender.level2.json",
+                 "remark": [
+                     {
+                         "language": "EN",
+                         "value": "Note that Fotogroep de Gender is abbreviated fcdegender.nl for historical reasons."
+                     }
+                 ],
+                 "nlSpecific": {
+                     "fotobondNumber": 1620
+                 }
             }
          },
      "members": [
