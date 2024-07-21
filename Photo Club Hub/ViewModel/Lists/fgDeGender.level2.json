@@ -60,11 +60,11 @@
                     "isAdmin": true
                 },
                 "status": {
-                    "isDeceased": true,
+                    "isDeceased": false,
                     "isFormerMember": true,
                     "isHonoraryMember": true,
                     "isMentor": true,
-                    "isPropectiveMember": true
+                    "isPropectiveMember": false
                 },
                 "birthday": "1957-10-18",
                 "website": "https://glass.photo/vdhamer",
