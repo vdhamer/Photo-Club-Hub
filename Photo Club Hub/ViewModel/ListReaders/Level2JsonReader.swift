@@ -129,7 +129,7 @@ class Level2JsonReader { // normally running on a background thread
 
     }
 
-    // returned String is nil or describes error
+    // returned String contains error description or nil (if there is no error)
     private func mergeLevel2Json(bgContext: NSManagedObjectContext,
                                  jsonData: String,
                                  club: Organization,
@@ -206,9 +206,9 @@ class Level2JsonReader { // normally running on a background thread
         let infixName: String = member["name"]["infixName"].stringValue
         let familyName: String = member["name"]["familyName"].stringValue
         print("""
-                  Member \(givenName) \
+                  Member "\(givenName) \
                   \(infixName=="" ? "" : infixName + " ")\
-                  \(familyName) \
+                  \(familyName)" \
                   found in \(urlComponents.shortName)
                   """)
         let photographer = Photographer.findCreateUpdate(context: bgContext,

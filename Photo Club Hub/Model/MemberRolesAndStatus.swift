@@ -107,6 +107,7 @@ struct MemberRolesAndStatus: Equatable {
 
     init(jsonRoles: JSON, jsonStatus: JSON) {
 
+        // process content of jsonRoles
         if jsonRoles["isChairman"].exists() {
             role[.chairman] = jsonRoles["isChairman"].boolValue
         }
@@ -123,20 +124,21 @@ struct MemberRolesAndStatus: Equatable {
             role[.admin] = jsonRoles["isAdmin"].boolValue
         }
 
+        // process content of jsonStatus
         if jsonStatus["isDeceased"].exists() {
-            status[.deceased] = jsonRoles["isDeceased"].boolValue
+            status[.deceased] = jsonStatus["isDeceased"].boolValue
         }
         if jsonStatus["isFormerMember"].exists() {
-            status[.former] = jsonRoles["isFormerMember"].boolValue
+            status[.former] = jsonStatus["isFormerMember"].boolValue
         }
         if jsonStatus["isHonoraryMember"].exists() {
-            status[.honorary] = jsonRoles["isHonoraryMember"].boolValue
+            status[.honorary] = jsonStatus["isHonoraryMember"].boolValue
         }
         if jsonStatus["isMentor"].exists() {
-            status[.coach] = jsonRoles["isMentor"].boolValue
+            status[.coach] = jsonStatus["isMentor"].boolValue
         }
         if jsonStatus["isPropectiveMember"].exists() {
-            status[.prospective] = jsonRoles["isPropectiveMember"].boolValue
+            status[.prospective] = jsonStatus["isPropectiveMember"].boolValue
         }
 
     }
