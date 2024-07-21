@@ -464,13 +464,13 @@
 		D0831A3F277F731C0049AB84 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				D0EEF48E2C2844290086419D /* Settings.swift */,
-				D006BA7D2B115FB1002E555B /* LocationManager.swift */,
 				D0329449283F9D1D0044C70C /* Bundle+VersionBuild.swift */,
-				D06BE9322A4F870B0055B3B1 /* ifDebugUtils.swift */,
 				D0416281295BBA7700ED073A /* CoreLocation+Equatable.swift */,
+				D06BE9322A4F870B0055B3B1 /* ifDebugUtils.swift */,
+				D006BA7D2B115FB1002E555B /* LocationManager.swift */,
 				D0831A43277F731C0049AB84 /* PersistenceController.swift */,
 				D0831A40277F731C0049AB84 /* Published+UserDefaults.swift */,
+				D0EEF48E2C2844290086419D /* Settings.swift */,
 				D0795CEB294FCCC200FA62A8 /* ShapeStyle+Colors.swift */,
 				D024F11528423BE60055021B /* Sounds.swift */,
 				D0BAB01C2A76CED300387E63 /* URLSession+synchronous.swift */,
