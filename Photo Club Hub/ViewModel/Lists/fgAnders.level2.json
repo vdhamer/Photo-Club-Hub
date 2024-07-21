@@ -57,8 +57,8 @@
             "optional": {
                 "roles": {
                 },
-                "website":
-                "featuredImage": "https://me4photo.jimdosite.com/portfolio/" "https://jimdo-storage.freetls.fastly.net/image/bf4d707f-ff72-4e16-8f2f-63680e7a8f91.jpg?format=pjpg&quality=80,90&auto=webp&disable=upscale&width=2560&height=2559",
+                "website": "https://me4photo.jimdosite.com/portfolio/"
+                "featuredImage": "https://jimdo-storage.freetls.fastly.net/image/bf4d707f-ff72-4e16-8f2f-63680e7a8f91.jpg?format=pjpg&quality=80,90&auto=webp&disable=upscale&width=2560&height=2559",
                 "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/"
             }
         }
