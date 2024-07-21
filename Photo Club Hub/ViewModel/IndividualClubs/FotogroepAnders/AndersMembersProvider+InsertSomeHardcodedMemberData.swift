@@ -46,7 +46,6 @@ extension AndersMembersProvider { // fill with some initial hard-coded content
                      """)
         clubAnders.hasHardCodedMemberData = true // store in database that we ran insertSomeHardcodedMembers...
 
-
         addMember(bgContext: bgContext, // add Dennis to Photographers and member of Anders (if needed)
                   personName: PersonName(givenName: "Dennis", infixName: "", familyName: "Verbruggen"),
                   organization: clubAnders,
