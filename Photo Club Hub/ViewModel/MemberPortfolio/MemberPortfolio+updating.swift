@@ -107,7 +107,7 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
         }
 
         let oldMemberRolesAndStatus = self.memberRolesAndStatus // copy of original value
-        // actually this setter does merging (overload + or += operators for this?)
+        // actually this setter does merging (is it better to overload + or += operators for this?)
         self.memberRolesAndStatus = memberRolesAndStatus
         let newMemberRolesAndStatus = self.memberRolesAndStatus // copy after possible changes
 
