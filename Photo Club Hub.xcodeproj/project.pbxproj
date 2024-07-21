@@ -414,12 +414,12 @@
 		D0831A23277F72340049AB84 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				D0621E832AE2DF8E000FFADB /* IndividualClubs */,
 				D08416952B2FC07F000F316D /* Lists */,
 				D08416942B2FC061000F316D /* ListReaders */,
-				D0621E832AE2DF8E000FFADB /* IndividualClubs */,
-				D0621E822AE2DF1B000FFADB /* MemberPortfolio */,
 				D0447C872BA510AF00982A1E /* LocalizedRemark.swift */,
 				D0447C862BA510AF00982A1E /* Language.swift */,
+				D0621E822AE2DF1B000FFADB /* MemberPortfolio */,
 				D0831A25277F72590049AB84 /* Photographer.swift */,
 				D0831A29277F72590049AB84 /* PreferencesViewModel.swift */,
 				D0C53BDC2ABF3ADF000722A1 /* PersonName.swift */,

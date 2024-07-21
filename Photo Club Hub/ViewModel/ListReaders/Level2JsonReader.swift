@@ -282,10 +282,9 @@ class Level2JsonReader { // normally running on a background thread
                                             photographer: photographer,
                                             memberRolesAndStatus: MemberRolesAndStatus(role: [:],
                                                                                        status: [:]),
-                                            dateInterval: nil,
-                                            memberWebsite: nil,
+                                            memberWebsite: nil, // portfolio website for this photography @ this club
                                             latestImage: featuredImage,
-                                            latestThumbnail: nil
+                                            latestThumbnail: featuredImage
                                            )
 
     }
