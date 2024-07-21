@@ -53,10 +53,10 @@
             },
             "optional": {
                 "roles": {
-                    "isChairman": false,
-                    "isViceChairman": false,
-                    "isTreasurer": false,
-                    "isSecretary": false,
+                    "isChairman": true,
+                    "isViceChairman": true,
+                    "isTreasurer": true,
+                    "isSecretary": true,
                     "isAdmin": true
                 },
                 "status": {
