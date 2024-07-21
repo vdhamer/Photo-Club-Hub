@@ -46,6 +46,14 @@ extension AndersMembersProvider { // fill with some initial hard-coded content
                      """)
         clubAnders.hasHardCodedMemberData = true // store in database that we ran insertSomeHardcodedMembers...
 
+
+        addMember(bgContext: bgContext, // add Dennis to Photographers and member of Anders (if needed)
+                  personName: PersonName(givenName: "Dennis", infixName: "", familyName: "Verbruggen"),
+                  organization: clubAnders,
+                  memberWebsite: URL(string: FotogroepWaalreMembersProvider.baseURL + "/Empty_Website/"),
+                  latestImage: URL(string: "http://www.vdhamer.com/wp-content/uploads/2023/11/DennisVerbruggen.jpeg")
+        )
+
         addMember(bgContext: bgContext, // add Helga to Photographers and member of Anders (if needed)
                   personName: PersonName(givenName: "Helga", infixName: "", familyName: "Nuchelmans"),
                   organization: clubAnders,
@@ -55,17 +63,6 @@ extension AndersMembersProvider { // fill with some initial hard-coded content
                                            d8801b208f49ae95bc80b15c07cde6f2/\
                                            902cb616-6aaf-4f1f-9d40-3487d0e1254a_rw_1200.jpg\
                                            ?h=7fee8b232bc10216ccf294e69a81be4c
-                                           """)
-        )
-
-        addMember(bgContext: bgContext, // add Mirjam to Photographers and member of Anders (if needed)
-                  personName: PersonName(givenName: "Mirjam", infixName: "", familyName: "Evers"),
-                  organization: clubAnders,
-                  memberWebsite: URL(string: "https://me4photo.jimdosite.com/portfolio/"),
-                  latestImage: URL(string: """
-                                           https://jimdo-storage.freetls.fastly.net/\
-                                           image/bf4d707f-ff72-4e16-8f2f-63680e7a8f91.jpg\
-                                           ?format=pjpg&quality=80,90&auto=webp&disable=upscale&width=2560&height=2559
                                            """)
         )
 
@@ -85,11 +82,15 @@ extension AndersMembersProvider { // fill with some initial hard-coded content
                                                """)
         )
 
-        addMember(bgContext: bgContext, // add Dennis to Photographers and member of Anders (if needed)
-                  personName: PersonName(givenName: "Dennis", infixName: "", familyName: "Verbruggen"),
+        addMember(bgContext: bgContext, // add Mirjam to Photographers and member of Anders (if needed)
+                  personName: PersonName(givenName: "Mirjam", infixName: "", familyName: "Evers"),
                   organization: clubAnders,
-                  memberWebsite: URL(string: FotogroepWaalreMembersProvider.baseURL + "/Empty_Website/"),
-                  latestImage: URL(string: "http://www.vdhamer.com/wp-content/uploads/2023/11/DennisVerbruggen.jpeg")
+                  memberWebsite: URL(string: "https://me4photo.jimdosite.com/portfolio/"),
+                  latestImage: URL(string: """
+                                           https://jimdo-storage.freetls.fastly.net/\
+                                           image/bf4d707f-ff72-4e16-8f2f-63680e7a8f91.jpg\
+                                           ?format=pjpg&quality=80,90&auto=webp&disable=upscale&width=2560&height=2559
+                                           """)
         )
 
     }
