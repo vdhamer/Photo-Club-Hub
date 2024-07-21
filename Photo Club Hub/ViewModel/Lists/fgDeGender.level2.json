@@ -63,7 +63,7 @@
                     "isDeceased": false,
                     "isFormerMember": true,
                     "isHonoraryMember": false,
-                    "isMentor": true,
+                    "isMentor": false,
                     "isPropectiveMember": false
                 },
                 "birthday": "1957-10-18",
