@@ -225,7 +225,8 @@ class Level2JsonReader { // normally running on a background thread
             _ = MemberPortfolio.findCreateUpdate(bgContext: bgContext,
                                                  organization: club,
                                                  photographer: photographer,
-                                                 memberRolesAndStatus: MemberRolesAndStatus(role: [:], status: [:])
+                                                 memberRolesAndStatus: MemberRolesAndStatus(jsonRoles: [:],
+                                                                                            jsonStatus: [:])
             )
         }
     }
@@ -264,7 +265,8 @@ class Level2JsonReader { // normally running on a background thread
         let featuredImage: URL? = jsonOptionalsToURL(jsonOptionals: jsonOptionals, key: "featuredImage")
         let level3URL: URL? = jsonOptionalsToURL(jsonOptionals: jsonOptionals, key: "level3URL")
 
-        let memberRolesAndStatus = MemberRolesAndStatus(role: [:], status: [:])
+        let memberRolesAndStatus = MemberRolesAndStatus(jsonRoles: jsonOptionals["roles"],
+                                                        jsonStatus: jsonOptionals["status"])
 
         // some attributes are at the Photographer level...
         _ = Photographer.findCreateUpdate(context: bgContext,
@@ -280,8 +282,7 @@ class Level2JsonReader { // normally running on a background thread
         _ = MemberPortfolio.findCreateUpdate(bgContext: bgContext,
                                             organization: club,
                                             photographer: photographer,
-                                            memberRolesAndStatus: MemberRolesAndStatus(role: [:],
-                                                                                       status: [:]),
+                                            memberRolesAndStatus: memberRolesAndStatus,
                                             memberWebsite: nil, // portfolio website for this photography @ this club
                                             latestImage: featuredImage,
                                             latestThumbnail: featuredImage

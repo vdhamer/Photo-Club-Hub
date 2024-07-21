@@ -5,6 +5,8 @@
 //  Created by Peter van den Hamer on 14/01/2022.
 //
 
+// MARK: - MemberRole
+
 enum MemberRole {
     // a Member can have 0, 1 or more of these MemberRoles at the same time
     case admin // rawValue not used because string needs localization
@@ -46,6 +48,8 @@ extension MemberRole: Comparable {
     }
 }
 
+// MARK: - MemberStatus
+
 enum MemberStatus {
     // a Member can have multiple of these special statusses
     case coach // rawValue not used because string needs localization
@@ -85,6 +89,8 @@ extension MemberStatus: Comparable {
     }
 }
 
+// MARK: - MemberRoleAndStatus
+
 struct MemberRolesAndStatus: Equatable {
     var role: [MemberRole: Bool?] = [:]
     var status: [MemberStatus: Bool?] = [:]
@@ -92,5 +98,46 @@ struct MemberRolesAndStatus: Equatable {
     func isDeceased() -> Bool? {
         guard let deceased = status[.deceased] else { return nil } // bit problematic type of Bool?? (double optional)
         return deceased
+    }
+
+    init(role: [MemberRole: Bool] = [:], status: [MemberStatus: Bool] = [:]) {
+        self.role = role
+        self.status = status
+    }
+
+    init(jsonRoles: JSON, jsonStatus: JSON) {
+
+        if jsonRoles["isChairman"].exists() {
+            role[.chairman] = jsonRoles["isChairman"].boolValue
+        }
+        if jsonRoles["isViceChairman"].exists() {
+            role[.viceChairman] = jsonRoles["isViceChairman"].boolValue
+        }
+        if jsonRoles["isTreasurer"].exists() {
+            role[.treasurer] = jsonRoles["isTreasurer"].boolValue
+        }
+        if jsonRoles["isSecretary"].exists() {
+            role[.secretary] = jsonRoles["isSecretary"].boolValue
+        }
+        if jsonRoles["isAdmin"].exists() {
+            role[.admin] = jsonRoles["isAdmin"].boolValue
+        }
+
+        if jsonStatus["isDeceased"].exists() {
+            status[.deceased] = jsonRoles["isDeceased"].boolValue
+        }
+        if jsonStatus["isFormerMember"].exists() {
+            status[.former] = jsonRoles["isFormerMember"].boolValue
+        }
+        if jsonStatus["isHonoraryMember"].exists() {
+            status[.honorary] = jsonRoles["isHonoraryMember"].boolValue
+        }
+        if jsonStatus["isMentor"].exists() {
+            status[.coach] = jsonRoles["isMentor"].boolValue
+        }
+        if jsonStatus["isPropectiveMember"].exists() {
+            status[.prospective] = jsonRoles["isPropectiveMember"].boolValue
+        }
+
     }
 }
