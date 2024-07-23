@@ -70,7 +70,7 @@ extension BellusImagoMembersProvider { // fill with some initial hard-coded cont
                            website: URL? = nil,
                            bornDT: Date? = nil,
                            organization: Organization,
-                           memberRolesAndStatus: MemberRolesAndStatus = MemberRolesAndStatus(role: [:], stat: [:]),
+                           memberRolesAndStatus: MemberRolesAndStatus = MemberRolesAndStatus(role: [:], status: [:]),
                            memberWebsite: URL? = nil,
                            latestImage: URL? = nil,
                            latestThumbnail: URL? = nil,
@@ -79,7 +79,7 @@ extension BellusImagoMembersProvider { // fill with some initial hard-coded cont
 
         let photographer = Photographer.findCreateUpdate(context: bgContext,
                                                          personName: personName,
-                                                         memberRolesAndStatus: memberRolesAndStatus,
+                                                         isDeceased: memberRolesAndStatus.isDeceased(),
                                                          website: website,
                                                          bornDT: bornDT,
                                                          organization: organization

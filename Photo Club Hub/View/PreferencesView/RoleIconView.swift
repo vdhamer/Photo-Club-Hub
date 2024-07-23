@@ -59,11 +59,11 @@ struct RoleStatusIconView: View {
     }
 
     private func chooseOneMemberStatus(memberRolesAndStatus: MemberRolesAndStatus) -> MemberStatus {
-        if memberRolesAndStatus.stat[.deceased] == true { return .deceased }
-        if memberRolesAndStatus.stat[.honorary] == true { return .honorary }
-        if memberRolesAndStatus.stat[.prospective] == true { return .prospective }
-        if memberRolesAndStatus.stat[.coach] == true { return .coach}
-        if memberRolesAndStatus.stat[.former] == true { return .former}
+        if memberRolesAndStatus.status[.deceased] == true { return .deceased }
+        if memberRolesAndStatus.status[.honorary] == true { return .honorary }
+        if memberRolesAndStatus.status[.prospective] == true { return .prospective }
+        if memberRolesAndStatus.status[.coach] == true { return .coach}
+        if memberRolesAndStatus.status[.former] == true { return .former}
         // member is a computed property (if you are none of the above), it doesn't occur in the Core Data store
         return .current // by default, the person is a member
     }

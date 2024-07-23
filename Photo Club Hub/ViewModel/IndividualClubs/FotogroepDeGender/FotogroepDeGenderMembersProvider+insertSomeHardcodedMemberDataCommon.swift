@@ -60,7 +60,7 @@ extension FotogroepDeGenderMembersProvider { // fill with some initial hard-code
         addMember(bgContext: bgContext,
                   personName: PersonName(givenName: "Peter", infixName: "van den", familyName: "Hamer"),
                   organization: clubDeGender,
-                  memberRolesAndStatus: MemberRolesAndStatus(stat: [.prospective: false]),
+                  memberRolesAndStatus: MemberRolesAndStatus(status: [.prospective: false]),
                   memberWebsite: URL(string: FotogroepWaalreMembersProvider.baseURL + "Empty_Website/"),
                   latestImage: URL(string:
                      "http://www.vdhamer.com/wp-content/uploads/2024/04/2023_Cornwall_R5_581-Pano.jpg")
@@ -70,7 +70,7 @@ extension FotogroepDeGenderMembersProvider { // fill with some initial hard-code
         addMember(bgContext: bgContext,
                   personName: PersonName(givenName: "Bettina", infixName: "de", familyName: "Graaf"),
                   organization: clubDeGender,
-                  memberRolesAndStatus: MemberRolesAndStatus(stat: [.prospective: false]),
+                  memberRolesAndStatus: MemberRolesAndStatus(status: [.prospective: false]),
                   memberWebsite: URL(string: FotogroepWaalreMembersProvider.baseURL + "Empty_Website/"),
                   latestImage: URL(string:
                      "http://www.vdhamer.com/wp-content/uploads/2023/11/BettinaDeGraaf.jpeg")
@@ -83,7 +83,7 @@ extension FotogroepDeGenderMembersProvider { // fill with some initial hard-code
                            website: URL? = nil,
                            bornDT: Date? = nil,
                            organization: Organization,
-                           memberRolesAndStatus: MemberRolesAndStatus = MemberRolesAndStatus(role: [:], stat: [:]),
+                           memberRolesAndStatus: MemberRolesAndStatus = MemberRolesAndStatus(role: [:], status: [:]),
                            memberWebsite: URL? = nil,
                            latestImage: URL? = nil,
                            latestThumbnail: URL? = nil,
@@ -92,7 +92,7 @@ extension FotogroepDeGenderMembersProvider { // fill with some initial hard-code
 
         let photographer = Photographer.findCreateUpdate(context: bgContext,
                                                          personName: personName,
-                                                         memberRolesAndStatus: memberRolesAndStatus,
+                                                         isDeceased: memberRolesAndStatus.isDeceased(),
                                                          website: website,
                                                          bornDT: bornDT,
                                                          organization: organization

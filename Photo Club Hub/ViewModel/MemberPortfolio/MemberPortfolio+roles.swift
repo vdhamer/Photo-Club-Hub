@@ -52,15 +52,15 @@ extension MemberPortfolio { // computed properties related to roles of members i
 
     var memberRolesAndStatus: MemberRolesAndStatus {
         get { // conversion from Bool to dictionary
-            var memberRS = MemberRolesAndStatus(role: [:], stat: [:])
+            var memberRS = MemberRolesAndStatus(role: [:], status: [:])
 
-            if photographer.isDeceased { memberRS.stat[.deceased] = true }
-            if isFormerMember { memberRS.stat[.former] = true }
-            if isHonoraryMember { memberRS.stat[.honorary] = true}
-            if isProspectiveMember { memberRS.stat[.prospective] = true }
-            if isMentor { memberRS.stat[.coach] = true }
+            if photographer.isDeceased { memberRS.status[.deceased] = true }
+            if isFormerMember { memberRS.status[.former] = true }
+            if isHonoraryMember { memberRS.status[.honorary] = true}
+            if isProspectiveMember { memberRS.status[.prospective] = true }
+            if isMentor { memberRS.status[.coach] = true }
             if !isFormerMember && !isHonoraryMember && !isProspectiveMember && !isMentor {
-                memberRS.stat[.current] = true
+                memberRS.status[.current] = true
             }
 
             if isChairman { memberRS.role[.chairman] = true }
@@ -72,19 +72,19 @@ extension MemberPortfolio { // computed properties related to roles of members i
             return memberRS
         }
         set { // merge newValue with existing dictionary
-            if let newBool = newValue.stat[.deceased] {
+            if let newBool = newValue.status[.deceased] {
                 photographer.isDeceased = newBool!
             }
-            if let newBool = newValue.stat[.former] {
+            if let newBool = newValue.status[.former] {
                 isFormerMember = newBool!
             }
-            if let newBool = newValue.stat[.honorary] {
+            if let newBool = newValue.status[.honorary] {
                 isHonoraryMember = newBool!
             }
-            if let newBool = newValue.stat[.prospective] {
+            if let newBool = newValue.status[.prospective] {
                 isProspectiveMember = newBool!
             }
-            if let newBool = newValue.stat[.coach] {
+            if let newBool = newValue.status[.coach] {
                 isMentor = newBool!
             }
             if let newBool = newValue.role[.chairman] {

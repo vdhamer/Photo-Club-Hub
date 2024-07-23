@@ -26,7 +26,7 @@ extension FotogroepWaalreMembersProvider { // fill with some initial hard-coded 
         addMember(bgContext: bgContext,
                   personName: PersonName(givenName: "Carel", infixName: "", familyName: "Bullens"),
                   organization: clubWaalre,
-                  memberRolesAndStatus: MemberRolesAndStatus(role: [ .viceChairman: true ], stat: [:]))
+                  memberRolesAndStatus: MemberRolesAndStatus(role: [ .viceChairman: true ], status: [:]))
 
         addMember(bgContext: bgContext,
                   personName: PersonName(givenName: "Erik", infixName: "van", familyName: "Geest"),
@@ -47,7 +47,7 @@ extension FotogroepWaalreMembersProvider { // fill with some initial hard-coded 
         addMember(bgContext: bgContext,
                   personName: PersonName(givenName: "Marijke", infixName: "", familyName: "Gallas"),
                   organization: clubWaalre,
-                  memberRolesAndStatus: MemberRolesAndStatus(role: [:], stat: [ .honorary: true ]))
+                  memberRolesAndStatus: MemberRolesAndStatus(role: [:], status: [ .honorary: true ]))
 
         addMember(bgContext: bgContext,
                   personName: PersonName(givenName: "Miek", infixName: "", familyName: "Kerkhoven"),
@@ -73,7 +73,7 @@ extension FotogroepWaalreMembersProvider { // fill with some initial hard-coded 
                            personName: PersonName,
                            bornDT: Date? = nil,
                            organization: Organization,
-                           memberRolesAndStatus: MemberRolesAndStatus = MemberRolesAndStatus(role: [:], stat: [:]),
+                           memberRolesAndStatus: MemberRolesAndStatus = MemberRolesAndStatus(role: [:], status: [:]),
                            memberWebsite: URL? = nil,
                            latestImage: URL? = nil) {
 
@@ -82,7 +82,7 @@ extension FotogroepWaalreMembersProvider { // fill with some initial hard-coded 
                            personName: PersonName(givenName: personName.givenName,
                                                   infixName: personName.infixName,
                                                   familyName: personName.familyName),
-                           memberRolesAndStatus: memberRolesAndStatus,
+                           isDeceased: memberRolesAndStatus.isDeceased(),
                            bornDT: bornDT,
                            organization: organization)
 

@@ -1,8 +1,13 @@
 ### 2.6.3 (GitHub commit fbeb334) 13-07-24
 
+Data
+* The membership data for Fotogroep de Gender and Fotogroep Anders are now read from level2.json data files.
+
 Maintenance
-* Added a wikipedia link for the club fgDeGender. The link is loaded from a prototype level2.json file.
-* First photo club membership list loaded from a data file (`fgDeGender.level2.json`).
+* Initial ability to read list of club members from a data file (`fgDeGender.level2.json`).
+* The membership data for 2 Dutch photo clubs (fgAnders, fgDeGender) are now read from level2.json data files.
+* Added a wikipedia link for the club fgDeGender. The link is mainly for demo/testing purposes.
+* Tested on iOS 18.0 beta 4 (22A5316j), Xcode 16.0 beta 4 (16A5211f) and Vision Pro 2.0 beta 4 (22N5286g).
 
 This build #4629 was made with Xcode 16.0.
 

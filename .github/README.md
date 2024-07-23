@@ -651,7 +651,7 @@ Here is an example of the format of a `Level 2` list for a photo club. This exam
                     "isMentor": false,
                     "isPropectiveMember": false
                 },
-                "birthday": "9999-10-18T00:00:00.000Z",
+                "birthday": "9999-10-18",
                 "website": "https://glass.photo/vdhamer",
                 "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg",
                 "level3URL": "https://www.example.com/FG_deGender/Peter_van_den_Hamer.level3.json"
