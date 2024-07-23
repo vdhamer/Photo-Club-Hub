@@ -1,5 +1,8 @@
 ### 2.6.3 (GitHub commit fbeb334) 13-07-24
 
+Data
+* The membership data for Fotogroep de Gender and Fotogroep Anders are now read from level2.json data files.
+
 Maintenance
 * Initial ability to read list of club members from a data file (`fgDeGender.level2.json`).
 * The membership data for 2 Dutch photo clubs (fgAnders, fgDeGender) are now read from level2.json data files.
