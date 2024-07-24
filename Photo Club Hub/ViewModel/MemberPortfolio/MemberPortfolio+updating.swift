@@ -44,7 +44,8 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
                                       dateInterval: dateInterval,
                                       memberWebsite: memberWebsite,
                                       latestImage: latestImage,
-                                      latestThumbnail: latestThumbnail) {
+                                      latestThumbnail: latestThumbnail,
+                                      obsolete: false) {
                 print("""
                       \(memberPortfolio.organization.fullName): \
                       Updated info for member \(memberPortfolio.photographer.fullNameFirstLast)
@@ -61,7 +62,8 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
                                        dateInterval: dateInterval,
                                        memberWebsite: memberWebsite,
                                        latestImage: latestImage,
-                                       latestThumbnail: latestThumbnail)
+                                       latestThumbnail: latestThumbnail,
+                                       obsolete: false)
             print("""
                   \(memberPortfolio.organization.fullNameTown): \
                   Created new membership for \(memberPortfolio.photographer.fullNameFirstLast)
@@ -71,40 +73,14 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
     }
 
     // Update non-identifying attributes/properties within existing instance of class MemberPortfolio
-    // swiftlint:disable:next function_parameter_count function_body_length
     private func update(bgContext: NSManagedObjectContext,
                         memberRolesAndStatus: MemberRolesAndStatus,
                         dateInterval: DateInterval?,
                         memberWebsite: URL?,
                         latestImage: URL?,
-                        latestThumbnail: URL?) -> Bool {
+                        latestThumbnail: URL?,
+                        obsolete: Bool) -> Bool {
         var needsSaving: Bool = false
-
-        // function only works for non-optional Types.
-        // If optional support needed, create variant with "inout Type?" instead of "inout Type"
-        func updateIfChanged<Type>(update persistedValue: inout Type,
-                                   with newValue: Type?) -> Bool // true only if needsSaving
-                                   where Type: Equatable {
-            if let newValue { // nil means no new value known - and thus doesn't erase existing value
-                if persistedValue != newValue {
-                    persistedValue = newValue // actual update
-                    return true // update needs to be saved
-                }
-            }
-            return false
-        }
-
-        func updateIfChangedOptional<Type>(update persistedValue: inout Type?,
-                                           with newValue: Type?) -> Bool // true only if needsSaving
-                                           where Type?: Equatable {
-            if let newValue { // nil means no new value known - and thus doesn't erase existing value
-                if persistedValue != newValue {
-                    persistedValue = newValue // actual update
-                    return true // update needs to be saved
-                }
-            }
-            return false
-        }
 
         let oldMemberRolesAndStatus = self.memberRolesAndStatus // copy of original value
         // actually this setter does merging (is it better to overload + or += operators for this?)
@@ -117,8 +93,9 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
         let changed4 = updateIfChanged(update: &self.level3URL, with: memberWebsite)
         let changed5 = updateIfChangedOptional(update: &self.featuredImage, with: latestImage)
         let changed6 = updateIfChangedOptional(update: &self.featuredImageThumbnail, with: latestThumbnail)
+        let changed7 = updateIfChanged(update: &self.obsolete, with: obsolete)
         needsSaving = changed1 || changed2 || changed3 ||
-                      changed4 || changed5 || changed6 // forces execution of updateIfChanged()
+                      changed4 || changed5 || changed6 || changed7 // forces execution of updateIfChanged()
 
         if needsSaving && Settings.extraCoreDataSaves {
             do {
@@ -158,6 +135,32 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
         }
 
         return needsSaving
+    }
+
+    // function only works for non-optional Types.
+    // If optional support needed, create variant with "inout Type?" instead of "inout Type"
+    private func updateIfChanged<Type>(update persistedValue: inout Type,
+                                       with newValue: Type?) -> Bool // true only if needsSaving
+                                      where Type: Equatable {
+        if let newValue { // nil means no new value known - and thus doesn't erase existing value
+            if persistedValue != newValue {
+                persistedValue = newValue // actual update
+                return true // update needs to be saved
+            }
+        }
+        return false
+    }
+
+    private func updateIfChangedOptional<Type>(update persistedValue: inout Type?,
+                                               with newValue: Type?) -> Bool // true only if needsSaving
+                                               where Type?: Equatable {
+        if let newValue { // nil means no new value known - and thus doesn't erase existing value
+            if persistedValue != newValue {
+                persistedValue = newValue // actual update
+                return true // update needs to be saved
+            }
+        }
+        return false
     }
 
 }
