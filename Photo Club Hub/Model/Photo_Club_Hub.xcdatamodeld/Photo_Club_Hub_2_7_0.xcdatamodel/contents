@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="23201.3" systemVersion="23F79" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="23211.1" systemVersion="23F79" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Language" representedClassName="Language" syncable="YES" codeGenerationType="class">
         <attribute name="isoCode_" attributeType="String"/>
         <attribute name="languageName_" attributeType="String" elementID="name_"/>
@@ -61,8 +61,8 @@
         <attribute name="lockedMap" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="longitude_" optional="YES" attributeType="Double" usesScalarValueType="YES"/>
         <attribute name="nickName_" optional="YES" attributeType="String" elementID="shortName_"/>
-        <attribute name="obsolete" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="pinned" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="removeOrganization" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="town_" attributeType="String" defaultValueString="DefaultTown"/>
         <attribute name="website" optional="YES" attributeType="URI" elementID="photoClubWebsite"/>
         <attribute name="wikipedia" optional="YES" attributeType="URI"/>
