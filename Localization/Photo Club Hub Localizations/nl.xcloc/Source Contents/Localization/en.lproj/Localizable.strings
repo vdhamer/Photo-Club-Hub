@@ -31,6 +31,9 @@
 /* Header of section of Who's Who screen */
 "1 photographer (of %lld)" = "1 photographer (of %lld)";
 
+/* In Preferences, above link to Settings */
+"Advanced" = "Advanced";
+
 /* Administrative role of member within a club. Used as part of concatenations. */
 "admin" = "admin";
 
@@ -42,9 +45,6 @@
 
 /* Shown on Readme page. */
 "App version %@ (build %@)" = "App version %@ (build %@)";
-
-/* Name of the fruit, not the company. */
-"Apple" = "Apple";
 
 /* Birthday of member (without year). Date not currently localized? */
 "Birthday" = "Birthday";
@@ -60,6 +60,9 @@
 
 /* Title of page with maps for Clubs and Museums */
 "Clubs and Museums" = "Clubs and Museums";
+
+/* Caption of an image on the Readme page */
+"Clubs, their Members, and their Portfolios\n" = "Clubs, their Members, and their Portfolios\n";
 
 /* Section title on Readme page */
 "Concept" = "The concept";
@@ -141,6 +144,9 @@
 
 /* Section title on Readme page */
 "Open Source" = "Developers";
+
+/* Link to Photo Club Hub section in Settings */
+"Options in Settings" = "Options in Settings";
 
 /* First paragraph in The App section of Readme page */
 "Paragraph_1.1" = "Our ambitions in creating _Photo Club Hub_ were to strengthen ties between photography clubs, and making the work of club members easier to access.";
@@ -318,9 +324,6 @@
 
 /* Title of page showing member portfolios */
 "Portfolios" = "Portfolios";
-
-/* Caption of an image on the Readme page */
-"Poster for a photo club exposition\n" = "Poster for a photo club exposition\n";
 
 /* Title of screen with toggles to adjust preferences */
 "Preferences" = "Preferences";

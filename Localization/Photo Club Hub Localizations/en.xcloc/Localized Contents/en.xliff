@@ -2,7 +2,7 @@
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
   <file original="en.lproj/Photo-Club-Hub-InfoPlist.strings" source-language="en" target-language="en" datatype="plaintext">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="16.0" build-num="16A5202i"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="16.0" build-num="16A5211f"/>
     </header>
     <body>
       <trans-unit id="CFBundleDisplayName" xml:space="preserve">
@@ -24,7 +24,7 @@
   </file>
   <file original="Localization/en.lproj/Localizable.strings" source-language="en" target-language="en" datatype="plaintext">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="16.0" build-num="16A5202i"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="16.0" build-num="16A5211f"/>
     </header>
     <body>
       <trans-unit id="%lld members (inc. ex-members)" xml:space="preserve">
@@ -87,11 +87,6 @@
         <target>App version %@ (build %@)</target>
         <note>Shown on Readme page.</note>
       </trans-unit>
-      <trans-unit id="Apple" xml:space="preserve">
-        <source>Apple</source>
-        <target>Apple</target>
-        <note>Name of the fruit, not the company.</note>
-      </trans-unit>
       <trans-unit id="Birthday" xml:space="preserve">
         <source>Birthday</source>
         <target>Birthday</target>
@@ -111,6 +106,13 @@
         <source>Clubs and Museums</source>
         <target>Clubs and Museums</target>
         <note>Title of page with maps for Clubs and Museums</note>
+      </trans-unit>
+      <trans-unit id="Clubs, their Members, and their Portfolios&#10;" xml:space="preserve">
+        <source>Clubs, their Members, and their Portfolios
+</source>
+        <target>Clubs, their Members, and their Portfolios
+</target>
+        <note>Caption of an image on the Readme page</note>
       </trans-unit>
       <trans-unit id="Concept" xml:space="preserve">
         <source>The concept</source>
@@ -202,7 +204,7 @@ Try dragging down the Clubs and Museums screen to reload the default clubs.</tar
       <trans-unit id="Options in Settings" xml:space="preserve">
         <source>Options in Settings</source>
         <target>Options in Settings</target>
-        <note>No comment provided by engineer.</note>
+        <note>Link to Photo Club Hub section in Settings</note>
       </trans-unit>
       <trans-unit id="Paragraph_1.1" xml:space="preserve">
         <source>Our ambitions in creating _Photo Club Hub_ were to strengthen ties between photography clubs, and making the work of club members easier to access.</source>
@@ -501,13 +503,6 @@ Try dragging down the Clubs and Museums screen to reload the default clubs.</tar
         <target>Portfolios</target>
         <note>Title of page showing member portfolios</note>
       </trans-unit>
-      <trans-unit id="Poster for a photo club exposition&#10;" xml:space="preserve">
-        <source>Poster for a photo club exposition
-</source>
-        <target>Poster for a photo club exposition
-</target>
-        <note>Caption of an image on the Readme page</note>
-      </trans-unit>
       <trans-unit id="Preferences" xml:space="preserve">
         <source>Preferences</source>
         <target>Preferences</target>
@@ -762,7 +757,7 @@ Try dragging down the Clubs and Museums screen to reload the default clubs.</tar
   </file>
   <file original="Settings.bundle/en.lproj/Root.strings" source-language="en" target-language="en" datatype="plaintext">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="16.0" build-num="16A5202i"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="16.0" build-num="16A5211f"/>
     </header>
     <body>
       <trans-unit id="Debug options" xml:space="preserve">
