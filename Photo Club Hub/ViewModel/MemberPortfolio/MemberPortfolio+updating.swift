@@ -14,12 +14,9 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
     static func findCreateUpdate(bgContext: NSManagedObjectContext,
                                  // identifying attributes of a Member:
                                  organization: Organization, photographer: Photographer,
+                                 removeMember: Bool = false, // remove records for members that disappeared from lists
                                  // non-identifying attributes of a Member:
-                                 memberRolesAndStatus: MemberRolesAndStatus,
-                                 dateInterval: DateInterval? = nil,
-                                 memberWebsite: URL? = nil,
-                                 latestImage: URL? = nil,
-                                 latestThumbnail: URL? = nil
+                                 optionalFields: MemberOptionalFields
                                 ) -> MemberPortfolio {
 
         let predicateFormat: String = "organization_ = %@ AND photographer_ = %@" // avoid localization
@@ -40,12 +37,8 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
         if let memberPortfolio = memberPortfolios.first {
             // already exists, so make sure secondary attributes are up to date
             if memberPortfolio.update(bgContext: bgContext,
-                                      memberRolesAndStatus: memberRolesAndStatus,
-                                      dateInterval: dateInterval,
-                                      memberWebsite: memberWebsite,
-                                      latestImage: latestImage,
-                                      latestThumbnail: latestThumbnail,
-                                      obsolete: false) {
+                                      removeMember: removeMember,
+                                      optionalFields: optionalFields) {
                 print("""
                       \(memberPortfolio.organization.fullName): \
                       Updated info for member \(memberPortfolio.photographer.fullNameFirstLast)
@@ -58,12 +51,9 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
             memberPortfolio.organization_ = organization
             memberPortfolio.photographer_ = photographer
             _ = memberPortfolio.update(bgContext: bgContext,
-                                       memberRolesAndStatus: memberRolesAndStatus,
-                                       dateInterval: dateInterval,
-                                       memberWebsite: memberWebsite,
-                                       latestImage: latestImage,
-                                       latestThumbnail: latestThumbnail,
-                                       obsolete: false)
+                                       removeMember: removeMember,
+                                       optionalFields: optionalFields
+                                       )
             print("""
                   \(memberPortfolio.organization.fullNameTown): \
                   Created new membership for \(memberPortfolio.photographer.fullNameFirstLast)
@@ -74,12 +64,9 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
 
     // Update non-identifying attributes/properties within existing instance of class MemberPortfolio
     private func update(bgContext: NSManagedObjectContext,
-                        memberRolesAndStatus: MemberRolesAndStatus,
-                        dateInterval: DateInterval?,
-                        memberWebsite: URL?,
-                        latestImage: URL?,
-                        latestThumbnail: URL?,
-                        obsolete: Bool) -> Bool {
+                        removeMember: Bool, // used to remove club members that disappeared from lists
+                        optionalFields: MemberOptionalFields
+                ) -> Bool {
         var needsSaving: Bool = false
 
         let oldMemberRolesAndStatus = self.memberRolesAndStatus // copy of original value
@@ -88,11 +75,12 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
         let newMemberRolesAndStatus = self.memberRolesAndStatus // copy after possible changes
 
         let changed1 = oldMemberRolesAndStatus != newMemberRolesAndStatus
-        let changed2 = updateIfChanged(update: &self.dateIntervalStart, with: dateInterval?.start)
-        let changed3 = updateIfChanged(update: &self.dateIntervalEnd, with: dateInterval?.end)
-        let changed4 = updateIfChanged(update: &self.level3URL, with: memberWebsite)
-        let changed5 = updateIfChangedOptional(update: &self.featuredImage, with: latestImage)
-        let changed6 = updateIfChangedOptional(update: &self.featuredImageThumbnail, with: latestThumbnail)
+        let changed2 = updateIfChanged(update: &self.dateIntervalStart, with: optionalFields.dateInterval?.start)
+        let changed3 = updateIfChanged(update: &self.dateIntervalEnd, with: optionalFields.dateInterval?.end)
+        let changed4 = updateIfChanged(update: &self.level3URL, with: optionalFields.memberWebsite)
+        let changed5 = updateIfChangedOptional(update: &self.featuredImage, with: optionalFields.latestImage)
+        let changed6 = updateIfChangedOptional(update: &self.featuredImageThumbnail,
+                                               with: optionalFields.latestThumbnail)
         let changed7 = updateIfChanged(update: &self.obsolete, with: obsolete)
         needsSaving = changed1 || changed2 || changed3 ||
                       changed4 || changed5 || changed6 || changed7 // forces execution of updateIfChanged()
@@ -119,12 +107,12 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
                 if changed5 { print("""
                                     \(organization.fullNameTown): \
                                     Changed latest image for \(photographer.fullNameFirstLast) \
-                                    to \(latestImage?.lastPathComponent ?? "<noLatestImage>")
+                                    to \(optionalFields.latestImage?.lastPathComponent ?? "<noLatestImage>")
                                     """)}
                 if changed6 { print("""
                                     \(organization.fullNameTown): \
                                     Changed latest thumbnail for \(photographer.fullNameFirstLast) \
-                                    to \(latestThumbnail?.lastPathComponent ?? "<noLatestThumbnail>")
+                                    to \(optionalFields.latestThumbnail?.lastPathComponent ?? "<noLatestThumbnail>")
                                     """)}
             } catch {
                 ifDebugFatalError("Update failed for member \(photographer.fullNameFirstLast) " +

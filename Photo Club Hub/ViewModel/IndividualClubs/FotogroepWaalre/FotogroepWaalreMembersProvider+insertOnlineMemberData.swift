@@ -18,7 +18,8 @@ extension FotogroepWaalreMembersProvider {
         let clubWaalre = Organization.findCreateUpdate(
             context: bgContext,
             organizationTypeEnum: .club,
-            idPlus: FotogroepWaalreMembersProvider.photoClubWaalreIdPlus
+            idPlus: FotogroepWaalreMembersProvider.photoClubWaalreIdPlus,
+            optionalFields: OrganizationOptionalFields() // empty
         )
 
         if let url = URL(string: FotogroepWaalreMembersProvider.url) {
@@ -92,8 +93,8 @@ extension FotogroepWaalreMembersProvider {
         var birthDate = toDate(from: "1/1/9999") // dummy value that is overwritten later
 
         let organization: Organization = Organization.findCreateUpdate(
-            context: bgContext,
-            organizationTypeEnum: .club, idPlus: idPlus
+            context: bgContext, organizationTypeEnum: .club, idPlus: idPlus,
+            optionalFields: OrganizationOptionalFields() // empty
         )
 
         htmlContent.enumerateLines { (line, _ stop) in
@@ -131,16 +132,20 @@ extension FotogroepWaalreMembersProvider {
                     _ = MemberPortfolio.findCreateUpdate(
                         bgContext: bgContext,
                         organization: organization, photographer: photographer,
-                        memberRolesAndStatus: MemberRolesAndStatus(
-                            role: [:],
-                            status: [
-                                .former: !self.isCurrentMember(name: personName.fullNameWithParenthesizedRole,
-                                                               includeProspectiveMembers: true),
-                                .coach: self.isMentor(name: personName.fullNameWithParenthesizedRole),
-                                .prospective: self.isProspectiveMember(name: personName.fullNameWithParenthesizedRole)
-                            ]
-                        ),
-                        memberWebsite: self.generateInternalURL(using: personName.fullNameWithoutParenthesizedRole)
+                        optionalFields: MemberOptionalFields(
+                            memberRolesAndStatus: MemberRolesAndStatus(
+                                role: [:],
+                                status: [
+                                    .former: !self.isCurrentMember(name: personName.fullNameWithParenthesizedRole,
+                                                                   includeProspectiveMembers: true),
+                                    .coach: self.isMentor(name: personName.fullNameWithParenthesizedRole),
+                                    .prospective: self.isProspectiveMember(
+                                        name: personName.fullNameWithParenthesizedRole
+                                    )
+                                ]
+                            ),
+                            memberWebsite: self.generateInternalURL(using: personName.fullNameWithoutParenthesizedRole)
+                        )
                     )
 
                 }

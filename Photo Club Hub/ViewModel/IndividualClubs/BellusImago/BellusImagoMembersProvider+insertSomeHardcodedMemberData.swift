@@ -35,7 +35,8 @@ extension BellusImagoMembersProvider { // fill with some initial hard-coded cont
         let clubBellusImago = Organization.findCreateUpdate(
                                                             context: bgContext,
                                                             organizationTypeEnum: .club,
-                                                            idPlus: Self.photoClubBellusImagoIdPlus
+                                                            idPlus: Self.photoClubBellusImagoIdPlus,
+                                                            optionalFields: OrganizationOptionalFields() // empty
                                                            )
 
         ifDebugPrint("""
@@ -48,19 +49,23 @@ extension BellusImagoMembersProvider { // fill with some initial hard-coded cont
                   personName: PersonName(givenName: "Rico", infixName: "", familyName: "Coolen"),
                   website: URL(string: "https://www.ricoco.nl"),
                   organization: clubBellusImago,
-                  memberWebsite: URL(string: "https://www.fotoclubbellusimago.nl/rico.html"),
-                  latestImage: URL(string:
-                     "https://www.fotoclubbellusimago.nl/uploads/5/5/1/2/55129719/vrijwerk-rico-3_orig.jpg"),
+                  optionalFields: MemberOptionalFields(
+                    memberWebsite: URL(string: "https://www.fotoclubbellusimago.nl/rico.html"),
+                    latestImage: URL(string: "https://www.fotoclubbellusimago" +
+                                             ".nl/uploads/5/5/1/2/55129719/vrijwerk-rico-3_orig.jpg")
+                  ),
                   eMail: "info@ricoco.nl"
         )
 
         addMember(bgContext: bgContext, // add Loek to Photographers and member of Bellus (if needed)
                   personName: PersonName(givenName: "Loek", infixName: "", familyName: "Dirkx"),
                   organization: clubBellusImago,
-                  memberRolesAndStatus: MemberRolesAndStatus(role: [ .chairman: true ]),
-                  memberWebsite: URL(string: "https://www.fotoclubbellusimago.nl/loek.html"),
-                  latestImage: URL(string:
-                     "https://www.fotoclubbellusimago.nl/uploads/5/5/1/2/55129719/vrijwerk-loek-1_2_orig.jpg")
+                  optionalFields: MemberOptionalFields(
+                    memberRolesAndStatus: MemberRolesAndStatus(role: [ .chairman: true ]),
+                    memberWebsite: URL(string: "https://www.fotoclubbellusimago.nl/loek.html"),
+                    latestImage: URL(string: "https://www.fotoclubbellusimago" +
+                                             ".nl/uploads/5/5/1/2/55129719/vrijwerk-loek-1_2_orig.jpg")
+                  )
         )
 
     }
@@ -70,29 +75,28 @@ extension BellusImagoMembersProvider { // fill with some initial hard-coded cont
                            website: URL? = nil,
                            bornDT: Date? = nil,
                            organization: Organization,
-                           memberRolesAndStatus: MemberRolesAndStatus = MemberRolesAndStatus(role: [:], status: [:]),
-                           memberWebsite: URL? = nil,
-                           latestImage: URL? = nil,
-                           latestThumbnail: URL? = nil,
+                           optionalFields: MemberOptionalFields,
                            phoneNumber: String? = nil,
                            eMail: String? = nil) {
 
         let photographer = Photographer.findCreateUpdate(context: bgContext,
                                                          personName: personName,
-                                                         isDeceased: memberRolesAndStatus.isDeceased(),
+                                                         isDeceased: optionalFields.memberRolesAndStatus.isDeceased(),
                                                          website: website,
                                                          bornDT: bornDT,
                                                          organization: organization
                                                          )
 
-        let image = latestImage ?? latestThumbnail // if image not available, use thumbnail (which might also be nil)
-        let thumb = latestThumbnail ?? latestImage // if thumb not available, use image (which might also be nil)
+        var localOptionalFields = optionalFields // in order to change two fields in optionalFields
+        // if latestImage is nil, use thumbnail (which might also be nil)
+        localOptionalFields.latestImage = optionalFields.latestImage ?? optionalFields.latestThumbnail
+        // if latestThumbnail is nil, use image (which might also be nil)
+        localOptionalFields.latestImage = optionalFields.latestThumbnail ?? optionalFields.latestImage
+
         _ = MemberPortfolio.findCreateUpdate(bgContext: bgContext,
-                                             organization: organization, photographer: photographer,
-                                             memberRolesAndStatus: memberRolesAndStatus,
-                                             memberWebsite: memberWebsite,
-                                             latestImage: image,
-                                             latestThumbnail: thumb
+                                             organization: organization,
+                                             photographer: photographer,
+                                             optionalFields: localOptionalFields
                                              )
     }
 

@@ -124,21 +124,24 @@ class RootLevel1JsonReader {
                                                 town: jsonOrganization["idPlus"]["town"].stringValue,
                                                 nickname: jsonOrganization["idPlus"]["nickName"].stringValue)
                 ifDebugPrint("Adding organization \(idPlus.fullName), \(idPlus.town), aka \(idPlus.nickname)")
+
+                let website = URL(string: jsonOrganization["website"].stringValue)
+                let wikipedia = URL(string: jsonOrganization["wikipedia"].stringValue)
+                let fotobondNumber = jsonOrganization["nlSpecific"]["fotobondNumber"].int16Value
                 let jsonCoordinates = jsonOrganization["coordinates"]
                 let coordinates = CLLocationCoordinate2D(latitude: jsonCoordinates["latitude"].doubleValue,
                                                          longitude: jsonCoordinates["longitude"].doubleValue)
-                let website = URL(string: jsonOrganization["website"].stringValue)
-                let wikipedia = URL(string: jsonOrganization["wikipedia"].stringValue)
                 let localizedRemarks = jsonOrganization["remark"].arrayValue
-                let fotobondNumber = jsonOrganization["nlSpecific"]["fotobondNumber"].int16Value
                 _ = Organization.findCreateUpdate(context: bgContext,
                                                   organizationTypeEnum: organizationTypeEnum,
                                                   idPlus: idPlus,
-                                                  website: website,
-                                                  wikipedia: wikipedia,
-                                                  fotobondNumber: fotobondNumber, // int16
-                                                  coordinates: coordinates,
-                                                  localizedRemarks: localizedRemarks)
+                                                  optionalFields: OrganizationOptionalFields(
+                                                      website: website,
+                                                      wikipedia: wikipedia,
+                                                      fotobondNumber: fotobondNumber, // int16
+                                                      coordinates: coordinates,
+                                                      localizedRemarks: localizedRemarks)
+                                                  )
             }
 
         } // end of loop that scans organizationTypeEnumsToLoad

@@ -159,13 +159,8 @@ class Level2JsonReader { // normally running on a background thread
             // no club/optional fields, so just create a basic club - for what it's worth.
             _ = Organization.findCreateUpdate(context: bgContext,
                                               organizationTypeEnum: OrganizationTypeEnum.club,
-                                              idPlus: idPlus
-                                              // , // following fields are filled with nil or empty array as defaults
-                                              // website: nil,
-                                              // wikipedia: nil,
-                                              // fotobondNumber: nil,
-                                              // coordinates: nil,
-                                              // localizedRemarks: [JSON]()
+                                              idPlus: idPlus,
+                                              optionalFields: OrganizationOptionalFields() // empty
                                              )
         }
 
@@ -225,8 +220,10 @@ class Level2JsonReader { // normally running on a background thread
             _ = MemberPortfolio.findCreateUpdate(bgContext: bgContext,
                                                  organization: club,
                                                  photographer: photographer,
-                                                 memberRolesAndStatus: MemberRolesAndStatus(jsonRoles: [:],
-                                                                                            jsonStatus: [:])
+                                                 optionalFields: MemberOptionalFields(
+                                                    memberRolesAndStatus: MemberRolesAndStatus(jsonRoles: [:],
+                                                                                               jsonStatus: [:])
+                                                 )
             )
         }
     }
@@ -248,11 +245,14 @@ class Level2JsonReader { // normally running on a background thread
                                           idPlus: OrganizationIdPlus(id: PhotoClubId(fullName: club.fullName,
                                                                                      town: club.town),
                                                                      nickname: club.nickName),
-                                          website: website,
-                                          wikipedia: wikipedia,
-                                          fotobondNumber: fotobondNumber,
-                                          coordinates: coordinates,
-                                          localizedRemarks: localizedRemarks)
+                                          optionalFields: OrganizationOptionalFields(
+                                              website: website,
+                                              wikipedia: wikipedia,
+                                              fotobondNumber: fotobondNumber,
+                                              coordinates: coordinates,
+                                              localizedRemarks: localizedRemarks
+                                              )
+        )
     }
 
     private func loadMemberOptionals(bgContext: NSManagedObjectContext,
@@ -280,13 +280,15 @@ class Level2JsonReader { // normally running on a background thread
 
         // ...while some attributes are at the Photographer as Member of club level
         _ = MemberPortfolio.findCreateUpdate(bgContext: bgContext,
-                                            organization: club,
-                                            photographer: photographer,
-                                            memberRolesAndStatus: memberRolesAndStatus,
-                                            memberWebsite: nil, // portfolio website for this photography @ this club
-                                            latestImage: featuredImage,
-                                            latestThumbnail: featuredImage
-                                           )
+                                             organization: club, photographer: photographer,
+                                             removeMember: false, // remove records for members that no longer on list
+                                             optionalFields: MemberOptionalFields(
+                                                memberRolesAndStatus: memberRolesAndStatus,
+                                                memberWebsite: nil, // portfolio website for this (photographer, club)
+                                                latestImage: featuredImage,
+                                                latestThumbnail: featuredImage
+                                             )
+        )
 
     }
 

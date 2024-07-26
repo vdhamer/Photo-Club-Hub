@@ -18,7 +18,9 @@ extension FotogroepDeGenderMembersProvider { // fill with some initial hard-code
         bgContext.perform { // execute on background thread
             let club = Organization.findCreateUpdate(context: bgContext,
                                                      organizationTypeEnum: .club,
-                                                     idPlus: fotogroepDeGenderIdPlus)
+                                                     idPlus: fotogroepDeGenderIdPlus,
+                                                     optionalFields: OrganizationOptionalFields() // empty fields
+                                                    )
             ifDebugPrint("\(club.fullNameTown): Starting insertOnlineMemberData() in background")
 
             _ = Level2JsonReader(bgContext: bgContext,

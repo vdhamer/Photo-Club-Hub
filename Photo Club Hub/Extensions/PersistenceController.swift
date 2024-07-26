@@ -60,20 +60,23 @@ struct PersistenceController {
                                                               status: [.deceased: ((index % 4) == 0),
                                                                      .former: ((index % 4) == 1)]
             )
-            let organization = Organization.findCreateUpdate(context: viewContext, // on main thread
-                                                       organizationTypeEnum: .club,
-                                                       idPlus: OrganizationIdPlus(
-                                                            fullName: "PhotoClub\(index)",
-                                                            town: "Town\(index)",
-                                                            nickname: "ClubNick\(index)"
-                                                       ),
-                                                       website: URL(string: "http://www.example.com/\(index)"),
-                                                       fotobondNumber: Int16(index*1111),
-                                                       coordinates: CLLocationCoordinate2D( // spread around BeNeLux
-                                                            latitude: 51.39184 + Double.random(in: -2.0 ... 2.0),
-                                                            longitude: 5.46144 + Double.random(in: -2.0 ... 1.0)),
-                                                       pinned: (index % 4 == 0)
-                                                       )
+            let organization = Organization.findCreateUpdate(
+                context: viewContext, // on main thread
+                organizationTypeEnum: .club,
+                idPlus: OrganizationIdPlus(
+                    fullName: "PhotoClub\(index)",
+                    town: "Town\(index)",
+                    nickname: "ClubNick\(index)"
+                ),
+                optionalFields: OrganizationOptionalFields(
+                    website: URL(string: "http://www.example.com/\(index)"),
+                    fotobondNumber: Int16(index*1111),
+                    coordinates: CLLocationCoordinate2D( // spread around BeNeLux
+                        latitude: 51.39184 + Double.random(in: -2.0 ... 2.0),
+                        longitude: 5.46144 + Double.random(in: -2.0 ... 1.0))
+                ),
+                pinned: (index % 4 == 0)
+            )
             let photographer = Photographer.findCreateUpdate(
                 context: viewContext, // on main thread
                 personName: PersonName(givenName: "Jan", infixName: "D'", familyName: "Eau\(index)"),
@@ -84,10 +87,11 @@ struct PersistenceController {
                 bornDT: Date() - Double.random(in: 365*24*3600 ... 75*365*24*3600),
                 organization: organization
             )
-            let memberPortfolio = MemberPortfolio.findCreateUpdate(bgContext: viewContext,
-                                                                   organization: organization,
-                                                                   photographer: photographer,
-                                                                   memberRolesAndStatus: memberRolesAndStatus
+            let memberPortfolio = MemberPortfolio.findCreateUpdate(
+                bgContext: viewContext,
+                organization: organization,
+                photographer: photographer,
+                optionalFields: MemberOptionalFields( memberRolesAndStatus: memberRolesAndStatus )
             )
         }
 
