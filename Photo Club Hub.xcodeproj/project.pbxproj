@@ -13,6 +13,8 @@
 		D01D2B6227D3BBDC00E2FE41 /* View+Navigate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01D2B6127D3BBDC00E2FE41 /* View+Navigate.swift */; };
 		D024F11628423BE60055021B /* Sounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = D024F11528423BE60055021B /* Sounds.swift */; };
 		D0275F5527E3E21F002FA4FE /* View+OnTapGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0275F5427E3E21F002FA4FE /* View+OnTapGesture.swift */; };
+		D029C4CF2C53E5C700ABA977 /* OrganizationOptionalFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = D029C4CE2C53E5C700ABA977 /* OrganizationOptionalFields.swift */; };
+		D029C4D22C54099900ABA977 /* MemberOptionalFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = D029C4D12C54099900ABA977 /* MemberOptionalFields.swift */; };
 		D02C273C2AEE6F870005F957 /* AndersMembersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02C273B2AEE6F870005F957 /* AndersMembersProvider.swift */; };
 		D02F88532C4C242C0043B25B /* String+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02F88522C4C242C0043B25B /* String+Date.swift */; };
 		D030CD652B3AE2E800A12E90 /* OrganizationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D030CD642B3AE2E800A12E90 /* OrganizationType.swift */; };
@@ -110,6 +112,8 @@
 		D01E4F1E2C444C27005E7D2E /* Photo_Club_Hub_2_7_0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_7_0.xcdatamodel; sourceTree = "<group>"; };
 		D024F11528423BE60055021B /* Sounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sounds.swift; sourceTree = "<group>"; };
 		D0275F5427E3E21F002FA4FE /* View+OnTapGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+OnTapGesture.swift"; sourceTree = "<group>"; };
+		D029C4CE2C53E5C700ABA977 /* OrganizationOptionalFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationOptionalFields.swift; sourceTree = "<group>"; };
+		D029C4D12C54099900ABA977 /* MemberOptionalFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberOptionalFields.swift; sourceTree = "<group>"; };
 		D02AB3EF28A702800021BF41 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		D02C273B2AEE6F870005F957 /* AndersMembersProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AndersMembersProvider.swift; sourceTree = "<group>"; };
 		D02C273D2AEE6FCD0005F957 /* AndersMembersProvider+InsertSomeHardcodedMemberData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AndersMembersProvider+InsertSomeHardcodedMemberData.swift"; sourceTree = "<group>"; };
@@ -238,6 +242,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D029C4D02C54096200ABA977 /* Organization */ = {
+			isa = PBXGroup;
+			children = (
+				D0831A2D277F72590049AB84 /* Organization.swift */,
+				D029C4CE2C53E5C700ABA977 /* OrganizationOptionalFields.swift */,
+			);
+			path = Organization;
+			sourceTree = "<group>";
+		};
 		D02C273A2AEE6EF50005F957 /* FotogroepAnders */ = {
 			isa = PBXGroup;
 			children = (
@@ -290,6 +303,7 @@
 				D0621E802AE2D7DE000FFADB /* MemberPortfolio+roles.swift */,
 				D0621E842AE2E085000FFADB /* MemberPortfolio+updating.swift */,
 				D0621E882AE2E47B000FFADB /* MemberPortfolio+refreshFirstImage.swift */,
+				D029C4D12C54099900ABA977 /* MemberOptionalFields.swift */,
 			);
 			path = MemberPortfolio;
 			sourceTree = "<group>";
@@ -423,7 +437,7 @@
 				D0831A25277F72590049AB84 /* Photographer.swift */,
 				D0831A29277F72590049AB84 /* PreferencesViewModel.swift */,
 				D0C53BDC2ABF3ADF000722A1 /* PersonName.swift */,
-				D0831A2D277F72590049AB84 /* Organization.swift */,
+				D029C4D02C54096200ABA977 /* Organization */,
 				D030CD642B3AE2E800A12E90 /* OrganizationType.swift */,
 			);
 			path = ViewModel;
@@ -781,6 +795,7 @@
 			files = (
 				D040566D29A0287200CB64B8 /* MemberPortfolioRow.swift in Sources */,
 				D0DE02772789D1B30062738C /* RoleIconView.swift in Sources */,
+				D029C4D22C54099900ABA977 /* MemberOptionalFields.swift in Sources */,
 				D08DC6062AE57294008DBD68 /* SinglePortfolioLinkView.swift in Sources */,
 				D0C6E95529577921001E5CE9 /* DebugPanel.swift in Sources */,
 				D087540C2BC5EE3700FCBDB3 /* WhoIsWhoThumbnails.swift in Sources */,
@@ -843,6 +858,7 @@
 				D030CD652B3AE2E800A12E90 /* OrganizationType.swift in Sources */,
 				D0831A31277F72590049AB84 /* MemberPortfolio.swift in Sources */,
 				D0831A32277F72590049AB84 /* Photographer.swift in Sources */,
+				D029C4CF2C53E5C700ABA977 /* OrganizationOptionalFields.swift in Sources */,
 				D0F11B612C4D9891001F705A /* AndersMembersProvider+insertOnlineMemberData.swift in Sources */,
 				D0B32BB32C15C51A009FF8E7 /* AppVersion.swift in Sources */,
 				D0EAEB332B3CA6D300EC05B6 /* RootLevel1JsonReader.swift in Sources */,
