@@ -96,7 +96,7 @@ struct MemberRolesAndStatus: Equatable {
     var status: [MemberStatus: Bool?] = [:]
 
     func isDeceased() -> Bool? {
-        guard let deceased = status[.deceased] else { return nil } // bit problematic type of Bool?? (double optional)
+        guard let deceased = status[.deceased] else { return nil } // bit problematic type of Bool: "double optional"
         return deceased
     }
 
