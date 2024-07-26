@@ -18,7 +18,8 @@ extension AndersMembersProvider { // fill with some initial hard-coded content
         bgContext.perform { // execute on background thread
             let club = Organization.findCreateUpdate(context: bgContext,
                                                      organizationTypeEnum: .club,
-                                                     idPlus: fotogroepAndersIdPlus)
+                                                     idPlus: fotogroepAndersIdPlus,
+                                                     optionalFields: OrganizationOptionalFields())
             ifDebugPrint("\(club.fullNameTown): Starting insertOnlineMemberData() in background")
 
             _ = Level2JsonReader(bgContext: bgContext,

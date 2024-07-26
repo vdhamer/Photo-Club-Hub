@@ -15,7 +15,8 @@ extension FotogroepWaalreMembersProvider { // fill with some initial hard-coded 
         let clubWaalre = Organization.findCreateUpdate(
                                         context: bgContext,
                                         organizationTypeEnum: .club,
-                                        idPlus: FotogroepWaalreMembersProvider.photoClubWaalreIdPlus
+                                        idPlus: FotogroepWaalreMembersProvider.photoClubWaalreIdPlus,
+                                        optionalFields: OrganizationOptionalFields()
                                         )
         ifDebugPrint("""
                      \(clubWaalre.fullNameTown): \
