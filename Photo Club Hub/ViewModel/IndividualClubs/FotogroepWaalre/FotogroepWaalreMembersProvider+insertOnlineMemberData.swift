@@ -156,6 +156,7 @@ extension FotogroepWaalreMembersProvider {
             organization: organization,
             photographer: photographer,
             optionalFields: MemberOptionalFields(
+                level3URL: self.generateInternalURL(using: personName.fullNameWithoutParenthesizedRole),
                 memberRolesAndStatus: MemberRolesAndStatus(
                     role: [:], // FG Waalre HTML input file doesn't contain role information
                     status: [
@@ -166,8 +167,7 @@ extension FotogroepWaalreMembersProvider {
                             name: personName.fullNameWithParenthesizedRole
                         )
                     ]
-                ),
-                memberWebsite: self.generateInternalURL(using: personName.fullNameWithoutParenthesizedRole)
+                )
             )
         )
     }

@@ -78,10 +78,10 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
         let changed1 = oldMemberRolesAndStatus != newMemberRolesAndStatus
         let changed2 = updateIfChanged(update: &self.dateIntervalStart, with: optionalFields.dateInterval?.start)
         let changed3 = updateIfChanged(update: &self.dateIntervalEnd, with: optionalFields.dateInterval?.end)
-        let changed4 = updateIfChanged(update: &self.level3URL, with: optionalFields.memberWebsite)
-        let changed5 = updateIfChangedOptional(update: &self.featuredImage, with: optionalFields.latestImage)
+        let changed4 = updateIfChanged(update: &self.level3URL, with: optionalFields.level3URL)
+        let changed5 = updateIfChangedOptional(update: &self.featuredImage, with: optionalFields.featuredImage)
         let changed6 = updateIfChangedOptional(update: &self.featuredImageThumbnail,
-                                               with: optionalFields.latestThumbnail)
+                                               with: optionalFields.featuredImageThumbnail)
         let changed7 = updateIfChanged(update: &self.obsolete, with: obsolete)
         needsSaving = changed1 || changed2 || changed3 ||
                       changed4 || changed5 || changed6 || changed7 // forces execution of updateIfChanged()
@@ -90,16 +90,14 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
             do {
                 try bgContext.save() // persist just to be sure?
                 if changed1 { print("""
-                                    \(organization.fullNameTown): \
-                                    Changed roles for \(photographer.fullNameFirstLast)
+                                    \(organization.fullNameTown): Changed roles for \(photographer.fullNameFirstLast)
                                     """) }
                 if changed2 { print("""
                                     \(organization.fullNameTown): \
                                     Changed start date for \(photographer.fullNameFirstLast)
                                     """) }
                 if changed3 { print("""
-                                    \(organization.fullNameTown): \
-                                    Changed end date for \(photographer.fullNameFirstLast)
+                                    \(organization.fullNameTown): Changed end date for \(photographer.fullNameFirstLast)
                                     """) }
                 if changed4 { print("""
                                     \(organization.fullNameTown): \
@@ -108,12 +106,13 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
                 if changed5 { print("""
                                     \(organization.fullNameTown): \
                                     Changed latest image for \(photographer.fullNameFirstLast) \
-                                    to \(optionalFields.latestImage?.lastPathComponent ?? "<noLatestImage>")
+                                    to \(optionalFields.featuredImage?.lastPathComponent ?? "<noLatestImage>")
                                     """)}
                 if changed6 { print("""
                                     \(organization.fullNameTown): \
                                     Changed latest thumbnail for \(photographer.fullNameFirstLast) \
-                                    to \(optionalFields.latestThumbnail?.lastPathComponent ?? "<noLatestThumbnail>")
+                                    to \(optionalFields.featuredImageThumbnail?.lastPathComponent ??
+                                    "<noLatestThumbnail>")
                                     """)}
             } catch {
                 ifDebugFatalError("Update failed for member \(photographer.fullNameFirstLast) " +

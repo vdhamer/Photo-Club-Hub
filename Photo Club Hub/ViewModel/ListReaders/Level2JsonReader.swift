@@ -294,12 +294,11 @@ class Level2JsonReader { // normally running on a background thread
                                              photographer: photographer,
                                              removeMember: false, // remove records for members that no longer on list
                                              optionalFields: MemberOptionalFields(
-                                                memberRolesAndStatus: memberRolesAndStatus,
-                                                memberWebsite: nil, // portfolio website for this (photographer, club)
-                                                latestImage: featuredImage,
-                                                latestThumbnail: featuredImage,
-                                                level3URL: level3URL // address of portfolio data for this member
-                                             )
+                                                featuredImage: featuredImage,
+                                                featuredImageThumbnail: featuredImage,
+                                                level3URL: level3URL, // address of portfolio data for this member
+                                                memberRolesAndStatus: memberRolesAndStatus
+                                              )
         )
 
     }
