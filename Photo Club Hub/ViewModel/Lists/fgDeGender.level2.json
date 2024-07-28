@@ -19,6 +19,208 @@
     "members": [
         {
             "name": {
+                "givenName": "Albert",
+                "infixName": "",
+                "familyName": "Koning"
+            },
+            "optional": {
+                "eMail": "albertkoning42@live.nl",
+                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/"
+            }
+        },
+        {
+            "name": {
+                "givenName": "Anke",
+                "infixName": "",
+                "familyName": "Spijkers"
+            },
+            "optional": {
+                "eMail": "ankespijkers@gmail.com",
+                "website": "http://www.ankefoto.nl/",
+                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/"
+            }
+        },
+        {
+            "name": {
+                "givenName": "Bert",
+                "infixName": "",
+                "familyName": "Zantingh"
+            },
+            "optional": {
+                "eMail": "bertzantingh2@gmail.com",
+                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/"
+            }
+        },
+        {
+            "name": {
+                "givenName": "Bettina",
+                "infixName": "de",
+                "familyName": "Graaf"
+            },
+            "optional": {
+                "birthday": "1970-07-19",
+                "eMail": "bettina@loureed.nl",
+                "website": "https://glass.photo/jerdam",
+                "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/BettinaDeGraaf.jpeg",
+                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/"
+            }
+        },
+        {
+            "name": {
+                "givenName": "Eric",
+                "infixName": "van de",
+                "familyName": "Ven"
+            },
+            "optional": {
+                "eMail": "eric.vandeven@hotmail.com",
+                "website": "https://www.ericvandeven.com/",
+                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/"
+            }
+        },
+        {
+            "name": {
+                "givenName": "Francien",
+                "infixName": "van",
+                "familyName": "Mil"
+            },
+            "optional": {
+                "eMail": "francien.van.mil@gmail.com",
+                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/"
+            }
+        },
+        {
+            "name": {
+                "givenName": "Gert",
+                "infixName": "du",
+                "familyName": "Bois"
+            },
+            "optional": {
+                "eMail": "g.du.bois@live.nl",
+                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/"
+            }
+        },
+        {
+            "name": {
+                "givenName": "Hans",
+                "infixName": "van",
+                "familyName": "Gorp"
+            },
+            "optional": {
+                "eMail": "hans.vangorp@ziggo.nl",
+                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/"
+            }
+        },
+        {
+            "name": {
+                "givenName": "Hans",
+                "infixName": "",
+                "familyName": "Krüsemann"
+            },
+            "optional": {
+                "eMail": "krusemann@on.nl",
+                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/"
+            }
+        },
+        {
+            "name": {
+                "givenName": "Jelle",
+                "infixName": "van de",
+                "familyName": "Voort"
+            },
+            "optional": {
+                "eMail": "nettyjelle@onsbrabantnet.nl",
+                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/"
+            }
+        },
+        {
+            "name": {
+                "givenName": "Joep",
+                "infixName": "",
+                "familyName": "Julicher"
+            },
+            "optional": {
+                "eMail": "j.julicher@outlook.com",
+                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/"
+            }
+        },
+        {
+            "name": {
+                "givenName": "Lex",
+                "infixName": "",
+                "familyName": "Augusteijn"
+            },
+            "optional": {
+                "roles": {
+                    "isOther": true
+                },
+                "eMail": "lex.augusteijn@gmail.com",
+                "website": "https://www.lex-augusteijn.nl",
+                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/"
+            }
+        },
+        {
+            "name": {
+                "givenName": "Mariet",
+                "familyName": "Wielders"
+            },
+            "optional": {
+                "roles": {
+                    "isChairman": false
+                },
+                "birthday": "1954-10-09",
+                "eMail": "mariet@m3w.nl",
+                "website": "https://www.m3w.nl",
+                "featuredImage": "https://www.fcdegender.nl/wp-content/uploads/Expositie%202023/Mariet/slides/Mariet%203.jpg",
+                "level3URL": "https://www.fcdegender.nl/wp-content/uploads/Expositie%202023/Mariet/"
+            }
+        },
+        {
+            "name": {
+                "givenName": "Marika",
+                "infixName": "",
+                "familyName": "Beckers-van Hout"
+            },
+            "optional": {
+                "eMail": "3kaatje@gmail.com",
+                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/"
+            }
+        },
+        {
+            "name": {
+                "givenName": "Martien",
+                "infixName": "",
+                "familyName": "Leenders"
+            },
+            "optional": {
+                "eMail": "mjleendersarts@kpnmail.nl",
+                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/"
+            }
+        },
+        {
+            "name": {
+                "givenName": "Miep",
+                "infixName": "",
+                "familyName": "Fransen"
+            },
+            "optional": {
+                "eMail": "boself@upcmail.nl",
+                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/"
+            }
+        },
+        {
+            "name": {
+                "givenName": "Peter",
+                "infixName": "de",
+                "familyName": "Wit"
+            },
+            "optional": {
+                "eMail": "peter1955@gmail.com",
+                "website": "https://www.flickr.com/photos/150047808@N08/albums",
+                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/"
+            }
+        },
+        {
+            "name": {
                 "givenName": "Peter",
                 "infixName": "van den",
                 "familyName": "Hamer"
@@ -39,6 +241,7 @@
                     "isPropectiveMember": false
                 },
                 "birthday": "1957-10-18",
+                "eMail": "vdHamer@msn.com",
                 "website": "https://glass.photo/vdhamer",
                 "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg",
                 "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/"
@@ -46,31 +249,98 @@
         },
         {
             "name": {
-                "givenName": "Bettina",
-                "infixName": "de",
-                "familyName": "Graaf"
+                "givenName": "Piet",
+                "infixName": "van der",
+                "familyName": "Putten"
             },
             "optional": {
-                "birthday": "1970-07-19",
-                "website": "https://glass.photo/jerdam",
-                "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/BettinaDeGraaf.jpeg",
+                "eMail": "pietvanderputten@live.com",
+                "website": "http://www.pietvanderputtenfotografie.nl/",
                 "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/"
             }
         },
         {
             "name": {
-                "givenName": "Mariet",
-                "familyName": "Wielders"
+                "givenName": "Regina",
+                "infixName": "",
+                "familyName": "Bakker"
             },
             "optional": {
+                "eMail": "rmbakker444@yahoo.com",
+                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/"
+            }
+        },
+        {
+            "name": {
+                "givenName": "Rob",
+                "infixName": "van",
+                "familyName": "Doorn"
+            },
+            "optional": {
+                "eMail": "depine@wxs.nl",
+                "website": "http://www.rovado-artworks.nl/",
+                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/"
+            }
+        },
+        {
+            "name": {
+                "givenName": "Ton",
+                "infixName": "",
+                "familyName": "Buijs"
+            },
+            "optional": {
+                "eMail": "huisvanbuijs@gmail.com",
+                "website": "http://www.tonbuijs.nl/",
+                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/"
+            }
+        },
+        {
+            "name": {
+                "givenName": "Ton",
+                "infixName": "",
+                "familyName": "Roovers"
+            },
+            "optional": {
+                "eMail": "a.roovers4@gmail.com",
+                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/"
+            }
+        },
+        {
+            "name": {
+                "givenName": "Toon",
+                "infixName": "",
+                "familyName": "Mouws"
+            },
+            "optional": {
+                "eMail": "toon.mouws@gmail.com",
+                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/"
+            }
+        },
+        {
+            "name": {
+                "givenName": "Truus",
+                "infixName": "",
+                "familyName": "Michielsen"
+            },
+            "optional": {
+                "eMail": "truusmichielsen@hotmail.com",
+                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/"
+            }
+        },
+        {
+            "name": {
+                "givenName": "Wim",
+                "infixName": "",
+                "familyName": "Heijne"
+            },
+            "optional": {
+                "eMail": "wardheijne@gmail.com",
+                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/",
                 "roles": {
-                    "isChairman": false
-                },
-                "birthday": "1954-10-09",
-                "website": "https://www.m3w.nl",
-                "featuredImage": "https://www.fcdegender.nl/wp-content/uploads/Expositie%202023/Mariet/slides/Mariet%203.jpg",
-                "level3URL": "https://www.fcdegender.nl/wp-content/uploads/Expositie%202023/Mariet/"
+                    "isTreasurer": false
+                }
             }
         }
     ]
 }
+
