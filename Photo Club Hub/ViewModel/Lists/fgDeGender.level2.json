@@ -85,7 +85,10 @@
             },
             "optional": {
                 "eMail": "francien.van.mil@gmail.com",
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/"
+                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/",
+                "roles": {
+                    "isSecretary": true
+                }
             }
         },
         {
@@ -118,7 +121,10 @@
             },
             "optional": {
                 "eMail": "krusemann@on.nl",
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/"
+                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/",
+                "roles": {
+                    "isOther": true
+                }
             }
         },
         {
@@ -129,7 +135,10 @@
             },
             "optional": {
                 "eMail": "nettyjelle@onsbrabantnet.nl",
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/"
+                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/",
+                "roles": {
+                    "isChairman": true
+                }
             }
         },
         {
@@ -150,12 +159,12 @@
                 "familyName": "Augusteijn"
             },
             "optional": {
-                "roles": {
-                    "isOther": true
-                },
                 "eMail": "lex.augusteijn@gmail.com",
                 "website": "https://www.lex-augusteijn.nl",
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/"
+                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/",
+                "roles": {
+                    "isOther": true
+                }
             }
         },
         {
@@ -226,12 +235,18 @@
                 "familyName": "Hamer"
             },
             "optional": {
+                "birthday": "1957-10-18",
+                "eMail": "vdHamer@msn.com",
+                "website": "https://glass.photo/vdhamer",
+                "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg",
+                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/",
                 "roles": {
                     "isChairman": false,
                     "isViceChairman": false,
                     "isTreasurer": false,
                     "isSecretary": false,
-                    "isAdmin": true
+                    "isAdmin": true,
+                    "isOther": false
                 },
                 "status": {
                     "isDeceased": false,
@@ -239,12 +254,7 @@
                     "isHonoraryMember": false,
                     "isMentor": false,
                     "isPropectiveMember": false
-                },
-                "birthday": "1957-10-18",
-                "eMail": "vdHamer@msn.com",
-                "website": "https://glass.photo/vdhamer",
-                "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg",
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/"
+                }
             }
         },
         {
@@ -337,7 +347,7 @@
                 "eMail": "wardheijne@gmail.com",
                 "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/",
                 "roles": {
-                    "isTreasurer": false
+                    "isTreasurer": true
                 }
             }
         }
