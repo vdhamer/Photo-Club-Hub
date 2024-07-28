@@ -83,10 +83,10 @@ struct PersistenceController {
                 organization: organization, // only needed for debug messages
                 isDeceased: memberRolesAndStatus.isDeceased(),
                 optionalFields: PhotographerOptionalFields(
-                    photographerWebsite: URL(string: "https://www.example.com/JanDEau\(index)"),
-                    phoneNumber: "06-12345678",
+                    bornDT: Date() - Double.random(in: 365*24*3600 ... 75*365*24*3600),
                     eMail: "Jan.D.Eau\(index)@example.com",
-                    bornDT: Date() - Double.random(in: 365*24*3600 ... 75*365*24*3600)
+                    phoneNumber: "06-12345678",
+                    photographerWebsite: URL(string: "https://www.example.com/JanDEau\(index)")
                 )
             )
             let memberPortfolio = MemberPortfolio.findCreateUpdate(

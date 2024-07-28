@@ -164,7 +164,7 @@ class Level2JsonReader { // normally running on a background thread
                                              )
         }
 
-        if jsonRoot["members"].exists() { // could conceivably be empty (although it wouldn't be too useful)
+        if jsonRoot["members"].exists() { // could be empty (although level2.json file would only contain club data)
             let members: [JSON] = jsonRoot["members"].arrayValue
             for member in members {
                 loadMember(bgContext: bgContext, member: member, club: club, urlComponents: urlComponents)
@@ -190,9 +190,10 @@ class Level2JsonReader { // normally running on a background thread
     private func loadMember(bgContext: NSManagedObjectContext,
                             member: JSON,
                             club: Organization,
-                            urlComponents: UrlComponents) { // for error messages
+                            urlComponents: UrlComponents) { // for error messages only (data might come from bundle)
         guard member["name"].exists(),
               member["name"]["givenName"].exists(),
+              // if member["name"]["givenName"] doesn't exist, SwiftyJSON returns ""
               member["name"]["familyName"].exists() else { // check for mandatory fields
             ifDebugFatalError("Missing or incomplete member/name data in \(urlComponents.shortName)")
             return
@@ -211,12 +212,12 @@ class Level2JsonReader { // normally running on a background thread
                                                             givenName: givenName,
                                                             infixName: infixName, // may be ""
                                                             familyName: familyName),
-                                                         organization: club,
-                                                         optionalFields: PhotographerOptionalFields())
-        if member["optional"].exists() {
-            loadMemberOptionals(bgContext: bgContext,
-                                jsonOptionals: member["optional"],
-                                photographer: photographer, club: club)
+                                                         organization: club, // used for debug messages
+                                                         optionalFields: PhotographerOptionalFields()) // updated later
+        if member["optional"].exists() { // could contain photographerOptionalFields, memberOptionalFields, or both.
+            loadPhotographerAndMemberOptionals(bgContext: bgContext,
+                                               jsonOptionals: member["optional"],
+                                               photographer: photographer, club: club)
         } else {
             _ = MemberPortfolio.findCreateUpdate(bgContext: bgContext,
                                                  organization: club,
@@ -235,9 +236,9 @@ class Level2JsonReader { // normally running on a background thread
         let clubWebsite = jsonOptionals["website"].exists() ? URL(string: jsonOptionals["website"].stringValue) : nil
         let wikipedia: URL? = jsonOptionalsToURL(jsonOptionals: jsonOptionals, key: "wikipedia")
         let fotobondNumber = jsonOptionals["nlSpecific"]["fotobondNumber"].exists()  ?
-        jsonOptionals["nlSpecific"]["fotobondNumber"].int16Value : nil
+            jsonOptionals["nlSpecific"]["fotobondNumber"].int16Value : nil
         let coordinates: CLLocationCoordinate2D? = jsonOptionals["coordinates"].exists() ?
-             CLLocationCoordinate2D(latitude: jsonOptionals["coordinates"]["latitude"].doubleValue,
+            CLLocationCoordinate2D(latitude: jsonOptionals["coordinates"]["latitude"].doubleValue,
                                     longitude: jsonOptionals["coordinates"]["longitude"].doubleValue) : nil
         let localizedRemarks = jsonOptionals["remark"].arrayValue // empty array if missing
 
@@ -256,13 +257,16 @@ class Level2JsonReader { // normally running on a background thread
         )
     }
 
-    private func loadMemberOptionals(bgContext: NSManagedObjectContext,
-                                     jsonOptionals: JSON,
-                                     photographer: Photographer,
-                                     club: Organization) {
+    private func loadPhotographerAndMemberOptionals(bgContext: NSManagedObjectContext,
+                                                    jsonOptionals: JSON,
+                                                    photographer: Photographer,
+                                                    club: Organization) {
         let birthday: String? = jsonOptionals["birthday"].exists() ? jsonOptionals["birthday"].stringValue : nil
+        let eMail: String? = jsonOptionals["eMail"].exists() ? jsonOptionals["eMail"].stringValue : nil
+        let phoneNumber: String? = jsonOptionals["phoneNumber"].exists() ?
+            jsonOptionals["phoneNumber"].stringValue : nil
 
-        let website: URL? = jsonOptionalsToURL(jsonOptionals: jsonOptionals, key: "website")
+        let photographerWebsite: URL? = jsonOptionalsToURL(jsonOptionals: jsonOptionals, key: "website")
         let featuredImage: URL? = jsonOptionalsToURL(jsonOptionals: jsonOptionals, key: "featuredImage")
         let level3URL: URL? = jsonOptionalsToURL(jsonOptionals: jsonOptionals, key: "level3URL")
 
@@ -277,8 +281,11 @@ class Level2JsonReader { // normally running on a background thread
                                           organization: club, // club is only shown on console for debug purposes
                                           isDeceased: memberRolesAndStatus.isDeceased(),
                                           optionalFields: PhotographerOptionalFields(
-                                            photographerWebsite: website,
-                                            bornDT: birthday?.extractDate())
+                                            bornDT: birthday?.extractDate(),
+                                            eMail: eMail,
+                                            phoneNumber: phoneNumber,
+                                            photographerWebsite: photographerWebsite
+                                            )
                                           )
 
         // ...while some attributes are at the Photographer as Member of club level

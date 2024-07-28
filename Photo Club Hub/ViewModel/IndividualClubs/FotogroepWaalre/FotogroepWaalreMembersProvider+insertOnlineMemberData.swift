@@ -115,7 +115,7 @@ extension FotogroepWaalreMembersProvider {
                     eMail = self.extractEMail(taggedString: line) // store url after cleanup
 
                 case .externalURL:
-                    externalURL = self.extractExternalURL(taggedString: line) // url after cleanup
+                    externalURL = self.extractPhotographerWebsite(taggedString: line) // url after cleanup
 
                 case .birthDate:
                     bornDT = self.extractBirthDate(taggedString: line)
@@ -123,12 +123,11 @@ extension FotogroepWaalreMembersProvider {
                     self.addMember(bgContext: bgContext,
                                    organization: organization, personName: personName,
                                    optionalFields: PhotographerOptionalFields(
-                                       photographerWebsite: nil,
-                                       phoneNumber: phoneNumber,
-                                       eMail: eMail,
-                                       externalURL: externalURL,
-                                       bornDT: bornDT
-                                   )
+                                   bornDT: bornDT,
+                                   eMail: eMail,
+                                   phoneNumber: phoneNumber,
+                                   photographerWebsite: URL(string: externalURL) ?? nil
+                                  )
                     )
                 }
 

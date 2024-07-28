@@ -148,23 +148,24 @@ extension Photographer {
 
 		var wasUpdated: Bool = false
 
-        if let isDeceased, photographer.isDeceased != isDeceased {
+        if let isDeceased, photographer.isDeceased != isDeceased { // mandatory
             photographer.memberRolesAndStatus.status[.deceased] = isDeceased
             wasUpdated = true
-		}
+        }
 
+        // following are fields in PhotographerOptionalFields type
         if optionalFields.bornDT != nil, photographer.bornDT != optionalFields.bornDT {
             photographer.bornDT = optionalFields.bornDT
-            wasUpdated = true
-		}
-
-        if optionalFields.phoneNumber != nil, photographer.phoneNumber != optionalFields.phoneNumber {
-            photographer.phoneNumber = optionalFields.phoneNumber!
             wasUpdated = true
         }
 
         if optionalFields.eMail != nil, photographer.eMail != optionalFields.eMail {
             photographer.eMail = optionalFields.eMail!
+            wasUpdated = true
+        }
+
+        if optionalFields.phoneNumber != nil, photographer.phoneNumber != optionalFields.phoneNumber {
+            photographer.phoneNumber = optionalFields.phoneNumber!
             wasUpdated = true
         }
 
