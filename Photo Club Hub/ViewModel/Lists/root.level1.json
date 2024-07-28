@@ -844,57 +844,6 @@
 
         {
             "idPlus": {
-                "town": "Veghel",
-                "fullName": "Fotoclub Veghel",
-                "nickName": "fcVeghel"
-            },
-            "coordinates": {
-                "latitude": 51.62441,
-                "longitude": 5.55930
-            },
-            "website": "https://fotoclubveghel.nl",
-            "level2URL": "https://www.example.com/fcVeghel.level2.json",
-            "remark": [
-                {
-                    "language": "EN",
-                    "value": "fcVeghel coordinates it yearly exposition with 3 other nearby clubs (fcSchijndel, Zoomm, fcRooi)."
-                },
-                {
-                    "language": "NL",
-                    "value": "Fotofestijn Meierijstad is een keten van 4 aansluitende exposities (van fcRooi, fcSchijndel, Zoomm, fcVeghel) die okt/nov gehouden worden."
-                }
-            ],
-            "nlSpecific": {
-                "fotobondNumber": 1601
-            }
-        },
-
-        {
-            "idPlus": {
-                "town": "Veghel",
-                "fullName": "Fotogroep Zoomm",
-                "nickName": "fgZoomm"
-            },
-            "coordinates": {
-                "latitude": 51.62201,
-                "longitude": 5.54782
-            },
-            "website": "https://www.facebook.com/FotofestijnMeierijstad/",
-            "level2URL": "https://www.example.com/fgZoomm.level2.json",
-            "remark": [
-                {
-                    "language": "EN",
-                    "value": "fgZoom coordinates it yearly exposition with 3 other nearby clubs (fcSchijndel, fcVeghel, fcRooi)."
-                },
-                {
-                    "language": "NL",
-                    "value": "Fotofestijn Meierijstad is een keten van 4 aansluitende exposities (van fcRooi, fcSchijndel, Zoomm, fcVeghel) die okt/nov gehouden worden."
-                }
-            ]
-        },
-
-        {
-            "idPlus": {
                 "town": "Uden",
                 "fullName": "Udense Amateurfotografen F/8",
                 "nickName": "f/8"
@@ -940,6 +889,57 @@
                 {
                     "language": "NL",
                     "value": "Niet te verwarren met FC Beeldspraak in Glimmen in Groningen."
+                }
+            ]
+        },
+
+        {
+            "idPlus": {
+                "town": "Veghel",
+                "fullName": "Fotoclub Veghel",
+                "nickName": "fcVeghel"
+            },
+            "coordinates": {
+                "latitude": 51.62441,
+                "longitude": 5.55930
+            },
+            "website": "https://fotoclubveghel.nl",
+            "level2URL": "https://www.example.com/fcVeghel.level2.json",
+            "remark": [
+                {
+                    "language": "EN",
+                    "value": "fcVeghel coordinates it yearly exposition with 3 other nearby clubs (fcSchijndel, Zoomm, fcRooi)."
+                },
+                {
+                    "language": "NL",
+                    "value": "Fotofestijn Meierijstad is een keten van 4 aansluitende exposities (van fcRooi, fcSchijndel, Zoomm, fcVeghel) die okt/nov gehouden worden."
+                }
+            ],
+            "nlSpecific": {
+                "fotobondNumber": 1601
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Veghel",
+                "fullName": "Fotogroep Zoomm",
+                "nickName": "fgZoomm"
+            },
+            "coordinates": {
+                "latitude": 51.62201,
+                "longitude": 5.54782
+            },
+            "website": "https://www.facebook.com/FotofestijnMeierijstad/",
+            "level2URL": "https://www.example.com/fgZoomm.level2.json",
+            "remark": [
+                {
+                    "language": "EN",
+                    "value": "fgZoom coordinates it yearly exposition with 3 other nearby clubs (fcSchijndel, fcVeghel, fcRooi)."
+                },
+                {
+                    "language": "NL",
+                    "value": "Fotofestijn Meierijstad is een keten van 4 aansluitende exposities (van fcRooi, fcSchijndel, Zoomm, fcVeghel) die okt/nov gehouden worden."
                 }
             ]
         },
