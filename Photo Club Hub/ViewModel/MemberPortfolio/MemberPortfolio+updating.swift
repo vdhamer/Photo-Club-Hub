@@ -13,7 +13,8 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
     // Update existing attributes or fill the new object
     static func findCreateUpdate(bgContext: NSManagedObjectContext,
                                  // identifying attributes of a Member:
-                                 organization: Organization, photographer: Photographer,
+                                 organization: Organization,
+                                 photographer: Photographer,
                                  removeMember: Bool = false, // remove records for members that disappeared from lists
                                  // non-identifying attributes of a Member:
                                  optionalFields: MemberOptionalFields

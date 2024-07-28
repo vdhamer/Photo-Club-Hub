@@ -28,50 +28,57 @@ extension FotogroepWaalreMembersProvider { // fill with some initial hard-coded 
         addMember(bgContext: bgContext,
                   personName: PersonName(givenName: "Carel", infixName: "", familyName: "Bullens"),
                   organization: clubWaalre,
-                  optionalFields: MemberOptionalFields(
-                        memberRolesAndStatus: MemberRolesAndStatus(role: [ .viceChairman: true ], status: [:]))
+                  memberOptionalFields: MemberOptionalFields(
+                        memberRolesAndStatus: MemberRolesAndStatus(role: [ .viceChairman: true ], status: [:])),
+                  photographerOptionalFields: PhotographerOptionalFields()
                   )
 
         addMember(bgContext: bgContext,
                   personName: PersonName(givenName: "Erik", infixName: "van", familyName: "Geest"),
                   organization: clubWaalre,
-                  optionalFields: MemberOptionalFields(
-                        memberRolesAndStatus: MemberRolesAndStatus(role: [ .admin: true ]))
+                  memberOptionalFields: MemberOptionalFields(
+                        memberRolesAndStatus: MemberRolesAndStatus(role: [ .admin: true ])),
+                  photographerOptionalFields: PhotographerOptionalFields()
                   )
 
         addMember(bgContext: bgContext,
                   personName: PersonName(givenName: "Henriëtte", infixName: "van", familyName: "Ekert"),
                   organization: clubWaalre,
-                  optionalFields: MemberOptionalFields(
-                        memberRolesAndStatus: MemberRolesAndStatus(role: [ .admin: true ]))
+                  memberOptionalFields: MemberOptionalFields(
+                        memberRolesAndStatus: MemberRolesAndStatus(role: [ .admin: true ])),
+                  photographerOptionalFields: PhotographerOptionalFields()
                   )
 
         addMember(bgContext: bgContext,
                   personName: PersonName(givenName: "Jos", infixName: "", familyName: "Jansen"),
                   organization: clubWaalre,
-                  optionalFields: MemberOptionalFields(
-                        memberRolesAndStatus: MemberRolesAndStatus(role: [ .treasurer: true ]))
+                  memberOptionalFields: MemberOptionalFields(
+                        memberRolesAndStatus: MemberRolesAndStatus(role: [ .treasurer: true ])),
+                  photographerOptionalFields: PhotographerOptionalFields()
                   )
 
         addMember(bgContext: bgContext,
                   personName: PersonName(givenName: "Kees", infixName: "van", familyName: "Gemert"),
                   organization: clubWaalre,
-                  optionalFields: MemberOptionalFields(
-                        memberRolesAndStatus: MemberRolesAndStatus(role: [ .secretary: true ]))
+                  memberOptionalFields: MemberOptionalFields(
+                        memberRolesAndStatus: MemberRolesAndStatus(role: [ .secretary: true ])),
+                  photographerOptionalFields: PhotographerOptionalFields()
                   )
 
         addMember(bgContext: bgContext,
                   personName: PersonName(givenName: "Marijke", infixName: "", familyName: "Gallas"),
                   organization: clubWaalre,
-                  optionalFields: MemberOptionalFields(
-                        memberRolesAndStatus: MemberRolesAndStatus(role: [:], status: [ .honorary: true ]))
+                  memberOptionalFields: MemberOptionalFields(
+                        memberRolesAndStatus: MemberRolesAndStatus(role: [:], status: [ .honorary: true ])),
+                  photographerOptionalFields: PhotographerOptionalFields()
                   )
 
         addMember(bgContext: bgContext,
                   personName: PersonName(givenName: "Miek", infixName: "", familyName: "Kerkhoven"),
                   organization: clubWaalre,
-                  optionalFields: MemberOptionalFields(
-                        memberRolesAndStatus: MemberRolesAndStatus(role: [ .chairman: true ]))
+                  memberOptionalFields: MemberOptionalFields(
+                        memberRolesAndStatus: MemberRolesAndStatus(role: [ .chairman: true ])),
+                  photographerOptionalFields: PhotographerOptionalFields()
                   )
 
         do {
@@ -93,23 +100,22 @@ extension FotogroepWaalreMembersProvider { // fill with some initial hard-coded 
     private func addMember(bgContext: NSManagedObjectContext,
                            personName: PersonName,
                            organization: Organization,
-                           bornDT: Date? = nil, // this is a field of Photographer, not of MemberPortfolio
-                           optionalFields: MemberOptionalFields
+                           memberOptionalFields: MemberOptionalFields,
+                           photographerOptionalFields: PhotographerOptionalFields
     ) {
-
         let photographer = Photographer.findCreateUpdate(
                            context: bgContext,
                            personName: PersonName(givenName: personName.givenName,
                                                   infixName: personName.infixName,
                                                   familyName: personName.familyName),
-                           isDeceased: optionalFields.memberRolesAndStatus.isDeceased(),
-                           bornDT: bornDT,
-                           organization: organization)
+                           organization: organization, // only used for debug messages
+                           isDeceased: memberOptionalFields.memberRolesAndStatus.isDeceased(),
+                           optionalFields: photographerOptionalFields)
 
         _ = MemberPortfolio.findCreateUpdate(
                             bgContext: bgContext,
                             organization: organization, photographer: photographer,
-                            optionalFields: optionalFields
+                            optionalFields: memberOptionalFields
                             )
         // do not need to bgContext.save() because a series of hardcoded members will be saved simultaneously
     }

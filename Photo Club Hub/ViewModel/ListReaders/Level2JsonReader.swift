@@ -108,15 +108,15 @@ class Level2JsonReader { // normally running on a background thread
             return jsonDataFetchedOnline // got the requested JSON from an online URL (preferred option)
         }
 
-        print("""
-              Could not access online file \(url.relativeString). \
-              Trying local file \(urlComponents.shortName) instead.
-              """)
+        print("Could not access online file \(url.relativeString).")
         // last chance: fetch json data from app bundle
         guard let filePath: String = Bundle.main.path(forResource: urlComponents.dataSourceFile + "." +
                                                                    urlComponents.fileSubType,
                                                       ofType: urlComponents.fileType)
-            else { return nil } // can't locate file within main app bundle
+            else {
+                print("Could not access local file \(urlComponents.shortName) either.")
+                return nil
+            } // can't locate file within main app bundle
 
         // get the requested JSON from a file in the main app bundle
         if let fileData = try? String(contentsOfFile: filePath) {
@@ -211,7 +211,8 @@ class Level2JsonReader { // normally running on a background thread
                                                             givenName: givenName,
                                                             infixName: infixName, // may be ""
                                                             familyName: familyName),
-                                                         organization: club) // club used only in print()
+                                                         organization: club,
+                                                         optionalFields: PhotographerOptionalFields())
         if member["optional"].exists() {
             loadMemberOptionals(bgContext: bgContext,
                                 jsonOptionals: member["optional"],
@@ -231,7 +232,7 @@ class Level2JsonReader { // normally running on a background thread
     private func loadClubOptionals(bgContext: NSManagedObjectContext,
                                    jsonOptionals: JSON,
                                    club: Organization) {
-        let website = jsonOptionals["website"].exists() ? URL(string: jsonOptionals["website"].stringValue) : nil
+        let clubWebsite = jsonOptionals["website"].exists() ? URL(string: jsonOptionals["website"].stringValue) : nil
         let wikipedia: URL? = jsonOptionalsToURL(jsonOptionals: jsonOptionals, key: "wikipedia")
         let fotobondNumber = jsonOptionals["nlSpecific"]["fotobondNumber"].exists()  ?
         jsonOptionals["nlSpecific"]["fotobondNumber"].int16Value : nil
@@ -246,7 +247,7 @@ class Level2JsonReader { // normally running on a background thread
                                                                                      town: club.town),
                                                                      nickname: club.nickName),
                                           optionalFields: OrganizationOptionalFields(
-                                              website: website,
+                                              organizationWebsite: clubWebsite,
                                               wikipedia: wikipedia,
                                               fotobondNumber: fotobondNumber,
                                               coordinates: coordinates,
@@ -273,20 +274,24 @@ class Level2JsonReader { // normally running on a background thread
                                           personName: PersonName(givenName: photographer.givenName,
                                                                  infixName: photographer.infixName,
                                                                  familyName: photographer.familyName),
+                                          organization: club, // club is only shown on console for debug purposes
                                           isDeceased: memberRolesAndStatus.isDeceased(),
-                                          website: website,
-                                          bornDT: birthday?.extractDate(),
-                                          organization: club ) // club is only shown on console for debug purposes
+                                          optionalFields: PhotographerOptionalFields(
+                                            photographerWebsite: website,
+                                            bornDT: birthday?.extractDate())
+                                          )
 
         // ...while some attributes are at the Photographer as Member of club level
         _ = MemberPortfolio.findCreateUpdate(bgContext: bgContext,
-                                             organization: club, photographer: photographer,
+                                             organization: club,
+                                             photographer: photographer,
                                              removeMember: false, // remove records for members that no longer on list
                                              optionalFields: MemberOptionalFields(
                                                 memberRolesAndStatus: memberRolesAndStatus,
                                                 memberWebsite: nil, // portfolio website for this (photographer, club)
                                                 latestImage: featuredImage,
-                                                latestThumbnail: featuredImage
+                                                latestThumbnail: featuredImage,
+                                                level3URL: level3URL // address of portfolio data for this member
                                              )
         )
 

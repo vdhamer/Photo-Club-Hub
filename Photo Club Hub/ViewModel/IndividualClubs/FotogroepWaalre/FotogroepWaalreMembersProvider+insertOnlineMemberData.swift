@@ -90,7 +90,7 @@ extension FotogroepWaalreMembersProvider {
 
         var personName = PersonName(fullNameWithParenthesizedRole: "", givenName: "", infixName: "", familyName: "")
         var eMail = "", phoneNumber: String?, externalURL: String = ""
-        var birthDate = toDate(from: "1/1/9999") // dummy value that is overwritten later
+        var bornDT = toDate(from: "1/1/9999") // dummy value that is overwritten later
 
         let organization: Organization = Organization.findCreateUpdate(
             context: bgContext, organizationTypeEnum: .club, idPlus: idPlus,
@@ -118,42 +118,59 @@ extension FotogroepWaalreMembersProvider {
                     externalURL = self.extractExternalURL(taggedString: line) // url after cleanup
 
                 case .birthDate:
-                    birthDate = self.extractBirthDate(taggedString: line)
+                    bornDT = self.extractBirthDate(taggedString: line)
 
-                    let photographer = Photographer.findCreateUpdate(
-                        context: bgContext,
-                        personName: personName,
-                        isDeceased: !self.isStillAlive(phone: phoneNumber),
-                        phoneNumber: phoneNumber, eMail: eMail,
-                        website: URL(string: externalURL),
-                        bornDT: birthDate,
-                        organization: organization)
-
-                    _ = MemberPortfolio.findCreateUpdate(
-                        bgContext: bgContext,
-                        organization: organization, photographer: photographer,
-                        optionalFields: MemberOptionalFields(
-                            memberRolesAndStatus: MemberRolesAndStatus(
-                                role: [:],
-                                status: [
-                                    .former: !self.isCurrentMember(name: personName.fullNameWithParenthesizedRole,
-                                                                   includeProspectiveMembers: true),
-                                    .coach: self.isMentor(name: personName.fullNameWithParenthesizedRole),
-                                    .prospective: self.isProspectiveMember(
-                                        name: personName.fullNameWithParenthesizedRole
-                                    )
-                                ]
-                            ),
-                            memberWebsite: self.generateInternalURL(using: personName.fullNameWithoutParenthesizedRole)
-                        )
+                    self.addMember(bgContext: bgContext,
+                                   organization: organization, personName: personName,
+                                   optionalFields: PhotographerOptionalFields(
+                                       photographerWebsite: nil,
+                                       phoneNumber: phoneNumber,
+                                       eMail: eMail,
+                                       externalURL: externalURL,
+                                       bornDT: bornDT
+                                   )
                     )
-
                 }
 
                 targetState = targetState.nextState()
             }
         }
 
+    }
+
+    // add Photographer and MemberPortfolio records to CoreData
+    private func addMember(bgContext: NSManagedObjectContext,
+                           organization: Organization,
+                           personName: PersonName,
+                           optionalFields: PhotographerOptionalFields
+                           ) {
+
+        let photographer = Photographer.findCreateUpdate(
+            context: bgContext,
+            personName: personName,
+            organization: organization,
+            isDeceased: !self.isStillAlive(phone: optionalFields.phoneNumber),
+            optionalFields: optionalFields)
+
+        _ = MemberPortfolio.findCreateUpdate(
+            bgContext: bgContext,
+            organization: organization,
+            photographer: photographer,
+            optionalFields: MemberOptionalFields(
+                memberRolesAndStatus: MemberRolesAndStatus(
+                    role: [:], // FG Waalre HTML input file doesn't contain role information
+                    status: [
+                        .former: !self.isCurrentMember(name: personName.fullNameWithParenthesizedRole,
+                                                       includeProspectiveMembers: true),
+                        .coach: self.isMentor(name: personName.fullNameWithParenthesizedRole),
+                        .prospective: self.isProspectiveMember(
+                            name: personName.fullNameWithParenthesizedRole
+                        )
+                    ]
+                ),
+                memberWebsite: self.generateInternalURL(using: personName.fullNameWithoutParenthesizedRole)
+            )
+        )
     }
 
     private func generateInternalURL(using name: String) -> URL? { // only use standard ASCII A...Z,a...z in URLs

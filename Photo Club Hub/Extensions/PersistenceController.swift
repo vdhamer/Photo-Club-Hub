@@ -69,7 +69,7 @@ struct PersistenceController {
                     nickname: "ClubNick\(index)"
                 ),
                 optionalFields: OrganizationOptionalFields(
-                    website: URL(string: "http://www.example.com/\(index)"),
+                    organizationWebsite: URL(string: "http://www.example.com/\(index)"),
                     fotobondNumber: Int16(index*1111),
                     coordinates: CLLocationCoordinate2D( // spread around BeNeLux
                         latitude: 51.39184 + Double.random(in: -2.0 ... 2.0),
@@ -80,12 +80,14 @@ struct PersistenceController {
             let photographer = Photographer.findCreateUpdate(
                 context: viewContext, // on main thread
                 personName: PersonName(givenName: "Jan", infixName: "D'", familyName: "Eau\(index)"),
+                organization: organization, // only needed for debug messages
                 isDeceased: memberRolesAndStatus.isDeceased(),
-                phoneNumber: "06-12345678",
-                eMail: "Jan.D.Eau\(index)@example.com",
-                website: URL(string: "https://www.example.com/JanDEau\(index)"),
-                bornDT: Date() - Double.random(in: 365*24*3600 ... 75*365*24*3600),
-                organization: organization
+                optionalFields: PhotographerOptionalFields(
+                    photographerWebsite: URL(string: "https://www.example.com/JanDEau\(index)"),
+                    phoneNumber: "06-12345678",
+                    eMail: "Jan.D.Eau\(index)@example.com",
+                    bornDT: Date() - Double.random(in: 365*24*3600 ... 75*365*24*3600)
+                )
             )
             let memberPortfolio = MemberPortfolio.findCreateUpdate(
                 bgContext: viewContext,

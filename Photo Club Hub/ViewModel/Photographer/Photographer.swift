@@ -78,10 +78,9 @@ extension Photographer {
     // Update existing attributes or fill the new object
     static func findCreateUpdate(context: NSManagedObjectContext, // foreground or background context
                                  personName: PersonName,
+                                 organization: Organization, // organization is only shown on console for debug purposes
                                  isDeceased: Bool? = nil, // nil means "don't know"
-                                 phoneNumber: String? = nil, eMail: String? = nil,
-                                 website: URL? = nil, bornDT: Date? = nil,
-                                 organization: Organization // organization is only shown on console for debug purposes
+                                 optionalFields: PhotographerOptionalFields
                                 ) -> Photographer {
         let photoClubPref = "\(organization.fullNameTown):"
 
@@ -116,8 +115,7 @@ extension Photographer {
             // already exists, so make sure secondary attributes are up to date
             let wasUpdated = update(bgContext: context, photographer: photographer,
                                     isDeceased: isDeceased,
-                                    phoneNumber: phoneNumber, eMail: eMail,
-                                    website: website, bornDT: bornDT)
+                                    optionalFields: optionalFields)
             if wasUpdated {
                 print("\(photoClubPref) Updated info for photographer <\(photographer.fullNameFirstLast)>")
             } else {
@@ -134,8 +132,7 @@ extension Photographer {
             _ = update(bgContext: context,
                        photographer: photographer,
                        isDeceased: isDeceased,
-                       phoneNumber: phoneNumber, eMail: eMail,
-                       website: website, bornDT: bornDT)
+                       optionalFields: optionalFields)
             // don't log whether attribbutes have been updated if it is a new photographer
             print("\(photoClubPref) Successfully created new photographer <\(photographer.fullNameFirstLast)>")
             return photographer
@@ -147,10 +144,7 @@ extension Photographer {
     private static func update(bgContext: NSManagedObjectContext,
                                photographer: Photographer,
                                isDeceased: Bool?,
-                               phoneNumber: String? = nil,
-                               eMail: String? = nil,
-                               website: URL? = nil,
-                               bornDT: Date? = nil) -> Bool {
+                               optionalFields: PhotographerOptionalFields) -> Bool {
 
 		var wasUpdated: Bool = false
 
@@ -159,23 +153,23 @@ extension Photographer {
             wasUpdated = true
 		}
 
-        if let bornDT, photographer.bornDT != bornDT {
-			photographer.bornDT = bornDT
+        if optionalFields.bornDT != nil, photographer.bornDT != optionalFields.bornDT {
+            photographer.bornDT = optionalFields.bornDT
             wasUpdated = true
 		}
 
-        if let phoneNumber, photographer.phoneNumber != phoneNumber {
-            photographer.phoneNumber = phoneNumber
+        if optionalFields.phoneNumber != nil, photographer.phoneNumber != optionalFields.phoneNumber {
+            photographer.phoneNumber = optionalFields.phoneNumber!
             wasUpdated = true
         }
 
-        if let eMail, photographer.eMail != eMail {
-            photographer.eMail = eMail
+        if optionalFields.eMail != nil, photographer.eMail != optionalFields.eMail {
+            photographer.eMail = optionalFields.eMail!
             wasUpdated = true
         }
 
-        if let website, photographer.website != website {
-            photographer.website = website
+        if let newWebsite = optionalFields.photographerWebsite, photographer.photographerWebsite != newWebsite {
+            photographer.photographerWebsite = newWebsite
             wasUpdated = true
         }
 

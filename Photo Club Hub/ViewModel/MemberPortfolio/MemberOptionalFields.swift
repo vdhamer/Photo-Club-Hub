@@ -16,4 +16,5 @@ struct MemberOptionalFields {
     var memberWebsite: URL?
     var latestImage: URL?
     var latestThumbnail: URL?
+    var level3URL: URL?
 }

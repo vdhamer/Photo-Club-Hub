@@ -125,7 +125,7 @@ class RootLevel1JsonReader {
                                                 nickname: jsonOrganization["idPlus"]["nickName"].stringValue)
                 ifDebugPrint("Adding organization \(idPlus.fullName), \(idPlus.town), aka \(idPlus.nickname)")
 
-                let website = URL(string: jsonOrganization["website"].stringValue)
+                let organizationWebsite = URL(string: jsonOrganization["website"].stringValue)
                 let wikipedia = URL(string: jsonOrganization["wikipedia"].stringValue)
                 let fotobondNumber = jsonOrganization["nlSpecific"]["fotobondNumber"].int16Value
                 let jsonCoordinates = jsonOrganization["coordinates"]
@@ -136,7 +136,7 @@ class RootLevel1JsonReader {
                                                   organizationTypeEnum: organizationTypeEnum,
                                                   idPlus: idPlus,
                                                   optionalFields: OrganizationOptionalFields(
-                                                      website: website,
+                                                      organizationWebsite: organizationWebsite,
                                                       wikipedia: wikipedia,
                                                       fotobondNumber: fotobondNumber, // int16
                                                       coordinates: coordinates,

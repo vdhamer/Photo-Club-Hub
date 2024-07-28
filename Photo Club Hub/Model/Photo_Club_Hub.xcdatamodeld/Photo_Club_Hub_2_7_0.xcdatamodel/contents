@@ -61,10 +61,10 @@
         <attribute name="lockedMap" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="longitude_" optional="YES" attributeType="Double" usesScalarValueType="YES"/>
         <attribute name="nickName_" optional="YES" attributeType="String" elementID="shortName_"/>
+        <attribute name="organizationWebsite" optional="YES" attributeType="URI" elementID="photoClubWebsite"/>
         <attribute name="pinned" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="removeOrganization" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="town_" attributeType="String" defaultValueString="DefaultTown"/>
-        <attribute name="website" optional="YES" attributeType="URI" elementID="photoClubWebsite"/>
         <attribute name="wikipedia" optional="YES" attributeType="URI"/>
         <relationship name="localizedRemarks_" toMany="YES" deletionRule="Cascade" destinationEntity="LocalizedRemark" inverseName="organization_" inverseEntity="LocalizedRemark"/>
         <relationship name="members_" toMany="YES" deletionRule="Cascade" destinationEntity="MemberPortfolio" inverseName="organization_" inverseEntity="MemberPortfolio"/>
@@ -94,7 +94,7 @@
         <attribute name="infixName_" attributeType="String" defaultValueString=""/>
         <attribute name="isDeceased" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="phoneNumber_" optional="YES" attributeType="String"/>
-        <attribute name="website" optional="YES" attributeType="URI" elementID="photographerWebsite"/>
+        <attribute name="photographerWebsite" optional="YES" attributeType="URI" elementID="photographerWebsite"/>
         <relationship name="memberships_" toMany="YES" deletionRule="Cascade" destinationEntity="MemberPortfolio" inverseName="photographer_" inverseEntity="MemberPortfolio"/>
         <uniquenessConstraints>
             <uniquenessConstraint>

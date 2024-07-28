@@ -57,7 +57,7 @@ struct FilteredWhoIsWhoView: View {
 
                     Spacer() // push WhoIsTextInfo to the left
 
-                    if let url: URL = filteredPhotographer.website {
+                    if let url: URL = filteredPhotographer.photographerWebsite {
                         Link(destination: url, label: {
                             Image(systemName: "link")
                                 .foregroundColor(.linkColor)

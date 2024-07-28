@@ -10,7 +10,7 @@ import CoreLocation // for CLLocationCoordinate2D
 // Set of paraameters (with their defaults) used when creating structs of type Organization.
 // Note that Organization is also an entity type in the CoreData database.
 struct OrganizationOptionalFields {
-    var website: URL?
+    var organizationWebsite: URL?
     var wikipedia: URL?
     var fotobondNumber: Int16?
     var coordinates: CLLocationCoordinate2D?

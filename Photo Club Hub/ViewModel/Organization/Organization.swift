@@ -237,8 +237,8 @@ extension Organization {
             self.removeOrganization = removeOrganization
             modified = true }
 
-        if let website = optionalFields.website, self.website != website {
-            self.website = website
+        if let website = optionalFields.organizationWebsite, self.organizationWebsite != website {
+            self.organizationWebsite = website
             modified = true }
 
         if let wikiURL = optionalFields.wikipedia, self.wikipedia != wikiURL {

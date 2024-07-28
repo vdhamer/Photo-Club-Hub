@@ -52,4 +52,18 @@ struct UrlComponents {
         fileType: "json"
     )
 
+    // MARK: - Bellus Imago
+
+    static let bellusImago = UrlComponents(
+        dataSourcePath: """
+                        https://raw.githubusercontent.com/\
+                        vdhamer/Photo-Club-Hub/\
+                        main/\
+                        Photo%20Club%20Hub/ViewModel/Lists/
+                        """,
+        dataSourceFile: "fcBellusImago",
+        fileSubType: "level2",
+        fileType: "json"
+    )
+
 }

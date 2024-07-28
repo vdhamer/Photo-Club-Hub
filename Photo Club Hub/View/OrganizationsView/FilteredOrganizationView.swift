@@ -94,7 +94,7 @@ struct FilteredOrganizationView: View, Sendable {
                                  comment: "<count> members (including all types of members) within photo club")
                             .font(.subheadline)
                         }
-                        if let website: URL = filteredOrganization.website {
+                        if let website: URL = filteredOrganization.organizationWebsite {
                             Link(destination: website, label: {
                                 Text(website.absoluteString)
                                     .lineLimit(1)
