@@ -8,7 +8,8 @@ Maintenance
 * Initial ability to read list of club members from a data file (`fgDeGender.level2.json`).
 * The membership data for 2 Dutch photo clubs (fgAnders, fgDeGender) are now read from level2.json data files.
 * Added a wikipedia link for the club fgDeGender. The link is mainly for demo/testing purposes.
-* Tested on iOS 18.0 beta 4 (22A5316j), Xcode 16.0 beta 4 (16A5211f) and Vision Pro 2.0 beta 4 (22N5286g).
+* Tested on iOS 18.0 beta 4 (22A5316j), Xcode 16.0 beta 4 (16A5211f), MacOS 14.6 and Vision Pro 2.0 beta 4 (22N5286g).
+* Incorporated pull request regarding try/catch for level 2 JSON loading submitted by Nikolay Dobychin (aka codifyme).
 
 This build #4629 was made with Xcode 16.0 beta 4.
 
