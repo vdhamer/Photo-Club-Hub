@@ -96,13 +96,13 @@ class Level2JsonReader { // normally running on a background thread
                                     club: club, // club that this level2.json file should describe
                                     urlComponents: urlComponents) // used for logging messages
             } catch MergeError.invalidJsonData(let message) {
-                print("Error reading Level 2 file \(urlComponents.shortName): \(message)")
+                print("Error reading file \(urlComponents.shortName): \(message)")
             } catch MergeError.mismatchedNameTown(let message) {
-                print("Error reading Level 2 file \(urlComponents.shortName): \(message)")
+                print("Error reading file \(urlComponents.shortName): \(message)")
             } catch MergeError.saveFailed {
-                print("Error: failed to save Level 2 changes to Core Data")
+                print("Error: failed to save \(urlComponents.shortName) data to Core Data")
             } catch {
-                print("An unexpected error occurred: \(error)")
+                print("An unexpected error occurred in Level2JsonReader: \(error)")
             }
         }
 
@@ -149,12 +149,13 @@ class Level2JsonReader { // normally running on a background thread
         ifDebugPrint("Loading members of \(club.fullNameTown) from \(urlComponents.shortName) in background.")
 
         let jsonRoot: JSON = JSON(parseJSON: jsonData) // pass the data to SwiftyJSON to parse
-
         guard jsonRoot["club"].exists() else {
             throw MergeError.invalidJsonData("Cannot find club keyword in \(urlComponents.shortName)") }
+
         let jsonClub: JSON = jsonRoot["club"]
         guard jsonClub["idPlus"].exists() else {
             throw MergeError.invalidJsonData("Cannot find idPlus keyword in \(urlComponents.shortName)") }
+
         let jsonIdPlus: JSON = jsonClub["idPlus"]
         guard jsonIdPlus["town"].stringValue == club.town && jsonIdPlus["fullName"].stringValue == club.fullName else {
             throw MergeError.mismatchedNameTown("""
@@ -162,7 +163,6 @@ class Level2JsonReader { // normally running on a background thread
                                                 \(club.fullNameTown) \
                                                 in \(urlComponents.shortName)
                                                 """) }
-
         let idPlus = OrganizationIdPlus(fullName: jsonIdPlus["fullName"].stringValue,
                                         town: jsonIdPlus["town"].stringValue,
                                         nickname: jsonIdPlus["nickName"].stringValue)
@@ -239,8 +239,8 @@ class Level2JsonReader { // normally running on a background thread
                                                  organization: club,
                                                  photographer: photographer,
                                                  optionalFields: MemberOptionalFields(
-                                                    memberRolesAndStatus: MemberRolesAndStatus(jsonRoles: [:],
-                                                                                               jsonStatus: [:])
+                                                     memberRolesAndStatus: MemberRolesAndStatus(jsonRoles: [:],
+                                                                                                jsonStatus: [:])
                                                  )
             )
         }
