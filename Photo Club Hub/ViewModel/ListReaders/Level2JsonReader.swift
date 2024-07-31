@@ -96,13 +96,13 @@ class Level2JsonReader { // normally running on a background thread
                                     club: club, // club that this level2.json file should describe
                                     urlComponents: urlComponents) // used for logging messages
             } catch MergeError.invalidJsonData(let message) {
-                print("Error reading file \(urlComponents.shortName): \(message)")
+                ifDebugFatalError("Error reading file \(urlComponents.shortName): \(message)")
             } catch MergeError.mismatchedNameTown(let message) {
-                print("Error reading file \(urlComponents.shortName): \(message)")
+                ifDebugFatalError("Error reading file \(urlComponents.shortName): \(message)")
             } catch MergeError.saveFailed {
-                print("Error: failed to save \(urlComponents.shortName) data to Core Data")
+                ifDebugFatalError("Error: failed to save \(urlComponents.shortName) data to Core Data")
             } catch {
-                print("An unexpected error occurred in Level2JsonReader: \(error)")
+                ifDebugFatalError("An unexpected error occurred in Level2JsonReader: \(error)")
             }
         }
 
