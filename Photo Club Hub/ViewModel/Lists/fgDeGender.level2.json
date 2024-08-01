@@ -273,6 +273,9 @@
                 "website": "https://glass.photo/vdhamer",
                 "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg",
                 "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/",
+                "nlSpecific": {
+                    "fotobondNumber": 1620110
+                }
                 "roles": {
                     "isChairman": false,
                     "isViceChairman": false,
