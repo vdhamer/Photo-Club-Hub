@@ -13,7 +13,10 @@
                 },
                 "website": "https://www.fcdegender.nl",
                 "wikipedia": "https://nl.wikipedia.org/wiki/Gender_(beek)",
-                "level2URL": "https://www.example.com/deGender.level2.json"
+                "level2URL": "https://www.example.com/deGender.level2.json",
+                "nlSpecific": {
+                    "fotobondNumber": 1620
+                }
             }
         },
     "members": [
@@ -24,8 +27,10 @@
                 "familyName": "Koning"
             },
             "optional": {
-                "eMail": "albertkoning42@live.nl",
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/"
+                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/",
+                "nlSpecific": {
+                    "fotobondNumber": 1620108
+                }
             }
         },
         {
@@ -35,9 +40,11 @@
                 "familyName": "Spijkers"
             },
             "optional": {
-                "eMail": "ankespijkers@gmail.com",
                 "website": "http://www.ankefoto.nl/",
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/"
+                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/",
+                "nlSpecific": {
+                    "fotobondNumber": 1620059
+                }
             }
         },
         {
@@ -47,8 +54,10 @@
                 "familyName": "Zantingh"
             },
             "optional": {
-                "eMail": "bertzantingh2@gmail.com",
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/"
+                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/",
+                "nlSpecific": {
+                    "fotobondNumber": 1620040
+                }
             }
         },
         {
@@ -59,7 +68,6 @@
             },
             "optional": {
                 "birthday": "1970-07-19",
-                "eMail": "bettina@loureed.nl",
                 "website": "https://glass.photo/jerdam",
                 "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/BettinaDeGraaf.jpeg",
                 "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/"
@@ -72,9 +80,11 @@
                 "familyName": "Ven"
             },
             "optional": {
-                "eMail": "eric.vandeven@hotmail.com",
                 "website": "https://www.ericvandeven.com/",
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/"
+                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/",
+                "nlSpecific": {
+                    "fotobondNumber": 1620109
+                }
             }
         },
         {
@@ -84,10 +94,12 @@
                 "familyName": "Mil"
             },
             "optional": {
-                "eMail": "francien.van.mil@gmail.com",
                 "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/",
                 "roles": {
                     "isSecretary": true
+                },
+                "nlSpecific": {
+                    "fotobondNumber": 1620099
                 }
             }
         },
@@ -98,8 +110,10 @@
                 "familyName": "Bois"
             },
             "optional": {
-                "eMail": "g.du.bois@live.nl",
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/"
+                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/",
+                "nlSpecific": {
+                    "fotobondNumber": 1620087
+                }
             }
         },
         {
@@ -109,8 +123,10 @@
                 "familyName": "Gorp"
             },
             "optional": {
-                "eMail": "hans.vangorp@ziggo.nl",
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/"
+                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/",
+                "nlSpecific": {
+                    "fotobondNumber": 1620029
+                }
             }
         },
         {
@@ -120,10 +136,12 @@
                 "familyName": "Krüsemann"
             },
             "optional": {
-                "eMail": "krusemann@on.nl",
                 "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/",
                 "roles": {
                     "isOther": true
+                },
+                "nlSpecific": {
+                    "fotobondNumber": 1620090
                 }
             }
         },
@@ -134,10 +152,12 @@
                 "familyName": "Voort"
             },
             "optional": {
-                "eMail": "nettyjelle@onsbrabantnet.nl",
                 "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/",
                 "roles": {
                     "isChairman": true
+                },
+                "nlSpecific": {
+                    "fotobondNumber": 1620103
                 }
             }
         },
@@ -148,8 +168,10 @@
                 "familyName": "Julicher"
             },
             "optional": {
-                "eMail": "j.julicher@outlook.com",
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/"
+                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/",
+                "nlSpecific": {
+                    "fotobondNumber": 1620098
+                }
             }
         },
         {
@@ -159,11 +181,13 @@
                 "familyName": "Augusteijn"
             },
             "optional": {
-                "eMail": "lex.augusteijn@gmail.com",
                 "website": "https://www.lex-augusteijn.nl",
                 "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/",
                 "roles": {
                     "isOther": true
+                },
+                "nlSpecific": {
+                    "fotobondNumber": 1620064
                 }
             }
         },
@@ -177,10 +201,12 @@
                     "isChairman": false
                 },
                 "birthday": "1954-10-09",
-                "eMail": "mariet@m3w.nl",
                 "website": "https://www.m3w.nl",
                 "featuredImage": "https://www.fcdegender.nl/wp-content/uploads/Expositie%202023/Mariet/slides/Mariet%203.jpg",
-                "level3URL": "https://www.fcdegender.nl/wp-content/uploads/Expositie%202023/Mariet/"
+                "level3URL": "https://www.fcdegender.nl/wp-content/uploads/Expositie%202023/Mariet/",
+                "nlSpecific": {
+                    "fotobondNumber": 1620079
+                }
             }
         },
         {
@@ -190,8 +216,10 @@
                 "familyName": "Beckers-van Hout"
             },
             "optional": {
-                "eMail": "3kaatje@gmail.com",
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/"
+                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/",
+                "nlSpecific": {
+                    "fotobondNumber": 1620104
+                }
             }
         },
         {
@@ -201,8 +229,10 @@
                 "familyName": "Leenders"
             },
             "optional": {
-                "eMail": "mjleendersarts@kpnmail.nl",
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/"
+                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/",
+                "nlSpecific": {
+                    "fotobondNumber": 1620008
+                }
             }
         },
         {
@@ -212,8 +242,10 @@
                 "familyName": "Fransen"
             },
             "optional": {
-                "eMail": "boself@upcmail.nl",
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/"
+                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/",
+                "nlSpecific": {
+                    "fotobondNumber": 1620021
+                }
             }
         },
         {
@@ -223,9 +255,11 @@
                 "familyName": "Wit"
             },
             "optional": {
-                "eMail": "peter1955@gmail.com",
                 "website": "https://www.flickr.com/photos/150047808@N08/albums",
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/"
+                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/",
+                "nlSpecific": {
+                    "fotobondNumber": 1620107
+                }
             }
         },
         {
@@ -236,7 +270,6 @@
             },
             "optional": {
                 "birthday": "1957-10-18",
-                "eMail": "vdHamer@msn.com",
                 "website": "https://glass.photo/vdhamer",
                 "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg",
                 "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/",
@@ -257,6 +290,9 @@
                     "isHonoraryMember": false,
                     "isMentor": false,
                     "isPropectiveMember": false
+                },
+                "nlSpecific": {
+                    "fotobondNumber": 1620110
                 }
             }
         },
@@ -267,9 +303,11 @@
                 "familyName": "Putten"
             },
             "optional": {
-                "eMail": "pietvanderputten@live.com",
                 "website": "http://www.pietvanderputtenfotografie.nl/",
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/"
+                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/",
+                "nlSpecific": {
+                    "fotobondNumber": 1620076
+                }
             }
         },
         {
@@ -279,8 +317,10 @@
                 "familyName": "Bakker"
             },
             "optional": {
-                "eMail": "rmbakker444@yahoo.com",
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/"
+                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/",
+                "nlSpecific": {
+                    "fotobondNumber": 1620101
+                }
             }
         },
         {
@@ -290,9 +330,11 @@
                 "familyName": "Doorn"
             },
             "optional": {
-                "eMail": "depine@wxs.nl",
                 "website": "http://www.rovado-artworks.nl/",
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/"
+                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/",
+                "nlSpecific": {
+                    "fotobondNumber": 1620093
+                }
             }
         },
         {
@@ -302,9 +344,11 @@
                 "familyName": "Buijs"
             },
             "optional": {
-                "eMail": "huisvanbuijs@gmail.com",
                 "website": "http://www.tonbuijs.nl/",
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/"
+                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/",
+                "nlSpecific": {
+                    "fotobondNumber": 1620085
+                }
             }
         },
         {
@@ -314,8 +358,10 @@
                 "familyName": "Roovers"
             },
             "optional": {
-                "eMail": "a.roovers4@gmail.com",
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/"
+                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/",
+                "nlSpecific": {
+                    "fotobondNumber": 1620106
+                }
             }
         },
         {
@@ -325,8 +371,10 @@
                 "familyName": "Mouws"
             },
             "optional": {
-                "eMail": "toon.mouws@gmail.com",
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/"
+                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/",
+                "nlSpecific": {
+                    "fotobondNumber": 1620038
+                }
             }
         },
         {
@@ -336,8 +384,10 @@
                 "familyName": "Michielsen"
             },
             "optional": {
-                "eMail": "truusmichielsen@hotmail.com",
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/"
+                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/",
+                "nlSpecific": {
+                    "fotobondNumber": 1620078
+                }
             }
         },
         {
@@ -347,13 +397,16 @@
                 "familyName": "Heijne"
             },
             "optional": {
-                "eMail": "wardheijne@gmail.com",
                 "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/",
                 "roles": {
                     "isTreasurer": true
+                },
+                "nlSpecific": {
+                    "fotobondNumber": 1620105
                 }
             }
         }
     ]
 }
+
 
