@@ -1,5 +1,5 @@
 //
-//  RootLevel1JsonReader.swift
+//  Level1JsonReader.swift
 //  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 16/12/2023.
@@ -66,7 +66,7 @@ private let organizationTypesToLoad: [OrganizationTypeEnum] = [.club, .museum]
 }
 */
 
-class RootLevel1JsonReader {
+class Level1JsonReader {
 
     init(bgContext: NSManagedObjectContext,
          useOnlyFile: Bool = false) {
