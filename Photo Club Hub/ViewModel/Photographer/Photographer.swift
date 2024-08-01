@@ -60,16 +60,6 @@ extension Photographer {
         }
     }
 
-    var phoneNumber: String {
-        get { return phoneNumber_ ?? ""}
-        set { phoneNumber_ = newValue}
-    }
-
-    var eMail: String {
-        get { return eMail_ ?? "" }
-        set { eMail_ = newValue}
-    }
-
     var isAlive: Bool {
         !isDeceased
     }
@@ -156,16 +146,6 @@ extension Photographer {
         // following are fields in PhotographerOptionalFields type
         if optionalFields.bornDT != nil, photographer.bornDT != optionalFields.bornDT {
             photographer.bornDT = optionalFields.bornDT
-            wasUpdated = true
-        }
-
-        if optionalFields.eMail != nil, photographer.eMail != optionalFields.eMail {
-            photographer.eMail = optionalFields.eMail!
-            wasUpdated = true
-        }
-
-        if optionalFields.phoneNumber != nil, photographer.phoneNumber != optionalFields.phoneNumber {
-            photographer.phoneNumber = optionalFields.phoneNumber!
             wasUpdated = true
         }
 

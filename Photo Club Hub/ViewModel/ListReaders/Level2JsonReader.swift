@@ -254,7 +254,7 @@ class Level2JsonReader { // normally running on a background thread
                                    club: Organization) {
         let clubWebsite = jsonOptionals["website"].exists() ? URL(string: jsonOptionals["website"].stringValue) : nil
         let wikipedia: URL? = jsonOptionalsToURL(jsonOptionals: jsonOptionals, key: "wikipedia")
-        let fotobondNumber = jsonOptionals["nlSpecific"]["fotobondNumber"].exists()  ?
+        let fotobondNumber = jsonOptionals["nlSpecific"]["fotobondNumber"].exists()  ? // id of club
             jsonOptionals["nlSpecific"]["fotobondNumber"].int16Value : nil
         let coordinates: CLLocationCoordinate2D? = jsonOptionals["coordinates"].exists() ?
             CLLocationCoordinate2D(latitude: jsonOptionals["coordinates"]["latitude"].doubleValue,
@@ -281,9 +281,6 @@ class Level2JsonReader { // normally running on a background thread
                                                     photographer: Photographer,
                                                     club: Organization) {
         let birthday: String? = jsonOptionals["birthday"].exists() ? jsonOptionals["birthday"].stringValue : nil
-        let eMail: String? = jsonOptionals["eMail"].exists() ? jsonOptionals["eMail"].stringValue : nil
-        let phoneNumber: String? = jsonOptionals["phoneNumber"].exists() ?
-            jsonOptionals["phoneNumber"].stringValue : nil
 
         let photographerWebsite: URL? = jsonOptionalsToURL(jsonOptionals: jsonOptionals, key: "website")
         let featuredImage: URL? = jsonOptionalsToURL(jsonOptionals: jsonOptionals, key: "featuredImage")
@@ -301,8 +298,6 @@ class Level2JsonReader { // normally running on a background thread
                                           isDeceased: memberRolesAndStatus.isDeceased(),
                                           optionalFields: PhotographerOptionalFields(
                                               bornDT: birthday?.extractDate(),
-                                              eMail: eMail,
-                                              phoneNumber: phoneNumber,
                                               photographerWebsite: photographerWebsite
                                               )
                                           )
