@@ -66,7 +66,10 @@ import CoreLocation // for CLLocationCoordinate2D
                  "birthday": "9999-10-18",
                  "website": "https://glass.photo/vdhamer",
                  "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg",
-                 "level3URL": "https://www.example.com/FG_deGender/Peter_van_den_Hamer.level3.json"
+                 "level3URL": "https://www.example.com/FG_deGender/Peter_van_den_Hamer.level3.json",
+                 "nlSpecific": {
+                     "fotobondNumber": 1620110
+                 }
              }
          }
      ]
