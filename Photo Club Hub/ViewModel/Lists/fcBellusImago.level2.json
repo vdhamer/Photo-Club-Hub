@@ -12,7 +12,10 @@
                     "longitude": 5.387560
                 },
                 "website": "https://www.fotoClubBellusImago.nl",
-                "level2URL": "https://www.example.com/fcBellusImago.level2.json"
+                "level2URL": "https://www.example.com/fcBellusImago.level2.json",
+                "nlSpecific": {
+                    "fotobondNumber": 1671
+                }
             }
     },
     "members": [
