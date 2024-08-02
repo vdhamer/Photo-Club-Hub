@@ -74,7 +74,10 @@
                 "birthday": "1970-07-19",
                 "website": "https://glass.photo/jerdam",
                 "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/BettinaDeGraaf.jpeg",
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/"
+                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/",
+                "nlSpecific": {
+                    "fotobondNumber": 1620111
+                }
             }
         },
 
