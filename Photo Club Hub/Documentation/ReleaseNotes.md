@@ -2,9 +2,10 @@
 
 Data
 * The membership data for fgDeGender, fgAnders and fcBellusImago are now read from level2.json data files.
-* The level2 data for fgDeGender is now complete (26 current members).
+* The level2 data for fgDeGender and fgWaalre is now complete (26 and 16 current members resp).
 * The app can now load and store Dutch fotobond membership numbers.
 * The app can't 'load and store e-mail addresses and phone numbers of photographers (Level2 files are not encrypted).
+* Added MK to fgWaalre
 
 Maintenance
 * Initial ability to read list of club members from a data file (`fgDeGender.level2.json`).
