@@ -29,7 +29,6 @@ class FotogroepWaalreMembersProvider { // WWDC21 Earthquakes also uses a Class h
             }
         }
     }
-
 }
 
 extension FotogroepWaalreMembersProvider { // private utitity functions
