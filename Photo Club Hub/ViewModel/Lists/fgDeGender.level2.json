@@ -19,6 +19,7 @@
                 }
             }
         },
+
     "members": [
         {
             "name": {
@@ -33,6 +34,7 @@
                 }
             }
         },
+
         {
             "name": {
                 "givenName": "Anke",
@@ -47,6 +49,7 @@
                 }
             }
         },
+
         {
             "name": {
                 "givenName": "Bert",
@@ -60,6 +63,7 @@
                 }
             }
         },
+
         {
             "name": {
                 "givenName": "Bettina",
@@ -73,6 +77,7 @@
                 "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/"
             }
         },
+
         {
             "name": {
                 "givenName": "Eric",
@@ -87,6 +92,7 @@
                 }
             }
         },
+
         {
             "name": {
                 "givenName": "Francien",
@@ -103,6 +109,7 @@
                 }
             }
         },
+
         {
             "name": {
                 "givenName": "Gert",
@@ -116,6 +123,7 @@
                 }
             }
         },
+
         {
             "name": {
                 "givenName": "Hans",
@@ -129,6 +137,7 @@
                 }
             }
         },
+
         {
             "name": {
                 "givenName": "Hans",
@@ -145,6 +154,7 @@
                 }
             }
         },
+
         {
             "name": {
                 "givenName": "Jelle",
@@ -161,6 +171,7 @@
                 }
             }
         },
+
         {
             "name": {
                 "givenName": "Joep",
@@ -174,6 +185,7 @@
                 }
             }
         },
+
         {
             "name": {
                 "givenName": "Lex",
@@ -191,6 +203,7 @@
                 }
             }
         },
+
         {
             "name": {
                 "givenName": "Mariet",
@@ -209,6 +222,7 @@
                 }
             }
         },
+
         {
             "name": {
                 "givenName": "Marika",
@@ -222,6 +236,7 @@
                 }
             }
         },
+
         {
             "name": {
                 "givenName": "Martien",
@@ -235,6 +250,7 @@
                 }
             }
         },
+
         {
             "name": {
                 "givenName": "Miep",
@@ -248,6 +264,7 @@
                 }
             }
         },
+
         {
             "name": {
                 "givenName": "Peter",
@@ -262,6 +279,7 @@
                 }
             }
         },
+
         {
             "name": {
                 "givenName": "Peter",
@@ -296,6 +314,7 @@
                 }
             }
         },
+
         {
             "name": {
                 "givenName": "Piet",
@@ -310,6 +329,7 @@
                 }
             }
         },
+
         {
             "name": {
                 "givenName": "Regina",
@@ -323,6 +343,7 @@
                 }
             }
         },
+
         {
             "name": {
                 "givenName": "Rob",
@@ -337,6 +358,7 @@
                 }
             }
         },
+
         {
             "name": {
                 "givenName": "Ton",
@@ -351,6 +373,7 @@
                 }
             }
         },
+
         {
             "name": {
                 "givenName": "Ton",
@@ -364,6 +387,7 @@
                 }
             }
         },
+
         {
             "name": {
                 "givenName": "Toon",
@@ -377,6 +401,7 @@
                 }
             }
         },
+
         {
             "name": {
                 "givenName": "Truus",
@@ -390,6 +415,7 @@
                 }
             }
         },
+
         {
             "name": {
                 "givenName": "Wim",
@@ -406,7 +432,6 @@
                 }
             }
         }
+
     ]
 }
-
-
