@@ -19,6 +19,7 @@
                 }
             }
         },
+
     "members": [
         {
             "name": {
@@ -27,12 +28,13 @@
                 "familyName": "Koning"
             },
             "optional": {
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/",
+                "level3URL": "http://www.vdhamer.com/fgDeGender/Albert_Koning/",
                 "nlSpecific": {
                     "fotobondNumber": 1620108
                 }
             }
         },
+
         {
             "name": {
                 "givenName": "Anke",
@@ -41,12 +43,13 @@
             },
             "optional": {
                 "website": "http://www.ankefoto.nl/",
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/",
+                "level3URL": "http://www.vdhamer.com/fgDeGender/Anke_Spijkers/",
                 "nlSpecific": {
                     "fotobondNumber": 1620059
                 }
             }
         },
+
         {
             "name": {
                 "givenName": "Bert",
@@ -54,12 +57,13 @@
                 "familyName": "Zantingh"
             },
             "optional": {
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/",
+                "level3URL": "http://www.vdhamer.com/fgDeGender/Bert_Zantingh/",
                 "nlSpecific": {
                     "fotobondNumber": 1620040
                 }
             }
         },
+
         {
             "name": {
                 "givenName": "Bettina",
@@ -70,9 +74,13 @@
                 "birthday": "1970-07-19",
                 "website": "https://glass.photo/jerdam",
                 "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/BettinaDeGraaf.jpeg",
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/"
+                "level3URL": "http://www.vdhamer.com/fgDeGender/Bettina_de_Graaf/",
+                "nlSpecific": {
+                    "fotobondNumber": 1620111
+                }
             }
         },
+
         {
             "name": {
                 "givenName": "Eric",
@@ -81,12 +89,13 @@
             },
             "optional": {
                 "website": "https://www.ericvandeven.com/",
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/",
+                "level3URL": "http://www.vdhamer.com/fgDeGender/Eric_van_de_Ven/",
                 "nlSpecific": {
                     "fotobondNumber": 1620109
                 }
             }
         },
+
         {
             "name": {
                 "givenName": "Francien",
@@ -94,7 +103,7 @@
                 "familyName": "Mil"
             },
             "optional": {
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/",
+                "level3URL": "http://www.vdhamer.com/fgDeGender/Francien_van_Mil/",
                 "roles": {
                     "isSecretary": true
                 },
@@ -103,6 +112,7 @@
                 }
             }
         },
+
         {
             "name": {
                 "givenName": "Gert",
@@ -110,12 +120,13 @@
                 "familyName": "Bois"
             },
             "optional": {
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/",
+                "level3URL": "http://www.vdhamer.com/fgDeGender/Gert_du_Bois/",
                 "nlSpecific": {
                     "fotobondNumber": 1620087
                 }
             }
         },
+
         {
             "name": {
                 "givenName": "Hans",
@@ -123,12 +134,13 @@
                 "familyName": "Gorp"
             },
             "optional": {
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/",
+                "level3URL": "http://www.vdhamer.com/fgDeGender/Hans_van_Gorp/",
                 "nlSpecific": {
                     "fotobondNumber": 1620029
                 }
             }
         },
+
         {
             "name": {
                 "givenName": "Hans",
@@ -136,7 +148,7 @@
                 "familyName": "Krüsemann"
             },
             "optional": {
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/",
+                "level3URL": "http://www.vdhamer.com/fgDeGender/Hans_Krusemann/",
                 "roles": {
                     "isOther": true
                 },
@@ -145,6 +157,7 @@
                 }
             }
         },
+
         {
             "name": {
                 "givenName": "Jelle",
@@ -152,7 +165,7 @@
                 "familyName": "Voort"
             },
             "optional": {
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/",
+                "level3URL": "http://www.vdhamer.com/fgDeGender/Jelle_van_de_Voort/",
                 "roles": {
                     "isChairman": true
                 },
@@ -161,6 +174,7 @@
                 }
             }
         },
+
         {
             "name": {
                 "givenName": "Joep",
@@ -168,12 +182,13 @@
                 "familyName": "Julicher"
             },
             "optional": {
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/",
+                "level3URL": "http://www.vdhamer.com/fgDeGender/Joep_Julicher/",
                 "nlSpecific": {
                     "fotobondNumber": 1620098
                 }
             }
         },
+
         {
             "name": {
                 "givenName": "Lex",
@@ -182,7 +197,7 @@
             },
             "optional": {
                 "website": "https://www.lex-augusteijn.nl",
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/",
+                "level3URL": "http://www.vdhamer.com/fgDeGender/Lex_Augesteijn/",
                 "roles": {
                     "isOther": true
                 },
@@ -191,6 +206,7 @@
                 }
             }
         },
+
         {
             "name": {
                 "givenName": "Mariet",
@@ -203,12 +219,13 @@
                 "birthday": "1954-10-09",
                 "website": "https://www.m3w.nl",
                 "featuredImage": "https://www.fcdegender.nl/wp-content/uploads/Expositie%202023/Mariet/slides/Mariet%203.jpg",
-                "level3URL": "https://www.fcdegender.nl/wp-content/uploads/Expositie%202023/Mariet/",
+                "level3URL": "http://www.vdhamer.com/fgDeGender/Mariet_Wielders/",
                 "nlSpecific": {
                     "fotobondNumber": 1620079
                 }
             }
         },
+
         {
             "name": {
                 "givenName": "Marika",
@@ -216,12 +233,13 @@
                 "familyName": "Beckers-van Hout"
             },
             "optional": {
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/",
+                "level3URL": "http://www.vdhamer.com/fgDeGender/Marika_Beckers_van_Hout/",
                 "nlSpecific": {
                     "fotobondNumber": 1620104
                 }
             }
         },
+
         {
             "name": {
                 "givenName": "Martien",
@@ -229,12 +247,13 @@
                 "familyName": "Leenders"
             },
             "optional": {
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/",
+                "level3URL": "http://www.vdhamer.com/fgDeGender/Martien_Leenders/",
                 "nlSpecific": {
                     "fotobondNumber": 1620008
                 }
             }
         },
+
         {
             "name": {
                 "givenName": "Miep",
@@ -242,12 +261,16 @@
                 "familyName": "Fransen"
             },
             "optional": {
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/",
+                "level3URL": "http://www.vdhamer.com/fgDeGender/Miep_Fransen/",
+                "status": {
+                    "isHonoraryMember": true
+                },
                 "nlSpecific": {
                     "fotobondNumber": 1620021
                 }
             }
         },
+
         {
             "name": {
                 "givenName": "Peter",
@@ -256,12 +279,13 @@
             },
             "optional": {
                 "website": "https://www.flickr.com/photos/150047808@N08/albums",
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/",
+                "level3URL": "http://www.vdhamer.com/fgDeGender/Peter_de_Wit/",
                 "nlSpecific": {
                     "fotobondNumber": 1620107
                 }
             }
         },
+
         {
             "name": {
                 "givenName": "Peter",
@@ -272,27 +296,16 @@
                 "birthday": "1957-10-18",
                 "website": "https://glass.photo/vdhamer",
                 "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg",
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/",
+                "level3URL": "http://www.vdhamer.com/fgDeGender/Peter_van_den_Hamer/",
                 "roles": {
-                    "isChairman": false,
-                    "isViceChairman": false,
-                    "isTreasurer": false,
-                    "isSecretary": false,
-                    "isAdmin": true,
-                    "isOther": false
-                },
-                "status": {
-                    "isDeceased": false,
-                    "isFormerMember": false,
-                    "isHonoraryMember": false,
-                    "isMentor": false,
-                    "isPropectiveMember": false
+                    "isAdmin": true
                 },
                 "nlSpecific": {
                     "fotobondNumber": 1620110
                 }
             }
         },
+
         {
             "name": {
                 "givenName": "Piet",
@@ -301,12 +314,13 @@
             },
             "optional": {
                 "website": "http://www.pietvanderputtenfotografie.nl/",
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/",
+                "level3URL": "http://www.vdhamer.com/fgDeGender/Piet_van_der_Putten/",
                 "nlSpecific": {
                     "fotobondNumber": 1620076
                 }
             }
         },
+
         {
             "name": {
                 "givenName": "Regina",
@@ -314,12 +328,13 @@
                 "familyName": "Bakker"
             },
             "optional": {
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/",
+                "level3URL": "http://www.vdhamer.com/fgDeGender/Regina_Bakker/",
                 "nlSpecific": {
                     "fotobondNumber": 1620101
                 }
             }
         },
+
         {
             "name": {
                 "givenName": "Rob",
@@ -328,12 +343,13 @@
             },
             "optional": {
                 "website": "http://www.rovado-artworks.nl/",
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/",
+                "level3URL": "http://www.vdhamer.com/fgDeGender/Rob_van_Doorn/",
                 "nlSpecific": {
                     "fotobondNumber": 1620093
                 }
             }
         },
+
         {
             "name": {
                 "givenName": "Ton",
@@ -342,12 +358,13 @@
             },
             "optional": {
                 "website": "http://www.tonbuijs.nl/",
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/",
+                "level3URL": "http://www.vdhamer.com/fgDeGender/Ton_Buijs/",
                 "nlSpecific": {
                     "fotobondNumber": 1620085
                 }
             }
         },
+
         {
             "name": {
                 "givenName": "Ton",
@@ -355,12 +372,13 @@
                 "familyName": "Roovers"
             },
             "optional": {
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/",
+                "level3URL": "http://www.vdhamer.com/fgDeGender/Ton_Roovers/",
                 "nlSpecific": {
                     "fotobondNumber": 1620106
                 }
             }
         },
+
         {
             "name": {
                 "givenName": "Toon",
@@ -368,12 +386,13 @@
                 "familyName": "Mouws"
             },
             "optional": {
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/",
+                "level3URL": "http://www.vdhamer.com/fgDeGender/Toon_Mouws/",
                 "nlSpecific": {
                     "fotobondNumber": 1620038
                 }
             }
         },
+
         {
             "name": {
                 "givenName": "Truus",
@@ -381,12 +400,13 @@
                 "familyName": "Michielsen"
             },
             "optional": {
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/",
+                "level3URL": "http://www.vdhamer.com/fgDeGender/Truus_Michielsen/",
                 "nlSpecific": {
                     "fotobondNumber": 1620078
                 }
             }
         },
+
         {
             "name": {
                 "givenName": "Wim",
@@ -394,7 +414,7 @@
                 "familyName": "Heijne"
             },
             "optional": {
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Empty_Website/",
+                "level3URL": "http://www.vdhamer.com/fgDeGender/Wim_Heijne/",
                 "roles": {
                     "isTreasurer": true
                 },
@@ -403,7 +423,6 @@
                 }
             }
         }
+
     ]
 }
-
-
