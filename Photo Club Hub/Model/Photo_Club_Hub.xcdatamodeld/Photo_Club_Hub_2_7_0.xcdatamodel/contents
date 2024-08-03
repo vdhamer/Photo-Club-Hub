@@ -23,8 +23,6 @@
         <userInfo/>
     </entity>
     <entity name="MemberPortfolio" representedClassName="MemberPortfolio" elementID="Member" syncable="YES" codeGenerationType="class">
-        <attribute name="dateIntervalEnd_" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="dateIntervalStart_" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="featuredImage" optional="YES" attributeType="URI" elementID="latestImage_"/>
         <attribute name="featuredImageThumbnail" optional="YES" attributeType="URI" elementID="latestThumbURL"/>
         <attribute name="fotobondNumber" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
@@ -40,6 +38,8 @@
         <attribute name="isViceChairman" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="latestImageSeen" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="level3URL_" optional="YES" attributeType="URI" elementID="level3URL"/>
+        <attribute name="membershipEndDate_" optional="YES" attributeType="Date" usesScalarValueType="NO" elementID="dateIntervalEnd_"/>
+        <attribute name="membershipStartDate_" optional="YES" attributeType="Date" usesScalarValueType="NO" elementID="dateIntervalStart_"/>
         <attribute name="obsolete" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <relationship name="organization_" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Organization" inverseName="members_" inverseEntity="Organization" elementID="photoClub_"/>
         <relationship name="photographer_" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Photographer" inverseName="memberships_" inverseEntity="Photographer"/>
