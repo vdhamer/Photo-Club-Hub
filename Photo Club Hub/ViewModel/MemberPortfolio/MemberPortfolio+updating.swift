@@ -76,8 +76,8 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
         let newMemberRolesAndStatus = self.memberRolesAndStatus // copy after possible changes
 
         let changed1 = oldMemberRolesAndStatus != newMemberRolesAndStatus
-        let changed2 = updateIfChanged(update: &self.dateIntervalStart, with: optionalFields.dateInterval?.start)
-        let changed3 = updateIfChanged(update: &self.dateIntervalEnd, with: optionalFields.dateInterval?.end)
+        let changed2 = updateIfChanged(update: &self.membershipStartDate, with: optionalFields.membershipStartDate)
+        let changed3 = updateIfChanged(update: &self.membershipEndDate, with: optionalFields.membershipEndDate)
         let changed4 = updateIfChanged(update: &self.level3URL, with: optionalFields.level3URL)
         let changed5 = updateIfChangedOptional(update: &self.featuredImage, with: optionalFields.featuredImage)
         let changed6 = updateIfChangedOptional(update: &self.featuredImageThumbnail,
@@ -125,8 +125,7 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
         return needsSaving
     }
 
-    // function only works for non-optional Types.
-    // If optional support needed, create variant with "inout Type?" instead of "inout Type"
+    // If optional support needed, use updateIfChangedOptional instead. updateIfChanged doesn't work for optionals.
     private func updateIfChanged<Type>(update persistedValue: inout Type,
                                        with newValue: Type?) -> Bool // true only if needsSaving
                                       where Type: Equatable {
