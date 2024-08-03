@@ -6,6 +6,7 @@ Data
 * The app can now load and store Dutch fotobond membership numbers.
 * The app can't 'load and store e-mail addresses and phone numbers of photographers (Level2 files are not encrypted).
 * Added MK to fgWaalre
+* Added ability to store date on which a member joined a club
 
 Maintenance
 * Initial ability to read list of club members from a data file (`fgDeGender.level2.json`).

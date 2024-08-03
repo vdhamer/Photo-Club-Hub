@@ -120,7 +120,7 @@
             "optional": {
                 "level3URL": "http://www.vdhamer.com/fgWaalre/Carel_Bullens/",
                 "roles": {
-                    "isViceChairman": false
+                    "isViceChairman": true
                 },
                 "nlSpecific": {
                     "fotobondNumber": 1634010
@@ -457,7 +457,7 @@
             "optional": {
                 "level3URL": "http://www.vdhamer.com/fgWaalre/Jos_Jansen/",
                 "roles": {
-                    "isTreasurer": false
+                    "isTreasurer": true
                 },
                 "nlSpecific": {
                     "fotobondNumber": 1634050
@@ -520,7 +520,7 @@
             "optional": {
                 "level3URL": "http://www.vdhamer.com/fgWaalre/Kees_van_Gemert/",
                 "roles": {
-                    "isSecretary": false
+                    "isSecretary": true
                 },
                 "nlSpecific": {
                     "fotobondNumber": 1634001
@@ -607,7 +607,7 @@
             "optional": {
                 "level3URL": "http://www.vdHamer.com/fgWaalre/Miek_Kerkhoven/",
                 "roles": {
-                    "isChairman": false
+                    "isChairman": true
                 },
                 "nlSpecific": {
                     "fotobondNumber": 1634005

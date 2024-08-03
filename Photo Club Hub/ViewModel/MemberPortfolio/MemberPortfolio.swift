@@ -21,6 +21,8 @@ extension MemberPortfolio: Comparable {
 
 extension MemberPortfolio { // expose computed properties (some related to handling optionals)
 
+    private static let emptyPortfolioURL: String = "http://www.vdHamer.com/fgWaalre/Empty_Website/"
+
     var membershipStartDate: Date { // non-optional version of membershipStartDate_
         get {
             if membershipStartDate_ == nil {
@@ -67,7 +69,7 @@ extension MemberPortfolio { // expose computed properties (some related to handl
     var level3URL: URL {
         get {
             if level3URL_ == nil {
-                level3URL_ = URL(string: FotogroepWaalreMembersProvider.baseURL + "Empty_Website/")!
+                level3URL_ = URL(string: MemberPortfolio.emptyPortfolioURL)!
             }
             return level3URL_!
         }

@@ -66,4 +66,18 @@ struct UrlComponents {
         fileType: "json"
     )
 
+    // MARK: - Waalre
+
+    static let waalre = UrlComponents(
+        dataSourcePath: """
+                        https://raw.githubusercontent.com/\
+                        vdhamer/Photo-Club-Hub/\
+                        main/\
+                        Photo%20Club%20Hub/ViewModel/Lists/
+                        """,
+        dataSourceFile: "fgWaalre",
+        fileSubType: "level2",
+        fileType: "json"
+    )
+
 }
