@@ -61,7 +61,7 @@
             "optional": {
                 "level3URL": "http://www.vdhamer.com/fgDeGender/Bert_Zantingh/",
                 "membershipStartDate": "1996-01-01",
-                "nlSpecific":
+                "nlSpecific": {
                     "fotobondNumber": 1620040
                 }
             }
