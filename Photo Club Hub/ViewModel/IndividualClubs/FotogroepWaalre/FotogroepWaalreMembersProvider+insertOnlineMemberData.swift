@@ -26,7 +26,7 @@ extension FotogroepWaalreMembersProvider { // fill with some initial hard-coded 
             _ = Level2JsonReader(bgContext: bgContext,
                                  urlComponents: UrlComponents.waalre,
                                  club: club,
-                                 useOnlyFile: true) // TODO
+                                 useOnlyFile: false)
         }
     }
 
