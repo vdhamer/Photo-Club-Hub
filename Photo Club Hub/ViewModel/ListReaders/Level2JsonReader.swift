@@ -145,7 +145,6 @@ class Level2JsonReader { // normally running on a background thread
         }
     }
 
-    // returned String contains error description or nil (if there is no error)
     private func mergeLevel2Json(bgContext: NSManagedObjectContext,
                                  jsonData: String,
                                  club: Organization,
@@ -261,7 +260,7 @@ class Level2JsonReader { // normally running on a background thread
         let coordinates: CLLocationCoordinate2D? = jsonOptionals["coordinates"].exists() ?
             CLLocationCoordinate2D(latitude: jsonOptionals["coordinates"]["latitude"].doubleValue,
                                     longitude: jsonOptionals["coordinates"]["longitude"].doubleValue) : nil
-        let localizedRemarks = jsonOptionals["remark"].arrayValue // empty array if missing
+        let localizedRemarks: [JSON] = jsonOptionals["remark"].arrayValue // empty array if missing
 
         _ = Organization.findCreateUpdate(context: bgContext,
                                           organizationTypeEnum: OrganizationTypeEnum.club,

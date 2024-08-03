@@ -20,7 +20,8 @@ extension String {
                 One("?") // can probably be made stricter: <td>?2001-12-31</td> is currently interpreted as 2001-12-31
                 Capture(.date(format: "\(year: .defaultDigits)-\(month: .twoDigits)-\(day: .twoDigits)",
                               locale: Locale.autoupdatingCurrent,
-                              timeZone: TimeZone.autoupdatingCurrent))
+                              timeZone: TimeZone.gmt))
+                              // timeZone prevents 2001-12-31 from becoming 2001-12-30 23:00:00 UTC
             }
         }
 
