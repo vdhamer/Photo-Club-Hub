@@ -67,6 +67,8 @@ import CoreLocation // for CLLocationCoordinate2D
                  "website": "https://glass.photo/vdhamer",
                  "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg",
                  "level3URL": "https://www.example.com/FG_deGender/Peter_van_den_Hamer.level3.json",
+                 "membershipStartDate: "2024-01-01",
+                 "membershipEndDate: "9999-12-31",
                  "nlSpecific": {
                      "fotobondNumber": 1620110
                  }
@@ -289,6 +291,14 @@ class Level2JsonReader { // normally running on a background thread
         let memberRolesAndStatus = MemberRolesAndStatus(jsonRoles: jsonOptionals["roles"],
                                                         jsonStatus: jsonOptionals["status"])
 
+        let fotobondNumber: Int32? = jsonOptionals["nlSpecific"]["fotobondNumber"].exists() ?
+            jsonOptionals["nlSpecific"]["fotobondNumber"].int32Value : nil
+
+        let membershipStartDate: Date? = jsonOptionals["membershipStartDate"].exists() ?
+            jsonOptionals["membershipStartDate"].stringValue.extractDate() : nil
+        let membershipEndDate: Date? = jsonOptionals["membershipEndDate"].exists() ?
+            jsonOptionals["membershipEndDate"].stringValue.extractDate() : nil
+
         // some attributes are at the Photographer level...
         _ = Photographer.findCreateUpdate(context: bgContext,
                                           personName: PersonName(givenName: photographer.givenName,
@@ -311,7 +321,10 @@ class Level2JsonReader { // normally running on a background thread
                                                 featuredImage: featuredImage,
                                                 featuredImageThumbnail: featuredImage,
                                                 level3URL: level3URL, // address of portfolio data for this member
-                                                memberRolesAndStatus: memberRolesAndStatus
+                                                memberRolesAndStatus: memberRolesAndStatus,
+                                                fotobondNumber: fotobondNumber,
+                                                membershipStartDate: membershipStartDate,
+                                                membershipEndDate: membershipEndDate
                                               )
         )
 
