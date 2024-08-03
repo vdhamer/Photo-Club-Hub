@@ -303,8 +303,8 @@
                 "nlSpecific": {
                     "fotobondNumber": 1620110
                 },
-                "membershipStartDate: "2024-01-01",
-                "membershipEndDate: "9999-12-31"
+                "membershipStartDate": "2024-01-01",
+                "membershipEndDate": "9999-12-31"
             }
         },
 
