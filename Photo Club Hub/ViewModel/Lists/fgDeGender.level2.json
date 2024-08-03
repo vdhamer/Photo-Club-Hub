@@ -262,6 +262,9 @@
             },
             "optional": {
                 "level3URL": "http://www.vdhamer.com/fgDeGender/Miep_Fransen/",
+                "status": {
+                    "isHonoraryMember": true
+                },
                 "nlSpecific": {
                     "fotobondNumber": 1620021
                 }
@@ -294,9 +297,6 @@
                 "website": "https://glass.photo/vdhamer",
                 "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg",
                 "level3URL": "http://www.vdhamer.com/fgDeGender/Peter_van_den_Hamer/",
-                "nlSpecific": {
-                    "fotobondNumber": 1620110
-                }
                 "roles": {
                     "isAdmin": true
                 },
