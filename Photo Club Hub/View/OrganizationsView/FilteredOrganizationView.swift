@@ -17,7 +17,7 @@ struct FilteredOrganizationView: View, Sendable {
 
     @FetchRequest var fetchedOrganizations: FetchedResults<Organization>
 
-    @State private var cameraPositions: [PhotoClubId: MapCameraPosition] = [:] // location of camera per club
+    @State private var cameraPositions: [OrganizationID: MapCameraPosition] = [:] // location of camera per club
     @State private var mapSelection: MKMapItem? // selected Anotation, if any
 
     private let searchText: Binding<String>
@@ -252,7 +252,7 @@ struct FilteredOrganizationView: View, Sendable {
         cameraPositions[organization.id] = mapCameraPosition // return MapCameraPosition and don't use input param
     }
 
-    private func cameraPositionBinding(for key: PhotoClubId) -> Binding<MapCameraPosition> {
+    private func cameraPositionBinding(for key: OrganizationID) -> Binding<MapCameraPosition> {
         let defaultCameraPosition = MapCameraPosition.region(MKCoordinateRegion(
             center: CLLocationCoordinate2D(latitude: 0, longitude: 6.52396), // island on the equator
                     latitudinalMeters: 100000, longitudinalMeters: 100000)

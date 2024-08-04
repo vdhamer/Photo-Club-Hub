@@ -234,20 +234,24 @@ class Level2JsonReader { // normally running on a background thread
                                                             familyName: familyName),
                                                          organization: club, // used for debug messages
                                                          optionalFields: PhotographerOptionalFields()) // updated later
+
+        let memberPortfolio: MemberPortfolio
         if member["optional"].exists() { // could contain photographerOptionalFields, memberOptionalFields, or both.
-            loadPhotographerAndMemberOptionals(bgContext: bgContext,
-                                               jsonOptionals: member["optional"],
-                                               photographer: photographer, club: club)
+            memberPortfolio = loadPhotographerAndMemberOptionals(bgContext: bgContext,
+                                                                 jsonOptionals: member["optional"],
+                                                                 photographer: photographer, club: club)
         } else {
-            _ = MemberPortfolio.findCreateUpdate(bgContext: bgContext,
-                                                 organization: club,
-                                                 photographer: photographer,
-                                                 optionalFields: MemberOptionalFields(
-                                                     memberRolesAndStatus: MemberRolesAndStatus(jsonRoles: [:],
+            memberPortfolio = MemberPortfolio.findCreateUpdate(bgContext: bgContext,
+                                                               organization: club,
+                                                               photographer: photographer,
+                                                               optionalFields: MemberOptionalFields(
+                                                                    memberRolesAndStatus: MemberRolesAndStatus(
+                                                                                                jsonRoles: [:],
                                                                                                 jsonStatus: [:])
-                                                 )
+                                                               )
             )
         }
+        memberPortfolio.refreshFirstImage()
     }
 
     private func loadClubOptionals(bgContext: NSManagedObjectContext,
@@ -264,7 +268,7 @@ class Level2JsonReader { // normally running on a background thread
 
         _ = Organization.findCreateUpdate(context: bgContext,
                                           organizationTypeEnum: OrganizationTypeEnum.club,
-                                          idPlus: OrganizationIdPlus(id: PhotoClubId(fullName: club.fullName,
+                                          idPlus: OrganizationIdPlus(id: OrganizationID(fullName: club.fullName,
                                                                                      town: club.town),
                                                                      nickname: club.nickName),
                                           optionalFields: OrganizationOptionalFields(
@@ -280,7 +284,7 @@ class Level2JsonReader { // normally running on a background thread
     private func loadPhotographerAndMemberOptionals(bgContext: NSManagedObjectContext,
                                                     jsonOptionals: JSON,
                                                     photographer: Photographer,
-                                                    club: Organization) {
+                                                    club: Organization) -> MemberPortfolio {
         let birthday: String? = jsonOptionals["birthday"].exists() ? jsonOptionals["birthday"].stringValue : nil
 
         let photographerWebsite: URL? = jsonOptionalsToURL(jsonOptionals: jsonOptionals, key: "website")
@@ -312,19 +316,20 @@ class Level2JsonReader { // normally running on a background thread
                                           )
 
         // ...while some attributes are at the Photographer as Member of club level
-        _ = MemberPortfolio.findCreateUpdate(bgContext: bgContext,
-                                             organization: club,
-                                             photographer: photographer,
-                                             removeMember: false, // remove records for members that no longer on list
-                                             optionalFields: MemberOptionalFields(
-                                                featuredImage: featuredImage,
-                                                featuredImageThumbnail: featuredImage,
-                                                level3URL: level3URL, // address of portfolio data for this member
-                                                memberRolesAndStatus: memberRolesAndStatus,
-                                                fotobondNumber: fotobondNumber,
-                                                membershipStartDate: membershipStartDate,
-                                                membershipEndDate: membershipEndDate
-                                              )
+        return MemberPortfolio.findCreateUpdate(
+            bgContext: bgContext,
+            organization: club,
+            photographer: photographer,
+            removeMember: false, // remove records for members that no longer on list
+            optionalFields: MemberOptionalFields(
+                featuredImage: featuredImage,
+                featuredImageThumbnail: featuredImage,
+                level3URL: level3URL, // address of portfolio data for this member
+                memberRolesAndStatus: memberRolesAndStatus,
+                fotobondNumber: fotobondNumber,
+                membershipStartDate: membershipStartDate,
+                membershipEndDate: membershipEndDate
+            )
         )
 
     }

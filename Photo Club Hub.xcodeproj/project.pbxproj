@@ -43,7 +43,6 @@
 		D0621E892AE2E47B000FFADB /* MemberPortfolio+refreshFirstImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0621E882AE2E47B000FFADB /* MemberPortfolio+refreshFirstImage.swift */; };
 		D0654D032C5586AD00171D8B /* BellusImagoMembersProvider+insertOnlineMemberData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0654D022C5586AD00171D8B /* BellusImagoMembersProvider+insertOnlineMemberData.swift */; };
 		D0654D052C55978A00171D8B /* fcBellusImago.level2.json in Resources */ = {isa = PBXBuildFile; fileRef = D0654D042C55978A00171D8B /* fcBellusImago.level2.json */; };
-		D06754A02942B23F00C0AB08 /* FotogroepWaalreMembersProvide+enumHTMLPageLoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D067549F2942B23F00C0AB08 /* FotogroepWaalreMembersProvide+enumHTMLPageLoadingState.swift */; };
 		D06BE9332A4F870B0055B3B1 /* ifDebugUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06BE9322A4F870B0055B3B1 /* ifDebugUtils.swift */; };
 		D06D08DE2C28835D00872BC2 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D0CEAECE2B2E1134005AE47D /* Settings.bundle */; };
 		D0795CEC294FCCC200FA62A8 /* ShapeStyle+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0795CEB294FCCC200FA62A8 /* ShapeStyle+Colors.swift */; };
@@ -63,7 +62,6 @@
 		D0831A32277F72590049AB84 /* Photographer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A25277F72590049AB84 /* Photographer.swift */; };
 		D0831A34277F72590049AB84 /* BellusImagoMembersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A28277F72590049AB84 /* BellusImagoMembersProvider.swift */; };
 		D0831A35277F72590049AB84 /* PreferencesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A29277F72590049AB84 /* PreferencesViewModel.swift */; };
-		D0831A36277F72590049AB84 /* FotogroepWaalreMembersProvider+insertSomeHardcodedMemberData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A2B277F72590049AB84 /* FotogroepWaalreMembersProvider+insertSomeHardcodedMemberData.swift */; };
 		D0831A37277F72590049AB84 /* FotogroepWaalreMembersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A2C277F72590049AB84 /* FotogroepWaalreMembersProvider.swift */; };
 		D0831A38277F72590049AB84 /* Organization.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A2D277F72590049AB84 /* Organization.swift */; };
 		D0831A45277F731C0049AB84 /* String+Capitalize.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A41277F731C0049AB84 /* String+Capitalize.swift */; };
@@ -78,6 +76,8 @@
 		D0ADF4AE27922DCA00535432 /* MemberRolesAndStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ADF4AD27922DCA00535432 /* MemberRolesAndStatus.swift */; };
 		D0AE1B7527889E8600E0100E /* OrganizationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AE1B7427889E8600E0100E /* OrganizationListView.swift */; };
 		D0AE1B782788A19500E0100E /* WhoIsWhoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AE1B772788A19500E0100E /* WhoIsWhoListView.swift */; };
+		D0AEDF572C5FC6930050E877 /* FotogroepWaalreMembersProvide+enumHTMLPageLoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D067549F2942B23F00C0AB08 /* FotogroepWaalreMembersProvide+enumHTMLPageLoadingState.swift */; };
+		D0AEDF592C5FC6A40050E877 /* FotogroepWaalreMembersProvider+insertOnlineHTMLMemberData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0968F652A76F8A00096987A /* FotogroepWaalreMembersProvider+insertOnlineHTMLMemberData.swift */; };
 		D0B260B72958FC2D00B73E1A /* FGWMembersProvider+extractName.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B260B62958FC2D00B73E1A /* FGWMembersProvider+extractName.swift */; };
 		D0B32BB32C15C51A009FF8E7 /* AppVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B32BB22C15C51A009FF8E7 /* AppVersion.swift */; };
 		D0B52497277F9A4B00927BCA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0B52495277F9A4B00927BCA /* Localizable.strings */; };
@@ -433,9 +433,9 @@
 			children = (
 				D0621E832AE2DF8E000FFADB /* IndividualClubs */,
 				D08416952B2FC07F000F316D /* Lists */,
-				D08416942B2FC061000F316D /* ListReaders */,
 				D0447C872BA510AF00982A1E /* LocalizedRemark.swift */,
 				D0447C862BA510AF00982A1E /* Language.swift */,
+				D08416942B2FC061000F316D /* ListReaders */,
 				D0621E822AE2DF1B000FFADB /* MemberPortfolio */,
 				D029C4D02C54096200ABA977 /* Organization */,
 				D0F5EE852C54ED750028C9A6 /* Photographer */,
@@ -821,6 +821,7 @@
 				D0831A34277F72590049AB84 /* BellusImagoMembersProvider.swift in Sources */,
 				D0FE77E52BB9AEE900272077 /* ItemFilterStatsEnum.swift in Sources */,
 				D0C53BDD2ABF3ADF000722A1 /* PersonName.swift in Sources */,
+				D0AEDF592C5FC6A40050E877 /* FotogroepWaalreMembersProvider+insertOnlineHTMLMemberData.swift in Sources */,
 				D0ADF4AE27922DCA00535432 /* MemberRolesAndStatus.swift in Sources */,
 				D0447C882BA510AF00982A1E /* Language.swift in Sources */,
 				D06BE9332A4F870B0055B3B1 /* ifDebugUtils.swift in Sources */,
@@ -830,6 +831,7 @@
 				D0447C892BA510AF00982A1E /* LocalizedRemark.swift in Sources */,
 				D0A0B6852AA930E90078DE9A /* Photo_Club_Hub.xcdatamodeld in Sources */,
 				D0EEF48F2C2844290086419D /* Settings.swift in Sources */,
+				D0AEDF572C5FC6930050E877 /* FotogroepWaalreMembersProvide+enumHTMLPageLoadingState.swift in Sources */,
 				D0831A22277F72270049AB84 /* MemberPortfolioListView.swift in Sources */,
 				D0C8E3A22BB81B4A00348D97 /* ItemFilterStatsView.swift in Sources */,
 				D0654D032C5586AD00171D8B /* BellusImagoMembersProvider+insertOnlineMemberData.swift in Sources */,
@@ -844,7 +846,6 @@
 				D08281362959CA7000D9C232 /* FGWMembersProvider+extractExternalURL.swift in Sources */,
 				D0795CEC294FCCC200FA62A8 /* ShapeStyle+Colors.swift in Sources */,
 				D0EB533C295775240061613B /* Crosshairs.swift in Sources */,
-				D0831A36277F72590049AB84 /* FotogroepWaalreMembersProvider+insertSomeHardcodedMemberData.swift in Sources */,
 				D0621E892AE2E47B000FFADB /* MemberPortfolio+refreshFirstImage.swift in Sources */,
 				D0831A20277F72270049AB84 /* FilteredOrganizationView.swift in Sources */,
 				D05124852C42BE2D00D94B81 /* Level2JsonReader.swift in Sources */,
@@ -882,7 +883,6 @@
 				D044646527FCE7C100990613 /* UIDevice+IsIPad.swift in Sources */,
 				D05E451E27EF2A2C00D31327 /* ReadmeView.swift in Sources */,
 				D01D2B6227D3BBDC00E2FE41 /* View+Navigate.swift in Sources */,
-				D06754A02942B23F00C0AB08 /* FotogroepWaalreMembersProvide+enumHTMLPageLoadingState.swift in Sources */,
 				D082BE912957806800FF0812 /* LogoPath.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

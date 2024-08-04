@@ -11,8 +11,12 @@ import RegexBuilder // for OneOrMore, Capture, etc
 extension MemberPortfolio {
 
     func refreshFirstImage() {
+        let clubsUsingJuiceBox: [OrganizationID] = [ // strings have to be precise ;-)
+            OrganizationID(fullName: "Fotogroep Waalre", town: "Waalre"),
+            OrganizationID(fullName: "Fotogroep de Gender", town: "Eindhoven")
+        ]
+        guard clubsUsingJuiceBox.contains(organization.id) else { return }
         let organizationTown: String = self.organization.fullNameTown
-        guard organizationTown == "Fotogroep Waalre" else { return }
 
         if let urlIndex = URL(string: self.level3URL.absoluteString + "config.xml") { // assume JuiceBox Pro
             ifDebugPrint("\(organizationTown): starting refreshFirstImage() \(urlIndex.absoluteString) in background")

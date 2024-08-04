@@ -69,7 +69,6 @@ extension FotogroepWaalreMembersProvider {
                 let portfoliosInClub = try bgContext.fetch(fetchRequest)
 
                 for portfolio in portfoliosInClub {
-                    // PhotoClubHubApp.antiZombiePinningOfMemberPortfolios.insert(portfolio)
                     portfolio.refreshFirstImage()
                 }
                 try bgContext.save() // persist first images for Fotogroep Waalre
@@ -123,11 +122,11 @@ extension FotogroepWaalreMembersProvider {
                     self.addMember(bgContext: bgContext,
                                    organization: organization, personName: personName,
                                    optionalFields: PhotographerOptionalFields(
-                                   bornDT: bornDT,
-                                   eMail: eMail,
-                                   phoneNumber: phoneNumber,
-                                   photographerWebsite: URL(string: externalURL) ?? nil
-                                  )
+                                        bornDT: bornDT,
+                                        eMail: eMail,
+                                        phoneNumber: phoneNumber,
+                                        photographerWebsite: URL(string: externalURL) ?? nil
+                                   )
                     )
                 }
 
@@ -152,24 +151,24 @@ extension FotogroepWaalreMembersProvider {
             optionalFields: optionalFields)
 
         _ = MemberPortfolio.findCreateUpdate(
-            bgContext: bgContext,
-            organization: organization,
-            photographer: photographer,
-            optionalFields: MemberOptionalFields(
-                level3URL: self.generateInternalURL(using: personName.fullNameWithoutParenthesizedRole),
-                memberRolesAndStatus: MemberRolesAndStatus(
-                    role: [:], // FG Waalre HTML input file doesn't contain role information
-                    status: [
-                        .former: !self.isCurrentMember(name: personName.fullNameWithParenthesizedRole,
-                                                       includeProspectiveMembers: true),
-                        .coach: self.isMentor(name: personName.fullNameWithParenthesizedRole),
-                        .prospective: self.isProspectiveMember(
-                            name: personName.fullNameWithParenthesizedRole
-                        )
-                    ]
+                bgContext: bgContext,
+                organization: organization,
+                photographer: photographer,
+                optionalFields: MemberOptionalFields(
+                    level3URL: self.generateInternalURL(using: personName.fullNameWithoutParenthesizedRole),
+                    memberRolesAndStatus: MemberRolesAndStatus(
+                        role: [:], // FG Waalre HTML input file doesn't contain role information
+                        status: [
+                            .former: !self.isCurrentMember(name: personName.fullNameWithParenthesizedRole,
+                                                           includeProspectiveMembers: true),
+                            .coach: self.isMentor(name: personName.fullNameWithParenthesizedRole),
+                            .prospective: self.isProspectiveMember(
+                                name: personName.fullNameWithParenthesizedRole
+                            )
+                        ]
+                    )
                 )
             )
-        )
     }
 
     private func generateInternalURL(using name: String) -> URL? { // only use standard ASCII A...Z,a...z in URLs

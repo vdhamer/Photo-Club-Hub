@@ -70,8 +70,8 @@ extension Organization {
         }
     }
 
-    public var id: PhotoClubId { // public because needed for Identifiable protocol
-        PhotoClubId(fullName: self.fullName, town: self.town)
+    public var id: OrganizationID { // public because needed for Identifiable protocol
+        OrganizationID(fullName: self.fullName, town: self.town)
     }
 
     var nickName: String {
