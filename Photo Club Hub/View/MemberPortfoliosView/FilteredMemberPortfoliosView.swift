@@ -130,9 +130,6 @@ struct FilteredMemberPortfoliosView: View {
                         Text(verbatim:
                              "\(unfiltCount) \(unfiltCount==1 ? member : members) \(shown).")
                     }
-//                    if let organization, organization.hasHardCodedMemberData {
-//                        Text("Data source: in-app member data.", comment: "Section footer text Portfolios screen")
-//                    } TODO delete
                     if organization != nil,
                        organization!.level2URL != nil,
                        organization!.level2URL!.host != nil,
