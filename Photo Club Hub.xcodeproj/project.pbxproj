@@ -532,7 +532,6 @@
 		D08416952B2FC07F000F316D /* Lists */ = {
 			isa = PBXGroup;
 			children = (
-				D01FBB2C2C5EED2D006D1F08 /* fgWaalre.level2.json */,
 				D04B1A0B2B1AA06300EB3817 /* OrganizationList.json */,
 				D0A30FB72BB0BB33009A9A6E /* root.level1.json */,
 				D0E2D6032B9B9568008D1F7A /* test1Club.level1.json */,
@@ -737,7 +736,6 @@
 				D04A2B122AC0958C003ED113 /* LineCount.xlsx in Resources */,
 				D004058F2C5E926A00BCB0B4 /* fgWaalre.level2.json in Resources */,
 				D053F23D2B54430C00662EF8 /* Photo-Club-Hub-InfoPlist.strings in Resources */,
-				D01FBB2D2C5EED2D006D1F08 /* fgWaalre.level2.json in Resources */,
 				D08416932B2FAEB1000F316D /* fgDeGender.level2.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1054,7 +1052,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Photo Club Hub/PhotoClubHub.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4629;
+				CURRENT_PROJECT_VERSION = 4630;
 				DEVELOPMENT_ASSET_PATHS = "\"Photo Club Hub/Preview Content\"";
 				DEVELOPMENT_TEAM = YDEWPN9GZ6;
 				ENABLE_PREVIEWS = YES;
@@ -1096,7 +1094,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Photo Club Hub/PhotoClubHub.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4629;
+				CURRENT_PROJECT_VERSION = 4630;
 				DEVELOPMENT_ASSET_PATHS = "\"Photo Club Hub/Preview Content\"";
 				DEVELOPMENT_TEAM = YDEWPN9GZ6;
 				ENABLE_PREVIEWS = YES;

@@ -1,5 +1,11 @@
 ### 2.7.0 (GitHub commit ???????) ??-08-24
 
+This build #4630 was made with Xcode 15.4 and is intended for App Store distribution.
+
+---------------------------------------------------------------------------
+
+### 2.7.0 (GitHub commit ca3d871) 06-08-24
+
 Data
 * The membership data for fgDeGender, fgAnders and fcBellusImago are now read from level2.json data files.
 * The level2 data for fgDeGender and fgWaalre is now complete (26 and 16 current members resp).
@@ -15,7 +21,7 @@ Maintenance
 * Tested on iOS 18.0 beta 4 (22A5316j), Xcode 16.0 beta 4 (16A5211f), MacOS 14.6 and Vision Pro 2.0 beta 4 (22N5286g).
 * Incorporated pull request regarding try/catch for level 2 JSON loading submitted by Nikolay Dobychin (aka codifyme).
 
-This build #4629 was made with Xcode 16.0 beta 4.
+This build #4629 was made with Xcode 16.0 beta 4. It can only be used for TestFlight users (because it is a beta).
 
 ---------------------------------------------------------------------------
 
