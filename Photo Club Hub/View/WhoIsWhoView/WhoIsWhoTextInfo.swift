@@ -71,7 +71,7 @@ struct WhoIsWhoTextInfo: View {
             */
 
             // personal (not club-related) web site if available
-            if let url: URL = photographer.website {
+            if let url: URL = photographer.photographerWebsite {
                 Link(destination: url, label: {
                     Text(url.absoluteString)
                         .lineLimit(1)

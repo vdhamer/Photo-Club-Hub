@@ -2,7 +2,7 @@
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
   <file original="en.lproj/Photo-Club-Hub-InfoPlist.strings" source-language="en" target-language="nl" datatype="plaintext">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="16.0" build-num="16A5202i"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="16.0" build-num="16A5211f"/>
     </header>
     <body>
       <trans-unit id="CFBundleDisplayName" xml:space="preserve">
@@ -24,7 +24,7 @@
   </file>
   <file original="Localization/en.lproj/Localizable.strings" source-language="en" target-language="nl" datatype="plaintext">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="16.0" build-num="16A5202i"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="16.0" build-num="16A5211f"/>
     </header>
     <body>
       <trans-unit id="%lld members (inc. ex-members)" xml:space="preserve">
@@ -74,7 +74,7 @@
       </trans-unit>
       <trans-unit id="Advanced" xml:space="preserve">
         <source>Advanced</source>
-        <target state="translated">Technische instellingen</target>
+        <target>Technische instellingen</target>
         <note>In Preferences, above link to Settings</note>
       </trans-unit>
       <trans-unit id="Amsterdam has two photography museums." xml:space="preserve">
@@ -86,11 +86,6 @@
         <source>App version %@ (build %@)</source>
         <target>App versie %@ (build %@)</target>
         <note>Shown on Readme page.</note>
-      </trans-unit>
-      <trans-unit id="Apple" xml:space="preserve">
-        <source>Apple</source>
-        <target>Appel</target>
-        <note>Name of the fruit, not the company.</note>
       </trans-unit>
       <trans-unit id="Birthday" xml:space="preserve">
         <source>Birthday</source>
@@ -111,6 +106,13 @@
         <source>Clubs and Museums</source>
         <target>Clubs en Musea</target>
         <note>Title of page with maps for Clubs and Museums</note>
+      </trans-unit>
+      <trans-unit id="Clubs, their Members, and their Portfolios&#10;" xml:space="preserve">
+        <source>Clubs, their Members, and their Portfolios
+</source>
+        <target>Clubs, hun Leden en hun Portfolio's
+</target>
+        <note>Caption of an image on the Readme page</note>
       </trans-unit>
       <trans-unit id="Concept" xml:space="preserve">
         <source>The concept</source>
@@ -201,8 +203,8 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
       </trans-unit>
       <trans-unit id="Options in Settings" xml:space="preserve">
         <source>Options in Settings</source>
-        <target state="translated">Opties bij Instellingen</target>
-        <note>No comment provided by engineer.</note>
+        <target>Opties bij Instellingen</target>
+        <note>Link to Photo Club Hub section in Settings</note>
       </trans-unit>
       <trans-unit id="Paragraph_1.1" xml:space="preserve">
         <source>Our ambitions in creating _Photo Club Hub_ were to strengthen ties between photography clubs, and making the work of club members easier to access.</source>
@@ -500,13 +502,6 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
         <target>Portfolio's</target>
         <note>Title of page showing member portfolios</note>
       </trans-unit>
-      <trans-unit id="Poster for a photo club exposition&#10;" xml:space="preserve">
-        <source>Poster for a photo club exposition
-</source>
-        <target>Poster voor een club expositie
-</target>
-        <note>Caption of an image on the Readme page</note>
-      </trans-unit>
       <trans-unit id="Preferences" xml:space="preserve">
         <source>Preferences</source>
         <target>Instellingen</target>
@@ -639,7 +634,7 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
       </trans-unit>
       <trans-unit id="WhosWho_Caption_3" xml:space="preserve">
         <source>③ The thumbnails can be scrolled horizontally.</source>
-        <target>③ De miniatuurfoto's kunnen horizontaal verschoven worden.</target>
+        <target>③ De miniatuurfoto's kunnen horizontaal versleept worden, al zal dat zelden nodig zijn.</target>
         <note>Shown in gray at the bottom of the Who's Who page (3/3).</note>
       </trans-unit>
       <trans-unit id="admin" xml:space="preserve">
@@ -761,7 +756,7 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
   </file>
   <file original="Settings.bundle/en.lproj/Root.strings" source-language="en" target-language="nl" datatype="plaintext">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="16.0" build-num="16A5202i"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="16.0" build-num="16A5211f"/>
     </header>
     <body>
       <trans-unit id="Debug options" xml:space="preserve">

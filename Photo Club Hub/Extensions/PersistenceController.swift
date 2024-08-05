@@ -57,37 +57,43 @@ struct PersistenceController {
         for index in 1...10 {
             let memberRolesAndStatus =  MemberRolesAndStatus( role: [.chairman: (index==1),
                                                                      .treasurer: (index==2)],
-                                                              stat: [.deceased: ((index % 4) == 0),
+                                                              status: [.deceased: ((index % 4) == 0),
                                                                      .former: ((index % 4) == 1)]
             )
-            let organization = Organization.findCreateUpdate(context: viewContext, // on main thread
-                                                       organizationTypeEnum: .club,
-                                                       idPlus: OrganizationIdPlus(
-                                                            fullName: "PhotoClub\(index)",
-                                                            town: "Town\(index)",
-                                                            nickname: "ClubNick\(index)"
-                                                       ),
-                                                       website: URL(string: "http://www.example.com/\(index)"),
-                                                       fotobondNumber: Int16(index*1111),
-                                                       coordinates: CLLocationCoordinate2D( // spread around BeNeLux
-                                                            latitude: 51.39184 + Double.random(in: -2.0 ... 2.0),
-                                                            longitude: 5.46144 + Double.random(in: -2.0 ... 1.0)),
-                                                       pinned: (index % 4 == 0)
-                                                       )
+            let organization = Organization.findCreateUpdate(
+                context: viewContext, // on main thread
+                organizationTypeEnum: .club,
+                idPlus: OrganizationIdPlus(
+                    fullName: "PhotoClub\(index)",
+                    town: "Town\(index)",
+                    nickname: "ClubNick\(index)"
+                ),
+                optionalFields: OrganizationOptionalFields(
+                    organizationWebsite: URL(string: "http://www.example.com/\(index)"),
+                    fotobondNumber: Int16(index*1111),
+                    coordinates: CLLocationCoordinate2D( // spread around BeNeLux
+                        latitude: 51.39184 + Double.random(in: -2.0 ... 2.0),
+                        longitude: 5.46144 + Double.random(in: -2.0 ... 1.0))
+                ),
+                pinned: (index % 4 == 0)
+            )
             let photographer = Photographer.findCreateUpdate(
                 context: viewContext, // on main thread
                 personName: PersonName(givenName: "Jan", infixName: "D'", familyName: "Eau\(index)"),
-                memberRolesAndStatus: memberRolesAndStatus,
-                phoneNumber: "06-12345678",
-                eMail: "Jan.D.Eau\(index)@example.com",
-                website: URL(string: "https://www.example.com/JanDEau\(index)"),
-                bornDT: Date() - Double.random(in: 365*24*3600 ... 75*365*24*3600),
-                organization: organization
+                organization: organization, // only needed for debug messages
+                isDeceased: memberRolesAndStatus.isDeceased(),
+                optionalFields: PhotographerOptionalFields(
+                    bornDT: Date() - Double.random(in: 365*24*3600 ... 75*365*24*3600),
+                    eMail: "Jan.D.Eau\(index)@example.com",
+                    phoneNumber: "06-12345678",
+                    photographerWebsite: URL(string: "https://www.example.com/JanDEau\(index)")
+                )
             )
-            let memberPortfolio = MemberPortfolio.findCreateUpdate(bgContext: viewContext,
-                                                                   organization: organization,
-                                                                   photographer: photographer,
-                                                                   memberRolesAndStatus: memberRolesAndStatus
+            let memberPortfolio = MemberPortfolio.findCreateUpdate(
+                bgContext: viewContext,
+                organization: organization,
+                photographer: photographer,
+                optionalFields: MemberOptionalFields( memberRolesAndStatus: memberRolesAndStatus )
             )
         }
 

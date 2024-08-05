@@ -10,7 +10,7 @@ import RegexBuilder
 
 extension FotogroepWaalreMembersProvider {
 
-    func extractExternalURL(taggedString: String) -> String {
+    func extractPhotographerWebsite(taggedString: String) -> String {
         // <td><a title="Ariejan van Twisk fotografie" href="https://www.domain.com" target="_blank">extern</a></td>
         // <td><a title="" href="" target="_blank"></a></td> // old Wordpress template: no URL available
         // <td><a title="" <="" a=""></a></td> // sometimes Wordpress does this if no URL available (bug in WP?)

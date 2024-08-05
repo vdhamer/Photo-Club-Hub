@@ -1,10 +1,21 @@
-### 2.6.3 (GitHub commit fbeb334) 13-07-24
+### 2.7.0 (GitHub commit ???????) ??-08-24
+
+Data
+* The membership data for fgDeGender, fgAnders and fcBellusImago are now read from level2.json data files.
+* The level2 data for fgDeGender and fgWaalre is now complete (26 and 16 current members resp).
+* The app can now load and store Dutch fotobond membership numbers.
+* The app can't 'load and store e-mail addresses and phone numbers of photographers (Level2 files are not encrypted).
+* Added MK to fgWaalre
+* Added ability to store date on which a member joined a club
 
 Maintenance
-* Added a wikipedia link for the club fgDeGender. The link is loaded from a prototype level2.json file.
-* First photo club membership list loaded from a data file (`fgDeGender.level2.json`).
+* Initial ability to read list of club members from a data file (`fgDeGender.level2.json`).
+* The membership data for 2 Dutch photo clubs (fgAnders, fgDeGender) are now read from level2.json data files.
+* Added a wikipedia link for the club fgDeGender. The link is mainly for demo/testing purposes.
+* Tested on iOS 18.0 beta 4 (22A5316j), Xcode 16.0 beta 4 (16A5211f), MacOS 14.6 and Vision Pro 2.0 beta 4 (22N5286g).
+* Incorporated pull request regarding try/catch for level 2 JSON loading submitted by Nikolay Dobychin (aka codifyme).
 
-This build #4629 was made with Xcode 16.0.
+This build #4629 was made with Xcode 16.0 beta 4.
 
 ---------------------------------------------------------------------------
 

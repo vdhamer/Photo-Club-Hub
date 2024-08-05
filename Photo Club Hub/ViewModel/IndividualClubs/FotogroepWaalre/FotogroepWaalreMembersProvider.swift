@@ -17,7 +17,6 @@ class FotogroepWaalreMembersProvider { // WWDC21 Earthquakes also uses a Class h
     init(bgContext: NSManagedObjectContext) {
         // following is asynchronous, but not documented as such using async/await
         bgContext.perform { // done asynchronously by CoreData
-            self.insertSomeHardcodedMemberData(bgContext: bgContext)
             self.insertOnlineMemberData(bgContext: bgContext)
             do {
                 if bgContext.hasChanges { // optimisation
@@ -29,7 +28,6 @@ class FotogroepWaalreMembersProvider { // WWDC21 Earthquakes also uses a Class h
             }
         }
     }
-
 }
 
 extension FotogroepWaalreMembersProvider { // private utitity functions

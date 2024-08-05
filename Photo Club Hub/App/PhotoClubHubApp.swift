@@ -64,7 +64,7 @@ extension PhotoClubHubApp {
         level1BackgroundContext.name = "root.level1.json"
         level1BackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         level1BackgroundContext.automaticallyMergesChangesFromParent = true // to push ObjectTypes to bgContext?
-        _ = RootLevel1JsonReader(bgContext: level1BackgroundContext, // read root.Level1.json file
+        _ = Level1JsonReader(bgContext: level1BackgroundContext, // read root.Level1.json file
                                  useOnlyFile: false)
 
         // warning: following clubs rely on Level 1 file for filling in their coordinates
