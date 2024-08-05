@@ -707,6 +707,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		D003AA7F278F896B001D57B7 /* Run IncrementBuildNumber script */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 8;
 			files = (
 			);
