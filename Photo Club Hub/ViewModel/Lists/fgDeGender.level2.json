@@ -76,7 +76,6 @@
             "optional": {
                 "birthday": "1970-07-19",
                 "website": "https://glass.photo/jerdam",
-                "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/BettinaDeGraaf.jpeg",
                 "level3URL": "http://www.vdhamer.com/fgDeGender/Bettina_de_Graaf/",
                 "membershipStartDate": "2024-01-01",
                 "nlSpecific": {
@@ -230,7 +229,6 @@
                 },
                 "birthday": "1954-10-09",
                 "website": "https://www.m3w.nl",
-                "featuredImage": "https://www.fcdegender.nl/wp-content/uploads/Expositie%202023/Mariet/slides/Mariet%203.jpg",
                 "level3URL": "http://www.vdhamer.com/fgDeGender/Mariet_Wielders/",
                 "membershipStartDate": "2009-11-01",
                 "nlSpecific": {
@@ -312,7 +310,6 @@
             "optional": {
                 "birthday": "1957-10-18",
                 "website": "https://glass.photo/vdhamer",
-                "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg",
                 "level3URL": "http://www.vdhamer.com/fgDeGender/Peter_van_den_Hamer/",
                 "roles": {
                     "isAdmin": true
