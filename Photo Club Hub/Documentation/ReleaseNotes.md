@@ -1,7 +1,7 @@
 ### 2.7.0 (GitHub commit ???????) ??-08-24
 
 Maintenance
-* Tested on Xcode 16.0 beta 5 (16A5221g), iOS 18.0 beta 5 (22A5326g), Vision Pro 2.0 beta 5 (22A5326g).
+* Tested on Xcode 16.0 beta 5 (16A5221g), iOS 18.0 beta 5 (22A5326g), Vision Pro 2.0 beta 5 (22A5326g), MacOS 14.6.1
 * Fixed spelling in name of member HN in fgAnders.
 * updated picture of data model in README.md
 
