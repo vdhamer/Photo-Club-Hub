@@ -82,7 +82,7 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
         let changed5 = updateIfChangedOptional(update: &self.featuredImage, with: optionalFields.featuredImage)
         let changed6 = updateIfChangedOptional(update: &self.featuredImageThumbnail,
                                                with: optionalFields.featuredImageThumbnail)
-        let changed7 = updateIfChanged(update: &self.obsolete, with: obsolete)
+        let changed7 = updateIfChanged(update: &self.removeMember, with: removeMember)
         needsSaving = changed1 || changed2 || changed3 ||
                       changed4 || changed5 || changed6 || changed7 // forces execution of updateIfChanged()
 

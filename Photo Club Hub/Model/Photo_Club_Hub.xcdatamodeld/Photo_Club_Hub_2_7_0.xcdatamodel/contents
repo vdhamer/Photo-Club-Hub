@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="23211.1" systemVersion="23G80" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="23222.3" systemVersion="23G93" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Language" representedClassName="Language" syncable="YES" codeGenerationType="class">
         <attribute name="isoCode_" attributeType="String"/>
         <attribute name="languageName_" attributeType="String" elementID="name_"/>
@@ -40,7 +40,7 @@
         <attribute name="level3URL_" optional="YES" attributeType="URI" elementID="level3URL"/>
         <attribute name="membershipEndDate_" optional="YES" attributeType="Date" usesScalarValueType="NO" elementID="dateIntervalEnd_"/>
         <attribute name="membershipStartDate_" optional="YES" attributeType="Date" usesScalarValueType="NO" elementID="dateIntervalStart_"/>
-        <attribute name="obsolete" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="removeMember" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" elementID="obsolete"/>
         <relationship name="organization_" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Organization" inverseName="members_" inverseEntity="Organization" elementID="photoClub_"/>
         <relationship name="photographer_" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Photographer" inverseName="memberships_" inverseEntity="Photographer"/>
         <uniquenessConstraints>
