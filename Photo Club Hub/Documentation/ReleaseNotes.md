@@ -2,7 +2,7 @@
 
 Maintenance
 * Tested on Xcode 16.0 beta 5 (16A5221g), iOS 18.0 beta 5 (22A5326g), Vision Pro 2.0 beta 5 (22A5326g).
-* Fixed spelling of member name in fgAnders.
+* Fixed spelling in name of member HN in fgAnders.
 
 This build #4630 was made with Xcode 15.4 and is intended for App Store distribution.
 
