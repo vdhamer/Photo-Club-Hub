@@ -1,4 +1,6 @@
-### 2.7.0 (GitHub commit ???????) ??-08-24
+---------------------------------------------------------------------------
+
+### 2.7.0 (GitHub commit 663471b) 11-08-24
 
 Portfolios screen
 * Swipe down refreshes database content
