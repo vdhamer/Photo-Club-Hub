@@ -112,13 +112,13 @@
 		</dict>
 		<dict>
 			<key>Type</key>
-			<string>PSTitleValueSpecifier</string>
+			<string>PSToggleSwitchSpecifier</string>
 			<key>Title</key>
-			<string>Post-v2.6.2 data refresh pending</string>
+			<string>Data refresh pending</string>
 			<key>DefaultValue</key>
-			<string>NO</string>
+			<true/>
 			<key>Key</key>
-			<string>dataResetAfterRel262Pending</string>
+			<string>dataResetPending</string>
 		</dict>
 	</array>
 </dict>
