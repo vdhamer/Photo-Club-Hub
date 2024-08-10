@@ -17,7 +17,7 @@ Maintenance
 * Settings switch to manucally force one-time reloading of json files.
 * One-time reloading is also triggered when 2.7.0 or higher is first installed (when creating the key in UserDefaults). 
 
-This build #4630 was made with Xcode 15.4 and is intended for App Store distribution.
+This build #4630 was built using Xcode 15.4 and is intended for App Store distribution.
 
 ---------------------------------------------------------------------------
 
@@ -38,7 +38,7 @@ Maintenance
 * Tested on iOS 18.0 beta 4 (22A5316j), Xcode 16.0 beta 4 (16A5211f), MacOS 14.6 and Vision Pro 2.0 beta 4 (22N5286g).
 * Incorporated pull request regarding try/catch for level 2 JSON loading submitted by Nikolay Dobychin (aka codifyme).
 
-This build #4629 was made with Xcode 16.0 beta 4. It can only be used for TestFlight users (because it is a beta).
+This build #4629 was built using Xcode 16.0 beta 4. It can only be used for TestFlight users (because it is a beta).
 
 ---------------------------------------------------------------------------
 
