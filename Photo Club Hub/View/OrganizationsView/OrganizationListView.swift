@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import CoreData // for implementing .refreshable
 
 struct OrganizationListView: View {
     @Environment(\.managedObjectContext) private var viewContext
@@ -64,6 +63,9 @@ struct OrganizationListView: View {
 
         .scrollTargetBehavior(.viewAligned) // iOS 17 smart scrolling
         .refreshable { // for pull-to-refresh
+            // do not remove next statement: a side-effect of reading the flag, is that it clears the flag
+            print("dataResetPending flag was \(Settings.dataResetPending), but is now false")
+            PhotoClubHubApp.deleteAllCoreDataObjects()
             PhotoClubHubApp.loadClubsAndMembers() // carefull: runs asynchronously
         }
         .task {

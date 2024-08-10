@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import CoreData // for .refreshable code
 
 struct MemberPortfolioListView: View {
     @Environment(\.managedObjectContext) private var viewContext
@@ -42,6 +41,9 @@ struct MemberPortfolioListView: View {
         }
         .listStyle(.plain)
         .refreshable { // for pull-to-refresh
+            // do not remove next statement: a side-effect of reading the flag, is that it clears the flag
+            print("dataResetPending flag was \(Settings.dataResetPending), but is now false")
+            PhotoClubHubApp.deleteAllCoreDataObjects()
             PhotoClubHubApp.loadClubsAndMembers() // carefull: runs asynchronously
         }
         .keyboardType(.namePhonePad)
