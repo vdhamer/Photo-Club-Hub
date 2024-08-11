@@ -180,10 +180,11 @@ extension FotogroepWaalreMembersProvider {
         // case if there is a replacement needed, that is not defined yet
         //      "Ekin Özbiçer" -> "<baseURL>/Ekin_" // because app doesn't substitute the Ö yet
         var tweakedName = name.replacingOccurrences(of: " ", with: "_")
-                              .replacingOccurrences(of: "á", with: "a") // affects István_Nagy
-                              .replacingOccurrences(of: "ç", with: "c") // affects François_Hermans
-                              .replacingOccurrences(of: "ë", with: "e") // affects Henriëtte_van_Ekert
-                              .replacingOccurrences(of: "é", with: "e") // affects José_Daniëls
+                              .replacingOccurrences(of: "á", with: "a") // affects István_Nagy, fgWaalre
+                              .replacingOccurrences(of: "ç", with: "c") // affects François_Hermans, fgWaalre
+                              .replacingOccurrences(of: "ë", with: "e") // affects Henriëtte_van_Ekert, fgWaalre
+                              .replacingOccurrences(of: "é", with: "e") // affects José_Daniëls, fgWaalre
+                              .replacingOccurrences(of: "ü", with: "u") // affects Hans_Krüsemann, fgDeGender
 
         let regex = Regex { // check if tweakedName only consists of standard ASCII characters
             Capture {
