@@ -271,10 +271,10 @@
             "name": {
                 "givenName": "Miep",
                 "infixName": "",
-                "familyName": "Fransen"
+                "familyName": "Franssen"
             },
             "optional": {
-                "level3URL": "http://www.vdhamer.com/fgDeGender/Miep_Fransen/",
+                "level3URL": "http://www.vdhamer.com/fgDeGender/Miep_Franssen/",
                 "status": {
                     "isHonoraryMember": true
                 },
