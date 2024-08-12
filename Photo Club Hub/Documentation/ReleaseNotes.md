@@ -11,14 +11,16 @@ Organizations screen
 Who's who screen
 * Swipe down refreshes database content
 
-Maintenance
-* Tested on Xcode 16.0 beta 5 (16A5221g), iOS 18.0 beta 5 (22A5326g), Vision Pro 2.0 beta 5 (22A5326g), MacOS 14.6.1.
-* Fixed spelling in name of member HN in fgAnders.
+Code Maintenance
+* Tested on Xcode 16.1 beta 1 (16B5001e), iOS 18.1 beta 1 (22B5023b), VisionOS 11 beta 1 (22N5297d), MacOS 14.6.1.
 * Updated dataModel.png as used in README.md
 * Renamed MemberPortfolio.obsolete to MemberPortfolio.removeMember
 * Settings switch to manucally force one-time reloading of json files.
 * One-time reloading is also triggered when 2.7.0 or higher is first installed (when creating the key in UserDefaults).
 * Minor sync of changes in GitHub's SwiftyJson
+
+Data Maintenance
+* Fixed spelling in name of member HN in fgAnders.
 * Added FV as former member to fgDeGender.level2.json
 
 This build #4630 was built using Xcode 15.4 and is intended for App Store distribution.
