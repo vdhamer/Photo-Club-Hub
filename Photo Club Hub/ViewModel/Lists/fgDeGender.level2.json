@@ -120,6 +120,25 @@
 
         {
             "name": {
+                "givenName": "Frans",
+                "infixName": "",
+                "familyName": "Verbeek"
+            },
+            "optional": {
+                "level3URL": "http://www.vdhamer.com/fgDeGender/Frans_Verbeek/",
+                "status": {
+                    "isFormerMember": true
+                },
+                "membershipStartDate": "2004-01-01",
+                "membershipEndDate": "2023-12-31",
+                "nlSpecific": {
+                    "fotobondNumber": 1620061
+                }
+            }
+        },
+
+        {
+            "name": {
                 "givenName": "Gert",
                 "infixName": "du",
                 "familyName": "Bois"

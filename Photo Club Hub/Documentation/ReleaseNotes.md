@@ -18,7 +18,8 @@ Maintenance
 * Renamed MemberPortfolio.obsolete to MemberPortfolio.removeMember
 * Settings switch to manucally force one-time reloading of json files.
 * One-time reloading is also triggered when 2.7.0 or higher is first installed (when creating the key in UserDefaults).
-* Minor sync of changes in GitHub's SwiftyJson 
+* Minor sync of changes in GitHub's SwiftyJson
+* Added FV as former member to fgDeGender.level2.json
 
 This build #4630 was built using Xcode 15.4 and is intended for App Store distribution.
 
