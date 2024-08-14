@@ -3,6 +3,7 @@
 ### 2.7.0 (GitHub commit 663471b) 11-08-24
 
 Portfolios screen
+* added Fotogroep de Gender portfolios
 * Swipe down refreshes database content
 
 Organizations screen
@@ -12,7 +13,7 @@ Who's who screen
 * Swipe down refreshes database content
 
 Code Maintenance
-* Tested on Xcode 16.1 beta 1 (16B5001e), iOS 18.1 beta 1 (22B5023b), VisionOS 11 beta 1 (22N5297d), MacOS 14.6.1.
+* Tested on Xcode 16.1 beta 1 (16B5001e), iOS 18.1 beta 2 (22B5023e), VisionOS 11 beta 1 (22N5297d), MacOS 14.6.1.
 * Updated dataModel.png as used in README.md
 * Renamed MemberPortfolio.obsolete to MemberPortfolio.removeMember
 * Settings switch to manucally force one-time reloading of json files.
