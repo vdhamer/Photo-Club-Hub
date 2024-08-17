@@ -1,3 +1,10 @@
+### 2.7.1 (GitHub commit ???????) ??-08-24
+
+Code Maintenance
+* Tested on SwiftLint 0.56.1
+
+This build #4631 was built using Xcode 15.4 and is intended for App Store distribution.
+
 ---------------------------------------------------------------------------
 
 ### 2.7.0 (GitHub commit 663471b) 11-08-24

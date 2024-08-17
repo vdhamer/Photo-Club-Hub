@@ -199,6 +199,7 @@
 		D0A0B6872AA932A10078DE9A /* Photo_Club_Hub_2_4_1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_4_1.xcdatamodel; sourceTree = "<group>"; };
 		D0A30FB72BB0BB33009A9A6E /* root.level1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = root.level1.json; sourceTree = "<group>"; };
 		D0A34EB92BFB97710077F3E0 /* Photo_Club_Hub_2_6_3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_6_3.xcdatamodel; sourceTree = "<group>"; };
+		D0A4DE392C7154C9004AC351 /* Photo_Club_Hub_2_7_1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_7_1.xcdatamodel; sourceTree = "<group>"; };
 		D0A5B7EE2B45F67E001FAD59 /* test2Club2Museum.level1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test2Club2Museum.level1.json; sourceTree = "<group>"; };
 		D0ADF4AD27922DCA00535432 /* MemberRolesAndStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberRolesAndStatus.swift; sourceTree = "<group>"; };
 		D0AE1B7427889E8600E0100E /* OrganizationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationListView.swift; sourceTree = "<group>"; };
@@ -1072,7 +1073,7 @@
 					"@executable_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 2.7.0;
+				MARKETING_VERSION = 2.7.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vdhamer.Fotogroep-Waalre";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1114,7 +1115,7 @@
 					"@executable_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 2.7.0;
+				MARKETING_VERSION = 2.7.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vdhamer.Fotogroep-Waalre";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1155,6 +1156,7 @@
 		D0A0B6832AA930E90078DE9A /* Photo_Club_Hub.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				D0A4DE392C7154C9004AC351 /* Photo_Club_Hub_2_7_1.xcdatamodel */,
 				D01E4F1E2C444C27005E7D2E /* Photo_Club_Hub_2_7_0.xcdatamodel */,
 				D0A34EB92BFB97710077F3E0 /* Photo_Club_Hub_2_6_3.xcdatamodel */,
 				D06F34FB2BDE56600047B04F /* Photo_Club_Hub_2_6_2.xcdatamodel */,
@@ -1171,7 +1173,7 @@
 				D0A0B6872AA932A10078DE9A /* Photo_Club_Hub_2_4_1.xcdatamodel */,
 				D0A0B6842AA930E90078DE9A /* Photo_Club_Hub.xcdatamodel */,
 			);
-			currentVersion = D01E4F1E2C444C27005E7D2E /* Photo_Club_Hub_2_7_0.xcdatamodel */;
+			currentVersion = D0A4DE392C7154C9004AC351 /* Photo_Club_Hub_2_7_1.xcdatamodel */;
 			path = Photo_Club_Hub.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
