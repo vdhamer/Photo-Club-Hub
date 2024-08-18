@@ -8,6 +8,7 @@
 // import SwiftyJSON // now used as a single file
 import CoreData // for NSManagedObjectContext
 import CoreLocation // for CLLocationCoordinate2D
+import SwiftyJSON // for JSON struct
 
 /* Example of level2.json file with one member but with a complete set of optional fields
  {

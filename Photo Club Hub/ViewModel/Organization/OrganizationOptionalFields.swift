@@ -6,6 +6,7 @@
 //
 
 import CoreLocation // for CLLocationCoordinate2D
+import SwiftyJSON // for JSON struct
 
 // Set of paraameters (with their defaults) used when creating structs of type Organization.
 // Note that Organization is also an entity type in the CoreData database.

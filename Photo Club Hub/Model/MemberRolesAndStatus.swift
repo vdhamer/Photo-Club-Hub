@@ -5,6 +5,8 @@
 //  Created by Peter van den Hamer on 14/01/2022.
 //
 
+import SwiftyJSON // for JSON struct
+
 // MARK: - MemberRole
 
 enum MemberRole {

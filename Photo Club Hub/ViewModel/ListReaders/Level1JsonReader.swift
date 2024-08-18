@@ -8,6 +8,7 @@
 // import SwiftyJSON // now used as a single file
 import CoreData // for NSManagedObjectContext
 import CoreLocation // for CLLocationCoordinate2D
+import SwiftyJSON // for JSON()
 
 private let dataSourcePath: String = """
                                      https://raw.githubusercontent.com/\
