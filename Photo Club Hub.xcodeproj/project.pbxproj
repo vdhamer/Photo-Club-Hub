@@ -10,7 +10,6 @@
 		D004058F2C5E926A00BCB0B4 /* fgWaalre.level2.json in Resources */ = {isa = PBXBuildFile; fileRef = D004058E2C5E926A00BCB0B4 /* fgWaalre.level2.json */; };
 		D006BA7E2B115FB1002E555B /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D006BA7D2B115FB1002E555B /* LocationManager.swift */; };
 		D008D2AA28739167007A7BE2 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = D008D2A928739167007A7BE2 /* .gitignore */; };
-		D01787502C72597A00A1E098 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D017874F2C72597A00A1E098 /* SwiftyJSON */; };
 		D01D2B6227D3BBDC00E2FE41 /* View+Navigate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01D2B6127D3BBDC00E2FE41 /* View+Navigate.swift */; };
 		D01FBB2B2C5EE1CC006D1F08 /* FotogroepWaalreMembersProvider+insertOnlineMemberData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01FBB2A2C5EE1CC006D1F08 /* FotogroepWaalreMembersProvider+insertOnlineMemberData.swift */; };
 		D024F11628423BE60055021B /* Sounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = D024F11528423BE60055021B /* Sounds.swift */; };
@@ -71,6 +70,7 @@
 		D087540A2BC5E9FD00FCBDB3 /* WhoIsWhoTextInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08754092BC5E9FD00FCBDB3 /* WhoIsWhoTextInfo.swift */; };
 		D087540C2BC5EE3700FCBDB3 /* WhoIsWhoThumbnails.swift in Sources */ = {isa = PBXBuildFile; fileRef = D087540B2BC5EE3700FCBDB3 /* WhoIsWhoThumbnails.swift */; };
 		D08DC6062AE57294008DBD68 /* SinglePortfolioLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08DC6052AE57294008DBD68 /* SinglePortfolioLinkView.swift */; };
+		D0A063F02C754D3C00ED8F73 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D0A063EF2C754D3C00ED8F73 /* SwiftyJSON */; settings = {ATTRIBUTES = (Required, ); }; };
 		D0A0B6852AA930E90078DE9A /* Photo_Club_Hub.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D0A0B6832AA930E90078DE9A /* Photo_Club_Hub.xcdatamodeld */; };
 		D0A30FB82BB0BB33009A9A6E /* root.level1.json in Resources */ = {isa = PBXBuildFile; fileRef = D0A30FB72BB0BB33009A9A6E /* root.level1.json */; };
 		D0ADF4AE27922DCA00535432 /* MemberRolesAndStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ADF4AD27922DCA00535432 /* MemberRolesAndStatus.swift */; };
@@ -240,7 +240,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D01787502C72597A00A1E098 /* SwiftyJSON in Frameworks */,
+				D0A063F02C754D3C00ED8F73 /* SwiftyJSON in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -667,7 +667,7 @@
 			);
 			name = "Photo Club Hub";
 			packageProductDependencies = (
-				D017874F2C72597A00A1E098 /* SwiftyJSON */,
+				D0A063EF2C754D3C00ED8F73 /* SwiftyJSON */,
 			);
 			productName = "Fotogroep Waalre 2";
 			productReference = D08319E3277F70A30049AB84 /* Photo Club Hub.app */;
@@ -699,7 +699,7 @@
 			);
 			mainGroup = D08319DA277F70A30049AB84;
 			packageReferences = (
-				D017874E2C72597A00A1E098 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				D0A063EE2C754D3C00ED8F73 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 			);
 			productRefGroup = D08319E4277F70A30049AB84 /* Products */;
 			projectDirPath = "";
@@ -1145,7 +1145,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		D017874E2C72597A00A1E098 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+		D0A063EE2C754D3C00ED8F73 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
 			requirement = {
@@ -1156,9 +1156,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		D017874F2C72597A00A1E098 /* SwiftyJSON */ = {
+		D0A063EF2C754D3C00ED8F73 /* SwiftyJSON */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D017874E2C72597A00A1E098 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			package = D0A063EE2C754D3C00ED8F73 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
 			productName = SwiftyJSON;
 		};
 /* End XCSwiftPackageProductDependency section */
