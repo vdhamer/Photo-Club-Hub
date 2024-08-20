@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct Photo_Club_Hub_HTMLgenApp: App {
+struct PhotoClubHubHtmlGenApp: App {
     let persistenceController = PersistenceController.shared
 
     var body: some Scene {

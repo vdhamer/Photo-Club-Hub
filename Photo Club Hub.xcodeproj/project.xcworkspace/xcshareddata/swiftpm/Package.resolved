@@ -1,6 +1,42 @@
 {
-  "originHash" : "def7d170524c5bbdd72b33bad8ae29549b3305eb393afc1e48b0dfc5c154d850",
+  "originHash" : "ea4b464203d520dd3ef2c8bbe500b4a8482adf64bec070950c1f041bd2199ae4",
   "pins" : [
+    {
+      "identity" : "ignite",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/vdhamer/Ignite",
+      "state" : {
+        "branch" : "main",
+        "revision" : "89b039b85b6f0f8a42af42cababcbaf7846c74e5"
+      }
+    },
+    {
+      "identity" : "swift-argument-parser",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-argument-parser.git",
+      "state" : {
+        "revision" : "41982a3656a71c768319979febd796c6fd111d5c",
+        "version" : "1.5.0"
+      }
+    },
+    {
+      "identity" : "swift-cmark",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/swiftlang/swift-cmark.git",
+      "state" : {
+        "branch" : "gfm",
+        "revision" : "fc07ab5da47975c5ef5f336acadfc02e8f706d30"
+      }
+    },
+    {
+      "identity" : "swift-markdown",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/swiftlang/swift-markdown.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "d21714073e0d16ba78eebdf36724863afc36871d"
+      }
+    },
     {
       "identity" : "swiftyjson",
       "kind" : "remoteSourceControl",
