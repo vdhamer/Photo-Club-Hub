@@ -455,6 +455,7 @@
                 "familyName": "Heijne"
             },
             "optional": {
+                "website": "https://www.flickr.com/photos/fotoklasje",
                 "level3URL": "http://www.vdhamer.com/fgDeGender/Wim_Heijne/",
                 "roles": {
                     "isTreasurer": true
