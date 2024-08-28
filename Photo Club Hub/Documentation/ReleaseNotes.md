@@ -4,6 +4,9 @@ Code Maintenance
 * Tested on SwiftLint 0.56.1
 * SwiftJSON imported as package (again). Was temporarily a single .swift file.
 
+Data Maintenance
+* Added website for member WH in fgDeGender.
+
 This build #4631 was built using Xcode 15.4 and is intended for App Store distribution.
 
 ---------------------------------------------------------------------------
