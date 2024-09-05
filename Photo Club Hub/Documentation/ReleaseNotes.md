@@ -1,8 +1,9 @@
 ### 2.7.1 (GitHub commit ???????) ??-08-24
 
 Code Maintenance
-* Tested on SwiftLint 0.56.1
+* Tested on SwiftLint 0.56.2
 * SwiftJSON imported as package (again). Was temporarily a single .swift file.
+* Entered trader status (not a trader) in Apple App Store.
 
 Data Maintenance
 * Added website for member WH in fgDeGender.
