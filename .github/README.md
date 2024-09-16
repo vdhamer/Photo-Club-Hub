@@ -1197,7 +1197,7 @@ Project Link: [https://github.com/vdhamer/Photo-Club-Hub](https://github.com/vdh
 [issues-shield]: https://img.shields.io/github/issues/vdhamer/Photo-Club-Hub?style=plastic
 [issues-url]: https://github.com/vdhamer/Photo-Club-Hub/issues
 
-[discussions-shield]: https://img.shields.io/github/discussions/vdhamer/Photo-Club-Hub?style=plastic?color=orange
+[discussions-shield]: https://img.shields.io/github/discussions/vdhamer/Photo-Club-Hub?style=plastic&color=orange
 [discussions-url]: https://github.com/vdhamer/Photo-Club-Hub/discussions
 
 [license-shield]: https://img.shields.io/github/license/vdhamer/Photo-Club-Hub?style=plastic
