@@ -91,6 +91,7 @@
                 "familyName": "Ven"
             },
             "optional": {
+                "birthday": "9999-10-17",
                 "website": "https://www.ericvandeven.com/",
                 "level3URL": "http://www.vdhamer.com/fgDeGender/Eric_van_de_Ven/",
                 "membershipStartDate": "2022-12-01",
@@ -225,6 +226,7 @@
                 "familyName": "Augusteijn"
             },
             "optional": {
+                "birthday": "9999-11-30",
                 "website": "https://www.lex-augusteijn.nl",
                 "level3URL": "http://www.vdhamer.com/fgDeGender/Lex_Augusteijn/",
                 "roles": {
@@ -263,6 +265,7 @@
                 "familyName": "Beckers-van Hout"
             },
             "optional": {
+                "birthday": "9999-05-01",
                 "level3URL": "http://www.vdhamer.com/fgDeGender/Marika_Beckers/",
                 "membershipStartDate": "2021-05-26",
                 "nlSpecific": {
@@ -347,6 +350,7 @@
                 "familyName": "Putten"
             },
             "optional": {
+                "birthday": "9999-04-10",
                 "website": "http://www.pietvanderputtenfotografie.nl/",
                 "level3URL": "http://www.vdhamer.com/fgDeGender/Piet_van_der_Putten/",
                 "membershipStartDate": "2008-04-01",
@@ -363,6 +367,7 @@
                 "familyName": "Bakker"
             },
             "optional": {
+                "birthday": "9999-12-19",
                 "level3URL": "http://www.vdhamer.com/fgDeGender/Regina_Bakker/",
                 "membershipStartDate": "2020-01-01",
                 "nlSpecific": {
@@ -394,6 +399,7 @@
                 "familyName": "Buijs"
             },
             "optional": {
+                "birthday": "9999-07-05",
                 "website": "http://www.tonbuijs.nl/",
                 "level3URL": "http://www.vdhamer.com/fgDeGender/Ton_Buijs/",
                 "membershipStartDate": "2014-12-01",
@@ -440,6 +446,7 @@
                 "familyName": "Michielsen"
             },
             "optional": {
+                "birthday": "9999-07-14",
                 "level3URL": "http://www.vdhamer.com/fgDeGender/Truus_Michielsen/",
                 "membershipStartDate": "2009-04-01",
                 "nlSpecific": {
