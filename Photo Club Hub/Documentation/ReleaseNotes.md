@@ -1,5 +1,7 @@
 ### 2.7.1 (GitHub commit ???????) ??-08-24
 
+Adding a new standalone MacOS app in GitHub that generates HTML membership lists for club websites.
+
 Code Maintenance
 * Tested on SwiftLint 0.56.2 and iOS 17.7
 * SwiftJSON imported as package (again). Was temporarily a single .swift file.
