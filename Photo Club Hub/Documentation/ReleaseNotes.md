@@ -6,7 +6,7 @@ Code Maintenance
 * Entered trader status (not a trader) in Apple App Store.
 
 Data Maintenance
-* Added website for member WH in fgDeGender.
+* Added website for member WH in fgDeGender and added a few birthdays.
 
 This build #4631 was built using Xcode 15.4 and is intended for App Store distribution.
 
