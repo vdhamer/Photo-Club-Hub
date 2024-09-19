@@ -33,6 +33,7 @@
     <details open><summary><a href="#features">Features</a></summary>
         <ul>
             <li><a href="#multi-club-support">Multi-club Support</a></li>
+            <li><a href="#website-generation">Website generation</a>a></li>
             <li><a href="#searchable-lists">Searchable Lists</a></li>
             <li><a href="#photo-museums">Photo Museums</a></li>
             <li><a href="#pull-down-to-refresh">Pull down to Refresh</a></li>
@@ -316,6 +317,15 @@ Version 2 added support for multiple photo clubs. This means:
 - a photographer is shown associated with multiple clubs if applicable (e.g., former club, current club)
 - the app is stepwise being prepared for larger amounts of data (data is distributed over sites)
 - the app is starting to enable that clubs can manage their own data (data "within" a club is managed by the club)
+
+### Website generation
+
+A new companion app [Photo Club Hub HTML](https://github.com/vdhamer/Photo-Club-Hub-HTML) is underway that uses the
+same input data used by this app to generate (static) HTML web pages. Initial focus in the HTML app is to generate
+a static webpage with members and portfolio links. That page can be added to a club's existing Wordpress site.
+
+It provides an alternative for "the rest of us" who don't use an iPhone or iPad. But also for anyone who want to
+view the information or photos on a laptop or desktop computer.
 
 ### Searchable Lists
 
