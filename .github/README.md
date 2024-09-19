@@ -857,7 +857,7 @@ By using a database, however, the app launches faster: on startup, the app
 can already display the content of the on-device database.</p>
 
 This implies showing the state of the data as it was at the end of the previous session.
-That data might be a bit outdated, but is should be accurate enough to start off with.</p>
+That data might be a bit outdated, but should be accurate enough to start off with.</p>
 
 To handle any data updates, asynchrous calls fetch fresher data over the network. 
 And the MVVM architecture uses this to update the user interface `Views` as soon as the requested data arrives.
