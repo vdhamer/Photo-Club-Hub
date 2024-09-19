@@ -33,7 +33,7 @@
     <details open><summary><a href="#features">Features</a></summary>
         <ul>
             <li><a href="#multi-club-support">Multi-club Support</a></li>
-            <li><a href="#website-generation">Website generation</a>a></li>
+            <li><a href="#website-generation">Website generation</a></li>
             <li><a href="#searchable-lists">Searchable Lists</a></li>
             <li><a href="#photo-museums">Photo Museums</a></li>
             <li><a href="#pull-down-to-refresh">Pull down to Refresh</a></li>
