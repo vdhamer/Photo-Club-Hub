@@ -70,7 +70,6 @@
 		D087540A2BC5E9FD00FCBDB3 /* WhoIsWhoTextInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08754092BC5E9FD00FCBDB3 /* WhoIsWhoTextInfo.swift */; };
 		D087540C2BC5EE3700FCBDB3 /* WhoIsWhoThumbnails.swift in Sources */ = {isa = PBXBuildFile; fileRef = D087540B2BC5EE3700FCBDB3 /* WhoIsWhoThumbnails.swift */; };
 		D08DC6062AE57294008DBD68 /* SinglePortfolioLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08DC6052AE57294008DBD68 /* SinglePortfolioLinkView.swift */; };
-		D0A063F02C754D3C00ED8F73 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D0A063EF2C754D3C00ED8F73 /* SwiftyJSON */; settings = {ATTRIBUTES = (Required, ); }; };
 		D0A0B6852AA930E90078DE9A /* Photo_Club_Hub.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D0A0B6832AA930E90078DE9A /* Photo_Club_Hub.xcdatamodeld */; };
 		D0A30FB82BB0BB33009A9A6E /* root.level1.json in Resources */ = {isa = PBXBuildFile; fileRef = D0A30FB72BB0BB33009A9A6E /* root.level1.json */; };
 		D0ADF4AE27922DCA00535432 /* MemberRolesAndStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ADF4AD27922DCA00535432 /* MemberRolesAndStatus.swift */; };
@@ -82,6 +81,7 @@
 		D0B32BB32C15C51A009FF8E7 /* AppVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B32BB22C15C51A009FF8E7 /* AppVersion.swift */; };
 		D0B52497277F9A4B00927BCA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0B52495277F9A4B00927BCA /* Localizable.strings */; };
 		D0B5743E2C41D79300334E4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D08319EA277F70A40049AB84 /* Assets.xcassets */; };
+		D0B7AF652C90D4BB00117F3F /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D0B7AF642C90D4BB00117F3F /* SwiftyJSON */; };
 		D0BAB01D2A76CED300387E63 /* URLSession+synchronous.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BAB01C2A76CED300387E63 /* URLSession+synchronous.swift */; };
 		D0C53BDD2ABF3ADF000722A1 /* PersonName.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C53BDC2ABF3ADF000722A1 /* PersonName.swift */; };
 		D0C6E95529577921001E5CE9 /* DebugPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C6E95429577921001E5CE9 /* DebugPanel.swift */; };
@@ -241,7 +241,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0A063F02C754D3C00ED8F73 /* SwiftyJSON in Frameworks */,
+				D0B7AF652C90D4BB00117F3F /* SwiftyJSON in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -669,7 +669,7 @@
 			);
 			name = "Photo Club Hub";
 			packageProductDependencies = (
-				D0A063EF2C754D3C00ED8F73 /* SwiftyJSON */,
+				D0B7AF642C90D4BB00117F3F /* SwiftyJSON */,
 			);
 			productName = "Fotogroep Waalre 2";
 			productReference = D08319E3277F70A30049AB84 /* Photo Club Hub.app */;
@@ -701,7 +701,7 @@
 			);
 			mainGroup = D08319DA277F70A30049AB84;
 			packageReferences = (
-				D0A063EE2C754D3C00ED8F73 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				D0B7AF632C90D4BB00117F3F /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 			);
 			productRefGroup = D08319E4277F70A30049AB84 /* Products */;
 			projectDirPath = "";
@@ -1147,7 +1147,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		D0A063EE2C754D3C00ED8F73 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+		D0B7AF632C90D4BB00117F3F /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
 			requirement = {
@@ -1158,9 +1158,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		D0A063EF2C754D3C00ED8F73 /* SwiftyJSON */ = {
+		D0B7AF642C90D4BB00117F3F /* SwiftyJSON */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D0A063EE2C754D3C00ED8F73 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			package = D0B7AF632C90D4BB00117F3F /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
 			productName = SwiftyJSON;
 		};
 /* End XCSwiftPackageProductDependency section */
