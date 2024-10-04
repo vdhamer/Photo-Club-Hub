@@ -3,14 +3,14 @@
 Adding a new standalone MacOS app in GitHub that generates HTML membership lists for club websites.
 
 Code Maintenance
-* Tested on SwiftLint 0.57.0 and iOS 18.0 / 18.1 beta and Xcode 16.0 / 16.1 beta and MacOS 15.0
+* Tested on SwiftLint 0.57.0 and iOS 18.0.1 / 18.1 beta and Xcode 16.0 / 16.1 beta and MacOS 15.0.1
 * SwiftJSON imported as package (again). Was temporarily a single .swift file.
 * Entered trader status (not a trader) in Apple App Store.
 
 Data Maintenance
 * Added website for member WH in fgDeGender and added a few birthdays.
 
-This build #4631 was built using Xcode 15.4 and is intended for App Store distribution.
+This build #4631 was built using Xcode 16.0 and is intended for App Store distribution.
 
 ---------------------------------------------------------------------------
 
