@@ -6,6 +6,7 @@ Code Maintenance
 * Tested on SwiftLint 0.57.0 and iOS 18.0.1 / 18.1 beta and Xcode 16.0 / 16.1 beta and MacOS 15.0.1
 * SwiftJSON imported as package (again). Was temporarily a single .swift file.
 * Entered trader status (not a trader) in Apple App Store.
+* Minor update to OrganizationType.swift (to stay in sync with Photo-Club-Hub-HTML)
 
 Data Maintenance
 * Added website for member WH in fgDeGender and added a few birthdays.
