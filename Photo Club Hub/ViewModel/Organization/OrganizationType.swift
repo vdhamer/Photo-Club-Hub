@@ -160,4 +160,19 @@ enum OrganizationTypeEnum: String, CaseIterable, Sendable, Hashable {
                           comment: "Organization type is not known. Used for debugging.")
         }
     }
+
+    // used in Photo-Club-Hub-HTML
+    static func randomClubMuseumUnknown() -> OrganizationTypeEnum { // used for testing purposes
+        var generator = SystemRandomNumberGenerator()
+        return .allCases.randomElement(using: &generator)! // .club, .museum or .unknown
+    }
+
+    // used (or not) in Photo-Club-Hub-HTML
+    static func randomClubMuseum() -> OrganizationTypeEnum { // used for testing purposes
+        if Bool.random() {
+            return OrganizationTypeEnum.club
+        } else {
+            return OrganizationTypeEnum.museum
+        }
+    }
 }
