@@ -441,7 +441,6 @@
 				D029C4D02C54096200ABA977 /* Organization */,
 				D0F5EE852C54ED750028C9A6 /* Photographer */,
 				D0831A29277F72590049AB84 /* PreferencesViewModel.swift */,
-				D0C53BDC2ABF3ADF000722A1 /* PersonName.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -625,6 +624,7 @@
 		D0F5EE852C54ED750028C9A6 /* Photographer */ = {
 			isa = PBXGroup;
 			children = (
+				D0C53BDC2ABF3ADF000722A1 /* PersonName.swift */,
 				D0831A25277F72590049AB84 /* Photographer.swift */,
 				D0F5EE862C54EDC60028C9A6 /* PhotographerOptionalFields.swift */,
 			);
