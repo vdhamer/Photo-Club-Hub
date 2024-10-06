@@ -68,12 +68,9 @@ extension Photographer {
     // Update existing attributes or fill the new object
     static func findCreateUpdate(context: NSManagedObjectContext, // foreground or background context
                                  personName: PersonName,
-                                 organization: Organization, // organization is only shown on console for debug purposes
                                  isDeceased: Bool? = nil, // nil means "don't know"
                                  optionalFields: PhotographerOptionalFields
                                 ) -> Photographer {
-        let photoClubPref = "\(organization.fullNameTown):"
-
         let predicateFormat: String = "givenName_ = %@ AND infixName_ = %@ AND familyName_ = %@" // avoid localization
         let predicate = NSPredicate(format: predicateFormat, argumentArray: [
                                                                               personName.givenName,
@@ -107,9 +104,9 @@ extension Photographer {
                                     isDeceased: isDeceased,
                                     optionalFields: optionalFields)
             if wasUpdated {
-                print("\(photoClubPref) Updated info for photographer <\(photographer.fullNameFirstLast)>")
+                print("Updated info for photographer <\(photographer.fullNameFirstLast)>")
             } else {
-                print("\(photoClubPref) No changes for photographer <\(photographer.fullNameFirstLast)>")
+                print("No changes for photographer <\(photographer.fullNameFirstLast)>")
             }
             return photographer
         } else {
@@ -124,7 +121,7 @@ extension Photographer {
                        isDeceased: isDeceased,
                        optionalFields: optionalFields)
             // don't log whether attribbutes have been updated if it is a new photographer
-            print("\(photoClubPref) Successfully created new photographer <\(photographer.fullNameFirstLast)>")
+            print("Successfully created new photographer <\(photographer.fullNameFirstLast)>")
             return photographer
         }
     }

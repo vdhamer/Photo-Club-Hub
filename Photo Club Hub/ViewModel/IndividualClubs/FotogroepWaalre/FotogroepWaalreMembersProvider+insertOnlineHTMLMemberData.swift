@@ -146,7 +146,6 @@ extension FotogroepWaalreMembersProvider {
         let photographer = Photographer.findCreateUpdate(
             context: bgContext,
             personName: personName,
-            organization: organization,
             isDeceased: !self.isStillAlive(phone: optionalFields.phoneNumber),
             optionalFields: optionalFields)
 

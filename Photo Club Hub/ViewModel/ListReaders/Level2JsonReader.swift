@@ -233,7 +233,6 @@ class Level2JsonReader { // normally running on a background thread
                                                             givenName: givenName,
                                                             infixName: infixName, // may be ""
                                                             familyName: familyName),
-                                                         organization: club, // used for debug messages
                                                          optionalFields: PhotographerOptionalFields()) // updated later
 
         let memberPortfolio: MemberPortfolio
@@ -308,7 +307,6 @@ class Level2JsonReader { // normally running on a background thread
                                           personName: PersonName(givenName: photographer.givenName,
                                                                  infixName: photographer.infixName,
                                                                  familyName: photographer.familyName),
-                                          organization: club, // club is only shown on console for debug purposes
                                           isDeceased: memberRolesAndStatus.isDeceased(),
                                           optionalFields: PhotographerOptionalFields(
                                               bornDT: birthday?.extractDate(),
