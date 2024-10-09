@@ -1108,6 +1108,30 @@
 
         {
             "idPlus": {
+                "town": "Westerhoven",
+                "fullName": "Fotoclub de Verbeelding",
+                "nickName": "fcVerbeelding"
+            },
+            "coordinates": {
+                "latitude": 51.33141,
+                "longitude": 5.39887
+            },
+            "website": "https://deverbeelding.squarespace.com",
+            "level2URL": "https://www.example.com/fcVerbeelding.level2.json",
+            "remark": [
+                {
+                    "language": "EN",
+                    "value": "The club's meets in a municipal building opposite the town's church."
+                },
+                {
+                    "language": "NL",
+                    "value": "De club komt bijeen in De Buitengaander, direkt tegenover de Sint-Servatiuskerk."
+                }
+            ]
+        },
+
+        {
+            "idPlus": {
                 "town": "Zaltbommel",
                 "fullName": "Fotoclub Bommelerwaard",
                 "nickName": "fcBommelerwaard"
