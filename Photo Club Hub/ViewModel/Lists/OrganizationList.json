@@ -428,7 +428,7 @@
                 "longitude": 5.4501
             },
             "website": "https://www.fcdegender.nl",
-            "level2URL": "https://www.example.com/deGender.level2.json",
+            "level2URL": "https://www.fcDeGender.com/deGender.level2.json",
             "remark": [
                 {
                     "language": "EN",
@@ -626,6 +626,54 @@
                 {
                     "language": "NL",
                     "value": "De jaarlijkse expositie wordt op moederdag gehouden in Natuurtheater Kersouwe."
+                }
+            ]
+        },
+
+        {
+            "idPlus": {
+                "town": "Nuenen",
+                "fullName": "Fotoclub f/2",
+                "nickName": "fcF2"
+            },
+            "coordinates": {
+                "latitude": 51.46536,
+                "longitude": 5.54854
+            },
+            "website": "https://www.pvge.nl/nuenen/fotoclub-f2/",
+            "level2URL": "https://www.example.com/fcF2.level2.json",
+            "remark": [
+                {
+                    "language": "EN",
+                    "value": "The club is part of a senior citizens organisation, along with another club called Fotoclub Knipoog."
+                },
+                {
+                    "language": "NL",
+                    "value": "De club maakt deel uit van seniorenverening PVGE Nuenen - net als een zusterverening Fotoclub Knipoog."
+                }
+            ]
+        },
+
+        {
+            "idPlus": {
+                "town": "Nuenen",
+                "fullName": "Fotoclub Knipoog",
+                "nickName": "fcKnipoog"
+            },
+            "coordinates": {
+                "latitude": 51.46536,
+                "longitude": 5.54854
+            },
+            "website": "https://www.pvge.nl/nuenen/fotoclub-knipoog/",
+            "level2URL": "https://www.example.com/fcKnipoog.level2.json",
+            "remark": [
+                {
+                    "language": "EN",
+                    "value": "The club is part of a senior citizens organisation, along with another club called Fotoclub f/2."
+                },
+                {
+                    "language": "NL",
+                    "value": "De club maakt deel uit van seniorenverening PVGE Nuenen - net als een zusterverening Fotoclub f/2."
                 }
             ]
         },
@@ -1141,7 +1189,7 @@
                 "longitude": 5.25076
             },
             "website": "",
-            "level2URL": "https://www.example.com/fcBommelerwaard.level2.json",
+            "level2URL": "https://www.example.com/?.level2.json",
             "remark": [
                 {
                     "language": "EN",
@@ -1168,7 +1216,7 @@
                 "longitude": 5.67461
             },
             "website": "www.facebook.com/ObjectiefZeeland",
-            "level2URL": "https://www.example.com/fcObjectief.level2.json",
+            "level2URL": "https://www.example.com/???.level2.json",
             "remark": [
                 {
                     "language": "EN",
@@ -2003,3 +2051,4 @@
 
     ]
 }
+
