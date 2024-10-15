@@ -632,6 +632,54 @@
 
         {
             "idPlus": {
+                "town": "Nuenen",
+                "fullName": "Fotoclub f/2",
+                "nickName": "fcF2"
+            },
+            "coordinates": {
+                "latitude": 51.46536,
+                "longitude": 5.54854
+            },
+            "website": "https://www.pvge.nl/nuenen/fotoclub-f2/",
+            "level2URL": "https://www.example.com/fcF2.level2.json",
+            "remark": [
+                {
+                    "language": "EN",
+                    "value": "The club is part of a senior citizens organisation, along with another club called Fotoclub Knipoog."
+                },
+                {
+                    "language": "NL",
+                    "value": "De club maakt deel uit van seniorenverening PVGE Nuenen - net als een zusterverening Fotoclub Knipoog."
+                }
+            ]
+        },
+
+        {
+            "idPlus": {
+                "town": "Nuenen",
+                "fullName": "Fotoclub Knipoog",
+                "nickName": "fcKnipoog"
+            },
+            "coordinates": {
+                "latitude": 51.46536,
+                "longitude": 5.54854
+            },
+            "website": "https://www.pvge.nl/nuenen/fotoclub-knipoog/",
+            "level2URL": "https://www.example.com/fcKnipoog.level2.json",
+            "remark": [
+                {
+                    "language": "EN",
+                    "value": "The club is part of a senior citizens organisation, along with another club called Fotoclub f/2."
+                },
+                {
+                    "language": "NL",
+                    "value": "De club maakt deel uit van seniorenverening PVGE Nuenen - net als een zusterverening Fotoclub f/2."
+                }
+            ]
+        },
+
+        {
+            "idPlus": {
                 "town": "Nuland",
                 "fullName": "Fotoclub Nuland",
                 "nickName": "fcNuland"
