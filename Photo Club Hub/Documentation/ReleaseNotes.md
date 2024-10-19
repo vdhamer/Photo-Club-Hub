@@ -8,6 +8,7 @@ Code Maintenance
 * Entered trader status (not a trader) in Apple App Store.
 * Minor update to OrganizationType.swift (to stay in sync with Photo-Club-Hub-HTML)
 * removed Organization parameter from Photographer.createFindUpdate() as it was used for debugging only
+* set LSMinimumSystemVersion to (MacOS) 15.0.0 in case the app ever runs on a Mac
 
 Data Maintenance
 * Added website for member WH in fgDeGender and added a few birthdays.
