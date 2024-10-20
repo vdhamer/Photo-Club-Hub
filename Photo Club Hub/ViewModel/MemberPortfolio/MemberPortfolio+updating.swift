@@ -63,6 +63,7 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
     }
 
     // Update non-identifying attributes/properties within existing instance of class MemberPortfolio
+    // swiftlint:disable:next function_body_length
     private func update(bgContext: NSManagedObjectContext,
                         removeMember: Bool, // used to remove club members that disappeared from lists
                         optionalFields: MemberOptionalFields
