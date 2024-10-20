@@ -112,7 +112,7 @@ This aims to provide a degree of uniformity, thus sparing the user from having t
 discovering where to find the photos within the site and how to browse through these portfolios. 
 Starting in version 2 the app's name was changed to _Photo Club Hub_ (the previous name was _Photo Club Waalre_) to emphasize the multi-club aspect.</p>
    
-To achieve this, the app fetches online software-readable lists of photo clubs, lists of club members and their curated photos. 
+To achieve this, the app fetches online lists of photo clubs, lists of club members and their curated photos. 
 This ensures that photo clubs, club members and their portfolio's can be added or updated without requiring a change to the app software.
 More importantly, this also allows the clubs to manage their own data.</p>
 
