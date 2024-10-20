@@ -155,10 +155,10 @@ and then see which club (or clubs) the photographer is associated with:
 * photographer __Bill__
   * photo club _Clickers_ (hosted on www.fotoclubclickers.com)
       * photos by Bill as a member of the Clickers
-  * photo club _Zoomers_ (hosted on www.photoclubzoomers.com)
-      * photos by Bill as a member of the Zoomers
 
 * photographer __John__
+  * photo club _Clickers_ (hosted on www.photoclubClickers.com)
+      * photos by John as a member of the Clickers
   * photo club _Zoomers_ (hosted on www.photoclubzoomer.com)
       * photos by John as a member of the Zoomers 
 
