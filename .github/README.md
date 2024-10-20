@@ -164,7 +164,7 @@ know the name of the club (or clubs) the photographer is associated with:
 
 * photographer __Sean__
     * photo club _Zoomers_ (hosted on `www.PhotoClubZoomers.com`)
-        * photos by Sean as a memer of the Zoomers
+        * photos by Sean as a member of the Zoomers
    
 <a/></p>
 
