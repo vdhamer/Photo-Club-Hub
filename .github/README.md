@@ -134,13 +134,13 @@ Either way, once you have chosen a photographer-and-club combination, you can vi
 Here is a schematic representation of the `Portfolios` screen.
 This view puts the photo club first, and then zooms into club members and their work:
 
-* photo club _Clickers_ (hosted on www.PhotoClubClickers.com)
+* photo club _Clickers_ (hosted on \www.PhotoClubClickers.com)
   * member __Bill__
     * photos by Bill as a a member the Clickers
   * member __John__
     * photos John as a member of the Clickers
 
-* photo club _Zoomers_ (hosted on www.PhotoClubZoomers.com)
+* photo club _Zoomers_ (hosted on /www.PhotoClubZoomers.com)
   * member __John__
     * photos by John as a member of the Zoomers
   * member __Sean__
