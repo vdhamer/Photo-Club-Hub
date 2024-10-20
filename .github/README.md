@@ -123,10 +123,10 @@ See the <a href="#adding-more-photo-clubs">chapter</a> on how to add a club's da
 
 > The app showcases curated images made by members of photo clubs.
 
-Photo clubs are the distinguishing feature of this app. You either look up a photo club and then find its members
-(the `Portfolio` screen) or you look up a photographer and then find the associated photo club
-(the `Who's Who` screen). Once you have chosen a club-and-member combination or a person-and-club combination,
-you can view the photo portfolio of that club member.
+Photo clubs are thus the distinguishing feature of this app.
+You can first look up a photo club and then find its members in the `Portfolio` screen. 
+Or you can alternatively look up a photographer and then the associated photo club in the `Who's Who` screen.
+Either way, once you have chosen a photographer-and-club combination, you can view the photo portfolio of that club member.
 
 <ul><details><summary>Details (click to expand)</summary></p>
 
