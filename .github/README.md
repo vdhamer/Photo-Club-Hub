@@ -148,7 +148,7 @@ This view puts the photo club first, and then zoom into club members and their w
 
 <a/></p>
 
-An alternative navigation path is provided by the "Who's Who" screen.
+An alternative navigation path is provided by the _Who's Who_ screen.
 This view puts the photographer first, thus allowing you to find a photographer directly
 and then see which club (or clubs) the photographer is associated with:
 
