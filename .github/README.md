@@ -132,7 +132,7 @@ Either way, once you have chosen a photographer-and-club combination, you can vi
 <ul><details><summary>Details (click to expand)</summary></p>
 
 Here is a schematic representation of the `Portfolios` screen.
-This view puts the photo club first, and then zooms into club members and their work:
+This screen puts the photo club first, and then allows you to select club members and their work:
 
 * photo club _Clickers_ (hosted on `www.PhotoClubClickers.com`)
   * member __Bill__
@@ -149,8 +149,8 @@ This view puts the photo club first, and then zooms into club members and their 
 <a/></p>
 
 An alternative navigation path is provided by the `Who's Who` screen.
-This view puts the photographer first, thus allowing you to find a photographer directly
-and then see which club (or clubs) the photographer is associated with:
+This screen puts the photographer first, thus allowing you to find a photographer even if you don't
+know the name of the club (or clubs) the photographer is associated with:
 
 * photographer __Bill__
   * photo club _Clickers_ (hosted on `www.PhotoClubclickers.com`)
@@ -170,15 +170,16 @@ and then see which club (or clubs) the photographer is associated with:
 
 For comparison, traditional personal websites stress the photographer's images, without any reference to clubs:
     
-* website for photographer1 (hosted on site1)
-  * photo galleryA (e.g. portraits)
-    * portraits in galleryA
-  * photo galleryB (e.g. landscapes)
-    * landscapes in galleryB
+* website for __Bill__ (hosted on `www.BillIsAwesome.com`)
+  * photo gallery with portraits
+    * portrait photos by Bill
+  * photo gallery with landscapes
+    * landscape photos by Bill
 
-* website for photographer 2 (hosted on site2)
-  * photo galleryC (e.g. macro)
-    * :
+* website for __John__ (hosted on `www.JohnIsAwesomeToo.com`)
+  * photo gallery with macros
+    * macro photos by John
+  * : 
 
 ### Implications
 <ul><details>
