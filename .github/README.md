@@ -134,14 +134,14 @@ Either way, once you have chosen a photographer-and-club combination, you can vi
 Here is a schematic representation of the `Portfolios` screen.
 This view puts the photo club first, and then zoom into club members and their work:
 
-* photo club Clickers (hosted on their website)
-  * member Bill
+* photo club _Clickers_ (hosted on www.fotoclubclickers.com)
+  * member __Bill__
     * photos by Bill as a a member the Clickers
-  * =member John
+  * =member __John__
     * photos John as a member of the Clickers
 
-* photo club Zoomers (hosted on their website)
-  * member John
+* photo club _Zoomers_ (hosted on www.fotoclubzoomers.com)
+  * member __John__
     * photos by John as a member of the Zoomers
   * member Sean
     * photos by Sean as a member of the Zoomers
@@ -152,19 +152,20 @@ An alternative navigation path is provided by the _Who's Who_ screen.
 This view puts the photographer first, thus allowing you to find a photographer directly
 and then see which club (or clubs) the photographer is associated with:
 
-* photographer Bill
-  * photo club Clickers (hosted on their website)
+* photographer __Bill__
+  * photo club _Clickers_ (hosted on their website)
       * photos by Bill as a member of the Clickers
-  * photo club Zoomers (hosted on their website)
+  * photo club _Zoomers_ (hosted on their website)
       * photos by Bill as a member of the Zoomers
 
-* photographer John
-  * photo club Zoomers
+* photographer __John__
+  * photo club _Zoomers_
       * photos by John as a member of the Zoomers 
 
-* photographer Sean
-  * :
-
+* photographer __Sean__
+    * photo club _Zoomers_
+        * photos by Sean as a memer of the Zoomers
+   
 <a/></p>
 
 For comparison, traditional personal websites stress the photographer's images, without any reference to clubs:
