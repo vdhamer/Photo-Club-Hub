@@ -137,7 +137,7 @@ This view puts the photo club first, and then zoom into club members and their w
 * photo club _Clickers_ (hosted on www.fotoclubclickers.com)
   * member __Bill__
     * photos by Bill as a a member the Clickers
-  * =member __John__
+  * member __John__
     * photos John as a member of the Clickers
 
 * photo club _Zoomers_ (hosted on www.fotoclubzoomers.com)
