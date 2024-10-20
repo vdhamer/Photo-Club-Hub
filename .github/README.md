@@ -134,17 +134,17 @@ Either way, once you have chosen a photographer-and-club combination, you can vi
 Here is a schematic representation of the `Portfolios` screen.
 This view puts the photo club first, and then zoom into club members and their work:
 
-* photo club A (hosted on site A)
-  * member 1
-    * photos by member 1
-  * member 2
-    * photos by member 2
+* photo club Clickers (hosted on their website)
+  * member Bill
+    * photos by Bill as a a member the Clickers
+  * =member John
+    * photos John as a member of the Clickers
 
-* photo club B (hosted on site B)
-  * member 3
-    * photos by member 3
-  * member 4
-    * photos by member 4
+* photo club Zoomers (hosted on their website)
+  * member John
+    * photos by John as a member of the Zoomers
+  * member Sean
+    * photos by Sean as a member of the Zoomers
 
 <a/></p>
 
@@ -152,17 +152,17 @@ An alternative navigation path is provided by the _Who's Who_ screen.
 This view puts the photographer first, thus allowing you to find a photographer directly
 and then see which club (or clubs) the photographer is associated with:
 
-* photographer 1
-  * photo club A
-      * photos by photographer 1 as member of club A
-  * photo club B (optional)
-      * photos of photographer 1 as member of club B     
+* photographer Bill
+  * photo club Clickers (hosted on their website)
+      * photos by Bill as a member of the Clickers
+  * photo club Zoomers (hosted on their website)
+      * photos by Bill as a member of the Zoomers
 
-* photographer 2
-  * photo club A (or club B or C)
-      * photos of photographer 2 as member of club A
+* photographer John
+  * photo club Zoomers
+      * photos by John as a member of the Zoomers 
 
-* photographer 3
+* photographer Sean
   * :
 
 <a/></p>
