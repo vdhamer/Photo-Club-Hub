@@ -428,7 +428,7 @@
                 "longitude": 5.4501
             },
             "website": "https://www.fcdegender.nl",
-            "level2URL": "https://www.example.com/deGender.level2.json",
+            "level2URL": "https://www.fcDeGender.com/deGender.level2.json",
             "remark": [
                 {
                     "language": "EN",
@@ -632,6 +632,54 @@
 
         {
             "idPlus": {
+                "town": "Nuenen",
+                "fullName": "Fotoclub f/2",
+                "nickName": "fcF2"
+            },
+            "coordinates": {
+                "latitude": 51.4654,
+                "longitude": 5.5485
+            },
+            "website": "https://www.pvge.nl/nuenen/fotoclub-f2/",
+            "level2URL": "https://www.example.com/fcF2.level2.json",
+            "remark": [
+                {
+                    "language": "EN",
+                    "value": "The club is part of a senior citizens organisation, along with another club called Fotoclub Knipoog."
+                },
+                {
+                    "language": "NL",
+                    "value": "De club maakt deel uit van seniorenverening PVGE Nuenen - net als een zusterverening Fotoclub Knipoog."
+                }
+            ]
+        },
+
+        {
+            "idPlus": {
+                "town": "Nuenen",
+                "fullName": "Fotoclub Knipoog",
+                "nickName": "fcKnipoog"
+            },
+            "coordinates": {
+                "latitude": 51.4655,
+                "longitude": 5.5486
+            },
+            "website": "https://www.pvge.nl/nuenen/fotoclub-knipoog/",
+            "level2URL": "https://www.example.com/fcKnipoog.level2.json",
+            "remark": [
+                {
+                    "language": "EN",
+                    "value": "The club is part of a senior citizens organisation, along with another club called Fotoclub f/2."
+                },
+                {
+                    "language": "NL",
+                    "value": "De club maakt deel uit van seniorenverening PVGE Nuenen - net als een zusterverening Fotoclub f/2."
+                }
+            ]
+        },
+
+        {
+            "idPlus": {
                 "town": "Nuland",
                 "fullName": "Fotoclub Nuland",
                 "nickName": "fcNuland"
@@ -812,6 +860,33 @@
             ],
             "nlSpecific": {
                 "fotobondNumber": 1676
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Sint Michielsgestel",
+                "fullName": "Fotokring Sint-Micheelsgestel",
+                "nickName": "fkGestel"
+            },
+            "coordinates": {
+                "latitude": 51.64036,
+                "longitude": 5.34749
+            },
+            "website": "https://www.fotokring-gestel.nl",
+            "level2URL": "https://www.example.com/fkGestel.level2.json",
+            "remark": [
+                {
+                    "language": "EN",
+                    "value": "This club dates back to 1960 and has meetups every 3 weeks."
+                },
+                {
+                    "language": "NL",
+                    "value": "De club is opgericht in 1960 en komt om de drie weken bijeen."
+                }
+            ],
+            "nlSpecific": {
+                "fotobondNumber": 1615
             }
         },
 
@@ -1062,7 +1137,7 @@
                 "latitude": 51.6825,
                 "longitude": 5.069444
             },
-            "website": "https://www.collectiefbrabant.nl",
+            "website": "https://www.facebook.com/people/Collectief-Brabant/100007273477885",
             "level2URL": "https://www.example.com/Brabant.level2.json",
             "remark": [
                 {
@@ -1104,6 +1179,30 @@
             "nlSpecific": {
                 "fotobondNumber": 1618
             }
+        },
+
+        {
+            "idPlus": {
+                "town": "Westerhoven",
+                "fullName": "Fotoclub de Verbeelding",
+                "nickName": "fcVerbeelding"
+            },
+            "coordinates": {
+                "latitude": 51.33141,
+                "longitude": 5.39887
+            },
+            "website": "https://deverbeelding.squarespace.com",
+            "level2URL": "https://www.example.com/fcVerbeelding.level2.json",
+            "remark": [
+                {
+                    "language": "EN",
+                    "value": "The club's meets in a municipal building opposite the town's church."
+                },
+                {
+                    "language": "NL",
+                    "value": "De club komt bijeen in De Buitengaander, direkt tegenover de Sint-Servatiuskerk."
+                }
+            ]
         },
 
         {
@@ -1979,3 +2078,4 @@
 
     ]
 }
+

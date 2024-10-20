@@ -20,10 +20,9 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
                                  optionalFields: MemberOptionalFields
                                 ) -> MemberPortfolio {
 
-        let predicateFormat: String = "organization_ = %@ AND photographer_ = %@" // avoid localization
+        let predicateFormat: String = "organization_ = %@ AND photographer_ = %@" // avoid localization of query string
         let predicate = NSPredicate(format: predicateFormat,
-                                    argumentArray: [organization, photographer]
-                                   )
+                                    argumentArray: [organization, photographer])
         let fetchRequest: NSFetchRequest<MemberPortfolio> = MemberPortfolio.fetchRequest()
         fetchRequest.predicate = predicate
         let memberPortfolios: [MemberPortfolio] = (try? bgContext.fetch(fetchRequest)) ?? [] // nil = absolute failure
@@ -64,6 +63,7 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
     }
 
     // Update non-identifying attributes/properties within existing instance of class MemberPortfolio
+    // swiftlint:disable:next function_body_length
     private func update(bgContext: NSManagedObjectContext,
                         removeMember: Bool, // used to remove club members that disappeared from lists
                         optionalFields: MemberOptionalFields
@@ -83,8 +83,9 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
         let changed6 = updateIfChangedOptional(update: &self.featuredImageThumbnail,
                                                with: optionalFields.featuredImageThumbnail)
         let changed7 = updateIfChanged(update: &self.removeMember, with: removeMember)
-        needsSaving = changed1 || changed2 || changed3 ||
-                      changed4 || changed5 || changed6 || changed7 // forces execution of updateIfChanged()
+        let changed8 = updateIfChanged(update: &self.fotobondNumber, with: optionalFields.fotobondNumber)
+        needsSaving = changed1 || changed2 || changed3 || changed4 ||
+                      changed5 || changed6 || changed7 || changed8 // forces execution of updateIfChanged()
 
         if needsSaving && Settings.extraCoreDataSaves {
             do {
@@ -113,6 +114,17 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
                                     Changed latest thumbnail for \(photographer.fullNameFirstLast) \
                                     to \(optionalFields.featuredImageThumbnail?.lastPathComponent ??
                                     "<noLatestThumbnail>")
+                                    """)}
+                if changed7 { print("""
+                                    \(organization.fullNameTown): \
+                                    Changed removeMember flag for \(photographer.fullNameFirstLast) \
+                                    to \(removeMember) ??
+                                    "<noLatestRemoveMember>")
+                                    """)}
+                if changed8 { print("""
+                                    \(organization.fullNameTown): \
+                                    Changed latest fotobondNumber for \(photographer.fullNameFirstLast) \
+                                    to \(optionalFields.fotobondNumber ?? 0)
                                     """)}
             } catch {
                 ifDebugFatalError("Update failed for member \(photographer.fullNameFirstLast) " +

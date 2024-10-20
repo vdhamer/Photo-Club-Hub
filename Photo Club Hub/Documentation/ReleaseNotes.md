@@ -1,14 +1,21 @@
 ### 2.7.1 (GitHub commit ???????) ??-08-24
 
+Adding a new standalone MacOS app in GitHub that generates HTML membership lists for club websites.
+
 Code Maintenance
-* Tested on SwiftLint 0.56.2 and iOS 17.7
+* Tested on SwiftLint 0.57.0 and 18.1 beta (22B5067a) and Xcode 16.0 / 16.1 beta (16B5029d) and MacOS 15.0.1
 * SwiftJSON imported as package (again). Was temporarily a single .swift file.
 * Entered trader status (not a trader) in Apple App Store.
+* Minor update to OrganizationType.swift (to stay in sync with Photo-Club-Hub-HTML)
+* removed Organization parameter from Photographer.createFindUpdate() as it was used for debugging only
+* set LSMinimumSystemVersion to (MacOS) 15.0.0 in case the app ever runs on a Mac
 
 Data Maintenance
 * Added website for member WH in fgDeGender and added a few birthdays (not shown so far).
+* Added Fotoclub de Verbeelding in Westerhoven, two clubs in Nuenen and one in Sint-Michielsgestel.
+* Updated website for Collectief Brabant
 
-This build #4631 was built using Xcode 15.4 and is intended for App Store distribution.
+This build #4631 was built using Xcode 16.0 and is intended for App Store distribution.
 
 ---------------------------------------------------------------------------
 
