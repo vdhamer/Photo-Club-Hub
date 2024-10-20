@@ -131,8 +131,8 @@ Either way, once you have chosen a photographer-and-club combination, you can vi
 
 <ul><details><summary>Details (click to expand)</summary></p>
 
-Here is a schematic representation of the `Portfolios` screen that lets you
-first find a photo club before you get to club's members and their images:
+Here is a schematic representation of the `Portfolios` screen.
+This view puts the photo club first, and then zoom into club members and their work:
 
 * photo clubA (hosted on siteA)
   * portfolio1 of photographer1
@@ -150,7 +150,7 @@ first find a photo club before you get to club's members and their images:
 
 An alternative navigation path is provided by the "Who's Who" screen.
 This view puts the photographer first, thus allowing you to find a photographer directly
-and then seeing which club(s) the photographer is associated with:
+and then see which club (or clubs) the photographer is associated with:
 
 * photographer1
   * photo club A
