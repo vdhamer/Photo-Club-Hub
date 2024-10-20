@@ -105,18 +105,16 @@
 ### The App
 
 This iOS app showcases photographs made by members of photography clubs.
-It thus serves as a permanent online gallery with selected work of these photographers.</p>
+It thus serves as a permanent online gallery with selected work by these photographers.</p>
 
-The first versions of the app only supported a single photo club in Waalre, a town in the south of the Netherlands.
-Starting with release 2.0, support was added for _multiple_ photo clubs.
-This allows viewers to see images from multiple clubs within a single app.
-It aims to provide a degree of uniformity, thus sparing the user from having to find each club's website, 
-discovering how to navigate each site and how to browse through the individual images within a site. 
-Starting in version 2 the app's name was changed from _Photo Club Waalre_ to _Photo Club Hub_ to emphasize the multi-club aspect.</p>
+Tha app allows viewers to see images from multiple clubs within a single app.
+This aims to provide a degree of uniformity, thus sparing the user from having to find a club's website, 
+discovering where to find the photos within the site and how to browse through these portfolios. 
+Starting in version 2 the app's name was changed to _Photo Club Hub_ (the previous name was _Photo Club Waalre_) to emphasize the multi-club aspect.</p>
    
-To achieve this, the app fetches online software-readable lists of photo clubs, their lists of members and their curated images. 
-This ensures that photo clubs, club members and member images can be added or changed without requiring an app update.
-It also allows the clubs to manage their own data.</p>
+To achieve this, the app fetches online lists of photo clubs, lists of club members and their curated photos. 
+This ensures that photo clubs, club members and their portfolio's can be added or updated without requiring a change to the app software.
+More importantly, this also allows the clubs to manage their own data.</p>
 
 See the <a href="#adding-more-photo-clubs">chapter</a> on how to add a club's data as 
 3 distict data layers or `Levels`.
@@ -125,47 +123,49 @@ See the <a href="#adding-more-photo-clubs">chapter</a> on how to add a club's da
 
 > The app showcases curated images made by members of photo clubs.
 
-Photo clubs are the distinguishing feature of this app. You either look up a photo club and then find its members
-(the `Portfolio` screen) or you look up a photographer and then find the associated photo club
-(the `Who's Who` screen). Once you have chosen a club-and-member combination or a person-and-club combination,
-you can view the image portfolio for that club member.
+Photo clubs are thus the distinguishing feature of this app.
+
+You can first look up a photo club and then find its members in the `Portfolio` screen. 
+Or you can alternatively look up a photographer and then the associated photo club in the `Who's Who` screen.
+Either way, once you have chosen a photographer-and-club combination, you can view the photo portfolio of that club member.
 
 <ul><details><summary>Details (click to expand)</summary></p>
 
-Here is a schematic representation of the `Portfolios` screen that lets you
-first find a photo club before you get to club's members and their images:
+Here is a schematic representation of the `Portfolios` screen.
+This view puts the photo club first, and then zooms into club members and their work:
 
-* photo clubA (hosted on siteA)
-  * portfolio1 of photographer1
-    * images within portfolio1
-  * portfolio2 of photographer2
-    * images within portfolio2
+* photo club _Clickers_ (hosted on `www.PhotoClubClickers.com`)
+  * member __Bill__
+    * photos by Bill as a a member the Clickers
+  * member __John__
+    * photos John as a member of the Clickers
 
-* photo clubB (hosted on siteB)
-  * portfolio3 of photographer3
-    * images within portfolio3
-  * portfolio4 of photographer4
-    * images within portfolio4
+* photo club _Zoomers_ (hosted on `www.PhotoClubZoomers.com`)
+  * member __John__
+    * photos by John as a member of the Zoomers
+  * member __Sean__
+    * photos by Sean as a member of the Zoomers
 
 <a/></p>
 
-An alternative navigation path is provided by the "Who's Who" screen.
+An alternative navigation path is provided by the `Who's Who` screen.
 This view puts the photographer first, thus allowing you to find a photographer directly
-and then seeing which club(s) the photographer is associated with:
+and then see which club (or clubs) the photographer is associated with:
 
-* photographer1
-  * photo club A
-      * images of photographer 1 in context of club A
-  * photo club B (optional)
-      * images of photographer 1 in context of club B     
+* photographer __Bill__
+  * photo club _Clickers_ (hosted on `www.PhotoClubclickers.com`)
+      * photos by Bill as a member of the Clickers
 
-* photographer2
-  * photo club A (or B or whatever)
-      * images of photographer 2 in context of club A
+* photographer __John__
+  * photo club _Clickers_ (hosted on `www.PhotoClubClickers.com`)
+      * photos by John as a member of the Clickers
+  * photo club _Zoomers_ (hosted on `www.photoclubzoomers.com`)
+      * photos by John as a member of the Zoomers 
 
-* photographer3
-  * :
-
+* photographer __Sean__
+    * photo club _Zoomers_ (hosted on `www.PhotoClubZoomers.com`)
+        * photos by Sean as a memer of the Zoomers
+   
 <a/></p>
 
 For comparison, traditional personal websites stress the photographer's images, without any reference to clubs:
