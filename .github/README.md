@@ -105,18 +105,16 @@
 ### The App
 
 This iOS app showcases photographs made by members of photography clubs.
-It thus serves as a permanent online gallery with selected work of these photographers.</p>
+It thus serves as a permanent online gallery with selected work by these photographers.</p>
 
-The first versions of the app only supported a single photo club in Waalre, a town in the south of the Netherlands.
-Starting with release 2.0, support was added for _multiple_ photo clubs.
-This allows viewers to see images from multiple clubs within a single app.
-It aims to provide a degree of uniformity, thus sparing the user from having to find each club's website, 
-discovering how to navigate each site and how to browse through the individual images within a site. 
-Starting in version 2 the app's name was changed from _Photo Club Waalre_ to _Photo Club Hub_ to emphasize the multi-club aspect.</p>
+Tha app allows viewers to see images from multiple clubs within a single app.
+This aims to provide a degree of uniformity, thus sparing the user from having to find a club's website, 
+discovering where to find the photos within each site and how to browse through these portfolios. 
+Starting in version 2 the app's name was changed to _Photo Club Hub_ (the previous name was _Photo Club Waalre_) to emphasize the multi-club aspect.</p>
    
-To achieve this, the app fetches online software-readable lists of photo clubs, their lists of members and their curated images. 
-This ensures that photo clubs, club members and member images can be added or changed without requiring an app update.
-It also allows the clubs to manage their own data.</p>
+To achieve this, the app fetches online software-readable lists of photo clubs, lists of club members and their curated photos. 
+This ensures that photo clubs, club members and their portfolio's can be added or updated without requiring a change to the app software.
+More importantly, this also allows the clubs to manage their own data.</p>
 
 See the <a href="#adding-more-photo-clubs">chapter</a> on how to add a club's data as 
 3 distict data layers or `Levels`.
@@ -128,7 +126,7 @@ See the <a href="#adding-more-photo-clubs">chapter</a> on how to add a club's da
 Photo clubs are the distinguishing feature of this app. You either look up a photo club and then find its members
 (the `Portfolio` screen) or you look up a photographer and then find the associated photo club
 (the `Who's Who` screen). Once you have chosen a club-and-member combination or a person-and-club combination,
-you can view the image portfolio for that club member.
+you can view the photo portfolio of that club member.
 
 <ul><details><summary>Details (click to expand)</summary></p>
 
