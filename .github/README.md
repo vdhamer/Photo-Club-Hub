@@ -132,7 +132,7 @@ Either way, once you have chosen a photographer-and-club combination, you can vi
 <ul><details><summary>Details (click to expand)</summary></p>
 
 Here is a schematic representation of the `Portfolios` screen.
-This view puts the photo club first, and then zoom into club members and their work:
+This view puts the photo club first, and then zooms into club members and their work:
 
 * photo club _Clickers_ (hosted on www.fotoclubclickers.com)
   * member __Bill__
@@ -143,7 +143,7 @@ This view puts the photo club first, and then zoom into club members and their w
 * photo club _Zoomers_ (hosted on www.fotoclubzoomers.com)
   * member __John__
     * photos by John as a member of the Zoomers
-  * member Sean
+  * member __Sean__
     * photos by Sean as a member of the Zoomers
 
 <a/></p>
