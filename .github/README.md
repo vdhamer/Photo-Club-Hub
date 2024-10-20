@@ -134,13 +134,13 @@ Either way, once you have chosen a photographer-and-club combination, you can vi
 Here is a schematic representation of the `Portfolios` screen.
 This view puts the photo club first, and then zoom into club members and their work:
 
-* photo clubA (hosted on siteA)
+* photo club A (hosted on site A)
   * member 1
     * photos by member 1
   * member 2
     * photos by member 2
 
-* photo clubB (hosted on siteB)
+* photo club B (hosted on site B)
   * member 3
     * photos by member 3
   * member 4
@@ -162,7 +162,7 @@ and then see which club (or clubs) the photographer is associated with:
   * photo club A (or club B or C)
       * photos of photographer 2 as member of club A
 
-* photographer3
+* photographer 3
   * :
 
 <a/></p>
