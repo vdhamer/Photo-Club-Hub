@@ -135,16 +135,16 @@ Here is a schematic representation of the `Portfolios` screen.
 This view puts the photo club first, and then zoom into club members and their work:
 
 * photo clubA (hosted on siteA)
-  * portfolio1 of photographer1
-    * images within portfolio1
-  * portfolio2 of photographer2
-    * images within portfolio2
+  * member 1
+    * photos by member 1
+  * member 2
+    * photos by member 2
 
 * photo clubB (hosted on siteB)
-  * portfolio3 of photographer3
-    * images within portfolio3
-  * portfolio4 of photographer4
-    * images within portfolio4
+  * member 3
+    * photos by member 3
+  * member 4
+    * photos by member 4
 
 <a/></p>
 
@@ -152,15 +152,15 @@ An alternative navigation path is provided by the "Who's Who" screen.
 This view puts the photographer first, thus allowing you to find a photographer directly
 and then see which club (or clubs) the photographer is associated with:
 
-* photographer1
+* photographer 1
   * photo club A
-      * images of photographer 1 in context of club A
+      * photos by photographer 1 as member of club A
   * photo club B (optional)
-      * images of photographer 1 in context of club B     
+      * photos of photographer 1 as member of club B     
 
-* photographer2
-  * photo club A (or B or whatever)
-      * images of photographer 2 in context of club A
+* photographer 2
+  * photo club A (or club B or C)
+      * photos of photographer 2 as member of club A
 
 * photographer3
   * :
