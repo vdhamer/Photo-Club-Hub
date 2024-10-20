@@ -109,7 +109,7 @@ It thus serves as a permanent online gallery with selected work by these photogr
 
 Tha app allows viewers to see images from multiple clubs within a single app.
 This aims to provide a degree of uniformity, thus sparing the user from having to find a club's website, 
-discovering where to find the photos within each site and how to browse through these portfolios. 
+discovering where to find the photos within the site and how to browse through these portfolios. 
 Starting in version 2 the app's name was changed to _Photo Club Hub_ (the previous name was _Photo Club Waalre_) to emphasize the multi-club aspect.</p>
    
 To achieve this, the app fetches online software-readable lists of photo clubs, lists of club members and their curated photos. 
