@@ -865,6 +865,33 @@
 
         {
             "idPlus": {
+                "town": "Sint Michielsgestel",
+                "fullName": "Fotokring Sint-Micheelsgestel",
+                "nickName": "fkGestel"
+            },
+            "coordinates": {
+                "latitude": 51.64036,
+                "longitude": 5.34749
+            },
+            "website": "https://www.fotokring-gestel.nl",
+            "level2URL": "https://www.example.com/fkGestel.level2.json",
+            "remark": [
+                {
+                    "language": "EN",
+                    "value": "This club dates back to 1960 and has meetups every 3 weeks."
+                },
+                {
+                    "language": "NL",
+                    "value": "De club is opgericht in 1960 en komt om de drie weken bijeen."
+                }
+            ],
+            "nlSpecific": {
+                "fotobondNumber": 1615
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Sint-Oedenrode",
                 "fullName": "Fotoclub Rooi",
                 "nickName": "fcRooi"

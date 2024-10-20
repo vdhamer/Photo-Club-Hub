@@ -12,7 +12,7 @@ Code Maintenance
 
 Data Maintenance
 * Added website for member WH in fgDeGender and added a few birthdays.
-* Added Fotoclub de Verbeelding in Westerhoven and two photo clubs in Nuenen.
+* Added Fotoclub de Verbeelding in Westerhoven, two clubs in Nuenen and one in Sint-Michielsgestel.
 * Updated website for Collectief Brabant
 
 This build #4631 was built using Xcode 16.0 and is intended for App Store distribution.
