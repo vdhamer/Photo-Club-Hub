@@ -11,7 +11,7 @@ Code Maintenance
 * set LSMinimumSystemVersion to (MacOS) 15.0.0 in case the app ever runs on a Mac
 
 Data Maintenance
-* Added website for member WH in fgDeGender and added a few birthdays.
+* Added website for member WH in fgDeGender and added a few birthdays (not shown so far).
 * Added Fotoclub de Verbeelding in Westerhoven, two clubs in Nuenen and one in Sint-Michielsgestel.
 * Updated website for Collectief Brabant
 
