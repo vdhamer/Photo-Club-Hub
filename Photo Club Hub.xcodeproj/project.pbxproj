@@ -180,7 +180,6 @@
 		D0831A25277F72590049AB84 /* Photographer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photographer.swift; sourceTree = "<group>"; };
 		D0831A28277F72590049AB84 /* BellusImagoMembersProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BellusImagoMembersProvider.swift; sourceTree = "<group>"; };
 		D0831A29277F72590049AB84 /* PreferencesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesViewModel.swift; sourceTree = "<group>"; };
-		D0831A2B277F72590049AB84 /* FotogroepWaalreMembersProvider+insertSomeHardcodedMemberData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FotogroepWaalreMembersProvider+insertSomeHardcodedMemberData.swift"; sourceTree = "<group>"; };
 		D0831A2C277F72590049AB84 /* FotogroepWaalreMembersProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FotogroepWaalreMembersProvider.swift; sourceTree = "<group>"; };
 		D0831A2D277F72590049AB84 /* Organization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Organization.swift; sourceTree = "<group>"; };
 		D0831A40277F731C0049AB84 /* Published+UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Published+UserDefaults.swift"; sourceTree = "<group>"; };
@@ -459,7 +458,6 @@
 			children = (
 				D0831A2C277F72590049AB84 /* FotogroepWaalreMembersProvider.swift */,
 				D067549F2942B23F00C0AB08 /* FotogroepWaalreMembersProvide+enumHTMLPageLoadingState.swift */,
-				D0831A2B277F72590049AB84 /* FotogroepWaalreMembersProvider+insertSomeHardcodedMemberData.swift */,
 				D0968F652A76F8A00096987A /* FotogroepWaalreMembersProvider+insertOnlineHTMLMemberData.swift */,
 				D01FBB2A2C5EE1CC006D1F08 /* FotogroepWaalreMembersProvider+insertOnlineMemberData.swift */,
 				D08281342959C9D800D9C232 /* FotogroepWaalre Extractors */,
