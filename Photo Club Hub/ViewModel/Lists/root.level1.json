@@ -263,6 +263,30 @@
 
         {
             "idPlus": {
+                "town": "Dommelen",
+                "fullName": "Fotoclub Lamina",
+                "nickName": "fcLamina"
+            },
+            "coordinates": {
+                "latitude": 51.35665,
+                "longitude": 5.43153
+            },
+            "website": "https://www.lamina.nl",
+            "level2URL": "https://www.example.com/fcLamina.level2.json",
+            "remark": [
+                {
+                    "language": "EN",
+                    "value": "The website mentions that enjoyment of photography should prevail over striving for the best possible images."
+                },
+                {
+                    "language": "NL",
+                    "value": "Citaat: 'Het niveau moet echter, naar onze mening, ondergeschikt zijn aan het plezier dat men beleeft aan fotografie.'"
+                }
+            ]
+        },
+
+        {
+            "idPlus": {
                 "town": "Duerne",
                 "fullName": "Fotoclub Optika",
                 "nickName": "FC Optika"
