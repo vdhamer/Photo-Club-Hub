@@ -342,6 +342,30 @@
         {
             "idPlus": {
                 "town": "Eersel",
+                "fullName": "Fotoclub Zzzoom",
+                "nickName": "fcZzzoom"
+            },
+            "coordinates": {
+                "latitude": 51.35712,
+                "longitude": 5.31062
+            },
+            "website": "https://www.zzzoom.nl",
+            "level2URL": "https://www.example.com/fcZzzoom.level2.json",
+            "remark": [
+                {
+                    "language": "EN",
+                    "value": "The club currently has 12 members and a jearly exposition."
+                },
+                {
+                    "language": "NL",
+                    "value": "Uit de website blijkt dat de club 12 leden heeft en jaarlijks exposeert."
+                }
+            ]
+        },
+
+        {
+            "idPlus": {
+                "town": "Eersel",
                 "fullName": "Fotoclub Lucifer",
                 "nickName": "FC Lucifer"
             },
