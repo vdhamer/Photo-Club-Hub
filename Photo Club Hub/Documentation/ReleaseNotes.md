@@ -3,7 +3,7 @@
 Adding a new standalone MacOS app in GitHub that generates HTML membership lists for club websites.
 
 Code Maintenance
-* Tested on SwiftLint 0.57.0 and iOS 18.2 (22C5109l) and Xcode 16.2 beta (16B5100e) and MacOS 15.0.1
+* Tested on SwiftLint 0.57.0 and iOS 18.2 (22C5109l) and Xcode 16.2 beta (16B5100e) and MacOS 15.1
 * SwiftJSON imported as package (again). Was temporarily a single .swift file.
 * Entered trader status (not a trader) in Apple App Store.
 * Minor update to OrganizationType.swift (to stay in sync with Photo-Club-Hub-HTML)
