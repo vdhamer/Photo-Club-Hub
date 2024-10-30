@@ -11,7 +11,7 @@ import RegexBuilder
 extension FotogroepWaalreMembersProvider {
 
     public static let baseURL = "http://www.vdHamer.com/fgWaalre/"
-    private static let url = "http://www.vdhamer.com/fgwaalre_level2/?ppt=f13a433cf52df1318ca04ca739867054"
+    fileprivate static let url = "http://www.vdhamer.com/fgwaalre_level2/?ppt=f13a433cf52df1318ca04ca739867054"
 
     func insertOnlineHTMLMemberData(bgContext: NSManagedObjectContext) { // runs on a background thread
         // can't rely on async (!) insertSomeHardcodedMemberData() to return managed photoClub object in time
@@ -36,10 +36,10 @@ extension FotogroepWaalreMembersProvider {
         }
     }
 
-    private func loadPrivateMembersFromWebsite(bgContext: NSManagedObjectContext,
-                                               privateMemberURL: URL,
-                                               organization: Organization,
-                                               idPlus: OrganizationIdPlus) {
+    fileprivate func loadPrivateMembersFromWebsite(bgContext: NSManagedObjectContext,
+                                                   privateMemberURL: URL,
+                                                   organization: Organization,
+                                                   idPlus: OrganizationIdPlus) {
 
         ifDebugPrint("\(organization.fullNameTown): starting loadPrivateMembersFromWebsite() in background")
 
@@ -82,9 +82,9 @@ extension FotogroepWaalreMembersProvider {
         }
     }
 
-    private func parseHTMLContent(bgContext: NSManagedObjectContext,
-                                  htmlContent: String,
-                                  idPlus: OrganizationIdPlus) {
+    fileprivate func parseHTMLContent(bgContext: NSManagedObjectContext,
+                                      htmlContent: String,
+                                      idPlus: OrganizationIdPlus) {
         var targetState: HTMLPageLoadingState = .tableStart        // initial entry point on loop of states
 
         var personName = PersonName(fullNameWithParenthesizedRole: "", givenName: "", infixName: "", familyName: "")
@@ -137,11 +137,10 @@ extension FotogroepWaalreMembersProvider {
     }
 
     // add Photographer and MemberPortfolio records to CoreData
-    private func addMember(bgContext: NSManagedObjectContext,
-                           organization: Organization,
-                           personName: PersonName,
-                           optionalFields: PhotographerOptionalFields
-                           ) {
+    fileprivate func addMember(bgContext: NSManagedObjectContext,
+                               organization: Organization,
+                               personName: PersonName,
+                               optionalFields: PhotographerOptionalFields) {
 
         let photographer = Photographer.findCreateUpdate(
             context: bgContext,
@@ -170,7 +169,7 @@ extension FotogroepWaalreMembersProvider {
             )
     }
 
-    private func generateInternalURL(using name: String) -> URL? { // only use standard ASCII A...Z,a...z in URLs
+    fileprivate func generateInternalURL(using name: String) -> URL? { // only use standard ASCII A...Z,a...z in URLs
         // spaces are replaced by underscores:
         //      "Peter van den Hamer" -> "<baseURL>/Peter_van_den_Hamer"
         // cases with one or more replacements:
@@ -215,7 +214,7 @@ extension FotogroepWaalreMembersProvider {
         return URL(string: FotogroepWaalreMembersProvider.baseURL + "/" + tweakedName + "/")
     }
 
-    private func toDate(from dateString: String) -> Date? {
+    fileprivate func toDate(from dateString: String) -> Date? {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd/MM/yyyy"
         return dateFormatter.date(from: dateString)

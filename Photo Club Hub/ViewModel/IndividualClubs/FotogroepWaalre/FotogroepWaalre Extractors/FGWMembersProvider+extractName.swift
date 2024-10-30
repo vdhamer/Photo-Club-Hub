@@ -16,7 +16,7 @@ extension FotogroepWaalreMembersProvider {
 
     // Returns fullName String by stripping off certain HTML tags
 
-    private func removeTags(taggedString: String) -> String {
+    fileprivate func removeTags(taggedString: String) -> String {
         // "<td>José Daniëls</td>" -> "José Daniëls"
         // "<td>Bart van Stekelenburg (lid)</td>" -> "Bart van Stekelenburg (lid)"
         // "<td>Zoë Aspirant (aspirantlid)</td>" -> "Zoë Aspirant (aspirantlid)"
@@ -48,7 +48,8 @@ extension FotogroepWaalreMembersProvider {
     // Furthermore Dutch (and maybe more languages someday) infix prepositions like "van den" are supported.
 
     // swiftlint:disable function_body_length
-    private func componentizePersonName(fullNameWithParenthesizedRole: String, printName: Bool = false) -> PersonName {
+    fileprivate func componentizePersonName(fullNameWithParenthesizedRole: String,
+                                            printName: Bool = false) -> PersonName {
         // "José Daniëls" -> ("José","","Daniëls") - former member
         // "Bart van Stekelenburg (lid)" -> ("Bart","van","Steklenburg") - member
         // "Zoë Aspirant (aspirantlid)" -> ("Zoë","","Aspirant") - aspiring member

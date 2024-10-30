@@ -9,7 +9,7 @@ import CoreData
 
 extension Language {
 
-    private static var code2Name: [String: String] {
+    fileprivate static var code2Name: [String: String] {
         [
             "DE": "Deutsch",
             "EN": "English",
@@ -75,8 +75,8 @@ extension Language {
     }
 
     // Update non-identifying attributes/properties within an existing instance of class Language
-    private func update(context: NSManagedObjectContext,
-                        name: String?) -> Bool { // change language.name if needed
+    fileprivate func update(context: NSManagedObjectContext,
+                            name: String?) -> Bool { // change language.name if needed
 
         var modified: Bool = false
 
@@ -98,7 +98,7 @@ extension Language {
         return modified
     }
 
-    private static func save(context: NSManagedObjectContext, language: Language, create: Bool) {
+    fileprivate static func save(context: NSManagedObjectContext, language: Language, create: Bool) {
         do {
             try context.save()
         } catch {

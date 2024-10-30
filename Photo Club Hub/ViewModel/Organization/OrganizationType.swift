@@ -78,8 +78,8 @@ extension OrganizationType {
     }
 
     // Update non-identifying attributes/properties within an existing instance of class OrganizationType
-    private func update(context: NSManagedObjectContext,
-                        unusedProperty: String) -> Bool {
+    fileprivate func update(context: NSManagedObjectContext,
+                            unusedProperty: String) -> Bool {
         // OrganizationType doesn't have any non-identifying properties
         // So, to keep findCreateUpdate() and update() consistent across types, we added an unused one.
 
@@ -116,7 +116,7 @@ extension OrganizationType {
         return self.organizationTypeName == OrganizationTypeEnum.museum.rawValue
     }
 
-    private static func save(context: NSManagedObjectContext, organizationType: OrganizationType, create: Bool) {
+    fileprivate static func save(context: NSManagedObjectContext, organizationType: OrganizationType, create: Bool) {
         do {
             try context.save()
         } catch {
