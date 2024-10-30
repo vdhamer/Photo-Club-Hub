@@ -17,14 +17,15 @@ import WebKit // for wkWebView
 // Preview unfortunately doesn't work.
 
 struct WhoIsWhoListView: View {
-    @Environment(\.managedObjectContext) private var viewContext
-    @State private var showingPhotoClubs = false
-    @State private var showingMembers = false
+    @Environment(\.managedObjectContext) fileprivate var viewContext
+    @State fileprivate var showingPhotoClubs = false
+    @State fileprivate var showingMembers = false
     var searchText: Binding<String>
     let wkWebView: WKWebView
 
     @StateObject var model = PreferencesViewModel()
-    private var navigationTitle = String(localized: "Who's Who", comment: "Title of page with list of photographers")
+    fileprivate var navigationTitle = String(localized: "Who's Who",
+                                             comment: "Title of page with list of photographers")
 
     init(searchText: Binding<String>, navigationTitle: String? = nil) {
         self.searchText = searchText

@@ -17,9 +17,9 @@ import SwiftUI
 
 struct WhoIsWhoTextInfo: View {
     var photographer: Photographer
-    private let dateFormatter: DateFormatter
+    fileprivate let dateFormatter: DateFormatter
 
-    @State private var showPhoneMail = false
+    @State fileprivate var showPhoneMail = false
 
     init(photographer: Photographer) {
         self.photographer = photographer

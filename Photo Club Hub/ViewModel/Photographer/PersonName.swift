@@ -28,7 +28,7 @@ struct PersonName {
         removeParenthesizedRole(fullNameWithParenthesizedRole: fullNameWithParenthesizedRole)
     }
 
-    private func removeParenthesizedRole(fullNameWithParenthesizedRole: String) -> String {
+    fileprivate func removeParenthesizedRole(fullNameWithParenthesizedRole: String) -> String {
         // "José Daniëls" -> "José Daniëls" - former member
         // "Bart van Stekelenburg (lid)" -> "Bart van Stekelenburg" - member
         // "Zoë Aspirant (aspirantlid)" -> "Zoë Aspirant" - aspiring member

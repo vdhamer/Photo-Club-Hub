@@ -115,13 +115,13 @@ class Level2JsonReader { // normally running on a background thread
     }
 
     // Fetch the JSON content and returns it as a String. If there is an error, it returns `nil` instead.
-    private func getJsonData(urlComponents: UrlComponents, useOnlyFile: Bool) -> String? {
+    fileprivate func getJsonData(urlComponents: UrlComponents, useOnlyFile: Bool) -> String? {
 
         guard let url = URL(string: urlComponents.fullURLstring)
             else { return nil } // not a valid URL
 
         // if fetching online works, and is allowed, this has priority over fetching from app bundle
-        if let jsonDataFetchedOnline: String = try? String(contentsOf: url), !useOnlyFile {
+        if let jsonDataFetchedOnline: String = try? String(contentsOf: url, encoding: .utf8), !useOnlyFile {
             guard !jsonDataFetchedOnline.isEmpty else { return nil }
             return jsonDataFetchedOnline // got the requested JSON from an online URL (preferred option)
         }
@@ -137,7 +137,7 @@ class Level2JsonReader { // normally running on a background thread
             } // can't locate file within main app bundle
 
         // get the requested JSON from a file in the main app bundle
-        if let fileData = try? String(contentsOfFile: filePath) {
+        if let fileData = try? String(contentsOfFile: filePath, encoding: .utf8) {
             return fileData.isEmpty ? nil : fileData
         } else {
             // calling fatalError is ok for a compile-time constant (as defined above)
@@ -146,10 +146,10 @@ class Level2JsonReader { // normally running on a background thread
         }
     }
 
-    private func mergeLevel2Json(bgContext: NSManagedObjectContext,
-                                 jsonData: String,
-                                 club: Organization,
-                                 urlComponents: UrlComponents) throws {
+    fileprivate func mergeLevel2Json(bgContext: NSManagedObjectContext,
+                                     jsonData: String,
+                                     club: Organization,
+                                     urlComponents: UrlComponents) throws {
 
         ifDebugPrint("Loading members of \(club.fullNameTown) from \(urlComponents.shortName) in background.")
 
@@ -208,10 +208,10 @@ class Level2JsonReader { // normally running on a background thread
         ifDebugPrint("Completed mergeLevel2Json() in background")
     }
 
-    private func loadMember(bgContext: NSManagedObjectContext,
-                            member: JSON,
-                            club: Organization,
-                            urlComponents: UrlComponents) { // for error messages only (data might come from bundle)
+    fileprivate func loadMember(bgContext: NSManagedObjectContext,
+                                member: JSON,
+                                club: Organization,
+                                urlComponents: UrlComponents) { // for error messages only (data might come from bundle)
         guard member["name"].exists(),
               member["name"]["givenName"].exists(),
               // if member["name"]["givenName"] doesn't exist, SwiftyJSON returns ""
@@ -254,9 +254,9 @@ class Level2JsonReader { // normally running on a background thread
         memberPortfolio.refreshFirstImage()
     }
 
-    private func loadClubOptionals(bgContext: NSManagedObjectContext,
-                                   jsonOptionals: JSON,
-                                   club: Organization) {
+    fileprivate func loadClubOptionals(bgContext: NSManagedObjectContext,
+                                       jsonOptionals: JSON,
+                                       club: Organization) {
         let clubWebsite = jsonOptionals["website"].exists() ? URL(string: jsonOptionals["website"].stringValue) : nil
         let wikipedia: URL? = jsonOptionalsToURL(jsonOptionals: jsonOptionals, key: "wikipedia")
         let fotobondNumber = jsonOptionals["nlSpecific"]["fotobondNumber"].exists()  ? // id of club
@@ -281,10 +281,10 @@ class Level2JsonReader { // normally running on a background thread
         )
     }
 
-    private func loadPhotographerAndMemberOptionals(bgContext: NSManagedObjectContext,
-                                                    jsonOptionals: JSON,
-                                                    photographer: Photographer,
-                                                    club: Organization) -> MemberPortfolio {
+    fileprivate func loadPhotographerAndMemberOptionals(bgContext: NSManagedObjectContext,
+                                                        jsonOptionals: JSON,
+                                                        photographer: Photographer,
+                                                        club: Organization) -> MemberPortfolio {
         let birthday: String? = jsonOptionals["birthday"].exists() ? jsonOptionals["birthday"].stringValue : nil
 
         let photographerWebsite: URL? = jsonOptionalsToURL(jsonOptionals: jsonOptionals, key: "website")
@@ -333,7 +333,7 @@ class Level2JsonReader { // normally running on a background thread
 
     }
 
-    private func jsonOptionalsToURL(jsonOptionals: JSON, key: String) -> URL? {
+    fileprivate func jsonOptionalsToURL(jsonOptionals: JSON, key: String) -> URL? {
         guard jsonOptionals[key].exists() else { return nil }
         guard let string = jsonOptionals[key].string else { return nil }
         return URL(string: string) // returns nil if the string doesn’t represent a valid URL

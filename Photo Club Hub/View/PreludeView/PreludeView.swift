@@ -11,18 +11,18 @@ struct PreludeView: View {
 
     // MARK: - Constants
     static let maxCellRepeat: Double = 32 // max number of cells horizontally and vertically
-    private static let log2CellRepeat: Double = log2(maxCellRepeat) // typically log2(32) = 5
-    private static let squareSize = 5.5 / 18 // size of single colored square compared to pitch (0.3055555)
-    private let crossHairsWidth: CGFloat = 2
-    private let crossHairsColor: Color = Color(UIColor(white: 0.5, alpha: 0.5))
+    fileprivate static let log2CellRepeat: Double = log2(maxCellRepeat) // typically log2(32) = 5
+    fileprivate static let squareSize = 5.5 / 18 // size of single colored square compared to pitch (0.3055555)
+    fileprivate let crossHairsWidth: CGFloat = 2
+    fileprivate let crossHairsColor: Color = Color(UIColor(white: 0.5, alpha: 0.5))
 
     // MARK: - State variables
-    @State private var offsetInCells = OffsetVectorInCells(x: 8, y: 6) // number of cell units left/above image center
-    @State private var logScale = log2CellRepeat // value driving the animation
-    @State private var willMoveToNextScreen = false // used to navigate to next screen
-    @State private var crosshairsVisible = true // displays Crosshairs view, can be toggled via keyboard "c" character
-    @State private var debugPanelVisible = false // displays DebugPanel view, can be toggled via keyboard "d" character
-    @State private var debugLocation = CGPoint(x: 0, y: 0)
+    @State fileprivate var offsetInCells = OffsetVectorInCells(x: 8, y: 6) // # of cell units left/above image center
+    @State fileprivate var logScale = log2CellRepeat // value driving the animation
+    @State fileprivate var willMoveToNextScreen = false // used to navigate to next screen
+    @State fileprivate var crosshairsVisible = true // displays Crosshairs view, can be toggled via "c" on keyboard
+    @State fileprivate var debugPanelVisible = false // displays DebugPanel view, can be toggled via "d" on keyboard
+    @State fileprivate var debugLocation = CGPoint(x: 0, y: 0)
     @Environment(\.horizontalSizeClass) var horSizeClass
 
     var body: some View {

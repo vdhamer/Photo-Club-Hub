@@ -72,8 +72,8 @@ extension LocalizedRemark { // expose computed properties (some related to handl
     }
 
     // Update non-identifying attributes/properties within existing instance of class LocalizedRemark
-    private func update(bgContext: NSManagedObjectContext,
-                        localizedString: String) -> Bool { // true if something got updated
+    fileprivate func update(bgContext: NSManagedObjectContext,
+                            localizedString: String) -> Bool { // true if something got updated
         guard self.localizedString != localizedString else { return false } // nothing to change
         self.localizedString = localizedString // update string
         return true // indicates that there was an update

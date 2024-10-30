@@ -21,10 +21,10 @@ import WebKit // for WKWebView
 
 struct FilteredWhoIsWhoView: View {
 
-    @Environment(\.managedObjectContext) private var viewContext // may not be correct
+    @Environment(\.managedObjectContext) fileprivate var viewContext // may not be correct
     @FetchRequest var fetchedPhotographers: FetchedResults<Photographer>
 
-    private let isDeletePhotographersPermitted = true // enable/disable .onDelete() functionality for this screen
+    fileprivate let isDeletePhotographersPermitted = true // enable/disable .onDelete() functionality for this screen
     let searchText: Binding<String>
     let wkWebView: WKWebView
 
@@ -80,7 +80,7 @@ struct FilteredWhoIsWhoView: View {
         }
     } // body
 
-    private var filteredPhotographers: [Photographer] {
+    fileprivate var filteredPhotographers: [Photographer] {
         if searchText.wrappedValue.isEmpty {
             return fetchedPhotographers.filter { _ in
                 true
@@ -91,12 +91,12 @@ struct FilteredWhoIsWhoView: View {
         }
     }
 
-    private func chooseColor(accentColor: Color, isDeceased: Bool) -> Color {
+    fileprivate func chooseColor(accentColor: Color, isDeceased: Bool) -> Color {
         isDeceased ? .deceasedColor : .photographerColor
     }
 
     @MainActor
-    private func deletePhotographers(indexSet: IndexSet) {
+    fileprivate func deletePhotographers(indexSet: IndexSet) {
         guard isDeletePhotographersPermitted else { return } // exit if feature is disabled
 
         let fullName: String = indexSet.map { filteredPhotographers[$0] }.first?.fullNameFirstLast ?? "noName"
@@ -115,7 +115,7 @@ struct FilteredWhoIsWhoView: View {
         }
     }
 
-    private struct PhotographerIconView: View {
+    fileprivate struct PhotographerIconView: View {
         let isDeceased: Bool
 
         var body: some View {

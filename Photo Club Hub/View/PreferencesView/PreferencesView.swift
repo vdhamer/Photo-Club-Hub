@@ -15,10 +15,11 @@ struct PreferencesView: View {
     @Binding var preferences: PreferencesStruct
     @Environment(\.dismiss) var dismiss: DismissAction // \.dismiss requires iOS 15
 
-    @State private var localPreferences = PreferencesStruct.defaultValue // parameters for various Toggles()
+    @State fileprivate var localPreferences = PreferencesStruct.defaultValue // parameters for various Toggles()
 
-    private let title = String(localized: "Preferences", comment: "Title of screen with toggles to adjust preferences")
-    private static let animation: Animation = Animation.easeIn(duration: 5)
+    fileprivate let title = String(localized: "Preferences",
+                                   comment: "Title of screen with toggles to adjust preferences")
+    fileprivate static let animation: Animation = Animation.easeIn(duration: 5)
 
     init(preferences: Binding<PreferencesStruct>) {
         _preferences = preferences
@@ -146,7 +147,7 @@ struct PreferencesView: View {
 }
 
 struct PreferencesView_Previews: PreviewProvider { // This preview works on iOS 18 / Xcode 16
-    @State static private var title = "PreferencesView Preview"
+    @State static fileprivate var title = "PreferencesView Preview"
     @State static var preferences = PreferencesStruct.defaultValue
 
     static var previews: some View {

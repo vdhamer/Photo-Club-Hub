@@ -11,8 +11,8 @@ import Roadmap
 struct VoteOnRoadmapView: View {
     var useOnlineList: Bool // using online allows updates, but gives empty page if device is offline
 
-    private let title = String(localized: "Roadmap Items", comment: "Title of Roadmap screen")
-    private let headerText = String(localized:
+    fileprivate let title = String(localized: "Roadmap Items", comment: "Title of Roadmap screen")
+    fileprivate let headerText = String(localized:
                               """
                               You can vote here on which roadmap items you would like to see. \
                               Please read the entire list before voting bacause you cannot undo a vote. \
@@ -57,7 +57,7 @@ struct VoteOnRoadmapView: View {
         }
     }
 
-    private func lookupStatusTintColor(string: String) -> Color {
+    fileprivate func lookupStatusTintColor(string: String) -> Color {
         switch string.lowercased() { // string should be unlocalized version as defined in Roadmap.json file
         case "planned": return .plannedColor
         case "?": return .unplannedColor
@@ -68,7 +68,7 @@ struct VoteOnRoadmapView: View {
 }
 
 struct VoteOnRoadmapView_Previews: PreviewProvider {
-    @State static private var title = "VoteOnRoadmapView_Preview"
+    @State static fileprivate var title = "VoteOnRoadmapView_Preview"
 
     static var previews: some View {
         VoteOnRoadmapView(useOnlineList: false)

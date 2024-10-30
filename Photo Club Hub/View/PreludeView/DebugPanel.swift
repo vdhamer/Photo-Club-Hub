@@ -38,9 +38,9 @@ struct DebugPanel: View {
 }
 
 struct DebugPanel_Previews: PreviewProvider {
-    @State private static var debugLocation = CGPoint(x: 0, y: 0)
-    @State private static var logScale: Double = 32 // value driving the animation
-    @State private static var offsetInCells = OffsetVectorInCells(x: 8, y: 6)
+    @State fileprivate static var debugLocation = CGPoint(x: 0, y: 0)
+    @State fileprivate static var logScale: Double = 32 // value driving the animation
+    @State fileprivate static var offsetInCells = OffsetVectorInCells(x: 8, y: 6)
 
     static func intOffset(rect: CGSize, location: CGPoint) -> OffsetVectorInCells {
         guard DebugPanel_Previews.logScale != 0 else { return OffsetVectorInCells(x: 0, y: 0) }

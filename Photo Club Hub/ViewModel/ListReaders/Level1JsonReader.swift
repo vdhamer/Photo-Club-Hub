@@ -103,9 +103,9 @@ class Level1JsonReader {
         }
     }
 
-    private func readRootLevel1Json(bgContext: NSManagedObjectContext,
-                                    data: String,
-                                    for organizationTypeEnumsToLoad: [OrganizationTypeEnum]) {
+    fileprivate func readRootLevel1Json(bgContext: NSManagedObjectContext,
+                                        data: String,
+                                        for organizationTypeEnumsToLoad: [OrganizationTypeEnum]) {
 
         ifDebugPrint("\nGoing to read Level 1 file (\(dataSourceFile)) with a list of organizations - in background.")
 

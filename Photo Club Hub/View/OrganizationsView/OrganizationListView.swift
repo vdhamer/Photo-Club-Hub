@@ -8,20 +8,20 @@
 import SwiftUI
 
 struct OrganizationListView: View {
-    @Environment(\.managedObjectContext) private var viewContext
+    @Environment(\.managedObjectContext) fileprivate var viewContext
     @StateObject var model = PreferencesViewModel()
     @State var locationManager = LocationManager()
-    @State private var searchText: String = "" // bindable string with content of Search bar
+    @State fileprivate var searchText: String = "" // bindable string with content of Search bar
 
     @FetchRequest(
         sortDescriptors: [], // organizations is only used for counting, so sorting doesn't matter
         animation: .default)
-    private var organizations: FetchedResults<Organization>
+    fileprivate var organizations: FetchedResults<Organization>
 
-    private static let predicateAll = NSPredicate(format: "TRUEPREDICATE")
-    private var predicate: NSPredicate = Self.predicateAll
-    private var navigationTitle = String(localized: "Clubs and Museums",
-                                         comment: "Title of page with maps for Clubs and Museums")
+    fileprivate static let predicateAll = NSPredicate(format: "TRUEPREDICATE")
+    fileprivate var predicate: NSPredicate = Self.predicateAll
+    fileprivate var navigationTitle = String(localized: "Clubs and Museums",
+                                             comment: "Title of page with maps for Clubs and Museums")
 
     init(predicate: NSPredicate? = nil,
          navigationTitle: String? = nil) {
@@ -88,7 +88,7 @@ struct OrganizationListView: View {
         .disableAutocorrection(true)
     }
 
-    private let toolbarItemPlacement: ToolbarItemPlacement = UIDevice.isIPad ?
+    fileprivate let toolbarItemPlacement: ToolbarItemPlacement = UIDevice.isIPad ?
         .destructiveAction : // iPad: Search field in toolbar
         .navigationBarTrailing // iPhone: Search field in drawer
 }

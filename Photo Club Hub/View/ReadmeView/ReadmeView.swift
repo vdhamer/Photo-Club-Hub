@@ -10,12 +10,12 @@ import SwiftUI
 // swiftlint:disable:next type_body_length
 struct ReadmeView: View {
 
-    private static let paddingConstant: CGFloat = 20
-    private let title = String(localized: "Readme", comment: "Title of Readme screen")
+    fileprivate static let paddingConstant: CGFloat = 20
+    fileprivate let title = String(localized: "Readme", comment: "Title of Readme screen")
     @Environment(\.dismiss) var dismiss: DismissAction // \.dismiss requires iOS 15
-    @State private var showingRoadmap = false // controls visibility of Preferences screen
-    @State private var selectedRoadmapDetent = PresentationDetent.large // careful: must be element of detentsList
-    private var detentsList: Set<PresentationDetent> = [ .fraction(0.5), .fraction(0.70), .fraction(0.90), .large ]
+    @State fileprivate var showingRoadmap = false // controls visibility of Preferences screen
+    @State fileprivate var selectedRoadmapDetent = PresentationDetent.large // careful: must be element of detentsList
+    fileprivate var detentsList: Set<PresentationDetent> = [ .fraction(0.5), .fraction(0.70), .fraction(0.90), .large ]
 
     var body: some View {
         GeometryReader { geo in
@@ -344,7 +344,7 @@ struct ReadmeView: View {
 }
 
 struct ReadmeView_Previews: PreviewProvider { // This preview actually works reliably (most don't, for some reason)
-    @State static private var title = "Info Preview"
+    @State static fileprivate var title = "Info Preview"
 
     static var previews: some View {
         ReadmeView()
