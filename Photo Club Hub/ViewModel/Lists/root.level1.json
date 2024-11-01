@@ -393,6 +393,30 @@
         {
             "idPlus": {
                 "town": "Eindhoven",
+                "fullName": "Dekate Mousa",
+                "nickName": "DekateMousa"
+            },
+            "coordinates": {
+                "latitude": 51.44914,
+                "longitude": 5.48768
+            },
+            "website": "https://dekatemousa.nl",
+            "level2URL": "https://www.example.com/dekatemousa.level2.json",
+            "remark": [
+                {
+                    "language": "EN",
+                    "value": "The club is run by students of the local university and also caters to English speaking students."
+                },
+                {
+                    "language": "NL",
+                    "value": "De club is verbonden aan de TU/e universiteit en doet ook aan fotografiecursussen."
+                }
+            ]
+        },
+
+        {
+            "idPlus": {
+                "town": "Eindhoven",
                 "fullName": "De FotoSchouw",
                 "nickName": "FotoSchouw"
             },
@@ -680,6 +704,78 @@
 
         {
             "idPlus": {
+                "town": "Helmond",
+                "fullName": "Fotoclub Helmond",
+                "nickName": "fcHelmond"
+            },
+            "coordinates": {
+                "latitude": 51.48148,
+                "longitude": 5.66852
+            },
+            "website": "https://www.fotoclubhelmond.nl/",
+            "level2URL": "https://www.example.com/fcHelmond.level2.json",
+            "remark": [
+                {
+                    "language": "EN",
+                    "value": "The club's website is quite state of the art, with an emphasis on the images."
+                },
+                {
+                    "language": "NL",
+                    "value": "De club heeft een indrukwekkende website waar veel fotowerk te zien is."
+                }
+            ]
+        },
+
+        {
+            "idPlus": {
+                "town": "Helmond",
+                "fullName": "Fotoclub Helmond Oost",
+                "nickName": "fcHelmondOost"
+            },
+            "coordinates": {
+                "latitude": 51.47794,
+                "longitude": 5.68352
+            },
+            "website": "https://www.fotografieclubhelmondoost.com",
+            "level2URL": "https://www.example.com/fcHelmondOost.level2.json",
+            "remark": [
+                {
+                    "language": "EN",
+                    "value": "The club was founded in 2015 and has about 20 members."
+                },
+                {
+                    "language": "NL",
+                    "value": "De club bestaat sedert 2015 en heeft ongeveer 20 leden."
+                }
+            ]
+        },
+
+        {
+            "idPlus": {
+                "town": "Mill",
+                "fullName": "Fotogroep Raak",
+                "nickName": "fgRaak"
+            },
+            "coordinates": {
+                "latitude": 51.63711,
+                "longitude": 5.87204
+            },
+            "website": "https://www.facebook.com/fotogroepraak/",
+            "level2URL": "https://www.example.com/fgRaak.level2.json",
+            "remark": [
+                {
+                    "language": "EN",
+                    "value": "The club has five members."
+                },
+                {
+                    "language": "NL",
+                    "value": "De club heeft vijf leden."
+                }
+            ]
+        },
+
+        {
+            "idPlus": {
                 "town": "Nuenen",
                 "fullName": "Fotoclub f/2",
                 "nickName": "fcF2"
@@ -693,11 +789,11 @@
             "remark": [
                 {
                     "language": "EN",
-                    "value": "The club is part of a senior citizens organisation, along with another club called Fotoclub Knipoog."
+                    "value": "The club is part of a senior citizens organisation, along with 3 other photography clubs in Nuenen."
                 },
                 {
                     "language": "NL",
-                    "value": "De club maakt deel uit van seniorenverening PVGE Nuenen - net als een zusterverening Fotoclub Knipoog."
+                    "value": "De club maakt deel uit van seniorenverening PVGE Nuenen - net als 3 andere fotoclubs."
                 }
             ]
         },
@@ -717,11 +813,59 @@
             "remark": [
                 {
                     "language": "EN",
-                    "value": "The club is part of a senior citizens organisation, along with another club called Fotoclub f/2."
+                    "value": "The club is part of a senior citizens organisation, along with 3 other photography clubs in Nuenen."
                 },
                 {
                     "language": "NL",
-                    "value": "De club maakt deel uit van seniorenverening PVGE Nuenen - net als een zusterverening Fotoclub f/2."
+                    "value": "De club maakt deel uit van seniorenverening PVGE Nuenen - net als 3 andere fotoclubs."
+                }
+            ]
+        },
+
+        {
+            "idPlus": {
+                "town": "Nuenen",
+                "fullName": "Fotoclub Prisma",
+                "nickName": "fcPrisma"
+            },
+            "coordinates": {
+                "latitude": 51.4656,
+                "longitude": 5.5487
+            },
+            "website": "https://www.pvge.nl/nuenen/fotoclub-prisma/",
+            "level2URL": "https://www.example.com/fcPrisma.level2.json",
+            "remark": [
+                {
+                    "language": "EN",
+                    "value": "The club is part of a senior citizens organisation, along with 3 other photography clubs in Nuenen."
+                },
+                {
+                    "language": "NL",
+                    "value": "De club maakt deel uit van seniorenverening PVGE Nuenen - net als 3 andere fotoclubs."
+                }
+            ]
+        },
+
+        {
+            "idPlus": {
+                "town": "Nuenen",
+                "fullName": "Fotoclub Perspectief",
+                "nickName": "fcPerspectief"
+            },
+            "coordinates": {
+                "latitude": 51.4657,
+                "longitude": 5.5488
+            },
+            "website": "https://www.pvge.nl/nuenen/fotoclub-perspectief/",
+            "level2URL": "https://www.example.com/fcPerspectief.level2.json",
+            "remark": [
+                {
+                    "language": "EN",
+                    "value": "The club is part of a senior citizens organisation, along with 3 other photography clubs in Nuenen."
+                },
+                {
+                    "language": "NL",
+                    "value": "De club maakt deel uit van seniorenverening PVGE Nuenen - net als 3 andere fotoclubs."
                 }
             ]
         },
@@ -778,6 +922,30 @@
             "nlSpecific": {
                 "fotobondNumber": 1607
             }
+        },
+
+        {
+            "idPlus": {
+                "town": "Oss",
+                "fullName": "Fotoclub Oss",
+                "nickName": "FOCOSS"
+            },
+            "coordinates": {
+                "latitude": 51.76717,
+                "longitude": 5.52091
+            },
+            "website": "https://www.focoss.nl",
+            "level2URL": "https://www.example.com/FOCOSS.level2.json",
+            "remark": [
+                {
+                    "language": "EN",
+                    "value": "The club has about 55 members. The club selects a photo of the month and photo of the year."
+                },
+                {
+                    "language": "NL",
+                    "value": "De groep heeft ongeveer 55 leden. Er wordt een foto van de maand en foto van het jaar gekozen."
+                }
+            ]
         },
 
         {
@@ -914,7 +1082,7 @@
         {
             "idPlus": {
                 "town": "Sint Michielsgestel",
-                "fullName": "Fotokring Sint-Micheelsgestel",
+                "fullName": "Fotokring Sint-Michielsgestel",
                 "nickName": "fkGestel"
             },
             "coordinates": {
@@ -1018,6 +1186,30 @@
 
         {
             "idPlus": {
+                "town": "Uden",
+                "fullName": "Fotoclub Maashorst",
+                "nickName": "fcMaashorst"
+            },
+            "coordinates": {
+                "latitude": 51.67258,
+                "longitude": 5.62362
+            },
+            "website": "https://www.facebook.com/profile.php?id=100089970454138",
+            "level2URL": "https://www.example.com/fcMaashorst.level2.json",
+            "remark": [
+                {
+                    "language": "EN",
+                    "value": "The club's original site www.fotoclubmaashorst.nl doesn't seem to be accessible."
+                },
+                {
+                    "language": "NL",
+                    "value": "De website www.fotoclubmaashorst.nl lijkt het niet meer te doen."
+                }
+            ]
+        },
+
+        {
+            "idPlus": {
                 "town": "Veghel",
                 "fullName": "Fotoclub Veghel",
                 "nickName": "fcVeghel"
@@ -1109,7 +1301,7 @@
             "remark": [
                 {
                     "language": "EN",
-                    "value": "In total the group meets about 25 times per year."
+                    "value": "When you include all its activities, the group meets about 25 times per year."
                 },
                 {
                     "language": "NL",
@@ -1119,6 +1311,30 @@
             "nlSpecific": {
                 "fotobondNumber": 1637
             }
+        },
+
+        {
+            "idPlus": {
+                "town": "Veldhoven",
+                "fullName": "Luminos",
+                "nickName": "fgLuminos"
+            },
+            "coordinates": {
+                "latitude": 51.40549,
+                "longitude": 5.39662
+            },
+            "website": "https://www.fotogroep-luminos.nl",
+            "level2URL": "https://www.example.com/fgLuminos.level2.json",
+            "remark": [
+                {
+                    "language": "EN",
+                    "value": "The website doesn't look up to date, but there are signs the club is still active."
+                },
+                {
+                    "language": "NL",
+                    "value": "De website loopt deels jaren achter, maar de club lijkt nog actief te zijn."
+                }
+            ]
         },
 
         {
