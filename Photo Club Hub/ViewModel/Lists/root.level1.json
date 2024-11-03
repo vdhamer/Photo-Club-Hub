@@ -5,7 +5,7 @@
             "idPlus": {
                 "town": "Asten",
                 "fullName": "Fotokring Beeldhoek",
-                "nickName": "FK Beeldhoek"
+                "nickName": "fkBeeldhoek"
             },
             "coordinates": {
                 "latitude": 51.402345,
@@ -32,7 +32,7 @@
             "idPlus": {
                 "town": "Beek en Donk",
                 "fullName": "Fotoclub Objectief",
-                "nickName": "FC Objectief"
+                "nickName": "fcObjectief"
             },
             "coordinates": {
                 "latitude": 51.53557,
@@ -110,7 +110,7 @@
             "idPlus": {
                 "town": "Boekel",
                 "fullName": "Fotogroep Focus KBO Boekel",
-                "nickName": "FG Focus"
+                "nickName": "fgFocus"
             },
             "coordinates": {
                 "latitude": 51.60421,
@@ -188,7 +188,7 @@
             "idPlus": {
                 "town": "Den Bosch",
                 "fullName": "Fotoclub Den Bosch AFC 68",
-                "nickName": "AFC68"
+                "nickName": "fcAFC68"
             },
             "coordinates": {
                 "latitude": 51.69440,
@@ -289,7 +289,7 @@
             "idPlus": {
                 "town": "Duerne",
                 "fullName": "Fotoclub Optika",
-                "nickName": "FC Optika"
+                "nickName": "fcOptika"
             },
             "coordinates": {
                 "latitude": 51.45032,
@@ -316,7 +316,7 @@
             "idPlus": {
                 "town": "Duizel",
                 "fullName": "Fotoclub Kemfodia",
-                "nickName": "FC Kemfodia"
+                "nickName": "fcKemfodia"
             },
             "coordinates": {
                 "latitude": 51.36821,
@@ -367,7 +367,7 @@
             "idPlus": {
                 "town": "Eersel",
                 "fullName": "Fotoclub Lucifer",
-                "nickName": "FC Lucifer"
+                "nickName": "fcLucifer"
             },
             "coordinates": {
                 "latitude": 51.41766,
@@ -442,7 +442,7 @@
             "idPlus": {
                 "town": "Eindhoven",
                 "fullName": "Fotoclub Ericamera",
-                "nickName": "Ericamera"
+                "nickName": "fcEricamera"
             },
             "coordinates": {
                 "latitude": 51.45403,
@@ -469,7 +469,7 @@
             "idPlus": {
                 "town": "Eindhoven",
                 "fullName": "Fotogroep Anders",
-                "nickName": "FG Anders"
+                "nickName": "fgAnders"
             },
             "coordinates": {
                 "latitude": 51.44297,
@@ -493,7 +493,7 @@
             "idPlus": {
                 "town": "Eindhoven",
                 "fullName": "Fotogroep de Gender",
-                "nickName": "FG deGender"
+                "nickName": "fgDeGender"
             },
             "coordinates": {
                 "latitude": 51.42398,
