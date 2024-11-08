@@ -55,7 +55,8 @@ import SwiftyJSON // for JSON struct
                      "isViceChairman": false,
                      "isTreasurer": false,
                      "isSecretary": false,
-                     "isAdmin": true
+                     "isAdmin": true,
+                     "isOther": false
                  },
                  "status": {
                      "isDeceased": false,

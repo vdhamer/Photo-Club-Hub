@@ -2,8 +2,11 @@
 
 Adding a new standalone MacOS app in GitHub that generates HTML membership lists for club websites.
 
+Who's who screen
+* Added support for club officers with role "other" (used for LA and HK in fgDeGender).
+
 Code Maintenance
-* Tested on SwiftLint 0.57.0 and iOS 18.2 (22C5125d) and Xcode 16.2 beta (16C5013f) and MacOS 15.1
+* Tested on SwiftLint 0.57.0_1 and iOS 18.2 (22C5125d) and Xcode 16.2 beta (16C5013f) and MacOS 15.1
 * SwiftJSON imported as package (again). Was temporarily a single .swift file.
 * Entered trader status (not a trader) in Apple App Store.
 * Minor update to OrganizationType.swift (to stay in sync with Photo-Club-Hub-HTML)
@@ -12,8 +15,8 @@ Code Maintenance
 
 Data Maintenance
 * Added website for member WH in fgDeGender and added a few birthdays (not shown so far).
-* Added over 10 local photo clubs to the list.
-* Updated website for Collectief Brabant
+* Added over 10 photo clubs to the list.
+* Updated website URL for Collectief Brabant
 
 This build #4631 was built using Xcode 16.0 and is intended for App Store distribution.
 

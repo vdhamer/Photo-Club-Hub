@@ -1,4 +1,7 @@
 /* (No Comment) */
+"Data refresh pending" = "Data eenmalig verversen";
+
+/* (No Comment) */
 "Debug options" = "Debug instellingen";
 
 /* (No Comment) */
@@ -12,9 +15,6 @@
 
 /* (No Comment) */
 "Load data manually" = "Data handmatig laden";
-
-/* (No Comment) */
-"Data refresh pending" = "Data eenmalig verversen";
 
 /* (No Comment) */
 "Repository owner" = "Archief eigenaar";

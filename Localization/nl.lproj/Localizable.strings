@@ -31,11 +31,11 @@
 /* Header of section of Who's Who screen */
 "1 photographer (of %lld)" = "1 fotograaf (van de %lld)";
 
-/* In Preferences, above link to Settings */
-"Advanced" = "Technische instellingen";
-
 /* Administrative role of member within a club. Used as part of concatenations. */
 "admin" = "admin";
+
+/* In Preferences, above link to Settings */
+"Advanced" = "Technische instellingen";
 
 /* Caption of Museums image on Readme page */
 "Amsterdam has two photography museums." = "Fotomusea aan de Keizersgracht in Amsterdam.";
@@ -51,9 +51,6 @@
 
 /* If photographer's birthday info is unavailable (Who's Who screen). */
 "Birthday unknown" = "Verjaardag onbekend";
-
-/* Caption about Play button on the Readme page */
-"Buttons for the automatic slide show" = "Knoppen om beelden automatisch af te spelen";
 
 /* Caption about Play button on the Readme page */
 "Buttons for the automatic slide show" = "Knopjes om de beelden automatisch te doorlopen";
@@ -156,6 +153,9 @@
 
 /* Link to Photo Club Hub section in Settings */
 "Options in Settings" = "Opties bij Instellingen";
+
+/* Administrative role of member within a club. Used as part of concatenations. */
+"other" = "bestuurslid";
 
 /* First paragraph in The App section of Readme page */
 "Paragraph_1.1" = "De app _Fotoclub Hub_ dient om banden tussen fotoclubs te versterken en om foto's gemaakt door de clubleden eenvoudig toegankelijk te maken.";

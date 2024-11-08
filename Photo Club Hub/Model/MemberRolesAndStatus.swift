@@ -16,6 +16,7 @@ enum MemberRole {
     case secretary
     case treasurer
     case viceChairman
+    case other
 
     func localizedString() -> String {
         switch self {
@@ -33,6 +34,9 @@ enum MemberRole {
                           comment: "Administrative role of member within a club. Used as part of concatenations.")
         case .viceChairman:
             return String(localized: "vice-chairman",
+                          comment: "Administrative role of member within a club. Used as part of concatenations.")
+        case .other:
+            return String(localized: "other",
                           comment: "Administrative role of member within a club. Used as part of concatenations.")
         }
     }
@@ -107,6 +111,7 @@ struct MemberRolesAndStatus: Equatable {
         self.status = status
     }
 
+    // swiftlint:disable:next cyclomatic_complexity
     init(jsonRoles: JSON, jsonStatus: JSON) {
 
         // process content of jsonRoles
@@ -124,6 +129,9 @@ struct MemberRolesAndStatus: Equatable {
         }
         if jsonRoles["isAdmin"].exists() {
             role[.admin] = jsonRoles["isAdmin"].boolValue
+        }
+        if jsonRoles["isOther"].exists() {
+            role[.other] = jsonRoles["isOther"].boolValue
         }
 
         // process content of jsonStatus

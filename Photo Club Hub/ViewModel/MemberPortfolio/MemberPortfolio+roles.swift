@@ -23,6 +23,7 @@ extension MemberPortfolio { // computed properties related to roles of members i
         if isTreasurer { suffixList.append(MemberRole.treasurer.localizedString()) }
         if isSecretary { suffixList.append(MemberRole.secretary.localizedString()) }
         if isAdmin { suffixList.append(MemberRole.admin.localizedString()) }
+        if isOther { suffixList.append(MemberRole.other.localizedString()) }
 
         if isProspectiveMember { suffixList.append(MemberStatus.prospective.localizedString()) } else {
             if isHonoraryMember { suffixList.append(MemberStatus.honorary.localizedString()) } else {
@@ -68,6 +69,7 @@ extension MemberPortfolio { // computed properties related to roles of members i
             if isTreasurer { memberRS.role[.treasurer] = true }
             if isSecretary { memberRS.role[.secretary] = true }
             if isAdmin { memberRS.role[.admin] = true }
+            if isOther { memberRS.role[.other] = true }
 
             return memberRS
         }
@@ -101,6 +103,9 @@ extension MemberPortfolio { // computed properties related to roles of members i
             }
             if let newBool = newValue.role[.admin] {
                 isAdmin = newBool!
+            }
+            if let newBool = newValue.role[.other] {
+                isOther = newBool!
             }
         }
     }

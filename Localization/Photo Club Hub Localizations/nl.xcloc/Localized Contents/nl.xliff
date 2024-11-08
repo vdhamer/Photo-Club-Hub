@@ -2,7 +2,7 @@
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
   <file original="en.lproj/Photo-Club-Hub-InfoPlist.strings" source-language="en" target-language="nl" datatype="plaintext">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="16.0" build-num="16A5211f"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="16.2" build-num="16C5013f"/>
     </header>
     <body>
       <trans-unit id="CFBundleDisplayName" xml:space="preserve">
@@ -24,7 +24,7 @@
   </file>
   <file original="Localization/en.lproj/Localizable.strings" source-language="en" target-language="nl" datatype="plaintext">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="16.0" build-num="16A5211f"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="16.2" build-num="16C5013f"/>
     </header>
     <body>
       <trans-unit id="%lld members (inc. ex-members)" xml:space="preserve">
@@ -712,6 +712,11 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
         <target>van</target>
         <note>&lt;person&gt; of &lt;photo club&gt;</note>
       </trans-unit>
+      <trans-unit id="other" xml:space="preserve">
+        <source>Club officer</source>
+        <target>bestuurslid</target>
+        <note>Administrative role of member within a club. Used as part of concatenations.</note>
+      </trans-unit>
       <trans-unit id="prospective member" xml:space="preserve">
         <source>prospective member</source>
         <target>aspirant-lid</target>
@@ -756,9 +761,14 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
   </file>
   <file original="Settings.bundle/en.lproj/Root.strings" source-language="en" target-language="nl" datatype="plaintext">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="16.0" build-num="16A5211f"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="16.2" build-num="16C5013f"/>
     </header>
     <body>
+      <trans-unit id="Data refresh pending" xml:space="preserve">
+        <source>Data refresh pending</source>
+        <target>Data eenmalig verversen</target>
+        <note>(No Comment)</note>
+      </trans-unit>
       <trans-unit id="Debug options" xml:space="preserve">
         <source>Debug options</source>
         <target>Debug instellingen</target>
@@ -782,11 +792,6 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
       <trans-unit id="Load data manually" xml:space="preserve">
         <source>Load data manually</source>
         <target>Data handmatig laden</target>
-        <note>(No Comment)</note>
-      </trans-unit>
-      <trans-unit id="Post-v2.6.2 data refresh pending" xml:space="preserve">
-        <source>Post-v2.6.2 data refresh pending</source>
-        <target>Data moet nog gewist worden na r2.6.2</target>
         <note>(No Comment)</note>
       </trans-unit>
       <trans-unit id="Repository owner" xml:space="preserve">
