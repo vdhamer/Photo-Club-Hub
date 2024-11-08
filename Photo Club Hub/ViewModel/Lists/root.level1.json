@@ -85,6 +85,54 @@
         {
             "idPlus": {
                 "town": "Best",
+                "fullName": "FFotone",
+                "nickName": "FFotone"
+            },
+            "coordinates": {
+                "latitude": 51.50923,
+                "longitude": 5.39895
+            },
+            "website": "https://www.fotoexpositie.nl/exposities/ffotone.html",
+            "level2URL": "https://www.example.com/FFotone.level2.json",
+            "remark": [
+                {
+                    "language": "EN",
+                    "value": "The group was founded in 2008 around analog photography, but also covers other artforms."
+                },
+                {
+                    "language": "NL",
+                    "value": "De group is oorspronkelijk opgericht door Willie Jan Bons \"om analoge fotografen bij elkaar te brengen\"."
+                }
+            ]
+        },
+
+        {
+            "idPlus": {
+                "town": "Best",
+                "fullName": "PVGE Best",
+                "nickName": "pvgeBest"
+            },
+            "coordinates": {
+                "latitude": 51.50975,
+                "longitude": 5.39411
+            },
+            "website": "https://www.pvge.nl/best/clubs/overige-clubs/fotoclub/",
+            "level2URL": "https://www.example.com/pvgeBest.level2.json",
+            "remark": [
+                {
+                    "language": "EN",
+                    "value": "PVGE was originally a society for retired employees of the Philips company."
+                },
+                {
+                    "language": "NL",
+                    "value": "PVGE is oorspronkelijk Philips Vereniging van Gepensioneerdeen Eindhoven."
+                }
+            ]
+        },
+
+        {
+            "idPlus": {
+                "town": "Best",
                 "fullName": "Fotogroep Best",
                 "nickName": "fgBest"
             },
