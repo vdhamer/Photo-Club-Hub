@@ -59,7 +59,7 @@ extension MemberRole: Comparable {
 enum MemberStatus {
     // a Member can have multiple of these special statusses
     case coach // rawValue not used because string needs localization
-    case deceased
+    case deceased // careful: isDeceased belongs to member.photographer.deceased rather than member.isdeceased
     case former
     case honorary
     case current

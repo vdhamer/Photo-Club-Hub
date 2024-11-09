@@ -13,7 +13,7 @@ extension FotogroepDeGenderMembersProvider { // fill with some initial hard-code
 
         let fotogroepDeGenderIdPlus = OrganizationIdPlus(fullName: "Fotogroep de Gender",
                                                          town: "Eindhoven",
-                                                         nickname: "FG deGender")
+                                                         nickname: "fgDeGender")
 
         bgContext.perform { // execute on background thread
             let club = Organization.findCreateUpdate(context: bgContext,

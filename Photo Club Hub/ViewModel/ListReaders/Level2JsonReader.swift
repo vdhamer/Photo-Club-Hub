@@ -89,7 +89,7 @@ class Level2JsonReader { // normally running on a background thread
         case saveFailed
     }
 
-    // init() does all the work here: it fetches the JSON data, parses it, and updates the CoreData database.
+    // init() does all the work: it fetches the JSON data, parses it, and updates the data stored in Core Data.
     init(bgContext: NSManagedObjectContext,
          urlComponents: UrlComponents, // what to parse
          club: Organization, // club who's data we are supposed to be receiving via this url
@@ -315,7 +315,7 @@ class Level2JsonReader { // normally running on a background thread
                                               )
                                           )
 
-        // ...while some attributes are at the Photographer as Member of club level
+        // ...while some attributes are at the Photographer-as-Member-of-club level
         return MemberPortfolio.findCreateUpdate(
             bgContext: bgContext,
             organization: club,

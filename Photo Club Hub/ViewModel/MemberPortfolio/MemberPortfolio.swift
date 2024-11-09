@@ -51,8 +51,8 @@ extension MemberPortfolio { // expose computed properties (some related to handl
     }
 
     var organization: Organization {
-        if let organization = organization_ {
-            return organization
+        if let organization_ {
+            return organization_
         } else {
             fatalError("Error because organization is nil") // something is fundamentally wrong if this happens
         }
@@ -69,7 +69,8 @@ extension MemberPortfolio { // expose computed properties (some related to handl
     var level3URL: URL {
         get {
             if level3URL_ == nil {
-                level3URL_ = URL(string: MemberPortfolio.emptyPortfolioURL)!
+                let string = MemberPortfolio.emptyPortfolioURL
+                level3URL_ = URL(string: string)! // TODO this line crashes sometimes, get rid of ! operator
             }
             return level3URL_!
         }

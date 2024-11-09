@@ -44,7 +44,7 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
                       Updated info for member \(memberPortfolio.photographer.fullNameFirstLast)
                       """)
             }
-             return memberPortfolio
+            return memberPortfolio
         } else {
             let entity = NSEntityDescription.entity(forEntityName: "MemberPortfolio", in: bgContext)!
             let memberPortfolio = MemberPortfolio(entity: entity, insertInto: bgContext) // bg needs special .init()
