@@ -51,8 +51,8 @@ extension MemberPortfolio { // expose computed properties (some related to handl
     }
 
     var organization: Organization {
-        if let organization_ {
-            return organization_
+        if let organization = organization_ {
+            return organization
         } else {
             fatalError("Error because organization is nil") // something is fundamentally wrong if this happens
         }
