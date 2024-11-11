@@ -225,6 +225,7 @@
 		D0E2D6032B9B9568008D1F7A /* test1Club.level1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test1Club.level1.json; sourceTree = "<group>"; };
 		D0E673BA2AE1C1A100A4DC95 /* Photo_Club_Hub_2_5_0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_5_0.xcdatamodel; sourceTree = "<group>"; };
 		D0E694C827EF9B450054D634 /* LockAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockAnimationView.swift; sourceTree = "<group>"; };
+		D0E69C2B2CE2543600D013DD /* app_screenshots_EN 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "app_screenshots_EN 2.jpg"; sourceTree = "<group>"; };
 		D0EAEB322B3CA6D300EC05B6 /* Level1JsonReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level1JsonReader.swift; sourceTree = "<group>"; };
 		D0EB533B295775240061613B /* Crosshairs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crosshairs.swift; sourceTree = "<group>"; };
 		D0EEF48E2C2844290086419D /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
@@ -617,6 +618,7 @@
 				D032516A2BBB6CB6005E9B32 /* whosWhoScreen.png */,
 				D06588EA2BAE5071000FD7F3 /* preludeScreen.png */,
 				D008665C2BBDC29C0091F204 /* dataModel.png */,
+				D0E69C2B2CE2543600D013DD /* app_screenshots_EN 2.jpg */,
 			);
 			path = images;
 			sourceTree = "<group>";
