@@ -440,6 +440,53 @@
 
         {
             "idPlus": {
+                "town": "Geldrop",
+                "fullName": "Fotoclub de Dreef",
+                "nickName": "fcDeDreef"
+            },
+            "coordinates": {
+                "latitude": 51.41932,
+                "longitude": 5.573495
+            },
+            "website": "https://fotoclubdedreef.nl",
+            "level2URL": "https://www.example.com/fcDeDreef.level2.json",
+            "remark": [
+                {
+                    "language": "EN",
+                    "value": "This 8 member club caters to beginners and well as more experienced photographers."
+                },
+                {
+                    "language": "NL",
+                    "value": "De club heeft 8 leden en is open voor beginnelingen tot gevorderden."
+                }
+            ],
+        },
+
+        {
+            "idPlus": {
+                "town": "Geldrop",
+                "fullName": "Fotogroep Digifoto Geldrop",
+                "nickName": "fgDigifoto"
+            },
+            "coordinates": {
+                "latitude": 51.42227,
+                "longitude": 5.56280
+            },
+            "level2URL": "https://www.example.com/fgDigifoto.level2.json",
+            "remark": [
+                {
+                    "language": "EN",
+                    "value": "We couldn't find a working web site for the club, but the club was active in Oct 2023."
+                },
+                {
+                    "language": "NL",
+                    "value": "De club lijkt geen website meer te hebben. In 2023 hielden zij een 20-jarig jubileum."
+                }
+            ],
+        },
+
+        {
+            "idPlus": {
                 "town": "Eindhoven",
                 "fullName": "Dekate Mousa",
                 "nickName": "DekateMousa"
