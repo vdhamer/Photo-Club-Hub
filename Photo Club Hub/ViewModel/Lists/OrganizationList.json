@@ -5,7 +5,7 @@
             "idPlus": {
                 "town": "Asten",
                 "fullName": "Fotokring Beeldhoek",
-                "nickName": "FK Beeldhoek"
+                "nickName": "fkBeeldhoek"
             },
             "coordinates": {
                 "latitude": 51.402345,
@@ -32,7 +32,7 @@
             "idPlus": {
                 "town": "Beek en Donk",
                 "fullName": "Fotoclub Objectief",
-                "nickName": "FC Objectief"
+                "nickName": "fcObjectief"
             },
             "coordinates": {
                 "latitude": 51.53557,
@@ -85,6 +85,54 @@
         {
             "idPlus": {
                 "town": "Best",
+                "fullName": "FFotone",
+                "nickName": "FFotone"
+            },
+            "coordinates": {
+                "latitude": 51.50923,
+                "longitude": 5.39895
+            },
+            "website": "https://www.fotoexpositie.nl/exposities/ffotone.html",
+            "level2URL": "https://www.example.com/FFotone.level2.json",
+            "remark": [
+                {
+                    "language": "EN",
+                    "value": "The group was founded in 2008 around analog photography, but also covers other artforms."
+                },
+                {
+                    "language": "NL",
+                    "value": "De group is oorspronkelijk opgericht door Willie Jan Bons \"om analoge fotografen bij elkaar te brengen\"."
+                }
+            ]
+        },
+
+        {
+            "idPlus": {
+                "town": "Best",
+                "fullName": "PVGE Best",
+                "nickName": "pvgeBest"
+            },
+            "coordinates": {
+                "latitude": 51.50975,
+                "longitude": 5.39411
+            },
+            "website": "https://www.pvge.nl/best/clubs/overige-clubs/fotoclub/",
+            "level2URL": "https://www.example.com/pvgeBest.level2.json",
+            "remark": [
+                {
+                    "language": "EN",
+                    "value": "PVGE was originally a society for retired employees of the Philips company."
+                },
+                {
+                    "language": "NL",
+                    "value": "PVGE is oorspronkelijk Philips Vereniging van Gepensioneerdeen Eindhoven."
+                }
+            ]
+        },
+
+        {
+            "idPlus": {
+                "town": "Best",
                 "fullName": "Fotogroep Best",
                 "nickName": "fgBest"
             },
@@ -110,7 +158,7 @@
             "idPlus": {
                 "town": "Boekel",
                 "fullName": "Fotogroep Focus KBO Boekel",
-                "nickName": "FG Focus"
+                "nickName": "fgFocus"
             },
             "coordinates": {
                 "latitude": 51.60421,
@@ -188,7 +236,7 @@
             "idPlus": {
                 "town": "Den Bosch",
                 "fullName": "Fotoclub Den Bosch AFC 68",
-                "nickName": "AFC68"
+                "nickName": "fcAFC68"
             },
             "coordinates": {
                 "latitude": 51.69440,
@@ -289,7 +337,7 @@
             "idPlus": {
                 "town": "Duerne",
                 "fullName": "Fotoclub Optika",
-                "nickName": "FC Optika"
+                "nickName": "fcOptika"
             },
             "coordinates": {
                 "latitude": 51.45032,
@@ -316,7 +364,7 @@
             "idPlus": {
                 "town": "Duizel",
                 "fullName": "Fotoclub Kemfodia",
-                "nickName": "FC Kemfodia"
+                "nickName": "fcKemfodia"
             },
             "coordinates": {
                 "latitude": 51.36821,
@@ -367,7 +415,7 @@
             "idPlus": {
                 "town": "Eersel",
                 "fullName": "Fotoclub Lucifer",
-                "nickName": "FC Lucifer"
+                "nickName": "fcLucifer"
             },
             "coordinates": {
                 "latitude": 51.41766,
@@ -388,6 +436,53 @@
             "nlSpecific": {
                 "fotobondNumber": 1679
             }
+        },
+
+        {
+            "idPlus": {
+                "town": "Geldrop",
+                "fullName": "Fotoclub de Dreef",
+                "nickName": "fcDeDreef"
+            },
+            "coordinates": {
+                "latitude": 51.41932,
+                "longitude": 5.573495
+            },
+            "website": "https://fotoclubdedreef.nl",
+            "level2URL": "https://www.example.com/fcDeDreef.level2.json",
+            "remark": [
+                {
+                    "language": "EN",
+                    "value": "This 8 member club caters to beginners and well as more experienced photographers."
+                },
+                {
+                    "language": "NL",
+                    "value": "De club heeft 8 leden en is open voor beginnelingen tot gevorderden."
+                }
+            ],
+        },
+
+        {
+            "idPlus": {
+                "town": "Geldrop",
+                "fullName": "Fotogroep Digifoto Geldrop",
+                "nickName": "fgDigifoto"
+            },
+            "coordinates": {
+                "latitude": 51.42227,
+                "longitude": 5.56280
+            },
+            "level2URL": "https://www.example.com/fgDigifoto.level2.json",
+            "remark": [
+                {
+                    "language": "EN",
+                    "value": "We couldn't find a working web site for the club, but the club was active in Oct 2023."
+                },
+                {
+                    "language": "NL",
+                    "value": "De club lijkt geen website meer te hebben. In 2023 hielden zij een 20-jarig jubileum."
+                }
+            ],
         },
 
         {
@@ -442,7 +537,7 @@
             "idPlus": {
                 "town": "Eindhoven",
                 "fullName": "Fotoclub Ericamera",
-                "nickName": "Ericamera"
+                "nickName": "fcEricamera"
             },
             "coordinates": {
                 "latitude": 51.45403,
@@ -469,7 +564,7 @@
             "idPlus": {
                 "town": "Eindhoven",
                 "fullName": "Fotogroep Anders",
-                "nickName": "FG Anders"
+                "nickName": "fgAnders"
             },
             "coordinates": {
                 "latitude": 51.44297,
@@ -493,7 +588,7 @@
             "idPlus": {
                 "town": "Eindhoven",
                 "fullName": "Fotogroep de Gender",
-                "nickName": "FG deGender"
+                "nickName": "fgDeGender"
             },
             "coordinates": {
                 "latitude": 51.42398,
@@ -2342,4 +2437,3 @@
 
     ]
 }
-
