@@ -207,7 +207,7 @@
 		D0B32BB22C15C51A009FF8E7 /* AppVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVersion.swift; sourceTree = "<group>"; };
 		D0B52496277F9A4B00927BCA /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D0BAB01C2A76CED300387E63 /* URLSession+synchronous.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+synchronous.swift"; sourceTree = "<group>"; };
-		D0BCEA7F2CD5505C00DEA3D5 /* 241101_Fotoclubs_Brabant_Oost.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = 241101_Fotoclubs_Brabant_Oost.xlsx; sourceTree = "<group>"; };
+		D0BCEA7F2CD5505C00DEA3D5 /* 241113_Fotoclubs_Brabant_Oost.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = 241113_Fotoclubs_Brabant_Oost.xlsx; sourceTree = "<group>"; };
 		D0C53BDC2ABF3ADF000722A1 /* PersonName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonName.swift; sourceTree = "<group>"; };
 		D0C6E95429577921001E5CE9 /* DebugPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugPanel.swift; sourceTree = "<group>"; };
 		D0C8E3A12BB81B4A00348D97 /* ItemFilterStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemFilterStatsView.swift; sourceTree = "<group>"; };
@@ -532,7 +532,7 @@
 		D08416952B2FC07F000F316D /* Lists */ = {
 			isa = PBXGroup;
 			children = (
-				D0BCEA7F2CD5505C00DEA3D5 /* 241101_Fotoclubs_Brabant_Oost.xlsx */,
+				D0BCEA7F2CD5505C00DEA3D5 /* 241113_Fotoclubs_Brabant_Oost.xlsx */,
 				D04B1A0B2B1AA06300EB3817 /* OrganizationList.json */,
 				D0A30FB72BB0BB33009A9A6E /* root.level1.json */,
 				D0E2D6032B9B9568008D1F7A /* test1Club.level1.json */,
