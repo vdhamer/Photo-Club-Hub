@@ -5,6 +5,9 @@ Adding a new standalone MacOS app in GitHub that generates HTML membership lists
 Who's who screen
 * Added support for club officers with role "other" (used for LA and HK in fgDeGender).
 
+Readme screen
+* Fixed typos in Dutch version (thanks Bram).
+
 Code Maintenance
 * Tested on SwiftLint 0.57.0_1 and iOS 18.2 (22C5125d) and Xcode 16.2 beta (16C5013f) and MacOS 15.1
 * SwiftJSON imported as package (again). Was temporarily a single .swift file.
