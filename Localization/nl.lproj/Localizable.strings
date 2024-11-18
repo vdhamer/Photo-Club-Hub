@@ -182,7 +182,7 @@
 "Paragraph_2.2" = "Het _Portfolio's_ scherm bevat een lijst van fotoclubs. Iedere club heeft een lijst van __portfolio's__ van hun leden. Deze portfolio's bevatten de foto's.";
 
 /* Third paragraph in The Concept on Readme page */
-"Paragraph_2.3" = "Een portfolio vertegenwoordigt het werk van één fotograaf voor zover dat hoort bij één club. Een fotograaf kan eventueel meerdere portfolio's in de app hebben als de fotograaf lid is (of was) van meerdere fotoclubs.";
+"Paragraph_2.3" = "Een portfolio vertegenwoordigt het werk van één fotograaf voor zover dat werk hoort bij die specifieke club. Een fotograaf kan eventueel meerdere portfolio's in de app hebben als de fotograaf lid is (of was) van meerdere fotoclubs.";
 
 /* Fourth paragraph in The Concept on Readme page */
 "Paragraph_2.4" = "Net als bij een schilder, kan een fotograaf van onderwerp of stijl veranderen. Daarom is ieder portfolio gesorteerd op tijdsvolgorde, met het nieuwste werk vooraan.";
@@ -236,7 +236,7 @@
 "Paragraph_3.6.a" = "__Slim Scrollen__";
 
 /* Paragraph 3.6.b of the Readme screen */
-"Paragraph_3.6.b" = "Het _Clubs en Musea_ scherm and het _Namenlijst_ scherm ondersteunen zogenaamde _smart scrolling_. Smart scrolling is stapsgewijs uitgebracht in iOS 17 en 18. Dit voorkomt dat tijdens het scrollen, een lijst tot stilstand komt op onhandige locaties zodat men bijvoorbeeld een halve foto of landkaart ziet. Om technische redenen ondersteunt het _Portfolio’s_ scherm dit nog niet.";
+"Paragraph_3.6.b" = "Het _Clubs en Musea_ scherm en het _Namenlijst_ scherm ondersteunen zogenaamde _smart scrolling_. Smart scrolling is stapsgewijs uitgebracht in iOS 17 en 18. Dit voorkomt dat tijdens het scrollen, een lijst tot stilstand komt op onhandige locaties zodat men bijvoorbeeld een halve foto of landkaart ziet. Om technische redenen ondersteunt het _Portfolio’s_ scherm dit nog niet.";
 
 /* Paragraph 3.7.a of the Readme screen */
 "Paragraph_3.7.a" = "__Websites__";
@@ -293,7 +293,7 @@
 "Paragraph_4.2" = "Om praktische redenen is de app geoptimaliseerd voor __iPhone__ en __iPad__. De app kan overigens ook draaien onder MacOS en VisionOS.";
 
 /* Third paragraph SupportedPlatforms section of Readme page */
-"Paragraph_4.3" = "Ofschoon de app vooralsnog geen ondersteuning heeft voor Android of andere niet-Apple telefoons, overwegen wij dit straks via een omweg te doen: het automatisch genereren van website pagina's vanuit dezelfde informatie die de app gebruikt. Dit help om club websites bijgewerkt te houden, maar maakt het ook mogelijk om de clublijst, ledenlijst en portfolio's in een web browser te bekijken op mobile apparaten (__Android__), PCs (__Windows__) of zelfs Linux.";
+"Paragraph_4.3" = "Ofschoon de app vooralsnog geen ondersteuning heeft voor Android of andere niet-Apple telefoons, overwegen wij dit straks via een omweg te doen: het automatisch genereren van website pagina's vanuit dezelfde informatie die de app gebruikt. Dit helpt om club websites bijgewerkt te houden, maar maakt het ook mogelijk om de clublijst, ledenlijst en portfolio's in een web browser te bekijken op mobile apparaten (__Android__), PCs (__Windows__) of zelfs Linux.";
 
 /* Fourth paragraph SupportedPlatforms section of Readme page */
 "Paragraph_4.4" = "Dit soort uitbreidingen zal afhangen van de belangstelling in de app en van hulp vanuit de _Open Source_ gemeenschap.";
