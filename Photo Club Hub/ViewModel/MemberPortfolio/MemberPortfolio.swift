@@ -70,7 +70,7 @@ extension MemberPortfolio { // expose computed properties (some related to handl
         get {
             if level3URL_ == nil {
                 let string = MemberPortfolio.emptyPortfolioURL
-                level3URL_ = URL(string: string)! // TODO this line crashes sometimes, get rid of ! operator
+                level3URL_ = URL(string: string)! // TODO can crash in PhotoClubHub HTML, get rid of ! operator?
             }
             return level3URL_!
         }
