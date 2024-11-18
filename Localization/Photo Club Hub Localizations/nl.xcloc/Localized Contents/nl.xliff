@@ -248,7 +248,7 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
       </trans-unit>
       <trans-unit id="Paragraph_2.3" xml:space="preserve">
         <source>A photographer may have multiple portfolios in the app in case the photographer is (or was) associated with more than one photo club.</source>
-        <target>Een portfolio vertegenwoordigt het werk van één fotograaf voor zover dat hoort bij één club. Een fotograaf kan eventueel meerdere portfolio's in de app hebben als de fotograaf lid is (of was) van meerdere fotoclubs.</target>
+        <target state="translated">Een portfolio vertegenwoordigt het werk van één fotograaf voor zover dat werk hoort bij die specifieke club. Een fotograaf kan eventueel meerdere portfolio's in de app hebben als de fotograaf lid is (of was) van meerdere fotoclubs.</target>
         <note>Third paragraph in The Concept on Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_2.4" xml:space="preserve">
@@ -338,7 +338,7 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
       </trans-unit>
       <trans-unit id="Paragraph_3.6.b" xml:space="preserve">
         <source>The _Clubs and Museums_ screen and the _Who’s Who_ screen feature _smart scrolling_, as introduced in iOS 17. This tries to prevent an item on a list from being partially displayed. The _Portfolios_ screen does not support smart scrolling because that is incompatible with having so-called sectioned lists.</source>
-        <target>Het _Clubs en Musea_ scherm and het _Namenlijst_ scherm ondersteunen zogenaamde _smart scrolling_. Smart scrolling is stapsgewijs uitgebracht in iOS 17 en 18. Dit voorkomt dat tijdens het scrollen, een lijst tot stilstand komt op onhandige locaties zodat men bijvoorbeeld een halve foto of landkaart ziet. Om technische redenen ondersteunt het _Portfolio’s_ scherm dit nog niet.</target>
+        <target state="translated">Het _Clubs en Musea_ scherm en het _Namenlijst_ scherm ondersteunen zogenaamde _smart scrolling_. Smart scrolling is stapsgewijs uitgebracht in iOS 17 en 18. Dit voorkomt dat tijdens het scrollen, een lijst tot stilstand komt op onhandige locaties zodat men bijvoorbeeld een halve foto of landkaart ziet. Om technische redenen ondersteunt het _Portfolio’s_ scherm dit nog niet.</target>
         <note>Paragraph 3.6.b of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.7.a" xml:space="preserve">
@@ -433,7 +433,7 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
       </trans-unit>
       <trans-unit id="Paragraph_4.3" xml:space="preserve">
         <source>Although there is presently no native support for __Android__ or other non-Apple phone platforms, we plan to provide support by automatically generating website pages from the same online lists that the app uses. This helps keep club web sites up to date, and allows viewing of clubs, members, and images in a web browsers on a wide range of platforms including Android, but also platforms like Windows or Linux.</source>
-        <target>Ofschoon de app vooralsnog geen ondersteuning heeft voor Android of andere niet-Apple telefoons, overwegen wij dit straks via een omweg te doen: het automatisch genereren van website pagina's vanuit dezelfde informatie die de app gebruikt. Dit help om club websites bijgewerkt te houden, maar maakt het ook mogelijk om de clublijst, ledenlijst en portfolio's in een web browser te bekijken op mobile apparaten (__Android__), PCs (__Windows__) of zelfs Linux.</target>
+        <target state="translated">Ofschoon de app vooralsnog geen ondersteuning heeft voor Android of andere niet-Apple telefoons, overwegen wij dit straks via een omweg te doen: het automatisch genereren van website pagina's vanuit dezelfde informatie die de app gebruikt. Dit helpt om club websites bijgewerkt te houden, maar maakt het ook mogelijk om de clublijst, ledenlijst en portfolio's in een web browser te bekijken op mobile apparaten (__Android__), PCs (__Windows__) of zelfs Linux.</target>
         <note>Third paragraph SupportedPlatforms section of Readme page</note>
       </trans-unit>
       <trans-unit id="Paragraph_4.4" xml:space="preserve">
