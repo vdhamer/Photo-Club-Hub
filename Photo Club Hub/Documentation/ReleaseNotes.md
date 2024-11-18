@@ -1,27 +1,27 @@
-### 2.7.1 (GitHub commit ???????) ??-08-24
+### 2.7.1 (GitHub commit ???????) ??-11-24
 
-Adding a new standalone MacOS app in GitHub that generates HTML membership lists for club websites.
+Working on a new standalone MacOS app (see GitHub/vdhamer) that generates HTML membership lists for club web sites.
 
 Who's who screen
 * Added support for club officers with role "other" (used for LA and HK in fgDeGender).
 
 Readme screen
-* Fixed typos in Dutch version (thanks Bram).
+* Fixed typos in Dutch text (thanks to BvdB of fgWaalre).
 
 Code Maintenance
 * Tested on SwiftLint 0.57.0_1 and iOS 18.2 (22C5125d) and Xcode 16.2 beta (16C5013f) and MacOS 15.1
-* SwiftJSON imported as package (again). Was temporarily a single .swift file.
+* SwiftJSON imported as an external package. Was temporarily included as a single Swift source file.
 * Entered trader status (not a trader) in Apple App Store.
-* Minor update to OrganizationType.swift (to stay in sync with Photo-Club-Hub-HTML)
-* removed Organization parameter from Photographer.createFindUpdate() as it was used for debugging only
-* set LSMinimumSystemVersion to (MacOS) 15.0.0 in case the app ever runs on a Mac
+* Minor update to OrganizationType.swift (to stay in sync with Photo-Club-Hub-HTML).
+* removed Organization parameter from Photographer.createFindUpdate() as it was used for debugging only.
+* set LSMinimumSystemVersion to (MacOS) 15.0.0 in case the app is run on a Mac.
 
 Data Maintenance
-* Added website for member WH in fgDeGender and added a few birthdays (not shown so far).
-* Added 14 photo clubs in Brabant Oost (NL) to the list.
-* Updated website URL for Collectief Brabant
+* Added website for member WH in fgDeGender and added a few birthdays (not visible yet in user interface).
+* Added 14 photo clubs in Brabant Oost (NL).
+* Fixed web site URL for Collectief Brabant.
 
-This build #4631 was built using Xcode 16.0 and is intended for App Store distribution.
+This build #4631 was built using Xcode 16.2 and is intended for App Store distribution.
 
 ---------------------------------------------------------------------------
 
