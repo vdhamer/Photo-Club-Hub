@@ -68,7 +68,7 @@ struct OrganizationListView: View {
             PhotoClubHubApp.deleteAllCoreDataObjects()
             PhotoClubHubApp.loadClubsAndMembers() // carefull: runs asynchronously
         }
-        .task {
+        .task { // will be aborted when ScrollView disappears
             try? await locationManager.requestUserAuthorization()
             try? await locationManager.startCurrentLocationUpdates()
             // remember that nothing will run here until the for try await loop finishes

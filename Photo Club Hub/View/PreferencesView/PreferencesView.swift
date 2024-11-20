@@ -110,7 +110,7 @@ struct PreferencesView: View {
                                          comment: "In Preferences, above link to Settings"),
                             content: {
                                 Button {
-                                    Task {
+                                    Task { // for async call
                                         if let url = URL(string: UIApplication.openSettingsURLString) {
                                             await UIApplication.shared.open(url)
                                         }
