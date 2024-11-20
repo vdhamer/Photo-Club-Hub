@@ -159,7 +159,7 @@ struct FilteredOrganizationView: View, Sendable {
                     var localizedCountry: String?
                     do {
                         let (locality, nation) = // can be (nil, nil) for Chinese location or Chinese user location
-                        try await reverseGeocode(coordinates: coordinates)
+                            try await reverseGeocode(coordinates: coordinates)
                         localizedTown = locality ?? town // unlocalized as fallback for localized -> String
                         localizedCountry = nation // optional String
                         await updateTownCountry(clubName: clubName, town: town,
@@ -348,8 +348,8 @@ extension FilteredOrganizationView { // reverse GeoCoding
             throw CLError(.geocodeFoundNoResult)
         }
 
-        let town = placemark.locality
-        let country = placemark.country
+        let town: String? = placemark.locality
+        let country: String? = placemark.country
         return (town, country)
     }
 
