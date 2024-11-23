@@ -8,6 +8,11 @@ Who's who screen
 
 Readme screen
 * Fixed typos in Dutch text (thanks to BvdB of fgWaalre).
+* Updated English text
+* Fixed screen size on iPad under iOS 18 (using presentationSizing)
+
+Preferences screen
+* Fixed screen size on iPad under iOS 18 (using presentationSizing)
 
 Code Maintenance
 * Tested on SwiftLint 0.57.0_1 and iOS 18.2 (22C5142a) and Xcode 16.2 beta (16C5023f) and MacOS 15.1.1
@@ -22,7 +27,7 @@ Data Maintenance
 * Added 14 photo clubs in Brabant Oost (NL).
 * Fixed web site URL for Collectief Brabant.
 
-This build #4631 was built using Xcode 16.2 and is intended for App Store distribution.
+This build #4631 was built using Xcode 16.1 and is intended for App Store distribution.
 
 ---------------------------------------------------------------------------
 
