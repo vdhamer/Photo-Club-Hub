@@ -83,7 +83,7 @@ struct ReadmeView: View {
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: geo.size.width * 0.8, alignment: .center)
-                            Text("Translating English phrases into Dutch",
+                            Text("Part of the internal translation table",
                                  comment: "Caption of Localizations image on Readme page")
                             .font(.callout.italic())
                             .frame(width: geo.size.width, alignment: .center)

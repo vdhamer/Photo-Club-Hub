@@ -313,6 +313,9 @@
 /* Fifth paragraph Developers section of Readme page */
 "Paragraph_5.5" = "Afgezien van het toevoegen van clubs, kunnen wij andere hulp heel goed gebruiken. Voorbeelden van __niet-technische hulp__ zijn het testen van de app, schrijven van FAQs en instructies, en uiteraard ideeën. De app is open source (via [GitHub](https://github.com/vdhamer/Photo-Club-Hub)) om __hulp bij de softwareontwikkeling__ mogelijk te maken. Voorbeelden van technische hulp zijn software uitbreidingen, bugs oplossen, technisch meedenken, of zelfs aanvullende programma’s (b.v. om gegevensinvoer simpeler te maken).";
 
+/* Caption of Localizations image on Readme page */
+"Part of the internal translation table" = "Een stukje van de interne EN-NL vertaaltabel";
+
 /* Telephone number (usually invisible) */
 "Phone:" = "Tel:";
 
