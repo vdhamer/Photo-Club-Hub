@@ -11,6 +11,7 @@ Readme screen
 * Updated English text
 * Fixed screen size on iPad under iOS 18 (using presentationSizing)
 * Fixed first image (screenshot)
+* Added "optional" to Level 1 example (hasn't been implemented yet)
 
 Preferences screen
 * Fixed screen size on iPad under iOS 18 (using presentationSizing)
