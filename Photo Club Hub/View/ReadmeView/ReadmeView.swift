@@ -267,8 +267,7 @@ struct ReadmeView: View {
                 .navigationTitle(title)
             }
             .padding(.init(top: 0, leading: 0, bottom: 15, trailing: 0))
-            .frame(minWidth: geo.size.width*0.2, idealWidth: geo.size.width*0.5, maxWidth: geo.size.width,
-                   minHeight: geo.size.height*0.5, idealHeight: geo.size.height, maxHeight: geo.size.height)
+            .presentationSizing(.page)
         } // GeometryReader
     }
 

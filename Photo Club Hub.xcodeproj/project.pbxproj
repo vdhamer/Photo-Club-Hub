@@ -501,8 +501,8 @@
 			children = (
 				D0831A4B277F736C0049AB84 /* ReleaseNotes.md */,
 				D076BE702CF0CC10008F4B47 /* Readme_EN_2_7_1.pages */,
-				D06E0DCA2C822E8900273AE9 /* Photo Club Hub.pptx */,
 				D0E02F972B80191300D67CDA /* Readme_NL_2_7_0.pages */,
+				D06E0DCA2C822E8900273AE9 /* Photo Club Hub.pptx */,
 				D07A1E2E28314EA600C77F66 /* SwiftUIEnvironmentValues.png */,
 				D01DFAA627E778BD007BABFA /* offsets.md */,
 				D04A2B112AC0958C003ED113 /* LineCount.xlsx */,

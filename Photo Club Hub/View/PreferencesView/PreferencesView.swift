@@ -139,8 +139,7 @@ struct PreferencesView: View {
                 // need to update Bindings for showPhotoClubsList etc
                 preferences = localPreferences
             }
-//            .frame(minWidth: geo.size.width*0.2, idealWidth: geo.size.width*0.35, maxWidth: geo.size.width,
-//                   minHeight: geo.size.height*0.3, idealHeight: geo.size.height*0.8, maxHeight: geo.size.height)
+            .presentationSizing(.form)
         })
     }
 
