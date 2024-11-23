@@ -152,55 +152,55 @@
 "other" = "Club officer";
 
 /* First paragraph in The App section of Readme page */
-"Paragraph_1.1" = "Our ambitions in creating _Photo Club Hub_ were to strengthen ties between photography clubs, and making the work of club members easier to access.";
+"Paragraph_1.1" = "_Photo Club Hub_ displays selected photos made by members of photo clubs in a consistent, accessible manner, while minimizing distractions.";
 
 /* Second paragraph in The App section of Readme page */
-"Paragraph_1.2" = "_Photo Club Hub_ showcases selected photos by members of participating clubs. The photos are displayed in a consistent, easy to access way, with minimal distractions.";
+"Paragraph_1.2" = "This consistency eliminates the need to manually find each club’s website and discover how to navigate its photo galleries. The app doesn’t replace club-, photographer-, or social media sites. Instead, it supports clubs and their members who try to reach out to other clubs, to other photographers, and to a general audience.";
 
 /* Third paragraph in The App section of Readme page */
-"Paragraph_1.3" = "This consistency avoids having to find each club's website yourself, and then figuring out how to locate and browse the photos on that site. The app does __not__ try to replace club web sites, photographer web sites, or social media channels. Instead, it supports clubs and their members who try to reach out to other clubs, to other photographers, and to a general audience.";
+"Paragraph_1.3" = "The app aims to strengthen ties between photography clubs and make their members’ photos easily accessible.";
 
 /* Fourth paragraph in The App section of Readme page */
-"Paragraph_1.4" = "The app was originally named _Photo Club Waalre_ after a 15-person photo club in the southern Netherlands. The word __hub__ in the new name stresses the app's goals of strengthening the ties between __multiple__ photo clubs.";
+"Paragraph_1.4" = "The app, originally named _Photo Club Waalre_, was created for a 15-person photo club in the southern Netherlands. The newer name, _Photo Club Hub_, emphasizes the app’s mission to foster connections among various photo clubs.";
 
 /* Fifth paragraph in The App section of Readme page */
-"Paragraph_1.5" = "Supporting dozens or even hundreds of clubs requires that each club manages its own data. This includes providing images, and maintaining lists of club members. No software expertise is required for adding a club to Photo Club Hub.";
+"Paragraph_1.5" = "Supporting dozens or even hundreds of clubs necessitates that each club manages its own data, including providing images and maintaining lists of club members. Notably, no software expertise is required to add a club to _Photo Club Hub_.";
 
 /* Sixth paragraph in The App section of Readme page */
-"Paragraph_1.6" = "Interested in adding support for your club? Contact us via [GitHub](https://github.com/vdhamer/Photo-Club-Hub), [Facebook](https://www.facebook.com/vdhamer) or [LinkedIn](https://www.linkedin.com/in/vdhamer/). Adding your club only involves providing and updating club data in a way that the app can understand. The app's [GitHub site](https://GitHub.com/vdhamer/Photo-Club-Hub#readme) explains the strategy and approach in more detail. We are here to help and to answer your questions.";
+"Paragraph_1.6" = "Interested in supporting your club? Contact us via [GitHub](https://github.com/vdhamer/Photo-Club-Hub), [Facebook](https://www.facebook.com/vdhamer), or [LinkedIn](https://www.linkedin.com/in/vdhamer/). Providing and maintaining club data in a standardized way is all that’s required. The app’s [GitHub site](https://github.com/vdhamer/Photo-Club-Hub) explains this approach in detail. We’re here to help with any questions.";
 
 /* First paragraph in The Concept on Readme page */
-"Paragraph_2.1" = "Photo clubs play a central role in this app. The _Portfolios_ screen shows a list of photo clubs.";
+"Paragraph_2.1" = "Photo clubs play a key role in the app. The central _Portfolios_ screen shows a list of photo clubs.";
 
 /* Second paragraph in The Concept on Readme page */
 "Paragraph_2.2" = "Each photo club contains a series of member __portfolios__ that hold the actual images. Each portfolio covers the photographer's photos that are associated with that photo club.";
 
 /* Third paragraph in The Concept on Readme page */
-"Paragraph_2.3" = "A photographer may have multiple portfolios in the app in case the photographer is (or was) associated with more than one photo club.";
+"Paragraph_2.3" = "A photographer may have multiple portfolios in the app if case the photographer is (or was) associated with more than one photo club.";
 
 /* Fourth paragraph in The Concept on Readme page */
-"Paragraph_2.4" = "Just like a painter, a photographer’s style often changes over the years. Each portfolio is therefore shown in chronological order, with the latest work first.";
+"Paragraph_2.4" = "Just like a painter, a photographer’s style often changes over the years. Each portfolio should preferably show the images in chronological order, with the latest work first.";
 
 /* Fifth paragraph in The Concept on Readme page */
-"Paragraph_2.5" = "We try to show the portfolios with minimal distraction, just like an exposition at a museum or gallery. Web sites tend to be less optimal for this, because they are cluttered by browser controls (e.g., an address bar or tabs), and need to display multiple types of information (e.g., club news or schedules).";
+"Paragraph_2.5" = "We try to show the portfolios with minimal distraction, just like an exposition at a museum or gallery. Web sites tend to be less suitable for this, because they are cluttered by browser controls (e.g., an address bar or tabs), and generally contain various additional types of information (e.g., club news or schedules).";
 
 /* Paragraph 3.1.a of the Readme screen */
 "Paragraph_3.1.a" = "__Languages__";
 
 /* Paragraph 3.1.b of the Readme screen */
-"Paragraph_3.1.b" = "_Photo Club Hub_ automatically selects its language based on your device’s language settings. It currently supports English and Dutch. You can change language using _Settings > General > Language & Region > Preferred Language Order_. Alternatively you can overrule this setting for this app only (_Settings > Photo Club Hub > Language_).";
+"Paragraph_3.1.b" = "_Photo Club Hub_ automatically selects its language based on your device’s language settings. It currently supports English and Dutch. You can change language using _Settings > Photo Club Hub > Language_. Alternatively you can change your device’s preference across all apps using _Settings > General > Language & Region > Preferred Language Order_.";
 
 /* Paragraph 3.2.a of the Readme screen */
 "Paragraph_3.2.a" = "__3D maps__";
 
 /* Paragraph 3.2.ba of the Readme screen */
-"Paragraph_3.2.b" = "If you zoom in far enough on any map, a button appears that allows you do view the area in three dimensions. In 3D mode you can rotate the map.";
+"Paragraph_3.2.b" = "If you zoom in far enough on any map, a button appears that allows you to view the area in three dimensions. In 3D mode you can rotate the map.";
 
 /* Paragraph 3.3.a of the Readme screen */
 "Paragraph_3.3.a" = "__Live location__";
 
 /* Paragraph 3.3.b of the Readme screen */
-"Paragraph_3.3.b" = "Maps can highlight your own location as a purple dot when it is in range of the map. This can help you navigate to a club or to estimate distances. If the map is unlocked/interactive, an arrow button let you re-center the map around your current location.";
+"Paragraph_3.3.b" = "Maps can display your current location as a purple dot when it falls within the map’s range. This can help you navigate to a club or to estimate distances. If the map is unlocked (interactive), an arrow button lets you re-center the map around your current location.";
 
 /* Paragraph 3.3.c of the Readme screen */
 "Paragraph_3.3.c" = "Live location requires granting the app __permission__ to access your location while in the app. The app doesn’t store or share your location with anyone or anything.";
@@ -209,19 +209,19 @@
 "Paragraph_3.4.a" = "__Adding photo clubs__";
 
 /* Paragraph 3.4.b of the Readme screen */
-"Paragraph_3.4.b" = "The app initially contains an initial list of 40+ photo clubs. Those clubs are currently all in one region in the Netherlands. The app, however, can support clubs anywhere in the world and the list can be extended by the users.";
+"Paragraph_3.4.b" = "The app initially contains an initial list of over 60 photo clubs. Those clubs are currently all in one part of the Netherlands. The app is however designed to support clubs anywhere in the world and the list of clubs can be extended by the users.";
 
 /* Paragraph 3.4.c of the Readme screen */
 "Paragraph_3.4.c" = "For a club to be included, the app needs basic information like the club’s name and location (Level 1), a list of its members (Level 2) and links to image portfolios (Level 3). More details on extending the various lists are provided below and on GitHub.";
 
 /* Paragraph 3.4.d of the Readme screen */
-"Paragraph_3.4.d" = "Similarly, the initial list of 30+ photo museums can also be extended by users without updating the app itself.";
+"Paragraph_3.4.d" = "The initial list of 30+ photo museums can be similarly extended.";
 
 /* Paragraph 3.5.a of the Readme screen */
 "Paragraph_3.5.a" = "__Photo museums__";
 
 /* Paragraph 3.5.b of the Readme screen */
-"Paragraph_3.5.b" = "The maps can show various photo museums throughout the world. Museums and clubs are represented differently on the map.";
+"Paragraph_3.5.b" = "The maps can show various photo museums throughout the world. Museums and clubs are depicted differently on the map.";
 
 /* Paragraph 3.5.c of the Readme screen */
 "Paragraph_3.5.c" = "Adding a photo museum works the same way as adding a photo club - except that a museum doesn’t have members or member portfolios.";
@@ -230,13 +230,13 @@
 "Paragraph_3.6.a" = "__Smart scrolling__";
 
 /* Paragraph 3.6.b of the Readme screen */
-"Paragraph_3.6.b" = "The _Clubs and Museums_ screen and the _Who’s Who_ screen feature _smart scrolling_, as introduced in iOS 17. This tries to prevent an item on a list from being partially displayed. The _Portfolios_ screen does not support smart scrolling because that is incompatible with having so-called sectioned lists.";
+"Paragraph_3.6.b" = "The _Clubs and Museums_ screen and the _Who’s Who_ screen feature _smart scrolling_, as introduced in iOS 17. This tries to prevent an item in a list from being partially visible. The _Portfolios_ screen does not currently support smart scrolling for technical reasons.";
 
 /* Paragraph 3.7.a of the Readme screen */
 "Paragraph_3.7.a" = "__Web sites__";
 
 /* Paragraph 3.7.b of the Readme scree */
-"Paragraph_3.7.b" = "This app is complimentary to your club’s web site. Because web sites have more uses than just presenting photos, _Photo Club Hub_ includes clickable links that bring you to club- and photographer web sites.";
+"Paragraph_3.7.b" = "This app is complimentary to your club’s web site. Because web sites serve more purposes than just presenting photos, _Photo Club Hub_ includes clickable links that lead to club- and photographer web sites.";
 
 /* Paragraph 3.8.a of the Readme screen */
 "Paragraph_3.8.a" = "__The opening image__";
@@ -251,16 +251,16 @@
 "Paragraph_3.8.d" = "Tapping __inside__ the image allows you to zoom in or out to your heart's content. Tapping __outside__ the image area ends the animation. A single tap __outside__ the image allows you to skip the animation.";
 
 /* Paragraph 3.8.e of the Readme screen */
-"Paragraph_3.8.e" = "The animation incidentally runs on your device's GPU cores using the [Metal software framework](https://browser.geekbench.com/ios-benchmarks#metal).";
+"Paragraph_3.8.e" = "The computations for this animation incidentally run on your device’s GPU cores. This is only scratching the surface of what these cores can do.";
 
 /* Paragraph 3.9.a of the Readme screen */
 "Paragraph_3.9.a" = "__Former Members__";
 
 /* Paragraph 3.9.b of the Readme screen */
-"Paragraph_3.9.b" = "The app can include the work of former club members. By default, former members are not shown, but you can be enabled on in the _Preferences_ screen.";
+"Paragraph_3.9.b" = "By default, former club members and their work are not shown, but this can be enabled on the _Preferences_ screen.";
 
 /* Paragraph 3.9.c of the Readme screen */
-"Paragraph_3.9.c" = "An easy way to get recent ex-member data in the app is to simply not remove their portfolios when they leave. You should instead change their status to ex-member in the membership (\"Level 2\") list.";
+"Paragraph_3.9.c" = "An easy way to get recent ex-member data in the app is to simply not remove their portfolios when they leave. You should then change their status to ex-member in the membership (\"Level 2\") list.";
 
 /* Paragraph 3.10.a of the Readme screen */
 "Paragraph_3.10.a" = "__Automatic Slide Shows__";
@@ -269,43 +269,43 @@
 "Paragraph_3.10.b" = "Some portfolios have an automatic slide show option. This is controlled by one of the buttons that appear when you tap on an image (this tapping is only needed on an iPhone).";
 
 /* Paragraph 3.10.c of the Readme screen */
-"Paragraph_3.10.c" = "This option is available on portfolios that were generated using the _Juicebox_ plug-in for _Lightroom Classic_ (see the portfolios of Fotogroep Waalre).";
+"Paragraph_3.10.c" = "This option is available on portfolios that were generated using the _Juicebox_ plug-in for _Lightroom Classic_ (see the portfolios of Fotogroep de Gender).";
 
 /* Paragraph 3.11.a of the Readme screen */
 "Paragraph_3.11.a" = "__Searching__";
 
 /* Paragraph 3.11.b of the Readme screen */
-"Paragraph_3.11.b" = "There is a search bar at the top of major screens. On an iPhone you may need to scroll back to the top of the list in order to see it.";
+"Paragraph_3.11.b" = "There is a search bar at the top of major screens. On an iPad the search bar is continuously visible. On an iPhone you need to scroll back to the very top of the list to get the search bar to appear.";
 
 /* Paragraph 3.11.c of the Readme screen */
-"Paragraph_3.11.c" = "Entering part of person’s name (for the _Portfolios_ and _Who’s Who_ screens) will find people with that name. The _Clubs and Museums_ screen searches both on the organization's name and on its location (town).";
+"Paragraph_3.11.c" = "Entering part of person’s name (on the _Portfolios_ and _Who’s Who_ screens) will find people with that name. The _Clubs and Museums_ screen simultaneously searches both on the club/museum name and on its specified location.";
 
 /* First paragraph SupportedPlatforms section of Readme page */
-"Paragraph_4.1" = "_Photo Club Hub_ requires the latest major version of iOS. This allows us to keep the app technically up to date. The latest app version can run on devices released in the last 6 or 7 years.";
+"Paragraph_4.1" = "_Photo Club Hub_ generally requires the latest version of iOS. This allows us to keep the app technically up to date. The latest app version can thus run on devices released in the last 6 or 7 years.";
 
 /* Second paragraph SupportedPlatforms section of Readme page */
-"Paragraph_4.2" = "For practical reasons, the app is optimized for __iOS__ and __iPadOS__. The app can also run on MacOS or VisionOS as an iPad app.";
+"Paragraph_4.2" = "The app is optimized for iOS and iPadOS. It can also run unoptimized on a Mac or Vision Pro.";
 
 /* Third paragraph SupportedPlatforms section of Readme page */
-"Paragraph_4.3" = "Although there is presently no native support for __Android__ or other non-Apple phone platforms, we plan to provide support by automatically generating website pages from the same online lists that the app uses. This helps keep club web sites up to date, and allows viewing of clubs, members, and images in a web browsers on a wide range of platforms including Android, but also platforms like Windows or Linux.";
+"Paragraph_4.3" = "Although there is presently no native support for __Android__ or other non-Apple phone platforms, we made a companion app that automatically generates website pages from the same online lists that the app uses. This helps keep club web sites up to date, and allows viewing of clubs, members, and images in a web browsers on a wide range of platforms (including Android, Windows, MacOS and Linux).";
 
 /* Fourth paragraph SupportedPlatforms section of Readme page */
-"Paragraph_4.4" = "These and other ideas will depend on uptake and help from volunteers from the software community. If you are interested in helping, see the next section.";
+"Paragraph_4.4" = "These developments really depend on the help of volunteers from the clubs and the software community. If you’re interested in helping out, check out the section below.";
 
 /* First paragraph Developers section of Readme page */
-"Paragraph_5.1" = "The app needs information in order to __cover your local photo club(s)__. This involves three so-called Levels. You can pause on any level before proceeding to a next level. See the app’s README file on GitHub for more details.";
+"Paragraph_5.1" = "The app needs information in order to cover your local photo club(s). This involves three so-called __Levels__. A club can stay at any level for a while before proceeding to a next level. See the app’s [README](https://github.com/vdhamer/Photo-Club-Hub/blob/main/.github/README.md) file on GitHub for more details.";
 
 /* Second paragraph Developers section of Readme page */
-"Paragraph_5.2" = "__Level 1__ requires providing the club’s name, location and a few links. As a result, the club is listed on the _Clubs and Museums_ screen and shown on its maps. If you send us the Level 1 information, we will add it to the app’s online list of clubs. Alternatively, you can submit that information (and any future updates) in the form a [GitHub “pull request”](https://www.youtube.com/watch?v=BCQHnlnPusY&list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV&index=1).";
+"Paragraph_5.2" = "__Level 1__ requires providing the club’s name, location and a few optional links. Once it is on Level 1, the club is listed on the _Clubs and Museums_ screen and shown on maps. If you send us the Level 1 information, we will add it to the app’s online list of clubs. The technically inclined can best submit that information (and any future updates) in the form a [GitHub “pull request”](https://www.youtube.com/watch?v=BCQHnlnPusY&list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV): this pretty much automates the integration process and reduces the risk of errors.";
 
 /* Third paragraph Developers section of Readme page */
-"Paragraph_5.3" = "__Level 2__ requires providing a list of the names of current (and maybe former) club members as a text file with a specific format. This file can be stored anywhere you like as long as it can be fetched using a web address (URL). For example, you can store it in the _Media_ section of your club’s _Wordpress_ web site. With Level 2, the membership lists shows up on the _Portfolios_ screen. _Fotogroep Anders_ (NL) shows what a Level 2 club looks like in the user interface. We are currently simplifying data entry for Level 2.";
+"Paragraph_5.3" = "__Level 2__ requires providing a list of the names of current (and optionally former) club members as a text file with a specific format. This file can be stored anywhere as long as it can be fetched using a web address (URL). For example, you can store it in the _Media_ section of your club’s _Wordpress_ web site. At Level 2, the membership lists show up on the _Portfolios_ screen. _Fotogroep Anders_ (NL) shows what a Level 2 club looks like in the user interface.";
 
 /* Fourth paragraph Developers section of Readme page */
-"Paragraph_5.4" = "__Level 3__ requires providing links to the online images in member portfolios. _Fotogroep Waalre_ (NL) is an example of a Level 3 club: you can view their portfolios via the _Portfolios_ screen. Because a club with with dozens of members may want to show hundreds of images, we have a way to automatically generate portfolios using _Lightroom_ (step-by-step instructions for this will be provided later).";
+"Paragraph_5.4" = "Clubs at __Level 3__ also provide links to the online images in member portfolios. _Fotogroep de Gender_ (NL) is an example of a Level 3 club: you can view their portfolios via the _Portfolios_ screen. Because a club with dozens of members may want to show hundreds of images, we have a way to automatically create portfolios from _Lightroom_ collections (step-by-step instructions for this will be made available)";
 
 /* Fifth paragraph Developers section of Readme page */
-"Paragraph_5.5" = "Apart from onboarding clubs, there are more ways in which you can help out. Examples of __non-technical__ help include testing, writing a review for Apple’s App Store, creating user guides, and improvement ideas. Last, and certainly not least, actual __software development__ support will help speed up development, come up with fresh ideas and ensure app continuity. Example contributions include code improvement of all sorts (via  [GitHub](https://github.com/vdhamer/Photo-Club-Hub), hunting down bugs, and contributing to discussions on functionality, implementation and interfaces.\n";
+"Paragraph_5.5" = "Help with onboarding of additional clubs is essential. But there are more ways in which you can help out. Examples of __non-technical help__ include testing, writing a review for Apple’s App Store, creating step-by-step user instructions, and coming up with improvement ideas. Last, and certainly not least, actual _software development_ support will help speed up app enhancements, produce fresh ideas and ensure app continuity. Example contributions include code improvement of all sorts (via [GitHub](https://github.com/vdhamer/Photo-Club-Hub)), hunting down bugs, and contributing to discussions on functionality, implementation and interfaces.\n";
 
 /* Telephone number (usually invisible) */
 "Phone:" = "Phone:";
