@@ -12,9 +12,11 @@ struct MemberPortfolioListView: View {
     fileprivate var detentsList: Set<PresentationDetent> = [ .fraction(0.5), .fraction(0.70), .fraction(0.90), .large ]
 
     @State fileprivate var showingPreferences = false // controls visibility of Preferences screen
-    @State fileprivate var selectedPreferencesDetent = PresentationDetent.fraction(0.70) // must be elem. of detentsList
     @State fileprivate var showingReadme = false // controls visibility of Readme screen
+
+    @State fileprivate var selectedPreferencesDetent = PresentationDetent.large // must be elem. of detentsList
     @State fileprivate var selectedReadmeDetent = PresentationDetent.fraction(0.70) // must be element of detentsList
+
     @State fileprivate var searchText: String = ""
 
     @FetchRequest( // is this used? It is replaced by a fetchRequest in Photographers page
