@@ -1,6 +1,7 @@
 ### 2.7.1 (GitHub commit ???????) ??-11-24
 
 Working on a new standalone MacOS app (see GitHub/vdhamer) that generates HTML membership lists for club web sites.
+This version requires iOS 18.0 or higher.
 
 Who's who screen
 * Added support for club officers with role "other" (used for LA and HK in fgDeGender).

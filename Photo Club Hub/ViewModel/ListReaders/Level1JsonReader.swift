@@ -91,11 +91,11 @@ class Level1JsonReader {
 
         func getData(fileURL: URL,
                      filePath: String) -> String {
-            if let urlData = try? String(contentsOf: fileURL), !useOnlyFile {
+            if let urlData = try? String(contentsOf: fileURL, encoding: .utf8), !useOnlyFile {
                 return urlData
             }
             print("Could not access online file \(fileURL.relativeString). Trying local file \(filePath) instead.")
-            if let fileData = try? String(contentsOfFile: filePath) {
+            if let fileData = try? String(contentsOfFile: filePath, encoding: .utf8) {
                 return fileData
             }
             // calling fatalError is ok for a compile-time constant (as defined above)
