@@ -10,6 +10,7 @@ Readme screen
 * Fixed typos in Dutch text (thanks to BvdB of fgWaalre).
 * Updated English text
 * Fixed screen size on iPad under iOS 18 (using presentationSizing)
+* Fixed first image (screenshot)
 
 Preferences screen
 * Fixed screen size on iPad under iOS 18 (using presentationSizing)
