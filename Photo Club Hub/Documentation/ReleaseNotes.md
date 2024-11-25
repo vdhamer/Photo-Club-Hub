@@ -7,11 +7,10 @@ Who's who screen
 * Added support for club officers with role "other" (used for LA and HK in fgDeGender).
 
 Readme screen
-* Fixed typos in Dutch text (thanks to BvdB of fgWaalre).
-* Updated English text
+* Updated Dutch and English versions of the text
 * Fixed screen size on iPad under iOS 18 (using presentationSizing)
-* Fixed first image (screenshot)
-* Added "optional" to Level 1 example (hasn't been implemented yet)
+* Updated several screenshots
+* Added "optional" to Level 1 example (although it hasn't been implemented yet)
 
 Preferences screen
 * Fixed screen size on iPad under iOS 18 (using presentationSizing)
