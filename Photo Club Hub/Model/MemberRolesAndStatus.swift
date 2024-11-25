@@ -19,25 +19,22 @@ enum MemberRole {
     case other
 
     func localizedString() -> String {
+        let translateComment: StaticString =
+            "Administrative role of member within a club. Used as part of concatenations."
+
         switch self {
         case .admin:
-            return String(localized: "admin",
-                          comment: "Administrative role of member within a club. Used as part of concatenations.")
+            return String(localized: "admin", comment: translateComment)
         case .chairman:
-            return String(localized: "chairman",
-                          comment: "Administrative role of member within a club. Used as part of concatenations.")
+            return String(localized: "chairman", comment: translateComment)
         case .secretary:
-            return String(localized: "secretary",
-                          comment: "Administrative role of member within a club. Used as part of concatenations.")
+            return String(localized: "secretary", comment: translateComment)
         case .treasurer:
-            return String(localized: "treasurer",
-                          comment: "Administrative role of member within a club. Used as part of concatenations.")
+            return String(localized: "treasurer", comment: translateComment)
         case .viceChairman:
-            return String(localized: "vice-chairman",
-                          comment: "Administrative role of member within a club. Used as part of concatenations.")
+            return String(localized: "vice-chairman", comment: translateComment) // used in fgWaalre
         case .other:
-            return String(localized: "other",
-                          comment: "Administrative role of member within a club. Used as part of concatenations.")
+            return String(localized: "other", comment: translateComment) // used in fgDeGender
         }
     }
 }
