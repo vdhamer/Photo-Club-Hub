@@ -121,7 +121,7 @@
       </trans-unit>
       <trans-unit id="Configuring Level 1 data for a Dutch photo club" xml:space="preserve">
         <source>Configuring Level 1 data for a Dutch photo club</source>
-        <target>Sjabloon voor het toevoegen van een fotoclub op Niveau 1</target>
+        <target>Sjabloon voor het toevoegen van een fotoclub</target>
         <note>Caption for image on Readme page</note>
       </trans-unit>
       <trans-unit id="Data source: %@://%@%@/" xml:space="preserve">
@@ -308,7 +308,7 @@ Door dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorb
       </trans-unit>
       <trans-unit id="Paragraph_3.4.c" xml:space="preserve">
         <source>For a club to be included, the app needs basic information like the club’s name and location (Level 1), a list of its members (Level 2) and links to image portfolios (Level 3). More details on extending the various lists are provided below and on GitHub.</source>
-        <target>Om het werk van een club te ondersteunen, heeft de app informatie nodig over de naam en ligging van de club (“__Niveau 1__”), een ledenlijst (“__Niveau 2__”) en de portfolio’s met foto’s (“__Niveau 3__”). We komen later op deze 3 niveaus terug.</target>
+        <target>Om het werk van een club te ondersteunen, heeft de app informatie nodig over de naam en ligging van de club (“__Niveau 1__”), de ledenlijst (“__Niveau 2__”) en de portfolio’s met foto’s (“__Niveau 3__”). We komen later op deze 3 niveaus terug.</target>
         <note>Paragraph 3.4.c of the Readme screen</note>
       </trans-unit>
       <trans-unit id="Paragraph_3.4.d" xml:space="preserve">
