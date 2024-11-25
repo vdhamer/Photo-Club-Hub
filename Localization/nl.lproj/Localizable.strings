@@ -71,7 +71,7 @@
 "Concept" = "Het concept";
 
 /* Caption for image on Readme page */
-"Configuring Level 1 data for a Dutch photo club" = "Sjabloon voor het toevoegen van een fotoclub op Niveau 1";
+"Configuring Level 1 data for a Dutch photo club" = "Sjabloon voor het toevoegen van een fotoclub";
 
 /* Section footer text Portfolios screen */
 "Data source: %@://%@%@/" = "Bron: %@://%@%@/";
@@ -218,7 +218,7 @@
 "Paragraph_3.4.b" = "Momenteel kent de app ruim 60 fotoclubs in regio Brabant Oost. De meerderheid hiervan is aangesloten by de Koninklijke Fotobond. De app is in principe ook geschikt voor clubs in het buitenland.";
 
 /* Paragraph 3.4.c of the Readme screen */
-"Paragraph_3.4.c" = "Om het werk van een club te ondersteunen, heeft de app informatie nodig over de naam en ligging van de club (\“__Niveau 1__\”), een ledenlijst (\“__Niveau 2__\”) en de portfolio’s met foto’s (\“__Niveau 3__\”). We komen later op deze 3 niveaus terug.";
+"Paragraph_3.4.c" = "Om het werk van een club te ondersteunen, heeft de app informatie nodig over de naam en ligging van de club (\“__Niveau 1__\”), de ledenlijst (\“__Niveau 2__\”) en de portfolio’s met foto’s (\“__Niveau 3__\”). We komen later op deze 3 niveaus terug.";
 
 /* Paragraph 3.4.d of the Readme screen */
 "Paragraph_3.4.d" = "Clubs, leden en foto’s toevoegen kan _zonder_ aanpassing van de app software. Dit gaat via online bestanden die de app ophaalt en weergeeft.";
