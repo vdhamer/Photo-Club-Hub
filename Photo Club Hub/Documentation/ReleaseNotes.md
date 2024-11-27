@@ -16,7 +16,7 @@ Preferences screen
 * Fixed screen size on iPad under iOS 18 (using presentationSizing)
 
 Code Maintenance
-* Tested on SwiftLint 0.57.0_1 and iOS 18.2 (22C5142a) and Xcode 16.2 beta (16C5023f) and MacOS 15.1.1
+* Tested on SwiftLint 0.57.1 and iOS 18.2 (22C5142a) and Xcode 16.2 beta (16C5023f) and MacOS 15.1.1
 * SwiftJSON imported as an external package. Preceding versions included it as a single Swift source file.
 * Entered trader status (not a trader) in Apple App Store.
 * Minor update to OrganizationType.swift (to stay in sync with Photo-Club-Hub-HTML).
