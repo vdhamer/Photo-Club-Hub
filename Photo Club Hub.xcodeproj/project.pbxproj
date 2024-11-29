@@ -468,6 +468,8 @@
 		D0831A3B277F727E0049AB84 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D0BF270E2CFA22AE00DA2CB9 /* Level 1 data files */,
+				D0BF270F2CFA22AE00DA2CB9 /* Level 2 data files */,
 				D0A0B6832AA930E90078DE9A /* Photo_Club_Hub.xcdatamodeld */,
 				D0ADF4AD27922DCA00535432 /* MemberRolesAndStatus.swift */,
 				D0D18C77296E1F6A00B334DB /* OrganizationIdPlus.swift */,
@@ -571,6 +573,20 @@
 				D0BF27032CFA218000DA2CB9 /* test2Club2Museum.level1.json */,
 			);
 			path = Lists;
+			sourceTree = "<group>";
+		};
+		D0BF270E2CFA22AE00DA2CB9 /* Level 1 data files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Level 1 data files";
+			sourceTree = "<group>";
+		};
+		D0BF270F2CFA22AE00DA2CB9 /* Level 2 data files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Level 2 data files";
 			sourceTree = "<group>";
 		};
 		D0CEAECD2B2E1120005AE47D /* Localization */ = {
