@@ -431,7 +431,6 @@
 			isa = PBXGroup;
 			children = (
 				D0621E832AE2DF8E000FFADB /* IndividualClubs */,
-				D08416952B2FC07F000F316D /* Lists */,
 				D0447C872BA510AF00982A1E /* LocalizedRemark.swift */,
 				D0447C862BA510AF00982A1E /* Language.swift */,
 				D08416942B2FC061000F316D /* ListReaders */,
@@ -467,6 +466,8 @@
 		D0831A3B277F727E0049AB84 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D0BF26F92CFA1E9E00DA2CB9 /* Level 2 data files */,
+				D0BF26F82CFA1E8100DA2CB9 /* Level 1 data files */,
 				D0A0B6832AA930E90078DE9A /* Photo_Club_Hub.xcdatamodeld */,
 				D0ADF4AD27922DCA00535432 /* MemberRolesAndStatus.swift */,
 				D0D18C77296E1F6A00B334DB /* OrganizationIdPlus.swift */,
@@ -527,22 +528,6 @@
 			path = ListReaders;
 			sourceTree = "<group>";
 		};
-		D08416952B2FC07F000F316D /* Lists */ = {
-			isa = PBXGroup;
-			children = (
-				D0BCEA7F2CD5505C00DEA3D5 /* 241113_Fotoclubs_Brabant_Oost.xlsx */,
-				D04B1A0B2B1AA06300EB3817 /* OrganizationList.json */,
-				D0A30FB72BB0BB33009A9A6E /* root.level1.json */,
-				D0E2D6032B9B9568008D1F7A /* test1Club.level1.json */,
-				D0A5B7EE2B45F67E001FAD59 /* test2Club2Museum.level1.json */,
-				D08416922B2FAEB1000F316D /* fgDeGender.level2.json */,
-				D004058E2C5E926A00BCB0B4 /* fgWaalre.level2.json */,
-				D0654D042C55978A00171D8B /* fcBellusImago.level2.json */,
-				D08416912B2FA3C2000F316D /* fgAnders.level2.json */,
-			);
-			path = Lists;
-			sourceTree = "<group>";
-		};
 		D08DC6042AE57222008DBD68 /* SinglePortfolioLinkView */ = {
 			isa = PBXGroup;
 			children = (
@@ -570,6 +555,29 @@
 				D087540B2BC5EE3700FCBDB3 /* WhoIsWhoThumbnails.swift */,
 			);
 			path = WhoIsWhoView;
+			sourceTree = "<group>";
+		};
+		D0BF26F82CFA1E8100DA2CB9 /* Level 1 data files */ = {
+			isa = PBXGroup;
+			children = (
+				D0BCEA7F2CD5505C00DEA3D5 /* 241113_Fotoclubs_Brabant_Oost.xlsx */,
+				D04B1A0B2B1AA06300EB3817 /* OrganizationList.json */,
+				D0A30FB72BB0BB33009A9A6E /* root.level1.json */,
+				D0E2D6032B9B9568008D1F7A /* test1Club.level1.json */,
+			);
+			path = "Level 1 data files";
+			sourceTree = "<group>";
+		};
+		D0BF26F92CFA1E9E00DA2CB9 /* Level 2 data files */ = {
+			isa = PBXGroup;
+			children = (
+				D0A5B7EE2B45F67E001FAD59 /* test2Club2Museum.level1.json */,
+				D08416922B2FAEB1000F316D /* fgDeGender.level2.json */,
+				D004058E2C5E926A00BCB0B4 /* fgWaalre.level2.json */,
+				D0654D042C55978A00171D8B /* fcBellusImago.level2.json */,
+				D08416912B2FA3C2000F316D /* fgAnders.level2.json */,
+			);
+			path = "Level 2 data files";
 			sourceTree = "<group>";
 		};
 		D0CEAECD2B2E1120005AE47D /* Localization */ = {
