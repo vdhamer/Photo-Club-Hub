@@ -103,7 +103,6 @@
 		D0001E1D2C30A9FD006DB860 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = "en.lproj/Photo-Club-Hub-InfoPlist.strings"; sourceTree = "<group>"; };
 		D004058E2C5E926A00BCB0B4 /* fgWaalre.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fgWaalre.level2.json; sourceTree = "<group>"; };
 		D006BA7D2B115FB1002E555B /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
-		D008665C2BBDC29C0091F204 /* dataModel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dataModel.png; sourceTree = "<group>"; };
 		D008D2A928739167007A7BE2 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		D00DC8F02BD5D85900B4A9A2 /* Photo_Club_Hub_2_6_1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_6_1.xcdatamodel; sourceTree = "<group>"; };
 		D01526BC278B91BA004DBD19 /* PhotoClubHub.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PhotoClubHub.entitlements; sourceTree = "<group>"; };
@@ -207,6 +206,7 @@
 		D0B52496277F9A4B00927BCA /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D0BAB01C2A76CED300387E63 /* URLSession+synchronous.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+synchronous.swift"; sourceTree = "<group>"; };
 		D0BCEA7F2CD5505C00DEA3D5 /* 241113_Fotoclubs_Brabant_Oost.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = 241113_Fotoclubs_Brabant_Oost.xlsx; sourceTree = "<group>"; };
+		D0BF26F72CFA0FDE00DA2CB9 /* dataModel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dataModel.png; sourceTree = "<group>"; };
 		D0C53BDC2ABF3ADF000722A1 /* PersonName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonName.swift; sourceTree = "<group>"; };
 		D0C6E95429577921001E5CE9 /* DebugPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugPanel.swift; sourceTree = "<group>"; };
 		D0C8E3A12BB81B4A00348D97 /* ItemFilterStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemFilterStatsView.swift; sourceTree = "<group>"; };
@@ -606,6 +606,7 @@
 		D0F2F2F32873A19F009DDD2A /* images */ = {
 			isa = PBXGroup;
 			children = (
+				D0BF26F72CFA0FDE00DA2CB9 /* dataModel.png */,
 				D06588E32BAE2F24000FD7F3 /* portfoliosScreen.png */,
 				D06588E42BAE31A0000FD7F3 /* clubsMuseumsScreen.png */,
 				D06588E52BAE31AE000FD7F3 /* imagesScreen.png */,
@@ -613,7 +614,6 @@
 				D06588E72BAE3E49000FD7F3 /* readmeScreen.png */,
 				D032516A2BBB6CB6005E9B32 /* whosWhoScreen.png */,
 				D06588EA2BAE5071000FD7F3 /* preludeScreen.png */,
-				D008665C2BBDC29C0091F204 /* dataModel.png */,
 				D0E69C2B2CE2543600D013DD /* app_screenshots_EN.jpg */,
 			);
 			path = images;
