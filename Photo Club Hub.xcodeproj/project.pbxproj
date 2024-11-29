@@ -550,15 +550,15 @@
 		D0BF26FA2CFA20AC00DA2CB9 /* Lists */ = {
 			isa = PBXGroup;
 			children = (
+				D0BF27012CFA218000DA2CB9 /* root.level1.json */,
+				D0BF27032CFA218000DA2CB9 /* test2Club2Museum.level1.json */,
+				D0BF27022CFA218000DA2CB9 /* test1Club.level1.json */,
+				D0BF27002CFA218000DA2CB9 /* OrganizationList.json */,
 				D0BF26FB2CFA218000DA2CB9 /* 241113_Fotoclubs_Brabant_Oost.xlsx */,
 				D0BF26FC2CFA218000DA2CB9 /* fcBellusImago.level2.json */,
 				D0BF26FD2CFA218000DA2CB9 /* fgAnders.level2.json */,
 				D0BF26FE2CFA218000DA2CB9 /* fgDeGender.level2.json */,
 				D0BF26FF2CFA218000DA2CB9 /* fgWaalre.level2.json */,
-				D0BF27002CFA218000DA2CB9 /* OrganizationList.json */,
-				D0BF27012CFA218000DA2CB9 /* root.level1.json */,
-				D0BF27022CFA218000DA2CB9 /* test1Club.level1.json */,
-				D0BF27032CFA218000DA2CB9 /* test2Club2Museum.level1.json */,
 			);
 			path = Lists;
 			sourceTree = "<group>";
