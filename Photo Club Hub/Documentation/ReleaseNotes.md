@@ -1,4 +1,4 @@
-### 2.7.1 (GitHub commit ???????) ??-11-24
+### 2.7.1 (GitHub commit ???????) ??-12-24
 
 Working on a new standalone MacOS app (see GitHub/vdhamer) that generates HTML membership lists for club web sites.
 This version requires iOS 18.0 or higher.
@@ -16,6 +16,7 @@ Preferences screen
 * Fixed screen size on iPad under iOS 18 (using presentationSizing)
 
 Code Maintenance
+* Added "optional:" keyword to level1.json files. Reason: easier to read and helps document the format.
 * Tested on SwiftLint 0.57.1 and iOS 18.2 (22C5142a) and Xcode 16.2 beta (16C5023f) and MacOS 15.1.1
 * SwiftJSON imported as an external package. Preceding versions included it as a single Swift source file.
 * Entered trader status (not a trader) in Apple App Store.
