@@ -34,14 +34,16 @@ private let organizationTypesToLoad: [OrganizationTypeEnum] = [.club, .museum]
                 "latitude": 51.42398,
                 "longitude": 5.45010
             }
-            "website": "https://www.fcdegender.nl",
-            "level2URL": "https://www.example.com/fgDeGender.level2.json"
-            "remark": [
-                {
-                    "language": "NL",
-                    "value": "In dit museum zijn scenes van het TV programma 'Het Perfecte Plaatje' opgenomen."
-                }
-            ]
+            "optional": {
+                "website": "https://www.fcdegender.nl",
+                "level2URL": "https://www.example.com/fgDeGender.level2.json"
+                "remark": [
+                    {
+                        "language": "NL",
+                        "value": "In dit museum zijn scenes van het TV programma 'Het Perfecte Plaatje' opgenomen."
+                    }
+                ]
+            }
         },
     "museums": [
         {
@@ -54,14 +56,16 @@ private let organizationTypesToLoad: [OrganizationTypeEnum] = [.club, .museum]
                 "latitude": 40.739278,
                 "longitude": -73.986722
             }
-            "website": "https://www.fotografiska.com/nyc/",
-            "wikipedia": "https://en.wikipedia.org/wiki/Fotografiska_New_York",
-            "remark": [
-                {
-                    "language": "EN",
-                    "value": "Associated with the original Fotografiska Museum in Stockholm"
-                }
-            ]
+            "optional:" {
+                "website": "https://www.fotografiska.com/nyc/",
+                "wikipedia": "https://en.wikipedia.org/wiki/Fotografiska_New_York",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Associated with the original Fotografiska Museum in Stockholm"
+                    }
+                ]
+            }
         }
     ]
 }
