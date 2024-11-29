@@ -73,8 +73,7 @@ private let organizationTypesToLoad: [OrganizationTypeEnum] = [.club, .museum]
 
 class Level1JsonReader {
 
-    init(bgContext: NSManagedObjectContext,
-         useOnlyFile: Bool = false) {
+    init(bgContext: NSManagedObjectContext, useOnlyFile: Bool = false) {
 
         bgContext.perform { // switch to supplied background thread
             guard let filePath = Bundle.main.path(forResource: dataSourceFile + "." + fileSubType,
