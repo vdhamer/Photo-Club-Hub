@@ -43,6 +43,7 @@
     <details open><summary><a href="#adding-photo-clubs-to-the-app">Adding Photo Clubs to the App</a></summary>
         <ul>
             <li><a href="#levels">Levels</a></li>
+            <li><a href="#levels-and-screens">Levels and Screens</a></li>
             <li><a href="#level-1-adding-clubs">Level 1. Adding Clubs</a></li>
             <li><a href="#level-2-adding-members">Level 2. Adding Members</a></li>
             <li><a href="#level-3-adding-images">Level 3. Adding Images</a></li>
@@ -435,7 +436,8 @@ This is important because this allows the app to **support many clubs**.
 But is also also necessary in order to give clubs **control** over their data:
 a club knows best what to mention regarding the club, who the current members are,
 who the club officials are, and which images the members want in their portfolios.
-
+<ul>
+    
 ### Levels
 
 To add a club to the app, the app distinguishes 3 hierarchical layers of information:
@@ -454,6 +456,8 @@ To the user this simply means that some clubs have shared more information than 
 Museums are handled in pretty much the same way as photo clubs, but only `Level 1` is applicable for museums.
 So you won't find members of a museum or portfolios associated with these members.
 
+### Levels and Screens
+
 ![Screenshots of 3 screens](images/app_screenshots_EN.jpg "Screenshots of app")
 
 When a club is at `Level 1`, it shows up as a marker on the maps (leftmost screenshot).
@@ -468,7 +472,6 @@ and allows app users to browse member photos.
 Technically different club members don't need to reach `Level 3` at the same time: you can first add a test portfolio for
 one member, then expand to all members, and later add some recent former members if you want. 
 Attempting to view a portfolio of a club member without an available portfolio will display a red built-in placeholder image.
-<ul>
 
 ### Level 1. Adding Clubs
 
