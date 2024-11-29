@@ -161,6 +161,7 @@ extension Organization {
     static func findCreateUpdate(context: NSManagedObjectContext, // can be foreground of background context
                                  organizationTypeEnum: OrganizationTypeEnum,
                                  idPlus: OrganizationIdPlus,
+                                 coordinates: CLLocationCoordinate2D,
                                  removeOrganization: Bool = false, // used to remove records for org's that disappeared
                                  optionalFields: OrganizationOptionalFields,
                                  pinned: Bool = false) -> Organization {
@@ -186,6 +187,7 @@ extension Organization {
             print("\(organization.fullNameTown): Will try to update info for organization \(organization.fullName)")
             if organization.update(bgContext: context,
                                    organizationTypeEnum: organizationTypeEnum, nickName: idPlus.nickname,
+                                   coordinates: coordinates,
                                    removeOrganization: removeOrganization,
                                    optionalFields: optionalFields,
                                    pinned: pinned) {
@@ -202,6 +204,7 @@ extension Organization {
             _ = organization.update(bgContext: context,
                                     organizationTypeEnum: organizationTypeEnum,
                                     nickName: idPlus.nickname,
+                                    coordinates: coordinates,
                                     removeOrganization: removeOrganization,
                                     optionalFields: optionalFields,
                                     pinned: pinned)
@@ -215,6 +218,7 @@ extension Organization {
     fileprivate func update(bgContext: NSManagedObjectContext,
                             organizationTypeEnum: OrganizationTypeEnum,
                             nickName: String,
+                            coordinates: CLLocationCoordinate2D,
                             removeOrganization: Bool, // used to remove records for org's that disappeared
                             optionalFields: OrganizationOptionalFields,
                             pinned: Bool) -> Bool {
@@ -233,6 +237,11 @@ extension Organization {
             self.nickName = nickName
             modified = true }
 
+        if self.coordinates != coordinates {
+            self.longitude_ = coordinates.longitude
+            self.latitude_ = coordinates.latitude
+            modified = true }
+
         if self.removeOrganization != removeOrganization {
             self.removeOrganization = removeOrganization
             modified = true }
@@ -248,11 +257,6 @@ extension Organization {
         if let fotobondNumber = optionalFields.fotobondNumber, self.fotobondNumber != fotobondNumber {
             self.fotobondNumber = fotobondNumber
             modified = true }
-
-        if let coord=optionalFields.coordinates, self.coordinates != optionalFields.coordinates {
-            self.longitude_ = coord.longitude
-            self.latitude_ = coord.latitude
-			modified = true }
 
         if self.pinned != pinned {
             self.pinned = pinned

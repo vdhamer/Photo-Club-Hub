@@ -14,6 +14,5 @@ struct OrganizationOptionalFields {
     var organizationWebsite: URL?
     var wikipedia: URL?
     var fotobondNumber: Int16?
-    var coordinates: CLLocationCoordinate2D?
     var localizedRemarks: [JSON] = [] // defaults to an empty array instead of to nil
 }
