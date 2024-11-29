@@ -42,6 +42,7 @@
     </details>
     <details open><summary><a href="#adding-photo-clubs-to-the-app">Adding Photo Clubs to the App</a></summary>
         <ul>
+            <li><a href="#levels">Levels</a></li>
             <li><a href="#level-1-adding-clubs">Level 1. Adding Clubs</a></li>
             <li><a href="#level-2-adding-members">Level 2. Adding Members</a></li>
             <li><a href="#level-3-adding-images">Level 3. Adding Images</a></li>
@@ -431,9 +432,11 @@ So we had to choose between removing segmentation or not providing fancy scrolli
 and maintained by the clubs themselves. 
 
 This is important because this allows the app to **support many clubs**.
-But is also also necessary in order to give clubs **control** over their own data:
+But is also also necessary in order to give clubs **control** over their data:
 a club knows best what to mention regarding the club, who the current members are,
-who the club officers are, and - maybe most significantly - which images the members want in their portfolios.
+who the club officials are, and which images the members want in their portfolios.
+
+### Levels
 
 To add a club to the app, the app distinguishes 3 hierarchical layers of information:
 
@@ -441,28 +444,30 @@ To add a club to the app, the app distinguishes 3 hierarchical layers of informa
 - `Level 2` lists the members per club.
 - `Level 3` links to portfolios per club member.</p>
 
-We call these layers of information `Levels` because they need to be submitted in ascending order and, 
-whenever the `Level` of a club increases, additional app features are automatically enabled for that club.
+We call these layers of information `Levels` because, like a game, you can only reach a level after you completed all lower levels.
+And - again like a game - reaching a particular level "unlocks" extra app functionality for that club.
 
-A club can take as long as needed (days, weeks, months) before proceeding to a next level.
-This means that an app user will see clubs with different `Levels` throughout the app.
+A club can take as long as they want (days, weeks, months) before proceeding to the next level.
+This means that an app user may find clubs at different `Levels` throughout the app.
 To the user this simply means that some clubs have shared more information than others. 
 
-Museums are added in the same way, although `Level 2` and `Level 3` are not applicable here.
+Museums are handled in pretty much the same way as photo clubs, but only `Level 1` is applicable for museums.
+So you won't find members of a museum or portfolios associated with these members.
 
 ![Screenshots of 3 screens](images/app_screenshots_EN.jpg "Screenshots of app")
 
 When a club is at `Level 1`, it shows up as a marker on the maps (leftmost screenshot).
 This is because the app knows the club's name and the latitude/longitude where it is based.
 
-When a club reaches `Level 2`, the app also knows the names and roles of club members.
+For clubs at `Level 2`, the app also knows the names and optional roles of club members.
 As illustrated in the center screenshot, the club and its members are now shown on the `Portfolio` and `Who's Who` screens.
-Clubs with zero members (as far as the app is concerned) are _not_ shown on these two screens.
+Clubs with zero members (as far as the app is concerned) are _not_ shown on either screens.
 
-When a club reaches `Level 3`, the app is aware of the image portfolios of club member (rightmost screenshot), 
+For clubs at `Level 3`, the app is aware of the image portfolios of club members (rightmost screenshot), 
 and allows app users to browse member photos.
-Different club members don't need to reach `Level 3` at the same time. 
-Attempting to view a portfolio of a club member without an available portfolio will display a placeholder message.
+Technically different club members don't need to reach `Level 3` at the same time: you can first add a test portfolio for
+one member, then expand to all members, and later add some recent former members if you want. 
+Attempting to view a portfolio of a club member without an available portfolio will display a red built-in placeholder image.
 <ul>
 
 ### Level 1. Adding Clubs
