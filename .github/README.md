@@ -533,7 +533,7 @@ Here is an example of the format of the `root.level1.json` file containing only 
                 "website": "https://www.fotografiska.com/nyc/",
                 "wikipedia": "https://en.wikipedia.org/wiki/Fotografiska_New_York",
                 "remark": [
-                    { "language": "EN", "value": "Fotografiska New York is a branch of the Swedish Fotografiska museum." }
+                    { "language": "EN", "value": "Fotografiska New York is a branch of the Swedish Fotografiska museum." },
                     { "language": "NL", "value": "Fotografiska New York is een dependance van het Fotografiska museum in Stockholm." }
                 ]
             }
