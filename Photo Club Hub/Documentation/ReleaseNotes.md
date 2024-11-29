@@ -23,6 +23,7 @@ Code Maintenance
 * Minor update to OrganizationType.swift (to stay in sync with Photo-Club-Hub-HTML).
 * removed Organization parameter from Photographer.createFindUpdate() as it was used for debugging only.
 * set LSMinimumSystemVersion to (MacOS) 15.0.0 in case the app is run on a Mac.
+* removed 2 source files that were no longer used
 
 Data Maintenance
 * Added website for member WH in fgDeGender and added a few birthdays (not visible yet in user interface).

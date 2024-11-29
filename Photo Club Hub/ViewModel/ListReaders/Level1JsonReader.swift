@@ -130,21 +130,22 @@ class Level1JsonReader {
                                                 nickname: jsonOrganization["idPlus"]["nickName"].stringValue)
                 ifDebugPrint("Adding organization \(idPlus.fullName), \(idPlus.town), aka \(idPlus.nickname)")
 
-                let organizationWebsite = URL(string: jsonOrganization["website"].stringValue)
-                let wikipedia = URL(string: jsonOrganization["wikipedia"].stringValue)
-                let fotobondNumber = jsonOrganization["nlSpecific"]["fotobondNumber"].int16Value
                 let jsonCoordinates = jsonOrganization["coordinates"]
                 let coordinates = CLLocationCoordinate2D(latitude: jsonCoordinates["latitude"].doubleValue,
                                                          longitude: jsonCoordinates["longitude"].doubleValue)
+
+                let organizationWebsite = URL(string: jsonOrganization["website"].stringValue)
+                let wikipedia = URL(string: jsonOrganization["wikipedia"].stringValue)
+                let fotobondNumber = jsonOrganization["nlSpecific"]["fotobondNumber"].int16Value
                 let localizedRemarks = jsonOrganization["remark"].arrayValue
                 _ = Organization.findCreateUpdate(context: bgContext,
                                                   organizationTypeEnum: organizationTypeEnum,
                                                   idPlus: idPlus,
+                                                  coordinates: coordinates,
                                                   optionalFields: OrganizationOptionalFields(
                                                       organizationWebsite: organizationWebsite,
                                                       wikipedia: wikipedia,
-                                                      fotobondNumber: fotobondNumber, // int16
-                                                      coordinates: coordinates,
+                                                      fotobondNumber: fotobondNumber, // Int16
                                                       localizedRemarks: localizedRemarks)
                                                   )
             }

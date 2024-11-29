@@ -6,6 +6,7 @@
 //
 
 import CoreData // for NSManagedObjectContext
+import CoreLocation // for CLLocationCoordinate2DMake
 
 extension FotogroepDeGenderMembersProvider { // fill with some initial hard-coded content
 
@@ -19,6 +20,8 @@ extension FotogroepDeGenderMembersProvider { // fill with some initial hard-code
             let club = Organization.findCreateUpdate(context: bgContext,
                                                      organizationTypeEnum: .club,
                                                      idPlus: fotogroepDeGenderIdPlus,
+                                                     // real coordinates added in fgDeGender.level2.json
+                                                     coordinates: CLLocationCoordinate2DMake(0, 0),
                                                      optionalFields: OrganizationOptionalFields() // empty fields
                                                     )
             ifDebugPrint("\(club.fullNameTown): Starting insertOnlineMemberData() in background")

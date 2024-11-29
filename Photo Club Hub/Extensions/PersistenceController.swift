@@ -68,12 +68,12 @@ struct PersistenceController {
                     town: "Town\(index)",
                     nickname: "ClubNick\(index)"
                 ),
+                coordinates: CLLocationCoordinate2D( // spread around BeNeLux
+                    latitude: 51.39184 + Double.random(in: -2.0 ... 2.0),
+                    longitude: 5.46144 + Double.random(in: -2.0 ... 1.0)),
                 optionalFields: OrganizationOptionalFields(
                     organizationWebsite: URL(string: "http://www.example.com/\(index)"),
-                    fotobondNumber: Int16(index*1111),
-                    coordinates: CLLocationCoordinate2D( // spread around BeNeLux
-                        latitude: 51.39184 + Double.random(in: -2.0 ... 2.0),
-                        longitude: 5.46144 + Double.random(in: -2.0 ... 1.0))
+                    fotobondNumber: Int16(index*1111)
                 ),
                 pinned: (index % 4 == 0)
             )
