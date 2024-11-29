@@ -475,20 +475,19 @@ Attempting to view a portfolio of a club member without an available portfolio w
 
 ### Level 1. Adding Clubs
 
-Adding photo clubs (or museums) to get to `Level 1` requires providing the item's name, location and a few optional URLs. 
+Adding photo clubs (or museums) to get to `Level 1` requires providing a name, location and a few optional URLs. 
 This enables the app to list the items on the `Clubs and Museums` screen and display them using location markers on the maps.
 
 `Level 1` data is technically stored in a _single_ `root.level1.json` 
 [file](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/ViewModel/Lists/root.level1.json)
-that is hosted on GitHub.
-Whenever the app is launched, it updates any outdated on-device data by reading this cenral online file.
-The user can already use the app during the update process: screens will update dynamically when necessary.
+that is centrally hosted.
+Whenever the app is launched, it updates any outdated on-device data by reading this central online file.
 
 If you send us a club's `Level 1` information, we are happy to add it for you to this central `root.level1.json` file.
 However, where possible, we prefer if you provide the change (and any future updates) as a GitHub _pull request_.
 This reduces the work required to handle many updates, and reduces the risk of administrative errors.
 
-The same applies if you want to add a missing photo museum to the central `root.level1.json` file.
+The same applies if you want to add a photo museum to the central `root.level1.json` file.
 
 <ul><details><Summary>Level 1 example (click to expand)</Summary></p>
 
@@ -506,14 +505,16 @@ Here is an example of the format of the `root.level1.json` file containing only 
             "coordinates": {
                 "latitude": 51.42398,
                 "longitude": 5.45010
-            }
-            "website": "https://www.fcdegender.nl",
-            "level2URL": "https://www.example.com/fgDeGender.level2.json",
-            "remark": [
-                { "language": "NL", "value": "Opgelet: Fotogroep de Gender gebruikt als domeinnaam nog altijd fcdegender.nl (van Fotoclub)." }
-            ],
-            "nlSpecific": {
-                "fotobondNumber": 1620
+            },
+            "optional": {
+                "website": "https://www.fcdegender.nl",
+                "level2URL": "https://www.example.com/fgDeGender.level2.json",
+                "remark": [
+                    { "language": "NL", "value": "Opgelet: Fotogroep de Gender gebruikt als domeinnaam nog altijd fcdegender.nl (van Fotoclub)." }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 1620
+                }
             }
         }
     ],
@@ -527,13 +528,15 @@ Here is an example of the format of the `root.level1.json` file containing only 
             "coordinates": {
                 "latitude": 40.739278,
                 "longitude": -73.986722
+            },
+            "optional": {
+                "website": "https://www.fotografiska.com/nyc/",
+                "wikipedia": "https://en.wikipedia.org/wiki/Fotografiska_New_York",
+                "remark": [
+                    { "language": "EN", "value": "Fotografiska New York is a branch of the Swedish Fotografiska museum." }
+                    { "language": "NL", "value": "Fotografiska New York is een dependance van het Fotografiska museum in Stockholm." }
+                ]
             }
-            "website": "https://www.fotografiska.com/nyc/",
-            "wikipedia": "https://en.wikipedia.org/wiki/Fotografiska_New_York",
-            "remark": [
-                { "language": "EN", "value": "Fotografiska New York is a branch of the Swedish Fotografiska museum." }
-                { "language": "NL", "value": "Fotografiska New York is een dependance van het Fotografiska museum in Stockholm." }
-            ]
         }
     ]
 }
