@@ -11,12 +11,14 @@
                 "latitude": 51.44,
                 "longitude": 5.51
             },
-            "remark": [
-                {
-                    "language": "EN",
-                    "value": "Remark in English"
-                }
-            ]
+            "optional:" {
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Remark in English"
+                    }
+                ]
+            }
         },
 
         {
