@@ -139,7 +139,13 @@ struct PreferencesView: View {
                 // need to update Bindings for showPhotoClubsList etc
                 preferences = localPreferences
             }
-            .presentationSizing(.form)
+            .apply {
+                if #available(iOS 18.0, *) {
+                    $0.presentationSizing(.form)
+                } else {
+                    $0
+                }
+            }
         })
     }
 

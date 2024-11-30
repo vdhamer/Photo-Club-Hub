@@ -7,6 +7,11 @@
 
 import SwiftUI
 
+// https://stackoverflow.com/questions/77735635/how-to-have-a-conditional-modifier-based-on-the-os-version-in-swiftui
+extension View {
+    func apply<V: View>(@ViewBuilder _ block: (Self) -> V) -> V { block(self) }
+}
+
 // swiftlint:disable:next type_body_length
 struct ReadmeView: View {
 
@@ -267,7 +272,13 @@ struct ReadmeView: View {
                 .navigationTitle(title)
             }
             .padding(.init(top: 0, leading: 0, bottom: 15, trailing: 0))
-            .presentationSizing(.page)
+            .apply {
+                if #available(iOS 18.0, *) {
+                    $0.presentationSizing(.page)
+                } else {
+                    $0
+                }
+            }
         } // GeometryReader
     }
 
