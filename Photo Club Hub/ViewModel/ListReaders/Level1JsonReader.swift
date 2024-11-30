@@ -16,7 +16,7 @@ private let dataSourcePath: String = """
                                      main/\
                                      Photo%20Club%20Hub/ViewModel/Lists/
                                      """
-private let dataSourceFile: String = "root"
+private let dataSourceFile: String = "temproot" // TODO change back to root before shipping
 private let fileSubType = "level1" // level1 is part of file name, not the extension
 private let fileType = "json"
 private let organizationTypesToLoad: [OrganizationTypeEnum] = [.club, .museum]
@@ -83,15 +83,17 @@ class Level1JsonReader {
                            not found. Check file name.
                            """)
             }
+            let data = getData(
+                fileURL: URL(string: dataSourcePath + dataSourceFile + "." +
+                             fileSubType + "." + fileType)!,
+                filePath: filePath
+            )
             self.readRootLevel1Json(bgContext: bgContext,
-                                    data: getData(
-                                        fileURL: URL(string: dataSourcePath + dataSourceFile + "." +
-                                                     fileSubType + "." + fileType)!,
-                                        filePath: filePath
-                                    ),
+                                    data: data,
                                     for: organizationTypesToLoad)
         }
 
+        // try to fetch the online root.level1.json file, and if that fails use a copy from the app's bundle instead
         func getData(fileURL: URL,
                      filePath: String) -> String {
             if let urlData = try? String(contentsOf: fileURL, encoding: .utf8), !useOnlyFile {
