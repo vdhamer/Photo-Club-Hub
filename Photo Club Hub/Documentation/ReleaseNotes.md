@@ -19,7 +19,7 @@ Code Maintenance
 * Added "optional:" keyword to level1.json files. Reason: easier to read and helps document the format.
 * Tested on SwiftLint 0.57.1 and iOS 18.2 (22C5142a) and Xcode 16.2 beta (16C5023f) and MacOS 15.1.1
 * SwiftJSON imported as an external package. Preceding versions included it as a single Swift source file.
-* Entered trader status (not a trader) in Apple App Store.
+* Entered trader status (not a trader) in Apple App Store. And accepted new terms and conditions.
 * Minor update to OrganizationType.swift (to stay in sync with Photo-Club-Hub-HTML).
 * removed Organization parameter from Photographer.createFindUpdate() as it was used for debugging only.
 * set LSMinimumSystemVersion to (MacOS) 15.0.0 in case the app is run on a Mac.
