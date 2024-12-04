@@ -85,7 +85,8 @@ struct PersistenceController {
                     bornDT: Date() - Double.random(in: 365*24*3600 ... 75*365*24*3600),
                     eMail: "Jan.D.Eau\(index)@example.com",
                     phoneNumber: "06-12345678",
-                    photographerWebsite: URL(string: "https://www.example.com/JanDEau\(index)")
+                    photographerWebsite: URL(string: "https://www.example.com/JanDEau\(index)"),
+                    photographerImage: nil
                 )
             )
             let memberPortfolio = MemberPortfolio.findCreateUpdate(

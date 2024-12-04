@@ -291,6 +291,8 @@ class Level2JsonReader { // normally running on a background thread
         let birthday: String? = jsonOptionals["birthday"].exists() ? jsonOptionals["birthday"].stringValue : nil
 
         let photographerWebsite: URL? = jsonOptionalsToURL(jsonOptionals: jsonOptionals, key: "website")
+        let photographerImage: URL? = jsonOptionalsToURL(jsonOptionals: jsonOptionals, key: "photographerImage")
+
         let featuredImage: URL? = jsonOptionalsToURL(jsonOptionals: jsonOptionals, key: "featuredImage")
         let level3URL: URL? = jsonOptionalsToURL(jsonOptionals: jsonOptionals, key: "level3URL")
 
@@ -313,7 +315,8 @@ class Level2JsonReader { // normally running on a background thread
                                           isDeceased: memberRolesAndStatus.isDeceased(),
                                           optionalFields: PhotographerOptionalFields(
                                               bornDT: birthday?.extractDate(),
-                                              photographerWebsite: photographerWebsite
+                                              photographerWebsite: photographerWebsite,
+                                              photographerImage: photographerImage
                                               )
                                           )
 
