@@ -108,12 +108,12 @@ struct FilteredOrganizationView: View, Sendable {
                     Spacer() // moved Button to trailing/right side
                     Button(
                         action: {
-                            openCloseSound(openClose: filteredOrganization.isScrollLocked ? .close : .open)
-                            filteredOrganization.isScrollLocked.toggle()
+                            openCloseSound(openClose: filteredOrganization.isMapScrollLocked ? .close : .open)
+                            filteredOrganization.isMapScrollLocked.toggle()
                         },
                         label: {
                             HStack { // to make background color clickable too
-                                LockAnimationView(locked: filteredOrganization.isScrollLocked)
+                                LockAnimationView(locked: filteredOrganization.isMapScrollLocked)
                             }
                             .frame(width: 60, height: 60)
                             .contentShape(Rectangle())
@@ -123,7 +123,7 @@ struct FilteredOrganizationView: View, Sendable {
                 }
                 .padding(.all, 0)
                 Map(position: cameraPositionBinding(for: filteredOrganization.id),
-                    interactionModes: filteredOrganization.isScrollLocked ? [] : [
+                    interactionModes: filteredOrganization.isMapScrollLocked ? [] : [
                         .rotate, // automatically enables the compas button when rotated
                         .pitch, // switch to 3D view if zoomed in far enough
                         .pan, .zoom], // actually .all is the default
@@ -180,7 +180,7 @@ struct FilteredOrganizationView: View, Sendable {
                 MapPitchToggle() // switch between 2D and 3D
                 MapScaleView() // distance scale
                 MapUserLocationButton()
-            } .mapControlVisibility(filteredOrganization.isScrollLocked ? .hidden : .automatic)
+            } .mapControlVisibility(filteredOrganization.isMapScrollLocked ? .hidden : .automatic)
         } // outer ForEach (filteredOrganization)
     } // body
 
