@@ -91,6 +91,7 @@
         <attribute name="givenName_" attributeType="String" defaultValueString="DefaultPhotographerGivenName"/>
         <attribute name="infixName_" attributeType="String" defaultValueString=""/>
         <attribute name="isDeceased" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="photographerImage" optional="YES" attributeType="URI"/>
         <attribute name="photographerWebsite" optional="YES" attributeType="URI" elementID="photographerWebsite"/>
         <relationship name="memberships_" toMany="YES" deletionRule="Cascade" destinationEntity="MemberPortfolio" inverseName="photographer_" inverseEntity="MemberPortfolio"/>
         <uniquenessConstraints>

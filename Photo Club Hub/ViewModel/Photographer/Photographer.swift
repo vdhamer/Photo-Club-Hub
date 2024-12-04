@@ -151,6 +151,11 @@ extension Photographer {
             wasUpdated = true
         }
 
+        if let newImage = optionalFields.photographerImage, photographer.photographerImage != newImage {
+            photographer.photographerImage = newImage
+            wasUpdated = true
+        }
+
         if wasUpdated && Settings.extraCoreDataSaves {
 			do {
 				try bgContext.save() // persist updated information about a photographer

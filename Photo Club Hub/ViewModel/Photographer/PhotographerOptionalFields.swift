@@ -12,4 +12,5 @@ struct PhotographerOptionalFields {
     var eMail: String?
     var phoneNumber: String?
     var photographerWebsite: URL?
+    var photographerImage: URL?
 }
