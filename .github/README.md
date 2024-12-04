@@ -909,7 +909,7 @@ Some of these gaps are addressed [below](#a-better-approach).
 
 ![Data model](images/dataModel.png "The data model")
 
-<ul><details><summary>Details (click to expand)</summary></p>
+<ul><details><summary>Data Model Entities (click to expand)</summary></p>
 
 The diagram shows the entities managed by the app's internal Core Data database.
 The entities (rounded boxes) are tables and arrows are relationships in the underlying SQLite database.</p>
@@ -925,22 +925,22 @@ a `String` value such as "Unknown town" rather than `String?` value returning `n
 
 <ul><details><summary>Details (click to expand)</summary></p>
 
-`Organization` supports both photo clubs and museums. Many properties apply to both.
-The relationship to `OrganizationType` is used to distinguish between both.
-Currently `OrganizationType` (essentially an enum) has only two allowed values: `club` and `museum`.
-But, for example, photography `festivals` could conceivably be added someday.</p>
+`Organization` supports both photo clubs and museums. Almost all properties apply to both.
+The relationship to `OrganizationType` is used to distinguish between clubs and museums.
+We could conceivably add photography `festivals` as well.</p>
 
-An Organization is uniquely identified by its `name` *and* its `town`.
-Its `town` is included to allow for multiple photo clubs in different towns that have the same name.
-This is unlikely for museums, but the same approach is used there just in case.</p>
+An Organization s uniquely identified by its `name` *and* its `town`.
+Its `town` string is part of the identification ("uniqueness constraint" in an rDBMS) to distinguish photo clubs in different towns that happen to have the same name.</p>
 
-An `Organization` has a rough address (`town`) and GPS `coordinates`.
-The GPS coordinates are used to insert markers on a map. 
-The GPS coordinates indicate where the club meets (should be precise enough for navigation purposes). 
-The GPS coordinates data is also used to localize `town` and `country` names by asking an online mapping 
-service to convert GPS coordinates into a textual address for the device's current `locale`.
-So if your device is set to English, you woould see "The Hague", while in Dutch, you would see "Den Haag".
-The localization differences can be larger for languages with unique alphabets like Japanese, Korean or Arabic.
+An `Organization` has a rough address (`town`) and `latitude_` and `longitude_` (together `coordinates`).
+The coordinates are not considered optional, but they _could_ be missing in the JSON data. You will find the stray map pin in the ocean off Africa ([at coordinates (0,0)](https://en.wikipedia.org/wiki/Null_Island)).</p>
+
+The coordinates for a club indicate where the club meets or holds expositions (we don't distinguish, they tend to be identical or near each other).
+The coordinates are used used to position markers on the maps. 
+The coordinates are also used to translate `town` names to `localizedTown_` and `localizedCountry_`.
+This works by asking an online mapping service to convert the `coordinates` into a textual address (using the device settings).
+So if your device is set to English, you might see "The Hague" and "London", while the Dutch would see "Den Haag" and "Londen".
+In fact, if your device is set to any language supported by the device (say Japanese) and you are looking at a Japanese location, Town and Country will be shown in Japanese.
 
 </details></ul>
 
