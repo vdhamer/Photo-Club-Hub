@@ -936,7 +936,7 @@ An `Organization` has a rough address (`town`) and `latitude_` and `longitude_` 
 The coordinates are not considered optional, but they _could_ be missing in the JSON data. You will find the stray map pin in the ocean off Africa ([at coordinates (0,0)](https://en.wikipedia.org/wiki/Null_Island)).</p>
 
 The coordinates for a club indicate where the club meets or holds expositions (we don't distinguish, they tend to be identical or near each other).
-The coordinates are used used to position markers on the maps. 
+The coordinates are used to position markers on the maps. 
 The coordinates are also used to translate `town` names to `localizedTown_` and `localizedCountry_`.
 This works by asking an online mapping service to convert the `coordinates` into a textual address (using the device settings).
 So if your device is set to English, you might see "The Hague" and "London", while the Dutch would see "Den Haag" and "Londen".
