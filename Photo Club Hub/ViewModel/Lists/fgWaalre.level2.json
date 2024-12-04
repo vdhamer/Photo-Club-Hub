@@ -623,6 +623,7 @@
             },
             "optional": {
                 "website": "https://glass.photo/vdhamer",
+                "photographer": "http://www.vdhamer.com/wp-content/uploads/2022/07/cropped-2006_Norway_276_SSharp1_4.jpg",
                 "level3URL": "http://www.vdHamer.com/fgWaalre/Peter_van_den_Hamer/",
                 "status": {
                     "isFormerMember": true
