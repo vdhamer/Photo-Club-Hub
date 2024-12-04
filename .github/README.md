@@ -909,36 +909,39 @@ Some of these gaps are addressed [below](#a-better-approach).
 
 ![Data model](images/dataModel.png "The data model")
 
-<ul><details><summary>Details (click to expand)</summary></p>
+<ul><details><summary>Data Model Entities (click to expand)</summary></p>
 
-Here are the entities managed by the app's internal Core Data database.
+The diagram shows the entities managed by the app's internal Core Data database.
 The entities (rounded boxes) are tables and arrows are relationships in the underlying SQLite database.</p>
 
 Note that the tables are fully "normalized" in the relational database sense.
 This means that redundancy in all stored data is minimized via referencing.</p>
 
-Optional properties in the database with names like `PhotoClub.town_` have a corresponding computed
-property that is non-optional named `PhotoClub.town`. This allows `PhotoClub.town` to always return
-a `String` value such as "Unknown town" rather than an optional `String?` value.
+Optional properties in the database with names like `Organization.town_` have a corresponding computed
+property that is non-optional named `Organization.town`. This allows `Organization.town` to always return
+a `String` value such as "Unknown town" rather than `String?` value returning `nil`.
 
 #### Organization
 
 <ul><details><summary>Details (click to expand)</summary></p>
 
-This table contains both photo clubs and musea. Many properties apply to both.
-The relationship to `OrganizationType` is used to distinguish betweene both.
-Currently `OrganizationType` (essentially an enum) has only two allowed values: `club` and `museum`.
-But, for example,`festivals` could also be added in the future.</p>
+`Organization` supports both photo clubs and museums. Almost all properties apply to both.
+The relationship to `OrganizationType` is used to distinguish between clubs and museums.
+We could conceivably add photography `festivals` as well.</p>
 
-An organization is uniquely identified by its `name` *and* a `town`.
-Including the town is necessary because two towns might have local photo clubs that happen to have the same name.
-This is unlikely for musea, but the same approach is used just in case.</p>
+An Organization s uniquely identified by its `name` *and* its `town`.
+Its `town` string is part of the identification ("uniqueness constraint" in an rDBMS) to distinguish photo clubs in different towns that happen to have the same name.</p>
 
-An `Organization` has a rough address down to the `town` level and GPS `coordinates`.
-The GPS coordinates can precisely indicate where the club meets (often good enough for navigation purposes). 
-The GPS coordinates are used to insert markers on a map. 
-The GPS coordinates are also used to localize `town` and `country` names by asking an online mapping 
-service to convert GPS coordinates into a textual address, using the device's current location as input.
+An `Organization` has a rough address (`town`) and `latitude_` and `longitude_` (together `coordinates`).
+The coordinates are not considered optional, but they _could_ be missing in the JSON data. You will find the stray map pin in the ocean off Africa ([at coordinates (0,0)](https://en.wikipedia.org/wiki/Null_Island)).</p>
+
+The coordinates for a club indicate where the club meets or holds expositions (we don't distinguish, they tend to be identical or near each other).
+The coordinates are used to position markers on the maps. 
+The coordinates are also used to translate `town` names to `localizedTown_` and `localizedCountry_`.
+This works by asking an online mapping service to convert the `coordinates` into a textual address (using the device settings).
+So if your device is set to English, you might see "The Hague" and "London", while the Dutch would see "Den Haag" and "Londen".
+In fact, if your device is set to any language supported by the device (say Japanese) and you are looking at a Japanese location, Town and Country will be shown in Japanese.
+
 </details></ul>
 
 #### Photographer
