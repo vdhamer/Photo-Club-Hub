@@ -675,6 +675,7 @@ Here is an example of the format of a `Level 2` list for a photo club. This exam
                 },
                 "birthday": "9999-10-18",
                 "website": "https://glass.photo/vdhamer",
+                "photographer": "http://www.vdhamer.com/wp-content/uploads/2022/07/cropped-2006_Norway_276_SSharp1_4.jpg",
                 "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg",
                 "level3URL": "https://www.example.com/FG_deGender/Peter_van_den_Hamer.level3.json"
             }
@@ -712,6 +713,7 @@ Here is an example of the format of a `Level 2` list for a photo club. This exam
     - `isProspectiveMember` is a possible future member who is currently participating in some of the club activities, but isn't formally a member yet. Most clubs won't need this feature.
     - `birthday` can be the full date of birth but currently only the month and date are shown in the user interface. So you can provide a dummy year (like `9999`) if that is preferred.
     - `website` is a personal photography-related website. If the website URL is available, the app provides a link to it.
+    - `photographer` is an image of the photographer. We may add an extra mode whereby an image of the photographer is shown instead of the currently shown featured image.
     - `featuredImage` is a URL to a single image that can be shown beside the member's name. It is visible in the `Portfolios` screen and the `Who's Who` screen.
     - `level3URL` is URL to a file containing the selected portfolio images made by this particular member in the context of a given photo club.</p>
  
