@@ -24,13 +24,14 @@ Code Maintenance
 * removed Organization parameter from Photographer.createFindUpdate() as it was used for debugging only.
 * set LSMinimumSystemVersion to (MacOS) 15.0.0 in case the app is run on a Mac.
 * removed 2 source files that were no longer used
+* renamed isScrollLocked to isMapScrollLocked in data model
 
 Data Maintenance
 * Added website for member WH in fgDeGender and added a few birthdays (not visible yet in user interface).
 * Added 14 photo clubs in Brabant Oost (NL).
 * Fixed web site URL for Collectief Brabant.
 
-This build #4633 was built using Xcode 16.1 and is intended for App Store distribution.
+This build #4634 was built using Xcode 16.1 and is intended for App Store distribution.
 
 ---------------------------------------------------------------------------
 

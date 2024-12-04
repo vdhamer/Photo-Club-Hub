@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="23601" systemVersion="24B83" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="23602" systemVersion="24B91" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Language" representedClassName="Language" syncable="YES" codeGenerationType="class">
         <attribute name="isoCode_" attributeType="String"/>
         <attribute name="languageName_" attributeType="String" elementID="name_"/>
@@ -53,12 +53,11 @@
     <entity name="Organization" representedClassName="Organization" elementID="PhotoClub" syncable="YES" codeGenerationType="class">
         <attribute name="fotobondNumber" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="fullName_" attributeType="String" defaultValueString="DefaultPhotoClubName" elementID="name_"/>
-        <attribute name="isScrollLocked" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES"/>
+        <attribute name="isMapScrollLocked" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES" elementID="isScrollLocked"/>
         <attribute name="latitude_" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="level2URL_" optional="YES" attributeType="URI" elementID="memberListURL_"/>
         <attribute name="localizedCountry_" attributeType="String" defaultValueString="Country?"/>
         <attribute name="localizedTown_" attributeType="String" defaultValueString="Town?"/>
-        <attribute name="lockedMap" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="longitude_" optional="YES" attributeType="Double" usesScalarValueType="YES"/>
         <attribute name="nickName_" optional="YES" attributeType="String" elementID="shortName_"/>
         <attribute name="organizationWebsite" optional="YES" attributeType="URI" elementID="photoClubWebsite"/>

@@ -16,8 +16,7 @@ private let dataSourcePath: String = """
                                      main/\
                                      Photo%20Club%20Hub/ViewModel/Lists/
                                      """
-private let dataSourceFile: String = "temproot"
-// TODO revert to root before shipping and upgrade root to new format and change build number to xx34
+private let dataSourceFile: String = "temproot" // TODO revert to root before shipping and upgrade root to new format
 private let fileSubType = "level1" // level1 is part of file name, not the extension
 private let fileType = "json"
 private let organizationTypesToLoad: [OrganizationTypeEnum] = [.club, .museum]
