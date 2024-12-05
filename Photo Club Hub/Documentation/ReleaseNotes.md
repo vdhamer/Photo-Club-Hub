@@ -33,7 +33,7 @@ Data Maintenance
 * Fixed web site URL for Collectief Brabant.
 * Added examples of a remark to fgDeGender.level2.json file. Not needed, but nice if the file is used as a template.
 
-This build #4634 was built using Xcode 16.1 and is intended for App Store distribution.
+This build #4634 was built using Xcode 16.2 and is intended for App Store distribution.
 
 ---------------------------------------------------------------------------
 
