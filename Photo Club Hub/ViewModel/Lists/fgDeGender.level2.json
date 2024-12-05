@@ -14,6 +14,16 @@
                 "website": "https://www.fcdegender.nl",
                 "wikipedia": "https://nl.wikipedia.org/wiki/Gender_(beek)",
                 "level2URL": "https://www.example.com/deGender.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Note that Fotogroep de Gender is abbreviated fcdegender.nl for historical reasons."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Opgelet: Fotogroep de Gender heeft als domeinnaam fcdegender.nl (fc = Fotoclub)."
+                    }
+                ],
                 "nlSpecific": {
                     "fotobondNumber": 1620
                 }

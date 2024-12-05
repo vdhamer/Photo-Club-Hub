@@ -31,6 +31,7 @@ Data Maintenance
 * Added website for member WH in fgDeGender and added a few birthdays (not visible yet in user interface).
 * Added 14 photo clubs in Brabant Oost (NL).
 * Fixed web site URL for Collectief Brabant.
+* Added examples of a remark to fgDeGender.level2.json file. Not needed, but nice if the file is used as a template.
 
 This build #4634 was built using Xcode 16.1 and is intended for App Store distribution.
 
