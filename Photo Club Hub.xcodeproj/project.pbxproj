@@ -189,7 +189,6 @@
 		D0BF26FD2CFA218000DA2CB9 /* fgAnders.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fgAnders.level2.json; sourceTree = "<group>"; };
 		D0BF26FE2CFA218000DA2CB9 /* fgDeGender.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fgDeGender.level2.json; sourceTree = "<group>"; };
 		D0BF26FF2CFA218000DA2CB9 /* fgWaalre.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fgWaalre.level2.json; sourceTree = "<group>"; };
-		D0BF27002CFA218000DA2CB9 /* OrganizationList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = OrganizationList.json; sourceTree = "<group>"; };
 		D0BF27022CFA218000DA2CB9 /* test1Club.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = test1Club.level1.json; sourceTree = "<group>"; };
 		D0BF27032CFA218000DA2CB9 /* test2Club2Museum.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = test2Club2Museum.level1.json; sourceTree = "<group>"; };
 		D0C53BDC2ABF3ADF000722A1 /* PersonName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonName.swift; sourceTree = "<group>"; };
@@ -532,7 +531,6 @@
 				D07463E52CFB5EFA00F48EB2 /* root.level1.json */,
 				D0BF27032CFA218000DA2CB9 /* test2Club2Museum.level1.json */,
 				D0BF27022CFA218000DA2CB9 /* test1Club.level1.json */,
-				D0BF27002CFA218000DA2CB9 /* OrganizationList.json */,
 				D0BF26FB2CFA218000DA2CB9 /* 241113_Fotoclubs_Brabant_Oost.xlsx */,
 				D0BF26FC2CFA218000DA2CB9 /* fcBellusImago.level2.json */,
 				D0BF26FD2CFA218000DA2CB9 /* fgAnders.level2.json */,
