@@ -3,7 +3,7 @@
 Working on a new standalone MacOS app (see GitHub/vdhamer) that generates HTML membership lists for club web sites.
 This version requires at least iOS version 17.6.
 
-Who's who screen
+Who's Who screen
 * Added support for club officers with role "other" (used for LA and HK in fgDeGender).
 
 Readme screen
@@ -26,11 +26,12 @@ Code Maintenance
 * removed 7 source files that were no longer used
 * renamed isScrollLocked to isMapScrollLocked in data model
 * Level 2 support for photographerImage added. Not shown in the user interface yet.
+* removed temproot.level1.json file (needed for beta testing build 4632/4633)
 
 Data Maintenance
 * Added website for member WH in fgDeGender and added a few birthdays (not visible yet in user interface).
 * Added 14 photo clubs in Brabant Oost (NL).
-* Fixed web site URL for Collectief Brabant.
+* Fixed web site URL for Collectief Brabant and Fotogroep Oirschot.
 * Added examples of a remark to fgDeGender.level2.json file. Not needed, but nice if the file is used as a template.
 
 This build #4634 was built using Xcode 16.2 and is intended for App Store distribution.
