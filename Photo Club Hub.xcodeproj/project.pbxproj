@@ -71,7 +71,6 @@
 		D0BAB01D2A76CED300387E63 /* URLSession+synchronous.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BAB01C2A76CED300387E63 /* URLSession+synchronous.swift */; };
 		D0BF27042CFA218000DA2CB9 /* fcBellusImago.level2.json in Resources */ = {isa = PBXBuildFile; fileRef = D0BF26FC2CFA218000DA2CB9 /* fcBellusImago.level2.json */; };
 		D0BF27082CFA218000DA2CB9 /* fgDeGender.level2.json in Resources */ = {isa = PBXBuildFile; fileRef = D0BF26FE2CFA218000DA2CB9 /* fgDeGender.level2.json */; };
-		D0BF27092CFA218000DA2CB9 /* temproot.level1.json in Resources */ = {isa = PBXBuildFile; fileRef = D0BF27012CFA218000DA2CB9 /* temproot.level1.json */; };
 		D0BF270B2CFA218000DA2CB9 /* fgWaalre.level2.json in Resources */ = {isa = PBXBuildFile; fileRef = D0BF26FF2CFA218000DA2CB9 /* fgWaalre.level2.json */; };
 		D0BF270C2CFA218000DA2CB9 /* fgAnders.level2.json in Resources */ = {isa = PBXBuildFile; fileRef = D0BF26FD2CFA218000DA2CB9 /* fgAnders.level2.json */; };
 		D0C53BDD2ABF3ADF000722A1 /* PersonName.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C53BDC2ABF3ADF000722A1 /* PersonName.swift */; };
@@ -168,7 +167,7 @@
 		D0831A43277F731C0049AB84 /* PersistenceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		D0831A4B277F736C0049AB84 /* ReleaseNotes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = ReleaseNotes.md; sourceTree = "<group>"; };
 		D0831A50277F73C00049AB84 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		D0840FB72D07481B00458E06 /* Nieuwsbrief_Jan25_app.pages */ = {isa = PBXFileReference; lastKnownFileType = file; path = Nieuwsbrief_Jan25_app.pages; sourceTree = "<group>"; };
+		D0840FB72D07481B00458E06 /* Nieuwsbrief_Jan_2025_app.pages */ = {isa = PBXFileReference; lastKnownFileType = file; path = Nieuwsbrief_Jan_2025_app.pages; sourceTree = "<group>"; };
 		D08754092BC5E9FD00FCBDB3 /* WhoIsWhoTextInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhoIsWhoTextInfo.swift; sourceTree = "<group>"; };
 		D087540B2BC5EE3700FCBDB3 /* WhoIsWhoThumbnails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhoIsWhoThumbnails.swift; sourceTree = "<group>"; };
 		D08DC6052AE57294008DBD68 /* SinglePortfolioLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePortfolioLinkView.swift; sourceTree = "<group>"; };
@@ -191,7 +190,6 @@
 		D0BF26FE2CFA218000DA2CB9 /* fgDeGender.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fgDeGender.level2.json; sourceTree = "<group>"; };
 		D0BF26FF2CFA218000DA2CB9 /* fgWaalre.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fgWaalre.level2.json; sourceTree = "<group>"; };
 		D0BF27002CFA218000DA2CB9 /* OrganizationList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = OrganizationList.json; sourceTree = "<group>"; };
-		D0BF27012CFA218000DA2CB9 /* temproot.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = temproot.level1.json; sourceTree = "<group>"; };
 		D0BF27022CFA218000DA2CB9 /* test1Club.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = test1Club.level1.json; sourceTree = "<group>"; };
 		D0BF27032CFA218000DA2CB9 /* test2Club2Museum.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = test2Club2Museum.level1.json; sourceTree = "<group>"; };
 		D0C53BDC2ABF3ADF000722A1 /* PersonName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonName.swift; sourceTree = "<group>"; };
@@ -470,8 +468,8 @@
 		D0831A48277F736C0049AB84 /* Documentation */ = {
 			isa = PBXGroup;
 			children = (
-				D0840FB72D07481B00458E06 /* Nieuwsbrief_Jan25_app.pages */,
 				D0831A4B277F736C0049AB84 /* ReleaseNotes.md */,
+				D0840FB72D07481B00458E06 /* Nieuwsbrief_Jan_2025_app.pages */,
 				D076BE702CF0CC10008F4B47 /* Readme_EN_2_7_1.pages */,
 				D0E02F972B80191300D67CDA /* Readme_NL_2_7_1.pages */,
 				D06E0DCA2C822E8900273AE9 /* Photo Club Hub.pptx */,
@@ -531,7 +529,6 @@
 		D0BF26FA2CFA20AC00DA2CB9 /* Lists */ = {
 			isa = PBXGroup;
 			children = (
-				D0BF27012CFA218000DA2CB9 /* temproot.level1.json */,
 				D07463E52CFB5EFA00F48EB2 /* root.level1.json */,
 				D0BF27032CFA218000DA2CB9 /* test2Club2Museum.level1.json */,
 				D0BF27022CFA218000DA2CB9 /* test1Club.level1.json */,
@@ -692,7 +689,6 @@
 				D0B5743E2C41D79300334E4C /* Assets.xcassets in Resources */,
 				D0BF27042CFA218000DA2CB9 /* fcBellusImago.level2.json in Resources */,
 				D0BF27082CFA218000DA2CB9 /* fgDeGender.level2.json in Resources */,
-				D0BF27092CFA218000DA2CB9 /* temproot.level1.json in Resources */,
 				D0BF270B2CFA218000DA2CB9 /* fgWaalre.level2.json in Resources */,
 				D0BF270C2CFA218000DA2CB9 /* fgAnders.level2.json in Resources */,
 				D07463E62CFB5EFA00F48EB2 /* root.level1.json in Resources */,
