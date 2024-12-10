@@ -3,8 +3,8 @@
 Working on a new standalone MacOS app (see GitHub/vdhamer) that generates HTML membership lists for club web sites.
 This version requires at least iOS version 17.6.
 
-Who's who screen
-* Added support for club officers with role "other" (used for LA and HK in fgDeGender).
+Who's Who screen
+* Added support for a new role for club officers called "Other" (needed for fgDeGender).
 
 Readme screen
 * Updated Dutch and English versions of the text
@@ -17,6 +17,7 @@ Preferences screen
 
 Code Maintenance
 * Added "optional:" keyword to level1.json files. Reason: easier to read and helps document the format.
+* Consequence: users who don't want to or can't upgrade to newer versions get marginally reduced functionality.
 * Tested on SwiftLint 0.57.1 and iOS 18.2 RC (22C150) and Xcode 16.2 beta (16C5023f) and MacOS 15.1.1
 * SwiftJSON imported as an external package. Preceding versions included it as a single Swift source file.
 * Entered trader status (not a trader) in Apple App Store. And accepted new terms and conditions.
@@ -26,11 +27,12 @@ Code Maintenance
 * removed 7 source files that were no longer used
 * renamed isScrollLocked to isMapScrollLocked in data model
 * Level 2 support for photographerImage added. Not shown in the user interface yet.
+* removed temproot.level1.json file (needed for beta testing build 4632/4633)
 
 Data Maintenance
 * Added website for member WH in fgDeGender and added a few birthdays (not visible yet in user interface).
 * Added 14 photo clubs in Brabant Oost (NL).
-* Fixed web site URL for Collectief Brabant.
+* Fixed web site URL for Collectief Brabant and Fotogroep Oirschot.
 * Added examples of a remark to fgDeGender.level2.json file. Not needed, but nice if the file is used as a template.
 
 This build #4634 was built using Xcode 16.2 and is intended for App Store distribution.
