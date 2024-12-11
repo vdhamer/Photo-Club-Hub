@@ -1,4 +1,10 @@
-### 2.7.1 (GitHub commit ???????) ??-12-24
+### 2.7.2 (GitHub commit ???????) 11-12-24
+
+This build #4635 was built using Xcode 16.2 and is intended for App Store distribution.
+
+---------------------------------------------------------------------------
+
+### 2.7.1 (GitHub commit dd07c09) 11-12-24
 
 Working on a new standalone MacOS app (see GitHub/vdhamer) that generates HTML membership lists for club web sites.
 This version requires at least iOS version 17.6.
@@ -35,7 +41,7 @@ Data Maintenance
 * Fixed web site URL for Collectief Brabant and Fotogroep Oirschot.
 * Added examples of a remark to fgDeGender.level2.json file. Not needed, but nice if the file is used as a template.
 
-This build #4634 was built using Xcode 16.2 and is intended for App Store distribution.
+This build #4634 was built using Xcode 16.2 and was distributed via the App Store.
 
 ---------------------------------------------------------------------------
 
