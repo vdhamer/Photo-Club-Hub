@@ -1,6 +1,9 @@
-### 2.7.2 (GitHub commit ???????) 11-12-24
+### 2.7.2 (GitHub commit ???????) ??-01-25
 
 This build #4635 was built using Xcode 16.2 and is intended for App Store distribution.
+
+Code Maintenance
+* Updated data model screenshot using CoreData Model Editor 1.4.1.
 
 ---------------------------------------------------------------------------
 

@@ -4,6 +4,7 @@
         <attribute name="isoCode_" attributeType="String"/>
         <attribute name="languageName_" attributeType="String" elementID="name_"/>
         <relationship name="localizedRemarks_" toMany="YES" deletionRule="Cascade" destinationEntity="LocalizedRemark" inverseName="language_" inverseEntity="LocalizedRemark"/>
+        <relationship name="localizedKeywords_" toMany="YES" deletionRule="Cascade" destinationEntity="LocalizedKeyword" inverseName="language_" inverseEntity="LocalizedKeyword"/>
         <uniquenessConstraints>
             <uniquenessConstraint>
                 <constraint value="isoCode_"/>
@@ -43,6 +44,7 @@
         <attribute name="removeMember" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" elementID="obsolete"/>
         <relationship name="organization_" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Organization" inverseName="members_" inverseEntity="Organization" elementID="photoClub_"/>
         <relationship name="photographer_" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Photographer" inverseName="memberships_" inverseEntity="Photographer"/>
+        <relationship name="memberKeyword_" toMany="YES" deletionRule="Cascade"/>
         <uniquenessConstraints>
             <uniquenessConstraint>
                 <constraint value="organization_"/>
@@ -94,6 +96,7 @@
         <attribute name="photographerImage" optional="YES" attributeType="URI"/>
         <attribute name="photographerWebsite" optional="YES" attributeType="URI" elementID="photographerWebsite"/>
         <relationship name="memberships_" toMany="YES" deletionRule="Cascade" destinationEntity="MemberPortfolio" inverseName="photographer_" inverseEntity="MemberPortfolio"/>
+        <relationship name="photographerKeywords_" toMany="YES" deletionRule="Cascade" destinationEntity="PhotographerKeyword" inverseName="photographer_" inverseEntity="PhotographerKeyword"/>
         <uniquenessConstraints>
             <uniquenessConstraint>
                 <constraint value="familyName_"/>
@@ -102,13 +105,34 @@
             </uniquenessConstraint>
         </uniquenessConstraints>
     </entity>
-    <configuration name="Configuration_0">
+    <entity name="Keyword" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <relationship name="photographerKeywords_" toMany="YES" deletionRule="Cascade" destinationEntity="PhotographerKeyword" inverseName="keyword_" inverseEntity="PhotographerKeyword"/>
+        <relationship name="localizedKeywords_" toMany="YES" deletionRule="Cascade" destinationEntity="LocalizedKeyword" inverseName="keyword_" inverseEntity="LocalizedKeyword"/>
+    </entity>
+    <entity name="LocalizedKeyword" syncable="YES">
+        <attribute name="localizedString" optional="YES" attributeType="String"/>
+        <relationship name="language_" optional="YES" deletionRule="Nullify" destinationEntity="Language" inverseName="localizedKeywords_" inverseEntity="Language"/>
+        <relationship name="keyword_" optional="YES" deletionRule="Nullify" destinationEntity="Keyword" inverseName="localizedKeywords_" inverseEntity="Keyword"/>
+    </entity>
+    <entity name="PhotographerKeyword" syncable="YES">
+        <relationship name="keyword_" optional="YES" deletionRule="Nullify" destinationEntity="Keyword" inverseName="photographerKeywords_" inverseEntity="Keyword"/>
+        <relationship name="photographer_" optional="YES" deletionRule="Nullify" destinationEntity="Photographer" inverseName="photographerKeywords_" inverseEntity="Photographer"/>
+    </entity>
+    <fetchRequest name="NewFetchRequest_0" entity="Language"/>
+    <configuration name="Membership">
         <memberEntity name="Photographer"/>
         <memberEntity name="MemberPortfolio"/>
-        <memberEntity name="Organization"/>
+        <memberEntity name="Keyword"/>
+        <memberEntity name="LocalizedKeyword"/>
+        <memberEntity name="PhotographerKeyword"/>
     </configuration>
-    <configuration name="Configuration_2">
+    <configuration name="ClubsMuseums">
+        <memberEntity name="Organization"/>
+        <memberEntity name="OrganizationType"/>
         <memberEntity name="LocalizedRemark"/>
+    </configuration>
+    <configuration name="Localization">
         <memberEntity name="Language"/>
     </configuration>
 </model>
