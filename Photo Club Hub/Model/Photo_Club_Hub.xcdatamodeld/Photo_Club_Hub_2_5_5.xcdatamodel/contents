@@ -110,7 +110,7 @@
         <memberEntity name="Organization"/>
         <memberEntity name="Photographer"/>
     </configuration>
-    <configuration name="Configuration_2">
+    <configuration name="Configuration_2_">
         <memberEntity name="Language"/>
         <memberEntity name="LocalizedRemark"/>
     </configuration>
