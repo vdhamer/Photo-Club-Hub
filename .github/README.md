@@ -1029,6 +1029,10 @@ The actual text shown in the user interface is provided in the `LocalizedRemark`
 
 The `Keyword` table holds predefined strings that can used as tags for `Photographers`. Examples: `black and white`, `landscape`, `portrait`.
 Like Xcodes string catalogs, the item has a string identifier which can then be translated for every supported `Language`.</p>
+
+At the moment, it hasn't been decided yet how the content of the `Keyboard` table is submitted.
+This is related to error checking of the `PhotographerKeyword` table (see description there).
+The data can come from an extra section in the `root.level1.json` file or a new `level0.json` file containing reference data.<p>
 </details></ul>
 
 #### LocalizedKeyword
@@ -1044,6 +1048,17 @@ The `LocalizedKeyword` table holds the strings representing `Keywords` in any sp
 
 The `PhotographerKeyword` table links a standardize (reusable) `Keyword` to a `Photographer`.
 It is thus a many-to-many relationship without any additional attributes.</p>
+
+Note that `Keyword`s per `Photographer` are provided per Club (`Level2.json`) but are stored at the `Photographer` level.
+Example: John is or was a member of both ClubA and ClubB.
+This means there are two independent `Level2.json` files providing information about John which can hold different sets of `Keywords`.
+The app will store the union of both sets in the `PhotographerKeyword` table.</p>
+
+Do we allow a `Level2.json` file to define new keywords for the `Keyword` table rather than just allow the 
+file to link `Photographers` to pre-existing `Keywords`? To prevent polution of the `Keyword` and `PhotographerKeyword` tables, 
+we decided to only accept keywords that already exist in the `Keywords` table.
+This means a typo in a keyword identifier in the `Level2.json` file (e.g. "landscape" vs "landscapes") means the entry is ignored.
+It also means that a deliberately new keyword encountered in the `Level2.json` file is ignored, until it gets added to the `Keyboard` table.
 </details></ul>
 </details></ul>
     
