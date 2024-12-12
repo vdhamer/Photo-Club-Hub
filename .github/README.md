@@ -994,18 +994,20 @@ And it could be used to generate statistics about how man `Organizations` per `O
 
 <ul><details><summary>Details (click to expand)</summary></p>
 
-The `Language` table is a tiny table to hold the languages supported by the `root.level1.json` file.
-For now, it is intended only to support the `LocalizedRemark` table. 
-Initially a hardcoded equivalent is used to load localized remarks from `root.level1.json`.</p>
+The `Language` table is a tiny table to support multiple languages used in the app's **data**.
+The set of languages used in the app data can differ from the set of languages supported by the app's user interface **code**:
+localization of code is enabled at build time using mechanisms provided in Xcode,
+while localization of database data is handled at run time using mechanisms provided by the app.</p>
 
-By storing it in the database, the set of supported `Languages` in `root.level1.json` can be opened.
-For example, a museum in Portugal may have an English and a Portugues remark, 
-even when the user interface is only localized to English and Dutch.
-This allows the app to display Portuguese text for the local museum if the device is set to Portuguese,
-while the user interface will be shown in English as long as Portuguese is not supported.</p>
+So by storing translations in the database, the set of supported `Languages` used in the data is open-ended.
+For example, a museum in Portugal may have an English and a Portugues descriptive remark, 
+even when the app's user interface can only be set to English or Dutch.
+This allows the app to display Portuguese text for the local museum whenever the user selected Portuguese as the preferred language.
+Under these conditions, the user interface will nomally be displayed in English.</p>
 
-A side benefit of this approach is that localized remarks can be provided without having to wait until
-the app provides full support for a language.
+Currently there are two features in the app that display text from the database and thus require support for localization:
+1. max one `localizedRemark` attached to an `organization` (club, museum) and
+2. multiple `localizedKeywords` attached to a `photographer`.
 </details></ul>
 
 #### LocalizedRemark
