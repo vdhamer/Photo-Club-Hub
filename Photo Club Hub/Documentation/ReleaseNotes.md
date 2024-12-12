@@ -4,7 +4,8 @@ This build #4635 was built using Xcode 16.2 and is intended for App Store distri
 
 Code Maintenance
 * Updated data model screenshot using CoreData Model Editor 1.4.1.
-* Tested on iOS 18.2 and MacOS 15.2
+* Tested on iOS 18.2, and Xcode 16.2 and MacOS 15.2
+* Updates to README.md file for Github
 
 ---------------------------------------------------------------------------
 
