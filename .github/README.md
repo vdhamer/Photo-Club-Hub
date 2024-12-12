@@ -1058,7 +1058,13 @@ Do we allow a `Level2.json` file to define new keywords for the `Keyword` table 
 file to link `Photographers` to pre-existing `Keywords`? To prevent polution of the `Keyword` and `PhotographerKeyword` tables, 
 we decided to only accept keywords that already exist in the `Keywords` table.
 This means a typo in a keyword identifier in the `Level2.json` file (e.g. "landscape" vs "landscapes") means the entry is ignored.
-It also means that a deliberately new keyword encountered in the `Level2.json` file is ignored, until it gets added to the `Keyboard` table.
+It also means that a deliberately new keyword encountered in the `Level2.json` file is ignored, until it gets added to the `Keyboard` table.</p>
+
+While being deliberately restrictive, this is quite powerful: a club may list a new keyword (`PhotographerKeyword`) to a `Photographer`.
+It will be in the `Level2.json` file, but won't get loaded by the app. The club can then lobby to get this keyword accepted. When accepted
+and added to the `Keyword` table, the ignored entry will immediately be used.
+Actually it might be nice to someday have a feature (same app? separate app?) that simultaneously detects typos ("landscap")
+in Level 1 keyword references and suggest wanted extensions to the `Keywords` list ("astrophotography").
 </details></ul>
 </details></ul>
     
