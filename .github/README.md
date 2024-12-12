@@ -994,20 +994,20 @@ And it could be used to generate statistics about how man `Organizations` per `O
 
 <ul><details><summary>Details (click to expand)</summary></p>
 
-The `Language` table is a tiny table to support multiple languages used in the app's **data**.
-The set of languages used in the app data can differ from the set of languages supported by the app's user interface **code**:
-localization of code is enabled at build time using mechanisms provided in Xcode,
-while localization of database data is handled at run time using mechanisms provided by the app.</p>
+The `Language` table is a tiny table to support multiple languages used in the app's data.
+The set of languages used in the app **data** can differ from the set of languages supported by the app's user interface **code**:
+localization of code is enabled at build-time using mechanisms provided in Xcode,
+while localization of database strings is handled at run-time using mechanisms defined in the app's code.</p>
+
+Currently there are two features in the app that display Strings from the database and thus require localization support:
+1. max one `localizedRemark` attached to an `organization` (club, museum) and
+2. multiple `localizedKeyword`s attached (indirectly via `Keyword`) to a `photographer`.
 
 So by storing translations in the database, the set of supported `Languages` used in the data is open-ended.
-For example, a museum in Portugal may have an English and a Portugues descriptive remark, 
-even when the app's user interface can only be set to English or Dutch.
-This allows the app to display Portuguese text for the local museum whenever the user selected Portuguese as the preferred language.
-Under these conditions, the user interface will nomally be displayed in English.</p>
-
-Currently there are two features in the app that display text from the database and thus require support for localization:
-1. max one `localizedRemark` attached to an `organization` (club, museum) and
-2. multiple `localizedKeywords` attached to a `photographer`.
+For example, a museum in Portugal may have a descriptive remark in both English and Portuguese, 
+even when the app's user interface currently has no support for Portuguese.
+This allows the app to display Portuguese text for the local museum whenever the user set Portuguese as the preferred language
+while the app's user interface will be displayed in English.</p>
 </details></ul>
 
 #### LocalizedRemark
@@ -1015,18 +1015,16 @@ Currently there are two features in the app that display text from the database 
 <ul><details><summary>Details (click to expand)</summary></p>
 
 The `LocalizedRemark` table holds brief remarks about an `Organization` in zero or more `Languages`. 
-Remarks are optional, but we recommend providing them. The `LocalizedRemark` table is not filled yet.
-Instead the localized remark texts are temporarily stored in hard-coded property fields
-(`remarkEN`, `remarkNL`) in the `Organization` table.</p>
+Remarks are optional, but we recommend providing them.</p>
 
 An `Organization` record can be linked to 0, 1, 2 or more `Languages` regardless of whether the app fully supports that language.
 The ISO 2 or 3-letter code of the language and a readable name are stored in `Language`.
 The actual text shown in the user interface is shown in the `LocalizedRemark` table.</p>
 
 If the device is configured at the iOS level to use e.g. FR for French,
-the app will give priority to displaying `LocalizedRemarks` in French if encountered.
+the app will give priority to displaying `LocalizedRemarks` and `LocalizedKeywords` in French if present.
 Otherwise it defaults to English, if available. 
-If the preferred langugages are not available, it will use a non-preferred language if available.
+If none of the users preferred langugages are available, a non-preferred language is used.
 </details></ul>
 </details></ul>
     
