@@ -1006,11 +1006,11 @@ For example, a museum in Portugal may have a descriptive remark in both English 
 even when the app's user interface currently has no support for Portuguese.
 This allows the app to display Portuguese text for the local museum whenever the user set Portuguese as the preferred language
 while the app's user interface will be displayed in English.</p>
-</details></ul>
 
 Currently there are two features in the app that display Strings from the database and thus require localization support:
 1. max one `localizedRemark` attached to an `organization` (club, museum) and
 2. multiple `localizedKeyword`s attached (indirectly via `Keyword`) to a `photographer`.</p>#### LocalizedRemark
+</details></ul>
 
 <ul><details><summary>Details (click to expand)</summary></p>
 
