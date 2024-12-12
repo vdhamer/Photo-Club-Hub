@@ -1012,6 +1012,8 @@ Currently there are two features in the app that display Strings from the databa
 2. multiple `localizedKeyword`s attached (indirectly via `Keyword`) to a `photographer`.</p>#### LocalizedRemark
 </details></ul>
 
+#### LocalizedRemark
+
 <ul><details><summary>Details (click to expand)</summary></p>
 
 The `LocalizedRemark` table holds short descriptions about an `Organization` in zero or more `Languages`. 
@@ -1019,6 +1021,29 @@ Remarks are optional, but we recommend providing them.</p>
 
 An `Organization` record can be linked to 0, 1, 2 or more `Languages` regardless of whether the app fully supports that language.
 The actual text shown in the user interface is provided in the `LocalizedRemark` table.</p>
+</details></ul>
+
+#### Keyword
+
+<ul><details><summary>Details (click to expand)</summary></p>
+
+The `Keyword` table holds predefined strings that can used as tags for `Photographers`. Examples: `black and white`, `landscape`, `portrait`.
+Like Xcodes string catalogs, the item has a string identifier which can then be translated for every supported `Language`.</p>
+</details></ul>
+
+#### LocalizedKeyword
+
+<ul><details><summary>Details (click to expand)</summary></p>
+
+The `LocalizedKeyword` table holds the strings representing `Keywords` in any specific `Language`.</p>
+</details></ul>
+
+#### PhotographerKeyword
+
+<ul><details><summary>Details (click to expand)</summary></p>
+
+The `PhotographerKeyword` table links a standardize (reusable) `Keyword` to a `Photographer`.
+It is thus a many-to-many relationship without any additional attributes.</p>
 </details></ul>
 </details></ul>
     
