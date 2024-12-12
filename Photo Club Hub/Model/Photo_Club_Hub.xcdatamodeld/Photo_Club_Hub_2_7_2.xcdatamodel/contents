@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="23605" systemVersion="24C101" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Keyword" syncable="YES">
-        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="idString" optional="YES" attributeType="String"/>
+        <attribute name="description" optional="YES"/>
         <relationship name="localizedKeywords_" toMany="YES" deletionRule="Cascade" destinationEntity="LocalizedKeyword" inverseName="keyword_" inverseEntity="LocalizedKeyword"/>
         <relationship name="photographerKeywords_" toMany="YES" deletionRule="Cascade" destinationEntity="PhotographerKeyword" inverseName="keyword_" inverseEntity="PhotographerKeyword"/>
     </entity>
@@ -21,7 +22,7 @@
         <relationship name="keyword_" optional="YES" deletionRule="Nullify" destinationEntity="Keyword" inverseName="localizedKeywords_" inverseEntity="Keyword"/>
         <relationship name="language_" optional="YES" deletionRule="Nullify" destinationEntity="Language" inverseName="localizedKeywords_" inverseEntity="Language"/>
     </entity>
-    <entity name="LocalizedRemark" representedClassName="LocalizedRemark" codeGenerationType="class">
+    <entity name="LocalizedRemark" representedClassName="LocalizedRemark" syncable="YES" codeGenerationType="class">
         <attribute name="localizedString" optional="YES" attributeType="String"/>
         <relationship name="language_" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Language" inverseName="localizedRemarks_" inverseEntity="Language"/>
         <relationship name="organization_" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Organization" inverseName="localizedRemarks_" inverseEntity="Organization"/>
@@ -118,20 +119,29 @@
         <relationship name="keyword_" optional="YES" deletionRule="Nullify" destinationEntity="Keyword" inverseName="photographerKeywords_" inverseEntity="Keyword"/>
         <relationship name="photographer_" optional="YES" deletionRule="Nullify" destinationEntity="Photographer" inverseName="photographerKeywords_" inverseEntity="Photographer"/>
     </entity>
-    <fetchRequest name="NewFetchRequest_0" entity="Language"/>
-    <configuration name="ClubsMuseums">
-        <memberEntity name="Organization"/>
-        <memberEntity name="OrganizationType"/>
-        <memberEntity name="LocalizedRemark"/>
-    </configuration>
-    <configuration name="Localization">
+    <entity name="Level0"/>
+    <entity name="Level1"/>
+    <entity name="Level2"/>
+    <entity name="Level3"/>
+    <configuration name="Level0">
         <memberEntity name="Language"/>
-    </configuration>
-    <configuration name="Membership">
-        <memberEntity name="Photographer"/>
-        <memberEntity name="MemberPortfolio"/>
         <memberEntity name="Keyword"/>
         <memberEntity name="LocalizedKeyword"/>
+        <memberEntity name="OrganizationType"/>
+        <memberEntity name="Level0"/>
+    </configuration>
+    <configuration name="Level1">
+        <memberEntity name="Organization"/>
+        <memberEntity name="LocalizedRemark"/>
+        <memberEntity name="Level1"/>
+    </configuration>
+    <configuration name="Level2">
+        <memberEntity name="MemberPortfolio"/>
         <memberEntity name="PhotographerKeyword"/>
+        <memberEntity name="Photographer"/>
+        <memberEntity name="Level2"/>
+    </configuration>
+    <configuration name="Level3">
+        <memberEntity name="Level3"/>
     </configuration>
 </model>
