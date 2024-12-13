@@ -7,6 +7,9 @@ Code Maintenance
 * Tested on iOS 18.2, and Xcode 16.2 and MacOS 15.2
 * Updates to README.md file for Github
 
+Data Maintenance
+* Added AJ to fcBellusImago
+
 ---------------------------------------------------------------------------
 
 ### 2.7.1 (GitHub commit dd07c09) 11-12-24
