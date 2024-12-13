@@ -21,19 +21,6 @@
     "members": [
         {
             "name": {
-                "givenName": "Rico",
-                "infixName": "",
-                "familyName": "Coolen"
-            },
-            "optional": {
-                "website": "https://www.ricoco.nl",
-                "featuredImage": "https://www.fotoclubbellusimago.nl/uploads/5/5/1/2/55129719/vrijwerk-rico-3_orig.jpg",
-                "level3URL": "https://www.fotoclubbellusimago.nl/rico.html",
-                "eMail": "info@ricoco.nl"
-            }
-        },
-        {
-            "name": {
                 "givenName": "Loek",
                 "infixName": "",
                 "familyName": "Dirkx"
@@ -44,6 +31,29 @@
                 },
                 "featuredImage": "https://www.fotoclubbellusimago.nl/uploads/5/5/1/2/55129719/vrijwerk-loek-1_2_orig.jpg",
                 "level3URL": "https://www.fotoclubbellusimago.nl/loek.html"
+            }
+        },
+        {
+            "name": {
+                "givenName": "Rico",
+                "infixName": "",
+                "familyName": "Coolen"
+            },
+            "optional": {
+                "website": "https://www.ricoco.nl",
+                "featuredImage": "https://www.fotoclubbellusimago.nl/uploads/5/5/1/2/55129719/vrijwerk-rico-3_orig.jpg",
+                "level3URL": "https://www.fotoclubbellusimago.nl/rico.html",
+            }
+        },
+        {
+            "name": {
+                "givenName": "Annemiek",
+                "infixName": "",
+                "familyName": "Jongeneelen"
+            },
+            "optional": {
+                "featuredImage": "https://www.fotoclubbellusimago.nl/uploads/5/5/1/2/55129719/annemiek-04_orig.jpg",
+                "level3URL": "https://www.fotoclubbellusimago.nl/annemiek.html",
             }
         }
     ]
