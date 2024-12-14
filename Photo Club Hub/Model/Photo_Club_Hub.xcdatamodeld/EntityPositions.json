@@ -1,48 +1,36 @@
 {
   "entitiesPositions" : {
+    "Level2" : [
+      945,
+      1111
+    ],
     "Organization" : [
       948,
       505
     ],
+    "Keyword" : [
+      -121,
+      556
+    ],
     "Level1" : [
-      940,
+      944,
       1089
     ],
     "MemberPortfolio" : [
       404,
       725
     ],
-    "Level0" : [
-      941,
-      1067
-    ],
-    "LocalizedKeyword" : [
-      -125,
-      787
-    ],
-    "PhotographerKeyword" : [
-      133,
-      810
-    ],
     "Photographer" : [
-      137,
+      140,
       554
     ],
+    "LocalizedRemark" : [
+      673,
+      727
+    ],
     "Level3" : [
-      939,
+      945,
       1133
-    ],
-    "Language" : [
-      405,
-      442
-    ],
-    "Level2" : [
-      939,
-      1111
-    ],
-    "Canvas...Position" : [
-      -431.035000000001,
-      72.97000000000025
     ],
     "LocalizedDescription" : [
       981,
@@ -52,13 +40,25 @@
       950,
       373
     ],
-    "Keyword" : [
-      -121,
-      556
+    "LocalizedKeyword" : [
+      -125,
+      787
     ],
-    "LocalizedRemark" : [
-      673,
-      727
+    "Canvas...Position" : [
+      -431.035000000001,
+      72.97000000000025
+    ],
+    "Level0" : [
+      944,
+      1067
+    ],
+    "PhotographerKeyword" : [
+      136,
+      810
+    ],
+    "Language" : [
+      405,
+      442
     ]
   },
   "information" : {
