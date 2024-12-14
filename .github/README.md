@@ -484,7 +484,7 @@ Attempting to view a portfolio of a club member without an available portfolio w
 ### Level 0. Keywords and Languages
 
 `Level 0` holds standardized keywords, standarized languages and the translations of those keywords into different languages.
-Feel free to skip reading about `Level 0` when first reading this.
+Feel free to skip reading about `Level 0` on a first reading: this is just support stuff for the more important data.
 
 <ul><details><Summary>Level 0 example (click to expand)</Summary>
 
