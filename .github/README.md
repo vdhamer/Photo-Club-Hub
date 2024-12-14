@@ -456,6 +456,13 @@ To the user this simply means that some clubs have shared more information than 
 Museums are handled in pretty much the same way as photo clubs, but only `Level 1` is applicable for museums.
 So you won't find members of a museum or portfolios associated with these members.
 
+Internally the app actually supports one extra level of data:
+
+- `Level 0` holds some basic configuration data.
+
+Users and clubs don't normally need to worry about this layer. `Level 0` data is shared across clubs and thus managed centrally. 
+Its main content is a list of standardized keywords for photographers, plus translations of these keywords into supported languages.
+
 ### Levels and Screens
 
 ![Screenshots of 3 screens](images/app_screenshots_EN.jpg "Screenshots of app")
