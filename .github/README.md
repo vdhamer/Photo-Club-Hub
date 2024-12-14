@@ -500,13 +500,13 @@ Feel free to skip reading about `Level 0` when first reading this.
             ]
         },
         {
-            "idString": "Travel",
+            "idString": "Black & White",
             "localizations": [
-                { "language": "EN", "localizedString": "Travel" },
-                { "language": "NL", "localizedString": "Reizen" }
+                { "language": "EN", "localizedString": "Black & White" },
+                { "language": "NL", "localizedString": "Zwart-wit" }
             ]
             "optional": {
-                "usage": "Images of faraway places"
+                "usage": "Grayscale or monochrome images"
             }
         },
     ],
@@ -532,9 +532,9 @@ Feel free to skip reading about `Level 0` when first reading this.
 </details></ul>
 
 <ul><details><Summary>Mandatory Level 0 fields (click to expand)</Summary></p>
-- `keywords` lists the keywords with which `photographers` can be tagged.
-Keywords apply to the photographer, and not to the person as a member of a particular club.
-If a photographer is associated with keywords by multiple clubs, the lists are combined. 
+- `keywords` lists the keywords that can be linked to one or more `photographers` to describe their main genres.
+Keywords apply to the photographer in general, and not to the photographer's membership of a particular club.
+If multiple clubs assign keywords to the same photographer, the lists are automatically merged ("union"). 
     - `idString` only serves to identify a keyword. Preferably use the English version of the keyword - but a text like "Keyword #123" will also work.
     - `localizations` is a list of translations of the keyword into one or more languages.
         - `language` contains the isoCode (typically 2 letters) for the language. Use the 3 letter version only for uncommon languages for which no 2 letter code exists. The codes must match the standard [ISO 639 list](https://www.loc.gov/standards/iso639-2/php/English_list.php) as maintained by the US Library of Congress. It is important to use the correct values, because `isoCode` is compared to the preference codes provided by iOS. Example: "DE" is "German".
