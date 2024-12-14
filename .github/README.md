@@ -535,11 +535,18 @@ Keywords apply to the photographer in general, and not to the photographer's mem
 If multiple clubs assign keywords to the same photographer, the lists are automatically merged ("union"). 
     - `idString` only serves to identify a keyword. Preferably use the English version of the keyword - but a text like "Keyword #123" will also work.
     - `localizations` is a list of translations of the keyword into one or more languages.
-        - `language` contains the isoCode (typically 2 letters) for the language. Use the 3 letter code only for uncommon languages for which no 2 letter code exists. The codes must match the standard [ISO 639 list](https://www.loc.gov/standards/iso639-2/php/English_list.php) as maintained by the US Library of Congress. It is important to use the correct values, because `isoCode` is compared to the preference codes provided by iOS. Example: "DE" is "German".
-        - `localizedString` contains the translation of the keyword into the indicated language. If possible provide translations for all languages the app supports (EN and NL). Additional translations are fine, and will be used where appropriate.
+        - `language` contains the isoCode (typically 2 letters) for the language.
+Use the 3 letter code only for uncommon languages for which no 2 letter code exists.
+The codes must match the standard [ISO 639 list](https://www.loc.gov/standards/iso639-2/php/English_list.php).
+It is important to use the correct values, because `isoCode` is compared to the preference codes provided by iOS.
+Example: "DE" is "German".
+        - `localizedString` contains the translation of the keyword into the indicated language.
+If possible provide translations for all languages the app supports (EN and NL).
+Additional translations are fine, and will be used where appropriate.
 - `languages` lists the meaning of the used language codes. This could tell you that ZH represents Chinese/Mandarin.
     - `isoCode` is the 2 or 3 letter code for the language. Use 2 letter codes whenever available.
-    - `languageNameEN` is the full name of the language in English. Example: "Arabic"
+    - `languageNameEN` is the name of the language in English. Example: "Arabic".
+If needed, we probably can translate the language name to other languages programmatically.
 </details></ul>
 
 <ul><details><Summary>Optional Level 0 fields (click to expand)</Summary></p>
