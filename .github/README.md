@@ -717,9 +717,20 @@ Here is an example of the format of a `Level 2` list for a photo club. This exam
     - `website` is a personal photography-related website. If the website URL is available, the app provides a link to it.
     - `photographerImage` is a depiction of the photographer. A special mode may be added whereby this photo or avatar of the photographer is shown instead of the featured image made by the photographer.
     - `featuredImage` is a URL to a single image that can be shown beside the member's name. It is visible in the `Portfolios` screen and the `Who's Who` screen.
-    - `level3URL` is URL to a file containing the selected portfolio images made by this particular member in the context of a given photo club.</p>
+    - `level3URL` is URL to a file containing the selected portfolio images made by this particular member in the context of a given photo club.
+    - `keywords` is a list of keywords describing what the photographer's genre mainly is.
+The list of strings at `Level 2` is used only to define ("as input") these keywords.
+The keywords shown in the user interface ("as output") are localized versions of these strings as defined in `Level 0`.
+Example: the input identifier "Landscape" that can be associated with a given photographer in the `Level 2` file
+can be translated (using Level 0 data) to "Landschaft" in German or "Landscape" in "English".
+The identifier will typically be identical to the EN translation, but like Apple's String Dictionaries, doesn't have to be.
+Question: so what happens if a keyword string in a `Level2.json` file doesn't occur in the list of keywords in the `Level0.json` file?
+Answer: it is not shown in the user interface as long as that identifier doesn't occur in the `Level 0` keywords list.
+Rationale: you might enter a typo ("Landscapes"). And mainly because we want to standardize the "picklist" (so no "Scenery" or "Mountains").
+But the unsupported keyword identifier at "Level 2" is internally still available and can be use it to detect a need for an extra keyword ("Aerial").
+</p>
  
-> Note that the `birthday`, `website`, `isDeceased`, and `photographerImage` fields are technically special because they describe the photographer - and not the photographer as a member of a particular club. 
+> Note that the `birthday`, `website`, `isDeceased`, `photographerImage`, and `keywords` fields are technically special because they describe the photographer - and not the photographer as a member of a particular club. 
 > Usually this doesn't matter, but it can show up if the photographer is associated with **multiple** clubs, each with its own level2.json file (for example, a former photo club and the current photo club).
 > Conceivably these multiple files may not agree on the value of `birthday`, `website` or `isDeceased`. The app currently will use the last answer it encountered.
 > This problem should occur infrequently, but a workaround is to only fill in these fields in one of the level2.json files. In the future, we could add rules to determine what to do if there are multiple different values for these fields (e.g. membership trumps former membership).
