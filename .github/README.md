@@ -537,10 +537,10 @@ Keywords apply to the photographer, and not to the person as a member of a parti
 If a photographer is associated with keywords by multiple clubs, the lists are combined. 
     - `idString` only serves to identify a keyword. Preferably use the English version of the keyword - but a text like "Keyword #123" will also work.
     - `localizations` is a list of translations of the keyword into one or more languages.
-        - `language` contains the isoCode (typically 2 letters) for the language. It can also use the 3 letter version if no 2 letter code exists. The codes must match the standard [ISO 639 list](https://www.loc.gov/standards/iso639-2/php/English_list.php) as maintained by the US Library of Congress. It is important to use the correct values, because `isoCode` is compared to the preference codes provided by iOS. Example: "DE" is "German".
-        - `localizedString`
-- `languages`
-    - `isoCode`
+        - `language` contains the isoCode (typically 2 letters) for the language. Use the 3 letter version only for uncommon languages for which no 2 letter code exists. The codes must match the standard [ISO 639 list](https://www.loc.gov/standards/iso639-2/php/English_list.php) as maintained by the US Library of Congress. It is important to use the correct values, because `isoCode` is compared to the preference codes provided by iOS. Example: "DE" is "German".
+        - `localizedString` contains the translation of the keyword into the indicated language. If possible provide translations for all languages the app supports (EN and NL). Additional translations are fine, and will be used where appropriate.
+- `languages` lists the meaning of the various language codes
+    - `isoCode` is the 2 or 3 letter code for the language. Use 3 letter codes only when no 2 letter code exists.
     - `languageNameEN`
     - `languageNameLocal`
 </details></ul>
