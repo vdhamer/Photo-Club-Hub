@@ -44,6 +44,7 @@
         <ul>
             <li><a href="#levels">Levels</a></li>
             <li><a href="#levels-and-screens">Levels and Screens</a></li>
+            <li><a href="#level-0-keywords-and-languages">Level 0. Keywords and Lanaguages</a></li>
             <li><a href="#level-1-adding-clubs">Level 1. Adding Clubs</a></li>
             <li><a href="#level-2-adding-members">Level 2. Adding Members</a></li>
             <li><a href="#level-3-adding-images">Level 3. Adding Images</a></li>
@@ -480,6 +481,64 @@ Technically different club members don't need to reach `Level 3` at the same tim
 one member, then expand to all members, and later add some recent former members if you want. 
 Attempting to view a portfolio of a club member without an available portfolio will display a red built-in placeholder image.
 
+### Level 0. Keywords and Languages
+
+`Level 0` holds standardized keywords, standarized languages and the translations of those keywords into different languages. Unless you have questions about this, feel free to skip reading about `Level 0`.
+
+<ul><details><Summary>Level 0 example (click to expand)</Summary>
+``` json
+{
+    "keywords": [
+        {
+            "idPlus": {
+                "town": "Eindhoven",
+                "fullName": "Fotogroep de Gender",
+                "nickName": "fgDeGender"
+            },
+            "coordinates": {
+                "latitude": 51.42398,
+                "longitude": 5.45010
+            },
+            "optional": {
+                "website": "https://www.fcdegender.nl",
+                "level2URL": "https://www.example.com/fgDeGender.level2.json",
+                "remark": [
+                    { "language": "NL", "value": "Opgelet: Fotogroep de Gender gebruikt als domeinnaam nog altijd fcdegender.nl (van Fotoclub)." }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 1620
+                }
+            }
+        }
+    ],
+    "languages": [
+        {
+            "isoCode": "EN",
+            "optional": {
+                "languageNameEN": "English",
+                "lanaguageNameLocalized": "English"
+            }
+        },
+        {
+            "isoCode": "NL",
+            "optional": {
+                "languageNameEN": "Dutch",
+                "lanaguageNameLocalized": "Nederlands"
+            }
+        }
+    ]
+}
+```
+</details></ul>
+
+<ul><details><Summary>Mandatory Level 0 fields (click to expand)</Summary></p>
+To do
+</details></ul>
+
+<ul><details><Summary>Optional Level 0 fields (click to expand)</Summary></p>
+To do
+</details></ul>
+
 ### Level 1. Adding Clubs
 
 Adding photo clubs (or museums) to get to `Level 1` requires providing a name, location and a few optional URLs. 
@@ -761,66 +820,6 @@ To do
 </details></ul>
 
 <ul><details><Summary>Optional Level 3 fields (click to expand)</Summary></p>
-To do
-</details></ul></ul>
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-### Level 0. Keywords and Languages
-
-`Level 0` holds standardized keywords, standarized languages and the translations of those keywords into different languages. Unless you have questions about this, feel free to skip reading about `Level 0`.
-
-<ul><details><Summary>Level 0 example (click to expand)</Summary>
-``` json
-{
-    "keywords": [
-        {
-            "idPlus": {
-                "town": "Eindhoven",
-                "fullName": "Fotogroep de Gender",
-                "nickName": "fgDeGender"
-            },
-            "coordinates": {
-                "latitude": 51.42398,
-                "longitude": 5.45010
-            },
-            "optional": {
-                "website": "https://www.fcdegender.nl",
-                "level2URL": "https://www.example.com/fgDeGender.level2.json",
-                "remark": [
-                    { "language": "NL", "value": "Opgelet: Fotogroep de Gender gebruikt als domeinnaam nog altijd fcdegender.nl (van Fotoclub)." }
-                ],
-                "nlSpecific": {
-                    "fotobondNumber": 1620
-                }
-            }
-        }
-    ],
-    "languages": [
-        {
-            "isoCode": "EN",
-            "optional": {
-                "languageNameEN": "English",
-                "lanaguageNameLocalized": "English"
-            }
-        },
-        {
-            "isoCode": "NL",
-            "optional": {
-                "languageNameEN": "Dutch",
-                "lanaguageNameLocalized": "Nederlands"
-            }
-        }
-    ]
-}
-```
-</details></ul>
-
-<ul><details><Summary>Mandatory Level 0 fields (click to expand)</Summary></p>
-To do
-</details></ul>
-
-<ul><details><Summary>Optional Level 0 fields (click to expand)</Summary></p>
 To do
 </details></ul></ul>
 
