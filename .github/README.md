@@ -458,7 +458,7 @@ So you won't find members of a museum or portfolios associated with these member
 
 Internally the app actually supports one extra level of data:
 
-- `Level 0` holds some basic configuration data.
+- `Level 0` holds some basic configuration data.</p>
 
 Users and clubs don't normally need to worry about this layer. `Level 0` data is shared across clubs and thus managed centrally. 
 Its main content is a list of standardized keywords for photographers, plus translations of these keywords into supported languages.
