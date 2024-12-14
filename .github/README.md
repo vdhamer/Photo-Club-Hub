@@ -481,7 +481,7 @@ Technically different club members don't need to reach `Level 3` at the same tim
 one member, then expand to all members, and later add some recent former members if you want. 
 Attempting to view a portfolio of a club member without an available portfolio will display a red built-in placeholder image.
 
-### Level 0. Keywords and Languages
+### Level 0. Keywords and Languages (in progress)
 
 `Level 0` contains standardized keywords, standardized languages, and the translations of keywords into these languages.
 You may want to skip reading about `Level 0` on a first reading, as it only contains supporting information for the more central data.
