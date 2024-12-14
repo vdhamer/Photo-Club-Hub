@@ -486,6 +486,7 @@ Attempting to view a portfolio of a club member without an available portfolio w
 `Level 0` holds standardized keywords, standarized languages and the translations of those keywords into different languages. Unless you have questions about this, feel free to skip reading about `Level 0`.
 
 <ul><details><Summary>Level 0 example (click to expand)</Summary>
+
 ``` json
 {
     "keywords": [
