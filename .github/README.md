@@ -505,33 +505,28 @@ Feel free to skip reading about `Level 0` when first reading this.
                 { "language": "EN", "localizedString": "Travel" },
                 { "language": "NL", "localizedString": "Reizen" }
             ]
+            "optional": {
+                "usage": "Images of faraway places"
+            }
         },
     ],
-    "optional": {
-        "languages": [
-            {
-                "isoCode": "EN",
-                "optional": {
-                    "languageNameEN": "English",
-                    "languageNameLocalized": "English"
-                }
-            },
-            {
-                "isoCode": "NL",
-                "optional": {
-                    "languageNameEN": "Dutch",
-                    "languageNameLocalized": "Nederlands"
-                }
-            },
-            {
-                "isoCode": "AR",
-                "optional": {
-                    "languageNameEN": "Arabic",
-                    "languageNameLocalized": "اَلْعَرَبِيَّةُ"
-                }
-            }
-        ]
-    }
+    "languages": [
+        {
+            "isoCode": "EN",
+            "languageNameEN": "English",
+            "languageNameLocalized": "English"
+        },
+        {
+            "isoCode": "NL",
+            "languageNameEN": "Dutch",
+            "languageNameLocalized": "Nederlands"
+        },
+        {
+            "isoCode": "AR",
+            "languageNameEN": "Arabic",
+            "languageNameLocalized": "اَلْعَرَبِيَّةُ"
+        }
+    ]
 }
 ```
 </details></ul>
