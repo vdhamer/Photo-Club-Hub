@@ -583,7 +583,7 @@ You can indentally check the basic syntax of JSON files using online JSON valida
 ### Level 2. Adding Members
 
 `Level 2` support requires providing a list of the members as a file per club.
-A club's `Level 2` data shows up in the Portfolios screen as a list of club members.
+A club's `Level 2` data shows up in the Portfolios screen as a list of club members per club.
 Each `Level 2` JSON file lists the current (and optionally former) members of a single club.
 For each member, a URL is stored pointing to the `Level 3` file (portfolio per member).
 `Level 2` lists also includes the URL of an image used as thumbnail for that member.
