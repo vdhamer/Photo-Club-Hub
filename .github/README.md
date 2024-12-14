@@ -483,7 +483,8 @@ Attempting to view a portfolio of a club member without an available portfolio w
 
 ### Level 0. Keywords and Languages
 
-`Level 0` holds standardized keywords, standarized languages and the translations of those keywords into different languages. Unless you have questions about this, feel free to skip reading about `Level 0`.
+`Level 0` holds standardized keywords, standarized languages and the translations of those keywords into different languages.
+Feel free to skip reading about `Level 0` when first reading this.
 
 <ul><details><Summary>Level 0 example (click to expand)</Summary>
 
@@ -491,43 +492,46 @@ Attempting to view a portfolio of a club member without an available portfolio w
 {
     "keywords": [
         {
-            "idPlus": {
-                "town": "Eindhoven",
-                "fullName": "Fotogroep de Gender",
-                "nickName": "fgDeGender"
-            },
-            "coordinates": {
-                "latitude": 51.42398,
-                "longitude": 5.45010
-            },
-            "optional": {
-                "website": "https://www.fcdegender.nl",
-                "level2URL": "https://www.example.com/fgDeGender.level2.json",
-                "remark": [
-                    { "language": "NL", "value": "Opgelet: Fotogroep de Gender gebruikt als domeinnaam nog altijd fcdegender.nl (van Fotoclub)." }
-                ],
-                "nlSpecific": {
-                    "fotobondNumber": 1620
-                }
-            }
-        }
-    ],
-    "languages": [
-        {
-            "isoCode": "EN",
-            "optional": {
-                "languageNameEN": "English",
-                "lanaguageNameLocalized": "English"
-            }
+            "idString": "Landscape",
+            "localizations": [
+                { "language": "EN", "localizedString": "Landscape" },
+                { "language": "NL", "localizedString": "Landschap" },
+                { "language": "AR", "localizedString": "منظر جمالي" }
+            ]}
         },
         {
-            "isoCode": "NL",
-            "optional": {
-                "languageNameEN": "Dutch",
-                "lanaguageNameLocalized": "Nederlands"
+            "idString": "Travel",
+            "localizations": [
+                { "language": "EN", "localizedString": "Travel" },
+                { "language": "NL", "localizedString": "Reizen" }
+            ]}
+        },
+    ],
+    optional: {
+        "languages": [
+            {
+                "isoCode": "EN",
+                "optional": {
+                    "languageNameEN": "English",
+                    "languageNameLocalized": "English"
+                }
+            },
+            {
+                "isoCode": "NL",
+                "optional": {
+                    "languageNameEN": "Dutch",
+                    "languageNameLocalized": "Nederlands"
+                }
+            },
+            {
+                "isoCode": "AR",
+                "optional": {
+                    "languageNameEN": "Arabic",
+                    "languageNameLocalized": "اَلْعَرَبِيَّةُ"
+                }
             }
-        }
-    ]
+        ]
+    }
 }
 ```
 </details></ul>
