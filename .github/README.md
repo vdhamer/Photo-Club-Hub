@@ -44,6 +44,7 @@
         <ul>
             <li><a href="#levels">Levels</a></li>
             <li><a href="#levels-and-screens">Levels and Screens</a></li>
+            <li><a href="#level-0-keywords-and-languages">Level 0. Keywords and Languages</a></li>
             <li><a href="#level-1-adding-clubs">Level 1. Adding Clubs</a></li>
             <li><a href="#level-2-adding-members">Level 2. Adding Members</a></li>
             <li><a href="#level-3-adding-images">Level 3. Adding Images</a></li>
@@ -456,6 +457,13 @@ To the user this simply means that some clubs have shared more information than 
 Museums are handled in pretty much the same way as photo clubs, but only `Level 1` is applicable for museums.
 So you won't find members of a museum or portfolios associated with these members.
 
+Internally the app actually supports one extra level of data:
+
+- `Level 0` holds some basic configuration data.</p>
+
+Users and clubs don't normally need to worry about this layer. `Level 0` data is shared across clubs and thus managed centrally. 
+Its main content is a list of standardized keywords for photographers, plus translations of these keywords into supported languages.
+
 ### Levels and Screens
 
 ![Screenshots of 3 screens](images/app_screenshots_EN.jpg "Screenshots of app")
@@ -472,6 +480,69 @@ and allows app users to browse member photos.
 Technically different club members don't need to reach `Level 3` at the same time: you can first add a test portfolio for
 one member, then expand to all members, and later add some recent former members if you want. 
 Attempting to view a portfolio of a club member without an available portfolio will display a red built-in placeholder image.
+
+### Level 0. Keywords and Languages
+
+`Level 0` holds standardized keywords, standarized languages and the translations of those keywords into different languages.
+Feel free to skip reading about `Level 0` when first reading this.
+
+<ul><details><Summary>Level 0 example (click to expand)</Summary>
+
+``` json
+{
+    "keywords": [
+        {
+            "idString": "Landscape",
+            "localizations": [
+                { "language": "EN", "localizedString": "Landscape" },
+                { "language": "NL", "localizedString": "Landschap" },
+                { "language": "AR", "localizedString": "منظر جمالي" }
+            ]
+        },
+        {
+            "idString": "Travel",
+            "localizations": [
+                { "language": "EN", "localizedString": "Travel" },
+                { "language": "NL", "localizedString": "Reizen" }
+            ]
+        },
+    ],
+    "optional": {
+        "languages": [
+            {
+                "isoCode": "EN",
+                "optional": {
+                    "languageNameEN": "English",
+                    "languageNameLocalized": "English"
+                }
+            },
+            {
+                "isoCode": "NL",
+                "optional": {
+                    "languageNameEN": "Dutch",
+                    "languageNameLocalized": "Nederlands"
+                }
+            },
+            {
+                "isoCode": "AR",
+                "optional": {
+                    "languageNameEN": "Arabic",
+                    "languageNameLocalized": "اَلْعَرَبِيَّةُ"
+                }
+            }
+        ]
+    }
+}
+```
+</details></ul>
+
+<ul><details><Summary>Mandatory Level 0 fields (click to expand)</Summary></p>
+To do
+</details></ul>
+
+<ul><details><Summary>Optional Level 0 fields (click to expand)</Summary></p>
+To do
+</details></ul>
 
 ### Level 1. Adding Clubs
 

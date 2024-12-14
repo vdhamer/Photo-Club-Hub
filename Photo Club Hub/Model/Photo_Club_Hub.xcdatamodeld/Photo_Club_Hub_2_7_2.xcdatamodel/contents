@@ -10,6 +10,7 @@
     <entity name="Language" representedClassName="Language" syncable="YES" codeGenerationType="class">
         <attribute name="isoCode_" attributeType="String"/>
         <attribute name="languageName_" attributeType="String" elementID="name_"/>
+        <attribute name="languageNameEN_" optional="YES" attributeType="String"/>
         <relationship name="localizedKeywords_" toMany="YES" deletionRule="Cascade" destinationEntity="LocalizedKeyword" inverseName="language_" inverseEntity="LocalizedKeyword"/>
         <relationship name="localizedRemarks_" toMany="YES" deletionRule="Cascade" destinationEntity="LocalizedRemark" inverseName="language_" inverseEntity="LocalizedRemark"/>
         <uniquenessConstraints>
