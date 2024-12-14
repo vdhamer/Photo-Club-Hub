@@ -724,10 +724,11 @@ The keywords shown in the user interface ("as output") are localized versions of
 Example: the input identifier "Landscape" that can be associated with a given photographer in the `Level 2` file
 can be translated (using Level 0 data) to "Landschaft" in German or "Landscape" in "English".
 The identifier will typically be identical to the EN translation, but like Apple's String Dictionaries, doesn't have to be.
-Question: so what happens if a keyword string in a `Level2.json` file doesn't occur in the list of keywords in the `Level0.json` file?
-Answer: it is not shown in the user interface as long as that identifier doesn't occur in the `Level 0` keywords list.
-Rationale: you might enter a typo ("Landscapes"). And mainly because we want to standardize the "picklist" (so no "Scenery" or "Mountains").
-But the unsupported keyword identifier at "Level 2" is internally still available and can be use it to detect a need for an extra keyword ("Aerial").
+Question: so what happens if a keyword string in a `Level2.json` file does _not_ occur in the list of keywords in the `Level0.json` file?
+Answer: it is shown as an error (red? gray?) in the user interface, thus prompting the user to fix the issue.
+It reverts to the standard color if that identifier ever shows up in a future version of the `Level 0` keywords list.
+Rationale: you might enter a typo ("Landscapes"). And mainly because we want to standardize the "picklist" (so no "Scenery" or "Desert").
+The unsupported keyword identifier at "Level 2" can be used to detect a need for an extra keyword (say "Aerial").
 </p>
  
 > Note that the `birthday`, `website`, `isDeceased`, `photographerImage`, and `keywords` fields are technically special because they describe the photographer - and not the photographer as a member of a particular club. 
