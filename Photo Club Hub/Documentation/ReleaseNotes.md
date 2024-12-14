@@ -3,9 +3,9 @@
 This build #4635 was built using Xcode 16.2 and is intended for App Store distribution.
 
 Code Maintenance
-* Updated data model screenshot using CoreData Model Editor 1.4.1.
 * Tested on iOS 18.2, and Xcode 16.2 and MacOS 15.2
-* Updates to README.md file for Github
+* Extended data model for keyword feature (and updated diagram in README)
+* Added documentation in README.md for keyword feature in Level 2 files.
 
 Data Maintenance
 * Added AJ to fcBellusImago
@@ -42,6 +42,8 @@ Code Maintenance
 * renamed isScrollLocked to isMapScrollLocked in data model
 * Level 2 support for photographerImage added. Not shown in the user interface yet.
 * removed temproot.level1.json file (needed for beta testing build 4632/4633)
+* Updates to README.md file for Github
+* Updated data model screenshot using CoreData Model Editor 1.4.1.
 
 Data Maintenance
 * Added website for member WH in fgDeGender and added a few birthdays (not visible yet in user interface).

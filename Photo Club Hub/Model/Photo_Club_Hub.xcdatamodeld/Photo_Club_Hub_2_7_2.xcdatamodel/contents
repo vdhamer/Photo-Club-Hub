@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="23605" systemVersion="24C101" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Keyword" syncable="YES">
-        <attribute name="idString" optional="YES" attributeType="String"/>
         <attribute name="description" optional="YES" attributeType="String"/>
+        <attribute name="idString" optional="YES" attributeType="String"/>
+        <attribute name="isStandard" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <relationship name="localizedKeywords_" toMany="YES" deletionRule="Cascade" destinationEntity="LocalizedKeyword" inverseName="keyword_" inverseEntity="LocalizedKeyword"/>
         <relationship name="photographerKeywords_" toMany="YES" deletionRule="Cascade" destinationEntity="PhotographerKeyword" inverseName="keyword_" inverseEntity="PhotographerKeyword"/>
     </entity>
@@ -16,6 +17,18 @@
                 <constraint value="isoCode_"/>
             </uniquenessConstraint>
         </uniquenessConstraints>
+    </entity>
+    <entity name="Level0">
+        <userInfo/>
+    </entity>
+    <entity name="Level1">
+        <userInfo/>
+    </entity>
+    <entity name="Level2">
+        <userInfo/>
+    </entity>
+    <entity name="Level3">
+        <userInfo/>
     </entity>
     <entity name="LocalizedKeyword" syncable="YES">
         <attribute name="localizedString" optional="YES" attributeType="String"/>
@@ -32,7 +45,6 @@
                 <constraint value="organization_"/>
             </uniquenessConstraint>
         </uniquenessConstraints>
-        <userInfo/>
     </entity>
     <entity name="MemberPortfolio" representedClassName="MemberPortfolio" elementID="Member" syncable="YES" codeGenerationType="class">
         <attribute name="featuredImage" optional="YES" attributeType="URI" elementID="latestImage_"/>
@@ -119,10 +131,6 @@
         <relationship name="keyword_" optional="YES" deletionRule="Nullify" destinationEntity="Keyword" inverseName="photographerKeywords_" inverseEntity="Keyword"/>
         <relationship name="photographer_" optional="YES" deletionRule="Nullify" destinationEntity="Photographer" inverseName="photographerKeywords_" inverseEntity="Photographer"/>
     </entity>
-    <entity name="Level0"/>
-    <entity name="Level1"/>
-    <entity name="Level2"/>
-    <entity name="Level3"/>
     <configuration name="Level0">
         <memberEntity name="Language"/>
         <memberEntity name="Keyword"/>
