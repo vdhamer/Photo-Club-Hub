@@ -497,14 +497,14 @@ Feel free to skip reading about `Level 0` when first reading this.
                 { "language": "EN", "localizedString": "Landscape" },
                 { "language": "NL", "localizedString": "Landschap" },
                 { "language": "AR", "localizedString": "منظر جمالي" }
-            ]}
+            ]
         },
         {
             "idString": "Travel",
             "localizations": [
                 { "language": "EN", "localizedString": "Travel" },
                 { "language": "NL", "localizedString": "Reizen" }
-            ]}
+            ]
         },
     ],
     optional: {
