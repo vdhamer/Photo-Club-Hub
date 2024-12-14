@@ -532,6 +532,7 @@ Feel free to skip reading about `Level 0` when first reading this.
 </details></ul>
 
 <ul><details><Summary>Mandatory Level 0 fields (click to expand)</Summary></p>
+
 - `keywords` lists the keywords that can be linked to one or more `photographers` to describe their main genres.
 Keywords apply to the photographer in general, and not to the photographer's membership of a particular club.
 If multiple clubs assign keywords to the same photographer, the lists are automatically merged ("union"). 
@@ -546,6 +547,7 @@ If multiple clubs assign keywords to the same photographer, the lists are automa
 </details></ul>
 
 <ul><details><Summary>Optional Level 0 fields (click to expand)</Summary></p>
+
 - `usage` (within a `keyword`) is a description of what is meant by the keyword. We couldn't call it a description because that is a reserved name in Swift.
 </details></ul>
 
