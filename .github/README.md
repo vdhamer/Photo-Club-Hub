@@ -766,6 +766,66 @@ To do
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+### Level 0. Keywords and Languages
+
+`Level 0` holds standardized keywords, standarized languages and the translations of those keywords into different languages. Unless you have questions about this, feel free to skip reading about `Level 0`.
+
+<ul><details><Summary>Level 0 example (click to expand)</Summary>
+``` json
+{
+    "keywords": [
+        {
+            "idPlus": {
+                "town": "Eindhoven",
+                "fullName": "Fotogroep de Gender",
+                "nickName": "fgDeGender"
+            },
+            "coordinates": {
+                "latitude": 51.42398,
+                "longitude": 5.45010
+            },
+            "optional": {
+                "website": "https://www.fcdegender.nl",
+                "level2URL": "https://www.example.com/fgDeGender.level2.json",
+                "remark": [
+                    { "language": "NL", "value": "Opgelet: Fotogroep de Gender gebruikt als domeinnaam nog altijd fcdegender.nl (van Fotoclub)." }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 1620
+                }
+            }
+        }
+    ],
+    "languages": [
+        {
+            "isoCode": "EN",
+            "optional": {
+                "languageNameEN": "English",
+                "lanaguageNameLocalized": "English"
+            }
+        },
+        {
+            "isoCode": "NL",
+            "optional": {
+                "languageNameEN": "Dutch",
+                "lanaguageNameLocalized": "Nederlands"
+            }
+        }
+    ]
+}
+```
+</details></ul>
+
+<ul><details><Summary>Mandatory Level 0 fields (click to expand)</Summary></p>
+To do
+</details></ul>
+
+<ul><details><Summary>Optional Level 0 fields (click to expand)</Summary></p>
+To do
+</details></ul></ul>
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 ## Installation</p>
 
 If you simly want to install the binary version of the app, just install it from Apple's app store ([link](https://apps.apple.com/nl/app/photo-club-hub/id1178324330?l=en)).
