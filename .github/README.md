@@ -513,18 +513,15 @@ You may want to skip reading about `Level 0` on a first reading, as it only cont
     "languages": [
         {
             "isoCode": "EN",
-            "languageNameEN": "English",
-            "languageNameLocal": "English"
+            "languageNameEN": "English"
         },
         {
             "isoCode": "NL",
-            "languageNameEN": "Dutch",
-            "languageNameLocal": "Nederlands"
+            "languageNameEN": "Dutch"
         },
         {
             "isoCode": "AR",
-            "languageNameEN": "Arabic",
-            "languageNameLocal": "اَلْعَرَبِيَّةُ"
+            "languageNameEN": "Arabic"
         }
     ]
 }
@@ -543,7 +540,6 @@ If multiple clubs assign keywords to the same photographer, the lists are automa
 - `languages` lists the meaning of the used language codes. This could tell you that ZH represents Chinese/Mandarin.
     - `isoCode` is the 2 or 3 letter code for the language. Use 2 letter codes whenever available.
     - `languageNameEN` is the full name of the language in English. Example: "Arabic"
-    - `languageNameLocal` is the name of the language in the language itself. Example: "اَلْعَرَبِيَّةُ"
 </details></ul>
 
 <ul><details><Summary>Optional Level 0 fields (click to expand)</Summary></p>
