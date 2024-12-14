@@ -507,7 +507,7 @@ Feel free to skip reading about `Level 0` when first reading this.
             ]
         },
     ],
-    optional: {
+    "optional": {
         "languages": [
             {
                 "isoCode": "EN",
