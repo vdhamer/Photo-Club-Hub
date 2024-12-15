@@ -76,7 +76,7 @@
                     "isFormerMember": true
                 },
                 "membershipStartDate": "1996-01-01",
-                "membershipEndDate": "2025-01-01",
+                "membershipEndDate": "2024-12-31",
                 "nlSpecific": {
                     "fotobondNumber": 1620040
                 }
@@ -272,7 +272,7 @@
                     "isFormerMember": true
                 },
                 "membershipStartDate": "2009-11-01",
-                "membershipEndDate": "2025-01-01",
+                "membershipEndDate": "2024-12-31",
                 "nlSpecific": {
                     "fotobondNumber": 1620079
                 }
@@ -307,7 +307,7 @@
                     "isFormerMember": true
                 },
                 "membershipStartDate": "1990-01-01",
-                "membershipStartDate": "2025-01-01",
+                "membershipEndDate": "2024-12-31",
                 "nlSpecific": {
                     "fotobondNumber": 1620008
                 }
