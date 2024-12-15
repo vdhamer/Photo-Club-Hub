@@ -307,7 +307,7 @@
                     "isFormerMember": true
                 },
                 "membershipStartDate": "1990-01-01",
-                "membershipStartDate": "2025-01-01",
+                "membershipEndDate": "2025-01-01",
                 "nlSpecific": {
                     "fotobondNumber": 1620008
                 }
