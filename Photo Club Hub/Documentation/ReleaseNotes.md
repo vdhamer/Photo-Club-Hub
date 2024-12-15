@@ -2,6 +2,9 @@
 
 This build #4635 was built using Xcode 16.2 and is intended for App Store distribution.
 
+Preferences screen
+* Bug fix: role "Other" didn't show up when filtering on club officers
+
 Code Maintenance
 * Tested on iOS 18.2, and Xcode 16.2 and MacOS 15.2
 * Extended data model for keyword feature (and updated diagram in README)
