@@ -758,9 +758,7 @@ Here is an example of the format of a `Level 2` list for a photo club. This exam
                 "photographerImage": "http://www.vdhamer.com/wp-content/uploads/2022/07/cropped-2006_Norway_276_SSharp1_4.jpg",
                 "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg",
                 "level3URL": "https://www.example.com/FG_deGender/Peter_van_den_Hamer.level3.json",
-                "keywords": [
-                    "Landscape", "Travel", "Minimal"
-                ]
+                "keywords": [ "Landscape", "Travel", "Minimal" ]
             }
         }
     ]
