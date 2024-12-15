@@ -358,9 +358,9 @@ Design detail: Search Bar filtering is done in the app's user interface and not 
 
 ### Photographer Keywords (in progress)
 
-</p>Photographers can be associated with keywords describing what type of photography they are mainly known for.
+</p>Photographers can be associated with keywords describing what kind of photography they are mainly known for.
 Examples: "Black & White" or "Landscape". Because these keywords can serve to Search for photographers with similar
-interests, they keywords are standardized (e.g. "Black & White" rather than "Black and White"). 
+interests, they keywords are standardized (e.g. consistently use "Black & White" rather than partly using "B&W" or "Black and White"). 
 </p>
 
 <details><summary>Details on Keyword Standardization (click to expand)</summary></p>
