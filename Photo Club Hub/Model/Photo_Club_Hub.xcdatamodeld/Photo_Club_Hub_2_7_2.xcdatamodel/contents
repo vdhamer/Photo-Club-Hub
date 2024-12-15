@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="23605" systemVersion="24C101" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Keyword" syncable="YES">
-        <attribute name="description" optional="YES" attributeType="String"/>
         <attribute name="idString" optional="YES" attributeType="String"/>
         <attribute name="isStandard" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="usage" optional="YES" attributeType="String"/>
         <relationship name="localizedKeywords_" toMany="YES" deletionRule="Cascade" destinationEntity="LocalizedKeyword" inverseName="keyword_" inverseEntity="LocalizedKeyword"/>
         <relationship name="photographerKeywords_" toMany="YES" deletionRule="Cascade" destinationEntity="PhotographerKeyword" inverseName="keyword_" inverseEntity="PhotographerKeyword"/>
     </entity>
     <entity name="Language" representedClassName="Language" syncable="YES" codeGenerationType="class">
         <attribute name="isoCode_" attributeType="String"/>
-        <attribute name="languageName_" attributeType="String" elementID="name_"/>
         <attribute name="languageNameEN_" optional="YES" attributeType="String"/>
         <relationship name="localizedKeywords_" toMany="YES" deletionRule="Cascade" destinationEntity="LocalizedKeyword" inverseName="language_" inverseEntity="LocalizedKeyword"/>
         <relationship name="localizedRemarks_" toMany="YES" deletionRule="Cascade" destinationEntity="LocalizedRemark" inverseName="language_" inverseEntity="LocalizedRemark"/>
@@ -33,8 +32,8 @@
     </entity>
     <entity name="LocalizedKeyword" syncable="YES">
         <attribute name="localizedString" optional="YES" attributeType="String"/>
-        <relationship name="keyword_" optional="YES" deletionRule="Nullify" destinationEntity="Keyword" inverseName="localizedKeywords_" inverseEntity="Keyword"/>
-        <relationship name="language_" optional="YES" deletionRule="Nullify" destinationEntity="Language" inverseName="localizedKeywords_" inverseEntity="Language"/>
+        <relationship name="keyword_" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Keyword" inverseName="localizedKeywords_" inverseEntity="Keyword"/>
+        <relationship name="language_" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Language" inverseName="localizedKeywords_" inverseEntity="Language"/>
     </entity>
     <entity name="LocalizedRemark" representedClassName="LocalizedRemark" syncable="YES" codeGenerationType="class">
         <attribute name="localizedString" optional="YES" attributeType="String"/>
@@ -129,8 +128,8 @@
         </uniquenessConstraints>
     </entity>
     <entity name="PhotographerKeyword" syncable="YES">
-        <relationship name="keyword_" optional="YES" deletionRule="Nullify" destinationEntity="Keyword" inverseName="photographerKeywords_" inverseEntity="Keyword"/>
-        <relationship name="photographer_" optional="YES" deletionRule="Nullify" destinationEntity="Photographer" inverseName="photographerKeywords_" inverseEntity="Photographer"/>
+        <relationship name="keyword_" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Keyword" inverseName="photographerKeywords_" inverseEntity="Keyword"/>
+        <relationship name="photographer_" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Photographer" inverseName="photographerKeywords_" inverseEntity="Photographer"/>
     </entity>
     <configuration name="Level0">
         <memberEntity name="Language"/>
