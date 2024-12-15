@@ -355,6 +355,21 @@ The text you type inside the search bar is matched against key fields for the re
 Design detail: Search Bar filtering is done in the app's user interface and not by the CoreData database.
 </details>
 
+### Photographer Keywords (in progress)
+
+</p>Photographers can be associated with keywords describing what type of photography they are mainly known for.
+Examples: "Black & White" or "Landscape". Because these keywords can serve to Search for photographers with similar
+interests, they keywords are standardized (e.g. "Black & White" rather than "Black and White"). 
+</p>
+
+<details><summary>Details on Keyword standardization (click to expand)</summary></p>
+
+Standardization also helps in displaying the texts in multiple languages: the translations are only defined
+in one local (`Level 0`). This means that if the Sierra Club associates their member Ansel Adams with "Black & White"
+they automatically get translations of "Black & White".
+If the app is thus set to Dutch, the user then sees "Zwart-Wit" rather than "Black & White".
+</details>
+
 ### Photo Museums
 
 </p>The maps showing the location of photo clubs also show the locations of selected photo museums.</p>
