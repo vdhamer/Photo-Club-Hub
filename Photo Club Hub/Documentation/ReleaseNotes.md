@@ -13,6 +13,7 @@ Code Maintenance
 Data Maintenance
 * Added AJ to fcBellusImago
 * Updated fgDeGender (MW, ML, BZ)
+* Created spreadsheet with timeline of former members of fgDeGender (precurser to updating fgDeGender.level2.json
 
 ---------------------------------------------------------------------------
 
