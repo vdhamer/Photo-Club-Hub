@@ -9,6 +9,7 @@ Code Maintenance
 
 Data Maintenance
 * Added AJ to fcBellusImago
+* Updated fgDeGender (MW, ML, BZ)
 
 ---------------------------------------------------------------------------
 
