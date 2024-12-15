@@ -27,9 +27,9 @@ extension Language {
         set { isoCode_ = newValue.uppercased() }
     }
 
-    var name: String {
-        get { return (languageName_ ?? isoCodeCaps).capitalized } // e.g. Nederlands or Nl
-        set { languageName_ = newValue.capitalized }
+    var nameEN: String {
+        get { return (languageNameEN_ ?? isoCodeCaps).capitalized } // e.g. Nederlands or Nl
+        set { languageNameEN_ = newValue.capitalized }
     }
 
     // MARK: - find or create
@@ -38,10 +38,10 @@ extension Language {
     // Update existing attributes or fill the new object
     static func findCreateUpdate(context: NSManagedObjectContext, // can be foreground of background context
                                  isoCode: String,
-                                 name inputName: String? = nil
+                                 nameENOptional: String? = nil
                                 ) -> Language {
 
-        let name = inputName ?? code2Name[isoCode] // fill in name if no name provided and dictionary contains name
+        let nameEN: String = nameENOptional ?? code2Name[isoCode] ?? "Name?" // fill in name if no name provided
         let predicateFormat: String = "isoCode_ = %@" // avoid localization
         let predicate = NSPredicate(format: predicateFormat, argumentArray: [isoCode])
         let fetchRequest: NSFetchRequest<Language> = Language.fetchRequest()
@@ -55,11 +55,9 @@ extension Language {
         }
 
         if let language = languages.first { // already exists, so update non-identifying attributes
-            if let name {
-                if language.update(context: context, name: name) {
-                    print("Updated info for language \"\(language.name)\"")
-                    save(context: context, language: language, create: false)
-                }
+            if language.update(context: context, nameEN: nameEN) {
+                print("Updated info for language \"\(language.nameEN)\"")
+                save(context: context, language: language, create: false)
             }
             return language
         } else {
@@ -67,21 +65,21 @@ extension Language {
             let entity = NSEntityDescription.entity(forEntityName: "Language", in: context)!
             let language = Language(entity: entity, insertInto: context)
             language.isoCodeCaps = isoCode
-            _ = language.update(context: context, name: name)
+            _ = language.update(context: context, nameEN: nameEN)
             save(context: context, language: language, create: true)
-            print("Created new Language for code \(language.isoCodeCaps) named \(language.name)")
+            print("Created new Language for code \(language.isoCodeCaps) named \(language.nameEN)")
             return language
         }
     }
 
     // Update non-identifying attributes/properties within an existing instance of class Language
     fileprivate func update(context: NSManagedObjectContext,
-                            name: String?) -> Bool { // change language.name if needed
+                            nameEN: String) -> Bool { // change language.name if needed
 
         var modified: Bool = false
 
-        if let name, self.name != name {
-            self.name = name
+        if self.nameEN != nameEN {
+            self.nameEN = nameEN
             modified = true
         }
 
@@ -89,7 +87,7 @@ extension Language {
             do {
                 try context.save() // update modified properties of a Language object
              } catch {
-                 ifDebugFatalError("Update failed for Language \(isoCodeCaps) aka \(self.name)",
+                 ifDebugFatalError("Update failed for Language \(isoCodeCaps) aka \(self.nameEN)",
                                   file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
                 // in release mode, if save() fails, just continue
             }
