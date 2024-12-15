@@ -70,7 +70,8 @@ struct PreferencesStruct: Codable { // order in which they are shown on Preferen
                                                        isViceChairman = TRUE OR
                                                        isTreasurer = TRUE OR
                                                        isSecretary = TRUE OR
-                                                       isAdmin = TRUE)
+                                                       isAdmin = TRUE OR
+                                                       isOther = TRUE)
                                                       """)
         }
         if showHonoraryMembers {
