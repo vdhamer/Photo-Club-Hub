@@ -36,7 +36,7 @@
             <li><a href="#website-generation">Website Generation</a></li>
             <li><a href="#searchable-lists">Searchable Lists</a></li>
             <li><a href="#photo-museums">Photo Museums</a></li>
-            <li><a href="#photographer-eywords-in-progress">Photographer Keywords (in progress)</a></li>
+            <li><a href="#photographer-keywords-in-progress">Photographer Keywords (in progress)</a></li>
             <li><a href="#pull-down-to-refresh">Pull down to Refresh</a></li>
             <li><a href="#fancy-scrolling">Fancy scrolling</a></li>
         </ul>
