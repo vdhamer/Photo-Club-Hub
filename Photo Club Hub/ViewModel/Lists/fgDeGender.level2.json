@@ -72,6 +72,9 @@
                 "birthday": "1949-04-29",
                 "website": "https://www.instagram.com/zantingh49/",
                 "level3URL": "http://www.vdhamer.com/fgDeGender/Bert_Zantingh/",
+                "status": {
+                    "isFormerMember": true
+                },
                 "membershipStartDate": "1996-01-01",
                 "nlSpecific": {
                     "fotobondNumber": 1620040
@@ -264,6 +267,9 @@
                 "birthday": "1954-10-09",
                 "website": "https://www.m3w.nl",
                 "level3URL": "http://www.vdhamer.com/fgDeGender/Mariet_Wielders/",
+                "status": {
+                    "isFormerMember": true
+                },
                 "membershipStartDate": "2009-11-01",
                 "nlSpecific": {
                     "fotobondNumber": 1620079
@@ -295,6 +301,9 @@
             },
             "optional": {
                 "level3URL": "http://www.vdhamer.com/fgDeGender/Martien_Leenders/",
+                "status": {
+                    "isFormerMember": true
+                },
                 "membershipStartDate": "1990-01-01",
                 "nlSpecific": {
                     "fotobondNumber": 1620008
