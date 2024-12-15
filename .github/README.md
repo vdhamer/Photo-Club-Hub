@@ -676,12 +676,12 @@ _Fotogroep de Gender_ and _Fotogroep Waalre_ in the Netherlands have `.level2.js
 <ul><details><Summary>Storing Level 2 data (click to expand)</Summary>
 </p>
 
-`Level 2` lists can be stored and managed on the club's own server. The file needs to be in a JSON format so that the app can interpret the data.
+A `Level 2` file needs to be in a JSON format so that the app can interpret the data.
 You can check the basic syntax of JSON files using online JSON validators such as
 [JSONLint](https://jsonlint.com).
 </p>
 
-A `Level 2` file can be located anywhere online, but should by default be stored on the a club's existing website.
+A `Level 2` file can be located anywhere online, but is by default stored on the a club's existing website.
 You could, for example, store it inside an existing _Wordpress_ site using
 _Wordpress'_ built-in features for uploading files (called `media` or `library`).
 </p>
@@ -689,11 +689,11 @@ _Wordpress'_ built-in features for uploading files (called `media` or `library`)
 The files are downloaded in background after app startup using a URL address found within the central `Level 1` file.
 </p>
     
-The `Level 2` data is stored in the app's CoreData database, so that the data is already visible even before the
+The `Level 2` data is loaded in the app's CoreData database on app startup, so that the data is can be displayed even before the
 data has been downloaded and the database content has been updated.
 </p>
 
-In the future, once there are hundreds or even thousands of `Level 2` files available, the app will need to become smarter about
+In the future, once there are hundreds or more `Level 2` files available, the app will need to become selective about
 which clubs to preload and how often to refresh the `Level2` data.
 </p>
 
