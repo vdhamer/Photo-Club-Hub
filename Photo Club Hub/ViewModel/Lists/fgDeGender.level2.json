@@ -31,6 +31,23 @@
         },
 
     "members": [
+
+        {
+            "name": {
+                "givenName": "Albert",
+                "infixName": "",
+                "familyName": "Dekkers"
+            },
+            "optional": {
+                "level3URL": "http://www.vdhamer.com/fgDeGender/Albert_Dekkers/",
+                "status": {
+                    "isFormerMember": true
+                },
+                "membershipStartDate": "2019-01-01",
+                "membershipEndDate": "2020-12-31"
+            }
+        },
+
         {
             "name": {
                 "givenName": "Albert",
@@ -102,6 +119,22 @@
 
         {
             "name": {
+                "givenName": "Eddy",
+                "infixName": "",
+                "familyName": "Oosterbosch"
+            },
+            "optional": {
+                "level3URL": "http://www.vdhamer.com/fgDeGender/Eddy_Oosterbosch/",
+                "status": {
+                    "isFormerMember": true
+                },
+                "membershipStartDate": "2011-01-01",
+                "membershipEndDate": "2020-12-31"
+            }
+        },
+
+        {
+            "name": {
                 "givenName": "Eric",
                 "infixName": "van de",
                 "familyName": "Ven"
@@ -157,6 +190,23 @@
 
         {
             "name": {
+                "givenName": "Geo",
+                "infixName": "",
+                "familyName": "Bushman"
+            },
+            "optional": {
+                "level3URL": "http://www.vdhamer.com/fgDeGender/Geo_Bushman/",
+                "status": {
+                    "isDeceased": true,
+                    "isFormerMember": true
+                },
+                "membershipStartDate": "2011-01-01",
+                "membershipEndDate": "2023-12-31"
+            }
+        },
+
+        {
+            "name": {
                 "givenName": "Gert",
                 "infixName": "du",
                 "familyName": "Bois"
@@ -167,6 +217,22 @@
                 "nlSpecific": {
                     "fotobondNumber": 1620087
                 }
+            }
+        },
+
+        {
+            "name": {
+                "givenName": "Greet",
+                "infixName": "",
+                "familyName": "Busink"
+            },
+            "optional": {
+                "level3URL": "http://www.vdhamer.com/fgDeGender/Greet_Busink/",
+                "status": {
+                    "isFormerMember": true
+                },
+                "membershipStartDate": "2011-01-01",
+                "membershipEndDate": "2023-12-31"
             }
         },
 
@@ -200,6 +266,22 @@
                 "nlSpecific": {
                     "fotobondNumber": 1620090
                 }
+            }
+        },
+
+        {
+            "name": {
+                "givenName": "Ingrid",
+                "infixName": "",
+                "familyName": "Helsen"
+            },
+            "optional": {
+                "level3URL": "http://www.vdhamer.com/fgDeGender/Ingrid_Helsen/",
+                "roles": {
+                    "isFormerMember": true
+                },
+                "membershipStartDate": "2017-01-01",
+                "membershipEndDate": "2020-12-31"
             }
         },
 
@@ -258,7 +340,27 @@
 
         {
             "name": {
+                "givenName": "Marcelle",
+                "infixName": "van",
+                "familyName": "Veen"
+            },
+            "optional": {
+                "birthday": "9999-10-09",
+                "website": "https://www.m3w.nl",
+                "level3URL": "http://www.vdhamer.com/fgDeGender/Marcelle_van_Veen/",
+                "status": {
+                    "isDeceased": true,
+                    "isFormerMember": true
+                },
+                "membershipStartDate": "2020-01-01",
+                "membershipEndDate": "2023-12-31"
+            }
+        },
+
+        {
+            "name": {
                 "givenName": "Mariet",
+                "infixName": "",
                 "familyName": "Wielders"
             },
             "optional": {
@@ -316,6 +418,22 @@
 
         {
             "name": {
+                "givenName": "Michaël",
+                "infixName": "",
+                "familyName": "Frankiel"
+            },
+            "optional": {
+                "level3URL": "http://www.vdhamer.com/fgDeGender/Michael_Frenkiel/",
+                "status": {
+                    "isFormerMember": true
+                },
+                "membershipStartDate": "2015-01-01",
+                "membershipEndDate": "2020-12-31"
+            }
+        },
+
+        {
+            "name": {
                 "givenName": "Miep",
                 "infixName": "",
                 "familyName": "Franssen"
@@ -329,6 +447,38 @@
                 "nlSpecific": {
                     "fotobondNumber": 1620021
                 }
+            }
+        },
+
+        {
+            "name": {
+                "givenName": "Monique",
+                "infixName": "de",
+                "familyName": "Bruijn"
+            },
+            "optional": {
+                "level3URL": "http://www.vdhamer.com/fgDeGender/Monique_de_Bruijn/",
+                "status": {
+                    "isFormerMember": true
+                },
+                "membershipStartDate": "2013-01-01",
+                "membershipEndDate": "2021-12-31"
+            }
+        },
+
+        {
+            "name": {
+                "givenName": "Nettie",
+                "infixName": "van der",
+                "familyName": "Palen"
+            },
+            "optional": {
+                "level3URL": "http://www.vdhamer.com/fgDeGender/Nettie_van_der_Palen/",
+                "status": {
+                    "isFormerMember": true
+                },
+                "membershipStartDate": "2011-01-01",
+                "membershipEndDate": "2023-12-31"
             }
         },
 
@@ -477,6 +627,22 @@
                 "nlSpecific": {
                     "fotobondNumber": 1620078
                 }
+            }
+        },
+
+        {
+            "name": {
+                "givenName": "Willy",
+                "infixName": "",
+                "familyName": "Lanters"
+            },
+            "optional": {
+                "level3URL": "http://www.vdhamer.com/fgDeGender/Willy_Lanters/",
+                "roles": {
+                    "isFormerMember": true
+                },
+                "membershipStartDate": "2020-01-01",
+                "membershipEndDate": "2022-12-31"
             }
         },
 
