@@ -638,7 +638,7 @@
             },
             "optional": {
                 "level3URL": "http://www.vdhamer.com/fgDeGender/Willy_Lanters/",
-                "roles": {
+                "status": {
                     "isFormerMember": true
                 },
                 "membershipStartDate": "2020-01-01",
