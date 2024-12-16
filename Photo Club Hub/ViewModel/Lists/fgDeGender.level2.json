@@ -69,7 +69,7 @@
                 "familyName": "Zantingh"
             },
             "optional": {
-                "birthday": "1949-04-29",
+                "birthday": "9999-04-29",
                 "website": "https://www.instagram.com/zantingh49/",
                 "level3URL": "http://www.vdhamer.com/fgDeGender/Bert_Zantingh/",
                 "status": {
@@ -90,7 +90,7 @@
                 "familyName": "Graaf"
             },
             "optional": {
-                "birthday": "1970-07-19",
+                "birthday": "9999-07-19",
                 "website": "https://glass.photo/jerdam",
                 "level3URL": "http://www.vdhamer.com/fgDeGender/Bettina_de_Graaf/",
                 "membershipStartDate": "2024-01-01",
@@ -265,7 +265,7 @@
                 "roles": {
                     "isChairman": false
                 },
-                "birthday": "1954-10-09",
+                "birthday": "9999-10-09",
                 "website": "https://www.m3w.nl",
                 "level3URL": "http://www.vdhamer.com/fgDeGender/Mariet_Wielders/",
                 "status": {
@@ -355,7 +355,7 @@
                 "familyName": "Hamer"
             },
             "optional": {
-                "birthday": "1957-10-18",
+                "birthday": "9999-10-18",
                 "website": "https://glass.photo/vdhamer",
                 "level3URL": "http://www.vdhamer.com/fgDeGender/Peter_van_den_Hamer/",
                 "roles": {
@@ -501,5 +501,3 @@
 
     ]
 }
-
-
