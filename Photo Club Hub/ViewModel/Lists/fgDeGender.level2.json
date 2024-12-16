@@ -89,10 +89,10 @@
                 "website": "https://www.instagram.com/zantingh49/",
                 "level3URL": "http://www.vdhamer.com/fgDeGender/Bert_Zantingh/",
                 "status": {
-                    "isFormerMember": true
+                    "isFormerMember": false
                 },
                 "membershipStartDate": "1996-01-01",
-                "membershipEndDate": "2024-12-31",
+                "membershipEndDate": "2025-04-01",
                 "nlSpecific": {
                     "fotobondNumber": 1620040
                 }
@@ -590,6 +590,7 @@
                 "familyName": "Roovers"
             },
             "optional": {
+                "birthday": "9999-06-08",
                 "level3URL": "http://www.vdhamer.com/fgDeGender/Ton_Roovers/",
                 "membershipStartDate": "2022-10-27",
                 "nlSpecific": {
