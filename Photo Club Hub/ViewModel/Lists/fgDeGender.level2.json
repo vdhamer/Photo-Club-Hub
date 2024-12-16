@@ -1,34 +1,33 @@
 {
-    "club":
-        {
-            "idPlus": {
-                "town": "Eindhoven",
-                "fullName": "Fotogroep de Gender",
-                "nickName": "FG deGender"
-            },
-            "optional": {
-                "coordinates": {
-                    "latitude": 51.42398,
-                    "longitude": 5.45010
-                },
-                "website": "https://www.fcdegender.nl",
-                "wikipedia": "https://nl.wikipedia.org/wiki/Gender_(beek)",
-                "level2URL": "https://www.example.com/deGender.level2.json",
-                "remark": [
-                    {
-                        "language": "EN",
-                        "value": "Note that Fotogroep de Gender is abbreviated fcdegender.nl for historical reasons."
-                    },
-                    {
-                        "language": "NL",
-                        "value": "Opgelet: Fotogroep de Gender heeft als domeinnaam fcdegender.nl (fc = Fotoclub)."
-                    }
-                ],
-                "nlSpecific": {
-                    "fotobondNumber": 1620
-                }
-            }
+    "club": {
+        "idPlus": {
+            "town": "Eindhoven",
+            "fullName": "Fotogroep de Gender",
+            "nickName": "FG deGender"
         },
+        "optional": {
+            "coordinates": {
+                "latitude": 51.42398,
+                "longitude": 5.4501
+            },
+            "website": "https://www.fcdegender.nl",
+            "wikipedia": "https://nl.wikipedia.org/wiki/Gender_(beek)",
+            "level2URL": "https://www.example.com/deGender.level2.json",
+            "remark": [
+                {
+                    "language": "EN",
+                    "value": "Note that Fotogroep de Gender is abbreviated fcdegender.nl for historical reasons."
+                },
+                {
+                    "language": "NL",
+                    "value": "Opgelet: Fotogroep de Gender heeft als domeinnaam fcdegender.nl (fc = Fotoclub)."
+                }
+            ],
+            "nlSpecific": {
+                "fotobondNumber": 1620
+            }
+        }
+    },
 
     "members": [
 
