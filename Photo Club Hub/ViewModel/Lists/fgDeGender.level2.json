@@ -276,7 +276,7 @@
             },
             "optional": {
                 "level3URL": "http://www.vdhamer.com/fgDeGender/Ingrid_Helsen/",
-                "roles": {
+                "status": {
                     "isFormerMember": true
                 },
                 "membershipStartDate": "2017-01-01",
