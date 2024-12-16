@@ -44,6 +44,10 @@ extension MemberPortfolio { // expose computed properties (some related to handl
         }
         set { membershipEndDate_ = newValue
             if newValue < Date() && !isFormerMember { // no longer a member
+                print("newValue: \(newValue)") // TODO
+                print("today's date: \(Date())")
+                print("isFormerMember: \(isFormerMember)")
+                print("\(newValue < Date() && !isFormerMember)")
                 isFormerMember = true
                 ifDebugFatalError("Overruling former membership flag for member \(self.photographer.fullNameFirstLast)")
             }
