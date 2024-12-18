@@ -1155,6 +1155,32 @@
 
         {
             "idPlus": {
+                "town": "Reusel",
+                "fullName": "Amateur Fotoclub Reusel",
+                "nickName": "AFCReusel"
+            },
+            "coordinates": {
+                "latitude": 51.36227,
+                "longitude": 5.16208
+            },
+            "optional": {
+                "website": "https://afcreusel.nl",
+                "level2URL": "https://www.example.com/AFCReusel.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Because of renovations, the club temporarily meets in the local town hall."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Wegens verbouwingen is de thuisbasis van de club tijdelijk in het plaatselijke gemeentehuis."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Rosmalen",
                 "fullName": "Fotoclub 't Spectrum",
                 "nickName": "fcSpectrum"
