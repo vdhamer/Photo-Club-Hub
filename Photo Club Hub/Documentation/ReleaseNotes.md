@@ -16,6 +16,7 @@ Data Maintenance
 * Created spreadsheet with timeline of former members of fgDeGender (precurser to updating fgDeGender.level2.json
 * Added 10-ish recent former members to fgDeGender.level2.json
 * Added fcAFCReusel
+* Created empty collections in LR for former members of fgDeGender
 
 ---------------------------------------------------------------------------
 
