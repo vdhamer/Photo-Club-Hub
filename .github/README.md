@@ -818,6 +818,8 @@ Here is an example of the format of a `Level 2` list for a photo club. This exam
     - `photographerImage` is a depiction of the photographer. A special mode may be added whereby this photo or avatar of the photographer is shown instead of the featured image made by the photographer.
     - `featuredImage` is a URL to a single image that can be shown beside the member's name. It is visible in the `Portfolios` screen and the `Who's Who` screen.
     - `level3URL` is URL to a file containing the selected portfolio images made by this particular member in the context of a given photo club.
+    - `membershipStartDate` is the date when the member joined the club.
+    - `membershipEndDate` is the date when the member left the club. If the member is a current member, it is best to omit this date.
     - `keywords` is a list of keywords describing what the photographer is mainly known for.
 The list of strings at `Level 2` is used to define the applicable keywords.
 It doesn't define how they are displayed because multi-language versions of keywords are defined in `Level 0`.
