@@ -255,7 +255,7 @@ currently based on a Javascript plug-in (`Juicebox Pro`) that is normally used i
 ### The `Preferences` Screen
 
 The `Preferences` screen allows you to configure which types of portfolios you want to include in the
-`Portfolios` screen. You can, for example, choose whether to include former members.
+`Portfolios` screen. You can, for example, choose whether to show former members.
 The `Preferences` screen probably should also filter the `Who's Who` screen - but it doesn't yet.
 
 ![Preferences Screen](images/preferencesScreen.png "Preferences Screen")
@@ -497,7 +497,7 @@ Clubs with zero members (as far as the app is concerned) are _not_ shown on eith
 For clubs at `Level 3`, the app is aware of the image portfolios of club members (rightmost screenshot), 
 and allows app users to browse member photos.
 Technically different club members don't need to reach `Level 3` at the same time: you can first add a test portfolio for
-one member, then expand to all members, and later add some recent former members if you want. 
+one member, then expand to all members, and later add recent former members if you want. 
 Attempting to view a portfolio of a club member without an available portfolio will display a red built-in placeholder image.
 
 ### Level 0. Keywords and Languages (in progress)
@@ -808,7 +808,7 @@ Here is an example of the format of a `Level 2` list for a photo club. This exam
     - the `level3URL` field allows the app to find the Level 3 information with the selected images for this member.</p>
     - the `roles` field indicates whether a member fullfills a role as a club officer (e.g. chairman). If a given `role` is not mentioned, a default value of `false` is assumed. Many `members` have an empty or even absent `roles` section. Some `members` may have multiple roles (e.g., `secretary` and `admin`).
     - the `status` entries indicate a member's status in the club. If a given `status` is not mentioned, a default value of `false` is assumed. Many `members` have an empty or even absent `status` section. Some `members` may have multiple special statuses (e.g., `former` and `honorary`).
-    - `isFormerMember` can be set to true if the person left the club and the club wants to keep that member's Portfolio visible. The user interface will state `former member` where applicable. By default (see Preferences) former members are not shown. When shown, users see "Former member of <clubname>". The user interface can generate text for more complex cases like "Former honorary member of <clubname>".
+    - `isFormerMember` can be set to true if the person left the club and the club wants to keep that member's Portfolio visible. The user interface will state `former member` where applicable. By default (see Preferences) former members are shown. When shown, users see "Former member of <clubname>". The user interface can generate text for more complex cases like "Former honorary member of <clubname>".
     - `isDeceased` is a special variant of `isFormerMember`. If deceased members are not removed from the level2.json list, this allows the user interface to indicate this. By default (see Preferences) former and deceased members are not shown. When shown, users see "Deceased, former member of <club>" and the text is shown in a different color.
     - `isHonaryMember` can be used if the person is no longer an active member, but is still treated as a member (e.g., after retiring) because of past achievements. Most clubs won't need this feature.
     - `isMentor` is for coaches who coach or previously (`isFormerMember` to `true`) coached the club. They can have a Portfolio (e.g. with pictures of them or pictures of their own work).
