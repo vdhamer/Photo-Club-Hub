@@ -6,7 +6,7 @@ Preferences screen
 * Bug fix: role "Other" didn't show up when filtering on club officers
 
 Code Maintenance
-* Tested on iOS 18.2, and Xcode 16.2 and MacOS 15.2
+* Tested on iOS 18.2.1, and Xcode 16.2 and MacOS 15.2
 * Extended data model for keyword feature (and updated diagram in README)
 * Added documentation in README.md for keyword feature in Level 2 files.
 
@@ -17,6 +17,7 @@ Data Maintenance
 * Added 10-ish recent former members to fgDeGender.level2.json
 * Added fcAFCReusel
 * Created empty collections in LR for former members of fgDeGender
+* Updated fgWaalre (JJ)
 
 ---------------------------------------------------------------------------
 
