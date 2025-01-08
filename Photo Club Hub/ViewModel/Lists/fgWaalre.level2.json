@@ -457,10 +457,8 @@
             },
             "optional": {
                 "level3URL": "http://www.vdhamer.com/fgWaalre/Jos_Jansen/",
-                "roles": {
-                    "isDeceased": true
-                },
                 "status": {
+                    "isDeceased": true,
                     "isFormerMember": true
                 },
                 "nlSpecific": {
