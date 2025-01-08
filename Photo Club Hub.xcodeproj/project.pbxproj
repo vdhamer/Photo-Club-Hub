@@ -471,8 +471,8 @@
 		D0831A48277F736C0049AB84 /* Documentation */ = {
 			isa = PBXGroup;
 			children = (
-				D04D7B2B2D2B3B210048454B /* Jaarverslag 2024 Website.docx */,
 				D0831A4B277F736C0049AB84 /* ReleaseNotes.md */,
+				D04D7B2B2D2B3B210048454B /* Jaarverslag 2024 Website.docx */,
 				D0840FB72D07481B00458E06 /* Nieuwsbrief_Jan_2025_app.pages */,
 				D076BE702CF0CC10008F4B47 /* Readme_EN_2_7_1.pages */,
 				D0E02F972B80191300D67CDA /* Readme_NL_2_7_1.pages */,
