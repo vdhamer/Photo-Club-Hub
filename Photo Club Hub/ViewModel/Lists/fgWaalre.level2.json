@@ -459,7 +459,7 @@
                 "level3URL": "http://www.vdhamer.com/fgWaalre/Jos_Jansen/",
                 "status": {
                     "isDeceased": true,
-                    "isFormerMember": false
+                    "isFormerMember": true
                 },
                 "nlSpecific": {
                     "fotobondNumber": 1634050
