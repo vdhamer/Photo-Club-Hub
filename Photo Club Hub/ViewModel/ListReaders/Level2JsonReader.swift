@@ -67,7 +67,8 @@ import SwiftyJSON // for JSON struct
                  },
                  "birthday": "9999-10-18",
                  "website": "https://glass.photo/vdhamer",
-                 "photographerImage": "http://www.vdhamer.com/wp-content/uploads/2022/07/2006_Norway_276.jpg",
+                 "photographerImage":
+                     "http://www.vdhamer.com/wp-content/uploads/2022/07/cropped-2006_Norway_276_SSharp1_4.jpg",
                  "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg",
                  "level3URL": "https://www.example.com/FG_deGender/Peter_van_den_Hamer.level3.json",
                  "membershipStartDate: "2024-01-01",
@@ -313,6 +314,7 @@ class Level2JsonReader { // normally running on a background thread
                                           personName: PersonName(givenName: photographer.givenName,
                                                                  infixName: photographer.infixName,
                                                                  familyName: photographer.familyName),
+                                          // TODO to Phot.OptionalFields? In both source files!
                                           isDeceased: memberRolesAndStatus.isDeceased(),
                                           optionalFields: PhotographerOptionalFields(
                                               bornDT: birthday?.extractDate(),
