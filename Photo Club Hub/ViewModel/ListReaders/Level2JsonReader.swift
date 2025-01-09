@@ -355,8 +355,8 @@ class Level2JsonReader { // normally running on a background thread
         guard memberRolesAndStatus.isDeceased() == true else { return memberRolesAndStatus }
 
         var possiblyCorrectedValue = memberRolesAndStatus
-        for eachRole in MemberRole.allCases where memberRolesAndStatus.role[eachRole] == true {
-            possiblyCorrectedValue.role[eachRole] = false
+        for eachRole in MemberRole.allCases where memberRolesAndStatus.roles[eachRole] == true {
+            possiblyCorrectedValue.roles[eachRole] = false
             ifDebugFatalError("""
                               Clearing role of \(eachRole) for deceased photographer \(photographer.fullNameFirstLast)
                               """)

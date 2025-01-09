@@ -14,7 +14,7 @@ struct MemberOptionalFields {
     var featuredImageThumbnail: URL?
     var level3URL: URL?
     var memberRolesAndStatus: MemberRolesAndStatus =
-        MemberRolesAndStatus(role: [:], status: [:]) // defaults to an empty pair of dictionaries instead of to nil
+        MemberRolesAndStatus(roles: [:], status: [:]) // defaults to an empty pair of dictionaries instead of to nil
     var fotobondNumber: Int32? // identification number of members of the Dutch Fotobond
     var membershipStartDate: Date?
     var membershipEndDate: Date?

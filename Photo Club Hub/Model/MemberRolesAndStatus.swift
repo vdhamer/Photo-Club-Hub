@@ -95,7 +95,7 @@ extension MemberStatus: Comparable {
 // MARK: - MemberRoleAndStatus
 
 struct MemberRolesAndStatus: Equatable {
-    var role: [MemberRole: Bool?] = [:]
+    var roles: [MemberRole: Bool?] = [:]
     var status: [MemberStatus: Bool?] = [:]
 
     func isDeceased() -> Bool? {
@@ -103,8 +103,8 @@ struct MemberRolesAndStatus: Equatable {
         return deceased
     }
 
-    init(role: [MemberRole: Bool] = [:], status: [MemberStatus: Bool] = [:]) {
-        self.role = role
+    init(roles: [MemberRole: Bool] = [:], status: [MemberStatus: Bool] = [:]) {
+        self.roles = roles
         self.status = status
     }
 
@@ -113,22 +113,22 @@ struct MemberRolesAndStatus: Equatable {
 
         // process content of jsonRoles
         if jsonRoles["isChairman"].exists() {
-            role[.chairman] = jsonRoles["isChairman"].boolValue
+            roles[.chairman] = jsonRoles["isChairman"].boolValue
         }
         if jsonRoles["isViceChairman"].exists() {
-            role[.viceChairman] = jsonRoles["isViceChairman"].boolValue
+            roles[.viceChairman] = jsonRoles["isViceChairman"].boolValue
         }
         if jsonRoles["isTreasurer"].exists() {
-            role[.treasurer] = jsonRoles["isTreasurer"].boolValue
+            roles[.treasurer] = jsonRoles["isTreasurer"].boolValue
         }
         if jsonRoles["isSecretary"].exists() {
-            role[.secretary] = jsonRoles["isSecretary"].boolValue
+            roles[.secretary] = jsonRoles["isSecretary"].boolValue
         }
         if jsonRoles["isAdmin"].exists() {
-            role[.admin] = jsonRoles["isAdmin"].boolValue
+            roles[.admin] = jsonRoles["isAdmin"].boolValue
         }
         if jsonRoles["isOther"].exists() {
-            role[.other] = jsonRoles["isOther"].boolValue
+            roles[.other] = jsonRoles["isOther"].boolValue
         }
 
         // process content of jsonStatus
