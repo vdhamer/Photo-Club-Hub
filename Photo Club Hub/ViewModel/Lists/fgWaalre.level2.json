@@ -462,7 +462,7 @@
                 },
                 "status": {
                     "isDeceased": true,
-                    "isFormerMember": false
+                    "isFormerMember": true
                 },
                 "nlSpecific": {
                     "fotobondNumber": 1634050
