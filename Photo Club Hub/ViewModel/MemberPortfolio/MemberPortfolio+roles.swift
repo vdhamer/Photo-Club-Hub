@@ -53,7 +53,7 @@ extension MemberPortfolio { // computed properties related to roles of members i
 
     var memberRolesAndStatus: MemberRolesAndStatus {
         get { // conversion from Bool to dictionary
-            var memberRS = MemberRolesAndStatus(role: [:], status: [:])
+            var memberRS = MemberRolesAndStatus(roles: [:], status: [:])
 
             if photographer.isDeceased { memberRS.status[.deceased] = true }
             if isFormerMember { memberRS.status[.former] = true }
@@ -64,12 +64,12 @@ extension MemberPortfolio { // computed properties related to roles of members i
                 memberRS.status[.current] = true
             }
 
-            if isChairman { memberRS.role[.chairman] = true }
-            if isViceChairman { memberRS.role[.viceChairman] = true }
-            if isTreasurer { memberRS.role[.treasurer] = true }
-            if isSecretary { memberRS.role[.secretary] = true }
-            if isAdmin { memberRS.role[.admin] = true }
-            if isOther { memberRS.role[.other] = true }
+            if isChairman { memberRS.roles[.chairman] = true }
+            if isViceChairman { memberRS.roles[.viceChairman] = true }
+            if isTreasurer { memberRS.roles[.treasurer] = true }
+            if isSecretary { memberRS.roles[.secretary] = true }
+            if isAdmin { memberRS.roles[.admin] = true }
+            if isOther { memberRS.roles[.other] = true }
 
             return memberRS
         }
@@ -89,22 +89,22 @@ extension MemberPortfolio { // computed properties related to roles of members i
             if let newBool = newValue.status[.coach] {
                 isMentor = newBool!
             }
-            if let newBool = newValue.role[.chairman] {
+            if let newBool = newValue.roles[.chairman] {
                 isChairman = newBool!
             }
-            if let newBool = newValue.role[.viceChairman] {
+            if let newBool = newValue.roles[.viceChairman] {
                 isViceChairman = newBool!
             }
-            if let newBool = newValue.role[.treasurer] {
+            if let newBool = newValue.roles[.treasurer] {
                 isTreasurer = newBool!
             }
-            if let newBool = newValue.role[.secretary] {
+            if let newBool = newValue.roles[.secretary] {
                 isSecretary = newBool!
             }
-            if let newBool = newValue.role[.admin] {
+            if let newBool = newValue.roles[.admin] {
                 isAdmin = newBool!
             }
-            if let newBool = newValue.role[.other] {
+            if let newBool = newValue.roles[.other] {
                 isOther = newBool!
             }
         }

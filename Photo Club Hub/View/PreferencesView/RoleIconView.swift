@@ -50,11 +50,11 @@ struct RoleStatusIconView: View {
     }
 
     fileprivate func chooseOneMemberRole(memberRolesAndStatus: MemberRolesAndStatus) -> MemberRole? {
-        if memberRolesAndStatus.role[.chairman] == true { return .chairman }
-        if memberRolesAndStatus.role[.viceChairman] == true { return .viceChairman }
-        if memberRolesAndStatus.role[.treasurer] == true { return .treasurer}
-        if memberRolesAndStatus.role[.secretary] == true { return .secretary}
-        if memberRolesAndStatus.role[.admin] == true { return .admin}
+        if memberRolesAndStatus.roles[.chairman] == true { return .chairman }
+        if memberRolesAndStatus.roles[.viceChairman] == true { return .viceChairman }
+        if memberRolesAndStatus.roles[.treasurer] == true { return .treasurer}
+        if memberRolesAndStatus.roles[.secretary] == true { return .secretary}
+        if memberRolesAndStatus.roles[.admin] == true { return .admin}
         return nil // member may not have any official managerial Role
     }
 

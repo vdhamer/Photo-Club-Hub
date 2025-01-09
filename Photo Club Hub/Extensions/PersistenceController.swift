@@ -55,10 +55,10 @@ struct PersistenceController {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
         for index in 1...10 {
-            let memberRolesAndStatus =  MemberRolesAndStatus( role: [.chairman: (index==1),
-                                                                     .treasurer: (index==2)],
+            let memberRolesAndStatus =  MemberRolesAndStatus( roles: [.chairman: (index==1),
+                                                                      .treasurer: (index==2)],
                                                               status: [.deceased: ((index % 4) == 0),
-                                                                     .former: ((index % 4) == 1)]
+                                                                       .former: ((index % 4) == 1)]
             )
             let organization = Organization.findCreateUpdate(
                 context: viewContext, // on main thread

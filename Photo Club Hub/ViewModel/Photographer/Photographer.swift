@@ -49,7 +49,7 @@ extension Photographer {
 
     var memberRolesAndStatus: MemberRolesAndStatus {
         get { // conversion from Bool to dictionary
-            return MemberRolesAndStatus(role: [:], status: [
+            return MemberRolesAndStatus(roles: [:], status: [
                 .deceased: isDeceased]
             )
         }
