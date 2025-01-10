@@ -10,7 +10,8 @@ Code Maintenance
 * Extended data model for keyword feature (and updated diagram in README.md on GitHub).
 * Added documentation in README.md for keyword feature in Level 2 files.
 * Automatically cleared any officer roles for a deceased member. Fatal error in debug version only.
-* Removed last traces of e-mail and phone number support (feature disabled in 2.7.0 for privacy reasons)
+* Removed remaining traces of e-mail and phone number support (feature disabled in 2.7.0 for privacy reasons)
+* Moved isDeceased parameter into PhotographerOptionalFields struct
 
 Data Maintenance
 * Added AJ to fcBellusImago
