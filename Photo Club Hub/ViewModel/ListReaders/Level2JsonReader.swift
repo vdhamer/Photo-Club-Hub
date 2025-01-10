@@ -314,9 +314,9 @@ class Level2JsonReader { // normally running on a background thread
                                           personName: PersonName(givenName: photographer.givenName,
                                                                  infixName: photographer.infixName,
                                                                  familyName: photographer.familyName),
-                                          isDeceased: memberRolesAndStatus.isDeceased(),
                                           optionalFields: PhotographerOptionalFields(
                                               bornDT: birthday?.extractDate(),
+                                              isDeceased: memberRolesAndStatus.isDeceased(),
                                               photographerWebsite: photographerWebsite,
                                               photographerImage: photographerImage
                                               )

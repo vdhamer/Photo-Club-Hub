@@ -9,6 +9,7 @@ import Foundation // for URL
 
 struct PhotographerOptionalFields {
     var bornDT: Date?
+    var isDeceased: Bool? // nil means "don't know"
     var photographerWebsite: URL?
     var photographerImage: URL?
 }
