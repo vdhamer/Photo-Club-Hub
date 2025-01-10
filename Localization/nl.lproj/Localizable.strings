@@ -218,7 +218,7 @@
 "Paragraph_3.4.b" = "Momenteel kent de app ruim 60 fotoclubs in regio Brabant Oost. De meerderheid hiervan is aangesloten by de Koninklijke Fotobond. De app is in principe ook geschikt voor clubs in het buitenland.";
 
 /* Paragraph 3.4.c of the Readme screen */
-"Paragraph_3.4.c" = "Om het werk van een club te ondersteunen, heeft de app informatie nodig over de naam en ligging van de club (\“__Niveau 1__\”), de ledenlijst (\“__Niveau 2__\”) en de portfolio’s met foto’s (\“__Niveau 3__\”). We komen later op deze 3 niveaus terug.";
+"Paragraph_3.4.c" = "Om het werk van een club te ondersteunen, heeft de app informatie nodig over de naam en ligging van de club (“__Niveau 1__”), de ledenlijst (“__Niveau 2__”) en de portfolio’s met foto’s (“__Niveau 3__”). We komen later op deze 3 niveaus terug.";
 
 /* Paragraph 3.4.d of the Readme screen */
 "Paragraph_3.4.d" = "Clubs, leden en foto’s toevoegen kan _zonder_ aanpassing van de app software. Dit gaat via online bestanden die de app ophaalt en weergeeft.";
@@ -315,9 +315,6 @@
 
 /* Caption of Localizations image on Readme page */
 "Part of the internal translation table" = "Een stukje van de interne EN-NL vertaaltabel";
-
-/* Telephone number (usually invisible) */
-"Phone:" = "Tel:";
 
 /* Name of the app shown in PreludeView when app is started */
 "Photo Club Hub" = "Fotoclub Hub";

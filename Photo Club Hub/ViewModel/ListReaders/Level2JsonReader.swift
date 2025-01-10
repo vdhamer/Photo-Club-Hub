@@ -314,7 +314,6 @@ class Level2JsonReader { // normally running on a background thread
                                           personName: PersonName(givenName: photographer.givenName,
                                                                  infixName: photographer.infixName,
                                                                  familyName: photographer.familyName),
-                                          // TODO to Phot.OptionalFields? In both source files!
                                           isDeceased: memberRolesAndStatus.isDeceased(),
                                           optionalFields: PhotographerOptionalFields(
                                               bornDT: birthday?.extractDate(),

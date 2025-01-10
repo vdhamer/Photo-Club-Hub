@@ -2,7 +2,7 @@
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
   <file original="en.lproj/Photo-Club-Hub-InfoPlist.strings" source-language="en" target-language="en" datatype="plaintext">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="16.2" build-num="16C5023f"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="16.2" build-num="16C5032a"/>
     </header>
     <body>
       <trans-unit id="CFBundleDisplayName" xml:space="preserve">
@@ -24,7 +24,7 @@
   </file>
   <file original="Localization/en.lproj/Localizable.strings" source-language="en" target-language="en" datatype="plaintext">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="16.2" build-num="16C5023f"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="16.2" build-num="16C5032a"/>
     </header>
     <body>
       <trans-unit id="%lld members (inc. ex-members)" xml:space="preserve">
@@ -473,11 +473,6 @@ Try dragging down the Clubs and Museums screen to reload the default clubs.</tar
         <target>Part of the internal translation table</target>
         <note>Caption of Localizations image on Readme page</note>
       </trans-unit>
-      <trans-unit id="Phone:" xml:space="preserve">
-        <source>Phone:</source>
-        <target>Phone:</target>
-        <note>Telephone number (usually invisible)</note>
-      </trans-unit>
       <trans-unit id="Photo Club Hub" xml:space="preserve">
         <source>Photo Club Hub</source>
         <target>Photo Club Hub</target>
@@ -767,7 +762,7 @@ Try dragging down the Clubs and Museums screen to reload the default clubs.</tar
   </file>
   <file original="Settings.bundle/en.lproj/Root.strings" source-language="en" target-language="en" datatype="plaintext">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="16.2" build-num="16C5023f"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="16.2" build-num="16C5032a"/>
     </header>
     <body>
       <trans-unit id="Data refresh pending" xml:space="preserve">

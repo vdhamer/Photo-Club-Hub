@@ -9,8 +9,6 @@ import Foundation // for URL
 
 struct PhotographerOptionalFields {
     var bornDT: Date?
-    var eMail: String?
-    var phoneNumber: String?
     var photographerWebsite: URL?
     var photographerImage: URL?
 }

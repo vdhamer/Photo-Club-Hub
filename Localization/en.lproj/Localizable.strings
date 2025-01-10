@@ -307,9 +307,6 @@
 /* Fifth paragraph Developers section of Readme page */
 "Paragraph_5.5" = "Help with onboarding of additional clubs is essential. But there are more ways in which you can help out. Examples of __non-technical help__ include testing, writing a review for Apple’s App Store, creating step-by-step user instructions, and coming up with improvement ideas. Last, and certainly not least, actual _software development_ support will help speed up app enhancements, produce fresh ideas and ensure app continuity. Example contributions include code improvement of all sorts (via [GitHub](https://github.com/vdhamer/Photo-Club-Hub)), hunting down bugs, and contributing to discussions on functionality, implementation and interfaces.\n";
 
-/* Telephone number (usually invisible) */
-"Phone:" = "Phone:";
-
 /* Name of the app shown in PreludeView when app is started */
 "Photo Club Hub" = "Photo Club Hub";
 

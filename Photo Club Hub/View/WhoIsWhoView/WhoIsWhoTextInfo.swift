@@ -19,8 +19,6 @@ struct WhoIsWhoTextInfo: View {
     var photographer: Photographer
     fileprivate let dateFormatter: DateFormatter
 
-    @State fileprivate var showPhoneMail = false
-
     init(photographer: Photographer) {
         self.photographer = photographer
 
@@ -51,24 +49,6 @@ struct WhoIsWhoTextInfo: View {
                     .font(.subheadline)
                     .foregroundStyle(photographer.isDeceased ? .deceasedColor : .secondary)
             }
-
-            // phone number if available (and allowed)
-            /*
-            if photographer.phoneNumber != "", showPhoneMail, photographer.isAlive {
-                let locPhone = String(localized: "Phone:",
-                                      comment: "Telephone number (usually invisible)")
-                Text(verbatim: "\(locPhone): \(photographer.phoneNumber)")
-                    .font(.subheadline)
-                    .foregroundColor(.primary) // don't show phone numbers for deceased people
-            }
-
-            // phone number if available (and allowed)
-            if photographer.eMail != "", showPhoneMail, !photographer.isDeceased {
-                Text(verbatim: "mailto://\(photographer.eMail)")
-                    .font(.subheadline)
-                    .foregroundColor(.primary) // don't show e-mail addresses for deceased people
-            }
-            */
 
             // personal (not club-related) web site if available
             if let url: URL = photographer.photographerWebsite {
