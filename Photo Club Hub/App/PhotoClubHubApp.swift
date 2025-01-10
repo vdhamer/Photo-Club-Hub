@@ -91,6 +91,13 @@ extension PhotoClubHubApp {
         andersBackgroundContext.automaticallyMergesChangesFromParent = true
         _ = AndersMembersProvider(bgContext: andersBackgroundContext)
 
+        // load test member(s) of ExampleMax
+        let exampleMaxBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+        exampleMaxBackgroundContext.name = "ExampleMax"
+        exampleMaxBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+        exampleMaxBackgroundContext.automaticallyMergesChangesFromParent = true
+        _ = ExampleMaxMembersProvider(bgContext: exampleMaxBackgroundContext)
+
     }
 
     @MainActor

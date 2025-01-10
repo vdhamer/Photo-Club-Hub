@@ -351,16 +351,17 @@ class Level2JsonReader { // normally running on a background thread
     // for deceased members, clear any role they may have as officer of a photo club
     fileprivate func cleanRoles(memberRolesAndStatus: MemberRolesAndStatus,
                                 photographer: Photographer) -> MemberRolesAndStatus {
-        guard memberRolesAndStatus.isDeceased() == true else { return memberRolesAndStatus }
-
-        var possiblyCorrectedValue = memberRolesAndStatus
-        for eachRole in MemberRole.allCases where memberRolesAndStatus.roles[eachRole] == true {
-            possiblyCorrectedValue.roles[eachRole] = false
-            ifDebugFatalError("""
-                              Clearing role of \(eachRole) for deceased photographer \(photographer.fullNameFirstLast)
-                              """)
-        }
-        return possiblyCorrectedValue
+//        guard memberRolesAndStatus.isDeceased() == true else { return memberRolesAndStatus }
+//
+//        var possiblyCorrectedValue = memberRolesAndStatus
+//        for eachRole in MemberRole.allCases where memberRolesAndStatus.roles[eachRole] == true {
+//            possiblyCorrectedValue.roles[eachRole] = false
+//            ifDebugFatalError("""
+//                              Clearing role of \(eachRole) for deceased photographer \(photographer.fullNameFirstLast)
+//                              """)
+//        }
+//        return possiblyCorrectedValue
+        return memberRolesAndStatus // function currently does nothing, TODO remove function?
     }
 
 }

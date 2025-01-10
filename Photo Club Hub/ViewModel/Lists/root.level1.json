@@ -3,6 +3,25 @@
 
         {
             "idPlus": {
+                "town": "Amsterdam",
+                "fullName": "ExampleClub With Maximal Data",
+                "nickName": "ExampleMax"
+            },
+            "optional": {
+                "coordinates": {
+                    "latitude": 52.37312,
+                    "longitude": 4.89237
+                },
+                "website": "https://www.example.com",
+                "level2URL": "https://www.example.com/ExampleMax.level2.json",
+                "nlSpecific": {
+                    "fotobondNumber": 9999
+                }
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Asten",
                 "fullName": "Fotokring Beeldhoek",
                 "nickName": "fkBeeldhoek"
