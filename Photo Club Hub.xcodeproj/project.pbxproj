@@ -31,6 +31,9 @@
 		D05124892C43122C00D94B81 /* UrlComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05124882C43122C00D94B81 /* UrlComponents.swift */; };
 		D053F23D2B54430C00662EF8 /* Photo-Club-Hub-InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D053F23B2B54430C00662EF8 /* Photo-Club-Hub-InfoPlist.strings */; };
 		D05414F72AC7499000D899D8 /* FotogroepDeGenderMembersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05414F62AC7499000D899D8 /* FotogroepDeGenderMembersProvider.swift */; };
+		D054173A2D31DDE300A2A579 /* ExampleMaxMembersProvider+insertOnlineMemberData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05417382D31DDE300A2A579 /* ExampleMaxMembersProvider+insertOnlineMemberData.swift */; };
+		D054173B2D31DDE300A2A579 /* ExampleMaxMembersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05417372D31DDE300A2A579 /* ExampleMaxMembersProvider.swift */; };
+		D054173E2D31DE6B00A2A579 /* ExampleMax.level2.json in Resources */ = {isa = PBXBuildFile; fileRef = D054173D2D31DE6B00A2A579 /* ExampleMax.level2.json */; };
 		D05E451E27EF2A2C00D31327 /* ReadmeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05E451D27EF2A2C00D31327 /* ReadmeView.swift */; };
 		D06061ED28A05D4600A675A7 /* String+Paths.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06061EC28A05D4600A675A7 /* String+Paths.swift */; };
 		D0621E812AE2D7DE000FFADB /* MemberPortfolio+roles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0621E802AE2D7DE000FFADB /* MemberPortfolio+roles.swift */; };
@@ -127,6 +130,9 @@
 		D05124882C43122C00D94B81 /* UrlComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlComponents.swift; sourceTree = "<group>"; };
 		D053F23C2B54430C00662EF8 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = "nl.lproj/Photo-Club-Hub-InfoPlist.strings"; sourceTree = "<group>"; };
 		D05414F62AC7499000D899D8 /* FotogroepDeGenderMembersProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FotogroepDeGenderMembersProvider.swift; sourceTree = "<group>"; };
+		D05417372D31DDE300A2A579 /* ExampleMaxMembersProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleMaxMembersProvider.swift; sourceTree = "<group>"; };
+		D05417382D31DDE300A2A579 /* ExampleMaxMembersProvider+insertOnlineMemberData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExampleMaxMembersProvider+insertOnlineMemberData.swift"; sourceTree = "<group>"; };
+		D054173D2D31DE6B00A2A579 /* ExampleMax.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ExampleMax.level2.json; sourceTree = "<group>"; };
 		D05E451D27EF2A2C00D31327 /* ReadmeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeView.swift; sourceTree = "<group>"; };
 		D06061EC28A05D4600A675A7 /* String+Paths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Paths.swift"; sourceTree = "<group>"; };
 		D0621E802AE2D7DE000FFADB /* MemberPortfolio+roles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MemberPortfolio+roles.swift"; sourceTree = "<group>"; };
@@ -269,6 +275,15 @@
 			path = FotogroepDeGender;
 			sourceTree = "<group>";
 		};
+		D05417392D31DDE300A2A579 /* ExampleMax */ = {
+			isa = PBXGroup;
+			children = (
+				D05417372D31DDE300A2A579 /* ExampleMaxMembersProvider.swift */,
+				D05417382D31DDE300A2A579 /* ExampleMaxMembersProvider+insertOnlineMemberData.swift */,
+			);
+			path = ExampleMax;
+			sourceTree = "<group>";
+		};
 		D05E451B27EF286B00D31327 /* PreferencesView */ = {
 			isa = PBXGroup;
 			children = (
@@ -301,6 +316,7 @@
 		D0621E832AE2DF8E000FFADB /* IndividualClubs */ = {
 			isa = PBXGroup;
 			children = (
+				D05417392D31DDE300A2A579 /* ExampleMax */,
 				D02C273A2AEE6EF50005F957 /* FotogroepAnders */,
 				D0831A2A277F72590049AB84 /* FotogroepWaalre */,
 				D0831A26277F72590049AB84 /* BellusImago */,
@@ -533,6 +549,7 @@
 		D0BF26FA2CFA20AC00DA2CB9 /* Lists */ = {
 			isa = PBXGroup;
 			children = (
+				D054173D2D31DE6B00A2A579 /* ExampleMax.level2.json */,
 				D066F0F72D0F4394002C6A2B /* fgDeGenderLeden.xlsx */,
 				D07463E52CFB5EFA00F48EB2 /* root.level1.json */,
 				D066F0F82D0F461F002C6A2B /* level0.json */,
@@ -696,6 +713,7 @@
 				D0BF270B2CFA218000DA2CB9 /* fgWaalre.level2.json in Resources */,
 				D0BF270C2CFA218000DA2CB9 /* fgAnders.level2.json in Resources */,
 				D07463E62CFB5EFA00F48EB2 /* root.level1.json in Resources */,
+				D054173E2D31DE6B00A2A579 /* ExampleMax.level2.json in Resources */,
 				D066F0F92D0F461F002C6A2B /* level0.json in Resources */,
 				D0B52497277F9A4B00927BCA /* Localizable.strings in Resources */,
 				D06D08DE2C28835D00872BC2 /* Settings.bundle in Resources */,
@@ -789,6 +807,8 @@
 				D0447C882BA510AF00982A1E /* Language.swift in Sources */,
 				D06BE9332A4F870B0055B3B1 /* ifDebugUtils.swift in Sources */,
 				D0831A38277F72590049AB84 /* Organization.swift in Sources */,
+				D054173A2D31DDE300A2A579 /* ExampleMaxMembersProvider+insertOnlineMemberData.swift in Sources */,
+				D054173B2D31DDE300A2A579 /* ExampleMaxMembersProvider.swift in Sources */,
 				D06061ED28A05D4600A675A7 /* String+Paths.swift in Sources */,
 				D0275F5527E3E21F002FA4FE /* View+OnTapGesture.swift in Sources */,
 				D0447C892BA510AF00982A1E /* LocalizedRemark.swift in Sources */,
