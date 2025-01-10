@@ -80,9 +80,9 @@ struct PersistenceController {
             let photographer = Photographer.findCreateUpdate(
                 context: viewContext, // on main thread
                 personName: PersonName(givenName: "Jan", infixName: "D'", familyName: "Eau\(index)"),
-                isDeceased: memberRolesAndStatus.isDeceased(),
                 optionalFields: PhotographerOptionalFields(
                     bornDT: Date() - Double.random(in: 365*24*3600 ... 75*365*24*3600),
+                    isDeceased: memberRolesAndStatus.isDeceased(),
                     photographerWebsite: URL(string: "https://www.example.com/JanDEau\(index)"),
                     photographerImage: nil
                 )

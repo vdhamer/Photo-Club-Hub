@@ -68,7 +68,6 @@ extension Photographer {
     // Update existing attributes or fill the new object
     static func findCreateUpdate(context: NSManagedObjectContext, // foreground or background context
                                  personName: PersonName,
-                                 isDeceased: Bool? = nil, // nil means "don't know"
                                  optionalFields: PhotographerOptionalFields
                                 ) -> Photographer {
         let predicateFormat: String = "givenName_ = %@ AND infixName_ = %@ AND familyName_ = %@" // avoid localization
@@ -101,7 +100,6 @@ extension Photographer {
         if let photographer = photographers.first {
             // already exists, so make sure secondary attributes are up to date
             let wasUpdated = update(bgContext: context, photographer: photographer,
-                                    isDeceased: isDeceased,
                                     optionalFields: optionalFields)
             if wasUpdated {
                 print("Updated info for photographer <\(photographer.fullNameFirstLast)>")
@@ -118,7 +116,6 @@ extension Photographer {
             photographer.familyName = personName.familyName
             _ = update(bgContext: context,
                        photographer: photographer,
-                       isDeceased: isDeceased,
                        optionalFields: optionalFields)
             // don't log whether attribbutes have been updated if it is a new photographer
             print("Successfully created new photographer <\(photographer.fullNameFirstLast)>")
@@ -130,12 +127,11 @@ extension Photographer {
     // Returns whether any of the non-identifying properties were updated.
     fileprivate static func update(bgContext: NSManagedObjectContext,
                                    photographer: Photographer,
-                                   isDeceased: Bool?,
                                    optionalFields: PhotographerOptionalFields) -> Bool {
 
 		var wasUpdated: Bool = false
 
-        if let isDeceased, photographer.isDeceased != isDeceased { // mandatory
+        if let isDeceased = optionalFields.isDeceased, photographer.isDeceased != optionalFields.isDeceased {
             photographer.memberRolesAndStatus.status[.deceased] = isDeceased
             wasUpdated = true
         }
