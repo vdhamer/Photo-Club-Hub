@@ -10,6 +10,7 @@ Code Maintenance
 * Extended data model for keyword feature (and updated diagram in README.md on GitHub).
 * Added documentation in README.md for keyword feature in Level 2 files.
 * Automatically cleared any officer roles for a deceased member. Fatal error in debug version only.
+* Removed last traces of e-mail and phone number support (feature disabled in 2.7.0 for privacy reasons)
 
 Data Maintenance
 * Added AJ to fcBellusImago
@@ -99,7 +100,7 @@ Data
 * The membership data for fgDeGender, fgAnders and fcBellusImago are now read from level2.json data files.
 * The level2 data for fgDeGender and fgWaalre is now complete (26 and 16 current members resp).
 * The app can now load and store Dutch fotobond membership numbers.
-* The app can't 'load and store e-mail addresses and phone numbers of photographers (Level2 files are not encrypted).
+* The app can't load and store e-mail addresses and phone numbers of photographers (Level2 files are not encrypted).
 * Added MK to fgWaalre
 * Added ability to store date on which a member joined a club
 
