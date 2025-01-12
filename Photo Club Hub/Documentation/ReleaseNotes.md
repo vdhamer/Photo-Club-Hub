@@ -2,6 +2,9 @@
 
 This build #4635 was built using Xcode 16.2 and is intended for App Store distribution.
 
+Portfolios Clubs-and-Museums screen
+* Added two demo clubs (XampleMin and XampleMax) as examples for adding new clubs.
+
 Preferences screen
 * Bug fix: role "Other" didn't show up when filtering on club officers
 
@@ -21,7 +24,7 @@ Data Maintenance
 * Added fcAFCReusel
 * Created empty collections in LR for former members of fgDeGender
 * Updated fgWaalre (JJ)
-* created two demo Level 2 files: ExampleMin.levelw.json and ExampleMax.level2.json
+* created two demo Level 12 files: XampleMin.level1.json and XampleMax.level1.json
 
 ---------------------------------------------------------------------------
 

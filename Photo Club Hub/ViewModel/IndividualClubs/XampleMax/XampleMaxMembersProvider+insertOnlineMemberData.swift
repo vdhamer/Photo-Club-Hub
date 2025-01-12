@@ -1,5 +1,5 @@
 //
-//  ExampleMinMembersProvider+insertOnlineMemberData.swift
+//  XampleMaxMembersProvider+insertOnlineMemberData.swift
 //  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 27/07/2024.
@@ -8,26 +8,26 @@
 import CoreData // for NSManagedObjectContext
 import CoreLocation // for CLLocationCoordinate2DMake
 
-extension ExampleMinMembersProvider { // fill with some initial hard-coded content
+extension XampleMaxMembersProvider { // fill with some initial hard-coded content
 
     func insertOnlineMemberData(bgContext: NSManagedObjectContext) { // runs on a background thread
 
-        let fotogroepExampleMinIdPlus = OrganizationIdPlus(fullName: "ExampleClub With Minimal Data",
-                                                           town: "Rotterdam",
-                                                           nickname: "ExampleMin")
+        let fotogroepXampleMaxIdPlus = OrganizationIdPlus(fullName: "Xample Club Max",
+                                                           town: "Amsterdam",
+                                                           nickname: "XampleMax")
 
         bgContext.perform { // execute on background thread
             let club = Organization.findCreateUpdate(context: bgContext,
                                                      organizationTypeEnum: .club,
-                                                     idPlus: fotogroepExampleMinIdPlus,
-                                                     // real coordinates added in ExampleMax.level2.json
+                                                     idPlus: fotogroepXampleMaxIdPlus,
+                                                     // real coordinates added in XampleMax.level2.json
                                                      coordinates: CLLocationCoordinate2DMake(0, 0),
                                                      optionalFields: OrganizationOptionalFields() // empty fields
                                                     )
             ifDebugPrint("\(club.fullNameTown): Starting insertOnlineMemberData() in background")
 
             _ = Level2JsonReader(bgContext: bgContext,
-                                 urlComponents: UrlComponents.exampleMin,
+                                 urlComponents: UrlComponents.xampleMax,
                                  club: club,
                                  useOnlyFile: false)
         }

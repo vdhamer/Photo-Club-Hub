@@ -12,6 +12,7 @@ import CoreData // for ManagedObjectContext
 struct PhotoClubHubApp: App {
 
     @Environment(\.scenePhase) var scenePhase
+    static let includeXampleClubs: Bool = true // whether or not to include XmpleMin and XmpleMax clubs
 
     init() {
 
@@ -91,21 +92,21 @@ extension PhotoClubHubApp {
         andersBackgroundContext.automaticallyMergesChangesFromParent = true
         _ = AndersMembersProvider(bgContext: andersBackgroundContext)
 
-        if isDebug() { // don't bother regular users with these test clubs because they show up in app's user interface
+        if includeXampleClubs {
 
-            // load test member(s) of ExampleMin
-            let exampleMinBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-            exampleMinBackgroundContext.name = "ExampleMin"
-            exampleMinBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-            exampleMinBackgroundContext.automaticallyMergesChangesFromParent = true
-            _ = ExampleMinMembersProvider(bgContext: exampleMinBackgroundContext)
+            // load test member(s) of XampleMin. Club is called XampleMin (rather than ExampleMin) to be at end of list
+            let xampleMinBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+            xampleMinBackgroundContext.name = "XampleMin"
+            xampleMinBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+            xampleMinBackgroundContext.automaticallyMergesChangesFromParent = true
+            _ = XampleMinMembersProvider(bgContext: xampleMinBackgroundContext)
 
-            // load test member(s) of ExampleMax
-            let exampleMaxBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-            exampleMaxBackgroundContext.name = "ExampleMax"
-            exampleMaxBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-            exampleMaxBackgroundContext.automaticallyMergesChangesFromParent = true
-            _ = ExampleMaxMembersProvider(bgContext: exampleMaxBackgroundContext)
+            // load test member(s) of XampleMax. Club is called XampleMax (rather than ExampleMax) to be at end of list
+            let xampleMaxBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+            xampleMaxBackgroundContext.name = "XampleMax"
+            xampleMaxBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+            xampleMaxBackgroundContext.automaticallyMergesChangesFromParent = true
+            _ = XampleMaxMembersProvider(bgContext: xampleMaxBackgroundContext)
 
         }
     }

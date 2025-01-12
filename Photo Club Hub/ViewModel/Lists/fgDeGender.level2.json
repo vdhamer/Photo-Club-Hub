@@ -189,12 +189,12 @@
 
         {
             "name": {
-                "givenName": "Geo",
+                "givenName": "Gio",
                 "infixName": "",
                 "familyName": "Bushman"
             },
             "optional": {
-                "level3URL": "http://www.vdhamer.com/fgDeGender/Geo_Bushman/",
+                "level3URL": "http://www.vdhamer.com/fgDeGender/Gio_Bushman/",
                 "status": {
                     "isDeceased": true,
                     "isFormerMember": true

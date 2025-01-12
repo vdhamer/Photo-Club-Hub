@@ -3,14 +3,15 @@
         {
             "idPlus": {
                 "town": "Rotterdam",
-                "fullName": "Sample Club With Minimal Data",
-                "nickName": "ExampleMin"
+                "fullName": "Xample Club With Minimal Data",
+                "nickName": "XampleMin"
             },
             "optional": {
                 "coordinates": {
                     "latitude": 51.92275,
                     "longitude": 4.47972
-                }
+                },
+                "level2URL": "https://www.example.com/XampleMin.level2.json"
             }
         },
     "members": [
