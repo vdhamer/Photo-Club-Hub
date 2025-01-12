@@ -165,12 +165,16 @@ class Level2JsonReader { // normally running on a background thread
             throw MergeError.invalidJsonData("Cannot find idPlus keyword in \(urlComponents.shortName)") }
 
         let jsonIdPlus: JSON = jsonClub["idPlus"]
-        guard jsonIdPlus["town"].stringValue == club.town && jsonIdPlus["fullName"].stringValue == club.fullName else {
-            throw MergeError.mismatchedNameTown("""
-                                                Error: mismatched Name/Town for club \
-                                                \(club.fullNameTown) \
-                                                in \(urlComponents.shortName)
-                                                """) }
+        if !isDebug() {
+            // Only load Level2 files for clubs already listed in a Level1 file.
+            // But skip this checking when in DEBUG mode (=developers).
+            // And, when in RELEASE mode, this aborts mergeLevel2Json with a string printed - which nobody will see.
+            guard jsonIdPlus["town"].stringValue == club.town && jsonIdPlus["fullName"].stringValue == club.fullName
+                else { throw MergeError.mismatchedNameTown("""
+                                                           Error: mismatched Name/Town for club \
+                                                           \(club.fullNameTown) in \(urlComponents.shortName)
+                                                           """) }
+        }
         let idPlus = OrganizationIdPlus(fullName: jsonIdPlus["fullName"].stringValue,
                                         town: jsonIdPlus["town"].stringValue,
                                         nickname: jsonIdPlus["nickName"].stringValue)
