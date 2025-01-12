@@ -7,7 +7,7 @@
 
 import CoreData // for PersistenceController
 
-class ExampleMinMembersProvider {
+class XampleMinMembersProvider {
 
     init(bgContext: NSManagedObjectContext) {
         insertOnlineMemberData(bgContext: bgContext)

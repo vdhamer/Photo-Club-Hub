@@ -10,77 +10,7 @@ import CoreData // for NSManagedObjectContext
 import CoreLocation // for CLLocationCoordinate2D
 import SwiftyJSON // for JSON struct
 
-/* Example of level2.json file with one member but with a complete set of optional fields
- {
-     "club":
-         {
-             "idPlus": {
-                 "town": "Eindhoven",
-                 "fullName": "Fotogroep de Gender",
-                 "nickName": "FG deGender"
-             },
-             "optional": {
-                 "coordinates": {
-                     "latitude": 51.42398,
-                     "longitude": 5.45010
-                 },
-                 "website": "https://www.fcdegender.nl",
-                 "wikipedia": "https://nl.wikipedia.org/wiki/Gender_(beek)",
-                 "level2URL": "https://www.example.com/deGender.level2.json",
-                 "remark": [
-                     {
-                         "language": "EN",
-                         "value": "Note that Fotogroep de Gender is abbreviated fcdegender.nl for historical reasons."
-                     },
-                     {
-                         "language": "NL",
-                         "value": "Opgelet: Fotogroep de Gender heeft als domeinnaam fcdegender.nl (fc = Fotoclub)."
-                     }
-                 ],
-                 "nlSpecific": {
-                     "fotobondNumber": 1620
-                 }
-            }
-         },
-     "members": [
-         {
-             "name": {
-                 "givenName": "Peter",
-                 "infixName": "van den",
-                 "familyName": "Hamer"
-             },
-             "optional": {
-                 "roles": {
-                     "isChairman": false,
-                     "isViceChairman": false,
-                     "isTreasurer": false,
-                     "isSecretary": false,
-                     "isAdmin": true,
-                     "isOther": false
-                 },
-                 "status": {
-                     "isDeceased": false,
-                     "isFormerMember": false,
-                     "isHonoraryMember": false,
-                     "isMentor": false,
-                     "isPropectiveMember": false
-                 },
-                 "birthday": "9999-10-18",
-                 "website": "https://glass.photo/vdhamer",
-                 "photographerImage":
-                     "http://www.vdhamer.com/wp-content/uploads/2022/07/cropped-2006_Norway_276_SSharp1_4.jpg",
-                 "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg",
-                 "level3URL": "https://www.example.com/FG_deGender/Peter_van_den_Hamer.level3.json",
-                 "membershipStartDate: "2024-01-01",
-                 "membershipEndDate: "9999-12-31",
-                 "nlSpecific": {
-                     "fotobondNumber": 1620110
-                 }
-             }
-         }
-     ]
- }
- */
+// see xampleMin.level2.json and xampleMax.level2.json for syntax examples
 
 class Level2JsonReader { // normally running on a background thread
 

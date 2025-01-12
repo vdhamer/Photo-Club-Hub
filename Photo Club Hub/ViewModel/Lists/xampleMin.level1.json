@@ -1,0 +1,32 @@
+{
+    "clubs": [
+        {
+            "idPlus": {
+                "town": "Eindhoven",
+                "fullName": "Fotogroep de Gender",
+                "nickName": "FG deGender"
+            },
+            "optional": {
+                "coordinates": {
+                    "latitude": 51.42398,
+                    "longitude": 5.45010
+                },
+                "level2URL": "https://www.example.com/fgDeGender.level2.json"
+            }
+        },
+    "museums": [
+        {
+            "idPlus": {
+                "town": "New York",
+                "fullName": "Fotografiska New York",
+                "nickName": "Fotografiska NYC"
+            },
+            "optional": {
+                "coordinates": {
+                    "latitude": 40.739278,
+                    "longitude": -73.986722
+                }
+            }
+        }
+    ]
+}

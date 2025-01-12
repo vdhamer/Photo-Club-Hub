@@ -3,8 +3,8 @@
         {
             "idPlus": {
                 "town": "Amsterdam",
-                "fullName": "Sample Club With Maximal Data",
-                "nickName": "ExampleMax"
+                "fullName": "Xample Club With Maximal Data",
+                "nickName": "XampleMax"
             },
             "optional": {
                 "coordinates": {
@@ -12,7 +12,18 @@
                     "longitude": 4.89237
                 },
                 "website": "https://www.example.com",
-                "level2URL": "https://www.example.com/ExampleMax.level2.json",
+                "wikipedia": "https://en.wikipedia.org/wiki/Rotterdam_City_Hall",
+                "level2URL": "https://www.example.com/XampleMax.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "A remark here about the club will overrule any remark provided in level1.json file."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Deze beschrijving van de club vervangt een eventuele beschrijving in root.level1.json"
+                    }
+                ],
                 "nlSpecific": {
                     "fotobondNumber": 9999
                 }
@@ -27,11 +38,12 @@
             },
             "optional": {
                 "roles": {
-                    "isChairman": false,
+                    "isChairman": true,
                     "isViceChairman": false,
                     "isTreasurer": false,
                     "isSecretary": false,
-                    "isAdmin": true
+                    "isAdmin": false,
+                    "isOthere": false
                 },
                 "status": {
                     "isDeceased": true,
@@ -47,7 +59,10 @@
                 "level3URL": "https://www.example.com/FG_deGender/Peter_van_den_Hamer.level3.json",
                 "membershipStartDate": "2020-01-01",
                 "membershipEndDate": "2020-12-31",
-                "keywords": [ "Landscape", "Travel", "Minimal" ]
+                "keywords": [ "Landscape", "Travel", "Minimal" ],
+                "nlSpecific": {
+                    "fotobondNumber": 1620110
+                }
             }
         }
     ]
