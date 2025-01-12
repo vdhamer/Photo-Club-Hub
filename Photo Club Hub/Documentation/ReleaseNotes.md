@@ -21,6 +21,7 @@ Data Maintenance
 * Added fcAFCReusel
 * Created empty collections in LR for former members of fgDeGender
 * Updated fgWaalre (JJ)
+* created two demo Level 2 files: ExampleMin.levelw.json and ExampleMax.level2.json
 
 ---------------------------------------------------------------------------
 

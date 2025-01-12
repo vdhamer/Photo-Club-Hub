@@ -61,6 +61,14 @@ struct UrlComponents {
         fileType: "json"
     )
 
+    // MARK: - ExampleMin
+
+    static let exampleMin = UrlComponents(
+        dataSourceFile: "ExampleMin",
+        fileSubType: "level2",
+        fileType: "json"
+    )
+
     // MARK: - ExampleMax
 
     static let exampleMax = UrlComponents(
