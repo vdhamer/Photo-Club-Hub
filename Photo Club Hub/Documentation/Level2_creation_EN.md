@@ -21,7 +21,7 @@
         - Peter van den Hamer is entered as `"givenName": "Peter", "infixName": "van den", "familyName": "Hamer"`.
         - Max Verstappen is entered as `"givenName": "Max", "infixName": "", "familyName": "Verstappen"` (or as `"givenName": "Max", "familyName": "Verstappen"` if you want).
     - You don't need to provide the complete list of club members in one go. So you could initially provide just a few members and add more in later versions of the file.
-        - If you choose to use [JSON Editor Online](https://jsoneditoronline.org), you can edit the list of club members simply by switching to "Table" mode. This shows you a table where you can edit cells or add rows - just like a spreadsheet.
+        - If you choose to use [JSON Editor Online](https://jsoneditoronline.org), you can edit the list of club members simply by switching to "Table" mode. This shows you a table where you can edit cells (double click) and add rows (menu option).
  
 4. If you are not using [JSON Editor Online](https://jsoneditoronline.org), please **check** your JSON data using for example [www.jsonlint.com](https://www.jsonlint.com). This finds the most common errors in JSON files.
     - The lucky [JSON Editor Online](https://jsoneditoronline.org) get their JSON checked while they edit it. So you will get warnings the moment things don't look correct. And some of the edit modes prevent these errors from occurring.
