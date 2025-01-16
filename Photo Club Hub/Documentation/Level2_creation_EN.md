@@ -18,7 +18,7 @@
     -  If your club is already visible in the app, you should simply reuse the`fullName` and `town` defined in the file [root.level1.json](https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/Photo%20Club%20Hub/ViewModel/Lists/root.level1.json). Again, the early adopters should find all the info they need in the above table.
         - If you are not one of the 64+ Dutch clubs in `root.level1.json`,  provide the club's `fullName` and `town`. Together these 2 fields uniquely identify the club: there better not be two clubs called "f8 and Be There" in Amsterdam. But there could be one that happens to have the same `fullName` in Singapore. Be careful to get the spelling right the first time: it gets messy if you need to fix this later.
 
-4. **Edit** the file to contain your club’s `members`.
+4. **Update** the file to show your club’s `members`.
     - If you are using [JSON Editor Online](https://jsoneditoronline.org), you can edit the list of club members simply by switching to "Table" mode. This shows you a table where you can edit cells (double click) and add rows (menu option).
     - Names of club members need to be spelled correctly because they also serve as identification. So "Jan Doede" and "Jan Doedel" are two different persons to the software.
         - Peter van den Hamer is entered as `"givenName": "Peter", "infixName": "van den", "familyName": "Hamer"`.
