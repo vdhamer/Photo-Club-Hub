@@ -1,6 +1,7 @@
 ## Creating a new level2.json file for a club in 7 steps 
 
 1. **Download** the [min](https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/Photo%20Club%20Hub/ViewModel/Lists/xampleMin.level2.json) and the [max](https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/Photo%20Club%20Hub/ViewModel/Lists/xampleMax.level2.json) example files. “Min” is optimized for simplicity. “Max” shows all supported optional data fields.
+
 2. Make a **copy** of the [min](https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/Photo%20Club%20Hub/ViewModel/Lists/xampleMin.level2.json) file.
    - Name it to match some reasonable nickname (short name) for the club. So if the club is called "F/8 and Be There" you might choose `f8AndBeThere.level2.json`. If your club is already listed in the Photo Club Hub app, you can just reuse the `nickName` from the file [root.level1.json](https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/Photo%20Club%20Hub/ViewModel/Lists/root.level1.json). To make this even simpler, here's what it says for 6 potential early-adopter clubs:
 
@@ -13,28 +14,29 @@
       | Veldhoven | Fotoclub Bellus Imago | fcBellusImago | 51.42541 | 5.38756 |  |
       | Waalre | Fotogroep Waalre | fgWaalre | 51.39184 | 5.46144 | [link](https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/Photo%20Club%20Hub/ViewModel/Lists/fgDeGender.level2.json) |
 
-3. **Edit** the file to contain your club’s `fullName`, `town`, `nickName` and preferably coordinates.
+3. **Edit** the file to contain your club’s `fullName`, `town`, `nickName`, and preferably coordinates.
     - Use a very basic [text editor](https://en.wikipedia.org/wiki/Comparison_of_text_editors) to get a "plain text" output format. So don't use Word (although that _can_ work). It is probably easiest to use the online JSON editor called [JSON Editor Online](https://jsoneditoronline.org): it actually simplifies the process without drowning you in features.
     -  If your club is already visible in the app, you should simply reuse the`fullName` and `town` defined in the file [root.level1.json](https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/Photo%20Club%20Hub/ViewModel/Lists/root.level1.json). Again, the early adopters should find all the info they need in the above table.
         - If you are not one of the 64+ Dutch clubs in `root.level1.json`,  provide the club's `fullName` and `town`. Together these 2 fields uniquely identify the club: there better not be two clubs called "f8 and Be There" in Amsterdam. But there could be one that happens to have the same `fullName` in Singapore. Be careful to get the spelling right the first time: it gets messy if you need to fix this later.
 
 4. **Update** the file to show your club’s `members`.
-    - If you are using [JSON Editor Online](https://jsoneditoronline.org), you can edit the list of club members simply by switching to "Table" mode. This shows you a table where you can edit cells (double click) and add rows (menu option).
+    - If you are using [JSON Editor Online](https://jsoneditoronline.org), you can edit the list of club members simply by switching to "Table" mode. This shows you a table where you can edit cells (double-click) and add rows (menu option).
     - Names of club members need to be spelled correctly because they also serve as identification. So "Jan Doede" and "Jan Doedel" are two different persons to the software.
         - Peter van den Hamer is entered as `"givenName": "Peter", "infixName": "van den", "familyName": "Hamer"`.
         - Max Verstappen is entered as `"givenName": "Max", "infixName": "", "familyName": "Verstappen"` (or as `"givenName": "Max", "familyName": "Verstappen"` if you want).
     - You don't need to provide the complete list of club members in one go. So you could initially provide just five members as a test and add more members in a later version.
- 
-5. Users of [JSON Editor Online](https://jsoneditoronline.org) can skip this step.
-    - JSON Editor Online generates warnings the moment the file is not a valid JSON file. A warning will tell you what's wrong, and where the error is. The site's Tree and Table modes even prevents certain types of errors.
-    - But, if you are not using [JSON Editor Online](https://jsoneditoronline.org), please **check** your JSON data by copying the JSON text into [www.jsonlint.com](https://www.jsonlint.com). This finds the most common errors in JSON files.
+ 
+5. Users of [JSON Editor Online](https://jsoneditoronline.org) can skip this step of **checking** the file.
+    - Why? JSON Editor Online generates warnings the moment the file is not a valid JSON file. A warning will tell you what's wrong and where the error is. The site's Tree and Table modes even prevent certain types of errors.
+    - But, if you are not using JSON Editor Online, you should **check** your JSON data by copying the JSON content into [www.jsonlint.com](https://www.jsonlint.com). This checks whether it is a valid JSON file.
         - After you **fix** the first error, run JSONlint again until all errors are fixed. The JSON format (see below) is notoriously picky about matching commas, curly brackets, etc.
-        - You do _not_ need to worry about “white space” like tabs, indentation and new lines. They are important for readability, but don’t count as errors. The tools typically have a feature to fix the formatting.
-    - We recommend listing the members in alphabetical order in order to detect duplicates. In the JSON convention and in JSON comparison tools, the ordering doesn't matter at all. 
+        - You do _not_ need to worry about “white space” like tabs, indentation, and new lines. They are important for readability but don’t count as errors. The tools typically have a feature to reformat/beautify the JSON.
+    - We recommend listing the members in alphabetical order. This helps you detect duplicates. In the JSON convention and in JSON comparison tools, ordering doesn't matter at all. 
 
-7. **Send** us your `level2.json` file for uploading and integration into the app. We will try to respond the same day. Our role is to keep an eye on technical correctness (and not, say, whether you got your member names right). If possible, we will send you a link to a web page you can integrate into your club's website - if you need that.
+6. **Send** us your `level2.json` file for uploading and integration into the app. We will try to respond the same day. Our role is to keep an eye on technical correctness (and not, say, whether you got your member names right). If possible, we will send you a link to a web page you can integrate into your club's website - if you need that.
+    - For early adopters, where we initially host the file for you, we will fill the optional `level2URL` field for you. It contains the web address where the `level2.json` file resides online.
 
-8. **Inspect** the results using the Photo Club Hub app, and optionally submit a new version with more data.
+7. **Inspect** the results using the Photo Club Hub app, and optionally submit a new version with more data.
 
 ### Appendix: The Level2.json format
 
