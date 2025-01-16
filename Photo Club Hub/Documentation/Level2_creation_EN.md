@@ -19,7 +19,7 @@
         - If you are not one of the 64+ Dutch clubs in `root.level1.json`,  provide the club's `fullName` and `town`. Together these 2 fields uniquely identify the club: there better not be two clubs called "f8 and Be There" in Amsterdam. But there could be one that happens to have the same `fullName` in Singapore. Be careful to get the spelling right the first time: it gets messy if you need to fix this later.
     - Names of club members are also critical because they also serve as identification. So "Jan Doede" and "Jan Doedel" are two different persons to the software.
         - Peter van den Hamer is entered as `"givenName": "Peter", "infixName": "van den", "familyName": "Hamer"`.
-        - Max Verstappen is entered as `"givenName": "Max", "infixName": "", "familyName": "Verstappen"` or as `"givenName": "Max", "familyName": "Verstappen"`.
+        - Max Verstappen is entered as `"givenName": "Max", "infixName": "", "familyName": "Verstappen"` (or as `"givenName": "Max", "familyName": "Verstappen"` if you want).
     - You don't need to provide the complete list of club members in one go. So you could initially provide just a few members and add more in later versions of the file.
         - If you choose to use [JSON Editor Online](https://jsoneditoronline.org), you can edit the list of club members simply by switching to "Table" mode. This shows you a table where you can edit cells or add rows - just like a spreadsheet.
  
