@@ -10,8 +10,7 @@
                 "coordinates": {
                     "latitude": 51.42398,
                     "longitude": 5.45010
-                },
-                "level2URL": "https://www.example.com/fgDeGender.level2.json"
+                }
             }
         },
     "museums": [
