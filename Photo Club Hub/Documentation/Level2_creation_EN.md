@@ -25,14 +25,16 @@
         - Max Verstappen is entered as `"givenName": "Max", "infixName": "", "familyName": "Verstappen"` (or as `"givenName": "Max", "familyName": "Verstappen"` if you want).
     - You don't need to provide the complete list of club members in one go. So you could initially provide just five members as a test and add more members in a later version.
  
-5. If you are not using [JSON Editor Online](https://jsoneditoronline.org), please **check** your JSON data using for example [www.jsonlint.com](https://www.jsonlint.com). This finds the most common errors in JSON files.
-    - The lucky [JSON Editor Online](https://jsoneditoronline.org) get their JSON checked while they edit it. So you will get warnings the moment things don't look correct. And some of the edit modes prevent these errors from occurring.
-    - After you **fix** the first error, run JSONlint again until all errors are fixed. The JSON format (see below) is notoriously picky about matching commas, curly brackets, etc.
-    - You do _not_ need to worry about “white space” like tabs, indentation and new lines. They are important for readability, but don’t count as errors. JSONlint has a feature to fix the formatting.
+5. Users of [JSON Editor Online](https://jsoneditoronline.org) can skip this step.
+    - JSON Editor Online generates warnings the moment the file is not a valid JSON file. A warning will tell you what's wrong, and where the error is. The site's Tree and Table modes even prevents certain types of errors.
+    - But, if you are not using [JSON Editor Online](https://jsoneditoronline.org), please **check** your JSON data by copying the JSON text into [www.jsonlint.com](https://www.jsonlint.com). This finds the most common errors in JSON files.
+        - After you **fix** the first error, run JSONlint again until all errors are fixed. The JSON format (see below) is notoriously picky about matching commas, curly brackets, etc.
+        - You do _not_ need to worry about “white space” like tabs, indentation and new lines. They are important for readability, but don’t count as errors. The tools typically have a feature to fix the formatting.
+    - We recommend listing the members in alphabetical order in order to detect duplicates. In the JSON convention and in JSON comparison tools, the ordering doesn't matter at all. 
 
-6. **Send** us your `level2.json` file for uploading and integration into the app. We will try to respond the same day. Our role is to keep an eye on technical correctness (and not, say, whether you got your member names right). If possible, we will send you a link to a web page you can integrate into your club's website - if you need that.
+7. **Send** us your `level2.json` file for uploading and integration into the app. We will try to respond the same day. Our role is to keep an eye on technical correctness (and not, say, whether you got your member names right). If possible, we will send you a link to a web page you can integrate into your club's website - if you need that.
 
-7. **Inspect** the results using the Photo Club Hub app, and optionally submit a new version with more data.
+8. **Inspect** the results using the Photo Club Hub app, and optionally submit a new version with more data.
 
 ### Appendix: The Level2.json format
 
