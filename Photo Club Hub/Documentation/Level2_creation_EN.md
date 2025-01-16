@@ -2,7 +2,7 @@
 
 1. **Download** the [min](https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/Photo%20Club%20Hub/ViewModel/Lists/xampleMin.level2.json) and the [max](https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/Photo%20Club%20Hub/ViewModel/Lists/xampleMax.level2.json) example files. “Min” is optimized for simplicity. “Max” shows all supported optional data fields.
 2. Make a **copy** of the [min](https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/Photo%20Club%20Hub/ViewModel/Lists/xampleMin.level2.json) file.
-   - Name it to match some reasonable nickname (short name) for the club. So if the club is called "F/8 and Be There" you might choose `f8AndBeThere.level2.json`. If your club is already listed in the Photo Club Hub app, you can just reuse the `nickName` from the file [root.level1.json](https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/Photo%20Club%20Hub/ViewModel/Lists/root.level1.json). To make this even simpler, here is what it says for the 6 early adopter clubs:
+   - Name it to match some reasonable nickname (short name) for the club. So if the club is called "F/8 and Be There" you might choose `f8AndBeThere.level2.json`. If your club is already listed in the Photo Club Hub app, you can just reuse the `nickName` from the file [root.level1.json](https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/Photo%20Club%20Hub/ViewModel/Lists/root.level1.json). To make this even simpler, here's what it says for 6 potential early-adopter clubs:
 
       | town  | fullName | nickName | latitude | longitude | level2URL |
       | -----  | ---------| ----- | :-----: | :-----: | :-----: |
