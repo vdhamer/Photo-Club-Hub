@@ -159,6 +159,7 @@
 		D072D5E22D333B4500EA88DD /* xampleMin.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = xampleMin.level2.json; sourceTree = "<group>"; };
 		D072D5E42D333E7500EA88DD /* XampleMinMembersProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XampleMinMembersProvider.swift; sourceTree = "<group>"; };
 		D072D5E52D333E7500EA88DD /* XampleMinMembersProvider+insertOnlineMemberData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XampleMinMembersProvider+insertOnlineMemberData.swift"; sourceTree = "<group>"; };
+		D073FE162D3B13B300DB01F4 /* Level2_aanmaken_NL.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Level2_aanmaken_NL.md; sourceTree = "<group>"; };
 		D07463E52CFB5EFA00F48EB2 /* root.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = root.level1.json; sourceTree = "<group>"; };
 		D076509D2D0E15FB0069CBD4 /* dataModel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dataModel.png; sourceTree = "<group>"; };
 		D076BE702CF0CC10008F4B47 /* Readme_EN_2_7_1.pages */ = {isa = PBXFileReference; lastKnownFileType = file; path = Readme_EN_2_7_1.pages; sourceTree = "<group>"; };
@@ -510,6 +511,7 @@
 			children = (
 				D0831A4B277F736C0049AB84 /* ReleaseNotes.md */,
 				D0A380932D39B0FE00FF95F4 /* Level2_creation_EN.md */,
+				D073FE162D3B13B300DB01F4 /* Level2_aanmaken_NL.md */,
 				D04D7B2B2D2B3B210048454B /* Jaarverslag 2024 Website.docx */,
 				D0840FB72D07481B00458E06 /* Nieuwsbrief_Jan_2025_app.pages */,
 				D076BE702CF0CC10008F4B47 /* Readme_EN_2_7_1.pages */,
