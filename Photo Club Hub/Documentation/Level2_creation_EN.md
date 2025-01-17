@@ -23,7 +23,7 @@
     - If you are using [JSON Editor Online](https://jsoneditoronline.org), you can edit the list of club members simply by switching to "Table" mode. This shows you a table where you can edit cells (double-click) and add rows (in the ":" menu).
     - Names of club members need to be spelled correctly because they also serve as identification. So "Jan Doede" and "Jan Doedel" are two different persons to the software.
         - Peter van den Hamer is entered as `"givenName": "Peter", "infixName": "van den", "familyName": "Hamer"`.
-        - Max Verstappen is entered as `"givenName": "Max", "infixName": "", "familyName": "Verstappen"` (or as `"givenName": "Max", "familyName": "Verstappen"` if you want).
+        - Max Verstappen is entered as `"givenName": "Max", "infixName": "", "familyName": "Verstappen"` (or alternatively as `"givenName": "Max", "familyName": "Verstappen"`).
     - You don't need to provide the complete list of club members in one go. So you could initially provide just five members as a test and add more members in a later version.
  
 5. Users of [JSON Editor Online](https://jsoneditoronline.org) can skip this step of **checking** the file.
