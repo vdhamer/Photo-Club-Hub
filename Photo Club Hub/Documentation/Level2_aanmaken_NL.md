@@ -4,10 +4,10 @@
    [max](https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/Photo%20Club%20Hub/ViewModel/Lists/xampleMax.level2.json) voorbeeldbestand.
    “Min” is een zo simpel mogelijk voorbeeld. “Max” toont juist alle beschikbare opties voor een club met 1 enkel lid.
 
-2. Maak een **copie** van het [min](https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/Photo%20Club%20Hub/ViewModel/Lists/xampleMin.level2.json) bestand.
-   - Geeft de copie een bestandsnaal met een korte versie (`nickName`) van de naam van de club.
-     Als de club bijvoorbeeld "Fotogroep Scheveningen" heet, zou je het `fgScheveningen.level2.json` kunnen noemen.
-     Als de club al vermeld wordt in de Fotoclub Hub app, kan je de verkorte clubnaam (`nickName`) 
+2. Maak een **kopie** van het [min](https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/Photo%20Club%20Hub/ViewModel/Lists/xampleMin.level2.json) bestand.
+   - Geeft deze kopie een bestandsnaam die overeenkomst met een korte versie (`nickName`) van de clubnaam.
+     Als de club bijvoorbeeld "Fotogroep Scheveningen" heet, zou je het bestand `fgScheveningen.level2.json` kunnen noemen.
+     Als de club al voorkomt in de Fotoclub Hub app, kan je de verkorte clubnaam (`nickName`) 
      vinden in het online textbestand [root.level1.json](https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/Photo%20Club%20Hub/ViewModel/Lists/root.level1.json). 
      Onderstaande tabel bevat, althans voor de mogelijke proefkonijnclubs, zowel die `nickName` als een paar 
      andere velden die U straks nodig zult hebben. Dat scheelt weer wat moeite.
