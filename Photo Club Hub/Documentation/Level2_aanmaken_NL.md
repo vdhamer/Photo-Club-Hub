@@ -21,7 +21,7 @@
 
 3. Pas gegevens over de club aan: `town`, `fullName`, `nickName`, en liefst ook locatie.
     - Aanbeveling: gebruik voor het aanpassen van het nieuwe bestand liefst de online JSON editor [JSON Editor Online](https://jsoneditoronline.org). Dit programma is bedoeld om dit soort ("JSON") textbestanden te maken, bekijken en controlleren.
-        - Voor wie dit niet kan of wil (geen internet verbinding?), gebruik een kale editor zoals NotePad++ of Sublime Text. 
+        - Alternatief: gebruik een kale editor zoals NotePad, NotePad++ of Sublime Text. 
     - De 6 proefkonijnclubs kunnen de vereiste `town`, `fullName`, `nickName` velden en `latitude` en `longitude` velden uit bovenstaande tabel overnemen.
       Er zijn gegevens voor vrijwel alle clubs uit de regio te vinden in [root.level1.json](https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/Photo%20Club%20Hub/ViewModel/Lists/root.level1.json).
 
