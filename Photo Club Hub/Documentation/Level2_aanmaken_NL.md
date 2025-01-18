@@ -19,8 +19,8 @@
       | Veldhoven | Fotoclub Bellus Imago | fcBellusImago | 51.42541 | 5.38756 |  |
       | Waalre | Fotogroep Waalre | fgWaalre | 51.39184 | 5.46144 | [link](https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/Photo%20Club%20Hub/ViewModel/Lists/fgDeGender.level2.json) |
 
-3. Bestand **aanpassen** t.a.v. gegevens over de club: `fullName`, `town`, `nickName`, and liefst ook de lengtegraad en breedtegraad.
-    - Gebruik en simpele [text editor](https://en.wikipedia.org/wiki/Comparison_of_text_editors) in plaats van b.v. Microsoft Word: het bestand is een "ouderwets", "ASCII" tekstbestand zonder opmaak.
+3. Pas gegevens over de club aan: `fullName`, `town`, `nickName`, en liefst ook locatie.
+    - Gebruik en simpele [text editor](https://en.wikipedia.org/wiki/Comparison_of_text_editors) in plaats van b.v. Microsoft Word: het bestand is een eenvoudig tekstbestand - dus zonder opmaak mogelijkheden zoals fonts, paginanummers of figuren.
         - Eigenlijk kan het waarschijnlijk nog eenvoudiger met de online JSON editor [JSON Editor Online](https://jsoneditoronline.org) omdat dat web programma begrijpt dat we een JSON tekstbestand willen maken.
           En dus actief kan meehelpen met de weergave, wijzigingen en controle van het bestand.
     - De 6 proefkonijnclubs kunnen de benodige velden die over de `club` uit bovenstaande tabel kopiëren.
