@@ -9,8 +9,8 @@
      Als de club bijvoorbeeld "Fotogroep Scheveningen" heet, zou je het bestand `fgScheveningen.level2.json` kunnen noemen.
      Als de club al voorkomt in de Fotoclub Hub app, kan je de verkorte clubnaam (`nickName`) 
      vinden in het online textbestand [root.level1.json](https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/Photo%20Club%20Hub/ViewModel/Lists/root.level1.json). 
-     Onderstaande tabel bevat, althans voor de mogelijke proefkonijnclubs, zowel die `nickName` als een paar 
-     andere velden die U straks nodig zult hebben. Dat scheelt weer wat moeite.
+     Onderstaande tabel bevat, voor de verwachte proefkonijnclubs, zowel de `nickName` als een paar 
+     andere velden die U straks nodig zult hebben. Dat scheelt wat opzoekwerk.
 
       | `town`  | `fullName` | `nickName` | `latitude` | `longitude` | `level2URL` |
       | -----  | ---------| ----- | :-----: | :-----: | :-----: |
