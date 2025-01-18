@@ -24,7 +24,7 @@
         - Alternatief: gebruik een kale editor zoals NotePad, NotePad++ of Sublime Text.
 
     - De 6 proefkonijnclubs kunnen de vereiste `town`, `fullName`, `nickName` velden en `latitude` en `longitude` velden uit bovenstaande tabel overnemen.
-      Er zijn gegevens voor vrijwel alle clubs uit de regio te vinden in [root.level1.json](https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/Photo%20Club%20Hub/ViewModel/Lists/root.level1.json).
+      Er zijn gegevens voor vrijwel alle clubs uit de regio te vinden in [root.level1.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/ViewModel/Lists/root.level1.json).
 
 5. Pas gegevens over de **clubleden** (`members`) aan.
     - If you are using [JSON Editor Online](https://jsoneditoronline.org), you can edit the list of club members simply by switching to "Table" mode. This shows you a table where you can edit cells (double-click) and add rows (in the "__⋮__" menu).
