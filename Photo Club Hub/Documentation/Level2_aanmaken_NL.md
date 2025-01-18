@@ -1,6 +1,6 @@
 ## Een nieuw level2.json bestand aanmaken voor een club 
 
-1. **Download** het [xampleMin](https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/Photo%20Club%20Hub/ViewModel/Lists/xampleMin.level2.json) en het
+1. **Download** het [xampleMin.level2.json](https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/Photo%20Club%20Hub/ViewModel/Lists/xampleMin.level2.json) en het
    [xampleMax.level2.json](https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/Photo%20Club%20Hub/ViewModel/Lists/xampleMax.level2.json) voorbeeldbestand.
    “Min” en "Max" zijn respectievelijk is een zo klein mogelijk voorbeeld en een voorbeeld met alle toeters en bellen benut. U eindigt vermoedelijk met iets tussen beide uitersten.
 
