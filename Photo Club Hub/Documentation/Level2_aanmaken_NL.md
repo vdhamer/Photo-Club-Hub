@@ -23,15 +23,8 @@
     - Gebruik en simpele [text editor](https://en.wikipedia.org/wiki/Comparison_of_text_editors) in plaats van b.v. Microsoft Word: het bestand is een eenvoudig tekstbestand - dus zonder opmaak mogelijkheden zoals fonts, paginanummers of figuren.
         - Eigenlijk kan het waarschijnlijk nog eenvoudiger met de online JSON editor [JSON Editor Online](https://jsoneditoronline.org) omdat dat web programma begrijpt dat we een JSON tekstbestand willen maken.
           En dus actief kan meehelpen met de weergave, wijzigingen en controle van het bestand.
-    - De 6 proefkonijnclubs kunnen de benodige velden die over de `club` uit bovenstaande tabel kopiëren.
-    - De resterende (ons bekende) clubs in Oost Brabant staan al verveld in [root.level1.json](https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/Photo%20Club%20Hub/ViewModel/Lists/root.level1.json).
-      Die kunnen de benodige verden t.a.v de club hieruit kopiëren.
-    - Als een voor de app totaal nieuw club bent (voorlopig nog onwaarschijnlijk) dan moet u de benodige velden op eigen kracht aanleveren.
-        - Bij het aanleveren van `fullName` en `town` (gemeente) bepalen die 2 antwoorden samen om welke club het gaat.
-          Zo bestaan er meerdere clubs die "Fotoclub Objectief" heten, maar wel allemaal in verschillende gemeenten.
-          Dus aangezien `fullName` en `town` samen gebruikt worden om clubs te identificeren, vragen wij extra aandacht om deze juist in te vullen.
-        - U kunt een adres omzetting in lengtegraad (het getal rond de +50) en breedtegraad (het getal rond de +5) via [deze dienst](https://www.gps-coordinaten.nl).
-        - Als de app geen coordinaten krijgt wordt die van [Null Island](https://en.wikipedia.org/wiki/Null_Island) gebruikt.
+    - De 6 proefkonijnclubs kunnen de ``, ``, ``, ``, `` en `` velden voor hun `club` uit bovenstaande tabel overnemen.
+      Er zijn meer clubs uit de regio te vinden in [root.level1.json](https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/Photo%20Club%20Hub/ViewModel/Lists/root.level1.json).
 
 4. **Update** the file to show your club’s `members`.
     - If you are using [JSON Editor Online](https://jsoneditoronline.org), you can edit the list of club members simply by switching to "Table" mode. This shows you a table where you can edit cells (double-click) and add rows (in the "__⋮__" menu).
