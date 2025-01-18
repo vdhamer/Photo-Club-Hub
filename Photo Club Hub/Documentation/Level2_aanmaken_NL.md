@@ -4,7 +4,7 @@
    [xampleMax.level2.json](https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/Photo%20Club%20Hub/ViewModel/Lists/xampleMax.level2.json) ("Max") voorbeeldbestand.
    Dit zijn respectievelijk is een zo klein mogelijk voorbeeld en een voorbeeld met alle toeters en bellen benut.
 
-2. Maak een **kopie** van het [min](https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/Photo%20Club%20Hub/ViewModel/Lists/xampleMin.level2.json) bestand en geef het een juiste naam.
+2. Maak een **kopie** van het [min](https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/Photo%20Club%20Hub/ViewModel/Lists/xampleMin.level2.json) bestand en geef het een andere naam.
    - Gebruik als naam voor het nieuwe bestand een korte versie (`nickName`) van de clubnaam.
      Als de club bijvoorbeeld "Fotogroep Scheveningen" heet, zou je het bestand `fgScheveningen.level2.json` kunnen noemen.
    - Onderstaande tabel bevat, voor de verwachte proefkonijnclubs, deze `nickName` plus enkele
