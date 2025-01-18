@@ -7,8 +7,8 @@
 2. Maak een **kopie** van het [min](https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/Photo%20Club%20Hub/ViewModel/Lists/xampleMin.level2.json) bestand en geef het een juiste naam.
    - Gebruik als naam voor het nieuwe bestand een korte versie (`nickName`) van de clubnaam.
      Als de club bijvoorbeeld "Fotogroep Scheveningen" heet, zou je het bestand `fgScheveningen.level2.json` kunnen noemen.
-     Onderstaande tabel bevat, voor de verwachte proefkonijnclubs, deze `nickName` plus enkele
-     andere velden die straks nodig zijn. Dat scheelt opzoeken [root.level1.json](https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/Photo%20Club%20Hub/ViewModel/Lists/root.level1.json) of zelf iets verzinnen.
+   - Onderstaande tabel bevat, voor de verwachte proefkonijnclubs, deze `nickName` plus enkele
+     andere velden die straks nodig zijn. Dat scheelt opzoeken in [root.level1.json](https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/Photo%20Club%20Hub/ViewModel/Lists/root.level1.json) of zelf iets verzinnen.
 
       | `town`  | `fullName` | `nickName` | `latitude` | `longitude` | `level2URL` |
       | -----  | ---------| ----- | :-----: | :-----: | :-----: |
