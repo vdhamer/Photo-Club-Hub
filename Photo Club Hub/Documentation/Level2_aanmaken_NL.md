@@ -1,8 +1,8 @@
 ## Een nieuw level2.json bestand aanmaken voor een club 
 
-1. **Download** het [min](https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/Photo%20Club%20Hub/ViewModel/Lists/xampleMin.level2.json) en het
-   [max](https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/Photo%20Club%20Hub/ViewModel/Lists/xampleMax.level2.json) voorbeeldbestand.
-   “Min” is een zo simpel mogelijk voorbeeld. “Max” toont juist alle beschikbare opties voor een club met 1 enkel lid.
+1. **Download** het [xampleMin](https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/Photo%20Club%20Hub/ViewModel/Lists/xampleMin.level2.json) en het
+   [xampleMax.level2.json](https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/Photo%20Club%20Hub/ViewModel/Lists/xampleMax.level2.json) voorbeeldbestand.
+   “Min” en "Max" zijn respectievelijk is een zo klein mogelijk voorbeeld en een voorbeeld met alle toeters en bellen benut. U eindigt vermoedelijk met iets tussen beide uitersten.
 
 2. Maak een **kopie** van het [min](https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/Photo%20Club%20Hub/ViewModel/Lists/xampleMin.level2.json) bestand.
    - Geeft deze kopie een bestandsnaam die overeenkomst met een korte versie (`nickName`) van de clubnaam.
