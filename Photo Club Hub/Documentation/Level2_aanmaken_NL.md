@@ -39,7 +39,7 @@
     - Het `featuredImage` veld mag later aangepast worden.
       Het bevat een webadres (URL) van een foto gemaakt door de fotograaf.
       Dat webadres moet een plaatje zijn, maar mag op een willekeurige plek op het internet staan.
-      Als `featuredImage` ontbreekt of niet klopt, wordt er een oranje dummy plaatje getoond.
+      Als `featuredImage` ontbreekt of het adres niet klopt, wordt er een oranje dummy plaatje getoond.
  
 6. Users of [JSON Editor Online](https://jsoneditoronline.org) can skip this step of **checking** the file.
     - Why? JSON Editor Online generates warnings the moment the file is not a valid JSON file. A warning will tell you what's wrong and where the error is. The site's Tree and Table modes even prevent certain types of errors.
