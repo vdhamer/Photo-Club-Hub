@@ -20,18 +20,19 @@
       | Waalre | Fotogroep Waalre | fgWaalre | 51.39184 | 5.46144 | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/ViewModel/Lists/root.level1.json) |
 
 3. Pas de gegevens over de **club** (`club`) aan: `town`, `fullName`, `nickName`, en ook locatie.
-    - Aanbeveling: gebruik voor het aanpassen van het nieuwe bestand liefst de online JSON editor [JSON Editor Online](https://jsoneditoronline.org). Dit programma is bedoeld om dit soort ("JSON") textbestanden te maken, bekijken en controlleren.
+    - Tip: gebruik voor het aanpassen van het nieuwe bestand liefst de online JSON editor [JSON Editor Online](https://jsoneditoronline.org). Dit programma is bedoeld om dit soort ("JSON") textbestanden te maken, bekijken en controlleren.
         - Alternatief: gebruik een kale editor zoals [Windows NotePad](https://nl.wikipedia.org/wiki/Notepad), [NotePad++](https://nl.wikipedia.org/wiki/Notepad%2B%2B) of [Sublime Text](https://nl.wikipedia.org/wiki/Sublime_Text).
 
     - De 6 proefkonijnclubs kunnen de vereiste `town`, `fullName`, `nickName` velden en `latitude` en `longitude` velden uit bovenstaande tabel overnemen.
       Er zijn gegevens voor vrijwel alle clubs uit de regio te vinden in [root.level1.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/ViewModel/Lists/root.level1.json).
 
 5. Pas gegevens over de **clubleden** (`members`) aan: `givenName`, `infixName` en `familyName`.
-    - If you are using [JSON Editor Online](https://jsoneditoronline.org), you can edit the list of club members simply by switching to "Table" mode. This shows you a table where you can edit cells (double-click) and add rows (in the "__⋮__" menu).
-    - Names of club members need to be spelled correctly because they also serve as identification. So "Jan Doede" and "Jan Doedel" are two different persons to the software.
-        - Peter van den Hamer is entered as `"givenName": "Peter", "infixName": "van den", "familyName": "Hamer"`.
-        - Max Verstappen is entered as `"givenName": "Max", "infixName": "", "familyName": "Verstappen"` (or alternatively as `"givenName": "Max", "familyName": "Verstappen"`).
-    - You don't need to provide the complete list of club members in one go. So you could initially provide a few members as a test and add more members in later versions.
+    - Tip: met de [JSON Editor Online](https://jsoneditoronline.org) kan je de lijst van clubleden als tabel zien en aanpassen via de "Table" view. Dan kan je dubbel-klikken op cellen die je wilt aanpassen, en regels toevoegen of verwijderen via het "__⋮__" menu.
+    - De spelling van clubleden let nauw. Ze worden namelijk gebruikt als identificatie - bijvoorbeeld om te bepalen dat dezelfde persoon lid is of was van 2 clubs. Wat de software betreft zijn "Jan de Vries" en "Jan Devries" dus verschillende personen.
+        - Peter van den Hamer voer je in als `"givenName": "Peter", "infixName": "van den", "familyName": "Hamer"`.
+        - Max Verstappen voer je in als `"givenName": "Max", "infixName": "", "familyName": "Verstappen"` (`"givenName": "Max", "familyName": "Verstappen"` mag ook).
+    - De lijst met leden hoeft niet in een keer compleet te zijn. Ik zou zelf eerst een paar leden toevoegen om de kijken of alles lukt.
+      En de lijst completer maken in een 2e versie. En b.v. eventuele moeilijke namen (na ruggespraak met b.v. ons) in een 3e versie.
  
 6. Users of [JSON Editor Online](https://jsoneditoronline.org) can skip this step of **checking** the file.
     - Why? JSON Editor Online generates warnings the moment the file is not a valid JSON file. A warning will tell you what's wrong and where the error is. The site's Tree and Table modes even prevent certain types of errors.
