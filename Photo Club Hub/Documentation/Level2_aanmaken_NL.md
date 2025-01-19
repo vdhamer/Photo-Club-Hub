@@ -55,17 +55,17 @@
 8. **Inspect** the results using the Photo Club Hub app, and optionally submit a new version with more data.
 
 
-## Bonus information
+## Bonus informatie
 
-### The `Level2.json` format
-<details><summary>Details (click to expand)</summary></p>
+### Het `Level2.json` formaat
+<details><summary>Details (klik om uit te klappen)</summary></p>
 
 - [JSON](https://en.wikipedia.org/wiki/JSON) is a very commonly used international standard, but you often won't see it directly. To learn more, find a [tutorial](https://codebeautify.org/json-cheat-sheet). But it should be enough to simply edit the provided [xampleMin.level2.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/ViewModel/Lists/xampleMin.level2.json) and [xampleMax.level2.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/ViewModel/Lists/xampleMax.level2.json) examples. Especially if you use an editor like [JSON Editor Online](https://jsoneditoronline.org).
 - Anything in the `optional: { }` section is not strictly needed and can be left out. This is not a JSON rule. It is a Photo Club Hub choice. See this as “stuff you can add later after your first version works”. In the xampleMin file, we have reduced the optional fields to a suggested minimum set.
 </details></p>
 
-### Data fields about members
-<details><summary>Details (click to expand)</summary></p>
+### Invoervelden over clubleden
+<details><summary>Details (klik om uit te klappen)</summary></p>
 
 - Detailed, and thus somewhat more technical, information about all the fields in a `level2.json` file can be found in [README.md file section](https://github.com/vdhamer/Photo-Club-Hub/blob/main/.github/README.md#level-2-adding-members) (English)
 - Recommended data to provide about members
@@ -84,7 +84,7 @@
 </details></p>
 
 ### Meer over JSON Editor Online
-<details><summary>Details (click to expand)</summary></p>
+<details><summary>Details (klik om uit te klappen)</summary></p>
 <ul>
    <li> De software vindt volgorde binnen een `[ ]` paar (een lijst) of `{ }` paar (een samenstelling) volstrekt irrelevant. Bij het vergelijken van 2 versies van een bestand zal volgorde bij het vergellijke genegeerd worden. Nogal verassend, maar zo is bepaald in de JSON standaard.</li>
 </ul>
