@@ -41,12 +41,14 @@
       Dat webadres moet een plaatje zijn, maar mag op een willekeurige plek op het internet staan.
       Als `featuredImage` ontbreekt of het adres niet klopt, wordt er een oranje dummy plaatje getoond.
  
-6. Users of [JSON Editor Online](https://jsoneditoronline.org) can skip this step of **checking** the file.
-    - Why? JSON Editor Online generates warnings the moment the file is not a valid JSON file. A warning will tell you what's wrong and where the error is. The site's Tree and Table modes even prevent certain types of errors.
-    - But, if you are not using JSON Editor Online, you should **check** your JSON data by copying the JSON content into [www.jsonlint.com](https://www.jsonlint.com). This checks whether it is a valid JSON file.
-        - After you **fix** the first error, run JSONlint again until all errors are fixed. The JSON format (see below) is notoriously picky about matching commas, curly brackets, etc.
-        - You do _not_ need to worry about “white space” like tabs, indentation, and new lines. They are important for readability but don’t count as errors. The tools typically have a feature to reformat/beautify the JSON.
-    - We recommend listing the members in alphabetical order. This helps you detect duplicates. In the JSON convention and in JSON comparison tools, ordering doesn't matter at all. 
+6. Deze controlestap is alleen nodig als je [JSON Editor Online](https://jsoneditoronline.org) __niet__ gebruikt.
+    - Hoezo? JSON Editor Online doet al de belangrijkste JSON controles tijdens het aanpassen van het bestand. En voorkomt bepaalde soorten fouten.
+    - Controle kan door de inhoud van het bestand aan te bieden aan [www.jsonlint.com](https://www.jsonlint.com).
+      Dit controleert de basis regels voor een JSON bestand, en vermeld bij eventuele fouten dingen zoals regelnummer.
+        - JSONlint wijst je op de eerste fout. Na correctie (kan binnen JSONlint) moet blijken of er meer fouten zijn.
+        - Het JSON formaat let nogal nauw ten aanzien van comma's en openenen en sluiten van diverse haakjes.
+        - Daarentegen is JSON totaala niet geintereseerd in de hoeveelheid spaties, tabs of nieuwe regels. Indentering is dus belangrijk voor menselijke lezers, maar de software analyzeert de inhoud aan de hand van die comma's, `{ }` paren en `[ ]` paren.
+    - Tip: het is handig om de leden in alfabetische volgorde te vermelden. Dan zie je meteen als een lid 2x op de lijst staat.
 
 7. **Send** us your `level2.json` file for uploading and integration into the app. We will try to respond the same day. Our role is to keep an eye on technical correctness (and not, say, whether you got your member names right). If possible, we will send you a link to a web page you can integrate into your club's website - if you need that.
     - For early adopters, where we initially host the file for you, we will fill the optional `level2URL` field for you. It contains the web address where the `level2.json` file resides online.
@@ -81,6 +83,14 @@
        - `membershipStartDate`. This is currently displayed using Photo Club Hub HTML.
        - `keywords` indication the main genres per photographer. It is currently an [unfinished feature](https://github.com/vdhamer/Photo-Club-Hub/issues/465), and will be covered in a separate instruction file. You can already start providing this data. Best to stick to the keywords found in [this file](https://github.com/vdhamer/Photo-Club-Hub/issues/465).
 </details></p>
+
+### Meer over JSON Editor Online
+<details><summary>Details (click to expand)</summary></p>
+<ul>
+   <li> De software vindt volgorde binnen een `[ ]` paar (een lijst) of `{ }` paar (een samenstelling) volstrekt irrelevant. Bij het vergelijken van 2 versies van een bestand zal volgorde bij het vergellijke genegeerd worden. Nogal verassend, maar zo is bepaald in de JSON standaard.</li>
+</ul>
+
+</details></details>p>
 
 
 
