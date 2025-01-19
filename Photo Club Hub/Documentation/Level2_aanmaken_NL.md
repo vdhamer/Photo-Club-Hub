@@ -26,7 +26,7 @@
     - Tip: gebruik voor het aanpassen van het nieuwe bestand liefst [JSON Editor Online](https://jsoneditoronline.org). Dat programma is bedoeld om zogenaamde "JSON" textbestanden aan te maken, te openen en meer.
         - Alternatief: gebruik een kale editor zoals [Windows NotePad](https://nl.wikipedia.org/wiki/Notepad), [NotePad++](https://nl.wikipedia.org/wiki/Notepad%2B%2B) of [Sublime Text](https://nl.wikipedia.org/wiki/Sublime_Text).
 
-    - De 6 proefkonijnclubs kunnen de vereiste `town`, `fullName`, `nickName` velden en `latitude` en `longitude` velden uit bovenstaande tabel overnemen.
+    - De 6 proefkonijnclubs kunnen de vereiste `town`, `fullName`, `nickName`,`latitude` en `longitude` velden uit de bovenstaande tabel overnemen.
       Er zijn gegevens voor vrijwel alle clubs uit de regio te vinden in [root.level1.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/ViewModel/Lists/root.level1.json).
 
 5. Pas gegevens over de **clubleden** (`members`) aan: `givenName`, `infixName` en `familyName`.
