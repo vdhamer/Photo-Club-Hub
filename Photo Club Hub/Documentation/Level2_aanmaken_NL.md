@@ -48,7 +48,7 @@
         - JSONlint wijst je op de eerste fout. Na correctie (kan binnen JSONlint) moet blijken of er meer fouten zijn.
         - Het JSON formaat let nogal nauw ten aanzien van comma's en openenen en sluiten van diverse haakjes.
         - Daarentegen is JSON totaal niet geintereseerd in de hoeveelheid spaties, tabs of nieuwe regels. Indentering is dus belangrijk voor menselijke lezers, maar de software analyzeert de inhoud aan de hand van die comma's, `{ }` paren en `[ ]` paren.
-    - Tip: het is handig om de leden in alfabetische volgorde te vermelden. Dan zie je meteen als een lid 2x op de lijst staat.
+    - Tip: het is handig om de leden in alfabetische volgorde te vermelden. Dan valt het op als een lid dubbel op de lijst voorkomt.
 
 7. **Send** us your `level2.json` file for uploading and integration into the app. We will try to respond the same day. Our role is to keep an eye on technical correctness (and not, say, whether you got your member names right). If possible, we will send you a link to a web page you can integrate into your club's website - if you need that.
     - For early adopters, where we initially host the file for you, we will fill the optional `level2URL` field for you. It contains the web address where the `level2.json` file resides online.
