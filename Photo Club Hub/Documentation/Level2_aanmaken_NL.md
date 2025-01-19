@@ -89,7 +89,8 @@
    <li> De software vindt volgorde binnen een `[ ]` paar (een lijst) of `{ }` paar (een samenstelling) volstrekt irrelevant. Bij het vergelijken van 2 versies van een bestand zal volgorde bij het vergellijke genegeerd worden. Nogal verassend, maar zo is bepaald in de JSON standaard.</li>
 </ul>
 
-</details></details>p>
+</details></details></details</details></details>
+</p>
 
 
 
