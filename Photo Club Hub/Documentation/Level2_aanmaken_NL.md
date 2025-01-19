@@ -44,7 +44,7 @@
 6. Deze controlestap is alleen nodig als je [JSON Editor Online](https://jsoneditoronline.org) __niet__ gebruikt.
     - Dit omdat de JSON Editor Online al de belangrijkste JSON controles tijdens het aanpassen doet. En zelfs bepaalde soorten fouten voorkomt.
     - Controle kan door de inhoud van het bestand aan te bieden aan [www.jsonlint.com](https://www.jsonlint.com).
-      Dit controleert de basisregels voor een JSON bestand, en vermeld bij eventuele fouten dingen zoals regelnummer.
+      Dit controleert de basisregels voor een JSON bestand, en vermeld bij eventuele fouten en fout met bijbehorend regelnummer.
         - JSONlint wijst je op de eerste fout. Na correctie (kan binnen JSONlint) moet blijken of er meer fouten zijn.
         - Het JSON formaat let nogal nauw ten aanzien van comma's en openenen en sluiten van diverse haakjes.
         - Daarentegen is JSON totaala niet geintereseerd in de hoeveelheid spaties, tabs of nieuwe regels. Indentering is dus belangrijk voor menselijke lezers, maar de software analyzeert de inhoud aan de hand van die comma's, `{ }` paren en `[ ]` paren.
