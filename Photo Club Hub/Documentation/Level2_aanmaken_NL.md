@@ -34,7 +34,7 @@ Maar de allereerste keer wil je vast enkele dingen goed bekijken of uitproberen,
     - De spelling van clubleden let nauw. Ze worden namelijk gebruikt als identificatie - bijvoorbeeld om te bepalen dat dezelfde persoon lid is of was van 2 clubs. Wat de software betreft zijn zelfs "Jan de Vries" en "Jan De Vries" verschillende personen.
         - Peter van den Hamer voer je in als `"givenName": "Peter", "infixName": "van den", "familyName": "Hamer"`.
         - Max Verstappen voer je in als `"givenName": "Max", "infixName": "", "familyName": "Verstappen"` (`"givenName": "Max", "familyName": "Verstappen"` mag ook).
-    - De lijst met leden hoeft niet in een keer compleet te zijn. Ik zou zelf eerst een paar leden toevoegen om de kijken of alles lukt.
+    - Tip: De lijst met leden hoeft niet in een keer compleet te zijn. Ik zou zelf eerst een paar leden toevoegen om de kijken of alles lukt.
       En de lijst completer maken in een 2e versie. En b.v. eventuele moeilijke namen (na ruggespraak met b.v. ons) in een 3e versie.
  
 6. Users of [JSON Editor Online](https://jsoneditoronline.org) can skip this step of **checking** the file.
