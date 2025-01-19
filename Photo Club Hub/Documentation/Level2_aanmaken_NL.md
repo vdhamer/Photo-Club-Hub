@@ -4,7 +4,7 @@
    [xampleMax.level2.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/ViewModel/Lists/xampleMax.level2.json) ("Max") voorbeeldbestand.
    Min is een zijn een zo klein mogelijk voorbeeldbestand. Max benut alle beschikbare toeters en bellen.
 
-2. Maak een **kopie** van het [min](https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/Photo%20Club%20Hub/ViewModel/Lists/xampleMin.level2.json) bestand en geef het een andere naam.
+2. Maak een **kopie** van het [min](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/ViewModel/Lists/xampleMin.level2.json) bestand en geef het een andere naam.
    - Gebruik in de naam een korte versie (`nickName`) van de clubnaam.
      Als de club bijvoorbeeld "Fotogroep Scheveningen" heet, zou je het bestand `fgScheveningen.level2.json` kunnen noemen.
    - Onderstaande tabel bevat, voor de verwachte proefkonijnclubs, deze `nickName` plus enkele
@@ -28,7 +28,7 @@
 
 5. Pas gegevens over de **clubleden** (`members`) aan: `givenName`, `infixName` en `familyName`.
     - Tip: met de [JSON Editor Online](https://jsoneditoronline.org) kan je de lijst van clubleden als tabel zien en aanpassen via de "Table" view. Dan kan je dubbel-klikken op cellen die je wilt aanpassen, en regels toevoegen of verwijderen via het "__⋮__" menu.
-    - De spelling van clubleden let nauw. Ze worden namelijk gebruikt als identificatie - bijvoorbeeld om te bepalen dat dezelfde persoon lid is of was van 2 clubs. Wat de software betreft zijn "Jan de Vries" en "Jan Devries" dus verschillende personen.
+    - De spelling van clubleden let nauw. Ze worden namelijk gebruikt als identificatie - bijvoorbeeld om te bepalen dat dezelfde persoon lid is of was van 2 clubs. Wat de software betreft zijn zelfs "Jan de Vries" en "Jan De Vries" verschillende personen.
         - Peter van den Hamer voer je in als `"givenName": "Peter", "infixName": "van den", "familyName": "Hamer"`.
         - Max Verstappen voer je in als `"givenName": "Max", "infixName": "", "familyName": "Verstappen"` (`"givenName": "Max", "familyName": "Verstappen"` mag ook).
     - De lijst met leden hoeft niet in een keer compleet te zijn. Ik zou zelf eerst een paar leden toevoegen om de kijken of alles lukt.
