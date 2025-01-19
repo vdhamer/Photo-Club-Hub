@@ -1,7 +1,7 @@
 ## Een level2.json bestand aanmaken voor een club
 
 ⏱ Het aanmaken van een bestand met enkele testleden kan - zonder te racen - vast binnen de 5 minuten. \
-🕰 Maar de allereerste keer zal het wellicht 1 uur duren om enkele dingen goed te bekijken of uit te proberen. 
+🕰 Maar de allereerste keer zal het wellicht 1 uur duren als men dingen goed bekijkt of wil uitproberen. 
 
 1. **Download** het [xampleMin.level2.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/ViewModel/Lists/xampleMin.level2.json) ("Min") en het
    [xampleMax.level2.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/ViewModel/Lists/xampleMax.level2.json) ("Max") voorbeeldbestand.
