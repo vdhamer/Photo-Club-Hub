@@ -36,6 +36,9 @@ Maar de allereerste keer wil je vast enkele dingen goed bekijken of uitproberen,
         - Max Verstappen voer je in als `"givenName": "Max", "infixName": "", "familyName": "Verstappen"` (`"givenName": "Max", "familyName": "Verstappen"` mag ook).
     - Tip: De lijst met leden hoeft niet in een keer compleet te zijn. Ik zou zelf eerst een paar leden toevoegen om de kijken of alles lukt.
       En de lijst completer maken in een 2e versie. En b.v. eventuele moeilijke namen (na ruggespraak met b.v. ons) in een 3e versie.
+    - Het `featuredImage` veld mag eventueel verwijderd worden, of later aangepast worden.
+       Het bevat een webadres van een foto gemaakt door de fotograaf (en dus niet een portret van de fotograaf).
+       `featuredImage` wordt betrekkelijk klein weergegeven. Als het ontbreekt, wordt er een oranje dummy plaatje getoond.
  
 6. Users of [JSON Editor Online](https://jsoneditoronline.org) can skip this step of **checking** the file.
     - Why? JSON Editor Online generates warnings the moment the file is not a valid JSON file. A warning will tell you what's wrong and where the error is. The site's Tree and Table modes even prevent certain types of errors.
