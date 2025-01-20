@@ -45,7 +45,7 @@
       Als `featuredImage` ontbreekt of het adres niet klopt, wordt er een oranje dummy plaatje getoond.
  
 6. Deze controlestap is alleen nodig als je [JSON Editor Online](https://jsoneditoronline.org) __niet__ gebruikt.
-    - Dit omdat de JSON Editor Online al de belangrijkste JSON controles tijdens het aanpassen doet. En zelfs bepaalde soorten fouten voorkomt.
+    - Dit omdat de [JSON Editor Online](https://jsoneditoronline.org) al de belangrijkste JSON controles tijdens het aanpassen doet. En zelfs bepaalde soorten fouten voorkomt.
     - Controle kan door de inhoud van het bestand aan te bieden aan [www.jsonlint.com](https://www.jsonlint.com).
       Dit controleert de basisregels voor een JSON bestand, en omschrijft de eventuele fouten met bijbehorend regelnummer.
         - JSONlint wijst je op de eerste fout. Na correctie (kan binnen JSONlint) moet blijken of er meer fouten zijn.
