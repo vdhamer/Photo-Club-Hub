@@ -2,7 +2,7 @@
 
 > 🕚 Wij schatten dat het de allereerste keer aanmaken van een Level2 bestand met enkele testleden 1 uur kost.
 > Die eenmalige investering is nodig om te ontdekken hoe met het gereedschap om te gaan.
-> De daaropvolgende aanpassingen en uitbreiding van de gegevens zullen veel sneller (minuten?) duren. 
+> De daaropvolgende aanpassingen en uitbreiding van de gegevens zullen vermoedelijk veel sneller (minuten?) gaan. 
 
 1. **Download** het [xampleMin.level2.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/ViewModel/Lists/xampleMin.level2.json) ("Min") en het
    [xampleMax.level2.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/ViewModel/Lists/xampleMax.level2.json) ("Max") voorbeeldbestand.
