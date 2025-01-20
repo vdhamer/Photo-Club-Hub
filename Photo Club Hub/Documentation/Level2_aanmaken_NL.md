@@ -50,9 +50,9 @@
     - Controle van de inhoud van het bestand kan ook door de inhoud te kopiëren naar [www.jsonlint.com](https://www.jsonlint.com).
       Dit controleert de diverse JSON basisregels, en benoemt de eventuele fouten met bijbehorend regelnummer.
         - JSONlint wijst je op de eerste fout. Na correctie (kan binnen JSONlint) moet blijken of er meer fouten zijn.
-        - Het JSON formaat let nogal nauw ten aanzien van comma's en openenen en sluiten van haakjes en aanhalingstekens. Vandaar dat we begonnen met een voorbeeldbestand.
+        - Het JSON formaat let nogal nauw ten aanzien van komma's en openen en sluiten van haakjes en aanhalingstekens. Vandaar dat we begonnen met een voorbeeldbestand.
         - Daarentegen is JSON totaal niet kieskeurig wat betreft de hoeveelheid spaties, tabs of nieuwe regels.
-          Indentering is dus belangrijk voor menselijke lezers, maar de software analyzeert de inhoud aan de hand van de leestekens.
+          Indentering is dus belangrijk voor menselijke lezers, maar de software analyseert de inhoud aan de hand van de leestekens.
     - Tip: het is handig om de leden in alfabetische volgorde te vermelden: dan valt het op als een lid dubbel op de lijst voorkomt.
 
 6. **Stuur** ons het gemaakte `level2.json` bestand. Dat mag ook bij tussenversies. Wij zullen proberen binnen 24 uur te reageren (nodig voor de volgende stap).
@@ -61,7 +61,7 @@
       Op termijn komen er extra instructies hoe een club _zelf_ zijn Level2 ledenbestand op een eigen (b.v. Wordpress) website kan zetten.
       Dan kan een club zijn Level2 bestand aanpassen zonder via ons te gaan.
 
-7. **Controlleer** of alles naar wens werkt via de [Photo Club Hub](https://www.fotobond-brabantoost.nl/nieuws/fotoclub-hub-app/) iOS app.
+7. **Controleer** of alles naar wens werkt via de [Photo Club Hub](https://www.fotobond-brabantoost.nl/nieuws/fotoclub-hub-app/) iOS app.
 Of via een door ons [gegenereerde](https://github.com/vdhamer/Photo-Club-Hub-HTML/blob/main/.github/README.md) HTML pagina als geen iPhone of iPad voorhanden is.
 
 ## Bonus informatie
