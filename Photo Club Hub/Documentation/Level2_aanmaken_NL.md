@@ -94,7 +94,7 @@ Het levert een voorbeeldplaatje op van het werk van een clublid.
    - Op termijn is het vast de moeite waard om nog enkele velden in te vullen:
        - `website` is het webaddress van een portfolio website van de fotograaf. Voorbeeld: een site op [Glass.photo](http://glass.photo/vdhamer) dat geen direkt verband heeft met een specifieke club.
          De iOS app en HTML generator maken met dit veld een klikbare link naar deze website.
-       - `roles` bevat eventuele bestuursfuncties van het lid binnen de club. Een lid kan meer dan 1 bestuurfunctie hebben.
+       - `roles` bevat eventuele bestuursfuncties van het lid binnen de club. Een lid kan meerdere bestuurfuncties hebben.
            - Men hoeft niet te vermelden dat een lid een bestuursfunctie _niet_ heeft.
              Invoer zoals '"isSecretary": false` kan nodig zijn om te expliciet aan te geven dat iemand die vroeger secretaris was dat niet meer is.
        - `membershipStartDate`. Dit veld wordt momenteel alleen gebruikt in _Photo Club Hub HTML_ en niet in de iOS app.
