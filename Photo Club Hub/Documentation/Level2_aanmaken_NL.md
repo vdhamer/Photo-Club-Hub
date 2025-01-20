@@ -12,7 +12,7 @@
    - Gebruik in de naam een korte versie (`nickName`) van de clubnaam.
      Als de club bijvoorbeeld "Fotogroep Scheveningen" heet, zou je het bestand `fgScheveningen.level2.json` kunnen noemen.
    - Onderstaande tabel bevat, voor de verwachte proefkonijnclubs, deze `nickName` plus enkele andere velden die straks nodig zijn.
-     Dan hoef je het niet zelf op te zoeken in de [lijst](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/ViewModel/Lists/root.level1.json) met clubs in Brabant Oost.
+     Dan hoef je die velden niet zelf op te zoeken in de [lijst](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/ViewModel/Lists/root.level1.json) met clubs in Brabant Oost.
 
       | `town`  | `fullName` | `nickName` | `latitude` | `longitude` | huidig bestand |
       | -----  | ---------| ----- | :-----: | :-----: | :-----: |
