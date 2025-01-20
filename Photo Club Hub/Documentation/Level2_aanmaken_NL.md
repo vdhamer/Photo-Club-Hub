@@ -30,7 +30,7 @@
     - De 6 proefkonijnclubs kunnen de vereiste `town`, `fullName`, `nickName`,`latitude` en `longitude` velden uit de bovenstaande tabel overnemen.
       Er zijn gegevens voor vrijwel alle clubs uit de regio te vinden in [root.level1.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/ViewModel/Lists/root.level1.json).
 
-5. Pas gegevens over de **clubleden** (`members`) aan: `givenName`, `infixName` en `familyName`.
+4. Pas gegevens over de **clubleden** (`members`) aan: `givenName`, `infixName` en `familyName`.
     - Tip: met de [JSON Editor Online](https://jsoneditoronline.org) kan je de lijst van clubleden als tabel zien en aanpassen via de "Table" view. Dan kan je dubbel-klikken op cellen die je wilt aanpassen, en regels toevoegen of verwijderen via het "__⋮__" menu.
     - De spelling van de namen van clubleden let nauw.
       De namen worden namelijk gebruikt als identificatie - bijvoorbeeld om te bepalen of een bepaald lid ook voorkomt als (ex)lid van een andere club.
@@ -44,24 +44,24 @@
       Dat webadres moet een plaatje zijn, maar mag op een willekeurige plek op het internet staan.
       Als `featuredImage` ontbreekt of het adres niet klopt, wordt er een oranje dummy plaatje getoond.
  
-6. Deze controlestap is alleen nodig als je [JSON Editor Online](https://jsoneditoronline.org) __niet__ gebruikt.
-    - Dit omdat de [JSON Editor Online](https://jsoneditoronline.org) de belangrijkste JSON controles al uitvoert tijdens de tekstaanpassingen zelf.
-      Het kan, afhankelijk hoe je het gebruikt, sommige fouten zelfs compleet uitsluiten.
+5. Deze controlestap is alleen nodig als je [JSON Editor Online](https://jsoneditoronline.org) __niet__ gebruikt.
+    - Er is bij [JSON Editor Online](https://jsoneditoronline.org) geen aparte JSON controle nodig.
+      Het controleert namelijk voordurend of de tekst voldoet aan de JSON regels en sommige sommige fouten worden zelfs compleet voorkomen.
     - Controle van de inhoud van het bestand kan ook door de inhoud te kopiëren naar [www.jsonlint.com](https://www.jsonlint.com).
       Dit controleert de diverse JSON basisregels, en benoemt de eventuele fouten met bijbehorend regelnummer.
         - JSONlint wijst je op de eerste fout. Na correctie (kan binnen JSONlint) moet blijken of er meer fouten zijn.
         - Het JSON formaat let nogal nauw ten aanzien van comma's en openenen en sluiten van haakjes en aanhalingstekens. Vandaar dat we begonnen met een voorbeeldbestand.
-        - Daarentegen is JSON totaal ongevoelig voor de hoeveelheid spaties, tabs of nieuwe regels.
-          Indentering is dus belangrijk voor menselijke lezers, maar de software analyzeert de inhoud aan de hand van die comma's, `{ }` paren en `[ ]` paren.
-    - Tip: het is handig om de leden in alfabetische volgorde te vermelden. Dan valt het op als een lid dubbel voorkomt op de lijst.
+        - Daarentegen is JSON totaal niet kieskeurig wat betreft de hoeveelheid spaties, tabs of nieuwe regels.
+          Indentering is dus belangrijk voor menselijke lezers, maar de software analyzeert de inhoud aan de hand van de leestekens.
+    - Tip: het is handig om de leden in alfabetische volgorde te vermelden: dan valt het op als een lid dubbel op de lijst voorkomt.
 
-7. **Stuur** ons het gemaakte `level2.json` bestand. Dat mag ook bij tussenversies. Wij proberen de gegevens binnen 24 uur online te zetten (nodig voor de volgende stap).
-    - Onze rol is om een de technische juistheid te bewaken en om hulp te bieden. Wij kunnen niet controlleren of de aangeleverde ledenlijst accuraat is en of de namen precies kloppen.
+6. **Stuur** ons het gemaakte `level2.json` bestand. Dat mag ook bij tussenversies. Wij zullen proberen binnen 24 uur te reageren (nodig voor de volgende stap).
+    - Onze rol is om een de technische juistheid te bewaken en om hulp te bieden. Wij kunnen niet zien of de aangeleverde ledenlijst accuraat is of zien of alles juist gespeld is.
     - Voor de proefkonijnclubs zullen we het bestand op onze eigen webserver zetten en het bijbehorende adres (URL) terugmelden.
-      Op termijn komen er instructies hoe een club _zelf_ zijn Level2 ledenbestand op een eigen (b.v. Wordpress) website kan zetten.
-      Dan kan een club zijn Level2 bestand aanpassen zonder onze hulp.
+      Op termijn komen er extra instructies hoe een club _zelf_ zijn Level2 ledenbestand op een eigen (b.v. Wordpress) website kan zetten.
+      Dan kan een club zijn Level2 bestand aanpassen zonder via ons te gaan.
 
-9. **Controlleer** of alles naar wens werkt via de [Photo Club Hub](https://www.fotobond-brabantoost.nl/nieuws/fotoclub-hub-app/) iOS app.
+7. **Controlleer** of alles naar wens werkt via de [Photo Club Hub](https://www.fotobond-brabantoost.nl/nieuws/fotoclub-hub-app/) iOS app.
 Of via een door ons [gegenereerde](https://github.com/vdhamer/Photo-Club-Hub-HTML/blob/main/.github/README.md) HTML pagina als geen iPhone of iPad voorhanden is.
 
 ## Bonus informatie
