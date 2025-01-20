@@ -4,7 +4,7 @@
 > Die eenmalige investering is nodig om te ontdekken hoe met het gereedschap om te gaan.
 > De daaropvolgende aanpassingen en uitbreiding van de gegevens zullen vermoedelijk veel sneller (minuten?) gaan. 
 
-1. **Download** het [xampleMin.level2.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/ViewModel/Lists/xampleMin.level2.json) ("Min") en het
+1. Maak een locale kopie van het [xampleMin.level2.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/ViewModel/Lists/xampleMin.level2.json) ("Min") en het
    [xampleMax.level2.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/ViewModel/Lists/xampleMax.level2.json) ("Max") voorbeeldbestand.
    _Min_ is een zo klein mogelijk voorbeeldbestand. _Max_ benut alle beschikbare toeters en bellen.
 
