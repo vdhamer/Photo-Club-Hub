@@ -6,7 +6,7 @@
 
 1. Maak desgewenst een locale kopie van het [xampleMin.level2.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/ViewModel/Lists/xampleMin.level2.json) ("Min") en het
    [xampleMax.level2.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/ViewModel/Lists/xampleMax.level2.json) ("Max") voorbeeldbestand.
-   _Min_ is een zo klein mogelijk voorbeeldbestand. _Max_ benut alle beschikbare toeters en bellen.
+   _Min_ is een zo klein mogelijk voorbeeldbestand. _Max_ benut daarentegen alle beschikbare toeters en bellen.
 
 2. Maak een **kopie** van het [Min](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/ViewModel/Lists/xampleMin.level2.json) bestand en verander de naam van het bestand:
    - Gebruik in de naam een korte versie (`nickName`) van de clubnaam.
