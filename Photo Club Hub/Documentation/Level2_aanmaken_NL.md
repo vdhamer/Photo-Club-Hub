@@ -46,7 +46,7 @@
  
 5. Deze controlestap is alleen nodig als je [JSON Editor Online](https://jsoneditoronline.org) __niet__ gebruikt.
     - Er is bij [JSON Editor Online](https://jsoneditoronline.org) geen aparte JSON controle nodig.
-      Het controleert namelijk voordurend of de tekst voldoet aan de JSON regels en sommige sommige fouten worden zelfs compleet voorkomen.
+      Het controleert namelijk voortdurend of de tekst voldoet aan de JSON regels en sommige fouten worden zelfs compleet voorkomen.
     - Controle van de inhoud van het bestand kan ook door de inhoud te kopiëren naar [www.jsonlint.com](https://www.jsonlint.com).
       Dit controleert de diverse JSON basisregels, en benoemt de eventuele fouten met bijbehorend regelnummer.
         - JSONlint wijst je op de eerste fout. Na correctie (kan binnen JSONlint) moet blijken of er meer fouten zijn.
