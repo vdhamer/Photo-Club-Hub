@@ -32,7 +32,9 @@
 
 5. Pas gegevens over de **clubleden** (`members`) aan: `givenName`, `infixName` en `familyName`.
     - Tip: met de [JSON Editor Online](https://jsoneditoronline.org) kan je de lijst van clubleden als tabel zien en aanpassen via de "Table" view. Dan kan je dubbel-klikken op cellen die je wilt aanpassen, en regels toevoegen of verwijderen via het "__⋮__" menu.
-    - De spelling van clubleden let nauw. Ze worden namelijk gebruikt als identificatie - bijvoorbeeld om te bepalen dat dezelfde persoon lid is of was van 2 clubs. Wat de software betreft zijn zelfs "Jan de Vries" en "Jan De Vries" verschillende personen.
+    - De spelling van de namen van clubleden let nauw.
+      De namen worden namelijk gebruikt als identificatie - bijvoorbeeld om te bepalen of iemand lid is (of was) van meer dan één club.
+      Wat de software betreft zijn zelfs "Jan de Vries" en "Jan De Vries" verschillende personen.
         - Peter van den Hamer voer je in als `"givenName": "Peter", "infixName": "van den", "familyName": "Hamer"`.
         - Max Verstappen voer je in als `"givenName": "Max", "infixName": "", "familyName": "Verstappen"` (`"givenName": "Max", "familyName": "Verstappen"` mag ook).
     - Tip: De lijst met leden hoeft niet in een keer compleet te zijn. Ik zou zelf eerst een paar leden toevoegen om de kijken of alles lukt.
