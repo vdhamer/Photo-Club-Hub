@@ -62,7 +62,7 @@
       En moeten wij alleen het adres van het bestand weten (voor de door ons onderhouden Level1 bestand).
 
 9. **Controlleer** of alles naar wens werkt via de [Photo Club Hub](https://www.fotobond-brabantoost.nl/nieuws/fotoclub-hub-app/) iOS app.
-Of via een door ons gegenereerde HTML pagina als geen iPhone of iPad voorhanden is.
+Of via een door ons [gegenereerde](https://github.com/vdhamer/Photo-Club-Hub-HTML/blob/main/.github/README.md) HTML pagina als geen iPhone of iPad voorhanden is.
 
 ## Bonus informatie
 
