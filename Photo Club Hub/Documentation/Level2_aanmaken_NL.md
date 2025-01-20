@@ -1,6 +1,6 @@
 ## Een level2.json bestand aanmaken voor een club
 
-> 🕚 Wij schatten dat het de allereerste keer aanmaken van een Level2 bestand (gevuld met enkele testleden) 1 uur kost.
+> 🕚 Wij schatten dat het de allereerste keer aanmaken van een Level2 bestand (gevuld met enkele testleden) 1 uur kost. \
 > Die eenmalige investering is nodig om te ontdekken hoe met het gereedschap om te gaan.
 > De daaropvolgende aanpassingen en uitbreiding van de gegevens zullen vermoedelijk veel sneller (minuten?) gaan. 
 
