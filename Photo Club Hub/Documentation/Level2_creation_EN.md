@@ -59,7 +59,7 @@
        - American style suffixes like `Jr.` can be left out. Alternatively, if you prefer them to be visible, you can insert them at the end of the `familyName`. 
        - If in doubt, temporarily leave out a member with a tricky name (like François) until you have decided how to deal with this. This avoids seeing the person twice with a slightly different name. The app is actually supposed to support the full UniCode character set. But not everybody can read Mandarin or modern Greek.
    - For now, you can leave `Level3URL` empty (it is for later: Level 3)
-   - You probably want to fill in `featuredImageURL` soon, as found the `xampleMin.level2.json` file. It gives you a nice sample picture next to the club member's name.
+   - You probably want to fill in `featuredImage` soon, as found the `xampleMin.level2.json` file. It gives you a nice sample picture next to the club member's name.
    - Later you may want to add
        - a `website` address (a portfolio website managed by the photographer, separately from their club portfolio). This shows up in the app and via Photo Club Hub HTML as a clickable link.
        - any special roles of the member such as `"isChairman": true`. These are displayed in the app and via Photo Club Hub HTML.
