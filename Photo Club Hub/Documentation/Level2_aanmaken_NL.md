@@ -94,13 +94,13 @@ Het levert een voorbeeldplaatje op van het werk van een clublid.
    - Op termijn is het vast de moeite waard om nog enkele velden in te vullen:
        - `website` is het webaddress van een portfolio website van de fotograaf. Voorbeeld: een site op [Glass.photo](http://glass.photo/vdhamer) dat geen direkt verband heeft met een specifieke club.
          De iOS app en HTML generator maken met dit veld een klikbare link naar deze website.
-       - `roles` bevat eventuele bestuursfuncties van het lid binnen de club. Een lid kan meer dan 1 bestuurfunctie hebben. Men hoeft niet te vermelden dat een lid een bestuursfunctie _niet_ heeft.
-         Invoer zoals '
-
-
-any special roles of the member such as `"isChairman": true`. These are displayed in the app and via Photo Club Hub HTML.
-       - `membershipStartDate`. This is currently displayed using Photo Club Hub HTML.
-       - `keywords` indication the main genres per photographer. It is currently an [unfinished feature](https://github.com/vdhamer/Photo-Club-Hub/issues/465), and will be covered in a separate instruction file. You can already start providing this data. Best to stick to the keywords found in [this file](https://github.com/vdhamer/Photo-Club-Hub/issues/465).
+       - `roles` bevat eventuele bestuursfuncties van het lid binnen de club. Een lid kan meer dan 1 bestuurfunctie hebben.
+           - Men hoeft niet te vermelden dat een lid een bestuursfunctie _niet_ heeft.
+             Invoer zoals '"isSecretary": false` kan nodig zijn om te expliciet aan te geven dat iemand die vroeger secretaris was dat niet meer is.
+       - `membershipStartDate`. Dit veld wordt momenteel alleen gebruikt in _Photo Club Hub HTML_ en niet in de iOS app.
+       - `keywords` (trefwoorden) geeft de hoofdfocus van de fotograaf aan. Er komen tzt aparte instructies voor dit veld.
+           - Het programmeerwerk is nog niet af, maar de gegevens kunnen als in het `level2.json` bestand alvast opgenomen worden.
+             Hou het voorlopig op de trefwoorden die voorkomen in [deze lijst](https://github.com/vdhamer/Photo-Club-Hub/issues/465).
 </details></p>
 
 ### Meer over JSON Editor Online
