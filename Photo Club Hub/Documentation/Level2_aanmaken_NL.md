@@ -98,7 +98,7 @@ Het zijn dus velden die je bij een tekstaanpassing alsnog kan toevoegen, bijvoor
 </details></p>
 
 ### Meer over JSON Editor Online
-<details><summary>Details (klik om uit te klappen)</summary>
+<details><summary>Details (klik om uit te klappen)</summary></p>
 
 - In JSON wordt de volgorde van de elementen binnen een `[ ]` paar (=lijst) of `{ }` paar (=samenstelling) genegeerd. Bij het vergelijken van 2 versies van een bestand in [JSON Editor Online](https://jsoneditoronline.org) zal dus een verschil in volgorde niet als verschil in inhoud opgevat worden.</li>
 
