@@ -74,7 +74,7 @@ Een overzicht van JSON zelf: [tutorial](https://codebeautify.org/json-cheat-shee
 [xampleMin.level2.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/ViewModel/Lists/xampleMin.level2.json) en [xampleMax.level2.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/ViewModel/Lists/xampleMax.level2.json) volgen.
 Vooral bij gebruikt van [JSON Editor Online](https://jsoneditoronline.org) is de kans op fouten klein.
 - Alle informatie tussen de haakjes in het `optional: { }` gedeelte van het bestand mag eventueel weggelaten worden. Dat is geen JSON conventie, maar een keus voor bestanden waar het hier om gaat. 
-Het zijn dus velden die je alsnog bij een tekstaanpassing kan toevoegen, bijvoorbeeld om de voordelen van de gegevens leveren inmiddels duidelijk zijn, of omdat de gegevens ondertussen beschikbaar kwamen.
+Het zijn dus velden die je alsnog bij een tekstaanpassing kan toevoegen, bijvoorbeeld omdat de voordelen van de gegevens leveren inmiddels duidelijk zijn, of omdat de gegevens ondertussen beschikbaar kwamen.
 </details></p>
 
 ### Invoervelden over clubleden
