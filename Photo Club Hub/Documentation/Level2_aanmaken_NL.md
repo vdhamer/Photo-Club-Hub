@@ -47,20 +47,19 @@
 6. Deze controlestap is alleen nodig als je [JSON Editor Online](https://jsoneditoronline.org) __niet__ gebruikt.
     - Dit omdat de [JSON Editor Online](https://jsoneditoronline.org) de belangrijkste JSON controles al uitvoert tijdens de tekstaanpassingen zelf.
       Het kan, afhankelijk hoe je het gebruikt, sommige fouten zelfs compleet uitsluiten.
-    - Controle kan door de inhoud van het bestand aan te bieden aan [www.jsonlint.com](https://www.jsonlint.com).
-      Dit controleert de basisregels voor een JSON bestand, en omschrijft de eventuele fouten met bijbehorend regelnummer.
+    - Controle van de inhoud van het bestand kan ook door de inhoud te kopiëren naar [www.jsonlint.com](https://www.jsonlint.com).
+      Dit controleert de diverse JSON basisregels, en benoemt de eventuele fouten met bijbehorend regelnummer.
         - JSONlint wijst je op de eerste fout. Na correctie (kan binnen JSONlint) moet blijken of er meer fouten zijn.
-        - Het JSON formaat let nogal nauw ten aanzien van comma's en openenen en sluiten van diverse haakjes.
-        - Daarentegen is JSON totaal ongevoelig voor de hoeveelheid spaties, tabs of nieuwe regels. Indentering is dus belangrijk voor menselijke lezers, maar de software analyzeert de inhoud aan de hand van die comma's, `{ }` paren en `[ ]` paren.
-    - Tip: het is handig om de leden in alfabetische volgorde te vermelden. Dan valt het op als een lid dubbel op de lijst voorkomt.
+        - Het JSON formaat let nogal nauw ten aanzien van comma's en openenen en sluiten van haakjes en aanhalingstekens. Vandaar dat we begonnen met een voorbeeldbestand.
+        - Daarentegen is JSON totaal ongevoelig voor de hoeveelheid spaties, tabs of nieuwe regels.
+          Indentering is dus belangrijk voor menselijke lezers, maar de software analyzeert de inhoud aan de hand van die comma's, `{ }` paren en `[ ]` paren.
+    - Tip: het is handig om de leden in alfabetische volgorde te vermelden. Dan valt het op als een lid dubbel voorkomt op de lijst.
 
 7. **Stuur** ons het gemaakte `level2.json` bestand. Dat mag ook bij tussenversies. Wij proberen de gegevens binnen 24 uur online te zetten (nodig voor de volgende stap).
-    - Onze rol is vooralsnog om een de technische juistheid te bewaken en hulp te bieden. Wij gaan niet controlleren of de namen van leden kloppen (dat weten wij niet, moet je zelf doen).
-    - Voor de proefkonijnclubs zullen we het bestand op onze eigen webserver zetten.
-      En dus het adres (URL) van het bestand aan de club terugsturen.
-      Op termijn volgen er instructies hoe een club zelf zijn Level2 ledenbestand op een eigen (b.v. Wordpress) website kan zetten.
-      Dan kan een club zijn bestand wijzigingen zonder dat het via ons gaat.
-      En moeten wij alleen het adres van het bestand weten (voor de door ons onderhouden Level1 bestand).
+    - Onze rol is om een de technische juistheid te bewaken en om hulp te bieden. Wij kunnen niet controlleren of de aangeleverde ledenlijst accuraat is en of de namen precies kloppen.
+    - Voor de proefkonijnclubs zullen we het bestand op onze eigen webserver zetten en het bijbehorende adres (URL) terugmelden.
+      Op termijn komen er instructies hoe een club _zelf_ zijn Level2 ledenbestand op een eigen (b.v. Wordpress) website kan zetten.
+      Dan kan een club zijn Level2 bestand aanpassen zonder onze hulp.
 
 9. **Controlleer** of alles naar wens werkt via de [Photo Club Hub](https://www.fotobond-brabantoost.nl/nieuws/fotoclub-hub-app/) iOS app.
 Of via een door ons [gegenereerde](https://github.com/vdhamer/Photo-Club-Hub-HTML/blob/main/.github/README.md) HTML pagina als geen iPhone of iPad voorhanden is.
@@ -70,8 +69,12 @@ Of via een door ons [gegenereerde](https://github.com/vdhamer/Photo-Club-Hub-HTM
 ### Het `Level2.json` formaat
 <details><summary>Details (klik om uit te klappen)</summary></p>
 
-- [JSON](https://en.wikipedia.org/wiki/JSON) is a very commonly used international standard, but you often won't see it directly. To learn more, find a [tutorial](https://codebeautify.org/json-cheat-sheet). But it should be enough to simply edit the provided [xampleMin.level2.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/ViewModel/Lists/xampleMin.level2.json) and [xampleMax.level2.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/ViewModel/Lists/xampleMax.level2.json) examples. Especially if you use an editor like [JSON Editor Online](https://jsoneditoronline.org).
-- Anything in the `optional: { }` section is not strictly needed and can be left out. This is not a JSON rule. It is a Photo Club Hub choice. See this as “stuff you can add later after your first version works”. In the xampleMin file, we have reduced the optional fields to a suggested minimum set.
+- [JSON](https://en.wikipedia.org/wiki/JSON) is zeer bekende internationale standaard in de IT wereld. Al ziet een gebruiker dit vaak niet omdat het vaak voor gegevensuitsisseling tussen computers gebruikt wordt.
+Een overzicht van JSON zelf: [tutorial](https://codebeautify.org/json-cheat-sheet). In ons geval is zou het voldoende moeten zijn om nauwgezet de voorbeelden in
+[xampleMin.level2.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/ViewModel/Lists/xampleMin.level2.json) en [xampleMax.level2.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/ViewModel/Lists/xampleMax.level2.json) volgen.
+Vooral bij gebruikt van [JSON Editor Online](https://jsoneditoronline.org) is de kans op fouten klein.
+- Alle informatie tussen de haakjes in het `optional: { }` gedeelte van het bestand mag eventueel weggelaten worden. Dat is geen JSON conventie, maar een keus voor bestanden waar het hier om gaat. 
+Het zijn dus velden die je alsnog bij een tekstaanpassing kan toevoegen, bijvoorbeeld om de voordelen van de gegevens leveren inmiddels duidelijk zijn, of omdat de gegevens ondertussen beschikbaar kwamen.
 </details></p>
 
 ### Invoervelden over clubleden
