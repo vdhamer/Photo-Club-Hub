@@ -31,7 +31,7 @@
       Er zijn gegevens voor vrijwel alle clubs uit de regio te vinden in [root.level1.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/ViewModel/Lists/root.level1.json).
 
 4. Pas gegevens over de **clubleden** (`members`) aan: `givenName`, `infixName` en `familyName`.
-    - Tip: met de [JSON Editor Online](https://jsoneditoronline.org) kan je de lijst van clubleden als tabel zien en aanpassen via de "Table" view. Dan kan je dubbel-klikken op cellen die je wilt aanpassen, en regels toevoegen of verwijderen via het "__⋮__" menu.
+    - Tip: met de [JSON Editor Online](https://jsoneditoronline.org) kan je de lijst van clubleden als tabel zien en aanpassen via de "Table" view. Dan kan je dubbelklikken op cellen die je wilt aanpassen, en regels toevoegen of verwijderen via het "__⋮__" menu.
     - De spelling van de namen van clubleden let nauw.
       De namen worden namelijk gebruikt als identificatie - bijvoorbeeld om te bepalen of een bepaald lid ook voorkomt als (ex)lid van een andere club.
       Wat de software betreft zijn zelfs "Jan de Vries" en "Jan De Vries" verschillende personen.
