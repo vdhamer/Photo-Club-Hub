@@ -43,7 +43,7 @@
                     "isTreasurer": false,
                     "isSecretary": false,
                     "isAdmin": false,
-                    "isOthere": false
+                    "isOther": false
                 },
                 "status": {
                     "isDeceased": true,
