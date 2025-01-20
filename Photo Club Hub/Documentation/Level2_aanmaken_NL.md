@@ -38,7 +38,7 @@
         - Peter van den Hamer voer je in als `"givenName": "Peter", "infixName": "van den", "familyName": "Hamer"`.
         - Max Verstappen voer je in als `"givenName": "Max", "infixName": "", "familyName": "Verstappen"` (`"givenName": "Max", "familyName": "Verstappen"` mag ook).
     - Tip: De lijst met leden hoeft niet in een keer compleet te zijn. Ik zou zelf eerst een paar leden toevoegen om de kijken of alles lukt.
-      En de lijst completer maken in een 2e versie. En b.v. eventuele moeilijke namen (na ruggespraak met b.v. ons) in een 3e versie.
+      En de lijst completer maken in een 2e versie. En b.v. eventuele moeilijke namen (b.v. na ruggespraak met ons) in een 3e versie.
     - Het `featuredImage` veld mag later aangepast worden.
       Het bevat een webadres (URL) van een foto gemaakt door de fotograaf.
       Dat webadres moet een plaatje zijn, maar mag op een willekeurige plek op het internet staan.
