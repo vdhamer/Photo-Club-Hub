@@ -13,8 +13,7 @@ import SwiftyJSON // for JSON()
 private let dataSourcePath: String = """
                                      https://raw.githubusercontent.com/\
                                      vdhamer/Photo-Club-Hub/\
-                                     main/\
-                                     Photo%20Club%20Hub/ViewModel/Lists/
+                                     main/JSON/
                                      """
 private let dataSourceFile: String = "root"
 private let fileSubType = "level1" // level1 is part of file name, not the extension
