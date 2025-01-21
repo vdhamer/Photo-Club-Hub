@@ -1,0 +1,69 @@
+{
+    "club":
+        {
+            "idPlus": {
+                "town": "Amsterdam",
+                "fullName": "Xample Club With Maximal Data",
+                "nickName": "XampleMax"
+            },
+            "optional": {
+                "coordinates": {
+                    "latitude": 52.37312,
+                    "longitude": 4.89237
+                },
+                "website": "https://www.example.com",
+                "wikipedia": "https://en.wikipedia.org/wiki/Rotterdam_City_Hall",
+                "level2URL": "https://www.example.com/XampleMax.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "A remark here about the club will overrule any remark provided in level1.json file."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Deze beschrijving van de club vervangt een eventuele beschrijving in root.level1.json"
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 9999
+                }
+            }
+        },
+    "members": [
+        {
+            "name": {
+                "givenName": "Max",
+                "infixName": "van",
+                "familyName": "Amsterdam"
+            },
+            "optional": {
+                "roles": {
+                    "isChairman": true,
+                    "isViceChairman": false,
+                    "isTreasurer": false,
+                    "isSecretary": false,
+                    "isAdmin": false,
+                    "isOther": false
+                },
+                "status": {
+                    "isDeceased": true,
+                    "isFormerMember": true,
+                    "isHonoraryMember": false,
+                    "isMentor": false,
+                    "isPropectiveMember": false
+                },
+                "birthday": "9999-10-18",
+                "website": "https://glass.photo/vdhamer",
+                "photographerImage": "http://www.vdhamer.com/wp-content/uploads/2022/07/cropped-2006_Norway_276_SSharp1_4.jpg",
+                "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg",
+                "level3URL": "https://www.example.com/FG_deGender/Peter_van_den_Hamer.level3.json",
+                "membershipStartDate": "2020-01-01",
+                "membershipEndDate": "2020-12-31",
+                "keywords": [ "Landscape", "Travel", "Minimal" ],
+                "nlSpecific": {
+                    "fotobondNumber": 1620110
+                }
+            }
+        }
+    ]
+}
