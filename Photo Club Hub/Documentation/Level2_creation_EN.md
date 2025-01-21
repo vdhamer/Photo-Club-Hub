@@ -1,22 +1,22 @@
 ## Creating a new level2.json file for your club 
 
-1. **Download** the [min](https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/Photo%20Club%20Hub/ViewModel/Lists/xampleMin.level2.json) and the [max](https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/Photo%20Club%20Hub/ViewModel/Lists/xampleMax.level2.json) example files. “Min” is optimized for simplicity. “Max” shows all supported optional data fields.
+1. **Download** the [min](https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/xampleMin.level2.json) and the [max](https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/xampleMax.level2.json) example files. “Min” is optimized for simplicity. “Max” shows all supported optional data fields.
 
-2. Make a **copy** of the [min](https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/Photo%20Club%20Hub/ViewModel/Lists/xampleMin.level2.json) file.
-   - Rename the file to some short name (`nickName`) for the club. So if the club is called "F/8 and Be There" you might choose `f8AndBeThere.level2.json`. If your club is already listed in the Photo Club Hub app, you can just reuse the `nickName` from the file [root.level1.json](https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/Photo%20Club%20Hub/ViewModel/Lists/root.level1.json). To make this even simpler, here's what it says for 6 potential early-adopter clubs:
+2. Make a **copy** of the [min](https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/xampleMin.level2.json) file.
+   - Rename the file to some short name (`nickName`) for the club. So if the club is called "F/8 and Be There" you might choose `f8AndBeThere.level2.json`. If your club is already listed in the Photo Club Hub app, you can just reuse the `nickName` from the file [root.level1.json](https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/root.level1.json). To make this even simpler, here's what it says for 6 potential early-adopter clubs:
 
       | `town`  | `fullName` | `nickName` | `latitude` | `longitude` | `level2URL` |
       | -----  | ---------| ----- | :-----: | :-----: | :-----: |
-      | Eindhoven | Fotogroep de Gender | fgDeGender | 51.42398 | 5.45010 | [link](https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/Photo%20Club%20Hub/ViewModel/Lists/fgWaalre.level2.json) |
+      | Eindhoven | Fotogroep de Gender | fgDeGender | 51.42398 | 5.45010 | [link](https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/fgWaalre.level2.json) |
       | Eindhoven | Fotoclub Ericamera | fcEricamera | 51.45403 | 5.46288 |  |
       | Oirschot | Fotogroep Oirschot | fgOirschot | 51.46785 | 5.25568 |  |
       | Sint Michielsgestel | Fotokring Sint-Michielsgestel | fkGestel | 51.64036 | 5.34749 |  |
       | Veldhoven | Fotoclub Bellus Imago | fcBellusImago | 51.42541 | 5.38756 |  |
-      | Waalre | Fotogroep Waalre | fgWaalre | 51.39184 | 5.46144 | [link](https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/Photo%20Club%20Hub/ViewModel/Lists/fgDeGender.level2.json) |
+      | Waalre | Fotogroep Waalre | fgWaalre | 51.39184 | 5.46144 | [link](https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/fgDeGender.level2.json) |
 
 3. **Edit** the file to contain your club’s `fullName`, `town`, `nickName`, and preferably coordinates.
     - Use a basic [text editor](https://en.wikipedia.org/wiki/Comparison_of_text_editors) to get a "plain text" output format. So don't use Word (although that _can_ work). Note that it is probably easiest to use the online JSON editor called [JSON Editor Online](https://jsoneditoronline.org): because it assumes you are trying to create a JSON file and can thus help simplify the process.
-    -  If your club is already visible in the app, you should simply reuse the`fullName` and `town` defined in the file [root.level1.json](https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/Photo%20Club%20Hub/ViewModel/Lists/root.level1.json). Again, the early adopters should find all the info they need in the above table.
+    -  If your club is already visible in the app, you should simply reuse the`fullName` and `town` defined in the file [root.level1.json](https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/root.level1.json). Again, the early adopters should find all the info they need in the above table.
         - If you are not one of the 64+ Dutch clubs in `root.level1.json`,  provide the club's `fullName` and `town`. Together these 2 fields uniquely identify the club: there better not be two clubs called "f8 and Be There" in Amsterdam. But there could be one that happens to have the same `fullName` in Singapore. Be careful to get the spelling right the first time: it gets messy if you need to fix this later.
 
 4. **Update** the file to show your club’s `members`.
@@ -44,7 +44,7 @@
 ### The `Level2.json` format
 <details><summary>Details (click to expand)</summary></p>
 
-- [JSON](https://en.wikipedia.org/wiki/JSON) is a very commonly used international standard, but you often won't see it directly. To learn more, find a [tutorial](https://codebeautify.org/json-cheat-sheet). But it should be enough to simply edit the provided [xampleMin.level2.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/ViewModel/Lists/xampleMin.level2.json) and [xampleMax.level2.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/ViewModel/Lists/xampleMax.level2.json) examples. Especially if you use an editor like [JSON Editor Online](https://jsoneditoronline.org).
+- [JSON](https://en.wikipedia.org/wiki/JSON) is a very commonly used international standard, but you often won't see it directly. To learn more, find a [tutorial](https://codebeautify.org/json-cheat-sheet). But it should be enough to simply edit the provided [xampleMin.level2.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/xampleMin.level2.json) and [xampleMax.level2.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/xampleMax.level2.json) examples. Especially if you use an editor like [JSON Editor Online](https://jsoneditoronline.org).
 - Anything in the `optional: { }` section is not strictly needed and can be left out. This is not a JSON rule. It is a Photo Club Hub choice. See this as “stuff you can add later after your first version works”. In the xampleMin file, we have reduced the optional fields to a suggested minimum set.
 </details></p>
 

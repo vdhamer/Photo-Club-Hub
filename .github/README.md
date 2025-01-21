@@ -578,8 +578,8 @@ We expect that we can translate the language's name to other languages programma
 Adding photo clubs (or museums) to get to `Level 1` requires providing a name, location and a few optional URLs. 
 This enables the app to list the items on the `Clubs and Museums` screen and display them using location markers on the maps.
 
-`Level 1` data is technically stored in a _single_ `root.level1.json` 
-[file](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/ViewModel/Lists/root.level1.json)
+`Level 1` data is technically stored in a _single_ `root.level1.json`
+[file](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/root.level1.json)
 that is centrally hosted.
 Whenever the app is launched, it updates any outdated on-device data by reading this central online file.
 

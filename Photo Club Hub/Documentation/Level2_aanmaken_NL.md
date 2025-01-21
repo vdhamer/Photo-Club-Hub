@@ -4,31 +4,31 @@
 > Die eenmalige investering is nodig om te ontdekken hoe met de gereedschappen om te gaan. \
 > Vervolgaanpassingen en uitbreidingen van de gegevens zullen zouden veel sneller (in minuten?) moeten gaan. 
 
-1. Maak desgewenst een lokale kopie van het [xampleMin.level2.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/ViewModel/Lists/xampleMin.level2.json) ("Min") en het
-   [xampleMax.level2.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/ViewModel/Lists/xampleMax.level2.json) ("Max") voorbeeldbestand.
+1. Maak desgewenst een lokale kopie van het [xampleMin.level2.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/xampleMin.level2.json) ("Min") en het
+   [xampleMax.level2.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/xampleMax.level2.json) ("Max") voorbeeldbestand.
    _Min_ is een zo klein mogelijk voorbeeldbestand. _Max_ benut daarentegen alle beschikbare toeters en bellen.
 
-2. Maak een **kopie** van het [Min](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/ViewModel/Lists/xampleMin.level2.json) bestand en verander de naam van het bestand:
+2. Maak een **kopie** van het [Min](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/xampleMin.level2.json) bestand en verander de naam van het bestand:
    - Gebruik in de naam een korte versie (`nickName`) van de clubnaam.
      Als de club bijvoorbeeld "Fotogroep Scheveningen" heet, zou je het bestand `fgScheveningen.level2.json` kunnen noemen.
    - Onderstaande tabel bevat, voor de verwachte proefkonijnclubs, deze `nickName` plus enkele andere velden die straks nodig zijn.
-     Dan hoef je die velden niet zelf op te zoeken in de [lijst](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/ViewModel/Lists/root.level1.json) met clubs in Brabant Oost.
+     Dan hoef je die velden niet zelf op te zoeken in de [lijst](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/root.level1.json) met clubs in Brabant Oost.
 
       | `town`  | `fullName` | `nickName` | `latitude` | `longitude` | huidig bestand |
       | -----  | ---------| ----- | :-----: | :-----: | :-----: |
-      | Eindhoven | Fotogroep de Gender | fgDeGender | 51.42398 | 5.45010 | [link](https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/Photo%20Club%20Hub/ViewModel/Lists/fgWaalre.level2.json) |
+      | Eindhoven | Fotogroep de Gender | fgDeGender | 51.42398 | 5.45010 | [link](https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/fgWaalre.level2.json) |
       | Eindhoven | Fotoclub Ericamera | fcEricamera | 51.45403 | 5.46288 |  |
       | Oirschot | Fotogroep Oirschot | fgOirschot | 51.46785 | 5.25568 |  |
       | Sint Michielsgestel | Fotokring Sint-Michielsgestel | fkGestel | 51.64036 | 5.34749 |  |
       | Veldhoven | Fotoclub Bellus Imago | fcBellusImago | 51.42541 | 5.38756 |  |
-      | Waalre | Fotogroep Waalre | fgWaalre | 51.39184 | 5.46144 | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/ViewModel/Lists/root.level1.json) |
+      | Waalre | Fotogroep Waalre | fgWaalre | 51.39184 | 5.46144 | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/root.level1.json) |
 
 3. Pas de gegevens over de **club** (`club`) aan: `town`, `fullName`, `nickName`, en ook de locatie:
     - Tip: gebruik voor het aanpassen van het nieuwe bestand liefst [JSON Editor Online](https://jsoneditoronline.org). Dat programma is bedoeld om zogenaamde "JSON" tekstbestanden aan te maken, te openen en meer.
         - Als alternatief kan je een kale editor gebruiken zoals [Windows NotePad](https://nl.wikipedia.org/wiki/Notepad), [NotePad++](https://nl.wikipedia.org/wiki/Notepad%2B%2B) of [Sublime Text](https://nl.wikipedia.org/wiki/Sublime_Text).
 
     - De 6 proefkonijnclubs kunnen de vereiste `town`, `fullName`, `nickName`,`latitude` en `longitude` velden uit de bovenstaande tabel overnemen.
-      Er zijn gegevens voor vrijwel alle clubs uit de regio te vinden in [root.level1.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/ViewModel/Lists/root.level1.json).
+      Er zijn gegevens voor vrijwel alle clubs uit de regio te vinden in [root.level1.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/root.level1.json).
 
 4. Pas gegevens over de **clubleden** (`members`) aan: `givenName`, `infixName` en `familyName`.
     - Tip: met de [JSON Editor Online](https://jsoneditoronline.org) kan je de lijst van clubleden als tabel zien en aanpassen via de "Table" view. Dan kan je dubbelklikken op cellen die je wilt aanpassen, en regels toevoegen of verwijderen via het "__⋮__" menu.
@@ -71,7 +71,7 @@ Of via een door ons [gegenereerde](https://github.com/vdhamer/Photo-Club-Hub-HTM
 
 - [JSON](https://en.wikipedia.org/wiki/JSON) is zeer bekende internationale standaard in de IT wereld.
 [Hier](https://codebeautify.org/json-cheat-sheet) is een korte uitleg van JSON. In ons geval is zou het voldoende moeten zijn om nauwgezet de voorbeelden in
-[xampleMin.level2.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/ViewModel/Lists/xampleMin.level2.json) en [xampleMax.level2.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/ViewModel/Lists/xampleMax.level2.json) te volgen.
+[xampleMin.level2.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/xampleMin.level2.json) en [xampleMax.level2.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/xampleMax.level2.json) te volgen.
 Bij gebruikt van [JSON Editor Online](https://jsoneditoronline.org) is de kans op fouten klein.
 
 - Alle informatie tussen de haakjes in het `optional: { }` gedeelte van het bestand mag eventueel weggelaten worden. Dat is geen JSON-conventie, maar een keus alleen voor deze app. 
@@ -89,7 +89,7 @@ Het zijn dus velden die je bij een tekstaanpassing alsnog kan toevoegen, bijvoor
          Als je de persoon zelf vraagt ("de familienaam is Beelaerts van Blokland") voorkom je dit probleem. 
        - In principe kan de app met de volledige [Unicode](https://nl.wikipedia.org/wiki/Unicode) karakterset uit de voeten. Voor een enkele letter is dat vaak ok, maar voor volledige namen zoals Вікторія Кобленко wordt dat onhandig.
    - Voorlopig kan het `Level3URL` veld weggelaten worden (het dient voor verwijzingen naar Level 3 bestanden).
-   - Men zal vaak het `featuredImage` veld vrij snel willen invullen. Een voorbeeld is daarom te vinden in de [xampleMin.level2.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/ViewModel/Lists/xampleMin.level2.json) bestand.
+   - Men zal vaak het `featuredImage` veld vrij snel willen invullen. Een voorbeeld is daarom te vinden in de [xampleMin.level2.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/xampleMin.level2.json) bestand.
 Het levert een voorbeeldplaatje op van het werk van een clublid.
    - Op termijn is het vast de moeite waard om nog enkele velden in te vullen:
        - `website` is het webadres van een portfolio website van de fotograaf. Voorbeeld: een site op [Glass.photo](http://glass.photo/vdhamer) dat geen direct verband heeft met een specifieke club.
