@@ -1,8 +1,8 @@
 ## Een level2.json bestand aanmaken voor een club
 
-> 🕚 Het de allereerste keer aanmaken van een Level2 bestand (gevuld met enkele testleden) kost misschien 1 uur kost. \
-> Die eenmalige investering is nodig om te ontdekken hoe met het gereedschap om te gaan.
-> Vervolgaanpassingen en uitbreidingen van de gegevens zullen ongetwijfeld veel sneller (minuten?) gaan. 
+> 🕚 Het voor de allereerste keer aanmaken van een Level2 bestand (gevuld met enkele testleden) kost ongeveer 1 uur kost. \
+> Die eenmalige investering is nodig om te ontdekken hoe met de gereedschappen om te gaan. \
+> Vervolgaanpassingen en uitbreidingen van de gegevens zullen zouden veel sneller (in minuten?) moeten gaan. 
 
 1. Maak desgewenst een lokale kopie van het [xampleMin.level2.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/ViewModel/Lists/xampleMin.level2.json) ("Min") en het
    [xampleMax.level2.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/ViewModel/Lists/xampleMax.level2.json) ("Max") voorbeeldbestand.
@@ -106,7 +106,14 @@ Het levert een voorbeeldplaatje op van het werk van een clublid.
 ### Meer over JSON Editor Online
 <details><summary>Details (klik om uit te klappen)</summary></p>
 
+- Bovenaan het scherm staat iets over "inloggen" en "prijzen". Men kan die regel voor ons doel negeren: de gratis versie is voldoende. En de site doet vrijwel alles zonder je te registreren. Dat scheelt weer het onthouden van een extra wachtwoord.
+
+- De site toont een linker en een rechter paneel. Die twee panelen kunnen verschillende bestanden (b.v. een voorbeeldbestand en een nieuw bestand) bevatten. Er zijn knopjes om de inhoud van het ene paneel naar het andere te copiëren. Dat kan je gebruiken om dezelfde JSON inhoud op 2 verschillende manieren tegelijk te bekijken. Of om een copie te maken en een van de twee te gebruiken om wijzingen aan te brengen.
+
 - In JSON wordt de volgorde van de elementen binnen een `[ ]` paar (=lijst) of `{ }` paar (=samenstelling) genegeerd. Bij het vergelijken van 2 versies van een bestand in [JSON Editor Online](https://jsoneditoronline.org) zal dus een verschil in volgorde niet als verschil in inhoud opgevat worden.</li>
+
+- Gebruikers van de Apple Safari browser (macOS, iPad) die de beschikbare horizontale schermruimte krap vinden kunnen de reclame aan de rechterkant verwijderen.
+Dit gaat via de Safari [Hide distracting items](https://support.apple.com/nl-nl/guide/safari/ibrwb68cc4bf/mac) functie. Gebruikers van een groot scherm zullen hier minder behoefte aan hebben, maar het werkt ook op een groot scherm.
 
 </details></details></details</details></details>
 </p>
