@@ -113,7 +113,7 @@ Het levert een voorbeeldplaatje op van het werk van een clublid.
 - In JSON wordt de volgorde van de elementen binnen een `[ ]` paar (=lijst) of `{ }` paar (=samenstelling) genegeerd. Bij het vergelijken van 2 versies van een bestand in [JSON Editor Online](https://jsoneditoronline.org) zal dus een verschil in volgorde niet als verschil in inhoud opgevat worden.</li>
 
 - Gebruikers van de Apple Safari browser (macOS, iPad) die de beschikbare horizontale schermruimte krap vinden kunnen de reclame aan de rechterkant verwijderen.
-Dit gaat via de Safari [Hide distracting items](https://support.apple.com/nl-nl/guide/safari/ibrwb68cc4bf/mac) functie (vind men bovenin). Gebruikers van een groot scherm zullen hier minder behoefte aan hebben, maar het werkt ook op een groot scherm.
+Dit gaat via de Safari [Hide distracting items](https://support.apple.com/nl-nl/guide/safari/ibrwb68cc4bf/mac) functie. Gebruikers van een groot scherm zullen hier minder behoefte aan hebben, maar het werkt ook op een groot scherm.
 
 </details></details></details</details></details>
 </p>
