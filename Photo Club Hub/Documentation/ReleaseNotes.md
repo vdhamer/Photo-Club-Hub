@@ -8,13 +8,17 @@ Portfolios Clubs-and-Museums screen
 Preferences screen
 * Bug fix: role "Other" didn't show up when filtering on club officers
 
+Documentation
+* Created step-by-step instructions for creating a Level 2 file. https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/
+
 Code Maintenance
 * Tested on iOS 18.2.1, and Xcode 16.2 and MacOS 15.2
 * Extended data model for keyword feature (and updated diagram in README.md on GitHub).
 * Added documentation in README.md for keyword feature in Level 2 files.
 * Automatically cleared any officer roles for a deceased member. Fatal error in debug version only.
-* Removed remaining traces of e-mail and phone number support (feature disabled in 2.7.0 for privacy reasons)
-* Moved isDeceased parameter into PhotographerOptionalFields struct
+* Removed remaining traces of e-mail and phone number support (feature disabled in 2.7.0 for privacy reasons).
+* Moved isDeceased parameter into PhotographerOptionalFields struct.
+* Moved the JSON files to a new directory with a simpler path.
 
 Data Maintenance
 * Added AJ to fcBellusImago
