@@ -1,0 +1,64 @@
+{
+    "club":
+        {
+            "idPlus": {
+                "town": "Veldhoven",
+                "fullName": "Fotoclub Bellus Imago",
+                "nickName": "fcBellusImago"
+            },
+            "optional": {
+                "coordinates": {
+                    "latitude": 51.425410,
+                    "longitude": 5.387560
+                },
+                "website": "https://www.fotoClubBellusImago.nl",
+                "level2URL": "https://www.example.com/fcBellusImago.level2.json",
+                "nlSpecific": {
+                    "fotobondNumber": 1671
+                }
+            }
+    },
+    "members": [
+        {
+            "name": {
+                "givenName": "Annemiek",
+                "infixName": "",
+                "familyName": "Jongeneelen"
+            },
+            "optional": {
+                "featuredImage": "https://www.fotoclubbellusimago.nl/uploads/5/5/1/2/55129719/annemiek-04_orig.jpg",
+                "level3URL": "https://www.fotoclubbellusimago.nl/annemiek.html",
+                "roles": {
+                    "isOther": true
+                }
+            }
+        },
+        {
+            "name": {
+                "givenName": "Loek",
+                "infixName": "",
+                "familyName": "Dirkx"
+            },
+            "optional": {
+                "roles": {
+                    "isChairman": true
+                },
+                "featuredImage": "https://www.fotoclubbellusimago.nl/uploads/5/5/1/2/55129719/vrijwerk-loek-1_2_orig.jpg",
+                "level3URL": "https://www.fotoclubbellusimago.nl/loek.html"
+            }
+        },
+        {
+            "name": {
+                "givenName": "Rico",
+                "infixName": "",
+                "familyName": "Coolen"
+            },
+            "optional": {
+                "website": "https://www.ricoco.nl",
+                "featuredImage": "https://www.fotoclubbellusimago.nl/uploads/5/5/1/2/55129719/vrijwerk-rico-3_orig.jpg",
+                "level3URL": "https://www.fotoclubbellusimago.nl/rico.html"
+            }
+        }
+    ]
+}
+

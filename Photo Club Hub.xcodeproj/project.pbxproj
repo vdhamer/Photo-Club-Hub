@@ -33,7 +33,6 @@
 		D05414F72AC7499000D899D8 /* FotogroepDeGenderMembersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05414F62AC7499000D899D8 /* FotogroepDeGenderMembersProvider.swift */; };
 		D054173A2D31DDE300A2A579 /* XampleMaxMembersProvider+insertOnlineMemberData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05417382D31DDE300A2A579 /* XampleMaxMembersProvider+insertOnlineMemberData.swift */; };
 		D054173B2D31DDE300A2A579 /* XampleMaxMembersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05417372D31DDE300A2A579 /* XampleMaxMembersProvider.swift */; };
-		D054173E2D31DE6B00A2A579 /* xampleMax.level2.json in Resources */ = {isa = PBXBuildFile; fileRef = D054173D2D31DE6B00A2A579 /* xampleMax.level2.json */; };
 		D05E451E27EF2A2C00D31327 /* ReadmeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05E451D27EF2A2C00D31327 /* ReadmeView.swift */; };
 		D06061ED28A05D4600A675A7 /* String+Paths.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06061EC28A05D4600A675A7 /* String+Paths.swift */; };
 		D0621E812AE2D7DE000FFADB /* MemberPortfolio+roles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0621E802AE2D7DE000FFADB /* MemberPortfolio+roles.swift */; };
@@ -43,7 +42,6 @@
 		D066F0F92D0F461F002C6A2B /* level0.json in Resources */ = {isa = PBXBuildFile; fileRef = D066F0F82D0F461F002C6A2B /* level0.json */; };
 		D06BE9332A4F870B0055B3B1 /* ifDebugUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06BE9322A4F870B0055B3B1 /* ifDebugUtils.swift */; };
 		D06D08DE2C28835D00872BC2 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D0CEAECE2B2E1134005AE47D /* Settings.bundle */; };
-		D072D5E32D333B4500EA88DD /* xampleMin.level2.json in Resources */ = {isa = PBXBuildFile; fileRef = D072D5E22D333B4500EA88DD /* xampleMin.level2.json */; };
 		D072D5E72D333E7500EA88DD /* XampleMinMembersProvider+insertOnlineMemberData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D072D5E52D333E7500EA88DD /* XampleMinMembersProvider+insertOnlineMemberData.swift */; };
 		D072D5E82D333E7500EA88DD /* XampleMinMembersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D072D5E42D333E7500EA88DD /* XampleMinMembersProvider.swift */; };
 		D07463E62CFB5EFA00F48EB2 /* root.level1.json in Resources */ = {isa = PBXBuildFile; fileRef = D07463E52CFB5EFA00F48EB2 /* root.level1.json */; };
@@ -83,8 +81,6 @@
 		D0C53BDD2ABF3ADF000722A1 /* PersonName.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C53BDC2ABF3ADF000722A1 /* PersonName.swift */; };
 		D0C6E95529577921001E5CE9 /* DebugPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C6E95429577921001E5CE9 /* DebugPanel.swift */; };
 		D0C8E3A22BB81B4A00348D97 /* ItemFilterStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C8E3A12BB81B4A00348D97 /* ItemFilterStatsView.swift */; };
-		D0CD0ADF2D33E6B0006C1CFA /* xampleMin.level1.json in Resources */ = {isa = PBXBuildFile; fileRef = D0CD0ADE2D33E6B0006C1CFA /* xampleMin.level1.json */; };
-		D0CD0AE02D33E6B0006C1CFA /* xampleMax.level1.json in Resources */ = {isa = PBXBuildFile; fileRef = D0CD0ADD2D33E6B0006C1CFA /* xampleMax.level1.json */; };
 		D0CFACAD2CDEDCBA005E3A0B /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D0CFACAC2CDEDCBA005E3A0B /* SwiftyJSON */; };
 		D0D18C78296E1F6A00B334DB /* OrganizationIdPlus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D18C77296E1F6A00B334DB /* OrganizationIdPlus.swift */; };
 		D0DE02772789D1B30062738C /* RoleIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DE02762789D1B30062738C /* RoleIconView.swift */; };
@@ -95,6 +91,13 @@
 		D0EEF48F2C2844290086419D /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EEF48E2C2844290086419D /* Settings.swift */; };
 		D0F11B612C4D9891001F705A /* AndersMembersProvider+insertOnlineMemberData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F11B602C4D9891001F705A /* AndersMembersProvider+insertOnlineMemberData.swift */; };
 		D0F5EE872C54EDC60028C9A6 /* PhotographerOptionalFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F5EE862C54EDC60028C9A6 /* PhotographerOptionalFields.swift */; };
+		D0F871942D403D1700530D10 /* fgAnders.level2.json in Resources */ = {isa = PBXBuildFile; fileRef = D0F871872D403D1700530D10 /* fgAnders.level2.json */; };
+		D0F871952D403D1700530D10 /* root.level1.json in Resources */ = {isa = PBXBuildFile; fileRef = D0F8718C2D403D1700530D10 /* root.level1.json */; };
+		D0F871972D403D1700530D10 /* fgWaalre.level2.json in Resources */ = {isa = PBXBuildFile; fileRef = D0F8718A2D403D1700530D10 /* fgWaalre.level2.json */; };
+		D0F871982D403D1700530D10 /* fcBellusImago.level2.json in Resources */ = {isa = PBXBuildFile; fileRef = D0F871862D403D1700530D10 /* fcBellusImago.level2.json */; };
+		D0F8719A2D403D1700530D10 /* fgDeGender.level2.json in Resources */ = {isa = PBXBuildFile; fileRef = D0F871882D403D1700530D10 /* fgDeGender.level2.json */; };
+		D0F8719C2D403D1700530D10 /* level0.json in Resources */ = {isa = PBXBuildFile; fileRef = D0F8718B2D403D1700530D10 /* level0.json */; };
+		D0F8719F2D403E6000530D10 /* readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = D0F8719E2D403E5500530D10 /* readme.txt */; };
 		D0FE77E52BB9AEE900272077 /* ItemFilterStatsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE77E42BB9AEE900272077 /* ItemFilterStatsEnum.swift */; };
 /* End PBXBuildFile section */
 
@@ -233,6 +236,19 @@
 		D0EEF48E2C2844290086419D /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		D0F11B602C4D9891001F705A /* AndersMembersProvider+insertOnlineMemberData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AndersMembersProvider+insertOnlineMemberData.swift"; sourceTree = "<group>"; };
 		D0F5EE862C54EDC60028C9A6 /* PhotographerOptionalFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotographerOptionalFields.swift; sourceTree = "<group>"; };
+		D0F871852D403D1700530D10 /* 241113_Fotoclubs_Brabant_Oost.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = 241113_Fotoclubs_Brabant_Oost.xlsx; sourceTree = "<group>"; };
+		D0F871862D403D1700530D10 /* fcBellusImago.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fcBellusImago.level2.json; sourceTree = "<group>"; };
+		D0F871872D403D1700530D10 /* fgAnders.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fgAnders.level2.json; sourceTree = "<group>"; };
+		D0F871882D403D1700530D10 /* fgDeGender.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fgDeGender.level2.json; sourceTree = "<group>"; };
+		D0F871892D403D1700530D10 /* fgDeGenderLeden.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = fgDeGenderLeden.xlsx; sourceTree = "<group>"; };
+		D0F8718A2D403D1700530D10 /* fgWaalre.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fgWaalre.level2.json; sourceTree = "<group>"; };
+		D0F8718B2D403D1700530D10 /* level0.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = level0.json; sourceTree = "<group>"; };
+		D0F8718C2D403D1700530D10 /* root.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = root.level1.json; sourceTree = "<group>"; };
+		D0F8718D2D403D1700530D10 /* xampleMax.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = xampleMax.level1.json; sourceTree = "<group>"; };
+		D0F8718E2D403D1700530D10 /* xampleMax.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = xampleMax.level2.json; sourceTree = "<group>"; };
+		D0F8718F2D403D1700530D10 /* xampleMin.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = xampleMin.level1.json; sourceTree = "<group>"; };
+		D0F871902D403D1700530D10 /* xampleMin.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = xampleMin.level2.json; sourceTree = "<group>"; };
+		D0F8719E2D403E5500530D10 /* readme.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
 		D0F999502AACE217005FA0FF /* Photo_Club_Hub_2_4_2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_4_2.xcdatamodel; sourceTree = "<group>"; };
 		D0FCF2E229B5517000F31442 /* VoteOnRoadmapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteOnRoadmapView.swift; sourceTree = "<group>"; };
 		D0FCF2E529B558FE00F31442 /* Roadmap.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Roadmap.json; sourceTree = "<group>"; };
@@ -394,6 +410,7 @@
 				D0CEAECD2B2E1120005AE47D /* Localization */,
 				D08319EA277F70A40049AB84 /* Assets.xcassets */,
 				D0CEAECE2B2E1134005AE47D /* Settings.bundle */,
+				D0F871912D403D1700530D10 /* JSON */,
 				D008D2A928739167007A7BE2 /* .gitignore */,
 				D0F2F2F22873A19F009DDD2A /* .github */,
 				D08319E4277F70A30049AB84 /* Products */,
@@ -573,6 +590,7 @@
 		D0BF26FA2CFA20AC00DA2CB9 /* Lists */ = {
 			isa = PBXGroup;
 			children = (
+				D0F8719E2D403E5500530D10 /* readme.txt */,
 				D066F0F72D0F4394002C6A2B /* fgDeGenderLeden.xlsx */,
 				D07463E52CFB5EFA00F48EB2 /* root.level1.json */,
 				D066F0F82D0F461F002C6A2B /* level0.json */,
@@ -645,6 +663,25 @@
 				D0F5EE862C54EDC60028C9A6 /* PhotographerOptionalFields.swift */,
 			);
 			path = Photographer;
+			sourceTree = "<group>";
+		};
+		D0F871912D403D1700530D10 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				D0F871852D403D1700530D10 /* 241113_Fotoclubs_Brabant_Oost.xlsx */,
+				D0F871862D403D1700530D10 /* fcBellusImago.level2.json */,
+				D0F871872D403D1700530D10 /* fgAnders.level2.json */,
+				D0F871882D403D1700530D10 /* fgDeGender.level2.json */,
+				D0F871892D403D1700530D10 /* fgDeGenderLeden.xlsx */,
+				D0F8718A2D403D1700530D10 /* fgWaalre.level2.json */,
+				D0F8718B2D403D1700530D10 /* level0.json */,
+				D0F8718C2D403D1700530D10 /* root.level1.json */,
+				D0F8718D2D403D1700530D10 /* xampleMax.level1.json */,
+				D0F8718E2D403D1700530D10 /* xampleMax.level2.json */,
+				D0F8718F2D403D1700530D10 /* xampleMin.level1.json */,
+				D0F871902D403D1700530D10 /* xampleMin.level2.json */,
+			);
+			path = JSON;
 			sourceTree = "<group>";
 		};
 		D0FCF2E429B558B500F31442 /* VoteOnRoadmapView */ = {
@@ -733,21 +770,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D072D5E32D333B4500EA88DD /* xampleMin.level2.json in Resources */,
 				D008D2AA28739167007A7BE2 /* .gitignore in Resources */,
 				D0B5743E2C41D79300334E4C /* Assets.xcassets in Resources */,
+				D0F8719F2D403E6000530D10 /* readme.txt in Resources */,
 				D0BF27042CFA218000DA2CB9 /* fcBellusImago.level2.json in Resources */,
 				D0BF27082CFA218000DA2CB9 /* fgDeGender.level2.json in Resources */,
 				D0BF270B2CFA218000DA2CB9 /* fgWaalre.level2.json in Resources */,
 				D0BF270C2CFA218000DA2CB9 /* fgAnders.level2.json in Resources */,
+				D0F871942D403D1700530D10 /* fgAnders.level2.json in Resources */,
+				D0F871952D403D1700530D10 /* root.level1.json in Resources */,
+				D0F871972D403D1700530D10 /* fgWaalre.level2.json in Resources */,
+				D0F871982D403D1700530D10 /* fcBellusImago.level2.json in Resources */,
+				D0F8719A2D403D1700530D10 /* fgDeGender.level2.json in Resources */,
+				D0F8719C2D403D1700530D10 /* level0.json in Resources */,
 				D07463E62CFB5EFA00F48EB2 /* root.level1.json in Resources */,
-				D054173E2D31DE6B00A2A579 /* xampleMax.level2.json in Resources */,
 				D066F0F92D0F461F002C6A2B /* level0.json in Resources */,
 				D0B52497277F9A4B00927BCA /* Localizable.strings in Resources */,
 				D06D08DE2C28835D00872BC2 /* Settings.bundle in Resources */,
 				D0831A51277F73C00049AB84 /* Preview Assets.xcassets in Resources */,
-				D0CD0ADF2D33E6B0006C1CFA /* xampleMin.level1.json in Resources */,
-				D0CD0AE02D33E6B0006C1CFA /* xampleMax.level1.json in Resources */,
 				D053F23D2B54430C00662EF8 /* Photo-Club-Hub-InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

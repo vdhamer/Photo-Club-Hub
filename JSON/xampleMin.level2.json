@@ -1,0 +1,39 @@
+{
+    "club":
+        {
+            "idPlus": {
+                "town": "Rotterdam",
+                "fullName": "Xample Club With Minimal Data",
+                "nickName": "XampleMin"
+            },
+            "optional": {
+                "coordinates": {
+                    "latitude": 51.92275,
+                    "longitude": 4.47972
+                },
+                "level2URL": "https://www.example.com/XampleMin.level2.json"
+            }
+        },
+    "members": [
+        {
+            "name": {
+                "givenName": "Mien",
+                "infixName": "van",
+                "familyName": "Rotterdam"
+            },
+            "optional": {
+                "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg"
+            }
+        },
+        {
+            "name": {
+                "givenName": "Mike",
+                "infixName": "",
+                "familyName": "Blaak"
+            },
+            "optional": {
+                "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg"
+            }
+        }
+    ]
+}
