@@ -1,5 +1,8 @@
 ## Een level2.json bestand aanmaken voor een club
 
+Level 2 bestrijkt (slechts) de lijst met clubleden. Portfolio's toevoegen is iets voor een vervolgstap (Level 3). Daar komen
+aparte instructies voor. Voor zowel ledenlijst als portfolio's geldt dat die volledig onder eigen beheer van de desbetreffende club vallen.
+
 > 🕚 Het voor de allereerste keer aanmaken van een Level2 bestand (gevuld met enkele testleden) kost ongeveer 1 uur kost. \
 > Die eenmalige investering is nodig om te ontdekken hoe met de gereedschappen om te gaan. \
 > Vervolgaanpassingen en uitbreidingen van de gegevens zullen zouden veel sneller (in minuten?) moeten gaan. 
