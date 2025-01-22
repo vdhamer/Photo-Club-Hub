@@ -745,6 +745,7 @@ Here is an example of the format of a `Level 2` list for a photo club. This exam
                         "value": "Note that Fotogroep de Gender is abbreviated fcdegender.nl for historical reasons."
                     }
                 ],
+                "contactEmail": "admin@fcdegender.nl",
                 "nlSpecific": {
                     "fotobondNumber": 1620
                 }
