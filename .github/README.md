@@ -608,7 +608,7 @@ Here is an example of the format of the `root.level1.json` file containing only 
             },
             "optional": {
                 "website": "https://www.fcdegender.nl",
-                "level2URL": "https://www.example.com/fgDeGender.level2.json",
+                "level2URL": "https://www.fcdegender.nl/fgDeGender.level2.json",
                 "remark": [
                     { "language": "NL", "value": "Opgelet: Fotogroep de Gender gebruikt als domeinnaam nog altijd fcdegender.nl (van Fotoclub)." }
                 ],
