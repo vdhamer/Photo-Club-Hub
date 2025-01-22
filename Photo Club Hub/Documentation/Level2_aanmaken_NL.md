@@ -101,6 +101,8 @@ Het levert een voorbeeldplaatje op van het werk van een clublid.
        - `keywords` (trefwoorden) geeft de hoofdfocus van de fotograaf aan. Er komen tzt aparte instructies voor dit veld.
            - Het programmeerwerk is nog niet af, maar de gegevens kunnen als in het `level2.json` bestand alvast opgenomen worden.
              Hou het voorlopig op de trefwoorden die voorkomen in [deze lijst](https://github.com/vdhamer/Photo-Club-Hub/issues/465).
+- Het `contactEmail` veld is diegene die benaderd kan worden als er iets aan de hand is met dit JSON bestand.
+  Vaak ik dat de website beheerder (b.v. admin@clubnaam.nl mits dat werkt), maar het zou een direct gmail account van een clublid kunnen zijn.
 </details></p>
 
 ### Meer over JSON Editor Online
