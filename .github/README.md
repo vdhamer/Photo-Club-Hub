@@ -612,6 +612,7 @@ Here is an example of the format of the `root.level1.json` file containing only 
                 "remark": [
                     { "language": "NL", "value": "Opgelet: Fotogroep de Gender gebruikt als domeinnaam nog altijd fcdegender.nl (van Fotoclub)." }
                 ],
+                "contactEmail": "admin@fcdegender.nl",
                 "nlSpecific": {
                     "fotobondNumber": 1620
                 }
