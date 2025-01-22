@@ -11,7 +11,7 @@
                     "latitude": 52.37312,
                     "longitude": 4.89237
                 },
-                "website": "https://www.example.com",
+                "website": "https://www.xamplemax.nl",
                 "wikipedia": "https://en.wikipedia.org/wiki/Rotterdam_City_Hall",
                 "level2URL": "https://www.example.com/XampleMax.level2.json",
                 "remark": [
@@ -24,7 +24,7 @@
                         "value": "Deze beschrijving van de club vervangt een eventuele beschrijving in root.level1.json"
                     }
                 ],
-                "contactEmail": "max1234@gmail.com",
+                "contactEmail": "admin@xamplemax.nl",
                 "nlSpecific": {
                     "fotobondNumber": 9999
                 }
