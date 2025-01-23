@@ -1,5 +1,8 @@
 ## Een level2.json bestand aanmaken voor een club
 
+Level 2 omschrijft de stappen om de lijst met clubleden aan te bieden. Er komen later aparte instructies om Portfolio's (Level 3) toe te voegen.
+De ledenlijst en de foto's zelf worden straks volledig onder eigen beheer van de desbetreffende club opgeslagen.
+
 > 🕚 Het voor de allereerste keer aanmaken van een Level2 bestand (gevuld met enkele testleden) kost ongeveer 1 uur kost. \
 > Die eenmalige investering is nodig om te ontdekken hoe met de gereedschappen om te gaan. \
 > Vervolgaanpassingen en uitbreidingen van de gegevens zullen zouden veel sneller (in minuten?) moeten gaan. 
@@ -58,8 +61,9 @@
 6. **Stuur** ons het gemaakte `level2.json` bestand. Dat mag ook bij tussenversies. Wij zullen proberen binnen 24 uur te reageren (nodig voor de volgende stap).
     - Onze rol is om een de technische juistheid te bewaken en om hulp te bieden. Wij kunnen niet zien of de aangeleverde ledenlijst accuraat is of zien of alles juist gespeld is.
     - Voor de proefkonijnclubs zullen we het bestand op onze eigen webserver zetten en het bijbehorende adres (URL) terugmelden.
-      Op termijn komen er extra instructies hoe een club _zelf_ zijn Level2 ledenbestand op een eigen (b.v. Wordpress) website kan zetten.
-      Dan kan een club zijn Level2 bestand aanpassen zonder via ons te gaan.
+      Binnenkort komen er aanvullende instructies hoe een club _zelf_ zijn Level2 ledenbestand op een eigen (b.v. Wordpress) website kan plaatsen.
+      Dan kan een club zijn Level2 bestand aanpassen zonder tussenkomst. 
+      Ofwel, hosting van enkele kleine tekstbestanden op onze webserver is slechts een tijdelijke oplossing. Dit om het proces stapje-voor-stapje te kunnen uittesten.
 
 7. **Controleer** of alles naar wens werkt via de [Photo Club Hub](https://www.fotobond-brabantoost.nl/nieuws/fotoclub-hub-app/) iOS app.
 Of via een door ons [gegenereerde](https://github.com/vdhamer/Photo-Club-Hub-HTML/blob/main/.github/README.md) HTML pagina als geen iPhone of iPad voorhanden is.
