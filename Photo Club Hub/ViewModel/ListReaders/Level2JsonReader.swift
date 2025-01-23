@@ -199,6 +199,8 @@ class Level2JsonReader { // normally running on a background thread
         let wikipedia: URL? = jsonOptionalsToURL(jsonOptionals: jsonOptionals, key: "wikipedia")
         let fotobondNumber = jsonOptionals["nlSpecific"]["fotobondNumber"].exists()  ? // id of club
             jsonOptionals["nlSpecific"]["fotobondNumber"].int16Value : nil
+        let contactEmail: String? = jsonOptionals["contactEmail"].exists() ?
+            jsonOptionals["contactEmail"].stringValue : nil
         let coordinates: CLLocationCoordinate2D = jsonOptionals["coordinates"].exists() ?
             CLLocationCoordinate2D(latitude: jsonOptionals["coordinates"]["latitude"].doubleValue,
                                     longitude: jsonOptionals["coordinates"]["longitude"].doubleValue) :
@@ -215,6 +217,7 @@ class Level2JsonReader { // normally running on a background thread
                                               organizationWebsite: clubWebsite,
                                               wikipedia: wikipedia,
                                               fotobondNumber: fotobondNumber,
+                                              contactEmail: contactEmail,
                                               localizedRemarks: localizedRemarks
                                               )
         )

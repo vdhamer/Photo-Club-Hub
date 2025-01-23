@@ -19,6 +19,7 @@ Code Maintenance
 * Removed remaining traces of e-mail and phone number support (feature disabled in 2.7.0 for privacy reasons).
 * Moved isDeceased parameter into PhotographerOptionalFields struct.
 * Moved the JSON files to a new directory with a simpler path.
+* Added support for a contactEmail field for knowing who to contact about Level2.json files.
 
 Data Maintenance
 * Added AJ to fcBellusImago
