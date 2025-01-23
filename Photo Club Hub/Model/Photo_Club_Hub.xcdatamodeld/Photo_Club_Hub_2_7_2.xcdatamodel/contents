@@ -75,6 +75,7 @@
         </uniquenessConstraints>
     </entity>
     <entity name="Organization" representedClassName="Organization" elementID="PhotoClub" syncable="YES" codeGenerationType="class">
+        <attribute name="contactEmail" optional="YES" attributeType="String"/>
         <attribute name="fotobondNumber" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="fullName_" attributeType="String" defaultValueString="DefaultPhotoClubName" elementID="name_"/>
         <attribute name="isMapScrollLocked" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES" elementID="isScrollLocked"/>

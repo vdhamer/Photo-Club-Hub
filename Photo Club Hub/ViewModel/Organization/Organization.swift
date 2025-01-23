@@ -254,6 +254,10 @@ extension Organization {
             self.wikipedia = wikiURL
             modified = true }
 
+        if let contactEmail = optionalFields.contactEmail, self.contactEmail != contactEmail {
+            self.contactEmail = contactEmail
+            modified = true }
+
         if let fotobondNumber = optionalFields.fotobondNumber, self.fotobondNumber != fotobondNumber {
             self.fotobondNumber = fotobondNumber
             modified = true }
