@@ -30,6 +30,7 @@ Data Maintenance
 * Created empty collections in LR for former members of fgDeGender
 * Updated fgWaalre (JJ)
 * created two demo Level 12 files: XampleMin.level1.json and XampleMax.level1.json
+* fixed broken link for ME of fgAnders (still don't have a real image though)
 
 ---------------------------------------------------------------------------
 
