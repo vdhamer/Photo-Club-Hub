@@ -6,7 +6,7 @@ Beide lijsten worden straks volledig onder beheer van de desbetreffende club opg
 
 > 🕚 Het voor de allereerste keer aanmaken van een Level2 bestand (gevuld met enkele testleden) zal misschien 1 uur kosten. \
 > Die eenmalige investering is nodig om de opzet te begrijpen en te ontdekken hoe met de gereedschappen om te gaan. \
-> Latere uitbreiding en aanpassingen van de gegevens zullen, na dit inleren, veel sneller (minutenwerk) kunnen. 
+> Latere uitbreiding en aanpassingen van de gegevens horen, na dit inleren, veel sneller (minutenwerk) veel sneller te kunnen gaan. 
 
 1. Maak desgewenst een lokale kopie van het [xampleMin.level2.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/xampleMin.level2.json) ("Min") en het
    [xampleMax.level2.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/xampleMax.level2.json) ("Max") voorbeeldbestand.
