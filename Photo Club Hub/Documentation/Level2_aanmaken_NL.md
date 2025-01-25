@@ -121,6 +121,19 @@ Het levert een voorbeeldplaatje op van het werk van een clublid.
 
 - Gebruikers van de Apple Safari browser (macOS, iPad) die de beschikbare horizontale schermruimte krap vinden kunnen de reclame aan de rechterkant verwijderen.
 Dit gaat via de Safari [Hide distracting items](https://support.apple.com/nl-nl/guide/safari/ibrwb68cc4bf/mac) functie. Gebruikers van een groot scherm zullen hier minder behoefte aan hebben, maar het werkt ook op een groot scherm.
+</details></p>
 
-</details></details></details</details></details>
-</p>
+### Kan het eenvoudiger?
+<details><summary>Details (klik om uit te klappen)</summary></p>
+
+Dit is een belangrijke vraag: wij willen drempels zo laag mogelijk houden.
+Ten eerste hebben we niet de middelen van b.v. een belangstingdienst: die laat ook gewone burgers gegevens invoeren die automatisch verwerkt worden ("makkelijker kunnen wij het niet maken").
+Dat leidt in ons geval richting hergebruik van bestaande technologie (b.v. JSON).
+
+Ten tweede, ben ik huiverig voor oplossingen die bijvoorbeeld een extra wachtwoord zouden vereisen. 
+Een mens heeft al zoveel wachtwoorden nodig, inloggen betekent extra stappen, en inlogpogingen leiden vaak tot problemen.
+Bijvoorbeeld omdat het wachtwoord zoekgeraakt is, of omdat het wachtwoord gewijzigd moeten worden, of gedeeld moeten worden door 2 mensen. 
+Dus ook daar willen we hergebruik maken van bestaande technologie die clubs al vaak gebruiken (b.v. Wordpress website).
+
+Toekomstige versimpelingen sluiten we niet uit. Maar dit vereist wel slimme ideeën, en de vaardigheid en energie om ze uit te voeren.
+</details></p>
