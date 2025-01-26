@@ -124,6 +124,8 @@
 		D044646427FCE7C100990613 /* UIDevice+IsIPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+IsIPad.swift"; sourceTree = "<group>"; };
 		D0447C862BA510AF00982A1E /* Language.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		D0447C872BA510AF00982A1E /* LocalizedRemark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedRemark.swift; sourceTree = "<group>"; };
+		D048546D2D46877000022117 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		D048546E2D46879000022117 /* Package.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Package.xcstrings; sourceTree = "<group>"; };
 		D04A2B112AC0958C003ED113 /* LineCount.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = LineCount.xlsx; sourceTree = "<group>"; };
 		D04D7B2B2D2B3B210048454B /* Jaarverslag 2024 Website.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jaarverslag 2024 Website.docx"; sourceTree = "<group>"; };
 		D04DFD8A2B39FD19006EF297 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = "nl.lproj/Photo-Club-Hub-InfoPlist.strings"; sourceTree = "<group>"; };
@@ -422,7 +424,6 @@
 		D08319E5277F70A30049AB84 /* Photo Club Hub */ = {
 			isa = PBXGroup;
 			children = (
-				D01526BC278B91BA004DBD19 /* PhotoClubHub.entitlements */,
 				D03DE5CC2C28439800130680 /* App */,
 				D0831A18277F72110049AB84 /* View */,
 				D0831A23277F72340049AB84 /* ViewModel */,
@@ -430,6 +431,7 @@
 				D0831A48277F736C0049AB84 /* Documentation */,
 				D0831A3F277F731C0049AB84 /* Extensions */,
 				D0831A4F277F73C00049AB84 /* Preview Content */,
+				D01526BC278B91BA004DBD19 /* PhotoClubHub.entitlements */,
 			);
 			path = "Photo Club Hub";
 			sourceTree = "<group>";
@@ -607,6 +609,8 @@
 				D04DFD892B39FD19006EF297 /* Photo-Club-Hub-InfoPlist.strings */,
 				D0B52495277F9A4B00927BCA /* Localizable.strings */,
 				D0DF0F442B2CFA3800E9FEC8 /* Photo Club Hub Localizations */,
+				D048546D2D46877000022117 /* Localizable.xcstrings */,
+				D048546E2D46879000022117 /* Package.xcstrings */,
 			);
 			path = Localization;
 			sourceTree = "<group>";
