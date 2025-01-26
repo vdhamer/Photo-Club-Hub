@@ -58,6 +58,7 @@
       disableMainThreadChecker = "YES"
       disablePerformanceAntipatternChecker = "YES"
       language = "en"
+      region = "US"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"

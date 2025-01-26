@@ -12,7 +12,7 @@ struct MemberPortfolioRow: View {
     var member: MemberPortfolio
     @Environment(\.horizontalSizeClass) var horSizeClass
     let wkWebView: WKWebView
-    fileprivate let of2 = String(localized: "of2", comment: "<person> of <photo club>")
+    fileprivate let of2 = String(localized: "of2", table: "Package", comment: "<person> of <photo club>")
 
     var body: some View {
         SinglePortfolioLinkView(destPortfolio: member, wkWebView: wkWebView) {

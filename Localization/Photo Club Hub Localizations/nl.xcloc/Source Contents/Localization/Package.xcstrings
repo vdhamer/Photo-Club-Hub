@@ -1,0 +1,58 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "and" : {
+      "comment" : "To generate strings like \"secretary and admin\""
+    },
+    "clubs" : {
+      "comment" : "Mode for the Clubs page: show photo clubs as sections."
+    },
+    "deceased" : {
+      "comment" : "Relationship status of member within a club. Used as prefix."
+    },
+    "external coach" : {
+      "comment" : "Relationship status of member within a club. Used in concatenations."
+    },
+    "former" : {
+      "comment" : "Relationship status of member within a club. Used as prefex."
+    },
+    "honorary member" : {
+      "comment" : "Relationship status of member within a club. Used in concatenations."
+    },
+    "member" : {
+      "comment" : "Default status of member within a club. Used in concatenations."
+    },
+    "museums" : {
+      "comment" : "Mode for the Clubs page: show museums as sections."
+    },
+    "No remark currently available for %@ %@." : {
+      "comment" : "Shown below map if there is no usable remark in the OrganzationList.json file.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "No remark currently available for %1$@ %2$@."
+          }
+        }
+      }
+    },
+    "of2" : {
+      "comment" : "<person> of <photo club>",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "of"
+          }
+        }
+      }
+    },
+    "prospective member" : {
+      "comment" : "Relationship status of member within a club. Used in concatenations."
+    },
+    "unknowns" : {
+      "comment" : "Organization type is not known. Used for debugging."
+    }
+  },
+  "version" : "1.0"
+}
