@@ -64,17 +64,17 @@ enum MemberStatus {
 
     func localizedString() -> String {
         switch self {
-        case .coach: return String(localized: "external coach",
+        case .coach: return String(localized: "external coach", table: "Package",
                                    comment: "Relationship status of member within a club. Used in concatenations.")
-        case .deceased: return String(localized: "deceased",
+        case .deceased: return String(localized: "deceased", table: "Package",
                                    comment: "Relationship status of member within a club. Used as prefix.")
-        case .former: return String(localized: "former",
+        case .former: return String(localized: "former", table: "Package",
                                    comment: "Relationship status of member within a club. Used as prefex.")
-        case .honorary: return String(localized: "honorary member",
+        case .honorary: return String(localized: "honorary member", table: "Package",
                                    comment: "Relationship status of member within a club. Used in concatenations.")
-        case .current: return String(localized: "member",
+        case .current: return String(localized: "member", table: "Package",
                                    comment: "Default status of member within a club. Used in concatenations.")
-        case .prospective: return String(localized: "prospective member",
+        case .prospective: return String(localized: "prospective member", table: "Package",
                                    comment: "Relationship status of member within a club. Used in concatenations.")
         }
     }

@@ -11,7 +11,8 @@ extension MemberPortfolio { // computed properties related to roles of members i
         var prefixList = [String]()
         var suffixList = [String]()
         var result: String = ""
-        let andLocalized = String(localized: "and", comment: "To generate strings like \"secretary and admin\"")
+        let andLocalized = String(localized: "and", table: "Package",
+                                  comment: "To generate strings like \"secretary and admin\"")
 
         if photographer.isDeceased {
             prefixList.append(MemberStatus.deceased.localizedString())
@@ -47,7 +48,7 @@ extension MemberPortfolio { // computed properties related to roles of members i
     }
 
     var roleDescriptionOfClubTown: String {
-        let of2 = String(localized: "of2", comment: "<person> of <photo club>")
+        let of2 = String(localized: "of2", table: "Package", comment: "<person> of <photo club>")
         return "\(roleDescription) \(of2) \(self.organization.fullNameTown)"
     }
 

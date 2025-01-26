@@ -1,0 +1,150 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "and" : {
+      "comment" : "To generate strings like \"secretary and admin\"",
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "en"
+          }
+        }
+      }
+    },
+    "clubs" : {
+      "comment" : "Mode for the Clubs page: show photo clubs as sections.",
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "clubs"
+          }
+        }
+      }
+    },
+    "deceased" : {
+      "comment" : "Relationship status of member within a club. Used as prefix.",
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "overleden"
+          }
+        }
+      }
+    },
+    "external coach" : {
+      "comment" : "Relationship status of member within a club. Used in concatenations.",
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "mentor"
+          }
+        }
+      }
+    },
+    "former" : {
+      "comment" : "Relationship status of member within a club. Used as prefex.",
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "voormalig"
+          }
+        }
+      }
+    },
+    "honorary member" : {
+      "comment" : "Relationship status of member within a club. Used in concatenations.",
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "erelid"
+          }
+        }
+      }
+    },
+    "member" : {
+      "comment" : "Default status of member within a club. Used in concatenations.",
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "lid"
+          }
+        }
+      }
+    },
+    "museums" : {
+      "comment" : "Mode for the Clubs page: show museums as sections.",
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "musea"
+          }
+        }
+      }
+    },
+    "No remark currently available for %@ %@." : {
+      "comment" : "Shown below map if there is no usable remark in the OrganzationList.json file.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "No remark currently available for %1$@ %2$@."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geen bijzonderheden bekend over %@ %@."
+          }
+        }
+      }
+    },
+    "of2" : {
+      "comment" : "<person> of <photo club>",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "of"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "van"
+          }
+        }
+      }
+    },
+    "prospective member" : {
+      "comment" : "Relationship status of member within a club. Used in concatenations.",
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "aspirant-lid"
+          }
+        }
+      }
+    },
+    "unknowns" : {
+      "comment" : "Organization type is not known. Used for debugging.",
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "onbekenden"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

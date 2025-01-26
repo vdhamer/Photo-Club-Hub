@@ -150,7 +150,7 @@ extension Organization {
         }
 
         let clubOrMuseum: String = organizationType.organizationTypeName
-        return String(localized: "No remark currently available for \(clubOrMuseum) \(fullName).",
+        return String(localized: "No remark currently available for \(clubOrMuseum) \(fullName).", table: "Package",
                       comment: "Shown below map if there is no usable remark in the OrganzationList.json file.")
     }
 
