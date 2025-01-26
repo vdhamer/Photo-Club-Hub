@@ -20,6 +20,7 @@ Code Maintenance
 * Moved isDeceased parameter into PhotographerOptionalFields struct.
 * Moved the JSON files to a new directory with a simpler path.
 * Added support for a contactEmail field for knowing who to contact about Level2.json files.
+* Migrated to String Catalogs for localization.
 
 Data Maintenance
 * Added AJ to fcBellusImago

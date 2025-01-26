@@ -71,7 +71,7 @@ struct ReadmeView: View {
                                          comment: "Shown on Readme page.")
                                     .font(.callout.italic())
                                     .frame(width: geo.size.width, alignment: .center)
-                                    Text("")
+                                    Text(verbatim: "")
                                 }
                             }
                         }
@@ -92,8 +92,8 @@ struct ReadmeView: View {
                                  comment: "Caption of Localizations image on Readme page")
                             .font(.callout.italic())
                             .frame(width: geo.size.width, alignment: .center)
-                            Text("")
-                            Text("")
+                            Text(verbatim: "")
+                            Text(verbatim: "")
 
                             Paragraph("3.2.a", comment: "Paragraph 3.2.a of the Readme screen", geo: geo)
                             Paragraph("3.2.b", comment: "Paragraph 3.2.b of the Readme screen", geo: geo)
@@ -107,7 +107,7 @@ struct ReadmeView: View {
                                  comment: "Caption of 3D image on Readme page")
                             .font(.callout.italic())
                             .frame(width: geo.size.width, alignment: .center)
-                            Text("")
+                            Text(verbatim: "")
 
                             Paragraph("3.3.a", comment: "Paragraph 3.3.a of the Readme screen", geo: geo)
                             Paragraph("3.3.b", comment: "Paragraph 3.3.b of the Readme screen", geo: geo)
@@ -131,7 +131,7 @@ struct ReadmeView: View {
                                  comment: "Caption of Museums image on Readme page")
                             .font(.callout.italic())
                             .frame(width: geo.size.width, alignment: .center)
-                            Text("")
+                            Text(verbatim: "")
 
                             Paragraph("3.6.a", comment: "Paragraph 3.6.a of the Readme screen", geo: geo)
                             Paragraph("3.6.b", comment: "Paragraph 3.6.b of the Readme screen", geo: geo)
@@ -148,7 +148,7 @@ struct ReadmeView: View {
                                  comment: "Caption of Websites image on Readme page")
                             .font(.callout.italic())
                             .frame(width: geo.size.width, alignment: .center)
-                            Text("")
+                            Text(verbatim: "")
 
                             Paragraph("3.8.a", comment: "Paragraph 3.8.a of the Readme screen", geo: geo)
                             Paragraph("3.8.b", comment: "Paragraph 3.8.b of the Readme screen", geo: geo)
@@ -179,7 +179,7 @@ struct ReadmeView: View {
                                  comment: "Caption of an image on the Readme page")
                             .font(.callout.italic())
                             .frame(width: geo.size.width * 0.8, alignment: .center)
-                            Text("")
+                            Text(verbatim: "")
 
                             Paragraph("3.10.a", comment: "Paragraph 3.10.a of the Readme screen", geo: geo)
                             Paragraph("3.10.b", comment: "Paragraph 3.10.b of the Readme screen", geo: geo)
@@ -194,7 +194,7 @@ struct ReadmeView: View {
                                  comment: "Caption about Play button on the Readme page")
                             .font(.callout.italic())
                             .frame(width: geo.size.width * 0.8, alignment: .center)
-                            Text("")
+                            Text(verbatim: "")
 
                             Paragraph("3.11.a", comment: "Paragraph 3.11.a of the Readme screen", geo: geo)
                             Paragraph("3.11.b", comment: "Paragraph 3.11.b of the Readme screen", geo: geo,
@@ -209,7 +209,7 @@ struct ReadmeView: View {
                                  comment: "Caption about Search Bar on the Readme page")
                             .font(.callout.italic())
                             .frame(width: geo.size.width * 0.8, alignment: .center)
-                            Text("")
+                            Text(verbatim: "")
 
                             Paragraph("3.11.c", comment: "Paragraph 3.11.c of the Readme screen", geo: geo)
                         }
@@ -243,7 +243,7 @@ struct ReadmeView: View {
                                      comment: "Caption for image on Readme page")
                                     .font(.callout.italic())
                                     .frame(width: geo.size.width, alignment: .center)
-                                Text("")
+                                Text(verbatim: "")
                             }
 
                             Paragraph("5.3", comment: "Third paragraph in OpenSource section of Readme page", geo: geo)
@@ -260,7 +260,7 @@ struct ReadmeView: View {
                                 Text("Fragment of the Swift source code", comment: "Caption for image on Readme page")
                                     .font(.callout.italic())
                                     .frame(width: geo.size.width, alignment: .center)
-                                Text("")
+                                Text(verbatim: "")
                             }
                         }
 

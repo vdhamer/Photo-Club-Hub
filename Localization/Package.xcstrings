@@ -4,6 +4,12 @@
     "and" : {
       "comment" : "To generate strings like \"secretary and admin\"",
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "and"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -15,6 +21,12 @@
     "clubs" : {
       "comment" : "Mode for the Clubs page: show photo clubs as sections.",
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "clubs"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -26,6 +38,12 @@
     "deceased" : {
       "comment" : "Relationship status of member within a club. Used as prefix.",
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "deceased"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -37,6 +55,12 @@
     "external coach" : {
       "comment" : "Relationship status of member within a club. Used in concatenations.",
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "external coach"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -48,6 +72,12 @@
     "former" : {
       "comment" : "Relationship status of member within a club. Used as prefex.",
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "former"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -59,6 +89,12 @@
     "honorary member" : {
       "comment" : "Relationship status of member within a club. Used in concatenations.",
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "honorary member"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -70,6 +106,12 @@
     "member" : {
       "comment" : "Default status of member within a club. Used in concatenations.",
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "member"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -81,6 +123,12 @@
     "museums" : {
       "comment" : "Mode for the Clubs page: show museums as sections.",
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "museums"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -126,6 +174,12 @@
     "prospective member" : {
       "comment" : "Relationship status of member within a club. Used in concatenations.",
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "prospective member"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -137,6 +191,12 @@
     "unknowns" : {
       "comment" : "Organization type is not known. Used for debugging.",
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "unknowns"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",

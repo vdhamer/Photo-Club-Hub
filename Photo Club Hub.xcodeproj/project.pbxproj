@@ -25,11 +25,13 @@
 		D044646527FCE7C100990613 /* UIDevice+IsIPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = D044646427FCE7C100990613 /* UIDevice+IsIPad.swift */; };
 		D0447C882BA510AF00982A1E /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0447C862BA510AF00982A1E /* Language.swift */; };
 		D0447C892BA510AF00982A1E /* LocalizedRemark.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0447C872BA510AF00982A1E /* LocalizedRemark.swift */; };
+		D04856342D46A41900022117 /* Photo-Club-Hub-InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = D04856332D46A41900022117 /* Photo-Club-Hub-InfoPlist.xcstrings */; };
+		D04856362D46A45D00022117 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = D04856352D46A45D00022117 /* Localizable.xcstrings */; };
+		D04856382D46A62200022117 /* Package.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = D04856372D46A62200022117 /* Package.xcstrings */; };
 		D04DFD882B39F788006EF297 /* Published+UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A40277F731C0049AB84 /* Published+UserDefaults.swift */; };
 		D05124852C42BE2D00D94B81 /* Level2JsonReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05124842C42BE2D00D94B81 /* Level2JsonReader.swift */; };
 		D05124872C43070E00D94B81 /* FotogroepDeGenderMembersProvider+insertOnlineMemberData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05124862C43070E00D94B81 /* FotogroepDeGenderMembersProvider+insertOnlineMemberData.swift */; };
 		D05124892C43122C00D94B81 /* UrlComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05124882C43122C00D94B81 /* UrlComponents.swift */; };
-		D053F23D2B54430C00662EF8 /* Photo-Club-Hub-InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D053F23B2B54430C00662EF8 /* Photo-Club-Hub-InfoPlist.strings */; };
 		D05414F72AC7499000D899D8 /* FotogroepDeGenderMembersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05414F62AC7499000D899D8 /* FotogroepDeGenderMembersProvider.swift */; };
 		D054173A2D31DDE300A2A579 /* XampleMaxMembersProvider+insertOnlineMemberData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05417382D31DDE300A2A579 /* XampleMaxMembersProvider+insertOnlineMemberData.swift */; };
 		D054173B2D31DDE300A2A579 /* XampleMaxMembersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05417372D31DDE300A2A579 /* XampleMaxMembersProvider.swift */; };
@@ -69,7 +71,6 @@
 		D0AE1B7527889E8600E0100E /* OrganizationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AE1B7427889E8600E0100E /* OrganizationListView.swift */; };
 		D0AE1B782788A19500E0100E /* WhoIsWhoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AE1B772788A19500E0100E /* WhoIsWhoListView.swift */; };
 		D0B32BB32C15C51A009FF8E7 /* AppVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B32BB22C15C51A009FF8E7 /* AppVersion.swift */; };
-		D0B52497277F9A4B00927BCA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0B52495277F9A4B00927BCA /* Localizable.strings */; };
 		D0B5743E2C41D79300334E4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D08319EA277F70A40049AB84 /* Assets.xcassets */; };
 		D0BAB01D2A76CED300387E63 /* URLSession+synchronous.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BAB01C2A76CED300387E63 /* URLSession+synchronous.swift */; };
 		D0C53BDD2ABF3ADF000722A1 /* PersonName.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C53BDC2ABF3ADF000722A1 /* PersonName.swift */; };
@@ -96,7 +97,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D0001E1D2C30A9FD006DB860 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = "en.lproj/Photo-Club-Hub-InfoPlist.strings"; sourceTree = "<group>"; };
 		D006BA7D2B115FB1002E555B /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		D008D2A928739167007A7BE2 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		D00DC8F02BD5D85900B4A9A2 /* Photo_Club_Hub_2_6_1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_6_1.xcdatamodel; sourceTree = "<group>"; };
@@ -124,15 +124,16 @@
 		D044646427FCE7C100990613 /* UIDevice+IsIPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+IsIPad.swift"; sourceTree = "<group>"; };
 		D0447C862BA510AF00982A1E /* Language.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		D0447C872BA510AF00982A1E /* LocalizedRemark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedRemark.swift; sourceTree = "<group>"; };
-		D048546D2D46877000022117 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
-		D048546E2D46879000022117 /* Package.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Package.xcstrings; sourceTree = "<group>"; };
+		D04856332D46A41900022117 /* Photo-Club-Hub-InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = "Photo-Club-Hub-InfoPlist.xcstrings"; sourceTree = "<group>"; };
+		D04856352D46A45D00022117 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		D04856372D46A62200022117 /* Package.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Package.xcstrings; sourceTree = "<group>"; };
+		D048571B2D46C13100022117 /* en.xcloc */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = en.xcloc; sourceTree = "<group>"; };
+		D048571C2D46C13100022117 /* nl.xcloc */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = nl.xcloc; sourceTree = "<group>"; };
 		D04A2B112AC0958C003ED113 /* LineCount.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = LineCount.xlsx; sourceTree = "<group>"; };
 		D04D7B2B2D2B3B210048454B /* Jaarverslag 2024 Website.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jaarverslag 2024 Website.docx"; sourceTree = "<group>"; };
-		D04DFD8A2B39FD19006EF297 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = "nl.lproj/Photo-Club-Hub-InfoPlist.strings"; sourceTree = "<group>"; };
 		D05124842C42BE2D00D94B81 /* Level2JsonReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level2JsonReader.swift; sourceTree = "<group>"; };
 		D05124862C43070E00D94B81 /* FotogroepDeGenderMembersProvider+insertOnlineMemberData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FotogroepDeGenderMembersProvider+insertOnlineMemberData.swift"; sourceTree = "<group>"; };
 		D05124882C43122C00D94B81 /* UrlComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlComponents.swift; sourceTree = "<group>"; };
-		D053F23C2B54430C00662EF8 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = "nl.lproj/Photo-Club-Hub-InfoPlist.strings"; sourceTree = "<group>"; };
 		D05414F62AC7499000D899D8 /* FotogroepDeGenderMembersProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FotogroepDeGenderMembersProvider.swift; sourceTree = "<group>"; };
 		D05417372D31DDE300A2A579 /* XampleMaxMembersProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XampleMaxMembersProvider.swift; sourceTree = "<group>"; };
 		D05417382D31DDE300A2A579 /* XampleMaxMembersProvider+insertOnlineMemberData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XampleMaxMembersProvider+insertOnlineMemberData.swift"; sourceTree = "<group>"; };
@@ -201,7 +202,6 @@
 		D0AE1B772788A19500E0100E /* WhoIsWhoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhoIsWhoListView.swift; sourceTree = "<group>"; };
 		D0AEDF3C2BBE0CD1003FD250 /* Photo_Club_Hub_2_5_7.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_5_7.xcdatamodel; sourceTree = "<group>"; };
 		D0B32BB22C15C51A009FF8E7 /* AppVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVersion.swift; sourceTree = "<group>"; };
-		D0B52496277F9A4B00927BCA /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D0BAB01C2A76CED300387E63 /* URLSession+synchronous.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+synchronous.swift"; sourceTree = "<group>"; };
 		D0BF26F72CFA0FDE00DA2CB9 /* dataModel_2_7_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dataModel_2_7_1.png; sourceTree = "<group>"; };
 		D0BF26FB2CFA218000DA2CB9 /* 241113_Fotoclubs_Brabant_Oost.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = 241113_Fotoclubs_Brabant_Oost.xlsx; sourceTree = "<group>"; };
@@ -212,7 +212,6 @@
 		D0C53BDC2ABF3ADF000722A1 /* PersonName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonName.swift; sourceTree = "<group>"; };
 		D0C6E95429577921001E5CE9 /* DebugPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugPanel.swift; sourceTree = "<group>"; };
 		D0C8E3A12BB81B4A00348D97 /* ItemFilterStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemFilterStatsView.swift; sourceTree = "<group>"; };
-		D0CB581228149D18005D496F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D0CD0ADD2D33E6B0006C1CFA /* xampleMax.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = xampleMax.level1.json; sourceTree = "<group>"; };
 		D0CD0ADE2D33E6B0006C1CFA /* xampleMin.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = xampleMin.level1.json; sourceTree = "<group>"; };
 		D0CEAECE2B2E1134005AE47D /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
@@ -221,7 +220,6 @@
 		D0D4860D2B0EC18A00ED0542 /* Photo_Club_Hub_2_5_2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_5_2.xcdatamodel; sourceTree = "<group>"; };
 		D0DCF7862D090D5C0057FB24 /* Photo_Club_Hub_2_7_2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_7_2.xcdatamodel; sourceTree = "<group>"; };
 		D0DE02762789D1B30062738C /* RoleIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleIconView.swift; sourceTree = "<group>"; };
-		D0DF0F442B2CFA3800E9FEC8 /* Photo Club Hub Localizations */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Photo Club Hub Localizations"; sourceTree = "<group>"; };
 		D0E02F972B80191300D67CDA /* Readme_NL_2_7_1.pages */ = {isa = PBXFileReference; lastKnownFileType = file; path = Readme_NL_2_7_1.pages; sourceTree = "<group>"; };
 		D0E2235327DE9139002A8600 /* PreludeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreludeView.swift; sourceTree = "<group>"; };
 		D0E673BA2AE1C1A100A4DC95 /* Photo_Club_Hub_2_5_0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_5_0.xcdatamodel; sourceTree = "<group>"; };
@@ -288,6 +286,15 @@
 				D08319E6277F70A30049AB84 /* PhotoClubHubApp.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		D048571D2D46C13100022117 /* Photo Club Hub Localizations */ = {
+			isa = PBXGroup;
+			children = (
+				D048571B2D46C13100022117 /* en.xcloc */,
+				D048571C2D46C13100022117 /* nl.xcloc */,
+			);
+			path = "Photo Club Hub Localizations";
 			sourceTree = "<group>";
 		};
 		D05414F52AC7496000D899D8 /* FotogroepDeGender */ = {
@@ -402,7 +409,6 @@
 			children = (
 				D08319E5277F70A30049AB84 /* Photo Club Hub */,
 				D0831A17277F71340049AB84 /* Photo-Club-Hub-Info.plist */,
-				D053F23B2B54430C00662EF8 /* Photo-Club-Hub-InfoPlist.strings */,
 				D0CEAECD2B2E1120005AE47D /* Localization */,
 				D08319EA277F70A40049AB84 /* Assets.xcassets */,
 				D0CEAECE2B2E1134005AE47D /* Settings.bundle */,
@@ -606,11 +612,10 @@
 		D0CEAECD2B2E1120005AE47D /* Localization */ = {
 			isa = PBXGroup;
 			children = (
-				D04DFD892B39FD19006EF297 /* Photo-Club-Hub-InfoPlist.strings */,
-				D0B52495277F9A4B00927BCA /* Localizable.strings */,
-				D0DF0F442B2CFA3800E9FEC8 /* Photo Club Hub Localizations */,
-				D048546D2D46877000022117 /* Localizable.xcstrings */,
-				D048546E2D46879000022117 /* Package.xcstrings */,
+				D048571D2D46C13100022117 /* Photo Club Hub Localizations */,
+				D04856352D46A45D00022117 /* Localizable.xcstrings */,
+				D04856372D46A62200022117 /* Package.xcstrings */,
+				D04856332D46A41900022117 /* Photo-Club-Hub-InfoPlist.xcstrings */,
 			);
 			path = Localization;
 			sourceTree = "<group>";
@@ -768,6 +773,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D04856382D46A62200022117 /* Package.xcstrings in Resources */,
 				D008D2AA28739167007A7BE2 /* .gitignore in Resources */,
 				D0B5743E2C41D79300334E4C /* Assets.xcassets in Resources */,
 				D0F8719F2D403E6000530D10 /* readme.txt in Resources */,
@@ -775,12 +781,12 @@
 				D0F871952D403D1700530D10 /* root.level1.json in Resources */,
 				D0F871972D403D1700530D10 /* fgWaalre.level2.json in Resources */,
 				D0F871982D403D1700530D10 /* fcBellusImago.level2.json in Resources */,
+				D04856342D46A41900022117 /* Photo-Club-Hub-InfoPlist.xcstrings in Resources */,
 				D0F8719A2D403D1700530D10 /* fgDeGender.level2.json in Resources */,
 				D0F8719C2D403D1700530D10 /* level0.json in Resources */,
-				D0B52497277F9A4B00927BCA /* Localizable.strings in Resources */,
 				D06D08DE2C28835D00872BC2 /* Settings.bundle in Resources */,
+				D04856362D46A45D00022117 /* Localizable.xcstrings in Resources */,
 				D0831A51277F73C00049AB84 /* Preview Assets.xcassets in Resources */,
-				D053F23D2B54430C00662EF8 /* Photo-Club-Hub-InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -930,35 +936,6 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		D04DFD892B39FD19006EF297 /* Photo-Club-Hub-InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D04DFD8A2B39FD19006EF297 /* nl */,
-			);
-			name = "Photo-Club-Hub-InfoPlist.strings";
-			sourceTree = "<group>";
-		};
-		D053F23B2B54430C00662EF8 /* Photo-Club-Hub-InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D053F23C2B54430C00662EF8 /* nl */,
-				D0001E1D2C30A9FD006DB860 /* en */,
-			);
-			name = "Photo-Club-Hub-InfoPlist.strings";
-			sourceTree = "<group>";
-		};
-		D0B52495277F9A4B00927BCA /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D0B52496277F9A4B00927BCA /* nl */,
-				D0CB581228149D18005D496F /* en */,
-			);
-			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
 		D0831A0A277F70A50049AB84 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1015,6 +992,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1074,6 +1052,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
