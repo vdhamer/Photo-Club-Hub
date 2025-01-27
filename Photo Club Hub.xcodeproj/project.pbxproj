@@ -66,6 +66,8 @@
 		D087540A2BC5E9FD00FCBDB3 /* WhoIsWhoTextInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08754092BC5E9FD00FCBDB3 /* WhoIsWhoTextInfo.swift */; };
 		D087540C2BC5EE3700FCBDB3 /* WhoIsWhoThumbnails.swift in Sources */ = {isa = PBXBuildFile; fileRef = D087540B2BC5EE3700FCBDB3 /* WhoIsWhoThumbnails.swift */; };
 		D08DC6062AE57294008DBD68 /* SinglePortfolioLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08DC6052AE57294008DBD68 /* SinglePortfolioLinkView.swift */; };
+		D09816EA2D484985009D22FE /* ReadmeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09816E92D484985009D22FE /* ReadmeSection.swift */; };
+		D09816EC2D485375009D22FE /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09816EB2D485375009D22FE /* SectionHeader.swift */; };
 		D0A0B6852AA930E90078DE9A /* Photo_Club_Hub.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D0A0B6832AA930E90078DE9A /* Photo_Club_Hub.xcdatamodeld */; };
 		D0ADF4AE27922DCA00535432 /* MemberRolesAndStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ADF4AD27922DCA00535432 /* MemberRolesAndStatus.swift */; };
 		D0AE1B7527889E8600E0100E /* OrganizationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AE1B7427889E8600E0100E /* OrganizationListView.swift */; };
@@ -192,6 +194,8 @@
 		D08754092BC5E9FD00FCBDB3 /* WhoIsWhoTextInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhoIsWhoTextInfo.swift; sourceTree = "<group>"; };
 		D087540B2BC5EE3700FCBDB3 /* WhoIsWhoThumbnails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhoIsWhoThumbnails.swift; sourceTree = "<group>"; };
 		D08DC6052AE57294008DBD68 /* SinglePortfolioLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePortfolioLinkView.swift; sourceTree = "<group>"; };
+		D09816E92D484985009D22FE /* ReadmeSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeSection.swift; sourceTree = "<group>"; };
+		D09816EB2D485375009D22FE /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
 		D09C90642BA8F171005FA3D6 /* Photo_Club_Hub_2_5_5a.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_5_5a.xcdatamodel; sourceTree = "<group>"; };
 		D0A0B6842AA930E90078DE9A /* Photo_Club_Hub.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub.xcdatamodel; sourceTree = "<group>"; };
 		D0A0B6872AA932A10078DE9A /* Photo_Club_Hub_2_4_1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_4_1.xcdatamodel; sourceTree = "<group>"; };
@@ -330,6 +334,8 @@
 			isa = PBXGroup;
 			children = (
 				D05E451D27EF2A2C00D31327 /* ReadmeView.swift */,
+				D09816E92D484985009D22FE /* ReadmeSection.swift */,
+				D09816EB2D485375009D22FE /* SectionHeader.swift */,
 			);
 			path = ReadmeView;
 			sourceTree = "<group>";
@@ -875,6 +881,7 @@
 				D0831A34277F72590049AB84 /* BellusImagoMembersProvider.swift in Sources */,
 				D0FE77E52BB9AEE900272077 /* ItemFilterStatsEnum.swift in Sources */,
 				D0C53BDD2ABF3ADF000722A1 /* PersonName.swift in Sources */,
+				D09816EC2D485375009D22FE /* SectionHeader.swift in Sources */,
 				D0ADF4AE27922DCA00535432 /* MemberRolesAndStatus.swift in Sources */,
 				D0447C882BA510AF00982A1E /* Language.swift in Sources */,
 				D06BE9332A4F870B0055B3B1 /* ifDebugUtils.swift in Sources */,
@@ -901,6 +908,7 @@
 				D072D5E72D333E7500EA88DD /* XampleMinMembersProvider+insertOnlineMemberData.swift in Sources */,
 				D072D5E82D333E7500EA88DD /* XampleMinMembersProvider.swift in Sources */,
 				D0621E892AE2E47B000FFADB /* MemberPortfolio+refreshFirstImage.swift in Sources */,
+				D09816EA2D484985009D22FE /* ReadmeSection.swift in Sources */,
 				D0831A20277F72270049AB84 /* FilteredOrganizationView.swift in Sources */,
 				D05124852C42BE2D00D94B81 /* Level2JsonReader.swift in Sources */,
 				D0E2235427DE9139002A8600 /* PreludeView.swift in Sources */,

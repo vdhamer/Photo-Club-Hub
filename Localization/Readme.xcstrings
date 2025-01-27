@@ -10,10 +10,11 @@
             "value" : ""
           }
         }
-      }
+      },
+      "shouldTranslate" : false
     },
     "§1.1" : {
-      "comment" : "First paragraph in The App section of Readme page",
+      "comment" : "Title of a section of the Readme screen",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -30,7 +31,7 @@
       }
     },
     "§1.2" : {
-      "comment" : "Second paragraph in The App section of Readme page",
+      "comment" : "Title of a section of the Readme screen",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -47,7 +48,7 @@
       }
     },
     "§1.3" : {
-      "comment" : "Third paragraph in The App section of Readme page",
+      "comment" : "Title of a section of the Readme screen",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -64,7 +65,7 @@
       }
     },
     "§1.4" : {
-      "comment" : "Fourth paragraph in The App section of Readme page",
+      "comment" : "Title of a section of the Readme screen",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -81,7 +82,7 @@
       }
     },
     "§1.5" : {
-      "comment" : "Fifth paragraph in The App section of Readme page",
+      "comment" : "Title of a section of the Readme screen",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -98,7 +99,7 @@
       }
     },
     "§1.6" : {
-      "comment" : "Sixth paragraph in The App section of Readme page",
+      "comment" : "Title of a section of the Readme screen",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -115,7 +116,7 @@
       }
     },
     "§2.1" : {
-      "comment" : "First paragraph in The Concept on Readme page",
+      "comment" : "Title of a section of the Readme screen",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -132,7 +133,7 @@
       }
     },
     "§2.2" : {
-      "comment" : "Second paragraph in The Concept on Readme page",
+      "comment" : "Title of a section of the Readme screen",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -149,7 +150,7 @@
       }
     },
     "§2.3" : {
-      "comment" : "Third paragraph in The Concept on Readme page",
+      "comment" : "Title of a section of the Readme screen",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -166,7 +167,7 @@
       }
     },
     "§2.4" : {
-      "comment" : "Fourth paragraph in The Concept on Readme page",
+      "comment" : "Title of a section of the Readme screen",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -183,7 +184,7 @@
       }
     },
     "§2.5" : {
-      "comment" : "Fifth paragraph in The Concept on Readme page",
+      "comment" : "Title of a section of the Readme screen",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -200,7 +201,7 @@
       }
     },
     "§3.1.a" : {
-      "comment" : "Paragraph 3.1.a of the Readme screen",
+      "comment" : "Title of a section of the Readme screen",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -217,7 +218,7 @@
       }
     },
     "§3.1.b" : {
-      "comment" : "Paragraph 3.1.b of the Readme screen",
+      "comment" : "Title of a section of the Readme screen",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -234,7 +235,7 @@
       }
     },
     "§3.2.a" : {
-      "comment" : "Paragraph 3.2.a of the Readme screen",
+      "comment" : "Title of a section of the Readme screen",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -251,7 +252,7 @@
       }
     },
     "§3.2.b" : {
-      "comment" : "Paragraph 3.2.ba of the Readme screen",
+      "comment" : "Title of a section of the Readme screen",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -268,7 +269,7 @@
       }
     },
     "§3.3.a" : {
-      "comment" : "Paragraph 3.3.a of the Readme screen",
+      "comment" : "Title of a section of the Readme screen",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -285,7 +286,7 @@
       }
     },
     "§3.3.b" : {
-      "comment" : "Paragraph 3.3.b of the Readme screen",
+      "comment" : "Title of a section of the Readme screen",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -302,7 +303,7 @@
       }
     },
     "§3.3.c" : {
-      "comment" : "Paragraph 3.3.c of the Readme screen",
+      "comment" : "Title of a section of the Readme screen",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -319,7 +320,7 @@
       }
     },
     "§3.4.a" : {
-      "comment" : "Paragraph 3.4.a of the Readme screen",
+      "comment" : "Title of a section of the Readme screen",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -336,7 +337,7 @@
       }
     },
     "§3.4.b" : {
-      "comment" : "Paragraph 3.4.b of the Readme screen",
+      "comment" : "Title of a section of the Readme screen",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -353,7 +354,7 @@
       }
     },
     "§3.4.c" : {
-      "comment" : "Paragraph 3.4.c of the Readme screen",
+      "comment" : "Title of a section of the Readme screen",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -370,7 +371,7 @@
       }
     },
     "§3.4.d" : {
-      "comment" : "Paragraph 3.4.d of the Readme screen",
+      "comment" : "Title of a section of the Readme screen",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -387,7 +388,7 @@
       }
     },
     "§3.5.a" : {
-      "comment" : "Paragraph 3.5.a of the Readme screen",
+      "comment" : "Title of a section of the Readme screen",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -404,7 +405,7 @@
       }
     },
     "§3.5.b" : {
-      "comment" : "Paragraph 3.5.b of the Readme screen",
+      "comment" : "Title of a section of the Readme screen",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -421,7 +422,7 @@
       }
     },
     "§3.5.c" : {
-      "comment" : "Paragraph 3.5.c of the Readme screen",
+      "comment" : "Title of a section of the Readme screen",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -438,7 +439,7 @@
       }
     },
     "§3.6.a" : {
-      "comment" : "Paragraph 3.6.a of the Readme screen",
+      "comment" : "Title of a section of the Readme screen",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -455,7 +456,7 @@
       }
     },
     "§3.6.b" : {
-      "comment" : "Paragraph 3.6.b of the Readme screen",
+      "comment" : "Title of a section of the Readme screen",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -472,7 +473,7 @@
       }
     },
     "§3.7.a" : {
-      "comment" : "Paragraph 3.7.a of the Readme screen",
+      "comment" : "Title of a section of the Readme screen",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -489,7 +490,7 @@
       }
     },
     "§3.7.b" : {
-      "comment" : "Paragraph 3.7.b of the Readme scree",
+      "comment" : "Title of a section of the Readme screen",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -506,7 +507,7 @@
       }
     },
     "§3.8.a" : {
-      "comment" : "Paragraph 3.8.a of the Readme screen",
+      "comment" : "Title of a section of the Readme screen",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -523,7 +524,7 @@
       }
     },
     "§3.8.b" : {
-      "comment" : "Paragraph 3.8.b of the Readme screen",
+      "comment" : "Title of a section of the Readme screen",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -540,7 +541,7 @@
       }
     },
     "§3.8.c" : {
-      "comment" : "Paragraph 3.8.c of the Readme screen",
+      "comment" : "Title of a section of the Readme screen",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -557,7 +558,7 @@
       }
     },
     "§3.8.d" : {
-      "comment" : "Paragraph 3.8.d of the Readme screen",
+      "comment" : "Title of a section of the Readme screen",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -574,7 +575,7 @@
       }
     },
     "§3.8.e" : {
-      "comment" : "Paragraph 3.8.e of the Readme screen",
+      "comment" : "Title of a section of the Readme screen",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -591,7 +592,7 @@
       }
     },
     "§3.9.a" : {
-      "comment" : "Paragraph 3.9.a of the Readme screen",
+      "comment" : "Title of a section of the Readme screen",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -608,7 +609,7 @@
       }
     },
     "§3.9.b" : {
-      "comment" : "Paragraph 3.9.b of the Readme screen",
+      "comment" : "Title of a section of the Readme screen",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -625,7 +626,7 @@
       }
     },
     "§3.9.c" : {
-      "comment" : "Paragraph 3.9.c of the Readme screen",
+      "comment" : "Title of a section of the Readme screen",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -642,7 +643,7 @@
       }
     },
     "§3.10.a" : {
-      "comment" : "Paragraph 3.10.a of the Readme screen",
+      "comment" : "Title of a section of the Readme screen",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -659,7 +660,7 @@
       }
     },
     "§3.10.b" : {
-      "comment" : "Paragraph 3.10.b of the Readme screen",
+      "comment" : "Title of a section of the Readme screen",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -676,7 +677,7 @@
       }
     },
     "§3.10.c" : {
-      "comment" : "Paragraph 3.10.c of the Readme screen",
+      "comment" : "Title of a section of the Readme screen",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -693,7 +694,7 @@
       }
     },
     "§3.11.a" : {
-      "comment" : "Paragraph 3.11.a of the Readme screen",
+      "comment" : "Title of a section of the Readme screen",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -710,7 +711,7 @@
       }
     },
     "§3.11.b" : {
-      "comment" : "Paragraph 3.11.b of the Readme screen",
+      "comment" : "Title of a section of the Readme screen",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -727,7 +728,7 @@
       }
     },
     "§3.11.c" : {
-      "comment" : "Paragraph 3.11.c of the Readme screen",
+      "comment" : "Title of a section of the Readme screen",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -744,7 +745,7 @@
       }
     },
     "§4.1" : {
-      "comment" : "First paragraph SupportedPlatforms section of Readme page",
+      "comment" : "Title of a section of the Readme screen",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -761,7 +762,7 @@
       }
     },
     "§4.2" : {
-      "comment" : "Second paragraph SupportedPlatforms section of Readme page",
+      "comment" : "Title of a section of the Readme screen",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -778,7 +779,7 @@
       }
     },
     "§4.3" : {
-      "comment" : "Third paragraph SupportedPlatforms section of Readme page",
+      "comment" : "Title of a section of the Readme screen",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -795,7 +796,7 @@
       }
     },
     "§4.4" : {
-      "comment" : "Fourth paragraph SupportedPlatforms section of Readme page",
+      "comment" : "Title of a section of the Readme screen",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -812,7 +813,7 @@
       }
     },
     "§5.1" : {
-      "comment" : "First paragraph Developers section of Readme page",
+      "comment" : "Title of a section of the Readme screen",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -829,7 +830,7 @@
       }
     },
     "§5.2" : {
-      "comment" : "Second paragraph Developers section of Readme page",
+      "comment" : "Title of a section of the Readme screen",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -846,7 +847,7 @@
       }
     },
     "§5.3" : {
-      "comment" : "Third paragraph Developers section of Readme page",
+      "comment" : "Title of a section of the Readme screen",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -863,7 +864,7 @@
       }
     },
     "§5.4" : {
-      "comment" : "Fourth paragraph Developers section of Readme page",
+      "comment" : "Title of a section of the Readme screen",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -880,7 +881,7 @@
       }
     },
     "§5.5" : {
-      "comment" : "Fifth paragraph Developers section of Readme page",
+      "comment" : "Title of a section of the Readme screen",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -897,6 +898,7 @@
       }
     },
     "Features and Tips" : {
+      "comment" : "Title of one section of Readme screen",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -913,6 +915,7 @@
       }
     },
     "How you can help" : {
+      "comment" : "Title of one section of Readme screen",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -946,6 +949,7 @@
       }
     },
     "Supported Platforms" : {
+      "comment" : "Title of one section of Readme screen",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -962,6 +966,7 @@
       }
     },
     "The App" : {
+      "comment" : "Title of one section of Readme screen",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -978,6 +983,7 @@
       }
     },
     "The Concept" : {
+      "comment" : "Title of one section of Readme screen",
       "localizations" : {
         "en" : {
           "stringUnit" : {
