@@ -17,7 +17,7 @@ struct ReadmeView: View {
 
     fileprivate static let paddingConstant: CGFloat = 20
     fileprivate let title = String(localized: "Readme", table: "Readme", comment: "Title of Readme screen")
-    fileprivate let comment = "§x.y is subsection y of section x of text on Readme screen"
+    fileprivate let comment: StaticString = "§x.y is subsection y of section x of text on Readme screen"
     @Environment(\.dismiss) var dismiss: DismissAction // \.dismiss requires iOS 15
     @State fileprivate var showingRoadmap = false // controls visibility of Preferences screen
     @State fileprivate var selectedRoadmapDetent = PresentationDetent.large // careful: must be element of detentsList
@@ -32,9 +32,9 @@ struct ReadmeView: View {
                             SectionHeader(String(localized: "The App", comment: "Section title on Readme page"),
                                           geo: geo)
 
-                            ReadmeSection("§1.1", comment: "First paragraph in The-app section of Readme page", geo: geo)
-                            ReadmeSection("§1.2", comment: "Second paragraph in The-app section of Readme page", geo: geo)
-                            ReadmeSection("§1.3", comment: "Third paragraph in The-app section of Readme page", geo: geo)
+                            ReadmeSection("§1.1", comment: comment, geo: geo)
+                            ReadmeSection("§1.2", comment: comment, geo: geo)
+                            ReadmeSection("§1.3", comment: comment, geo: geo)
 
                             Image("app_screenshots_EN")
                                 .resizable()
@@ -46,20 +46,20 @@ struct ReadmeView: View {
                                 .font(.callout.italic())
                                 .frame(width: geo.size.width, alignment: .center)
 
-                            ReadmeSection("§1.4", comment: "Fourth section in The-app section of Readme page", geo: geo)
-                            ReadmeSection("§1.5", comment: "Fifth section in The-app section of Readme page", geo: geo)
-                            ReadmeSection("§1.6", comment: "Sixth section in The-app section of Readme page", geo: geo)
+                            ReadmeSection("§1.4", comment: comment, geo: geo)
+                            ReadmeSection("§1.5", comment: comment, geo: geo)
+                            ReadmeSection("§1.6", comment: comment, geo: geo)
                         }
 
                         Group {
                             SectionHeader(String(localized: "The Concept", comment: "Section title on Readme page"),
                                                  geo: geo)
 
-                            ReadmeSection("§2.1", comment: "First section in Concept section of Readme page", geo: geo)
-                            ReadmeSection("§2.2", comment: "Second section in Concept section of Readme page", geo: geo)
-                            ReadmeSection("§2.3", comment: "Third section in Concept section of Readme page", geo: geo)
-                            ReadmeSection("§2.4", comment: "Fourth section in Concept section of Readme page", geo: geo)
-                            ReadmeSection("§2.5", comment: "Fifth section in Concept section of Readme page", geo: geo)
+                            ReadmeSection("§2.1", comment: comment, geo: geo)
+                            ReadmeSection("§2.2", comment: comment, geo: geo)
+                            ReadmeSection("§2.3", comment: comment, geo: geo)
+                            ReadmeSection("§2.4", comment: comment, geo: geo)
+                            ReadmeSection("§2.5", comment: comment, geo: geo)
 
                             Image("Waalre_AppIcon")
                                 .resizable()
@@ -82,8 +82,8 @@ struct ReadmeView: View {
                                                  comment: "Section title on Readme page"),
                                           geo: geo)
 
-                            ReadmeSection("§3.1.a", comment: "Section 3.1.a of the Readme screen", geo: geo)
-                            ReadmeSection("§3.1.b", comment: "Section 3.1.b of the Readme screen", geo: geo)
+                            ReadmeSection("§3.1.a", comment: comment, geo: geo)
+                            ReadmeSection("§3.1.b", comment: comment, geo: geo)
 
                             Image("Localizations") // belongs to Section 3.1
                                 .resizable()
@@ -96,8 +96,8 @@ struct ReadmeView: View {
                             Text(verbatim: "")
                             Text(verbatim: "")
 
-                            ReadmeSection("§3.2.a", comment: "Section 3.2.a of the Readme screen", geo: geo)
-                            ReadmeSection("§3.2.b", comment: "Section 3.2.b of the Readme screen", geo: geo)
+                            ReadmeSection("§3.2.a", comment: comment, geo: geo)
+                            ReadmeSection("§3.2.b", comment: comment, geo: geo)
 
                             Image("3D_map") // belongs to Section 3.2
                                 .resizable()
@@ -110,18 +110,18 @@ struct ReadmeView: View {
                             .frame(width: geo.size.width, alignment: .center)
                             Text(verbatim: "")
 
-                            ReadmeSection("§3.3.a", comment: "Section 3.3.a of the Readme screen", geo: geo)
-                            ReadmeSection("§3.3.b", comment: "Section 3.3.b of the Readme screen", geo: geo)
-                            ReadmeSection("§3.3.c", comment: "Section 3.3.c of the Readme screen", geo: geo)
+                            ReadmeSection("§3.3.a", comment: comment, geo: geo)
+                            ReadmeSection("§3.3.b", comment: comment, geo: geo)
+                            ReadmeSection("§3.3.c", comment: comment, geo: geo)
 
-                            ReadmeSection("§3.4.a", comment: "Section 3.4.a of the Readme screen", geo: geo)
-                            ReadmeSection("§3.4.b", comment: "Section 3.4.b of the Readme screen", geo: geo)
-                            ReadmeSection("§3.4.c", comment: "Section 3.4.c of the Readme screen", geo: geo)
-                            ReadmeSection("§3.4.d", comment: "Section 3.4.d of the Readme screen", geo: geo)
+                            ReadmeSection("§3.4.a", comment: comment, geo: geo)
+                            ReadmeSection("§3.4.b", comment: comment, geo: geo)
+                            ReadmeSection("§3.4.c", comment: comment, geo: geo)
+                            ReadmeSection("§3.4.d", comment: comment, geo: geo)
 
-                            ReadmeSection("§3.5.a", comment: "Section 3.5.a of the Readme screen", geo: geo)
-                            ReadmeSection("§3.5.b", comment: "Section 3.5.b of the Readme screen", geo: geo)
-                            ReadmeSection("§3.5.c", comment: "Section 3.5.b of the Readme screen", geo: geo)
+                            ReadmeSection("§3.5.a", comment: comment, geo: geo)
+                            ReadmeSection("§3.5.b", comment: comment, geo: geo)
+                            ReadmeSection("§3.5.c", comment: comment, geo: geo)
 
                             Image("Maps") // belongs to Section 3.5
                                 .resizable()
@@ -134,11 +134,11 @@ struct ReadmeView: View {
                             .frame(width: geo.size.width, alignment: .center)
                             Text(verbatim: "")
 
-                            ReadmeSection("§3.6.a", comment: "Section 3.6.a of the Readme screen", geo: geo)
-                            ReadmeSection("§3.6.b", comment: "Section 3.6.b of the Readme screen", geo: geo)
+                            ReadmeSection("§3.6.a", comment: comment, geo: geo)
+                            ReadmeSection("§3.6.b", comment: comment, geo: geo)
 
-                            ReadmeSection("§3.7.a", comment: "Section 3.7.a of the Readme screen", geo: geo)
-                            ReadmeSection("§3.7.b", comment: "Section 3.7.b of the Readme screen", geo: geo)
+                            ReadmeSection("§3.7.a", comment: comment, geo: geo)
+                            ReadmeSection("§3.7.b", comment: comment, geo: geo)
 
                             Image("Website")
                                 .resizable()
@@ -151,11 +151,11 @@ struct ReadmeView: View {
                             .frame(width: geo.size.width, alignment: .center)
                             Text(verbatim: "")
 
-                            ReadmeSection("§3.8.a", comment: "Section 3.8.a of the Readme screen", geo: geo)
-                            ReadmeSection("§3.8.b", comment: "Section 3.8.b of the Readme screen", geo: geo)
-                            ReadmeSection("§3.8.c", comment: "Section 3.8.c of the Readme screen", geo: geo)
-                            ReadmeSection("§3.8.d", comment: "Section 3.8.d of the Readme screen", geo: geo)
-                            ReadmeSection("§3.8.e", comment: "Section 3.8.e of the Readme screen", geo: geo)
+                            ReadmeSection("§3.8.a", comment: comment, geo: geo)
+                            ReadmeSection("§3.8.b", comment: comment, geo: geo)
+                            ReadmeSection("§3.8.c", comment: comment, geo: geo)
+                            ReadmeSection("§3.8.d", comment: comment, geo: geo)
+                            ReadmeSection("§3.8.e", comment: comment, geo: geo)
 
                             Image("2021_FotogroepWaalre_058")
                                 .resizable()
@@ -167,9 +167,9 @@ struct ReadmeView: View {
                                 .font(.callout.italic())
                                 .frame(width: geo.size.width, alignment: .center)
 
-                            ReadmeSection("§3.9.a", comment: "Section 3.9.a of the Readme screen", geo: geo)
-                            ReadmeSection("§3.9.b", comment: "Section 3.9.b of the Readme screen", geo: geo)
-                            ReadmeSection("§3.9.c", comment: "Section 3.9.b of the Readme screen", geo: geo)
+                            ReadmeSection("§3.9.a", comment: comment, geo: geo)
+                            ReadmeSection("§3.9.b", comment: comment, geo: geo)
+                            ReadmeSection("§3.9.c", comment: comment, geo: geo)
 
                             Image("Preferences")
                                 .resizable()
@@ -182,9 +182,9 @@ struct ReadmeView: View {
                             .frame(width: geo.size.width * 0.8, alignment: .center)
                             Text(verbatim: "")
 
-                            ReadmeSection("§3.10.a", comment: "Section 3.10.a of the Readme screen", geo: geo)
-                            ReadmeSection("§3.10.b", comment: "Section 3.10.b of the Readme screen", geo: geo)
-                            ReadmeSection("§3.10.c", comment: "Section 3.10.c of the Readme screen", geo: geo)
+                            ReadmeSection("§3.10.a", comment: comment, geo: geo)
+                            ReadmeSection("§3.10.b", comment: comment, geo: geo)
+                            ReadmeSection("§3.10.c", comment: comment, geo: geo)
 
                             Image("Play-button")
                                 .resizable()
@@ -197,8 +197,8 @@ struct ReadmeView: View {
                             .frame(width: geo.size.width * 0.8, alignment: .center)
                             Text(verbatim: "")
 
-                            ReadmeSection("§3.11.a", comment: "Section 3.11.a of the Readme screen", geo: geo)
-                            ReadmeSection("§3.11.b", comment: "Section 3.11.b of the Readme screen", geo: geo,
+                            ReadmeSection("§3.11.a", comment: comment, geo: geo)
+                            ReadmeSection("§3.11.b", comment: comment, geo: geo,
                                       bottomPaddingAmount: 0)
 
                             Image("Search-bar")
@@ -212,7 +212,7 @@ struct ReadmeView: View {
                             .frame(width: geo.size.width * 0.8, alignment: .center)
                             Text(verbatim: "")
 
-                            ReadmeSection("§3.11.c", comment: "Section 3.11.c of the Readme screen", geo: geo)
+                            ReadmeSection("§3.11.c", comment: comment, geo: geo)
                         }
 
                         Group {
@@ -220,10 +220,10 @@ struct ReadmeView: View {
                                                  comment: "Section title on Readme page"),
                                           geo: geo)
 
-                            ReadmeSection("§4.1", comment: "First section in Platforms section of Readme page", geo: geo)
-                            ReadmeSection("§4.2", comment: "Second section in Platforms section of Readme page", geo: geo)
-                            ReadmeSection("§4.3", comment: "Third section in Platforms section of Readme page", geo: geo)
-                            ReadmeSection("§4.4", comment: "Fourth section in Platforms section of Readme page", geo: geo)
+                            ReadmeSection("§4.1", comment: comment, geo: geo)
+                            ReadmeSection("§4.2", comment: comment, geo: geo)
+                            ReadmeSection("§4.3", comment: comment, geo: geo)
+                            ReadmeSection("§4.4", comment: comment, geo: geo)
                         }
 
                         Group {
@@ -231,8 +231,8 @@ struct ReadmeView: View {
                                                  comment: "Section title on Readme page"),
                                           geo: geo)
 
-                            ReadmeSection("§5.1", comment: "First section in OpenSource section of Readme page", geo: geo)
-                            ReadmeSection("§5.2", comment: "Second section in OpenSource section of Readme page", geo: geo)
+                            ReadmeSection("§5.1", comment: comment, geo: geo)
+                            ReadmeSection("§5.2", comment: comment, geo: geo)
 
                             VStack {
                                 Image("Bellus_Imago_Level_1")
@@ -247,9 +247,9 @@ struct ReadmeView: View {
                                 Text(verbatim: "")
                             }
 
-                            ReadmeSection("§5.3", comment: "Third section in OpenSource section of Readme page", geo: geo)
-                            ReadmeSection("§5.4", comment: "Fourth section in OpenSource section of Readme page", geo: geo)
-                            ReadmeSection("§5.5", comment: "Fifth section in OpenSource section of Readme page", geo: geo,
+                            ReadmeSection("§5.3", comment: comment, geo: geo)
+                            ReadmeSection("§5.4", comment: comment, geo: geo)
+                            ReadmeSection("§5.5", comment: comment, geo: geo,
                                       bottomPaddingAmount: 0)
 
                             VStack {
