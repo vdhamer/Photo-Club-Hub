@@ -9,7 +9,7 @@ Preferences screen
 * Bug fix: role "Other" didn't show up when filtering on club officers
 
 Documentation
-* Created step-by-step instructions for creating a Level 2 file. https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/
+* Created 7-step instructions in NL and EN for creating a new `level2.json` file. https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/
 
 Code Maintenance
 * Tested on iOS 18.2.1, and Xcode 16.2 and MacOS 15.2
