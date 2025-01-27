@@ -2,28 +2,92 @@
   "sourceLanguage" : "en",
   "strings" : {
     "and" : {
-      "comment" : "To generate strings like \"secretary and admin\""
+      "comment" : "To generate strings like \"secretary and admin\"",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "and"
+          }
+        }
+      }
     },
     "clubs" : {
-      "comment" : "Mode for the Clubs page: show photo clubs as sections."
+      "comment" : "Mode for the Clubs page: show photo clubs as sections.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "clubs"
+          }
+        }
+      }
     },
     "deceased" : {
-      "comment" : "Relationship status of member within a club. Used as prefix."
+      "comment" : "Relationship status of member within a club. Used as prefix.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "deceased"
+          }
+        }
+      }
     },
     "external coach" : {
-      "comment" : "Relationship status of member within a club. Used in concatenations."
+      "comment" : "Relationship status of member within a club. Used in concatenations.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "external coach"
+          }
+        }
+      }
     },
     "former" : {
-      "comment" : "Relationship status of member within a club. Used as prefex."
+      "comment" : "Relationship status of member within a club. Used as prefex.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "former"
+          }
+        }
+      }
     },
     "honorary member" : {
-      "comment" : "Relationship status of member within a club. Used in concatenations."
+      "comment" : "Relationship status of member within a club. Used in concatenations.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "honorary member"
+          }
+        }
+      }
     },
     "member" : {
-      "comment" : "Default status of member within a club. Used in concatenations."
+      "comment" : "Default status of member within a club. Used in concatenations.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "member"
+          }
+        }
+      }
     },
     "museums" : {
-      "comment" : "Mode for the Clubs page: show museums as sections."
+      "comment" : "Mode for the Clubs page: show museums as sections.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "museums"
+          }
+        }
+      }
     },
     "No remark currently available for %@ %@." : {
       "comment" : "Shown below map if there is no usable remark in the OrganzationList.json file.",
@@ -48,10 +112,26 @@
       }
     },
     "prospective member" : {
-      "comment" : "Relationship status of member within a club. Used in concatenations."
+      "comment" : "Relationship status of member within a club. Used in concatenations.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "prospective member"
+          }
+        }
+      }
     },
     "unknowns" : {
-      "comment" : "Organization type is not known. Used for debugging."
+      "comment" : "Organization type is not known. Used for debugging.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "unknowns"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"

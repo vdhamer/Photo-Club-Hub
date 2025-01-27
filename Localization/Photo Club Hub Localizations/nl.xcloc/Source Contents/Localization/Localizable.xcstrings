@@ -2,144 +2,346 @@
   "sourceLanguage" : "en",
   "strings" : {
     "“Current members” includes “club officers”" : {
-      "comment" : "Shown when \"Show club officers\" entry is missing in Preferences"
-    },
-    "“Former members” includes “deceased members”" : {
-      "comment" : "Shown when \"Show deceased members\" entry is missing in Preferences"
-    },
-    "%lld members (inc. ex-members)" : {
-      "comment" : "<count> members (including all types of members) within photo club"
-    },
-    "%lld organizations" : {
-      "comment" : "Stats header displayed at top of Clubs and Museums screen"
-    },
-    "%lld organizations (of %lld)" : {
-      "comment" : "Stats header displayed at top of Clubs and Museums screen"
-    },
-    "%lld photographers" : {
-      "comment" : "Header of section of Who's Who screen"
-    },
-    "%lld photographers (of %lld)" : {
-      "comment" : "Header of section of Who's Who screen"
-    },
-    "1 organization" : {
-      "comment" : "Stats header displayed at top of Clubs and Museums screen"
-    },
-    "1 organization (of %lld)" : {
-      "comment" : "Stats header displayed at top of Clubs and Museums screen"
-    },
-    "1 photographer" : {
-      "comment" : "Header of section of Who's Who screen"
-    },
-    "1 photographer (of %lld)" : {
-      "comment" : "Header of section of Who's Who screen"
-    },
-    "admin" : {
-      "comment" : "Administrative role of member within a club. Used as part of concatenations."
-    },
-    "Advanced" : {
-      "comment" : "In Preferences, above link to Settings"
-    },
-    "Amsterdam has two photography museums." : {
-      "comment" : "Caption of Museums image on Readme page"
-    },
-    "and" : {
-      "comment" : "To generate strings like \"secretary and admin\"",
-      "extractionState" : "manual"
-    },
-    "App version %@ (build %@)" : {
-      "comment" : "Shown on Readme page."
-    },
-    "Birthday" : {
-      "comment" : "Birthday of member (without year). Date not currently localized?"
-    },
-    "Birthday unknown" : {
-      "comment" : "If photographer's birthday info is unavailable (Who's Who screen)."
-    },
-    "Buttons for the automatic slide show" : {
-      "comment" : "Caption about Play button on the Readme page"
-    },
-    "chairman" : {
-      "comment" : "Administrative role of member within a club. Used as part of concatenations."
-    },
-    "Clubs and Museums" : {
-      "comment" : "Title of page with maps for Clubs and Museums"
-    },
-    "Clubs, their Members, and their Portfolios\n" : {
-      "comment" : "Caption of an image on the Readme page"
-    },
-    "Concept" : {
-      "comment" : "Section title on Readme page",
-      "extractionState" : "manual",
+      "comment" : "Shown when \"Show club officers\" entry is missing in Preferences",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "The concept"
+            "value" : "“Current members” includes “club officers”"
+          }
+        }
+      }
+    },
+    "“Former members” includes “deceased members”" : {
+      "comment" : "Shown when \"Show deceased members\" entry is missing in Preferences",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "“Former members” includes “deceased members”"
+          }
+        }
+      }
+    },
+    "%lld members (inc. ex-members)" : {
+      "comment" : "<count> members (including all types of members) within photo club",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld members (inc. ex-members)"
+          }
+        }
+      }
+    },
+    "%lld organizations" : {
+      "comment" : "Stats header displayed at top of Clubs and Museums screen",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld organizations"
+          }
+        }
+      }
+    },
+    "%lld organizations (of %lld)" : {
+      "comment" : "Stats header displayed at top of Clubs and Museums screen",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld organizations (of %lld)"
+          }
+        }
+      }
+    },
+    "%lld photographers" : {
+      "comment" : "Header of section of Who's Who screen",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld photographers"
+          }
+        }
+      }
+    },
+    "%lld photographers (of %lld)" : {
+      "comment" : "Header of section of Who's Who screen",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld photographers (of %lld)"
+          }
+        }
+      }
+    },
+    "1 organization" : {
+      "comment" : "Stats header displayed at top of Clubs and Museums screen",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1 organization"
+          }
+        }
+      }
+    },
+    "1 organization (of %lld)" : {
+      "comment" : "Stats header displayed at top of Clubs and Museums screen",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1 organization (of %lld)"
+          }
+        }
+      }
+    },
+    "1 photographer" : {
+      "comment" : "Header of section of Who's Who screen",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1 photographer"
+          }
+        }
+      }
+    },
+    "1 photographer (of %lld)" : {
+      "comment" : "Header of section of Who's Who screen",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1 photographer (of %lld)"
+          }
+        }
+      }
+    },
+    "admin" : {
+      "comment" : "Administrative role of member within a club. Used as part of concatenations.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "admin"
+          }
+        }
+      }
+    },
+    "Advanced" : {
+      "comment" : "In Preferences, above link to Settings",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Advanced"
+          }
+        }
+      }
+    },
+    "Amsterdam has two photography museums." : {
+      "comment" : "Caption of Museums image on Readme page",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Amsterdam has two photography museums."
+          }
+        }
+      }
+    },
+    "App version %@ (build %@)" : {
+      "comment" : "Shown on Readme page.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "App version %@ (build %@)"
+          }
+        }
+      }
+    },
+    "Birthday" : {
+      "comment" : "Birthday of member (without year). Date not currently localized?",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Birthday"
+          }
+        }
+      }
+    },
+    "Birthday unknown" : {
+      "comment" : "If photographer's birthday info is unavailable (Who's Who screen).",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Birthday unknown"
+          }
+        }
+      }
+    },
+    "Buttons for the automatic slide show" : {
+      "comment" : "Caption about Play button on the Readme page",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Buttons for the automatic slide show"
+          }
+        }
+      }
+    },
+    "chairman" : {
+      "comment" : "Administrative role of member within a club. Used as part of concatenations.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "chairman"
+          }
+        }
+      }
+    },
+    "Clubs and Museums" : {
+      "comment" : "Title of page with maps for Clubs and Museums",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clubs and Museums"
+          }
+        }
+      }
+    },
+    "Clubs, their Members, and their Portfolios\n" : {
+      "comment" : "Caption of an image on the Readme page",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clubs, their Members, and their Portfolios\n"
           }
         }
       }
     },
     "Configuring Level 1 data for a Dutch photo club" : {
-      "comment" : "Caption for image on Readme page"
+      "comment" : "Caption for image on Readme page",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Configuring Level 1 data for a Dutch photo club"
+          }
+        }
+      }
     },
     "Data source: %@://%@%@/" : {
-      "comment" : "Section footer text Portfolios screen"
+      "comment" : "Section footer text Portfolios screen",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Data source: %@://%@%@/"
+          }
+        }
+      }
     },
     "Data source: in-app member data." : {
       "comment" : "Section footer text Portfolios screen",
-      "extractionState" : "manual"
-    },
-    "deceased" : {
-      "comment" : "Relationship status of member within a club. Used as prefix.",
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Data source: in-app member data."
+          }
+        }
+      }
     },
     "Example of a link to a club web site" : {
-      "comment" : "Caption of Websites image on Readme page"
-    },
-    "external coach" : {
-      "comment" : "Relationship status of member within a club. Used in concatenations.",
-      "extractionState" : "manual"
-    },
-    "Features and Tips" : {
-      "comment" : "Section title on Readme page"
-    },
-    "former" : {
-      "comment" : "Relationship status of member within a club. Used as prefex.",
-      "extractionState" : "manual"
+      "comment" : "Caption of Websites image on Readme page",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Example of a link to a club web site"
+          }
+        }
+      }
     },
     "Fragment of the Swift source code" : {
-      "comment" : "Caption for image on Readme page"
+      "comment" : "Caption for image on Readme page",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fragment of the Swift source code"
+          }
+        }
+      }
     },
     "frameSize = [%@,%@]" : {
-      "comment" : "Used in DebugPanel. I couldn't avoid localization here. Just use original as translation"
-    },
-    "honorary member" : {
-      "comment" : "Relationship status of member within a club. Used in concatenations.",
-      "extractionState" : "manual"
-    },
-    "How you can help" : {
-      "comment" : "Section title on Readme page"
+      "comment" : "Used in DebugPanel. I couldn't avoid localization here. Just use original as translation",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "frameSize = [%@,%@]"
+          }
+        }
+      }
     },
     "In debug mode" : {
-      "comment" : "Shown instead of app name in PreludeView when app is started"
-    },
-    "Level 1 support for a Dutch photo club" : {
-      "comment" : "Caption for image on Readme page",
-      "extractionState" : "manual"
+      "comment" : "Shown instead of app name in PreludeView when app is started",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "In debug mode"
+          }
+        }
+      }
     },
     "Manual loading" : {
-      "comment" : "Shown instead of app name in PreludeView when app is started"
+      "comment" : "Shown instead of app name in PreludeView when app is started",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Manual loading"
+          }
+        }
+      }
     },
     "Maps can be viewed in 3D" : {
-      "comment" : "Caption of 3D image on Readme page"
-    },
-    "member" : {
-      "comment" : "Default status of member within a club. Used in concatenations.",
-      "extractionState" : "manual"
+      "comment" : "Caption of 3D image on Readme page",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Maps can be viewed in 3D"
+          }
+        }
+      }
     },
     "Member categories" : {
-      "comment" : "In Preferences, above toggles like \"Show former members\""
+      "comment" : "In Preferences, above toggles like \"Show former members\"",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Member categories"
+          }
+        }
+      }
     },
     "member_" : {
       "comment" : "Statistics at end of section of FilteredMemberPortfoliosView",
@@ -153,22 +355,34 @@
       }
     },
     "members" : {
-      "comment" : "Statistics at end of section of FilteredMemberPortfoliosView"
-    },
-    "No known personal website" : {
-      "comment" : "Shown on Who's Who screen If photographer has no personal website."
-    },
-    "No photo clubs seem to be currently loaded.\nTry dragging down the Clubs and Museums screen to reload the default clubs." : {
-      "comment" : "Hint to the user if the database returns zero PhotoClubs."
-    },
-    "No remark currently available for %@ %@." : {
-      "comment" : "Shown below map if there is no usable remark in the OrganzationList.json file.",
-      "extractionState" : "manual",
+      "comment" : "Statistics at end of section of FilteredMemberPortfoliosView",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "No remark currently available for %@ %@."
+            "value" : "members"
+          }
+        }
+      }
+    },
+    "No known personal website" : {
+      "comment" : "Shown on Who's Who screen If photographer has no personal website.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No known personal website"
+          }
+        }
+      }
+    },
+    "No photo clubs seem to be currently loaded.\nTry dragging down the Clubs and Museums screen to reload the default clubs." : {
+      "comment" : "Hint to the user if the database returns zero PhotoClubs.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No photo clubs seem to be currently loaded.\nTry dragging down the Clubs and Museums screen to reload the default clubs."
           }
         }
       }
@@ -184,32 +398,16 @@
         }
       }
     },
-    "of2" : {
-      "comment" : "<person> of <photo club>",
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "of"
-          }
-        }
-      }
-    },
-    "Open Source" : {
-      "comment" : "Section title on Readme page",
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Developers"
-          }
-        }
-      }
-    },
     "Options in Settings" : {
-      "comment" : "Link to Photo Club Hub section in Settings"
+      "comment" : "Link to Photo Club Hub section in Settings",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Options in Settings"
+          }
+        }
+      }
     },
     "other" : {
       "comment" : "Administrative role of member within a club. Used as part of concatenations.",
@@ -222,644 +420,24 @@
         }
       }
     },
-    "Paragraph_1.1" : {
-      "comment" : "First paragraph in The App section of Readme page",
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "_Photo Club Hub_ displays selected photos made by members of photo clubs in a consistent, accessible manner, while minimizing distractions."
-          }
-        }
-      }
-    },
-    "Paragraph_1.2" : {
-      "comment" : "Second paragraph in The App section of Readme page",
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "This consistency eliminates the need to manually find each club’s website and discover how to navigate its photo galleries. The app doesn’t replace club-, photographer-, or social media sites. Instead, it supports clubs and their members who try to reach out to other clubs, to other photographers, and to a general audience."
-          }
-        }
-      }
-    },
-    "Paragraph_1.3" : {
-      "comment" : "Third paragraph in The App section of Readme page",
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "The app aims to strengthen ties between photography clubs and make their members’ photos easily accessible."
-          }
-        }
-      }
-    },
-    "Paragraph_1.4" : {
-      "comment" : "Fourth paragraph in The App section of Readme page",
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "The app, originally named _Photo Club Waalre_, was created for a 15-person photo club in the southern Netherlands. The newer name, _Photo Club Hub_, emphasizes the app’s mission to foster connections among various photo clubs."
-          }
-        }
-      }
-    },
-    "Paragraph_1.5" : {
-      "comment" : "Fifth paragraph in The App section of Readme page",
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Supporting dozens or even hundreds of clubs necessitates that each club manages its own data, including providing images and maintaining lists of club members. Notably, no software expertise is required to add a club to _Photo Club Hub_."
-          }
-        }
-      }
-    },
-    "Paragraph_1.6" : {
-      "comment" : "Sixth paragraph in The App section of Readme page",
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Interested in supporting your club? Contact us via [GitHub](https://github.com/vdhamer/Photo-Club-Hub), [Facebook](https://www.facebook.com/vdhamer), or [LinkedIn](https://www.linkedin.com/in/vdhamer/). Providing and maintaining club data in a standardized way is all that’s required. The app’s [GitHub site](https://github.com/vdhamer/Photo-Club-Hub) explains this approach in detail. We’re here to help with any questions."
-          }
-        }
-      }
-    },
-    "Paragraph_2.1" : {
-      "comment" : "First paragraph in The Concept on Readme page",
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Photo clubs play a key role in the app. The central _Portfolios_ screen shows a list of photo clubs."
-          }
-        }
-      }
-    },
-    "Paragraph_2.2" : {
-      "comment" : "Second paragraph in The Concept on Readme page",
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Each photo club contains a series of member __portfolios__ that hold the actual images. Each portfolio covers the photographer's photos that are associated with that photo club."
-          }
-        }
-      }
-    },
-    "Paragraph_2.3" : {
-      "comment" : "Third paragraph in The Concept on Readme page",
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "A photographer may have multiple portfolios in the app if case the photographer is (or was) associated with more than one photo club."
-          }
-        }
-      }
-    },
-    "Paragraph_2.4" : {
-      "comment" : "Fourth paragraph in The Concept on Readme page",
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Just like a painter, a photographer’s style often changes over the years. Each portfolio should preferably show the images in chronological order, with the latest work first."
-          }
-        }
-      }
-    },
-    "Paragraph_2.5" : {
-      "comment" : "Fifth paragraph in The Concept on Readme page",
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "We try to show the portfolios with minimal distraction, just like an exposition at a museum or gallery. Web sites tend to be less suitable for this, because they are cluttered by browser controls (e.g., an address bar or tabs), and generally contain various additional types of information (e.g., club news or schedules)."
-          }
-        }
-      }
-    },
-    "Paragraph_3.1.a" : {
-      "comment" : "Paragraph 3.1.a of the Readme screen",
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "__Languages__"
-          }
-        }
-      }
-    },
-    "Paragraph_3.1.b" : {
-      "comment" : "Paragraph 3.1.b of the Readme screen",
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "_Photo Club Hub_ automatically selects its language based on your device’s language settings. It currently supports English and Dutch. You can change language using _Settings > Photo Club Hub > Language_. Alternatively you can change your device’s preference across all apps using _Settings > General > Language & Region > Preferred Language Order_."
-          }
-        }
-      }
-    },
-    "Paragraph_3.2.a" : {
-      "comment" : "Paragraph 3.2.a of the Readme screen",
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "__3D maps__"
-          }
-        }
-      }
-    },
-    "Paragraph_3.2.b" : {
-      "comment" : "Paragraph 3.2.ba of the Readme screen",
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "If you zoom in far enough on any map, a button appears that allows you to view the area in three dimensions. In 3D mode you can rotate the map."
-          }
-        }
-      }
-    },
-    "Paragraph_3.3.a" : {
-      "comment" : "Paragraph 3.3.a of the Readme screen",
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "__Live location__"
-          }
-        }
-      }
-    },
-    "Paragraph_3.3.b" : {
-      "comment" : "Paragraph 3.3.b of the Readme screen",
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Maps can display your current location as a purple dot when it falls within the map’s range. This can help you navigate to a club or to estimate distances. If the map is unlocked (interactive), an arrow button lets you re-center the map around your current location."
-          }
-        }
-      }
-    },
-    "Paragraph_3.3.c" : {
-      "comment" : "Paragraph 3.3.c of the Readme screen",
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Live location requires granting the app __permission__ to access your location while in the app. The app doesn’t store or share your location with anyone or anything."
-          }
-        }
-      }
-    },
-    "Paragraph_3.4.a" : {
-      "comment" : "Paragraph 3.4.a of the Readme screen",
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "__Adding photo clubs__"
-          }
-        }
-      }
-    },
-    "Paragraph_3.4.b" : {
-      "comment" : "Paragraph 3.4.b of the Readme screen",
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "The app initially contains an initial list of over 60 photo clubs. Those clubs are currently all in one part of the Netherlands. The app is however designed to support clubs anywhere in the world and the list of clubs can be extended by the users."
-          }
-        }
-      }
-    },
-    "Paragraph_3.4.c" : {
-      "comment" : "Paragraph 3.4.c of the Readme screen",
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "For a club to be included, the app needs basic information like the club’s name and location (Level 1), a list of its members (Level 2) and links to image portfolios (Level 3). More details on extending the various lists are provided below and on GitHub."
-          }
-        }
-      }
-    },
-    "Paragraph_3.4.d" : {
-      "comment" : "Paragraph 3.4.d of the Readme screen",
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "The initial list of 30+ photo museums can be similarly extended."
-          }
-        }
-      }
-    },
-    "Paragraph_3.5.a" : {
-      "comment" : "Paragraph 3.5.a of the Readme screen",
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "__Photo museums__"
-          }
-        }
-      }
-    },
-    "Paragraph_3.5.b" : {
-      "comment" : "Paragraph 3.5.b of the Readme screen",
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "The maps can show various photo museums throughout the world. Museums and clubs are depicted differently on the map."
-          }
-        }
-      }
-    },
-    "Paragraph_3.5.c" : {
-      "comment" : "Paragraph 3.5.c of the Readme screen",
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Adding a photo museum works the same way as adding a photo club - except that a museum doesn’t have members or member portfolios."
-          }
-        }
-      }
-    },
-    "Paragraph_3.6.a" : {
-      "comment" : "Paragraph 3.6.a of the Readme screen",
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "__Smart scrolling__"
-          }
-        }
-      }
-    },
-    "Paragraph_3.6.b" : {
-      "comment" : "Paragraph 3.6.b of the Readme screen",
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "The _Clubs and Museums_ screen and the _Who’s Who_ screen feature _smart scrolling_, as introduced in iOS 17. This tries to prevent an item in a list from being partially visible. The _Portfolios_ screen does not currently support smart scrolling for technical reasons."
-          }
-        }
-      }
-    },
-    "Paragraph_3.7.a" : {
-      "comment" : "Paragraph 3.7.a of the Readme screen",
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "__Web sites__"
-          }
-        }
-      }
-    },
-    "Paragraph_3.7.b" : {
-      "comment" : "Paragraph 3.7.b of the Readme scree",
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "This app is complimentary to your club’s web site. Because web sites serve more purposes than just presenting photos, _Photo Club Hub_ includes clickable links that lead to club- and photographer web sites."
-          }
-        }
-      }
-    },
-    "Paragraph_3.8.a" : {
-      "comment" : "Paragraph 3.8.a of the Readme screen",
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "__The opening image__"
-          }
-        }
-      }
-    },
-    "Paragraph_3.8.b" : {
-      "comment" : "Paragraph 3.8.b of the Readme screen",
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "When the app opens, it shows an image (“Prelude”) corresponding to the app’s icon. If you tap somewhere __inside__ the image, it zooms out to show the full image representing how digital cameras see color."
-          }
-        }
-      }
-    },
-    "Paragraph_3.8.c" : {
-      "comment" : "Paragraph 3.8.c of the Readme screen",
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "This involves a [Bayer color filter array](https://en.wikipedia.org/wiki/Bayer_filter) that adds a color filter on top of each sensor cell. This filter array is shown superimposed on a colorful photo."
-          }
-        }
-      }
-    },
-    "Paragraph_3.8.d" : {
-      "comment" : "Paragraph 3.8.d of the Readme screen",
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tapping __inside__ the image allows you to zoom in or out to your heart's content. Tapping __outside__ the image area ends the animation. A single tap __outside__ the image allows you to skip the animation."
-          }
-        }
-      }
-    },
-    "Paragraph_3.8.e" : {
-      "comment" : "Paragraph 3.8.e of the Readme screen",
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "The computations for this animation incidentally run on your device’s GPU cores. This is only scratching the surface of what these cores can do."
-          }
-        }
-      }
-    },
-    "Paragraph_3.9.a" : {
-      "comment" : "Paragraph 3.9.a of the Readme screen",
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "__Former Members__"
-          }
-        }
-      }
-    },
-    "Paragraph_3.9.b" : {
-      "comment" : "Paragraph 3.9.b of the Readme screen",
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "By default, former club members and their work are not shown, but this can be enabled on the _Preferences_ screen."
-          }
-        }
-      }
-    },
-    "Paragraph_3.9.c" : {
-      "comment" : "Paragraph 3.9.c of the Readme screen",
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "An easy way to get recent ex-member data in the app is to simply not remove their portfolios when they leave. You should then change their status to ex-member in the membership (\"Level 2\") list."
-          }
-        }
-      }
-    },
-    "Paragraph_3.10.a" : {
-      "comment" : "Paragraph 3.10.a of the Readme screen",
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "__Automatic Slide Shows__"
-          }
-        }
-      }
-    },
-    "Paragraph_3.10.b" : {
-      "comment" : "Paragraph 3.10.b of the Readme screen",
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Some portfolios have an automatic slide show option. This is controlled by one of the buttons that appear when you tap on an image (this tapping is only needed on an iPhone)."
-          }
-        }
-      }
-    },
-    "Paragraph_3.10.c" : {
-      "comment" : "Paragraph 3.10.c of the Readme screen",
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "This option is available on portfolios that were generated using the _Juicebox_ plug-in for _Lightroom Classic_ (see the portfolios of Fotogroep de Gender)."
-          }
-        }
-      }
-    },
-    "Paragraph_3.11.a" : {
-      "comment" : "Paragraph 3.11.a of the Readme screen",
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "__Searching__"
-          }
-        }
-      }
-    },
-    "Paragraph_3.11.b" : {
-      "comment" : "Paragraph 3.11.b of the Readme screen",
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "There is a search bar at the top of major screens. On an iPad the search bar is continuously visible. On an iPhone you need to scroll back to the very top of the list to get the search bar to appear."
-          }
-        }
-      }
-    },
-    "Paragraph_3.11.c" : {
-      "comment" : "Paragraph 3.11.c of the Readme screen",
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Entering part of person’s name (on the _Portfolios_ and _Who’s Who_ screens) will find people with that name. The _Clubs and Museums_ screen simultaneously searches both on the club/museum name and on its specified location."
-          }
-        }
-      }
-    },
-    "Paragraph_4.1" : {
-      "comment" : "First paragraph SupportedPlatforms section of Readme page",
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "_Photo Club Hub_ generally requires the latest version of iOS. This allows us to keep the app technically up to date. The latest app version can thus run on devices released in the last 6 or 7 years."
-          }
-        }
-      }
-    },
-    "Paragraph_4.2" : {
-      "comment" : "Second paragraph SupportedPlatforms section of Readme page",
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "The app is optimized for iOS and iPadOS. It can also run unoptimized on a Mac or Vision Pro."
-          }
-        }
-      }
-    },
-    "Paragraph_4.3" : {
-      "comment" : "Third paragraph SupportedPlatforms section of Readme page",
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Although there is presently no native support for __Android__ or other non-Apple phone platforms, we made a companion app that automatically generates website pages from the same online lists that the app uses. This helps keep club web sites up to date, and allows viewing of clubs, members, and images in a web browsers on a wide range of platforms (including Android, Windows, MacOS and Linux)."
-          }
-        }
-      }
-    },
-    "Paragraph_4.4" : {
-      "comment" : "Fourth paragraph SupportedPlatforms section of Readme page",
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "These developments really depend on the help of volunteers from the clubs and the software community. If you’re interested in helping out, check out the section below."
-          }
-        }
-      }
-    },
-    "Paragraph_5.1" : {
-      "comment" : "First paragraph Developers section of Readme page",
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "The app needs information in order to cover your local photo club(s). This involves three so-called __Levels__. A club can stay at any level for a while before proceeding to a next level. See the app’s [README](https://github.com/vdhamer/Photo-Club-Hub/blob/main/.github/README.md) file on GitHub for more details."
-          }
-        }
-      }
-    },
-    "Paragraph_5.2" : {
-      "comment" : "Second paragraph Developers section of Readme page",
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "__Level 1__ requires providing the club’s name, location and a few optional links. Once it is on Level 1, the club is listed on the _Clubs and Museums_ screen and shown on maps. If you send us the Level 1 information, we will add it to the app’s online list of clubs. The technically inclined can best submit that information (and any future updates) in the form a [GitHub “pull request”](https://www.youtube.com/watch?v=BCQHnlnPusY&list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV): this pretty much automates the integration process and reduces the risk of errors."
-          }
-        }
-      }
-    },
-    "Paragraph_5.3" : {
-      "comment" : "Third paragraph Developers section of Readme page",
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "__Level 2__ requires providing a list of the names of current (and optionally former) club members as a text file with a specific format. This file can be stored anywhere as long as it can be fetched using a web address (URL). For example, you can store it in the _Media_ section of your club’s _Wordpress_ web site. At Level 2, the membership lists show up on the _Portfolios_ screen. _Fotogroep Anders_ (NL) shows what a Level 2 club looks like in the user interface."
-          }
-        }
-      }
-    },
-    "Paragraph_5.4" : {
-      "comment" : "Fourth paragraph Developers section of Readme page",
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Clubs at __Level 3__ also provide links to the online images in member portfolios. _Fotogroep de Gender_ (NL) is an example of a Level 3 club: you can view their portfolios via the _Portfolios_ screen. Because a club with dozens of members may want to show hundreds of images, we have a way to automatically create portfolios from _Lightroom_ collections (step-by-step instructions for this will be made available)"
-          }
-        }
-      }
-    },
-    "Paragraph_5.5" : {
-      "comment" : "Fifth paragraph Developers section of Readme page",
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Help with onboarding of additional clubs is essential. But there are more ways in which you can help out. Examples of __non-technical help__ include testing, writing a review for Apple’s App Store, creating step-by-step user instructions, and coming up with improvement ideas. Last, and certainly not least, actual _software development_ support will help speed up app enhancements, produce fresh ideas and ensure app continuity. Example contributions include code improvement of all sorts (via [GitHub](https://github.com/vdhamer/Photo-Club-Hub)), hunting down bugs, and contributing to discussions on functionality, implementation and interfaces.\n"
-          }
-        }
-      }
-    },
     "Part of the internal translation table" : {
-      "comment" : "Caption of Localizations image on Readme page"
+      "comment" : "Caption of Localizations image on Readme page",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Part of the internal translation table"
+          }
+        }
+      }
     },
     "Photo Club Hub" : {
-      "comment" : "Name of the app shown in PreludeView when app is started"
-    },
-    "Photo Clubs" : {
-      "comment" : "Title of page with clubs and maps",
-      "extractionState" : "manual",
+      "comment" : "Name of the app shown in PreludeView when app is started",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Photo Clubs"
+            "value" : "Photo Club Hub"
           }
         }
       }
@@ -898,20 +476,37 @@
       }
     },
     "Portfolios" : {
-      "comment" : "Title of page showing member portfolios"
+      "comment" : "Title of page showing member portfolios",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Portfolios"
+          }
+        }
+      }
     },
     "Preferences" : {
-      "comment" : "Title of screen with toggles to adjust preferences"
+      "comment" : "Title of screen with toggles to adjust preferences",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Preferences"
+          }
+        }
+      }
     },
     "Prelude" : {
-      "comment" : "Title of the opening animation screen"
-    },
-    "prospective member" : {
-      "comment" : "Relationship status of member within a club. Used in concatenations.",
-      "extractionState" : "manual"
-    },
-    "Readme" : {
-      "comment" : "Title of Readme screen"
+      "comment" : "Title of the opening animation screen",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prelude"
+          }
+        }
+      }
     },
     "Search bar at the top of _Portfolios_ screen" : {
       "comment" : "Caption about Search Bar on the Readme page",
@@ -925,7 +520,15 @@
       }
     },
     "Search names and towns" : {
-      "comment" : "Field at top of Clubs and Museums page that allows the user to filter the members based on a fragment of the organization name."
+      "comment" : "Field at top of Clubs and Museums page that allows the user to filter the members based on a fragment of the organization name.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search names and towns"
+          }
+        }
+      }
     },
     "Search_names_m" : {
       "comment" : "Field at top of MemberPortfolios page that allows the user to filter the members based on either given- and family name.",
@@ -950,77 +553,180 @@
       }
     },
     "secretary" : {
-      "comment" : "Administrative role of member within a club. Used as part of concatenations."
-    },
-    "Show aspiring members" : {
-      "comment" : "Label of toggle in Preferences"
-    },
-    "Show club officers" : {
-      "comment" : "Label of toggle in Preferences"
-    },
-    "Show current members" : {
-      "comment" : "Label of toggle in Preferences"
-    },
-    "Show deceased members" : {
-      "comment" : "Label of toggle in Preferences"
-    },
-    "Show external coaches" : {
-      "comment" : "Label of toggle in Preferences"
-    },
-    "Show former members" : {
-      "comment" : "Label of toggle in Preferences"
-    },
-    "Show honorary members" : {
-      "comment" : "Label of toggle in Preferences"
-    },
-    "shown" : {
-      "comment" : "X member(s) shown (due to various forms of filtering)"
-    },
-    "Supported Platforms" : {
-      "comment" : "Section title on Readme page",
+      "comment" : "Administrative role of member within a club. Used as part of concatenations.",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "iOS, iPadOS"
+            "value" : "secretary"
           }
         }
       }
     },
-    "The App" : {
-      "comment" : "Section title on Readme page"
+    "Show aspiring members" : {
+      "comment" : "Label of toggle in Preferences",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show aspiring members"
+          }
+        }
+      }
     },
-    "The Concept" : {
-      "comment" : "Section title on Readme page"
+    "Show club officers" : {
+      "comment" : "Label of toggle in Preferences",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show club officers"
+          }
+        }
+      }
+    },
+    "Show current members" : {
+      "comment" : "Label of toggle in Preferences",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show current members"
+          }
+        }
+      }
+    },
+    "Show deceased members" : {
+      "comment" : "Label of toggle in Preferences",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show deceased members"
+          }
+        }
+      }
+    },
+    "Show external coaches" : {
+      "comment" : "Label of toggle in Preferences",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show external coaches"
+          }
+        }
+      }
+    },
+    "Show former members" : {
+      "comment" : "Label of toggle in Preferences",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show former members"
+          }
+        }
+      }
+    },
+    "Show honorary members" : {
+      "comment" : "Label of toggle in Preferences",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show honorary members"
+          }
+        }
+      }
+    },
+    "shown" : {
+      "comment" : "X member(s) shown (due to various forms of filtering)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "shown"
+          }
+        }
+      }
     },
     "The Preferences screen." : {
-      "comment" : "Caption of an image on the Readme page"
-    },
-    "The Prelude" : {
-      "comment" : "Section title on Readme page",
-      "extractionState" : "manual"
+      "comment" : "Caption of an image on the Readme page",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The Preferences screen."
+          }
+        }
+      }
     },
     "To see names here, please adapt the Search filter or enable additional categories on the Preferences page." : {
-      "comment" : "Hint to the user if the database returns zero Members with Search filter in use."
+      "comment" : "Hint to the user if the database returns zero Members with Search filter in use.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "To see names here, please adapt the Search filter or enable additional categories on the Preferences page."
+          }
+        }
+      }
     },
     "To see names here, please enable additional categories on the Preferences page." : {
-      "comment" : "Hint to the user if the database returns zero Members with empty Search filter."
-    },
-    "Translating English phrases into Dutch" : {
-      "comment" : "Caption of Localizations image on Readme page",
-      "extractionState" : "manual"
+      "comment" : "Hint to the user if the database returns zero Members with empty Search filter.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "To see names here, please enable additional categories on the Preferences page."
+          }
+        }
+      }
     },
     "treasurer" : {
-      "comment" : "Administrative role of member within a club. Used as part of concatenations."
+      "comment" : "Administrative role of member within a club. Used as part of concatenations.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "treasurer"
+          }
+        }
+      }
     },
     "vice-chairman" : {
-      "comment" : "Administrative role of member within a club. Used as part of concatenations."
+      "comment" : "Administrative role of member within a club. Used as part of concatenations.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "vice-chairman"
+          }
+        }
+      }
     },
     "Warning: all member categories on the Preferences page are disabled. Please enable one or more options in Preferences." : {
-      "comment" : "Hint to the user if all of the Preference toggles are disabled."
+      "comment" : "Hint to the user if all of the Preference toggles are disabled.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Warning: all member categories on the Preferences page are disabled. Please enable one or more options in Preferences."
+          }
+        }
+      }
     },
     "Who's Who" : {
-      "comment" : "Title of page with list of photographers"
+      "comment" : "Title of page with list of photographers",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Who's Who"
+          }
+        }
+      }
     },
     "WhosWho_Caption_1" : {
       "comment" : "Shown in gray at the bottom of the Who's Who page (1/3).",

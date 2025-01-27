@@ -427,23 +427,6 @@
         }
       }
     },
-    "Features and Tips" : {
-      "comment" : "Section title on Readme page",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Features and Tips"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Functionaliteit en Tips"
-          }
-        }
-      }
-    },
     "Fragment of the Swift source code" : {
       "comment" : "Caption for image on Readme page",
       "localizations" : {
@@ -474,23 +457,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "frameSize = [%@,%@]"
-          }
-        }
-      }
-    },
-    "How you can help" : {
-      "comment" : "Section title on Readme page",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "How you can help"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "App zoekt hulp"
           }
         }
       }
@@ -818,24 +784,6 @@
         }
       }
     },
-    "Readme" : {
-      "comment" : "Title of Readme screen",
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Readme"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Over deze app"
-          }
-        }
-      }
-    },
     "Search bar at the top of _Portfolios_ screen" : {
       "comment" : "Caption about Search Bar on the Readme page",
       "localizations" : {
@@ -1053,57 +1001,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "getoond"
-          }
-        }
-      }
-    },
-    "Supported Platforms" : {
-      "comment" : "Section title on Readme page",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "iOS, iPadOS"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "iOS en iPadOS"
-          }
-        }
-      }
-    },
-    "The App" : {
-      "comment" : "Section title on Readme page",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "The App"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Overzicht"
-          }
-        }
-      }
-    },
-    "The Concept" : {
-      "comment" : "Section title on Readme page",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "The Concept"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Het Concept"
           }
         }
       }
