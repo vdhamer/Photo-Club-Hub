@@ -12,7 +12,7 @@ Documentation
 * Created 7-step instructions in NL and EN for creating a new `level2.json` file. https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/
 
 Code Maintenance
-* Tested on iOS 18.2.1, and Xcode 16.2 and MacOS 15.2
+* Tested on iOS 18.3, and Xcode 16.2 and MacOS 15.3
 * Extended data model for keyword feature (and updated diagram in README.md on GitHub).
 * Added documentation in README.md for keyword feature in Level 2 files.
 * Automatically cleared any officer roles for a deceased member. Fatal error in debug version only.
