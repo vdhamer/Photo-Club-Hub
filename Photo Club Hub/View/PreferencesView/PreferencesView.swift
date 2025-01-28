@@ -110,7 +110,7 @@ struct PreferencesView: View {
                                          comment: "In Preferences, above link to Settings"),
                             content: {
                                 Button {
-                                    Task { // for async call
+                                    Task { // required for for async call
                                         if let url = URL(string: UIApplication.openSettingsURLString) {
                                             await UIApplication.shared.open(url)
                                         }
@@ -123,17 +123,6 @@ struct PreferencesView: View {
 
                 } // List
                 .navigationTitle(title)
-//                .toolbar {
-//                    ToolbarItemGroup(placement: ToolbarItemPlacement.confirmationAction) {
-//                        Button { // actual saving done in .onDisappear
-//                            dismiss()
-//                        } label: {
-//                            Text("Done",
-//                                 comment: "Button at top right of Preferences. Stores preference settings.")
-//                        }
-//                        .disabled(localPreferences.nothingEnabled)
-//                    }
-//                }
             }
             .onDisappear {
                 // need to update Bindings for showPhotoClubsList etc
@@ -158,6 +147,5 @@ struct PreferencesView_Previews: PreviewProvider { // This preview works on iOS 
     static var previews: some View {
         PreferencesView(preferences: $preferences)
             .navigationTitle(title)
-//            .navigationViewStyle(.stack)
     }
 }
