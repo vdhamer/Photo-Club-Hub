@@ -111,6 +111,7 @@ struct PreferencesView: View {
                             content: {
                                 Button {
                                     Task { // required for for async call
+                                        // code matches https://developer.apple.com/videos/play/wwdc2024/10185/
                                         if let url = URL(string: UIApplication.openSettingsURLString) {
                                             await UIApplication.shared.open(url)
                                         }
