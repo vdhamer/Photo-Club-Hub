@@ -1,37 +1,37 @@
-### 2.7.2 (GitHub commit ???????) ??-01-25
+### 2.7.2 (GitHub commit ???????) 29-01-25
 
-This build #4635 was built using Xcode 16.2 and is intended for App Store distribution.
-
-Portfolios Clubs-and-Museums screen
+Portfolios and Clubs-and-Museums screens
 * Added two demo clubs (XampleMin and XampleMax) as examples for adding new clubs.
 
 Preferences screen
 * Bug fix: role "Other" didn't show up when filtering on club officers
 
 Documentation
-* Created 7-step instructions in NL and EN for creating a new `level2.json` file. https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/
+* Created 7-step instructions (Github Documentation directory) for creating a new `level2.json` file.
 
 Code Maintenance
 * Tested on iOS 18.3, and Xcode 16.2 and MacOS 15.3
 * Extended data model for keyword feature (and updated diagram in README.md on GitHub).
-* Added documentation in README.md for keyword feature in Level 2 files.
+* Added documentation in README.md for keyword feature in Level 0 and Level 2 files.
 * Automatically cleared any officer roles for a deceased member. Fatal error in debug version only.
 * Removed remaining traces of e-mail and phone number support (feature disabled in 2.7.0 for privacy reasons).
 * Moved isDeceased parameter into PhotographerOptionalFields struct.
 * Moved the JSON files to a new directory with a simpler path.
-* Added support for a contactEmail field for knowing who to contact about Level2.json files.
-* Migrated to String Catalogs for localization.
+* Added support for a contactEmail field for knowing who to contact if there is an issue with a Level2.json file.
+* Migrated to String Catalogs for supporting multiple languages.
 
 Data Maintenance
 * Added AJ to fcBellusImago
 * Updated fgDeGender (MW, ML, BZ)
 * Created spreadsheet with timeline of former members of fgDeGender (precurser to updating fgDeGender.level2.json
-* Added 10-ish recent former members to fgDeGender.level2.json
-* Added fcAFCReusel
+* Added 10-ish former members to fgDeGender.level2.json
+* Added a missing club fcAFCReusel
 * Created empty collections in LR for former members of fgDeGender
 * Updated fgWaalre (JJ)
-* created two demo Level 12 files: XampleMin.level1.json and XampleMax.level1.json
-* fixed broken link for ME of fgAnders (still don't have a real image though)
+* Created two demo Level 12 files: XampleMin.level1.json and XampleMax.level1.json
+* Fixed broken link for ME of fgAnders (still don't have a real image though)
+
+This build #4635 was made using Xcode 16.2 and is intended for TestFlight distribution.
 
 ---------------------------------------------------------------------------
 
