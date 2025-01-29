@@ -1,4 +1,4 @@
-### 2.7.2 (GitHub commit ???????) 29-01-25
+### 2.7.2 (GitHub commit c4d0faa) 29-01-25
 
 Portfolios and Clubs-and-Museums screens
 * Added two demo clubs (XampleMin and XampleMax) as examples for adding new clubs.
