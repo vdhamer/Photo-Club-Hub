@@ -1,5 +1,14 @@
 ### 2.7.2 (GitHub commit c4d0faa) 29-01-25
 
+Code Maintenance
+* Tested with SwiftLint 0.58.2
+
+This build #4636 was made using Xcode 16.2 and is intended for App Store distribution.
+
+---------------------------------------------------------------------------
+
+### 2.7.2 (GitHub commit c4d0faa) 29-01-25
+
 Portfolios and Clubs-and-Museums screens
 * Added two demo clubs (XampleMin and XampleMax) as examples for adding new clubs.
 
@@ -28,7 +37,7 @@ Data Maintenance
 * Added a missing club fcAFCReusel
 * Created empty collections in LR for former members of fgDeGender
 * Updated fgWaalre (JJ)
-* Created two demo Level 12 files: XampleMin.level1.json and XampleMax.level1.json
+* Created two demo Level 12 files: XampleMin.level2.json and XampleMax.level2.json
 * Fixed broken link for ME of fgAnders (still don't have a real image though)
 
 This build #4635 was made using Xcode 16.2 and is intended for TestFlight distribution.
