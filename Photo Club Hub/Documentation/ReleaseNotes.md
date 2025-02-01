@@ -5,6 +5,9 @@ Code Maintenance
 
 This build #4636 was made using Xcode 16.2 and is intended for App Store distribution.
 
+Data Maintenance
+* Set Core Data debugging according to https://useyourloaf.com/blog/debugging-core-data/
+
 ---------------------------------------------------------------------------
 
 ### 2.7.2 (GitHub commit c4d0faa) 29-01-25
