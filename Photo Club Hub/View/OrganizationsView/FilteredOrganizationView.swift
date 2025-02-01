@@ -10,7 +10,7 @@ import MapKit
 import CoreData
 
 @MainActor
-struct FilteredOrganizationView: View, Sendable {
+struct FilteredOrganizationView: View {
 
     @Environment(\.managedObjectContext) fileprivate var viewContext // may not be correct
     @Environment(\.layoutDirection) var layoutDirection // .leftToRight or .rightToLeft
