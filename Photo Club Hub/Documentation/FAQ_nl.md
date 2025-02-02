@@ -236,3 +236,14 @@ Op het buitenland heet de app "Photo Club Hub" (engels) in plaats van "Fotoclub 
 In alle gevallen krijg je precies dezelfde app. De app is kiest de taal bij het opstarten.
 Dit kan voorkomen als men een tijd in het buitenland gewoond heeft.
 </details></p>
+
+### Mag een club niet zelf zijn Level 1 omschrijving bepalen?
+
+<details><summary>Klik om uit te klappen</summary></p>
+Graag. Het kan automatisch door de `remark` voor de club aan de bovenkant van een Level 2 bestand te vullen met de gewenste tekst.
+Dat Level 2 bestand staat in principe onder beheer van de club (terwijl Level 1 centraal staat).
+Hiermee wordt de `remark` op Level 1 in de app vervangen door de betere `remark` op Level 2.
+Dit zou ook moeten werken voor `latitude` en `longitude` (GPS coordinaten).
+
+Graag ons op dergelijke wijzigingen op club-niveau attenderen: dan corrigeren wij ook het Level 1 bestand.
+</details></p>
