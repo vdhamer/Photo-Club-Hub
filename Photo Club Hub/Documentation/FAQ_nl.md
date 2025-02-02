@@ -192,12 +192,17 @@ Zeg maar vergelijkbaar met een andere verbeteringsactie rondom de club website.
 ### Wat is al dat gedoe met Levels/Niveaus?
 
 <details><summary>Klik om uit te klappen</summary></p>
-Een club kan meedoen op Level 1, 2 of 3. Op Level 1 weet de app alleen dat de club bestaat en waar de club zit.
-Level 2 voegt hier een lijst met clubleden aan toe. Level 3 voegt hier een portfolio met foto's aan toe.
-Een club kan deze stapen op zijn gemak uitvoeren. Op ieder niveau kan de app iets meer laten zien.</p>
+Een club kan meedoen op Level 1, 2 of 3. 
 
-De ingebouwde documentatie in de app legt dit wat verder uit. De GitHub site bevat voorbeelden van de gegevens
-en een uitleg van ieder brokje informatie per level ([GitHub](https://github.com/vdhamer/Photo-Club-Hub)).
+- Op Level 1 weet de app alleen dat de club bestaat en waar de club zit.
+- Level 2 voegt hier een lijst met clubleden aan toe. 
+- Level 3 voegt hier portfolio's met foto's aan toe.
+
+Een club kan deze stapen op zijn gemak uitvoeren. Op Level 2 toont de app de lijst met leden (en op Level 1 niet).
+Op level 3 kan je door portfolio's bladeren (en op Level 1 en 2 niet).
+
+De ingebouwde documentatie in de app legt dit wat verder uit. De GitHub site bevat voorbeelden van de invoerbestanden
+en een gedetailleerde uitleg wat ieder stuke informatie betekent ([GitHub](https://github.com/vdhamer/Photo-Club-Hub)).
 </details></p>
 
 ### Ben ik Level 1 per ongeluk aan het overslaan?
