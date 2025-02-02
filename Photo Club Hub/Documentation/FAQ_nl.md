@@ -70,6 +70,10 @@ Omdat het vrij eenvoudig kon. En de doelgroep er iets aan kan hebben.
 De app is "open". Je kunt zelf een club toevoegen. Hier komen stapsgewijs instructies voor.
 De vrijwel volledige lijst met clubs in Brabant-Oost staat erin als demo en om het proces op te starten.
 
+### Wie of wat bepaald welke foto's in de app staan?
+
+
+
 ### Moet ik mij niet zorgen maken over privacy?
 
 Nee. Een club beheert zijn eigen gegevens. En die gegevens staan op de club website en worden door de club geleverd en onderhouden.
