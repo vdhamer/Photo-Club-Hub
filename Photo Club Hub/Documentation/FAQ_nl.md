@@ -1,7 +1,7 @@
 ### Wat doet de app?
 
 <details><summary>Klik om uit te klappen</summary></p>
-Dit is de huidige omschrijving in de nederlandse Apple App Store:
+Dit is de huidige omschrijving in de nederlandse Apple App Store:</p>
 
 > De app toont geselecteerd werk van leden van fotoclubs. 
 >
