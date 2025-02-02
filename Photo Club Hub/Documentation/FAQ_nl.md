@@ -170,7 +170,8 @@ Zeg maar vergelijkbaar met een andere verbeteringsactie rondom de website.
 ### Hoe maak ik een Level 2 bestand aan?
 
 <details><summary>Klik om uit te klappen</summary></p>
-Hier is eene apart stappenplan met instructies voor: [https://tinyurl.com/Level2aanmaken](https://tinyurl.com/Level2aanmaken).
-Er is ook een bijbehorende engelstalige versie: [https://tinyurl.com/Level2aanmaken](https://tinyurl.com/Level2creation).
+    
+Hier is eene apart stappenplan met instructies voor: [tinyurl.com/Level2aanmaken](https://tinyurl.com/Level2aanmaken).
+Er is ook een bijbehorende engelstalige versie: [tinyurl.com/Level2aanmaken](https://tinyurl.com/Level2creation).
 De nederlandse versie is recenter/beter.
 </details></p>
