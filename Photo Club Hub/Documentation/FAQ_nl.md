@@ -1,4 +1,20 @@
-###  Wat is het nut van de app?
+### Wat doet de app?
+
+<details><summary>Klik om uit te klappen</summary></p>
+Dit is de huidige omschrijving in de nederlandse Apple App Store:
+
+> De app toont geselecteerd werk van leden van fotoclubs. 
+>
+> De app dient dus als een permanente online tentoonstelling van de leden van diverse fotoclubs.
+> Een gebruiker kan een club vinden door te bladeren, zoeken op naam of via de interactieve landkaarten.
+> Clubleden zijn te vinden door te bladeren, te zoeken op naam of trefwoord en via de lijsten met clubleden.
+>
+> Clubs kunnen zichzelf toevoegen door het online plaatsen van een lijst met hun leden. In een aparte stap kan de club links naar geselecteerde foto's per lid aanbieden.
+> Met deze gegevens kan een zuster macOS app portfolio pagina's voor bestaande websites automatisch genereren.
+> Beide apps staan op GitHub.
+</details></p>
+
+### Waarom is de app gemaakt?
 
 <details><summary>Klik om uit te klappen</summary></p>
 Fotografen worden lid van een fotoclub om hun werk aan elkaar te laten zien.
