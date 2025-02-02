@@ -73,7 +73,7 @@ Vergeleken met Instagram, heeft deze app...
 
 - geen commercieel doel of budget. Deze app is gratis en advertentievrij.
 - geen copieën van de foto's. Foto's en ledenlijst staan bij de clubs.
-- geen inlogproces om gegevens te zien.
+- geen inlogscherm met bijbehorende wachtwoorden.
 - geen mogelijkheid om via de app commentaar op andermans foto's te geven. Dus ook geen moderatie nodig.
 - een nadruk op foto's als kunstvorm. Dus geen foto's van je lunch, je verjaardagsfeest of je huisdier.
 </details></p>
@@ -81,13 +81,13 @@ Vergeleken met Instagram, heeft deze app...
 ### Hoe verschilt dit van een online fotoclub zoals Glass.photo?
 
 <details><summary>Klik om uit te klappen</summary></p>
-[Glass.photo](www.glass.photo) ziet fotografen als een individue - maar zou je kunnen zien als 1 grote fotoclub.
-Vergeleken met Glass.photo, heeft deze app...
+[Glass.photo](www.glass.photo) ziet fotografen als een individue - maar je kunt Glass zien als 1 grote fotoclub.
+Vergeleken met Glass, heeft Photo Club Hub...
 
 - geen jaarlijks abonnement en bijbhorend inlogproces. Glass heeft enkele werknemers en maakt dus significante kosten.
 - geen copieën van de foto's. Foto's en ledenlijst staan bij de clubs.
 - geen mogelijkheid om via de app commentaar op andermans foto's te geven. Dus ook geen moderatie nodig.
-- voor de komende tijd een nadruk op Nederlandse gebruikers. Glass is internationaal en engelstalig, al ziet het bedrijf in Amsterdam.
+- voor de komende tijd een nadruk op Nederlandse gebruikers. Glass is internationaal en engelstalig, al zitten de oprichters in Amsterdam.
 - nog geen mogelijkheid om individueen of clubs te "volgen". Maar dat zal bij voldoende gebruik nodig worden.
 </details></p>
 
