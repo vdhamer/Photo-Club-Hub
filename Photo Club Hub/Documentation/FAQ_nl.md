@@ -1,20 +1,20 @@
 ###  Wat is het nut van de app?
 
-Fotografen worden lid van een fotoclub om hun werk aan anderen te laten zien. En om het werk van anderen te zien.
+Fotografen worden lid van een fotoclub om hun werk aan elkaar te laten zien.
+Intern binnen een fotoclub lukt dat zien en gezien-worden aardig door om de paar weken fysiek bijeen te komen. 
 
-Intern binnen een fotoclub lukt dat zien en gezien-worden aardig doordat met om de paar weken fysiek bijeen komt. 
-Bredere verspreiding blijkt lastiger. Dat gebeurt vooral via een jaarlijks expositie en een website.
-Expositiebezoek bereikt een  kring bestaande uit familieleden, vrienden en "usual suspects" van omliggende clubs.
-Het bezoek van kleine websites gaat echter al jaren achteruit. De aandacht verschoof richting grote websites (zoals NOS.nl) en platforms (zoals Facebook) waar meer gebeurde en waar je (omdat er teveel gebeurde) abonneert op jouw voorkeuren.
+Bredere verspreiding blijkt echter lastiger. Dat gebeurt vooral via jaarlijks exposities en websites.
+Expositiebezoek bereikt vooral een vaste kring bestaande uit familieleden, vrienden en diverse getrouwe bezoekers vanuit omliggende clubs.
+Het bezoek van kleine websites gaat echter al jaren achteruit.
+De aandacht verschoof richting grote websites (zoals NOS.nl) en platforms (zoals Facebook) waar meer gebeurt en die jou via algoritmes danwel abonnement .
 
-Deze app wil een platform (dus met voldoende schaal) leveren dat laagdrempelig fotoclubs met elkaar in kontakt brengt.
-Je kunt het zien als een "permanente expositie" waar clubs en fotografen elkaar makkelijk kunnen vinden. 
-Dus een soort permanent communicatiekanaal gesprecializeerd in fotoclubs.
+Vandaar dat er behoefte lijkt aan een laagdrempelig platform speciaal om fotoclubs in kontakt te brengen met elkaar en met hun publiek.
+Je kunt de app dus zien als een online fotomuseum dat nooit dicht gaat, en dat groot genoeg is dat er altijd wat nieuws te ontdekken valt.
 
 ### Is de app alleen voor Nederland?
 
 De nadruk ligt voorlopig op Nederland. Maar de app is wereldwijd te gebruiken.
-De app schakelt al automatisch over op engels indien de telefoon ingesteld is op gebruik van Engels.
+De app ondersteunt bijvoorbeeld zowel Nederlands als Engels. In het Engels heet de app "Photo Club Hub" ipv "Fotoclub Hub".
 
 ### Moet een club lid zijn van de Fotobond?
 
@@ -68,19 +68,23 @@ Omdat het vrij eenvoudig kon. En de doelgroep er iets aan kan hebben.
 De app is "open". Je kunt zelf een club toevoegen. Hier komen stapsgewijs instructies voor.
 De vrijwel volledige lijst met clubs in Brabant-Oost staat erin als demo en om het proces op te starten.
 
-### Wie of wat bepaald welke foto's in de app staan?
+### Wie bepaalt welke foto's in de app staan?
 
+De individuele clubs. Zo kan je bijvoorbeeld ervoor kiezen dat foto's van alle clubexposities en individuele exposities van de afgelopen jaren te zien zijn.
+Die foto's horen tenslotte het tonen waard te zijn. Maar je kunt ook afspreken dat iedere fotograaf zelf foto's uitkiest voor zijn/naar portfolio in de app.
+De app gaat er wel (meer of minder) van uit dat de foto's redelijk geselecteerd zijn. Dus bijvoorbeeld 10 foto's per fotograaf per jaar.
 
-
-### Moet ik mij niet zorgen maken over privacy?
+### Moet ik mij zorgen maken over privacy?
 
 Nee. Een club beheert zijn eigen gegevens. En die gegevens staan op de club website en worden door de club geleverd en onderhouden.
-De gegevens waar het om gaan zijn doorgaans al op vele websites te zien: namen van leden, een selectie van foto's.
-De app doet dus niet aan postadressen, e-mailadressen of telefoonnummers van leden.
+De gegevens waar het hier om gaat zijn vaak al op bestaande websites te zien: namen van leden, een selectie van foto's.
+Maar nu zijn die gegevens in een voor software leesbaar formaat, zodat ze op een consistente, uniforme manier getoond kunnen worden.
+
+De app doet overigens niet aan postadressen, e-mailadressen of telefoonnummers van leden.
 De app doet zelfs niet aan postadres van de thuisbasis van de club: 
 het zet een club op de kaart via GPS coordinaten die je desgewenst kunt afronden of het midden van de stad kan zetten.
 
-###  Moeten ex-leden in de app vermeld worden?
+### Moeten ex-leden in de app vermeld worden?
 
 Nee. Maar de app is zo gemaakt dat het kan.
 Vaak wordt dat gewaaardeerd (b.v. als iemand 20 jaar lid was, en wegens gezondheidsredenen niet meer meedoet met "zijn" club).
@@ -89,7 +93,7 @@ Technisch kan een **gebruiker** van de app ook nog eens kiezen of ex-leden getoo
 En kan iedere club zelf een beleid op dit punt beslissen: als de club de gegevens niet aanlevert, zijn ze uiteraard niet te zien.
 Meer detail hieronder hieronder.
 
-###  Kan een overleden voormalig lid zichtbaar zijn?
+### Kan een overleden voormalig lid zichtbaar zijn?
 
 Als een club zijn gegevens niet onderhoudt, zal dit op termijn bij ieder lid gebeuren. 
 Het internet heeft hier namelijk nog geen goede oplossing voor. 
@@ -105,3 +109,15 @@ Wij raden dus de clubs 3 basisregels aan:
 Voor de app betekent dit dat de verantwoording voor de inhoud volledig bij een clubs liggen. 
 En als een complete club ophoudt te bestaan, verwijnt die club vroeger of later uit de app
 doordat ze de rekening voor hun website niet meer betalen.
+
+### Is er een Android of PC versie van de app?
+
+Er is een "web" versie in ontwikkeling. Die bekijk je dus in je browser (Chrome, Edge, Safari, Mozilla...) en kan je gebruiken als uitbreiding van een bestaande website.
+Dat scheelt dubbel werk.
+
+De software voor die webversie heet "Fotoclub Hub HTML" en genereert pagina's uit dezelfde bestanden die gebruikt worden voor "Fotoclub Hub".
+Dat voorkomt dubbel werk om de gegevens te onderhouden.
+Foto Club Hub HTML genereert een (HTML/CSS/js) ledenlijst met links naar de portfolio's van de clubleden.
+Door ernaar te linken heb kan je bijvoorbeeld een bestaande Wordpress website site voorzien van portfolio's van leden.
+Op termijn zullen we ook een centrale indexpagina maken (genereren) die doorverwijst naar de desbetreffende club pagina's.
+
