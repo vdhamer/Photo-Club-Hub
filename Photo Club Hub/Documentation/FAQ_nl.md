@@ -1,19 +1,17 @@
 ###  Wat is het nut van de app?
 
-Leden van fotoclubs zijn lid om hun betere werk aan anderen te laten zien. En om het werk van anderen te zien, b.v. ter inspiratie.
+Fotografen worden lid van een fotoclubs om hun werk aan anderen te laten zien. En om het werk van anderen te zien, b.v. ter lering en inspiratie.
 
-Binnen de leden van een fotoclub lukt dat door om de paar weken bijeen te komen. 
-Bredere verspreiding gebeurt traditioneel enigszins via een website en via een jaarlijks expositie.
-Bezoek aan kleine websites is al jaren aan het dalen omdat de gebruikers overgaan naar platforms 
-zoals Facebook waar er miljoenen dingen te zien zijn, en je kunt abonneren op wat je wilt zien.
-Expositiebezoek lijkt aardig stabliel, maar bereikt een vrij beperkte kring met familie, vrienden en "usual suspects" van omliggende clubs.
-En die bezoekers moeten ook nog op dat weekend kunnen en binnen redelijke afstand wonen. En zijn per expostie enkele uren kwijt.
+Intern binnen een fotoclub lukt dat aardig door om de paar weken bijeen te komen. 
+Bredere verspreiding lukt maar beperkt. Dat gebeurt traditioneel vooral via een website en via een jaarlijks expositie.
+Bezoek aan kleine websites echter is al jaren aan het dalen omdat de gebruikers overgaan
+naar platforms waar meer gebeurt en waar je (omdat er teveel gebeurt) kunt abonneren op jouw voorkeuren. Dus kleine websites sterven af.
+Expositiebezoek lijkt aardig stabliel, maar bereikt een vrij beperkte kring van familieleden, vrienden en "usual suspects" van omliggende clubs.
 
-Deze app probeert specifiek om clubs laagdrempelig bijeen te brengen. Clubs sluit aan bij bestaande organisatie. 
-En benadrukt locatie omdat je we mensen in de buurt makkelijk kan vinden.
+Deze app wil een platform (dus met voldoende schaal) leveren dat laagdrempelig clubs bijeen brengt. Clubs sluit aan bij bestaande organisatie. 
+En benadrukt locatie omdat je expliciet zielsverwanten in de regio kunt vinden. Dan kan je hun of hun expo gericht fysiek opzoeken.
 Je kunt het zien als een "permanente expositie" waar clubs en elkaar makkelijk kunnen vinden. 
-Dus permanent ipv 1 of 2 keer per jaar.
-En met voldoende inhoud dat het als platform kan dienen waar je clubs, fotografen en inspiratie kunt vinden. 
+Een permanent communicatiekanaal (ipv 1 of 2 expo's per jaar) dat door zijn omvang de moeite waard is om regelmatig door te bladeren.
 
 ### Is de app alleen voor Nederland?
 
