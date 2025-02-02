@@ -64,8 +64,8 @@ Het "zomaar" verwijderen van iemand kan heel pijnlijk zijn voor nabestaanden.
 Maar zomaar aanhouden kan net zo pijnlijk zijn. 
 Wij raden dus de clubs 2 basisregels aan:
 
-    1) stem af met de betrokkene,
-    2) probeer de app up to date te houden t.a.v. het onderscheid lid / ex-lid / overleden.
+    1. stem af met de betrokkene,
+    2. probeer de app up to date te houden t.a.v. het onderscheid lid / ex-lid / overledene.
 
 Voor de app betekent dit dat de verantwoording voor de inhoud volledig bij een clubs liggen. 
 En als een complete club ophoudt te bestaan, verwijnt die club vroeger of later uit de app omdat ze de rekening voor hun website niet meer betalen.
