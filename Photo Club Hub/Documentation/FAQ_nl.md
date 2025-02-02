@@ -233,8 +233,8 @@ Daarvoor heb je een Wordpress plug-in nodig. Bijvoorbeeld [https://wordpress.org
 
 <details><summary>Klik om uit te klappen</summary></p>
 Op het buitenland heet de app "Photo Club Hub" (engels) in plaats van "Fotoclub Hub" (nederlands).
-In alle gevallen krijg je precies dezelfde app. De app is kiest de taal bij het opstarten.
-Dit kan voorkomen als men een tijd in het buitenland gewoond heeft.
+Je kunt op een buitenlandse App Store aangewezen zijn als je een tijd in het buitenland gewoond hebt.
+In alle gevallen krijg je precies dezelfde app. De app kiest automatisch de juiste taal bij het opstarten.
 </details></p>
 
 ### Mag een club niet zelf zijn Level 1 omschrijving bepalen?
