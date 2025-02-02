@@ -61,7 +61,7 @@ Als een club zijn gegevens niet onderhoudt, zal dit op termijn bij ieder lid geb
 Het internet heeft hier namelijk nog geen goede oplossing voor. 
 Je ziet soms b.v. op Facebook dat een overledene - met de beste bedoelingen - felicitaties kijgt op zijn/haar verjaardag.
 Het "zomaar" verwijderen van iemand kan heel pijnlijk zijn voor nabestaanden.
-Maar zomaar aanhouden zou kan net zo pijnlijk zijn. 
+Maar zomaar aanhouden kan net zo pijnlijk zijn. 
 Wij raden dus de clubs 2 basisregels aan:
     1) stem af met de betrokkene,
     2) probeer de app up to date te houden t.a.v. het onderscheid lid / ex-lid / overleden.
