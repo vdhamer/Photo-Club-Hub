@@ -7,6 +7,9 @@ This build #4636 was made using Xcode 16.2 and is intended for App Store distrib
 
 Data Maintenance
 * Set Core Data debugging according to https://useyourloaf.com/blog/debugging-core-data/
+* Updated membership of fgWaalre for 2025
+
+This build #4636 was made using Xcode 16.2 and is intended for App Store distribution.
 
 ---------------------------------------------------------------------------
 
