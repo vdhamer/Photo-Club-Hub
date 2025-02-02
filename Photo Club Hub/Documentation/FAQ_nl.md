@@ -128,6 +128,7 @@ naar b.v. naar een dorsplein of station kan laten wijzen.
 ### Moeten ex-leden in de app vermeld worden?
 
 <details><summary>Klik om uit te klappen</summary></p>
+
 Nee. Maar de app is zo gemaakt dat het kan.
 Vaak wordt dat gewaaardeerd (b.v. als iemand 20 jaar lid was, en wegens gezondheidsredenen niet meer meedoet met "zijn" club).
 "In de app blijven of niet" kan per lid besloten worden. Of per club. Het is wel verstandig om dit met het lid zelf af te stemmen.
