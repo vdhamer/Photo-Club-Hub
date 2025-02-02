@@ -94,7 +94,7 @@ Het internet heeft hier namelijk nog geen goede oplossing voor.
 Zo kan het op Facebook gebeuren dat een overledene - met de beste bedoelingen - felicitaties kijgt op zijn/haar verjaardag.
 Het "zomaar" verwijderen van iemand kan heel pijnlijk zijn voor nabestaanden die de herinnering in ere willen houden.
 Maar "zomaar" aanhouden kan mogelijk ook pijnlijk zijn. 
-Wij raden dus de clubs 2 basisregels aan:
+Wij raden dus de clubs 3 basisregels aan:
 
     1. stem af met de betrokkene.
     2. als de belanghebbenden onbereikbaar zijn, verwijder de gegevens.
