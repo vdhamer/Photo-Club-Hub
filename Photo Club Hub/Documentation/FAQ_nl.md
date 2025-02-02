@@ -6,10 +6,11 @@ Intern binnen een fotoclub lukt dat zien en gezien-worden aardig door om de paar
 Bredere verspreiding blijkt echter lastiger. Dat gebeurt vooral via jaarlijks exposities en websites.
 Expositiebezoek bereikt vooral een vaste kring bestaande uit familieleden, vrienden en diverse getrouwe bezoekers vanuit omliggende clubs.
 Het bezoek van kleine websites gaat echter al jaren achteruit.
-De aandacht verschoof richting grote websites (zoals NOS.nl) en platforms (zoals Facebook) waar meer gebeurt en die jou via algoritmes danwel abonnement .
+De aandacht verschoof richting grote websites (zoals NOS.nl) en platforms (zoals Facebook en Instagram) waar meer gebeurt en waar ze de gebruiker naar de meest relevante inhoud proberen te leiden (omdat er eigenlijk teveel te zien valt).
 
-Vandaar dat er behoefte lijkt aan een laagdrempelig platform speciaal om fotoclubs in kontakt te brengen met elkaar en met hun publiek.
-Je kunt de app dus zien als een online fotomuseum dat nooit dicht gaat, en dat groot genoeg is dat er altijd wat nieuws te ontdekken valt.
+Vandaar dat er behoefte lijkt aan een laagdrempelig platform speciaal om fotoclubs onderling in kontakt te brengen. En in kontakt te brengen met hun potentiele doelgroep.
+Je kunt de app dus zien als een online museum voor de amateurfotografie dat nooit dicht is, en dat groot genoeg is bezoekers te trekken.
+Mogelijk dat de app ooit instelbare notificaties krijgt waarmee de gebruiker kan waarschuwen dat er relevante nieuwe foto's binnengekomen zijn.
 
 ### Is de app alleen voor Nederland?
 
@@ -110,14 +111,31 @@ Voor de app betekent dit dat de verantwoording voor de inhoud volledig bij een c
 En als een complete club ophoudt te bestaan, verwijnt die club vroeger of later uit de app
 doordat ze de rekening voor hun website niet meer betalen.
 
-### Is er een Android of PC versie van de app?
+### Is er bijvoorbeeld Android of PC versie van de app?
 
-Er is een "web" versie in ontwikkeling. Die bekijk je dus in je browser (Chrome, Edge, Safari, Mozilla...) en kan je gebruiken als uitbreiding van een bestaande website.
-Dat scheelt dubbel werk.
+De app versie ondersteunt, om praktische redenen, de iPhone en iPad.
+Er is een "web" versie in ontwikkeling. Die bekijk je dus in je browser (Chrome, Edge, Safari, Mozilla...) op een computer of mobiel apparaat.
+Die web versie levert HTML pagina's die je straks gewoon toevoegt aan een bestaande website (b.v. Wordpress).
 
-De software voor die webversie heet "Fotoclub Hub HTML" en genereert pagina's uit dezelfde bestanden die gebruikt worden voor "Fotoclub Hub".
-Dat voorkomt dubbel werk om de gegevens te onderhouden.
+De software voor de web webversie heet "Fotoclub Hub HTML" en genereert pagina's uit dezelfde bestanden die gebruikt worden voor "Fotoclub Hub".
+Dat voorkomt dubbel werk als eene club zowel de app als hun website moet bijwerken.
 Foto Club Hub HTML genereert een (HTML/CSS/js) ledenlijst met links naar de portfolio's van de clubleden.
-Door ernaar te linken heb kan je bijvoorbeeld een bestaande Wordpress website site voorzien van portfolio's van leden.
-Op termijn zullen we ook een centrale indexpagina maken (genereren) die doorverwijst naar de desbetreffende club pagina's.
+
+### Kan een club erop vertrouwen dat alles blijft werken?
+
+Bij een bedrijf als Adobe mag je aannemen dat alles nog jaren ondersteund wordt: men betaalt ervoor, 
+en het is de verantwoordelijk van Adobe om voor continuiteit te zorgen. 
+Dat gaat meestal goed zolang het bedrijf winst op het product maakt.
+
+Hier ligt dit anders: de broncode is openbaar ("open source"), zodat het in principe nooit verloren kan gaan.
+Maar de software heeft zo nu en dan onderhoud nodig. En gebruikers verwachten dat het geleidelijk beter/krachtiger wordt.
+
+Aangezien er geen budget is, streef ik ernaar voldoende gebruikers te krijgen zodat er meer vrijwillers komen die bereid zijn
+om af en toe aan de software te sleutelen. Bijvoorbeeld omdat ze een idee hebben en het zelf kunnen helpen realizeren.
+Dat staat of valt bij het kunnen opbouwen van een interessant genoeg ecosysteem.
+Bij gebruik door bijvoorbeeld 100 clubs is er kans dat er toevallig iemand tussenzit die wil meehelpen.
+Dit _kan_ gaan sneeuwballen: meer ontwikkelaars > meer functionaliteit > meer gebruikers > meer kans op ontwikkelaars...
+
+Voor een club is de continuiteitsvraag niet erg belangrijk: de investering per club om gegevens aan te leveren zijn heel beperkt.
+Dus het risiko is vergelijkbaar met de keus om een Wordpress Plug-in of Theme te gebruiken. De continuiteitsvraag is vooral relevant voor het ontwikkelen van de sofware zelf. 
 
