@@ -94,7 +94,7 @@ Vergeleken met Glass, heeft Photo Club Hub...
 ### Waarom staan er fotomusea in?
 
 <details><summary>Klik om uit te klappen</summary></p>
-Omdat het vrij eenvoudig kon. En de doelgroep er iets aan kan hebben.
+Omdat het vrij eenvoudig kon, goed samenging met de landkaartjes, en nuttig kon zijn voor sommige gebruikers.
 </details></p>
 
 ### Waarom staat mijn club niet in de app?
