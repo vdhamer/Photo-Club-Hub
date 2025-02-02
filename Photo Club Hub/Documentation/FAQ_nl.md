@@ -45,7 +45,7 @@ De app ondersteunt bijvoorbeeld zowel Nederlands als Engels. In het Engels heet 
 <details><summary>Klik om uit te klappen</summary></p>
 De app kan prima omgaan met clubs die geen lid zijn van de Fotobond.
 Er zijn voorbeelden te vinden op de landkaarten.
-Buitenlandse club zouden per definitie geen lid van de Konijklijke Nederlandse Fotobond zijn.
+Buitenlandse club zouden per definitie geen lid van de (Nederlandse) Konijklijke Fotobond zijn.
 </details></p>
 
 ### Hoe verschilt dit van een website?
