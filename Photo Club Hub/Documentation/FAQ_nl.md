@@ -121,21 +121,20 @@ De software voor de web webversie heet "Fotoclub Hub HTML" en genereert pagina's
 Dat voorkomt dubbel werk als eene club zowel de app als hun website moet bijwerken.
 Foto Club Hub HTML genereert een (HTML/CSS/js) ledenlijst met links naar de portfolio's van de clubleden.
 
-### Kan een club erop vertrouwen dat alles blijft werken?
+### Werkt dit nog over enkele jaren?
 
-Bij een bedrijf als Adobe mag je aannemen dat alles nog jaren ondersteund wordt: men betaalt ervoor, 
-en het is de verantwoordelijk van Adobe om voor continuiteit te zorgen. 
-Dat gaat meestal goed zolang het bedrijf winst op het product maakt.
+Bij een bedrijf als Adobe mag je aannemen dat alles minstens 10 jaar ondersteund wordt: men betaalt ervoor, 
+en het is de verantwoordelijk van Adobe om voor continuiteit te zorgen zolang het product winst maakt.
 
 Hier ligt dit anders: de broncode is openbaar ("open source"), zodat het in principe nooit verloren kan gaan.
-Maar de software heeft zo nu en dan onderhoud nodig. En gebruikers verwachten dat het geleidelijk beter/krachtiger wordt.
+Maar de software heeft zo nu en dan onderhoud nodig. En gebruikers verwachten dat het geleidelijk doorgroeit.
+Softwareonderhoud en uitbouw vergt in software nogal wat specialistische technisiche kennis.
 
-Aangezien er geen budget is, streef ik ernaar voldoende gebruikers te krijgen zodat er meer vrijwillers komen die bereid zijn
-om af en toe aan de software te sleutelen. Bijvoorbeeld omdat ze een idee hebben en het zelf kunnen helpen realizeren.
-Dat staat of valt bij het kunnen opbouwen van een interessant genoeg ecosysteem.
-Bij gebruik door bijvoorbeeld 100 clubs is er kans dat er toevallig iemand tussenzit die wil meehelpen.
+Aangezien er geen budget is, streven wij ernaar dat er straks voldoende gebruikers zijn dat er meer vrijwillers komen die bereid zijn
+incidenteel aan de software te sleutelen. Bijvoorbeeld omdat ze een idee hebben en het zelf kunnen helpen realizeren.
+Dat staat of valt bij het kunnen opbouwen van een sucsesvol ecosysteem.
+Bij gebruik door bijvoorbeeld 100 clubs is er kans dat er toevallig iemand (b.v. student) tussenzit die mee zou kunnen helpen.
 Dit _kan_ gaan sneeuwballen: meer ontwikkelaars > meer functionaliteit > meer gebruikers > meer kans op ontwikkelaars...
 
-Voor een club is de continuiteitsvraag niet erg belangrijk: de investering per club om gegevens aan te leveren zijn heel beperkt.
-Dus het risiko is vergelijkbaar met de keus om een Wordpress Plug-in of Theme te gebruiken. De continuiteitsvraag is vooral relevant voor het ontwikkelen van de sofware zelf. 
-
+Voor een club hoeft deze continuiteitsvraag geen drama te zijn: de investering per club om gegevens aan te leveren zijn heel beperkt.
+Zeg maar vergelijkbaar met een andere verbeteringsactie rondom de website.
