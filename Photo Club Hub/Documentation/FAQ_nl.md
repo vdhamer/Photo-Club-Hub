@@ -1,17 +1,34 @@
 ###  Wat is het nut van de app?
 
-###  Is de app alleen voor Nederland?
+We zijn 
+
+### Is de app alleen voor Nederland?
 
 De nadruk ligt voorlopig op Nederland. Maar de app is wereldwijd te gebruiken.
 De app schakelt al automatisch over op engels indien de telefoon ingesteld is op gebruik van Engels.
 
-###  Moet een club lid zijn van de Fotobond?
+### Moet een club lid zijn van de Fotobond?
 
 De app kan prima omgaan met clubs die geen lid zijn van de Fotobond.
 Er zijn voorbeelden te vinden op de landkaarten.
 Buitenlandse club zouden per definitie geen lid van de Konijklijke Nederlandse Fotobond zijn.
 
-###  Hoe verschilt dit van b.v. Instagram?
+### Hoe verschilt dit van een website?
+
+Een website vereist dat de gebruiker expliciet op zoek gaat naar informatie.
+Dat is prima voor het beantwoorden van een explicite vraag (b.v. openingstijden, goedkoopste aanbieder).
+Maar kleine websites krijgen tegenwoordig weinig verkeer omdat er vrijwel nooit iets nieuws te vinden is.
+En er is niets nieuws te zien omdat er vrijwel geen bezoekers komen. 
+
+Vandaar de trend dat eigen websites van bedrijfjes of individuen vervangen worden door b.v. Facebook pagina's: 
+er is altijd wel wat gaande, en je kan je abonneren op notificaties als er iets verandert.
+
+Het hebben van een eigen platform voor foto clubs ipv b.v. "op Facebook zitten", heeft als centraal voordeel dat het er rustiger is:
+
+- minder afleiding door honderd nieuwtjes per dag, over allerlei onderwerpen: doom scrolling.
+- minder afleiding op de pagina's zelf. De gespecializeerde app is dichteer tegen een "museum" dan een "bazaar". 
+
+### Hoe verschilt dit van b.v. Instagram?
 
 Instagram ziet iedereen als een individue - en kent dus geen club begrip.
 Vergeleken met Instagram, heeft deze app...
@@ -22,7 +39,7 @@ Vergeleken met Instagram, heeft deze app...
 - geen mogelijkheid om via de app commentaar op andermans foto's te geven. Dus ook geen moderatie nodig.
 - een nadruk op foto's als kunstvorm. Dus geen foto's van je lunch, je verjaardagsfeest of je huisdier.
 
-###  Hoe verschilt dit van een online fotoclub zoals Glass.photo?
+### Hoe verschilt dit van een online fotoclub zoals Glass.photo?
 
 [Glass.photo](www.glass.photo) ziet fotografen als een individue - maar zou je kunnen zien als 1 grote fotoclub.
 Vergeleken met Glass.photo, heeft deze app...
@@ -33,16 +50,16 @@ Vergeleken met Glass.photo, heeft deze app...
 - voor de komende tijd een nadruk op Nederlandse gebruikers. Glass is internationaal en engelstalig, al ziet het bedrijf in Amsterdam.
 - nog geen mogelijkheid om individueen of clubs te "volgen". Maar dat zal bij voldoende gebruik nodig worden.
 
-###  Waarom staan er fotomusea in?
+### Waarom staan er fotomusea in?
 
 Omdat het vrij eenvoudig kon. En de doelgroep er iets aan kan hebben.
 
-###  Waarom staat mijn club niet in de app?
+### Waarom staat mijn club niet in de app?
 
 De app is "open". Je kunt zelf een club toevoegen. Hier komen stapsgewijs instructies voor.
 De vrijwel volledige lijst met clubs in Brabant-Oost staat erin als demo en om het proces op te starten.
 
-###  Moet ik mij zorgen maken over privacy?
+### Moet ik mij niet zorgen maken over privacy?
 
 Nee. Een club beheert zijn eigen gegevens. En die gegevens staan op de club website en worden door de club geleverd en onderhouden.
 De gegevens waar het om gaan zijn doorgaans al op vele websites te zien: namen van leden, een selectie van foto's.
@@ -54,18 +71,23 @@ het zet een club op de kaart via GPS coordinaten die je desgewenst kunt afronden
 
 Nee. Maar het kan wel. Vaak wordt dat gewaaardeerd (b.v. als iemand 20 jaar lid was, en wegens gezondheidsredenen moest vertrekken).
 "In de app blijven of niet" kan per lid besloten worden. Of per club. Het is wel verstandig om het met het lid zelf af te stemmen.
+Technisch kan een begruiker van de app zelf kiezen of ex-leden getoond worden.
+En kan iedere club zelf een beleid op dit punt beslissen: als de club de gegevens niet aanlevert, zijn ze uiteraard niet te zien.
+Meer detail hieronder volgend punt.
 
 ###  Kan een overleden voormalig lid zichtbaar zijn?
 
 Als een club zijn gegevens niet onderhoudt, zal dit op termijn bij ieder lid gebeuren. 
 Het internet heeft hier namelijk nog geen goede oplossing voor. 
-Je ziet soms b.v. op Facebook dat een overledene - met de beste bedoelingen - felicitaties kijgt op zijn/haar verjaardag.
-Het "zomaar" verwijderen van iemand kan heel pijnlijk zijn voor nabestaanden.
-Maar zomaar aanhouden kan net zo pijnlijk zijn. 
+Zo kan het op Facebook gebeuren dat een overledene - met de beste bedoelingen - felicitaties kijgt op zijn/haar verjaardag.
+Het "zomaar" verwijderen van iemand kan heel pijnlijk zijn voor nabestaanden die de herinnering in ere willen houden.
+Maar "zomaar" aanhouden kan mogelijk ook pijnlijk zijn. 
 Wij raden dus de clubs 2 basisregels aan:
 
-    1. stem af met de betrokkene,
-    2. probeer de app up to date te houden t.a.v. het onderscheid lid / ex-lid / overledene.
+    1. stem af met de betrokkene.
+    2. als de belanghebbenden onbereikbaar zijn, verwijder de gegevens.
+    3. probeer de app up to date te houden t.a.v. het onderscheid lid / ex-lid / overledene.
 
 Voor de app betekent dit dat de verantwoording voor de inhoud volledig bij een clubs liggen. 
-En als een complete club ophoudt te bestaan, verwijnt die club vroeger of later uit de app omdat ze de rekening voor hun website niet meer betalen.
+En als een complete club ophoudt te bestaan, verwijnt die club vroeger of later uit de app
+doordat ze de rekening voor hun website niet meer betalen.
