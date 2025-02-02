@@ -1,6 +1,19 @@
 ###  Wat is het nut van de app?
 
-We zijn 
+Leden van fotoclubs zijn lid om hun betere werk aan anderen te laten zien. En om het werk van anderen te zien, b.v. ter inspiratie.
+
+Binnen de leden van een fotoclub lukt dat door om de paar weken bijeen te komen. 
+Bredere verspreiding gebeurt traditioneel enigszins via een website en via een jaarlijks expositie.
+Bezoek aan kleine websites is al jaren aan het dalen omdat de gebruikers overgaan naar platforms 
+zoals Facebook waar er miljoenen dingen te zien zijn, en je kunt abonneren op wat je wilt zien.
+Expositiebezoek lijkt aardig stabliel, maar bereikt een vrij beperkte kring met familie, vrienden en "usual suspects" van omliggende clubs.
+En die bezoekers moeten ook nog op dat weekend kunnen en binnen redelijke afstand wonen. En zijn per expostie enkele uren kwijt.
+
+Deze app probeert specifiek om clubs laagdrempelig bijeen te brengen. Clubs sluit aan bij bestaande organisatie. 
+En benadrukt locatie omdat je we mensen in de buurt makkelijk kan vinden.
+Je kunt het zien als een "permanente expositie" waar clubs en elkaar makkelijk kunnen vinden. 
+Dus permanent ipv 1 of 2 keer per jaar.
+En met voldoende inhoud dat het als platform kan dienen waar je clubs, fotografen en inspiratie kunt vinden. 
 
 ### Is de app alleen voor Nederland?
 
@@ -25,8 +38,8 @@ er is altijd wel wat gaande, en je kan je abonneren op notificaties als er iets 
 
 Het hebben van een eigen platform voor foto clubs ipv b.v. "op Facebook zitten", heeft als centraal voordeel dat het er rustiger is:
 
-- minder afleiding door honderd nieuwtjes per dag, over allerlei onderwerpen: doom scrolling.
-- minder afleiding op de pagina's zelf. De gespecializeerde app is dichteer tegen een "museum" dan een "bazaar". 
+- minder afleiding door honderd nieuwtjes per dag, over allerlei onderwerpen: "doom scrolling".
+- minder afleiding op de pagina's zelf. De gespecializeerde app is dichter tegen een "museum" dan een "bazaar". 
 
 ### Hoe verschilt dit van b.v. Instagram?
 
