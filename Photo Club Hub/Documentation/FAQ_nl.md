@@ -1,4 +1,4 @@
-*** Wat is het nut van de app?
+***Wat is het nut van de app?
 
 *** Is de app alleen voor Nederland?
 De nadruk ligt voorlopig op Nederland. Maar de app is wereldwijd te gebruiken.
