@@ -191,12 +191,14 @@ Zeg maar vergelijkbaar met een andere verbeteringsactie rondom de club website.
 
 ### Wat is al dat gedoe met Levels/Niveaus?
 
+<details><summary>Klik om uit te klappen</summary></p>
 Een club kan meedoen op Level 1, 2 of 3. Op Level 1 weet de app alleen dat de club bestaat en waar de club zit.
 Level 2 voegt hier een lijst met clubleden aan toe. Level 3 voegt hier een portfolio met foto's aan toe.
 Een club kan deze stapen op zijn gemak uitvoeren. Op ieder niveau kan de app iets meer laten zien.
 
 De ingebouwde documentatie in de app legt dit wat verder uit. De GitHub site bevat voorbeelden van de gegevens
 en een uitleg van ieder brokje informatie per level ([GitHub](https://github.com/vdhamer/Photo-Club-Hub)).
+</details></p>
 
 ### Ben ik Level 1 per ongeluk aan het overslaan?
 
@@ -225,4 +227,12 @@ Dan moet je de URL bewaren (omdat het Level 1 bestand doorverwijst naar de locat
 
 Vermoedelijk bevat WordPress en beveiliging om vooral plaatjes en video te uploaded. En dus een JSON betand weigert.
 Daarvoor heb je een Wordpress plug-in nodig. Bijvoorbeeld [https://wordpress.org/plugins/mime-types-plus/](https://wordpress.org/plugins/mime-types-plus/)
+</details></p>
+
+### Ik kan Fotoclub Hub niet vinden op de Apple App Store?
+
+<details><summary>Klik om uit te klappen</summary></p>
+Op het buitenland heet de app "Photo Club Hub" (engels) in plaats van "Fotoclub Hub" (nederlands).
+In alle gevallen krijg je precies dezelfde app. De app is kiest de taal bij het opstarten.
+Dit kan voorkomen als men een tijd in het buitenland gewoond heeft.
 </details></p>
