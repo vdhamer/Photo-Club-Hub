@@ -80,11 +80,12 @@ het zet een club op de kaart via GPS coordinaten die je desgewenst kunt afronden
 
 ###  Moeten ex-leden in de app vermeld worden?
 
-Nee. Maar het kan wel. Vaak wordt dat gewaaardeerd (b.v. als iemand 20 jaar lid was, en wegens gezondheidsredenen moest vertrekken).
-"In de app blijven of niet" kan per lid besloten worden. Of per club. Het is wel verstandig om het met het lid zelf af te stemmen.
-Technisch kan een begruiker van de app zelf kiezen of ex-leden getoond worden.
+Nee. Maar de app is zo gemaakt dat het kan.
+Vaak wordt dat gewaaardeerd (b.v. als iemand 20 jaar lid was, en wegens gezondheidsredenen niet meer meedoet met "zijn" club).
+"In de app blijven of niet" kan per lid besloten worden. Of per club. Het is wel verstandig om dit met het lid zelf af te stemmen.
+Technisch kan een **gebruiker** van de app ook nog eens kiezen of ex-leden getoond worden.
 En kan iedere club zelf een beleid op dit punt beslissen: als de club de gegevens niet aanlevert, zijn ze uiteraard niet te zien.
-Meer detail hieronder volgend punt.
+Meer detail hieronder hieronder.
 
 ###  Kan een overleden voormalig lid zichtbaar zijn?
 
