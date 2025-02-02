@@ -5,6 +5,9 @@ Code Maintenance
 
 This build #4636 was made using Xcode 16.2 and is intended for App Store distribution.
 
+Code Maintenance
+* Deleting the database content didn't cover 3 new tables (`Keyword`, `LocalizedKeyword`, `PhotographerKeyword`)
+
 Data Maintenance
 * Set Core Data debugging according to https://useyourloaf.com/blog/debugging-core-data/
 * Updated membership of fgWaalre for 2025

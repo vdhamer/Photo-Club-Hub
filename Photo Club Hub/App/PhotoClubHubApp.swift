@@ -118,7 +118,11 @@ extension PhotoClubHubApp {
         // order is important because of non-optional relationships
         do {
             try deleteEntitiesOfOneType("LocalizedRemark")
+            try deleteEntitiesOfOneType("LocalizedKeyword")
             try deleteEntitiesOfOneType("Language")
+
+            try deleteEntitiesOfOneType("PhotographerKeyword")
+            try deleteEntitiesOfOneType("Keyword")
 
             try deleteEntitiesOfOneType("MemberPortfolio")
             try deleteEntitiesOfOneType("Organization")
