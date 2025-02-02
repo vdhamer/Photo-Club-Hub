@@ -171,7 +171,20 @@ Zeg maar vergelijkbaar met een andere verbeteringsactie rondom de website.
 
 <details><summary>Klik om uit te klappen</summary></p>
     
-Hier is eene apart stappenplan met instructies voor: [tinyurl.com/Level2aanmaken](https://tinyurl.com/Level2aanmaken).
+Hier is een apart stappenplan met instructies voor: [tinyurl.com/Level2aanmaken](https://tinyurl.com/Level2aanmaken).
 Er is ook een bijbehorende engelstalige versie: [tinyurl.com/Level2aanmaken](https://tinyurl.com/Level2creation).
 De nederlandse versie is recenter/beter.
+</details></p>
+
+### Hoe krijg ik het Level 2 bestand op mijn club website?
+
+<details><summary>Klik om uit te klappen</summary></p>
+    
+Hier komt apart stappenplan met instructies voor. Voor de eerste clubs willen wij _tijdelijk_ het bestand wel op een eigen server zetten.
+
+Globale instructies: je kunt via Dashboard > Media bestanden uploaded naar Wordpress.
+Dan moet je de URL bewaren (omdat het Level 1 bestand doorverwijst naar de locatie van het Level 2 bestand).
+
+Vermoedelijk bevat WordPress en beveiliging om vooral plaatjes en video te uploaded. En dus een JSON betand weigert.
+Daarvoor heb je een Wordpress plug-in nodig. Bijvoorbeeld [https://wordpress.org/plugins/mime-types-plus/](https://wordpress.org/plugins/mime-types-plus/)
 </details></p>
