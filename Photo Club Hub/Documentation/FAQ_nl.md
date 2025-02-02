@@ -115,13 +115,14 @@ De app gaat er wel (meer of minder) van uit dat de foto's redelijk geselecteerd 
 ### Moet ik mij zorgen maken over privacy?
 
 <details><summary>Klik om uit te klappen</summary></p>
-Nee. Een club beheert zijn eigen gegevens. En die gegevens staan op de club website en worden door de club geleverd en onderhouden.
-De gegevens waar het hier om gaat zijn vaak al op bestaande websites te zien: namen van leden, een selectie van foto's.
-Maar nu zijn die gegevens in een voor software leesbaar formaat, zodat ze op een consistente, uniforme manier getoond kunnen worden.
+Nee. Een club beheert zijn eigen gegevens. En die gegevens staan opgeslagen op de club website en worden door de club geleverd en onderhouden.
+De gegevens waar het hier om gaat zijn meestal al op bestaande websites te zien: namen van leden, een selectie van foto's, leden van het bestuur.
+Dus nu zijn diezelfde gegevens omgezet in een voor software leesbaar formaat, zodat ze op een consistente, uniforme manier getoond kunnen worden.
 
-De app doet overigens niet aan postadressen, e-mailadressen of telefoonnummers van leden.
-De app doet zelfs niet aan postadres van de thuisbasis van de club: 
-het zet een club op de kaart via GPS coordinaten die je desgewenst kunt afronden of het midden van de stad kan zetten.
+De meeste velden zijn optioneel. Dus een club is niet gedwongen om b.v. te linken naar hun website, of aan te geven wie in het bestuur zit.
+Verder doet de app niet aan postadressen, e-mailadressen of telefoonnummers van leden. Die zijn niet optioneel: de app ondersteunt ze niet.
+Zelfs het postadres van de thuisbasis van de club is optioneel. Het is opgeslagen als GPS coordinaten, die je kunt afronden of 
+naar b.v. naar een dorsplein of station kan laten wijzen.
 </details></p>
 
 ### Moeten ex-leden in de app vermeld worden?
@@ -139,63 +140,81 @@ Meer detail hieronder hieronder.
 
 <details><summary>Klik om uit te klappen</summary></p>
 Als een club zijn gegevens niet onderhoudt, zal dit op termijn bij ieder lid gebeuren. 
-Het internet heeft hier namelijk nog geen goede oplossing voor. 
+Het internet heeft hier nog geen goede oplossing voor. 
 Zo kan het op Facebook gebeuren dat een overledene - met de beste bedoelingen - felicitaties kijgt op zijn/haar verjaardag.
+    
 Het "zomaar" verwijderen van iemand kan heel pijnlijk zijn voor nabestaanden die de herinnering in ere willen houden.
-Maar "zomaar" aanhouden kan mogelijk ook pijnlijk zijn. 
+Maar "zomaar" aanhouden kan soms ook pijnlijk zijn. 
 Wij raden dus de clubs 3 basisregels aan:
 
     1. stem af met de betrokkene.
     2. als de belanghebbenden onbereikbaar zijn, verwijder de gegevens.
     3. probeer de app up to date te houden t.a.v. het onderscheid lid / ex-lid / overledene.
 
-Voor de app betekent dit dat de verantwoording voor de inhoud volledig bij een clubs liggen. 
-En als een complete club ophoudt te bestaan, verwijnt die club vroeger of later uit de app
-doordat ze de rekening voor hun website niet meer betalen.
+Voor de app betekent dit dat de verantwoording voor de inhoud volledig bij de clubs liggen. 
+En indien een complete club onverhoopt opgeheven wordt, verwijnt die club vroeger of later uit de app
+doordat ze de rekening voor hun club website niet meer betalen.
 </details></p>
 
-### Is er bijvoorbeeld Android of PC versie van de app?
+### Is er een Android of PC versie van de app?
 
 <details><summary>Klik om uit te klappen</summary></p>
-De app versie ondersteunt, om praktische redenen, de iPhone en iPad.
-Er is een "web" versie in ontwikkeling. Die bekijk je dus in je browser (Chrome, Edge, Safari, Mozilla...) op een computer of mobiel apparaat.
-Die web versie levert HTML pagina's die je straks gewoon toevoegt aan een bestaande website (b.v. Wordpress).
+De app versie ondersteunt om praktische redenen de iPhone en iPad.
+Er is een "web" versie in ontwikkeling. Die bekijk je dus in je browser (Chrome, Edge, Safaria...) en dient als alternatief op bijvoorbeeld een PC, Mac, of telefoon met Android.
+Die web versie bestaat uit HTML pagina's die vaak zal toevoegen aan een bestaande website (b.v. Wordpress).
 
 De software voor de web webversie heet "Fotoclub Hub HTML" en genereert pagina's uit dezelfde bestanden die gebruikt worden voor "Fotoclub Hub".
 Dat voorkomt dubbel werk als eene club zowel de app als hun website moet bijwerken.
 Foto Club Hub HTML genereert een (HTML/CSS/js) ledenlijst met links naar de portfolio's van de clubleden.
 </details></p>
 
-### Werkt dit nog over enkele jaren?
+### Werkt dit allemaal nog over enkele jaren?
 
 <details><summary>Klik om uit te klappen</summary></p>
-Bij een bedrijf als Adobe mag je aannemen dat alles minstens 10 jaar ondersteund wordt: men betaalt ervoor, 
-en het is de verantwoordelijk van Adobe om voor continuiteit te zorgen zolang het product winst maakt.
+Bij een bedrijf (b.v. Adobe) mag je aannemen dat alles minstens 10 jaar ondersteund wordt. Men betaalt er tenslotte voor, 
+en het is de verantwoordelijk van Adobe om voor continuiteit te zorgen zolang ze een redelijke winst maken. Maar een harde garantie is er niet.
 
 Hier ligt dit anders: de broncode is openbaar ("open source"), zodat het in principe nooit verloren kan gaan.
-Maar de software heeft zo nu en dan onderhoud nodig. En gebruikers verwachten dat het geleidelijk doorgroeit.
-Softwareonderhoud en uitbouw vergt in software nogal wat specialistische technisiche kennis.
+Maar de software heeft zo nu en dan onderhoud nodig. En gebruikers hopen vaak op uitbreidingen en vernieuwingen.
+Softwareonderhoud en uitbouw vergt in software nogal wat specialistische kennis en is dus normaal voor een club onbetaalbaar.
 
 Aangezien er geen budget is, streven wij ernaar dat er straks voldoende gebruikers zijn dat er meer vrijwillers komen die bereid zijn
-incidenteel aan de software te sleutelen. Bijvoorbeeld omdat ze een idee hebben en het zelf kunnen helpen realizeren.
-Dat staat of valt bij het kunnen opbouwen van een sucsesvol ecosysteem.
+incidenteel en zonder vergoeding aan de software te sleutelen. Bijvoorbeeld omdat ze een idee hebben en het zelf kunnen helpen realizeren.
+Dat staat of valt bij het kunnen opbouwen van een groepje techneuten die dat kunnen en willen. Ze hoeven niet op dezelfde plek of zelfs in hetzelfde land te zitten.
 Bij gebruik door bijvoorbeeld 100 clubs is er kans dat er toevallig iemand (b.v. student) tussenzit die mee zou kunnen helpen.
-Dit _kan_ gaan sneeuwballen: meer ontwikkelaars > meer functionaliteit > meer gebruikers > meer kans op ontwikkelaars...
+Dit _kan_ gaan sneeuwballen: meer ontwikkelaars > meer functionaliteit > meer gebruikers > meer kans op ontwikkelaars. Of niet. Geen harde garantie.
+Maar er is wel de ambitie om dit op deze manier op te lossen.
 
 Voor een club hoeft deze continuiteitsvraag geen drama te zijn: de investering per club om gegevens aan te leveren zijn heel beperkt.
-Zeg maar vergelijkbaar met een andere verbeteringsactie rondom de website.
+Zeg maar vergelijkbaar met een andere verbeteringsactie rondom de club website.
+</details></p>
+
+### Wat is al dat gedoe met Levels/Niveaus?
+
+Een club kan meedoen op Level 1, 2 of 3. Op Level 1 weet de app alleen dat de club bestaat en waar de club zit.
+Level 2 voegt hier een lijst met clubleden aan toe. Level 3 voegt hier een portfolio met foto's aan toe.
+Een club kan deze stapen op zijn gemak uitvoeren. Op ieder niveau kan de app iets meer laten zien.
+
+De ingebouwde documentatie in de app legt dit wat verder uit. De GitHub site bevat voorbeelden van de gegevens
+en een uitleg van ieder brokje informatie per level ([GitHub](https://github.com/vdhamer/Photo-Club-Hub)).
+
+### Ben ik Level 1 per ongeluk aan het overslaan?
+
+<details><summary>Klik om uit te klappen</summary></p>
+Misschien. Voor de clubs in regio Noord Brabant - Oost hebben wij de Level 1 gegevens voor alle ons bekende clubs ingevoerd.
+Andere clubs kunnen dus zelf hun Level 1 gegevens bij ons aanleveren. Gelukkig stelt Level 1 heel weinig voor: vooral de naam, gemeente, en GPS coordinaten.
+Plus liefst (niet verplicht) een enkele zin over iets wat er speciaal is aan de club.
 </details></p>
 
 ### Hoe maak ik een Level 2 bestand aan?
 
 <details><summary>Klik om uit te klappen</summary></p>
-    
 Hier is een apart stappenplan met instructies voor: [tinyurl.com/Level2aanmaken](https://tinyurl.com/Level2aanmaken).
 Er is ook een bijbehorende engelstalige versie: [tinyurl.com/Level2aanmaken](https://tinyurl.com/Level2creation).
-De nederlandse versie is recenter/beter.
+Maar de nederlandse versie is op dit moment recenter/beter.
 </details></p>
 
-### Hoe krijg ik het Level 2 bestand op mijn club website?
+### Hoe krijg ik een Level 2 bestand op mijn club website?
 
 <details><summary>Klik om uit te klappen</summary></p>
     
