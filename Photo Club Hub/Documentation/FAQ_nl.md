@@ -5,7 +5,7 @@ Fotografen worden lid van een fotoclubs om hun werk aan anderen te laten zien. E
 Intern binnen een fotoclub lukt dat aardig door om de paar weken bijeen te komen. 
 Bredere verspreiding lukt maar beperkt. Dat gebeurt traditioneel vooral via een website en via een jaarlijks expositie.
 Bezoek aan kleine websites echter is al jaren aan het dalen omdat de gebruikers overgaan
-naar platforms waar meer gebeurt en waar je (omdat er teveel gebeurt) kunt abonneren op jouw voorkeuren. Dus kleine websites sterven af.
+naar platforms waar meer gebeurt en waar je (omdat er juist teveel gebeurt) kunt abonneren op jouw voorkeuren. Dus kleine websites sterven af.
 Expositiebezoek lijkt aardig stabliel, maar bereikt een vrij beperkte kring van familieleden, vrienden en "usual suspects" van omliggende clubs.
 
 Deze app wil een platform (dus met voldoende schaal) leveren dat laagdrempelig clubs bijeen brengt. Clubs sluit aan bij bestaande organisatie. 
