@@ -20,14 +20,16 @@ Dit is de huidige omschrijving in de nederlandse Apple App Store:</p>
 Fotografen worden lid van een fotoclub om hun werk aan elkaar te laten zien.
 Intern binnen een fotoclub lukt dat zien en gezien-worden aardig door om de paar weken fysiek bijeen te komen.</p>
 
-Bredere zichtbaarheid via vooral een expostie en een website blijkt echter lastiger.
-Expositiebezoekers zijn vooral een vaste kring met familieleden, vrienden en diverse getrouwe bezoekers vanuit omliggende clubs.
-Aandacht trekken via de clubwebsite gaat echter al jaren achteruit. Vooral omdat kleine websites uit de mode zijn: er zijn er teveel, je moet ze vinden, en dan blijkt dat ze vaak onveranderd zijn in de laatste paar maanden.
-De aandacht van gebruikers verschoof richting grote websites (zoals nu.nl) en platforms (zoals Facebook en Instagram) waar meer gebeurt en waar ze de gebruiker naar de meest relevante inhoud proberen te leiden (omdat er eigenlijk teveel gebeurt).</p>
+Bredere zichtbaarheid loopt vooral via exposties en een eigen website. Dat gaat vaak moeizaam:
+Expositiebezoekers zijn vooral een vaste kring met familieleden, vrienden en diverse getrouwe bezoekers vanuit omliggende clubs. Expo bezoek lijkt aardig stabiel.
+Aandacht trekken via de clubwebsite loopt echter al jaren achteruit.
+Vooral omdat kleine websites over het algemeen steeds minder aandacht krijgen: je moet ze vinden, er zijn teveel om ze af te lopen, en de inhoud blijkt vaak maar een paar keer per jaar te veranderen.
+De aandacht van gebruikers verschoof richting grote websites (zoals nu.nl, CNN.com) en platforms (zoals Facebook en Instagram) waar altijd wat nieuws is en waar ze de gebruiker naar relevante inhoud leiden.</p>
 
-Vandaar dat er behoefte lijkt aan een laagdrempelig platform speciaal om de onderlinge banden tussen fotoclubs aan te halen. En clubs in kontakt te brengen met een grotere doelgroep.
-Je kunt de app dus zien als een online museum voor de amateurfotografie dat nooit dicht is, en dat groot genoeg is bezoekers te trekken omdat er kontinue iets gebeurt.
-Mogelijk dat de app ooit instelbare notificaties krijgt om de gebruiker te waarschuwen dat er relevante nieuwe foto's binnengekomen zijn. Dat kan een website niet echt, maar een app wel.
+Vandaar dat er behoefte lijkt aan een laagdrempelig platform speciaal om de onderlinge banden tussen fotoclubs aan te halen. En met artsy fotoliefhebbers. Maar ook met je oom in Australië die tijdens de club expo verhinderd was.
+Je kunt de app dus zien als een online museum voor de amateurfotografie dat nooit dicht is, en dat groot genoeg is om liefhebbers te trekken omdat er altijd wel iets nieuws is.
+
+We sluiten niet uit dat we de app ooit uitbreiden zodat de app kan melden wanneer er relevante nieuwe foto's binnengekomen zijn. Dat kan een website echt, maar een app wel.
 </details></p>
 
 ### Is de app alleen voor Nederland?
