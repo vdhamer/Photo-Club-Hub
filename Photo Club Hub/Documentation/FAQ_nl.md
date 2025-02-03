@@ -317,6 +317,6 @@ Vast wel. Zie tabel:
 | Creating a new level2.json file for your club | [tinyurl.com/Level2creation](https://tinyurl.com/Level2creation) | EN |
 | Readme op GitHub | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/.github/README.md) | EN |
 | Readme in App | ingebouwd | EN & NL |
-| Powerpoint presentatie | [link](https://github.com/vdhamer/Photo-Club-Hub/raw/refs/heads/main/Photo%20Club%20Hub/Documentation/Photo%20Club%20Hub.pptx) | NL |
-| FAQ | [tinyurl.com/fchFAQnl](https://tinyurl.com/fchFAQnl) | NL |
+| Powerpoint presentatie | [download](https://github.com/vdhamer/Photo-Club-Hub/raw/refs/heads/main/Photo%20Club%20Hub/Documentation/Photo%20Club%20Hub.pptx) | NL |
+| FAQ (dit document) | [tinyurl.com/fchFAQnl](https://tinyurl.com/fchFAQnl) | NL |
 </details></p>
