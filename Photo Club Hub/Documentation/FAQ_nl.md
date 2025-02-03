@@ -135,6 +135,35 @@ Zelfs het postadres van de thuisbasis van de club is optioneel. Het is opgeslage
 naar b.v. naar een dorpsplein of station kan laten wijzen.
 </details></p>
 
+### Houdt mijn club controle over de eigen foto's?
+
+<details><summary>Klik om uit te klappen</summary></p>
+Ja. Er worden geen kopieën gemaakt van de foto's. De foto's blijven op de site van de club. Technisch wordt er alleen naar gelinkt.
+En zelfs de lijsten met linkjes naar foto's staan op de club website, en niet een centrale server. 
+Hierdoor is de situatie totaal anders dan foto's die je deelt (en daarmee beschikbaar stelt) via Facebook, Instagram, Flickr, X, enz.
+
+Voorbeeld: de foto's en lijsten met foto's van Fotogroep De Gender komen op www.fcDeGender.nl te staan. Dat is de bestaande server van de club.
+En op die bestaande server stonden altijd al zeer vergelijkbare informatie: wie zijn de huidige leden, een soort portfolio per lid.
+Het is overigens zelfs mogelijk om "de foto's van Jan" eventueele bij Jan zelf neer te zetten. Maar laten we heb voor nu zo simpel mogelijk houden.
+
+Als test staan de foto's van De Gener even op een andere (mijn privé) server. Maar dat is tijdelijk: het is beter voor het beheer, en het is
+technisch onverstandig als tientallen of honderden clubs afhankelijk worden van een enkele server ("single point of failure"). En verder heeft
+mijn privé server maar beperkte ruimte. Clubs zijn meestal al gewend om een bedrijfje te betalen voor het "hosten" van hun website.
+</details></p>
+
+### Kan iemand de getoonde foto's kopieëren?
+
+<details><summary>Klik om uit te klappen</summary></p>
+Dat is niet helemaal tegen te gaan: alle online plaatjes die zichtbaar zijn, kan je een screenshot van maken.
+Maar het is hier wel opgezet om kopieëren zo lastig mogelijk te maken. Bij mijn procedé hiervoor...
+
+    - rechtsklikken en "Save as.." is in de software geblokeerd.
+    - de foto bevat zichtbaar de naam van de maker in de linkeronderhoek
+    - de foto bevat digitaal en onzichtbaar (in het EXIF copyright veld) de naam van de maker
+
+Dit is overigens vergelijkbaar met wat je kan doen met een traditionele website.
+</details></p>
+
 ### Moeten ex-leden in de app vermeld worden?
 
 <details><summary>Klik om uit te klappen</summary></p>
