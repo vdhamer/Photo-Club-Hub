@@ -162,7 +162,7 @@ Weet ik niet precies. Het overgrote deel van de clubs heeft al een website (= ie
 - Level 1 vereist geen eigen website. De informatie zit in een centraal bestand.
 - Level 2 kost vrijwel geen opslag. Makkelijk om een vrijwilliger te vinden die 1 enkel bestandje online wil zetten. Instructies hiervoor volgen.
 - Level 3 is wat lastiger, maar opslag bij een bevriende club is misschien bespreekbaar. Of een [gratis website leverancier](https://www.techradar.com/web-hosting/best-free-web-hosting) vinden.
-Ik denk niet dat wij instructies gaan maken voor "hoe maak ik een website" (doen de hosting providers). Maar we kunnen wel voorbeeldinstructies delen.
+Ik denk niet dat wij instructies gaan maken voor "hoe maak ik een website" (doen de hosting providers). Maar we kunnen wel voorbeeldinstructies gemaakt door een club delen.
 </details></p>
 
 ### Kan iemand de getoonde foto's kopieëren?
@@ -304,4 +304,13 @@ Hiermee wordt de `remark` op Level 1 in de app vervangen door de betere `remark`
 Dit zou ook moeten werken voor `latitude` en `longitude` (GPS coordinaten).
 
 Graag ons op dergelijke wijzigingen op club-niveau attenderen: dan corrigeren wij toch ook het Level 1 bestand.
+</details></p>
+
+### Er is vast meer documentatie?
+
+<details><summary>Klik om uit te klappen</summary></p>
+Vast wel. Zie tabel:
+    
+|- link -|- inhoud -|- taal -|
+| a | B | c |
 </details></p>
