@@ -97,6 +97,16 @@ Vergeleken met Glass, heeft Photo Club Hub...
 Omdat het vrij eenvoudig kon, goed samenging met de landkaartjes, en nuttig kon zijn voor sommige gebruikers.
 </details></p>
 
+### Kan ik een fotomuseum toevoegen?
+
+<details><summary>Klik om uit te klappen</summary></p>
+Ja. Dat doe je door de Level 1 lijst uit te breiden.
+Graag alleen musea toevoegen die duidelijke voor fotografie interessant zijn.
+
+In principe zouden alle nederlandse fotografie musea er al in moeten zitten.
+Fotografie musea in het buitenland mogen (er staan 10 in).
+</details></p>
+
 ### Waarom staat mijn club niet in de app?
 
 <details><summary>Klik om uit te klappen</summary></p>
