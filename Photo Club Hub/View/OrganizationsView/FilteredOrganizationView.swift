@@ -325,7 +325,7 @@ extension FilteredOrganizationView { // graphic representation
             result = "camera.fill"
         case OrganizationTypeEnum.unknown.rawValue:
             result = "questionmark"
-        default: // not sure why default is needed
+        default: // compiler insists on having a default, likely because organizationTypeName is a String
             result = "exclamationmark"
         }
 

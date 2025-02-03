@@ -7,7 +7,7 @@
 
 import Foundation // for URL
 
-// Set of paraameters (with their defaults) used when creating structs of type MemberPortfolio.
+// Set of parameters (with their defaults) used when creating structs of type MemberPortfolio.
 // Note that MemberPortfolio is also an entity type in the CoreData database.
 struct MemberOptionalFields {
     var featuredImage: URL?
