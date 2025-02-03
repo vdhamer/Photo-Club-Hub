@@ -148,7 +148,18 @@ Het is overigens zelfs mogelijk om "de foto's van Jan" eventueele bij Jan zelf n
 
 Als test staan de foto's van De Gender even op een andere (mijn privé) server. Maar dat is tijdelijk: het is beter voor het beheer, en het is
 technisch onverstandig als tientallen of honderden clubs afhankelijk worden van een enkele server ("single point of failure"). En verder heeft
-mijn privé server maar beperkte ruimte. Clubs zijn meestal al gewend om een bedrijfje te betalen voor het "hosten" van hun website.
+mijn privé server maar beperkte ruimte. De meeste clubs zijn al gewend om een bedrijfje te betalen voor opslagruimte, bandbreedte en het "hosten" van hun website.
+Dus dit zou geen extra kosten moeten veroorzaken. Daar worden penningmeesters blij van.
+</details></p>
+
+### Wat als een club geen website heeft?
+
+<details><summary>Klik om uit te klappen</summary></p>
+Weet ik niet precies. Het overgrote deel van de clubs heeft al een website (= iets waar je bestanden via een webadres kan ophalen, zeg maar "http//www.mijnclub.nl/...").
+
+- Level 1 vereist geen eigen website. De informatie zit in een centraal bestand.
+- Level 2 kost vrijwel geen opslag. Makkelijk om een vrijwilliger te vinden die het bestandje online wil zetten. Instructies hiervoor volgen.
+- Level 3 is wat lastiger, maar opslag bij een bevriende club is misschien bespreekbaar. Of een [gratis website leverancier](https://www.techradar.com/web-hosting/best-free-web-hosting) vinden.
 </details></p>
 
 ### Kan iemand de getoonde foto's kopieëren?
