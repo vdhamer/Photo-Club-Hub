@@ -313,6 +313,10 @@ Vast wel. Zie tabel:
     
 | Titel  | Link | Taal (NL, EN)  |
 | ----------- | ----------- | ----------- |
-| Een level2.json bestand aanmaken voor een club | https://tinyurl.com/Level2aanmaken | NL |
-| Text       | https://tinyurl.com/Level2creation | EN |
+| Een level2.json bestand aanmaken voor een club | [tinyurl.com/Level2aanmaken](https://tinyurl.com/Level2aanmaken) | NL |
+| Creating a new level2.json file for your club | [tinyurl.com/Level2creation](https://tinyurl.com/Level2creation) | EN |
+| Readme op GitHub | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/.github/README.md) | EN |
+| Readme in App | ingebouwd | EN & NL |
+| Powerpoint presentatie | [link](https://github.com/vdhamer/Photo-Club-Hub/raw/refs/heads/main/Photo%20Club%20Hub/Documentation/Photo%20Club%20Hub.pptx) | NL |
+| FAQ | [tinyurl.com/fchFAQnl](https://tinyurl.com/fchFAQnl) | NL |
 </details></p>
