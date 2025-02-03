@@ -135,6 +135,49 @@ Zelfs het postadres van de thuisbasis van de club is optioneel. Het is opgeslage
 naar b.v. naar een dorpsplein of station kan laten wijzen.
 </details></p>
 
+### Houdt mijn club controle over zijn eigen foto's?
+
+<details><summary>Klik om uit te klappen</summary></p>
+Ja. Er worden geen kopieën getrokken van de foto's. De foto's blijven op de site van de club. Technisch wordt er alleen naar "gelinkt".
+En zelfs de lijsten met linkjes naar foto's staan op de club website, en niet op een centrale server. 
+Hierdoor is de situatie niet te vergelijken met foto's delen via Facebook, Instagram, Flickr, X, enz.
+Vandaar dat die ook gebruiksvoorwaarden hebben waarbij zij in kleine lettertjes zichzelf allerlei rechten "toeeigenen" op hun kopie van jullie foto's.</p>
+
+Voorbeeld: de foto's en lijsten met foto's van Fotogroep De Gender komen† op www.fcDeGender.nl te staan. Dat is de bestaande server van de club.
+En op die bestaande server stonden altijd al de namen van de huidige leden, en voorbeeldfoto's per lid.
+
+Het is overigens zelfs mogelijk om "de foto's van Jan" eventueele bij Jan zelf neer te zetten. Maar laten we heb voor nu zo simpel mogelijk houden.
+
+† Als test staan de foto's van De Gender even op een andere (mijn privé) server. Maar dat is tijdelijk: het is beter voor het beheer als een club dat zelf doet, en het is
+onverstandig als tientallen of honderden clubs afhankelijk worden van een enkele server ("single point of failure"). En verder heeft
+mijn privé server natuurlijk maar beperkte ruimte. De meeste clubs zijn al gewend om een bedrijfje te betalen voor opslagruimte, bandbreedte en het "hosten" van hun website.
+Dus dit zou normaal geen extra uitgaven voor de clubpenningmeester betekenen. Zie volgend punt:
+</details></p>
+
+### Wat als een club geen website heeft?
+
+<details><summary>Klik om uit te klappen</summary></p>
+Weet ik niet precies. Het overgrote deel van de clubs heeft al een website (= iets waar je bestanden kan ophalen via een webadres zoals "http//www.mijnclub.nl/..."). Per niveau:
+
+- Level 1 vereist geen eigen website. De informatie zit in een centraal bestand.
+- Level 2 kost vrijwel geen opslag. Makkelijk om een vrijwilliger te vinden die 1 enkel bestandje online wil zetten. Instructies hiervoor volgen.
+- Level 3 is wat lastiger, maar opslag bij een bevriende club is misschien bespreekbaar. Of een [gratis website leverancier](https://www.techradar.com/web-hosting/best-free-web-hosting) vinden.
+Ik denk niet dat wij instructies gaan maken voor "hoe maak ik een website" (doen de hosting providers). Maar we kunnen wel voorbeeldinstructies gemaakt door een club delen.
+</details></p>
+
+### Kan iemand de getoonde foto's kopieëren?
+
+<details><summary>Klik om uit te klappen</summary></p>
+Dat is niet helemaal tegen te gaan: alle online plaatjes die zichtbaar zijn, kan je een screenshot van maken.
+Maar het is hier wel opgezet om kopieëren zo lastig mogelijk te maken. Bij mijn procedé hiervoor...
+
+- rechtsklikken en "Save as.." is in de software geblokeerd.
+- de foto bevat zichtbaar de naam van de maker in de linkeronderhoek
+- de foto bevat digitaal en onzichtbaar (in het EXIF copyright veld) de naam van de maker
+
+Dit is overigens vergelijkbaar met wat je kan doen met een traditionele website.
+</details></p>
+
 ### Moeten ex-leden in de app vermeld worden?
 
 <details><summary>Klik om uit te klappen</summary></p>
@@ -261,4 +304,19 @@ Hiermee wordt de `remark` op Level 1 in de app vervangen door de betere `remark`
 Dit zou ook moeten werken voor `latitude` en `longitude` (GPS coordinaten).
 
 Graag ons op dergelijke wijzigingen op club-niveau attenderen: dan corrigeren wij toch ook het Level 1 bestand.
+</details></p>
+
+### Er is vast meer documentatie?
+
+<details><summary>Klik om uit te klappen</summary></p>
+Vast wel. Zie tabel:
+    
+| Titel  | Link | Taal (NL, EN)  |
+| ----------- | ----------- | ----------- |
+| Een level2.json bestand aanmaken voor een club | [tinyurl.com/Level2aanmaken](https://tinyurl.com/Level2aanmaken) | NL |
+| Creating a new level2.json file for your club | [tinyurl.com/Level2creation](https://tinyurl.com/Level2creation) | EN |
+| Readme op GitHub | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/.github/README.md) | EN |
+| Readme in App | ingebouwd | EN & NL |
+| Powerpoint presentatie | [download](https://github.com/vdhamer/Photo-Club-Hub/raw/refs/heads/main/Photo%20Club%20Hub/Documentation/Photo%20Club%20Hub.pptx) | NL |
+| FAQ (dit document) | [tinyurl.com/fchFAQnl](https://tinyurl.com/fchFAQnl) | NL |
 </details></p>
