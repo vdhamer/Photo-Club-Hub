@@ -174,7 +174,7 @@ De app versie ondersteunt om praktische redenen de iPhone en iPad.
 Er is een "web" versie in ontwikkeling. Die bekijk je dus in je browser (Chrome, Edge, Safari...) en dient als alternatief op bijvoorbeeld een PC, Mac, of telefoon met Android.
 Die web versie bestaat uit HTML pagina's die vaak zal toevoegen aan een bestaande website (b.v. Wordpress).
 
-De software voor de webversie heet "Fotoclub Hub HTML" en genereert pagina's uit dezelfde bestanden die gebruikt worden voor "Fotoclub Hub".
+De software voor de webversie heet "Photo Club Hub HTML" (en) danwel "Fotoclub Hub HTML" (nl) en genereert pagina's uit dezelfde bestanden die gebruikt worden voor "Fotoclub Hub".
 Dat voorkomt dubbel werk als een club zowel de app als hun website moet bijwerken.
 Foto Club Hub HTML genereert een (HTML/CSS/js) ledenlijst met links naar de portfolio's van de clubleden.
 </details></p>
