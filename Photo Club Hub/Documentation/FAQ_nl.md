@@ -1,7 +1,7 @@
 ### Wat doet de app?
 
 <details><summary>Klik om uit te klappen</summary></p>
-Dit is de huidige omschrijving in de nederlandse Apple App Store:</p>
+Dit is de huidige omschrijving in de Nederlandse Apple App Store:</p>
 
 > De app toont geselecteerd werk van leden van fotoclubs. 
 >
@@ -20,17 +20,17 @@ Dit is de huidige omschrijving in de nederlandse Apple App Store:</p>
 Fotografen worden lid van een fotoclub om hun werk aan elkaar te laten zien.
 Dat zien en gezien-worden lukt vrij aardig binnen de club doordat deze om de paar weken bijeen komt.</p>
 
-Zichtbaarheid van werk buiten de club gaat vooral via exposties en de eigen website. Dat lukt maar ten dele:
+Zichtbaarheid van werk buiten de club gaat vooral via exposities en de eigen website. Dat lukt maar ten dele:
 Expositiebezoekers zijn vooral een vaste kring met familieleden, vrienden en diverse getrouwe bezoekers vanuit omliggende clubs. Bezoekers aantal zijn vaak aardig stabiel.
 
 Online bezoek aan de club website loopt echter al jaren terug.
 Vooral omdat kleine websites over het algemeen steeds minder aandacht krijgen: je moet ze vinden, er zijn teveel sites om in de gaten te houden, en de inhoud blijkt vaak onveranderd te zijn sedert een vorig bezoek.
 Ofwel, de aandacht van gebruikers is verschoven naar grote websites (zoals nu.nl die druk onderhouden worden) en social media platforms (zoals Facebook en Instagram) waar de gebruiker geleid wordt naar geselecteerde nieuwtjes.</p>
 
-Vandaar dat er behoefte lijkt aan een laagdrempelig platform speciaal om de onderlinge banden tussen fotoclubs aan te halen. En de banden met fotoliefhebbers, maar mischien ook naar je oom in Australië.
+Vandaar dat er behoefte lijkt aan een laagdrempelig platform speciaal om de onderlinge banden tussen fotoclubs aan te halen. En de banden met fotoliefhebbers, maar misschien ook naar je oom in Australië.
 Men kan de app dus zien als een online museum voor de amateurfotografie dat altijd open is, en dat groot genoeg is om liefhebbers te trekken omdat er altijd wel iets nieuws is.
 
-We sluiten overigens niet uit dat de app tzt kan melden wanneer er relevante nieuwe foto's binnengekomen zijn. Dat kan een website niet, maar een app wel.
+We sluiten overigens niet uit dat de app t.z.t. kan melden wanneer er relevante nieuwe foto's binnengekomen zijn. Dat kan een website niet, maar een app wel.
 </details></p>
 
 ### Is de app alleen voor Nederland?
@@ -45,7 +45,7 @@ De app ondersteunt bijvoorbeeld zowel Nederlands als Engels. In het Engels heet 
 <details><summary>Klik om uit te klappen</summary></p>
 De app kan prima omgaan met clubs die geen lid zijn van de Fotobond.
 Er zijn voorbeelden te vinden op de landkaarten.
-Buitenlandse club zouden per definitie geen lid van de Konijklijke Nederlandse Fotobond zijn.
+Buitenlandse club zouden per definitie geen lid van de (Nederlandse) Koninklijke Fotobond zijn.
 </details></p>
 
 ### Hoe verschilt dit van een website?
@@ -62,17 +62,17 @@ er is altijd wel wat gaande, en je kan je abonneren op notificaties als er iets 
 Het hebben van een eigen platform voor foto clubs ipv b.v. "op Facebook zitten", heeft als centraal voordeel dat het er rustiger is:
 
 - minder afleiding door honderd nieuwtjes per dag, over allerlei onderwerpen: "doom scrolling".
-- minder afleiding op de pagina's zelf. De gespecializeerde app is dichter tegen een "museum" dan een "bazaar". 
+- minder afleiding op de pagina's zelf. De gespecialiseerde app is dichter tegen een "museum" dan een "bazaar". 
 </details></p>
 
 ### Hoe verschilt dit van b.v. Instagram?
 
 <details><summary>Klik om uit te klappen</summary></p>
-Instagram ziet iedereen als een individue - en kent dus geen club begrip.
+Instagram ziet iedereen als een individu - en kent dus geen club begrip.
 Vergeleken met Instagram, heeft deze app...
 
-- geen commercieel doel of budget. Deze app is gratis en advertentievrij.
-- geen copieën van de foto's. Foto's en ledenlijst staan bij de clubs.
+- geen commercieel doel of budget. Deze app is gratis en advertentie-vrij.
+- geen kopieën van de foto's. Foto's en ledenlijst staan bij de clubs.
 - geen inlogscherm met bijbehorende wachtwoorden.
 - geen mogelijkheid om via de app commentaar op andermans foto's te geven. Dus ook geen moderatie nodig.
 - een nadruk op foto's als kunstvorm. Dus geen foto's van je lunch, je verjaardagsfeest of je huisdier.
@@ -81,20 +81,30 @@ Vergeleken met Instagram, heeft deze app...
 ### Hoe verschilt dit van een online fotoclub zoals Glass.photo?
 
 <details><summary>Klik om uit te klappen</summary></p>
-[Glass.photo](www.glass.photo) ziet fotografen als een individue - maar je kunt Glass zien als 1 grote fotoclub.
+[Glass.photo](www.glass.photo) ziet fotografen als een individu - maar je kunt Glass zien als 1 grote fotoclub.
 Vergeleken met Glass, heeft Photo Club Hub...
 
-- geen jaarlijks abonnement en bijbhorend inlogproces. Glass heeft enkele werknemers en maakt dus significante kosten.
-- geen copieën van de foto's. Foto's en ledenlijst staan bij de clubs.
+- geen jaarlijks abonnement en bijbehorend inlogscherm. Glass heeft enkele werknemers en maakt dus significante kosten.
+- geen kopieën van de foto's. Foto's en ledenlijst staan bij de clubs.
 - geen mogelijkheid om via de app commentaar op andermans foto's te geven. Dus ook geen moderatie nodig.
-- voor de komende tijd een nadruk op Nederlandse gebruikers. Glass is internationaal en engelstalig, al zitten de oprichters in Amsterdam.
-- nog geen mogelijkheid om individueen of clubs te "volgen". Maar dat zal bij voldoende gebruik nodig worden.
+- voor de komende tijd een nadruk op Nederlandse gebruikers. Glass is internationaal en Engelstalig, al zitten de oprichters in Amsterdam.
+- nog geen mogelijkheid om individuen of clubs te "volgen". Maar dat zal bij voldoende gebruik nodig worden.
 </details></p>
 
 ### Waarom staan er fotomusea in?
 
 <details><summary>Klik om uit te klappen</summary></p>
 Omdat het vrij eenvoudig kon, goed samenging met de landkaartjes, en nuttig kon zijn voor sommige gebruikers.
+</details></p>
+
+### Kan ik een fotomuseum toevoegen?
+
+<details><summary>Klik om uit te klappen</summary></p>
+Ja. Dat doe je door de Level 1 lijst uit te breiden.
+Graag alleen musea toevoegen die duidelijke voor fotografie interessant zijn.
+
+In principe zouden alle Nederlandse fotografie musea er al in moeten zitten.
+Fotografie musea in het buitenland mogen (er staan 10 in).
 </details></p>
 
 ### Waarom staat mijn club niet in de app?
@@ -122,14 +132,15 @@ Dus nu zijn diezelfde gegevens omgezet in een voor software leesbaar formaat, zo
 De meeste velden zijn optioneel. Dus een club is niet gedwongen om b.v. te linken naar hun website, of aan te geven wie in het bestuur zit.
 Verder doet de app niet aan postadressen, e-mailadressen of telefoonnummers van leden. Die zijn niet optioneel: de app ondersteunt ze niet.
 Zelfs het postadres van de thuisbasis van de club is optioneel. Het is opgeslagen als GPS coordinaten, die je kunt afronden of 
-naar b.v. naar een dorsplein of station kan laten wijzen.
+naar b.v. naar een dorpsplein of station kan laten wijzen.
 </details></p>
 
 ### Moeten ex-leden in de app vermeld worden?
 
 <details><summary>Klik om uit te klappen</summary></p>
+
 Nee. Maar de app is zo gemaakt dat het kan.
-Vaak wordt dat gewaaardeerd (b.v. als iemand 20 jaar lid was, en wegens gezondheidsredenen niet meer meedoet met "zijn" club).
+Vaak wordt dat gewaardeerd (b.v. als iemand 20 jaar lid was, en wegens gezondheidsredenen niet meer meedoet met "zijn" club).
 "In de app blijven of niet" kan per lid besloten worden. Of per club. Het is wel verstandig om dit met het lid zelf af te stemmen.
 Technisch kan een **gebruiker** van de app ook nog eens kiezen of ex-leden getoond worden.
 En kan iedere club zelf een beleid op dit punt beslissen: als de club de gegevens niet aanlevert, zijn ze uiteraard niet te zien.
@@ -141,7 +152,7 @@ Meer detail hieronder hieronder.
 <details><summary>Klik om uit te klappen</summary></p>
 Als een club zijn gegevens niet onderhoudt, zal dit op termijn bij ieder lid gebeuren. 
 Het internet heeft hier nog geen goede oplossing voor. 
-Zo kan het op Facebook gebeuren dat een overledene - met de beste bedoelingen - felicitaties kijgt op zijn/haar verjaardag.
+Zo kan het op Facebook gebeuren dat een overledene - met de beste bedoelingen - felicitaties krijgt op zijn/haar verjaardag.
     
 Het "zomaar" verwijderen van iemand kan heel pijnlijk zijn voor nabestaanden die de herinnering in ere willen houden.
 Maar "zomaar" aanhouden kan soms ook pijnlijk zijn. 
@@ -152,7 +163,7 @@ Wij raden dus de clubs 3 basisregels aan:
     3. probeer de app up to date te houden t.a.v. het onderscheid lid / ex-lid / overledene.
 
 Voor de app betekent dit dat de verantwoording voor de inhoud volledig bij de clubs liggen. 
-En indien een complete club onverhoopt opgeheven wordt, verwijnt die club vroeger of later uit de app
+En indien een complete club onverhoopt opgeheven wordt, verdwijnt die club vroeger of later uit de app
 doordat ze de rekening voor hun club website niet meer betalen.
 </details></p>
 
@@ -160,11 +171,11 @@ doordat ze de rekening voor hun club website niet meer betalen.
 
 <details><summary>Klik om uit te klappen</summary></p>
 De app versie ondersteunt om praktische redenen de iPhone en iPad.
-Er is een "web" versie in ontwikkeling. Die bekijk je dus in je browser (Chrome, Edge, Safaria...) en dient als alternatief op bijvoorbeeld een PC, Mac, of telefoon met Android.
+Er is een "web" versie in ontwikkeling. Die bekijk je dus in je browser (Chrome, Edge, Safari...) en dient als alternatief op bijvoorbeeld een PC, Mac, of telefoon met Android.
 Die web versie bestaat uit HTML pagina's die vaak zal toevoegen aan een bestaande website (b.v. Wordpress).
 
-De software voor de web webversie heet "Fotoclub Hub HTML" en genereert pagina's uit dezelfde bestanden die gebruikt worden voor "Fotoclub Hub".
-Dat voorkomt dubbel werk als eene club zowel de app als hun website moet bijwerken.
+De software voor de webversie heet "Photo Club Hub HTML" (en) danwel "Fotoclub Hub HTML" (nl) en genereert pagina's uit dezelfde bestanden die gebruikt worden voor "Fotoclub Hub".
+Dat voorkomt dubbel werk als een club zowel de app als hun website moet bijwerken.
 Foto Club Hub HTML genereert een (HTML/CSS/js) ledenlijst met links naar de portfolio's van de clubleden.
 </details></p>
 
@@ -172,32 +183,37 @@ Foto Club Hub HTML genereert een (HTML/CSS/js) ledenlijst met links naar de port
 
 <details><summary>Klik om uit te klappen</summary></p>
 Bij een bedrijf (b.v. Adobe) mag je aannemen dat alles minstens 10 jaar ondersteund wordt. Men betaalt er tenslotte voor, 
-en het is de verantwoordelijk van Adobe om voor continuiteit te zorgen zolang ze een redelijke winst maken. Maar een harde garantie is er niet.
+en het is de verantwoordelijk van Adobe om voor continuïteit te zorgen zolang ze een redelijke winst maken. Maar een harde garantie is er niet.
 
 Hier ligt dit anders: de broncode is openbaar ("open source"), zodat het in principe nooit verloren kan gaan.
 Maar de software heeft zo nu en dan onderhoud nodig. En gebruikers hopen vaak op uitbreidingen en vernieuwingen.
 Softwareonderhoud en uitbouw vergt in software nogal wat specialistische kennis en is dus normaal voor een club onbetaalbaar.
 
 Aangezien er geen budget is, streven wij ernaar dat er straks voldoende gebruikers zijn dat er meer vrijwillers komen die bereid zijn
-incidenteel en zonder vergoeding aan de software te sleutelen. Bijvoorbeeld omdat ze een idee hebben en het zelf kunnen helpen realizeren.
+incidenteel en zonder vergoeding aan de software te sleutelen. Bijvoorbeeld omdat ze een idee hebben en het zelf kunnen helpen realiseren.
 Dat staat of valt bij het kunnen opbouwen van een groepje techneuten die dat kunnen en willen. Ze hoeven niet op dezelfde plek of zelfs in hetzelfde land te zitten.
 Bij gebruik door bijvoorbeeld 100 clubs is er kans dat er toevallig iemand (b.v. student) tussenzit die mee zou kunnen helpen.
 Dit _kan_ gaan sneeuwballen: meer ontwikkelaars > meer functionaliteit > meer gebruikers > meer kans op ontwikkelaars. Of niet. Geen harde garantie.
 Maar er is wel de ambitie om dit op deze manier op te lossen.
 
-Voor een club hoeft deze continuiteitsvraag geen drama te zijn: de investering per club om gegevens aan te leveren zijn heel beperkt.
+Voor een club hoeft deze continuïteitsvraag geen drama te zijn: de investering per club om gegevens aan te leveren zijn heel beperkt.
 Zeg maar vergelijkbaar met een andere verbeteringsactie rondom de club website.
 </details></p>
 
 ### Wat is al dat gedoe met Levels/Niveaus?
 
 <details><summary>Klik om uit te klappen</summary></p>
-Een club kan meedoen op Level 1, 2 of 3. Op Level 1 weet de app alleen dat de club bestaat en waar de club zit.
-Level 2 voegt hier een lijst met clubleden aan toe. Level 3 voegt hier een portfolio met foto's aan toe.
-Een club kan deze stapen op zijn gemak uitvoeren. Op ieder niveau kan de app iets meer laten zien.
+Een club kan meedoen op Level 1, 2 of 3. 
 
-De ingebouwde documentatie in de app legt dit wat verder uit. De GitHub site bevat voorbeelden van de gegevens
-en een uitleg van ieder brokje informatie per level ([GitHub](https://github.com/vdhamer/Photo-Club-Hub)).
+- Op Level 1 weet de app alleen dat de club bestaat en waar de club zit.
+- Level 2 voegt hier een lijst met clubleden aan toe. 
+- Level 3 voegt hier portfolio's met foto's aan toe.
+
+Een club kan deze stappen op zijn gemak uitvoeren. Op Level 2 toont de app de lijst met leden (en op Level 1 niet).
+Op level 3 kan je door portfolio's bladeren (en op Level 1 en 2 niet).
+
+De ingebouwde documentatie in de app legt dit wat verder uit. De GitHub site bevat voorbeelden van de invoerbestanden
+en een gedetailleerde uitleg wat ieder stukje informatie betekent ([GitHub](https://github.com/vdhamer/Photo-Club-Hub)).
 </details></p>
 
 ### Ben ik Level 1 per ongeluk aan het overslaan?
@@ -212,8 +228,7 @@ Plus liefst (niet verplicht) een enkele zin over iets wat er speciaal is aan de 
 
 <details><summary>Klik om uit te klappen</summary></p>
 Hier is een apart stappenplan met instructies voor: [tinyurl.com/Level2aanmaken](https://tinyurl.com/Level2aanmaken).
-Er is ook een bijbehorende engelstalige versie: [tinyurl.com/Level2aanmaken](https://tinyurl.com/Level2creation).
-Maar de nederlandse versie is op dit moment recenter/beter.
+Er is ook een bijbehorende engelstalige versie hiervan: [tinyurl.com/Level2aanmaken](https://tinyurl.com/Level2creation).
 </details></p>
 
 ### Hoe krijg ik een Level 2 bestand op mijn club website?
@@ -225,14 +240,25 @@ Hier komt apart stappenplan met instructies voor. Voor de eerste clubs willen wi
 Globale instructies: je kunt via Dashboard > Media bestanden uploaded naar Wordpress.
 Dan moet je de URL bewaren (omdat het Level 1 bestand doorverwijst naar de locatie van het Level 2 bestand).
 
-Vermoedelijk bevat WordPress en beveiliging om vooral plaatjes en video te uploaded. En dus een JSON betand weigert.
+Vermoedelijk bevat WordPress en beveiliging om vooral plaatjes en video te uploaded. En dus een JSON bestand weigert.
 Daarvoor heb je een Wordpress plug-in nodig. Bijvoorbeeld [https://wordpress.org/plugins/mime-types-plus/](https://wordpress.org/plugins/mime-types-plus/)
 </details></p>
 
 ### Ik kan Fotoclub Hub niet vinden op de Apple App Store?
 
 <details><summary>Klik om uit te klappen</summary></p>
-Op het buitenland heet de app "Photo Club Hub" (engels) in plaats van "Fotoclub Hub" (nederlands).
-In alle gevallen krijg je precies dezelfde app. De app is kiest de taal bij het opstarten.
-Dit kan voorkomen als men een tijd in het buitenland gewoond heeft.
+Op het buitenland heet de app "Photo Club Hub" (engels) in plaats van "Fotoclub Hub" (Nederlands).
+Je kunt op een buitenlandse App Store aangewezen zijn als je een tijd in het buitenland gewoond hebt.
+In alle gevallen krijg je precies dezelfde app. De app kiest automatisch de juiste taal bij het opstarten.
+</details></p>
+
+### Mag een club niet zelf zijn Level 1 omschrijving bepalen?
+
+<details><summary>Klik om uit te klappen</summary></p>
+Graag. Het kan automatisch door de `remark` voor de club aan de bovenkant van een Level 2 bestand te vullen met de gewenste tekst.
+Dat Level 2 bestand staat in principe onder beheer van de club (terwijl Level 1 centraal staat).
+Hiermee wordt de `remark` op Level 1 in de app vervangen door de betere `remark` op Level 2.
+Dit zou ook moeten werken voor `latitude` en `longitude` (GPS coordinaten).
+
+Graag ons op dergelijke wijzigingen op club-niveau attenderen: dan corrigeren wij toch ook het Level 1 bestand.
 </details></p>
