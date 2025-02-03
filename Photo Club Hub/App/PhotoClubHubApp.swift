@@ -64,13 +64,6 @@ extension PhotoClubHubApp {
 
         // warning: following clubs rely on Level 1 file for filling in their coordinates
 
-        // load test member(s) of Fotogroep Bellus Imago
-        let bellusBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-        bellusBackgroundContext.name = "Bellus Imago"
-        bellusBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-        bellusBackgroundContext.automaticallyMergesChangesFromParent = true
-        _ = BellusImagoMembersProvider(bgContext: bellusBackgroundContext)
-
         // load test member(s) of Fotogroep De Gender
         let genderBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
         genderBackgroundContext.name = "FG de Gender"
@@ -84,13 +77,6 @@ extension PhotoClubHubApp {
         waalreBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         waalreBackgroundContext.automaticallyMergesChangesFromParent = true
         _ = FotogroepWaalreMembersProvider(bgContext: waalreBackgroundContext)
-
-        // load all current members of Fotogroep Anders
-        let andersBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-        andersBackgroundContext.name = "FG Anders"
-        andersBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-        andersBackgroundContext.automaticallyMergesChangesFromParent = true
-        _ = AndersMembersProvider(bgContext: andersBackgroundContext)
 
         if includeXampleClubs {
 
