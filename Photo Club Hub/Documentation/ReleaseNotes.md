@@ -1,11 +1,10 @@
 ### 2.7.2 (GitHub commit c4d0faa) 29-01-25
 
+Preferences screen
+* Changed app default to "don't show former members".
+
 Code Maintenance
 * Tested with SwiftLint 0.58.2
-
-This build #4636 was made using Xcode 16.2 and is intended for App Store distribution.
-
-Code Maintenance
 * Deleting the database content didn't cover 3 new tables (`Keyword`, `LocalizedKeyword`, `PhotographerKeyword`)
 
 Data Maintenance

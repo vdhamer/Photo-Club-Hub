@@ -122,6 +122,7 @@
 		D0329449283F9D1D0044C70C /* Bundle+VersionBuild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+VersionBuild.swift"; sourceTree = "<group>"; };
 		D0362A862AC3A21200F87378 /* String+containsWordUsingNLP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+containsWordUsingNLP.swift"; sourceTree = "<group>"; };
 		D036591F2BADBAE10014F266 /* Photo_Club_Hub_2_5_6.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_5_6.xcdatamodel; sourceTree = "<group>"; };
+		D036EA082D5019510012A47D /* FAQ_nl.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = FAQ_nl.md; sourceTree = "<group>"; };
 		D040566C29A0287200CB64B8 /* MemberPortfolioRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberPortfolioRow.swift; sourceTree = "<group>"; };
 		D0416281295BBA7700ED073A /* CoreLocation+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreLocation+Equatable.swift"; sourceTree = "<group>"; };
 		D044646427FCE7C100990613 /* UIDevice+IsIPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+IsIPad.swift"; sourceTree = "<group>"; };
@@ -536,6 +537,7 @@
 			isa = PBXGroup;
 			children = (
 				D0831A4B277F736C0049AB84 /* ReleaseNotes.md */,
+				D036EA082D5019510012A47D /* FAQ_nl.md */,
 				D0A380932D39B0FE00FF95F4 /* Level2_creation_EN.md */,
 				D073FE162D3B13B300DB01F4 /* Level2_aanmaken_NL.md */,
 				D04D7B2B2D2B3B210048454B /* Jaarverslag 2024 Website.docx */,
