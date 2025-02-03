@@ -146,7 +146,7 @@ Voorbeeld: de foto's en lijsten met foto's van Fotogroep De Gender komen op www.
 En op die bestaande server stonden altijd al zeer vergelijkbare informatie: wie zijn de huidige leden, een soort portfolio per lid.
 Het is overigens zelfs mogelijk om "de foto's van Jan" eventueele bij Jan zelf neer te zetten. Maar laten we heb voor nu zo simpel mogelijk houden.
 
-Als test staan de foto's van De Gener even op een andere (mijn privé) server. Maar dat is tijdelijk: het is beter voor het beheer, en het is
+Als test staan de foto's van De Gender even op een andere (mijn privé) server. Maar dat is tijdelijk: het is beter voor het beheer, en het is
 technisch onverstandig als tientallen of honderden clubs afhankelijk worden van een enkele server ("single point of failure"). En verder heeft
 mijn privé server maar beperkte ruimte. Clubs zijn meestal al gewend om een bedrijfje te betalen voor het "hosten" van hun website.
 </details></p>
