@@ -311,6 +311,8 @@ Graag ons op dergelijke wijzigingen op club-niveau attenderen: dan corrigeren wi
 <details><summary>Klik om uit te klappen</summary></p>
 Vast wel. Zie tabel:
     
-|- link -|- inhoud -|- taal -|
-| a | B | c |
+| Titel  | Link | Taal (NL, EN)  |
+| ----------- | ----------- | ----------- |
+| Een level2.json bestand aanmaken voor een club | https://tinyurl.com/Level2aanmaken | NL |
+| Text       | https://tinyurl.com/Level2creation | EN |
 </details></p>
