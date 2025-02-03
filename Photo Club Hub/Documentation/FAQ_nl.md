@@ -1,7 +1,7 @@
 ### Wat doet de app?
 
 <details><summary>Klik om uit te klappen</summary></p>
-Dit is de huidige omschrijving in de nederlandse Apple App Store:</p>
+Dit is de huidige omschrijving in de Nederlandse Apple App Store:</p>
 
 > De app toont geselecteerd werk van leden van fotoclubs. 
 >
@@ -20,17 +20,17 @@ Dit is de huidige omschrijving in de nederlandse Apple App Store:</p>
 Fotografen worden lid van een fotoclub om hun werk aan elkaar te laten zien.
 Dat zien en gezien-worden lukt vrij aardig binnen de club doordat deze om de paar weken bijeen komt.</p>
 
-Zichtbaarheid van werk buiten de club gaat vooral via exposties en de eigen website. Dat lukt maar ten dele:
+Zichtbaarheid van werk buiten de club gaat vooral via exposities en de eigen website. Dat lukt maar ten dele:
 Expositiebezoekers zijn vooral een vaste kring met familieleden, vrienden en diverse getrouwe bezoekers vanuit omliggende clubs. Bezoekers aantal zijn vaak aardig stabiel.
 
 Online bezoek aan de club website loopt echter al jaren terug.
 Vooral omdat kleine websites over het algemeen steeds minder aandacht krijgen: je moet ze vinden, er zijn teveel sites om in de gaten te houden, en de inhoud blijkt vaak onveranderd te zijn sedert een vorig bezoek.
 Ofwel, de aandacht van gebruikers is verschoven naar grote websites (zoals nu.nl die druk onderhouden worden) en social media platforms (zoals Facebook en Instagram) waar de gebruiker geleid wordt naar geselecteerde nieuwtjes.</p>
 
-Vandaar dat er behoefte lijkt aan een laagdrempelig platform speciaal om de onderlinge banden tussen fotoclubs aan te halen. En de banden met fotoliefhebbers, maar mischien ook naar je oom in Australië.
+Vandaar dat er behoefte lijkt aan een laagdrempelig platform speciaal om de onderlinge banden tussen fotoclubs aan te halen. En de banden met fotoliefhebbers, maar misschien ook naar je oom in Australië.
 Men kan de app dus zien als een online museum voor de amateurfotografie dat altijd open is, en dat groot genoeg is om liefhebbers te trekken omdat er altijd wel iets nieuws is.
 
-We sluiten overigens niet uit dat de app tzt kan melden wanneer er relevante nieuwe foto's binnengekomen zijn. Dat kan een website niet, maar een app wel.
+We sluiten overigens niet uit dat de app t.z.t. kan melden wanneer er relevante nieuwe foto's binnengekomen zijn. Dat kan een website niet, maar een app wel.
 </details></p>
 
 ### Is de app alleen voor Nederland?
@@ -45,7 +45,7 @@ De app ondersteunt bijvoorbeeld zowel Nederlands als Engels. In het Engels heet 
 <details><summary>Klik om uit te klappen</summary></p>
 De app kan prima omgaan met clubs die geen lid zijn van de Fotobond.
 Er zijn voorbeelden te vinden op de landkaarten.
-Buitenlandse club zouden per definitie geen lid van de (Nederlandse) Konijklijke Fotobond zijn.
+Buitenlandse club zouden per definitie geen lid van de (Nederlandse) Koninklijke Fotobond zijn.
 </details></p>
 
 ### Hoe verschilt dit van een website?
@@ -62,17 +62,17 @@ er is altijd wel wat gaande, en je kan je abonneren op notificaties als er iets 
 Het hebben van een eigen platform voor foto clubs ipv b.v. "op Facebook zitten", heeft als centraal voordeel dat het er rustiger is:
 
 - minder afleiding door honderd nieuwtjes per dag, over allerlei onderwerpen: "doom scrolling".
-- minder afleiding op de pagina's zelf. De gespecializeerde app is dichter tegen een "museum" dan een "bazaar". 
+- minder afleiding op de pagina's zelf. De gespecialiseerde app is dichter tegen een "museum" dan een "bazaar". 
 </details></p>
 
 ### Hoe verschilt dit van b.v. Instagram?
 
 <details><summary>Klik om uit te klappen</summary></p>
-Instagram ziet iedereen als een individue - en kent dus geen club begrip.
+Instagram ziet iedereen als een individu - en kent dus geen club begrip.
 Vergeleken met Instagram, heeft deze app...
 
-- geen commercieel doel of budget. Deze app is gratis en advertentievrij.
-- geen copieën van de foto's. Foto's en ledenlijst staan bij de clubs.
+- geen commercieel doel of budget. Deze app is gratis en advertentie-vrij.
+- geen kopieën van de foto's. Foto's en ledenlijst staan bij de clubs.
 - geen inlogscherm met bijbehorende wachtwoorden.
 - geen mogelijkheid om via de app commentaar op andermans foto's te geven. Dus ook geen moderatie nodig.
 - een nadruk op foto's als kunstvorm. Dus geen foto's van je lunch, je verjaardagsfeest of je huisdier.
