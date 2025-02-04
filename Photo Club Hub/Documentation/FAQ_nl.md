@@ -48,20 +48,28 @@ Er zijn voorbeelden te vinden op de landkaarten.
 Buitenlandse club zouden per definitie geen lid van de (Nederlandse) Koninklijke Fotobond zijn.
 </details></p>
 
-### Hoe verschilt dit van een website?
+### Hoe verschilt dit van een clubwebsite?
 
 <details><summary>Klik om uit te klappen</summary></p>
-Een website vereist dat de gebruiker expliciet op zoek gaat naar informatie.
-Dat is prima voor het beantwoorden van een explicite vraag (b.v. openingstijden, goedkoopste aanbieder).
-Maar kleine websites krijgen tegenwoordig weinig verkeer omdat er vrijwel nooit iets nieuws te vinden is.
-En er is niets nieuws te zien omdat er vrijwel geen bezoekers komen.</p>
+Een website vereist dat de gebruiker zelf initiatief neemt om informatie te zoeken.
+Dat werkt goed bij gerichte vragen over b.v. openingstijden of productprijzen.
+Maar werkt bij relatief kleine sites niet goed om op de hoogte gehouden te worden: je moet meerdere sites handmatig
+aflopen - en op de meesten blijkt er niets veranderd te zijn. Met geringe bezoekersaantallen als gevolg. 
+Wat het weer minder aantrekkelijk maakt om de site bij te werken ("er komt toch vrijwel niemand").</p>
 
-Vandaar de trend dat eigen websites van bedrijfjes of individuen vervangen worden door b.v. Facebook pagina's: 
-er is altijd wel wat gaande, en je kan je abonneren op notificaties als er iets verandert.
+Dit kan je oplossen door a) het nieuws op 1 plek te bundelen, b) veranderingen makkelijk vindbaar te maken en c) eventueel de gebruiker waarschuwen als er relevante veranderingen zijn.
+</details></p>
+
+### Hoe verschilt dit van een website?
+
+Er bestaan manieren om automatisch veranderingen in sites op te sporen (RSS).
+Maar grosso modo is nieuws inmiddels het domein van de grote klassieke media (nos.nl) 
+en van social media zoals Facebook, Instagram, enz.
+Ten eerste gebeurt er altijd wat, maar ze automatiseren ook nog het vinden naar nieuwe berichten.
 
 Het hebben van een eigen platform voor foto clubs ipv b.v. "op Facebook zitten", heeft als centraal voordeel dat het er rustiger is:
 
-- minder afleiding door honderd nieuwtjes per dag, over allerlei onderwerpen: "doom scrolling".
+- minder afleiding door 101 onderwerpen die om aandacht vragen: "doom scrolling".
 - minder afleiding op de pagina's zelf. De gespecialiseerde app is dichter tegen een "museum" dan een "bazaar". 
 </details></p>
 
