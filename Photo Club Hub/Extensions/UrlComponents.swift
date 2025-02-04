@@ -37,22 +37,6 @@ struct UrlComponents {
         fileType: "json"
     )
 
-    // MARK: - Fotogroep Anders
-
-    static let anders = UrlComponents(
-        dataSourceFile: "fgAnders",
-        fileSubType: "level2",
-        fileType: "json"
-    )
-
-    // MARK: - Bellus Imago
-
-    static let bellusImago = UrlComponents(
-        dataSourceFile: "fcBellusImago",
-        fileSubType: "level2",
-        fileType: "json"
-    )
-
     // MARK: - Waalre
 
     static let waalre = UrlComponents(
