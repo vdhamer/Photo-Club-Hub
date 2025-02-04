@@ -2,6 +2,7 @@
 
 Preferences screen
 * Changed app default to "don't show former members".
+* Forced a data reset to clean up the content of the in-app database
 
 Code Maintenance
 * Tested with SwiftLint 0.58.2
@@ -10,6 +11,9 @@ Code Maintenance
 Data Maintenance
 * Set Core Data debugging according to https://useyourloaf.com/blog/debugging-core-data/
 * Updated membership of fgWaalre for 2025
+* Added fcBrandevoort (Helmond)
+* Removed 2 clubs that were just in there for test purposes (they will hopefully show up again in the future)
+* Updated club officer list for fgDeGender
 
 This build #4636 was made using Xcode 16.2 and is intended for App Store distribution.
 
