@@ -259,7 +259,7 @@
             "optional": {
                 "level3URL": "http://www.vdhamer.com/fgDeGender/Hans_Krusemann/",
                 "roles": {
-                    "isOther": true
+                    "isOther": false
                 },
                 "membershipStartDate": "2016-04-01",
                 "nlSpecific": {
@@ -328,7 +328,7 @@
                 "website": "https://www.lex-augusteijn.nl",
                 "level3URL": "http://www.vdhamer.com/fgDeGender/Lex_Augusteijn/",
                 "roles": {
-                    "isOther": true
+                    "isOther": false
                 },
                 "membershipStartDate": "2005-01-01",
                 "nlSpecific": {

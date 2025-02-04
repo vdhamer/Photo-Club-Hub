@@ -62,8 +62,6 @@ extension PhotoClubHubApp {
         _ = Level1JsonReader(bgContext: level1BackgroundContext, // read root.Level1.json file
                              useOnlyFile: false)
 
-        // warning: following clubs rely on Level 1 file for filling in their coordinates
-
         // load test member(s) of Fotogroep De Gender
         let genderBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
         genderBackgroundContext.name = "FG de Gender"
