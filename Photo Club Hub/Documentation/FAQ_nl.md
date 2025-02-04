@@ -83,19 +83,6 @@ Concreet betekent dit:
 - galerie-achtige weergave zodat de foto's tot hun recht komen (dus geen reclame of wereldnieuws)
 </details></p>
 
-### Hoe verschilt dit van social media zoals Facebook of Instagram?
-
-<details><summary>Klik om uit te klappen</summary></p>
-Instagram ziet iedereen als een individu - en kent dus geen club begrip.
-Vergeleken met Instagram, heeft deze app...
-
-- geen commercieel doel of budget. Deze app is gratis en advertentie-vrij.
-- geen kopieën van de foto's. Foto's en ledenlijst staan bij de clubs.
-- geen inlogscherm met bijbehorende wachtwoorden.
-- geen mogelijkheid om via de app commentaar op andermans foto's te geven. Dus ook geen moderatie nodig.
-- een nadruk op foto's als kunstvorm. Dus geen foto's van je lunch, je verjaardagsfeest of je huisdier.
-</details></p>
-
 ### Hoe verschilt dit van een online fotoclub zoals Glass.photo?
 
 <details><summary>Klik om uit te klappen</summary></p>
