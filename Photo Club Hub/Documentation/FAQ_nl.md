@@ -54,7 +54,7 @@ Buitenlandse club zouden per definitie geen lid van de (Nederlandse) Koninklijke
 Een website vereist dat de gebruiker expliciet op zoek gaat naar informatie.
 Dat is prima voor het beantwoorden van een explicite vraag (b.v. openingstijden, goedkoopste aanbieder).
 Maar kleine websites krijgen tegenwoordig weinig verkeer omdat er vrijwel nooit iets nieuws te vinden is.
-En er is niets nieuws te zien omdat er vrijwel geen bezoekers komen. 
+En er is niets nieuws te zien omdat er vrijwel geen bezoekers komen.</p>
 
 Vandaar de trend dat eigen websites van bedrijfjes of individuen vervangen worden door b.v. Facebook pagina's: 
 er is altijd wel wat gaande, en je kan je abonneren op notificaties als er iets verandert.
