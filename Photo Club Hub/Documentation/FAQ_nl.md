@@ -51,29 +51,39 @@ Buitenlandse club zouden per definitie geen lid van de (Nederlandse) Koninklijke
 ### Hoe verschilt dit van een clubwebsite?
 
 <details><summary>Klik om uit te klappen</summary></p>
-Een website vereist dat de gebruiker zelf initiatief neemt om informatie te zoeken.
-Dat werkt goed bij gerichte vragen over b.v. openingstijden of productprijzen.
-Maar werkt bij relatief kleine sites niet goed om op de hoogte gehouden te worden: je moet meerdere sites handmatig
-aflopen - en op de meesten blijkt er niets veranderd te zijn. Met geringe bezoekersaantallen als gevolg. 
-Wat het weer minder aantrekkelijk maakt om de site bij te werken ("er komt toch vrijwel niemand").</p>
+Een website vereist dat de gebruiker _zelf_ initiatief onderneemt om informatie te zoeken.
+Dat werkt goed bij gerichte vragen over b.v. openingstijden of koopjes.
+Maar werkt bij relatief kleine sites niet goed: om op de hoogte te blijven moet je meerdere sites handmatig
+aflopen - en vaak blijkt er niets veranderd te zijn. Het gevolg is weinig bezoekers (behalve rond de expo). 
+Wat het weer minder aantrekkelijk maakt om de site bij te werken. Wat leidt tot nog minder bezoekers.</p>
 
-Dit kan je oplossen door a) het nieuws op 1 plek te bundelen, b) veranderingen makkelijk vindbaar te maken en c) eventueel de gebruiker waarschuwen als er relevante veranderingen zijn.
+De kleine websites van 10 jaar geleden kwijnen dus weg. Dit kan je oplossen door 
+- het nieuws van meerdere clubs op 1 plek te bundelen zodat er altijd wel wat nieuws is
+- veranderingen makkelijk vindbaar te maken (b.v. nieuwste foto per fotograaf tonen)
+- eventueel zelfs actief melden als er relevant nieuws binnengekomen is (uiteraard instelbaar).
 </details></p>
 
-### Hoe verschilt dit van een website?
+### Hoe verschilt dit van social media zoals Facebook of Instagram?
 
-Er bestaan manieren om automatisch veranderingen in sites op te sporen (RSS).
+<details><summary>Klik om uit te klappen</summary></p>
+Er bestaan manieren om automatisch veranderingen in websites op te sporen (RSS).
 Maar grosso modo is nieuws inmiddels het domein van de grote klassieke media (nos.nl) 
 en van social media zoals Facebook, Instagram, enz.
-Ten eerste gebeurt er altijd wat, maar ze automatiseren ook nog het vinden naar nieuwe berichten.
 
-Het hebben van een eigen platform voor foto clubs ipv b.v. "op Facebook zitten", heeft als centraal voordeel dat het er rustiger is:
+Ten eerste gebeurt er altijd wat, en probeert je (vaak te handnekkig) te leiden naar nieus dat jij interessant kan vinden.
 
-- minder afleiding door 101 onderwerpen die om aandacht vragen: "doom scrolling".
-- minder afleiding op de pagina's zelf. De gespecialiseerde app is dichter tegen een "museum" dan een "bazaar". 
+Een speciaal platform voor fotoclubs heeft, b.v. vergeleken met Instragram, heeft voordeel dat het er rustiger is.
+Dat is vooral belangrijk bij een kunstvorm zoals fotografie:
+bij een expositie wil je liever een museumsfeer hebben dan een druk marktplein waar iedereen en alles om aandacht schreeuwt. 
+
+Concreet betekent dit:
+
+- alleen fotografie als kunstvorm (dus geen foto's van de zakenlunch of kat)
+- aandacht voor de fotoclubs
+- galerie-achtige weergave zodat de foto's tot hun recht komen (dus geen reclame of wereldnieuws)
 </details></p>
 
-### Hoe verschilt dit van b.v. Instagram?
+### Hoe verschilt dit van social media zoals Facebook of Instagram?
 
 <details><summary>Klik om uit te klappen</summary></p>
 Instagram ziet iedereen als een individu - en kent dus geen club begrip.
