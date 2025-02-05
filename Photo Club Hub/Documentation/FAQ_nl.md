@@ -241,7 +241,7 @@ De software voor de webversie heet "Photo Club Hub HTML" (en) danwel "Fotoclub H
 Hiermee kan een website beheerder pagina's automatisch aanmaken vanuit _dezelfde_ databestanden
 die gebruikt worden voor "Fotoclub Hub" app.
 [Hier](http://www.vdhamer.com/fgDeGender/) is een vroege testversie van een dergelijke, genereerde mini-site.
-Deze opzet voorkomt dubbel werk bij het bijhouden van app en website (en wellicht meer).
+Dit voorkomt dubbel werk bij het bijhouden van zowel app als website. 
 Foto Club Hub HTML genereert dus een ledenlijst met links naar de portfolio's van de clubleden.
 </details></p>
 
@@ -327,6 +327,12 @@ Hiermee wordt de `remark` op Level 1 in de app vervangen door de betere `remark`
 Dit zou ook moeten werken voor `latitude` en `longitude` (GPS coordinaten).
 
 Graag ons op dergelijke wijzigingen op club-niveau attenderen: dan corrigeren wij toch ook het Level 1 bestand.
+</details></p>
+
+### Gaat dit ook iets met exposities doen?
+<details><summary>Klik om uit te klappen</summary></p>
+Ja. Er is een begin aan gemaakt ([voorproefje](http://www.vdhamer.com/fgDeGender/expo2024/)).
+Het gaat dan om de foto's van clubexposities te tonen _na afloop_ van de fysieke expositie.
 </details></p>
 
 ### Er is vast meer documentatie?
