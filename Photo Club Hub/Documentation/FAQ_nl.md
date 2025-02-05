@@ -17,6 +17,7 @@ De omschrijving in de Apple App Store luidt:</p>
 ### Waarom is de app gemaakt?
 
 <details><summary>Klik om uit te klappen</summary></p>
+
 Fotografen worden lid van een fotoclub om hun werk aan elkaar te laten zien.
 Dat zien en gezien-worden lukt prima _binnen_ de club doordat de leden om de paar weken bijeen komen.</p>
 
