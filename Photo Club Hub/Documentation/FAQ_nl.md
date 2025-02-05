@@ -126,12 +126,13 @@ Nee. De Photo Club Hub en Photo Club Hub HTML software is gratis en blijft grati
 En zijn geen kosten voor centrale opslag of rekenkracht: er is geen noemenswaardige centrale infrastructuur.
 De enige kans op kosten zijn een (eenmalige) plug-in aanschaf voor Lightroom (Classic) per club.</p>
 
-Die plug-in is software van derden. Moet tzt naar gekeken worden of er een gratis alternatief afdoende is, 
-of iemand die wil vervangen door eigen software voor (duur, maar we gaan uit van gratis),
-of dat dat de plug-in kosten eenmalig centraal afkoopbaar is.
-
-Hierbaar wordt er dus wel uitgegaan dat minstens een clublid reeds LR heeft, en dat een club een eigen website heeft.
-Dit lijkt komende 10 jaar een veilige veronderstelling voor deze doelgroep.
+Als we ervan uitgaan dat een club vrijwel altijd een website heeft en een lid heeft met Lightroom Classic, dan blijft
+als enige bekende kostenpost een eenmalige aanschaf van een LR plug-in (Juicebox Pro).
+Er kan gekeken worden gekeken worden of er een gratis alternatief afdoende is (LR zelf heeft iets simpelers).
+Zelf bouwen van een alternatief voor die plug-in is in principe mogelijk maar niet eenvoudig: dat hangt dus op het
+vinden van een vrijwilliger die het kan en ertoe bereid is.
+Er kan ook gekeken worden of de plug-in kosten voor dit doel eenmalig centraal afkoopbaar zijn.
+De maker was bij een eerdere technische vraag zondermeer hulpvaardig, maar het lijkt te vroeg om hierover te gaan informeren.
 </details></p>
 
 ### Waarom staat mijn club niet in de app?
