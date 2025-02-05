@@ -122,9 +122,13 @@ De vrijwel volledige lijst met clubs in Brabant-Oost staat erin als demo en om h
 ### Wie bepaalt welke foto's in de app staan?
 
 <details><summary>Klik om uit te klappen</summary></p>
-De individuele clubs. Zo kan je bijvoorbeeld ervoor kiezen dat foto's van alle clubexposities en individuele exposities van de afgelopen jaren te zien zijn.
-Die foto's horen tenslotte het tonen waard te zijn. Maar je kunt ook afspreken dat iedere fotograaf zelf foto's uitkiest voor zijn/naar portfolio in de app.
-De app gaat er wel (meer of minder) van uit dat de foto's redelijk geselecteerd zijn. Dus bijvoorbeeld 10 foto's per fotograaf per jaar.
+De individuele clubs.</p>
+
+Zo kan je bijvoorbeeld ervoor kiezen dat foto's van alle clubexposities 
+en individuele exposities van de afgelopen jaren te zien zijn.
+Maar je kunt ook afspreken dat iedere fotograaf zelf foto's uitkiest voor zijn/naar portfolio in de app. Of een combinatie.
+De app gaat er in principe wel van uit dat de foto's geselecteerd zijn.
+Dus eerder tien dan honderd foto's per fotograaf per jaar. Dat heb je zo met exposeren: keuzes maken.
 </details></p>
 
 ### Moet ik mij zorgen maken over privacy?
