@@ -113,10 +113,25 @@ Omdat het vrij eenvoudig kon, goed samenging met de landkaartjes, en nuttig kon 
 
 <details><summary>Klik om uit te klappen</summary></p>
 Ja. Dat doe je door de Level 1 lijst uit te breiden.
-Graag alleen musea toevoegen die duidelijke voor fotografie interessant zijn.
+Graag alleen musea toevoegen die duidelijke voor fotografie interessant zijn.</p>
 
-In principe zouden alle Nederlandse fotografie musea er al in moeten zitten.
-Fotografie musea in het buitenland mogen (er staan 10 in).
+In principe zouden alle Nederlandse fotografie musea er al op de Level 1 lijst moeten staan.
+Er staan momentaal alleen enkele bekende Fotomusea in bijvoorbeeld Duitsland, VS en Japan in.
+</details></p>
+
+### Zijn er kosten aan verbonden?
+
+<details><summary>Klik om uit te klappen</summary></p>
+Nee. De Photo Club Hub en Photo Club Hub HTML software is gratis en blijft gratis.
+En zijn geen kosten voor centrale opslag of rekenkracht: er is geen noemenswaardige centrale infrastructuur.
+De enige kans op kosten zijn een (eenmalige) plug-in aanschaf voor Lightroom (Classic) per club.</p>
+
+Die plug-in is software van derden. Moet tzt naar gekeken worden of er een gratis alternatief afdoende is, 
+of iemand die wil vervangen door eigen software voor (duur, maar we gaan uit van gratis),
+of dat dat de plug-in kosten eenmalig centraal afkoopbaar is.
+
+Hierbaar wordt er dus wel uitgegaan dat minstens een clublid reeds LR heeft, en dat een club een eigen website heeft.
+Dit lijkt komende 10 jaar een veilige veronderstelling voor deze doelgroep.
 </details></p>
 
 ### Waarom staat mijn club niet in de app?
