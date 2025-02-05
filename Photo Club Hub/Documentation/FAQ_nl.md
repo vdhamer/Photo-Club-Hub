@@ -122,17 +122,16 @@ Er staan momentaal alleen enkele bekende Fotomusea in bijvoorbeeld Duitsland, VS
 ### Zijn er kosten aan verbonden?
 
 <details><summary>Klik om uit te klappen</summary></p>
-Nee. De Photo Club Hub en Photo Club Hub HTML software is gratis en blijft gratis.
+Niet of nauwelijk. De Photo Club Hub en Photo Club Hub HTML software is gratis en blijft gratis.
 En zijn geen kosten voor centrale opslag of rekenkracht: er is geen noemenswaardige centrale infrastructuur.
 De enige kans op kosten zijn een (eenmalige) plug-in aanschaf voor Lightroom (Classic) per club.</p>
 
 Als we ervan uitgaan dat een club vrijwel altijd een website heeft en een lid heeft met Lightroom Classic, dan blijft
-als enige bekende kostenpost een eenmalige aanschaf van een LR plug-in (Juicebox Pro).
+als enige bekende kostenpost een eenmalige aanschaf van een LR plug-in ([Juicebox Pro](https://www.juicebox.net)).
 Er kan gekeken worden gekeken worden of er een gratis alternatief afdoende is (LR zelf heeft iets simpelers).
 Zelf bouwen van een alternatief voor die plug-in is in principe mogelijk maar niet eenvoudig: dat hangt dus op het
-vinden van een vrijwilliger die het kan en ertoe bereid is.
+vinden van een vrijwilliger die het kan en ertoe bereid is. De plug-in heeft ook een gratis versie.
 Er kan ook gekeken worden of de plug-in kosten voor dit doel eenmalig centraal afkoopbaar zijn.
-De maker was bij een eerdere technische vraag zondermeer hulpvaardig, maar het lijkt te vroeg om hierover te gaan informeren.
 </details></p>
 
 ### Waarom staat mijn club niet in de app?
