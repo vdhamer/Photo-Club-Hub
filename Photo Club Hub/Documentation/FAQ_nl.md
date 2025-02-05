@@ -18,9 +18,9 @@ De omschrijving in de Apple App Store luidt:</p>
 
 <details><summary>Klik om uit te klappen</summary></p>
 Fotografen worden lid van een fotoclub om hun werk aan elkaar te laten zien.
-Dat zien en gezien-worden lukt prima binnen de club doordat de leden om de paar weken bijeen komen.</p>
+Dat zien en gezien-worden lukt prima **binnen** de club doordat de leden om de paar weken bijeen komen.</p>
 
-Zichtbaarheid van werk buiten de club gaat vooral via exposities en de website van de club. Dat lukt maar ten dele:
+Zichtbaarheid van werk **buiten** de club gaat vooral via exposities en de website van de club. Dat lukt maar ten dele:
 Expositiebezoekers zijn vooral een vaste kring met familieleden, vrienden en diverse getrouwe bezoekers vanuit omliggende clubs. Bezoekers aantal zijn vaak aardig stabiel.
 
 Online bezoek aan de club website loopt echter al jaren terug.
