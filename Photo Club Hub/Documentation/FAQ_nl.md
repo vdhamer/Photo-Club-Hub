@@ -27,7 +27,8 @@ Het aantal bezoekers over de jaren lijk relatief stabiel.
 
 Bezoek aan de online website loopt daarentegen al jaren terug.
 Vooral omdat kleine websites over het algemeen steeds minder aandacht krijgen:
-je moet ze vinden, er zijn teveel sites om in de gaten te houden, en de inhoud blijkt vaak onveranderd te zijn sedert een vorig bezoek.
+je moet ze vinden, er zijn teveel sites om ze allemmaal regelmatig in de gaten te houden,
+en de inhoud blijkt vaak onveranderd te zijn sedert een vorig bezoek.
 Ofwel, de aandacht van gebruikers is verschoven naar grote websites (zoals nu.nl die druk onderhouden worden)
 en social media platforms (zoals Facebook en Instagram) waar de gebruiker geleid wordt naar geselecteerde nieuwtjes.</p>
 
