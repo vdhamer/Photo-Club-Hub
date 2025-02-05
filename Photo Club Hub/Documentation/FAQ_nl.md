@@ -27,18 +27,17 @@ Het aantal bezoekers over de jaren lijk relatief stabiel.
 
 Bezoek aan de online website loopt daarentegen al jaren terug.
 Vooral omdat kleine websites over het algemeen steeds minder aandacht krijgen:
-je moet ze vinden, er zijn teveel sites om ze allemmaal regelmatig in de gaten te houden,
+je moet ze vinden, er zijn teveel sites om ze allemmaal regelmatig af te lopen,
 en de inhoud blijkt vaak onveranderd te zijn sedert een vorig bezoek.
-Ofwel, de aandacht van gebruikers is verschoven naar grote websites (zoals nu.nl die druk onderhouden worden)
-en social media platforms (zoals Facebook en Instagram) waar de gebruiker geleid wordt naar geselecteerde nieuwtjes.</p>
+Ofwel, de aandacht van gebruikers is verschoven naar grote websites
+(zoals Nos.nl of Petapixel.com, met hun teams van betaalde schrijvens en redacteuren)
+en social media platforms zoals Facebook en Instagram waar de gebruiker zowel inhoud consumeert als levert.</p>
 
-Vandaar dat er behoefte lijkt aan een laagdrempelig platform speciaal om de onderlinge banden tussen fotoclubs aan te halen.
-En de banden met fotoliefhebbers, maar misschien ook naar je oom in Australië.
-Men kan de app dus zien als een online museum voor de amateurfotografie dat altijd open is, 
-en dat groot genoeg is om liefhebbers te trekken omdat er altijd wel iets nieuws is.
+Vandaar dat er voor fotoclubs een behoefte lijkt aan een tussenvorm tussen de "vrijwel verlaten" van de websites van vroeger
+en de "doom scrolling" van de intens drukke huidige social media.
+Met als doel om de het fotowerk van clubs onderling te delen, en een laagdrempelige ingang te bieden aan fotoliefhebbers in het algemeen.
 
-We sluiten overigens niet uit dat de app t.z.t. kan melden wanneer er relevante nieuwe foto's binnengekomen zijn.
-Dat kan een website niet, maar een app wel.
+Men kan de app dus zien als een online museum voor de amateurfotografie dat altijd open is, Waar je in kunt rondlopen in een rustige omgeving, met nadruk op de foto's en hun makers.
 </details></p>
 
 ### Is de app alleen voor Nederland?
