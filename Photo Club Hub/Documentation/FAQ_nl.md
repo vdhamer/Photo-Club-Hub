@@ -143,19 +143,29 @@ naar b.v. naar een dorpsplein of station kan laten wijzen.
 ### Houdt mijn club controle over zijn eigen foto's?
 
 <details><summary>Klik om uit te klappen</summary></p>
-Ja. Er worden geen kopieën getrokken van de foto's. De foto's blijven op de site van de club. Technisch wordt er alleen naar "gelinkt".
-En zelfs de lijsten met linkjes naar foto's staan op de club website, en niet op een centrale server. 
-Hierdoor is de situatie niet te vergelijken met foto's delen via Facebook, Instagram, Flickr, X, enz.
-Vandaar dat die ook gebruiksvoorwaarden hebben waarbij zij in kleine lettertjes zichzelf allerlei rechten "toeeigenen" op hun kopie van jullie foto's.</p>
+Ja. Er worden geen kopieën getrokken van de foto's. De foto's staan op de website van de club.
+Technisch wordt er alleen naar "gelinkt".
+En zelfs de lijsten met linkjes naar foto's staan op de website van de club, en dus _niet_ op een centrale server. 
+Dit is dus niet vergelijkbaar met foto's delen via Facebook, Instagram, Flickr, X, enz.
+Social media trekt dus een kopie, en probeert zich vaak rechten toe te eigenen op foto's in ruil voor het gebruik van hun dienst.
+Deze app is daarentegen expliciet ontwerpen zodat de club/fotograaf volledige controle houdt: 
+er worden geen kopieën van foto's of data gemaakt, is is geen centrale server, 
+en de software is gratis en openbaar ("open source").</p>
 
-Voorbeeld: de foto's en lijsten met foto's van Fotogroep De Gender komen† op www.fcDeGender.nl te staan. Dat is de bestaande server van de club.
-En op die bestaande server stonden altijd al de namen van de huidige leden, en voorbeeldfoto's per lid.
+Voorbeeld: de foto's en lijsten met foto's van Fotogroep De Gender komen† op www.fcDeGender.nl te staan.
+Dat is de bestaande website van de club.
+En op die website stonden altijd al de namen van de leden, en geselecteerde foto's per lid.
+Je zou kunnen zeggen dat je met hander gereedschap hetzelfde doet als vroeger.
+Op een manier dat enkele problemen met bestaande websites ondervangt door gebruik te maken van wat modernere techniek.
 
-Het is overigens zelfs mogelijk om "de foto's van Jan" eventueele bij Jan zelf neer te zetten. Maar laten we heb voor nu zo simpel mogelijk houden.
+Het is overigens zelfs mogelijk om "de foto's van Jan" eventueele bij Jan zelf neer te zetten. Wij verwachten dat dit niet
+veel gebruikt zal worden, en raden aan om het vooral in het begin simpel te houden.
 
 † Als test staan de foto's van De Gender even op een andere (mijn privé) server. Maar dat is tijdelijk: het is beter voor het beheer als een club dat zelf doet, en het is
-onverstandig als tientallen of honderden clubs afhankelijk worden van een enkele server ("single point of failure"). En verder heeft
-mijn privé server natuurlijk maar beperkte ruimte. De meeste clubs zijn al gewend om een bedrijfje te betalen voor opslagruimte, bandbreedte en het "hosten" van hun website.
+onverstandig als tientallen of honderden clubs afhankelijk worden van een enkele server ("single point of failure"). 
+En verder heeft mijn privé server natuurlijk maar beperkte ruimte. 
+De meeste clubs zijn al gewend om een internet leverancier te betalen
+voor opslagruimte, bandbreedte, domeinnaam en het in de lucht houden van hun website.
 Dus dit zou normaal geen extra uitgaven voor de clubpenningmeester betekenen. Zie volgend punt:
 </details></p>
 
