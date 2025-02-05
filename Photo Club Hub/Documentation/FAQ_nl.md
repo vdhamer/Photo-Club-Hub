@@ -27,7 +27,7 @@ Het aantal bezoekers over de jaren lijk relatief stabiel.
 
 Bezoek aan de online website loopt daarentegen al jaren terug.
 Vooral omdat kleine websites over het algemeen steeds minder aandacht krijgen:
-je moet ze vinden, er zijn teveel sites om ze allemmaal regelmatig af te lopen,
+je moet ze vinden, er zijn teveel sites om ze allemaal regelmatig af te lopen,
 en de inhoud blijkt vaak onveranderd te zijn sedert een vorig bezoek.
 Ofwel, de aandacht van gebruikers is verschoven naar grote websites
 (zoals Nos.nl of Petapixel.com, met hun teams van betaalde schrijvens en redacteuren)
