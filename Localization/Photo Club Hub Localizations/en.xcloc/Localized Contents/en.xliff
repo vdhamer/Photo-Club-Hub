@@ -450,7 +450,7 @@ Try dragging down the Clubs and Museums screen to reload the default clubs.</tar
       <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="16.2" build-num="16C5032a"/>
     </header>
     <body>
-      <trans-unit id="" xml:space="preserve">
+      <trans-unit id="" translate="no" xml:space="preserve">
         <source/>
         <target state="new"/>
         <note>Empty section header</note>
@@ -458,12 +458,12 @@ Try dragging down the Clubs and Museums screen to reload the default clubs.</tar
       <trans-unit id="Features and Tips" xml:space="preserve">
         <source>Features and Tips</source>
         <target state="translated">Features and Tips</target>
-        <note/>
+        <note>Title of one section of Readme screen</note>
       </trans-unit>
       <trans-unit id="How you can help" xml:space="preserve">
         <source>How you can help</source>
         <target state="translated">How you can help</target>
-        <note/>
+        <note>Title of one section of Readme screen</note>
       </trans-unit>
       <trans-unit id="Readme" xml:space="preserve">
         <source>Readme</source>
@@ -473,290 +473,290 @@ Try dragging down the Clubs and Museums screen to reload the default clubs.</tar
       <trans-unit id="Supported Platforms" xml:space="preserve">
         <source>Supported Platforms</source>
         <target state="translated">Supported Platforms</target>
-        <note/>
+        <note>Title of one section of Readme screen</note>
       </trans-unit>
       <trans-unit id="The App" xml:space="preserve">
         <source>The App</source>
         <target state="translated">The App</target>
-        <note/>
+        <note>Title of one section of Readme screen</note>
       </trans-unit>
       <trans-unit id="The Concept" xml:space="preserve">
         <source>The Concept</source>
         <target state="translated">The Concept</target>
-        <note/>
+        <note>Title of one section of Readme screen</note>
       </trans-unit>
       <trans-unit id="§1.1" xml:space="preserve">
         <source>_Photo Club Hub_ displays selected photos made by members of photo clubs in a consistent, accessible manner, while minimizing distractions.</source>
         <target state="translated">_Photo Club Hub_ displays selected photos made by members of photo clubs in a consistent, accessible manner, while minimizing distractions.</target>
-        <note>First paragraph in The App section of Readme page</note>
+        <note>Title of a section of the Readme screen</note>
       </trans-unit>
       <trans-unit id="§1.2" xml:space="preserve">
         <source>This consistency eliminates the need to manually find each club’s website and discover how to navigate its photo galleries. The app doesn’t replace club-, photographer-, or social media sites. Instead, it supports clubs and their members who try to reach out to other clubs, to other photographers, and to a general audience.</source>
         <target state="translated">This consistency eliminates the need to manually find each club’s website and discover how to navigate its photo galleries. The app doesn’t replace club-, photographer-, or social media sites. Instead, it supports clubs and their members who try to reach out to other clubs, to other photographers, and to a general audience.</target>
-        <note>Second paragraph in The App section of Readme page</note>
+        <note>Title of a section of the Readme screen</note>
       </trans-unit>
       <trans-unit id="§1.3" xml:space="preserve">
         <source>The app aims to strengthen ties between photography clubs and make their members’ photos easily accessible.</source>
         <target state="translated">The app aims to strengthen ties between photography clubs and make their members’ photos easily accessible.</target>
-        <note>Third paragraph in The App section of Readme page</note>
+        <note>Title of a section of the Readme screen</note>
       </trans-unit>
       <trans-unit id="§1.4" xml:space="preserve">
         <source>The app, originally named _Photo Club Waalre_, was created for a 15-person photo club in the southern Netherlands. The newer name, _Photo Club Hub_, emphasizes the app’s mission to foster connections among various photo clubs.</source>
         <target state="translated">The app, originally named _Photo Club Waalre_, was created for a 15-person photo club in the southern Netherlands. The newer name, _Photo Club Hub_, emphasizes the app’s mission to foster connections among various photo clubs.</target>
-        <note>Fourth paragraph in The App section of Readme page</note>
+        <note>Title of a section of the Readme screen</note>
       </trans-unit>
       <trans-unit id="§1.5" xml:space="preserve">
         <source>Supporting dozens or even hundreds of clubs necessitates that each club manages its own data, including providing images and maintaining lists of club members. Notably, no software expertise is required to add a club to _Photo Club Hub_.</source>
         <target state="translated">Supporting dozens or even hundreds of clubs necessitates that each club manages its own data, including providing images and maintaining lists of club members. Notably, no software expertise is required to add a club to _Photo Club Hub_.</target>
-        <note>Fifth paragraph in The App section of Readme page</note>
+        <note>Title of a section of the Readme screen</note>
       </trans-unit>
       <trans-unit id="§1.6" xml:space="preserve">
         <source>Interested in supporting your club? Contact us via [GitHub](https://github.com/vdhamer/Photo-Club-Hub), [Facebook](https://www.facebook.com/vdhamer), or [LinkedIn](https://www.linkedin.com/in/vdhamer/). Providing and maintaining club data in a standardized way is all that’s required. The app’s [GitHub site](https://github.com/vdhamer/Photo-Club-Hub) explains this approach in detail. We’re here to help with any questions.</source>
         <target state="translated">Interested in supporting your club? Contact us via [GitHub](https://github.com/vdhamer/Photo-Club-Hub), [Facebook](https://www.facebook.com/vdhamer), or [LinkedIn](https://www.linkedin.com/in/vdhamer/). Providing and maintaining club data in a standardized way is all that’s required. The app’s [GitHub site](https://github.com/vdhamer/Photo-Club-Hub) explains this approach in detail. We’re here to help with any questions.</target>
-        <note>Sixth paragraph in The App section of Readme page</note>
+        <note>Title of a section of the Readme screen</note>
       </trans-unit>
       <trans-unit id="§2.1" xml:space="preserve">
         <source>Photo clubs play a key role in the app. The central _Portfolios_ screen shows a list of photo clubs.</source>
         <target state="translated">Photo clubs play a key role in the app. The central _Portfolios_ screen shows a list of photo clubs.</target>
-        <note>First paragraph in The Concept on Readme page</note>
+        <note>Title of a section of the Readme screen</note>
       </trans-unit>
       <trans-unit id="§2.2" xml:space="preserve">
         <source>Each photo club contains a series of member __portfolios__ that hold the actual images. Each portfolio covers the photographer's photos that are associated with that photo club.</source>
         <target state="translated">Each photo club contains a series of member __portfolios__ that hold the actual images. Each portfolio covers the photographer's photos that are associated with that photo club.</target>
-        <note>Second paragraph in The Concept on Readme page</note>
+        <note>Title of a section of the Readme screen</note>
       </trans-unit>
       <trans-unit id="§2.3" xml:space="preserve">
         <source>A photographer may have multiple portfolios in the app if case the photographer is (or was) associated with more than one photo club.</source>
         <target state="translated">A photographer may have multiple portfolios in the app if case the photographer is (or was) associated with more than one photo club.</target>
-        <note>Third paragraph in The Concept on Readme page</note>
+        <note>Title of a section of the Readme screen</note>
       </trans-unit>
       <trans-unit id="§2.4" xml:space="preserve">
         <source>Just like a painter, a photographer’s style often changes over the years. Each portfolio should preferably show the images in chronological order, with the latest work first.</source>
         <target state="translated">Just like a painter, a photographer’s style often changes over the years. Each portfolio should preferably show the images in chronological order, with the latest work first.</target>
-        <note>Fourth paragraph in The Concept on Readme page</note>
+        <note>Title of a section of the Readme screen</note>
       </trans-unit>
       <trans-unit id="§2.5" xml:space="preserve">
         <source>We try to show the portfolios with minimal distraction, just like an exposition at a museum or gallery. Web sites tend to be less suitable for this, because they are cluttered by browser controls (e.g., an address bar or tabs), and generally contain various additional types of information (e.g., club news or schedules).</source>
         <target state="translated">We try to show the portfolios with minimal distraction, just like an exposition at a museum or gallery. Web sites tend to be less suitable for this, because they are cluttered by browser controls (e.g., an address bar or tabs), and generally contain various additional types of information (e.g., club news or schedules).</target>
-        <note>Fifth paragraph in The Concept on Readme page</note>
+        <note>Title of a section of the Readme screen</note>
       </trans-unit>
       <trans-unit id="§3.1.a" xml:space="preserve">
         <source>__Languages__</source>
         <target state="translated">__Languages__</target>
-        <note>Paragraph 3.1.a of the Readme screen</note>
+        <note>Title of a section of the Readme screen</note>
       </trans-unit>
       <trans-unit id="§3.1.b" xml:space="preserve">
         <source>_Photo Club Hub_ automatically selects its language based on your device’s language settings. It currently supports English and Dutch. You can change language using _Settings &gt; Photo Club Hub &gt; Language_. Alternatively you can change your device’s preference across all apps using _Settings &gt; General &gt; Language &amp; Region &gt; Preferred Language Order_.</source>
         <target state="translated">_Photo Club Hub_ automatically selects its language based on your device’s language settings. It currently supports English and Dutch. You can change language using _Settings &gt; Photo Club Hub &gt; Language_. Alternatively you can change your device’s preference across all apps using _Settings &gt; General &gt; Language &amp; Region &gt; Preferred Language Order_.</target>
-        <note>Paragraph 3.1.b of the Readme screen</note>
+        <note>Title of a section of the Readme screen</note>
       </trans-unit>
       <trans-unit id="§3.2.a" xml:space="preserve">
         <source>__3D maps__</source>
         <target state="translated">__3D maps__</target>
-        <note>Paragraph 3.2.a of the Readme screen</note>
+        <note>Title of a section of the Readme screen</note>
       </trans-unit>
       <trans-unit id="§3.2.b" xml:space="preserve">
         <source>If you zoom in far enough on any map, a button appears that allows you to view the area in three dimensions. In 3D mode you can rotate the map.</source>
         <target state="translated">If you zoom in far enough on any map, a button appears that allows you to view the area in three dimensions. In 3D mode you can rotate the map.</target>
-        <note>Paragraph 3.2.ba of the Readme screen</note>
+        <note>Title of a section of the Readme screen</note>
       </trans-unit>
       <trans-unit id="§3.3.a" xml:space="preserve">
         <source>__Live location__</source>
         <target state="translated">__Live location__</target>
-        <note>Paragraph 3.3.a of the Readme screen</note>
+        <note>Title of a section of the Readme screen</note>
       </trans-unit>
       <trans-unit id="§3.3.b" xml:space="preserve">
         <source>Maps can display your current location as a purple dot when it falls within the map’s range. This can help you navigate to a club or to estimate distances. If the map is unlocked (interactive), an arrow button lets you re-center the map around your current location.</source>
         <target state="translated">Maps can display your current location as a purple dot when it falls within the map’s range. This can help you navigate to a club or to estimate distances. If the map is unlocked (interactive), an arrow button lets you re-center the map around your current location.</target>
-        <note>Paragraph 3.3.b of the Readme screen</note>
+        <note>Title of a section of the Readme screen</note>
       </trans-unit>
       <trans-unit id="§3.3.c" xml:space="preserve">
         <source>Live location requires granting the app __permission__ to access your location while in the app. The app doesn’t store or share your location with anyone or anything.</source>
         <target state="translated">Live location requires granting the app __permission__ to access your location while in the app. The app doesn’t store or share your location with anyone or anything.</target>
-        <note>Paragraph 3.3.c of the Readme screen</note>
+        <note>Title of a section of the Readme screen</note>
       </trans-unit>
       <trans-unit id="§3.4.a" xml:space="preserve">
         <source>__Adding photo clubs__</source>
         <target state="translated">__Adding photo clubs__</target>
-        <note>Paragraph 3.4.a of the Readme screen</note>
+        <note>Title of a section of the Readme screen</note>
       </trans-unit>
       <trans-unit id="§3.4.b" xml:space="preserve">
         <source>The app initially contains an initial list of over 60 photo clubs. Those clubs are currently all in one part of the Netherlands. The app is however designed to support clubs anywhere in the world and the list of clubs can be extended by the users.</source>
         <target state="translated">The app initially contains an initial list of over 60 photo clubs. Those clubs are currently all in one part of the Netherlands. The app is however designed to support clubs anywhere in the world and the list of clubs can be extended by the users.</target>
-        <note>Paragraph 3.4.b of the Readme screen</note>
+        <note>Title of a section of the Readme screen</note>
       </trans-unit>
       <trans-unit id="§3.4.c" xml:space="preserve">
         <source>For a club to be included, the app needs basic information like the club’s name and location (Level 1), a list of its members (Level 2) and links to image portfolios (Level 3). More details on extending the various lists are provided below and on GitHub.</source>
         <target state="translated">For a club to be included, the app needs basic information like the club’s name and location (Level 1), a list of its members (Level 2) and links to image portfolios (Level 3). More details on extending the various lists are provided below and on GitHub.</target>
-        <note>Paragraph 3.4.c of the Readme screen</note>
+        <note>Title of a section of the Readme screen</note>
       </trans-unit>
       <trans-unit id="§3.4.d" xml:space="preserve">
         <source>The initial list of 30+ photo museums can be similarly extended.</source>
         <target state="translated">The initial list of 30+ photo museums can be similarly extended.</target>
-        <note>Paragraph 3.4.d of the Readme screen</note>
+        <note>Title of a section of the Readme screen</note>
       </trans-unit>
       <trans-unit id="§3.5.a" xml:space="preserve">
         <source>__Photo museums__</source>
         <target state="translated">__Photo museums__</target>
-        <note>Paragraph 3.5.a of the Readme screen</note>
+        <note>Title of a section of the Readme screen</note>
       </trans-unit>
       <trans-unit id="§3.5.b" xml:space="preserve">
         <source>The maps can show various photo museums throughout the world. Museums and clubs are depicted differently on the map.</source>
         <target state="translated">The maps can show various photo museums throughout the world. Museums and clubs are depicted differently on the map.</target>
-        <note>Paragraph 3.5.b of the Readme screen</note>
+        <note>Title of a section of the Readme screen</note>
       </trans-unit>
       <trans-unit id="§3.5.c" xml:space="preserve">
         <source>Adding a photo museum works the same way as adding a photo club - except that a museum doesn’t have members or member portfolios.</source>
         <target state="translated">Adding a photo museum works the same way as adding a photo club - except that a museum doesn’t have members or member portfolios.</target>
-        <note>Paragraph 3.5.c of the Readme screen</note>
+        <note>Title of a section of the Readme screen</note>
       </trans-unit>
       <trans-unit id="§3.6.a" xml:space="preserve">
         <source>__Smart scrolling__</source>
         <target state="translated">__Smart scrolling__</target>
-        <note>Paragraph 3.6.a of the Readme screen</note>
+        <note>Title of a section of the Readme screen</note>
       </trans-unit>
       <trans-unit id="§3.6.b" xml:space="preserve">
         <source>The _Clubs and Museums_ screen and the _Who’s Who_ screen feature _smart scrolling_, as introduced in iOS 17. This tries to prevent an item in a list from being partially visible. The _Portfolios_ screen does not currently support smart scrolling for technical reasons.</source>
         <target state="translated">The _Clubs and Museums_ screen and the _Who’s Who_ screen feature _smart scrolling_, as introduced in iOS 17. This tries to prevent an item in a list from being partially visible. The _Portfolios_ screen does not currently support smart scrolling for technical reasons.</target>
-        <note>Paragraph 3.6.b of the Readme screen</note>
+        <note>Title of a section of the Readme screen</note>
       </trans-unit>
       <trans-unit id="§3.7.a" xml:space="preserve">
         <source>__Web sites__</source>
         <target state="translated">__Web sites__</target>
-        <note>Paragraph 3.7.a of the Readme screen</note>
+        <note>Title of a section of the Readme screen</note>
       </trans-unit>
       <trans-unit id="§3.7.b" xml:space="preserve">
         <source>This app is complimentary to your club’s web site. Because web sites serve more purposes than just presenting photos, _Photo Club Hub_ includes clickable links that lead to club- and photographer web sites.</source>
         <target state="translated">This app is complimentary to your club’s web site. Because web sites serve more purposes than just presenting photos, _Photo Club Hub_ includes clickable links that lead to club- and photographer web sites.</target>
-        <note>Paragraph 3.7.b of the Readme scree</note>
+        <note>Title of a section of the Readme screen</note>
       </trans-unit>
       <trans-unit id="§3.8.a" xml:space="preserve">
         <source>__The opening image__</source>
         <target state="translated">__The opening image__</target>
-        <note>Paragraph 3.8.a of the Readme screen</note>
+        <note>Title of a section of the Readme screen</note>
       </trans-unit>
       <trans-unit id="§3.8.b" xml:space="preserve">
         <source>When the app opens, it shows an image (“Prelude”) corresponding to the app’s icon. If you tap somewhere __inside__ the image, it zooms out to show the full image representing how digital cameras see color.</source>
         <target state="translated">When the app opens, it shows an image (“Prelude”) corresponding to the app’s icon. If you tap somewhere __inside__ the image, it zooms out to show the full image representing how digital cameras see color.</target>
-        <note>Paragraph 3.8.b of the Readme screen</note>
+        <note>Title of a section of the Readme screen</note>
       </trans-unit>
       <trans-unit id="§3.8.c" xml:space="preserve">
         <source>This involves a [Bayer color filter array](https://en.wikipedia.org/wiki/Bayer_filter) that adds a color filter on top of each sensor cell. This filter array is shown superimposed on a colorful photo.</source>
         <target state="translated">This involves a [Bayer color filter array](https://en.wikipedia.org/wiki/Bayer_filter) that adds a color filter on top of each sensor cell. This filter array is shown superimposed on a colorful photo.</target>
-        <note>Paragraph 3.8.c of the Readme screen</note>
+        <note>Title of a section of the Readme screen</note>
       </trans-unit>
       <trans-unit id="§3.8.d" xml:space="preserve">
         <source>Tapping __inside__ the image allows you to zoom in or out to your heart's content. Tapping __outside__ the image area ends the animation. A single tap __outside__ the image allows you to skip the animation.</source>
         <target state="translated">Tapping __inside__ the image allows you to zoom in or out to your heart's content. Tapping __outside__ the image area ends the animation. A single tap __outside__ the image allows you to skip the animation.</target>
-        <note>Paragraph 3.8.d of the Readme screen</note>
+        <note>Title of a section of the Readme screen</note>
       </trans-unit>
       <trans-unit id="§3.8.e" xml:space="preserve">
         <source>The computations for this animation incidentally run on your device’s GPU cores. This is only scratching the surface of what these cores can do.</source>
         <target state="translated">The computations for this animation incidentally run on your device’s GPU cores. This is only scratching the surface of what these cores can do.</target>
-        <note>Paragraph 3.8.e of the Readme screen</note>
+        <note>Title of a section of the Readme screen</note>
       </trans-unit>
       <trans-unit id="§3.9.a" xml:space="preserve">
         <source>__Former Members__</source>
         <target state="translated">__Former Members__</target>
-        <note>Paragraph 3.9.a of the Readme screen</note>
+        <note>Title of a section of the Readme screen</note>
       </trans-unit>
       <trans-unit id="§3.9.b" xml:space="preserve">
         <source>By default, former club members and their work are not shown, but this can be enabled on the _Preferences_ screen.</source>
         <target state="translated">By default, former club members and their work are not shown, but this can be enabled on the _Preferences_ screen.</target>
-        <note>Paragraph 3.9.b of the Readme screen</note>
+        <note>Title of a section of the Readme screen</note>
       </trans-unit>
       <trans-unit id="§3.9.c" xml:space="preserve">
         <source>An easy way to get recent ex-member data in the app is to simply not remove their portfolios when they leave. You should then change their status to ex-member in the membership ("Level 2") list.</source>
         <target state="translated">An easy way to get recent ex-member data in the app is to simply not remove their portfolios when they leave. You should then change their status to ex-member in the membership ("Level 2") list.</target>
-        <note>Paragraph 3.9.c of the Readme screen</note>
+        <note>Title of a section of the Readme screen</note>
       </trans-unit>
       <trans-unit id="§3.10.a" xml:space="preserve">
         <source>__Automatic Slide Shows__</source>
         <target state="translated">__Automatic Slide Shows__</target>
-        <note>Paragraph 3.10.a of the Readme screen</note>
+        <note>Title of a section of the Readme screen</note>
       </trans-unit>
       <trans-unit id="§3.10.b" xml:space="preserve">
         <source>Some portfolios have an automatic slide show option. This is controlled by one of the buttons that appear when you tap on an image (this tapping is only needed on an iPhone).</source>
         <target state="translated">Some portfolios have an automatic slide show option. This is controlled by one of the buttons that appear when you tap on an image (this tapping is only needed on an iPhone).</target>
-        <note>Paragraph 3.10.b of the Readme screen</note>
+        <note>Title of a section of the Readme screen</note>
       </trans-unit>
       <trans-unit id="§3.10.c" xml:space="preserve">
         <source>This option is available on portfolios that were generated using the _Juicebox_ plug-in for _Lightroom Classic_ (see the portfolios of Fotogroep de Gender).</source>
         <target state="translated">This option is available on portfolios that were generated using the _Juicebox_ plug-in for _Lightroom Classic_ (see the portfolios of Fotogroep de Gender).</target>
-        <note>Paragraph 3.10.c of the Readme screen</note>
+        <note>Title of a section of the Readme screen</note>
       </trans-unit>
       <trans-unit id="§3.11.a" xml:space="preserve">
         <source>__Searching__</source>
         <target state="translated">__Searching__</target>
-        <note>Paragraph 3.11.a of the Readme screen</note>
+        <note>Title of a section of the Readme screen</note>
       </trans-unit>
       <trans-unit id="§3.11.b" xml:space="preserve">
         <source>There is a search bar at the top of major screens. On an iPad the search bar is continuously visible. On an iPhone you need to scroll back to the very top of the list to get the search bar to appear.</source>
         <target state="translated">There is a search bar at the top of major screens. On an iPad the search bar is continuously visible. On an iPhone you need to scroll back to the very top of the list to get the search bar to appear.</target>
-        <note>Paragraph 3.11.b of the Readme screen</note>
+        <note>Title of a section of the Readme screen</note>
       </trans-unit>
       <trans-unit id="§3.11.c" xml:space="preserve">
         <source>Entering part of person’s name (on the _Portfolios_ and _Who’s Who_ screens) will find people with that name. The _Clubs and Museums_ screen simultaneously searches both on the club/museum name and on its specified location.</source>
         <target state="translated">Entering part of person’s name (on the _Portfolios_ and _Who’s Who_ screens) will find people with that name. The _Clubs and Museums_ screen simultaneously searches both on the club/museum name and on its specified location.</target>
-        <note>Paragraph 3.11.c of the Readme screen</note>
+        <note>Title of a section of the Readme screen</note>
       </trans-unit>
       <trans-unit id="§4.1" xml:space="preserve">
         <source>_Photo Club Hub_ generally requires the latest version of iOS. This allows us to keep the app technically up to date. The latest app version can thus run on devices released in the last 6 or 7 years.</source>
         <target state="translated">_Photo Club Hub_ generally requires the latest version of iOS. This allows us to keep the app technically up to date. The latest app version can thus run on devices released in the last 6 or 7 years.</target>
-        <note>First paragraph SupportedPlatforms section of Readme page</note>
+        <note>Title of a section of the Readme screen</note>
       </trans-unit>
       <trans-unit id="§4.2" xml:space="preserve">
         <source>The app is optimized for iOS and iPadOS. It can also run unoptimized on a Mac or Vision Pro.</source>
         <target state="translated">The app is optimized for iOS and iPadOS. It can also run unoptimized on a Mac or Vision Pro.</target>
-        <note>Second paragraph SupportedPlatforms section of Readme page</note>
+        <note>Title of a section of the Readme screen</note>
       </trans-unit>
       <trans-unit id="§4.3" xml:space="preserve">
         <source>Although there is presently no native support for __Android__ or other non-Apple phone platforms, we made a companion app that automatically generates website pages from the same online lists that the app uses. This helps keep club web sites up to date, and allows viewing of clubs, members, and images in a web browsers on a wide range of platforms (including Android, Windows, MacOS and Linux).</source>
         <target state="translated">Although there is presently no native support for __Android__ or other non-Apple phone platforms, we made a companion app that automatically generates website pages from the same online lists that the app uses. This helps keep club web sites up to date, and allows viewing of clubs, members, and images in a web browsers on a wide range of platforms (including Android, Windows, MacOS and Linux).</target>
-        <note>Third paragraph SupportedPlatforms section of Readme page</note>
+        <note>Title of a section of the Readme screen</note>
       </trans-unit>
       <trans-unit id="§4.4" xml:space="preserve">
         <source>These developments really depend on the help of volunteers from the clubs and the software community. If you’re interested in helping out, check out the section below.</source>
         <target state="translated">These developments really depend on the help of volunteers from the clubs and the software community. If you’re interested in helping out, check out the section below.</target>
-        <note>Fourth paragraph SupportedPlatforms section of Readme page</note>
+        <note>Title of a section of the Readme screen</note>
       </trans-unit>
       <trans-unit id="§5.1" xml:space="preserve">
         <source>The app needs information in order to cover your local photo club(s). This involves three so-called __Levels__. A club can stay at any level for a while before proceeding to a next level. See the app’s [README](https://github.com/vdhamer/Photo-Club-Hub/blob/main/.github/README.md) file on GitHub for more details.</source>
         <target state="translated">The app needs information in order to cover your local photo club(s). This involves three so-called __Levels__. A club can stay at any level for a while before proceeding to a next level. See the app’s [README](https://github.com/vdhamer/Photo-Club-Hub/blob/main/.github/README.md) file on GitHub for more details.</target>
-        <note>First paragraph Developers section of Readme page</note>
+        <note>Title of a section of the Readme screen</note>
       </trans-unit>
       <trans-unit id="§5.2" xml:space="preserve">
         <source>__Level 1__ requires providing the club’s name, location and a few optional links. Once it is on Level 1, the club is listed on the _Clubs and Museums_ screen and shown on maps. If you send us the Level 1 information, we will add it to the app’s online list of clubs. The technically inclined can best submit that information (and any future updates) in the form a [GitHub “pull request”](https://www.youtube.com/watch?v=BCQHnlnPusY&amp;list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV): this pretty much automates the integration process and reduces the risk of errors.</source>
         <target state="translated">__Level 1__ requires providing the club’s name, location and a few optional links. Once it is on Level 1, the club is listed on the _Clubs and Museums_ screen and shown on maps. If you send us the Level 1 information, we will add it to the app’s online list of clubs. The technically inclined can best submit that information (and any future updates) in the form a [GitHub “pull request”](https://www.youtube.com/watch?v=BCQHnlnPusY&amp;list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV): this pretty much automates the integration process and reduces the risk of errors.</target>
-        <note>Second paragraph Developers section of Readme page</note>
+        <note>Title of a section of the Readme screen</note>
       </trans-unit>
       <trans-unit id="§5.3" xml:space="preserve">
         <source>__Level 2__ requires providing a list of the names of current (and optionally former) club members as a text file with a specific format. This file can be stored anywhere as long as it can be fetched using a web address (URL). For example, you can store it in the _Media_ section of your club’s _Wordpress_ web site. At Level 2, the membership lists show up on the _Portfolios_ screen. _Fotogroep Anders_ (NL) shows what a Level 2 club looks like in the user interface.</source>
         <target state="translated">__Level 2__ requires providing a list of the names of current (and optionally former) club members as a text file with a specific format. This file can be stored anywhere as long as it can be fetched using a web address (URL). For example, you can store it in the _Media_ section of your club’s _Wordpress_ web site. At Level 2, the membership lists show up on the _Portfolios_ screen. _Fotogroep Anders_ (NL) shows what a Level 2 club looks like in the user interface.</target>
-        <note>Third paragraph Developers section of Readme page</note>
+        <note>Title of a section of the Readme screen</note>
       </trans-unit>
       <trans-unit id="§5.4" xml:space="preserve">
         <source>Clubs at __Level 3__ also provide links to the online images in member portfolios. _Fotogroep de Gender_ (NL) is an example of a Level 3 club: you can view their portfolios via the _Portfolios_ screen. Because a club with dozens of members may want to show hundreds of images, we have a way to automatically create portfolios from _Lightroom_ collections (step-by-step instructions for this will be made available)</source>
         <target state="translated">Clubs at __Level 3__ also provide links to the online images in member portfolios. _Fotogroep de Gender_ (NL) is an example of a Level 3 club: you can view their portfolios via the _Portfolios_ screen. Because a club with dozens of members may want to show hundreds of images, we have a way to automatically create portfolios from _Lightroom_ collections (step-by-step instructions for this will be made available)</target>
-        <note>Fourth paragraph Developers section of Readme page</note>
+        <note>Title of a section of the Readme screen</note>
       </trans-unit>
       <trans-unit id="§5.5" xml:space="preserve">
         <source>Help with onboarding of additional clubs is essential. But there are more ways in which you can help out. Examples of __non-technical help__ include testing, writing a review for Apple’s App Store, creating step-by-step user instructions, and coming up with improvement ideas. Last, and certainly not least, actual _software development_ support will help speed up app enhancements, produce fresh ideas and ensure app continuity. Example contributions include code improvement of all sorts (via [GitHub](https://github.com/vdhamer/Photo-Club-Hub)), hunting down bugs, and contributing to discussions on functionality, implementation and interfaces.
 </source>
         <target state="translated">Help with onboarding of additional clubs is essential. But there are more ways in which you can help out. Examples of __non-technical help__ include testing, writing a review for Apple’s App Store, creating step-by-step user instructions, and coming up with improvement ideas. Last, and certainly not least, actual _software development_ support will help speed up app enhancements, produce fresh ideas and ensure app continuity. Example contributions include code improvement of all sorts (via [GitHub](https://github.com/vdhamer/Photo-Club-Hub)), hunting down bugs, and contributing to discussions on functionality, implementation and interfaces.
 </target>
-        <note>Fifth paragraph Developers section of Readme page</note>
+        <note>Title of a section of the Readme screen</note>
       </trans-unit>
     </body>
   </file>
-  <file original="Settings.bundle/en.lproj/Root.strings" source-language="en" target-language="en" datatype="plaintext">
+  <file original="Settings.bundle/en.lproj/Settings.strings" source-language="en" target-language="en" datatype="plaintext">
     <header>
       <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="16.2" build-num="16C5032a"/>
     </header>
     <body>
-      <trans-unit id="Data refresh pending" xml:space="preserve">
-        <source>Data refresh pending</source>
-        <target>Data refresh pending</target>
+      <trans-unit id="Data refresh (for r2.7.2) pending" xml:space="preserve">
+        <source>Data refresh (for r2.7.2) pending</source>
+        <target>Data refresh (for r2.7.2) pending</target>
         <note>(No Comment)</note>
       </trans-unit>
       <trans-unit id="Debug options" xml:space="preserve">
