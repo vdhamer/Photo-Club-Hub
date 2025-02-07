@@ -2,7 +2,7 @@
 
 Preferences screen
 * Changed app default to "don't show former members".
-* Forced a data reset to clean up the content of the in-app database
+* Forced a data reset to clean up the content of the in-app database when 2.7.2 or higher is first run
 
 Code Maintenance
 * Tested with SwiftLint 0.58.2

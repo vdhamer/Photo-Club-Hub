@@ -23,7 +23,7 @@ extension Language {
     // MARK: - getters and setters
 
     var isoCodeCaps: String {
-        get { return isoCode_?.uppercased() ?? "??"} // e.g. NL
+        get { return isoCode_?.uppercased() ?? "??"} // e.g. "NL"
         set { isoCode_ = newValue.uppercased() }
     }
 

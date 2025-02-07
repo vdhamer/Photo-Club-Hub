@@ -9,15 +9,16 @@ import Foundation
 
 struct Settings {
 
-    static var dataResetPending: Bool { // stored as a string shown in Settings, controlled by version and any resets
+    static var dataResetPending272: Bool { // stored as a string shown in Settings
         // returns true until a reset is done
 
-        if UserDefaults.standard.object(forKey: "dataResetPending") == nil {
-            UserDefaults.standard.set(true, forKey: "dataResetPending") // interpret nil as true
+        if UserDefaults.standard.object(forKey: "dataResetPending272") == nil {
+            UserDefaults.standard.set(true, forKey: "dataResetPending272") // interpret nil as true
+            UserDefaults.standard.removeObject(forKey: "dataResetPending") // cleanup of unused key-value pair
         }
 
-        let prevValue = UserDefaults.standard.bool(forKey: "dataResetPending")
-        UserDefaults.standard.set(false, forKey: "dataResetPending") // never true more than once
+        let prevValue = UserDefaults.standard.bool(forKey: "dataResetPending272")
+        UserDefaults.standard.set(false, forKey: "dataResetPending272") // never true more than once
         return prevValue // if true, app has to react immediately (by executing data reset)
     } // implicit getter only
 

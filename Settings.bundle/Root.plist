@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>StringsTable</key>
-	<string>Root</string>
+	<string>Settings</string>
 	<key>PreferenceSpecifiers</key>
 	<array>
 		<dict>
@@ -114,11 +114,11 @@
 			<key>Type</key>
 			<string>PSToggleSwitchSpecifier</string>
 			<key>Title</key>
-			<string>Data refresh pending</string>
+			<string>Data refresh (for r2.7.2) pending</string>
 			<key>DefaultValue</key>
 			<true/>
 			<key>Key</key>
-			<string>dataResetPending</string>
+			<string>dataResetPending272</string>
 		</dict>
 	</array>
 </dict>

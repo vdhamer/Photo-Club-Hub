@@ -26,7 +26,7 @@ struct PhotoClubHubApp: App {
         // update version number shown in iOS Settings
         UserDefaults.standard.set(Bundle.main.fullVersion, forKey: "version_preference")
 
-        if Settings.manualDataLoading || Settings.dataResetPending {
+        if Settings.manualDataLoading || Settings.dataResetPending272 {
             PhotoClubHubApp.deleteAllCoreDataObjects() // keep resetting if manualDataLoading=true
         }
 
@@ -103,7 +103,7 @@ extension PhotoClubHubApp {
         do {
             try deleteEntitiesOfOneType("LocalizedRemark")
             try deleteEntitiesOfOneType("LocalizedKeyword")
-            try deleteEntitiesOfOneType("Language")
+            try deleteEntitiesOfOneType("Language") // TODO enabling this can cause crash
 
             try deleteEntitiesOfOneType("PhotographerKeyword")
             try deleteEntitiesOfOneType("Keyword")

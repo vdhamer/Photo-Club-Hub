@@ -273,6 +273,7 @@ extension Organization {
             if isoCode != nil && localizedRemarkNewValue != nil { // nil could happens if JSON file not schema compliant
                 let language = Language.findCreateUpdate(context: bgContext,
                                                          isoCode: isoCode!) // find or construct the remark's Language
+//                modified = true  TODO temp hack. Use `if context.hasChanges`
 
                 let remarkNeedsPersisting: Bool = LocalizedRemark.findCreateUpdate(
                     bgContext: bgContext, // create object

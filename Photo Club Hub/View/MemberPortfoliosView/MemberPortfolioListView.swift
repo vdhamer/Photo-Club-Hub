@@ -43,8 +43,10 @@ struct MemberPortfolioListView: View {
         }
         .listStyle(.plain)
         .refreshable { // for pull-to-refresh
-            // do not remove next statement: a side-effect of reading the flag, is that it clears the flag
-            print("dataResetPending flag was \(Settings.dataResetPending), but is now false")
+            // do not remove next statement: a side-effect of reading the flag, is that it clears the flag!
+            if Settings.dataResetPending272 {
+                print("dataResetPending272 flag reset from true to false")
+            }
             PhotoClubHubApp.deleteAllCoreDataObjects()
             PhotoClubHubApp.loadClubsAndMembers() // carefull: runs asynchronously
         }
