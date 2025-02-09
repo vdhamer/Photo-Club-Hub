@@ -1,4 +1,5 @@
 {
+
     "club":
         {
             "idPlus": {
@@ -30,6 +31,7 @@
                 }
             }
         },
+
     "members": [
         {
             "name": {
@@ -47,7 +49,7 @@
                     "isOther": false
                 },
                 "status": {
-                    "isDeceased": true,
+                    "isDeceased": false,
                     "isFormerMember": true,
                     "isHonoraryMember": false,
                     "isMentor": false,
@@ -67,4 +69,5 @@
             }
         }
     ]
+
 }

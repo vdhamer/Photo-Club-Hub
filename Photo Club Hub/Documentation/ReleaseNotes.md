@@ -14,6 +14,7 @@ Data Maintenance
 * Added fcBrandevoort (Helmond)
 * Removed 2 clubs that were just in there for test purposes (they will hopefully show up again in the future)
 * Updated club officer list for fgDeGender
+* Changes one Status for MvA in XampleMax sample club
 
 This build #4636 was made using Xcode 16.2 and is intended for App Store distribution.
 
