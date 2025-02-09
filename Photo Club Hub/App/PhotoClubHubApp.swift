@@ -103,7 +103,7 @@ extension PhotoClubHubApp {
         do {
             try deleteEntitiesOfOneType("LocalizedRemark")
             try deleteEntitiesOfOneType("LocalizedKeyword")
-            try deleteEntitiesOfOneType("Language") // TODO enabling this can cause crash
+            try deleteEntitiesOfOneType("Language")
 
             try deleteEntitiesOfOneType("PhotographerKeyword")
             try deleteEntitiesOfOneType("Keyword")
@@ -134,8 +134,12 @@ func deleteEntitiesOfOneType(_ entity: String) throws {
             viewContext.delete(objectData)
         }
         try viewContext.save()
-        if entity == "OrganizationType" { // initConstants() should not really be necessary
+        // initConstants shouldn't be necessary, but is there as a temp safety net for concurrenty issues with CoreData
+        if entity == "OrganizationType" {
             OrganizationType.initConstants() // insert contant records into OrganizationType table if needed
+        }
+        if entity == "Language" { // initialization shouldn't be necessary (related to occasional transaction crash)
+            Language.initConstants() // insert contant records into OrganizationType table if needed
         }
 
     } catch let error { // if `entity` identifier is not found, `try` doesn't throw. Maybe a rethrow is missing.
