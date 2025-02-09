@@ -273,7 +273,7 @@ extension Organization {
             if isoCode != nil && localizedRemarkNewValue != nil { // nil could happens if JSON file not schema compliant
                 let language = Language.findCreateUpdate(context: bgContext,
                                                          isoCode: isoCode!) // find or construct the remark's Language
-//                modified = true  TODO temp hack. Use `if context.hasChanges`
+                // language updates doesn't set modified flag
 
                 let remarkNeedsPersisting: Bool = LocalizedRemark.findCreateUpdate(
                     bgContext: bgContext, // create object
@@ -285,7 +285,7 @@ extension Organization {
             }
         } // end of loop over remark in all provided languages
 
-        if modified {
+        if bgContext.hasChanges {
 			do {
 				try bgContext.save() // persist modifications in PhotoClub record
  			} catch {
