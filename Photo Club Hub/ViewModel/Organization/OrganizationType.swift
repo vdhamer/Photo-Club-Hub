@@ -23,6 +23,7 @@ extension OrganizationType {
         do {
             try viewContext.save() // persist all organizationTypes using main thread ManagedObjectContext
         } catch {
+            viewContext.rollback()
             ifDebugFatalError("Couldn't initialize the three organizationType records",
                               file: #fileID, line: #line)
         }

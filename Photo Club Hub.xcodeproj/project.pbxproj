@@ -194,6 +194,8 @@
 		D0A34EB92BFB97710077F3E0 /* Photo_Club_Hub_2_6_3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_6_3.xcdatamodel; sourceTree = "<group>"; };
 		D0A380932D39B0FE00FF95F4 /* Level2_creation_EN.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Level2_creation_EN.md; sourceTree = "<group>"; };
 		D0A4DE392C7154C9004AC351 /* Photo_Club_Hub_2_7_1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_7_1.xcdatamodel; sourceTree = "<group>"; };
+		D0A958662D5970B400658373 /* Website_Status_template.pptx */ = {isa = PBXFileReference; lastKnownFileType = file; path = Website_Status_template.pptx; sourceTree = "<group>"; };
+		D0A958672D59724B00658373 /* Website_Status_Feb25.pptx */ = {isa = PBXFileReference; lastKnownFileType = file; path = Website_Status_Feb25.pptx; sourceTree = "<group>"; };
 		D0ADF4AD27922DCA00535432 /* MemberRolesAndStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberRolesAndStatus.swift; sourceTree = "<group>"; };
 		D0AE1B7427889E8600E0100E /* OrganizationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationListView.swift; sourceTree = "<group>"; };
 		D0AE1B772788A19500E0100E /* WhoIsWhoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhoIsWhoListView.swift; sourceTree = "<group>"; };
@@ -518,6 +520,7 @@
 				D07A1E2E28314EA600C77F66 /* SwiftUIEnvironmentValues.png */,
 				D01DFAA627E778BD007BABFA /* offsets.md */,
 				D04A2B112AC0958C003ED113 /* LineCount.xlsx */,
+				D0A958632D596C3300658373 /* Website_status_PPT */,
 			);
 			path = Documentation;
 			sourceTree = "<group>";
@@ -545,6 +548,15 @@
 				D08DC6052AE57294008DBD68 /* SinglePortfolioLinkView.swift */,
 			);
 			path = SinglePortfolioLinkView;
+			sourceTree = "<group>";
+		};
+		D0A958632D596C3300658373 /* Website_status_PPT */ = {
+			isa = PBXGroup;
+			children = (
+				D0A958672D59724B00658373 /* Website_Status_Feb25.pptx */,
+				D0A958662D5970B400658373 /* Website_Status_template.pptx */,
+			);
+			path = Website_status_PPT;
 			sourceTree = "<group>";
 		};
 		D0AE1B7327889D6700E0100E /* OrganizationsView */ = {

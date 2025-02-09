@@ -11,13 +11,35 @@ extension Language {
 
     fileprivate static var code2Name: [String: String] {
         [
-            "DE": "Deutsch",
+            "DE": "German",
             "EN": "English",
-            "ES": "Español",
-            "FR": "Français",
-            "NL": "Nederlands",
-            "PL": "Polski"
+            "ES": "Spanish",
+            "FR": "French",
+            "NL": "Dutch",
+            "PL": "Polish"
         ]
+    }
+
+    @MainActor
+    static func initConstants() { // called on main thread
+        // initConstants shouldn't be necessary, but is there as a temp safety net for concurrenty issues with CoreData
+        let viewContext = PersistenceController.shared.container.viewContext // requires foreground context
+
+        for language in code2Name {
+            _ = Language.findCreateUpdate(
+                context: viewContext, // requires @MainActor
+                isoCode: language.key, // e.g. "EN"
+                nameENOptional: language.value // e.g. "English"
+            )
+        }
+
+        do {
+            try viewContext.save() // persist all organizationTypes using main thread ManagedObjectContext
+        } catch {
+            viewContext.rollback()
+            ifDebugFatalError("Couldn't initialize the three organizationType records",
+                              file: #fileID, line: #line)
+        }
     }
 
     // MARK: - getters and setters
@@ -34,7 +56,7 @@ extension Language {
 
     // MARK: - find or create
 
-    // Find Language object (or create a new object - used at start of app)
+    // Find existing Language object or create a new one.
     // Update existing attributes or fill the new object
     static func findCreateUpdate(context: NSManagedObjectContext, // can be foreground of background context
                                  isoCode: String,
@@ -57,7 +79,9 @@ extension Language {
         if let language = languages.first { // already exists, so update non-identifying attributes
             if language.update(context: context, nameEN: nameEN) {
                 print("Updated info for language \"\(language.nameEN)\"")
-                save(context: context, language: language, create: false)
+                if Settings.extraCoreDataSaves {
+                    save(context: context, language: language, create: false)
+                }
             }
             return language
         } else {
@@ -66,8 +90,10 @@ extension Language {
             let language = Language(entity: entity, insertInto: context)
             language.isoCodeCaps = isoCode
             _ = language.update(context: context, nameEN: nameEN)
-            save(context: context, language: language, create: true)
-            print("Created new Language for code \(language.isoCodeCaps) named \(language.nameEN)")
+            if Settings.extraCoreDataSaves {
+                save(context: context, language: language, create: true)
+            }
+           print("Created new Language for code \(language.isoCodeCaps) named \(language.nameEN)")
             return language
         }
     }
@@ -100,6 +126,7 @@ extension Language {
         do {
             try context.save()
         } catch {
+            context.rollback()
             if create {
                 ifDebugFatalError("Could not save created Language \(language.isoCodeCaps)")
             } else {
