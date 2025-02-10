@@ -9,6 +9,7 @@ Code Maintenance
 * Deleting the database content didn't cover 3 new tables (`Keyword`, `LocalizedKeyword`, `PhotographerKeyword`)
 
 Data Maintenance
+* Tested on iOS 18.3.1 and MacOS 15.3.1
 * Set Core Data debugging according to https://useyourloaf.com/blog/debugging-core-data/
 * Updated membership of fgWaalre for 2025
 * Added fcBrandevoort (Helmond)
