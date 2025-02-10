@@ -1,21 +1,21 @@
-### 2.7.2 (GitHub commit c4d0faa) 29-01-25
+### 2.7.2 (GitHub commit 50334f9) 10-02-25
 
 Preferences screen
 * Changed app default to "don't show former members".
 * Forced a data reset to clean up the content of the in-app database when 2.7.2 or higher is first run
 
 Code Maintenance
+* Tested on iOS 18.3.1 and macOS 15.3.1
 * Tested with SwiftLint 0.58.2
 * Deleting the database content didn't cover 3 new tables (`Keyword`, `LocalizedKeyword`, `PhotographerKeyword`)
 
 Data Maintenance
-* Tested on iOS 18.3.1 and MacOS 15.3.1
 * Set Core Data debugging according to https://useyourloaf.com/blog/debugging-core-data/
 * Updated membership of fgWaalre for 2025
-* Added fcBrandevoort (Helmond)
-* Removed 2 clubs that were just in there for test purposes (they will hopefully show up again in the future)
+* Added fcBrandevoort (in Helmond)
+* Removed 2 clubs used only for demo purposes (they will hopefully show up again in the future)
 * Updated club officer list for fgDeGender
-* Changes one Status for MvA in XampleMax sample club
+* Changes status for MvA in XampleMax sample club
 
 This build #4636 was made using Xcode 16.2 and is intended for App Store distribution.
 
@@ -33,7 +33,7 @@ Documentation
 * Created 7-step instructions (Github Documentation directory) for creating a new `level2.json` file.
 
 Code Maintenance
-* Tested on iOS 18.3, and Xcode 16.2 and MacOS 15.3
+* Tested on iOS 18.3, and Xcode 16.2 and macOS 15.3
 * Extended data model for keyword feature (and updated diagram in README.md on GitHub).
 * Added documentation in README.md for keyword feature in Level 0 and Level 2 files.
 * Automatically cleared any officer roles for a deceased member. Fatal error in debug version only.
@@ -60,7 +60,7 @@ This build #4635 was made using Xcode 16.2 and is intended for TestFlight distri
 
 ### 2.7.1 (GitHub commit dd07c09) 11-12-24
 
-Working on a new standalone MacOS app (see GitHub/vdhamer) that generates HTML membership lists for club web sites.
+Working on a new standalone macOS app (see GitHub/vdhamer) that generates HTML membership lists for club web sites.
 This version requires at least iOS version 17.6.
 
 Who's Who screen
@@ -78,12 +78,12 @@ Preferences screen
 Code Maintenance
 * Added "optional:" keyword to level1.json files. Reason: easier to read and helps document the format.
 * Consequence: users who don't want to or can't upgrade to newer versions get marginally reduced functionality.
-* Tested on SwiftLint 0.57.1 and iOS 18.2 RC (22C150) and Xcode 16.2 beta (16C5023f) and MacOS 15.1.1
+* Tested on SwiftLint 0.57.1 and iOS 18.2 RC (22C150) and Xcode 16.2 beta (16C5023f) and macOS 15.1.1
 * SwiftJSON imported as an external package. Preceding versions included it as a single Swift source file.
 * Entered trader status (not a trader) in Apple App Store. And accepted new terms and conditions.
 * Minor update to OrganizationType.swift (to stay in sync with Photo-Club-Hub-HTML).
 * removed Organization parameter from Photographer.createFindUpdate() as it was used for debugging only.
-* set LSMinimumSystemVersion to (MacOS) 15.0.0 in case the app is run on a Mac.
+* set LSMinimumSystemVersion to (macOS) 15.0.0 in case the app is run on a Mac.
 * removed 7 source files that were no longer used
 * renamed isScrollLocked to isMapScrollLocked in data model
 * Level 2 support for photographerImage added. Not shown in the user interface yet.
@@ -114,7 +114,7 @@ Who's who screen
 * Swipe down refreshes database content
 
 Code Maintenance
-* Tested on Xcode 16.1 beta 1 (16B5001e), iOS 18.1 beta 2 (22B5023e), VisionOS 2.0 beta 1 (22N5297g), MacOS 14.6.1.
+* Tested on Xcode 16.1 beta 1 (16B5001e), iOS 18.1 beta 2 (22B5023e), VisionOS 2.0 beta 1 (22N5297g), macOS 14.6.1.
 * Updated dataModel.png as used in README.md
 * Renamed MemberPortfolio.obsolete to MemberPortfolio.removeMember
 * Settings switch to manucally force one-time reloading of json files.
@@ -143,7 +143,7 @@ Maintenance
 * Initial ability to read list of club members from a data file (`fgDeGender.level2.json`).
 * The membership data for 2 Dutch photo clubs (fgAnders, fgDeGender) are now read from level2.json data files.
 * Added a wikipedia link for the club fgDeGender. The link is mainly for demo/testing purposes.
-* Tested on iOS 18.0 beta 4 (22A5316j), Xcode 16.0 beta 4 (16A5211f), MacOS 14.6 and Vision Pro 2.0 beta 4 (22N5286g).
+* Tested on iOS 18.0 beta 4 (22A5316j), Xcode 16.0 beta 4 (16A5211f), macOS 14.6 and Vision Pro 2.0 beta 4 (22N5286g).
 * Incorporated pull request regarding try/catch for level 2 JSON loading submitted by Nikolay Dobychin (aka codifyme).
 
 This build #4629 was built using Xcode 16.0 beta 4. It can only be used for TestFlight users (because it is a beta).
@@ -253,7 +253,7 @@ Documentation
 
 Maintenance
 * Added Photo Club Bernheeze to the list (`root.level1.json`).
-* Tested on MacOS 14,5 (23F79), Xcode 15.4 (15F31d), SwiftLint 0.55.1, iOS 17.5 and Vision Pro 1.2 beta 5 (21O5565d).
+* Tested on macOS 14,5 (23F79), Xcode 15.4 (15F31d), SwiftLint 0.55.1, iOS 17.5 and Vision Pro 1.2 beta 5 (21O5565d).
 * Fixed a SwiftLint coding rule warning (function explicitly returning void).
 * Removed encryption using `git-crypt`. Member list of FGW is now fetched directly (removed data like phone numbers).
 
@@ -360,7 +360,7 @@ Maintenance
 * Updated Level 2 (HTML) file for Fotogroep Waalre (GvdK)
 * Added a Dutch photo club (FC Den Dungen)
 * Cleaned up string translation issues
-* Tested on MacOS 14.4.1
+* Tested on macOS 14.4.1
 
 This is build #4617 and was sent out to Apple Testflight users only.
 
@@ -371,7 +371,7 @@ Clubs and Museums screen
 * Remarks can now be shown in any language (previously: just English and Dutch).
 
 Maintenance
-* Tested on iOS/iPadOS 17.4.1, MacOS 14.4, Xcode 14.3, VisionOS 1.1 beta 4.
+* Tested on iOS/iPadOS 17.4.1, macOS 14.4, Xcode 14.3, VisionOS 1.1 beta 4.
 * Added the Photo Elysée museum in Lausanne.
 * Added two local photo clubs: Boxtel, De Fotoschouw.
 * Added Dutch translations for remarks for all museums.
@@ -394,7 +394,7 @@ Who's Who screen
 * performance improvement: fewer calls to WkWebView(): from once per thumbnail to once per screen.
 
 Maintenance
-* Tested with iOS 17.4 RC, MacOS 14.3, Xcode 14.3 RC, VisionOS 1.1 beta 4.
+* Tested with iOS 17.4 RC, macOS 14.3, Xcode 14.3 RC, VisionOS 1.1 beta 4.
 * Added Fotogroep Best as a Level 1 supported photo club.
 * Fixed broken shields in GitHub README.md.
 * Removed empty targets for testing and UI testing.
@@ -418,7 +418,7 @@ Readme screen
 Maintenance
 * Renamed PhotoClub table to Organization table (because it can now contain museums)
 * Replaced musea -> museums in English text.
-* Tested with with iOS 17.4 beta 2, MacOS 14.3, Xcode 14.3 beta 2, VisionOS 1.1 beta
+* Tested with with iOS 17.4 beta 2, macOS 14.3, Xcode 14.3 beta 2, VisionOS 1.1 beta
 * Converted SwiftyJSON from package to file (as a temp workaround)
 * Added basic info about dozens of nearby photo clubs (as an example, and for screenshots)
 * Removed image property in OrganizationList.json. User can see an image of the building via the Wikipedia link.
@@ -450,7 +450,7 @@ Readme screen
 * Significant text updates and added new pictures. Removed section on data model. It's on GitHub readme.
 
 Maintenance
-* Tested with with iOS 17.2.1, MacOS 14.2.1, GitCrypt 0.7.0.1, Xcode 14.2
+* Tested with with iOS 17.2.1, macOS 14.2.1, GitCrypt 0.7.0.1, Xcode 14.2
 * Centralized code for loading and of input data (file: `PhotoClubHubApp`).
 * Updated data model picture in GitHub README.md file.
 * .xcloc localization files are no longer included in the Photo Club Hub target (not used in bundle).
@@ -465,7 +465,7 @@ Photo Clubs screen
 * Map controls are hidden when map is locked. In version 2.5.0 they were disabled, but not hidden.
 
 Maintenance
-* Tested with with iOS 17.2, MacOS 14.2, Xcode 14.1, and swiftlint 0.53.0 (there are issues with 0.54.0).
+* Tested with with iOS 17.2, macOS 14.2, Xcode 14.1, and swiftlint 0.53.0 (there are issues with 0.54.0).
 * Updated GitHub README.md and portfolios.jpg screenshot.
 * Updated status of BdG and PvdH within FG de Gender
 * Corrected URL Fotomuseum Den Haag
@@ -493,7 +493,7 @@ Readme screen
 
 Maintenance
 * Replaced deprecated API Map calls by newer SwiftUI MapKit equivalent. This fixed 3 compiler warnings.
-* Tested with MacOS 14.1.1, Xcode 15.1 Beta 3 and iOS 17.1.1.
+* Tested with macOS 14.1.1, Xcode 15.1 Beta 3 and iOS 17.1.1.
 * Completed English list of localizable strings (also for cases where no translation is necessary).
 * Set ITSAppUsesNonExemptEncryption to false in info.plist (to automate answer to question during releasing).
     
@@ -518,7 +518,7 @@ Who's Who screen
 Maintenance
 * Requires iOS 17.0 or higher.
 * Cleaned up logging and passing of PersonName structs.
-* Upgraded and tested with MacOS 14.1, Xcode 15.1 Beta 2 and iOS 17.1.
+* Upgraded and tested with macOS 14.1, Xcode 15.1 Beta 2 and iOS 17.1.
     
 This is build #4603 in Apple's App Store.
 
@@ -532,7 +532,7 @@ Readme screen
 * Fixed a typo in Dutch language version
 
 Maintenance
-* Upgraded and tested with MacOS 13.5.2, SwiftLint 0.52.4, Xcode 15.0 RC1
+* Upgraded and tested with macOS 13.5.2, SwiftLint 0.52.4, Xcode 15.0 RC1
     
 This is build #4596 in Apple's App Store.
 
@@ -619,7 +619,7 @@ Readme screen
 Maintenance
 * Removed fopen() warnings when Metal initializes the first time the app is run
 * Changed URL from vdhamer.com to www.vdhamer.com (invisible to user)
-* Upgraded and tested with iOS 16.5, MacOS 13.4, XCode 13.4.1 RC, Swift 5.8.1 and SwiftLint 0.52.2
+* Upgraded and tested with iOS 16.5, macOS 13.4, XCode 13.4.1 RC, Swift 5.8.1 and SwiftLint 0.52.2
     
 This is build #4590 in Apple's App Store.
 
@@ -646,14 +646,14 @@ In Apple's App Store, the release notes of 2.3.3 and 2.3.4 are combined.
 Readme screen
 * Bug fix: colors of status field of Roadmap items didn't get triggered in Dutch translation
 * Updated the Readme text
-* Added "MacOS support" to the Roadmap questionnaire
+* Added "macOS support" to the Roadmap questionnaire
 
 Maintenance
-* Disabled support (in App store) for running the iPad version on MacOS (because Photo Clubs screen crashed)
+* Disabled support (in App store) for running the iPad version on macOS (because Photo Clubs screen crashed)
 * Fixed bug in AvdLee/Roadmap related to `statusTintColor` when status strings are localized 
 * Built using XCode 14.3 RC and tested with iOS 16.4 RC
 * Removed WebView.swift (dead code)
-* Disabled support for running the iPad version on MacOS (because Maps crashed in Photo Clubs screen)
+* Disabled support for running the iPad version on macOS (because Maps crashed in Photo Clubs screen)
 
 This is build #4588 (didn't make it to Apple's App Store)
 
@@ -666,7 +666,7 @@ Readme screen
 
 Maintenance
 * Required iOS version is now 16.2 (was 16.0)
-* Disabled support for running the iPad version on MacOS (because Maps crashed in Photo Clubs screen)
+* Disabled support for running the iPad version on macOS (because Maps crashed in Photo Clubs screen)
 * Added Roadmap package
 * Updated GitHub README and associated screenshot for GitHub
 * Tested against XCode 14.3 beta 3

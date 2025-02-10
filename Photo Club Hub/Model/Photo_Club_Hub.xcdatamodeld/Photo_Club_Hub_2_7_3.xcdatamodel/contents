@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="23605" systemVersion="24C101" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Keyword" syncable="YES">
+        <attribute name="idString" optional="YES" attributeType="String"/>
+        <attribute name="isStandard" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="usage" optional="YES" attributeType="String"/>
+        <relationship name="localizedKeywords_" toMany="YES" deletionRule="Cascade" destinationEntity="LocalizedKeyword" inverseName="keyword_" inverseEntity="LocalizedKeyword"/>
+        <relationship name="photographerKeywords_" toMany="YES" deletionRule="Cascade" destinationEntity="PhotographerKeyword" inverseName="keyword_" inverseEntity="PhotographerKeyword"/>
+    </entity>
+    <entity name="Language" representedClassName="Language" syncable="YES" codeGenerationType="class">
+        <attribute name="isoCode_" attributeType="String"/>
+        <attribute name="languageNameEN_" optional="YES" attributeType="String"/>
+        <relationship name="localizedKeywords_" toMany="YES" deletionRule="Cascade" destinationEntity="LocalizedKeyword" inverseName="language_" inverseEntity="LocalizedKeyword"/>
+        <relationship name="localizedRemarks_" toMany="YES" deletionRule="Cascade" destinationEntity="LocalizedRemark" inverseName="language_" inverseEntity="LocalizedRemark"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="isoCode_"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="Level0">
+        <userInfo/>
+    </entity>
+    <entity name="Level1">
+        <userInfo/>
+    </entity>
+    <entity name="Level2">
+        <userInfo/>
+    </entity>
+    <entity name="Level3">
+        <userInfo/>
+    </entity>
+    <entity name="LocalizedKeyword" syncable="YES">
+        <attribute name="localizedString" optional="YES" attributeType="String"/>
+        <relationship name="keyword_" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Keyword" inverseName="localizedKeywords_" inverseEntity="Keyword"/>
+        <relationship name="language_" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Language" inverseName="localizedKeywords_" inverseEntity="Language"/>
+    </entity>
+    <entity name="LocalizedRemark" representedClassName="LocalizedRemark" syncable="YES" codeGenerationType="class">
+        <attribute name="localizedString" optional="YES" attributeType="String"/>
+        <relationship name="language_" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Language" inverseName="localizedRemarks_" inverseEntity="Language"/>
+        <relationship name="organization_" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Organization" inverseName="localizedRemarks_" inverseEntity="Organization"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="language_"/>
+                <constraint value="organization_"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="MemberPortfolio" representedClassName="MemberPortfolio" elementID="Member" syncable="YES" codeGenerationType="class">
+        <attribute name="featuredImage" optional="YES" attributeType="URI" elementID="latestImage_"/>
+        <attribute name="featuredImageThumbnail" optional="YES" attributeType="URI" elementID="latestThumbURL"/>
+        <attribute name="fotobondNumber" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="isAdmin" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="isChairman" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="isFormerMember" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="isHonoraryMember" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="isMentor" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="isOther" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="isProspectiveMember" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="isSecretary" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="isTreasurer" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="isViceChairman" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="latestImageSeen" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="level3URL_" optional="YES" attributeType="URI" elementID="level3URL"/>
+        <attribute name="membershipEndDate_" optional="YES" attributeType="Date" usesScalarValueType="NO" elementID="dateIntervalEnd_"/>
+        <attribute name="membershipStartDate_" optional="YES" attributeType="Date" usesScalarValueType="NO" elementID="dateIntervalStart_"/>
+        <attribute name="removeMember" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" elementID="obsolete"/>
+        <relationship name="organization_" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Organization" inverseName="members_" inverseEntity="Organization" elementID="photoClub_"/>
+        <relationship name="photographer_" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Photographer" inverseName="memberships_" inverseEntity="Photographer"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="organization_"/>
+                <constraint value="photographer_"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="Organization" representedClassName="Organization" elementID="PhotoClub" syncable="YES" codeGenerationType="class">
+        <attribute name="contactEmail" optional="YES" attributeType="String"/>
+        <attribute name="fotobondNumber" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="fullName_" attributeType="String" defaultValueString="DefaultPhotoClubName" elementID="name_"/>
+        <attribute name="isMapScrollLocked" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES" elementID="isScrollLocked"/>
+        <attribute name="latitude_" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="level2URL_" optional="YES" attributeType="URI" elementID="memberListURL_"/>
+        <attribute name="localizedCountry_" attributeType="String" defaultValueString="Country?"/>
+        <attribute name="localizedTown_" attributeType="String" defaultValueString="Town?"/>
+        <attribute name="longitude_" optional="YES" attributeType="Double" usesScalarValueType="YES"/>
+        <attribute name="nickName_" optional="YES" attributeType="String" elementID="shortName_"/>
+        <attribute name="organizationWebsite" optional="YES" attributeType="URI" elementID="photoClubWebsite"/>
+        <attribute name="pinned" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="removeOrganization" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="town_" attributeType="String" defaultValueString="DefaultTown"/>
+        <attribute name="wikipedia" optional="YES" attributeType="URI"/>
+        <relationship name="localizedRemarks_" toMany="YES" deletionRule="Cascade" destinationEntity="LocalizedRemark" inverseName="organization_" inverseEntity="LocalizedRemark"/>
+        <relationship name="members_" toMany="YES" deletionRule="Cascade" destinationEntity="MemberPortfolio" inverseName="organization_" inverseEntity="MemberPortfolio"/>
+        <relationship name="organizationType_" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="OrganizationType" inverseName="organizations_" inverseEntity="OrganizationType"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="fullName_"/>
+                <constraint value="town_"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="OrganizationType" representedClassName="OrganizationType" syncable="YES" codeGenerationType="class">
+        <attribute name="organizationTypeName_" optional="YES" attributeType="String" elementID="name_"/>
+        <attribute name="unusedProperty" optional="YES" attributeType="String"/>
+        <relationship name="organizations_" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Organization" inverseName="organizationType_" inverseEntity="Organization"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="organizationTypeName_"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="Photographer" representedClassName="Photographer" syncable="YES" codeGenerationType="class">
+        <attribute name="bornDT" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="familyName_" attributeType="String" defaultValueString="DefaultPhotographerFamilyName"/>
+        <attribute name="givenName_" attributeType="String" defaultValueString="DefaultPhotographerGivenName"/>
+        <attribute name="infixName_" attributeType="String" defaultValueString=""/>
+        <attribute name="isDeceased" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="photographerImage" optional="YES" attributeType="URI"/>
+        <attribute name="photographerWebsite" optional="YES" attributeType="URI" elementID="photographerWebsite"/>
+        <relationship name="memberships_" toMany="YES" deletionRule="Cascade" destinationEntity="MemberPortfolio" inverseName="photographer_" inverseEntity="MemberPortfolio"/>
+        <relationship name="photographerKeywords_" toMany="YES" deletionRule="Cascade" destinationEntity="PhotographerKeyword" inverseName="photographer_" inverseEntity="PhotographerKeyword"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="familyName_"/>
+                <constraint value="infixName_"/>
+                <constraint value="givenName_"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="PhotographerKeyword" syncable="YES">
+        <relationship name="keyword_" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Keyword" inverseName="photographerKeywords_" inverseEntity="Keyword"/>
+        <relationship name="photographer_" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Photographer" inverseName="photographerKeywords_" inverseEntity="Photographer"/>
+    </entity>
+    <configuration name="Level0">
+        <memberEntity name="Language"/>
+        <memberEntity name="Keyword"/>
+        <memberEntity name="LocalizedKeyword"/>
+        <memberEntity name="OrganizationType"/>
+        <memberEntity name="Level0"/>
+    </configuration>
+    <configuration name="Level1">
+        <memberEntity name="Organization"/>
+        <memberEntity name="LocalizedRemark"/>
+        <memberEntity name="Level1"/>
+    </configuration>
+    <configuration name="Level2">
+        <memberEntity name="MemberPortfolio"/>
+        <memberEntity name="PhotographerKeyword"/>
+        <memberEntity name="Photographer"/>
+        <memberEntity name="Level2"/>
+    </configuration>
+    <configuration name="Level3">
+        <memberEntity name="Level3"/>
+    </configuration>
+</model>
