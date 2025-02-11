@@ -316,7 +316,7 @@ Plus liefst (niet verplicht) een enkele zin over iets wat er speciaal is aan de 
 
 <details><summary>Klik om uit te klappen</summary></p>
 Hier is een apart stappenplan met instructies voor: [tinyurl.com/Level2aanmaken](https://tinyurl.com/Level2aanmaken).
-Er is ook een bijbehorende engelstalige versie hiervan: [tinyurl.com/Level2aanmaken](https://tinyurl.com/Level2creation).
+Er is ook een engelstalige versie hiervan: [tinyurl.com/Level2aanmaken](https://tinyurl.com/Level2creation).
 </details></p>
 
 ### Hoe krijg ik een Level 2 bestand op mijn club website?
