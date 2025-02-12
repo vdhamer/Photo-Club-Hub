@@ -74,6 +74,9 @@
             },
             "optional": {
                 "level3URL": "http://www.vdhamer.com/fgWaalre/Bart_van_Stekelenburg/",
+                "status": {
+                    "isFormerMember": true
+                },
                 "nlSpecific": {
                     "fotobondNumber": 1634041
                 }
@@ -150,6 +153,9 @@
             },
             "optional": {
                 "level3URL": "http://www.vdhamer.com/fgWaalre/Conny_Klessens/",
+                "status": {
+                    "isFormerMember": true
+                },
                 "nlSpecific": {
                     "fotobondNumber": 1634065
                 }
@@ -398,6 +404,17 @@
 
         {
             "name": {
+                "givenName": "Janneke",
+                "infixName": "",
+                "familyName": "Sinot"
+            },
+            "optional": {
+                "level3URL": "http://www.vdHamer.com/fgWaalre/Janneke_Sinot/"
+            }
+        },
+
+        {
+            "name": {
                 "givenName": "Jet",
                 "infixName": "",
                 "familyName": "Hazelzet"
@@ -564,7 +581,10 @@
                 "familyName": "Obbing"
             },
             "optional": {
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Marijelle_Obbing/"
+                "level3URL": "http://www.vdHamer.com/fgWaalre/Marijelle_Obbing/",
+                "status": {
+                    "isFormerMember": true
+                }
             }
         },
 
@@ -615,6 +635,17 @@
                 "nlSpecific": {
                     "fotobondNumber": 1634005
                 }
+            }
+        },
+
+        {
+            "name": {
+                "givenName": "Monique",
+                "infixName": "",
+                "familyName": "Houben"
+            },
+            "optional": {
+                "level3URL": "http://www.vdHamer.com/fgWaalre/Janneke_Sinot/"
             }
         },
 

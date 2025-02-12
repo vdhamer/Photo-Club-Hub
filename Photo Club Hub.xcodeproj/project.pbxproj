@@ -203,7 +203,6 @@
 		D0AEDF3C2BBE0CD1003FD250 /* Photo_Club_Hub_2_5_7.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_5_7.xcdatamodel; sourceTree = "<group>"; };
 		D0B32BB22C15C51A009FF8E7 /* AppVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVersion.swift; sourceTree = "<group>"; };
 		D0BAB01C2A76CED300387E63 /* URLSession+synchronous.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+synchronous.swift"; sourceTree = "<group>"; };
-		D0BF26FB2CFA218000DA2CB9 /* 241113_Fotoclubs_Brabant_Oost.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = 241113_Fotoclubs_Brabant_Oost.xlsx; sourceTree = "<group>"; };
 		D0BF26FC2CFA218000DA2CB9 /* fcBellusImago.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fcBellusImago.level2.json; sourceTree = "<group>"; };
 		D0BF26FD2CFA218000DA2CB9 /* fgAnders.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fgAnders.level2.json; sourceTree = "<group>"; };
 		D0BF26FE2CFA218000DA2CB9 /* fgDeGender.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fgDeGender.level2.json; sourceTree = "<group>"; };
@@ -588,7 +587,6 @@
 				D066F0F72D0F4394002C6A2B /* fgDeGenderLeden.xlsx */,
 				D07463E52CFB5EFA00F48EB2 /* root.level1.json */,
 				D066F0F82D0F461F002C6A2B /* level0.json */,
-				D0BF26FB2CFA218000DA2CB9 /* 241113_Fotoclubs_Brabant_Oost.xlsx */,
 				D0BF26FC2CFA218000DA2CB9 /* fcBellusImago.level2.json */,
 				D0BF26FD2CFA218000DA2CB9 /* fgAnders.level2.json */,
 				D0BF26FE2CFA218000DA2CB9 /* fgDeGender.level2.json */,
