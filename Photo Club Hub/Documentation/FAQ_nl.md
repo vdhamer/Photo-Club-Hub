@@ -123,7 +123,7 @@ Er staan momentaal alleen enkele bekende Fotomusea in bijvoorbeeld Duitsland, VS
 ### Zijn er kosten aan verbonden?
 
 <details><summary>Klik om uit te klappen</summary></p>
-Niet of nauwelijk. De Photo Club Hub en Photo Club Hub HTML software is gratis en blijft gratis.
+Niet of nauwelijks. De Photo Club Hub en Photo Club Hub HTML software is gratis en blijft gratis.
 En zijn geen kosten voor centrale opslag of rekenkracht: er is geen noemenswaardige centrale infrastructuur.</p>
 
 Als we ervan uitgaan dat een club vrijwel altijd een website heeft en een lid heeft met Lightroom Classic, dan blijft
