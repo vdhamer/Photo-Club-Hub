@@ -67,7 +67,7 @@ Wat het weer minder aantrekkelijk maakt om de site bij te werken. Wat leidt tot 
 De kleine websites van 10 jaar geleden kwijnen dus weg. Dit kan je oplossen door 
 - het nieuws van meerdere clubs op 1 plek te bundelen zodat er altijd wel wat nieuws is
 - veranderingen makkelijk vindbaar te maken (b.v. nieuwste foto per fotograaf tonen)
-- eventueel zelfs actief melden als er relevant nieuws binnengekomen is (uiteraard instelbaar).
+- optie om eventueel zelfs actief melden als er relevant nieuws binnengekomen is (instelbare notificaties).
 </details></p>
 
 ### Hoe verschilt dit van social media zoals Facebook of Instagram?
