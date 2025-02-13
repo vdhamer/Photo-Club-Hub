@@ -139,7 +139,9 @@ Er kan ook gekeken worden of de plug-in kosten voor dit doel eenmalig centraal a
 
 <details><summary>Klik om uit te klappen</summary></p>
 De app is "open". Je kunt zelf een club toevoegen. Hier komen stapsgewijs instructies voor.
-De vrijwel volledige lijst met clubs in Brabant-Oost staat erin als demo en om het proces op te starten.
+    
+De vrijwel volledige lijst met clubs in Brabant-Oost staat erin als demo en om het proces op te starten:
+dat scheel alvast 1 van de 3 stappen.
 </details></p>
 
 ### Wie bepaalt welke foto's in de app staan?
