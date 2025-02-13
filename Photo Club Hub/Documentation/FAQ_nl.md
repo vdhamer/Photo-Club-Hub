@@ -1,3 +1,5 @@
+In een toekomstige versie worden de vragen mogelijk opgedeeld naar doelgroep: clubbestuur, gebruikers, gegevensbeheerders.
+
 ### Wat doet de app?
 
 <details><summary>Klik om uit te klappen</summary></p>
@@ -138,7 +140,7 @@ Er kan ook gekeken worden of de plug-in kosten voor dit doel eenmalig centraal a
 ### Waarom staat mijn club niet in de app?
 
 <details><summary>Klik om uit te klappen</summary></p>
-De app is "open". Je kunt zelf een club toevoegen. Hier komen stapsgewijs instructies voor.
+De app is "open". Je kunt zelf een club toevoegen. Hier komen stapsgewijs instructies voor.</p>
     
 De vrijwel volledige lijst met clubs in Brabant-Oost staat erin als demo en om het proces op te starten:
 dat scheel alvast 1 van de 3 stappen.
