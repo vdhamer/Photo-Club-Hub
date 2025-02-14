@@ -1,3 +1,16 @@
+### 2.7.3 (GitHub commit ???????) ??-02-25
+
+Preferences screen
+
+Code Maintenance
+* Aligned refreshFirstImage() code to make it closer to Photo Club HTML code.
+
+Data Maintenance
+
+This build #4637 was made using Xcode 16.2
+
+---------------------------------------------------------------------------
+
 ### 2.7.2 (GitHub commit 50334f9) 10-02-25
 
 Preferences screen
