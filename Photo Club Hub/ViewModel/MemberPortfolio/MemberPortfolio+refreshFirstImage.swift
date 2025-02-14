@@ -10,30 +10,38 @@ import RegexBuilder // for OneOrMore, Capture, etc
 
 extension MemberPortfolio {
 
+    private static let clubsUsingJuiceBox: [OrganizationID] = [ // careful: ID strings have to be accurate to match
+        OrganizationID(fullName: "Fotogroep Waalre", town: "Waalre"),
+        OrganizationID(fullName: "Fotogroep de Gender", town: "Eindhoven")
+    ]
+
     func refreshFirstImage() {
-        let clubsUsingJuiceBox: [OrganizationID] = [ // strings have to be precise ;-)
-            OrganizationID(fullName: "Fotogroep Waalre", town: "Waalre"),
-            OrganizationID(fullName: "Fotogroep de Gender", town: "Eindhoven")
-        ]
-        guard clubsUsingJuiceBox.contains(organization.id) else { return }
-        let organizationTown: String = self.organization.fullNameTown
+    	// does this club use JuicBox Pro xml files?
 
-        if let urlIndex = URL(string: self.level3URL.absoluteString + "config.xml") { // assume JuiceBox Pro
-            ifDebugPrint("\(organizationTown): starting refreshFirstImage() \(urlIndex.absoluteString) in background")
+        guard MemberPortfolio.clubsUsingJuiceBox.contains(organization.id) else { return }
+        guard let urlOfImageIndex = URL(string: self.level3URL.absoluteString + "config.xml") else { return }
 
-            // swiftlint:disable:next large_tuple
-            var results: (utfContent: Data?, urlResponse: URLResponse?, error: (any Error)?)? = (nil, nil, nil)
-            results = URLSession.shared.synchronousDataTask(from: urlIndex)
-            guard results != nil && results!.utfContent != nil else {
-                print("\(organizationTown): ERROR - loading refreshFirstImage() \(urlIndex.absoluteString) failed")
-                return
-            }
+        // assumes JuiceBox Pro is used
+        ifDebugPrint("""
+                     \(self.organization.fullNameTown): starting refreshFirstImage() \
+                     \(urlOfImageIndex.absoluteString) in background
+                     """)
 
-            let xmlContent = String(data: results!.utfContent! as Data,
-                                    encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue))!
-            parseXMLContent(xmlContent: xmlContent, member: self)
-            ifDebugPrint("\(organizationTown): completed refreshFirstImage() \(urlIndex.absoluteString)")
+        // swiftlint:disable:next large_tuple
+        var results: (utfContent: Data?, urlResponse: URLResponse?, error: (any Error)?)? = (nil, nil, nil)
+        results = URLSession.shared.synchronousDataTask(from: urlOfImageIndex)
+        guard results != nil && results!.utfContent != nil else {
+            print("""
+                  \(organization.fullNameTown): ERROR - \
+                  loading refreshFirstImage() \(urlOfImageIndex.absoluteString) failed
+                  """)
+            return
         }
+
+        let xmlContent = String(data: results!.utfContent! as Data,
+                                encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue))!
+        parseXMLContent(xmlContent: xmlContent, member: self)
+        ifDebugPrint("\(organization.fullNameTown): completed refreshFirstImage() \(urlOfImageIndex.absoluteString)")
     }
 
     fileprivate func parseXMLContent(xmlContent: String, member: MemberPortfolio) { // sample data
