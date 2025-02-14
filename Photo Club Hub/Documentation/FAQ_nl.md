@@ -1,3 +1,5 @@
+In een toekomstige versie worden de vragen mogelijk opgedeeld naar doelgroep: clubbestuur, gebruikers, gegevensbeheerders.
+
 ### Wat doet de app?
 
 <details><summary>Klik om uit te klappen</summary></p>
@@ -64,10 +66,11 @@ Maar werkt bij relatief kleine sites niet goed: om op de hoogte te blijven moet 
 aflopen - en vaak blijkt er niets veranderd te zijn. Het gevolg is weinig bezoekers (behalve rond de expo). 
 Wat het weer minder aantrekkelijk maakt om de site bij te werken. Wat leidt tot nog minder bezoekers.</p>
 
-De kleine websites van 10 jaar geleden kwijnen dus weg. Dit kan je oplossen door 
+De klassieke "statische" websites kwijnen worden qua aandacht vervangen door grotere "dynamische" sites.
+Dit kan je in dit geval oplossen door 
 - het nieuws van meerdere clubs op 1 plek te bundelen zodat er altijd wel wat nieuws is
 - veranderingen makkelijk vindbaar te maken (b.v. nieuwste foto per fotograaf tonen)
-- eventueel zelfs actief melden als er relevant nieuws binnengekomen is (uiteraard instelbaar).
+- optie om eventueel zelfs actief melden als er relevant nieuws binnengekomen is (instelbare notificaties).
 </details></p>
 
 ### Hoe verschilt dit van social media zoals Facebook of Instagram?
@@ -122,7 +125,7 @@ Er staan momentaal alleen enkele bekende Fotomusea in bijvoorbeeld Duitsland, VS
 ### Zijn er kosten aan verbonden?
 
 <details><summary>Klik om uit te klappen</summary></p>
-Niet of nauwelijk. De Photo Club Hub en Photo Club Hub HTML software is gratis en blijft gratis.
+Niet of nauwelijks. De Photo Club Hub en Photo Club Hub HTML software is gratis en blijft gratis.
 En zijn geen kosten voor centrale opslag of rekenkracht: er is geen noemenswaardige centrale infrastructuur.</p>
 
 Als we ervan uitgaan dat een club vrijwel altijd een website heeft en een lid heeft met Lightroom Classic, dan blijft
@@ -137,8 +140,10 @@ Er kan ook gekeken worden of de plug-in kosten voor dit doel eenmalig centraal a
 ### Waarom staat mijn club niet in de app?
 
 <details><summary>Klik om uit te klappen</summary></p>
-De app is "open". Je kunt zelf een club toevoegen. Hier komen stapsgewijs instructies voor.
-De vrijwel volledige lijst met clubs in Brabant-Oost staat erin als demo en om het proces op te starten.
+De app is "open". Je kunt zelf een club toevoegen. Hier komen stapsgewijs instructies voor.</p>
+    
+De vrijwel volledige lijst met clubs in Brabant-Oost staat erin als demo en om het proces op te starten:
+dat scheel alvast 1 van de 3 stappen.
 </details></p>
 
 ### Wie bepaalt welke foto's in de app staan?
