@@ -4,6 +4,7 @@ Preferences screen
 
 Code Maintenance
 * Aligned refreshFirstImage() code to make it closer to Photo Club HTML code.
+* Moved deleteAllCoreDataObjects() to a new file Model.swift
 
 Data Maintenance
 
