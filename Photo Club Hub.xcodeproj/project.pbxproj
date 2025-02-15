@@ -39,6 +39,7 @@
 		D0621E812AE2D7DE000FFADB /* MemberPortfolio+roles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0621E802AE2D7DE000FFADB /* MemberPortfolio+roles.swift */; };
 		D0621E852AE2E085000FFADB /* MemberPortfolio+updating.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0621E842AE2E085000FFADB /* MemberPortfolio+updating.swift */; };
 		D0621E892AE2E47B000FFADB /* MemberPortfolio+refreshFirstImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0621E882AE2E47B000FFADB /* MemberPortfolio+refreshFirstImage.swift */; };
+		D06B70E42D5FE9A700B0DECB /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06B70E32D5FE9A700B0DECB /* Model.swift */; };
 		D06BE9332A4F870B0055B3B1 /* ifDebugUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06BE9322A4F870B0055B3B1 /* ifDebugUtils.swift */; };
 		D06D08DE2C28835D00872BC2 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D0CEAECE2B2E1134005AE47D /* Settings.bundle */; };
 		D072D5E72D333E7500EA88DD /* XampleMinMembersProvider+insertOnlineMemberData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D072D5E52D333E7500EA88DD /* XampleMinMembersProvider+insertOnlineMemberData.swift */; };
@@ -149,6 +150,7 @@
 		D06588EA2BAE5071000FD7F3 /* preludeScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = preludeScreen.png; sourceTree = "<group>"; };
 		D066F0F72D0F4394002C6A2B /* fgDeGenderLeden.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = fgDeGenderLeden.xlsx; sourceTree = "<group>"; };
 		D066F0F82D0F461F002C6A2B /* level0.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = level0.json; sourceTree = "<group>"; };
+		D06B70E32D5FE9A700B0DECB /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		D06BE9322A4F870B0055B3B1 /* ifDebugUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ifDebugUtils.swift; sourceTree = "<group>"; };
 		D06E0DCA2C822E8900273AE9 /* Photo Club Hub.pptx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Photo Club Hub.pptx"; sourceTree = "<group>"; };
 		D06E91E72B939C1B00D05BC0 /* Photo_Club_Hub_2_5_4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_5_4.xcdatamodel; sourceTree = "<group>"; };
@@ -479,6 +481,7 @@
 				D0ADF4AD27922DCA00535432 /* MemberRolesAndStatus.swift */,
 				D0D18C77296E1F6A00B334DB /* OrganizationIdPlus.swift */,
 				D0B32BB22C15C51A009FF8E7 /* AppVersion.swift */,
+				D06B70E32D5FE9A700B0DECB /* Model.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -883,6 +886,7 @@
 				D072D5E72D333E7500EA88DD /* XampleMinMembersProvider+insertOnlineMemberData.swift in Sources */,
 				D072D5E82D333E7500EA88DD /* XampleMinMembersProvider.swift in Sources */,
 				D0621E892AE2E47B000FFADB /* MemberPortfolio+refreshFirstImage.swift in Sources */,
+				D06B70E42D5FE9A700B0DECB /* Model.swift in Sources */,
 				D09816EA2D484985009D22FE /* ReadmeSection.swift in Sources */,
 				D0831A20277F72270049AB84 /* FilteredOrganizationView.swift in Sources */,
 				D05124852C42BE2D00D94B81 /* Level2JsonReader.swift in Sources */,

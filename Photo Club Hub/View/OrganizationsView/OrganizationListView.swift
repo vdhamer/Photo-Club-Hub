@@ -67,7 +67,7 @@ struct OrganizationListView: View {
             if Settings.dataResetPending272 {
                 print("dataResetPending272 flag reset from true to false")
             }
-            PhotoClubHubApp.deleteAllCoreDataObjects()
+            Model.deleteAllCoreDataObjects()
             PhotoClubHubApp.loadClubsAndMembers() // carefull: runs asynchronously
         }
         .task { // will be aborted when ScrollView disappears
