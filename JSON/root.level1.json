@@ -1378,6 +1378,33 @@
 
         {
             "idPlus": {
+                "town": "Sint-Oedenrode",
+                "fullName": "Fotogroep de Vriendschap",
+                "nickName": "fgDeVriendschap"
+            },
+            "coordinates": {
+                "latitude": 51.58067,
+                "longitude": 5.40911
+            },
+            "optional": {
+                "website": "https://www.fgdevriendschap.com",
+                "level2URL": "https://www.example.com/fgDeVriendschap.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "The club focusses on landscapes and nature and has up to 25 members."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "De nadruk van de club is natuur en landschappen. Het maximale ledental is 25."
+                    }
+                ]
+            }
+        },
+
+
+        {
+            "idPlus": {
                 "town": "Uden",
                 "fullName": "Udense Amateurfotografen F/8",
                 "nickName": "f/8"

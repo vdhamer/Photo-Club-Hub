@@ -7,6 +7,7 @@ Code Maintenance
 * Moved deleteAllCoreDataObjects() to a new file Model.swift
 
 Data Maintenance
+* Added fgDeVriendschap (near Sint-Oedenrode)
 
 This build #4637 was made using Xcode 16.2
 
