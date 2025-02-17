@@ -108,6 +108,9 @@
             },
             "optional": {
                 "level3URL": "http://www.vdhamer.com/fgWaalre/Bram_van_den_Berge/",
+                "roles": {
+                    "isAdmin": true
+                },
                 "nlSpecific": {
                     "fotobondNumber": 1634007
                 }
@@ -323,7 +326,7 @@
                 "website": "https://henriettevanekert.nl/",
                 "level3URL": "http://www.vdhamer.com/fgWaalre/Henriette_van_Ekert/",
                 "roles": {
-                    "isAdmin": true
+                    "isAdmin": false
                 },
                 "nlSpecific": {
                     "fotobondNumber": 1634063
