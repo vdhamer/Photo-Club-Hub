@@ -2,30 +2,31 @@
     "clubs": [
         {
             "idPlus": {
-                "town": "Eindhoven",
-                "fullName": "Fotogroep de Gender",
-                "nickName": "FG deGender"
+                "town": "Amsterdam",
+                "fullName": "Xample Club With Maximal Data",
+                "nickName": "XampleMax"
             },
             "optional": {
                 "coordinates": {
-                    "latitude": 51.42398,
-                    "longitude": 5.45010
+                    "latitude": 52.37312,
+                    "longitude": 4.89237
                 },
-                "website": "https://www.fcdegender.nl",
-                "wikipedia": "https://nl.wikipedia.org/wiki/Gender_(beek)",
-                "level2URL": "https://www.example.com/fgDeGender.level2.json",
+                "website": "https://www.xamplemax.nl",
+                "wikipedia": "https://en.wikipedia.org/wiki/Rotterdam_City_Hall",
+                "level2URL": "https://www.xamplemax.nl/XampleMax.level2.json",
                 "remark": [
                     {
                         "language": "EN",
-                        "value": "Note that Fotogroep de Gender is abbreviated fcdegender.nl for historical reasons."
+                        "value": "A remark here about the club will overrule any remark provided in level1.json file."
                     },
                     {
                         "language": "NL",
-                        "value": "Opgelet: Fotogroep de Gender heeft als domeinnaam fcdegender.nl (fc = Fotoclub)."
+                        "value": "Deze beschrijving van de club vervangt een eventuele beschrijving in root.level1.json"
                     }
                 ],
+                "contactEmail": "admin@xamplemax.nl",
                 "nlSpecific": {
-                    "fotobondNumber": 1620
+                    "fotobondNumber": 9999
                 }
             }
         }
@@ -41,7 +42,7 @@
                 "latitude": 40.739278,
                 "longitude": -73.986722
             }
-            "optional:" {
+            "optional": {
                 "website": "https://www.fotografiska.com/nyc/",
                 "wikipedia": "https://en.wikipedia.org/wiki/Fotografiska_New_York",
                 "remark": [
