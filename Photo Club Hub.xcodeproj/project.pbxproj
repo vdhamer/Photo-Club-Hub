@@ -521,7 +521,7 @@
 				D07A1E2E28314EA600C77F66 /* SwiftUIEnvironmentValues.png */,
 				D01DFAA627E778BD007BABFA /* offsets.md */,
 				D04A2B112AC0958C003ED113 /* LineCount.xlsx */,
-				D0A958632D596C3300658373 /* Website_status_PPT */,
+				D0A958632D596C3300658373 /* Website_Status_PPT */,
 			);
 			path = Documentation;
 			sourceTree = "<group>";
@@ -551,11 +551,11 @@
 			path = SinglePortfolioLinkView;
 			sourceTree = "<group>";
 		};
-		D0A958632D596C3300658373 /* Website_status_PPT */ = {
+		D0A958632D596C3300658373 /* Website_Status_PPT */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Website_status_PPT;
+			path = Website_Status_PPT;
 			sourceTree = "<group>";
 		};
 		D0AE1B7327889D6700E0100E /* OrganizationsView */ = {
