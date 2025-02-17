@@ -141,7 +141,7 @@ iOSInjectionProject/
 ## Powerpoint
 
 ~$*.pptx
-**/Website_status_PPT/
+**/Website_status_PPT/*.pptx
 
 ## Excel
 
