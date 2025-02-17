@@ -2,17 +2,19 @@
     "clubs": [
         {
             "idPlus": {
-                "town": "Eindhoven",
-                "fullName": "Fotogroep de Gender",
-                "nickName": "FG deGender"
+                "town": "Rotterdam",
+                "fullName": "Xample Club With Minimal Data",
+                "nickName": "XampleMin"
             },
             "optional": {
                 "coordinates": {
-                    "latitude": 51.42398,
-                    "longitude": 5.45010
-                }
+                    "latitude": 51.92275,
+                    "longitude": 4.47972
+                },
+                "level2URL": "https://www.example.com/XampleMin.level2.json"
             }
-        },
+        }
+    ],
     "museums": [
         {
             "idPlus": {

@@ -9,6 +9,7 @@ Code Maintenance
 Data Maintenance
 * Added fgDeVriendschap (near Sint-Oedenrode)
 * Fixed level2 url for fgDeGender in root.level1.json file (.com -> .nl)
+* Updated xampleMin.level1.json and xampleMax.level1.json sample files
 
 This build #4637 was made using Xcode 16.2
 
