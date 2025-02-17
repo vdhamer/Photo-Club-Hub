@@ -212,8 +212,6 @@
 		D0C53BDC2ABF3ADF000722A1 /* PersonName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonName.swift; sourceTree = "<group>"; };
 		D0C6E95429577921001E5CE9 /* DebugPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugPanel.swift; sourceTree = "<group>"; };
 		D0C8E3A12BB81B4A00348D97 /* ItemFilterStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemFilterStatsView.swift; sourceTree = "<group>"; };
-		D0CD0ADD2D33E6B0006C1CFA /* xampleMax.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = xampleMax.level1.json; sourceTree = "<group>"; };
-		D0CD0ADE2D33E6B0006C1CFA /* xampleMin.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = xampleMin.level1.json; sourceTree = "<group>"; };
 		D0CEAECE2B2E1134005AE47D /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		D0CEAED32B2E5847005AE47D /* Photo_Club_Hub_2_5_3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_5_3.xcdatamodel; sourceTree = "<group>"; };
 		D0D18C77296E1F6A00B334DB /* OrganizationIdPlus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationIdPlus.swift; sourceTree = "<group>"; };
@@ -594,8 +592,6 @@
 				D0BF26FD2CFA218000DA2CB9 /* fgAnders.level2.json */,
 				D0BF26FE2CFA218000DA2CB9 /* fgDeGender.level2.json */,
 				D0BF26FF2CFA218000DA2CB9 /* fgWaalre.level2.json */,
-				D0CD0ADE2D33E6B0006C1CFA /* xampleMin.level1.json */,
-				D0CD0ADD2D33E6B0006C1CFA /* xampleMax.level1.json */,
 				D072D5E22D333B4500EA88DD /* xampleMin.level2.json */,
 				D054173D2D31DE6B00A2A579 /* xampleMax.level2.json */,
 			);
