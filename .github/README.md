@@ -555,7 +555,7 @@ You may want to skip reading about `Level 0` on a first reading, as it only desc
 Keywords apply to the photographer in general, and not to the photographer's membership of a particular club.
 If multiple clubs assign keywords to the same photographer, the lists are automatically merged ("union"). 
     - `idString` only serves to identify a keyword. Preferably use the English version of the keyword - but a text like "Keyword #123" will also work.
-    - `localizations` is a list of translations of the keyword into one or more languages.
+    - `name` is a list of translations of the keyword into one or more languages.
         - `language` contains the isoCode (typically 2 letters) for the language.
 Use the 3 letter code only for uncommon languages for which no 2 letter code exists.
 The codes must match the standard [ISO 639 list](https://www.loc.gov/standards/iso639-2/php/English_list.php).
