@@ -553,7 +553,7 @@ You may want to skip reading about `Level 0` on a first reading, as it only desc
 
 - `keywords` lists the keywords that can be linked to one or more `photographers` to describe their main genres.
 Keywords apply to the photographer in general, and not to the photographer's membership of a particular club.
-If multiple clubs assign keywords to the same photographer, the lists are automatically merged in the app ("union"). 
+If multiple clubs assign different keywords to the same photographer, the lists are automatically merged in the app ("union"). 
     - `idString` only serves to identify a keyword. Preferably use the English version of the keyword - but a text like "Keyword #123" will also work.
     - `name` is a list of translations of the keyword into one or more languages.
         - `language` contains the isoCode (typically 2 letters) for the language.
