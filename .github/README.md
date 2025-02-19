@@ -567,7 +567,6 @@ Additional translations are fine, and will be used where appropriate.
 - `languages` lists the language codes used for localized photographer `keywords` and organization `remarks`.
     - `isoCode` is the 2 (ISO 639-1) or 3 letter (ISO 639-2) language code for the language. Use the 2 letter codes when available.
     - `languageNameEN` is the name of the language in English. Example: "Chinese". So this can tell you that ZH represents Chinese.
-We expect that we can translate the language's name to other languages programmatically, should that be necessary.
 </details></ul>
 
 <ul><details><Summary>Optional Level 0 fields (click to expand)</Summary></p>
