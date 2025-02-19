@@ -37,7 +37,7 @@
         <relationship name="language_" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Language" inverseName="localizedKeywords_" inverseEntity="Language"/>
     </entity>
     <entity name="LocalizedRemark" representedClassName="LocalizedRemark" syncable="YES" codeGenerationType="class">
-        <attribute name="name" attributeType="String"/>
+        <attribute name="localizedString" attributeType="String"/>
         <relationship name="language_" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Language" inverseName="localizedRemarks_" inverseEntity="Language"/>
         <relationship name="organization_" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Organization" inverseName="localizedRemarks_" inverseEntity="Organization"/>
         <uniquenessConstraints>
