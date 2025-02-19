@@ -512,7 +512,7 @@ You may want to skip reading about `Level 0` on a first reading, as it only desc
     "keywords": [
         {
             "idString": "Landscape",
-            "localizations": [
+            "name": [
                 { "language": "EN", "localizedString": "Landscape" },
                 { "language": "NL", "localizedString": "Landschap" },
                 { "language": "AR", "localizedString": "منظر جمالي" }
@@ -520,12 +520,14 @@ You may want to skip reading about `Level 0` on a first reading, as it only desc
         },
         {
             "idString": "Black & White",
-            "localizations": [
+            "name": [
                 { "language": "EN", "localizedString": "Black & White" },
                 { "language": "NL", "localizedString": "Zwart-wit" }
             ]
             "optional": {
-                "usage": "Grayscale or monochrome images"
+                description": [
+                    { "language": "EN", "localizedString": "Grayscale, sepia or other monochrome images" }
+                ]
             }
         },
     ],
