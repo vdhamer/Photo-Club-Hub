@@ -360,15 +360,15 @@ Design detail: Search Bar filtering is done in the app's user interface and not 
 
 </p>Photographers can be associated with keywords describing what kind of photography they are mainly known for.
 Examples: "Black & White" or "Landscape". Because these keywords can serve to Search for photographers with similar
-interests, they keywords are standardized (e.g. consistently use "Black & White" rather than partly using "B&W" or "Black and White"). 
+interests, they keywords are standardized (e.g. consistently use "Black & White" rather than a mix with "B&W" or "Black and White"). 
 </p>
 
 <details><summary>Details on Keyword Standardization (click to expand)</summary></p>
 
 Standardization also helps in displaying the texts in multiple languages: the translations are only defined
-in one local (`Level 0`). This means that if the Sierra Club associates their member Ansel Adams with "Black & White"
-they automatically get translations of "Black & White".
-If the app is thus set to Dutch, the user then sees "Zwart-Wit" rather than "Black & White".
+in one locale (`Level 0`). This means that if the Sierra Club associates their member Ansel Adams with "Black & White"
+they automatically get translations of "Black & White" into certain languages:
+if the app is thus set to Dutch, the user sees "Zwart-Wit" rather than "Black & White".
 
 Information on how to define keywords per photographer and how to define standardized keywords can be found in
 the explanations about adding `Level 2` and `Level 0` data respectively.
