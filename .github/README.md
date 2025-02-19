@@ -562,7 +562,7 @@ The codes must match the standard [ISO 639 list](https://www.loc.gov/standards/i
 It is important to use the correct values, because `isoCode` is compared to the preference codes provided by iOS.
 Example: "DE" is "German".
         - `localizedString` contains the translation of the keyword into the indicated language.
-If possible provide translations for all languages the app supports (EN and NL).
+If possible provide translations for at least the languages that the app currently supports (EN and NL).
 Additional translations are fine, and will be used where appropriate.
 - `languages` lists the language codes used for localized photographer `keywords` and organization `remarks`.
     - `isoCode` is the 2 (ISO 639-1) or 3 letter (ISO 639-2) language code for the language. Use the 2 letter codes when available.
