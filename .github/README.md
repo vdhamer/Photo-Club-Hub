@@ -36,7 +36,7 @@
             <li><a href="#website-generation">Website Generation</a></li>
             <li><a href="#searchable-lists">Searchable Lists</a></li>
             <li><a href="#photo-museums">Photo Museums</a></li>
-            <li><a href="#photographer-keywords-in-progress">Photographer Keywords (in progress)</a></li>
+            <li><a href="#photographer-keywords-in-progress">Photographer Keywords</a></li>
             <li><a href="#pull-down-to-refresh">Pull down to Refresh</a></li>
             <li><a href="#fancy-scrolling">Fancy scrolling</a></li>
         </ul>
@@ -45,7 +45,7 @@
         <ul>
             <li><a href="#levels">Levels</a></li>
             <li><a href="#levels-and-screens">Levels and Screens</a></li>
-            <li><a href="#level-0-keywords-and-languages-in-progress">Level 0. Keywords and Languages (in progress)</a></li>
+            <li><a href="#level-0-keywords-and-languages">Level 0. Keywords and Languages</a></li>
             <li><a href="#level-1-adding-clubs">Level 1. Adding Clubs</a></li>
             <li><a href="#level-2-adding-members">Level 2. Adding Members</a></li>
             <li><a href="#level-3-adding-images">Level 3. Adding Images</a></li>
@@ -356,22 +356,21 @@ The text you type inside the search bar is matched against key fields for the re
 Design detail: Search Bar filtering is done in the app's user interface and not by the CoreData database.
 </details>
 
-### Photographer Keywords (in progress)
+### Photographer Keywords
 
 </p>Photographers can be associated with keywords describing what kind of photography they are mainly known for.
 Examples: "Black & White" or "Landscape". Because these keywords can serve to Search for photographers with similar
-interests, they keywords are standardized (e.g. consistently use "Black & White" rather than partly using "B&W" or "Black and White"). 
+interests, they keywords are standardized (e.g. consistently use "Black & White" rather than a mix with "B&W" or "Black and White"). 
 </p>
 
 <details><summary>Details on Keyword Standardization (click to expand)</summary></p>
 
-Standardization also helps in displaying the texts in multiple languages: the translations are only defined
-in one local (`Level 0`). This means that if the Sierra Club associates their member Ansel Adams with "Black & White"
-they automatically get translations of "Black & White".
-If the app is thus set to Dutch, the user then sees "Zwart-Wit" rather than "Black & White".
+Standardization also helps in displaying the texts in multiple languages. The translations are defined in a single file named `Level 0`. This means that if the Sierra Club associates their member Ansel Adams with "Black & White"
+they automatically get translations of "Black & White" into certain languages:
+if the app is thus set to Dutch, the user sees "Zwart-Wit" rather than "Black & White".
 
 Information on how to define keywords per photographer and how to define standardized keywords can be found in
-the explanations about adding `Level 2` and `Level 0` data respectively.
+the explanations about adding `Level 2` data and maintaining `Level 0` data respectively.
 </details>
 
 ### Photo Museums
@@ -501,10 +500,10 @@ Technically different club members don't need to reach `Level 3` at the same tim
 one member, then expand to all members, and later add recent former members if you want. 
 Attempting to view a portfolio of a club member without an available portfolio will display a red built-in placeholder image.
 
-### Level 0. Keywords and Languages (in progress)
+### Level 0. Keywords and Languages
 
 `Level 0` contains standardized keywords, standardized languages, and the translations of keywords into these languages.
-You may want to skip reading about `Level 0` on a first reading, as it only describes supporting data rather than key app data.
+You may want to skip reading about `Level 0` on a first reading, as it only describes data needed to support an optional feature.
 
 <ul><details><Summary>Level 0 example (click to expand)</Summary>
 
@@ -513,7 +512,7 @@ You may want to skip reading about `Level 0` on a first reading, as it only desc
     "keywords": [
         {
             "idString": "Landscape",
-            "localizations": [
+            "name": [
                 { "language": "EN", "localizedString": "Landscape" },
                 { "language": "NL", "localizedString": "Landschap" },
                 { "language": "AR", "localizedString": "منظر جمالي" }
@@ -521,14 +520,16 @@ You may want to skip reading about `Level 0` on a first reading, as it only desc
         },
         {
             "idString": "Black & White",
-            "localizations": [
+            "name": [
                 { "language": "EN", "localizedString": "Black & White" },
                 { "language": "NL", "localizedString": "Zwart-wit" }
-            ]
+            ],
             "optional": {
-                "usage": "Grayscale or monochrome images"
+                "description": [
+                    { "language": "EN", "localizedString": "Grayscale, sepia or other monochrome images" }
+                ]
             }
-        },
+        }
     ],
     "languages": [
         {
@@ -552,26 +553,25 @@ You may want to skip reading about `Level 0` on a first reading, as it only desc
 
 - `keywords` lists the keywords that can be linked to one or more `photographers` to describe their main genres.
 Keywords apply to the photographer in general, and not to the photographer's membership of a particular club.
-If multiple clubs assign keywords to the same photographer, the lists are automatically merged ("union"). 
+If multiple clubs assign different keywords to the same photographer, the lists are automatically merged in the app ("union"). 
     - `idString` only serves to identify a keyword. Preferably use the English version of the keyword - but a text like "Keyword #123" will also work.
-    - `localizations` is a list of translations of the keyword into one or more languages.
+    - `name` is a list of translations of the keyword into one or more languages.
         - `language` contains the isoCode (typically 2 letters) for the language.
 Use the 3 letter code only for uncommon languages for which no 2 letter code exists.
 The codes must match the standard [ISO 639 list](https://www.loc.gov/standards/iso639-2/php/English_list.php).
 It is important to use the correct values, because `isoCode` is compared to the preference codes provided by iOS.
 Example: "DE" is "German".
         - `localizedString` contains the translation of the keyword into the indicated language.
-If possible provide translations for all languages the app supports (EN and NL).
+If possible provide translations for the languages that the app supports (currently EN and NL).
 Additional translations are fine, and will be used where appropriate.
 - `languages` lists the language codes used for localized photographer `keywords` and organization `remarks`.
     - `isoCode` is the 2 (ISO 639-1) or 3 letter (ISO 639-2) language code for the language. Use the 2 letter codes when available.
     - `languageNameEN` is the name of the language in English. Example: "Chinese". So this can tell you that ZH represents Chinese.
-We expect that we can translate the language's name to other languages programmatically, should that be necessary.
 </details></ul>
 
 <ul><details><Summary>Optional Level 0 fields (click to expand)</Summary></p>
 
-- `usage` (within a `keyword`) is a description of what is meant by the keyword. We couldn't call it a description because that is a reserved name in Swift.
+- `description` (within a `keyword`) is a text string defining the intention of the keyword. In the code we unfortunately had to call it `explanation` because `description` is a reserved name in Swift. The description text can be provided in multiple languages (typically EN and NL).
 </details></ul>
 
 ### Level 1. Adding Clubs
