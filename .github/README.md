@@ -525,7 +525,7 @@ You may want to skip reading about `Level 0` on a first reading, as it only desc
                 { "language": "NL", "localizedString": "Zwart-wit" }
             ],
             "optional": {
-                "definition": [
+                "description": [
                     { "language": "EN", "localizedString": "Grayscale, sepia or other monochrome images" }
                 ]
             }
@@ -571,7 +571,7 @@ Additional translations are fine, and will be used where appropriate.
 
 <ul><details><Summary>Optional Level 0 fields (click to expand)</Summary></p>
 
-- `definition` (within a `keyword`) is a text string defining the intention of the keyword. In the code we unfortunately had to call it `definition` because `description` is a reserved property name in Swift code. The defining text can be provided in multiple languages (typically EN and NL).
+- `description` (within a `keyword`) is a text string defining the intention of the keyword. In the code we unfortunately had to call it `descriptionFCH` because `description` is a reserved property name in Swift code. The description text can be provided in multiple languages (typically EN and NL).
 </details></ul>
 
 ### Level 1. Adding Clubs
