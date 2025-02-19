@@ -503,7 +503,7 @@ Attempting to view a portfolio of a club member without an available portfolio w
 ### Level 0. Keywords and Languages
 
 `Level 0` contains standardized keywords, standardized languages, and the translations of keywords into these languages.
-You may want to skip reading about `Level 0` on a first reading, as it only describes supporting data rather than key app data.
+You may want to skip reading about `Level 0` on a first reading, as it only describes data needed to support an optional feature.
 
 <ul><details><Summary>Level 0 example (click to expand)</Summary>
 
