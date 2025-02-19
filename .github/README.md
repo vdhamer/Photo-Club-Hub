@@ -36,7 +36,7 @@
             <li><a href="#website-generation">Website Generation</a></li>
             <li><a href="#searchable-lists">Searchable Lists</a></li>
             <li><a href="#photo-museums">Photo Museums</a></li>
-            <li><a href="#photographer-keywords-in-progress">Photographer Keywords (in progress)</a></li>
+            <li><a href="#photographer-keywords-in-progress">Photographer Keywords</a></li>
             <li><a href="#pull-down-to-refresh">Pull down to Refresh</a></li>
             <li><a href="#fancy-scrolling">Fancy scrolling</a></li>
         </ul>
@@ -45,7 +45,7 @@
         <ul>
             <li><a href="#levels">Levels</a></li>
             <li><a href="#levels-and-screens">Levels and Screens</a></li>
-            <li><a href="#level-0-keywords-and-languages-in-progress">Level 0. Keywords and Languages (in progress)</a></li>
+            <li><a href="#level-0-keywords-and-languages-in-progress">Level 0. Keywords and Languages</a></li>
             <li><a href="#level-1-adding-clubs">Level 1. Adding Clubs</a></li>
             <li><a href="#level-2-adding-members">Level 2. Adding Members</a></li>
             <li><a href="#level-3-adding-images">Level 3. Adding Images</a></li>
@@ -356,7 +356,7 @@ The text you type inside the search bar is matched against key fields for the re
 Design detail: Search Bar filtering is done in the app's user interface and not by the CoreData database.
 </details>
 
-### Photographer Keywords (in progress)
+### Photographer Keywords
 
 </p>Photographers can be associated with keywords describing what kind of photography they are mainly known for.
 Examples: "Black & White" or "Landscape". Because these keywords can serve to Search for photographers with similar
@@ -500,7 +500,7 @@ Technically different club members don't need to reach `Level 3` at the same tim
 one member, then expand to all members, and later add recent former members if you want. 
 Attempting to view a portfolio of a club member without an available portfolio will display a red built-in placeholder image.
 
-### Level 0. Keywords and Languages (in progress)
+### Level 0. Keywords and Languages
 
 `Level 0` contains standardized keywords, standardized languages, and the translations of keywords into these languages.
 You may want to skip reading about `Level 0` on a first reading, as it only describes supporting data rather than key app data.
