@@ -1,100 +1,141 @@
 {
     "keywords": [
+
         {
             "idString": "Abstract",
-            "localizations": [
+            "name": [
                 { "language": "EN", "localizedString": "Abstract" },
                 { "language": "NL", "localizedString": "Abstract" }
             ],
             "optional": {
-                "usage": "Subject of the image is less relevant or hard to determine"
+                "description":  [
+                    { "language": "EN", "localizedString": "Subject of the image hard to determine or less relevant." },
+                    { "language": "NL", "localizedString": "Als het onderwerp slecht herkenbaar of nauwelijks relevant is." }
+                ]
             }
         },
+
         {
             "idString": "Architecture",
-            "localizations": [
+            "name": [
                 { "language": "EN", "localizedString": "Architecture" },
                 { "language": "NL", "localizedString": "Architectuur" }
             ],
             "optional": {
-                "usage": "Fragments of, or interpretations of buildings."
+                "description":  [
+                    { "language": "EN", "localizedString": "Fragments of, or interpretations of buildings." },
+                    { "language": "NL", "localizedString": "Stukjes van of eigen interpretaties van gebouwen." }
+               ]
             }
         },
+
         {
             "idString": "Experimental",
-            "localizations": [
+            "name": [
                 { "language": "EN", "localizedString": "Experimental" },
                 { "language": "NL", "localizedString": "Experimenteel" }
             ],
             "optional": {
-                "usage": "Trying out something that is not cliche."
+                "description":  [
+                    { "language": "EN", "localizedString": "Trying out something that is not cliche." },
+                    { "language": "NL", "localizedString": "De gebaande paden verlaten." }
+                ]
             }
         },
+
         {
             "idString": "Black & White",
-            "localizations": [
+            "name": [
                 { "language": "EN", "localizedString": "Black & White" },
                 { "language": "NL", "localizedString": "Zwart-wit" }
             ],
             "optional": {
-                "usage": "Grayscale or monochromatic images"
+                "description":  [
+                    { "language": "EN", "localizedString": "Grayscale or monochromatic images" },
+                    { "language": "NL", "localizedString": "Monchromatisch, waaronder grijstinten en sepia." }
+                ]
             }
         },
+
         {
             "idString": "Landscape",
-            "localizations": [
+            "name": [
                 { "language": "EN", "localizedString": "Landscape" },
                 { "language": "NL", "localizedString": "Landschap" }
             ]
         },
+
         {
             "idString": "Minimal",
-            "localizations": [
+            "name": [
                 { "language": "EN", "localizedString": "Minimal" },
                 { "language": "NL", "localizedString": "Minimaal" }
-            ]
+            ],
+            "optional": {
+                "description":  [
+                    { "language": "EN", "localizedString": "Image with few visual elements." },
+                    { "language": "NL", "localizedString": "Rustige foto met weinig beeldelementen." }
+                 ]
+            }
         },
+
         {
             "idString": "Portrait",
-            "localizations": [
+            "name": [
                 { "language": "EN", "localizedString": "Portrait" },
                 { "language": "NL", "localizedString": "Portret" }
             ],
             "optional": {
-                "usage": "Shows a person and that person's personality, sometimes in a characteristic context"
+                "description":  [
+                    { "language": "EN", "localizedString": "Shows a person and the person's personality, sometimes in a characteristic context." },
+                    { "language": "NL", "localizedString": "Persoon, karaktertrekken en mogelijk kenmerkende omgeving." }
+                ]
             }
         },
+
         {
             "idString": "Postprocessing",
-            "localizations": [
+            "name": [
                 { "language": "EN", "localizedString": "Postprocessing" },
                 { "language": "NL", "localizedString": "Nabewerking" }
             ],
             "optional": {
-                "usage": "Images where the use of e.g. Photoshop to a large degree defines the picture"
+                "description":  [
+                    { "language": "EN", "localizedString": "Images where the use of e.g. Photoshop is rather dominant." },
+                    { "language": "NL", "localizedString": "Beelden met meteen opvallende nabewerking." }
+                ]
             }
         },
+
         {
             "idString": "Street",
-            "localizations": [
+            "name": [
                 { "language": "EN", "localizedString": "Street" },
                 { "language": "NL", "localizedString": "Straat" }
             ],
             "optional": {
-                "usage": "Urban scenes largely involving passers by"
+                "description":  [
+                    { "language": "EN", "localizedString": "Urban scenes largely involving passers by." },
+                    { "language": "NL", "localizedString": "Stadsbeelden met passanten." }
+                ]
             }
         },
+
         {
             "idString": "Travel",
-            "localizations": [
+            "name": [
                 { "language": "EN", "localizedString": "Travel" },
                 { "language": "NL", "localizedString": "Reis" }
             ],
             "optional": {
-                "usage": "Scenes predominantly depecting 'other' parts of the word"
+                "description":  [
+                    { "language": "EN", "localizedString": "Scenes clearly depicting 'other' parts of the word" },
+                    { "language": "NL", "localizedString": "Beelden die meteen doen denken aan 'verre' landen." }
+                 ]
             }
-        },
+        }
     ],
+
     "languages": [
         {
             "isoCode": "EN",
