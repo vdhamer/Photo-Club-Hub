@@ -45,7 +45,7 @@
         <ul>
             <li><a href="#levels">Levels</a></li>
             <li><a href="#levels-and-screens">Levels and Screens</a></li>
-            <li><a href="#level-0-keywords-and-languages-in-progress">Level 0. Keywords and Languages</a></li>
+            <li><a href="#level-0-keywords-and-languages">Level 0. Keywords and Languages</a></li>
             <li><a href="#level-1-adding-clubs">Level 1. Adding Clubs</a></li>
             <li><a href="#level-2-adding-members">Level 2. Adding Members</a></li>
             <li><a href="#level-3-adding-images">Level 3. Adding Images</a></li>
