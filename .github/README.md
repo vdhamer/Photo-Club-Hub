@@ -571,7 +571,7 @@ Additional translations are fine, and will be used where appropriate.
 
 <ul><details><Summary>Optional Level 0 fields (click to expand)</Summary></p>
 
-- `usage` (within a `keyword`) is a description of what is meant by the keyword. We couldn't call it a description because that is a reserved name in Swift.
+- `description` (within a `keyword`) is a description of what is meant by the keyword. In the code we had to call it `explanation` because `description` is a reserved name in Swift.
 </details></ul>
 
 ### Level 1. Adding Clubs
