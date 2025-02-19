@@ -93,7 +93,7 @@ extension Language {
             if Settings.extraCoreDataSaves {
                 save(context: context, language: language, create: true)
             }
-           print("Created new Language for code \(language.isoCodeCaps) named \(language.nameEN)")
+            print("Created new Language for code \(language.isoCodeCaps) named \(language.nameEN)")
             return language
         }
     }
