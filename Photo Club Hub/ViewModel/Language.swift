@@ -88,7 +88,7 @@ extension Language {
             // cannot use Language() initializer because we must use supplied context
             let entity = NSEntityDescription.entity(forEntityName: "Language", in: context)!
             let language = Language(entity: entity, insertInto: context)
-            language.isoCodeCaps = isoCode
+            language.isoCodeCaps = isoCode // immediately set it to a non-nil value
             _ = language.update(context: context, nameEN: nameEN)
             if Settings.extraCoreDataSaves {
                 save(context: context, language: language, create: true)
@@ -98,7 +98,8 @@ extension Language {
         }
     }
 
-    // Update non-identifying attributes/properties within an existing instance of class Language
+    // Update non-identifying attributes/properties within an existing instance of class Language if needed.
+    // Returns whether an update was needed.
     fileprivate func update(context: NSManagedObjectContext,
                             nameEN: String) -> Bool { // change language.name if needed
 
