@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="23605" systemVersion="24D70" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Keyword" syncable="YES">
+    <entity name="Keyword" representedClassName="Keyword" syncable="YES" codeGenerationType="class">
         <attribute name="idString" optional="YES" attributeType="String"/>
         <attribute name="isStandard" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="usage" optional="YES" attributeType="String"/>
@@ -30,7 +30,7 @@
     <entity name="Level3">
         <userInfo/>
     </entity>
-    <entity name="LocalizedKeyword" syncable="YES">
+    <entity name="LocalizedKeyword" representedClassName="LocalizedKeyword" syncable="YES" codeGenerationType="class">
         <attribute name="definition" optional="YES" attributeType="String"/>
         <attribute name="name" attributeType="String"/>
         <relationship name="keyword_" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Keyword" inverseName="localizedKeywords_" inverseEntity="Keyword"/>
@@ -129,7 +129,7 @@
             </uniquenessConstraint>
         </uniquenessConstraints>
     </entity>
-    <entity name="PhotographerKeyword" syncable="YES">
+    <entity name="PhotographerKeyword" representedClassName="PhotographerKeyword" syncable="YES" codeGenerationType="class">
         <relationship name="keyword_" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Keyword" inverseName="photographerKeywords_" inverseEntity="Keyword"/>
         <relationship name="photographer_" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Photographer" inverseName="photographerKeywords_" inverseEntity="Photographer"/>
     </entity>

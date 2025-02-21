@@ -82,6 +82,9 @@
 		D0DFBEF42D47036900CB9E73 /* Readme.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = D0DFBEF32D47036900CB9E73 /* Readme.xcstrings */; };
 		D0E2235427DE9139002A8600 /* PreludeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E2235327DE9139002A8600 /* PreludeView.swift */; };
 		D0E694C927EF9B450054D634 /* LockAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E694C827EF9B450054D634 /* LockAnimationView.swift */; };
+		D0E868902D68B99B00F2A03A /* PhotographerKeyword.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E8688F2D68B99B00F2A03A /* PhotographerKeyword.swift */; };
+		D0E868912D68B99B00F2A03A /* Keyword.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E8688E2D68B99B00F2A03A /* Keyword.swift */; };
+		D0E868932D68BBE400F2A03A /* LocalizedKeyword.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E868922D68BBE400F2A03A /* LocalizedKeyword.swift */; };
 		D0EAEB332B3CA6D300EC05B6 /* Level1JsonReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EAEB322B3CA6D300EC05B6 /* Level1JsonReader.swift */; };
 		D0EB533C295775240061613B /* Crosshairs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EB533B295775240061613B /* Crosshairs.swift */; };
 		D0EEF48F2C2844290086419D /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EEF48E2C2844290086419D /* Settings.swift */; };
@@ -224,6 +227,9 @@
 		D0E673BA2AE1C1A100A4DC95 /* Photo_Club_Hub_2_5_0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_5_0.xcdatamodel; sourceTree = "<group>"; };
 		D0E694C827EF9B450054D634 /* LockAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockAnimationView.swift; sourceTree = "<group>"; };
 		D0E69C2B2CE2543600D013DD /* app_screenshots_EN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = app_screenshots_EN.jpg; sourceTree = "<group>"; };
+		D0E8688E2D68B99B00F2A03A /* Keyword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyword.swift; sourceTree = "<group>"; };
+		D0E8688F2D68B99B00F2A03A /* PhotographerKeyword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotographerKeyword.swift; sourceTree = "<group>"; };
+		D0E868922D68BBE400F2A03A /* LocalizedKeyword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedKeyword.swift; sourceTree = "<group>"; };
 		D0EAEB322B3CA6D300EC05B6 /* Level1JsonReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level1JsonReader.swift; sourceTree = "<group>"; };
 		D0EB533B295775240061613B /* Crosshairs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crosshairs.swift; sourceTree = "<group>"; };
 		D0EEF48E2C2844290086419D /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
@@ -452,12 +458,15 @@
 			children = (
 				D0BF26FA2CFA20AC00DA2CB9 /* Lists */,
 				D0621E832AE2DF8E000FFADB /* IndividualClubs */,
-				D0447C872BA510AF00982A1E /* LocalizedRemark.swift */,
-				D0447C862BA510AF00982A1E /* Language.swift */,
 				D08416942B2FC061000F316D /* ListReaders */,
 				D0621E822AE2DF1B000FFADB /* MemberPortfolio */,
 				D029C4D02C54096200ABA977 /* Organization */,
 				D0F5EE852C54ED750028C9A6 /* Photographer */,
+				D0E8688E2D68B99B00F2A03A /* Keyword.swift */,
+				D0447C862BA510AF00982A1E /* Language.swift */,
+				D0E868922D68BBE400F2A03A /* LocalizedKeyword.swift */,
+				D0447C872BA510AF00982A1E /* LocalizedRemark.swift */,
+				D0E8688F2D68B99B00F2A03A /* PhotographerKeyword.swift */,
 				D0831A29277F72590049AB84 /* PreferencesViewModel.swift */,
 			);
 			path = ViewModel;
@@ -910,10 +919,13 @@
 				D0831A32277F72590049AB84 /* Photographer.swift in Sources */,
 				D029C4CF2C53E5C700ABA977 /* OrganizationOptionalFields.swift in Sources */,
 				D0B32BB32C15C51A009FF8E7 /* AppVersion.swift in Sources */,
+				D0E868902D68B99B00F2A03A /* PhotographerKeyword.swift in Sources */,
+				D0E868912D68B99B00F2A03A /* Keyword.swift in Sources */,
 				D0EAEB332B3CA6D300EC05B6 /* Level1JsonReader.swift in Sources */,
 				D087540A2BC5E9FD00FCBDB3 /* WhoIsWhoTextInfo.swift in Sources */,
 				D044646527FCE7C100990613 /* UIDevice+IsIPad.swift in Sources */,
 				D05E451E27EF2A2C00D31327 /* ReadmeView.swift in Sources */,
+				D0E868932D68BBE400F2A03A /* LocalizedKeyword.swift in Sources */,
 				D01D2B6227D3BBDC00E2FE41 /* View+Navigate.swift in Sources */,
 				D082BE912957806800FF0812 /* LogoPath.swift in Sources */,
 			);
