@@ -165,7 +165,6 @@
 		D072D5E52D333E7500EA88DD /* XampleMinMembersProvider+insertOnlineMemberData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XampleMinMembersProvider+insertOnlineMemberData.swift"; sourceTree = "<group>"; };
 		D073FE162D3B13B300DB01F4 /* Level2_aanmaken_NL.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Level2_aanmaken_NL.md; sourceTree = "<group>"; };
 		D07463E52CFB5EFA00F48EB2 /* root.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = root.level1.json; sourceTree = "<group>"; };
-		D076509D2D0E15FB0069CBD4 /* dataModel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dataModel.png; sourceTree = "<group>"; };
 		D076BE702CF0CC10008F4B47 /* Readme_EN_2_7_1.pages */ = {isa = PBXFileReference; lastKnownFileType = file; path = Readme_EN_2_7_1.pages; sourceTree = "<group>"; };
 		D0795CEB294FCCC200FA62A8 /* ShapeStyle+Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ShapeStyle+Colors.swift"; sourceTree = "<group>"; };
 		D07A1E2E28314EA600C77F66 /* SwiftUIEnvironmentValues.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SwiftUIEnvironmentValues.png; sourceTree = "<group>"; };
@@ -230,6 +229,7 @@
 		D0E8688E2D68B99B00F2A03A /* Keyword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyword.swift; sourceTree = "<group>"; };
 		D0E8688F2D68B99B00F2A03A /* PhotographerKeyword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotographerKeyword.swift; sourceTree = "<group>"; };
 		D0E868922D68BBE400F2A03A /* LocalizedKeyword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedKeyword.swift; sourceTree = "<group>"; };
+		D0E868942D68C73F00F2A03A /* dataModel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dataModel.png; sourceTree = "<group>"; };
 		D0EAEB322B3CA6D300EC05B6 /* Level1JsonReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level1JsonReader.swift; sourceTree = "<group>"; };
 		D0EB533B295775240061613B /* Crosshairs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crosshairs.swift; sourceTree = "<group>"; };
 		D0EEF48E2C2844290086419D /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
@@ -267,6 +267,7 @@
 		D029C4D02C54096200ABA977 /* Organization */ = {
 			isa = PBXGroup;
 			children = (
+				D0447C872BA510AF00982A1E /* LocalizedRemark.swift */,
 				D0831A2D277F72590049AB84 /* Organization.swift */,
 				D029C4CE2C53E5C700ABA977 /* OrganizationOptionalFields.swift */,
 				D030CD642B3AE2E800A12E90 /* OrganizationType.swift */,
@@ -462,11 +463,7 @@
 				D0621E822AE2DF1B000FFADB /* MemberPortfolio */,
 				D029C4D02C54096200ABA977 /* Organization */,
 				D0F5EE852C54ED750028C9A6 /* Photographer */,
-				D0E8688E2D68B99B00F2A03A /* Keyword.swift */,
 				D0447C862BA510AF00982A1E /* Language.swift */,
-				D0E868922D68BBE400F2A03A /* LocalizedKeyword.swift */,
-				D0447C872BA510AF00982A1E /* LocalizedRemark.swift */,
-				D0E8688F2D68B99B00F2A03A /* PhotographerKeyword.swift */,
 				D0831A29277F72590049AB84 /* PreferencesViewModel.swift */,
 			);
 			path = ViewModel;
@@ -643,7 +640,7 @@
 		D0F2F2F32873A19F009DDD2A /* images */ = {
 			isa = PBXGroup;
 			children = (
-				D076509D2D0E15FB0069CBD4 /* dataModel.png */,
+				D0E868942D68C73F00F2A03A /* dataModel.png */,
 				D06588E32BAE2F24000FD7F3 /* portfoliosScreen.png */,
 				D06588E42BAE31A0000FD7F3 /* clubsMuseumsScreen.png */,
 				D06588E52BAE31AE000FD7F3 /* imagesScreen.png */,
@@ -659,9 +656,12 @@
 		D0F5EE852C54ED750028C9A6 /* Photographer */ = {
 			isa = PBXGroup;
 			children = (
+				D0E868922D68BBE400F2A03A /* LocalizedKeyword.swift */,
 				D0831A25277F72590049AB84 /* Photographer.swift */,
 				D0C53BDC2ABF3ADF000722A1 /* PersonName.swift */,
 				D0F5EE862C54EDC60028C9A6 /* PhotographerOptionalFields.swift */,
+				D0E8688F2D68B99B00F2A03A /* PhotographerKeyword.swift */,
+				D0E8688E2D68B99B00F2A03A /* Keyword.swift */,
 			);
 			path = Photographer;
 			sourceTree = "<group>";
