@@ -9,7 +9,7 @@ import CoreData // for NSManagedObjectContext
 
 extension Keyword {
 
-    // `id` is persisted in CoreData as `id_` but has to be public because it is the `id` for the Identifiable protocol
+    // `id` is persisted in CoreData as `id_` but has to be public because it is also used for the Identifiable protocol
     public var id: String {
         get {
             if id_ != nil { // shouldn't be nil in the first place
