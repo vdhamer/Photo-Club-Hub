@@ -38,7 +38,13 @@ extension Keyword {
         let predicate = NSPredicate(format: predicateFormat, argumentArray: [id])
         let fetchRequest: NSFetchRequest<Keyword> = Keyword.fetchRequest()
         fetchRequest.predicate = predicate
-        let keywords: [Keyword] = (try? context.fetch(fetchRequest)) ?? [] // nil = absolute failure
+        var keywords: [Keyword]! = []
+        do {
+            keywords = try context.fetch(fetchRequest)
+        } catch {
+            ifDebugFatalError("Failed to fetch Keyword \(id): \(error)", file: #fileID, line: #line)
+            // on non-Debug version, continue with empty `keywords` array
+        }
 
         if keywords.count > 1 { // there is actually a Core Data constraint to prevent this
             ifDebugFatalError("Query returned multiple (\(keywords.count)) Keywords with code \(id)",
@@ -67,6 +73,22 @@ extension Keyword {
             return keyword
         }
 
+    }
+
+    // count number of objects with a given id
+    static func count(context: NSManagedObjectContext, id: String) -> Int {
+        let predicateFormat: String = "id_ = %@" // avoid localization
+        let predicate = NSPredicate(format: predicateFormat, argumentArray: [id])
+        let fetchRequest: NSFetchRequest<Keyword> = Keyword.fetchRequest()
+        fetchRequest.predicate = predicate
+        var keywords: [Keyword]! = []
+        do {
+            keywords = try context.fetch(fetchRequest)
+        } catch {
+            ifDebugFatalError("Failed to fetch Keyword \(id): \(error)", file: #fileID, line: #line)
+            // on non-Debug version, continue with empty `keywords` array
+        }
+        return keywords.count
     }
 
     // Find existing non-standard Keyword object or create a new one.
@@ -110,7 +132,8 @@ extension Keyword {
         return modified
     }
 
-    // MARK: - find or create
+
+    // MARK: - utilities
 
     func delete(context: NSManagedObjectContext) { // for testing?
         context.delete(self)
@@ -122,15 +145,18 @@ extension Keyword {
         }
     }
 
-    fileprivate static func save(context: NSManagedObjectContext, keyword: Keyword, create: Bool) {
-        do {
-            try context.save()
-        } catch {
-            context.rollback()
-            if create {
-                ifDebugFatalError("Could not save created Keyword \"\(keyword.id)\"")
-            } else {
-                ifDebugFatalError("Could not save updated property of Keyword \"\(keyword.id)\"")
+
+    static func save(context: NSManagedObjectContext, keyword: Keyword, create: Bool) {
+        if context.hasChanges {
+            do {
+                try context.save()
+            } catch {
+                context.rollback()
+                if create {
+                    ifDebugFatalError("Could not save created Keyword \"\(keyword.id)\"")
+                } else {
+                    ifDebugFatalError("Could not save updated property of Keyword \"\(keyword.id)\"")
+                }
             }
         }
     }
