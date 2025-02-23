@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -96,6 +96,16 @@
 		D0F8719F2D403E6000530D10 /* readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = D0F8719E2D403E5500530D10 /* readme.txt */; };
 		D0FE77E52BB9AEE900272077 /* ItemFilterStatsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE77E42BB9AEE900272077 /* ItemFilterStatsEnum.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D0E8689E2D693A3600F2A03A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D08319DB277F70A30049AB84 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D08319E2277F70A30049AB84;
+			remoteInfo = "Photo Club Hub";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		D006BA7D2B115FB1002E555B /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
@@ -190,6 +200,7 @@
 		D0831A4B277F736C0049AB84 /* ReleaseNotes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = ReleaseNotes.md; sourceTree = "<group>"; };
 		D0831A50277F73C00049AB84 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D0840FB72D07481B00458E06 /* Nieuwsbrief_Jan_2025_app.pages */ = {isa = PBXFileReference; lastKnownFileType = file; path = Nieuwsbrief_Jan_2025_app.pages; sourceTree = "<group>"; };
+		D085D6EE2D6A411E0052AE5E /* Photo Club Hub.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Photo Club Hub.xctestplan"; sourceTree = "<group>"; };
 		D08754092BC5E9FD00FCBDB3 /* WhoIsWhoTextInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhoIsWhoTextInfo.swift; sourceTree = "<group>"; };
 		D087540B2BC5EE3700FCBDB3 /* WhoIsWhoThumbnails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhoIsWhoThumbnails.swift; sourceTree = "<group>"; };
 		D08DC6052AE57294008DBD68 /* SinglePortfolioLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePortfolioLinkView.swift; sourceTree = "<group>"; };
@@ -230,6 +241,7 @@
 		D0E8688F2D68B99B00F2A03A /* PhotographerKeyword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotographerKeyword.swift; sourceTree = "<group>"; };
 		D0E868922D68BBE400F2A03A /* LocalizedKeyword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedKeyword.swift; sourceTree = "<group>"; };
 		D0E868952D68FB6200F2A03A /* dataModel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dataModel.png; sourceTree = "<group>"; };
+		D0E8689A2D693A3600F2A03A /* Photo Club HubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Photo Club HubTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0EAEB322B3CA6D300EC05B6 /* Level1JsonReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level1JsonReader.swift; sourceTree = "<group>"; };
 		D0EB533B295775240061613B /* Crosshairs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crosshairs.swift; sourceTree = "<group>"; };
 		D0EEF48E2C2844290086419D /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
@@ -252,12 +264,23 @@
 		D0FE77E42BB9AEE900272077 /* ItemFilterStatsEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemFilterStatsEnum.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		D0E8689B2D693A3600F2A03A /* Photo Club HubTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "Photo Club HubTests"; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
 		D08319E0277F70A30049AB84 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				D0CFACAD2CDEDCBA005E3A0B /* SwiftyJSON in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0E868972D693A3600F2A03A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,6 +425,7 @@
 		D08319DA277F70A30049AB84 = {
 			isa = PBXGroup;
 			children = (
+				D085D6EE2D6A411E0052AE5E /* Photo Club Hub.xctestplan */,
 				D08319E5277F70A30049AB84 /* Photo Club Hub */,
 				D0831A17277F71340049AB84 /* Photo-Club-Hub-Info.plist */,
 				D0CEAECD2B2E1120005AE47D /* Localization */,
@@ -410,6 +434,7 @@
 				D0F871912D403D1700530D10 /* JSON */,
 				D008D2A928739167007A7BE2 /* .gitignore */,
 				D0F2F2F22873A19F009DDD2A /* .github */,
+				D0E8689B2D693A3600F2A03A /* Photo Club HubTests */,
 				D08319E4277F70A30049AB84 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -418,6 +443,7 @@
 			isa = PBXGroup;
 			children = (
 				D08319E3277F70A30049AB84 /* Photo Club Hub.app */,
+				D0E8689A2D693A3600F2A03A /* Photo Club HubTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -727,6 +753,29 @@
 			productReference = D08319E3277F70A30049AB84 /* Photo Club Hub.app */;
 			productType = "com.apple.product-type.application";
 		};
+		D0E868992D693A3600F2A03A /* Photo Club HubTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0E868A22D693A3600F2A03A /* Build configuration list for PBXNativeTarget "Photo Club HubTests" */;
+			buildPhases = (
+				D0E868962D693A3600F2A03A /* Sources */,
+				D0E868972D693A3600F2A03A /* Frameworks */,
+				D0E868982D693A3600F2A03A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D0E8689F2D693A3600F2A03A /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				D0E8689B2D693A3600F2A03A /* Photo Club HubTests */,
+			);
+			name = "Photo Club HubTests";
+			packageProductDependencies = (
+			);
+			productName = "Photo Club HubTests";
+			productReference = D0E8689A2D693A3600F2A03A /* Photo Club HubTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -734,11 +783,15 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1320;
+				LastSwiftUpdateCheck = 1620;
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					D08319E2277F70A30049AB84 = {
 						CreatedOnToolsVersion = 13.2.1;
+					};
+					D0E868992D693A3600F2A03A = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = D08319E2277F70A30049AB84;
 					};
 				};
 			};
@@ -760,6 +813,7 @@
 			projectRoot = "";
 			targets = (
 				D08319E2277F70A30049AB84 /* Photo Club Hub */,
+				D0E868992D693A3600F2A03A /* Photo Club HubTests */,
 			);
 		};
 /* End PBXProject section */
@@ -782,6 +836,13 @@
 				D06D08DE2C28835D00872BC2 /* Settings.bundle in Resources */,
 				D04856362D46A45D00022117 /* Localizable.xcstrings in Resources */,
 				D0831A51277F73C00049AB84 /* Preview Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0E868982D693A3600F2A03A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -931,7 +992,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D0E868962D693A3600F2A03A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D0E8689F2D693A3600F2A03A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D08319E2277F70A30049AB84 /* Photo Club Hub */;
+			targetProxy = D0E8689E2D693A3600F2A03A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		D0831A0A277F70A50049AB84 /* Debug */ = {
@@ -1144,6 +1220,51 @@
 			};
 			name = Release;
 		};
+		D0E868A02D693A3600F2A03A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YDEWPN9GZ6;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vdHamer.Photo-Club-HubTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Photo Club Hub.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Photo Club Hub";
+			};
+			name = Debug;
+		};
+		D0E868A12D693A3600F2A03A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YDEWPN9GZ6;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vdHamer.Photo-Club-HubTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Photo Club Hub.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Photo Club Hub";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1161,6 +1282,15 @@
 			buildConfigurations = (
 				D0831A0D277F70A50049AB84 /* Debug */,
 				D0831A0E277F70A50049AB84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0E868A22D693A3600F2A03A /* Build configuration list for PBXNativeTarget "Photo Club HubTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0E868A02D693A3600F2A03A /* Debug */,
+				D0E868A12D693A3600F2A03A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
