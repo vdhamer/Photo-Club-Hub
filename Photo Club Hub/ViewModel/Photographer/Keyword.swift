@@ -145,6 +145,7 @@ extension Keyword {
         }
     }
 
+    // TODO cleanup save() in Keyword.swift. Change from static. Reduce params.
     static func save(context: NSManagedObjectContext, keyword: Keyword, create: Bool) {
         if context.hasChanges {
             do {
