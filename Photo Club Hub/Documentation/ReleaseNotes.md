@@ -5,6 +5,8 @@ Preferences screen
 Code Maintenance
 * Aligned refreshFirstImage() code to make it closer to Photo Club HTML code.
 * Moved deleteAllCoreDataObjects() to a new file Model.swift
+* Added Swift Testing package for unit testing (I know, a bit late)
+* Tested on Xcode 16.3 beta (16E5104o), iOS 18.4 beta (22E5200m) and visionOS 2.4 beta (2205199n)
 
 Data Maintenance
 * Added fgDeVriendschap (near Sint-Oedenrode)
