@@ -68,7 +68,13 @@ extension Language {
         let predicate = NSPredicate(format: predicateFormat, argumentArray: [isoCode])
         let fetchRequest: NSFetchRequest<Language> = Language.fetchRequest()
         fetchRequest.predicate = predicate
-        let languages: [Language] = (try? context.fetch(fetchRequest)) ?? [] // nil = absolute failure
+        var languages: [Language]! = []
+        do {
+            languages = try context.fetch(fetchRequest)
+        } catch {
+            ifDebugFatalError("Failed to fetch Language with code \(isoCode)", file: #fileID, line: #line)
+            // on non-Debug version, continue with empty `languages` array
+        }
 
         if languages.count > 1 { // there is actually a Core Data constraint to prevent this
             ifDebugFatalError("Query returned multiple (\(languages.count)) Languages with code \(isoCode)",
@@ -96,6 +102,23 @@ extension Language {
             print("Created new Language for code \(language.isoCodeCaps) named \(language.nameEN)")
             return language
         }
+    }
+
+    // count number of objects with a given isoCode
+    static func count(context: NSManagedObjectContext, isoCode: String) -> Int {
+        var languages: [Language]! = []
+
+        let fetchRequest: NSFetchRequest<Language> = Language.fetchRequest()
+        let predicateFormat: String = "isoCode_ = %@" // avoid localization
+        let predicate = NSPredicate(format: predicateFormat, argumentArray: [isoCode])
+        fetchRequest.predicate = predicate
+        do {
+            languages = try context.fetch(fetchRequest)
+        } catch {
+            ifDebugFatalError("Failed to fetch Language \(isoCode): \(error)", file: #fileID, line: #line)
+            // on non-Debug version, continue with empty `keywords` array
+        }
+        return languages.count
     }
 
     // Update non-identifying attributes/properties within an existing instance of class Language if needed.
