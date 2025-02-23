@@ -28,7 +28,7 @@ struct Model {
             try deleteEntitiesOfOneType("OrganizationType")
             print(forcedDataRefresh + "was successful.")
         } catch {
-            print(forcedDataRefresh + "FAILED.")
+            print(forcedDataRefresh + "FAILED: \(error)")
         }
     }
 
