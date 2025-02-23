@@ -15,7 +15,7 @@ import CoreData // for NSManagedObjectContext
 
     init () {
         context = PersistenceController.shared.container.viewContext
-        Model.deleteAllCoreDataObjects()
+        Model.deleteAllCoreDataObjects() // might be tricky while app is loading in the background
     }
 
     @Test("Add LocalizedKeyword for existing keyword and language") func addLocKeywordExistKeywordExistLanguage() {
