@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="23605" systemVersion="24D70" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Keyword" representedClassName="Keyword" syncable="YES" codeGenerationType="class">
-<<<<<<< HEAD
-        <attribute name="id_" attributeType="String"/>
-=======
         <attribute name="id_" attributeType="String" defaultValueString="ID is missing"/>
->>>>>>> 498-findcreateupdate-and-update-for-keyword
         <attribute name="isStandard" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <relationship name="localizedKeywords_" toMany="YES" deletionRule="Cascade" destinationEntity="LocalizedKeyword" inverseName="keyword_" inverseEntity="LocalizedKeyword"/>
         <relationship name="photographerKeywords_" toMany="YES" deletionRule="Cascade" destinationEntity="PhotographerKeyword" inverseName="keyword_" inverseEntity="PhotographerKeyword"/>

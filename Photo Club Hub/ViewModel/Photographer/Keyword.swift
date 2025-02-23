@@ -132,7 +132,6 @@ extension Keyword {
         return modified
     }
 
-
     // MARK: - utilities
 
     func delete(context: NSManagedObjectContext) { // for testing?
@@ -144,7 +143,6 @@ extension Keyword {
             ifDebugFatalError("Could not save the deletion of Keyword \"\(self.id)\"")
         }
     }
-
 
     static func save(context: NSManagedObjectContext, keyword: Keyword, create: Bool) {
         if context.hasChanges {
