@@ -1,0 +1,52 @@
+{
+  "configurations" : [
+    {
+      "id" : "34EE0F9E-58A5-4239-B5B1-3A1DACD4954C",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "commandLineArgumentEntries" : [
+      {
+        "argument" : "-com.apple.CoreData.SQLDebug 1",
+        "enabled" : false
+      },
+      {
+        "argument" : "-com.apple.CoreData.ConcurrencyDebug 1"
+      }
+    ],
+    "environmentVariableEntries" : [
+      {
+        "key" : "SQLITE_ENABLE_THREAD_ASSERTIONS",
+        "value" : "1"
+      },
+      {
+        "enabled" : false,
+        "key" : "SQLITE_AUTO_TRACE",
+        "value" : "1"
+      },
+      {
+        "key" : "SQLITE_ENABLE_FILE_ASSERTIONS",
+        "value" : "1"
+      }
+    ],
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:Photo Club Hub.xcodeproj",
+      "identifier" : "D08319E2277F70A30049AB84",
+      "name" : "Photo Club Hub"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Photo Club Hub.xcodeproj",
+        "identifier" : "D0E868992D693A3600F2A03A",
+        "name" : "Photo Club HubTests"
+      }
+    }
+  ],
+  "version" : 1
+}
