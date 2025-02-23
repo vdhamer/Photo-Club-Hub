@@ -33,7 +33,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D08319F7277F70A50049AB84"
+               BlueprintIdentifier = "D0E868992D693A3600F2A03A"
                BuildableName = "Photo Club HubTests.xctest"
                BlueprintName = "Photo Club HubTests"
                ReferencedContainer = "container:Photo Club Hub.xcodeproj">
