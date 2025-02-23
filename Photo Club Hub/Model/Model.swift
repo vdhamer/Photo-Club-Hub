@@ -10,7 +10,7 @@ import CoreData // for NSManagedObject
 struct Model {
     @MainActor
     static func deleteAllCoreDataObjects() {
-        let forcedDataRefresh = "Forced refresh of CoreData data performed" // just for log, not localized
+        let forcedDataRefresh = "Forced refresh of CoreData data " // just for log, not localized
 
         // order is important because of non-optional relationships
         do {
@@ -26,9 +26,9 @@ struct Model {
             try deleteEntitiesOfOneType("Photographer")
 
             try deleteEntitiesOfOneType("OrganizationType")
-            print(forcedDataRefresh + " successfully.")
+            print(forcedDataRefresh + "was successful.")
         } catch {
-            print(forcedDataRefresh + " UNsuccessfully.")
+            print(forcedDataRefresh + "FAILED.")
         }
     }
 
