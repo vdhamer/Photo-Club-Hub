@@ -9,7 +9,7 @@ import CoreData // for NSFetchRequest and NSManagedObjectContext
 
 extension LocalizedRemark { // expose computed properties (some related to handling optionals)
 
-    // MARK: - getters (setting is done via init)
+    // MARK: - getters (setting is done via findCreateUpdate)
 
     var organization: Organization { // getter
         if let organization = organization_ {

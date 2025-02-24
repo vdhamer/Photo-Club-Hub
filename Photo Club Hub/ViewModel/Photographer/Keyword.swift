@@ -75,23 +75,6 @@ extension Keyword {
 
     }
 
-    // count number of objects with a given id
-    static func count(context: NSManagedObjectContext, id: String) -> Int {
-        var keywords: [Keyword]! = []
-
-        let fetchRequest: NSFetchRequest<Keyword> = Keyword.fetchRequest()
-        let predicateFormat: String = "id_ = %@" // avoid localization
-        let predicate = NSPredicate(format: predicateFormat, argumentArray: [id])
-        fetchRequest.predicate = predicate
-        do {
-            keywords = try context.fetch(fetchRequest)
-        } catch {
-            ifDebugFatalError("Failed to fetch Keyword \(id): \(error)", file: #fileID, line: #line)
-            // on non-Debug version, continue with empty `keywords` array
-        }
-        return keywords.count
-    }
-
     // Find existing non-standard Keyword object or create a new one.
     // Update existing attributes or fill the new object
     static func findCreateUpdateStandard(context: NSManagedObjectContext, // can be foreground of background context
@@ -159,6 +142,23 @@ extension Keyword {
                 }
             }
         }
+    }
+
+    // count number of objects with a given id
+    static func count(context: NSManagedObjectContext, id: String) -> Int {
+        var keywords: [Keyword]! = []
+
+        let fetchRequest: NSFetchRequest<Keyword> = Keyword.fetchRequest()
+        let predicateFormat: String = "id_ = %@" // avoid localization
+        let predicate = NSPredicate(format: predicateFormat, argumentArray: [id])
+        fetchRequest.predicate = predicate
+        do {
+            keywords = try context.fetch(fetchRequest)
+        } catch {
+            ifDebugFatalError("Failed to fetch Keyword \(id): \(error)", file: #fileID, line: #line)
+            // on non-Debug version, continue with empty `keywords` array
+        }
+        return keywords.count
     }
 
 }
