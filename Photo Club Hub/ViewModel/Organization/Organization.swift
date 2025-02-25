@@ -39,7 +39,7 @@ extension Organization {
                 let viewContext = persistenceController.container.viewContext // requires @MainActor
                 return OrganizationType.findCreateUpdate( // organizationType is CoreData NSManagedObject
                     context: viewContext, // requires @MainActor
-                    organizationTypeName: OrganizationTypeEnum.unknown.rawValue
+                    orgTypeName: OrganizationTypeEnum.unknown.rawValue
                 )
             }
         }
@@ -200,6 +200,10 @@ extension Organization {
             let organization = Organization(entity: entity, insertInto: context) // create new Club or Museum
             organization.fullName = idPlus.fullName // first part of ID
             organization.town = idPlus.town // second part of ID
+            // some fancy footwork because organization type info originated from other context
+            let organizationType = OrganizationType.findCreateUpdate(context: context,
+                                                                     orgTypeName: organizationTypeEnum.rawValue)
+            organization.organizationType = organizationType
             print("\(organization.fullNameTown): Will try to fill fields for this new organization")
             _ = organization.update(bgContext: context,
                                     organizationTypeEnum: organizationTypeEnum,
@@ -224,14 +228,6 @@ extension Organization {
                             pinned: Bool) -> Bool {
 
 		var modified: Bool = false
-
-        // some fancy footwork because organization type info originated from other context
-        let organizationType = OrganizationType.findCreateUpdate(context: bgContext,
-                                                                 organizationTypeName: organizationTypeEnum.rawValue)
-
-        if self.organizationType_ != organizationType {
-            self.organizationType = organizationType
-            modified = true }
 
         if self.nickName != nickName {
             self.nickName = nickName

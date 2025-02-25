@@ -63,7 +63,7 @@ extension Language {
                                  nameENOptional: String? = nil
                                 ) -> Language {
 
-        let nameEN: String = nameENOptional ?? code2Name[isoCode] ?? "Name?" // fill in name if no name provided
+        let nameEN: String = nameENOptional ?? code2Name[isoCode.uppercased()] ?? "Name?"
         let predicateFormat: String = "isoCode_ = %@" // avoid localization
         let predicate = NSPredicate(format: predicateFormat, argumentArray: [isoCode])
         let fetchRequest: NSFetchRequest<Language> = Language.fetchRequest()

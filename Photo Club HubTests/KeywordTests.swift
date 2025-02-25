@@ -15,14 +15,13 @@ import CoreData // for NSManagedObjectContext
 
     init () {
         context = PersistenceController.shared.container.viewContext
-        Model.deleteAllCoreDataObjects() // might be tricky while app is loading in the background
     }
 
     @Test("Add a standard keyword") func addStandardKeyword() throws {
         let keyword = Keyword.findCreateUpdateStandard(context: context, id: "Test1")
         #expect(keyword.id == "Test1")
         #expect(keyword.isStandard == true)
-        Keyword.save(context: context, keyword: keyword, create: true)
+        Keyword.save(context: context, errorText: "Error saving keyword \"Test1\"")
         #expect(Keyword.count(context: context, id: "Test1") == 1)
     }
 
@@ -30,7 +29,7 @@ import CoreData // for NSManagedObjectContext
         let keyword = Keyword.findCreateUpdateNonStandard(context: context, id: "Test2")
         #expect(keyword.id == "Test2")
         #expect(keyword.isStandard == false)
-        Keyword.save(context: context, keyword: keyword, create: true)
+        Keyword.save(context: context, errorText: "Error saving keyword \"Test2\"")
         #expect(Keyword.count(context: context, id: "Test2") == 1)
     }
 
@@ -43,11 +42,11 @@ import CoreData // for NSManagedObjectContext
         let id = "foobar".capitalized
         let keyword1 = Keyword.findCreateUpdateStandard(context: context, id: id)
         #expect(keyword1.isStandard == true)
-        Keyword.save(context: context, keyword: keyword1, create: true)
+        Keyword.save(context: context, errorText: "Error saving keyword \"keyword1\"")
         #expect(Keyword.count(context: context, id: id) == 1)
 
         let keyword2 = Keyword.findCreateUpdateNonStandard(context: context, id: id)
-        Keyword.save(context: context, keyword: keyword1, create: true) // should not create a new record
+        Keyword.save(context: context, errorText: "Error saving keyword \"keyword2\"") // shouldn't create a new record
         #expect(Keyword.count(context: context, id: id) == 1)
 
         #expect(keyword2.isStandard == false)

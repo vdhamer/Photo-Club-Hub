@@ -68,7 +68,11 @@ extension LocalizedKeyword {
                       Updated translation of keyword \"\(keyword.id)\" into \(language.isoCodeCaps) as \(localizedName)
                       """)
                 if Settings.extraCoreDataSaves {
-                    localizedKeyword.save(context: context)
+                    LocalizedKeyword.save(context: context, errorText:
+                                          """
+                                          Could not update LocalizedKeyword for \"\(localizedKeyword.keyword.id)\" \
+                                          for language \(localizedKeyword.language.isoCodeCaps)
+                                          """)
                 }
             }
             return localizedKeyword
@@ -80,7 +84,11 @@ extension LocalizedKeyword {
             localizedKeyword.language_ = language
             _ = localizedKeyword.update(context: context, localizedName: localizedName, localizedUsage: localizedUsage)
             if Settings.extraCoreDataSaves {
-                localizedKeyword.save(context: context)
+                LocalizedKeyword.save(context: context, errorText:
+                                          """
+                                          Could not create LocalizedKeyword for \"\(localizedKeyword.keyword.id)\" \
+                                          for language \(localizedKeyword.language.isoCodeCaps)
+                                          """)
             }
             return localizedKeyword
         }
@@ -123,18 +131,33 @@ extension LocalizedKeyword {
 
     // MARK: - utilities
 
-    func save(context: NSManagedObjectContext) {
+    static func save(context: NSManagedObjectContext, errorText: String? = nil) {
         if context.hasChanges {
             do {
                 try context.save()
             } catch {
                 context.rollback()
-                ifDebugFatalError("""
-                                  Could not save LocalizedKeyword for \"\(self.keyword.id)\" \
-                                  into \(self.language.isoCodeCaps)
-                                  """)
+                ifDebugFatalError(errorText ?? "Error saving LocalizedKeyword")
             }
         }
+    }
+
+    // count number of objects with a given id
+    static func count(context: NSManagedObjectContext, keywordID: String, languageIsoCode: String) -> Int {
+        var localizedKeywords: [LocalizedKeyword]! = []
+
+        let fetchRequest: NSFetchRequest<LocalizedKeyword> = LocalizedKeyword.fetchRequest()
+        let predicateFormat: String = "keyword_.id_ = %@ && language_.isoCode_ = %@" // avoid localization
+        let predicate = NSPredicate(format: predicateFormat, argumentArray: [keywordID, languageIsoCode])
+        fetchRequest.predicate = predicate
+        do {
+            localizedKeywords = try context.fetch(fetchRequest)
+        } catch {
+            ifDebugFatalError("Failed to fetch LocalizedKeyword \(keywordID) for \(languageIsoCode): \(error)",
+                              file: #fileID, line: #line)
+            // on non-Debug version, continue with empty `keywords` array
+        }
+        return localizedKeywords.count
     }
 
 }

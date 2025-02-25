@@ -16,7 +16,7 @@ extension OrganizationType {
         for type in OrganizationTypeEnum.allCases { // type is simple enum
             _ = OrganizationType.findCreateUpdate( // organizationType is CoreData NSManagedObject
                 context: viewContext, // requires @MainActor
-                organizationTypeName: type.unlocalizedSingular
+                orgTypeName: type.unlocalizedSingular
             )
         }
 
@@ -41,12 +41,12 @@ extension OrganizationType {
     // Find OrganizationType object (or create a new object - used at start of app)
     // Update existing attributes or fill the new object
     static func findCreateUpdate(context: NSManagedObjectContext, // can be foreground of background context
-                                 organizationTypeName: String,
+                                 orgTypeName: String,
                                  unusedProperty: String = "foobar"
                                 ) -> OrganizationType {
 
         let predicateFormat: String = "organizationTypeName_ = %@" // avoid localization
-        let predicate = NSPredicate(format: predicateFormat, argumentArray: [organizationTypeName])
+        let predicate = NSPredicate(format: predicateFormat, argumentArray: [orgTypeName])
         let fetchRequest: NSFetchRequest<OrganizationType> = OrganizationType.fetchRequest()
         fetchRequest.predicate = predicate
         let organizationTypes: [OrganizationType] = (try? context.fetch(fetchRequest)) ?? [] // nil = absolute failure
@@ -54,7 +54,7 @@ extension OrganizationType {
         if organizationTypes.count > 1 { // there is actually a Core Data constraint to prevent this
             ifDebugFatalError("""
                               Query returned multiple (\(organizationTypes.count)) OrganizationTypes \
-                              named \(organizationTypeName)
+                              named \(orgTypeName)
                               """,
                               file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
             // in release mode, log that there are multiple clubs, but continue using the first one.
@@ -70,10 +70,10 @@ extension OrganizationType {
             // cannot use OrganizationType() initializer because we must use supplied context
             let entity = NSEntityDescription.entity(forEntityName: "OrganizationType", in: context)!
             let organizationType = OrganizationType(entity: entity, insertInto: context)
-            organizationType.organizationTypeName = organizationTypeName
+            organizationType.organizationTypeName = orgTypeName
             _ = organizationType.update(context: context, unusedProperty: unusedProperty)
             save(context: context, organizationType: organizationType, create: true)
-            print("Created new OrganizationType called \"\(organizationTypeName)\"")
+            print("Created new OrganizationType called \"\(orgTypeName)\"")
             return organizationType
         }
     }
