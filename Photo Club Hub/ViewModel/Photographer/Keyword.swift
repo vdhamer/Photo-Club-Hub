@@ -56,7 +56,7 @@ extension Keyword {
             if keyword.update(context: context, isStandard: isStandard) {
                 print("Updated info for keyword \"\(keyword.id)\" that became \(isStandard ? "" : "non-")standard")
                 if Settings.extraCoreDataSaves {
-                    save(context: context, keyword: keyword, create: false)
+                    Keyword.save(context: context, errorText: "Could not update Keyword \"\(keyword.id)\"")
                 }
             }
             return keyword
@@ -67,7 +67,7 @@ extension Keyword {
             keyword.id = id // immediately set it to a non-nil value
             _ = keyword.update(context: context, isStandard: isStandard) // ignore whether update made changes
             if Settings.extraCoreDataSaves {
-                save(context: context, keyword: keyword, create: true)
+                Keyword.save(context: context, errorText: "Could not save Keyword \"\(keyword.id)\"")
             }
             print("Created new Keyword for \"\(keyword.id)\"")
             return keyword
@@ -128,18 +128,13 @@ extension Keyword {
         }
     }
 
-    // TODO cleanup save() in Keyword.swift. Change from static. Reduce params.
-    static func save(context: NSManagedObjectContext, keyword: Keyword, create: Bool) {
+    static func save(context: NSManagedObjectContext, errorText: String? = nil) {
         if context.hasChanges {
             do {
                 try context.save()
             } catch {
                 context.rollback()
-                if create {
-                    ifDebugFatalError("Could not save created Keyword \"\(keyword.id)\"")
-                } else {
-                    ifDebugFatalError("Could not save updated property of Keyword \"\(keyword.id)\"")
-                }
+                ifDebugFatalError(errorText ?? "Error saving Keyword")
             }
         }
     }
