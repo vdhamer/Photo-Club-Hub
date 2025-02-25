@@ -28,7 +28,7 @@ extension Keyword {
 
     // Find existing Keyword object or create a new one.
     // Update existing attributes or fill the new object
-    fileprivate static func findCreateUpdate(context: NSManagedObjectContext, // can be foreground of background context
+    fileprivate static func findCreateUpdate(context: NSManagedObjectContext, // can be foreground or background context
                                              id: String,
                                              isStandard: Bool
                                             ) -> Keyword {
@@ -77,7 +77,7 @@ extension Keyword {
 
     // Find existing non-standard Keyword object or create a new one.
     // Update existing attributes or fill the new object
-    static func findCreateUpdateStandard(context: NSManagedObjectContext, // can be foreground of background context
+    static func findCreateUpdateStandard(context: NSManagedObjectContext, // can be foreground or background context
                                          id: String
                                         ) -> Keyword {
         findCreateUpdate(context: context, id: id, isStandard: true)
@@ -85,7 +85,7 @@ extension Keyword {
 
     // Find existing non-standard Keyword object or create a new one.
     // Update existing attributes or fill the new object
-    static func findCreateUpdateNonStandard(context: NSManagedObjectContext, // can be foreground of background context
+    static func findCreateUpdateNonStandard(context: NSManagedObjectContext, // can be foreground or background context
                                             id: String
                                            ) -> Keyword {
         findCreateUpdate(context: context, id: id, isStandard: false)

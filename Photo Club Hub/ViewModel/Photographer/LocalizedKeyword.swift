@@ -31,7 +31,7 @@ extension LocalizedKeyword {
 
     // Find existing Keyword object or create a new one.
     // Update existing attributes or fill the new object
-    static func findCreateUpdate(context: NSManagedObjectContext, // can be foreground of background context
+    static func findCreateUpdate(context: NSManagedObjectContext, // can be foreground or background context
                                  keyword: Keyword,
                                  language: Language,
                                  localizedName: String,
