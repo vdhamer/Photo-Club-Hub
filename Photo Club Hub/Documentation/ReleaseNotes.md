@@ -1,18 +1,16 @@
 ### 2.7.3 (GitHub commit ???????) ??-02-25
 
-Preferences screen
-
 Code Maintenance
-* Aligned refreshFirstImage() code to make it closer to Photo Club HTML code.
-* Moved deleteAllCoreDataObjects() to a new file Model.swift
-* Added Swift Testing package for unit testing (I know, a bit late)
-* Tested on Xcode 16.3 beta (16E5104o), iOS 18.4 beta (22E5200m) and visionOS 2.4 beta (2205199n)
+* Aligned refreshFirstImage() code to make it more similar to Photo Club HTML code.
+* Moved deleteAllCoreDataObjects() to a new file named Model.swift.
+* Introduced use of Swift Testing framework for software unit testing.
+* Tested on Xcode 16.3 beta (16E5104o), iOS 18.4 beta (22E5200m) and visionOS 2.4 beta (2205199n).
 
 Data Maintenance
-* Added fgDeVriendschap (near Sint-Oedenrode)
-* Fixed level2 url for fgDeGender in root.level1.json file (.com -> .nl)
-* Updated xampleMin.level1.json and xampleMax.level1.json sample files
-* Updated admin for fgWaalre
+* Added fgDeVriendschap (near Sint-Oedenrode).
+* Fixed level2 url for fgDeGender in root.level1.json file (.com -> .nl).
+* Updated xampleMin.level1.json and xampleMax.level1.json sample files.
+* Updated admin role for fgWaalre.
 
 This build #4637 was made using Xcode 16.2
 
