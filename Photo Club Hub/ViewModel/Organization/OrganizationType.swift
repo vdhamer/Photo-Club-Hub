@@ -40,7 +40,7 @@ extension OrganizationType {
 
     // Find OrganizationType object (or create a new object - used at start of app)
     // Update existing attributes or fill the new object
-    static func findCreateUpdate(context: NSManagedObjectContext, // can be foreground of background context
+    static func findCreateUpdate(context: NSManagedObjectContext, // can be foreground or background context
                                  orgTypeName: String,
                                  unusedProperty: String = "foobar"
                                 ) -> OrganizationType {
