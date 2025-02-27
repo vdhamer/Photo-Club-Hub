@@ -373,13 +373,13 @@ Het gaat dan om de foto's van clubexposities te tonen _na afloop_ van de fysieke
 <details><summary>Klik om uit te klappen</summary></p>
 Vast wel. Zie tabel:
     
-| Titel  | Link | Taal (NL, EN)  |
+| Titel  | Link | Nederlands | Engels  |
 | ----------- | ----------- | ----------- |
-| Een level2.json bestand aanmaken voor een club | [tinyurl.com/Level2aanmaken](https://tinyurl.com/Level2aanmaken) | NL |
-| Creating a new level2.json file for your club | [tinyurl.com/Level2creation](https://tinyurl.com/Level2creation) | EN |
-| Readme Photo Club Hub | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/.github/README.md) | EN |
-| Readme Photo Club Hub HTML | [link](https://github.com/vdhamer/Photo-Club-Hub-HTML/blob/main/.github/README.md) | EN |
-| Interne readme in Photo Club Hub app | ingebouwd | EN & NL |
-| Powerpoint presentatie | [download](https://github.com/vdhamer/Photo-Club-Hub/raw/refs/heads/main/Photo%20Club%20Hub/Documentation/Photo%20Club%20Hub.pptx) | NL |
-| FAQ (dit document) | [tinyurl.com/fchFAQnl](https://tinyurl.com/fchFAQnl) | NL |
+| Een level2.json bestand aanmaken voor een club | [tinyurl.com/Level2aanmaken](https://tinyurl.com/Level2aanmaken) | ✓ | |
+| Creating a new level2.json file for your club | [tinyurl.com/Level2creation](https://tinyurl.com/Level2creation) | | ✓ |
+| Readme Photo Club Hub | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/.github/README.md) | | ✓ |
+| Readme Photo Club Hub HTML | [link](https://github.com/vdhamer/Photo-Club-Hub-HTML/blob/main/.github/README.md) | | ✓ |
+| Interne readme in Photo Club Hub app | ingebouwd | ✓ | ✓ |
+| Powerpoint presentatie | [download](https://github.com/vdhamer/Photo-Club-Hub/raw/refs/heads/main/Photo%20Club%20Hub/Documentation/Photo%20Club%20Hub.pptx) | ✓ | |
+| FAQ (dit document) | [tinyurl.com/fchFAQnl](https://tinyurl.com/fchFAQnl) | ✓ | |
 </details></p>
