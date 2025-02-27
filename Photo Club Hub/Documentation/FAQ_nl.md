@@ -1,4 +1,8 @@
-In een toekomstige versie worden de vragen mogelijk opgedeeld naar doelgroep: clubbestuur, gebruikers, gegevensbeheerders.
+In een toekomstige versie worden de vragen waarschijnlijk opgedeeld in vragen over:
+- beleid
+- gebruik
+- gegevensbeheer
+- mogelijke uitbreidingen.
 
 ### Wat doet de app?
 
