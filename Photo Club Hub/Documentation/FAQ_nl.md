@@ -60,7 +60,7 @@ dat scheel alvast 1 van de 3 stappen.
 <details><summary>Klik om uit te klappen</summary></p>
 De app versie ondersteunt om praktische redenen de iPhone en iPad.
 Maar er zijn genoeg andere doelgroepen. Dus is er een zogenaamde "webversie" in ontwikkeling.
-Die bekijk je in je browser (Chrome, Edge, Safari...) en dent dus zowel PC/Mac gebruikers als alle merken smartfoons af.
+Die bekijk je in je browser (Chrome, Edge, Safari...) en dekt dus zowel PC/Mac gebruikers als alle merken smartfoons af.
 Die webversie bestaat uit HTML pagina's die toegevoegen kunnen worden aan een bestaande website (b.v. Wordpress).</p>
 
 De software voor de webversie heet "Photo Club Hub HTML" (en) danwel "Fotoclub Hub HTML" (nl). 
