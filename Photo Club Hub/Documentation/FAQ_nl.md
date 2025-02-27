@@ -1,6 +1,7 @@
 In een toekomstige versie worden de vragen waarschijnlijk opgedeeld in vragen over:
 - basisvragen
 - beleid
+- alternatieven
 - gebruik
 - gegevensbeheer
 - mogelijke uitbreidingen.
