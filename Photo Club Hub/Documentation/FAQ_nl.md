@@ -58,17 +58,15 @@ dat scheel alvast 1 van de 3 stappen.
 ### Is er een Android of PC versie van de app? [beleid] + [gebruik] + [basisvragen]
 
 <details><summary>Klik om uit te klappen</summary></p>
-De app versie ondersteunt om praktische redenen de iPhone en iPad.
-Maar er zijn genoeg andere doelgroepen. Dus is er een zogenaamde "webversie" in ontwikkeling.
-Die bekijk je in je browser (Chrome, Edge, Safari...) en dekt dus zowel PC/Mac gebruikers als alle merken smartfoons af.
-Die webversie bestaat uit HTML pagina's die toegevoegen kunnen worden aan een bestaande website (b.v. Wordpress).</p>
+Er is een iPhone/iPad versie van de app op de Apple App Store.</p>
 
-De software voor de webversie heet "Photo Club Hub HTML" (en) danwel "Fotoclub Hub HTML" (nl). 
-Hiermee kan een website beheerder pagina's automatisch aanmaken vanuit _dezelfde_ databestanden
-die gebruikt worden voor "Fotoclub Hub" app.
-[Hier](http://www.vdhamer.com/fgDeGender/) is een vroege testversie van een dergelijke, genereerde mini-site.
-Dit voorkomt dubbel werk bij het bijhouden van zowel app als website. 
-Foto Club Hub HTML genereert dus een ledenlijst met links naar de portfolio's van de clubleden.
+Voor andere apparaten is er een zogenaamde "webversie". Met de webversie kan je club portfolio's bekijken in een internet browser (Chrome, Edge, Safari...) 
+op vrijwel ieder slim apparaat (bijvoorbeeld een Android telefoon, een tablet van willekeurig merk, een Windows laptop...). De iOS app en de webversie hebben dezelfde opzet
+en gebruiken dezelfde gegevens. De webversie is technisch een computerprogramma dat op verzoek webpagina's aanmaakt die toegevoegd kunnen worden aan bestaande club websites.
+Op termijn komt er ook een centrale webpagina waarop men alle deelnemende clubs kan vinden en via links kan bereiken (de tegenhanger van het Portfolio's scherm in de iPhone/iPad app).
+
+Er wordt momenteel aan beide versies continue gewerkt. Het is in principe mogelijk dat iemand nog een versie maakt voor de Android Play Store of een versie voor Windows.
+Maar daar zou ik niet op wachten: er moeten eerste meer vrijwilligers mee gaan doen die die kar te trekken.
 </details></p>
 </details></p>
 
