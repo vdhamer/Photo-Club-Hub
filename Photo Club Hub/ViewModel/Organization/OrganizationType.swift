@@ -9,6 +9,11 @@ import CoreData
 
 extension OrganizationType {
 
+    @available(*, unavailable)
+    convenience init() {
+        fatalError("init() is not available. Use .findCreateUpdate instead.")
+    }
+
     @MainActor
     static func initConstants() { // called on main thread
         let viewContext = PersistenceController.shared.container.viewContext // requires foreground context

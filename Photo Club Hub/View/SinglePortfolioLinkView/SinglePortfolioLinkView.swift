@@ -7,6 +7,7 @@
 
 import SwiftUI // for View
 import WebKit // for WKWebView
+import CoreLocation // for CLLocationCoordinate2D
 
 struct SinglePortfolioLinkView<Content: View>: View {
     // https://www.hackingwithswift.com/books/ios-swiftui/custom-containers
@@ -34,9 +35,31 @@ struct SinglePortfolioLinkView<Content: View>: View {
 }
 
 #Preview { // doesn't really work
-    let destPortfolio: MemberPortfolio = MemberPortfolio()
+    let persistenceController = PersistenceController.shared // for Core Data
+    let viewContext = persistenceController.container.viewContext
+
+    let organizationIdPlus = OrganizationIdPlus(fullName: "Test Club", town: "Nowhere", nickname: "IgnoreMe")
+    let organization = Organization.findCreateUpdate(context: viewContext,
+                                                     organizationTypeEnum: OrganizationTypeEnum.club,
+                                                     idPlus: organizationIdPlus,
+                                                     coordinates: CLLocationCoordinate2D(
+                                                        latitude: 0.0, longitude: 0.0),
+                                                     optionalFields: OrganizationOptionalFields()
+                                                    )
+
+    let personName = PersonName(givenName: "Jan", infixName: "de", familyName: "Korte")
+    let optionalFields = PhotographerOptionalFields()
+    let photographer = Photographer.findCreateUpdate(context: viewContext,
+                                                 personName: personName,
+                                                 optionalFields: optionalFields)
+
+    let destPortfolio = MemberPortfolio.findCreateUpdate(bgContext: viewContext,
+                                                         organization: organization,
+                                                         photographer: photographer,
+                                                         optionalFields: MemberOptionalFields())
+
     let wkWebView = WKWebView()
-    return SinglePortfolioLinkView(destPortfolio: destPortfolio, wkWebView: wkWebView) {
-        Text(verbatim: "Test Link")
+    SinglePortfolioLinkView(destPortfolio: destPortfolio, wkWebView: wkWebView) {
+        Text(verbatim: "This is a test Link")
     }
 }

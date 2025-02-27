@@ -17,6 +17,11 @@ extension Photographer: Comparable {
 
 extension Photographer {
 
+    @available(*, unavailable)
+    convenience init() {
+        fatalError("init() is not available. Use .findCreateUpdate instead.")
+    }
+
 	var memberships: Set<MemberPortfolio> {
 		get { (memberships_ as? Set<MemberPortfolio>) ?? [] }
 		set { memberships_ = newValue as NSSet }

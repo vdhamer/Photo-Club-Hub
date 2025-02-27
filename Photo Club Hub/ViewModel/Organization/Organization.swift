@@ -20,6 +20,11 @@ extension Organization: Comparable {
 
 extension Organization {
 
+    @available(*, unavailable)
+    convenience init() {
+        fatalError("init() is not available. Use .findCreateUpdate instead.")
+    }
+
     // MARK: - getters and setters
 
 	var members: Set<MemberPortfolio> {

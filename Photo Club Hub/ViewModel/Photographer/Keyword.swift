@@ -9,6 +9,11 @@ import CoreData // for NSManagedObjectContext
 
 extension Keyword {
 
+    @available(*, unavailable)
+    convenience init() {
+        fatalError("init() is not available. Use .findCreateUpdate instead.")
+    }
+
     // `id` is persisted in CoreData as `id_` but has to be public because it is also used for the Identifiable protocol
     public var id: String {
         get {
@@ -33,11 +38,11 @@ extension Keyword {
                                              isStandard: Bool
                                             ) -> Keyword {
 
-        // execute fetchRequest to get keyword object for id=id. Query could return more than 1.
-        let predicateFormat: String = "id_ = %@" // avoid localization
-        let predicate = NSPredicate(format: predicateFormat, argumentArray: [id])
+        // execute fetchRequest to get keyword object for id=id. Query could return multiple - but shouldn't.
         let fetchRequest: NSFetchRequest<Keyword> = Keyword.fetchRequest()
-        fetchRequest.predicate = predicate
+        let predicateFormat: String = "id_ = %@" // avoid localization
+        fetchRequest.predicate = NSPredicate(format: predicateFormat, argumentArray: [id])
+
         var keywords: [Keyword]! = []
         do {
             keywords = try context.fetch(fetchRequest)
@@ -46,6 +51,7 @@ extension Keyword {
             // on non-Debug version, continue with empty `keywords` array
         }
 
+        // are there multiple copies of the keyword? This shouldn't be the case.
         if keywords.count > 1 { // there is actually a Core Data constraint to prevent this
             ifDebugFatalError("Query returned multiple (\(keywords.count)) Keywords with code \(id)",
                               file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0

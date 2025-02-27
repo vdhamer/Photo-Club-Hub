@@ -9,6 +9,11 @@ import CoreData // for NSManagedObjectContext
 
 extension LocalizedKeyword {
 
+    @available(*, unavailable)
+    convenience init() {
+        fatalError("init() is not available. Use .findCreateUpdate instead.")
+    }
+
     // MARK: - getters (setting is done via findCreateUpdate)
 
     var keyword: Keyword { // getter
@@ -38,10 +43,11 @@ extension LocalizedKeyword {
                                  localizedUsage: String?
                                 ) -> LocalizedKeyword {
 
-        let predicateFormat: String = "keyword_ = %@ AND language_ = %@" // avoid localization of query string
-        let predicate = NSPredicate(format: predicateFormat, argumentArray: [keyword, language])
+        // execute fetchRequest to get keyword object for id=id. Query could return multiple - but shouldn't.
         let fetchRequest: NSFetchRequest<LocalizedKeyword> = LocalizedKeyword.fetchRequest()
-        fetchRequest.predicate = predicate
+        let predicateFormat: String = "keyword_ = %@ AND language_ = %@" // avoid localization of query string
+        fetchRequest.predicate = NSPredicate(format: predicateFormat, argumentArray: [keyword, language])
+
         var localizedKeywords: [LocalizedKeyword]! = []
         do {
             localizedKeywords = try context.fetch(fetchRequest)
@@ -51,7 +57,7 @@ extension LocalizedKeyword {
             // on non-Debug version, continue with empty `keywords` array
         }
 
-        // are there multiple translations of the keyword into the same language? This shouldn't be the case
+        // are there multiple translations of the keyword into the same language? This shouldn't be the case.
         if localizedKeywords.count > 1 { // there is actually a Core Data constraint to prevent this
             ifDebugFatalError("""
                               Query returned multiple (\(localizedKeywords.count)) translations \
@@ -148,8 +154,8 @@ extension LocalizedKeyword {
 
         let fetchRequest: NSFetchRequest<LocalizedKeyword> = LocalizedKeyword.fetchRequest()
         let predicateFormat: String = "keyword_.id_ = %@ && language_.isoCode_ = %@" // avoid localization
-        let predicate = NSPredicate(format: predicateFormat, argumentArray: [keywordID, languageIsoCode])
-        fetchRequest.predicate = predicate
+        fetchRequest.predicate = NSPredicate(format: predicateFormat, argumentArray: [keywordID, languageIsoCode])
+
         do {
             localizedKeywords = try context.fetch(fetchRequest)
         } catch {

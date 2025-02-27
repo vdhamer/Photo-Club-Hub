@@ -9,6 +9,11 @@ import CoreData
 
 extension Language {
 
+    @available(*, unavailable)
+    convenience init() {
+        fatalError("init() is not available. Use .findCreateUpdate instead.")
+    }
+
     fileprivate static var code2Name: [String: String] {
         [
             "DE": "German",

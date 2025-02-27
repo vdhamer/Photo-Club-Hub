@@ -9,6 +9,11 @@ import CoreData // for NSFetchRequest and NSManagedObjectContext
 
 extension LocalizedRemark { // expose computed properties (some related to handling optionals)
 
+    @available(*, unavailable)
+    convenience init() {
+        fatalError("init() is not available. Use .findCreateUpdate instead.")
+    }
+
     // MARK: - getters (setting is done via findCreateUpdate)
 
     var organization: Organization { // getter

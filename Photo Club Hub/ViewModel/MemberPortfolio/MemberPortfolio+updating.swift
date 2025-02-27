@@ -9,6 +9,11 @@ import CoreData // for NSFetchRequest and NSManagedObjectContext
 
 extension MemberPortfolio { // findCreateUpdate() records in Member table
 
+    @available(*, unavailable)
+    convenience init() {
+        fatalError("init() is not available. Use .findCreateUpdate instead.")
+    }
+
     // Find existing object or create a new object
     // Update existing attributes or fill the new object
     static func findCreateUpdate(bgContext: NSManagedObjectContext,
