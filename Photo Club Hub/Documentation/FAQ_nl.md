@@ -72,7 +72,17 @@ De app kan prima omgaan met clubs die geen lid zijn van de Fotobond.
 Er zijn voorbeelden te vinden op de landkaarten.
 Buitenlandse club zouden per definitie geen lid van de (Nederlandse) Koninklijke Fotobond zijn.
 </details></p>
+
+### Waarom staan er fotomusea in? [beleid]
+
+<details><summary>Klik om uit te klappen</summary></p>
+Omdat het vrij eenvoudig kon, goed samenging met de landkaartjes, en nuttig kon zijn voor sommige gebruikers.
 </details></p>
+</details></p>
+
+## Vergelijkingen
+
+<details><summary>Klik om uit te klappen</summary></p>
 
 ### Hoe verschilt dit van een clubwebsite? [vergelijkingen]
 
@@ -122,11 +132,6 @@ Vergeleken met Glass, heeft Photo Club Hub...
 - voor de komende tijd een nadruk op Nederlandse gebruikers. Glass is internationaal en Engelstalig, al zitten de oprichters in Amsterdam.
 - nog geen mogelijkheid om individuen of clubs te "volgen". Maar dat zal bij voldoende gebruik nodig worden.
 </details></p>
-
-### Waarom staan er fotomusea in? [beleid]
-
-<details><summary>Klik om uit te klappen</summary></p>
-Omdat het vrij eenvoudig kon, goed samenging met de landkaartjes, en nuttig kon zijn voor sommige gebruikers.
 </details></p>
 
 ### Kan ik een fotomuseum toevoegen? [gegevensbeheer]
