@@ -7,6 +7,7 @@
 
 import SwiftUI
 import WebKit // for wkWebView
+import CoreLocation // for CLLocationCoordinate2D
 
 struct MemberPortfolioRow: View {
     var member: MemberPortfolio
@@ -77,7 +78,27 @@ struct MemberPortfolioRow: View {
 
  struct MemberPortfolioRow_Previews: PreviewProvider {
     static var previews: some View {
-        let member = MemberPortfolio() // compiles but doesn't really work
+        let persistenceController = PersistenceController.shared // for Core Data
+        let viewContext = persistenceController.container.viewContext
+        let personName = PersonName(givenName: "Jan", infixName: "de", familyName: "Korte")
+        let optionalFields = PhotographerOptionalFields()
+        let photographer = Photographer.findCreateUpdate(context: viewContext,
+                                                     personName: personName,
+                                                     optionalFields: optionalFields)
+        let organizationIdPlus = OrganizationIdPlus(fullName: "TestClub", town: "Location", nickname: "IgnoreMe")
+        let organization = Organization.findCreateUpdate(context: viewContext,
+                                                         organizationTypeEnum: OrganizationTypeEnum.club,
+                                                         idPlus: organizationIdPlus,
+                                                         coordinates: CLLocationCoordinate2D(
+                                                            latitude: 0.0, longitude: 0.0),
+                                                         optionalFields: OrganizationOptionalFields()
+                                                        )
+
+        let member = MemberPortfolio.findCreateUpdate(bgContext: viewContext,
+                                                      organization: organization,
+                                                      photographer: photographer,
+                                                      optionalFields: MemberOptionalFields()
+                                                     )
         MemberPortfolioRow(member: member, wkWebView: WKWebView())
     }
  }
