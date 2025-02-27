@@ -17,7 +17,7 @@ import CoreData // for NSManagedObjectContext
     init () {
         context = PersistenceController.shared.container.viewContext
 
-        let personName = PersonName(givenName: "Jan", infixName: "", familyName: randomString(10))
+        let personName = PersonName(givenName: randomString(10), infixName: "", familyName: "UnitTestDummy")
         let optionalFields = PhotographerOptionalFields()
         photographer = Photographer.findCreateUpdate(context: context,
                                                      personName: personName,
@@ -33,8 +33,8 @@ import CoreData // for NSManagedObjectContext
             keyword: Keyword.findCreateUpdateNonStandard(context: context, id: keywordID))
         #expect(photographerKeyword.keyword.id == keywordID)
         #expect(photographerKeyword.photographer === photographer)
-        #expect(photographerKeyword.photographer.givenName == "Jan")
-        #expect(photographerKeyword.photographer.infixName == "")
+        #expect(photographerKeyword.photographer.givenName == photographer.givenName)
+        #expect(photographerKeyword.photographer.infixName == photographer.infixName)
         #expect(photographerKeyword.photographer.familyName == photographer.familyName)
     }
 
@@ -47,8 +47,8 @@ import CoreData // for NSManagedObjectContext
             keyword: Keyword.findCreateUpdateNonStandard(context: context, id: keywordID))
         #expect(photographerKeyword1.keyword.id == keywordID)
         #expect(photographerKeyword1.photographer === photographer)
-        #expect(photographerKeyword1.photographer.givenName == "Jan")
-        #expect(photographerKeyword1.photographer.infixName == "")
+        #expect(photographerKeyword1.photographer.givenName == photographer.givenName)
+        #expect(photographerKeyword1.photographer.infixName == photographer.infixName)
         #expect(photographerKeyword1.photographer.familyName == photographer.familyName)
         PhotographerKeyword.save(context: context)
 
@@ -58,8 +58,8 @@ import CoreData // for NSManagedObjectContext
             keyword: Keyword.findCreateUpdateNonStandard(context: context, id: keywordID)) // same keyword
         #expect(photographerKeyword2.keyword.id == keywordID)
         #expect(photographerKeyword2.photographer === photographer)
-        #expect(photographerKeyword2.photographer.givenName == "Jan")
-        #expect(photographerKeyword2.photographer.infixName == "")
+        #expect(photographerKeyword2.photographer.givenName == photographer.givenName)
+        #expect(photographerKeyword2.photographer.infixName == photographer.infixName)
         #expect(photographerKeyword2.photographer.familyName == photographer.familyName)
         PhotographerKeyword.save(context: context)
 
