@@ -379,7 +379,6 @@ Voor de app betekent dit dat de verantwoording voor de inhoud volledig bij de cl
 En indien een complete club onverhoopt opgeheven wordt, verdwijnt die club vroeger of later uit de app
 doordat ze de rekening voor hun club website niet meer betalen.
 </details></p>
-</details></p>
 
 ### Wat is al dat gedoe met Levels/Niveaus? [gegevensbeheer]
 
