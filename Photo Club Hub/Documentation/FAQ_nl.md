@@ -1,11 +1,4 @@
-In een komende versie worden de vragen onderverdeeld in categorieën:
-- basisvragen
-- beleid
-- vergelijkingen
-- gebruik
-- gegevensbeheer
-- uitbreidingen
-- meer informatie
+De vragen zijn onderverdeeld in de volgende categorieën:
 
 ## Basisvragen
 
