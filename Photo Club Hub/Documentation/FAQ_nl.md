@@ -129,7 +129,7 @@ In principe zouden alle Nederlandse fotografie musea er al op de Level 1 lijst m
 Er staan momentaal alleen enkele bekende Fotomusea in bijvoorbeeld Duitsland, VS en Japan in.
 </details></p>
 
-### Zijn er kosten aan verbonden? [beleid]
+### Zijn er kosten aan verbonden? [beleid] + [gebruik]
 
 <details><summary>Klik om uit te klappen</summary></p>
 Niet of nauwelijks. De Photo Club Hub en Photo Club Hub HTML software is gratis en blijft gratis.
