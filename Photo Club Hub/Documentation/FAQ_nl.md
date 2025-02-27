@@ -9,8 +9,8 @@ In een komende versie worden de vragen onderverdeeld in categorieën:
 
 ### Basisvragen
 
-#### Wat doet de app? [basisvragen]
 <details><summary>Klik om uit te klappen</summary></p>
+#### Wat doet de app? [basisvragen]
 
 <details><summary>Klik om uit te klappen</summary></p>
 De omschrijving in de Apple App Store luidt:</p>
