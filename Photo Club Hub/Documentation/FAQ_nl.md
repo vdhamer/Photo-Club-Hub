@@ -263,7 +263,7 @@ En indien een complete club onverhoopt opgeheven wordt, verdwijnt die club vroeg
 doordat ze de rekening voor hun club website niet meer betalen.
 </details></p>
 
-### Is er een Android of PC versie van de app? [beleid]
+### Is er een Android of PC versie van de app? [beleid] + [gebruik]
 
 <details><summary>Klik om uit te klappen</summary></p>
 De app versie ondersteunt om praktische redenen de iPhone en iPad.
