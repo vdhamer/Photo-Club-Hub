@@ -52,6 +52,31 @@ Men kan de app dus zien als een online museum voor de amateurfotografie dat alti
 Waar je in kunt rondlopen in een rustige omgeving, met nadruk op de foto's en hun makers.
 Maar in tegenstelling tot een museum, kan het dienen als streekmuseum: een landkaart maakt duidelijk welke clubs dichtbij zijn en welke niet.
 </details></p>
+
+### Waarom staat mijn club niet in de app? [basisvragen]
+
+<details><summary>Klik om uit te klappen</summary></p>
+De app is "open". Je kunt zelf een club toevoegen. Hier komen stapsgewijs instructies voor.</p>
+    
+De vrijwel volledige lijst met clubs in Brabant-Oost staat erin als demo en om het proces op te starten:
+dat scheel alvast 1 van de 3 stappen.
+</details></p>
+
+### Is er een Android of PC versie van de app? [beleid] + [gebruik] + [basisvragen]
+
+<details><summary>Klik om uit te klappen</summary></p>
+De app versie ondersteunt om praktische redenen de iPhone en iPad.
+Maar er zijn genoeg andere doelgroepen. Dus is er een zogenaamde "webversie" in ontwikkeling.
+Die bekijk je in je browser (Chrome, Edge, Safari...) en denkt dus zowel PC/Mac gebruikers als alle merken smartfoons af.
+Die webversie bestaat uit HTML pagina's die toegevoegen kunnen worden aan een bestaande website (b.v. Wordpress).</p>
+
+De software voor de webversie heet "Photo Club Hub HTML" (en) danwel "Fotoclub Hub HTML" (nl). 
+Hiermee kan een website beheerder pagina's automatisch aanmaken vanuit _dezelfde_ databestanden
+die gebruikt worden voor "Fotoclub Hub" app.
+[Hier](http://www.vdhamer.com/fgDeGender/) is een vroege testversie van een dergelijke, genereerde mini-site.
+Dit voorkomt dubbel werk bij het bijhouden van zowel app als website. 
+Foto Club Hub HTML genereert dus een ledenlijst met links naar de portfolio's van de clubleden.
+</details></p>
 </details></p>
 
 ## Beleid
@@ -77,6 +102,138 @@ Buitenlandse club zouden per definitie geen lid van de (Nederlandse) Koninklijke
 
 <details><summary>Klik om uit te klappen</summary></p>
 Omdat het vrij eenvoudig kon, goed samenging met de landkaartjes, en nuttig kon zijn voor sommige gebruikers.
+</details></p>
+
+### Zijn er kosten aan verbonden? [beleid] + [gebruik]
+
+<details><summary>Klik om uit te klappen</summary></p>
+Niet of nauwelijks. De Photo Club Hub en Photo Club Hub HTML software is gratis en blijft gratis.
+En zijn geen kosten voor centrale opslag of rekenkracht: er is geen noemenswaardige centrale infrastructuur.</p>
+
+Als we ervan uitgaan dat een club vrijwel altijd een website heeft en een lid heeft met Lightroom Classic, dan blijft
+als enige bekende kostenpost een eenmalige aanschaf van een LR plug-in ([Juicebox Pro](https://www.juicebox.net)).
+Er kan gekeken worden gekeken worden of er een gratis alternatief afdoende is 
+(LR wordt geleverd met enkele web plug-ins, Juicebox zelf heeft een 'Lite' versie).
+Zelf bouwen van een alternatief voor die plug-in is in principe mogelijk maar niet eenvoudig: dat hangt dus op het
+vinden van een vrijwilliger die het kan en ertoe bereid is.
+Er kan ook gekeken worden of de plug-in kosten voor dit doel eenmalig centraal afkoopbaar zijn.
+</details></p
+
+### Wie bepaalt welke foto's in de app staan? [beleid]
+
+<details><summary>Klik om uit te klappen</summary></p>
+De individuele clubs.</p>
+
+Zo kan je bijvoorbeeld ervoor kiezen dat foto's van alle clubexposities 
+en individuele exposities van de afgelopen jaren te zien zijn.
+Maar je kunt ook afspreken dat iedere fotograaf zelf foto's uitkiest voor zijn/naar portfolio in de app. Of een combinatie.
+De app gaat er in principe wel van uit dat de foto's geselecteerd zijn.
+Dus eerder tien dan honderd foto's per fotograaf per jaar. Dat heb je zo met exposeren: keuzes maken.
+</details></p>
+
+### Moet ik mij zorgen maken over privacy? [beleid]
+
+<details><summary>Klik om uit te klappen</summary></p>
+Nee. Een club beheert zijn eigen gegevens. En die gegevens staan opgeslagen op de club website en worden door de club geleverd en onderhouden.
+De gegevens waar het hier om gaat zijn meestal al op bestaande websites te zien: namen van leden, een selectie van foto's, leden van het bestuur.
+Dus nu zijn diezelfde gegevens omgezet in een voor software leesbaar formaat, zodat ze op een consistente, uniforme manier getoond kunnen worden.
+
+De meeste velden zijn optioneel. Dus een club is niet gedwongen om b.v. te linken naar hun website, of aan te geven wie in het bestuur zit.
+Verder doet de app niet aan postadressen, e-mailadressen of telefoonnummers van leden. Die zijn niet optioneel: de app ondersteunt ze niet.
+Zelfs het postadres van de thuisbasis van de club is optioneel. Het is opgeslagen als GPS coordinaten, die je kunt afronden of 
+naar b.v. naar een dorpsplein of station kan laten wijzen.
+</details></p>
+
+### Houdt mijn club controle over zijn eigen foto's? [beleid]
+
+<details><summary>Klik om uit te klappen</summary></p>
+Ja. Er worden geen kopieën getrokken van de foto's. De foto's staan op de website van de club.
+Technisch wordt er alleen naar "gelinkt".
+En zelfs de lijsten met linkjes naar foto's staan op de website van de club, en dus _niet_ op een centrale server. 
+Dit is dus niet vergelijkbaar met foto's delen via Facebook, Instagram, Flickr, X, enz.
+Social media trekt dus een kopie, en probeert zich vaak rechten toe te eigenen op foto's in ruil voor het gebruik van hun dienst.
+Deze app is daarentegen expliciet ontwerpen zodat de club/fotograaf volledige controle houdt: 
+er worden geen kopieën van foto's of data gemaakt, er is geen centrale server, 
+en de software is gratis en openbaar ("open source").</p>
+
+Voorbeeld: de foto's en lijsten met foto's van Fotogroep De Gender komen† op www.fcDeGender.nl te staan.
+Dat is de bestaande website van de club.
+En op die website stonden altijd al de namen van de leden, en geselecteerde foto's per lid.
+Je zou kunnen zeggen dat je met hander gereedschap hetzelfde doet als vroeger.
+Op een manier dat enkele problemen met bestaande websites ondervangt door gebruik te maken van wat modernere techniek.
+
+Het is overigens zelfs mogelijk om "de foto's van Jan" eventueele bij Jan zelf neer te zetten. Wij verwachten dat dit niet
+veel gebruikt zal worden, en raden aan om het vooral in het begin simpel te houden.
+
+† Als test staan de foto's van De Gender even op een andere (mijn privé) server. Maar dat is tijdelijk: het is beter voor het beheer als een club dat zelf doet, en het is
+onwenselijk als tientallen of honderden clubs afhankelijk worden van een enkele server ("single point of failure"). 
+En verder heeft een centrale server natuurlijk maar beperkte ruimte. 
+De meeste clubs zijn al gewend om een internet leverancier te betalen
+voor opslagruimte, bandbreedte, domeinnaam en het in de lucht houden van hun website.
+Dus dit zou normaal geen extra kosten met zich meebrengen. Zie volgend punt:
+</details></p>
+
+### Kan iemand de getoonde foto's kopieëren? [beleid]
+
+<details><summary>Klik om uit te klappen</summary></p>
+Dat is niet helemaal tegen te gaan: alle online plaatjes die zichtbaar zijn, kan je een screenshot van maken.
+Maar het is hier wel opgezet om kopieëren zo lastig mogelijk te maken. Bij mijn procedé hiervoor...
+
+- rechtsklikken en "Save as.." is in de software geblokeerd.
+- de foto bevat zichtbaar de naam van de maker in de linkeronderhoek
+- de foto bevat digitaal en onzichtbaar (in het EXIF copyright veld) de naam van de maker
+
+Dit is overigens vergelijkbaar met wat je kan doen met een traditionele website.
+</details></p>
+
+### Moeten ex-leden in de app vermeld worden? [beleid]
+
+<details><summary>Klik om uit te klappen</summary></p>
+
+Nee. Maar de app is zo gemaakt dat het kan.
+Vaak wordt dat gewaardeerd (b.v. als iemand 20 jaar lid was, en wegens gezondheidsredenen niet meer meedoet met "zijn" club).
+"In de app blijven of niet" kan per lid besloten worden. Of per club. Het is wel verstandig om dit met het lid zelf af te stemmen.
+Technisch kan een **gebruiker** van de app ook nog eens kiezen of ex-leden getoond worden.
+En kan iedere club zelf een beleid op dit punt beslissen: als de club de gegevens niet aanlevert, zijn ze uiteraard niet te zien.
+Meer details zijn hieronder te vinden.
+</details></p>
+
+### Is er een Android of PC versie van de app? [beleid] + [gebruik] + [basisvragen]
+
+<details><summary>Klik om uit te klappen</summary></p>
+De app versie ondersteunt om praktische redenen de iPhone en iPad.
+Maar er zijn genoeg andere doelgroepen. Dus is er een zogenaamde "webversie" in ontwikkeling.
+Die bekijk je in je browser (Chrome, Edge, Safari...) en denkt dus zowel PC/Mac gebruikers als alle merken smartfoons af.
+Die webversie bestaat uit HTML pagina's die toegevoegen kunnen worden aan een bestaande website (b.v. Wordpress).</p>
+
+De software voor de webversie heet "Photo Club Hub HTML" (en) danwel "Fotoclub Hub HTML" (nl). 
+Hiermee kan een website beheerder pagina's automatisch aanmaken vanuit _dezelfde_ databestanden
+die gebruikt worden voor "Fotoclub Hub" app.
+[Hier](http://www.vdhamer.com/fgDeGender/) is een vroege testversie van een dergelijke, genereerde mini-site.
+Dit voorkomt dubbel werk bij het bijhouden van zowel app als website. 
+Foto Club Hub HTML genereert dus een ledenlijst met links naar de portfolio's van de clubleden.
+</details></p>
+
+### Werkt dit allemaal nog over enkele jaren? [beleid]
+
+<details><summary>Klik om uit te klappen</summary></p>
+Bij een bedrijf (b.v. Adobe) mag je aannemen dat alles minstens 10 jaar ondersteund wordt. Men betaalt er tenslotte voor, 
+en het is de verantwoordelijkheid van Adobe om voor continuïteit te zorgen zolang ze een redelijke winst maken.
+Maar een harde garantie is er niet.
+
+Hier ligt dit anders: de broncode is openbaar ("open source"), zodat het in principe nooit verloren kan gaan.
+Maar de software heeft zo nu en dan onderhoud nodig. En gebruikers hopen vaak op uitbreidingen en vernieuwingen.
+Softwareonderhoud en uitbouw vergt in software nogal wat specialistische kennis en is dus normaal voor een club onbetaalbaar.
+
+Aangezien er geen budget is, streven wij ernaar dat er straks voldoende gebruikers zijn dat er meer vrijwillers komen die bereid zijn
+incidenteel en zonder vergoeding aan de software te sleutelen. Bijvoorbeeld omdat ze een idee hebben en het zelf kunnen helpen realiseren.
+Dat staat of valt bij het kunnen opbouwen van een groepje techneuten die dat kunnen en willen. Ze hoeven niet op dezelfde plek of zelfs in hetzelfde land te zitten.
+Bij gebruik door bijvoorbeeld 100 clubs is er kans dat er toevallig iemand (b.v. student) tussenzit die mee zou kunnen helpen.
+Dit _kan_ gaan sneeuwballen: meer ontwikkelaars > meer functionaliteit > meer gebruikers > meer kans op ontwikkelaars. Of niet. Geen harde garantie.
+Maar er is wel de ambitie om dit op deze manier op te lossen.
+
+Voor een club hoeft deze continuïteitsvraag geen drama te zijn: de investering per club om gegevens aan te leveren zijn heel beperkt.
+Zeg maar vergelijkbaar met een andere verbeteringsactie rondom de club website.
 </details></p>
 </details></p>
 
@@ -134,15 +291,9 @@ Vergeleken met Glass, heeft Photo Club Hub...
 </details></p>
 </details></p>
 
-### Kan ik een fotomuseum toevoegen? [gegevensbeheer]
+## Gebruik
 
 <details><summary>Klik om uit te klappen</summary></p>
-Ja. Dat doe je door de Level 1 lijst uit te breiden.
-Graag alleen musea toevoegen die duidelijk voor fotografie interessant zijn.</p>
-
-In principe zouden alle Nederlandse fotografie musea er al op de Level 1 lijst moeten staan.
-Er staan momentaal alleen enkele bekende Fotomusea in bijvoorbeeld Duitsland, VS en Japan in.
-</details></p>
 
 ### Zijn er kosten aan verbonden? [beleid] + [gebruik]
 
@@ -159,67 +310,43 @@ vinden van een vrijwilliger die het kan en ertoe bereid is.
 Er kan ook gekeken worden of de plug-in kosten voor dit doel eenmalig centraal afkoopbaar zijn.
 </details></p>
 
-### Waarom staat mijn club niet in de app? [basisvragen]
+### Is er een Android of PC versie van de app? [beleid] + [gebruik] + [basisvragen]
 
 <details><summary>Klik om uit te klappen</summary></p>
-De app is "open". Je kunt zelf een club toevoegen. Hier komen stapsgewijs instructies voor.</p>
-    
-De vrijwel volledige lijst met clubs in Brabant-Oost staat erin als demo en om het proces op te starten:
-dat scheel alvast 1 van de 3 stappen.
+De app versie ondersteunt om praktische redenen de iPhone en iPad.
+Maar er zijn genoeg andere doelgroepen. Dus is er een zogenaamde "webversie" in ontwikkeling.
+Die bekijk je in je browser (Chrome, Edge, Safari...) en denkt dus zowel PC/Mac gebruikers als alle merken smartfoons af.
+Die webversie bestaat uit HTML pagina's die toegevoegen kunnen worden aan een bestaande website (b.v. Wordpress).</p>
+
+De software voor de webversie heet "Photo Club Hub HTML" (en) danwel "Fotoclub Hub HTML" (nl). 
+Hiermee kan een website beheerder pagina's automatisch aanmaken vanuit _dezelfde_ databestanden
+die gebruikt worden voor "Fotoclub Hub" app.
+[Hier](http://www.vdhamer.com/fgDeGender/) is een vroege testversie van een dergelijke, genereerde mini-site.
+Dit voorkomt dubbel werk bij het bijhouden van zowel app als website. 
+Foto Club Hub HTML genereert dus een ledenlijst met links naar de portfolio's van de clubleden.
 </details></p>
 
-### Wie bepaalt welke foto's in de app staan? [beleid]
+### Ik kan Fotoclub Hub niet vinden op de Apple App Store? [gebruik]
 
 <details><summary>Klik om uit te klappen</summary></p>
-De individuele clubs.</p>
-
-Zo kan je bijvoorbeeld ervoor kiezen dat foto's van alle clubexposities 
-en individuele exposities van de afgelopen jaren te zien zijn.
-Maar je kunt ook afspreken dat iedere fotograaf zelf foto's uitkiest voor zijn/naar portfolio in de app. Of een combinatie.
-De app gaat er in principe wel van uit dat de foto's geselecteerd zijn.
-Dus eerder tien dan honderd foto's per fotograaf per jaar. Dat heb je zo met exposeren: keuzes maken.
+Op het buitenland heet de app "Photo Club Hub" (engels) in plaats van "Fotoclub Hub" (Nederlands).
+Je kunt op een buitenlandse App Store aangewezen zijn als je een tijd in het buitenland gewoond hebt.
+In alle gevallen krijg je precies dezelfde app. De app kiest automatisch de juiste taal bij het opstarten.
+</details></p>
 </details></p>
 
-### Moet ik mij zorgen maken over privacy? [beleid]
+## Gegevensbeheer
 
 <details><summary>Klik om uit te klappen</summary></p>
-Nee. Een club beheert zijn eigen gegevens. En die gegevens staan opgeslagen op de club website en worden door de club geleverd en onderhouden.
-De gegevens waar het hier om gaat zijn meestal al op bestaande websites te zien: namen van leden, een selectie van foto's, leden van het bestuur.
-Dus nu zijn diezelfde gegevens omgezet in een voor software leesbaar formaat, zodat ze op een consistente, uniforme manier getoond kunnen worden.
 
-De meeste velden zijn optioneel. Dus een club is niet gedwongen om b.v. te linken naar hun website, of aan te geven wie in het bestuur zit.
-Verder doet de app niet aan postadressen, e-mailadressen of telefoonnummers van leden. Die zijn niet optioneel: de app ondersteunt ze niet.
-Zelfs het postadres van de thuisbasis van de club is optioneel. Het is opgeslagen als GPS coordinaten, die je kunt afronden of 
-naar b.v. naar een dorpsplein of station kan laten wijzen.
-</details></p>
-
-### Houdt mijn club controle over zijn eigen foto's? [beleid]
+### Kan ik een fotomuseum toevoegen? [gegevensbeheer]
 
 <details><summary>Klik om uit te klappen</summary></p>
-Ja. Er worden geen kopieën getrokken van de foto's. De foto's staan op de website van de club.
-Technisch wordt er alleen naar "gelinkt".
-En zelfs de lijsten met linkjes naar foto's staan op de website van de club, en dus _niet_ op een centrale server. 
-Dit is dus niet vergelijkbaar met foto's delen via Facebook, Instagram, Flickr, X, enz.
-Social media trekt dus een kopie, en probeert zich vaak rechten toe te eigenen op foto's in ruil voor het gebruik van hun dienst.
-Deze app is daarentegen expliciet ontwerpen zodat de club/fotograaf volledige controle houdt: 
-er worden geen kopieën van foto's of data gemaakt, er is geen centrale server, 
-en de software is gratis en openbaar ("open source").</p>
+Ja. Dat doe je door de Level 1 lijst uit te breiden.
+Graag alleen musea toevoegen die duidelijk voor fotografie interessant zijn.</p>
 
-Voorbeeld: de foto's en lijsten met foto's van Fotogroep De Gender komen† op www.fcDeGender.nl te staan.
-Dat is de bestaande website van de club.
-En op die website stonden altijd al de namen van de leden, en geselecteerde foto's per lid.
-Je zou kunnen zeggen dat je met hander gereedschap hetzelfde doet als vroeger.
-Op een manier dat enkele problemen met bestaande websites ondervangt door gebruik te maken van wat modernere techniek.
-
-Het is overigens zelfs mogelijk om "de foto's van Jan" eventueele bij Jan zelf neer te zetten. Wij verwachten dat dit niet
-veel gebruikt zal worden, en raden aan om het vooral in het begin simpel te houden.
-
-† Als test staan de foto's van De Gender even op een andere (mijn privé) server. Maar dat is tijdelijk: het is beter voor het beheer als een club dat zelf doet, en het is
-onwenselijk als tientallen of honderden clubs afhankelijk worden van een enkele server ("single point of failure"). 
-En verder heeft een centrale server natuurlijk maar beperkte ruimte. 
-De meeste clubs zijn al gewend om een internet leverancier te betalen
-voor opslagruimte, bandbreedte, domeinnaam en het in de lucht houden van hun website.
-Dus dit zou normaal geen extra kosten met zich meebrengen. Zie volgend punt:
+In principe zouden alle Nederlandse fotografie musea er al op de Level 1 lijst moeten staan.
+Er staan momentaal alleen enkele bekende Fotomusea in bijvoorbeeld Duitsland, VS en Japan in.
 </details></p>
 
 ### Wat als een club geen website heeft? [gegevensbeheer]
@@ -231,31 +358,6 @@ Weet ik niet precies. Het overgrote deel van de clubs heeft al een website (= ie
 - Level 2 kost vrijwel geen opslag. Makkelijk om een vrijwilliger te vinden die 1 enkel bestandje online wil zetten. Instructies hiervoor volgen.
 - Level 3 is wat lastiger, maar opslag bij een bevriende club is misschien bespreekbaar. Of een [gratis website leverancier](https://www.techradar.com/web-hosting/best-free-web-hosting) vinden.
 Ik denk niet dat wij instructies gaan maken voor "hoe maak ik een website" (doen de hosting providers). Maar we kunnen wel voorbeeldinstructies gemaakt door een club delen.
-</details></p>
-
-### Kan iemand de getoonde foto's kopieëren? [beleid]
-
-<details><summary>Klik om uit te klappen</summary></p>
-Dat is niet helemaal tegen te gaan: alle online plaatjes die zichtbaar zijn, kan je een screenshot van maken.
-Maar het is hier wel opgezet om kopieëren zo lastig mogelijk te maken. Bij mijn procedé hiervoor...
-
-- rechtsklikken en "Save as.." is in de software geblokeerd.
-- de foto bevat zichtbaar de naam van de maker in de linkeronderhoek
-- de foto bevat digitaal en onzichtbaar (in het EXIF copyright veld) de naam van de maker
-
-Dit is overigens vergelijkbaar met wat je kan doen met een traditionele website.
-</details></p>
-
-### Moeten ex-leden in de app vermeld worden? [beleid]
-
-<details><summary>Klik om uit te klappen</summary></p>
-
-Nee. Maar de app is zo gemaakt dat het kan.
-Vaak wordt dat gewaardeerd (b.v. als iemand 20 jaar lid was, en wegens gezondheidsredenen niet meer meedoet met "zijn" club).
-"In de app blijven of niet" kan per lid besloten worden. Of per club. Het is wel verstandig om dit met het lid zelf af te stemmen.
-Technisch kan een **gebruiker** van de app ook nog eens kiezen of ex-leden getoond worden.
-En kan iedere club zelf een beleid op dit punt beslissen: als de club de gegevens niet aanlevert, zijn ze uiteraard niet te zien.
-Meer details zijn hieronder te vinden.
 </details></p>
 
 ### Kan een overleden voormalig lid zichtbaar zijn? [gegevensbeheer]
@@ -277,43 +379,6 @@ Voor de app betekent dit dat de verantwoording voor de inhoud volledig bij de cl
 En indien een complete club onverhoopt opgeheven wordt, verdwijnt die club vroeger of later uit de app
 doordat ze de rekening voor hun club website niet meer betalen.
 </details></p>
-
-### Is er een Android of PC versie van de app? [beleid] + [gebruik] + [basis]
-
-<details><summary>Klik om uit te klappen</summary></p>
-De app versie ondersteunt om praktische redenen de iPhone en iPad.
-Maar er zijn genoeg andere doelgroepen. Dus is er een zogenaamde "webversie" in ontwikkeling.
-Die bekijk je in je browser (Chrome, Edge, Safari...) en denkt dus zowel PC/Mac gebruikers als alle merken smartfoons af.
-Die webversie bestaat uit HTML pagina's die toegevoegen kunnen worden aan een bestaande website (b.v. Wordpress).</p>
-
-De software voor de webversie heet "Photo Club Hub HTML" (en) danwel "Fotoclub Hub HTML" (nl). 
-Hiermee kan een website beheerder pagina's automatisch aanmaken vanuit _dezelfde_ databestanden
-die gebruikt worden voor "Fotoclub Hub" app.
-[Hier](http://www.vdhamer.com/fgDeGender/) is een vroege testversie van een dergelijke, genereerde mini-site.
-Dit voorkomt dubbel werk bij het bijhouden van zowel app als website. 
-Foto Club Hub HTML genereert dus een ledenlijst met links naar de portfolio's van de clubleden.
-</details></p>
-
-### Werkt dit allemaal nog over enkele jaren? [beleid]
-
-<details><summary>Klik om uit te klappen</summary></p>
-Bij een bedrijf (b.v. Adobe) mag je aannemen dat alles minstens 10 jaar ondersteund wordt. Men betaalt er tenslotte voor, 
-en het is de verantwoordelijkheid van Adobe om voor continuïteit te zorgen zolang ze een redelijke winst maken.
-Maar een harde garantie is er niet.
-
-Hier ligt dit anders: de broncode is openbaar ("open source"), zodat het in principe nooit verloren kan gaan.
-Maar de software heeft zo nu en dan onderhoud nodig. En gebruikers hopen vaak op uitbreidingen en vernieuwingen.
-Softwareonderhoud en uitbouw vergt in software nogal wat specialistische kennis en is dus normaal voor een club onbetaalbaar.
-
-Aangezien er geen budget is, streven wij ernaar dat er straks voldoende gebruikers zijn dat er meer vrijwillers komen die bereid zijn
-incidenteel en zonder vergoeding aan de software te sleutelen. Bijvoorbeeld omdat ze een idee hebben en het zelf kunnen helpen realiseren.
-Dat staat of valt bij het kunnen opbouwen van een groepje techneuten die dat kunnen en willen. Ze hoeven niet op dezelfde plek of zelfs in hetzelfde land te zitten.
-Bij gebruik door bijvoorbeeld 100 clubs is er kans dat er toevallig iemand (b.v. student) tussenzit die mee zou kunnen helpen.
-Dit _kan_ gaan sneeuwballen: meer ontwikkelaars > meer functionaliteit > meer gebruikers > meer kans op ontwikkelaars. Of niet. Geen harde garantie.
-Maar er is wel de ambitie om dit op deze manier op te lossen.
-
-Voor een club hoeft deze continuïteitsvraag geen drama te zijn: de investering per club om gegevens aan te leveren zijn heel beperkt.
-Zeg maar vergelijkbaar met een andere verbeteringsactie rondom de club website.
 </details></p>
 
 ### Wat is al dat gedoe met Levels/Niveaus? [gegevensbeheer]
@@ -360,14 +425,6 @@ Vermoedelijk bevat WordPress en beveiliging om vooral plaatjes en video te uploa
 Daarvoor heb je een Wordpress plug-in nodig. Bijvoorbeeld [https://wordpress.org/plugins/mime-types-plus/](https://wordpress.org/plugins/mime-types-plus/)
 </details></p>
 
-### Ik kan Fotoclub Hub niet vinden op de Apple App Store? [gebruik]
-
-<details><summary>Klik om uit te klappen</summary></p>
-Op het buitenland heet de app "Photo Club Hub" (engels) in plaats van "Fotoclub Hub" (Nederlands).
-Je kunt op een buitenlandse App Store aangewezen zijn als je een tijd in het buitenland gewoond hebt.
-In alle gevallen krijg je precies dezelfde app. De app kiest automatisch de juiste taal bij het opstarten.
-</details></p>
-
 ### Mag een club niet zelf zijn Level 1 omschrijving bepalen? [gegevensbeheer]
 
 <details><summary>Klik om uit te klappen</summary></p>
@@ -378,12 +435,22 @@ Dit zou ook moeten werken voor `latitude` en `longitude` (GPS coordinaten).
 
 Graag ons op dergelijke wijzigingen op club-niveau attenderen: dan corrigeren wij toch ook het Level 1 bestand.
 </details></p>
+</details></p>
+
+## Uitbreidingen
+
+<details><summary>Klik om uit te klappen</summary></p>
 
 ### Gaat dit ook iets met exposities doen? [uitbreidingen]
 <details><summary>Klik om uit te klappen</summary></p>
 Ja. Er is een begin aan gemaakt ([voorproefje](http://www.vdhamer.com/fgDeGender/expo2024/)).
 Het gaat dan om de foto's van clubexposities te tonen _na afloop_ van de fysieke expositie.
 </details></p>
+</details></p>
+
+## Meer informatie
+
+<details><summary>Klik om uit te klappen</summary></p>
 
 ### Er is vast meer documentatie? [meer info]
 
@@ -399,4 +466,5 @@ Vast wel. Zie tabel:
 | Interne readme in Photo Club Hub app | ingebouwd | ✓ | ✓ |
 | Powerpoint presentatie | [download](https://github.com/vdhamer/Photo-Club-Hub/raw/refs/heads/main/Photo%20Club%20Hub/Documentation/Photo%20Club%20Hub.pptx) | ✓ | |
 | FAQ (dit document) | [tinyurl.com/fchFAQnl](https://tinyurl.com/fchFAQnl) | ✓ | |
+</details></p>
 </details></p>
