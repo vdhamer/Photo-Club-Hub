@@ -101,7 +101,7 @@ Omdat het vrij eenvoudig kon, goed samenging met de landkaartjes, en nuttig kon 
 Niet of nauwelijks. De Photo Club Hub en Photo Club Hub HTML software is gratis en blijft gratis.
 En zijn geen kosten voor centrale opslag of rekenkracht: er is geen noemenswaardige centrale infrastructuur.</p>
 
-Als we ervan uitgaan dat een club vrijwel altijd een website heeft en een lid heeft met Lightroom Classic, dan blijft
+Als we ervan uitgaan dat een club vrijwel altijd al een website heeft en minstens één lid heeft met Lightroom Classic, dan blijft
 als enige bekende kostenpost een eenmalige aanschaf van een LR plug-in ([Juicebox Pro](https://www.juicebox.net)).
 Er kan gekeken worden gekeken worden of er een gratis alternatief afdoende is 
 (LR wordt geleverd met enkele web plug-ins, Juicebox zelf heeft een 'Lite' versie).
@@ -292,7 +292,7 @@ Vergeleken met Glass, heeft Photo Club Hub...
 Niet of nauwelijks. De Photo Club Hub en Photo Club Hub HTML software is gratis en blijft gratis.
 En zijn geen kosten voor centrale opslag of rekenkracht: er is geen noemenswaardige centrale infrastructuur.</p>
 
-Als we ervan uitgaan dat een club vrijwel altijd een website heeft en een lid heeft met Lightroom Classic, dan blijft
+Als we ervan uitgaan dat een club vrijwel altijd al een website heeft en minstens één lid heeft met Lightroom Classic, dan blijft
 als enige bekende kostenpost een eenmalige aanschaf van een LR plug-in ([Juicebox Pro](https://www.juicebox.net)).
 Er kan gekeken worden gekeken worden of er een gratis alternatief afdoende is 
 (LR wordt geleverd met enkele web plug-ins, Juicebox zelf heeft een 'Lite' versie).
