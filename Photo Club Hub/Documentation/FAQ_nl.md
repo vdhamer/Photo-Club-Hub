@@ -66,11 +66,11 @@ Maar werkt bij relatief kleine sites niet goed: om op de hoogte te blijven moet 
 aflopen - en vaak blijkt er niets veranderd te zijn. Het gevolg is weinig bezoekers (behalve rond de expo). 
 Wat het weer minder aantrekkelijk maakt om de site bij te werken. Wat leidt tot nog minder bezoekers.</p>
 
-De klassieke "statische" websites kwijnen worden qua aandacht vervangen door grotere "dynamische" sites.
-Dit kan je in dit geval oplossen door 
-- het nieuws van meerdere clubs op 1 plek te bundelen zodat er altijd wel wat nieuws is
+De klassieke "statische" websites worden qua aandacht vervangen door grotere "dynamische" sites.
+Dit kan je in dit geval oplossen door
+- het nieuws van meerdere clubs op 1 plek te bundelen zodat er altijd wel wat nieuws te vinden is
 - veranderingen makkelijk vindbaar te maken (b.v. nieuwste foto per fotograaf tonen)
-- optie om eventueel zelfs actief melden als er relevant nieuws binnengekomen is (instelbare notificaties).
+- optie om proactief te melden wanneer er relevant nieuws binnengekomen is (instelbare notificaties).
 </details></p>
 
 ### Hoe verschilt dit van social media zoals Facebook of Instagram?
