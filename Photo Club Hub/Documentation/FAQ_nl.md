@@ -374,7 +374,7 @@ Het gaat dan om de foto's van clubexposities te tonen _na afloop_ van de fysieke
 Vast wel. Zie tabel:
     
 | Titel  | Link | Nederlands | Engels  |
-| ----------- | ----------- | ----------- |
+| ----------- | ----------- | --- | --- |
 | Een level2.json bestand aanmaken voor een club | [tinyurl.com/Level2aanmaken](https://tinyurl.com/Level2aanmaken) | ✓ | |
 | Creating a new level2.json file for your club | [tinyurl.com/Level2creation](https://tinyurl.com/Level2creation) | | ✓ |
 | Readme Photo Club Hub | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/.github/README.md) | | ✓ |
