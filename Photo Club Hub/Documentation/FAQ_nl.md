@@ -7,10 +7,11 @@ In een komende versie worden de vragen onderverdeeld in categorieën:
 - uitbreidingen
 - meer informatie
 
-### Basisvragen
+## Basisvragen
 
 <details><summary>Klik om uit te klappen</summary></p>
-#### Wat doet de app? [basisvragen]
+    
+### Wat doet de app? [basisvragen]
 
 <details><summary>Klik om uit te klappen</summary></p>
 De omschrijving in de Apple App Store luidt:</p>
@@ -26,7 +27,7 @@ De omschrijving in de Apple App Store luidt:</p>
 > Beide apps staan op GitHub.
 </details></p>
 
-#### Waarom is de app gemaakt? [basisvragen]
+### Waarom is de app gemaakt? [basisvragen]
 
 <details><summary>Klik om uit te klappen</summary></p>
 
@@ -53,22 +54,27 @@ Maar in tegenstelling tot een museum, kan het dienen als streekmuseum: een landk
 </details></p>
 </details></p>
 
-#### Is de app alleen voor Nederland? [beleid]
+## Beleid
+
+<details><summary>Klik om uit te klappen</summary></p>
+
+### Is de app alleen voor Nederland? [beleid]
 
 <details><summary>Klik om uit te klappen</summary></p>
 De nadruk ligt voorlopig op Nederland. Maar de app is wereldwijd te gebruiken.
 De app ondersteunt bijvoorbeeld zowel Nederlands als Engels. In het Engels heet de app "Photo Club Hub" ipv "Fotoclub Hub".
 </details></p>
 
-#### Moet een club lid zijn van de Fotobond? [beleid]
+### Moet een club lid zijn van de Fotobond? [beleid]
 
 <details><summary>Klik om uit te klappen</summary></p>
 De app kan prima omgaan met clubs die geen lid zijn van de Fotobond.
 Er zijn voorbeelden te vinden op de landkaarten.
 Buitenlandse club zouden per definitie geen lid van de (Nederlandse) Koninklijke Fotobond zijn.
 </details></p>
+</details></p>
 
-#### Hoe verschilt dit van een clubwebsite? [vergelijkingen]
+### Hoe verschilt dit van een clubwebsite? [vergelijkingen]
 
 <details><summary>Klik om uit te klappen</summary></p>
 Een website vereist dat de gebruiker _zelf_ initiatief onderneemt om informatie te zoeken.
@@ -84,7 +90,7 @@ Dit kan je in dit geval oplossen door
 - optie om proactief te melden wanneer er relevant nieuws binnengekomen is (instelbare notificaties).
 </details></p>
 
-#### Hoe verschilt dit van social media zoals Facebook of Instagram? [vergelijkingen]
+### Hoe verschilt dit van social media zoals Facebook of Instagram? [vergelijkingen]
 
 <details><summary>Klik om uit te klappen</summary></p>
 Er bestaan manieren om automatisch veranderingen in websites op te sporen (RSS).
@@ -104,7 +110,7 @@ Concreet betekent dit:
 - galerie-achtige weergave zodat de foto's tot hun recht komen (dus geen reclame of wereldnieuws)
 </details></p>
 
-#### Hoe verschilt dit van een online fotoclub zoals Glass.photo? [vergelijkingen]
+### Hoe verschilt dit van een online fotoclub zoals Glass.photo? [vergelijkingen]
 
 <details><summary>Klik om uit te klappen</summary></p>
 [Glass.photo](www.glass.photo) ziet fotografen als een individu - maar je kunt Glass zien als 1 grote fotoclub.
@@ -117,13 +123,13 @@ Vergeleken met Glass, heeft Photo Club Hub...
 - nog geen mogelijkheid om individuen of clubs te "volgen". Maar dat zal bij voldoende gebruik nodig worden.
 </details></p>
 
-#### Waarom staan er fotomusea in? [beleid]
+### Waarom staan er fotomusea in? [beleid]
 
 <details><summary>Klik om uit te klappen</summary></p>
 Omdat het vrij eenvoudig kon, goed samenging met de landkaartjes, en nuttig kon zijn voor sommige gebruikers.
 </details></p>
 
-#### Kan ik een fotomuseum toevoegen? [gegevensbeheer]
+### Kan ik een fotomuseum toevoegen? [gegevensbeheer]
 
 <details><summary>Klik om uit te klappen</summary></p>
 Ja. Dat doe je door de Level 1 lijst uit te breiden.
@@ -133,7 +139,7 @@ In principe zouden alle Nederlandse fotografie musea er al op de Level 1 lijst m
 Er staan momentaal alleen enkele bekende Fotomusea in bijvoorbeeld Duitsland, VS en Japan in.
 </details></p>
 
-#### Zijn er kosten aan verbonden? [beleid] + [gebruik]
+### Zijn er kosten aan verbonden? [beleid] + [gebruik]
 
 <details><summary>Klik om uit te klappen</summary></p>
 Niet of nauwelijks. De Photo Club Hub en Photo Club Hub HTML software is gratis en blijft gratis.
@@ -148,7 +154,7 @@ vinden van een vrijwilliger die het kan en ertoe bereid is.
 Er kan ook gekeken worden of de plug-in kosten voor dit doel eenmalig centraal afkoopbaar zijn.
 </details></p>
 
-#### Waarom staat mijn club niet in de app? [basisvragen]
+### Waarom staat mijn club niet in de app? [basisvragen]
 
 <details><summary>Klik om uit te klappen</summary></p>
 De app is "open". Je kunt zelf een club toevoegen. Hier komen stapsgewijs instructies voor.</p>
@@ -157,7 +163,7 @@ De vrijwel volledige lijst met clubs in Brabant-Oost staat erin als demo en om h
 dat scheel alvast 1 van de 3 stappen.
 </details></p>
 
-#### Wie bepaalt welke foto's in de app staan? [beleid]
+### Wie bepaalt welke foto's in de app staan? [beleid]
 
 <details><summary>Klik om uit te klappen</summary></p>
 De individuele clubs.</p>
@@ -169,7 +175,7 @@ De app gaat er in principe wel van uit dat de foto's geselecteerd zijn.
 Dus eerder tien dan honderd foto's per fotograaf per jaar. Dat heb je zo met exposeren: keuzes maken.
 </details></p>
 
-#### Moet ik mij zorgen maken over privacy? [beleid]
+### Moet ik mij zorgen maken over privacy? [beleid]
 
 <details><summary>Klik om uit te klappen</summary></p>
 Nee. Een club beheert zijn eigen gegevens. En die gegevens staan opgeslagen op de club website en worden door de club geleverd en onderhouden.
@@ -182,7 +188,7 @@ Zelfs het postadres van de thuisbasis van de club is optioneel. Het is opgeslage
 naar b.v. naar een dorpsplein of station kan laten wijzen.
 </details></p>
 
-#### Houdt mijn club controle over zijn eigen foto's? [beleid]
+### Houdt mijn club controle over zijn eigen foto's? [beleid]
 
 <details><summary>Klik om uit te klappen</summary></p>
 Ja. Er worden geen kopieën getrokken van de foto's. De foto's staan op de website van de club.
@@ -211,7 +217,7 @@ voor opslagruimte, bandbreedte, domeinnaam en het in de lucht houden van hun web
 Dus dit zou normaal geen extra kosten met zich meebrengen. Zie volgend punt:
 </details></p>
 
-#### Wat als een club geen website heeft? [gegevensbeheer]
+### Wat als een club geen website heeft? [gegevensbeheer]
 
 <details><summary>Klik om uit te klappen</summary></p>
 Weet ik niet precies. Het overgrote deel van de clubs heeft al een website (= iets waar je bestanden kan ophalen via een webadres zoals "http//www.mijnclub.nl/..."). Per niveau:
@@ -222,7 +228,7 @@ Weet ik niet precies. Het overgrote deel van de clubs heeft al een website (= ie
 Ik denk niet dat wij instructies gaan maken voor "hoe maak ik een website" (doen de hosting providers). Maar we kunnen wel voorbeeldinstructies gemaakt door een club delen.
 </details></p>
 
-#### Kan iemand de getoonde foto's kopieëren? [beleid]
+### Kan iemand de getoonde foto's kopieëren? [beleid]
 
 <details><summary>Klik om uit te klappen</summary></p>
 Dat is niet helemaal tegen te gaan: alle online plaatjes die zichtbaar zijn, kan je een screenshot van maken.
@@ -235,7 +241,7 @@ Maar het is hier wel opgezet om kopieëren zo lastig mogelijk te maken. Bij mijn
 Dit is overigens vergelijkbaar met wat je kan doen met een traditionele website.
 </details></p>
 
-#### Moeten ex-leden in de app vermeld worden? [beleid]
+### Moeten ex-leden in de app vermeld worden? [beleid]
 
 <details><summary>Klik om uit te klappen</summary></p>
 
@@ -247,7 +253,7 @@ En kan iedere club zelf een beleid op dit punt beslissen: als de club de gegeven
 Meer details zijn hieronder te vinden.
 </details></p>
 
-#### Kan een overleden voormalig lid zichtbaar zijn? [gegevensbeheer]
+### Kan een overleden voormalig lid zichtbaar zijn? [gegevensbeheer]
 
 <details><summary>Klik om uit te klappen</summary></p>
 Als een club zijn gegevens niet onderhoudt, zal dit op termijn bij ieder lid gebeuren. 
@@ -267,7 +273,7 @@ En indien een complete club onverhoopt opgeheven wordt, verdwijnt die club vroeg
 doordat ze de rekening voor hun club website niet meer betalen.
 </details></p>
 
-#### Is er een Android of PC versie van de app? [beleid] + [gebruik] + [basis]
+### Is er een Android of PC versie van de app? [beleid] + [gebruik] + [basis]
 
 <details><summary>Klik om uit te klappen</summary></p>
 De app versie ondersteunt om praktische redenen de iPhone en iPad.
@@ -283,7 +289,7 @@ Dit voorkomt dubbel werk bij het bijhouden van zowel app als website.
 Foto Club Hub HTML genereert dus een ledenlijst met links naar de portfolio's van de clubleden.
 </details></p>
 
-#### Werkt dit allemaal nog over enkele jaren? [beleid]
+### Werkt dit allemaal nog over enkele jaren? [beleid]
 
 <details><summary>Klik om uit te klappen</summary></p>
 Bij een bedrijf (b.v. Adobe) mag je aannemen dat alles minstens 10 jaar ondersteund wordt. Men betaalt er tenslotte voor, 
@@ -305,7 +311,7 @@ Voor een club hoeft deze continuïteitsvraag geen drama te zijn: de investering 
 Zeg maar vergelijkbaar met een andere verbeteringsactie rondom de club website.
 </details></p>
 
-#### Wat is al dat gedoe met Levels/Niveaus? [gegevensbeheer]
+### Wat is al dat gedoe met Levels/Niveaus? [gegevensbeheer]
 
 <details><summary>Klik om uit te klappen</summary></p>
 Een club kan meedoen op Level 1, 2 of 3. 
@@ -321,7 +327,7 @@ De ingebouwde documentatie in de app legt dit wat verder uit. De GitHub site bev
 en een gedetailleerde uitleg wat ieder stukje informatie betekent ([GitHub](https://github.com/vdhamer/Photo-Club-Hub)).
 </details></p>
 
-#### Ben ik Level 1 per ongeluk aan het overslaan? [gegevensbeheer]
+### Ben ik Level 1 per ongeluk aan het overslaan? [gegevensbeheer]
 
 <details><summary>Klik om uit te klappen</summary></p>
 Misschien. Voor de clubs in regio Noord Brabant - Oost hebben wij de Level 1 gegevens voor alle ons bekende clubs ingevoerd.
@@ -329,14 +335,14 @@ Andere clubs kunnen dus zelf hun Level 1 gegevens bij ons aanleveren. Gelukkig s
 Plus liefst (niet verplicht) een enkele zin over iets wat er speciaal is aan de club.
 </details></p>
 
-#### Hoe maak ik een Level 2 bestand aan? [gegevensbeheer]
+### Hoe maak ik een Level 2 bestand aan? [gegevensbeheer]
 
 <details><summary>Klik om uit te klappen</summary></p>
 Hier is een apart stappenplan met instructies voor: [tinyurl.com/Level2aanmaken](https://tinyurl.com/Level2aanmaken).
 Er is ook een engelstalige versie hiervan: [tinyurl.com/Level2aanmaken](https://tinyurl.com/Level2creation).
 </details></p>
 
-#### Hoe krijg ik een Level 2 bestand op mijn club website? [gegevensbeheer]
+### Hoe krijg ik een Level 2 bestand op mijn club website? [gegevensbeheer]
 
 <details><summary>Klik om uit te klappen</summary></p>
     
@@ -349,7 +355,7 @@ Vermoedelijk bevat WordPress en beveiliging om vooral plaatjes en video te uploa
 Daarvoor heb je een Wordpress plug-in nodig. Bijvoorbeeld [https://wordpress.org/plugins/mime-types-plus/](https://wordpress.org/plugins/mime-types-plus/)
 </details></p>
 
-#### Ik kan Fotoclub Hub niet vinden op de Apple App Store? [gebruik]
+### Ik kan Fotoclub Hub niet vinden op de Apple App Store? [gebruik]
 
 <details><summary>Klik om uit te klappen</summary></p>
 Op het buitenland heet de app "Photo Club Hub" (engels) in plaats van "Fotoclub Hub" (Nederlands).
@@ -357,7 +363,7 @@ Je kunt op een buitenlandse App Store aangewezen zijn als je een tijd in het bui
 In alle gevallen krijg je precies dezelfde app. De app kiest automatisch de juiste taal bij het opstarten.
 </details></p>
 
-#### Mag een club niet zelf zijn Level 1 omschrijving bepalen? [gegevensbeheer]
+### Mag een club niet zelf zijn Level 1 omschrijving bepalen? [gegevensbeheer]
 
 <details><summary>Klik om uit te klappen</summary></p>
 Graag. Het kan automatisch door de `remark` voor de club aan de bovenkant van een Level 2 bestand te vullen met de gewenste tekst.
@@ -368,13 +374,13 @@ Dit zou ook moeten werken voor `latitude` en `longitude` (GPS coordinaten).
 Graag ons op dergelijke wijzigingen op club-niveau attenderen: dan corrigeren wij toch ook het Level 1 bestand.
 </details></p>
 
-#### Gaat dit ook iets met exposities doen? [uitbreidingen]
+### Gaat dit ook iets met exposities doen? [uitbreidingen]
 <details><summary>Klik om uit te klappen</summary></p>
 Ja. Er is een begin aan gemaakt ([voorproefje](http://www.vdhamer.com/fgDeGender/expo2024/)).
 Het gaat dan om de foto's van clubexposities te tonen _na afloop_ van de fysieke expositie.
 </details></p>
 
-#### Er is vast meer documentatie? [meer info]
+### Er is vast meer documentatie? [meer info]
 
 <details><summary>Klik om uit te klappen</summary></p>
 Vast wel. Zie tabel:
