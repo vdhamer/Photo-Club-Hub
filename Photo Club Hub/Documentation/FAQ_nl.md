@@ -6,6 +6,7 @@ d vragen zijn onderverdeeld in de volgende categorieën:
 <ul>
 
 <li>
+
 ### Wat doet de app? [basisvragen]
 </li>
 
