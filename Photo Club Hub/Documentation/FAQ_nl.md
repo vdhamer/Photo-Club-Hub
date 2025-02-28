@@ -9,7 +9,7 @@ De vragen zijn onderverdeeld in categorieën:
 
 ### Wat doet de app? [basisvragen]
 
-<details><summary><div style="color:orange">Klik om uit te klappen</div></summary></p>
+<details><div style="color:orange"><summary>Klik om uit te klappen</summary></div></p>
 De omschrijving in de Apple App Store luidt:</p>
 
 > De app toont geselecteerd werk van leden van fotoclubs. 
