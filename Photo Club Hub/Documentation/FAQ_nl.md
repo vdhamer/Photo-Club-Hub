@@ -3,7 +3,8 @@ d vragen zijn onderverdeeld in de volgende categorieën:
 ## Basisvragen
 
 <details><summary>Klik om uit te klappen</summary></p>
-    
+
+<ul>
 ### Wat doet de app? [basisvragen]
 
 <details><summary>Klik om uit te klappen</summary></p>
@@ -67,7 +68,7 @@ Op termijn komt er nog een centrale webpagina waarop men alle deelnemende clubs 
 
 Er wordt momenteel aan **beide** versies continue gewerkt. Het is in principe mogelijk dat iemand nog een versie maakt voor de Android Play Store. Of een versie voor Microsoft Windows.
 Maar dat zal in ieder geval even duren: er moeten eerst vrijwilligers zich hiervoor melden, en dan moet het nog gemaakt worden.
-</details></p>
+</ul></details></p>
 </details></p>
 
 ## Beleid
