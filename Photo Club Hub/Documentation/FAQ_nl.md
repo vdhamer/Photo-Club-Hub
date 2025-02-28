@@ -83,12 +83,16 @@ Maar dat zal in ieder geval even duren: er moeten eerst vrijwilligers zich hierv
 
 <details><summary>Klik om uit te klappen</summary></p>
 
+<ul><li>
+
 ### Is de app alleen voor Nederland? [beleid]
 
 <details><summary>Klik om uit te klappen</summary></p>
 De nadruk ligt voorlopig op Nederland. Maar de app is wereldwijd te gebruiken.
 De app ondersteunt bijvoorbeeld zowel Nederlands als Engels. In het Engels heet de app "Photo Club Hub" ipv "Fotoclub Hub".
 </details></p>
+
+</li><li>
 
 ### Moet een club lid zijn van de Fotobond? [beleid]
 
@@ -98,11 +102,15 @@ Er zijn voorbeelden te vinden op de landkaarten.
 Buitenlandse club zouden per definitie geen lid van de (Nederlandse) Koninklijke Fotobond zijn.
 </details></p>
 
+</li><li>
+
 ### Waarom staan er fotomusea in? [beleid]
 
 <details><summary>Klik om uit te klappen</summary></p>
 Omdat het vrij eenvoudig kon, goed samenging met de landkaartjes, en nuttig kon zijn voor sommige gebruikers.
 </details></p>
+
+</li><li>
 
 ### Zijn er kosten aan verbonden? [beleid] + [gebruik]
 
@@ -119,6 +127,8 @@ vinden van een vrijwilliger die het kan en ertoe bereid is.
 Er kan ook gekeken worden of de plug-in kosten voor dit doel eenmalig centraal afkoopbaar zijn.
 </details></p>
 
+</li><li>
+
 ### Wie bepaalt welke foto's in de app staan? [beleid]
 
 <details><summary>Klik om uit te klappen</summary></p>
@@ -130,6 +140,8 @@ Maar je kunt ook afspreken dat iedere fotograaf zelf foto's uitkiest voor zijn/n
 De app gaat er in principe wel van uit dat de foto's geselecteerd zijn.
 Dus eerder tien dan honderd foto's per fotograaf per jaar. Dat heb je zo met exposeren: keuzes maken.
 </details></p>
+
+</li><li>
 
 ### Moet ik mij zorgen maken over privacy? [beleid]
 
@@ -143,6 +155,8 @@ Verder doet de app niet aan postadressen, e-mailadressen of telefoonnummers van 
 Zelfs het postadres van de thuisbasis van de club is optioneel. Het is opgeslagen als GPS coordinaten, die je kunt afronden of 
 naar b.v. naar een dorpsplein of station kan laten wijzen.
 </details></p>
+
+</li><li>
 
 ### Houdt mijn club controle over zijn eigen foto's? [beleid]
 
@@ -173,6 +187,8 @@ voor opslagruimte, bandbreedte, domeinnaam en het in de lucht houden van hun web
 Dus dit zou normaal geen extra kosten met zich meebrengen. Zie volgend punt:
 </details></p>
 
+</li><li>
+
 ### Kan iemand de getoonde foto's kopieëren? [beleid]
 
 <details><summary>Klik om uit te klappen</summary></p>
@@ -186,6 +202,8 @@ Maar het is hier wel opgezet om kopieëren zo lastig mogelijk te maken. Bij mijn
 Dit is overigens vergelijkbaar met wat je kan doen met een traditionele website.
 </details></p>
 
+</li><li>
+
 ### Moeten ex-leden in de app vermeld worden? [beleid]
 
 <details><summary>Klik om uit te klappen</summary></p>
@@ -197,6 +215,8 @@ Technisch kan een **gebruiker** van de app ook nog eens kiezen of ex-leden getoo
 En kan iedere club zelf een beleid op dit punt beslissen: als de club de gegevens niet aanlevert, zijn ze uiteraard niet te zien.
 Meer details zijn hieronder te vinden.
 </details></p>
+
+</li><li>
 
 ### Is er een Android of PC versie van de app? [beleid] + [gebruik] + [basisvragen]
 
@@ -213,6 +233,8 @@ die gebruikt worden voor "Fotoclub Hub" app.
 Dit voorkomt dubbel werk bij het bijhouden van zowel app als website. 
 Foto Club Hub HTML genereert dus een ledenlijst met links naar de portfolio's van de clubleden.
 </details></p>
+
+</li><li>
 
 ### Werkt dit allemaal nog over enkele jaren? [beleid]
 
@@ -234,7 +256,7 @@ Maar er is wel de ambitie om dit op deze manier op te lossen.
 
 Voor een club hoeft deze continuïteitsvraag geen drama te zijn: de investering per club om gegevens aan te leveren zijn heel beperkt.
 Zeg maar vergelijkbaar met een andere verbeteringsactie rondom de club website.
-</details></p>
+</li></ul></details></p>
 </details></p>
 
 ## Vergelijkingen
