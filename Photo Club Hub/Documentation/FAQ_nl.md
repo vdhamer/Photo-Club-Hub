@@ -9,7 +9,7 @@ De vragen zijn onderverdeeld in categorieën:
 
 ### Wat doet de app? [basisvragen]
 
-<details><summary>$\color{red}{\textsf{Klik om uit te klappen}}$</summary></p>
+<details><summary>$\color{gray}{\textsf{Klik om uit te klappen}}$</summary></p>
 De omschrijving in de <font color="red">Apple App Store</font> luidt:</p>
 
 > De app toont geselecteerd werk van leden van fotoclubs. 
@@ -27,7 +27,7 @@ De omschrijving in de <font color="red">Apple App Store</font> luidt:</p>
 
 ### Waarom is de app gemaakt? [basisvragen]
 
-<details><summary>Klik om uit te klappen</summary></p>
+<details><summary>$\color{lightgray}{\textsf{Klik om uit te klappen}}$</summary></p>
 
 Fotografen worden lid van een fotoclub om hun werk aan elkaar te laten zien.
 Dat zien en gezien-worden lukt prima _binnen_ de club doordat de leden om de paar weken bijeen komen.</p>
