@@ -9,7 +9,7 @@ De vragen zijn onderverdeeld in categorieën:
 
 ### Wat doet de app? [basisvragen]
 
-<details><summary>Klik om uit te klappen</summary></p><div style="color:orange">
+<details><summary><div style="color:orange">Klik om uit te klappen</div></summary></p>
 De omschrijving in de Apple App Store luidt:</p>
 
 > De app toont geselecteerd werk van leden van fotoclubs. 
@@ -21,7 +21,7 @@ De omschrijving in de Apple App Store luidt:</p>
 > Clubs kunnen zichzelf toevoegen door het online plaatsen van een lijst met hun leden. In een aparte stap kan de club links naar geselecteerde foto's per lid aanbieden.
 > Met deze gegevens kan een zuster macOS app portfolio pagina's voor bestaande websites automatisch genereren.
 > Beide apps staan op GitHub.
-</div></details></p>
+</details></p>
 
 </li><li>
 
