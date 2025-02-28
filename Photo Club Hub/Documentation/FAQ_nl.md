@@ -373,6 +373,8 @@ In alle gevallen krijg je precies dezelfde app. De app kiest automatisch de juis
 
 <details><summary>Klik om uit te klappen</summary></p>
 
+<ul><li>
+
 ### Kan ik een fotomuseum toevoegen? [gegevensbeheer]
 
 <details><summary>Klik om uit te klappen</summary></p>
@@ -382,6 +384,8 @@ Graag alleen musea toevoegen die duidelijk voor fotografie interessant zijn.</p>
 In principe zouden alle Nederlandse fotografie musea er al op de Level 1 lijst moeten staan.
 Er staan momentaal alleen enkele bekende Fotomusea in bijvoorbeeld Duitsland, VS en Japan in.
 </details></p>
+
+</li><li>
 
 ### Wat als een club geen website heeft? [gegevensbeheer]
 
@@ -393,6 +397,8 @@ Weet ik niet precies. Het overgrote deel van de clubs heeft al een website (= ie
 - Level 3 is wat lastiger, maar opslag bij een bevriende club is misschien bespreekbaar. Of een [gratis website leverancier](https://www.techradar.com/web-hosting/best-free-web-hosting) vinden.
 Ik denk niet dat wij instructies gaan maken voor "hoe maak ik een website" (doen de hosting providers). Maar we kunnen wel voorbeeldinstructies gemaakt door een club delen.
 </details></p>
+
+</li><li>
 
 ### Kan een overleden voormalig lid zichtbaar zijn? [gegevensbeheer]
 
@@ -414,6 +420,8 @@ En indien een complete club onverhoopt opgeheven wordt, verdwijnt die club vroeg
 doordat ze de rekening voor hun club website niet meer betalen.
 </details></p>
 
+</li><li>
+
 ### Wat is al dat gedoe met Levels/Niveaus? [gegevensbeheer]
 
 <details><summary>Klik om uit te klappen</summary></p>
@@ -430,6 +438,8 @@ De ingebouwde documentatie in de app legt dit wat verder uit. De GitHub site bev
 en een gedetailleerde uitleg wat ieder stukje informatie betekent ([GitHub](https://github.com/vdhamer/Photo-Club-Hub)).
 </details></p>
 
+</li><li>
+
 ### Ben ik Level 1 per ongeluk aan het overslaan? [gegevensbeheer]
 
 <details><summary>Klik om uit te klappen</summary></p>
@@ -438,12 +448,16 @@ Andere clubs kunnen dus zelf hun Level 1 gegevens bij ons aanleveren. Gelukkig s
 Plus liefst (niet verplicht) een enkele zin over iets wat er speciaal is aan de club.
 </details></p>
 
+</li><li>
+
 ### Hoe maak ik een Level 2 bestand aan? [gegevensbeheer]
 
 <details><summary>Klik om uit te klappen</summary></p>
 Hier is een apart stappenplan met instructies voor: [tinyurl.com/Level2aanmaken](https://tinyurl.com/Level2aanmaken).
 Er is ook een engelstalige versie hiervan: [tinyurl.com/Level2aanmaken](https://tinyurl.com/Level2creation).
 </details></p>
+
+</li><li>
 
 ### Hoe krijg ik een Level 2 bestand op mijn club website? [gegevensbeheer]
 
@@ -458,6 +472,8 @@ Vermoedelijk bevat WordPress en beveiliging om vooral plaatjes en video te uploa
 Daarvoor heb je een Wordpress plug-in nodig. Bijvoorbeeld [https://wordpress.org/plugins/mime-types-plus/](https://wordpress.org/plugins/mime-types-plus/)
 </details></p>
 
+</li><li>
+
 ### Mag een club niet zelf zijn Level 1 omschrijving bepalen? [gegevensbeheer]
 
 <details><summary>Klik om uit te klappen</summary></p>
@@ -467,7 +483,7 @@ Hiermee wordt de `remark` op Level 1 in de app vervangen door de betere `remark`
 Dit zou ook moeten werken voor `latitude` en `longitude` (GPS coordinaten).
 
 Graag ons op dergelijke wijzigingen op club-niveau attenderen: dan corrigeren wij toch ook het Level 1 bestand.
-</details></p>
+</details></p></li></ul>
 </details></p>
 
 ## Uitbreidingen
