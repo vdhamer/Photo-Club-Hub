@@ -117,7 +117,7 @@ Er kan gekeken worden gekeken worden of er een gratis alternatief afdoende is
 Zelf bouwen van een alternatief voor die plug-in is in principe mogelijk maar niet eenvoudig: dat hangt dus op het
 vinden van een vrijwilliger die het kan en ertoe bereid is.
 Er kan ook gekeken worden of de plug-in kosten voor dit doel eenmalig centraal afkoopbaar zijn.
-</details></p
+</details></p>
 
 ### Wie bepaalt welke foto's in de app staan? [beleid]
 
