@@ -263,6 +263,8 @@ Zeg maar vergelijkbaar met een andere verbeteringsactie rondom de club website.
 
 <details><summary>Klik om uit te klappen</summary></p>
 
+<ul><li>
+
 ### Hoe verschilt dit van een clubwebsite? [vergelijkingen]
 
 <details><summary>Klik om uit te klappen</summary></p>
@@ -278,6 +280,8 @@ Dit kan je in dit geval oplossen door
 - veranderingen makkelijk vindbaar te maken (b.v. nieuwste foto per fotograaf tonen)
 - optie om proactief te melden wanneer er relevant nieuws binnengekomen is (instelbare notificaties).
 </details></p>
+
+</li><li>
 
 ### Hoe verschilt dit van social media zoals Facebook of Instagram? [vergelijkingen]
 
@@ -299,6 +303,8 @@ Concreet betekent dit:
 - galerie-achtige weergave zodat de foto's tot hun recht komen (dus geen reclame of wereldnieuws)
 </details></p>
 
+</li><li>
+
 ### Hoe verschilt dit van een online fotoclub zoals Glass.photo? [vergelijkingen]
 
 <details><summary>Klik om uit te klappen</summary></p>
@@ -310,7 +316,7 @@ Vergeleken met Glass, heeft Photo Club Hub...
 - geen mogelijkheid om via de app commentaar op andermans foto's te geven. Dus ook geen moderatie nodig.
 - voor de komende tijd een nadruk op Nederlandse gebruikers. Glass is internationaal en Engelstalig, al zitten de oprichters in Amsterdam.
 - nog geen mogelijkheid om individuen of clubs te "volgen". Maar dat zal bij voldoende gebruik nodig worden.
-</details></p>
+</details></p></li></ul>
 </details></p>
 
 ## Gebruik
