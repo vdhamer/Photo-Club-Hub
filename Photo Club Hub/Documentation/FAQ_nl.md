@@ -5,7 +5,9 @@ d vragen zijn onderverdeeld in de volgende categorieën:
 <details><summary>Klik om uit te klappen</summary></p>
 <ul>
 
-    <li>### Wat doet de app? [basisvragen]</li>
+<li>
+### Wat doet de app? [basisvragen]
+</li>
 
 <details><summary>Klik om uit te klappen</summary></p>
 De omschrijving in de Apple App Store luidt:</p>
