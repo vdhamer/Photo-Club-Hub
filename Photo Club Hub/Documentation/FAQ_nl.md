@@ -60,13 +60,13 @@ dat scheel alvast 1 van de 3 stappen.
 <details><summary>Klik om uit te klappen</summary></p>
 Er is een iPhone/iPad versie van de app op de Apple App Store.</p>
 
-Voor andere apparaten is er een zogenaamde "webversie". Met de webversie kan je club portfolio's bekijken in een internet browser (Chrome, Edge, Safari...) 
-op vrijwel ieder slim apparaat (bijvoorbeeld een Android telefoon, een tablet van willekeurig merk, een Windows laptop...). De iOS app en de webversie hebben dezelfde opzet
-en gebruiken dezelfde gegevens. De webversie is technisch een computerprogramma dat op verzoek webpagina's aanmaakt die toegevoegd kunnen worden aan bestaande club websites.
-Op termijn komt er ook een centrale webpagina waarop men alle deelnemende clubs kan vinden en via links kan bereiken (de tegenhanger van het Portfolio's scherm in de iPhone/iPad app).
+Voor andere merken mobiele apparaten en voor grotere computers is er de "webversie". Met de webversie kan je club portfolio's bekijken in een internet browser (Chrome, Edge, Safari...) 
+op vrijwel ieder slim apparaat (Android telefoon, Chinese telefoon, tablet, Windows laptop, Linux desktop...). De iOS app en de webversie hebben dezelfde opzet
+en gebruiken dezelfde gegevens. De webversie is technisch een computerprogramma dat met een druk op een knop de vereiste webpagina's automatisch aanmaakt die toegevoegd kunnen worden aan bestaande club websites.
+Op termijn komt er nog een centrale webpagina waarop men alle deelnemende clubs kan vinden en via links kan bereiken (de tegenhanger van het Portfolio's scherm in de iPhone/iPad app).
 
-Er wordt momenteel aan beide versies continue gewerkt. Het is in principe mogelijk dat iemand nog een versie maakt voor de Android Play Store of een versie voor Windows.
-Maar daar zou ik niet op wachten: er moeten eerste meer vrijwilligers mee gaan doen die die kar te trekken.
+Er wordt momenteel aan **beide** versies continue gewerkt. Het is in principe mogelijk dat iemand nog een versie maakt voor de Android Play Store. Of een versie voor Microsoft Windows.
+Maar dat zal in ieder geval even duren: er moeten eerst vrijwilligers zich hiervoor melden, en dan moet het nog gemaakt worden.
 </details></p>
 </details></p>
 
