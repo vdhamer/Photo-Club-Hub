@@ -490,16 +490,20 @@ Graag ons op dergelijke wijzigingen op club-niveau attenderen: dan corrigeren wi
 
 <details><summary>Klik om uit te klappen</summary></p>
 
+<ul><li>
+
 ### Gaat dit ook iets met exposities doen? [uitbreidingen]
 <details><summary>Klik om uit te klappen</summary></p>
 Ja. Er is een begin aan gemaakt ([voorproefje](http://www.vdhamer.com/fgDeGender/expo2024/)).
 Het gaat dan om de foto's van clubexposities te tonen _na afloop_ van de fysieke expositie.
-</details></p>
+</details></p></li></ul>
 </details></p>
 
 ## Meer informatie
 
 <details><summary>Klik om uit te klappen</summary></p>
+
+<ul><li>
 
 ### Er is vast meer documentatie? [meer info]
 
@@ -515,5 +519,5 @@ Vast wel. Zie tabel:
 | Interne readme in Photo Club Hub app | ingebouwd | ✓ | ✓ |
 | Powerpoint presentatie | [download](https://github.com/vdhamer/Photo-Club-Hub/raw/refs/heads/main/Photo%20Club%20Hub/Documentation/Photo%20Club%20Hub.pptx) | ✓ | |
 | FAQ (dit document) | [tinyurl.com/fchFAQnl](https://tinyurl.com/fchFAQnl) | ✓ | |
-</details></p>
+</details></p></li></ul>
 </details></p>
