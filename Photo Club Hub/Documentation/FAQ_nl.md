@@ -1,4 +1,4 @@
-De vragen zijn onderverdeeld in de volgende categorieën:
+De vragen zijn onderverdeeld in categorieën:
 
 ## Basisvragen
 
