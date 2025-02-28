@@ -148,7 +148,7 @@ Dus eerder tien dan honderd foto's per fotograaf per jaar. Dat heb je zo met exp
 <details><summary>Klik om uit te klappen</summary></p>
 Nee. Een club beheert zijn eigen gegevens. En die gegevens staan opgeslagen op de club website en worden door de club geleverd en onderhouden.
 De gegevens waar het hier om gaat zijn meestal al op bestaande websites te zien: namen van leden, een selectie van foto's, leden van het bestuur.
-Dus nu zijn diezelfde gegevens omgezet in een voor software leesbaar formaat, zodat ze op een consistente, uniforme manier getoond kunnen worden.
+Dus nu zijn diezelfde gegevens omgezet in een voor software leesbaar formaat, zodat ze op een consistente, uniforme manier getoond kunnen worden.</p>
 
 De meeste velden zijn optioneel. Dus een club is niet gedwongen om b.v. te linken naar hun website, of aan te geven wie in het bestuur zit.
 Verder doet de app niet aan postadressen, e-mailadressen of telefoonnummers van leden. Die zijn niet optioneel: de app ondersteunt ze niet.
