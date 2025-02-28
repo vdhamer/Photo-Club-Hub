@@ -9,8 +9,8 @@ De vragen zijn onderverdeeld in categorieën:
 
 ### Wat doet de app? [basisvragen]
 
-<details><summary><font color="red">Klik om uit te klappen</font></summary></p>
-De omschrijving in de Apple App Store luidt:</p>
+<details><summary>Klik om uit te klappen</summary></p>
+De omschrijving in de <font color="red">Apple App Store</font> luidt:</p>
 
 > De app toont geselecteerd werk van leden van fotoclubs. 
 >
