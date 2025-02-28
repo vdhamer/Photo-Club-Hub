@@ -323,6 +323,8 @@ Vergeleken met Glass, heeft Photo Club Hub...
 
 <details><summary>Klik om uit te klappen</summary></p>
 
+<ul><li>
+
 ### Zijn er kosten aan verbonden? [beleid] + [gebruik]
 
 <details><summary>Klik om uit te klappen</summary></p>
@@ -337,6 +339,8 @@ Zelf bouwen van een alternatief voor die plug-in is in principe mogelijk maar ni
 vinden van een vrijwilliger die het kan en ertoe bereid is.
 Er kan ook gekeken worden of de plug-in kosten voor dit doel eenmalig centraal afkoopbaar zijn.
 </details></p>
+
+</li><li>
 
 ### Is er een Android of PC versie van de app? [beleid] + [gebruik] + [basisvragen]
 
@@ -354,13 +358,15 @@ Dit voorkomt dubbel werk bij het bijhouden van zowel app als website.
 Foto Club Hub HTML genereert dus een ledenlijst met links naar de portfolio's van de clubleden.
 </details></p>
 
+</li><li>
+
 ### Ik kan Fotoclub Hub niet vinden op de Apple App Store? [gebruik]
 
 <details><summary>Klik om uit te klappen</summary></p>
 Op het buitenland heet de app "Photo Club Hub" (engels) in plaats van "Fotoclub Hub" (Nederlands).
 Je kunt op een buitenlandse App Store aangewezen zijn als je een tijd in het buitenland gewoond hebt.
 In alle gevallen krijg je precies dezelfde app. De app kiest automatisch de juiste taal bij het opstarten.
-</details></p>
+</details></p></li></ul>
 </details></p>
 
 ## Gegevensbeheer
