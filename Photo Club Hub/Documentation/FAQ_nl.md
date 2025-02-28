@@ -1,4 +1,4 @@
-d vragen zijn onderverdeeld in de volgende categorieën:
+De vragen zijn onderverdeeld in de volgende categorieën:
 
 ## Basisvragen
 
@@ -8,7 +8,6 @@ d vragen zijn onderverdeeld in de volgende categorieën:
 <li>
 
 ### Wat doet de app? [basisvragen]
-</li>
 
 <details><summary>Klik om uit te klappen</summary></p>
 De omschrijving in de Apple App Store luidt:</p>
@@ -24,10 +23,9 @@ De omschrijving in de Apple App Store luidt:</p>
 > Beide apps staan op GitHub.
 </details></p>
 
-<li>
+</li><li>
 
 ### Waarom is de app gemaakt? [basisvragen]
-</li>
 
 <details><summary>Klik om uit te klappen</summary></p>
 
@@ -53,10 +51,10 @@ Waar je in kunt rondlopen in een rustige omgeving, met nadruk op de foto's en hu
 Maar in tegenstelling tot een museum, kan het dienen als streekmuseum: een landkaart maakt duidelijk welke clubs dichtbij zijn en welke niet.
 </details></p>
 
-<li>
+</li><li>
 
 ### Waarom staat mijn club niet in de app? [basisvragen]
-</li>
+
 <details><summary>Klik om uit te klappen</summary></p>
 De app is "open". Je kunt zelf een club toevoegen. Hier komen stapsgewijs instructies voor.</p>
     
@@ -64,7 +62,7 @@ De vrijwel volledige lijst met clubs in Brabant-Oost staat erin als demo en om h
 dat scheel alvast 1 van de 3 stappen.
 </details></p>
 
-<li>
+</li><li>
 
 ### Is er een Android of PC versie van de app? [beleid] + [gebruik] + [basisvragen]
 
@@ -78,7 +76,7 @@ Op termijn komt er nog een centrale webpagina waarop men alle deelnemende clubs 
 
 Er wordt momenteel aan **beide** versies continue gewerkt. Het is in principe mogelijk dat iemand nog een versie maakt voor de Android Play Store. Of een versie voor Microsoft Windows.
 Maar dat zal in ieder geval even duren: er moeten eerst vrijwilligers zich hiervoor melden, en dan moet het nog gemaakt worden.
-</li></ul></details></p>
+</details></p></li></ul>
 </details></p>
 
 ## Beleid
