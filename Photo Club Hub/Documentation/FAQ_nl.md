@@ -156,7 +156,8 @@ Dus eerder tien dan honderd foto's per fotograaf per jaar. Dat heb je zo met exp
 ### Moet ik mij zorgen maken over privacy?
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord uit te klappen}}$</summary></p>
-Nee. Een club beheert zijn eigen gegevens. 
+Nee. Een club beheert zijn eigen gegevens.</details>p>
+
 En die gegevens staan opgeslagen op de club website en worden door de club geleverd en onderhouden.
 De gegevens waar het hier om gaat zijn meestal al op bestaande websites te zien: 
 namen van leden, een selectie van foto's, leden van het bestuur.
@@ -167,7 +168,7 @@ De meeste velden zijn optioneel.
 Dus een club is niet gedwongen om b.v. te linken naar hun website, of aan te geven wie in het bestuur zit.
 Verder doet de app niet aan postadressen, e-mailadressen of telefoonnummers van leden.
 Die zijn niet optioneel: de app ondersteunt ze niet.
-Zelfs het postadres van de thuisbasis van de club is optioneel. Het is opgeslagen als GPS coordinaten,
+Zelfs de locatie van de thuisbasis van de club is optioneel. De locatie opgeslagen als GPS coordinaten,
 die je kunt afronden of naar b.v. naar een dorpsplein of station kan laten wijzen.
 </details></p>
 
