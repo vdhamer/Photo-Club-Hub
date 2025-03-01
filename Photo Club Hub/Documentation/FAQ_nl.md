@@ -209,14 +209,15 @@ Dus dit zou normaal geen extra kosten met zich meebrengen. Zie volgend punt:
 ### Kan iemand de getoonde foto's kopieëren?
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord uit te klappen}}$</summary></p>
-Dat is niet helemaal tegen te gaan: alle online plaatjes die zichtbaar zijn, kan je een screenshot van maken.
-Maar het is hier wel opgezet om kopieëren zo lastig mogelijk te maken. Bij mijn procedé hiervoor...
+Laten we eerste vooropstellen dat de foto's op de clubwebsite staan - en niet ergens centraal.
+Dus deze vraag geld voor iedere clubwebsite waar foto's op te zien zijn.
 
-- rechtsklikken en "Save as.." is in de software geblokkeerd.
-- de foto bevat zichtbaar de naam van de maker in de linkeronderhoek
-- de foto bevat digitaal en onzichtbaar (in het EXIF copyright veld) de naam van de maker
+Kopieëren is niet helemaal tegen te gaan: alle online plaatjes die zichtbaar zijn, kan je een screenshot van maken.
+Maar het is hier wel opgezet om kopieëren zo lastig mogelijk te maken. Bij onze procedé hiervoor...
 
-Dit is overigens vergelijkbaar met wat je kan doen met een traditionele website.
+- is rechtsklikken en "Save as.." is in de software geblokkeerd.
+- is iedere foto zichtbaar voorzien van de naam van de maker in de linkeronderhoek.
+- is iedere foto bevat digitaal en onzichtbaar gemerkt (EXIF copyright) met de naam van de maker.
 </details></p>
 
 </li><li>
