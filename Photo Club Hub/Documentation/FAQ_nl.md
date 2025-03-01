@@ -490,11 +490,22 @@ Graag ons op dergelijke wijzigingen op club-niveau attenderen: dan corrigeren wi
 
 <ul><li>
 
-### Gaat dit ook iets met exposities doen?
+### Gaat dit ook iets met afgelopen exposities doen?
 
 <details><summary>$\color{lightgray}{\textsf{Klik om uit te klappen}}$</summary></p>
 Ja. Er is een begin aan gemaakt ([voorproefje](http://www.vdhamer.com/fgDeGender/expo2024/)).
 Het gaat dan om de foto's van clubexposities te tonen _na afloop_ van de fysieke expositie.
+</details></p>
+
+</li><li>
+
+### Gaat dit ook iets komende exposities doen?
+
+<details><summary>$\color{lightgray}{\textsf{Klik om uit te klappen}}$</summary></p>
+Mogelijk. Hierbij zou een club moeten invoeren wanneer en waar een komende clubsexpositie is.
+Te denken valt aan het tonen van exposities uit het verleden en een expositie in de toekomst.
+Exposities uit het verleden kunnen lijden naar een pagina met de vertoonde foto's.
+Exposities in de toekomst kunnen eenvoudig leiden naar een JPG van de poster voor die expositie. 
 </details></p></li></ul>
 </details></p>
 
