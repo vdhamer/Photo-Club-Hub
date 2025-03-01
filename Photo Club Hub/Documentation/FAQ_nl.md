@@ -74,7 +74,20 @@ vereiste webpagina's automatisch aanmaakt die toegevoegd kunnen worden aan besta
 Er wordt aan uitbreiding van **beide** versies gewerkt. 
 Het is in principe mogelijk dat er een versie komt voor bijvoorbeeld de Android Play Store. 
 Daar zoeken wij een technische onderlegde vrijwilliger voor.
-</details></p></li></ul>
+</details>
+
+</li><li>
+
+### Is de app gratis?
+
+<details><summary>$\color{green}{\textsf{Klik om antwoord uit te klappen}}$</summary></p>
+De appversie op de Apple App Store is en blijft gratis.
+Ook de software om de optionele websites aan te maken en onderhouden is en blijft gratis.
+De broncode van de software is "open source".
+</details>
+
+</li></ul>
+
 </details></p>
 
 ## Beleid
