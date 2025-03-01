@@ -1,6 +1,6 @@
 ## Basisvragen
 
-<details><summary>$\color{orange}{\texttt{Klik om categorie uit te klappen}}$</summary></p>
+<details><summary>$\color{orange}{\textsf{Klik om categorie uit te klappen}}$</summary></p>
 <ul>
 
 <li>
@@ -16,7 +16,8 @@ De omschrijving in de <font color="red">Apple App Store</font> luidt:</p>
 > Een gebruiker kan een club vinden door te bladeren, zoeken op naam of via de interactieve landkaarten.
 > Clubleden zijn te vinden door te bladeren, te zoeken op naam of trefwoord en via de lijsten met clubleden.
 >
-> Clubs kunnen zichzelf toevoegen door het online plaatsen van een lijst met hun leden. In een aparte stap kan de club links naar geselecteerde foto's per lid aanbieden.
+> Clubs kunnen zichzelf toevoegen door het online plaatsen van een lijst met hun leden.
+> In een aparte stap kan de club links naar geselecteerde foto's per lid aanbieden.
 > Met deze gegevens kan een zuster macOS app portfolio pagina's voor bestaande websites automatisch genereren.
 > Beide apps staan op GitHub.
 </details></p>
@@ -28,25 +29,17 @@ De omschrijving in de <font color="red">Apple App Store</font> luidt:</p>
 <details><summary>$\color{green}{\textsf{Klik om antwoord uit te klappen}}$</summary></p>
 
 Fotografen worden lid van een fotoclub om hun werk aan elkaar te laten zien.
-Dat zien en gezien-worden lukt prima _binnen_ de club doordat de leden om de paar weken bijeen komen.</p>
+Dat zien en gezien-worden lukt prima _binnen_ de club doordat de leden regelmatig bijeen komen.</p>
 
-Zichtbaarheid van werk _buiten_ de club gaat vooral via exposities en de website van de club.
-Ze zijn complementair. In tegenstelling tot exposities, loopt bezoek aan de website al jaren terug.
-Vooral omdat kleine websites over het algemeen steeds minder aandacht krijgen:
-je moet ze vinden, er zijn teveel van,
-en de inhoud veranderd meestal vrij zelden. Een neerwaardse spiraal dus.
-Ofwel, de aandacht van gebruikers is verschoven naar grote websites
-(zoals Nos.nl of Petapixel.com, met hun teams van betaalde redacteuren en schrijvers)
-en social media platforms zoals Facebook of Twitter/X die dienen als (extreem druk) digitaal dorpsplein.</p>
+Zichtbaarheid van werk _buiten_ de club loopt via de website van de club en via exposities.
+Bezoek aan dergelijke websites loopt al jaren terug:
+je moet zelf initiatief nemen om ze vinden, het zijn er veel, en de inhoud verandert maar zelden.
+De aandacht van gebruikers is daardoor verschoven naar grote websites
+(zoals Nos.nl of Petapixel.com, met hun teams van betaalde redacteurs/schrijvers)
+en social media platforms zoals Facebook of Twitter/X die dienen als een vluchtige ontmoetingsplek.</p>
 
-Vandaar dat er voor fotoclubs een behoefte leek aan een tussenvorm tussen de "vrijwel verlaten" van de websites van vroeger
-en de "doom scrolling" en "Times Square" van de druk bezochte social media.
-Met als doel om de het fotowerk van clubs onderling te delen, en een laagdrempelige ingang te bieden aan fotoliefhebbers in het algemeen.
-Maar je kunt het ook als tussenvorm zien tussen de lokale bijeenkomsten van fotoclubs en de grote wereld van Social Media waar je ervan uitgaat dat je de ander nooit _in real life_ zult tegenkomen.
-
-Men kan de app dus zien als een online museum voor de amateurfotografie dat altijd open is, 
-Waar je in kunt rondlopen in een rustige omgeving, met nadruk op de foto's en hun makers.
-Maar in tegenstelling tot een museum, kan het dienen als streekmuseum: een landkaart maakt duidelijk welke clubs dichtbij zijn en welke niet.
+Vandaar dat wij voor fotoclubs een behoefte zagen voor een tussenvorm tussen de vrijwel verlaten websites van vroeger
+en de hektische social media van tegenwoordig. Met als doel om de het fotowerk van clubs eenvoudig en in alle rust te kunnen bekijken.
 </details></p>
 
 </li><li>
@@ -54,10 +47,9 @@ Maar in tegenstelling tot een museum, kan het dienen als streekmuseum: een landk
 ### Waarom staat mijn club niet in de app?
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord uit te klappen}}$</summary></p>
-De app is "open". Je kunt zelf een club toevoegen. Hier komen stapsgewijs instructies voor.</p>
+Je kunt zelf een club toevoegen. Hier komen stapsgewijs instructies voor (zie vraag over documentatie).</p>
     
-De vrijwel volledige lijst met clubs in Brabant-Oost staat erin als demo en om het proces op te starten:
-dat scheel alvast 1 van de 3 stappen.
+De lijst met clubs in Brabant-Oost staat er alvast in om het groeiproces op te starten.
 </details></p>
 
 </li><li>
@@ -66,28 +58,48 @@ dat scheel alvast 1 van de 3 stappen.
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord uit te klappen}}$</summary></p>
 Er is een iPhone/iPad versie van de app op de Apple App Store.</p>
+Voor andere merken telefoontjes en voor grotere schermen is er de "webversie".
 
-Voor andere merken mobiele apparaten en voor grotere computers is er de "webversie". Met de webversie kan je club portfolio's bekijken in een internet browser (Chrome, Edge, Safari...) 
-op vrijwel ieder slim apparaat (Android telefoon, Chinese telefoon, tablet, Windows laptop, Linux desktop...). De iOS app en de webversie hebben dezelfde opzet
-en gebruiken dezelfde gegevens. De webversie is technisch een computerprogramma dat met een druk op een knop de vereiste webpagina's automatisch aanmaakt die toegevoegd kunnen worden aan bestaande club websites.
-Op termijn komt er nog een centrale webpagina waarop men alle deelnemende clubs kan vinden en via links kan bereiken (de tegenhanger van het Portfolio's scherm in de iPhone/iPad app).
+Met de webversie kan je club portfolio's bekijken in een internet browser (_Chrome_, _Edge_, _Safari_...) 
+op allerlei apparaten (Android telefoon, Chinees merk telefoon, tablet, laptop, desktop).
 
-Er wordt momenteel aan **beide** versies continue gewerkt. Het is in principe mogelijk dat iemand nog een versie maakt voor de Android Play Store. Of een versie voor Microsoft Windows.
-Maar dat zal in ieder geval even duren: er moeten eerst vrijwilligers zich hiervoor melden, en dan moet het nog gemaakt worden.
-</details></p></li></ul>
+De iOS app en de webversie hebben dezelfde opzet en gebruiken dezelfde gegevens.
+De webversie is technisch een computerprogramma dat met een druk op een knop de 
+vereiste webpagina's automatisch aanmaakt die toegevoegd kunnen worden aan bestaande club websites.
+
+Er wordt aan uitbreiding van **beide** versies gewerkt. 
+Het is in principe mogelijk dat er een versie komt voor bijvoorbeeld de Android Play Store. 
+Daar zoeken wij een technische onderlegde vrijwilliger voor.
+</details>
+
+</li><li>
+
+### Is de app gratis?
+
+<details><summary>$\color{green}{\textsf{Klik om antwoord uit te klappen}}$</summary></p>
+Ja. De appversie op de Apple App Store is en blijft gratis.
+De software om de optionele websites aan te maken en onderhouden is en blijft ook gratis.
+De broncode van deze software is "open source".
+</details>
+
+</li></ul>
+
 </details></p>
 
 ## Beleid
 
-<details><summary>$\color{orange}{\texttt{Klik om categorie uit te klappen}}$</summary></p>
+<details><summary>$\color{orange}{\textsf{Klik om categorie uit te klappen}}$</summary></p>
 
 <ul><li>
 
 ### Is de app alleen voor Nederland?
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord uit te klappen}}$</summary></p>
-De nadruk ligt voorlopig op Nederland. Maar de app is wereldwijd te gebruiken.
-De app ondersteunt bijvoorbeeld zowel Nederlands als Engels. In het Engels heet de app "Photo Club Hub" ipv "Fotoclub Hub".
+    
+Nee. De nadruk ligt welliswaar voorlopig op Nederland, maar de app is wereldwijd te gebruiken.
+
+De app ondersteunt bijvoorbeeld zowel Nederlands als Engels.
+In het Engels heet de app overigens "Photo Club Hub" ipv "Fotoclub Hub".
 </details></p>
 
 </li><li>
@@ -95,9 +107,9 @@ De app ondersteunt bijvoorbeeld zowel Nederlands als Engels. In het Engels heet 
 ### Moet een club lid zijn van de Fotobond?
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord uit te klappen}}$</summary></p>
-De app kan prima omgaan met clubs die geen lid zijn van de Fotobond.
-Er zijn voorbeelden te vinden op de landkaarten.
-Buitenlandse club zouden per definitie geen lid van de (Nederlandse) Koninklijke Fotobond zijn.
+Nee. De app kan prima omgaan met clubs die geen lid zijn van de Fotobond.
+Er zijn tientallen voorbeelden te vinden op de landkaarten.
+Buitenlandse club zouden uiteraard ook geen lid van de (Nederlandse) Koninklijke Fotobond zijn.
 </details></p>
 
 </li><li>
@@ -116,10 +128,10 @@ Omdat het vrij eenvoudig kon, goed samenging met de landkaartjes, en nuttig kon 
 Niet of nauwelijks. De Photo Club Hub en Photo Club Hub HTML software is gratis en blijft gratis.
 En zijn geen kosten voor centrale opslag of rekenkracht: er is geen noemenswaardige centrale infrastructuur.</p>
 
-Als we ervan uitgaan dat een club vrijwel altijd al een website heeft en minstens één lid heeft met Lightroom Classic, dan blijft
-als enige bekende kostenpost een eenmalige aanschaf van een LR plug-in ([Juicebox Pro](https://www.juicebox.net)).
-Er kan gekeken worden gekeken worden of er een gratis alternatief afdoende is 
-(LR wordt geleverd met enkele web plug-ins, Juicebox zelf heeft een 'Lite' versie).
+Als we ervan uitgaan dat een club vrijwel altijd al een website heeft en minstens één lid heeft met Lightroom Classic, 
+dan blijft als enige bekende kostenpost een eenmalige aanschaf van een LR plug-in
+([Juicebox Pro](https://www.juicebox.net)). Er kan gekeken worden gekeken worden of er een gratis alternatief
+afdoende is (LR wordt geleverd met enkele web plug-ins, Juicebox zelf heeft een 'Lite' versie).
 Zelf bouwen van een alternatief voor die plug-in is in principe mogelijk maar niet eenvoudig: dat hangt dus op het
 vinden van een vrijwilliger die het kan en ertoe bereid is.
 Er kan ook gekeken worden of de plug-in kosten voor dit doel eenmalig centraal afkoopbaar zijn.
@@ -134,8 +146,8 @@ De individuele clubs.</p>
 
 Zo kan je bijvoorbeeld ervoor kiezen dat foto's van alle clubexposities 
 en individuele exposities van de afgelopen jaren te zien zijn.
-Maar je kunt ook afspreken dat iedere fotograaf zelf foto's uitkiest voor zijn/naar portfolio in de app. Of een combinatie.
-De app gaat er in principe wel van uit dat de foto's geselecteerd zijn.
+Maar je kunt ook afspreken dat iedere fotograaf zelf foto's uitkiest voor zijn/naar portfolio in de app.
+Of een combinatie. De app gaat er in principe wel van uit dat de foto's geselecteerd zijn.
 Dus eerder tien dan honderd foto's per fotograaf per jaar. Dat heb je zo met exposeren: keuzes maken.
 </details></p>
 
@@ -144,14 +156,20 @@ Dus eerder tien dan honderd foto's per fotograaf per jaar. Dat heb je zo met exp
 ### Moet ik mij zorgen maken over privacy?
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord uit te klappen}}$</summary></p>
-Nee. Een club beheert zijn eigen gegevens. En die gegevens staan opgeslagen op de club website en worden door de club geleverd en onderhouden.
-De gegevens waar het hier om gaat zijn meestal al op bestaande websites te zien: namen van leden, een selectie van foto's, leden van het bestuur.
-Dus nu zijn diezelfde gegevens omgezet in een voor software leesbaar formaat, zodat ze op een consistente, uniforme manier getoond kunnen worden.</p>
+Nee. Een club beheert zijn eigen gegevens.</p>
 
-De meeste velden zijn optioneel. Dus een club is niet gedwongen om b.v. te linken naar hun website, of aan te geven wie in het bestuur zit.
-Verder doet de app niet aan postadressen, e-mailadressen of telefoonnummers van leden. Die zijn niet optioneel: de app ondersteunt ze niet.
-Zelfs het postadres van de thuisbasis van de club is optioneel. Het is opgeslagen als GPS coordinaten, die je kunt afronden of 
-naar b.v. naar een dorpsplein of station kan laten wijzen.
+En die gegevens staan opgeslagen op de club website en worden door de club geleverd en onderhouden.
+De gegevens waar het hier om gaat zijn meestal al op bestaande websites te zien: 
+namen van leden, een selectie van foto's, leden van het bestuur.
+Dus nu zijn diezelfde gegevens omgezet in een voor software leesbaar formaat, 
+zodat ze op een consistente, uniforme manier getoond kunnen worden.</p>
+
+De meeste velden zijn optioneel. 
+Dus een club is niet gedwongen om b.v. te linken naar hun website, of aan te geven wie in het bestuur zit.
+Verder doet de app niet aan postadressen, e-mailadressen of telefoonnummers van leden.
+Die zijn niet optioneel: de app ondersteunt ze niet.
+Zelfs de locatie van de thuisbasis van de club is optioneel. De locatie opgeslagen als GPS coordinaten,
+die je kunt afronden of naar b.v. naar een dorpsplein of station kan laten wijzen.
 </details></p>
 
 </li><li>
@@ -162,8 +180,8 @@ naar b.v. naar een dorpsplein of station kan laten wijzen.
 Ja. Er worden geen kopieën getrokken van de foto's. De foto's staan op de website van de club.
 Technisch wordt er alleen naar "gelinkt".
 En zelfs de lijsten met linkjes naar foto's staan op de website van de club, en dus _niet_ op een centrale server. 
-Dit is dus niet vergelijkbaar met foto's delen via Facebook, Instagram, Flickr, X, enz.
-Social media trekt dus een kopie, en probeert zich vaak rechten toe te eigenen op foto's in ruil voor het gebruik van hun dienst.
+Dit is dus niet vergelijkbaar met foto's delen via Facebook, Instagram, Flickr, X, enz. Social media trekt 
+dus een kopie, en probeert zich vaak rechten toe te eigenen op foto's in ruil voor het gebruik van de dienst.
 Deze app is daarentegen expliciet ontwerpen zodat de club/fotograaf volledige controle houdt: 
 er worden geen kopieën van foto's of data gemaakt, er is geen centrale server, 
 en de software is gratis en openbaar ("open source").</p>
@@ -174,10 +192,11 @@ En op die website stonden altijd al de namen van de leden, en geselecteerde foto
 Je zou kunnen zeggen dat je met hander gereedschap hetzelfde doet als vroeger.
 Op een manier dat enkele problemen met bestaande websites ondervangt door gebruik te maken van wat modernere techniek.
 
-Het is overigens zelfs mogelijk om "de foto's van Jan" eventueele bij Jan zelf neer te zetten. Wij verwachten dat dit niet
-veel gebruikt zal worden, en raden aan om het vooral in het begin simpel te houden.
+Het is overigens zelfs mogelijk om "de foto's van Jan" eventueel bij Jan zelf neer te zetten. Wij verwachten dat dit
+niet veel gebruikt zal worden, en raden aan om het vooral in het begin simpel te houden.
 
-† Als test staan de foto's van De Gender even op een andere (mijn privé) server. Maar dat is tijdelijk: het is beter voor het beheer als een club dat zelf doet, en het is
+† Als test staan de foto's van De Gender even op een andere (mijn privé) server.
+Maar dat is tijdelijk: het is beter voor het beheer als een club dat zelf doet, en het is
 onwenselijk als tientallen of honderden clubs afhankelijk worden van een enkele server ("single point of failure"). 
 En verder heeft een centrale server natuurlijk maar beperkte ruimte. 
 De meeste clubs zijn al gewend om een internet leverancier te betalen
@@ -190,14 +209,15 @@ Dus dit zou normaal geen extra kosten met zich meebrengen. Zie volgend punt:
 ### Kan iemand de getoonde foto's kopieëren?
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord uit te klappen}}$</summary></p>
-Dat is niet helemaal tegen te gaan: alle online plaatjes die zichtbaar zijn, kan je een screenshot van maken.
-Maar het is hier wel opgezet om kopieëren zo lastig mogelijk te maken. Bij mijn procedé hiervoor...
+Laten we eerste vooropstellen dat de foto's op de clubwebsite staan - en niet ergens centraal.
+Dus deze vraag geld voor iedere clubwebsite waar foto's op te zien zijn.
 
-- rechtsklikken en "Save as.." is in de software geblokeerd.
-- de foto bevat zichtbaar de naam van de maker in de linkeronderhoek
-- de foto bevat digitaal en onzichtbaar (in het EXIF copyright veld) de naam van de maker
+Kopieëren is niet helemaal tegen te gaan: alle online plaatjes die zichtbaar zijn, kan je een screenshot van maken.
+Maar het is hier wel opgezet om kopieëren zo lastig mogelijk te maken. Bij onze procedé hiervoor...
 
-Dit is overigens vergelijkbaar met wat je kan doen met een traditionele website.
+- is rechtsklikken en "Save as.." is in de software geblokkeerd.
+- is iedere foto zichtbaar voorzien van de naam van de maker in de linkeronderhoek.
+- is iedere foto bevat digitaal en onzichtbaar gemerkt (EXIF copyright) met de naam van de maker.
 </details></p>
 
 </li><li>
@@ -206,12 +226,13 @@ Dit is overigens vergelijkbaar met wat je kan doen met een traditionele website.
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord uit te klappen}}$</summary></p>
 
-Nee. Maar de app is zo gemaakt dat het kan.
-Vaak wordt dat gewaardeerd (b.v. als iemand 20 jaar lid was, en wegens gezondheidsredenen niet meer meedoet met "zijn" club).
-"In de app blijven of niet" kan per lid besloten worden. Of per club. Het is wel verstandig om dit met het lid zelf af te stemmen.
+Nee. Maar de app is zo gemaakt dat het kan. Vaak wordt dat gewaardeerd
+(b.v. als iemand 20 jaar lid was, en wegens gezondheidsredenen niet meer meedoet met "zijn" club).
+"In de app blijven of niet" kan per lid besloten worden. Of per club.
+Het is wel verstandig om dit met het lid zelf af te stemmen.
 Technisch kan een **gebruiker** van de app ook nog eens kiezen of ex-leden getoond worden.
-En kan iedere club zelf een beleid op dit punt beslissen: als de club de gegevens niet aanlevert, zijn ze uiteraard niet te zien.
-Meer details zijn hieronder te vinden.
+En kan iedere club zelf een beleid op dit punt beslissen:
+als de club de gegevens niet aanlevert, zijn ze uiteraard niet te zien. Meer details zijn hieronder te vinden.
 </details></p>
 
 </li><li>
@@ -237,46 +258,56 @@ Foto Club Hub HTML genereert dus een ledenlijst met links naar de portfolio's va
 ### Werkt dit allemaal nog over enkele jaren?
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord uit te klappen}}$</summary></p>
-Bij een bedrijf (b.v. Adobe) mag je aannemen dat alles minstens 10 jaar ondersteund wordt. Men betaalt er tenslotte voor, 
-en het is de verantwoordelijkheid van Adobe om voor continuïteit te zorgen zolang ze een redelijke winst maken.
-Maar een harde garantie is er niet.
+Bij een bedrijf (b.v. Adobe) mag je aannemen dat alles minstens 10 jaar ondersteund wordt.
+Men betaalt er tenslotte voor, en het is de verantwoordelijkheid van Adobe om voor continuïteit te zorgen 
+zolang ze een redelijke winst maken. Maar een harde garantie is er niet.
 
 Hier ligt dit anders: de broncode is openbaar ("open source"), zodat het in principe nooit verloren kan gaan.
 Maar de software heeft zo nu en dan onderhoud nodig. En gebruikers hopen vaak op uitbreidingen en vernieuwingen.
-Softwareonderhoud en uitbouw vergt in software nogal wat specialistische kennis en is dus normaal voor een club onbetaalbaar.
+Softwareonderhoud en uitbouw vergt in software nogal wat specialistische kennis en is dus voor een fotoclub onhaalbaar.
 
-Aangezien er geen budget is, streven wij ernaar dat er straks voldoende gebruikers zijn dat er meer vrijwillers komen die bereid zijn
-incidenteel en zonder vergoeding aan de software te sleutelen. Bijvoorbeeld omdat ze een idee hebben en het zelf kunnen helpen realiseren.
-Dat staat of valt bij het kunnen opbouwen van een groepje techneuten die dat kunnen en willen. Ze hoeven niet op dezelfde plek of zelfs in hetzelfde land te zitten.
-Bij gebruik door bijvoorbeeld 100 clubs is er kans dat er toevallig iemand (b.v. student) tussenzit die mee zou kunnen helpen.
-Dit _kan_ gaan sneeuwballen: meer ontwikkelaars > meer functionaliteit > meer gebruikers > meer kans op ontwikkelaars. Of niet. Geen harde garantie.
+Aangezien er geen budget is, streven wij ernaar dat er straks voldoende gebruikers zijn dat er meer vrijwillers
+komen die bereid zijn incidenteel en zonder vergoeding aan de software te sleutelen.
+Bijvoorbeeld omdat ze een idee hebben en het zelf kunnen helpen realiseren.
+Dat staat of valt bij het kunnen opbouwen van een groepje techneuten die dat kunnen en willen.
+Ze hoeven niet op dezelfde plek of zelfs in hetzelfde land te zitten.
+Bij gebruik door bijvoorbeeld 100 clubs is er kans dat er toevallig iemand (b.v. student) 
+tussenzit die mee zou kunnen helpen. Dit _kan_ gaan sneeuwballen: 
+meer ontwikkelaars > meer functionaliteit > meer gebruikers > meer kans op ontwikkelaars. 
+Of niet - er is geen garantie.
 Maar er is wel de ambitie om dit op deze manier op te lossen.
 
-Voor een club hoeft deze continuïteitsvraag geen drama te zijn: de investering per club om gegevens aan te leveren zijn heel beperkt.
+Voor een club hoeft deze continuïteitsvraag geen drama te zijn:
+de investering per club om gegevens aan te leveren zijn heel beperkt.
 Zeg maar vergelijkbaar met een andere verbeteringsactie rondom de club website.
-</li></ul></details></p>
+</details></p>
+
+</li></ul>
+
 </details></p>
 
 ## Vergelijkingen
 
-<details><summary>$\color{orange}{\texttt{Klik om categorie uit te klappen}}$</summary></p>
+<details><summary>$\color{orange}{\textsf{Klik om categorie uit te klappen}}$</summary></p>
 
 <ul><li>
 
 ### Hoe verschilt dit van een clubwebsite?
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord uit te klappen}}$</summary></p>
-Een website vereist dat de gebruiker _zelf_ initiatief onderneemt om informatie te zoeken.
-Dat werkt goed bij gerichte vragen over b.v. openingstijden of koopjes.
+
+Een website vereist dat de bezoeker _zelf_ initiatief neemt om informatie te zoeken.
+Dat werkt goed bij gerichte vragen over b.v. openingstijden of contactgegevens.
 Maar werkt bij relatief kleine sites niet goed: om op de hoogte te blijven moet je meerdere sites handmatig
 aflopen - en vaak blijkt er niets veranderd te zijn. Het gevolg is weinig bezoekers (behalve rond de expo). 
 Wat het weer minder aantrekkelijk maakt om de site bij te werken. Wat leidt tot nog minder bezoekers.</p>
 
 De klassieke "statische" websites worden qua aandacht vervangen door grotere "dynamische" sites.
 Dit kan je in dit geval oplossen door
-- het nieuws van meerdere clubs op 1 plek te bundelen zodat er altijd wel wat nieuws te vinden is
-- veranderingen makkelijk vindbaar te maken (b.v. nieuwste foto per fotograaf tonen)
-- optie om proactief te melden wanneer er relevant nieuws binnengekomen is (instelbare notificaties).
+- het nieuws van meerdere clubs op 1 plek te bundelen. Dan is er altijd wel wat veranderd sedert vorige keer.
+- een bookmark ipv een te onderhouden lijst met bookmarks per club.
+- veranderingen goed zichtbaar maken: nieuwste foto's van fotograaf vooraan tonen.
+- misschien ooit instelbare notificaties.
 </details></p>
 
 </li><li>
@@ -288,11 +319,11 @@ Er bestaan manieren om automatisch veranderingen in websites op te sporen (RSS).
 Maar grosso modo is nieuws inmiddels het domein van de grote klassieke media (nos.nl) 
 en van social media zoals Facebook, Instagram, enz.
 
-Ten eerste gebeurt er altijd wat, en probeert je (vaak te hardnekkig) te leiden naar nieuws dat jij interessant kan vinden.
+Ten eerste gebeurt er altijd wat, en probeert je (vaak te hardnekkig) te leiden naar nieuws dat jij interessant vind.
 
 Een speciaal platform voor fotoclubs heeft, b.v. vergeleken met Instragram, heeft voordeel dat het er rustiger is.
-Dat is vooral belangrijk bij een kunstvorm zoals fotografie:
-bij een expositie wil je liever een museumsfeer hebben dan een druk marktplein waar iedereen en alles om aandacht schreeuwt. 
+Dat is vooral belangrijk bij een kunstvorm zoals fotografie: bij een expositie 
+wil je liever een museumsfeer hebben dan een druk marktplein waar iedereen en alles om aandacht schreeuwt. 
 
 Concreet betekent dit:
 
@@ -312,14 +343,33 @@ Vergeleken met Glass, heeft Photo Club Hub...
 - geen jaarlijks abonnement en bijbehorend inlogscherm. Glass heeft enkele werknemers en maakt dus significante kosten.
 - geen kopieën van de foto's. Foto's en ledenlijst staan bij de clubs.
 - geen mogelijkheid om via de app commentaar op andermans foto's te geven. Dus ook geen moderatie nodig.
-- voor de komende tijd een nadruk op Nederlandse gebruikers. Glass is internationaal en Engelstalig, al zitten de oprichters in Amsterdam.
+- voor de komende tijd een nadruk op Nederland. Glass is internationaal, al zitten de oprichters in Amsterdam.
 - nog geen mogelijkheid om individuen of clubs te "volgen". Maar dat zal bij voldoende gebruik nodig worden.
-</details></p></li></ul>
 </details></p>
+
+</li><li>
+
+### Hoe verschilt dit van fotoexpositie.nl?
+
+<details><summary>$\color{green}{\textsf{Klik om antwoord uit te klappen}}$</summary></p>
+
+De website [fotoexpositie.nl](https://www.fotoexpositie.nl)) heeft een andere opzet en aanpak - maar ook overeenkomsten.
+
+Voor [fotoexpositie.nl](https://www.fotoexpositie.nl)) geldt:
+
+- in essentie is het één centrale website plus een wekelijks nieuwsbrief.
+- toegang tot de foto's en aankondigingen op de website en de nieuwsbrief is gratis.
+- het plaatsen van informatie vereist een abonnement.
+- het merendeel van de leden ("vrienden") zijn individuele fotografen. Er zijn enkele fotoclubs, maar ook musea.
+- lidmaatschap geeft de mogelijkheid om max 25 foto's bij een expositieaankondiging te plaatsen.
+- de doelgroep is momenteel beperkt tot Nederland.
+</details></p>
+
+</li></ul></details></p>
 
 ## Gebruik
 
-<details><summary>$\color{orange}{\texttt{Klik om categorie uit te klappen}}$</summary></p>
+<details><summary>$\color{orange}{\textsf{Klik om categorie uit te klappen}}$</summary></p>
 
 <ul><li>
 
@@ -329,12 +379,12 @@ Vergeleken met Glass, heeft Photo Club Hub...
 Niet of nauwelijks. De Photo Club Hub en Photo Club Hub HTML software is gratis en blijft gratis.
 En zijn geen kosten voor centrale opslag of rekenkracht: er is geen noemenswaardige centrale infrastructuur.</p>
 
-Als we ervan uitgaan dat een club vrijwel altijd al een website heeft en minstens één lid heeft met Lightroom Classic, dan blijft
-als enige bekende kostenpost een eenmalige aanschaf van een LR plug-in ([Juicebox Pro](https://www.juicebox.net)).
-Er kan gekeken worden gekeken worden of er een gratis alternatief afdoende is 
-(LR wordt geleverd met enkele web plug-ins, Juicebox zelf heeft een 'Lite' versie).
+Als we ervan uitgaan dat een club vrijwel altijd al een website heeft en minstens één lid heeft met Lightroom Classic,
+dan blijft als enige bekende kostenpost een eenmalige aanschaf van een LR plug-in
+([Juicebox Pro](https://www.juicebox.net)). Er kan gekeken worden gekeken worden of er een gratis alternatief
+voldoet (LR wordt geleverd met enkele web plug-ins, Juicebox zelf heeft een 'Lite' versie).
 Zelf bouwen van een alternatief voor die plug-in is in principe mogelijk maar niet eenvoudig: dat hangt dus op het
-vinden van een vrijwilliger die het kan en ertoe bereid is.
+vinden van een vrijwilliger die ertoe bereid is.
 Er kan ook gekeken worden of de plug-in kosten voor dit doel eenmalig centraal afkoopbaar zijn.
 </details></p>
 
@@ -369,7 +419,7 @@ In alle gevallen krijg je precies dezelfde app. De app kiest automatisch de juis
 
 ## Gegevensbeheer
 
-<details><summary>$\color{orange}{\texttt{Klik om categorie uit te klappen}}$</summary></p>
+<details><summary>$\color{orange}{\textsf{Klik om categorie uit te klappen}}$</summary></p>
 
 <ul><li>
 
@@ -388,12 +438,16 @@ Er staan momentaal alleen enkele bekende Fotomusea in bijvoorbeeld Duitsland, VS
 ### Wat als een club geen website heeft?
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord uit te klappen}}$</summary></p>
-Weet ik niet precies. Het overgrote deel van de clubs heeft al een website (= iets waar je bestanden kan ophalen via een webadres zoals "http//www.mijnclub.nl/..."). Per niveau:
+Weet ik niet precies. Het overgrote deel van de clubs heeft al een website (= iets waar je bestanden kan ophalen
+via een webadres zoals "http//www.mijnclub.nl/..."). Per niveau:
 
 - Level 1 vereist geen eigen website. De informatie zit in een centraal bestand.
-- Level 2 kost vrijwel geen opslag. Makkelijk om een vrijwilliger te vinden die 1 enkel bestandje online wil zetten. Instructies hiervoor volgen.
-- Level 3 is wat lastiger, maar opslag bij een bevriende club is misschien bespreekbaar. Of een [gratis website leverancier](https://www.techradar.com/web-hosting/best-free-web-hosting) vinden.
-Ik denk niet dat wij instructies gaan maken voor "hoe maak ik een website" (doen de hosting providers). Maar we kunnen wel voorbeeldinstructies gemaakt door een club delen.
+- Level 2 kost vrijwel geen opslag. Makkelijk om een vrijwilliger te vinden die 1 enkel bestandje online wil zetten.
+Instructies hiervoor volgen.
+- Level 3 is wat lastiger, maar opslag bij een bevriende club is misschien bespreekbaar. 
+Of een [gratis website leverancier](https://www.techradar.com/web-hosting/best-free-web-hosting) vinden.
+Ik denk niet dat wij instructies gaan maken voor "hoe maak ik een website" (doen de hosting providers). 
+Maar we kunnen wel voorbeeldinstructies gemaakt door een club delen.
 </details></p>
 
 </li><li>
@@ -403,7 +457,7 @@ Ik denk niet dat wij instructies gaan maken voor "hoe maak ik een website" (doen
 <details><summary>$\color{green}{\textsf{Klik om antwoord uit te klappen}}$</summary></p>
 Als een club zijn gegevens niet onderhoudt, zal dit op termijn bij ieder lid gebeuren. 
 Het internet heeft hier nog geen goede oplossing voor. 
-Zo kan het op Facebook gebeuren dat een overledene - met de beste bedoelingen - felicitaties krijgt op zijn/haar verjaardag.
+Zo kan het op Facebook gebeuren dat een overledene (met de beste bedoelingen) felicitaties krijgt op zijn/haar verjaardag.
     
 Het "zomaar" verwijderen van iemand kan heel pijnlijk zijn voor nabestaanden die de herinnering in ere willen houden.
 Maar "zomaar" aanhouden kan soms ook pijnlijk zijn. 
@@ -441,8 +495,10 @@ en een gedetailleerde uitleg wat ieder stukje informatie betekent ([GitHub](http
 ### Ben ik Level 1 per ongeluk aan het overslaan?
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord uit te klappen}}$</summary></p>
-Misschien. Voor de clubs in regio Noord Brabant - Oost hebben wij de Level 1 gegevens voor alle ons bekende clubs ingevoerd.
-Andere clubs kunnen dus zelf hun Level 1 gegevens bij ons aanleveren. Gelukkig stelt Level 1 heel weinig voor: vooral de naam, gemeente, en GPS coordinaten.
+Misschien.
+Voor de clubs in regio Noord Brabant - Oost hebben wij de Level 1 gegevens voor alle ons bekende clubs ingevoerd.
+Andere clubs kunnen dus zelf hun Level 1 gegevens bij ons aanleveren.
+Gelukkig stelt Level 1 heel weinig voor: vooral de naam, gemeente, en GPS coordinaten.
 Plus liefst (niet verplicht) een enkele zin over iets wat er speciaal is aan de club.
 </details></p>
 
@@ -460,21 +516,24 @@ Er is ook een engelstalige versie hiervan: [tinyurl.com/Level2aanmaken](https://
 ### Hoe krijg ik een Level 2 bestand op mijn club website?
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord uit te klappen}}$</summary></p>
-Hier komt apart stappenplan met instructies voor. Voor de eerste clubs willen wij _tijdelijk_ het bestand wel op een eigen server zetten.
+Hier komt apart stappenplan met instructies voor.
+Voor de eerste clubs willen wij _tijdelijk_ het bestand wel op een eigen server zetten.
 
 Globale instructies: je kunt via Dashboard > Media bestanden uploaded naar Wordpress.
 Dan moet je de URL bewaren (omdat het Level 1 bestand doorverwijst naar de locatie van het Level 2 bestand).
 
 Vermoedelijk bevat WordPress en beveiliging om vooral plaatjes en video te uploaded. En dus een JSON bestand weigert.
-Daarvoor heb je een Wordpress plug-in nodig. Bijvoorbeeld [https://wordpress.org/plugins/mime-types-plus/](https://wordpress.org/plugins/mime-types-plus/)
+Daarvoor heb je een Wordpress plug-in nodig.
+Bijvoorbeeld [https://wordpress.org/plugins/mime-types-plus/](https://wordpress.org/plugins/mime-types-plus/)
 </details></p>
 
 </li><li>
 
-### Mag een club niet zelf zijn Level 1 omschrijving bepalen?
+### Hoe kan een club zelf zijn Level 1 omschrijving bepalen?
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord uit te klappen}}$</summary></p>
-Graag. Het kan automatisch door de `remark` voor de club aan de bovenkant van een Level 2 bestand te vullen met de gewenste tekst.
+Het kan automatisch door de `remark` voor de club aan de bovenkant van 
+een Level 2 bestand te vullen met de gewenste tekst.
 Dat Level 2 bestand staat in principe onder beheer van de club (terwijl Level 1 centraal staat).
 Hiermee wordt de `remark` op Level 1 in de app vervangen door de betere `remark` op Level 2.
 Dit zou ook moeten werken voor `latitude` en `longitude` (GPS coordinaten).
@@ -485,54 +544,60 @@ Graag ons op dergelijke wijzigingen op club-niveau attenderen: dan corrigeren wi
 
 ## Uitbreidingen
 
-<details><summary>$\color{orange}{\texttt{Klik om categorie uit te klappen}}$</summary></p>
+<details><summary>$\color{orange}{\textsf{Klik om categorie uit te klappen}}$</summary></p>
 
 <ul><li>
 
-### Trefwoorden?
+### Trefwoorden bij de fotografen? (onderweg)
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord uit te klappen}}$</summary></p>
 Hier wordt aan gewerkt.
 Een fotograaf kan straks gekoppeld worden aan enkele trefwoorden zoals "portret" of "zwart-wit".
 En de app kan dit dan weergeven en hierop zoeken. Hiermee kan je fotografen 
 met een vergelijkbare belangstelling vinden en hun portfolio's inzien. En eventueel
-elkaars exposities bezoeken of op een andere manier in kontakt opnemen.
-
-</li><li>
-    
-### Portfolio's van individuele bondsleden?
-
-<details><summary>$\color{green}{\textsf{Klik om antwoord uit te klappen}}$</summary></p>
-Hier lijkt behoeft aan, want ze zijn redelijk talrijk.
-Ideeën hoe dit eruit zou moeten zien (zonder teveel af te wijken van bestaande app structuur) zijn welkom.
+elkaars exposities bezoeken of op een andere manier in contact opnemen.
 
 </li><li>
 
-### Gaat dit ook iets met afgelopen exposities doen?
+### Foto's van afgelopen exposities? (onderweg)
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord uit te klappen}}$</summary></p>
-Ja. Er is een begin aan gemaakt in Photo Club Hub HTML ([voorproefje](http://www.vdhamer.com/fgDeGender/expo2024/)).
+Hier is een begin aan gemaakt in Photo Club Hub HTML ([voorproefje](http://www.vdhamer.com/fgDeGender/expo2024/)).
 Het gaat dan om de foto's van clubexposities te tonen _na afloop_ van de fysieke expositie.
 </details></p>
 
 </li><li>
 
-### Gaat dit ook iets komende exposities doen?
+### Aankondigen komende exposities doen?
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord uit te klappen}}$</summary></p>
-Misschien. De app is meer een museum dan een nieuwssite. Maar het valt goed te combineren met ondersteuning voor afgelopen exposities.
-Te denken valt aan het tonen van een lijst met exposities uit het verleden en exposities (max 1?) in de toekomst.
-Gesorteerd op datum.
-Komende exposities kunnen leiden naar een URL met de poster (jpg) gemaakt voor die expositie. Daar mag de gebruiker dan zelf het adres en openingstijden lezen.
-Afgelopen exposities kunnen lijden naar een pagina met de vertoonde foto's.
-In de app versie, zou de app in principe actief kunnen waarschuwen als er komende tijd een expo in de buurt is.
+Dat zou kunnen. Te denken valt aan het tonen van een chronologische lijst met afgelopen exposities en de komende expositie.
+De komende expositie zou leiden naar een afbeelding van de aankondigingsposter voor de expositie. 
+De app versie zou ook actief kunnen melden welke exposities er de komende dagen aankomen ("widget" op iOS home screen).
 </details></p>
+
+</li><li>
+    
+### Centrale ingang voor de webversie?
+
+<details><summary>$\color{green}{\textsf{Klik om antwoord uit te klappen}}$</summary></p>
+Op termijn moet er ook een centrale (HTML) indexpagina komen die all deelnemende club websites vermeld.
+De hiervoor benodigde informatie is er al (voor de Portfolio's pagina van de appversie).
+Met deze uitbreiding worden de losstaande webeilandjes per club plotseling één doorgelinkt geheel. 
+
+</li><li>
+    
+### Ondersteuning individuele bondsleden?
+
+<details><summary>$\color{green}{\textsf{Klik om antwoord uit te klappen}}$</summary></p>
+Hier lijkt naar te zijn.
+Ideeën hoe dit eruit zou moeten zien (zonder veel af te wijken van bestaande app structuur) zijn welkom.
 
 </li></ul></details></p>
 
 ## Meer informatie
 
-<details><summary>$\color{orange}{\texttt{Klik om categorie uit te klappen}}$</summary></p>
+<details><summary>$\color{orange}{\textsf{Klik om categorie uit te klappen}}$</summary></p>
 
 <ul><li>
 
