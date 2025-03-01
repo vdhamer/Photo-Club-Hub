@@ -2,7 +2,7 @@ De vragen zijn onderverdeeld in categorieën:
 
 ## Basisvragen
 
-<details><summary>Klik om uit te klappen</summary></p>
+<details><summary>$\color{lightgray}{\textsf{Klik om uit te klappen}}$</summary></p>
 <ul>
 
 <li>
@@ -80,7 +80,7 @@ Maar dat zal in ieder geval even duren: er moeten eerst vrijwilligers zich hierv
 
 ## Beleid
 
-<details><summary>Klik om uit te klappen</summary></p>
+<details><summary>$\color{lightgray}{\textsf{Klik om uit te klappen}}$</summary></p>
 
 <ul><li>
 
@@ -260,7 +260,7 @@ Zeg maar vergelijkbaar met een andere verbeteringsactie rondom de club website.
 
 ## Vergelijkingen
 
-<details><summary>Klik om uit te klappen</summary></p>
+<details><summary>$\color{lightgray}{\textsf{Klik om uit te klappen}}$</summary></p>
 
 <ul><li>
 
@@ -320,7 +320,7 @@ Vergeleken met Glass, heeft Photo Club Hub...
 
 ## Gebruik
 
-<details><summary>Klik om uit te klappen</summary></p>
+<details><summary>$\color{lightgray}{\textsf{Klik om uit te klappen}}$</summary></p>
 
 <ul><li>
 
@@ -370,7 +370,7 @@ In alle gevallen krijg je precies dezelfde app. De app kiest automatisch de juis
 
 ## Gegevensbeheer
 
-<details><summary>Klik om uit te klappen</summary></p>
+<details><summary>$\color{lightgray}{\textsf{Klik om uit te klappen}}$</summary></p>
 
 <ul><li>
 
@@ -486,7 +486,7 @@ Graag ons op dergelijke wijzigingen op club-niveau attenderen: dan corrigeren wi
 
 ## Uitbreidingen
 
-<details><summary>Klik om uit te klappen</summary></p>
+<details><summary>$\color{lightgray}{\textsf{Klik om uit te klappen}}$</summary></p>
 
 <ul><li>
 
@@ -500,7 +500,7 @@ Het gaat dan om de foto's van clubexposities te tonen _na afloop_ van de fysieke
 
 ## Meer informatie
 
-<details><summary>Klik om uit te klappen</summary></p>
+<details><summary>$\color{lightgray}{\textsf{Klik om uit te klappen}}$</summary></p>
 
 <ul><li>
 
