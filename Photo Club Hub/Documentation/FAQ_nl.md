@@ -492,10 +492,10 @@ Graag ons op dergelijke wijzigingen op club-niveau attenderen: dan corrigeren wi
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord uit te klappen}}$</summary></p>
 Hier wordt aan gewerkt.
-Een fotograaf kan zichzelf koppelen aan trefwoorden zoals "portret".
-En de app kan dit weergeven en er vermoedelijk op zoeken. Hiermee kan je fotografen 
-met een vergelijkbare belangstelling vinden en hun portfolio's zien En eventueel
-elkaars exposities bezoeken of op een andere manier kontakt opnemen.
+Een fotograaf kan straks gekoppeld worden aan enkele trefwoorden zoals "portret" of "zwart-wit".
+En de app kan dit dan weergeven en hierop zoeken. Hiermee kan je fotografen 
+met een vergelijkbare belangstelling vinden en hun portfolio's inzien. En eventueel
+elkaars exposities bezoeken of op een andere manier in kontakt opnemen.
 
 </li><li>
     
