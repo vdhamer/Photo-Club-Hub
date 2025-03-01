@@ -95,6 +95,7 @@ De broncode van deze software is "open source".
 ### Is de app alleen voor Nederland?
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord uit te klappen}}$</summary></p>
+    
 Nee. De nadruk ligt welliswaar voorlopig op Nederland, maar de app is wereldwijd te gebruiken.
 
 De app ondersteunt bijvoorbeeld zowel Nederlands als Engels.
