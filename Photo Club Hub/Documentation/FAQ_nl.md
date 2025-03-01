@@ -352,6 +352,7 @@ Vergeleken met Glass, heeft Photo Club Hub...
 ### Hoe verschilt dit van fotoexpositie.nl?
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord uit te klappen}}$</summary></p>
+
 De website [fotoexpositie.nl](https://www.fotoexpositie.nl)) heeft een andere opzet en aanpak - maar ook overeenkomsten
 Voor [fotoexpositie.nl](https://www.fotoexpositie.nl)) geldt:
 
