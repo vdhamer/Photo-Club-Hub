@@ -490,10 +490,29 @@ Graag ons op dergelijke wijzigingen op club-niveau attenderen: dan corrigeren wi
 
 <ul><li>
 
+### Trefwoorden bij fotografen?
+
+<details><summary>$\color{lightgray}{\textsf{Klik om uit te klappen}}$</summary></p>
+Hier wordt aan gewerkt.
+Een fotograaf kan zichzelf koppelen aan trefwoorden zoals "portret".
+En de app kan dit weergeven en er vermoedelijk op zoeken. Hiermee kan je fotografen 
+met een vergelijkbare belangstelling vinden en hun portfolio's zien En eventueel
+elkaars exposities bezoeken of op een andere manier kontakt opnemen.
+
+</li><li>
+    
+### Portfolio's van individuele bondsleden?
+
+<details><summary>$\color{lightgray}{\textsf{Klik om uit te klappen}}$</summary></p>
+Hier lijkt behoeft aan, want ze zijn redelijk talrijk.
+Ideeën hoe dit eruit zou moeten zien (zonder teveel af te wijken van bestaande app structuur) zijn welkom.
+
+</li><li>
+
 ### Gaat dit ook iets met afgelopen exposities doen?
 
 <details><summary>$\color{lightgray}{\textsf{Klik om uit te klappen}}$</summary></p>
-Ja. Er is een begin aan gemaakt ([voorproefje](http://www.vdhamer.com/fgDeGender/expo2024/)).
+Ja. Er is een begin aan gemaakt in Photo Club Hub HTML ([voorproefje](http://www.vdhamer.com/fgDeGender/expo2024/)).
 Het gaat dan om de foto's van clubexposities te tonen _na afloop_ van de fysieke expositie.
 </details></p>
 
@@ -502,12 +521,15 @@ Het gaat dan om de foto's van clubexposities te tonen _na afloop_ van de fysieke
 ### Gaat dit ook iets komende exposities doen?
 
 <details><summary>$\color{lightgray}{\textsf{Klik om uit te klappen}}$</summary></p>
-Mogelijk. Hierbij zou een club moeten invoeren wanneer en waar een komende clubsexpositie is.
-Te denken valt aan het tonen van exposities uit het verleden en een expositie in de toekomst.
-Exposities uit het verleden kunnen lijden naar een pagina met de vertoonde foto's.
-Exposities in de toekomst kunnen eenvoudig leiden naar een JPG van de poster voor die expositie. 
-</details></p></li></ul>
+Misschien. De app is meer een museum dan een nieuwssite. Maar het valt goed te combineren met ondersteuning voor afgelopen exposities.
+Te denken valt aan het tonen van een lijst met exposities uit het verleden en exposities (max 1?) in de toekomst.
+Gesorteerd op datum.
+Komende exposities kunnen leiden naar een URL met de poster (jpg) gemaakt voor die expositie. Daar mag de gebruiker dan zelf het adres en openingstijden lezen.
+Afgelopen exposities kunnen lijden naar een pagina met de vertoonde foto's.
+In de app versie, zou de app in principe actief kunnen waarschuwen als er komende tijd een expo in de buurt is.
 </details></p>
+
+</li></ul></details></p>
 
 ## Meer informatie
 
