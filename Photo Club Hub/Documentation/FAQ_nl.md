@@ -9,7 +9,7 @@ De vragen zijn onderverdeeld in categorieën:
 
 ### Wat doet de app?
 
-<details><summary>$\color{lightgray}{\textsf{Klik om uit te klappen}}$</summary></p>
+<details><summary>$\color{green}{\textsf{Klik om uit te klappen}}$</summary></p>
 De omschrijving in de <font color="red">Apple App Store</font> luidt:</p>
 
 > De app toont geselecteerd werk van leden van fotoclubs. 
