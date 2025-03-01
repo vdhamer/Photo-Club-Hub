@@ -12,6 +12,9 @@ Data Maintenance
 * Updated xampleMin.level1.json and xampleMax.level1.json sample files.
 * Updated admin role for fgWaalre.
 
+Documentation
+* Updated FAQ_nl.md.
+
 This build #4637 was made using Xcode 16.2
 
 ---------------------------------------------------------------------------
