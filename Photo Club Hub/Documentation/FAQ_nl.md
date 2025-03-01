@@ -44,8 +44,6 @@ en de hektische social media van tegenwoordig. Met als doel om de het fotowerk v
 
 Men kan de app dus zien als een online museum voor de amateurfotografie dat altijd open is, 
 waar je rustig kunt rondkijken, met alle nadruk op de foto's en hun makers.
-Maar, in tegenstelling tot een museum, is er ook nadruk op geografische afstand: 
-landkaarten tonen welke clubs in de buurt liggen. 
 </details></p>
 
 </li><li>
@@ -512,7 +510,7 @@ Graag ons op dergelijke wijzigingen op club-niveau attenderen: dan corrigeren wi
 
 <ul><li>
 
-### Trefwoorden?
+### Trefwoorden bij de fotografen?
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord uit te klappen}}$</summary></p>
 Hier wordt aan gewerkt.
@@ -522,19 +520,11 @@ met een vergelijkbare belangstelling vinden en hun portfolio's inzien. En eventu
 elkaars exposities bezoeken of op een andere manier in contact opnemen.
 
 </li><li>
-    
-### Portfolio's van individuele bondsleden?
-
-<details><summary>$\color{green}{\textsf{Klik om antwoord uit te klappen}}$</summary></p>
-Hier lijkt behoeft aan, want ze zijn redelijk talrijk.
-Ideeën hoe dit eruit zou moeten zien (zonder teveel af te wijken van bestaande app structuur) zijn welkom.
-
-</li><li>
 
 ### Gaat dit ook iets met afgelopen exposities doen?
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord uit te klappen}}$</summary></p>
-Ja. Er is een begin aan gemaakt in Photo Club Hub HTML ([voorproefje](http://www.vdhamer.com/fgDeGender/expo2024/)).
+Hier is een begin aan gemaakt in Photo Club Hub HTML ([voorproefje](http://www.vdhamer.com/fgDeGender/expo2024/)).
 Het gaat dan om de foto's van clubexposities te tonen _na afloop_ van de fysieke expositie.
 </details></p>
 
@@ -543,15 +533,29 @@ Het gaat dan om de foto's van clubexposities te tonen _na afloop_ van de fysieke
 ### Gaat dit ook iets komende exposities doen?
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord uit te klappen}}$</summary></p>
-Misschien. De app is meer een museum dan een nieuwssite.
-Maar het valt goed te combineren met ondersteuning voor afgelopen exposities.
-Te denken valt aan het tonen van een lijst met exposities uit het verleden en exposities (max 1?) in de toekomst.
-Gesorteerd op datum.
-Komende exposities kunnen leiden naar een URL met de poster (jpg) gemaakt voor die expositie. 
-Daar mag de gebruiker dan zelf het adres en openingstijden lezen.
-Afgelopen exposities kunnen lijden naar een pagina met de vertoonde foto's.
-In de app versie, zou de app in principe actief kunnen waarschuwen als er komende tijd een expo in de buurt is.
+Mogelijk. De app is meer een museum dan een nieuwssite.
+Te denken valt aan het tonen van een chronologische lijst met afgelopen exposities en maximaal 1 geplande expositie.
+De komende expositie zou leiden naar een plaatje van de aankondigingsposter voor de expositie. 
+Ja, de app versie zou de gebruiker ook actief kunnen op relevante exposities.
 </details></p>
+
+</li><li>
+    
+### Clubs vinden in de webversie?
+
+<details><summary>$\color{green}{\textsf{Klik om antwoord uit te klappen}}$</summary></p>
+Op termijn komt er ook een centrale (HTML) indexpagina met alle deelnemende club websites.
+De benodigde informatie is als voor de appversie beschikbaar.
+Met deze uitbreiding krijg je dat de eilandjes met clubportfolio's 
+(gegenereeerd door de Photo Club Hub HTML app) plotseling één geheel gaat vormen. 
+
+</li><li>
+    
+### Ondersteuning individuele bondsleden?
+
+<details><summary>$\color{green}{\textsf{Klik om antwoord uit te klappen}}$</summary></p>
+Hier lijkt naar te zijn.
+Ideeën hoe dit eruit zou moeten zien (zonder veel af te wijken van bestaande app structuur) zijn welkom.
 
 </li></ul></details></p>
 
