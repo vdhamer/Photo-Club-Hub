@@ -31,24 +31,21 @@ De omschrijving in de <font color="red">Apple App Store</font> luidt:</p>
 Fotografen worden lid van een fotoclub om hun werk aan elkaar te laten zien.
 Dat zien en gezien-worden lukt prima _binnen_ de club doordat de leden regelmatig bijeen komen.</p>
 
-Zichtbaarheid van werk _buiten_ de club loopt via de website van de club en vooral exposities.
-In tegenstelling tot exposities, loopt bezoek aan de website al jaren terug.
-Vooral omdat kleine websites steeds minder aandacht krijgen:
-je moet ze vinden, er zijn teveel van,
-en de inhoud verandert meestal zelden. Een neerwaardse spiraal dus.
-Ofwel, de aandacht van gebruikers is verschoven naar grote websites
-(zoals Nos.nl of Petapixel.com, met hun teams van betaalde redacteuren en schrijvers)
-en social media platforms zoals Facebook of Twitter/X die dienen als een druk digitaal dorpsplein.</p>
+Zichtbaarheid van werk _buiten_ de club loopt via de website van de club en via exposities.
+Bezoek aan deregelijke websites loopt al jaren terug:
+je moet zelf initiatief nemen om ze vinden, het zijn er veel,
+en de inhoud verandert maar zelden. Een neerwaardse spiraal dus.
+De aandacht van gebruikers is daardoor verschoven naar grote websites
+(zoals Nos.nl of Petapixel.com, met hun teams van betaalde redacteurs/schrijvers)
+en social media platforms zoals Facebook of Twitter/X die dienen als een vluchtige ontmoetingsplek.</p>
 
-Vandaar dat er voor fotoclubs een behoefte leek aan een tussenvorm tussen de vrijwel verlaten websites van vroeger
-en de schreeuwerige social media van tegenwoordig. 
-Met als doel om de het fotowerk van clubs onderling te kunnen zien,
-en een laagdrempelige ingang te bieden aan fotoliefhebbers.
+Vandaar dat wij voor fotoclubs een behoefte zagen voor een tussenvorm tussen de vrijwel verlaten websites van vroeger
+en de hektische social media van tegenwoordig. Met als doel om de het fotowerk van clubs eenvoudig te kunnen bekijken.
 
 Men kan de app dus zien als een online museum voor de amateurfotografie dat altijd open is, 
 waar je rustig kunt rondkijken, met alle nadruk op de foto's en hun makers.
-Maar in tegenstelling tot een museum, is er ook nadruk op locatie: 
-landkaarten maken duidelijk welke clubs dichtbij zijn en welke niet.
+Maar, in tegenstelling tot een museum, is er ook nadruk op geografische afstand: 
+landkaarten tonen welke clubs in de buurt liggen. 
 </details></p>
 
 </li><li>
@@ -56,10 +53,9 @@ landkaarten maken duidelijk welke clubs dichtbij zijn en welke niet.
 ### Waarom staat mijn club niet in de app?
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord uit te klappen}}$</summary></p>
-De app is "open". Je kunt zelf een club toevoegen. Hier komen stapsgewijs instructies voor.</p>
+Je kunt zelf een club toevoegen. Hier komen stapsgewijs instructies voor (zie vraag over documentatie).</p>
     
-De vrijwel volledige lijst met clubs in Brabant-Oost staat erin als demo en om het proces op te starten:
-dat scheel alvast 1 van de 3 stappen.
+De lijst met clubs in Brabant-Oost staat er alvast in om het groeiproces op te starten.
 </details></p>
 
 </li><li>
@@ -68,20 +64,18 @@ dat scheel alvast 1 van de 3 stappen.
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord uit te klappen}}$</summary></p>
 Er is een iPhone/iPad versie van de app op de Apple App Store.</p>
+Voor andere merken telefoontjes en voor grotere schermen is er de "webversie".
 
-Voor andere merken mobiele apparaten en voor grotere computers is er de "webversie".
-Met de webversie kan je club portfolio's bekijken in een internet browser (Chrome, Edge, Safari...) 
-op vrijwel ieder slim apparaat (Android telefoon, Chinese telefoon, tablet, Windows laptop, Linux desktop...).
+Met de webversie kan je club portfolio's bekijken in een internet browser (_Chrome_, _Edge_, _Safari_...) 
+op allerlei apparaten (Android telefoon, Chinees merk telefoon, tablet, laptop, desktop).
+
 De iOS app en de webversie hebben dezelfde opzet en gebruiken dezelfde gegevens.
 De webversie is technisch een computerprogramma dat met een druk op een knop de 
 vereiste webpagina's automatisch aanmaakt die toegevoegd kunnen worden aan bestaande club websites.
-Op termijn komt er nog een centrale webpagina waarop men alle deelnemende clubs kan vinden en 
-via links kan bereiken (de tegenhanger van het Portfolio's scherm in de iPhone/iPad app).
 
-Er wordt momenteel aan **beide** versies continue gewerkt. 
-Het is in principe mogelijk dat iemand nog een versie maakt voor de Android Play Store. 
-Of een versie voor Microsoft Windows. Maar dat zal in ieder geval even duren: er moeten 
-eerst vrijwilligers zich hiervoor melden, en dan moet het nog gemaakt worden.
+Er wordt aan uitbreiding van **beide** versies gewerkt. 
+Het is in principe mogelijk dat er een versie komt voor bijvoorbeeld de Android Play Store. 
+Daar zoeken wij een technische onderlegde vrijwilliger voor.
 </details></p></li></ul>
 </details></p>
 
