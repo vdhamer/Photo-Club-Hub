@@ -156,7 +156,7 @@ Dus eerder tien dan honderd foto's per fotograaf per jaar. Dat heb je zo met exp
 ### Moet ik mij zorgen maken over privacy?
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord uit te klappen}}$</summary></p>
-Nee. Een club beheert zijn eigen gegevens.</details>p>
+Nee. Een club beheert zijn eigen gegevens.</p>
 
 En die gegevens staan opgeslagen op de club website en worden door de club geleverd en onderhouden.
 De gegevens waar het hier om gaat zijn meestal al op bestaande websites te zien: 
