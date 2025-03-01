@@ -39,10 +39,7 @@ De aandacht van gebruikers is daardoor verschoven naar grote websites
 en social media platforms zoals Facebook of Twitter/X die dienen als een vluchtige ontmoetingsplek.</p>
 
 Vandaar dat wij voor fotoclubs een behoefte zagen voor een tussenvorm tussen de vrijwel verlaten websites van vroeger
-en de hektische social media van tegenwoordig. Met als doel om de het fotowerk van clubs eenvoudig te kunnen bekijken.
-
-Men kan de app dus zien als een online museum voor de amateurfotografie dat altijd open is, 
-waar je rustig kunt rondkijken, met alle nadruk op de foto's en hun makers.
+en de hektische social media van tegenwoordig. Met als doel om de het fotowerk van clubs eenvoudig en in alle rust te kunnen bekijken.
 </details></p>
 
 </li><li>
