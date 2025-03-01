@@ -279,7 +279,10 @@ Maar er is wel de ambitie om dit op deze manier op te lossen.
 Voor een club hoeft deze continuïteitsvraag geen drama te zijn:
 de investering per club om gegevens aan te leveren zijn heel beperkt.
 Zeg maar vergelijkbaar met een andere verbeteringsactie rondom de club website.
-</li></ul></details></p>
+</details></p>
+
+</li></ul>
+
 </details></p>
 
 ## Vergelijkingen
