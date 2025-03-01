@@ -278,6 +278,7 @@ Zeg maar vergelijkbaar met een andere verbeteringsactie rondom de club website.
 ### Hoe verschilt dit van een clubwebsite?
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord uit te klappen}}$</summary></p>
+
 Een website vereist dat de gebruiker _zelf_ initiatief onderneemt om informatie te zoeken.
 Dat werkt goed bij gerichte vragen over b.v. openingstijden of koopjes.
 Maar werkt bij relatief kleine sites niet goed: om op de hoogte te blijven moet je meerdere sites handmatig
