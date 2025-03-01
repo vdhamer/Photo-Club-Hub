@@ -345,8 +345,25 @@ Vergeleken met Glass, heeft Photo Club Hub...
 - geen mogelijkheid om via de app commentaar op andermans foto's te geven. Dus ook geen moderatie nodig.
 - voor de komende tijd een nadruk op Nederland. Glass is internationaal, al zitten de oprichters in Amsterdam.
 - nog geen mogelijkheid om individuen of clubs te "volgen". Maar dat zal bij voldoende gebruik nodig worden.
-</details></p></li></ul>
 </details></p>
+
+</li><li>
+
+### Hoe verschilt dit van fotoexpositie.nl?
+
+<details><summary>$\color{green}{\textsf{Klik om antwoord uit te klappen}}$</summary></p>
+De website [fotoexpositie.nl](https://www.fotoexpositie.nl)) heeft een andere opzet en aanpak - maar ook overeenkomsten
+Voor [fotoexpositie.nl](https://www.fotoexpositie.nl)) geldt:
+
+- in essentie is het één centrale website plus een wekelijks nieuwsbrief.
+- toegang tot de foto's en aankondigingen op de website en de nieuwsbrief is gratis.
+- het plaatsen van informatie vereist een abonnement.
+- het merendeel van de leden ("vrienden") zijn individuele fotografen. Er zijn enkele fotoclubs, maar ook musea.
+- lidmaatschap geeft de mogelijkheid om max 25 foto's bij een expositieaankondiging te plaatsen.
+- de doelgroep is momenteel beperkt tot Nederland.
+</details></p>
+
+</li></ul></details></p>
 
 ## Gebruik
 
