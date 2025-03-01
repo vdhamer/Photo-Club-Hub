@@ -510,7 +510,7 @@ Graag ons op dergelijke wijzigingen op club-niveau attenderen: dan corrigeren wi
 
 <ul><li>
 
-### Trefwoorden bij de fotografen?
+### Trefwoorden bij de fotografen? (onderweg)
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord uit te klappen}}$</summary></p>
 Hier wordt aan gewerkt.
@@ -521,7 +521,7 @@ elkaars exposities bezoeken of op een andere manier in contact opnemen.
 
 </li><li>
 
-### Gaat dit ook iets met afgelopen exposities doen?
+### Foto's van afgelopen exposities? (onderweg)
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord uit te klappen}}$</summary></p>
 Hier is een begin aan gemaakt in Photo Club Hub HTML ([voorproefje](http://www.vdhamer.com/fgDeGender/expo2024/)).
@@ -530,24 +530,22 @@ Het gaat dan om de foto's van clubexposities te tonen _na afloop_ van de fysieke
 
 </li><li>
 
-### Gaat dit ook iets komende exposities doen?
+### Aankondigen komende exposities doen?
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord uit te klappen}}$</summary></p>
-Mogelijk. De app is meer een museum dan een nieuwssite.
-Te denken valt aan het tonen van een chronologische lijst met afgelopen exposities en maximaal 1 geplande expositie.
-De komende expositie zou leiden naar een plaatje van de aankondigingsposter voor de expositie. 
-Ja, de app versie zou de gebruiker ook actief kunnen op relevante exposities.
+Dat zou kunnen. Te denken valt aan het tonen van een chronologische lijst met afgelopen exposities en de komende expositie.
+De komende expositie zou leiden naar een afbeelding van de aankondigingsposter voor de expositie. 
+De app versie zou ook actief kunnen melden welke exposities er de komende dagen aankomen ("widget" op iOS home screen).
 </details></p>
 
 </li><li>
     
-### Clubs vinden in de webversie?
+### Centrale ingang voor de webversie?
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord uit te klappen}}$</summary></p>
-Op termijn komt er ook een centrale (HTML) indexpagina met alle deelnemende club websites.
-De benodigde informatie is als voor de appversie beschikbaar.
-Met deze uitbreiding krijg je dat de eilandjes met clubportfolio's 
-(gegenereeerd door de Photo Club Hub HTML app) plotseling één geheel gaat vormen. 
+Op termijn moet er ook een centrale (HTML) indexpagina komen die all deelnemende club websites vermeld.
+De hiervoor benodigde informatie is er al (voor de Portfolio's pagina van de appversie).
+Met deze uitbreiding worden de losstaande webeilandjes per club plotseling één doorgelinkt geheel. 
 
 </li><li>
     
