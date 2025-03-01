@@ -81,9 +81,9 @@ Daar zoeken wij een technische onderlegde vrijwilliger voor.
 ### Is de app gratis?
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord uit te klappen}}$</summary></p>
-De appversie op de Apple App Store is en blijft gratis.
-Ook de software om de optionele websites aan te maken en onderhouden is en blijft gratis.
-De broncode van de software is "open source".
+Ja. De appversie op de Apple App Store is en blijft gratis.
+De software om de optionele websites aan te maken en onderhouden is en blijft ook gratis.
+De broncode van deze software is "open source".
 </details>
 
 </li></ul>
