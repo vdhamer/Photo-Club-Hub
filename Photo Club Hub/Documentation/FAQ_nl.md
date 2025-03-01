@@ -296,17 +296,18 @@ Zeg maar vergelijkbaar met een andere verbeteringsactie rondom de club website.
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord uit te klappen}}$</summary></p>
 
-Een website vereist dat de gebruiker _zelf_ initiatief onderneemt om informatie te zoeken.
-Dat werkt goed bij gerichte vragen over b.v. openingstijden of koopjes.
+Een website vereist dat de bezoeker _zelf_ initiatief neemt om informatie te zoeken.
+Dat werkt goed bij gerichte vragen over b.v. openingstijden of contactgegevens.
 Maar werkt bij relatief kleine sites niet goed: om op de hoogte te blijven moet je meerdere sites handmatig
 aflopen - en vaak blijkt er niets veranderd te zijn. Het gevolg is weinig bezoekers (behalve rond de expo). 
 Wat het weer minder aantrekkelijk maakt om de site bij te werken. Wat leidt tot nog minder bezoekers.</p>
 
 De klassieke "statische" websites worden qua aandacht vervangen door grotere "dynamische" sites.
 Dit kan je in dit geval oplossen door
-- het nieuws van meerdere clubs op 1 plek te bundelen zodat er altijd wel wat nieuws te vinden is
-- veranderingen makkelijk vindbaar te maken (b.v. nieuwste foto per fotograaf tonen)
-- optie om proactief te melden wanneer er relevant nieuws binnengekomen is (instelbare notificaties).
+- het nieuws van meerdere clubs op 1 plek te bundelen. Dan is er altijd wel wat veranderd sedert vorige keer.
+- een bookmark ipv een te onderhouden lijst met bookmarks per club.
+- veranderingen goed zichtbaar maken: nieuwste foto's van fotograaf vooraan tonen.
+- misschien ooit instelbare notificaties.
 </details></p>
 
 </li><li>
