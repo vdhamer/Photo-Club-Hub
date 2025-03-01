@@ -2,7 +2,7 @@ De vragen zijn onderverdeeld in categorieën:
 
 ## Basisvragen
 
-<details><summary>$\color{lightblue}{\textsf{Klik om uit te klappen}}$</summary></p>
+<details><summary>$\color{orange}{\textsf{Klik om uit te klappen}}$</summary></p>
 <ul>
 
 <li>
