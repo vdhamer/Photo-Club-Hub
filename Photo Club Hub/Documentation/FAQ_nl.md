@@ -29,28 +29,26 @@ De omschrijving in de <font color="red">Apple App Store</font> luidt:</p>
 <details><summary>$\color{green}{\textsf{Klik om antwoord uit te klappen}}$</summary></p>
 
 Fotografen worden lid van een fotoclub om hun werk aan elkaar te laten zien.
-Dat zien en gezien-worden lukt prima _binnen_ de club doordat de leden om de paar weken bijeen komen.</p>
+Dat zien en gezien-worden lukt prima _binnen_ de club doordat de leden regelmatig bijeen komen.</p>
 
-Zichtbaarheid van werk _buiten_ de club gaat vooral via exposities en de website van de club.
-Ze zijn complementair. In tegenstelling tot exposities, loopt bezoek aan de website al jaren terug.
-Vooral omdat kleine websites over het algemeen steeds minder aandacht krijgen:
+Zichtbaarheid van werk _buiten_ de club loopt via de website van de club en vooral exposities.
+In tegenstelling tot exposities, loopt bezoek aan de website al jaren terug.
+Vooral omdat kleine websites steeds minder aandacht krijgen:
 je moet ze vinden, er zijn teveel van,
-en de inhoud veranderd meestal vrij zelden. Een neerwaardse spiraal dus.
+en de inhoud verandert meestal zelden. Een neerwaardse spiraal dus.
 Ofwel, de aandacht van gebruikers is verschoven naar grote websites
 (zoals Nos.nl of Petapixel.com, met hun teams van betaalde redacteuren en schrijvers)
-en social media platforms zoals Facebook of Twitter/X die dienen als (extreem druk) digitaal dorpsplein.</p>
+en social media platforms zoals Facebook of Twitter/X die dienen als een druk digitaal dorpsplein.</p>
 
-Vandaar dat er voor fotoclubs een behoefte leek aan een tussenvorm tussen de "vrijwel verlaten" van de websites van vroeger
-en de "doom scrolling" en "Times Square" van de druk bezochte social media. 
-Met als doel om de het fotowerk van clubs onderling te delen,
-en een laagdrempelige ingang te bieden aan fotoliefhebbers in het algemeen.
-Maar je kunt het ook als tussenvorm zien tussen de lokale bijeenkomsten van fotoclubs en de grote wereld 
-van Social Media waar je ervan uitgaat dat je de ander nooit _in real life_ zult tegenkomen.
+Vandaar dat er voor fotoclubs een behoefte leek aan een tussenvorm tussen de vrijwel verlaten websites van vroeger
+en de schreeuwerige social media van tegenwoordig. 
+Met als doel om de het fotowerk van clubs onderling te kunnen zien,
+en een laagdrempelige ingang te bieden aan fotoliefhebbers.
 
 Men kan de app dus zien als een online museum voor de amateurfotografie dat altijd open is, 
-Waar je in kunt rondlopen in een rustige omgeving, met nadruk op de foto's en hun makers.
-Maar in tegenstelling tot een museum, kan het dienen als streekmuseum: 
-een landkaart maakt duidelijk welke clubs dichtbij zijn en welke niet.
+waar je rustig kunt rondkijken, met alle nadruk op de foto's en hun makers.
+Maar in tegenstelling tot een museum, is er ook nadruk op locatie: 
+landkaarten maken duidelijk welke clubs dichtbij zijn en welke niet.
 </details></p>
 
 </li><li>
