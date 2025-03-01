@@ -32,7 +32,7 @@ Fotografen worden lid van een fotoclub om hun werk aan elkaar te laten zien.
 Dat zien en gezien-worden lukt prima _binnen_ de club doordat de leden regelmatig bijeen komen.</p>
 
 Zichtbaarheid van werk _buiten_ de club loopt via de website van de club en via exposities.
-Bezoek aan deregelijke websites loopt al jaren terug:
+Bezoek aan dergelijke websites loopt al jaren terug:
 je moet zelf initiatief nemen om ze vinden, het zijn er veel,
 en de inhoud verandert maar zelden. Een neerwaardse spiraal dus.
 De aandacht van gebruikers is daardoor verschoven naar grote websites
