@@ -9,7 +9,7 @@ De vragen zijn onderverdeeld in categorieën:
 
 ### Wat doet de app? [basisvragen]
 
-<details><summary>$\color{gray}{\textsf{Klik om uit te klappen}}$</summary></p>
+<details><summary>$\color{lightgray}{\textsf{Klik om uit te klappen}}$</summary></p>
 De omschrijving in de <font color="red">Apple App Store</font> luidt:</p>
 
 > De app toont geselecteerd werk van leden van fotoclubs. 
@@ -28,7 +28,6 @@ De omschrijving in de <font color="red">Apple App Store</font> luidt:</p>
 ### Waarom is de app gemaakt? [basisvragen]
 
 <details><summary>$\color{lightgray}{\textsf{Klik om uit te klappen}}$</summary></p>
-
 Fotografen worden lid van een fotoclub om hun werk aan elkaar te laten zien.
 Dat zien en gezien-worden lukt prima _binnen_ de club doordat de leden om de paar weken bijeen komen.</p>
 
@@ -55,7 +54,7 @@ Maar in tegenstelling tot een museum, kan het dienen als streekmuseum: een landk
 
 ### Waarom staat mijn club niet in de app? [basisvragen]
 
-<details><summary>Klik om uit te klappen</summary></p>
+<details><summary>$\color{lightgray}{\textsf{Klik om uit te klappen}}$</summary></p>
 De app is "open". Je kunt zelf een club toevoegen. Hier komen stapsgewijs instructies voor.</p>
     
 De vrijwel volledige lijst met clubs in Brabant-Oost staat erin als demo en om het proces op te starten:
@@ -66,7 +65,7 @@ dat scheel alvast 1 van de 3 stappen.
 
 ### Is er een Android of PC versie van de app? [beleid] + [gebruik] + [basisvragen]
 
-<details><summary>Klik om uit te klappen</summary></p>
+<details><summary>$\color{lightgray}{\textsf{Klik om uit te klappen}}$</summary></p>
 Er is een iPhone/iPad versie van de app op de Apple App Store.</p>
 
 Voor andere merken mobiele apparaten en voor grotere computers is er de "webversie". Met de webversie kan je club portfolio's bekijken in een internet browser (Chrome, Edge, Safari...) 
@@ -87,7 +86,7 @@ Maar dat zal in ieder geval even duren: er moeten eerst vrijwilligers zich hierv
 
 ### Is de app alleen voor Nederland? [beleid]
 
-<details><summary>Klik om uit te klappen</summary></p>
+<details><summary>$\color{lightgray}{\textsf{Klik om uit te klappen}}$</summary></p>
 De nadruk ligt voorlopig op Nederland. Maar de app is wereldwijd te gebruiken.
 De app ondersteunt bijvoorbeeld zowel Nederlands als Engels. In het Engels heet de app "Photo Club Hub" ipv "Fotoclub Hub".
 </details></p>
@@ -96,7 +95,7 @@ De app ondersteunt bijvoorbeeld zowel Nederlands als Engels. In het Engels heet 
 
 ### Moet een club lid zijn van de Fotobond? [beleid]
 
-<details><summary>Klik om uit te klappen</summary></p>
+<details><summary>$\color{lightgray}{\textsf{Klik om uit te klappen}}$</summary></p>
 De app kan prima omgaan met clubs die geen lid zijn van de Fotobond.
 Er zijn voorbeelden te vinden op de landkaarten.
 Buitenlandse club zouden per definitie geen lid van de (Nederlandse) Koninklijke Fotobond zijn.
@@ -106,7 +105,7 @@ Buitenlandse club zouden per definitie geen lid van de (Nederlandse) Koninklijke
 
 ### Waarom staan er fotomusea in? [beleid]
 
-<details><summary>Klik om uit te klappen</summary></p>
+<details><summary>$\color{lightgray}{\textsf{Klik om uit te klappen}}$</summary></p>
 Omdat het vrij eenvoudig kon, goed samenging met de landkaartjes, en nuttig kon zijn voor sommige gebruikers.
 </details></p>
 
@@ -114,7 +113,7 @@ Omdat het vrij eenvoudig kon, goed samenging met de landkaartjes, en nuttig kon 
 
 ### Zijn er kosten aan verbonden? [beleid] + [gebruik]
 
-<details><summary>Klik om uit te klappen</summary></p>
+<details><summary>$\color{lightgray}{\textsf{Klik om uit te klappen}}$</summary></p>
 Niet of nauwelijks. De Photo Club Hub en Photo Club Hub HTML software is gratis en blijft gratis.
 En zijn geen kosten voor centrale opslag of rekenkracht: er is geen noemenswaardige centrale infrastructuur.</p>
 
@@ -131,7 +130,7 @@ Er kan ook gekeken worden of de plug-in kosten voor dit doel eenmalig centraal a
 
 ### Wie bepaalt welke foto's in de app staan? [beleid]
 
-<details><summary>Klik om uit te klappen</summary></p>
+<details><summary>$\color{lightgray}{\textsf{Klik om uit te klappen}}$</summary></p>
 De individuele clubs.</p>
 
 Zo kan je bijvoorbeeld ervoor kiezen dat foto's van alle clubexposities 
@@ -145,7 +144,7 @@ Dus eerder tien dan honderd foto's per fotograaf per jaar. Dat heb je zo met exp
 
 ### Moet ik mij zorgen maken over privacy? [beleid]
 
-<details><summary>Klik om uit te klappen</summary></p>
+<details><summary>$\color{lightgray}{\textsf{Klik om uit te klappen}}$</summary></p>
 Nee. Een club beheert zijn eigen gegevens. En die gegevens staan opgeslagen op de club website en worden door de club geleverd en onderhouden.
 De gegevens waar het hier om gaat zijn meestal al op bestaande websites te zien: namen van leden, een selectie van foto's, leden van het bestuur.
 Dus nu zijn diezelfde gegevens omgezet in een voor software leesbaar formaat, zodat ze op een consistente, uniforme manier getoond kunnen worden.</p>
@@ -160,7 +159,7 @@ naar b.v. naar een dorpsplein of station kan laten wijzen.
 
 ### Houdt mijn club controle over zijn eigen foto's? [beleid]
 
-<details><summary>Klik om uit te klappen</summary></p>
+<details><summary>$\color{lightgray}{\textsf{Klik om uit te klappen}}$</summary></p>
 Ja. Er worden geen kopieën getrokken van de foto's. De foto's staan op de website van de club.
 Technisch wordt er alleen naar "gelinkt".
 En zelfs de lijsten met linkjes naar foto's staan op de website van de club, en dus _niet_ op een centrale server. 
@@ -191,7 +190,7 @@ Dus dit zou normaal geen extra kosten met zich meebrengen. Zie volgend punt:
 
 ### Kan iemand de getoonde foto's kopieëren? [beleid]
 
-<details><summary>Klik om uit te klappen</summary></p>
+<details><summary>$\color{lightgray}{\textsf{Klik om uit te klappen}}$</summary></p>
 Dat is niet helemaal tegen te gaan: alle online plaatjes die zichtbaar zijn, kan je een screenshot van maken.
 Maar het is hier wel opgezet om kopieëren zo lastig mogelijk te maken. Bij mijn procedé hiervoor...
 
@@ -206,7 +205,7 @@ Dit is overigens vergelijkbaar met wat je kan doen met een traditionele website.
 
 ### Moeten ex-leden in de app vermeld worden? [beleid]
 
-<details><summary>Klik om uit te klappen</summary></p>
+<details><summary>$\color{lightgray}{\textsf{Klik om uit te klappen}}$</summary></p>
 
 Nee. Maar de app is zo gemaakt dat het kan.
 Vaak wordt dat gewaardeerd (b.v. als iemand 20 jaar lid was, en wegens gezondheidsredenen niet meer meedoet met "zijn" club).
@@ -220,7 +219,7 @@ Meer details zijn hieronder te vinden.
 
 ### Is er een Android of PC versie van de app? [beleid] + [gebruik] + [basisvragen]
 
-<details><summary>Klik om uit te klappen</summary></p>
+<details><summary>$\color{lightgray}{\textsf{Klik om uit te klappen}}$</summary></p>
 De app versie ondersteunt om praktische redenen de iPhone en iPad.
 Maar er zijn genoeg andere doelgroepen. Dus is er een zogenaamde "webversie" in ontwikkeling.
 Die bekijk je in je browser (Chrome, Edge, Safari...) en dekt dus zowel PC/Mac gebruikers als alle merken smartfoons af.
@@ -238,7 +237,7 @@ Foto Club Hub HTML genereert dus een ledenlijst met links naar de portfolio's va
 
 ### Werkt dit allemaal nog over enkele jaren? [beleid]
 
-<details><summary>Klik om uit te klappen</summary></p>
+<details><summary>$\color{lightgray}{\textsf{Klik om uit te klappen}}$</summary></p>
 Bij een bedrijf (b.v. Adobe) mag je aannemen dat alles minstens 10 jaar ondersteund wordt. Men betaalt er tenslotte voor, 
 en het is de verantwoordelijkheid van Adobe om voor continuïteit te zorgen zolang ze een redelijke winst maken.
 Maar een harde garantie is er niet.
@@ -267,7 +266,7 @@ Zeg maar vergelijkbaar met een andere verbeteringsactie rondom de club website.
 
 ### Hoe verschilt dit van een clubwebsite? [vergelijkingen]
 
-<details><summary>Klik om uit te klappen</summary></p>
+<details><summary>$\color{lightgray}{\textsf{Klik om uit te klappen}}$</summary></p>
 Een website vereist dat de gebruiker _zelf_ initiatief onderneemt om informatie te zoeken.
 Dat werkt goed bij gerichte vragen over b.v. openingstijden of koopjes.
 Maar werkt bij relatief kleine sites niet goed: om op de hoogte te blijven moet je meerdere sites handmatig
@@ -285,7 +284,7 @@ Dit kan je in dit geval oplossen door
 
 ### Hoe verschilt dit van social media zoals Facebook of Instagram? [vergelijkingen]
 
-<details><summary>Klik om uit te klappen</summary></p>
+<details><summary>$\color{lightgray}{\textsf{Klik om uit te klappen}}$</summary></p>
 Er bestaan manieren om automatisch veranderingen in websites op te sporen (RSS).
 Maar grosso modo is nieuws inmiddels het domein van de grote klassieke media (nos.nl) 
 en van social media zoals Facebook, Instagram, enz.
@@ -307,7 +306,7 @@ Concreet betekent dit:
 
 ### Hoe verschilt dit van een online fotoclub zoals Glass.photo? [vergelijkingen]
 
-<details><summary>Klik om uit te klappen</summary></p>
+<details><summary>$\color{lightgray}{\textsf{Klik om uit te klappen}}$</summary></p>
 [Glass.photo](www.glass.photo) ziet fotografen als een individu - maar je kunt Glass zien als 1 grote fotoclub.
 Vergeleken met Glass, heeft Photo Club Hub...
 
@@ -327,7 +326,7 @@ Vergeleken met Glass, heeft Photo Club Hub...
 
 ### Zijn er kosten aan verbonden? [beleid] + [gebruik]
 
-<details><summary>Klik om uit te klappen</summary></p>
+<details><summary>$\color{lightgray}{\textsf{Klik om uit te klappen}}$</summary></p>
 Niet of nauwelijks. De Photo Club Hub en Photo Club Hub HTML software is gratis en blijft gratis.
 En zijn geen kosten voor centrale opslag of rekenkracht: er is geen noemenswaardige centrale infrastructuur.</p>
 
@@ -344,7 +343,7 @@ Er kan ook gekeken worden of de plug-in kosten voor dit doel eenmalig centraal a
 
 ### Is er een Android of PC versie van de app? [beleid] + [gebruik] + [basisvragen]
 
-<details><summary>Klik om uit te klappen</summary></p>
+<details><summary>$\color{lightgray}{\textsf{Klik om uit te klappen}}$</summary></p>
 De app versie ondersteunt om praktische redenen de iPhone en iPad.
 Maar er zijn genoeg andere doelgroepen. Dus is er een zogenaamde "webversie" in ontwikkeling.
 Die bekijk je in je browser (Chrome, Edge, Safari...) en dekt dus zowel PC/Mac gebruikers als alle merken smartfoons af.
@@ -362,7 +361,7 @@ Foto Club Hub HTML genereert dus een ledenlijst met links naar de portfolio's va
 
 ### Ik kan Fotoclub Hub niet vinden op de Apple App Store? [gebruik]
 
-<details><summary>Klik om uit te klappen</summary></p>
+<details><summary>$\color{lightgray}{\textsf{Klik om uit te klappen}}$</summary></p>
 Op het buitenland heet de app "Photo Club Hub" (engels) in plaats van "Fotoclub Hub" (Nederlands).
 Je kunt op een buitenlandse App Store aangewezen zijn als je een tijd in het buitenland gewoond hebt.
 In alle gevallen krijg je precies dezelfde app. De app kiest automatisch de juiste taal bij het opstarten.
@@ -377,7 +376,7 @@ In alle gevallen krijg je precies dezelfde app. De app kiest automatisch de juis
 
 ### Kan ik een fotomuseum toevoegen? [gegevensbeheer]
 
-<details><summary>Klik om uit te klappen</summary></p>
+<details><summary>$\color{lightgray}{\textsf{Klik om uit te klappen}}$</summary></p>
 Ja. Dat doe je door de Level 1 lijst uit te breiden.
 Graag alleen musea toevoegen die duidelijk voor fotografie interessant zijn.</p>
 
@@ -389,7 +388,7 @@ Er staan momentaal alleen enkele bekende Fotomusea in bijvoorbeeld Duitsland, VS
 
 ### Wat als een club geen website heeft? [gegevensbeheer]
 
-<details><summary>Klik om uit te klappen</summary></p>
+<details><summary>$\color{lightgray}{\textsf{Klik om uit te klappen}}$</summary></p>
 Weet ik niet precies. Het overgrote deel van de clubs heeft al een website (= iets waar je bestanden kan ophalen via een webadres zoals "http//www.mijnclub.nl/..."). Per niveau:
 
 - Level 1 vereist geen eigen website. De informatie zit in een centraal bestand.
@@ -402,7 +401,7 @@ Ik denk niet dat wij instructies gaan maken voor "hoe maak ik een website" (doen
 
 ### Kan een overleden voormalig lid zichtbaar zijn? [gegevensbeheer]
 
-<details><summary>Klik om uit te klappen</summary></p>
+<details><summary>$\color{lightgray}{\textsf{Klik om uit te klappen}}$</summary></p>
 Als een club zijn gegevens niet onderhoudt, zal dit op termijn bij ieder lid gebeuren. 
 Het internet heeft hier nog geen goede oplossing voor. 
 Zo kan het op Facebook gebeuren dat een overledene - met de beste bedoelingen - felicitaties krijgt op zijn/haar verjaardag.
@@ -424,7 +423,7 @@ doordat ze de rekening voor hun club website niet meer betalen.
 
 ### Wat is al dat gedoe met Levels/Niveaus? [gegevensbeheer]
 
-<details><summary>Klik om uit te klappen</summary></p>
+<details><summary>$\color{lightgray}{\textsf{Klik om uit te klappen}}$</summary></p>
 Een club kan meedoen op Level 1, 2 of 3. 
 
 - Op Level 1 weet de app alleen dat de club bestaat en waar de club zit.
@@ -442,7 +441,7 @@ en een gedetailleerde uitleg wat ieder stukje informatie betekent ([GitHub](http
 
 ### Ben ik Level 1 per ongeluk aan het overslaan? [gegevensbeheer]
 
-<details><summary>Klik om uit te klappen</summary></p>
+<details><summary>$\color{lightgray}{\textsf{Klik om uit te klappen}}$</summary></p>
 Misschien. Voor de clubs in regio Noord Brabant - Oost hebben wij de Level 1 gegevens voor alle ons bekende clubs ingevoerd.
 Andere clubs kunnen dus zelf hun Level 1 gegevens bij ons aanleveren. Gelukkig stelt Level 1 heel weinig voor: vooral de naam, gemeente, en GPS coordinaten.
 Plus liefst (niet verplicht) een enkele zin over iets wat er speciaal is aan de club.
@@ -452,7 +451,7 @@ Plus liefst (niet verplicht) een enkele zin over iets wat er speciaal is aan de 
 
 ### Hoe maak ik een Level 2 bestand aan? [gegevensbeheer]
 
-<details><summary>Klik om uit te klappen</summary></p>
+<details><summary>$\color{lightgray}{\textsf{Klik om uit te klappen}}$</summary></p>
 Hier is een apart stappenplan met instructies voor: [tinyurl.com/Level2aanmaken](https://tinyurl.com/Level2aanmaken).
 Er is ook een engelstalige versie hiervan: [tinyurl.com/Level2aanmaken](https://tinyurl.com/Level2creation).
 </details></p>
@@ -461,8 +460,7 @@ Er is ook een engelstalige versie hiervan: [tinyurl.com/Level2aanmaken](https://
 
 ### Hoe krijg ik een Level 2 bestand op mijn club website? [gegevensbeheer]
 
-<details><summary>Klik om uit te klappen</summary></p>
-    
+<details><summary>$\color{lightgray}{\textsf{Klik om uit te klappen}}$</summary></p>
 Hier komt apart stappenplan met instructies voor. Voor de eerste clubs willen wij _tijdelijk_ het bestand wel op een eigen server zetten.
 
 Globale instructies: je kunt via Dashboard > Media bestanden uploaded naar Wordpress.
@@ -476,7 +474,7 @@ Daarvoor heb je een Wordpress plug-in nodig. Bijvoorbeeld [https://wordpress.org
 
 ### Mag een club niet zelf zijn Level 1 omschrijving bepalen? [gegevensbeheer]
 
-<details><summary>Klik om uit te klappen</summary></p>
+<details><summary>$\color{lightgray}{\textsf{Klik om uit te klappen}}$</summary></p>
 Graag. Het kan automatisch door de `remark` voor de club aan de bovenkant van een Level 2 bestand te vullen met de gewenste tekst.
 Dat Level 2 bestand staat in principe onder beheer van de club (terwijl Level 1 centraal staat).
 Hiermee wordt de `remark` op Level 1 in de app vervangen door de betere `remark` op Level 2.
@@ -493,7 +491,8 @@ Graag ons op dergelijke wijzigingen op club-niveau attenderen: dan corrigeren wi
 <ul><li>
 
 ### Gaat dit ook iets met exposities doen? [uitbreidingen]
-<details><summary>Klik om uit te klappen</summary></p>
+
+<details><summary>$\color{lightgray}{\textsf{Klik om uit te klappen}}$</summary></p>
 Ja. Er is een begin aan gemaakt ([voorproefje](http://www.vdhamer.com/fgDeGender/expo2024/)).
 Het gaat dan om de foto's van clubexposities te tonen _na afloop_ van de fysieke expositie.
 </details></p></li></ul>
@@ -507,7 +506,7 @@ Het gaat dan om de foto's van clubexposities te tonen _na afloop_ van de fysieke
 
 ### Er is vast meer documentatie? [meer info]
 
-<details><summary>Klik om uit te klappen</summary></p>
+<details><summary>$\color{lightgray}{\textsf{Klik om uit te klappen}}$</summary></p>
 Vast wel. Zie tabel:
     
 | Titel  | Link | Nederlands | Engels  |
