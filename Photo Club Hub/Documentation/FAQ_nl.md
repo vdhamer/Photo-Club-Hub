@@ -26,6 +26,7 @@ De omschrijving in de <font color="red">Apple App Store</font> luidt:</p>
 ### Waarom is de app gemaakt?
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord uit te klappen}}$</summary></p>
+
 Fotografen worden lid van een fotoclub om hun werk aan elkaar te laten zien.
 Dat zien en gezien-worden lukt prima _binnen_ de club doordat de leden om de paar weken bijeen komen.</p>
 
