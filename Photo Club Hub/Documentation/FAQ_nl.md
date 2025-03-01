@@ -2,7 +2,7 @@ De vragen zijn onderverdeeld in categorieën:
 
 ## Basisvragen
 
-<details><summary>$\color{orange}{\textsf{Klik om uit te klappen}}$</summary></p>
+<details><summary>$\color{orange}{\texttt{Klik om categorie uit te klappen}}$</summary></p>
 <ul>
 
 <li>
@@ -80,7 +80,7 @@ Maar dat zal in ieder geval even duren: er moeten eerst vrijwilligers zich hierv
 
 ## Beleid
 
-<details><summary>$\color{lightgray}{\textsf{Klik om uit te klappen}}$</summary></p>
+<details><summary>$\color{orange}{\texttt{Klik om categorie uit te klappen}}$</summary></p>
 
 <ul><li>
 
@@ -260,7 +260,7 @@ Zeg maar vergelijkbaar met een andere verbeteringsactie rondom de club website.
 
 ## Vergelijkingen
 
-<details><summary>$\color{lightgray}{\textsf{Klik om uit te klappen}}$</summary></p>
+<details><summary>$\color{orange}{\texttt{Klik om categorie uit te klappen}}$</summary></p>
 
 <ul><li>
 
@@ -320,7 +320,7 @@ Vergeleken met Glass, heeft Photo Club Hub...
 
 ## Gebruik
 
-<details><summary>$\color{lightgray}{\textsf{Klik om uit te klappen}}$</summary></p>
+<details><summary>$\color{orange}{\texttt{Klik om categorie uit te klappen}}$</summary></p>
 
 <ul><li>
 
@@ -370,7 +370,7 @@ In alle gevallen krijg je precies dezelfde app. De app kiest automatisch de juis
 
 ## Gegevensbeheer
 
-<details><summary>$\color{lightgray}{\textsf{Klik om uit te klappen}}$</summary></p>
+<details><summary>$\color{orange}{\texttt{Klik om categorie uit te klappen}}$</summary></p>
 
 <ul><li>
 
@@ -486,7 +486,7 @@ Graag ons op dergelijke wijzigingen op club-niveau attenderen: dan corrigeren wi
 
 ## Uitbreidingen
 
-<details><summary>$\color{lightgray}{\textsf{Klik om uit te klappen}}$</summary></p>
+<details><summary>$\color{orange}{\texttt{Klik om categorie uit te klappen}}$</summary></p>
 
 <ul><li>
 
@@ -533,7 +533,7 @@ In de app versie, zou de app in principe actief kunnen waarschuwen als er komend
 
 ## Meer informatie
 
-<details><summary>$\color{lightgray}{\textsf{Klik om uit te klappen}}$</summary></p>
+<details><summary>$\color{orange}{\texttt{Klik om categorie uit te klappen}}$</summary></p>
 
 <ul><li>
 
