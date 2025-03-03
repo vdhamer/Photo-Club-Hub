@@ -113,15 +113,14 @@ It thus serves as a permanent online gallery with selected work by these photogr
 
 Tha app allows viewers to see images from multiple clubs within a single app.
 This aims to provide a degree of uniformity, thus sparing the user from having to find a club's website, 
-discovering where to find the photos within the site and how to browse through these portfolios. 
-Starting in version 2 the app's name was changed to _Photo Club Hub_ (the previous name was _Photo Club Waalre_) to emphasize the multi-club aspect.</p>
+discovering where to find the photos within the site and how to browse through these portfolios.
    
 To achieve this, the app fetches online lists of photo clubs, lists of club members and their curated photos. 
 This ensures that photo clubs, club members and their portfolio's can be added or updated without requiring a change to the app software.
 More importantly, this also allows the clubs to manage their own data.</p>
 
-See the <a href="#adding-photo-clubs-to-the-app">chapter</a> on how to add a club's data as 
-3 distict data layers or `Levels`.
+There is a <a href="#adding-photo-clubs-to-the-app">chapter</a> blow on how to add a club's data as 
+3 distict data layers or "`Levels`".
 
 ### Photo Clubs
 
