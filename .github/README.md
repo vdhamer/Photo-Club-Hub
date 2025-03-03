@@ -120,7 +120,7 @@ To achieve this, the app fetches online lists of photo clubs, lists of club memb
 This ensures that photo clubs, club members and their portfolio's can be added or updated without requiring a change to the app software.
 More importantly, this also allows the clubs to manage their own data.</p>
 
-See the <a href="#adding-more-photo-clubs">chapter</a> on how to add a club's data as 
+See the <a href="#adding-photo-clubs-to-the-app">chapter</a> on how to add a club's data as 
 3 distict data layers or `Levels`.
 
 ### Photo Clubs
