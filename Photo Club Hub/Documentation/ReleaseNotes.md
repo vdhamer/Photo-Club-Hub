@@ -1,10 +1,11 @@
-### 2.7.3 (GitHub commit ???????) ??-02-25
+### 2.7.3 (GitHub commit ???????) ??-03-25
 
 Code Maintenance
 * Aligned refreshFirstImage() code to make it more similar to Photo Club HTML code.
 * Moved deleteAllCoreDataObjects() to a new file named Model.swift.
 * Introduced use of Swift Testing framework for software unit testing.
 * Tested on Xcode 16.3 beta (16E5104o), iOS 18.4 beta (22E5200m) and visionOS 2.4 beta (2205199n).
+* Removed .pptx files from GitHub repo to save space.
 
 Data Maintenance
 * Added fgDeVriendschap (near Sint-Oedenrode).
