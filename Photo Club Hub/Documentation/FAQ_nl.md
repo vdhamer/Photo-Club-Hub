@@ -31,15 +31,15 @@ De omschrijving in de <font color="red">Apple App Store</font> luidt:</p>
 Fotografen worden lid van een fotoclub om hun werk aan elkaar te laten zien.
 Dat zien en gezien-worden lukt prima _binnen_ de club doordat de leden regelmatig bijeen komen.</p>
 
-Zichtbaarheid van werk _buiten_ de club loopt via de website van de club en via exposities.
-Bezoek aan dergelijke websites loopt al jaren terug:
-je moet zelf initiatief nemen om ze vinden, het zijn er veel, en de inhoud verandert maar zelden.
+Zichtbaarheid van hun werk _buiten_ de club loopt via online websites en fysieke exposities.
+Bezoek aan websites loopt al jaren terug:
+bezoekers moeten zelf initiatief nemen om ze vinden, het zijn er veel, en de inhoud verandert relatief langzaam.
 De aandacht van gebruikers is daardoor verschoven naar grote websites
-(zoals Nos.nl of Petapixel.com, met hun teams van betaalde redacteurs/schrijvers)
-en social media platforms zoals Facebook of Twitter/X die dienen als een vluchtige ontmoetingsplek.</p>
+(zoals Nos.nl of Petapixel.com, met hun betaalde redactieteams)
+en social media platforms zoals Facebook die dienen als vluchtige ontmoetingspleken.</p>
 
-Vandaar dat wij voor fotoclubs een behoefte zagen voor een tussenvorm tussen de vrijwel verlaten websites van vroeger
-en de hektische social media van tegenwoordig. Met als doel om de het fotowerk van clubs eenvoudig en in alle rust te kunnen bekijken.
+Vandaar dat wij een behoefte zagen voor een tussenvorm speciaal voor fotoclubs: iets tussen de relatief onbezochte websites
+en de (te) hektische en vluchtige social media. Met als doel om de het fotowerk van clubs eenvoudig en in alle rust te kunnen bekijken.
 </details></p>
 
 </li><li>
