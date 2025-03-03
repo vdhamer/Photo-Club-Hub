@@ -35,7 +35,7 @@ extension Keyword {
     // Update existing attributes or fill the new object
     fileprivate static func findCreateUpdate(context: NSManagedObjectContext, // can be foreground or background context
                                              id: String,
-                                             isStandard: Bool
+                                             isStandard: Bool? // nil means don't change
                                             ) -> Keyword {
 
         // execute fetchRequest to get keyword object for id=id. Query could return multiple - but shouldn't.
@@ -60,7 +60,11 @@ extension Keyword {
 
         if let keyword = keywords.first { // already exists, so update non-identifying attributes
             if keyword.update(context: context, isStandard: isStandard) {
-                print("Updated info for keyword \"\(keyword.id)\" that became \(isStandard ? "" : "non-")standard")
+                if isStandard == nil {
+                    ifDebugFatalError("Updated keyword \(keyword.id).isStandard to nil (which is suspicious)")
+                } else {
+                    print("Updated keyword \(keyword.id).isStandard to \(isStandard! ? "" : "non-")standard")
+                }
                 if Settings.extraCoreDataSaves {
                     Keyword.save(context: context, errorText: "Could not update Keyword \"\(keyword.id)\"")
                 }
@@ -100,26 +104,26 @@ extension Keyword {
     // Update non-identifying attributes/properties within an existing instance of class Keyword if needed.
     // Returns whether an update was needed.
     fileprivate func update(context: NSManagedObjectContext,
-                            isStandard: Bool) -> Bool {
+                            isStandard: Bool? // nil means don't change
+                           ) -> Bool {
 
-        var modified: Bool = false
+        var updated: Bool = false
 
-        if self.isStandard != isStandard {
-            self.isStandard = isStandard
-            modified = true
-        }
-
-        if modified && Settings.extraCoreDataSaves {
-            do {
-                try context.save() // update modified properties of a Keyword object
-             } catch {
-                 ifDebugFatalError("Update failed for Keyword \"\(id)\"",
-                                  file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
-                // in release mode, if save() fails, just continue
+        if isStandard != nil, self.isStandard != isStandard {
+            self.isStandard = isStandard!
+            if Settings.extraCoreDataSaves {
+                do {
+                    try context.save() // update modified properties of a Keyword object
+                 } catch {
+                     ifDebugFatalError("Update failed for Keyword \"\(id)\"",
+                                      file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
+                    // in release mode, if save() fails, just continue
+                }
             }
+            updated = true // value changed, but maybe not saved yet
         }
 
-        return modified
+        return updated
     }
 
     // MARK: - utilities
