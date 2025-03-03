@@ -57,6 +57,7 @@ De lijst met clubs in Brabant-Oost staat er alvast in om het groeiproces op te s
 ### Is er een Android of PC versie van de app?
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
+
 Er is een iPhone/iPad versie van de app op de Apple App Store.
 Voor andere merken telefoontjes en voor grotere schermen is er de "webversie".
 
