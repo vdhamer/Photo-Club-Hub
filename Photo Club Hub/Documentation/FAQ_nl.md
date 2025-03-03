@@ -112,7 +112,7 @@ In het Engels heet de app overigens "Photo Club Hub" ipv "Fotoclub Hub".
 <details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
 Nee. De app kan prima omgaan met clubs die geen lid zijn van de Fotobond.
 Er zijn tientallen voorbeelden te vinden op de landkaarten.
-Buitenlandse club zouden uiteraard ook geen lid van de (Nederlandse) Koninklijke Fotobond zijn.
+Buitenlandse club zijn uiteraard ook niet lid van de (Nederlandse) Koninklijke Fotobond.
 </details></p>
 
 </li><li>
