@@ -78,6 +78,7 @@ Maar tot die tijd is de webversie een prima oplossing voor Android, Windows en m
 ### Is de app gratis?
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
+
 Ja. De appversie op de Apple App Store is en blijft gratis.
 De software voor het genereren van de webversie is en blijft ook gratis.
 De broncode van deze software is "open source" en valt onder de zogenaamde
