@@ -356,16 +356,16 @@ Vergeleken met Glass, heeft Photo Club Hub...
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
 
-De website [fotoexpositie.nl](https://www.fotoexpositie.nl)) heeft een andere opzet en aanpak - maar ook overeenkomsten.
+De website [fotoexpositie.nl](https://www.fotoexpositie.nl)) is vooral om bekendheid te geven aan exposities.
+Deze apps zijn vooral om bekendheid te geven aan fotoclubs en de bijbehorende portfolio's zichtbaar te maken.
 
 Voor [fotoexpositie.nl](https://www.fotoexpositie.nl)) geldt:
 
-- in essentie is het één centrale website plus een wekelijks nieuwsbrief.
-- toegang tot de foto's en aankondigingen op de website en de nieuwsbrief is gratis.
-- het plaatsen van informatie vereist een abonnement.
-- het merendeel van de leden ("vrienden") zijn individuele fotografen. Er zijn enkele fotoclubs, maar ook musea.
-- lidmaatschap geeft de mogelijkheid om max 25 foto's bij een expositieaankondiging te plaatsen.
-- de doelgroep is momenteel beperkt tot Nederland.
+- Het merendeel van de leden ("vrienden") zijn individuele fotografen. Er zijn ook wat fotoclubs en zelfs fotomusea.
+- In essentie is het één centrale website plus een wekelijks nieuwsbrief.
+De gegevens worden centraal beheerd, en voor die dienst worden wat kosten voor in rekening gebracht.
+De online informatie is kostenloos voor iedereen zichtbaar.
+- Geplaatste foto's zijn vooral ter illustratie bij exposities. Potfolio's zijn te zien via links naar de websites van de fotografen.
 </details></p>
 
 </li></ul></details></p>
