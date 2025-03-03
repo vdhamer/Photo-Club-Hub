@@ -79,8 +79,9 @@ Maar tot die tijd is de webversie een prima oplossing voor Android, Windows en m
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
 Ja. De appversie op de Apple App Store is en blijft gratis.
-De software om de optionele websites aan te maken en onderhouden is en blijft ook gratis.
-De broncode van deze software is "open source".
+De software voor het genereren van de webversie is en blijft ook gratis.
+De broncode van deze software is "open source" en valt onder de zogenaamde
+[MIT licensie](https://github.com/vdhamer/Photo-Club-Hub/blob/main/.github/LICENSE.md).
 </details>
 
 </li></ul>
