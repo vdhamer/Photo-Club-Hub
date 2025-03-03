@@ -57,15 +57,15 @@ De lijst met clubs in Brabant-Oost staat er alvast in om het groeiproces op te s
 ### Is er een Android of PC versie van de app?
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
-Er is een iPhone/iPad versie van de app op de Apple App Store.</p>
+Er is een iPhone/iPad versie van de app op de Apple App Store.
 Voor andere merken telefoontjes en voor grotere schermen is er de "webversie".
 
 Met de webversie kan je club portfolio's bekijken in een internet browser (_Chrome_, _Edge_, _Safari_...) 
-op allerlei apparaten (Android telefoon, Chinees merk telefoon, tablet, laptop, desktop).
+op allerlei apparaten (Android telefoons, Chinese telefoonmerken, tablets, laptops, desktops).
 
 De iOS app en de webversie hebben dezelfde opzet en gebruiken dezelfde gegevens.
-De webversie is technisch een computerprogramma dat met een druk op een knop de 
-vereiste webpagina's automatisch aanmaakt die toegevoegd kunnen worden aan bestaande club websites.
+Achter de schermen is de webversie een computerprogramma dat met een druk op de knop de 
+vereiste webpagina's aanmaakt. Die pagina's kunnen toegevoegd worden aan bestaande clubwebsites (b.v. via WordPress).
 
 Er wordt aan uitbreiding van **beide** versies gewerkt. 
 Het is in principe mogelijk dat er een versie komt voor bijvoorbeeld de Android Play Store. 
