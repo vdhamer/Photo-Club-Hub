@@ -85,7 +85,7 @@ extension Keyword {
 
     }
 
-    // Find existing non-standard Keyword object or create a new one.
+    // Find existing standard Keyword object or create a new one.
     // Update existing attributes or fill the new object
     static func findCreateUpdateStandard(context: NSManagedObjectContext, // can be foreground or background context
                                          id: String
@@ -94,6 +94,14 @@ extension Keyword {
     }
 
     // Find existing non-standard Keyword object or create a new one.
+    // Update existing attributes or fill the new object
+    static func findCreateUpdateNonStandard(context: NSManagedObjectContext, // can be foreground or background context
+                                            id: String
+                                           ) -> Keyword {
+        findCreateUpdate(context: context, id: id, isStandard: false)
+    }
+
+    // Find existing Keyword object or create a new one without changing the Standard flag.
     // Don't update existing Standard attribute
     static func findCreateUpdateUndefStandard(context: NSManagedObjectContext, // can be foreground or background cntxt
                                               id: String
@@ -149,7 +157,7 @@ extension Keyword {
         }
     }
 
-    // count number of objects with a given id
+    // count number of Keywords with a given id
     static func count(context: NSManagedObjectContext, id: String) -> Int {
         var keywords: [Keyword]! = []
 
@@ -161,7 +169,21 @@ extension Keyword {
             keywords = try context.fetch(fetchRequest)
         } catch {
             ifDebugFatalError("Failed to fetch Keyword \(id): \(error)", file: #fileID, line: #line)
-            // on non-Debug version, continue with empty `keywords` array
+        }
+        return keywords.count
+    }
+
+    // count number of Keywords
+    static func count(context: NSManagedObjectContext) -> Int {
+        var keywords: [Keyword]! = []
+
+        let fetchRequest: NSFetchRequest<Keyword> = Keyword.fetchRequest()
+        let predicateAll = NSPredicate(format: "TRUEPREDICATE")
+        fetchRequest.predicate = predicateAll
+        do {
+            keywords = try context.fetch(fetchRequest)
+        } catch {
+            ifDebugFatalError("Failed to fetch all Keywords: \(error)", file: #fileID, line: #line)
         }
         return keywords.count
     }

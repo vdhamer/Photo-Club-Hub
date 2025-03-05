@@ -30,6 +30,7 @@ extension XampleMaxMembersProvider { // fill with some initial hard-coded conten
                                  urlComponents: UrlComponents.xampleMax,
                                  club: club,
                                  useOnlyFile: false)
+            try? bgContext.save()
         }
     }
 

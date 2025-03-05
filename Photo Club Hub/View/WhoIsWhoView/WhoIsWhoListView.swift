@@ -66,7 +66,7 @@ struct WhoIsWhoListView: View {
             if Settings.dataResetPending272 {
                 print("dataResetPending272 flag reset from true to false")
             }
-            Model.deleteAllCoreDataObjects()
+            Model.deleteAllCoreDataObjects(context: viewContext)
             PhotoClubHubApp.loadClubsAndMembers() // carefull: runs asynchronously
         }
         .keyboardType(.namePhonePad)

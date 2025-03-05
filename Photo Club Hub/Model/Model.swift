@@ -9,34 +9,35 @@ import CoreData // for NSManagedObject
 
 @MainActor
 struct Model {
-    static func deleteAllCoreDataObjects() {
+    static func deleteAllCoreDataObjects(context: NSManagedObjectContext) {
         let forcedDataRefresh = "Forced refresh of CoreData data " // just for log, not localized
 
         // order is important because of non-optional relationships
-        do {
-            try deleteEntitiesOfOneType("LocalizedRemark")
-            try deleteEntitiesOfOneType("LocalizedKeyword")
-            try deleteEntitiesOfOneType("Language")
+        do { // order is important to avoid problems with referential integrity
+            try deleteEntitiesOfOneType("LocalizedRemark", context: context)
 
-            deleteCoreDataKeywords()
+            deleteCoreDataKeywords(context: context)
 
-            try deleteEntitiesOfOneType("MemberPortfolio")
-            try deleteEntitiesOfOneType("Organization")
-            try deleteEntitiesOfOneType("Photographer")
+            try deleteEntitiesOfOneType("MemberPortfolio", context: context)
+            try deleteEntitiesOfOneType("Organization", context: context)
+            try deleteEntitiesOfOneType("Photographer", context: context)
 
-            try deleteEntitiesOfOneType("OrganizationType")
+            try deleteEntitiesOfOneType("OrganizationType", context: context)
+            try deleteEntitiesOfOneType("Language", context: context)
             print(forcedDataRefresh + "was successful.")
         } catch {
             ifDebugFatalError(forcedDataRefresh + "FAILED: \(error)")
         }
     }
 
-    static func deleteCoreDataKeywords() { // separate so they can be separately deleted
+    // don't delete Photographer or Language before deleting this. See data model picture in README.md.
+    static func deleteCoreDataKeywords(context: NSManagedObjectContext) { // can be deleted separately if needed (Tests)
         let forcedDataRefresh = "Forced clearing of CoreData keywords "
 
-        do {
-            try deleteEntitiesOfOneType("PhotographerKeyword")
-            try deleteEntitiesOfOneType("Keyword")
+        do { // order is important to avoid problems with referential integrity
+            try deleteEntitiesOfOneType("LocalizedKeyword", context: context)
+            try deleteEntitiesOfOneType("PhotographerKeyword", context: context)
+            try deleteEntitiesOfOneType("Keyword", context: context)
             print(forcedDataRefresh + "was successful.")
         } catch {
             ifDebugFatalError(forcedDataRefresh + "FAILED: \(error)")
@@ -44,17 +45,16 @@ struct Model {
     }
 
     // returns true if successful
-    private static func deleteEntitiesOfOneType(_ entity: String) throws {
+    private static func deleteEntitiesOfOneType(_ entity: String, context: NSManagedObjectContext) throws {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entity)
-        fetchRequest.returnsObjectsAsFaults = false
+        fetchRequest.returnsObjectsAsFaults = false // comes from some fragment fron StackOverFlow? purpose?
         do {
-            let viewContext = PersistenceController.shared.container.viewContext // requires @MainActor
-            let results = try viewContext.fetch(fetchRequest)
+            let results = try context.fetch(fetchRequest)
             for object in results {
                 guard let objectData = object as? NSManagedObject else {continue}
-                viewContext.delete(objectData)
+                context.delete(objectData)
             }
-            try viewContext.save()
+            try context.save()
             // initConstants shouldn't be necessary, but is there as a temp safetynet for CoreData concurrenty issues
             if entity == "OrganizationType" {
                 OrganizationType.initConstants() // insert contant records into OrganizationType table if needed
