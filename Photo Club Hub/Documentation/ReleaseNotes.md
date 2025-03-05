@@ -1,5 +1,8 @@
 ### 2.7.3 (GitHub commit ???????) ??-03-25
 
+Who's Who screen
+* added temporary statistics about keywords near footer of Who's Who screen (for software testing)
+
 Code Maintenance
 * Aligned refreshFirstImage() code to make it more similar to Photo Club HTML code.
 * Moved deleteAllCoreDataObjects() to a new file named Model.swift.

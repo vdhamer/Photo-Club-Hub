@@ -22,7 +22,7 @@ import CoreData // for NSManagedObjectContext
         #expect(keyword.id == "Test1")
         #expect(keyword.isStandard == true)
         Keyword.save(context: context, errorText: "Error saving keyword \"Test1\"")
-        #expect(Keyword.count(context: context, id: "Test1") == 1)
+        #expect(Keyword.count(context: context, keywordID: "Test1") == 1)
     }
 
     @Test("Add a non-standard keyword") func addNonStandardKeyword() throws {
@@ -30,7 +30,7 @@ import CoreData // for NSManagedObjectContext
         #expect(keyword.id == "Test2")
         #expect(keyword.isStandard == false)
         Keyword.save(context: context, errorText: "Error saving keyword \"Test2\"")
-        #expect(Keyword.count(context: context, id: "Test2") == 1)
+        #expect(Keyword.count(context: context, keywordID: "Test2") == 1)
     }
 
     @Test("Check capitalization of incoming ID strings") func checkIdCaplitalization() throws {
@@ -43,11 +43,11 @@ import CoreData // for NSManagedObjectContext
         let keyword1 = Keyword.findCreateUpdateStandard(context: context, id: id)
         #expect(keyword1.isStandard == true)
         Keyword.save(context: context, errorText: "Error saving keyword \"keyword1\"")
-        #expect(Keyword.count(context: context, id: id) == 1)
+        #expect(Keyword.count(context: context, keywordID: id) == 1)
 
         let keyword2 = Keyword.findCreateUpdateNonStandard(context: context, id: id)
         Keyword.save(context: context, errorText: "Error saving keyword \"keyword2\"") // shouldn't create a new record
-        #expect(Keyword.count(context: context, id: id) == 1)
+        #expect(Keyword.count(context: context, keywordID: id) == 1)
 
         #expect(keyword2.isStandard == false)
         #expect(keyword1.isStandard == false) // should not create a new record

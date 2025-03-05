@@ -55,22 +55,55 @@ struct WhoIsWhoListView: View {
                 Text("WhosWho_Caption_3",
                      comment: "Shown in gray at the bottom of the Who's Who page (3/3).")
 
-                // TODO temp addition in Who's Who screen
                 Group {
-                    Text(verbatim: "Count of Abstract keyword: \(Keyword.count(context: viewContext, id: "Abstract"))")
-                    Text(verbatim: "Count of Arch keyword: \(Keyword.count(context: viewContext, id: "Architecture"))")
-                    Text(verbatim: "Count of B&W keyword: \(Keyword.count(context: viewContext, id: "Black & White"))")
-                    Text(verbatim: "Count of Exper keyword: \(Keyword.count(context: viewContext, id: "Experimental"))")
-                    Text(verbatim: "Count of Landsc keyword: \(Keyword.count(context: viewContext, id: "Landscape"))")
-                    Text(verbatim: "Count of Minimal keyword: \(Keyword.count(context: viewContext, id: "Minimal"))")
-                    Text(verbatim: "Count of Portrait keyword: \(Keyword.count(context: viewContext, id: "Portrait"))")
-                    Text(verbatim: "Count of Post keyword: \(Keyword.count(context: viewContext, id: "Postprocessing"))")
-                    Text(verbatim: "Count of Street keyword: \(Keyword.count(context: viewContext, id: "Street"))")
-                    Text(verbatim: "Count of Travel keyword: \(Keyword.count(context: viewContext, id: "Travel"))")
-
-                    Text(verbatim: "Number of defined Keywords: \(Keyword.count(context: viewContext))")
-                    Text(verbatim: "Number of Keyword usages: \(PhotographerKeyword.count(context: viewContext))")
-                } .foregroundColor(Color.red) .font(.title3)
+                    Divider()
+                    Text(verbatim: """
+                                   Number of Abstract keyword instances \
+                                   \(PhotographerKeyword.count(context: viewContext, keywordID: "Abstract"))
+                                   """)
+                    Text(verbatim: """
+                                   Number of Architecture keyword instances \
+                                   \(PhotographerKeyword.count(context: viewContext, keywordID: "Architecture"))
+                                   """)
+                    Text(verbatim: """
+                                   Number of Black & White keyword instances \
+                                   \(PhotographerKeyword.count(context: viewContext, keywordID: "Black & White"))
+                                   """)
+                    Text(verbatim: """
+                                   Number of Experimental keyword instances \
+                                   \(PhotographerKeyword.count(context: viewContext, keywordID: "Experimental"))
+                                   """)
+                    Text(verbatim: """
+                                   Number of Landscape keyword instances \
+                                   \(PhotographerKeyword.count(context: viewContext, keywordID: "Landscape"))
+                                   """)
+                    Text(verbatim: """
+                                   Number of Minimal keyword instances \
+                                   \(PhotographerKeyword.count(context: viewContext, keywordID: "Minimal"))
+                                   """)
+                    Text(verbatim: """
+                                   Number of Portrait keyword instances \
+                                   \(PhotographerKeyword.count(context: viewContext, keywordID: "Portrait"))
+                                   """)
+                    Text(verbatim: """
+                                   Number of Postprocessing keyword instances \
+                                   \(PhotographerKeyword.count(context: viewContext, keywordID: "Postprocessing"))
+                                   """)
+                    Text(verbatim: """
+                                   Number of Street keyword instances \
+                                   \(PhotographerKeyword.count(context: viewContext, keywordID: "Street"))
+                                   """)
+                    Text(verbatim: """
+                                   Number of Travel keyword instances \
+                                   \(PhotographerKeyword.count(context: viewContext, keywordID: "Travel"))
+                                   """)
+                    Divider()
+                    Text(verbatim: """
+                                   Total number of Keyword instances: \(PhotographerKeyword.count(context: viewContext))
+                                   """)
+                    Divider()
+                    Text(verbatim: "Number of different Keywords: \(Keyword.count(context: viewContext))")
+                } .foregroundColor(Color.red) .font(.callout)
             }
             .foregroundColor(Color.secondary)
 

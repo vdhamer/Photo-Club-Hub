@@ -158,17 +158,17 @@ extension Keyword {
     }
 
     // count number of Keywords with a given id
-    static func count(context: NSManagedObjectContext, id: String) -> Int {
+    static func count(context: NSManagedObjectContext, keywordID: String) -> Int {
         var keywords: [Keyword]! = []
 
         let fetchRequest: NSFetchRequest<Keyword> = Keyword.fetchRequest()
         let predicateFormat: String = "id_ = %@" // avoid localization
-        let predicate = NSPredicate(format: predicateFormat, argumentArray: [id])
+        let predicate = NSPredicate(format: predicateFormat, argumentArray: [keywordID])
         fetchRequest.predicate = predicate
         do {
             keywords = try context.fetch(fetchRequest)
         } catch {
-            ifDebugFatalError("Failed to fetch Keyword \(id): \(error)", file: #fileID, line: #line)
+            ifDebugFatalError("Failed to fetch Keyword \(keywordID): \(error)", file: #fileID, line: #line)
         }
         return keywords.count
     }

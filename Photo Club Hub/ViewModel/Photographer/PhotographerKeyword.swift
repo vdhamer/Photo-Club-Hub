@@ -130,7 +130,7 @@ extension PhotographerKeyword {
         }
     }
 
-    // count number of objects with a given id
+    // count number of objects with a given id for a given photographer
     static func count(context: NSManagedObjectContext, keywordID: String, photographer: Photographer) -> Int {
         var photographerKeywords: [PhotographerKeyword]! = []
 
@@ -144,6 +144,26 @@ extension PhotographerKeyword {
             ifDebugFatalError("""
                               Failed to fetch PhotographerKeyword \"\(keywordID)\" \
                               for \(photographer.fullNameFirstLast): \(error)
+                              """,
+                              file: #fileID, line: #line)
+            // on non-Debug version, continue with empty `keywords` array
+        }
+        return photographerKeywords.count
+    }
+
+    // count number of objects with a given id
+    static func count(context: NSManagedObjectContext, keywordID: String) -> Int {
+        var photographerKeywords: [PhotographerKeyword]! = []
+
+        let fetchRequest: NSFetchRequest<PhotographerKeyword> = PhotographerKeyword.fetchRequest()
+        let predicateFormat: String = "keyword_.id_ = %@" // avoid localization
+        fetchRequest.predicate = NSPredicate(format: predicateFormat, argumentArray: [keywordID])
+
+        do {
+            photographerKeywords = try context.fetch(fetchRequest)
+        } catch {
+            ifDebugFatalError("""
+                              Failed to fetch PhotographerKeyword \"\(keywordID)\"
                               """,
                               file: #fileID, line: #line)
             // on non-Debug version, continue with empty `keywords` array
