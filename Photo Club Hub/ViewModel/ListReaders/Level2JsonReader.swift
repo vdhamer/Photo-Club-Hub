@@ -171,7 +171,7 @@ class Level2JsonReader { // normally running on a background thread
                                                             givenName: givenName,
                                                             infixName: infixName, // may be ""
                                                             familyName: familyName),
-                                                         optionalFields: PhotographerOptionalFields()) // updated later
+                                                         optionalFields: PhotographerOptionalFields()) // filled later
 
         let memberPortfolio: MemberPortfolio
         if member["optional"].exists() { // could contain photographerOptionalFields, memberOptionalFields, or both.
@@ -261,7 +261,7 @@ class Level2JsonReader { // normally running on a background thread
                                               )
                                           )
 
-        // ...while some attributes are at the Photographer-as-Member-of-club level
+        // ...while some attributes are at the Photographer-as-Member-of-club level (instead of Photographer level)
         return MemberPortfolio.findCreateUpdate(
             bgContext: bgContext,
             organization: club,

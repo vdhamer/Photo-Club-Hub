@@ -134,8 +134,6 @@ extension Photographer {
                                    photographer: Photographer,
                                    optionalFields: PhotographerOptionalFields) -> Bool {
 
-		var wasUpdated: Bool = false
-
         // following are fields in PhotographerOptionalFields type
         if optionalFields.bornDT != nil, photographer.bornDT != optionalFields.bornDT {
             photographer.bornDT = optionalFields.bornDT
@@ -162,18 +160,18 @@ extension Photographer {
                                                      keyword: keyword)
         }
 
-        if bgContext.hasChanges && Settings.extraCoreDataSaves {
+        var hasChanges: Bool = bgContext.hasChanges
+        if hasChanges && Settings.extraCoreDataSaves {
 			do {
 				try bgContext.save() // persist updated information about a photographer
-                wasUpdated = true // update may be because of earlier update
+                hasChanges = false // update may be because of earlier update
 			} catch {
                 ifDebugFatalError("Update failed for photographer <\(photographer.fullNameFirstLast)>",
                                   file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
                 // in release mode, if the data cannot be saved, log this and continue.
-                wasUpdated = false
 			}
 		}
-        return wasUpdated
+        return hasChanges
 	}
 
 }

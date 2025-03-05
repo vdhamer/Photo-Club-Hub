@@ -71,7 +71,7 @@ extension Keyword {
             }
             return keyword
         } else {
-            // cannot use Language() initializer because we must use supplied context
+            // cannot use Keyword() initializer because we must use supplied context
             let entity = NSEntityDescription.entity(forEntityName: "Keyword", in: context)!
             let keyword = Keyword(entity: entity, insertInto: context)
             keyword.id = id // immediately set it to a non-nil value
@@ -79,7 +79,7 @@ extension Keyword {
             if Settings.extraCoreDataSaves {
                 Keyword.save(context: context, errorText: "Could not save Keyword \"\(keyword.id)\"")
             }
-            print("Created new Keyword for \"\(keyword.id)\"")
+            print("Created new Keyword called \"\(keyword.id)\"")
             return keyword
         }
 
