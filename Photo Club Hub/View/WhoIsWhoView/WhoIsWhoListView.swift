@@ -54,6 +54,15 @@ struct WhoIsWhoListView: View {
                 Divider()
                 Text("WhosWho_Caption_3",
                      comment: "Shown in gray at the bottom of the Who's Who page (3/3).")
+
+                // TODO temp addition in Who's Who screen
+                Group {
+                    Text(verbatim: "Count of Landscape keyword: \(Keyword.count(context: viewContext, id: "Landscape"))")
+                    Text(verbatim: "Count of Travel keyword: \(Keyword.count(context: viewContext, id: "Travel"))")
+                    Text(verbatim: "Count of Minimal keyword: \(Keyword.count(context: viewContext, id: "Minimal"))")
+                    Text(verbatim: "Number of defined Keywords: \(Keyword.count(context: viewContext))")
+                    Text(verbatim: "Number of Keyword usages: \(PhotographerKeyword.count(context: viewContext))")
+                } .foregroundColor(Color.red) .font(.title3)
             }
             .foregroundColor(Color.secondary)
 

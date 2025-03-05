@@ -151,4 +151,20 @@ extension PhotographerKeyword {
         return photographerKeywords.count
     }
 
+    // count total number of PhotographerKeyword objects/records
+    // there are ways to count without fetching all records, but this func is only used for testing
+    static func count(context: NSManagedObjectContext) -> Int {
+        var photographerKeywords: [PhotographerKeyword]! = []
+
+        let fetchRequest: NSFetchRequest<PhotographerKeyword> = PhotographerKeyword.fetchRequest()
+        let predicateAll = NSPredicate(format: "TRUEPREDICATE")
+        fetchRequest.predicate = predicateAll
+        do {
+            photographerKeywords = try context.fetch(fetchRequest)
+        } catch {
+            ifDebugFatalError("Failed to fetch all PhotographerKeywords: \(error)", file: #fileID, line: #line)
+        }
+        return photographerKeywords.count
+    }
+
 }

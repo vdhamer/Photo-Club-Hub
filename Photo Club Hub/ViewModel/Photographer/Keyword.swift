@@ -173,7 +173,8 @@ extension Keyword {
         return keywords.count
     }
 
-    // count number of Keywords
+    // count total number of Keyword objects/records
+    // there are ways to count without fetching all records, but this func is only used for testing
     static func count(context: NSManagedObjectContext) -> Int {
         var keywords: [Keyword]! = []
 
