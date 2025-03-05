@@ -227,24 +227,25 @@ class Level2JsonReader { // normally running on a background thread
                                                         jsonOptionals: JSON,
                                                         photographer: Photographer,
                                                         club: Organization) -> MemberPortfolio {
-        let birthday: String? = jsonOptionals["birthday"].exists() ? jsonOptionals["birthday"].stringValue : nil
-
-        let photographerWebsite: URL? = jsonOptionalsToURL(jsonOptionals: jsonOptionals, key: "website")
-        let photographerImage: URL? = jsonOptionalsToURL(jsonOptionals: jsonOptionals, key: "photographerImage")
-
-        let featuredImage: URL? = jsonOptionalsToURL(jsonOptionals: jsonOptionals, key: "featuredImage")
-        let level3URL: URL? = jsonOptionalsToURL(jsonOptionals: jsonOptionals, key: "level3URL")
 
         let memberRolesAndStatus = MemberRolesAndStatus(jsonRoles: jsonOptionals["roles"],
                                                         jsonStatus: jsonOptionals["status"])
 
-        let fotobondNumber: Int32? = jsonOptionals["nlSpecific"]["fotobondNumber"].exists() ?
-            jsonOptionals["nlSpecific"]["fotobondNumber"].int32Value : nil
+        let birthday: String? = jsonOptionals["birthday"].exists() ? jsonOptionals["birthday"].stringValue : nil
+        let photographerWebsite: URL? = jsonOptionalsToURL(jsonOptionals: jsonOptionals, key: "website")
+        let photographerImage: URL? = jsonOptionalsToURL(jsonOptionals: jsonOptionals, key: "photographerImage")
+        let featuredImage: URL? = jsonOptionalsToURL(jsonOptionals: jsonOptionals, key: "featuredImage")
+        let level3URL: URL? = jsonOptionalsToURL(jsonOptionals: jsonOptionals, key: "level3URL")
 
         let membershipStartDate: Date? = jsonOptionals["membershipStartDate"].exists() ?
             jsonOptionals["membershipStartDate"].stringValue.extractDate() : nil
         let membershipEndDate: Date? = jsonOptionals["membershipEndDate"].exists() ?
             jsonOptionals["membershipEndDate"].stringValue.extractDate() : nil
+
+        let photographerKeywords: [JSON] = jsonOptionals["keywords"].arrayValue
+
+        let fotobondNumber: Int32? = jsonOptionals["nlSpecific"]["fotobondNumber"].exists() ?
+            jsonOptionals["nlSpecific"]["fotobondNumber"].int32Value : nil
 
         // some attributes are at the Photographer level...
         _ = Photographer.findCreateUpdate(context: bgContext,
@@ -255,7 +256,8 @@ class Level2JsonReader { // normally running on a background thread
                                               bornDT: birthday?.extractDate(),
                                               isDeceased: memberRolesAndStatus.isDeceased(),
                                               photographerWebsite: photographerWebsite,
-                                              photographerImage: photographerImage
+                                              photographerImage: photographerImage,
+                                              photographerKeywords: photographerKeywords
                                               )
                                           )
 

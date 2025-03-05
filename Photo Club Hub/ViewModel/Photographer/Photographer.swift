@@ -136,30 +136,36 @@ extension Photographer {
 
 		var wasUpdated: Bool = false
 
-        if let isDeceased = optionalFields.isDeceased, photographer.isDeceased != optionalFields.isDeceased {
-            photographer.memberRolesAndStatus.status[.deceased] = isDeceased
-            wasUpdated = true
-        }
-
         // following are fields in PhotographerOptionalFields type
         if optionalFields.bornDT != nil, photographer.bornDT != optionalFields.bornDT {
             photographer.bornDT = optionalFields.bornDT
-            wasUpdated = true
+        }
+
+        if let isDeceased = optionalFields.isDeceased, photographer.isDeceased != optionalFields.isDeceased {
+            photographer.memberRolesAndStatus.status[.deceased] = isDeceased
         }
 
         if let newWebsite = optionalFields.photographerWebsite, photographer.photographerWebsite != newWebsite {
             photographer.photographerWebsite = newWebsite
-            wasUpdated = true
         }
 
         if let newImage = optionalFields.photographerImage, photographer.photographerImage != newImage {
             photographer.photographerImage = newImage
-            wasUpdated = true
         }
 
-        if wasUpdated && Settings.extraCoreDataSaves {
+        for photographerKeywordJSON in optionalFields.photographerKeywords {
+            let photographerKeywordID = photographerKeywordJSON.stringValue
+            let keyword = Keyword.findCreateUpdateUndefStandard(context: bgContext,
+                                                                id: photographerKeywordID)
+            _ = PhotographerKeyword.findCreateUpdate(context: bgContext,
+                                                     photographer: photographer,
+                                                     keyword: keyword)
+        }
+
+        if bgContext.hasChanges && Settings.extraCoreDataSaves {
 			do {
 				try bgContext.save() // persist updated information about a photographer
+                wasUpdated = true // update may be because of earlier update
 			} catch {
                 ifDebugFatalError("Update failed for photographer <\(photographer.fullNameFirstLast)>",
                                   file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0

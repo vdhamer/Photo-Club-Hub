@@ -35,7 +35,7 @@ extension Keyword {
     // Update existing attributes or fill the new object
     fileprivate static func findCreateUpdate(context: NSManagedObjectContext, // can be foreground or background context
                                              id: String,
-                                             isStandard: Bool? // nil means don't change
+                                             isStandard: Bool? // nil means don't change existing value
                                             ) -> Keyword {
 
         // execute fetchRequest to get keyword object for id=id. Query could return multiple - but shouldn't.
@@ -94,11 +94,11 @@ extension Keyword {
     }
 
     // Find existing non-standard Keyword object or create a new one.
-    // Update existing attributes or fill the new object
-    static func findCreateUpdateNonStandard(context: NSManagedObjectContext, // can be foreground or background context
-                                            id: String
-                                           ) -> Keyword {
-        findCreateUpdate(context: context, id: id, isStandard: false)
+    // Don't update existing Standard attribute
+    static func findCreateUpdateUndefStandard(context: NSManagedObjectContext, // can be foreground or background cntxt
+                                              id: String
+                                             ) -> Keyword {
+        findCreateUpdate(context: context, id: id, isStandard: nil)
     }
 
     // Update non-identifying attributes/properties within an existing instance of class Keyword if needed.
