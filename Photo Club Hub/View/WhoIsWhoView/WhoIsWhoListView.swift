@@ -57,9 +57,17 @@ struct WhoIsWhoListView: View {
 
                 // TODO temp addition in Who's Who screen
                 Group {
-                    Text(verbatim: "Count of Landscape keyword: \(Keyword.count(context: viewContext, id: "Landscape"))")
-                    Text(verbatim: "Count of Travel keyword: \(Keyword.count(context: viewContext, id: "Travel"))")
+                    Text(verbatim: "Count of Abstract keyword: \(Keyword.count(context: viewContext, id: "Abstract"))")
+                    Text(verbatim: "Count of Arch keyword: \(Keyword.count(context: viewContext, id: "Architecture"))")
+                    Text(verbatim: "Count of B&W keyword: \(Keyword.count(context: viewContext, id: "Black & White"))")
+                    Text(verbatim: "Count of Exper keyword: \(Keyword.count(context: viewContext, id: "Experimental"))")
+                    Text(verbatim: "Count of Landsc keyword: \(Keyword.count(context: viewContext, id: "Landscape"))")
                     Text(verbatim: "Count of Minimal keyword: \(Keyword.count(context: viewContext, id: "Minimal"))")
+                    Text(verbatim: "Count of Portrait keyword: \(Keyword.count(context: viewContext, id: "Portrait"))")
+                    Text(verbatim: "Count of Post keyword: \(Keyword.count(context: viewContext, id: "Postprocessing"))")
+                    Text(verbatim: "Count of Street keyword: \(Keyword.count(context: viewContext, id: "Street"))")
+                    Text(verbatim: "Count of Travel keyword: \(Keyword.count(context: viewContext, id: "Travel"))")
+
                     Text(verbatim: "Number of defined Keywords: \(Keyword.count(context: viewContext))")
                     Text(verbatim: "Number of Keyword usages: \(PhotographerKeyword.count(context: viewContext))")
                 } .foregroundColor(Color.red) .font(.title3)
