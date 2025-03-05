@@ -7,8 +7,8 @@
 
 import CoreData // for NSManagedObject
 
+@MainActor
 struct Model {
-    @MainActor
     static func deleteAllCoreDataObjects() {
         let forcedDataRefresh = "Forced refresh of CoreData data " // just for log, not localized
 
@@ -18,8 +18,7 @@ struct Model {
             try deleteEntitiesOfOneType("LocalizedKeyword")
             try deleteEntitiesOfOneType("Language")
 
-            try deleteEntitiesOfOneType("PhotographerKeyword")
-            try deleteEntitiesOfOneType("Keyword")
+            deleteCoreDataKeywords()
 
             try deleteEntitiesOfOneType("MemberPortfolio")
             try deleteEntitiesOfOneType("Organization")
@@ -28,12 +27,23 @@ struct Model {
             try deleteEntitiesOfOneType("OrganizationType")
             print(forcedDataRefresh + "was successful.")
         } catch {
-            print(forcedDataRefresh + "FAILED: \(error)")
+            ifDebugFatalError(forcedDataRefresh + "FAILED: \(error)")
+        }
+    }
+
+    static func deleteCoreDataKeywords() { // separate so they can be separately deleted
+        let forcedDataRefresh = "Forced clearing of CoreData keywords "
+
+        do {
+            try deleteEntitiesOfOneType("PhotographerKeyword")
+            try deleteEntitiesOfOneType("Keyword")
+            print(forcedDataRefresh + "was successful.")
+        } catch {
+            ifDebugFatalError(forcedDataRefresh + "FAILED: \(error)")
         }
     }
 
     // returns true if successful
-    @MainActor
     private static func deleteEntitiesOfOneType(_ entity: String) throws {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entity)
         fetchRequest.returnsObjectsAsFaults = false
