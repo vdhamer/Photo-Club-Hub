@@ -79,7 +79,7 @@ extension Organization {
         OrganizationID(fullName: self.fullName, town: self.town)
     }
 
-    var nickName: String {
+    var nickname: String {
         get { return nickName_ ?? "Name?" }
         set { nickName_ = newValue }
     }
@@ -234,8 +234,8 @@ extension Organization {
 
 		var modified: Bool = false
 
-        if self.nickName != nickName {
-            self.nickName = nickName
+        if self.nickname != nickName {
+            self.nickname = nickName
             modified = true }
 
         if self.coordinates != coordinates {

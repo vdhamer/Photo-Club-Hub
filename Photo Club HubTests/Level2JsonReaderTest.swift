@@ -28,7 +28,25 @@ import CoreData // for NSManagedObjectContext
         // note that XampleMinMembersProvider runs asynchronously (via bgContext.perform {})
         _ = XampleMinMembersProvider(bgContext: xampleMinBackgroundContext)
 
-        #expect(true)
+        let idPlus = OrganizationIdPlus(fullName: "Xample Club Min",
+                                        town: "Rotterdam",
+                                        nickname: "XampleMin")
+
+        let predicateFormat: String = "fullName_ = %@ AND town_ = %@" // avoid localization
+        // Note that organizationType is not an identifying attribute.
+        // This implies that you cannot have 2 organizations with the same Name and Town, but of a different type.
+        let predicate = NSPredicate(format: predicateFormat,
+                                    argumentArray: [idPlus.fullName,
+                                                    idPlus.town] )
+        let fetchRequest: NSFetchRequest<Organization> = Organization.fetchRequest()
+        fetchRequest.predicate = predicate
+        let organizations: [Organization] = (try? context.fetch(fetchRequest)) ?? []
+
+        #expect(organizations.count == 1)
+        #expect(organizations[0].organizationType.organizationTypeName == OrganizationTypeEnum.club.rawValue)
+        #expect(organizations[0].fullName == idPlus.fullName)
+        #expect(organizations[0].town == idPlus.town)
+        #expect(organizations[0].nickname == idPlus.nickname)
     }
 
 }

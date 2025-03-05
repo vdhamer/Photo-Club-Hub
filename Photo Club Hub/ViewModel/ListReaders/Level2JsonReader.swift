@@ -211,7 +211,7 @@ class Level2JsonReader { // normally running on a background thread
                                           organizationTypeEnum: OrganizationTypeEnum.club,
                                           idPlus: OrganizationIdPlus(id: OrganizationID(fullName: club.fullName,
                                                                                      town: club.town),
-                                                                     nickname: club.nickName),
+                                                                     nickname: club.nickname),
                                           coordinates: coordinates,
                                           optionalFields: OrganizationOptionalFields(
                                               organizationWebsite: clubWebsite,
