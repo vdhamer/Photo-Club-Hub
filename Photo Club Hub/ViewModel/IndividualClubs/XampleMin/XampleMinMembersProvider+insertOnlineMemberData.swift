@@ -13,8 +13,8 @@ extension XampleMinMembersProvider { // fill with some initial hard-coded conten
     func insertOnlineMemberData(bgContext: NSManagedObjectContext) { // runs on a background thread
 
         let fotogroepXampleMinIdPlus = OrganizationIdPlus(fullName: "Xample Club Min",
-                                                           town: "Rotterdam",
-                                                           nickname: "XampleMin")
+                                                          town: "Rotterdam",
+                                                          nickname: "XampleMin")
 
         bgContext.perform { // execute on background thread
             let club = Organization.findCreateUpdate(context: bgContext,
