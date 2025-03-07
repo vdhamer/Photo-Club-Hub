@@ -1626,6 +1626,31 @@
         {
             "idPlus": {
                 "town": "Vught",
+                "fullName": "Fotocollectief 2020",
+                "nickName": "fc2020"
+            },
+            "coordinates": {
+                "latitude": 51.65823,
+                "longitude": 5.29832
+            },
+            "optional": {
+                "level2URL": "https://www.example.com/fc2020.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "This club is separate from Fotogroep Vught (both hold exhibitions in the same former church)."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Fotogroep Vught en Fotocollectief 2020 (Vught) exposeren in 2025 apart, maar aansluitend."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Vught",
                 "fullName": "Fotogroep Vught",
                 "nickName": "fgVucht"
             },
