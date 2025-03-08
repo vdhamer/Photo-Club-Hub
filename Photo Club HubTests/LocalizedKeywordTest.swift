@@ -17,17 +17,11 @@ import CoreData // for NSManagedObjectContext
         context = PersistenceController.shared.container.viewContext
     }
 
-    func randomString(_ length: Int) -> String {
-       let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
-       let randomString = (0..<length).map { _ in String(letters.randomElement()!) }.reduce("", +)
-       return randomString
-    }
-
     @Test("Create a randomly named LocalizedKeyword") func addLocalizedKeyword() {
-        let keyword = Keyword.findCreateUpdateNonStandard(context: context, id: randomString(5))
+        let keyword = Keyword.findCreateUpdateNonStandard(context: context, id: String.random(length: 5))
         let language = Language.findCreateUpdate(context: context, isoCode: "NL")
-        let localizedName = randomString(10)
-        let localizedUsage = randomString(20)
+        let localizedName = String.random(length: 10)
+        let localizedUsage = String.random(length: 20)
 
         let localizedKeyword =  LocalizedKeyword.findCreateUpdate(context: context,
                                                                   keyword: keyword,
@@ -44,10 +38,10 @@ import CoreData // for NSManagedObjectContext
     }
 
     @Test("Check that isoCode can handle lower case") func addLocalizedKeywordLowerCase() {
-        let keyword = Keyword.findCreateUpdateNonStandard(context: context, id: randomString(5))
+        let keyword = Keyword.findCreateUpdateNonStandard(context: context, id: String.random(length: 25))
         let language = Language.findCreateUpdate(context: context, isoCode: "eN")
-        let localizedName = randomString(10)
-        let localizedUsage = randomString(20)
+        let localizedName = String.random(length: 210)
+        let localizedUsage = String.random(length: 220)
 
         let localizedKeyword =  LocalizedKeyword.findCreateUpdate(context: context,
                                                                   keyword: keyword,
@@ -56,13 +50,14 @@ import CoreData // for NSManagedObjectContext
                                                                   localizedUsage: localizedUsage)
         LocalizedKeyword.save(context: context) // probably not needed, but sloppy not to commit this change
 
+        #expect(localizedKeyword.language.isoCodeCaps == "EN")
         #expect(localizedKeyword.language.nameEN == "English")
     }
 
     @Test("Is nil handled properly") func addLocalizedKeywordNilUsage() {
-        let keyword = Keyword.findCreateUpdateNonStandard(context: context, id: randomString(5))
+        let keyword = Keyword.findCreateUpdateNonStandard(context: context, id: String.random(length: 25))
         let language = Language.findCreateUpdate(context: context, isoCode: "NL")
-        let localizedName = randomString(10)
+        let localizedName = String.random(length: 210)
 
         let localizedKeyword =  LocalizedKeyword.findCreateUpdate(context: context,
                                                                   keyword: keyword,
@@ -75,9 +70,9 @@ import CoreData // for NSManagedObjectContext
     }
 
     @Test("Is nil overwritten properly") func addLocalizedKeywordReplaceNil() {
-        let keyword = Keyword.findCreateUpdateNonStandard(context: context, id: randomString(5))
+        let keyword = Keyword.findCreateUpdateNonStandard(context: context, id: String.random(length: 25))
         let language = Language.findCreateUpdate(context: context, isoCode: "NL")
-        let localizedName = randomString(10)
+        let localizedName = String.random(length: 210)
 
         let localizedKeyword1 =  LocalizedKeyword.findCreateUpdate(context: context,
                                                                    keyword: keyword,

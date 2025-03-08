@@ -9,7 +9,7 @@ import Testing
 @testable import Photo_Club_Hub
 import CoreData // for NSManagedObjectContext
 
-@MainActor @Suite("Tests the Core Data Keyword class") struct Level2JsonReaderTests {
+@MainActor @Suite("Tests the Level 2 JSON reader") struct Level2JsonReaderTests {
 
     fileprivate let context: NSManagedObjectContext
 
@@ -26,27 +26,29 @@ import CoreData // for NSManagedObjectContext
 
         // note that club XampleMin may already be loaded
         // note that XampleMinMembersProvider runs asynchronously (via bgContext.perform {})
-        _ = XampleMinMembersProvider(bgContext: xampleMinBackgroundContext)
+        let townOverruleTo = String.random(length: 10)
+        _ = XampleMinMembersProvider(bgContext: xampleMinBackgroundContext, townOverruleTo: townOverruleTo)
 
         let idPlus = OrganizationIdPlus(fullName: "Xample Club Min",
-                                        town: "Rotterdam",
+                                        town: townOverruleTo, // unique town to keep this separate from normal loading
                                         nickname: "XampleMin")
 
-        let predicateFormat: String = "fullName_ = %@ AND town_ = %@" // avoid localization
+        let predicateFormat: String = "town_ = %@" // avoid localization
         // Note that organizationType is not an identifying attribute.
         // This implies that you cannot have 2 organizations with the same Name and Town, but of a different type.
         let predicate = NSPredicate(format: predicateFormat,
-                                    argumentArray: [idPlus.fullName,
-                                                    idPlus.town] )
+                                    argumentArray: [ townOverruleTo ] )
         let fetchRequest: NSFetchRequest<Organization> = Organization.fetchRequest()
         fetchRequest.predicate = predicate
         let organizations: [Organization] = (try? context.fetch(fetchRequest)) ?? []
 
         #expect(organizations.count == 1)
-        #expect(organizations[0].organizationType.organizationTypeName == OrganizationTypeEnum.club.rawValue)
-        #expect(organizations[0].fullName == idPlus.fullName)
-        #expect(organizations[0].town == idPlus.town)
-        #expect(organizations[0].nickname == idPlus.nickname)
+        if organizations.isEmpty == false {
+            #expect(organizations[0].organizationType.organizationTypeName == OrganizationTypeEnum.club.rawValue)
+            #expect(organizations[0].fullName == idPlus.fullName)
+            #expect(organizations[0].town == idPlus.town)
+            #expect(organizations[0].nickname == idPlus.nickname)
+        }
     }
 
 }
