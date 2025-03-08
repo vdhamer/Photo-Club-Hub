@@ -17,7 +17,7 @@ import CoreData // for NSManagedObjectContext
     init () {
         context = PersistenceController.shared.container.viewContext
 
-        let personName = PersonName(givenName: randomString(10), infixName: "", familyName: "UnitTestDummy")
+        let personName = PersonName(givenName: String.random(length: 10), infixName: "", familyName: "UnitTestDummy")
         let optionalFields = PhotographerOptionalFields()
         photographer = Photographer.findCreateUpdate(context: context,
                                                      personName: personName,
@@ -26,7 +26,7 @@ import CoreData // for NSManagedObjectContext
 
     @Test("Create a random keyword for a random photographer") func addPhotographerKeyword() {
 
-        let keywordID = randomString(10).capitalized // internally keyword.id is capitalized
+        let keywordID = String.random(length: 10).capitalized // internally keyword.id is capitalized
         let photographerKeyword = PhotographerKeyword.findCreateUpdate(
             context: context,
             photographer: photographer,
@@ -40,7 +40,7 @@ import CoreData // for NSManagedObjectContext
 
     @Test("Attempt to create duplicate PhotographerKeyword") func duplicatePhotographerKeyword() {
 
-        let keywordID = randomString(10).capitalized // internally keyword.id is capitalized
+        let keywordID = String.random(length: 10).capitalized // internally keyword.id is capitalized
         let photographerKeyword1 = PhotographerKeyword.findCreateUpdate(
             context: context,
             photographer: photographer,
@@ -67,10 +67,4 @@ import CoreData // for NSManagedObjectContext
         #expect(PhotographerKeyword.count(context: context, keywordID: keywordID, photographer: photographer) == 1)
     }
 
-}
-
-private func randomString(_ length: Int) -> String {
-   let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
-   let randomString = (0..<length).map { _ in String(letters.randomElement()!) }.reduce("", +)
-   return randomString
 }

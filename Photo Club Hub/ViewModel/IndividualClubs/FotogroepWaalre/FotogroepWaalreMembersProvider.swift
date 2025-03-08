@@ -7,6 +7,7 @@
 
 import CoreData // for NSManagedObjectContext
 import RegexBuilder // for Regex struct
+import CoreLocation // for CLLocationCoordinate2DMake
 
 class FotogroepWaalreMembersProvider { // WWDC21 Earthquakes also uses a Class here
 
@@ -28,6 +29,30 @@ class FotogroepWaalreMembersProvider { // WWDC21 Earthquakes also uses a Class h
             }
         }
     }
+
+    fileprivate func insertOnlineMemberData(bgContext: NSManagedObjectContext) { // runs on a background thread
+
+        let fotogroepWaalreIdPlus = OrganizationIdPlus(fullName: "Fotogroep Waalre",
+                                                       town: "Waalre",
+                                                       nickname: "fgWaalre")
+
+        bgContext.perform { // execute on background thread
+            let club = Organization.findCreateUpdate(context: bgContext,
+                                                     organizationTypeEnum: .club,
+                                                     idPlus: fotogroepWaalreIdPlus,
+                                                     // real coordinates added in fgWaalre.level2.json
+                                                     coordinates: CLLocationCoordinate2DMake(0, 0),
+                                                     optionalFields: OrganizationOptionalFields() // empty fields
+                                                    )
+            ifDebugPrint("\(club.fullNameTown): Starting insertOnlineMemberData() in background")
+
+            _ = Level2JsonReader(bgContext: bgContext,
+                                 urlComponents: UrlComponents.waalre,
+                                 club: club,
+                                 useOnlyFile: false)
+        }
+    }
+
 }
 
 extension FotogroepWaalreMembersProvider { // private utitity functions

@@ -18,38 +18,41 @@ import CoreData // for NSManagedObjectContext
     }
 
     @Test("Add a standard keyword") func addStandardKeyword() throws {
-        let keyword = Keyword.findCreateUpdateStandard(context: context, id: "Test1")
-        #expect(keyword.id == "Test1")
+        let keywordID = String.random(length: 10).capitalized
+        let keyword = Keyword.findCreateUpdateStandard(context: context, id: keywordID)
+        #expect(keyword.id == keywordID)
         #expect(keyword.isStandard == true)
-        Keyword.save(context: context, errorText: "Error saving keyword \"Test1\"")
-        #expect(Keyword.count(context: context, keywordID: "Test1") == 1)
+        Keyword.save(context: context, errorText: "Error saving keyword \"\(keywordID)\"")
+        #expect(Keyword.count(context: context, keywordID: keywordID) == 1)
     }
 
     @Test("Add a non-standard keyword") func addNonStandardKeyword() throws {
-        let keyword = Keyword.findCreateUpdateNonStandard(context: context, id: "Test2")
-        #expect(keyword.id == "Test2")
+        let keywordID = String.random(length: 10).capitalized
+        let keyword = Keyword.findCreateUpdateNonStandard(context: context, id: keywordID)
+        #expect(keyword.id == keywordID)
         #expect(keyword.isStandard == false)
-        Keyword.save(context: context, errorText: "Error saving keyword \"Test2\"")
-        #expect(Keyword.count(context: context, keywordID: "Test2") == 1)
+        Keyword.save(context: context, errorText: "Error saving keyword \"\(keywordID)\"")
+        #expect(Keyword.count(context: context, keywordID: keywordID) == 1)
     }
 
     @Test("Check capitalization of incoming ID strings") func checkIdCaplitalization() throws {
-        let keyword = Keyword.findCreateUpdateStandard(context: context, id: "my Keyword")
-        #expect(keyword.id == "My Keyword")
+        let keywordID = "a " + String.random(length: 8).capitalized
+        let keyword = Keyword.findCreateUpdateStandard(context: context, id: keywordID.capitalized)
+        #expect(keyword.id == keywordID.capitalized)
     }
 
     @Test("Avoid creating same keyword twice") func avoidDuplicateKeywords() {
-        let id = "foobar".capitalized
+        let id = String.random(length: 10).capitalized
         let keyword1 = Keyword.findCreateUpdateStandard(context: context, id: id)
         #expect(keyword1.isStandard == true)
-        Keyword.save(context: context, errorText: "Error saving keyword \"keyword1\"")
+        Keyword.save(context: context, errorText: "Error saving keyword \"\(id)\"")
         #expect(Keyword.count(context: context, keywordID: id) == 1)
+        Keyword.save(context: context, errorText: "Error saving keyword \"\(id)\"") // shouldn't create a new record
 
         let keyword2 = Keyword.findCreateUpdateNonStandard(context: context, id: id)
-        Keyword.save(context: context, errorText: "Error saving keyword \"keyword2\"") // shouldn't create a new record
         #expect(Keyword.count(context: context, keywordID: id) == 1)
-
         #expect(keyword2.isStandard == false)
+
         #expect(keyword1.isStandard == false) // should not create a new record
     }
 

@@ -6,11 +6,42 @@
 //
 
 import CoreData // for PersistenceController
+import CoreLocation // for CLLocationCoordinate2DMake
 
 class XampleMinMembersProvider {
 
-    init(bgContext: NSManagedObjectContext) {
-        insertOnlineMemberData(bgContext: bgContext)
+    init(bgContext: NSManagedObjectContext, townOverruleTo: String? = nil) {
+        insertOnlineMemberData(bgContext: bgContext, overrulingTown: townOverruleTo)
+    }
+
+    fileprivate func insertOnlineMemberData(bgContext: NSManagedObjectContext, overrulingTown: String?) {
+
+        let overruledTown: String = overrulingTown != nil ? overrulingTown! : "Rotterdam"
+        let fotogroepXampleMinIdPlus = OrganizationIdPlus(fullName: "Xample Club Min",
+                                                          town: overruledTown,
+                                                          nickname: "XampleMin")
+
+        bgContext.perform { // execute on background thread
+            let club = Organization.findCreateUpdate(context: bgContext,
+                                                     organizationTypeEnum: .club,
+                                                     idPlus: fotogroepXampleMinIdPlus,
+                                                     // real coordinates added in XampleMax.level2.json
+                                                     coordinates: CLLocationCoordinate2DMake(0, 0),
+                                                     optionalFields: OrganizationOptionalFields() // empty fields
+                                                    )
+            ifDebugPrint("\(club.fullNameTown): Starting insertOnlineMemberData() in background")
+
+            _ = Level2JsonReader(bgContext: bgContext,
+                                 urlComponents: UrlComponents.xampleMin,
+                                 club: club,
+                                 useOnlyFile: false)
+            do {
+                try bgContext.save()
+            } catch {
+                ifDebugFatalError("Failed to save club XampleMin", file: #file, line: #line)
+            }
+
+        }
     }
 
 }
