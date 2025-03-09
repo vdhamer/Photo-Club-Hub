@@ -10,14 +10,15 @@ import CoreLocation // for CLLocationCoordinate2DMake
 
 class XampleMaxMembersProvider {
 
-    init(bgContext: NSManagedObjectContext) {
-        insertOnlineMemberData(bgContext: bgContext)
+    init(bgContext: NSManagedObjectContext, townOverruleTo: String? = nil) {
+        insertOnlineMemberData(bgContext: bgContext, overrulingTown: townOverruleTo)
     }
 
-    fileprivate func insertOnlineMemberData(bgContext: NSManagedObjectContext) { // runs on a background thread
+    fileprivate func insertOnlineMemberData(bgContext: NSManagedObjectContext, overrulingTown: String?) {
 
+	let overruledTown: String = overrulingTown != nil ? overrulingTown! : "Rotterdam"
         let fotogroepXampleMaxIdPlus = OrganizationIdPlus(fullName: "Xample Club Max",
-                                                           town: "Amsterdam",
+                                                           town: overruledTown,
                                                            nickname: "XampleMax")
 
         bgContext.perform { // execute on background thread
@@ -34,7 +35,12 @@ class XampleMaxMembersProvider {
                                  urlComponents: UrlComponents.xampleMax,
                                  club: club,
                                  useOnlyFile: false)
-            try? bgContext.save()
+            do {
+                try bgContext.save()
+            } catch {
+                ifDebugFatalError("Failed to save club XampleMax", file: #file, line: #line)
+            }
+
         }
     }
 

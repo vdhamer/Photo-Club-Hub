@@ -52,7 +52,7 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
             return memberPortfolio
         } else {
             let entity = NSEntityDescription.entity(forEntityName: "MemberPortfolio", in: bgContext)!
-            let memberPortfolio = MemberPortfolio(entity: entity, insertInto: bgContext) // bg needs special .init()
+            let memberPortfolio = MemberPortfolio(entity: entity, insertInto: bgContext) // backgr needs special .init()
             memberPortfolio.organization_ = organization
             memberPortfolio.photographer_ = photographer
             _ = memberPortfolio.update(bgContext: bgContext,

@@ -25,6 +25,7 @@ struct Model {
             try deleteEntitiesOfOneType("OrganizationType", context: context)
             try deleteEntitiesOfOneType("Language", context: context)
             print(forcedDataRefresh + "was successful.")
+            try context.save()
         } catch {
             ifDebugFatalError(forcedDataRefresh + "FAILED: \(error)")
         }
@@ -39,6 +40,9 @@ struct Model {
             try deleteEntitiesOfOneType("PhotographerKeyword", context: context)
             try deleteEntitiesOfOneType("Keyword", context: context)
             print(forcedDataRefresh + "was successful.")
+            try? context.performAndWait {
+                try context.save()
+            }
         } catch {
             ifDebugFatalError(forcedDataRefresh + "FAILED: \(error)")
         }
@@ -48,24 +52,26 @@ struct Model {
     private static func deleteEntitiesOfOneType(_ entity: String, context: NSManagedObjectContext) throws {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entity)
         fetchRequest.returnsObjectsAsFaults = false // comes from some fragment fron StackOverFlow? purpose?
-        do {
-            let results = try context.fetch(fetchRequest)
-            for object in results {
-                guard let objectData = object as? NSManagedObject else {continue}
-                context.delete(objectData)
-            }
-            try context.save()
-            // initConstants shouldn't be necessary, but is there as a temp safetynet for CoreData concurrenty issues
-            if entity == "OrganizationType" {
-                OrganizationType.initConstants() // insert contant records into OrganizationType table if needed
-            }
-            if entity == "Language" { // initialization shouldn't be necessary (related to occasional transaction crash)
-                Language.initConstants() // insert contant records into OrganizationType table if needed
-            }
+        try? context.performAndWait {
+            do {
+                let results = try context.fetch(fetchRequest)
+                for object in results {
+                    guard let objectData = object as? NSManagedObject else {continue}
+                    context.delete(objectData)
+                }
+                try context.save()
+                // initConstants shouldn't be necessary, but is there as a temp safetynet for CoreData concurrenty issues
+                if entity == "OrganizationType" {
+                    OrganizationType.initConstants() // insert contant records into OrganizationType table if needed
+                }
+                if entity == "Language" { // initialization shouldn't be necessary (related to occasional transaction crash)
+                    Language.initConstants() // insert contant records into OrganizationType table if needed
+                }
 
-        } catch let error { // if `entity` identifier is not found, `try` doesn't throw. Maybe a rethrow is missing.
-            print("Delete all data in \(entity) error :", error)
-            throw error
+            } catch let error { // if `entity` identifier is not found, `try` doesn't throw. Maybe a rethrow is missing.
+                print("Delete all data in \(entity) error :", error)
+                throw error
+            }
         }
     }
 
