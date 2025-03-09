@@ -307,22 +307,6 @@
 			path = "Photo Club Hub Localizations";
 			sourceTree = "<group>";
 		};
-		D05414F52AC7496000D899D8 /* FotogroepDeGender */ = {
-			isa = PBXGroup;
-			children = (
-				D05414F62AC7499000D899D8 /* FotogroepDeGenderMembersProvider.swift */,
-			);
-			path = FotogroepDeGender;
-			sourceTree = "<group>";
-		};
-		D05417392D31DDE300A2A579 /* XampleMax */ = {
-			isa = PBXGroup;
-			children = (
-				D05417372D31DDE300A2A579 /* XampleMaxMembersProvider.swift */,
-			);
-			path = XampleMax;
-			sourceTree = "<group>";
-		};
 		D05E451B27EF286B00D31327 /* PreferencesView */ = {
 			isa = PBXGroup;
 			children = (
@@ -357,20 +341,12 @@
 		D0621E832AE2DF8E000FFADB /* IndividualClubs */ = {
 			isa = PBXGroup;
 			children = (
-				D0831A2A277F72590049AB84 /* FotogroepWaalre */,
-				D05414F52AC7496000D899D8 /* FotogroepDeGender */,
-				D072D5E62D333E7500EA88DD /* XampleMin */,
-				D05417392D31DDE300A2A579 /* XampleMax */,
+				D05414F62AC7499000D899D8 /* FotogroepDeGenderMembersProvider.swift */,
+				D0831A2C277F72590049AB84 /* FotogroepWaalreMembersProvider.swift */,
+				D072D5E42D333E7500EA88DD /* XampleMinMembersProvider.swift */,
+				D05417372D31DDE300A2A579 /* XampleMaxMembersProvider.swift */,
 			);
 			path = IndividualClubs;
-			sourceTree = "<group>";
-		};
-		D072D5E62D333E7500EA88DD /* XampleMin */ = {
-			isa = PBXGroup;
-			children = (
-				D072D5E42D333E7500EA88DD /* XampleMinMembersProvider.swift */,
-			);
-			path = XampleMin;
 			sourceTree = "<group>";
 		};
 		D0795CE9294FCAC000FA62A8 /* String extensions */ = {
@@ -482,14 +458,6 @@
 				D0831A29277F72590049AB84 /* PreferencesViewModel.swift */,
 			);
 			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		D0831A2A277F72590049AB84 /* FotogroepWaalre */ = {
-			isa = PBXGroup;
-			children = (
-				D0831A2C277F72590049AB84 /* FotogroepWaalreMembersProvider.swift */,
-			);
-			path = FotogroepWaalre;
 			sourceTree = "<group>";
 		};
 		D0831A3B277F727E0049AB84 /* Model */ = {
