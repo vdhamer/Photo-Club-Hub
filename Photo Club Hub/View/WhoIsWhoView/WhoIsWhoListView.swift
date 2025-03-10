@@ -98,10 +98,11 @@ struct WhoIsWhoListView: View {
                                    \(PhotographerKeyword.count(context: viewContext, keywordID: "Travel"))
                                    """)
                     Divider()
-                    Text(verbatim: """
-                                   Total number of Keyword instances: \(PhotographerKeyword.count(context: viewContext))
-                                   """)
-                    Divider()
+//                    Text(verbatim: """ // TODO updating of view using async function
+//                                   Total number of Keyword instances: \
+//                                   \(PhotographerKeyword.count(context: viewContext))
+//                                   """)
+//                    Divider()
                     Text(verbatim: "Number of different Keywords: \(Keyword.count(context: viewContext))")
                 } .foregroundColor(Color.red) .font(.callout)
             }
@@ -116,7 +117,14 @@ struct WhoIsWhoListView: View {
             if Settings.dataResetPending272 {
                 print("dataResetPending272 flag reset from true to false")
             }
-            Model.deleteAllCoreDataObjects(context: viewContext)
+            Task {
+                let bgContext = PersistenceController.shared.container.newBackgroundContext()
+                bgContext.name = "XampleMax"
+                bgContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+                bgContext.automaticallyMergesChangesFromParent = true
+
+                await Model.deleteCoreDataKeywords(context: bgContext)
+            }
             PhotoClubHubApp.loadClubsAndMembers() // carefull: runs asynchronously
         }
         .keyboardType(.namePhonePad)

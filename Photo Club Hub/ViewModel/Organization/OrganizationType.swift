@@ -14,8 +14,7 @@ extension OrganizationType {
         fatalError("init() is not available. Use .findCreateUpdate instead.")
     }
 
-    @MainActor
-    static func initConstants() { // called on main thread
+    static func initConstants() {
         let viewContext = PersistenceController.shared.container.viewContext // requires foreground context
 
         for type in OrganizationTypeEnum.allCases { // type is simple enum

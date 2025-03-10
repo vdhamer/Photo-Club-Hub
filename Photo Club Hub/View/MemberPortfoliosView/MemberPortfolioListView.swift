@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoreData  // for NSMergePolicy
 
 struct MemberPortfolioListView: View {
     @Environment(\.managedObjectContext) fileprivate var viewContext
@@ -47,7 +48,14 @@ struct MemberPortfolioListView: View {
             if Settings.dataResetPending272 {
                 print("dataResetPending272 flag reset from true to false")
             }
-            Model.deleteAllCoreDataObjects(context: viewContext)
+            Task {
+                let bgContext = PersistenceController.shared.container.newBackgroundContext()
+                bgContext.name = "XampleMax"
+                bgContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+                bgContext.automaticallyMergesChangesFromParent = true
+
+                await Model.deleteCoreDataKeywords(context: bgContext)
+            }
             PhotoClubHubApp.loadClubsAndMembers() // carefull: runs asynchronously
         }
         .keyboardType(.namePhonePad)

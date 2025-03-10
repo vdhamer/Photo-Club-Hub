@@ -14,9 +14,9 @@ final class XampleMinMembersProvider: Sendable {
 //        insertOnlineMemberData(bgContext: bgContext, overrulingTown: townOverruleTo)
 //    } TODO
 
-    init(bgContext: NSManagedObjectContext, overrulingTown: String? = nil) {
+    init(bgContext: NSManagedObjectContext, townOverruleTo: String? = nil) {
 
-        let overruledTown: String = overrulingTown != nil ? overrulingTown! : "Rotterdam"
+        let overruledTown: String = townOverruleTo != nil ? townOverruleTo! : "Rotterdam"
         let fotogroepXampleMinIdPlus = OrganizationIdPlus(fullName: "Xample Club Min",
                                                           town: overruledTown,
                                                           nickname: "XampleMin")

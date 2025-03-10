@@ -7,40 +7,41 @@
 
 import CoreData // for NSManagedObject
 
-@MainActor
 struct Model {
-    static func deleteAllCoreDataObjects(context: NSManagedObjectContext) {
+    static func deleteAllCoreDataObjects(context: NSManagedObjectContext) async {
         let forcedDataRefresh = "Forced refresh of CoreData data " // just for log, not localized
 
         // order is important because of non-optional relationships
         do { // order is important to avoid problems with referential integrity
-            try deleteEntitiesOfOneType("LocalizedRemark", context: context)
+            try await deleteEntitiesOfOneType("LocalizedRemark", context: context)
 
-            deleteCoreDataKeywords(context: context)
+            await deleteCoreDataKeywords(context: context)
 
-            try deleteEntitiesOfOneType("MemberPortfolio", context: context)
-            try deleteEntitiesOfOneType("Organization", context: context)
-            try deleteEntitiesOfOneType("Photographer", context: context)
+            try await deleteEntitiesOfOneType("MemberPortfolio", context: context)
+            try await deleteEntitiesOfOneType("Organization", context: context)
+            try await deleteEntitiesOfOneType("Photographer", context: context)
 
-            try deleteEntitiesOfOneType("OrganizationType", context: context)
-            try deleteEntitiesOfOneType("Language", context: context)
+            try await deleteEntitiesOfOneType("OrganizationType", context: context)
+            try await deleteEntitiesOfOneType("Language", context: context)
             print(forcedDataRefresh + "was successful.")
-            try context.save()
+            try context.performAndWait {
+                try context.save()
+            }
         } catch {
             ifDebugFatalError(forcedDataRefresh + "FAILED: \(error)")
         }
     }
 
     // don't delete Photographer or Language before deleting this. See data model picture in README.md.
-    static func deleteCoreDataKeywords(context: NSManagedObjectContext) { // can be deleted separately if needed (Tests)
+    static func deleteCoreDataKeywords(context: NSManagedObjectContext) async { // delete subset of tables eparately
         let forcedDataRefresh = "Forced clearing of CoreData keywords "
 
         do { // order is important to avoid problems with referential integrity
-            try deleteEntitiesOfOneType("LocalizedKeyword", context: context)
-            try deleteEntitiesOfOneType("PhotographerKeyword", context: context)
-            try deleteEntitiesOfOneType("Keyword", context: context)
+            try await deleteEntitiesOfOneType("LocalizedKeyword", context: context)
+            try await deleteEntitiesOfOneType("PhotographerKeyword", context: context)
+            try await deleteEntitiesOfOneType("Keyword", context: context)
             print(forcedDataRefresh + "was successful.")
-            try? context.performAndWait {
+            try context.performAndWait {
                 try context.save()
             }
         } catch {
@@ -49,11 +50,11 @@ struct Model {
     }
 
     // returns true if successful
-    private static func deleteEntitiesOfOneType(_ entity: String, context: NSManagedObjectContext) throws {
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entity)
-        fetchRequest.returnsObjectsAsFaults = false // comes from some fragment fron StackOverFlow? purpose?
-        try? context.performAndWait {
-            do {
+    private static func deleteEntitiesOfOneType(_ entity: String, context: NSManagedObjectContext) async throws {
+        do {
+            try await context.perform {
+                let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entity)
+                fetchRequest.returnsObjectsAsFaults = false // comes from some fragment fron StackOverFlow? purpose?
                 let results = try context.fetch(fetchRequest)
                 for object in results {
                     guard let objectData = object as? NSManagedObject else {continue}
@@ -67,11 +68,10 @@ struct Model {
                 if entity == "Language" {
                     Language.initConstants() // insert contant records into OrganizationType table if needed
                 }
-
-            } catch let error { // if `entity` identifier is not found, `try` doesn't throw. Maybe a rethrow is missing.
-                print("Delete all data in \(entity) error :", error)
-                throw error
             }
+        } catch {
+            print("Delete all data in \(entity) error :", error)
+            throw error
         }
     }
 

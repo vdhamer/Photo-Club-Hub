@@ -173,7 +173,7 @@ extension PhotographerKeyword {
 
     // count total number of PhotographerKeyword objects/records
     // there are ways to count without fetching all records, but this func is only used for testing
-    static func count(context: NSManagedObjectContext) -> Int {
+    static func count(context: NSManagedObjectContext) async -> Int {
         var photographerKeywords: [PhotographerKeyword]! = []
 
         let fetchRequest: NSFetchRequest<PhotographerKeyword> = PhotographerKeyword.fetchRequest()

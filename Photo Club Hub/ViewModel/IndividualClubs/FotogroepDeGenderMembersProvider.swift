@@ -10,14 +10,15 @@ import CoreLocation // for CLLocationCoordinate2DMake
 
 class FotogroepDeGenderMembersProvider {
 
-    init(bgContext: NSManagedObjectContext) {
-        insertOnlineMemberData(bgContext: bgContext) // should do its own bgContext.save()
+    init(bgContext: NSManagedObjectContext, townOverruleTo: String? = nil) {
+        insertOnlineMemberData(bgContext: bgContext, overrulingTown: townOverruleTo)
     }
 
-    fileprivate func insertOnlineMemberData(bgContext: NSManagedObjectContext) { // runs on a background thread
+    fileprivate func insertOnlineMemberData(bgContext: NSManagedObjectContext, overrulingTown: String?) {
 
+	let overruledTown: String = overrulingTown != nil ? overrulingTown! : "Eindhoven"
         let fotogroepDeGenderIdPlus = OrganizationIdPlus(fullName: "Fotogroep de Gender",
-                                                         town: "Eindhoven",
+                                                         town: overruledTown,
                                                          nickname: "fgDeGender")
 
         bgContext.perform { // execute on background thread
@@ -34,6 +35,12 @@ class FotogroepDeGenderMembersProvider {
                                  urlComponents: UrlComponents.deGender,
                                  club: club,
                                  useOnlyFile: false)
+            do {
+                try bgContext.save()
+            } catch {
+                ifDebugFatalError("Failed to save club fgDeGender", file: #file, line: #line)
+            }
+
         }
     }
 
