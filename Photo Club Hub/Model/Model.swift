@@ -60,11 +60,11 @@ struct Model {
                     context.delete(objectData)
                 }
                 try context.save()
-                // initConstants shouldn't be necessary, but is there as a temp safetynet for CoreData concurrenty issues
+                // initConstants shouldn't be needed, but is there as a temp safetynet for CoreData concurrency issues
                 if entity == "OrganizationType" {
                     OrganizationType.initConstants() // insert contant records into OrganizationType table if needed
                 }
-                if entity == "Language" { // initialization shouldn't be necessary (related to occasional transaction crash)
+                if entity == "Language" {
                     Language.initConstants() // insert contant records into OrganizationType table if needed
                 }
 

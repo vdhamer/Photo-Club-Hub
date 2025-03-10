@@ -29,7 +29,8 @@ import CoreData // for NSManagedObjectContext
         // note that club XampleMin may already be loaded
         // note that XampleMinMembersProvider runs asynchronously (via bgContext.perform {})
         let townOverruleTo = String.random(length: 10)
-        _ = XampleMinMembersProvider(bgContext: xampleMinBackgroundContext, townOverruleTo: townOverruleTo)
+        _ = XampleMinMembersProvider(bgContext: xampleMinBackgroundContext,
+                                     overrulingTown: townOverruleTo)
 
         let idPlus = OrganizationIdPlus(fullName: "Xample Club Min",
                                         town: townOverruleTo, // unique town to keep this separate from normal loading

@@ -8,13 +8,13 @@
 import CoreData // for PersistenceController
 import CoreLocation // for CLLocationCoordinate2DMake
 
-class XampleMinMembersProvider {
+final class XampleMinMembersProvider: Sendable {
 
-    init(bgContext: NSManagedObjectContext, townOverruleTo: String? = nil) {
-        insertOnlineMemberData(bgContext: bgContext, overrulingTown: townOverruleTo)
-    }
+//    init(bgContext: NSManagedObjectContext, townOverruleTo: String? = nil) {
+//        insertOnlineMemberData(bgContext: bgContext, overrulingTown: townOverruleTo)
+//    } TODO
 
-    fileprivate func insertOnlineMemberData(bgContext: NSManagedObjectContext, overrulingTown: String?) {
+    init(bgContext: NSManagedObjectContext, overrulingTown: String? = nil) {
 
         let overruledTown: String = overrulingTown != nil ? overrulingTown! : "Rotterdam"
         let fotogroepXampleMinIdPlus = OrganizationIdPlus(fullName: "Xample Club Min",
