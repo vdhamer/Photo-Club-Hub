@@ -16,7 +16,7 @@ class XampleMaxMembersProvider {
 
     fileprivate func insertOnlineMemberData(bgContext: NSManagedObjectContext, overrulingTown: String?) {
 
-	let overruledTown: String = overrulingTown != nil ? overrulingTown! : "Rotterdam"
+	let overruledTown: String = overrulingTown != nil ? overrulingTown! : "Amsterdam"
         let fotogroepXampleMaxIdPlus = OrganizationIdPlus(fullName: "Xample Club Max",
                                                            town: overruledTown,
                                                            nickname: "XampleMax")
