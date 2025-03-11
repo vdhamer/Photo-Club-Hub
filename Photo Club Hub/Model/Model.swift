@@ -32,7 +32,7 @@ struct Model {
     }
 
     // don't delete Photographer or Language before deleting this. See data model picture in README.md.
-    static func deleteCoreDataKeywords(context: NSManagedObjectContext) { // can be deleted separately if needed (Tests)
+    static func deleteCoreDataKeywords(context: NSManagedObjectContext) { // delete subset of tables separately
         let forcedDataRefresh = "Forced clearing of CoreData keywords "
 
         do { // order is important to avoid problems with referential integrity
@@ -60,11 +60,11 @@ struct Model {
                     context.delete(objectData)
                 }
                 try context.save()
-                // initConstants shouldn't be necessary, but is there as a temp safetynet for CoreData concurrenty issues
+                // initConstants shouldn't be needed, but is there as a temp safetynet for CoreData concurrency issues
                 if entity == "OrganizationType" {
                     OrganizationType.initConstants() // insert contant records into OrganizationType table if needed
                 }
-                if entity == "Language" { // initialization shouldn't be necessary (related to occasional transaction crash)
+                if entity == "Language" {
                     Language.initConstants() // insert contant records into OrganizationType table if needed
                 }
 

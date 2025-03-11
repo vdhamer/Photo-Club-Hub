@@ -17,19 +17,23 @@ import CoreData // for NSManagedObjectContext
         context = PersistenceController.shared.container.viewContext
     }
 
-    // Read XampleMin.level2.json and check for parsing errors
+    // Read XampleMin.level2.json and check for parsing errors.
+    // Clears entire CoreData database. Runs on background thread, adding bunch of extra complexity ;-(
+    // Additional checks:
+    //      - no PhotographerKeywords added by loading club
+    //      - no Keywords added by loading club
     @Test("Parse XampleMin.level2.json") func xampleMinParse() async {
-        let xampleMinBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-        xampleMinBackgroundContext.name = "XampleMin"
-        xampleMinBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-        xampleMinBackgroundContext.automaticallyMergesChangesFromParent = true
+        let bgContext = PersistenceController.shared.container.newBackgroundContext()
+        bgContext.name = "XampleMin"
+        bgContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+        bgContext.automaticallyMergesChangesFromParent = true
 
-        Model.deleteCoreDataKeywords(context: xampleMinBackgroundContext) // This test doesn't have Keywords
+        Model.deleteCoreDataKeywords(context: bgContext) // This test doesn't have Keywords
 
         // note that club XampleMin may already be loaded
         // note that XampleMinMembersProvider runs asynchronously (via bgContext.perform {})
         let townOverruleTo = String.random(length: 10)
-        _ = XampleMinMembersProvider(bgContext: xampleMinBackgroundContext, townOverruleTo: townOverruleTo)
+        _ = XampleMinMembersProvider(bgContext: bgContext, townOverruleTo: townOverruleTo)
 
         let idPlus = OrganizationIdPlus(fullName: "Xample Club Min",
                                         town: townOverruleTo, // unique town to keep this separate from normal loading
@@ -44,7 +48,7 @@ import CoreData // for NSManagedObjectContext
         fetchRequest.predicate = predicate
         let organizations: [Organization] = (try? context.fetch(fetchRequest)) ?? []
 
-        #expect(Keyword.count(context: xampleMinBackgroundContext) == 0)
+        #expect(Keyword.count(context: bgContext) == 0)
 
 //        #expect(organizations.count == 1) // TODO Test doesn't work because of concurrency issue
         if organizations.isEmpty == false {
@@ -57,17 +61,17 @@ import CoreData // for NSManagedObjectContext
 
     // Read XampleMax.level2.json and check for parsing errors
     @Test("Parse XampleMax.level2.json") func xampleMaxParse() async {
-        let xampleMaxBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-        xampleMaxBackgroundContext.name = "XampleMax"
-        xampleMaxBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-        xampleMaxBackgroundContext.automaticallyMergesChangesFromParent = true
+        let bgContext = PersistenceController.shared.container.newBackgroundContext()
+        bgContext.name = "XampleMax"
+        bgContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+        bgContext.automaticallyMergesChangesFromParent = true
 
-        Model.deleteCoreDataKeywords(context: xampleMaxBackgroundContext) // This test does have Keywords
+        Model.deleteCoreDataKeywords(context: bgContext) // This test does have Keywords
 
         // note that club XampleMax may already be loaded
         // note that XampleMaxMembersProvider runs asynchronously (via bgContext.perform {})
         let townOverruleTo = String.random(length: 10)
-        _ = XampleMaxMembersProvider(bgContext: xampleMaxBackgroundContext, townOverruleTo: townOverruleTo)
+        _ = XampleMaxMembersProvider(bgContext: bgContext, townOverruleTo: townOverruleTo)
 
         let idPlus = OrganizationIdPlus(fullName: "Xample Club Max",
                                         town: townOverruleTo, // unique town to keep this separate from normal loading
@@ -82,7 +86,7 @@ import CoreData // for NSManagedObjectContext
         fetchRequest.predicate = predicate
         let organizations: [Organization] = (try? context.fetch(fetchRequest)) ?? []
 
-        #expect(Keyword.count(context: xampleMaxBackgroundContext) == 3)
+        #expect(Keyword.count(context: bgContext) == 3)
 
 //        #expect(organizations.count == 1) Test doesn't work because of concurrency issue
         if organizations.isEmpty == false {
@@ -92,5 +96,50 @@ import CoreData // for NSManagedObjectContext
             #expect(organizations[0].nickname == idPlus.nickname)
         }
     }
+
+    // Read fgDeGender.level2.json and check for parsing errors
+//    @Test("Parse fgDeGender.level2.json") func fgDeGenderParse() async {
+//        let bgContext = PersistenceController.shared.container.newBackgroundContext()
+//        bgContext.name = "fgDeGender"
+//        bgContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+//        bgContext.automaticallyMergesChangesFromParent = true
+//
+//        Model.deleteCoreDataKeywords(context: bgContext) // This test does have Keywords
+//
+//        // note that club fgDeGender may already be loaded
+//        // note that fgDeGenderMembersProvider runs asynchronously (via bgContext.perform {})
+//        let townOverruleTo = String.random(length: 10)
+//        _ = FotogroepDeGenderMembersProvider(bgContext: bgContext, townOverruleTo: townOverruleTo)
+//
+//        let idPlus = OrganizationIdPlus(fullName: "Fotogroep De Gender",
+//                                        town: townOverruleTo, // unique town to keep this separate from normal loading
+//                                        nickname: "fgDeGender")
+//
+//        let predicateFormat: String = "town_ = %@" // avoid localization
+//        // Note that organizationType is not an identifying attribute.
+//        // This implies that you cannot have 2 organizations with the same Name and Town, but of a different type.
+//        let predicate = NSPredicate(format: predicateFormat,
+//                                    argumentArray: [ townOverruleTo ] )
+//        let fetchRequest: NSFetchRequest<Organization> = Organization.fetchRequest()
+//        fetchRequest.predicate = predicate
+//        let organizations: [Organization] = (try? context.fetch(fetchRequest)) ?? []
+//
+//        #expect(Keyword.count(context: bgContext) == 2)
+//        for keyword in Keyword { // TODO
+//            var count: Int = 0
+//            for keyword in Keyword {
+//                count += 1
+//                print("Keyword #\(count): \(keyword.id)")
+//            }
+//        }
+//
+////        #expect(organizations.count == 1) Test doesn't work because of concurrency issue
+//        if organizations.isEmpty == false {
+//            #expect(organizations[0].organizationType.organizationTypeName == OrganizationTypeEnum.club.rawValue)
+//            #expect(organizations[0].fullName == idPlus.fullName)
+//            #expect(organizations[0].town == idPlus.town)
+//            #expect(organizations[0].nickname == idPlus.nickname)
+//        }
+//    }
 
 }

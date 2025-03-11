@@ -7,7 +7,7 @@ Code Maintenance
 * Aligned refreshFirstImage() code to make it more similar to Photo Club HTML code.
 * Moved deleteAllCoreDataObjects() to a new file named Model.swift.
 * Introduced use of Swift Testing framework for software unit testing.
-* Tested on Xcode 16.3 beta (16E5121h), iOS 18.4 beta (22E5216d) and visionOS 2.4 beta (2205199n).
+* Tested on Xcode 16.3 beta (16E5121h), iOS 18.4 beta (22E5216d), and macOS 15.3.1 and visionOS 2.4 beta (2205199n).
 * Removed .pptx files from GitHub repo to save space.
 
 Data Maintenance
