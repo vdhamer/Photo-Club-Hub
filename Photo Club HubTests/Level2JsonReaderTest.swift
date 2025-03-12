@@ -108,12 +108,12 @@ import CoreData // for NSManagedObjectContext
         bgContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         bgContext.automaticallyMergesChangesFromParent = true
 
-        Model.deleteCoreDataKeywords(context: bgContext) // This test does have Keywords
+        Model.deleteCoreDataKeywords(context: bgContext)
 
         // note that club fgDeGender may already be loaded
         // note that fgDeGenderMembersProvider runs asynchronously (via bgContext.perform {})
         let randomTown = String.random(length: 10)
-        _ = FotogroepDeGenderMembersProvider(bgContext: bgContext,
+        _ = FotogroepDeGenderMembersProvider(bgContext: bgContext, // The club has Keywords
                                              synchronousWithRandomTown: true,
                                              randomTown: randomTown)
 
