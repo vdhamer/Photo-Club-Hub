@@ -132,41 +132,43 @@ extension PhotographerKeyword {
 
     // count number of objects with a given id for a given photographer
     static func count(context: NSManagedObjectContext, keywordID: String, photographer: Photographer) -> Int {
-        var photographerKeywords: [PhotographerKeyword]! = []
-
         let fetchRequest: NSFetchRequest<PhotographerKeyword> = PhotographerKeyword.fetchRequest()
         let predicateFormat: String = "keyword_.id_ = %@ && photographer_ = %@" // avoid localization
         fetchRequest.predicate = NSPredicate(format: predicateFormat, argumentArray: [keywordID, photographer])
 
-        do {
-            photographerKeywords = try context.fetch(fetchRequest)
-        } catch {
-            ifDebugFatalError("""
-                              Failed to fetch PhotographerKeyword \"\(keywordID)\" \
-                              for \(photographer.fullNameFirstLast): \(error)
-                              """,
-                              file: #fileID, line: #line)
-            // on non-Debug version, continue with empty `keywords` array
+        var photographerKeywords: [PhotographerKeyword]! = []
+        context.performAndWait {
+            do {
+                photographerKeywords = try context.fetch(fetchRequest)
+            } catch {
+                ifDebugFatalError("""
+                                  Failed to fetch PhotographerKeyword \"\(keywordID)\" \
+                                  for \(photographer.fullNameFirstLast): \(error)
+                                  """,
+                                  file: #fileID, line: #line)
+                // on non-Debug version, continue with empty `keywords` array
+            }
         }
         return photographerKeywords.count
     }
 
     // count number of objects with a given id
     static func count(context: NSManagedObjectContext, keywordID: String) -> Int {
-        var photographerKeywords: [PhotographerKeyword]! = []
-
         let fetchRequest: NSFetchRequest<PhotographerKeyword> = PhotographerKeyword.fetchRequest()
         let predicateFormat: String = "keyword_.id_ = %@" // avoid localization
         fetchRequest.predicate = NSPredicate(format: predicateFormat, argumentArray: [keywordID])
 
-        do {
-            photographerKeywords = try context.fetch(fetchRequest)
-        } catch {
-            ifDebugFatalError("""
-                              Failed to fetch PhotographerKeyword \"\(keywordID)\"
-                              """,
-                              file: #fileID, line: #line)
-            // on non-Debug version, continue with empty `keywords` array
+        var photographerKeywords: [PhotographerKeyword]! = []
+        context.performAndWait {
+            do {
+                photographerKeywords = try context.fetch(fetchRequest)
+            } catch {
+                ifDebugFatalError("""
+                                  Failed to fetch PhotographerKeyword \"\(keywordID)\"
+                                  """,
+                                  file: #fileID, line: #line)
+                // on non-Debug version, continue with empty `keywords` array
+            }
         }
         return photographerKeywords.count
     }
@@ -174,15 +176,21 @@ extension PhotographerKeyword {
     // count total number of PhotographerKeyword objects/records
     // there are ways to count without fetching all records, but this func is only used for testing
     static func count(context: NSManagedObjectContext) -> Int {
-        var photographerKeywords: [PhotographerKeyword]! = []
-
         let fetchRequest: NSFetchRequest<PhotographerKeyword> = PhotographerKeyword.fetchRequest()
         let predicateAll = NSPredicate(format: "TRUEPREDICATE")
         fetchRequest.predicate = predicateAll
-        do {
-            photographerKeywords = try context.fetch(fetchRequest)
-        } catch {
-            ifDebugFatalError("Failed to fetch all PhotographerKeywords: \(error)", file: #fileID, line: #line)
+
+        var photographerKeywords: [PhotographerKeyword]! = []
+        context.performAndWait {
+            do {
+                photographerKeywords = try context.fetch(fetchRequest)
+            } catch {
+                ifDebugFatalError("""
+                                  Failed to fetch PhotographerKeywords: \"\(error)\"
+                                  """,
+                                  file: #fileID, line: #line)
+                // on non-Debug version, continue with empty `keywords` array
+            }
         }
         return photographerKeywords.count
     }

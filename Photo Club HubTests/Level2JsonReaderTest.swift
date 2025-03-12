@@ -62,6 +62,10 @@ import CoreData // for NSManagedObjectContext
     }
 
     // Read XampleMax.level2.json and check for parsing errors
+    // Clears entire CoreData database. Runs on background thread, adding bunch of extra complexity ;-(
+    // Additional checks:
+    //      - PhotographerKeywords added by loading club
+    //      - Keywords added by loading club
     @Test("Parse XampleMax.level2.json") func xampleMaxParse() async {
         let bgContext = PersistenceController.shared.container.newBackgroundContext()
         bgContext.name = "XampleMax"
@@ -90,6 +94,7 @@ import CoreData // for NSManagedObjectContext
         let organizations: [Organization] = (try? context.fetch(fetchRequest)) ?? []
 
         #expect(Keyword.count(context: bgContext) == 3)
+        #expect(PhotographerKeyword.count(context: bgContext, keywordID: "Landscape") == 1)
 
         #expect(organizations.count == 1)
         if organizations.isEmpty == false {
