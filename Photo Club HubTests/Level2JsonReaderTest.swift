@@ -66,6 +66,7 @@ import CoreData // for NSManagedObjectContext
     // Additional checks:
     //      - PhotographerKeywords added by loading club
     //      - Keywords added by loading club
+    //      - properties of loaded club
     @Test("Parse XampleMax.level2.json") func xampleMaxParse() async {
         let bgContext = PersistenceController.shared.container.newBackgroundContext()
         bgContext.name = "XampleMax"
@@ -106,6 +107,11 @@ import CoreData // for NSManagedObjectContext
     }
 
     // Read fgDeGender.level2.json and check for parsing errors
+    // Clears entire CoreData database. Runs on background thread, adding bunch of extra complexity ;-(
+    // Additional checks:
+    //      - PhotographerKeywords added by loading club
+    //      - Keywords added by loading club
+    //      - properties of loaded club
     @Test("Parse fgDeGender.level2.json") func fgDeGenderParse() async {
         let bgContext = PersistenceController.shared.container.newBackgroundContext()
         bgContext.name = "fgDeGender"
@@ -140,9 +146,12 @@ import CoreData // for NSManagedObjectContext
             #expect(organizations[0].fullName == idPlus.fullName)
             #expect(organizations[0].town == idPlus.town)
             #expect(organizations[0].nickname == idPlus.nickname)
+            #expect(organizations[0].fotobondNumber == 1620)
         }
 
         #expect(Keyword.count(context: bgContext) == 2)
+        #expect(PhotographerKeyword.count(context: bgContext, keywordID: "Minimal") == 1)
+        #expect(PhotographerKeyword.count(context: bgContext) == 2)
     }
 
 }
