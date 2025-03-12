@@ -76,8 +76,6 @@
 		D0CA9B3F2D6B7959005428C0 /* PhotographerKeyword.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CA9B3E2D6B7959005428C0 /* PhotographerKeyword.swift */; };
 		D0CFACAD2CDEDCBA005E3A0B /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D0CFACAC2CDEDCBA005E3A0B /* SwiftyJSON */; };
 		D0D18C78296E1F6A00B334DB /* OrganizationIdPlus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D18C77296E1F6A00B334DB /* OrganizationIdPlus.swift */; };
-		D0DDEF582D80E965002A842A /* String+random.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DDEF522D80E965002A842A /* String+random.swift */; };
-		D0DDEF592D8101FB002A842A /* String+random.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DDEF522D80E965002A842A /* String+random.swift */; };
 		D0DE02772789D1B30062738C /* RoleIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DE02762789D1B30062738C /* RoleIconView.swift */; };
 		D0DFBEF42D47036900CB9E73 /* Readme.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = D0DFBEF32D47036900CB9E73 /* Readme.xcstrings */; };
 		D0E2235427DE9139002A8600 /* PreludeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E2235327DE9139002A8600 /* PreludeView.swift */; };
@@ -226,7 +224,6 @@
 		D0D18C77296E1F6A00B334DB /* OrganizationIdPlus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationIdPlus.swift; sourceTree = "<group>"; };
 		D0D4860D2B0EC18A00ED0542 /* Photo_Club_Hub_2_5_2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_5_2.xcdatamodel; sourceTree = "<group>"; };
 		D0DCF7862D090D5C0057FB24 /* Photo_Club_Hub_2_7_2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_7_2.xcdatamodel; sourceTree = "<group>"; };
-		D0DDEF522D80E965002A842A /* String+random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+random.swift"; sourceTree = "<group>"; };
 		D0DE02762789D1B30062738C /* RoleIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleIconView.swift; sourceTree = "<group>"; };
 		D0DFBEF32D47036900CB9E73 /* Readme.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Readme.xcstrings; sourceTree = "<group>"; };
 		D0E02F972B80191300D67CDA /* Readme_NL_2_7_1.pages */ = {isa = PBXFileReference; lastKnownFileType = file; path = Readme_NL_2_7_1.pages; sourceTree = "<group>"; };
@@ -359,7 +356,6 @@
 				D06061EC28A05D4600A675A7 /* String+Paths.swift */,
 				D0362A862AC3A21200F87378 /* String+containsWordUsingNLP.swift */,
 				D02F88522C4C242C0043B25B /* String+Date.swift */,
-				D0DDEF522D80E965002A842A /* String+random.swift */,
 			);
 			path = "String extensions";
 			sourceTree = "<group>";
@@ -899,7 +895,6 @@
 				D0EEF48F2C2844290086419D /* Settings.swift in Sources */,
 				D0831A22277F72270049AB84 /* MemberPortfolioListView.swift in Sources */,
 				D0C8E3A22BB81B4A00348D97 /* ItemFilterStatsView.swift in Sources */,
-				D0DDEF592D8101FB002A842A /* String+random.swift in Sources */,
 				D0AE1B7527889E8600E0100E /* OrganizationListView.swift in Sources */,
 				D0E694C927EF9B450054D634 /* LockAnimationView.swift in Sources */,
 				D0416282295BBA7700ED073A /* CoreLocation+Equatable.swift in Sources */,
@@ -953,7 +948,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0DDEF582D80E965002A842A /* String+random.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
