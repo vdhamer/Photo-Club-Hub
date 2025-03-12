@@ -89,7 +89,7 @@
 		D0F871952D403D1700530D10 /* root.level1.json in Resources */ = {isa = PBXBuildFile; fileRef = D0F8718C2D403D1700530D10 /* root.level1.json */; };
 		D0F871972D403D1700530D10 /* fgWaalre.level2.json in Resources */ = {isa = PBXBuildFile; fileRef = D0F8718A2D403D1700530D10 /* fgWaalre.level2.json */; };
 		D0F8719A2D403D1700530D10 /* fgDeGender.level2.json in Resources */ = {isa = PBXBuildFile; fileRef = D0F871882D403D1700530D10 /* fgDeGender.level2.json */; };
-		D0F8719C2D403D1700530D10 /* level0.json in Resources */ = {isa = PBXBuildFile; fileRef = D0F8718B2D403D1700530D10 /* level0.json */; };
+		D0F8719C2D403D1700530D10 /* root.level0.json in Resources */ = {isa = PBXBuildFile; fileRef = D0F8718B2D403D1700530D10 /* root.level0.json */; };
 		D0F8719F2D403E6000530D10 /* readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = D0F8719E2D403E5500530D10 /* readme.txt */; };
 		D0FE77E52BB9AEE900272077 /* ItemFilterStatsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE77E42BB9AEE900272077 /* ItemFilterStatsEnum.swift */; };
 /* End PBXBuildFile section */
@@ -245,7 +245,7 @@
 		D0F871882D403D1700530D10 /* fgDeGender.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fgDeGender.level2.json; sourceTree = "<group>"; };
 		D0F871892D403D1700530D10 /* fgDeGenderLeden.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = fgDeGenderLeden.xlsx; sourceTree = "<group>"; };
 		D0F8718A2D403D1700530D10 /* fgWaalre.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fgWaalre.level2.json; sourceTree = "<group>"; };
-		D0F8718B2D403D1700530D10 /* level0.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = level0.json; sourceTree = "<group>"; };
+		D0F8718B2D403D1700530D10 /* root.level0.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = root.level0.json; sourceTree = "<group>"; };
 		D0F8718C2D403D1700530D10 /* root.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = root.level1.json; sourceTree = "<group>"; };
 		D0F8718D2D403D1700530D10 /* xampleMax.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = xampleMax.level1.json; sourceTree = "<group>"; };
 		D0F8718E2D403D1700530D10 /* xampleMax.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = xampleMax.level2.json; sourceTree = "<group>"; };
@@ -658,7 +658,7 @@
 				D0F871892D403D1700530D10 /* fgDeGenderLeden.xlsx */,
 				D0F871882D403D1700530D10 /* fgDeGender.level2.json */,
 				D0F8718A2D403D1700530D10 /* fgWaalre.level2.json */,
-				D0F8718B2D403D1700530D10 /* level0.json */,
+				D0F8718B2D403D1700530D10 /* root.level0.json */,
 				D0F8718C2D403D1700530D10 /* root.level1.json */,
 				D0F8718D2D403D1700530D10 /* xampleMax.level1.json */,
 				D0F8718E2D403D1700530D10 /* xampleMax.level2.json */,
@@ -791,7 +791,7 @@
 				D0DFBEF42D47036900CB9E73 /* Readme.xcstrings in Resources */,
 				D04856342D46A41900022117 /* Photo-Club-Hub-InfoPlist.xcstrings in Resources */,
 				D0F8719A2D403D1700530D10 /* fgDeGender.level2.json in Resources */,
-				D0F8719C2D403D1700530D10 /* level0.json in Resources */,
+				D0F8719C2D403D1700530D10 /* root.level0.json in Resources */,
 				D06D08DE2C28835D00872BC2 /* Settings.bundle in Resources */,
 				D04856362D46A45D00022117 /* Localizable.xcstrings in Resources */,
 				D0831A51277F73C00049AB84 /* Preview Assets.xcassets in Resources */,
