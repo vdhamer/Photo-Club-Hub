@@ -13,27 +13,20 @@ class FotogroepDeGenderMembersProvider {
     init(bgContext: NSManagedObjectContext,
          synchronousWithRandomTown: Bool = false,
          randomTown: String = "RandomTown") {
-        insertOnlineMemberData(bgContext: bgContext,
-                               synchronousWithRandomTown: synchronousWithRandomTown,
-                               randomTown: randomTown )
-    }
-
-    fileprivate func insertOnlineMemberData(bgContext: NSManagedObjectContext,
-                                            synchronousWithRandomTown: Bool,
-                                            randomTown: String) {
 
         if synchronousWithRandomTown {
             bgContext.performAndWait { // execute block synchronously or ...
-                self.insertOnlineMemberDataContent(bgContext: bgContext, town: randomTown)
+                self.insertOnlineMemberData(bgContext: bgContext, town: randomTown)
             }
         } else {
             bgContext.perform { // ...execute block asynchronously
-                self.insertOnlineMemberDataContent(bgContext: bgContext)
+                self.insertOnlineMemberData(bgContext: bgContext)
             }
         }
+
     }
 
-    fileprivate func insertOnlineMemberDataContent(bgContext: NSManagedObjectContext, town: String = "Eindhoven") {
+    fileprivate func insertOnlineMemberData(bgContext: NSManagedObjectContext, town: String = "Eindhoven") {
         let fgIdPlus = OrganizationIdPlus(fullName: "Fotogroep de Gender",
                                           town: town,
                                           nickname: "fgDeGender")

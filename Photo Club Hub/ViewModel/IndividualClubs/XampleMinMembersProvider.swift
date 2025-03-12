@@ -13,28 +13,20 @@ class XampleMinMembersProvider {
     init(bgContext: NSManagedObjectContext,
          synchronousWithRandomTown: Bool = false,
          randomTown: String = "RandomTown") {
-        insertOnlineMemberData(bgContext: bgContext,
-                               synchronousWithRandomTown: synchronousWithRandomTown,
-                               randomTown: randomTown )
-    }
-
-    fileprivate func insertOnlineMemberData(bgContext: NSManagedObjectContext,
-                                            synchronousWithRandomTown: Bool,
-                                            randomTown: String) {
 
         if synchronousWithRandomTown {
             bgContext.performAndWait { // ...or execute same block synchronously
-                self.insertOnlineMemberDataContent(bgContext: bgContext, town: randomTown)
+                self.insertOnlineMemberData(bgContext: bgContext, town: randomTown)
             }
         } else {
             bgContext.perform { // execute block asynchronously...
-                self.insertOnlineMemberDataContent(bgContext: bgContext)
+                self.insertOnlineMemberData(bgContext: bgContext)
             }
         }
 
     }
 
-    fileprivate func insertOnlineMemberDataContent(bgContext: NSManagedObjectContext, town: String = "Rotterdam") {
+    fileprivate func insertOnlineMemberData(bgContext: NSManagedObjectContext, town: String = "Rotterdam") {
         let fgIdPlus = OrganizationIdPlus(fullName: "Xample Club Min",
                                           town: town,
                                           nickname: "XampleMin")
