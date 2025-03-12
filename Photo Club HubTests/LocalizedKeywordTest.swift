@@ -40,8 +40,8 @@ import CoreData // for NSManagedObjectContext
     @Test("Check that isoCode can handle lower case") func addLocalizedKeywordLowerCase() {
         let keyword = Keyword.findCreateUpdateNonStandard(context: context, id: String.random(length: 25))
         let language = Language.findCreateUpdate(context: context, isoCode: "eN")
-        let localizedName = String.random(length: 210)
-        let localizedUsage = String.random(length: 220)
+        let localizedName = String.random(length: 10)
+        let localizedUsage = String.random(length: 20)
 
         let localizedKeyword =  LocalizedKeyword.findCreateUpdate(context: context,
                                                                   keyword: keyword,
@@ -57,7 +57,7 @@ import CoreData // for NSManagedObjectContext
     @Test("Is nil handled properly") func addLocalizedKeywordNilUsage() {
         let keyword = Keyword.findCreateUpdateNonStandard(context: context, id: String.random(length: 25))
         let language = Language.findCreateUpdate(context: context, isoCode: "NL")
-        let localizedName = String.random(length: 210)
+        let localizedName = String.random(length: 10)
 
         let localizedKeyword =  LocalizedKeyword.findCreateUpdate(context: context,
                                                                   keyword: keyword,
@@ -72,7 +72,7 @@ import CoreData // for NSManagedObjectContext
     @Test("Is nil overwritten properly") func addLocalizedKeywordReplaceNil() {
         let keyword = Keyword.findCreateUpdateNonStandard(context: context, id: String.random(length: 25))
         let language = Language.findCreateUpdate(context: context, isoCode: "NL")
-        let localizedName = String.random(length: 210)
+        let localizedName = String.random(length: 10)
 
         let localizedKeyword1 =  LocalizedKeyword.findCreateUpdate(context: context,
                                                                    keyword: keyword,
