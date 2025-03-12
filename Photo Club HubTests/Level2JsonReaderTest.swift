@@ -9,7 +9,7 @@ import Testing
 @testable import Photo_Club_Hub
 import CoreData // for NSManagedObjectContext
 
-@MainActor @Suite("Tests the Level 2 JSON reader") struct Level2JsonReaderTests {
+@MainActor @Suite("Tests the Level2JsonReader class") struct Level2JsonReaderTests {
 
     fileprivate let context: NSManagedObjectContext
 
