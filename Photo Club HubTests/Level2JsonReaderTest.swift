@@ -9,7 +9,7 @@ import Testing
 @testable import Photo_Club_Hub
 import CoreData // for NSManagedObjectContext
 
-@MainActor @Suite("Tests the Level2JsonReader class") struct Level2JsonReaderTests {
+@MainActor @Suite("Tests the Level 2 JSON reader") struct Level2JsonReaderTests {
 
     fileprivate let context: NSManagedObjectContext
 
@@ -18,7 +18,7 @@ import CoreData // for NSManagedObjectContext
     }
 
     // Read XampleMin.level2.json and check for parsing errors.
-    // Clears entire CoreData database. Runs on background thread, adding bunch of extra complexity ;-(
+    // Clears all CoreData keywords. Runs on background thread, adding bunch of extra complexity ;-(
     @Test("Parse XampleMin.level2.json") func xampleMinParse() async {
         let bgContext = PersistenceController.shared.container.newBackgroundContext()
         bgContext.name = "XampleMin"
@@ -47,6 +47,7 @@ import CoreData // for NSManagedObjectContext
         let organizations: [Organization] = (try? context.fetch(fetchRequest)) ?? []
 
         #expect(Keyword.count(context: bgContext) == 0)
+        #expect(PhotographerKeyword.count(context: bgContext) == 0)  // A club without PhotographerKeywords
 
         #expect(organizations.count == 1)
         if organizations.isEmpty == false {
@@ -59,7 +60,7 @@ import CoreData // for NSManagedObjectContext
     }
 
     // Read XampleMax.level2.json and check for parsing errors
-    // Clears entire CoreData database. Runs on background thread, adding bunch of extra complexity ;-(
+    // Clears all CoreData keywords. Runs on background thread, adding bunch of extra complexity ;-(
     @Test("Parse XampleMax.level2.json") func xampleMaxParse() async {
         let bgContext = PersistenceController.shared.container.newBackgroundContext()
         bgContext.name = "XampleMax"
@@ -100,7 +101,7 @@ import CoreData // for NSManagedObjectContext
     }
 
     // Read fgDeGender.level2.json and check for parsing errors
-    // Clears entire CoreData database. Runs on background thread, adding bunch of extra complexity ;-(
+    // Clears all CoreData keywords. Runs on background thread, adding bunch of extra complexity ;-(
     @Test("Parse fgDeGender.level2.json") func fgDeGenderParse() async {
         let bgContext = PersistenceController.shared.container.newBackgroundContext()
         bgContext.name = "fgDeGender"
@@ -144,7 +145,7 @@ import CoreData // for NSManagedObjectContext
     }
 
     // Read fgDeGender.level2.json and check for parsing errors
-    // Clears entire CoreData database. Runs on background thread, adding bunch of extra complexity ;-(
+    // Clears all CoreData keywords. Runs on background thread, adding bunch of extra complexity ;-(
     @Test("Load 2 clubs with keyword data for same photographer") func fgWaalreFgDeGender() async {
         let bgContext = PersistenceController.shared.container.newBackgroundContext()
         bgContext.name = "fgDeGender"
