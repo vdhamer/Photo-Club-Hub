@@ -98,13 +98,13 @@ struct WhoIsWhoListView: View {
                                    \(PhotographerKeyword.count(context: viewContext, keywordID: "Travel"))
                                    """)
                     Divider()
-//                    Text(verbatim: """ // TODO updating of view using async function
-//                                   Total number of Keyword instances: \
-//                                   \(PhotographerKeyword.count(context: viewContext))
-//                                   """)
-//                    Divider()
+                    Text(verbatim: """
+                                   Total number of Keyword instances: \
+                                   \(PhotographerKeyword.count(context: viewContext))
+                                   """)
+                    Divider()
                     Text(verbatim: "Number of different Keywords: \(Keyword.count(context: viewContext))")
-                } .foregroundColor(Color.red) .font(.callout)
+                } .foregroundColor(Color.gray) .font(.callout)
             }
             .foregroundColor(Color.secondary)
 

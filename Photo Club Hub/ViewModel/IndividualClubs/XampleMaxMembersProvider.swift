@@ -10,38 +10,54 @@ import CoreLocation // for CLLocationCoordinate2DMake
 
 class XampleMaxMembersProvider {
 
-    init(bgContext: NSManagedObjectContext, townOverruleTo: String? = nil) {
-        insertOnlineMemberData(bgContext: bgContext, overrulingTown: townOverruleTo)
+    init(bgContext: NSManagedObjectContext,
+         synchronousWithRandomTown: Bool = false,
+         randomTown: String = "RandomTown") {
+        insertOnlineMemberData(bgContext: bgContext,
+                               synchronousWithRandomTown: synchronousWithRandomTown,
+                               randomTown: randomTown )
     }
 
-    fileprivate func insertOnlineMemberData(bgContext: NSManagedObjectContext, overrulingTown: String?) {
+    fileprivate func insertOnlineMemberData(bgContext: NSManagedObjectContext,
+                                            synchronousWithRandomTown: Bool,
+                                            randomTown: String) {
 
-	let overruledTown: String = overrulingTown != nil ? overrulingTown! : "Amsterdam"
-        let fotogroepXampleMaxIdPlus = OrganizationIdPlus(fullName: "Xample Club Max",
-                                                           town: overruledTown,
-                                                           nickname: "XampleMax")
-
-        bgContext.perform { // execute on background thread
-            let club = Organization.findCreateUpdate(context: bgContext,
-                                                     organizationTypeEnum: .club,
-                                                     idPlus: fotogroepXampleMaxIdPlus,
-                                                     // real coordinates added in XampleMax.level2.json
-                                                     coordinates: CLLocationCoordinate2DMake(0, 0),
-                                                     optionalFields: OrganizationOptionalFields() // empty fields
-                                                    )
-            ifDebugPrint("\(club.fullNameTown): Starting insertOnlineMemberData() in background")
-
-            _ = Level2JsonReader(bgContext: bgContext,
-                                 urlComponents: UrlComponents.xampleMax,
-                                 club: club,
-                                 useOnlyFile: false)
-            do {
-                try bgContext.save()
-            } catch {
-                ifDebugFatalError("Failed to save club XampleMax", file: #file, line: #line)
+        if synchronousWithRandomTown {
+            bgContext.performAndWait { // ...or execute same block synchronously
+                self.insertOnlineMemberDataContent(bgContext: bgContext, town: randomTown)
             }
-
+        } else {
+            bgContext.perform { // execute block asynchronously...
+                self.insertOnlineMemberDataContent(bgContext: bgContext)
+            }
         }
+
+    }
+
+    fileprivate func insertOnlineMemberDataContent(bgContext: NSManagedObjectContext, town: String = "Amsterdam") {
+        let fgIdPlus = OrganizationIdPlus(fullName: "Xample Club Max",
+                                          town: town,
+                                          nickname: "XampleMax")
+
+        let club = Organization.findCreateUpdate(context: bgContext,
+                                                 organizationTypeEnum: .club,
+                                                 idPlus: fgIdPlus,
+                                                 // real coordinates added in XampleMax.level2.json
+                                                 coordinates: CLLocationCoordinate2DMake(0, 0),
+                                                 optionalFields: OrganizationOptionalFields() // empty fields
+        )
+        ifDebugPrint("\(club.fullNameTown): Starting insertOnlineMemberData() in background")
+
+        _ = Level2JsonReader(bgContext: bgContext,
+                             urlComponents: UrlComponents.xampleMax,
+                             club: club,
+                             useOnlyFile: false)
+        do {
+            try bgContext.save()
+        } catch {
+            ifDebugFatalError("Failed to save club \(fgIdPlus.nickname)", file: #file, line: #line)
+        }
+
     }
 
 }

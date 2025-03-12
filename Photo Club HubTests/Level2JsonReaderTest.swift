@@ -29,34 +29,36 @@ import CoreData // for NSManagedObjectContext
         bgContext.automaticallyMergesChangesFromParent = true
 
         Model.deleteCoreDataKeywords(context: bgContext) // This test doesn't have Keywords
+        #expect(Keyword.count(context: bgContext) == 0)
 
         // note that club XampleMin may already be loaded
         // note that XampleMinMembersProvider runs asynchronously (via bgContext.perform {})
-        let townOverruleTo = String.random(length: 10)
-        _ = XampleMinMembersProvider(bgContext: bgContext, townOverruleTo: townOverruleTo)
+        let randomTown = String.random(length: 10)
+        _ = XampleMinMembersProvider(bgContext: bgContext, synchronousWithRandomTown: true, randomTown: randomTown)
 
         let idPlus = OrganizationIdPlus(fullName: "Xample Club Min",
-                                        town: townOverruleTo, // unique town to keep this separate from normal loading
+                                        town: randomTown, // unique town to keep this separate from normal loading
                                         nickname: "XampleMin")
 
         let predicateFormat: String = "town_ = %@" // avoid localization
         // Note that organizationType is not an identifying attribute.
         // This implies that you cannot have 2 organizations with the same Name and Town, but of a different type.
         let predicate = NSPredicate(format: predicateFormat,
-                                    argumentArray: [ townOverruleTo ] )
+                                    argumentArray: [ randomTown ] )
         let fetchRequest: NSFetchRequest<Organization> = Organization.fetchRequest()
         fetchRequest.predicate = predicate
         let organizations: [Organization] = (try? context.fetch(fetchRequest)) ?? []
 
         #expect(Keyword.count(context: bgContext) == 0)
 
-//        #expect(organizations.count == 1) // TODO Test doesn't work because of concurrency issue
+        #expect(organizations.count == 1)
         if organizations.isEmpty == false {
             #expect(organizations[0].organizationType.organizationTypeName == OrganizationTypeEnum.club.rawValue)
             #expect(organizations[0].fullName == idPlus.fullName)
             #expect(organizations[0].town == idPlus.town)
             #expect(organizations[0].nickname == idPlus.nickname)
         }
+
     }
 
     // Read XampleMax.level2.json and check for parsing errors
@@ -67,28 +69,29 @@ import CoreData // for NSManagedObjectContext
         bgContext.automaticallyMergesChangesFromParent = true
 
         Model.deleteCoreDataKeywords(context: bgContext) // This test does have Keywords
+        #expect(Keyword.count(context: bgContext) == 0)
 
         // note that club XampleMax may already be loaded
         // note that XampleMaxMembersProvider runs asynchronously (via bgContext.perform {})
-        let townOverruleTo = String.random(length: 10)
-        _ = XampleMaxMembersProvider(bgContext: bgContext, townOverruleTo: townOverruleTo)
+        let randomTown = String.random(length: 10)
+        _ = XampleMaxMembersProvider(bgContext: bgContext, synchronousWithRandomTown: true, randomTown: randomTown)
 
         let idPlus = OrganizationIdPlus(fullName: "Xample Club Max",
-                                        town: townOverruleTo, // unique town to keep this separate from normal loading
+                                        town: randomTown, // unique town to keep this separate from normal loading
                                         nickname: "XampleMax")
 
         let predicateFormat: String = "town_ = %@" // avoid localization
         // Note that organizationType is not an identifying attribute.
         // This implies that you cannot have 2 organizations with the same Name and Town, but of a different type.
         let predicate = NSPredicate(format: predicateFormat,
-                                    argumentArray: [ townOverruleTo ] )
+                                    argumentArray: [ randomTown ] )
         let fetchRequest: NSFetchRequest<Organization> = Organization.fetchRequest()
         fetchRequest.predicate = predicate
         let organizations: [Organization] = (try? context.fetch(fetchRequest)) ?? []
 
         #expect(Keyword.count(context: bgContext) == 3)
 
-//        #expect(organizations.count == 1) Test doesn't work because of concurrency issue
+        #expect(organizations.count == 1)
         if organizations.isEmpty == false {
             #expect(organizations[0].organizationType.organizationTypeName == OrganizationTypeEnum.club.rawValue)
             #expect(organizations[0].fullName == idPlus.fullName)
@@ -98,48 +101,43 @@ import CoreData // for NSManagedObjectContext
     }
 
     // Read fgDeGender.level2.json and check for parsing errors
-//    @Test("Parse fgDeGender.level2.json") func fgDeGenderParse() async {
-//        let bgContext = PersistenceController.shared.container.newBackgroundContext()
-//        bgContext.name = "fgDeGender"
-//        bgContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-//        bgContext.automaticallyMergesChangesFromParent = true
-//
-//        Model.deleteCoreDataKeywords(context: bgContext) // This test does have Keywords
-//
-//        // note that club fgDeGender may already be loaded
-//        // note that fgDeGenderMembersProvider runs asynchronously (via bgContext.perform {})
-//        let townOverruleTo = String.random(length: 10)
-//        _ = FotogroepDeGenderMembersProvider(bgContext: bgContext, townOverruleTo: townOverruleTo)
-//
-//        let idPlus = OrganizationIdPlus(fullName: "Fotogroep De Gender",
-//                                        town: townOverruleTo, // unique town to keep this separate from normal loading
-//                                        nickname: "fgDeGender")
-//
-//        let predicateFormat: String = "town_ = %@" // avoid localization
-//        // Note that organizationType is not an identifying attribute.
-//        // This implies that you cannot have 2 organizations with the same Name and Town, but of a different type.
-//        let predicate = NSPredicate(format: predicateFormat,
-//                                    argumentArray: [ townOverruleTo ] )
-//        let fetchRequest: NSFetchRequest<Organization> = Organization.fetchRequest()
-//        fetchRequest.predicate = predicate
-//        let organizations: [Organization] = (try? context.fetch(fetchRequest)) ?? []
-//
-//        #expect(Keyword.count(context: bgContext) == 2)
-//        for keyword in Keyword { // TODO
-//            var count: Int = 0
-//            for keyword in Keyword {
-//                count += 1
-//                print("Keyword #\(count): \(keyword.id)")
-//            }
-//        }
-//
-////        #expect(organizations.count == 1) Test doesn't work because of concurrency issue
-//        if organizations.isEmpty == false {
-//            #expect(organizations[0].organizationType.organizationTypeName == OrganizationTypeEnum.club.rawValue)
-//            #expect(organizations[0].fullName == idPlus.fullName)
-//            #expect(organizations[0].town == idPlus.town)
-//            #expect(organizations[0].nickname == idPlus.nickname)
-//        }
-//    }
+    @Test("Parse fgDeGender.level2.json") func fgDeGenderParse() async {
+        let bgContext = PersistenceController.shared.container.newBackgroundContext()
+        bgContext.name = "fgDeGender"
+        bgContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+        bgContext.automaticallyMergesChangesFromParent = true
+
+        Model.deleteCoreDataKeywords(context: bgContext) // This test does have Keywords
+
+        // note that club fgDeGender may already be loaded
+        // note that fgDeGenderMembersProvider runs asynchronously (via bgContext.perform {})
+        let randomTown = String.random(length: 10)
+        _ = FotogroepDeGenderMembersProvider(bgContext: bgContext,
+                                             synchronousWithRandomTown: true,
+                                             randomTown: randomTown)
+
+        let idPlus = OrganizationIdPlus(fullName: "Fotogroep de Gender",
+                                        town: randomTown, // unique town to keep this separate from normal loading
+                                        nickname: "fgDeGender")
+
+        let predicateFormat: String = "town_ = %@" // avoid localization
+        // Note that organizationType is not an identifying attribute.
+        // This implies that you cannot have 2 organizations with the same Name and Town, but of a different type.
+        let predicate = NSPredicate(format: predicateFormat,
+                                    argumentArray: [ randomTown ] )
+        let fetchRequest: NSFetchRequest<Organization> = Organization.fetchRequest()
+        fetchRequest.predicate = predicate
+        let organizations: [Organization] = (try? context.fetch(fetchRequest)) ?? []
+
+        #expect(organizations.count == 1)
+        if organizations.isEmpty == false {
+            #expect(organizations[0].organizationType.organizationTypeName == OrganizationTypeEnum.club.rawValue)
+            #expect(organizations[0].fullName == idPlus.fullName)
+            #expect(organizations[0].town == idPlus.town)
+            #expect(organizations[0].nickname == idPlus.nickname)
+        }
+
+        #expect(Keyword.count(context: bgContext) == 2)
+    }
 
 }

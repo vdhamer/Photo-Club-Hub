@@ -10,30 +10,52 @@ import CoreLocation // for CLLocationCoordinate2DMake
 
 class FotogroepDeGenderMembersProvider {
 
-    init(bgContext: NSManagedObjectContext) {
-        insertOnlineMemberData(bgContext: bgContext) // should do its own bgContext.save()
+    init(bgContext: NSManagedObjectContext,
+         synchronousWithRandomTown: Bool = false,
+         randomTown: String = "RandomTown") {
+        insertOnlineMemberData(bgContext: bgContext,
+                               synchronousWithRandomTown: synchronousWithRandomTown,
+                               randomTown: randomTown )
     }
 
-    fileprivate func insertOnlineMemberData(bgContext: NSManagedObjectContext) { // runs on a background thread
+    fileprivate func insertOnlineMemberData(bgContext: NSManagedObjectContext,
+                                            synchronousWithRandomTown: Bool,
+                                            randomTown: String) {
 
-        let fotogroepDeGenderIdPlus = OrganizationIdPlus(fullName: "Fotogroep de Gender",
-                                                         town: "Eindhoven",
-                                                         nickname: "fgDeGender")
+        if synchronousWithRandomTown {
+            bgContext.performAndWait { // ...or execute same block synchronously
+                self.insertOnlineMemberDataContent(bgContext: bgContext, town: randomTown)
+            }
+        } else {
+            bgContext.perform { // execute block asynchronously...
+                self.insertOnlineMemberDataContent(bgContext: bgContext)
+            }
+        }
 
-        bgContext.perform { // execute on background thread
-            let club = Organization.findCreateUpdate(context: bgContext,
-                                                     organizationTypeEnum: .club,
-                                                     idPlus: fotogroepDeGenderIdPlus,
-                                                     // real coordinates added in fgDeGender.level2.json
-                                                     coordinates: CLLocationCoordinate2DMake(0, 0),
-                                                     optionalFields: OrganizationOptionalFields() // empty fields
-                                                    )
-            ifDebugPrint("\(club.fullNameTown): Starting insertOnlineMemberData() in background")
+    }
 
-            _ = Level2JsonReader(bgContext: bgContext,
-                                 urlComponents: UrlComponents.deGender,
-                                 club: club,
-                                 useOnlyFile: false)
+    fileprivate func insertOnlineMemberDataContent(bgContext: NSManagedObjectContext, town: String = "Eindhoven") {
+        let fgIdPlus = OrganizationIdPlus(fullName: "Fotogroep de Gender",
+                                          town: town,
+                                          nickname: "fgDeGender")
+
+        let club = Organization.findCreateUpdate(context: bgContext,
+                                                 organizationTypeEnum: .club,
+                                                 idPlus: fgIdPlus,
+                                                 // real coordinates added in fgDeGender.level2.json
+                                                 coordinates: CLLocationCoordinate2DMake(0, 0),
+                                                 optionalFields: OrganizationOptionalFields() // empty fields
+                                                )
+        ifDebugPrint("\(club.fullNameTown): Starting insertOnlineMemberData() in background")
+
+        _ = Level2JsonReader(bgContext: bgContext,
+                             urlComponents: UrlComponents.deGender,
+                             club: club,
+                             useOnlyFile: false)
+        do {
+            try bgContext.save()
+        } catch {
+            ifDebugFatalError("Failed to save club \(fgIdPlus.nickname)", file: #file, line: #line)
         }
     }
 
