@@ -23,15 +23,14 @@ class FotogroepDeGenderMembersProvider {
                                             randomTown: String) {
 
         if synchronousWithRandomTown {
-            bgContext.performAndWait { // ...or execute same block synchronously
+            bgContext.performAndWait { // execute block synchronously or ...
                 self.insertOnlineMemberDataContent(bgContext: bgContext, town: randomTown)
             }
         } else {
-            bgContext.perform { // execute block asynchronously...
+            bgContext.perform { // ...execute block asynchronously
                 self.insertOnlineMemberDataContent(bgContext: bgContext)
             }
         }
-
     }
 
     fileprivate func insertOnlineMemberDataContent(bgContext: NSManagedObjectContext, town: String = "Eindhoven") {

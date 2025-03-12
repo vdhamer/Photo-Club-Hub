@@ -154,12 +154,13 @@ extension PhotographerKeyword {
 
     // count number of objects with a given id
     static func count(context: NSManagedObjectContext, keywordID: String) -> Int {
-        let fetchRequest: NSFetchRequest<PhotographerKeyword> = PhotographerKeyword.fetchRequest()
-        let predicateFormat: String = "keyword_.id_ = %@" // avoid localization
-        fetchRequest.predicate = NSPredicate(format: predicateFormat, argumentArray: [keywordID])
-
         var photographerKeywords: [PhotographerKeyword]! = []
+
         context.performAndWait {
+            let fetchRequest: NSFetchRequest<PhotographerKeyword> = PhotographerKeyword.fetchRequest()
+            let predicateFormat: String = "keyword_.id_ = %@" // avoid localization
+            fetchRequest.predicate = NSPredicate(format: predicateFormat, argumentArray: [keywordID])
+
             do {
                 photographerKeywords = try context.fetch(fetchRequest)
             } catch {
@@ -170,6 +171,7 @@ extension PhotographerKeyword {
                 // on non-Debug version, continue with empty `keywords` array
             }
         }
+
         return photographerKeywords.count
     }
 

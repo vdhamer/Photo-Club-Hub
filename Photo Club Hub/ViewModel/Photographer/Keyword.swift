@@ -178,16 +178,19 @@ extension Keyword {
     static func count(context: NSManagedObjectContext) -> Int {
         var keywords: [Keyword]! = []
 
-        let fetchRequest: NSFetchRequest<Keyword> = Keyword.fetchRequest()
-        let predicateAll = NSPredicate(format: "TRUEPREDICATE")
-        fetchRequest.predicate = predicateAll
         context.performAndWait {
-            do {
-                keywords = try context.fetch(fetchRequest)
-            } catch {
-                ifDebugFatalError("Failed to fetch all Keywords: \(error)", file: #fileID, line: #line)
+            let fetchRequest: NSFetchRequest<Keyword> = Keyword.fetchRequest()
+            let predicateAll = NSPredicate(format: "TRUEPREDICATE")
+            fetchRequest.predicate = predicateAll
+            context.performAndWait {
+                do {
+                    keywords = try context.fetch(fetchRequest)
+                } catch {
+                    ifDebugFatalError("Failed to fetch all Keywords: \(error)", file: #fileID, line: #line)
+                }
             }
         }
+
         return keywords.count
     }
 

@@ -11,29 +11,34 @@ import CoreLocation // for CLLocationCoordinate2DMake
 
 class FotogroepWaalreMembersProvider { // WWDC21 Earthquakes also uses a Class here
 
-    static let photoClubWaalreIdPlus = OrganizationIdPlus(fullName: "Fotogroep Waalre",
-                                                          town: "Waalre",
-                                                          nickname: "fgWaalre")
-
-    init(bgContext: NSManagedObjectContext) {
-        // following is asynchronous, but not documented as such using async/await
-        bgContext.perform { // done asynchronously by CoreData
-            self.insertOnlineMemberData(bgContext: bgContext)
-            do {
-                if bgContext.hasChanges { // optimisation
-                    try bgContext.save() // persist Fotogroep Waalre and its online member data
-                    print("Sucess loading FG Waalre member data")
-                }
-            } catch {
-                ifDebugFatalError("Error saving members of FG Waalre: \(error.localizedDescription)")
-            }
-        }
+    init(bgContext: NSManagedObjectContext,
+         synchronousWithRandomTown: Bool = false,
+         randomTown: String = "RandomTown") {
+        insertOnlineMemberData(bgContext: bgContext,
+                               synchronousWithRandomTown: synchronousWithRandomTown,
+                               randomTown: randomTown )
     }
 
-    fileprivate func insertOnlineMemberData(bgContext: NSManagedObjectContext) { // runs on a background thread
+    fileprivate func  insertOnlineMemberData(bgContext: NSManagedObjectContext,
+                                             synchronousWithRandomTown: Bool,
+                                             randomTown: String  ) {
+
+        if synchronousWithRandomTown {
+            bgContext.performAndWait { // execute block synchronously or ...
+                self.insertOnlineMemberDataContent(bgContext: bgContext, town: randomTown)
+            }
+        } else {
+            bgContext.perform { // ...execute block asynchronously
+                self.insertOnlineMemberDataContent(bgContext: bgContext)
+            }
+        }
+
+    }
+
+    fileprivate func insertOnlineMemberDataContent(bgContext: NSManagedObjectContext, town: String = "Waalre") {
 
         let fotogroepWaalreIdPlus = OrganizationIdPlus(fullName: "Fotogroep Waalre",
-                                                       town: "Waalre",
+                                                       town: town,
                                                        nickname: "fgWaalre")
 
         bgContext.perform { // execute on background thread
@@ -50,6 +55,15 @@ class FotogroepWaalreMembersProvider { // WWDC21 Earthquakes also uses a Class h
                                  urlComponents: UrlComponents.waalre,
                                  club: club,
                                  useOnlyFile: false)
+        }
+
+        do {
+            if bgContext.hasChanges { // optimisation
+                try bgContext.save() // persist club and its online member data
+                print("Sucess loading FG Waalre member data")
+            }
+        } catch {
+            ifDebugFatalError("Error saving members of FG Waalre: \(error.localizedDescription)")
         }
     }
 
