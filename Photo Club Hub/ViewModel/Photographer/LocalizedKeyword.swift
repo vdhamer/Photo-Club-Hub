@@ -39,7 +39,7 @@ extension LocalizedKeyword {
     static func findCreateUpdate(context: NSManagedObjectContext, // can be foreground or background context
                                  keyword: Keyword,
                                  language: Language,
-                                 localizedName: String,
+                                 localizedName: String?,
                                  localizedUsage: String?
                                 ) -> LocalizedKeyword {
 
@@ -71,7 +71,8 @@ extension LocalizedKeyword {
         if let localizedKeyword = localizedKeywords.first {
             if localizedKeyword.update(context: context, localizedName: localizedName, localizedUsage: localizedUsage) {
                 print("""
-                      Updated translation of keyword \"\(keyword.id)\" into \(language.isoCodeCaps) as \(localizedName)
+                      Updated translation of keyword \"\(keyword.id)\" into \
+                      \(language.isoCodeCaps) as \(localizedName ?? "nil")
                       """)
                 if Settings.extraCoreDataSaves {
                     LocalizedKeyword.save(context: context, errorText:
@@ -104,7 +105,7 @@ extension LocalizedKeyword {
     // Update non-identifying attributes/properties within an existing instance of class LocalizedKeyword if needed.
     // Returns whether an update was needed.
     fileprivate func update(context: NSManagedObjectContext,
-                            localizedName: String,
+                            localizedName: String?,
                             localizedUsage: String?) -> Bool {
 
         var modified: Bool = false
@@ -146,6 +147,24 @@ extension LocalizedKeyword {
                 ifDebugFatalError(errorText ?? "Error saving LocalizedKeyword")
             }
         }
+    }
+
+    // count total number of objects in CoreData database
+    static func count(context: NSManagedObjectContext) async -> Int {
+        var localizedKeywords: [LocalizedKeyword]! = []
+
+        let fetchRequest: NSFetchRequest<LocalizedKeyword> = LocalizedKeyword.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "TRUEPREDicate")
+
+        await context.perform {
+            do {
+                localizedKeywords = try context.fetch(fetchRequest)
+            } catch {
+                ifDebugFatalError("Failed to fetch list of all LocalizedKeywords: \(error)", file: #fileID, line: #line)
+                // on non-Debug version, continue with empty `keywords` array
+            }
+        }
+        return localizedKeywords.count
     }
 
     // count number of objects with a given id

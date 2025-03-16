@@ -84,6 +84,7 @@
 		D0EAEB332B3CA6D300EC05B6 /* Level1JsonReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EAEB322B3CA6D300EC05B6 /* Level1JsonReader.swift */; };
 		D0EB533C295775240061613B /* Crosshairs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EB533B295775240061613B /* Crosshairs.swift */; };
 		D0EEF48F2C2844290086419D /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EEF48E2C2844290086419D /* Settings.swift */; };
+		D0F4B4D82D86CFA500F60920 /* empty.level0.json in Resources */ = {isa = PBXBuildFile; fileRef = D06F109E2D84D8CC005AE931 /* empty.level0.json */; };
 		D0F4FAAA2D82275100FFAEAE /* Level0JsonReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F4FAA92D82275100FFAEAE /* Level0JsonReader.swift */; };
 		D0F5EE872C54EDC60028C9A6 /* PhotographerOptionalFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F5EE862C54EDC60028C9A6 /* PhotographerOptionalFields.swift */; };
 		D0F871952D403D1700530D10 /* root.level1.json in Resources */ = {isa = PBXBuildFile; fileRef = D0F8718C2D403D1700530D10 /* root.level1.json */; };
@@ -161,6 +162,7 @@
 		D06BE9322A4F870B0055B3B1 /* ifDebugUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ifDebugUtils.swift; sourceTree = "<group>"; };
 		D06E0DCA2C822E8900273AE9 /* Photo Club Hub.pptx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Photo Club Hub.pptx"; sourceTree = "<group>"; };
 		D06E91E72B939C1B00D05BC0 /* Photo_Club_Hub_2_5_4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_5_4.xcdatamodel; sourceTree = "<group>"; };
+		D06F109E2D84D8CC005AE931 /* empty.level0.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = empty.level0.json; sourceTree = "<group>"; };
 		D06F34FB2BDE56600047B04F /* Photo_Club_Hub_2_6_2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_6_2.xcdatamodel; sourceTree = "<group>"; };
 		D07276F92D63A8FB0047B0CF /* Website_Status_Feb25.pptx */ = {isa = PBXFileReference; lastKnownFileType = file; path = Website_Status_Feb25.pptx; sourceTree = "<group>"; };
 		D07276FA2D63A8FB0047B0CF /* Website_Status_template.pptx */ = {isa = PBXFileReference; lastKnownFileType = file; path = Website_Status_template.pptx; sourceTree = "<group>"; };
@@ -654,6 +656,7 @@
 		D0F871912D403D1700530D10 /* JSON */ = {
 			isa = PBXGroup;
 			children = (
+				D06F109E2D84D8CC005AE931 /* empty.level0.json */,
 				D0F871852D403D1700530D10 /* 250218_Fotoclubs_Brabant_Oost.xlsx */,
 				D0F871892D403D1700530D10 /* fgDeGenderLeden.xlsx */,
 				D0F871882D403D1700530D10 /* fgDeGender.level2.json */,
@@ -782,6 +785,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0F4B4D82D86CFA500F60920 /* empty.level0.json in Resources */,
 				D04856382D46A62200022117 /* Package.xcstrings in Resources */,
 				D008D2AA28739167007A7BE2 /* .gitignore in Resources */,
 				D0B5743E2C41D79300334E4C /* Assets.xcassets in Resources */,

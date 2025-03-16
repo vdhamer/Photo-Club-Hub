@@ -49,7 +49,7 @@ class Level1JsonReader {
             if let urlData = try? String(contentsOf: fileURL, encoding: .utf8), !useOnlyFile {
                 return urlData
             }
-            print("Could not access online file \(fileURL.relativeString). Trying local file \(filePath) instead.")
+            print("Could not access online file \(fileURL.relativeString). Trying in-app file \(filePath) instead.")
             if let fileData = try? String(contentsOfFile: filePath, encoding: .utf8) {
                 return fileData
             }
