@@ -30,7 +30,7 @@ import CoreData // for NSManagedObjectContext
         let photographerKeyword = PhotographerKeyword.findCreateUpdate(
             context: context,
             photographer: photographer,
-            keyword: Keyword.findCreateUpdateNonStandard(context: context, id: keywordID))
+            keyword: Keyword.findCreateUpdateNonStandard(context: context, id: keywordID, name: [], usage: []))
         #expect(photographerKeyword.keyword.id == keywordID)
         #expect(photographerKeyword.photographer === photographer)
         #expect(photographerKeyword.photographer.givenName == photographer.givenName)
@@ -44,7 +44,7 @@ import CoreData // for NSManagedObjectContext
         let photographerKeyword1 = PhotographerKeyword.findCreateUpdate(
             context: context,
             photographer: photographer,
-            keyword: Keyword.findCreateUpdateNonStandard(context: context, id: keywordID))
+            keyword: Keyword.findCreateUpdateNonStandard(context: context, id: keywordID, name: [], usage: []))
         #expect(photographerKeyword1.keyword.id == keywordID)
         #expect(photographerKeyword1.photographer === photographer)
         #expect(photographerKeyword1.photographer.givenName == photographer.givenName)
@@ -55,7 +55,8 @@ import CoreData // for NSManagedObjectContext
         let photographerKeyword2 = PhotographerKeyword.findCreateUpdate(
             context: context,
             photographer: photographer, // same photographer
-            keyword: Keyword.findCreateUpdateNonStandard(context: context, id: keywordID)) // same keyword
+            keyword: Keyword.findCreateUpdateNonStandard(context: context, id: keywordID,
+                                                         name: [], usage: [])) // same keyword
         #expect(photographerKeyword2.keyword.id == keywordID)
         #expect(photographerKeyword2.photographer === photographer)
         #expect(photographerKeyword2.photographer.givenName == photographer.givenName)

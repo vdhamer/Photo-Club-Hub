@@ -19,7 +19,7 @@ import CoreData // for NSManagedObjectContext
 
     @Test("Add a standard keyword") func addStandardKeyword() throws {
         let keywordID = String.random(length: 10).capitalized
-        let keyword = Keyword.findCreateUpdateStandard(context: context, id: keywordID)
+        let keyword = Keyword.findCreateUpdateStandard(context: context, id: keywordID, name: [], usage: [])
         #expect(keyword.id == keywordID)
         #expect(keyword.isStandard == true)
         Keyword.save(context: context, errorText: "Error saving keyword \"\(keywordID)\"")
@@ -28,7 +28,7 @@ import CoreData // for NSManagedObjectContext
 
     @Test("Add a non-standard keyword") func addNonStandardKeyword() throws {
         let keywordID = String.random(length: 10).capitalized
-        let keyword = Keyword.findCreateUpdateNonStandard(context: context, id: keywordID)
+        let keyword = Keyword.findCreateUpdateNonStandard(context: context, id: keywordID, name: [], usage: [])
         #expect(keyword.id == keywordID)
         #expect(keyword.isStandard == false)
         Keyword.save(context: context, errorText: "Error saving keyword \"\(keywordID)\"")
@@ -37,19 +37,19 @@ import CoreData // for NSManagedObjectContext
 
     @Test("Check capitalization of incoming ID strings") func checkIdCaplitalization() throws {
         let keywordID = "a " + String.random(length: 8).capitalized
-        let keyword = Keyword.findCreateUpdateStandard(context: context, id: keywordID.capitalized)
+        let keyword = Keyword.findCreateUpdateStandard(context: context, id: keywordID.capitalized, name: [], usage: [])
         #expect(keyword.id == keywordID.capitalized)
     }
 
     @Test("Avoid creating same keyword twice") func avoidDuplicateKeywords() {
         let id = String.random(length: 10).capitalized
-        let keyword1 = Keyword.findCreateUpdateStandard(context: context, id: id)
+        let keyword1 = Keyword.findCreateUpdateStandard(context: context, id: id, name: [], usage: [])
         #expect(keyword1.isStandard == true)
         Keyword.save(context: context, errorText: "Error saving keyword \"\(id)\"")
         #expect(Keyword.count(context: context, keywordID: id) == 1)
         Keyword.save(context: context, errorText: "Error saving keyword \"\(id)\"") // shouldn't create a new record
 
-        let keyword2 = Keyword.findCreateUpdateNonStandard(context: context, id: id)
+        let keyword2 = Keyword.findCreateUpdateNonStandard(context: context, id: id, name: [], usage: [])
         #expect(Keyword.count(context: context, keywordID: id) == 1)
         #expect(keyword2.isStandard == false)
 
