@@ -21,7 +21,9 @@ private let fileType = "json"
 
 class Level0JsonReader {
 
-    init(bgContext: NSManagedObjectContext, useOnlyFile: Bool = false, overrulingDataSourceFile: String? = nil) {
+    init(bgContext: NSManagedObjectContext,
+         useOnlyFile: Bool = false,
+         overrulingDataSourceFile: String? = nil) {
 
         bgContext.perform { // switch to supplied background thread
             let overruledDataSourceFile = overrulingDataSourceFile ?? dataSourceFile

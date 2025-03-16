@@ -84,9 +84,9 @@
 		D0EAEB332B3CA6D300EC05B6 /* Level1JsonReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EAEB322B3CA6D300EC05B6 /* Level1JsonReader.swift */; };
 		D0EB533C295775240061613B /* Crosshairs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EB533B295775240061613B /* Crosshairs.swift */; };
 		D0EEF48F2C2844290086419D /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EEF48E2C2844290086419D /* Settings.swift */; };
-		D0F4B4D82D86CFA500F60920 /* empty.level0.json in Resources */ = {isa = PBXBuildFile; fileRef = D06F109E2D84D8CC005AE931 /* empty.level0.json */; };
 		D0F4FAAA2D82275100FFAEAE /* Level0JsonReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F4FAA92D82275100FFAEAE /* Level0JsonReader.swift */; };
 		D0F5EE872C54EDC60028C9A6 /* PhotographerOptionalFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F5EE862C54EDC60028C9A6 /* PhotographerOptionalFields.swift */; };
+		D0F739B32D877A8300D90528 /* empty.level0.json in Resources */ = {isa = PBXBuildFile; fileRef = D06F109E2D84D8CC005AE931 /* empty.level0.json */; };
 		D0F871952D403D1700530D10 /* root.level1.json in Resources */ = {isa = PBXBuildFile; fileRef = D0F8718C2D403D1700530D10 /* root.level1.json */; };
 		D0F871972D403D1700530D10 /* fgWaalre.level2.json in Resources */ = {isa = PBXBuildFile; fileRef = D0F8718A2D403D1700530D10 /* fgWaalre.level2.json */; };
 		D0F8719A2D403D1700530D10 /* fgDeGender.level2.json in Resources */ = {isa = PBXBuildFile; fileRef = D0F871882D403D1700530D10 /* fgDeGender.level2.json */; };
@@ -785,7 +785,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0F4B4D82D86CFA500F60920 /* empty.level0.json in Resources */,
 				D04856382D46A62200022117 /* Package.xcstrings in Resources */,
 				D008D2AA28739167007A7BE2 /* .gitignore in Resources */,
 				D0B5743E2C41D79300334E4C /* Assets.xcassets in Resources */,
@@ -797,6 +796,7 @@
 				D0F8719A2D403D1700530D10 /* fgDeGender.level2.json in Resources */,
 				D0F8719C2D403D1700530D10 /* root.level0.json in Resources */,
 				D06D08DE2C28835D00872BC2 /* Settings.bundle in Resources */,
+				D0F739B32D877A8300D90528 /* empty.level0.json in Resources */,
 				D04856362D46A45D00022117 /* Localizable.xcstrings in Resources */,
 				D0831A51277F73C00049AB84 /* Preview Assets.xcassets in Resources */,
 			);
