@@ -33,7 +33,7 @@ class Level0JsonReader {
                            """)
             }
             let data = self.getData( // get the data from one of the two sources
-                fileURL: URL(string: dataSourcePath + dataSourceFile + "." +
+                fileURL: URL(string: dataSourcePath + overruledDataSourceFile + "." +
                              fileSubType + "." + fileType)!,
                 filePath: filePath,
                 useOnlyFile: useOnlyFile
