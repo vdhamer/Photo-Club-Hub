@@ -55,6 +55,14 @@ extension PhotoClubHubApp {
 
     static func loadClubsAndMembers() {
 
+        // load list of keywords and languages from root.Level0.json file
+        let level0BackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+        level0BackgroundContext.name = "Level 0 loader"
+        level0BackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+        level0BackgroundContext.automaticallyMergesChangesFromParent = true // to push ObjectTypes to bgContext?
+        _ = Level0JsonReader(bgContext: level0BackgroundContext, // read root.Level0.json file
+                             useOnlyFile: false)
+
         // load list of photo clubs and museums from root.Level1.json file
         let level1BackgroundContext = PersistenceController.shared.container.newBackgroundContext()
         level1BackgroundContext.name = "Level 1 loader"
