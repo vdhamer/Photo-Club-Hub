@@ -6,6 +6,7 @@
 //
 
 import CoreData // for NSManagedObjectContext
+import SwiftyJSON // for JSON()
 
 extension Keyword {
 
@@ -35,7 +36,9 @@ extension Keyword {
     // Update existing attributes or fill the new object
     fileprivate static func findCreateUpdate(context: NSManagedObjectContext, // can be foreground or background context
                                              id: String,
-                                             isStandard: Bool? // nil means don't change existing value
+                                             isStandard: Bool?, // nil means don't change existing value
+                                             name: [JSON], // JSON equivalent of a dictionality with localized names
+                                             usage: [JSON]
                                             ) -> Keyword {
 
         // execute fetchRequest to get keyword object for id=id. Query could return multiple - but shouldn't.
@@ -59,7 +62,7 @@ extension Keyword {
         }
 
         if let keyword = keywords.first { // already exists, so update non-identifying attributes
-            if keyword.update(context: context, isStandard: isStandard) {
+            if keyword.update(context: context, isStandard: isStandard, name: name, usage: usage) {
                 if isStandard == nil {
                     ifDebugFatalError("Updated keyword \(keyword.id).isStandard to nil (which is suspicious)")
                 } else {
@@ -75,7 +78,10 @@ extension Keyword {
             let entity = NSEntityDescription.entity(forEntityName: "Keyword", in: context)!
             let keyword = Keyword(entity: entity, insertInto: context)
             keyword.id = id // immediately set it to a non-nil value
-            _ = keyword.update(context: context, isStandard: isStandard) // ignore whether update made changes
+            _ = keyword.update(context: context,
+                               isStandard: isStandard,
+                               name: name, // ignore whether update made changes
+                               usage: usage)
             if Settings.extraCoreDataSaves {
                 Keyword.save(context: context, errorText: "Could not save Keyword \"\(keyword.id)\"")
             }
@@ -88,47 +94,78 @@ extension Keyword {
     // Find existing standard Keyword object or create a new one.
     // Update existing attributes or fill the new object
     static func findCreateUpdateStandard(context: NSManagedObjectContext, // can be foreground or background context
-                                         id: String
+                                         id: String,
+                                         name: [JSON], // array mapping languages to localizedNames
+                                         usage: [JSON]
                                         ) -> Keyword {
-        findCreateUpdate(context: context, id: id, isStandard: true)
+        findCreateUpdate(context: context, id: id, isStandard: true, name: name, usage: usage)
     }
 
     // Find existing non-standard Keyword object or create a new one.
     // Update existing attributes or fill the new object
     static func findCreateUpdateNonStandard(context: NSManagedObjectContext, // can be foreground or background context
-                                            id: String
+                                            id: String,
+                                            name: [JSON], // array mapping languages to localizedNames
+                                            usage: [JSON]
                                            ) -> Keyword {
-        findCreateUpdate(context: context, id: id, isStandard: false)
+        findCreateUpdate(context: context, id: id, isStandard: false, name: name, usage: usage)
     }
 
     // Find existing Keyword object or create a new one without changing the Standard flag.
     // Don't update existing Standard attribute
     static func findCreateUpdateUndefStandard(context: NSManagedObjectContext, // can be foreground or background cntxt
-                                              id: String
+                                              id: String,
+                                              name: [JSON], // array mapping languages to localizedNames
+                                              usage: [JSON]
                                              ) -> Keyword {
-        findCreateUpdate(context: context, id: id, isStandard: nil)
+        findCreateUpdate(context: context, id: id, isStandard: nil, name: name, usage: usage)
     }
 
     // Update non-identifying attributes/properties within an existing instance of class Keyword if needed.
     // Returns whether an update was needed.
     fileprivate func update(context: NSManagedObjectContext,
-                            isStandard: Bool? // nil means don't change
-                           ) -> Bool {
+                            isStandard: Bool?, // nil means don't change
+                            name: [JSON], // empty array means do not change
+                            usage: [JSON]
+    ) -> Bool {
 
         var updated: Bool = false
 
         if isStandard != nil, self.isStandard != isStandard {
             self.isStandard = isStandard!
-            if Settings.extraCoreDataSaves {
-                do {
-                    try context.save() // update modified properties of a Keyword object
-                 } catch {
-                     ifDebugFatalError("Update failed for Keyword \"\(id)\"",
-                                      file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
-                    // in release mode, if save() fails, just continue
-                }
+            updated = true
+        }
+
+        for localizedKeyword in name {
+            let language: String? = localizedKeyword["language"].string
+            let localizedName: String? = localizedKeyword["localizedName"].string
+            if language != nil, localizedName != nil {
+                let language = Language.findCreateUpdate(context: context, isoCode: language!)
+                _ = LocalizedKeyword.findCreateUpdate(context: context,
+                                                      keyword: self, language: language,
+                                                      localizedName: localizedName!, localizedUsage: nil)
             }
-            updated = true // value changed, but maybe not saved yet
+        }
+
+        for localizedUsage in usage {
+            let language: String? = localizedUsage["language"].string
+            let localizedDescription: String? = localizedUsage["localizedName"].string
+            if language != nil, localizedDescription != nil {
+                let language = Language.findCreateUpdate(context: context, isoCode: language!)
+                _ = LocalizedKeyword.findCreateUpdate(context: context,
+                                                      keyword: self, language: language,
+                                                      localizedName: nil, localizedUsage: localizedDescription!)
+            }
+        }
+
+        if updated && Settings.extraCoreDataSaves {
+            do {
+                try context.save() // update modified properties of a Keyword object
+            } catch {
+                ifDebugFatalError("Update failed for Keyword \"\(id)\"",
+                                  file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
+                // in release mode, if save() fails, just continue
+            }
         }
 
         return updated
@@ -137,7 +174,7 @@ extension Keyword {
     // MARK: - utilities
 
     func delete(context: NSManagedObjectContext) { // for testing?
-        context.delete(self)
+        context.delete(self) // TODO check for cascading delete
         do {
             try context.save()
         } catch {

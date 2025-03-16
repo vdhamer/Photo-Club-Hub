@@ -5,7 +5,6 @@
 //  Created by Peter van den Hamer on 16/12/2023.
 //
 
-// import SwiftyJSON // now used as a single file
 import CoreData // for NSManagedObjectContext
 import CoreLocation // for CLLocationCoordinate2D
 import SwiftyJSON // for JSON()
@@ -50,7 +49,7 @@ class Level1JsonReader {
             if let urlData = try? String(contentsOf: fileURL, encoding: .utf8), !useOnlyFile {
                 return urlData
             }
-            print("Could not access online file \(fileURL.relativeString). Trying local file \(filePath) instead.")
+            print("Could not access online file \(fileURL.relativeString). Trying in-app file \(filePath) instead.")
             if let fileData = try? String(contentsOfFile: filePath, encoding: .utf8) {
                 return fileData
             }
@@ -63,9 +62,9 @@ class Level1JsonReader {
                                         data: String,
                                         for organizationTypeEnumsToLoad: [OrganizationTypeEnum]) {
 
-        ifDebugPrint("\nGoing to read Level 1 file (\(dataSourceFile)) with a list of organizations - in background.")
+        ifDebugPrint("\nWill read Level 1 file (\(dataSourceFile)) with a list of organizations in the background.")
 
-        // give the data to SwiftyJSON to parse
+        // hand the data to SwiftyJSON to parse
         let jsonRoot = JSON(parseJSON: data) // call to SwiftyJSON
 
         // extract the `organizationTypes` in `organizationTypeEnumsToLoad` one-by-one from `jsonRoot`

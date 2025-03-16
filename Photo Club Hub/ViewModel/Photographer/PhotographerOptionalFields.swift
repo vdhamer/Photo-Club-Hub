@@ -6,7 +6,7 @@
 //
 
 import Foundation // for URL
-import SwiftyJSON // for JSON
+import SwiftyJSON // for JSON struct
 
 struct PhotographerOptionalFields {
     var bornDT: Date?

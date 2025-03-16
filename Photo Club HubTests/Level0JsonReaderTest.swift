@@ -1,0 +1,55 @@
+//
+//  Level0JsonReaderTest.swift
+//  Photo Club HubTests
+//
+//  Created by Peter van den Hamer on 13/03/2025.
+//
+
+import Testing
+@testable import Photo_Club_Hub
+import CoreData // for NSManagedObjectContext
+
+@MainActor @Suite("Tests the Level 0 JSON reader") struct Level0JsonReaderTests {
+
+    fileprivate let context: NSManagedObjectContext
+
+    init () {
+        context = PersistenceController.shared.container.viewContext
+    }
+
+    // Read root.level0.json and check for parsing errors.
+    // Clears all CoreData keywords. Runs on background thread, adding bunch of extra complexity ;-(
+    @Test("Parse empty.json") func emptyLevel0Parse() async {
+        let bgContext = PersistenceController.shared.container.newBackgroundContext()
+        bgContext.name = "EmptyLevel0"
+        bgContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+        bgContext.automaticallyMergesChangesFromParent = true
+
+        Model.deleteCoreDataKeywords(context: bgContext)
+        #expect(Keyword.count(context: bgContext) == 0)
+
+        _ = Level0JsonReader(bgContext: bgContext, // read root.Level0.json file
+                             useOnlyFile: false,
+                             overrulingDataSourceFile: "empty")
+        #expect(Keyword.count(context: bgContext) == 0)
+        #expect(await LocalizedKeyword.count(context: bgContext) == 0)
+        #expect(PhotographerKeyword.count(context: bgContext) == 0)
+    }
+
+    // Read root.level0.json and check for parsing errors.
+    // Clears all CoreData keywords. Runs on background thread, adding bunch of extra complexity ;-(
+    @Test("Parse root.level0.json") func rootLevel0Parse() async {
+        let bgContext = PersistenceController.shared.container.newBackgroundContext()
+        bgContext.name = "RootLevel0"
+        bgContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+        bgContext.automaticallyMergesChangesFromParent = true
+
+        Model.deleteCoreDataKeywords(context: bgContext) // This test doesn't have Keywords
+        #expect(Keyword.count(context: bgContext) == 0)
+
+        _ = Level0JsonReader(bgContext: bgContext, // read root.Level0.json file
+                             useOnlyFile: false)
+        #expect(Keyword.count(context: bgContext) == 10)
+    }
+
+}
