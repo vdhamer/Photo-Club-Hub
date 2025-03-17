@@ -10,38 +10,49 @@ import CoreData // for NSManagedObject
 @MainActor
 struct Model {
     static func deleteAllCoreDataObjects(context: NSManagedObjectContext) {
-        let forcedDataRefresh = "Forced refresh of CoreData data " // just for log, not localized
+        // order is important to avoid problems with referential integrity
+        deleteCoreDataKeywordsLanguages(context: context) // performs its own save()
+        deleteCoreDataPhotographersClubs(context: context) // performs its own save()
+    }
 
-        // order is important because of non-optional relationships
+    // don't delete Photographer before deleting this. See data model picture in README.md.
+    static func deleteCoreDataKeywordsLanguages(context: NSManagedObjectContext) { // delete subset of tables separately
+        let forcedDataRefresh = "Forced clearing of CoreData keywords "
+
         do { // order is important to avoid problems with referential integrity
             try deleteEntitiesOfOneType("LocalizedRemark", context: context)
-
-            deleteCoreDataKeywords(context: context)
-
-            try deleteEntitiesOfOneType("MemberPortfolio", context: context)
-            try deleteEntitiesOfOneType("Organization", context: context)
-            try deleteEntitiesOfOneType("Photographer", context: context)
-
-            try deleteEntitiesOfOneType("OrganizationType", context: context)
+            try deleteEntitiesOfOneType("LocalizedKeyword", context: context)
+            try deleteEntitiesOfOneType("PhotographerKeyword", context: context)
+            try deleteEntitiesOfOneType("Keyword", context: context)
             try deleteEntitiesOfOneType("Language", context: context)
+
             print(forcedDataRefresh + "was successful.")
-            try context.save()
+            try? context.performAndWait {
+                if context.hasChanges {
+                    try context.save()
+                }
+            }
         } catch {
             ifDebugFatalError(forcedDataRefresh + "FAILED: \(error)")
         }
     }
 
-    // don't delete Photographer or Language before deleting this. See data model picture in README.md.
-    static func deleteCoreDataKeywords(context: NSManagedObjectContext) { // delete subset of tables separately
+    // don't delete Photographer before deleting this. See data model picture in README.md.
+    static func deleteCoreDataPhotographersClubs(context: NSManagedObjectContext) { // delete subset of tables
         let forcedDataRefresh = "Forced clearing of CoreData keywords "
 
         do { // order is important to avoid problems with referential integrity
-            try deleteEntitiesOfOneType("LocalizedKeyword", context: context)
-            try deleteEntitiesOfOneType("PhotographerKeyword", context: context)
-            try deleteEntitiesOfOneType("Keyword", context: context)
+            try deleteEntitiesOfOneType("MemberPortfolio", context: context)
+            try deleteEntitiesOfOneType("Organization", context: context)
+            try deleteEntitiesOfOneType("Photographer", context: context)
+
+            try deleteEntitiesOfOneType("OrganizationType", context: context)
+
             print(forcedDataRefresh + "was successful.")
             try? context.performAndWait {
-                try context.save()
+                if context.hasChanges {
+                    try context.save()
+                }
             }
         } catch {
             ifDebugFatalError(forcedDataRefresh + "FAILED: \(error)")
