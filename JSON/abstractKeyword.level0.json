@@ -1,0 +1,20 @@
+{
+    "keywords": [
+
+        {
+            "idString": "Abstract",
+            "name": [
+                { "language": "EN", "localizedString": "Abstract" },
+                { "language": "NL", "localizedString": "Abstract" },
+                { "language": "ES", "localizedString": "Fotografía abstracta"},
+                { "language": "EL", "localizedString": "Αφηρημένο"}
+            ],
+            "optional": {
+                "usage":  [
+                    { "language": "EN", "localizedString": "Subject of the image is difficult to identify or less relevant." },
+                    { "language": "NL", "localizedString": "Als het onderwerp slecht herkenbaar of nauwelijks relevant is." }
+                ]
+            }
+        }
+    ]
+}

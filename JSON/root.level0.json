@@ -10,7 +10,7 @@
             "optional": {
                 "usage":  [
                     { "language": "EN", "localizedString": "Subject of the image is difficult to identify or less relevant." },
-                    { "language": "NL", "localizedString": "Als het onderwerp slecht herkenbaar of nauwelijks relevant is." }
+                    { "language": "NL", "localizedString": "Als het onderwerp nauwelijks herkenbaar of relevant is." }
                 ]
             }
         },
