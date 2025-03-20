@@ -19,7 +19,7 @@ import CoreData // for NSManagedObjectContext
 
     // Read root.level0.json and check for parsing errors.
     // Clears all CoreData keywords. Runs on background thread, adding bunch of extra complexity ;-(
-    @Test("Parse empty.json") func emptyLevel0Parse() async {
+    @Test("Parse empty.level0.json") func emptyLevel0Parse() async {
         let bgContext = PersistenceController.shared.container.newBackgroundContext()
         bgContext.name = "EmptyLevel0"
         bgContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
