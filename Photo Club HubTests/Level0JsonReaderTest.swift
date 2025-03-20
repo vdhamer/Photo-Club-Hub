@@ -55,7 +55,7 @@ import CoreData // for NSManagedObjectContext
         }
         #expect(Keyword.count(context: bgContext) == 1)
         #expect(PhotographerKeyword.count(context: bgContext) == 0)
-        #expect(await LocalizedKeyword.count(context: bgContext) == 4)
+        await #expect(LocalizedKeyword.count(context: bgContext) == 4)
     }
 
     // Read root.level0.json and check for parsing errors.
