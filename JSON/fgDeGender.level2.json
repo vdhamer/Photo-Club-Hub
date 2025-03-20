@@ -80,6 +80,20 @@
 
         {
             "name": {
+                "givenName": "Annet",
+                "infixName": "",
+                "familyName": "Kars"
+            },
+            "optional": {
+                "level3URL": "http://www.vdhamer.com/fgDeGender/Annet_Kars/",
+                "status": {
+                    "isProspectiveMember": true
+                }
+            }
+        },
+
+        {
+            "name": {
                 "givenName": "Bert",
                 "infixName": "",
                 "familyName": "Zantingh"
@@ -319,6 +333,20 @@
 
         {
             "name": {
+                "givenName": "Jos",
+                "infixName": "",
+                "familyName": "Zwaans"
+            },
+            "optional": {
+                "level3URL": "http://www.vdhamer.com/fgDeGender/Jos_Zwaans/",
+                "status": {
+                    "isProspectiveMember": true
+                }
+            }
+        },
+
+        {
+            "name": {
                 "givenName": "Lex",
                 "infixName": "",
                 "familyName": "Augusteijn"
@@ -537,6 +565,20 @@
 
         {
             "name": {
+                "givenName": "Pieter",
+                "infixName": "de",
+                "familyName": "Jong"
+            },
+            "optional": {
+                "level3URL": "http://www.vdhamer.com/fgDeGender/Pieter_de_Jong/",
+                "status": {
+                    "isProspectiveMember": true
+                }
+            }
+        },
+
+        {
+            "name": {
                 "givenName": "Regina",
                 "infixName": "",
                 "familyName": "Bakker"
@@ -627,6 +669,20 @@
                 "membershipStartDate": "2009-04-01",
                 "nlSpecific": {
                     "fotobondNumber": 1620078
+                }
+            }
+        },
+
+        {
+            "name": {
+                "givenName": "Willem",
+                "infixName": "",
+                "familyName": "Kars"
+            },
+            "optional": {
+                "level3URL": "http://www.vdhamer.com/fgDeGender/Willem_Kars/",
+                "status": {
+                    "isProspectiveMember": true
                 }
             }
         },
