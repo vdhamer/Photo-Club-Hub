@@ -36,6 +36,28 @@ import CoreData // for NSManagedObjectContext
         #expect(PhotographerKeyword.count(context: bgContext) == 0)
     }
 
+    // Read abstract.level0.json.
+    // Clears all CoreData keywords. Runs on background thread, adding bunch of extra complexity ;-(
+    @Test("Parse abstractKeyword.level0.json") func abstractKeywordLevel0Parse() async {
+        let bgContext = PersistenceController.shared.container.newBackgroundContext()
+        bgContext.name = "AbstractKeywordLevel0"
+        bgContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+        bgContext.automaticallyMergesChangesFromParent = true
+
+        Model.deleteCoreDataKeywordsLanguages(context: bgContext)
+        #expect(Keyword.count(context: bgContext) == 0)
+
+        bgContext.performAndWait {
+            _ = Level0JsonReader(bgContext: bgContext, // read root.Level0.json file
+                                 useOnlyFile: false,
+                                 overrulingDataSourceFile: "abstractKeyword")
+            try? bgContext.save()
+        }
+        #expect(Keyword.count(context: bgContext) == 1)
+        #expect(PhotographerKeyword.count(context: bgContext) == 0)
+        #expect(LocalizedKeyword.count(context: bgContext) == 4)
+    }
+
     // Read root.level0.json and check for parsing errors.
     // Clears all CoreData keywords. Runs on background thread, adding bunch of extra complexity ;-(
     @Test("Parse root.level0.json") func rootLevel0Parse() async {
