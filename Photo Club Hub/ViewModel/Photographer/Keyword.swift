@@ -37,7 +37,7 @@ extension Keyword {
     fileprivate static func findCreateUpdate(context: NSManagedObjectContext, // can be foreground or background context
                                              id: String,
                                              isStandard: Bool?, // nil means don't change existing value
-                                             name: [JSON], // JSON equivalent of a dictionality with localized names
+                                             name: [JSON], // JSON equivalent of a dictionary with localized names
                                              usage: [JSON]
                                             ) -> Keyword {
 

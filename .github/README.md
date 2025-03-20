@@ -773,7 +773,7 @@ Here is an example of the format of a `Level 2` list for a photo club. This exam
                     "isFormerMember": false,
                     "isHonoraryMember": false,
                     "isMentor": false,
-                    "isPropectiveMember": false
+                    "isProspectiveMember": false
                 },
                 "birthday": "9999-10-18",
                 "website": "https://glass.photo/vdhamer",

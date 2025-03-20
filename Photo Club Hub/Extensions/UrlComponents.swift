@@ -10,11 +10,10 @@ struct UrlComponents {
     static let dataSourcePath = """
                                 https://raw.githubusercontent.com/\
                                 vdhamer/Photo-Club-Hub/\
-                                main/\
-                                JSON/
+                                main/JSON/
                                 """
 
-    let dataSourceFile: String // fgDeGender
+    var dataSourceFile: String // fgDeGender, can be overruled when testing
     let fileSubType: String // level2 (part of name)
     let fileType: String // json (actual file system type)
 
