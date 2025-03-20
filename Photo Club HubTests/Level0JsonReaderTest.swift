@@ -25,7 +25,7 @@ import CoreData // for NSManagedObjectContext
         bgContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         bgContext.automaticallyMergesChangesFromParent = true
 
-        Model.deleteCoreDataKeywords(context: bgContext)
+        Model.deleteCoreDataKeywordsLanguages(context: bgContext)
         #expect(Keyword.count(context: bgContext) == 0)
 
         _ = Level0JsonReader(bgContext: bgContext, // read root.Level0.json file
@@ -44,7 +44,7 @@ import CoreData // for NSManagedObjectContext
         bgContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         bgContext.automaticallyMergesChangesFromParent = true
 
-        Model.deleteCoreDataKeywords(context: bgContext) // This test doesn't have Keywords
+        Model.deleteCoreDataKeywordsLanguages(context: bgContext) // This test doesn't have Keywords
         #expect(Keyword.count(context: bgContext) == 0)
 
         _ = Level0JsonReader(bgContext: bgContext, // read root.Level0.json file
