@@ -153,7 +153,6 @@ extension LocalizedKeyword {
     static func count(context: NSManagedObjectContext) async -> Int {
         var localizedKeywords: [LocalizedKeyword]! = []
 
-        //        context.performAndWait { // TODO
         let fetchRequest: NSFetchRequest<LocalizedKeyword> = LocalizedKeyword.fetchRequest()
         let predicateAll = NSPredicate(format: "TRUEPREDICATE")
         fetchRequest.predicate = predicateAll
@@ -167,7 +166,6 @@ extension LocalizedKeyword {
             }
         }
         return localizedKeywords.count
-        //        }
     }
 
     // count number of objects with a given id

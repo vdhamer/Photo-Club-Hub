@@ -27,6 +27,8 @@ import CoreData // for NSManagedObjectContext
 
         Model.deleteCoreDataKeywordsLanguages(context: bgContext)
         #expect(Keyword.count(context: bgContext) == 0)
+        #expect(PhotographerKeyword.count(context: bgContext) == 0)
+        await #expect(LocalizedKeyword.count(context: bgContext) == 0)
 
         _ = Level0JsonReader(bgContext: bgContext, // read root.Level0.json file
                              useOnlyFile: false,
@@ -46,6 +48,8 @@ import CoreData // for NSManagedObjectContext
 
         Model.deleteCoreDataKeywordsLanguages(context: bgContext)
         #expect(Keyword.count(context: bgContext) == 0)
+        #expect(PhotographerKeyword.count(context: bgContext) == 0)
+        await #expect(LocalizedKeyword.count(context: bgContext) == 0)
 
         bgContext.performAndWait {
             _ = Level0JsonReader(bgContext: bgContext, // read root.Level0.json file
@@ -54,8 +58,8 @@ import CoreData // for NSManagedObjectContext
             try? bgContext.save()
         }
         #expect(Keyword.count(context: bgContext) == 1)
-        #expect(PhotographerKeyword.count(context: bgContext) == 0)
         await #expect(LocalizedKeyword.count(context: bgContext) == 4)
+        #expect(PhotographerKeyword.count(context: bgContext) == 0)
     }
 
     // Read root.level0.json and check for parsing errors.
