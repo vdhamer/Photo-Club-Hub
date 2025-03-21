@@ -174,7 +174,7 @@ extension Keyword {
     // MARK: - utilities
 
     func delete(context: NSManagedObjectContext) { // for testing?
-        context.delete(self) // TODO check for cascading delete
+        context.delete(self)
         do {
             try context.save()
         } catch {
