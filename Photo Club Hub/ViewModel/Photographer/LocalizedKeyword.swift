@@ -110,7 +110,7 @@ extension LocalizedKeyword {
 
         var modified: Bool = false
 
-        if self.name != localizedName {
+        if let localizedName, self.name != localizedName {
             self.name = localizedName
             modified = true
         }

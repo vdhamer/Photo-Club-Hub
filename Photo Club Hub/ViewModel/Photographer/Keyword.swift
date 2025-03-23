@@ -137,25 +137,28 @@ extension Keyword {
         }
 
         for localizedKeyword in name {
-            let language: String? = localizedKeyword["language"].string
-            let localizedName: String? = localizedKeyword["localizedName"].string
-            if language != nil, localizedName != nil {
-                let language = Language.findCreateUpdate(context: context, isoCode: language!)
-                _ = LocalizedKeyword.findCreateUpdate(context: context,
-                                                      keyword: self, language: language,
-                                                      localizedName: localizedName!, localizedUsage: nil)
-            }
+            guard localizedKeyword["language"].exists(), localizedKeyword["localizedString"].exists() else { continue }
+
+            let isoCode: String = localizedKeyword["language"].string!
+            let language = Language.findCreateUpdate(context: context, isoCode: isoCode)
+
+            let localizedString: String = localizedKeyword["localizedString"].string!
+            _ = LocalizedKeyword.findCreateUpdate(context: context,
+                                                  keyword: self, language: language,
+                                                  localizedName: localizedString, localizedUsage: nil)
         }
 
         for localizedUsage in usage {
-            let language: String? = localizedUsage["language"].string
-            let localizedDescription: String? = localizedUsage["localizedName"].string
-            if language != nil, localizedDescription != nil {
-                let language = Language.findCreateUpdate(context: context, isoCode: language!)
-                _ = LocalizedKeyword.findCreateUpdate(context: context,
-                                                      keyword: self, language: language,
-                                                      localizedName: nil, localizedUsage: localizedDescription!)
-            }
+            guard localizedUsage["language"].exists(), localizedUsage["localizedString"].exists() else { continue }
+
+            let isoCode: String = localizedUsage["language"].string!
+            let language = Language.findCreateUpdate(context: context, isoCode: isoCode)
+
+            let localizedDescription: String = localizedUsage["localizedString"].string!
+            _ = LocalizedKeyword.findCreateUpdate(context: context,
+                                                  keyword: self, language: language,
+                                                  localizedName: nil, localizedUsage: localizedDescription)
+
         }
 
         if updated && Settings.extraCoreDataSaves {
