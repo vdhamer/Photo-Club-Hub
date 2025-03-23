@@ -222,6 +222,7 @@ extension Keyword {
             let fetchRequest: NSFetchRequest<Keyword> = Keyword.fetchRequest()
             let predicateAll = NSPredicate(format: "TRUEPREDICATE")
             fetchRequest.predicate = predicateAll
+
             context.performAndWait {
                 do {
                     keywords = try context.fetch(fetchRequest)
