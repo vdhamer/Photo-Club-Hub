@@ -82,10 +82,12 @@ class Level0JsonReader {
                 ifDebugFatalError("Keyword doesn't have localized representations", file: #file, line: #line)
                 continue  // if it doesn't exist, skip the keyword
             }
-            let jsonName = jsonKeyword["name"].arrayValue // entire dictionary of localized names for the keyword
+            let jsonKeywordName = jsonKeyword["name"].arrayValue // entire dictionary of localized names for the keyword
 
             // we insist on having at least one language for which jsonKeyword has a localized name
-            guard jsonName.count > 0, jsonName[0]["language"].exists(), jsonName[0]["localizedString"].exists() else {
+            guard jsonKeywordName.count > 0,
+                  jsonKeywordName[0]["language"].exists(),
+                  jsonKeywordName[0]["localizedString"].exists() else {
                 ifDebugFatalError("Keyword doesn't have any localized representations", file: #file, line: #line)
                 continue  // if it doesn't exist, skip the keyword (note that it even skips the "usage" array)
             }
@@ -93,7 +95,11 @@ class Level0JsonReader {
             let jsonKeywordOptionals = jsonKeyword["optional"] // rest will be empty if not found
             let jsonUsage = jsonKeywordOptionals["usage"].arrayValue
 
-            _ = Keyword.findCreateUpdateStandard(context: bgContext, id: idString, name: jsonName, usage: jsonUsage)
+            let keyword = Keyword.findCreateUpdateStandard(context: bgContext,
+                                                           id: idString,
+                                                           name: jsonKeywordName,
+                                                           usage: jsonUsage)
+            print("Keyword <\(keyword.id)> with \(jsonKeywordName.count) localized name(s) found")
         }
         print("\(jsonKeywords.count) Keywords found")
 
@@ -102,8 +108,8 @@ class Level0JsonReader {
                 try bgContext.save() // persist contents of entire root.Level1.json file
             }
         } catch {
-            ifDebugFatalError("Failed to save changes to Core Data",
-                              file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
+            ifDebugFatalError("Failed to save changes to Core Data: \(error)",
+                              file: #file, line: #line)  // likely deprecation of #fileID in Swift 6.0
             // in release mode, the failed database update is only logged. App doesn't stop.
             ifDebugPrint("Failed to save JSON Keyword changes in background")
             return

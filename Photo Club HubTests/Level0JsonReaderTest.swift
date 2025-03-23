@@ -47,8 +47,8 @@ import CoreData // for NSManagedObjectContext
         bgContext.automaticallyMergesChangesFromParent = true
 
         Model.deleteCoreDataKeywordsLanguages(context: bgContext)
-        #expect(Keyword.count(context: bgContext) == 0)
-        #expect(PhotographerKeyword.count(context: bgContext) == 0)
+        #expect(Keyword.count(context: bgContext) == 0) // returns 3 instead of zero, why??
+        #expect(PhotographerKeyword.count(context: bgContext) == 0) // returns 3 instead of zero, why??
         await #expect(LocalizedKeyword.count(context: bgContext) == 0)
 
         bgContext.performAndWait {
@@ -58,9 +58,9 @@ import CoreData // for NSManagedObjectContext
             try? bgContext.save()
         }
         #expect(Keyword.count(context: bgContext) == 1)
-        await #expect(LocalizedKeyword.count(context: bgContext) == 4)
         #expect(PhotographerKeyword.count(context: bgContext) == 0)
-    }
+        await #expect(LocalizedKeyword.count(context: bgContext) == 4)
+   }
 
     // Read root.level0.json and check for parsing errors.
     // Clears all CoreData keywords. Runs on background thread, adding bunch of extra complexity ;-(
