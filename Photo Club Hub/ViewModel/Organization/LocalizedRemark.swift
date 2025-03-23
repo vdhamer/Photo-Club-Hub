@@ -84,4 +84,26 @@ extension LocalizedRemark { // expose computed properties (some related to handl
         return true // indicates that there was an update
     }
 
+    // count total number of objects in CoreData database
+    static func count(context: NSManagedObjectContext) -> Int {
+        var localizedRemarks: [LocalizedRemark]! = []
+
+        context.performAndWait {
+            let fetchRequest: NSFetchRequest<LocalizedRemark> = LocalizedRemark.fetchRequest()
+            let predicateAll = NSPredicate(format: "TRUEPREDICATE")
+            fetchRequest.predicate = predicateAll
+
+            context.perform {
+                do {
+                    localizedRemarks = try context.fetch(fetchRequest)
+                } catch {
+                    ifDebugFatalError("Failed to fetch list of all LocalizedLanguages: \(error)",
+                                      file: #fileID, line: #line)
+                    // on non-Debug version, continue with empty `keywords` array
+                }
+            }
+        }
+        return localizedRemarks.count
+    }
+
 }
