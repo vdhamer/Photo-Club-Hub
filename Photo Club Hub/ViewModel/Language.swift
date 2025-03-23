@@ -117,12 +117,16 @@ extension Language {
         let predicateFormat: String = "isoCode_ = %@" // avoid localization
         let predicate = NSPredicate(format: predicateFormat, argumentArray: [isoCode])
         fetchRequest.predicate = predicate
-        do {
-            languages = try context.fetch(fetchRequest)
-        } catch {
-            ifDebugFatalError("Failed to fetch Language \(isoCode): \(error)", file: #fileID, line: #line)
-            // on non-Debug version, continue with empty `keywords` array
+
+        context.performAndWait {
+            do {
+                languages = try context.fetch(fetchRequest)
+            } catch {
+                ifDebugFatalError("Failed to fetch Language \(isoCode): \(error)", file: #fileID, line: #line)
+                // on non-Debug version, continue with empty `keywords` array
+            }
         }
+
         return languages.count
     }
 

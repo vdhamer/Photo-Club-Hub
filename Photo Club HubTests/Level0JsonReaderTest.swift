@@ -27,14 +27,14 @@ import CoreData // for NSManagedObjectContext
 
         Model.deleteCoreDataKeywordsLanguages(context: bgContext)
         #expect(Keyword.count(context: bgContext) == 0)
+        #expect(LocalizedKeyword.count(context: bgContext) == 0)
         #expect(PhotographerKeyword.count(context: bgContext) == 0)
-        await #expect(LocalizedKeyword.count(context: bgContext) == 0)
 
         _ = Level0JsonReader(bgContext: bgContext, // read root.Level0.json file
                              useOnlyFile: false,
                              overrulingDataSourceFile: "empty")
         #expect(Keyword.count(context: bgContext) == 0)
-        #expect(await LocalizedKeyword.count(context: bgContext) == 0)
+        #expect(LocalizedKeyword.count(context: bgContext) == 0)
         #expect(PhotographerKeyword.count(context: bgContext) == 0)
     }
 
@@ -49,7 +49,7 @@ import CoreData // for NSManagedObjectContext
         Model.deleteCoreDataKeywordsLanguages(context: bgContext)
         #expect(Keyword.count(context: bgContext) == 0) // returns 3 instead of zero, why??
         #expect(PhotographerKeyword.count(context: bgContext) == 0) // returns 3 instead of zero, why??
-        await #expect(LocalizedKeyword.count(context: bgContext) == 0)
+        #expect(LocalizedKeyword.count(context: bgContext) == 0)
 
         bgContext.performAndWait {
             _ = Level0JsonReader(bgContext: bgContext, // read root.Level0.json file
@@ -59,7 +59,7 @@ import CoreData // for NSManagedObjectContext
         }
         #expect(Keyword.count(context: bgContext) == 1)
         #expect(PhotographerKeyword.count(context: bgContext) == 0)
-        await #expect(LocalizedKeyword.count(context: bgContext) == 4)
+        #expect(LocalizedKeyword.count(context: bgContext) == 4)
    }
 
     // Read root.level0.json and check for parsing errors.
@@ -76,6 +76,28 @@ import CoreData // for NSManagedObjectContext
         _ = Level0JsonReader(bgContext: bgContext, // read root.Level0.json file
                              useOnlyFile: false)
         #expect(Keyword.count(context: bgContext) == 10)
+    }
+
+    // Read language.level0.json.
+    // Clears all CoreData languages. Runs on background thread, adding bunch of extra complexity ;-(
+    @Test("Parse language.level0.json") func languageLevel0Parse() async {
+        let bgContext = PersistenceController.shared.container.newBackgroundContext()
+        bgContext.name = "LanguageLevel0"
+        bgContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+        bgContext.automaticallyMergesChangesFromParent = true
+
+        Model.deleteCoreDataKeywordsLanguages(context: bgContext)
+        #expect(Language.count(context: bgContext, isoCode: "ur") == 0)
+        #expect(LocalizedRemark.count(context: bgContext) == 0)
+        #expect(LocalizedKeyword.count(context: bgContext) == 0)
+
+        _ = Level0JsonReader(bgContext: bgContext, // read root.Level0.json file
+                             useOnlyFile: false,
+                             overrulingDataSourceFile: "language")
+
+        #expect(Language.count(context: bgContext, isoCode: "ur") == 1)
+        #expect(LocalizedRemark.count(context: bgContext) == 0)
+        #expect(LocalizedKeyword.count(context: bgContext) == 0)
     }
 
 }
