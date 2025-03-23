@@ -150,18 +150,19 @@ extension LocalizedKeyword {
     }
 
     // count total number of objects in CoreData database
-    static func count(context: NSManagedObjectContext) async -> Int {
+    static func count(context: NSManagedObjectContext) -> Int {
         var localizedKeywords: [LocalizedKeyword]! = []
 
         let fetchRequest: NSFetchRequest<LocalizedKeyword> = LocalizedKeyword.fetchRequest()
         let predicateAll = NSPredicate(format: "TRUEPREDICATE")
         fetchRequest.predicate = predicateAll
 
-        await context.perform {
+        context.performAndWait {
             do {
                 localizedKeywords = try context.fetch(fetchRequest)
             } catch {
-                ifDebugFatalError("Failed to fetch list of all LocalizedKeywords: \(error)", file: #fileID, line: #line)
+                ifDebugFatalError("Failed to fetch list of all LocalizedKeywords: \(error)",
+                                  file: #fileID, line: #line) // TODO #fileID? or #file
                 // on non-Debug version, continue with empty `keywords` array
             }
         }
@@ -176,12 +177,14 @@ extension LocalizedKeyword {
         let predicateFormat: String = "keyword_.id_ = %@ && language_.isoCode_ = %@" // avoid localization
         fetchRequest.predicate = NSPredicate(format: predicateFormat, argumentArray: [keywordID, languageIsoCode])
 
-        do {
-            localizedKeywords = try context.fetch(fetchRequest)
-        } catch {
-            ifDebugFatalError("Failed to fetch LocalizedKeyword \(keywordID) for \(languageIsoCode): \(error)",
-                              file: #fileID, line: #line)
-            // on non-Debug version, continue with empty `keywords` array
+        context.performAndWait {
+            do {
+                localizedKeywords = try context.fetch(fetchRequest)
+            } catch {
+                ifDebugFatalError("Failed to fetch LocalizedKeyword \(keywordID) for \(languageIsoCode): \(error)",
+                                  file: #fileID, line: #line)
+                // on non-Debug version, continue with empty `keywords` array
+            }
         }
         return localizedKeywords.count
     }

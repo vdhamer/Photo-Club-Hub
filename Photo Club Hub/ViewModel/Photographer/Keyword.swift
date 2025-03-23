@@ -201,14 +201,16 @@ extension Keyword {
     static func count(context: NSManagedObjectContext, keywordID: String) -> Int {
         var keywords: [Keyword]! = []
 
-        let fetchRequest: NSFetchRequest<Keyword> = Keyword.fetchRequest()
-        let predicateFormat: String = "id_ = %@" // avoid localization
-        let predicate = NSPredicate(format: predicateFormat, argumentArray: [keywordID])
-        fetchRequest.predicate = predicate
-        do {
-            keywords = try context.fetch(fetchRequest)
-        } catch {
-            ifDebugFatalError("Failed to fetch Keyword \(keywordID): \(error)", file: #fileID, line: #line)
+        context.performAndWait {
+            let fetchRequest: NSFetchRequest<Keyword> = Keyword.fetchRequest()
+            let predicateFormat: String = "id_ = %@" // avoid localization
+            let predicate = NSPredicate(format: predicateFormat, argumentArray: [keywordID])
+            fetchRequest.predicate = predicate
+            do {
+                keywords = try context.fetch(fetchRequest)
+            } catch {
+                ifDebugFatalError("Failed to fetch Keyword \(keywordID): \(error)", file: #fileID, line: #line)
+            }
         }
         return keywords.count
     }
@@ -223,12 +225,10 @@ extension Keyword {
             let predicateAll = NSPredicate(format: "TRUEPREDICATE")
             fetchRequest.predicate = predicateAll
 
-            context.performAndWait {
-                do {
-                    keywords = try context.fetch(fetchRequest)
-                } catch {
-                    ifDebugFatalError("Failed to fetch all Keywords: \(error)", file: #fileID, line: #line)
-                }
+            do {
+                keywords = try context.fetch(fetchRequest)
+            } catch {
+                ifDebugFatalError("Failed to fetch all Keywords: \(error)", file: #fileID, line: #line)
             }
         }
 

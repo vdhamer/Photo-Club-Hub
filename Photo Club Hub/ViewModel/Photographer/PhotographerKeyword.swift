@@ -183,6 +183,7 @@ extension PhotographerKeyword {
         fetchRequest.predicate = predicateAll
 
         var photographerKeywords: [PhotographerKeyword]! = []
+
         context.performAndWait {
             do {
                 photographerKeywords = try context.fetch(fetchRequest)
