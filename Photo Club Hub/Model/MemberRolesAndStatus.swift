@@ -147,8 +147,8 @@ struct MemberRolesAndStatus: Equatable {
         if jsonStatus["isMentor"].exists() {
             status[.coach] = jsonStatus["isMentor"].boolValue
         }
-        if jsonStatus["isPropectiveMember"].exists() {
-            status[.prospective] = jsonStatus["isPropectiveMember"].boolValue
+        if jsonStatus["isProspectiveMember"].exists() {
+            status[.prospective] = jsonStatus["isProspectiveMember"].boolValue
         }
 
     }
