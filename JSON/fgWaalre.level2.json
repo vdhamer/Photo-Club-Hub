@@ -1,517 +1,545 @@
 {
-    "club":
+  "club": {
+    "idPlus": {
+      "town": "Waalre",
+      "fullName": "Fotogroep Waalre",
+      "nickName": "fgWaalre"
+    },
+    "optional": {
+      "coordinates": {
+        "latitude": 51.39184,
+        "longitude": 5.46144
+      },
+      "website": "https://www.fotogroepwaalre.nl",
+      "level2URL": "https://www.example.com/fgWaalre.level2.json",
+      "remark": [
         {
-            "idPlus": {
-                "town": "Waalre",
-                "fullName": "Fotogroep Waalre",
-                "nickName": "fgWaalre"
-            },
-            "optional": {
-                "coordinates": {
-                    "latitude": 51.39184,
-                    "longitude": 5.46144
-                },
-                "website": "https://www.fotogroepwaalre.nl",
-                "level2URL": "https://www.example.com/fgWaalre.level2.json",
-                "remark": [
-                    {
-                        "language": "EN",
-                        "value": "The club is named after its home town Waalre, near Eindhoven."
-                    },
-                    {
-                        "language": "NL",
-                        "value": "Fotogroep Waalre vergadert en exposeert jaarlijks in het gemeentehuis van Waalre."
-                    }
-                ],
-                "nlSpecific": {
-                    "fotobondNumber": 1634
-                }
-            }
+          "language": "EN",
+          "value": "The club is named after its home town Waalre, near Eindhoven."
         },
+        {
+          "language": "NL",
+          "value": "Fotogroep Waalre vergadert en exposeert jaarlijks in het gemeentehuis van Waalre."
+        }
+      ],
+      "nlSpecific": {
+        "fotobondNumber": 1634
+      }
+    }
+  },
 
-    "members": [
+  "members": [
+
+    {
+      "name": {
+        "givenName": "Aad",
+        "infixName": "",
+        "familyName": "Schoenmakers"
+      },
+      "optional": {
+        "level3URL": "http://www.vdhamer.com/fgWaalre/Aad_Schoenmakers/",
+        "status": {
+          "isFormerMember": true
+        },
+        "nlSpecific": {
+          "fotobondNumber": 1634046
+        }
+      }
+    },
+
+    {
+      "name": {
+        "givenName": "Ariejan",
+        "infixName": "van",
+        "familyName": "Twisk"
+      },
+      "optional": {
+        "website": "http://www.ariejanvantwiskfotografie.nl",
+        "level3URL": "http://www.vdhamer.com/fgWaalre/Ariejan_van_Twisk/",
+        "status": {
+          "isFormerMember": true
+        },
+        "nlSpecific": {
+          "fotobondNumber": 1634051
+        }
+      }
+    },
+
+    {
+      "name": {
+        "givenName": "Bart",
+        "infixName": "van",
+        "familyName": "Stekelenburg"
+      },
+      "optional": {
+        "level3URL": "http://www.vdhamer.com/fgWaalre/Bart_van_Stekelenburg/",
+        "status": {
+          "isFormerMember": true
+        },
+        "nlSpecific": {
+          "fotobondNumber": 1634041
+        }
+      }
+    },
+
+    {
+      "name": {
+        "givenName": "Bettina",
+        "infixName": "de",
+        "familyName": "Graaf"
+      },
+      "optional": {
+        "level3URL": "http://www.vdhamer.com/fgWaalre/Bettina_de_Graaf/",
+        "status": {
+          "isFormerMember": true
+        },
+        "nlSpecific": {
+          "fotobondNumber": 1634067
+        }
+      }
+    },
+
+    {
+      "name": {
+        "givenName": "Bram",
+        "infixName": "van den",
+        "familyName": "Berge"
+      },
+      "optional": {
+        "level3URL": "http://www.vdhamer.com/fgWaalre/Bram_van_den_Berge/",
+        "roles": {
+          "isAdmin": true
+        },
+        "nlSpecific": {
+          "fotobondNumber": 1634007
+        }
+      }
+    },
+
+    {
+      "name": {
+        "givenName": "Carel",
+        "infixName": "",
+        "familyName": "Bullens"
+      },
+      "optional": {
+        "level3URL": "http://www.vdhamer.com/fgWaalre/Carel_Bullens/",
+        "roles": {
+          "isViceChairman": true
+        },
+        "nlSpecific": {
+          "fotobondNumber": 1634010
+        }
+      }
+    },
+
+    {
+      "name": {
+        "givenName": "Cassandra",
+        "infixName": "",
+        "familyName": "Postema"
+      },
+      "optional": {
+        "level3URL": "http://www.vdhamer.com/fgWaalre/Cassandra_Postema/",
+        "status": {
+          "isFormerMember": true
+        }
+      }
+    },
+
+    {
+      "name": {
+        "givenName": "Conny",
+        "infixName": "",
+        "familyName": "Klessens"
+      },
+      "optional": {
+        "level3URL": "http://www.vdhamer.com/fgWaalre/Conny_Klessens/",
+        "status": {
+          "isFormerMember": true
+        },
+        "nlSpecific": {
+          "fotobondNumber": 1634065
+        }
+      }
+    },
+
+    {
+      "name": {
+        "givenName": "Elke",
+        "infixName": "",
+        "familyName": "Neggers"
+      },
+      "optional": {
+        "level3URL": "http://www.vdhamer.com/fgWaalre/Elke_Neggers/",
+        "status": {
+          "isFormerMember": true
+        }
+      }
+    },
+
+    {
+      "name": {
+        "givenName": "Erik",
+        "infixName": "van",
+        "familyName": "Geest"
+      },
+      "optional": {
+        "level3URL": "http://www.vdhamer.com/fgWaalre/Erik_van_Geest/",
+        "roles": {
+          "isAdmin": true
+        },
+        "nlSpecific": {
+          "fotobondNumber": 1634052
+        }
+      }
+    },
+
+    {
+      "name": {
+        "givenName": "François",
+        "infixName": "",
+        "familyName": "Hermans"
+      },
+      "optional": {
+        "level3URL": "http://www.vdhamer.com/fgWaalre/Francois_Hermans/",
+        "nlSpecific": {
+          "fotobondNumber": 1634044
+        }
+      }
+    },
+
+    {
+      "name": {
+        "givenName": "Germa",
+        "infixName": "van de",
+        "familyName": "Kamp"
+      },
+      "optional": {
+        "level3URL": "http://www.vdhamer.com/fgWaalre/Germa_van_de_Kamp/"
+      }
+    },
+
+    {
+      "name": {
+        "givenName": "Greetje",
+        "infixName": "van",
+        "familyName": "Son"
+      },
+      "optional": {
+        "website": "https://www.vansonphotography.nl/",
+        "level3URL": "http://www.vdhamer.com/fgWaalre/Greetje_van_Son/",
+        "nlSpecific": {
+          "fotobondNumber": 1634055
+        }
+      }
+    },
+
+    {
+      "name": {
+        "givenName": "Guido",
+        "infixName": "",
+        "familyName": "Steger"
+      },
+      "optional": {
+        "level3URL": "http://www.vdhamer.com/fgWaalre/Guido_Steger/",
+        "status": {
+          "isFormerMember": true
+        },
+        "nlSpecific": {
+          "fotobondNumber": 1634040
+        }
+      }
+    },
+
+    {
+      "name": {
+        "givenName": "Guus",
+        "infixName": "",
+        "familyName": "Maas"
+      },
+      "optional": {
+        "website": "http://guusmaasfotografie.nl/",
+        "level3URL": "http://www.vdhamer.com/fgWaalre/Guus_Maas/",
+        "nlSpecific": {
+          "fotobondNumber": 1634066
+        }
+      }
+    },
+
+    {
+      "name": {
+        "givenName": "Hans",
+        "infixName": "",
+        "familyName": "Zoete"
+      },
+      "optional": {
+        "website": "https://www.brabantcultureel.nl/2024/03/28/hans-zoete-1948-2024-zag-de-schoonheid-in-ogenschijnlijk-onbelangrijke-zaken/",
+        "level3URL": "http://www.vdhamer.com/fgWaalre/Hans_Zoete/",
+        "status": {
+          "isDeceased": true,
+          "isFormerMember": true,
+          "isMentor": true
+        }
+      }
+    },
+
+    {
+      "name": {
+        "givenName": "Helga",
+        "infixName": "",
+        "familyName": "Nuchelmans"
+      },
+      "optional": {
+        "website": "http://helganuchelmans.nl/",
+        "level3URL": "http://www.vdhamer.com/fgWaalre/Helga_Nuchelmans/",
+        "status": {
+          "isFormerMember": true
+        },
+        "nlSpecific": {
+          "fotobondNumber": 1634062
+        }
+      }
+    },
+
+    {
+      "name": {
+        "givenName": "Henny",
+        "infixName": "",
+        "familyName": "Looren de Jong"
+      },
+      "optional": {
+        "level3URL": "http://www.vdhamer.com/fgWaalre/Henny_Looren_de_Jong/",
+        "nlSpecific": {
+          "fotobondNumber": 1634057
+        }
+      }
+    },
+
+    {
+      "name": {
+        "givenName": "Henriëtte",
+        "infixName": "van",
+        "familyName": "Ekert"
+      },
+      "optional": {
+        "website": "https://henriettevanekert.nl/",
+        "level3URL": "http://www.vdhamer.com/fgWaalre/Henriette_van_Ekert/",
+        "roles": {
+          "isAdmin": false
+        },
+        "nlSpecific": {
+          "fotobondNumber": 1634063
+        }
+      }
+    },
+
+    {
+      "name": {
+        "givenName": "Irene",
+        "infixName": "van",
+        "familyName": "Nunen"
+      },
+      "optional": {
+        "website": "https://500px.com/irene_van_nunen",
+        "level3URL": "http://www.vdhamer.com/fgWaalre/Irene_van_Nunen/",
+        "status": {
+          "isFormerMember": true
+        },
+        "nlSpecific": {
+          "fotobondNumber": 1634058
+        }
+      }
+    },
+
+    {
+      "name": {
+        "givenName": "István",
+        "infixName": "",
+        "familyName": "Nagy"
+      },
+      "optional": {
+        "website": "http://www.istvannagy.nl/",
+        "level3URL": "http://www.vdhamer.com/fgWaalre/Istvan_Nagy/",
+        "status": {
+          "isFormerMember": true
+        },
+        "nlSpecific": {
+          "fotobondNumber": 1634053
+        }
+      }
+    },
+
+    {
+      "name": {
+        "givenName": "Jan",
+        "infixName": "",
+        "familyName": "Niezen"
+      },
+      "optional": {
+        "level3URL": "http://www.vdhamer.com/fgWaalre/Jan_Niezen/",
+        "status": {
+          "isDeceased": true,
+          "isFormerMember": true
+        },
+        "nlSpecific": {
+          "fotobondNumber": 1634061
+        }
+      }
+    },
+
+    {
+      "name": {
+        "givenName": "Jan",
+        "infixName": "",
+        "familyName": "Stege"
+      },
+      "optional": {
+        "level3URL": "http://www.vdhamer.com/fgWaalre/Jan_Stege/",
+        "status": {
+          "isFormerMember": true
+        },
+        "nlSpecific": {
+          "fotobondNumber": 1634056
+        }
+      }
+    },
+
+    {
+      "name": {
+        "givenName": "Janneke",
+        "infixName": "",
+        "familyName": "Sinot"
+      },
+      "optional": {
+        "level3URL": "http://www.vdHamer.com/fgWaalre/Janneke_Sinot/"
+      }
+    },
+
+    {
+      "name": {
+        "givenName": "Jeroen",
+        "infixName": "",
+        "familyName": "Tapper"
+      },
+      "optional": {
+        "level3URL": "http://www.vdHamer.com/fgWaalre/Jeroen_Tapper/",
+        "nlSpecific": {
+          "fotobondNumber": 1634075
+        }
+      }
+    },
+
+    {
+      "name": {
+        "givenName": "Jet",
+        "infixName": "",
+        "familyName": "Hazelzet"
+      },
+      "optional": {
+        "level3URL": "http://www.vdhamer.com/fgWaalre/Jet_Hazelzet/",
+        "status": {
+          "isFormerMember": true
+        },
+        "nlSpecific": {
+          "fotobondNumber": 1634035
+        }
+      }
+    },
+
+    {
+      "name": {
+        "givenName": "Joke",
+        "infixName": "",
+        "familyName": "Stegehuis"
+      },
+      "optional": {
+        "level3URL": "http://www.vdhamer.com/fgWaalre/Joke_Stegehuis/",
+        "status": {
+          "isFormerMember": true
+        },
+        "nlSpecific": {
+          "fotobondNumber": 1634022
+        }
+      }
+    },
+
+    {
+      "name": {
+        "givenName": "Joop",
+        "infixName": "",
+        "familyName": "Postema"
+      },
+      "optional": {
+        "website": "http://www.flickr.com/photos/jooppostema/",
+        "level3URL": "http://www.vdhamer.com/fgWaalre/Joop_Postema/",
+        "status": {
+          "isDeceased": true,
+          "isFormerMember": true
+        },
+        "nlSpecific": {
+          "fotobondNumber": 1634036
+        }
+      }
+    },
+
+    {
+      "name": {
+        "givenName": "Jos",
+        "infixName": "",
+        "familyName": "Jansen"
+      },
+      "optional": {
+        "level3URL": "http://www.vdhamer.com/fgWaalre/Jos_Jansen/",
+        "status": {
+          "isDeceased": true,
+          "isFormerMember": true
+        },
+        "nlSpecific": {
+          "fotobondNumber": 1634050
+        },
+        "membershipEndDate": "2024-12-31"
+      }
+    },
+
+    {
+      "name": {
+        "givenName": "Jos",
+        "infixName": "de",
+        "familyName": "Vries"
+      },
+      "optional": {
+        "level3URL": "http://www.vdhamer.com/fgWaalre/Jos_de_Vries/",
+        "status": {
+          "isFormerMember": true
+        }
+      }
+    },
+
+    {
+      "name": {
+        "givenName": "José",
+        "infixName": "",
+        "familyName": "Daniëls"
+      },
+      "optional": {
+        "level3URL": "http://www.vdhamer.com/fgWaalre/Jose_Daniels/",
+        "status": {
+          "isFormerMember": true
+        }
+      }
+    },
 
         {
             "name": {
-                "givenName": "Aad",
+                "givenName": "Lars",
                 "infixName": "",
-                "familyName": "Schoenmakers"
+                "familyName": "Veerhoff"
             },
             "optional": {
-                "level3URL": "http://www.vdhamer.com/fgWaalre/Aad_Schoenmakers/",
-                "status": {
-                    "isFormerMember": true
-                },
+                "level3URL": "http://www.vdHamer.com/fgWaalre/Lars_Veerhoff/",
                 "nlSpecific": {
-                    "fotobondNumber": 1634046
-                }
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "Ariejan",
-                "infixName": "van",
-                "familyName": "Twisk"
-            },
-            "optional": {
-                "website": "http://www.ariejanvantwiskfotografie.nl",
-                "level3URL": "http://www.vdhamer.com/fgWaalre/Ariejan_van_Twisk/",
-                "status": {
-                    "isFormerMember": true
-                },
-                "nlSpecific": {
-                    "fotobondNumber": 1634051
-                }
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "Bart",
-                "infixName": "van",
-                "familyName": "Stekelenburg"
-            },
-            "optional": {
-                "level3URL": "http://www.vdhamer.com/fgWaalre/Bart_van_Stekelenburg/",
-                "status": {
-                    "isFormerMember": true
-                },
-                "nlSpecific": {
-                    "fotobondNumber": 1634041
-                }
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "Bettina",
-                "infixName": "de",
-                "familyName": "Graaf"
-            },
-            "optional": {
-                "level3URL": "http://www.vdhamer.com/fgWaalre/Bettina_de_Graaf/",
-                "status": {
-                    "isFormerMember": true
-                },
-                "nlSpecific": {
-                    "fotobondNumber": 1634067
-                }
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "Bram",
-                "infixName": "van den",
-                "familyName": "Berge"
-            },
-            "optional": {
-                "level3URL": "http://www.vdhamer.com/fgWaalre/Bram_van_den_Berge/",
-                "roles": {
-                    "isAdmin": true
-                },
-                "nlSpecific": {
-                    "fotobondNumber": 1634007
-                }
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "Carel",
-                "infixName": "",
-                "familyName": "Bullens"
-            },
-            "optional": {
-                "level3URL": "http://www.vdhamer.com/fgWaalre/Carel_Bullens/",
-                "roles": {
-                    "isViceChairman": true
-                },
-                "nlSpecific": {
-                    "fotobondNumber": 1634010
-                }
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "Cassandra",
-                "infixName": "",
-                "familyName": "Postema"
-            },
-            "optional": {
-                "level3URL": "http://www.vdhamer.com/fgWaalre/Cassandra_Postema/",
-                "status": {
-                    "isFormerMember": true
-                }
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "Conny",
-                "infixName": "",
-                "familyName": "Klessens"
-            },
-            "optional": {
-                "level3URL": "http://www.vdhamer.com/fgWaalre/Conny_Klessens/",
-                "status": {
-                    "isFormerMember": true
-                },
-                "nlSpecific": {
-                    "fotobondNumber": 1634065
-                }
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "Elke",
-                "infixName": "",
-                "familyName": "Neggers"
-            },
-            "optional": {
-                "level3URL": "http://www.vdhamer.com/fgWaalre/Elke_Neggers/",
-                "status": {
-                    "isFormerMember": true
-                }
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "Erik",
-                "infixName": "van",
-                "familyName": "Geest"
-            },
-            "optional": {
-                "level3URL": "http://www.vdhamer.com/fgWaalre/Erik_van_Geest/",
-                "roles": {
-                    "isAdmin": true
-                },
-                "nlSpecific": {
-                    "fotobondNumber": 1634052
-                }
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "François",
-                "infixName": "",
-                "familyName": "Hermans"
-            },
-            "optional": {
-                "level3URL": "http://www.vdhamer.com/fgWaalre/Francois_Hermans/",
-                "nlSpecific": {
-                    "fotobondNumber": 1634044
-                }
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "Germa",
-                "infixName": "van de",
-                "familyName": "Kamp"
-            },
-            "optional": {
-                "level3URL": "http://www.vdhamer.com/fgWaalre/Germa_van_de_Kamp/"
-            }
-        },
-        {
-            "name": {
-                "givenName": "Greetje",
-                "infixName": "van",
-                "familyName": "Son"
-            },
-            "optional": {
-                "website": "https://www.vansonphotography.nl/",
-                "level3URL": "http://www.vdhamer.com/fgWaalre/Greetje_van_Son/",
-                "nlSpecific": {
-                    "fotobondNumber": 1634055
-                }
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "Guido",
-                "infixName": "",
-                "familyName": "Steger"
-            },
-            "optional": {
-                "level3URL": "http://www.vdhamer.com/fgWaalre/Guido_Steger/",
-                "status": {
-                    "isFormerMember": true
-                },
-                "nlSpecific": {
-                    "fotobondNumber": 1634040
-                }
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "Guus",
-                "infixName": "",
-                "familyName": "Maas"
-            },
-            "optional": {
-                "website": "http://guusmaasfotografie.nl/",
-                "level3URL": "http://www.vdhamer.com/fgWaalre/Guus_Maas/",
-                "nlSpecific": {
-                    "fotobondNumber": 1634066
-                }
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "Hans",
-                "infixName": "",
-                "familyName": "Zoete"
-            },
-            "optional": {
-                "website": "https://www.brabantcultureel.nl/2024/03/28/hans-zoete-1948-2024-zag-de-schoonheid-in-ogenschijnlijk-onbelangrijke-zaken/",
-                "level3URL": "http://www.vdhamer.com/fgWaalre/Hans_Zoete/",
-                "status": {
-                    "isDeceased": true,
-                    "isFormerMember": true,
-                    "isMentor": true
-                }
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "Helga",
-                "infixName": "",
-                "familyName": "Nuchelmans"
-            },
-            "optional": {
-                "website": "http://helganuchelmans.nl/",
-                "level3URL": "http://www.vdhamer.com/fgWaalre/Helga_Nuchelmans/",
-                "status": {
-                    "isFormerMember": true
-                },
-                "nlSpecific": {
-                    "fotobondNumber": 1634062
-                }
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "Henny",
-                "infixName": "",
-                "familyName": "Looren de Jong"
-            },
-            "optional": {
-                "level3URL": "http://www.vdhamer.com/fgWaalre/Henny_Looren_de_Jong/",
-                "nlSpecific": {
-                    "fotobondNumber": 1634057
-                }
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "Henriëtte",
-                "infixName": "van",
-                "familyName": "Ekert"
-            },
-            "optional": {
-                "website": "https://henriettevanekert.nl/",
-                "level3URL": "http://www.vdhamer.com/fgWaalre/Henriette_van_Ekert/",
-                "roles": {
-                    "isAdmin": false
-                },
-                "nlSpecific": {
-                    "fotobondNumber": 1634063
-                }
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "Irene",
-                "infixName": "van",
-                "familyName": "Nunen"
-            },
-            "optional": {
-                "website": "https://500px.com/irene_van_nunen",
-                "level3URL": "http://www.vdhamer.com/fgWaalre/Irene_van_Nunen/",
-                "status": {
-                    "isFormerMember": true
-                },
-                "nlSpecific": {
-                    "fotobondNumber": 1634058
-                }
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "István",
-                "infixName": "",
-                "familyName": "Nagy"
-            },
-            "optional": {
-                "website": "http://www.istvannagy.nl/",
-                "level3URL": "http://www.vdhamer.com/fgWaalre/Istvan_Nagy/",
-                "status": {
-                    "isFormerMember": true
-                },
-                "nlSpecific": {
-                    "fotobondNumber": 1634053
-                }
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "Jan",
-                "infixName": "",
-                "familyName": "Niezen"
-            },
-            "optional": {
-                "level3URL": "http://www.vdhamer.com/fgWaalre/Jan_Niezen/",
-                "status": {
-                    "isDeceased": true,
-                    "isFormerMember": true
-                },
-                "nlSpecific": {
-                    "fotobondNumber": 1634061
-                }
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "Jan",
-                "infixName": "",
-                "familyName": "Stege"
-            },
-            "optional": {
-                "level3URL": "http://www.vdhamer.com/fgWaalre/Jan_Stege/",
-                "status": {
-                    "isFormerMember": true
-                },
-                "nlSpecific": {
-                    "fotobondNumber": 1634056
-                }
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "Janneke",
-                "infixName": "",
-                "familyName": "Sinot"
-            },
-            "optional": {
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Janneke_Sinot/"
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "Jet",
-                "infixName": "",
-                "familyName": "Hazelzet"
-            },
-            "optional": {
-                "level3URL": "http://www.vdhamer.com/fgWaalre/Jet_Hazelzet/",
-                "status": {
-                    "isFormerMember": true
-                },
-                "nlSpecific": {
-                    "fotobondNumber": 1634035
-                }
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "Joke",
-                "infixName": "",
-                "familyName": "Stegehuis"
-            },
-            "optional": {
-                "level3URL": "http://www.vdhamer.com/fgWaalre/Joke_Stegehuis/",
-                "status": {
-                    "isFormerMember": true
-                },
-                "nlSpecific": {
-                    "fotobondNumber": 1634022
-                }
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "Joop",
-                "infixName": "",
-                "familyName": "Postema"
-            },
-            "optional": {
-                "website": "http://www.flickr.com/photos/jooppostema/",
-                "level3URL": "http://www.vdhamer.com/fgWaalre/Joop_Postema/",
-                "status": {
-                    "isDeceased": true,
-                    "isFormerMember": true
-                },
-                "nlSpecific": {
-                    "fotobondNumber": 1634036
-                }
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "Jos",
-                "infixName": "",
-                "familyName": "Jansen"
-            },
-            "optional": {
-                "level3URL": "http://www.vdhamer.com/fgWaalre/Jos_Jansen/",
-                "status": {
-                    "isDeceased": true,
-                    "isFormerMember": true
-                },
-                "nlSpecific": {
-                    "fotobondNumber": 1634050
-                },
-                "membershipEndDate": "2024-12-31"
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "Jos",
-                "infixName": "de",
-                "familyName": "Vries"
-            },
-            "optional": {
-                "level3URL": "http://www.vdhamer.com/fgWaalre/Jos_de_Vries/",
-                "status": {
-                    "isFormerMember": true
-                }
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "José",
-                "infixName": "",
-                "familyName": "Daniëls"
-            },
-            "optional": {
-                "level3URL": "http://www.vdhamer.com/fgWaalre/Jose_Daniels/",
-                "status": {
-                    "isFormerMember": true
+                    "fotobondNumber": 1634076
                 }
             }
         },
@@ -551,256 +579,273 @@
             }
         },
 
-        {
-            "name": {
-                "givenName": "Mariet",
-                "infixName": "",
-                "familyName": "Wielders"
-            },
-            "optional": {
-                "website": "http://www.m3w.nl/",
-                "level3URL": "http://www.vdhamer.com/fgWaalre/Mariet_Wielders/",
-                "status": {
-                    "isFormerMember": true
-                }
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "Mariette",
-                "infixName": "",
-                "familyName": "Knaapen"
-            },
-            "optional": {
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Mariette_Knaapen/"
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "Marijelle",
-                "infixName": "",
-                "familyName": "Obbing"
-            },
-            "optional": {
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Marijelle_Obbing/",
-                "status": {
-                    "isFormerMember": true
-                }
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "Marijke",
-                "infixName": "",
-                "familyName": "Gallas"
-            },
-            "optional": {
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Marijke_Gallas/",
-                "status": {
-                    "isFormerMember": true,
-                    "isHonoraryMember": true
-                },
-                "nlSpecific": {
-                    "fotobondNumber": 1634011
-                }
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "Mia",
-                "infixName": "",
-                "familyName": "Driessen"
-            },
-            "optional": {
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Mia_Driessen/",
-                "status": {
-                    "isDeceased": true,
-                    "isFormerMember": true
-                }
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "Miek",
-                "infixName": "",
-                "familyName": "Kerkhoven"
-            },
-            "optional": {
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Miek_Kerkhoven/",
-                "roles": {
-                    "isChairman": true
-                },
-                "nlSpecific": {
-                    "fotobondNumber": 1634005
-                }
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "Monique",
-                "infixName": "",
-                "familyName": "Houben"
-            },
-            "optional": {
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Janneke_Sinot/"
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "Peter",
-                "infixName": "van den",
-                "familyName": "Hamer"
-            },
-            "optional": {
-                "website": "https://glass.photo/vdhamer",
-                "photographerImage": "http://www.vdhamer.com/wp-content/uploads/2022/07/cropped-2006_Norway_276_SSharp1_4.jpg",
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Peter_van_den_Hamer/",
-                "status": {
-                    "isFormerMember": true
-                },
-                "keywords": [ "Travel" ],
-                "nlSpecific": {
-                    "fotobondNumber": 1634045
-                }
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "Peter",
-                "infixName": "",
-                "familyName": "Poelen"
-            },
-            "optional": {
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Peter_Poelen/",
-                "status": {
-                    "isFormerMember": true
-                },
-                "nlSpecific": {
-                    "fotobondNumber": 1634054
-                }
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "Ria",
-                "infixName": "van der",
-                "familyName": "Ploeg"
-            },
-            "optional": {
-                "website": "http://www.riavanderploegfotografie.nl/",
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Ria_van_der_Ploeg/",
-                "status": {
-                    "isFormerMember": true
-                }
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "Sipke",
-                "infixName": "",
-                "familyName": "Wadman"
-            },
-            "optional": {
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Sipke_Wadman/",
-                "nlSpecific": {
-                    "fotobondNumber": 1634039
-                }
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "Theo",
-                "infixName": "van",
-                "familyName": "Waas"
-            },
-            "optional": {
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Theo_van_Waas/",
-                "status": {
-                    "isDeceased": true,
-                    "isFormerMember": true,
-                    "isMentor": true
-                }
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "Tinus",
-                "infixName": "",
-                "familyName": "Comperen"
-            },
-            "optional": {
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Tinus_Comperen/",
-                "status": {
-                    "isDeceased": true,
-                    "isFormerMember": true
-                }
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "Tis",
-                "infixName": "",
-                "familyName": "Veugen"
-            },
-            "optional": {
-                "website": "https://www.tistis.nl/photos.html",
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Tis_Veugen/",
-                "status": {
-                    "isFormerMember": true
-                },
-                "nlSpecific": {
-                    "fotobondNumber": 1634064
-                }
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "Wilko",
-                "infixName": "van",
-                "familyName": "Asseldonk"
-            },
-            "optional": {
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Wilko_van_Asseldonk/",
-                "status": {
-                    "isFormerMember": true
-                },
-                "nlSpecific": {
-                    "fotobondNumber": 1634059
-                }
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "Willem",
-                "infixName": "",
-                "familyName": "Meijer"
-            },
-            "optional": {
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Willem_Meijer/",
-                "status": {
-                    "isFormerMember": true
-                },
-                "nlSpecific": {
-                    "fotobondNumber": 1634049
-                }
-            }
+    {
+      "name": {
+        "givenName": "Mariet",
+        "infixName": "",
+        "familyName": "Wielders"
+      },
+      "optional": {
+        "website": "http://www.m3w.nl/",
+        "level3URL": "http://www.vdhamer.com/fgWaalre/Mariet_Wielders/",
+        "status": {
+          "isFormerMember": true
         }
+      }
+    },
 
-    ]
+    {
+      "name": {
+        "givenName": "Mariette",
+        "infixName": "",
+        "familyName": "Knaapen"
+      },
+      "optional": {
+        "level3URL": "http://www.vdHamer.com/fgWaalre/Mariette_Knaapen/"
+      }
+    },
+
+    {
+      "name": {
+        "givenName": "Marijelle",
+        "infixName": "",
+        "familyName": "Obbing"
+      },
+      "optional": {
+        "level3URL": "http://www.vdHamer.com/fgWaalre/Marijelle_Obbing/",
+        "status": {
+          "isFormerMember": true
+        }
+      }
+    },
+
+    {
+      "name": {
+        "givenName": "Marijke",
+        "infixName": "",
+        "familyName": "Gallas"
+      },
+      "optional": {
+        "level3URL": "http://www.vdHamer.com/fgWaalre/Marijke_Gallas/",
+        "status": {
+          "isFormerMember": true,
+          "isHonoraryMember": true
+        },
+        "nlSpecific": {
+          "fotobondNumber": 1634011
+        }
+      }
+    },
+
+    {
+      "name": {
+        "givenName": "Mia",
+        "infixName": "",
+        "familyName": "Driessen"
+      },
+      "optional": {
+        "level3URL": "http://www.vdHamer.com/fgWaalre/Mia_Driessen/",
+        "status": {
+          "isDeceased": true,
+          "isFormerMember": true
+        }
+      }
+    },
+
+    {
+      "name": {
+        "givenName": "Miek",
+        "infixName": "",
+        "familyName": "Kerkhoven"
+      },
+      "optional": {
+        "level3URL": "http://www.vdHamer.com/fgWaalre/Miek_Kerkhoven/",
+        "roles": {
+          "isChairman": true
+        },
+        "nlSpecific": {
+          "fotobondNumber": 1634005
+        }
+      }
+    },
+
+    {
+      "name": {
+        "givenName": "Monique",
+        "infixName": "",
+        "familyName": "Houben"
+      },
+      "optional": {
+        "level3URL": "http://www.vdHamer.com/fgWaalre/Monique_Houben/",
+        "nlSpecific": {
+          "fotobondNumber": 1634073
+        }
+      }
+    },
+
+    {
+      "name": {
+        "givenName": "Peter",
+        "infixName": "de",
+        "familyName": "Wit"
+      },
+      "optional": {
+        "level3URL": "http://www.vdHamer.com/fgWaalre/Peter_de_Wit/",
+        "status": {
+          "isFormerMember": false
+        },
+        "nlSpecific": {
+          "fotobondNumber": 1634005
+        }
+      }
+    },
+
+    {
+      "name": {
+        "givenName": "Peter",
+        "infixName": "van den",
+        "familyName": "Hamer"
+      },
+      "optional": {
+        "website": "https://glass.photo/vdhamer",
+        "photographerImage": "http://www.vdhamer.com/wp-content/uploads/2022/07/cropped-2006_Norway_276_SSharp1_4.jpg",
+        "level3URL": "http://www.vdHamer.com/fgWaalre/Peter_van_den_Hamer/",
+        "status": {
+          "isFormerMember": true
+        },
+        "nlSpecific": {
+          "fotobondNumber": 1634045
+        }
+      }
+    },
+
+    {
+      "name": {
+        "givenName": "Peter",
+        "infixName": "",
+        "familyName": "Poelen"
+      },
+      "optional": {
+        "level3URL": "http://www.vdHamer.com/fgWaalre/Peter_Poelen/",
+        "status": {
+          "isFormerMember": true
+        },
+        "nlSpecific": {
+          "fotobondNumber": 1634054
+        }
+      }
+    },
+
+    {
+      "name": {
+        "givenName": "Ria",
+        "infixName": "van der",
+        "familyName": "Ploeg"
+      },
+      "optional": {
+        "website": "http://www.riavanderploegfotografie.nl/",
+        "level3URL": "http://www.vdHamer.com/fgWaalre/Ria_van_der_Ploeg/",
+        "status": {
+          "isFormerMember": true
+        }
+      }
+    },
+
+    {
+      "name": {
+        "givenName": "Sipke",
+        "infixName": "",
+        "familyName": "Wadman"
+      },
+      "optional": {
+        "level3URL": "http://www.vdHamer.com/fgWaalre/Sipke_Wadman/",
+        "nlSpecific": {
+          "fotobondNumber": 1634039
+        }
+      }
+    },
+
+    {
+      "name": {
+        "givenName": "Theo",
+        "infixName": "van",
+        "familyName": "Waas"
+      },
+      "optional": {
+        "level3URL": "http://www.vdHamer.com/fgWaalre/Theo_van_Waas/",
+        "status": {
+          "isDeceased": true,
+          "isFormerMember": true,
+          "isMentor": true
+        }
+      }
+    },
+
+    {
+      "name": {
+        "givenName": "Tinus",
+        "infixName": "",
+        "familyName": "Comperen"
+      },
+      "optional": {
+        "level3URL": "http://www.vdHamer.com/fgWaalre/Tinus_Comperen/",
+        "status": {
+          "isDeceased": true,
+          "isFormerMember": true
+        }
+      }
+    },
+
+    {
+      "name": {
+        "givenName": "Tis",
+        "infixName": "",
+        "familyName": "Veugen"
+      },
+      "optional": {
+        "website": "https://www.tistis.nl/photos.html",
+        "level3URL": "http://www.vdHamer.com/fgWaalre/Tis_Veugen/",
+        "status": {
+          "isFormerMember": true
+        },
+        "nlSpecific": {
+          "fotobondNumber": 1634064
+        }
+      }
+    },
+
+    {
+      "name": {
+        "givenName": "Wilko",
+        "infixName": "van",
+        "familyName": "Asseldonk"
+      },
+      "optional": {
+        "level3URL": "http://www.vdHamer.com/fgWaalre/Wilko_van_Asseldonk/",
+        "status": {
+          "isFormerMember": true
+        },
+        "nlSpecific": {
+          "fotobondNumber": 1634059
+        }
+      }
+    },
+
+    {
+      "name": {
+        "givenName": "Willem",
+        "infixName": "",
+        "familyName": "Meijer"
+      },
+      "optional": {
+        "level3URL": "http://www.vdHamer.com/fgWaalre/Willem_Meijer/",
+        "status": {
+          "isFormerMember": true
+        },
+        "nlSpecific": {
+          "fotobondNumber": 1634049
+        }
+      }
+    }
+  ]
 }
-
