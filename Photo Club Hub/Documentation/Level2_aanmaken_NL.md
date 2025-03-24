@@ -30,7 +30,7 @@ Dit stappenplan beschrijft hoe een lijst ("Level 2") met clubleden aan te maken 
      Het [Min](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/xampleMin.level2.json) bestand toont hoe het eruit ziet als vrijwel alle weglaatbare verden ontbreken.
      Als je daarentegen uitgaat van het [Min](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/xampleMin.level2.json) bestand krijg je
      met de omgekeerde situatie te maken: je kunt dan het [Max](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/xampleMax.level2.json)
-     bestand gebruiken om te kijken hoe het met die optionele velden moet.
+     bestand gebruiken om te kijken hoe het met die extra velden moet.
      Bij het creëren van een tussenvorm (tussen Min en Max in) is de kans groot dat je bijvoorbeeld een comma teveel of te weinig hebt.
      Verderop staat hoe je dat kunt controleren: JSON is kieskeurig over haakjes van diverse soorten.
      En vooral kieskeurig over comma's (tussen elementen in een lijst, maar niet na de laatste).
