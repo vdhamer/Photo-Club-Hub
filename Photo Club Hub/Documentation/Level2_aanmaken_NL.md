@@ -32,7 +32,8 @@ Dit stappenplan beschrijft hoe een lijst ("Level 2") met clubleden aan te maken 
      met de omgekeerde situatie te maken: je kunt dan het [Max](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/xampleMax.level2.json)
      bestand gebruiken om te kijken hoe het er met die optionele velden uitziet.
      Bij het creëren van een tussenvorm (tussen Min en Max in) is de kans groot dat je bijvoorbeeld een comma teveel of te weinig hebt.
-     Verderop staat hoe je dat kunt controleren: er zit wel degelijk logica in de JSON standaard, maar JSON is kieskeurig over haakjes van diverse soorten. En vooral comma's.
+     Verderop staat hoe je dat kunt controleren: JSON is kieskeurig over haakjes van diverse soorten.
+     En vooral kieskeurig over comma's (tussen elementen in een lijst, maar niet na de laatste).
 
 3. Pas de gegevens over de **club** (`club`) aan: `town`, `fullName`, `nickName`, en ook de locatie:
     - Tip: gebruik voor het aanpassen van het bestand liefst [JSON Editor Online](https://jsoneditoronline.org). Dat programma is bedoeld om zogenaamde "JSON" tekstbestanden aan te maken.
