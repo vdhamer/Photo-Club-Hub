@@ -62,6 +62,8 @@
 		D09816EA2D484985009D22FE /* ReadmeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09816E92D484985009D22FE /* ReadmeSection.swift */; };
 		D09816EC2D485375009D22FE /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09816EB2D485375009D22FE /* SectionHeader.swift */; };
 		D0A0B6852AA930E90078DE9A /* Photo_Club_Hub.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D0A0B6832AA930E90078DE9A /* Photo_Club_Hub.xcdatamodeld */; };
+		D0A6155B2D91AEA90024EC9E /* FotoclubBellusImagoMembersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A6155A2D91AEA90024EC9E /* FotoclubBellusImagoMembersProvider.swift */; };
+		D0A615792D91B7A00024EC9E /* fcBellusImago.level2.json in Resources */ = {isa = PBXBuildFile; fileRef = D0A615782D91B7A00024EC9E /* fcBellusImago.level2.json */; };
 		D0ADF4AE27922DCA00535432 /* MemberRolesAndStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ADF4AD27922DCA00535432 /* MemberRolesAndStatus.swift */; };
 		D0AE1B7527889E8600E0100E /* OrganizationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AE1B7427889E8600E0100E /* OrganizationListView.swift */; };
 		D0AE1B782788A19500E0100E /* WhoIsWhoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AE1B772788A19500E0100E /* WhoIsWhoListView.swift */; };
@@ -210,6 +212,8 @@
 		D0A34EB92BFB97710077F3E0 /* Photo_Club_Hub_2_6_3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_6_3.xcdatamodel; sourceTree = "<group>"; };
 		D0A380932D39B0FE00FF95F4 /* Level2_creation_EN.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Level2_creation_EN.md; sourceTree = "<group>"; };
 		D0A4DE392C7154C9004AC351 /* Photo_Club_Hub_2_7_1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_7_1.xcdatamodel; sourceTree = "<group>"; };
+		D0A6155A2D91AEA90024EC9E /* FotoclubBellusImagoMembersProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FotoclubBellusImagoMembersProvider.swift; sourceTree = "<group>"; };
+		D0A615782D91B7A00024EC9E /* fcBellusImago.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fcBellusImago.level2.json; sourceTree = "<group>"; };
 		D0ADF4AD27922DCA00535432 /* MemberRolesAndStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberRolesAndStatus.swift; sourceTree = "<group>"; };
 		D0AE1B7427889E8600E0100E /* OrganizationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationListView.swift; sourceTree = "<group>"; };
 		D0AE1B772788A19500E0100E /* WhoIsWhoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhoIsWhoListView.swift; sourceTree = "<group>"; };
@@ -355,6 +359,7 @@
 				D0831A2C277F72590049AB84 /* FotogroepWaalreMembersProvider.swift */,
 				D072D5E42D333E7500EA88DD /* XampleMinMembersProvider.swift */,
 				D05417372D31DDE300A2A579 /* XampleMaxMembersProvider.swift */,
+				D0A6155A2D91AEA90024EC9E /* FotoclubBellusImagoMembersProvider.swift */,
 			);
 			path = IndividualClubs;
 			sourceTree = "<group>";
@@ -662,6 +667,7 @@
 		D0F871912D403D1700530D10 /* JSON */ = {
 			isa = PBXGroup;
 			children = (
+				D0A615782D91B7A00024EC9E /* fcBellusImago.level2.json */,
 				D0FD28B82D8CDFD3002B5C38 /* abstractKeyword.level0.json */,
 				D0FD28B92D8CDFD3002B5C38 /* language.level0.json */,
 				D0FD28BA2D8CDFD3002B5C38 /* languages.level0.json */,
@@ -800,6 +806,7 @@
 				D0B5743E2C41D79300334E4C /* Assets.xcassets in Resources */,
 				D0F8719F2D403E6000530D10 /* readme.txt in Resources */,
 				D0F871952D403D1700530D10 /* root.level1.json in Resources */,
+				D0A615792D91B7A00024EC9E /* fcBellusImago.level2.json in Resources */,
 				D0F871972D403D1700530D10 /* fgWaalre.level2.json in Resources */,
 				D0DFBEF42D47036900CB9E73 /* Readme.xcstrings in Resources */,
 				D04856342D46A41900022117 /* Photo-Club-Hub-InfoPlist.xcstrings in Resources */,
@@ -933,6 +940,7 @@
 				D0E2235427DE9139002A8600 /* PreludeView.swift in Sources */,
 				D0F5EE872C54EDC60028C9A6 /* PhotographerOptionalFields.swift in Sources */,
 				D0621E812AE2D7DE000FFADB /* MemberPortfolio+roles.swift in Sources */,
+				D0A6155B2D91AEA90024EC9E /* FotoclubBellusImagoMembersProvider.swift in Sources */,
 				D0362A872AC3A21200F87378 /* String+containsWordUsingNLP.swift in Sources */,
 				D0AE1B782788A19500E0100E /* WhoIsWhoListView.swift in Sources */,
 				D006BA7E2B115FB1002E555B /* LocationManager.swift in Sources */,

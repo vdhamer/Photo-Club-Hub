@@ -60,4 +60,12 @@ struct UrlComponents {
         fileType: "json"
     )
 
+    // MARK: - bellusImago
+
+    static let bellusImago = UrlComponents(
+        dataSourceFile: "fcBellusImago",
+        fileSubType: "level2",
+        fileType: "json"
+    )
+
 }

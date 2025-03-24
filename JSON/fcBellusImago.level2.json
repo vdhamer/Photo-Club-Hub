@@ -1,0 +1,49 @@
+{
+
+    "club":
+        {
+            "idPlus": {
+                "town": "Veldhoven",
+                "fullName": "Fotoclub Bellus Imago",
+                "nickName": "fcBellusImago"
+            },
+            "optional": {
+                "coordinates": {
+                    "latitude": 51.42541,
+                    "longitude": 5.38756
+                },
+                "website": "https://www.fotoclubbellusimago.nl",
+                "contactEmail": "fotoclubbellusimago@xgmail.com",
+                "nlSpecific": {
+                    "fotobondNumber": 1671
+                }
+            }
+        },
+
+    "members":
+        [
+            {
+                "name": {
+                    "givenName": "Paula",
+                    "infixName": "",
+                    "familyName": "Anglès"
+                },
+                "optional": {
+                    "roles": {
+                        "isChairman": true,
+                        "isAdmin": true
+                    },
+                    "birthday": "9999-06-07",
+                    "website": "https://www.paulaangles.nl",
+                    "featuredImage": "https://www.fotoclubbellusimago.nl/uploads/5/5/1/2/55129719/stilte02-web_orig.jpg",
+                    "level3URL": "https://www.fotoclubbellusimago.nl/paula.html",
+                    "membershipStartDate": "2010-01-21",
+                    "keywords": [ "Landscape", "Abstract", "Minimal" ],
+                    "nlSpecific": {
+                        "fotobondNumber": 1671014
+                    }
+                }
+            }
+        ]
+
+}

@@ -62,12 +62,12 @@ class Level2JsonReader { // normally running on a background thread
         print("Could not access online file \(url.relativeString).")
         // last chance: fetch json data from app bundle
         guard let filePath: String = Bundle.main.path(forResource: urlComponents.dataSourceFile + "." +
-                                                                   urlComponents.fileSubType,
+                                                      urlComponents.fileSubType,
                                                       ofType: urlComponents.fileType)
-            else {
-                print("Could not access local file \(urlComponents.shortName) either.")
-                return nil
-            } // can't locate file within main app bundle
+        else {
+            ifDebugFatalError("Could not access local file \(urlComponents.shortName).")
+            return nil
+        } // can't locate file within main app bundle
 
         // get the requested JSON from a file in the main app bundle
         if let fileData = try? String(contentsOfFile: filePath, encoding: .utf8) {

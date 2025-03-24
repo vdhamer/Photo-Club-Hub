@@ -85,6 +85,13 @@ extension PhotoClubHubApp {
         waalreBackgroundContext.automaticallyMergesChangesFromParent = true
         _ = FotogroepWaalreMembersProvider(bgContext: waalreBackgroundContext)
 
+        // load all current/former members of Fotoclub Bellus Imago
+        let bellusBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
+        bellusBackgroundContext.name = "Fotoclub Bellus Imagoe"
+        bellusBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+        bellusBackgroundContext.automaticallyMergesChangesFromParent = true
+        _ = FotoclubBellusImagoMembersProvider(bgContext: bellusBackgroundContext)
+
         if includeXampleClubs {
 
             // load test member(s) of XampleMin. Club is called XampleMin (rather than ExampleMin) to be at end of list
