@@ -87,7 +87,7 @@ import CoreData // for NSManagedObjectContext
         bgContext.automaticallyMergesChangesFromParent = true
 
         Model.deleteCoreDataKeywordsLanguages(context: bgContext)
-        #expect(Language.count(context: bgContext, isoCode: "ur") == 0)
+        #expect(Language.count(context: bgContext, isoCode: "UR") == 0)
         #expect(LocalizedRemark.count(context: bgContext) == 0)
         #expect(LocalizedKeyword.count(context: bgContext) == 0)
 
@@ -95,7 +95,7 @@ import CoreData // for NSManagedObjectContext
                              useOnlyFile: false,
                              overrulingDataSourceFile: "language")
 
-        #expect(Language.count(context: bgContext, isoCode: "ur") == 1)
+        #expect(Language.count(context: bgContext, isoCode: "UR") == 1)
         #expect(LocalizedRemark.count(context: bgContext) == 0)
         #expect(LocalizedKeyword.count(context: bgContext) == 0)
     }
