@@ -32,7 +32,7 @@ import CoreData // for NSManagedObjectContext
         LocalizedKeyword.save(context: context) // probably not needed, but sloppy not to commit this change
 
         #expect(localizedKeyword.keyword.id == keyword.id)
-        #expect(localizedKeyword.language.isoCodeCaps == language.isoCodeCaps)
+        #expect(localizedKeyword.language.isoCodeAllCaps == language.isoCodeAllCaps)
         #expect(localizedKeyword.language.nameEN == "Dutch")
         #expect(localizedKeyword.name == localizedName)
         #expect(localizedKeyword.usage == localizedUsage)
@@ -52,7 +52,7 @@ import CoreData // for NSManagedObjectContext
                                                                   localizedUsage: localizedUsage)
         LocalizedKeyword.save(context: context) // probably not needed, but sloppy not to commit this change
 
-        #expect(localizedKeyword.language.isoCodeCaps == "EN")
+        #expect(localizedKeyword.language.isoCodeAllCaps == "EN")
         #expect(localizedKeyword.language.nameEN == "English")
     }
 
@@ -96,7 +96,7 @@ import CoreData // for NSManagedObjectContext
         #expect(localizedKeyword1.usage == "overwritten")
         #expect(LocalizedKeyword.count(context: context,
                                        keywordID: keyword.id,
-                                       languageIsoCode: language.isoCodeCaps) == 1)
+                                       languageIsoCode: language.isoCodeAllCaps) == 1)
     }
 
 }

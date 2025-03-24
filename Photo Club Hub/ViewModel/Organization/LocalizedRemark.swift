@@ -50,7 +50,7 @@ extension LocalizedRemark { // expose computed properties (some related to handl
         let localizedRemarks: [LocalizedRemark] = (try? bgContext.fetch(fetchRequest)) ?? [] // nil = absolute failure
         if localizedRemarks.count > 1 { // there is actually a Core Data constraint to prevent this
             ifDebugFatalError("Query returned multiple (\(localizedRemarks.count)) remarks for " +
-                              "\(organization.fullNameTown) for language code \(language.isoCodeCaps)",
+                              "\(organization.fullNameTown) for language code \(language.isoCodeAllCaps)",
                               file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
             // in release mode, log that there are multiple clubs, but continue using the first one.
         }
@@ -69,7 +69,10 @@ extension LocalizedRemark { // expose computed properties (some related to handl
                     try bgContext.save() // persist modifications in PhotoClub record
                 }
             } catch {
-                ifDebugFatalError("Creation of remark failed for \(organization.fullName) in \(language.isoCodeCaps)",
+                ifDebugFatalError("""
+                                  Creation of remark failed for \(organization.fullName) \
+                                  in language \(language.isoCodeAllCaps)
+                                  """,
                                   file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
             }
             return true // something got updated

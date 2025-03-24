@@ -33,7 +33,7 @@ extension Language {
         for language in code2Name {
             _ = Language.findCreateUpdate(
                 context: viewContext, // requires @MainActor
-                isoCode: language.key, // e.g. "EN"
+                isoCode: language.key, // converted to all caps within findCreateUpdate
                 nameENOptional: language.value // e.g. "English"
             )
         }
@@ -42,53 +42,65 @@ extension Language {
             try viewContext.save() // persist all organizationTypes using main thread ManagedObjectContext
         } catch {
             viewContext.rollback()
-            ifDebugFatalError("Couldn't initialize the three organizationType records",
+            ifDebugFatalError("Couldn't initialize the Language records",
                               file: #fileID, line: #line)
         }
     }
 
     // MARK: - getters and setters
 
-    var isoCodeCaps: String {
-        get { return isoCode_?.uppercased() ?? "??"} // e.g. "NL"
+    fileprivate var isoCode: String {
+        get {
+            let result = isoCode_?.uppercased() ?? "??"
+            if result != isoCode_ {
+                isoCode_ = result // update version in CoreData
+            }
+            return result
+        } set {
+            isoCode_ = newValue.uppercased()
+        }
+    }
+
+    var isoCodeAllCaps: String {
+        get { isoCode } // e.g. "NL"
         set { isoCode_ = newValue.uppercased() }
     }
 
     var nameEN: String {
-        get { return (languageNameEN_ ?? isoCodeCaps).capitalized } // e.g. Nederlands or Nl
-        set { languageNameEN_ = newValue.capitalized }
+        get { return languageNameEN_?.capitalizingFirstLetter() ?? isoCodeAllCaps } // e.g. Dutch or NL
+        set { languageNameEN_ = newValue.capitalizingFirstLetter() }
     }
 
     // MARK: - find or create
 
     // Find existing Language object or create a new one.
     // Update existing attributes or fill the new object
-    static func findCreateUpdate(context: NSManagedObjectContext, // can be foreground or background context
+    static func findCreateUpdate(context: NSManagedObjectContext, // can be foreground or background thread
                                  isoCode: String,
                                  nameENOptional: String? = nil
                                 ) -> Language {
 
-        let nameEN: String = nameENOptional ?? code2Name[isoCode.uppercased()] ?? "Name?"
+        let isoCodeAllCaps: String = isoCode.uppercased() // "en" -> "EN"
         let predicateFormat: String = "isoCode_ = %@" // avoid localization
-        let predicate = NSPredicate(format: predicateFormat, argumentArray: [isoCode])
+        let predicate = NSPredicate(format: predicateFormat, argumentArray: [isoCodeAllCaps])
         let fetchRequest: NSFetchRequest<Language> = Language.fetchRequest()
         fetchRequest.predicate = predicate
         var languages: [Language]! = []
         do {
             languages = try context.fetch(fetchRequest)
         } catch {
-            ifDebugFatalError("Failed to fetch Language with code \(isoCode)", file: #fileID, line: #line)
+            ifDebugFatalError("Failed to fetch Language with code \(isoCodeAllCaps)", file: #fileID, line: #line)
             // on non-Debug version, continue with empty `languages` array
         }
 
         if languages.count > 1 { // there is actually a Core Data constraint to prevent this
-            ifDebugFatalError("Query returned multiple (\(languages.count)) Languages with code \(isoCode)",
-                              file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
+            ifDebugFatalError("Query returned multiple (\(languages.count)) Languages with code \(isoCodeAllCaps)",
+                              file: #fileID, line: #line)
             // in release mode, log that there are multiple clubs, but continue using the first one.
         }
 
         if let language = languages.first { // already exists, so update non-identifying attributes
-            if language.update(context: context, nameEN: nameEN) {
+            if language.update(context: context, nameENOptional: nameENOptional) { // nameENOptional can be nil
                 print("Updated info for language \"\(language.nameEN)\"")
                 if Settings.extraCoreDataSaves {
                     save(context: context, language: language, create: false)
@@ -99,12 +111,12 @@ extension Language {
             // cannot use Language() initializer because we must use supplied context
             let entity = NSEntityDescription.entity(forEntityName: "Language", in: context)!
             let language = Language(entity: entity, insertInto: context)
-            language.isoCodeCaps = isoCode // immediately set it to a non-nil value
-            _ = language.update(context: context, nameEN: nameEN)
+            language.isoCodeAllCaps = isoCode // immediately set it to a non-nil value
+            _ = language.update(context: context, nameENOptional: nameENOptional)
             if Settings.extraCoreDataSaves {
                 save(context: context, language: language, create: true)
             }
-            print("Created new Language for code \(language.isoCodeCaps) named \(language.nameEN)")
+            print("Created new Language for code \(language.isoCodeAllCaps) named \(language.nameEN)")
             return language
         }
     }
@@ -112,17 +124,17 @@ extension Language {
     // count number of objects with a given isoCode
     static func count(context: NSManagedObjectContext, isoCode: String) -> Int {
         var languages: [Language]! = []
-
+        let isoCodeAllCaps = isoCode.uppercased()
         let fetchRequest: NSFetchRequest<Language> = Language.fetchRequest()
         let predicateFormat: String = "isoCode_ = %@" // avoid localization
-        let predicate = NSPredicate(format: predicateFormat, argumentArray: [isoCode])
+        let predicate = NSPredicate(format: predicateFormat, argumentArray: [isoCodeAllCaps])
         fetchRequest.predicate = predicate
 
         context.performAndWait {
             do {
                 languages = try context.fetch(fetchRequest)
             } catch {
-                ifDebugFatalError("Failed to fetch Language \(isoCode): \(error)", file: #fileID, line: #line)
+                ifDebugFatalError("Failed to fetch Language \(isoCodeAllCaps): \(error)", file: #fileID, line: #line)
                 // on non-Debug version, continue with empty `keywords` array
             }
         }
@@ -133,7 +145,9 @@ extension Language {
     // Update non-identifying attributes/properties within an existing instance of class Language if needed.
     // Returns whether an update was needed.
     fileprivate func update(context: NSManagedObjectContext,
-                            nameEN: String) -> Bool { // change language.name if needed
+                            nameENOptional: String?) -> Bool { // change language.name if needed
+
+        guard let nameEN = nameENOptional else { return false } // nothing to change
 
         var modified: Bool = false
 
@@ -146,8 +160,8 @@ extension Language {
             do {
                 try context.save() // update modified properties of a Language object
              } catch {
-                 ifDebugFatalError("Update failed for Language \(isoCodeCaps) aka \(self.nameEN)",
-                                  file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
+                 ifDebugFatalError("Update failed for Language \(isoCodeAllCaps) aka \(self.nameEN)",
+                                  file: #fileID, line: #line)
                 // in release mode, if save() fails, just continue
             }
         }
@@ -161,9 +175,9 @@ extension Language {
         } catch {
             context.rollback()
             if create {
-                ifDebugFatalError("Could not save created Language \(language.isoCodeCaps)")
+                ifDebugFatalError("Could not save created Language \(language.isoCodeAllCaps)")
             } else {
-                ifDebugFatalError("Could not save updated property of Language \(language.isoCodeCaps)")
+                ifDebugFatalError("Could not save updated property of Language \(language.isoCodeAllCaps)")
             }
         }
     }

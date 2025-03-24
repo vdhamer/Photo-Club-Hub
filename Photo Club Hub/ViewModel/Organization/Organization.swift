@@ -137,13 +137,13 @@ extension Organization {
         let currentLangID = Locale.preferredLanguages.first?.split(separator: "-").first?.uppercased() ?? "EN"
 
         // can we find the current language?
-        for localRemark in localizedRemarks where localRemark.language.isoCodeCaps == currentLangID {
+        for localRemark in localizedRemarks where localRemark.language.isoCodeAllCaps == currentLangID {
             if localRemark.localizedString != nil {
                 return localRemark.localizedString!
             }
          }
 
-        for localizedRemark in localizedRemarks where localizedRemark.language.isoCodeCaps == "EN" {
+        for localizedRemark in localizedRemarks where localizedRemark.language.isoCodeAllCaps == "EN" {
             if localizedRemark.localizedString != nil {
                 return localizedRemark.localizedString!
             }
@@ -151,7 +151,7 @@ extension Organization {
 
         // just use any language
         if localizedRemarks.first != nil, localizedRemarks.first!.localizedString != nil {
-            return "\(localizedRemarks.first!.localizedString!) [\(localizedRemarks.first!.language.isoCodeCaps)]"
+            return "\(localizedRemarks.first!.localizedString!) [\(localizedRemarks.first!.language.isoCodeAllCaps)]"
         }
 
         let clubOrMuseum: String = organizationType.organizationTypeName

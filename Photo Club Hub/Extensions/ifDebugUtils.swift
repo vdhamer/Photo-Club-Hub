@@ -21,7 +21,7 @@ func ifDebugFatalError(_ string: String) {
 }
 
 // normally the value passed for file should be #fileID (and line should receive #line)
-// Note that in Swift 6.0, #fileID may be deprecated (and code needs to use #file instead)
+// Note that in Swift 6.0, #fileID may be needed because #file is deprecated
 // no point in providing defaults for file & line (would be this file)
 func ifDebugFatalError(_ string: String, file: StaticString, line: UInt) {
     #if DEBUG

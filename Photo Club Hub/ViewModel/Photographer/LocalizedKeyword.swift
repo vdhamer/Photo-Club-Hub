@@ -43,7 +43,7 @@ extension LocalizedKeyword {
                                  localizedUsage: String?
                                 ) -> LocalizedKeyword {
 
-        // execute fetchRequest to get keyword object for id=id. Query could return multiple - but shouldn't.
+        // execute fetchRequest to get keyword object for id=id. Query could return multiple keywords - but shouldn't.
         let fetchRequest: NSFetchRequest<LocalizedKeyword> = LocalizedKeyword.fetchRequest()
         let predicateFormat: String = "keyword_ = %@ AND language_ = %@" // avoid localization of query string
         fetchRequest.predicate = NSPredicate(format: predicateFormat, argumentArray: [keyword, language])
@@ -52,16 +52,18 @@ extension LocalizedKeyword {
         do {
             localizedKeywords = try context.fetch(fetchRequest)
         } catch {
-            ifDebugFatalError("Failed to fetch LocalizedKeyword for \(keyword.id) in \(language.isoCodeCaps): \(error)",
-                              file: #fileID, line: #line)
-            // on non-Debug version, continue with empty `keywords` array
+            ifDebugFatalError("""
+                              Failed to fetch LocalizedKeyword for \(keyword.id) \
+                              in language \(language.isoCodeAllCaps): \(error)
+                              """,
+                              file: #fileID, line: #line) // on non-Debug version, continue with empty `keywords` array
         }
 
         // are there multiple translations of the keyword into the same language? This shouldn't be the case.
         if localizedKeywords.count > 1 { // there is actually a Core Data constraint to prevent this
             ifDebugFatalError("""
                               Query returned multiple (\(localizedKeywords.count)) translations \
-                              of Keyword \(keyword.id) into \(language.isoCodeCaps)
+                              of Keyword \(keyword.id) into \(language.isoCodeAllCaps)
                               """,
                               file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
             // in release mode, log that there are multiple clubs, but continue using the first one.
@@ -72,15 +74,14 @@ extension LocalizedKeyword {
             if localizedKeyword.update(context: context, localizedName: localizedName, localizedUsage: localizedUsage) {
                 print("""
                       Updated translation of keyword \"\(keyword.id)\" into \
-                      \(language.isoCodeCaps) as \(localizedName ?? "nil")
+                      \(language.isoCodeAllCaps) as \(localizedName ?? "nil")
                       """)
-                if Settings.extraCoreDataSaves {
-                    LocalizedKeyword.save(context: context, errorText:
-                                          """
-                                          Could not update LocalizedKeyword for \"\(localizedKeyword.keyword.id)\" \
-                                          for language \(localizedKeyword.language.isoCodeCaps)
-                                          """)
-                }
+                LocalizedKeyword.save(context: context, errorText:
+                                      """
+                                      Could not update LocalizedKeyword for \"\(localizedKeyword.keyword.id)\" \
+                                      for language \(localizedKeyword.language.isoCodeAllCaps)
+                                      """,
+                                      if: Settings.extraCoreDataSaves)
             }
             return localizedKeyword
         } else {
@@ -90,13 +91,12 @@ extension LocalizedKeyword {
             localizedKeyword.keyword_ = keyword
             localizedKeyword.language_ = language
             _ = localizedKeyword.update(context: context, localizedName: localizedName, localizedUsage: localizedUsage)
-            if Settings.extraCoreDataSaves {
-                LocalizedKeyword.save(context: context, errorText:
-                                          """
-                                          Could not create LocalizedKeyword for \"\(localizedKeyword.keyword.id)\" \
-                                          for language \(localizedKeyword.language.isoCodeCaps)
-                                          """)
-            }
+            LocalizedKeyword.save(context: context, errorText:
+                                  """
+                                  Could not create LocalizedKeyword for \"\(localizedKeyword.keyword.id)\" \
+                                  for language \(localizedKeyword.language.isoCodeAllCaps)
+                                  """,
+                                  if: Settings.extraCoreDataSaves)
             return localizedKeyword
         }
 
@@ -126,7 +126,7 @@ extension LocalizedKeyword {
              } catch {
                  ifDebugFatalError("""
                                    Update failed for LocalizedKeyword \
-                                   (\(self.keyword.id) | \(self.language.isoCodeCaps))
+                                   (\(self.keyword.id) | \(self.language.isoCodeAllCaps))
                                    """,
                                   file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
                 // in release mode, if save() fails, just continue
@@ -138,8 +138,8 @@ extension LocalizedKeyword {
 
     // MARK: - utilities
 
-    static func save(context: NSManagedObjectContext, errorText: String? = nil) {
-        if context.hasChanges {
+    static func save(context: NSManagedObjectContext, errorText: String? = nil, if condition: Bool = true) {
+        if context.hasChanges, condition {
             do {
                 try context.save()
             } catch {
@@ -162,7 +162,7 @@ extension LocalizedKeyword {
                 localizedKeywords = try context.fetch(fetchRequest)
             } catch {
                 ifDebugFatalError("Failed to fetch list of all LocalizedKeywords: \(error)",
-                                  file: #fileID, line: #line) // TODO #fileID? or #file
+                                  file: #fileID, line: #line)
                 // on non-Debug version, continue with empty `keywords` array
             }
         }

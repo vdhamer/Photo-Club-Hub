@@ -2133,6 +2133,10 @@
                     {
                         "language": "NL",
                         "value": "Het museum is gespecializeerd in het conserveren van grote fotocollecties, waaronder die van Charlie Chaplin."
+                    },
+                    {
+                        "language": "FR",
+                        "value": "Le musée est spécialisé dans la conservation de grandes collections photographiques, dont celle de Charlie Chaplin."
                     }
                 ]
             }
