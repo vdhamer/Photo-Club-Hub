@@ -426,6 +426,16 @@ In alle gevallen krijg je precies dezelfde app. De app kiest automatisch de juis
 
 <ul><li>
 
+### Mag een tekst ook speciale lettertekens bevatten?
+
+<details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
+Ja. Namen van b.v. personen mogen speciale (Unicode) tekens bevatten. Bijvoorbeeld "François".
+Dit geldt voor alle velden, waaronder de namen van musea ("Museum für Fotografie") en vertalingen
+("Le musée est spécialisé dans la conservation de...").
+</details></p>
+
+<ul><li>
+
 ### Kan ik een fotomuseum toevoegen?
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
