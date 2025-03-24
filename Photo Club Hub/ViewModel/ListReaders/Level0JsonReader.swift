@@ -73,13 +73,13 @@ class Level0JsonReader {
 
         for jsonKeyword in jsonKeywords {
             guard jsonKeyword["idString"].exists() else {
-                ifDebugFatalError("Keyword doesn't have an idString", file: #file, line: #line)
+                ifDebugFatalError("Keyword doesn't have an idString", file: #fileID, line: #line)
                 continue  // if it doesn't exist, skip the keyword
             }
             let idString = jsonKeyword["idString"].stringValue
 
             guard jsonKeyword["name"].exists() else {
-                ifDebugFatalError("Keyword doesn't have localized representations", file: #file, line: #line)
+                ifDebugFatalError("Keyword doesn't have localized representations", file: #fileID, line: #line)
                 continue  // if it doesn't exist, skip the keyword
             }
             let jsonKeywordName = jsonKeyword["name"].arrayValue // entire dictionary of localized names for the keyword
@@ -88,7 +88,7 @@ class Level0JsonReader {
             guard jsonKeywordName.count > 0,
                   jsonKeywordName[0]["language"].exists(),
                   jsonKeywordName[0]["localizedString"].exists() else {
-                ifDebugFatalError("Keyword doesn't have any localized representations", file: #file, line: #line)
+                ifDebugFatalError("Keyword doesn't have any localized representations", file: #fileID, line: #line)
                 continue  // if it doesn't exist, skip the keyword (note that it even skips the "usage" array)
             }
 
@@ -109,7 +109,7 @@ class Level0JsonReader {
             }
         } catch {
             ifDebugFatalError("Failed to save changes to Core Data: \(error)",
-                              file: #file, line: #line)  // likely deprecation of #fileID in Swift 6.0
+                              file: #fileID, line: #line)
             // in release mode, the failed database update is only logged. App doesn't stop.
             ifDebugPrint("Failed to save JSON Keyword changes in background")
             return

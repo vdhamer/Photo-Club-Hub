@@ -47,7 +47,7 @@ class XampleMaxMembersProvider {
         do {
             try bgContext.save()
         } catch {
-            ifDebugFatalError("Failed to save club \(fgIdPlus.nickname)", file: #file, line: #line)
+            ifDebugFatalError("Failed to save club \(fgIdPlus.nickname)", file: #fileID, line: #line)
         }
 
     }
