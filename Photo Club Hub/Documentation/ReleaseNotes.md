@@ -10,6 +10,7 @@ Code Maintenance
 * Tested on Xcode 16.3 beta 3 (16E5129f), iOS 18.4 beta (22E5231a), and macOS 15.3.1 and visionOS 2.4 beta (22O5230a).
 * Removed .pptx files from GitHub repo to save space.
 * Fixed typo in code, JSON files and README.md: isPropectiveMember -> isProspectiveMember.
+* Added support for a new Level 2 club: fcBellusImago.
 
 Data Maintenance
 * Added fgDeVriendschap (near Sint-Oedenrode) and Fotocollectief 2020 (Vught)
@@ -17,6 +18,7 @@ Data Maintenance
 * Updated xampleMin.level1.json and xampleMax.level1.json sample files.
 * Updated admin role for fgWaalre.
 * Added prospective members for fgDeGender.
+* Updated membership data for fgWaalre.
 
 Documentation
 * Updated FAQ_nl.md
