@@ -39,7 +39,7 @@ extension Organization {
                 return organizationType_! // organizationType_ cannot be nil at this point
             } else {
                 // something is fundamentally wrong if this happens
-                ifDebugFatalError( "Error because organization is nil", file: #file, line: #line )
+                ifDebugFatalError( "Error because organization is nil", file: #fileID, line: #line )
                 let persistenceController = PersistenceController.shared // for Core Data
                 let viewContext = persistenceController.container.viewContext // requires @MainActor
                 return OrganizationType.findCreateUpdate( // organizationType is CoreData NSManagedObject

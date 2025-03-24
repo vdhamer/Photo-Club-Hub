@@ -65,7 +65,7 @@ extension LocalizedKeyword {
                               Query returned multiple (\(localizedKeywords.count)) translations \
                               of Keyword \(keyword.id) into \(language.isoCodeAllCaps)
                               """,
-                              file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
+                              file: #fileID, line: #line)
             // in release mode, log that there are multiple clubs, but continue using the first one.
         }
 
