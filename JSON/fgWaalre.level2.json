@@ -407,17 +407,6 @@
 
     {
       "name": {
-        "givenName": "Janneke",
-        "infixName": "",
-        "familyName": "Sinot"
-      },
-      "optional": {
-        "level3URL": "http://www.vdHamer.com/fgWaalre/Janneke_Sinot/"
-      }
-    },
-
-    {
-      "name": {
         "givenName": "Jeroen",
         "infixName": "",
         "familyName": "Tapper"
