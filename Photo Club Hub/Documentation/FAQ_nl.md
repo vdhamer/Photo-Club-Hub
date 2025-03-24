@@ -426,6 +426,16 @@ In alle gevallen krijg je precies dezelfde app. De app kiest automatisch de juis
 
 <ul><li>
 
+### Mag een tekst ook speciale lettertekens bevatten?
+
+<details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
+Ja. Namen van b.v. personen mogen speciale (Unicode) tekens bevatten. Bijvoorbeeld "François".
+Dit geldt voor alle velden, waaronder de namen van musea ("Museum für Fotografie") en vertalingen
+("Le musée est spécialisé dans la conservation de...").
+</details></p>
+
+<ul><li>
+
 ### Kan ik een fotomuseum toevoegen?
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
@@ -554,11 +564,14 @@ Graag ons op dergelijke wijzigingen op club-niveau attenderen: dan corrigeren wi
 ### Trefwoorden bij de fotografen? (onderweg)
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
-Hier wordt aan gewerkt.
 Een fotograaf kan straks gekoppeld worden aan enkele trefwoorden zoals "portret" of "zwart-wit".
 En de app kan dit dan weergeven en hierop zoeken. Hiermee kan je fotografen 
 met een vergelijkbare belangstelling vinden en hun portfolio's inzien. En eventueel
-elkaars exposities bezoeken of op een andere manier in contact opnemen.
+elkaars exposities bezoeken of op een andere manier in contact opnemen.</p>
+
+Hier wordt momenteel aan gewerkt: een Level 2 bestand kan al trefwoorden (`keywords`) per fotograaf opnemen.
+En er wordt al een Level 0 bestand ingelezen met met trefwoorden en hun vertalingen.
+De trefwoorden worden worden echter nog niet getoond.
 
 </li><li>
 

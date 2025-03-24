@@ -22,8 +22,18 @@ Dit stappenplan beschrijft hoe een lijst ("Level 2") met clubleden aan te maken 
       | Eindhoven | Fotoclub Ericamera | fcEricamera | 51.45403 | 5.46288 |  |
       | Oirschot | Fotogroep Oirschot | fgOirschot | 51.46785 | 5.25568 |  |
       | Sint Michielsgestel | Fotokring Sint-Michielsgestel | fkGestel | 51.64036 | 5.34749 |  |
-      | Veldhoven | Fotoclub Bellus Imago | fcBellusImago | 51.42541 | 5.38756 |  |
+      | Veldhoven | Fotoclub Bellus Imago | fcBellusImago | 51.42541 | 5.38756 | op komst |
       | Waalre | Fotogroep Waalre | fgWaalre | 51.39184 | 5.46144 | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/fgDeGender.level2.json) |
+
+   - Tip: Je kunt eventueel ook uitgaan van het [Max](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/xampleMax.level2.json) bestand.
+     Dit zal ertoe leiden dat je velden die je momenteel niet kunt aanleveren zult willen weglaten. 
+     Het [Min](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/xampleMin.level2.json) bestand toont hoe het eruit ziet als vrijwel alle weglaatbare verden ontbreken.
+     Als je daarentegen uitgaat van het [Min](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/xampleMin.level2.json) bestand krijg je
+     met de omgekeerde situatie te maken: je kunt dan het [Max](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/xampleMax.level2.json)
+     bestand gebruiken om te kijken hoe het met die extra velden moet.
+     Bij het creëren van een tussenvorm (tussen Min en Max in) is de kans groot dat je bijvoorbeeld een comma teveel of te weinig hebt.
+     Verderop staat hoe je dat kunt controleren: JSON is kieskeurig over haakjes van diverse soorten.
+     En vooral kieskeurig over comma's (tussen elementen in een lijst, maar niet na de laatste).
 
 3. Pas de gegevens over de **club** (`club`) aan: `town`, `fullName`, `nickName`, en ook de locatie:
     - Tip: gebruik voor het aanpassen van het bestand liefst [JSON Editor Online](https://jsoneditoronline.org). Dat programma is bedoeld om zogenaamde "JSON" tekstbestanden aan te maken.
@@ -45,6 +55,7 @@ Dit stappenplan beschrijft hoe een lijst ("Level 2") met clubleden aan te maken 
       Het bevat een webadres (URL) van een foto gemaakt door de fotograaf.
       Dat webadres moet een plaatje zijn, maar mag op een willekeurige locatie op het internet staan.
       Als `featuredImage` ontbreekt of het adres niet klopt, wordt er een oranje plaatje met een "?" getoond.
+    - Tip: Speciale lettertekens in namen (en elders) zijn toegestaan. Bijvoorbeeld "Juriën" of "Saša". 
  
 5. Deze controlestap is alleen nodig als je [JSON Editor Online](https://jsoneditoronline.org) __niet__ gebruikt.
     - Er is bij [JSON Editor Online](https://jsoneditoronline.org) geen aparte JSON controle nodig.
