@@ -69,8 +69,51 @@ class Level0JsonReader {
         // hand the data to SwiftyJSON to parse
         let jsonRoot = JSON(parseJSON: jsonData) // get entire JSON file
 
+        // parse Keywords section of file
         let jsonKeywords: [JSON] = jsonRoot["keywords"].arrayValue
 
+        parseKeywords(bgContext: bgContext, jsonKeywords: jsonKeywords)
+        print("\(jsonKeywords.count) Keywords found")
+
+        // parse Language section of file
+        let jsonLanguages: [JSON] = jsonRoot["languages"].arrayValue
+
+        parseLanguages(bgContext: bgContext, jsonLanguages: jsonLanguages)
+
+        do { // saving may not be necessary because every organization is saved separately
+            if bgContext.hasChanges { // optimization recommended by Apple
+                try bgContext.save() // persist contents of entire root.Level1.json file
+            }
+        } catch {
+            ifDebugFatalError("Failed to save changes to Core Data: \(error)",
+                              file: #fileID, line: #line)
+            // in release mode, the failed database update is only logged. App doesn't stop.
+            ifDebugPrint("Failed to save JSON Keyword changes in background")
+            return
+        }
+
+        ifDebugPrint("Completed readRootLevel0Json() in background")
+    }
+
+    private func parseLanguages(bgContext: NSManagedObjectContext, jsonLanguages: [JSON]) {
+        for jsonLanguage in jsonLanguages {
+            guard jsonLanguage["isoCode"].exists(),
+                  jsonLanguage["languageNameEN"].exists() else {
+                ifDebugFatalError("Language doesn't have an isoCode or translated name", file: #fileID, line: #line)
+                continue
+            }
+
+            let isoCode = jsonLanguage["isoCode"].stringValue
+            let languageNameEN = jsonLanguage["languageNameEN"].stringValue
+
+            let language = Language.findCreateUpdate(context: bgContext,
+                                                     isoCode: isoCode,
+                                                     nameENOptional: languageNameEN)
+            print("Language <\(language.isoCodeAllCaps)> found")
+        }
+    }
+
+    private func parseKeywords(bgContext: NSManagedObjectContext, jsonKeywords: [JSON]) {
         for jsonKeyword in jsonKeywords {
             guard jsonKeyword["idString"].exists() else {
                 ifDebugFatalError("Keyword doesn't have an idString", file: #fileID, line: #line)
@@ -101,21 +144,6 @@ class Level0JsonReader {
                                                            usage: jsonUsage)
             print("Keyword <\(keyword.id)> with \(jsonKeywordName.count) localized name(s) found")
         }
-        print("\(jsonKeywords.count) Keywords found")
-
-        do { // saving may not be necessary because every organization is saved separately
-            if bgContext.hasChanges { // optimization recommended by Apple
-                try bgContext.save() // persist contents of entire root.Level1.json file
-            }
-        } catch {
-            ifDebugFatalError("Failed to save changes to Core Data: \(error)",
-                              file: #fileID, line: #line)
-            // in release mode, the failed database update is only logged. App doesn't stop.
-            ifDebugPrint("Failed to save JSON Keyword changes in background")
-            return
-        }
-
-        ifDebugPrint("Completed readRootLevel0Json() in background")
     }
 
 }

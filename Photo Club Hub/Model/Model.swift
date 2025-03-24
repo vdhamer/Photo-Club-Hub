@@ -27,11 +27,6 @@ struct Model {
             try deleteEntitiesOfOneType("Language", context: context)
 
             print(forcedDataRefresh + "was successful.")
-            try? context.performAndWait {
-                if context.hasChanges {
-                    try context.save()
-                }
-            }
         } catch {
             ifDebugFatalError(forcedDataRefresh + "FAILED: \(error)")
         }
@@ -49,21 +44,18 @@ struct Model {
             try deleteEntitiesOfOneType("OrganizationType", context: context)
 
             print(forcedDataRefresh + "was successful.")
-            try? context.performAndWait {
-                if context.hasChanges {
-                    try context.save()
-                }
-            }
         } catch {
             ifDebugFatalError(forcedDataRefresh + "FAILED: \(error)")
         }
     }
 
-    // returns true if successful
-    private static func deleteEntitiesOfOneType(_ entity: String, context: NSManagedObjectContext) throws {
+    // does an internal retry if saving data fails, with a max of retryDownCounter retries
+    private static func deleteEntitiesOfOneType(_ entity: String,
+                                                context: NSManagedObjectContext,
+                                                retryDownCounter: Int = 5) throws {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entity)
         fetchRequest.returnsObjectsAsFaults = false // comes from some fragment fron StackOverFlow? purpose?
-        try? context.performAndWait {
+        try context.performAndWait {
             do {
                 let results = try context.fetch(fetchRequest)
                 for object in results {
@@ -79,9 +71,18 @@ struct Model {
                     Language.initConstants() // insert contant records into OrganizationType table if needed
                 }
 
-            } catch let error { // if `entity` identifier is not found, `try` doesn't throw. Maybe a rethrow is missing.
-                print("Delete all data in \(entity) error :", error)
-                throw error
+            } catch let error {
+                context.rollback()
+                if retryDownCounter > 0 {
+                    sleep(1)
+                    print("deleteEntitiesOfOneType doing retry #\(retryDownCounter) for entity \(entity)")
+                    return try self.deleteEntitiesOfOneType(entity,
+                                                            context: context,
+                                                            retryDownCounter: retryDownCounter-1)
+                } else {
+                    print("Delete all data in \(entity) error :", error)
+                    throw error
+                }
             }
         }
     }

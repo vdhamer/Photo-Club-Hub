@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="23605" systemVersion="24D70" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="23786.1" systemVersion="24D81" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Keyword" representedClassName="Keyword" syncable="YES" codeGenerationType="class">
         <attribute name="id_" attributeType="String" defaultValueString="ID is missing"/>
         <attribute name="isStandard" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
@@ -136,6 +136,12 @@
     <entity name="PhotographerKeyword" representedClassName="PhotographerKeyword" syncable="YES" codeGenerationType="class">
         <relationship name="keyword_" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Keyword" inverseName="photographerKeywords_" inverseEntity="Keyword"/>
         <relationship name="photographer_" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Photographer" inverseName="photographerKeywords_" inverseEntity="Photographer"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="keyword_"/>
+                <constraint value="photographer_"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
     </entity>
     <configuration name="Level0">
         <memberEntity name="Language"/>
