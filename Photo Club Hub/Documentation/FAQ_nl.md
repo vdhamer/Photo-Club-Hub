@@ -434,7 +434,7 @@ Dit geldt voor alle velden, waaronder de namen van musea ("Museum für Fotografi
 ("Le musée est spécialisé dans la conservation de...").
 </details></p>
 
-<ul><li>
+</li><li>
 
 ### Kan ik een fotomuseum toevoegen?
 
