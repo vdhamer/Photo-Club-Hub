@@ -153,6 +153,7 @@ import CoreData // for NSManagedObjectContext
         bgContext.automaticallyMergesChangesFromParent = true
 
         Model.deleteCoreDataKeywordsLanguages(context: bgContext) // This test does have Keywords
+        #expect(Keyword.count(context: bgContext) == 0)
 
         // note that club fgDeGender may already be loaded
         // note that fgDeGenderMembersProvider runs asynchronously (via bgContext.perform {})
@@ -160,6 +161,8 @@ import CoreData // for NSManagedObjectContext
         _ = FotogroepDeGenderMembersProvider(bgContext: bgContext,
                                              synchronousWithRandomTown: true,
                                              randomTown: randomTownG)
+        #expect(Keyword.count(context: bgContext) == 2)
+
         let randomTownW = String.random(length: 10)
         _ = FotogroepWaalreMembersProvider(bgContext: bgContext,
                                            synchronousWithRandomTown: true,

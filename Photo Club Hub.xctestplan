@@ -41,6 +41,7 @@
   },
   "testTargets" : [
     {
+      "parallelizable" : false,
       "target" : {
         "containerPath" : "container:Photo Club Hub.xcodeproj",
         "identifier" : "D0E868992D693A3600F2A03A",
