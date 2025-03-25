@@ -529,6 +529,7 @@ Er is ook een engelstalige versie hiervan: [tinyurl.com/Level2aanmaken](https://
 ### Hoe krijg ik een Level 2 bestand op mijn club website?
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
+
 Hier komt apart stappenplan met instructies voor.
 Voor de eerste clubs willen wij _tijdelijk_ het bestand wel op een eigen server zetten.
 
