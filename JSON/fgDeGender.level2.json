@@ -518,7 +518,11 @@
             "optional": {
                 "website": "https://www.flickr.com/people/150047808@N08/",
                 "level3URL": "http://www.vdhamer.com/fgDeGender/Peter_de_Wit/",
+                "status": {
+                    "isFormerMember": true
+                },
                 "membershipStartDate": "2022-10-30",
+                "membershipEndDate": "2025-03-26",
                 "nlSpecific": {
                     "fotobondNumber": 1620107
                 }
