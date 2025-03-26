@@ -1,5 +1,8 @@
 ### 2.7.3 (GitHub commit ???????) ??-03-25
 
+Preferences screen
+* Forced a data reset to clean up the content of the in-app database when 2.7.3 or higher is first run (JS of fgW related)
+
 Who's Who screen
 * added temp statistics about keywords near footer of Who's Who screen (for software testing)
 
