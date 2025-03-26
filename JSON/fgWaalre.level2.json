@@ -325,9 +325,6 @@
       "optional": {
         "website": "https://henriettevanekert.nl/",
         "level3URL": "http://www.vdhamer.com/fgWaalre/Henriette_van_Ekert/",
-        "roles": {
-          "isAdmin": false
-        },
         "nlSpecific": {
           "fotobondNumber": 1634063
         }
@@ -680,9 +677,6 @@
       },
       "optional": {
         "level3URL": "http://www.vdHamer.com/fgWaalre/Peter_de_Wit/",
-        "status": {
-          "isFormerMember": false
-        },
         "nlSpecific": {
           "fotobondNumber": 1634005
         }
