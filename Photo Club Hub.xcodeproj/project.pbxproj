@@ -254,7 +254,6 @@
 		D0F871852D403D1700530D10 /* 250218_Fotoclubs_Brabant_Oost.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = 250218_Fotoclubs_Brabant_Oost.xlsx; sourceTree = "<group>"; };
 		D0F871882D403D1700530D10 /* fgDeGender.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fgDeGender.level2.json; sourceTree = "<group>"; };
 		D0F871892D403D1700530D10 /* fgDeGenderLeden.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = fgDeGenderLeden.xlsx; sourceTree = "<group>"; };
-		D0F8718A2D403D1700530D10 /* OLDfgWaalre.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = OLDfgWaalre.level2.json; sourceTree = "<group>"; };
 		D0F8718B2D403D1700530D10 /* root.level0.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = root.level0.json; sourceTree = "<group>"; };
 		D0F8718C2D403D1700530D10 /* root.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = root.level1.json; sourceTree = "<group>"; };
 		D0F8718D2D403D1700530D10 /* xampleMax.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = xampleMax.level1.json; sourceTree = "<group>"; };
@@ -677,7 +676,6 @@
 				D0F871852D403D1700530D10 /* 250218_Fotoclubs_Brabant_Oost.xlsx */,
 				D0F871892D403D1700530D10 /* fgDeGenderLeden.xlsx */,
 				D0F871882D403D1700530D10 /* fgDeGender.level2.json */,
-				D0F8718A2D403D1700530D10 /* OLDfgWaalre.level2.json */,
 				D0F8718B2D403D1700530D10 /* root.level0.json */,
 				D0F8718C2D403D1700530D10 /* root.level1.json */,
 				D0F8718D2D403D1700530D10 /* xampleMax.level1.json */,
