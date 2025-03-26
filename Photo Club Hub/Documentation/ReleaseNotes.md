@@ -1,5 +1,8 @@
 ### 2.7.3 (GitHub commit 4985f44) 26-03-25
 
+Data Maintenance
+* Change in membership for fgDeGender (BZ, PdW).
+
 This build #4638 was made using Xcode 16.3 RC
 
 ---------------------------------------------------------------------------
