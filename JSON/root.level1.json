@@ -633,6 +633,32 @@
         {
             "idPlus": {
                 "town": "Eindhoven",
+                "fullName": "De Beeldmakers",
+                "nickName": "DeBeeldmakers"
+            },
+            "coordinates": {
+                "latitude": 51.44304,
+                "longitude": 5.51534
+            },
+            "optional": {
+                "website": "",
+                "level2URL": "https://www.example.com/deBeeldmakers.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "The 2025 exposition in a local gallery in Eindhoven included a dance performance."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Tijdens de 2025 expositie in De Kruisruimte (Eindhoven) was er een bijbehorende dansvoorstelling."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Eindhoven",
                 "fullName": "Fotogroep de Gender",
                 "nickName": "fgDeGender"
             },
