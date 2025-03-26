@@ -10,7 +10,7 @@ Code Maintenance
 * Aligned refreshFirstImage() code to make it more similar to Photo Club HTML code.
 * Moved deleteAllCoreDataObjects() to a new file named Model.swift.
 * Introduced use of Swift Testing framework for software unit testing.
-* Tested on Xcode 16.3 beta 3 (16E5129f), iOS 18.4 beta (22E5231a), and macOS 15.3.1 and visionOS 2.4 beta (22O5230a).
+* Tested on Xcode 16.3 RC (16E137), iOS 18.4 beta (24E241), and macOS 15.3.1 and visionOS 2.4 beta (22O233).
 * Removed .pptx files from GitHub repo to save space.
 * Fixed typo in code, JSON files and README.md: isPropectiveMember -> isProspectiveMember.
 * Added support for a new Level 2 club: fcBellusImago.
@@ -26,7 +26,7 @@ Data Maintenance
 Documentation
 * Updated FAQ_nl.md
 
-This build #4637 was made using Xcode 16.2
+This build #4637 was made using Xcode 16.3 RC
 
 ---------------------------------------------------------------------------
 
