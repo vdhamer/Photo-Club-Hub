@@ -1,4 +1,10 @@
-### 2.7.3 (GitHub commit ???????) ??-03-25
+### 2.7.3 (GitHub commit 4985f44) 26-03-25
+
+This build #4638 was made using Xcode 16.3 RC
+
+---------------------------------------------------------------------------
+
+### 2.7.3 (GitHub commit 4985f44) 26-03-25
 
 Preferences screen
 * Forced a data reset to clean up the content of the in-app database when 2.7.3 or higher is first run (JS of fgW related)
@@ -16,7 +22,7 @@ Code Maintenance
 * Added support for a new Level 2 club: fcBellusImago.
 
 Data Maintenance
-* Added fgDeVriendschap (near Sint-Oedenrode) and Fotocollectief 2020 (Vught)
+* Added fgDeVriendschap (near Sint-Oedenrode), Fotocollectief 2020 (Vught), 
 * Fixed level2 url for fgDeGender in root.level1.json file (.com -> .nl).
 * Updated xampleMin.level1.json and xampleMax.level1.json sample files.
 * Updated admin role for fgWaalre.
