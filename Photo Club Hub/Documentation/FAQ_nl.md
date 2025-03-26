@@ -531,27 +531,27 @@ Er is ook een engelstalige versie hiervan: [tinyurl.com/Level2aanmaken](https://
 <details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
 
 Voor de eerste clubs zijn we bereid om _tijdelijk_ het bestand op onze eigen server zetten. 
-Het nadeel hiervan is dat je iedere versie via ons moet laten uploaden.
+Het nadeel hiervan is dat iedere herziening van het bestand via ons moet lopen.
 
-Kenners kunnen het bestand ook `ftp` op de eigen site zetten. Maar `ftp` is niet echt gebruikersvriendelijk en vereist extra inloggegevens.
+Kenners kunnen het bestand ook met `ftp` op de eigen site zetten - maar `ftp` is niet echt gebruikersvriendelijk.
 
-Het idee is daarom om het bestand op de eigen server te zetten via **Wordpress**.
-Wordpress is vrij gebruikersvriendelijk en vaak al aanwezig en bekend. Dan kan het bestand via een webadres door de app opgehaald kan worden.
-Je kunt in Wordpress b.v. foto's uploaded via `Dashboard` > `Media`. Wordpress laat het webadres zien. Dat webadres komt in het level1.json bestand.
+Het idee is daarom om het bestand op de eigen server te zetten via **Wordpress** (of iets vergelijkbaars).
+Wordpress is relatief gebruikersvriendelijk en wordt vaak gebruikt. Na de upload kan de app het bestand ophalen via een webadres (URL).
+Je kunt in Wordpress b.v. foto's uploaded via `Dashboard` > `Media`. Wordpress laat het webadres van het bestand zien. Dat webadres zetten wij vervolgens voor je in het `level1.json` bestand.
 
-Daar zijn mogelijk 3 complicaties bij:
+Bij het uploadeden via Wordpress zijn 3 complicaties te verwachten:
 
-1. **Inloggen**. Er zijn inloggegevens nodig om iets op een Wordpress site te veranderen. Die moeten bij een bestaande site al bij iemand in de club bekend zijn.
-Vaak zal dat ook de persoon zijn die het Level 2 bestand aanpast. De inloggevens moeten bij zo min mogelijk personen bekend zijn (b.v. de admin en een backup).
+1. **Inloggen**. Er zijn inloggegevens nodig om iets op een Wordpress site te wijzigen. Die moeten iemand van de club al weten.
+Het is handig om klein onderhoud van het `Level 2` bestand bij die persoon neer te leggen: die heeft de inloggevens en kent Wordpress een beetje.
 
-2. **Bestandstype**. WordPress heeft een beveiliging om te zorgen dat je niet "vreemde" files upload. Het verwacht tenslotte "media" bestanden zoals .jpg of .mp4.
+2. **Bestandstype**. WordPress verwacht tenslotte "media" bestanden van typen zoals .jpg of .mp4 of .pdf. Het verwacht geen .json bestanden.
 Dit is oplosbaar via een Wordpress plug-in zoals [https://wordpress.org/plugins/mime-types-plus/](https://wordpress.org/plugins/mime-types-plus/)
 
-3. **Stabiel adres**. Vroeger of later zal je een nieuwe versie van je Level 2 bestand hebben.
-De nieuwe versie moet liefst op precies hetzelfde webadres komen als de vorige versie. Zodat de verwijzing naar het bestand blijft werken.
-Daar heeft Wordpress iets voor: "permalinks".
+3. **Stabiel adres**. Vroeger of later zal men het `Level 2` bestand willen vervangen door een bijgewerkte versie.
+De nieuwe versie moet eigenlijk op hetzelfde webadres komen als de vorige versie. Anders werken bestaande links/verwijzigingen niet meer.
+Daar heeft Wordpress "permalinks" voor. Dat vind je op de Wordpress pagina waarmee je het bestand upload.
 
-Er komt een apart stappenplan met instructies voor "hoe krijg ik mijn Level 2 bestand op de club website". Hulp om dit te schrijven is welkom.
+Er komt een apart stappenplan met stap-voor-stap instructies voor "hoe krijg ik mijn Level 2 bestand op de club website". Wie helpt om dit uit te zoeken en te schrijven?
 
 </details></p>
 
