@@ -633,6 +633,32 @@
         {
             "idPlus": {
                 "town": "Eindhoven",
+                "fullName": "De Beeldmakers",
+                "nickName": "DeBeeldmakers"
+            },
+            "coordinates": {
+                "latitude": 51.44304,
+                "longitude": 5.51534
+            },
+            "optional": {
+                "website": "",
+                "level2URL": "https://www.example.com/deBeeldmakers.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Expositions are held in a gallery in Eindhoven."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Exposities worden gehouden in De Kruisruimte, Eindhoven."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Eindhoven",
                 "fullName": "Fotogroep de Gender",
                 "nickName": "fgDeGender"
             },
