@@ -2,6 +2,7 @@
 
 Data Maintenance
 * Change in membership for fgDeGender (BZ, PdW).
+* Added images for fgDeGender based on Expo25.
 
 This build #4638 was made using Xcode 16.3 RC
 
