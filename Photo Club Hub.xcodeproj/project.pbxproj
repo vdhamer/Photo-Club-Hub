@@ -223,7 +223,6 @@
 		D0B32BB22C15C51A009FF8E7 /* AppVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVersion.swift; sourceTree = "<group>"; };
 		D0BAB01C2A76CED300387E63 /* URLSession+synchronous.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+synchronous.swift"; sourceTree = "<group>"; };
 		D0BF26FC2CFA218000DA2CB9 /* fcBellusImago.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fcBellusImago.level2.json; sourceTree = "<group>"; };
-		D0BF26FD2CFA218000DA2CB9 /* fgAnders.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fgAnders.level2.json; sourceTree = "<group>"; };
 		D0BF26FE2CFA218000DA2CB9 /* fgDeGender.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fgDeGender.level2.json; sourceTree = "<group>"; };
 		D0BF26FF2CFA218000DA2CB9 /* fgWaalre.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fgWaalre.level2.json; sourceTree = "<group>"; };
 		D0C53BDC2ABF3ADF000722A1 /* PersonName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonName.swift; sourceTree = "<group>"; };
@@ -593,7 +592,6 @@
 				D07463E52CFB5EFA00F48EB2 /* root.level1.json */,
 				D066F0F82D0F461F002C6A2B /* level0.json */,
 				D0BF26FC2CFA218000DA2CB9 /* fcBellusImago.level2.json */,
-				D0BF26FD2CFA218000DA2CB9 /* fgAnders.level2.json */,
 				D0BF26FE2CFA218000DA2CB9 /* fgDeGender.level2.json */,
 				D0BF26FF2CFA218000DA2CB9 /* fgWaalre.level2.json */,
 				D072D5E22D333B4500EA88DD /* xampleMin.level2.json */,
