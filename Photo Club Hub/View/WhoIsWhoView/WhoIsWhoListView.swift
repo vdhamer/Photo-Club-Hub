@@ -104,6 +104,9 @@ struct WhoIsWhoListView: View {
                                    """)
                     Divider()
                     Text(verbatim: "Number of different Keywords: \(Keyword.count(context: viewContext))")
+                    ForEach(Keyword.getAll(context: viewContext), id: \.self) { keyword in
+                        Text(verbatim: "   🔑 \(keyword.id): \(keyword.isStandard ? "Standard" : "Non-standard")")
+                    }
                 } .foregroundColor(Color.gray) .font(.callout)
             }
             .foregroundColor(Color.secondary)

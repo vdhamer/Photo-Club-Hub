@@ -235,4 +235,24 @@ extension Keyword {
         return keywords.count
     }
 
+    @MainActor
+    // get array with list of all Keywords
+    static func getAll(context: NSManagedObjectContext) -> [Keyword] {
+        var keywords: [Keyword]! = []
+
+        context.performAndWait {
+            let fetchRequest: NSFetchRequest<Keyword> = Keyword.fetchRequest()
+            let predicateAll = NSPredicate(format: "TRUEPREDICATE")
+            fetchRequest.predicate = predicateAll
+
+            do {
+                keywords = try context.fetch(fetchRequest)
+            } catch {
+                ifDebugFatalError("Failed to fetch all Keywords: \(error)", file: #fileID, line: #line)
+            }
+        }
+
+        return keywords
+    }
+
 }
