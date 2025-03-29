@@ -124,6 +124,7 @@
                 "website": "https://glass.photo/jerdam",
                 "level3URL": "http://www.vdhamer.com/fgDeGender/Bettina_de_Graaf/",
                 "membershipStartDate": "2024-01-01",
+                "keywords": [ "Portrait", "Travel" ],
                 "nlSpecific": {
                     "fotobondNumber": 1620111
                 }
@@ -157,6 +158,7 @@
                 "website": "https://www.ericvdven.nl/",
                 "level3URL": "http://www.vdhamer.com/fgDeGender/Eric_van_de_Ven/",
                 "membershipStartDate": "2022-12-01",
+                "keywords": [ "Experimental", "Postprocessing" ],
                 "nlSpecific": {
                     "fotobondNumber": 1620109
                 }
@@ -276,6 +278,7 @@
                     "isOther": false
                 },
                 "membershipStartDate": "2016-04-01",
+                "keywords": [ "Black & White", "Landscape" ],
                 "nlSpecific": {
                     "fotobondNumber": 1620090
                 }
@@ -325,6 +328,7 @@
             "optional": {
                 "level3URL": "http://www.vdhamer.com/fgDeGender/Joep_Julicher/",
                 "membershipStartDate": "2019-04-01",
+                "keywords": [ "Minimal" ],
                 "nlSpecific": {
                     "fotobondNumber": 1620098
                 }
@@ -720,6 +724,7 @@
                     "isTreasurer": true
                 },
                 "membershipStartDate": "2022-10-23",
+                "keywords": [ "Experimental" ],
                 "nlSpecific": {
                     "fotobondNumber": 1620105
                 }
