@@ -80,6 +80,20 @@
 
         {
             "name": {
+                "givenName": "Annet",
+                "infixName": "",
+                "familyName": "Kars"
+            },
+            "optional": {
+                "level3URL": "http://www.vdhamer.com/fgDeGender/Annet_Kars/",
+                "status": {
+                    "isProspectiveMember": true
+                }
+            }
+        },
+
+        {
+            "name": {
                 "givenName": "Bert",
                 "infixName": "",
                 "familyName": "Zantingh"
@@ -89,10 +103,10 @@
                 "website": "https://www.instagram.com/zantingh49/",
                 "level3URL": "http://www.vdhamer.com/fgDeGender/Bert_Zantingh/",
                 "status": {
-                    "isFormerMember": false
+                    "isFormerMember": true
                 },
                 "membershipStartDate": "1996-01-01",
-                "membershipEndDate": "2025-04-01",
+                "membershipEndDate": "2025-03-31",
                 "nlSpecific": {
                     "fotobondNumber": 1620040
                 }
@@ -110,6 +124,7 @@
                 "website": "https://glass.photo/jerdam",
                 "level3URL": "http://www.vdhamer.com/fgDeGender/Bettina_de_Graaf/",
                 "membershipStartDate": "2024-01-01",
+                "keywords": [ "Portrait", "Street", "Travel" ],
                 "nlSpecific": {
                     "fotobondNumber": 1620111
                 }
@@ -143,6 +158,7 @@
                 "website": "https://www.ericvdven.nl/",
                 "level3URL": "http://www.vdhamer.com/fgDeGender/Eric_van_de_Ven/",
                 "membershipStartDate": "2022-12-01",
+                "keywords": [ "Experimental", "Postprocessing" ],
                 "nlSpecific": {
                     "fotobondNumber": 1620109
                 }
@@ -262,6 +278,7 @@
                     "isOther": false
                 },
                 "membershipStartDate": "2016-04-01",
+                "keywords": [ "Black & White", "Landscape" ],
                 "nlSpecific": {
                     "fotobondNumber": 1620090
                 }
@@ -311,8 +328,23 @@
             "optional": {
                 "level3URL": "http://www.vdhamer.com/fgDeGender/Joep_Julicher/",
                 "membershipStartDate": "2019-04-01",
+                "keywords": [ "Minimal" ],
                 "nlSpecific": {
                     "fotobondNumber": 1620098
+                }
+            }
+        },
+
+        {
+            "name": {
+                "givenName": "Jos",
+                "infixName": "",
+                "familyName": "Zwaans"
+            },
+            "optional": {
+                "level3URL": "http://www.vdhamer.com/fgDeGender/Jos_Zwaans/",
+                "status": {
+                    "isProspectiveMember": true
                 }
             }
         },
@@ -331,6 +363,7 @@
                     "isOther": false
                 },
                 "membershipStartDate": "2005-01-01",
+                "keywords": [ "Macro", "Panorama" ],
                 "nlSpecific": {
                     "fotobondNumber": 1620064
                 }
@@ -490,7 +523,11 @@
             "optional": {
                 "website": "https://www.flickr.com/people/150047808@N08/",
                 "level3URL": "http://www.vdhamer.com/fgDeGender/Peter_de_Wit/",
+                "status": {
+                    "isFormerMember": true
+                },
                 "membershipStartDate": "2022-10-30",
+                "membershipEndDate": "2025-03-26",
                 "nlSpecific": {
                     "fotobondNumber": 1620107
                 }
@@ -511,6 +548,7 @@
                     "isAdmin": true
                 },
                 "membershipStartDate": "2024-01-01",
+                "keywords": [ "Landscape", "Minimal" ],
                 "nlSpecific": {
                     "fotobondNumber": 1620110
                 }
@@ -536,6 +574,20 @@
 
         {
             "name": {
+                "givenName": "Pieter",
+                "infixName": "de",
+                "familyName": "Jong"
+            },
+            "optional": {
+                "level3URL": "http://www.vdhamer.com/fgDeGender/Pieter_de_Jong/",
+                "status": {
+                    "isProspectiveMember": true
+                }
+            }
+        },
+
+        {
+            "name": {
                 "givenName": "Regina",
                 "infixName": "",
                 "familyName": "Bakker"
@@ -544,6 +596,7 @@
                 "birthday": "9999-12-19",
                 "level3URL": "http://www.vdhamer.com/fgDeGender/Regina_Bakker/",
                 "membershipStartDate": "2020-01-01",
+                "keywords": [ "Landscape" ],
                 "nlSpecific": {
                     "fotobondNumber": 1620101
                 }
@@ -632,6 +685,20 @@
 
         {
             "name": {
+                "givenName": "Willem",
+                "infixName": "",
+                "familyName": "Kars"
+            },
+            "optional": {
+                "level3URL": "http://www.vdhamer.com/fgDeGender/Willem_Kars/",
+                "status": {
+                    "isProspectiveMember": true
+                }
+            }
+        },
+
+        {
+            "name": {
                 "givenName": "Willy",
                 "infixName": "",
                 "familyName": "Lanters"
@@ -659,6 +726,7 @@
                     "isTreasurer": true
                 },
                 "membershipStartDate": "2022-10-23",
+                "keywords": [ "Experimental" ],
                 "nlSpecific": {
                     "fotobondNumber": 1620105
                 }

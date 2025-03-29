@@ -633,6 +633,32 @@
         {
             "idPlus": {
                 "town": "Eindhoven",
+                "fullName": "De Beeldmakers",
+                "nickName": "DeBeeldmakers"
+            },
+            "coordinates": {
+                "latitude": 51.44304,
+                "longitude": 5.51534
+            },
+            "optional": {
+                "website": "",
+                "level2URL": "https://www.example.com/deBeeldmakers.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "The 2025 exposition in a local gallery in Eindhoven included a dance performance."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Tijdens de 2025 expositie in De Kruisruimte (Eindhoven) was er een bijbehorende dansvoorstelling."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Eindhoven",
                 "fullName": "Fotogroep de Gender",
                 "nickName": "fgDeGender"
             },
@@ -642,7 +668,7 @@
             },
             "optional": {
                 "website": "https://www.fcdegender.nl",
-                "level2URL": "https://www.fcDeGender.com/deGender.level2.json",
+                "level2URL": "https://www.fcDeGender.nl/deGender.level2.json",
                 "remark": [
                     {
                         "language": "EN",
@@ -1378,6 +1404,33 @@
 
         {
             "idPlus": {
+                "town": "Sint-Oedenrode",
+                "fullName": "Fotogroep de Vriendschap",
+                "nickName": "fgDeVriendschap"
+            },
+            "coordinates": {
+                "latitude": 51.58067,
+                "longitude": 5.40911
+            },
+            "optional": {
+                "website": "https://www.fgdevriendschap.com",
+                "level2URL": "https://www.example.com/fgDeVriendschap.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "The club focusses on landscapes and nature and has up to 25 members."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "De nadruk van de club is natuur en landschappen. Het maximale ledental is 25."
+                    }
+                ]
+            }
+        },
+
+
+        {
+            "idPlus": {
                 "town": "Uden",
                 "fullName": "Udense Amateurfotografen F/8",
                 "nickName": "f/8"
@@ -1599,6 +1652,31 @@
         {
             "idPlus": {
                 "town": "Vught",
+                "fullName": "Fotocollectief 2020",
+                "nickName": "fc2020"
+            },
+            "coordinates": {
+                "latitude": 51.65823,
+                "longitude": 5.29832
+            },
+            "optional": {
+                "level2URL": "https://www.example.com/fc2020.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "This club is separate from Fotogroep Vught (both hold exhibitions in the same former church)."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Fotogroep Vught en Fotocollectief 2020 (Vught) exposeren in 2025 apart, maar aansluitend."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Vught",
                 "fullName": "Fotogroep Vught",
                 "nickName": "fgVucht"
             },
@@ -1645,7 +1723,7 @@
                     },
                     {
                         "language": "NL",
-                        "value": "Fotogroep Waalre vergadert en exposeert jaarlijks in het gemeentehuis van Waalre."
+                        "value": "Fotogroep Waalre vergadert en exposeert in het gemeentehuis van Waalre."
                     }
                 ],
                 "nlSpecific": {
@@ -2081,6 +2159,10 @@
                     {
                         "language": "NL",
                         "value": "Het museum is gespecializeerd in het conserveren van grote fotocollecties, waaronder die van Charlie Chaplin."
+                    },
+                    {
+                        "language": "FR",
+                        "value": "Le musée est spécialisé dans la conservation de grandes collections photographiques, dont celle de Charlie Chaplin."
                     }
                 ]
             }
