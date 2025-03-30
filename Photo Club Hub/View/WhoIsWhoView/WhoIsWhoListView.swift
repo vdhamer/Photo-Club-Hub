@@ -26,6 +26,8 @@ struct WhoIsWhoListView: View {
     @StateObject var model = PreferencesViewModel()
     fileprivate var navigationTitle = String(localized: "Who's Who",
                                              comment: "Title of page with list of photographers")
+    fileprivate let nonStandard = String(localized: "Non-standard",
+                                      comment: "Keyword description at bottom of Who's Who screen")
 
     init(searchText: Binding<String>, navigationTitle: String? = nil) {
         self.searchText = searchText
@@ -54,60 +56,20 @@ struct WhoIsWhoListView: View {
                 Divider()
                 Text("WhosWho_Caption_3",
                      comment: "Shown in gray at the bottom of the Who's Who page (3/3).")
-
-                Group {
-                    Divider()
-                    Text(verbatim: """
-                                   Number of Abstract keyword instances \
-                                   \(PhotographerKeyword.count(context: viewContext, keywordID: "Abstract"))
-                                   """)
-                    Text(verbatim: """
-                                   Number of Architecture keyword instances \
-                                   \(PhotographerKeyword.count(context: viewContext, keywordID: "Architecture"))
-                                   """)
-                    Text(verbatim: """
-                                   Number of Black & White keyword instances \
-                                   \(PhotographerKeyword.count(context: viewContext, keywordID: "Black & White"))
-                                   """)
-                    Text(verbatim: """
-                                   Number of Experimental keyword instances \
-                                   \(PhotographerKeyword.count(context: viewContext, keywordID: "Experimental"))
-                                   """)
-                    Text(verbatim: """
-                                   Number of Landscape keyword instances \
-                                   \(PhotographerKeyword.count(context: viewContext, keywordID: "Landscape"))
-                                   """)
-                    Text(verbatim: """
-                                   Number of Minimal keyword instances \
-                                   \(PhotographerKeyword.count(context: viewContext, keywordID: "Minimal"))
-                                   """)
-                    Text(verbatim: """
-                                   Number of Portrait keyword instances \
-                                   \(PhotographerKeyword.count(context: viewContext, keywordID: "Portrait"))
-                                   """)
-                    Text(verbatim: """
-                                   Number of Postprocessing keyword instances \
-                                   \(PhotographerKeyword.count(context: viewContext, keywordID: "Postprocessing"))
-                                   """)
-                    Text(verbatim: """
-                                   Number of Street keyword instances \
-                                   \(PhotographerKeyword.count(context: viewContext, keywordID: "Street"))
-                                   """)
-                    Text(verbatim: """
-                                   Number of Travel keyword instances \
-                                   \(PhotographerKeyword.count(context: viewContext, keywordID: "Travel"))
-                                   """)
-                    Divider()
-                    Text(verbatim: """
-                                   Total number of Keyword instances: \
-                                   \(PhotographerKeyword.count(context: viewContext))
-                                   """)
-                    Divider()
-                    Text(verbatim: "Number of different Keywords: \(Keyword.count(context: viewContext))")
-                    ForEach(Keyword.getAll(context: viewContext), id: \.self) { keyword in
-                        Text(verbatim: "   🔑 \(keyword.id): \(keyword.isStandard ? "Standard" : "Non-standard")")
+                Divider()
+                Text("WhosWho_Caption_4",
+                     comment: "Shown in gray at the bottom of the Who's Who page (3/3).")
+                ForEach(Keyword.getAll(context: viewContext), id: \.self) { keyword in
+                    HStack {
+                        Text(verbatim: "   🔑 \(keyword.id)")
+                        Text(PhotographerKeyword.count(context: viewContext, keywordID: keyword.id).description+"x")
+                        Text("\(keyword.isStandard ? "" : nonStandard)")
                     }
-                } .foregroundColor(Color.gray) .font(.callout)
+                }
+                Text("Total number of Keyword instances: \(PhotographerKeyword.count(context: viewContext))x",
+                     comment: "Keyword statistics at bottom of Who's Who screen")
+                Text("Total number of Keywords: \(Keyword.count(context: viewContext))",
+                     comment: "Keyword statistics at bottom of Who's Who screen")
             }
             .foregroundColor(Color.secondary)
 

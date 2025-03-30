@@ -244,6 +244,7 @@ extension Keyword {
             let fetchRequest: NSFetchRequest<Keyword> = Keyword.fetchRequest()
             let predicateAll = NSPredicate(format: "TRUEPREDICATE")
             fetchRequest.predicate = predicateAll
+            fetchRequest.sortDescriptors = [NSSortDescriptor(key: "id_", ascending: true)]
 
             do {
                 keywords = try context.fetch(fetchRequest)

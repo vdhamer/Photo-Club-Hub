@@ -35,6 +35,9 @@
         }
       }
     },
+    "%@" : {
+      "shouldTranslate" : false
+    },
     "%lld members (inc. ex-members)" : {
       "comment" : "<count> members (including all types of members) within photo club",
       "localizations" : {
@@ -597,6 +600,23 @@
         }
       }
     },
+    "Non-standard" : {
+      "comment" : "Keyword description at bottom of Who's Who screen",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "[ no translations ]"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "[ zonder vertalingen ]"
+          }
+        }
+      }
+    },
     "of1" : {
       "comment" : "X of Y portfolio(s) shown (due to various forms of filtering)",
       "localizations" : {
@@ -1056,6 +1076,28 @@
         }
       }
     },
+    "Total number of Keyword instances: %lldx" : {
+      "comment" : "Keyword statistics at bottom of Who's Who screen",
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trefwoorden zijn %lldx toegepast."
+          }
+        }
+      }
+    },
+    "Total number of Keywords: %lld" : {
+      "comment" : "Keyword statistics at bottom of Who's Who screen",
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aantal gedefinieerde trefwoorden: %lld."
+          }
+        }
+      }
+    },
     "treasurer" : {
       "comment" : "Administrative role of member within a club. Used as part of concatenations.",
       "localizations" : {
@@ -1171,6 +1213,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "③ De miniatuurfoto's kunnen horizontaal versleept worden, al zal dat zelden nodig zijn."
+          }
+        }
+      }
+    },
+    "WhosWho_Caption_4" : {
+      "comment" : "Shown in gray at the bottom of the Who's Who page (3/3).",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "④ Photographer keyword stats"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "④ Trefwoorden t.a.v. fotografen"
           }
         }
       }
