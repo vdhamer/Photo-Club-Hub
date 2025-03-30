@@ -22,38 +22,67 @@
 
     "members":
     [
+
         {
             "name": {
-                "givenName": "Paula",
+                "givenName": "Alex",
                 "infixName": "",
-                "familyName": "Anglès"
+                "familyName": "Eekel"
             },
             "optional": {
-                "roles": {
-                    "isChairman": false,
-                    "isAdmin": true
-                },
-                "birthday": "9999-06-07",
-                "website": "https://www.paulaangles.nl",
-                "featuredImage": "https://www.fotoclubbellusimago.nl/uploads/5/5/1/2/55129719/paula-angles-natuur-stilte-1.jpg",
-                "level3URL": "https://www.fotoclubbellusimago.nl/paula.html",
-                "membershipStartDate": "2010-01-21",
-                "keywords": [ "Landscape", "Abstract", "Minimal" ],
-                "nlSpecific": {
-                    "fotobondNumber": 1671014
-                }
+                "featuredImage": "https://www.fotoclubbellusimago.nl/uploads/5/5/1/2/55129719/2024-01-14-12-28-macro-druppels-3754-2024-alex.jpg",
+                "level3URL": "https://www.fotoclubsbellusimago.nl/alex.html"
             }
         },
 
         {
             "name": {
-                "givenName": "Connie",
-                "infixName": "van den",
-                "familyName": "Berg"
+                "givenName": "André",
+                "infixName": "",
+                "familyName": "Herst"
             },
             "optional": {
-                "featuredImage": "https://www.fotoclubbellusimago.nl/uploads/5/5/1/2/55129719/connie-18.jpg",
-                "level3URL": "https://www.fotoclubsbellusimago.nl/connie.html"
+                "featuredImage": "https://www.fotoclubbellusimago.nl/uploads/5/5/1/2/55129719/andre-20230505-085027-01-01.jpg",
+                "level3URL": "https://www.fotoclubsbellusimago.nl/andre.html"
+            }
+        },
+
+        {
+            "name": {
+                "givenName": "Anne",
+                "infixName": "",
+                "familyName": "Letz"
+            },
+            "optional": {
+                "featuredImage": "https://www.fotoclubbellusimago.nl/uploads/5/5/1/2/55129719/vrijwerk-anne-3-anne-letz-2024.jpg",
+                "level3URL": "https://www.fotoclubsbellusimago.nl/anne.html"
+            }
+        },
+
+        {
+            "name": {
+                "givenName": "Annemiek",
+                "infixName": "",
+                "familyName": "Jongeneelen"
+            },
+            "optional": {
+                "roles": {
+                    "isOther": true
+                },
+                "featuredImage": "https://www.fotoclubbellusimago.nl/uploads/5/5/1/2/55129719/vrijwerk-annemiek-1-annemiek-jongeneelen-2024.jpg",
+                "level3URL": "https://www.fotoclubsbellusimago.nl/annemiek.html"
+            }
+        },
+
+        {
+            "name": {
+                "givenName": "Berry",
+                "infixName": "de",
+                "familyName": "Jong"
+            },
+            "optional": {
+                "featuredImage": "https://www.fotoclubbellusimago.nl/uploads/5/5/1/2/55129719/vrijwerk-berry-1.jpg",
+                "level3URL": "https://www.fotoclubsbellusimago.nl/berry.html"
             }
         },
 
@@ -71,108 +100,13 @@
 
         {
             "name": {
-                "givenName": "Leonie",
-                "infixName": "",
-                "familyName": "Brok-Elfering"
+                "givenName": "Connie",
+                "infixName": "van den",
+                "familyName": "Berg"
             },
             "optional": {
-                "featuredImage": "https://www.fotoclubbellusimago.nl/uploads/5/5/1/2/55129719/leonie-19.jpg",
-                "level3URL": "https://www.fotoclubbellusimago.nl/leonie.html"
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "Rico",
-                "infixName": "",
-                "familyName": "Coolen"
-            },
-            "optional": {
-                "roles": {
-                    "isChairman": true
-                },
-                "website": "http://ricoco.jalbum.net",
-                "featuredImage": "https://www.fotoclubbellusimago.nl/uploads/5/5/1/2/55129719/vrijwerk-rico-1-vrij-werk-stuck.jpg",
-                "level3URL": "https://www.fotoclubbellusimago.nl/rico.html"
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "Marc",
-                "infixName": "van",
-                "familyName": "Cootwijk"
-            },
-            "optional": {
-                "featuredImage": "https://www.fotoclubbellusimago.nl/uploads/5/5/1/2/55129719/marc-van-cootwijk-001-small-1.jpg",
-                "level3URL": "https://www.fotoclubbellusimago.nl/marc.html"
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "Hans",
-                "infixName": "de",
-                "familyName": "Cortie"
-            },
-            "optional": {
-                "roles": {
-                    "isSecretary": true
-                },
-                "website": "https://www.decortiefotografie.nl/",
-                "featuredImage": "https://www.fotoclubbellusimago.nl/uploads/5/5/1/2/55129719/vrijwerk-hans-1-donkere-wolken-boven-loire-dal.jpg",
-                "level3URL": "https://www.fotoclubbellusimago.nl/hans.html"
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "Loek",
-                "infixName": "",
-                "familyName": "Dirkx"
-            },
-            "optional": {
-                "featuredImage": "https://www.fotoclubbellusimago.nl/uploads/5/5/1/2/55129719/expo-loekdirkx-2-loek-dirkx-2024.jpg",
-                "level3URL": "https://www.fotoclubsbellusimago.nl/loek.html"
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "Alex",
-                "infixName": "",
-                "familyName": "Eekel"
-            },
-            "optional": {
-                "featuredImage": "https://www.fotoclubbellusimago.nl/uploads/5/5/1/2/55129719/2024-01-14-12-28-macro-druppels-3754-2024-alex.jpg",
-                "level3URL": "https://www.fotoclubsbellusimago.nl/alex.html"
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "Kitty",
-                "infixName": "",
-                "familyName": "Faas"
-            },
-            "optional": {
-                "roles": {
-                    "isTreasurer": true
-                },
-                "featuredImage": "https://www.fotoclubbellusimago.nl/uploads/5/5/1/2/55129719/12-vrijwerk-kitty-01-mg-8208.jpg",
-                "level3URL": "https://www.fotoclubsbellusimago.nl/kitty.html"
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "André",
-                "infixName": "",
-                "familyName": "Herst\n"
-            },
-            "optional": {
-                "featuredImage": "https://www.fotoclubbellusimago.nl/uploads/5/5/1/2/55129719/andre-20230505-085027-01-01.jpg",
-                "level3URL": "https://www.fotoclubsbellusimago.nl/andre.html"
+                "featuredImage": "https://www.fotoclubbellusimago.nl/uploads/5/5/1/2/55129719/connie-18.jpg",
+                "level3URL": "https://www.fotoclubsbellusimago.nl/connie.html"
             }
         },
 
@@ -202,80 +136,29 @@
 
         {
             "name": {
-                "givenName": "Berry",
+                "givenName": "Gerda",
+                "infixName": "van de",
+                "familyName": "Velde"
+            },
+            "optional": {
+                "featuredImage": "https://www.fotoclubbellusimago.nl/uploads/5/5/1/2/55129719/gerda-8_orig.jpg",
+                "level3URL": "https://www.fotoclubsbellusimago.nl/gerda.html"
+            }
+        },
+
+        {
+            "name": {
+                "givenName": "Hans",
                 "infixName": "de",
-                "familyName": "Jong"
-            },
-            "optional": {
-                "featuredImage": "https://www.fotoclubbellusimago.nl/uploads/5/5/1/2/55129719/vrijwerk-berry-1.jpg",
-                "level3URL": "https://www.fotoclubsbellusimago.nl/berry.html"
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "Annemiek",
-                "infixName": "",
-                "familyName": "Jongeneelen"
+                "familyName": "Cortie"
             },
             "optional": {
                 "roles": {
-                    "isOther": true
+                    "isSecretary": true
                 },
-                "featuredImage": "https://www.fotoclubbellusimago.nl/uploads/5/5/1/2/55129719/vrijwerk-annemiek-1-annemiek-jongeneelen-2024.jpg",
-                "level3URL": "https://www.fotoclubsbellusimago.nl/annemiek.html"
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "Margo",
-                "infixName": "",
-                "familyName": "Kauwenberg"
-            },
-            "optional": {
-                "roles": {
-                    "isOther": true
-                },
-                "website": "http://margokauwenberg.nl",
-                "featuredImage": "https://www.fotoclubbellusimago.nl/uploads/5/5/1/2/55129719/vrijwerk-margo-3-margo-kauwenberg.jpg",
-                "level3URL": "https://www.fotoclubsbellusimago.nl/margo.html"
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "Katrin",
-                "infixName": "",
-                "familyName": "Letz"
-            },
-            "optional": {
-                "featuredImage": "https://www.fotoclubbellusimago.nl/uploads/5/5/1/2/55129719/ln09-05800-katrin-letz-2024.jpg",
-                "level3URL": "https://www.fotoclubsbellusimago.nl/katrin.html"
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "Anne",
-                "infixName": "",
-                "familyName": "Letz"
-            },
-            "optional": {
-                "featuredImage": "https://www.fotoclubbellusimago.nl/uploads/5/5/1/2/55129719/vrijwerk-anne-3-anne-letz-2024.jpg",
-                "level3URL": "https://www.fotoclubsbellusimago.nl/anne.html"
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "René",
-                "infixName": "",
-                "familyName": "Mathijssen"
-            },
-            "optional": {
-                "featuredImage": "https://www.fotoclubbellusimago.nl/uploads/5/5/1/2/55129719/vrij-ren-1z-2024_orig.jpg",
-                "level3URL": "https://www.fotoclubsbellusimago.nl/rene.html"
+                "website": "https://www.decortiefotografie.nl/",
+                "featuredImage": "https://www.fotoclubbellusimago.nl/uploads/5/5/1/2/55129719/vrijwerk-hans-1-donkere-wolken-boven-loire-dal.jpg",
+                "level3URL": "https://www.fotoclubbellusimago.nl/hans.html"
             }
         },
 
@@ -307,26 +190,64 @@
 
         {
             "name": {
-                "givenName": "Tony",
+                "givenName": "Katrin",
                 "infixName": "",
-                "familyName": "Seesing"
+                "familyName": "Letz"
             },
             "optional": {
-                "website": "http://www.dezelfontspanner.nl",
-                "featuredImage": "https://www.fotoclubbellusimago.nl/uploads/5/5/1/2/55129719/vrijwerk-tony-3.jpg",
-                "level3URL": "https://www.fotoclubsbellusimago.nl/tony.html"
+                "featuredImage": "https://www.fotoclubbellusimago.nl/uploads/5/5/1/2/55129719/ln09-05800-katrin-letz-2024.jpg",
+                "level3URL": "https://www.fotoclubsbellusimago.nl/katrin.html"
             }
         },
 
         {
             "name": {
-                "givenName": "René",
+                "givenName": "Kitty",
                 "infixName": "",
-                "familyName": "Mathijssen"
+                "familyName": "Faas"
             },
             "optional": {
-                "featuredImage": "https://www.fotoclubbellusimago.nl/uploads/5/5/1/2/55129719/vrij-ren-1z-2024_orig.jpg",
-                "level3URL": "https://www.fotoclubsbellusimago.nl/rene.html"
+                "roles": {
+                    "isTreasurer": true
+                },
+                "featuredImage": "https://www.fotoclubbellusimago.nl/uploads/5/5/1/2/55129719/12-vrijwerk-kitty-01-mg-8208.jpg",
+                "level3URL": "https://www.fotoclubsbellusimago.nl/kitty.html"
+            }
+        },
+
+        {
+            "name": {
+                "givenName": "Leonie",
+                "infixName": "",
+                "familyName": "Brok-Elfering"
+            },
+            "optional": {
+                "featuredImage": "https://www.fotoclubbellusimago.nl/uploads/5/5/1/2/55129719/leonie-19.jpg",
+                "level3URL": "https://www.fotoclubbellusimago.nl/leonie.html"
+            }
+        },
+
+        {
+            "name": {
+                "givenName": "Loek",
+                "infixName": "",
+                "familyName": "Dirkx"
+            },
+            "optional": {
+                "featuredImage": "https://www.fotoclubbellusimago.nl/uploads/5/5/1/2/55129719/expo-loekdirkx-2-loek-dirkx-2024.jpg",
+                "level3URL": "https://www.fotoclubsbellusimago.nl/loek.html"
+            }
+        },
+
+        {
+            "name": {
+                "givenName": "Marc",
+                "infixName": "van",
+                "familyName": "Cootwijk"
+            },
+            "optional": {
+                "featuredImage": "https://www.fotoclubbellusimago.nl/uploads/5/5/1/2/55129719/marc-van-cootwijk-001-small-1.jpg",
+                "level3URL": "https://www.fotoclubbellusimago.nl/marc.html"
             }
         },
 
@@ -344,13 +265,81 @@
 
         {
             "name": {
-                "givenName": "Gerda",
-                "infixName": "van de",
-                "familyName": "Velde"
+                "givenName": "Margo",
+                "infixName": "",
+                "familyName": "Kauwenberg"
             },
             "optional": {
-                "featuredImage": "https://www.fotoclubbellusimago.nl/uploads/5/5/1/2/55129719/gerda-8_orig.jpg",
-                "level3URL": "https://www.fotoclubsbellusimago.nl/gerda.html"
+                "roles": {
+                    "isOther": true
+                },
+                "website": "http://margokauwenberg.nl",
+                "featuredImage": "https://www.fotoclubbellusimago.nl/uploads/5/5/1/2/55129719/vrijwerk-margo-3-margo-kauwenberg.jpg",
+                "level3URL": "https://www.fotoclubsbellusimago.nl/margo.html"
+            }
+        },
+
+        {
+            "name": {
+                "givenName": "Paula",
+                "infixName": "",
+                "familyName": "Anglès"
+            },
+            "optional": {
+                "roles": {
+                    "isChairman": false,
+                    "isAdmin": true
+                },
+                "birthday": "9999-06-07",
+                "website": "https://www.paulaangles.nl",
+                "featuredImage": "https://www.fotoclubbellusimago.nl/uploads/5/5/1/2/55129719/paula-angles-natuur-stilte-1.jpg",
+                "level3URL": "https://www.fotoclubbellusimago.nl/paula.html",
+                "membershipStartDate": "2010-01-21",
+                "keywords": [ "Landscape", "Abstract", "Minimal" ],
+                "nlSpecific": {
+                    "fotobondNumber": 1671014
+                }
+            }
+        },
+
+        {
+            "name": {
+                "givenName": "René",
+                "infixName": "",
+                "familyName": "Mathijssen"
+            },
+            "optional": {
+                "featuredImage": "https://www.fotoclubbellusimago.nl/uploads/5/5/1/2/55129719/vrij-ren-1z-2024_orig.jpg",
+                "level3URL": "https://www.fotoclubsbellusimago.nl/rene.html"
+            }
+        },
+
+        {
+            "name": {
+                "givenName": "Rico",
+                "infixName": "",
+                "familyName": "Coolen"
+            },
+            "optional": {
+                "roles": {
+                    "isChairman": true
+                },
+                "website": "http://ricoco.jalbum.net",
+                "featuredImage": "https://www.fotoclubbellusimago.nl/uploads/5/5/1/2/55129719/vrijwerk-rico-1-vrij-werk-stuck.jpg",
+                "level3URL": "https://www.fotoclubbellusimago.nl/rico.html"
+            }
+        },
+
+        {
+            "name": {
+                "givenName": "Tony",
+                "infixName": "",
+                "familyName": "Seesing"
+            },
+            "optional": {
+                "website": "http://www.dezelfontspanner.nl",
+                "featuredImage": "https://www.fotoclubbellusimago.nl/uploads/5/5/1/2/55129719/vrijwerk-tony-3.jpg",
+                "level3URL": "https://www.fotoclubsbellusimago.nl/tony.html"
             }
         },
 
