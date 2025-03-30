@@ -304,11 +304,11 @@
         {
             "name": {
                 "givenName": "Jelle",
-                "infixName": "van de",
+                "infixName": "van der",
                 "familyName": "Voort"
             },
             "optional": {
-                "level3URL": "http://www.vdhamer.com/fgDeGender/Jelle_van_de_Voort/",
+                "level3URL": "http://www.vdhamer.com/fgDeGender/Jelle_van_der_Voort/",
                 "roles": {
                     "isChairman": true
                 },
