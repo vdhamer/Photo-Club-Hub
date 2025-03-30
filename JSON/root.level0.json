@@ -66,6 +66,20 @@
         },
 
         {
+            "idString": "Macro",
+            "name": [
+                { "language": "EN", "localizedString": "Macro" },
+                { "language": "NL", "localizedString": "Macro" }
+            ],
+            "optional": {
+                "usage":  [
+                    { "language": "EN", "localizedString": "Images of small details hard to see with the naked eye." },
+                    { "language": "NL", "localizedString": "Opnamen met vergroting rond de 1:1." }
+                 ]
+            }
+        },
+
+        {
             "idString": "Minimal",
             "name": [
                 { "language": "EN", "localizedString": "Minimal" },
@@ -75,6 +89,20 @@
                 "usage":  [
                     { "language": "EN", "localizedString": "Image with few visual elements." },
                     { "language": "NL", "localizedString": "Rustige foto met weinig beeldelementen." }
+                 ]
+            }
+        },
+
+        {
+            "idString": "Panorama",
+            "name": [
+                { "language": "EN", "localizedString": "Panorama" },
+                { "language": "NL", "localizedString": "Panorama" }
+            ],
+            "optional": {
+                "usage":  [
+                    { "language": "EN", "localizedString": "Images stitched together in the camera or in post." },
+                    { "language": "NL", "localizedString": "Meervoudige opnamen die tot één beeld gecombineeerd zijn." }
                  ]
             }
         },
