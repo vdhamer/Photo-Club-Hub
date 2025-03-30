@@ -1079,6 +1079,12 @@
     "Total number of Keyword instances: %lldx" : {
       "comment" : "Keyword statistics at bottom of Who's Who screen",
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Total number of Keyword instances: %lldx"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1090,6 +1096,12 @@
     "Total number of Keywords: %lld" : {
       "comment" : "Keyword statistics at bottom of Who's Who screen",
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Total number of Keywords: %lld"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
