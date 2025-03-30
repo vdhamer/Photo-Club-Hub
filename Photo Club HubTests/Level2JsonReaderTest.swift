@@ -139,9 +139,9 @@ import CoreData // for NSManagedObjectContext
             #expect(organizations[0].fotobondNumber == 1620)
         }
 
-        #expect(Keyword.count(context: bgContext) == 2)
-        #expect(PhotographerKeyword.count(context: bgContext, keywordID: "Minimal") == 1)
-        #expect(PhotographerKeyword.count(context: bgContext) == 2)
+        #expect(Keyword.count(context: bgContext) == 10)
+        #expect(PhotographerKeyword.count(context: bgContext, keywordID: "Minimal") == 2)
+        #expect(PhotographerKeyword.count(context: bgContext) == 14)
     }
 
     // Read fgDeGender.level2.json and check for parsing errors
@@ -161,14 +161,16 @@ import CoreData // for NSManagedObjectContext
         _ = FotogroepDeGenderMembersProvider(bgContext: bgContext,
                                              synchronousWithRandomTown: true,
                                              randomTown: randomTownG)
-        #expect(Keyword.count(context: bgContext) == 2)
+        #expect(Keyword.count(context: bgContext) == 10)
+        #expect(PhotographerKeyword.count(context: bgContext) == 14)
 
         let randomTownW = String.random(length: 10)
         _ = FotogroepWaalreMembersProvider(bgContext: bgContext,
                                            synchronousWithRandomTown: true,
                                            randomTown: randomTownW)
 
-        #expect(Keyword.count(context: bgContext) == 3)
+        #expect(Keyword.count(context: bgContext) == 12)
+        #expect(PhotographerKeyword.count(context: bgContext) == 43)
     }
 
 }
