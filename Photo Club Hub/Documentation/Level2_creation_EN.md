@@ -7,12 +7,12 @@
 
       | `town`  | `fullName` | `nickName` | `latitude` | `longitude` | `level2URL` |
       | -----  | ---------| ----- | :-----: | :-----: | :-----: |
-      | Eindhoven | Fotogroep de Gender | fgDeGender | 51.42398 | 5.45010 | [link](https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/fgWaalre.level2.json) |
+      | Eindhoven | Fotogroep de Gender | fgDeGender | 51.42398 | 5.45010 | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/fgDeGender.level2.json) |
       | Eindhoven | Fotoclub Ericamera | fcEricamera | 51.45403 | 5.46288 |  |
       | Oirschot | Fotogroep Oirschot | fgOirschot | 51.46785 | 5.25568 |  |
       | Sint Michielsgestel | Fotokring Sint-Michielsgestel | fkGestel | 51.64036 | 5.34749 |  |
       | Veldhoven | Fotoclub Bellus Imago | fcBellusImago | 51.42541 | 5.38756 | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/fcBellusImago.level2.json) |
-      | Waalre | Fotogroep Waalre | fgWaalre | 51.39184 | 5.46144 | [link](https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/fgDeGender.level2.json) |
+      | Waalre | Fotogroep Waalre | fgWaalre | 51.39184 | 5.46144 | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/fgWaalre.level2.json) |
 
 3. **Edit** the file to contain your club’s `fullName`, `town`, `nickName`, and preferably coordinates.
     - Use a basic [text editor](https://en.wikipedia.org/wiki/Comparison_of_text_editors) to get a "plain text" output format. So don't use Word (although that _can_ work). Note that it is probably easiest to use the online JSON editor called [JSON Editor Online](https://jsoneditoronline.org): because it assumes you are trying to create a JSON file and can thus help simplify the process.

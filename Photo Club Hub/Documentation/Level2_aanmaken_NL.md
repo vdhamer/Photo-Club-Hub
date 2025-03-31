@@ -18,7 +18,7 @@ Dit stappenplan beschrijft hoe een lijst ("Level 2") met clubleden aan te maken 
 
       | `town`  | `fullName` | `nickName` | `latitude` | `longitude` | huidig bestand |
       | -----  | ---------| ----- | :-----: | :-----: | :-----: |
-      | Eindhoven | Fotogroep de Gender | fgDeGender | 51.42398 | 5.45010 | [link](https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/fgWaalre.level2.json) |
+      | Eindhoven | Fotogroep de Gender | fgDeGender | 51.42398 | 5.45010 | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/fgDeGender.level2.json) |
       | Eindhoven | Fotoclub Ericamera | fcEricamera | 51.45403 | 5.46288 |  |
       | Oirschot | Fotogroep Oirschot | fgOirschot | 51.46785 | 5.25568 |  |
       | Sint Michielsgestel | Fotokring Sint-Michielsgestel | fkGestel | 51.64036 | 5.34749 |  |
