@@ -73,8 +73,8 @@
             ],
             "optional": {
                 "usage":  [
-                    { "language": "EN", "localizedString": "Images of small details hard to see with the naked eye." },
-                    { "language": "NL", "localizedString": "Opnamen met vergroting rond de 1:1." }
+                    { "language": "EN", "localizedString": "Macro and micro photography." },
+                    { "language": "NL", "localizedString": "Macro en micro fotografie." }
                  ]
             }
         },
@@ -101,8 +101,8 @@
             ],
             "optional": {
                 "usage":  [
-                    { "language": "EN", "localizedString": "Images stitched together in the camera or in post." },
-                    { "language": "NL", "localizedString": "Meervoudige opnamen die tot één beeld gecombineeerd zijn." }
+                    { "language": "EN", "localizedString": "Panoramas and other forms of projection/stitching." },
+                    { "language": "NL", "localizedString": "Panorama's en andere projecties met een extreme beeldveld." }
                  ]
             }
         },
