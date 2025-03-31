@@ -1,5 +1,8 @@
 ### 2.7.3 (GitHub commit 4985f44) 26-03-25
 
+Code Maintenance
+* Tested on Xcode 16.3, iOS 18.4, macOS 15.4, and visionOS 2.4.
+
 Data Maintenance
 * Change in membership for fgDeGender (BZ, PdW).
 * Added images for fgDeGender based on Expo25.
@@ -21,7 +24,7 @@ Code Maintenance
 * Aligned refreshFirstImage() code to make it more similar to Photo Club HTML code.
 * Moved deleteAllCoreDataObjects() to a new file named Model.swift.
 * Introduced use of Swift Testing framework for software unit testing.
-* Tested on Xcode 16.3 RC (16E137), iOS 18.4 beta (24E241), and macOS 15.3.1 and visionOS 2.4 beta (22O233).
+* Tested on Xcode 16.3 RC (16E137), iOS 18.4 beta (24E241), macOS 15.3.1 and visionOS 2.4 beta (22O233).
 * Removed .pptx files from GitHub repo to save space.
 * Fixed typo in code, JSON files and README.md: isPropectiveMember -> isProspectiveMember.
 * Added support for a new Level 2 club: fcBellusImago.

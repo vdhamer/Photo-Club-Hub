@@ -337,20 +337,6 @@
 
         {
             "name": {
-                "givenName": "Jos",
-                "infixName": "",
-                "familyName": "Zwaans"
-            },
-            "optional": {
-                "level3URL": "http://www.vdhamer.com/fgDeGender/Jos_Zwaans/",
-                "status": {
-                    "isProspectiveMember": true
-                }
-            }
-        },
-
-        {
-            "name": {
                 "givenName": "Lex",
                 "infixName": "",
                 "familyName": "Augusteijn"
