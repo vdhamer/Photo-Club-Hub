@@ -58,6 +58,20 @@
         },
 
         {
+            "idString": "Conceptual",
+            "name": [
+                { "language": "EN", "localizedString": "Conceptual" },
+                { "language": "NL", "localizedString": "Conceptueel" }
+            ],
+            "optional": {
+                "usage":  [
+                    { "language": "EN", "localizedString": "Images that represent a predetermined idea." },
+                    { "language": "NL", "localizedString": "Beelden die een vantevoren gekozen idee uitbeelden." }
+                ]
+            }
+        },
+
+        {
             "idString": "Landscape",
             "name": [
                 { "language": "EN", "localizedString": "Landscape" },
