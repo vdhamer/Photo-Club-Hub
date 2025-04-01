@@ -222,6 +222,7 @@
 		D0AEDF3C2BBE0CD1003FD250 /* Photo_Club_Hub_2_5_7.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_5_7.xcdatamodel; sourceTree = "<group>"; };
 		D0B32BB22C15C51A009FF8E7 /* AppVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVersion.swift; sourceTree = "<group>"; };
 		D0BAB01C2A76CED300387E63 /* URLSession+synchronous.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+synchronous.swift"; sourceTree = "<group>"; };
+		D0BD7FE62D9C84DE005D199A /* Photo_Club_Hub_2_8_0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_8_0.xcdatamodel; sourceTree = "<group>"; };
 		D0BF26FC2CFA218000DA2CB9 /* fcBellusImago.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fcBellusImago.level2.json; sourceTree = "<group>"; };
 		D0BF26FE2CFA218000DA2CB9 /* fgDeGender.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fgDeGender.level2.json; sourceTree = "<group>"; };
 		D0BF26FF2CFA218000DA2CB9 /* fgWaalre.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fgWaalre.level2.json; sourceTree = "<group>"; };
@@ -1298,6 +1299,7 @@
 		D0A0B6832AA930E90078DE9A /* Photo_Club_Hub.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				D0BD7FE62D9C84DE005D199A /* Photo_Club_Hub_2_8_0.xcdatamodel */,
 				D037C3772D5AACA800BA787D /* Photo_Club_Hub_2_7_3.xcdatamodel */,
 				D0DCF7862D090D5C0057FB24 /* Photo_Club_Hub_2_7_2.xcdatamodel */,
 				D0A4DE392C7154C9004AC351 /* Photo_Club_Hub_2_7_1.xcdatamodel */,
@@ -1317,7 +1319,7 @@
 				D0A0B6872AA932A10078DE9A /* Photo_Club_Hub_2_4_1.xcdatamodel */,
 				D0A0B6842AA930E90078DE9A /* Photo_Club_Hub.xcdatamodel */,
 			);
-			currentVersion = D037C3772D5AACA800BA787D /* Photo_Club_Hub_2_7_3.xcdatamodel */;
+			currentVersion = D0BD7FE62D9C84DE005D199A /* Photo_Club_Hub_2_8_0.xcdatamodel */;
 			path = Photo_Club_Hub.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

@@ -1,4 +1,10 @@
-### 2.7.3 (GitHub commit 4985f44) 26-03-25
+### 2.8.0 (GitHub commit ???????) ??-04-25
+
+This build #4638 was made using Xcode 16.3
+
+---------------------------------------------------------------------------
+
+### 2.7.3 (GitHub commit 65199f7) 01-04-25
 
 Code Maintenance
 * Tested on Xcode 16.3, iOS 18.4, macOS 15.4, and visionOS 2.4.
@@ -8,7 +14,7 @@ Data Maintenance
 * Added images for fgDeGender based on Expo25.
 * Added keywords for fgWaalre and fgDeGender members
 
-This build #4638 was made using Xcode 16.3 and is intended for App Store release.
+This build #4638 was made using Xcode 16.3 and is intended for App Store distribution.
 
 ---------------------------------------------------------------------------
 
