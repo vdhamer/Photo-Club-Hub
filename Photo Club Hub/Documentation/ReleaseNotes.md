@@ -1,5 +1,9 @@
 ### 2.8.0 (GitHub commit ???????) ??-04-25
 
+Data Maintenance
+* Added "Conceptual" keyword.
+* Updated membership list for fgDeGender.
+
 This build #4638 was made using Xcode 16.3
 
 ---------------------------------------------------------------------------

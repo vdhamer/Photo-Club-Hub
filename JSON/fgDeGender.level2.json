@@ -228,7 +228,11 @@
             },
             "optional": {
                 "level3URL": "http://www.vdhamer.com/fgDeGender/Gert_du_Bois/",
+                "status": {
+                    "isFormerMember": true
+                },
                 "membershipStartDate": "2015-01-01",
+                "membershipStartDate": "2025-03-31",
                 "nlSpecific": {
                     "fotobondNumber": 1620087
                 }
