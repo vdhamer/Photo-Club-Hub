@@ -8,7 +8,7 @@ Data Maintenance
 * Added images for fgDeGender based on Expo25.
 * Added keywords for fgWaalre and fgDeGender members
 
-This build #4638 was made using Xcode 16.3 RC
+This build #4638 was made using Xcode 16.3 and is intended for App Store release.
 
 ---------------------------------------------------------------------------
 
