@@ -60,7 +60,7 @@ struct UrlComponents {
         fileType: "json"
     )
 
-    // MARK: - bellusImago
+    // MARK: - Bellus Imago
 
     static let bellusImago = UrlComponents(
         dataSourceFile: "fcBellusImago",
