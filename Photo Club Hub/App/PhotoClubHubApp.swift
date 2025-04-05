@@ -87,7 +87,7 @@ extension PhotoClubHubApp {
 
         // load all current/former members of Fotoclub Bellus Imago
         let bellusBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-        bellusBackgroundContext.name = "Fotoclub Bellus Imagoe"
+        bellusBackgroundContext.name = "Fotoclub Bellus Imago"
         bellusBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         bellusBackgroundContext.automaticallyMergesChangesFromParent = true
         _ = FotoclubBellusImagoMembersProvider(bgContext: bellusBackgroundContext)
