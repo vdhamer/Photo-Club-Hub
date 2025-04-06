@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import CoreData // for ManagedObjectContext
+import CoreData // for NSManagedObjectContext
 
 @main
 struct PhotoClubHubApp: App {
