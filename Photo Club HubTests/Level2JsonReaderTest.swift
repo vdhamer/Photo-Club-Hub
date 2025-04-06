@@ -170,7 +170,7 @@ import CoreData // for NSManagedObjectContext
                                            randomTown: randomTownW)
 
         #expect(Keyword.count(context: bgContext) == 12)
-        #expect(PhotographerKeyword.count(context: bgContext) == 43)
+        #expect(PhotographerKeyword.count(context: bgContext) == 42)
     }
 
 }
