@@ -23,27 +23,16 @@ extension MemberPortfolio { // expose computed properties (some related to handl
 
     static let emptyPortfolioURL: String = "http://www.vdHamer.com/fgWaalre/Empty_Website/"
 
-    var membershipStartDate: Date { // non-optional version of membershipStartDate_
-        get {
-            if membershipStartDate_ == nil {
-                return Date.distantPast // membership has no known start date
-            } else {
-                return membershipStartDate_!
-            }
-        }
+    var membershipStartDate: Date? {
+        get { return membershipStartDate_ }
         set { membershipStartDate_ = newValue }
     }
 
-    var membershipEndDate: Date { // non-optional version of membershipEndDate_
-        get {
-            if membershipEndDate_ == nil {
-                return Date.distantFuture
-            } else {
-                return membershipEndDate_!
-            }
-        }
-        set { membershipEndDate_ = newValue
-            if (newValue < Date()) && (isFormerMember == false) { // no longer a member according to membershipEndDate
+    var membershipEndDate: Date? { // nil means photographer is still a club member
+        get { return membershipEndDate_ }
+        set {
+            membershipEndDate_ = newValue
+            if newValue != nil, newValue! < Date() && isFormerMember == false { // no longer a member
                 isFormerMember = true
                 ifDebugFatalError("Overruling former membership flag for member \(self.photographer.fullNameFirstLast)")
             }

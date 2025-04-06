@@ -2,6 +2,7 @@
 
 Code Maintenance
 * removed unused duplicate files
+* synchronized some of the code with Photo Club Hub HTML
 
 Data Maintenance
 * Added "Conceptual" keyword.
