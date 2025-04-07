@@ -56,9 +56,7 @@ extension Keyword {
 
         // are there multiple copies of the keyword? This shouldn't be the case.
         if keywords.count > 1 { // there is actually a Core Data constraint to prevent this
-            ifDebugFatalError("Query returned multiple (\(keywords.count)) Keywords with code \(id)",
-                              file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
-            // in release mode, log that there are multiple clubs, but continue using the first one.
+            ifDebugPrint("Query returned multiple (\(keywords.count)) Keywords with code \(id)")
         }
 
         if let keyword = keywords.first { // already exists, so update non-identifying attributes

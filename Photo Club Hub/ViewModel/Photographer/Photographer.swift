@@ -96,10 +96,8 @@ extension Photographer {
             let givenName = personName.givenName
             let infixName = personName.infixName
             let familyName = personName.familyName
-            ifDebugFatalError("Query returned \(photographers.count) photographers named " +
-                              "\(givenName) " + "\(infixName.isEmpty ? "" : "\(infixName) ")\(familyName)",
-                              file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
-            // in release mode, log that there are multiple photographers, but continue using the first one.
+            ifDebugPrint("Query returned \(photographers.count) photographers named " +
+                         "\(givenName) " + "\(infixName.isEmpty ? "" : "\(infixName) ")\(familyName)")
         }
 
         if let photographer = photographers.first {
