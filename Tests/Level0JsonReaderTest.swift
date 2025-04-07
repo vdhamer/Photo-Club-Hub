@@ -100,4 +100,35 @@ import CoreData // for NSManagedObjectContext
         #expect(LocalizedKeyword.count(context: bgContext) == 0)
     }
 
+    // Read language.level0.json.
+    // Clears all CoreData languages. Runs on background thread, adding bunch of extra complexity ;-(
+    @Test("Parse languages.level0.json") func languagesLevel0Parse() async {
+        let bgContext = PersistenceController.shared.container.newBackgroundContext()
+        bgContext.name = "LanguagesLevel0"
+        bgContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+        bgContext.automaticallyMergesChangesFromParent = true
+
+        Model.deleteCoreDataKeywordsLanguages(context: bgContext)
+        #expect(Language.count(context: bgContext, isoCode: "UR") == 0)
+        #expect(LocalizedRemark.count(context: bgContext) == 0)
+        #expect(LocalizedKeyword.count(context: bgContext) == 0)
+
+        _ = Level0JsonReader(bgContext: bgContext, // read root.Level0.json file
+                             useOnlyFile: false,
+                             overrulingDataSourceFile: "languages")
+
+        #expect(Language.count(context: bgContext, isoCode: "EN") == 1)
+        #expect(Language.count(context: bgContext, isoCode: "NL") == 1)
+        #expect(Language.count(context: bgContext, isoCode: "DE") == 1)
+        #expect(Language.count(context: bgContext, isoCode: "UR") == 1)
+        #expect(Language.count(context: bgContext, isoCode: "UK") == 1)
+        #expect(Language.count(context: bgContext, isoCode: "FR") == 1) // from initConstants
+        #expect(Language.count(context: bgContext, isoCode: "ES") == 1) // from initConstants
+        #expect(Language.count(context: bgContext, isoCode: "PL") == 1) // from initConstants
+        #expect(Language.count(context: bgContext, isoCode: "XX") == 0)
+        #expect(Language.count(context: bgContext) == 8)
+        #expect(LocalizedRemark.count(context: bgContext) == 0)
+        #expect(LocalizedKeyword.count(context: bgContext) == 0)
+    }
+
 }

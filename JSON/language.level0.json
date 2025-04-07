@@ -3,6 +3,14 @@
         {
             "isoCode": "UR",
             "languageNameEN": "Urdu"
+        },
+        {
+            "isoCode": "UR",
+            "languageNameEN": "Urdu"
+        },
+        {
+            "isoCode": "ur",
+            "languageNameEN": "Urdu"
         }
     ]
 }

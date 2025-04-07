@@ -140,6 +140,24 @@ extension Language {
         return languages.count
     }
 
+    // count number of objects with a given isoCode
+    static func count(context: NSManagedObjectContext) -> Int {
+        var languages: [Language]! = []
+        let fetchRequest: NSFetchRequest<Language> = Language.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "TRUEPREDICATE")
+
+        context.performAndWait {
+            do {
+                languages = try context.fetch(fetchRequest)
+            } catch {
+                ifDebugFatalError("Failed to fetch Languages: \(error)", file: #fileID, line: #line)
+                // on non-Debug version, continue with empty `keywords` array
+            }
+        }
+
+        return languages.count
+    }
+
     // Update non-identifying attributes/properties within an existing instance of class Language if needed.
     // Returns whether an update was needed.
     fileprivate func update(context: NSManagedObjectContext,

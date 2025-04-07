@@ -1,24 +1,36 @@
 {
     "languages": [
         {
+            "isoCode": "DE",
+            "languageNameEN": "German"
+        },
+        {
             "isoCode": "EN",
             "languageNameEN": "English"
         },
+        {
+            "isoCode": "ES",
+            "languageNameEN": "Spanish"
+        }
+        {
+            "isoCode": "FR",
+            "languageNameEN": "French"
+        }
         {
             "isoCode": "NL",
             "languageNameEN": "Dutch"
         },
         {
-            "isoCode": "DE",
-            "languageNameEN": "German"
-        },
-        {
-            "isoCode": "UR",
-            "languageNameEN": "Urdu"
+            "isoCode": "PL",
+            "languageNameEN": "Polish"
         },
         {
             "isoCode": "UK",
             "languageNameEN": "Ukranian"
+        },
+        {
+            "isoCode": "UR",
+            "languageNameEN": "Urdu"
         }
     ]
 }
