@@ -94,9 +94,7 @@ extension Language {
         }
 
         if languages.count > 1 { // there is actually a Core Data constraint to prevent this
-            ifDebugFatalError("Query returned multiple (\(languages.count)) Languages with code \(isoCodeAllCaps)",
-                              file: #fileID, line: #line)
-            // in release mode, log that there are multiple clubs, but continue using the first one.
+            ifDebugPrint("Query returned multiple (\(languages.count)) Languages with code \(isoCodeAllCaps)")
         }
 
         if let language = languages.first { // already exists, so update non-identifying attributes
