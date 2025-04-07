@@ -11,11 +11,11 @@
         {
             "isoCode": "ES",
             "languageNameEN": "Spanish"
-        }
+        },
         {
             "isoCode": "FR",
             "languageNameEN": "French"
-        }
+        },
         {
             "isoCode": "NL",
             "languageNameEN": "Dutch"
@@ -34,3 +34,4 @@
         }
     ]
 }
+
