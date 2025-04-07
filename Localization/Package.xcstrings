@@ -1,6 +1,23 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "admin" : {
+      "comment" : "Administrative role of member within a club. Used as part of concatenations.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "admin"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "admin"
+          }
+        }
+      }
+    },
     "and" : {
       "comment" : "To generate strings like \"secretary and admin\"",
       "localizations" : {
@@ -14,6 +31,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "en"
+          }
+        }
+      }
+    },
+    "chairman" : {
+      "comment" : "Administrative role of member within a club. Used as part of concatenations.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "chairman"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "voorzitter"
           }
         }
       }
@@ -171,6 +205,23 @@
         }
       }
     },
+    "other" : {
+      "comment" : "Administrative role of member within a club. Used as part of concatenations.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "other"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "bestuurslid"
+          }
+        }
+      }
+    },
     "prospective member" : {
       "comment" : "Relationship status of member within a club. Used in concatenations.",
       "localizations" : {
@@ -188,6 +239,40 @@
         }
       }
     },
+    "secretary" : {
+      "comment" : "Administrative role of member within a club. Used as part of concatenations.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "secretary"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "secretaris"
+          }
+        }
+      }
+    },
+    "treasurer" : {
+      "comment" : "Administrative role of member within a club. Used as part of concatenations.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "treasurer"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "penningmeester"
+          }
+        }
+      }
+    },
     "unknowns" : {
       "comment" : "Organization type is not known. Used for debugging.",
       "localizations" : {
@@ -201,6 +286,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "onbekenden"
+          }
+        }
+      }
+    },
+    "vice-chairman" : {
+      "comment" : "Administrative role of member within a club. Used as part of concatenations.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "vice-chairman"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "vicevoorzitter"
           }
         }
       }
