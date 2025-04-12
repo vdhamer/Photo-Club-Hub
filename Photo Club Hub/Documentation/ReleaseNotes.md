@@ -4,6 +4,7 @@ Code Maintenance
 * removed unused duplicate files
 * synchronized some of the code with Photo Club Hub HTML
 * moved some strings from one string catalog to another
+* Tested with SwiftLint 0.59
 
 Data Maintenance
 * Added "Conceptual" keyword.
