@@ -93,7 +93,7 @@
                 "familyName": "Tester"
             },
             "optional": {
-                "featuredImage": "https://fotogroepwaalre.nl/wp-content/uploads/2024/04/GeplakteAfbeelding-61-4.jpeg",
+                "featuredImage": "https://www.fotogroepWaalre.nl/wp-content/uploads/2024/04/GeplakteAfbeelding-61-4.jpeg",
                 "level3URL": "https://www.fotogroepWaalre.nl/leden/bram-van-den-berge/#anker",
                 "roles": {"isAdmin": true},
                 "keywords": ["Experimental", "Postprocessing"],
