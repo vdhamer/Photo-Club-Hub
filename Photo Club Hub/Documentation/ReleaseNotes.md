@@ -1,14 +1,15 @@
 ### 2.8.0 (GitHub commit ???????) ??-04-25
 
 Code Maintenance
-* removed unused duplicate files
-* synchronized some of the code with Photo Club Hub HTML
-* moved some strings from one string catalog to another
+* Removed unused duplicate files
+* Synchronized some of the code with Photo Club Hub HTML
+* Moved some strings from one string catalog to another
 * Tested with SwiftLint 0.59
 
 Data Maintenance
 * Added "Conceptual" keyword.
 * Updated membership list for fgDeGender.
+* Mentioned fkGestel in Level2_aanmaken_NL.md
 
 This build #4638 was made using Xcode 16.3
 
