@@ -137,14 +137,20 @@ Dit gaat via de Safari [Hide distracting items](https://support.apple.com/nl-nl/
 ### Kan het eenvoudiger?
 <details><summary>Details (klik om uit te klappen)</summary></p>
 
-Dit is een belangrijke vraag: wij willen drempels zo laag mogelijk houden.
-Ten eerste hebben we niet de middelen van b.v. een belangstingdienst: die laat ook gewone burgers gegevens invoeren die automatisch verwerkt worden ("makkelijker kunnen wij het niet maken").
-Dat leidt in ons geval richting hergebruik van bestaande technologie (b.v. JSON).
+Dit is een cruciale vraag: wij willen de drempel voor een club om mee te doen zo laag mogelijk houden.
+Maar er zijn 3 complicaties in dit specifieke geval.
 
-Ten tweede, ben ik huiverig voor oplossingen die bijvoorbeeld een extra wachtwoord zouden vereisen. 
+Ten eerste hebben we niet de mankracht van b.v. een belangstingdienst: tenslotte laten zij gewone burgen ook gegevens
+invullen die voornamelijk automatisch verwerkt worden ("makkelijker kunnen wij het niet maken").
+Beperkte mankracht leidt richting hergebruik van bestaande softwaretechnologie (b.v. JSON en bijbehorende code).
+
+Ten tweede, zijn wij huiverig voor oplossingen die een extra wachtwoord vereisen. 
 Een mens heeft al zoveel wachtwoorden nodig, inloggen betekent extra stappen, en inlogpogingen leiden vaak tot problemen.
 Bijvoorbeeld omdat het wachtwoord zoekgeraakt is, of omdat het wachtwoord gewijzigd moeten worden, of gedeeld moeten worden door 2 mensen. 
 Dus ook daar willen we hergebruik maken van bestaande technologie die clubs al vaak gebruiken (b.v. Wordpress website).
 
-Toekomstige versimpelingen sluiten we niet uit. Maar dit vereist wel slimme ideeën, en de vaardigheid en energie om ze uit te voeren.
+Ten slotte willen wij voorkomen dat er kosten gemaakt worden. Vooral omdat dat veel organisatorisch gedoe geeft.
+Dat sluit min of meer een centrale server uit.
+
+Toekomstige versimpelingen sluiten we zeker niet uit. Maar dit vereist wel slimme ideeën, en de deskundigheid en energie om ze uit te voeren.
 </details></p>
