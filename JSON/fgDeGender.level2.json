@@ -85,10 +85,12 @@
                 "familyName": "Kars"
             },
             "optional": {
+                "membershipStartDate": "2025-04-14",
                 "level3URL": "http://www.vdhamer.com/fgDeGender/Annet_Kars/",
                 "status": {
                     "isProspectiveMember": false
                 }
+                "keywords": [ ],
             }
         },
 
@@ -680,10 +682,12 @@
                 "familyName": "Kars"
             },
             "optional": {
+                "membershipStartDate": "2025-04-14",
                 "level3URL": "http://www.vdhamer.com/fgDeGender/Willem_Kars/",
                 "status": {
                     "isProspectiveMember": false
                 }
+                "keywords": [ ],
             }
         },
 
