@@ -138,9 +138,10 @@ iOSInjectionProject/
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,swift,xcode
 
-## Powerpoint
+## Powerpoint and Keynote
 
 *.pptx
+*.key
 
 ## Excel
 
