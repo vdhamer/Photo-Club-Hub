@@ -89,8 +89,8 @@
                 "level3URL": "http://www.vdhamer.com/fgDeGender/Annet_Kars/",
                 "status": {
                     "isProspectiveMember": false
-                }
-                "keywords": [ ],
+                },
+                "keywords": [ ]
             }
         },
 
@@ -234,7 +234,7 @@
                     "isFormerMember": true
                 },
                 "membershipStartDate": "2015-01-01",
-                "membershipStartDate": "2025-03-31",
+                "membershipEndDate": "2025-03-31",
                 "nlSpecific": {
                     "fotobondNumber": 1620087
                 }
@@ -686,8 +686,8 @@
                 "level3URL": "http://www.vdhamer.com/fgDeGender/Willem_Kars/",
                 "status": {
                     "isProspectiveMember": false
-                }
-                "keywords": [ ],
+                },
+                "keywords": [ ]
             }
         },
 
