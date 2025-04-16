@@ -85,10 +85,12 @@
                 "familyName": "Kars"
             },
             "optional": {
+                "membershipStartDate": "2025-04-14",
                 "level3URL": "http://www.vdhamer.com/fgDeGender/Annet_Kars/",
                 "status": {
-                    "isProspectiveMember": true
-                }
+                    "isProspectiveMember": false
+                },
+                "keywords": [ "Bird"]
             }
         },
 
@@ -232,7 +234,7 @@
                     "isFormerMember": true
                 },
                 "membershipStartDate": "2015-01-01",
-                "membershipStartDate": "2025-03-31",
+                "membershipEndDate": "2025-03-31",
                 "nlSpecific": {
                     "fotobondNumber": 1620087
                 }
@@ -680,10 +682,12 @@
                 "familyName": "Kars"
             },
             "optional": {
+                "membershipStartDate": "2025-04-14",
                 "level3URL": "http://www.vdhamer.com/fgDeGender/Willem_Kars/",
                 "status": {
-                    "isProspectiveMember": true
-                }
+                    "isProspectiveMember": false
+                },
+                "keywords": [ "Bird" ]
             }
         },
 
