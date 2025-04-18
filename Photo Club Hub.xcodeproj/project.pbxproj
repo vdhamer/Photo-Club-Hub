@@ -220,6 +220,8 @@
 		D0AE1B772788A19500E0100E /* WhoIsWhoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhoIsWhoListView.swift; sourceTree = "<group>"; };
 		D0AEDF3C2BBE0CD1003FD250 /* Photo_Club_Hub_2_5_7.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_5_7.xcdatamodel; sourceTree = "<group>"; };
 		D0B32BB22C15C51A009FF8E7 /* AppVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVersion.swift; sourceTree = "<group>"; };
+		D0B6B05B2DB27A3E00EAAF69 /* packages diagram.key */ = {isa = PBXFileReference; lastKnownFileType = file; path = "packages diagram.key"; sourceTree = "<group>"; };
+		D0B6B05C2DB27A3E00EAAF69 /* Photo Club Hub intro.pptx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Photo Club Hub intro.pptx"; sourceTree = "<group>"; };
 		D0BAB01C2A76CED300387E63 /* URLSession+synchronous.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+synchronous.swift"; sourceTree = "<group>"; };
 		D0BD7FE62D9C84DE005D199A /* Photo_Club_Hub_2_8_0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_8_0.xcdatamodel; sourceTree = "<group>"; };
 		D0BF26FC2CFA218000DA2CB9 /* fcBellusImago.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fcBellusImago.level2.json; sourceTree = "<group>"; };
@@ -510,6 +512,8 @@
 		D0831A48277F736C0049AB84 /* Documentation */ = {
 			isa = PBXGroup;
 			children = (
+				D0B6B05B2DB27A3E00EAAF69 /* packages diagram.key */,
+				D0B6B05C2DB27A3E00EAAF69 /* Photo Club Hub intro.pptx */,
 				D0831A4B277F736C0049AB84 /* ReleaseNotes.md */,
 				D0F361CE2D5134A00077FFA0 /* Nieuwsbrief_Feb25_app.docx */,
 				D036EA082D5019510012A47D /* FAQ_nl.md */,
