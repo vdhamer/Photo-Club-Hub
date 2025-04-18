@@ -141,7 +141,9 @@ iOSInjectionProject/
 ## Powerpoint and Keynote
 
 ~$*.pptx
+*.pptx
 ~$*.key
+*.key
 
 ## Excel
 
