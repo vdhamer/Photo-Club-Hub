@@ -7,7 +7,7 @@ Code Maintenance
 * Tested with SwiftLint 0.59
 
 Data Maintenance
-* Added "Conceptual" keyword.
+* Added "Conceptual" and "Bird" keywords.
 * Updated membership list for fgDeGender.
 * Mentioned fkGestel in Level2_aanmaken_NL.md
 
