@@ -203,7 +203,6 @@
 		D085D6EE2D6A411E0052AE5E /* Photo Club Hub.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Photo Club Hub.xctestplan"; sourceTree = "<group>"; };
 		D08754092BC5E9FD00FCBDB3 /* WhoIsWhoTextInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhoIsWhoTextInfo.swift; sourceTree = "<group>"; };
 		D087540B2BC5EE3700FCBDB3 /* WhoIsWhoThumbnails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhoIsWhoThumbnails.swift; sourceTree = "<group>"; };
-		D08902AB2DB05FB900DD4105 /* Photo Club Hub package.key */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Photo Club Hub package.key"; sourceTree = "<group>"; };
 		D08DC6052AE57294008DBD68 /* SinglePortfolioLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePortfolioLinkView.swift; sourceTree = "<group>"; };
 		D091C13B2D942F5200C666AC /* 250326_Fotoclubs_Brabant_Oost.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = 250326_Fotoclubs_Brabant_Oost.xlsx; sourceTree = "<group>"; };
 		D09816E92D484985009D22FE /* ReadmeSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeSection.swift; sourceTree = "<group>"; };
@@ -512,7 +511,6 @@
 		D0831A48277F736C0049AB84 /* Documentation */ = {
 			isa = PBXGroup;
 			children = (
-				D08902AB2DB05FB900DD4105 /* Photo Club Hub package.key */,
 				D0831A4B277F736C0049AB84 /* ReleaseNotes.md */,
 				D0F361CE2D5134A00077FFA0 /* Nieuwsbrief_Feb25_app.docx */,
 				D036EA082D5019510012A47D /* FAQ_nl.md */,
