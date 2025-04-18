@@ -140,8 +140,8 @@ iOSInjectionProject/
 
 ## Powerpoint and Keynote
 
-*.pptx
-*.key
+~$*.pptx
+~$*.key
 
 ## Excel
 
