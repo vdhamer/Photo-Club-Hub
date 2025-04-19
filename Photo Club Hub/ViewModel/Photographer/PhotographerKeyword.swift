@@ -117,7 +117,7 @@ extension PhotographerKeyword {
         return modified
     }
 
-    // MARK: - utilities
+    // MARK: - save
 
     static func save(context: NSManagedObjectContext, errorText: String? = nil) {
         if context.hasChanges {
@@ -129,6 +129,8 @@ extension PhotographerKeyword {
             }
         }
     }
+
+    // MARK: - count
 
     // count number of objects with a given id for a given photographer
     static func count(context: NSManagedObjectContext, keywordID: String, photographer: Photographer) -> Int {
@@ -196,6 +198,53 @@ extension PhotographerKeyword {
             }
         }
         return photographerKeywords.count
+    }
+
+    // MARK: - fetch
+    // get array with list of all Keywords for a Photographer
+    static func getAll(context: NSManagedObjectContext, photographer: Photographer) -> [String] {
+        var photographerKeywords: [PhotographerKeyword]! = []
+        var keywords = [Keyword]()
+        var keywordStrings = [String]()
+
+        context.performAndWait {
+            let fetchRequest: NSFetchRequest<PhotographerKeyword> = PhotographerKeyword.fetchRequest()
+            let predicateFormat: String = "photographer_ = %@" // avoid localization
+            let predicate = NSPredicate(format: predicateFormat, argumentArray: [photographer])
+            fetchRequest.predicate = predicate
+
+            do {
+                photographerKeywords = try context.fetch(fetchRequest)
+            } catch {
+                ifDebugFatalError("Failed to fetch Keywords for \(photographer.fullNameFirstLast): \(error)",
+                                  file: #fileID, line: #line)
+            }
+        }
+
+        for photographerKeyword in photographerKeywords {
+            keywords.append(photographerKeyword.keyword)
+        }
+
+        for keyword in keywords {
+            let fetchRequest: NSFetchRequest<LocalizedKeyword> = LocalizedKeyword.fetchRequest()
+            let predicateFormat: String = "keyword_ = %@" // avoid localization
+            let predicate = NSPredicate(format: predicateFormat, argumentArray: [keyword])
+            fetchRequest.predicate = predicate
+
+            do {
+                let localizedKeywords = try context.fetch(fetchRequest)
+                guard let firstLocalizedKeyword = localizedKeywords.first else {
+                    ifDebugFatalError("Cannot find translations for Keyword \(keyword.id)")
+                    continue
+                }
+                keywordStrings.append(firstLocalizedKeyword.name ?? "missing keyword translation for \(keyword.id)")
+            } catch {
+                ifDebugFatalError("Failed to fetch LocalizedKeywords for \(keyword.id): \(error)",
+                                  file: #fileID, line: #line)
+            }
+        }
+
+        return keywordStrings
     }
 
 }
