@@ -11,6 +11,9 @@ Data Maintenance
 * Updated membership list for fgDeGender.
 * Mentioned fkGestel in Level2_aanmaken_NL.md
 
+Documentation
+* Updated dataModel.png in README.md
+
 This build #4638 was made using Xcode 16.3
 
 ---------------------------------------------------------------------------
