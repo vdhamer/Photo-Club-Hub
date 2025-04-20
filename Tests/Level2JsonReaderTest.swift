@@ -140,11 +140,11 @@ import CoreData // for NSManagedObjectContext
         }
 
         #expect(Keyword.count(context: bgContext) == 10)
-        #expect(PhotographerKeyword.count(context: bgContext, keywordID: "Minimal") == 2)
+        #expect(PhotographerKeyword.count(context: bgContext, keywordID: "Minimal") == 3)
         #expect(PhotographerKeyword.count(context: bgContext) == 14)
     }
 
-    // Read fgDeGender.level2.json and check for parsing errors
+    // Read and check for keyword merging
     // Clears all CoreData keywords. Runs on background thread, adding bunch of extra complexity ;-(
     @Test("Load 2 clubs with keyword data for same photographer") func fgWaalreFgDeGender() async {
         let bgContext = PersistenceController.shared.container.newBackgroundContext()
@@ -169,7 +169,7 @@ import CoreData // for NSManagedObjectContext
                                            synchronousWithRandomTown: true,
                                            randomTown: randomTownW)
 
-        #expect(Keyword.count(context: bgContext) == 12)
+        #expect(Keyword.count(context: bgContext) == 14)
         #expect(PhotographerKeyword.count(context: bgContext) == 42)
     }
 

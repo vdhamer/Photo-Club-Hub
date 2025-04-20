@@ -75,7 +75,7 @@ import CoreData // for NSManagedObjectContext
 
         _ = Level0JsonReader(bgContext: bgContext, // read root.Level0.json file
                              useOnlyFile: false)
-        #expect(Keyword.count(context: bgContext) == 13)
+        #expect(Keyword.count(context: bgContext) == 14)
     }
 
     // Read language.level0.json.
