@@ -101,6 +101,7 @@
             },
             "optional": {
                 "level3URL": "https://www.fotogroepWaalre.nl/leden/carel-bullens/",
+                "featuredImage": "https://www.fotogroepWaalre.nl/wp-content/uploads/2024/04/GeplakteAfbeelding-61-4.jpeg",
                 "roles": {"isViceChairman": true},
                 "keywords": ["Landscape", "Street"],
                 "nlSpecific": {"fotobondNumber": 1634010}
@@ -152,6 +153,7 @@
             },
             "optional": {
                 "level3URL": "https://www.fotogroepWaalre.nl/leden/erik-van-geest/",
+                "featuredImage": "https://www.fotogroepWaalre.nl/wp-content/uploads/2024/04/GeplakteAfbeelding-61-4.jpeg",
                 "roles": {"isAdmin": true},
                 "keywords": ["Street", "Travel"],
                 "nlSpecific": {"fotobondNumber": 1634052}
@@ -166,6 +168,7 @@
             },
             "optional": {
                 "level3URL": "https://www.fotogroepWaalre.nl/leden/bart-van-stekelenburg-copy-2/",
+		"featuredImage": "https://www.fotogroepWaalre.nl/wp-content/uploads/2024/04/GeplakteAfbeelding-61-4.jpeg",
                 "keywords": ["Landscape"],
                 "nlSpecific": {"fotobondNumber": 1634044}
             }
@@ -179,6 +182,7 @@
             },
             "optional": {
                 "level3URL": "https://www.fotogroepWaalre.nl/leden/germa-van-de-kamp/",
+		"featuredImage": "https://www.fotogroepWaalre.nl/wp-content/uploads/2024/04/GeplakteAfbeelding-61-4.jpeg",
                 "keywords": ["Landscape"]
             }
         },
@@ -192,6 +196,7 @@
             "optional": {
                 "website": "https://www.vansonphotography.nl/",
                 "level3URL": "https://www.fotogroepWaalre.nl/leden/greetje-van-son/",
+		"featuredImage": "https://www.fotogroepWaalre.nl/wp-content/uploads/2024/04/GeplakteAfbeelding-61-4.jpeg",
                 "keywords": ["Architecture", "Postprocessing"],
                 "nlSpecific": {"fotobondNumber": 1634055}
             }
@@ -219,6 +224,7 @@
             "optional": {
                 "website": "http://guusmaasfotografie.nl/",
                 "level3URL": "https://www.fotogroepWaalre.nl/leden/guus-maas/",
+                "featuredImage": "https://www.fotogroepWaalre.nl/wp-content/uploads/2024/04/GeplakteAfbeelding-61-4.jpeg",
                 "keywords": ["Landscape"],
                 "nlSpecific": {"fotobondNumber": 1634066}
             }
@@ -263,6 +269,7 @@
             },
             "optional": {
                 "level3URL": "https://www.fotogroepWaalre.nl/leden/Henny-looren-de-jong/",
+		"featuredImage": "https://www.fotogroepWaalre.nl/wp-content/uploads/2024/04/GeplakteAfbeelding-61-4.jpeg",
                 "keywords": ["Street", "Travel"],
                 "nlSpecific": {"fotobondNumber": 1634057}
             }
@@ -277,6 +284,7 @@
             "optional": {
                 "website": "https://henriettevanekert.nl/",
                 "level3URL": "https://www.fotogroepWaalre.nl/leden/henriette-van-ekert/",
+		"featuredImage": "https://www.fotogroepWaalre.nl/wp-content/uploads/2024/04/GeplakteAfbeelding-61-4.jpeg",
                 "keywords": ["Experimental", "Postprocessing"],
                 "nlSpecific": {"fotobondNumber": 1634063}
             }
@@ -344,6 +352,7 @@
             },
             "optional": {
                 "level3URL": "https://www.fotogroepWaalre.nl/leden/jeroen-tapper/",
+		"featuredImage": "https://www.fotogroepWaalre.nl/wp-content/uploads/2024/04/GeplakteAfbeelding-61-4.jpeg",
                 "nlSpecific": {"fotobondNumber": 1634075}
             }
         },
@@ -435,6 +444,7 @@
             },
             "optional": {
                 "level3URL": "https://www.fotogroepWaalre.nl/leden/lars-veerhoff/",
+		"featuredImage": "https://www.fotogroepWaalre.nl/wp-content/uploads/2024/04/GeplakteAfbeelding-61-4.jpeg",
                 "keywords": ["Landscape"],
                 "nlSpecific": {"fotobondNumber": 1634076}
             }
@@ -462,6 +472,7 @@
             },
             "optional": {
                 "level3URL": "https://www.fotogroepWaalre.nl/leden/kees-van-gemert/",
+		"featuredImage": "https://www.fotogroepWaalre.nl/wp-content/uploads/2024/04/GeplakteAfbeelding-61-4.jpeg",
                 "roles": {"isSecretary": true},
                 "keywords": ["Black & White", "Street"],
                 "nlSpecific": {"fotobondNumber": 1634001}
@@ -488,7 +499,8 @@
                 "familyName": "Knaapen"
             },
             "optional": {
-                "level3URL": "https://www.fotogroepWaalre.nl/leden/mariette-knaapen/"
+                "level3URL": "https://www.fotogroepWaalre.nl/leden/mariette-knaapen/",
+                "featuredImage": "https://www.fotogroepWaalre.nl/wp-content/uploads/2024/04/GeplakteAfbeelding-61-4.jpeg"
             }
         },
 
@@ -537,6 +549,7 @@
             },
             "optional": {
                 "level3URL": "https://www.fotogroepWaalre.nl/leden/mieke-kerkhoven/",
+		"featuredImage": "https://www.fotogroepWaalre.nl/wp-content/uploads/2024/04/GeplakteAfbeelding-61-4.jpeg",
                 "roles": {"isChairman": true},
                 "keywords": ["Landscape", "Abstract"],
                 "nlSpecific": {"fotobondNumber": 1634005}
@@ -551,6 +564,7 @@
             },
             "optional": {
                 "level3URL": "https://www.fotogroepWaalre.nl/leden/monique-houben/",
+		"featuredImage": "https://www.fotogroepWaalre.nl/wp-content/uploads/2024/04/GeplakteAfbeelding-61-4.jpeg",
                 "nlSpecific": {"fotobondNumber": 1634073}
             }
         },
@@ -563,6 +577,7 @@
             },
             "optional": {
                 "level3URL": "https://www.fotogroepWaalre.nl/leden/peter-de-wit/",
+		"featuredImage": "https://www.fotogroepWaalre.nl/wp-content/uploads/2024/04/GeplakteAfbeelding-61-4.jpeg",
                 "nlSpecific": {"fotobondNumber": 1634005}
             }
         },
@@ -617,6 +632,7 @@
             },
             "optional": {
                 "level3URL": "https://www.fotogroepWaalre.nl/leden/sipke-wadman/",
+		"featuredImage": "https://www.fotogroepWaalre.nl/wp-content/uploads/2024/04/GeplakteAfbeelding-61-4.jpeg",
                 "keywords": ["Experimental", "Postprocessing"],
                 "nlSpecific": {"fotobondNumber": 1634039}
             }
