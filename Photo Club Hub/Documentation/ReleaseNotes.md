@@ -8,7 +8,7 @@ Code Maintenance
 
 Data Maintenance
 * Added "Conceptual" and "Bird" keywords.
-* Updated membership list for fgDeGender.
+* Updated membership list for fgDeGender and fgWaalre.
 * Mentioned fkGestel in Level2_aanmaken_NL.md
 
 Documentation
