@@ -10,6 +10,7 @@ Data Maintenance
 * Added "Conceptual" and "Bird" keywords.
 * Updated membership list for fgDeGender and fgWaalre.
 * Mentioned fkGestel in Level2_aanmaken_NL.md
+* Updated usage text for keywords in root.level0.json
 
 Documentation
 * Updated dataModel.png in README.md
