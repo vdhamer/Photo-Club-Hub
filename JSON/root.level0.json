@@ -10,7 +10,7 @@
             "optional": {
                 "usage":  [
                     { "language": "EN", "localizedString": "Subject of the image is difficult to identify or less relevant." },
-                    { "language": "NL", "localizedString": "Als het onderwerp nauwelijks herkenbaar of relevant is." }
+                    { "language": "NL", "localizedString": "Beelden waarbij het onderwerp nauwelijks herkenbaar of nauwelijks relevant is." }
                 ]
             }
         },
@@ -23,8 +23,8 @@
             ],
             "optional": {
                 "usage":  [
-                    { "language": "EN", "localizedString": "Fragments of, or interpretations of buildings." },
-                    { "language": "NL", "localizedString": "Stukjes van of eigen interpretaties van gebouwen." }
+                    { "language": "EN", "localizedString": "Fragments of, or personal interpretations of buildings." },
+                    { "language": "NL", "localizedString": "Stukjes van, of eigen interpretaties van, gebouwen." }
                ]
             }
         },
@@ -38,21 +38,7 @@
             "optional": {
                 "usage":  [
                     { "language": "EN", "localizedString": "Grayscale or monochromatic images" },
-                    { "language": "NL", "localizedString": "Monchromatisch, waaronder grijstinten en sepia." }
-                ]
-            }
-        },
-
-        {
-            "idString": "Bird",
-            "name": [
-                { "language": "EN", "localizedString": "Birds" },
-                { "language": "NL", "localizedString": "Vogels" }
-            ],
-            "optional": {
-                "usage":  [
-                    { "language": "EN", "localizedString": "Birds in the wild" },
-                    { "language": "NL", "localizedString": "Vogels in de natuur" }
+                    { "language": "NL", "localizedString": "Monochromatische beelden, waaronder beelden in grijstinten of sepia." }
                 ]
             }
         },
@@ -66,7 +52,7 @@
             "optional": {
                 "usage":  [
                     { "language": "EN", "localizedString": "Images that represent a predetermined idea." },
-                    { "language": "NL", "localizedString": "Beelden die een vantevoren gekozen idee uitbeelden." }
+                    { "language": "NL", "localizedString": "Beelden die een idee trachten uit te beelden." }
                 ]
             }
         },
@@ -80,7 +66,7 @@
             "optional": {
                 "usage":  [
                     { "language": "EN", "localizedString": "Trying out something that is not cliche." },
-                    { "language": "NL", "localizedString": "De gebaande paden verlaten." }
+                    { "language": "NL", "localizedString": "Beelden die nadrukkelijk de gebaande paden verlaten." }
                 ]
             }
         },
@@ -90,7 +76,13 @@
             "name": [
                 { "language": "EN", "localizedString": "Landscape" },
                 { "language": "NL", "localizedString": "Landschap" }
-            ]
+            ],
+            "optional": {
+                "usage":  [
+                    { "language": "EN", "localizedString": "Images showing the beauty and tranquility of nature or rural environments." },
+                    { "language": "NL", "localizedString": "Sfeerbeelden met een nadruk op natuurlijke omgevingen." }
+                ]
+            }
         },
 
         {
@@ -115,8 +107,8 @@
             ],
             "optional": {
                 "usage":  [
-                    { "language": "EN", "localizedString": "Image with few visual elements." },
-                    { "language": "NL", "localizedString": "Rustige foto met weinig beeldelementen." }
+                    { "language": "EN", "localizedString": "Images with few visual elements." },
+                    { "language": "NL", "localizedString": "Rustige foto's met relatief weinig beeldelementen." }
                  ]
             }
         },
@@ -130,7 +122,7 @@
             "optional": {
                 "usage":  [
                     { "language": "EN", "localizedString": "Panoramas and other forms of projection/stitching." },
-                    { "language": "NL", "localizedString": "Panorama's en andere projecties met een extreme beeldveld." }
+                    { "language": "NL", "localizedString": "Panorama's of andere projecties met een groot blikveld." }
                  ]
             }
         },
@@ -143,8 +135,8 @@
             ],
             "optional": {
                 "usage":  [
-                    { "language": "EN", "localizedString": "Shows a person and the person's personality, sometimes in a characteristic context." },
-                    { "language": "NL", "localizedString": "Persoon, karaktertrekken en mogelijk kenmerkende omgeving." }
+                    { "language": "EN", "localizedString": "Often posed images of a person, sometimes with a focus on their personality or environment." },
+                    { "language": "NL", "localizedString": "Karakteristieke beelden van personen, soms in een kenmerkende omgeving." }
                 ]
             }
         },
@@ -157,8 +149,8 @@
             ],
             "optional": {
                 "usage":  [
-                    { "language": "EN", "localizedString": "Images where the use of e.g. Photoshop is rather dominant." },
-                    { "language": "NL", "localizedString": "Beelden met meteen opvallende nabewerking." }
+                    { "language": "EN", "localizedString": "Images where the use of e.g. Photoshop is noteworthy." },
+                    { "language": "NL", "localizedString": "Beelden met in het oog springende nabewerkingen." }
                 ]
             }
         },
@@ -186,7 +178,7 @@
             "optional": {
                 "usage":  [
                     { "language": "EN", "localizedString": "Scenes clearly depicting 'other' parts of the word" },
-                    { "language": "NL", "localizedString": "Beelden die meteen doen denken aan 'verre' landen." }
+                    { "language": "NL", "localizedString": "Beelden die associaties opwekken met andere landen." }
                  ]
             }
         }
@@ -207,3 +199,4 @@
         }
     ]
 }
+
