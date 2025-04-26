@@ -30,6 +30,20 @@
         },
 
         {
+            "idString": "Bird",
+            "name": [
+                { "language": "EN", "localizedString": "Birds" },
+                { "language": "NL", "localizedString": "Vogels" }
+            ],
+            "optional": {
+                "usage":  [
+                    { "language": "EN", "localizedString": "Images of birds in the wild." },
+                    { "language": "NL", "localizedString": "Beelden van vogels in de natuur." }
+                ]
+            }
+        },
+
+        {
             "idString": "Black & White",
             "name": [
                 { "language": "EN", "localizedString": "Black & White" },
