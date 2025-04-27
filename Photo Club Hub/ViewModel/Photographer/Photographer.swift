@@ -22,9 +22,12 @@ extension Photographer {
         fatalError("init() is not available. Use .findCreateUpdate instead.")
     }
 
+    var photographerKeywords: Set<PhotographerKeyword> {
+        (photographerKeywords_ as? Set<PhotographerKeyword>) ?? []
+    }
+
 	var memberships: Set<MemberPortfolio> {
-		get { (memberships_ as? Set<MemberPortfolio>) ?? [] }
-		set { memberships_ = newValue as NSSet }
+		(memberships_ as? Set<MemberPortfolio>) ?? []
 	}
 
 	fileprivate(set) var givenName: String {

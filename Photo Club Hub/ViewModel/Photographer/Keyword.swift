@@ -15,6 +15,8 @@ extension Keyword {
         fatalError("init() is not available. Use .findCreateUpdate instead.")
     }
 
+    // MARK: - getters and setters
+
     // `id` is persisted in CoreData as `id_` but has to be public because it is also used for the Identifiable protocol
     public var id: String {
         get {
@@ -252,6 +254,36 @@ extension Keyword {
         }
 
         return keywords
+    }
+
+    var localizedKeywords: Set<LocalizedKeyword> {
+        (localizedKeywords_ as? Set<LocalizedKeyword>) ?? []
+    }
+
+    // Priority system to choose the most appropriate LocalizedKeyword for a given Keyword.
+    // The choice depends on available translations and the current language preferences set on the device.
+    var selectedLocalizedKeyword: LocalizedKeywordResult {
+        // don't use Locale.current.language.languageCode because this only returns languages supported by the app
+        // first choice: accomodate user's language preferences according to Apple's Locale API
+        for lang in Locale.preferredLanguages {
+            let langID = lang.split(separator: "-").first?.uppercased() ?? "EN"
+            // now check if one of the user's preferences is available for this Remark
+            for localizedKeyword in localizedKeywords where localizedKeyword.language.isoCodeAllCaps == langID {
+                return LocalizedKeywordResult(localizedKeyword: localizedKeyword, id: self.id)
+            }
+        }
+
+        // second choice: most people speak English, at least let's pretend that is the case ;-)
+        for localizedKeyword in localizedKeywords where localizedKeyword.language.isoCodeAllCaps == "EN" {
+            return LocalizedKeywordResult(localizedKeyword: localizedKeyword, id: self.id)
+        }
+
+        // third choice: use arbitrary (first) translation available for this keyword
+        if localizedKeywords.first != nil {
+            return LocalizedKeywordResult(localizedKeyword: localizedKeywords.first!, id: self.id)
+        }
+
+        return LocalizedKeywordResult(localizedKeyword: nil, id: self.id)
     }
 
 }

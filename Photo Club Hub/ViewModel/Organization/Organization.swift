@@ -134,26 +134,30 @@ extension Organization {
     // The choice depends on the current language settings of the device, and on available translations.
     var localizedRemark: String {
         // don't use Locale.current.language.languageCode because this only returns languages supported by the app
-        let currentLangID = Locale.preferredLanguages.first?.split(separator: "-").first?.uppercased() ?? "EN"
-
-        // can we find the current language?
-        for localRemark in localizedRemarks where localRemark.language.isoCodeAllCaps == currentLangID {
-            if localRemark.localizedString != nil {
-                return localRemark.localizedString!
+        // first choice: accomodate user's language preferences according to Apple's Locale API
+        for lang in Locale.preferredLanguages {
+            let langID = lang.split(separator: "-").first?.uppercased() ?? "EN"
+            // now check if one of the user's preferences is available for this Remark
+            for localRemark in localizedRemarks where localRemark.language.isoCodeAllCaps == langID {
+                if localRemark.localizedString != nil {
+                    return localRemark.localizedString!
+                }
             }
-         }
+        }
 
+        // second choice: most people speak English, at least let's pretend that is the case ;-)
         for localizedRemark in localizedRemarks where localizedRemark.language.isoCodeAllCaps == "EN" {
             if localizedRemark.localizedString != nil {
                 return localizedRemark.localizedString!
             }
         }
 
-        // just use any language
+        // third choice: use any translation available for this keyword
         if localizedRemarks.first != nil, localizedRemarks.first!.localizedString != nil {
             return "\(localizedRemarks.first!.localizedString!) [\(localizedRemarks.first!.language.isoCodeAllCaps)]"
         }
 
+        // otherwise display an error message instead of a real remark
         let clubOrMuseum: String = organizationType.organizationTypeName
         return String(localized: "No remark currently available for \(clubOrMuseum) \(fullName).", table: "Package",
                       comment: "Shown below map if there is no usable remark in the OrganzationList.json file.")
