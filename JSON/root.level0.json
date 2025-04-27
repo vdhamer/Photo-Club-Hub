@@ -72,6 +72,20 @@
         },
 
         {
+            "idString": "Concert",
+            "name": [
+                { "language": "EN", "localizedString": "Concert" },
+                { "language": "NL", "localizedString": "Concert" }
+            ],
+            "optional": {
+                "usage":  [
+                    { "language": "EN", "localizedString": "Images of musicians during performances." },
+                    { "language": "NL", "localizedString": "Beelden van musici tijdens optredens." }
+                ]
+            }
+        },
+
+        {
             "idString": "Experimental",
             "name": [
                 { "language": "EN", "localizedString": "Experimental" },

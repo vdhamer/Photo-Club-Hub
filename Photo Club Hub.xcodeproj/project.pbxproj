@@ -513,8 +513,8 @@
 		D0831A48277F736C0049AB84 /* Documentation */ = {
 			isa = PBXGroup;
 			children = (
-				D0B6B05C2DB27A3E00EAAF69 /* Photo Club Hub intro.pptx */,
 				D0831A4B277F736C0049AB84 /* ReleaseNotes.md */,
+				D0B6B05C2DB27A3E00EAAF69 /* Photo Club Hub intro.pptx */,
 				D0F361CE2D5134A00077FFA0 /* Nieuwsbrief_Feb25_app.docx */,
 				D036EA082D5019510012A47D /* FAQ_nl.md */,
 				D0A380932D39B0FE00FF95F4 /* Level2_creation_EN.md */,

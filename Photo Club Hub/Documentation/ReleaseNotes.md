@@ -7,7 +7,7 @@ Code Maintenance
 * Tested with SwiftLint 0.59.1, iOS 18.4.1 and macOS 15.4.1
 
 Data Maintenance
-* Added "Conceptual" and "Bird" keywords.
+* Added "Conceptual", "Bird", and "Concert" keywords.
 * Updated membership list for fgDeGender and fgWaalre.
 * Mentioned fkGestel in Level2_aanmaken_NL.md
 * Updated usage text for keywords in root.level0.json

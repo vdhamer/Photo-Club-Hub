@@ -128,7 +128,7 @@
                 "website": "https://glass.photo/jerdam",
                 "level3URL": "http://www.vdhamer.com/fgDeGender/Bettina_de_Graaf/",
                 "membershipStartDate": "2024-01-01",
-                "keywords": [ "Portrait", "Street", "Travel" ],
+                "keywords": [ "Portrait", "Street", "Concert" ],
                 "nlSpecific": {
                     "fotobondNumber": 1620111
                 }
@@ -358,7 +358,7 @@
                     "isOther": false
                 },
                 "membershipStartDate": "2005-01-01",
-                "keywords": [ "Macro", "Panorama" ],
+                "keywords": [ "Macro", "Panorama", "Experimental" ],
                 "nlSpecific": {
                     "fotobondNumber": 1620064
                 }
