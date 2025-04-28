@@ -545,7 +545,7 @@
                     "isAdmin": true
                 },
                 "membershipStartDate": "2024-01-01",
-                "keywords": [ "Landscape", "Minimal" ],
+                "keywords": [ "Landscape", "Minimal", "Travel", "4thkeywordtest" ],
                 "nlSpecific": {
                     "fotobondNumber": 1620110
                 }
