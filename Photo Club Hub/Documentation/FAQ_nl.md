@@ -307,7 +307,7 @@ Wat het weer minder aantrekkelijk maakt om de site bij te werken. Wat leidt tot 
 
 De klassieke "statische" websites worden qua aandacht vervangen door grotere "dynamische" sites.
 Dit kan je in dit geval oplossen door
-- het nieuws van meerdere clubs op 1 plek te bundelen. Dan is er altijd wel wat veranderd sedert vorige keer.
+- het nieuws van meerdere clubs op 1 plek te bundelen. Dan is er altijd wel wat veranderd sinds vorige keer.
 - een bookmark ipv een te onderhouden lijst met bookmarks per club.
 - veranderingen goed zichtbaar maken: nieuwste foto's van fotograaf vooraan tonen.
 - misschien ooit instelbare notificaties.
