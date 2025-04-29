@@ -4,7 +4,7 @@ Code Maintenance
 * Removed unused duplicate files
 * Synchronized some of the code with Photo Club Hub HTML
 * Moved some strings from one string catalog to another
-* Tested with SwiftLint 0.59.1, iOS 18.4.1 and macOS 15.4.1
+* Tested with Xcode 16.4 (beta 1, 16F1t), SwiftLint 0.59.1, iOS 18.4.1, iOS 18.5 (beta 22F5065a) and macOS 15.4.1
 
 Data Maintenance
 * Added "Conceptual", "Bird", and "Concert" keywords.
