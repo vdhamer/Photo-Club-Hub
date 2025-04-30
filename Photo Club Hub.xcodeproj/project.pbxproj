@@ -517,7 +517,6 @@
 			isa = PBXGroup;
 			children = (
 				D0831A4B277F736C0049AB84 /* ReleaseNotes.md */,
-				D01238FE2DBF9B43000EAD8B /* fgDeGender_Trefwoorden.xlsx */,
 				D0B6B05C2DB27A3E00EAAF69 /* Photo Club Hub intro.pptx */,
 				D0F361CE2D5134A00077FFA0 /* Nieuwsbrief_Feb25_app.docx */,
 				D036EA082D5019510012A47D /* FAQ_nl.md */,
@@ -690,6 +689,7 @@
 				D0F8718E2D403D1700530D10 /* xampleMax.level2.json */,
 				D0F8718F2D403D1700530D10 /* xampleMin.level1.json */,
 				D0F871902D403D1700530D10 /* xampleMin.level2.json */,
+				D01238FE2DBF9B43000EAD8B /* fgDeGender_Trefwoorden.xlsx */,
 			);
 			path = JSON;
 			sourceTree = "<group>";
