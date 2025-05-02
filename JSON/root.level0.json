@@ -142,6 +142,20 @@
         },
 
         {
+            "idString": "Museum",
+            "name": [
+                { "language": "EN", "localizedString": "Museum" },
+                { "language": "NL", "localizedString": "Museum" }
+            ],
+            "optional": {
+                "usage":  [
+                    { "language": "EN", "localizedString": "Similar to street photography, but in a museum." },
+                    { "language": "NL", "localizedString": "Vergelijkbaar met straatfotografie, maar dan in een museum." }
+                 ]
+            }
+        },
+
+        {
             "idString": "Panorama",
             "name": [
                 { "language": "EN", "localizedString": "Panorama" },

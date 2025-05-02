@@ -59,7 +59,7 @@
                 "nlSpecific": {
                     "fotobondNumber": 1620108
                 },
-                "keywords": [ "Travel"]
+                "keywords": [ "Travel", "Street", "Museum" ]
             }
         },
 
@@ -545,7 +545,7 @@
                     "isAdmin": true
                 },
                 "membershipStartDate": "2024-01-01",
-                "keywords": [ "Landscape", "Minimal", "Travel", "4thkeywordtest", "5thkeywordtest" ],
+                "keywords": [ "Landscape", "Minimal", "Travel" ],
                 "nlSpecific": {
                     "fotobondNumber": 1620110
                 }
