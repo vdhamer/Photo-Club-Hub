@@ -75,7 +75,8 @@
                 "membershipStartDate": "2002-04-01",
                 "nlSpecific": {
                     "fotobondNumber": 1620059
-                }
+                },
+                "keywords": [ ]
             }
         },
 
@@ -91,7 +92,7 @@
                 "status": {
                     "isProspectiveMember": false
                 },
-                "keywords": [ "Bird" ]
+                "keywords": [ "Bird", "Landscape", "Macro" ]
             }
         },
 
@@ -110,9 +111,6 @@
                 },
                 "membershipStartDate": "1996-01-01",
                 "membershipEndDate": "2025-03-31",
-                "nlSpecific": {
-                    "fotobondNumber": 1620040
-                },
                 "keywords": [ "Architecture", "Minimal" ]
             }
         },
@@ -271,7 +269,8 @@
                 "membershipStartDate": "1995-01-01",
                 "nlSpecific": {
                     "fotobondNumber": 1620029
-                }
+                },
+                "keywords": [ ]
             }
         },
 
@@ -324,7 +323,8 @@
                 "membershipStartDate": "2020-01-01",
                 "nlSpecific": {
                     "fotobondNumber": 1620103
-                }
+                },
+                "keywords": [ ]
             }
         },
 
@@ -475,7 +475,8 @@
                 "membershipStartDate": "1976-01-01",
                 "nlSpecific": {
                     "fotobondNumber": 1620021
-                }
+                },
+                "keywords": [ "Self-expression" ]
             }
         },
 
@@ -580,7 +581,8 @@
                 "level3URL": "http://www.vdhamer.com/fgDeGender/Pieter_de_Jong/",
                 "status": {
                     "isProspectiveMember": true
-                }
+                },
+                "keywords": [ ]
             }
         },
 
@@ -648,7 +650,8 @@
                 "membershipStartDate": "2022-10-27",
                 "nlSpecific": {
                     "fotobondNumber": 1620106
-                }
+                },
+                "keywords": [ ]
             }
         },
 
@@ -697,7 +700,7 @@
                 "status": {
                     "isProspectiveMember": false
                 },
-                "keywords": [ "Bird" ]
+                "keywords": [ "Bird", "Landscape", "Architecture" ]
             }
         },
 
