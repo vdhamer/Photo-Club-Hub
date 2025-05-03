@@ -86,6 +86,20 @@
         },
 
         {
+            "idString": "Drone",
+            "name": [
+                { "language": "EN", "localizedString": "Drone" },
+                { "language": "NL", "localizedString": "Drone" }
+            ],
+            "optional": {
+                "usage":  [
+                    { "language": "EN", "localizedString": "Low altitude aerial photography." },
+                    { "language": "NL", "localizedString": "Luchtfotografie met drones of andere laagvliegers." }
+                ]
+            }
+        },
+
+        {
             "idString": "Experimental",
             "name": [
                 { "language": "EN", "localizedString": "Experimental" },
@@ -255,4 +269,3 @@
         }
     ]
 }
-
