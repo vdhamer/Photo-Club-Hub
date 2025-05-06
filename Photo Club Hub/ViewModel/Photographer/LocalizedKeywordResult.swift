@@ -1,6 +1,6 @@
 //
 //  LocalizedKeywordResult.swift
-//  Photo Club Hub HTML
+//  Photo Club Hub HTML (struct currently only used by Photo Club Hub HTML)
 //
 //  Created by Peter van den Hamer on 26/04/2025.
 //
@@ -10,6 +10,8 @@ import Foundation
 struct LocalizedKeywordResult {
     let localizedKeyword: LocalizedKeyword? // a given keyword doesn't have a translation if it isn't defined at Level 0
     let id: String // fallback if localizedKeyword is nil
+    var delimiterToAppend: String = "," // can be set to ""
+    var customHint: String? // overrules standard Ignite hint
 }
 
 extension LocalizedKeywordResult: Comparable {
