@@ -170,20 +170,6 @@
         },
 
         {
-            "idString": "Self-expression",
-            "name": [
-                { "language": "EN", "localizedString": "Self-expression" },
-                { "language": "NL", "localizedString": "Zelfexpressie" }
-            ],
-            "optional": {
-                "usage":  [
-                    { "language": "EN", "localizedString": "Images that the photographer uses to express feelings or personality." },
-                    { "language": "NL", "localizedString": "Beelden bedoeld on gevoelens en persoonlijkheid van de maker te uiten." }
-                 ]
-            }
-        },
-
-        {
             "idString": "Panorama",
             "name": [
                 { "language": "EN", "localizedString": "Panorama" },
@@ -222,6 +208,20 @@
                     { "language": "EN", "localizedString": "Images where the use of e.g. Photoshop is noteworthy." },
                     { "language": "NL", "localizedString": "Beelden met in het oog springende nabewerkingen." }
                 ]
+            }
+        },
+	
+        {
+            "idString": "Self-Expression",
+            "name": [
+                { "language": "EN", "localizedString": "Self-expression" },
+                { "language": "NL", "localizedString": "Zelfexpressie" }
+            ],
+            "optional": {
+                "usage":  [
+                    { "language": "EN", "localizedString": "Images that the photographer uses to express feelings or personality." },
+                    { "language": "NL", "localizedString": "Beelden bedoeld on gevoelens en persoonlijkheid van de maker te uiten." }
+                 ]
             }
         },
 
