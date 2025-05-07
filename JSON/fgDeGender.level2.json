@@ -160,7 +160,7 @@
                 "website": "https://www.ericvdven.nl/",
                 "level3URL": "http://www.vdhamer.com/fgDeGender/Eric_van_de_Ven/",
                 "membershipStartDate": "2022-12-01",
-                "keywords": [ "Experimental", "Postprocessing" ],
+                "keywords": [ "Experimental", "Mixed-Media", "Postprocessing" ],
                 "nlSpecific": {
                     "fotobondNumber": 1620109
                 }
@@ -422,6 +422,7 @@
                 "nlSpecific": {
                     "fotobondNumber": 1620104
                 }
+                "keywords": [ "Architecture", "Experimental", "Landscape" ]
             }
         },
 
@@ -651,7 +652,7 @@
                 "nlSpecific": {
                     "fotobondNumber": 1620106
                 },
-                "keywords": [ ]
+                "keywords": [ "Architecture", "Portrait", "Black & White" ]
             }
         },
 
@@ -667,7 +668,7 @@
                 "nlSpecific": {
                     "fotobondNumber": 1620038
                 },
-                "keywords": [ "Travel" ]
+                "keywords": [ "Abstract", "Concert", "Travel" ]
             }
         },
 

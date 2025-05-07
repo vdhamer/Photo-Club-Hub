@@ -156,6 +156,20 @@
         },
 
         {
+            "idString": "Mixed-Media",
+            "name": [
+                { "language": "EN", "localizedString": "Mixed media" },
+                { "language": "NL", "localizedString": "Gemengde technieken" }
+            ],
+            "optional": {
+                "usage":  [
+                    { "language": "EN", "localizedString": "Photographs combined with other media or materials." },
+                    { "language": "NL", "localizedString": "Fotografie gecombineerd met andere kunstmedia of materialen." }
+                 ]
+            }
+        },
+
+        {
             "idString": "Museum",
             "name": [
                 { "language": "EN", "localizedString": "Museum" },
