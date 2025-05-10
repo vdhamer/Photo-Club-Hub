@@ -28,6 +28,7 @@
 		D04DFD882B39F788006EF297 /* Published+UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A40277F731C0049AB84 /* Published+UserDefaults.swift */; };
 		D05124852C42BE2D00D94B81 /* Level2JsonReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05124842C42BE2D00D94B81 /* Level2JsonReader.swift */; };
 		D05124892C43122C00D94B81 /* UrlComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05124882C43122C00D94B81 /* UrlComponents.swift */; };
+		D053A4262DCFEB5300ED832A /* Photo Club Hub Data in Frameworks */ = {isa = PBXBuildFile; productRef = D053A4252DCFEB5300ED832A /* Photo Club Hub Data */; };
 		D05414F72AC7499000D899D8 /* FotogroepDeGenderMembersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05414F62AC7499000D899D8 /* FotogroepDeGenderMembersProvider.swift */; };
 		D054173B2D31DDE300A2A579 /* XampleMaxMembersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05417372D31DDE300A2A579 /* XampleMaxMembersProvider.swift */; };
 		D05E451E27EF2A2C00D31327 /* ReadmeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05E451D27EF2A2C00D31327 /* ReadmeView.swift */; };
@@ -149,6 +150,7 @@
 		D04D7B2B2D2B3B210048454B /* Jaarverslag 2024 Website.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jaarverslag 2024 Website.docx"; sourceTree = "<group>"; };
 		D05124842C42BE2D00D94B81 /* Level2JsonReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level2JsonReader.swift; sourceTree = "<group>"; };
 		D05124882C43122C00D94B81 /* UrlComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlComponents.swift; sourceTree = "<group>"; };
+		D053A4232DCFEB0500ED832A /* Photo Club Hub Data */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "Photo Club Hub Data"; path = "Photo Club Hub/Photo Club Hub Data"; sourceTree = "<group>"; };
 		D05414F62AC7499000D899D8 /* FotogroepDeGenderMembersProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FotogroepDeGenderMembersProvider.swift; sourceTree = "<group>"; };
 		D05417372D31DDE300A2A579 /* XampleMaxMembersProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XampleMaxMembersProvider.swift; sourceTree = "<group>"; };
 		D054173D2D31DE6B00A2A579 /* xampleMax.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = xampleMax.level2.json; sourceTree = "<group>"; };
@@ -284,6 +286,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D053A4262DCFEB5300ED832A /* Photo Club Hub Data in Frameworks */,
 				D0CFACAD2CDEDCBA005E3A0B /* SwiftyJSON in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,6 +327,13 @@
 				D048571C2D46C13100022117 /* nl.xcloc */,
 			);
 			path = "Photo Club Hub Localizations";
+			sourceTree = "<group>";
+		};
+		D053A4242DCFEB5300ED832A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		D05E451B27EF286B00D31327 /* PreferencesView */ = {
@@ -410,6 +420,7 @@
 		D08319DA277F70A30049AB84 = {
 			isa = PBXGroup;
 			children = (
+				D053A4232DCFEB0500ED832A /* Photo Club Hub Data */,
 				D085D6EE2D6A411E0052AE5E /* Photo Club Hub.xctestplan */,
 				D08319E5277F70A30049AB84 /* Photo Club Hub */,
 				D0831A17277F71340049AB84 /* Photo-Club-Hub-Info.plist */,
@@ -420,6 +431,7 @@
 				D008D2A928739167007A7BE2 /* .gitignore */,
 				D0F2F2F22873A19F009DDD2A /* .github */,
 				D0E8689B2D693A3600F2A03A /* Tests */,
+				D053A4242DCFEB5300ED832A /* Frameworks */,
 				D08319E4277F70A30049AB84 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -733,6 +745,7 @@
 			name = "Photo Club Hub";
 			packageProductDependencies = (
 				D0CFACAC2CDEDCBA005E3A0B /* SwiftyJSON */,
+				D053A4252DCFEB5300ED832A /* Photo Club Hub Data */,
 			);
 			productName = "Fotogroep Waalre 2";
 			productReference = D08319E3277F70A30049AB84 /* Photo Club Hub.app */;
@@ -1298,6 +1311,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		D053A4252DCFEB5300ED832A /* Photo Club Hub Data */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = "Photo Club Hub Data";
+		};
 		D0CFACAC2CDEDCBA005E3A0B /* SwiftyJSON */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D0CFACAB2CDEDCBA005E3A0B /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
