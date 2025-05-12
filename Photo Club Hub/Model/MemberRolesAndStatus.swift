@@ -19,22 +19,25 @@ enum MemberRole {
     case other
 
     func localizedString() -> String {
-        let translateComment: StaticString =
-            "Administrative role of member within a club. Used as part of concatenations."
-
         switch self {
         case .admin:
-            return String(localized: "admin", table: "Package", comment: translateComment)
+            return String(localized: "admin", table: "Package",
+                          comment: "Administrative role of member within a club. Used as part of concatenations.")
         case .chairman:
-            return String(localized: "chairman", table: "Package", comment: translateComment)
+            return String(localized: "chairman", table: "Package",
+                          comment: "Administrative role of member within a club. Used as part of concatenations.")
         case .secretary:
-            return String(localized: "secretary", table: "Package", comment: translateComment)
+            return String(localized: "secretary", table: "Package",
+                          comment: "Administrative role of member within a club. Used as part of concatenations.")
         case .treasurer:
-            return String(localized: "treasurer", table: "Package", comment: translateComment)
+            return String(localized: "treasurer", table: "Package",
+                          comment: "Administrative role of member within a club. Used as part of concatenations.")
         case .viceChairman:
-            return String(localized: "vice-chairman", table: "Package", comment: translateComment) // used in fgWaalre
+            return String(localized: "vice-chairman", table: "Package", // used in fgWaalre
+                          comment: "Administrative role of member within a club. Used as part of concatenations.")
         case .other:
-            return String(localized: "other", table: "Package", comment: translateComment) // used in fgDeGender
+            return String(localized: "other", table: "Package", // used in fgDeGender
+                          comment: "Administrative role of member within a club. Used as part of concatenations.")
         }
     }
 }
