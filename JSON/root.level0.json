@@ -170,6 +170,20 @@
         },
 
         {
+            "idString": "Multiple-Exposure",
+            "name": [
+                { "language": "EN", "localizedString": "Multiple exposure" },
+                { "language": "NL", "localizedString": "Meervoudige opnamen" }
+            ],
+            "optional": {
+                "usage":  [
+                    { "language": "EN", "localizedString": "Superimposed images made in camera or in postprocessing." },
+                    { "language": "NL", "localizedString": "Dubbeldruk en vergelijkbare technieken in camera of tijdens nabewerking." }
+                 ]
+            }
+        },
+
+        {
             "idString": "Museum",
             "name": [
                 { "language": "EN", "localizedString": "Museum" },

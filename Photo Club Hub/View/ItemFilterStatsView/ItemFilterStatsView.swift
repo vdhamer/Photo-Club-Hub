@@ -19,6 +19,7 @@ struct ItemFilterStatsView: View { // display right-aligned string like "12 entr
         self.unfilteredCount = unfilteredCount
         self.elementType = elementType
 
+        // somehow use of variable Comment of type StaticString gives warnings in the build log, but the results do work
         if elementType == ItemFilterStatsEnum.organization {
             comment = "Stats header displayed at top of Clubs and Museums screen"
         } else {
