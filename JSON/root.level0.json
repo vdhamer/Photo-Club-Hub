@@ -86,6 +86,20 @@
         },
 
         {
+            "idString": "Documentary",
+            "name": [
+                { "language": "EN", "localizedString": "Documentary" },
+                { "language": "NL", "localizedString": "Documentair" }
+            ],
+            "optional": {
+                "usage":  [
+                    { "language": "EN", "localizedString": "Images (often in series) that tell a story about some noteworthy aspect of life or the world." },
+                    { "language": "NL", "localizedString": "Foto's of fotoseries die de werkelijkheid verhalend vastleggen." }
+                ]
+            }
+        },
+
+        {
             "idString": "Drone",
             "name": [
                 { "language": "EN", "localizedString": "Drone" },

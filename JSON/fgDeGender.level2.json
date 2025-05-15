@@ -270,7 +270,7 @@
                 "nlSpecific": {
                     "fotobondNumber": 1620029
                 },
-                "keywords": [ ]
+                "keywords": [ "Documentary" ]
             }
         },
 
@@ -337,7 +337,7 @@
             "optional": {
                 "level3URL": "http://www.vdhamer.com/fgDeGender/Joep_Julicher/",
                 "membershipStartDate": "2019-04-01",
-                "keywords": [ "Minimal" ],
+                "keywords": [ "Minimal", "Experimental" ],
                 "nlSpecific": {
                     "fotobondNumber": 1620098
                 }
