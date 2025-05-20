@@ -67,7 +67,7 @@ Dit stappenplan beschrijft hoe een lijst ("Level 2") met clubleden aan te maken 
       Het bevat een webadres (URL) van een foto gemaakt door de fotograaf.
       Dat webadres moet een plaatje zijn, maar mag op een willekeurige locatie op het internet staan.
       Als `featuredImage` ontbreekt of het adres niet klopt, wordt er een oranje plaatje met een gestileerde "?" getoond.
-      </br>
+</br>
     
     > Tip: Speciale lettertekens in namen (en elders) zijn toegestaan. Bijvoorbeeld "Juriën" of "Saša". 
  
@@ -83,8 +83,8 @@ Dit stappenplan beschrijft hoe een lijst ("Level 2") met clubleden aan te maken 
           inhoud volledig aan de hand van de genoemde leestekens.
 </br>
     
-    > Tip: het is handig om de leden in alfabetische volgorde van voornaam of achternaam te zetten: dan valt het makkelijke op als een lid dubbel op de lijst staat.
-
+    > Tip: het is handig om de leden in alfabetische volgorde van voornaam of achternaam te zetten:
+    > dan valt het makkelijke op als een lid dubbel op de lijst staat.
 
 6. **Stuur** ons het gemaakte `level2.json` bestand. Dat mag ook bij tussenversies. Wij zullen proberen binnen 24 uur te reageren.
     - Onze rol is om een de technische juistheid te bewaken en om hulp te bieden. Wij kijken niet de aangeleverde ledenlijst accuraat is en controlleren niet de spelling van namen.
