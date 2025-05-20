@@ -37,8 +37,9 @@ Dit stappenplan beschrijft hoe een lijst ("Level 2") met clubleden aan te maken 
    > En vooral kieskeurig over comma's (tussen elementen in een lijst, maar niet na de laatste).
 
 3. Pas de gegevens over de **club** (`club`) aan: `town`, `fullName`, `nickName`, en ook de locatie:
-    - Tip: gebruik voor het aanpassen van het bestand liefst [JSON Editor Online](https://jsoneditoronline.org). Dat programma is bedoeld om zogenaamde "JSON" tekstbestanden aan te maken.
-        - Als alternatief kan je een kale editor gebruiken zoals [Windows NotePad](https://nl.wikipedia.org/wiki/Notepad), [NotePad++](https://nl.wikipedia.org/wiki/Notepad%2B%2B) of [Sublime Text](https://nl.wikipedia.org/wiki/Sublime_Text).
+    > Tip: gebruik voor het aanpassen van het bestand liefst [JSON Editor Online](https://jsoneditoronline.org).
+    > Dat programma is bedoeld om zogenaamde "JSON" tekstbestanden aan te maken.
+    > Als alternatief kan je een kale editor gebruiken zoals [Windows NotePad](https://nl.wikipedia.org/wiki/Notepad), [NotePad++](https://nl.wikipedia.org/wiki/Notepad%2B%2B) of [Sublime Text](https://nl.wikipedia.org/wiki/Sublime_Text).
 
     - De 6 proefkonijnclubs kunnen de vereiste `town`, `fullName`, `nickName`,`latitude` en `longitude` velden uit de bovenstaande tabel overnemen.
       Er zijn gegevens voor de clubs uit de regio te vinden in [root.level1.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/root.level1.json).
