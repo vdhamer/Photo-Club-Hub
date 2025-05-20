@@ -56,7 +56,7 @@ Dit stappenplan beschrijft hoe een lijst ("Level 2") met clubleden aan te maken 
       Wat de software betreft zijn zelfs "Jan de Vries" en "Jan De Vries" verschillende personen.
         - Jan de Vries voer je in als `"givenName": "Jan", "infixName": "de", "familyName": "Vries"`.
         - Max Verstappen voer je in als `"givenName": "Max", "infixName": "", "familyName": "Verstappen"` (het mag ook als `"givenName": "Max", "familyName": "Verstappen"`).
-   
+    >
     > Tip: De lijst met leden hoeft niet in een keer compleet te zijn:
     > je kan dus eerst enkele leden toevoegen om de kijken of alles lukt.
     > En de lijst vervolgens completer maken in een 2e versie. En b.v. eventuele moeilijke namen
