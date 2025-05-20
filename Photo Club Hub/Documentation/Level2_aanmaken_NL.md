@@ -49,6 +49,7 @@ Dit stappenplan beschrijft hoe een lijst ("Level 2") met clubleden aan te maken 
     > Tip: met de [JSON Editor Online](https://jsoneditoronline.org) kan je de lijst van clubleden als tabel
     > bekijken en aanpassen. Dan kan je dubbelklikken op cellen die je wilt aanpassen,
     > en regels toevoegen of verwijderen via het een menu ("__⋮__").
+  
     - De spelling van de namen van clubleden let nauw.
       De namen worden namelijk gebruikt als identificatie - bijvoorbeeld om te bepalen of een bepaald lid
       ook voorkomt als lid of ex-lid van een andere club.
@@ -64,7 +65,7 @@ Dit stappenplan beschrijft hoe een lijst ("Level 2") met clubleden aan te maken 
       Het bevat een webadres (URL) van een foto gemaakt door de fotograaf.
       Dat webadres moet een plaatje zijn, maar mag op een willekeurige locatie op het internet staan.
       Als `featuredImage` ontbreekt of het adres niet klopt, wordt er een oranje plaatje met een gestileerde "?" getoond.
-
+  
     > Tip: Speciale lettertekens in namen (en elders) zijn toegestaan. Bijvoorbeeld "Juriën" of "Saša". 
  
 5. Deze controlestap is alleen nodig als je [JSON Editor Online](https://jsoneditoronline.org) __niet__ gebruikt.
@@ -76,7 +77,7 @@ Dit stappenplan beschrijft hoe een lijst ("Level 2") met clubleden aan te maken 
         - Het JSON formaat let nogal nauw ten aanzien van komma's en openen en sluiten van haakjes en aanhalingstekens. Vandaar dat we hier begonnen met een voorbeeldbestand.
         - Daarentegen is JSON totaal _niet_ kieskeurig wat betreft de hoeveelheid spaties, tabs of nieuwe regels.
           Inspringen van de tekst is heel nuttig voor menselijke lezers, maar de software analyseert de inhoud volledig aan de hand van de genoemde leestekens.
-
+  
     > Tip: het is handig om de leden in alfabetische volgorde van voornaam of achternaam te zetten: dan valt het makkelijke op als een lid dubbel op de lijst staat.
 
 
