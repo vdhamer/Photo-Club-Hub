@@ -42,8 +42,8 @@ Dit stappenplan beschrijft hoe een lijst ("Level 2") met clubleden aan te maken 
     > Als alternatief kan je een kale editor gebruiken zoals [Windows NotePad](https://nl.wikipedia.org/wiki/Notepad), [NotePad++](https://nl.wikipedia.org/wiki/Notepad%2B%2B) of [Sublime Text](https://nl.wikipedia.org/wiki/Sublime_Text).
 
     - De genoemde proefkonijnclubs kunnen de vereiste `town`, `fullName`, `nickName`,`latitude` en `longitude`
-    - velden uit de bovenstaande tabel overnemen. Er zijn gegevens voor de clubs uit de regio te vinden in
-    - [root.level1.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/root.level1.json).
+      velden uit de bovenstaande tabel overnemen. Er zijn gegevens voor de clubs uit de regio te vinden in
+      [root.level1.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/root.level1.json).
 
 4. Pas gegevens over de **clubleden** (`members`) aan: `givenName`, `infixName` en `familyName`.
     > Tip: met de [JSON Editor Online](https://jsoneditoronline.org) kan je de lijst van clubleden als tabel
