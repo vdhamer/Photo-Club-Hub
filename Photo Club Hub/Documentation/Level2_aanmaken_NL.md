@@ -67,7 +67,7 @@ Dit stappenplan beschrijft hoe een lijst ("Level 2") met clubleden aan te maken 
       Het bevat een webadres (URL) van een foto gemaakt door de fotograaf.
       Dat webadres moet een plaatje zijn, maar mag op een willekeurige locatie op het internet staan.
       Als `featuredImage` ontbreekt of het adres niet klopt, wordt er een oranje plaatje met een gestileerde "?" getoond.
-</br>
+  </br>
     
     > Tip: Speciale lettertekens in namen (en elders) zijn toegestaan. Bijvoorbeeld "Juriën" of "Saša". 
  
