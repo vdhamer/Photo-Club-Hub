@@ -95,7 +95,7 @@ Dit stappenplan beschrijft hoe een lijst ("Level 2") met clubleden aan te maken 
       Ofwel, hosting van enkele kleine tekstbestanden op onze webserver is slechts een tijdelijke oplossing. Dit om het proces stapje-voor-stapje te kunnen uittesten.
 
 7. **Controleer** of alles naar wens werkt via de [Photo Club Hub](https://www.fotobond-brabantoost.nl/nieuws/fotoclub-hub-app/) iOS app.
-Of via een door ons [gegenereerde](https://github.com/vdhamer/Photo-Club-Hub-HTML/blob/main/.github/README.md) HTML pagina als geen iPhone of iPad beschikbaar is.
+Of via een door ons [gegenereerde](https://github.com/vdhamer/Photo-Club-Hub-HTML/blob/main/.github/README.md) HTML pagina als er geen iPhone of iPad beschikbaar is.
 
 ## Bonus informatie
 
