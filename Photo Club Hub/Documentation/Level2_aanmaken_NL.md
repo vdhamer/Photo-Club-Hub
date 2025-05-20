@@ -41,8 +41,9 @@ Dit stappenplan beschrijft hoe een lijst ("Level 2") met clubleden aan te maken 
     > Dat programma is bedoeld om zogenaamde "JSON" tekstbestanden aan te maken.
     > Als alternatief kan je een kale editor gebruiken zoals [Windows NotePad](https://nl.wikipedia.org/wiki/Notepad), [NotePad++](https://nl.wikipedia.org/wiki/Notepad%2B%2B) of [Sublime Text](https://nl.wikipedia.org/wiki/Sublime_Text).
 
-    - De 6 proefkonijnclubs kunnen de vereiste `town`, `fullName`, `nickName`,`latitude` en `longitude` velden uit de bovenstaande tabel overnemen.
-      Er zijn gegevens voor de clubs uit de regio te vinden in [root.level1.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/root.level1.json).
+    - De genoemde proefkonijnclubs kunnen de vereiste `town`, `fullName`, `nickName`,`latitude` en `longitude`
+    - velden uit de bovenstaande tabel overnemen. Er zijn gegevens voor de clubs uit de regio te vinden in
+    - [root.level1.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/root.level1.json).
 
 4. Pas gegevens over de **clubleden** (`members`) aan: `givenName`, `infixName` en `familyName`.
     > Tip: met de [JSON Editor Online](https://jsoneditoronline.org) kan je de lijst van clubleden als tabel
@@ -54,8 +55,11 @@ Dit stappenplan beschrijft hoe een lijst ("Level 2") met clubleden aan te maken 
       Wat de software betreft zijn zelfs "Jan de Vries" en "Jan De Vries" verschillende personen.
         - Jan de Vries voer je in als `"givenName": "Jan", "infixName": "de", "familyName": "Vries"`.
         - Max Verstappen voer je in als `"givenName": "Max", "infixName": "", "familyName": "Verstappen"` (het mag ook als `"givenName": "Max", "familyName": "Verstappen"`).
-    - Tip: De lijst met leden hoeft niet in een keer compleet te zijn: je kan dus eerst enkele leden toevoegen om de kijken of alles lukt.
-      En de lijst vervolgens completer maken in een 2e versie. En b.v. eventuele moeilijke namen (b.v. na ruggespraak met ons) in een 3e versie.
+    > Tip: De lijst met leden hoeft niet in een keer compleet te zijn:
+    > je kan dus eerst enkele leden toevoegen om de kijken of alles lukt.
+    > En de lijst vervolgens completer maken in een 2e versie. En b.v. eventuele moeilijke namen
+    > (b.v. na ruggespraak met ons) in een 3e versie.
+
     - Het `featuredImage` veld mag later aangepast worden.
       Het bevat een webadres (URL) van een foto gemaakt door de fotograaf.
       Dat webadres moet een plaatje zijn, maar mag op een willekeurige locatie op het internet staan.
