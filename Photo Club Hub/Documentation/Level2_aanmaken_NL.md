@@ -63,7 +63,7 @@ Dit stappenplan beschrijft hoe een lijst ("Level 2") met clubleden aan te maken 
     - Het `featuredImage` veld mag later aangepast worden.
       Het bevat een webadres (URL) van een foto gemaakt door de fotograaf.
       Dat webadres moet een plaatje zijn, maar mag op een willekeurige locatie op het internet staan.
-      Als `featuredImage` ontbreekt of het adres niet klopt, wordt er een oranje plaatje met een "?" getoond.
+      Als `featuredImage` ontbreekt of het adres niet klopt, wordt er een oranje plaatje met een gestileerde "?" getoond.
     - Tip: Speciale lettertekens in namen (en elders) zijn toegestaan. Bijvoorbeeld "Juriën" of "Saša". 
  
 5. Deze controlestap is alleen nodig als je [JSON Editor Online](https://jsoneditoronline.org) __niet__ gebruikt.
