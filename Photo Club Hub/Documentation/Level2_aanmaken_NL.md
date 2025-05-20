@@ -50,7 +50,7 @@ Dit stappenplan beschrijft hoe een lijst ("Level 2") met clubleden aan te maken 
     > bekijken en aanpassen. Dan kan je dubbelklikken op cellen die je wilt aanpassen,
     > en regels toevoegen of verwijderen via het een menu ("__⋮__").
 
-    = De spelling van de namen van clubleden let nauw.
+    - De spelling van de namen van clubleden let nauw.
       De namen worden namelijk gebruikt als identificatie - bijvoorbeeld om te bepalen of een bepaald lid ook voorkomt als lid of ex-lid van een andere club.
       Wat de software betreft zijn zelfs "Jan de Vries" en "Jan De Vries" verschillende personen.
         - Jan de Vries voer je in als `"givenName": "Jan", "infixName": "de", "familyName": "Vries"`.
