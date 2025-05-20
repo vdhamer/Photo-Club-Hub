@@ -82,7 +82,7 @@ Dit stappenplan beschrijft hoe een lijst ("Level 2") met clubleden aan te maken 
         - Daarentegen is JSON totaal _niet_ kieskeurig wat betreft de hoeveelheid spaties, tabs of nieuwe regels.
           Inspringen van de tekst is heel nuttig voor menselijke lezers, maar de software analyseert de
           inhoud volledig aan de hand van de genoemde leestekens.
-</br>
+    </br>
     
     > Tip: het is handig om de leden in alfabetische volgorde van voornaam of achternaam te zetten:
     > dan valt het makkelijke op als een lid dubbel op de lijst staat.
