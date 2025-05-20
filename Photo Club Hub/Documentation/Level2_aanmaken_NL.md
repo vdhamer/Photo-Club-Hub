@@ -26,13 +26,15 @@ Dit stappenplan beschrijft hoe een lijst ("Level 2") met clubleden aan te maken 
       | Veldhoven | Fotoclub Bellus Imago | fcBellusImago | 51.42541 | 5.38756 | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/fcBellusImago.level2.json) |
       | Waalre | Fotogroep Waalre | fgWaalre | 51.39184 | 5.46144 | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/fgDeGender.level2.json) |
 
-   - Tip: Je kunt eventueel ook uitgaan van het [Max](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/xampleMax.level2.json) bestand.
-     Dit zal ertoe leiden dat je velden die je momenteel niet kunt aanleveren zult willen weglaten. 
-     Het [Min](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/xampleMin.level2.json) bestand toont hoe het eruit ziet als vrijwel alle weglaatbare verden ontbreken.
-     Als je daarentegen uitgaat van het [Max](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/xampleMax.level2.json) bestand zie je ingevulde voorbeelden van alle mogelijke extra ("optionele") velden.
-     Bij het creëren van een tussenvorm (tussen Min en Max in) is de kans groot dat je bijvoorbeeld een comma teveel of te weinig hebt.
-     Verderop staat hoe je dat automatisch kan controleren: JSON is kieskeurig over haakjes van diverse soorten.
-     En vooral kieskeurig over comma's (tussen elementen in een lijst, maar niet na de laatste).
+   > Tip: Je kunt eventueel ook uitgaan van het [Max](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/xampleMax.level2.json) bestand.
+   > Dit zal ertoe leiden dat je velden die je momenteel niet kunt aanleveren zult willen weglaten. 
+   > Het [Min](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/xampleMin.level2.json) bestand 
+   > toont hoe het eruit ziet als vrijwel alle weglaatbare verden ontbreken.
+   >  Als je daarentegen uitgaat van het [Max](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/xampleMax.level2.json)
+   > bestand zie je ingevulde voorbeelden van alle mogelijke extra ("optionele") velden.
+   > Bij het creëren van een tussenvorm (tussen Min en Max in) is de kans groot dat je bijvoorbeeld een comma teveel of te weinig hebt.
+   > Verderop staat hoe je dat automatisch kan controleren: JSON is kieskeurig over haakjes van diverse soorten.
+   > En vooral kieskeurig over comma's (tussen elementen in een lijst, maar niet na de laatste).
 
 3. Pas de gegevens over de **club** (`club`) aan: `town`, `fullName`, `nickName`, en ook de locatie:
     - Tip: gebruik voor het aanpassen van het bestand liefst [JSON Editor Online](https://jsoneditoronline.org). Dat programma is bedoeld om zogenaamde "JSON" tekstbestanden aan te maken.
