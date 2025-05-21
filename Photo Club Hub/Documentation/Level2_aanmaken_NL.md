@@ -3,7 +3,7 @@
 Dit stappenplan beschrijft hoe een men een lijst ("Level 2") met clubleden aan kan maken.
 Het resulterende bestand kan vervolgens automatisch ingelezen worden door de [Photo Club Hub](https://github.com/vdhamer/Photo-Club-Hub)
 en [Photo Club Hub HTML](https://github.com/vdhamer/Photo-Club-Hub-HTML) apps.
-Er komen later _aparte_ instructies hoe _portfolio's_ met foto's ("Level 3") toe te voegen en hoe de lijsten op een _eigen_ website te zetten.
+Er komen later aparte instructies hoe _portfolio's_ met foto's ("Level 3") toe te voegen en hoe de lijsten op een _eigen_ website te zetten.
 
 > 🕚 Het voor de allereerste keer aanmaken van een Level2 bestand (gevuld met enkele testleden) kost naar schatting 1 uur. \
 > Die eenmalige investering is nodig om de opzet te begrijpen en te ontdekken hoe met de gereedschappen om te gaan. \
