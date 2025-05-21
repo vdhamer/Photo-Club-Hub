@@ -11,7 +11,7 @@
                     "latitude": 51.92275,
                     "longitude": 4.47972
                 },
-                "level2URL": "https://www.example.com/XampleMin.level2.json"
+                "level2URL": "https://www.xamplemin.nl/XampleMin.level2.json"
             }
         },
     "members": [
@@ -37,3 +37,4 @@
         }
     ]
 }
+
