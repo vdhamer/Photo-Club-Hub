@@ -91,14 +91,17 @@ Er komen later aparte instructies hoe _portfolio's_ met foto's ("Level 3") toe t
     > dan valt het makkelijke op als een lid dubbel op de lijst staat.
 
 6. **Stuur** ons het gemaakte `level2.json` bestand. Dat mag ook bij tussenversies. Wij zullen proberen binnen 24 uur te reageren.
-    - Onze rol is om een de technische juistheid te bewaken en om hulp te bieden. Wij kijken niet de aangeleverde ledenlijst accuraat is en controlleren niet de spelling van namen.
+    - Onze rol is om een de technische juistheid te bewaken en om hulp te bieden.
+      Wij kijken niet of de aangeleverde ledenlijst accuraat is en controlleren niet de spelling van namen.
     - Voor de proefkonijnclubs zullen we het bestand op onze eigen webserver zetten en het bijbehorende adres (URL) terugmelden.
       Binnenkort komen er aanvullende instructies hoe een club _zelf_ zijn Level2 ledenbestand op een eigen (b.v. Wordpress) website kan plaatsen.
-      Dan kan een club zijn Level2 bestand aanpassen zonder tussenkomst. 
-      Ofwel, hosting van enkele kleine tekstbestanden op onze webserver is slechts een tijdelijke oplossing. Dit om het proces stapje-voor-stapje te kunnen uittesten.
+      Dan kan een club zijn Level2 bestand aanpassen zonder tussenkomst van derden. 
+      Ofwel, hosting van enkele kleine tekstbestanden op onze webserver is slechts een tijdelijke oplossing.
+      Dit om het proces stapje-voor-stapje te kunnen uittesten.
 
 7. **Controleer** of alles naar wens werkt via de [Photo Club Hub](https://www.fotobond-brabantoost.nl/nieuws/fotoclub-hub-app/) iOS app.
-Of via een door ons [gegenereerde](https://github.com/vdhamer/Photo-Club-Hub-HTML/blob/main/.github/README.md) HTML pagina als er geen iPhone of iPad beschikbaar is.
+Of via een door ons [gegenereerde](https://github.com/vdhamer/Photo-Club-Hub-HTML/blob/main/.github/README.md) HTML pagina
+als men niet over een iPhone of iPad beschikt.
 
 ## Bonus informatie
 
