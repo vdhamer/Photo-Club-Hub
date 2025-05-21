@@ -1,16 +1,19 @@
 ## Een level2.json bestand aanmaken voor een club
 
-Dit stappenplan beschrijft hoe een lijst ("Level 2") met clubleden aan te maken en aan te bieden zodat het ingelezen kan worden door _Photo Club Hub_. Dezelfde `Level 2` lijsten worden overigens ook gebruikt door de web variant [Photo Club Hub HTML](https://github.com/vdhamer/Photo-Club-Hub-HTML). Er komen later aparte instructies hoe _portfolio's_ met foto's ("Level 3") toe te voegen en hoe de lijsten op een _eigen_ website te zetten.
+Dit stappenplan beschrijft hoe men een lijst met clubleden aan kan maken.
+Het resulterende bestand moet automatisch ingelezen kunnen worden door de [Photo Club Hub](https://github.com/vdhamer/Photo-Club-Hub)
+en [Photo Club Hub HTML](https://github.com/vdhamer/Photo-Club-Hub-HTML) apps. Daarom zijn er vereisten wat betreft het formaat ("Level 2" JSON).
+Er komen later aparte instructies hoe _portfolio's_ met foto's ("Level 3") toe te voegen en hoe de lijsten op een _eigen_ website te zetten.
 
-> 🕚 Het voor de allereerste keer aanmaken van een Level2 bestand (gevuld met enkele testleden) kost naar schatting 1 uur. \
-> Die eenmalige investering is nodig om de opzet te begrijpen en te ontdekken hoe met de gereedschappen om te gaan. \
-> Latere uitbreiding en aanpassingen van de gegevens horen, na dit inleren, zullen veel sneller (minutenwerk) veel sneller gaan. 
+> 🕚 Het voor de allereerste keer aanmaken van een Level2 bestand met enkele testleden blijkt ongeveer 1 uur te kosten. \
+> Die eenmalige investering is nodig om de aanpak te begrijpen en te ontdekken hoe met de vereiste software om te gaan. \
+> Latere uitbreiding en aanpassingen van de gegevens horen, na dit inleren, zullen slechts minuten per clublid kosten.
 
 1. Maak desgewenst een lokale kopie van het [xampleMin.level2.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/xampleMin.level2.json) ("Min") en het
    [xampleMax.level2.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/xampleMax.level2.json) ("Max") voorbeeldbestand.
-   _Min_ is een zo klein mogelijk voorbeeldbestand. _Max_ benut daarentegen alle beschikbare toeters en bellen.
+   _Min_ is een zo klein mogelijk voorbeeldbestand. _Max_ bevat juist alle beschikbare toeters en bellen.
 
-2. Maak een **kopie** van het [Min](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/xampleMin.level2.json) bestand en verander de naam van het bestand:
+2. Maak een **kopie** van het [Min](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/xampleMin.level2.json) bestand en geef het een passende bestandsnaam:
    - Gebruik in de naam een korte versie (`nickName`) van de clubnaam.
      Als de club bijvoorbeeld "Fotogroep Scheveningen" heet, zou je het bestand `fgScheveningen.level2.json` kunnen noemen.
    - Onderstaande tabel bevat, voor de verwachte proefkonijnclubs, deze `nickName` plus enkele andere velden die straks nodig zijn.
@@ -26,37 +29,50 @@ Dit stappenplan beschrijft hoe een lijst ("Level 2") met clubleden aan te maken 
       | Veldhoven | Fotoclub Bellus Imago | fcBellusImago | 51.42541 | 5.38756 | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/fcBellusImago.level2.json) |
       | Waalre | Fotogroep Waalre | fgWaalre | 51.39184 | 5.46144 | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/fgDeGender.level2.json) |
 
-   - Tip: Je kunt eventueel ook uitgaan van het [Max](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/xampleMax.level2.json) bestand.
-     Dit zal ertoe leiden dat je velden die je momenteel niet kunt aanleveren zult willen weglaten. 
-     Het [Min](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/xampleMin.level2.json) bestand toont hoe het eruit ziet als vrijwel alle weglaatbare verden ontbreken.
-     Als je daarentegen uitgaat van het [Min](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/xampleMin.level2.json) bestand krijg je
-     met de omgekeerde situatie te maken: je kunt dan het [Max](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/xampleMax.level2.json)
-     bestand gebruiken om te kijken hoe het met die extra velden moet.
-     Bij het creëren van een tussenvorm (tussen Min en Max in) is de kans groot dat je bijvoorbeeld een comma teveel of te weinig hebt.
-     Verderop staat hoe je dat kunt controleren: JSON is kieskeurig over haakjes van diverse soorten.
-     En vooral kieskeurig over comma's (tussen elementen in een lijst, maar niet na de laatste).
+   > Tip: Je kunt eventueel ook uitgaan van het [Max](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/xampleMax.level2.json) bestand.
+   > Dit zal ertoe leiden dat je velden die je momenteel niet kunt aanleveren zult willen weglaten. 
+   > Het [Min](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/xampleMin.level2.json) bestand 
+   > toont hoe het eruit ziet als vrijwel alle weglaatbare velden ontbreken.
+   >  Als je daarentegen uitgaat van het [Max](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/xampleMax.level2.json)
+   > bestand zie je ingevulde voorbeelden van alle mogelijke extra ("optionele") velden.
+   > Bij het creëren van een tussenvorm (tussen Min en Max in) is de kans groot dat je bijvoorbeeld een comma teveel of te weinig hebt.
+   > Verderop staat hoe je dat automatisch kan controleren: het JSON formaat is gewoon kieskeurig over haakjes en comma's.
 
 3. Pas de gegevens over de **club** (`club`) aan: `town`, `fullName`, `nickName`, en ook de locatie:
-    - Tip: gebruik voor het aanpassen van het bestand liefst [JSON Editor Online](https://jsoneditoronline.org). Dat programma is bedoeld om zogenaamde "JSON" tekstbestanden aan te maken.
-        - Als alternatief kan je een kale editor gebruiken zoals [Windows NotePad](https://nl.wikipedia.org/wiki/Notepad), [NotePad++](https://nl.wikipedia.org/wiki/Notepad%2B%2B) of [Sublime Text](https://nl.wikipedia.org/wiki/Sublime_Text).
+    > Tip: gebruik voor het aanpassen van het bestand liefst [JSON Editor Online](https://jsoneditoronline.org).
+    > Dat programma is bedoeld om zogenaamde "JSON" tekstbestanden aan te maken.
+    > Als alternatief kan je een kale editor gebruiken zoals [Windows NotePad](https://nl.wikipedia.org/wiki/Notepad), [NotePad++](https://nl.wikipedia.org/wiki/Notepad%2B%2B) of [Sublime Text](https://nl.wikipedia.org/wiki/Sublime_Text).
 
-    - De 6 proefkonijnclubs kunnen de vereiste `town`, `fullName`, `nickName`,`latitude` en `longitude` velden uit de bovenstaande tabel overnemen.
-      Er zijn gegevens voor de clubs uit de regio te vinden in [root.level1.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/root.level1.json).
+    - De genoemde proefkonijnclubs kunnen de vereiste `town`, `fullName`, `nickName`,`latitude` en `longitude`
+      velden uit de bovenstaande tabel overnemen. Er zijn gegevens voor de clubs uit de regio te vinden in
+      [root.level1.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/root.level1.json).
 
 4. Pas gegevens over de **clubleden** (`members`) aan: `givenName`, `infixName` en `familyName`.
-    - Tip: met de [JSON Editor Online](https://jsoneditoronline.org) kan je de lijst van clubleden als tabel bekijken en aanpassen. Dan kan je dubbelklikken op cellen die je wilt aanpassen, en regels toevoegen of verwijderen via het een menu ("__⋮__").
+    > Tip: met de [JSON Editor Online](https://jsoneditoronline.org) kan je de lijst van clubleden als tabel
+    > bekijken en aanpassen. Dan kan je dubbelklikken op cellen die je wilt aanpassen,
+    > en regels toevoegen of verwijderen via het een menu ("__⋮__").
+  
     - De spelling van de namen van clubleden let nauw.
-      De namen worden namelijk gebruikt als identificatie - bijvoorbeeld om te bepalen of een bepaald lid ook voorkomt als lid of ex-lid van een andere club.
+      De namen worden namelijk gebruikt als identificatie - bijvoorbeeld om te bepalen of een bepaald lid
+      ook voorkomt als lid of ex-lid van een andere club.
       Wat de software betreft zijn zelfs "Jan de Vries" en "Jan De Vries" verschillende personen.
         - Jan de Vries voer je in als `"givenName": "Jan", "infixName": "de", "familyName": "Vries"`.
         - Max Verstappen voer je in als `"givenName": "Max", "infixName": "", "familyName": "Verstappen"` (het mag ook als `"givenName": "Max", "familyName": "Verstappen"`).
-    - Tip: De lijst met leden hoeft niet in een keer compleet te zijn: je kan dus eerst enkele leden toevoegen om de kijken of alles lukt.
-      En de lijst vervolgens completer maken in een 2e versie. En b.v. eventuele moeilijke namen (b.v. na ruggespraak met ons) in een 3e versie.
+    </br>
+    
+    > Tip: De lijst met leden hoeft niet in een keer compleet te zijn:
+    > je kan dus eerst enkele leden toevoegen om de kijken of alles lukt.
+    > En de lijst vervolgens completer maken in een 2e versie. En b.v. eventuele moeilijke namen
+    > (b.v. na ruggespraak met ons) in een 3e versie.
+
     - Het `featuredImage` veld mag later aangepast worden.
       Het bevat een webadres (URL) van een foto gemaakt door de fotograaf.
       Dat webadres moet een plaatje zijn, maar mag op een willekeurige locatie op het internet staan.
-      Als `featuredImage` ontbreekt of het adres niet klopt, wordt er een oranje plaatje met een "?" getoond.
-    - Tip: Speciale lettertekens in namen (en elders) zijn toegestaan. Bijvoorbeeld "Juriën" of "Saša". 
+      Als `featuredImage` ontbreekt of het adres niet klopt, wordt er een oranje plaatje met een gestileerde "?" getoond.
+    </br>
+    
+    > Tip: Speciale lettertekens in namen (en elders) zijn toegestaan.
+    > Bijvoorbeeld "Juriën" of "Saša". 
  
 5. Deze controlestap is alleen nodig als je [JSON Editor Online](https://jsoneditoronline.org) __niet__ gebruikt.
     - Er is bij [JSON Editor Online](https://jsoneditoronline.org) geen aparte JSON controle nodig.
@@ -66,26 +82,32 @@ Dit stappenplan beschrijft hoe een lijst ("Level 2") met clubleden aan te maken 
         - JSONlint wijst je op de eerste fout. Na correctie (kan binnen JSONlint) zal blijken of er meer fouten zijn.
         - Het JSON formaat let nogal nauw ten aanzien van komma's en openen en sluiten van haakjes en aanhalingstekens. Vandaar dat we hier begonnen met een voorbeeldbestand.
         - Daarentegen is JSON totaal _niet_ kieskeurig wat betreft de hoeveelheid spaties, tabs of nieuwe regels.
-          Inspringen van de tekst is heel nuttig voor menselijke lezers, maar de software analyseert de inhoud volledig aan de hand van de genoemde leestekens.
-    - Tip: het is handig om de leden in alfabetische volgorde van voornaam of achternaam te zetten: dan valt het makkelijke op als een lid dubbel op de lijst staat.
-
+          Inspringen van de tekst is heel nuttig voor menselijke lezers, maar de software analyseert de
+          inhoud volledig aan de hand van de genoemde leestekens.
+    </br>
+    
+    > Tip: het is handig om de leden in alfabetische volgorde van voornaam of achternaam te zetten:
+    > dan valt het makkelijke op als een lid dubbel op de lijst staat.
 
 6. **Stuur** ons het gemaakte `level2.json` bestand. Dat mag ook bij tussenversies. Wij zullen proberen binnen 24 uur te reageren.
-    - Onze rol is om een de technische juistheid te bewaken en om hulp te bieden. Wij kijken niet de aangeleverde ledenlijst accuraat is en controlleren niet de spelling van namen.
+    - Onze rol is om een de technische juistheid te bewaken en om hulp te bieden.
+      Wij kijken niet of de aangeleverde ledenlijst accuraat is en controlleren niet de spelling van namen.
     - Voor de proefkonijnclubs zullen we het bestand op onze eigen webserver zetten en het bijbehorende adres (URL) terugmelden.
       Binnenkort komen er aanvullende instructies hoe een club _zelf_ zijn Level2 ledenbestand op een eigen (b.v. Wordpress) website kan plaatsen.
-      Dan kan een club zijn Level2 bestand aanpassen zonder tussenkomst. 
-      Ofwel, hosting van enkele kleine tekstbestanden op onze webserver is slechts een tijdelijke oplossing. Dit om het proces stapje-voor-stapje te kunnen uittesten.
+      Dan kan een club zijn Level2 bestand aanpassen zonder tussenkomst van derden. 
+      Ofwel, hosting van enkele kleine tekstbestanden op onze webserver is slechts een tijdelijke oplossing.
+      Dit om het proces stapje-voor-stapje te kunnen uittesten.
 
 7. **Controleer** of alles naar wens werkt via de [Photo Club Hub](https://www.fotobond-brabantoost.nl/nieuws/fotoclub-hub-app/) iOS app.
-Of via een door ons [gegenereerde](https://github.com/vdhamer/Photo-Club-Hub-HTML/blob/main/.github/README.md) HTML pagina als geen iPhone of iPad beschikbaar is.
+Of via een door ons [gegenereerde](https://github.com/vdhamer/Photo-Club-Hub-HTML/blob/main/.github/README.md) HTML pagina
+als men niet over een iPhone of iPad beschikt.
 
 ## Bonus informatie
 
 ### Het `Level2.json` formaat
 <details><summary>Details (klik om uit te klappen)</summary></p>
 
-- [JSON](https://en.wikipedia.org/wiki/JSON) is zeer bekende internationale standaard in de IT wereld.
+- [JSON](https://en.wikipedia.org/wiki/JSON) is heel bekende standaard in de IT wereld.
 [Hier](https://codebeautify.org/json-cheat-sheet) is een korte uitleg van JSON. In ons geval is zou het voldoende moeten zijn om nauwgezet de voorbeelden in
 [xampleMin.level2.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/xampleMin.level2.json) en [xampleMax.level2.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/xampleMax.level2.json) te volgen.
 Bij gebruikt van [JSON Editor Online](https://jsoneditoronline.org) is de kans op fouten klein.

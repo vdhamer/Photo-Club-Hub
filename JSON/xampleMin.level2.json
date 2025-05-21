@@ -15,6 +15,7 @@
             }
         },
     "members": [
+
         {
             "name": {
                 "givenName": "Mien",
@@ -25,6 +26,7 @@
                 "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg"
             }
         },
+
         {
             "name": {
                 "givenName": "Mike",
@@ -35,6 +37,7 @@
                 "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg"
             }
         }
+
     ]
 }
 
