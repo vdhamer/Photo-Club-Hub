@@ -5,8 +5,8 @@ Het resulterende bestand moet automatisch ingelezen kunnen worden door de [Photo
 en [Photo Club Hub HTML](https://github.com/vdhamer/Photo-Club-Hub-HTML) apps. Daarom zijn er vereisten wat betreft het formaat ("Level 2").
 Er komen later aparte instructies hoe _portfolio's_ met foto's ("Level 3") toe te voegen en hoe de lijsten op een _eigen_ website te zetten.
 
-> 🕚 Het voor de allereerste keer aanmaken van een Level2 bestand (gevuld met enkele testleden) kost naar schatting 1 uur. \
-> Die eenmalige investering is nodig om de opzet te begrijpen en te ontdekken hoe met de gereedschappen om te gaan. \
+> 🕚 Het voor de allereerste keer aanmaken van een Level2 bestand met enkele testleden blijkt ongeveer 1 uur te kosten. \
+> Die eenmalige investering is nodig om de aanpak te begrijpen en te ontdekken hoe met de vereiste software om te gaan. \
 > Latere uitbreiding en aanpassingen van de gegevens horen, na dit inleren, zullen slechts minuten per clublid kosten.
 
 1. Maak desgewenst een lokale kopie van het [xampleMin.level2.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/xampleMin.level2.json) ("Min") en het
