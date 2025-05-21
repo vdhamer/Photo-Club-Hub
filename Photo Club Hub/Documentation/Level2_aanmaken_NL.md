@@ -32,7 +32,7 @@ Er komen later aparte instructies hoe _portfolio's_ met foto's ("Level 3") toe t
    > Tip: Je kunt eventueel ook uitgaan van het [Max](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/xampleMax.level2.json) bestand.
    > Dit zal ertoe leiden dat je velden die je momenteel niet kunt aanleveren zult willen weglaten. 
    > Het [Min](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/xampleMin.level2.json) bestand 
-   > toont hoe het eruit ziet als vrijwel alle weglaatbare verden ontbreken.
+   > toont hoe het eruit ziet als vrijwel alle weglaatbare velden ontbreken.
    >  Als je daarentegen uitgaat van het [Max](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/xampleMax.level2.json)
    > bestand zie je ingevulde voorbeelden van alle mogelijke extra ("optionele") velden.
    > Bij het creëren van een tussenvorm (tussen Min en Max in) is de kans groot dat je bijvoorbeeld een comma teveel of te weinig hebt.
