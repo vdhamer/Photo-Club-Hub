@@ -11,6 +11,7 @@ Data Maintenance
 * Updated membership list for fgDeGender and fgWaalre.
 * Mentioned fkGestel in Level2_aanmaken_NL.md
 * Updated usage text for keywords in root.level0.json
+* Minor update to XampleMin and XampleMax demo files
 
 Documentation
 * Updated dataModel.png in README.md
