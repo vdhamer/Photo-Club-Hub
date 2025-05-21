@@ -108,7 +108,7 @@ als men niet over een iPhone of iPad beschikt.
 ### Het `Level2.json` formaat
 <details><summary>Details (klik om uit te klappen)</summary></p>
 
-- [JSON](https://en.wikipedia.org/wiki/JSON) is zeer bekende internationale standaard in de IT wereld.
+- [JSON](https://en.wikipedia.org/wiki/JSON) is heel bekende standaard in de IT wereld.
 [Hier](https://codebeautify.org/json-cheat-sheet) is een korte uitleg van JSON. In ons geval is zou het voldoende moeten zijn om nauwgezet de voorbeelden in
 [xampleMin.level2.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/xampleMin.level2.json) en [xampleMax.level2.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/xampleMax.level2.json) te volgen.
 Bij gebruikt van [JSON Editor Online](https://jsoneditoronline.org) is de kans op fouten klein.
