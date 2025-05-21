@@ -2,7 +2,7 @@
 
 Dit stappenplan beschrijft hoe men een lijst met clubleden aan kan maken.
 Het resulterende bestand moet automatisch ingelezen kunnen worden door de [Photo Club Hub](https://github.com/vdhamer/Photo-Club-Hub)
-en [Photo Club Hub HTML](https://github.com/vdhamer/Photo-Club-Hub-HTML) apps. Daarom zijn er vereisten wat betreft het formaat ("Level 2").
+en [Photo Club Hub HTML](https://github.com/vdhamer/Photo-Club-Hub-HTML) apps. Daarom zijn er vereisten wat betreft het formaat ("Level 2" JSON).
 Er komen later aparte instructies hoe _portfolio's_ met foto's ("Level 3") toe te voegen en hoe de lijsten op een _eigen_ website te zetten.
 
 > 🕚 Het voor de allereerste keer aanmaken van een Level2 bestand met enkele testleden blijkt ongeveer 1 uur te kosten. \
