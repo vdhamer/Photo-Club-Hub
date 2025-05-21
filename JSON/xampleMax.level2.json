@@ -51,7 +51,7 @@
                 },
                 "status": {
                     "isDeceased": false,
-                    "isFormerMember": true,
+                    "isFormerMember": false,
                     "isHonoraryMember": false,
                     "isMentor": false,
                     "isProspectiveMember": false
