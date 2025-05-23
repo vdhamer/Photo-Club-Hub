@@ -168,6 +168,32 @@
 
         {
             "idPlus": {
+                "town": "Best",
+                "fullName": "Fotogroep Heivelden",
+                "nickName": "fgHeivelden"
+            },
+            "coordinates": {
+                "latitude": 51.50429,
+                "longitude": 5.37126
+            },
+            "optional": {
+                "website": "https://fotogroepheivelden.weebly.com",
+                "level2URL": "https://www.example.com/fgHeivelden.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "The club organizes a photo excursion every first Saturday of the month."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "De club houdt iedere eerste zaterdag van de maand een fotouitje."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Boekel",
                 "fullName": "Fotogroep Focus KBO Boekel",
                 "nickName": "fgFocus"
