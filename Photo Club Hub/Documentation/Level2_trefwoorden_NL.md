@@ -1,7 +1,8 @@
 ## FAQ over trefwoorden voor een level2.json bestand
 
 In Level 2 kan men trefwoorden toekenen aan leden van een club.
-Het formaat van Level 2 bestanden is beschreven in [Level2_aanmaken_NL]().
+Het formaat van Level 2 bestanden is beschreven in
+[Level2_aanmaken_NL](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/Level2_aanmaken_NL.md).
 Deze FAQ gaat vooral over het optimale gebruik van trefwoorden en het achterliggende beleid.
 
 ## Basisvragen
@@ -12,6 +13,22 @@ Deze FAQ gaat vooral over het optimale gebruik van trefwoorden en het achterligg
 <li>
 
 ### Wat is het nut van trefwoorden?
+
+<details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
+
+</details></p>
+
+</li><li>
+
+### Hoe ziet een bezoeker de trefwoorden?
+
+<details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
+x
+</details></p>
+
+</li><li>
+
+### Wat betekent een trefwoord hier eigenlijk?
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
 x
@@ -27,15 +44,7 @@ x
 
 </li><li>
 
-### Hoe ziet een bezoeker de trefwoorden?
-
-<details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
-x
-</details></p>
-
-</li><li>
-
-### Groeit de lijst met trefwoorden?
+### Hoe groeit de lijst met trefwoorden?
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
 x
@@ -84,7 +93,7 @@ x
 
 </li><li>
 
-### x?
+### Specialisme versus projkt?
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
 x
