@@ -33,7 +33,7 @@ x
 x
 </details></p>
 
-</li></ul>
+</li><li>
 
 ### Groeit de lijst met trefwoorden?
 
