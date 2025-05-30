@@ -84,7 +84,7 @@ x
 
 </li><li>
 
-### Fijnmazigheid?
+### x?
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
 x
