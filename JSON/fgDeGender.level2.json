@@ -160,7 +160,7 @@
                 "website": "https://www.ericvdven.nl/",
                 "level3URL": "http://www.vdhamer.com/fgDeGender/Eric_van_de_Ven/",
                 "membershipStartDate": "2022-12-01",
-                "keywords": [ "Experimental", "Mixed-Media", "Postprocessing" ],
+                "keywords": [ "Experimental", "Mixed-Media" ],
                 "nlSpecific": {
                     "fotobondNumber": 1620109
                 }
@@ -685,7 +685,7 @@
                 "nlSpecific": {
                     "fotobondNumber": 1620078
                 },
-                "keywords": [ "Portrait" ]
+                "keywords": [ "Portrait", "Travel" ]
             }
         },
 
