@@ -1,7 +1,7 @@
 ## FAQ over trefwoorden voor een level2.json bestand
 
 In Level 2 kan men trefwoorden toekenen aan leden van een club.
-De technische kanten hiervan al beschreven in Level2_aanmaken_NL.md.
+Het formaat van Level 2 bestanden is beschreven in [Level2_aanmaken_NL]().
 Deze FAQ gaat vooral over het optimale gebruik van trefwoorden en het achterliggende beleid.
 
 ## Basisvragen
