@@ -33,10 +33,6 @@ x
 x
 </details></p>
 
-</li></ul>
-
-</details></p>
-
 ### Kan ik een nieuw trefwoord toevoegen?
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
