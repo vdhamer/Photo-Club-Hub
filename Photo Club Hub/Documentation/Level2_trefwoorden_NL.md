@@ -12,7 +12,7 @@ Deze FAQ gaat vooral over het optimale gebruik van trefwoorden en het achterligg
 
 <li>
 
-### Wat is het nut van trefwoorden?
+### Wat betekent een trefwoord hier eigenlijk?
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
 
@@ -28,7 +28,7 @@ x
 
 </li><li>
 
-### Wat betekent een trefwoord hier eigenlijk?
+### Wat is het nut van trefwoorden?
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
 x
