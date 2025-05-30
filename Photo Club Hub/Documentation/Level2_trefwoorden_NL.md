@@ -33,6 +33,8 @@ x
 x
 </details></p>
 
+</li></ul>
+
 ### Groeit de lijst met trefwoorden?
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
