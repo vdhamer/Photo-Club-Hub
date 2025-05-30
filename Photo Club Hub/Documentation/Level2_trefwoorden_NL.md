@@ -27,7 +27,17 @@ x
 
 </li><li>
 
-### Moet ik kiezen uit een vaste lijst?
+### Hoe ziet een bezoeker de trefwoorden?
+
+<details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
+x
+</details></p>
+
+</li></ul>
+
+</details></p>
+
+### Kan ik een nieuw trefwoord toevoegen?
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
 x
@@ -38,3 +48,32 @@ x
 </details></p>
 
 ## Beleid
+
+<details><summary>$\color{orange}{\textsf{Klik om categorie open of dicht te klappen}}$</summary></p>
+<ul>
+
+<li>
+
+### Waarom maar 2 trefwoorden per persoon?
+
+<details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
+x
+</details></p>
+
+</li><li>
+
+### xx?
+
+<details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
+x
+</details></p>
+
+</li><li>
+
+### xx?
+
+<details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
+x
+</details></p>
+
+</li><li>
