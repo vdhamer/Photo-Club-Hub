@@ -11,7 +11,7 @@ Deze FAQ gaat vooral over het nut van trefwoorden en hoe trefwoorden zo nuttig m
 
 <li>
 
-### Wat doet de app?
+### Wat is het nut van trefwoorden?
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
 x
@@ -19,7 +19,7 @@ x
 
 </li><li>
 
-### Waarom is de app gemaakt?
+### Hoeveel trefwoorden per clublid?
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
 x
@@ -27,7 +27,7 @@ x
 
 </li><li>
 
-### Waarom staat mijn club niet in de app?
+### Moet ik kiezen uit een vaste lijst?
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
 x
