@@ -93,7 +93,7 @@ x
 
 </li><li>
 
-### Specialisme versus projkt?
+### Project versus specialisme?
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
 x
