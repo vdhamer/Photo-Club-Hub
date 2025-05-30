@@ -111,16 +111,16 @@
 This iOS app showcases photographs made by members of photography clubs.
 It thus serves as a permanent online gallery with selected work by these photographers.</p>
 
-Tha app allows viewers to see images from multiple clubs within a single app.
-This aims to provide a degree of uniformity, thus sparing the user from having to find a club's website, 
-discovering where to find the photos within the site and how to browse through these portfolios.
+The app allows viewers to see images from multiple clubs within one app.
+This gives a degree of uniformity, thus sparing the user from having to find a club's website, 
+discovering where to find the photos within the site and how to browse through the portfolios.
    
 To achieve this, the app fetches online lists of photo clubs, lists of club members and their curated photos. 
-This ensures that photo clubs, club members and their portfolio's can be added or updated without requiring a change to the app software.
-More importantly, this also allows the clubs to manage their own data.</p>
+This ensures that photo clubs, club members and their portfolio's can be added and updated without requiring a change to the app software.
+In addition, this also allows the clubs to manage their own data.</p>
 
-There is a <a href="#adding-photo-clubs-to-the-app">chapter</a> blow on how to add a club's data as 
-3 distict data layers or "`Levels`".
+There is a <a href="#adding-photo-clubs-to-the-app">chapter</a> below on how to add a club's data in 
+3 distict "`Levels`" (steps).
 
 ### Photo Clubs
 
