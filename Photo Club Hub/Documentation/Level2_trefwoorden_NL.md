@@ -33,7 +33,7 @@ x
 x
 </details></p>
 
-### Kan ik een nieuw trefwoord toevoegen?
+### Groeit de lijst met trefwoorden?
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
 x
@@ -58,7 +58,7 @@ x
 
 </li><li>
 
-### xx?
+### Hoeveel trefwoorden komen er?
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
 x
@@ -66,7 +66,7 @@ x
 
 </li><li>
 
-### xx?
+### Fijnmazigheid?
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
 x
