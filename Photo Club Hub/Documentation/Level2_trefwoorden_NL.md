@@ -15,9 +15,12 @@ Deze FAQ gaat over het optimale gebruik van trefwoorden en de achterliggende bed
 ### Wat betekent "trefwoord" hier?
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
-In b.v. Lightroom kan je trefwoorden hangen aan individuele foto's om ze vooral zelf makkelijk te kunnen terugvinden.
-Hier gaat het _niet_ om trefwoorden bij foto's, maar om trefwoorden bij de fotografen om aan te geven waar hij/zij bekend om is.
-Ze dienen om fotografen te ontdekken met bijvoorbeeld een erkende specialiteit.
+In ondermeer Adobe Lightroom kan je trefwoorden hangen aan individuele foto's
+om ze vooral zelf makkelijk te kunnen terugvinden in een verameling van b.v. tienduizend foto's.
+
+De trefwoorden hier zijn anders. Hier gaat hier om trefwoorden die aan de **fotograaf** hangen.
+Ze geven 1 of hooguit 2 specialismes aan: "waar staat Rob om bekend?".
+Hiermee kan iemand Rob ontdekken als men belangstelling heeft in b.v. "conceptuele fotografie".
 </details></p>
 
 </li><li>
