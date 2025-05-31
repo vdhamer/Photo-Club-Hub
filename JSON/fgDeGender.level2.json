@@ -59,7 +59,7 @@
                 "nlSpecific": {
                     "fotobondNumber": 1620108
                 },
-                "keywords": [ "Travel", "Street", "Museum" ]
+                "keywords": [ "Travel", "Museum" ]
             }
         },
 
@@ -597,7 +597,7 @@
                 "birthday": "9999-12-19",
                 "level3URL": "http://www.vdhamer.com/fgDeGender/Regina_Bakker/",
                 "membershipStartDate": "2020-01-01",
-                "keywords": [ "Landscape", "Abstract", "Macro" ],
+                "keywords": [ "Abstract", "Macro" ],
                 "nlSpecific": {
                     "fotobondNumber": 1620101
                 }
@@ -617,7 +617,7 @@
                 "nlSpecific": {
                     "fotobondNumber": 1620093
                 },
-                "keywords": [ "Conceptual", "Abstract", "Experimental" ]
+                "keywords": [ "Conceptual", "Abstract" ]
             }
         },
 
