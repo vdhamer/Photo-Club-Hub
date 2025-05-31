@@ -29,6 +29,7 @@ Hiermee kan iemand Rob ontdekken als men belangstelling heeft in b.v. "conceptue
 ### Wat ziet een gebruiken van de trefwoorden?
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
+
 - In de HTML/web versie van de app, zie je de trefwoorden in een kolom van de ledenlijsttabel.
 - In de iOS versie, zie je (straks) bij de naam van de fotograaf in het Namenlijst scherm.
 Richting voor de langere termijn:
