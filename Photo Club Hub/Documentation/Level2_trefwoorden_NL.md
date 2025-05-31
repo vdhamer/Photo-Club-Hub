@@ -3,7 +3,7 @@
 In Level 2 kan men trefwoorden toekenen aan leden van een club.
 Het formaat van Level 2 bestanden is beschreven in
 [Level2_aanmaken_NL](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/Level2_aanmaken_NL.md).
-Deze FAQ gaat vooral over het optimale gebruik van trefwoorden en het achterliggende beleid.
+Deze FAQ gaat over het optimale gebruik van trefwoorden en de achterliggende bedoelingen.
 
 ## Basisvragen
 
@@ -12,10 +12,12 @@ Deze FAQ gaat vooral over het optimale gebruik van trefwoorden en het achterligg
 
 <li>
 
-### Wat betekent een trefwoord hier eigenlijk?
+### Wat betekent "trefwoord" hier?
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
-
+In b.v. Lightroom kan je trefwoorden hangen aan individuele foto's om ze vooral zelf makkelijk te kunnen terugvinden.
+Hier gaat het _niet_ om trefwoorden bij foto's, maar om trefwoorden bij de fotografen om aan te geven waar hij/zij bekend om is.
+Ze dienen om fotografen te ontdekken met bijvoorbeeld een erkende specialiteit.
 </details></p>
 
 </li><li>
