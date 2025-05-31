@@ -17,6 +17,7 @@ Deze FAQ gaat over het optimale gebruik van trefwoorden en de achterliggende bed
 <details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
 In ondermeer Adobe Lightroom kan je trefwoorden hangen aan individuele foto's
 om ze vooral zelf makkelijk te kunnen terugvinden in een verameling van b.v. tienduizend foto's.
+</p>
 
 De trefwoorden hier zijn anders. Hier gaat hier om trefwoorden die aan de **fotograaf** hangen.
 Ze geven 1 of hooguit 2 specialismes aan: "waar staat Rob om bekend?".
@@ -25,10 +26,16 @@ Hiermee kan iemand Rob ontdekken als men belangstelling heeft in b.v. "conceptue
 
 </li><li>
 
-### Hoe ziet een bezoeker de trefwoorden?
+### Wat ziet een gebruiken van de trefwoorden?
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
-x
+- In de HTML/web versie van de app, zie je de trefwoorden in een kolom van de ledenlijsttabel.
+- In de iOS versie, zie je (straks) bij de naam van de fotograaf in het Namenlijst scherm.
+Richting voor de langere termijn:
+- In de iOS versie, moet je kunnen zoeken op een enkel trefwoord via de bestaande Zoek balk.
+Dus intypen van "zwart" filtert de lijst op fotografen met het "zwart-wit" trefwoord.
+Maar toont ook namen zoals "Kees de Zwart".
+- In de HTML versie, zouden de getoonde trefwoorden links kunnen worden. Erop klikken geeft een pagina met alle fotografen met dat trefwoord.
 </details></p>
 
 </li><li>
