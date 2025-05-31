@@ -129,14 +129,6 @@ x
 
 <li>
 
-### Er zijn eigenlijk 2 soorten trefwoorden?
-
-<details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
-x
-</details></p>
-
-</li><li>
-
 ### Vertalingen?
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
@@ -146,6 +138,30 @@ x
 </li><li>
 
 ### Identifiers?
+
+<details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
+x
+</details></p>
+
+</li><li>
+
+### Trefwoorden per fotograaf of per clublid?
+
+<details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
+x
+</details></p>
+
+</li><li>
+
+### Teveel trefwoorden?
+
+<details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
+x
+</details></p>
+
+</li><li>
+
+### Meerdere soorten trefwoorden?
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
 x
