@@ -73,7 +73,7 @@ x
 
 </details></p>
 
-## Beleid
+## Richtlijnen
 
 <details><summary>$\color{orange}{\textsf{Klik om categorie open of dicht te klappen}}$</summary></p>
 <ul>
@@ -122,7 +122,7 @@ x
 
 </details></p>
 
-## Techniek en features
+## Technische haken en ogen
 
 <details><summary>$\color{orange}{\textsf{Klik om categorie open of dicht te klappen}}$</summary></p>
 <ul>
