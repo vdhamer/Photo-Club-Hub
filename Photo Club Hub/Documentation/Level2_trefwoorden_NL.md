@@ -31,12 +31,12 @@ Hiermee kan iemand Rob ontdekken als men belangstelling heeft in b.v. "conceptue
 <details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
 
 - In de HTML/web versie van de app, zie je de trefwoorden in een kolom in de tabellen met clubleden.
-- In de iOS versie staat er een lijst van beschikbare trefwoorden helemaal onderaan de pagina (zoek op "trefwoorden" of "zzz").
-- In de iOS versie zie je (straks) de beschikbare trefwoorden bij iedere fotograaf in het Namenlijst scherm.</p>
+- In de iOS versie staat er een lijst van beschikbare trefwoorden helemaal onderaan de `Namenlijst` pagina (zoek op "trefwoorden" of "zzz").
+- In de iOS versie zie je (straks) de beschikbare trefwoorden bij iedere fotograaf in het `Namenlijst` scherm.</p>
 
 Richting voor de iets langere termijn:
 
-- In de iOS versie, moet je kunnen **zoeken** op een enkel trefwoord via de bestaande Zoek balk.
+- In de iOS versie, moet je kunnen **zoeken** op een enkel trefwoord via de bestaande zoekbalk.
 Dus intypen van "zwart" filtert de lijst op fotografen met het "zwart-wit" trefwoord.
 Maar toont ook namen zoals "Kees de Zwart".
 - In de HTML versie, zouden de getoonde trefwoorden links kunnen worden.
