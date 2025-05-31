@@ -30,16 +30,19 @@ Hiermee kan iemand Rob ontdekken als men belangstelling heeft in b.v. "conceptue
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
 
-- In de HTML/web versie van de app, zie je de trefwoorden in een kolom van de ledenlijsttabel.
-- In de iOS versie, zie je (straks) bij trefwoorden bij iedere fotograaf in het Namenlijst scherm.
+- In de HTML/web versie van de app, zie je de trefwoorden in een kolom in de tabellen met clubleden.
+- In de iOS versie zie je (straks) de beschikbare trefwoorden bij iedere fotograaf in het Namenlijst scherm.
 
-Richting voor de langere termijn:
+Richting voor de iets langere termijn:
 
-- In de iOS versie, moet je kunnen zoeken op een enkel trefwoord via de bestaande Zoek balk.
+- In de iOS versie, moet je kunnen **zoeken** op een enkel trefwoord via de bestaande Zoek balk.
 Dus intypen van "zwart" filtert de lijst op fotografen met het "zwart-wit" trefwoord.
 Maar toont ook namen zoals "Kees de Zwart".
-- In de HTML versie, zouden de getoonde trefwoorden links kunnen worden. Erop klikken geeft een pagina met alle fotografen met dat trefwoord.
+- In de HTML versie, zouden de getoonde trefwoorden links kunnen worden.
+Erop **klikken** toont een lijst met alle fotografen (van alle deelnemende clubs) die gekoppeld zijn aan dat trefwoord.
 </details></p>
+- In de HTML versie, zou er een aparte pagina kunnen komen met een (klikbare) lijst van alle beschikbare trefwoordenlijst.
+Hiermee kan je ontdekken dat een trefwoord beschikbaar is.  
 
 </li><li>
 
