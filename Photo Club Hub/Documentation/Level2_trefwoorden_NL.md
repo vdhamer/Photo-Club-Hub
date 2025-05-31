@@ -31,8 +31,10 @@ Hiermee kan iemand Rob ontdekken als men belangstelling heeft in b.v. "conceptue
 <details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
 
 - In de HTML/web versie van de app, zie je de trefwoorden in een kolom van de ledenlijsttabel.
-- In de iOS versie, zie je (straks) bij de naam van de fotograaf in het Namenlijst scherm.
+- In de iOS versie, zie je (straks) bij trefwoorden bij iedere fotograaf in het Namenlijst scherm.
+
 Richting voor de langere termijn:
+
 - In de iOS versie, moet je kunnen zoeken op een enkel trefwoord via de bestaande Zoek balk.
 Dus intypen van "zwart" filtert de lijst op fotografen met het "zwart-wit" trefwoord.
 Maar toont ook namen zoals "Kees de Zwart".
