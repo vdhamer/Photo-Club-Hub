@@ -40,9 +40,9 @@ Dus intypen van "zwart" filtert de lijst op fotografen met het "zwart-wit" trefw
 Maar toont ook namen zoals "Kees de Zwart".
 - In de HTML versie, zouden de getoonde trefwoorden links kunnen worden.
 Erop **klikken** toont een lijst met alle fotografen (van alle deelnemende clubs) die gekoppeld zijn aan dat trefwoord.
-</details></p>
 - In de HTML versie, zou er een aparte pagina kunnen komen met een (klikbare) lijst van alle beschikbare trefwoordenlijst.
 Hiermee kan je ontdekken dat een trefwoord beschikbaar is.  
+</details></p>
 
 </li><li>
 
