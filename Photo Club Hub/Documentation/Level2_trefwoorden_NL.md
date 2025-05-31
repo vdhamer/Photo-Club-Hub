@@ -31,7 +31,7 @@ Hiermee kan iemand Rob ontdekken als men belangstelling heeft in b.v. "conceptue
 <details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
 
 - In de HTML/web versie van de app, zie je de trefwoorden in een kolom in de tabellen met clubleden.
-- In de iOS versie zie je (straks) de beschikbare trefwoorden bij iedere fotograaf in het Namenlijst scherm.
+- In de iOS versie zie je (straks) de beschikbare trefwoorden bij iedere fotograaf in het Namenlijst scherm.</p>
 
 Richting voor de iets langere termijn:
 
