@@ -12,7 +12,7 @@ Deze FAQ gaat over het optimale gebruik van trefwoorden en de achterliggende bed
 
 <li>
 
-### Wat betekent "trefwoord" hier?
+### Wat betekent `trefwoord` hier?
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
 In ondermeer Adobe Lightroom kan je trefwoorden hangen aan individuele foto's
