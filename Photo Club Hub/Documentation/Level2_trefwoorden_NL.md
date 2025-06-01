@@ -1,4 +1,4 @@
-## FAQ over trefwoorden voor een level2.json bestand
+## FAQ over de `trefwoorden` in level2.json bestanden
 
 In Level 2 kan men trefwoorden toekenen aan leden van een club.
 Het formaat van Level 2 bestanden is beschreven in
