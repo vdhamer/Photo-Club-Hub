@@ -1,4 +1,4 @@
-## FAQ over trefwoorden voor een level2.json bestand
+## FAQ over de `trefwoorden` in level2.json bestanden
 
 In Level 2 kan men trefwoorden toekenen aan leden van een club.
 Het formaat van Level 2 bestanden is beschreven in
@@ -12,7 +12,7 @@ Deze FAQ gaat over het optimale gebruik van trefwoorden en de achterliggende bed
 
 <li>
 
-### Wat betekent "trefwoord" hier?
+### Wat betekent `trefwoord` hier?
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
 In ondermeer Adobe Lightroom kan je trefwoorden hangen aan individuele foto's
@@ -26,7 +26,7 @@ Hiermee kan iemand Rob ontdekken als men belangstelling heeft in b.v. "conceptue
 
 </li><li>
 
-### Wat ziet een gebruiken van de trefwoorden?
+### Wat ziet een gebruiker van de trefwoorden?
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
 
