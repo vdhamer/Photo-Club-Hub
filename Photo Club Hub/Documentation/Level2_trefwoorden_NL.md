@@ -26,7 +26,7 @@ Hiermee kan iemand Rob ontdekken als men belangstelling heeft in b.v. "conceptue
 
 </li><li>
 
-### Wat ziet een gebruiken van de trefwoorden?
+### Wat ziet een gebruiker van de trefwoorden?
 
 <details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
 
