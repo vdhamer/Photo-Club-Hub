@@ -16,8 +16,8 @@ Deze FAQ gaat over het doel en optimale gebruik van `expertise`.
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 Het gaat hier om 1 of 2 gebieden waar een fotograaf om bekend staat.
-Hiermee kan met zien dat b.v. Rob zich toespitsts op conceptuele fotografie.
-Maar het hoofddoel is om Rob te kunnen vinden tussen alle andere fotografen als men in de apps zoekt op conceptuele fotografie.
+Hiermee kan met zien dat b.v. Rob zich toespitsts op abstracte fotografie. Maar hopelijk valt dat ook te zien aan de foto's van Rob.
+Het hoofddoel is om Rob te kunnen vinden tussen alle andere fotografen als men in de app zoekt op "abstract" of "abs".
 </details></p>
 
 </li><li>
