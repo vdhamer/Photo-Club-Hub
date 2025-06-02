@@ -90,10 +90,11 @@ Verder kan je een technische versie van de lijst [hier](https://github.com/vdham
 
 <li>
 
-### Mag expertise veranderen op de tijd?
+### Mag mijn expertise veranderen op de tijd?
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
-Zeker. De gekozen gebieden zijn bedoeld als huidige expertise. En dat kan verschuiven.
+Zeker. De gekozen gebieden zijn bedoeld als huidige expertise.
+"Ik deel vroeger veel aan macro" zou betekenen dat Macro van de lijst kan.
 
 </details></p>
 
