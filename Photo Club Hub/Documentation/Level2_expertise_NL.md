@@ -1,9 +1,9 @@
 ## FAQ over `expertise` in level2.json bestanden
 
-In Level 2 kan men expertisegebieden aangeven van de leden van een club.
-Het aanmaken en formaat van Level 2 bestanden is beschreven in
+In Level 2 kan men per clublid 1 of 2 expertisegebieden opgevenaangeven.
+Het aanmaken en het formaat van Level 2 bestanden is beschreven in
 [Level2_aanmaken_NL](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/Level2_aanmaken_NL.md).
-Deze FAQ gaat over het doel en optimale gebruik van het begrip expertise.
+Deze FAQ gaat over het doel en optimale gebruik van `expertise`.
 
 ## Basisvragen
 
@@ -15,34 +15,30 @@ Deze FAQ gaat over het doel en optimale gebruik van het begrip expertise.
 ### Wat betekent `expertise` hier?
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
-In ondermeer Adobe Lightroom kan je trefwoorden hangen aan individuele foto's
-om ze vooral zelf makkelijk te kunnen terugvinden in een verameling van b.v. tienduizend foto's.
-</p>
-
-De trefwoorden hier zijn anders. Hier gaat hier om trefwoorden die aan de **fotograaf** hangen.
-Ze geven 1 of hooguit 2 specialismes aan: "waar staat Rob om bekend?".
-Hiermee kan iemand Rob ontdekken als men belangstelling heeft in b.v. "conceptuele fotografie".
+Het gaat hier om 1 of 2 gebieden waar een fotograaf om bekend staat.
+Hiermee kan met zien dat b.v. Rob zich toespitsts op "conceptuele fotografie".
+Maar het hoofddoel is om Rob te kunnen vinden tussen alle andere fotografen als men in de apps zoekt op "conceptuele fotografie".
 </details></p>
 
 </li><li>
 
-### Wat ziet een gebruiker van deze expertises?
+### Wat ziet een gebruiker van opgegeven `expertises`?
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 
-- In de HTML/web versie van de app, zie je de trefwoorden in een kolom in de tabellen met clubleden.
-- In de iOS versie staat er een lijst van beschikbare trefwoorden helemaal onderaan de `Namenlijst` pagina (zoek op "trefwoorden" of "zzz").
-- In de iOS versie zie je (straks) de beschikbare trefwoorden bij iedere fotograaf in het `Namenlijst` scherm.</p>
+- In de HTML/web versie van de app, staan ze vermeld in een kolom "expertisegebieden" in de tabel met clubleden.
+- In de iOS versie zie je (straks) de beschikbare trefwoorden bij iedere fotograaf in het `Namenlijst` pagina.
+- In de iOS versie staat alle beschikbare expertisegebieden helemaal onderaan de `Namenlijst` pagina (zoek op "expertise" of "zzz").
+</p>
 
-Richting voor de iets langere termijn:
+En op de iets langere termijn:
 
-- In de iOS versie, moet je kunnen **zoeken** op een enkel trefwoord via de bestaande zoekbalk.
-Dus intypen van "zwart" filtert de lijst op fotografen met het "zwart-wit" trefwoord.
-Maar toont ook namen zoals "Kees de Zwart".
-- In de HTML versie, zouden de getoonde trefwoorden links kunnen worden.
-Erop **klikken** toont een lijst met alle fotografen (van alle deelnemende clubs) die gekoppeld zijn aan dat trefwoord.
-- In de HTML versie, zou er een **aparte pagina** moeten komen met een (klikbare) lijst met alle beschikbare trefwoordenlijst.
-Hiermee kan je zien welke trefwoorden er zijn, met wat statistieken.  
+- In de iOS versie, kan men straks **zoeken** op expertisegebied door de eerste paar letters in te tikken in de zoekbalk.
+Dus intypen van "zwart" reduceert de lijst tot fotografen die aan "zwart-wit" gekoppeld zijn.
+Maar toont ook namen zoals "Kees de Zwart": de zoekbalk zoekt gelijktijdig op naam en op expertise.
+- In de HTML versie, moeten de getoonde expertises klikbare links worden. Dit brengt je naar een lijst met alle fotografen met die expertise.
+- In de HTML versie, zou er een misschien ook een aparte pagina moeten komen met een (klikbare) lijst met alle beschikbare expertisegebieden.
+Hiermee kan je zien welke er zijn, wat hun uitleg is, en hoeveel fotografen ze vermeld hebben.  
 </details></p>
 
 </li><li>
