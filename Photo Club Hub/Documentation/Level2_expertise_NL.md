@@ -100,13 +100,13 @@ Zeker. De gekozen gebieden zijn bedoeld als huidige expertise.
 ### Waarom max 2 expertisegebieden per persoon?
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
-De gedachte is dat een zoekopdracht net als bij Google vooral relevante resultaten oplevert.
+De gedachte is dat een zoekopdracht net als bij Google Search vooral _relevante_ resultaten oplevert.
 Mischien niet precies de soort "architectuur" waar je in geintereseerd bent.
 Maar we willen voorkomen dat je bij een portfolio lang moet bladeren voordat je die enkele verdwaalde architectuurfoto's tegenkomt.</p>
 
-Wij proberen met de beperking te voorkomen dat de fotograaf tracht om al zijn werk in bakjes te vangen.
+Het is dus _niet_ de bedoeling dat de fotograaf tracht om al zijn werk in trefwoorden te vangen.
 Veel "specialismes" neigt eigenlijk naar "geen expertisegebieden". En dat is ook een valide antwoord.
-Een beginnende fotograaf heeft bijvoorbeeld vaak nog geen echt specialisme - hooguit een soort projekt.
+Sommige fotografen hebben nu eenmaal geen of nog geen herkenbaar specialisme.
 
 </details></p>
 
