@@ -13,6 +13,7 @@
 		D024F11628423BE60055021B /* Sounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = D024F11528423BE60055021B /* Sounds.swift */; };
 		D0273E4A2DEE42C800C4F5E1 /* fgOirschot.level2.json in Resources */ = {isa = PBXBuildFile; fileRef = D0273E492DEE42C800C4F5E1 /* fgOirschot.level2.json */; };
 		D0273E4B2DEE42C800C4F5E1 /* fcEricamera.level2.json in Resources */ = {isa = PBXBuildFile; fileRef = D0273E482DEE42C800C4F5E1 /* fcEricamera.level2.json */; };
+		D0273E6D2DEE484C00C4F5E1 /* FotoclubEricameraMembersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0273E5A2DEE460E00C4F5E1 /* FotoclubEricameraMembersProvider.swift */; };
 		D0275F5527E3E21F002FA4FE /* View+OnTapGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0275F5427E3E21F002FA4FE /* View+OnTapGesture.swift */; };
 		D029C4CF2C53E5C700ABA977 /* OrganizationOptionalFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = D029C4CE2C53E5C700ABA977 /* OrganizationOptionalFields.swift */; };
 		D029C4D22C54099900ABA977 /* MemberOptionalFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = D029C4D12C54099900ABA977 /* MemberOptionalFields.swift */; };
@@ -935,6 +936,7 @@
 				D0ADF4AE27922DCA00535432 /* MemberRolesAndStatus.swift in Sources */,
 				D0447C882BA510AF00982A1E /* Language.swift in Sources */,
 				D0CA9B3F2D6B7959005428C0 /* PhotographerKeyword.swift in Sources */,
+				D0273E6D2DEE484C00C4F5E1 /* FotoclubEricameraMembersProvider.swift in Sources */,
 				D06BE9332A4F870B0055B3B1 /* ifDebugUtils.swift in Sources */,
 				D0831A38277F72590049AB84 /* Organization.swift in Sources */,
 				D054173B2D31DDE300A2A579 /* XampleMaxMembersProvider.swift in Sources */,
