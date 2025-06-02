@@ -90,10 +90,26 @@ Verder kan je een technische versie van de lijst [hier](https://github.com/vdham
 
 <li>
 
-### Waarom maar 2 trefwoorden per persoon?
+### Mag expertise veranderen op de tijd?
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
-x
+Zeker. De gekozen gebieden zijn bedoeld als huidige expertise. En dat kan verschuiven.
+
+</details></p>
+
+</li><li>
+
+### Waarom max 2 expertisegebieden per persoon?
+
+<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
+De gedachte is dat een zoekopdracht net als bij Google vooral relevante resultaten oplevert.
+Mischien niet precies de soort "architectuur" waar je in geintereseerd bent.
+Maar we willen voorkomen dat je bij een portfolio lang moet bladeren voordat je die enkele verdwaalde architectuurfoto's tegenkomt.</p>
+
+Wij proberen met de beperking te voorkomen dat de fotograaf tracht om al zijn werk in bakjes te vangen.
+Veel "specialismes" neigt eigenlijk naar "geen expertisegebieden". En dat is ook een valide antwoord.
+Een beginnende fotograaf heeft bijvoorbeeld vaak nog geen echt specialisme - hooguit een soort projekt.
+
 </details></p>
 
 </li><li>
@@ -101,7 +117,17 @@ x
 ### Hoeveel trefwoorden komen er?
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
-x
+Dat moet blijken. Criteria:
+
+- Wikipedia gebieden t.a.v. onderwerp ("portret") of techniek ("zwart/wit") zijn hoe dan ook prima.
+- Het moet vrij duidelijk zijn wat eronder valt.
+- Liefst weinig overlap met bestaande gebieden, "Natuur" is b.v. onhandig als er ook "landschappen" en "wilde dieren" categorieen zijn.
+- Er moeten meerdere beoefenaars te verwachten zijn. Maar het hoeven niet veel te zijn.
+- Die beoefenaars moeten zichzelf als (amateur)fotografen zien. Bij een eventuele bespreking zou het om de fotografie en niet het gefotografeerde moeten gaan.
+
+Naarmate er meer fotografen aan boord komen, zal de lijst geleidelijk doorgroeien. Van de hudige 20 richting b.v. 100.
+We moeten proberen onder de 100 te blijven (ook bij veel fotografen) omdat dit problemen gaat geven met met 
+vinden en kiezen van trefwoorden (architectuur vs wolkenkrabbers). 
 </details></p>
 
 </li><li>
