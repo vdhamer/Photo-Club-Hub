@@ -75,7 +75,7 @@ x
 
 ## Richtlijnen
 
-<details><summary>$\color{orange}{\textsf{Klik om categorie open of dicht te klappen</summary></p>
+<details><summary>Klik om categorie open of dicht te klappen</summary></p>
 <ul>
 
 <li>
@@ -124,7 +124,7 @@ x
 
 ## Technische haken en ogen
 
-<details><summary>$\color{orange}{\textsf{Klik om categorie open of dicht te klappen</summary></p>
+<details><summary>Klik om categorie open of dicht te klappen</summary></p>
 <ul>
 
 <li>
