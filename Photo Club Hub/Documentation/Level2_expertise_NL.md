@@ -28,7 +28,7 @@ Het hoofddoel is om Rob te kunnen vinden tussen alle andere fotografen als men i
 
 1. In de HTML/web versie van de app, staan ze (al) vermeld in een kolom "expertisegebieden" in de tabel met clubleden.
 2. In de iOS versie zie je (straks) de beschikbare trefwoorden bij iedere fotograaf op het `Namenlijst` pagina.
-3. In de iOS versie staat (al) alle beschikbare expertisegebieden helemaal onderaan de `Namenlijst` pagina (zoek op "expertise" of "zzz").
+3. In de iOS versie staan (al) de beschikbare expertisegebieden helemaal onderaan de `Namenlijst` pagina (zoek op "expertise" of "zzz", want het is een eind scrollen).
 </p>
 
 En op termijn komen er ook zoekfuncties bij:
