@@ -231,6 +231,7 @@ Dit moet de club aanmoedigen om het te corrigeren.
 ### Foute `expertises`?
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
+
 Wat gebeurt als een Level 2 bestand een onbekende `expertise` bevat dat niet bekend is in de app?
 Voorbeeld: ergens staat "Model" ipv b.v. "Portait".
 De app toont "(Model)". De haakjes en een pop-up geven aan dat dit momenteel geen officeel `expertise` is.
