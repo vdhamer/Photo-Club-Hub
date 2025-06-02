@@ -69,7 +69,7 @@ lang moet bladeren voordat je die enkele verdwaalde architectuurfoto's tegenkomt
 
 </li><li>
 
-### Hoeveen en welke expertisegebieden zijn beschikbaar?
+### Hoeveel en welke expertisegebieden zijn beschikbaar?
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 In de iOS versie van de app staat alle beschikbare expertisegebieden helemaal onderaan de `Namenlijst` pagina (zoek op "expertise" of "zzz").
