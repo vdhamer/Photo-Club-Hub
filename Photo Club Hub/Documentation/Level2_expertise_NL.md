@@ -7,7 +7,7 @@ Deze FAQ gaat over het optimale gebruik van het expertise begrip en de achterlig
 
 ## Basisvragen
 
-<details><summary>{\textsf{Klik om categorie open of dicht te klappen}}</summary></p>
+<details><summary>Klik om categorie open of dicht te klappen</summary></p>
 <ul>
 
 <li>
