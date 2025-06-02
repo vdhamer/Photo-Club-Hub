@@ -57,11 +57,11 @@ Hier vind je bekenden mee. Expertisegebieden laat je interessante fotografen ont
 ### Hoeveel expertisegebieden per clublid?
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
-Eén of twee. Bij meer dan twee gaat de app bewust een beetje moeilijk doen.</p>
+Nul, één of twee. Bij meer dan twee gaat de app bewust een beetje moeilijk doen.</p>
 
-De gedachte is dat een zoekopdracht net als bij Google vooral relevante resultaten oplevert. 
-Mischien niet precies de soort "architectuur" waar je in geintereseerd bent. Maar we willen voorkomen dat je bij een portfolio
-lang moet bladeren voordat je die enkele verdwaalde architectuurfoto's tegenkomt.
+De gedachte is dat een zoekopdracht net als bij Google Search vooral relevante resultaten oplevert. 
+Mischien niet precies de soort "architectuur" waar die je zocht. Maar we willen voorkomen dat je bij een portfolio
+langdurig moet bladeren voordat je foto's tegenkomt die je als architectuurfoto's zou kunnen bestempelen.
 </details></p>
 
 </li><li>
@@ -70,10 +70,10 @@ lang moet bladeren voordat je die enkele verdwaalde architectuurfoto's tegenkomt
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 In de iOS versie van de app staat alle beschikbare expertisegebieden helemaal onderaan de `Namenlijst` pagina (zoek op "expertise" of "zzz").
-Deze lijst is dynamisch (online opgehaald): mogelijk dat er volgende week bijvoorbeeld een gebied bijgekomen is.</p>
+Deze lijst is dynamisch (online opgehaald): het kan dat er volgende week een nieuw gebied bijgekomen is.</p>
 
-De HTML versie krijgt hopelijk ooit een extra pagina met diezelfde lijst. 
-Verder kan je een technische versie van de lijst [hier](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/root.level0.json) inzien.
+De HTML versie krijgt wellicht een extra pagina met diezelfde lijst. 
+Verder kan je de actuele lijst (in JSON formaat) [hier](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/root.level0.json) inzien.
 </details></p>
 
 </li></ul>
