@@ -126,6 +126,8 @@
 		D024F11528423BE60055021B /* Sounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sounds.swift; sourceTree = "<group>"; };
 		D0273E482DEE42C800C4F5E1 /* fcEricamera.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fcEricamera.level2.json; sourceTree = "<group>"; };
 		D0273E492DEE42C800C4F5E1 /* fgOirschot.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fgOirschot.level2.json; sourceTree = "<group>"; };
+		D0273E5A2DEE460E00C4F5E1 /* FotoclubEricameraMembersProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FotoclubEricameraMembersProvider.swift; sourceTree = "<group>"; };
+		D0273E5B2DEE460E00C4F5E1 /* FotogroepOirschot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FotogroepOirschot.swift; sourceTree = "<group>"; };
 		D0275F5427E3E21F002FA4FE /* View+OnTapGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+OnTapGesture.swift"; sourceTree = "<group>"; };
 		D029C4CE2C53E5C700ABA977 /* OrganizationOptionalFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationOptionalFields.swift; sourceTree = "<group>"; };
 		D029C4D12C54099900ABA977 /* MemberOptionalFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberOptionalFields.swift; sourceTree = "<group>"; };
@@ -365,6 +367,8 @@
 		D0621E832AE2DF8E000FFADB /* IndividualClubs */ = {
 			isa = PBXGroup;
 			children = (
+				D0273E5A2DEE460E00C4F5E1 /* FotoclubEricameraMembersProvider.swift */,
+				D0273E5B2DEE460E00C4F5E1 /* FotogroepOirschot.swift */,
 				D05414F62AC7499000D899D8 /* FotogroepDeGenderMembersProvider.swift */,
 				D0831A2C277F72590049AB84 /* FotogroepWaalreMembersProvider.swift */,
 				D072D5E42D333E7500EA88DD /* XampleMinMembersProvider.swift */,
