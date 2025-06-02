@@ -165,33 +165,55 @@ En een expertise is vaak algemener en kan dus van pas komen bij meerdere projekt
 
 </details></p>
 
-## Technische haken en ogen
+## Technische kanten
 
 <details><summary>Klik om categorie open of dicht te klappen</summary></p>
 <ul>
 
 <li>
 
-### Vertalingen?
+### Meertalige weergave
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
-x
+Erkende expertisegebieden worden in de app weergegeven in het Nederlands of in het Engels.
+Als een fotograaf gekoppeld is aan zwart-wit fotografie, wordt dat afhankelijk van omstandigheden als "Zwart-wit" of als "Black & White" weergegeven.
+Als de app een onbekend expertisegebied tegenkomt, wordt er niet vertaald. En is er een waarschuwing te zien - mede omdat het en invoerfout kan zijn.
 </details></p>
 
 </li><li>
 
-### Identifiers?
+### Een-talige invoer
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
-x
+Bij het koppelen van expertisegebieden aan fotografen gebruik je meestal de Engelse term.
+Maar die identificatie (`idString`) kan in principe afwijken van wat er in het Engels getoond wordt.
+Dus strict genomen zijn er 3 benaming voor een expertisegebied:</p>
+
+1. een identificatie zoals "Bird", gebruikt on aan te geven welk expertisegebied we bedoelen. Dit zal bijna altijd overeenkomen met (2), maar het hoeft niet:
+2. een Engelse weergavetekst zoals "Birds", zoals het getoond wordt aan Engelstalige gebruikers.
+3. een Nederlandse weergavetekst zoals "Vogels", zoals het getoond wordt aan Nederlandstalige gebruikers.
+
 </details></p>
 
 </li><li>
 
-### Trefwoorden per fotograaf of per clublid?
+### Expertisegebieden en clubs?
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
-x
+Strikt genomen vindt de app dat de expertisegebieden aan een persoon hangen.
+En dus niet afhankelijk zijn van de club waar de persoon lid is of was.</p>
+  
+Maar de expertisegebieden worden door clubs ingevoerd.
+Dus een fijnproever kan zich afvragen: "als Jan lid is van Club 1 en Club 2, 
+en de beide clubs iets anders invullen voor `Expertise` van Jan, wat doet de app?".
+
+Goede vraag overigens! De lijsten van expertises van Jan vanuit beide clubs worden intern
+samengevoegd. Als de lijsten identiek zijn, zie je daar niets van. Als maar een lijst gevuld is,
+zie je dat. Als Club 1 meldt "Portret" + "Abstract", termijn Club 2 zegt "Abstract" + "Landschap",
+dan gebruikt de app "Portret" + "Abstract" + "Landschap" aan de slag.
+
+Als de gecombineerde lijst te lang is, en Jan nog steeds contact heeft met beide groepen,
+mag Jan dat verder regelen. Bijvoorbeeld door de `expertises` bij 1 club weg te halen.
 </details></p>
 
 </li><li>
