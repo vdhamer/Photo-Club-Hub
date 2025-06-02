@@ -22,7 +22,7 @@ Het hoofddoel is om Rob te kunnen vinden tussen alle andere fotografen als men i
 
 </li><li>
 
-### Wat ziet een gebruiker van opgegeven `expertises`?
+### Waar ziet een gebruiker de gemelde `expertises`?
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 
