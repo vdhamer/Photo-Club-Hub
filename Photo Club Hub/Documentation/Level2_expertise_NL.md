@@ -1,13 +1,13 @@
-## FAQ over de `trefwoorden` in level2.json bestanden
+## FAQ over `expertise` in level2.json bestanden
 
-In Level 2 kan men trefwoorden toekenen aan leden van een club.
+In Level 2 kan men expertisegebieden aangeven van de leden van een club.
 Het formaat van Level 2 bestanden is beschreven in
 [Level2_aanmaken_NL](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/Level2_aanmaken_NL.md).
-Deze FAQ gaat over het optimale gebruik van trefwoorden en de achterliggende bedoelingen.
+Deze FAQ gaat over het optimale gebruik van het expertise begrip en de achterliggende bedoeling.
 
 ## Basisvragen
 
-<details><summary>$\color{orange}{\textsf{Klik om categorie open of dicht te klappen}}$</summary></p>
+<details><summary>{\textsf{Klik om categorie open of dicht te klappen}}</summary></p>
 <ul>
 
 <li>
