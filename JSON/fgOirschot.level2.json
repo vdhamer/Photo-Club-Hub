@@ -1,0 +1,112 @@
+{
+    "club": {
+        "idPlus": {
+            "town": "Oirschot",
+            "fullName": "Fotogroep Oirschot",
+            "nickName": "FG Oirschot"
+        },
+        "optional": {
+            "coordinates": {
+                "latitude": 51.46785,
+                "longitude": 5.25568
+            },
+            "website": "https://www.fotogroepoirschot.nl",
+            "level2URL": "https://www.example.com/fgOirschot.level2.json",
+            "remark": [
+                {
+                    "language": "EN",
+                    "value": "Note that Fotogroep Oirschot is abbreviated as fgoirschot.nl."
+                },
+                {
+                    "language": "NL",
+                    "value": "Opgelet: Fotogroep Oirschot heeft als domeinnaam fgoirschot.nl."
+                }
+            ],
+            "nlSpecific": {
+                "fotobondNumber": 1607
+            }
+        }
+    },
+
+    "members": [
+
+        {
+            "name": {
+                "givenName": "Wil",
+                "infixName": "der",
+                "familyName": "Kinderen"
+            },
+            "optional": {
+                "membershipStartDate": "1979-01-01",
+                "nlSpecific": {
+                    "fotobondNumber": 1607006
+                },
+                "keywords": [ "Model", "Street", "Free" ]
+            }
+        },
+
+        {
+            "name": {
+                "givenName": "Liesbeth",
+                "infixName": "der",
+                "familyName": "Kinderen"
+            },
+            "optional": {
+                "membershipStartDate": "1989-08-01",
+                "nlSpecific": {
+                    "fotobondNumber": 1607054
+                },
+                "keywords": [ "Nature", "Abstract", "Travel", "Free" ]
+            }
+        },
+
+        {
+            "name": {
+                "givenName": "Verbeek",
+                "infixName": "",
+                "familyName": "Henk"
+            },
+            "optional": {
+                "birthday": "9999-04-01",               
+                "membershipStartDate": "1978-01-01",
+                "nlSpecific": {
+                    "fotobondNumber": 1607009
+                },
+                "keywords": [ "Architecture", "Experimental", "Free" ]
+            }
+        },
+
+        {
+            "name": {
+                "givenName": "Severijns",
+                "infixName": "",
+                "familyName": "Ruud"
+            },
+             "optional": {
+                 "membershipStartDate": "2018-04-01",
+                 "nlSpecific": {
+                     "fotobondNumber": 1607049
+                 },
+                 "keywords": [ "Street", "Documantary", "Free" ]
+             }
+         },
+
+        {
+            "name": {
+                "givenName": "Marjo",
+                "infixName": "van der",
+                "familyName": "Burgt - van Dommelen"
+            },
+            "optional": {
+                "membershipStartDate": "2012-12-01",
+                "nlSpecific": {
+                    "fotobondNumber": 1607041
+                },
+                "keywords": [ "Street", "Travel", "Nature", "Free" ]
+
+            }
+
+        }
+
+    ]
+}

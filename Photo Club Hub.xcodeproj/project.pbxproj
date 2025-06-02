@@ -11,6 +11,8 @@
 		D008D2AA28739167007A7BE2 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = D008D2A928739167007A7BE2 /* .gitignore */; };
 		D01D2B6227D3BBDC00E2FE41 /* View+Navigate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01D2B6127D3BBDC00E2FE41 /* View+Navigate.swift */; };
 		D024F11628423BE60055021B /* Sounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = D024F11528423BE60055021B /* Sounds.swift */; };
+		D0273E4A2DEE42C800C4F5E1 /* fgOirschot.level2.json in Resources */ = {isa = PBXBuildFile; fileRef = D0273E492DEE42C800C4F5E1 /* fgOirschot.level2.json */; };
+		D0273E4B2DEE42C800C4F5E1 /* fcEricamera.level2.json in Resources */ = {isa = PBXBuildFile; fileRef = D0273E482DEE42C800C4F5E1 /* fcEricamera.level2.json */; };
 		D0275F5527E3E21F002FA4FE /* View+OnTapGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0275F5427E3E21F002FA4FE /* View+OnTapGesture.swift */; };
 		D029C4CF2C53E5C700ABA977 /* OrganizationOptionalFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = D029C4CE2C53E5C700ABA977 /* OrganizationOptionalFields.swift */; };
 		D029C4D22C54099900ABA977 /* MemberOptionalFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = D029C4D12C54099900ABA977 /* MemberOptionalFields.swift */; };
@@ -122,6 +124,8 @@
 		D01DFAA627E778BD007BABFA /* offsets.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = offsets.md; sourceTree = "<group>"; };
 		D01E4F1E2C444C27005E7D2E /* Photo_Club_Hub_2_7_0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_7_0.xcdatamodel; sourceTree = "<group>"; };
 		D024F11528423BE60055021B /* Sounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sounds.swift; sourceTree = "<group>"; };
+		D0273E482DEE42C800C4F5E1 /* fcEricamera.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fcEricamera.level2.json; sourceTree = "<group>"; };
+		D0273E492DEE42C800C4F5E1 /* fgOirschot.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fgOirschot.level2.json; sourceTree = "<group>"; };
 		D0275F5427E3E21F002FA4FE /* View+OnTapGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+OnTapGesture.swift"; sourceTree = "<group>"; };
 		D029C4CE2C53E5C700ABA977 /* OrganizationOptionalFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationOptionalFields.swift; sourceTree = "<group>"; };
 		D029C4D12C54099900ABA977 /* MemberOptionalFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberOptionalFields.swift; sourceTree = "<group>"; };
@@ -676,6 +680,8 @@
 		D0F871912D403D1700530D10 /* JSON */ = {
 			isa = PBXGroup;
 			children = (
+				D0273E482DEE42C800C4F5E1 /* fcEricamera.level2.json */,
+				D0273E492DEE42C800C4F5E1 /* fgOirschot.level2.json */,
 				D091C13B2D942F5200C666AC /* 250523_Fotoclubs_Brabant_Oost.xlsx */,
 				D0A615B22D920C5B0024EC9E /* fgWaalre.level2.json */,
 				D0A615782D91B7A00024EC9E /* fcBellusImago.level2.json */,
@@ -814,6 +820,8 @@
 				D04856382D46A62200022117 /* Package.xcstrings in Resources */,
 				D008D2AA28739167007A7BE2 /* .gitignore in Resources */,
 				D0B5743E2C41D79300334E4C /* Assets.xcassets in Resources */,
+				D0273E4A2DEE42C800C4F5E1 /* fgOirschot.level2.json in Resources */,
+				D0273E4B2DEE42C800C4F5E1 /* fcEricamera.level2.json in Resources */,
 				D0F8719F2D403E6000530D10 /* readme.txt in Resources */,
 				D0F871952D403D1700530D10 /* root.level1.json in Resources */,
 				D0A615792D91B7A00024EC9E /* fcBellusImago.level2.json in Resources */,

@@ -1,0 +1,403 @@
+{
+  "club": {
+    "idPlus": {
+      "town": "Eindhoven",
+      "fullName": "Fotoclub Ericamera",
+      "nickname": "fcEricamera"
+    }
+  },
+  "optional": {
+    "coordinates": {
+      "latitude": 51.45403,
+      "longitude": 5.46288
+    },
+    "website": {
+      "level3URL": "https://www.ericamera.nl"
+    },
+    "nlSpecific": {
+      "fotobondNumber": 1674
+    }
+  },
+  "members": [
+    {
+      "name": {
+        "givenName": "Ad",
+        "infixName": "",
+        "familyName": "Karman"
+      },
+      "optional": {
+        "level3URL": "https://www.ericamera.nl/ad-karman",
+        "nlSpecific": {
+          "fotobondNumber": 1674005
+        },
+        "roles": {
+          "isMember": true
+        },
+        "keywords": [
+          "Aaa",
+          "Bbb"
+        ]
+      }
+    },
+    {
+      "name": {
+        "givenName": "Bas",
+        "infixName": "",
+        "familyName": "Wagemakers"
+      },
+      "optional": {
+        "level3URL": "https://www.ericamera.nl/bas-wagemakers",
+        "nlSpecific": {
+          "fotobondNumber": 1674031
+        },
+        "roles": {
+          "isMember": true
+        },
+        "keywords": [
+          "Aaa",
+          "Bbb"
+        ]
+      }
+    },
+    {
+      "name": {
+        "givenName": "Ben",
+        "infixName": "van",
+        "familyName": "Veelen"
+      },
+      "optional": {
+        "level3URL": "https://www.ericamera.nl/ben-van-veelen",
+        "nlSpecific": {
+          "fotobondNumber": 1674023
+        },
+        "roles": {
+          "isBestuurslid": true
+        },
+        "keywords": [
+          "Aaa",
+          "Bbb"
+        ]
+      }
+    },
+    {
+      "name": {
+        "givenName": "Bob",
+        "infixName": "",
+        "familyName": "Alisic"
+      },
+      "optional": {
+        "level3URL": "https://www.ericamera.nl/bob-alisic",
+        "nlSpecific": {
+          "fotobondNumber": 1674030
+        },
+        "roles": {
+          "isVoorzitter": true
+        },
+        "keywords": [
+          "Aaa",
+          "Bbb"
+        ]
+      }
+    },
+    {
+      "name": {
+        "givenName": "Cor",
+        "infixName": "van",
+        "familyName": "Deursen"
+      },
+      "optional": {
+        "level3URL": "https://www.ericamera.nl/cor-van-deursen",
+        "nlSpecific": {
+          "fotobondNumber": 1674013
+        },
+        "roles": {
+          "isMember": true
+        },
+        "keywords": [
+          "Aaa",
+          "Bbb"
+        ]
+      }
+    },
+    {
+      "name": {
+        "givenName": "Edjoe",
+        "infixName": "",
+        "familyName": "Osinski"
+      },
+      "optional": {
+        "level3URL": "https://www.ericamera.nl/edjoe-osinski",
+        "nlSpecific": {
+          "fotobondNumber": 1674036
+        },
+        "roles": {
+          "isMember": true
+        },
+        "keywords": [
+          "Aaa",
+          "Bbb"
+        ]
+      }
+    },
+    {
+      "name": {
+        "givenName": "Geoff",
+        "infixName": "",
+        "familyName": "Naylor"
+      },
+      "optional": {
+        "level3URL": "https://www.ericamera.nl/geoff-naylor",
+        "nlSpecific": {
+          "fotobondNumber": 1674008
+        },
+        "roles": {
+          "isBestuurslid": true
+        },
+        "keywords": [
+          "Aaa",
+          "Bbb"
+        ]
+      }
+    },
+    {
+      "name": {
+        "givenName": "Gerd",
+        "infixName": "",
+        "familyName": "Bartels"
+      },
+      "optional": {
+        "level3URL": "https://www.ericamera.nl/gerd-bartels",
+        "nlSpecific": {
+          "fotobondNumber": 1674028
+        },
+        "roles": {
+          "isMember": true
+        },
+        "keywords": [
+          "Aaa",
+          "Bbb"
+        ]
+      }
+    },
+    {
+      "name": {
+        "givenName": "Gertjan",
+        "infixName": "",
+        "familyName": "Keesman"
+      },
+      "optional": {
+        "level3URL": "https://www.ericamera.nl/gertjan-keesman",
+        "nlSpecific": {
+          "fotobondNumber": 1674038
+        },
+        "roles": {
+          "isMember": true
+        },
+        "keywords": [
+          "Aaa",
+          "Bbb"
+        ]
+      }
+    },
+    {
+      "name": {
+        "givenName": "Harry",
+        "infixName": "",
+        "familyName": "Graus"
+      },
+      "optional": {
+        "level3URL": "https://www.ericamera.nl/harry-graus",
+        "nlSpecific": {
+          "fotobondNumber": 1674037
+        },
+        "roles": {
+          "isMember": true
+        },
+        "keywords": [
+          "Aaa",
+          "Bbb"
+        ]
+      }
+    },
+    {
+      "name": {
+        "givenName": "Ineke",
+        "infixName": "",
+        "familyName": "Binnendijk"
+      },
+      "optional": {
+        "level3URL": "https://www.ericamera.nl/ineke-binnendijk",
+        "nlSpecific": {
+          "fotobondNumber": 1674001
+        },
+        "roles": {
+          "isMember": true
+        },
+        "keywords": [
+          "Aaa",
+          "Bbb"
+        ]
+      }
+    },
+    {
+      "name": {
+        "givenName": "Joost",
+        "infixName": "",
+        "familyName": "Sytsma"
+      },
+      "optional": {
+        "level3URL": "https://www.ericamera.nl/joost-sytsma",
+        "nlSpecific": {
+          "fotobondNumber": 1674040
+        },
+        "roles": {
+          "isMember": true
+        },
+        "keywords": [
+          "Aaa",
+          "Bbb"
+        ]
+      }
+    },
+    {
+      "name": {
+        "givenName": "Klaas",
+        "infixName": "",
+        "familyName": "Vet"
+      },
+      "optional": {
+        "level3URL": "https://www.ericamera.nl/klaas-vet",
+        "nlSpecific": {
+          "fotobondNumber": 1674016
+        },
+        "roles": {
+          "isMember": true
+        },
+        "keywords": [
+          "Aaa",
+          "Bbb"
+        ]
+      }
+    },
+    {
+      "name": {
+        "givenName": "Manfred",
+        "infixName": "",
+        "familyName": "Gammel"
+      },
+      "optional": {
+        "level3URL": "https://www.ericamera.nl/manfred-gammel",
+        "nlSpecific": {
+          "fotobondNumber": 1674033
+        },
+        "roles": {
+          "isPenningmeester": true
+        },
+        "keywords": [
+          "Aaa",
+          "Bbb"
+        ]
+      }
+    },
+    {
+      "name": {
+        "givenName": "Marie-Louise",
+        "infixName": "",
+        "familyName": "Gast"
+      },
+      "optional": {
+        "level3URL": "https://www.ericamera.nl/marie-louise-gast",
+        "nlSpecific": {
+          "fotobondNumber": 1674041
+        },
+        "roles": {
+          "isSecretaris": true
+        },
+        "keywords": [
+          "Aaa",
+          "Bbb"
+        ]
+      }
+    },
+    {
+      "name": {
+        "givenName": "Marjo",
+        "infixName": "",
+        "familyName": "Teeuwen"
+      },
+      "optional": {
+        "level3URL": "https://www.ericamera.nl/marjo-teeuwen"
+      },
+      "nlSpecific": {
+        "fotobondNumber": 1674099
+      },
+      "roles": {
+        "isMember": true
+      },
+      "keywords": [
+        "Aaa",
+        "Bbb"
+      ]
+    },
+    {
+      "name": {
+        "givenName": "Peter",
+        "infixName": "",
+        "familyName": "Stas"
+      },
+      "optional": {
+        "level3URL": "https://www.ericamera.nl/peter-stas",
+        "nlSpecific": {
+          "fotobondNumber": 1674012
+        },
+        "roles": {
+          "isMember": true
+        },
+        "keywords": [
+          "Aaa",
+          "Bbb"
+        ]
+      }
+    },
+    {
+      "name": {
+        "givenName": "Rob",
+        "infixName": "",
+        "familyName": "Sponselee"
+      },
+      "optional": {
+        "level3URL": "https://www.ericamera.nl/rob-sponselee"
+      },
+      "nlSpecific": {
+        "fotobondNumber": 1674011,
+        "roles": {
+          "isMember": true
+        },
+        "keywords": [
+          "Aaa",
+          "Bbb"
+        ]
+      }
+    },
+    {
+      "name": {
+        "givenName": "Ton",
+        "infixName": "",
+        "familyName": "Vermaesen"
+      },
+      "optional": {
+        "level3URL": "https://www.ericamera.nl/ton-vermaesen",
+        "nlSpecific": {
+          "fotobondNumber": 1674015
+        },
+        "roles": {
+          "isMember": true
+        },
+        "keywords": [
+          "Aaa",
+          "Bbb"
+        ]
+      }
+    }
+  ]
+}
