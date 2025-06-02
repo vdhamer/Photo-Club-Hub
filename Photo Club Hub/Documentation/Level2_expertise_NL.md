@@ -218,10 +218,11 @@ mag Jan dat verder regelen. Bijvoorbeeld door de `expertises` bij 1 club weg te 
 
 </li><li>
 
-### Teveel trefwoorden?
+### Teveel expertisegebieden?
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
-x
+Bij 3 of meer expertisegebieden, toont de app "(Teveel Expertises)" op de plek van het 3e element.
+Door het aan te raken of te klikken zie je dan een tijdelijke pop-up met de complete lijst.
 </details></p>
 
 </li><li>
