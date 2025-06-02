@@ -1,9 +1,9 @@
 ## FAQ over `expertise` in level2.json bestanden
 
 In Level 2 kan men expertisegebieden aangeven van de leden van een club.
-Het formaat van Level 2 bestanden is beschreven in
+Het aanmaken en formaat van Level 2 bestanden is beschreven in
 [Level2_aanmaken_NL](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/Level2_aanmaken_NL.md).
-Deze FAQ gaat over het optimale gebruik van het expertise begrip en de achterliggende bedoeling.
+Deze FAQ gaat over het doel en optimale gebruik van het begrip expertise.
 
 ## Basisvragen
 
@@ -14,7 +14,7 @@ Deze FAQ gaat over het optimale gebruik van het expertise begrip en de achterlig
 
 ### Wat betekent `trefwoord` hier?
 
-<details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
+<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 In ondermeer Adobe Lightroom kan je trefwoorden hangen aan individuele foto's
 om ze vooral zelf makkelijk te kunnen terugvinden in een verameling van b.v. tienduizend foto's.
 </p>
@@ -28,7 +28,7 @@ Hiermee kan iemand Rob ontdekken als men belangstelling heeft in b.v. "conceptue
 
 ### Wat ziet een gebruiker van de trefwoorden?
 
-<details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
+<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 
 - In de HTML/web versie van de app, zie je de trefwoorden in een kolom in de tabellen met clubleden.
 - In de iOS versie staat er een lijst van beschikbare trefwoorden helemaal onderaan de `Namenlijst` pagina (zoek op "trefwoorden" of "zzz").
@@ -49,7 +49,7 @@ Hiermee kan je zien welke trefwoorden er zijn, met wat statistieken.
 
 ### Wat is het nut van trefwoorden?
 
-<details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
+<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 x
 </details></p>
 
@@ -57,7 +57,7 @@ x
 
 ### Hoeveel trefwoorden per clublid?
 
-<details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
+<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 x
 </details></p>
 
@@ -65,7 +65,7 @@ x
 
 ### Hoe groeit de lijst met trefwoorden?
 
-<details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
+<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 x
 </details></p>
 
@@ -75,14 +75,14 @@ x
 
 ## Richtlijnen
 
-<details><summary>$\color{orange}{\textsf{Klik om categorie open of dicht te klappen}}$</summary></p>
+<details><summary>$\color{orange}{\textsf{Klik om categorie open of dicht te klappen</summary></p>
 <ul>
 
 <li>
 
 ### Waarom maar 2 trefwoorden per persoon?
 
-<details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
+<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 x
 </details></p>
 
@@ -90,7 +90,7 @@ x
 
 ### Hoeveel trefwoorden komen er?
 
-<details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
+<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 x
 </details></p>
 
@@ -98,7 +98,7 @@ x
 
 ### Fijnmazigheid?
 
-<details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
+<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 x
 </details></p>
 
@@ -106,7 +106,7 @@ x
 
 ### Wie beheert de lijst met trefwoorden?
 
-<details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
+<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 x
 </details></p>
 
@@ -114,7 +114,7 @@ x
 
 ### Project versus specialisme?
 
-<details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
+<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 x
 </details></p>
 
@@ -124,14 +124,14 @@ x
 
 ## Technische haken en ogen
 
-<details><summary>$\color{orange}{\textsf{Klik om categorie open of dicht te klappen}}$</summary></p>
+<details><summary>$\color{orange}{\textsf{Klik om categorie open of dicht te klappen</summary></p>
 <ul>
 
 <li>
 
 ### Vertalingen?
 
-<details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
+<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 x
 </details></p>
 
@@ -139,7 +139,7 @@ x
 
 ### Identifiers?
 
-<details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
+<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 x
 </details></p>
 
@@ -147,7 +147,7 @@ x
 
 ### Trefwoorden per fotograaf of per clublid?
 
-<details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
+<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 x
 </details></p>
 
@@ -155,7 +155,7 @@ x
 
 ### Teveel trefwoorden?
 
-<details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
+<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 x
 </details></p>
 
@@ -163,7 +163,7 @@ x
 
 ### Meerdere soorten trefwoorden?
 
-<details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
+<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 x
 </details></p>
 
