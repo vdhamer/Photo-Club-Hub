@@ -100,7 +100,7 @@ Zeker. De gekozen gebieden zijn bedoeld als huidige expertise.
 ### Waarom max 2 expertisegebieden per persoon?
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
-De gedachte is dat een zoekopdracht net als bij Google Search vooral _relevante_ resultaten oplevert.
+De gedachte is dat een zoekopdracht net als bij Google Search vooral relevante resultaten oplevert.
 Mischien niet precies de soort "architectuur" waar je in geintereseerd bent.
 Maar we willen voorkomen dat je bij een portfolio lang moet bladeren voordat je die enkele verdwaalde architectuurfoto's tegenkomt.</p>
 
