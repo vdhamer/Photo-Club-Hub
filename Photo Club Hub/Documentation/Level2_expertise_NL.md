@@ -234,10 +234,11 @@ Dit moet de club aanmoedigen om het te corrigeren.
 
 Wat gebeurt als een Level 2 bestand een onbekende `expertise` bevat dat niet bekend is in de app?
 Voorbeeld: ergens staat "Model" ipv b.v. "Portait".
-De app toont "(Model)". De haakjes en een pop-up geven aan dat dit momenteel geen officeel `expertise` is.
-De app meldt expliciet dat daardoor geen vertaling beschikbaar is. Dit moet de club aanmoedigen om het te corrigeren.
-Maar één mogelijk afloop is dat "Model" later gepromoveerd wordt tot een officieele `expertise`.
-De haakjes en waarschuwing verdwijnen dan automatisch op het moment dat de app kan zien dat "Model" nu een officieele `expertise` is.
+De app toont dan "(Model)" - met haakjes dus. De haakjes en een pop-up geven aan dat dit op dit moment geen officeele `expertise` is.
+De app meldt expliciet dat daardoor geen vertaling mogelijk zijn (die zijn er per definitie alleen voor officiële expertises). 
+Dit kan ertoe leiden dat de club de fout corrigeert.
+Maar andere afloop is dat "Model" op een gegeven moment gepromoveerd wordt tot een officiële `expertise`: het was zo gek nog niet.
+De haakjes en waarschuwing verdwijnen dan automatisch zodra de app kan zien dat "Model" een officiële `expertise` is.
 </details></p>
 
 </li>
