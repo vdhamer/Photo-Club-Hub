@@ -26,18 +26,18 @@ Maar het hoofddoel is om Rob te kunnen vinden tussen alle andere fotografen als 
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 
-- In de HTML/web versie van de app, staan ze vermeld in een kolom "expertisegebieden" in de tabel met clubleden.
-- In de iOS versie zie je (straks) de beschikbare trefwoorden bij iedere fotograaf in het `Namenlijst` pagina.
-- In de iOS versie staat alle beschikbare expertisegebieden helemaal onderaan de `Namenlijst` pagina (zoek op "expertise" of "zzz").
+1. In de HTML/web versie van de app, staan ze (nu) vermeld in een kolom "expertisegebieden" in de tabel met clubleden.
+2. In de iOS versie zie je (straks) de beschikbare trefwoorden bij iedere fotograaf in het `Namenlijst` pagina.
+3. In de iOS versie staat (nu) alle beschikbare expertisegebieden helemaal onderaan de `Namenlijst` pagina (zoek op "expertise" of "zzz").
 </p>
 
-En op de iets langere termijn:
+En op termijn komen er ook zoekfuncties bij:
 
-- In de iOS versie, kan men straks **zoeken** op expertisegebied door de eerste paar letters in te tikken in de zoekbalk.
+1. In de HTML versie, moeten de getoonde expertises **klikbare links** worden. Dit brengt je naar een lijst met alle fotografen met die expertise. Dit is een alternatief voor het zoeken in de iOS versie.
+2. 2. In de iOS versie, kan men straks **zoeken** op expertisegebied door de eerste paar letters in te tikken in de zoekbalk.
 Dus intypen van "zwart" reduceert de lijst tot fotografen die aan "zwart-wit" gekoppeld zijn.
 Maar toont ook namen zoals "Kees de Zwart": de zoekbalk zoekt gelijktijdig op naam en op expertise.
-- In de HTML versie, moeten de getoonde expertises klikbare links worden. Dit brengt je naar een lijst met alle fotografen met die expertise.
-- In de HTML versie, zou er een misschien ook een aparte pagina moeten komen met een (klikbare) lijst met alle beschikbare expertisegebieden.
+3. In de HTML versie, zou er een eigenlijk ook een **aparte pagina** moeten komen met een (klikbare) lijst met alle beschikbare expertisegebieden.
 Hiermee kan je zien welke er zijn, wat hun uitleg is, en hoeveel fotografen ze vermeld hebben.  
 </details></p>
 
