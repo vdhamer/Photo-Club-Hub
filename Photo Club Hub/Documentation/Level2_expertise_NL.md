@@ -49,26 +49,34 @@ Hiermee kan je zien welke er zijn, wat hun uitleg is, en hoeveel fotografen ze v
 Stel dat er tien, honderd of zelfs duizend clubs meedoen met ieder zeg 20 leden.
 Dan zijn er 200, 2000 of zelfs 20000 fotografen bekend in de app. 
 De app bevat nu al zoekfuncties op naam van de fotograaf (en op naam/locaatie van de club).
-Hier vind je bekenden mee. Expertisegebieden maakt het mogelijk om voor jou interessante personen te ontdekken.
+Hier vind je bekenden mee. Expertisegebieden maakt het mogelijk om voor jou interessante personen te ontdekken.</p>
 
 Analogie met Google Search: soms zoek je om iets terug te vinden waarvan je weet dat het bestaat.
-Maar vaker zoek je wat er beschikbaar is op een bepaald gebied.  
+Maar vaker zoek je iets waarvan je niet vooraf weet wat het antwoord zou moeten zijn.  
 </details></p>
 
 </li><li>
 
-### Hoeveel expertises per clublid?
+### Hoeveel expertisegebieden per clublid?
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
-x
+Eén of twee. Bij meer dan twee gaat de app zachtjes zeuren.</details>p>
+
+De gedachte is dat een zoekopdracht net als bij Google herkenbaar vooral relevante resultaten oplevert. 
+Mischien niet precies de soort "architectuur" waar je in geintereseerd bent. Maar we willen voorkomen dat je bij een portfolio
+lang moet bladeren voordat je die enkele verdwaalde architectuurfoto's tegenkomt.
 </details></p>
 
 </li><li>
 
-### Welke expertisegebieden zijn beschikbaar?
+### Hoeveen en welke expertisegebieden zijn beschikbaar?
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
-x
+In de iOS versie van de app staat alle beschikbare expertisegebieden helemaal onderaan de `Namenlijst` pagina (zoek op "expertise" of "zzz").
+Deze lijst is dynamisch (online opgehaald): mogelijk dat er volgende week bijvoorbeeld een gebied bijgekomen is.</p>
+
+De HTML versie krijgt hopelijk ooit een extra pagina met diezelfde lijst. 
+Verder kan je een technische versie van de lijst [hier](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/root.level0.json) inzien.
 </details></p>
 
 </li></ul>
