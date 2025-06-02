@@ -62,7 +62,7 @@ Maar vaker zoek je iets waarvan je niet vooraf weet wat het antwoord zou moeten 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 Eén of twee. Bij meer dan twee gaat de app bewust een beetje moeilijk doen.</p>
 
-De gedachte is dat een zoekopdracht net als bij Google herkenbaar vooral relevante resultaten oplevert. 
+De gedachte is dat een zoekopdracht net als bij Google vooral relevante resultaten oplevert. 
 Mischien niet precies de soort "architectuur" waar je in geintereseerd bent. Maar we willen voorkomen dat je bij een portfolio
 lang moet bladeren voordat je die enkele verdwaalde architectuurfoto's tegenkomt.
 </details></p>
