@@ -6,7 +6,7 @@ Code Maintenance
 * Removed unused duplicate files
 * Synchronized some of the code with Photo Club Hub HTML
 * Moved some strings from one string catalog to another
-* Tested with Xcode 16.4 (RC1, 16F6), SwiftLint 0.59.1, iOS 18.4.1, iOS 18.5 and macOS 15.5
+* Tested with Xcode 16.4, SwiftLint 0.59.1, iOS 18.4.1, iOS 18.5 and macOS 15.5
 
 Data Maintenance
 * Added "Conceptual", "Bird", "Concert", "Multiple exposure" keywords.
@@ -20,7 +20,7 @@ Documentation
 * Updated dataModel.png in README.md
 * New FAQ (in Dutch) Level2_expertise_NL.md
 
-This build #4638 was made using Xcode 16.4 RC1
+This build #4638 was made using Xcode 16.4
 
 ---------------------------------------------------------------------------
 
