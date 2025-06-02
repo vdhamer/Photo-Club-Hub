@@ -27,7 +27,7 @@ Het hoofddoel is om Rob te kunnen vinden tussen alle andere fotografen als men i
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 
 1. In de HTML/web versie van de app, staan ze vermeld in een kolom "expertisegebieden" in de tabel met clubleden.
-2. In de iOS versie zie je (straks) de beschikbare trefwoorden bij iedere fotograaf op het `Namenlijst` pagina.
+2. In de iOS versie zie je (straks) de beschikbare expertises bij iedere fotograaf op het `Namenlijst` pagina.
 3. In de iOS versie staan de beschikbare expertisegebieden helemaal onderaan de `Namenlijst` pagina (zoek op "expertise" of "zzz", want het is een eind scrollen).
 </p>
 
@@ -104,7 +104,7 @@ De gedachte is dat een zoekopdracht net als bij Google Search vooral relevante r
 Mischien niet precies de soort "architectuur" waar je in geintereseerd bent.
 Maar we willen voorkomen dat je bij een portfolio lang moet bladeren voordat je die enkele verdwaalde architectuurfoto's tegenkomt.</p>
 
-Het is dus _niet_ de bedoeling dat de fotograaf tracht om al zijn werk in trefwoorden te vangen.
+Het is dus _niet_ de bedoeling dat de fotograaf tracht om al zijn werk in een groot aantal bakjes te vangen.
 Veel "specialismes" neigt eigenlijk naar "geen expertisegebieden". En dat is ook een valide antwoord.
 Sommige fotografen hebben nu eenmaal geen of nog geen herkenbaar specialisme.
 
@@ -112,7 +112,7 @@ Sommige fotografen hebben nu eenmaal geen of nog geen herkenbaar specialisme.
 
 </li><li>
 
-### Hoeveel trefwoorden komen er?
+### Hoeveel expertisegebieden komen er?
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 Dat moet blijken. Criteria:</p>
@@ -145,7 +145,7 @@ Een te grote expertisegebied ("buitenfotografie") levert minder waarde, en geeft
 
 </li><li>
 
-### Wie beheert de lijst met trefwoorden?
+### Wie beheert de lijst met expertisegebieden?
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 Vooralsnog de maker(s) van de app. Het is echter een dienstverlening, en men moet voortdurend contact houden met gebruikers.
@@ -228,15 +228,15 @@ Dit moet de club aanmoedigen om het te corrigeren.
 
 </li><li>
 
-### Meerdere soorten trefwoorden?
+### Foute `expertises`?
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 Wat gebeurt als een Level 2 bestand een onbekende `expertise` bevat dat niet bekend is in de app?
-Voorbeeld: ergens staat "Sepia" ipv "Black & White" (de officiele versie).
-De app toont "(Sepia)". De haakjes en een pop-up geven aan dat dit geen officeel `expertise` is.
-En dat er daarom ook geen vertalingen beschikbaar zijn. Dit moet de club aanmoedigen om het te corrigeren.
-Een mogelijk afloop is ook dat een nieuw `expertise` geaccepteerd wordt als officieel `expertise`
-De haakjes en waarschuwing verdwijnen dan automatisch zodra het trefwoord officieel wordt.
+Voorbeeld: ergens staat "Model" ipv b.v. "Portait".
+De app toont "(Model)". De haakjes en een pop-up geven aan dat dit momenteel geen officeel `expertise` is.
+De app meldt expliciet dat daardoor geen vertaling beschikbaar is. Dit moet de club aanmoedigen om het te corrigeren.
+Maar één mogelijk afloop is dat "Model" later gepromoveerd wordt tot een officieele `expertise`.
+De haakjes en waarschuwing verdwijnen dan automatisch op het moment dat de app kan zien dat "Model" nu een officieele `expertise` is.
 </details></p>
 
 </li>
