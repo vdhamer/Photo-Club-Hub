@@ -1,4 +1,6 @@
-### 2.8.0 (GitHub commit ???????) ??-04-25
+### 2.8.0 (GitHub commit ???????) ??-06-25
+
+* Keyword is renamed to Expertise
 
 Code Maintenance
 * Removed unused duplicate files
@@ -15,8 +17,9 @@ Data Maintenance
 
 Documentation
 * Updated dataModel.png in README.md
+* New FAQ (in Dutch) Level2_expertise_NL.md
 
-This build #4638 was made using Xcode 16.3
+This build #4638 was made using Xcode 16.4 RC1
 
 ---------------------------------------------------------------------------
 

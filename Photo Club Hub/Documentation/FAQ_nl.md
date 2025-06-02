@@ -642,6 +642,7 @@ Vast wel. Zie tabel:
 | FAQ (dit document) | [tinyurl.com/fchFAQnl](https://tinyurl.com/fchFAQnl) | ✓ | |
 | Een level2.json bestand aanmaken voor een club | [tinyurl.com/Level2aanmaken](https://tinyurl.com/Level2aanmaken) | ✓ | |
 | Creating a new level2.json file for your club | [tinyurl.com/Level2creation](https://tinyurl.com/Level2creation) | | ✓ |
+| FAQ over `expertise` in level2.json bestanden | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/Level2_expertise_NL.md) | ✓ | |
 | Readme Photo Club Hub | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/.github/README.md) | | ✓ |
 | Readme Photo Club Hub HTML | [link](https://github.com/vdhamer/Photo-Club-Hub-HTML/blob/main/.github/README.md) | | ✓ |
 | Interne readme in Photo Club Hub app | ingebouwd | ✓ | ✓ |
