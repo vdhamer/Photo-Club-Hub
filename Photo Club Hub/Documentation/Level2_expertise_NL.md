@@ -43,10 +43,16 @@ Hiermee kan je zien welke er zijn, wat hun uitleg is, en hoeveel fotografen ze v
 
 </li><li>
 
-### Wat is het nut van expertises aanmelden?
+### Wat is de bedoeling eigenlijk?
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
-x
+Stel dat er tien, honderd of zelfs duizend clubs meedoen met ieder zeg 20 leden.
+Dan zijn er 200, 2000 of zelfs 20000 fotografen bekend in de app. 
+De app bevat nu al zoekfuncties op naam van de fotograaf (en op naam/locaatie van de club).
+Hier vind je bekenden mee. Expertisegebieden maakt het mogelijk om voor jou interessante personen te ontdekken.
+
+Analogie met Google Search: soms zoek je om iets terug te vinden waarvan je weet dat het bestaat.
+Maar vaker zoek je wat er beschikbaar is op een bepaald gebied.  
 </details></p>
 
 </li><li>
