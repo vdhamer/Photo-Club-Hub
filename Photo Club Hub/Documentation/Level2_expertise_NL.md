@@ -115,17 +115,17 @@ Sommige fotografen hebben nu eenmaal geen of nog geen herkenbaar specialisme.
 ### Hoeveel trefwoorden komen er?
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
-Dat moet blijken. Criteria:
+Dat moet blijken. Criteria:</p>
 
-- Wikipedia gebieden t.a.v. onderwerp ("portret") of techniek ("zwart/wit") zijn hoe dan ook prima.
+- Wikipedia gebieden t.a.v. fotografieonderwerp ("portret") of techniek ("zwart/wit") zijn hoe dan ook prima.
 - Het moet vrij duidelijk zijn wat eronder valt.
-- Liefst weinig overlap met bestaande gebieden, "Natuur" is b.v. onhandig als er ook "landschappen" en "wilde dieren" categorieen zijn.
+- Liefst weinig overlap met bestaande gebieden. "Natuur" is b.v. onhandig als er ook "landschappen" en "wilde dieren" categorieën zijn.
 - Er moeten meerdere beoefenaars te verwachten zijn. Maar het hoeven niet veel te zijn.
 - Die beoefenaars moeten zichzelf als (amateur)fotografen zien. Bij een eventuele bespreking zou het om de fotografie en niet het gefotografeerde moeten gaan.
 
-Naarmate er meer fotografen aan boord komen, zal de lijst geleidelijk doorgroeien. Van de hudige 20 richting b.v. 100.
-We moeten proberen onder de 100 te blijven (ook bij veel fotografen) omdat dit problemen gaat geven met met 
-vinden en kiezen van trefwoorden (architectuur vs wolkenkrabbers). 
+Naarmate er meer fotografen aan boord komen, zal de lijst geleidelijk groeien.
+We willen proberen onder de 100 te blijven (ook bij veel fotografen) omdat dit anders problemen geeft met 
+kiezen en gebruik van "vakjes" (architectuur vs kathedralen). 
 </details></p>
 
 </li><li>
@@ -133,7 +133,14 @@ vinden en kiezen van trefwoorden (architectuur vs wolkenkrabbers).
 ### Fijnmazigheid?
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
-x
+Een klein expertisegebied met slechts een handjevol beoefenaars hoeft geen probleem te zijn.
+Het is namelijk voor die beoefenaars en geinteresseerden juist extra waardevol. 
+  
+Dit is net als bij liefhebbers van bijzondere categorieen muziek of boeken.
+Maar het is handig als het minimale overlap geeft met andere categorieën.
+Het moet echter ook weer niet zo klein is dat er maar 1 persoon belangstelling in heeft. 
+
+Een te grote expertisegebied ("buitenfotografie") levert minder waarde, en geeft kans op oplap met andere categorieën ("landschap", "street").
 </details></p>
 
 </li><li>
@@ -141,7 +148,7 @@ x
 ### Wie beheert de lijst met trefwoorden?
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
-x
+Vooralsnog de maker(s) van de app. Het is echter een dienstverlening, en men moet voortdurend contact houden met gebruikers.
 </details></p>
 
 </li><li>
@@ -149,7 +156,9 @@ x
 ### Project versus specialisme?
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
-x
+Een langlopend project kan lijken op een expertise: iemand kan er bekend om zijn.
+Maar er zijn verschillen: Het project is in principe van tijdelijke aard. 
+En een expertise is vaak algemener en kan dus van pas komen bij meerdere projekten.
 </details></p>
 
 </li></ul>
