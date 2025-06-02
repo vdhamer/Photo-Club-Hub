@@ -14,6 +14,7 @@ Data Maintenance
 * Mentioned fkGestel in Level2_aanmaken_NL.md
 * Updated usage text for keywords in root.level0.json
 * Minor update to XampleMin and XampleMax demo files
+* Added Level 2 for fgOirschot and fcEricema
 
 Documentation
 * Updated dataModel.png in README.md

@@ -16,7 +16,7 @@ class XampleMinMembersProvider {
 
         if synchronousWithRandomTown {
             bgContext.performAndWait { // ...or execute same block synchronously
-                self.insertOnlineMemberData(bgContext: bgContext, town: randomTown)
+                insertOnlineMemberData(bgContext: bgContext, town: randomTown)
             }
         } else {
             bgContext.perform { // execute block asynchronously...
@@ -27,13 +27,13 @@ class XampleMinMembersProvider {
     }
 
     fileprivate func insertOnlineMemberData(bgContext: NSManagedObjectContext, town: String = "Rotterdam") {
-        let fgIdPlus = OrganizationIdPlus(fullName: "Xample Club Min",
-                                          town: town,
-                                          nickname: "XampleMin")
+        let idPlus = OrganizationIdPlus(fullName: "Xample Club Min",
+                                        town: town,
+                                        nickname: "XampleMin")
 
         let club = Organization.findCreateUpdate(context: bgContext,
                                                  organizationTypeEnum: .club,
-                                                 idPlus: fgIdPlus,
+                                                 idPlus: idPlus,
                                                  // real coordinates added in XampleMin.level2.json
                                                  coordinates: CLLocationCoordinate2DMake(0, 0),
                                                  optionalFields: OrganizationOptionalFields() // empty fields
@@ -47,7 +47,7 @@ class XampleMinMembersProvider {
         do {
             try bgContext.save()
         } catch {
-            ifDebugFatalError("Failed to save club \(fgIdPlus.nickname)", file: #fileID, line: #line)
+            ifDebugFatalError("Failed to save club \(idPlus.nickname)", file: #fileID, line: #line)
         }
 
     }
