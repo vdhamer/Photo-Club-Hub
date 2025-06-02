@@ -46,13 +46,10 @@ Hiermee kan je zien welke er zijn, wat hun uitleg is, en hoeveel fotografen ze v
 ### Wat is de bedoeling eigenlijk?
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
-Stel dat er tien, honderd of zelfs duizend clubs meedoen met ieder zeg 20 leden.
-Dan zijn er 200, 2000 of zelfs 20000 fotografen bekend in de app. 
+Stel dat er tien, honderd of zelfs duizend clubs meedoen met ieder 20 leden.
+Dan zijn er 200, 2000 of zelfs 20.000 fotografen bekend in de app. 
 De app bevat nu al zoekfuncties op naam van de fotograaf (en op naam/locaatie van de club).
-Hier vind je bekenden mee. Expertisegebieden maakt het mogelijk om voor jou interessante personen te ontdekken.</p>
-
-Analogie met Google Search: soms zoek je om iets terug te vinden waarvan je weet dat het bestaat.
-Maar vaker zoek je iets waarvan je niet vooraf weet wat het antwoord zou moeten zijn.  
+Hier vind je bekenden mee. Expertisegebieden maakt het daarentegen om interessante fotografen te ontdekken die je nog niet kende.
 </details></p>
 
 </li><li>
