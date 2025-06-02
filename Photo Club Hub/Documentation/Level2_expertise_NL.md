@@ -12,7 +12,7 @@ Deze FAQ gaat over het doel en optimale gebruik van het begrip expertise.
 
 <li>
 
-### Wat betekent `trefwoord` hier?
+### Wat betekent `expertise` hier?
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 In ondermeer Adobe Lightroom kan je trefwoorden hangen aan individuele foto's
@@ -26,7 +26,7 @@ Hiermee kan iemand Rob ontdekken als men belangstelling heeft in b.v. "conceptue
 
 </li><li>
 
-### Wat ziet een gebruiker van de trefwoorden?
+### Wat ziet een gebruiker van deze expertises?
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 
@@ -47,7 +47,7 @@ Hiermee kan je zien welke trefwoorden er zijn, met wat statistieken.
 
 </li><li>
 
-### Wat is het nut van trefwoorden?
+### Wat is het nut van expertises aanmelden?
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 x
@@ -55,7 +55,7 @@ x
 
 </li><li>
 
-### Hoeveel trefwoorden per clublid?
+### Hoeveel expertises per clublid?
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 x
@@ -63,7 +63,7 @@ x
 
 </li><li>
 
-### Hoe groeit de lijst met trefwoorden?
+### Welke expertisegebieden zijn beschikbaar?
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 x
