@@ -222,7 +222,8 @@ mag Jan dat verder regelen. Bijvoorbeeld door de `expertises` bij 1 club weg te 
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 Bij 3 of meer expertisegebieden, toont de app "(Teveel Expertises)" op de plek van het 3e element.
-Door het aan te raken of te klikken zie je dan een tijdelijke pop-up met de complete lijst.
+Door het aan te raken of te klikken zie je dan een tijdelijke pop-up met de complete lijst met 3 of meer expertises.
+Dit moet de club aanmoedigen om het te corrigeren.
 </details></p>
 
 </li><li>
@@ -230,7 +231,12 @@ Door het aan te raken of te klikken zie je dan een tijdelijke pop-up met de comp
 ### Meerdere soorten trefwoorden?
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
-x
+Wat gebeurt als een Level 2 bestand een onbekende `expertise` bevat dat niet bekend is in de app?
+Voorbeeld: ergens staat "Sepia" ipv "Black & White" (de officiele versie).
+De app toont "(Sepia)". De haakjes en een pop-up geven aan dat dit geen officeel `expertise` is.
+En dat er daarom ook geen vertalingen beschikbaar zijn. Dit moet de club aanmoedigen om het te corrigeren.
+Een mogelijk afloop is ook dat een nieuw `expertise` geaccepteerd wordt als officieel `expertise`
+De haakjes en waarschuwing verdwijnen dan automatisch zodra het trefwoord officieel wordt.
 </details></p>
 
 </li>
