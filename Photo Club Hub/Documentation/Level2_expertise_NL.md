@@ -70,7 +70,7 @@ langdurig moet bladeren voordat je foto's tegenkomt die je als architectuurfoto'
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 In de iOS versie van de app staat alle beschikbare expertisegebieden helemaal onderaan de `Namenlijst` pagina (zoek op "expertise" of "zzz").
-Deze lijst is dynamisch (online opgehaald): het kan dat er volgende week een nieuw gebied bijgekomen is.</p>
+Deze lijst is dynamisch (online opgehaald): het kan dat er volgende week een nieuw gebied bijgekomen is. Momenteel zijn het er ruim 20.</p>
 
 De HTML versie krijgt wellicht een extra pagina met diezelfde lijst. 
 Verder kan je de actuele lijst (in JSON formaat) [hier](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/root.level0.json) inzien.
