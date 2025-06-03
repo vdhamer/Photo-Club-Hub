@@ -115,9 +115,9 @@ extension PhotoClubHubApp {
         }
 
         // load current/former members of Fotogroep Oirschot
-//         let oirschotBackgroundContext = makeBgContext(ctxName: "Level 2 loader fgOirschot")
-//         _ = FotogroepOirschotMembersProvider(bgContext: oirschotBackgroundContext,
-//                                             useOnlyInBundleFile: false)
+         let oirschotBackgroundContext = makeBgContext(ctxName: "Level 2 loader fgOirschot")
+         _ = FotogroepOirschotMembersProvider(bgContext: oirschotBackgroundContext,
+                                             useOnlyInBundleFile: false)
 
     }
 

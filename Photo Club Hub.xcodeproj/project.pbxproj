@@ -65,6 +65,7 @@
 		D0A0B6852AA930E90078DE9A /* Photo_Club_Hub.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D0A0B6832AA930E90078DE9A /* Photo_Club_Hub.xcdatamodeld */; };
 		D0A615792D91B7A00024EC9E /* fcBellusImago.level2.json in Resources */ = {isa = PBXBuildFile; fileRef = D0A615782D91B7A00024EC9E /* fcBellusImago.level2.json */; };
 		D0A615CF2D9218030024EC9E /* fgWaalre.level2.json in Resources */ = {isa = PBXBuildFile; fileRef = D0A615B22D920C5B0024EC9E /* fgWaalre.level2.json */; };
+		D0ACCEC32DEF90360002FACC /* FotogroepOirschot.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0273E5B2DEE460E00C4F5E1 /* FotogroepOirschot.swift */; };
 		D0ADF4AE27922DCA00535432 /* MemberRolesAndStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ADF4AD27922DCA00535432 /* MemberRolesAndStatus.swift */; };
 		D0AE1B7527889E8600E0100E /* OrganizationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AE1B7427889E8600E0100E /* OrganizationListView.swift */; };
 		D0AE1B782788A19500E0100E /* WhoIsWhoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AE1B772788A19500E0100E /* WhoIsWhoListView.swift */; };
@@ -949,6 +950,7 @@
 				D0A0B6852AA930E90078DE9A /* Photo_Club_Hub.xcdatamodeld in Sources */,
 				D0EEF48F2C2844290086419D /* Settings.swift in Sources */,
 				D0831A22277F72270049AB84 /* MemberPortfolioListView.swift in Sources */,
+				D0ACCEC32DEF90360002FACC /* FotogroepOirschot.swift in Sources */,
 				D0C8E3A22BB81B4A00348D97 /* ItemFilterStatsView.swift in Sources */,
 				D0AE1B7527889E8600E0100E /* OrganizationListView.swift in Sources */,
 				D0E694C927EF9B450054D634 /* LockAnimationView.swift in Sources */,
