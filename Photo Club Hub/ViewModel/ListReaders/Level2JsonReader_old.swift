@@ -7,81 +7,127 @@
 
 // import SwiftyJSON // now used as a single file
 import CoreData // for NSManagedObjectContext
-import SwiftyJSON // for JSON struct
 import CoreLocation // for CLLocationCoordinate2D
+import SwiftyJSON // for JSON struct
 
-// see xampleMin.level2.json or xampleMax.level2.json for syntax examples
+// see xampleMin.level2.json and xampleMax.level2.json for syntax examples
 
-public class Level2JsonReader { // normally running on a background thread
+class Level2JsonReader { // normally running on a background thread
 
-    // init() does it all: it fetches the JSON data, parses it, and updates the data stored in Core Data.
-    public init(bgContext: NSManagedObjectContext,
-                organizationIdPlus: OrganizationIdPlus,
-                isInTestBundle: Bool,
-                useOnlyInBundleFile: Bool = false // true avoids fetching the latest version from GitHub
-               ) {
-        _ = FetchAndProcessFile( // FetchAndProcessFile fetches jsonData and passes it to readRootLevel2Json()
-                                bgContext: bgContext,
-                                fileSelector: FileSelector(organizationIdPlus: organizationIdPlus,
-                                                           isInTestBundle: isInTestBundle),
-                                fileType: "json",
-                                fileSubType: "level2", // "fgDeGender.level2.json"
-                                useOnlyInBundleFile: useOnlyInBundleFile,
-                                fileContentProcessor: readRootLevel2Json(bgContext:jsonData:fileSelector:)
-                               )
+    enum MergeError: Error {
+        case invalidJsonData(String)
+        case clubNotFound(String)
+        case mismatchedNameTown(String)
+        case saveFailed
     }
 
-    fileprivate func readRootLevel2Json(bgContext: NSManagedObjectContext,
-                                        jsonData: String,
-                                        fileSelector: FileSelector) {
+    // init() does all the work: it fetches the JSON data, parses it, and updates the data stored in Core Data.
+    init(bgContext: NSManagedObjectContext,
+         urlComponents: UrlComponents, // what to parse
+         club: Organization, // club who's data we are supposed to be receiving via this url
+         useOnlyFile: Bool = false) {
 
-        guard fileSelector.organizationIdPlus != nil else { // need id of a club
-            fatalError("Missing `targetIdorganizationIdPlus` in readRootLevel2Json()")
+        if let jsonData = getJsonData(urlComponents: urlComponents,
+                                      useOnlyFile: useOnlyFile) { // fetch JSON level 2 as String
+            do {
+                try mergeLevel2Json(bgContext: bgContext, // for database access on this thread
+                                    jsonData: jsonData, // string to parse
+                                    club: club, // club that this level2.json file should describe
+                                    urlComponents: urlComponents) // used for logging messages
+            } catch MergeError.invalidJsonData(let message) {
+                ifDebugFatalError("Error reading file \(urlComponents.shortName): \(message)")
+            } catch MergeError.mismatchedNameTown(let message) {
+                ifDebugFatalError("Error reading file \(urlComponents.shortName): \(message)")
+            } catch MergeError.saveFailed {
+                ifDebugFatalError("Error: failed to save \(urlComponents.shortName) data to Core Data")
+            } catch {
+                ifDebugFatalError("An unexpected error occurred in Level2JsonReader: \(error)")
+            }
         }
-        let targetIdPlus: OrganizationIdPlus = fileSelector.organizationIdPlus! // safe due to preceding guard statement
-        ifDebugPrint("Loading members of club \(targetIdPlus.fullName) in background.")
+
+    }
+
+    // Fetch the JSON content and returns it as a String. If there is an error, it returns `nil` instead.
+    fileprivate func getJsonData(urlComponents: UrlComponents, useOnlyFile: Bool) -> String? {
+
+        guard let url = URL(string: urlComponents.fullURLstring)
+            else { return nil } // not a valid URL
+
+        // if fetching online works, and is allowed, this has priority over fetching from app bundle
+        if let jsonDataFetchedOnline: String = try? String(contentsOf: url, encoding: .utf8), !useOnlyFile {
+            guard !jsonDataFetchedOnline.isEmpty else { return nil }
+            return jsonDataFetchedOnline // got the requested JSON from an online URL (preferred option)
+        }
+
+        print("Could not access online file \(url.relativeString).")
+        // last chance: fetch json data from app bundle
+        guard let filePath: String = Bundle.main.path(forResource: urlComponents.dataSourceFile + "." +
+                                                      urlComponents.fileSubType,
+                                                      ofType: urlComponents.fileType)
+        else {
+            ifDebugFatalError("Could not access local file \(urlComponents.shortName).")
+            return nil
+        } // can't locate file within main app bundle
+
+        // get the requested JSON from a file in the main app bundle
+        if let fileData = try? String(contentsOfFile: filePath, encoding: .utf8) {
+            return fileData.isEmpty ? nil : fileData
+        } else {
+            // calling fatalError is ok for a compile-time constant (as defined above)
+            ifDebugFatalError("Cannot load Level 2 file \(urlComponents.fullURLstring)")
+            return nil
+        }
+    }
+
+    fileprivate func mergeLevel2Json(bgContext: NSManagedObjectContext,
+                                     jsonData: String,
+                                     club: Organization,
+                                     urlComponents: UrlComponents) throws {
+
+        ifDebugPrint("Loading members of \(club.fullNameTown) from \(urlComponents.shortName) in background.")
 
         let jsonRoot: JSON = JSON(parseJSON: jsonData) // pass the data to SwiftyJSON to parse
         guard jsonRoot["club"].exists() else {
-            ifDebugFatalError("Cannot find `club` keyword for club \(targetIdPlus.fullName)")
-            return
-        }
+            throw MergeError.invalidJsonData("Cannot find club keyword in \(urlComponents.shortName)") }
 
         let jsonClub: JSON = jsonRoot["club"]
         guard jsonClub["idPlus"].exists() else {
-            ifDebugFatalError("Cannot find `idPlus` keyword for club \(targetIdPlus.fullName)")
-            return
-        }
+            throw MergeError.invalidJsonData("Cannot find idPlus keyword in \(urlComponents.shortName)") }
 
         let jsonIdPlus: JSON = jsonClub["idPlus"]
-        let idPlus = OrganizationIdPlus(fullName: jsonIdPlus["fullName"].stringValue, // idPlus found inside JSON file
+        if !isDebug() {
+            // Only load Level2 files for clubs already listed in a Level1 file.
+            // But skip this checking when in DEBUG mode (=developers).
+            // And, when in RELEASE mode, this aborts mergeLevel2Json with a string printed - which nobody will see.
+            guard jsonIdPlus["town"].stringValue == club.town && jsonIdPlus["fullName"].stringValue == club.fullName
+                else { throw MergeError.mismatchedNameTown("""
+                                                           Error: mismatched Name/Town for club \
+                                                           \(club.fullNameTown) in \(urlComponents.shortName)
+                                                           """) }
+        }
+        let idPlus = OrganizationIdPlus(fullName: jsonIdPlus["fullName"].stringValue,
                                         town: jsonIdPlus["town"].stringValue,
                                         nickname: jsonIdPlus["nickName"].stringValue)
-
-        guard idPlus.fullName == targetIdPlus.fullName else { // does fine contain the right club?
-            ifDebugFatalError("""
-                              Warning: JSON file for club \(targetIdPlus.fullName) \
-                              contains club \(idPlus.fullName) instead.
-                              """)
-            return // in non-debug software, just don't load the file
-        }
-
-        // normally  the club already exists, but if not.. create it
-        let club: Organization = Organization.findCreateUpdate(context: bgContext,
-                                                               organizationTypeEnum: OrganizationTypeEnum.club,
-                                                               idPlus: idPlus)
 
         // optional fields within jsonClub
         if jsonClub["optional"].exists() {
             loadClubOptionals(bgContext: bgContext,
                               jsonOptionals: jsonClub["optional"],
                               club: club)
+        } else {
+            // no club/optional fields, so just create a basic club - for what it's worth.
+            _ = Organization.findCreateUpdate(context: bgContext,
+                                              organizationTypeEnum: OrganizationTypeEnum.club,
+                                              idPlus: idPlus,
+                                              coordinates: CLLocationCoordinate2DMake(0, 0),
+                                              optionalFields: OrganizationOptionalFields() // empty
+                                             )
         }
 
         if jsonRoot["members"].exists() { // could be empty (although level2.json file would only contain club data)
             let members: [JSON] = jsonRoot["members"].arrayValue
             for member in members {
-                loadMember(bgContext: bgContext, member: member, club: club)
+                loadMember(bgContext: bgContext, member: member, club: club, urlComponents: urlComponents)
             }
         }
 
@@ -90,10 +136,11 @@ public class Level2JsonReader { // normally running on a background thread
                 try bgContext.save() // persist contents of entire Level2.json file
             }
         } catch {
-            ifDebugFatalError("Failed to save changes to Core Data", file: #fileID, line: #line)
+            ifDebugFatalError("Failed to save changes to Core Data",
+                              file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
             // in release mode, the failed database update is only logged. App doesn't stop.
             ifDebugPrint("Failed to save JSON ClubList items in background")
-            ifDebugFatalError("Error: failed to save Level 2 changes to Core Data")
+            throw MergeError.saveFailed /*"Error: failed to save Level 2 changes to Core Data"*/
        }
 
         ifDebugPrint("Completed mergeLevel2Json() in background")
@@ -101,12 +148,13 @@ public class Level2JsonReader { // normally running on a background thread
 
     fileprivate func loadMember(bgContext: NSManagedObjectContext,
                                 member: JSON,
-                                club: Organization) {
+                                club: Organization,
+                                urlComponents: UrlComponents) { // for error messages only (data might come from bundle)
         guard member["name"].exists(),
               member["name"]["givenName"].exists(),
               // if member["name"]["givenName"] doesn't exist, SwiftyJSON returns ""
               member["name"]["familyName"].exists() else { // check for mandatory fields
-            ifDebugFatalError("Missing or incomplete member/name data in \(club.id.fullName)")
+            ifDebugFatalError("Missing or incomplete member/name data in \(urlComponents.shortName)")
             return
         }
         let givenName: String = member["name"]["givenName"].stringValue
@@ -115,7 +163,8 @@ public class Level2JsonReader { // normally running on a background thread
         print("""
                   Member "\(givenName) \
                   \(infixName=="" ? "" : infixName + " ")\
-                  \(familyName)" found in \(club.id.fullName)
+                  \(familyName)" \
+                  found in \(urlComponents.shortName)
                   """)
         let photographer = Photographer.findCreateUpdate(context: bgContext,
                                                          personName: PersonName(
@@ -160,7 +209,8 @@ public class Level2JsonReader { // normally running on a background thread
 
         _ = Organization.findCreateUpdate(context: bgContext,
                                           organizationTypeEnum: OrganizationTypeEnum.club,
-                                          idPlus: OrganizationIdPlus(fullName: club.fullName, town: club.town,
+                                          idPlus: OrganizationIdPlus(id: OrganizationID(fullName: club.fullName,
+                                                                                     town: club.town),
                                                                      nickname: club.nickname),
                                           coordinates: coordinates,
                                           optionalFields: OrganizationOptionalFields(

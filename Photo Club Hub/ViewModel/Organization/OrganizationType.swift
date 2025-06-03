@@ -7,7 +7,7 @@
 
 import CoreData
 
-extension OrganizationType {
+public extension OrganizationType {
 
     @available(*, unavailable)
     convenience init() {
@@ -139,7 +139,7 @@ extension OrganizationType {
 
 }
 
-enum OrganizationTypeEnum: String, CaseIterable, Sendable, Hashable {
+public enum OrganizationTypeEnum: String, CaseIterable, Sendable, Hashable {
 
     case club // rawValue automatically set to "club"
     case museum
@@ -149,7 +149,7 @@ enum OrganizationTypeEnum: String, CaseIterable, Sendable, Hashable {
         self.rawValue
     }
 
-    var unlocalizedPlural: String {
+    public var unlocalizedPlural: String {
         self.rawValue + "s" // "museums" as used in parsing root.level1.json file
     }
 

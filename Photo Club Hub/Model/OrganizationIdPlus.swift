@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct OrganizationIdPlus: Sendable { // PhotoClubID plus non-identifying nickname
+public struct OrganizationIdPlus: Sendable { // PhotoClubID plus non-identifying nickname
     var id: OrganizationID
-    var nickname: String
+    public var nickname: String
 
     init(fullName: String, // initializer hides PhotoClubId level
          town: String,
@@ -26,11 +26,17 @@ struct OrganizationIdPlus: Sendable { // PhotoClubID plus non-identifying nickna
     }
 
     // convenience functions
-    var fullName: String { id.fullName }
-    var town: String { id.town }
+    public var fullName: String { id.fullName }
+    public var town: String { id.town }
 }
 
 public struct OrganizationID: Hashable, Sendable { // hashable because PhotoClubId is used as dictionary key
+
+    public init(fullName: String, town: String) {
+        self.fullName = fullName
+        self.town = town
+    }
+
     var fullName: String
     var town: String
 }

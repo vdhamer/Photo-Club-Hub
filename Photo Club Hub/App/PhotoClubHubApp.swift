@@ -76,21 +76,25 @@ extension PhotoClubHubApp {
         genderBackgroundContext.name = "FG de Gender"
         genderBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         genderBackgroundContext.automaticallyMergesChangesFromParent = true
-        _ = FotogroepDeGenderMembersProvider(bgContext: genderBackgroundContext)
+//        _ = FotogroepDeGenderMembersProvider(bgContext: genderBackgroundContext) TODO uncomment
 
         // load all current/former members of Fotogroep Waalre
         let waalreBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
         waalreBackgroundContext.name = "Fotogroep Waalre"
         waalreBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         waalreBackgroundContext.automaticallyMergesChangesFromParent = true
-        _ = FotogroepWaalreMembersProvider(bgContext: waalreBackgroundContext)
+//        _ = FotogroepWaalreMembersProvider(bgContext: waalreBackgroundContext) // TODO uncomment
 
         // load all current/former members of Fotoclub Bellus Imago
         let bellusBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
         bellusBackgroundContext.name = "Fotoclub Bellus Imago"
         bellusBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         bellusBackgroundContext.automaticallyMergesChangesFromParent = true
-        _ = FotoclubBellusImagoMembersProvider(bgContext: bellusBackgroundContext)
+//        _ = FotoclubBellusImagoMembersProvider(bgContext: bellusBackgroundContext) // TODO uncomment
+
+        // load current/former members of Fotoclub Ericamera
+        let ericameraBackgroundContext = makeBgContext(ctxName: "Level 2 loader fcEricamera")
+        _ = FotoclubEricameraMembersProvider(bgContext: ericameraBackgroundContext, useOnlyInBundleFile: false)
 
         if includeXampleClubs {
 
@@ -99,15 +103,31 @@ extension PhotoClubHubApp {
             xampleMinBackgroundContext.name = "XampleMin"
             xampleMinBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
             xampleMinBackgroundContext.automaticallyMergesChangesFromParent = true
-            _ = XampleMinMembersProvider(bgContext: xampleMinBackgroundContext)
+//            _ = XampleMinMembersProvider(bgContext: xampleMinBackgroundContext) // uncomment
 
             // load test member(s) of XampleMax. Club is called XampleMax (rather than ExampleMax) to be at end of list
             let xampleMaxBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
             xampleMaxBackgroundContext.name = "XampleMax"
             xampleMaxBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
             xampleMaxBackgroundContext.automaticallyMergesChangesFromParent = true
-            _ = XampleMaxMembersProvider(bgContext: xampleMaxBackgroundContext)
+//            _ = XampleMaxMembersProvider(bgContext: xampleMaxBackgroundContext) // TODO uncomment
 
         }
+
+        // load current/former members of Fotogroep Oirschot
+//         let oirschotBackgroundContext = makeBgContext(ctxName: "Level 2 loader fgOirschot")
+//         _ = FotogroepOirschotMembersProvider(bgContext: oirschotBackgroundContext,
+//                                             useOnlyInBundleFile: false)
+
+    }
+
+    static func makeBgContext(ctxName: String) -> NSManagedObjectContext {
+
+        let bgContext = PersistenceController.shared.container.newBackgroundContext()
+        bgContext.name = ctxName
+        bgContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+        bgContext.automaticallyMergesChangesFromParent = true // to push ObjectTypes to bgContext?
+        return bgContext
+
     }
 }

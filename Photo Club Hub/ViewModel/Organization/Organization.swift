@@ -56,7 +56,7 @@ extension Organization {
         }
     }
 
-	var fullName: String {
+	public var fullName: String {
 		get { return fullName_ ?? "DefaultPhotoClubName" }
 		set { fullName_ = newValue }
 	}
@@ -67,7 +67,7 @@ extension Organization {
     // "Fotogroep Waalre" and "waalre" returns "Fotogroep Waalre"
     // "Fotogroep Waalre" and "to" returns "Fotogroep Waalre (to)"
     // "Fotogroep Waalre" and "Waal" returns "Fotogroep Waalre (Waal)" if you use NLP-based word matching
-    @objc var fullNameTown: String { // @objc needed for SectionedFetchRequest's sectionIdentifier
+    @objc public var fullNameTown: String { // @objc needed for SectionedFetchRequest's sectionIdentifier
         if fullName.containsWordUsingNLP(targetWord: town) {
             fullName // fullname "Fotogroep Waalre" and town "Waalre" returns "Fotogroep Waalre"
         } else {
@@ -104,11 +104,11 @@ extension Organization {
 
     var localizedCountry: String {
         /*
-            LocalizedCountry is retrieved from the CoreData database, where it is not optional.
-            It is calculated using the mandatory GPS coordinates using reverseGeolocation.
-            During this reverseGeolocation, the string is automatically adapted to the current locale.
-            Example: Paris returns localizedCountry="Frankrijk" if the device is set to Dutch.
-        */
+         LocalizedCountry is retrieved from the CoreData database, where it is not optional.
+         It is calculated using the mandatory GPS coordinates using reverseGeolocation.
+         During this reverseGeolocation, the string is automatically adapted to the current locale.
+         Example: Paris returns localizedCountry="Frankrijk" if the device is set to Dutch.
+         */
         get { return localizedCountry_ ?? "ErrorCountry" }
         set { localizedCountry_ = newValue}
     }
@@ -167,13 +167,13 @@ extension Organization {
 
 	// Find existing organization or create a new one
 	// Update new or existing organization's attributes
-    static func findCreateUpdate(context: NSManagedObjectContext, // can be foreground or background context
-                                 organizationTypeEnum: OrganizationTypeEnum,
-                                 idPlus: OrganizationIdPlus,
-                                 coordinates: CLLocationCoordinate2D,
-                                 removeOrganization: Bool = false, // used to remove records for org's that disappeared
-                                 optionalFields: OrganizationOptionalFields,
-                                 pinned: Bool = false) -> Organization {
+    public static func findCreateUpdate(context: NSManagedObjectContext, // can be foreground or background context
+                                        organizationTypeEnum: OrganizationTypeEnum,
+                                        idPlus: OrganizationIdPlus,
+                                        coordinates: CLLocationCoordinate2D = CLLocationCoordinate2DMake(0, 0),
+                                        removeOrganization: Bool = false, // can remove records for removed org's
+                                        optionalFields: OrganizationOptionalFields = OrganizationOptionalFields(),
+                                        pinned: Bool = false) -> Organization {
 
         let predicateFormat: String = "fullName_ = %@ AND town_ = %@" // avoid localization
         // Note that organizationType is not an identifying attribute.
@@ -183,7 +183,7 @@ extension Organization {
                                                     idPlus.town] )
         let fetchRequest: NSFetchRequest<Organization> = Organization.fetchRequest()
         fetchRequest.predicate = predicate
-		let organizations: [Organization] = (try? context.fetch(fetchRequest)) ?? [] // EXC_BAD_ACCESS (code=1, address=0x100)
+		let organizations: [Organization] = (try? context.fetch(fetchRequest)) ?? []
 
         if organizations.count > 1 { // organization exists, but there shouldn't be multiple that satify the predicate
             ifDebugFatalError("Query returned \(organizations.count) organizations named " +
