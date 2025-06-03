@@ -110,8 +110,7 @@ extension PhotoClubHubApp {
             xampleMaxBackgroundContext.name = "XampleMax"
             xampleMaxBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
             xampleMaxBackgroundContext.automaticallyMergesChangesFromParent = true
-//            _ = XampleMaxMembersProvider(bgContext: xampleMaxBackgroundContext) // TODO uncomment
-
+            _ = XampleMaxMembersProvider(bgContext: xampleMaxBackgroundContext)
         }
 
         // load current/former members of Fotogroep Oirschot
