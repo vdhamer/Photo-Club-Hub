@@ -66,6 +66,10 @@
 		D0A615792D91B7A00024EC9E /* fcBellusImago.level2.json in Resources */ = {isa = PBXBuildFile; fileRef = D0A615782D91B7A00024EC9E /* fcBellusImago.level2.json */; };
 		D0A615CF2D9218030024EC9E /* fgWaalre.level2.json in Resources */ = {isa = PBXBuildFile; fileRef = D0A615B22D920C5B0024EC9E /* fgWaalre.level2.json */; };
 		D0ACCEC32DEF90360002FACC /* FotogroepOirschot.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0273E5B2DEE460E00C4F5E1 /* FotogroepOirschot.swift */; };
+		D0ACCED22DEF99800002FACC /* FotogroepDeGenderMembersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05414F62AC7499000D899D8 /* FotogroepDeGenderMembersProvider.swift */; };
+		D0ACCEE12DEF9B070002FACC /* FotogroepWaalreMembersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A2C277F72590049AB84 /* FotogroepWaalreMembersProvider.swift */; };
+		D0ACCEE22DEF9BCD0002FACC /* FotoclubBellusImagoMembersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A6155A2D91AEA90024EC9E /* FotoclubBellusImagoMembersProvider.swift */; };
+		D0ACCEE32DEF9CED0002FACC /* XampleMinMembersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D072D5E42D333E7500EA88DD /* XampleMinMembersProvider.swift */; };
 		D0ADF4AE27922DCA00535432 /* MemberRolesAndStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ADF4AD27922DCA00535432 /* MemberRolesAndStatus.swift */; };
 		D0AE1B7527889E8600E0100E /* OrganizationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AE1B7427889E8600E0100E /* OrganizationListView.swift */; };
 		D0AE1B782788A19500E0100E /* WhoIsWhoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AE1B772788A19500E0100E /* WhoIsWhoListView.swift */; };
@@ -270,10 +274,10 @@
 		D0F871892D403D1700530D10 /* fgDeGenderLeden.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = fgDeGenderLeden.xlsx; sourceTree = "<group>"; };
 		D0F8718B2D403D1700530D10 /* root.level0.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = root.level0.json; sourceTree = "<group>"; };
 		D0F8718C2D403D1700530D10 /* root.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = root.level1.json; sourceTree = "<group>"; };
-		D0F8718D2D403D1700530D10 /* xampleMax.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = xampleMax.level1.json; sourceTree = "<group>"; };
-		D0F8718E2D403D1700530D10 /* xampleMax.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = xampleMax.level2.json; sourceTree = "<group>"; };
-		D0F8718F2D403D1700530D10 /* xampleMin.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = xampleMin.level1.json; sourceTree = "<group>"; };
-		D0F871902D403D1700530D10 /* xampleMin.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = xampleMin.level2.json; sourceTree = "<group>"; };
+		D0F8718D2D403D1700530D10 /* XampleMax.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = XampleMax.level1.json; sourceTree = "<group>"; };
+		D0F8718E2D403D1700530D10 /* XampleMax.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = XampleMax.level2.json; sourceTree = "<group>"; };
+		D0F8718F2D403D1700530D10 /* XampleMin.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = XampleMin.level1.json; sourceTree = "<group>"; };
+		D0F871902D403D1700530D10 /* XampleMin.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = XampleMin.level2.json; sourceTree = "<group>"; };
 		D0F8719E2D403E5500530D10 /* readme.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
 		D0F999502AACE217005FA0FF /* Photo_Club_Hub_2_4_2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_4_2.xcdatamodel; sourceTree = "<group>"; };
 		D0FCF2E229B5517000F31442 /* VoteOnRoadmapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteOnRoadmapView.swift; sourceTree = "<group>"; };
@@ -702,10 +706,10 @@
 				D0F871882D403D1700530D10 /* fgDeGender.level2.json */,
 				D0F8718B2D403D1700530D10 /* root.level0.json */,
 				D0F8718C2D403D1700530D10 /* root.level1.json */,
-				D0F8718D2D403D1700530D10 /* xampleMax.level1.json */,
-				D0F8718E2D403D1700530D10 /* xampleMax.level2.json */,
-				D0F8718F2D403D1700530D10 /* xampleMin.level1.json */,
-				D0F871902D403D1700530D10 /* xampleMin.level2.json */,
+				D0F8718D2D403D1700530D10 /* XampleMax.level1.json */,
+				D0F8718E2D403D1700530D10 /* XampleMax.level2.json */,
+				D0F8718F2D403D1700530D10 /* XampleMin.level1.json */,
+				D0F871902D403D1700530D10 /* XampleMin.level2.json */,
 				D01238FE2DBF9B43000EAD8B /* fgDeGender_Trefwoorden.xlsx */,
 			);
 			path = JSON;
@@ -934,6 +938,8 @@
 				D0831A45277F731C0049AB84 /* String+CapitalizeFirstLetter.swift in Sources */,
 				D0831A1F277F72270049AB84 /* FilteredMemberPortfoliosView.swift in Sources */,
 				D02F88532C4C242C0043B25B /* String+Date.swift in Sources */,
+				D0ACCEE22DEF9BCD0002FACC /* FotoclubBellusImagoMembersProvider.swift in Sources */,
+				D0ACCED22DEF99800002FACC /* FotogroepDeGenderMembersProvider.swift in Sources */,
 				D0FE77E52BB9AEE900272077 /* ItemFilterStatsEnum.swift in Sources */,
 				D0C53BDD2ABF3ADF000722A1 /* PersonName.swift in Sources */,
 				D09816EC2D485375009D22FE /* SectionHeader.swift in Sources */,
@@ -960,6 +966,7 @@
 				D024F11628423BE60055021B /* Sounds.swift in Sources */,
 				D0795CEC294FCCC200FA62A8 /* ShapeStyle+Colors.swift in Sources */,
 				D0EB533C295775240061613B /* Crosshairs.swift in Sources */,
+				D0ACCEE32DEF9CED0002FACC /* XampleMinMembersProvider.swift in Sources */,
 				D0CA9B392D6B7739005428C0 /* LocalizedRemark.swift in Sources */,
 				D0621E892AE2E47B000FFADB /* MemberPortfolio+refreshFirstImage.swift in Sources */,
 				D06B70E42D5FE9A700B0DECB /* Model.swift in Sources */,
@@ -975,6 +982,7 @@
 				D0831A21277F72270049AB84 /* FilteredWhoIsWhoView.swift in Sources */,
 				D04DFD882B39F788006EF297 /* Published+UserDefaults.swift in Sources */,
 				D0831A35277F72590049AB84 /* PreferencesViewModel.swift in Sources */,
+				D0ACCEE12DEF9B070002FACC /* FotogroepWaalreMembersProvider.swift in Sources */,
 				D0D0912A2DBEE0AF00BD3919 /* LocalizedKeywordResult.swift in Sources */,
 				D081655F278616930078AB16 /* SinglePortfolioView.swift in Sources */,
 				D0831A47277F731C0049AB84 /* PersistenceController.swift in Sources */,

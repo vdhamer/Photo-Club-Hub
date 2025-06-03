@@ -76,21 +76,21 @@ extension PhotoClubHubApp {
         genderBackgroundContext.name = "FG de Gender"
         genderBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         genderBackgroundContext.automaticallyMergesChangesFromParent = true
-//        _ = FotogroepDeGenderMembersProvider(bgContext: genderBackgroundContext) TODO uncomment
+        _ = FotogroepDeGenderMembersProvider(bgContext: genderBackgroundContext)
 
         // load all current/former members of Fotogroep Waalre
         let waalreBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
         waalreBackgroundContext.name = "Fotogroep Waalre"
         waalreBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         waalreBackgroundContext.automaticallyMergesChangesFromParent = true
-//        _ = FotogroepWaalreMembersProvider(bgContext: waalreBackgroundContext) // TODO uncomment
+        _ = FotogroepWaalreMembersProvider(bgContext: waalreBackgroundContext)
 
         // load all current/former members of Fotoclub Bellus Imago
         let bellusBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
         bellusBackgroundContext.name = "Fotoclub Bellus Imago"
         bellusBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         bellusBackgroundContext.automaticallyMergesChangesFromParent = true
-//        _ = FotoclubBellusImagoMembersProvider(bgContext: bellusBackgroundContext) // TODO uncomment
+        _ = FotoclubBellusImagoMembersProvider(bgContext: bellusBackgroundContext)
 
         // load current/former members of Fotoclub Ericamera
         let ericameraBackgroundContext = makeBgContext(ctxName: "Level 2 loader fcEricamera")
@@ -103,7 +103,7 @@ extension PhotoClubHubApp {
             xampleMinBackgroundContext.name = "XampleMin"
             xampleMinBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
             xampleMinBackgroundContext.automaticallyMergesChangesFromParent = true
-//            _ = XampleMinMembersProvider(bgContext: xampleMinBackgroundContext) // uncomment
+            _ = XampleMinMembersProvider(bgContext: xampleMinBackgroundContext)
 
             // load test member(s) of XampleMax. Club is called XampleMax (rather than ExampleMax) to be at end of list
             let xampleMaxBackgroundContext = PersistenceController.shared.container.newBackgroundContext()

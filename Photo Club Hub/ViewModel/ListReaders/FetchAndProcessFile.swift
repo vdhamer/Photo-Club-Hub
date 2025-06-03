@@ -26,7 +26,7 @@ struct FetchAndProcessFile {
             let nameWithSubtype = (fileSelector.fileName) + "." + fileSubType // e.g. "root.level0"
 
 //            var bundle: Bundle = Bundle.module // overwritten by Test Bundle depending if fileSelector.isInTestBundle
-            let bundle: Bundle = .main // TODO fix
+            let bundle: Bundle = Bundle.main // TODO fix
 
 //            if fileSelector.isInTestBundle {
 //                let testUrl = Bundle.module.bundleURL.deletingLastPathComponent().appending(

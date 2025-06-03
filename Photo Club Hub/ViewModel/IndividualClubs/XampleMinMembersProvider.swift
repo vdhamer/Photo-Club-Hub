@@ -6,13 +6,13 @@
 //
 
 import CoreData // for PersistenceController
-import CoreLocation // for CLLocationCoordinate2DMake
 
-class XampleMinMembersProvider {
+public class XampleMinMembersProvider {
 
-    init(bgContext: NSManagedObjectContext,
-         synchronousWithRandomTown: Bool = false,
-         randomTown: String = "RandomTown") {
+    public init(bgContext: NSManagedObjectContext,
+                useOnlyInBundleFile: Bool = false,
+                synchronousWithRandomTown: Bool = false,
+                randomTown: String = "RandomTown") {
 
         if synchronousWithRandomTown {
             bgContext.performAndWait { // ...or execute same block synchronously
@@ -27,23 +27,19 @@ class XampleMinMembersProvider {
     }
 
     fileprivate func insertOnlineMemberData(bgContext: NSManagedObjectContext, town: String = "Rotterdam") {
-        let idPlus = OrganizationIdPlus(fullName: "Xample Club Min",
+        let idPlus = OrganizationIdPlus(fullName: "Xample Club With Minimal Data",
                                         town: town,
                                         nickname: "XampleMin")
 
         let club = Organization.findCreateUpdate(context: bgContext,
                                                  organizationTypeEnum: .club,
-                                                 idPlus: idPlus,
-                                                 // real coordinates added in XampleMin.level2.json
-                                                 coordinates: CLLocationCoordinate2DMake(0, 0),
-                                                 optionalFields: OrganizationOptionalFields() // empty fields
-        )
+                                                 idPlus: idPlus)
         ifDebugPrint("\(club.fullNameTown): Starting insertOnlineMemberData() in background")
 
         _ = Level2JsonReader(bgContext: bgContext,
-                             urlComponents: UrlComponents.xampleMin,
-                             club: club,
-                             useOnlyFile: false)
+                             organizationIdPlus: idPlus,
+                             isInTestBundle: false,
+                             useOnlyInBundleFile: false)
         do {
             try bgContext.save()
         } catch {
