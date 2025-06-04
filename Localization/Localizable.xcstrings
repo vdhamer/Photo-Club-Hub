@@ -994,6 +994,12 @@
     "There are %lld areas of expertise." : {
       "comment" : "Expertise statistics in footnote #4 of Who's Who screen",
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "There are %lld areas of expertise."
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",

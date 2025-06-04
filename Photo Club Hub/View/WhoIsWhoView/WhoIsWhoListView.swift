@@ -59,7 +59,7 @@ struct WhoIsWhoListView: View {
                 Divider()
                 Text("WhosWho_Caption_4",
                      comment: "Shown in gray at the bottom of the Who's Who page (3/3).")
-                ForEach(Keyword.getAll(context: viewContext), id: \.self) { keyword in
+                ForEach(Keyword.getAll(context: viewContext).sorted(by: sortKeywordsLocalized), id: \.self) { keyword in
                     HStack {
                         Text(verbatim: "   🏵️ \(keyword.selectedLocalizedKeyword.name)")
                         Text(PhotographerKeyword.count(context: viewContext, keywordID: keyword.id).description+"x")
@@ -97,6 +97,10 @@ struct WhoIsWhoListView: View {
                                           """)
         )
         .disableAutocorrection(true)
+    }
+
+    func sortKeywordsLocalized(lhs: Keyword, rhs: Keyword) -> Bool {
+        return lhs.selectedLocalizedKeyword.name < rhs.selectedLocalizedKeyword.name
     }
 
 }
