@@ -9,73 +9,42 @@ import CoreData // for NSManagedObjectContext
 import CoreLocation // for CLLocationCoordinate2D
 import SwiftyJSON // for JSON struct
 
-private let dataSourcePath: String = """
-                                     https://raw.githubusercontent.com/\
-                                     vdhamer/Photo-Club-Hub/\
-                                     main/JSON/
-                                     """
-private let dataSourceFile: String = "root"
-private let fileSubType = "level1" // level1 is part of file name, not the extension
-private let fileType = "json"
-private let organizationTypesToLoad: [OrganizationTypeEnum] = [.club, .museum]
+private let organizationTypesToLoad: [OrganizationTypeEnum] = [.club, .museum] // types are loaded one-by-one
 
-// see xampleMin.level1.json and xampleMax.level1.json for syntax examples
+// see XampleMin.level1.json and XampleMax.level1.json for syntax examples
 
-class Level1JsonReader {
+public class Level1JsonReader {
 
-    init(bgContext: NSManagedObjectContext,
-         useOnlyFile: Bool = false) {
-
-        bgContext.perform { // switch to supplied background thread
-            guard let filePath = Bundle.main.path(forResource: dataSourceFile + "." + fileSubType,
-                                                  ofType: fileType) else {
-                fatalError("""
-                           Internal file \(dataSourceFile + "." + fileSubType + "." + fileType) \
-                           not found. Check file name.
-                           """)
-            }
-            let data = self.getData(
-                fileURL: URL(string: dataSourcePath + dataSourceFile + "." +
-                             fileSubType + "." + fileType)!,
-                filePath: filePath,
-                useOnlyFile: useOnlyFile
-            )
-            self.readRootLevel1Json(bgContext: bgContext,
-                                    data: data,
-                                    for: organizationTypesToLoad)
-        }
-    }
-
-    // try to fetch the online root.level1.json file, and if that fails use a copy from the app's bundle instead
-    fileprivate func getData(fileURL: URL,
-                             filePath: String,
-                             useOnlyFile: Bool) -> String {
-        if let urlData = try? String(contentsOf: fileURL, encoding: .utf8), !useOnlyFile {
-            return urlData
-        }
-        print("Could not access online file \(fileURL.relativeString). Trying in-app file \(filePath) instead.")
-        if let fileData = try? String(contentsOfFile: filePath, encoding: .utf8) {
-            return fileData
-        }
-        // calling fatalError is ok for a compile-time constant (as defined above)
-        fatalError("Cannot load Level 1 file \(filePath)")
+    public init(bgContext: NSManagedObjectContext,
+                fileName: String = "root",  // can overrule the name for unit testing
+                isInTestBundle: Bool,
+                useOnlyInBundleFile: Bool = false // true can be used to avoid publishing a test file to GitHub
+               ) {
+        _ = FetchAndProcessFile(bgContext: bgContext,
+                                fileSelector: FileSelector(fileName: fileName, isInTestBundle: isInTestBundle),
+                                fileType: "json", fileSubType: "level1", // "root.level1.json"
+                                useOnlyInBundleFile: useOnlyInBundleFile,
+                                fileContentProcessor: readRootLevel1Json(bgContext:
+                                                                         jsonData:
+                                                                         fileSelector:))
     }
 
     fileprivate func readRootLevel1Json(bgContext: NSManagedObjectContext,
-                                        data: String,
-                                        for organizationTypeEnumsToLoad: [OrganizationTypeEnum]) {
+                                        jsonData: String,
+                                        fileSelector: FileSelector) {
 
-        ifDebugPrint("\nWill read Level 1 file (\(dataSourceFile)) with a list of organizations in the background.")
+        let fileName = fileSelector.fileName
+        ifDebugPrint("/nWill read (\(fileName)).level1.json with a list of organizations in the background.")
 
         // hand the data to SwiftyJSON to parse
-        let jsonRoot = JSON(parseJSON: data) // call to SwiftyJSON
+        let jsonRoot = JSON(parseJSON: jsonData) // call to SwiftyJSON
 
         // extract the `organizationTypes` in `organizationTypeEnumsToLoad` one-by-one from `jsonRoot`
-        for organizationTypeEnum in organizationTypeEnumsToLoad {
+        for organizationTypeEnum in organizationTypesToLoad {
 
             let jsonOrganizationsOfOneType: [JSON] = jsonRoot[organizationTypeEnum.unlocalizedPlural].arrayValue
             ifDebugPrint("Found \(jsonOrganizationsOfOneType.count) \(organizationTypeEnum.unlocalizedPlural) " +
-                         "in \(dataSourceFile).")
+                         "in \(fileName).")
 
             // extract the requested items (clubs, museums) of that organizationType one-by-one from the json file
             for jsonOrganization in jsonOrganizationsOfOneType {

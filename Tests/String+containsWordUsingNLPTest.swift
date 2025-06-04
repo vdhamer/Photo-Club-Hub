@@ -1,5 +1,5 @@
 //
-//  String+containsWordUsingNLP.swift
+//  String+containsWordUsingNLPTest.swift
 //  Photo Club HubTests
 //
 //  Created by Peter van den Hamer on 22/02/2025.

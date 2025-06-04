@@ -15,11 +15,11 @@ extension MemberPortfolio {
         OrganizationID(fullName: "Fotogroep de Gender", town: "Eindhoven")
     ]
 
-    func refreshFirstImage() {
-    	// does this club use JuicBox Pro xml files?
+    public func refreshFirstImage() {
 
+    	// does this club use JuicBox Pro xml files?
         guard MemberPortfolio.clubsUsingJuiceBox.contains(organization.id) else { return }
-        guard let urlOfImageIndex = URL(string: self.level3URL.absoluteString + "config.xml") else { return }
+        guard let urlOfImageIndex else { return }
 
         // assumes JuiceBox Pro is used
         ifDebugPrint("""
@@ -42,6 +42,21 @@ extension MemberPortfolio {
                                 encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue))!
         parseXMLContent(xmlContent: xmlContent, member: self)
         ifDebugPrint("\(organization.fullNameTown): completed refreshFirstImage() \(urlOfImageIndex.absoluteString)")
+    }
+
+    // remove a suffix like "#myanchor" if present, and append "config.xml"
+    var urlOfImageIndex: URL? {
+        let url: URL? = URL(string: self.level3URL.absoluteString)
+        guard let url else { return nil } // bad string
+
+        guard let urlString = url.absoluteString.removingPercentEncoding else { return nil }
+        if urlString.contains("#") { // force unwrap protected by guard
+            let reducedString = urlString.components(separatedBy: "#")[0]
+            guard let reducedURL = URL(string: String(reducedString)) else { return nil }
+            return reducedURL.appendingPathComponent("config.xml")
+        } else {
+            return url.appendingPathComponent("config.xml")
+        }
     }
 
     fileprivate func parseXMLContent(xmlContent: String, member: MemberPortfolio) { // sample data

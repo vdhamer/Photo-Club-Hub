@@ -22,7 +22,7 @@ extension LocalizedKeyword {
 
     // MARK: - getters (setting is done via findCreateUpdate)
 
-    var name: String {
+    public var name: String {
         get {
             if let name = name_ {
                 return name

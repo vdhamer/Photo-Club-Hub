@@ -22,7 +22,7 @@ extension Photographer {
         fatalError("init() is not available. Use .findCreateUpdate instead.")
     }
 
-    var photographerKeywords: Set<PhotographerKeyword> {
+    public var photographerKeywords: Set<PhotographerKeyword> {
         (photographerKeywords_ as? Set<PhotographerKeyword>) ?? []
     }
 
@@ -30,20 +30,20 @@ extension Photographer {
 		(memberships_ as? Set<MemberPortfolio>) ?? []
 	}
 
-	fileprivate(set) var givenName: String {
+	fileprivate(set) public var givenName: String {
 		get { return givenName_ ?? "MissingGivenName" }
 		set { givenName_ = newValue }
 	}
 
-	fileprivate(set) var familyName: String {
-		get { return familyName_ ?? "MissingFamilyName" }
-		set { familyName_ = newValue }
-	}
-
-    fileprivate(set) var infixName: String { // "van" in names like "Jan van Doesburg"
+    fileprivate(set) public var infixName: String { // "van" in names like "Jan van Doesburg"
         get { return infixName_ ?? "MissingInfixName" } // Should never happen. CoreData defaults to empty string.
         set { infixName_ = newValue }
     }
+
+    fileprivate(set) public var familyName: String {
+		get { return familyName_ ?? "MissingFamilyName" }
+		set { familyName_ = newValue }
+	}
 
     var fullNameFirstLast: String { // "John Doe" or "Jan van Doesburg"
         let infixName = self.infixName.isEmpty ? " " : " \(self.infixName) " // " van " in names like "Jan van Doesburg"
@@ -74,17 +74,13 @@ extension Photographer {
 
     // Find existing object and otherwise create a new object
     // Update existing attributes or fill the new object
-    static func findCreateUpdate(context: NSManagedObjectContext, // foreground or background context
-                                 personName: PersonName,
-                                 optionalFields: PhotographerOptionalFields
-                                ) -> Photographer {
+    public static func findCreateUpdate(context: NSManagedObjectContext, // foreground or background context
+                                        personName: PersonName,
+                                        optionalFields: PhotographerOptionalFields = PhotographerOptionalFields()
+                                       ) -> Photographer {
         let predicateFormat: String = "givenName_ = %@ AND infixName_ = %@ AND familyName_ = %@" // avoid localization
         let predicate = NSPredicate(format: predicateFormat, argumentArray: [
-                                                                              personName.givenName,
-                                                                              personName.infixName,
-                                                                              personName.familyName
-                                                                            ]
-                                   )
+            personName.givenName, personName.infixName, personName.familyName ])
         let fetchRequest: NSFetchRequest<Photographer> = Photographer.fetchRequest()
         fetchRequest.predicate = predicate
         let photographers: [Photographer] = (try? context.fetch(fetchRequest)) ?? [] // nil means absolute failure

@@ -9,7 +9,7 @@ import SwiftyJSON // for JSON struct
 
 // MARK: - MemberRole
 
-enum MemberRole {
+public enum MemberRole {
     // a Member can have 0, 1 or more of these MemberRoles at the same time
     case admin // rawValue not used because string needs localization
     case chairman
@@ -18,7 +18,7 @@ enum MemberRole {
     case viceChairman
     case other
 
-    func localizedString() -> String {
+    public func localizedString() -> String {
         switch self {
         case .admin:
             return String(localized: "admin", table: "Package",
@@ -43,20 +43,20 @@ enum MemberRole {
 }
 
 extension MemberRole: CaseIterable, Identifiable {
-    var id: String { // switch to self?
+    public var id: String { // switch to self?
         self.localizedString()
     }
 }
 
 extension MemberRole: Comparable {
-    static func < (lhs: MemberRole, rhs: MemberRole) -> Bool {
+    public static func < (lhs: MemberRole, rhs: MemberRole) -> Bool {
         return lhs.localizedString() < rhs.localizedString()
     }
 }
 
 // MARK: - MemberStatus
 
-enum MemberStatus {
+public enum MemberStatus {
     // a Member can have multiple of these special statusses
     case coach // rawValue not used because string needs localization
     case deceased // careful: isDeceased belongs to member.photographer.deceased rather than member.isdeceased
@@ -67,46 +67,52 @@ enum MemberStatus {
 
     func localizedString() -> String {
         switch self {
-        case .coach: return String(localized: "external coach", table: "Package",
-                                   comment: "Relationship status of member within a club. Used in concatenations.")
-        case .deceased: return String(localized: "deceased", table: "Package",
-                                   comment: "Relationship status of member within a club. Used as prefix.")
-        case .former: return String(localized: "former", table: "Package",
-                                   comment: "Relationship status of member within a club. Used as prefex.")
-        case .honorary: return String(localized: "honorary member", table: "Package",
-                                   comment: "Relationship status of member within a club. Used in concatenations.")
-        case .current: return String(localized: "member", table: "Package",
-                                   comment: "Default status of member within a club. Used in concatenations.")
-        case .prospective: return String(localized: "prospective member", table: "Package",
-                                   comment: "Relationship status of member within a club. Used in concatenations.")
+        case .coach:
+            return String(localized: "external coach", table: "Package",
+                          comment: "Relationship status of member within a club. Used in concatenations.")
+        case .deceased:
+            return String(localized: "deceased", table: "Package",
+                          comment: "Relationship status of member within a club. Used as prefix.")
+        case .former:
+            return String(localized: "former", table: "Package",
+                          comment: "Relationship status of member within a club. Used as prefex.")
+        case .honorary:
+            return String(localized: "honorary member", table: "Package",
+                          comment: "Relationship status of member within a club. Used in concatenations.")
+        case .current:
+            return String(localized: "member", table: "Package",
+                          comment: "Default status of member within a club. Used in concatenations.")
+        case .prospective:
+            return String(localized: "prospective member", table: "Package",
+                          comment: "Relationship status of member within a club. Used in concatenations.")
         }
     }
 }
 
 extension MemberStatus: CaseIterable, Identifiable {
-    var id: String {
+    public var id: String {
         self.localizedString()
     }
 }
 
 extension MemberStatus: Comparable {
-    static func < (lhs: MemberStatus, rhs: MemberStatus) -> Bool {
+    public static func < (lhs: MemberStatus, rhs: MemberStatus) -> Bool {
             return lhs.localizedString() < rhs.localizedString()
     }
 }
 
 // MARK: - MemberRoleAndStatus
 
-struct MemberRolesAndStatus: Equatable {
-    var roles: [MemberRole: Bool?] = [:]
-    var status: [MemberStatus: Bool?] = [:]
+public struct MemberRolesAndStatus: Equatable {
+    public var roles: [MemberRole: Bool?] = [:]
+    public var status: [MemberStatus: Bool?] = [:]
 
     func isDeceased() -> Bool? {
         guard let deceased = status[.deceased] else { return nil } // bit problematic type of Bool: "double optional"
         return deceased
     }
 
-    init(roles: [MemberRole: Bool] = [:], status: [MemberStatus: Bool] = [:]) {
+    public init(roles: [MemberRole: Bool] = [:], status: [MemberStatus: Bool] = [:]) {
         self.roles = roles
         self.status = status
     }

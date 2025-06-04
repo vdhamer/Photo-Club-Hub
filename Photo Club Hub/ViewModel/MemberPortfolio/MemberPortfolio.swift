@@ -21,14 +21,14 @@ extension MemberPortfolio: Comparable {
 
 extension MemberPortfolio { // expose computed properties (some related to handling optionals)
 
-    static let emptyPortfolioURL: String = "http://www.vdHamer.com/fgWaalre/Empty_Website/"
+    public static let emptyPortfolioURL: String = "http://www.vdHamer.com/fgWaalre/Empty_Website/"
 
-    var membershipStartDate: Date? {
+    public var membershipStartDate: Date? {
         get { return membershipStartDate_ }
         set { membershipStartDate_ = newValue }
     }
 
-    var membershipEndDate: Date? { // nil means photographer is still a club member
+    public var membershipEndDate: Date? { // nil means photographer is still a club member
         get { return membershipEndDate_ }
         set {
             membershipEndDate_ = newValue
@@ -47,7 +47,7 @@ extension MemberPortfolio { // expose computed properties (some related to handl
         }
 	}
 
-	var photographer: Photographer {
+	public var photographer: Photographer {
         if let photographer = photographer_ {
             return photographer
         } else {

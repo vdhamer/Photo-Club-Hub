@@ -10,7 +10,7 @@ import CoreData // for NSManagedObjectContext
 import SwiftyJSON // for JSON struct
 import CoreLocation // for CLLocationCoordinate2D
 
-// see xampleMin.level2.json or xampleMax.level2.json for syntax examples
+// see XampleMin.level2.json or XampleMax.level2.json for syntax examples
 
 public class Level2JsonReader { // normally running on a background thread
 

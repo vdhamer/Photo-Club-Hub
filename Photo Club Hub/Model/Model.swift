@@ -8,8 +8,8 @@
 import CoreData // for NSManagedObject
 
 @MainActor
-struct Model {
-    static func deleteAllCoreDataObjects(context: NSManagedObjectContext) {
+public struct Model {
+    public static func deleteAllCoreDataObjects(context: NSManagedObjectContext) {
         // order is important to avoid problems with referential integrity
         deleteCoreDataKeywordsLanguages(context: context) // performs its own save()
         deleteCoreDataPhotographersClubs(context: context) // performs its own save()

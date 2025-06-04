@@ -75,7 +75,7 @@ import CoreData // for NSManagedObjectContext
         let randomTown = String.random(length: 10)
         _ = XampleMaxMembersProvider(bgContext: bgContext, synchronousWithRandomTown: true, randomTown: randomTown)
 
-        let idPlus = OrganizationIdPlus(fullName: "Xample Club Max",
+        let idPlus = OrganizationIdPlus(fullName: "Xample Club With Maximal Data",
                                         town: randomTown, // unique town to keep this separate from normal loading
                                         nickname: "XampleMax")
 
@@ -139,7 +139,7 @@ import CoreData // for NSManagedObjectContext
             #expect(organizations[0].fotobondNumber == 1620)
         }
 
-        #expect(Keyword.count(context: bgContext) == 10)
+        #expect(Keyword.count(context: bgContext) == 21)
         #expect(PhotographerKeyword.count(context: bgContext, keywordID: "Minimal") == 3)
         #expect(PhotographerKeyword.count(context: bgContext) == 14)
     }
@@ -161,7 +161,7 @@ import CoreData // for NSManagedObjectContext
         _ = FotogroepDeGenderMembersProvider(bgContext: bgContext,
                                              synchronousWithRandomTown: true,
                                              randomTown: randomTownG)
-        #expect(Keyword.count(context: bgContext) == 10)
+        #expect(Keyword.count(context: bgContext) == 21)
         #expect(PhotographerKeyword.count(context: bgContext) == 14)
 
         let randomTownW = String.random(length: 10)
@@ -169,7 +169,7 @@ import CoreData // for NSManagedObjectContext
                                            synchronousWithRandomTown: true,
                                            randomTown: randomTownW)
 
-        #expect(Keyword.count(context: bgContext) == 19)
+        #expect(Keyword.count(context: bgContext) == 21)
         #expect(PhotographerKeyword.count(context: bgContext) == 42)
     }
 

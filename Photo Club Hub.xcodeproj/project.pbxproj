@@ -136,7 +136,6 @@
 		D0273E5B2DEE460E00C4F5E1 /* FotogroepOirschot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FotogroepOirschot.swift; sourceTree = "<group>"; };
 		D0273F5F2DEE555C00C4F5E1 /* FetchAndProcessFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchAndProcessFile.swift; sourceTree = "<group>"; };
 		D0273F602DEE555C00C4F5E1 /* FileSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSelector.swift; sourceTree = "<group>"; };
-		D0273F612DEE555C00C4F5E1 /* Level2JsonReader_old.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level2JsonReader_old.swift; sourceTree = "<group>"; };
 		D0275F5427E3E21F002FA4FE /* View+OnTapGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+OnTapGesture.swift"; sourceTree = "<group>"; };
 		D029C4CE2C53E5C700ABA977 /* OrganizationOptionalFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationOptionalFields.swift; sourceTree = "<group>"; };
 		D029C4D12C54099900ABA977 /* MemberOptionalFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberOptionalFields.swift; sourceTree = "<group>"; };
@@ -566,7 +565,6 @@
 			children = (
 				D0273F5F2DEE555C00C4F5E1 /* FetchAndProcessFile.swift */,
 				D0273F602DEE555C00C4F5E1 /* FileSelector.swift */,
-				D0273F612DEE555C00C4F5E1 /* Level2JsonReader_old.swift */,
 				D0F4FAA92D82275100FFAEAE /* Level0JsonReader.swift */,
 				D0EAEB322B3CA6D300EC05B6 /* Level1JsonReader.swift */,
 				D05124842C42BE2D00D94B81 /* Level2JsonReader.swift */,

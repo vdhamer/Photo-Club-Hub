@@ -16,14 +16,15 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
 
     // Find existing object or create a new object
     // Update existing attributes or fill the new object
-    static func findCreateUpdate(bgContext: NSManagedObjectContext,
-                                 // identifying attributes of a Member:
-                                 organization: Organization,
-                                 photographer: Photographer,
-                                 removeMember: Bool = false, // remove records for members that disappeared from lists
-                                 // non-identifying attributes of a Member:
-                                 optionalFields: MemberOptionalFields
-                                ) -> MemberPortfolio {
+    public static func findCreateUpdate(bgContext: NSManagedObjectContext,
+                                        // identifying attributes of a Member:
+                                        organization: Organization,
+                                        photographer: Photographer,
+                                        // remove records for members that disappeared from lists:
+                                        removeMember: Bool = false,
+                                        // non-identifying attributes of a Member:
+                                        optionalFields: MemberOptionalFields = MemberOptionalFields() // empty default
+    ) -> MemberPortfolio {
 
         let predicateFormat: String = "organization_ = %@ AND photographer_ = %@" // avoid localization of query string
         let predicate = NSPredicate(format: predicateFormat,

@@ -8,63 +8,30 @@
 import CoreData // for NSManagedObjectContext
 import SwiftyJSON // for JSON struct
 
-private let dataSourcePath: String = """
-                                     https://raw.githubusercontent.com/\
-                                     vdhamer/Photo-Club-Hub/\
-                                     main/JSON/
-                                     """
-private let dataSourceFile: String = "root"
-private let fileSubType = "level0" // level0 is part of file name, the extension is "json" rather than "level0"
-private let fileType = "json"
-
 // see root.level0.json for a syntax example
 
-class Level0JsonReader {
+public class Level0JsonReader {
 
-    init(bgContext: NSManagedObjectContext,
-         useOnlyFile: Bool = false,
-         overrulingDataSourceFile: String? = nil) {
-
-        bgContext.perform { // switch to supplied background thread
-            let overruledDataSourceFile = overrulingDataSourceFile ?? dataSourceFile
-            guard let filePath = Bundle.main.path(forResource: overruledDataSourceFile + "." + fileSubType,
-                                                  ofType: fileType) else {
-                fatalError("""
-                           Internal file \(overruledDataSourceFile + "." + fileSubType + "." + fileType) \
-                           not found. Check file name.
-                           """)
-            }
-            let data = self.getData( // get the data from one of the two sources
-                fileURL: URL(string: dataSourcePath + overruledDataSourceFile + "." +
-                             fileSubType + "." + fileType)!,
-                filePath: filePath,
-                useOnlyFile: useOnlyFile
-            )
-            self.readRootLevel0Json(bgContext: bgContext,
-                                    jsonData: data)
-        }
-
-    }
-
-    // try to fetch the online root.level0.json file, and if that fails use a copy from the app's bundle instead
-    fileprivate func getData(fileURL: URL,
-                             filePath: String,
-                             useOnlyFile: Bool) -> String {
-        if let urlData = try? String(contentsOf: fileURL, encoding: .utf8), !useOnlyFile {
-            return urlData
-        }
-        print("Could not access online file \(fileURL.relativeString). Trying in-app file \(filePath) instead.")
-        if let fileData = try? String(contentsOfFile: filePath, encoding: .utf8) {
-            return fileData
-        }
-        // calling fatalError is ok for a compile-time constant (as defined above)
-        fatalError("Cannot load Level 0 file \(filePath)")
+    public init(bgContext: NSManagedObjectContext,
+                fileName: String = "root",  // can overrule the name for unit testing
+                isInTestBundle: Bool,
+                useOnlyInBundleFile: Bool = false // true can be used to avoid publishing a test file to GitHub
+               ) {
+        _ = FetchAndProcessFile(bgContext: bgContext,
+                                fileSelector: FileSelector(fileName: fileName, isInTestBundle: isInTestBundle),
+                                fileType: "json", fileSubType: "level0", // "root.level0.json"
+                                useOnlyInBundleFile: useOnlyInBundleFile,
+                                fileContentProcessor: readRootLevel0Json(bgContext:
+                                                                         jsonData:
+                                                                         fileSelector:))
     }
 
     fileprivate func readRootLevel0Json(bgContext: NSManagedObjectContext,
-                                        jsonData: String) {
+                                        jsonData: String,
+                                        fileSelector: FileSelector) {
 
-        ifDebugPrint("\nWill read Level 0 file (\(dataSourceFile)) with standard keywords and languages in background.")
+        let fileName: String = fileSelector.fileName
+        ifDebugPrint("\nWill read Level 0 file (\(fileName)) with standard keywords and languages in background.")
 
         // hand the data to SwiftyJSON to parse
         let jsonRoot = JSON(parseJSON: jsonData) // get entire JSON file

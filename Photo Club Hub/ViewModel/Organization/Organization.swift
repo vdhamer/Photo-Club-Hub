@@ -8,7 +8,6 @@
 import CoreData // needed for NSSet
 import CoreLocation // needed for coordinate translation
 import SwiftUI // for UserInterfaceSizeClass
-// import SwiftyJSON // for JSON struct
 
 extension Organization: Comparable {
 

@@ -52,7 +52,7 @@ extension MemberPortfolio { // computed properties related to roles of members i
         return "\(roleDescription) \(of2) \(self.organization.fullNameTown)"
     }
 
-    var memberRolesAndStatus: MemberRolesAndStatus {
+    public var memberRolesAndStatus: MemberRolesAndStatus {
         get { // conversion from Bool to dictionary
             var memberRS = MemberRolesAndStatus(roles: [:], status: [:])
 

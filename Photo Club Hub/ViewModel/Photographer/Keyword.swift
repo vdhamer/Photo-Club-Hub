@@ -93,27 +93,27 @@ extension Keyword {
 
     // Find existing standard Keyword object or create a new one.
     // Update existing attributes or fill the new object
-    static func findCreateUpdateStandard(context: NSManagedObjectContext, // can be foreground or background context
-                                         id: String,
-                                         name: [JSON], // array mapping languages to localizedNames
-                                         usage: [JSON]
-                                        ) -> Keyword {
+    public static func findCreateUpdateStandard(context: NSManagedObjectContext, // can be foreground or background
+                                                id: String,
+                                                name: [JSON], // array mapping languages to localizedNames
+                                                usage: [JSON]
+    					       ) -> Keyword {
         findCreateUpdate(context: context, id: id, isStandard: true, name: name, usage: usage)
     }
 
     // Find existing non-standard Keyword object or create a new one.
     // Update existing attributes or fill the new object
-    static func findCreateUpdateNonStandard(context: NSManagedObjectContext, // can be foreground or background context
-                                            id: String,
-                                            name: [JSON], // array mapping languages to localizedNames
-                                            usage: [JSON]
-                                           ) -> Keyword {
+    public static func findCreateUpdateNonStandard(context: NSManagedObjectContext, // can be foreground or background
+                                                   id: String,
+                                                   name: [JSON], // array mapping languages to localizedNames
+                                                   usage: [JSON]
+    						  ) -> Keyword {
         findCreateUpdate(context: context, id: id, isStandard: false, name: name, usage: usage)
     }
 
     // Find existing Keyword object or create a new one without changing the Standard flag.
     // Don't update existing Standard attribute
-    static func findCreateUpdateUndefStandard(context: NSManagedObjectContext, // can be foreground or background cntxt
+    static func findCreateUpdateUndefStandard(context: NSManagedObjectContext, // can be foreground or background
                                               id: String,
                                               name: [JSON], // array mapping languages to localizedNames
                                               usage: [JSON]
@@ -262,7 +262,7 @@ extension Keyword {
 
     // Priority system to choose the most appropriate LocalizedKeyword for a given Keyword.
     // The choice depends on available translations and the current language preferences set on the device.
-    var selectedLocalizedKeyword: LocalizedKeywordResult {
+    public var selectedLocalizedKeyword: LocalizedKeywordResult {
         // don't use Locale.current.language.languageCode because this only returns languages supported by the app
         // first choice: accomodate user's language preferences according to Apple's Locale API
         for lang in Locale.preferredLanguages {

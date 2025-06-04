@@ -25,7 +25,7 @@ struct FetchAndProcessFile {
         bgContext.perform { [self] in // run on requested background thread
             let nameWithSubtype = (fileSelector.fileName) + "." + fileSubType // e.g. "root.level0"
 
-            let bundle: Bundle = Bundle.main // There is a better version of this in the Data package
+            let bundle: Bundle = Bundle.main // There is a better version of this in Photo Club Hub Data package
             let fileInBundleURL: URL? = bundle.url(forResource: nameWithSubtype, withExtension: fileType)
             guard fileInBundleURL != nil else {
                 fatalError("""

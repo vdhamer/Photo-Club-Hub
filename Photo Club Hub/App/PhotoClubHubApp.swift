@@ -56,67 +56,49 @@ extension PhotoClubHubApp {
     static func loadClubsAndMembers() {
 
         // load list of keywords and languages from root.Level0.json file
-        let level0BackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-        level0BackgroundContext.name = "Level 0 loader"
-        level0BackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-        level0BackgroundContext.automaticallyMergesChangesFromParent = true // to push ObjectTypes to bgContext?
-        _ = Level0JsonReader(bgContext: level0BackgroundContext, // read root.Level0.json file
-                             useOnlyFile: false)
+        let level0BackgroundContext = makeBgContext(ctxName: "Level 0 loader")
+        _ = Level0JsonReader(bgContext: level0BackgroundContext, isInTestBundle: false, useOnlyInBundleFile: false)
 
         // load list of photo clubs and museums from root.Level1.json file
-        let level1BackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-        level1BackgroundContext.name = "Level 1 loader"
-        level1BackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-        level1BackgroundContext.automaticallyMergesChangesFromParent = true // to push ObjectTypes to bgContext?
+        let level1BackgroundContext = makeBgContext(ctxName: "Level 1 loader")
         _ = Level1JsonReader(bgContext: level1BackgroundContext, // read root.Level1.json file
-                             useOnlyFile: false)
+                             isInTestBundle: false, useOnlyInBundleFile: false)
 
-        // load test member(s) of Fotogroep De Gender
-        let genderBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-        genderBackgroundContext.name = "FG de Gender"
-        genderBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-        genderBackgroundContext.automaticallyMergesChangesFromParent = true
-        _ = FotogroepDeGenderMembersProvider(bgContext: genderBackgroundContext)
+        // load current/former members of Fotogroep De Gender
+        let genderBackgroundContext = makeBgContext(ctxName: "Level 2 loader fgDeGender")
+        _ = FotogroepDeGenderMembersProvider(bgContext: genderBackgroundContext,
+                                             useOnlyInBundleFile: false)
 
-        // load all current/former members of Fotogroep Waalre
-        let waalreBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-        waalreBackgroundContext.name = "Fotogroep Waalre"
-        waalreBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-        waalreBackgroundContext.automaticallyMergesChangesFromParent = true
-        _ = FotogroepWaalreMembersProvider(bgContext: waalreBackgroundContext)
+        // load current/former members of Fotogroep Waalre
+        let waalreBackgroundContext = makeBgContext(ctxName: "Level 2 loader fgWaalre")
+        _ = FotogroepWaalreMembersProvider(bgContext: waalreBackgroundContext,
+                                           useOnlyInBundleFile: false)
 
-        // load all current/former members of Fotoclub Bellus Imago
-        let bellusBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-        bellusBackgroundContext.name = "Fotoclub Bellus Imago"
-        bellusBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-        bellusBackgroundContext.automaticallyMergesChangesFromParent = true
-        _ = FotoclubBellusImagoMembersProvider(bgContext: bellusBackgroundContext)
+        // load current/former members of Fotoclub Bellus Imago
+        let bellusBackgroundContext = makeBgContext(ctxName: "Level 2 loader fcBellusImago")
+        _ = FotoclubBellusImagoMembersProvider(bgContext: bellusBackgroundContext,
+                                               useOnlyInBundleFile: false)
 
-        // load current/former members of Fotoclub Ericamera
-        let ericameraBackgroundContext = makeBgContext(ctxName: "Level 2 loader fcEricamera")
-        _ = FotoclubEricameraMembersProvider(bgContext: ericameraBackgroundContext, useOnlyInBundleFile: false)
+        // load current/former members of Fotogroep Oirschot
+        let oirschotBackgroundContext = makeBgContext(ctxName: "Level 2 loader fgOirschot")
+        _ = FotogroepOirschotMembersProvider(bgContext: oirschotBackgroundContext,
+                                             useOnlyInBundleFile: false)
 
         if includeXampleClubs {
 
             // load test member(s) of XampleMin. Club is called XampleMin (rather than ExampleMin) to be at end of list
-            let xampleMinBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-            xampleMinBackgroundContext.name = "XampleMin"
-            xampleMinBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-            xampleMinBackgroundContext.automaticallyMergesChangesFromParent = true
-            _ = XampleMinMembersProvider(bgContext: xampleMinBackgroundContext)
+            let xampleMinBackgroundContext = makeBgContext(ctxName: "Level 2 loader XampleMin")
+            _ = XampleMinMembersProvider(bgContext: xampleMinBackgroundContext, useOnlyInBundleFile: false)
 
             // load test member(s) of XampleMax. Club is called XampleMax (rather than ExampleMax) to be at end of list
-            let xampleMaxBackgroundContext = PersistenceController.shared.container.newBackgroundContext()
-            xampleMaxBackgroundContext.name = "XampleMax"
-            xampleMaxBackgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-            xampleMaxBackgroundContext.automaticallyMergesChangesFromParent = true
-            _ = XampleMaxMembersProvider(bgContext: xampleMaxBackgroundContext)
+            let xampleMaxBackgroundContext = makeBgContext(ctxName: "Level 2 loader XampleMax")
+            _ = XampleMaxMembersProvider(bgContext: xampleMaxBackgroundContext, useOnlyInBundleFile: false)
+
         }
 
-        // load current/former members of Fotogroep Oirschot
-         let oirschotBackgroundContext = makeBgContext(ctxName: "Level 2 loader fgOirschot")
-         _ = FotogroepOirschotMembersProvider(bgContext: oirschotBackgroundContext,
-                                             useOnlyInBundleFile: false)
+        // load current/former members of Fotoclub Ericamera
+        let ericameraBackgroundContext = makeBgContext(ctxName: "Level 2 loader fcEricamera")
+        _ = FotoclubEricameraMembersProvider(bgContext: ericameraBackgroundContext, useOnlyInBundleFile: false)
 
     }
 
