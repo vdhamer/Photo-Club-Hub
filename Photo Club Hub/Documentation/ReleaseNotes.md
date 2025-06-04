@@ -1,5 +1,8 @@
 ### 2.8.0 (GitHub commit ???????) ??-06-25
 
+Data Maintenance
+* Added a major new photography museum in Seoul.
+
 This build #4640 was made using Xcode 16.4
 
 ---------------------------------------------------------------------------
@@ -22,7 +25,7 @@ Data Maintenance
 * Mentioned fkGestel in Level2_aanmaken_NL.md
 * Updated usage text for keywords in root.level0.json
 * Minor update to XampleMin and XampleMax demo files
-* Added Level 2 for fgOirschot and fcEricema
+* Added Level 2 for fgOirschot and fcEricamera
 
 Documentation
 * Updated dataModel.png in README.md

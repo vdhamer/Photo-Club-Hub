@@ -2610,6 +2610,32 @@
 
         {
             "idPlus": {
+                "town": "Seoul",
+                "fullName": "Photography Seoul Museum of Art",
+                "nickName": "PhotoSeMA"
+            },
+            "coordinates": {
+                "latitude": 37.65536,
+                "longitude": 127.04897
+            },
+            "optional": {
+                "website": "https://sema.seoul.go.kr/en/visit/photosema",
+                "wikipedia": "",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "This 6 story building dedicated to photography was opened on May 29th 2025."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Het museum is nieuw (Mei 2025) en is volledig gewijdt aan fotografie als kunstvorm."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Sidney",
                 "fullName": "Australian Centre for Photography",
                 "nickName": "ACP Sidney"
