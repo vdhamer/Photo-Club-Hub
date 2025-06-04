@@ -1,13 +1,13 @@
 ## Basisvragen
 
-<details><summary>$\color{orange}{\textsf{Klik om categorie open of dicht te klappen}}$</summary></p>
+<details><summary>Klik om categorie open of dicht te klappen</summary></p>
 <ul>
 
 <li>
 
 ### Wat doet de app?
 
-<details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
+<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 De omschrijving in de <font color="red">Apple App Store</font> luidt:</p>
 
 > De app toont geselecteerd werk van leden van fotoclubs. 
@@ -26,7 +26,7 @@ De omschrijving in de <font color="red">Apple App Store</font> luidt:</p>
 
 ### Waarom is de app gemaakt?
 
-<details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
+<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 
 Fotografen worden lid van een fotoclub om hun werk aan elkaar te laten zien.
 Dat zien en gezien-worden lukt prima _binnen_ de club doordat de leden regelmatig bijeen komen.</p>
@@ -46,7 +46,7 @@ en de (te) hektische en vluchtige social media. Met als doel om de het fotowerk 
 
 ### Waarom staat mijn club niet in de app?
 
-<details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
+<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 Je kunt zelf een club toevoegen. Hier komen stapsgewijs instructies voor (zie vraag over documentatie).</p>
     
 De lijst met clubs in Brabant-Oost staat er alvast in om het groeiproces op te starten.
@@ -56,7 +56,7 @@ De lijst met clubs in Brabant-Oost staat er alvast in om het groeiproces op te s
 
 ### Is er een Android of PC versie van de app?
 
-<details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
+<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 
 Er is een **iOS** (iPhone/iPad) versie van de app op de Apple App Store.
 Voor andere merken telefoontjes en voor grotere schermen is er een **webversie**.
@@ -77,7 +77,7 @@ Maar tot die tijd is de webversie een prima oplossing voor Android, Windows en m
 
 ### Is de app gratis?
 
-<details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
+<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 
 Ja. De appversie op de Apple App Store is en blijft gratis.
 De software voor het genereren van de webversie is en blijft ook gratis.
@@ -91,13 +91,13 @@ De broncode van deze software is "open source" en valt onder de zogenaamde
 
 ## Beleid
 
-<details><summary>$\color{orange}{\textsf{Klik om categorie open of dicht te klappen}}$</summary></p>
+<details><summary>Klik om categorie open of dicht te klappen</summary></p>
 
 <ul><li>
 
 ### Is de app alleen voor Nederland?
 
-<details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
+<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
     
 Nee. De nadruk ligt welliswaar voorlopig op Nederland, maar de app is wereldwijd te gebruiken.
 
@@ -109,7 +109,7 @@ In het Engels heet de app overigens "Photo Club Hub" ipv "Fotoclub Hub".
 
 ### Moet een club lid zijn van de Fotobond?
 
-<details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
+<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 Nee. De app kan prima omgaan met clubs die geen lid zijn van de Fotobond.
 Er zijn tientallen voorbeelden te vinden op de landkaarten.
 Buitenlandse club zijn uiteraard ook niet lid van de (Nederlandse) Koninklijke Fotobond.
@@ -119,7 +119,7 @@ Buitenlandse club zijn uiteraard ook niet lid van de (Nederlandse) Koninklijke F
 
 ### Waarom staan er fotomusea in?
 
-<details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
+<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 Omdat het vrij eenvoudig kon, goed samenging met de landkaartjes, en nuttig kon zijn voor sommige gebruikers.
 </details></p>
 
@@ -127,7 +127,7 @@ Omdat het vrij eenvoudig kon, goed samenging met de landkaartjes, en nuttig kon 
 
 ### Zijn er kosten aan verbonden?
 
-<details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
+<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 Niet of nauwelijks. De Photo Club Hub en Photo Club Hub HTML software is gratis en blijft gratis.
 En zijn geen kosten voor centrale opslag of rekenkracht: er is geen noemenswaardige centrale infrastructuur.</p>
 
@@ -144,7 +144,7 @@ Er kan ook gekeken worden of de plug-in kosten voor dit doel eenmalig centraal a
 
 ### Wie bepaalt welke foto's in de app staan?
 
-<details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
+<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 De individuele clubs.</p>
 
 Zo kan je bijvoorbeeld ervoor kiezen dat foto's van alle clubexposities 
@@ -158,7 +158,7 @@ Dus eerder tien dan honderd foto's per fotograaf per jaar. Dat heb je zo met exp
 
 ### Moet ik mij zorgen maken over privacy?
 
-<details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
+<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 Nee. Een club beheert zijn eigen gegevens.</p>
 
 En die gegevens staan opgeslagen op de club website en worden door de club geleverd en onderhouden.
@@ -179,7 +179,7 @@ die je kunt afronden of naar b.v. naar een dorpsplein of station kan laten wijze
 
 ### Houdt mijn club controle over zijn eigen foto's?
 
-<details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
+<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 Ja. Er worden geen kopieën getrokken van de foto's. De foto's staan op de website van de club.
 Technisch wordt er alleen naar "gelinkt".
 En zelfs de lijsten met linkjes naar foto's staan op de website van de club, en dus _niet_ op een centrale server. 
@@ -211,7 +211,7 @@ Dus dit zou normaal geen extra kosten met zich meebrengen. Zie volgend punt:
 
 ### Kan iemand de getoonde foto's kopieëren?
 
-<details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
+<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 Laten we eerste vooropstellen dat de foto's op de clubwebsite staan - en niet ergens centraal.
 Dus deze vraag geld voor iedere clubwebsite waar foto's op te zien zijn.
 
@@ -227,7 +227,7 @@ Maar het is hier wel opgezet om kopieëren zo lastig mogelijk te maken. Bij onze
 
 ### Moeten ex-leden in de app vermeld worden?
 
-<details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
+<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 
 Nee. Maar de app is zo gemaakt dat het kan. Vaak wordt dat gewaardeerd
 (b.v. als iemand 20 jaar lid was, en wegens gezondheidsredenen niet meer meedoet met "zijn" club).
@@ -242,7 +242,7 @@ als de club de gegevens niet aanlevert, zijn ze uiteraard niet te zien. Meer det
 
 ### Is er een Android of PC versie van de app?
 
-<details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
+<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 De app versie ondersteunt om praktische redenen de iPhone en iPad.
 Maar er zijn genoeg andere doelgroepen. Dus is er een zogenaamde "webversie" in ontwikkeling.
 Die bekijk je in je browser (Chrome, Edge, Safari...) en dekt dus zowel PC/Mac gebruikers als alle merken smartfoons af.
@@ -260,7 +260,7 @@ Foto Club Hub HTML genereert dus een ledenlijst met links naar de portfolio's va
 
 ### Werkt dit allemaal nog over enkele jaren?
 
-<details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
+<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 Bij een bedrijf (b.v. Adobe) mag je aannemen dat alles minstens 10 jaar ondersteund wordt.
 Men betaalt er tenslotte voor, en het is de verantwoordelijkheid van Adobe om voor continuïteit te zorgen 
 zolang ze een redelijke winst maken. Maar een harde garantie is er niet.
@@ -291,13 +291,13 @@ Zeg maar vergelijkbaar met een andere verbeteringsactie rondom de club website.
 
 ## Vergelijkingen
 
-<details><summary>$\color{orange}{\textsf{Klik om categorie open of dicht te klappen}}$</summary></p>
+<details><summary>Klik om categorie open of dicht te klappen</summary></p>
 
 <ul><li>
 
 ### Hoe verschilt dit van een clubwebsite?
 
-<details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
+<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 
 Een website vereist dat de bezoeker _zelf_ initiatief neemt om informatie te zoeken.
 Dat werkt goed bij gerichte vragen over b.v. openingstijden of contactgegevens.
@@ -317,7 +317,7 @@ Dit kan je in dit geval oplossen door
 
 ### Hoe verschilt dit van social media zoals Facebook of Instagram?
 
-<details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
+<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 Er bestaan manieren om automatisch veranderingen in websites op te sporen (RSS).
 Maar grosso modo is nieuws inmiddels het domein van de grote klassieke media (nos.nl) 
 en van social media zoals Facebook, Instagram, enz.
@@ -339,7 +339,7 @@ Concreet betekent dit:
 
 ### Hoe verschilt dit van een online fotoclub zoals Glass.photo?
 
-<details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
+<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 [Glass.photo](www.glass.photo) ziet fotografen als een individu - maar je kunt Glass zien als 1 grote fotoclub.
 Vergeleken met Glass, heeft Photo Club Hub...
 
@@ -354,7 +354,7 @@ Vergeleken met Glass, heeft Photo Club Hub...
 
 ### Hoe verschilt dit van fotoexpositie.nl?
 
-<details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
+<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 
 De website [fotoexpositie.nl](https://www.fotoexpositie.nl)) is vooral om bekendheid te geven aan exposities.
 Deze apps zijn vooral om bekendheid te geven aan fotoclubs en de bijbehorende portfolio's zichtbaar te maken.
@@ -372,13 +372,13 @@ De online informatie is kostenloos voor iedereen zichtbaar.
 
 ## Gebruik
 
-<details><summary>$\color{orange}{\textsf{Klik om categorie open of dicht te klappen}}$</summary></p>
+<details><summary>Klik om categorie open of dicht te klappen</summary></p>
 
 <ul><li>
 
 ### Zijn er kosten aan verbonden?
 
-<details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
+<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 Niet of nauwelijks. De Photo Club Hub en Photo Club Hub HTML software is gratis en blijft gratis.
 En zijn geen kosten voor centrale opslag of rekenkracht: er is geen noemenswaardige centrale infrastructuur.</p>
 
@@ -395,7 +395,7 @@ Er kan ook gekeken worden of de plug-in kosten voor dit doel eenmalig centraal a
 
 ### Is er een Android of PC versie van de app?
 
-<details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
+<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 De app versie ondersteunt om praktische redenen de iPhone en iPad.
 Maar er zijn genoeg andere doelgroepen. Dus is er een zogenaamde "webversie" in ontwikkeling.
 Die bekijk je in je browser (Chrome, Edge, Safari...) en dekt dus zowel PC/Mac gebruikers als alle merken smartfoons af.
@@ -413,7 +413,7 @@ Foto Club Hub HTML genereert dus een ledenlijst met links naar de portfolio's va
 
 ### Ik kan Fotoclub Hub niet vinden op de Apple App Store?
 
-<details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
+<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 Op het buitenland heet de app "Photo Club Hub" (engels) in plaats van "Fotoclub Hub" (Nederlands).
 Je kunt op een buitenlandse App Store aangewezen zijn als je een tijd in het buitenland gewoond hebt.
 In alle gevallen krijg je precies dezelfde app. De app kiest automatisch de juiste taal bij het opstarten.
@@ -422,13 +422,13 @@ In alle gevallen krijg je precies dezelfde app. De app kiest automatisch de juis
 
 ## Gegevensbeheer
 
-<details><summary>$\color{orange}{\textsf{Klik om categorie open of dicht te klappen}}$</summary></p>
+<details><summary>Klik om categorie open of dicht te klappen</summary></p>
 
 <ul><li>
 
 ### Mag een tekst ook speciale lettertekens bevatten?
 
-<details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
+<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 Ja. Namen van b.v. personen mogen speciale (Unicode) tekens bevatten. Bijvoorbeeld "François".
 Dit geldt voor alle velden, waaronder de namen van musea ("Museum für Fotografie") en vertalingen
 ("Le musée est spécialisé dans la conservation de...").
@@ -438,7 +438,7 @@ Dit geldt voor alle velden, waaronder de namen van musea ("Museum für Fotografi
 
 ### Kan ik een fotomuseum toevoegen?
 
-<details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
+<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 Ja. Dat doe je door de Level 1 lijst uit te breiden.
 Graag alleen musea toevoegen die duidelijk voor fotografie interessant zijn.</p>
 
@@ -450,7 +450,7 @@ Er staan momentaal alleen enkele bekende Fotomusea in bijvoorbeeld Duitsland, VS
 
 ### Wat als een club geen website heeft?
 
-<details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
+<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 Weet ik niet precies. Het overgrote deel van de clubs heeft al een website (= iets waar je bestanden kan ophalen
 via een webadres zoals "http//www.mijnclub.nl/..."). Per niveau:
 
@@ -467,7 +467,7 @@ Maar we kunnen wel voorbeeldinstructies gemaakt door een club delen.
 
 ### Kan een overleden voormalig lid zichtbaar zijn?
 
-<details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
+<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 Als een club zijn gegevens niet onderhoudt, zal dit op termijn bij ieder lid gebeuren. 
 Het internet heeft hier nog geen goede oplossing voor. 
 Zo kan het op Facebook gebeuren dat een overledene (met de beste bedoelingen) felicitaties krijgt op zijn/haar verjaardag.
@@ -489,7 +489,7 @@ doordat ze de rekening voor hun club website niet meer betalen.
 
 ### Wat is al dat gedoe met Levels/Niveaus?
 
-<details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
+<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 Een club kan meedoen op Level 1, 2 of 3. 
 
 - Op Level 1 weet de app alleen dat de club bestaat en waar de club zit.
@@ -507,7 +507,7 @@ en een gedetailleerde uitleg wat ieder stukje informatie betekent ([GitHub](http
 
 ### Ben ik Level 1 per ongeluk aan het overslaan?
 
-<details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
+<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 Misschien.
 Voor de clubs in regio Noord Brabant - Oost hebben wij de Level 1 gegevens voor alle ons bekende clubs ingevoerd.
 Andere clubs kunnen dus zelf hun Level 1 gegevens bij ons aanleveren.
@@ -519,7 +519,7 @@ Plus liefst (niet verplicht) een enkele zin over iets wat er speciaal is aan de 
 
 ### Hoe maak ik een Level 2 bestand aan?
 
-<details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
+<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 Hier is een apart stappenplan met instructies voor: [tinyurl.com/Level2aanmaken](https://tinyurl.com/Level2aanmaken).
 Er is ook een engelstalige versie hiervan: [tinyurl.com/Level2aanmaken](https://tinyurl.com/Level2creation).
 </details></p>
@@ -528,7 +528,7 @@ Er is ook een engelstalige versie hiervan: [tinyurl.com/Level2aanmaken](https://
 
 ### Hoe krijg ik een Level 2 bestand op mijn club website?
 
-<details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
+<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 
 Voor de eerste clubs zijn we bereid om _tijdelijk_ het bestand op onze eigen server zetten. 
 Het nadeel hiervan is dat iedere herziening van het bestand via ons moet lopen.
@@ -559,7 +559,7 @@ Er komt een apart stappenplan met stap-voor-stap instructies voor "hoe krijg ik 
 
 ### Hoe kan een club zelf zijn Level 1 omschrijving bepalen?
 
-<details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
+<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 Het kan automatisch door de `remark` voor de club aan de bovenkant van 
 een Level 2 bestand te vullen met de gewenste tekst.
 Dat Level 2 bestand staat in principe onder beheer van de club (terwijl Level 1 centraal staat).
@@ -572,13 +572,13 @@ Graag ons op dergelijke wijzigingen op club-niveau attenderen: dan corrigeren wi
 
 ## Uitbreidingen
 
-<details><summary>$\color{orange}{\textsf{Klik om categorie open of dicht te klappen}}$</summary></p>
+<details><summary>Klik om categorie open of dicht te klappen</summary></p>
 
 <ul><li>
 
 ### Trefwoorden bij de fotografen? (onderweg)
 
-<details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
+<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 Een fotograaf kan straks gekoppeld worden aan enkele trefwoorden zoals "portret" of "zwart-wit".
 En de app kan dit dan weergeven en hierop zoeken. Hiermee kan je fotografen 
 met een vergelijkbare belangstelling vinden en hun portfolio's inzien. En eventueel
@@ -592,7 +592,7 @@ De trefwoorden worden worden echter nog niet getoond.
 
 ### Foto's van afgelopen exposities? (onderweg)
 
-<details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
+<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 Hier is een begin aan gemaakt in Photo Club Hub HTML ([voorproefje](http://www.vdhamer.com/fgDeGender/expo2024/)).
 Het gaat dan om de foto's van clubexposities te tonen _na afloop_ van de fysieke expositie.
 </details></p>
@@ -601,7 +601,7 @@ Het gaat dan om de foto's van clubexposities te tonen _na afloop_ van de fysieke
 
 ### Aankondigen komende exposities doen?
 
-<details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
+<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 Dat zou kunnen. Te denken valt aan het tonen van een chronologische lijst met afgelopen exposities en de komende expositie.
 De komende expositie zou leiden naar een afbeelding van de aankondigingsposter voor de expositie. 
 De app versie zou ook actief kunnen melden welke exposities er de komende dagen aankomen ("widget" op iOS home screen).
@@ -611,7 +611,7 @@ De app versie zou ook actief kunnen melden welke exposities er de komende dagen 
     
 ### Centrale ingang voor de webversie?
 
-<details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
+<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 Op termijn moet er ook een centrale (HTML) indexpagina komen die all deelnemende club websites vermeld.
 De hiervoor benodigde informatie is er al (voor de Portfolio's pagina van de appversie).
 Met deze uitbreiding worden de losstaande webeilandjes per club plotseling één doorgelinkt geheel. 
@@ -620,7 +620,7 @@ Met deze uitbreiding worden de losstaande webeilandjes per club plotseling één
     
 ### Ondersteuning individuele bondsleden?
 
-<details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
+<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 Hier lijkt naar te zijn.
 Ideeën hoe dit eruit zou moeten zien (zonder veel af te wijken van bestaande app structuur) zijn welkom.
 
@@ -628,13 +628,13 @@ Ideeën hoe dit eruit zou moeten zien (zonder veel af te wijken van bestaande ap
 
 ## Meer informatie
 
-<details><summary>$\color{orange}{\textsf{Klik om categorie open of dicht te klappen}}$</summary></p>
+<details><summary>Klik om categorie open of dicht te klappen</summary></p>
 
 <ul><li>
 
 ### Er is vast meer documentatie?
 
-<details><summary>$\color{green}{\textsf{Klik om antwoord open of dicht te klappen}}$</summary></p>
+<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 Vast wel. Zie tabel:
     
 | Titel  | Link | Nederlands | Engels  |
