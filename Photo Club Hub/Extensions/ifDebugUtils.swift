@@ -5,13 +5,13 @@
 //  Created by Peter van den Hamer on 22/03/2023.
 //
 
-func ifDebugPrint(_ string: String) {
+public func ifDebugPrint(_ string: String) {
     #if DEBUG
         print(string)
     #endif
 }
 
-func ifDebugFatalError(_ string: String) {
+public func ifDebugFatalError(_ string: String) {
     #if DEBUG
         fatalError(string)
     #else
@@ -23,7 +23,7 @@ func ifDebugFatalError(_ string: String) {
 // normally the value passed for file should be #fileID (and line should receive #line)
 // Note that in Swift 6.0, #fileID may be needed because #file is deprecated
 // no point in providing defaults for file & line (would be this file)
-func ifDebugFatalError(_ string: String, file: StaticString, line: UInt) {
+public func ifDebugFatalError(_ string: String, file: StaticString, line: UInt) {
     #if DEBUG
         fatalError(string, file: file, line: line)
     #else
@@ -32,7 +32,7 @@ func ifDebugFatalError(_ string: String, file: StaticString, line: UInt) {
     #endif
 }
 
-func isDebug() -> Bool {
+public func isDebug() -> Bool {
     #if DEBUG
         true
     #else

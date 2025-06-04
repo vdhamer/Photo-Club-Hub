@@ -9,7 +9,7 @@ import NaturalLanguage
 
 extension String {
 
-    func containsWordUsingNLP(targetWord: String) -> Bool {
+    public func containsWordUsingNLP(targetWord: String) -> Bool {
         let tokenizer = NLTokenizer(unit: .word)
         tokenizer.string = self
         let range = self.startIndex..<self.endIndex

@@ -12,7 +12,7 @@ extension String {
 
     // "2001-12-31" returns Dec 31st 2001
     // "?" returns nil
-    func extractDate() -> Date? {
+    public func extractDate() -> Date? {
         guard self.isEmpty == false else {
             return nil
         }

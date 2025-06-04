@@ -10,7 +10,7 @@ import Foundation
 extension URLSession {
 
     // swiftlint:disable:next large_tuple
-    func synchronousDataTask(from url: URL) -> (Data?, URLResponse?, Error?) {
+    public func synchronousDataTask(from url: URL) -> (Data?, URLResponse?, Error?) {
         // (synchronous-http-request-via-nsurlsession-in-swift)[https://stackoverflow.com/questions/26784315]
         nonisolated(unsafe) var data: Data?     // protected by semaphore
         nonisolated(unsafe) var response: URLResponse?
