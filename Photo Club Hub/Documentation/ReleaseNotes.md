@@ -1,7 +1,7 @@
 ### 2.8.0 (GitHub commit ???????) ??-06-25
 
 Data Maintenance
-* Added a major new photography museum in Seoul.
+* Added a large new photography museum in Seoul.
 
 This build #4640 was made using Xcode 16.4
 

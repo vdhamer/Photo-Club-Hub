@@ -104,7 +104,7 @@
 		D0F8719C2D403D1700530D10 /* root.level0.json in Resources */ = {isa = PBXBuildFile; fileRef = D0F8718B2D403D1700530D10 /* root.level0.json */; };
 		D0F8719F2D403E6000530D10 /* readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = D0F8719E2D403E5500530D10 /* readme.txt */; };
 		D0FD28BB2D8CDFD3002B5C38 /* languages.level0.json in Resources */ = {isa = PBXBuildFile; fileRef = D0FD28BA2D8CDFD3002B5C38 /* languages.level0.json */; };
-		D0FD28BC2D8CDFD3002B5C38 /* abstractKeyword.level0.json in Resources */ = {isa = PBXBuildFile; fileRef = D0FD28B82D8CDFD3002B5C38 /* abstractKeyword.level0.json */; };
+		D0FD28BC2D8CDFD3002B5C38 /* abstractExpertise.level0.json in Resources */ = {isa = PBXBuildFile; fileRef = D0FD28B82D8CDFD3002B5C38 /* abstractExpertise.level0.json */; };
 		D0FD28BD2D8CDFD3002B5C38 /* language.level0.json in Resources */ = {isa = PBXBuildFile; fileRef = D0FD28B92D8CDFD3002B5C38 /* language.level0.json */; };
 		D0FE77E52BB9AEE900272077 /* ItemFilterStatsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE77E42BB9AEE900272077 /* ItemFilterStatsEnum.swift */; };
 /* End PBXBuildFile section */
@@ -284,7 +284,7 @@
 		D0F999502AACE217005FA0FF /* Photo_Club_Hub_2_4_2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_4_2.xcdatamodel; sourceTree = "<group>"; };
 		D0FCF2E229B5517000F31442 /* VoteOnRoadmapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteOnRoadmapView.swift; sourceTree = "<group>"; };
 		D0FCF2E529B558FE00F31442 /* Roadmap.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Roadmap.json; sourceTree = "<group>"; };
-		D0FD28B82D8CDFD3002B5C38 /* abstractKeyword.level0.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = abstractKeyword.level0.json; sourceTree = "<group>"; };
+		D0FD28B82D8CDFD3002B5C38 /* abstractExpertise.level0.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = abstractExpertise.level0.json; sourceTree = "<group>"; };
 		D0FD28B92D8CDFD3002B5C38 /* language.level0.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = language.level0.json; sourceTree = "<group>"; };
 		D0FD28BA2D8CDFD3002B5C38 /* languages.level0.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = languages.level0.json; sourceTree = "<group>"; };
 		D0FE77E42BB9AEE900272077 /* ItemFilterStatsEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemFilterStatsEnum.swift; sourceTree = "<group>"; };
@@ -699,7 +699,7 @@
 				D091C13B2D942F5200C666AC /* 250523_Fotoclubs_Brabant_Oost.xlsx */,
 				D0A615B22D920C5B0024EC9E /* fgWaalre.level2.json */,
 				D0A615782D91B7A00024EC9E /* fcBellusImago.level2.json */,
-				D0FD28B82D8CDFD3002B5C38 /* abstractKeyword.level0.json */,
+				D0FD28B82D8CDFD3002B5C38 /* abstractExpertise.level0.json */,
 				D0FD28B92D8CDFD3002B5C38 /* language.level0.json */,
 				D0FD28BA2D8CDFD3002B5C38 /* languages.level0.json */,
 				D06F109E2D84D8CC005AE931 /* empty.level0.json */,
@@ -848,7 +848,7 @@
 				D06D08DE2C28835D00872BC2 /* Settings.bundle in Resources */,
 				D04856362D46A45D00022117 /* Localizable.xcstrings in Resources */,
 				D0FD28BB2D8CDFD3002B5C38 /* languages.level0.json in Resources */,
-				D0FD28BC2D8CDFD3002B5C38 /* abstractKeyword.level0.json in Resources */,
+				D0FD28BC2D8CDFD3002B5C38 /* abstractExpertise.level0.json in Resources */,
 				D0FD28BD2D8CDFD3002B5C38 /* language.level0.json in Resources */,
 				D0831A51277F73C00049AB84 /* Preview Assets.xcassets in Resources */,
 				D0A615CF2D9218030024EC9E /* fgWaalre.level2.json in Resources */,

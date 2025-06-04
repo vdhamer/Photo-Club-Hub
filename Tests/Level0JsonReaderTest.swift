@@ -40,9 +40,9 @@ import CoreData // for NSManagedObjectContext
 
     // Read abstract.level0.json.
     // Clears all CoreData keywords. Runs on background thread, adding bunch of extra complexity ;-(
-    @Test("Parse abstractKeyword.level0.json") func abstractKeywordLevel0Parse() async {
+    @Test("Parse abstractExpertise.level0.json") func abstractExpertiseLevel0Parse() async {
         let bgContext = PersistenceController.shared.container.newBackgroundContext()
-        bgContext.name = "AbstractKeywordLevel0"
+        bgContext.name = "AbstractExpertiseLevel0"
         bgContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         bgContext.automaticallyMergesChangesFromParent = true
 
@@ -53,7 +53,7 @@ import CoreData // for NSManagedObjectContext
 
         bgContext.performAndWait {
             _ = Level0JsonReader(bgContext: bgContext, // read root.Level0.json file
-                                 fileName: "abstractKeyword", isInTestBundle: true,
+                                 fileName: "abstractExpertise", isInTestBundle: true,
                                  useOnlyInBundleFile: false)
             try? bgContext.save()
         }
