@@ -61,15 +61,15 @@ struct WhoIsWhoListView: View {
                      comment: "Shown in gray at the bottom of the Who's Who page (3/3).")
                 ForEach(Keyword.getAll(context: viewContext), id: \.self) { keyword in
                     HStack {
-                        Text(verbatim: "   🔑 \(keyword.id)")
+                        Text(verbatim: "   🏵️ \(keyword.selectedLocalizedKeyword.name)")
                         Text(PhotographerKeyword.count(context: viewContext, keywordID: keyword.id).description+"x")
                         Text("\(keyword.isStandard ? "" : nonStandard)")
                     }
                 }
-                Text("Total number of Keyword instances: \(PhotographerKeyword.count(context: viewContext))x",
-                     comment: "Keyword statistics at bottom of Who's Who screen")
-                Text("Total number of Keywords: \(Keyword.count(context: viewContext))",
-                     comment: "Keyword statistics at bottom of Who's Who screen")
+                Text("There are \(Keyword.count(context: viewContext)) areas of expertise.",
+                     comment: "Expertise statistics in footnote #4 of Who's Who screen")
+                Text("Expertises were assigned \(PhotographerKeyword.count(context: viewContext)) times.",
+                     comment: "Expertise statistics in footnote #4 of Who's Who screen")
             }
             .foregroundColor(Color.secondary)
 

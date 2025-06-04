@@ -1,6 +1,8 @@
 ### 2.8.0 (GitHub commit ???????) ??-06-25
 
+Who's Who screen
 * Keyword is renamed to Expertise
+* icon for Expertise changed from 🔑 to 🏵️
 
 Code Maintenance
 * Removed unused duplicate files

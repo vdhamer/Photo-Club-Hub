@@ -396,6 +396,23 @@
         }
       }
     },
+    "Expertises were assigned %lld times." : {
+      "comment" : "Expertise statistics in footnote #4 of Who's Who screen",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Expertises were assigned %lld times."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Expertisegebieden zijn %lldx toegekend."
+          }
+        }
+      }
+    },
     "Fragment of the Swift source code" : {
       "comment" : "Caption for image on Readme page",
       "localizations" : {
@@ -974,6 +991,17 @@
         }
       }
     },
+    "There are %lld areas of expertise." : {
+      "comment" : "Expertise statistics in footnote #4 of Who's Who screen",
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Er zijn %lld verschillende expertisegebieden."
+          }
+        }
+      }
+    },
     "To see names here, please adapt the Search filter or enable additional categories on the Preferences page." : {
       "comment" : "Hint to the user if the database returns zero Members with Search filter in use.",
       "localizations" : {
@@ -1004,40 +1032,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Deze lijst is vermoedelijk leeg omdat er onvoldoende ledencategorieën geselecteerd zijn op het Instellingen scherm."
-          }
-        }
-      }
-    },
-    "Total number of Keyword instances: %lldx" : {
-      "comment" : "Keyword statistics at bottom of Who's Who screen",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Total number of Keyword instances: %lldx"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Trefwoorden zijn %lldx toegepast."
-          }
-        }
-      }
-    },
-    "Total number of Keywords: %lld" : {
-      "comment" : "Keyword statistics at bottom of Who's Who screen",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Total number of Keywords: %lld"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aantal gedefinieerde trefwoorden: %lld."
           }
         }
       }
@@ -1133,13 +1127,13 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "④ Photographer keyword stats"
+            "value" : "④ Photographic areas of expertise"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "④ Trefwoorden t.a.v. fotografen"
+            "value" : "④ Fotografische expertisegebieden"
           }
         }
       }
