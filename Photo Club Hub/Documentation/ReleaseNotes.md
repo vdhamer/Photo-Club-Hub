@@ -1,8 +1,14 @@
 ### 2.8.0 (GitHub commit ???????) ??-06-25
 
+This build #4640 was made using Xcode 16.4
+
+---------------------------------------------------------------------------
+
+### 2.8.0 (GitHub commit 77ab4e2) 04-06-25
+
 Who's Who screen
 * Keyword is renamed to Expertise
-* icon for Expertise changed from 🔑 to 🏵️
+* Icon for Expertise changed from 🔑 to 🏵️ and 🪲
 
 Code Maintenance
 * Removed unused duplicate files
@@ -22,7 +28,7 @@ Documentation
 * Updated dataModel.png in README.md
 * New FAQ (in Dutch) Level2_expertise_NL.md
 
-This build #4638 was made using Xcode 16.4
+This build #4639 was made using Xcode 16.4 and is intended for beta testing only
 
 ---------------------------------------------------------------------------
 
