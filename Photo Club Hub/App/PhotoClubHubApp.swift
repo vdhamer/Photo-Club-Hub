@@ -55,7 +55,7 @@ extension PhotoClubHubApp {
 
     static func loadClubsAndMembers() {
 
-        // load list of keywords and languages from root.Level0.json file
+        // load list of expertises and languages from root.Level0.json file
         let level0BackgroundContext = makeBgContext(ctxName: "Level 0 loader")
         _ = Level0JsonReader(bgContext: level0BackgroundContext, isInTestBundle: false, useOnlyInBundleFile: false)
 

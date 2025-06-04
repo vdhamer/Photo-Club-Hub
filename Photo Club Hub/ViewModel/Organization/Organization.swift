@@ -151,7 +151,7 @@ extension Organization {
             }
         }
 
-        // third choice: use any translation available for this keyword
+        // third choice: use any translation available for this expertise
         if localizedRemarks.first != nil, localizedRemarks.first!.localizedString != nil {
             return "\(localizedRemarks.first!.localizedString!) [\(localizedRemarks.first!.language.isoCodeAllCaps)]"
         }
