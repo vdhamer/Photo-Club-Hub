@@ -61,7 +61,7 @@ struct WhoIsWhoListView: View {
                      comment: "Shown in gray at the bottom of the Who's Who page (3/3).")
                 ForEach(Keyword.getAll(context: viewContext).sorted(by: sortKeywordsLocalized), id: \.self) { keyword in
                     HStack {
-                        Text(verbatim: "   🏵️ \(keyword.selectedLocalizedKeyword.name)")
+                        Text(verbatim: "   \(keyword.isStandard ? "🏵️" : "❓") \(keyword.selectedLocalizedKeyword.name)")
                         Text(PhotographerKeyword.count(context: viewContext, keywordID: keyword.id).description+"x")
                         Text("\(keyword.isStandard ? "" : nonStandard)")
                     }
