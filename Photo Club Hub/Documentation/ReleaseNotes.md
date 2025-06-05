@@ -3,6 +3,9 @@
 Data Maintenance
 * Added a large new photography museum in Seoul.
 
+Documentation
+* Updated FAQ_nl to reflect new Expertise terminology.
+
 This build #4640 was made using Xcode 16.4
 
 ---------------------------------------------------------------------------
