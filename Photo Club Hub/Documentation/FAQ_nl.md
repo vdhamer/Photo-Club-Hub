@@ -64,8 +64,8 @@ Voor andere merken telefoontjes en voor grotere schermen is er een **webversie**
 Met de webversie kan je club portfolio's bekijken in een internet browser (_Chrome_, _Edge_, _Safari_) 
 op allerlei apparaten (Android telefoons, Chinese telefoonmerken, tablets, laptops, desktops).
 
-De beide versies hebben dezelfde opzet en gebruiken dezelfde gegevens.
-Achter de schermen is de webversie een computerprogramma dat met een druk op de knop de vereiste webpagina's aanmaakt.
+Beide versies hebben dezelfde opzet en gebruiken dezelfde gegevens.
+Achter de schermen is er voor de webversie een computerprogramma dat met een druk op de knop de vereiste webpagina's aanmaakt.
 Die pagina's kunnen toegevoegd worden aan bestaande clubwebsites (dit zullen vaak WordPress websites zijn).
 
 Er wordt continu aan verbeteringen van **beide** versies gewerkt.
