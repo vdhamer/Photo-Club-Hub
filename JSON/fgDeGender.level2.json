@@ -92,7 +92,7 @@
                 "status": {
                     "isProspectiveMember": false
                 },
-                "keywords": [ "Bird", "Landscape", "Macro" ]
+                "keywords": [ "Bird", "Landscape" ]
             }
         },
 
@@ -701,7 +701,7 @@
                 "status": {
                     "isProspectiveMember": false
                 },
-                "keywords": [ "Bird", "Landscape", "Architecture" ]
+                "keywords": [ "Bird", "Landscape" ]
             }
         },
 
