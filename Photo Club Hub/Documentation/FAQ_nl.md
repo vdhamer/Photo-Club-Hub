@@ -62,11 +62,12 @@ Er is een **iOS** (iPhone/iPad) versie van de app op de Apple App Store.
 Voor andere merken telefoontjes en voor grotere schermen is er een **webversie**.
 
 Met de webversie kan je club portfolio's bekijken in een internet browser (_Chrome_, _Edge_, _Safari_) 
-op allerlei apparaten (Android telefoons, Chinese telefoonmerken, tablets, laptops, desktops).
+op allerlei apparaten (Android telefoons, Chinese telefoonmerken, tablets, laptops, Windows PC, Mac).
+Beide versies hebben dezelfde opzet en gebruiken dezelfde gegevens.
 
-De beide versies hebben dezelfde opzet en gebruiken dezelfde gegevens.
-Achter de schermen is de webversie een computerprogramma dat met een druk op de knop de vereiste webpagina's aanmaakt.
-Die pagina's kunnen toegevoegd worden aan bestaande clubwebsites (dit zullen vaak WordPress websites zijn).
+Achter de schermen bestaat is de webversie uit een app dat met een druk op de knop de vereiste webpagina's aanmaakt.
+Die pagina's kunnen toegevoegd worden aan bestaande clubwebsites (dit zullen vaak WordPress websites zijn). 
+Iemand die de webversie bekijkt ziet de achterliggende app niet: de app ondherhoudt als het ware alleen de web pagina's.
 
 Er wordt continu aan verbeteringen van **beide** versies gewerkt.
 Wij staan open voor vrijwilligers die een derde versie voor Android willen en kunnen maken.
@@ -576,17 +577,16 @@ Graag ons op dergelijke wijzigingen op club-niveau attenderen: dan corrigeren wi
 
 <ul><li>
 
-### Trefwoorden bij de fotografen? (onderweg)
+### Expertisegebieden van fotografen? (onderweg)
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
-Een fotograaf kan straks gekoppeld worden aan enkele trefwoorden zoals "portret" of "zwart-wit".
-En de app kan dit dan weergeven en hierop zoeken. Hiermee kan je fotografen 
-met een vergelijkbare belangstelling vinden en hun portfolio's inzien. En eventueel
-elkaars exposities bezoeken of op een andere manier in contact opnemen.</p>
+Een fotograaf kan gekoppeld worden aan expertisegebieden zoals "portret" of "zwart-wit".
+De app kan deze dan weergeven en (straks) hierop zoeken. Hiermee kan je fotografen 
+met een bepaalde specialisatie vinden en hun portfolio's bekijken. Bij voldoende interesse kan men
+b.v. een expositie bezoeken of via de club persoonlijk contact opnemen.</p>
 
-Hier wordt momenteel aan gewerkt: een Level 2 bestand kan al trefwoorden (`keywords`) per fotograaf opnemen.
-En er wordt al een Level 0 bestand ingelezen met met trefwoorden en hun vertalingen.
-De trefwoorden worden worden echter nog niet getoond.
+Hier wordt momenteel aan gewerkt: een Level 2 bestand kan al expertisegebieden per fotograaf aanleveren.
+En is ook een ("Level 0") lijst met gestandaardiseerde expertisebegieden en hun vertalingen.
 
 </li><li>
 
