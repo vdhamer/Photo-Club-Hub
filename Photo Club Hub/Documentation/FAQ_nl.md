@@ -577,17 +577,16 @@ Graag ons op dergelijke wijzigingen op club-niveau attenderen: dan corrigeren wi
 
 <ul><li>
 
-### Trefwoorden bij de fotografen? (onderweg)
+### Expertisegebieden van fotografen? (onderweg)
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
-Een fotograaf kan straks gekoppeld worden aan enkele trefwoorden zoals "portret" of "zwart-wit".
-En de app kan dit dan weergeven en hierop zoeken. Hiermee kan je fotografen 
-met een vergelijkbare belangstelling vinden en hun portfolio's inzien. En eventueel
-elkaars exposities bezoeken of op een andere manier in contact opnemen.</p>
+Een fotograaf kan geassocieerd worden aan expertisegebieden zoals "portret" of "zwart-wit".
+De app kan dit dan weergeven en (straks) hierop zoeken. Hiermee kan je fotografen 
+met een bepaalde focus vinden en hun portfolio's bekijken. Bij voldoende interesse kan men
+b.v. een expositie bezoeken of op een andere manier contact opnemen.</p>
 
-Hier wordt momenteel aan gewerkt: een Level 2 bestand kan al trefwoorden (`keywords`) per fotograaf opnemen.
-En er wordt al een Level 0 bestand ingelezen met met trefwoorden en hun vertalingen.
-De trefwoorden worden worden echter nog niet getoond.
+Hier wordt momenteel aan gewerkt: een Level 2 bestand kan al expertisegebieden per fotograaf aanleveren.
+En is ook een ("Level 0") lijst met gestandaardiseerde expertisebegieden (Level 0) met vertalingen.
 
 </li><li>
 
