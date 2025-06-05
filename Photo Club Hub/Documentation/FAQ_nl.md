@@ -62,11 +62,12 @@ Er is een **iOS** (iPhone/iPad) versie van de app op de Apple App Store.
 Voor andere merken telefoontjes en voor grotere schermen is er een **webversie**.
 
 Met de webversie kan je club portfolio's bekijken in een internet browser (_Chrome_, _Edge_, _Safari_) 
-op allerlei apparaten (Android telefoons, Chinese telefoonmerken, tablets, laptops, desktops).
-
+op allerlei apparaten (Android telefoons, Chinese telefoonmerken, tablets, laptops, Windows PC, Mac).
 Beide versies hebben dezelfde opzet en gebruiken dezelfde gegevens.
-Achter de schermen is er voor de webversie een computerprogramma dat met een druk op de knop de vereiste webpagina's aanmaakt.
-Die pagina's kunnen toegevoegd worden aan bestaande clubwebsites (dit zullen vaak WordPress websites zijn).
+
+Achter de schermen bestaat is de webversie uit een app dat met een druk op de knop de vereiste webpagina's aanmaakt.
+Die pagina's kunnen toegevoegd worden aan bestaande clubwebsites (dit zullen vaak WordPress websites zijn). 
+Iemand die de webversie bekijkt ziet de achterliggende app niet: de app ondherhoudt als het ware alleen de web pagina's.
 
 Er wordt continu aan verbeteringen van **beide** versies gewerkt.
 Wij staan open voor vrijwilligers die een derde versie voor Android willen en kunnen maken.
