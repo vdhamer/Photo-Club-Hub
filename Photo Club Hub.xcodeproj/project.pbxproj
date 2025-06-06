@@ -258,7 +258,7 @@
 		D0DE02762789D1B30062738C /* RoleIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleIconView.swift; sourceTree = "<group>"; };
 		D0DE6B6D2DB6DAE700841DBF /* packages.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = packages.png; sourceTree = "<group>"; };
 		D0DFBEF32D47036900CB9E73 /* Readme.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Readme.xcstrings; sourceTree = "<group>"; };
-		D0E02F972B80191300D67CDA /* Readme_NL_2_7_1.pages */ = {isa = PBXFileReference; lastKnownFileType = file; path = Readme_NL_2_7_1.pages; sourceTree = "<group>"; };
+		D0E02F972B80191300D67CDA /* Readme_NL_2_8_0.pages */ = {isa = PBXFileReference; lastKnownFileType = file; path = Readme_NL_2_8_0.pages; sourceTree = "<group>"; };
 		D0E2235327DE9139002A8600 /* PreludeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreludeView.swift; sourceTree = "<group>"; };
 		D0E673BA2AE1C1A100A4DC95 /* Photo_Club_Hub_2_5_0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_5_0.xcdatamodel; sourceTree = "<group>"; };
 		D0E694C827EF9B450054D634 /* LockAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockAnimationView.swift; sourceTree = "<group>"; };
@@ -543,7 +543,7 @@
 				D04D7B2B2D2B3B210048454B /* Jaarverslag 2024 Website.docx */,
 				D0840FB72D07481B00458E06 /* Nieuwsbrief_Jan_2025_app.pages */,
 				D076BE702CF0CC10008F4B47 /* Readme_EN_2_7_1.pages */,
-				D0E02F972B80191300D67CDA /* Readme_NL_2_7_1.pages */,
+				D0E02F972B80191300D67CDA /* Readme_NL_2_8_0.pages */,
 				D07A1E2E28314EA600C77F66 /* SwiftUIEnvironmentValues.png */,
 				D01DFAA627E778BD007BABFA /* offsets.md */,
 				D04A2B112AC0958C003ED113 /* LineCount.xlsx */,

@@ -1,5 +1,9 @@
 ### 2.8.0 (GitHub commit ???????) ??-06-25
 
+Who's Who screen
+* Updated Readme_NL_2_8_0.pages to cover expertises
+* Updated screenshot on Search Bar
+
 Data Maintenance
 * Added a large new photography museum in Seoul.
 
