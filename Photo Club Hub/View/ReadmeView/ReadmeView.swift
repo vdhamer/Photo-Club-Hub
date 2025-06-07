@@ -47,10 +47,11 @@ struct ReadmeView: View {
                                 .border(.gray, width: 1)
                                 .scaledToFit()
                                 .frame(width: geo.size.width * 0.8, alignment: .center)
-                            Text("Clubs, their Members, and their Portfolios\n",
+                            Text("Clubs, their Members, and their Portfolios\n", tableName: "Readme",
                                  comment: "Caption of an image on the Readme page")
                             .font(.callout.italic())
                             .frame(width: geo.size.width, alignment: .center)
+                            Text(verbatim: "")
 
                             ReadmeSection(LocalizedStringResource("§1.4", table: "Readme",
                                                                   comment: "Paragraph in the Readme screen"),
@@ -90,7 +91,7 @@ struct ReadmeView: View {
                                 .border(.gray, width: 1)
                             if let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
                                 if let build = Bundle.main.infoDictionary?["CFBundleVersion"] as? String {
-                                    Text("App version \(version) (build \(build))",
+                                    Text("App version \(version) (build \(build))", tableName: "Readme",
                                          comment: "Shown on Readme page.")
                                     .font(.callout.italic())
                                     .frame(width: geo.size.width, alignment: .center)
@@ -117,13 +118,35 @@ struct ReadmeView: View {
                                 .border(.gray, width: 1)
                                 .scaledToFit()
                                 .frame(width: geo.size.width * 0.8, height: 260, alignment: .center)
-                            Text("Search bar at the top of _Portfolios_ screen",
+                            Text("Search bar at the top of _Portfolios_ screen", tableName: "Readme",
                                  comment: "Caption about Search Bar on the Readme page")
                             .font(.callout.italic())
                             .frame(width: geo.size.width * 0.8, alignment: .center)
                             Text(verbatim: "")
 
                             ReadmeSection(LocalizedStringResource("§3.11.c", table: "Readme",
+                                                                  comment: "Paragraph in the Readme screen"),
+                                                                  geo: geo)
+
+                            ReadmeSection(LocalizedStringResource("§3.12.a", table: "Readme",
+                                                                  comment: "Title of a section of the Readme screen"),
+                                                                  geo: geo)
+                            ReadmeSection(LocalizedStringResource("§3.12.b", table: "Readme",
+                                                                  comment: "Paragraph in the Readme screen"),
+                                                                  geo: geo, bottomPaddingAmount: 0)
+
+                            Image("Expertise")
+                                .resizable()
+                                .border(.gray, width: 1)
+                                .scaledToFit()
+                                .frame(width: geo.size.width * 0.8, height: 260, alignment: .center)
+                            Text("Available (🏵) and potential (🪲) Areas of Expertise", tableName: "Readme",
+                                 comment: "Caption about Expertise on the Readme page")
+                            .font(.callout.italic())
+                            .frame(width: geo.size.width * 0.8, alignment: .center)
+                            Text(verbatim: "")
+
+                            ReadmeSection(LocalizedStringResource("§3.12.c", table: "Readme",
                                                                   comment: "Paragraph in the Readme screen"),
                                                                   geo: geo)
 
@@ -138,7 +161,7 @@ struct ReadmeView: View {
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: geo.size.width * 0.8, alignment: .center)
-                            Text("Part of the internal translation table",
+                            Text("Part of the internal translation table", tableName: "Readme",
                                  comment: "Caption of Localizations image on Readme page")
                             .font(.callout.italic())
                             .frame(width: geo.size.width, alignment: .center)
@@ -157,7 +180,7 @@ struct ReadmeView: View {
                                 .scaledToFit()
                                 .frame(width: geo.size.width * 0.8, alignment: .center)
                                 .border(.gray, width: 1)
-                            Text("Maps can be viewed in 3D",
+                            Text("Maps can be viewed in 3D", tableName: "Readme",
                                  comment: "Caption of 3D image on Readme page")
                             .font(.callout.italic())
                             .frame(width: geo.size.width, alignment: .center)
@@ -201,7 +224,7 @@ struct ReadmeView: View {
                                 .scaledToFit()
                                 .frame(width: geo.size.width * 0.8, alignment: .center)
                                 .border(.gray, width: 1)
-                            Text("Amsterdam has two photography museums.",
+                            Text("Amsterdam has two photography museums.", tableName: "Readme",
                                  comment: "Caption of Museums image on Readme page")
                             .font(.callout.italic())
                             .frame(width: geo.size.width, alignment: .center)
@@ -226,7 +249,7 @@ struct ReadmeView: View {
                                 .scaledToFit()
                                 .border(.gray, width: 1)
                                 .frame(width: geo.size.width * 0.6, alignment: .center)
-                            Text("Example of a link to a club web site",
+                            Text("Example of a link to a club web site", tableName: "Readme",
                                  comment: "Caption of Websites image on Readme page")
                             .font(.callout.italic())
                             .frame(width: geo.size.width, alignment: .center)
@@ -273,7 +296,7 @@ struct ReadmeView: View {
                                 .border(.gray, width: 1)
                                 .scaledToFit()
                                 .frame(width: geo.size.width * 0.8, height: 300, alignment: .center)
-                            Text("The Preferences screen.",
+                            Text("The Preferences screen.", tableName: "Readme",
                                  comment: "Caption of an image on the Readme page")
                             .font(.callout.italic())
                             .frame(width: geo.size.width * 0.8, alignment: .center)
@@ -294,7 +317,7 @@ struct ReadmeView: View {
                                 .border(.gray, width: 1)
                                 .scaledToFit()
                                 .frame(width: geo.size.width * 0.8, height: 300, alignment: .center)
-                            Text("Buttons for the automatic slide show",
+                            Text("Buttons for the automatic slide show", tableName: "Readme",
                                  comment: "Caption about Play button on the Readme page")
                             .font(.callout.italic())
                             .frame(width: geo.size.width * 0.8, alignment: .center)
@@ -337,7 +360,7 @@ struct ReadmeView: View {
                                     .border(.gray, width: 1)
                                     .scaledToFit()
                                     .frame(width: geo.size.width * 0.8, alignment: .center)
-                                Text("Configuring Level 1 data for a Dutch photo club",
+                                Text("Configuring Level 1 data for a Dutch photo club", tableName: "Readme",
                                      comment: "Caption for image on Readme page")
                                 .font(.callout.italic())
                                 .frame(width: geo.size.width, alignment: .center)
@@ -360,7 +383,8 @@ struct ReadmeView: View {
                                     .border(.gray, width: 1)
                                     .scaledToFit()
                                     .frame(width: geo.size.width * 0.8, alignment: .center)
-                                Text("Fragment of the Swift source code", comment: "Caption for image on Readme page")
+                                Text("Fragment of the Swift source code", tableName: "Readme",
+                                     comment: "Caption for image on Readme page")
                                     .font(.callout.italic())
                                     .frame(width: geo.size.width, alignment: .center)
                                 Text(verbatim: "")

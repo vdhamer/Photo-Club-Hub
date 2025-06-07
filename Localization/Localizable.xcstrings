@@ -208,40 +208,6 @@
         }
       }
     },
-    "Amsterdam has two photography museums." : {
-      "comment" : "Caption of Museums image on Readme page",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Amsterdam has two photography museums."
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fotomusea aan de Keizersgracht in Amsterdam."
-          }
-        }
-      }
-    },
-    "App version %@ (build %@)" : {
-      "comment" : "Shown on Readme page.",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "App version %@ (build %@)"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "App versie %@ (build %@)"
-          }
-        }
-      }
-    },
     "Birthday" : {
       "comment" : "Birthday of member (without year). Date not currently localized?",
       "localizations" : {
@@ -276,23 +242,6 @@
         }
       }
     },
-    "Buttons for the automatic slide show" : {
-      "comment" : "Caption about Play button on the Readme page",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Buttons for the automatic slide show"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Knopjes om de beelden automatisch te doorlopen"
-          }
-        }
-      }
-    },
     "Clubs and Museums" : {
       "comment" : "Title of page with maps for Clubs and Museums",
       "localizations" : {
@@ -306,40 +255,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Clubs en Musea"
-          }
-        }
-      }
-    },
-    "Clubs, their Members, and their Portfolios\n" : {
-      "comment" : "Caption of an image on the Readme page",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Clubs, their Members, and their Portfolios\n"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Clubs, hun Leden en hun Portfolio's\n"
-          }
-        }
-      }
-    },
-    "Configuring Level 1 data for a Dutch photo club" : {
-      "comment" : "Caption for image on Readme page",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Configuring Level 1 data for a Dutch photo club"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sjabloon voor het toevoegen van een fotoclub"
           }
         }
       }
@@ -379,23 +294,6 @@
         }
       }
     },
-    "Example of a link to a club web site" : {
-      "comment" : "Caption of Websites image on Readme page",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Example of a link to a club web site"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Link (in blauw) naar een club website"
-          }
-        }
-      }
-    },
     "Expertises were assigned %lld times." : {
       "comment" : "Expertise statistics in footnote #4 of Who's Who screen",
       "localizations" : {
@@ -409,23 +307,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Expertisegebieden zijn %lldx toegekend."
-          }
-        }
-      }
-    },
-    "Fragment of the Swift source code" : {
-      "comment" : "Caption for image on Readme page",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fragment of the Swift source code"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Swift codefragment t.a.v. functies in het clubbestuur"
           }
         }
       }
@@ -477,23 +358,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Handmatig laden"
-          }
-        }
-      }
-    },
-    "Maps can be viewed in 3D" : {
-      "comment" : "Caption of 3D image on Readme page",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Maps can be viewed in 3D"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Omgeving van een fotomuseum in 3D"
           }
         }
       }
@@ -634,23 +498,6 @@
         }
       }
     },
-    "Part of the internal translation table" : {
-      "comment" : "Caption of Localizations image on Readme page",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Part of the internal translation table"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Een stukje van de interne EN-NL vertaaltabel"
-          }
-        }
-      }
-    },
     "Photo Club Hub" : {
       "comment" : "Name of the app shown in PreludeView when app is started",
       "localizations" : {
@@ -766,23 +613,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Prelude"
-          }
-        }
-      }
-    },
-    "Search bar at the top of _Portfolios_ screen" : {
-      "comment" : "Caption about Search Bar on the Readme page",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Search bar at the top of Portfolios screen"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Zoekfunctie bovenaan het Portfolio’s scherm"
           }
         }
       }
@@ -970,23 +800,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "getoond"
-          }
-        }
-      }
-    },
-    "The Preferences screen." : {
-      "comment" : "Caption of an image on the Readme page",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "The Preferences screen."
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Het Instellingen scherm in de app zelf."
           }
         }
       }
