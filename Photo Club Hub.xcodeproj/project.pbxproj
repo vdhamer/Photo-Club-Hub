@@ -190,7 +190,7 @@
 		D072D5E42D333E7500EA88DD /* XampleMinMembersProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XampleMinMembersProvider.swift; sourceTree = "<group>"; };
 		D073FE162D3B13B300DB01F4 /* Level2_aanmaken_NL.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Level2_aanmaken_NL.md; sourceTree = "<group>"; };
 		D07463E52CFB5EFA00F48EB2 /* root.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = root.level1.json; sourceTree = "<group>"; };
-		D076BE702CF0CC10008F4B47 /* Readme_EN_2_7_1.pages */ = {isa = PBXFileReference; lastKnownFileType = file; path = Readme_EN_2_7_1.pages; sourceTree = "<group>"; };
+		D076BE702CF0CC10008F4B47 /* Readme_EN_2_8_0.pages */ = {isa = PBXFileReference; lastKnownFileType = file; path = Readme_EN_2_8_0.pages; sourceTree = "<group>"; };
 		D0795CEB294FCCC200FA62A8 /* ShapeStyle+Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ShapeStyle+Colors.swift"; sourceTree = "<group>"; };
 		D07A1E2E28314EA600C77F66 /* SwiftUIEnvironmentValues.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SwiftUIEnvironmentValues.png; sourceTree = "<group>"; };
 		D081655E278616930078AB16 /* SinglePortfolioView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SinglePortfolioView.swift; sourceTree = "<group>"; };
@@ -542,7 +542,7 @@
 				D0F4B1822DEDF2D7009849A1 /* Level2_expertise_NL.md */,
 				D04D7B2B2D2B3B210048454B /* Jaarverslag 2024 Website.docx */,
 				D0840FB72D07481B00458E06 /* Nieuwsbrief_Jan_2025_app.pages */,
-				D076BE702CF0CC10008F4B47 /* Readme_EN_2_7_1.pages */,
+				D076BE702CF0CC10008F4B47 /* Readme_EN_2_8_0.pages */,
 				D0E02F972B80191300D67CDA /* Readme_NL_2_8_0.pages */,
 				D07A1E2E28314EA600C77F66 /* SwiftUIEnvironmentValues.png */,
 				D01DFAA627E778BD007BABFA /* offsets.md */,
