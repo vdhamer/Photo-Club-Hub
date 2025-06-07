@@ -21,7 +21,7 @@ Er komen later aparte instructies hoe _portfolio's_ met foto's ("Level 3") toe t
 
       | `town`  | `fullName` | `nickName` | `latitude` | `longitude` | JSON bestand | Web pagina |
       | -----  | ---------| ----- | :-----: | :-----: | :-----: | :-----: |
-      | Berlicum | FCC Shot71 | FCC Shot71 | 51.66306 | 5.41825 |  |  |
+      | Berlicum | FCC Shot71 | fccShot71 | 51.66306 | 5.41825 |  |  |
       | Eindhoven | Fotogroep de Gender | fgDeGender | 51.42398 | 5.45010 | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/fgDeGender.level2.json) | [link](http://www.vdhamer.com/fgDeGender) |
       | Eindhoven | Fotoclub Ericamera | fcEricamera | 51.45403 | 5.46288 | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/fcEricamera.level2.json) | [link](http://www.vdhamer.com/fcEricamera) |
       | Eindhoven | Fotoclub 't Karregat | fcKarregat | 51.48048 | 5.42879 | verwacht |  |
