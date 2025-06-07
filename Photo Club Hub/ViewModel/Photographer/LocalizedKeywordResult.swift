@@ -14,6 +14,7 @@ public struct LocalizedKeywordResult {
     public var customHint: String? // used to overrule standard Ignite hint
 
     var name: String { localizedKeyword?.name ?? id } // localized name or (if no translations) generic id
+    var isStandard: Bool { localizedKeyword != nil }
 
     public init(localizedKeyword: LocalizedKeyword?,
                 id: String,
@@ -33,5 +34,9 @@ extension LocalizedKeywordResult: Comparable {
         guard rhs.localizedKeyword != nil else { return true } // put untranslateable at end of list
         return lhs.localizedKeyword!.name < rhs.localizedKeyword!.name // normal sorting
     }
+
+}
+
+extension LocalizedKeywordResult: Identifiable {
 
 }

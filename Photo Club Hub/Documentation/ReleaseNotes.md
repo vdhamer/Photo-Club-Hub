@@ -1,14 +1,17 @@
 ### 2.8.0 (GitHub commit ???????) ??-06-25
 
+Readme screen
+* Updated Readme_NL_2_8_0 & Readme_EN_2_8_0 to include Expertise feature.
+* Updated screenshot showing Search Bar.
+
+Portfolio screen
+* Display areas of expertise of club members.
+
 Data Maintenance
 * Added the new photography museum in Seoul, Korea.
 
 Code Maintenance
 * Moved string translations for Readme into dedicated file (was inconsistent).
-
-Readme screen
-* Updated Readme_NL_2_8_0 & Readme_EN_2_8_0 to include Expertise feature.
-* Updated screenshot showing Search Bar.
 
 Documentation
 * Updated FAQ_nl to reflect new Expertise terminology.
