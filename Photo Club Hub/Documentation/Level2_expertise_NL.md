@@ -1,7 +1,7 @@
-## FAQ over `expertise` in level2.json bestanden
+## FAQ over `Expertise` in level2.json bestanden
 
-In Level 2 kan men per clublid 1 of 2 expertisegebieden opgeven.
-Het aanmaken en het formaat van Level 2 bestanden is beschreven in
+In Level 2 bestanden kan men per clublid 1 of 2 expertisegebieden opgeven.
+Het aanmaken en het formaat van Level 2 bestanden is omschreven in
 [Level2_aanmaken_NL](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/Level2_aanmaken_NL.md).
 Deze FAQ gaat over het doel en optimale gebruik van `expertise`.
 
@@ -12,12 +12,12 @@ Deze FAQ gaat over het doel en optimale gebruik van `expertise`.
 
 <li>
 
-### Wat betekent `expertise` hier?
+### Wat betekent `Expertise` hier?
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
-Het gaat hier om 1 of 2 gebieden waar een fotograaf om bekend staat.
-Hiermee kan met zien dat b.v. Rob zich toespitsts op abstracte fotografie. Maar hopelijk valt dat ook te zien aan de foto's van Rob.
-Het hoofddoel is om Rob te kunnen vinden tussen alle andere fotografen als men in de app zoekt op "abstract" of "abs".
+Hiermee bedoelen we enkele soorten fotografie waar een fotograaf zichzelf in bekwaamd heeft.
+Hiermee kan met zien dat b.v. Rob zich toespitsts op "Abstracte" fotografie. 
+Het hoofddoel is om Rob en zijn werk eenvoudig te kunnen vinden door "abstract" of "abs" in te typen.
 </details></p>
 
 </li><li>
@@ -46,10 +46,10 @@ Hiermee kan je zien welke er zijn, wat hun uitleg is, en hoeveel fotografen ze v
 ### Wat is de bedoeling eigenlijk?
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
-Stel dat er tien, honderd of zelfs duizend clubs meedoen met ieder 20 leden.
-Dan zijn er 200, 2000 of zelfs 20.000 fotografen bekend in de app. 
+Stel dat er tien, honderd of zelfs duizend clubs meedoen met gemiddeld 15 leden.
+Dan zijn er 150, 1500 of zelfs 15.000 fotografen bekend in de app. 
 De app bevat zoekfuncties waarmee je op naam van de fotograaf kunt zoeken.
-Hier vind je bekenden mee. Expertisegebieden laat je interessante fotografen ontdekken die je nog niet kende.
+Hier vind je bekenden mee. Expertisegebieden laat je interessante fotografen op basis van hun specialismes.
 </details></p>
 
 </li><li>
@@ -57,11 +57,24 @@ Hier vind je bekenden mee. Expertisegebieden laat je interessante fotografen ont
 ### Hoeveel expertisegebieden per clublid?
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
-Nul, één of twee. Bij meer dan twee gaat de app bewust een beetje moeilijk doen.</p>
+Maximaal twee. Bij meer expertises gaat de app bewust een beetje moeilijk doen.</p>
 
-De gedachte is dat een zoekopdracht net als bij Google Search vooral relevante resultaten oplevert. 
-Mischien niet precies de soort "architectuur" waar die je zocht. Maar we willen voorkomen dat je bij een portfolio
-langdurig moet bladeren voordat je foto's tegenkomt die je als architectuurfoto's zou kunnen bestempelen.
+De gedachte hierachter is dat een zoekopdracht net als bij Google Search vooral relevante resultaten oplevert. 
+Mogelijk is niet allemaal de soort "architectuur" waar die je zocht. Maar we willen liefs hebben dat de portfolio's
+van architectuurspecialisten vrij duidelijk dit specialism laten zien.
+</details></p>
+
+</li><li>
+
+### Kan iemand ook nul Expertises hebben?
+
+<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
+Ja. Dat kan drie goede redenen hebben:
+
+1. Iemand heeft dus geen duidelijk specialisme ("if fotografeer wat ik zoal tegen kom").
+2. Iemand wil - om wat voor reden dan ook - die informatie niet delen.
+3. De informatie moet nog door de club nog verzameld en ingevoerd worden.
+
 </details></p>
 
 </li><li>
