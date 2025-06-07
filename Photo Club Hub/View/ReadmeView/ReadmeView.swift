@@ -95,10 +95,10 @@ struct ReadmeView: View {
                                                                   comment: "Title of one section of Readme screen"),
                                                                   geo: geo)
 
-                            ReadmeSection(LocalizedStringResource("§3.11.a", table: "Readme",
+                            ReadmeSection(LocalizedStringResource("§3.01.a", table: "Readme",
                                                                   comment: "Title of a section of the Readme screen"),
                                                                   geo: geo)
-                            ReadmeSection(LocalizedStringResource("§3.11.b", table: "Readme",
+                            ReadmeSection(LocalizedStringResource("§3.01.b", table: "Readme",
                                                                   comment: "Paragraph in the Readme screen"),
                                                                   geo: geo, bottomPaddingAmount: 0)
 
@@ -113,13 +113,13 @@ struct ReadmeView: View {
                             .frame(width: geo.size.width * 0.8, alignment: .center)
                             Text(verbatim: "")
 
-                            ReadmeSection(LocalizedStringResource("§3.11.c", table: "Readme",
+                            ReadmeSection(LocalizedStringResource("§3.01.c", table: "Readme",
                                                                   comment: "Paragraph in the Readme screen"), geo: geo)
 
-                            ReadmeSection(LocalizedStringResource("§3.12.a", table: "Readme",
+                            ReadmeSection(LocalizedStringResource("§3.02.a", table: "Readme",
                                                                   comment: "Title of a section of the Readme screen"),
                                                                   geo: geo)
-                            ReadmeSection(LocalizedStringResource("§3.12.b", table: "Readme",
+                            ReadmeSection(LocalizedStringResource("§3.02.b", table: "Readme",
                                                                   comment: "Paragraph in the Readme screen"),
                                           geo: geo, bottomPaddingAmount: 0)
 
@@ -135,13 +135,13 @@ struct ReadmeView: View {
                             .frame(width: geo.size.width * 0.8, alignment: .center)
                             Text(verbatim: "")
 
-                            ReadmeSection(LocalizedStringResource("§3.12.c", table: "Readme",
+                            ReadmeSection(LocalizedStringResource("§3.02.c", table: "Readme",
                                                                   comment: "Paragraph in the Readme screen"), geo: geo)
 
-                            ReadmeSection(LocalizedStringResource("§3.1.a", table: "Readme",
+                            ReadmeSection(LocalizedStringResource("§3.03.a", table: "Readme",
                                                                   comment: "Title of a section of the Readme screen"),
                                                                   geo: geo)
-                            ReadmeSection(LocalizedStringResource("§3.1.b", table: "Readme",
+                            ReadmeSection(LocalizedStringResource("§3.03.b", table: "Readme",
                                                                   comment: "Paragraph in the Readme screen"), geo: geo)
 
                             Image("Localizations") // belongs to Section 3.1
@@ -155,10 +155,10 @@ struct ReadmeView: View {
                             Text(verbatim: "")
                             Text(verbatim: "")
 
-                            ReadmeSection(LocalizedStringResource("§3.2.a", table: "Readme",
+                            ReadmeSection(LocalizedStringResource("§3.04.a", table: "Readme",
                                                                   comment: "Title of a section of the Readme screen"),
                                                                   geo: geo)
-                            ReadmeSection(LocalizedStringResource("§3.2.b", table: "Readme",
+                            ReadmeSection(LocalizedStringResource("§3.04.b", table: "Readme",
                                                                   comment: "Paragraph in the Readme screen"), geo: geo)
 
                             Image("3D_map") // belongs to Section 3.2
@@ -172,30 +172,30 @@ struct ReadmeView: View {
                             .frame(width: geo.size.width, alignment: .center)
                             Text(verbatim: "")
 
-                            ReadmeSection(LocalizedStringResource("§3.3.a", table: "Readme",
+                            ReadmeSection(LocalizedStringResource("§3.05.a", table: "Readme",
                                                                   comment: "Title of a section of the Readme screen"),
                                                                   geo: geo)
-                            ReadmeSection(LocalizedStringResource("§3.3.b", table: "Readme",
+                            ReadmeSection(LocalizedStringResource("§3.05.b", table: "Readme",
                                                                   comment: "Paragraph in the Readme screen"), geo: geo)
-                            ReadmeSection(LocalizedStringResource("§3.3.c", table: "Readme",
+                            ReadmeSection(LocalizedStringResource("§3.05.c", table: "Readme",
                                                                   comment: "Paragraph in the Readme screen"), geo: geo)
 
-                            ReadmeSection(LocalizedStringResource("§3.4.a", table: "Readme",
+                            ReadmeSection(LocalizedStringResource("§3.06.a", table: "Readme",
                                                                   comment: "Title of a section of the Readme screen"),
                                                                   geo: geo)
-                            ReadmeSection(LocalizedStringResource("§3.4.b", table: "Readme",
+                            ReadmeSection(LocalizedStringResource("§3.06.b", table: "Readme",
                                                                   comment: "Paragraph in the Readme screen"), geo: geo)
-                            ReadmeSection(LocalizedStringResource("§3.4.c", table: "Readme",
+                            ReadmeSection(LocalizedStringResource("§3.06.c", table: "Readme",
                                                                   comment: "Paragraph in the Readme screen"), geo: geo)
-                            ReadmeSection(LocalizedStringResource("§3.4.d", table: "Readme",
+                            ReadmeSection(LocalizedStringResource("§3.06.d", table: "Readme",
                                                                   comment: "Paragraph in the Readme screen"), geo: geo)
 
-                            ReadmeSection(LocalizedStringResource("§3.5.a", table: "Readme",
+                            ReadmeSection(LocalizedStringResource("§3.07.a", table: "Readme",
                                                                   comment: "Title of a section of the Readme screen"),
                                                                   geo: geo)
-                            ReadmeSection(LocalizedStringResource("§3.5.b", table: "Readme",
+                            ReadmeSection(LocalizedStringResource("§3.07.b", table: "Readme",
                                                                   comment: "Paragraph in the Readme screen"), geo: geo)
-                            ReadmeSection(LocalizedStringResource("§3.5.c", table: "Readme",
+                            ReadmeSection(LocalizedStringResource("§3.07.c", table: "Readme",
                                                                   comment: "Paragraph in the Readme screen"), geo: geo)
 
                             Image("Maps") // belongs to Section 3.5
@@ -209,16 +209,16 @@ struct ReadmeView: View {
                             .frame(width: geo.size.width, alignment: .center)
                             Text(verbatim: "")
 
-                            ReadmeSection(LocalizedStringResource("§3.6.a", table: "Readme",
+                            ReadmeSection(LocalizedStringResource("§3.08.a", table: "Readme",
                                                                   comment: "Title of a section of the Readme screen"),
                                                                   geo: geo)
-                            ReadmeSection(LocalizedStringResource("§3.6.b", table: "Readme",
+                            ReadmeSection(LocalizedStringResource("§3.08.b", table: "Readme",
                                                                   comment: "Paragraph in the Readme screen"), geo: geo)
 
-                            ReadmeSection(LocalizedStringResource("§3.7.a", table: "Readme",
+                            ReadmeSection(LocalizedStringResource("§3.09.a", table: "Readme",
                                                                   comment: "Title of a section of the Readme screen"),
                                                                   geo: geo)
-                            ReadmeSection(LocalizedStringResource("§3.7.b", table: "Readme",
+                            ReadmeSection(LocalizedStringResource("§3.09.b", table: "Readme",
                                                                   comment: "Paragraph in the Readme screen"), geo: geo)
 
                             Image("Website")
@@ -232,16 +232,16 @@ struct ReadmeView: View {
                             .frame(width: geo.size.width, alignment: .center)
                             Text(verbatim: "")
 
-                            ReadmeSection(LocalizedStringResource("§3.8.a", table: "Readme",
+                            ReadmeSection(LocalizedStringResource("§3.10.a", table: "Readme",
                                                                   comment: "Title of a section of the Readme screen"),
                                                                   geo: geo)
-                            ReadmeSection(LocalizedStringResource("§3.8.b", table: "Readme",
+                            ReadmeSection(LocalizedStringResource("§3.10.b", table: "Readme",
                                                                   comment: "Paragraph in the Readme screen"), geo: geo)
-                            ReadmeSection(LocalizedStringResource("§3.8.c", table: "Readme",
+                            ReadmeSection(LocalizedStringResource("§3.10.c", table: "Readme",
                                                                   comment: "Paragraph in the Readme screen"), geo: geo)
-                            ReadmeSection(LocalizedStringResource("§3.8.d", table: "Readme",
+                            ReadmeSection(LocalizedStringResource("§3.10.d", table: "Readme",
                                                                   comment: "Paragraph in the Readme screen"), geo: geo)
-                            ReadmeSection(LocalizedStringResource("§3.8.e", table: "Readme",
+                            ReadmeSection(LocalizedStringResource("§3.10.e", table: "Readme",
                                                                   comment: "Paragraph in the Readme screen"), geo: geo)
 
                             Image("2021_FotogroepWaalre_058")
@@ -254,12 +254,12 @@ struct ReadmeView: View {
                                 .font(.callout.italic())
                                 .frame(width: geo.size.width, alignment: .center)
 
-                            ReadmeSection(LocalizedStringResource("§3.9.a", table: "Readme",
+                            ReadmeSection(LocalizedStringResource("§3.11.a", table: "Readme",
                                                                   comment: "Title of a section of the Readme screen"),
                                                                   geo: geo)
-                            ReadmeSection(LocalizedStringResource("§3.9.b", table: "Readme",
+                            ReadmeSection(LocalizedStringResource("§3.11.b", table: "Readme",
                                                                   comment: "Paragraph in the Readme screen"), geo: geo)
-                            ReadmeSection(LocalizedStringResource("§3.9.c", table: "Readme",
+                            ReadmeSection(LocalizedStringResource("§3.11.c", table: "Readme",
                                                                   comment: "Paragraph in the Readme screen"), geo: geo)
 
                             Image("Preferences")
@@ -273,12 +273,12 @@ struct ReadmeView: View {
                             .frame(width: geo.size.width * 0.8, alignment: .center)
                             Text(verbatim: "")
 
-                            ReadmeSection(LocalizedStringResource("§3.10.a", table: "Readme",
+                            ReadmeSection(LocalizedStringResource("§3.12.a", table: "Readme",
                                                                   comment: "Title of a section of the Readme screen"),
                                                                   geo: geo)
-                            ReadmeSection(LocalizedStringResource("§3.10.b", table: "Readme",
+                            ReadmeSection(LocalizedStringResource("§3.12.b", table: "Readme",
                                                                   comment: "Paragraph in the Readme screen"), geo: geo)
-                            ReadmeSection(LocalizedStringResource("§3.10.c", table: "Readme",
+                            ReadmeSection(LocalizedStringResource("§3.12.c", table: "Readme",
                                                                   comment: "Paragraph in the Readme screen"), geo: geo)
 
                             Image("Play-button")
