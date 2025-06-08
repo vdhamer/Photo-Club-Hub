@@ -91,8 +91,8 @@ struct MemberPortfolioRow: View {
             result1.append(photographerKeyword.keyword_!.selectedLocalizedKeyword)
         }
 
-        // then dsort based on selected language.  Has some special behavior for keywords without translation
-        let result2: [LocalizedKeywordResult] = result1.sorted()
+        // then sort based on selected language.  Has special behavior for keywords without translation
+        let result2: [LocalizedKeywordResult] = result1.sorted() // note dedicated LocalizedKeywordResult.<() function
         let maxCount2 = result2.count // for ["keywordA", "keywordB", "keywordC"] maxCount is 3
 
         // insert delimeters where needed

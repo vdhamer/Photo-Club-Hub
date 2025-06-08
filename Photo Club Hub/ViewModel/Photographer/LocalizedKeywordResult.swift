@@ -30,13 +30,15 @@ public struct LocalizedKeywordResult {
 extension LocalizedKeywordResult: Comparable {
 
     public static func < (lhs: LocalizedKeywordResult, rhs: LocalizedKeywordResult) -> Bool {
-        guard lhs.localizedKeyword != nil else { return false } // put untranslateable at end of list
-        guard rhs.localizedKeyword != nil else { return true } // put untranslateable at end of list
-        return lhs.localizedKeyword!.name < rhs.localizedKeyword!.name // normal sorting
+
+        if (lhs.localizedKeyword != nil && rhs.localizedKeyword != nil) || // both sides have a translation
+            (lhs.localizedKeyword == nil && rhs.localizedKeyword == nil) { // both sides have no translation
+            return lhs.name < rhs.name // normal sorting
+        }
+        return lhs.localizedKeyword != nil // put untranslateables after translateables
+
     }
 
 }
 
-extension LocalizedKeywordResult: Identifiable {
-
-}
+extension LocalizedKeywordResult: Identifiable { } // for compatibility with ForEach
