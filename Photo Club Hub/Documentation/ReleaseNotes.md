@@ -6,6 +6,7 @@ Readme screen
 
 Portfolio screen
 * Display areas of expertise of club members.
+* Fixed EN translation of role "Other".
 
 Data Maintenance
 * Added the new photography museum in Seoul, Korea.

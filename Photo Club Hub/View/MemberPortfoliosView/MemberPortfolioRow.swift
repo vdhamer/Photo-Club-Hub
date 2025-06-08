@@ -114,7 +114,8 @@ struct MemberPortfolioRow: View {
             result4.append(result3[index-1]) // copy the (aphabetically) first three LocalizedKeywordResult elements
         }
         let moreKeyword = Keyword.findCreateUpdateStandard(context: moc,
-                                                           id: String(localized: "Too many expertises", table: "HTML",
+                                                           id: String(localized: "Too many expertises",
+                                                                      table: "Localizable",
                                                                       comment: "Shown if photographer has >3 keywords"),
                                                            name: [],
                                                            usage: [])

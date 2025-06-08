@@ -855,6 +855,23 @@
         }
       }
     },
+    "Too many expertises" : {
+      "comment" : "Shown if photographer has >3 keywords",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Too many expertises"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Teveel expertises"
+          }
+        }
+      }
+    },
     "Warning: all member categories on the Preferences page are disabled. Please enable one or more options in Preferences." : {
       "comment" : "Hint to the user if all of the Preference toggles are disabled.",
       "localizations" : {

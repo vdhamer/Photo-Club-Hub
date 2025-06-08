@@ -211,12 +211,12 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "other"
+            "value" : "officer"
           }
         },
         "nl" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "bestuurslid"
           }
         }
