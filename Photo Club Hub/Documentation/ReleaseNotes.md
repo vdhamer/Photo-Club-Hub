@@ -1,21 +1,22 @@
 ### 2.8.0 (GitHub commit ???????) ??-06-25
 
-Readme screen
-* Updated Readme_NL_2_8_0 & Readme_EN_2_8_0 to include Expertise feature.
-* Updated screenshot showing Search Bar.
-
 Portfolio screen
 * Display areas of expertise of club members.
-* Fixed EN translation of role "Other".
+* Fixed English translation of role "Other".
+
+Readme screen
+* Updated to mention new Expertise feature.
+* Updated screenshot showing Search Bar.
 
 Data Maintenance
-* Added the new photography museum in Seoul, Korea.
+* Added the new photography museum in Seoul (South Korea).
 
 Code Maintenance
 * Moved string translations for ReadmeView into dedicated file (was inconsistent).
 
 Documentation
 * Updated FAQ_nl to reflect new Expertise terminology.
+* Updated Readme_NL_2_8_0 & Readme_EN_2_8_0 to include Expertise feature.
 
 This build #4640 was made using Xcode 16.4 and is intended for beta testing only
 
