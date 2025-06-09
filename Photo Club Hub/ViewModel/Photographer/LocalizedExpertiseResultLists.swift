@@ -8,10 +8,19 @@
 // Used to provide UI with pairs of lists with Exertise records with localized names
 struct LocalizedExpertiseResultLists {
 
-    let standardIcon = "🏵️" // Unicode rosette
-    let standardLKRs: [LocalizedKeywordResult] // can be shown with standardIcon
+    init(standardList: [LocalizedKeywordResult], nonstandardList: [LocalizedKeywordResult]) {
+        standard = LocalizedExpertiseResultList(icon: "🏵️", list: standardList)
+        nonstandard = LocalizedExpertiseResultList(icon: "🪲", list: nonstandardList)
+    }
 
-    let nonStandardIcon = "🪲" // Unicode beetle
-    let nonStandardLKRs: [LocalizedKeywordResult] // can be shown with nonStandardIcon
+    var standard: LocalizedExpertiseResultList
+    var nonstandard: LocalizedExpertiseResultList
+
+}
+
+struct LocalizedExpertiseResultList {
+
+    let icon: String // cannot be modified
+    var list: [LocalizedKeywordResult]
 
 }

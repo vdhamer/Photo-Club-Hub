@@ -38,29 +38,29 @@ struct MemberPortfolioRow: View {
                     let localizedKeywordResultLists = localizeSortAndClip(moc: moc,
                                                                           member.photographer.photographerKeywords)
                     Group {
-                        if !localizedKeywordResultLists.standardLKRs.isEmpty {
+                        if !localizedKeywordResultLists.standard.list.isEmpty {
                             HStack(spacing: 3) {
-                                Text(localizedKeywordResultLists.standardIcon)
+                                Text(localizedKeywordResultLists.standard.icon)
                                     .font(.footnote)
-                                ForEach(localizedKeywordResultLists.standardLKRs) { standardLKR in
+                                ForEach(localizedKeywordResultLists.standard.list) { standardLKR in
                                     Text(standardLKR.localizedKeyword!.name + standardLKR.delimiterToAppend)
                                 }
-                                    .lineLimit(1)
-                                    .truncationMode(.tail)
                             }
                         }
-                        if !localizedKeywordResultLists.nonStandardLKRs.isEmpty {
+
+                        if !localizedKeywordResultLists.nonstandard.list.isEmpty {
                             HStack(spacing: 3) {
-                                Text(localizedKeywordResultLists.nonStandardIcon)
+                                Text(localizedKeywordResultLists.nonstandard.icon)
                                     .font(.footnote)
-                                ForEach(localizedKeywordResultLists.nonStandardLKRs) { nonstandardLKR in
+                                ForEach(localizedKeywordResultLists.nonstandard.list) { nonstandardLKR in
                                     Text(nonstandardLKR.id + nonstandardLKR.delimiterToAppend)
                                 }
-                                    .lineLimit(1)
-                                    .truncationMode(.tail)
                             }
                         }
-                    } .font(.subheadline)
+                    }
+                        .font(.subheadline)
+                        .lineLimit(1)
+                        .truncationMode(.tail)
 
                     Text(verbatim: "\(member.roleDescriptionOfClubTown)")
                         .truncationMode(.tail)
@@ -151,7 +151,7 @@ struct MemberPortfolioRow: View {
             }
         }
 
-        // Step 5. remove final delimeter
+        // Step 5. remove delimeter after last element
         if !standard.isEmpty {
             standard[standard.count-1].delimiterToAppend = ""
         }
@@ -159,7 +159,7 @@ struct MemberPortfolioRow: View {
             nonStandard[nonStandard.count-1].delimiterToAppend = ""
         }
 
-        return LocalizedExpertiseResultLists(standardLKRs: standard, nonStandardLKRs: nonStandard)
+        return LocalizedExpertiseResultLists(standardList: standard, nonstandardList: nonStandard)
     }
 
     fileprivate func customHint(localizedKeywordResults: [LocalizedKeywordResult]) -> String {
