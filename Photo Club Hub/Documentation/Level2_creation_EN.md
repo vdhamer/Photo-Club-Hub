@@ -5,7 +5,7 @@
 2. Make a **copy** of the [min](https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/xampleMin.level2.json) file.
    - Rename the file to some short name (`nickName`) for the club. So if the club is called "F/8 and Be There" you might choose `f8AndBeThere.level2.json`. If your club is already listed in the Photo Club Hub app, you can just reuse the `nickName` from the file [root.level1.json](https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/root.level1.json). To make this even simpler, here's what it says for some of the early-adopter clubs:
 
-      | `town`  | `fullName` | `nickName` | `latitude` | `longitude` | Input bestand | Output pagina |
+      | `town`  | `fullName` | `nickName` | `latitude` | `longitude` | Input file | Output page |
       | -----  | ---------| ----- | :-----: | :-----: | :-----: | :-----: |
       | Berlicum | FCC Shot71 | fccShot71 | 51.66306 | 5.41825 | ? |  |
       | Eindhoven | Fotogroep de Gender | fgDeGender | 51.42398 | 5.45010 | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/fgDeGender.level2.json) | [link](http://www.vdhamer.com/fgDeGender) |
