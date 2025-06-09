@@ -1,5 +1,11 @@
 ### 2.8.0 (GitHub commit ???????) ??-06-25
 
+This build #4641 was made using Xcode ???? and is intended for App Store distribution.
+
+---------------------------------------------------------------------------
+
+### 2.8.0 (GitHub commit c3e5229) 09-06-25
+
 Portfolio screen
 * Display areas of expertise of club members.
 * Fixed English translation of role "Other".
