@@ -8,7 +8,7 @@
 // Used to provide UI with pairs of lists with Exertise records with localized names
 struct LocalizedExpertiseResultLists {
 
-    let standardIcon = "🏵️" // Unicode rosette TODO remove icons elsewhere in code
+    let standardIcon = "🏵️" // Unicode rosette
     let standardLKRs: [LocalizedKeywordResult] // can be shown with standardIcon
 
     let nonStandardIcon = "🪲" // Unicode beetle

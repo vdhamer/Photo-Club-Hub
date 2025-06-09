@@ -39,10 +39,12 @@ struct MemberPortfolioRow: View {
                                                                           member.photographer.photographerKeywords)
                     Group {
                         ForEach(localizedKeywordResultLists.standardLKRs) { standardLocalizedKeywordResult in
-                            Text("🏵️ " + standardLocalizedKeywordResult.localizedKeyword!.name)
+                            Text(localizedKeywordResultLists.standardIcon + " " +
+                                 standardLocalizedKeywordResult.localizedKeyword!.name)
                         }
                         ForEach(localizedKeywordResultLists.nonStandardLKRs) { nonstandardLocalizedKeywordResult in
-                            Text("🪲" + nonstandardLocalizedKeywordResult.id)
+                            Text(localizedKeywordResultLists.nonStandardIcon + " "
+                                 + nonstandardLocalizedKeywordResult.id)
                         }
                     } .font(.subheadline)
 
@@ -91,8 +93,9 @@ struct MemberPortfolioRow: View {
         }
     }
 
-    fileprivate func localizeSortAndClip(moc: NSManagedObjectContext,
-                                         _ photographerkeywords: Set<PhotographerKeyword>) -> [LocalizedKeywordResult] {
+    fileprivate func localizeSortAndClip(moc: NSManagedObjectContext, _ photographerKeywords: Set<PhotographerKeyword>)
+    -> LocalizedExpertiseResultLists {
+
         // first translate keywords to appropriate language and make elements non-optional
         var interim: [LocalizedKeywordResult] = [] // start with empty array
         for photographerKeyword in photographerKeywords {
@@ -124,35 +127,17 @@ struct MemberPortfolioRow: View {
         }
 
         // insert delimeters where needed
-        var result3 = [LocalizedKeywordResult]() // start with empty list
-        var count: Int = 0
-        for item in result2 {
-            count += 1
-            if count < maxCount2 { // turn this into ["keywordA,", "keywordB,", "keywordC"]
-                result3.append(item) // accept appending "," to item
+        var standard: [LocalizedKeywordResult] = [] // start with two empty arrays
+        var nonStandard: [LocalizedKeywordResult] = []
+        for item in sorted {
+            if item.isStandard { // turn this into ["keywordA,", "keywordB,", "keywordC,"]
+                standard.append(item) // accept appending "," to item
             } else {
-                result3.append(LocalizedKeywordResult(localizedKeyword: item.localizedKeyword, id: item.id))
+                nonStandard.append(LocalizedKeywordResult(localizedKeyword: item.localizedKeyword, id: item.id))
             }
         }
 
-        // limit size to 3 displayed keywords
-        if result3.count <= maxKeywordsPerMember { return result3 } // no clipping needed
-        var result4 = [LocalizedKeywordResult]()
-        for index in 1...maxKeywordsPerMember {
-            result4.append(result3[index-1]) // copy the (aphabetically) first three LocalizedKeywordResult elements
-        }
-        let moreKeyword = Keyword.findCreateUpdateStandard(context: moc,
-                                                           id: String(localized: "Too many expertises",
-                                                                      table: "Localizable",
-                                                                      comment: "Shown if photographer has >3 keywords"),
-                                                           name: [],
-                                                           usage: [])
-        let moreLocalizedKeyword: LocalizedKeywordResult = moreKeyword.selectedLocalizedKeyword
-        result4.append(LocalizedKeywordResult(localizedKeyword: moreLocalizedKeyword.localizedKeyword,
-                                              id: moreKeyword.id,
-                                              customHint: customHint(localizedKeywordResults: result3)))
-
-        return result4
+        return LocalizedExpertiseResultLists(standardLKRs: standard, nonStandardLKRs: nonStandard)
     }
 
     fileprivate func customHint(localizedKeywordResults: [LocalizedKeywordResult]) -> String {
