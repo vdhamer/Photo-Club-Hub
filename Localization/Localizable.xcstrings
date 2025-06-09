@@ -856,7 +856,7 @@
       }
     },
     "Too many expertises" : {
-      "comment" : "Shown if photographer has >3 keywords",
+      "comment" : "Shown when too many expertises are found",
       "localizations" : {
         "en" : {
           "stringUnit" : {

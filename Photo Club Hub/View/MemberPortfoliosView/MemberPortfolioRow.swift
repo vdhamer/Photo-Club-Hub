@@ -34,10 +34,20 @@ struct MemberPortfolioRow: View {
                             defaultColor: .accentColor,
                             isDeceased: member.photographer.isDeceased
                         ))
-                    ForEach(localizeSortAndClip(moc: moc, member.photographer.photographerKeywords)) { lExpertResult in
-                        Text((lExpertResult.isStandard ? "🏵️ " : "🪲 ") + lExpertResult.name)
-                            .font(.subheadline)
-                    }
+
+                    let localizedKeywordResultLists = localizeSortAndClip(moc: moc,
+                                                                          member.photographer.photographerKeywords)
+                    Group {
+                        ForEach(localizedKeywordResultLists.standardLKRs) { standardLocalizedKeywordResult in
+                            Text(localizedKeywordResultLists.standardIcon + " " +
+                                 standardLocalizedKeywordResult.localizedKeyword!.name)
+                        }
+                        ForEach(localizedKeywordResultLists.nonStandardLKRs) { nonstandardLocalizedKeywordResult in
+                            Text(localizedKeywordResultLists.nonStandardIcon + " "
+                                 + nonstandardLocalizedKeywordResult.id)
+                        }
+                    } .font(.subheadline)
+
                     Text(verbatim: "\(member.roleDescriptionOfClubTown)")
                         .truncationMode(.tail)
                         .lineLimit(2)
@@ -83,48 +93,51 @@ struct MemberPortfolioRow: View {
         }
     }
 
-    fileprivate func localizeSortAndClip(moc: NSManagedObjectContext,
-                                         _ photographerkeywords: Set<PhotographerKeyword>) -> [LocalizedKeywordResult] {
-        // first translate keywords to appropriate language and make elements non-optional
-        var result1 = [LocalizedKeywordResult]()
-        for photographerKeyword in photographerkeywords where photographerKeyword.keyword_ != nil {
-            result1.append(photographerKeyword.keyword_!.selectedLocalizedKeyword)
+    fileprivate func localizeSortAndClip(moc: NSManagedObjectContext, _ photographerKeywords: Set<PhotographerKeyword>)
+    -> LocalizedExpertiseResultLists {
+
+        // Step 1. Translate keywords to appropriate language
+        var translated: [LocalizedKeywordResult] = [] // start with empty array
+        for photographerKeyword in photographerKeywords {
+            translated.append(photographerKeyword.keyword.selectedLocalizedKeyword) // choose most suitable language
         }
 
-        // then sort based on selected language.  Has special behavior for keywords without translation
-        let result2: [LocalizedKeywordResult] = result1.sorted() // note dedicated LocalizedKeywordResult.<() function
-        let maxCount2 = result2.count // for ["keywordA", "keywordB", "keywordC"] maxCount is 3
+        // Step 2. Sort based on selected language.  Has special behavior for keywords without translation
+        let sorted: [LocalizedKeywordResult] = translated.sorted() // note dedicated LocalizedKeywordResult.<() function
 
-        // insert delimeters where needed
-        var result3 = [LocalizedKeywordResult]() // start with empty list
-        var count: Int = 0
-        for item in result2 {
-            count += 1
-            if count < maxCount2 { // turn this into ["keywordA,", "keywordB,", "keywordC"]
-                result3.append(item) // accept appending "," to item
+        // Step 3. Clip size to maxKeywordsPerMember keywords
+        var clipped: [LocalizedKeywordResult] = [] // start with empty array
+        if sorted.count > 0 {
+            for index in 0...min(maxKeywordsPerMember-1, sorted.count-1) {
+                clipped.append(sorted[index]) // copy the first few sorted LocalizedKeywordResult elements
+            }
+        }
+        if sorted.count > maxKeywordsPerMember { // if list overflows, add a warning
+            let moreKeyword = Keyword.findCreateUpdateNonStandard(
+                                        context: moc,
+                                        id: String(localized: "Too many expertises",
+                                                   table: "Localizable",
+                                                   comment: "Shown when too many expertises are found"),
+                                        name: [],
+                                        usage: [] )
+            let moreLocalizedKeyword: LocalizedKeywordResult = moreKeyword.selectedLocalizedKeyword
+            clipped.append(LocalizedKeywordResult(localizedKeyword: moreLocalizedKeyword.localizedKeyword,
+                                                  id: moreKeyword.id,
+                                                  customHint: customHint(localizedKeywordResults: sorted)))
+        }
+
+        // Step 4. Split list of photographer's expertises into 2 parts: standard and nonStandard
+        var standard: [LocalizedKeywordResult] = [] // start with two empty arrays
+        var nonStandard: [LocalizedKeywordResult] = []
+        for item in clipped {
+            if item.isStandard { // turn this into ["keywordA,", "keywordB,", "keywordC,"]
+                standard.append(item) // accept appending "," to item
             } else {
-                result3.append(LocalizedKeywordResult(localizedKeyword: item.localizedKeyword, id: item.id))
+                nonStandard.append(LocalizedKeywordResult(localizedKeyword: item.localizedKeyword, id: item.id))
             }
         }
 
-        // limit size to 3 displayed keywords
-        if result3.count <= maxKeywordsPerMember { return result3 } // no clipping needed
-        var result4 = [LocalizedKeywordResult]()
-        for index in 1...maxKeywordsPerMember {
-            result4.append(result3[index-1]) // copy the (aphabetically) first three LocalizedKeywordResult elements
-        }
-        let moreKeyword = Keyword.findCreateUpdateStandard(context: moc,
-                                                           id: String(localized: "Too many expertises",
-                                                                      table: "Localizable",
-                                                                      comment: "Shown if photographer has >3 keywords"),
-                                                           name: [],
-                                                           usage: [])
-        let moreLocalizedKeyword: LocalizedKeywordResult = moreKeyword.selectedLocalizedKeyword
-        result4.append(LocalizedKeywordResult(localizedKeyword: moreLocalizedKeyword.localizedKeyword,
-                                              id: moreKeyword.id,
-                                              customHint: customHint(localizedKeywordResults: result3)))
-
-        return result4
+        return LocalizedExpertiseResultLists(standardLKRs: standard, nonStandardLKRs: nonStandard)
     }
 
     fileprivate func customHint(localizedKeywordResults: [LocalizedKeywordResult]) -> String {

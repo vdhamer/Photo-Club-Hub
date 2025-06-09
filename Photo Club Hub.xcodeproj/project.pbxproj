@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D006BA7E2B115FB1002E555B /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D006BA7D2B115FB1002E555B /* LocationManager.swift */; };
 		D008D2AA28739167007A7BE2 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = D008D2A928739167007A7BE2 /* .gitignore */; };
+		D016DF992DF6D1850018B526 /* LocalizedExpertiseResultLists.swift in Sources */ = {isa = PBXBuildFile; fileRef = D016DF982DF6D1850018B526 /* LocalizedExpertiseResultLists.swift */; };
 		D01D2B6227D3BBDC00E2FE41 /* View+Navigate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01D2B6127D3BBDC00E2FE41 /* View+Navigate.swift */; };
 		D024F11628423BE60055021B /* Sounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = D024F11528423BE60055021B /* Sounds.swift */; };
 		D0273E4A2DEE42C800C4F5E1 /* fgOirschot.level2.json in Resources */ = {isa = PBXBuildFile; fileRef = D0273E492DEE42C800C4F5E1 /* fgOirschot.level2.json */; };
@@ -125,6 +126,7 @@
 		D00DC8F02BD5D85900B4A9A2 /* Photo_Club_Hub_2_6_1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_6_1.xcdatamodel; sourceTree = "<group>"; };
 		D01238FE2DBF9B43000EAD8B /* fgDeGender_Trefwoorden.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = fgDeGender_Trefwoorden.xlsx; sourceTree = "<group>"; };
 		D01526BC278B91BA004DBD19 /* PhotoClubHub.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PhotoClubHub.entitlements; sourceTree = "<group>"; };
+		D016DF982DF6D1850018B526 /* LocalizedExpertiseResultLists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedExpertiseResultLists.swift; sourceTree = "<group>"; };
 		D01D2B6127D3BBDC00E2FE41 /* View+Navigate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Navigate.swift"; sourceTree = "<group>"; };
 		D01DDD962AF5A11F00F98906 /* Photo_Club_Hub_2_5_1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_5_1.xcdatamodel; sourceTree = "<group>"; };
 		D01DFAA627E778BD007BABFA /* offsets.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = offsets.md; sourceTree = "<group>"; };
@@ -687,6 +689,7 @@
 				D0E8688E2D68B99B00F2A03A /* Keyword.swift */,
 				D0CA9B3C2D6B7937005428C0 /* LocalizedKeyword.swift */,
 				D0CA9B3E2D6B7959005428C0 /* PhotographerKeyword.swift */,
+				D016DF982DF6D1850018B526 /* LocalizedExpertiseResultLists.swift */,
 			);
 			path = Photographer;
 			sourceTree = "<group>";
@@ -969,6 +972,7 @@
 				D0621E852AE2E085000FFADB /* MemberPortfolio+updating.swift in Sources */,
 				D024F11628423BE60055021B /* Sounds.swift in Sources */,
 				D0795CEC294FCCC200FA62A8 /* ShapeStyle+Colors.swift in Sources */,
+				D016DF992DF6D1850018B526 /* LocalizedExpertiseResultLists.swift in Sources */,
 				D0EB533C295775240061613B /* Crosshairs.swift in Sources */,
 				D0ACCEE32DEF9CED0002FACC /* XampleMinMembersProvider.swift in Sources */,
 				D0CA9B392D6B7739005428C0 /* LocalizedRemark.swift in Sources */,
