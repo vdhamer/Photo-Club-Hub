@@ -27,7 +27,7 @@ struct WhoIsWhoListView: View {
     fileprivate var navigationTitle = String(localized: "Who's Who",
                                              comment: "Title of page with list of photographers")
     fileprivate let nonStandard = String(localized: "Non-standard",
-                                      comment: "Keyword description at bottom of Who's Who screen")
+                                         comment: "Keyword description at bottom of Who's Who screen")
 
     init(searchText: Binding<String>, navigationTitle: String? = nil) {
         self.searchText = searchText
@@ -61,7 +61,10 @@ struct WhoIsWhoListView: View {
                      comment: "Shown in gray at the bottom of the Who's Who page (3/3).")
                 ForEach(Keyword.getAll(context: viewContext).sorted(by: sortKeywordsLocalized), id: \.self) { keyword in
                     HStack {
-                        Text(verbatim: "   \(keyword.isStandard ? "🏵️" : "🪲") \(keyword.selectedLocalizedKeyword.name)")
+                        Text(verbatim: """
+                                       \(getIconString(standard: keyword.isStandard)) \
+                                       \(keyword.selectedLocalizedKeyword.name)
+                                       """)
                         Text(PhotographerKeyword.count(context: viewContext, keywordID: keyword.id).description+"x")
                         Text("\(keyword.isStandard ? "" : nonStandard)")
                     }
@@ -99,8 +102,13 @@ struct WhoIsWhoListView: View {
         .disableAutocorrection(true)
     }
 
-    func sortKeywordsLocalized(lhs: Keyword, rhs: Keyword) -> Bool {
+    fileprivate func sortKeywordsLocalized(lhs: Keyword, rhs: Keyword) -> Bool {
         return lhs.selectedLocalizedKeyword.name < rhs.selectedLocalizedKeyword.name
+    }
+
+    fileprivate func getIconString(standard: Bool) -> String {
+        let temp = LocalizedExpertiseResultLists(standardList: [], nonstandardList: [])
+        return standard ? temp.standard.icon : temp.nonstandard.icon
     }
 
 }

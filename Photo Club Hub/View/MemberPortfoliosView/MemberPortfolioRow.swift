@@ -126,19 +126,6 @@ struct MemberPortfolioRow: View {
                 clipped.append(sorted[index]) // copy the first few sorted LocalizedKeywordResult elements
             }
         }
-        if sorted.count > maxKeywordsPerMember { // if list overflows, add a warning
-            let moreKeyword = Keyword.findCreateUpdateNonStandard(
-                                        context: moc,
-                                        id: String(localized: "Too many expertises",
-                                                   table: "Localizable",
-                                                   comment: "Shown when too many expertises are found"),
-                                        name: [],
-                                        usage: [] )
-            let moreLocalizedKeyword: LocalizedKeywordResult = moreKeyword.selectedLocalizedKeyword
-            clipped.append(LocalizedKeywordResult(localizedKeyword: moreLocalizedKeyword.localizedKeyword,
-                                                  id: moreKeyword.id,
-                                                  customHint: customHint(localizedKeywordResults: sorted)))
-        }
 
         // Step 4. Split list of photographer's expertises into 2 parts: standard and nonStandard
         var standard: [LocalizedKeywordResult] = [] // start with two empty arrays
@@ -151,7 +138,22 @@ struct MemberPortfolioRow: View {
             }
         }
 
-        // Step 5. remove delimeter after last element
+        // Step 6. remove delimeter after last element
+        if sorted.count > maxKeywordsPerMember { // if list overflows, add a warning
+            let moreKeyword = Keyword.findCreateUpdateNonStandard(
+                                        context: moc,
+                                        id: String(localized: "Too many expertises",
+                                                   table: "Localizable",
+                                                   comment: "Shown when too many expertises are found"),
+                                        name: [],
+                                        usage: [] )
+            let moreLocalizedKeyword: LocalizedKeywordResult = moreKeyword.selectedLocalizedKeyword
+            nonStandard.append(LocalizedKeywordResult(localizedKeyword: moreLocalizedKeyword.localizedKeyword,
+                                                      id: moreKeyword.id,
+                                                      customHint: customHint(localizedKeywordResults: sorted)))
+        }
+
+        // Step 6. remove delimeter after last element
         if !standard.isEmpty {
             standard[standard.count-1].delimiterToAppend = ""
         }
@@ -164,16 +166,22 @@ struct MemberPortfolioRow: View {
 
     fileprivate func customHint(localizedKeywordResults: [LocalizedKeywordResult]) -> String {
         var hint: String = ""
+        let temp = LocalizedExpertiseResultLists(standardList: [], nonstandardList: [])
 
         for localizedKeywordResult in localizedKeywordResults {
             if localizedKeywordResult.localizedKeyword != nil {
-                hint.append("🏵️ " + localizedKeywordResult.localizedKeyword!.name + " ")
+                hint.append(temp.standard.icon + " " + localizedKeywordResult.localizedKeyword!.name + " ")
             } else {
-                hint.append("🪲 " + localizedKeywordResult.id + " ")
+                hint.append(temp.nonstandard.icon + " " + localizedKeywordResult.id + " ")
             }
         }
 
         return hint.trimmingCharacters(in: CharacterSet(charactersIn: " "))
+    }
+
+    fileprivate func getIconString(standard: Bool) -> String {
+        let temp = LocalizedExpertiseResultLists(standardList: [], nonstandardList: [])
+        return standard ? temp.standard.icon : temp.nonstandard.icon
     }
 }
 
