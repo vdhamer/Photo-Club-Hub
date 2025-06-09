@@ -38,13 +38,27 @@ struct MemberPortfolioRow: View {
                     let localizedKeywordResultLists = localizeSortAndClip(moc: moc,
                                                                           member.photographer.photographerKeywords)
                     Group {
-                        ForEach(localizedKeywordResultLists.standardLKRs) { standardLocalizedKeywordResult in
-                            Text(localizedKeywordResultLists.standardIcon + " " +
-                                 standardLocalizedKeywordResult.localizedKeyword!.name)
+                        if !localizedKeywordResultLists.standardLKRs.isEmpty {
+                            HStack(spacing: 3) {
+                                Text(localizedKeywordResultLists.standardIcon)
+                                    .font(.footnote)
+                                ForEach(localizedKeywordResultLists.standardLKRs) { standardLKR in
+                                    Text(standardLKR.localizedKeyword!.name + standardLKR.delimiterToAppend)
+                                }
+                                    .lineLimit(1)
+                                    .truncationMode(.tail)
+                            }
                         }
-                        ForEach(localizedKeywordResultLists.nonStandardLKRs) { nonstandardLocalizedKeywordResult in
-                            Text(localizedKeywordResultLists.nonStandardIcon + " "
-                                 + nonstandardLocalizedKeywordResult.id)
+                        if !localizedKeywordResultLists.nonStandardLKRs.isEmpty {
+                            HStack(spacing: 3) {
+                                Text(localizedKeywordResultLists.nonStandardIcon)
+                                    .font(.footnote)
+                                ForEach(localizedKeywordResultLists.nonStandardLKRs) { nonstandardLKR in
+                                    Text(nonstandardLKR.id + nonstandardLKR.delimiterToAppend)
+                                }
+                                    .lineLimit(1)
+                                    .truncationMode(.tail)
+                            }
                         }
                     } .font(.subheadline)
 
@@ -130,11 +144,19 @@ struct MemberPortfolioRow: View {
         var standard: [LocalizedKeywordResult] = [] // start with two empty arrays
         var nonStandard: [LocalizedKeywordResult] = []
         for item in clipped {
-            if item.isStandard { // turn this into ["keywordA,", "keywordB,", "keywordC,"]
-                standard.append(item) // accept appending "," to item
+            if item.isStandard {
+                standard.append(item)
             } else {
                 nonStandard.append(LocalizedKeywordResult(localizedKeyword: item.localizedKeyword, id: item.id))
             }
+        }
+
+        // Step 5. remove final delimeter
+        if !standard.isEmpty {
+            standard[standard.count-1].delimiterToAppend = ""
+        }
+        if !nonStandard.isEmpty {
+            nonStandard[nonStandard.count-1].delimiterToAppend = ""
         }
 
         return LocalizedExpertiseResultLists(standardLKRs: standard, nonStandardLKRs: nonStandard)
