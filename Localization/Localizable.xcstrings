@@ -856,7 +856,7 @@
       }
     },
     "Too many expertises" : {
-      "comment" : "Shown if too many keywords found",
+      "comment" : "Shown when too many expertises are found",
       "localizations" : {
         "en" : {
           "stringUnit" : {
