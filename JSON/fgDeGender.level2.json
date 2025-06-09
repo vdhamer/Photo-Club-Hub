@@ -352,7 +352,7 @@
             },
             "optional": {
                 "level3URL": "http://www.vdhamer.com/fgDeGender/Kitty_Heesakkers/",
-                "roles": {
+                "status": {
                     "isProspectiveMember": true
                 },
                 "keywords": [ ]
