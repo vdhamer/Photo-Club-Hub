@@ -34,10 +34,18 @@ struct MemberPortfolioRow: View {
                             defaultColor: .accentColor,
                             isDeceased: member.photographer.isDeceased
                         ))
-                    ForEach(localizeSortAndClip(moc: moc, member.photographer.photographerKeywords)) { lExpertResult in
-                        Text((lExpertResult.isStandard ? "🏵️ " : "🪲 ") + lExpertResult.name)
-                            .font(.subheadline)
-                    }
+
+                    let localizedKeywordResultLists = localizeSortAndClip(moc: moc,
+                                                                          member.photographer.photographerKeywords)
+                    Group {
+                        ForEach(localizedKeywordResultLists.standardLKRs) { standardLocalizedKeywordResult in
+                            Text("🏵️ " + standardLocalizedKeywordResult.localizedKeyword!.name)
+                        }
+                        ForEach(localizedKeywordResultLists.nonStandardLKRs) { nonstandardLocalizedKeywordResult in
+                            Text("🪲" + nonstandardLocalizedKeywordResult.id)
+                        }
+                    } .font(.subheadline)
+
                     Text(verbatim: "\(member.roleDescriptionOfClubTown)")
                         .truncationMode(.tail)
                         .lineLimit(2)
@@ -86,14 +94,34 @@ struct MemberPortfolioRow: View {
     fileprivate func localizeSortAndClip(moc: NSManagedObjectContext,
                                          _ photographerkeywords: Set<PhotographerKeyword>) -> [LocalizedKeywordResult] {
         // first translate keywords to appropriate language and make elements non-optional
-        var result1 = [LocalizedKeywordResult]()
-        for photographerKeyword in photographerkeywords where photographerKeyword.keyword_ != nil {
-            result1.append(photographerKeyword.keyword_!.selectedLocalizedKeyword)
+        var interim: [LocalizedKeywordResult] = [] // start with empty array
+        for photographerKeyword in photographerKeywords {
+            interim.append(photographerKeyword.keyword.selectedLocalizedKeyword) // choose appropriate language
         }
 
-        // then sort based on selected language.  Has special behavior for keywords without translation
-        let result2: [LocalizedKeywordResult] = result1.sorted() // note dedicated LocalizedKeywordResult.<() function
-        let maxCount2 = result2.count // for ["keywordA", "keywordB", "keywordC"] maxCount is 3
+        // next sort based on selected language.  Has special behavior for keywords without translation
+        let sorted: [LocalizedKeywordResult] = interim.sorted() // note dedicated LocalizedKeywordResult.<() function
+
+        // limit size to maxKeywordsPerMember displayed keywords
+        var clipped: [LocalizedKeywordResult] = [] // start with empty array
+        if sorted.count > 0 {
+            for index in 1...min(maxKeywordsPerMember, sorted.count) {
+                clipped.append(sorted[index-1]) // copy the (aphabetically) first few LocalizedKeywordResult elements
+            }
+        }
+        if sorted.count > maxKeywordsPerMember {
+            let moreKeyword = Keyword.findCreateUpdateStandard(
+                context: moc,
+                id: String(localized: "Too many expertises",
+                           table: "Localizable",
+                           comment: "Shown if too many keywords found"),
+                name: [],
+                usage: [] )
+            let moreLocalizedKeyword: LocalizedKeywordResult = moreKeyword.selectedLocalizedKeyword
+            clipped.append(LocalizedKeywordResult(localizedKeyword: moreLocalizedKeyword.localizedKeyword,
+                                                  id: moreKeyword.id,
+                                                  customHint: customHint(localizedKeywordResults: sorted)))
+        }
 
         // insert delimeters where needed
         var result3 = [LocalizedKeywordResult]() // start with empty list
