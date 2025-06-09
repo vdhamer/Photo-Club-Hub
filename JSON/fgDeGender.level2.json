@@ -346,6 +346,20 @@
 
         {
             "name": {
+                "givenName": "Kitty",
+                "infixName": "",
+                "familyName": "Heesakkers"
+            },
+            "optional": {
+                "level3URL": "http://www.vdhamer.com/fgDeGender/Kitty_Heesakkers/",
+                "roles": {
+                    "isProspectiveMember": true
+                }
+            }
+        },
+
+        {
+            "name": {
                 "givenName": "Lex",
                 "infixName": "",
                 "familyName": "Augusteijn"
