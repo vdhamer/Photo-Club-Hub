@@ -12,12 +12,12 @@ Data Maintenance
 * Added the new photography museum in Seoul, Korea.
 
 Code Maintenance
-* Moved string translations for Readme into dedicated file (was inconsistent).
+* Moved string translations for ReadmeView into dedicated file (was inconsistent).
 
 Documentation
 * Updated FAQ_nl to reflect new Expertise terminology.
 
-This build #4640 was made using Xcode 16.4
+This build #4640 was made using Xcode 16.4 and is intended for beta testing only
 
 ---------------------------------------------------------------------------
 
