@@ -8,10 +8,10 @@
 import CoreData
 import CoreLocation // needed for coordinate translation
 
-struct PersistenceController {
-	static let shared = PersistenceController()
+public struct PersistenceController: Sendable {
+	public static let shared = PersistenceController()
 
-	let container: NSPersistentContainer
+	public let container: NSPersistentContainer
 
 	init(inMemory: Bool = false) {
 		container = NSPersistentContainer(name: "Photo_Club_Hub") // name of .xcdatamodel
@@ -51,7 +51,7 @@ struct PersistenceController {
 
     }
 
-    static let preview: PersistenceController = {
+    public static let preview: PersistenceController = {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
         for index in 1...10 {
