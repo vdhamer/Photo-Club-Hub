@@ -1,7 +1,10 @@
 ### 2.8.0 (GitHub commit ???????) ??-06-25
 
 Code Maintenance
-* Tested with Xcode 26.0 beta
+* Tested with Xcode 26.0 beta, iOS 26 (23A5260k)
+
+Documentation
+* Added "accessibility nutrition labels" for the App Store
 
 This build #4641 was made using Xcode ???? and is intended for App Store distribution.
 

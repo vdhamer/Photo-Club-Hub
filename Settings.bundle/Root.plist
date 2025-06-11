@@ -24,7 +24,7 @@
 			<key>DefaultValue</key>
 			<string>https://github.com/vdhamer/Photo-Club-Hub</string>
 			<key>Key</key>
-			<string>github</string>
+			<string>githubPad</string>
 			<key>SupportedUserInterfaceIdioms</key>
 			<array>
 				<string>Pad</string>
@@ -38,7 +38,35 @@
 			<key>DefaultValue</key>
 			<string>https://tinyurl.com/PhClubHub</string>
 			<key>Key</key>
-			<string>github</string>
+			<string>githubPhone</string>
+			<key>SupportedUserInterfaceIdioms</key>
+			<array>
+				<string>Phone</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTitleValueSpecifier</string>
+			<key>Title</key>
+			<string>License</string>
+			<key>DefaultValue</key>
+			<string>https://opensource.org/license/mit</string>
+			<key>Key</key>
+			<string>licensePad</string>
+			<key>SupportedUserInterfaceIdioms</key>
+			<array>
+				<string>Pad</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTitleValueSpecifier</string>
+			<key>Title</key>
+			<string>License</string>
+			<key>DefaultValue</key>
+			<string>https://tinyurl.com/MITlicense</string>
+			<key>Key</key>
+			<string>licensePhone</string>
 			<key>SupportedUserInterfaceIdioms</key>
 			<array>
 				<string>Phone</string>
@@ -53,34 +81,6 @@
 			<string>Peter van den Hamer</string>
 			<key>Key</key>
 			<string>owner</string>
-		</dict>
-		<dict>
-			<key>Type</key>
-			<string>PSTitleValueSpecifier</string>
-			<key>Title</key>
-			<string>License</string>
-			<key>DefaultValue</key>
-			<string>https://opensource.org/license/mit</string>
-			<key>Key</key>
-			<string>license</string>
-			<key>SupportedUserInterfaceIdioms</key>
-			<array>
-				<string>Pad</string>
-			</array>
-		</dict>
-		<dict>
-			<key>Type</key>
-			<string>PSTitleValueSpecifier</string>
-			<key>Title</key>
-			<string>License</string>
-			<key>DefaultValue</key>
-			<string>https://tinyurl.com/MITlicense</string>
-			<key>Key</key>
-			<string>license</string>
-			<key>SupportedUserInterfaceIdioms</key>
-			<array>
-				<string>Phone</string>
-			</array>
 		</dict>
 		<dict>
 			<key>Type</key>

@@ -20,7 +20,7 @@
 "Turning debug options on will enable non-standard behavior. This is used for software testing purposes. See Settings.swift source file for more info." = "Turning debug options on will enable non-standard behavior. This is used for software testing purposes. See Settings.swift source file for more info.";
 
 /* (No Comment) */
-"Extra saving of data" = "Extra saving of data";
+"Extra saving of data" = "Save data more often";
 
 /* (No Comment) */
 "Data refresh (for r2.7.3) pending" = "Data refresh (for r2.7.3) pending";
