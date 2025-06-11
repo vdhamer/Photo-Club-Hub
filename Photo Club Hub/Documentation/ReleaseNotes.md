@@ -2,6 +2,7 @@
 
 Code Maintenance
 * Tested with Xcode 26.0 beta, iOS 26 (23A5260k)
+* Fixed bug in Settings app (display of GitHub URL and open source licence type)
 
 Documentation
 * Added "accessibility nutrition labels" for the App Store
