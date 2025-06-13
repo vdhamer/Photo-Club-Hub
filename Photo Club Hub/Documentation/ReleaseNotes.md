@@ -1,9 +1,10 @@
 ### 2.8.0 (GitHub commit ???????) ??-06-25
 
 Code Maintenance
-* Tested with Xcode 26.0 beta, iOS 26 (23A5260k)
+* Tested with Xcode 26.0 (17A5241e), iOS 26 (23A5260k)
 * Fixed bug in Settings app (display of GitHub URL and open source licence type)
 * Turned localizeSortAndClip() into an initializer.
+* Added 2 new recommended settings present in Xcode 26 (17A5241e)
 
 Data Maintenance
 * Placeholder file for fcDenDungen
