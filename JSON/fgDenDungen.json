@@ -1,0 +1,133 @@
+{
+    "club":
+        {
+            "idPlus": {
+                "town": "Den Dungen",
+                "fullName": "Fotoclub den Dungen",
+                "nickName": "fcDenDungen"
+            },
+            "optional": {
+                "coordinates": {
+                    "latitude": 51.66214,
+                    "longitude": 5.37097
+                },
+                "website": "https://www.fotoclubdendungen.nl",
+                "level2URL": "https://www.example.com/fcdDungen.level2.json"
+            }
+        },
+
+
+    "members": [
+
+        {
+            "name": {
+                "givenName": "Rien",
+                "infixName": "den",
+                "familyName": "Otter"
+            },
+            "optional": {
+                "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg"
+            }
+        },
+
+        {
+            "name": {
+                "givenName": "Rien2",
+                "infixName": "den",
+                "familyName": "Otter"
+            },
+            "optional": {
+                "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg"
+            }
+        },
+
+        {
+            "name": {
+                "givenName": "Rien3",
+                "infixName": "den",
+                "familyName": "Otter"
+            },
+            "optional": {
+                "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg"
+            }
+        },
+
+        {
+            "name": {
+                "givenName": "Rien4",
+                "infixName": "den",
+                "familyName": "Otter"
+            },
+            "optional": {
+                "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg"
+            }
+        },
+
+        {
+            "name": {
+                "givenName": "Rien4",
+                "infixName": "den",
+                "familyName": "Otter"
+            },
+            "optional": {
+                "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg"
+            }
+        },
+
+        {
+            "name": {
+                "givenName": "Rien5",
+                "infixName": "den",
+                "familyName": "Otter"
+            },
+            "optional": {
+                "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg"
+            }
+        },
+
+        {
+            "name": {
+                "givenName": "Rien6",
+                "infixName": "den",
+                "familyName": "Otter"
+            },
+            "optional": {
+                "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg"
+            }
+        },
+
+        {
+            "name": {
+                "givenName": "Rien7",
+                "infixName": "den",
+                "familyName": "Otter"
+            },
+            "optional": {
+                "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg"
+            }
+        },
+
+        {
+            "name": {
+                "givenName": "Rien8",
+                "infixName": "den",
+                "familyName": "Otter"
+            },
+            "optional": {
+                "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg"
+            }
+        },
+
+        {
+            "name": {
+                "givenName": "Rien9",
+                "infixName": "den",
+                "familyName": "Otter"
+            },
+            "optional": {
+                "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg"
+            }
+        },
+
+    ]
+}
