@@ -1,5 +1,5 @@
 //
-//  FotogroepOirschotMembersProvider.swift
+//  FotoclubDenDungenMembersProvider.swift
 //  Photo Club Hub Data
 //
 //  Created by Peter van den Hamer on 31/05/2025.
@@ -7,7 +7,7 @@
 
 import CoreData // for PersistenceController
 
-public class FotogroepOirschotMembersProvider {
+public class FotoclubDenDungenMembersProvider {
 
     public init(bgContext: NSManagedObjectContext,
                 useOnlyInBundleFile: Bool = true,
@@ -26,10 +26,10 @@ public class FotogroepOirschotMembersProvider {
 
     }
 
-    fileprivate func insertOnlineMemberData(bgContext: NSManagedObjectContext, town: String = "Oirschot") {
-        let idPlus = OrganizationIdPlus(fullName: "Fotogroep Oirschot",
+    fileprivate func insertOnlineMemberData(bgContext: NSManagedObjectContext, town: String = "Den Dungen") {
+        let idPlus = OrganizationIdPlus(fullName: "Fotoclub Den Dungen",
                                         town: town,
-                                        nickname: "fgOirschot")
+                                        nickname: "fcDenDungen")
 
         let club = Organization.findCreateUpdate(context: bgContext,
                                                  organizationTypeEnum: .club,

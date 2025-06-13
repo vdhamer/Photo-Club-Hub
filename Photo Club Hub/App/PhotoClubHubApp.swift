@@ -100,6 +100,10 @@ extension PhotoClubHubApp {
         let ericameraBackgroundContext = makeBgContext(ctxName: "Level 2 loader fcEricamera")
         _ = FotoclubEricameraMembersProvider(bgContext: ericameraBackgroundContext, useOnlyInBundleFile: false)
 
+        // load current/former members of Fotoclub Ericamera
+        let dungenBackgroundContext = makeBgContext(ctxName: "Level 2 loader fgDenDungen")
+        _ = FotoclubDenDungenMembersProvider(bgContext: dungenBackgroundContext, useOnlyInBundleFile: false)
+
     }
 
     static func makeBgContext(ctxName: String) -> NSManagedObjectContext {
