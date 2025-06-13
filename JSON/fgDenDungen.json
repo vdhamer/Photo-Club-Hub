@@ -3,7 +3,7 @@
         {
             "idPlus": {
                 "town": "Den Dungen",
-                "fullName": "Fotoclub Den Dungen",
+                "fullName": "Fotoclub den Dungen",
                 "nickName": "fcDenDungen"
             },
             "optional": {
@@ -32,7 +32,7 @@
 
         {
             "name": {
-                "givenName": "Rien",
+                "givenName": "Rien2",
                 "infixName": "den",
                 "familyName": "Otter"
             },
@@ -43,7 +43,7 @@
 
         {
             "name": {
-                "givenName": "Rien",
+                "givenName": "Rien3",
                 "infixName": "den",
                 "familyName": "Otter"
             },
@@ -54,7 +54,7 @@
 
         {
             "name": {
-                "givenName": "Rien",
+                "givenName": "Rien4",
                 "infixName": "den",
                 "familyName": "Otter"
             },
@@ -65,7 +65,7 @@
 
         {
             "name": {
-                "givenName": "Rien",
+                "givenName": "Rien4",
                 "infixName": "den",
                 "familyName": "Otter"
             },
@@ -76,7 +76,7 @@
 
         {
             "name": {
-                "givenName": "Rien",
+                "givenName": "Rien5",
                 "infixName": "den",
                 "familyName": "Otter"
             },
@@ -87,7 +87,7 @@
 
         {
             "name": {
-                "givenName": "Rien",
+                "givenName": "Rien6",
                 "infixName": "den",
                 "familyName": "Otter"
             },
@@ -98,7 +98,7 @@
 
         {
             "name": {
-                "givenName": "Rien",
+                "givenName": "Rien7",
                 "infixName": "den",
                 "familyName": "Otter"
             },
@@ -109,7 +109,7 @@
 
         {
             "name": {
-                "givenName": "Rien",
+                "givenName": "Rien8",
                 "infixName": "den",
                 "familyName": "Otter"
             },
@@ -120,7 +120,7 @@
 
         {
             "name": {
-                "givenName": "Rien",
+                "givenName": "Rien9",
                 "infixName": "den",
                 "familyName": "Otter"
             },
@@ -128,17 +128,6 @@
                 "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg"
             }
         },
-
-        {
-            "name": {
-                "givenName": "Rien",
-                "infixName": "den",
-                "familyName": "Otter"
-            },
-            "optional": {
-                "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg"
-            }
-        }
 
     ]
 }
