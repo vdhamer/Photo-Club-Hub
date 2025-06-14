@@ -26,7 +26,6 @@
                 "familyName": "Otter"
             },
             "optional": {
-                "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg"
             }
         },
 
@@ -37,7 +36,6 @@
                 "familyName": "Otter"
             },
             "optional": {
-                "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg"
             }
         },
 
@@ -48,7 +46,6 @@
                 "familyName": "Otter"
             },
             "optional": {
-                "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg"
             }
         },
 
@@ -59,7 +56,6 @@
                 "familyName": "Otter"
             },
             "optional": {
-                "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg"
             }
         },
 
@@ -70,7 +66,6 @@
                 "familyName": "Otter"
             },
             "optional": {
-                "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg"
             }
         },
 
@@ -81,7 +76,16 @@
                 "familyName": "Otter"
             },
             "optional": {
-                "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg"
+             }
+        },
+
+        {
+            "name": {
+                "givenName": "Rien",
+                "infixName": "den",
+                "familyName": "Otter"
+            },
+            "optional": {
             }
         },
 
@@ -92,7 +96,6 @@
                 "familyName": "Otter"
             },
             "optional": {
-                "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg"
             }
         },
 
@@ -103,7 +106,6 @@
                 "familyName": "Otter"
             },
             "optional": {
-                "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg"
             }
         },
 
@@ -114,7 +116,6 @@
                 "familyName": "Otter"
             },
             "optional": {
-                "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg"
             }
         },
 
@@ -125,18 +126,6 @@
                 "familyName": "Otter"
             },
             "optional": {
-                "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg"
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "Rien",
-                "infixName": "den",
-                "familyName": "Otter"
-            },
-            "optional": {
-                "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg"
             }
         }
 
