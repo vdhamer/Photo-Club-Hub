@@ -7,6 +7,8 @@
 
 import CoreData // for NSManagedObjectContext
 
+let maxKeywordsPerMember: Int = 2
+
 // Used to provide the UI with pairs of lists with Exertise records with localized names
 public struct LocalizedExpertiseResultLists {
 

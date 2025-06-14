@@ -10,8 +10,6 @@ import WebKit // for wkWebView
 import CoreLocation // for CLLocationCoordinate2D
 import CoreData // for NSManagedObjectContext
 
-let maxKeywordsPerMember: Int = 2
-
 struct MemberPortfolioRow: View {
     var member: MemberPortfolio
     @Environment(\.horizontalSizeClass) var horSizeClass
