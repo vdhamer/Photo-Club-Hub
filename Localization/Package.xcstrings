@@ -256,6 +256,9 @@
         }
       }
     },
+    "Too many expertises" : {
+      "comment" : "Shown when too many expertises are found"
+    },
     "treasurer" : {
       "comment" : "Administrative role of member within a club. Used as part of concatenations.",
       "localizations" : {

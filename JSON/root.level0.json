@@ -52,7 +52,7 @@
             "optional": {
                 "usage":  [
                     { "language": "EN", "localizedString": "Grayscale or monochromatic images" },
-                    { "language": "NL", "localizedString": "Monochromatische beelden, waaronder beelden in grijstinten of sepia." }
+                    { "language": "NL", "localizedString": "Monochrome beelden, waaronder beelden in grijstinten of sepia." }
                 ]
             }
         },

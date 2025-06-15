@@ -857,6 +857,7 @@
     },
     "Too many expertises" : {
       "comment" : "Shown when too many expertises are found",
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {

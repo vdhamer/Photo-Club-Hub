@@ -110,6 +110,7 @@
 		D0FD28BC2D8CDFD3002B5C38 /* abstractExpertise.level0.json in Resources */ = {isa = PBXBuildFile; fileRef = D0FD28B82D8CDFD3002B5C38 /* abstractExpertise.level0.json */; };
 		D0FD28BD2D8CDFD3002B5C38 /* language.level0.json in Resources */ = {isa = PBXBuildFile; fileRef = D0FD28B92D8CDFD3002B5C38 /* language.level0.json */; };
 		D0FE77E52BB9AEE900272077 /* ItemFilterStatsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE77E42BB9AEE900272077 /* ItemFilterStatsEnum.swift */; };
+		D0FF4D3E2DFF813600C640F9 /* LocalizedExpertiseResultList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FF4D3D2DFF813600C640F9 /* LocalizedExpertiseResultList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -294,6 +295,7 @@
 		D0FD28B92D8CDFD3002B5C38 /* language.level0.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = language.level0.json; sourceTree = "<group>"; };
 		D0FD28BA2D8CDFD3002B5C38 /* languages.level0.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = languages.level0.json; sourceTree = "<group>"; };
 		D0FE77E42BB9AEE900272077 /* ItemFilterStatsEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemFilterStatsEnum.swift; sourceTree = "<group>"; };
+		D0FF4D3D2DFF813600C640F9 /* LocalizedExpertiseResultList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedExpertiseResultList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -687,6 +689,7 @@
 		D0F5EE852C54ED750028C9A6 /* Photographer */ = {
 			isa = PBXGroup;
 			children = (
+				D0FF4D3D2DFF813600C640F9 /* LocalizedExpertiseResultList.swift */,
 				D0D091292DBEE0AF00BD3919 /* LocalizedKeywordResult.swift */,
 				D0831A25277F72590049AB84 /* Photographer.swift */,
 				D0C53BDC2ABF3ADF000722A1 /* PersonName.swift */,
@@ -949,6 +952,7 @@
 				D0C6E95529577921001E5CE9 /* DebugPanel.swift in Sources */,
 				D087540C2BC5EE3700FCBDB3 /* WhoIsWhoThumbnails.swift in Sources */,
 				D0831A45277F731C0049AB84 /* String+CapitalizeFirstLetter.swift in Sources */,
+				D0FF4D3E2DFF813600C640F9 /* LocalizedExpertiseResultList.swift in Sources */,
 				D0831A1F277F72270049AB84 /* FilteredMemberPortfoliosView.swift in Sources */,
 				D02F88532C4C242C0043B25B /* String+Date.swift in Sources */,
 				D0ACCEE22DEF9BCD0002FACC /* FotoclubBellusImagoMembersProvider.swift in Sources */,

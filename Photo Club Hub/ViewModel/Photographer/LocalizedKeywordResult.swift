@@ -13,7 +13,7 @@ public struct LocalizedKeywordResult {
     public var delimiterToAppend: String // normally "," but can be set to ""
     public var customHint: String? // used to overrule standard Ignite hint
 
-    var name: String { localizedKeyword?.name ?? id } // localized name or (if no translations) generic id
+    public var name: String { localizedKeyword?.name ?? id } // localized name or (if no translations) generic id
     var isStandard: Bool { localizedKeyword != nil }
 
     public init(localizedKeyword: LocalizedKeyword?,

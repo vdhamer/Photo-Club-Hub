@@ -43,8 +43,6 @@ public struct LocalizedExpertiseResultLists {
         }
 
         // Step 4. Split list of photographer's expertises into 2 parts: standard and nonStandard
-//        var localStandard: [LocalizedKeywordResult] = [] // start with two empty arrays
-//        var localNonStandard: [LocalizedKeywordResult] = []
         for item in clipped {
             if item.isStandard {
                 resultLERLs.standard.list.append(item)
@@ -59,7 +57,7 @@ public struct LocalizedExpertiseResultLists {
             let moreKeyword = Keyword.findCreateUpdateNonStandard(
                                         context: moc,
                                         id: String(localized: "Too many expertises",
-                                                   table: "Localizable",
+                                                   table: "Package",
                                                    comment: "Shown when too many expertises are found"),
                                         name: [],
                                         usage: [] )
@@ -98,20 +96,8 @@ public struct LocalizedExpertiseResultLists {
         return hint.trimmingCharacters(in: CharacterSet(charactersIn: " "))
     }
 
-    fileprivate func getIconString(standard: Bool) -> String {
+    public func getIconString(standard: Bool) -> String {
         let temp = LocalizedExpertiseResultLists(standardList: [], nonstandardList: [])
         return standard ? temp.standard.icon : temp.nonstandard.icon
     }
-}
-
-public struct LocalizedExpertiseResultList {
-
-    public init(isStandard: Bool, list: [LocalizedKeywordResult]) {
-        self.icon = isStandard ? "🏵️" : "🪲"
-        self.list = list
-    }
-
-    public let icon: String // cannot be modified, icon is a single Unicode character
-    public var list: [LocalizedKeywordResult]
-
 }
