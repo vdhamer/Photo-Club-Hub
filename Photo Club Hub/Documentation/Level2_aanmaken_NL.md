@@ -138,7 +138,7 @@ Het levert een voorbeeldplaatje op van het werk van een clublid.
            - Men hoeft niet te vermelden dat een lid een bestuursfunctie _niet_ heeft.
              Invoer zoals '"isSecretary": false` kan nodig zijn om te expliciet aan te geven dat iemand die vroeger secretaris was dat niet meer is.
        - `membershipStartDate`. Dit veld wordt momenteel alleen gebruikt in _Photo Club Hub HTML_ en niet in de iOS app.
-       - `expertises` geven de hoofdfocus van de fotograaf aan. Er zijn [aparte instructies](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/Level2_expertise_NL.md) voor dit veld.
+       - `expertises` geven één of twee opvallendste expertisegebieden van de fotograaf aan. Er zijn [aparte instructies](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/Level2_expertise_NL.md) voor dit veld.
 - Het `contactEmail` veld is diegene die benaderd kan worden als er iets aan de hand is met dit JSON bestand.
   Vaak ik dat de website beheerder (b.v. admin@clubnaam.nl mits dat werkt), maar het zou een direct gmail account van een clublid kunnen zijn.
 </details></p>
