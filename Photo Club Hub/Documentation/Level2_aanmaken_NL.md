@@ -26,7 +26,9 @@ Er komen later aparte instructies hoe _portfolio's_ met foto's ("Level 3") toe t
       | Eindhoven | Fotogroep de Gender | fgDeGender | 51.42398 | 5.45010 | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/fgDeGender.level2.json) | [link](http://www.vdhamer.com/fgDeGender) |
       | Eindhoven | Fotoclub Ericamera | fcEricamera | 51.45403 | 5.46288 | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/fcEricamera.level2.json) ⌛ | [link](http://www.vdhamer.com/fcEricamera) |
       | Eindhoven | Fotoclub 't Karregat | fcKarregat | 51.48048 | 5.42879 | ? |  |
+      | Gemert | Foto Expressie Groep Gemert | fegGemert | 51.56025 | 5.68508 | ⌛ |  |
       | Oirschot | Fotogroep Oirschot | fgOirschot | 51.46785 | 5.25568 | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/fgOirschot.level2.json) ⌛ |[link](http://www.vdhamer.com/fgOirschot) |
+      | Schijndel | Fotoclub Schijndel | fcSchijndel | 51.61402 | 5.44888 | ? |  |
       | Sint Michielsgestel | Fotokring Sint-Michielsgestel | fkGestel | 51.64036 | 5.34749 | ⌛ |  |
       | Veldhoven | Fotoclub Bellus Imago | fcBellusImago | 51.42541 | 5.38756 | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/fcBellusImago.level2.json) | [link](http://www.vdhamer.com/fcBellusImago) |
       | Waalre | Fotogroep Waalre | fgWaalre | 51.39184 | 5.46144 | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/fgWaalre.level2.json) | [link](http://www.vdhamer.com/fgWaalre) |
