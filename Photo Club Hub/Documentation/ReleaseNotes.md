@@ -11,7 +11,7 @@ Data Maintenance
 * Placeholder file for fcDenDungen
 
 Documentation
-* Added "accessibility nutrition labels" for the App Store
+* Filled out "accessibility nutrition labels" form for the App Store
 
 This build #4641 was made using Xcode ???? and is intended for App Store distribution.
 
