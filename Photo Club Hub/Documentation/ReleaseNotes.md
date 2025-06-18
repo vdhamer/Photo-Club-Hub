@@ -6,9 +6,11 @@ Code Maintenance
 * Turned localizeSortAndClip() into an initializer.
 * Added 2 new recommended settings present in Xcode 26 (17A5241e)
 * Renamed database tables (to match new Expertise terminology)
+* Bug fix: Fotoclub Den Dungen is no longer displayed as "Fotoclub Den Dungen (Den Dungen)"
 
 Data Maintenance
 * Placeholder file for fcDenDungen
+* Added a new club Zien & Doorzien
 
 Documentation
 * Added "accessibility nutrition labels" for the App Store
