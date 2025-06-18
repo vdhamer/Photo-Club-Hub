@@ -5,6 +5,7 @@ Code Maintenance
 * Fixed bug in Settings app (display of GitHub URL and open source licence type)
 * Turned localizeSortAndClip() into an initializer.
 * Added 2 new recommended settings present in Xcode 26 (17A5241e)
+* Renamed database tables (to match new Expertise terminology)
 
 Data Maintenance
 * Placeholder file for fcDenDungen
