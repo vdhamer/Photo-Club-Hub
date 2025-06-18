@@ -269,10 +269,7 @@
                         "language": "NL",
                         "value": "De groep heeft 7 leden (met de ambitie om iets te groeien). Voor fotobesprekingen komt de groep en een mentor bijeen in een van de huiskamers."
                     }
-                ],
-                "nlSpecific": {
-                    "fotobondNumber": 1681
-                }
+                ]
             }
         },
 
@@ -326,10 +323,7 @@
                         "language": "NL",
                         "value": "ISO2016 heeft geen eigen website."
                     }
-                ],
-                "nlSpecific": {
-                    "fotobondNumber": 1682
-                }
+                ]
             }
         },
 
@@ -762,10 +756,7 @@
                         "language": "NL",
                         "value": "Citaat: 'Fotogroep Klick is in 2010 na het beëindigen van een fotografiecursus door een aantal enthousiaste fotoamateurs opgericht.'"
                     }
-                ],
-                "nlSpecific": {
-                    "fotobondNumber": 1672
-                }
+                ]
             }
         },
 
@@ -791,10 +782,7 @@
                         "language": "NL",
                         "value": "De club komt bijeen in Gemeenshapshuis De Uitwijk, Eindhoven. De jaarlijkse expo valt in maart."
                     }
-                ],
-                "nlSpecific": {
-                    "fotobondNumber": 1626
-                }
+                ]
             }
         },
 
@@ -831,7 +819,7 @@
             "idPlus": {
                 "town": "Gemert",
                 "fullName": "Foto Expressie Groep Gemert",
-                "nickName": "FEGG"
+                "nickName": "fegGemert"
             },
             "coordinates": {
                 "latitude": 51.56025,
@@ -878,10 +866,7 @@
                         "language": "NL",
                         "value": "Om lid te worden van de fotoclub moet men ook lid zijn van de vereniging 'De Sociëteit' in Grave, waar de fotoclub deel van uitmaakt."
                     }
-                ],
-                "nlSpecific": {
-                    "fotobondNumber": 1688
-                }
+                ]
             }
         },
 
@@ -1141,10 +1126,7 @@
                         "language": "NL",
                         "value": "In 2023 heeft de club met twee clubs in Rosmalen een fotoketting gemaakt waarbij ieder binnen een week fotografisch reageerde op een foto van een voorganger."
                     }
-                ],
-                "nlSpecific": {
-                    "fotobondNumber": 1680
-                }
+                ]
             }
         },
 
