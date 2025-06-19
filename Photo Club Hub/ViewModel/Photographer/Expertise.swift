@@ -262,28 +262,28 @@ extension Expertise {
 
     // Priority system to choose the most appropriate LocalizedKeyword for a given Keyword.
     // The choice depends on available translations and the current language preferences set on the device.
-    public var selectedLocalizedKeyword: LocalizedKeywordResult {
+    public var selectedLocalizedKeyword: LocalizedExpertiseResult {
         // don't use Locale.current.language.languageCode because this only returns languages supported by the app
         // first choice: accomodate user's language preferences according to Apple's Locale API
         for lang in Locale.preferredLanguages {
             let langID = lang.split(separator: "-").first?.uppercased() ?? "EN"
             // now check if one of the user's preferences is available for this Remark
             for localizedKeyword in localizedExpertises where localizedKeyword.language.isoCodeAllCaps == langID {
-                return LocalizedKeywordResult(localizedKeyword: localizedKeyword, id: self.id)
+                return LocalizedExpertiseResult(localizedKeyword: localizedKeyword, id: self.id)
             }
         }
 
         // second choice: most people speak English, at least let's pretend that is the case ;-)
         for localizedKeyword in localizedExpertises where localizedKeyword.language.isoCodeAllCaps == "EN" {
-            return LocalizedKeywordResult(localizedKeyword: localizedKeyword, id: self.id)
+            return LocalizedExpertiseResult(localizedKeyword: localizedKeyword, id: self.id)
         }
 
         // third choice: use arbitrary (first) translation available for this keyword
         if localizedExpertises.first != nil {
-            return LocalizedKeywordResult(localizedKeyword: localizedExpertises.first!, id: self.id)
+            return LocalizedExpertiseResult(localizedKeyword: localizedExpertises.first!, id: self.id)
         }
 
-        return LocalizedKeywordResult(localizedKeyword: nil, id: self.id)
+        return LocalizedExpertiseResult(localizedKeyword: nil, id: self.id)
     }
 
 }

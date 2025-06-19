@@ -105,7 +105,7 @@ public class Level0JsonReader {
             let jsonKeywordOptionals = jsonKeyword["optional"] // rest will be empty if not found
             let jsonUsage = jsonKeywordOptionals["usage"].arrayValue
 
-            let keyword = Keyword.findCreateUpdateStandard(context: bgContext,
+            let keyword = Expertise.findCreateUpdateStandard(context: bgContext,
                                                            id: idString,
                                                            name: jsonKeywordName,
                                                            usage: jsonUsage)

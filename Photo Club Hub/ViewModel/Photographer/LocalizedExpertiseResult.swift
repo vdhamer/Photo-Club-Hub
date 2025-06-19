@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct LocalizedKeywordResult {
+public struct LocalizedExpertiseResult {
     public let localizedKeyword: LocalizedExpertise? // keyword may not have a translation if it isn't defined at Level0
     public let id: String // fallback if localizedKeyword is nil
     public var delimiterToAppend: String // normally "," but can be set to ""
@@ -27,9 +27,9 @@ public struct LocalizedKeywordResult {
     }
 }
 
-extension LocalizedKeywordResult: Comparable {
+extension LocalizedExpertiseResult: Comparable {
 
-    public static func < (lhs: LocalizedKeywordResult, rhs: LocalizedKeywordResult) -> Bool {
+    public static func < (lhs: LocalizedExpertiseResult, rhs: LocalizedExpertiseResult) -> Bool {
 
         if (lhs.localizedKeyword != nil && rhs.localizedKeyword != nil) || // both sides have a translation
             (lhs.localizedKeyword == nil && rhs.localizedKeyword == nil) { // both sides have no translation
@@ -41,4 +41,4 @@ extension LocalizedKeywordResult: Comparable {
 
 }
 
-extension LocalizedKeywordResult: Identifiable { } // for compatibility with ForEach
+extension LocalizedExpertiseResult: Identifiable { } // for compatibility with ForEach
