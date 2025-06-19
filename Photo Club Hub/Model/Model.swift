@@ -11,12 +11,12 @@ import CoreData // for NSManagedObject
 public struct Model {
     public static func deleteAllCoreDataObjects(context: NSManagedObjectContext) {
         // order is important to avoid problems with referential integrity
-        deleteCoreDataKeywordsLanguages(context: context) // performs its own save()
+        deleteCoreDataExpertisesLanguages(context: context) // performs its own save()
         deleteCoreDataPhotographersClubs(context: context) // performs its own save()
     }
 
     // don't delete Photographer before deleting this. See data model picture in README.md.
-    static func deleteCoreDataKeywordsLanguages(context: NSManagedObjectContext) { // delete subset of tables separately
+    static func deleteCoreDataExpertisesLanguages(context: NSManagedObjectContext) { // delete certain tables separately
         let forcedDataRefresh = "Forced clearing of CoreData keywords "
 
         do { // order is important to avoid problems with referential integrity

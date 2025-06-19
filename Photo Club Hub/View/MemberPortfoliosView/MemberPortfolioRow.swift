@@ -34,7 +34,7 @@ struct MemberPortfolioRow: View {
                         ))
 
                     let localizedKeywordResultLists = LocalizedExpertiseResultLists(moc: moc,
-                                                      member.photographer.photographerKeywords)
+                                                      member.photographer.photographerExpertises)
                     Group {
                         if !localizedKeywordResultLists.standard.list.isEmpty {
                             HStack(spacing: 3) {

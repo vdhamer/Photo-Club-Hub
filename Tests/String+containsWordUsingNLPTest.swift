@@ -8,7 +8,7 @@
 import Testing
 @testable import Photo_Club_Hub
 
-@Suite struct StringContainsWordUsingNLP {
+@Suite struct StringContainsWordUsingNLPTest {
 
     @Test("String contains word") func stringContainsWord() {
         let bigString = "The quick brown fox jumped over the lazy dog."

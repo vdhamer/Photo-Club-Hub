@@ -144,7 +144,7 @@ extension Expertise {
 
             let localizedString: String = localizedKeyword["localizedString"].string!
             _ = LocalizedExpertise.findCreateUpdate(context: context,
-                                                    keyword: self, language: language,
+                                                    expertise: self, language: language,
                                                     localizedName: localizedString, localizedUsage: nil)
         }
 
@@ -156,7 +156,7 @@ extension Expertise {
 
             let localizedDescription: String = localizedUsage["localizedString"].string!
             _ = LocalizedExpertise.findCreateUpdate(context: context,
-                                                    keyword: self, language: language,
+                                                    expertise: self, language: language,
                                                     localizedName: nil, localizedUsage: localizedDescription)
 
         }
@@ -198,18 +198,18 @@ extension Expertise {
     }
 
     // count number of Keywords with a given id
-    static func count(context: NSManagedObjectContext, keywordID: String) -> Int {
+    static func count(context: NSManagedObjectContext, expertiseID: String) -> Int {
         var keywords: [Expertise]! = []
 
         context.performAndWait {
             let fetchRequest: NSFetchRequest<Expertise> = Expertise.fetchRequest()
             let predicateFormat: String = "id_ = %@" // avoid localization
-            let predicate = NSPredicate(format: predicateFormat, argumentArray: [keywordID])
+            let predicate = NSPredicate(format: predicateFormat, argumentArray: [expertiseID])
             fetchRequest.predicate = predicate
             do {
                 keywords = try context.fetch(fetchRequest)
             } catch {
-                ifDebugFatalError("Failed to fetch Keyword \(keywordID): \(error)", file: #fileID, line: #line)
+                ifDebugFatalError("Failed to fetch Keyword \(expertiseID): \(error)", file: #fileID, line: #line)
             }
         }
         return keywords.count

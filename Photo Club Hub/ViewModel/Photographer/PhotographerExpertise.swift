@@ -14,7 +14,7 @@ extension PhotographerExpertise {
         fatalError("init() is not available. Use .findCreateUpdate instead.")
     }
 
-    var keyword: Expertise {
+    var expertise: Expertise {
         get {
             if let expertise = expertise_ {
                 return expertise
@@ -46,20 +46,20 @@ extension PhotographerExpertise {
     // Update existing attributes or fill the new object
     static func findCreateUpdate(context: NSManagedObjectContext, // can be foreground or background context
                                  photographer: Photographer,
-                                 keyword: Expertise
+                                 expertise: Expertise
                                 ) -> PhotographerExpertise {
 
         // execute fetchRequest to get keyword object for id=id. Query could return multiple - but shouldn't.
         let fetchRequest: NSFetchRequest<PhotographerExpertise> = PhotographerExpertise.fetchRequest()
         let predicateFormat: String = "expertise_ = %@ AND photographer_ = %@" // avoid localization of query string
-        fetchRequest.predicate = NSPredicate(format: predicateFormat, argumentArray: [keyword, photographer])
+        fetchRequest.predicate = NSPredicate(format: predicateFormat, argumentArray: [expertise, photographer])
 
         var photographerExpertise: [PhotographerExpertise]! = []
         do {
             photographerExpertise = try context.fetch(fetchRequest) // query database
         } catch {
             ifDebugFatalError("""
-                              Failed to fetch PhotographerKeyword for \"\(keyword.id)\" \
+                              Failed to fetch PhotographerKeyword for \"\(expertise.id)\" \
                               for \(photographer.fullNameFirstLast): \(error)
                               """, file: #fileID, line: #line)
             // on non-Debug version, continue with empty `keywords` array
@@ -69,7 +69,7 @@ extension PhotographerExpertise {
         if photographerExpertise.count > 1 { // there is actually a Core Data constraint to prevent this
             ifDebugFatalError("""
                               Query returned multiple (\(photographerExpertise.count)) copies \
-                              of Keyword \"\(keyword.id)\" for photographer \(photographer.fullNameFirstLast)
+                              of Keyword \"\(expertise.id)\" for photographer \(photographer.fullNameFirstLast)
                               """,
                               file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
             // in release mode, log that there are multiple clubs, but continue using the first one.
@@ -82,7 +82,7 @@ extension PhotographerExpertise {
                     PhotographerExpertise.save(context: context, errorText:
                                           """
                                           Could not update PhotographerKeyword \
-                                          for \"\(photographerKeyword.keyword.id)\" \
+                                          for \"\(photographerKeyword.expertise.id)\" \
                                           for keyword \"\(photographerKeyword.photographer.familyName)\"
                                           """)
                 }
@@ -91,7 +91,7 @@ extension PhotographerExpertise {
         } else {
             let entity = NSEntityDescription.entity(forEntityName: "PhotographerExpertise", in: context)!
             let photographerKeyword = PhotographerExpertise(entity: entity, insertInto: context)
-            photographerKeyword.keyword = keyword
+            photographerKeyword.expertise = expertise
             photographerKeyword.photographer = photographer
             // so far, this class has no other properties to populate
             _ = photographerKeyword.update(context: context)
@@ -99,7 +99,7 @@ extension PhotographerExpertise {
                 LocalizedExpertise.save(context: context, errorText:
                                         """
                                         Could not create PhotographerKeyword for \
-                                        \"\(photographerKeyword.keyword.id)\" \
+                                        \"\(photographerKeyword.expertise.id)\" \
                                         for \(photographerKeyword.photographer.fullNameFirstLast)
                                         """)
             }
@@ -133,10 +133,10 @@ extension PhotographerExpertise {
     // MARK: - count
 
     // count number of objects with a given id for a given photographer
-    static func count(context: NSManagedObjectContext, keywordID: String, photographer: Photographer) -> Int {
+    static func count(context: NSManagedObjectContext, expertiseID: String, photographer: Photographer) -> Int {
         let fetchRequest: NSFetchRequest<PhotographerExpertise> = PhotographerExpertise.fetchRequest()
         let predicateFormat: String = "expertise_.id_ = %@ && photographer_ = %@" // avoid localization
-        fetchRequest.predicate = NSPredicate(format: predicateFormat, argumentArray: [keywordID, photographer])
+        fetchRequest.predicate = NSPredicate(format: predicateFormat, argumentArray: [expertiseID, photographer])
 
         var photographerExpertise: [PhotographerExpertise]! = []
         context.performAndWait {
@@ -144,7 +144,7 @@ extension PhotographerExpertise {
                 photographerExpertise = try context.fetch(fetchRequest)
             } catch {
                 ifDebugFatalError("""
-                                  Failed to fetch PhotographerKeyword \"\(keywordID)\" \
+                                  Failed to fetch PhotographerKeyword \"\(expertiseID)\" \
                                   for \(photographer.fullNameFirstLast): \(error)
                                   """,
                                   file: #fileID, line: #line)

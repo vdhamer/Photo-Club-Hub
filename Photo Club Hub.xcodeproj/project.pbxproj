@@ -256,11 +256,8 @@
 		D0C53BDC2ABF3ADF000722A1 /* PersonName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonName.swift; sourceTree = "<group>"; };
 		D0C6E95429577921001E5CE9 /* DebugPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugPanel.swift; sourceTree = "<group>"; };
 		D0C8E3A12BB81B4A00348D97 /* ItemFilterStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemFilterStatsView.swift; sourceTree = "<group>"; };
-		D0CA9B3C2D6B7937005428C0 /* LocalizedKeyword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedKeyword.swift; sourceTree = "<group>"; };
-		D0CA9B3E2D6B7959005428C0 /* PhotographerKeyword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotographerKeyword.swift; sourceTree = "<group>"; };
 		D0CEAECE2B2E1134005AE47D /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		D0CEAED32B2E5847005AE47D /* Photo_Club_Hub_2_5_3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_5_3.xcdatamodel; sourceTree = "<group>"; };
-		D0D091292DBEE0AF00BD3919 /* LocalizedKeywordResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedKeywordResult.swift; sourceTree = "<group>"; };
 		D0D094602DBEE55C00BD3919 /* dataModel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dataModel.png; sourceTree = "<group>"; };
 		D0D18C77296E1F6A00B334DB /* OrganizationIdPlus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationIdPlus.swift; sourceTree = "<group>"; };
 		D0D4860D2B0EC18A00ED0542 /* Photo_Club_Hub_2_5_2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_5_2.xcdatamodel; sourceTree = "<group>"; };
@@ -273,7 +270,6 @@
 		D0E673BA2AE1C1A100A4DC95 /* Photo_Club_Hub_2_5_0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_5_0.xcdatamodel; sourceTree = "<group>"; };
 		D0E694C827EF9B450054D634 /* LockAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockAnimationView.swift; sourceTree = "<group>"; };
 		D0E69C2B2CE2543600D013DD /* app_screenshots_EN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = app_screenshots_EN.jpg; sourceTree = "<group>"; };
-		D0E8688E2D68B99B00F2A03A /* Keyword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyword.swift; sourceTree = "<group>"; };
 		D0E8689A2D693A3600F2A03A /* Photo Club HubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Photo Club HubTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0EAEB322B3CA6D300EC05B6 /* Level1JsonReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level1JsonReader.swift; sourceTree = "<group>"; };
 		D0EB533B295775240061613B /* Crosshairs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crosshairs.swift; sourceTree = "<group>"; };
@@ -698,13 +694,9 @@
 				D08B8FCA2E04B01A00944B8E /* LocalizedExpertiseResult.swift */,
 				D08B8FCB2E04B01A00944B8E /* PhotographerExpertise.swift */,
 				D0FF4D3D2DFF813600C640F9 /* LocalizedExpertiseResultList.swift */,
-				D0D091292DBEE0AF00BD3919 /* LocalizedKeywordResult.swift */,
 				D0831A25277F72590049AB84 /* Photographer.swift */,
 				D0C53BDC2ABF3ADF000722A1 /* PersonName.swift */,
 				D0F5EE862C54EDC60028C9A6 /* PhotographerOptionalFields.swift */,
-				D0E8688E2D68B99B00F2A03A /* Keyword.swift */,
-				D0CA9B3C2D6B7937005428C0 /* LocalizedKeyword.swift */,
-				D0CA9B3E2D6B7959005428C0 /* PhotographerKeyword.swift */,
 				D016DF982DF6D1850018B526 /* LocalizedExpertiseResultLists.swift */,
 			);
 			path = Photographer;
