@@ -1,4 +1,4 @@
-### 2.8.0 (GitHub commit ???????) ??-06-25
+### 2.8.0 (GitHub commit 407e7cc) 20-06-25
 
 Code Maintenance
 * Bug fix: Fotoclub Den Dungen is no longer displayed as "Fotoclub Den Dungen (Den Dungen)"
