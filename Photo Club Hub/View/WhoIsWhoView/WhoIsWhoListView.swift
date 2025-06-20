@@ -59,7 +59,7 @@ struct WhoIsWhoListView: View {
                 Divider()
                 Text("WhosWho_Caption_4",
                      comment: "Shown in gray at the bottom of the Who's Who page (3/3).")
-                ForEach(Expertise.getAll(context: viewContext).sorted(by: sortKeywordsLocalized),
+                ForEach(Expertise.getAll(context: viewContext).sorted(by: sortExpertisesLocalized),
                         id: \.self) { expertise in
                     HStack {
                         Text(verbatim: """
@@ -104,7 +104,7 @@ struct WhoIsWhoListView: View {
         .disableAutocorrection(true)
     }
 
-    fileprivate func sortKeywordsLocalized(lhs: Expertise, rhs: Expertise) -> Bool {
+    fileprivate func sortExpertisesLocalized(lhs: Expertise, rhs: Expertise) -> Bool {
         return lhs.selectedLocalizedExpertise.name < rhs.selectedLocalizedExpertise.name
     }
 
