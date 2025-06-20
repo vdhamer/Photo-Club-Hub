@@ -34,6 +34,7 @@ Data Maintenance
 
 Code Maintenance
 * Moved string translations for ReadmeView into dedicated file (was inconsistent).
+* Removed more references in the code to Keyword (renamed to Expertise)
 
 Documentation
 * Updated FAQ_nl to reflect new Expertise terminology.
