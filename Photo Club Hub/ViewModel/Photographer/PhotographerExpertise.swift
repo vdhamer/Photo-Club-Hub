@@ -98,7 +98,7 @@ extension PhotographerExpertise {
             if Settings.extraCoreDataSaves {
                 LocalizedExpertise.save(context: context, errorText:
                                         """
-                                        Could not create PhotographerKeyword for \
+                                        Could not create PhotographerExpertise for \
                                         \"\(photographerExpertise.expertise.id)\" \
                                         for \(photographerExpertise.photographer.fullNameFirstLast)
                                         """)
@@ -155,19 +155,19 @@ extension PhotographerExpertise {
     }
 
     // count number of objects with a given id
-    static func count(context: NSManagedObjectContext, keywordID: String) -> Int {
+    static func count(context: NSManagedObjectContext, expertiseID: String) -> Int {
         var photographerExpertises: [PhotographerExpertise]! = []
 
         context.performAndWait {
             let fetchRequest: NSFetchRequest<PhotographerExpertise> = PhotographerExpertise.fetchRequest()
             let predicateFormat: String = "expertise_.id_ = %@" // avoid localization
-            fetchRequest.predicate = NSPredicate(format: predicateFormat, argumentArray: [keywordID])
+            fetchRequest.predicate = NSPredicate(format: predicateFormat, argumentArray: [expertiseID])
 
             do {
                 photographerExpertises = try context.fetch(fetchRequest)
             } catch {
                 ifDebugFatalError("""
-                                  Failed to fetch PhotographerKeyword \"\(keywordID)\"
+                                  Failed to fetch PhotographerExpertise \"\(expertiseID)\"
                                   """,
                                   file: #fileID, line: #line)
                 // on non-Debug version, continue with empty `Expertise` array
@@ -177,7 +177,7 @@ extension PhotographerExpertise {
         return photographerExpertises.count
     }
 
-    // count total number of PhotographerKeyword objects/records
+    // count total number of PhotographerExpertise objects/records
     // there are ways to count without fetching all records, but this func is only used for testing
     static func count(context: NSManagedObjectContext) -> Int {
         let fetchRequest: NSFetchRequest<PhotographerExpertise> = PhotographerExpertise.fetchRequest()
@@ -194,7 +194,7 @@ extension PhotographerExpertise {
                                   Failed to fetch PhotographerExpertises: \"\(error)\"
                                   """,
                                   file: #fileID, line: #line)
-                // on non-Debug version, continue with empty `keywords` array
+                // on non-Debug version, continue with empty `expertise` array
             }
         }
         return photographerExpertises.count

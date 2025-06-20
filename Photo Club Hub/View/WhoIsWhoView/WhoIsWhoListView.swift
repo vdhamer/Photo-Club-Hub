@@ -66,7 +66,8 @@ struct WhoIsWhoListView: View {
                                        \(getIconString(standard: expertise.isStandard)) \
                                        \(expertise.selectedLocalizedExpertise.name)
                                        """)
-                        Text(PhotographerExpertise.count(context: viewContext, keywordID: expertise.id).description+"x")
+                        Text(PhotographerExpertise.count(context: viewContext,
+                                                         expertiseID: expertise.id).description+"x")
                         Text("\(expertise.isStandard ? "" : nonStandard)")
                     }
                 }
