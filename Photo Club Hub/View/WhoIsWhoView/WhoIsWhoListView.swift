@@ -27,7 +27,7 @@ struct WhoIsWhoListView: View {
     fileprivate var navigationTitle = String(localized: "Who's Who",
                                              comment: "Title of page with list of photographers")
     fileprivate let nonStandard = String(localized: "Non-standard",
-                                         comment: "Keyword description at bottom of Who's Who screen")
+                                         comment: "Expertise description at bottom of Who's Who screen")
 
     init(searchText: Binding<String>, navigationTitle: String? = nil) {
         self.searchText = searchText
