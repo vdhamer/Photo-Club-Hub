@@ -41,7 +41,7 @@ struct MemberPortfolioRow: View {
                                 Text(localizedExpertiseResultLists.standard.icon)
                                     .font(.footnote)
                                 ForEach(localizedExpertiseResultLists.standard.list) { standardLKR in
-                                    Text(standardLKR.localizedKeyword!.name + standardLKR.delimiterToAppend)
+                                    Text(standardLKR.localizedExpertise!.name + standardLKR.delimiterToAppend)
                                 }
                             }
                         }

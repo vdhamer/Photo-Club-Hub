@@ -269,21 +269,21 @@ extension Expertise {
             let langID = lang.split(separator: "-").first?.uppercased() ?? "EN"
             // now check if one of the user's preferences is available for this Remark
             for localizedKeyword in localizedExpertises where localizedKeyword.language.isoCodeAllCaps == langID {
-                return LocalizedExpertiseResult(localizedKeyword: localizedKeyword, id: self.id)
+                return LocalizedExpertiseResult(localizedExpertise: localizedKeyword, id: self.id)
             }
         }
 
         // second choice: most people speak English, at least let's pretend that is the case ;-)
         for localizedKeyword in localizedExpertises where localizedKeyword.language.isoCodeAllCaps == "EN" {
-            return LocalizedExpertiseResult(localizedKeyword: localizedKeyword, id: self.id)
+            return LocalizedExpertiseResult(localizedExpertise: localizedKeyword, id: self.id)
         }
 
         // third choice: use arbitrary (first) translation available for this keyword
         if localizedExpertises.first != nil {
-            return LocalizedExpertiseResult(localizedKeyword: localizedExpertises.first!, id: self.id)
+            return LocalizedExpertiseResult(localizedExpertise: localizedExpertises.first!, id: self.id)
         }
 
-        return LocalizedExpertiseResult(localizedKeyword: nil, id: self.id)
+        return LocalizedExpertiseResult(localizedExpertise: nil, id: self.id)
     }
 
 }

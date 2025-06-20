@@ -47,8 +47,8 @@ public struct LocalizedExpertiseResultLists {
             if item.isStandard {
                 resultLERLs.standard.list.append(item)
             } else {
-                resultLERLs.nonstandard.list.append(LocalizedExpertiseResult(localizedKeyword: item.localizedKeyword,
-                                                                           id: item.id))
+                resultLERLs.nonstandard.list.append(LocalizedExpertiseResult(localizedExpertise:
+                                                                                item.localizedExpertise, id: item.id))
             }
         }
 
@@ -63,7 +63,7 @@ public struct LocalizedExpertiseResultLists {
                                         usage: [] )
             let moreLocalizedKeyword: LocalizedExpertiseResult = moreKeyword.selectedLocalizedExpertise
             resultLERLs.nonstandard.list.append(LocalizedExpertiseResult(
-                                                    localizedKeyword: moreLocalizedKeyword.localizedKeyword,
+                                                    localizedExpertise: moreLocalizedKeyword.localizedExpertise,
                                                     id: moreKeyword.id,
                                                     customHint: customHint(localizedKeywordResults: sorted))
                                                 )
@@ -86,8 +86,8 @@ public struct LocalizedExpertiseResultLists {
         let temp = LocalizedExpertiseResultLists(standardList: [], nonstandardList: [])
 
         for localizedKeywordResult in localizedKeywordResults {
-            if localizedKeywordResult.localizedKeyword != nil {
-                hint.append(temp.standard.icon + " " + localizedKeywordResult.localizedKeyword!.name + " ")
+            if localizedKeywordResult.localizedExpertise != nil {
+                hint.append(temp.standard.icon + " " + localizedKeywordResult.localizedExpertise!.name + " ")
             } else {
                 hint.append(temp.nonstandard.icon + " " + localizedKeywordResult.id + " ")
             }
