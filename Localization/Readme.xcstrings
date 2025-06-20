@@ -200,6 +200,108 @@
         }
       }
     },
+    "§3.01.a" : {
+      "comment" : "Title of a section of the Readme screen",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "__Searching__"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "__Zoekfunctie__"
+          }
+        }
+      }
+    },
+    "§3.01.b" : {
+      "comment" : "Paragraph in the Readme screen",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "There is a search bar at the top of major screens. On an iPad the search bar is continuously visible. On an iPhone you need to scroll back to the very top of the list to get the search bar to appear."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bovenaan schermen met lijsten is er een invoerveld om binnen de lijst snel te kunnen zoeken. Op een iPhone wordt het zoekveld pas getoond als men helemaal naar de bovenkant van de lijst gaat.\n"
+          }
+        }
+      }
+    },
+    "§3.01.c" : {
+      "comment" : "Paragraph in the Readme screen",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Entering part of person’s name (on the _Portfolios_ and _Who’s Who_ screens) will find people with that name. The _Clubs and Museums_ screen simultaneously searches both on the club/museum name and on its specified location."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Op de _Portfolio's_ en _Namenlijst_ schermen wordt er op de naam van fotografen gezocht. Op het _Clubs en Musea_ scherm wordt er gelijktijdig op clubnaam (of museumnaam) en de opgegeven locatie gezocht."
+          }
+        }
+      }
+    },
+    "§3.02.a" : {
+      "comment" : "Title of a section of the Readme screen",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "__Areas of Expertise__"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "__Expertisegebieden__"
+          }
+        }
+      }
+    },
+    "§3.02.b" : {
+      "comment" : "Paragraph in the Readme screen",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Photographers can choose to display one or two genres (e.g. “Street”) for which they are relatively well-known. More details [here](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo$20Club%20Hub/Documentation/Level2_expertise_EN.md)."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fotografen kunnen een of twee soorten fotografie (“Portret”) vermelden waar ze vooral om bekend staan. Meer details [hier](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/Level2_expertise_NL.md)."
+          }
+        }
+      }
+    },
+    "§3.02.c" : {
+      "comment" : "Paragraph in the Readme screen",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "We manage a central list of such Areas of Expertise from which to choose. Standardizing these keywords allows you to use the app to find photographers with a shared interest (e.g. “Macro”)."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "De keuzelijst voor deze expertisegebieden wordt centraal beheerd, Door in de app te zoeken op b.v. “Portret” kan je die fotografen vinden die daarin gespecialiseerd zijn."
+          }
+        }
+      }
+    },
     "§3.03.a" : {
       "comment" : "Title of a section of the Readme screen",
       "localizations" : {
@@ -689,108 +791,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Deze knop is deel van portfolio's die gegenereerd zijn vanuit de _Juicebox Pro_ plug-in voor _Lightroom Classic_. Zie bijvoorbeeld de portfolio's van leden van _Fotogroep de Gender_."
-          }
-        }
-      }
-    },
-    "§3.01.a" : {
-      "comment" : "Title of a section of the Readme screen",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "__Searching__"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "__Zoekfunctie__"
-          }
-        }
-      }
-    },
-    "§3.01.b" : {
-      "comment" : "Paragraph in the Readme screen",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "There is a search bar at the top of major screens. On an iPad the search bar is continuously visible. On an iPhone you need to scroll back to the very top of the list to get the search bar to appear."
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bovenaan schermen met lijsten is er een invoerveld om binnen de lijst snel te kunnen zoeken. Op een iPhone wordt het zoekveld pas getoond als men helemaal naar de bovenkant van de lijst gaat.\n"
-          }
-        }
-      }
-    },
-    "§3.01.c" : {
-      "comment" : "Paragraph in the Readme screen",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Entering part of person’s name (on the _Portfolios_ and _Who’s Who_ screens) will find people with that name. The _Clubs and Museums_ screen simultaneously searches both on the club/museum name and on its specified location."
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Op de _Portfolio's_ en _Namenlijst_ schermen wordt er op de naam van fotografen gezocht. Op het _Clubs en Musea_ scherm wordt er gelijktijdig op clubnaam (of museumnaam) en de opgegeven locatie gezocht."
-          }
-        }
-      }
-    },
-    "§3.02.a" : {
-      "comment" : "Title of a section of the Readme screen",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "__Areas of Expertise__"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "__Expertisegebieden__"
-          }
-        }
-      }
-    },
-    "§3.02.b" : {
-      "comment" : "Paragraph in the Readme screen",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Photographers can choose to display one or two genres (e.g. “Street”) for which they are relatively well-known. More details [here](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo$20Club%20Hub/Documentation/Level2_expertise_EN.md)."
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Fotografen kunnen een of twee soorten fotografie (“Portret”) vermelden waar ze vooral om bekend staan. Meer details [hier](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/Level2_expertise_NL.md)."
-          }
-        }
-      }
-    },
-    "§3.02.c" : {
-      "comment" : "Paragraph in the Readme screen",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "We manage a central list of such Areas of Expertise from which to choose. Standardizing these keywords allows you to use the app to find photographers with a shared interest (e.g. “Macro”)."
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "De keuzelijst voor deze expertisegebieden wordt centraal beheerd, Door in de app te zoeken op b.v. “Portret” kan je die fotografen vinden die daarin gespecialiseerd zijn."
           }
         }
       }
