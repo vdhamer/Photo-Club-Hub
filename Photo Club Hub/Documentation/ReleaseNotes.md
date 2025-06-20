@@ -16,7 +16,7 @@ Data Maintenance
 Documentation
 * Filled in "accessibility nutrition labels" for the App Store
 
-This build #4641 was made using Xcode 16.4 and is intended for beta testing only.
+This build #4641 was made using Xcode beta 1 (17A5241e) and can thus only be used for beta testing.
 
 ---------------------------------------------------------------------------
 
