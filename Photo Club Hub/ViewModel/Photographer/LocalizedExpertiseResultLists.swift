@@ -20,15 +20,15 @@ public struct LocalizedExpertiseResultLists {
         nonstandard = LocalizedExpertiseResultList(isStandard: false, list: nonstandardList)
     }
 
-    public init(moc: NSManagedObjectContext, _ photographerKeywords: Set<PhotographerExpertise>) {
+    public init(moc: NSManagedObjectContext, _ photographerExpertises: Set<PhotographerExpertise>) {
 
         // Use init(standardList:nonstandardList) to get access to the icons
         var resultLERLs = LocalizedExpertiseResultLists.init(standardList: [], nonstandardList: [])
 
         // Step 1. Translate expertises to appropriate language
         var translated: [LocalizedExpertiseResult] = [] // start with empty array
-        for photographerKeyword in photographerKeywords {
-            translated.append(photographerKeyword.expertise.selectedLocalizedExpertise) // choose most suitable language
+        for photographerExpertise in photographerExpertises {
+            translated.append(photographerExpertise.expertise.selectedLocalizedExpertise) // choose a suitable language
         }
 
         // Step 2. Sort based on selected language.  Has special behavior for expertises without translation
@@ -65,7 +65,7 @@ public struct LocalizedExpertiseResultLists {
             resultLERLs.nonstandard.list.append(LocalizedExpertiseResult(
                                                     localizedExpertise: moreLocalizedExpertise.localizedExpertise,
                                                     id: moreExpertise.id,
-                                                    customHint: customHint(localizedKeywordResults: sorted))
+                                                    customHint: customHint(localizedExpertiseResults: sorted))
                                                 )
         }
 
@@ -81,15 +81,15 @@ public struct LocalizedExpertiseResultLists {
         self.nonstandard.list = resultLERLs.nonstandard.list
     }
 
-    fileprivate func customHint(localizedKeywordResults: [LocalizedExpertiseResult]) -> String {
+    fileprivate func customHint(localizedExpertiseResults: [LocalizedExpertiseResult]) -> String {
         var hint: String = ""
         let temp = LocalizedExpertiseResultLists(standardList: [], nonstandardList: [])
 
-        for localizedKeywordResult in localizedKeywordResults {
-            if localizedKeywordResult.localizedExpertise != nil {
-                hint.append(temp.standard.icon + " " + localizedKeywordResult.localizedExpertise!.name + " ")
+        for localizedExpertiseResult in localizedExpertiseResults {
+            if localizedExpertiseResult.localizedExpertise != nil {
+                hint.append(temp.standard.icon + " " + localizedExpertiseResult.localizedExpertise!.name + " ")
             } else {
-                hint.append(temp.nonstandard.icon + " " + localizedKeywordResult.id + " ")
+                hint.append(temp.nonstandard.icon + " " + localizedExpertiseResult.id + " ")
             }
         }
 
