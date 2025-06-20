@@ -14,7 +14,7 @@ Data Maintenance
 * Added a new club Zien & Doorzien (Veghel, NL)
 
 Documentation
-* Filled in "accessibility nutrition labels" for the App Store
+* Filled out "accessibility nutrition labels" form for the App Store
 
 This build #4641 was made using Xcode beta 1 (17A5241e) and can thus only be used for beta testing.
 
