@@ -216,7 +216,7 @@
         },
         "nl" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "bestuurslid"
           }
         }
@@ -257,7 +257,21 @@
       }
     },
     "Too many expertises" : {
-      "comment" : "Shown when too many expertises are found"
+      "comment" : "Shown when too many expertises are found",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Too many expertises"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Teveel expertises"
+          }
+        }
+      }
     },
     "treasurer" : {
       "comment" : "Administrative role of member within a club. Used as part of concatenations.",

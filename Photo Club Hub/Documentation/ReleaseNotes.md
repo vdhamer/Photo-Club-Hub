@@ -1,19 +1,22 @@
 ### 2.8.0 (GitHub commit ???????) ??-06-25
 
 Code Maintenance
-* Tested with Xcode 26.0 (17A5241e), iOS 26 (23A5260k)
-* Fixed bug in Settings app (display of GitHub URL and open source licence type)
+* Bug fix: Fotoclub Den Dungen is no longer displayed as "Fotoclub Den Dungen (Den Dungen)"
+* Bug fix: display of GitHub URL and open source licence type in iOS Settings app
 * Turned localizeSortAndClip() into an initializer.
-* Added 2 new recommended settings present in Xcode 26 (17A5241e)
-* Renamed database tables (to match new Expertise terminology)
+* Tested with Xcode 26.0 (17A5241e), iOS 26 (23A5260k)
+* Added 2 new "recommended settings" present in Xcode 26 (17A5241e)
+* Renamed database tables to transition terminology from Keywords to Expertises
+* Code renaming to transition terminology from Keywords to Expertises
 
 Data Maintenance
-* Placeholder file for fcDenDungen
+* Placeholder file for fcDenDungen (Den Dungen, NL)
+* Added a new club Zien & Doorzien (Veghel, NL)
 
 Documentation
 * Filled out "accessibility nutrition labels" form for the App Store
 
-This build #4641 was made using Xcode ???? and is intended for App Store distribution.
+This build #4641 was made using Xcode beta 1 (17A5241e) and can thus only be used for beta testing.
 
 ---------------------------------------------------------------------------
 
@@ -32,6 +35,7 @@ Data Maintenance
 
 Code Maintenance
 * Moved string translations for ReadmeView into dedicated file (was inconsistent).
+* Removed more references in the code to Keyword (renamed to Expertise)
 
 Documentation
 * Updated FAQ_nl to reflect new Expertise terminology.

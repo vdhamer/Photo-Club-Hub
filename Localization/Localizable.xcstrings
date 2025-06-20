@@ -448,7 +448,7 @@
       }
     },
     "Non-standard" : {
-      "comment" : "Keyword description at bottom of Who's Who screen",
+      "comment" : "Expertise description at bottom of Who's Who screen",
       "localizations" : {
         "en" : {
           "stringUnit" : {

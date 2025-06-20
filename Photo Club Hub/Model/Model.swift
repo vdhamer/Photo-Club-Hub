@@ -11,19 +11,19 @@ import CoreData // for NSManagedObject
 public struct Model {
     public static func deleteAllCoreDataObjects(context: NSManagedObjectContext) {
         // order is important to avoid problems with referential integrity
-        deleteCoreDataKeywordsLanguages(context: context) // performs its own save()
+        deleteCoreDataExpertisesLanguages(context: context) // performs its own save()
         deleteCoreDataPhotographersClubs(context: context) // performs its own save()
     }
 
     // don't delete Photographer before deleting this. See data model picture in README.md.
-    static func deleteCoreDataKeywordsLanguages(context: NSManagedObjectContext) { // delete subset of tables separately
-        let forcedDataRefresh = "Forced clearing of CoreData keywords "
+    static func deleteCoreDataExpertisesLanguages(context: NSManagedObjectContext) { // delete certain tables separately
+        let forcedDataRefresh = "Forced clearing of CoreData expertises "
 
         do { // order is important to avoid problems with referential integrity
             try deleteEntitiesOfOneType("LocalizedRemark", context: context)
-            try deleteEntitiesOfOneType("LocalizedKeyword", context: context)
-            try deleteEntitiesOfOneType("PhotographerKeyword", context: context)
-            try deleteEntitiesOfOneType("Keyword", context: context)
+            try deleteEntitiesOfOneType("LocalizedExpertise", context: context)
+            try deleteEntitiesOfOneType("PhotographerExpertise", context: context)
+            try deleteEntitiesOfOneType("Expertise", context: context)
             try deleteEntitiesOfOneType("Language", context: context)
 
             print(forcedDataRefresh + "was successful.")
@@ -34,7 +34,7 @@ public struct Model {
 
     // don't delete Photographer before deleting this. See data model picture in README.md.
     static func deleteCoreDataPhotographersClubs(context: NSManagedObjectContext) { // delete subset of tables
-        let forcedDataRefresh = "Forced clearing of CoreData keywords "
+        let forcedDataRefresh = "Forced clearing of CoreData expertises "
 
         do { // order is important to avoid problems with referential integrity
             try deleteEntitiesOfOneType("MemberPortfolio", context: context)

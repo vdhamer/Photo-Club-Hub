@@ -27,7 +27,7 @@ struct WhoIsWhoListView: View {
     fileprivate var navigationTitle = String(localized: "Who's Who",
                                              comment: "Title of page with list of photographers")
     fileprivate let nonStandard = String(localized: "Non-standard",
-                                         comment: "Keyword description at bottom of Who's Who screen")
+                                         comment: "Expertise description at bottom of Who's Who screen")
 
     init(searchText: Binding<String>, navigationTitle: String? = nil) {
         self.searchText = searchText
@@ -59,19 +59,21 @@ struct WhoIsWhoListView: View {
                 Divider()
                 Text("WhosWho_Caption_4",
                      comment: "Shown in gray at the bottom of the Who's Who page (3/3).")
-                ForEach(Keyword.getAll(context: viewContext).sorted(by: sortKeywordsLocalized), id: \.self) { keyword in
+                ForEach(Expertise.getAll(context: viewContext).sorted(by: sortExpertisesLocalized),
+                        id: \.self) { expertise in
                     HStack {
                         Text(verbatim: """
-                                       \(getIconString(standard: keyword.isStandard)) \
-                                       \(keyword.selectedLocalizedKeyword.name)
+                                       \(getIconString(standard: expertise.isStandard)) \
+                                       \(expertise.selectedLocalizedExpertise.name)
                                        """)
-                        Text(PhotographerKeyword.count(context: viewContext, keywordID: keyword.id).description+"x")
-                        Text("\(keyword.isStandard ? "" : nonStandard)")
+                        Text(PhotographerExpertise.count(context: viewContext,
+                                                         expertiseID: expertise.id).description+"x")
+                        Text("\(expertise.isStandard ? "" : nonStandard)")
                     }
                 }
-                Text("There are \(Keyword.count(context: viewContext)) areas of expertise.",
+                Text("There are \(Expertise.count(context: viewContext)) areas of expertise.",
                      comment: "Expertise statistics in footnote #4 of Who's Who screen")
-                Text("Expertises were assigned \(PhotographerKeyword.count(context: viewContext)) times.",
+                Text("Expertises were assigned \(PhotographerExpertise.count(context: viewContext)) times.",
                      comment: "Expertise statistics in footnote #4 of Who's Who screen")
             }
             .foregroundColor(Color.secondary)
@@ -102,8 +104,8 @@ struct WhoIsWhoListView: View {
         .disableAutocorrection(true)
     }
 
-    fileprivate func sortKeywordsLocalized(lhs: Keyword, rhs: Keyword) -> Bool {
-        return lhs.selectedLocalizedKeyword.name < rhs.selectedLocalizedKeyword.name
+    fileprivate func sortExpertisesLocalized(lhs: Expertise, rhs: Expertise) -> Bool {
+        return lhs.selectedLocalizedExpertise.name < rhs.selectedLocalizedExpertise.name
     }
 
     fileprivate func getIconString(standard: Bool) -> String {

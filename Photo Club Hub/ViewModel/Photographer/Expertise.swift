@@ -1,5 +1,5 @@
 //
-//  Keyword.swift
+//  Expertise.swift
 //  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 19/02/2025.
@@ -8,7 +8,7 @@
 import CoreData // for NSManagedObjectContext
 import SwiftyJSON // for JSON()
 
-extension Keyword {
+extension Expertise {
 
     @available(*, unavailable)
     convenience init() {
@@ -41,14 +41,14 @@ extension Keyword {
                                              isStandard: Bool?, // nil means don't change existing value
                                              name: [JSON], // JSON equivalent of a dictionary with localized names
                                              usage: [JSON]
-                                            ) -> Keyword {
+                                            ) -> Expertise {
 
         // execute fetchRequest to get keyword object for id=id. Query could return multiple - but shouldn't.
-        let fetchRequest: NSFetchRequest<Keyword> = Keyword.fetchRequest()
+        let fetchRequest: NSFetchRequest<Expertise> = Expertise.fetchRequest()
         let predicateFormat: String = "id_ = %@" // avoid localization
         fetchRequest.predicate = NSPredicate(format: predicateFormat, argumentArray: [id])
 
-        var keywords: [Keyword]! = []
+        var keywords: [Expertise]! = []
         do {
             keywords = try context.fetch(fetchRequest)
         } catch {
@@ -69,21 +69,21 @@ extension Keyword {
                     print("Updated keyword \(keyword.id).isStandard to \(isStandard! ? "" : "non-")standard")
                 }
                 if Settings.extraCoreDataSaves {
-                    Keyword.save(context: context, errorText: "Could not update Keyword \"\(keyword.id)\"")
+                    Expertise.save(context: context, errorText: "Could not update Keyword \"\(keyword.id)\"")
                 }
             }
             return keyword
         } else {
             // cannot use Keyword() initializer because we must use supplied context
-            let entity = NSEntityDescription.entity(forEntityName: "Keyword", in: context)!
-            let keyword = Keyword(entity: entity, insertInto: context)
+            let entity = NSEntityDescription.entity(forEntityName: "Expertise", in: context)!
+            let keyword = Expertise(entity: entity, insertInto: context)
             keyword.id = id // immediately set it to a non-nil value
             _ = keyword.update(context: context,
                                isStandard: isStandard,
                                name: name, // ignore whether update made changes
                                usage: usage)
             if Settings.extraCoreDataSaves {
-                Keyword.save(context: context, errorText: "Could not save Keyword \"\(keyword.id)\"")
+                Expertise.save(context: context, errorText: "Could not save Keyword \"\(keyword.id)\"")
             }
             print("Created new Keyword called \"\(keyword.id)\"")
             return keyword
@@ -97,7 +97,7 @@ extension Keyword {
                                                 id: String,
                                                 name: [JSON], // array mapping languages to localizedNames
                                                 usage: [JSON]
-    					       ) -> Keyword {
+    					       ) -> Expertise {
         findCreateUpdate(context: context, id: id, isStandard: true, name: name, usage: usage)
     }
 
@@ -107,7 +107,7 @@ extension Keyword {
                                                    id: String,
                                                    name: [JSON], // array mapping languages to localizedNames
                                                    usage: [JSON]
-    						  ) -> Keyword {
+    						  ) -> Expertise {
         findCreateUpdate(context: context, id: id, isStandard: false, name: name, usage: usage)
     }
 
@@ -117,7 +117,7 @@ extension Keyword {
                                               id: String,
                                               name: [JSON], // array mapping languages to localizedNames
                                               usage: [JSON]
-                                             ) -> Keyword {
+                                             ) -> Expertise {
         findCreateUpdate(context: context, id: id, isStandard: nil, name: name, usage: usage)
     }
 
@@ -143,9 +143,9 @@ extension Keyword {
             let language = Language.findCreateUpdate(context: context, isoCode: isoCode)
 
             let localizedString: String = localizedKeyword["localizedString"].string!
-            _ = LocalizedKeyword.findCreateUpdate(context: context,
-                                                  keyword: self, language: language,
-                                                  localizedName: localizedString, localizedUsage: nil)
+            _ = LocalizedExpertise.findCreateUpdate(context: context,
+                                                    expertise: self, language: language,
+                                                    localizedName: localizedString, localizedUsage: nil)
         }
 
         for localizedUsage in usage {
@@ -155,9 +155,9 @@ extension Keyword {
             let language = Language.findCreateUpdate(context: context, isoCode: isoCode)
 
             let localizedDescription: String = localizedUsage["localizedString"].string!
-            _ = LocalizedKeyword.findCreateUpdate(context: context,
-                                                  keyword: self, language: language,
-                                                  localizedName: nil, localizedUsage: localizedDescription)
+            _ = LocalizedExpertise.findCreateUpdate(context: context,
+                                                    expertise: self, language: language,
+                                                    localizedName: nil, localizedUsage: localizedDescription)
 
         }
 
@@ -198,18 +198,18 @@ extension Keyword {
     }
 
     // count number of Keywords with a given id
-    static func count(context: NSManagedObjectContext, keywordID: String) -> Int {
-        var keywords: [Keyword]! = []
+    static func count(context: NSManagedObjectContext, expertiseID: String) -> Int {
+        var keywords: [Expertise]! = []
 
         context.performAndWait {
-            let fetchRequest: NSFetchRequest<Keyword> = Keyword.fetchRequest()
+            let fetchRequest: NSFetchRequest<Expertise> = Expertise.fetchRequest()
             let predicateFormat: String = "id_ = %@" // avoid localization
-            let predicate = NSPredicate(format: predicateFormat, argumentArray: [keywordID])
+            let predicate = NSPredicate(format: predicateFormat, argumentArray: [expertiseID])
             fetchRequest.predicate = predicate
             do {
                 keywords = try context.fetch(fetchRequest)
             } catch {
-                ifDebugFatalError("Failed to fetch Keyword \(keywordID): \(error)", file: #fileID, line: #line)
+                ifDebugFatalError("Failed to fetch Keyword \(expertiseID): \(error)", file: #fileID, line: #line)
             }
         }
         return keywords.count
@@ -218,10 +218,10 @@ extension Keyword {
     // count total number of Keyword objects/records
     // there are ways to count without fetching all records, but this func is only used for testing
     static func count(context: NSManagedObjectContext) -> Int {
-        var keywords: [Keyword]! = []
+        var keywords: [Expertise]! = []
 
         context.performAndWait {
-            let fetchRequest: NSFetchRequest<Keyword> = Keyword.fetchRequest()
+            let fetchRequest: NSFetchRequest<Expertise> = Expertise.fetchRequest()
             let predicateAll = NSPredicate(format: "TRUEPREDICATE")
             fetchRequest.predicate = predicateAll
 
@@ -237,11 +237,11 @@ extension Keyword {
 
     @MainActor
     // get array with list of all Keywords
-    static func getAll(context: NSManagedObjectContext) -> [Keyword] {
-        var keywords: [Keyword]! = []
+    static func getAll(context: NSManagedObjectContext) -> [Expertise] {
+        var keywords: [Expertise]! = []
 
         context.performAndWait {
-            let fetchRequest: NSFetchRequest<Keyword> = Keyword.fetchRequest()
+            let fetchRequest: NSFetchRequest<Expertise> = Expertise.fetchRequest()
             let predicateAll = NSPredicate(format: "TRUEPREDICATE")
             fetchRequest.predicate = predicateAll
             fetchRequest.sortDescriptors = [NSSortDescriptor(key: "id_", ascending: true)]
@@ -256,34 +256,34 @@ extension Keyword {
         return keywords
     }
 
-    var localizedKeywords: Set<LocalizedKeyword> {
-        (localizedKeywords_ as? Set<LocalizedKeyword>) ?? []
+    var localizedExpertises: Set<LocalizedExpertise> {
+        (localizedExpertises_ as? Set<LocalizedExpertise>) ?? []
     }
 
     // Priority system to choose the most appropriate LocalizedKeyword for a given Keyword.
     // The choice depends on available translations and the current language preferences set on the device.
-    public var selectedLocalizedKeyword: LocalizedKeywordResult {
+    public var selectedLocalizedExpertise: LocalizedExpertiseResult {
         // don't use Locale.current.language.languageCode because this only returns languages supported by the app
         // first choice: accomodate user's language preferences according to Apple's Locale API
         for lang in Locale.preferredLanguages {
             let langID = lang.split(separator: "-").first?.uppercased() ?? "EN"
             // now check if one of the user's preferences is available for this Remark
-            for localizedKeyword in localizedKeywords where localizedKeyword.language.isoCodeAllCaps == langID {
-                return LocalizedKeywordResult(localizedKeyword: localizedKeyword, id: self.id)
+            for localizedKeyword in localizedExpertises where localizedKeyword.language.isoCodeAllCaps == langID {
+                return LocalizedExpertiseResult(localizedExpertise: localizedKeyword, id: self.id)
             }
         }
 
         // second choice: most people speak English, at least let's pretend that is the case ;-)
-        for localizedKeyword in localizedKeywords where localizedKeyword.language.isoCodeAllCaps == "EN" {
-            return LocalizedKeywordResult(localizedKeyword: localizedKeyword, id: self.id)
+        for localizedKeyword in localizedExpertises where localizedKeyword.language.isoCodeAllCaps == "EN" {
+            return LocalizedExpertiseResult(localizedExpertise: localizedKeyword, id: self.id)
         }
 
         // third choice: use arbitrary (first) translation available for this keyword
-        if localizedKeywords.first != nil {
-            return LocalizedKeywordResult(localizedKeyword: localizedKeywords.first!, id: self.id)
+        if localizedExpertises.first != nil {
+            return LocalizedExpertiseResult(localizedExpertise: localizedExpertises.first!, id: self.id)
         }
 
-        return LocalizedKeywordResult(localizedKeyword: nil, id: self.id)
+        return LocalizedExpertiseResult(localizedExpertise: nil, id: self.id)
     }
 
 }

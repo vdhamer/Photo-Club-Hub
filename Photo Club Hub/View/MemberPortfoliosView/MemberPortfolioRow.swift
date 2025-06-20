@@ -33,24 +33,24 @@ struct MemberPortfolioRow: View {
                             isDeceased: member.photographer.isDeceased
                         ))
 
-                    let localizedKeywordResultLists = LocalizedExpertiseResultLists(moc: moc,
-                                                      member.photographer.photographerKeywords)
+                    let localizedExpertiseResultLists = LocalizedExpertiseResultLists(moc: moc,
+                                                            member.photographer.photographerExpertises)
                     Group {
-                        if !localizedKeywordResultLists.standard.list.isEmpty {
+                        if !localizedExpertiseResultLists.standard.list.isEmpty {
                             HStack(spacing: 3) {
-                                Text(localizedKeywordResultLists.standard.icon)
+                                Text(localizedExpertiseResultLists.standard.icon)
                                     .font(.footnote)
-                                ForEach(localizedKeywordResultLists.standard.list) { standardLKR in
-                                    Text(standardLKR.localizedKeyword!.name + standardLKR.delimiterToAppend)
+                                ForEach(localizedExpertiseResultLists.standard.list) { standardLKR in
+                                    Text(standardLKR.localizedExpertise!.name + standardLKR.delimiterToAppend)
                                 }
                             }
                         }
 
-                        if !localizedKeywordResultLists.nonstandard.list.isEmpty {
+                        if !localizedExpertiseResultLists.nonstandard.list.isEmpty {
                             HStack(spacing: 3) {
-                                Text(localizedKeywordResultLists.nonstandard.icon)
+                                Text(localizedExpertiseResultLists.nonstandard.icon)
                                     .font(.footnote)
-                                ForEach(localizedKeywordResultLists.nonstandard.list) { nonstandardLKR in
+                                ForEach(localizedExpertiseResultLists.nonstandard.list) { nonstandardLKR in
                                     Text(nonstandardLKR.id + nonstandardLKR.delimiterToAppend)
                                 }
                             }

@@ -22,8 +22,8 @@ extension Photographer {
         fatalError("init() is not available. Use .findCreateUpdate instead.")
     }
 
-    public var photographerKeywords: Set<PhotographerKeyword> {
-        (photographerKeywords_ as? Set<PhotographerKeyword>) ?? []
+    public var photographerExpertises: Set<PhotographerExpertise> {
+        (photographerExpertises_ as? Set<PhotographerExpertise>) ?? []
     }
 
 	var memberships: Set<MemberPortfolio> {
@@ -150,13 +150,13 @@ extension Photographer {
 
         for photographerKeywordJSON in optionalFields.photographerKeywords {
             let photographerKeywordID = photographerKeywordJSON.stringValue
-            let keyword = Keyword.findCreateUpdateUndefStandard(context: bgContext,
-                                                                id: photographerKeywordID,
-                                                                name: [],
-                                                                usage: [])
-            _ = PhotographerKeyword.findCreateUpdate(context: bgContext,
-                                                     photographer: photographer,
-                                                     keyword: keyword)
+            let keyword = Expertise.findCreateUpdateUndefStandard(context: bgContext,
+                                                                  id: photographerKeywordID,
+                                                                  name: [],
+                                                                  usage: [])
+            _ = PhotographerExpertise.findCreateUpdate(context: bgContext,
+                                                       photographer: photographer,
+                                                       expertise: keyword)
         }
 
         var hasChanges: Bool = bgContext.hasChanges

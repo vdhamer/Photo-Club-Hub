@@ -66,12 +66,17 @@ extension Organization {
     // "Fotogroep Waalre" and "waalre" returns "Fotogroep Waalre"
     // "Fotogroep Waalre" and "to" returns "Fotogroep Waalre (to)"
     // "Fotogroep Waalre" and "Waal" returns "Fotogroep Waalre (Waal)" if you use NLP-based word matching
+    // "Fotoclub Den Dungen" and "Den Dungen" don't use NLP-based word matching because town looks like multiple words
     @objc public var fullNameTown: String { // @objc needed for SectionedFetchRequest's sectionIdentifier
         if fullName.containsWordUsingNLP(targetWord: town) {
-            fullName // fullname "Fotogroep Waalre" and town "Waalre" returns "Fotogroep Waalre"
-        } else {
-            "\(fullName) (\(town))" // fullname "Fotogroep Aalst" with "Waalre" returns "Fotogroep Aalst (Waalre)"
+            return fullName // fullname "Fotogroep Waalre" and town "Waalre" returns "Fotogroep Waalre"
         }
+
+        if fullName.contains(town) && town.contains(" ") {
+            return fullName // fullname "Fotoclub Den Dungen" and town "Den Dungen" returns "Fotoclub Den Dungen"
+        }
+
+        return "\(fullName) (\(town))" // fullname "Fotogroep Aalst" with "Waalre" returns "Fotogroep Aalst (Waalre)"
     }
 
     public var id: OrganizationID { // public because needed for Identifiable protocol
@@ -83,7 +88,7 @@ extension Organization {
         set { nickName_ = newValue }
     }
 
-	var town: String {
+	var town: String { // may be one word ("Rotterdam") or multiple words ("Den Bosch").
 		get { return town_ ?? "DefaultPhotoClubTown" }  // nil shouldn't occur, but it does?
 		set { town_ = newValue }
 	}
