@@ -7,7 +7,7 @@
 
 import CoreData // for NSManagedObjectContext
 
-let maxKeywordsPerMember: Int = 2
+let maxExpertisesPerMember: Int = 2
 
 // Used to provide the UI with pairs of lists with Exertise records with localized names
 public struct LocalizedExpertiseResultLists {
@@ -25,20 +25,20 @@ public struct LocalizedExpertiseResultLists {
         // Use init(standardList:nonstandardList) to get access to the icons
         var resultLERLs = LocalizedExpertiseResultLists.init(standardList: [], nonstandardList: [])
 
-        // Step 1. Translate keywords to appropriate language
+        // Step 1. Translate expertises to appropriate language
         var translated: [LocalizedExpertiseResult] = [] // start with empty array
         for photographerKeyword in photographerKeywords {
             translated.append(photographerKeyword.expertise.selectedLocalizedExpertise) // choose most suitable language
         }
 
-        // Step 2. Sort based on selected language.  Has special behavior for keywords without translation
-        let sorted: [LocalizedExpertiseResult] = translated.sorted() // note dedicated LocalizedKeywordResult.<() func
+        // Step 2. Sort based on selected language.  Has special behavior for expertises without translation
+        let sorted: [LocalizedExpertiseResult] = translated.sorted() // note dedicated LocalizedExpertiseResult.<() func
 
-        // Step 3. Clip size to maxKeywordsPerMember keywords
+        // Step 3. Clip size to maxExpertisesPerMember Expertises
         var clipped: [LocalizedExpertiseResult] = [] // start with empty array
         if sorted.count > 0 {
-            for index in 0...min(maxKeywordsPerMember-1, sorted.count-1) {
-                clipped.append(sorted[index]) // copy the first few sorted LocalizedKeywordResult elements
+            for index in 0...min(maxExpertisesPerMember-1, sorted.count-1) {
+                clipped.append(sorted[index]) // copy the first few sorted LocalizedExpertiseResult elements
             }
         }
 
@@ -53,18 +53,18 @@ public struct LocalizedExpertiseResultLists {
         }
 
         // Step 5. remove delimeter after last element
-        if sorted.count > maxKeywordsPerMember { // if list overflows, add a warning
-            let moreKeyword = Expertise.findCreateUpdateNonStandard(
-                                        context: moc,
-                                        id: String(localized: "Too many expertises",
-                                                   table: "Package",
-                                                   comment: "Shown when too many expertises are found"),
-                                        name: [],
-                                        usage: [] )
-            let moreLocalizedKeyword: LocalizedExpertiseResult = moreKeyword.selectedLocalizedExpertise
+        if sorted.count > maxExpertisesPerMember { // if list overflows, add a warning
+            let moreExpertise = Expertise.findCreateUpdateNonStandard(
+                                          context: moc,
+                                          id: String(localized: "Too many expertises",
+                                                      table: "Package",
+                                                      comment: "Shown when too many expertises are found"),
+                                          name: [],
+                                          usage: [] )
+            let moreLocalizedExpertise: LocalizedExpertiseResult = moreExpertise.selectedLocalizedExpertise
             resultLERLs.nonstandard.list.append(LocalizedExpertiseResult(
-                                                    localizedExpertise: moreLocalizedKeyword.localizedExpertise,
-                                                    id: moreKeyword.id,
+                                                    localizedExpertise: moreLocalizedExpertise.localizedExpertise,
+                                                    id: moreExpertise.id,
                                                     customHint: customHint(localizedKeywordResults: sorted))
                                                 )
         }
