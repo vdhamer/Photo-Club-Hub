@@ -19,7 +19,7 @@ extension PhotographerExpertise {
             if let expertise = expertise_ {
                 return expertise
             } else {
-                fatalError("Error because keyword is nil") // something is fundamentally wrong if this happens
+                fatalError("Error because expertise is nil") // something is fundamentally wrong if this happens
             }
         }
         set {
@@ -42,14 +42,14 @@ extension PhotographerExpertise {
 
     // MARK: - find or create
 
-    // Find existing PhotographerKeyword object or create a new one.
+    // Find existing PhotographerExpertise object or create a new one.
     // Update existing attributes or fill the new object
     static func findCreateUpdate(context: NSManagedObjectContext, // can be foreground or background context
                                  photographer: Photographer,
                                  expertise: Expertise
                                 ) -> PhotographerExpertise {
 
-        // execute fetchRequest to get keyword object for id=id. Query could return multiple - but shouldn't.
+        // execute fetchRequest to get expertise object for id=id. Query could return multiple - but shouldn't.
         let fetchRequest: NSFetchRequest<PhotographerExpertise> = PhotographerExpertise.fetchRequest()
         let predicateFormat: String = "expertise_ = %@ AND photographer_ = %@" // avoid localization of query string
         fetchRequest.predicate = NSPredicate(format: predicateFormat, argumentArray: [expertise, photographer])
@@ -59,56 +59,56 @@ extension PhotographerExpertise {
             photographerExpertise = try context.fetch(fetchRequest) // query database
         } catch {
             ifDebugFatalError("""
-                              Failed to fetch PhotographerKeyword for \"\(expertise.id)\" \
+                              Failed to fetch PhotographerExpertise for \"\(expertise.id)\" \
                               for \(photographer.fullNameFirstLast): \(error)
                               """, file: #fileID, line: #line)
-            // on non-Debug version, continue with empty `keywords` array
+            // on non-Debug version, continue with empty `expertise` array
         }
 
-        // are there multiple copies of the keyword connected to the same photographer? This shouldn't be the case.
+        // are there multiple copies of the expertise connected to the same photographer? This shouldn't be the case.
         if photographerExpertise.count > 1 { // there is actually a Core Data constraint to prevent this
             ifDebugFatalError("""
                               Query returned multiple (\(photographerExpertise.count)) copies \
-                              of Keyword \"\(expertise.id)\" for photographer \(photographer.fullNameFirstLast)
+                              of Expertise \"\(expertise.id)\" for photographer \(photographer.fullNameFirstLast)
                               """,
                               file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
             // in release mode, log that there are multiple clubs, but continue using the first one.
         }
 
         // if a translation already exists, update non-identifying attributes
-        if let photographerKeyword = photographerExpertise.first {
-            if photographerKeyword.update(context: context) { // actually this class has no non-identifying attributes
+        if let photographerExpertise = photographerExpertise.first {
+            if photographerExpertise.update(context: context) { // actually this class has no non-identifying attributes
                 if Settings.extraCoreDataSaves {
                     PhotographerExpertise.save(context: context, errorText:
                                           """
-                                          Could not update PhotographerKeyword \
-                                          for \"\(photographerKeyword.expertise.id)\" \
-                                          for keyword \"\(photographerKeyword.photographer.familyName)\"
+                                          Could not update PhotographerExpertise \
+                                          for \"\(photographerExpertise.expertise.id)\" \
+                                          for expertise \"\(photographerExpertise.photographer.familyName)\"
                                           """)
                 }
             }
-            return photographerKeyword
+            return photographerExpertise
         } else {
             let entity = NSEntityDescription.entity(forEntityName: "PhotographerExpertise", in: context)!
-            let photographerKeyword = PhotographerExpertise(entity: entity, insertInto: context)
-            photographerKeyword.expertise = expertise
-            photographerKeyword.photographer = photographer
+            let photographerExpertise = PhotographerExpertise(entity: entity, insertInto: context)
+            photographerExpertise.expertise = expertise
+            photographerExpertise.photographer = photographer
             // so far, this class has no other properties to populate
-            _ = photographerKeyword.update(context: context)
+            _ = photographerExpertise.update(context: context)
             if Settings.extraCoreDataSaves {
                 LocalizedExpertise.save(context: context, errorText:
                                         """
                                         Could not create PhotographerKeyword for \
-                                        \"\(photographerKeyword.expertise.id)\" \
-                                        for \(photographerKeyword.photographer.fullNameFirstLast)
+                                        \"\(photographerExpertise.expertise.id)\" \
+                                        for \(photographerExpertise.photographer.fullNameFirstLast)
                                         """)
             }
-            return photographerKeyword
+            return photographerExpertise
         }
 
     }
 
-    // Update non-identifying attributes/properties within an existing instance of class LocalizedKeyword if needed.
+    // Update non-identifying attributes/properties within an existing instance of class LocalizedExpertise if needed.
     // Returns whether an update was needed. But this class (unlike the others) has no relevant properties.
     fileprivate func update(context: NSManagedObjectContext) -> Bool {
 
@@ -144,11 +144,11 @@ extension PhotographerExpertise {
                 photographerExpertise = try context.fetch(fetchRequest)
             } catch {
                 ifDebugFatalError("""
-                                  Failed to fetch PhotographerKeyword \"\(expertiseID)\" \
+                                  Failed to fetch PhotographerExpertise \"\(expertiseID)\" \
                                   for \(photographer.fullNameFirstLast): \(error)
                                   """,
                                   file: #fileID, line: #line)
-                // on non-Debug version, continue with empty `keywords` array
+                // on non-Debug version, continue with empty `expertise` array
             }
         }
         return photographerExpertise.count
@@ -170,7 +170,7 @@ extension PhotographerExpertise {
                                   Failed to fetch PhotographerKeyword \"\(keywordID)\"
                                   """,
                                   file: #fileID, line: #line)
-                // on non-Debug version, continue with empty `keywords` array
+                // on non-Debug version, continue with empty `Expertise` array
             }
         }
 
@@ -191,7 +191,7 @@ extension PhotographerExpertise {
                 photographerExpertises = try context.fetch(fetchRequest)
             } catch {
                 ifDebugFatalError("""
-                                  Failed to fetch PhotographerKeywords: \"\(error)\"
+                                  Failed to fetch PhotographerExpertises: \"\(error)\"
                                   """,
                                   file: #fileID, line: #line)
                 // on non-Debug version, continue with empty `keywords` array
