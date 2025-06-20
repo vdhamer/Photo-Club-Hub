@@ -89,7 +89,7 @@ import CoreData // for NSManagedObjectContext
         let organizations: [Organization] = (try? context.fetch(fetchRequest)) ?? []
 
         #expect(Expertise.count(context: bgContext) == 3)
-        #expect(PhotographerExpertise.count(context: bgContext, keywordID: "Landscape") == 1)
+        #expect(PhotographerExpertise.count(context: bgContext, expertiseID: "Landscape") == 1)
 
         #expect(organizations.count == 1)
         if organizations.isEmpty == false {
@@ -140,7 +140,7 @@ import CoreData // for NSManagedObjectContext
         }
 
         #expect(Expertise.count(context: bgContext) == 21)
-        #expect(PhotographerExpertise.count(context: bgContext, keywordID: "Minimal") == 3)
+        #expect(PhotographerExpertise.count(context: bgContext, expertiseID: "Minimal") == 3)
         #expect(PhotographerExpertise.count(context: bgContext) == 14)
     }
 
