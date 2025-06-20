@@ -17,7 +17,7 @@ public struct Model {
 
     // don't delete Photographer before deleting this. See data model picture in README.md.
     static func deleteCoreDataExpertisesLanguages(context: NSManagedObjectContext) { // delete certain tables separately
-        let forcedDataRefresh = "Forced clearing of CoreData keywords "
+        let forcedDataRefresh = "Forced clearing of CoreData expertises "
 
         do { // order is important to avoid problems with referential integrity
             try deleteEntitiesOfOneType("LocalizedRemark", context: context)
@@ -34,7 +34,7 @@ public struct Model {
 
     // don't delete Photographer before deleting this. See data model picture in README.md.
     static func deleteCoreDataPhotographersClubs(context: NSManagedObjectContext) { // delete subset of tables
-        let forcedDataRefresh = "Forced clearing of CoreData keywords "
+        let forcedDataRefresh = "Forced clearing of CoreData expertises "
 
         do { // order is important to avoid problems with referential integrity
             try deleteEntitiesOfOneType("MemberPortfolio", context: context)
