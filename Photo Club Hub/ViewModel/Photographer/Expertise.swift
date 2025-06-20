@@ -262,7 +262,7 @@ extension Expertise {
 
     // Priority system to choose the most appropriate LocalizedKeyword for a given Keyword.
     // The choice depends on available translations and the current language preferences set on the device.
-    public var selectedLocalizedKeyword: LocalizedExpertiseResult {
+    public var selectedLocalizedExpertise: LocalizedExpertiseResult {
         // don't use Locale.current.language.languageCode because this only returns languages supported by the app
         // first choice: accomodate user's language preferences according to Apple's Locale API
         for lang in Locale.preferredLanguages {

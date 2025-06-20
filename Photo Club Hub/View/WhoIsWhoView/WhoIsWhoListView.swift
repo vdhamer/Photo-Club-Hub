@@ -27,7 +27,7 @@ struct WhoIsWhoListView: View {
     fileprivate var navigationTitle = String(localized: "Who's Who",
                                              comment: "Title of page with list of photographers")
     fileprivate let nonStandard = String(localized: "Non-standard",
-                                         comment: "Keyword description at bottom of Who's Who screen")
+                                         comment: "Expertise description at bottom of Who's Who screen")
 
     init(searchText: Binding<String>, navigationTitle: String? = nil) {
         self.searchText = searchText
@@ -64,7 +64,7 @@ struct WhoIsWhoListView: View {
                     HStack {
                         Text(verbatim: """
                                        \(getIconString(standard: expertise.isStandard)) \
-                                       \(expertise.selectedLocalizedKeyword.name)
+                                       \(expertise.selectedLocalizedExpertise.name)
                                        """)
                         Text(PhotographerExpertise.count(context: viewContext, keywordID: expertise.id).description+"x")
                         Text("\(expertise.isStandard ? "" : nonStandard)")
@@ -104,7 +104,7 @@ struct WhoIsWhoListView: View {
     }
 
     fileprivate func sortKeywordsLocalized(lhs: Expertise, rhs: Expertise) -> Bool {
-        return lhs.selectedLocalizedKeyword.name < rhs.selectedLocalizedKeyword.name
+        return lhs.selectedLocalizedExpertise.name < rhs.selectedLocalizedExpertise.name
     }
 
     fileprivate func getIconString(standard: Bool) -> String {
