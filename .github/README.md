@@ -36,7 +36,7 @@
             <li><a href="#website-generation">Website Generation</a></li>
             <li><a href="#searchable-lists">Searchable Lists</a></li>
             <li><a href="#photo-museums">Photo Museums</a></li>
-            <li><a href="#photographer-keywords-in-progress">Photographer Keywords</a></li>
+            <li><a href="#photographer-expertises">Photographer Expertises</a></li>
             <li><a href="#pull-down-to-refresh">Pull down to Refresh</a></li>
             <li><a href="#fancy-scrolling">Fancy scrolling</a></li>
         </ul>
@@ -45,7 +45,7 @@
         <ul>
             <li><a href="#levels">Levels</a></li>
             <li><a href="#levels-and-screens">Levels and Screens</a></li>
-            <li><a href="#level-0-keywords-and-languages">Level 0. Keywords and Languages</a></li>
+            <li><a href="#level-0-expertises-and-languages">Level 0. Expertises and Languages</a></li>
             <li><a href="#level-1-adding-clubs">Level 1. Adding Clubs</a></li>
             <li><a href="#level-2-adding-members">Level 2. Adding Members</a></li>
             <li><a href="#level-3-adding-images">Level 3. Adding Images</a></li>
@@ -355,20 +355,20 @@ The text you type inside the search bar is matched against key fields for the re
 Design detail: Search Bar filtering is done in the app's user interface and not by the CoreData database.
 </details>
 
-### Photographer Keywords
+### Photographer Expertises
 
-</p>Photographers can be associated with keywords describing what kind of photography they are mainly known for.
-Examples: "Black & White" or "Landscape". Because these keywords can serve to Search for photographers with similar
-interests, the keywords are standardized (e.g. consistently use "Black & White" rather than a mix with "B&W" or "Black and White"). 
+</p>Photographers can be associated with expertises describing what kind of photography they are mainly known for.
+Examples: "Black & White" or "Landscape". Because these expertises can serve to Search for photographers with similar
+interests, the expertises are standardized (e.g. consistently use "Black & White" rather than a mix with "B&W" or "Black and White"). 
 </p>
 
-<details><summary>Details on Keyword Standardization (click to expand)</summary></p>
+<details><summary>Details on Expertise Standardization (click to expand)</summary></p>
 
 Standardization also helps in displaying the texts in multiple languages. The translations are defined in a single file named `Level 0`. This means that if the Sierra Club associates their member Ansel Adams with "Black & White"
 they automatically get translations of "Black & White" into certain languages:
 if the app is thus set to Dutch, the user sees "Zwart-Wit" rather than "Black & White".
 
-Information on how to define keywords per photographer and how to define standardized keywords can be found in
+Information on how to define expertises per photographer and how to define standardized expertises can be found in
 the explanations about adding `Level 2` data and maintaining `Level 0` data respectively.
 </details>
 
@@ -480,7 +480,7 @@ Internally the app actually supports one extra level of data:
 - `Level 0` holds some basic configuration data.</p>
 
 Users and clubs don't normally need to worry about this layer. `Level 0` data is shared across clubs and thus managed centrally. 
-Its main content is a list of standardized keywords for photographers, plus translations of these keywords into supported languages.
+Its main content is a list of standardized expertises for photographers, plus translations of these expertises into supported languages.
 
 ### Levels and Screens
 
@@ -499,16 +499,16 @@ Technically different club members don't need to reach `Level 3` at the same tim
 one member, then expand to all members, and later add recent former members if you want. 
 Attempting to view a portfolio of a club member without an available portfolio will display a red built-in placeholder image.
 
-### Level 0. Keywords and Languages
+### Level 0. Expertises and Languages
 
-`Level 0` contains standardized keywords, standardized languages, and the translations of keywords into these languages.
+`Level 0` contains standardized expertises, standardized languages, and the translations of expertises into these languages.
 You may want to skip reading about `Level 0` on a first reading, as it only describes data needed to support an optional feature.
 
 <ul><details><Summary>Level 0 example (click to expand)</Summary>
 
 ``` json
 {
-    "keywords": [
+    "expertises": [
         {
             "idString": "Landscape",
             "name": [
@@ -550,27 +550,27 @@ You may want to skip reading about `Level 0` on a first reading, as it only desc
 
 <ul><details><Summary>Mandatory Level 0 fields (click to expand)</Summary></p>
 
-- `keywords` lists the keywords that can be linked to one or more `photographers` to describe their main genres.
-Keywords apply to the photographer in general, and not to the photographer's membership of a particular club.
-If multiple clubs assign different keywords to the same photographer, the lists are automatically merged in the app ("union"). 
-    - `idString` only serves to identify a keyword. Preferably use the English version of the keyword - but a text like "Keyword #123" will also work.
-    - `name` is a list of translations of the keyword into one or more languages.
+- `expertises` lists the expertises that can be linked to one or more `photographers` to describe their main genres.
+Expertises apply to the photographer in general, and not to the photographer's membership of a particular club.
+If multiple clubs assign different expertises to the same photographer, the lists are automatically merged in the app ("union"). 
+    - `idString` only serves to identify an expertise. Preferably use the English version of the expertise - but a text like "Expertise #123" will also work.
+    - `name` is a list of translations of the expertise into one or more languages.
         - `language` contains the isoCode (typically 2 letters) for the language.
 Use the 3 letter code only for uncommon languages for which no 2 letter code exists.
 The codes must match the standard [ISO 639 list](https://www.loc.gov/standards/iso639-2/php/English_list.php).
 It is important to use the correct values, because `isoCode` is compared to the preference codes provided by iOS.
 Example: "DE" is "German".
-        - `localizedString` contains the translation of the keyword into the indicated language.
+        - `localizedString` contains the translation of the expertise into the indicated language.
 If possible provide translations for the languages that the app supports (currently EN and NL).
 Additional translations are fine, and will be used where appropriate.
-- `languages` lists the language codes used for localized photographer `keywords` and organization `remarks`.
+- `languages` lists the language codes used for localized photographer `expertises` and `remarks` about `organizations`.
     - `isoCode` is the 2 (ISO 639-1) or 3 letter (ISO 639-2) language code for the language. Use the 2 letter codes when available.
     - `languageNameEN` is the name of the language in English. Example: "Chinese". So this can tell you that ZH represents Chinese.
 </details></ul>
 
 <ul><details><Summary>Optional Level 0 fields (click to expand)</Summary></p>
 
-- `usage` (within a `keyword`) is a description of the keyword's intended usage.
+- `usage` (within a `expertise`) is a description of the expertise's intended usage.
 The optional `usage` text can be defined in multiple languages (preferably at least in EN and NL).
 </details></ul>
 
@@ -782,7 +782,7 @@ Here is an example of the format of a `Level 2` list for a photo club. This exam
                 "level3URL": "https://www.example.com/FG_deGender/Peter_van_den_Hamer.level3.json",
                 "membershipStartDate": "2024-01-01",
                 "membershipEndDate": "9999-01-01",
-                "keywords": [ "Landscape", "Travel", "Minimal" ]
+                "expertises": [ "Landscape", "Travel", "Minimal" ]
             }
         }
     ]
@@ -824,20 +824,20 @@ Here is an example of the format of a `Level 2` list for a photo club. This exam
     - `level3URL` is URL to a file containing the selected portfolio images made by this particular member in the context of a given photo club.
     - `membershipStartDate` is the date when the member joined the club.
     - `membershipEndDate` is the date when the member left the club. If the member is a current member, it is best to omit this date.
-    - `keywords` is a list of keywords describing what the photographer is mainly known for.
-The list of strings at `Level 2` is used to define the applicable keywords.
-It doesn't define how they are displayed because multi-language versions of keywords are defined in `Level 0`.
+    - `expertises` is a list of expertises the photographer is mainly known for.
+The list of strings at `Level 2` is used to define the applicable expertises.
+It doesn't define how they are displayed because multi-language versions of expertises are defined in `Level 0`.
 Example: the input identifier "Landscape" that can be associated with a given photographer in the `Level 2` file
 can be translated (using Level 0 data) to "Landschaft" in German or "Landscape" in "English".
 The identifier should preferably match the English translation for practical reasons but, technically speaking, doesn't need be.
-Question: so what happens if a keyword string in a `Level2.json` file does _not_ occur in the list of keywords in the `Level0.json` file?
+Question: so what happens if an expertise string in a `Level2.json` file does _not_ occur in the list of expertises in the `Level0.json` file?
 Answer: it is shown as an error (gray?) in the user interface, thus prompting the user to fix the issue.
-The keyword reverts to the standard color as soon as that problem is resolved.
+The expertise reverts to the standard color as soon as that problem is resolved.
 Rationale: you might enter a typo ("Landscapes" instead of "Landscape").
 But it also signals a "non-standard" term (e.g., using "Scenery" or "Desert" instead of "Landscape").
 </p>
  
-> Note that the `birthday`, `website`, `isDeceased`, `photographerImage`, and `keywords` fields are technically special
+> Note that the `birthday`, `website`, `isDeceased`, `photographerImage`, and `expertises` fields are technically special
 > because they describe the photographer - and not the photographer in the context of a particular club membership.
 > Usually this doesn't matter, but it can show up if the photographer is associated with **multiple** clubs,
 > each with its own level2.json file (for example, a former photo club and the current photo club).
@@ -846,10 +846,10 @@ But it also signals a "non-standard" term (e.g., using "Scenery" or "Desert" ins
 > This problem should occur infrequently, but a workaround is to only fill in these fields in one of the level2.json files.
 > In the future, we could add rules to determine what to do if there are multiple
 > different values for these fields (e.g. membership trumps former membership).
-> If multiple clubs supply `keywords` for the same photographer, the lists are automatically merged for use by the app.
+> If multiple clubs supply `expertises` for the same photographer, the lists are automatically merged for use by the app.
 > The respective `Level 2` data files are left as is.
-> Example: John is a member of Club A (keywords K1 and K2) and Club B (keywords K2 and K3) and Club C (no keywords provided).
-> Result: all three clubs show keywords K1, K2 and K3.
+> Example: John is a member of Club A (expertises K1 and K2) and Club B (expertises K2 and K3) and Club C (no expertises provided).
+> Result: all three clubs show expertises K1, K2 and K3.
 
 </details></ul>
 
@@ -1138,7 +1138,7 @@ while the app's user interface will be displayed in English.</p>
 
 Currently there are two features in the app that display Strings from the database and thus require localization support:
 1. max one `localizedRemark` attached to an `organization` (club, museum) and
-2. multiple `localizedKeyword`s attached (indirectly via `Keyword`) to a `photographer`.</p>#### LocalizedRemark
+2. multiple `localizedExpertise`s attached (indirectly via `Expertise`) to a `photographer`.</p>#### LocalizedRemark
 </details></ul>
 
 #### LocalizedRemark
@@ -1152,48 +1152,48 @@ An `Organization` record can be linked to 0, 1, 2 or more `Languages` regardless
 The actual text shown in the user interface is provided in the `LocalizedRemark` table.</p>
 </details></ul>
 
-#### Keyword
+#### Expertise
 
 <ul><details><summary>Details (click to expand)</summary></p>
 
-The `Keyword` table holds predefined strings that can used as tags for `Photographers`. Examples: `black and white`, `landscape`, `portrait`.
+The `Expertise` table holds predefined strings that can used as tags for `Photographers`. Examples: `black and white`, `landscape`, `portrait`.
 Like Xcodes string catalogs, the item has a string identifier which can then be translated for every supported `Language`.</p>
 
 At the moment, it hasn't been decided yet how the content of the `Keyboard` table is submitted.
-This is related to error checking of the `PhotographerKeyword` table (see description there).
+This is related to error checking of the `PhotographerExpertise` table (see description there).
 The data can come from an extra section in the `root.level1.json` file or a new `level0.json` file containing reference data.<p>
 </details></ul>
 
-#### LocalizedKeyword
+#### LocalizedExpertise
 
 <ul><details><summary>Details (click to expand)</summary></p>
 
-The `LocalizedKeyword` table holds the strings representing `Keywords` in any specific `Language`.</p>
+The `LocalizedExpertise` table holds the strings representing `Expertises` in any specific `Language`.</p>
 </details></ul>
 
-#### PhotographerKeyword
+#### PhotographerExpertise
 
 <ul><details><summary>Details (click to expand)</summary></p>
 
-The `PhotographerKeyword` table links a standardize (reusable) `Keyword` to a `Photographer`.
+The `PhotographerExpertise` table links a standardize (reusable) `Expertise` to a `Photographer`.
 It is thus a many-to-many relationship without any additional attributes.</p>
 
-Note that `Keyword`s per `Photographer` are provided per Club (`Level2.json`) but are stored at the `Photographer` level.
+Note that `Expertise`s per `Photographer` are provided per Club (`Level2.json`) but are stored at the `Photographer` level.
 Example: John is or was a member of both ClubA and ClubB.
-This means there are two independent `Level2.json` files providing information about John which can hold different sets of `Keywords`.
-The app will store the union of both sets in the `PhotographerKeyword` table.</p>
+This means there are two independent `Level2.json` files providing information about John which can hold different sets of `Expertise`s.
+The app will store the union of both sets in the `PhotographerExpertise` table.</p>
 
-Do we allow a `Level2.json` file to define new keywords for the `Keyword` table rather than just allow the 
-file to link `Photographers` to pre-existing `Keywords`? To prevent polution of the `Keyword` and `PhotographerKeyword` tables, 
-we decided to only accept keywords that already exist in the `Keywords` table.
-This means a typo in a keyword identifier in the `Level2.json` file (e.g. "landscape" vs "landscapes") means the entry is ignored.
-It also means that a deliberately new keyword encountered in the `Level2.json` file is ignored, until it gets added to the `Keyboard` table.</p>
+Do we allow a `Level2.json` file to define new expertises for the `Expertise` table rather than just allow the 
+file to link `Photographers` to pre-existing `Expertise`s? To prevent polution of the `Expertise` and `PhotographerExpertise` tables, 
+we decided to only accept expertises that already exist in the `Expertise` table.
+This means a typo in an expertise identifier in the `Level2.json` file (e.g. "landscape" vs "landscapes") means the entry is ignored.
+It also means that a deliberately new expertise encountered in the `Level2.json` file is ignored, until it gets added to the `Keyboard` table.</p>
 
-While being deliberately restrictive, this is quite powerful: a club may list a new keyword (`PhotographerKeyword`) to a `Photographer`.
-It will be in the `Level2.json` file, but won't get loaded by the app. The club can then lobby to get this keyword accepted. When accepted
-and added to the `Keyword` table, the ignored entry will immediately be used.
+While being deliberately restrictive, this is quite powerful: a club may list a new expertise (`PhotographerExpertise`) to a `Photographer`.
+It will be in the `Level2.json` file, but won't get loaded by the app. The club can then lobby to get this expertise accepted. When accepted
+and added to the `Expertise` table, the ignored entry will immediately be used.
 Actually it might be nice to someday have a feature (same app? separate app?) that simultaneously detects typos ("landscap")
-in Level 1 keyword references and suggest wanted extensions to the `Keywords` list ("astrophotography").
+in Level 1 expertise references and suggests extensions to the `Expertise` list ("astrophotography").
 </details></ul>
 </details></ul>
     
