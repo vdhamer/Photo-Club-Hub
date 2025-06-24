@@ -20,9 +20,11 @@ struct MemberPortfolioRow: View {
     var body: some View {
         SinglePortfolioLinkView(destPortfolio: member, wkWebView: wkWebView) {
             HStack(alignment: .top) {
+
                 RoleStatusIconView(memberRolesAndStatus: member.memberRolesAndStatus)
                     .foregroundStyle(.memberPortfolioColor, .gray, .red) // red color is not used
                     .imageScale(.large)
+
                 VStack(alignment: .leading) {
                     Text(verbatim: "\(member.photographer.fullNameFirstLast)")
                         .font(UIDevice.isIPad ? .title : .title2)

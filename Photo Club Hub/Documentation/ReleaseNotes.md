@@ -1,5 +1,8 @@
 ### 2.8.0 (GitHub commit ???????) ??-07-25
 
+Portfolio screen
+* When no FeatauredImage is available, show red disc instead of orange question mark.
+
 Data Maintenance
 * replaced "keyword(s)" by "expertise(s)" in JSON files
 
