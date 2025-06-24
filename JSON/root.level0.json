@@ -293,6 +293,20 @@
                     { "language": "NL", "localizedString": "Beelden die associaties opwekken met andere landen." }
                  ]
             }
+        },
+
+        {
+            "idString": "TestExpertise",
+            "name": [
+                { "language": "EN", "localizedString": "TestExpertise" },
+                { "language": "NL", "localizedString": "TestExpertise" }
+            ],
+            "optional": {
+                "usage":  [
+                    { "language": "EN", "localizedString": "Scenes clearly depicting 'other' parts of the word" },
+                    { "language": "NL", "localizedString": "Beelden die associaties opwekken met andere landen." }
+                 ]
+            }
         }
     ],
 
