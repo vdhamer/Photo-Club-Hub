@@ -133,7 +133,7 @@ extension Language {
                 languages = try context.fetch(fetchRequest)
             } catch {
                 ifDebugFatalError("Failed to fetch Language \(isoCodeAllCaps): \(error)", file: #fileID, line: #line)
-                // on non-Debug version, continue with empty `expertises` array
+                // on non-Debug version, continue with empty `languages` array
             }
         }
 
@@ -151,7 +151,7 @@ extension Language {
                 languages = try context.fetch(fetchRequest)
             } catch {
                 ifDebugFatalError("Failed to fetch Languages: \(error)", file: #fileID, line: #line)
-                // on non-Debug version, continue with empty `expertises` array
+                // on non-Debug version, continue with empty `languages` array
             }
         }
 

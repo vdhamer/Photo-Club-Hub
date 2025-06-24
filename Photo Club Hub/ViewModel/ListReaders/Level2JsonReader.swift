@@ -43,13 +43,13 @@ public class Level2JsonReader { // normally running on a background thread
 
         let jsonRoot: JSON = JSON(parseJSON: jsonData) // pass the data to SwiftyJSON to parse
         guard jsonRoot["club"].exists() else {
-            ifDebugFatalError("Cannot find `club` expertise for club \(targetIdPlus.fullName)")
+            ifDebugFatalError("Cannot find `club` keyword for club \(targetIdPlus.fullName)")
             return
         }
 
         let jsonClub: JSON = jsonRoot["club"]
         guard jsonClub["idPlus"].exists() else {
-            ifDebugFatalError("Cannot find `idPlus` expertise for club \(targetIdPlus.fullName)")
+            ifDebugFatalError("Cannot find `idPlus` keyword for club \(targetIdPlus.fullName)")
             return
         }
 
