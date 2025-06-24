@@ -1,5 +1,8 @@
 ### 2.8.0 (GitHub commit ???????) ??-07-25
 
+Data Maintenance
+* replaced "keyword(s)" by "expertise(s)" in JSON files
+
 This build #4642 was made using Xcode beta 1 (17A5241e) and is intended for ?????.
 
 ---------------------------------------------------------------------------
