@@ -33,7 +33,7 @@
         "roles": {
           "isMember": true
         },
-        "keywords": [
+        "expertises": [
           "Aaa",
           "Bbb"
         ]
@@ -53,7 +53,7 @@
         "roles": {
           "isMember": true
         },
-        "keywords": [
+        "expertises": [
           "Aaa",
           "Bbb"
         ]
@@ -73,7 +73,7 @@
         "roles": {
           "isBestuurslid": true
         },
-        "keywords": [
+        "expertises": [
           "Aaa",
           "Bbb"
         ]
@@ -93,7 +93,7 @@
         "roles": {
           "isVoorzitter": true
         },
-        "keywords": [
+        "expertises": [
           "Aaa",
           "Bbb"
         ]
@@ -113,7 +113,7 @@
         "roles": {
           "isMember": true
         },
-        "keywords": [
+        "expertises": [
           "Aaa",
           "Bbb"
         ]
@@ -133,7 +133,7 @@
         "roles": {
           "isMember": true
         },
-        "keywords": [
+        "expertises": [
           "Aaa",
           "Bbb"
         ]
@@ -153,7 +153,7 @@
         "roles": {
           "isBestuurslid": true
         },
-        "keywords": [
+        "expertises": [
           "Aaa",
           "Bbb"
         ]
@@ -173,7 +173,7 @@
         "roles": {
           "isMember": true
         },
-        "keywords": [
+        "expertises": [
           "Aaa",
           "Bbb"
         ]
@@ -193,7 +193,7 @@
         "roles": {
           "isMember": true
         },
-        "keywords": [
+        "expertises": [
           "Aaa",
           "Bbb"
         ]
@@ -213,7 +213,7 @@
         "roles": {
           "isMember": true
         },
-        "keywords": [
+        "expertises": [
           "Aaa",
           "Bbb"
         ]
@@ -233,7 +233,7 @@
         "roles": {
           "isMember": true
         },
-        "keywords": [
+        "expertises": [
           "Aaa",
           "Bbb"
         ]
@@ -253,7 +253,7 @@
         "roles": {
           "isMember": true
         },
-        "keywords": [
+        "expertises": [
           "Aaa",
           "Bbb"
         ]
@@ -273,7 +273,7 @@
         "roles": {
           "isMember": true
         },
-        "keywords": [
+        "expertises": [
           "Aaa",
           "Bbb"
         ]
@@ -293,7 +293,7 @@
         "roles": {
           "isPenningmeester": true
         },
-        "keywords": [
+        "expertises": [
           "Aaa",
           "Bbb"
         ]
@@ -313,7 +313,7 @@
         "roles": {
           "isSecretaris": true
         },
-        "keywords": [
+        "expertises": [
           "Aaa",
           "Bbb"
         ]
@@ -334,7 +334,7 @@
       "roles": {
         "isMember": true
       },
-      "keywords": [
+      "expertises": [
         "Aaa",
         "Bbb"
       ]
@@ -353,7 +353,7 @@
         "roles": {
           "isMember": true
         },
-        "keywords": [
+        "expertises": [
           "Aaa",
           "Bbb"
         ]
@@ -373,7 +373,7 @@
         "roles": {
           "isMember": true
         },
-        "keywords": [
+        "expertises": [
           "Aaa",
           "Bbb"
         ]
@@ -393,7 +393,7 @@
         "roles": {
           "isMember": true
         },
-        "keywords": [
+        "expertises": [
           "Aaa",
           "Bbb"
         ]

@@ -59,7 +59,7 @@
                 "nlSpecific": {
                     "fotobondNumber": 1620108
                 },
-                "keywords": [ "Travel", "Museum" ]
+                "expertises": [ "Travel", "Museum" ]
             }
         },
 
@@ -76,7 +76,7 @@
                 "nlSpecific": {
                     "fotobondNumber": 1620059
                 },
-                "keywords": [ "Travel" ]
+                "expertises": [ "Travel" ]
             }
         },
 
@@ -92,7 +92,7 @@
                 "status": {
                     "isProspectiveMember": false
                 },
-                "keywords": [ "Bird", "Landscape" ]
+                "expertises": [ "Bird", "Landscape" ]
             }
         },
 
@@ -111,7 +111,7 @@
                 },
                 "membershipStartDate": "1996-01-01",
                 "membershipEndDate": "2025-03-31",
-                "keywords": [ "Architecture", "Landscape", "Drone" ]
+                "expertises": [ "Architecture", "Landscape", "Drone" ]
             }
         },
 
@@ -126,7 +126,7 @@
                 "website": "https://glass.photo/jerdam",
                 "level3URL": "http://www.vdhamer.com/fgDeGender/Bettina_de_Graaf/",
                 "membershipStartDate": "2024-01-01",
-                "keywords": [ "Portrait", "Concert" ],
+                "expertises": [ "Portrait", "Concert" ],
                 "nlSpecific": {
                     "fotobondNumber": 1620111
                 }
@@ -160,7 +160,7 @@
                 "website": "https://www.ericvdven.nl/",
                 "level3URL": "http://www.vdhamer.com/fgDeGender/Eric_van_de_Ven/",
                 "membershipStartDate": "2022-12-01",
-                "keywords": [ "Experimental", "Mixed-Media" ],
+                "expertises": [ "Experimental", "Mixed-Media" ],
                 "nlSpecific": {
                     "fotobondNumber": 1620109
                 }
@@ -182,7 +182,7 @@
                 "nlSpecific": {
                     "fotobondNumber": 1620099
                 },
-                "keywords": [ "Street", "Macro" ]
+                "expertises": [ "Street", "Macro" ]
             }
         },
 
@@ -270,7 +270,7 @@
                 "nlSpecific": {
                     "fotobondNumber": 1620029
                 },
-                "keywords": [ "Documentary" ]
+                "expertises": [ "Documentary" ]
             }
         },
 
@@ -286,7 +286,7 @@
                     "isOther": false
                 },
                 "membershipStartDate": "2016-04-01",
-                "keywords": [ "Architecture", "Landscape" ],
+                "expertises": [ "Architecture", "Landscape" ],
                 "nlSpecific": {
                     "fotobondNumber": 1620090
                 }
@@ -324,7 +324,7 @@
                 "nlSpecific": {
                     "fotobondNumber": 1620103
                 },
-                "keywords": [ "Street", "Portrait" ]
+                "expertises": [ "Street", "Portrait" ]
             }
         },
 
@@ -337,7 +337,7 @@
             "optional": {
                 "level3URL": "http://www.vdhamer.com/fgDeGender/Joep_Julicher/",
                 "membershipStartDate": "2019-04-01",
-                "keywords": [ "Minimal", "Experimental" ],
+                "expertises": [ "Minimal", "Experimental" ],
                 "nlSpecific": {
                     "fotobondNumber": 1620098
                 }
@@ -358,7 +358,7 @@
                     "isOther": false
                 },
                 "membershipStartDate": "2005-01-01",
-                "keywords": [ "Macro", "Panorama" ],
+                "expertises": [ "Macro", "Panorama" ],
                 "nlSpecific": {
                     "fotobondNumber": 1620064
                 }
@@ -405,7 +405,7 @@
                 "nlSpecific": {
                     "fotobondNumber": 1620079
                 },
-                "keywords": [ "Portrait" ]
+                "expertises": [ "Portrait" ]
             }
         },
 
@@ -422,7 +422,7 @@
                 "nlSpecific": {
                     "fotobondNumber": 1620104
                 },
-                "keywords": [ "Experimental", "Landscape" ]
+                "expertises": [ "Experimental", "Landscape" ]
             }
         },
 
@@ -442,7 +442,7 @@
                 "nlSpecific": {
                     "fotobondNumber": 1620008
                 },
-                "keywords": [ "Experimental", "Postprocessing" ]
+                "expertises": [ "Experimental", "Postprocessing" ]
             }
         },
 
@@ -477,7 +477,7 @@
                 "nlSpecific": {
                     "fotobondNumber": 1620021
                 },
-                "keywords": [ "Self-Expression" ]
+                "expertises": [ "Self-Expression" ]
             }
         },
 
@@ -547,7 +547,7 @@
                     "isAdmin": true
                 },
                 "membershipStartDate": "2024-01-01",
-                "keywords": [ "Minimal", "Travel" ],
+                "expertises": [ "Minimal", "Travel" ],
                 "nlSpecific": {
                     "fotobondNumber": 1620110
                 }
@@ -568,7 +568,7 @@
                 "nlSpecific": {
                     "fotobondNumber": 1620076
                 },
-                "keywords": [ "Experimental", "Portrait", "Multiple-Exposure" ]
+                "expertises": [ "Experimental", "Portrait", "Multiple-Exposure" ]
             }
         },
 
@@ -583,7 +583,7 @@
                 "status": {
                     "isProspectiveMember": true
                 },
-                "keywords": [ ]
+                "expertises": [ ]
             }
         },
 
@@ -597,7 +597,7 @@
                 "birthday": "9999-12-19",
                 "level3URL": "http://www.vdhamer.com/fgDeGender/Regina_Bakker/",
                 "membershipStartDate": "2020-01-01",
-                "keywords": [ "Abstract", "Macro" ],
+                "expertises": [ "Abstract", "Macro" ],
                 "nlSpecific": {
                     "fotobondNumber": 1620101
                 }
@@ -617,7 +617,7 @@
                 "nlSpecific": {
                     "fotobondNumber": 1620093
                 },
-                "keywords": [ "Conceptual", "Abstract" ]
+                "expertises": [ "Conceptual", "Abstract" ]
             }
         },
 
@@ -635,7 +635,7 @@
                 "nlSpecific": {
                     "fotobondNumber": 1620085
                 },
-                "keywords": [ "Landscape", "Conceptual" ]
+                "expertises": [ "Landscape", "Conceptual" ]
             }
         },
 
@@ -652,7 +652,7 @@
                 "nlSpecific": {
                     "fotobondNumber": 1620106
                 },
-                "keywords": [ "Architecture", "Portrait" ]
+                "expertises": [ "Architecture", "Portrait" ]
             }
         },
 
@@ -668,7 +668,7 @@
                 "nlSpecific": {
                     "fotobondNumber": 1620038
                 },
-                "keywords": [ "Abstract", "Concert", "Travel" ]
+                "expertises": [ "Abstract", "Concert", "Travel" ]
             }
         },
 
@@ -685,7 +685,7 @@
                 "nlSpecific": {
                     "fotobondNumber": 1620078
                 },
-                "keywords": [ "Portrait", "Travel" ]
+                "expertises": [ "Portrait", "Travel" ]
             }
         },
 
@@ -701,7 +701,7 @@
                 "status": {
                     "isProspectiveMember": false
                 },
-                "keywords": [ "Bird", "Landscape" ]
+                "expertises": [ "Bird", "Landscape" ]
             }
         },
 
@@ -734,7 +734,7 @@
                     "isTreasurer": true
                 },
                 "membershipStartDate": "2022-10-23",
-                "keywords": [ "Street", "Portrait", "Travel" ],
+                "expertises": [ "Street", "Portrait", "Travel" ],
                 "nlSpecific": {
                     "fotobondNumber": 1620105
                 }

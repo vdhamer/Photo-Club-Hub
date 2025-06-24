@@ -291,12 +291,12 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "We manage a central list of such Areas of Expertise from which to choose. Standardizing these keywords allows you to use the app to find photographers with a shared interest (e.g. “Macro”)."
+            "value" : "We manage a central list of such Areas of Expertise from which to choose. Standardizing these expertises allows you to use the app to find photographers with a shared interest (e.g. “Macro”)."
           }
         },
         "nl" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "De keuzelijst voor deze expertisegebieden wordt centraal beheerd, Door in de app te zoeken op b.v. “Portret” kan je die fotografen vinden die daarin gespecialiseerd zijn."
           }
         }

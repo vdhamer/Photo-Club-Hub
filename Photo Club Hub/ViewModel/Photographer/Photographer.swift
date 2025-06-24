@@ -148,15 +148,15 @@ extension Photographer {
             photographer.photographerImage = newImage
         }
 
-        for photographerKeywordJSON in optionalFields.photographerKeywords {
-            let photographerKeywordID = photographerKeywordJSON.stringValue
-            let keyword = Expertise.findCreateUpdateUndefStandard(context: bgContext,
-                                                                  id: photographerKeywordID,
+        for photographerExpertiseJSON in optionalFields.photographerExpertises {
+            let photographerExpertiseID = photographerExpertiseJSON.stringValue
+            let expertise = Expertise.findCreateUpdateUndefStandard(context: bgContext,
+                                                                  id: photographerExpertiseID,
                                                                   name: [],
                                                                   usage: [])
             _ = PhotographerExpertise.findCreateUpdate(context: bgContext,
                                                        photographer: photographer,
-                                                       expertise: keyword)
+                                                       expertise: expertise)
         }
 
         var hasChanges: Bool = bgContext.hasChanges

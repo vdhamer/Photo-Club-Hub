@@ -43,13 +43,13 @@ public class Level2JsonReader { // normally running on a background thread
 
         let jsonRoot: JSON = JSON(parseJSON: jsonData) // pass the data to SwiftyJSON to parse
         guard jsonRoot["club"].exists() else {
-            ifDebugFatalError("Cannot find `club` keyword for club \(targetIdPlus.fullName)")
+            ifDebugFatalError("Cannot find `club` expertise for club \(targetIdPlus.fullName)")
             return
         }
 
         let jsonClub: JSON = jsonRoot["club"]
         guard jsonClub["idPlus"].exists() else {
-            ifDebugFatalError("Cannot find `idPlus` keyword for club \(targetIdPlus.fullName)")
+            ifDebugFatalError("Cannot find `idPlus` expertise for club \(targetIdPlus.fullName)")
             return
         }
 
@@ -192,7 +192,7 @@ public class Level2JsonReader { // normally running on a background thread
         let membershipEndDate: Date? = jsonOptionals["membershipEndDate"].exists() ?
             jsonOptionals["membershipEndDate"].stringValue.extractDate() : nil
 
-        let photographerKeywords: [JSON] = jsonOptionals["keywords"].arrayValue
+        let photographerExpertises: [JSON] = jsonOptionals["expertises"].arrayValue
 
         let fotobondNumber: Int32? = jsonOptionals["nlSpecific"]["fotobondNumber"].exists() ?
             jsonOptionals["nlSpecific"]["fotobondNumber"].int32Value : nil
@@ -207,7 +207,7 @@ public class Level2JsonReader { // normally running on a background thread
                                               isDeceased: memberRolesAndStatus.isDeceased(),
                                               photographerWebsite: photographerWebsite,
                                               photographerImage: photographerImage,
-                                              photographerKeywords: photographerKeywords
+                                              photographerExpertises: photographerExpertises
                                               )
                                           )
 

@@ -18,7 +18,7 @@ import CoreData // for NSManagedObjectContext
     }
 
     // Read XampleMin.level2.json and check for parsing errors.
-    // Clears all CoreData keywords. Runs on background thread, adding bunch of extra complexity ;-(
+    // Clears all CoreData expertises. Runs on background thread, adding bunch of extra complexity ;-(
     @Test("Parse XampleMin.level2.json") func xampleMinParse() async {
         let bgContext = PersistenceController.shared.container.newBackgroundContext()
         bgContext.name = "XampleMin"
@@ -60,7 +60,7 @@ import CoreData // for NSManagedObjectContext
     }
 
     // Read XampleMax.level2.json and check for parsing errors
-    // Clears all CoreData keywords. Runs on background thread, adding bunch of extra complexity ;-(
+    // Clears all CoreData expertises. Runs on background thread, adding bunch of extra complexity ;-(
     @Test("Parse XampleMax.level2.json") func xampleMaxParse() async {
         let bgContext = PersistenceController.shared.container.newBackgroundContext()
         bgContext.name = "XampleMax"
@@ -101,7 +101,7 @@ import CoreData // for NSManagedObjectContext
     }
 
     // Read fgDeGender.level2.json and check for parsing errors
-    // Clears all CoreData keywords. Runs on background thread, adding bunch of extra complexity ;-(
+    // Clears all CoreData expertises. Runs on background thread, adding bunch of extra complexity ;-(
     @Test("Parse fgDeGender.level2.json") func fgDeGenderParse() async {
         let bgContext = PersistenceController.shared.container.newBackgroundContext()
         bgContext.name = "fgDeGender"
@@ -144,9 +144,9 @@ import CoreData // for NSManagedObjectContext
         #expect(PhotographerExpertise.count(context: bgContext) == 14)
     }
 
-    // Read and check for keyword merging
-    // Clears all CoreData keywords. Runs on background thread, adding bunch of extra complexity ;-(
-    @Test("Load 2 clubs with keyword data for same photographer") func fgWaalreFgDeGender() async {
+    // Read and check for expertise merging
+    // Clears all CoreData expertises. Runs on background thread, adding bunch of extra complexity ;-(
+    @Test("Load 2 clubs with expertise data for same photographer") func fgWaalreFgDeGender() async {
         let bgContext = PersistenceController.shared.container.newBackgroundContext()
         bgContext.name = "fgDeGender"
         bgContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump

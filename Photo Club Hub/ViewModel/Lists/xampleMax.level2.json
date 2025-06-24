@@ -62,7 +62,7 @@
                 "level3URL": "https://www.example.com/XmpleMax/Max_van_Amsterdam.level3.json",
                 "membershipStartDate": "2020-01-01",
                 "membershipEndDate": "2020-12-31",
-                "keywords": [ "Landscape", "Travel", "Minimal" ],
+                "expertises": [ "Landscape", "Travel", "Minimal" ],
                 "nlSpecific": {
                     "fotobondNumber": 1620110
                 }

@@ -57,7 +57,7 @@
             "optional": {
                 "level3URL": "http://www.vdhamer.com/fgWaalre/Bart_van_Stekelenburg/",
                 "status": {"isFormerMember": true},
-                "keywords": ["Street", "Black & White"],
+                "expertises": ["Street", "Black & White"],
                 "nlSpecific": {"fotobondNumber": 1634041}
             }
         },
@@ -82,7 +82,7 @@
             "optional": {
                 "level3URL": "http://www.vdhamer.com/fgWaalre/Bram_van_den_Berge/",
                 "roles": {"isAdmin": true},
-                "keywords": ["Experimental", "Postprocessing"],
+                "expertises": ["Experimental", "Postprocessing"],
                 "nlSpecific": {"fotobondNumber": 1634007}
             }
         },
@@ -95,7 +95,7 @@
             "optional": {
                 "level3URL": "http://www.vdhamer.com/fgWaalre/Carel_Bullens/",
                 "roles": {"isViceChairman": true},
-                "keywords": ["Landscape", "Street"],
+                "expertises": ["Landscape", "Street"],
                 "nlSpecific": {"fotobondNumber": 1634010}
             }
         },
@@ -142,7 +142,7 @@
             "optional": {
                 "level3URL": "http://www.vdhamer.com/fgWaalre/Erik_van_Geest/",
                 "roles": {"isAdmin": true},
-                "keywords": ["Street", "Travel"],
+                "expertises": ["Street", "Travel"],
                 "nlSpecific": {"fotobondNumber": 1634052}
             }
         },
@@ -154,7 +154,7 @@
             },
             "optional": {
                 "level3URL": "http://www.vdhamer.com/fgWaalre/Francois_Hermans/",
-                "keywords": ["Landscape"],
+                "expertises": ["Landscape"],
                 "nlSpecific": {"fotobondNumber": 1634044}
             }
         },
@@ -177,7 +177,7 @@
             "optional": {
                 "website": "https://www.vansonphotography.nl/",
                 "level3URL": "http://www.vdhamer.com/fgWaalre/Greetje_van_Son/",
-                "keywords": ["Architecture", "Postprocessing"],
+                "expertises": ["Architecture", "Postprocessing"],
                 "nlSpecific": {"fotobondNumber": 1634055}
             }
         },
@@ -202,7 +202,7 @@
             "optional": {
                 "website": "http://guusmaasfotografie.nl/",
                 "level3URL": "http://www.vdhamer.com/fgWaalre/Guus_Maas/",
-                "keywords": ["Landscape"],
+                "expertises": ["Landscape"],
                 "nlSpecific": {"fotobondNumber": 1634066}
             }
         },
@@ -243,7 +243,7 @@
             },
             "optional": {
                 "level3URL": "http://www.vdhamer.com/fgWaalre/Henny_Looren_de_Jong/",
-                "keywords": ["Street", "Travel"],
+                "expertises": ["Street", "Travel"],
                 "nlSpecific": {"fotobondNumber": 1634057}
             }
         },
@@ -256,7 +256,7 @@
             "optional": {
                 "website": "https://henriettevanekert.nl/",
                 "level3URL": "http://www.vdhamer.com/fgWaalre/Henriette_van_Ekert/",
-                "keywords": ["Experimental", "Postprocessing"],
+                "expertises": ["Experimental", "Postprocessing"],
                 "nlSpecific": {"fotobondNumber": 1634063}
             }
         },
@@ -367,7 +367,7 @@
             "optional": {
                 "level3URL": "http://www.vdhamer.com/fgWaalre/Jos_Jansen/",
                 "status": {"isDeceased": true, "isFormerMember": true},
-                "keywords": ["Street"],
+                "expertises": ["Street"],
                 "nlSpecific": {"fotobondNumber": 1634050},
                 "membershipEndDate": "2024-12-31"
             }
@@ -402,7 +402,7 @@
             },
             "optional": {
                 "level3URL": "http://www.vdHamer.com/fgWaalre/Lars_Veerhoff/",
-                "keywords": ["Landscape"],
+                "expertises": ["Landscape"],
                 "nlSpecific": {"fotobondNumber": 1634076}
             }
         },
@@ -428,7 +428,7 @@
             "optional": {
                 "level3URL": "http://www.vdhamer.com/fgWaalre/Kees_van_Gemert/",
                 "roles": {"isSecretary": true},
-                "keywords": ["Black & White", "Street"],
+                "expertises": ["Black & White", "Street"],
                 "nlSpecific": {"fotobondNumber": 1634001}
             }
         },
@@ -497,7 +497,7 @@
             "optional": {
                 "level3URL": "http://www.vdHamer.com/fgWaalre/Miek_Kerkhoven/",
                 "roles": {"isChairman": true},
-                "keywords": ["Landscape", "Abstract"],
+                "expertises": ["Landscape", "Abstract"],
                 "nlSpecific": {"fotobondNumber": 1634005}
             }
         },
@@ -534,7 +534,7 @@
                 "photographerImage": "http://www.vdhamer.com/wp-content/uploads/2022/07/cropped-2006_Norway_276_SSharp1_4.jpg",
                 "level3URL": "http://www.vdHamer.com/fgWaalre/Peter_van_den_Hamer/",
                 "status": {"isFormerMember": true},
-                "keywords": ["Minimal", "Travel"],
+                "expertises": ["Minimal", "Travel"],
                 "nlSpecific": {"fotobondNumber": 1634045}
             }
         },
@@ -570,7 +570,7 @@
             },
             "optional": {
                 "level3URL": "http://www.vdHamer.com/fgWaalre/Sipke_Wadman/",
-                "keywords": ["Experimental", "Postprocessing"],
+                "expertises": ["Experimental", "Postprocessing"],
                 "nlSpecific": {"fotobondNumber": 1634039}
             }
         },
@@ -610,7 +610,7 @@
                 "website": "https://www.tistis.nl/photos.html",
                 "level3URL": "http://www.vdHamer.com/fgWaalre/Tis_Veugen/",
                 "status": {"isFormerMember": true},
-                "keywords": ["Experimental", "Postprocessing"],
+                "expertises": ["Experimental", "Postprocessing"],
                 "nlSpecific": {"fotobondNumber": 1634064}
             }
         },
@@ -635,7 +635,7 @@
             "optional": {
                 "level3URL": "http://www.vdHamer.com/fgWaalre/Willem_Meijer/",
                 "status": {"isFormerMember": true},
-                "keywords": ["Black & White"],
+                "expertises": ["Black & White"],
                 "nlSpecific": {"fotobondNumber": 1634049}
             }
         }

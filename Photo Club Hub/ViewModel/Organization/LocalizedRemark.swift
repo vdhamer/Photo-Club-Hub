@@ -102,7 +102,7 @@ extension LocalizedRemark { // expose computed properties (some related to handl
                 } catch {
                     ifDebugFatalError("Failed to fetch list of all LocalizedLanguages: \(error)",
                                       file: #fileID, line: #line)
-                    // on non-Debug version, continue with empty `keywords` array
+                    // on non-Debug version, continue with empty `expertises` array
                 }
             }
         }

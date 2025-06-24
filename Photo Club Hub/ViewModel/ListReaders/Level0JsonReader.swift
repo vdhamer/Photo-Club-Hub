@@ -31,16 +31,16 @@ public class Level0JsonReader {
                                         fileSelector: FileSelector) {
 
         let fileName: String = fileSelector.fileName
-        ifDebugPrint("\nWill read Level 0 file (\(fileName)) with standard keywords and languages in background.")
+        ifDebugPrint("\nWill read Level 0 file (\(fileName)) with standard expertises and languages in background.")
 
         // hand the data to SwiftyJSON to parse
         let jsonRoot = JSON(parseJSON: jsonData) // get entire JSON file
 
-        // parse Keywords section of file
-        let jsonKeywords: [JSON] = jsonRoot["keywords"].arrayValue
+        // parse Experises section of file
+        let jsonExpertises: [JSON] = jsonRoot["expertises"].arrayValue
 
-        parseKeywords(bgContext: bgContext, jsonKeywords: jsonKeywords)
-        print("\(jsonKeywords.count) Keywords found")
+        parseExpertises(bgContext: bgContext, jsonExpertises: jsonExpertises)
+        print("\(jsonExpertises.count) Expertises found")
 
         // parse Language section of file
         let jsonLanguages: [JSON] = jsonRoot["languages"].arrayValue
@@ -55,7 +55,7 @@ public class Level0JsonReader {
             ifDebugFatalError("Failed to save changes to Core Data: \(error)",
                               file: #fileID, line: #line)
             // in release mode, the failed database update is only logged. App doesn't stop.
-            ifDebugPrint("Failed to save JSON Keyword changes in background")
+            ifDebugPrint("Failed to save JSON Expertise changes in background")
             return
         }
 
@@ -80,36 +80,36 @@ public class Level0JsonReader {
         }
     }
 
-    private func parseKeywords(bgContext: NSManagedObjectContext, jsonKeywords: [JSON]) {
-        for jsonKeyword in jsonKeywords {
-            guard jsonKeyword["idString"].exists() else {
-                ifDebugFatalError("Keyword doesn't have an idString", file: #fileID, line: #line)
-                continue  // if it doesn't exist, skip the keyword
+    private func parseExpertises(bgContext: NSManagedObjectContext, jsonExpertises: [JSON]) {
+        for jsonExpertise in jsonExpertises {
+            guard jsonExpertise["idString"].exists() else {
+                ifDebugFatalError("Expertise doesn't have an idString", file: #fileID, line: #line)
+                continue  // if it doesn't exist, skip the expertise
             }
-            let idString = jsonKeyword["idString"].stringValue
+            let idString = jsonExpertise["idString"].stringValue
 
-            guard jsonKeyword["name"].exists() else {
-                ifDebugFatalError("Keyword doesn't have localized representations", file: #fileID, line: #line)
-                continue  // if it doesn't exist, skip the keyword
+            guard jsonExpertise["name"].exists() else {
+                ifDebugFatalError("Expertise doesn't have localized representations", file: #fileID, line: #line)
+                continue  // if it doesn't exist, skip the expertise
             }
-            let jsonKeywordName = jsonKeyword["name"].arrayValue // entire dictionary of localized names for the keyword
+            let jsonExpertiseName = jsonExpertise["name"].arrayValue // dictionary of localized names for the expertise
 
-            // we insist on having at least one language for which jsonKeyword has a localized name
-            guard jsonKeywordName.count > 0,
-                  jsonKeywordName[0]["language"].exists(),
-                  jsonKeywordName[0]["localizedString"].exists() else {
-                ifDebugFatalError("Keyword doesn't have any localized representations", file: #fileID, line: #line)
-                continue  // if it doesn't exist, skip the keyword (note that it even skips the "usage" array)
+            // we insist on having at least one language for which jsonExpertise has a localized name
+            guard jsonExpertiseName.count > 0,
+                  jsonExpertiseName[0]["language"].exists(),
+                  jsonExpertiseName[0]["localizedString"].exists() else {
+                ifDebugFatalError("Expertise doesn't have any localized representations", file: #fileID, line: #line)
+                continue  // if it doesn't exist, skip the expertise (note that it even skips the "usage" array)
             }
 
-            let jsonKeywordOptionals = jsonKeyword["optional"] // rest will be empty if not found
-            let jsonUsage = jsonKeywordOptionals["usage"].arrayValue
+            let jsonExpertiseOptionals = jsonExpertise["optional"] // rest will be empty if not found
+            let jsonUsage = jsonExpertiseOptionals["usage"].arrayValue
 
-            let keyword = Expertise.findCreateUpdateStandard(context: bgContext,
-                                                           id: idString,
-                                                           name: jsonKeywordName,
-                                                           usage: jsonUsage)
-            print("Keyword <\(keyword.id)> with \(jsonKeywordName.count) localized name(s) found")
+            let expertise = Expertise.findCreateUpdateStandard(context: bgContext,
+                                                               id: idString,
+                                                               name: jsonExpertiseName,
+                                                               usage: jsonUsage)
+            print("Expertise <\(expertise.id)> with \(jsonExpertiseName.count) localized name(s) found")
         }
     }
 

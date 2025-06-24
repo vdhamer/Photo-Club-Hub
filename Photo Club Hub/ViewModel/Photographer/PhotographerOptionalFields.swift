@@ -13,17 +13,17 @@ public struct PhotographerOptionalFields {
     var isDeceased: Bool? // nil means "don't know"
     var photographerWebsite: URL?
     var photographerImage: URL?
-    var photographerKeywords: [JSON] // defaults to empty list
+    var photographerExpertises: [JSON] // defaults to empty list
 
     public init(bornDT: Date? = nil,
                 isDeceased: Bool? = nil,
                 photographerWebsite: URL? = nil,
                 photographerImage: URL? = nil,
-                photographerKeywords: [JSON] = []) {
+                photographerExpertises: [JSON] = []) {
         self.bornDT = bornDT
         self.isDeceased = isDeceased
         self.photographerWebsite = photographerWebsite
         self.photographerImage = photographerImage
-        self.photographerKeywords = photographerKeywords
+        self.photographerExpertises = photographerExpertises
     }
 }

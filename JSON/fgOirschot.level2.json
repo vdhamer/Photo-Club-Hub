@@ -41,7 +41,7 @@
                 "nlSpecific": {
                     "fotobondNumber": 1607006
                 },
-                "keywords": [ "Model", "Street", "Free" ]
+                "expertises": [ "Model", "Street", "Free" ]
             }
         },
 
@@ -56,7 +56,7 @@
                 "nlSpecific": {
                     "fotobondNumber": 1607054
                 },
-                "keywords": [ "Nature", "Abstract", "Travel", "Free" ]
+                "expertises": [ "Nature", "Abstract", "Travel", "Free" ]
             }
         },
 
@@ -72,7 +72,7 @@
                 "nlSpecific": {
                     "fotobondNumber": 1607009
                 },
-                "keywords": [ "Architecture", "Experimental", "Free" ]
+                "expertises": [ "Architecture", "Experimental", "Free" ]
             }
         },
 
@@ -87,7 +87,7 @@
                  "nlSpecific": {
                      "fotobondNumber": 1607049
                  },
-                 "keywords": [ "Street", "Documantary", "Free" ]
+                 "expertises": [ "Street", "Documantary", "Free" ]
              }
          },
 
@@ -102,7 +102,7 @@
                 "nlSpecific": {
                     "fotobondNumber": 1607041
                 },
-                "keywords": [ "Street", "Travel", "Nature", "Free" ]
+                "expertises": [ "Street", "Travel", "Nature", "Free" ]
 
             }
 

@@ -23,8 +23,8 @@ extension Expertise {
             if id_ != nil { // shouldn't be nil in the first place
                 return id_!
             } else {
-                ifDebugFatalError("CoreData id_ for Keyword is nil", file: #fileID, line: #line)
-                return "No id for Keyword"
+                ifDebugFatalError("CoreData id_ for Expertise is nil", file: #fileID, line: #line)
+                return "No id for Expertise"
             }
         }
         set {
@@ -34,7 +34,7 @@ extension Expertise {
 
     // MARK: - find or create
 
-    // Find existing Keyword object or create a new one.
+    // Find existing Expertise object or create a new one.
     // Update existing attributes or fill the new object
     fileprivate static func findCreateUpdate(context: NSManagedObjectContext, // can be foreground or background context
                                              id: String,
@@ -43,55 +43,55 @@ extension Expertise {
                                              usage: [JSON]
                                             ) -> Expertise {
 
-        // execute fetchRequest to get keyword object for id=id. Query could return multiple - but shouldn't.
+        // execute fetchRequest to get expertise object for id=id. Query could return multiple - but shouldn't.
         let fetchRequest: NSFetchRequest<Expertise> = Expertise.fetchRequest()
         let predicateFormat: String = "id_ = %@" // avoid localization
         fetchRequest.predicate = NSPredicate(format: predicateFormat, argumentArray: [id])
 
-        var keywords: [Expertise]! = []
+        var expertises: [Expertise]! = []
         do {
-            keywords = try context.fetch(fetchRequest)
+            expertises = try context.fetch(fetchRequest)
         } catch {
-            ifDebugFatalError("Failed to fetch Keyword \(id): \(error)", file: #fileID, line: #line)
-            // on non-Debug version, continue with empty `keywords` array
+            ifDebugFatalError("Failed to fetch Expertise \(id): \(error)", file: #fileID, line: #line)
+            // on non-Debug version, continue with empty `expertises` array
         }
 
-        // are there multiple copies of the keyword? This shouldn't be the case.
-        if keywords.count > 1 { // there is actually a Core Data constraint to prevent this
-            ifDebugPrint("Query returned multiple (\(keywords.count)) Keywords with code \(id)")
+        // are there multiple copies of the expertise? This shouldn't be the case.
+        if expertises.count > 1 { // there is actually a Core Data constraint to prevent this
+            ifDebugPrint("Query returned multiple (\(expertises.count)) Expertises with code \(id)")
         }
 
-        if let keyword = keywords.first { // already exists, so update non-identifying attributes
-            if keyword.update(context: context, isStandard: isStandard, name: name, usage: usage) {
+        if let expertise = expertises.first { // already exists, so update non-identifying attributes
+            if expertise.update(context: context, isStandard: isStandard, name: name, usage: usage) {
                 if isStandard == nil {
-                    ifDebugFatalError("Updated keyword \(keyword.id).isStandard to nil (which is suspicious)")
+                    ifDebugFatalError("Updated expertise \(expertise.id).isStandard to nil (which is suspicious)")
                 } else {
-                    print("Updated keyword \(keyword.id).isStandard to \(isStandard! ? "" : "non-")standard")
+                    print("Updated expertise \(expertise.id).isStandard to \(isStandard! ? "" : "non-")standard")
                 }
                 if Settings.extraCoreDataSaves {
-                    Expertise.save(context: context, errorText: "Could not update Keyword \"\(keyword.id)\"")
+                    Expertise.save(context: context, errorText: "Could not update Expertise \"\(expertise.id)\"")
                 }
             }
-            return keyword
+            return expertise
         } else {
-            // cannot use Keyword() initializer because we must use supplied context
+            // cannot use Expertise() initializer because we must use supplied context
             let entity = NSEntityDescription.entity(forEntityName: "Expertise", in: context)!
-            let keyword = Expertise(entity: entity, insertInto: context)
-            keyword.id = id // immediately set it to a non-nil value
-            _ = keyword.update(context: context,
+            let expertise = Expertise(entity: entity, insertInto: context)
+            expertise.id = id // immediately set it to a non-nil value
+            _ = expertise.update(context: context,
                                isStandard: isStandard,
                                name: name, // ignore whether update made changes
                                usage: usage)
             if Settings.extraCoreDataSaves {
-                Expertise.save(context: context, errorText: "Could not save Keyword \"\(keyword.id)\"")
+                Expertise.save(context: context, errorText: "Could not save Expertise \"\(expertise.id)\"")
             }
-            print("Created new Keyword called \"\(keyword.id)\"")
-            return keyword
+            print("Created new Expertise called \"\(expertise.id)\"")
+            return expertise
         }
 
     }
 
-    // Find existing standard Keyword object or create a new one.
+    // Find existing standard Expertise object or create a new one.
     // Update existing attributes or fill the new object
     public static func findCreateUpdateStandard(context: NSManagedObjectContext, // can be foreground or background
                                                 id: String,
@@ -101,7 +101,7 @@ extension Expertise {
         findCreateUpdate(context: context, id: id, isStandard: true, name: name, usage: usage)
     }
 
-    // Find existing non-standard Keyword object or create a new one.
+    // Find existing non-standard Expertise object or create a new one.
     // Update existing attributes or fill the new object
     public static func findCreateUpdateNonStandard(context: NSManagedObjectContext, // can be foreground or background
                                                    id: String,
@@ -111,7 +111,7 @@ extension Expertise {
         findCreateUpdate(context: context, id: id, isStandard: false, name: name, usage: usage)
     }
 
-    // Find existing Keyword object or create a new one without changing the Standard flag.
+    // Find existing Expertise object or create a new one without changing the Standard flag.
     // Don't update existing Standard attribute
     static func findCreateUpdateUndefStandard(context: NSManagedObjectContext, // can be foreground or background
                                               id: String,
@@ -121,7 +121,7 @@ extension Expertise {
         findCreateUpdate(context: context, id: id, isStandard: nil, name: name, usage: usage)
     }
 
-    // Update non-identifying attributes/properties within an existing instance of class Keyword if needed.
+    // Update non-identifying attributes/properties within an existing instance of class Expertise if needed.
     // Returns whether an update was needed.
     fileprivate func update(context: NSManagedObjectContext,
                             isStandard: Bool?, // nil means don't change
@@ -136,13 +136,14 @@ extension Expertise {
             updated = true
         }
 
-        for localizedKeyword in name {
-            guard localizedKeyword["language"].exists(), localizedKeyword["localizedString"].exists() else { continue }
+        for localizedExpertise in name {
+            guard localizedExpertise["language"].exists(), localizedExpertise["localizedString"].exists()
+                else { continue }
 
-            let isoCode: String = localizedKeyword["language"].string!
+            let isoCode: String = localizedExpertise["language"].string!
             let language = Language.findCreateUpdate(context: context, isoCode: isoCode)
 
-            let localizedString: String = localizedKeyword["localizedString"].string!
+            let localizedString: String = localizedExpertise["localizedString"].string!
             _ = LocalizedExpertise.findCreateUpdate(context: context,
                                                     expertise: self, language: language,
                                                     localizedName: localizedString, localizedUsage: nil)
@@ -163,9 +164,9 @@ extension Expertise {
 
         if updated && Settings.extraCoreDataSaves {
             do {
-                try context.save() // update modified properties of a Keyword object
+                try context.save() // update modified properties of a Expertise object
             } catch {
-                ifDebugFatalError("Update failed for Keyword \"\(id)\"",
+                ifDebugFatalError("Update failed for Expertise \"\(id)\"",
                                   file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
                 // in release mode, if save() fails, just continue
             }
@@ -182,7 +183,7 @@ extension Expertise {
             try context.save()
         } catch {
             context.rollback()
-            ifDebugFatalError("Could not save the deletion of Keyword \"\(self.id)\"")
+            ifDebugFatalError("Could not save the deletion of Expertise \"\(self.id)\"")
         }
     }
 
@@ -192,14 +193,14 @@ extension Expertise {
                 try context.save()
             } catch {
                 context.rollback()
-                ifDebugFatalError(errorText ?? "Error saving Keyword")
+                ifDebugFatalError(errorText ?? "Error saving Expertise")
             }
         }
     }
 
-    // count number of Keywords with a given id
+    // count number of Expertises with a given id
     static func count(context: NSManagedObjectContext, expertiseID: String) -> Int {
-        var keywords: [Expertise]! = []
+        var expertises: [Expertise]! = []
 
         context.performAndWait {
             let fetchRequest: NSFetchRequest<Expertise> = Expertise.fetchRequest()
@@ -207,18 +208,18 @@ extension Expertise {
             let predicate = NSPredicate(format: predicateFormat, argumentArray: [expertiseID])
             fetchRequest.predicate = predicate
             do {
-                keywords = try context.fetch(fetchRequest)
+                expertises = try context.fetch(fetchRequest)
             } catch {
-                ifDebugFatalError("Failed to fetch Keyword \(expertiseID): \(error)", file: #fileID, line: #line)
+                ifDebugFatalError("Failed to fetch Expertise \(expertiseID): \(error)", file: #fileID, line: #line)
             }
         }
-        return keywords.count
+        return expertises.count
     }
 
-    // count total number of Keyword objects/records
+    // count total number of Expertise objects/records
     // there are ways to count without fetching all records, but this func is only used for testing
     static func count(context: NSManagedObjectContext) -> Int {
-        var keywords: [Expertise]! = []
+        var expertises: [Expertise]! = []
 
         context.performAndWait {
             let fetchRequest: NSFetchRequest<Expertise> = Expertise.fetchRequest()
@@ -226,19 +227,19 @@ extension Expertise {
             fetchRequest.predicate = predicateAll
 
             do {
-                keywords = try context.fetch(fetchRequest)
+                expertises = try context.fetch(fetchRequest)
             } catch {
-                ifDebugFatalError("Failed to fetch all Keywords: \(error)", file: #fileID, line: #line)
+                ifDebugFatalError("Failed to fetch all Expertises: \(error)", file: #fileID, line: #line)
             }
         }
 
-        return keywords.count
+        return expertises.count
     }
 
     @MainActor
-    // get array with list of all Keywords
+    // get array with list of all Expertises
     static func getAll(context: NSManagedObjectContext) -> [Expertise] {
-        var keywords: [Expertise]! = []
+        var expertises: [Expertise]! = []
 
         context.performAndWait {
             let fetchRequest: NSFetchRequest<Expertise> = Expertise.fetchRequest()
@@ -247,20 +248,20 @@ extension Expertise {
             fetchRequest.sortDescriptors = [NSSortDescriptor(key: "id_", ascending: true)]
 
             do {
-                keywords = try context.fetch(fetchRequest)
+                expertises = try context.fetch(fetchRequest)
             } catch {
-                ifDebugFatalError("Failed to fetch all Keywords: \(error)", file: #fileID, line: #line)
+                ifDebugFatalError("Failed to fetch all Expertises: \(error)", file: #fileID, line: #line)
             }
         }
 
-        return keywords
+        return expertises
     }
 
     var localizedExpertises: Set<LocalizedExpertise> {
         (localizedExpertises_ as? Set<LocalizedExpertise>) ?? []
     }
 
-    // Priority system to choose the most appropriate LocalizedKeyword for a given Keyword.
+    // Priority system to choose the most appropriate LocalizedExpertise for a given Expertise.
     // The choice depends on available translations and the current language preferences set on the device.
     public var selectedLocalizedExpertise: LocalizedExpertiseResult {
         // don't use Locale.current.language.languageCode because this only returns languages supported by the app
@@ -268,17 +269,17 @@ extension Expertise {
         for lang in Locale.preferredLanguages {
             let langID = lang.split(separator: "-").first?.uppercased() ?? "EN"
             // now check if one of the user's preferences is available for this Remark
-            for localizedKeyword in localizedExpertises where localizedKeyword.language.isoCodeAllCaps == langID {
-                return LocalizedExpertiseResult(localizedExpertise: localizedKeyword, id: self.id)
+            for localizedExpertise in localizedExpertises where localizedExpertise.language.isoCodeAllCaps == langID {
+                return LocalizedExpertiseResult(localizedExpertise: localizedExpertise, id: self.id)
             }
         }
 
         // second choice: most people speak English, at least let's pretend that is the case ;-)
-        for localizedKeyword in localizedExpertises where localizedKeyword.language.isoCodeAllCaps == "EN" {
-            return LocalizedExpertiseResult(localizedExpertise: localizedKeyword, id: self.id)
+        for localizedExpertise in localizedExpertises where localizedExpertise.language.isoCodeAllCaps == "EN" {
+            return LocalizedExpertiseResult(localizedExpertise: localizedExpertise, id: self.id)
         }
 
-        // third choice: use arbitrary (first) translation available for this keyword
+        // third choice: use arbitrary (first) translation available for this expertise
         if localizedExpertises.first != nil {
             return LocalizedExpertiseResult(localizedExpertise: localizedExpertises.first!, id: self.id)
         }

@@ -64,10 +64,10 @@ Code Maintenance
 * Tested with Xcode 16.4, SwiftLint 0.59.1, iOS 18.4.1, iOS 18.5 and macOS 15.5
 
 Data Maintenance
-* Added "Conceptual", "Bird", "Concert", "Multiple exposure" keywords.
+* Added "Conceptual", "Bird", "Concert", "Multiple exposure" expertises.
 * Updated membership list for fgDeGender and fgWaalre.
 * Mentioned fkGestel in Level2_aanmaken_NL.md
-* Updated usage text for keywords in root.level0.json
+* Updated usage text for expertises in root.level0.json
 * Minor update to XampleMin and XampleMax demo files
 * Added Level 2 for fgOirschot and fcEricamera
 
@@ -87,7 +87,7 @@ Code Maintenance
 Data Maintenance
 * Change in membership for fgDeGender (BZ, PdW).
 * Added images for fgDeGender based on Expo25.
-* Added keywords for fgWaalre and fgDeGender members
+* Added expertises for fgWaalre and fgDeGender members
 
 This build #4638 was made using Xcode 16.3 and is intended for App Store distribution.
 
@@ -99,7 +99,7 @@ Preferences screen
 * Forced a data reset to clean up the content of the in-app database when 2.7.3 or higher is first run (JS of fgW related)
 
 Who's Who screen
-* added temp statistics about keywords near footer of Who's Who screen (for software testing)
+* added temp statistics about expertises near footer of Who's Who screen (for software testing)
 
 Code Maintenance
 * Aligned refreshFirstImage() code to make it more similar to Photo Club HTML code.
@@ -134,7 +134,7 @@ Preferences screen
 Code Maintenance
 * Tested on iOS 18.3.1 and macOS 15.3.1
 * Tested with SwiftLint 0.58.2
-* Deleting the database content didn't cover 3 new tables (`Keyword`, `LocalizedKeyword`, `PhotographerKeyword`)
+* Deleting the database content didn't cover 3 new tables (`Expertise`, `LocalizedExpertise`, `PhotographerExpertise`)
 
 Data Maintenance
 * Set Core Data debugging according to https://useyourloaf.com/blog/debugging-core-data/
@@ -161,8 +161,8 @@ Documentation
 
 Code Maintenance
 * Tested on iOS 18.3, and Xcode 16.2 and macOS 15.3
-* Extended data model for keyword feature (and updated diagram in README.md on GitHub).
-* Added documentation in README.md for keyword feature in Level 0 and Level 2 files.
+* Extended data model for expertise feature (and updated diagram in README.md on GitHub).
+* Added documentation in README.md for expertise feature in Level 0 and Level 2 files.
 * Automatically cleared any officer roles for a deceased member. Fatal error in debug version only.
 * Removed remaining traces of e-mail and phone number support (feature disabled in 2.7.0 for privacy reasons).
 * Moved isDeceased parameter into PhotographerOptionalFields struct.
