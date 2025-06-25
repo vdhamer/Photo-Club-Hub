@@ -1,12 +1,15 @@
 ### 2.8.0 (GitHub commit ???????) ??-07-25
 
 Portfolio screen
-* When no FeatauredImage is available, show red disc instead of orange question mark.
+* Bug fix: when no FeatauredImage is provided, orange question mark was shown instead of red disc.
+
+Code Maintenance
+* Tested with Xcode 26.0 (17A5241o), iOS 26 (23A5276e)
 
 Data Maintenance
 * replaced "keyword(s)" by "expertise(s)" in JSON files
 
-This build #4642 was made using Xcode beta 1 (17A5241e) and is intended for ?????.
+This build #4642 was made using Xcode beta 2 (17A5241o) and can thus only be used for beta testing.
 
 ---------------------------------------------------------------------------
 
