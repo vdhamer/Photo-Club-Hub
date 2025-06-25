@@ -100,7 +100,7 @@ extension PhotoClubHubApp {
         let ericameraBackgroundContext = makeBgContext(ctxName: "Level 2 loader fcEricamera")
         _ = FotoclubEricameraMembersProvider(bgContext: ericameraBackgroundContext, useOnlyInBundleFile: false)
 
-        // load current/former members of Fotoclub Ericamera
+        // load current/former members of Fotoclub Den Dungen
         let dungenBackgroundContext = makeBgContext(ctxName: "Level 2 loader fcDenDungen")
         _ = FotoclubDenDungenMembersProvider(bgContext: dungenBackgroundContext, useOnlyInBundleFile: false)
 

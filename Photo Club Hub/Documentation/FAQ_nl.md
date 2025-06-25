@@ -234,7 +234,7 @@ Nee. Maar de app is zo gemaakt dat het kan. Vaak wordt dat gewaardeerd
 (b.v. als iemand 20 jaar lid was, en wegens gezondheidsredenen niet meer meedoet met "zijn" club).
 "In de app blijven of niet" kan per lid besloten worden. Of per club.
 Het is wel verstandig om dit met het lid zelf af te stemmen.
-Technisch kan een **gebruiker** van de app ook nog eens kiezen of ex-leden getoond worden.
+Technisch kan een **gebruiker** van de app ook nog eens kiezen of ex-leden weergegeven worden.
 En kan iedere club zelf een beleid op dit punt beslissen:
 als de club de gegevens niet aanlevert, zijn ze uiteraard niet te zien. Meer details zijn hieronder te vinden.
 </details></p>

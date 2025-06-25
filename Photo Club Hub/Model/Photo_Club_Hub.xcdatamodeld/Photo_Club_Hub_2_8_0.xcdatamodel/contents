@@ -53,7 +53,7 @@
     </entity>
     <entity name="MemberPortfolio" representedClassName="MemberPortfolio" elementID="Member" syncable="YES" codeGenerationType="class">
         <attribute name="featuredImage" optional="YES" attributeType="URI" elementID="latestImage_"/>
-        <attribute name="featuredImageThumbnail" optional="YES" attributeType="URI" elementID="latestThumbURL"/>
+        <attribute name="featuredImageThumbnail_" optional="YES" attributeType="URI" elementID="latestThumbURL"/>
         <attribute name="fotobondNumber" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="isAdmin" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="isChairman" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>

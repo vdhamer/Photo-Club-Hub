@@ -86,8 +86,8 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
         let changed3 = updateIfChanged(update: &self.membershipEndDate, with: optionalFields.membershipEndDate)
         let changed4 = updateIfChanged(update: &self.level3URL, with: optionalFields.level3URL)
         let changed5 = updateIfChangedOptional(update: &self.featuredImage, with: optionalFields.featuredImage)
-        let changed6 = updateIfChangedOptional(update: &self.featuredImageThumbnail,
-                                               with: optionalFields.featuredImageThumbnail)
+        let changed6 = updateIfChanged(update: &self.featuredImageThumbnail,
+                                       with: optionalFields.featuredImageThumbnail)
         let changed7 = updateIfChanged(update: &self.removeMember, with: removeMember)
         let changed8 = updateIfChanged(update: &self.fotobondNumber, with: optionalFields.fotobondNumber)
         needsSaving = changed1 || changed2 || changed3 || changed4 ||

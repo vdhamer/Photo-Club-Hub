@@ -106,7 +106,7 @@ extension MemberPortfolio {
             print("\(organization.fullName): found new image \(imageURL!)")
         }
         if member.featuredImageThumbnail != thumbURL && thumbURL != nil {
-            member.featuredImageThumbnail = thumbURL // this is where it happens.
+            member.featuredImageThumbnail = thumbURL! // this is where it happens.
             print("\(organization.fullName): found new thumbnail \(thumbURL!)")
         }
     }

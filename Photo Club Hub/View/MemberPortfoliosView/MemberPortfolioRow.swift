@@ -75,8 +75,7 @@ struct MemberPortfolioRow: View {
                         image // Displays the loaded image
                             .resizable()
                             .aspectRatio(contentMode: .fill)
-                    } else if phase.error != nil ||
-                                member.featuredImageThumbnail == nil {
+                    } else if phase.error != nil {
                         Image("Question-mark") // Displays image indicating an error occurred
                             .resizable()
                             .aspectRatio(contentMode: .fit)

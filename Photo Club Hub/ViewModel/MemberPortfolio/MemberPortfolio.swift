@@ -55,6 +55,17 @@ extension MemberPortfolio { // expose computed properties (some related to handl
         }
 	}
 
+    public var featuredImageThumbnail: URL {
+        get {
+            if featuredImageThumbnail_ != nil {
+                return featuredImageThumbnail_!
+            } else {
+                return URL(string: "http://www.vdhamer.com/2017_GemeentehuisWaalre_5D2_33-Edit.jpg")!
+            }
+        }
+        set { featuredImageThumbnail_ = newValue }
+    }
+
     var level3URL: URL {
         get {
             if level3URL_ == nil {
