@@ -1,7 +1,7 @@
 ### 2.8.0 (GitHub commit ???????) ??-07-25
 
 Portfolio screen
-* Bug fix: when no FeatauredImage is provided, orange question mark was shown instead of red disc.
+* Bug fix: when a club hasn't provide a FeatauredImage yet, an orange question mark was shown instead of red disc.
 
 Code Maintenance
 * Tested with Xcode 26.0 (17A5241o), iOS 26 (23A5276e)
@@ -9,8 +9,9 @@ Code Maintenance
 Data Maintenance
 * replaced "keyword(s)" by "expertise(s)" in JSON files
 * Triggered a forced data refresh when release 2.8.0 is first run (related to duplicate member in fgW)
+* Temporarily disabled fgOirschot (awaiting more complete data)
 
-This build #4642 was made using Xcode beta 2 (17A5241o) and can thus only be used for beta testing.
+This build #4642 was made using Xcode 16.4 and is intended for App Store distribution.
 
 ---------------------------------------------------------------------------
 
