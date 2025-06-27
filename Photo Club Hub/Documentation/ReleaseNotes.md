@@ -8,6 +8,7 @@ Code Maintenance
 
 Data Maintenance
 * replaced "keyword(s)" by "expertise(s)" in JSON files
+* Triggered a forced data refresh when release 2.8.0 is first run (related to duplicate member in fgW)
 
 This build #4642 was made using Xcode beta 2 (17A5241o) and can thus only be used for beta testing.
 

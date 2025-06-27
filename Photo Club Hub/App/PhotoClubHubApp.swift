@@ -25,7 +25,7 @@ struct PhotoClubHubApp: App {
 
         // update version number shown in iOS Settings
         UserDefaults.standard.set(Bundle.main.fullVersion, forKey: "version_preference")
-        if Settings.manualDataLoading || Settings.dataResetPending273 {
+        if Settings.manualDataLoading || Settings.dataResetPending280 {
             Model.deleteAllCoreDataObjects(context: viewContext) // keep resetting if manualDataLoading=true
         } else { // initialize some constant records for Language and OrganizationType (for stability)
             Language.initConstants()

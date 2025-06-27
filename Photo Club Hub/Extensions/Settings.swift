@@ -10,17 +10,17 @@ import Foundation
 struct Settings {
 
     // Doesn't really work in Photo Club Hub HTML until the version numbers are synchronized
-    static var dataResetPending273: Bool { // stored as a string shown in Settings
+    static var dataResetPending280: Bool { // stored as a string shown in Settings
         // returns true until a reset is done
 
-        if UserDefaults.standard.object(forKey: "dataResetPending273") == nil {
-            UserDefaults.standard.set(true, forKey: "dataResetPending273") // interpret nil as true
+        if UserDefaults.standard.object(forKey: "dataResetPending280") == nil {
+            UserDefaults.standard.set(true, forKey: "dataResetPending280") // interpret nil as true
             UserDefaults.standard.removeObject(forKey: "dataResetPending272") // cleanup of any old reset key-value pair
             UserDefaults.standard.removeObject(forKey: "dataResetPending") // cleanup of any old reset key-value pair
         }
 
-        let prevValue = UserDefaults.standard.bool(forKey: "dataResetPending273")
-        UserDefaults.standard.set(false, forKey: "dataResetPending273") // never true more than once
+        let prevValue = UserDefaults.standard.bool(forKey: "dataResetPending280")
+        UserDefaults.standard.set(false, forKey: "dataResetPending280") // never true more than once
         return prevValue // if true, app has to react immediately (by executing data reset)
     } // implicit getter only
 
