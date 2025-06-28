@@ -1,4 +1,13 @@
-### 2.8.0 (GitHub commit ???????) ??-07-25
+### 2.8.1 (GitHub commit ???????) ??-07-25
+
+Data Maintenance
+* Added Pennings Foundation (Eindhoven) a photo museum
+
+This build #4642 was made using Xcode beta 1 (17A5241e) and can thus only be used for beta testing.
+
+---------------------------------------------------------------------------
+
+### 2.8.0 (GitHub commit 0d8cd34) 28-06-25
 
 Portfolio screen
 * Bug fix: when a club hasn't provide a FeatauredImage yet, an orange question mark was shown instead of red disc.

@@ -2121,6 +2121,31 @@
 
         {
             "idPlus": {
+                "town": "Eindhoven",
+                "fullName": "Pennings Foundation",
+                "nickName": "Pennings"
+            },
+            "coordinates": {
+                "latitude": 51.43391,
+                "longitude": 5.48889
+            },
+            "optional": {
+                "website": "https://www.penningsfoundation.com",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Pennings' own tagline is `Presentation platform and knowledge center for photography`."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Pennings omschrijft zichzelf als 'Presentatieplatform en kenniscentrum voor fotografie'."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Gurugram",
                 "fullName": "Museo Camera Centre for the Photographic Arts",
                 "nickName": "Museo Camera"
