@@ -72,7 +72,7 @@ van architectuurspecialisten vrij duidelijk dit specialism laten zien.
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 Ja. Dat kan drie goede redenen hebben:
 
-1. Iemand heeft dus geen duidelijk specialisme ("if fotografeer wat ik zoal tegen kom").
+1. Iemand heeft dus geen duidelijk specialisme ("if fotografeer wat ik zoal tegenkom").
 2. Iemand wil - om wat voor reden dan ook - die informatie niet delen.
 3. De informatie moet nog door de club nog verzameld en ingevoerd worden.
 
