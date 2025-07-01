@@ -26,9 +26,10 @@ Het hoofddoel is om Rob en zijn werk eenvoudig te kunnen vinden door "abstract" 
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 
-1. In de HTML/web versie van de app, staan ze vermeld in een kolom "expertisegebieden" in de tabel met clubleden.
-2. In de iOS versie zie je (straks) de beschikbare expertises bij iedere fotograaf op het `Namenlijst` pagina.
-3. In de iOS versie staan de beschikbare expertisegebieden helemaal onderaan de `Namenlijst` pagina (zoek op "expertise" of "zzz", want het is een eind scrollen).
+1. In de HTML/web versie van de app, staan ze vermeld in een kolom "expertisegebieden" in de diverse tabellen met clubleden.
+2. In de iOS versie zie je de beschikbare expertises bij iedere fotograaf op het `Portfolio` pagina.
+3. In de iOS versie staan de beschikbare expertisegebieden helemaal onderaan de `Namenlijst` pagina.
+   Om snel onderaan te komen, zoek op "expertise" of "zzz".
 </p>
 
 En op termijn komen er ook zoekfuncties bij:
