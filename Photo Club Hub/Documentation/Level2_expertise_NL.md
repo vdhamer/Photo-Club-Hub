@@ -39,7 +39,8 @@ En op termijn komen er ook zoekfuncties bij:
 Dus intypen van "zwart" reduceert de lijst tot fotografen die aan "zwart-wit" gekoppeld zijn.
 Maar toont ook namen zoals "Kees de Zwart": deze zoekbalk zoekt zowel op naam en op expertise.
 3. In de HTML versie, zou er een eigenlijk ook een **aparte pagina** moeten komen met een (klikbare) lijst met alle beschikbare expertisegebieden.
-Hiermee kan je zien welke er zijn, wat hun uitleg is, en hoeveel fotografen ze vermeld hebben.  
+Hiermee kan je zien welke expertisegebieden er zijn, wat de bijbehorende toelichting is,
+en hoeveel fotografen in de app hieraan gekoppeld zijn.  
 </details></p>
 
 </li><li>
@@ -70,7 +71,7 @@ van architectuurspecialisten vrij duidelijk dit specialism laten zien.
 ### Kan iemand ook nul Expertises hebben?
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
-Ja. Dat kan drie goede redenen hebben:
+Ja. Dat kan drie verschillende redenen hebben:
 
 1. Iemand heeft dus geen duidelijk specialisme ("if fotografeer wat ik zoal tegenkom").
 2. Iemand wil - om wat voor reden dan ook - die informatie niet delen.
