@@ -26,9 +26,10 @@ Het hoofddoel is om Rob en zijn werk eenvoudig te kunnen vinden door "abstract" 
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 
-1. In de HTML/web versie van de app, staan ze vermeld in een kolom "expertisegebieden" in de tabel met clubleden.
-2. In de iOS versie zie je (straks) de beschikbare expertises bij iedere fotograaf op het `Namenlijst` pagina.
-3. In de iOS versie staan de beschikbare expertisegebieden helemaal onderaan de `Namenlijst` pagina (zoek op "expertise" of "zzz", want het is een eind scrollen).
+1. In de HTML/web versie van de app, staan ze vermeld in een kolom "expertisegebieden" in de diverse tabellen met clubleden.
+2. In de iOS versie zie je de beschikbare expertises bij iedere fotograaf op het `Portfolio` pagina.
+3. In de iOS versie staan de beschikbare expertisegebieden helemaal onderaan de `Namenlijst` pagina.
+   Om snel onderaan te komen, zoek op "expertise" of "zzz".
 </p>
 
 En op termijn komen er ook zoekfuncties bij:
@@ -38,7 +39,8 @@ En op termijn komen er ook zoekfuncties bij:
 Dus intypen van "zwart" reduceert de lijst tot fotografen die aan "zwart-wit" gekoppeld zijn.
 Maar toont ook namen zoals "Kees de Zwart": deze zoekbalk zoekt zowel op naam en op expertise.
 3. In de HTML versie, zou er een eigenlijk ook een **aparte pagina** moeten komen met een (klikbare) lijst met alle beschikbare expertisegebieden.
-Hiermee kan je zien welke er zijn, wat hun uitleg is, en hoeveel fotografen ze vermeld hebben.  
+Hiermee kan je zien welke expertisegebieden er zijn, wat de bijbehorende toelichting is,
+en hoeveel fotografen in de app hieraan gekoppeld zijn.  
 </details></p>
 
 </li><li>
@@ -69,9 +71,9 @@ van architectuurspecialisten vrij duidelijk dit specialism laten zien.
 ### Kan iemand ook nul Expertises hebben?
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
-Ja. Dat kan drie goede redenen hebben:
+Ja. Dat kan drie verschillende redenen hebben:
 
-1. Iemand heeft dus geen duidelijk specialisme ("if fotografeer wat ik zoal tegen kom").
+1. Iemand heeft dus geen duidelijk specialisme ("if fotografeer wat ik zoal tegenkom").
 2. Iemand wil - om wat voor reden dan ook - die informatie niet delen.
 3. De informatie moet nog door de club nog verzameld en ingevoerd worden.
 
@@ -241,17 +243,18 @@ Dit moet de club aanmoedigen om het te corrigeren.
 
 </li><li>
 
-### Foute `expertises`?
+### Fouten bij invoeren `expertises`?
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 
 Wat gebeurt als een Level 2 bestand een onbekende `expertise` bevat dat niet bekend is in de app?
 Voorbeeld: ergens staat "Model" ipv b.v. "Portait".
-De app toont dan "(Model)" - met haakjes dus. De haakjes en een pop-up geven aan dat dit op dit moment geen officeele `expertise` is.
-De app meldt expliciet dat daardoor geen vertaling mogelijk zijn (die zijn er per definitie alleen voor officiële expertises). 
-Dit kan ertoe leiden dat de club de fout corrigeert.
-Maar andere afloop is dat "Model" op een gegeven moment gepromoveerd wordt tot een officiële `expertise`: het was zo gek nog niet.
-De haakjes en waarschuwing verdwijnen dan automatisch zodra de app kan zien dat "Model" een officiële `expertise` is.
+De app toont dan "Model" - maar met een speciaal groen ikoon.
+Het ikoon en bijbehorende 'tooltip' geven aan dat dit op dit moment geen officeele `expertise` is.
+De app meldt expliciet dat daardoor geen vertalingen beschikbaar zijn: die zijn er alleen voor de reeds erkende expertisegebieden. 
+Dit kan ertoe leiden dat de club de eventuele fout corrigeert of overschakelt naar een verwant erkend expertisegebied.
+Maar andere uitkomst is dat "Model" op een gegeven moment gepromoveerd wordt tot een officiële `expertise`: het was zo gek nog niet.
+Het groene ikoon en de waarschuwing verdwijnen dan automatisch zodra de app ziet dat "Model" inmiddels een officiële `expertise` is.
 </details></p>
 
 </li>
