@@ -47,6 +47,7 @@
                 "website": "http://www.ariejanvantwiskfotografie.nl",
                 "level3URL": "http://www.vdhamer.com/fgWaalre/Ariejan_van_Twisk/",
                 "status": {"isFormerMember": true},
+                "expertises": ["Architecture"],
                 "nlSpecific": {"fotobondNumber": 1634051}
             }
         },
@@ -183,7 +184,7 @@
             "optional": {
                 "featuredImage": "https://fotogroepwaalre.nl/wp-content/uploads/2024/04/Germa-2-_DSC03106-.jpg",
                 "level3URL": "https://www.fotogroepWaalre.nl/leden/germa-van-de-kamp/#anker",
-                "expertises": ["Landscape"]
+                "expertises": ["Landscape". "Portrait"]
             }
         },
 
@@ -197,7 +198,7 @@
                 "website": "https://www.vansonphotography.nl/",
                 "featuredImage": "https://fotogroepwaalre.nl/wp-content/uploads/2024/03/GVS3630c-kopie-2.jpg",
                 "level3URL": "https://www.fotogroepWaalre.nl/leden/greetje-van-son/#anker",
-                "expertises": ["Architecture", "Postprocessing"],
+                "expertises": ["Architecture", "Abstract"],
                 "nlSpecific": {"fotobondNumber": 1634055}
             }
         },
@@ -244,6 +245,20 @@
                     "isFormerMember": true,
                     "isMentor"      : true
                 }
+            }
+        },
+
+        {
+            "name": {
+                "givenName" : "Henriëtte" ,
+                "infixName" : "van"     ,
+                "familyName": "Ekert"
+            },
+            "optional": {
+                "website": "https://www.henriettevanekert.nl/",
+                "level3URL": "https://www.fotogroepWaalre.nl/leden/henriette-van-ekert/#anker",
+                "expertises": ["Experimental", "Postprocessing"],
+                "featuredImage": "https://fotogroepwaalre.nl/wp-content/uploads/2023/09/2022_ExpoFotogroepWaalre_097-e1707489766638.jpg",                "nlSpecific": {"fotobondNumber": 1634063}
             }
         },
 
@@ -299,6 +314,7 @@
                 "website": "http://www.istvannagy.nl/",
                 "level3URL": "http://www.vdhamer.com/fgWaalre/Istvan_Nagy/",
                 "status": {"isFormerMember": true},
+                "expertises": ["Black & White", "Panorama"],
                 "nlSpecific": {"fotobondNumber": 1634053}
             }
         },
@@ -325,6 +341,7 @@
             "optional": {
                 "level3URL": "http://www.vdhamer.com/fgWaalre/Jan_Stege/",
                 "status": {"isFormerMember": true},
+                "expertises": ["Black & White"],
                 "nlSpecific": {"fotobondNumber": 1634056}
             }
         },
@@ -338,6 +355,7 @@
             "optional": {
                 "featuredImage": "https://fotogroepwaalre.nl/wp-content/uploads/2025/04/Fotos-Janneke-Sinot-website-aanvulling.jpg",
                 "level3URL": "https://www.fotogroepWaalre.nl/leden/janneke-sinot/#anker",
+                "expertises": ["Black & White"],
                 "nlSpecific": {"fotobondNumber": 1634075}
             }
         },
@@ -351,6 +369,7 @@
             "optional": {
                 "featuredImage": "https://fotogroepwaalre.nl/wp-content/uploads/2025/04/Jeroen_Portfolio-05.jpg",
                 "level3URL": "https://www.fotogroepWaalre.nl/leden/jeroen-tapper/#anker",
+                "expertises": ["experimental"],
                 "nlSpecific": {"fotobondNumber": 1634075}
             }
         },
@@ -391,6 +410,7 @@
                 "website": "http://www.flickr.com/photos/jooppostema/",
                 "level3URL": "http://www.vdhamer.com/fgWaalre/Joop_Postema/",
                 "status": {"isDeceased": true, "isFormerMember": true},
+                "expertises": ["landscape"],
                 "nlSpecific": {"fotobondNumber": 1634036}
             }
         },
@@ -418,7 +438,8 @@
             },
             "optional": {
                 "level3URL": "http://www.vdhamer.com/fgWaalre/Jos_de_Vries/",
-                "status": {"isFormerMember": true}
+                "status": {"isFormerMember": true},
+                "expertises": ["Black & White"]
             }
         },
 
@@ -443,7 +464,7 @@
             "optional": {
                 "featuredImage": "https://fotogroepwaalre.nl/wp-content/uploads/2025/04/DSC_9606_Snapseed.jpg",
                 "level3URL": "https://www.fotogroepWaalre.nl/leden/lars-veerhoff/#anker",
-                "expertises": ["Landscape"],
+                "expertises": ["Landscape", "Travel"],
                 "nlSpecific": {"fotobondNumber": 1634076}
             }
         },
@@ -498,6 +519,7 @@
             },
             "optional": {
                 "featuredImage": "https://fotogroepwaalre.nl/wp-content/uploads/2024/07/IMG_1380-2.jpg",
+                "expertises": ["Black & White"],
                 "level3URL": "https://www.fotogroepWaalre.nl/leden/mariette-knaapen/#anker"
             }
         },
@@ -523,6 +545,7 @@
             "optional": {
                 "level3URL": "http://www.vdHamer.com/fgWaalre/Marijke_Gallas/",
                 "status": {"isFormerMember": true, "isHonoraryMember": true},
+                "expertises": ["Landscape"],
                 "nlSpecific": {"fotobondNumber": 1634011}
             }
         },
@@ -563,6 +586,7 @@
             "optional": {
                 "featuredImage": "https://fotogroepwaalre.nl/wp-content/uploads/2025/04/2.jpg",
                 "level3URL": "https://www.fotogroepWaalre.nl/leden/monique-houben/#anker",
+                "expertises": ["Street"],
                 "nlSpecific": {"fotobondNumber": 1634073}
             }
         },
@@ -576,6 +600,7 @@
             "optional": {
                 "featuredImage": "https://fotogroepwaalre.nl/wp-content/uploads/2025/04/Foto-26-04-2025-om-20.29.jpg",
                 "level3URL": "https://www.fotogroepWaalre.nl/leden/peter-de-wit/#anker",
+                "expertises": ["Street"],
                 "nlSpecific": {"fotobondNumber": 1634005}
             }
         },
@@ -631,7 +656,7 @@
             "optional": {
                 "featuredImage": "https://fotogroepwaalre.nl/wp-content/uploads/2024/03/Macro.jpg",
                 "level3URL": "https://www.fotogroepWaalre.nl/leden/sipke-wadman/#anker",
-                "expertises": ["Experimental", "Postprocessing"],
+                "expertises": ["Experimental", "Macro"],
                 "nlSpecific": {"fotobondNumber": 1634039}
             }
         },
