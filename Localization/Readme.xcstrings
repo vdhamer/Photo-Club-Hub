@@ -296,8 +296,8 @@
         },
         "nl" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "De keuzelijst voor deze expertisegebieden wordt centraal beheerd, Door in de app te zoeken op b.v. “Portret” kan je die fotografen vinden die daarin gespecialiseerd zijn."
+            "state" : "translated",
+            "value" : "De keuzelijst voor deze expertisegebieden wordt centraal beheerd, Door in de app te zoeken op b.v. “Portret” kan je fotografen vinden die daarin gespecialiseerd zijn."
           }
         }
       }

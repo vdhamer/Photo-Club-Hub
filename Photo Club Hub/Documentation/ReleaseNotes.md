@@ -1,7 +1,10 @@
-### 2.8.1 (GitHub commit ???????) ??-07-25
+### 2.8.0 (GitHub commit ???????) ??-07-25
 
 Data Maintenance
-* Added Pennings Foundation (Eindhoven) a photo museum
+* Added Pennings Foundation (Eindhoven) to the list of photo museums
+
+Code Maintenance
+* Cleaned up translation table (minor)
 
 This build #4643 was made using Xcode beta 1 (17A5241e) and can thus only be used for beta testing.
 
