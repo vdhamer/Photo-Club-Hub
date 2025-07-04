@@ -51,7 +51,7 @@ en hoeveel fotografen in de app hieraan gekoppeld zijn.
 Stel dat er tien, honderd of zelfs duizend clubs meedoen met gemiddeld 15 leden.
 Dan zijn er 150, 1500 of zelfs 15.000 fotografen bekend in de app. 
 De app bevat zoekfuncties waarmee je op naam van de fotograaf kunt zoeken.
-Hier vind je bekenden mee. Expertisegebieden laat je interessante fotografen op basis van hun specialismes.
+Hier vind je bekenden mee. Expertisegebieden laat je interessante fotografen zien op basis van hun specialismes.
 </details></p>
 
 </li><li>
