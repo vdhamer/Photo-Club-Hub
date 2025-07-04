@@ -52,7 +52,7 @@ public struct LocalizedExpertiseResultLists {
             }
         }
 
-        // Step 5. remove delimeter after last element
+        // Step 5. warn if there are more expertises than allowed
         if sorted.count > maxExpertisesPerMember { // if list overflows, add a warning
             let moreExpertise = Expertise.findCreateUpdateNonStandard(
                                           context: moc,
