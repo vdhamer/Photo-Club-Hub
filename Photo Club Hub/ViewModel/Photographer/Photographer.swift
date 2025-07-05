@@ -151,9 +151,9 @@ extension Photographer {
         for photographerExpertiseJSON in optionalFields.photographerExpertises {
             let photographerExpertiseID = photographerExpertiseJSON.stringValue
             let expertise = Expertise.findCreateUpdateUndefStandard(context: bgContext,
-                                                                  id: photographerExpertiseID,
-                                                                  name: [],
-                                                                  usage: [])
+                                                                    id: photographerExpertiseID,
+                                                                    name: [],
+                                                                    usage: [])
             _ = PhotographerExpertise.findCreateUpdate(context: bgContext,
                                                        photographer: photographer,
                                                        expertise: expertise)

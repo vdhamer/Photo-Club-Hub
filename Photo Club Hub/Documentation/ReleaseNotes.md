@@ -6,7 +6,7 @@ Data Maintenance
 Code Maintenance
 * Cleaned up translation table (minor)
 
-This build #4643 was made using Xcode beta 1 (17A5241e) and can thus only be used for beta testing.
+This build #4643 was made using Xcode beta 2 (17A5241o) and can thus only be used for beta testing.
 
 ---------------------------------------------------------------------------
 
