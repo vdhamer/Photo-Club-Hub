@@ -15,42 +15,15 @@
         }
     },
     "members": [
+
         {
             "name": {
-                "givenName": "Ben",
-                "infixName": "van",
-                "familyName": "Kaathoven"
+                "givenName": "Adrie",
+                "infixName": "",
+                "familyName": "Dekkers"
             },
             "optional": {
                 "featuredImage": "https://www.fotoclubdendungen.nl/wp-content/uploads/2025/04/Evy--1030x687.jpg"
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "Riet",
-                "infixName": "",
-                "familyName": "School"
-            },
-            "optional": {
-                "featuredImage": "https://www.fotoclubdendungen.nl/wp-content/uploads/2025/04/Evy--1030x687.jpg",
-                "roles": {
-                    "isChairman": true
-                }
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "Bob",
-                "infixName": "",
-                "familyName": "Goedmakers"
-            },
-            "optional": {
-                "featuredImage": "https://www.fotoclubdendungen.nl/wp-content/uploads/2025/04/Evy--1030x687.jpg",
-                "roles": {
-                    "isTreasurer": true
-                }
             }
         },
 
@@ -70,23 +43,9 @@
 
         {
             "name": {
-                "givenName": "Rien",
-                "infixName": "den",
-                "familyName": "Otter"
-            },
-            "optional": {
-                "featuredImage": "https://www.fotoclubdendungen.nl/wp-content/uploads/2025/04/Evy--1030x687.jpg",
-                "roles": {
-                    "isSecretary": true
-                }
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "Rick",
-                "infixName": "",
-                "familyName": "Meinders"
+                "givenName": "Ben",
+                "infixName": "van",
+                "familyName": "Kaathoven"
             },
             "optional": {
                 "featuredImage": "https://www.fotoclubdendungen.nl/wp-content/uploads/2025/04/Evy--1030x687.jpg"
@@ -95,31 +54,9 @@
 
         {
             "name": {
-                "givenName": "Adrie",
+                "givenName": "Birgitte",
                 "infixName": "",
-                "familyName": "Dekkers"
-            },
-            "optional": {
-                "featuredImage": "https://www.fotoclubdendungen.nl/wp-content/uploads/2025/04/Evy--1030x687.jpg"
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "Netty",
-                "infixName": "",
-                "familyName": "Bijnen"
-            },
-            "optional": {
-                "featuredImage": "https://www.fotoclubdendungen.nl/wp-content/uploads/2025/04/Evy--1030x687.jpg"
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "Rob",
-                "infixName": "",
-                "familyName": "Barnhoorn"
+                "familyName": "Broeren"
             },
             "optional": {
                 "featuredImage": "https://www.fotoclubdendungen.nl/wp-content/uploads/2025/04/Evy--1030x687.jpg"
@@ -139,13 +76,78 @@
 
         {
             "name": {
-                "givenName": "Birgitte",
+                "givenName": "Netty",
                 "infixName": "",
-                "familyName": "Broeren"
+                "familyName": "Bijnen"
+            },
+            "optional": {
+                "featuredImage": "https://www.fotoclubdendungen.nl/wp-content/uploads/2025/04/Evy--1030x687.jpg"
+            }
+        },
+
+        {
+            "name": {
+                "givenName": "Bob",
+                "infixName": "",
+                "familyName": "Goedmakers"
+            },
+            "optional": {
+                "featuredImage": "https://www.fotoclubdendungen.nl/wp-content/uploads/2025/04/Evy--1030x687.jpg",
+                "roles": {
+                    "isTreasurer": true
+                }
+            }
+        },
+
+        {
+            "name": {
+                "givenName": "Rick",
+                "infixName": "",
+                "familyName": "Meinders"
+            },
+            "optional": {
+                "featuredImage": "https://www.fotoclubdendungen.nl/wp-content/uploads/2025/04/Evy--1030x687.jpg"
+            }
+        },
+
+        {
+            "name": {
+                "givenName": "Rien",
+                "infixName": "den",
+                "familyName": "Otter"
+            },
+            "optional": {
+                "featuredImage": "https://www.fotoclubdendungen.nl/wp-content/uploads/2025/04/Evy--1030x687.jpg",
+                "roles": {
+                    "isSecretary": true
+                }
+            }
+        },
+
+        {
+            "name": {
+                "givenName": "Riet",
+                "infixName": "",
+                "familyName": "School"
+            },
+            "optional": {
+                "featuredImage": "https://www.fotoclubdendungen.nl/wp-content/uploads/2025/04/Evy--1030x687.jpg",
+                "roles": {
+                    "isChairman": true
+                }
+            }
+        },
+
+        {
+            "name": {
+                "givenName": "Rob",
+                "infixName": "",
+                "familyName": "Barnhoorn"
             },
             "optional": {
                 "featuredImage": "https://www.fotoclubdendungen.nl/wp-content/uploads/2025/04/Evy--1030x687.jpg"
             }
         }
+
     ]
 }
