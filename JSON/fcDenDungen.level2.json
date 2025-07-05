@@ -23,7 +23,7 @@
                 "familyName": "Dekkers"
             },
             "optional": {
-                "featuredImage": "https://www.fotoclubdendungen.nl/wp-content/uploads/2020/10/Zwitserland-773x1030.jpeg"
+                "featuredImage": "https://www.fotoclubdendungen.nl/wp-content/uploads/2019/04/IMG_0558-1030x687.jpg"
             }
         },
 
@@ -34,7 +34,7 @@
                 "familyName": "Veelenturf"
             },
             "optional": {
-                "featuredImage": "https://www.fotoclubdendungen.nl/wp-content/uploads/2025/04/Evy--1030x687.jpg",
+                "featuredImage": "https://www.fotoclubdendungen.nl/wp-content/uploads/2020/10/Zwitserland-773x1030.jpeg",
                 "roles": {
                     "isAdmin": true
                 }
@@ -48,7 +48,7 @@
                 "familyName": "Kaathoven"
             },
             "optional": {
-                "featuredImage": "https://www.fotoclubdendungen.nl/wp-content/uploads/2025/04/Evy--1030x687.jpg"
+                "featuredImage": "https://www.fotoclubdendungen.nl/wp-content/uploads/2023/11/Ben-8-1030x687.jpeg"
             }
         },
 
@@ -59,7 +59,7 @@
                 "familyName": "Broeren"
             },
             "optional": {
-                "featuredImage": "https://www.fotoclubdendungen.nl/wp-content/uploads/2025/04/Evy--1030x687.jpg"
+                "featuredImage": "https://www.fotoclubdendungen.nl/wp-content/uploads/2023/10/Birgitte-foto-4-687x1030.jpeg"
             }
         },
 
@@ -70,7 +70,7 @@
                 "familyName": "Alebeek"
             },
             "optional": {
-                "featuredImage": "https://www.fotoclubdendungen.nl/wp-content/uploads/2025/04/Evy--1030x687.jpg"
+                "featuredImage": "https://www.fotoclubdendungen.nl/wp-content/uploads/2023/10/Ger-7-1030x687.jpg"
             }
         },
 
@@ -81,7 +81,7 @@
                 "familyName": "Bijnen"
             },
             "optional": {
-                "featuredImage": "https://www.fotoclubdendungen.nl/wp-content/uploads/2025/04/Evy--1030x687.jpg"
+                "featuredImage": "https://www.fotoclubdendungen.nl/wp-content/uploads/2020/10/Netty-Bijnen-Portet-687x1030.jpg"
             }
         },
 
@@ -92,7 +92,7 @@
                 "familyName": "Goedmakers"
             },
             "optional": {
-                "featuredImage": "https://www.fotoclubdendungen.nl/wp-content/uploads/2025/04/Evy--1030x687.jpg",
+                "featuredImage": "https://www.fotoclubdendungen.nl/wp-content/uploads/2020/10/Bob-Goedmakers-Lange-sluitertijd-1030x687.jpg",
                 "roles": {
                     "isTreasurer": true
                 }
@@ -106,7 +106,7 @@
                 "familyName": "Meinders"
             },
             "optional": {
-                "featuredImage": "https://www.fotoclubdendungen.nl/wp-content/uploads/2025/04/Evy--1030x687.jpg"
+                "featuredImage": "https://www.fotoclubdendungen.nl/wp-content/uploads/2023/07/Foto-4-Romantisch-bankje-Rick-Meinders-1030x687.jpg"
             }
         },
 
@@ -131,7 +131,7 @@
                 "familyName": "School"
             },
             "optional": {
-                "featuredImage": "https://www.fotoclubdendungen.nl/wp-content/uploads/2025/04/Evy--1030x687.jpg",
+                "featuredImage": "https://www.fotoclubdendungen.nl/wp-content/uploads/2023/10/Riet-5-1030x687.jpg",
                 "roles": {
                     "isChairman": true
                 }
@@ -145,7 +145,7 @@
                 "familyName": "Barnhoorn"
             },
             "optional": {
-                "featuredImage": "https://www.fotoclubdendungen.nl/wp-content/uploads/2025/04/Evy--1030x687.jpg"
+                "featuredImage": "https://www.fotoclubdendungen.nl/wp-content/uploads/2023/11/Rob-7-1030x688.jpeg"
             }
         }
 
