@@ -55,54 +55,54 @@ extension PhotoClubHubApp {
 
     static func loadClubsAndMembers() {
 
-        // load list of expertises and languages from root.Level0.json file
-//        let level0BackgroundContext = makeBgContext(ctxName: "Level 0 loader")
-//        _ = Level0JsonReader(bgContext: level0BackgroundContext, isInTestBundle: false, useOnlyInBundleFile: false)
+        // load list of Expertises and Languages from root.Level0.json file
+        let level0BackgroundContext = makeBgContext(ctxName: "Level 0 loader")
+        _ = Level0JsonReader(bgContext: level0BackgroundContext, isInTestBundle: false, useOnlyInBundleFile: false)
 
         // load list of photo clubs and museums from root.Level1.json file
-//        let level1BackgroundContext = makeBgContext(ctxName: "Level 1 loader")
-//        _ = Level1JsonReader(bgContext: level1BackgroundContext, // read root.Level1.json file
-//                             isInTestBundle: false, useOnlyInBundleFile: false)
+        let level1BackgroundContext = makeBgContext(ctxName: "Level 1 loader")
+        _ = Level1JsonReader(bgContext: level1BackgroundContext, // read root.Level1.json file
+                             isInTestBundle: false, useOnlyInBundleFile: false)
 
         // load current/former members of Fotogroep De Gender
-//        let genderBackgroundContext = makeBgContext(ctxName: "Level 2 loader fgDeGender")
-//        _ = FotogroepDeGenderMembersProvider(bgContext: genderBackgroundContext,
-//                                             useOnlyInBundleFile: false)
+        let genderBackgroundContext = makeBgContext(ctxName: "Level 2 loader fgDeGender")
+        _ = FotogroepDeGenderMembersProvider(bgContext: genderBackgroundContext,
+                                             useOnlyInBundleFile: false)
 
         // load current/former members of Fotogroep Waalre
-//        let waalreBackgroundContext = makeBgContext(ctxName: "Level 2 loader fgWaalre")
-//        _ = FotogroepWaalreMembersProvider(bgContext: waalreBackgroundContext,
-//                                           useOnlyInBundleFile: false)
+        let waalreBackgroundContext = makeBgContext(ctxName: "Level 2 loader fgWaalre")
+        _ = FotogroepWaalreMembersProvider(bgContext: waalreBackgroundContext,
+                                           useOnlyInBundleFile: false)
 
         // load current/former members of Fotoclub Bellus Imago
-//        let bellusBackgroundContext = makeBgContext(ctxName: "Level 2 loader fcBellusImago")
-//        _ = FotoclubBellusImagoMembersProvider(bgContext: bellusBackgroundContext,
-//                                               useOnlyInBundleFile: false)
+        let bellusBackgroundContext = makeBgContext(ctxName: "Level 2 loader fcBellusImago")
+        _ = FotoclubBellusImagoMembersProvider(bgContext: bellusBackgroundContext,
+                                               useOnlyInBundleFile: false)
 
         // load current/former members of Fotogroep Oirschot
         let oirschotBackgroundContext = makeBgContext(ctxName: "Level 2 loader fgOirschot") // TODO reenable Oirschot
         _ = FotogroepOirschotMembersProvider(bgContext: oirschotBackgroundContext,
                                              useOnlyInBundleFile: false)
 
-//        if includeXampleClubs {
-//
-//            // load test member(s) of XampleMin. Club is called XampleMin (rather than ExampleMin) to be at end of list
-//            let xampleMinBackgroundContext = makeBgContext(ctxName: "Level 2 loader XampleMin")
-//            _ = XampleMinMembersProvider(bgContext: xampleMinBackgroundContext, useOnlyInBundleFile: false)
-//
-//            // load test member(s) of XampleMax. Club is called XampleMax (rather than ExampleMax) to be at end of list
-//            let xampleMaxBackgroundContext = makeBgContext(ctxName: "Level 2 loader XampleMax")
-//            _ = XampleMaxMembersProvider(bgContext: xampleMaxBackgroundContext, useOnlyInBundleFile: false)
-//
-//        }
+        if includeXampleClubs {
+
+            // load test member(s) of XampleMin. Club is called XampleMin (rather than ExampleMin) to be at end of list
+            let xampleMinBackgroundContext = makeBgContext(ctxName: "Level 2 loader XampleMin")
+            _ = XampleMinMembersProvider(bgContext: xampleMinBackgroundContext, useOnlyInBundleFile: false)
+
+            // load test member(s) of XampleMax. Club is called XampleMax (rather than ExampleMax) to be at end of list
+            let xampleMaxBackgroundContext = makeBgContext(ctxName: "Level 2 loader XampleMax")
+            _ = XampleMaxMembersProvider(bgContext: xampleMaxBackgroundContext, useOnlyInBundleFile: false)
+
+        }
 
         // load current/former members of Fotoclub Ericamera
-//        let ericameraBackgroundContext = makeBgContext(ctxName: "Level 2 loader fcEricamera")
-//        _ = FotoclubEricameraMembersProvider(bgContext: ericameraBackgroundContext, useOnlyInBundleFile: false)
+        let ericameraBackgroundContext = makeBgContext(ctxName: "Level 2 loader fcEricamera")
+        _ = FotoclubEricameraMembersProvider(bgContext: ericameraBackgroundContext, useOnlyInBundleFile: false)
 
         // load current/former members of Fotoclub Den Dungen
-//        let dungenBackgroundContext = makeBgContext(ctxName: "Level 2 loader fcDenDungen")
-//        _ = FotoclubDenDungenMembersProvider(bgContext: dungenBackgroundContext, useOnlyInBundleFile: false)
+        let dungenBackgroundContext = makeBgContext(ctxName: "Level 2 loader fcDenDungen")
+        _ = FotoclubDenDungenMembersProvider(bgContext: dungenBackgroundContext, useOnlyInBundleFile: false)
 
     }
 
