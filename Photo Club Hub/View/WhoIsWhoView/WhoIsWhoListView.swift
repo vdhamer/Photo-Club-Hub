@@ -59,8 +59,9 @@ struct WhoIsWhoListView: View {
                 Divider()
                 Text("WhosWho_Caption_4",
                      comment: "Shown in gray at the bottom of the Who's Who page (3/3).")
-                ForEach(Expertise.getAll(context: viewContext).sorted(by: sortExpertisesLocalized),
-                        id: \.self) { expertise in
+                ForEach(Expertise.getAll(context: viewContext)
+                    .sorted(by: sortExpertisesLocalized)
+                    .filter { !$0.id.capitalized.contains("Expertise") }, id: \.self) { expertise in
                     HStack {
                         Text(verbatim: """
                                        \(getIconString(standard: expertise.isStandard)) \

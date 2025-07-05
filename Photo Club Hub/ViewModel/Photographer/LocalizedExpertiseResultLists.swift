@@ -57,8 +57,8 @@ public struct LocalizedExpertiseResultLists {
             let moreExpertise = Expertise.findCreateUpdateNonStandard(
                                           context: moc,
                                           id: String(localized: "Too many expertises",
-                                                      table: "Package",
-                                                      comment: "Shown when too many expertises are found"),
+                                                     table: "Package",
+                                                     comment: "Shown when too many expertises are found"),
                                           name: [],
                                           usage: [] )
             let moreLocalizedExpertise: LocalizedExpertiseResult = moreExpertise.selectedLocalizedExpertise
@@ -67,6 +67,13 @@ public struct LocalizedExpertiseResultLists {
                                                     id: moreExpertise.id,
                                                     customHint: customHint(localizedExpertiseResults: sorted))
                                                 )
+            do { // new expertises are loaded by Level0Loader or Level2Loader. This pseudo-expertise is an exception.
+                if moc.hasChanges {
+                    try moc.save()
+                }
+            } catch {
+                ifDebugFatalError("Failed to save \"too many expertises\" as an Expertise: \(error)")
+            }
         }
 
         // Step 6. remove delimeter after last element

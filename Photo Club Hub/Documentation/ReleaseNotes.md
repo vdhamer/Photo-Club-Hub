@@ -5,6 +5,8 @@ Data Maintenance
 
 Code Maintenance
 * Cleaned up translation table (minor)
+* Bug: "Too many expertises" could show up multiple times in UI Expertise list. Fixed, but also no longer shown at all.
+* Bug: List of expertises often showed incorrect icons, due to no intermediate CoreData save().
 
 This build #4643 was made using Xcode beta 2 (17A5241o) and can thus only be used for beta testing.
 
