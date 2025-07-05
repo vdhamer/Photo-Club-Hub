@@ -18,6 +18,8 @@
       "fotobondNumber": 1674
     }
   },
+
+
   "members": [
     {
       "name": {
@@ -34,11 +36,10 @@
           "isMember": true
         },
         "expertises": [
-          "Aaa",
-          "Bbb"
         ]
       }
     },
+
     {
       "name": {
         "givenName": "Bas",
@@ -54,11 +55,10 @@
           "isMember": true
         },
         "expertises": [
-          "Aaa",
-          "Bbb"
         ]
       }
     },
+
     {
       "name": {
         "givenName": "Ben",
@@ -74,11 +74,10 @@
           "isBestuurslid": true
         },
         "expertises": [
-          "Aaa",
-          "Bbb"
         ]
       }
     },
+
     {
       "name": {
         "givenName": "Bob",
@@ -94,11 +93,10 @@
           "isVoorzitter": true
         },
         "expertises": [
-          "Aaa",
-          "Bbb"
         ]
       }
     },
+
     {
       "name": {
         "givenName": "Cor",
@@ -114,11 +112,10 @@
           "isMember": true
         },
         "expertises": [
-          "Aaa",
-          "Bbb"
         ]
       }
     },
+
     {
       "name": {
         "givenName": "Edjoe",
@@ -134,11 +131,10 @@
           "isMember": true
         },
         "expertises": [
-          "Aaa",
-          "Bbb"
         ]
       }
     },
+
     {
       "name": {
         "givenName": "Geoff",
@@ -154,11 +150,10 @@
           "isBestuurslid": true
         },
         "expertises": [
-          "Aaa",
-          "Bbb"
         ]
       }
     },
+
     {
       "name": {
         "givenName": "Gerd",
@@ -174,11 +169,10 @@
           "isMember": true
         },
         "expertises": [
-          "Aaa",
-          "Bbb"
         ]
       }
     },
+
     {
       "name": {
         "givenName": "Gertjan",
@@ -194,11 +188,10 @@
           "isMember": true
         },
         "expertises": [
-          "Aaa",
-          "Bbb"
         ]
       }
     },
+
     {
       "name": {
         "givenName": "Harry",
@@ -214,11 +207,10 @@
           "isMember": true
         },
         "expertises": [
-          "Aaa",
-          "Bbb"
         ]
       }
     },
+
     {
       "name": {
         "givenName": "Ineke",
@@ -234,11 +226,10 @@
           "isMember": true
         },
         "expertises": [
-          "Aaa",
-          "Bbb"
         ]
       }
     },
+
     {
       "name": {
         "givenName": "Joost",
@@ -254,11 +245,10 @@
           "isMember": true
         },
         "expertises": [
-          "Aaa",
-          "Bbb"
         ]
       }
     },
+
     {
       "name": {
         "givenName": "Klaas",
@@ -274,11 +264,10 @@
           "isMember": true
         },
         "expertises": [
-          "Aaa",
-          "Bbb"
         ]
       }
     },
+
     {
       "name": {
         "givenName": "Manfred",
@@ -294,11 +283,10 @@
           "isPenningmeester": true
         },
         "expertises": [
-          "Aaa",
-          "Bbb"
         ]
       }
     },
+
     {
       "name": {
         "givenName": "Marie-Louise",
@@ -314,11 +302,10 @@
           "isSecretaris": true
         },
         "expertises": [
-          "Aaa",
-          "Bbb"
         ]
       }
     },
+
     {
       "name": {
         "givenName": "Marjo",
@@ -335,10 +322,9 @@
         "isMember": true
       },
       "expertises": [
-        "Aaa",
-        "Bbb"
       ]
     },
+
     {
       "name": {
         "givenName": "Peter",
@@ -354,11 +340,10 @@
           "isMember": true
         },
         "expertises": [
-          "Aaa",
-          "Bbb"
         ]
       }
     },
+
     {
       "name": {
         "givenName": "Rob",
@@ -374,11 +359,10 @@
           "isMember": true
         },
         "expertises": [
-          "Aaa",
-          "Bbb"
         ]
       }
     },
+
     {
       "name": {
         "givenName": "Ton",
@@ -394,10 +378,9 @@
           "isMember": true
         },
         "expertises": [
-          "Aaa",
-          "Bbb"
         ]
       }
     }
+
   ]
 }

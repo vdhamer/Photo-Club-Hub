@@ -2,6 +2,7 @@
 
 Data Maintenance
 * Added Pennings Foundation (Eindhoven) to the list of photo museums
+* Removed test Expertises "Aaa" and "Bbb" from fcEricamera
 
 Code Maintenance
 * Cleaned up translation table (minor)
