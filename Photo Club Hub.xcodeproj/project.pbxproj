@@ -32,6 +32,8 @@
 		D04856362D46A45D00022117 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = D04856352D46A45D00022117 /* Localizable.xcstrings */; };
 		D04856382D46A62200022117 /* Package.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = D04856372D46A62200022117 /* Package.xcstrings */; };
 		D04DFD882B39F788006EF297 /* Published+UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A40277F731C0049AB84 /* Published+UserDefaults.swift */; };
+		D04E91232E1B163200F6A66F /* IndividueelBO.level2.json in Resources */ = {isa = PBXBuildFile; fileRef = D04E91222E1B163200F6A66F /* IndividueelBO.level2.json */; };
+		D04E91252E1B1B8100F6A66F /* IndividueelBOMemebersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04E91242E1B1B8100F6A66F /* IndividueelBOMemebersProvider.swift */; };
 		D05124852C42BE2D00D94B81 /* Level2JsonReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05124842C42BE2D00D94B81 /* Level2JsonReader.swift */; };
 		D05124892C43122C00D94B81 /* UrlComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05124882C43122C00D94B81 /* UrlComponents.swift */; };
 		D05E451E27EF2A2C00D31327 /* ReadmeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05E451D27EF2A2C00D31327 /* ReadmeView.swift */; };
@@ -166,6 +168,8 @@
 		D048571C2D46C13100022117 /* nl.xcloc */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = nl.xcloc; sourceTree = "<group>"; };
 		D04A2B112AC0958C003ED113 /* LineCount.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = LineCount.xlsx; sourceTree = "<group>"; };
 		D04D7B2B2D2B3B210048454B /* Jaarverslag 2024 Website.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jaarverslag 2024 Website.docx"; sourceTree = "<group>"; };
+		D04E91222E1B163200F6A66F /* IndividueelBO.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = IndividueelBO.level2.json; sourceTree = "<group>"; };
+		D04E91242E1B1B8100F6A66F /* IndividueelBOMemebersProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividueelBOMemebersProvider.swift; sourceTree = "<group>"; };
 		D05124842C42BE2D00D94B81 /* Level2JsonReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level2JsonReader.swift; sourceTree = "<group>"; };
 		D05124882C43122C00D94B81 /* UrlComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlComponents.swift; sourceTree = "<group>"; };
 		D05414F62AC7499000D899D8 /* FotogroepDeGenderMembersProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FotogroepDeGenderMembersProvider.swift; sourceTree = "<group>"; };
@@ -391,6 +395,7 @@
 				D072D5E42D333E7500EA88DD /* XampleMinMembersProvider.swift */,
 				D05417372D31DDE300A2A579 /* XampleMaxMembersProvider.swift */,
 				D0A6155A2D91AEA90024EC9E /* FotoclubBellusImagoMembersProvider.swift */,
+				D04E91242E1B1B8100F6A66F /* IndividueelBOMemebersProvider.swift */,
 			);
 			path = IndividualClubs;
 			sourceTree = "<group>";
@@ -705,6 +710,7 @@
 		D0F871912D403D1700530D10 /* JSON */ = {
 			isa = PBXGroup;
 			children = (
+				D04E91222E1B163200F6A66F /* IndividueelBO.level2.json */,
 				D0F78AC92DFCCBFE00DE234D /* fcDenDungen.level2.json */,
 				D0273E482DEE42C800C4F5E1 /* fcEricamera.level2.json */,
 				D0273E492DEE42C800C4F5E1 /* fgOirschot.level2.json */,
@@ -846,6 +852,7 @@
 				D0ACCFD82DEFAD690002FACC /* XampleMin.level2.json in Resources */,
 				D0F4B4D82D86CFA500F60920 /* empty.level0.json in Resources */,
 				D04856382D46A62200022117 /* Package.xcstrings in Resources */,
+				D04E91232E1B163200F6A66F /* IndividueelBO.level2.json in Resources */,
 				D008D2AA28739167007A7BE2 /* .gitignore in Resources */,
 				D0B5743E2C41D79300334E4C /* Assets.xcassets in Resources */,
 				D0F78ACA2DFCCBFE00DE234D /* fcDenDungen.level2.json in Resources */,
@@ -1016,6 +1023,7 @@
 				D0831A31277F72590049AB84 /* MemberPortfolio.swift in Sources */,
 				D0BADF842DF9C80800BDE2CD /* PreferencesViewModel.swift in Sources */,
 				D0831A32277F72590049AB84 /* Photographer.swift in Sources */,
+				D04E91252E1B1B8100F6A66F /* IndividueelBOMemebersProvider.swift in Sources */,
 				D029C4CF2C53E5C700ABA977 /* OrganizationOptionalFields.swift in Sources */,
 				D0B32BB32C15C51A009FF8E7 /* AppVersion.swift in Sources */,
 				D0EAEB332B3CA6D300EC05B6 /* Level1JsonReader.swift in Sources */,

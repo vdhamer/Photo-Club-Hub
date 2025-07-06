@@ -93,6 +93,10 @@ extension PhotoClubHubApp {
             let xampleMaxBackgroundContext = makeBgContext(ctxName: "Level 2 loader XampleMax")
             _ = XampleMaxMembersProvider(bgContext: xampleMaxBackgroundContext, useOnlyInBundleFile: false)
 
+            // load current/former members of container for Individual members of Fotobond (in region 16)
+            let individueelBOBackgroundContext = makeBgContext(ctxName: "Level 2 loader IndividueelBO")
+            _ = IndividueelBOMembersProvider(bgContext: individueelBOBackgroundContext, useOnlyInBundleFile: false)
+
         }
 
         // load current/former members of Fotoclub Ericamera

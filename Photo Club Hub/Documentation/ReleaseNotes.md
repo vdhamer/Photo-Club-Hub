@@ -4,6 +4,7 @@ Data Maintenance
 * Added Pennings Foundation (Eindhoven) to the list of photo museums.
 * Removed test Expertises "Aaa" and "Bbb" from fcEricamera.
 * Added interim FeaturedImages for fcDenDungen (the club should select preferred images themselves).
+* Added individueelBO as a placeholder for individual members of the Dutch national Fotobond.
 
 Code Maintenance
 * Cleaned up translation table (minor).
@@ -11,7 +12,7 @@ Code Maintenance
 * Bug: List of expertises often showed incorrect icons, due to no intermediate CoreData save().
 
 Settings App
-* Added a toggle (default is Off) to load XampleMin, XampleMax and (for now) fgOirschot clubs.
+* Added a toggle (default is Off) to load XampleMin, XampleMax, and (temp) individueelBO and fgOirschot clubs.
 * Forced a datareset at dataResetPending280b4643 (related to new Settings switch).
 
 This build #4643 was made using Xcode beta 2 (17A5241o) and can thus only be used for beta testing.
