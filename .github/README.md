@@ -324,12 +324,18 @@ Version 2 added support for multiple photo clubs. This means:
 
 ### Website Generation
 
-A new companion app [Photo Club Hub HTML](https://github.com/vdhamer/Photo-Club-Hub-HTML) is underway that uses the
-same input data used by this app to generate (static) HTML web pages. Initial focus in the HTML app is to generate
-a static webpage with members and portfolio links. That page can be added to a club's existing Wordpress site.
+A companion app [Photo Club Hub HTML](https://github.com/vdhamer/Photo-Club-Hub-HTML) exists that uses the
+same input data used by this app to generate (static) HTML web pages. The companion app generates
+static webpages _per club_ that list each club's members and has links to their portfolios.
 
-It provides an alternative for "the rest of us" who don't use an iPhone or iPad. But also for anyone who want to
-view the information or photos on a laptop or desktop computer.
+The webpages per club are collectively equivalent to the Portfolio page in iOS app.
+There is no central index page yet to locate the club HTML pages, but this is will be added at some point.
+The individual club pages can be easily integrated into existing (e.g. Wordpress), websites maintained by
+the individual clubs.
+
+Apart from keeping websites up to date using the available Photo Club Hub data, the HTML version provides an alternative
+for "the rest of us" who don't own an iPhone or an iPad.
+The HTML version also covers the cases where someone wants to view the  the information or photos on a laptop or desktop computer.
 
 ### Searchable Lists
 
