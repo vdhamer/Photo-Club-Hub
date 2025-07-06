@@ -10,7 +10,7 @@ import Foundation
 struct Settings {
 
     // Doesn't really work in Photo Club Hub HTML until the version numbers are synchronized
-    static var dataResetPending280: Bool { // stored as a string shown in Settings
+    static var dataResetPending280b4643: Bool { // stored as a string shown in Settings
         // returns true until a reset is done
 
         if UserDefaults.standard.object(forKey: "dataResetPending280") == nil {
@@ -28,24 +28,19 @@ struct Settings {
         // Setting this to true clears the existing database and skips loading any data on app startup.
         // It displays "Manual loading" in the Prelude startup screen as a warning that the mode is set.
         // The missing club/museum/member data can be loaded manually by swiping down on e.g., the Portfolio screen.
-        get {
-            UserDefaults.standard.bool(forKey: "manualDataLoading") // here we are happy with missing key -> false
-        }
-        set {
-            UserDefaults.standard.set(newValue, forKey: "manualDataLoading")
-        }
+        UserDefaults.standard.bool(forKey: "manualDataLoading") // here we are happy with missing key -> false
     }
 
     static var extraCoreDataSaves: Bool { // controlled by toggle in Settings
         // Important setting that should normally be kept false.
         // It adds extra ManagedObjectContext.save() transactions to the minimal set of save's.
         // It is needed for testing purposes only.
-        get {
-            UserDefaults.standard.bool(forKey: "extraCoreDataSaves") // here we are happy with missing key -> false
-        }
-        set {
-            UserDefaults.standard.set(newValue, forKey: "extraCoreDataSaves")
-        }
+        UserDefaults.standard.bool(forKey: "extraCoreDataSaves") // here we are happy with missing key -> false
     }
 
+    static var loadTestClubs: Bool { // controlled by toggle in Settings
+        // Instructs the app whether to load XampleMax.level2.json and XampleMin.level2.json
+        // It will typically be used by people creating new level2.json files to see what the example files look like
+        UserDefaults.standard.bool(forKey: "loadTestClubs") // if the key is missing, this returns false
+    }
 }

@@ -120,6 +120,16 @@
 			<key>Key</key>
 			<string>dataResetPending280</string>
 		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSToggleSwitchSpecifier</string>
+			<key>Title</key>
+			<string>Load test clubs</string>
+			<key>Key</key>
+			<string>loadTestClubs</string>
+			<key>DefaultValue</key>
+			<false/>
+		</dict>
 	</array>
 </dict>
 </plist>

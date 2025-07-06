@@ -1,14 +1,18 @@
 ### 2.8.0 (GitHub commit ???????) ??-07-25
 
 Data Maintenance
-* Added Pennings Foundation (Eindhoven) to the list of photo museums
-* Removed test Expertises "Aaa" and "Bbb" from fcEricamera
+* Added Pennings Foundation (Eindhoven) to the list of photo museums.
+* Removed test Expertises "Aaa" and "Bbb" from fcEricamera.
 * Added interim FeaturedImages for fcDenDungen (the club should select preferred images themselves).
 
 Code Maintenance
-* Cleaned up translation table (minor)
+* Cleaned up translation table (minor).
 * Bug: "Too many expertises" could show up multiple times in UI Expertise list. Fixed, but also no longer shown at all.
 * Bug: List of expertises often showed incorrect icons, due to no intermediate CoreData save().
+
+Settings App
+* Added a toggle (default is Off) to load XampleMin, XampleMax and (for now) fgOirschot clubs.
+* Forced a datareset at dataResetPending280b4643 (related to new Settings switch).
 
 This build #4643 was made using Xcode beta 2 (17A5241o) and can thus only be used for beta testing.
 

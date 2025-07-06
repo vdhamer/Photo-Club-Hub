@@ -12,7 +12,6 @@ import CoreData // for NSManagedObjectContext
 struct PhotoClubHubApp: App {
 
     @Environment(\.scenePhase) var scenePhase
-    static let includeXampleClubs: Bool = true // whether or not to include XmpleMin and XmpleMax clubs
 
     init() {
 
@@ -25,7 +24,7 @@ struct PhotoClubHubApp: App {
 
         // update version number shown in iOS Settings
         UserDefaults.standard.set(Bundle.main.fullVersion, forKey: "version_preference")
-        if Settings.manualDataLoading || Settings.dataResetPending280 {
+        if Settings.manualDataLoading || Settings.dataResetPending280b4643 {
             Model.deleteAllCoreDataObjects(context: viewContext) // keep resetting if manualDataLoading=true
         } else { // initialize some constant records for Language and OrganizationType (for stability)
             Language.initConstants()
@@ -79,12 +78,12 @@ extension PhotoClubHubApp {
         _ = FotoclubBellusImagoMembersProvider(bgContext: bellusBackgroundContext,
                                                useOnlyInBundleFile: false)
 
-        // load current/former members of Fotogroep Oirschot
-        let oirschotBackgroundContext = makeBgContext(ctxName: "Level 2 loader fgOirschot") // TODO reenable Oirschot
-        _ = FotogroepOirschotMembersProvider(bgContext: oirschotBackgroundContext,
-                                             useOnlyInBundleFile: false)
+        if Settings.loadTestClubs {
 
-        if includeXampleClubs {
+            // load current/former members of Fotogroep Oirschot
+            let oirschotBackgroundContext = makeBgContext(ctxName: "Level 2 loader fgOirschot")
+            _ = FotogroepOirschotMembersProvider(bgContext: oirschotBackgroundContext,
+                                                 useOnlyInBundleFile: false)
 
             // load test member(s) of XampleMin. Club is called XampleMin (rather than ExampleMin) to be at end of list
             let xampleMinBackgroundContext = makeBgContext(ctxName: "Level 2 loader XampleMin")
