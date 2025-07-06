@@ -1,0 +1,50 @@
+{
+    "club":
+    {
+        "idPlus": {
+            "town": "Eindhoven",
+            "fullName": "Individuele Leden Brabant Oost",
+            "nickName": "IndividueelBO"
+        },
+        "coordinates": {
+            "latitude": 51.44327,
+            "longitude": 5.47990
+        },
+        "optional": {
+           "level2URL": "https://www.example.com/IndividueelBO.level2.json",
+            "remark": [
+                {
+                    "language": "EN",
+                    "value": "These photographers are members of the Dutch national Fotobond, but not via a specific club."
+                },
+                {
+                    "language": "NL",
+                    "value": "Individuele leden van de Koninklijke Fotobond - Afdeling 16 Brabant Oost."
+                }
+            ],
+            "nlSpecific": {
+                "fotobondNumber": 1600
+            }
+        }
+    },
+
+
+    "members": [
+
+        {
+            "name": {
+                "givenName": "Mariet",
+                "infixName": "",
+                "familyName": "Wielders"
+            },
+            "optional": {
+                "website": "https://www.m3w.nl",
+                "featuredImage": "https://www.m3w.nl/wp-content/uploads/2017/12/Portretten-DSC06336-Large-300x300.jpg",
+                "level3URL": "https://www.m3w.nl/portfolio/",
+                "membershipStartDate": "2025-01-01",
+                "expertises": [ "Portrait", "Multiple-Exposure" ]
+            }
+        }
+
+    ]
+}

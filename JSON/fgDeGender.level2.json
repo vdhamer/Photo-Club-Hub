@@ -391,9 +391,6 @@
                 "familyName": "Wielders"
             },
             "optional": {
-                "roles": {
-                    "isChairman": false
-                },
                 "birthday": "9999-10-09",
                 "website": "https://www.m3w.nl",
                 "level3URL": "http://www.vdhamer.com/fgDeGender/Mariet_Wielders/",
