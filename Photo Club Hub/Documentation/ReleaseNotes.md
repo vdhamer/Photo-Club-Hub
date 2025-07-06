@@ -12,7 +12,7 @@ Code Maintenance
 * Bug: List of expertises often showed incorrect icons, due to no intermediate CoreData save().
 
 Settings App
-* Added a toggle (default is Off) to load XampleMin, XampleMax, and (temp) IndividueelBO and fgOirschot clubs.
+* Added a toggle (default is Off) to load the XampleMin, XampleMax, and (temp) IndividueelBO and fgOirschot clubs.
 * Forced a datareset at dataResetPending280b4643 (related to new Settings switch).
 
 This build #4643 was made using Xcode beta 2 (17A5241o) and can thus only be used for beta testing.
