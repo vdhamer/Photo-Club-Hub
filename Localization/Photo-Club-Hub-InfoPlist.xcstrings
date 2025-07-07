@@ -43,13 +43,13 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "To display your current location on the maps."
+            "value" : "This allows displaying your current location on the maps."
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Om de huidige locatie van de gebruiker te tonen op de landkaarten."
+            "value" : "Hiermee wordt de huidige locatie van de gebruiker getoond op de landkaarten."
           }
         }
       }

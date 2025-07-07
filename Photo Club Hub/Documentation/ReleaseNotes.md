@@ -1,5 +1,8 @@
 ### 2.8.0 (GitHub commit ???????) ??-07-25
 
+Code Maintenance
+* Changed message asking permission to access user's location (minor).
+
 Data Maintenance
 * Fixed spelling of a name MK in fgWaalre.
 * Forced a datareset at dataResetPending280b4644 (related to previous bullet).
