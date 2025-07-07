@@ -10,7 +10,7 @@ import Foundation
 struct Settings {
 
     // Doesn't really work in Photo Club Hub HTML until the version numbers are synchronized
-    static var dataResetPending280b4643: Bool { // stored as a string shown in Settings
+    static var dataResetPending280b4644: Bool { // stored as a string shown in Settings
         // returns true until a reset is done
 
         if UserDefaults.standard.object(forKey: "dataResetPending280") == nil {

@@ -1,6 +1,16 @@
 ### 2.8.0 (GitHub commit ???????) ??-07-25
 
 Data Maintenance
+* Fixed spelling of a name MK in fgWaalre.
+* Forced a datareset at dataResetPending280b4644 (related to previous bullet).
+
+This build #4644 was made using Xcode 16.4 and is intended for App Store distribution.
+
+---------------------------------------------------------------------------
+
+### 2.8.0 (GitHub commit cda6e56) 06-07-25
+
+Data Maintenance
 * Added Pennings Foundation (Eindhoven) to the list of photo museums.
 * Removed test Expertises "Aaa" and "Bbb" from fcEricamera.
 * Added interim FeaturedImages for fcDenDungen (the club should select preferred images themselves).
@@ -32,7 +42,7 @@ Data Maintenance
 * Triggered a forced data refresh when release 2.8.0 is first run (related to duplicate member in fgW)
 * Temporarily disabled fgOirschot (awaiting more complete data)
 
-This build #4642 was made using Xcode 16.4 and is intended for App Store distribution.
+This build #4642 was made using Xcode 16.4.
 
 ---------------------------------------------------------------------------
 
