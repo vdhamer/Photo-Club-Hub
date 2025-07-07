@@ -1,4 +1,11 @@
-### 2.8.0 (GitHub commit ???????) ??-07-25
+### 2.8.1 (GitHub commit ???????) ??-07-25
+
+This build #4645 was made using Xcode beta 2 (17A5241o) and can thus only be used for beta testing.
+
+---------------------------------------------------------------------------
+
+
+### 2.8.0 (GitHub commit 0d8cd34) 07-07-25
 
 Code Maintenance
 * Changed message asking permission to access user's location (minor).
@@ -7,7 +14,7 @@ Data Maintenance
 * Fixed spelling of a name MK in fgWaalre.
 * Forced a datareset at dataResetPending280b4644 (related to previous bullet).
 
-This build #4644 was made using Xcode 16.4 and is intended for App Store distribution.
+This build #4644 was made using Xcode 16.4 was released via the App Store.
 
 ---------------------------------------------------------------------------
 
