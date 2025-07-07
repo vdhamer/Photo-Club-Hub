@@ -43,4 +43,5 @@ struct Settings {
         // It will typically be used by people creating new level2.json files to see what the example files look like
         UserDefaults.standard.bool(forKey: "loadTestClubs") // if the key is missing, this returns false
     }
+
 }

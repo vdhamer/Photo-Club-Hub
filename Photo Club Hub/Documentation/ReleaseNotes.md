@@ -4,7 +4,6 @@ This build #4645 was made using Xcode beta 2 (17A5241o) and can thus only be use
 
 ---------------------------------------------------------------------------
 
-
 ### 2.8.0 (GitHub commit 0d8cd34) 07-07-25
 
 Code Maintenance
@@ -12,7 +11,7 @@ Code Maintenance
 
 Data Maintenance
 * Fixed spelling of a name MK in fgWaalre.
-* Forced a datareset at dataResetPending280b4644 (related to previous bullet).
+* Forced a datareset at dataResetPending280b4644 (related to member name fix).
 
 This build #4644 was made using Xcode 16.4 was released via the App Store.
 
