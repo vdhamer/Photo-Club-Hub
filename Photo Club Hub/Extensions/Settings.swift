@@ -15,6 +15,7 @@ struct Settings {
 
         if UserDefaults.standard.object(forKey: "dataResetPending280") == nil {
             UserDefaults.standard.set(true, forKey: "dataResetPending280") // interpret nil as true
+            UserDefaults.standard.removeObject(forKey: "dataResetPending280") // cleanup of any old reset key-value pair
             UserDefaults.standard.removeObject(forKey: "dataResetPending272") // cleanup of any old reset key-value pair
             UserDefaults.standard.removeObject(forKey: "dataResetPending") // cleanup of any old reset key-value pair
         }

@@ -58,7 +58,7 @@ import CoreData // for NSManagedObjectContext
 
     @Test("Is nil handled properly") func addLocalizedExpertiseNilUsage() {
         let expertise = Expertise.findCreateUpdateNonStandard(context: context, id: String.random(length: 25),
-                                                          name: [], usage: [])
+                                                              name: [], usage: [])
         let language = Language.findCreateUpdate(context: context, isoCode: "NL")
         let localizedName = String.random(length: 10)
 

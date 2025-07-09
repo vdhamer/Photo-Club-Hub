@@ -66,7 +66,8 @@ import CoreData // for NSManagedObjectContext
 
         #expect(photographerExpertise1 == photographerExpertise2)
         #expect(PhotographerExpertise.count(context: context,
-                                            expertiseID: expertiseID, photographer: photographer) == 1)
+                                            expertiseID: expertiseID,
+					    photographer: photographer) == 1)
     }
 
 }

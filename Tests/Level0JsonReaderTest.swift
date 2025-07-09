@@ -9,7 +9,7 @@ import Testing
 @testable import Photo_Club_Hub
 import CoreData // for NSManagedObjectContext
 
-@MainActor @Suite("Tests the Level 0 JSON reader") struct Level0JsonReaderTest {
+@MainActor @Suite("Tests the Level 0 JSON reader") struct Level0JsonReaderTests {
 
     fileprivate let context: NSManagedObjectContext
 
@@ -48,8 +48,8 @@ import CoreData // for NSManagedObjectContext
 
         Model.deleteCoreDataExpertisesLanguages(context: bgContext)
         #expect(Expertise.count(context: bgContext) == 0) // returns 3 instead of zero, why??
-        #expect(PhotographerExpertise.count(context: bgContext) == 0) // returns 3 instead of zero, why??
         #expect(LocalizedExpertise.count(context: bgContext) == 0)
+        #expect(PhotographerExpertise.count(context: bgContext) == 0) // returns 3 instead of zero, why??
 
         bgContext.performAndWait {
             _ = Level0JsonReader(bgContext: bgContext, // read root.Level0.json file
@@ -58,8 +58,8 @@ import CoreData // for NSManagedObjectContext
             try? bgContext.save()
         }
         #expect(Expertise.count(context: bgContext) == 1)
-        #expect(PhotographerExpertise.count(context: bgContext) == 0)
         #expect(LocalizedExpertise.count(context: bgContext) == 4)
+        #expect(PhotographerExpertise.count(context: bgContext) == 0)
    }
 
     // Read root.level0.json and check for parsing errors.

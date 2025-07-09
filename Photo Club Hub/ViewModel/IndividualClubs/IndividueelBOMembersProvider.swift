@@ -11,8 +11,8 @@ public class IndividueelBOMembersProvider {
 
     public init(bgContext: NSManagedObjectContext,
                 useOnlyInBundleFile: Bool = false,
-                synchronousWithRandomTown: Bool = false,
-                randomTown: String = "RandomTown") {
+                synchronousWithRandomTown: Bool = false, // for testing
+                randomTown: String = "RandomTown") { // for testing
 
         if synchronousWithRandomTown {
             bgContext.performAndWait { // ...or execute same block synchronously

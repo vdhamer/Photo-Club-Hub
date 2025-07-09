@@ -1,5 +1,11 @@
 ### 2.8.1 (GitHub commit ???????) ??-07-25
 
+Code Maintenance
+* Tested with Xcode 26.0 beta 2 (17A5276g), iOS 26 beta (23A5287g)
+* Fixed file name of IndividueelBOMembersProvider.swift
+* removed obsolete UserData key dataResetPending280
+* minor cleanups to unit Test code
+
 This build #4645 was made using Xcode beta 2 (17A5241o) and can thus only be used for beta testing.
 
 ---------------------------------------------------------------------------

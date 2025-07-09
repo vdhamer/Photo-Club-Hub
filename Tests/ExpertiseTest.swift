@@ -9,7 +9,7 @@ import Testing
 @testable import Photo_Club_Hub
 import CoreData // for NSManagedObjectContext
 
-@MainActor @Suite("Tests the Core Data Expertise class") struct ExpertiseTest {
+@MainActor @Suite("Tests the Core Data Expertise class") struct ExpertiseTests {
 
     fileprivate let context: NSManagedObjectContext
 
