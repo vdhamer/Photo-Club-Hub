@@ -1,386 +1,293 @@
 {
-  "club": {
-    "idPlus": {
-      "town": "Eindhoven",
-      "fullName": "Fotoclub Ericamera",
-      "nickname": "fcEricamera"
-    }
-  },
-  "optional": {
-    "coordinates": {
-      "latitude": 51.45403,
-      "longitude": 5.46288
-    },
-    "website": {
-      "level3URL": "https://www.ericamera.nl"
-    },
-    "nlSpecific": {
-      "fotobondNumber": 1674
-    }
-  },
-
-
-  "members": [
-    {
-      "name": {
-        "givenName": "Ad",
-        "infixName": "",
-        "familyName": "Karman"
-      },
-      "optional": {
-        "level3URL": "https://www.ericamera.nl/ad-karman",
-        "nlSpecific": {
-          "fotobondNumber": 1674005
+    "club": {
+        "idPlus": {
+            "town"    : "Eindhoven",
+            "fullName": "Fotoclub Ericamera",
+            "nickname": "fcEricamera"
         },
-        "roles": {
-          "isMember": true
-        },
-        "expertises": [
-        ]
-      }
+        "optional": {
+            "coordinates": {"latitude": 51.45403, "longitude": 5.46288},
+            "website"    : {"level3URL": "https://www.ericamera.nl"},
+            "nlSpecific" : {"fotobondNumber": 1674}
+        }
     },
 
-    {
-      "name": {
-        "givenName": "Bas",
-        "infixName": "",
-        "familyName": "Wagemakers"
-      },
-      "optional": {
-        "level3URL": "https://www.ericamera.nl/bas-wagemakers",
-        "nlSpecific": {
-          "fotobondNumber": 1674031
-        },
-        "roles": {
-          "isMember": true
-        },
-        "expertises": [
-        ]
-      }
-    },
 
-    {
-      "name": {
-        "givenName": "Ben",
-        "infixName": "van",
-        "familyName": "Veelen"
-      },
-      "optional": {
-        "level3URL": "https://www.ericamera.nl/ben-van-veelen",
-        "nlSpecific": {
-          "fotobondNumber": 1674023
-        },
-        "roles": {
-          "isBestuurslid": true
-        },
-        "expertises": [
-        ]
-      }
-    },
+    "members": [
 
-    {
-      "name": {
-        "givenName": "Bob",
-        "infixName": "",
-        "familyName": "Alisic"
-      },
-      "optional": {
-        "level3URL": "https://www.ericamera.nl/bob-alisic",
-        "nlSpecific": {
-          "fotobondNumber": 1674030
+        {
+            "name": {
+                "givenName" : "Ad",
+                "infixName" : "",
+                "familyName": "Karman"
+            },
+            "optional": {
+                "featuredimage": "https://static.wixstatic.com/media/8a1255_ef497a08b6a54acda5d840722cdb9a65~mv2.jpg/v1/fill/w_1200,h_800,al_c,q_90,enc_auto/8a1255_ef497a08b6a54acda5d840722cdb9a65~mv2.jpg",
+                "level3URL": "https://www.ericamera.nl/ad-karman",
+                "website": "www.adkarman.nl",
+                "nlSpecific": {"fotobondNumber": 1674005},
+                "expertises": ["Landscape", "City"]
+            }
         },
-        "roles": {
-          "isVoorzitter": true
-        },
-        "expertises": [
-        ]
-      }
-    },
 
-    {
-      "name": {
-        "givenName": "Cor",
-        "infixName": "van",
-        "familyName": "Deursen"
-      },
-      "optional": {
-        "level3URL": "https://www.ericamera.nl/cor-van-deursen",
-        "nlSpecific": {
-          "fotobondNumber": 1674013
+        {
+            "name": {
+                "givenName" : "Bas",
+                "infixName" : "",
+                "familyName": "Wagemakers"
+            },
+            "optional": {
+                "featuredimage": "https://static.wixstatic.com/media/8a1255_c32724778b0344adaa5779b63d702ed4~mv2.png/v1/fill/w_1141,h_800,al_c,q_95,enc_avif,quality_auto/8a1255_c32724778b0344adaa5779b63d702ed4~mv2.png",
+                "level3URL": "https://www.ericamera.nl/bas-wagemakers",
+                "website": "www.baswagemakersfotografie.nl",
+                "nlSpecific": {"fotobondNumber": 1674031},
+                "expertises": ["Architecture"]
+            }
         },
-        "roles": {
-          "isMember": true
-        },
-        "expertises": [
-        ]
-      }
-    },
 
-    {
-      "name": {
-        "givenName": "Edjoe",
-        "infixName": "",
-        "familyName": "Osinski"
-      },
-      "optional": {
-        "level3URL": "https://www.ericamera.nl/edjoe-osinski",
-        "nlSpecific": {
-          "fotobondNumber": 1674036
+        {
+            "name": {
+                "givenName" : "Ben",
+                "infixName" : "van",
+                "familyName": "Veelen"
+            },
+            "optional": {
+                "featuredimage": "https://static.wixstatic.com/media/8a1255_799782e2474a459493aeb1f44757f4ab~mv2.jpg/v1/fill/w_1200,h_801,al_c,q_90,enc_auto/8a1255_799782e2474a459493aeb1f44757f4ab~mv2.jpg",
+                "level3URL": "https://www.ericamera.nl/ben-van-veelen",
+                "website": "www.bernardfoto.nl",
+                "nlSpecific": {"fotobondNumber": 1674023},
+                "roles": {"isBestuurslid": true},
+                "expertises": ["Theatre", "LR"]
+            }
         },
-        "roles": {
-          "isMember": true
-        },
-        "expertises": [
-        ]
-      }
-    },
 
-    {
-      "name": {
-        "givenName": "Geoff",
-        "infixName": "",
-        "familyName": "Naylor"
-      },
-      "optional": {
-        "level3URL": "https://www.ericamera.nl/geoff-naylor",
-        "nlSpecific": {
-          "fotobondNumber": 1674008
+        {
+            "name": {
+                "givenName" : "Bob",
+                "infixName" : "",
+                "familyName": "Alisic"
+            },
+            "optional": {
+                "featuredimage": "https://static.wixstatic.com/media/8a1255_7238dbfc7a2d4dcb914697338c160d0c~mv2.jpg/v1/fill/w_1094,h_1200,al_c,q_90,enc_auto/8a1255_7238dbfc7a2d4dcb914697338c160d0c~mv2.jpg",
+                "level3URL": "https://www.ericamera.nl/bob-alisic",
+                "nlSpecific": {"fotobondNumber": 1674030},
+                "roles": {"isVoorzitter": true},
+                "expertises": ["Theatre", "Printing"]
+            }
         },
-        "roles": {
-          "isBestuurslid": true
-        },
-        "expertises": [
-        ]
-      }
-    },
 
-    {
-      "name": {
-        "givenName": "Gerd",
-        "infixName": "",
-        "familyName": "Bartels"
-      },
-      "optional": {
-        "level3URL": "https://www.ericamera.nl/gerd-bartels",
-        "nlSpecific": {
-          "fotobondNumber": 1674028
+        {
+            "name": {
+                "givenName" : "Cor",
+                "infixName" : "van",
+                "familyName": "Deursen"
+            },
+            "optional": {
+                "featuredimage": "https://static.wixstatic.com/media/8a1255_2f82237cb6b94db5a1da1bdc7d03379f~mv2.jpg/v1/fill/w_1200,h_797,al_c,q_90,enc_auto/8a1255_2f82237cb6b94db5a1da1bdc7d03379f~mv2.jpg",
+                "level3URL": "https://www.ericamera.nl/cor-van-deursen",
+                "nlSpecific": {"fotobondNumber": 1674013},
+                "expertises": ["Documentary"]
+            }
         },
-        "roles": {
-          "isMember": true
-        },
-        "expertises": [
-        ]
-      }
-    },
 
-    {
-      "name": {
-        "givenName": "Gertjan",
-        "infixName": "",
-        "familyName": "Keesman"
-      },
-      "optional": {
-        "level3URL": "https://www.ericamera.nl/gertjan-keesman",
-        "nlSpecific": {
-          "fotobondNumber": 1674038
+        {
+            "name": {
+                "givenName" : "Edjoe",
+                "infixName" : "",
+                "familyName": "Osinski"
+            },
+            "optional": {
+                "featuredimage": "",
+                "level3URL": "http://www.vdhamer.com/fgWaalre/Emply_Website/",
+                "nlSpecific": {"fotobondNumber": 1674036},
+                "expertises": []
+            }
         },
-        "roles": {
-          "isMember": true
-        },
-        "expertises": [
-        ]
-      }
-    },
 
-    {
-      "name": {
-        "givenName": "Harry",
-        "infixName": "",
-        "familyName": "Graus"
-      },
-      "optional": {
-        "level3URL": "https://www.ericamera.nl/harry-graus",
-        "nlSpecific": {
-          "fotobondNumber": 1674037
+        {
+            "name": {
+                "givenName" : "Geoff",
+                "infixName" : "",
+                "familyName": "Naylor"
+            },
+            "optional": {
+                "featuredimage": "",
+                "level3URL": "https://www.ericamera.nl/geoff-naylor",
+                "nlSpecific": {"fotobondNumber": 1674008},
+                "roles": {"isBestuurslid": true},
+                "expertises": ["Street"]
+            }
         },
-        "roles": {
-          "isMember": true
-        },
-        "expertises": [
-        ]
-      }
-    },
 
-    {
-      "name": {
-        "givenName": "Ineke",
-        "infixName": "",
-        "familyName": "Binnendijk"
-      },
-      "optional": {
-        "level3URL": "https://www.ericamera.nl/ineke-binnendijk",
-        "nlSpecific": {
-          "fotobondNumber": 1674001
+        {
+            "name": {
+                "givenName" : "Gerd",
+                "infixName" : "",
+                "familyName": "Bartels"
+            },
+            "optional": {
+                "featuredimage": "",
+                "level3URL": "http://www.vdhamer.com/fgWaalre/Emply_Website/",
+                "nlSpecific": {"fotobondNumber": 1674028},
+                "expertises": []
+            }
         },
-        "roles": {
-          "isMember": true
-        },
-        "expertises": [
-        ]
-      }
-    },
 
-    {
-      "name": {
-        "givenName": "Joost",
-        "infixName": "",
-        "familyName": "Sytsma"
-      },
-      "optional": {
-        "level3URL": "https://www.ericamera.nl/joost-sytsma",
-        "nlSpecific": {
-          "fotobondNumber": 1674040
+        {
+            "name": {
+                "givenName" : "Gertjan",
+                "infixName" : "",
+                "familyName": "Keesman"
+            },
+            "optional": {
+                "featuredimage": "https://static.wixstatic.com/media/8a1255_124f1dd7c51944939479c2c284a01e00~mv2.png/v1/fill/w_1200,h_800,al_c,q_95,enc_auto/8a1255_124f1dd7c51944939479c2c284a01e00~mv2.png",
+                "level3URL": "https://www.ericamera.nl/gertjan-keesman",
+                "nlSpecific": {"fotobondNumber": 1674038},
+                "expertises": []
+            }
         },
-        "roles": {
-          "isMember": true
-        },
-        "expertises": [
-        ]
-      }
-    },
 
-    {
-      "name": {
-        "givenName": "Klaas",
-        "infixName": "",
-        "familyName": "Vet"
-      },
-      "optional": {
-        "level3URL": "https://www.ericamera.nl/klaas-vet",
-        "nlSpecific": {
-          "fotobondNumber": 1674016
+        {
+            "name": {
+                "givenName" : "Harry",
+                "infixName" : "",
+                "familyName": "Graus"
+            },
+            "optional": {
+                "featuredimage": "",
+                "level3URL": "http://www.vdhamer.com/fgWaalre/Emply_Website/",
+                "nlSpecific": {"fotobondNumber": 1674037},
+                "expertises": []
+            }
         },
-        "roles": {
-          "isMember": true
-        },
-        "expertises": [
-        ]
-      }
-    },
 
-    {
-      "name": {
-        "givenName": "Manfred",
-        "infixName": "",
-        "familyName": "Gammel"
-      },
-      "optional": {
-        "level3URL": "https://www.ericamera.nl/manfred-gammel",
-        "nlSpecific": {
-          "fotobondNumber": 1674033
+        {
+            "name": {
+                "givenName" : "Ineke",
+                "infixName" : "",
+                "familyName": "Binnendijk"
+            },
+            "optional": {
+                "featuredimage": "",
+                "level3URL": "https://www.ericamera.nl/ineke-binnendijk",
+                "nlSpecific": {"fotobondNumber": 1674001},
+                "expertises": []
+            }
         },
-        "roles": {
-          "isPenningmeester": true
-        },
-        "expertises": [
-        ]
-      }
-    },
 
-    {
-      "name": {
-        "givenName": "Marie-Louise",
-        "infixName": "",
-        "familyName": "Gast"
-      },
-      "optional": {
-        "level3URL": "https://www.ericamera.nl/marie-louise-gast",
-        "nlSpecific": {
-          "fotobondNumber": 1674041
+        {
+            "name": {
+                "givenName" : "Joost",
+                "infixName" : "",
+                "familyName": "Sytsma"
+            },
+            "optional": {
+                "featuredimage": "",
+                "level3URL": "http://www.vdhamer.com/fgWaalre/Emply_Website/",
+                "nlSpecific": {"fotobondNumber": 1674040},
+                "expertises": []
+            }
         },
-        "roles": {
-          "isSecretaris": true
-        },
-        "expertises": [
-        ]
-      }
-    },
 
-    {
-      "name": {
-        "givenName": "Marjo",
-        "infixName": "",
-        "familyName": "Teeuwen"
-      },
-      "optional": {
-        "level3URL": "https://www.ericamera.nl/marjo-teeuwen"
-      },
-      "nlSpecific": {
-        "fotobondNumber": 1674099
-      },
-      "roles": {
-        "isMember": true
-      },
-      "expertises": [
-      ]
-    },
+        {
+            "name": {
+                "givenName" : "Klaas",
+                "infixName" : "",
+                "familyName": "Vet"
+            },
+            "optional": {
+                "featuredimage": "",
+                "level3URL": "https://www.ericamera.nl/klaas-vet",
+                "nlSpecific": {"fotobondNumber": 1674016},
+                "expertises": []
+            }
+        },
 
-    {
-      "name": {
-        "givenName": "Peter",
-        "infixName": "",
-        "familyName": "Stas"
-      },
-      "optional": {
-        "level3URL": "https://www.ericamera.nl/peter-stas",
-        "nlSpecific": {
-          "fotobondNumber": 1674012
+        {
+            "name": {
+                "givenName" : "Manfred",
+                "infixName" : "",
+                "familyName": "Gammel"
+            },
+            "optional": {
+                "featuredimage": "https://static.wixstatic.com/media/8a1255_6ea24447866240b0926153b338ab7d48~mv2.jpg/v1/fill/w_2094,h_1396,al_c,q_90,enc_auto/8a1255_6ea24447866240b0926153b338ab7d48~mv2.jpg",
+                "level3URL": "https://www.ericamera.nl/manfred-gammel",
+                "nlSpecific": {"fotobondNumber": 1674033},
+                "roles": {"isPenningmeester": true},
+                "expertises": []
+            }
         },
-        "roles": {
-          "isMember": true
-        },
-        "expertises": [
-        ]
-      }
-    },
 
-    {
-      "name": {
-        "givenName": "Rob",
-        "infixName": "",
-        "familyName": "Sponselee"
-      },
-      "optional": {
-        "level3URL": "https://www.ericamera.nl/rob-sponselee"
-      },
-      "nlSpecific": {
-        "fotobondNumber": 1674011,
-        "roles": {
-          "isMember": true
+        {
+            "name": {
+                "givenName" : "Marie-Louise",
+                "infixName" : "",
+                "familyName": "Gast"
+            },
+            "optional": {
+                "featuredimage": "https://static.wixstatic.com/media/8a1255_19ef918ec89842c88fd06753e0d926b2~mv2.png/v1/fill/w_1145,h_800,al_c,q_95,enc_auto/8a1255_19ef918ec89842c88fd06753e0d926b2~mv2.png",
+                "level3URL": "https://www.ericamera.nl/marie-louise-gast",
+                "nlSpecific": {"fotobondNumber": 1674041},
+                "roles": {"isSecretaris": true},
+                "expertises": ["Landscape", "Nature"]
+            }
         },
-        "expertises": [
-        ]
-      }
-    },
 
-    {
-      "name": {
-        "givenName": "Ton",
-        "infixName": "",
-        "familyName": "Vermaesen"
-      },
-      "optional": {
-        "level3URL": "https://www.ericamera.nl/ton-vermaesen",
-        "nlSpecific": {
-          "fotobondNumber": 1674015
+        {
+            "name": {
+                "givenName" : "Marjo",
+                "infixName" : "",
+                "familyName": "Teeuwen"
+            },
+            "optional": {
+                "featuredimage": "",
+                "level3URL": "http://www.vdhamer.com/fgWaalre/Emply_Website/",
+                "nlSpecific": {"fotobondNumber": 1674099},
+                "expertises": []
+            }
         },
-        "roles": {
-          "isMember": true
-        },
-        "expertises": [
-        ]
-      }
-    }
 
-  ]
+        {
+            "name": {
+                "givenName" : "Peter",
+                "infixName" : "",
+                "familyName": "Stas"
+            },
+            "optional": {
+                "featuredimage": "https://static.wixstatic.com/media/8a1255_9be98f6f6cbc4c40b37706b9426ee18c~mv2.jpg/v1/fill/w_1200,h_770,al_c,q_90,enc_auto/8a1255_9be98f6f6cbc4c40b37706b9426ee18c~mv2.jpg",
+                "level3URL": "https://www.ericamera.nl/peter-stas",
+                "nlSpecific": {"fotobondNumber": 1674012},
+                "expertises": []
+            }
+        },
+
+        {
+            "name": {
+                "givenName" : "Rob",
+                "infixName" : "",
+                "familyName": "Sponselee"
+            },
+            "optional": {
+                "featuredimage": "",
+                "level3URL": "https://www.ericamera.nl/rob-sponselee",
+                "nlSpecific": {"fotobondNumber": 1674011},
+                "expertises": []
+            }
+        },
+
+        {
+            "name": {
+                "givenName" : "Ton",
+                "infixName" : "",
+                "familyName": "Vermaesen"
+            },
+            "optional": {
+                "featuredimage": "",
+                "level3URL": "https://www.ericamera.nl/ton-vermaesen",
+                "nlSpecific": {"fotobondNumber": 1674015},
+                "expertises": []
+            }
+        }
+
+    ]
 }
