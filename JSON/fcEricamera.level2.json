@@ -24,7 +24,7 @@
             "optional": {
                 "featuredImage": "https://static.wixstatic.com/media/8a1255_ef497a08b6a54acda5d840722cdb9a65~mv2.jpg/v1/fill/w_1200,h_800,al_c,q_90,enc_auto/8a1255_ef497a08b6a54acda5d840722cdb9a65~mv2.jpg",
                 "level3URL": "https://www.ericamera.nl/ad-karman",
-                "website": "www.adkarman.nl",
+                "website": "https://www.adkarman.nl",
                 "nlSpecific": {"fotobondNumber": 1674005},
                 "expertises": ["Landscape", "City"]
             }
@@ -39,7 +39,7 @@
             "optional": {
                 "featuredImage": "https://static.wixstatic.com/media/8a1255_c32724778b0344adaa5779b63d702ed4~mv2.png/v1/fill/w_1141,h_800,al_c,q_95,enc_avif,quality_auto/8a1255_c32724778b0344adaa5779b63d702ed4~mv2.png",
                 "level3URL": "https://www.ericamera.nl/bas-wagemakers",
-                "website": "www.baswagemakersfotografie.nl",
+                "website": "https://www.baswagemakersfotografie.nl",
                 "nlSpecific": {"fotobondNumber": 1674031},
                 "expertises": ["Architecture"]
             }
@@ -54,7 +54,7 @@
             "optional": {
                 "featuredImage": "https://static.wixstatic.com/media/8a1255_799782e2474a459493aeb1f44757f4ab~mv2.jpg/v1/fill/w_1200,h_801,al_c,q_90,enc_auto/8a1255_799782e2474a459493aeb1f44757f4ab~mv2.jpg",
                 "level3URL": "https://www.ericamera.nl/ben-van-veelen",
-                "website": "www.bernardfoto.nl",
+                "website": "https://www.bernardfoto.nl",
                 "nlSpecific": {"fotobondNumber": 1674023},
                 "roles": {"isBestuurslid": true},
                 "expertises": ["Theatre", "LR"]
