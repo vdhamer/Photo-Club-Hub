@@ -204,10 +204,23 @@ struct FilteredMemberPortfoliosView: View {
         } else {
             filteredPortfolios = unFilteredPortfolios.filter { memberPortfolio in
                 memberPortfolio.photographer.fullNameFirstLast
-                    .localizedCaseInsensitiveContains(searchText.wrappedValue) }
+                    .localizedCaseInsensitiveContains(searchText.wrappedValue) ||
+                comparePhotographerExpertisesToSearchText(
+                    photographerExpertises: memberPortfolio.photographer.photographerExpertises
+                )
+            }
         }
 
         return filteredPortfolios
+    }
+
+    private func comparePhotographerExpertisesToSearchText(photographerExpertises: Set<PhotographerExpertise>) -> Bool {
+        for photographerExpertise in photographerExpertises {
+            if photographerExpertise.expertise.selectedLocalizedExpertise.name.localizedCaseInsensitiveContains(searchText.wrappedValue) {
+                return true
+            }
+        }
+        return false
     }
 
 }
