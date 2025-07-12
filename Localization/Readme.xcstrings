@@ -257,13 +257,13 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "__Areas of Expertise__"
+            "value" : "__Expertise tags__"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "__Expertisegebieden__"
+            "value" : "__Expertisetags__"
           }
         }
       }
@@ -280,7 +280,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Fotografen kunnen een of twee soorten fotografie (“Portret”) vermelden waar ze vooral om bekend staan. Meer details [hier](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/Level2_expertise_NL.md)."
+            "value" : "Fotografen kunnen een of twee soorten specialisatie (bijvoorbeeld “Portret” of “Macro”) vermelden waarvoor ze bekend zijn. Meer details [hier](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/Level2_expertise_NL.md)."
           }
         }
       }
@@ -291,13 +291,13 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "We manage a central list of such Areas of Expertise from which to choose. Standardizing these expertises allows you to use the app to find photographers with a shared interest (e.g. “Macro”)."
+            "value" : "We manage a central list of supported Expertise tags from which a photographer can choose. Standardizing these tags allows you to use the app to find photographers with a clear area of expertise (e.g. “Macro” or “Theatre” photography)."
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "De keuzelijst voor deze expertisegebieden wordt centraal beheerd, Door in de app te zoeken op b.v. “Portret” kan je fotografen vinden die daarin gespecialiseerd zijn."
+            "value" : "Er is een centrale lijst met goedgekeurde  expertisetags. Door op het Portfolio scherm te zoeken naar “Portret” of “por” kan je fotografen vinden die in portretfotografie gespecialiseerd zijn."
           }
         }
       }
@@ -988,13 +988,13 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Available (🏵) and potential (🪲) Areas of Expertise"
+            "value" : "Available (🏵) and potential (🪲) Expertise Tags"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Beschikbare (🏵) en potentiële (🪲) expertisegebieden"
+            "value" : "Voorbeelden van goedgekeurde (🏵) en overige (🪲) expertisetags"
           }
         }
       }
