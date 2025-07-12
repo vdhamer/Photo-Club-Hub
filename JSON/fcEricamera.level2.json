@@ -56,7 +56,7 @@
                 "level3URL": "https://www.ericamera.nl/ben-van-veelen",
                 "website": "https://www.bernardfoto.nl",
                 "nlSpecific": {"fotobondNumber": 1674023},
-                "roles": {"isOfficer": true},
+                "roles": {"isOther": true},
                 "expertises": ["Theatre", "LR"]
             }
         },
@@ -114,7 +114,7 @@
                 "featuredImage": "",
                 "level3URL": "https://www.ericamera.nl/geoff-naylor",
                 "nlSpecific": {"fotobondNumber": 1674008},
-                "roles": {"isOfficer": true},
+                "roles": {"isOther": true},
                 "expertises": ["Street"]
             }
         },
