@@ -3,7 +3,7 @@
         "idPlus": {
             "town"    : "Eindhoven",
             "fullName": "Fotoclub Ericamera",
-            "nickname": "fcEricamera"
+            "nickName": "fcEricamera"
         },
         "optional": {
             "coordinates": {"latitude": 51.45403, "longitude": 5.46288},
