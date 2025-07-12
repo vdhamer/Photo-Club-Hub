@@ -1,6 +1,6 @@
 ## FAQ over `Expertise` in level2.json bestanden
 
-In Level 2 bestanden kan men per clublid één of twee expertisegebieden opgeven.
+In Level 2 bestanden kan men nul, één of twee expertisegebieden opgeven voor ieder clublid.
 Het aanmaken en het formaat van Level 2 bestanden is omschreven in
 [Level2_aanmaken_NL](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/Level2_aanmaken_NL.md).
 Deze FAQ gaat over het doel en optimale gebruik van `expertise`.
