@@ -1,7 +1,7 @@
 ### 2.8.1 (GitHub commit ???????) ??-07-25
 
 Portfolio screen
-* User can filter on Expertise (in local language) via the Search bar.
+* User can filter on Expertise (in local language) using the Search bar.
 
 Code Maintenance
 * Tested with Xcode 26.0 beta 2 (17A5276g), iOS 26 beta (23A5287g)

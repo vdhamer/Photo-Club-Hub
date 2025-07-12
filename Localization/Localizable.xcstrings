@@ -640,13 +640,13 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Search names"
+            "value" : "Search on name or expertise"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Zoek op naam"
+            "value" : "Zoek op naam of expertise"
           }
         }
       }

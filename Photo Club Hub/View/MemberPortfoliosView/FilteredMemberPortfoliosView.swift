@@ -215,10 +215,11 @@ struct FilteredMemberPortfoliosView: View {
     }
 
     private func comparePhotographerExpertisesToSearchText(photographerExpertises: Set<PhotographerExpertise>) -> Bool {
-        for photographerExpertise in photographerExpertises {
-            if photographerExpertise.expertise.selectedLocalizedExpertise.name.localizedCaseInsensitiveContains(searchText.wrappedValue) {
-                return true
-            }
+        for photographerExpertise in photographerExpertises where
+            photographerExpertise.expertise // check every Expertise
+                                 .selectedLocalizedExpertise.name // gets its name in selected language
+                                 .localizedCaseInsensitiveContains(searchText.wrappedValue) {
+            return true // doing an || here across all elements of the Set
         }
         return false
     }
