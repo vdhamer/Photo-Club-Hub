@@ -3,7 +3,7 @@
 A Level 2 file can specify up to two `expertise` tags per photographer.
 Detailed instructions for creating Level 2 files can be found in
 [Level2_aanmaken_EN](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/Level2_aanmaken_EN.md).
-This FAQ covers the purpose and optimal use of the app's `expertise` tags.
+This FAQ covers the use and management the app's `expertise` tags.
 
 ## Basics
 
@@ -37,130 +37,141 @@ This enables you to find Rob and others by typing "abstract" or "abst" into the 
 In a future release, you can expect similar search functions for the HTML/web version:
 
 1. Clicking on an expertise tag brings you to a list of all photographers labelled with that tag.
-2. A separate Expertise tags page show all supported tags with their statistics and with clickable links to the preceding pages.
-3. In de HTML versie, moet er nog een **aparte pagina** komen met een (klikbare) lijst met alle beschikbare expertisegebieden.
+2. A separate Expertise tags page will show all supported tags with their statistics and with links to pages per Expertise.
 </details></p>
 
 </li><li>
 
-### Wat is de bedoeling eigenlijk?
+### Why have Expertises?
 
 <details><summary>Click to expand or collapse an answer</summary></p>
-Stel dat er tien, honderd of zelfs duizend clubs meedoen, met gemiddeld 15 leden per club.
-Dan zijn er 150, 1500 of zelfs 15.000 fotografen bekend in de app. 
-De app bevat zoekfuncties waarmee je op naam van de fotograaf kunt zoeken. Hier vind je bekenden mee.
-Expertisegebieden laat je bovendien interessante fotografen zien op basis van hun specialismes.
+Assume the app contains ten, a hundred or even a thousand clubs, with on average 15 members each.
+That gives us maybe 150, 1500 or even 15,000 photographers in the app.
+The app contains a Search capability allowing you to find known photographers - if you know their name.
+Expertise tags allows you discover relevant photographers you didn't know about yet.
 </details></p>
 
 </li><li>
 
-### Hoeveel expertisegebieden per clublid?
+### Number of expertise tags per photographer?
 
 <details><summary>Click to expand or collapse an answer</summary></p>
-Maximaal twee. Bij meer expertises gaat de app bewust een beetje moeilijk doen.</p>
+The app allows up to two tags per photographer.</p>
 
-De gedachte hierachter is dat een zoekopdracht net als bij Google Search vooral relevante resultaten oplevert. 
-We willen liefs hebben dat de gevonden portfolio's duidelijk de opgegeven specialismes bevestigen.
+If there are more than two expertise tags, the app deliberately starts softly complaining.
+The point of limiting the number of tags is that a search on an expertise tag should
+return pretty relevant results. Meaning that the member's portfolio hopefully contains images
+that confirm that the member is active and experienced in that area.
 </details></p>
 
 </li><li>
 
-### Kan iemand ook geen Expertises hebben?
+### Can somebody have zero `Expertise` tags?
 
 <details><summary>Click to expand or collapse an answer</summary></p>
-Ja. Dat kan drie verschillende redenen hebben:
+Sure. That can have various causes:
 
-1. Iemand heeft dus geen duidelijk specialisme ("ik fotografeer wat ik toevallig tegenkom").
-2. Iemand wil - om wat voor reden dan ook - die informatie niet delen.
-3. De informatie moet door de club nog verzameld en ingevoerd worden.
+1. Maybe the photographer doesn't have a clear specialization
+   ("I shoot whatever I happen to encounter and don't have a particularly recognizable style").
+2. The person is, for whatever reason, not inclined to share that information.
+3. The club hasn't gotten around to collecting this information yet.
 
 </details></p>
 
 </li><li>
 
-### Hoeveel en welke expertisegebieden zijn beschikbaar?
+### How many tags can I choose from?
 
 <details><summary>Click to expand or collapse an answer</summary></p>
-In de iOS versie van de app staat alle beschikbare expertisegebieden helemaal onderaan de `Namenlijst` pagina (zoek op "expertise" of "xyz").
-Deze lijst is dynamisch (online opgehaald): het kan dat er volgende week een nieuw gebied bijgekomen is. Het zijn er al ruim 20.</p>
+At the moment there are roughly 25 tags available.
 
-De HTML versie krijgt wellicht een extra pagina met diezelfde lijst. 
-Verder kan je de actuele lijst (in JSON formaat) [hier](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/root.level0.json) inzien.
+In the iOS version of the app, all available (and some candidate) tags are listed at the bottom of the `Who's Who` screen.
+You can reach the bottom quickly by using the Search bar to filter out all the photographers.</p>
+
+De HTML/web version of the app will get a comparable list, but it will be accessed a bit differently. 
+
+The list is stored online and will change over time: there may be a new tag tomorrow that is not on the list today.
+The online master list (in JSON formaat) with all approved tags can be found
+[here](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/root.level0.json).
 </details></p>
 
 </li></ul>
 
 </details></p>
 
-## Richtlijnen
+## Guidelines
 
 <details><summary>Click to expand or collapse a category</summary></p>
 <ul>
 
 <li>
 
-### Kunnen de expertise tags veranderen over de jaren?
+### Can someone's `expertise` tags change over time?
 
 <details><summary>Click to expand or collapse an answer</summary></p>
-Zeker. De gekozen gebieden zijn bedoeld als huidige expertise.
-Iemand kan dingen bijleren of van focusgebied verschuiven.
+Certainly. The selected tags reflect somebody's current areas of expertise.
+People learn or can shift focus.
 
 </details></p>
 
 </li><li>
 
-### Waarom hooguit twee expertisegebieden per fotograaf?
+### Why allow only two extertise tags per photographer?
 
 <details><summary>Click to expand or collapse an answer</summary></p>
-De gedachte is dat een zoekopdracht, net als bij Google Search, zo relevant mogelijke resultaten vindt.
-Mischien niet met precies de soort architectuurfotografie die je zocht, maar wel redelijk in de buurt.
-We willen voorkomen dat je bij een portfolio lang moet bladeren voordat je een enkele verdwaalde architectuurfoto tegenkomt.</p>
+The idea is that searching on Expertise tags will give you largely relevant results.
+A search on "Street" may give you multiple styles of street photography, but all-in-all the resulting
+photographers should have a recognizable expertise in street photography.
 
-Het is dus _niet_ de bedoeling dat de fotograaf tracht om al zijn werk in een groot aantal bakjes te vangen.
-Het hebben van veel "specialismes" neigt eigenlijk naar "geen specialismes".
-De app vereist niet dat iedereen specialismes heeft; sommige fotografen hebben nu eenmaal (nog) geen herkenbaar specialisme.
+If we would allow 5 or even 10 tags, the results would include people who occasionaly do architecture photography
+- which makes the searching on expertise tags much less useful for finding specialists. Expressed differently, 
+the expertise tags per person serve a very different purpose than Lightroom keywords per image:
+you may succesfully use hundreds or thousands of LR keywords to find specific photos ("birthday", "beach", "Iceland"). 
+Our expertise tags are meant to find photographers ("who are known for their street photography").</p>
+</details></p>
+
+</li><li>
+
+### How many different expertise tags will there be in the long run?
+
+<details><summary>Click to expand or collapse an answer</summary></p>
+Hopefully below 100. Criteria:</p>
+
+- Any photography domain recognized by Wikipedia ("portrait photography") is credible candidate.
+- It should be relatively clear what the tag means. So "outdoors" is not ok, while "landscape is ok."
+- A tag shouldn't have a lot of overlap with existing tags. So no simultaneous "old buildings" next to "architecture".
+- A tag with only one expected user is too specialized. Partly because of the "max 100 tags" target.
+- The practioners in the domain should see themselves as photographers, rather than enthousiasts like
+  train spotters or butterfly enthousiasts who happen to use photo's to communicate. Our open source software could
+  conceivably be suitable for other uses, but we want to avoid mixing "our" data with "their" data.
 
 </details></p>
 
 </li><li>
 
-### Hoeveel expertisegebieden komen er?
+### Granularity?
 
 <details><summary>Click to expand or collapse an answer</summary></p>
-Dat moet blijken. Criteria:</p>
-
-- Wikipedia gebieden t.a.v. fotografieonderwerp ("portret") of techniek ("zwart/wit") zijn meestal prima.
-- Het moet vrij duidelijk zijn wat eronder valt.
-- Liefst weinig overlap met bestaande gebieden. "Natuur" is b.v. onhandig als er ook "landschappen" en "wilde dieren" categorieën zijn.
-- Er moeten meerdere beoefenaars te verwachten zijn. Maar het hoeven niet veel te zijn.
-- Die beoefenaars moeten zichzelf als (amateur)fotografen zien. Bij een verzamelaar van foto's van vliegtuig spotter
-gaat het vaak meer over het vliegtuig danwel de belevenis, maar nauwelijks over de fotografische kant. 
-
-Naarmate er meer fotografen aan boord komen, zal de lijst geleidelijk groeien.
-We willen proberen onder de 100 te blijven (ook bij veel fotografen) omdat dit anders keuzeproblemen geeft.
-</details></p>
-
-</li><li>
-
-### Fijnmazigheid?
-
-<details><summary>Click to expand or collapse an answer</summary></p>
-Een klein expertisegebied met slechts een handjevol beoefenaars hoeft geen probleem te zijn.
-Het is namelijk voor die beoefenaars en geinteresseerden vaak extra waardevol. 
+A small area of expertise with only a few partitioners is not necessarily a problem:
+a small domain ("underwater photography") may have a relatively high value to those who need it. 
   
-Dit is net als bij liefhebbers van bijzondere categorieen muziek of boeken.
-Maar het is handig als het minimale overlap geeft met andere categorieën.
-Het moet echter ook weer niet zo klein is dat er maar 1 persoon belangstelling in heeft. 
+A large area of expertise ("people") will lose value if it is too diverse ("street", "portait", "model", "family", and "sports" would all
+fall under "people").
 
-Een te grote expertisegebied ("buitenfotografie") levert minder waarde, en geeft kans op oplap met andere categorieën ("landschap", "street").
+So curating the list of keywords is a tradeoff between:
+- clarity and recognizability of the term,
+- keeping the list short enough that tags are not overlooked, and
+- minimizing overlaping categories.
 </details></p>
 
 </li><li>
 
-### Wie beheert de lijst met expertisegebieden?
+### Who manages the list of approved tags?
 
 <details><summary>Click to expand or collapse an answer</summary></p>
-Vooralsnog de maker(s) van de app. Het is echter een dienstverlening, en men moet voortdurend contact houden met gebruikers.
+For now the maker(s) of the app.
+But this task (technically maintaining the
+[root.level0.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/root.level0.json) file) could be done by others.
 </details></p>
 
 </li><li>
