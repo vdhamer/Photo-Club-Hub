@@ -1,55 +1,51 @@
-## FAQ over `Expertise` in level2.json bestanden
+## FAQ regarding `Expertise` in level2.json files
 
-In Level 2 bestanden kan men nul, één of twee expertisegebieden opgeven voor ieder clublid.
-Het aanmaken en het formaat van Level 2 bestanden is omschreven in
-[Level2_aanmaken_NL](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/Level2_aanmaken_NL.md).
-Deze FAQ gaat over het doel en optimale gebruik van `expertise`.
+A Level 2 file can specify up to two `expertise` tags per photographer.
+Detailed instructions for creating Level 2 files can be found in
+[Level2_aanmaken_EN](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/Level2_aanmaken_EN.md).
+This FAQ covers the purpose and optimal use of the app's `expertise` tags.
 
-## Basisvragen
+## Basics
 
-<details><summary>Klik om categorie open of dicht te klappen</summary></p>
+<details><summary>Click to expand or collapse a category</summary></p>
 <ul>
 
 <li>
 
-### Wat is een `Expertise` tag?
+### What is an `Expertise` tag?
 
-<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
-Met `expertise` bedoelen we de soorten fotografie waar een fotograaf zichzelf in bekwaamd heeft.
-De app gebruikt `expertise` tags om aan te geven dat b.v. Rob zich toespitsts op "Abstracte" fotografie. 
-Hiermee kan je Rob en zijn werk eenvoudig vinden door op "abstract" of "abs" te zoeken
-in de zoekbank van het `Portfolio` scherm.
+<details><summary>Click to expand or collapse an answer</summary></p>
+An expertise is a photography domain for which the photographer is known. 
+An `expertise` tag in the app can tell you that Bob is specialized in "Abstract" photography.
+This enables you to find Rob and others by typing "abstract" or "abst" into the Search bar on the
+`Portfolio` screen.
 </details></p>
 
 </li><li>
 
-### Waar ziet een gebruiker de gemelde `expertises`?
+### Where do app users see `expertises`?
 
-<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
+<details><summary>Click to expand or collapse an answer</summary></p>
 
-1. In de HTML/web versie van de app, staan ze vermeld in een kolom "expertisegebieden" in de diverse tabellen met clubleden.
-2. In de iOS versie zie je de beschikbare expertises bij iedere fotograaf op de `Portfolio` pagina.
-3. In de iOS versie staan de beschikbare expertisegebieden helemaal onderaan de `Namenlijst` pagina.
-   Om snel onderaan te komen, zoek op "expertise" of "zzz".
-4. In de iOS versie, kan men **zoeken** op expertisegebied door de eerste paar letters in te tikken in de zoekbalk.
-   Dus intypen van "zwart" reduceert de lijst tot fotografen die aan "zwart-wit" gekoppeld zijn.
-   Maar dit kan ook namen tonen zoals "Kees de Zwart": deze zoekbalk zoekt gelijktijdig op naam en op expertise tags.
-</p>
+1. In the HTML/web version of the app, `expertises` are shown in the `Areas of expertise` column in the tables of club members.
+2. In the iOS version of the app, `expertises` are shown per photographer on the `Portfolio` page. 
+2. In the iOS version, the list of `expertises` and their statistics are shown at the bottom of the `Who's Who` screen. To avoid a lot of scrolling you can search for "expertises" or any other text that has no matches like "zzz".
+4. In the iOS version, you can **search** for `expertise` tags by typing in the first few letters of the expertise in the Search bar.
+   So typing "black" shortens the list to only show photographers that have the "Black & White" tag.
+   But you may also find a stray photographer with a name like "Blackstone" unless you type "black ".</p>
 
-En op termijn komen er ook zoekfuncties op `expertise` in de HTML versie:
+In a future release, you can expect similar search functions for the HTML/web version:
 
-1. In de HTML versie, moeten de getoonde expertises **klikbare links** worden. Dit brengt je naar een lijst met alle fotografen met die expertise.
-2. In de HTML versie, moet er nog een **aparte pagina** komen met een (klikbare) lijst met alle beschikbare expertisegebieden.
-Hiermee kan je zien welke expertisegebieden er zijn, wat de bijbehorende toelichting is,
-en hoeveel fotografen in de app hieraan gekoppeld zijn. Verder is het dan ook mogelijk om te klikken op een expertise
-tag om alle bijbehorende leden in alle beschikbare clubs te vinden.
+1. Clicking on an expertise tag brings you to a list of all photographers labelled with that tag.
+2. A separate Expertise tags page show all supported tags with their statistics and with clickable links to the preceding pages.
+3. In de HTML versie, moet er nog een **aparte pagina** komen met een (klikbare) lijst met alle beschikbare expertisegebieden.
 </details></p>
 
 </li><li>
 
 ### Wat is de bedoeling eigenlijk?
 
-<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
+<details><summary>Click to expand or collapse an answer</summary></p>
 Stel dat er tien, honderd of zelfs duizend clubs meedoen, met gemiddeld 15 leden per club.
 Dan zijn er 150, 1500 of zelfs 15.000 fotografen bekend in de app. 
 De app bevat zoekfuncties waarmee je op naam van de fotograaf kunt zoeken. Hier vind je bekenden mee.
@@ -60,7 +56,7 @@ Expertisegebieden laat je bovendien interessante fotografen zien op basis van hu
 
 ### Hoeveel expertisegebieden per clublid?
 
-<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
+<details><summary>Click to expand or collapse an answer</summary></p>
 Maximaal twee. Bij meer expertises gaat de app bewust een beetje moeilijk doen.</p>
 
 De gedachte hierachter is dat een zoekopdracht net als bij Google Search vooral relevante resultaten oplevert. 
@@ -71,7 +67,7 @@ We willen liefs hebben dat de gevonden portfolio's duidelijk de opgegeven specia
 
 ### Kan iemand ook geen Expertises hebben?
 
-<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
+<details><summary>Click to expand or collapse an answer</summary></p>
 Ja. Dat kan drie verschillende redenen hebben:
 
 1. Iemand heeft dus geen duidelijk specialisme ("ik fotografeer wat ik toevallig tegenkom").
@@ -84,7 +80,7 @@ Ja. Dat kan drie verschillende redenen hebben:
 
 ### Hoeveel en welke expertisegebieden zijn beschikbaar?
 
-<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
+<details><summary>Click to expand or collapse an answer</summary></p>
 In de iOS versie van de app staat alle beschikbare expertisegebieden helemaal onderaan de `Namenlijst` pagina (zoek op "expertise" of "xyz").
 Deze lijst is dynamisch (online opgehaald): het kan dat er volgende week een nieuw gebied bijgekomen is. Het zijn er al ruim 20.</p>
 
@@ -98,14 +94,14 @@ Verder kan je de actuele lijst (in JSON formaat) [hier](https://github.com/vdham
 
 ## Richtlijnen
 
-<details><summary>Klik om categorie open of dicht te klappen</summary></p>
+<details><summary>Click to expand or collapse a category</summary></p>
 <ul>
 
 <li>
 
 ### Kunnen de expertise tags veranderen over de jaren?
 
-<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
+<details><summary>Click to expand or collapse an answer</summary></p>
 Zeker. De gekozen gebieden zijn bedoeld als huidige expertise.
 Iemand kan dingen bijleren of van focusgebied verschuiven.
 
@@ -115,7 +111,7 @@ Iemand kan dingen bijleren of van focusgebied verschuiven.
 
 ### Waarom hooguit twee expertisegebieden per fotograaf?
 
-<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
+<details><summary>Click to expand or collapse an answer</summary></p>
 De gedachte is dat een zoekopdracht, net als bij Google Search, zo relevant mogelijke resultaten vindt.
 Mischien niet met precies de soort architectuurfotografie die je zocht, maar wel redelijk in de buurt.
 We willen voorkomen dat je bij een portfolio lang moet bladeren voordat je een enkele verdwaalde architectuurfoto tegenkomt.</p>
@@ -130,7 +126,7 @@ De app vereist niet dat iedereen specialismes heeft; sommige fotografen hebben n
 
 ### Hoeveel expertisegebieden komen er?
 
-<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
+<details><summary>Click to expand or collapse an answer</summary></p>
 Dat moet blijken. Criteria:</p>
 
 - Wikipedia gebieden t.a.v. fotografieonderwerp ("portret") of techniek ("zwart/wit") zijn meestal prima.
@@ -148,7 +144,7 @@ We willen proberen onder de 100 te blijven (ook bij veel fotografen) omdat dit a
 
 ### Fijnmazigheid?
 
-<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
+<details><summary>Click to expand or collapse an answer</summary></p>
 Een klein expertisegebied met slechts een handjevol beoefenaars hoeft geen probleem te zijn.
 Het is namelijk voor die beoefenaars en geinteresseerden vaak extra waardevol. 
   
@@ -163,7 +159,7 @@ Een te grote expertisegebied ("buitenfotografie") levert minder waarde, en geeft
 
 ### Wie beheert de lijst met expertisegebieden?
 
-<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
+<details><summary>Click to expand or collapse an answer</summary></p>
 Vooralsnog de maker(s) van de app. Het is echter een dienstverlening, en men moet voortdurend contact houden met gebruikers.
 </details></p>
 
@@ -171,7 +167,7 @@ Vooralsnog de maker(s) van de app. Het is echter een dienstverlening, en men moe
 
 ### Project versus specialisme?
 
-<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
+<details><summary>Click to expand or collapse an answer</summary></p>
 Een langlopend project kan lijken op een expertise: iemand kan er bekend om zijn.
 Maar er zijn verschillen: Het project is in principe van tijdelijke aard. 
 En een expertise is vaak algemener en kan dus van pas komen bij meerdere projekten.
@@ -183,14 +179,14 @@ En een expertise is vaak algemener en kan dus van pas komen bij meerdere projekt
 
 ## Technische bijkomstigheden
 
-<details><summary>Klik om categorie open of dicht te klappen</summary></p>
+<details><summary>Click to expand or collapse a category</summary></p>
 <ul>
 
 <li>
 
 ### Meertalige weergave
 
-<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
+<details><summary>Click to expand or collapse an answer</summary></p>
 Erkende expertisetags kunnen in de app weergegeven worden in het Nederlands en in het Engels.
 Als een fotograaf gekoppeld is aan zwart-wit fotografie, wordt dat afhankelijk van omstandigheden dus automatisch in de juiste taal weergegeven ("Zwart-wit", "Black & White").
 Als de app een onbekend expertisegebied tegenkomt, wordt er niet vertaald. En is er een waarschuwing te zien - mede omdat het en invoerfout kan zijn.
@@ -200,7 +196,7 @@ Als de app een onbekend expertisegebied tegenkomt, wordt er niet vertaald. En is
 
 ### Eentalige invoer
 
-<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
+<details><summary>Click to expand or collapse an answer</summary></p>
 Bij het koppelen van expertisegebieden aan fotografen gebruik je meestal de Engelse term.
 Maar die identificatie (`idString`) kan in principe afwijken van wat er in het Engels getoond wordt.
 
@@ -215,7 +211,7 @@ Dus strict genomen zijn er 3 benaming voor een expertisegebied:
 
 ### Expertisetags en clubs
 
-<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
+<details><summary>Click to expand or collapse an answer</summary></p>
 De app koppelt expertisetags aan een persoon - dus los van enig clubverband.</p>
   
 Maar de expertisegebieden worden door clubs ingevoerd.
@@ -235,7 +231,7 @@ mag Jan dat verder regelen. Bijvoorbeeld door de bijde lijsten gelijk te trekken
 
 ### Teveel expertisegebieden?
 
-<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
+<details><summary>Click to expand or collapse an answer</summary></p>
 Bij 3 of meer expertisegebieden, meldt de app "Teveel Expertises" op de plek van het 3e element.
 Dit moet de club aanmoedigen om het te corrigeren.
 </details></p>
@@ -244,7 +240,7 @@ Dit moet de club aanmoedigen om het te corrigeren.
 
 ### Fouten bij invoeren `expertises`?
 
-<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
+<details><summary>Click to expand or collapse an answer</summary></p>
 
 Wat gebeurt als een Level 2 bestand een onbekende `expertise` tag bevat die niet bekend is in de app?
 Voorbeeld: een bestand bevat "Model" terwijl alleen "Portrait" ondersteund is.
