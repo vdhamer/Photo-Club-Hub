@@ -80,7 +80,7 @@ Sure. That can have various causes:
 
 </li><li>
 
-### How many tags can I choose from?
+### How many tags can we choose from?
 
 <details><summary>Click to expand or collapse an answer</summary></p>
 At the moment there are roughly 25 tags available.
@@ -109,7 +109,7 @@ The online master list (in JSON formaat) with all approved tags can be found
 ### Can someone's `expertise` tags change over time?
 
 <details><summary>Click to expand or collapse an answer</summary></p>
-Certainly. The selected tags reflect somebody's current areas of expertise.
+Yes. The selected tags reflect somebody's current areas of expertise.
 People learn or can shift focus.
 
 </details></p>
@@ -119,31 +119,33 @@ People learn or can shift focus.
 ### Why allow only two extertise tags per photographer?
 
 <details><summary>Click to expand or collapse an answer</summary></p>
-The idea is that searching on Expertise tags will give you largely relevant results.
+The purpose of having Expertise tags is that searching on tags will give you largely relevant list of photographers.
 A search on "Street" may give you multiple styles of street photography, but all-in-all the resulting
-photographers should have a recognizable expertise in street photography.
+photographers should have a recognizable expertise in street photography. And it will probably show up
+in their portfolio.
 
-If we would allow 5 or even 10 tags, the results would include people who occasionaly do architecture photography
-- which makes the searching on expertise tags much less useful for finding specialists. Expressed differently, 
-the expertise tags per person serve a very different purpose than Lightroom keywords per image:
+If we would allow 5 or even 10 tags, the results would include people who occasionaly do street photography - which
+makes the searching on expertise tags much less useful for finding good street photography images and their makers.
+
+Expressed differently, the expertise tags per person serve a very different purpose than Lightroom keywords per image:
 you may succesfully use hundreds or thousands of LR keywords to find specific photos ("birthday", "beach", "Iceland"). 
-Our expertise tags are meant to find photographers ("who are known for their street photography").</p>
+Our expertise tags are meant to find photographers who are known for a particular expertise.</p>
 </details></p>
 
 </li><li>
 
-### How many different expertise tags will there be in the long run?
+### How many different expertise tags will there eventually be?
 
 <details><summary>Click to expand or collapse an answer</summary></p>
-Hopefully below 100. Criteria:</p>
+For now, we target keeping the list size below 100. Criteria:</p>
 
-- Any photography domain recognized by Wikipedia ("portrait photography") is credible candidate.
-- It should be relatively clear what the tag means. So "outdoors" is not ok, while "landscape is ok."
+- It should be relatively clear what the tag means. So "outdoors" is less suitable than "landscape."
+- Any photography domain recognized by Wikipedia ("portrait photography") is a reasonable candidate for a tag.
 - A tag shouldn't have a lot of overlap with existing tags. So no simultaneous "old buildings" next to "architecture".
 - A tag with only one expected user is too specialized. Partly because of the "max 100 tags" target.
 - The practioners in the domain should see themselves as photographers, rather than enthousiasts like
-  train spotters or butterfly enthousiasts who happen to use photo's to communicate. Our open source software could
-  conceivably be suitable for other uses, but we want to avoid mixing "our" data with "their" data.
+  train spotters or butterfly experts who happen to use photo's to communicate. Our open source software could
+  be suitable for such other uses, but we don't 'want to mix photography content with other content.
 
 </details></p>
 
@@ -152,16 +154,18 @@ Hopefully below 100. Criteria:</p>
 ### Granularity?
 
 <details><summary>Click to expand or collapse an answer</summary></p>
-A small area of expertise with only a few partitioners is not necessarily a problem:
-a small domain ("underwater photography") may have a relatively high value to those who need it. 
+A very specialized area of expertise with only a few partitioners is not necessarily a problem.
+Although a tag that only gets used for one photographer is overdoing things (if you know the domain, you probably
+know that photographer), a specialized domain like "underwater photography" tends to have relatively high value
+because it is hard to find such practioners. 
   
-A large area of expertise ("people") will lose value if it is too diverse ("street", "portait", "model", "family", and "sports" would all
-fall under "people").
+A large area of expertise will lose value if it is too broad. A tag like "people" may be applied to
+"street", "portait", "model", "family", and "sports".
 
-So curating the list of keywords is a tradeoff between:
-- clarity and recognizability of the term,
-- keeping the list short enough that tags are not overlooked, and
-- minimizing overlaping categories.
+Therefore curating the list of keywords is a tradeoff between:
+- clarity and recognizability of the tag,
+- keeping the list tags short enough that relevant tags are not overlooked, and
+- minimizing tag overlap.
 </details></p>
 
 </li><li>
@@ -169,98 +173,120 @@ So curating the list of keywords is a tradeoff between:
 ### Who manages the list of approved tags?
 
 <details><summary>Click to expand or collapse an answer</summary></p>
-For now the maker(s) of the app.
-But this task (technically maintaining the
-[root.level0.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/root.level0.json) file) could be done by others.
+For now the maker(s) of the app. But this task of technically maintaining the
+[root.level0.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/root.level0.json) file could be delegated
+to a suitable volunteer.
 </details></p>
 
 </li><li>
 
-### Project versus specialisme?
+### Project versus expertise?
 
 <details><summary>Click to expand or collapse an answer</summary></p>
-Een langlopend project kan lijken op een expertise: iemand kan er bekend om zijn.
-Maar er zijn verschillen: Het project is in principe van tijdelijke aard. 
-En een expertise is vaak algemener en kan dus van pas komen bij meerdere projekten.
+A long-running photography project can start to sound like an expertise or specialism:
+somebody invests a lot of effort into some theme and may become well known for that.
+But there are differences: a project is by definition temporary; and an expertise can
+often be applied in multiple projects.
 </details></p>
 
 </li></ul>
 
 </details></p>
 
-## Technische bijkomstigheden
+## Technical description
 
 <details><summary>Click to expand or collapse a category</summary></p>
 <ul>
 
 <li>
 
-### Meertalige weergave
+### Displaying in multiple languages
 
 <details><summary>Click to expand or collapse an answer</summary></p>
-Erkende expertisetags kunnen in de app weergegeven worden in het Nederlands en in het Engels.
-Als een fotograaf gekoppeld is aan zwart-wit fotografie, wordt dat afhankelijk van omstandigheden dus automatisch in de juiste taal weergegeven ("Zwart-wit", "Black & White").
-Als de app een onbekend expertisegebied tegenkomt, wordt er niet vertaald. En is er een waarschuwing te zien - mede omdat het en invoerfout kan zijn.
+Supported expertise tags can be shown in the user interface in at least two languages: English and Dutch.
+This means that if a photographer is known for multiple-exposure photography, the app will display either
+"Multiple exposure" for English or "Meervoudige opnamen" for Dutch - depending on your language preference.
+These translations for approved tags are stored in the
+[root.level0.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/root.level0.json) file.
+If the app runs across an unapproved tag (because of a user error, or as a proposal),
+that tag is shown untranslated because it doesn't occur in the root.level0.json file right now.
 </details></p>
 
 </li><li>
 
-### Eentalige invoer
+### Tag entry in a single language
 
 <details><summary>Click to expand or collapse an answer</summary></p>
-Bij het koppelen van expertisegebieden aan fotografen gebruik je meestal de Engelse term.
-Maar die identificatie (`idString`) kan in principe afwijken van wat er in het Engels getoond wordt.
+When defining the tags per photographer in the Level2.json file, you should be using an English term and,
+if it is approved, using the so-called `idString` identifier as defined in the
+[root.level0.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/root.level0.json) file.
+It might also be convenient to simply copy that `idString` identifier from an existing Level 2 file:
+if it works there, it will work for you as well.
 
-Dus strict genomen zijn er 3 benaming voor een expertisegebied:
-1. een identificatie zoals "Bird", gebruikt on aan te geven welk expertise we bedoelen. Dit zal meestal overeenkomen met (2), maar dat hoeft niet.
-2. een Engelse weergavetekst zoals "Birds", zoals het getoond wordt aan Engelstalige gebruikers.
-3. een Nederlandse weergavetekst zoals "Vogels", zoals het getoond wordt aan Nederlandstalige gebruikers.
+So strictly speaking (see root.level0.json) an expertise has 3 distinct names:
+1. The internal `idString` such as `Multiple-exposure` as used to identify the tag.
+   This will often correspond to the next, English name but it doesn't have to.
+2. An Engelse (EN) representation such as `Multiple exposure` as shown to English speaking users.
+3. A Dutch (NL) representation such as `Meervoudige opnamen` as shown to Dutch speaking users.
+If your device is set to another language, the software will then use the English version.
+But the app allows you to provide more than two translations if you want (e.g. German = DE or Hindi = HI).
+
+So to summarize: 
+- Level 2 files use the `idString` identifier, which usually matches the **English** version (e.g. "Travel").
+- Translation is done automatically by the app.
+  The way the `idString` version is translataed is configured centrally, so few people will see this. 
 
 </details></p>
 
 </li><li>
 
-### Expertisetags en clubs
+### Role of clubs in expertise tags
 
 <details><summary>Click to expand or collapse an answer</summary></p>
-De app koppelt expertisetags aan een persoon - dus los van enig clubverband.</p>
+The app associates tags with **photographers** rather than with photographers in their capacity as a member of any single club.
+That is a bit tricky it means that if John is a member of ClubA and of ClubB, the app will show the same
+tags when you scroll to John as a member of ClubA or scroll to John as a member of ClubB.
+This is similar to saying "John's birthday is Feb 29".
+John's birthday doesn't depend on any photo club he is or was a member of.</p>
   
-Maar de expertisegebieden worden door clubs ingevoerd.
-Dus een fijnproever kan zich afvragen: "als Jan lid is van Club 1 en Club 2, 
-en de beide clubs vulen wat andere `Expertise`tags in voor Jan. Hoe reageert de app?".
+The tricky part is that ClubA and ClubB can both specify expertise tags for John, and undoubtedly won't coordinate
+to get the same set of tags in their respective Level 2 files.
 
-Goede vraag! De lijsten van expertises van Jan vanuit beide clubs worden intern
-samengevoegd. Als de lijsten identiek zijn, merkt de gebruiker daar niets van. Als maar een lijst met tags voor Jan betaat, zie je die tags (bij alle clubs van Jan).
-Maar als Club 1 "Portret" en "Abstract" vermeldt, terwijl Club 2 "Abstract" en "Landschap" vermeldt, dan wordt dat door de app gecombineerd tot
-"Portret" en "Abstract" en "Landschap".
-
-Als de gecombineerde lijst te lang is, en Jan nog steeds contact heeft met beide groepen,
-mag Jan dat verder regelen. Bijvoorbeeld door de bijde lijsten gelijk te trekken of een lijst leeg te maken.
+So what does the app do if finds photographers who had or have associations with more than one club?
+The answer is simple: multiple lists of tags are assumed to all be true, and are merged into one list that is applied
+to the two (or more) clubs. Example outcome:
+- If the lists are identical, nobody will notice anything: you see indentical lists for both clubs.
+- If only one club provided expertise tags, these are shown for both clubs.
+- If ClubA specified "Portrait" while ClubB specified and "Landscape", this is shown as "Abstract" + "Landscape".
+- If ClubA specified "Portait" + "Abstract" while ClubB specified "Abstract" + "Landscape" these will be combined to 
+  "Abstract" + "Portrait" + "Landscape". And the app will show that there are more than 2 tags and the member can help by
+  chosing what the desired outcome is asking at least one club to adapt their tags..
 </details></p>
 
 </li><li>
 
-### Teveel expertisegebieden?
+### To many expertise tags
 
 <details><summary>Click to expand or collapse an answer</summary></p>
-Bij 3 of meer expertisegebieden, meldt de app "Teveel Expertises" op de plek van het 3e element.
-Dit moet de club aanmoedigen om het te corrigeren.
+For 3 or more expertisetags, the app will display a warning like "Too many expertises" instead of the 3rd tag.
+This is meant to trigger the club to fix this.
 </details></p>
 
 </li><li>
 
-### Fouten bij invoeren `expertises`?
+### Errors in the provided `expertise` tags
 
 <details><summary>Click to expand or collapse an answer</summary></p>
+What happens if a Level 2 file contains a tag that hasn't been approved or just contains a typo?
+Example: the file has a tag called "Model" while there is only a tag for "Portrait".
+The app will then display a warning icon next to the unofficial tag "Model" to indicate that it doesn't really
+know that tag. And that, consequently, there will be no translations available.
 
-Wat gebeurt als een Level 2 bestand een onbekende `expertise` tag bevat die niet bekend is in de app?
-Voorbeeld: een bestand bevat "Model" terwijl alleen "Portrait" ondersteund is.
-De app toont dan "Model" - maar met een speciaal groen ikoon.
-Het ikoon en bijbehorende 'tooltip' geven aan dat dit op dit moment geen officeele `expertise` is.
-De app meldt expliciet dat daardoor geen vertalingen beschikbaar zijn: die zijn alleen mogelijk voor erkende expertise tags. 
-Dit kan ertoe leiden dat de club de eventuele fout corrigeert of overschakelt naar een verwant erkend expertisegebied.
-Maar andere uitkomst is dat "Model" op een gegeven moment gepromoveerd wordt tot een officiële `expertise`: het was zo gek nog niet.
-Het groene ikoon en de waarschuwing verdwijnen dan automatisch zodra de app ziet dat "Model" inmiddels een officiële tag geworden is.
+This *may* prompt the club to fix a typo, or replace the unapproved app by a similar approved app.
+Alternatively, it may prompt the app's maintainers to promote the unapproved tag to an approved one if it meets
+the necesary criteria. One an unapproved tag is promoted onto the approved 
+[root.level0.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/root.level0.json) tag list
+or the Level 2 file has been fixed, the warning icon will disappear.
 </details></p>
 
 </li>
