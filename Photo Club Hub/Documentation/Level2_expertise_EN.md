@@ -27,21 +27,18 @@ This enables you to find Rob and others by typing "abstract" or "abst" into the 
 
 <details><summary>Click to expand or collapse an answer</summary></p>
 
-1. In de HTML/web versie van de app, staan ze vermeld in een kolom "expertisegebieden" in de diverse tabellen met clubleden.
-2. In de iOS versie zie je de beschikbare expertises bij iedere fotograaf op de `Portfolio` pagina.
-3. In de iOS versie staan de beschikbare expertisegebieden helemaal onderaan de `Namenlijst` pagina.
-   Om snel onderaan te komen, zoek op "expertise" of "zzz".
-4. In de iOS versie, kan men **zoeken** op expertisegebied door de eerste paar letters in te tikken in de zoekbalk. 
-   Dus intypen van "zwart" reduceert de lijst tot fotografen die aan "zwart-wit" gekoppeld zijn.
-   Maar dit kan ook namen tonen zoals "Kees de Zwart": deze zoekbalk zoekt gelijktijdig op naam en op expertise tags.</p>
+1. In the HTML/web version of the app, `expertises` are shown in the `Areas of expertise` column in the tables of club members.
+2. In the iOS version of the app, `expertises` are shown per photographer on the `Portfolio` page. 
+2. In the iOS version, the list of `expertises` and their statistics are shown at the bottom of the `Who's Who` screen. To avoid a lot of scrolling you can search for "expertises" or any other text that has no matches like "zzz".
+4. In the iOS version, you can **search** for `expertise` tags by typing in the first few letters of the expertise in the Search bar.
+   So typing "black" shortens the list to only show photographers that have the "Black & White" tag.
+   But you may also find a stray photographer with a name like "Blackstone" unless you type "black ".</p>
 
-En op termijn komen er ook zoekfuncties bij:
+In a future release, you can expect similar search functions for the HTML/web version:
 
-1. In de HTML versie, moeten de getoonde expertises **klikbare links** worden. Dit brengt je naar een lijst met alle fotografen met die expertise.
-2. In de HTML versie, moet er nog een **aparte pagina** komen met een (klikbare) lijst met alle beschikbare expertisegebieden.
-Hiermee kan je zien welke expertisegebieden er zijn, wat de bijbehorende toelichting is,
-en hoeveel fotografen in de app hieraan gekoppeld zijn. Verder is het dan ook mogelijk om te klikken op een expertise
-tag om alle bijbehorende leden in alle beschikbare clubs te vinden.
+1. Clicking on an expertise tag brings you to a list of all photographers labelled with that tag.
+2. A separate Expertise tags page show all supported tags with their statistics and with clickable links to the preceding pages.
+3. In de HTML versie, moet er nog een **aparte pagina** komen met een (klikbare) lijst met alle beschikbare expertisegebieden.
 </details></p>
 
 </li><li>
