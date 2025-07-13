@@ -15,9 +15,9 @@ Deze FAQ gaat over het doel en optimale gebruik van `expertise`.
 ### Wat is een `Expertise` tag?
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
-Hiermee bedoelen we de soorten fotografie waar een fotograaf zichzelf in bekwaamd heeft.
-Hiermee kan met zien dat b.v. Rob zich toespitsts op "Abstracte" fotografie. 
-Hiermee kan je Rob en zijn werk eenvoudig vinden door "abstract" of "abs" in te typen
+Met `expertise` bedoelen we de soorten fotografie waar een fotograaf zichzelf in bekwaamd heeft.
+De app gebruikt `expertise` tags om aan te geven dat b.v. Rob zich toespitsts op "Abstracte" fotografie. 
+Hiermee kan je Rob en zijn werk eenvoudig vinden door op "abstract" of "abs" te zoeken
 in de zoekbank van het `Portfolio` scherm.
 </details></p>
 
@@ -31,15 +31,15 @@ in de zoekbank van het `Portfolio` scherm.
 2. In de iOS versie zie je de beschikbare expertises bij iedere fotograaf op de `Portfolio` pagina.
 3. In de iOS versie staan de beschikbare expertisegebieden helemaal onderaan de `Namenlijst` pagina.
    Om snel onderaan te komen, zoek op "expertise" of "zzz".
+4. In de iOS versie, kan men **zoeken** op expertisegebied door de eerste paar letters in te tikken in de zoekbalk.
+   Dus intypen van "zwart" reduceert de lijst tot fotografen die aan "zwart-wit" gekoppeld zijn.
+   Maar dit kan ook namen tonen zoals "Kees de Zwart": deze zoekbalk zoekt gelijktijdig op naam en op expertise tags.
 </p>
 
-En op termijn komen er ook zoekfuncties bij:
+En op termijn komen er ook zoekfuncties op `expertise` in de HTML versie:
 
 1. In de HTML versie, moeten de getoonde expertises **klikbare links** worden. Dit brengt je naar een lijst met alle fotografen met die expertise.
-2. In de iOS versie, kan men **zoeken** op expertisegebied door de eerste paar letters in te tikken in de zoekbalk.
-Dus intypen van "zwart" reduceert de lijst tot fotografen die aan "zwart-wit" gekoppeld zijn.
-Maar dit kan ook namen tonen zoals "Kees de Zwart": deze zoekbalk zoekt gelijktijdig op naam en op expertise tags.
-3. In de HTML versie, moet er nog een **aparte pagina** komen met een (klikbare) lijst met alle beschikbare expertisegebieden.
+2. In de HTML versie, moet er nog een **aparte pagina** komen met een (klikbare) lijst met alle beschikbare expertisegebieden.
 Hiermee kan je zien welke expertisegebieden er zijn, wat de bijbehorende toelichting is,
 en hoeveel fotografen in de app hieraan gekoppeld zijn. Verder is het dan ook mogelijk om te klikken op een expertise
 tag om alle bijbehorende leden in alle beschikbare clubs te vinden.
