@@ -1,9 +1,9 @@
 ## FAQ regarding `Expertise` in level2.json files
 
-A Level 2 file can specify up to two expertise tags per club member.
-Instructies for creating Level 2 files can be found in
+A Level 2 file can specify up to two `expertise` tags per photographer.
+Detailed instructions for creating Level 2 files can be found in
 [Level2_aanmaken_EN](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/Level2_aanmaken_EN.md).
-This FAQ covers the purpose and optimal use of `expertise` tags.
+This FAQ covers the purpose and optimal use of the app's `expertise` tags.
 
 ## Basics
 
@@ -97,7 +97,7 @@ Verder kan je de actuele lijst (in JSON formaat) [hier](https://github.com/vdham
 
 ## Richtlijnen
 
-<details><summary>Klik om categorie open of dicht te klappen</summary></p>
+<details><summary>Click to expand or collapse a category</summary></p>
 <ul>
 
 <li>
@@ -182,7 +182,7 @@ En een expertise is vaak algemener en kan dus van pas komen bij meerdere projekt
 
 ## Technische bijkomstigheden
 
-<details><summary>Klik om categorie open of dicht te klappen</summary></p>
+<details><summary>Click to expand or collapse a category</summary></p>
 <ul>
 
 <li>
