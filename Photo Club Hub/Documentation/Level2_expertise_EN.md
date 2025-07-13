@@ -12,13 +12,13 @@ This FAQ is about the purpose and optimal use of `expertise` tags.
 
 <li>
 
-### Wat is een `Expertise` tag?
+### What is an `Expertise` tag?
 
-<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
-Hiermee bedoelen we de soorten fotografie waar een fotograaf zichzelf in bekwaamd heeft.
-Hiermee kan met zien dat b.v. Rob zich toespitsts op "Abstracte" fotografie. 
-Hiermee kan je Rob en zijn werk eenvoudig vinden door "abstract" of "abs" in te typen
-in de zoekbank van het `Portfolio` scherm.
+<details><summary>Click to expand or collapse an answer</summary></p>
+An expertise is a photography domain for which the photographer is known. 
+An `expertise` tag in the app can tell you that Bob is specialized in "Abstract" photography.
+This enables you to find Rob and others by typing "abstract" or "abst" into the Search bar on the
+`Portfolio` screen.
 </details></p>
 
 </li><li>
