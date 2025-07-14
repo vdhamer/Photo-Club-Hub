@@ -1,3 +1,15 @@
+### 2.8.2 (GitHub commit  ???????) ??-07-25
+
+Code Maintenance
+* Missing nickName in Level2 file is not handled robustly. (TODO!!!!)
+
+Data Maintenance
+* URLs without an https:// or http:// are now allowed (TODO!!!!).
+
+This build #4646 was made using Xcode beta 3 (17A5276g) and can thus only be used for beta testing.
+
+---------------------------------------------------------------------------
+
 ### 2.8.1 (GitHub commit  bc51dba) 14-07-25
 
 * New expertise tag: Theater
@@ -14,11 +26,11 @@ Code Maintenance
 * More consistent use of the term "expertise tag".
 
 Data Maintenance
-* URLs without an https:// or http:// are now allowed (TODO!!!!).
 * Update to membership list for IndividiueelBO.level2.json
 
 Documentation
 * Updated Level2_expertise_NL documentation.
+* Created English language documentation: Level2_expertise_EN
 
 This build #4645 was made using Xcode 16.4 and may be released via the App Store.
 
