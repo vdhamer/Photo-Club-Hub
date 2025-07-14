@@ -31,20 +31,103 @@
 
     "members": [
 
-        {
-            "name": {
-                "givenName": "Mariet",
-                "infixName": "",
-                "familyName": "Wielders"
-            },
-            "optional": {
-                "website": "https://www.m3w.nl",
-                "featuredImage": "https://www.m3w.nl/wp-content/uploads/2017/12/Portretten-DSC06336-Large-300x300.jpg",
-                "level3URL": "https://www.m3w.nl/portfolio/",
-                "membershipStartDate": "2025-01-01",
-                "expertises": [ "Portrait", "Multiple-Exposure" ]
-            }
-        }
+       {
+           "name": {
+               "givenName": "Mariet",
+               "infixName": "",
+               "familyName": "Wielders"
+           },
+           "optional": {
+               "website": "https://www.m3w.nl",
+               "featuredImage": "https://www.m3w.nl/wp-content/uploads/2017/12/Portretten-DSC06336-Large-300x300.jpg",
+               "level3URL": "https://www.m3w.nl/portfolio/",
+               "membershipStartDate": "2025-07-10",
+               "expertises": [ "Portrait", "documentary" ]
+           }
+       },
+ {
+           "name": {
+               "givenName": "Geertjan",
+               "infixName": "",
+               "familyName": "Vlot"
+           },
+           "optional": {
+               "website": "",
+               "level3URL": "https://www.youtube.com/watch?v=HOc3KDEvQJ8?",
+               "membershipStartDate": "2025-07-10",
+               "expertises": [ "documentary" ]
+           }
+       },
+ {
+           "name": {
+               "givenName": "Arthur",
+               "infixName": "van",
+               "familyName": "Ligten"
+           },
+           "optional": {
+               "website": "",
+               "featuredImage": "",
+               "level3URL": "",
+               "membershipStartDate": "2025-07-10",
+               "expertises": [ "architecture", "street" ]
+           }
+       },
+{
+           "name": {
+               "givenName": "Peter",
+               "infixName": "",
+               "familyName": "Toirkens"
+           },
+           "optional": {
+               "website": "",
+               "featuredImage": "",
+               "level3URL": "",
+               "membershipStartDate": "2025-07-10",
+               "expertises": [ "portrait", "creative" ]
+           }
+       },
+{
+           "name": {
+               "givenName": "Mariska",
+               "infixName": "",
+               "familyName": "Vereijken"
+           },
+           "optional": {
+               "website": "https://mariskavereijken.nl",
+               "featuredImage": "",
+               "level3URL": "",
+               "membershipStartDate": "2025-07-10",
+               "expertises": [ "portrait", "creative" ]
+           }
+       },
+{
+           "name": {
+               "givenName": "Sandra",
+               "infixName": "",
+               "familyName": "Blom"
+           },
+           "optional": {
+               "website": "https://mariskavereijken.nl",
+               "featuredImage": "",
+               "level3URL": "https://www.fotoclubgemert.nl/portfolio/sandra-blom",
+               "membershipStartDate": "2025-07-10",
+               "expertises": [ "creative" ]
+           }
+       },
+{
+           "name": {
+               "givenName": "Hans",
+               "infixName": "van",
+               "familyName": "Kilsdonk"
+           },
+           "optional": {
+               "website": "",
+               "featuredImage": "",
+               "level3URL": "",
+               "membershipStartDate": "2025-07-10",
+               "expertises": [ "architecture", "street" ]
+           }
+       }
 
-    ]
+   ]
 }
