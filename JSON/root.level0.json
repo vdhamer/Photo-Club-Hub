@@ -282,6 +282,20 @@
         },
 
         {
+            "idString": "Theater",
+            "name": [
+                { "language": "EN", "localizedString": "Theater" },
+                { "language": "NL", "localizedString": "Theater" }
+            ],
+            "optional": {
+                "usage":  [
+                    { "language": "EN", "localizedString": "Images of theatrical performances." },
+                    { "language": "NL", "localizedString": "Beelden van theatervoorstellingen." }
+                 ]
+            }
+        }
+
+        {
             "idString": "Travel",
             "name": [
                 { "language": "EN", "localizedString": "Travel" },

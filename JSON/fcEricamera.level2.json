@@ -57,7 +57,7 @@
                 "website": "https://www.bernardfoto.nl",
                 "nlSpecific": {"fotobondNumber": 1674023},
                 "roles": {"isOther": true},
-                "expertises": ["Theatre", "LR"]
+                "expertises": ["Theater", "LR"]
             }
         },
 
@@ -72,7 +72,7 @@
                 "level3URL": "https://www.ericamera.nl/bob-alisic",
                 "nlSpecific": {"fotobondNumber": 1674030},
                 "roles": {"isChairman": true},
-                "expertises": ["Theatre", "Printing"]
+                "expertises": ["Theater", "Printing"]
             }
         },
 

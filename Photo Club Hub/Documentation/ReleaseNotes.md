@@ -1,5 +1,7 @@
 ### 2.8.1 (GitHub commit ???????) ??-07-25
 
+* New expertise tag: Theater
+
 Portfolio screen
 * User can filter on Expertise (in local language) using the Search bar.
 
