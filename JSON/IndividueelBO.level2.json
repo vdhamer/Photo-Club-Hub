@@ -55,7 +55,7 @@
                "website": "",
                "level3URL": "https://www.youtube.com/watch?v=HOc3KDEvQJ8?",
                "membershipStartDate": "2025-07-10",
-               "expertises": [ "documentary" ]
+               "expertises": [ "Documentary" ]
            }
        },
  {
@@ -69,7 +69,7 @@
                "featuredImage": "",
                "level3URL": "",
                "membershipStartDate": "2025-07-10",
-               "expertises": [ "architecture", "street" ]
+               "expertises": [ "Architecture", "Street" ]
            }
        },
 {
@@ -83,7 +83,7 @@
                "featuredImage": "",
                "level3URL": "",
                "membershipStartDate": "2025-07-10",
-               "expertises": [ "portrait", "creative" ]
+               "expertises": [ "Portrait", "Creative" ]
            }
        },
 {
@@ -97,7 +97,7 @@
                "featuredImage": "",
                "level3URL": "",
                "membershipStartDate": "2025-07-10",
-               "expertises": [ "portrait", "creative" ]
+               "expertises": [ "Portrait", "Creative" ]
            }
        },
 {
@@ -111,7 +111,7 @@
                "featuredImage": "",
                "level3URL": "https://www.fotoclubgemert.nl/portfolio/sandra-blom",
                "membershipStartDate": "2025-07-10",
-               "expertises": [ "creative" ]
+               "expertises": [ "Creative" ]
            }
        },
 {
@@ -125,7 +125,7 @@
                "featuredImage": "",
                "level3URL": "",
                "membershipStartDate": "2025-07-10",
-               "expertises": [ "architecture", "street" ]
+               "expertises": [ "Architecture", "Street" ]
            }
        }
 
