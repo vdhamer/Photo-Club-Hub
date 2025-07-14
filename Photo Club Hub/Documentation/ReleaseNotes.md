@@ -12,6 +12,7 @@ Code Maintenance
 
 Data Maintenance
 * URLs without an https:// or http:// are now allowed (TODO!!!!).
+* Update to membership list for IndividiueelBO.level2.json
 
 Documentation
 * Updated Level2_expertise_NL documentation.
