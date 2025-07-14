@@ -9,6 +9,7 @@ Code Maintenance
 * Removed obsolete UserData key dataResetPending280.
 * Minor cleanups to unit Test code.
 * Missing nickName in Level2 file is not handled robustly. (TODO!!!!)
+* More consistent use of the term "expertise tag".
 
 Data Maintenance
 * URLs without an https:// or http:// are now allowed (TODO!!!!).

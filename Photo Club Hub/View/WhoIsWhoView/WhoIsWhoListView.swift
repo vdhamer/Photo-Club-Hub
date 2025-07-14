@@ -72,9 +72,9 @@ struct WhoIsWhoListView: View {
                         Text("\(expertise.isStandard ? "" : nonStandard)")
                     }
                 }
-                Text("There are \(Expertise.count(context: viewContext)) areas of expertise.",
+                Text("There are \(Expertise.count(context: viewContext)) expertise tags.",
                      comment: "Expertise statistics in footnote #4 of Who's Who screen")
-                Text("Expertises were assigned \(PhotographerExpertise.count(context: viewContext)) times.",
+                Text("Expertise tags were assigned \(PhotographerExpertise.count(context: viewContext)) times.",
                      comment: "Expertise statistics in footnote #4 of Who's Who screen")
             }
             .foregroundColor(Color.secondary)

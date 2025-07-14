@@ -577,19 +577,6 @@ Graag ons op dergelijke wijzigingen op club-niveau attenderen: dan corrigeren wi
 
 <ul><li>
 
-### Expertisegebieden van fotografen?
-
-<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
-Een fotograaf kan gekoppeld worden aan expertisegebieden zoals "portret" of "zwart-wit".
-De app kan deze weergeven en (straks) hierop zoeken. Hiermee kan je fotografen 
-met een bepaalde specialisatie vinden en hun portfolio's bekijken. Bij voldoende interesse kan men
-b.v. een expositie bezoeken of via de club persoonlijk contact opnemen.</p>
-
-Hier wordt momenteel aan gewerkt: een Level 2 bestand kan al expertisegebieden per fotograaf aanleveren.
-En is ook een ("Level 0") lijst met gestandaardiseerde expertisebegieden en hun vertalingen.
-
-</li><li>
-
 ### Foto's van afgelopen exposities? (onderweg)
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>

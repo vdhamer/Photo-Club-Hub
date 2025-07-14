@@ -294,19 +294,19 @@
         }
       }
     },
-    "Expertises were assigned %lld times." : {
+    "Expertise tags were assigned %lld times." : {
       "comment" : "Expertise statistics in footnote #4 of Who's Who screen",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Expertises were assigned %lld times."
+            "value" : "Expertise tags were assigned %lld times."
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Expertisegebieden zijn %lldx toegekend."
+            "value" : "Er zijn %lldx expertise tags toegekend."
           }
         }
       }
@@ -804,19 +804,19 @@
         }
       }
     },
-    "There are %lld areas of expertise." : {
+    "There are %lld expertise tags." : {
       "comment" : "Expertise statistics in footnote #4 of Who's Who screen",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "There are %lld areas of expertise."
+            "value" : "There are %lld expertise tags."
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Er zijn %lld verschillende expertisegebieden."
+            "value" : "Er zijn %lld verschillende expertise tags."
           }
         }
       }
@@ -946,13 +946,13 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "④ Photographic areas of expertise"
+            "value" : "④ Photographic expertise tags"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "④ Fotografische expertisegebieden"
+            "value" : "④ Fotografische expertise tags"
           }
         }
       }
