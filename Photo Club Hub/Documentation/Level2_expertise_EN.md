@@ -27,7 +27,7 @@ This enables you to find Rob and others by typing "abstract" or "abst" into the 
 
 <details><summary>Click to expand or collapse an answer</summary></p>
 
-1. In the HTML/web version of the app, `expertises` are shown in the `Areas of expertise` column in the tables of club members.
+1. In the HTML/web version of the app, `expertises` are shown in the `Expertise tags` column in the tables of club members.
 2. In the iOS version of the app, `expertises` are shown per photographer on the `Portfolio` page. 
 2. In the iOS version, the list of `expertises` and their statistics are shown at the bottom of the `Who's Who` screen. To avoid a lot of scrolling you can search for "expertises" or any other text that has no matches like "zzz".
 4. In the iOS version, you can **search** for `expertise` tags by typing in the first few letters of the expertise in the Search bar.
@@ -154,7 +154,7 @@ For now, we target keeping the list size below 100. Criteria:</p>
 ### Granularity?
 
 <details><summary>Click to expand or collapse an answer</summary></p>
-A very specialized area of expertise with only a few practitioners is not necessarily a bad idea.
+A very specialized Expertise tag with only a few practitioners is not necessarily a bad idea.
 A tag that would only get used for one photographer is overdoing things (if you know the domain, you may already
 know the photographer), a specialized domain like "underwater photography" tends to be relatively valuable
 because it is hard to find such practitioners. 

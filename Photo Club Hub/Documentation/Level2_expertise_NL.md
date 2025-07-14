@@ -1,6 +1,6 @@
 ## FAQ over `Expertise` in level2.json bestanden
 
-In Level 2 bestanden kan men nul, één of twee expertisegebieden opgeven voor ieder clublid.
+In Level 2 bestanden kan men nul, één of twee expertise tags opgeven voor ieder clublid.
 Het aanmaken en het formaat van Level 2 bestanden is omschreven in
 [Level2_aanmaken_NL](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/Level2_aanmaken_NL.md).
 Deze FAQ gaat over het doel en optimale gebruik van `expertise`.
@@ -27,11 +27,11 @@ in de zoekbank van het `Portfolio` scherm.
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 
-1. In de HTML/web versie van de app, staan ze vermeld in een kolom "expertisegebieden" in de diverse tabellen met clubleden.
+1. In de HTML/web versie van de app, staan ze vermeld in een kolom "expertise tags" in de diverse tabellen met clubleden.
 2. In de iOS versie zie je de beschikbare expertises bij iedere fotograaf op de `Portfolio` pagina.
-3. In de iOS versie staan de beschikbare expertisegebieden helemaal onderaan de `Namenlijst` pagina.
+3. In de iOS versie staan de beschikbare expertise tags helemaal onderaan de `Namenlijst` pagina.
    Om snel onderaan te komen, zoek op "expertise" of "zzz".
-4. In de iOS versie, kan men **zoeken** op expertisegebied door de eerste paar letters in te tikken in de zoekbalk.
+4. In de iOS versie, kan men **zoeken** op expertiseg tag door de eerste paar letters in te tikken in de zoekbalk.
    Dus intypen van "zwart" reduceert de lijst tot fotografen die aan "zwart-wit" gekoppeld zijn.
    Maar dit kan ook namen tonen zoals "Kees de Zwart": deze zoekbalk zoekt gelijktijdig op naam en op expertise tags.
 </p>
@@ -39,8 +39,8 @@ in de zoekbank van het `Portfolio` scherm.
 En op termijn komen er ook zoekfuncties op `expertise` in de HTML versie:
 
 1. In de HTML versie, moeten de getoonde expertises **klikbare links** worden. Dit brengt je naar een lijst met alle fotografen met die expertise.
-2. In de HTML versie, moet er nog een **aparte pagina** komen met een (klikbare) lijst met alle beschikbare expertisegebieden.
-Hiermee kan je zien welke expertisegebieden er zijn, wat de bijbehorende toelichting is,
+2. In de HTML versie, moet er nog een **aparte pagina** komen met een (klikbare) lijst met alle beschikbare expertise tags.
+Hiermee kan je zien welke expertise tags er zijn, wat de bijbehorende toelichting is,
 en hoeveel fotografen in de app hieraan gekoppeld zijn. Verder is het dan ook mogelijk om te klikken op een expertise
 tag om alle bijbehorende leden in alle beschikbare clubs te vinden.
 </details></p>
@@ -53,7 +53,7 @@ tag om alle bijbehorende leden in alle beschikbare clubs te vinden.
 Stel dat er tien, honderd of zelfs duizend clubs meedoen, met gemiddeld 15 leden per club.
 Dan zijn er 150, 1500 of zelfs 15.000 fotografen bekend in de app. 
 De app bevat zoekfuncties waarmee je op naam van de fotograaf kunt zoeken. Hier vind je bekenden mee.
-Expertisegebieden laat je bovendien interessante fotografen zien op basis van hun specialismes.
+Met expertise tags kan je ook fotografen vinden op basis van hun specialismes.
 </details></p>
 
 </li><li>
@@ -82,10 +82,10 @@ Ja. Dat kan drie verschillende redenen hebben:
 
 </li><li>
 
-### Hoeveel en welke expertisegebieden zijn beschikbaar?
+### Hoeveel en welke expertise tags zijn beschikbaar?
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
-In de iOS versie van de app staat alle beschikbare expertisegebieden helemaal onderaan de `Namenlijst` pagina (zoek op "expertise" of "xyz").
+In de iOS versie van de app staat alle beschikbare expertise tags helemaal onderaan de `Namenlijst` pagina (zoek op "expertise" of "xyz").
 Deze lijst is dynamisch (online opgehaald): het kan dat er volgende week een nieuw gebied bijgekomen is. Het zijn er al ruim 20.</p>
 
 De HTML versie krijgt wellicht een extra pagina met diezelfde lijst. 
@@ -113,7 +113,7 @@ Iemand kan dingen bijleren of van focusgebied verschuiven.
 
 </li><li>
 
-### Waarom hooguit twee expertisegebieden per fotograaf?
+### Waarom hooguit twee expertise tags per fotograaf?
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 De gedachte is dat een zoekopdracht, net als bij Google Search, zo relevant mogelijke resultaten vindt.
@@ -128,10 +128,10 @@ De app vereist niet dat iedereen specialismes heeft; sommige fotografen hebben n
 
 </li><li>
 
-### Hoeveel expertisegebieden komen er?
+### Hoeveel expertise tags komen er?
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
-Dat moet blijken. Criteria:</p>
+Dat moet blijken. We mikken op maximaal honderd. Criteria:</p>
 
 - Wikipedia gebieden t.a.v. fotografieonderwerp ("portret") of techniek ("zwart/wit") zijn meestal prima.
 - Het moet vrij duidelijk zijn wat eronder valt.
@@ -161,7 +161,7 @@ Een te grote expertisegebied ("buitenfotografie") levert minder waarde, en geeft
 
 </li><li>
 
-### Wie beheert de lijst met expertisegebieden?
+### Wie beheert de lijst met expertise tags?
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 Vooralsnog de maker(s) van de app. Het is echter een dienstverlening, en men moet voortdurend contact houden met gebruikers.
@@ -193,7 +193,7 @@ En een expertise is vaak algemener en kan dus van pas komen bij meerdere projekt
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 Erkende expertisetags kunnen in de app weergegeven worden in het Nederlands en in het Engels.
 Als een fotograaf gekoppeld is aan zwart-wit fotografie, wordt dat afhankelijk van omstandigheden dus automatisch in de juiste taal weergegeven ("Zwart-wit", "Black & White").
-Als de app een onbekend expertisegebied tegenkomt, wordt er niet vertaald. En is er een waarschuwing te zien - mede omdat het en invoerfout kan zijn.
+Als de app een onbekend expertise tag tegenkomt, wordt er niet vertaald. En is er een waarschuwing te zien - mede omdat het en invoerfout kan zijn.
 </details></p>
 
 </li><li>
@@ -201,10 +201,10 @@ Als de app een onbekend expertisegebied tegenkomt, wordt er niet vertaald. En is
 ### Eentalige invoer
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
-Bij het koppelen van expertisegebieden aan fotografen gebruik je meestal de Engelse term.
+Bij het toekennen van expertise tags aan fotografen gebruik je meestal de Engelse term.
 Maar die identificatie (`idString`) kan in principe afwijken van wat er in het Engels getoond wordt.
 
-Dus strict genomen zijn er 3 benaming voor een expertisegebied:
+Dus strict genomen zijn er 3 benaming voor een expertise tag:
 1. een identificatie zoals "Bird", gebruikt on aan te geven welk expertise we bedoelen. Dit zal meestal overeenkomen met (2), maar dat hoeft niet.
 2. een Engelse weergavetekst zoals "Birds", zoals het getoond wordt aan Engelstalige gebruikers.
 3. een Nederlandse weergavetekst zoals "Vogels", zoals het getoond wordt aan Nederlandstalige gebruikers.
@@ -218,7 +218,7 @@ Dus strict genomen zijn er 3 benaming voor een expertisegebied:
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 De app koppelt expertisetags aan een persoon - dus los van enig clubverband.</p>
   
-Maar de expertisegebieden worden door clubs ingevoerd.
+Maar de expertise tags worden door clubs ingevoerd.
 Dus een fijnproever kan zich afvragen: "als Jan lid is van Club 1 en Club 2, 
 en de beide clubs vulen wat andere `Expertise`tags in voor Jan. Hoe reageert de app?".
 
@@ -233,10 +233,10 @@ mag Jan dat verder regelen. Bijvoorbeeld door de bijde lijsten gelijk te trekken
 
 </li><li>
 
-### Teveel expertisegebieden?
+### Teveel expertise tags per fotograaaf?
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
-Bij 3 of meer expertisegebieden, meldt de app "Teveel Expertises" op de plek van het 3e element.
+Bij 3 of meer tags, meldt de app "Teveel Expertises" op de plek van het 3e element.
 Dit moet de club aanmoedigen om het te corrigeren.
 </details></p>
 
@@ -251,7 +251,7 @@ Voorbeeld: een bestand bevat "Model" terwijl alleen "Portrait" ondersteund is.
 De app toont dan "Model" - maar met een speciaal groen ikoon.
 Het ikoon en bijbehorende 'tooltip' geven aan dat dit op dit moment geen officeele `expertise` is.
 De app meldt expliciet dat daardoor geen vertalingen beschikbaar zijn: die zijn alleen mogelijk voor erkende expertise tags. 
-Dit kan ertoe leiden dat de club de eventuele fout corrigeert of overschakelt naar een verwant erkend expertisegebied.
+Dit kan ertoe leiden dat de club de eventuele fout corrigeert of overschakelt naar een verwant erkend expertise tag.
 Maar andere uitkomst is dat "Model" op een gegeven moment gepromoveerd wordt tot een officiële `expertise`: het was zo gek nog niet.
 Het groene ikoon en de waarschuwing verdwijnen dan automatisch zodra de app ziet dat "Model" inmiddels een officiële tag geworden is.
 </details></p>

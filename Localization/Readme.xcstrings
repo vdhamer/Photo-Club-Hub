@@ -291,13 +291,13 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "We manage a central list of supported Expertise tags from which a photographer can choose. Standardizing these tags allows you to use the app to find photographers with a clear area of expertise (e.g. “Macro” or “Theatre” photography)."
+            "value" : "We manage a central list of supported Expertise tags from which a photographer can choose. Standardizing these tags allows you to use the app to find photographers with a notable area of expertise (e.g. “Macro” or “Theatre” photography)."
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Er is een centrale lijst met goedgekeurde  expertisetags. Door op het Portfolio scherm te zoeken naar “Portret” of “por” kan je fotografen vinden die in portretfotografie gespecialiseerd zijn."
+            "value" : "Er is een centrale lijst met goedgekeurde  expertise tags. Door op het Portfolio scherm te zoeken naar “Portret” of “por” kan je fotografen vinden die in portretfotografie gespecialiseerd zijn."
           }
         }
       }
@@ -982,23 +982,6 @@
         }
       }
     },
-    "Available (🏵) and potential (🪲) Areas of Expertise" : {
-      "comment" : "Caption about Expertise on the Readme page",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Available (🏵) and potential (🪲) Expertise Tags"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Voorbeelden van goedgekeurde (🏵) en overige (🪲) expertisetags"
-          }
-        }
-      }
-    },
     "Buttons for the automatic slide show" : {
       "comment" : "Caption about Play button on the Readme page",
       "localizations" : {
@@ -1131,6 +1114,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Omgeving van een fotomuseum in 3D"
+          }
+        }
+      }
+    },
+    "Official (🏵) and unofficial (🪲) expertise tags" : {
+      "comment" : "Caption about Expertise on the Readme page",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Official (🏵) and unofficial (🪲) expertise tags"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Officiële (🏵) and ad-hoc (🪲) expertise tags"
           }
         }
       }
