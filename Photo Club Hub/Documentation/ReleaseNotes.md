@@ -1,4 +1,4 @@
-### 2.8.1 (GitHub commit ???????) ??-07-25
+### 2.8.1 (GitHub commit  bc51dba) 14-07-25
 
 * New expertise tag: Theater
 
@@ -20,7 +20,7 @@ Data Maintenance
 Documentation
 * Updated Level2_expertise_NL documentation.
 
-This build #4645 was made using Xcode beta 2 (17A5241o) and can thus only be used for beta testing.
+This build #4645 was made using Xcode 16.4 and may be released via the App Store.
 
 ---------------------------------------------------------------------------
 
