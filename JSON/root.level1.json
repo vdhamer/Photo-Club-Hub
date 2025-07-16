@@ -249,6 +249,34 @@
 
         {
             "idPlus": {
+                "town": "Eindhoven",
+                "fullName": "Individuele Leden Brabant Oost",
+                "nickName": "IndividueelBO"
+            },
+            "coordinates": {
+                "latitude": 51.44327,
+                "longitude": 5.47990
+            },
+            "optional": {
+               "level2URL": "https://www.example.com/IndividueelBO.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "These photographers are members of the Dutch national Fotobond, but not via their membership of any specific club."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Individuele leden van de Koninklijke Fotobond, Afdeling 16: Brabant Oost."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 1600
+                }
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Den Bosch",
                 "fullName": "Fotogroep Argus",
                 "nickName": "fgArgus"
@@ -1761,34 +1789,6 @@
                 ],
                 "nlSpecific": {
                     "fotobondNumber": 1634
-                }
-            }
-        },
-
-        {
-            "idPlus": {
-                "town": "Eindhoven",
-                "fullName": "Individuele Leden Brabant Oost",
-                "nickName": "IndividueelBO"
-            },
-            "coordinates": {
-                "latitude": 51.44327,
-                "longitude": 5.47990
-            },
-            "optional": {
-               "level2URL": "https://www.example.com/IndividueelBO.level2.json",
-                "remark": [
-                    {
-                        "language": "EN",
-                        "value": "These photographers are members of the Dutch national Fotobond, but not via their membership of any specific club."
-                    },
-                    {
-                        "language": "NL",
-                        "value": "Individuele leden van de Koninklijke Fotobond, Afdeling 16: Brabant Oost."
-                    }
-                ],
-                "nlSpecific": {
-                    "fotobondNumber": 1600
                 }
             }
         },
