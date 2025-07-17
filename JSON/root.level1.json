@@ -689,7 +689,6 @@
                 "longitude": 5.51534
             },
             "optional": {
-                "website": "",
                 "level2URL": "https://www.example.com/deBeeldmakers.level2.json",
                 "remark": [
                     {
@@ -1505,7 +1504,6 @@
                 "longitude": 5.60938
             },
             "optional": {
-                "website": "",
                 "level2URL": "https://www.example.com/fcBeeldspraakU.level2.json",
                 "remark": [
                     {
@@ -1888,7 +1886,6 @@
                 "longitude": 5.25076
             },
             "optional": {
-                "website": "",
                 "level2URL": "https://www.example.com/?.level2.json",
                 "remark": [
                     {
@@ -1917,7 +1914,7 @@
                 "longitude": 5.67461
             },
             "optional": {
-                "website": "www.facebook.com/ObjectiefZeeland",
+                "website": "https://www.facebook.com/ObjectiefZeeland",
                 "level2URL": "https://www.example.com/???.level2.json",
                 "remark": [
                     {
@@ -2132,7 +2129,7 @@
                 "longitude": -6.265375
             },
             "optional": {
-                "website": "",
+                "website": "https://www.nli.ie/collections/our-collections/photographs",
                 "wikipedia": "https://en.wikipedia.org/wiki/National_Photographic_Archive",
                 "remark": [
                     {

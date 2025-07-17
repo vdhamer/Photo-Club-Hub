@@ -3,18 +3,18 @@
     "club":
         {
             "idPlus": {
-                "town": "Amsterdam",
+                "town": "Rotterdam",
                 "fullName": "Xample Club With Maximal Data",
                 "nickName": "XampleMax"
             },
             "optional": {
                 "coordinates": {
-                    "latitude": 52.37312,
-                    "longitude": 4.89237
+                    "latitude": 51.92275,
+                    "longitude": 4.47972
                 },
-                "website": "https://www.xamplemax.nl",
-                "wikipedia": "https://en.wikipedia.org/wiki/National_Monument_(Amsterdam)",
-                "level2URL": "https://www.xamplemax.nl/XampleMax.level2.json",
+                "website": "https://www.example.com/XmpleMax",
+                "wikipedia": "https://en.wikipedia.org/wiki/Rotterdam",
+                "level2URL": "https://www.example.com/XampleMax.level2.json",
                 "remark": [
                     {
                         "language": "EN",
@@ -37,9 +37,9 @@
 
         {
             "name": {
-                "givenName": "Jan",
-                "infixName": "uit de",
-                "familyName": "Jordaan"
+                "givenName": "Mien",
+                "infixName": "van",
+                "familyName": "Rotterdam"
             },
             "optional": {
                 "roles": {
@@ -61,7 +61,7 @@
                 "website": "https://glass.photo/vdhamer",
                 "photographerImage": "http://www.vdhamer.com/wp-content/uploads/2022/07/cropped-2006_Norway_276_SSharp1_4.jpg",
                 "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg",
-                "level3URL": "https://www.example.com/XmpleMax/Max_van_Amsterdam.level3.json",
+                "level3URL": "https://www.example.com/XmpleMax/Mien_van_Rotterdam.level3.json",
                 "membershipStartDate": "2020-01-01",
                 "expertises": [ "Experimental", "Street" ],
                 "nlSpecific": {
@@ -72,9 +72,9 @@
 
         {
             "name": {
-                "givenName": "Max",
-                "infixName": "van",
-                "familyName": "Amsterdam"
+                "givenName": "Mike",
+                "infixName": "",
+                "familyName": "Blaak"
             },
             "optional": {
                 "roles": {
@@ -96,7 +96,7 @@
                 "website": "https://glass.photo/vdhamer",
                 "photographerImage": "http://www.vdhamer.com/wp-content/uploads/2022/07/cropped-2006_Norway_276_SSharp1_4.jpg",
                 "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg",
-                "level3URL": "https://www.example.com/XmpleMax/Max_van_Amsterdam.level3.json",
+                "level3URL": "https://www.example.com/XmpleMax/Mike_Blaak.level3.json",
                 "membershipStartDate": "2020-01-01",
                 "membershipEndDate": "2020-12-31",
                 "expertises": [ "Landscape", "Travel", "Minimal" ],

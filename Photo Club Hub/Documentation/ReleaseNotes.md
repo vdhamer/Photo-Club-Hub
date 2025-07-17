@@ -6,7 +6,7 @@ Code Maintenance
 
 Data Maintenance
 * URLs without an https:// or http:// are now allowed (TODO!!!!).
-* Forced a datareset at dataResetPending282b4646 (related to IndividueelBO town changing "Eindhoven" -> "Brabant Oost".
+* Forced a datareset at dataResetPending282b4646 (related to IndividueelBO, XampleMax and XampleMin town changes).
 
 This build #4646 was made using Xcode beta 3 (17A5276g) and can thus only be used for beta testing.
 
