@@ -85,8 +85,8 @@ struct WhoIsWhoListView: View {
         .contentMargins(.horizontal, -5, for: .scrollIndicators) // iOS 17 smart scrolling
         .refreshable { // for pull-to-refresh
             // do not remove next statement: a side-effect of reading the flag, is that it clears the flag!
-            if Settings.dataResetPending280b4644 {
-                print("dataResetPending280 flag reset from true to false")
+            if Settings.dataResetPending282b4646 {
+                print("dataResetPending282b4646 flag reset from true to false")
             }
             Model.deleteAllCoreDataObjects(context: viewContext)
             PhotoClubHubApp.loadClubsAndMembers() // carefull: runs asynchronously

@@ -10,19 +10,22 @@ import Foundation
 struct Settings {
 
     // Doesn't really work in Photo Club Hub HTML until the version numbers are synchronized
-    static var dataResetPending280b4644: Bool { // stored as a string shown in Settings
+    static var dataResetPending282b4646: Bool { // stored as a string shown in Settings
         // returns true until a reset is done
 
-        if UserDefaults.standard.object(forKey: "dataResetPending280b4644") == nil {
-            UserDefaults.standard.set(true, forKey: "dataResetPending280b4644") // interpret nil as true
-            UserDefaults.standard.removeObject(forKey: "dataResetPending280") // cleanup of any old reset key-value pair
-            UserDefaults.standard.removeObject(forKey: "dataResetPending272") // cleanup of any old reset key-value pair
-            UserDefaults.standard.removeObject(forKey: "dataResetPending") // cleanup of any old reset key-value pair
+        if UserDefaults.standard.object(forKey: "dataResetPending282b4646") == nil {
+            UserDefaults.standard.set(true, forKey: "dataResetPending282b4646") // interpret nil as true
+            // following lines remove any old dataResetPending keys from UserDefaults
+            UserDefaults.standard.removeObject(forKey: "dataResetPending280b4644")
+            UserDefaults.standard.removeObject(forKey: "dataResetPending280")
+            UserDefaults.standard.removeObject(forKey: "dataResetPending272")
+            UserDefaults.standard.removeObject(forKey: "dataResetPending")
         }
 
-        let prevValue = UserDefaults.standard.bool(forKey: "dataResetPending280")
-        UserDefaults.standard.set(false, forKey: "dataResetPending280") // never true more than once
-        return prevValue // if true, app has to react immediately (by executing data reset)
+        let prevValue = UserDefaults.standard.bool(forKey: "dataResetPending282b4646") // return whether reset needed
+        UserDefaults.standard.set(false, forKey: "dataResetPending282b4646") // don't trigger a reset at next app launch
+
+        return prevValue // if true, app will immediately do a data reset
     } // implicit getter only
 
     static var manualDataLoading: Bool { // controlled by toggle in Settings
