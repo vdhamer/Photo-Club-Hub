@@ -2,14 +2,14 @@
     "clubs": [
         {
             "idPlus": {
-                "town": "Amsterdam",
+                "town": "Rotterdam",
                 "fullName": "Xample Club With Maximal Data",
                 "nickName": "XampleMax"
             },
             "optional": {
                 "coordinates": {
-                    "latitude": 52.37312,
-                    "longitude": 4.89237
+                    "latitude": 51.92275,
+                    "longitude": 4.47972
                 },
                 "website": "https://www.xamplemax.nl",
                 "wikipedia": "https://en.wikipedia.org/wiki/Rotterdam_City_Hall",
@@ -17,11 +17,11 @@
                 "remark": [
                     {
                         "language": "EN",
-                        "value": "A remark here about the club will overrule any remark provided in level1.json file."
+                        "value": "A remark here about the club will be overruled by a remark in level2.json file."
                     },
                     {
                         "language": "NL",
-                        "value": "Deze beschrijving van de club vervangt een eventuele beschrijving in root.level1.json"
+                        "value": "Deze beschrijving van de club wordt overschreven door een mogelijke beschrijving in root.level2.json"
                     }
                 ],
                 "contactEmail": "admin@xamplemax.nl",
@@ -31,6 +31,8 @@
             }
         }
     ],
+
+
     "museums": [
         {
             "idPlus": {
@@ -41,7 +43,7 @@
             "coordinates": {
                 "latitude": 40.739278,
                 "longitude": -73.986722
-            }
+            },
             "optional": {
                 "website": "https://www.fotografiska.com/nyc/",
                 "wikipedia": "https://en.wikipedia.org/wiki/Fotografiska_New_York",
@@ -54,4 +56,5 @@
             }
         }
     ]
+
 }
