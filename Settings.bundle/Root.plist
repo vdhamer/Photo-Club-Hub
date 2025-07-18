@@ -114,11 +114,11 @@
 			<key>Type</key>
 			<string>PSToggleSwitchSpecifier</string>
 			<key>Title</key>
-			<string>Data refresh (for r2.8.0) pending</string>
+			<string>Data refresh (for r2.8.2) pending</string>
 			<key>DefaultValue</key>
 			<true/>
 			<key>Key</key>
-			<string>dataResetPending280</string>
+			<string>dataResetPending282b4646</string>
 		</dict>
 		<dict>
 			<key>Type</key>
