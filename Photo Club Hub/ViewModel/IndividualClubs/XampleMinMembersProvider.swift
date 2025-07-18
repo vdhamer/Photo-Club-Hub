@@ -26,7 +26,7 @@ public class XampleMinMembersProvider {
 
     }
 
-    fileprivate func insertOnlineMemberData(bgContext: NSManagedObjectContext, town: String = "Rotterdam") {
+    fileprivate func insertOnlineMemberData(bgContext: NSManagedObjectContext, town: String = "Amsterdam") {
         let idPlus = OrganizationIdPlus(fullName: "Xample Club With Minimal Data",
                                         town: town,
                                         nickname: "XampleMin")

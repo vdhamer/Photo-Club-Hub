@@ -26,7 +26,7 @@ public class XampleMaxMembersProvider {
 
     }
 
-    fileprivate func insertOnlineMemberData(bgContext: NSManagedObjectContext, town: String = "Amsterdam") {
+    fileprivate func insertOnlineMemberData(bgContext: NSManagedObjectContext, town: String = "Rotterdam") {
         let idPlus = OrganizationIdPlus(fullName: "Xample Club With Maximal Data",
                                         town: town,
                                         nickname: "XampleMax")
