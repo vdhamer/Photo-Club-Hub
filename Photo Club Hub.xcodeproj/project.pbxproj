@@ -180,6 +180,7 @@
 		D0621E802AE2D7DE000FFADB /* MemberPortfolio+roles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MemberPortfolio+roles.swift"; sourceTree = "<group>"; };
 		D0621E842AE2E085000FFADB /* MemberPortfolio+updating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MemberPortfolio+updating.swift"; sourceTree = "<group>"; };
 		D0621E882AE2E47B000FFADB /* MemberPortfolio+refreshFirstImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MemberPortfolio+refreshFirstImage.swift"; sourceTree = "<group>"; };
+		D06403972E2BD25900515F25 /* Nieuwsbrief_Aug_2025_app.pages */ = {isa = PBXFileReference; lastKnownFileType = file; path = Nieuwsbrief_Aug_2025_app.pages; sourceTree = "<group>"; };
 		D0640F2F2E0609B7008EAE00 /* dataModel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dataModel.png; sourceTree = "<group>"; };
 		D06588E32BAE2F24000FD7F3 /* portfoliosScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = portfoliosScreen.png; sourceTree = "<group>"; };
 		D06588E42BAE31A0000FD7F3 /* clubsMuseumsScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clubsMuseumsScreen.png; sourceTree = "<group>"; };
@@ -550,6 +551,7 @@
 		D0831A48277F736C0049AB84 /* Documentation */ = {
 			isa = PBXGroup;
 			children = (
+				D06403972E2BD25900515F25 /* Nieuwsbrief_Aug_2025_app.pages */,
 				D0831A4B277F736C0049AB84 /* ReleaseNotes.md */,
 				D0B6B05C2DB27A3E00EAAF69 /* Photo Club Hub intro.pptx */,
 				D0F361CE2D5134A00077FFA0 /* Nieuwsbrief_Feb25_app.docx */,
