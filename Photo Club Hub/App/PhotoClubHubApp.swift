@@ -78,12 +78,12 @@ extension PhotoClubHubApp {
         _ = FotoclubBellusImagoMembersProvider(bgContext: bellusBackgroundContext,
                                                useOnlyInBundleFile: false)
 
-        if Settings.loadTestClubs {
+        // load current/former members of Fotogroep Oirschot
+        let oirschotBackgroundContext = makeBgContext(ctxName: "Level 2 loader fgOirschot")
+        _ = FotogroepOirschotMembersProvider(bgContext: oirschotBackgroundContext,
+                                             useOnlyInBundleFile: false)
 
-            // load current/former members of Fotogroep Oirschot
-            let oirschotBackgroundContext = makeBgContext(ctxName: "Level 2 loader fgOirschot")
-            _ = FotogroepOirschotMembersProvider(bgContext: oirschotBackgroundContext,
-                                                 useOnlyInBundleFile: false)
+        if Settings.loadTestClubs {
 
             // load test member(s) of XampleMin. Club is called XampleMin (rather than ExampleMin) to be at end of list
             let xampleMinBackgroundContext = makeBgContext(ctxName: "Level 2 loader XampleMin")
@@ -93,11 +93,11 @@ extension PhotoClubHubApp {
             let xampleMaxBackgroundContext = makeBgContext(ctxName: "Level 2 loader XampleMax")
             _ = XampleMaxMembersProvider(bgContext: xampleMaxBackgroundContext, useOnlyInBundleFile: false)
 
-            // load current/former members of container for Individual members of Fotobond (in region 16)
-            let individueelBOBackgroundContext = makeBgContext(ctxName: "Level 2 loader IndividueelBO")
-            _ = IndividueelBOMembersProvider(bgContext: individueelBOBackgroundContext, useOnlyInBundleFile: false)
-
         }
+
+        // load current/former members of container for Individual members of Fotobond (in region 16)
+        let individueelBOBackgroundContext = makeBgContext(ctxName: "Level 2 loader IndividueelBO")
+        _ = IndividueelBOMembersProvider(bgContext: individueelBOBackgroundContext, useOnlyInBundleFile: false)
 
         // load current/former members of Fotoclub Ericamera
         let ericameraBackgroundContext = makeBgContext(ctxName: "Level 2 loader fcEricamera")
