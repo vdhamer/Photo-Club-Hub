@@ -1,5 +1,8 @@
 ### 2.8.2 (GitHub commit  ???????) ??-07-25
 
+Portfolio screen
+* By default clubs fgOirschot and IndividueelBO now show up. Previously only load when "loadTestClubs" setting enabled.
+
 Code Maintenance
 * Missing nickName in Level2 file is not handled robustly. (TODO!!!!)
 * Minor code fix in dataResetPending logic
