@@ -3,12 +3,14 @@
 Code Maintenance
 * Missing nickName in Level2 file is not handled robustly. (TODO!!!!)
 * Minor code fix in dataResetPending logic
+* Tested with Xcode 26.0 beta 4 (17A5285i), iOS 26 beta (23A5297f)
 
 Data Maintenance
 * URLs without an https:// or http:// are now allowed (TODO!!!!).
 * Forced a datareset at dataResetPending282b4646 (related to IndividueelBO, XampleMax and XampleMin town changes).
+* Added data for member PdJ of fgDeGender.
 
-This build #4646 was made using Xcode beta 3 (17A5276g) and can thus only be used for beta testing.
+This build #4646 was made using Xcode 16.4 and can be released via the App Store..
 
 ---------------------------------------------------------------------------
 
@@ -34,7 +36,7 @@ Documentation
 * Updated Level2_expertise_NL documentation.
 * Created English language documentation: Level2_expertise_EN
 
-This build #4645 was made using Xcode 16.4 and may be released via the App Store.
+This build #4645 was made using Xcode 16.4 and was released via the App Store.
 
 ---------------------------------------------------------------------------
 
