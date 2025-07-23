@@ -576,11 +576,12 @@
                 "familyName": "Jong"
             },
             "optional": {
+                "website": "https://www.flickr.com/photos/ptdj/",
                 "level3URL": "http://www.vdhamer.com/fgDeGender/Pieter_de_Jong/",
                 "status": {
                     "isProspectiveMember": true
                 },
-                "expertises": [ ]
+                "expertises": [ "Street", "Travel" ]
             }
         },
 

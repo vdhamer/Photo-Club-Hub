@@ -150,6 +150,7 @@
 		D02AB3EF28A702800021BF41 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		D02C35F12880C3D6008C671A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D02F88522C4C242C0043B25B /* String+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Date.swift"; sourceTree = "<group>"; };
+		D0300D2A2E2D6BA500A11A03 /* Nieuwsbrief_Aug_2025_app.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Nieuwsbrief_Aug_2025_app.pdf; sourceTree = "<group>"; };
 		D030CD642B3AE2E800A12E90 /* OrganizationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationType.swift; sourceTree = "<group>"; };
 		D032516A2BBB6CB6005E9B32 /* whosWhoScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whosWhoScreen.png; sourceTree = "<group>"; };
 		D0329449283F9D1D0044C70C /* Bundle+VersionBuild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+VersionBuild.swift"; sourceTree = "<group>"; };
@@ -551,8 +552,8 @@
 		D0831A48277F736C0049AB84 /* Documentation */ = {
 			isa = PBXGroup;
 			children = (
-				D06403972E2BD25900515F25 /* Nieuwsbrief_Aug_2025_app.pages */,
 				D0831A4B277F736C0049AB84 /* ReleaseNotes.md */,
+				D06403972E2BD25900515F25 /* Nieuwsbrief_Aug_2025_app.pages */,
 				D0B6B05C2DB27A3E00EAAF69 /* Photo Club Hub intro.pptx */,
 				D0F361CE2D5134A00077FFA0 /* Nieuwsbrief_Feb25_app.docx */,
 				D036EA082D5019510012A47D /* FAQ_nl.md */,
@@ -568,6 +569,7 @@
 				D01DFAA627E778BD007BABFA /* offsets.md */,
 				D04A2B112AC0958C003ED113 /* LineCount.xlsx */,
 				D0A958632D596C3300658373 /* Website_Status_PPT */,
+				D0300D2A2E2D6BA500A11A03 /* Nieuwsbrief_Aug_2025_app.pdf */,
 			);
 			path = Documentation;
 			sourceTree = "<group>";
