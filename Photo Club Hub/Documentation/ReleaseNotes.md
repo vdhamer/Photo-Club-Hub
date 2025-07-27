@@ -13,6 +13,9 @@ Data Maintenance
 * Forced a datareset at dataResetPending282b4646 (related to IndividueelBO, XampleMax and XampleMin town changes).
 * Added data for member PdJ of fgDeGender.
 
+Documentation
+* Created a story in Dutch summarizing current project status (Nieuwsbrief_Aug_2025_app).
+
 This build #4646 was made using Xcode 16.4 and can be released via the App Store..
 
 ---------------------------------------------------------------------------
