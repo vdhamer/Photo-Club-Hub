@@ -579,7 +579,7 @@
                 "website": "https://lockdown2020.myportfolio.com/about-pieter-de-jong",
                 "level3URL": "http://www.vdhamer.com/fgDeGender/Pieter_de_Jong/",
                 "status": {
-                    "isProspectiveMember": false
+                    "isProspectiveMember": true
                 },
                 "expertises": [ "Street", "Travel" ]
             }
