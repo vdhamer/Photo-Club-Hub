@@ -1,26 +1,30 @@
-### 2.8.2 (GitHub commit  ???????) ??-07-25
+### 2.8.2 (GitHub commit 5c2a2ef) ??-08-25
+
+This build #4647 was made using Xcode 16.4 and can be released via the App Store.
+
+---------------------------------------------------------------------------
+
+### 2.8.2 (GitHub commit 5c2a2ef) 28-07-25
 
 Portfolio screen
 * By default clubs fgOirschot and IndividueelBO now show up. Previously only load when "loadTestClubs" setting enabled.
 
 Code Maintenance
-* Missing nickName in Level2 file is not handled robustly. (TODO!!!!)
 * Minor code fix in dataResetPending logic
 * Tested with Xcode 26.0 beta 4 (17A5285i), iOS 26 beta (23A5297f)
 
 Data Maintenance
-* URLs without an https:// or http:// are now allowed (TODO!!!!).
 * Forced a datareset at dataResetPending282b4646 (related to IndividueelBO, XampleMax and XampleMin town changes).
 * Added data for member PdJ of fgDeGender.
 
 Documentation
 * Created a story in Dutch summarizing current project status (Nieuwsbrief_Aug_2025_app).
 
-This build #4646 was made using Xcode 16.4 and can be released via the App Store..
+This build #4646 was made using Xcode 16.4 and can be released via the App Store.
 
 ---------------------------------------------------------------------------
 
-### 2.8.1 (GitHub commit  bc51dba) 14-07-25
+### 2.8.1 (GitHub commit bc51dba) 14-07-25
 
 * New expertise tag: Theater
 
