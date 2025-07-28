@@ -36,7 +36,6 @@ Code Maintenance
 * Fixed file name of IndividueelBOMembersProvider.swift.
 * Removed obsolete UserData key dataResetPending280.
 * Minor cleanups to unit Test code.
-* Missing nickName in Level2 file is not handled robustly. (TODO!!!!)
 * More consistent use of the term "expertise tag".
 
 Data Maintenance
