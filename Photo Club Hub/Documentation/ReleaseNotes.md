@@ -1,6 +1,9 @@
 ### 2.8.2 (GitHub commit 5c2a2ef) ??-08-25
 
-This build #4647 was made using Xcode 16.4 and can be released via the App Store.
+Code Maintenance
+* Tested with MacOS 15.6, iOS 26 beta (23A5297i)
+
+This build #4647 was made using Xcode 16.4 and is intended for release via the App Store.
 
 ---------------------------------------------------------------------------
 
@@ -20,7 +23,7 @@ Data Maintenance
 Documentation
 * Created a story in Dutch summarizing current project status (Nieuwsbrief_Aug_2025_app).
 
-This build #4646 was made using Xcode 16.4 and can be released via the App Store.
+This build #4646 was made using Xcode 23.0 beta 4 and can thus can be used for beta testing.
 
 ---------------------------------------------------------------------------
 
