@@ -561,7 +561,7 @@
                 "remark": [
                     {
                         "language": "EN",
-                        "value": "We couldn't find a working web site for the club, but the club was active in Oct 2023."
+                        "value": "We couldn't find a working website for the club, but the club was active in Oct 2023."
                     },
                     {
                         "language": "NL",
@@ -1231,7 +1231,7 @@
                     },
                     {
                         "language": "NL",
-                        "value": "Voor zover bekend heeft Fotokring Riethoven geen eigen web site."
+                        "value": "Voor zover bekend heeft Fotokring Riethoven geen eigen website."
                     }
                 ],
                 "nlSpecific": {
@@ -1788,6 +1788,32 @@
                 "nlSpecific": {
                     "fotobondNumber": 1634
                 }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Waalre",
+                "fullName": "Collectief de Verbeelding",
+                "nickName": "cVerbeelding"
+            },
+            "coordinates": {
+                "latitude": 51.38691,
+                "longitude": 5.44533
+            },
+            "optional": {
+                "website": "https://collectief-deverbeelding.nl",
+                "level2URL": "https://www.example.com/cDeVerbeelding.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "The collective consists of 4 members and was founded in May 2025."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Het collectief is opgericht in mei 2025 en exposeert in het Waalres Museum."
+                    }
+                ]
             }
         },
 

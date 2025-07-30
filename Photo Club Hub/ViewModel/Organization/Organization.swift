@@ -308,4 +308,35 @@ extension Organization {
         return modified
 	}
 
+    public static func find(context: NSManagedObjectContext, // can be foreground or background context
+                            organizationID: OrganizationID) throws -> Organization {
+
+        let predicateFormat: String = "fullName_ = %@ AND town_ = %@" // avoid localization
+        // Note that organizationType is not an identifying attribute.
+        // This implies that you cannot have 2 organizations with the same Name and Town, but of a different type.
+        let predicate = NSPredicate(format: predicateFormat,
+                                    argumentArray: [organizationID.fullName, organizationID.town] )
+        let fetchRequest: NSFetchRequest<Organization> = Organization.fetchRequest()
+        fetchRequest.predicate = predicate
+        let organizations: [Organization] = (try? context.fetch(fetchRequest)) ?? []
+
+        if organizations.count > 1 { // organization exists, but there shouldn't be multiple that satify the predicate
+            ifDebugFatalError("Query returned \(organizations.count) organizations named " +
+                              "\(organizationID.fullName) in \(organizationID.town)",
+                              file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
+            // in release mode, log that there are multiple clubs, but continue using the first one.
+        }
+
+        if let org = organizations.first {
+            return org
+        } else {
+            throw CoreDataError.cantFindOrg(
+                "No organization found matching \(organizationID.fullName) in \(organizationID.town)")
+        }
+    }
+
+    enum CoreDataError: Error {
+        case cantFindOrg(_ message: String)
+    }
+
 }

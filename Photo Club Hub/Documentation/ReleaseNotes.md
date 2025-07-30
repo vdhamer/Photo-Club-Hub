@@ -4,6 +4,9 @@ Code Maintenance
 * Tested with MacOS 15.6, iOS 26 beta (23A5297i)
 * Code cleanup for dataResetPending
 
+Data Maintenance
+* Added new club (cVerbeelding)
+
 This build #4647 was made using Xcode 16.4 and is intended for release via the App Store.
 
 ---------------------------------------------------------------------------
