@@ -80,8 +80,8 @@ struct WhoIsWhoThumbnail: View {
                 .font(.caption)
                 .lineLimit(2)
                 .truncationMode(.middle)
-                .dynamicTypeSize( // constrain impact of large dynamic type
-                    ...DynamicTypeSize.xLarge)
+                .dynamicTypeSize( // block xLarge (etc) dynamic type sizze for layout reasons
+                    ...DynamicTypeSize.large)
         } // VStack to combine image and caption
     }
 }

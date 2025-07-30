@@ -1,5 +1,8 @@
 ### 2.8.2 (GitHub commit 5c2a2ef) ??-08-25
 
+Who's Who screen
+* Preventing the image captures from taking up too much space if Dynamic Type is used
+
 Code Maintenance
 * Tested with MacOS 15.6, iOS 26 beta (23A5297i)
 * Code cleanup for dataResetPending
