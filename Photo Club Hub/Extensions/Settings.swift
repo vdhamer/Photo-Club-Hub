@@ -9,21 +9,33 @@ import Foundation
 
 struct Settings {
 
-    // Doesn't really work in Photo Club Hub HTML until the version numbers are synchronized
-    static var dataResetPending282b4646: Bool { // stored as a string shown in Settings
-        // returns true until a reset is done
+    @available(*, unavailable)
+    init() {
+        fatalError("init() is not available. Settings only holds a few static computer properties.")
+    }
 
-        if UserDefaults.standard.object(forKey: "dataResetPending282b4646") == nil {
-            UserDefaults.standard.set(true, forKey: "dataResetPending282b4646") // interpret nil as true
-            // following lines remove any old dataResetPending keys from UserDefaults
-            UserDefaults.standard.removeObject(forKey: "dataResetPending280b4644")
-            UserDefaults.standard.removeObject(forKey: "dataResetPending280")
-            UserDefaults.standard.removeObject(forKey: "dataResetPending272")
-            UserDefaults.standard.removeObject(forKey: "dataResetPending")
+    static let userDefaultsKey: String = "dataResetPending282b4646" // must match id of Settings toggle in Root.plist
+    private static let prevUserDefaultsKeys: Set<String> = ["dataResetPending280b4644",
+                                                            "dataResetPending280",
+                                                            "dataResetPending272",
+                                                            "dataResetPending"]
+
+    // Doesn't really work in Photo Club Hub HTML until the version numbers are synchronized
+    static var dataResetPending: Bool { // stored as a string shown in Settings
+        // returns true only when read for the first time
+
+        if UserDefaults.standard.object(forKey: userDefaultsKey) == nil {
+            UserDefaults.standard.set(true, forKey: userDefaultsKey) // if key missing, set value to true
         }
 
-        let prevValue = UserDefaults.standard.bool(forKey: "dataResetPending282b4646") // return whether reset needed
-        UserDefaults.standard.set(false, forKey: "dataResetPending282b4646") // don't trigger a reset at next app launch
+        let prevValue = UserDefaults.standard.bool(forKey: userDefaultsKey) // return whether reset needed
+
+        if prevValue {
+            UserDefaults.standard.set(false, forKey: userDefaultsKey) // return true only once
+            for key in prevUserDefaultsKeys { // also remove all previously used dataResetPending keys from UserDefaults
+                UserDefaults.standard.removeObject(forKey: key) // not important, just a cleanup
+            }
+        }
 
         return prevValue // if true, app will immediately do a data reset
     } // implicit getter only
