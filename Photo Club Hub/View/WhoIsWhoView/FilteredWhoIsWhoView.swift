@@ -43,37 +43,37 @@ struct FilteredWhoIsWhoView: View {
 //        ItemFilterStatsView(filteredCount: filteredPhotographers.count,
 //                            unfilteredCount: fetchedPhotographers.count,
 //                            elementType: ItemFilterStatsEnum.photographer)
-        ForEach(filteredPhotographers, id: \.id) { filteredPhotographer in // each photographer's "card"
+        ForEach(filteredPhotographers, id: \.id) { photographer in // each photographer's "card"
             VStack(alignment: .leading) { // there are horizontal layers within each photographer's "card"
                 HStack(alignment: .top) { // first row within each photographer's "card" with textual info
 
-                    PhotographerIconView(isDeceased: filteredPhotographer.isDeceased)
+                    PhotographerIconView(isDeceased: photographer.isDeceased)
                         .foregroundStyle(.photographerColor, .gray, .red) // red tertiary color should not show up
                         .font(.title3)
                         .frame(width: 35)
                         .padding(.top, 3)
 
-                    WhoIsWhoTextInfo(photographer: filteredPhotographer)
+                    WhoIsWhoTextInfo(photographer: photographer)
 
                     Spacer() // push WhoIsTextInfo to the left
 
-                    if let url: URL = filteredPhotographer.photographerWebsite {
+                    if let url: URL = photographer.photographerWebsite {
                         Link(destination: url, label: {
                             Image(systemName: "link")
                                 .foregroundColor(.linkColor)
                         })
-                        .buttonStyle(.plain) // to avoid entire List element to be clickable
+                        .buttonStyle(.plain) // to avoid entire List element being clickable
                     }
 
                 } // HStack
 
-                WhoIsWhoThumbnails(photographer: filteredPhotographer, wkWebView: wkWebView)
+                WhoIsWhoThumbnails(photographer: photographer, wkWebView: wkWebView)
 
-                Divider()
             } // VStack
+//            .border(.gray) // TODO remove
             .accentColor(.photographerColor)
             .foregroundColor(chooseColor(accentColor: .accentColor,
-                                         isDeceased: filteredPhotographer.isDeceased))
+                                         isDeceased: photographer.isDeceased))
         } // ForEach filteredPhotographer
         .onDelete { indexSet in
             deletePhotographers(indexSet: indexSet) // can be disabled using isDeletedPhotographerEnabled flag

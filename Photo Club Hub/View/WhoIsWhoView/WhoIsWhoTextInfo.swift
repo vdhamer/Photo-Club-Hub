@@ -44,10 +44,6 @@ struct WhoIsWhoTextInfo: View {
                 Text(verbatim: "\(locBirthday): \(dateFormatter.string(from: date))")
                     .font(.subheadline)
                     .foregroundStyle(photographer.isDeceased ? .deceasedColor : .primary)
-            } else {
-                Text("Birthday unknown", comment: "If photographer's birthday info is unavailable (Who's Who screen).")
-                    .font(.subheadline)
-                    .foregroundStyle(photographer.isDeceased ? .deceasedColor : .secondary)
             }
 
             // personal (not club-related) web site if available
@@ -60,11 +56,6 @@ struct WhoIsWhoTextInfo: View {
                         .foregroundColor(.linkColor)
                 })
                 .buttonStyle(.plain) // prevents entire List element from becoming clickable
-            } else {
-                Text("No known personal website",
-                     comment: "Shown on Who's Who screen If photographer has no personal website.")
-                    .font(.subheadline)
-                    .foregroundColor(.secondary)
             }
         }
     }

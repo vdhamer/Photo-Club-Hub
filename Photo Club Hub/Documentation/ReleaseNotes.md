@@ -1,7 +1,8 @@
 ### 2.8.2 (GitHub commit 5c2a2ef) ??-08-25
 
 Who's Who screen
-* Preventing the image captures from taking up too much space if Dynamic Type is used
+* Preventing the image captions from taking up too much space (Dynamic Type related).
+* If there is no personal website or birthday to show, don't use up any screen space.
 
 Code Maintenance
 * Tested with MacOS 15.6, iOS 26 beta (23A5297i)

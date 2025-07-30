@@ -225,23 +225,6 @@
         }
       }
     },
-    "Birthday unknown" : {
-      "comment" : "If photographer's birthday info is unavailable (Who's Who screen).",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Birthday unknown"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Verjaardag onbekend"
-          }
-        }
-      }
-    },
     "Clubs and Museums" : {
       "comment" : "Title of page with maps for Clubs and Museums",
       "localizations" : {
@@ -409,23 +392,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "leden"
-          }
-        }
-      }
-    },
-    "No known personal website" : {
-      "comment" : "Shown on Who's Who screen If photographer has no personal website.",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No known personal website"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Geen fotografie website bekend"
           }
         }
       }
