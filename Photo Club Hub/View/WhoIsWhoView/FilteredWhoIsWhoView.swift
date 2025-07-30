@@ -70,7 +70,6 @@ struct FilteredWhoIsWhoView: View {
                 WhoIsWhoThumbnails(photographer: photographer, wkWebView: wkWebView)
 
             } // VStack
-//            .border(.gray) // TODO remove
             .accentColor(.photographerColor)
             .foregroundColor(chooseColor(accentColor: .accentColor,
                                          isDeceased: photographer.isDeceased))

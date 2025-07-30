@@ -2,7 +2,8 @@
 
 Who's Who screen
 * Preventing the image captions from taking up too much space (Dynamic Type related).
-* If there is no personal website or birthday to show, don't use up any screen space.
+* If there is no personal website or birthday to show, don't waste screen space.
+* Available birthdays are only shown if there were a few days ago or in a few days.
 
 Code Maintenance
 * Tested with MacOS 15.6, iOS 26 beta (23A5297i)
