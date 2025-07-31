@@ -41,7 +41,7 @@ struct WhoIsWhoTextInfo: View {
                                               Date not currently localized?
                                               """)
             if let date: Date = photographer.bornDT {
-                if isBirthdaySoon(date, minResult: -30, maxResult: 30) != nil {
+                if isBirthdaySoon(date, minResult: -1, maxResult: 7) != nil {
                     Text(verbatim: "\(locBirthday): \(dateFormatter.string(from: date))")
                         .font(.subheadline)
                         .foregroundStyle(photographer.isDeceased ? .deceasedColor : .primary)
@@ -71,9 +71,11 @@ func isBirthdaySoon(_ birthday: Date, minResult: Int = -1, maxResult: Int = 7) -
     let birthday: Date = Calendar.current.date(from: Calendar.current.dateComponents(tymdComponents, from: birthday))!
     let tmdComponents: Set<Calendar.Component> = [.timeZone, .month, .day]
     let compBirthday = Calendar.current.dateComponents(tmdComponents, from: birthday)
-    let startDate = Calendar.current.date(byAdding: .day, value: -1 * abs(minResult), to: today)
-    guard let startDate else { return nil } // unwrap
-    let nearbyBirthday: Date = Calendar.current.nextDate(after: startDate,
+    let timeWindowStart: Date? = Calendar.current.date(byAdding: .day, value: -1 * abs(minResult), to: today)
+    guard let timeWindowStart: Date else { return nil } // unwrap
+    let compTimeWindowStart: DateComponents = Calendar.current.dateComponents(tmdComponents, from: timeWindowStart)
+    if compBirthday == compTimeWindowStart { return 0 }
+    let nearbyBirthday: Date = Calendar.current.nextDate(after: timeWindowStart,
                                                          matching: DateComponents(timeZone: compBirthday.timeZone,
                                                                                   month: compBirthday.month,
                                                                                   day: compBirthday.day),
@@ -81,7 +83,7 @@ func isBirthdaySoon(_ birthday: Date, minResult: Int = -1, maxResult: Int = 7) -
                                                          direction: .forward)!
 
     let interval = TimeInterval((abs(minResult) + abs(maxResult)) * 24 * 60 * 60) // unit is seconds
-    if !DateInterval(start: startDate, duration: interval).contains(nearbyBirthday) {
+    if !DateInterval(start: timeWindowStart, duration: interval).contains(nearbyBirthday) {
         return nil
     } else {
         return Calendar.current.dateComponents([.day], from: today, to: nearbyBirthday).day
