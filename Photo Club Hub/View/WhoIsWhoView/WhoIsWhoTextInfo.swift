@@ -43,7 +43,7 @@ struct WhoIsWhoTextInfo: View {
                                               Date not currently localized?
                                               """)
             if let date: Date = photographer.bornDT {
-                if isBirthdaySoon(date, minResult: -1, maxResult: 7) != nil {
+                if isBirthdaySoon(date, minResult: -1, maxResult: 7, name: photographer.fullNameFirstLast) != nil {
                     Text(verbatim: "\(locBirthday): \(Self.dateFormatter.string(from: date))")
                         .font(.subheadline)
                         .foregroundStyle(photographer.isDeceased ? .deceasedColor : .primary)
@@ -66,7 +66,7 @@ struct WhoIsWhoTextInfo: View {
     }
 }
 
-/// Returns the number of days until the next occurrence of a birthday that falls within a specified window around today.
+/// Returns the number of days between today and a birthday that falls within a specified window around today.
 ///
 /// - Parameters:
 ///   - birthday: The birth date (only month and day are considered).
@@ -75,26 +75,29 @@ struct WhoIsWhoTextInfo: View {
 /// - Returns: The number of days until the next birthday if it's within the window (0 means today), otherwise `nil`.
 /// - Note: Returns `nil` if the window does not include a nearby birthday, or if improper parameters are given.
 /// - Note: Returns a small negative number of birthday occurred a few days ago.
-func isBirthdaySoon(_ birthday: Date, minResult: Int = -1, maxResult: Int = 7) -> Int? {
+func isBirthdaySoon(_ birthday: Date, minResult: Int = -1, maxResult: Int = 7, name: String) -> Int? {
+    if name.contains("Blaak") {
+        print("Found Mike Blaak - for setting a breakpoint only") // TODO remove
+    }
     guard minResult <= 0 && maxResult >= 0 else {
         ifDebugFatalError("minResults should <= 0 and maxResults should be >= 0")
         return nil
     }
-
     let calendar = Calendar.current
+
     let today = calendar.startOfDay(for: Date())
-    let timeWindowStart: Date? = calendar.date(byAdding: .day, value: -1 * minResult, to: today)
+    let timeWindowStart: Date? = calendar.date(byAdding: .day, value: minResult, to: today)
     guard let timeWindowStart: Date else {
         ifDebugFatalError("Calendar.date() returned nil")
         return nil
     }
+    let timeWindowStartComponents: DateComponents = calendar.dateComponents([.month, .day], from: timeWindowStart)
 
     let birthdayComponents = calendar.dateComponents([.month, .day], from: birthday)
 
-    let compTimeWindowStart: DateComponents = calendar.dateComponents([.month, .day], from: timeWindowStart)
-    if birthdayComponents == compTimeWindowStart {
-        return 0
-    }
+//    if birthdayComponents == timeWindowStartComponents {
+//        return 0 // to avoid answers like 365
+//    }
     let nearbyBirthday: Date = calendar.nextDate(after: timeWindowStart,
                                                  matching: DateComponents(timeZone: birthdayComponents.timeZone,
                                                                           month: birthdayComponents.month,
@@ -102,11 +105,11 @@ func isBirthdaySoon(_ birthday: Date, minResult: Int = -1, maxResult: Int = 7) -
                                                  matchingPolicy: .nextTime,
                                                  direction: .forward)!
 
-    let interval = TimeInterval((minResult + maxResult) * 24 * 60 * 60) // unit is seconds
-    if !DateInterval(start: timeWindowStart, duration: interval).contains(nearbyBirthday) {
-        return nil
-    } else {
+    let interval = TimeInterval((maxResult - minResult) * 24 * 60 * 60) // unit is seconds
+    if DateInterval(start: timeWindowStart, duration: interval).contains(nearbyBirthday) {
+        print("days from today: \(calendar.dateComponents([.day], from: today, to: nearbyBirthday).day ?? 0)")
         return calendar.dateComponents([.day], from: today, to: nearbyBirthday).day
+    } else {
+        return nil
     }
 }
-
