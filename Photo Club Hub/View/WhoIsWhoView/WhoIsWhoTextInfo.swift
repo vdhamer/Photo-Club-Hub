@@ -17,13 +17,15 @@ import SwiftUI
 
 struct WhoIsWhoTextInfo: View {
     var photographer: Photographer
-    fileprivate let dateFormatter: DateFormatter
+
+    private static let dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd MMMM"
+        return formatter
+    }()
 
     init(photographer: Photographer) {
         self.photographer = photographer
-
-        dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd MMMM" // used here for birthdays only, so year is hidden
     }
 
     var body: some View {
@@ -42,7 +44,7 @@ struct WhoIsWhoTextInfo: View {
                                               """)
             if let date: Date = photographer.bornDT {
                 if isBirthdaySoon(date, minResult: -1, maxResult: 7) != nil {
-                    Text(verbatim: "\(locBirthday): \(dateFormatter.string(from: date))")
+                    Text(verbatim: "\(locBirthday): \(Self.dateFormatter.string(from: date))")
                         .font(.subheadline)
                         .foregroundStyle(photographer.isDeceased ? .deceasedColor : .primary)
                 }
