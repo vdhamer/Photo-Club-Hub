@@ -59,35 +59,54 @@ struct WhoIsWhoTextInfo: View {
                         .font(.subheadline)
                         .foregroundColor(.linkColor)
                 })
-                .buttonStyle(.plain) // prevents entire List element from becoming clickable
+                // prevents entire List element from becoming clickable
+                .buttonStyle(.plain)
             }
         }
     }
 }
 
+/// Returns the number of days until the next occurrence of a birthday that falls within a specified window around today.
+///
+/// - Parameters:
+///   - birthday: The birth date (only month and day are considered).
+///   - minResult: The negative number of days before today to start the search window (e.g., -1 for yesterday).
+///   - maxResult: The positive number of days after today to end the search window (e.g., 7 for one week ahead).
+/// - Returns: The number of days until the next birthday if it's within the window (0 means today), otherwise `nil`.
+/// - Note: Returns `nil` if the window does not include a nearby birthday, or if improper parameters are given.
+/// - Note: Returns a small negative number of birthday occurred a few days ago.
 func isBirthdaySoon(_ birthday: Date, minResult: Int = -1, maxResult: Int = 7) -> Int? {
+    guard minResult <= 0 && maxResult >= 0 else {
+        ifDebugFatalError("minResults should <= 0 and maxResults should be >= 0")
+        return nil
+    }
 
-    let tymdComponents: Set<Calendar.Component> = [.timeZone, .year, .month, .day]
-    let today: Date = Calendar.current.date(from: Calendar.current.dateComponents(tymdComponents, from: Date.now))!
+    let calendar = Calendar.current
+    let today = calendar.startOfDay(for: Date())
+    let timeWindowStart: Date? = calendar.date(byAdding: .day, value: -1 * minResult, to: today)
+    guard let timeWindowStart: Date else {
+        ifDebugFatalError("Calendar.date() returned nil")
+        return nil
+    }
 
-    let birthday: Date = Calendar.current.date(from: Calendar.current.dateComponents(tymdComponents, from: birthday))!
-    let tmdComponents: Set<Calendar.Component> = [.timeZone, .month, .day]
-    let compBirthday = Calendar.current.dateComponents(tmdComponents, from: birthday)
-    let timeWindowStart: Date? = Calendar.current.date(byAdding: .day, value: -1 * abs(minResult), to: today)
-    guard let timeWindowStart: Date else { return nil } // unwrap
-    let compTimeWindowStart: DateComponents = Calendar.current.dateComponents(tmdComponents, from: timeWindowStart)
-    if compBirthday == compTimeWindowStart { return 0 }
-    let nearbyBirthday: Date = Calendar.current.nextDate(after: timeWindowStart,
-                                                         matching: DateComponents(timeZone: compBirthday.timeZone,
-                                                                                  month: compBirthday.month,
-                                                                                  day: compBirthday.day),
-                                                         matchingPolicy: .nextTime,
-                                                         direction: .forward)!
+    let birthdayComponents = calendar.dateComponents([.month, .day], from: birthday)
 
-    let interval = TimeInterval((abs(minResult) + abs(maxResult)) * 24 * 60 * 60) // unit is seconds
+    let compTimeWindowStart: DateComponents = calendar.dateComponents([.month, .day], from: timeWindowStart)
+    if birthdayComponents == compTimeWindowStart {
+        return 0
+    }
+    let nearbyBirthday: Date = calendar.nextDate(after: timeWindowStart,
+                                                 matching: DateComponents(timeZone: birthdayComponents.timeZone,
+                                                                          month: birthdayComponents.month,
+                                                                          day: birthdayComponents.day),
+                                                 matchingPolicy: .nextTime,
+                                                 direction: .forward)!
+
+    let interval = TimeInterval((minResult + maxResult) * 24 * 60 * 60) // unit is seconds
     if !DateInterval(start: timeWindowStart, duration: interval).contains(nearbyBirthday) {
         return nil
     } else {
-        return Calendar.current.dateComponents([.day], from: today, to: nearbyBirthday).day
+        return calendar.dateComponents([.day], from: today, to: nearbyBirthday).day
     }
 }
+
