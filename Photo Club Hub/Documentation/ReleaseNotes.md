@@ -3,7 +3,7 @@
 Who's Who screen
 * Preventing the image captions from taking up too much space (Dynamic Type related).
 * If there is no personal website, don't add a text line stating this.
-* Only show line about birthdays if info is available and birthday is very soon.
+* Only show birthdays if birthday is very soon (and the info was provided).
 
 Code Maintenance
 * Tested with MacOS 15.6, iOS 26 beta (23A5297i)
