@@ -35,7 +35,7 @@
                 "level3URL": "https://fotogroepoirschot.nl/bart-van-nunen/",
                 "membershipStartDate": "1978-01-01",
                 "nlSpecific": {"fotobondNumber": 1607002},
-                "keywords": ["Architecture", "Black & White"]
+                "expertises": ["Architecture", "Black & White"]
             }
         },
 
@@ -279,7 +279,7 @@
                 "membershipStartDate": "1979-01-01",
                 "level3URL": "https://fotogroepoirschot.nl/wil-der-kinderen/",
                 "nlSpecific": {"fotobondNumber": 1607006},
-                "keywords": ["Studio", "Street"]
+                "expertises": ["Studio", "Street"]
             }
         }
 
