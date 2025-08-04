@@ -18,8 +18,6 @@ import SwiftUI
 struct WhoIsWhoTextInfo: View {
     var photographer: Photographer
 
-    @State private var scaleFactor: CGFloat = 1.0
-
     private static let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "dd MMMM"
@@ -30,14 +28,16 @@ struct WhoIsWhoTextInfo: View {
         self.photographer = photographer
     }
 
+    @State private var animationTrigger: Bool = false
+
     var body: some View {
         VStack(alignment: .leading) { // lines of text with different pieces of information
             // first green line with icon and name of photographer
             let alive: String = photographer.isDeceased ? // generate name suffix
-                (" - " + MemberStatus.deceased.localizedString()) : ""
-                Text(verbatim: "\(photographer.fullNameLastFirst)\(alive)")
-                    .font(.title3)
-                    .tracking(1)
+            (" - " + MemberStatus.deceased.localizedString()) : ""
+            Text(verbatim: "\(photographer.fullNameLastFirst)\(alive)")
+                .font(.title3)
+                .tracking(1)
 
             let locBirthday = String(localized: "Birthday", // birthday if available (year of birth is not shown)
                                      comment: """
@@ -49,13 +49,17 @@ struct WhoIsWhoTextInfo: View {
                     Text(verbatim: "\(locBirthday): \(Self.dateFormatter.string(from: date))")
                         .font(.subheadline)
                         .foregroundStyle(photographer.isDeceased ? .deceasedColor : .primary)
-                        .scaleEffect(scaleFactor)
-                        .offset(x: (scaleFactor-1.0)*20, y: (scaleFactor-1.0)*20)
-                        .onAppear {
-                            withAnimation(Animation.linear(duration: 0.5).repeatCount(10, autoreverses: true)) {
-                                scaleFactor = 1.1
-                            }
+                        .phaseAnimator(BirthdayPhaseEnum.allCases, trigger: animationTrigger) { view, phase in
+                            view
+                                .scaleEffect(phase.scale, anchor: .leading)
+                                .offset(x: phase.offsetX, y: phase.offsetY)
                         }
+                    animation: {_ in
+                        Animation.linear(duration: 0.5)
+                    }
+                    .onAppear {
+                        animationTrigger.toggle() // trigger animation
+                    }
                 }
             }
 
@@ -71,9 +75,42 @@ struct WhoIsWhoTextInfo: View {
                 // prevents entire List element from becoming clickable
                 .buttonStyle(.plain)
             }
+
         }
     }
-}
+
+    enum BirthdayPhaseEnum: CaseIterable {
+        case initial // 4 complete cycles
+        case expanded
+        case initial2
+        case expanded2
+        case initial3
+        case expanded3
+        case initial4
+        case expanded4
+        case initial5
+
+        var offsetX: CGFloat {
+            switch self {
+            case .initial, .initial2, .initial3, .initial4, .initial5: 0
+            case .expanded, .expanded2, .expanded3, .expanded4: -1
+            }
+        }
+
+        var offsetY: CGFloat {
+            switch self {
+            case .initial, .initial2, .initial3, .initial4, .initial5: 0
+            case .expanded, .expanded2, .expanded3, .expanded4: 3
+            }
+        }
+
+        var scale: CGFloat {
+            switch self {
+            case .initial, .initial2, .initial3, .initial4, .initial5: 1
+            case .expanded, .expanded2, .expanded3, .expanded4: 1.05
+            }
+        }
+    }
 
 /// Returns the number of days between today and a birthday that falls within a specified window around today.
 ///
@@ -85,34 +122,36 @@ struct WhoIsWhoTextInfo: View {
 /// - Note: Returns `nil` if the window does not include a nearby birthday, or if improper parameters are given.
 /// - Note: Returns a small negative number of birthday occurred a few days ago.
 
-func isBirthdaySoon(_ birthday: Date, minResult: Int = -1, maxResult: Int = 7, name: String) -> Int? {
-    guard minResult <= 0 && maxResult >= 0 else {
-        ifDebugFatalError("minResults should <= 0 and maxResults should be >= 0")
-        return nil
+    func isBirthdaySoon(_ birthday: Date, minResult: Int = -1, maxResult: Int = 7, name: String) -> Int? {
+        guard minResult <= 0 && maxResult >= 0 else {
+            ifDebugFatalError("minResults should <= 0 and maxResults should be >= 0")
+            return nil
+        }
+        let calendar = Calendar.current
+
+        let today = calendar.startOfDay(for: Date())
+        let timeWindowStart: Date? = calendar.date(byAdding: .day, value: minResult, to: today)
+        guard let timeWindowStart: Date else {
+            ifDebugFatalError("Calendar.date() returned nil")
+            return nil
+        }
+
+        let birthdayComponents = calendar.dateComponents([.month, .day], from: birthday)
+
+        let nearbyBirthday: Date = calendar.nextDate(after: timeWindowStart,
+                                                     matching: DateComponents(timeZone: birthdayComponents.timeZone,
+                                                                              month: birthdayComponents.month,
+                                                                              day: birthdayComponents.day),
+                                                     matchingPolicy: .nextTime,
+                                                     direction: .forward)!
+
+        let interval = TimeInterval((maxResult - minResult) * 24 * 60 * 60) // unit is seconds
+        if DateInterval(start: timeWindowStart, duration: interval).contains(nearbyBirthday) {
+            print("days from today: \(calendar.dateComponents([.day], from: today, to: nearbyBirthday).day ?? 0)")
+            return calendar.dateComponents([.day], from: today, to: nearbyBirthday).day
+        } else {
+            return nil
+        }
     }
-    let calendar = Calendar.current
 
-    let today = calendar.startOfDay(for: Date())
-    let timeWindowStart: Date? = calendar.date(byAdding: .day, value: minResult, to: today)
-    guard let timeWindowStart: Date else {
-        ifDebugFatalError("Calendar.date() returned nil")
-        return nil
-    }
-
-    let birthdayComponents = calendar.dateComponents([.month, .day], from: birthday)
-
-    let nearbyBirthday: Date = calendar.nextDate(after: timeWindowStart,
-                                                 matching: DateComponents(timeZone: birthdayComponents.timeZone,
-                                                                          month: birthdayComponents.month,
-                                                                          day: birthdayComponents.day),
-                                                 matchingPolicy: .nextTime,
-                                                 direction: .forward)!
-
-    let interval = TimeInterval((maxResult - minResult) * 24 * 60 * 60) // unit is seconds
-    if DateInterval(start: timeWindowStart, duration: interval).contains(nearbyBirthday) {
-        print("days from today: \(calendar.dateComponents([.day], from: today, to: nearbyBirthday).day ?? 0)")
-        return calendar.dateComponents([.day], from: today, to: nearbyBirthday).day
-    } else {
-        return nil
-    }
 }
