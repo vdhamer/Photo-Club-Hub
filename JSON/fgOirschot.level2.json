@@ -6,10 +6,7 @@
             "nickName": "FG Oirschot"
         },
         "optional": {
-            "coordinates": {
-                "latitude": 51.46785,
-                "longitude": 5.25568
-            },
+            "coordinates": {"latitude": 51.46785, "longitude": 5.25568},
             "website": "https://www.fotogroepoirschot.nl",
             "level2URL": "https://www.example.com/fgOirschot.level2.json",
             "remark": [
@@ -22,91 +19,270 @@
                     "value": "Opgelet: Fotogroep Oirschot heeft als domeinnaam fgoirschot.nl."
                 }
             ],
-            "nlSpecific": {
-                "fotobondNumber": 1607
-            }
+            "nlSpecific": {"fotobondNumber": 1607}
         }
     },
 
-    "members": [
 
+    "members": [
         {
             "name": {
-                "givenName": "Wil",
-                "infixName": "der",
-                "familyName": "Kinderen"
+                "givenName" : "Bart",
+                "infixName" : "van",
+                "familyName": "Nunen"
             },
             "optional": {
-                "membershipStartDate": "1979-01-01",
-                "nlSpecific": {
-                    "fotobondNumber": 1607006
-                },
-                "expertises": [ "Model", "Street", "Free" ]
+                "level3URL": "https://fotogroepoirschot.nl/bart-van-nunen/",
+                "membershipStartDate": "1978-01-01",
+                "nlSpecific": {"fotobondNumber": 1607002},
+                "keywords": ["Architecture", "Black & White"]
             }
         },
 
         {
             "name": {
-                "givenName": "Liesbeth",
-                "infixName": "der",
+                "givenName" : "Corry",
+                "infixName" : "van",
+                "familyName": "Gerven"
+            },
+            "optional": {
+                "level3URL": "https://fotogroepoirschot.nl/corry-van-gerven/",
+                "membershipStartDate": "2006-09-01",
+                "nlSpecific": {"fotobondNumber": 1607053},
+                "keywords": ["Landscape", "Street art"]
+            }
+        },
+
+        {
+            "name": {
+                "givenName" : "Gert",
+                "infixName" : "de",
+                "familyName": "Groot"
+            },
+            "optional": {
+                "level3URL": "https://fotogroepoirschot.nl/gert-de-groot/",
+                "membershipStartDate": "2017-04-01",
+                "nlSpecific": {"fotobondNumber": 1607047},
+                "keywords": ["Architecture", "Industrial inheritance"]
+            }
+        },
+
+        {
+            "name": {
+                "givenName" : "Hannie",
+                "infixName" : "van de",
+                "familyName": "Schoot"
+            },
+            "optional": {
+                "level3URL": "https://fotogroepoirschot.nl/hannie-van-de-schoot-2/",
+                "membershipStartDate": "2013-05-01",
+                "nlSpecific": {"fotobondNumber": 1607043},
+                "keywords": ["Abstract", "Experimental"]
+            }
+        },
+
+        {
+            "name": {
+                "givenName" : "Hans",
+                "infixName" : "van",
+                "familyName": "Steensel"
+            },
+            "optional": {
+                "level3URL": "https://fotogroepoirschot.nl/hans-van-steensel/",
+                "membershipStartDate": "2015-05-01",
+                "nlSpecific": {"fotobondNumber": 1607045},
+                "keywords": ["Architecture", "Industrial inheritance"]
+            }
+        },
+
+        {
+            "name": {
+                "givenName" : "Henk",
+                "infixName" : "",
+                "familyName": "Verbeek"
+            },
+            "optional": {
+                "birthday": "9999-04-01",
+                "roles": {"isTreasurer": true},
+                "membershipStartDate": "1978-01-01",
+                "level3URL": "https://fotogroepoirschot.nl/henk-verbeek/",
+                "nlSpecific": {"fotobondNumber": 1607009},
+                "keywords": ["Architecture", "Experimental"]
+            }
+        },
+
+        {
+            "name": {
+                "givenName" : "Leon",
+                "infixName" : "van",
+                "familyName": "Roosmalen"
+            },
+            "optional": {
+                "membershipStartDate": "2006-03-01",
+                "level3URL": "https://fotogroepoirschot.nl/leon-van-roosmalen/",
+                "nlSpecific": {"fotobondNumber": 1607030},
+                "keywords": ["Architecture", "Industrial inheritance"]
+            }
+        },
+
+        {
+            "name": {
+                "givenName" : "Liesbeth",
+                "infixName" : "der",
                 "familyName": "Kinderen"
             },
             "optional": {
                 "membershipStartDate": "1989-08-01",
-                "nlSpecific": {
-                    "fotobondNumber": 1607054
-                },
-                "expertises": [ "Nature", "Abstract", "Travel", "Free" ]
+                "level3URL": "https://fotogroepoirschot.nl/liesbeth-der-kinderen/",
+                "nlSpecific": {"fotobondNumber": 1607054},
+                "keywords": ["Abstract", "Landscape"]
             }
         },
 
         {
             "name": {
-                "givenName": "Verbeek",
-                "infixName": "",
-                "familyName": "Henk"
+                "givenName" : "Margo",
+                "infixName" : "van",
+                "familyName": "Heugten-van-Nunenn"
             },
             "optional": {
-                "birthday": "9999-04-01",               
-                "membershipStartDate": "1978-01-01",
-                "nlSpecific": {
-                    "fotobondNumber": 1607009
-                },
-                "expertises": [ "Architecture", "Experimental", "Free" ]
+                "membershipStartDate": "2018-01-01",
+                "level3URL": "https://fotogroepoirschot.nl/margo-van-heugten-van-nunen/",
+                "nlSpecific": {"fotobondNumber": 1607048},
+                "keywords": ["Street", "Landscape"]
             }
         },
 
         {
             "name": {
-                "givenName": "Severijns",
-                "infixName": "",
-                "familyName": "Ruud"
+                "givenName" : "Marianne",
+                "infixName" : "",
+                "familyName": "Kwakernaat"
             },
-             "optional": {
-                 "membershipStartDate": "2018-04-01",
-                 "nlSpecific": {
-                     "fotobondNumber": 1607049
-                 },
-                 "expertises": [ "Street", "Documantary", "Free" ]
-             }
-         },
+            "optional": {
+                "membershipStartDate": "2023-05-01",
+                "level3URL": "https://fotogroepoirschot.nl/marianne-kwakernaat/",
+                "nlSpecific": {"fotobondNumber": 1607057},
+                "keywords": ["Landscape", "Experimental"]
+            }
+        },
 
         {
             "name": {
-                "givenName": "Marjo",
-                "infixName": "van der",
-                "familyName": "Burgt - van Dommelen"
+                "givenName" : "Marjo",
+                "infixName" : "van der",
+                "familyName": "Burgt-van-Dommelen"
             },
             "optional": {
                 "membershipStartDate": "2012-12-01",
-                "nlSpecific": {
-                    "fotobondNumber": 1607041
-                },
-                "expertises": [ "Street", "Travel", "Nature", "Free" ]
-
+                "level3URL": "https://fotogroepoirschot.nl/marjo-van-der-burgt-van-dommelen/",
+                "nlSpecific": {"fotobondNumber": 1607041},
+                "keywords": ["Street", "Landscape"]
             }
+        },
 
+        {
+            "name": {
+                "givenName" : "Martin",
+                "infixName" : "van",
+                "familyName": "Wulfen"
+            },
+            "optional": {
+                "membershipStartDate": "2001-12-01",
+                "level3URL": "https://fotogroepoirschot.nl/martin-van-wulfen/",
+                "nlSpecific": {"fotobondNumber": 1607023},
+                "keywords": ["Street", "Landscape"]
+            }
+        },
+
+        {
+            "name": {
+                "givenName" : "Raymund",
+                "infixName" : "van de",
+                "familyName": "Wal"
+            },
+            "optional": {
+                "membershipStartDate": "1987-04-01",
+                "level3URL": "https://fotogroepoirschot.nl/raymund-van-de-wal/",
+                "nlSpecific": {"fotobondNumber": 1607007},
+                "keywords": ["Street", "Landscape"]
+            }
+        },
+
+        {
+            "name": {
+                "givenName" : "Reina",
+                "infixName" : "van de",
+                "familyName": "Wiel"
+            },
+            "optional": {
+                "membershipStartDate": "2013-09-01",
+                "level3URL": "https://fotogroepoirschot.nl/reina-van-de-wiel/",
+                "nlSpecific": {"fotobondNumber": 1607044},
+                "keywords": ["Street", "Landscape"]
+            }
+        },
+
+        {
+            "name": {
+                "givenName" : "Riekie",
+                "infixName" : "",
+                "familyName": "Hems"
+            },
+            "optional": {
+                "membershipStartDate": "2006-09-01",
+                "level3URL": "https://fotogroepoirschot.nl/riekie-hems/",
+                "nlSpecific": {"fotobondNumber": 1607034},
+                "keywords": ["Street", "Abstract"]
+            }
+        },
+
+        {
+            "name": {
+                "givenName" : "Ruud",
+                "infixName" : "",
+                "familyName": "Severijns"
+            },
+            "optional": {
+                "roles": {"isChairman": true},
+                "membershipStartDate": "2018-04-01",
+                "nlSpecific": {
+                    "level3URL": "https://fotogroepoirschot.nl/ruud-severijns/",
+                    "fotobondNumber": 1607049
+                },
+                "keywords": ["Street", "Industrial inheritance"]
+            }
+        },
+
+        {
+            "name": {
+                "givenName" : "Thea",
+                "infixName" : "van",
+                "familyName": "Riet"
+            },
+            "optional": {
+                "membershipStartDate": "2022-09-01",
+                "level3URL": "https://fotogroepoirschot.nl/thea-van-riet/",
+                "nlSpecific": {"fotobondNumber": 1607056},
+                "keywords": ["Macro", "Experimental"]
+            }
+        },
+
+        {
+            "name": {
+                "givenName" : "Wil",
+                "infixName" : "der",
+                "familyName": "Kinderen"
+            },
+            "optional": {
+                "roles": {"isSecretary": true},
+                "membershipStartDate": "1979-01-01",
+                "level3URL": "https://fotogroepoirschot.nl/wil-der-kinderen/",
+                "nlSpecific": {"fotobondNumber": 1607006},
+                "keywords": ["Studio", "Street"]
+            }
         }
 
     ]
 }
+
