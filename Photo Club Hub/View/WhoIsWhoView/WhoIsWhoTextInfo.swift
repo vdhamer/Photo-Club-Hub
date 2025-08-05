@@ -45,7 +45,7 @@ struct WhoIsWhoTextInfo: View {
                                               Date not currently localized?
                                               """)
             if let date: Date = photographer.bornDT {
-                if isBirthdaySoon(date, minResult: -1, maxResult: 7, name: photographer.fullNameFirstLast) != nil {
+                if isBirthdaySoon(date, minResult: -1, maxResult: 7) != nil {
                     Text(verbatim: "\(locBirthday): \(Self.dateFormatter.string(from: date))")
                         .font(.subheadline)
                         .foregroundStyle(photographer.isDeceased ? .deceasedColor : .primary)
@@ -122,7 +122,7 @@ struct WhoIsWhoTextInfo: View {
 /// - Note: Returns `nil` if the window does not include a nearby birthday, or if improper parameters are given.
 /// - Note: Returns a small negative number of birthday occurred a few days ago.
 
-    func isBirthdaySoon(_ birthday: Date, minResult: Int = -1, maxResult: Int = 7, name: String) -> Int? {
+    func isBirthdaySoon(_ birthday: Date, minResult: Int = -1, maxResult: Int = 7) -> Int? {
         guard minResult <= 0 && maxResult >= 0 else {
             ifDebugFatalError("minResults should <= 0 and maxResults should be >= 0")
             return nil
@@ -139,16 +139,15 @@ struct WhoIsWhoTextInfo: View {
         let birthdayComponents = calendar.dateComponents([.month, .day], from: birthday)
 
         let nearbyBirthday: Date = calendar.nextDate(after: timeWindowStart,
-                                                     matching: DateComponents(timeZone: birthdayComponents.timeZone,
-                                                                              month: birthdayComponents.month,
+                                                     matching: DateComponents(month: birthdayComponents.month,
                                                                               day: birthdayComponents.day),
                                                      matchingPolicy: .nextTime,
                                                      direction: .forward)!
 
         let interval = TimeInterval((maxResult - minResult) * 24 * 60 * 60) // unit is seconds
         if DateInterval(start: timeWindowStart, duration: interval).contains(nearbyBirthday) {
-            print("days from today: \(calendar.dateComponents([.day], from: today, to: nearbyBirthday).day ?? 0)")
-            return calendar.dateComponents([.day], from: today, to: nearbyBirthday).day
+            let timeDifference: Int? = calendar.dateComponents([.day], from: today, to: nearbyBirthday).day
+            return timeDifference
         } else {
             return nil
         }
