@@ -297,18 +297,17 @@
                 "infixName": "",
                 "familyName": "Severijns"
             },
-             "optional": {
-                 "roles": {
+            "optional": {
+                "roles": {
                     "isChairman": true
-                 },
-                 "membershipStartDate": "2018-04-01",
-                 "nlSpecific": {
-                 "level3URL": "https://fotogroepoirschot.nl/ruud-severijns/",
-                 "featuredImage": "https://fotogroepoirschot.nl/wp-content/uploads/2025/07/Fotos-Homepagina-2025-07-Forum-13-Ruud.jpg",
-                 "fotobondNumber": 1607049
-                 },
-                 "expertises": [ "Street", "Industrial heritage" ]
-
+                },
+                "membershipStartDate": "2018-04-01",
+                "level3URL": "https://fotogroepoirschot.nl/ruud-severijns/",
+                "featuredImage": "https://fotogroepoirschot.nl/wp-content/uploads/2025/07/Fotos-Homepagina-2025-07-Forum-13-Ruud.jpg",
+                "nlSpecific": {
+                     "fotobondNumber": 1607049
+                },
+                "expertises": [ "Street", "Industrial heritage" ]
             }
         },
 
