@@ -194,6 +194,32 @@
 
         {
             "idPlus": {
+                "town": "Best",
+                "fullName": "FotoWerkgroep IVN-Best",
+                "nickName": "fwIVNBest"
+            },
+            "coordinates": {
+                "latitude": 51.50269,
+                "longitude": 5.38895
+            },
+            "optional": {
+                "website": "https://www.ivn.nl/afdeling/best/werkgroepen/werkgroep-natuurfotografie/",
+                "level2URL": "https://www.example.com/fwIVNBest.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "These photographers are part of a well-known Dutch non-profit organization, IVN, that promotes awareness of conservation of nature."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Deze fotowerkgroep in Best maakt deel uit van de IVN (Instituut voor Natuurbeschermingseducatie)."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Boekel",
                 "fullName": "Fotogroep Focus KBO Boekel",
                 "nickName": "fgFocus"

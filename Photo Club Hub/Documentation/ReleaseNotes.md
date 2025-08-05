@@ -1,4 +1,4 @@
-### 2.8.2 (GitHub commit 5c2a2ef) ??-08-25
+### 2.8.2 (GitHub commit ???????) 05-08-25
 
 Who's Who screen
 * Preventing the image captions from taking up too much space (Dynamic Type related).
@@ -11,7 +11,7 @@ Code Maintenance
 
 Data Maintenance
 * Forced a datareset at dataResetPending282b4647 (related to fgOirschot changes).
-* Added new club (cVerbeelding)
+* Added 2 clubs (cVerbeelding, wgIVNBest)
 * Data update for club fgOirschot
 
 This build #4647 was made using Xcode 16.4 and is intended for release via the App Store.
