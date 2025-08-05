@@ -12,6 +12,7 @@ Code Maintenance
 Data Maintenance
 * Forced a datareset at dataResetPending282b4647 (related to fgOirschot changes).
 * Added new club (cVerbeelding)
+* Data update for club fgOirschot
 
 This build #4647 was made using Xcode 16.4 and is intended for release via the App Store.
 
