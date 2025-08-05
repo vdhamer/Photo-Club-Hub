@@ -1,5 +1,7 @@
 ### 2.8.3 (GitHub commit ???????) ??-08-25
 
+Settings
+* Fix: localization of "Data refresh pending" toggle
 
 This build #4648 was made using Xcode 16.4 and is intended for release via the App Store.
 
