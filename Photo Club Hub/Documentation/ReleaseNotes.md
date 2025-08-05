@@ -1,4 +1,11 @@
-### 2.8.2 (GitHub commit ???????) 05-08-25
+### 2.8.3 (GitHub commit ???????) ??-08-25
+
+
+This build #4648 was made using Xcode 16.4 and is intended for release via the App Store.
+
+---------------------------------------------------------------------------
+
+### 2.8.2 (GitHub commit ede2aa2) 05-08-25
 
 Who's Who screen
 * Preventing the image captions from taking up too much space (Dynamic Type related).
@@ -34,7 +41,7 @@ Data Maintenance
 Documentation
 * Created a story in Dutch summarizing current project status (Nieuwsbrief_Aug_2025_app).
 
-This build #4646 was made using Xcode 23.0 beta 4 and can thus can be used for beta testing.
+This build #4646 was made using Xcode 23.0 beta 4 and can thus only be used for beta testing.
 
 ---------------------------------------------------------------------------
 
