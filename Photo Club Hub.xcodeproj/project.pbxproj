@@ -92,7 +92,6 @@
 		D0CA9B392D6B7739005428C0 /* LocalizedRemark.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0447C872BA510AF00982A1E /* LocalizedRemark.swift */; };
 		D0CFACAD2CDEDCBA005E3A0B /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D0CFACAC2CDEDCBA005E3A0B /* SwiftyJSON */; };
 		D0D18C78296E1F6A00B334DB /* OrganizationIdPlus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D18C77296E1F6A00B334DB /* OrganizationIdPlus.swift */; };
-		D0DD28D62E42AB4600C10627 /* fcDenDungen.level2.json in Resources */ = {isa = PBXBuildFile; fileRef = D0DD28D52E42AB4600C10627 /* fcDenDungen.level2.json */; };
 		D0DE02772789D1B30062738C /* RoleIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DE02762789D1B30062738C /* RoleIconView.swift */; };
 		D0DFBEF42D47036900CB9E73 /* Readme.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = D0DFBEF32D47036900CB9E73 /* Readme.xcstrings */; };
 		D0E2235427DE9139002A8600 /* PreludeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E2235327DE9139002A8600 /* PreludeView.swift */; };
@@ -870,7 +869,6 @@
 				D0F78ACA2DFCCBFE00DE234D /* fcDenDungen.level2.json in Resources */,
 				D0273E4A2DEE42C800C4F5E1 /* fgOirschot.level2.json in Resources */,
 				D0273E4B2DEE42C800C4F5E1 /* fcEricamera.level2.json in Resources */,
-				D0DD28D62E42AB4600C10627 /* fcDenDungen.level2.json in Resources */,
 				D0F8719F2D403E6000530D10 /* readme.txt in Resources */,
 				D0F871952D403D1700530D10 /* root.level1.json in Resources */,
 				D0A615792D91B7A00024EC9E /* fcBellusImago.level2.json in Resources */,
