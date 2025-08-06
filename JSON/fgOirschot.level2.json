@@ -169,7 +169,7 @@
             "name": {
                 "givenName": "Margo",
                 "infixName": "van",
-                "familyName": "Heugten-van-Nunenn"
+                "familyName": "Heugten-van-Nunen"
             },
             "optional": {
                 "membershipStartDate": "2018-01-01",
@@ -341,9 +341,11 @@
                 },
                 "membershipStartDate": "1979-01-01",
                 "level3URL": "https://fotogroepoirschot.nl/wil-der-kinderen/",
-		"featuredImage": "https://fotogroepoirschot.nl/wp-content/uploads/2025/07/Webpag-Wil-2025-07-19-Wil-01.jpg",
-                "nlSpecific": {"fotobondNumber": 1607006},
-                "expertises": ["Studio", "Street"]
+                "featuredImage": "https://fotogroepoirschot.nl/wp-content/uploads/2025/07/Webpag-Wil-2025-07-19-Wil-01.jpg",
+                "nlSpecific": {
+                    "fotobondNumber": 1607006
+                },
+                "expertises": [ "Studio", "Street" ]
             }
         }
 
