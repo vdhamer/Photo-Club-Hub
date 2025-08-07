@@ -25,7 +25,7 @@ extension Language {
         ]
     }
 
-    @MainActor
+//    @MainActor TODO remove
     static func initConstants() { // called on main thread
         // initConstants shouldn't be necessary, but is there as a temp safety net for concurrenty issues with CoreData
         let viewContext = PersistenceController.shared.container.viewContext // requires foreground context
@@ -38,7 +38,7 @@ extension Language {
             )
         }
 
-        do {
+        do { // findCreateUpdatae does not normally save TODO
             try viewContext.save() // persist all organizationTypes using main thread ManagedObjectContext
         } catch {
             viewContext.rollback()
