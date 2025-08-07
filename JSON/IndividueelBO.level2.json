@@ -1,17 +1,13 @@
 {
-    "club":
-    {
+    "club": {
         "idPlus": {
             "town": "Brabant Oost",
             "fullName": "Individuele Leden Brabant Oost",
             "nickName": "IndividueelBO"
         },
-        "coordinates": {
-            "latitude": 51.44327,
-            "longitude": 5.47990
-        },
+        "coordinates": {"latitude": 51.44327, "longitude": 5.47990},
         "optional": {
-           "level2URL": "https://www.example.com/IndividueelBO.level2.json",
+            "level2URL": "https://www.example.com/IndividueelBO.level2.json",
             "remark": [
                 {
                     "language": "EN",
@@ -22,112 +18,128 @@
                     "value": "Individuele leden van de Koninklijke Fotobond - Afdeling 16 Brabant Oost."
                 }
             ],
-            "nlSpecific": {
-                "fotobondNumber": 1600
-            }
+            "nlSpecific": {"fotobondNumber": 1600}
         }
     },
 
 
     "members": [
+        {
+            "name": {
+                "givenName": "Mariet",
+                "infixName": "",
+                "familyName": "Wielders"
+            },
+            "optional": {
+                "website": "https://www.m3w.nl",
+                "featuredImage": "https://www.m3w.nl/wp-content/uploads/2017/12/Portretten-DSC06336-Large-300x300.jpg",
+                "level3URL": "https://www.m3w.nl/portfolio/",
+                "membershipStartDate": "2025-01-01",
+                "expertises": ["Portrait", "documentary"]
+            }
+        },
 
-       {
-           "name": {
-               "givenName": "Mariet",
-               "infixName": "",
-               "familyName": "Wielders"
-           },
-           "optional": {
-               "website": "https://www.m3w.nl",
-               "featuredImage": "https://www.m3w.nl/wp-content/uploads/2017/12/Portretten-DSC06336-Large-300x300.jpg",
-               "level3URL": "https://www.m3w.nl/portfolio/",
-               "membershipStartDate": "2025-07-10",
-               "expertises": [ "Portrait", "Documentary" ]
-           }
-       },
- {
-           "name": {
-               "givenName": "Geertjan",
-               "infixName": "",
-               "familyName": "Vlot"
-           },
-           "optional": {
-               "website": "",
-               "level3URL": "https://www.youtube.com/watch?v=HOc3KDEvQJ8?",
-               "membershipStartDate": "2025-07-10",
-               "expertises": [ "Documentary" ]
-           }
-       },
- {
-           "name": {
-               "givenName": "Arthur",
-               "infixName": "van",
-               "familyName": "Ligten"
-           },
-           "optional": {
-               "website": "",
-               "featuredImage": "",
-               "level3URL": "",
-               "membershipStartDate": "2025-07-10",
-               "expertises": [ "Architecture", "Street" ]
-           }
-       },
-{
-           "name": {
-               "givenName": "Peter",
-               "infixName": "",
-               "familyName": "Toirkens"
-           },
-           "optional": {
-               "website": "",
-               "featuredImage": "",
-               "level3URL": "",
-               "membershipStartDate": "2025-07-10",
-               "expertises": [ "Portrait", "Creative" ]
-           }
-       },
-{
-           "name": {
-               "givenName": "Mariska",
-               "infixName": "",
-               "familyName": "Vereijken"
-           },
-           "optional": {
-               "website": "https://mariskavereijken.nl",
-               "featuredImage": "",
-               "level3URL": "https://mariskavereijken.nl/portfolio/",
-               "membershipStartDate": "2025-07-10",
-               "expertises": [ "Portrait", "Creative" ]
-           }
-       },
-{
-           "name": {
-               "givenName": "Sandra",
-               "infixName": "",
-               "familyName": "Blom"
-           },
-           "optional": {
-               "website": "https://instagram.com/joekiefotografeert",
-               "featuredImage": "",
-               "level3URL": "https://www.fotoclubgemert.nl/portfolio/sandra-blom",
-               "membershipStartDate": "2025-07-10",
-               "expertises": [ "Creative", "iPhone"]
-           }
-       },
-{
-           "name": {
-               "givenName": "Hans",
-               "infixName": "van",
-               "familyName": "Kilsdonk"
-           },
-           "optional": {
-               "website": "",
-               "featuredImage": "",
-               "level3URL": "",
-               "membershipStartDate": "2025-07-10",
-               "expertises": [ "Architecture", "Street" ]
-           }
-       }
+        {
+            "name": {
+                "givenName": "Geertjan",
+                "infixName": "",
+                "familyName": "Vlot"
+            },
+            "optional": {
+                "website": "",
+                "level3URL": "https://www.youtube.com/watch?v=HOc3KDEvQJ8?",
+                "membershipStartDate": "2025-07-10",
+                "expertises": ["Documentary"]
+            }
+        },
 
-   ]
+        {
+            "name": {
+                "givenName": "Arthur",
+                "infixName": "van",
+                "familyName": "Ligten"
+            },
+            "optional": {
+                "website": "",
+                "featuredImage": "",
+                "level3URL": "",
+                "membershipStartDate": "2025-07-10",
+                "expertises": ["Architecture", "Street"]
+            }
+        },
+        {
+            "name": {
+                "givenName": "Gilles",
+                "infixName": "de",
+                "familyName": "Rooij"
+            },
+            "optional": {
+                "website": "",
+                "featuredImage": "",
+                "level3URL": "",
+                "membershipStartDate": "2025-08-06",
+                "expertises": ["Portrait", "Creative"]
+            }
+        },
+
+        {
+            "name": {
+                "givenName": "Mariska",
+                "infixName": "",
+                "familyName": "Vereijken"
+            },
+            "optional": {
+                "website": "https://mariskavereijken.nl",
+                "featuredImage": "",
+                "level3URL": "https://mariskavereijken.nl/portfolio/",
+                "membershipStartDate": "2025-07-10",
+                "expertises": ["Portrait", "Creative"]
+            }
+        },
+
+        {
+            "name": {
+                "givenName": "Sandra",
+                "infixName": "",
+                "familyName": "Blom"
+            },
+            "optional": {
+                "website": "https://instagram.com/joekiefotografeert",
+                "featuredImage": "",
+                "level3URL": "https://www.fotoclubgemert.nl/portfolio/sandra-blom",
+                "membershipStartDate": "2025-07-10",
+                "expertises": ["Creative", "iPhone"]
+            }
+        },
+
+        {
+            "name": {
+                "givenName": "Hans",
+                "infixName": "van",
+                "familyName": "Kilsdonk"
+            },
+            "optional": {
+                "website": "",
+                "featuredImage": "",
+                "level3URL": "",
+                "membershipStartDate": "2025-07-10",
+                "expertises": ["Architecture", "Street"]
+            }
+        },
+
+        {
+            "name": {
+                "givenName": "Ger",
+                "infixName": "",
+                "familyName": "Jansens"
+            },
+            "optional": {
+                "website": "",
+                "featuredImage": "",
+                "level3URL": "",
+                "membershipStartDate": "2025-08-07",
+                "expertises": ["architecture", "street"]
+            }
+        }
+    ]
 }
