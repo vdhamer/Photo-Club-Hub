@@ -25,7 +25,6 @@ extension Language {
         ]
     }
 
-//    @MainActor TODO remove
     static func initConstants() { // called on main thread
         // initConstants shouldn't be necessary, but is there as a temp safety net for concurrenty issues with CoreData
         let viewContext = PersistenceController.shared.container.viewContext // requires foreground context

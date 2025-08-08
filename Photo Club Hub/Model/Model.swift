@@ -7,7 +7,7 @@
 
 import CoreData // for NSManagedObject
 
-/// Provides static methods for deleting all Core Data objects related to expertises, languages, photographers, and clubs.
+/// Methods for deleting (all) Core Data objects per type
 public struct Model {
 
     /// Deletes all relevant Core Data objects in the correct order to avoid issues with referential integrity.
@@ -87,7 +87,7 @@ public struct Model {
                     case "OrganizationType": OrganizationType.initConstants()
                     case "Language": Language.initConstants()
                     default: break
-                }
+                    }
             }
         } catch {
             viewContext.rollback()
