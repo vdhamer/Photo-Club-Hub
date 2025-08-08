@@ -200,61 +200,62 @@ extension Expertise {
 
     // count number of Expertises with a given id
     static func count(context: NSManagedObjectContext, expertiseID: String) -> Int {
-        var expertises: [Expertise]! = []
 
-        context.performAndWait {
+        let expertiseCount: Int = context.performAndWait {
             let fetchRequest: NSFetchRequest<Expertise> = Expertise.fetchRequest()
             let predicateFormat: String = "id_ = %@" // avoid localization
             let predicate = NSPredicate(format: predicateFormat, argumentArray: [expertiseID])
             fetchRequest.predicate = predicate
             do {
-                expertises = try context.fetch(fetchRequest)
+                return try context.fetch(fetchRequest).count
             } catch {
                 ifDebugFatalError("Failed to fetch Expertise \(expertiseID): \(error)", file: #fileID, line: #line)
+                return 0
             }
         }
-        return expertises.count
+
+        return expertiseCount
     }
 
     // count total number of Expertise objects/records
     // there are ways to count without fetching all records, but this func is only used for testing
     static func count(context: NSManagedObjectContext) -> Int {
-        var expertises: [Expertise]! = []
 
-        context.performAndWait {
+        let expertiseCount: Int = context.performAndWait {
             let fetchRequest: NSFetchRequest<Expertise> = Expertise.fetchRequest()
             let predicateAll = NSPredicate(format: "TRUEPREDICATE")
             fetchRequest.predicate = predicateAll
 
             do {
-                expertises = try context.fetch(fetchRequest)
+                return try context.fetch(fetchRequest).count
             } catch {
-                ifDebugFatalError("Failed to fetch all Expertises: \(error)", file: #fileID, line: #line)
+                ifDebugFatalError("Error fetching all Expertises: \(error)", file: #fileID, line: #line)
+                return 0
             }
         }
 
-        return expertises.count
+        return expertiseCount
     }
 
     @MainActor
     // get array with list of all Expertises
     static func getAll(context: NSManagedObjectContext) -> [Expertise] {
-        var expertises: [Expertise]! = []
 
-        context.performAndWait {
+        let allExpertises: [Expertise] = context.performAndWait {
             let fetchRequest: NSFetchRequest<Expertise> = Expertise.fetchRequest()
             let predicateAll = NSPredicate(format: "TRUEPREDICATE")
             fetchRequest.predicate = predicateAll
             fetchRequest.sortDescriptors = [NSSortDescriptor(key: "id_", ascending: true)]
 
             do {
-                expertises = try context.fetch(fetchRequest)
+                return try context.fetch(fetchRequest) // returns to fill allExpertises
             } catch {
                 ifDebugFatalError("Failed to fetch all Expertises: \(error)", file: #fileID, line: #line)
+                return [] // returns to fill allExpertises
             }
         }
 
-        return expertises
+        return allExpertises
     }
 
     var localizedExpertises: Set<LocalizedExpertise> {
