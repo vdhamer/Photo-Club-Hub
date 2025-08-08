@@ -8,7 +8,7 @@
 import CoreData // for NSManagedObjectContext
 import RegexBuilder // for Regex struct
 
-public class FotogroepWaalreMembersProvider { // WWDC21 Earthquakes also uses a Class here
+final public class FotogroepWaalreMembersProvider: Sendable { // WWDC21 Earthquakes also uses a Class here
 
     public init(bgContext: NSManagedObjectContext,
                 useOnlyInBundleFile: Bool = false,

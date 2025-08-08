@@ -14,7 +14,6 @@ public extension OrganizationType {
         fatalError("init() is not available. Use .findCreateUpdate instead.")
     }
 
-//    @MainActor TODO
     static func initConstants() { // called on main thread
         let viewContext = PersistenceController.shared.container.viewContext // requires foreground context
 

@@ -47,7 +47,7 @@ struct MemberPortfolioListView: View {
             if Settings.dataResetPending {
                 print("dataResetPending flag toggled from true to false")
             }
-            Model.deleteAllCoreDataObjects(context: viewContext)
+            Model.deleteAllCoreDataObjects(viewContext: viewContext)
             PhotoClubHubApp.loadClubsAndMembers() // carefull: runs asynchronously
         }
         .keyboardType(.namePhonePad)

@@ -134,34 +134,49 @@ extension PhotographerExpertise {
 
     // count number of objects with a given id for a given photographer
     static func count(context: NSManagedObjectContext, expertiseID: String, photographer: Photographer) -> Int {
-        let fetchRequest: NSFetchRequest<PhotographerExpertise> = PhotographerExpertise.fetchRequest()
-        let predicateFormat: String = "expertise_.id_ = %@ && photographer_ = %@" // avoid localization
-        fetchRequest.predicate = NSPredicate(format: predicateFormat, argumentArray: [expertiseID, photographer])
 
-        var photographerExpertise: [PhotographerExpertise]! = []
-        context.performAndWait {
+        // Photographer is not sendable, but Strings are.
+        // Could have used Photographer.objectID as well, but then there is no photographer name for error messages.
+        let person = (photographer.givenName, photographer.infixName, photographer.familyName)
+
+        let photographerExpertiseCount: Int = context.performAndWait {
+            let fetchRequest: NSFetchRequest<PhotographerExpertise> = PhotographerExpertise.fetchRequest()
+            let predicateFormat: String = """
+                                          expertise_.id_ = %@ \
+                                          && photographer_.givenName = %@ \
+                                          && photographer_.infixName = %@ \
+                                          && photographer_.familyName = %@
+                                          """ // avoid localization
+            fetchRequest.predicate = NSPredicate(format: predicateFormat,
+                                                 argumentArray: [expertiseID, person.0, person.1, person.2])
+
+            var photographerExpertises: [PhotographerExpertise]! = []
+
             do {
-                photographerExpertise = try context.fetch(fetchRequest)
+                photographerExpertises = try context.fetch(fetchRequest)
             } catch {
                 ifDebugFatalError("""
                                   Failed to fetch PhotographerExpertise \"\(expertiseID)\" \
-                                  for \(photographer.fullNameFirstLast): \(error)
+                                  for \(person.0) \(person.1) \(person.2): \(error)
                                   """,
                                   file: #fileID, line: #line)
                 // on non-Debug version, continue with empty `expertise` array
             }
+            return photographerExpertises.count
         }
-        return photographerExpertise.count
+
+        return photographerExpertiseCount
     }
 
     // count number of objects with a given id
     static func count(context: NSManagedObjectContext, expertiseID: String) -> Int {
-        var photographerExpertises: [PhotographerExpertise]! = []
 
-        context.performAndWait {
+        let photographerExpertiseCount: Int = context.performAndWait {
             let fetchRequest: NSFetchRequest<PhotographerExpertise> = PhotographerExpertise.fetchRequest()
             let predicateFormat: String = "expertise_.id_ = %@" // avoid localization
             fetchRequest.predicate = NSPredicate(format: predicateFormat, argumentArray: [expertiseID])
+
+            var photographerExpertises: [PhotographerExpertise]! = []
 
             do {
                 photographerExpertises = try context.fetch(fetchRequest)
@@ -172,21 +187,23 @@ extension PhotographerExpertise {
                                   file: #fileID, line: #line)
                 // on non-Debug version, continue with empty `Expertise` array
             }
+            return photographerExpertises.count
         }
 
-        return photographerExpertises.count
+        return photographerExpertiseCount
     }
 
     // count total number of PhotographerExpertise objects/records
     // there are ways to count without fetching all records, but this func is only used for testing
     static func count(context: NSManagedObjectContext) -> Int {
-        let fetchRequest: NSFetchRequest<PhotographerExpertise> = PhotographerExpertise.fetchRequest()
-        let predicateAll = NSPredicate(format: "TRUEPREDICATE")
-        fetchRequest.predicate = predicateAll
 
-        var photographerExpertises: [PhotographerExpertise]! = []
+        let photographerExpertiseCount: Int = context.performAndWait {
+            let fetchRequest: NSFetchRequest<PhotographerExpertise> = PhotographerExpertise.fetchRequest()
+            let predicateAll = NSPredicate(format: "TRUEPREDICATE")
+            fetchRequest.predicate = predicateAll
 
-        context.performAndWait {
+            var photographerExpertises: [PhotographerExpertise]! = []
+
             do {
                 photographerExpertises = try context.fetch(fetchRequest)
             } catch {
@@ -196,8 +213,10 @@ extension PhotographerExpertise {
                                   file: #fileID, line: #line)
                 // on non-Debug version, continue with empty `expertise` array
             }
+            return photographerExpertises.count
         }
-        return photographerExpertises.count
+
+        return photographerExpertiseCount
     }
 
 }
