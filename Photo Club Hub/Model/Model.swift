@@ -7,16 +7,20 @@
 
 import CoreData // for NSManagedObject
 
-@MainActor
+/// Provides static methods for deleting all Core Data objects related to expertises, languages, photographers, and clubs.
 public struct Model {
-    public static func deleteAllCoreDataObjects(viewContext: NSManagedObjectContext) {
+
+    /// Deletes all relevant Core Data objects in the correct order to avoid issues with referential integrity.
+    /// - Parameter viewContext: The managed object context to operate on. For now this has to be the main thread.
+    @MainActor public static func deleteAllCoreDataObjects(viewContext: NSManagedObjectContext) {
         // order is important to avoid problems with referential integrity
         deleteCoreDataExpertisesAndLanguages(viewContext: viewContext) // performs its own save()
         deleteCoreDataPhotographersClubs(viewContext: viewContext) // performs its own save()
     }
 
-    // don't delete Photographer before deleting this. See data model picture in README.md.
-    private static func deleteCoreDataExpertisesAndLanguages(viewContext: NSManagedObjectContext) {
+    /// Deletes all Core Data objects related to expertises and languages.
+    /// - Parameter viewContext: The managed object context to operate on. For now this has to be the main thread.
+    @MainActor private static func deleteCoreDataExpertisesAndLanguages(viewContext: NSManagedObjectContext) {
         let forcedDataRefresh = "Forced clearing of CoreData expertises "
 
         do { // order is important to avoid problems with referential integrity
@@ -32,7 +36,9 @@ public struct Model {
         }
     }
 
-    // don't delete Photographer before deleting this. See data model picture in README.md.
+    /// Deletes all Core Data objects related to photographers and clubs.
+    /// - Parameter viewContext: The managed object context to operate on. For now this has to be the main thread.
+    @MainActor
     private static func deleteCoreDataPhotographersClubs(viewContext: NSManagedObjectContext) { // delete certain tables
         let forcedDataRefreshText = "Forced clearing of CoreData expertises "
 
@@ -49,10 +55,15 @@ public struct Model {
         }
     }
 
-    @MainActor
-    private static func deleteEntitiesOfOneType(_ entity: String,
-                                                viewContext: NSManagedObjectContext,
-                                                retryDownCounter: Int = 5) throws {
+    /// Deletes all objects of a given Core Data entity type, with optional retries on failure during save()..
+    /// - Parameters:
+    ///   - entity: The name of the entity to delete.
+    ///   - viewContext: The managed object context to operate on. For now this has to be the main thread.
+    ///   - retryDownCounter: The number of retries allowed in case of failure (default is 5).
+    /// - Throws: An error if deletion ultimately fails despite retries.
+    @MainActor private static func deleteEntitiesOfOneType(_ entity: String,
+                                                           viewContext: NSManagedObjectContext,
+                                                           retryDownCounter: Int = 5) throws {
         if viewContext.hasChanges {
             do {
                 try viewContext.save()
@@ -72,11 +83,10 @@ public struct Model {
                     viewContext.delete(objectData)
                 }
                 try viewContext.save()
-                if entity == "OrganizationType" {
-                    OrganizationType.initConstants()
-                }
-                if entity == "Language" {
-                    Language.initConstants()
+                switch entity {
+                    case "OrganizationType": OrganizationType.initConstants()
+                    case "Language": Language.initConstants()
+                    default: break
                 }
             }
         } catch {
