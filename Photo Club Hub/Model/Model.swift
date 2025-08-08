@@ -64,17 +64,18 @@ public struct Model {
     @MainActor private static func deleteEntitiesOfOneType(_ entity: String,
                                                            viewContext: NSManagedObjectContext,
                                                            retryDownCounter: Int = 5) throws {
-        if viewContext.hasChanges {
-            do {
-                try viewContext.save()
-            } catch {
-                ifDebugFatalError("Could not save context before deleting \(entity)s.")
-                return
-            }
-        }
 
         do {
             try viewContext.performAndWait {
+                if viewContext.hasChanges {
+                    do {
+                        try viewContext.save()
+                    } catch {
+                        ifDebugFatalError("Could not save context before deleting \(entity)s.")
+                        return
+                    }
+                }
+
                 let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entity)
                 fetchRequest.returnsObjectsAsFaults = false
                 let results = try viewContext.fetch(fetchRequest)

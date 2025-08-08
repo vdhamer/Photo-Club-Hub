@@ -143,9 +143,9 @@ extension PhotographerExpertise {
             let fetchRequest: NSFetchRequest<PhotographerExpertise> = PhotographerExpertise.fetchRequest()
             let predicateFormat: String = """
                                           expertise_.id_ = %@ \
-                                          && photographer_.givenName = %@ \
-                                          && photographer_.infixName = %@ \
-                                          && photographer_.familyName = %@
+                                          && photographer_.givenName_ = %@ \
+                                          && photographer_.infixName_ = %@ \
+                                          && photographer_.familyName_ = %@
                                           """ // avoid localization
             fetchRequest.predicate = NSPredicate(format: predicateFormat,
                                                  argumentArray: [expertiseID, person.0, person.1, person.2])
