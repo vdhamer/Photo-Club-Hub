@@ -9,22 +9,22 @@ import CoreData // for NSManagedObject
 
 @MainActor
 public struct Model {
-    public static func deleteAllCoreDataObjects(context: NSManagedObjectContext) {
+    public static func deleteAllCoreDataObjects(viewContext: NSManagedObjectContext) {
         // order is important to avoid problems with referential integrity
-        deleteCoreDataExpertisesLanguages(context: context) // performs its own save()
-        deleteCoreDataPhotographersClubs(context: context) // performs its own save()
+        deleteCoreDataExpertisesAndLanguages(viewContext: viewContext) // performs its own save()
+        deleteCoreDataPhotographersClubs(viewContext: viewContext) // performs its own save()
     }
 
     // don't delete Photographer before deleting this. See data model picture in README.md.
-    private static func deleteCoreDataExpertisesLanguages(context: NSManagedObjectContext) { // delete certain tables separately
+    private static func deleteCoreDataExpertisesAndLanguages(viewContext: NSManagedObjectContext) {
         let forcedDataRefresh = "Forced clearing of CoreData expertises "
 
         do { // order is important to avoid problems with referential integrity
-            try deleteEntitiesOfOneType("LocalizedRemark", context: context)
-            try deleteEntitiesOfOneType("LocalizedExpertise", context: context)
-            try deleteEntitiesOfOneType("PhotographerExpertise", context: context)
-            try deleteEntitiesOfOneType("Expertise", context: context)
-            try deleteEntitiesOfOneType("Language", context: context)
+            try deleteEntitiesOfOneType("LocalizedRemark", viewContext: viewContext)
+            try deleteEntitiesOfOneType("LocalizedExpertise", viewContext: viewContext)
+            try deleteEntitiesOfOneType("PhotographerExpertise", viewContext: viewContext)
+            try deleteEntitiesOfOneType("Expertise", viewContext: viewContext)
+            try deleteEntitiesOfOneType("Language", viewContext: viewContext)
 
             print(forcedDataRefresh + "was successful.")
         } catch {
@@ -33,56 +33,63 @@ public struct Model {
     }
 
     // don't delete Photographer before deleting this. See data model picture in README.md.
-    private static func deleteCoreDataPhotographersClubs(context: NSManagedObjectContext) { // delete subset of tables
-        let forcedDataRefresh = "Forced clearing of CoreData expertises "
+    private static func deleteCoreDataPhotographersClubs(viewContext: NSManagedObjectContext) { // delete certain tables
+        let forcedDataRefreshText = "Forced clearing of CoreData expertises "
 
         do { // order is important to avoid problems with referential integrity
-            try deleteEntitiesOfOneType("MemberPortfolio", context: context)
-            try deleteEntitiesOfOneType("Organization", context: context)
-            try deleteEntitiesOfOneType("Photographer", context: context)
+            try deleteEntitiesOfOneType("MemberPortfolio", viewContext: viewContext)
+            try deleteEntitiesOfOneType("Organization", viewContext: viewContext)
+            try deleteEntitiesOfOneType("Photographer", viewContext: viewContext)
 
-            try deleteEntitiesOfOneType("OrganizationType", context: context)
+            try deleteEntitiesOfOneType("OrganizationType", viewContext: viewContext)
 
-            print(forcedDataRefresh + "was successful.")
+            print(forcedDataRefreshText + "was successful.")
         } catch {
-            ifDebugFatalError(forcedDataRefresh + "FAILED: \(error)")
+            ifDebugFatalError(forcedDataRefreshText + "FAILED: \(error)")
         }
     }
 
-    // does an internal retry if saving data fails, with a max of retryDownCounter retries
+    @MainActor
     private static func deleteEntitiesOfOneType(_ entity: String,
-                                                context: NSManagedObjectContext,
+                                                viewContext: NSManagedObjectContext,
                                                 retryDownCounter: Int = 5) throws {
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entity)
-        fetchRequest.returnsObjectsAsFaults = false // comes from some fragment fron StackOverFlow? purpose?
-        try context.performAndWait {
+        if viewContext.hasChanges {
             do {
-                let results = try context.fetch(fetchRequest)
+                try viewContext.save()
+            } catch {
+                ifDebugFatalError("Could not save context before deleting \(entity)s.")
+                return
+            }
+        }
+
+        do {
+            try viewContext.performAndWait {
+                let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entity)
+                fetchRequest.returnsObjectsAsFaults = false
+                let results = try viewContext.fetch(fetchRequest)
                 for object in results {
-                    guard let objectData = object as? NSManagedObject else {continue}
-                    context.delete(objectData)
+                    guard let objectData = object as? NSManagedObject else { continue }
+                    viewContext.delete(objectData)
                 }
-                try context.save()
-                // initConstants shouldn't be needed, but is there as a temp safetynet for CoreData concurrency issues
+                try viewContext.save()
                 if entity == "OrganizationType" {
-                    OrganizationType.initConstants() // insert contant records into OrganizationType table if needed
+                    OrganizationType.initConstants()
                 }
                 if entity == "Language" {
-                    Language.initConstants() // insert contant records into OrganizationType table if needed
+                    Language.initConstants()
                 }
-
-            } catch let error {
-                context.rollback()
-                if retryDownCounter > 0 {
-                    sleep(1)
-                    print("deleteEntitiesOfOneType doing retry #\(retryDownCounter) for entity \(entity)")
-                    return try self.deleteEntitiesOfOneType(entity,
-                                                            context: context,
-                                                            retryDownCounter: retryDownCounter-1)
-                } else {
-                    print("Delete all data in \(entity) error :", error)
-                    throw error
-                }
+            }
+        } catch {
+            viewContext.rollback()
+            if retryDownCounter > 1 {
+                sleep(1)
+                print("deleteEntitiesOfOneType doing recursive retry #\(retryDownCounter) for entity \(entity)")
+                return try self.deleteEntitiesOfOneType(entity,
+                                                        viewContext: viewContext,
+                                                        retryDownCounter: retryDownCounter-1)
+            } else {
+                print("Error deleting all data in \(entity):", error)
+                throw error
             }
         }
     }
