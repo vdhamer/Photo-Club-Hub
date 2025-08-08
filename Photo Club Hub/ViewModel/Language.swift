@@ -5,7 +5,7 @@
 //  Created by Peter van den Hamer on 02/03/2024.
 //
 
-import CoreData
+@preconcurrency import CoreData
 
 extension Language {
 
