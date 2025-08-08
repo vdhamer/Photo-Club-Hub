@@ -20,7 +20,7 @@ public struct Model {
 
     /// Deletes all Core Data objects related to expertises and languages.
     /// - Parameter viewContext: The managed object context to operate on. For now this has to be the main thread.
-    @MainActor private static func deleteCoreDataExpertisesAndLanguages(viewContext: NSManagedObjectContext) {
+    @MainActor static func deleteCoreDataExpertisesAndLanguages(viewContext: NSManagedObjectContext) {
         let forcedDataRefresh = "Forced clearing of CoreData expertises "
 
         do { // order is important to avoid problems with referential integrity
