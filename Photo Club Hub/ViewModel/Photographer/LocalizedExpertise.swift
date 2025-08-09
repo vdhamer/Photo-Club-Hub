@@ -167,44 +167,56 @@ extension LocalizedExpertise {
         }
     }
 
-    // count total number of objects in CoreData database
+    /// Returns the total number of `LocalizedExpertise` objects in the Core Data database.
+    ///
+    /// - Parameter context: The `NSManagedObjectContext` used to perform the fetch.
+    /// - Returns: The total count of `LocalizedExpertise` records, or 0 if an error occurs.
     static func count(context: NSManagedObjectContext) -> Int {
-        var localizedExpertises: [LocalizedExpertise]! = []
 
-        let fetchRequest: NSFetchRequest<LocalizedExpertise> = LocalizedExpertise.fetchRequest()
-        let predicateAll = NSPredicate(format: "TRUEPREDICATE")
-        fetchRequest.predicate = predicateAll
+        let localizedExpertiseCount: Int = context.performAndWait {
+            let fetchRequest: NSFetchRequest<LocalizedExpertise> = LocalizedExpertise.fetchRequest()
+            let predicateAll = NSPredicate(format: "TRUEPREDICATE")
+            fetchRequest.predicate = predicateAll
 
-        context.performAndWait {
             do {
-                localizedExpertises = try context.fetch(fetchRequest)
+                return try context.fetch(fetchRequest).count
             } catch {
                 ifDebugFatalError("Failed to fetch list of all LocalizedExpertises: \(error)",
                                   file: #fileID, line: #line)
                 // on non-Debug version, continue with empty `expertises` array
+                return 0
             }
         }
-        return localizedExpertises.count
+
+        return localizedExpertiseCount
     }
 
-    // count number of objects with a given id
+    /// Returns the number of `LocalizedExpertise` objects in the Core Data database
+    /// matching the specified expertise and language ISO code.
+    ///
+    /// - Parameters:
+    ///   - context: The `NSManagedObjectContext` used to perform the fetch.
+    ///   - expertiseID: The unique identifier for the `Expertise` entity to match.
+    ///   - languageIsoCode: The ISO code for the Language to match.
+    /// - Returns: The count of `LocalizedExpertise` records matching both criteria, or 0 if an error occurs.
     static func count(context: NSManagedObjectContext, expertiseID: String, languageIsoCode: String) -> Int {
-        var localizedExpertises: [LocalizedExpertise]! = []
 
-        let fetchRequest: NSFetchRequest<LocalizedExpertise> = LocalizedExpertise.fetchRequest()
-        let predicateFormat: String = "expertise_.id_ = %@ && language_.isoCode_ = %@" // avoid localization
-        fetchRequest.predicate = NSPredicate(format: predicateFormat, argumentArray: [expertiseID, languageIsoCode])
+        let localizedExpertiseCount: Int = context.performAndWait {
+            let fetchRequest: NSFetchRequest<LocalizedExpertise> = LocalizedExpertise.fetchRequest()
+            let predicateFormat: String = "expertise_.id_ = %@ && language_.isoCode_ = %@" // avoid localization
+            fetchRequest.predicate = NSPredicate(format: predicateFormat, argumentArray: [expertiseID, languageIsoCode])
 
-        context.performAndWait {
             do {
-                localizedExpertises = try context.fetch(fetchRequest)
+                return try context.fetch(fetchRequest).count
             } catch {
                 ifDebugFatalError("Failed to fetch LocalizedExpertise \(expertiseID) for \(languageIsoCode): \(error)",
                                   file: #fileID, line: #line)
                 // on non-Debug version, continue with empty `expertises` array
+                return 0
             }
         }
-        return localizedExpertises.count
+
+        return localizedExpertiseCount
     }
 
 }

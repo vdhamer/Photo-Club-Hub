@@ -7,7 +7,7 @@
 
 import CoreData // for PersistenceController
 
-public class FotoclubEricameraMembersProvider {
+final public class FotoclubEricameraMembersProvider: Sendable {
 
     public init(bgContext: NSManagedObjectContext,
                 useOnlyInBundleFile: Bool = true,

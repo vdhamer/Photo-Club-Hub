@@ -5,7 +5,7 @@
 //  Created by Peter van den Hamer on 02/03/2024.
 //
 
-import CoreData
+@preconcurrency import CoreData
 
 extension Language {
 
@@ -25,23 +25,20 @@ extension Language {
         ]
     }
 
-    @MainActor
-    static func initConstants() { // called on main thread
+    static func initConstants(context: NSManagedObjectContext) {
         // initConstants shouldn't be necessary, but is there as a temp safety net for concurrenty issues with CoreData
-        let viewContext = PersistenceController.shared.container.viewContext // requires foreground context
-
         for language in code2Name {
             _ = Language.findCreateUpdate(
-                context: viewContext, // requires @MainActor
+                context: context, // requires @MainActor
                 isoCode: language.key, // converted to all caps within findCreateUpdate
                 nameENOptional: language.value // e.g. "English"
             )
         }
 
-        do {
-            try viewContext.save() // persist all organizationTypes using main thread ManagedObjectContext
+        do { // findCreateUpdatae does not normally save, so we are doing it here
+            try context.save() // persist all languages at once using main thread ManagedObjectContext
         } catch {
-            viewContext.rollback()
+            context.rollback()
             ifDebugFatalError("Couldn't initialize the Language records",
                               file: #fileID, line: #line)
         }
@@ -71,7 +68,7 @@ extension Language {
         set { languageNameEN_ = newValue.capitalizingFirstLetter() }
     }
 
-    // MARK: - find or create
+    // MARK: - find, create, update
 
     // Find existing Language object or create a new one.
     // Update existing attributes or fill the new object
@@ -119,45 +116,6 @@ extension Language {
         }
     }
 
-    // count number of objects with a given isoCode
-    static func count(context: NSManagedObjectContext, isoCode: String) -> Int {
-        var languages: [Language]! = []
-        let isoCodeAllCaps = isoCode.uppercased()
-        let fetchRequest: NSFetchRequest<Language> = Language.fetchRequest()
-        let predicateFormat: String = "isoCode_ = %@" // avoid localization
-        let predicate = NSPredicate(format: predicateFormat, argumentArray: [isoCodeAllCaps])
-        fetchRequest.predicate = predicate
-
-        context.performAndWait {
-            do {
-                languages = try context.fetch(fetchRequest)
-            } catch {
-                ifDebugFatalError("Failed to fetch Language \(isoCodeAllCaps): \(error)", file: #fileID, line: #line)
-                // on non-Debug version, continue with empty `languages` array
-            }
-        }
-
-        return languages.count
-    }
-
-    // count number of objects with a given isoCode
-    static func count(context: NSManagedObjectContext) -> Int {
-        var languages: [Language]! = []
-        let fetchRequest: NSFetchRequest<Language> = Language.fetchRequest()
-        fetchRequest.predicate = NSPredicate(format: "TRUEPREDICATE")
-
-        context.performAndWait {
-            do {
-                languages = try context.fetch(fetchRequest)
-            } catch {
-                ifDebugFatalError("Failed to fetch Languages: \(error)", file: #fileID, line: #line)
-                // on non-Debug version, continue with empty `languages` array
-            }
-        }
-
-        return languages.count
-    }
-
     // Update non-identifying attributes/properties within an existing instance of class Language if needed.
     // Returns whether an update was needed.
     fileprivate func update(context: NSManagedObjectContext,
@@ -196,6 +154,57 @@ extension Language {
                 ifDebugFatalError("Could not save updated property of Language \(language.isoCodeAllCaps)")
             }
         }
+    }
+
+    // MARK: - counting
+
+    /// Returns the number of `Language` objects in the given Core Data context that match the specified language.
+    /// - Parameters:
+    ///   - context: The `NSManagedObjectContext` used to perform the fetch request.
+    ///   - isoCode: The language (via case-insensitive ISO Language code) to look for.
+    /// - Returns: The number of matching `Language` objects, or 0 if an error occurs.
+    static func count(context: NSManagedObjectContext, isoCode: String) -> Int {
+
+        let languageCount: Int = context.performAndWait {
+
+            let isoCodeAllCaps = isoCode.uppercased()
+            let fetchRequest: NSFetchRequest<Language> = Language.fetchRequest()
+            let predicateFormat: String = "isoCode_ = %@" // avoid localization
+            let predicate = NSPredicate(format: predicateFormat, argumentArray: [isoCodeAllCaps])
+            fetchRequest.predicate = predicate
+
+            do {
+                return try context.fetch(fetchRequest).count
+            } catch {
+                ifDebugFatalError("Failed to fetch Language \(isoCodeAllCaps): \(error)", file: #fileID, line: #line)
+                // on non-Debug version, continue with empty `languages` array
+                return 0
+            }
+        }
+
+        return languageCount
+    }
+
+    /// Returns the total number of `Language` objects in the specified Core Data context.
+    ///
+    /// - Parameter context: The `NSManagedObjectContext` used to perform the fetch request.
+    /// - Returns: The number of `Language` objects found, or 0 if an error occurs.
+    static func count(context: NSManagedObjectContext) -> Int {
+
+        let languageCount: Int = context.performAndWait {
+            do {
+                let fetchRequest: NSFetchRequest<Language> = Language.fetchRequest()
+                fetchRequest.predicate = NSPredicate(format: "TRUEPREDICATE")
+
+                return try context.fetch(fetchRequest).count
+            } catch {
+                ifDebugFatalError("Failed to fetch Languages: \(error)", file: #fileID, line: #line)
+                // on non-Debug version, continue with empty `languages` array
+                return 0
+            }
+        }
+
+        return languageCount
     }
 
 }

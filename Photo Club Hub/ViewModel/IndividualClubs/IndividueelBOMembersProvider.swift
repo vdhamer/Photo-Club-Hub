@@ -7,7 +7,7 @@
 
 import CoreData // for PersistenceController
 
-public class IndividueelBOMembersProvider {
+final public class IndividueelBOMembersProvider: Sendable {
 
     public init(bgContext: NSManagedObjectContext,
                 useOnlyInBundleFile: Bool = false,

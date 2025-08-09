@@ -7,7 +7,7 @@
 
 import CoreData // for PersistenceController
 
-public class XampleMaxMembersProvider {
+final public class XampleMaxMembersProvider: Sendable {
 
     public init(bgContext: NSManagedObjectContext,
                 useOnlyInBundleFile: Bool = false,
