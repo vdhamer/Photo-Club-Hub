@@ -24,15 +24,16 @@ extension View {
             }
             .navigationDestination(isPresented: binding) {
                 view
-                    .navigationBarBackButtonHidden(hideBackButton(horSizeClass: horSizeClass))
+                    // hide "<" or "< Prelude" to save space
+                    .navigationBarBackButtonHidden(shouldHideBackButton(horSizeClass: horSizeClass))
             }
         }
     }
 
-    // hide "<" or "< Intro" if there is not enough space for all the icons
-    func hideBackButton(horSizeClass: UserInterfaceSizeClass?) -> Bool {
-        guard horSizeClass != nil else { return true } // don't know
-        return horSizeClass == UserInterfaceSizeClass.compact // .regular on iPad and iPhone 14 Plus or Pro Max
+    private func shouldHideBackButton(horSizeClass: UserInterfaceSizeClass?) -> Bool {
+        guard horSizeClass != nil else { return true } // don't know horSizeClass
+
+        return horSizeClass == UserInterfaceSizeClass.compact // .regular on iPad and iPhone Plus or Pro Max
     }
 
 }
