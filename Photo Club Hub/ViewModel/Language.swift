@@ -37,8 +37,8 @@ extension Language {
             )
         }
 
-        do { // findCreateUpdatae does not normally save TODO
-            try viewContext.save() // persist all organizationTypes using main thread ManagedObjectContext
+        do { // findCreateUpdatae does not normally save, so we are doing it here
+            try viewContext.save() // persist all languages at once using main thread ManagedObjectContext
         } catch {
             viewContext.rollback()
             ifDebugFatalError("Couldn't initialize the Language records",
@@ -70,7 +70,7 @@ extension Language {
         set { languageNameEN_ = newValue.capitalizingFirstLetter() }
     }
 
-    // MARK: - find or create
+    // MARK: - find, create, update
 
     // Find existing Language object or create a new one.
     // Update existing attributes or fill the new object
@@ -117,6 +117,48 @@ extension Language {
             return language
         }
     }
+
+    // Update non-identifying attributes/properties within an existing instance of class Language if needed.
+    // Returns whether an update was needed.
+    fileprivate func update(context: NSManagedObjectContext,
+                            nameENOptional: String?) -> Bool { // change language.name if needed
+
+        guard let nameEN = nameENOptional else { return false } // nothing to change
+
+        var modified: Bool = false
+
+        if self.nameEN != nameEN {
+            self.nameEN = nameEN
+            modified = true
+        }
+
+        if modified && Settings.extraCoreDataSaves {
+            do {
+                try context.save() // update modified properties of a Language object
+             } catch {
+                 ifDebugFatalError("Update failed for Language \(isoCodeAllCaps) aka \(self.nameEN)",
+                                  file: #fileID, line: #line)
+                // in release mode, if save() fails, just continue
+            }
+        }
+
+        return modified
+    }
+
+    fileprivate static func save(context: NSManagedObjectContext, language: Language, create: Bool) {
+        do {
+            try context.save()
+        } catch {
+            context.rollback()
+            if create {
+                ifDebugFatalError("Could not save created Language \(language.isoCodeAllCaps)")
+            } else {
+                ifDebugFatalError("Could not save updated property of Language \(language.isoCodeAllCaps)")
+            }
+        }
+    }
+
+    // MARK: - counting
 
     /// Returns the number of `Language` objects in the given Core Data context that match the specified language.
     /// - Parameters:
@@ -165,46 +207,6 @@ extension Language {
         }
 
         return languageCount
-    }
-
-    // Update non-identifying attributes/properties within an existing instance of class Language if needed.
-    // Returns whether an update was needed.
-    fileprivate func update(context: NSManagedObjectContext,
-                            nameENOptional: String?) -> Bool { // change language.name if needed
-
-        guard let nameEN = nameENOptional else { return false } // nothing to change
-
-        var modified: Bool = false
-
-        if self.nameEN != nameEN {
-            self.nameEN = nameEN
-            modified = true
-        }
-
-        if modified && Settings.extraCoreDataSaves {
-            do {
-                try context.save() // update modified properties of a Language object
-             } catch {
-                 ifDebugFatalError("Update failed for Language \(isoCodeAllCaps) aka \(self.nameEN)",
-                                  file: #fileID, line: #line)
-                // in release mode, if save() fails, just continue
-            }
-        }
-
-        return modified
-    }
-
-    fileprivate static func save(context: NSManagedObjectContext, language: Language, create: Bool) {
-        do {
-            try context.save()
-        } catch {
-            context.rollback()
-            if create {
-                ifDebugFatalError("Could not save created Language \(language.isoCodeAllCaps)")
-            } else {
-                ifDebugFatalError("Could not save updated property of Language \(language.isoCodeAllCaps)")
-            }
-        }
     }
 
 }
