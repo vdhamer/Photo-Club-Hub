@@ -118,43 +118,53 @@ extension Language {
         }
     }
 
-    // count number of objects with a given isoCode
+    /// Returns the number of `Language` objects in the given Core Data context that match the specified language.
+    /// - Parameters:
+    ///   - context: The `NSManagedObjectContext` used to perform the fetch request.
+    ///   - isoCode: The language (via case-insensitive ISO Language code) to look for.
+    /// - Returns: The number of matching `Language` objects, or 0 if an error occurs.
     static func count(context: NSManagedObjectContext, isoCode: String) -> Int {
-        var languages: [Language]! = []
-        let isoCodeAllCaps = isoCode.uppercased()
-        let fetchRequest: NSFetchRequest<Language> = Language.fetchRequest()
-        let predicateFormat: String = "isoCode_ = %@" // avoid localization
-        let predicate = NSPredicate(format: predicateFormat, argumentArray: [isoCodeAllCaps])
-        fetchRequest.predicate = predicate
 
-        context.performAndWait {
+        let languageCount: Int = context.performAndWait {
+
+            let isoCodeAllCaps = isoCode.uppercased()
+            let fetchRequest: NSFetchRequest<Language> = Language.fetchRequest()
+            let predicateFormat: String = "isoCode_ = %@" // avoid localization
+            let predicate = NSPredicate(format: predicateFormat, argumentArray: [isoCodeAllCaps])
+            fetchRequest.predicate = predicate
+
             do {
-                languages = try context.fetch(fetchRequest)
+                return try context.fetch(fetchRequest).count
             } catch {
                 ifDebugFatalError("Failed to fetch Language \(isoCodeAllCaps): \(error)", file: #fileID, line: #line)
                 // on non-Debug version, continue with empty `languages` array
+                return 0
             }
         }
 
-        return languages.count
+        return languageCount
     }
 
-    // count number of objects with a given isoCode
+    /// Returns the total number of `Language` objects in the specified Core Data context.
+    ///
+    /// - Parameter context: The `NSManagedObjectContext` used to perform the fetch request.
+    /// - Returns: The number of `Language` objects found, or 0 if an error occurs.
     static func count(context: NSManagedObjectContext) -> Int {
-        var languages: [Language]! = []
-        let fetchRequest: NSFetchRequest<Language> = Language.fetchRequest()
-        fetchRequest.predicate = NSPredicate(format: "TRUEPREDICATE")
 
-        context.performAndWait {
+        let languageCount: Int = context.performAndWait {
             do {
-                languages = try context.fetch(fetchRequest)
+                let fetchRequest: NSFetchRequest<Language> = Language.fetchRequest()
+                fetchRequest.predicate = NSPredicate(format: "TRUEPREDICATE")
+
+                return try context.fetch(fetchRequest).count
             } catch {
                 ifDebugFatalError("Failed to fetch Languages: \(error)", file: #fileID, line: #line)
                 // on non-Debug version, continue with empty `languages` array
+                return 0
             }
         }
 
-        return languages.count
+        return languageCount
     }
 
     // Update non-identifying attributes/properties within an existing instance of class Language if needed.
