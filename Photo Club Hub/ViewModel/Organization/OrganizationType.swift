@@ -14,23 +14,13 @@ public extension OrganizationType {
         fatalError("init() is not available. Use .findCreateUpdate instead.")
     }
 
-    static func initConstants() { // called on main thread
-        let viewContext = PersistenceController.shared.container.viewContext // requires foreground context
-
+    static func initConstants(context: NSManagedObjectContext) {
         for type in OrganizationTypeEnum.allCases { // type is simple enum
             _ = OrganizationType.findCreateUpdate( // organizationType is CoreData NSManagedObject
-                context: viewContext, // requires @MainActor
+                context: context,
                 orgTypeName: type.unlocalizedSingular
             )
         }
-
-//        do { // TODO remove because findCreateUpdate already saves
-//            try viewContext.save() // persist all organizationTypes using main thread ManagedObjectContext
-//        } catch {
-//            viewContext.rollback()
-//            ifDebugFatalError("Couldn't initialize the three organizationType records",
-//                              file: #fileID, line: #line)
-//        }
     }
 
     // MARK: - getters and setters

@@ -85,8 +85,8 @@ public struct Model {
                 }
                 try viewContext.save()
                 switch entity {
-                    case "OrganizationType": OrganizationType.initConstants()
-                    case "Language": Language.initConstants()
+                    case "OrganizationType": OrganizationType.initConstants(context: viewContext)
+                    case "Language": Language.initConstants(context: viewContext)
                     default: break
                     }
             }

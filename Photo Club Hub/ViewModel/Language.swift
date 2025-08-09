@@ -25,22 +25,20 @@ extension Language {
         ]
     }
 
-    static func initConstants() { // called on main thread
+    static func initConstants(context: NSManagedObjectContext) {
         // initConstants shouldn't be necessary, but is there as a temp safety net for concurrenty issues with CoreData
-        let viewContext = PersistenceController.shared.container.viewContext // requires foreground context
-
         for language in code2Name {
             _ = Language.findCreateUpdate(
-                context: viewContext, // requires @MainActor
+                context: context, // requires @MainActor
                 isoCode: language.key, // converted to all caps within findCreateUpdate
                 nameENOptional: language.value // e.g. "English"
             )
         }
 
         do { // findCreateUpdatae does not normally save, so we are doing it here
-            try viewContext.save() // persist all languages at once using main thread ManagedObjectContext
+            try context.save() // persist all languages at once using main thread ManagedObjectContext
         } catch {
-            viewContext.rollback()
+            context.rollback()
             ifDebugFatalError("Couldn't initialize the Language records",
                               file: #fileID, line: #line)
         }
