@@ -75,6 +75,12 @@ struct WhoIsWhoListView: View {
                 }
                 Text("There are \(Expertise.count(context: viewContext)) expertise tags.",
                      comment: "Expertise statistics in footnote #4 of Who's Who screen")
+                Text("""
+                     \(Expertise.getAll(context: viewContext).filter { keyword in keyword.isStandard }.count) \
+                     of these \(Expertise.count(context: viewContext)) \
+                     expertise tags are approved.
+                     """,
+                     comment: "Expertise statistics in footnote #4 of Who's Who screen")
                 Text("Expertise tags were assigned \(PhotographerExpertise.count(context: viewContext)) times.",
                      comment: "Expertise statistics in footnote #4 of Who's Who screen")
             }
