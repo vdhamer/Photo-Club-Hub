@@ -54,14 +54,20 @@ extension PhotoClubHubApp {
 
     static func loadClubsAndMembers() {
 
+        // MARK: - Level 0
+
         // load list of Expertises and Languages from root.Level0.json file
         let level0BackgroundContext = makeBgContext(ctxName: "Level 0 loader")
         _ = Level0JsonReader(bgContext: level0BackgroundContext, isInTestBundle: false, useOnlyInBundleFile: false)
+
+        // MARK: - Level 1
 
         // load list of photo clubs and museums from root.Level1.json file
         let level1BackgroundContext = makeBgContext(ctxName: "Level 1 loader")
         _ = Level1JsonReader(bgContext: level1BackgroundContext, // read root.Level1.json file
                              isInTestBundle: false, useOnlyInBundleFile: false)
+
+        // MARK: - Level 2
 
         // load current/former members of Fotogroep De Gender
         let genderBackgroundContext = makeBgContext(ctxName: "Level 2 loader fgDeGender")
