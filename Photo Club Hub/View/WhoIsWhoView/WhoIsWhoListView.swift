@@ -60,8 +60,9 @@ struct WhoIsWhoListView: View {
                 Text("WhosWho_Caption_4",
                      comment: "Shown in gray at the bottom of the Who's Who page (3/3).")
                 ForEach(Expertise.getAll(context: viewContext)
-                    .sorted(by: sortExpertisesLocalized)
-                    .filter { !$0.id.capitalized.contains("Expertise") }, id: \.self) { expertise in
+                    .filter { !$0.id.capitalized.contains("Expertise") }  // Block "Too many experiences" entry
+                    .sorted(by: sortExpertisesLocalized),
+                        id: \.self) { expertise in
                     HStack {
                         Text(verbatim: """
                                        \(getIconString(standard: expertise.isStandard)) \
@@ -109,9 +110,10 @@ struct WhoIsWhoListView: View {
         return lhs.selectedLocalizedExpertise.name < rhs.selectedLocalizedExpertise.name
     }
 
+    static let iconExamples = LocalizedExpertiseResultLists(standardList: [], nonstandardList: [])
+
     fileprivate func getIconString(standard: Bool) -> String {
-        let temp = LocalizedExpertiseResultLists(standardList: [], nonstandardList: [])
-        return standard ? temp.standard.icon : temp.nonstandard.icon
+        return standard ? Self.iconExamples.standard.icon : Self.iconExamples.nonstandard.icon
     }
 
 }
