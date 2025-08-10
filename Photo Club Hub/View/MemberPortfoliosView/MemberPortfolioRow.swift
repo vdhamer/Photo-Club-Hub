@@ -113,7 +113,7 @@ struct MemberPortfolioRow: View {
         Group {
             let persistenceController = PersistenceController.shared // for Core Data
             let viewContext = persistenceController.container.viewContext
-            
+
             let personName = PersonName(givenName: "Jan", infixName: "de", familyName: "Korte")
             let photographerOptionalFields = PhotographerOptionalFields()
             let photographer = Photographer.findCreateUpdate(context: viewContext,
@@ -127,7 +127,7 @@ struct MemberPortfolioRow: View {
                                                                 latitude: 0.0, longitude: 0.0),
                                                              optionalFields: OrganizationOptionalFields()
             )
-            
+
             let member = MemberPortfolio.findCreateUpdate(bgContext: viewContext,
                                                           organization: organization,
                                                           photographer: photographer,
