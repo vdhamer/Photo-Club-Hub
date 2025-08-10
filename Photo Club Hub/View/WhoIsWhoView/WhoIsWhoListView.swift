@@ -13,7 +13,7 @@ import WebKit // for wkWebView
 //     * providing the navigation title,
 //     * searchbar to filter on photographer's name,
 //     * vertical (smart) scrolling photographer cards,
-//     * help text at bottom.
+//     * help text at bottom. One of these footnotes shows the Expertise stats.
 // Preview unfortunately doesn't work.
 
 struct WhoIsWhoListView: View {
@@ -116,14 +116,14 @@ struct WhoIsWhoListView: View {
 
 }
 
-struct PhotographersView_Previews: PreviewProvider {
-    @State static var searchText = "D'Eau1"
-    static var previews: some View {
-        NavigationStack {
-            WhoIsWhoListView(searchText: $searchText,
-                             navigationTitle: String("PhotographerListView")
-                )
-                .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
-        }
-    }
-}
+// struct PhotographersView_Previews: PreviewProvider {
+//    @State static var searchText = "D'Eau1"
+//    static var previews: some View {
+//        NavigationStack {
+//            WhoIsWhoListView(searchText: $searchText,
+//                             navigationTitle: String("PhotographerListView")
+//                )
+//                .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+//        }
+//    }
+// }
