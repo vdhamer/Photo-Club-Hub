@@ -39,13 +39,13 @@ struct WhoIsWhoTextInfo: View {
                 .font(.title3)
                 .tracking(1)
 
-            let locBirthday = String(localized: "Birthday", // birthday if available (year of birth is not shown)
-                                     comment: """
-                                              Birthday of member (without year). \
-                                              Date not currently localized?
-                                              """)
             if let date: Date = photographer.bornDT {
                 if isBirthdaySoon(date, minResult: -1, maxResult: 7) != nil {
+                    let locBirthday = String(localized: "Birthday", // birthday if available (year of birth not shown)
+                                             comment: """
+                                                      Birthday of member (without year). \
+                                                      Date not currently localized?
+                                                      """)
                     Text(verbatim: "\(locBirthday): \(Self.dateFormatter.string(from: date))")
                         .font(.subheadline)
                         .foregroundStyle(photographer.isDeceased ? .deceasedColor : .primary)
