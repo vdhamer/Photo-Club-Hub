@@ -31,7 +31,7 @@ public class Level0JsonReader {
                                         fileSelector: FileSelector) {
 
         let fileName: String = fileSelector.fileName
-        ifDebugPrint("\nWill read Level 0 file (\(fileName)) with standard expertises and languages in background.")
+        ifDebugPrint("\nStarting background read of \(fileName).level0.json to get standard expertises and languages.")
 
         // hand the data to SwiftyJSON to parse
         let jsonRoot = JSON(parseJSON: jsonData) // get entire JSON file
@@ -60,24 +60,6 @@ public class Level0JsonReader {
         }
 
         ifDebugPrint("Completed readRootLevel0Json() in background")
-    }
-
-    private func parseLanguages(bgContext: NSManagedObjectContext, jsonLanguages: [JSON]) {
-        for jsonLanguage in jsonLanguages {
-            guard jsonLanguage["isoCode"].exists(),
-                  jsonLanguage["languageNameEN"].exists() else {
-                ifDebugFatalError("Language doesn't have an isoCode or translated name", file: #fileID, line: #line)
-                continue
-            }
-
-            let isoCode = jsonLanguage["isoCode"].stringValue
-            let languageNameEN = jsonLanguage["languageNameEN"].stringValue
-
-            let language = Language.findCreateUpdate(context: bgContext,
-                                                     isoCode: isoCode,
-                                                     nameENOptional: languageNameEN)
-            print("Language <\(language.isoCodeAllCaps)> found")
-        }
     }
 
     private func parseExpertises(bgContext: NSManagedObjectContext, jsonExpertises: [JSON]) {
@@ -113,4 +95,21 @@ public class Level0JsonReader {
         }
     }
 
+    private func parseLanguages(bgContext: NSManagedObjectContext, jsonLanguages: [JSON]) {
+        for jsonLanguage in jsonLanguages {
+            guard jsonLanguage["isoCode"].exists(),
+                  jsonLanguage["languageNameEN"].exists() else {
+                ifDebugFatalError("Language doesn't have an isoCode or translated name", file: #fileID, line: #line)
+                continue
+            }
+
+            let isoCode = jsonLanguage["isoCode"].stringValue
+            let languageNameEN = jsonLanguage["languageNameEN"].stringValue
+
+            let language = Language.findCreateUpdate(context: bgContext,
+                                                     isoCode: isoCode,
+                                                     nameENOptional: languageNameEN)
+            print("Language <\(language.isoCodeAllCaps)> found")
+        }
+    }
 }
