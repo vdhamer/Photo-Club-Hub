@@ -180,12 +180,7 @@ extension Expertise {
 
     func delete(context: NSManagedObjectContext) { // for testing?
         context.delete(self)
-        do {
-            try context.save()
-        } catch {
-            context.rollback()
-            ifDebugFatalError("Could not save the deletion of Expertise \"\(self.id)\"")
-        }
+        Expertise.save(context: context, errorText: "Could not save the deletion of Expertise \"\(self.id)\"")
     }
 
     static func save(context: NSManagedObjectContext, errorText: String? = nil) {
