@@ -95,10 +95,10 @@ extension Expertise {
     // Update existing attributes or fill the new object
     public static func findCreateUpdateStandard(context: NSManagedObjectContext, // can be foreground or background
                                                 id: String,
-                                                name: [JSON], // array mapping languages to localizedNames
-                                                usage: [JSON]
+                                                names: [JSON], // array mapping languages to localizedNames
+                                                usages: [JSON]
     					       ) -> Expertise {
-        findCreateUpdate(context: context, id: id, isStandard: true, name: name, usage: usage)
+        findCreateUpdate(context: context, id: id, isStandard: true, name: names, usage: usages)
     }
 
     // Find existing non-standard Expertise object or create a new one.
