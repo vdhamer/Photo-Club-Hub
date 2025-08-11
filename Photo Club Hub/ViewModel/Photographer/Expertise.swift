@@ -62,7 +62,7 @@ extension Expertise {
         }
 
         if let expertise = expertises.first { // already exists, so update non-identifying attributes
-            if expertise.update(context: context, isStandard: isStandard, name: names, usage: usage) {
+            if expertise.update(context: context, newIsStandard: isStandard, name: names, usage: usage) {
                 if isStandard == nil {
                     ifDebugFatalError("Updated expertise \(expertise.id).isStandard to nil (which is suspicious)")
                 } else {
@@ -79,9 +79,9 @@ extension Expertise {
             let expertise = Expertise(entity: entity, insertInto: context)
             expertise.id = id // immediately set it to a non-nil value
             _ = expertise.update(context: context,
-                               isStandard: isStandard,
-                               name: names, // ignore whether update made changes
-                               usage: usage)
+                                 newIsStandard: isStandard,
+                                 name: names, // ignore whether update made changes
+                                 usage: usage)
             if Settings.extraCoreDataSaves {
                 Expertise.save(context: context, errorText: "Could not save Expertise \"\(expertise.id)\"")
             }
@@ -124,16 +124,17 @@ extension Expertise {
     // Update non-identifying attributes/properties within an existing instance of class Expertise if needed.
     // Returns whether an update was needed.
     fileprivate func update(context: NSManagedObjectContext,
-                            isStandard: Bool?, // nil means don't change
+                            newIsStandard: Bool?, // nil means don't change
                             name: [JSON], // empty array means do not change
                             usage: [JSON]
     ) -> Bool {
 
-        var updated: Bool = false
+        var updated: Bool = false // keep track if anything changed
 
-        if isStandard != nil, self.isStandard != isStandard {
-            self.isStandard = isStandard!
-            updated = true
+        if newIsStandard == true, // if nil, don't change. If false, don't change.
+           self.isStandard == false { // if already true, no need to change
+                self.isStandard = true
+                updated = true
         }
 
         for localizedExpertise in name {
