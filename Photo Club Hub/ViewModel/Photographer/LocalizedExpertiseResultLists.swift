@@ -59,8 +59,8 @@ public struct LocalizedExpertiseResultLists {
                                           id: String(localized: "Too many expertises",
                                                      table: "Package",
                                                      comment: "Shown when too many expertises are found"),
-                                          name: [],
-                                          usage: [] )
+                                          names: [],
+                                          usages: [] )
             let moreLocalizedExpertise: LocalizedExpertiseResult = moreExpertise.selectedLocalizedExpertise
             resultLERLs.nonstandard.list.append(LocalizedExpertiseResult(
                                                     localizedExpertise: moreLocalizedExpertise.localizedExpertise,

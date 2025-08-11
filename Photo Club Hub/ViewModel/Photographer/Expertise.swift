@@ -39,7 +39,7 @@ extension Expertise {
     fileprivate static func findCreateUpdate(context: NSManagedObjectContext, // can be foreground or background context
                                              id: String,
                                              isStandard: Bool?, // nil means don't change existing value
-                                             name: [JSON], // JSON equivalent of a dictionary with localized names
+                                             names: [JSON], // JSON equivalent of a dictionary with localized names
                                              usage: [JSON]
                                             ) -> Expertise {
 
@@ -62,7 +62,7 @@ extension Expertise {
         }
 
         if let expertise = expertises.first { // already exists, so update non-identifying attributes
-            if expertise.update(context: context, isStandard: isStandard, name: name, usage: usage) {
+            if expertise.update(context: context, isStandard: isStandard, name: names, usage: usage) {
                 if isStandard == nil {
                     ifDebugFatalError("Updated expertise \(expertise.id).isStandard to nil (which is suspicious)")
                 } else {
@@ -80,7 +80,7 @@ extension Expertise {
             expertise.id = id // immediately set it to a non-nil value
             _ = expertise.update(context: context,
                                isStandard: isStandard,
-                               name: name, // ignore whether update made changes
+                               name: names, // ignore whether update made changes
                                usage: usage)
             if Settings.extraCoreDataSaves {
                 Expertise.save(context: context, errorText: "Could not save Expertise \"\(expertise.id)\"")
@@ -95,20 +95,20 @@ extension Expertise {
     // Update existing attributes or fill the new object
     public static func findCreateUpdateStandard(context: NSManagedObjectContext, // can be foreground or background
                                                 id: String,
-                                                name: [JSON], // array mapping languages to localizedNames
-                                                usage: [JSON]
+                                                names: [JSON], // array mapping languages to localizedNames
+                                                usages: [JSON]
     					       ) -> Expertise {
-        findCreateUpdate(context: context, id: id, isStandard: true, name: name, usage: usage)
+        findCreateUpdate(context: context, id: id, isStandard: true, names: names, usage: usages)
     }
 
     // Find existing non-standard Expertise object or create a new one.
     // Update existing attributes or fill the new object
     public static func findCreateUpdateNonStandard(context: NSManagedObjectContext, // can be foreground or background
                                                    id: String,
-                                                   name: [JSON], // array mapping languages to localizedNames
-                                                   usage: [JSON]
+                                                   names: [JSON], // array mapping languages to localizedNames
+                                                   usages: [JSON]
     						  ) -> Expertise {
-        findCreateUpdate(context: context, id: id, isStandard: false, name: name, usage: usage)
+        findCreateUpdate(context: context, id: id, isStandard: false, names: names, usage: usages)
     }
 
     // Find existing Expertise object or create a new one without changing the Standard flag.
@@ -118,7 +118,7 @@ extension Expertise {
                                               name: [JSON], // array mapping languages to localizedNames
                                               usage: [JSON]
                                              ) -> Expertise {
-        findCreateUpdate(context: context, id: id, isStandard: nil, name: name, usage: usage)
+        findCreateUpdate(context: context, id: id, isStandard: nil, names: name, usage: usage)
     }
 
     // Update non-identifying attributes/properties within an existing instance of class Expertise if needed.
