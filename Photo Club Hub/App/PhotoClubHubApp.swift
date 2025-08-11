@@ -119,7 +119,7 @@ extension PhotoClubHubApp {
 
         let bgContext = PersistenceController.shared.container.newBackgroundContext()
         bgContext.name = ctxName
-        bgContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+        bgContext.mergePolicy = NSMergePolicy.mergeByPropertyStoreTrump // .mergeByPropertyObjectTrump doesn't work
         bgContext.automaticallyMergesChangesFromParent = true // to push ObjectTypes to bgContext?
         return bgContext
 
