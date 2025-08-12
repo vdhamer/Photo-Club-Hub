@@ -7,7 +7,7 @@ Settings
 * Fix: localization of "Data refresh pending" toggle
 
 Code Maintenance
-* Tested with MacOS 15.6, iOS 26 beta 5 (??), Xcode 23.0 beta 5
+* Tested with MacOS 26.0 (25A5338b), iOS 26 beta 6 (23A5318c)
 * Code sync with Photo Club Hub HTML
 
 This build #4648 was made using Xcode 16.4 and is intended for release via the App Store.
