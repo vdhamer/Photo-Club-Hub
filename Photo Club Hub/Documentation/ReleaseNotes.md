@@ -1,10 +1,13 @@
 ### 2.8.3 (GitHub commit ???????) ??-08-25
 
 Who's Who screen
-* Fix: some Standard Expertises (in footnote #4) showed Non-Standard icon instead
+* Fix: some Standard Expertises (in footnote #4 at bottom of Who's Who) incorrectly displayed as Non-Standard
 
 Settings
 * Fix: localization of "Data refresh pending" toggle
+
+Code maintenance
+* Synch'd code changes back to Photo Club Hub HTML
 
 This build #4648 was made using Xcode 16.4 and is intended for release via the App Store.
 
