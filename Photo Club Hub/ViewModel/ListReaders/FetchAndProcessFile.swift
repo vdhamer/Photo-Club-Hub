@@ -19,9 +19,9 @@ struct FetchAndProcessFile {
          fileSelector: FileSelector,
          fileType: String, fileSubType: String,
          useOnlyInBundleFile: Bool,
-         fileContentProcessor: @escaping (_ bgContext: NSManagedObjectContext,
-                                          _ jsonData: String,
-                                          _ selectFile: FileSelector) -> Void) {
+         fileContentProcessor: @Sendable @escaping (_ bgContext: NSManagedObjectContext,
+                                                    _ jsonData: String,
+                                                    _ selectFile: FileSelector) -> Void) {
         bgContext.perform { [self] in // run on requested background thread
             let nameWithSubtype = (fileSelector.fileName) + "." + fileSubType // e.g. "root.level0"
 
