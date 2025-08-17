@@ -1,7 +1,14 @@
 ### 2.8.3 (GitHub commit ???????) ??-08-25
 
+This build #4649 was made using Xcode ???? and is intended for release via the App Store.
+
+---------------------------------------------------------------------------
+
+### 2.8.3 (GitHub commit c5245aa) 17-08-25
+
 Who's Who screen
-* Fix: some Standard Expertises (in footnote #4 at bottom of Who's Who) incorrectly displayed as Non-Standard
+* Fix: some Standard Expertises (in footnote #4 at bottom of Who's Who) incorrectly displayed as Non-Standard.
+* Extra line in footnote #4 specifying how many of the Expertises are Standard (listed in root.level0.json).
 
 Settings
 * Fix: localization of "Data refresh pending" toggle
@@ -10,7 +17,7 @@ Code Maintenance
 * Tested with MacOS 26.0 (25A5338b), iOS 18.6.1, iOS 26 beta 6 (23A5318c)
 * Code sync with Photo Club Hub HTML
 
-This build #4648 was made using Xcode 16.4 and is intended for release via the App Store.
+This build #4648 was made using Xcode 26.0 build 5 and and therefore cannot be released via the App Store.
 
 ---------------------------------------------------------------------------
 
