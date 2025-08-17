@@ -58,7 +58,8 @@ extension PhotoClubHubApp {
 
         // load list of Expertises and Languages from root.Level0.json file
         let level0BackgroundContext = makeBgContext(ctxName: "Level 0 loader")
-        _ = Level0JsonReader(bgContext: level0BackgroundContext, isInTestBundle: false, useOnlyInBundleFile: false)
+        _ = Level0JsonReader(bgContext: level0BackgroundContext,
+                             isInTestBundle: false, useOnlyInBundleFile: false)
 
         // MARK: - Level 1
 
@@ -121,6 +122,7 @@ extension PhotoClubHubApp {
         bgContext.name = ctxName
         bgContext.mergePolicy = NSMergePolicy.mergeByPropertyStoreTrump // .mergeByPropertyObjectTrump doesn't work
         bgContext.automaticallyMergesChangesFromParent = true // to push ObjectTypes to bgContext?
+        bgContext.undoManager = nil // no undo manager (for speed)
         return bgContext
 
     }

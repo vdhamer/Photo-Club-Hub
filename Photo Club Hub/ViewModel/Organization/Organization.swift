@@ -299,7 +299,7 @@ extension Organization {
 				try bgContext.save() // persist modifications in PhotoClub record
  			} catch {
                 print("Error: \(error)")
-                ifDebugFatalError("Update failed for club or museum \(fullName)",
+                ifDebugFatalError("Update failed for club or museum \"\(fullName)\"",
                                   file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
                 // in release mode, if .save() fails, just continue
                 return false
