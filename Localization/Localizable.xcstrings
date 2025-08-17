@@ -67,7 +67,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Er zijn %1$lld van deze %2$lld expertise tags zijn goedgekeurd."
+            "value" : "Er zijn %1$lld van deze %2$lld expertise tags goedgekeurd."
           }
         }
       }

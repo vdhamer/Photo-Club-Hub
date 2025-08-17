@@ -1,5 +1,8 @@
 ### 2.8.3 (GitHub commit ???????) ??-08-25
 
+Who's Who screen
+* Fixed: a localization error in the Dutch/NL translation.
+
 This build #4649 was made using Xcode ???? and is intended for release via the App Store.
 
 ---------------------------------------------------------------------------
