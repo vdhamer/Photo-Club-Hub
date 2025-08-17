@@ -10,7 +10,7 @@ import CoreData // for NSManagedObjectContext
 import SwiftyJSON // for JSON struct
 import CoreLocation // for CLLocationCoordinate2D
 
-// see XampleMin.level2.json or XampleMax.level2.json for syntax examples
+// see XampleMin.level2.json and XampleMax.level2.json for example data files
 
 public class Level2JsonReader { // normally running on a background thread
 
@@ -27,13 +27,15 @@ public class Level2JsonReader { // normally running on a background thread
                                 fileType: "json",
                                 fileSubType: "level2", // "fgDeGender.level2.json"
                                 useOnlyInBundleFile: useOnlyInBundleFile,
-                                fileContentProcessor: readRootLevel2Json(bgContext:jsonData:fileSelector:)
+                                fileContentProcessor: Level2JsonReader.readRootLevel2Json(bgContext:
+                                                                                          jsonData:
+                                                                                          fileSelector:)
                                )
     }
 
-    fileprivate func readRootLevel2Json(bgContext: NSManagedObjectContext,
-                                        jsonData: String,
-                                        fileSelector: FileSelector) {
+    @Sendable static fileprivate func readRootLevel2Json(bgContext: NSManagedObjectContext,
+                                                         jsonData: String,
+                                                         fileSelector: FileSelector) {
 
         guard fileSelector.organizationIdPlus != nil else { // need id of a club
             fatalError("Missing `targetIdorganizationIdPlus` in readRootLevel2Json()")
@@ -81,7 +83,7 @@ public class Level2JsonReader { // normally running on a background thread
         if jsonRoot["members"].exists() { // could be empty (although level2.json file would only contain club data)
             let members: [JSON] = jsonRoot["members"].arrayValue
             for member in members {
-                loadMember(bgContext: bgContext, member: member, club: club)
+                Level2JsonReader.loadMember(bgContext: bgContext, member: member, club: club)
             }
         }
 
@@ -99,9 +101,9 @@ public class Level2JsonReader { // normally running on a background thread
         ifDebugPrint("Completed mergeLevel2Json() in background")
     }
 
-    fileprivate func loadMember(bgContext: NSManagedObjectContext,
-                                member: JSON,
-                                club: Organization) {
+    fileprivate static func loadMember(bgContext: NSManagedObjectContext,
+                                       member: JSON,
+                                       club: Organization) {
         guard member["name"].exists(),
               member["name"]["givenName"].exists(),
               // if member["name"]["givenName"] doesn't exist, SwiftyJSON returns ""
@@ -126,9 +128,10 @@ public class Level2JsonReader { // normally running on a background thread
 
         let memberPortfolio: MemberPortfolio
         if member["optional"].exists() { // could contain photographerOptionalFields, memberOptionalFields, or both.
-            memberPortfolio = loadPhotographerAndMemberOptionals(bgContext: bgContext,
-                                                                 jsonOptionals: member["optional"],
-                                                                 photographer: photographer, club: club)
+            memberPortfolio = Level2JsonReader.loadPhotographerAndMemberOptionals(bgContext: bgContext,
+                                                                                  jsonOptionals: member["optional"],
+                                                                                  photographer: photographer,
+                                                                                  club: club)
         } else {
             memberPortfolio = MemberPortfolio.findCreateUpdate(bgContext: bgContext,
                                                                organization: club,
@@ -143,11 +146,11 @@ public class Level2JsonReader { // normally running on a background thread
         memberPortfolio.refreshFirstImage()
     }
 
-    fileprivate func loadClubOptionals(bgContext: NSManagedObjectContext,
-                                       jsonOptionals: JSON,
-                                       club: Organization) {
+    fileprivate static func loadClubOptionals(bgContext: NSManagedObjectContext,
+                                              jsonOptionals: JSON,
+                                              club: Organization) {
         let clubWebsite = jsonOptionals["website"].exists() ? URL(string: jsonOptionals["website"].stringValue) : nil
-        let wikipedia: URL? = jsonOptionalsToURL(jsonOptionals: jsonOptionals, key: "wikipedia")
+        let wikipedia: URL? = Level2JsonReader.jsonOptionalsToURL(jsonOptionals: jsonOptionals, key: "wikipedia")
         let fotobondNumber = jsonOptionals["nlSpecific"]["fotobondNumber"].exists()  ? // id of club
             jsonOptionals["nlSpecific"]["fotobondNumber"].int16Value : nil
         let contactEmail: String? = jsonOptionals["contactEmail"].exists() ?
@@ -173,19 +176,23 @@ public class Level2JsonReader { // normally running on a background thread
         )
     }
 
-    fileprivate func loadPhotographerAndMemberOptionals(bgContext: NSManagedObjectContext,
-                                                        jsonOptionals: JSON,
-                                                        photographer: Photographer,
-                                                        club: Organization) -> MemberPortfolio {
+    fileprivate static func loadPhotographerAndMemberOptionals(bgContext: NSManagedObjectContext,
+                                                               jsonOptionals: JSON,
+                                                               photographer: Photographer,
+                                                               club: Organization) -> MemberPortfolio {
 
         let memberRolesAndStatus = MemberRolesAndStatus(jsonRoles: jsonOptionals["roles"],
                                                         jsonStatus: jsonOptionals["status"])
 
         let birthday: String? = jsonOptionals["birthday"].exists() ? jsonOptionals["birthday"].stringValue : nil
-        let photographerWebsite: URL? = jsonOptionalsToURL(jsonOptionals: jsonOptionals, key: "website")
-        let photographerImage: URL? = jsonOptionalsToURL(jsonOptionals: jsonOptionals, key: "photographerImage")
-        let featuredImage: URL? = jsonOptionalsToURL(jsonOptionals: jsonOptionals, key: "featuredImage")
-        let level3URL: URL? = jsonOptionalsToURL(jsonOptionals: jsonOptionals, key: "level3URL")
+        let photographerWebsite: URL? = Level2JsonReader.jsonOptionalsToURL(jsonOptionals: jsonOptionals,
+                                                                            key: "website")
+        let photographerImage: URL? = Level2JsonReader.jsonOptionalsToURL(jsonOptionals: jsonOptionals,
+                                                                          key: "photographerImage")
+        let featuredImage: URL? = Level2JsonReader.jsonOptionalsToURL(jsonOptionals: jsonOptionals,
+                                                                      key: "featuredImage")
+        let level3URL: URL? = Level2JsonReader.jsonOptionalsToURL(jsonOptionals: jsonOptionals,
+                                                                  key: "level3URL")
 
         let membershipStartDate: Date? = jsonOptionals["membershipStartDate"].exists() ?
             jsonOptionals["membershipStartDate"].stringValue.extractDate() : nil
@@ -230,7 +237,7 @@ public class Level2JsonReader { // normally running on a background thread
 
     }
 
-    fileprivate func jsonOptionalsToURL(jsonOptionals: JSON, key: String) -> URL? {
+    fileprivate static func jsonOptionalsToURL(jsonOptionals: JSON, key: String) -> URL? {
         guard jsonOptionals[key].exists() else { return nil }
         guard let string = jsonOptionals[key].string else { return nil }
         return URL(string: string) // returns nil if the string doesn’t represent a valid URL

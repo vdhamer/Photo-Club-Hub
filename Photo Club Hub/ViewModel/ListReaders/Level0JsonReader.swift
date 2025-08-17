@@ -21,14 +21,15 @@ public class Level0JsonReader {
                                 fileSelector: FileSelector(fileName: fileName, isInTestBundle: isInTestBundle),
                                 fileType: "json", fileSubType: "level0", // "root.level0.json"
                                 useOnlyInBundleFile: useOnlyInBundleFile,
-                                fileContentProcessor: readRootLevel0Json(bgContext:
-                                                                         jsonData:
-                                                                         fileSelector:))
+                                fileContentProcessor: Level0JsonReader.readRootLevel0Json(bgContext:
+                                                                                          jsonData:
+                                                                                          fileSelector:))
     }
 
-    fileprivate func readRootLevel0Json(bgContext: NSManagedObjectContext,
-                                        jsonData: String,
-                                        fileSelector: FileSelector) {
+    // Marked as @Sendable to satisfy concurrency safety requirements.
+    @Sendable static fileprivate func readRootLevel0Json(bgContext: NSManagedObjectContext,
+                                                         jsonData: String,
+                                                         fileSelector: FileSelector) {
 
         let fileName: String = fileSelector.fileName
         ifDebugPrint("\nStarting background read of \(fileName).level0.json to get standard Expertises and Languages.")
@@ -39,13 +40,13 @@ public class Level0JsonReader {
         // parse Experises section of file
         let jsonExpertises: [JSON] = jsonRoot["expertises"].arrayValue
 
-        parseExpertises(bgContext: bgContext, jsonExpertises: jsonExpertises)
+        Level0JsonReader.parseExpertises(bgContext: bgContext, jsonExpertises: jsonExpertises)
         print("\(jsonExpertises.count) Expertises found")
 
         // parse Language section of file
         let jsonLanguages: [JSON] = jsonRoot["languages"].arrayValue
 
-        parseLanguages(bgContext: bgContext, jsonLanguages: jsonLanguages)
+        Level0JsonReader.parseLanguages(bgContext: bgContext, jsonLanguages: jsonLanguages)
 
         do { // saving may not be necessary because every organization is saved separately
             if bgContext.hasChanges { // optimization recommended by Apple
@@ -62,7 +63,7 @@ public class Level0JsonReader {
         ifDebugPrint("Completed readRootLevel0Json() in background")
     }
 
-    private func parseExpertises(bgContext: NSManagedObjectContext, jsonExpertises: [JSON]) {
+    private static func parseExpertises(bgContext: NSManagedObjectContext, jsonExpertises: [JSON]) {
         for jsonExpertise in jsonExpertises {
             guard jsonExpertise["idString"].exists() else {
                 ifDebugFatalError("JSON Expertise block is missing an idString field", file: #fileID, line: #line)
@@ -96,7 +97,7 @@ public class Level0JsonReader {
         }
     }
 
-    private func parseLanguages(bgContext: NSManagedObjectContext, jsonLanguages: [JSON]) {
+    private static func parseLanguages(bgContext: NSManagedObjectContext, jsonLanguages: [JSON]) {
         for jsonLanguage in jsonLanguages {
             guard jsonLanguage["isoCode"].exists(),
                   jsonLanguage["languageNameEN"].exists() else {
