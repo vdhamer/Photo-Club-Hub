@@ -37,49 +37,79 @@ public class Level2JsonReader { // normally running on a background thread
                                                          jsonData: String,
                                                          fileSelector: FileSelector) {
 
-        guard fileSelector.organizationIdPlus != nil else { // need id of a club
+        guard fileSelector.organizationIdPlus != nil else { // need expected id of a club
             fatalError("Missing `targetIdorganizationIdPlus` in readRootLevel2Json()")
         }
         let targetIdPlus: OrganizationIdPlus = fileSelector.organizationIdPlus! // safe due to preceding guard statement
-        ifDebugPrint("Loading members of club \(targetIdPlus.fullName) in background.")
+        ifDebugPrint("Will try to Load members of club \(targetIdPlus.fullName) in background.")
 
+        // MARK: - /
         let jsonRoot: JSON = JSON(parseJSON: jsonData) // pass the data to SwiftyJSON to parse
+
+        // MARK: - /club
         guard jsonRoot["club"].exists() else {
             ifDebugFatalError("Cannot find `club` keyword for club \(targetIdPlus.fullName)")
             return
         }
-
         let jsonClub: JSON = jsonRoot["club"]
+
+        // MARK: - /club/idPlus
         guard jsonClub["idPlus"].exists() else {
             ifDebugFatalError("Cannot find `idPlus` keyword for club \(targetIdPlus.fullName)")
             return
         }
-
         let jsonIdPlus: JSON = jsonClub["idPlus"]
-        let idPlus = OrganizationIdPlus(fullName: jsonIdPlus["fullName"].stringValue, // idPlus found inside JSON file
+
+        // MARK: - /club/idPlus/fullName
+        guard jsonIdPlus["fullName"].exists() else {
+            ifDebugFatalError("Cannot find `fullName` keyword in idPlus for club \(targetIdPlus.fullName)")
+            return
+        }
+        // MARK: - /club/idPlus/town
+        guard jsonIdPlus["town"].exists() else {
+            ifDebugFatalError("Cannot find `town` keyword in idPlus for club \(targetIdPlus.fullName)")
+            return
+        }
+        // MARK: - /club/idPlus/nickName
+        guard jsonIdPlus["nickName"].exists() else {
+            ifDebugFatalError("Cannot find `nickName` keyword in idPlus for club \(targetIdPlus.fullName)")
+            return
+        }
+        // MARK: - /club/idPlus
+        let idPlus = OrganizationIdPlus(fullName: jsonIdPlus["fullName"].stringValue, // idPlus found _inside_ JSON file
                                         town: jsonIdPlus["town"].stringValue,
                                         nickname: jsonIdPlus["nickName"].stringValue)
-
         guard idPlus.fullName == targetIdPlus.fullName else { // does fine contain the right club?
             ifDebugFatalError("""
-                              Warning: JSON file for club \(targetIdPlus.fullName) \
+                              Warning: JSON file expecting to contain club \(targetIdPlus.fullName) \
                               contains club \(idPlus.fullName) instead.
                               """)
             return // in non-debug software, just don't load the file
         }
 
-        // normally  the club already exists, but if not.. create it
+        // normally  the club already exists, but if it doesn't we have to create it
         let club: Organization = Organization.findCreateUpdate(context: bgContext,
                                                                organizationTypeEnum: OrganizationTypeEnum.club,
                                                                idPlus: idPlus)
 
-        // optional fields within jsonClub
+        // MARK: - /club/coordinates
+        guard jsonClub["coordinates"].exists() else {
+            ifDebugFatalError("Cannot find `coordinates` keyword for club \(targetIdPlus.fullName)")
+            return // TODO add handling of coordinates
+        }
+        //        let coordinates: CLLocationCoordinate2D = jsonOptionals["coordinates"].exists() ?
+        //            CLLocationCoordinate2D(latitude: jsonOptionals["coordinates"]["latitude"].doubleValue,
+        //                                    longitude: jsonOptionals["coordinates"]["longitude"].doubleValue) :
+        //            CLLocationCoordinate2DMake(0, 0) // for safety: Level 1 file should always contain coordinate fields
+
+        // MARK: - /club/optional may not exist
         if jsonClub["optional"].exists() {
             loadClubOptionals(bgContext: bgContext,
                               jsonOptionals: jsonClub["optional"],
                               club: club)
         }
 
+        // MARK: - /members
         if jsonRoot["members"].exists() { // could be empty (although level2.json file would only contain club data)
             let members: [JSON] = jsonRoot["members"].arrayValue
             for member in members {
@@ -155,17 +185,13 @@ public class Level2JsonReader { // normally running on a background thread
             jsonOptionals["nlSpecific"]["fotobondNumber"].int16Value : nil
         let contactEmail: String? = jsonOptionals["contactEmail"].exists() ?
             jsonOptionals["contactEmail"].stringValue : nil
-        let coordinates: CLLocationCoordinate2D = jsonOptionals["coordinates"].exists() ?
-            CLLocationCoordinate2D(latitude: jsonOptionals["coordinates"]["latitude"].doubleValue,
-                                    longitude: jsonOptionals["coordinates"]["longitude"].doubleValue) :
-            CLLocationCoordinate2DMake(0, 0) // for safety: Level 1 file should always contain coordinate fields
         let localizedRemarks: [JSON] = jsonOptionals["remark"].arrayValue // empty array if missing
 
         _ = Organization.findCreateUpdate(context: bgContext,
                                           organizationTypeEnum: OrganizationTypeEnum.club,
                                           idPlus: OrganizationIdPlus(fullName: club.fullName, town: club.town,
                                                                      nickname: club.nickname),
-                                          coordinates: coordinates,
+                                          coordinates: club.coordinates,
                                           optionalFields: OrganizationOptionalFields(
                                               organizationWebsite: clubWebsite,
                                               wikipedia: wikipedia,

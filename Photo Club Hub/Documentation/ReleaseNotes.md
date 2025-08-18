@@ -1,7 +1,11 @@
 ### 2.8.3 (GitHub commit ???????) ??-08-25
 
 Who's Who screen
-* Fixed: a localization error in the Dutch/NL translation.
+* Fixed: a minor localization error in the Dutch/NL translation.
+
+Code Maintenance
+* Fixed: club coordinates in Level2 files were incorrectly handled.
+* Fixed: and club optional fields in Level2 files were ignored.
 
 This build #4649 was made using Xcode ???? and is intended for release via the App Store.
 
