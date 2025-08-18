@@ -801,6 +801,10 @@ Here is an example of the format of a `Level 2` list for a photo club. This exam
 - `club` has the same structure as a single `club` record from the `root.level1.json` file. It serves to label the `Level2` file so you can tell which club it belongs to.
   - `idPlus` and its 3 fields (`town`, `fullName`, and `nickName`) are all required.
   - `town` and `fullName` must exactly match the corresponding fields in the `root.level1.json` file.
+- `coordinates` is used to draw the club on the map and to generate localized versions of the names of towns and countries.
+  - `coordinates` in the Level 2 file overrule the club's coordinates in the Level 1 file. This allows a club to change the coordinates without any outside help.
+  - `latitude` should be in the range [-90.0, +90.0] where negative values are used for the Sounthern hemisphere (e.g., Australia).
+  - `longitude` should be in the range [-180.0, +180.0] where negative values are used for the Western hemisphere (e.g., USA).
 - `members` is a list with the club's current and optionally former members.</p>
 
 </details></ul>
