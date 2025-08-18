@@ -5,11 +5,10 @@
             "fullName": "Fotogroep Oirschot",
             "nickName": "FG Oirschot"
         },
+        "coordinates": {
+            "latitude": 51.46785, "longitude": 5.25568
+        },
         "optional": {
-            "coordinates": {
-                "latitude": 51.46785,
-                "longitude": 5.25568
-            },
             "website": "https://www.fotogroepoirschot.nl",
             "level2URL": "https://www.example.com/fgOirschot.level2.json",
             "nlSpecific": {

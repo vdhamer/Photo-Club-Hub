@@ -5,8 +5,8 @@
       "fullName": "Fotoclub Bellus Imago",
       "nickName": "fcBellusImago"
     },
+    "coordinates": {"latitude": 51.42541, "longitude": 5.38756},
     "optional": {
-      "coordinates": {"latitude": 51.42541, "longitude": 5.38756},
       "website": "https://www.fotoclubbellusimago.nl",
       "contactEmail": "fotoclubbellusimago@gmail.com",
       "nlSpecific": {"fotobondNumber": 1671}

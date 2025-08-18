@@ -5,8 +5,8 @@
             "fullName": "Fotoclub Ericamera",
             "nickName": "fcEricamera"
         },
+        "coordinates": {"latitude": 51.45403, "longitude": 5.46288},
         "optional": {
-            "coordinates": {"latitude": 51.45403, "longitude": 5.46288},
             "website"    : {"level3URL": "https://www.ericamera.nl"},
             "nlSpecific" : {"fotobondNumber": 1674}
         }

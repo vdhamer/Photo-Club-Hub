@@ -7,11 +7,10 @@
                 "fullName": "Xample Club With Maximal Data",
                 "nickName": "XampleMax"
             },
+            "coordinates": {
+                "latitude": 51.92275, "longitude": 4.47972
+            },
             "optional": {
-                "coordinates": {
-                    "latitude": 51.92275,
-                    "longitude": 4.47972
-                },
                 "website": "https://www.rotterdam.nl/stadhuis",
                 "wikipedia": "https://en.wikipedia.org/wiki/Rotterdam",
                 "level2URL": "https://www.example.com/XampleMax.level2.json",

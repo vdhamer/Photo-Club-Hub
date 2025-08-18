@@ -270,7 +270,6 @@
 		D0D18C77296E1F6A00B334DB /* OrganizationIdPlus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationIdPlus.swift; sourceTree = "<group>"; };
 		D0D4860D2B0EC18A00ED0542 /* Photo_Club_Hub_2_5_2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_5_2.xcdatamodel; sourceTree = "<group>"; };
 		D0DCF7862D090D5C0057FB24 /* Photo_Club_Hub_2_7_2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_7_2.xcdatamodel; sourceTree = "<group>"; };
-		D0DD28D52E42AB4600C10627 /* fcDenDungen.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fcDenDungen.level2.json; sourceTree = "<group>"; };
 		D0DE02762789D1B30062738C /* RoleIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleIconView.swift; sourceTree = "<group>"; };
 		D0DE1B272E1BD23E00FEDFA7 /* Photo_Club_Hub_2_8_1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_8_1.xcdatamodel; sourceTree = "<group>"; };
 		D0DE6B6D2DB6DAE700841DBF /* packages.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = packages.png; sourceTree = "<group>"; };
@@ -740,7 +739,6 @@
 				D0F8718F2D403D1700530D10 /* XampleMin.level1.json */,
 				D0F871902D403D1700530D10 /* XampleMin.level2.json */,
 				D01238FE2DBF9B43000EAD8B /* fgDeGender_Trefwoorden.xlsx */,
-				D0DD28D52E42AB4600C10627 /* fcDenDungen.level2.json */,
 			);
 			path = JSON;
 			sourceTree = "<group>";

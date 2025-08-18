@@ -5,11 +5,10 @@
             "fullName": "Fotoclub Den Dungen",
             "nickName": "fcDenDungen"
         },
+        "coordinates": {
+            "latitude": 51.66214, "longitude": 5.37097
+        },
         "optional": {
-            "coordinates": {
-                "latitude": 51.66214,
-                "longitude": 5.37097
-            },
             "website": "https://www.fotoclubdendungen.nl",
             "level2URL": "https://www.example.com/fcdDungen.level2.json"
         }

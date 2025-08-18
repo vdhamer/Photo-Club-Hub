@@ -5,8 +5,8 @@
             "fullName": "Fotogroep Waalre",
             "nickName": "fgWaalre"
         },
+        "coordinates": {"latitude": 51.39184, "longitude": 5.46144},
         "optional": {
-            "coordinates": {"latitude": 51.39184, "longitude": 5.46144},
             "website": "https://www.fotogroepwaalre.nl",
             "level2URL": "https://www.example.com/fgWaalre.level2.json",
             "remark": [

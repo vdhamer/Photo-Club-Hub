@@ -5,11 +5,10 @@
             "fullName": "Fotogroep de Gender",
             "nickName": "FG deGender"
         },
+        "coordinates": {
+            "latitude": 51.42398, "longitude": 5.4501
+        },
         "optional": {
-            "coordinates": {
-                "latitude": 51.42398,
-                "longitude": 5.4501
-            },
             "website": "https://www.fcdegender.nl",
             "wikipedia": "https://nl.wikipedia.org/wiki/Gender_(beek)",
             "level2URL": "https://www.example.com/deGender.level2.json",
