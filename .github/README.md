@@ -739,11 +739,11 @@ Here is an example of the format of a `Level 2` list for a photo club. This exam
                 "fullName": "Fotogroep de Gender",
                 "nickName": "FG deGender"
             },
+            "coordinates": {
+                "latitude": 51.42398,
+                "longitude": 5.45010
+            },
             "optional": {
-                "coordinates": {
-                    "latitude": 51.42398,
-                    "longitude": 5.45010
-                },
                 "website": "https://www.fcdegender.nl",
                 "wikipedia": "https://nl.wikipedia.org/wiki/Gender_(beek)",
                 "level2URL": "https://www.example.com/deGender.level2.json",
