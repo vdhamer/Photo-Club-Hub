@@ -120,9 +120,10 @@ extension PhotoClubHubApp {
 
         let bgContext = PersistenceController.shared.container.newBackgroundContext()
         bgContext.name = ctxName
-        bgContext.mergePolicy = NSMergePolicy.mergeByPropertyStoreTrump // .mergeByPropertyObjectTrump doesn't work
+        bgContext.mergePolicy = NSMergePolicy.error // TODO temp mergePolicy (!)
+//        bgContext.mergePolicy = NSMergePolicy.mergeByPropertyStoreTrump // .mergeByPropertyObjectTrump doesn't work
         bgContext.automaticallyMergesChangesFromParent = true // to push ObjectTypes to bgContext?
-        bgContext.undoManager = nil // no undo manager (for speed)
+        bgContext.undoManager = nil // no undo manager (supposedly speeds things up)
         return bgContext
 
     }
