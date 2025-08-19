@@ -53,7 +53,7 @@ public class Level2JsonReader { // normally running on a background thread
         }
         let jsonClub: JSON = jsonRoot["club"]
 
-        // MARK: - /club/idPlus
+        // MARK: - /club/idPlus loading
         guard jsonClub["idPlus"].exists() else {
             ifDebugFatalError("Cannot find `idPlus` keyword for club \(targetIdPlus.fullName)")
             return
@@ -75,7 +75,7 @@ public class Level2JsonReader { // normally running on a background thread
             ifDebugFatalError("Cannot find `nickName` keyword in idPlus for club \(targetIdPlus.fullName)")
             return
         }
-        // MARK: - /club/idPlus
+        // MARK: - /club/idPlus checking
         let idPlus = OrganizationIdPlus(fullName: jsonIdPlus["fullName"].stringValue, // idPlus found _inside_ JSON file
                                         town: jsonIdPlus["town"].stringValue,
                                         nickname: jsonIdPlus["nickName"].stringValue)
@@ -83,11 +83,13 @@ public class Level2JsonReader { // normally running on a background thread
             ifDebugFatalError("""
                               Warning: JSON file expecting to contain club \(targetIdPlus.fullName) \
                               contains club \(idPlus.fullName) instead.
+                              But maybe there is a nicknames mismatch: \
+                              found \(idPlus.nickname) and expected \(targetIdPlus.nickname).
                               """)
             return // in non-debug software, just don't load the file
         }
 
-        // normally  the club already exists, but if it doesn't we have to create it
+        // normally  the club already exists, but if it somehow doesn't we will just have to create it
         let club: Organization = Organization.findCreateUpdate(context: bgContext,
                                                                organizationTypeEnum: OrganizationTypeEnum.club,
                                                                idPlus: idPlus)
@@ -134,6 +136,7 @@ public class Level2JsonReader { // normally running on a background thread
     fileprivate static func loadMember(bgContext: NSManagedObjectContext,
                                        member: JSON,
                                        club: Organization) {
+        // MARK: - /members/member/name
         guard member["name"].exists(),
               member["name"]["givenName"].exists(),
               // if member["name"]["givenName"] doesn't exist, SwiftyJSON returns ""
@@ -145,15 +148,16 @@ public class Level2JsonReader { // normally running on a background thread
         let infixName: String = member["name"]["infixName"].stringValue
         let familyName: String = member["name"]["familyName"].stringValue
         print("""
-                  Member "\(givenName) \
-                  \(infixName=="" ? "" : infixName + " ")\
-                  \(familyName)" found in \(club.id.fullName)
-                  """)
+              Member "\(givenName) \
+              \(infixName=="" ? "" : infixName + " ")\
+              \(familyName)" found in \(club.id.fullName)
+              """)
         let photographer = Photographer.findCreateUpdate(context: bgContext,
                                                          personName: PersonName(
-                                                            givenName: givenName,
-                                                            infixName: infixName, // may be ""
-                                                            familyName: familyName),
+                                                             givenName: givenName,
+                                                             infixName: infixName, // may be ""
+                                                             familyName: familyName
+                                                         ),
                                                          optionalFields: PhotographerOptionalFields()) // filled later
 
         let memberPortfolio: MemberPortfolio
