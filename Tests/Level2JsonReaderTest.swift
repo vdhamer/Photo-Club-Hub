@@ -54,7 +54,7 @@ import CoreData // for NSManagedObjectContext
             #expect(organizations[0].organizationType.organizationTypeName == OrganizationTypeEnum.club.rawValue)
             #expect(organizations[0].fullName == idPlus.fullName)
             #expect(organizations[0].town == idPlus.town)
-            #expect(organizations[0].nickname == idPlus.nickname)
+            #expect(organizations[0].nickName == idPlus.nickname)
         }
 
     }
@@ -96,7 +96,7 @@ import CoreData // for NSManagedObjectContext
             #expect(organizations[0].organizationType.organizationTypeName == OrganizationTypeEnum.club.rawValue)
             #expect(organizations[0].fullName == idPlus.fullName)
             #expect(organizations[0].town == idPlus.town)
-            #expect(organizations[0].nickname == idPlus.nickname)
+            #expect(organizations[0].nickName == idPlus.nickname)
         }
     }
 
@@ -135,7 +135,7 @@ import CoreData // for NSManagedObjectContext
             #expect(organizations[0].organizationType.organizationTypeName == OrganizationTypeEnum.club.rawValue)
             #expect(organizations[0].fullName == idPlus.fullName)
             #expect(organizations[0].town == idPlus.town)
-            #expect(organizations[0].nickname == idPlus.nickname)
+            #expect(organizations[0].nickName == idPlus.nickname)
             #expect(organizations[0].fotobondNumber == 1620)
         }
 

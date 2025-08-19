@@ -97,12 +97,18 @@ public class Level2JsonReader { // normally running on a background thread
         // MARK: - /club/coordinates
         guard jsonClub["coordinates"].exists() else {
             ifDebugFatalError("Cannot find `coordinates` keyword for club \(targetIdPlus.fullName)")
-            return // TODO add handling of coordinates
+            return
         }
-        //        let coordinates: CLLocationCoordinate2D = jsonOptionals["coordinates"].exists() ?
-        //            CLLocationCoordinate2D(latitude: jsonOptionals["coordinates"]["latitude"].doubleValue,
-        //                                    longitude: jsonOptionals["coordinates"]["longitude"].doubleValue) :
-        //            CLLocationCoordinate2DMake(0, 0) // for safety: Level 1 file should always contain coordinate fields
+        guard jsonClub["coordinates"]["latitude"].exists() && jsonClub["coordinates"]["longitude"].exists() else {
+            ifDebugFatalError("`coordinates` keyword missing `latitude` or `longitude` for \(targetIdPlus.fullName)")
+            return
+        }
+        let coordinates: CLLocationCoordinate2D =
+            CLLocationCoordinate2D(latitude: jsonClub["coordinates"]["latitude"].doubleValue,
+                                   longitude: jsonClub["coordinates"]["longitude"].doubleValue)
+        if club.coordinates != coordinates {
+            club.coordinates = coordinates
+        }
 
         // MARK: - /club/optional may not exist
         if jsonClub["optional"].exists() {
@@ -185,16 +191,17 @@ public class Level2JsonReader { // normally running on a background thread
                                               club: Organization) {
         let clubWebsite = jsonOptionals["website"].exists() ? URL(string: jsonOptionals["website"].stringValue) : nil
         let wikipedia: URL? = Level2JsonReader.jsonOptionalsToURL(jsonOptionals: jsonOptionals, key: "wikipedia")
-        let fotobondNumber = jsonOptionals["nlSpecific"]["fotobondNumber"].exists()  ? // id of club
-            jsonOptionals["nlSpecific"]["fotobondNumber"].int16Value : nil
+        // level2URL is deliberately ignoring to avoid possibility of overruling what is stated in Level 1 file
+        let localizedRemarks: [JSON] = jsonOptionals["remark"].arrayValue // empty array if missing
         let contactEmail: String? = jsonOptionals["contactEmail"].exists() ?
             jsonOptionals["contactEmail"].stringValue : nil
-        let localizedRemarks: [JSON] = jsonOptionals["remark"].arrayValue // empty array if missing
+        let fotobondNumber = jsonOptionals["nlSpecific"]["fotobondNumber"].exists()  ? // id of club
+            jsonOptionals["nlSpecific"]["fotobondNumber"].int16Value : nil
 
         _ = Organization.findCreateUpdate(context: bgContext,
                                           organizationTypeEnum: OrganizationTypeEnum.club,
                                           idPlus: OrganizationIdPlus(fullName: club.fullName, town: club.town,
-                                                                     nickname: club.nickname),
+                                                                     nickname: club.nickName),
                                           coordinates: club.coordinates,
                                           optionalFields: OrganizationOptionalFields(
                                               organizationWebsite: clubWebsite,
