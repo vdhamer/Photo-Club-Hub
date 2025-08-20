@@ -10,6 +10,7 @@ Code Maintenance
 
 Data Maintenance
 * Forced a datareset at dataResetPending283b4649 (related to Street-Art).
+* Fixed a few lower-case Expertises in club IndividueelBO.
 
 This build #4649 was made using Xcode ???? and is intended for release via the App Store.
 
