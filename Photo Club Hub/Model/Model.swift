@@ -40,7 +40,7 @@ public struct Model {
     /// - Parameter viewContext: The managed object context to operate on. For now this has to be the main thread.
     @MainActor
     private static func deleteCoreDataPhotographersClubs(viewContext: NSManagedObjectContext) { // delete certain tables
-        let forcedDataRefreshText = "Forced clearing of CoreData expertises "
+        let forcedDataRefreshText = "Forced clearing of CoreData organizations "
 
         do { // order is important to avoid problems with referential integrity
             try deleteEntitiesOfOneType("MemberPortfolio", viewContext: viewContext)
