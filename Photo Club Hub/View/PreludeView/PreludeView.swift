@@ -169,7 +169,7 @@ struct PreludeView: View {
         if Settings.manualDataLoading {
             String(localized: "Manual loading",
                    comment: "Shown instead of app name in PreludeView when app is started")
-        } else if isDebug() {
+        } else if isDebug {
             String(localized: "In debug mode",
                    comment: "Shown instead of app name in PreludeView when app is started")
         } else {

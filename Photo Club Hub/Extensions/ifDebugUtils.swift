@@ -32,7 +32,7 @@ public func ifDebugFatalError(_ string: String, file: StaticString, line: UInt) 
     #endif
 }
 
-public func isDebug() -> Bool {
+public var isDebug: Bool {
     #if DEBUG
         true
     #else
