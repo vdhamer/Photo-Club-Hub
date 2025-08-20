@@ -1,7 +1,7 @@
 ### 2.8.3 (GitHub commit ???????) ??-08-25
 
 Who's Who screen
-* Fixed: a minor localization error in the Dutch/NL translation.
+* Fixed: 2 minor localization errors in the translation.
 
 Code Maintenance
 * Fixed: club coordinates in Level2 files were incorrectly handled.
