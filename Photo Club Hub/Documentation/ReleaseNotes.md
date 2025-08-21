@@ -6,7 +6,7 @@ Who's Who screen
 Code Maintenance
 * Fixed: club coordinates in Level2 files were incorrectly handled.
 * Fixed: and club optional fields in Level2 files were ignored.
-* Tested with Xcode 26 beta 6 (17A5305f), macOS 26 beta 7 (25A5346a), iOS 26 beta 7 (23A5326a)
+* Tested with Xcode 26 beta 6 (17A5305f), macOS 26 beta 7 (25A5346a), macOS 15.6.1, iOS 26 beta 7 (23A5326a)
 
 Data Maintenance
 * Forced a datareset at dataResetPending283b4649 (related to Street-Art).
