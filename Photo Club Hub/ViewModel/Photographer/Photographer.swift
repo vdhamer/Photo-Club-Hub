@@ -149,7 +149,7 @@ extension Photographer {
         }
 
         for photographerExpertiseJSON in optionalFields.photographerExpertises {
-            let photographerExpertiseID = photographerExpertiseJSON.stringValue
+            let photographerExpertiseID = photographerExpertiseJSON.stringValue.canonicalCase
             let expertise = Expertise.findCreateUpdateUndefStandard(context: bgContext,
                                                                     id: photographerExpertiseID,
                                                                     name: [],
@@ -160,10 +160,13 @@ extension Photographer {
         }
 
         var hasChanges: Bool = bgContext.hasChanges
-        if hasChanges && Settings.extraCoreDataSaves {
+        let tempBoolean: Bool = true // TODO remove
+        if Settings.extraCoreDataSaves || tempBoolean {
 			do {
-				try bgContext.save() // persist updated information about a photographer
-                hasChanges = false // update may be because of earlier update
+                if hasChanges {
+                    try bgContext.save() // persist updated information about a photographer
+                    hasChanges = false // update may be because of earlier update
+                }
 			} catch {
                 ifDebugFatalError("Update failed for photographer <\(photographer.fullNameFirstLast)>",
                                   file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0

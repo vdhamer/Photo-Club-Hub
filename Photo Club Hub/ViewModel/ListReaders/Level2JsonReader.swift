@@ -130,7 +130,7 @@ public class Level2JsonReader { // normally running on a background thread
                 try bgContext.save() // persist contents of entire Level2.json file
             }
         } catch {
-            ifDebugFatalError("Failed to save changes to Core Data", file: #fileID, line: #line)
+            ifDebugFatalError("Error saving changes to Core Data: \(error)", file: #fileID, line: #line)
             // in release mode, the failed database update is only logged. App doesn't stop.
             ifDebugPrint("Failed to save JSON ClubList items in background")
             ifDebugFatalError("Error: failed to save Level 2 changes to Core Data")

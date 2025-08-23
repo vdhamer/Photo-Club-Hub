@@ -18,16 +18,17 @@ import CoreData // for NSManagedObjectContext
     }
 
     @Test("Add a standard expertise") func addStandardExpertise() throws {
-        let expertiseID = String.random(length: 10).capitalized
+        let expertiseID = String.random(length: 10).canonicalCase
         let expertise = Expertise.findCreateUpdateStandard(context: context, id: expertiseID, names: [], usages: [])
-        #expect(expertise.id == expertiseID)
+        #expect(expertise.id == expertiseID.canonicalCase)
         #expect(expertise.isStandard == true)
         Expertise.save(context: context, errorText: "Error saving expertise \"\(expertiseID)\"")
+        #expect(Expertise.count(context: context, expertiseID: expertiseID) == 1)
         #expect(Expertise.count(context: context, expertiseID: expertiseID) == 1)
     }
 
     @Test("Add a non-standard expertise") func addNonStandardExpertise() throws {
-        let expertiseID = String.random(length: 10).capitalized
+        let expertiseID = String.random(length: 10).canonicalCase
         let expertise = Expertise.findCreateUpdateNonStandard(context: context, id: expertiseID, names: [], usages: [])
         #expect(expertise.id == expertiseID)
         #expect(expertise.isStandard == false)
@@ -36,14 +37,15 @@ import CoreData // for NSManagedObjectContext
     }
 
     @Test("Check capitalization of incoming ID strings") func checkIdCaplitalization() throws {
-        let expertiseID = "a " + String.random(length: 8).capitalized
-        let expertise = Expertise.findCreateUpdateStandard(context: context, id: expertiseID.capitalized,
+        let expertiseID = "a " + String.random(length: 8).canonicalCase
+        let expertise = Expertise.findCreateUpdateStandard(context: context, id: expertiseID.canonicalCase,
                                                            names: [], usages: [])
-        #expect(expertise.id == expertiseID.capitalized)
+        #expect(expertise.id == expertiseID)
     }
 
     @Test("Avoid creating same expertise twice") func avoidDuplicateExpertises() {
-        let id = String.random(length: 10).capitalized
+        // TODO may need to remove test because it throws a fatal error in debug mode
+        let id = String.random(length: 10).canonicalCase
         let expertise1 = Expertise.findCreateUpdateStandard(context: context, id: id, names: [], usages: [])
         #expect(expertise1.isStandard == true)
         Expertise.save(context: context, errorText: "Error saving expertise \"\(id)\"")

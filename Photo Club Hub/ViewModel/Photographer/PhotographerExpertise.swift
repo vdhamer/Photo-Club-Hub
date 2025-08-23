@@ -148,7 +148,8 @@ extension PhotographerExpertise {
                                           && photographer_.familyName_ = %@
                                           """ // avoid localization
             fetchRequest.predicate = NSPredicate(format: predicateFormat,
-                                                 argumentArray: [expertiseID, person.0, person.1, person.2])
+                                                 argumentArray: [expertiseID.canonicalCase,
+                                                                 person.0, person.1, person.2])
 
             var photographerExpertises: [PhotographerExpertise]! = []
 
@@ -174,7 +175,8 @@ extension PhotographerExpertise {
         let photographerExpertiseCount: Int = context.performAndWait {
             let fetchRequest: NSFetchRequest<PhotographerExpertise> = PhotographerExpertise.fetchRequest()
             let predicateFormat: String = "expertise_.id_ = %@" // avoid localization
-            fetchRequest.predicate = NSPredicate(format: predicateFormat, argumentArray: [expertiseID])
+            fetchRequest.predicate = NSPredicate(format: predicateFormat,
+                                                 argumentArray: [expertiseID.canonicalCase])
 
             var photographerExpertises: [PhotographerExpertise]! = []
 

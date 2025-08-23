@@ -31,7 +31,7 @@ import CoreData // for NSManagedObjectContext
                                                                       localizedUsage: localizedUsage)
         LocalizedExpertise.save(context: context) // probably not needed, but sloppy not to commit this change
 
-        #expect(localizedExpertise.expertise.id == expertise.id)
+        #expect(localizedExpertise.expertise.id == expertise.id.canonicalCase)
         #expect(localizedExpertise.language.isoCodeAllCaps == language.isoCodeAllCaps)
         #expect(localizedExpertise.language.nameEN == "Dutch")
         #expect(localizedExpertise.name == localizedName)
