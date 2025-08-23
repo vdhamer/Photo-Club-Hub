@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37C9DB962E59CE8A0039F423 /* String+canonicalCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C9DB952E59CE8A0039F423 /* String+canonicalCase.swift */; };
 		D006BA7E2B115FB1002E555B /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D006BA7D2B115FB1002E555B /* LocationManager.swift */; };
 		D008D2AA28739167007A7BE2 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = D008D2A928739167007A7BE2 /* .gitignore */; };
 		D016DF992DF6D1850018B526 /* LocalizedExpertiseResultLists.swift in Sources */ = {isa = PBXBuildFile; fileRef = D016DF982DF6D1850018B526 /* LocalizedExpertiseResultLists.swift */; };
@@ -126,6 +127,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		37C9DB952E59CE8A0039F423 /* String+canonicalCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+canonicalCase.swift"; sourceTree = "<group>"; };
 		D006BA7D2B115FB1002E555B /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		D008D2A928739167007A7BE2 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		D00DC8F02BD5D85900B4A9A2 /* Photo_Club_Hub_2_6_1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_6_1.xcdatamodel; sourceTree = "<group>"; };
@@ -413,6 +415,7 @@
 				D06061EC28A05D4600A675A7 /* String+Paths.swift */,
 				D0362A862AC3A21200F87378 /* String+containsWordUsingNLP.swift */,
 				D02F88522C4C242C0043B25B /* String+Date.swift */,
+				37C9DB952E59CE8A0039F423 /* String+canonicalCase.swift */,
 			);
 			path = "String extensions";
 			sourceTree = "<group>";
@@ -999,6 +1002,7 @@
 				D0C8E3A22BB81B4A00348D97 /* ItemFilterStatsView.swift in Sources */,
 				D0AE1B7527889E8600E0100E /* OrganizationListView.swift in Sources */,
 				D0E694C927EF9B450054D634 /* LockAnimationView.swift in Sources */,
+				37C9DB962E59CE8A0039F423 /* String+canonicalCase.swift in Sources */,
 				D0416282295BBA7700ED073A /* CoreLocation+Equatable.swift in Sources */,
 				D032944A283F9D1D0044C70C /* Bundle+VersionBuild.swift in Sources */,
 				D0621E852AE2E085000FFADB /* MemberPortfolio+updating.swift in Sources */,

@@ -60,7 +60,7 @@ struct WhoIsWhoListView: View {
                 Text("WhosWho_Caption_4",
                      comment: "Shown in gray at the bottom of the Who's Who page (3/3).")
                 ForEach(Expertise.getAll(context: viewContext)
-                    .filter { !$0.id.capitalized.contains("Expertise") }  // Block "Too many experiences" entry
+                    .filter { !$0.id.contains("expertise") }  // Block "Too many experiences" entry
                     .sorted(by: sortExpertisesLocalized),
                         id: \.self) { expertise in
                     HStack {

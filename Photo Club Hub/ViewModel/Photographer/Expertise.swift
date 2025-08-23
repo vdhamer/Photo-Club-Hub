@@ -23,12 +23,14 @@ extension Expertise {
             if id_ != nil { // shouldn't be nil in the first place
                 return id_!
             } else {
-                ifDebugFatalError("CoreData id_ for Expertise is nil", file: #fileID, line: #line)
+                ifDebugFatalError("id_ for Expertise in CoreData is nil", file: #fileID, line: #line)
                 return "No id for Expertise"
             }
         }
         set {
-            id_ = newValue.capitalized // ensure CoreData always contains string with first letter capitalized
+            // ensure CoreData always contains string in it's canonical form
+            // (e.g. "Black & white" even if file provided "black & white" or "Black & White"
+            id_ = newValue.canonicalCase
         }
     }
 
@@ -77,7 +79,7 @@ extension Expertise {
             // cannot use Expertise() initializer because we must use supplied context
             let entity = NSEntityDescription.entity(forEntityName: "Expertise", in: context)!
             let expertise = Expertise(entity: entity, insertInto: context)
-            expertise.id = id // immediately set it to a non-nil value
+            expertise.id = id // immediately set it to a non-nil value. The setter saves a canonicalCase version.
             _ = expertise.update(context: context,
                                  newIsStandard: isStandard,
                                  name: names, // ignore whether update made changes
@@ -200,12 +202,13 @@ extension Expertise {
         let expertiseCount: Int = context.performAndWait {
             let fetchRequest: NSFetchRequest<Expertise> = Expertise.fetchRequest()
             let predicateFormat: String = "id_ = %@" // avoid localization
-            let predicate = NSPredicate(format: predicateFormat, argumentArray: [expertiseID])
+            let predicate = NSPredicate(format: predicateFormat, argumentArray: [expertiseID.canonicalCase])
             fetchRequest.predicate = predicate
             do {
                 return try context.fetch(fetchRequest).count
             } catch {
-                ifDebugFatalError("Failed to fetch Expertise \(expertiseID): \(error)", file: #fileID, line: #line)
+                ifDebugFatalError("Failed to fetch Expertise \(expertiseID.canonicalCase): \(error)",
+                                  file: #fileID, line: #line)
                 return 0
             }
         }
@@ -258,7 +261,7 @@ extension Expertise {
         (localizedExpertises_ as? Set<LocalizedExpertise>) ?? []
     }
 
-    // Priority system to choose the most appropriate LocalizedExpertise for a given Expertise.
+    // Priority system to choose the most appropriate localized version of a given Expertise.
     // The choice depends on available translations and the current language preferences set on the device.
     public var selectedLocalizedExpertise: LocalizedExpertiseResult {
         // don't use Locale.current.language.languageCode because this only returns languages supported by the app
@@ -271,7 +274,7 @@ extension Expertise {
             }
         }
 
-        // second choice: most people speak English, at least let's pretend that is the case ;-)
+        // second choice: most users can speak English, at least let's assume that is the case ;-)
         for localizedExpertise in localizedExpertises where localizedExpertise.language.isoCodeAllCaps == "EN" {
             return LocalizedExpertiseResult(localizedExpertise: localizedExpertise, id: self.id)
         }

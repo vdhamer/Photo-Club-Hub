@@ -202,14 +202,19 @@ extension LocalizedExpertise {
     static func count(context: NSManagedObjectContext, expertiseID: String, languageIsoCode: String) -> Int {
 
         let localizedExpertiseCount: Int = context.performAndWait {
+            let expertiseIDCanonical = expertiseID.canonicalCase
             let fetchRequest: NSFetchRequest<LocalizedExpertise> = LocalizedExpertise.fetchRequest()
             let predicateFormat: String = "expertise_.id_ = %@ && language_.isoCode_ = %@" // avoid localization
-            fetchRequest.predicate = NSPredicate(format: predicateFormat, argumentArray: [expertiseID, languageIsoCode])
+            fetchRequest.predicate = NSPredicate(format: predicateFormat,
+                                                 argumentArray: [expertiseIDCanonical, languageIsoCode])
 
             do {
                 return try context.fetch(fetchRequest).count
             } catch {
-                ifDebugFatalError("Failed to fetch LocalizedExpertise \(expertiseID) for \(languageIsoCode): \(error)",
+                ifDebugFatalError("""
+                                  Failed to fetch LocalizedExpertise \(expertiseIDCanonical) \
+                                  for \(languageIsoCode): \(error)
+                                  """,
                                   file: #fileID, line: #line)
                 // on non-Debug version, continue with empty `expertises` array
                 return 0
