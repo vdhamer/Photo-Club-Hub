@@ -73,7 +73,7 @@ public class Level0JsonReader {
                 ifDebugFatalError("JSON Expertise block is missing an idString field", file: #fileID, line: #line)
                 continue  // if idString field doesn't exist, skip the Expertise
             }
-            let idString = jsonExpertise["idString"].stringValue
+            let idString = jsonExpertise["idString"].stringValue.canonicalCase
 
             guard jsonExpertise["name"].exists() else {
                 ifDebugFatalError("JSON Expertise doesn't have any localized names", file: #fileID, line: #line)
