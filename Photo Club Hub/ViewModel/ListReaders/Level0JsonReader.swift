@@ -37,16 +37,20 @@ public class Level0JsonReader {
         // hand the data to SwiftyJSON to parse
         let jsonRoot = JSON(parseJSON: jsonData) // get entire JSON file
 
-        // parse Experises section of file
+        // MARK: - process Experises section of Level0 file
+
         let jsonExpertises: [JSON] = jsonRoot["expertises"].arrayValue
 
         Level0JsonReader.parseExpertises(bgContext: bgContext, jsonExpertises: jsonExpertises)
         print("\(jsonExpertises.count) Expertises found")
 
-        // parse Language section of file
+        // MARK: - process Languages section of Level0 file
+
         let jsonLanguages: [JSON] = jsonRoot["languages"].arrayValue
 
         Level0JsonReader.parseLanguages(bgContext: bgContext, jsonLanguages: jsonLanguages)
+
+        // MARK: - save Expertises and Languages
 
         do { // saving may not be necessary because every organization is saved separately
             if bgContext.hasChanges { // optimization recommended by Apple
