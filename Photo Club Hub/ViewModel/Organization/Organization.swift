@@ -264,7 +264,7 @@ extension Organization {
             modified = true }
 
         if let contactEmail = optionalFields.contactEmail, self.contactEmail != contactEmail {
-            self.contactEmail = contactEmail
+            self.contactEmail = contactEmail // TODO somehow contactEmail for IndividueelBO is "" rather than nil
             modified = true }
 
         if let fotobondNumber = optionalFields.fotobondNumber, self.fotobondNumber != fotobondNumber {
@@ -279,7 +279,7 @@ extension Organization {
             let isoCode: String? = localizedRemark["language"].stringValue.uppercased() // e.g. "NL", "DE" or "PDC"
             let localizedRemarkNewValue: String? = localizedRemark["value"].stringValue
 
-            if isoCode != nil && localizedRemarkNewValue != nil { // nil could happens if JSON file not schema compliant
+            if isoCode != nil && localizedRemarkNewValue != nil { // nil could occur if JSON file isn't schema compliant
                 let language = Language.findCreateUpdate(context: bgContext,
                                                          isoCode: isoCode!) // find or construct the remark's Language
                 // language updates doesn't set modified flag
