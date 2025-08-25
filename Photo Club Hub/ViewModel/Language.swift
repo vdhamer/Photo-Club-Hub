@@ -71,8 +71,6 @@ extension Language {
                                  isoCode: String,
                                  nameENOptional: String? = nil
                                 ) -> Language {
-        if isoCode != isoCode.uppercased() { ifDebugFatalError("Language code \(isoCode) is not uppercased") }
-
         let isoCode = isoCode.uppercased() // "en" -> "EN" in case we don't receive uppercase input
         let predicateFormat: String = "isoCode_ = %@" // avoid localization
         let predicate = NSPredicate(format: predicateFormat, argumentArray: [isoCode])
