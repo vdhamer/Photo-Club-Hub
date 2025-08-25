@@ -192,14 +192,17 @@ struct PreludeView: View {
                 HStack(alignment: .bottom) {
                     DebugPanel(size: size, offset: offset, location: location, hidden: !debugPanelVisible)
                     Spacer()
-                    Button {
-                        willMoveToNextScreen.wrappedValue = true
-                    } label: {
-                        Image(systemName: "arrowshape.turn.up.forward.circle")
-                            .font(.largeTitle)
-                            .foregroundColor(.black)
+                    Group {
+                        Button {
+                            willMoveToNextScreen.wrappedValue = true
+                        } label: {
+                            Image(systemName: "arrowshape.turn.up.forward.circle")
+                                .font(.largeTitle)
+                                .foregroundColor(.black)
+                        }
+                        .keyboardShortcut(.defaultAction) // return key
                     }
-                    .keyboardShortcut(.defaultAction) // return key
+                    .modifier(GlassButtonIfAvailable())
 
                     Button { // can't add multiple .keyboarShortcuts to same Button
                         willMoveToNextScreen.wrappedValue = true
@@ -234,9 +237,25 @@ struct OffsetVectorInCells {
     var x, y: Int
 }
 
-struct Prelude_Previews: PreviewProvider {
-    static var previews: some View {
-        PreludeView()
-            .previewInterfaceOrientation(.portrait)
+struct GlassButtonIfAvailable: ViewModifier {
+    func body(content: Content) -> some View {
+        if #available(iOS 26.0, *) {
+            content.buttonStyle(.glass)
+        } else {
+            content
+        }
     }
 }
+
+struct Prelude_Previews: PreviewProvider {
+      static var previews: some View {
+          Group {
+              PreludeView()
+                  .previewInterfaceOrientation(.portrait)
+              PreludeView()
+                  .previewInterfaceOrientation(.landscapeLeft)
+              PreludeView()
+                  .environment(\.colorScheme, .dark)
+          }
+      }
+  }

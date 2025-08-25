@@ -3,6 +3,9 @@
 Who's Who screen
 * Fixed: 2 minor localization errors in the translation.
 
+Prelude screen
+* Button complies to Liquid Glass style for devices running iOS 26.
+
 Code Maintenance
 * Fixed: club coordinates in Level2 files were incorrectly handled.
 * Fixed: and club optional fields in Level2 files were ignored.
