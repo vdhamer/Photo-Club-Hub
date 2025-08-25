@@ -32,7 +32,7 @@ import CoreData // for NSManagedObjectContext
         LocalizedExpertise.save(context: context) // probably not needed, but sloppy not to commit this change
 
         #expect(localizedExpertise.expertise.id == expertise.id.canonicalCase)
-        #expect(localizedExpertise.language.isoCodeAllCaps == language.isoCodeAllCaps)
+        #expect(localizedExpertise.language.isoCode == language.isoCode)
         #expect(localizedExpertise.language.nameEN == "Dutch")
         #expect(localizedExpertise.name == localizedName)
         #expect(localizedExpertise.usage == localizedUsage)
@@ -52,7 +52,7 @@ import CoreData // for NSManagedObjectContext
                                                                       localizedUsage: localizedUsage)
         LocalizedExpertise.save(context: context) // probably not needed, but sloppy not to commit this change
 
-        #expect(localizedExpertise.language.isoCodeAllCaps == "EN")
+        #expect(localizedExpertise.language.isoCode == "EN")
         #expect(localizedExpertise.language.nameEN == "English")
     }
 
@@ -96,7 +96,7 @@ import CoreData // for NSManagedObjectContext
         #expect(localizedExpertise1.usage == "overwritten")
         #expect(LocalizedExpertise.count(context: context,
                                          expertiseID: expertise.id,
-                                         languageIsoCode: language.isoCodeAllCaps) == 1)
+                                         languageIsoCode: language.isoCode) == 1)
     }
 
 }
