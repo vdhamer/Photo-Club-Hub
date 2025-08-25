@@ -3,10 +3,16 @@
 Who's Who screen
 * Fixed: 2 minor localization errors in the translation.
 
+Prelude screen
+* Button supports Liquid Glass style for devices running iOS 26.
+
+Setup screen
+* New debug switch in iOS Settings app (about CoreData merge conflicts).
+
 Code Maintenance
 * Fixed: club coordinates in Level2 files were incorrectly handled.
 * Fixed: and club optional fields in Level2 files were ignored.
-* Tested with Xcode 26 beta 6 (17A5305f), macOS 26 beta 7 (25A5346a), macOS 15.6.1, iOS 26 beta 7 (23A5326a)
+* Tested with Xcode 26 beta 6 (17A5305f), macOS 26 beta 8 (25A5349a), macOS 15.6.1, iOS 26 beta 8 (23A5330a)
 
 Data Maintenance
 * Forced a datareset at dataResetPending283b4649 (related to Street-Art).

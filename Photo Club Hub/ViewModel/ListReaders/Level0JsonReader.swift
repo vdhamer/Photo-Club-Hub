@@ -37,16 +37,20 @@ public class Level0JsonReader {
         // hand the data to SwiftyJSON to parse
         let jsonRoot = JSON(parseJSON: jsonData) // get entire JSON file
 
-        // parse Experises section of file
+        // MARK: - process Experises section of Level0 file
+
         let jsonExpertises: [JSON] = jsonRoot["expertises"].arrayValue
 
         Level0JsonReader.parseExpertises(bgContext: bgContext, jsonExpertises: jsonExpertises)
         print("\(jsonExpertises.count) Expertises found")
 
-        // parse Language section of file
+        // MARK: - process Languages section of Level0 file
+
         let jsonLanguages: [JSON] = jsonRoot["languages"].arrayValue
 
         Level0JsonReader.parseLanguages(bgContext: bgContext, jsonLanguages: jsonLanguages)
+
+        // MARK: - save Expertises and Languages
 
         do { // saving may not be necessary because every organization is saved separately
             if bgContext.hasChanges { // optimization recommended by Apple
@@ -69,7 +73,7 @@ public class Level0JsonReader {
                 ifDebugFatalError("JSON Expertise block is missing an idString field", file: #fileID, line: #line)
                 continue  // if idString field doesn't exist, skip the Expertise
             }
-            let idString = jsonExpertise["idString"].stringValue
+            let idString = jsonExpertise["idString"].stringValue.canonicalCase
 
             guard jsonExpertise["name"].exists() else {
                 ifDebugFatalError("JSON Expertise doesn't have any localized names", file: #fileID, line: #line)
@@ -111,7 +115,7 @@ public class Level0JsonReader {
             let language = Language.findCreateUpdate(context: bgContext,
                                                      isoCode: isoCode,
                                                      nameENOptional: languageNameEN)
-            print("Language <\(language.isoCodeAllCaps)> found")
+            print("Language <\(language.isoCode)> found")
         }
     }
 }

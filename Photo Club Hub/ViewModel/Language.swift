@@ -46,7 +46,7 @@ extension Language {
 
     // MARK: - getters and setters
 
-    fileprivate var isoCode: String {
+    var isoCode: String {
         get {
             let result = isoCode_?.uppercased() ?? "??"
             if result != isoCode_ {
@@ -58,13 +58,8 @@ extension Language {
         }
     }
 
-    var isoCodeAllCaps: String {
-        get { isoCode } // e.g. "NL"
-        set { isoCode_ = newValue.uppercased() }
-    }
-
     var nameEN: String {
-        get { return languageNameEN_?.capitalizingFirstLetter() ?? isoCodeAllCaps } // e.g. Dutch or NL
+        get { return languageNameEN_?.capitalizingFirstLetter() ?? isoCode } // e.g. Dutch or NL
         set { languageNameEN_ = newValue.capitalizingFirstLetter() }
     }
 
@@ -76,22 +71,21 @@ extension Language {
                                  isoCode: String,
                                  nameENOptional: String? = nil
                                 ) -> Language {
-
-        let isoCodeAllCaps: String = isoCode.uppercased() // "en" -> "EN"
+        let isoCode = isoCode.uppercased() // "en" -> "EN" in case we don't receive uppercase input
         let predicateFormat: String = "isoCode_ = %@" // avoid localization
-        let predicate = NSPredicate(format: predicateFormat, argumentArray: [isoCodeAllCaps])
+        let predicate = NSPredicate(format: predicateFormat, argumentArray: [isoCode])
         let fetchRequest: NSFetchRequest<Language> = Language.fetchRequest()
         fetchRequest.predicate = predicate
         var languages: [Language]! = []
         do {
             languages = try context.fetch(fetchRequest)
         } catch {
-            ifDebugFatalError("Failed to fetch Language with code \(isoCodeAllCaps)", file: #fileID, line: #line)
+            ifDebugFatalError("Failed to fetch Language with code \(isoCode)", file: #fileID, line: #line)
             // on non-Debug version, continue with empty `languages` array
         }
 
         if languages.count > 1 { // there is actually a Core Data constraint to prevent this
-            ifDebugPrint("Query returned multiple (\(languages.count)) Languages with code \(isoCodeAllCaps)")
+            ifDebugPrint("Query returned multiple (\(languages.count)) Languages with code \(isoCode)")
         }
 
         if let language = languages.first { // already exists, so update non-identifying attributes
@@ -106,12 +100,12 @@ extension Language {
             // cannot use Language() initializer because we must use supplied context
             let entity = NSEntityDescription.entity(forEntityName: "Language", in: context)!
             let language = Language(entity: entity, insertInto: context)
-            language.isoCodeAllCaps = isoCode // immediately set it to a non-nil value
+            language.isoCode = isoCode // immediately set it to a non-nil value
             _ = language.update(context: context, nameENOptional: nameENOptional)
             if Settings.extraCoreDataSaves {
                 save(context: context, language: language, create: true)
             }
-            print("Created new Language for code \(language.isoCodeAllCaps) named \(language.nameEN)")
+            print("Created new Language for code \(language.isoCode) named \(language.nameEN)")
             return language
         }
     }
@@ -134,7 +128,7 @@ extension Language {
             do {
                 try context.save() // update modified properties of a Language object
              } catch {
-                 ifDebugFatalError("Update failed for Language \(isoCodeAllCaps) aka \(self.nameEN)",
+                 ifDebugFatalError("Update failed for Language with code \(isoCode) aka \(self.nameEN)",
                                   file: #fileID, line: #line)
                 // in release mode, if save() fails, just continue
             }
@@ -149,9 +143,9 @@ extension Language {
         } catch {
             context.rollback()
             if create {
-                ifDebugFatalError("Could not save created Language \(language.isoCodeAllCaps)")
+                ifDebugFatalError("Could not save created Language \(language.isoCode)")
             } else {
-                ifDebugFatalError("Could not save updated property of Language \(language.isoCodeAllCaps)")
+                ifDebugFatalError("Could not save updated property of Language \(language.isoCode)")
             }
         }
     }

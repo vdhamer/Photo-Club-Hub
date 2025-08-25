@@ -37,26 +37,46 @@ import CoreData // for NSManagedObjectContext
     }
 
     @Test("Check capitalization of incoming ID strings") func checkIdCaplitalization() throws {
-        let expertiseID = "a " + String.random(length: 8).canonicalCase
+        let expertiseID = "a " + String.random(length: 8)
         let expertise = Expertise.findCreateUpdateStandard(context: context, id: expertiseID.canonicalCase,
                                                            names: [], usages: [])
-        #expect(expertise.id == expertiseID)
+        #expect(expertise.id == expertiseID.canonicalCase)
     }
 
-    @Test("Avoid creating same expertise twice") func avoidDuplicateExpertises() {
-        // TODO may need to remove test because it throws a fatal error in debug mode
-        let id = String.random(length: 10).canonicalCase
+    @Test("Standard expertise cannot be changed back to non-standard") func expertiseStandard2NonStandard() {
+        var id = String.random(length: 10) // findCreateUpdate() converts this to .canonicalCase
         let expertise1 = Expertise.findCreateUpdateStandard(context: context, id: id, names: [], usages: [])
         #expect(expertise1.isStandard == true)
+        #expect(id.canonicalCase == expertise1.id)
+        id = id.canonicalCase
         Expertise.save(context: context, errorText: "Error saving expertise \"\(id)\"")
-        #expect(Expertise.count(context: context, expertiseID: id) == 1)
+        #expect(Expertise.count(context: context, expertiseID: id.canonicalCase) == 1)
         Expertise.save(context: context, errorText: "Error saving expertise \"\(id)\"") // shouldn't create a new record
+        #expect(Expertise.count(context: context, expertiseID: id.canonicalCase) == 1)
 
         let expertise2 = Expertise.findCreateUpdateNonStandard(context: context, id: id, names: [], usages: [])
+        Expertise.save(context: context, errorText: "Error saving expertise \"\(id)\"") // shouldn't create a new record
+        #expect(expertise2.isStandard == true) // standard never reverts back to non-standard (latching)
+        #expect(expertise1.isStandard == expertise2.isStandard) // should be same, as this is a class
         #expect(Expertise.count(context: context, expertiseID: id) == 1)
-        #expect(expertise2.isStandard == false)
+    }
 
-        #expect(expertise1.isStandard == false) // should not create a new record
+    @Test("Non-standard expertise can be promoted to standard") func expertiseNonStandard2Standard() {
+        var id = String.random(length: 10) // findCreateUpdate() converts this to .canonicalCase
+        let expertise1 = Expertise.findCreateUpdateNonStandard(context: context, id: id, names: [], usages: [])
+        #expect(expertise1.isStandard == false)
+        #expect(id.canonicalCase == expertise1.id)
+        id = id.canonicalCase
+        Expertise.save(context: context, errorText: "Error saving expertise \"\(id)\"")
+        #expect(Expertise.count(context: context, expertiseID: id.canonicalCase) == 1)
+        Expertise.save(context: context, errorText: "Error saving expertise \"\(id)\"") // shouldn't create a new record
+        #expect(Expertise.count(context: context, expertiseID: id.canonicalCase) == 1)
+
+        let expertise2 = Expertise.findCreateUpdateStandard(context: context, id: id, names: [], usages: [])
+        Expertise.save(context: context, errorText: "Error saving expertise \"\(id)\"") // shouldn't create a new record
+        #expect(expertise2.isStandard == true) // should have promoted to standard
+        #expect(expertise1.isStandard == expertise2.isStandard) // should be same, as this is a class
+        #expect(Expertise.count(context: context, expertiseID: id) == 1)
     }
 
 }

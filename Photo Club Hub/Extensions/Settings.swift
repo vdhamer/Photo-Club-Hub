@@ -62,4 +62,11 @@ struct Settings {
         UserDefaults.standard.bool(forKey: "loadTestClubs") // if the key is missing, this returns false
     }
 
+    static var errorOnCoreDataMerge: Bool { // controlled by toggle in Settings
+        // Instructs the app to set CoreData NSManagedObjectContext.mergePolicy to NSMergePolicy.error
+        // This causes the app to stop when a uniqueness constraint violation or a merging issue in encountered.
+        // Setting this Bool to true only does something if the app is in Debug mode. So does nothing for end users.
+        UserDefaults.standard.bool(forKey: "errorOnCoreDataMerge") // if the key is missing, this returns false
+    }
+
 }
