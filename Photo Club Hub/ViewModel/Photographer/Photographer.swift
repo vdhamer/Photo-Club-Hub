@@ -160,8 +160,7 @@ extension Photographer {
         }
 
         var hasChanges: Bool = bgContext.hasChanges
-        let tempBoolean: Bool = true // TODO remove
-        if Settings.extraCoreDataSaves || tempBoolean {
+        if Settings.extraCoreDataSaves {
 			do {
                 if hasChanges {
                     try bgContext.save() // persist updated information about a photographer
