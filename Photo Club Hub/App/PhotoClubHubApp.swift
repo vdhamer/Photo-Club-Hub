@@ -70,49 +70,49 @@ extension PhotoClubHubApp {
 
         // MARK: - Level 2
 
-//        // load current/former members of Fotogroep De Gender
-//        let genderBackgroundContext = makeBgContext(ctxName: "Level 2 loader fgDeGender")
-//        _ = FotogroepDeGenderMembersProvider(bgContext: genderBackgroundContext,
-//                                             useOnlyInBundleFile: false)
-//
-//        // load current/former members of Fotogroep Waalre
-//        let waalreBackgroundContext = makeBgContext(ctxName: "Level 2 loader fgWaalre")
-//        _ = FotogroepWaalreMembersProvider(bgContext: waalreBackgroundContext,
-//                                           useOnlyInBundleFile: false)
-//
-//        // load current/former members of Fotoclub Bellus Imago
-//        let bellusBackgroundContext = makeBgContext(ctxName: "Level 2 loader fcBellusImago")
-//        _ = FotoclubBellusImagoMembersProvider(bgContext: bellusBackgroundContext,
-//                                               useOnlyInBundleFile: false)
-//
-//        // load current/former members of Fotogroep Oirschot
-//        let oirschotBackgroundContext = makeBgContext(ctxName: "Level 2 loader fgOirschot")
-//        _ = FotogroepOirschotMembersProvider(bgContext: oirschotBackgroundContext,
-//                                             useOnlyInBundleFile: false)
-//
-//        if Settings.loadTestClubs {
-//
-//            // load test member(s) of XampleMin. Club name starts with an X in order to be at end of list
-//            let xampleMinBackgroundContext = makeBgContext(ctxName: "Level 2 loader XampleMin")
-//            _ = XampleMinMembersProvider(bgContext: xampleMinBackgroundContext, useOnlyInBundleFile: false)
-//
-//            // load test member(s) of XampleMax. Club name starts with an X in order to be at end of list
-//            let xampleMaxBackgroundContext = makeBgContext(ctxName: "Level 2 loader XampleMax")
-//            _ = XampleMaxMembersProvider(bgContext: xampleMaxBackgroundContext, useOnlyInBundleFile: false)
-//
-//        } TODO uncomment
+        // load current/former members of Fotogroep De Gender
+        let genderBackgroundContext = makeBgContext(ctxName: "Level 2 loader fgDeGender")
+        _ = FotogroepDeGenderMembersProvider(bgContext: genderBackgroundContext,
+                                             useOnlyInBundleFile: false)
+
+        // load current/former members of Fotogroep Waalre
+        let waalreBackgroundContext = makeBgContext(ctxName: "Level 2 loader fgWaalre")
+        _ = FotogroepWaalreMembersProvider(bgContext: waalreBackgroundContext,
+                                           useOnlyInBundleFile: false)
+
+        // load current/former members of Fotoclub Bellus Imago
+        let bellusBackgroundContext = makeBgContext(ctxName: "Level 2 loader fcBellusImago")
+        _ = FotoclubBellusImagoMembersProvider(bgContext: bellusBackgroundContext,
+                                               useOnlyInBundleFile: false)
+
+        // load current/former members of Fotogroep Oirschot
+        let oirschotBackgroundContext = makeBgContext(ctxName: "Level 2 loader fgOirschot")
+        _ = FotogroepOirschotMembersProvider(bgContext: oirschotBackgroundContext,
+                                             useOnlyInBundleFile: false)
+
+        if Settings.loadTestClubs {
+
+            // load test member(s) of XampleMin. Club name starts with an X in order to be at end of list
+            let xampleMinBackgroundContext = makeBgContext(ctxName: "Level 2 loader XampleMin")
+            _ = XampleMinMembersProvider(bgContext: xampleMinBackgroundContext, useOnlyInBundleFile: false)
+
+            // load test member(s) of XampleMax. Club name starts with an X in order to be at end of list
+            let xampleMaxBackgroundContext = makeBgContext(ctxName: "Level 2 loader XampleMax")
+            _ = XampleMaxMembersProvider(bgContext: xampleMaxBackgroundContext, useOnlyInBundleFile: false)
+
+        }
 
         // load current/former members of container for Individual members of Fotobond (in region 16)
         let individueelBOBackgroundContext = makeBgContext(ctxName: "Level 2 loader IndividueelBO")
         _ = IndividueelBOMembersProvider(bgContext: individueelBOBackgroundContext, useOnlyInBundleFile: false)
 
-//        // load current/former members of Fotoclub Ericamera
-//        let ericameraBackgroundContext = makeBgContext(ctxName: "Level 2 loader fcEricamera")
-//        _ = FotoclubEricameraMembersProvider(bgContext: ericameraBackgroundContext, useOnlyInBundleFile: false)
-//
-//        // load current/former members of Fotoclub Den Dungen
-//        let dungenBackgroundContext = makeBgContext(ctxName: "Level 2 loader fcDenDungen")
-//        _ = FotoclubDenDungenMembersProvider(bgContext: dungenBackgroundContext, useOnlyInBundleFile: false) TODO unco
+        // load current/former members of Fotoclub Ericamera
+        let ericameraBackgroundContext = makeBgContext(ctxName: "Level 2 loader fcEricamera")
+        _ = FotoclubEricameraMembersProvider(bgContext: ericameraBackgroundContext, useOnlyInBundleFile: false)
+
+        // load current/former members of Fotoclub Den Dungen
+        let dungenBackgroundContext = makeBgContext(ctxName: "Level 2 loader fcDenDungen")
+        _ = FotoclubDenDungenMembersProvider(bgContext: dungenBackgroundContext, useOnlyInBundleFile: false)
 
     }
 
