@@ -269,13 +269,13 @@ extension Expertise {
         for lang in Locale.preferredLanguages {
             let langID = lang.split(separator: "-").first?.uppercased() ?? "EN"
             // now check if one of the user's preferences is available for this Remark
-            for localizedExpertise in localizedExpertises where localizedExpertise.language.isoCodeAllCaps == langID {
+            for localizedExpertise in localizedExpertises where localizedExpertise.language.isoCode == langID {
                 return LocalizedExpertiseResult(localizedExpertise: localizedExpertise, id: self.id)
             }
         }
 
         // second choice: most users can speak English, at least let's assume that is the case ;-)
-        for localizedExpertise in localizedExpertises where localizedExpertise.language.isoCodeAllCaps == "EN" {
+        for localizedExpertise in localizedExpertises where localizedExpertise.language.isoCode == "EN" {
             return LocalizedExpertiseResult(localizedExpertise: localizedExpertise, id: self.id)
         }
 

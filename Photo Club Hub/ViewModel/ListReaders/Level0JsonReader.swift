@@ -115,7 +115,7 @@ public class Level0JsonReader {
             let language = Language.findCreateUpdate(context: bgContext,
                                                      isoCode: isoCode,
                                                      nameENOptional: languageNameEN)
-            print("Language <\(language.isoCodeAllCaps)> found")
+            print("Language <\(language.isoCode)> found")
         }
     }
 }

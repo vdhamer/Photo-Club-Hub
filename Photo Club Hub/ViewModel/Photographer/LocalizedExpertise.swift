@@ -72,14 +72,14 @@ extension LocalizedExpertise {
             localizedExpertises = try context.fetch(fetchRequest)
         } catch {
             ifDebugFatalError("Failed to fetch LocalizedExpertise for \(expertise.id) " +
-                              "in language \(language.isoCodeAllCaps): \(error)",
+                              "in language \(language.isoCode): \(error)",
                               file: #fileID, line: #line) // on release version, continue with empty `expertises` array
         }
 
         // are there multiple translations of the expertise into the same language? This shouldn't be the case.
         if localizedExpertises.count > 1 { // there is actually a Core Data constraint to prevent this
             ifDebugFatalError("Query returned multiple (\(localizedExpertises.count)) translations " +
-                              "of Expertise \(expertise.id) into \(language.isoCodeAllCaps)",
+                              "of Expertise \(expertise.id) into \(language.isoCode)",
                               file: #fileID, line: #line)
             // in release mode, log that there are multiple clubs, but continue using the first one.
         }
@@ -90,12 +90,12 @@ extension LocalizedExpertise {
                                          localizedName: localizedName, localizedUsage: localizedUsage) {
                 print("""
                       Updated translation of expertise \"\(expertise.id)\" into \
-                      \(language.isoCodeAllCaps) as \(localizedName ?? "nil")
+                      \(language.isoCode) as \(localizedName ?? "nil")
                       """)
                 LocalizedExpertise.save(context: context, errorText:
                                         "Could not update LocalizedExpertise " +
                                         "for \"\(localizedExpertise.expertise.id)\" " +
-                                        "for language \(localizedExpertise.language.isoCodeAllCaps)",
+                                        "for language \(localizedExpertise.language.isoCode)",
                                         if: Settings.extraCoreDataSaves)
             }
             return localizedExpertise
@@ -112,7 +112,7 @@ extension LocalizedExpertise {
             LocalizedExpertise.save(context: context, errorText:
                                     """
                                     Could not create LocalizedExpertise for \"\(localizedExpertise.expertise.id)\" \
-                                    for language \(localizedExpertise.language.isoCodeAllCaps)
+                                    for language \(localizedExpertise.language.isoCode)
                                     """,
                                     if: Settings.extraCoreDataSaves)
             return localizedExpertise
@@ -144,7 +144,7 @@ extension LocalizedExpertise {
              } catch {
                  ifDebugFatalError("""
                                    Update failed for LocalizedExpertise \
-                                   (\(self.expertise.id) | \(self.language.isoCodeAllCaps))
+                                   (\(self.expertise.id) | \(self.language.isoCode))
                                    """,
                                   file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
                 // in release mode, if save() fails, just continue
