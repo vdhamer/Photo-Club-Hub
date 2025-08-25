@@ -46,6 +46,7 @@ extension Expertise {
                                             ) -> Expertise {
 
         // execute fetchRequest to get expertise object for id=id. Query could return multiple - but shouldn't.
+        let id = id.canonicalCase
         let fetchRequest: NSFetchRequest<Expertise> = Expertise.fetchRequest()
         let predicateFormat: String = "id_ = %@" // avoid localization
         fetchRequest.predicate = NSPredicate(format: predicateFormat, argumentArray: [id])
