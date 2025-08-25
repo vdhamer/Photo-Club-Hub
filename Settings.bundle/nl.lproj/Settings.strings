@@ -27,3 +27,6 @@
 
 /* (No Comment) */
 "Load test clubs" = "Testfotoclubs laden";
+
+/* (No Comment) */
+"CoreData merge issue terminates app" = "CoreData mergeconflict sluit de app af";
