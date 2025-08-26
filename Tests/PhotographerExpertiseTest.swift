@@ -40,7 +40,7 @@ import CoreData // for NSManagedObjectContext
 
     @Test("Attempt to create duplicate PhotographerExpertise") func duplicatePhotographerExpertise() {
 
-        let expertiseID = String.random(length: 10).capitalized // internally expertise.id is capitalized
+        let expertiseID = String.random(length: 10).canonicalCase // internally expertise.id is capitalized
         let photographerExpertise1 = PhotographerExpertise.findCreateUpdate(
             context: context,
             photographer: photographer,
