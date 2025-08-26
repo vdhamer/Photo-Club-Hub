@@ -192,16 +192,14 @@ struct PreludeView: View {
                 HStack(alignment: .bottom) {
                     DebugPanel(size: size, offset: offset, location: location, hidden: !debugPanelVisible)
                     Spacer()
-                    Group {
-                        Button {
-                            willMoveToNextScreen.wrappedValue = true
-                        } label: {
-                            Image(systemName: "arrowshape.turn.up.forward.circle")
-                                .font(.largeTitle)
-                                .foregroundColor(.black)
-                        }
-                        .keyboardShortcut(.defaultAction) // return key
+                    Button {
+                        willMoveToNextScreen.wrappedValue = true
+                    } label: {
+                        Image(systemName: "arrowshape.turn.up.forward.circle")
+                            .font(.largeTitle)
                     }
+                    .buttonStyle(.borderedProminent)
+                    .keyboardShortcut(.defaultAction) // return key
                     .modifier(GlassButtonIfAvailable())
 
                     Button { // can't add multiple .keyboarShortcuts to same Button
