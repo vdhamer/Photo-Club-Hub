@@ -41,7 +41,9 @@ final public class XampleMaxMembersProvider: Sendable {
                              isInTestBundle: false,
                              useOnlyInBundleFile: false)
         do {
-            try bgContext.save()
+            if bgContext.hasChanges {
+                try bgContext.save()
+            }
         } catch {
             ifDebugFatalError("Failed to save club \(idPlus.nickname)", file: #fileID, line: #line)
         }
