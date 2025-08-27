@@ -88,6 +88,23 @@ extension Organization {
         set { nickName_ = newValue }
     }
 
+    public var contactEmail: String? {
+        get { // https://softwareengineering.stackexchange.com/questions/32578/sql-empty-string-vs-null-value
+            if contactEmail_ == "" || contactEmail_ == nil {
+                return nil
+            } else {
+                return contactEmail_!
+            }
+        }
+        set {
+            if newValue == "" {
+                contactEmail_ = nil
+            } else {
+                contactEmail_ = newValue
+            }
+        }
+    }
+
 	public var town: String { // may be one word ("Rotterdam") or multiple words ("Den Bosch").
 		get { return town_ ?? "DefaultPhotoClubTown" }  // nil shouldn't occur, but it does?
 		set { town_ = newValue }
@@ -264,7 +281,7 @@ extension Organization {
             modified = true }
 
         if let contactEmail = optionalFields.contactEmail, self.contactEmail != contactEmail {
-            self.contactEmail = contactEmail // TODO somehow contactEmail for IndividueelBO is "" rather than nil
+            self.contactEmail = contactEmail
             modified = true }
 
         if let fotobondNumber = optionalFields.fotobondNumber, self.fotobondNumber != fotobondNumber {
