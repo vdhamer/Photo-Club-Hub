@@ -22,6 +22,7 @@ Data Maintenance
 * Forced a datareset at dataResetPending283b4649 (related to Street-Art).
 * Fixed a few lower-case Expertises in club IndividueelBO.
 * Fixed name of FG deGender -> fgDeGender (and same for fgOirschot)
+* Promoted "Industrial heritage" (NL: "industrieel erfgoed") to a standardized expertise tag.
 
 This build #4649 was made using Xcode ???? and is intended for release via the App Store.
 
