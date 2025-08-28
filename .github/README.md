@@ -737,7 +737,7 @@ Here is an example of the format of a `Level 2` list for a photo club. This exam
             "idPlus": {
                 "town": "Eindhoven",
                 "fullName": "Fotogroep de Gender",
-                "nickName": "FG deGender"
+                "nickName": "fgDeGender"
             },
             "coordinates": {
                 "latitude": 51.42398,
