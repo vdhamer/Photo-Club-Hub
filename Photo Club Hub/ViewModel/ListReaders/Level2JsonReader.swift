@@ -53,63 +53,20 @@ public class Level2JsonReader { // normally running on a background thread
         }
         let jsonClub: JSON = jsonRoot["club"]
 
-//        // MARK: - /club/idPlus loading
-//        guard jsonClub["idPlus"].exists() else {
-//            ifDebugFatalError("Cannot find `idPlus` keyword for club \(targetIdPlus.fullName)")
-//            return
-//        }
-//        let jsonIdPlus: JSON = jsonClub["idPlus"]
-//
-//        // MARK: - /club/idPlus/fullName
-//        guard jsonIdPlus["fullName"].exists() else {
-//            ifDebugFatalError("Cannot find `fullName` keyword in idPlus for club \(targetIdPlus.fullName)")
-//            return
-//        }
-//        // MARK: - /club/idPlus/town
-//        guard jsonIdPlus["town"].exists() else {
-//            ifDebugFatalError("Cannot find `town` keyword in idPlus for club \(targetIdPlus.fullName)")
-//            return
-//        }
-//        // MARK: - /club/idPlus/nickName
-//        guard jsonIdPlus["nickName"].exists() else {
-//            ifDebugFatalError("Cannot find `nickName` keyword in idPlus for club \(targetIdPlus.fullName)")
-//            return
-//        }
-//        // MARK: - /club/idPlus checking
-//        let idPlus = OrganizationIdPlus(fullName: jsonIdPlus["fullName"].stringValue,
-//                                        town: jsonIdPlus["town"].stringValue,
-//                                        nickname: jsonIdPlus["nickName"].stringValue)
-//        guard idPlus.fullName == targetIdPlus.fullName else { // does fine contain the right club?
-//            ifDebugFatalError("""
-//                              Warning: JSON file expecting to contain club \(targetIdPlus.fullName) \
-//                              contains club \(idPlus.fullName) instead.
-//                              But maybe there is a nicknames mismatch: \
-//                              found \(idPlus.nickname) and expected \(targetIdPlus.nickname).
-//                              """)
-//            return // in non-debug software, just don't load the file
-//        }
-
+        // MARK: - /club/idPlus
         guard let idPlus = checkIdPlus(jsonClub: jsonClub, targetIdPlus: targetIdPlus) else {
             return // in the Debug version checkIdPlus forces a fatal error, so we never reach this point
         }
 
-        // normally  the club already exists, but if it somehow doesn't we will just have to create it
+        // normally the club already exists, but if it somehow doesn't we will just have to create it
         let club: Organization = Organization.findCreateUpdate(context: bgContext,
                                                                organizationTypeEnum: OrganizationTypeEnum.club,
                                                                idPlus: idPlus)
 
         // MARK: - /club/coordinates
-        guard jsonClub["coordinates"].exists() else {
-            ifDebugFatalError("Cannot find `coordinates` keyword for club \(targetIdPlus.fullName)")
-            return
+        guard let coordinates = loadClubCoordinates(jsonClub: jsonClub, targetIdPlus: targetIdPlus) else {
+            return // in the Debug version loadClubCoordinates forces a fatal error, so we never reach this point
         }
-        guard jsonClub["coordinates"]["latitude"].exists() && jsonClub["coordinates"]["longitude"].exists() else {
-            ifDebugFatalError("`coordinates` keyword missing `latitude` or `longitude` for \(targetIdPlus.fullName)")
-            return
-        }
-        let coordinates: CLLocationCoordinate2D =
-            CLLocationCoordinate2D(latitude: jsonClub["coordinates"]["latitude"].doubleValue,
-                                   longitude: jsonClub["coordinates"]["longitude"].doubleValue)
         if club.coordinates != coordinates {
             club.coordinates = coordinates
         }
@@ -331,6 +288,25 @@ public class Level2JsonReader { // normally running on a background thread
         }
 
         return idPlus
+    }
+
+    fileprivate static func loadClubCoordinates(jsonClub: JSON, targetIdPlus: OrganizationIdPlus) ->
+        CLLocationCoordinate2D? {
+
+        guard jsonClub["coordinates"].exists() else {
+            ifDebugFatalError("Cannot find `coordinates` keyword for club \(targetIdPlus.fullName)")
+            return nil
+        }
+
+        guard jsonClub["coordinates"]["latitude"].exists() && jsonClub["coordinates"]["longitude"].exists() else {
+            ifDebugFatalError("`coordinates` keyword missing `latitude` or `longitude` for \(targetIdPlus.fullName)")
+            return nil
+        }
+
+        let coordinates: CLLocationCoordinate2D =
+            CLLocationCoordinate2D(latitude: jsonClub["coordinates"]["latitude"].doubleValue,
+                                   longitude: jsonClub["coordinates"]["longitude"].doubleValue)
+        return coordinates
     }
 
 }
