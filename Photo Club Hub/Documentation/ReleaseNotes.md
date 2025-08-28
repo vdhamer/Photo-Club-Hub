@@ -12,7 +12,7 @@ Setup screen
 Code Maintenance
 * Fixed: club coordinates in Level2 files were incorrectly handled.
 * Fixed: and club optional fields in Level2 files were ignored.
-* Tested with Xcode 26 beta 6 (17A5305f), macOS 26 beta 8 (25A5349a), macOS 15.6.1, iOS 26 beta 8 (23A5330a).
+* Tested with Xcode 26 beta 7 (17A5305k), macOS 26 beta 8 (25A5349a), macOS 15.6.1, iOS 26 beta 8 (23A5330a/23A5324a).
 * Made handling of expertise names fully case-insensitive to avoid duplicate records, and bad database content.
 * Organization.contactEmail now only uses nil when no data is available (it could return "" instead)
 * Fixed: Level2JsonReader now checks whether club is the right club using both fullName and town.
