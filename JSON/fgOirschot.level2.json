@@ -67,8 +67,8 @@
                 "nlSpecific": {
                     "fotobondNumber": 1607047
                 },
-                "expertises": [ "Architecture", "Industrial heritage" ]
-                
+                "expertises": [ "Architecture", "Industrial-heritage" ]
+
             }
         },
 
@@ -103,7 +103,7 @@
                 "nlSpecific": {
                     "fotobondNumber": 1607045
                 },
-                "expertises": [ "Architecture", "Industrial heritage" ]
+                "expertises": [ "Architecture", "Industrial-heritage" ]
             }
         },
 
@@ -141,7 +141,7 @@
                 "nlSpecific": {
                     "fotobondNumber": 1607030
                 },
-                "expertises": [ "Architecture", "Industrial heritage" ]
+                "expertises": [ "Architecture", "Industrial-heritage" ]
 
             }
         },
@@ -306,7 +306,7 @@
                 "nlSpecific": {
                      "fotobondNumber": 1607049
                 },
-                "expertises": [ "Street", "Industrial heritage" ]
+                "expertises": [ "Street", "Industrial-heritage" ]
             }
         },
 

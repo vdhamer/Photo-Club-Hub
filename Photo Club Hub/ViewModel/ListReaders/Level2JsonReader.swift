@@ -284,7 +284,7 @@ public class Level2JsonReader { // normally running on a background thread
         return URL(string: string) // returns nil if the string doesn’t represent a valid URL
     }
 
-    /// Validates and extracts an OrganizationIdPlus from the provided JSON, ensuring it matches the expected club (targetIdPlus).
+    /// Checks the completeness of the IdPlus part of a level2.json file and its value against the expected value..
     /// - Parameters:
     ///   - jsonClub: The JSON object representing the club data.
     ///   - targetIdPlus: The expected value for OrganizationIdPlus.

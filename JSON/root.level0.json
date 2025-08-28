@@ -128,6 +128,20 @@
         },
 
         {
+            "idString": "Industrial-Heritage",
+            "name": [
+                { "language": "EN", "localizedString": "Industrial heritage" },
+                { "language": "NL", "localizedString": "Industrieel erfgoed" }
+            ],
+            "optional": {
+                "usage":  [
+                    { "language": "EN", "localizedString": "Monuments from the industrial revolution (mills, machines, etc)." },
+                    { "language": "NL", "localizedString": "Monumenten van de industriele revolutie (fabrieken, machines, enz.)." }
+                ]
+            }
+        },
+
+        {
             "idString": "Landscape",
             "name": [
                 { "language": "EN", "localizedString": "Landscape" },
