@@ -53,40 +53,44 @@ public class Level2JsonReader { // normally running on a background thread
         }
         let jsonClub: JSON = jsonRoot["club"]
 
-        // MARK: - /club/idPlus loading
-        guard jsonClub["idPlus"].exists() else {
-            ifDebugFatalError("Cannot find `idPlus` keyword for club \(targetIdPlus.fullName)")
-            return
-        }
-        let jsonIdPlus: JSON = jsonClub["idPlus"]
+//        // MARK: - /club/idPlus loading
+//        guard jsonClub["idPlus"].exists() else {
+//            ifDebugFatalError("Cannot find `idPlus` keyword for club \(targetIdPlus.fullName)")
+//            return
+//        }
+//        let jsonIdPlus: JSON = jsonClub["idPlus"]
+//
+//        // MARK: - /club/idPlus/fullName
+//        guard jsonIdPlus["fullName"].exists() else {
+//            ifDebugFatalError("Cannot find `fullName` keyword in idPlus for club \(targetIdPlus.fullName)")
+//            return
+//        }
+//        // MARK: - /club/idPlus/town
+//        guard jsonIdPlus["town"].exists() else {
+//            ifDebugFatalError("Cannot find `town` keyword in idPlus for club \(targetIdPlus.fullName)")
+//            return
+//        }
+//        // MARK: - /club/idPlus/nickName
+//        guard jsonIdPlus["nickName"].exists() else {
+//            ifDebugFatalError("Cannot find `nickName` keyword in idPlus for club \(targetIdPlus.fullName)")
+//            return
+//        }
+//        // MARK: - /club/idPlus checking
+//        let idPlus = OrganizationIdPlus(fullName: jsonIdPlus["fullName"].stringValue,
+//                                        town: jsonIdPlus["town"].stringValue,
+//                                        nickname: jsonIdPlus["nickName"].stringValue)
+//        guard idPlus.fullName == targetIdPlus.fullName else { // does fine contain the right club?
+//            ifDebugFatalError("""
+//                              Warning: JSON file expecting to contain club \(targetIdPlus.fullName) \
+//                              contains club \(idPlus.fullName) instead.
+//                              But maybe there is a nicknames mismatch: \
+//                              found \(idPlus.nickname) and expected \(targetIdPlus.nickname).
+//                              """)
+//            return // in non-debug software, just don't load the file
+//        }
 
-        // MARK: - /club/idPlus/fullName
-        guard jsonIdPlus["fullName"].exists() else {
-            ifDebugFatalError("Cannot find `fullName` keyword in idPlus for club \(targetIdPlus.fullName)")
-            return
-        }
-        // MARK: - /club/idPlus/town
-        guard jsonIdPlus["town"].exists() else {
-            ifDebugFatalError("Cannot find `town` keyword in idPlus for club \(targetIdPlus.fullName)")
-            return
-        }
-        // MARK: - /club/idPlus/nickName
-        guard jsonIdPlus["nickName"].exists() else {
-            ifDebugFatalError("Cannot find `nickName` keyword in idPlus for club \(targetIdPlus.fullName)")
-            return
-        }
-        // MARK: - /club/idPlus checking
-        let idPlus = OrganizationIdPlus(fullName: jsonIdPlus["fullName"].stringValue, // idPlus found _inside_ JSON file
-                                        town: jsonIdPlus["town"].stringValue,
-                                        nickname: jsonIdPlus["nickName"].stringValue)
-        guard idPlus.fullName == targetIdPlus.fullName else { // does fine contain the right club?
-            ifDebugFatalError("""
-                              Warning: JSON file expecting to contain club \(targetIdPlus.fullName) \
-                              contains club \(idPlus.fullName) instead.
-                              But maybe there is a nicknames mismatch: \
-                              found \(idPlus.nickname) and expected \(targetIdPlus.nickname).
-                              """)
-            return // in non-debug software, just don't load the file
+        guard let idPlus = checkIdPlus(jsonClub: jsonClub, targetIdPlus: targetIdPlus) else {
+            return // in the Debug version checkIdPlus forces a fatal error, so we never reach this point
         }
 
         // normally  the club already exists, but if it somehow doesn't we will just have to create it
@@ -278,6 +282,55 @@ public class Level2JsonReader { // normally running on a background thread
         guard jsonOptionals[key].exists() else { return nil }
         guard let string = jsonOptionals[key].string else { return nil }
         return URL(string: string) // returns nil if the string doesn’t represent a valid URL
+    }
+
+    /// Validates and extracts an OrganizationIdPlus from the provided JSON, ensuring it matches the expected club (targetIdPlus).
+    /// - Parameters:
+    ///   - jsonClub: The JSON object representing the club data.
+    ///   - targetIdPlus: The expected value for OrganizationIdPlus.
+    /// - Returns: The validated OrganizationIdPlus if all fields exist and match, or nil otherwise.
+    fileprivate static func checkIdPlus(jsonClub: JSON, targetIdPlus: OrganizationIdPlus) -> OrganizationIdPlus? {
+
+        // MARK: - /club/idPlus loading
+        guard jsonClub["idPlus"].exists() else {
+            ifDebugFatalError("Cannot find `idPlus` keyword for club \(targetIdPlus.fullName)")
+            return nil
+        }
+        let jsonIdPlus: JSON = jsonClub["idPlus"]
+
+        // MARK: - /club/idPlus/fullName
+        guard jsonIdPlus["fullName"].exists() else {
+            ifDebugFatalError("Cannot find `fullName` keyword in idPlus for club \(targetIdPlus.fullName)")
+            return nil
+        }
+        // MARK: - /club/idPlus/town
+        guard jsonIdPlus["town"].exists() else {
+            ifDebugFatalError("Cannot find `town` keyword in idPlus for club \(targetIdPlus.fullName)")
+            return nil
+        }
+        // MARK: - /club/idPlus/nickName
+        guard jsonIdPlus["nickName"].exists() else {
+            ifDebugFatalError("Cannot find `nickName` keyword in idPlus for club \(targetIdPlus.fullName)")
+            return nil
+        }
+        // MARK: - /club/idPlus check if this is the club we were expecting
+        let idPlus = OrganizationIdPlus(fullName: jsonIdPlus["fullName"].stringValue, // idPlus found _inside_ JSON file
+                                        town: jsonIdPlus["town"].stringValue,
+                                        nickname: jsonIdPlus["nickName"].stringValue)
+        guard idPlus.fullName == targetIdPlus.fullName &&
+              idPlus.town == targetIdPlus.town &&
+              idPlus.nickname == targetIdPlus.nickname else { // does file contain the expected club?
+            ifDebugFatalError("""
+                              Warning: JSON file expecting to contain club \
+                              \(targetIdPlus.fullName) (\(targetIdPlus.town)) \
+                              contains club \(idPlus.fullName) (\(idPlus.town)) instead.
+                              But maybe there is a nickname mismatch: \
+                              app found \(idPlus.nickname) and was expecting \(targetIdPlus.nickname).
+                              """)
+            return nil // in non-debug software, just skip loading this Level 2 file
+        }
+
+        return idPlus
     }
 
 }

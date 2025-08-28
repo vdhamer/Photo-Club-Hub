@@ -15,6 +15,8 @@ Code Maintenance
 * Tested with Xcode 26 beta 6 (17A5305f), macOS 26 beta 8 (25A5349a), macOS 15.6.1, iOS 26 beta 8 (23A5330a).
 * Made handling of expertise names fully case-insensitive to avoid duplicate records, and bad database content.
 * Organization.contactEmail now only uses nil when no data is available (it could return "" instead)
+* Fixed: Level2JsonReader now checks whether club is the right club using both fullName and town.
+* Reduced complexity/length of readRootLevel2Json(NSManagedObjectContext:String:FileSelector)
 
 Data Maintenance
 * Forced a datareset at dataResetPending283b4649 (related to Street-Art).
