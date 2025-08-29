@@ -1,10 +1,10 @@
-### 2.8.3 (GitHub commit ???????) ??-08-25
+### 2.8.3 (GitHub commit ???????) 29-08-25
 
 Who's Who screen
-* Fixed: 2 minor localization errors in a translation.
+* Fixed: 2 minor translation errors.
 
 Prelude screen
-* Button uses Liquid Glass style if device is running iOS 26.
+* Button prepared for Liquid Glass style (on iOS 26). Not fully enabled yet (needs Xccode 26).
 
 Setup screen
 * New debug toggle in iOS Settings app (about CoreData merge conflicts).
@@ -17,15 +17,15 @@ Code Maintenance
 * Organization.contactEmail now only uses nil when no data is available (it could return "" instead)
 * Fixed: Level2JsonReader now checks whether club is the right club using both fullName and town.
 * Reduced complexity/length of readRootLevel2Json(NSManagedObjectContext:String:FileSelector)
-* Fixed testing problem due to use of randomly town name. Test fails require moving data files to test module.
+* Fixed: testing problem due to use of random town name. Test still require moving data files into test module.
 
 Data Maintenance
 * Forced a datareset at dataResetPending283b4649 (related to Street-Art).
 * Fixed a few lower-case Expertises in club IndividueelBO.
-* Fixed name of FG deGender -> fgDeGender (and same for fgOirschot)
-* Promoted "Industrial heritage" (NL: "industrieel erfgoed") to a standardized expertise tag.
+* Fixed nickname of FG deGender -> fgDeGender and FG Oirschot -> fgOirschot
+* Approved "Industrial heritage" (NL: "industrieel erfgoed") expertise tag.
 
-This build #4649 was made using Xcode ???? and is intended for release via the App Store.
+This build #4649 was made using Xcode 16.4 and is suitable for release to the App Store.
 
 ---------------------------------------------------------------------------
 
