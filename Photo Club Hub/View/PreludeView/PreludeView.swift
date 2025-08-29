@@ -198,7 +198,6 @@ struct PreludeView: View {
                         Image(systemName: "arrowshape.turn.up.forward.circle")
                             .font(.largeTitle)
                     }
-                    .buttonStyle(.borderedProminent)
                     .keyboardShortcut(.defaultAction) // return key
                     .modifier(GlassButtonIfAvailable())
 
@@ -238,7 +237,8 @@ struct OffsetVectorInCells {
 struct GlassButtonIfAvailable: ViewModifier {
     func body(content: Content) -> some View {
         if #available(iOS 26.0, *) {
-            content.buttonStyle(.glass)
+//            content.buttonStyle(.glassProminent) // TODO remove when Xcode 26 allowed in app store
+            content.buttonStyle(.borderedProminent)
         } else {
             content
         }
