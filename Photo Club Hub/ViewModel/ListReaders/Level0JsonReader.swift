@@ -17,19 +17,24 @@ public class Level0JsonReader {
                 isInTestBundle: Bool,
                 useOnlyInBundleFile: Bool = false // true can be used to avoid publishing a test file to GitHub
                ) {
-        _ = FetchAndProcessFile(bgContext: bgContext,
-                                fileSelector: FileSelector(fileName: fileName, isInTestBundle: isInTestBundle),
-                                fileType: "json", fileSubType: "level0", // "root.level0.json"
-                                useOnlyInBundleFile: useOnlyInBundleFile,
-                                fileContentProcessor: Level0JsonReader.readRootLevel0Json(bgContext:
-                                                                                          jsonData:
-                                                                                          fileSelector:))
+        _ = FetchAndProcessFile(
+            bgContext: bgContext,
+            fileSelector: FileSelector(fileName: fileName, isInTestBundle: isInTestBundle),
+            fileType: "json", fileSubType: "level0", // "root.level0.json"
+            useOnlyInBundleFile: useOnlyInBundleFile,
+            isBeingTested: isInTestBundle,
+            fileContentProcessor: Level0JsonReader.readRootLevel0Json(bgContext:
+                                                                      jsonData:
+                                                                      fileSelector:
+                                                                      isBeingTested:)
+        )
     }
 
     // Marked as @Sendable to satisfy concurrency safety requirements.
     @Sendable static fileprivate func readRootLevel0Json(bgContext: NSManagedObjectContext,
                                                          jsonData: String,
-                                                         fileSelector: FileSelector) {
+                                                         fileSelector: FileSelector,
+                                                         isBeingTested: Bool = false) {
 
         let fileName: String = fileSelector.fileName
         ifDebugPrint("\nStarting background read of \(fileName).level0.json to get standard Expertises and Languages.")

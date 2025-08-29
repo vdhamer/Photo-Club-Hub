@@ -27,15 +27,18 @@ public class Level2JsonReader { // normally running on a background thread
                                 fileType: "json",
                                 fileSubType: "level2", // "fgDeGender.level2.json"
                                 useOnlyInBundleFile: useOnlyInBundleFile,
+                                isBeingTested: isInTestBundle,
                                 fileContentProcessor: Level2JsonReader.readRootLevel2Json(bgContext:
                                                                                           jsonData:
-                                                                                          fileSelector:)
+                                                                                          fileSelector:
+                                                                                          isBeingTested:)
                                )
     }
 
     @Sendable static fileprivate func readRootLevel2Json(bgContext: NSManagedObjectContext,
                                                          jsonData: String,
-                                                         fileSelector: FileSelector) {
+                                                         fileSelector: FileSelector,
+                                                         isBeingTested: Bool = false) {
 
         guard fileSelector.organizationIdPlus != nil else { // need expected id of a club
             fatalError("Missing `targetIdorganizationIdPlus` in readRootLevel2Json()")
@@ -54,7 +57,9 @@ public class Level2JsonReader { // normally running on a background thread
         let jsonClub: JSON = jsonRoot["club"]
 
         // MARK: - /club/idPlus
-        guard let idPlus = checkIdPlus(jsonClub: jsonClub, targetIdPlus: targetIdPlus) else {
+        guard let idPlus = checkIdPlus(jsonClub: jsonClub,
+                                       targetIdPlus: targetIdPlus,
+                                       isBeingTested: isBeingTested) else {
             return // in the Debug version checkIdPlus forces a fatal error, so we never reach this point
         }
 
@@ -245,8 +250,11 @@ public class Level2JsonReader { // normally running on a background thread
     /// - Parameters:
     ///   - jsonClub: The JSON object representing the club data.
     ///   - targetIdPlus: The expected value for OrganizationIdPlus.
+    ///   - isBeingTested: if true, disable check on town.
     /// - Returns: The validated OrganizationIdPlus if all fields exist and match, or nil otherwise.
-    fileprivate static func checkIdPlus(jsonClub: JSON, targetIdPlus: OrganizationIdPlus) -> OrganizationIdPlus? {
+    fileprivate static func checkIdPlus(jsonClub: JSON,
+                                        targetIdPlus: OrganizationIdPlus,
+                                        isBeingTested: Bool) -> OrganizationIdPlus? {
 
         // MARK: - /club/idPlus loading
         guard jsonClub["idPlus"].exists() else {
@@ -275,14 +283,19 @@ public class Level2JsonReader { // normally running on a background thread
                                         town: jsonIdPlus["town"].stringValue,
                                         nickname: jsonIdPlus["nickName"].stringValue)
         guard idPlus.fullName == targetIdPlus.fullName &&
-              idPlus.town == targetIdPlus.town &&
-              idPlus.nickname == targetIdPlus.nickname else { // does file contain the expected club?
+              idPlus.nickname == targetIdPlus.nickname else {// does file contain the expected club?
             ifDebugFatalError("""
                               Warning: JSON file expecting to contain club \
-                              \(targetIdPlus.fullName) (\(targetIdPlus.town)) \
-                              contains club \(idPlus.fullName) (\(idPlus.town)) instead.
-                              But maybe there is a nickname mismatch: \
-                              app found \(idPlus.nickname) and was expecting \(targetIdPlus.nickname).
+                              \(targetIdPlus.fullName) (\(targetIdPlus.nickname)) \
+                              contains club \(idPlus.fullName) (\(idPlus.nickname)) instead.
+                              """)
+            return nil // in non-debug software, just skip loading this Level 2 file
+        }
+
+        guard idPlus.town == targetIdPlus.town || isBeingTested else { // expected town?
+            ifDebugFatalError("""
+                              Warning: there is a mismatch in Town: \
+                              the in-file app town is \(idPlus.town) but \(targetIdPlus.town) was expecting.
                               """)
             return nil // in non-debug software, just skip loading this Level 2 file
         }

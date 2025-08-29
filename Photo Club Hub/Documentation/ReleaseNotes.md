@@ -17,6 +17,7 @@ Code Maintenance
 * Organization.contactEmail now only uses nil when no data is available (it could return "" instead)
 * Fixed: Level2JsonReader now checks whether club is the right club using both fullName and town.
 * Reduced complexity/length of readRootLevel2Json(NSManagedObjectContext:String:FileSelector)
+* Fixed testing problem due to use of randomly town name. Test fails require moving data files to test module.
 
 Data Maintenance
 * Forced a datareset at dataResetPending283b4649 (related to Street-Art).

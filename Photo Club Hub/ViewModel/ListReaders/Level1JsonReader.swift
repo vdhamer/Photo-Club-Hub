@@ -24,14 +24,17 @@ public class Level1JsonReader {
                                 fileSelector: FileSelector(fileName: fileName, isInTestBundle: isInTestBundle),
                                 fileType: "json", fileSubType: "level1", // "root.level1.json"
                                 useOnlyInBundleFile: useOnlyInBundleFile,
+                                isBeingTested: isInTestBundle,
                                 fileContentProcessor: Level1JsonReader.readRootLevel1Json(bgContext:
                                                                                           jsonData:
-                                                                                          fileSelector:))
+                                                                                          fileSelector:
+                                                                                          isBeingTested:))
     }
 
     @Sendable static fileprivate func readRootLevel1Json(bgContext: NSManagedObjectContext,
                                                          jsonData: String,
-                                                         fileSelector: FileSelector) {
+                                                         fileSelector: FileSelector,
+                                                         isBeingTested: Bool = false) {
 
         let fileName = fileSelector.fileName
         ifDebugPrint("\nWill read (\(fileName)).level1.json with a list of organizations in the background.")
