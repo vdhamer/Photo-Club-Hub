@@ -1,4 +1,4 @@
-### 2.8.3 (GitHub commit ???????) 29-08-25
+### 2.8.3 (GitHub commit c45aaea) 29-08-25
 
 Who's Who screen
 * Fixed: 2 minor translation errors.
