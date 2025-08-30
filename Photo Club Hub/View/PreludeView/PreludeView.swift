@@ -237,8 +237,7 @@ struct OffsetVectorInCells {
 struct GlassButtonIfAvailable: ViewModifier {
     func body(content: Content) -> some View {
         if #available(iOS 26.0, *) {
-//            content.buttonStyle(.glassProminent) // TODO remove when Xcode 26 allowed in app store
-            content.buttonStyle(.borderedProminent)
+            content.buttonStyle(.glassProminent)
         } else {
             content
         }
