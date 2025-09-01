@@ -1216,7 +1216,7 @@
             "idPlus": {
                 "town": "Oss",
                 "fullName": "Fotoclub Oss",
-                "nickName": "FOCOSS"
+                "nickName": "fcFOCOSS"
             },
             "coordinates": {
                 "latitude": 51.76717,
@@ -1224,7 +1224,7 @@
             },
             "optional": {
                 "website": "https://www.focoss.nl",
-                "level2URL": "https://www.example.com/FOCOSS.level2.json",
+                "level2URL": "https://www.example.com/fcFOCOSS.level2.json",
                 "remark": [
                     {
                         "language": "EN",
