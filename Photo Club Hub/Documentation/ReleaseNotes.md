@@ -1,3 +1,15 @@
+### 2.8.4 (GitHub commit ???????) ??-09-25
+
+Prelude screen
+* Button prepared for Liquid Glass style (on iOS 26).
+
+Data Maintenance
+* Updated fgDeGender.level2.json file (in time for release of 2.8.3)
+
+This build #4650 was made using Xcode 26.0 and is suitable for release to the App Store.
+
+---------------------------------------------------------------------------
+
 ### 2.8.3 (GitHub commit c45aaea) 29-08-25
 
 Who's Who screen
