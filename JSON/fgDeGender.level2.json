@@ -570,22 +570,6 @@
 
         {
             "name": {
-                "givenName": "Pieter",
-                "infixName": "de",
-                "familyName": "Jong"
-            },
-            "optional": {
-                "website": "https://lockdown2020.myportfolio.com/about-pieter-de-jong",
-                "level3URL": "http://www.vdhamer.com/fgDeGender/Pieter_de_Jong/",
-                "status": {
-                    "isProspectiveMember": true
-                },
-                "expertises": [ "Street", "Travel" ]
-            }
-        },
-
-        {
-            "name": {
                 "givenName": "Regina",
                 "infixName": "",
                 "familyName": "Bakker"
