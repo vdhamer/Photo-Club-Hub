@@ -3,8 +3,8 @@
 Prelude screen
 * Button prepared for Liquid Glass style (on iOS 26).
 
-Data Maintenance
-* Updated fgDeGender.level2.json file (in time for release of 2.8.3)
+Code Maintenance
+* Tested with macOS 26 beta 9 (25A5351b), iOS 26 beta 8 (23A5336a).
 
 This build #4650 was made using Xcode 26.0 and is suitable for release to the App Store.
 
@@ -36,6 +36,7 @@ Data Maintenance
 * Fixed a few lower-case Expertises in club IndividueelBO.
 * Fixed nickname of FG deGender -> fgDeGender and FG Oirschot -> fgOirschot
 * Approved "Industrial heritage" (NL: "industrieel erfgoed") expertise tag.
+* Updated fgDeGender.level2.json file (in time for release of 2.8.3)
 
 This build #4649 was made using Xcode 16.4 and is suitable for release to the App Store.
 
