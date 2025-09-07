@@ -216,12 +216,15 @@ extension Organization {
 		if let organization = organizations.first { // already exists, so make sure non-ID attributes are up to date
             print("\(organization.fullNameTown): Will try to update info for organization \(organization.fullName)")
             if organization.update(bgContext: context,
-                                   organizationTypeEnum: organizationTypeEnum, nickName: idPlus.nickname,
+                                   organizationTypeEnum: organizationTypeEnum,
+                                   nickName: idPlus.nickname,
                                    coordinates: coordinates,
                                    removeOrganization: removeOrganization,
                                    optionalFields: optionalFields,
                                    pinned: pinned) {
-                print("\(organization.fullNameTown): Updated info for organization \(organization.fullName)")
+                print("""
+                      \(organization.fullNameTown): Successfully updated existing organization \(organization.fullName)
+                      """)
             }
 			return organization
 		} else { // have to create PhotoClub object because it doesn't exist yet
