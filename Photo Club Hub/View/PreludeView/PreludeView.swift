@@ -192,14 +192,26 @@ struct PreludeView: View {
                 HStack(alignment: .bottom) {
                     DebugPanel(size: size, offset: offset, location: location, hidden: !debugPanelVisible)
                     Spacer()
-                    Button {
-                        willMoveToNextScreen.wrappedValue = true
-                    } label: {
+                    if #available(iOS 26.0, *) {
                         Image(systemName: "arrowshape.turn.up.forward.circle")
-                            .font(.largeTitle)
+                            .foregroundStyle(.white)
+                            .font(.system(size: 36))
+                            .frame(width: 65, height: 65)
+                            .glassEffect(.regular.interactive().tint(.blue))
+                            .onTapGesture {
+                                willMoveToNextScreen.wrappedValue = true
+                            }
+                            .keyboardShortcut(.defaultAction) // return key
+                    } else {
+                        Button {
+                            willMoveToNextScreen.wrappedValue = true
+                        } label: {
+                            Image(systemName: "arrowshape.turn.up.forward.circle")
+                                .font(.largeTitle)
+                        }
+                        .keyboardShortcut(.defaultAction) // return key
+                        .buttonStyle(.bordered)
                     }
-                    .keyboardShortcut(.defaultAction) // return key
-                    .modifier(GlassButtonIfAvailable())
 
                     Button { // can't add multiple .keyboarShortcuts to same Button
                         willMoveToNextScreen.wrappedValue = true
@@ -232,16 +244,6 @@ struct PreludeView: View {
 struct OffsetVectorInCells {
     // swiftlint:disable:next identifier_name
     var x, y: Int
-}
-
-struct GlassButtonIfAvailable: ViewModifier {
-    func body(content: Content) -> some View {
-        if #available(iOS 26.0, *) {
-            content.buttonStyle(.glassProminent)
-        } else {
-            content
-        }
-    }
 }
 
 struct Prelude_Previews: PreviewProvider {
