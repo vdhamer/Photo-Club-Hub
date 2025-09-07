@@ -35,13 +35,24 @@ struct PhotoClubHubApp: App {
 
     var body: some Scene {
         WindowGroup {
-            PreludeView()
-                .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext) // main queue!
-                .onAppear {
-                    if !Settings.manualDataLoading {
-                        PhotoClubHubApp.loadClubsAndMembers()
+            // Here we switch between the pre-Liquid Glass view versions and post-Liquid Glass view versions
+            if #unavailable(iOS 26.0) { // iOS 17.6 ...  (mandated by app min requirement) or 18
+                PreludeView()
+                    .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext)
+                    .onAppear {
+                        if !Settings.manualDataLoading {
+                            PhotoClubHubApp.loadClubsAndMembers()
+                        }
                     }
-                }
+            } else {
+                PreludeView()
+                    .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext)
+                    .onAppear {
+                        if !Settings.manualDataLoading {
+                            PhotoClubHubApp.loadClubsAndMembers()
+                        }
+                    }
+            }
         }
         .onChange(of: scenePhase) { // pre-iOS 17 there was 1 param. Since iOS 17 it is 0 or 2.
             PersistenceController.shared.save() // persist data when app moves to background (may not be needed)
