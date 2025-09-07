@@ -141,7 +141,7 @@ struct PreferencesView: View {
 
 }
 
-struct PreferencesView_Previews: PreviewProvider { // This preview works on iOS 18 / Xcode 16
+struct PreferencesView_Previews: PreviewProvider {
     @State static fileprivate var title = "PreferencesView Preview"
     @State static var preferences = PreferencesStruct.defaultValue
 
