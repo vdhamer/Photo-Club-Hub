@@ -4,7 +4,7 @@ Prelude screen
 * Button prepared for Liquid Glass style (on iOS 26).
 
 Code Maintenance
-* Tested with macOS 26 beta 9 (25A5351b), iOS 26 beta 8 (23A5336a), SwiftLint 0.60.
+* Tested with macOS 26 beta 9 (25A5351b), iOS 26 beta 8 (23A5336a), SwiftLint 0.61.
 * TODO: sync in the code updates from Photo Club Hub HTML.
 * TODO: prepare for more Liquid Glass user interface changes.
 
