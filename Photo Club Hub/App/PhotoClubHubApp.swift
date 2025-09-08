@@ -37,7 +37,7 @@ struct PhotoClubHubApp: App {
         WindowGroup {
             // Here we switch between the pre-Liquid Glass view versions and post-Liquid Glass view versions
             if #unavailable(iOS 26.0) { // iOS 17.6 ...  (mandated by app min requirement) or 18
-                PreludeView()
+                PreludeView1718()
                     .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext)
                     .onAppear {
                         if !Settings.manualDataLoading {
@@ -45,7 +45,7 @@ struct PhotoClubHubApp: App {
                         }
                     }
             } else {
-                PreludeView()
+                PreludeView2626()
                     .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext)
                     .onAppear {
                         if !Settings.manualDataLoading {
