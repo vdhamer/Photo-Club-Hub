@@ -5,7 +5,7 @@ Prelude screen
 
 Code Maintenance
 * Tested with macOS 26 beta 9 (25A5351b), iOS 26 beta 8 (23A5336a), SwiftLint 0.61.
-* TODO: prepare for more Liquid Glass user interface changes. Issue #606
+* Prepare user interface files for more Liquid Glass user interface changes. Issue #606
 * TODO: sync in the code updates from Photo Club Hub HTML.
 
 This build #4650 was made using Xcode 26.0 and is suitable for release to the App Store.
