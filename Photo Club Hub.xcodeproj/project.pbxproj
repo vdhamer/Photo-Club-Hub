@@ -352,6 +352,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		37E134BC2E6F7A7100C61714 /* OldVersions */ = {
+			isa = PBXGroup;
+			children = (
+				D0831A1D277F72270049AB84 /* MemberPortfolioListView1718.swift */,
+			);
+			path = OldVersions;
+			sourceTree = "<group>";
+		};
+		37E134BD2E6F7AAB00C61714 /* OldVersions */ = {
+			isa = PBXGroup;
+			children = (
+				D0831A1B277F72270049AB84 /* FilteredOrganizationView1718.swift */,
+				37E134B12E6F693E00C61714 /* OrganizationListView1718.swift */,
+			);
+			path = OldVersions;
+			sourceTree = "<group>";
+		};
+		37E134BE2E6F7AC300C61714 /* OldVersions */ = {
+			isa = PBXGroup;
+			children = (
+				37E134B42E6F709500C61714 /* PreferencesView1718.swift */,
+			);
+			path = OldVersions;
+			sourceTree = "<group>";
+		};
+		37E134BF2E6F7AD600C61714 /* OldVersions */ = {
+			isa = PBXGroup;
+			children = (
+				D0C6E95429577921001E5CE9 /* DebugPanel1718.swift */,
+				D0E2235327DE9139002A8600 /* PreludeView1718.swift */,
+			);
+			path = OldVersions;
+			sourceTree = "<group>";
+		};
+		37E134C02E6F7AE700C61714 /* OldVersions */ = {
+			isa = PBXGroup;
+			children = (
+				D05E451D27EF2A2C00D31327 /* ReadmeView1718.swift */,
+				D09816E92D484985009D22FE /* ReadmeSection1718.swift */,
+				D09816EB2D485375009D22FE /* SectionHeader1718.swift */,
+			);
+			path = OldVersions;
+			sourceTree = "<group>";
+		};
 		D029C4D02C54096200ABA977 /* Organization */ = {
 			isa = PBXGroup;
 			children = (
@@ -383,7 +427,7 @@
 		D05E451B27EF286B00D31327 /* PreferencesView */ = {
 			isa = PBXGroup;
 			children = (
-				37E134B42E6F709500C61714 /* PreferencesView1718.swift */,
+				37E134BE2E6F7AC300C61714 /* OldVersions */,
 				D0831A19277F72270049AB84 /* PreferencesView2626.swift */,
 				D0DE02762789D1B30062738C /* RoleIconView.swift */,
 			);
@@ -393,12 +437,10 @@
 		D05E451C27EF297100D31327 /* ReadmeView */ = {
 			isa = PBXGroup;
 			children = (
+				37E134C02E6F7AE700C61714 /* OldVersions */,
 				37E134B62E6F75ED00C61714 /* ReadmeSection2626.swift */,
 				37E134B72E6F75ED00C61714 /* ReadmeView2626.swift */,
 				37E134B82E6F75ED00C61714 /* SectionHeader2626.swift */,
-				D05E451D27EF2A2C00D31327 /* ReadmeView1718.swift */,
-				D09816E92D484985009D22FE /* ReadmeSection1718.swift */,
-				D09816EB2D485375009D22FE /* SectionHeader1718.swift */,
 			);
 			path = ReadmeView;
 			sourceTree = "<group>";
@@ -455,8 +497,8 @@
 		D081655C278612470078AB16 /* MemberPortfoliosView */ = {
 			isa = PBXGroup;
 			children = (
+				37E134BC2E6F7A7100C61714 /* OldVersions */,
 				37E134AE2E6F63D100C61714 /* MemberPortfolioListView2626.swift */,
-				D0831A1D277F72270049AB84 /* MemberPortfolioListView1718.swift */,
 				D0831A1A277F72270049AB84 /* FilteredMemberPortfoliosView.swift */,
 				D040566C29A0287200CB64B8 /* MemberPortfolioRow.swift */,
 			);
@@ -642,10 +684,9 @@
 		D0AE1B7327889D6700E0100E /* OrganizationsView */ = {
 			isa = PBXGroup;
 			children = (
+				37E134BD2E6F7AAB00C61714 /* OldVersions */,
 				37E134B02E6F693E00C61714 /* FilteredOrganizationView2626.swift */,
-				D0831A1B277F72270049AB84 /* FilteredOrganizationView1718.swift */,
 				D0AE1B7427889E8600E0100E /* OrganizationListView2626.swift */,
-				37E134B12E6F693E00C61714 /* OrganizationListView1718.swift */,
 				D0E694C827EF9B450054D634 /* LockAnimationView.swift */,
 			);
 			path = OrganizationsView;
@@ -693,10 +734,9 @@
 		D0E2235227DE9139002A8600 /* PreludeView */ = {
 			isa = PBXGroup;
 			children = (
+				37E134BF2E6F7AD600C61714 /* OldVersions */,
 				376D14F92E6DE83A00A1403B /* DebugPanel2626.swift */,
-				D0C6E95429577921001E5CE9 /* DebugPanel1718.swift */,
 				376D14F72E6DE60900A1403B /* PreludeView2626.swift */,
-				D0E2235327DE9139002A8600 /* PreludeView1718.swift */,
 				D0EB533B295775240061613B /* Crosshairs.swift */,
 				D082BE902957806800FF0812 /* LogoPath.swift */,
 			);
