@@ -1,5 +1,5 @@
 //
-//  DebugPanel_1718.swift
+//  DebugPanel1718.swift
 //  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 24/12/2022.
@@ -9,6 +9,7 @@ import SwiftUI
 
 // Displays some numbers related to the Prelude screen graphics.
 // The numbers update (via @Binding) when the screen is tapped.
+@available(iOS, obsoleted: 19.0, message: "Please use 'DebugPanel2626' for versions above iOS 18.x")
 struct DebugPanel1718: View {
     var size: CGSize
     @Binding var offset: OffsetVectorInCells1718
@@ -37,6 +38,7 @@ struct DebugPanel1718: View {
     }
 }
 
+@available(iOS, obsoleted: 19.0, message: "Please use 'DebugPanel2626_Previews' for versions above iOS 18.x")
 struct DebugPanel1718_Previews: PreviewProvider {
     @State fileprivate static var debugLocation = CGPoint(x: 0, y: 0)
     @State fileprivate static var logScale: Double = 32 // value driving the animation

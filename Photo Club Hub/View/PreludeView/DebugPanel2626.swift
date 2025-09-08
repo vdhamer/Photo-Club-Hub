@@ -1,5 +1,5 @@
 //
-//  DebugPanel_26.swift
+//  DebugPanel2626.swift
 //  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 24/12/2022.

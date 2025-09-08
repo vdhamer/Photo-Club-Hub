@@ -1,5 +1,5 @@
 //
-//  PreludeView_26.swift
+//  PreludeView2626.swift
 //  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 05/03/2022.
@@ -43,7 +43,7 @@ struct PreludeView2626: View {
                         willMoveToNextScreen = true
                     }
                 }
-                .navigate(to: MemberPortfolioListView().navigationBarTitle("Portfolios"),
+                .navigate(to: MemberPortfolioListView2626().navigationBarTitle("Portfolios"),
                           when: $willMoveToNextScreen,
                           horSizeClass: horSizeClass)
 
@@ -193,26 +193,15 @@ struct PreludeView2626: View {
                 HStack(alignment: .bottom) {
                     DebugPanel2626(size: size, offset: offset, location: location, hidden: !debugPanelVisible)
                     Spacer()
-                    if #available(iOS 26.0, *) {
-                        Image(systemName: "arrowshape.turn.up.forward.circle")
-                            .foregroundStyle(.white)
-                            .font(.system(size: 36))
-                            .frame(width: 65, height: 65)
-                            .glassEffect(.regular.interactive().tint(.blue))
-                            .onTapGesture {
-                                willMoveToNextScreen.wrappedValue = true
-                            }
-                            .keyboardShortcut(.defaultAction) // return key
-                    } else {
-                        Button {
+                    Image(systemName: "arrowshape.turn.up.forward.circle")
+                        .foregroundStyle(.white)
+                        .font(.system(size: 36))
+                        .frame(width: 65, height: 65)
+                        .glassEffect(.regular.interactive().tint(.blue))
+                        .onTapGesture {
                             willMoveToNextScreen.wrappedValue = true
-                        } label: {
-                            Image(systemName: "arrowshape.turn.up.forward.circle")
-                                .font(.largeTitle)
                         }
                         .keyboardShortcut(.defaultAction) // return key
-                        .buttonStyle(.bordered)
-                    }
 
                     Button { // can't add multiple .keyboarShortcuts to same Button
                         willMoveToNextScreen.wrappedValue = true

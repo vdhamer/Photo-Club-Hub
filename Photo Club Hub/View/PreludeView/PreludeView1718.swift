@@ -1,5 +1,5 @@
 //
-//  PreludeView_1718.swift
+//  PreludeView1718.swift
 //  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 05/03/2022.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-@available(iOS, obsoleted: 19.0, message: "Please use 'PreludeView2323' for versions about iOS 18.x")
+@available(iOS, obsoleted: 19.0, message: "Please use 'PreludeView2626' for versions about iOS 18.x")
 struct PreludeView1718: View {
 
     // MARK: - Constants
@@ -43,7 +43,7 @@ struct PreludeView1718: View {
                         willMoveToNextScreen = true
                     }
                 }
-                .navigate(to: MemberPortfolioListView().navigationBarTitle("Portfolios"),
+                .navigate(to: MemberPortfolioListView1718().navigationBarTitle("Portfolios"),
                           when: $willMoveToNextScreen,
                           horSizeClass: horSizeClass)
 
@@ -193,26 +193,14 @@ struct PreludeView1718: View {
                 HStack(alignment: .bottom) {
                     DebugPanel1718(size: size, offset: offset, location: location, hidden: !debugPanelVisible)
                     Spacer()
-                    if #available(iOS 26.0, *) {
+                    Button {
+                        willMoveToNextScreen.wrappedValue = true
+                    } label: {
                         Image(systemName: "arrowshape.turn.up.forward.circle")
-                            .foregroundStyle(.white)
-                            .font(.system(size: 36))
-                            .frame(width: 65, height: 65)
-                            .glassEffect(.regular.interactive().tint(.blue))
-                            .onTapGesture {
-                                willMoveToNextScreen.wrappedValue = true
-                            }
-                            .keyboardShortcut(.defaultAction) // return key
-                    } else {
-                        Button {
-                            willMoveToNextScreen.wrappedValue = true
-                        } label: {
-                            Image(systemName: "arrowshape.turn.up.forward.circle")
-                                .font(.largeTitle)
-                        }
-                        .keyboardShortcut(.defaultAction) // return key
-                        .buttonStyle(.bordered)
+                            .font(.largeTitle)
                     }
+                    .keyboardShortcut(.defaultAction) // return key
+                    .buttonStyle(.bordered)
 
                     Button { // can't add multiple .keyboarShortcuts to same Button
                         willMoveToNextScreen.wrappedValue = true
@@ -242,13 +230,13 @@ struct PreludeView1718: View {
 
 }
 
-@available(iOS, obsoleted: 19.0, message: "Please use 'OffsetVectorInCells2323' for versions about iOS 18.x")
+@available(iOS, obsoleted: 19.0, message: "Please use 'OffsetVectorInCells2626' for versions about iOS 18.x")
 struct OffsetVectorInCells1718 {
     // swiftlint:disable:next identifier_name
     var x, y: Int
 }
 
-@available(iOS, obsoleted: 19.0, message: "Please use 'PreviewProvider2323' for versions about iOS 18.x")
+@available(iOS, obsoleted: 19.0, message: "Please use 'PreviewProvider2626' for versions about iOS 18.x")
 struct Prelude1718_Previews: PreviewProvider {
     static var previews: some View {
         Group {

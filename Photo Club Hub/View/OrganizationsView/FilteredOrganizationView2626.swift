@@ -1,5 +1,5 @@
 //
-//  FilteredOrganizationView.swift
+//  FilteredOrganizationView2626.swift
 //  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 30/12/2021.
@@ -9,8 +9,9 @@ import SwiftUI
 import MapKit
 import CoreData
 
+@available(iOS 26.0, *)
 @MainActor
-struct FilteredOrganizationView: View {
+struct FilteredOrganizationView2626: View {
 
     @Environment(\.managedObjectContext) fileprivate var viewContext // may not be correct
     @Environment(\.layoutDirection) var layoutDirection // .leftToRight or .rightToLeft
@@ -22,7 +23,6 @@ struct FilteredOrganizationView: View {
 
     fileprivate let searchText: Binding<String>
     fileprivate let interactionModes: MapInteractionModes = [.pan, .zoom, .rotate, .pitch]
-    fileprivate let iOS18: Bool
 
     // regenerate Section using dynamic FetchRequest with dynamic predicate and dynamic sortDescriptor
     init(predicate: NSPredicate, searchText: Binding<String>) {
@@ -39,12 +39,6 @@ struct FilteredOrganizationView: View {
             animation: .easeIn
         )
         self.searchText = searchText
-
-        if #unavailable(iOS 18) { // used to optimize ScrollView smart scrolling under iOS 18
-            iOS18 = false
-        } else {
-            iOS18 = true
-        }
     }
 
     var body: some View {
@@ -143,7 +137,6 @@ struct FilteredOrganizationView: View {
                     .frame(minHeight: 300, idealHeight: 500, maxHeight: .infinity)
                 Text(filteredOrganization.localizedRemark) // display remark in preferred language (if possible)
                     .padding(.top, 5)
-                    .frame(height: iOS18 ? nil : 70) // iOS 18 can handle variable size views for smart scrolling
             } // VStack
             .task {
                 initializeCameraPosition(organization: filteredOrganization) // better than .onAppear(perform:)?
@@ -300,7 +293,8 @@ struct FilteredOrganizationView: View {
 
 }
 
-extension FilteredOrganizationView { // graphic representation
+@available(iOS 26.0, *)
+extension FilteredOrganizationView2626 { // graphic representation
 
     func selectMarkerTint(organization: Organization, selectedOrganization: Organization) -> Color {
         if isEqual(organizationLHS: organization, organizationRHS: selectedOrganization) {
@@ -337,7 +331,8 @@ extension FilteredOrganizationView { // graphic representation
 
 }
 
-extension FilteredOrganizationView { // reverse GeoCoding
+@available(iOS 26.0, *)
+extension FilteredOrganizationView2626 { // reverse GeoCoding
 
     func reverseGeocode(coordinates: CLLocationCoordinate2D) async throws -> (city: String?, country: String?) {
         let geocoder = CLGeocoder()
@@ -355,7 +350,8 @@ extension FilteredOrganizationView { // reverse GeoCoding
 
 }
 
-extension FilteredOrganizationView { // tests for equality
+@available(iOS 26.0, *)
+extension FilteredOrganizationView2626 { // tests for equality
 
     fileprivate func isEqual(organizationLHS: Organization, organizationRHS: Organization) -> Bool {
         return (organizationLHS.fullName == organizationRHS.fullName) && (organizationLHS.town == organizationRHS.town)
@@ -363,7 +359,8 @@ extension FilteredOrganizationView { // tests for equality
 
 }
 
-struct FilteredOrganizationView_Previews: PreviewProvider {
+@available(iOS 26.0, *)
+struct FilteredOrganizationView2626_Previews: PreviewProvider {
     static let organizationPredicate = NSPredicate(format: "fullName_ = %@ || fullName_ = %@ || fullName_ = %@",
                                                    argumentArray: ["PhotoClub2", "PhotoClub1", "PhotoClub3"])
     @State static var searchText: String = ""
@@ -371,7 +368,7 @@ struct FilteredOrganizationView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
             List { // lists are "Lazy" automatically
-                FilteredOrganizationView(predicate: organizationPredicate, searchText: $searchText)
+                FilteredOrganizationView2626(predicate: organizationPredicate, searchText: $searchText)
                     .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
             }
             .navigationBarTitle(Text(String("PhotoClubInnerView"))) // prevent localization

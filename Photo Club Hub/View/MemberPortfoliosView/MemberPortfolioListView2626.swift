@@ -1,5 +1,5 @@
 //
-//  MemberPortfoliosView.swift
+//  MemberPortfoliosView2626.swift
 //  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 20/06/2021.
@@ -7,7 +7,8 @@
 
 import SwiftUI
 
-struct MemberPortfolioListView: View {
+@available(iOS 26.0, *)
+struct MemberPortfolioListView2626: View {
     @Environment(\.managedObjectContext) fileprivate var viewContext
     fileprivate var detentsList: Set<PresentationDetent> = [ .fraction(0.5), .fraction(0.70), .fraction(0.90), .large ]
 
@@ -63,10 +64,10 @@ struct MemberPortfolioListView: View {
                         showingPreferences = true
                     }
                 } label: {
-                    PreferencesIcon()
+                    PreferencesIcon1718()
                 }
                 .sheet(isPresented: $showingPreferences, content: {
-                    PreferencesView(preferences: $model.preferences)
+                    PreferencesView2626(preferences: $model.preferences)
                     // the detents don't do anything on an iPad
                         .presentationDetents(detentsList, selection: $selectedPreferencesDetent)
                         .presentationBackground(.regularMaterial) // doesn't work yet with PreferencesView
@@ -84,7 +85,7 @@ struct MemberPortfolioListView: View {
                         .foregroundStyle(.linkColor, .gray, .white)
                 }
                 .sheet(isPresented: $showingReadme, content: {
-                    ReadmeView()
+                    ReadmeView2626()
                     // the detents don't do anything on an iPad
                         .presentationDetents(detentsList, selection: $selectedReadmeDetent)
                         .presentationBackground(.thickMaterial) // doesn't work yet with ReadmeView
@@ -96,7 +97,7 @@ struct MemberPortfolioListView: View {
 
                 NavigationLink(destination: {
                     let predicateAll = NSPredicate(format: "TRUEPREDICATE")
-                    OrganizationListView(predicate: predicateAll)
+                    OrganizationListView1718(predicate: predicateAll)
                 }, label: {
                     Image("mappin.ellipse.rectangle")
                         .font(.title)
@@ -131,14 +132,16 @@ struct MemberPortfolioListView: View {
 
 }
 
-struct MemberListView_Previews: PreviewProvider {
+@available(iOS 26.0, *)
+struct MemberListView2626_Previews: PreviewProvider {
     static var previews: some View {
-        MemberPortfolioListView()
+        MemberPortfolioListView2626()
 			.environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }
 
-struct PreferencesIcon: View {
+@available(iOS 26.0, *)
+struct PreferencesIcon2626: View {
     @Environment(\.isEnabled) fileprivate var isEnabled: Bool
 
     var body: some View {
