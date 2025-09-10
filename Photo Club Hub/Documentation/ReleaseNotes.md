@@ -8,6 +8,9 @@ Code Maintenance
 * Prepare user interface files for more Liquid Glass user interface changes. Issue #606
 * TODO: sync in the code updates from Photo Club Hub HTML.
 
+Data Maintenance
+* Enabled loading of club fkGestel.
+
 This build #4650 was made using Xcode 26.0 RC1 and is suitable for release to the App Store.
 
 ---------------------------------------------------------------------------
