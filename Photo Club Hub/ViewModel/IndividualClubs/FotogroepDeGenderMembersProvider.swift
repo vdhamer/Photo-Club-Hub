@@ -10,23 +10,32 @@ import CoreData // for PersistenceController
 final public class FotogroepDeGenderMembersProvider: Sendable {
 
     public init(bgContext: NSManagedObjectContext,
+                isBeingTested: Bool,
                 useOnlyInBundleFile: Bool = false,
-                synchronousWithRandomTown: Bool = false,
-                randomTown: String = "RandomTown") {
+                randomTownForTesting: String? = nil) {
 
-        if synchronousWithRandomTown {
+        if isBeingTested {
+            guard let randomTownForTesting else {
+                ifDebugFatalError("Missing randomTownForTesting", file: #file, line: #line)
+                return
+            }
             bgContext.performAndWait { // execute block synchronously or ...
-                insertOnlineMemberData(bgContext: bgContext, town: randomTown)
+                insertOnlineMemberData(bgContext: bgContext,
+                                       isBeingTested: isBeingTested,
+                                       town: randomTownForTesting)
             }
         } else {
             bgContext.perform { // ...execute block asynchronously
-                self.insertOnlineMemberData(bgContext: bgContext)
+                self.insertOnlineMemberData(bgContext: bgContext,
+					    isBeingTested: isBeingTested)
             }
         }
 
     }
 
-    fileprivate func insertOnlineMemberData(bgContext: NSManagedObjectContext, town: String = "Eindhoven") {
+    fileprivate func insertOnlineMemberData(bgContext: NSManagedObjectContext,
+                                            isBeingTested: Bool,
+                                            town: String = "Eindhoven") {
         let idPlus = OrganizationIdPlus(fullName: "Fotogroep de Gender",
                                         town: town,
                                         nickname: "fgDeGender")
@@ -39,10 +48,12 @@ final public class FotogroepDeGenderMembersProvider: Sendable {
 
         _ = Level2JsonReader(bgContext: bgContext,
                              organizationIdPlus: idPlus,
-                             isInTestBundle: false,
+                             isBeingTested: isBeingTested,
                              useOnlyInBundleFile: false)
         do {
-            try bgContext.save()
+            if bgContext.hasChanges {
+                try bgContext.save()
+            }
         } catch {
             ifDebugFatalError("Failed to save club \(idPlus.nickname)", file: #fileID, line: #line)
         }
