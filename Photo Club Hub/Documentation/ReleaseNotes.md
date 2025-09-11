@@ -9,7 +9,7 @@ Code Maintenance
 * TODO: sync in the code updates from Photo Club Hub HTML.
 
 Data Maintenance
-* Enabled loading of club fkGestel.
+* Support for loading of club fkGestel.
 
 This build #4650 was made using Xcode 26.0 RC1 and is suitable for release to the App Store.
 
