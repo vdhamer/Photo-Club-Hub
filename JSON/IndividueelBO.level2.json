@@ -25,7 +25,22 @@
 
     "members": [
 
-        {
+    {
+        "name": {
+            "givenName": "Ad",
+            "infixName": "van der",
+            "familyName": "Nat"
+        },
+        "optional": {
+            "website": "https://www.advandernat.nl",
+            "featuredImage": "",
+            "level3URL": "",
+            "membershipStartDate": "2025-09-08",
+            "expertises": ["Portrait", "Nature"]
+        }
+    },
+
+	{
             "name": {
                 "givenName": "Arthur",
                 "infixName": "van",
@@ -76,11 +91,11 @@
                 "familyName": "Rooij"
             },
             "optional": {
-                "website": "",
+                "website": "https://www.gillesderooij.nl",
                 "featuredImage": "",
                 "level3URL": "",
-                "membershipStartDate": "2025-08-06",
-                "expertises": ["Portrait", "Creative"]
+                "membershipStartDate": "2025-08-09",
+                "expertises": ["Architecture", "Minimal"]
             }
         },
 
@@ -126,6 +141,21 @@
                 "level3URL": "https://mariskavereijken.nl/portfolio/",
                 "membershipStartDate": "2025-07-10",
                 "expertises": ["Portrait", "Creative"]
+            }
+        },
+
+        {
+            "name": {
+                "givenName": "Roy",
+                "infixName": "van",
+                "familyName": "Peufflik"
+            },
+            "optional": {
+                "website": "https://www.ossefotostudio.nl",
+                "featuredImage": "",
+                "level3URL": "https://www.f8fotografie.nl",
+                "membershipStartDate": "2025-07-10",
+                "expertises": ["Portrait"]
             }
         },
 
