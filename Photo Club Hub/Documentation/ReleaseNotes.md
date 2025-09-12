@@ -12,6 +12,9 @@ Code Maintenance
 Data Maintenance
 * Added members to club IndividueelBO.
 
+Data Maintenance
+* Support for loading of club fkGestel.
+
 This build #4650 was made using Xcode 26.0 RC1 and is suitable for release to the App Store.
 
 ---------------------------------------------------------------------------

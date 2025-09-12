@@ -63,8 +63,11 @@ struct PhotoClubHubApp: App {
 
 extension PhotoClubHubApp {
 
+    // swiftlint:disable:next function_body_length
     static func loadClubsAndMembers() {
-        let isBeingTested = false
+
+        let isBeingTested = false // these are being loaded to get the data into Core Data, not for testing purposes
+        let useOnlyInBundleFile = false
 
         // MARK: - Level 0
 
@@ -72,7 +75,7 @@ extension PhotoClubHubApp {
         let level0BackgroundContext = makeBgContext(ctxName: "Level 0 loader")
         _ = Level0JsonReader(bgContext: level0BackgroundContext,
                              isBeingTested: isBeingTested,
-                             useOnlyInBundleFile: false)
+                             useOnlyInBundleFile: useOnlyInBundleFile)
 
         // MARK: - Level 1
 
@@ -80,7 +83,7 @@ extension PhotoClubHubApp {
         let level1BackgroundContext = makeBgContext(ctxName: "Level 1 loader")
         _ = Level1JsonReader(bgContext: level1BackgroundContext, // read root.Level1.json file
                              isBeingTested: isBeingTested,
-                             useOnlyInBundleFile: false)
+                             useOnlyInBundleFile: useOnlyInBundleFile)
 
         // MARK: - Level 2
 
@@ -88,25 +91,25 @@ extension PhotoClubHubApp {
         let genderBackgroundContext = makeBgContext(ctxName: "Level 2 loader fgDeGender")
         _ = FotogroepDeGenderMembersProvider(bgContext: genderBackgroundContext,
                                              isBeingTested: isBeingTested,
-                                             useOnlyInBundleFile: false)
+                                             useOnlyInBundleFile: useOnlyInBundleFile)
 
         // load current/former members of Fotogroep Waalre
         let waalreBackgroundContext = makeBgContext(ctxName: "Level 2 loader fgWaalre")
         _ = FotogroepWaalreMembersProvider(bgContext: waalreBackgroundContext,
                                            isBeingTested: isBeingTested,
-                                           useOnlyInBundleFile: false)
+                                           useOnlyInBundleFile: useOnlyInBundleFile)
 
         // load current/former members of Fotoclub Bellus Imago
         let bellusBackgroundContext = makeBgContext(ctxName: "Level 2 loader fcBellusImago")
         _ = FotoclubBellusImagoMembersProvider(bgContext: bellusBackgroundContext,
                                                isBeingTested: isBeingTested,
-                                               useOnlyInBundleFile: false)
+                                               useOnlyInBundleFile: useOnlyInBundleFile)
 
         // load current/former members of Fotogroep Oirschot
         let oirschotBackgroundContext = makeBgContext(ctxName: "Level 2 loader fgOirschot")
         _ = FotogroepOirschotMembersProvider(bgContext: oirschotBackgroundContext,
                                              isBeingTested: isBeingTested,
-                                             useOnlyInBundleFile: false)
+                                             useOnlyInBundleFile: useOnlyInBundleFile)
 
         if Settings.loadTestClubs {
 
@@ -114,13 +117,13 @@ extension PhotoClubHubApp {
             let xampleMinBackgroundContext = makeBgContext(ctxName: "Level 2 loader XampleMin")
             _ = XampleMinMembersProvider(bgContext: xampleMinBackgroundContext,
                                          isBeingTested: isBeingTested,
-                                         useOnlyInBundleFile: false)
+                                         useOnlyInBundleFile: useOnlyInBundleFile)
 
             // load test member(s) of XampleMax. Club name starts with an X in order to be at end of list
             let xampleMaxBackgroundContext = makeBgContext(ctxName: "Level 2 loader XampleMax")
             _ = XampleMaxMembersProvider(bgContext: xampleMaxBackgroundContext,
                                          isBeingTested: isBeingTested,
-                                         useOnlyInBundleFile: false)
+                                         useOnlyInBundleFile: useOnlyInBundleFile)
 
         }
 
@@ -128,20 +131,25 @@ extension PhotoClubHubApp {
         let individueelBOBackgroundContext = makeBgContext(ctxName: "Level 2 loader IndividueelBO")
         _ = IndividueelBOMembersProvider(bgContext: individueelBOBackgroundContext,
                                          isBeingTested: isBeingTested,
-                                         useOnlyInBundleFile: false)
+                                         useOnlyInBundleFile: useOnlyInBundleFile)
 
         // load current/former members of Fotoclub Ericamera
         let ericameraBackgroundContext = makeBgContext(ctxName: "Level 2 loader fcEricamera")
         _ = FotoclubEricameraMembersProvider(bgContext: ericameraBackgroundContext,
                                              isBeingTested: isBeingTested,
-                                             useOnlyInBundleFile: false)
+                                             useOnlyInBundleFile: useOnlyInBundleFile)
 
         // load current/former members of Fotoclub Den Dungen
         let dungenBackgroundContext = makeBgContext(ctxName: "Level 2 loader fcDenDungen")
         _ = FotoclubDenDungenMembersProvider(bgContext: dungenBackgroundContext,
                                              isBeingTested: isBeingTested,
-                                             useOnlyInBundleFile: false)
+                                             useOnlyInBundleFile: useOnlyInBundleFile)
 
+        // load current/former members of Fotokring Sint-Michielsgestel
+        let gestelBackgroundContext = makeBgContext(ctxName: "Level 2 loader fkGestel")
+        _ = FotokringStMichielsgestelMembersProvider(bgContext: gestelBackgroundContext,
+                                                     isBeingTested: isBeingTested,
+                                                     useOnlyInBundleFile: useOnlyInBundleFile)
     }
 
     static func makeBgContext(ctxName: String) -> NSManagedObjectContext {
