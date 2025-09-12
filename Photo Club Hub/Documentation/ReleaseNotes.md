@@ -9,6 +9,9 @@ Code Maintenance
 * Sync in the code updates from Photo Club Hub HTML.
 * Forced a data reset at dataResetPending284b4650 (related to extertise change in IndividueelBO).
 
+Data Maintenance
+* Added members to club IndividueelBO.
+
 This build #4650 was made using Xcode 26.0 RC1 and is suitable for release to the App Store.
 
 ---------------------------------------------------------------------------
