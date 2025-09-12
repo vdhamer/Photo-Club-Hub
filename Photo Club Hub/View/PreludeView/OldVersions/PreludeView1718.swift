@@ -1,5 +1,5 @@
 //
-//  PreludeView.swift
+//  PreludeView1718.swift
 //  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 05/03/2022.
@@ -7,7 +7,8 @@
 
 import SwiftUI
 
-struct PreludeView: View {
+@available(iOS, obsoleted: 19.0, message: "Please use 'PreludeView2626' for versions about iOS 18.x")
+struct PreludeView1718: View {
 
     // MARK: - Constants
     static let maxCellRepeat: Double = 32 // max number of cells horizontally and vertically
@@ -17,7 +18,7 @@ struct PreludeView: View {
     fileprivate let crossHairsColor: Color = Color(UIColor(white: 0.5, alpha: 0.5))
 
     // MARK: - State variables
-    @State fileprivate var offsetInCells = OffsetVectorInCells(x: 8, y: 6) // # of cell units left/above image center
+    @State fileprivate var offsetInCells = OffsetVectorInCells1718(x: 8, y: 6) // # of cell units left/above imagecenter
     @State fileprivate var logScale = log2CellRepeat // value driving the animation
     @State fileprivate var willMoveToNextScreen = false // used to navigate to next screen
     @State fileprivate var crosshairsVisible = true // displays Crosshairs view, can be toggled via "c" on keyboard
@@ -42,7 +43,7 @@ struct PreludeView: View {
                         willMoveToNextScreen = true
                     }
                 }
-                .navigate(to: MemberPortfolioListView().navigationBarTitle("Portfolios"),
+                .navigate(to: MemberPortfolioListView1718().navigationBarTitle("Portfolios"),
                           when: $willMoveToNextScreen,
                           horSizeClass: horSizeClass)
 
@@ -54,20 +55,20 @@ struct PreludeView: View {
                                 .scaledToFit()
                                 .brightness(logScale == 0  ? 0.1 : 0.2)
                             Group {
-                                LogoPath(logCellRepeat: PreludeView.log2CellRepeat, // upper left part of logo
-                                         relPixelSize: PreludeView.squareSize,
+                                LogoPath(logCellRepeat: PreludeView1718.log2CellRepeat, // upper left part of logo
+                                         relPixelSize: PreludeView1718.squareSize,
                                          offsetPoint: .zero)
                                 .fill(.fgwGreen)
-                                LogoPath(logCellRepeat: PreludeView.log2CellRepeat, // upper right part of logo
-                                         relPixelSize: PreludeView.squareSize,
+                                LogoPath(logCellRepeat: PreludeView1718.log2CellRepeat, // upper right part of logo
+                                         relPixelSize: PreludeView1718.squareSize,
                                          offsetPoint: .top)
                                 .fill(.fgwBlue)
-                                LogoPath(logCellRepeat: PreludeView.log2CellRepeat, // lower left part of logo
-                                         relPixelSize: PreludeView.squareSize,
+                                LogoPath(logCellRepeat: PreludeView1718.log2CellRepeat, // lower left part of logo
+                                         relPixelSize: PreludeView1718.squareSize,
                                          offsetPoint: .leading)
                                 .fill(.fgwRed)
-                                LogoPath(logCellRepeat: PreludeView.log2CellRepeat, // lower righ part of logo
-                                         relPixelSize: PreludeView.squareSize,
+                                LogoPath(logCellRepeat: PreludeView1718.log2CellRepeat, // lower righ part of logo
+                                         relPixelSize: PreludeView1718.squareSize,
                                          offsetPoint: .center)
                                 .fill(.fgwGreen)
                             }
@@ -90,10 +91,10 @@ struct PreludeView: View {
                             debugLocation = location
                             withAnimation(.easeInOut(duration: 7)) { // carefull: code is duplicated twice ;-(
                                 if logScale == 0.0 { // if we are completely zoomed out at the time of the tap
-                                    logScale = log2(PreludeView.maxCellRepeat) // zoom in
+                                    logScale = log2(PreludeView1718.maxCellRepeat) // zoom in
                                     offsetInCells = intOffset(rect: geo.size, location: location)
                                 } else {
-                                    offsetInCells = OffsetVectorInCells(x: 0, y: 0)
+                                    offsetInCells = OffsetVectorInCells1718(x: 0, y: 0)
                                     logScale = 0.0 // zoom out
                                 }
                             }
@@ -124,10 +125,10 @@ struct PreludeView: View {
                             ifDebugPrint("Tap location: (\(location.x),\(location.y))")
                             withAnimation(.easeInOut(duration: 7)) { // carefull: code is duplicated twice ;-(
                                 if logScale == 0.0 { // if we are completely zoomed out at the time of the tap
-                                    logScale = log2(PreludeView.maxCellRepeat) // zoom in
+                                    logScale = log2(PreludeView1718.maxCellRepeat) // zoom in
                                     offsetInCells = intOffset(rect: geo.size, location: location)
                                 } else {
-                                    offsetInCells = OffsetVectorInCells(x: 0, y: 0)
+                                    offsetInCells = OffsetVectorInCells1718(x: 0, y: 0)
                                     logScale = 0.0 // zoom out
                                 }
                             }
@@ -150,19 +151,19 @@ struct PreludeView: View {
     func offset(frame rect: CGSize) -> CGSize { // used to position large image in the middle of a cell
         guard logScale != 0 else { return .zero }
         let shortFrameDimension: Double = min(rect.width, rect.height)
-        let cellPitchInPixels: Double = shortFrameDimension/PreludeView.maxCellRepeat
+        let cellPitchInPixels: Double = shortFrameDimension/PreludeView1718.maxCellRepeat
         let offset = CGSize( width: cellPitchInPixels * Double(offsetInCells.x) * pow(2, logScale),
                              height: cellPitchInPixels * Double(offsetInCells.y) * pow(2, logScale) )
         return offset
     }
 
-    func intOffset(rect: CGSize, location: CGPoint) -> OffsetVectorInCells { // used to translate tap to selected cell
-        guard logScale != 0 else { return OffsetVectorInCells(x: 0, y: 0) }
+    func intOffset(rect: CGSize, location: CGPoint) -> OffsetVectorInCells1718 { // to translate tap to selected cell
+        guard logScale != 0 else { return OffsetVectorInCells1718(x: 0, y: 0) }
         let shortFrameDimension = min(rect.width, rect.height)
         let halfFrameDimension = shortFrameDimension / 2
-        let cellPitchInPixels = shortFrameDimension/PreludeView.maxCellRepeat
-        return OffsetVectorInCells( x: Int((((halfFrameDimension - location.x) / cellPitchInPixels)).rounded()),
-                                    y: Int((((halfFrameDimension - location.y) / cellPitchInPixels)).rounded()) )
+        let cellPitchInPixels = shortFrameDimension/PreludeView1718.maxCellRepeat
+        return OffsetVectorInCells1718(x: Int((((halfFrameDimension - location.x) / cellPitchInPixels)).rounded()),
+                                       y: Int((((halfFrameDimension - location.y) / cellPitchInPixels)).rounded()))
     }
 
     var preludeText: String {
@@ -180,7 +181,7 @@ struct PreludeView: View {
 
     struct EscapeHatch: View {
         let willMoveToNextScreen: Binding<Bool>
-        let offset: Binding<OffsetVectorInCells>
+        let offset: Binding<OffsetVectorInCells1718>
         let location: Binding<CGPoint>
         var size: CGSize
         @Binding var debugPanelVisible: Bool
@@ -190,7 +191,7 @@ struct PreludeView: View {
             VStack {
                 Spacer()
                 HStack(alignment: .bottom) {
-                    DebugPanel(size: size, offset: offset, location: location, hidden: !debugPanelVisible)
+                    DebugPanel1718(size: size, offset: offset, location: location, hidden: !debugPanelVisible)
                     Spacer()
                     Button {
                         willMoveToNextScreen.wrappedValue = true
@@ -199,7 +200,7 @@ struct PreludeView: View {
                             .font(.largeTitle)
                     }
                     .keyboardShortcut(.defaultAction) // return key
-                    .modifier(GlassButtonIfAvailable())
+                    .buttonStyle(.bordered)
 
                     Button { // can't add multiple .keyboarShortcuts to same Button
                         willMoveToNextScreen.wrappedValue = true
@@ -229,30 +230,22 @@ struct PreludeView: View {
 
 }
 
-struct OffsetVectorInCells {
+@available(iOS, obsoleted: 19.0, message: "Please use 'OffsetVectorInCells2626' for versions about iOS 18.x")
+struct OffsetVectorInCells1718 {
     // swiftlint:disable:next identifier_name
     var x, y: Int
 }
 
-struct GlassButtonIfAvailable: ViewModifier {
-    func body(content: Content) -> some View {
-        if #available(iOS 26.0, *) {
-            content.buttonStyle(.glassProminent)
-        } else {
-            content
+@available(iOS, obsoleted: 19.0, message: "Please use 'PreviewProvider2626' for versions about iOS 18.x")
+struct Prelude1718_Previews: PreviewProvider {
+    static var previews: some View {
+        Group {
+            PreludeView1718()
+                .previewInterfaceOrientation(.portrait)
+            PreludeView1718()
+                .previewInterfaceOrientation(.landscapeLeft)
+            PreludeView1718()
+                .environment(\.colorScheme, .dark)
         }
     }
 }
-
-struct Prelude_Previews: PreviewProvider {
-      static var previews: some View {
-          Group {
-              PreludeView()
-                  .previewInterfaceOrientation(.portrait)
-              PreludeView()
-                  .previewInterfaceOrientation(.landscapeLeft)
-              PreludeView()
-                  .environment(\.colorScheme, .dark)
-          }
-      }
-  }

@@ -14,15 +14,15 @@ public class Level0JsonReader {
 
     public init(bgContext: NSManagedObjectContext,
                 fileName: String = "root",  // can overrule the name for unit testing
-                isInTestBundle: Bool,
+                isBeingTested: Bool,
                 useOnlyInBundleFile: Bool = false // true can be used to avoid publishing a test file to GitHub
                ) {
         _ = FetchAndProcessFile(
             bgContext: bgContext,
-            fileSelector: FileSelector(fileName: fileName, isInTestBundle: isInTestBundle),
+            fileSelector: FileSelector(fileName: fileName, isBeingTested: isBeingTested),
             fileType: "json", fileSubType: "level0", // "root.level0.json"
             useOnlyInBundleFile: useOnlyInBundleFile,
-            isBeingTested: isInTestBundle,
+            isBeingTested: isBeingTested,
             fileContentProcessor: Level0JsonReader.readRootLevel0Json(bgContext:
                                                                       jsonData:
                                                                       fileSelector:
@@ -34,7 +34,7 @@ public class Level0JsonReader {
     @Sendable static fileprivate func readRootLevel0Json(bgContext: NSManagedObjectContext,
                                                          jsonData: String,
                                                          fileSelector: FileSelector,
-                                                         isBeingTested: Bool = false) {
+                                                         isBeingTested: Bool) {
 
         let fileName: String = fileSelector.fileName
         ifDebugPrint("\nStarting background read of \(fileName).level0.json to get standard Expertises and Languages.")

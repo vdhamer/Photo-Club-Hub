@@ -1,5 +1,5 @@
 //
-//  PreferencesView.swift
+//  PreferencesView1718.swift
 //  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 11/12/2021.
@@ -7,10 +7,9 @@
 
 import SwiftUI
 
-let valueOverwrittenByInit = false // dummy constant
-
+@available(iOS, obsoleted: 19.0, message: "Please use 'PreferencesView2626' for versions above iOS 18.x")
 @MainActor
-struct PreferencesView: View {
+struct PreferencesView1718: View {
 
     @Binding var preferences: PreferencesStruct
     @Environment(\.dismiss) var dismiss: DismissAction // \.dismiss requires iOS 15
@@ -141,12 +140,13 @@ struct PreferencesView: View {
 
 }
 
-struct PreferencesView_Previews: PreviewProvider { // This preview works on iOS 18 / Xcode 16
+@available(iOS, obsoleted: 19.0, message: "Please use 'PreferencesView2626_Previews' for versions above iOS 18.x")
+struct PreferencesView1718_Previews: PreviewProvider {
     @State static fileprivate var title = "PreferencesView Preview"
     @State static var preferences = PreferencesStruct.defaultValue
 
     static var previews: some View {
-        PreferencesView(preferences: $preferences)
+        PreferencesView1718(preferences: $preferences)
             .navigationTitle(title)
     }
 }

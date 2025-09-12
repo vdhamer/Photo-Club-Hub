@@ -10,23 +10,32 @@ import CoreData // for PersistenceController
 final public class FotogroepOirschotMembersProvider: Sendable {
 
     public init(bgContext: NSManagedObjectContext,
-                useOnlyInBundleFile: Bool = true,
-                synchronousWithRandomTown: Bool = false,
-                randomTown: String = "RandomTown") {
+                isBeingTested: Bool,
+                useOnlyInBundleFile: Bool = false,
+                randomTownForTesting: String? = nil) {
 
-        if synchronousWithRandomTown {
+        if isBeingTested {
+            guard let randomTownForTesting else {
+                ifDebugFatalError("Missing randomTownForTesting", file: #file, line: #line)
+                return
+            }
             bgContext.performAndWait { // ...or execute same block synchronously
-                self.insertOnlineMemberData(bgContext: bgContext, town: randomTown)
+                self.insertOnlineMemberData(bgContext: bgContext,
+                                            isBeingTested: isBeingTested,
+                                            town: randomTownForTesting)
             }
         } else {
             bgContext.perform { // execute block asynchronously...
-                self.insertOnlineMemberData(bgContext: bgContext)
+                self.insertOnlineMemberData(bgContext: bgContext,
+					    isBeingTested: isBeingTested)
             }
         }
 
     }
 
-    fileprivate func insertOnlineMemberData(bgContext: NSManagedObjectContext, town: String = "Oirschot") {
+    fileprivate func insertOnlineMemberData(bgContext: NSManagedObjectContext,
+                                            isBeingTested: Bool,
+                                            town: String = "Oirschot") {
         let idPlus = OrganizationIdPlus(fullName: "Fotogroep Oirschot",
                                         town: town,
                                         nickname: "fgOirschot")
@@ -39,10 +48,12 @@ final public class FotogroepOirschotMembersProvider: Sendable {
 
         _ = Level2JsonReader(bgContext: bgContext,
                              organizationIdPlus: idPlus,
-                             isInTestBundle: false,
+                             isBeingTested: isBeingTested,
                              useOnlyInBundleFile: false)
         do {
-            try bgContext.save()
+            if bgContext.hasChanges {
+                try bgContext.save()
+            }
         } catch {
             ifDebugFatalError("Failed to save club \(idPlus.nickname)", file: #fileID, line: #line)
         }

@@ -17,17 +17,17 @@ public class Level2JsonReader { // normally running on a background thread
     // init() does it all: it fetches the JSON data, parses it, and updates the data stored in Core Data.
     public init(bgContext: NSManagedObjectContext,
                 organizationIdPlus: OrganizationIdPlus,
-                isInTestBundle: Bool,
+                isBeingTested: Bool,
                 useOnlyInBundleFile: Bool = false // true avoids fetching the latest version from GitHub
                ) {
         _ = FetchAndProcessFile( // FetchAndProcessFile fetches jsonData and passes it to readRootLevel2Json()
                                 bgContext: bgContext,
                                 fileSelector: FileSelector(organizationIdPlus: organizationIdPlus,
-                                                           isInTestBundle: isInTestBundle),
+                                                           isBeingTested: isBeingTested),
                                 fileType: "json",
                                 fileSubType: "level2", // "fgDeGender.level2.json"
                                 useOnlyInBundleFile: useOnlyInBundleFile,
-                                isBeingTested: isInTestBundle,
+                                isBeingTested: isBeingTested,
                                 fileContentProcessor: Level2JsonReader.readRootLevel2Json(bgContext:
                                                                                           jsonData:
                                                                                           fileSelector:
@@ -38,7 +38,7 @@ public class Level2JsonReader { // normally running on a background thread
     @Sendable static fileprivate func readRootLevel2Json(bgContext: NSManagedObjectContext,
                                                          jsonData: String,
                                                          fileSelector: FileSelector,
-                                                         isBeingTested: Bool = false) {
+                                                         isBeingTested: Bool) {
 
         guard fileSelector.organizationIdPlus != nil else { // need expected id of a club
             fatalError("Missing `targetIdorganizationIdPlus` in readRootLevel2Json()")
@@ -292,12 +292,14 @@ public class Level2JsonReader { // normally running on a background thread
             return nil // in non-debug software, just skip loading this Level 2 file
         }
 
-        guard idPlus.town == targetIdPlus.town || isBeingTested else { // expected town?
-            ifDebugFatalError("""
-                              Warning: there is a mismatch in Town: \
-                              the in-file app town is \(idPlus.town) but \(targetIdPlus.town) was expecting.
-                              """)
-            return nil // in non-debug software, just skip loading this Level 2 file
+        if isBeingTested == false {
+            guard idPlus.town == targetIdPlus.town else { // expected town?
+                ifDebugFatalError("""
+                                  Warning: there is a mismatch for the Town of \(targetIdPlus.fullName): \
+                                  the in-file town is \(idPlus.town) but \(targetIdPlus.town) was expected.
+                                  """)
+                return nil // in non-debug software, just skip loading this Level 2 file
+            }
         }
 
         return idPlus

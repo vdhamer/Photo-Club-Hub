@@ -1,5 +1,5 @@
 //
-//  OrganizationListView.swift
+//  OrganizationListView2626.swift
 //  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 07/01/2022.
@@ -7,7 +7,8 @@
 
 import SwiftUI
 
-struct OrganizationListView: View {
+@available(iOS 26.0, *)
+struct OrganizationListView2626: View {
     @Environment(\.managedObjectContext) fileprivate var viewContext
     @StateObject var model = PreferencesViewModel()
     @State var locationManager = LocationManager()
@@ -39,7 +40,7 @@ struct OrganizationListView: View {
         ScrollView(.vertical, showsIndicators: true) {
 
             LazyVStack {
-                FilteredOrganizationView(predicate: model.preferences.photoClubPredicate, searchText: $searchText)
+                FilteredOrganizationView1718(predicate: model.preferences.photoClubPredicate, searchText: $searchText)
             }
             .scrollTargetLayout()
 
@@ -95,7 +96,8 @@ struct OrganizationListView: View {
         .navigationBarTrailing // iPhone: Search field in drawer
 }
 
-struct NoClubsText: View {
+@available(iOS 26.0, *)
+struct NoClubsText2626: View {
     var body: some View {
         Text("""
              No photo clubs seem to be currently loaded.
@@ -104,13 +106,14 @@ struct NoClubsText: View {
     }
 }
 
-struct PhotoClubListView_Previews: PreviewProvider {
+@available(iOS 26.0, *)
+struct PhotoClubListView2626_Previews: PreviewProvider {
     static let predicate = NSPredicate(format: "fullName_ = %@ || fullName_ = %@ || fullName_ = %@",
                                        argumentArray: ["PhotoClub2", "PhotoClub1", "PhotoClub3"])
 
     static var previews: some View {
         NavigationStack {
-            OrganizationListView(predicate: predicate, navigationTitle: String("PhotoClubView"))
+            OrganizationListView1718(predicate: predicate, navigationTitle: String("PhotoClubView"))
                 .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
         }
     }
