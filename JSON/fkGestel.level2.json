@@ -1,14 +1,16 @@
 {
     "club": {
         "idPlus": {
-            "town"    : "Sint-Michielsgestel",
+            "town": "Sint-Michielsgestel",
             "fullName": "Fotokring Sint-Michielsgestel",
             "nickName": "fkGestel"
         },
-        "coordinates": {"latitude": 51.64036, "longitude": 5.34749},
+        "coordinates": {
+            "latitude": 51.64036, "longitude": 5.34749
+        },
         "optional": {
-            "website": "https://www.Fotokring-gestel.nl",
-            "level2URL": "https://www.fotokring-gestel.nl/fkGestel.level2.json",
+            "website": "https://www.fotokring-gestel.nl",
+            "level2URL": "https://www.fotokring-gestel.nl/fkgestel.level2.json",
             "contactEmail": "info@fotokring-gestel.nl",
             "nlSpecific": {"fotobondNumber": 1615}
         }
@@ -19,40 +21,117 @@
 
         {
             "name": {
-                "givenName" : "Ad",
-                "infixName" : "van",
+                "givenName": "Ad",
+                "infixName": "van",
                 "familyName": "Mil"
             },
             "optional": {
-                "roles": {
-                    "isOther": true
-                },
-                "website": "https://glass.photo/vdhamer",
-                "photographerImage": "http://www.vdhamer.com/wp-content/uploads/2022/07/cropped-2006_Norway_276_SSharp1_4.jpg",
-                "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg",
-                "level3URL": "https://www.example.com/XmpleMax/Mien_van_Rotterdam.level3.json",
+                "featuredImage": "https://www.fotokring-gestel.nl/wp-admin/upload.php?item=6029",
                 "expertises": ["Macro", "Landscape"]
             }
         },
 
         {
             "name": {
-                "givenName" : "Coby",
-                "infixName" : "",
+                "givenName": "Majonka",
+                "infixName": "van",
+                "familyName": "Anken"
+            },
+            "optional": {
+                "featuredImage": "https://www.fotokring-gestel.nl/wp-admin/upload.php?item=5131",
+                "roles": {
+                    "isAdmin": true
+                }
+            }
+        },
+
+        {
+            "name": {
+                "givenName": "Coby",
+                "infixName": "",
                 "familyName": "Spuls-Veld"
             },
             "optional": {
+                "featuredImage": "https://www.fotokring-gestel.nl/wp-admin/upload.php?item=5997",
+                "expertises": ["People", "Travel"]
+            }
+        },
+
+        {
+            "name": {
+                "givenName": "Peter",
+                "infixName": "van",
+                "familyName": "Ham"
+            },
+            "optional": {
+                "featuredImage": "https://www.fotokring-gestel.nl/wp-admin/upload.php?item=6774",
                 "roles": {
                     "isOther": true
-                },
-                "status": {
-                    "isFormerMember": true
-                },
-                "website": "https://glass.photo/vdhamer",
-                "photographerImage": "http://www.vdhamer.com/wp-content/uploads/2022/07/cropped-2006_Norway_276_SSharp1_4.jpg",
-                "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg",
-                "level3URL": "https://www.example.com/XmpleMax/Mike_Blaak.level3.json",
-                "expertises": ["People", "Travel", "Nature"]
+                }
+            }
+        },
+
+        {
+            "name": {
+                "givenName": "Gidi",
+                "infixName": "van",
+                "familyName": "Osch"
+            },
+            "optional": {
+                "featuredImage": "https://www.fotoclubdendungen.nl/wp-content/uploads/2023/10/Ger-7-1030x687.jpg",
+                "roles": {
+                    "isTreasurer": true
+                }
+            }
+        },
+
+        {
+            "name": {
+                "givenName": "Herman",
+                "infixName": "van",
+                "familyName": "Eijck"
+            },
+            "optional": {
+                "featuredImage": "https://www.fotokring-gestel.nl/wp-admin/upload.php?item=6779",
+                "roles": {
+                    "isOther": true
+                }
+            }
+        },
+
+        {
+            "name": {
+                "givenName": "Jacqueline",
+                "infixName": "van der",
+                "familyName": "Gugten"
+            },
+            "optional": {
+                "featuredImage": "https://www.fotokring-gestel.nl/wp-admin/upload.php?item=6034"
+            }
+        },
+
+        {
+            "name": {
+                "givenName": "Rien",
+                "infixName": "den",
+                "familyName": "Otter"
+            },
+            "optional": {
+                "featuredImage": "https://www.fotokring-gestel.nl/wp-admin/upload.php?item=6533"
+            }
+        },
+
+        {
+            "name": {
+                "givenName": "Jac",
+                "infixName": "",
+                "familyName": "Hendriks"
+            },
+            "optional": {
+                "featuredImage": "https://www.fotokring-gestel.nl/wp-admin/upload.php?item=5037",
+                "roles": {
+                    "isChairman": true
+                }
             }
         }
 
