@@ -10,36 +10,49 @@ import CoreData // for PersistenceController
 final public class XampleMaxMembersProvider: Sendable {
 
     public init(bgContext: NSManagedObjectContext,
+                isBeingTested: Bool,
                 useOnlyInBundleFile: Bool = false,
-                synchronousWithRandomTown: Bool = false,
-                randomTown: String = "RandomTown") {
+                randomTownForTesting: String? = nil) {
 
-        if synchronousWithRandomTown {
-            bgContext.performAndWait { // ...or execute same block synchronously
-                insertOnlineMemberData(bgContext: bgContext, town: randomTown)
+        if isBeingTested {
+            guard let randomTownForTesting else {
+                ifDebugFatalError("Missing randomTownForTesting", file: #file, line: #line)
+                return
+            }
+            bgContext.performAndWait { // execute block synchronously
+                insertOnlineMemberData(bgContext: bgContext,
+                                       isBeingTested: isBeingTested,
+                                       town: randomTownForTesting,
+                                       useOnlyInBundleFile: useOnlyInBundleFile)
             }
         } else {
-            bgContext.perform { // execute block asynchronously...
-                self.insertOnlineMemberData(bgContext: bgContext)
+            bgContext.perform { // ... or execute same block asynchronously
+                self.insertOnlineMemberData(bgContext: bgContext,
+                                            isBeingTested: isBeingTested,
+                                            useOnlyInBundleFile: useOnlyInBundleFile)
             }
         }
 
     }
 
-    fileprivate func insertOnlineMemberData(bgContext: NSManagedObjectContext, town: String = "Rotterdam") {
+    fileprivate func insertOnlineMemberData(bgContext: NSManagedObjectContext,
+                                            isBeingTested: Bool,
+                                            town: String = "Rotterdam",
+                                            useOnlyInBundleFile: Bool) {
         let idPlus = OrganizationIdPlus(fullName: "Xample Club With Maximal Data",
                                         town: town,
                                         nickname: "XampleMax")
 
         let club = Organization.findCreateUpdate(context: bgContext,
                                                  organizationTypeEnum: .club,
-                                                 idPlus: idPlus)
+                                                 idPlus: idPlus
+                                                )
         ifDebugPrint("\(club.fullNameTown): Starting insertOnlineMemberData() in background")
 
         _ = Level2JsonReader(bgContext: bgContext,
                              organizationIdPlus: idPlus,
-                             isInTestBundle: false,
-                             useOnlyInBundleFile: false)
+                             isBeingTested: isBeingTested,
+                             useOnlyInBundleFile: useOnlyInBundleFile)
         do {
             if bgContext.hasChanges {
                 try bgContext.save()

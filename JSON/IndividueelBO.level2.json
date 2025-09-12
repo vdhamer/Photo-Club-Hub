@@ -32,7 +32,7 @@
             "familyName": "Nat"
         },
         "optional": {
-            "website": "www.advandernat.nl",
+            "website": "https://www.advandernat.nl",
             "featuredImage": "",
             "level3URL": "",
             "membershipStartDate": "2025-09-08",
@@ -91,7 +91,7 @@
                 "familyName": "Rooij"
             },
             "optional": {
-                "website": "www.gillesderooij.nl",
+                "website": "https://www.gillesderooij.nl",
                 "featuredImage": "",
                 "level3URL": "",
                 "membershipStartDate": "2025-08-09",
