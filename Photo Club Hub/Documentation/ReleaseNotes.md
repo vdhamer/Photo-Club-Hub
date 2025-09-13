@@ -6,7 +6,11 @@ Prelude screen
 Code Maintenance
 * Tested with Xcode 26 RC1 (17A321), macOS 26.0 (25A353), iOS 26.0 (23A339), SwiftLint 0.61.
 * Prepare user interface files for more Liquid Glass user interface changes. Issue #606
-* TODO: sync in the code updates from Photo Club Hub HTML.
+* Sync in the code updates from Photo Club Hub HTML.
+* Forced a data reset at dataResetPending284b4650 (related to extertise change in IndividueelBO).
+
+Data Maintenance
+* Added members to club IndividueelBO.
 
 Data Maintenance
 * Support for loading of club fkGestel.
@@ -37,7 +41,7 @@ Code Maintenance
 * Fixed: testing problem due to use of random town name. Test still require moving data files into test module.
 
 Data Maintenance
-* Forced a datareset at dataResetPending283b4649 (related to Street-Art).
+* Forced a data reset at dataResetPending283b4649 (related to Street-Art).
 * Fixed a few lower-case Expertises in club IndividueelBO.
 * Fixed nickname of FG deGender -> fgDeGender and FG Oirschot -> fgOirschot
 * Approved "Industrial heritage" (NL: "industrieel erfgoed") expertise tag.
