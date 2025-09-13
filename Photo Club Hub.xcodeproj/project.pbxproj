@@ -627,6 +627,7 @@
 		D0831A48277F736C0049AB84 /* Documentation */ = {
 			isa = PBXGroup;
 			children = (
+				D0831A4B277F736C0049AB84 /* ReleaseNotes.md */,
 				D04D7B2B2D2B3B210048454B /* Jaarverslag 2024 Website.docx */,
 				D0F361CE2D5134A00077FFA0 /* Nieuwsbrief_Feb25_app.docx */,
 				D036EA082D5019510012A47D /* FAQ_nl.md */,
@@ -635,7 +636,6 @@
 				D01383382E23E67A002C325D /* Level2_expertise_EN.md */,
 				D0F4B1822DEDF2D7009849A1 /* Level2_expertise_NL.md */,
 				D01DFAA627E778BD007BABFA /* offsets.md */,
-				D0831A4B277F736C0049AB84 /* ReleaseNotes.md */,
 				D06403972E2BD25900515F25 /* Nieuwsbrief_Aug_2025_app.pages */,
 				D0840FB72D07481B00458E06 /* Nieuwsbrief_Jan_2025_app.pages */,
 				D076BE702CF0CC10008F4B47 /* Readme_EN_2_8_0.pages */,

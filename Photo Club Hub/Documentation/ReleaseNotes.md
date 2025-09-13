@@ -1,7 +1,7 @@
 ### 2.8.4 (GitHub commit ???????) ??-09-25
 
 Prelude screen
-* Button prepared for Liquid Glass style (on iOS 26).
+* Button prepared to support Liquid Glass UI on iOS 26.
 
 Code Maintenance
 * Tested with Xcode 26 RC1 (17A321), macOS 26.0 (25A353), iOS 26.0 (23A339), SwiftLint 0.61.
