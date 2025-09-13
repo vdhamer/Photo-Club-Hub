@@ -3,17 +3,19 @@
 Prelude screen
 * Button prepared to support Liquid Glass UI on iOS 26.
 
+Portfolio's screen
+* Fixed: fkGester no longer repeats Sint-Michielsgestel twice
+* Support for club fkGestel.
+
 Code Maintenance
 * Tested with Xcode 26 RC1 (17A321), macOS 26.0 (25A353), iOS 26.0 (23A339), SwiftLint 0.61.
 * Prepare user interface files for more Liquid Glass user interface changes. Issue #606
 * Sync in the code updates from Photo Club Hub HTML.
 * Forced a data reset at dataResetPending284b4650 (related to extertise change in IndividueelBO).
+* Added 7 tests checking whether or not town gets appended too fullName in Organizaiton.fullNameTown
 
 Data Maintenance
 * Added members to club IndividueelBO.
-
-Data Maintenance
-* Support for loading of club fkGestel.
 
 This build #4650 was made using Xcode 26.0 RC1 and is suitable for release to the App Store.
 
