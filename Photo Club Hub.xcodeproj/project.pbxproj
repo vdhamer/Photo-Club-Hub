@@ -627,24 +627,24 @@
 		D0831A48277F736C0049AB84 /* Documentation */ = {
 			isa = PBXGroup;
 			children = (
-				D0831A4B277F736C0049AB84 /* ReleaseNotes.md */,
-				D06403972E2BD25900515F25 /* Nieuwsbrief_Aug_2025_app.pages */,
-				D0B6B05C2DB27A3E00EAAF69 /* Photo Club Hub intro.pptx */,
+				D04D7B2B2D2B3B210048454B /* Jaarverslag 2024 Website.docx */,
 				D0F361CE2D5134A00077FFA0 /* Nieuwsbrief_Feb25_app.docx */,
 				D036EA082D5019510012A47D /* FAQ_nl.md */,
-				D0A380932D39B0FE00FF95F4 /* Level2_creation_EN.md */,
 				D073FE162D3B13B300DB01F4 /* Level2_aanmaken_NL.md */,
+				D0A380932D39B0FE00FF95F4 /* Level2_creation_EN.md */,
 				D01383382E23E67A002C325D /* Level2_expertise_EN.md */,
 				D0F4B1822DEDF2D7009849A1 /* Level2_expertise_NL.md */,
-				D04D7B2B2D2B3B210048454B /* Jaarverslag 2024 Website.docx */,
+				D01DFAA627E778BD007BABFA /* offsets.md */,
+				D0831A4B277F736C0049AB84 /* ReleaseNotes.md */,
+				D06403972E2BD25900515F25 /* Nieuwsbrief_Aug_2025_app.pages */,
 				D0840FB72D07481B00458E06 /* Nieuwsbrief_Jan_2025_app.pages */,
 				D076BE702CF0CC10008F4B47 /* Readme_EN_2_8_0.pages */,
 				D0E02F972B80191300D67CDA /* Readme_NL_2_8_0.pages */,
+				D0300D2A2E2D6BA500A11A03 /* Nieuwsbrief_Aug_2025_app.pdf */,
 				D07A1E2E28314EA600C77F66 /* SwiftUIEnvironmentValues.png */,
-				D01DFAA627E778BD007BABFA /* offsets.md */,
+				D0B6B05C2DB27A3E00EAAF69 /* Photo Club Hub intro.pptx */,
 				D04A2B112AC0958C003ED113 /* LineCount.xlsx */,
 				D0A958632D596C3300658373 /* Website_Status_PPT */,
-				D0300D2A2E2D6BA500A11A03 /* Nieuwsbrief_Aug_2025_app.pdf */,
 			);
 			path = Documentation;
 			sourceTree = "<group>";
