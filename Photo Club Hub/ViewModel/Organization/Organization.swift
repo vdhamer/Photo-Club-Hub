@@ -60,20 +60,24 @@ extension Organization {
 		set { fullName_ = newValue }
 	}
 
-    // appends " \(town)" to fullName unless `town` is already included as a word in fullName
+    // Appends " \(town)" to \(fullName) unless \(town) is already part of \(fullName).
+    // The following cases are tested in OrganizationTest:
     // "Fotogroep Waalre" and "Aalst" returns "Fotogroep Waalre (Aalst)"
     // "Fotogroep Waalre" and "Waalre" returns "Fotogroep Waalre"
     // "Fotogroep Waalre" and "waalre" returns "Fotogroep Waalre"
     // "Fotogroep Waalre" and "to" returns "Fotogroep Waalre (to)"
     // "Fotogroep Waalre" and "Waal" returns "Fotogroep Waalre (Waal)" if you use NLP-based word matching
-    // "Fotoclub Den Dungen" and "Den Dungen" don't use NLP-based word matching because town looks like multiple words
+    // "Fotoclub Den Dungen" and "Den Dungen" returns "Fotoclub Den Dungen"
+    // "Fotokring Sint-Michelsgestel" and "Sint-Michelsgestel" returns "Fotoclub Sint-Michelsgestel"
     @objc public var fullNameTown: String { // @objc needed for SectionedFetchRequest's sectionIdentifier
         if fullName.containsWordUsingNLP(targetWord: town) {
             return fullName // fullname "Fotogroep Waalre" and town "Waalre" returns "Fotogroep Waalre"
         }
 
-        if fullName.contains(town) && town.contains(" ") {
-            return fullName // fullname "Fotoclub Den Dungen" and town "Den Dungen" returns "Fotoclub Den Dungen"
+        if fullName.contains(town) { // for "Fotoclub Den Dungen" and "Fotokring Sint-Michielsgestel"
+            if town.contains(" ") || town.contains("-") {
+                return fullName
+            }
         }
 
         return "\(fullName) (\(town))" // fullname "Fotogroep Aalst" with "Waalre" returns "Fotogroep Aalst (Waalre)"
