@@ -26,7 +26,7 @@
                 "familyName": "Mil"
             },
             "optional": {
-                "featuredImage": "https://www.fotokring-gestel.nl/wp-admin/upload.php?item=6029",
+                "featuredImage": "https://www.fotokring-gestel.nl/wp-content/uploads/2024/05/Ad-mei.jpg",
                 "expertises": ["Macro", "Landscape"]
             }
         },
@@ -38,7 +38,7 @@
                 "familyName": "Anken"
             },
             "optional": {
-                "featuredImage": "https://www.fotokring-gestel.nl/wp-admin/upload.php?item=5131",
+                "featuredImage": "https://www.fotokring-gestel.nl/wp-content/uploads/2024/04/Majonka-26-april.jpg",
                 "roles": {
                     "isAdmin": true
                 }
@@ -52,7 +52,7 @@
                 "familyName": "Spuls-Veld"
             },
             "optional": {
-                "featuredImage": "https://www.fotokring-gestel.nl/wp-admin/upload.php?item=5997",
+                "featuredImage": "https://www.fotokring-gestel.nl/wp-content/uploads/2024/02/2024_02_10_IMG_6406-klein.jpg",
                 "expertises": ["People", "Travel"]
             }
         },
@@ -64,7 +64,7 @@
                 "familyName": "Ham"
             },
             "optional": {
-                "featuredImage": "https://www.fotokring-gestel.nl/wp-admin/upload.php?item=6774",
+                "featuredImage": "https://www.fotokring-gestel.nl/wp-content/uploads/2025/07/3-juli-Peter-Abstract.jpg",
                 "roles": {
                     "isOther": true
                 }
@@ -78,7 +78,7 @@
                 "familyName": "Osch"
             },
             "optional": {
-                "featuredImage": "https://www.fotoclubdendungen.nl/wp-content/uploads/2023/10/Ger-7-1030x687.jpg",
+                "featuredImage": "https://www.fotokring-gestel.nl/wp-content/uploads/2025/09/3-april-Gidi-1.jpg",
                 "roles": {
                     "isTreasurer": true
                 }
@@ -92,7 +92,7 @@
                 "familyName": "Eijck"
             },
             "optional": {
-                "featuredImage": "https://www.fotokring-gestel.nl/wp-admin/upload.php?item=6779",
+                "featuredImage": "https://www.fotokring-gestel.nl/wp-content/uploads/2020/12/08-Herman-Purperreiger-1500x1000-1.jpg",
                 "roles": {
                     "isOther": true
                 }
@@ -106,7 +106,7 @@
                 "familyName": "Gugten"
             },
             "optional": {
-                "featuredImage": "https://www.fotokring-gestel.nl/wp-admin/upload.php?item=6034"
+                "featuredImage": "https://www.fotokring-gestel.nl/wp-content/uploads/2024/12/Jacqueline-19-december.jpg"
             }
         },
 
@@ -117,7 +117,7 @@
                 "familyName": "Otter"
             },
             "optional": {
-                "featuredImage": "https://www.fotokring-gestel.nl/wp-admin/upload.php?item=6533"
+                "featuredImage": "https://www.fotokring-gestel.nl/wp-content/uploads/2025/01/01-januari-Rien-JBZ-2025-ZW.jpg"
             }
         },
 
@@ -128,7 +128,7 @@
                 "familyName": "Hendriks"
             },
             "optional": {
-                "featuredImage": "https://www.fotokring-gestel.nl/wp-admin/upload.php?item=5037",
+                "featuredImage": "https://www.fotokring-gestel.nl/wp-content/uploads/2023/01/Jac-3.jpg",
                 "roles": {
                     "isChairman": true
                 }
