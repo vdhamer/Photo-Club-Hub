@@ -3,7 +3,7 @@
 Prelude screen
 * Continue button converted to support Liquid Glass when run on iOS 26.0.
 
-Portfolio's screen
+Portfolios screen
 * Fixed: fkGestel no longer repeats Sint-Michielsgestel twice.
 * Support for club fkGestel.
 
