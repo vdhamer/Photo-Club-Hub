@@ -1,4 +1,4 @@
-### 2.8.4 (GitHub commit 4bff724) 16-09-25
+### 2.8.4 (GitHub commit bc4dcb7) 17-09-25
 
 PRELUDE SCREEN
 
