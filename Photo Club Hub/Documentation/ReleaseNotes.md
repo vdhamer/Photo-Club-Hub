@@ -17,6 +17,10 @@ CODE MAINTENANCE
 * Forced a data reset at dataResetPending284b4650 (related to extertise change in IndividueelBO).
 * Added 7 tests about deciding whether Town gets appended to fullName in Organizaiton.fullNameTown.
 
+CLUBS AND MUSEUMS SCREEN
+
+* Improved layout of statistics shown at top of screen.
+
 DATA MAINTENANCE
 
 * Added members to club IndividueelBO.

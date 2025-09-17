@@ -29,7 +29,7 @@ struct ItemFilterStatsView: View { // display right-aligned string like "12 entr
 
     var body: some View {
         HStack {
-            Spacer() // allign to right
+            Spacer() // allign to trailing edge
 
             if elementType == ItemFilterStatsEnum.organization {
                 if (filteredCount == 1) && unfiltered {
@@ -52,9 +52,8 @@ struct ItemFilterStatsView: View { // display right-aligned string like "12 entr
                     Text("\(filteredCount) photographers (of \(unfilteredCount))", comment: comment)
                 }
             }
-
         }
-        .padding(.horizontal, 0)
+        .padding(.trailing)
         .font(.callout) // small font
 
         var filtered: Bool { filteredCount != unfilteredCount }
