@@ -1,3 +1,9 @@
+### 2.8.5 (GitHub commit ???????) ??-09-25
+
+This build #4650 was made using Xcode 26.0.
+
+---------------------------------------------------------------------------
+
 ### 2.8.4 (GitHub commit bc4dcb7) 17-09-25
 
 PRELUDE SCREEN
