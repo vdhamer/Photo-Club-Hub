@@ -1,6 +1,10 @@
 ### 2.8.5 (GitHub commit ???????) ??-09-25
 
-This build #4650 was made using Xcode 26.0.
+* Tested with Xcode 26.0.1 (17A400).
+* TODO: Sync of code updates from Photo Club Hub HTML.
+* TODO: Crash on Clubs & Museums page??
+
+This build #4651 was made using Xcode 26.0.1.
 
 ---------------------------------------------------------------------------
 
