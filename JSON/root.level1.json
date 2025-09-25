@@ -548,57 +548,6 @@
 
         {
             "idPlus": {
-                "town": "Geldrop",
-                "fullName": "Fotoclub de Dreef",
-                "nickName": "fcDeDreef"
-            },
-            "coordinates": {
-                "latitude": 51.41932,
-                "longitude": 5.573495
-            },
-            "optional": {
-                "website": "https://fotoclubdedreef.nl",
-                "level2URL": "https://www.example.com/fcDeDreef.level2.json",
-                "remark": [
-                    {
-                        "language": "EN",
-                        "value": "This 8 member club caters to beginners and well as more experienced photographers."
-                    },
-                    {
-                        "language": "NL",
-                        "value": "De club heeft 8 leden en is open voor beginnelingen tot gevorderden."
-                    }
-                ]
-            }
-        },
-
-        {
-            "idPlus": {
-                "town": "Geldrop",
-                "fullName": "Fotogroep Digifoto Geldrop",
-                "nickName": "fgDigifoto"
-            },
-            "coordinates": {
-                "latitude": 51.42227,
-                "longitude": 5.56280
-            },
-            "optional": {
-                "level2URL": "https://www.example.com/fgDigifoto.level2.json",
-                "remark": [
-                    {
-                        "language": "EN",
-                        "value": "We couldn't find a working website for the club, but the club was active in Oct 2023."
-                    },
-                    {
-                        "language": "NL",
-                        "value": "De club lijkt geen website meer te hebben. In 2023 hielden zij een 20-jarig jubileum."
-                    }
-                ]
-            }
-        },
-
-        {
-            "idPlus": {
                 "town": "Eindhoven",
                 "fullName": "Dekate Mousa",
                 "nickName": "DekateMousa"
@@ -644,6 +593,32 @@
                     {
                         "language": "NL",
                         "value": "De club schrijft \"een fotoclub enthousiaste amateurfotografen die 50 jaar en ouder zijn\"."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Eindhoven",
+                "fullName": "Foto-videoclub DAF",
+                "nickName": "DAF"
+            },
+            "coordinates": {
+                "latitude": 51.433188,
+                "longitude": 5.504971
+            },
+            "optional": {
+                "website": "https://www.daffotovideoclub.nl",
+                "level2URL": "https://www.example.com/daf.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "This club consists of employees of a major truck manufacturer based in Eindhoven."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "De club bestaan uit DAF medewerkers en organiseert ondermeer workshops op het DAF terrein in EIndhoven, maar ook elders."
                     }
                 ]
             }
@@ -870,6 +845,57 @@
 
         {
             "idPlus": {
+                "town": "Geldrop",
+                "fullName": "Fotoclub de Dreef",
+                "nickName": "fcDeDreef"
+            },
+            "coordinates": {
+                "latitude": 51.41932,
+                "longitude": 5.573495
+            },
+            "optional": {
+                "website": "https://fotoclubdedreef.nl",
+                "level2URL": "https://www.example.com/fcDeDreef.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "This 8 member club caters to beginners and well as more experienced photographers."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "De club heeft 8 leden en is open voor beginnelingen tot gevorderden."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Geldrop",
+                "fullName": "Fotogroep Digifoto Geldrop",
+                "nickName": "fgDigifoto"
+            },
+            "coordinates": {
+                "latitude": 51.42227,
+                "longitude": 5.56280
+            },
+            "optional": {
+                "level2URL": "https://www.example.com/fgDigifoto.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "We couldn't find a working website for the club, but the club was active in Oct 2023."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "De club lijkt geen website meer te hebben. In 2023 hielden zij een 20-jarig jubileum."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Gemert",
                 "fullName": "Foto Expressie Groep Gemert",
                 "nickName": "fegGemert"
@@ -1022,6 +1048,32 @@
                     {
                         "language": "NL",
                         "value": "De club bestaat sinds 2015 en heeft ongeveer 20 leden."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Middelrode",
+                "fullName": "Fotoclub Natuur in Beeld",
+                "nickName": "fcNatuurInBeeld"
+            },
+            "coordinates": {
+                "latitude": 51.66295,
+                "longitude": 5.41814
+            },
+            "optional": {
+                "website": "https://natuurinbeeldmiddelrode.nl",
+                "level2URL": "https://www.example.com/fcNatuurMiddelrode.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "The club specializes in nature photography and videography. It streses the importance of knowing about and respecting your subjects."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Deze natuurfotografie club benadrukt het belang van kennis van- en respect voor de natuur bij het maken van opnamen"
                     }
                 ]
             }
@@ -1233,6 +1285,32 @@
                     {
                         "language": "NL",
                         "value": "De groep heeft ongeveer 55 leden. Er wordt een foto van de maand en foto van het jaar gekozen."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Oss",
+                "fullName": "Vrije Osse Fotoclub Met Body",
+                "nickName": "VOFMB"
+            },
+            "coordinates": {
+                "latitude": 51.76730,
+                "longitude": 5.52094
+            },
+            "optional": {
+                "website": "https://www.facebook.com/groups/vofmb/",
+                "level2URL": "https://www.example.com/VOFMB.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "The club's name refer to a fusion between two separate photography clubs in Oss."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "De naam is het gevolg van een samensmelting in 2016 tussen de Vrije Osse Fotoclub en Fotoclub Met Body."
                     }
                 ]
             }
