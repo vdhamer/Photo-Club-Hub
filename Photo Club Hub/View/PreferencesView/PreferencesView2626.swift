@@ -17,6 +17,7 @@ struct PreferencesView2626: View {
     @State fileprivate var localPreferences = PreferencesStruct.defaultValue // parameters for various Toggles()
 
     fileprivate let title = String(localized: "Preferences",
+                                   table: "PhotoClubHub.SwiftUI",
                                    comment: "Title of screen with toggles to adjust preferences")
     fileprivate static let animation: Animation = Animation.easeIn(duration: 5)
 
@@ -32,12 +33,14 @@ struct PreferencesView2626: View {
             NavigationStack {
                 List {
                     Section(header: Text("Member categories",
+                                         tableName: "PhotoClubHub.SwiftUI",
                                          comment: "In Preferences, above toggles like \"Show former members\""),
                             content: {
                         HStack {
                             RoleStatusIconView(memberStatus: .current)
                                 .foregroundColor(.memberPortfolioColor)
                             Toggle(String(localized: "Show current members",
+                                          table: "PhotoClubHub.SwiftUI",
                                           comment: "Label of toggle in Preferences"),
                                    isOn: $localPreferences.showCurrentMembers.animation())
                         }
@@ -46,6 +49,7 @@ struct PreferencesView2626: View {
                                 RoleStatusIconView(memberRole: .viceChairman)
                                     .foregroundColor(.deceasedColor)
                                 Toggle(String(localized: "Show club officers",
+                                              table: "PhotoClubHub.SwiftUI",
                                               comment: "Label of toggle in Preferences"),
                                        isOn: $localPreferences.showOfficers)
                             }
@@ -54,6 +58,7 @@ struct PreferencesView2626: View {
                                 RoleStatusIconView(memberRole: .viceChairman)
                                     .foregroundColor(.deceasedColor)
                                 Text("“Current members” includes “club officers”",
+                                     tableName: "PhotoClubHub.SwiftUI",
                                      comment: "Shown when \"Show club officers\" entry is missing in Preferences")
                                     .foregroundColor(.gray)
                             }
@@ -62,6 +67,7 @@ struct PreferencesView2626: View {
                             RoleStatusIconView(memberStatus: .prospective)
                                 .foregroundColor(.memberPortfolioColor)
                             Toggle(String(localized: "Show aspiring members",
+                                          table: "PhotoClubHub.SwiftUI",
                                           comment: "Label of toggle in Preferences"),
                                    isOn: $localPreferences.showAspiringMembers)
                         }
@@ -69,13 +75,16 @@ struct PreferencesView2626: View {
                             RoleStatusIconView(memberStatus: .honorary)
                                 .foregroundColor(.memberPortfolioColor)
                             Toggle(String(localized: "Show honorary members",
+                                          table: "PhotoClubHub.SwiftUI",
                                           comment: "Label of toggle in Preferences"),
                                    isOn: $localPreferences.showHonoraryMembers)
                         }
                         HStack {
                             RoleStatusIconView(memberStatus: .former)
                                 .foregroundColor(.memberPortfolioColor)
-                            Toggle(String(localized: "Show former members", comment: "Label of toggle in Preferences"),
+                            Toggle(String(localized: "Show former members",
+                                          table: "PhotoClubHub.SwiftUI",
+                                          comment: "Label of toggle in Preferences"),
                                    isOn: $localPreferences.showFormerMembers.animation())
                         }
                         if localPreferences.showFormerMembers == false {
@@ -83,6 +92,7 @@ struct PreferencesView2626: View {
                                 RoleStatusIconView(memberStatus: .deceased)
                                     .foregroundColor(.deceasedColor)
                                 Toggle(String(localized: "Show deceased members",
+                                              table: "PhotoClubHub.SwiftUI",
                                               comment: "Label of toggle in Preferences"),
                                        isOn: $localPreferences.showDeceasedMembers)
                             }
@@ -92,6 +102,7 @@ struct PreferencesView2626: View {
                                     .foregroundColor(.deceasedColor)
                                 Text(
                                     "“Former members” includes “deceased members”",
+                                    tableName: "PhotoClubHub.SwiftUI",
                                     comment: "Shown when \"Show deceased members\" entry is missing in Preferences")
                                     .foregroundColor(.gray)
                             }
@@ -100,12 +111,14 @@ struct PreferencesView2626: View {
                             RoleStatusIconView(memberStatus: .coach)
                                 .foregroundColor(.memberPortfolioColor)
                             Toggle(String(localized: "Show external coaches",
+                                          table: "PhotoClubHub.SwiftUI",
                                           comment: "Label of toggle in Preferences"),
                                    isOn: $localPreferences.showExternalCoaches)
                         }
                     }) // Section
 
                     Section(header: Text("Advanced",
+                                         tableName: "PhotoClubHub.SwiftUI",
                                          comment: "In Preferences, above link to Settings"),
                             content: {
                                 Button {
@@ -117,6 +130,7 @@ struct PreferencesView2626: View {
                                     }
                                 } label: {
                                     Text("Options in Settings",
+                                         tableName: "PhotoClubHub.SwiftUI",
                                          comment: "Link to Photo Club Hub section in Settings")
                                 }
                     })

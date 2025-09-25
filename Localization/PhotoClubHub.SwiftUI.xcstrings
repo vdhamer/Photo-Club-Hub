@@ -35,9 +35,6 @@
         }
       }
     },
-    "%@" : {
-      "shouldTranslate" : false
-    },
     "%lld members (inc. ex-members)" : {
       "comment" : "<count> members (including all types of members) within photo club",
       "localizations" : {
@@ -208,9 +205,6 @@
         }
       }
     },
-    "admin" : {
-      "comment" : "Administrative role of member within a club."
-    },
     "Advanced" : {
       "comment" : "In Preferences, above link to Settings",
       "localizations" : {
@@ -244,9 +238,6 @@
           }
         }
       }
-    },
-    "chairman" : {
-      "comment" : "Administrative role of member within a club."
     },
     "Clubs and Museums" : {
       "comment" : "Title of page with maps for Clubs and Museums",
@@ -318,7 +309,7 @@
       }
     },
     "frameSize = [%@,%@]" : {
-      "comment" : "Used in DebugPanel. I couldn't avoid localization here. Just use original as translation",
+      "comment" : "Used in DebugPanel. Can't avoid localization here. Just use original as translation",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -470,6 +461,23 @@
         }
       }
     },
+    "of2" : {
+      "comment" : "<person> of <photo club>",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "of"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "van"
+          }
+        }
+      }
+    },
     "Options in Settings" : {
       "comment" : "Link to Photo Club Hub section in Settings",
       "localizations" : {
@@ -486,9 +494,6 @@
           }
         }
       }
-    },
-    "other" : {
-      "comment" : "Administrative role of member within a club."
     },
     "Photo Club Hub" : {
       "comment" : "Name of the app shown in PreludeView when app is started",
@@ -659,9 +664,6 @@
           }
         }
       }
-    },
-    "secretary" : {
-      "comment" : "Administrative role of member within a club."
     },
     "Show aspiring members" : {
       "comment" : "Label of toggle in Preferences",
@@ -849,12 +851,6 @@
           }
         }
       }
-    },
-    "treasurer" : {
-      "comment" : "Administrative role of member within a club."
-    },
-    "vice-chairman" : {
-      "comment" : "Administrative role of member within a club."
     },
     "Warning: all member categories on the Preferences page are disabled. Please enable one or more options in Preferences." : {
       "comment" : "Hint to the user if all of the Preference toggles are disabled.",

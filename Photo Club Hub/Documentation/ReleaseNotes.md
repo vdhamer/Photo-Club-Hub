@@ -1,8 +1,10 @@
 ### 2.8.5 (GitHub commit ???????) ??-09-25
 
-* Tested with Xcode 26.0.1 (17A400).
-* TODO: Sync of code updates from Photo Club Hub HTML.
+CODE MAINTENANCE
+
+* Sync of code updates from Photo Club Hub HTML.
 * TODO: Crash on Clubs & Museums page??
+* Tested with Xcode 26.0.1 (17A400) and iOS 26.1 beta (23B5044k).
 
 This build #4651 was made using Xcode 26.0.1.
 

@@ -184,7 +184,8 @@ extension Organization {
 
         // otherwise display an error message instead of a real remark
         let clubOrMuseum: String = organizationType.organizationTypeName
-        return String(localized: "No remark currently available for \(clubOrMuseum) \(fullName).", table: "Package",
+        return String(localized: "No remark currently available for \(clubOrMuseum) \(fullName).",
+                      table: "PhotoClubHubData",
                       comment: "Shown below map if there is no usable remark in the OrganzationList.json file.")
     }
 

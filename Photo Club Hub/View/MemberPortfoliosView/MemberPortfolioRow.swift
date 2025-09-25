@@ -14,7 +14,7 @@ struct MemberPortfolioRow: View {
     var member: MemberPortfolio
     @Environment(\.horizontalSizeClass) var horSizeClass
     let wkWebView: WKWebView
-    fileprivate let of2 = String(localized: "of2", table: "Package", comment: "<person> of <photo club>")
+    fileprivate let of2 = String(localized: "of2", table: "PhotoClubHub.SwiftUI", comment: "<person> of <photo club>")
     let moc = PersistenceController.shared.container.viewContext
 
     var body: some View {

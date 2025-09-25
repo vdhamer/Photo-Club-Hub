@@ -67,16 +67,22 @@ struct FilteredMemberPortfoliosView: View {
             Text("""
                  Warning: all member categories on the Preferences page are disabled. \
                  Please enable one or more options in Preferences.
-                 """, comment: "Hint to the user if all of the Preference toggles are disabled.")
+                 """,
+                 tableName: "PhotoClubHub.SwiftUI",
+                 comment: "Hint to the user if all of the Preference toggles are disabled.")
         } else if searchText.wrappedValue != "" && sectionedPortfoliosResults.isEmpty {
             Text("""
                  To see names here, please adapt the Search filter \
                  or enable additional categories on the Preferences page.
-                 """, comment: "Hint to the user if the database returns zero Members with Search filter in use.")
+                 """,
+                 tableName: "PhotoClubHub.SwiftUI",
+                 comment: "Hint to the user if the database returns zero Members with Search filter in use.")
         } else if searchText.wrappedValue == "" && sectionedPortfoliosResults.isEmpty {
             Text("""
                  To see names here, please enable additional categories on the Preferences page.
-                 """, comment: "Hint to the user if the database returns zero Members with empty Search filter.")
+                 """,
+                 tableName: "PhotoClubHub.SwiftUI",
+                 comment: "Hint to the user if the database returns zero Members with empty Search filter.")
         }
     }
 
@@ -111,12 +117,16 @@ struct FilteredMemberPortfoliosView: View {
         var listName: String
         var organization: Organization? // optional because we copy this from first member in the photoClub collection
         let member = String(localized: "member_",
+                            table: "PhotoClubHub.SwiftUI",
                             comment: "Statistics at end of section of FilteredMemberPortfoliosView")
         let members = String(localized: "members",
+                             table: "PhotoClubHub.SwiftUI",
                              comment: "Statistics at end of section of FilteredMemberPortfoliosView")
         let shown = String(localized: "shown",
+                           table: "PhotoClubHub.SwiftUI",
                            comment: "X member(s) shown (due to various forms of filtering)")
         let of1 = String(localized: "of1",
+                         table: "PhotoClubHub.SwiftUI",
                          comment: "X of Y portfolio(s) shown (due to various forms of filtering)")
 
         var body: some View {
@@ -134,12 +144,12 @@ struct FilteredMemberPortfoliosView: View {
                        organization!.level2URL != nil,
                        organization!.level2URL!.host != nil,
                        organization!.level2URL!.scheme != nil {
-                            Text(String(localized:
-                                """
-                                Data source: \(organization!.level2URL!.scheme!)://\
-                                \(organization!.level2URL!.host!)\
-                                \(organization!.level2URL!.path)/
-                                """,
+                            Text(String(localized: """
+                                                   Data source: \(organization!.level2URL!.scheme!)://\
+                                                   \(organization!.level2URL!.host!)\
+                                                   \(organization!.level2URL!.path)/
+                                                   """,
+                                table: "PhotoClubHub.SwiftUI",
                                 comment: "Section footer text Portfolios screen"))
                             .lineLimit(1)
                             .truncationMode(.tail)

@@ -22,6 +22,7 @@ struct OrganizationListView2626: View {
     fileprivate static let predicateAll = NSPredicate(format: "TRUEPREDICATE")
     fileprivate var predicate: NSPredicate = Self.predicateAll
     fileprivate var navigationTitle = String(localized: "Clubs and Museums",
+                                             table: "PhotoClubHub.SwiftUI",
                                              comment: "Title of page with maps for Clubs and Museums")
 
     init(predicate: NSPredicate? = nil,
@@ -50,12 +51,15 @@ struct OrganizationListView2626: View {
 
             VStack(alignment: .leading) {
                 Text("PhotoClubs_Caption_1",
+                     tableName: "PhotoClubHub.SwiftUI",
                      comment: "Shown in gray at the bottom of the Clubs and Museums page (1/3).")
                 Divider()
                 Text("PhotoClubs_Caption_2",
+                     tableName: "PhotoClubHub.SwiftUI",
                      comment: "Shown in gray at the bottom of the Clubs and Museums page (2/3).")
                 Divider()
                 Text("PhotoClubs_Caption_3",
+                     tableName: "PhotoClubHub.SwiftUI",
                      comment: "Shown in gray at the bottom of the Clubs and Museums page (3/3).")
             }
             .foregroundColor(Color.secondary)
@@ -82,11 +86,12 @@ struct OrganizationListView2626: View {
                     // .toolbar The search field is placed in the toolbar. To right of person.text.rect.cust
                     // .sidebar The search field is placed in the sidebar of a navigation view. not on iPad
                     // .navigationBarDrawer The search field is placed in an drawer of the navigation bar. OK
-                    prompt: Text("Search names and towns", comment:
-                                    """
-                                    Field at top of Clubs and Museums page that allows the user to \
-                                    filter the members based on a fragment of the organization name.
-                                    """
+                    prompt: Text("Search names and towns",
+                                 tableName: "PhotoClubHub.SwiftUI",
+                                 comment: """
+                                          Field at top of Clubs and Museums page that allows the user to \
+                                          filter the members based on a fragment of the organization name.
+                                          """
                                 ))
         .disableAutocorrection(true)
     }

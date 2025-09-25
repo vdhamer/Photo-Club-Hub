@@ -21,7 +21,8 @@ struct DebugPanel2626: View {
             VStack {
                 // swiftlint:disable:next line_length
                 Text("frameSize = [\(Int(size.width), format: IntegerFormatStyle.number.grouping(.never)),\(Int(size.height), format: IntegerFormatStyle.number.grouping(.never))]",
-                comment: "Used in DebugPanel. I couldn't avoid localization here. Just use original as translation")
+                     tableName: "PhotoClubHub.SwiftUI",
+                     comment: "Used in DebugPanel. Can't avoid localization here. Just use original as translation")
                 // I didn't manage to avoid localization in the above Text.
                 Text(verbatim: "tapLocation = [\(Int(location.x)), \(Int(location.y))]")
                 Text(verbatim: "offsetInCells = [\(offset.x), \(offset.y)]")

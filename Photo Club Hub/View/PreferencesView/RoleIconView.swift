@@ -87,7 +87,9 @@ struct RoleStatusIconView_Previews: PreviewProvider {
                         ForEach(MemberRole.allCases.sorted(by: <)) { memberRole in
                             HStack {
                                 RoleStatusIconView(memberRole: memberRole)
-                                Text(memberRole.localizedString().capitalizingFirstLetter())
+                                Text(memberRole
+                                    .localizedString()
+                                    .capitalizingFirstLetter())
                                     .lineLimit(1)
                                     .truncationMode(.middle)
                                 Spacer()

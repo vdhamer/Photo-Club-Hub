@@ -145,13 +145,13 @@ public enum OrganizationTypeEnum: String, CaseIterable, Sendable, Hashable {
     var localizedPlural: String { // "musea" as used in user interface (e.g. NavigationBar.title)
         switch self {
         case .club:
-            return String(localized: "clubs", table: "Package",
+            return String(localized: "clubs", table: "PhotoClubHubData",
                           comment: "Mode for the Clubs page: show photo clubs as sections.")
         case .museum:
-            return String(localized: "museums", table: "Package",
+            return String(localized: "museums", table: "PhotoClubHubData",
                           comment: "Mode for the Clubs page: show museums as sections.")
         default:
-            return String(localized: "unknowns", table: "Package",
+            return String(localized: "unknowns", table: "PhotoClubHubData",
                           comment: "Organization type is not known. Used for debugging.")
         }
     }

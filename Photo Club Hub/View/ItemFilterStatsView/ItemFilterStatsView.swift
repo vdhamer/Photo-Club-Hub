@@ -33,23 +33,39 @@ struct ItemFilterStatsView: View { // display right-aligned string like "12 entr
 
             if elementType == ItemFilterStatsEnum.organization {
                 if (filteredCount == 1) && unfiltered {
-                    Text("1 organization", comment: comment)
+                    Text("1 organization",
+                         tableName: "PhotoClubHub.SwiftUI",
+                         comment: comment)
                 } else if (filteredCount != 1) && unfiltered {
-                    Text("\(filteredCount) organizations", comment: comment)
+                    Text("\(filteredCount) organizations",
+                         tableName: "PhotoClubHub.SwiftUI",
+                         comment: comment)
                 } else if (filteredCount == 1) && filtered {
-                    Text("1 organization (of \(unfilteredCount))", comment: comment)
+                    Text("1 organization (of \(unfilteredCount))",
+                         tableName: "PhotoClubHub.SwiftUI",
+                         comment: comment)
                 } else {
-                    Text("\(filteredCount) organizations (of \(unfilteredCount))", comment: comment)
+                    Text("\(filteredCount) organizations (of \(unfilteredCount))",
+                         tableName: "PhotoClubHub.SwiftUI",
+                         comment: comment)
                 }
             } else {
                 if (filteredCount == 1) && unfiltered {
-                    Text("1 photographer", comment: comment)
+                    Text("1 photographer",
+                         tableName: "PhotoClubHub.SwiftUI",
+                         comment: comment)
                 } else if (filteredCount != 1) && unfiltered {
-                    Text("\(filteredCount) photographers", comment: comment)
+                    Text("\(filteredCount) photographers",
+                         tableName: "PhotoClubHub.SwiftUI",
+                         comment: comment)
                 } else if (filteredCount == 1) && filtered {
-                    Text("1 photographer (of \(unfilteredCount))", comment: comment)
+                    Text("1 photographer (of \(unfilteredCount))",
+                         tableName: "PhotoClubHub.SwiftUI",
+                         comment: comment)
                 } else {
-                    Text("\(filteredCount) photographers (of \(unfilteredCount))", comment: comment)
+                    Text("\(filteredCount) photographers (of \(unfilteredCount))",
+                         tableName: "PhotoClubHub.SwiftUI",
+                         comment: comment)
                 }
             }
         }

@@ -11,15 +11,18 @@ import Roadmap
 struct VoteOnRoadmapView: View {
     var useOnlineList: Bool // using online allows updates, but gives empty page if device is offline
 
-    fileprivate let title = String(localized: "Roadmap Items", comment: "Title of Roadmap screen")
+    fileprivate let title = String(localized: "Roadmap Items",
+                                   table: "PhotoClubHub.SwiftUI",
+                                   comment: "Title of Roadmap screen")
     fileprivate let headerText = String(localized:
-                              """
-                              You can vote here on which roadmap items you would like to see. \
-                              Please read the entire list before voting bacause you cannot undo a vote. \
-                              Don't vote for more than half the items: the data helps us \
-                              prioritize (this isn't about \"liking\" individual items).
-                              """,
-                              comment: "Instructions at top of Roadmap screen")
+                                        """
+                                        You can vote here on which roadmap items you would like to see. \
+                                        Please read the entire list before voting bacause you cannot undo a vote. \
+                                        Don't vote for more than half the items: the data helps us \
+                                        prioritize (this isn't about \"liking\" individual items).
+                                        """,
+                                        table: "PhotoClubHub.SwiftUI",
+                                        comment: "Instructions at top of Roadmap screen")
 
     var configuration: RoadmapConfiguration? // nil gets overwritten during init(). Initialization needs access to self.
 

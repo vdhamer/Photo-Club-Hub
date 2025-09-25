@@ -6,6 +6,7 @@
 //
 
 import SwiftyJSON // for JSON struct
+import Foundation // for Bundle
 
 // MARK: - MemberRole
 
@@ -21,30 +22,43 @@ public enum MemberRole {
     public func localizedString() -> String {
         switch self {
         case .admin:
-            return String(localized: "admin", table: "Package",
-                          comment: "Administrative role of member within a club. Used as part of concatenations.")
+            return String(localized: "admin",
+                          table: "PhotoClubHubData",
+                          bundle: Bundle.photoClubHubDataModule,
+                          comment: "Administrative role of member within a club.")
         case .chairman:
-            return String(localized: "chairman", table: "Package",
-                          comment: "Administrative role of member within a club. Used as part of concatenations.")
+            return String(localized: "chairman",
+                          table: "PhotoClubHubData",
+                          bundle: Bundle.photoClubHubDataModule,
+                          comment: "Administrative role of member within a club.")
         case .secretary:
-            return String(localized: "secretary", table: "Package",
-                          comment: "Administrative role of member within a club. Used as part of concatenations.")
+            return String(localized: "secretary",
+                          table: "PhotoClubHubData",
+                          bundle: Bundle.photoClubHubDataModule,
+                          comment: "Administrative role of member within a club.")
         case .treasurer:
-            return String(localized: "treasurer", table: "Package",
-                          comment: "Administrative role of member within a club. Used as part of concatenations.")
-        case .viceChairman:
-            return String(localized: "vice-chairman", table: "Package", // used in fgWaalre
-                          comment: "Administrative role of member within a club. Used as part of concatenations.")
-        case .other:
-            return String(localized: "other", table: "Package", // used in fgDeGender
-                          comment: "Administrative role of member within a club. Used as part of concatenations.")
+            return String(localized: "treasurer",
+                          table: "PhotoClubHubData",
+                          bundle: Bundle.photoClubHubDataModule,
+                          comment: "Administrative role of member within a club.")
+        case .viceChairman: // used in fgWaalre
+            return String(localized: "vice-chairman",
+                          table: "PhotoClubHubData",
+//                          table: "PhotoClubHubData",
+                          bundle: Bundle.photoClubHubDataModule,
+                          comment: "Administrative role of member within a club.")
+        case .other:  // used in fgDeGender
+            return String(localized: "other",
+                          table: "PhotoClubHubData",
+                          bundle: Bundle.photoClubHubDataModule,
+                          comment: "Administrative role of member within a club.")
         }
     }
 }
 
 extension MemberRole: CaseIterable, Identifiable {
     public var id: String { // switch to self?
-        self.localizedString()
+        self.localizedString().capitalized
     }
 }
 
@@ -66,25 +80,42 @@ public enum MemberStatus {
     case prospective
 
     func localizedString() -> String {
+        return self.localizedString2().capitalized
+    }
+
+    private func localizedString2() -> String {
         switch self {
         case .coach:
-            return String(localized: "external coach", table: "Package",
-                          comment: "Relationship status of member within a club. Used in concatenations.")
+            return String(localized: "external coach",
+                          table: "PhotoClubHubData",
+                          bundle: Bundle.photoClubHubDataModule,
+                          comment: "Relationship status of member within a club.")
         case .deceased:
-            return String(localized: "deceased", table: "Package",
+            return String(localized: "deceased",
+                          table: "PhotoClubHubData",
+                          bundle: Bundle.photoClubHubDataModule,
                           comment: "Relationship status of member within a club. Used as prefix.")
         case .former:
-            return String(localized: "former", table: "Package",
+            return String(localized: "former",
+                          table: "PhotoClubHubData",
+                          bundle: Bundle.photoClubHubDataModule,
                           comment: "Relationship status of member within a club. Used as prefex.")
         case .honorary:
-            return String(localized: "honorary member", table: "Package",
-                          comment: "Relationship status of member within a club. Used in concatenations.")
+            return String(localized: "honorary member",
+                          table: "PhotoClubHubData",
+                          bundle: Bundle.photoClubHubDataModule,
+                          comment: "Relationship status of member within a club.")
         case .current:
-            return String(localized: "member", table: "Package",
-                          comment: "Default status of member within a club. Used in concatenations.")
+            return String(localized: "member",
+                          table: "PhotoClubHubData",
+                          bundle: Bundle.photoClubHubDataModule,
+                          comment: "Default status of member within a club.")
+
         case .prospective:
-            return String(localized: "prospective member", table: "Package",
-                          comment: "Relationship status of member within a club. Used in concatenations.")
+            return String(localized: "prospective member",
+                          table: "PhotoClubHubData",
+                          bundle: Bundle.photoClubHubDataModule,
+                          comment: "Relationship status of member within a club.")
         }
     }
 }
@@ -98,6 +129,20 @@ extension MemberStatus: CaseIterable, Identifiable {
 extension MemberStatus: Comparable {
     public static func < (lhs: MemberStatus, rhs: MemberStatus) -> Bool {
             return lhs.localizedString() < rhs.localizedString()
+    }
+}
+
+// Temporary helper function that works both in a standalone app and within the PhotoClubHubData package.
+// This can be removed when both Photo Club Hub and Photo Club Hub HTML both use the PhotoClubHubData package.
+private final class _PhotoClubHubDataBundleToken {}
+private extension Bundle {
+    static var photoClubHubDataModule: Bundle {
+        #if SWIFT_PACKAGE
+        return .module
+        #else
+        // Bundle where this source file lives (works for app and framework targets)
+        return Bundle(for: _PhotoClubHubDataBundleToken.self)
+        #endif
     }
 }
 

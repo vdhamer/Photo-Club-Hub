@@ -92,6 +92,7 @@ struct FilteredOrganizationView1718: View {
                         .font(.subheadline)
                         if filteredOrganization.members.count > 0 { // hide for museums and clubs without members
                             Text("\(filteredOrganization.members.count) members (inc. ex-members)",
+                                 tableName: "PhotoClubHub.SwiftUI",
                                  comment: "<count> members (including all types of members) within photo club")
                             .font(.subheadline)
                         }

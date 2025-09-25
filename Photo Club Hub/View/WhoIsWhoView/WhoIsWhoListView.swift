@@ -25,8 +25,10 @@ struct WhoIsWhoListView: View {
 
     @StateObject var model = PreferencesViewModel()
     fileprivate var navigationTitle = String(localized: "Who's Who",
+                                             table: "PhotoClubHub.SwiftUI",
                                              comment: "Title of page with list of photographers")
     fileprivate let nonStandard = String(localized: "Non-standard",
+                                         table: "PhotoClubHub.SwiftUI",
                                          comment: "Expertise description at bottom of Who's Who screen")
 
     init(searchText: Binding<String>, navigationTitle: String? = nil) {
@@ -49,15 +51,19 @@ struct WhoIsWhoListView: View {
 
             VStack(alignment: .leading) {
                 Text("WhosWho_Caption_1",
+                     tableName: "PhotoClubHub.SwiftUI",
                      comment: "Shown in gray at the bottom of the Who's Who page (1/3).")
                 Divider()
                 Text("WhosWho_Caption_2",
+                     tableName: "PhotoClubHub.SwiftUI",
                      comment: "Shown in gray at the bottom of the Who's Who page (2/3).")
                 Divider()
                 Text("WhosWho_Caption_3",
+                     tableName: "PhotoClubHub.SwiftUI",
                      comment: "Shown in gray at the bottom of the Who's Who page (3/3).")
                 Divider()
                 Text("WhosWho_Caption_4",
+                     tableName: "PhotoClubHub.SwiftUI",
                      comment: "Shown in gray at the bottom of the Who's Who page (3/3).")
                 ForEach(Expertise.getAll(context: viewContext)
                     .filter { !$0.id.contains("expertise") }  // Block "Too many experiences" entry
@@ -74,14 +80,17 @@ struct WhoIsWhoListView: View {
                     }
                 }
                 Text("There are \(Expertise.count(context: viewContext)) expertise tags.",
+                     tableName: "PhotoClubHub.SwiftUI",
                      comment: "Expertise statistics in footnote #4 of Who's Who screen")
                 Text("""
                      \(Expertise.getAll(context: viewContext).filter { keyword in keyword.isStandard }.count) \
                      of these \(Expertise.count(context: viewContext)) \
                      expertise tags are approved.
                      """,
+                     tableName: "PhotoClubHub.SwiftUI",
                      comment: "Expertise statistics in footnote #4 of Who's Who screen")
                 Text("Expertise tags were assigned \(PhotographerExpertise.count(context: viewContext)) times.",
+                     tableName: "PhotoClubHub.SwiftUI",
                      comment: "Expertise statistics in footnote #4 of Who's Who screen")
             }
             .foregroundColor(Color.secondary)
@@ -104,6 +113,7 @@ struct WhoIsWhoListView: View {
         .navigationTitle(navigationTitle)
         .searchable(text: searchText, placement: .automatic,
                     prompt: Text("Search_names_p",
+                                 tableName: "PhotoClubHub.SwiftUI",
                                  comment: """
                                           Field at top of Who's Who page that allows the user to \
                                           filter the photographers based on either given- and family name.

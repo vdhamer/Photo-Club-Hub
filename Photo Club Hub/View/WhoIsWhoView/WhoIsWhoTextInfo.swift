@@ -42,6 +42,7 @@ struct WhoIsWhoTextInfo: View {
             if let date: Date = photographer.bornDT {
                 if isBirthdaySoon(date, minResult: -1, maxResult: 7) != nil {
                     let locBirthday = String(localized: "Birthday", // birthday if available (year of birth not shown)
+                                             table: "PhotoClubHub.SwiftUI",
                                              comment: """
                                                       Birthday of member (without year). \
                                                       Date not currently localized?

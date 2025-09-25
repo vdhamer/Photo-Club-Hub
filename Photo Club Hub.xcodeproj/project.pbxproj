@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3705AFC62E7381D10067CE6B /* fkGestel.level2.json in Resources */ = {isa = PBXBuildFile; fileRef = 3705AFC52E7381D10067CE6B /* fkGestel.level2.json */; };
+		372028CE2E84A4CC00ED1B91 /* Photo-Club-Hub-InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 372028CD2E84A4CC00ED1B91 /* Photo-Club-Hub-InfoPlist.xcstrings */; };
 		376D14F82E6DE60900A1403B /* PreludeView2626.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376D14F72E6DE60900A1403B /* PreludeView2626.swift */; };
 		376D14FA2E6DE83A00A1403B /* DebugPanel2626.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376D14F92E6DE83A00A1403B /* DebugPanel2626.swift */; };
 		37C61B8F2E72091000C5BAEF /* FotokringSintMichielsgestel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C61B8E2E72091000C5BAEF /* FotokringSintMichielsgestel.swift */; };
@@ -40,9 +41,8 @@
 		D0416282295BBA7700ED073A /* CoreLocation+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0416281295BBA7700ED073A /* CoreLocation+Equatable.swift */; };
 		D044646527FCE7C100990613 /* UIDevice+IsIPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = D044646427FCE7C100990613 /* UIDevice+IsIPad.swift */; };
 		D0447C882BA510AF00982A1E /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0447C862BA510AF00982A1E /* Language.swift */; };
-		D04856342D46A41900022117 /* Photo-Club-Hub-InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = D04856332D46A41900022117 /* Photo-Club-Hub-InfoPlist.xcstrings */; };
-		D04856362D46A45D00022117 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = D04856352D46A45D00022117 /* Localizable.xcstrings */; };
-		D04856382D46A62200022117 /* Package.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = D04856372D46A62200022117 /* Package.xcstrings */; };
+		D04856362D46A45D00022117 /* PhotoClubHub.SwiftUI.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = D04856352D46A45D00022117 /* PhotoClubHub.SwiftUI.xcstrings */; };
+		D04856382D46A62200022117 /* PhotoClubHubData.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = D04856372D46A62200022117 /* PhotoClubHubData.xcstrings */; };
 		D04DFD882B39F788006EF297 /* Published+UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A40277F731C0049AB84 /* Published+UserDefaults.swift */; };
 		D04E91232E1B163200F6A66F /* IndividueelBO.level2.json in Resources */ = {isa = PBXBuildFile; fileRef = D04E91222E1B163200F6A66F /* IndividueelBO.level2.json */; };
 		D05124852C42BE2D00D94B81 /* Level2JsonReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05124842C42BE2D00D94B81 /* Level2JsonReader.swift */; };
@@ -105,7 +105,7 @@
 		D0CFACAD2CDEDCBA005E3A0B /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D0CFACAC2CDEDCBA005E3A0B /* SwiftyJSON */; };
 		D0D18C78296E1F6A00B334DB /* OrganizationIdPlus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D18C77296E1F6A00B334DB /* OrganizationIdPlus.swift */; };
 		D0DE02772789D1B30062738C /* RoleIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DE02762789D1B30062738C /* RoleIconView.swift */; };
-		D0DFBEF42D47036900CB9E73 /* Readme.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = D0DFBEF32D47036900CB9E73 /* Readme.xcstrings */; };
+		D0DFBEF42D47036900CB9E73 /* PhotoClubHub.Readme.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = D0DFBEF32D47036900CB9E73 /* PhotoClubHub.Readme.xcstrings */; };
 		D0E2235427DE9139002A8600 /* PreludeView1718.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E2235327DE9139002A8600 /* PreludeView1718.swift */; };
 		D0E694C927EF9B450054D634 /* LockAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E694C827EF9B450054D634 /* LockAnimationView.swift */; };
 		D0EAEB332B3CA6D300EC05B6 /* Level1JsonReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EAEB322B3CA6D300EC05B6 /* Level1JsonReader.swift */; };
@@ -139,6 +139,7 @@
 
 /* Begin PBXFileReference section */
 		3705AFC52E7381D10067CE6B /* fkGestel.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fkGestel.level2.json; sourceTree = "<group>"; };
+		372028CD2E84A4CC00ED1B91 /* Photo-Club-Hub-InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = "Photo-Club-Hub-InfoPlist.xcstrings"; sourceTree = "<group>"; };
 		376D14F72E6DE60900A1403B /* PreludeView2626.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreludeView2626.swift; sourceTree = "<group>"; };
 		376D14F92E6DE83A00A1403B /* DebugPanel2626.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugPanel2626.swift; sourceTree = "<group>"; };
 		37C61B8E2E72091000C5BAEF /* FotokringSintMichielsgestel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FotokringSintMichielsgestel.swift; sourceTree = "<group>"; };
@@ -189,9 +190,8 @@
 		D044646427FCE7C100990613 /* UIDevice+IsIPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+IsIPad.swift"; sourceTree = "<group>"; };
 		D0447C862BA510AF00982A1E /* Language.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		D0447C872BA510AF00982A1E /* LocalizedRemark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedRemark.swift; sourceTree = "<group>"; };
-		D04856332D46A41900022117 /* Photo-Club-Hub-InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = "Photo-Club-Hub-InfoPlist.xcstrings"; sourceTree = "<group>"; };
-		D04856352D46A45D00022117 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
-		D04856372D46A62200022117 /* Package.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Package.xcstrings; sourceTree = "<group>"; };
+		D04856352D46A45D00022117 /* PhotoClubHub.SwiftUI.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = PhotoClubHub.SwiftUI.xcstrings; sourceTree = "<group>"; };
+		D04856372D46A62200022117 /* PhotoClubHubData.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = PhotoClubHubData.xcstrings; sourceTree = "<group>"; };
 		D048571B2D46C13100022117 /* en.xcloc */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = en.xcloc; sourceTree = "<group>"; };
 		D048571C2D46C13100022117 /* nl.xcloc */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = nl.xcloc; sourceTree = "<group>"; };
 		D04A2B112AC0958C003ED113 /* LineCount.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = LineCount.xlsx; sourceTree = "<group>"; };
@@ -299,7 +299,7 @@
 		D0DE02762789D1B30062738C /* RoleIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleIconView.swift; sourceTree = "<group>"; };
 		D0DE1B272E1BD23E00FEDFA7 /* Photo_Club_Hub_2_8_1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_8_1.xcdatamodel; sourceTree = "<group>"; };
 		D0DE6B6D2DB6DAE700841DBF /* packages.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = packages.png; sourceTree = "<group>"; };
-		D0DFBEF32D47036900CB9E73 /* Readme.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Readme.xcstrings; sourceTree = "<group>"; };
+		D0DFBEF32D47036900CB9E73 /* PhotoClubHub.Readme.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = PhotoClubHub.Readme.xcstrings; sourceTree = "<group>"; };
 		D0E02F972B80191300D67CDA /* Readme_NL_2_8_0.pages */ = {isa = PBXFileReference; lastKnownFileType = file; path = Readme_NL_2_8_0.pages; sourceTree = "<group>"; };
 		D0E2235327DE9139002A8600 /* PreludeView1718.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreludeView1718.swift; sourceTree = "<group>"; };
 		D0E673BA2AE1C1A100A4DC95 /* Photo_Club_Hub_2_5_0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_5_0.xcdatamodel; sourceTree = "<group>"; };
@@ -728,10 +728,10 @@
 		D0CEAECD2B2E1120005AE47D /* Localization */ = {
 			isa = PBXGroup;
 			children = (
-				D0DFBEF32D47036900CB9E73 /* Readme.xcstrings */,
-				D04856352D46A45D00022117 /* Localizable.xcstrings */,
-				D04856372D46A62200022117 /* Package.xcstrings */,
-				D04856332D46A41900022117 /* Photo-Club-Hub-InfoPlist.xcstrings */,
+				D0DFBEF32D47036900CB9E73 /* PhotoClubHub.Readme.xcstrings */,
+				D04856352D46A45D00022117 /* PhotoClubHub.SwiftUI.xcstrings */,
+				D04856372D46A62200022117 /* PhotoClubHubData.xcstrings */,
+				372028CD2E84A4CC00ED1B91 /* Photo-Club-Hub-InfoPlist.xcstrings */,
 				D048571D2D46C13100022117 /* Photo Club Hub Localizations */,
 			);
 			path = Localization;
@@ -938,22 +938,22 @@
 				D0ACCFD72DEFAD690002FACC /* XampleMax.level2.json in Resources */,
 				D0ACCFD82DEFAD690002FACC /* XampleMin.level2.json in Resources */,
 				D0F4B4D82D86CFA500F60920 /* empty.level0.json in Resources */,
-				D04856382D46A62200022117 /* Package.xcstrings in Resources */,
+				D04856382D46A62200022117 /* PhotoClubHubData.xcstrings in Resources */,
 				D04E91232E1B163200F6A66F /* IndividueelBO.level2.json in Resources */,
 				D008D2AA28739167007A7BE2 /* .gitignore in Resources */,
 				D0B5743E2C41D79300334E4C /* Assets.xcassets in Resources */,
+				372028CE2E84A4CC00ED1B91 /* Photo-Club-Hub-InfoPlist.xcstrings in Resources */,
 				D0F78ACA2DFCCBFE00DE234D /* fcDenDungen.level2.json in Resources */,
 				D0273E4A2DEE42C800C4F5E1 /* fgOirschot.level2.json in Resources */,
 				D0273E4B2DEE42C800C4F5E1 /* fcEricamera.level2.json in Resources */,
 				D0F8719F2D403E6000530D10 /* readme.txt in Resources */,
 				D0F871952D403D1700530D10 /* root.level1.json in Resources */,
 				D0A615792D91B7A00024EC9E /* fcBellusImago.level2.json in Resources */,
-				D0DFBEF42D47036900CB9E73 /* Readme.xcstrings in Resources */,
-				D04856342D46A41900022117 /* Photo-Club-Hub-InfoPlist.xcstrings in Resources */,
+				D0DFBEF42D47036900CB9E73 /* PhotoClubHub.Readme.xcstrings in Resources */,
 				D0F8719A2D403D1700530D10 /* fgDeGender.level2.json in Resources */,
 				D0F8719C2D403D1700530D10 /* root.level0.json in Resources */,
 				D06D08DE2C28835D00872BC2 /* Settings.bundle in Resources */,
-				D04856362D46A45D00022117 /* Localizable.xcstrings in Resources */,
+				D04856362D46A45D00022117 /* PhotoClubHub.SwiftUI.xcstrings in Resources */,
 				3705AFC62E7381D10067CE6B /* fkGestel.level2.json in Resources */,
 				D0FD28BB2D8CDFD3002B5C38 /* languages.level0.json in Resources */,
 				D0FD28BC2D8CDFD3002B5C38 /* abstractExpertise.level0.json in Resources */,
