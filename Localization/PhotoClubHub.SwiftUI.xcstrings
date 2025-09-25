@@ -208,6 +208,9 @@
         }
       }
     },
+    "admin" : {
+      "comment" : "Administrative role of member within a club."
+    },
     "Advanced" : {
       "comment" : "In Preferences, above link to Settings",
       "localizations" : {
@@ -241,6 +244,9 @@
           }
         }
       }
+    },
+    "chairman" : {
+      "comment" : "Administrative role of member within a club."
     },
     "Clubs and Museums" : {
       "comment" : "Title of page with maps for Clubs and Museums",
@@ -481,6 +487,9 @@
         }
       }
     },
+    "other" : {
+      "comment" : "Administrative role of member within a club."
+    },
     "Photo Club Hub" : {
       "comment" : "Name of the app shown in PreludeView when app is started",
       "localizations" : {
@@ -650,6 +659,9 @@
           }
         }
       }
+    },
+    "secretary" : {
+      "comment" : "Administrative role of member within a club."
     },
     "Show aspiring members" : {
       "comment" : "Label of toggle in Preferences",
@@ -837,6 +849,12 @@
           }
         }
       }
+    },
+    "treasurer" : {
+      "comment" : "Administrative role of member within a club."
+    },
+    "vice-chairman" : {
+      "comment" : "Administrative role of member within a club."
     },
     "Warning: all member categories on the Preferences page are disabled. Please enable one or more options in Preferences." : {
       "comment" : "Hint to the user if all of the Preference toggles are disabled.",
