@@ -1055,6 +1055,58 @@
 
         {
             "idPlus": {
+                "town": "Helmond",
+                "fullName": "Fotoclub Fotodier",
+                "nickName": "fcFotodier"
+            },
+            "coordinates": {
+                "latitude": 51.49516,
+                "longitude": 5.69171
+            },
+            "optional": {
+                "website": "https://dierdonk.nl/fotodier/",
+                "level2URL": "https://www.example.com/fcFotodier.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Fotodier is named after a suburb of the city of Helmond."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Fotodier is genoemd naar Dierdonk, een wijk van Helmond."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Helmond",
+                "fullName": "Fotowerkgroep Kiek Nauw (IVN)",
+                "nickName": "fwgKiekNauw"
+            },
+            "coordinates": {
+                "latitude": 51.48333,
+                "longitude": 5.65000
+            },
+            "optional": {
+                "website": "https://www.ivn.nl/afdeling/helmond/overons-werkgroepen-fotowerkgroepen/",
+                "level2URL": "https://www.example.com/fwgKiekNauw.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "These photographers are part of a well-known Dutch non-profit organization, IVN, that promotes awareness of conservation of nature."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Er vallen 2 samenwerkende fotowerkgroepen onder de IVN afdeling Helmond (Instituut voor Natuurbeschermingseducatie)."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Middelrode",
                 "fullName": "Fotoclub Natuur in Beeld",
                 "nickName": "fcNatuurInBeeld"
@@ -1204,6 +1256,32 @@
                     {
                         "language": "NL",
                         "value": "De club maakt deel uit van seniorenverening PVGE Nuenen - net als 3 andere fotoclubs."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Nuenen",
+                "fullName": "Fotoclub Momentum",
+                "nickName": "fcMomentum"
+            },
+            "coordinates": {
+                "latitude": 51.47586,
+                "longitude": 5.55000
+            },
+            "optional": {
+                "website": "https://www.fotoclub-momentum.nl",
+                "level2URL": "https://www.example.com/fcMomentum.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "A noteworthy activity in the group is to pass around a physical object (e.g. a small sculpture) which the photographers can then portray in their own style. The results are shared at the end of the assignment."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Soms heeft de club een projekt rondom een 'doorgeefobject' dat door achtereenvolgende fotografen vastgelegd wordt. De beelden hiervan worden aan het einde van de rit gedeeld."
                     }
                 ]
             }
