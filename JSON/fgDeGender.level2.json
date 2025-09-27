@@ -372,7 +372,6 @@
             },
             "optional": {
                 "birthday": "9999-10-09",
-                "website": "https://www.m3w.nl",
                 "level3URL": "http://www.vdhamer.com/fgDeGender/Marcelle_van_Veen/",
                 "status": {
                     "isDeceased": true,
