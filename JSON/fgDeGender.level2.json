@@ -294,6 +294,19 @@
 
         {
             "name": {
+                "givenName": "Hans",
+                "infixName": "",
+                "familyName": "Vervloed"
+            },
+            "optional": {
+                "website": "https://www.hansvervloed.nl",
+                "level3URL": "http://www.vdhamer.com/fgDeGender/Hans_Vervloed/",
+                "membershipStartDate": "2025-09-29"
+            }
+        },
+
+        {
+            "name": {
                 "givenName": "Ingrid",
                 "infixName": "",
                 "familyName": "Helsen"
@@ -537,7 +550,7 @@
             "optional": {
                 "birthday": "9999-10-18",
                 "website": "https://glass.photo/vdhamer",
-                "level3URL": "http://www.vdhamer.com/fgDeGender/Peter_van_den_Hamer/",
+                "level3URL": "http://www.fcDeGender.nl/Peter_van_den_Hamer/",
                 "roles": {
                     "isAdmin": true
                 },

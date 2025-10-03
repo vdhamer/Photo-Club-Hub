@@ -1,4 +1,4 @@
-### 2.8.5 (GitHub commit ???????) ??-09-25
+### 2.8.5 (GitHub commit ???????) ??-10-25
 
 CODE MAINTENANCE
 
@@ -9,7 +9,7 @@ CODE MAINTENANCE
 DATA MAINTENANCE
 
 * Added 6 photo clubs.
-* Removed incorrect website link for former member of fgDeGender.
+* Updated data for fgDeGender.
 
 This build #4651 was made using Xcode 26.0.1.
 
