@@ -550,7 +550,7 @@
             "optional": {
                 "birthday": "9999-10-18",
                 "website": "https://glass.photo/vdhamer",
-                "level3URL": "http://www.fcDeGender.nl/Peter_van_den_Hamer/",
+                "level3URL": "https://www.fcDeGender.nl/Peter_van_den_Hamer/",
                 "roles": {
                     "isAdmin": true
                 },
