@@ -226,6 +226,20 @@
         },
 
         {
+            "idString": "Nature",
+            "name": [
+                { "language": "EN", "localizedString": "Nature" },
+                { "language": "NL", "localizedString": "Natuur" }
+            ],
+            "optional": {
+                "usage":  [
+                    { "language": "EN", "localizedString": "Animals and plants in the wild (Birds are a separate tag)." },
+                    { "language": "NL", "localizedString": "Natuurfotografie (Vogels hebben een aparte tag)." }
+                 ]
+            }
+        },
+
+        {
             "idString": "Panorama",
             "name": [
                 { "language": "EN", "localizedString": "Panorama" },
