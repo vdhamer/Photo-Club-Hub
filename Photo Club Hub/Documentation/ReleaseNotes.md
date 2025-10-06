@@ -4,7 +4,7 @@ CODE MAINTENANCE
 
 * Sync of code updates from Photo Club Hub HTML.
 * TODO: Crash on Clubs & Museums page??
-* Tested with Xcode 26.0.1 (17A400), Xcode 26.1 beta (17B5035f), iOS 26.1 beta (23B5059c) and SwiftLint 0.61.0.
+* Tested with Xcode 26.0.1 (17A400), Xcode 26.1 beta (17B5035f), and iOS 26.1 beta (23B5059e).
 
 DATA MAINTENANCE
 
