@@ -301,7 +301,8 @@
             "optional": {
                 "website": "https://www.hansvervloed.nl",
                 "level3URL": "https://www.fcDeGender.nl/portfolios/Hans_Vervloed/",
-                "membershipStartDate": "2025-09-29"
+                "membershipStartDate": "2025-09-29",
+                "expertises": [ "Experimental", "Mixed-Media" ]
             }
         },
 
@@ -645,7 +646,7 @@
                 "nlSpecific": {
                     "fotobondNumber": 1620106
                 },
-                "expertises": [ "Architecture", "Portrait" ]
+                "expertises": [ "Portrait" ]
             }
         },
 
