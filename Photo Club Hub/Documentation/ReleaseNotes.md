@@ -9,8 +9,8 @@ CODE MAINTENANCE
 DATA MAINTENANCE
 
 * Added 6 photo clubs.
-* Updated data for fgDeGender.
-* Approved "Nature" (NL: "Natuur") expertise tag.
+* Updated members and expertises for fgDeGender.
+* Approved new "nature" Expertise tag.
 
 This build #4651 was made using Xcode 26.0.1.
 
