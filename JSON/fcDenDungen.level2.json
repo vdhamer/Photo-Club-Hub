@@ -1,152 +1,167 @@
 {
     "club": {
         "idPlus": {
-            "town": "Den Dungen",
+            "town"    : "Den Dungen",
             "fullName": "Fotoclub Den Dungen",
             "nickName": "fcDenDungen"
         },
-        "coordinates": {
-            "latitude": 51.66214, "longitude": 5.37097
-        },
+        "coordinates": {"latitude": 51.66214, "longitude": 5.37097},
         "optional": {
-            "website": "https://www.fotoclubdendungen.nl",
+            "website"  : "https://www.fotoclubdendungen.nl",
             "level2URL": "https://www.example.com/fcdDungen.level2.json"
         }
     },
+
+
     "members": [
 
         {
             "name": {
-                "givenName": "Adrie",
-                "infixName": "",
+                "givenName" : "Adrie",
+                "infixName" : "",
                 "familyName": "Dekkers"
             },
             "optional": {
-                "featuredImage": "https://www.fotoclubdendungen.nl/wp-content/uploads/2019/04/IMG_0558-1030x687.jpg"
+                "birthday": "9999-12-30",
+                "featuredImage": "https://www.fotoclubdendungen.nl/wp-content/uploads/2019/04/IMG_0558-1030x687.jpg",
+                "expertises": ["Macro", "Portrait"]
             }
         },
 
         {
             "name": {
-                "givenName": "Andy",
-                "infixName": "",
+                "givenName" : "Andy",
+                "infixName" : "",
                 "familyName": "Veelenturf"
             },
             "optional": {
+                "birthday": "9999-08-23",
                 "featuredImage": "https://www.fotoclubdendungen.nl/wp-content/uploads/2020/10/Zwitserland-773x1030.jpeg",
-                "roles": {
-                    "isAdmin": true
-                }
+                "roles": {"isAdmin": true},
+                "expertises": ["Documentary", "Portrait"]
             }
         },
 
         {
             "name": {
-                "givenName": "Ben",
-                "infixName": "van",
+                "givenName" : "Ben",
+                "infixName" : "van",
                 "familyName": "Kaathoven"
             },
             "optional": {
-                "featuredImage": "https://www.fotoclubdendungen.nl/wp-content/uploads/2023/11/Ben-8-1030x687.jpeg"
+                "birthday": "9999-01-31",
+                "featuredImage": "https://www.fotoclubdendungen.nl/wp-content/uploads/2023/11/Ben-8-1030x687.jpeg",
+                "expertises": ["Architecture", "Nature"]
             }
         },
 
         {
             "name": {
-                "givenName": "Birgitte",
-                "infixName": "",
+                "givenName" : "Birgitte",
+                "infixName" : "",
                 "familyName": "Broeren"
             },
             "optional": {
-                "featuredImage": "https://www.fotoclubdendungen.nl/wp-content/uploads/2023/10/Birgitte-foto-4-687x1030.jpeg"
+                "birthday": "9999-09-26",
+                "featuredImage": "https://www.fotoclubdendungen.nl/wp-content/uploads/2023/10/Birgitte-foto-4-687x1030.jpeg",
+                "expertises": ["Landscape", "Nature"]
             }
         },
 
         {
             "name": {
-                "givenName": "Ger",
-                "infixName": "van",
-                "familyName": "Alebeek"
-            },
-            "optional": {
-                "featuredImage": "https://www.fotoclubdendungen.nl/wp-content/uploads/2023/10/Ger-7-1030x687.jpg"
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "Netty",
-                "infixName": "",
-                "familyName": "Bijnen"
-            },
-            "optional": {
-                "featuredImage": "https://www.fotoclubdendungen.nl/wp-content/uploads/2020/10/Netty-Bijnen-Portet-687x1030.jpg"
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "Bob",
-                "infixName": "",
+                "givenName" : "Bob",
+                "infixName" : "",
                 "familyName": "Goedmakers"
             },
             "optional": {
+                "birthday": "9999-08-24",
                 "featuredImage": "https://www.fotoclubdendungen.nl/wp-content/uploads/2020/10/Bob-Goedmakers-Lange-sluitertijd-1030x687.jpg",
-                "roles": {
-                    "isTreasurer": true
-                }
+                "roles": {"isTreasurer": true},
+                "expertises": ["Bird", "Landscape"]
             }
         },
 
         {
             "name": {
-                "givenName": "Rick",
-                "infixName": "",
+                "givenName" : "Ger",
+                "infixName" : "van",
+                "familyName": "Alebeek"
+            },
+            "optional": {
+                "birthday": "9999-10-19",
+                "featuredImage": "https://www.fotoclubdendungen.nl/wp-content/uploads/2023/10/Ger-7-1030x687.jpg",
+                "expertises": ["Landscape", "Panorama"]
+            }
+        },
+
+        {
+            "name": {
+                "givenName" : "Netty",
+                "infixName" : "",
+                "familyName": "Bijnen"
+            },
+            "optional": {
+                "birthday": "9999-06-01",
+                "featuredImage": "https://www.fotoclubdendungen.nl/wp-content/uploads/2020/10/Netty-Bijnen-Portet-687x1030.jpg",
+                "expertises": ["Bird", "Portrait"]
+            }
+        },
+
+        {
+            "name": {
+                "givenName" : "Rick",
+                "infixName" : "",
                 "familyName": "Meinders"
             },
             "optional": {
-                "featuredImage": "https://www.fotoclubdendungen.nl/wp-content/uploads/2023/07/Foto-4-Romantisch-bankje-Rick-Meinders-1030x687.jpg"
+                "birthday": "9999-09-07",
+                "featuredImage": "https://www.fotoclubdendungen.nl/wp-content/uploads/2023/07/Foto-4-Romantisch-bankje-Rick-Meinders-1030x687.jpg",
+                "expertises": ["Architecture", "Macro"]
             }
         },
 
         {
             "name": {
-                "givenName": "Rien",
-                "infixName": "den",
+                "givenName" : "Rien",
+                "infixName" : "den",
                 "familyName": "Otter"
             },
             "optional": {
+                "birthday": "9999-04-28",
                 "featuredImage": "https://www.fotoclubdendungen.nl/wp-content/uploads/2025/04/Evy--1030x687.jpg",
-                "roles": {
-                    "isSecretary": true
-                }
+                "roles": {"isSecretary": true},
+                "expertises": ["Portrait", "Sport"]
             }
         },
 
         {
             "name": {
-                "givenName": "Riet",
-                "infixName": "",
+                "givenName" : "Riet",
+                "infixName" : "",
                 "familyName": "School"
             },
             "optional": {
+                "birthday": "9999-09-17",
                 "featuredImage": "https://www.fotoclubdendungen.nl/wp-content/uploads/2023/10/Riet-5-1030x687.jpg",
-                "roles": {
-                    "isChairman": true
-                }
+                "roles": {"isChairman": true},
+                "expertises": ["Landscape", "Macro"]
             }
         },
 
         {
             "name": {
-                "givenName": "Rob",
-                "infixName": "",
+                "givenName" : "Rob",
+                "infixName" : "",
                 "familyName": "Barnhoorn"
             },
             "optional": {
-                "featuredImage": "https://www.fotoclubdendungen.nl/wp-content/uploads/2023/11/Rob-7-1030x688.jpeg"
+                "birthday": "9999-05-25",
+                "featuredImage": "https://www.fotoclubdendungen.nl/wp-content/uploads/2023/11/Rob-7-1030x688.jpeg",
+                "expertises": ["Architecture", "Macro"]
             }
         }
 
     ]
 }
+
