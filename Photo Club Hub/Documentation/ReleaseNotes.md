@@ -11,6 +11,7 @@ DATA MAINTENANCE
 * Added 6 photo clubs.
 * Updated members and expertises for fgDeGender.
 * Approved new "nature" Expertise tag.
+* Update of IndividueelBO.level2.json 
 
 This build #4651 was made using Xcode 26.0.1.
 
