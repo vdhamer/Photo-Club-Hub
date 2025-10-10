@@ -88,7 +88,7 @@ struct RoleStatusIconView_Previews: PreviewProvider {
                             HStack {
                                 RoleStatusIconView(memberRole: memberRole)
                                 Text(memberRole
-                                    .localizedString()
+                                    .localizedString(table: "PhotoClubHub.SwiftUI")
                                     .capitalizingFirstLetter())
                                     .lineLimit(1)
                                     .truncationMode(.middle)

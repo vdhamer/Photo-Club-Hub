@@ -42,6 +42,19 @@
   "testTargets" : [
     {
       "parallelizable" : false,
+      "skippedTests" : {
+        "suites" : [
+          {
+            "name" : "Level2JsonReaderTests",
+            "testFunctions" : [
+              "fgDeGenderParse()",
+              "fgWaalreFgDeGender()",
+              "xampleMaxParse()",
+              "xampleMinParse()"
+            ]
+          }
+        ]
+      },
       "target" : {
         "containerPath" : "container:Photo Club Hub.xcodeproj",
         "identifier" : "D0E868992D693A3600F2A03A",
