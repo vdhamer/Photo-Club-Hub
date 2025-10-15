@@ -63,7 +63,7 @@
             "idPlus": {
                 "town": "Berlicum",
                 "fullName": "FFC Shot71",
-                "nickName": "FFC Shot71"
+                "nickName": "ffcShot71"
             },
             "coordinates": {
                 "latitude": 51.663059,
@@ -168,6 +168,58 @@
 
         {
             "idPlus": {
+                "town": "Best",
+                "fullName": "Fotogroep Heivelden",
+                "nickName": "fgHeivelden"
+            },
+            "coordinates": {
+                "latitude": 51.50429,
+                "longitude": 5.37126
+            },
+            "optional": {
+                "website": "https://fotogroepheivelden.weebly.com",
+                "level2URL": "https://www.example.com/fgHeivelden.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "The club organizes a photo excursion every first Saturday of the month."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "De club houdt iedere eerste zaterdag van de maand een fotouitje."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Best",
+                "fullName": "FotoWerkgroep IVN-Best",
+                "nickName": "fwIVNBest"
+            },
+            "coordinates": {
+                "latitude": 51.50269,
+                "longitude": 5.38895
+            },
+            "optional": {
+                "website": "https://www.ivn.nl/afdeling/best/werkgroepen/werkgroep-natuurfotografie/",
+                "level2URL": "https://www.example.com/fwIVNBest.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "These photographers are part of a well-known Dutch non-profit organization, IVN, that promotes awareness of conservation of nature."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Deze fotowerkgroep in Best maakt deel uit van de IVN (Instituut voor Natuurbeschermingseducatie)."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Boekel",
                 "fullName": "Fotogroep Focus KBO Boekel",
                 "nickName": "fgFocus"
@@ -223,6 +275,34 @@
 
         {
             "idPlus": {
+                "town": "Brabant Oost",
+                "fullName": "Individuele Leden Brabant Oost",
+                "nickName": "IndividueelBO"
+            },
+            "coordinates": {
+                "latitude": 51.44327,
+                "longitude": 5.47990
+            },
+            "optional": {
+               "level2URL": "https://www.example.com/IndividueelBO.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "These photographers are members of the Dutch national Fotobond, but not via their membership of any specific club."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Individuele leden van de Koninklijke Fotobond, Afdeling 16: Brabant Oost."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 1600
+                }
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Den Bosch",
                 "fullName": "Fotogroep Argus",
                 "nickName": "fgArgus"
@@ -243,10 +323,7 @@
                         "language": "NL",
                         "value": "De groep heeft 7 leden (met de ambitie om iets te groeien). Voor fotobesprekingen komt de groep en een mentor bijeen in een van de huiskamers."
                     }
-                ],
-                "nlSpecific": {
-                    "fotobondNumber": 1681
-                }
+                ]
             }
         },
 
@@ -300,10 +377,7 @@
                         "language": "NL",
                         "value": "ISO2016 heeft geen eigen website."
                     }
-                ],
-                "nlSpecific": {
-                    "fotobondNumber": 1682
-                }
+                ]
             }
         },
 
@@ -311,11 +385,11 @@
             "idPlus": {
                 "town": "Den Dungen",
                 "fullName": "Fotoclub Den Dungen",
-                "nickName": "fcdDungen"
+                "nickName": "fcDenDungen"
             },
             "coordinates": {
-                "latitude": 51.66214,
-                "longitude": 5.37097
+                "latitude": 51.65987,
+                "longitude": 5.38646
             },
             "optional": {
                 "website": "https://www.fotoclubdendungen.nl",
@@ -474,57 +548,6 @@
 
         {
             "idPlus": {
-                "town": "Geldrop",
-                "fullName": "Fotoclub de Dreef",
-                "nickName": "fcDeDreef"
-            },
-            "coordinates": {
-                "latitude": 51.41932,
-                "longitude": 5.573495
-            },
-            "optional": {
-                "website": "https://fotoclubdedreef.nl",
-                "level2URL": "https://www.example.com/fcDeDreef.level2.json",
-                "remark": [
-                    {
-                        "language": "EN",
-                        "value": "This 8 member club caters to beginners and well as more experienced photographers."
-                    },
-                    {
-                        "language": "NL",
-                        "value": "De club heeft 8 leden en is open voor beginnelingen tot gevorderden."
-                    }
-                ]
-            }
-        },
-
-        {
-            "idPlus": {
-                "town": "Geldrop",
-                "fullName": "Fotogroep Digifoto Geldrop",
-                "nickName": "fgDigifoto"
-            },
-            "coordinates": {
-                "latitude": 51.42227,
-                "longitude": 5.56280
-            },
-            "optional": {
-                "level2URL": "https://www.example.com/fgDigifoto.level2.json",
-                "remark": [
-                    {
-                        "language": "EN",
-                        "value": "We couldn't find a working web site for the club, but the club was active in Oct 2023."
-                    },
-                    {
-                        "language": "NL",
-                        "value": "De club lijkt geen website meer te hebben. In 2023 hielden zij een 20-jarig jubileum."
-                    }
-                ]
-            }
-        },
-
-        {
-            "idPlus": {
                 "town": "Eindhoven",
                 "fullName": "Dekate Mousa",
                 "nickName": "DekateMousa"
@@ -570,6 +593,32 @@
                     {
                         "language": "NL",
                         "value": "De club schrijft \"een fotoclub enthousiaste amateurfotografen die 50 jaar en ouder zijn\"."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Eindhoven",
+                "fullName": "Foto-videoclub DAF",
+                "nickName": "DAF"
+            },
+            "coordinates": {
+                "latitude": 51.433188,
+                "longitude": 5.504971
+            },
+            "optional": {
+                "website": "https://www.daffotovideoclub.nl",
+                "level2URL": "https://www.example.com/daf.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "This club consists of employees of a major truck manufacturer based in Eindhoven."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "De club bestaan uit DAF medewerkers en organiseert ondermeer workshops op het DAF terrein in EIndhoven, maar ook elders."
                     }
                 ]
             }
@@ -641,7 +690,6 @@
                 "longitude": 5.51534
             },
             "optional": {
-                "website": "",
                 "level2URL": "https://www.example.com/deBeeldmakers.level2.json",
                 "remark": [
                     {
@@ -736,10 +784,7 @@
                         "language": "NL",
                         "value": "Citaat: 'Fotogroep Klick is in 2010 na het beëindigen van een fotografiecursus door een aantal enthousiaste fotoamateurs opgericht.'"
                     }
-                ],
-                "nlSpecific": {
-                    "fotobondNumber": 1672
-                }
+                ]
             }
         },
 
@@ -765,10 +810,7 @@
                         "language": "NL",
                         "value": "De club komt bijeen in Gemeenshapshuis De Uitwijk, Eindhoven. De jaarlijkse expo valt in maart."
                     }
-                ],
-                "nlSpecific": {
-                    "fotobondNumber": 1626
-                }
+                ]
             }
         },
 
@@ -803,9 +845,60 @@
 
         {
             "idPlus": {
+                "town": "Geldrop",
+                "fullName": "Fotoclub de Dreef",
+                "nickName": "fcDeDreef"
+            },
+            "coordinates": {
+                "latitude": 51.41932,
+                "longitude": 5.573495
+            },
+            "optional": {
+                "website": "https://fotoclubdedreef.nl",
+                "level2URL": "https://www.example.com/fcDeDreef.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "This 8 member club caters to beginners and well as more experienced photographers."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "De club heeft 8 leden en is open voor beginnelingen tot gevorderden."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Geldrop",
+                "fullName": "Fotogroep Digifoto Geldrop",
+                "nickName": "fgDigifoto"
+            },
+            "coordinates": {
+                "latitude": 51.42227,
+                "longitude": 5.56280
+            },
+            "optional": {
+                "level2URL": "https://www.example.com/fgDigifoto.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "We couldn't find a working website for the club, but the club was active in Oct 2023."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "De club lijkt geen website meer te hebben. In 2023 hielden zij een 20-jarig jubileum."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Gemert",
                 "fullName": "Foto Expressie Groep Gemert",
-                "nickName": "FEGG"
+                "nickName": "fegGemert"
             },
             "coordinates": {
                 "latitude": 51.56025,
@@ -852,10 +945,7 @@
                         "language": "NL",
                         "value": "Om lid te worden van de fotoclub moet men ook lid zijn van de vereniging 'De Sociëteit' in Grave, waar de fotoclub deel van uitmaakt."
                     }
-                ],
-                "nlSpecific": {
-                    "fotobondNumber": 1688
-                }
+                ]
             }
         },
 
@@ -875,7 +965,7 @@
                 "remark": [
                     {
                         "language": "EN",
-                        "value": "The club's exposition is held every 2nd Sunday in May (Mother's Day) in an open air theatre in a local forest."
+                        "value": "The club's exposition is held every 2nd Sunday in May (Mother's Day) in an open air theater in a local forest."
                     },
                     {
                         "language": "NL",
@@ -958,6 +1048,84 @@
                     {
                         "language": "NL",
                         "value": "De club bestaat sinds 2015 en heeft ongeveer 20 leden."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Helmond",
+                "fullName": "Fotoclub Fotodier",
+                "nickName": "fcFotodier"
+            },
+            "coordinates": {
+                "latitude": 51.49516,
+                "longitude": 5.69171
+            },
+            "optional": {
+                "website": "https://dierdonk.nl/fotodier/",
+                "level2URL": "https://www.example.com/fcFotodier.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Fotodier is named after a suburb of the city of Helmond."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Fotodier is genoemd naar Dierdonk, een wijk van Helmond."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Helmond",
+                "fullName": "Fotowerkgroep Kiek Nauw (IVN)",
+                "nickName": "fwgKiekNauw"
+            },
+            "coordinates": {
+                "latitude": 51.48333,
+                "longitude": 5.65000
+            },
+            "optional": {
+                "website": "https://www.ivn.nl/afdeling/helmond/overons-werkgroepen-fotowerkgroepen/",
+                "level2URL": "https://www.example.com/fwgKiekNauw.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "These photographers are part of a well-known Dutch non-profit organization, IVN, that promotes awareness of conservation of nature."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Er vallen 2 samenwerkende fotowerkgroepen onder de IVN afdeling Helmond (Instituut voor Natuurbeschermingseducatie)."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Middelrode",
+                "fullName": "Fotoclub Natuur in Beeld",
+                "nickName": "fcNatuurInBeeld"
+            },
+            "coordinates": {
+                "latitude": 51.66295,
+                "longitude": 5.41814
+            },
+            "optional": {
+                "website": "https://natuurinbeeldmiddelrode.nl",
+                "level2URL": "https://www.example.com/fcNatuurMiddelrode.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "The club specializes in nature photography and videography. It streses the importance of knowing about and respecting your subjects."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Deze natuurfotografie club benadrukt het belang van kennis van- en respect voor de natuur bij het maken van opnamen"
                     }
                 ]
             }
@@ -1095,6 +1263,32 @@
 
         {
             "idPlus": {
+                "town": "Nuenen",
+                "fullName": "Fotoclub Momentum",
+                "nickName": "fcMomentum"
+            },
+            "coordinates": {
+                "latitude": 51.47586,
+                "longitude": 5.55000
+            },
+            "optional": {
+                "website": "https://www.fotoclub-momentum.nl",
+                "level2URL": "https://www.example.com/fcMomentum.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "A noteworthy activity in the group is to pass around a physical object (e.g. a small sculpture) which the photographers can then portray in their own style. The results are shared at the end of the assignment."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Soms heeft de club een projekt rondom een 'doorgeefobject' dat door achtereenvolgende fotografen vastgelegd wordt. De beelden hiervan worden aan het einde van de rit gedeeld."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Nuland",
                 "fullName": "Fotoclub Nuland",
                 "nickName": "fcNuland"
@@ -1115,10 +1309,7 @@
                         "language": "NL",
                         "value": "In 2023 heeft de club met twee clubs in Rosmalen een fotoketting gemaakt waarbij ieder binnen een week fotografisch reageerde op een foto van een voorganger."
                     }
-                ],
-                "nlSpecific": {
-                    "fotobondNumber": 1680
-                }
+                ]
             }
         },
 
@@ -1155,7 +1346,7 @@
             "idPlus": {
                 "town": "Oss",
                 "fullName": "Fotoclub Oss",
-                "nickName": "FOCOSS"
+                "nickName": "fcFOCOSS"
             },
             "coordinates": {
                 "latitude": 51.76717,
@@ -1163,7 +1354,7 @@
             },
             "optional": {
                 "website": "https://www.focoss.nl",
-                "level2URL": "https://www.example.com/FOCOSS.level2.json",
+                "level2URL": "https://www.example.com/fcFOCOSS.level2.json",
                 "remark": [
                     {
                         "language": "EN",
@@ -1172,6 +1363,32 @@
                     {
                         "language": "NL",
                         "value": "De groep heeft ongeveer 55 leden. Er wordt een foto van de maand en foto van het jaar gekozen."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Oss",
+                "fullName": "Vrije Osse Fotoclub Met Body",
+                "nickName": "VOFMB"
+            },
+            "coordinates": {
+                "latitude": 51.76730,
+                "longitude": 5.52094
+            },
+            "optional": {
+                "website": "https://www.facebook.com/groups/vofmb/",
+                "level2URL": "https://www.example.com/VOFMB.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "The club's name refer to a fusion between two separate photography clubs in Oss."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "De naam is het gevolg van een samensmelting in 2016 tussen de Vrije Osse Fotoclub en Fotoclub Met Body."
                     }
                 ]
             }
@@ -1196,7 +1413,7 @@
                     },
                     {
                         "language": "NL",
-                        "value": "Voor zover bekend heeft Fotokring Riethoven geen eigen web site."
+                        "value": "Voor zover bekend heeft Fotokring Riethoven geen eigen website."
                     }
                 ],
                 "nlSpecific": {
@@ -1346,7 +1563,7 @@
 
         {
             "idPlus": {
-                "town": "Sint Michielsgestel",
+                "town": "Sint-Michielsgestel",
                 "fullName": "Fotokring Sint-Michielsgestel",
                 "nickName": "fkGestel"
             },
@@ -1469,7 +1686,6 @@
                 "longitude": 5.60938
             },
             "optional": {
-                "website": "",
                 "level2URL": "https://www.example.com/fcBeeldspraakU.level2.json",
                 "remark": [
                     {
@@ -1567,6 +1783,31 @@
 
         {
             "idPlus": {
+                "town": "Veghel",
+                "fullName": "Fotowerkgroep Zien & Doorzien",
+                "nickName": "fwgZienDoorzien"
+            },
+            "coordinates": {
+                "latitude": 51.61640,
+                "longitude": 5.53012
+            },
+            "optional": {
+                "level2URL": "https://www.example.com/fwgZienBezien.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "De club holds joint expositions with 4 other regional photo clubs."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "De club exposeert samen met 4 andere clubs op voormalig fabrieksterrein de Noordkade."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Veldhoven",
                 "fullName": "Fotoclub Bellus Imago",
                 "nickName": "fcBellusImago"
@@ -1626,7 +1867,7 @@
         {
             "idPlus": {
                 "town": "Veldhoven",
-                "fullName": "Luminos",
+                "fullName": "Fotogroep Luminos",
                 "nickName": "fgLuminos"
             },
             "coordinates": {
@@ -1734,6 +1975,32 @@
 
         {
             "idPlus": {
+                "town": "Waalre",
+                "fullName": "Collectief de Verbeelding",
+                "nickName": "cVerbeelding"
+            },
+            "coordinates": {
+                "latitude": 51.38691,
+                "longitude": 5.44533
+            },
+            "optional": {
+                "website": "https://collectief-deverbeelding.nl",
+                "level2URL": "https://www.example.com/cDeVerbeelding.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "The collective consists of 4 members and was founded in May 2025."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Het collectief is opgericht in mei 2025 en exposeert in het Waalres Museum."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Waalwijk",
                 "fullName": "Collectief Brabant",
                 "nickName": "fcBrabant"
@@ -1827,7 +2094,6 @@
                 "longitude": 5.25076
             },
             "optional": {
-                "website": "",
                 "level2URL": "https://www.example.com/?.level2.json",
                 "remark": [
                     {
@@ -1856,7 +2122,7 @@
                 "longitude": 5.67461
             },
             "optional": {
-                "website": "www.facebook.com/ObjectiefZeeland",
+                "website": "https://www.facebook.com/ObjectiefZeeland",
                 "level2URL": "https://www.example.com/???.level2.json",
                 "remark": [
                     {
@@ -2071,7 +2337,7 @@
                 "longitude": -6.265375
             },
             "optional": {
-                "website": "",
+                "website": "https://www.nli.ie/collections/our-collections/photographs",
                 "wikipedia": "https://en.wikipedia.org/wiki/National_Photographic_Archive",
                 "remark": [
                     {
@@ -2081,6 +2347,31 @@
                     {
                         "language": "NL",
                         "value": "Het archief, dat deel uitmaakt van de Nationale Bibliotheek van Ierland, organiseert ook tentoonstellingen."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Eindhoven",
+                "fullName": "Pennings Foundation",
+                "nickName": "Pennings"
+            },
+            "coordinates": {
+                "latitude": 51.43391,
+                "longitude": 5.48889
+            },
+            "optional": {
+                "website": "https://www.penningsfoundation.com",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Pennings' own tagline is \"Presentation platform and knowledge center for photography\"."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Pennings omschrijft zichzelf als \"Presentatieplatform en kenniscentrum voor fotografie\"."
                     }
                 ]
             }
@@ -2537,8 +2828,8 @@
                 "nickName": "NFM Rdam"
             },
             "coordinates": {
-                "latitude": 51.92275,
-                "longitude": 4.47972
+                "latitude": 51.90296,
+                "longitude": 4.49504
             },
             "optional": {
                 "website": "https://www.nederlandsfotomuseum.nl",
@@ -2577,6 +2868,32 @@
                     {
                         "language": "NL",
                         "value": "Het museum draagt de naam van de Japanese fotograaf Ken Domon, die in Sakata, Japan geboren is."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Seoul",
+                "fullName": "Photography Seoul Museum of Art",
+                "nickName": "PhotoSeMA"
+            },
+            "coordinates": {
+                "latitude": 37.65536,
+                "longitude": 127.04897
+            },
+            "optional": {
+                "website": "https://sema.seoul.go.kr/en/visit/photosema",
+                "wikipedia": "",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "This 6 story building dedicated to photography was opened on May 29th 2025."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Het museum is nieuw (Mei 2025) en is volledig gewijdt aan fotografie als kunstvorm."
                     }
                 ]
             }

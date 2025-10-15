@@ -3,13 +3,12 @@
         "idPlus": {
             "town": "Eindhoven",
             "fullName": "Fotogroep de Gender",
-            "nickName": "FG deGender"
+            "nickName": "fgDeGender"
+        },
+        "coordinates": {
+            "latitude": 51.42398, "longitude": 5.4501
         },
         "optional": {
-            "coordinates": {
-                "latitude": 51.42398,
-                "longitude": 5.4501
-            },
             "website": "https://www.fcdegender.nl",
             "wikipedia": "https://nl.wikipedia.org/wiki/Gender_(beek)",
             "level2URL": "https://www.example.com/deGender.level2.json",
@@ -38,7 +37,7 @@
                 "familyName": "Dekkers"
             },
             "optional": {
-                "level3URL": "http://www.vdhamer.com/fgDeGender/Albert_Dekkers/",
+                "level3URL": "https://www.fcDeGender.nl/portfolios/Albert_Dekkers/",
                 "status": {
                     "isFormerMember": true
                 },
@@ -54,11 +53,12 @@
                 "familyName": "Koning"
             },
             "optional": {
-                "level3URL": "http://www.vdhamer.com/fgDeGender/Albert_Koning/",
+                "level3URL": "https://www.fcDeGender.nl/portfolios/Albert_Koning/",
                 "membershipStartDate": "2022-11-17",
                 "nlSpecific": {
                     "fotobondNumber": 1620108
-                }
+                },
+                "expertises": [ "Travel", "Museum" ]
             }
         },
 
@@ -70,11 +70,12 @@
             },
             "optional": {
                 "website": "http://www.ankefoto.nl/",
-                "level3URL": "http://www.vdhamer.com/fgDeGender/Anke_Spijkers/",
+                "level3URL": "https://www.fcDeGender.nl/portfolios/Anke_Spijkers/",
                 "membershipStartDate": "2002-04-01",
                 "nlSpecific": {
                     "fotobondNumber": 1620059
-                }
+                },
+                "expertises": [ "Travel" ]
             }
         },
 
@@ -85,10 +86,12 @@
                 "familyName": "Kars"
             },
             "optional": {
-                "level3URL": "http://www.vdhamer.com/fgDeGender/Annet_Kars/",
+                "membershipStartDate": "2025-04-14",
+                "level3URL": "https://www.fcDeGender.nl/portfolios/Annet_Kars/",
                 "status": {
-                    "isProspectiveMember": true
-                }
+                    "isProspectiveMember": false
+                },
+                "expertises": [ "Bird", "Landscape" ]
             }
         },
 
@@ -101,15 +104,13 @@
             "optional": {
                 "birthday": "9999-04-29",
                 "website": "https://www.instagram.com/zantingh49/",
-                "level3URL": "http://www.vdhamer.com/fgDeGender/Bert_Zantingh/",
+                "level3URL": "https://www.fcDeGender.nl/portfolios/Bert_Zantingh/",
                 "status": {
                     "isFormerMember": true
                 },
                 "membershipStartDate": "1996-01-01",
                 "membershipEndDate": "2025-03-31",
-                "nlSpecific": {
-                    "fotobondNumber": 1620040
-                }
+                "expertises": [ "Architecture", "Landscape", "Drone" ]
             }
         },
 
@@ -122,9 +123,9 @@
             "optional": {
                 "birthday": "9999-07-19",
                 "website": "https://glass.photo/jerdam",
-                "level3URL": "http://www.vdhamer.com/fgDeGender/Bettina_de_Graaf/",
+                "level3URL": "https://www.fcDeGender.nl/portfolios/Bettina_de_Graaf/",
                 "membershipStartDate": "2024-01-01",
-                "expertises": [ "Portrait", "Street", "Travel" ],
+                "expertises": [ "Portrait", "Concert" ],
                 "nlSpecific": {
                     "fotobondNumber": 1620111
                 }
@@ -138,7 +139,7 @@
                 "familyName": "Oosterbosch"
             },
             "optional": {
-                "level3URL": "http://www.vdhamer.com/fgDeGender/Eddy_Oosterbosch/",
+                "level3URL": "https://www.fcDeGender.nl/portfolios/Eddy_Oosterbosch/",
                 "status": {
                     "isFormerMember": true
                 },
@@ -156,9 +157,9 @@
             "optional": {
                 "birthday": "9999-10-17",
                 "website": "https://www.ericvdven.nl/",
-                "level3URL": "http://www.vdhamer.com/fgDeGender/Eric_van_de_Ven/",
+                "level3URL": "https://www.fcDeGender.nl/portfolios/Eric_van_de_Ven/",
                 "membershipStartDate": "2022-12-01",
-                "expertises": [ "Experimental", "Postprocessing" ],
+                "expertises": [ "Experimental", "Mixed-Media" ],
                 "nlSpecific": {
                     "fotobondNumber": 1620109
                 }
@@ -172,14 +173,15 @@
                 "familyName": "Mil"
             },
             "optional": {
-                "level3URL": "http://www.vdhamer.com/fgDeGender/Francien_van_Mil/",
+                "level3URL": "https://www.fcDeGender.nl/portfolios/Francien_van_Mil/",
                 "roles": {
                     "isSecretary": true
                 },
                 "membershipStartDate": "2019-09-22",
                 "nlSpecific": {
                     "fotobondNumber": 1620099
-                }
+                },
+                "expertises": [ "Street" ]
             }
         },
 
@@ -191,7 +193,7 @@
             },
             "optional": {
                 "website": "https://www.facebook.com/frans.verbeek.54/photos?locale=nl_NL",
-                "level3URL": "http://www.vdhamer.com/fgDeGender/Frans_Verbeek/",
+                "level3URL": "https://www.fcDeGender.nl/portfolios/Frans_Verbeek/",
                 "status": {
                     "isFormerMember": true
                 },
@@ -210,7 +212,7 @@
                 "familyName": "Bushman"
             },
             "optional": {
-                "level3URL": "http://www.vdhamer.com/fgDeGender/Gio_Bushman/",
+                "level3URL": "https://www.fcDeGender.nl/portfolios/Gio_Bushman/",
                 "status": {
                     "isDeceased": true,
                     "isFormerMember": true
@@ -227,8 +229,12 @@
                 "familyName": "Bois"
             },
             "optional": {
-                "level3URL": "http://www.vdhamer.com/fgDeGender/Gert_du_Bois/",
+                "level3URL": "https://www.fcDeGender.nl/portfolios/Gert_du_Bois/",
+                "status": {
+                    "isFormerMember": true
+                },
                 "membershipStartDate": "2015-01-01",
+                "membershipEndDate": "2025-03-31",
                 "nlSpecific": {
                     "fotobondNumber": 1620087
                 }
@@ -242,7 +248,7 @@
                 "familyName": "Busink"
             },
             "optional": {
-                "level3URL": "http://www.vdhamer.com/fgDeGender/Greet_Busink/",
+                "level3URL": "https://www.fcDeGender.nl/portfolios/Greet_Busink/",
                 "status": {
                     "isFormerMember": true
                 },
@@ -258,11 +264,12 @@
                 "familyName": "Gorp"
             },
             "optional": {
-                "level3URL": "http://www.vdhamer.com/fgDeGender/Hans_van_Gorp/",
+                "level3URL": "https://www.fcDeGender.nl/portfolios/Hans_van_Gorp/",
                 "membershipStartDate": "1995-01-01",
                 "nlSpecific": {
                     "fotobondNumber": 1620029
-                }
+                },
+                "expertises": [ "Documentary" ]
             }
         },
 
@@ -273,15 +280,29 @@
                 "familyName": "Krüsemann"
             },
             "optional": {
-                "level3URL": "http://www.vdhamer.com/fgDeGender/Hans_Krusemann/",
+                "level3URL": "https://www.fcDeGender.nl/portfolios/Hans_Krusemann/",
                 "roles": {
                     "isOther": false
                 },
                 "membershipStartDate": "2016-04-01",
-                "expertises": [ "Black & White", "Landscape" ],
+                "expertises": [ "Architecture", "Landscape" ],
                 "nlSpecific": {
                     "fotobondNumber": 1620090
                 }
+            }
+        },
+
+        {
+            "name": {
+                "givenName": "Hans",
+                "infixName": "",
+                "familyName": "Vervloed"
+            },
+            "optional": {
+                "website": "https://www.hansvervloed.nl",
+                "level3URL": "https://www.fcDeGender.nl/portfolios/Hans_Vervloed/",
+                "membershipStartDate": "2025-09-29",
+                "expertises": [ "Experimental", "Mixed-Media" ]
             }
         },
 
@@ -292,7 +313,7 @@
                 "familyName": "Helsen"
             },
             "optional": {
-                "level3URL": "http://www.vdhamer.com/fgDeGender/Ingrid_Helsen/",
+                "level3URL": "https://www.fcDeGender.nl/portfolios/Ingrid_Helsen/",
                 "status": {
                     "isFormerMember": true
                 },
@@ -304,18 +325,19 @@
         {
             "name": {
                 "givenName": "Jelle",
-                "infixName": "van de",
+                "infixName": "van der",
                 "familyName": "Voort"
             },
             "optional": {
-                "level3URL": "http://www.vdhamer.com/fgDeGender/Jelle_van_de_Voort/",
+                "level3URL": "https://www.fcDeGender.nl/portfolios/Jelle_van_der_Voort/",
                 "roles": {
                     "isChairman": true
                 },
                 "membershipStartDate": "2020-01-01",
                 "nlSpecific": {
                     "fotobondNumber": 1620103
-                }
+                },
+                "expertises": [ "Street", "Portrait" ]
             }
         },
 
@@ -326,25 +348,11 @@
                 "familyName": "Julicher"
             },
             "optional": {
-                "level3URL": "http://www.vdhamer.com/fgDeGender/Joep_Julicher/",
+                "level3URL": "https://www.fcDeGender.nl/portfolios/Joep_Julicher/",
                 "membershipStartDate": "2019-04-01",
-                "expertises": [ "Minimal" ],
+                "expertises": [ "Minimal", "Experimental" ],
                 "nlSpecific": {
                     "fotobondNumber": 1620098
-                }
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "Jos",
-                "infixName": "",
-                "familyName": "Zwaans"
-            },
-            "optional": {
-                "level3URL": "http://www.vdhamer.com/fgDeGender/Jos_Zwaans/",
-                "status": {
-                    "isProspectiveMember": true
                 }
             }
         },
@@ -358,7 +366,7 @@
             "optional": {
                 "birthday": "9999-11-30",
                 "website": "https://www.lex-augusteijn.nl",
-                "level3URL": "http://www.vdhamer.com/fgDeGender/Lex_Augusteijn/",
+                "level3URL": "https://www.fcDeGender.nl/portfolios/Lex_Augusteijn/",
                 "roles": {
                     "isOther": false
                 },
@@ -378,8 +386,7 @@
             },
             "optional": {
                 "birthday": "9999-10-09",
-                "website": "https://www.m3w.nl",
-                "level3URL": "http://www.vdhamer.com/fgDeGender/Marcelle_van_Veen/",
+                "level3URL": "https://www.fcDeGender.nl/portfolios/Marcelle_van_Veen/",
                 "status": {
                     "isDeceased": true,
                     "isFormerMember": true
@@ -396,12 +403,9 @@
                 "familyName": "Wielders"
             },
             "optional": {
-                "roles": {
-                    "isChairman": false
-                },
                 "birthday": "9999-10-09",
                 "website": "https://www.m3w.nl",
-                "level3URL": "http://www.vdhamer.com/fgDeGender/Mariet_Wielders/",
+                "level3URL": "https://www.fcDeGender.nl/portfolios/Mariet_Wielders/",
                 "status": {
                     "isFormerMember": true
                 },
@@ -409,7 +413,8 @@
                 "membershipEndDate": "2024-12-31",
                 "nlSpecific": {
                     "fotobondNumber": 1620079
-                }
+                },
+                "expertises": [ "Portrait" ]
             }
         },
 
@@ -421,11 +426,12 @@
             },
             "optional": {
                 "birthday": "9999-05-01",
-                "level3URL": "http://www.vdhamer.com/fgDeGender/Marika_Beckers/",
+                "level3URL": "https://www.fcDeGender.nl/portfolios/Marika_Beckers/",
                 "membershipStartDate": "2021-05-26",
                 "nlSpecific": {
                     "fotobondNumber": 1620104
-                }
+                },
+                "expertises": [ "Experimental", "Landscape" ]
             }
         },
 
@@ -436,7 +442,7 @@
                 "familyName": "Leenders"
             },
             "optional": {
-                "level3URL": "http://www.vdhamer.com/fgDeGender/Martien_Leenders/",
+                "level3URL": "https://www.fcDeGender.nl/portfolios/Martien_Leenders/",
                 "status": {
                     "isFormerMember": true
                 },
@@ -444,7 +450,8 @@
                 "membershipEndDate": "2024-12-31",
                 "nlSpecific": {
                     "fotobondNumber": 1620008
-                }
+                },
+                "expertises": [ "Experimental", "Postprocessing" ]
             }
         },
 
@@ -455,7 +462,7 @@
                 "familyName": "Frenkiel"
             },
             "optional": {
-                "level3URL": "http://www.vdhamer.com/fgDeGender/Michael_Frenkiel/",
+                "level3URL": "https://www.fcDeGender.nl/portfolios/Michael_Frenkiel/",
                 "status": {
                     "isFormerMember": true
                 },
@@ -471,14 +478,15 @@
                 "familyName": "Franssen"
             },
             "optional": {
-                "level3URL": "http://www.vdhamer.com/fgDeGender/Miep_Franssen/",
+                "level3URL": "https://www.fcDeGender.nl/portfolios/Miep_Franssen/",
                 "status": {
                     "isHonoraryMember": true
                 },
                 "membershipStartDate": "1976-01-01",
                 "nlSpecific": {
                     "fotobondNumber": 1620021
-                }
+                },
+                "expertises": [ "Self-Expression" ]
             }
         },
 
@@ -489,7 +497,7 @@
                 "familyName": "Bruijn"
             },
             "optional": {
-                "level3URL": "http://www.vdhamer.com/fgDeGender/Monique_de_Bruijn/",
+                "level3URL": "https://www.fcDeGender.nl/portfolios/Monique_de_Bruijn/",
                 "status": {
                     "isFormerMember": true
                 },
@@ -505,7 +513,7 @@
                 "familyName": "Palen"
             },
             "optional": {
-                "level3URL": "http://www.vdhamer.com/fgDeGender/Nettie_van_der_Palen/",
+                "level3URL": "https://www.fcDeGender.nl/portfolios/Nettie_van_der_Palen/",
                 "status": {
                     "isFormerMember": true
                 },
@@ -522,7 +530,7 @@
             },
             "optional": {
                 "website": "https://www.flickr.com/people/150047808@N08/",
-                "level3URL": "http://www.vdhamer.com/fgDeGender/Peter_de_Wit/",
+                "level3URL": "https://www.fcDeGender.nl/portfolios/Peter_de_Wit/",
                 "status": {
                     "isFormerMember": true
                 },
@@ -543,12 +551,12 @@
             "optional": {
                 "birthday": "9999-10-18",
                 "website": "https://glass.photo/vdhamer",
-                "level3URL": "http://www.vdhamer.com/fgDeGender/Peter_van_den_Hamer/",
+                "level3URL": "https://www.fcDeGender.nl/portfolios/Peter_van_den_Hamer/",
                 "roles": {
                     "isAdmin": true
                 },
                 "membershipStartDate": "2024-01-01",
-                "expertises": [ "Landscape", "Minimal" ],
+                "expertises": [ "Minimal", "Travel" ],
                 "nlSpecific": {
                     "fotobondNumber": 1620110
                 }
@@ -564,25 +572,12 @@
             "optional": {
                 "birthday": "9999-04-10",
                 "website": "http://www.pietvanderputtenfotografie.nl/",
-                "level3URL": "http://www.vdhamer.com/fgDeGender/Piet_van_der_Putten/",
+                "level3URL": "https://www.fcDeGender.nl/portfolios/Piet_van_der_Putten/",
                 "membershipStartDate": "2008-04-01",
                 "nlSpecific": {
                     "fotobondNumber": 1620076
-                }
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "Pieter",
-                "infixName": "de",
-                "familyName": "Jong"
-            },
-            "optional": {
-                "level3URL": "http://www.vdhamer.com/fgDeGender/Pieter_de_Jong/",
-                "status": {
-                    "isProspectiveMember": true
-                }
+                },
+                "expertises": [ "Experimental", "Portrait", "Multiple-Exposure" ]
             }
         },
 
@@ -594,9 +589,9 @@
             },
             "optional": {
                 "birthday": "9999-12-19",
-                "level3URL": "http://www.vdhamer.com/fgDeGender/Regina_Bakker/",
+                "level3URL": "https://www.fcDeGender.nl/portfolios/Regina_Bakker/",
                 "membershipStartDate": "2020-01-01",
-                "expertises": [ "Landscape" ],
+                "expertises": [ "Abstract", "Macro" ],
                 "nlSpecific": {
                     "fotobondNumber": 1620101
                 }
@@ -611,11 +606,12 @@
             },
             "optional": {
                 "website": "http://www.rovado-artworks.nl/",
-                "level3URL": "http://www.vdhamer.com/fgDeGender/Rob_van_Doorn/",
+                "level3URL": "https://www.fcDeGender.nl/portfolios/Rob_van_Doorn/",
                 "membershipStartDate": "2017-10-23",
                 "nlSpecific": {
                     "fotobondNumber": 1620093
-                }
+                },
+                "expertises": [ "Conceptual", "Abstract" ]
             }
         },
 
@@ -628,11 +624,12 @@
             "optional": {
                 "birthday": "9999-07-05",
                 "website": "http://www.tonbuijs.nl/",
-                "level3URL": "http://www.vdhamer.com/fgDeGender/Ton_Buijs/",
+                "level3URL": "https://www.fcDeGender.nl/portfolios/Ton_Buijs/",
                 "membershipStartDate": "2014-12-01",
                 "nlSpecific": {
                     "fotobondNumber": 1620085
-                }
+                },
+                "expertises": [ "Landscape", "Conceptual" ]
             }
         },
 
@@ -644,11 +641,12 @@
             },
             "optional": {
                 "birthday": "9999-06-08",
-                "level3URL": "http://www.vdhamer.com/fgDeGender/Ton_Roovers/",
+                "level3URL": "https://www.fcDeGender.nl/portfolios/Ton_Roovers/",
                 "membershipStartDate": "2022-10-27",
                 "nlSpecific": {
                     "fotobondNumber": 1620106
-                }
+                },
+                "expertises": [ "Portrait" ]
             }
         },
 
@@ -659,11 +657,12 @@
                 "familyName": "Mouws"
             },
             "optional": {
-                "level3URL": "http://www.vdhamer.com/fgDeGender/Toon_Mouws/",
+                "level3URL": "https://www.fcDeGender.nl/portfolios/Toon_Mouws/",
                 "membershipStartDate": "1996-01-01",
                 "nlSpecific": {
                     "fotobondNumber": 1620038
-                }
+                },
+                "expertises": [ "Abstract", "Concert", "Travel" ]
             }
         },
 
@@ -675,11 +674,12 @@
             },
             "optional": {
                 "birthday": "9999-07-14",
-                "level3URL": "http://www.vdhamer.com/fgDeGender/Truus_Michielsen/",
+                "level3URL": "https://www.fcDeGender.nl/portfolios/Truus_Michielsen/",
                 "membershipStartDate": "2009-04-01",
                 "nlSpecific": {
                     "fotobondNumber": 1620078
-                }
+                },
+                "expertises": [ "Portrait", "Nature" ]
             }
         },
 
@@ -690,10 +690,12 @@
                 "familyName": "Kars"
             },
             "optional": {
-                "level3URL": "http://www.vdhamer.com/fgDeGender/Willem_Kars/",
+                "membershipStartDate": "2025-04-14",
+                "level3URL": "https://www.fcDeGender.nl/portfolios/Willem_Kars/",
                 "status": {
-                    "isProspectiveMember": true
-                }
+                    "isProspectiveMember": false
+                },
+                "expertises": [ "Bird", "Landscape" ]
             }
         },
 
@@ -704,7 +706,7 @@
                 "familyName": "Lanters"
             },
             "optional": {
-                "level3URL": "http://www.vdhamer.com/fgDeGender/Willy_Lanters/",
+                "level3URL": "https://www.fcDeGender.nl/portfolios/Willy_Lanters/",
                 "status": {
                     "isFormerMember": true
                 },
@@ -721,12 +723,12 @@
             },
             "optional": {
                 "website": "https://www.flickr.com/photos/fotoklasje",
-                "level3URL": "http://www.vdhamer.com/fgDeGender/Wim_Heijne/",
+                "level3URL": "https://www.fcDeGender.nl/portfolios/Wim_Heijne/",
                 "roles": {
                     "isTreasurer": true
                 },
                 "membershipStartDate": "2022-10-23",
-                "expertises": [ "Experimental" ],
+                "expertises": [ "Street", "Travel" ],
                 "nlSpecific": {
                     "fotobondNumber": 1620105
                 }

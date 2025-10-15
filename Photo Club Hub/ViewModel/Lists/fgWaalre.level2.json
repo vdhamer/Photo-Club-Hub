@@ -5,8 +5,8 @@
             "fullName": "Fotogroep Waalre",
             "nickName": "fgWaalre"
         },
+        "coordinates": {"latitude": 51.39184, "longitude": 5.46144},
         "optional": {
-            "coordinates": {"latitude": 51.39184, "longitude": 5.46144},
             "website": "https://www.fotogroepwaalre.nl",
             "level2URL": "https://www.example.com/fgWaalre.level2.json",
             "remark": [
@@ -23,6 +23,7 @@
         }
     },
     "members": [
+
         {
             "name": {
                 "givenName" : "Aad"         ,
@@ -35,6 +36,7 @@
                 "nlSpecific": {"fotobondNumber": 1634046}
             }
         },
+
         {
             "name": {
                 "givenName" : "Ariejan",
@@ -45,9 +47,11 @@
                 "website": "http://www.ariejanvantwiskfotografie.nl",
                 "level3URL": "http://www.vdhamer.com/fgWaalre/Ariejan_van_Twisk/",
                 "status": {"isFormerMember": true},
+                "expertises": ["Architecture"],
                 "nlSpecific": {"fotobondNumber": 1634051}
             }
         },
+
         {
             "name": {
                 "givenName" : "Bart"        ,
@@ -61,6 +65,7 @@
                 "nlSpecific": {"fotobondNumber": 1634041}
             }
         },
+
         {
             "name": {
                 "givenName" : "Bettina",
@@ -73,6 +78,7 @@
                 "nlSpecific": {"fotobondNumber": 1634067}
             }
         },
+
         {
             "name": {
                 "givenName" : "Bram"   ,
@@ -80,12 +86,14 @@
                 "familyName": "Berge"
             },
             "optional": {
-                "level3URL": "http://www.vdhamer.com/fgWaalre/Bram_van_den_Berge/",
+                "featuredImage": "https://fotogroepwaalre.nl/wp-content/uploads/2024/04/WhatsApp-Image-2024-04-21-at-15.36.47.jpeg",
+                "level3URL": "https://www.fotogroepWaalre.nl/leden/bram-van-den-berge/#anker",
                 "roles": {"isAdmin": true},
                 "expertises": ["Experimental", "Postprocessing"],
                 "nlSpecific": {"fotobondNumber": 1634007}
             }
         },
+
         {
             "name": {
                 "givenName" : "Carel"  ,
@@ -93,12 +101,14 @@
                 "familyName": "Bullens"
             },
             "optional": {
-                "level3URL": "http://www.vdhamer.com/fgWaalre/Carel_Bullens/",
+                "featuredImage": "https://fotogroepwaalre.nl/wp-content/uploads/2024/03/photo_00190-e1712773795260.jpg",
+                "level3URL": "https://www.fotogroepWaalre.nl/leden/carel-bullens/#anker",
                 "roles": {"isViceChairman": true},
                 "expertises": ["Landscape", "Street"],
                 "nlSpecific": {"fotobondNumber": 1634010}
             }
         },
+
         {
             "name": {
                 "givenName" : "Cassandra",
@@ -110,6 +120,7 @@
                 "status": {"isFormerMember": true}
             }
         },
+
         {
             "name": {
                 "givenName" : "Conny"   ,
@@ -122,6 +133,7 @@
                 "nlSpecific": {"fotobondNumber": 1634065}
             }
         },
+
         {
             "name": {
                 "givenName" : "Elke"   ,
@@ -133,6 +145,7 @@
                 "status": {"isFormerMember": true}
             }
         },
+
         {
             "name": {
                 "givenName" : "Erik" ,
@@ -140,12 +153,14 @@
                 "familyName": "Geest"
             },
             "optional": {
-                "level3URL": "http://www.vdhamer.com/fgWaalre/Erik_van_Geest/",
+                "featuredImage": "https://fotogroepwaalre.nl/wp-content/uploads/2024/04/DSC03339-2.jpg",
+                "level3URL": "https://www.fotogroepWaalre.nl/leden/erik-van-geest/#anker",
                 "roles": {"isAdmin": true},
                 "expertises": ["Street", "Travel"],
                 "nlSpecific": {"fotobondNumber": 1634052}
             }
         },
+
         {
             "name": {
                 "givenName" : "François",
@@ -153,11 +168,13 @@
                 "familyName": "Hermans"
             },
             "optional": {
-                "level3URL": "http://www.vdhamer.com/fgWaalre/Francois_Hermans/",
+                "featuredImage": "https://fotogroepwaalre.nl/wp-content/uploads/2024/07/2-takkenbos.jpg",
+                "level3URL": "https://www.fotogroepWaalre.nl/leden/francois-hermans/#anker",
                 "expertises": ["Landscape"],
                 "nlSpecific": {"fotobondNumber": 1634044}
             }
         },
+
         {
             "name": {
                 "givenName" : "Germa" ,
@@ -165,9 +182,12 @@
                 "familyName": "Kamp"
             },
             "optional": {
-                "level3URL": "http://www.vdhamer.com/fgWaalre/Germa_van_de_Kamp/"
+                "featuredImage": "https://fotogroepwaalre.nl/wp-content/uploads/2024/04/Germa-2-_DSC03106-.jpg",
+                "level3URL": "https://www.fotogroepWaalre.nl/leden/germa-van-de-kamp/#anker",
+                "expertises": ["Landscape", "Portrait"]
             }
         },
+
         {
             "name": {
                 "givenName" : "Greetje",
@@ -176,11 +196,13 @@
             },
             "optional": {
                 "website": "https://www.vansonphotography.nl/",
-                "level3URL": "http://www.vdhamer.com/fgWaalre/Greetje_van_Son/",
-                "expertises": ["Architecture", "Postprocessing"],
+                "featuredImage": "https://fotogroepwaalre.nl/wp-content/uploads/2024/03/GVS3630c-kopie-2.jpg",
+                "level3URL": "https://www.fotogroepWaalre.nl/leden/greetje-van-son/#anker",
+                "expertises": ["Architecture", "Abstract"],
                 "nlSpecific": {"fotobondNumber": 1634055}
             }
         },
+
         {
             "name": {
                 "givenName" : "Guido" ,
@@ -193,6 +215,7 @@
                 "nlSpecific": {"fotobondNumber": 1634040}
             }
         },
+
         {
             "name": {
                 "givenName" : "Guus",
@@ -201,11 +224,13 @@
             },
             "optional": {
                 "website": "http://guusmaasfotografie.nl/",
-                "level3URL": "http://www.vdhamer.com/fgWaalre/Guus_Maas/",
+                "featuredImage": "https://fotogroepwaalre.nl/wp-content/uploads/2024/03/DSC_5134_B_CR-V.jpg",
+                "level3URL": "https://www.fotogroepWaalre.nl/leden/guus-maas/#anker",
                 "expertises": ["Landscape"],
                 "nlSpecific": {"fotobondNumber": 1634066}
             }
         },
+
         {
             "name": {
                 "givenName" : "Hans" ,
@@ -222,6 +247,21 @@
                 }
             }
         },
+
+        {
+            "name": {
+                "givenName" : "Henriëtte" ,
+                "infixName" : "van"     ,
+                "familyName": "Ekert"
+            },
+            "optional": {
+                "website": "https://www.henriettevanekert.nl/",
+                "level3URL": "https://www.fotogroepWaalre.nl/leden/henriette-van-ekert/#anker",
+                "expertises": ["Experimental", "Postprocessing"],
+                "featuredImage": "https://fotogroepwaalre.nl/wp-content/uploads/2023/09/2022_ExpoFotogroepWaalre_097-e1707489766638.jpg",                "nlSpecific": {"fotobondNumber": 1634063}
+            }
+        },
+
         {
             "name": {
                 "givenName" : "Helga"     ,
@@ -235,6 +275,7 @@
                 "nlSpecific": {"fotobondNumber": 1634062}
             }
         },
+
         {
             "name": {
                 "givenName" : "Henny"         ,
@@ -242,24 +283,13 @@
                 "familyName": "Looren de Jong"
             },
             "optional": {
-                "level3URL": "http://www.vdhamer.com/fgWaalre/Henny_Looren_de_Jong/",
+                "featuredImage": "https://fotogroepwaalre.nl/wp-content/uploads/2024/03/R5_19564.jpg",
+                "level3URL": "https://www.fotogroepWaalre.nl/leden/Henny-looren-de-jong/#anker",
                 "expertises": ["Street", "Travel"],
                 "nlSpecific": {"fotobondNumber": 1634057}
             }
         },
-        {
-            "name": {
-                "givenName" : "Henriëtte",
-                "infixName" : "van"      ,
-                "familyName": "Ekert"
-            },
-            "optional": {
-                "website": "https://henriettevanekert.nl/",
-                "level3URL": "http://www.vdhamer.com/fgWaalre/Henriette_van_Ekert/",
-                "expertises": ["Experimental", "Postprocessing"],
-                "nlSpecific": {"fotobondNumber": 1634063}
-            }
-        },
+
         {
             "name": {
                 "givenName" : "Irene",
@@ -273,6 +303,7 @@
                 "nlSpecific": {"fotobondNumber": 1634058}
             }
         },
+
         {
             "name": {
                 "givenName" : "István",
@@ -283,9 +314,11 @@
                 "website": "http://www.istvannagy.nl/",
                 "level3URL": "http://www.vdhamer.com/fgWaalre/Istvan_Nagy/",
                 "status": {"isFormerMember": true},
+                "expertises": ["Black & White", "Panorama"],
                 "nlSpecific": {"fotobondNumber": 1634053}
             }
         },
+
         {
             "name": {
                 "givenName" : "Jan"   ,
@@ -298,6 +331,7 @@
                 "nlSpecific": {"fotobondNumber": 1634061}
             }
         },
+
         {
             "name": {
                 "givenName" : "Jan"  ,
@@ -307,9 +341,25 @@
             "optional": {
                 "level3URL": "http://www.vdhamer.com/fgWaalre/Jan_Stege/",
                 "status": {"isFormerMember": true},
+                "expertises": ["Black & White"],
                 "nlSpecific": {"fotobondNumber": 1634056}
             }
         },
+
+        {
+            "name": {
+                "givenName" : "Janneke",
+                "infixName" : ""      ,
+                "familyName": "Sinot"
+            },
+            "optional": {
+                "featuredImage": "https://fotogroepwaalre.nl/wp-content/uploads/2025/04/Fotos-Janneke-Sinot-website-aanvulling.jpg",
+                "level3URL": "https://www.fotogroepWaalre.nl/leden/janneke-sinot/#anker",
+                "expertises": ["Black & White"],
+                "nlSpecific": {"fotobondNumber": 1634075}
+            }
+        },
+
         {
             "name": {
                 "givenName" : "Jeroen",
@@ -317,10 +367,13 @@
                 "familyName": "Tapper"
             },
             "optional": {
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Jeroen_Tapper/",
+                "featuredImage": "https://fotogroepwaalre.nl/wp-content/uploads/2025/04/Jeroen_Portfolio-05.jpg",
+                "level3URL": "https://www.fotogroepWaalre.nl/leden/jeroen-tapper/#anker",
+                "expertises": ["Experimental"],
                 "nlSpecific": {"fotobondNumber": 1634075}
             }
         },
+
         {
             "name": {
                 "givenName" : "Jet"     ,
@@ -333,6 +386,7 @@
                 "nlSpecific": {"fotobondNumber": 1634035}
             }
         },
+
         {
             "name": {
                 "givenName" : "Joke"     ,
@@ -345,6 +399,7 @@
                 "nlSpecific": {"fotobondNumber": 1634022}
             }
         },
+
         {
             "name": {
                 "givenName" : "Joop"   ,
@@ -355,9 +410,11 @@
                 "website": "http://www.flickr.com/photos/jooppostema/",
                 "level3URL": "http://www.vdhamer.com/fgWaalre/Joop_Postema/",
                 "status": {"isDeceased": true, "isFormerMember": true},
+                "expertises": ["Landscape"],
                 "nlSpecific": {"fotobondNumber": 1634036}
             }
         },
+
         {
             "name": {
                 "givenName" : "Jos"   ,
@@ -372,6 +429,7 @@
                 "membershipEndDate": "2024-12-31"
             }
         },
+
         {
             "name": {
                 "givenName" : "Jos"  ,
@@ -380,9 +438,11 @@
             },
             "optional": {
                 "level3URL": "http://www.vdhamer.com/fgWaalre/Jos_de_Vries/",
-                "status": {"isFormerMember": true}
+                "status": {"isFormerMember": true},
+                "expertises": ["Black & White"]
             }
         },
+
         {
             "name": {
                 "givenName" : "José"   ,
@@ -394,6 +454,7 @@
                 "status": {"isFormerMember": true}
             }
         },
+
         {
             "name": {
                 "givenName" : "Lars"    ,
@@ -401,11 +462,13 @@
                 "familyName": "Veerhoff"
             },
             "optional": {
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Lars_Veerhoff/",
-                "expertises": ["Landscape"],
+                "featuredImage": "https://fotogroepwaalre.nl/wp-content/uploads/2025/04/DSC_9606_Snapseed.jpg",
+                "level3URL": "https://www.fotogroepWaalre.nl/leden/lars-veerhoff/#anker",
+                "expertises": ["Landscape", "Travel"],
                 "nlSpecific": {"fotobondNumber": 1634076}
             }
         },
+
         {
             "name": {
                 "givenName" : "Ludwig"   ,
@@ -419,6 +482,7 @@
                 "nlSpecific": {"fotobondNumber": 1634060}
             }
         },
+
         {
             "name": {
                 "givenName" : "Kees"  ,
@@ -426,12 +490,14 @@
                 "familyName": "Gemert"
             },
             "optional": {
-                "level3URL": "http://www.vdhamer.com/fgWaalre/Kees_van_Gemert/",
+                "featuredImage": "https://fotogroepwaalre.nl/wp-content/uploads/2024/04/10.jpg",
+                "level3URL": "https://www.fotogroepWaalre.nl/leden/kees-van-gemert/#anker",
                 "roles": {"isSecretary": true},
                 "expertises": ["Black & White", "Street"],
                 "nlSpecific": {"fotobondNumber": 1634001}
             }
         },
+
         {
             "name": {
                 "givenName" : "Mariet"  ,
@@ -444,16 +510,20 @@
                 "status": {"isFormerMember": true}
             }
         },
+
         {
             "name": {
-                "givenName" : "Mariette",
+                "givenName" : "Mariëtte",
                 "infixName" : ""        ,
                 "familyName": "Knaapen"
             },
             "optional": {
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Mariette_Knaapen/"
+                "featuredImage": "https://fotogroepwaalre.nl/wp-content/uploads/2024/07/IMG_1380-2.jpg",
+                "expertises": ["Black & White"],
+                "level3URL": "https://www.fotogroepWaalre.nl/leden/mariette-knaapen/#anker"
             }
         },
+
         {
             "name": {
                 "givenName" : "Marijelle",
@@ -465,6 +535,7 @@
                 "status": {"isFormerMember": true}
             }
         },
+
         {
             "name": {
                 "givenName" : "Marijke",
@@ -474,9 +545,11 @@
             "optional": {
                 "level3URL": "http://www.vdHamer.com/fgWaalre/Marijke_Gallas/",
                 "status": {"isFormerMember": true, "isHonoraryMember": true},
+                "expertises": ["Landscape"],
                 "nlSpecific": {"fotobondNumber": 1634011}
             }
         },
+
         {
             "name": {
                 "givenName" : "Mia"     ,
@@ -488,19 +561,22 @@
                 "status": {"isDeceased": true, "isFormerMember": true}
             }
         },
+
         {
             "name": {
-                "givenName" : "Miek"     ,
+                "givenName" : "Mieke"     ,
                 "infixName" : ""         ,
                 "familyName": "Kerkhoven"
             },
             "optional": {
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Miek_Kerkhoven/",
+                "featuredImage": "https://fotogroepwaalre.nl/wp-content/uploads/2024/03/Mieke.jpg",
+                "level3URL": "https://www.fotogroepWaalre.nl/leden/mieke-kerkhoven/#anker",
                 "roles": {"isChairman": true},
                 "expertises": ["Landscape", "Abstract"],
                 "nlSpecific": {"fotobondNumber": 1634005}
             }
         },
+
         {
             "name": {
                 "givenName" : "Monique",
@@ -508,10 +584,13 @@
                 "familyName": "Houben"
             },
             "optional": {
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Monique_Houben/",
+                "featuredImage": "https://fotogroepwaalre.nl/wp-content/uploads/2025/04/2.jpg",
+                "level3URL": "https://www.fotogroepWaalre.nl/leden/monique-houben/#anker",
+                "expertises": ["Street"],
                 "nlSpecific": {"fotobondNumber": 1634073}
             }
         },
+
         {
             "name": {
                 "givenName" : "Peter",
@@ -519,10 +598,13 @@
                 "familyName": "Wit"
             },
             "optional": {
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Peter_de_Wit/",
+                "featuredImage": "https://fotogroepwaalre.nl/wp-content/uploads/2025/04/Foto-26-04-2025-om-20.29.jpg",
+                "level3URL": "https://www.fotogroepWaalre.nl/leden/peter-de-wit/#anker",
+                "expertises": ["Street"],
                 "nlSpecific": {"fotobondNumber": 1634005}
             }
         },
+
         {
             "name": {
                 "givenName" : "Peter"  ,
@@ -538,6 +620,7 @@
                 "nlSpecific": {"fotobondNumber": 1634045}
             }
         },
+
         {
             "name": {
                 "givenName" : "Peter" ,
@@ -550,6 +633,7 @@
                 "nlSpecific": {"fotobondNumber": 1634054}
             }
         },
+
         {
             "name": {
                 "givenName" : "Ria"    ,
@@ -562,6 +646,7 @@
                 "status": {"isFormerMember": true}
             }
         },
+
         {
             "name": {
                 "givenName" : "Sipke" ,
@@ -569,11 +654,13 @@
                 "familyName": "Wadman"
             },
             "optional": {
-                "level3URL": "http://www.vdHamer.com/fgWaalre/Sipke_Wadman/",
-                "expertises": ["Experimental", "Postprocessing"],
+                "featuredImage": "https://fotogroepwaalre.nl/wp-content/uploads/2024/03/Macro.jpg",
+                "level3URL": "https://www.fotogroepWaalre.nl/leden/sipke-wadman/#anker",
+                "expertises": ["Experimental", "Macro"],
                 "nlSpecific": {"fotobondNumber": 1634039}
             }
         },
+
         {
             "name": {
                 "givenName" : "Theo",
@@ -589,6 +676,7 @@
                 }
             }
         },
+
         {
             "name": {
                 "givenName" : "Tinus"   ,
@@ -600,6 +688,7 @@
                 "status": {"isDeceased": true, "isFormerMember": true}
             }
         },
+
         {
             "name": {
                 "givenName" : "Tis"   ,
@@ -614,6 +703,7 @@
                 "nlSpecific": {"fotobondNumber": 1634064}
             }
         },
+
         {
             "name": {
                 "givenName" : "Wilko"    ,
@@ -626,6 +716,7 @@
                 "nlSpecific": {"fotobondNumber": 1634059}
             }
         },
+
         {
             "name": {
                 "givenName" : "Willem",
@@ -639,5 +730,6 @@
                 "nlSpecific": {"fotobondNumber": 1634049}
             }
         }
+
     ]
 }

@@ -6,15 +6,18 @@
                 "fullName": "Xample Club With Minimal Data",
                 "nickName": "XampleMin"
             },
+            "coordinates": {
+                "latitude": 52.37312,
+                "longitude": 4.89383
+            },
             "optional": {
-                "coordinates": {
-                    "latitude": 52.37312,
-                    "longitude": 4.89383
-                },
-                "level2URL": "https://www.example.com/XampleMin.level2.json"
+                "level2URL": "https://www.xamplemin.nl/XampleMin.level2.json"
             }
         },
+
+
     "members": [
+
         {
             "name": {
                 "givenName": "Jan",
@@ -25,6 +28,7 @@
                 "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg"
             }
         },
+
         {
             "name": {
                 "givenName": "Max",
@@ -35,5 +39,6 @@
                 "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg"
             }
         }
+
     ]
 }

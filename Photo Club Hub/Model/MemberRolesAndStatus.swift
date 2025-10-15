@@ -31,6 +31,11 @@ public enum MemberRole {
                           table: table,
                           bundle: Bundle.photoClubHubDataModule,
                           comment: "Administrative role of member within a club.")
+        case .other:  // used in fgDeGender
+            return String(localized: "other",
+                          table: table,
+                          bundle: Bundle.photoClubHubDataModule,
+                          comment: "Administrative role of member within a club.")
         case .secretary:
             return String(localized: "secretary",
                           table: table,
@@ -43,11 +48,6 @@ public enum MemberRole {
                           comment: "Administrative role of member within a club.")
         case .viceChairman: // used in fgWaalre
             return String(localized: "vice-chairman",
-                          table: table,
-                          bundle: Bundle.photoClubHubDataModule,
-                          comment: "Administrative role of member within a club.")
-        case .other:  // used in fgDeGender
-            return String(localized: "other",
                           table: table,
                           bundle: Bundle.photoClubHubDataModule,
                           comment: "Administrative role of member within a club.")

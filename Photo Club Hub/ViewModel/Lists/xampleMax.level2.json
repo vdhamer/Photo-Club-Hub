@@ -7,11 +7,10 @@
                 "fullName": "Xample Club With Maximal Data",
                 "nickName": "XampleMax"
             },
+            "coordinates": {
+                "latitude": 51.92275, "longitude": 4.47972
+            },
             "optional": {
-                "coordinates": {
-                    "latitude": 51.92275,
-                    "longitude": 4.47972
-                },
                 "website": "https://www.rotterdam.nl/stadhuis",
                 "wikipedia": "https://en.wikipedia.org/wiki/Rotterdam",
                 "level2URL": "https://www.example.com/XampleMax.level2.json",
@@ -86,13 +85,13 @@
                     "isOther": false
                 },
                 "status": {
-                    "isDeceased": false,
+                    "isDeceased": true,
                     "isFormerMember": true,
                     "isHonoraryMember": false,
                     "isMentor": false,
                     "isProspectiveMember": false
                 },
-                "birthday": "9999-10-18",
+                "birthday": "9999-08-11",
                 "website": "https://glass.photo/vdhamer",
                 "photographerImage": "http://www.vdhamer.com/wp-content/uploads/2022/07/cropped-2006_Norway_276_SSharp1_4.jpg",
                 "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg",
