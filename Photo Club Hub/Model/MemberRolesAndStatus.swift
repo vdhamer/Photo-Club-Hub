@@ -83,7 +83,7 @@ public enum MemberStatus {
     }
 
     private func localizedString2() -> String {
-        let table = "PhotoClubHubData"
+        let table: String = "PhotoClubHubData"
 
         switch self {
         case .coach:
@@ -106,7 +106,6 @@ public enum MemberStatus {
             return String(localized: "member",
                           table: table, bundle: Bundle.photoClubHubDataModule,
                           comment: "Default status of member within a club.")
-
         case .prospective:
             return String(localized: "prospective member",
                           table: table, bundle: Bundle.photoClubHubDataModule,
