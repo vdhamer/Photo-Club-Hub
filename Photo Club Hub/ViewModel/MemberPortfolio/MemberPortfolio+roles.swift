@@ -20,12 +20,12 @@ extension MemberPortfolio { // computed properties related to roles of members i
         }
         if isFormerMember && !isHonoraryMember { prefixList.append(MemberStatus.former.localizedString()) }
 
-        if isChairman { suffixList.append(MemberRole.chairman.localizedString(table: table)) }
-        if isViceChairman { suffixList.append(MemberRole.viceChairman.localizedString(table: table)) }
-        if isTreasurer { suffixList.append(MemberRole.treasurer.localizedString(table: table)) }
-        if isSecretary { suffixList.append(MemberRole.secretary.localizedString(table: table)) }
-        if isAdmin { suffixList.append(MemberRole.admin.localizedString(table: table)) }
-        if isOther { suffixList.append(MemberRole.other.localizedString(table: table)) }
+        if isChairman { suffixList.append(MemberRole.chairman.localizedString(unused: table)) }
+        if isViceChairman { suffixList.append(MemberRole.viceChairman.localizedString(unused: table)) }
+        if isTreasurer { suffixList.append(MemberRole.treasurer.localizedString(unused: table)) }
+        if isSecretary { suffixList.append(MemberRole.secretary.localizedString(unused: table)) }
+        if isAdmin { suffixList.append(MemberRole.admin.localizedString(unused: table)) }
+        if isOther { suffixList.append(MemberRole.other.localizedString(unused: table)) }
 
         if isProspectiveMember { suffixList.append(MemberStatus.prospective.localizedString()) } else {
             if isHonoraryMember { suffixList.append(MemberStatus.honorary.localizedString()) } else {

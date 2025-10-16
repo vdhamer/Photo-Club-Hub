@@ -19,7 +19,9 @@ public enum MemberRole {
     case viceChairman
     case other
 
-    public func localizedString(table: String) -> String {
+    public func localizedString(unused: String) -> String {
+        let table: String = "PhotoClubHubData"
+
         switch self {
         case .admin:
             return String(localized: "admin",
@@ -57,13 +59,13 @@ public enum MemberRole {
 
 extension MemberRole: CaseIterable, Identifiable {
     public var id: String { // switch to self?
-        self.localizedString(table: "PhotoClubHubData").capitalized
+        self.localizedString(unused: "PhotoClubHubData").capitalized
     }
 }
 
 extension MemberRole: Comparable {
     public static func < (lhs: MemberRole, rhs: MemberRole) -> Bool {
-        return lhs.localizedString(table: "PhotoClubHubData") < rhs.localizedString(table: "PhotoClubHubData")
+        return lhs.localizedString(unused: "PhotoClubHubData") < rhs.localizedString(unused: "PhotoClubHubData")
     }
 }
 
