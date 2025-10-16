@@ -84,11 +84,11 @@ struct RoleStatusIconView_Previews: PreviewProvider {
                 LazyVGrid(columns: layout) {
 
                     Section(content: {
-                        ForEach(MemberRole.allCases.sorted(by: <)) { memberRole in
+                        ForEach(MemberRole.allCases.sorted(), id: \.self) { memberRole in
                             HStack {
                                 RoleStatusIconView(memberRole: memberRole)
                                 Text(memberRole
-                                    .localizedString(table: "PhotoClubHub.SwiftUI")
+                                    .localizedString()
                                     .capitalizingFirstLetter())
                                     .lineLimit(1)
                                     .truncationMode(.middle)
