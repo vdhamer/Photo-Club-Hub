@@ -108,30 +108,39 @@ struct MemberPortfolioRow: View {
 
 }
 
- struct MemberPortfolioRow_Previews: PreviewProvider {
+ struct MemberPortfolioRow_Previews: PreviewProvider { // this preview actually works!
     static var previews: some View {
         Group {
             let persistenceController = PersistenceController.shared // for Core Data
             let viewContext = persistenceController.container.viewContext
 
             let personName = PersonName(givenName: "Jan", infixName: "de", familyName: "Korte")
-            let photographerOptionalFields = PhotographerOptionalFields()
-            let photographer = Photographer.findCreateUpdate(context: viewContext,
-                                                             personName: personName,
-                                                             optionalFields: photographerOptionalFields)
-            let organizationIdPlus = OrganizationIdPlus(fullName: "TestClub", town: "Location", nickname: "IgnoreMe")
-            let organization = Organization.findCreateUpdate(context: viewContext,
-                                                             organizationTypeEnum: OrganizationTypeEnum.club,
-                                                             idPlus: organizationIdPlus,
-                                                             coordinates: CLLocationCoordinate2D(
-                                                                latitude: 0.0, longitude: 0.0),
-                                                             optionalFields: OrganizationOptionalFields()
+            let photographerOptionalFields = PhotographerOptionalFields(
+            )
+            let photographer = Photographer.findCreateUpdate(
+                context: viewContext,
+                personName: personName,
+                optionalFields: photographerOptionalFields
             )
 
-            let member = MemberPortfolio.findCreateUpdate(bgContext: viewContext,
-                                                          organization: organization,
-                                                          photographer: photographer,
-                                                          optionalFields: MemberOptionalFields()
+            let organizationIdPlus = OrganizationIdPlus(fullName: "TestClub", town: "Location", nickname: "IgnoreMe")
+            let organization = Organization.findCreateUpdate(
+                context: viewContext,
+                organizationTypeEnum: OrganizationTypeEnum.club,
+                idPlus: organizationIdPlus,
+                coordinates: CLLocationCoordinate2D(
+                    latitude: 0.0, longitude: 0.0),
+                optionalFields: OrganizationOptionalFields()
+            )
+
+            let memberRolesAndStatus = MemberRolesAndStatus(roles: [.chairman: true], status: [:])
+            let member = MemberPortfolio.findCreateUpdate(
+                bgContext: viewContext,
+                organization: organization,
+                photographer: photographer,
+                optionalFields: MemberOptionalFields(
+                    memberRolesAndStatus: memberRolesAndStatus
+                )
             )
             MemberPortfolioRow(member: member, wkWebView: WKWebView())
         } .border(.blue, width: 1) .padding([.horizontal], 10)
