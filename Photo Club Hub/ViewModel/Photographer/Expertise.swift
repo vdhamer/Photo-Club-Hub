@@ -217,14 +217,16 @@ extension Expertise {
         return expertiseCount
     }
 
-    // count total number of Expertise objects/records
-    // there are ways to count without fetching all records, but this func is only used for testing
+    // Count total number of Expertise objects/records.
+    // Note: there are ways to count without fetching all records.
+    // Items with "expertise" in the id are not counted to avoid counting "Too many expertises" pseudo-expertise.
     static func count(context: NSManagedObjectContext) -> Int {
 
         let expertiseCount: Int = context.performAndWait {
             let fetchRequest: NSFetchRequest<Expertise> = Expertise.fetchRequest()
-            let predicateAll = NSPredicate(format: "TRUEPREDICATE")
-            fetchRequest.predicate = predicateAll
+            let predicateFormat: String = "NOT (id_ CONTAINS %@)"
+            let predicate = NSPredicate(format: predicateFormat, "expertise")
+            fetchRequest.predicate = predicate
 
             do {
                 return try context.fetch(fetchRequest).count
