@@ -1,9 +1,13 @@
 ### 2.8.5 (GitHub commit ???????) ??-10-25
 
+WHO'S WHO SCREEN
+
+* Fixed: the total count of expertises at bottom of screen was 1 off ("Too many expertises" was also counted).
+* Changed footnote text at bottom of screen.
+
 CODE MAINTENANCE
 
 * Sync of code updates from Photo Club Hub HTML.
-* TODO: Crash on Clubs & Museums page??
 * Tested with Xcode 26.0.1 (17A400), Xcode 26.1 beta (17B5035f), and iOS 26.1 beta (23B5059e).
 
 DATA MAINTENANCE
