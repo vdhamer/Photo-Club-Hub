@@ -84,7 +84,7 @@ struct WhoIsWhoListView: View {
                      tableName: "PhotoClubHub.SwiftUI",
                      comment: "Expertise statistics in footnote #4 of Who's Who screen")
                 Text("""
-                     \(totalCount 
+                     \(totalCount
                      - Expertise.getAll(context: viewContext).filter { keyword in keyword.isStandard }.count) \
                      of these \(Expertise.count(context: viewContext)) \
                      expertise tags are temporary.
