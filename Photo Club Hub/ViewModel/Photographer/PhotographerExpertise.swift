@@ -133,7 +133,7 @@ extension PhotographerExpertise {
     // MARK: - count
 
     // count number of objects with a given id for a given photographer
-    static func count(context: NSManagedObjectContext, expertiseID: String, photographer: Photographer) -> Int {
+    public static func count(context: NSManagedObjectContext, expertiseID: String, photographer: Photographer) -> Int {
 
         // Photographer is not sendable, but Strings are.
         // Could have used Photographer.objectID as well, but then there is no photographer name for error messages.
@@ -170,7 +170,7 @@ extension PhotographerExpertise {
     }
 
     // count number of objects with a given id
-    static func count(context: NSManagedObjectContext, expertiseID: String) -> Int {
+    public static func count(context: NSManagedObjectContext, expertiseID: String) -> Int {
 
         let photographerExpertiseCount: Int = context.performAndWait {
             let fetchRequest: NSFetchRequest<PhotographerExpertise> = PhotographerExpertise.fetchRequest()
