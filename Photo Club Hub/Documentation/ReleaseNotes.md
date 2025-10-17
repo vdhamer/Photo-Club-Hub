@@ -4,6 +4,11 @@ WHO'S WHO SCREEN
 
 * Fixed: the total count of expertises at bottom of screen was 1 off ("Too many expertises" was also counted).
 * Changed footnote text at bottom of screen.
+* Search bar autocapitalizes
+
+PORTFOLIOS SCREEN
+
+* Search bar autocapitalizes
 
 CODE MAINTENANCE
 

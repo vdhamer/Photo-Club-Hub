@@ -110,7 +110,7 @@ struct WhoIsWhoListView: View {
             PhotoClubHubApp.loadClubsAndMembers() // carefull: runs asynchronously
         }
         .keyboardType(.namePhonePad)
-        .autocapitalization(.none)
+        .autocapitalization(.sentences)
         .submitLabel(.done) // currently only works with text fields?
         .navigationTitle(navigationTitle)
         .searchable(text: searchText, placement: .automatic,

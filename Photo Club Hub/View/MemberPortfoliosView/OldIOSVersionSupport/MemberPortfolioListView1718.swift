@@ -52,7 +52,7 @@ struct MemberPortfolioListView1718: View {
             PhotoClubHubApp.loadClubsAndMembers() // carefull: runs asynchronously
         }
         .keyboardType(.namePhonePad)
-        .autocapitalization(.none)
+        .autocapitalization(.sentences)
         .submitLabel(.done) // currently only works with text fields?
         .disableAutocorrection(true)
         .navigationTitle(String(localized: "Portfolios",
