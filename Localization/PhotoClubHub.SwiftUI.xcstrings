@@ -52,19 +52,19 @@
         }
       }
     },
-    "%lld of these %lld expertise tags are approved." : {
+    "%lld of these %lld expertise tags are temporary." : {
       "comment" : "Expertise statistics in footnote #4 of Who's Who screen",
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$lld of these %2$lld expertise tags are approved."
+            "state" : "new",
+            "value" : "%1$lld of these %2$lld expertise tags are temporary."
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Er zijn %1$lld van deze %2$lld expertise tags goedgekeurd."
+            "value" : "Van deze %2$lld expertise tags zijn er %1$lld tijdelijk."
           }
         }
       }
@@ -303,7 +303,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Er zijn %lldx expertise tags toegekend."
+            "value" : "Expertise tags zijn %lld keer toegekend aan fotografen."
           }
         }
       }

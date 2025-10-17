@@ -79,13 +79,15 @@ struct WhoIsWhoListView: View {
                         Text("\(expertise.isStandard ? "" : nonStandard)")
                     }
                 }
-                Text("There are \(Expertise.count(context: viewContext)) expertise tags.",
+                let totalCount = Expertise.count(context: viewContext)
+                Text("There are \(totalCount) expertise tags.",
                      tableName: "PhotoClubHub.SwiftUI",
                      comment: "Expertise statistics in footnote #4 of Who's Who screen")
                 Text("""
-                     \(Expertise.getAll(context: viewContext).filter { keyword in keyword.isStandard }.count) \
+                     \(totalCount 
+                     - Expertise.getAll(context: viewContext).filter { keyword in keyword.isStandard }.count) \
                      of these \(Expertise.count(context: viewContext)) \
-                     expertise tags are approved.
+                     expertise tags are temporary.
                      """,
                      tableName: "PhotoClubHub.SwiftUI",
                      comment: "Expertise statistics in footnote #4 of Who's Who screen")
