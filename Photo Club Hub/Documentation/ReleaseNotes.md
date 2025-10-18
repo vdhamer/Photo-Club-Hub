@@ -9,6 +9,7 @@ WHO'S WHO SCREEN
 PORTFOLIOS SCREEN
 
 * Search bar autocapitalizes
+* Cleaned up capitalization of member roles.
 
 CODE MAINTENANCE
 
