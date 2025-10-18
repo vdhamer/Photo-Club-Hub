@@ -81,10 +81,6 @@ public enum MemberStatus {
     case prospective
 
     func localizedString() -> String {
-        return self.localizedString2().capitalized
-    }
-
-    private func localizedString2() -> String {
         let table: String = "PhotoClubHubData"
 
         switch self {

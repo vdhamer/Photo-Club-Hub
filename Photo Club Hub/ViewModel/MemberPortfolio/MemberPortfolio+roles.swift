@@ -7,6 +7,7 @@
 
 extension MemberPortfolio { // computed properties related to roles of members in their club
 
+    // typicala value: "Member" or "Secretary and member"
     var roleDescription: String {
         var prefixList = [String]()
         var suffixList = [String]()
@@ -39,6 +40,7 @@ extension MemberPortfolio { // computed properties related to roles of members i
         }
 
         for (index, element) in suffixList.enumerated() {
+            print("TEMP element #\(index): \(element)")
             result.append(element + " ") // example "secretary "
             if index < suffixList.count-1 {
                 result.append(andLocalized + " ") // example "secretary and " unless there are no elements left
