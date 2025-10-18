@@ -11,6 +11,11 @@ PORTFOLIOS SCREEN
 * Search bar autocapitalizes
 * Cleaned up capitalization of member roles.
 
+README SCREEN
+
+* Search function screenshot shown depends on iOS version (before/after introduction of Liquid Glass).
+* Various text updates.
+
 CODE MAINTENANCE
 
 * Sync of code updates from Photo Club Hub HTML.

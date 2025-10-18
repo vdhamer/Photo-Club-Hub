@@ -443,8 +443,8 @@
 			isa = PBXGroup;
 			children = (
 				37E134C02E6F7AE700C61714 /* OldIOSVersionSupport */,
-				37E134B62E6F75ED00C61714 /* ReadmeSection2626.swift */,
 				37E134B72E6F75ED00C61714 /* ReadmeView2626.swift */,
+				37E134B62E6F75ED00C61714 /* ReadmeSection2626.swift */,
 				37E134B82E6F75ED00C61714 /* SectionHeader2626.swift */,
 			);
 			path = ReadmeView;

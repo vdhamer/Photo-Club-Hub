@@ -98,15 +98,14 @@ struct ReadmeView2626: View {
                                                                   comment: "Paragraph in the Readme screen"),
                                                                   geo: geo, bottomPaddingAmount: 0)
 
-                            Image("Search-bar")
+                            Image("Search-bar-bottom")
                                 .resizable()
-                                .border(.gray, width: 1)
                                 .scaledToFit()
                                 .frame(width: geo.size.width * 0.8, height: 260, alignment: .center)
-                            Text("Search bar at the top of _Portfolios_ screen", tableName: "PhotoClubHub.Readme",
+                            Text("Search bar of _Portfolios_ screen (for iOS 26 and up)",
+                                 tableName: "PhotoClubHub.Readme",
                                  comment: "Caption about Search Bar on the Readme page")
                             .font(.callout.italic())
-                            .frame(width: geo.size.width * 0.8, alignment: .center)
                             Text(verbatim: "")
 
                             ReadmeSection2626(LocalizedStringResource("§3.01.c", table: "PhotoClubHub.Readme",

@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "SearchBar_EN.jpeg",
+      "filename" : "Searchbar_Bottom_EN_light.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -12,7 +12,7 @@
           "value" : "dark"
         }
       ],
-      "filename" : "SearchBar_EN_dark.jpeg",
+      "filename" : "Searchbar_Bottom_EN_dark.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -45,7 +45,7 @@
       "scale" : "3x"
     },
     {
-      "filename" : "SearchBar_NL.jpeg",
+      "filename" : "Searchbar_Bottom_NL_light.png",
       "idiom" : "universal",
       "locale" : "nl",
       "scale" : "1x"
@@ -57,7 +57,7 @@
           "value" : "dark"
         }
       ],
-      "filename" : "SearchBar_NL_dark.jpeg",
+      "filename" : "Searchbar_Bottom_NL_dark.png",
       "idiom" : "universal",
       "locale" : "nl",
       "scale" : "1x"
@@ -92,54 +92,6 @@
       ],
       "idiom" : "universal",
       "locale" : "nl",
-      "scale" : "3x"
-    },
-    {
-      "idiom" : "universal",
-      "locale" : "en",
-      "scale" : "1x"
-    },
-    {
-      "appearances" : [
-        {
-          "appearance" : "luminosity",
-          "value" : "dark"
-        }
-      ],
-      "idiom" : "universal",
-      "locale" : "en",
-      "scale" : "1x"
-    },
-    {
-      "idiom" : "universal",
-      "locale" : "en",
-      "scale" : "2x"
-    },
-    {
-      "appearances" : [
-        {
-          "appearance" : "luminosity",
-          "value" : "dark"
-        }
-      ],
-      "idiom" : "universal",
-      "locale" : "en",
-      "scale" : "2x"
-    },
-    {
-      "idiom" : "universal",
-      "locale" : "en",
-      "scale" : "3x"
-    },
-    {
-      "appearances" : [
-        {
-          "appearance" : "luminosity",
-          "value" : "dark"
-        }
-      ],
-      "idiom" : "universal",
-      "locale" : "en",
       "scale" : "3x"
     }
   ],

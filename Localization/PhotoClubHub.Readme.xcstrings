@@ -25,7 +25,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "De _Fotoclub Hub_ app presenteert geselecteerd werk van leden van fotoclubs. De foto's zijn op een consistente wijze te bekijken. Men kan de app dus zien als een permanente online tentoonstelling."
+            "value" : "De _Fotoclub Hub_ app toont geselecteerd werk van leden van fotoclubs. De foto's zijn op een consistente wijze te bekijken. De app is dus ondermeer te gebruiken als een permanente online expositie."
           }
         }
       }
@@ -42,7 +42,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Door de foto's op een consistente manier te presenteren, hoeft de gebruiker de website van de club niet op te zoeken om vervolgens uit te zoeken hoe de foto's te bekijken zijn."
+            "value" : "Door de foto's op een consistente manier te presenteren, hoeft de gebruiker de website van de club niet op te zoeken om vervolgens uit te zoeken hoe de foto's te bekijken."
           }
         }
       }
@@ -59,7 +59,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "De app probeert nadrukkelijk __niet__ om de websites of b.v. Facebook sites van clubs te vervangen: de _Fotoclub Hub_ app dient alleen om banden tussen fotoclubs te versterken en om foto's gemaakt door de clubleden eenvoudig toegankelijk te maken."
+            "value" : "De app probeert _niet_ om de websites van clubs te vervangen: de _Fotoclub Hub_ app dient alleen om banden tussen fotoclubs te versterken en om foto's gemaakt door de clubleden makkelijk toegankelijk te maken."
           }
         }
       }
@@ -70,13 +70,13 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "The app, originally named _Photo Club Waalre_, was created for a 15-person photo club in the southern Netherlands. The newer name, _Photo Club Hub_, emphasizes the app’s mission to foster connections among various photo clubs."
+            "value" : "The app’s name, _Photo Club Hub_, emphasizes the app’s mission to strengthen connections between photo clubs."
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Oorspronkelijk heette deze app _Fotogroep Waalre_, naar een fotoclub bij Eindhoven. Het woord __hub__ (= middelpunt, trefpunt) in de nieuwe naam benadrukt dat de huidige versie __meerdere__ fotoclubs ondersteunt en verbindt."
+            "value" : "Het woord _Hub_ (middelpunt, trefpunt) in de naam van de app benadrukt dat het _meerdere_ fotoclubs ondersteunt en verbindt."
           }
         }
       }
@@ -93,7 +93,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Het ondersteunen van tientallen of zelfs honderden clubs vereist dat de clubs _zelf_ hun gegevens beheren. Het gaat hier om het bijhouden van ledenlijsten en lijsten met portfolio foto’s. Hiervoor is geen specifieke softwarekennis nodig."
+            "value" : "Het ondersteunen van tientallen of zelfs honderden clubs vereist dat de clubs _zelf_ hun gegevens beheren. Het gaat hier om het bijhouden van ledenlijsten en lijsten met portfolio foto’s. Voor dit bijhouden is geen specifieke softwarekennis nodig."
           }
         }
       }
@@ -110,7 +110,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Heb je belangstelling om jouw club in de app te krijgen? Neem dan contact op via [GitHub](https://github.com/vdhamer/Photo-Club-Hub), [Facebook](https://www.facebook.com/vdhamer), [Mastodon](https://mastodon.social/@vdhamer) of [LinkedIn](https://www.linkedin.com/in/vdhamer/). Dit vereist alleen dat er informatie in een gestandaardiseerd formaat aangeleverd wordt. Neem bij hulpvragen gerust contact op."
+            "value" : "Heb je belangstelling om jouw club in de app te krijgen? Neem dan contact op via [GitHub](https://github.com/vdhamer/Photo-Club-Hub), [Facebook](https://www.facebook.com/vdhamer), [Mastodon](https://mastodon.social/@vdhamer) of [LinkedIn](https://www.linkedin.com/in/vdhamer/). Dit vereist alleen dat er informatie in een gestandaardiseerd formaat aangeleverd wordt. Neem bij vragen gerust contact op."
           }
         }
       }
@@ -127,7 +127,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Fotoclubs en hun leden spelen een dominante rol in deze app. Het centrale Portfolio's scherm bevat een lijst met __fotoclubs__."
+            "value" : "Fotoclubs en hun leden spelen een dominante rol in deze app. Het centrale _Portfolio’s_ scherm bevat een gealfabetiseerde lijst met _clubs_."
           }
         }
       }
@@ -144,7 +144,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Een club heeft op zijn beurt een lijst met __portfolio's__ van hun leden. Iedere portfolio bevat links naar de te tonen foto's."
+            "value" : "Een club bevat op zijn beurt een lijst met _portfolio's_ van clubleden. Iedere portfolio bevat links naar de geselecteerde _foto’s_."
           }
         }
       }
@@ -161,7 +161,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Een lijst met geselecteerde __foto’s__ (“portfolio”) vertegenwoordigt het werk van één fotograaf voor zover dat hoort bij één club. Een fotograaf kan soms _meerdere_ portfolio's in de app hebben als de fotograaf lid is (of was) van meer dan één fotoclub."
+            "value" : "Een Portfolio vertegenwoordigt dus het werk van één fotograaf voor zover dat hoort bij één club. Een fotograaf die lid is (of was) van meer dan één fotoclub kan _meerdere_ portfolio's in de app hebben. Bijvoorbeeld bij de huidige club en bij een vorige club."
           }
         }
       }
@@ -178,7 +178,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Net als bij een schilder, kan een fotograaf gedurende de tijd van onderwerp of stijl veranderen. Daarom is ieder portfolio bij voorkeur gesorteerd op tijdsvolgorde, met het recentste werk vooraan."
+            "value" : "Net als bij een schilder, kan een fotograaf na verloop van tijd van onderwerp of van stijl veranderen. Daarom is ieder portfolio waar mogelijk gesorteerd op tijd: het meest recentste werk staat vooraan."
           }
         }
       }
@@ -195,7 +195,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Net als bij een tentoonstelling is het belangrijk om een portfolio _zonder afleiding_ te kunnen bekijken. Webpagina's zijn hier vaak iets te druk voor vanwege allerlei bedieningselementen, maar ook omdat ze vaak meerdere soorten informatie bevatten (zoals aankondigingen, contactpersonen en de club agenda)."
+            "value" : "Net als bij een expositie is het belangrijk om een portfolio _zonder afleiding_ te kunnen bekijken. Webpagina's zijn hier vaak iets te druk voor vanwege allerlei bedieningselementen, maar ook omdat ze vaak meerdere soorten informatie bevatten (zoals aankondigingen, contactpersonen en de club agenda)."
           }
         }
       }
@@ -223,13 +223,13 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "There is a search bar at the top of major screens. On an iPad the search bar is continuously visible. On an iPhone you need to scroll back to the very top of the list to get the search bar to appear."
+            "value" : "There is a search bar at the bottom or top of major screens. The location is different on iPads (top of screen) and new iPhones (bottom of screen) and old iPhones (at the top of the list)."
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Bovenaan schermen met lijsten is er een invoerveld om binnen de lijst snel te kunnen zoeken. Op een iPhone wordt het zoekveld pas getoond als men helemaal naar de bovenkant van de lijst gaat.\n"
+            "value" : "Er is een zoekveld onderaan (soms bovenaan) de schermen met lijsten. Hiermee kan je de lijst inkorten op basis van bijvoorbeeld de naam van de fotograaf, een expertise of clubnaam. De locatie van het zoekveld hangt af van de schermgrootte van het apparaat en van de gebruikte versie van het besturingssysteem.\n"
           }
         }
       }
@@ -246,7 +246,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Op de _Portfolio's_ en _Namenlijst_ schermen wordt er op de naam van fotografen gezocht. Op het _Clubs en Musea_ scherm wordt er gelijktijdig op clubnaam (of museumnaam) en de opgegeven locatie gezocht."
+            "value" : "Op het _Portfolio's_ scherm kan men op de naam van de fotograaf en op expertisegebied gebied zoeken. Op het _Clubs en Musea_ scherm kan men op clubnaam en op de opgegeven locatie zoeken."
           }
         }
       }
@@ -1169,19 +1169,36 @@
         }
       }
     },
-    "Search bar at the top of _Portfolios_ screen" : {
+    "Search bar of _Portfolios_ screen (for iOS 26 and up)" : {
       "comment" : "Caption about Search Bar on the Readme page",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Search bar at the top of _Portfolios_ screen"
+            "value" : "Search bar of _Portfolios_ screen for iOS/iPadOS versions supporting Liquid Glass."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Zoekfunctie van het _Portfolio_’s scherm vanaf iOS 26."
+          }
+        }
+      }
+    },
+    "Search bar of _Portfolios_ screen (up to iOS 18)" : {
+      "comment" : "Caption about Search Bar on the Readme page",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search bar of _Portfolios_ screen (up to iOS 18."
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Zoekfunctie bovenaan het _Portfolio_’s scherm"
+            "value" : "Zoekfunctie van het _Portfolio_’s scherm t/m iOS 18."
           }
         }
       }

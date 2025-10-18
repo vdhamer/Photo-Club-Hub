@@ -104,12 +104,12 @@ struct ReadmeView1718: View {
                                                                   comment: "Paragraph in the Readme screen"),
                                                                   geo: geo, bottomPaddingAmount: 0)
 
-                            Image("Search-bar")
+                            Image("Search-bar-top")
                                 .resizable()
-                                .border(.gray, width: 1)
                                 .scaledToFit()
                                 .frame(width: geo.size.width * 0.8, height: 260, alignment: .center)
-                            Text("Search bar at the top of _Portfolios_ screen", tableName: "PhotoClubHub.Readme",
+                            Text("Search bar of _Portfolios_ screen (up to iOS 18)",
+                                 tableName: "PhotoClubHub.Readme",
                                  comment: "Caption about Search Bar on the Readme page")
                             .font(.callout.italic())
                             .frame(width: geo.size.width * 0.8, alignment: .center)
