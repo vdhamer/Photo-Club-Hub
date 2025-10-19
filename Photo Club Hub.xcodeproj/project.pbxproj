@@ -691,8 +691,8 @@
 			isa = PBXGroup;
 			children = (
 				37E134BD2E6F7AAB00C61714 /* OldIOSVersionSupport */,
-				37E134B02E6F693E00C61714 /* FilteredOrganizationView2626.swift */,
 				D0AE1B7427889E8600E0100E /* OrganizationListView2626.swift */,
+				37E134B02E6F693E00C61714 /* FilteredOrganizationView2626.swift */,
 				D0E694C827EF9B450054D634 /* LockAnimationView.swift */,
 			);
 			path = OrganizationsView;
