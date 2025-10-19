@@ -303,7 +303,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Expertise tags zijn %lld keer aan fotografen toegekend."
+            "value" : "Expertise tags zijn %lld keer toegekend."
           }
         }
       }

@@ -124,7 +124,7 @@ struct ReadmeView2626: View {
                                 .border(.gray, width: 1)
                                 .scaledToFit()
                                 .frame(width: geo.size.width * 0.8, height: 260, alignment: .center)
-                            Text("Official (🏵) and unofficial (🪲) expertise tags", tableName: "PhotoClubHub.Readme",
+                            Text("Approved (🏵) and temporary (🪲) expertise tags", tableName: "PhotoClubHub.Readme",
                                  comment: "Caption about Expertise on the Readme page")
                             .font(.callout.italic())
                             .frame(width: geo.size.width * 0.8, alignment: .center)
