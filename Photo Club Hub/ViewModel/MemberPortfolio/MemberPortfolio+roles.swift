@@ -16,21 +16,21 @@ extension MemberPortfolio { // computed properties related to roles of members i
                                   comment: "To generate strings like \"secretary and admin\"")
 
         if photographer.isDeceased {
-            prefixList.append(MemberStatus.deceased.localizedString())
+            prefixList.append(MemberStatus.deceased.localizedString)
         }
-        if isFormerMember && !isHonoraryMember { prefixList.append(MemberStatus.former.localizedString()) }
+        if isFormerMember && !isHonoraryMember { prefixList.append(MemberStatus.former.localizedString) }
 
-        if isChairman { suffixList.append(MemberRole.chairman.localizedString()) }
-        if isViceChairman { suffixList.append(MemberRole.viceChairman.localizedString()) }
-        if isTreasurer { suffixList.append(MemberRole.treasurer.localizedString()) }
-        if isSecretary { suffixList.append(MemberRole.secretary.localizedString()) }
-        if isAdmin { suffixList.append(MemberRole.admin.localizedString()) }
-        if isOther { suffixList.append(MemberRole.other.localizedString()) }
+        if isChairman { suffixList.append(MemberRole.chairman.localizedString) }
+        if isViceChairman { suffixList.append(MemberRole.viceChairman.localizedString) }
+        if isTreasurer { suffixList.append(MemberRole.treasurer.localizedString) }
+        if isSecretary { suffixList.append(MemberRole.secretary.localizedString) }
+        if isAdmin { suffixList.append(MemberRole.admin.localizedString) }
+        if isOther { suffixList.append(MemberRole.other.localizedString) }
 
-        if isProspectiveMember { suffixList.append(MemberStatus.prospective.localizedString()) } else {
-            if isHonoraryMember { suffixList.append(MemberStatus.honorary.localizedString()) } else {
-                if isMentor { suffixList.append(MemberStatus.coach.localizedString()) } else {
-                    suffixList.append(MemberStatus.current.localizedString())
+        if isProspectiveMember { suffixList.append(MemberStatus.prospective.localizedString) } else {
+            if isHonoraryMember { suffixList.append(MemberStatus.honorary.localizedString) } else {
+                if isMentor { suffixList.append(MemberStatus.coach.localizedString) } else {
+                    suffixList.append(MemberStatus.current.localizedString)
                 }
             }
         }

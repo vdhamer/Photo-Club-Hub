@@ -34,7 +34,7 @@ struct WhoIsWhoTextInfo: View {
         VStack(alignment: .leading) { // lines of text with different pieces of information
             // first green line with icon and name of photographer
             let alive: String = photographer.isDeceased ? // generate name suffix
-            (" - " + MemberStatus.deceased.localizedString()) : ""
+            (" - " + MemberStatus.deceased.localizedString) : ""
             Text(verbatim: "\(photographer.fullNameLastFirst)\(alive)")
                 .font(.title3)
                 .tracking(1)
