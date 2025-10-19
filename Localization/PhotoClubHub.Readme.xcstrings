@@ -178,7 +178,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Net als bij een schilder, kan een fotograaf na verloop van tijd van onderwerp of van stijl veranderen. Daarom is ieder portfolio waar mogelijk gesorteerd op tijd: het meest recentste werk staat vooraan."
+            "value" : "Net als bij een schilder, kan een fotograaf na verloop van tijd van onderwerp of stijl veranderen. Daarom zijn portfolio’s indien mogelijk gesorteerd met het recentste werk vooraan."
           }
         }
       }
@@ -195,7 +195,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Net als bij een expositie is het belangrijk om een portfolio _zonder afleiding_ te kunnen bekijken. Webpagina's zijn hier vaak iets te druk voor vanwege allerlei bedieningselementen, maar ook omdat ze vaak meerdere soorten informatie bevatten (zoals aankondigingen, contactpersonen en de club agenda)."
+            "value" : "Net als bij een expositie is het belangrijk om een portfolio _zonder afleiding_ te kunnen bekijken. Webpagina's zijn hier vaak iets te druk voor vanwege allerlei bedieningselementen, maar ook omdat ze vaak meerdere doelen tegelijk dienen (zoals het tonen van aankondigingen, contactpersonen en de club agenda)."
           }
         }
       }
@@ -229,7 +229,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Er is een zoekveld onderaan (soms bovenaan) de schermen met lijsten. Hiermee kan je de lijst inkorten op basis van bijvoorbeeld de naam van de fotograaf, een expertise of clubnaam. De locatie van het zoekveld hangt af van de schermgrootte van het apparaat en van de gebruikte versie van het besturingssysteem.\n"
+            "value" : "Er is een zoekveld onderaan (soms bovenaan) diverse schermen. Hiermee kan je de lijst doorzoeken op sommige informatiesoorten. De locatie van het zoekveld hangt af van de schermgrootte van het apparaat en van de gebruikte versie van het besturingssysteem.\n"
           }
         }
       }
@@ -246,7 +246,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Op het _Portfolio's_ scherm kan men op de naam van de fotograaf en op expertisegebied gebied zoeken. Op het _Clubs en Musea_ scherm kan men op clubnaam en op de opgegeven locatie zoeken."
+            "value" : "Op het _Portfolio's_ scherm kan men op de naam van de fotograaf of op expertisegebied gebied zoeken. Op het _Clubs en Musea_ scherm kan men op clubnaam of op de opgegeven locatie zoeken."
           }
         }
       }
@@ -280,7 +280,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Fotografen kunnen een of twee soorten specialisatie (bijvoorbeeld “Portret” of “Macro”) vermelden waarvoor ze bekend zijn. Meer details [hier](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/Level2_expertise_NL.md)."
+            "value" : "Fotografen kunnen één of twee soorten specialisatie vermelden waarvoor ze bekend zijn. Bijvoorbeeld voor Portretfotografie. Meer details [via deze link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/Level2_expertise_NL.md)."
           }
         }
       }
@@ -297,7 +297,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Er is een centrale lijst met goedgekeurde  expertise tags. Door op het Portfolio scherm te zoeken naar “Portret” of “por” kan je fotografen vinden die in portretfotografie gespecialiseerd zijn."
+            "value" : "Er is een centrale lijst met goedgekeurde expertise tags. Door op het Portfolio scherm te zoeken naar “Portret” of “por” kan je fotografen vinden die in portretfotografie gespecialiseerd zijn."
           }
         }
       }
@@ -331,7 +331,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "De app ondersteunt zowel Nederlands (_Fotoclub Hub_) als Engels (_Photo Club Hub_). De app kiest de taal op basis van de taal die ingesteld is op het apparaat. Men kan de taalinstelling voor de app aanpassen onder _Instellingen → Fotoclub Hub → Voorkeurstaal_."
+            "value" : "De app ondersteunt zowel Nederlands (_Fotoclub Hub_) als Engels (_Photo Club Hub_). De app kiest de taal op basis van de taal die ingesteld is op het apparaat. Men kan ook de taalinstelling voor alleen deze app aanpassen onder _Instellingen → Fotoclub Hub → Voorkeurstaal_."
           }
         }
       }
@@ -365,7 +365,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Wanneer men voldoende inzoomt op een landkaart, verschijnt er een knop om de kaart in 3D weer te geven. Dit vereist dat de kaart interactief is (slotje is open). Probeer het bijvoorbeeld uit met New York met zijn wolkenkrabbers."
+            "value" : "Wanneer men ver genoeg inzoomt op een landkaart, verschijnt er een knop om de kaart in 3D weer te geven. Dit vereist dat de kaart interactief is (slotje is open). Probeer het bijvoorbeeld uit met New York met zijn wolkenkrabbers."
           }
         }
       }
@@ -399,7 +399,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "De landkaarten kunnen de huidige locatie van de gebruiker als paarse stip weergeven indien deze binnen het bereik van de kaart valt. Indien het slotje open is, verschijnt er een pijlvormige knop waarmee de kaart gecentreerd kan worden rondom de huidige locatie."
+            "value" : "De landkaarten kunnen de huidige locatie van de gebruiker als paarse stip weergeven als deze binnen het bereik van de kaart valt. Indien het slotje open is, verschijnt er een pijlvormige knop waarmee de kaart gecentreerd kan worden rondom de huidige locatie."
           }
         }
       }
@@ -416,7 +416,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Locatieweergave vereist dat de gebruiker desgevraagd __toestemming__ verleent aan de app om locatiegegevens van iOS te ontvangen. Locatie informatie wordt niet door de app opgeslagen of doorgegeven: het dient alleen om te zien waar men op dat moment is."
+            "value" : "Locatieweergave vereist dat de gebruiker desgevraagd __toestemming__ geeft aan de app om locatiegegevens van iOS te ontvangen. Locatie informatie wordt niet door de app opgeslagen of doorgegeven: het dient momenteel alleen om de paarse stip te tonen."
           }
         }
       }
@@ -444,13 +444,13 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "The app initially contains an initial list of over 60 photo clubs. Those clubs are currently all in one part of the Netherlands. The app is however designed to support clubs anywhere in the world and the list of clubs can be extended by the users."
+            "value" : "The app initially contains an initial list of over 75 photo clubs. Those clubs are currently all in one part of the Netherlands. The app is however designed to support clubs anywhere in the world and the list of clubs can be extended by the users."
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Momenteel kent de app ruim 60 fotoclubs in regio Brabant Oost. De meerderheid hiervan is aangesloten by de Koninklijke Fotobond. De app is in principe ook geschikt voor clubs in het buitenland."
+            "value" : "Momenteel kent de app ruim 75 fotoclubs in regio Brabant Oost. Velen hiervan zijn aangesloten by de Koninklijke Fotobond. De app is in principe ook geschikt voor clubs in het buitenland."
           }
         }
       }
@@ -467,7 +467,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Om het werk van een club te ondersteunen, heeft de app informatie nodig over de naam en ligging van de club (“__Niveau 1__”), de ledenlijst (“__Niveau 2__”) en de portfolio’s met foto’s (“__Niveau 3__”). We komen later op deze 3 niveaus terug."
+            "value" : "Om het werk van een club te ondersteunen, heeft de app informatie nodig over de naam en ligging van de club (“__Niveau 1__”), de ledenlijst (“__Niveau 2__”) en de portfolio’s met foto’s (“__Niveau 3__”). We komen later op deze niveaus terug."
           }
         }
       }
@@ -518,7 +518,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "De landkaarten tonen ook een aantal fotomusea in diverse landen (waaronder Nederland, Engeland, America, Japan en Australië). Om ze te zien moet de kaart van slot zijn zodat men voldoende kan uitzoomen."
+            "value" : "De landkaarten tonen ook een aantal fotomusea (waaronder musea Nederland, Engeland, America, Japan en Australië). Om ze te zien moet de kaart van slot zijn zodat men voldoende kan uitzoomen."
           }
         }
       }
@@ -569,7 +569,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Het _Clubs en Musea_ scherm and het _Namenlijst_ scherm ondersteunen zogenaamde \"smart scrolling\". Smart scrolling voorkomt dat tijdens het scrollen, een lijst tot stilstand komt op onhandige locaties zodat men bijvoorbeeld een halve foto of landkaart ziet."
+            "value" : "Het _Clubs en Musea_ scherm and het _Namenlijst_ scherm ondersteunen zogenaamde \"smart scrolling\". Smart scrolling voorkomt dat een lijst tot stilstand komt op een onhandige positie. Zo voorkomt de app dat de gebruiker een halve foto of halve landkaart ziet."
           }
         }
       }
@@ -603,7 +603,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Omdat de websites van fotoclubs allerlei extra informatie bevatten, ondersteunt de app links om naar club websites te springen. De app ondersteunt ook links naar eventuele eigen fotografie websites van fotografen."
+            "value" : "Omdat de websites van fotoclubs allerlei extra informatie bevatten, bevat de app links om naar een club website te springen. De app ondersteunt ook links naar eventuele eigen fotografie websites van individuele fotografen."
           }
         }
       }
@@ -637,7 +637,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Na het opstarten van de app verschijnt er een beeld (\"Prelude\") dat afgeleid is van de app logo. Men kan in en uitzoomen door binnen het centrale beeld te klikken."
+            "value" : "Na het opstarten van de app verschijnt er een beeld dat afgeleid is van de app logo. Men kan in- en uitzoomen door op het centrale beeld te klikken."
           }
         }
       }
@@ -654,7 +654,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Uitgezoomd blijkt het beeld een foto te zijn voorzien van een maskerlaag met kleurenfilters. Dit geheel geeft aan hoe digitale camera's kleur kunnen zien (de chip zelf is namelijk volledig kleurenblind). Technisch heet dit een [Bayer kleurenfilter](https://nl.wikipedia.org/wiki/Bayerfilter). Per lichtgevoelige cel van de sensor worden bepaalde kleuren selectief doorgelaten. Een 24 MPixel full-frame camera heeft bijvoorbeeld een raster van circa 4000 x 6000 kleine kleurfiltertjes."
+            "value" : "Uitgezoomd blijkt het beeld een foto te zijn voorzien van een maskerlaag met kleurenfilters. Dit geeft aan hoe digitale camera's kleur zien (de chip zelf is zonder de kleurenfilters volledig kleurenblind). Technisch heet dit een [Bayer kleurenfilter](https://nl.wikipedia.org/wiki/Bayerfilter). Per lichtgevoelige cel van de sensor worden bepaalde kleuren hiertoe selectief doorgelaten. Een 24 megapixel camera heeft vaak een raster van circa 4000 x 6000 kleine kleurfiltertjes."
           }
         }
       }
@@ -671,7 +671,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Er is een knop rechtsonder waarmee men de __animatie afbreekt__. Het aanraken van iedere andere plek buiten de centrale vierkant werkt overigens ook."
+            "value" : "Er is een knop rechtsonder waarmee men de _animatie afbreekt_. Het aanraken van iedere andere plek buiten het centrale beeld werkt overigens ook."
           }
         }
       }
@@ -688,7 +688,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "De getoonde animatie wordt uitgerekend op de beschikbare [GPU](https://nl.wikipedia.org/wiki/Graphics_processing_unit) rekenkernen van het apparaat. De animatie is dus geen vooraf gemaakte video: de gebruiker kan de lopende animatie interactief beïnvloeden."
+            "value" : "De getoonde animatie wordt uitgerekend op de beschikbare [GPU](https://nl.wikipedia.org/wiki/Graphics_processing_unit) rekenkernen van het apparaat. De animatie is dus niet een vooraf opgenomen video: de gebruiker kan de lopende animatie interactief beïnvloeden."
           }
         }
       }
@@ -722,7 +722,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "De app kan ook voormalig clubleden tonen. Ex-leden zijn standaard niet zichtbaar, maar kunnen onder _Instellingen_ zichtbaar gemaakt worden."
+            "value" : "De app kan ook voormalig clubleden tonen. Ex-leden worden standaard niet getoond, maar kunnen onder _Instellingen_ zichtbaar gemaakt worden."
           }
         }
       }
@@ -739,7 +739,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Een makkelijk manier om gegevens van recente ex-leden binnen de app te krijgen is om ze gewoon niet te wissen op het moment dat een lid vertrekt: in de ledenlijst (Niveau 2) kan aangegeven worden of iemand een ex-lid is."
+            "value" : "De makkelijkste manier om gegevens van recente ex-leden binnen de app te krijgen is om ze gewoon te laten staan op het moment dat een lid vertrekt: in de ledenlijst (Niveau 2) kan men aangegeven dat iemand een voormalig lid is."
           }
         }
       }
@@ -790,7 +790,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Deze knop is deel van portfolio's die gegenereerd zijn vanuit de _Juicebox Pro_ plug-in voor _Lightroom Classic_. Zie bijvoorbeeld de portfolio's van leden van _Fotogroep de Gender_."
+            "value" : "Deze knop is aanwezig bij portfolio's die gegenereerd zijn vanuit de _Juicebox Pro_ plug-in voor _Lightroom Classic_. Zie bijvoorbeeld de portfolio's van leden van _Fotogroep de Gender_."
           }
         }
       }
@@ -807,7 +807,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "_Fotoclub Hub_ vereist een recente versie van iOS. In de praktijk betekent dit dat toestellen die niet ouder zijn dan een jaar of 6 de nieuwste app versies kunnen draaien."
+            "value" : "_Fotoclub Hub_ vereist minimaal iOS 17. In de praktijk betekent dit dat iPhone en iPads vanaf 2018 nog ondersteund worden. Bij iOS versies vanaf 26.0 is de app deels aangepast aan “Liquid Glass”."
           }
         }
       }
@@ -824,7 +824,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Om praktische redenen is de app geoptimaliseerd voor __iPhone__ en __iPad__. De app kan ook draaien op een Mac of Vision Pro."
+            "value" : "Om praktische redenen is de app geoptimaliseerd voor __iPhone__ en __iPad__. De app kan (in principe) ook draaien op een Mac of Vision Pro."
           }
         }
       }
@@ -841,7 +841,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ofschoon er momenteel geen versie van deze app bestaat voor Android of andere niet-Apple telefoons, is er wel een [zuster app](https://github.com/vdhamer/Photo-Club-Hub-HTML) die web pagina’s aanmaakt aan de hand van dezelfde gegevens die de app gebruikt. Dit help om club websites bijgewerkt te houden, maar maakt het ook mogelijk om ledenlijsten en portfolio's in een web browser te bekijken op mobile apparaten (__Android__), PCs (__Windows__ en __MacOS__), of Linux."
+            "value" : "Ofschoon er momenteel geen versie van deze app bestaat voor Android of andere niet-Apple telefoons, is er wel een [zuster app](https://github.com/vdhamer/Photo-Club-Hub-HTML) die webpagina’s aanmaakt aan de hand van dezelfde gegevens die de app gebruikt. Dit helpt om club websites bijgewerkt te houden, maar maakt het ook mogelijk om ledenlijsten en portfolio's in een web browser te bekijken op allerlei apparaten (__Android__), PCs (__Windows__ en __MacOS__), of Linux."
           }
         }
       }
@@ -1180,7 +1180,7 @@
         },
         "nl" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Zoekfunctie van het _Portfolio_’s scherm vanaf iOS 26."
           }
         }
