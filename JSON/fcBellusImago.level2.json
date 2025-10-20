@@ -106,18 +106,6 @@
 
     {
       "name": {
-        "givenName" : "Dirk"   ,
-        "infixName" : "van den",
-        "familyName": "Heuvel"
-      },
-      "optional": {
-        "featuredImage": "https://www.fotoclubbellusimago.nl/uploads/5/5/1/2/55129719/dirk-2025-foto1.jpg",
-        "level3URL": "https://www.fotoclubbellusimago.nl/dirk.html"
-      }
-    },
-
-    {
-      "name": {
         "givenName" : "Frank"    ,
         "infixName" : ""         ,
         "familyName": "Jansbeken"
@@ -200,22 +188,6 @@
         "roles": {"isTreasurer": true},
         "featuredImage": "https://www.fotoclubbellusimago.nl/uploads/5/5/1/2/55129719/12-vrijwerk-kitty-01-mg-8208.jpg",
         "level3URL": "https://www.fotoclubbellusimago.nl/kitty.html"
-      }
-    },
-
-    {
-      "name": {
-        "givenName" : "Leonie"       ,
-        "infixName" : ""             ,
-        "familyName": "Brok-Elfering"
-      },
-      "optional": {
-        "birthday": "9999-03-15",
-        "featuredImage": "https://www.fotoclubbellusimago.nl/uploads/5/5/1/2/55129719/leonie-19.jpg",
-        "level3URL": "https://www.fotoclubbellusimago.nl/leonie.html",
-        "membershipStartDate": "2023-12-01",
-        "expertises": ["Landscape", "Macro"],
-        "nlSpecific": {"fotobondNumber": 1671067}
       }
     },
 
