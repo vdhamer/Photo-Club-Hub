@@ -26,8 +26,8 @@ DATA MAINTENANCE
 * Added 6 photo clubs.
 * Updated members and expertises for fgDeGender and IndividueelBO.
 * Added "Nature" Expertise tag.
-* TODO: Removed 2 members of fcBellusImago
-* TODO: Forced a database reset to ensure the change propagates
+* Removed 2 members of fcBellusImago.
+* Forced a data reset at dataResetPending285b4651 (related to removing members from fcBellusImago).
 
 This build #4651 was made using Xcode 26.0.1.
 
