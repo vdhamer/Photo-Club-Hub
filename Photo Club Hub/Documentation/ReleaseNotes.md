@@ -19,7 +19,7 @@ README SCREEN
 CODE MAINTENANCE
 
 * Sync of code updates from Photo Club Hub HTML.
-* Tested with Xcode 26.0.1 (17A400), Xcode 26.1 beta (17B5035f), and iOS 26.1 beta (23B5059e).
+* Tested with Xcode 26.0.1 (17A400), Xcode 26.1 beta (17B5045g), and iOS 26.1 beta (23B5073a).
 
 DATA MAINTENANCE
 
