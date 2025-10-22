@@ -82,7 +82,8 @@ struct ReadmeView1718: View {
                                 .border(.gray, width: 1)
                             if let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
                                 if let build = Bundle.main.infoDictionary?["CFBundleVersion"] as? String {
-                                    Text("App version \(version) (build \(build))", tableName: "PhotoClubHub.Readme",
+                                    Text("You are running app version \(version) (build \(build))",
+                                         tableName: "PhotoClubHub.Readme",
                                          comment: "Shown on Readme page.")
                                     .font(.callout.italic())
                                     .frame(width: geo.size.width, alignment: .center)
@@ -131,7 +132,7 @@ struct ReadmeView1718: View {
                                 .border(.gray, width: 1)
                                 .scaledToFit()
                                 .frame(width: geo.size.width * 0.8, height: 260, alignment: .center)
-                            Text("Approved (🏵) and temporary (🪲) expertise tags", tableName: "PhotoClubHub.Readme",
+                            Text("Supported (🏵) and temporary (🪲) expertise tags", tableName: "PhotoClubHub.Readme",
                                  comment: "Caption about Expertise on the Readme page")
                             .font(.callout.italic())
                             .frame(width: geo.size.width * 0.8, alignment: .center)
