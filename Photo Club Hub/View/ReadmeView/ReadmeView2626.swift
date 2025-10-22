@@ -179,7 +179,13 @@ struct ReadmeView2626: View {
                             ReadmeSection2626(LocalizedStringResource("§3.06.a", table: "PhotoClubHub.Readme",
                                                                   comment: "Title of a section of the Readme screen"),
                                                                   geo: geo)
-                            ReadmeSection2626(LocalizedStringResource("§3.06.b", table: "PhotoClubHub.Readme",
+                            let persistenceController = PersistenceController.shared // for Core Data
+                            let viewContext = persistenceController.container.viewContext
+                            // -2 is to not count XampleMin and XampleMax
+                            let orgCount = Organization.count(context: viewContext,
+                                                              organizationTypeE: OrganizationTypeEnum.club) - 2
+                            ReadmeSection2626(LocalizedStringResource("§3.06.b \(orgCount)",
+                                                                  table: "PhotoClubHub.Readme",
                                                                   comment: "Paragraph in the Readme screen"), geo: geo)
                             ReadmeSection2626(LocalizedStringResource("§3.06.c", table: "PhotoClubHub.Readme",
                                                                   comment: "Paragraph in the Readme screen"), geo: geo)

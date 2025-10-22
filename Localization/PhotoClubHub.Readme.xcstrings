@@ -365,7 +365,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Wanneer men ver genoeg inzoomt op een landkaart, verschijnt er een knop om de kaart in 3D weer te geven. Dit vereist dat de kaart interactief is (slotje is open). Probeer het bijvoorbeeld uit met New York met zijn wolkenkrabbers."
+            "value" : "Wanneer men ver genoeg inzoomt op een landkaart, verschijnt er een knop om de kaart in 3D weer te geven. Dit vereist dat het slotje bij de kaart open is. Probeer het zelf maar uit midden in New York met zijn wolkenkrabbers."
           }
         }
       }
@@ -399,7 +399,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "De landkaarten kunnen de huidige locatie van de gebruiker als paarse stip weergeven als deze binnen het bereik van de kaart valt. Indien het slotje open is, verschijnt er een pijlvormige knop waarmee de kaart gecentreerd kan worden rondom de huidige locatie."
+            "value" : "De landkaarten kunnen de huidige locatie van de gebruiker als paarse stip weergeven als deze binnen het bereik van de kaart valt. Indien het slotje open is, verschijnt er een pijlvormige knop waarmee men de kaart kan verplaatsen naar de huidige locatie."
           }
         }
       }
@@ -416,7 +416,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Locatieweergave vereist dat de gebruiker desgevraagd __toestemming__ geeft aan de app om locatiegegevens van iOS te ontvangen. Locatie informatie wordt niet door de app opgeslagen of doorgegeven: het dient momenteel alleen om de paarse stip te tonen."
+            "value" : "Locatieweergave vereist dat de gebruiker desgevraagd _toestemming_ geeft aan de app om locatiegegevens van iOS te ontvangen. Locatie informatie wordt niet door de app opgeslagen of doorgegeven: het dient hier alleen om de paarse stip te tonen."
           }
         }
       }
@@ -440,6 +440,7 @@
     },
     "§3.06.b" : {
       "comment" : "Paragraph in the Readme screen",
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -451,6 +452,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Momenteel kent de app ruim 75 fotoclubs in regio Brabant Oost. Velen hiervan zijn aangesloten by de Koninklijke Fotobond. De app is in principe ook geschikt voor clubs in het buitenland."
+          }
+        }
+      }
+    },
+    "§3.06.b %lld" : {
+      "comment" : "Paragraph in the Readme screen",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The app currently contains a list of %lld photo clubs. Those clubs are currently all in one part of the Netherlands. The app is however designed to support clubs anywhere in the world and the list of clubs can be extended by the users."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Momenteel kent de app %lld fotoclubs in regio Brabant Oost. Velen hiervan zijn aangesloten by de Koninklijke Fotobond. De app is in principe ook geschikt voor clubs in het buitenland."
           }
         }
       }
