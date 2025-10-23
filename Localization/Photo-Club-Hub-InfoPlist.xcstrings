@@ -53,6 +53,24 @@
           }
         }
       }
+    },
+    "NSPhotoLibraryAddUsageDescription" : {
+      "comment" : "Privacy - Photo Library Additions Usage Description",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Allows an image to be stored to Photos Library if requested. This permission is not needed for the proper operation of the Photo Club Hub app."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deze toestemming is nodig om een foto te bewaren in de fotobibliotheek. Dit is niet nodig voor de goede werking van de Photo Club Hub app."
+          }
+        }
+      }
     }
   },
   "version" : "1.0"

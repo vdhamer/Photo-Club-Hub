@@ -4,6 +4,8 @@
 <dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>User&apos;s location is shown on the maps.</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Allows an image to be stored to Photos Library if requested. This permission is not needed for the proper operation of the Photo Club Hub app.</string>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
 	<key>LSMinimumSystemVersion</key>
@@ -38,7 +40,7 @@
 	<array>
 		<string>fetch</string>
 	</array>
-    <key>UIPrefersShowingLanguageSettings</key>
-    <true/>
+	<key>UIPrefersShowingLanguageSettings</key>
+	<true/>
 </dict>
 </plist>
