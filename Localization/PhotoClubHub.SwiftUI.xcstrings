@@ -427,23 +427,6 @@
         }
       }
     },
-    "Non-standard" : {
-      "comment" : "Expertise description at bottom of Who's Who screen",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "[ no translations ]"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "[ zonder vertalingen ]"
-          }
-        }
-      }
-    },
     "of1" : {
       "comment" : "X of Y portfolio(s) shown (due to various forms of filtering)",
       "localizations" : {
@@ -797,6 +780,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "getoond"
+          }
+        }
+      }
+    },
+    "Temporary" : {
+      "comment" : "Expertise description at bottom of Who's Who screen",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "[ no translations available ]"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "[ zonder vertalingen ]"
           }
         }
       }
