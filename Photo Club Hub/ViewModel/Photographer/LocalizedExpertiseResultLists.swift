@@ -12,18 +12,18 @@ let maxExpertisesPerMember: Int = 2
 // Used to provide the UI with pairs of lists with Exertise records with localized names
 public struct LocalizedExpertiseResultLists {
 
-    public var standard = LocalizedExpertiseResultList(isStandard: true, list: [])
-    public var nonstandard = LocalizedExpertiseResultList(isStandard: false, list: [])
+    public var supported = LocalizedExpertiseResultList(isSupported: true, list: [])
+    public var temporary = LocalizedExpertiseResultList(isSupported: false, list: [])
 
-    public init(standardList: [LocalizedExpertiseResult], nonstandardList: [LocalizedExpertiseResult]) {
-        standard = LocalizedExpertiseResultList(isStandard: true, list: standardList)
-        nonstandard = LocalizedExpertiseResultList(isStandard: false, list: nonstandardList)
+    public init(supportedList: [LocalizedExpertiseResult], temporaryList: [LocalizedExpertiseResult]) {
+        supported = LocalizedExpertiseResultList(isSupported: true, list: supportedList)
+        temporary = LocalizedExpertiseResultList(isSupported: false, list: temporaryList)
     }
 
     public init(moc: NSManagedObjectContext, _ photographerExpertises: Set<PhotographerExpertise>) {
 
-        // Use init(standardList:nonstandardList) to get access to the icons
-        var resultLERLs = LocalizedExpertiseResultLists.init(standardList: [], nonstandardList: [])
+        // Use init(supportedList:temporaryList) to get access to the icons
+        var resultLERLs = LocalizedExpertiseResultLists.init(supportedList: [], temporaryList: [])
 
         // Step 1. Translate expertises to appropriate language
         var translated: [LocalizedExpertiseResult] = [] // start with empty array
@@ -42,19 +42,19 @@ public struct LocalizedExpertiseResultLists {
             }
         }
 
-        // Step 4. Split list of photographer's expertises into 2 parts: standard and nonStandard
+        // Step 4. Split list of photographer's expertises into 2 parts: supported and temporary
         for item in clipped {
-            if item.isStandard {
-                resultLERLs.standard.list.append(item)
+            if item.isSupported {
+                resultLERLs.supported.list.append(item)
             } else {
-                resultLERLs.nonstandard.list.append(LocalizedExpertiseResult(localizedExpertise:
+                resultLERLs.temporary.list.append(LocalizedExpertiseResult(localizedExpertise:
                                                                                 item.localizedExpertise, id: item.id))
             }
         }
 
         // Step 5. warn if there are more expertises than allowed
         if sorted.count > maxExpertisesPerMember { // if list overflows, add a warning
-            let moreExpertise = Expertise.findCreateUpdateNonStandard(
+            let moreExpertise = Expertise.findCreateUpdateTemporary(
                                           context: moc,
                                           id: String(localized: "Too many expertises",
                                                      table: "PhotoClubHubData", bundle: Bundle.photoClubHubDataModule,
@@ -62,7 +62,7 @@ public struct LocalizedExpertiseResultLists {
                                           names: [],
                                           usages: [] )
             let moreLocalizedExpertise: LocalizedExpertiseResult = moreExpertise.selectedLocalizedExpertise
-            resultLERLs.nonstandard.list.append(LocalizedExpertiseResult(
+            resultLERLs.temporary.list.append(LocalizedExpertiseResult(
                                                     localizedExpertise: moreLocalizedExpertise.localizedExpertise,
                                                     id: moreExpertise.id,
                                                     customHint: customHint(localizedExpertiseResults: sorted))
@@ -77,34 +77,34 @@ public struct LocalizedExpertiseResultLists {
         }
 
         // Step 6. remove delimeter after last element
-        if !resultLERLs.standard.list.isEmpty {
-            resultLERLs.standard.list[resultLERLs.standard.list.count-1].delimiterToAppend = "" // was ","
+        if !resultLERLs.supported.list.isEmpty {
+            resultLERLs.supported.list[resultLERLs.supported.list.count-1].delimiterToAppend = "" // was ","
         }
-        if !resultLERLs.nonstandard.list.isEmpty {
-            resultLERLs.nonstandard.list[resultLERLs.nonstandard.list.count-1].delimiterToAppend = ""
+        if !resultLERLs.temporary.list.isEmpty {
+            resultLERLs.temporary.list[resultLERLs.temporary.list.count-1].delimiterToAppend = ""
         }
 
-        self.standard.list = resultLERLs.standard.list
-        self.nonstandard.list = resultLERLs.nonstandard.list
+        self.supported.list = resultLERLs.supported.list
+        self.temporary.list = resultLERLs.temporary.list
     }
 
     fileprivate func customHint(localizedExpertiseResults: [LocalizedExpertiseResult]) -> String {
         var hint: String = ""
-        let temp = LocalizedExpertiseResultLists(standardList: [], nonstandardList: [])
+        let temp = LocalizedExpertiseResultLists(supportedList: [], temporaryList: [])
 
         for localizedExpertiseResult in localizedExpertiseResults {
             if localizedExpertiseResult.localizedExpertise != nil {
-                hint.append(temp.standard.icon + " " + localizedExpertiseResult.localizedExpertise!.name + " ")
+                hint.append(temp.supported.icon + " " + localizedExpertiseResult.localizedExpertise!.name + " ")
             } else {
-                hint.append(temp.nonstandard.icon + " " + localizedExpertiseResult.id + " ")
+                hint.append(temp.temporary.icon + " " + localizedExpertiseResult.id + " ")
             }
         }
 
         return hint.trimmingCharacters(in: CharacterSet(charactersIn: " "))
     }
 
-    public func getIconString(standard: Bool) -> String {
-        let temp = LocalizedExpertiseResultLists(standardList: [], nonstandardList: [])
-        return standard ? temp.standard.icon : temp.nonstandard.icon
+    public func getIconString(isSupported: Bool) -> String {
+        let temp = LocalizedExpertiseResultLists(supportedList: [], temporaryList: [])
+        return isSupported ? temp.supported.icon : temp.temporary.icon
     }
 }

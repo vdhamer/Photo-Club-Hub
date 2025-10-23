@@ -370,7 +370,9 @@ interests, the expertises are standardized (e.g. consistently use "Black & White
 
 <details><summary>Details on Expertise Standardization (click to expand)</summary></p>
 
-Standardization also helps in displaying the texts in multiple languages. The translations are defined in a single file named `Level 0`. This means that if the Sierra Club associates their member Ansel Adams with "Black & White"
+Standardization also helps in displaying the texts in multiple languages. 
+The translations are defined in a single file named `Level 0`. 
+This means that if the Sierra Club associates their member Ansel Adams with "Black & White"
 they automatically get translations of "Black & White" into certain languages:
 if the app is thus set to Dutch, the user sees "Zwart-Wit" rather than "Black & White".
 
@@ -486,7 +488,7 @@ Internally the app actually supports one extra level of data:
 - `Level 0` holds some basic configuration data.</p>
 
 Users and clubs don't normally need to worry about this layer. `Level 0` data is shared across clubs and thus managed centrally. 
-Its main content is a list of standardized expertises for photographers, plus translations of these expertises into supported languages.
+Its main content is a list of supported expertises for photographers, plus translations of these expertises into supported languages.
 
 ### Levels and Screens
 
@@ -507,7 +509,7 @@ Attempting to view a portfolio of a club member without an available portfolio w
 
 ### Level 0. Expertises and Languages
 
-`Level 0` contains standardized expertises, standardized languages, and the translations of expertises into these languages.
+`Level 0` contains supported expertises, supported languages, and the translations of expertises into these languages.
 You may want to skip reading about `Level 0` on a first reading, as it only describes data needed to support an optional feature.
 
 <ul><details><Summary>Level 0 example (click to expand)</Summary>
@@ -842,9 +844,9 @@ can be translated (using Level 0 data) to "Landschaft" in German or "Landscape" 
 The identifier should preferably match the English translation for practical reasons but, technically speaking, doesn't need be.
 Question: so what happens if an expertise string in a `Level2.json` file does _not_ occur in the list of expertises in the `Level0.json` file?
 Answer: it is shown as an error (gray?) in the user interface, thus prompting the user to fix the issue.
-The expertise reverts to the standard color as soon as that problem is resolved.
+The expertise reverts to the "supported" color as soon as that problem is resolved.
 Rationale: you might enter a typo ("Landscapes" instead of "Landscape").
-But it also signals a "non-standard" term (e.g., using "Scenery" or "Desert" instead of "Landscape").
+But it also signals a unsupported term (e.g., using "Scenery" or "Desert" instead of "Landscape").
 </p>
  
 > Note that the `birthday`, `website`, `isDeceased`, `photographerImage`, and `expertises` fields are technically special
@@ -1185,7 +1187,7 @@ The `LocalizedExpertise` table holds the strings representing `Expertises` in an
 
 <ul><details><summary>Details (click to expand)</summary></p>
 
-The `PhotographerExpertise` table links a standardize (reusable) `Expertise` to a `Photographer`.
+The `PhotographerExpertise` table links a supported `Expertise` to a `Photographer`.
 It is thus a many-to-many relationship without any additional attributes.</p>
 
 Note that `Expertise`s per `Photographer` are provided per Club (`Level2.json`) but are stored at the `Photographer` level.

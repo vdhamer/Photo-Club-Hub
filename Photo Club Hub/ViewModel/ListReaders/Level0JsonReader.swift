@@ -37,7 +37,7 @@ public class Level0JsonReader {
                                                          isBeingTested: Bool) {
 
         let fileName: String = fileSelector.fileName
-        ifDebugPrint("\nStarting background read of \(fileName).level0.json to get standard Expertises and Languages.")
+        ifDebugPrint("\nStarting background read of \(fileName).level0.json to get supported Expertises and Languages.")
 
         // hand the data to SwiftyJSON to parse
         let jsonRoot = JSON(parseJSON: jsonData) // get entire JSON file
@@ -97,8 +97,8 @@ public class Level0JsonReader {
             let jsonExpertiseOptionals = jsonExpertise["optional"] // rest will be empty if not found
             let jsonUsages = jsonExpertiseOptionals["usage"].arrayValue
 
-            // Expertises from the root.level1.json file are by definition Standard
-            let expertise = Expertise.findCreateUpdateStandard(context: bgContext,
+            // Expertises from the root.level1.json file are by definition Supported
+            let expertise = Expertise.findCreateUpdateSupported(context: bgContext,
                                                                id: idString,
                                                                names: jsonExpertiseNames,
                                                                usages: jsonUsages)

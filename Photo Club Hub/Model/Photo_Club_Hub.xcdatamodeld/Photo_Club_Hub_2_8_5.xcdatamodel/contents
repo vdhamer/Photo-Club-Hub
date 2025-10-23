@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="24295.2" systemVersion="25A5349a" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="24299" systemVersion="25A362" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Expertise" representedClassName="Expertise" elementID="Keyword" syncable="YES" codeGenerationType="class">
         <attribute name="id_" attributeType="String" defaultValueString="ID is missing"/>
-        <attribute name="isStandard" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="isSupported" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <relationship name="localizedExpertises_" toMany="YES" deletionRule="Cascade" destinationEntity="LocalizedExpertise" inverseName="expertise_" inverseEntity="LocalizedExpertise" elementID="localizedKeywords_"/>
         <relationship name="photographerExpertises_" toMany="YES" deletionRule="Cascade" destinationEntity="PhotographerExpertise" inverseName="expertise_" inverseEntity="PhotographerExpertise" elementID="photographerKeywords_"/>
         <uniquenessConstraints>

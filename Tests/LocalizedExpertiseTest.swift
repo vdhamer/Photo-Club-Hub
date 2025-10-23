@@ -18,7 +18,7 @@ import CoreData // for NSManagedObjectContext
     }
 
     @Test("Create a randomly named LocalizedExpertise") func addLocalizedExpertise() {
-        let expertise = Expertise.findCreateUpdateNonStandard(context: context, id: String.random(length: 5),
+        let expertise = Expertise.findCreateUpdateTemporary(context: context, id: String.random(length: 5),
                                                               names: [], usages: [])
         let language = Language.findCreateUpdate(context: context, isoCode: "NL")
         let localizedName = String.random(length: 10)
@@ -39,7 +39,7 @@ import CoreData // for NSManagedObjectContext
     }
 
     @Test("Check that isoCode can handle lower case") func addLocalizedExpertiseLowerCase() {
-        let expertise = Expertise.findCreateUpdateNonStandard(context: context, id: String.random(length: 25),
+        let expertise = Expertise.findCreateUpdateTemporary(context: context, id: String.random(length: 25),
                                                               names: [], usages: [])
         let language = Language.findCreateUpdate(context: context, isoCode: "eN")
         let localizedName = String.random(length: 10)
@@ -57,7 +57,7 @@ import CoreData // for NSManagedObjectContext
     }
 
     @Test("Is nil handled properly") func addLocalizedExpertiseNilUsage() {
-        let expertise = Expertise.findCreateUpdateNonStandard(context: context, id: String.random(length: 25),
+        let expertise = Expertise.findCreateUpdateTemporary(context: context, id: String.random(length: 25),
                                                               names: [], usages: [])
         let language = Language.findCreateUpdate(context: context, isoCode: "NL")
         let localizedName = String.random(length: 10)
@@ -73,7 +73,7 @@ import CoreData // for NSManagedObjectContext
     }
 
     @Test("Is nil overwritten properly") func addLocalizedExpertiseReplaceNil() {
-        let expertise = Expertise.findCreateUpdateNonStandard(context: context, id: String.random(length: 25),
+        let expertise = Expertise.findCreateUpdateTemporary(context: context, id: String.random(length: 25),
                                                               names: [], usages: [])
         let language = Language.findCreateUpdate(context: context, isoCode: "NL")
         let localizedName = String.random(length: 10)

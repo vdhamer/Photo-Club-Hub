@@ -14,7 +14,7 @@ public struct LocalizedExpertiseResult {
     public var customHint: String? // used to overrule standard Ignite hint
 
     public var name: String { localizedExpertise?.name ?? id } // localized name or (if no translations) generic id
-    var isStandard: Bool { localizedExpertise != nil }
+    var isSupported: Bool { localizedExpertise != nil }
 
     public init(localizedExpertise: LocalizedExpertise?,
                 id: String,

@@ -9,8 +9,8 @@ import CoreData // for NSManagedObjectContext
 
 public struct LocalizedExpertiseResultList {
 
-    public init(isStandard: Bool, list: [LocalizedExpertiseResult]) {
-        self.icon = isStandard ? "🏵️" : "🪲"
+    public init(isSupported: Bool, list: [LocalizedExpertiseResult]) {
+        self.icon = isSupported ? "🏵️" : "🪲"
         self.list = list
     }
 

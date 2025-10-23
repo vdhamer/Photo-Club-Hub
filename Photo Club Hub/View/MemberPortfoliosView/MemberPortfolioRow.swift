@@ -38,22 +38,22 @@ struct MemberPortfolioRow: View {
                     let localizedExpertiseResultLists = LocalizedExpertiseResultLists(moc: moc,
                                                             member.photographer.photographerExpertises)
                     Group {
-                        if !localizedExpertiseResultLists.standard.list.isEmpty {
+                        if !localizedExpertiseResultLists.supported.list.isEmpty {
                             HStack(spacing: 3) {
-                                Text(localizedExpertiseResultLists.standard.icon)
+                                Text(localizedExpertiseResultLists.supported.icon)
                                     .font(.footnote)
-                                ForEach(localizedExpertiseResultLists.standard.list) { standardLKR in
-                                    Text(standardLKR.localizedExpertise!.name + standardLKR.delimiterToAppend)
+                                ForEach(localizedExpertiseResultLists.supported.list) { supportedLER in
+                                    Text(supportedLER.localizedExpertise!.name + supportedLER.delimiterToAppend)
                                 }
                             }
                         }
 
-                        if !localizedExpertiseResultLists.nonstandard.list.isEmpty {
+                        if !localizedExpertiseResultLists.temporary.list.isEmpty {
                             HStack(spacing: 3) {
-                                Text(localizedExpertiseResultLists.nonstandard.icon)
+                                Text(localizedExpertiseResultLists.temporary.icon)
                                     .font(.footnote)
-                                ForEach(localizedExpertiseResultLists.nonstandard.list) { nonstandardLKR in
-                                    Text(nonstandardLKR.id + nonstandardLKR.delimiterToAppend)
+                                ForEach(localizedExpertiseResultLists.temporary.list) { temporaryLKR in
+                                    Text(temporaryLKR.id + temporaryLKR.delimiterToAppend)
                                 }
                             }
                         }

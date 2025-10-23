@@ -27,9 +27,9 @@ struct WhoIsWhoListView: View {
     fileprivate var navigationTitle = String(localized: "Who's Who",
                                              table: "PhotoClubHub.SwiftUI",
                                              comment: "Title of page with list of photographers")
-    fileprivate let nonStandard = String(localized: "Non-standard",
-                                         table: "PhotoClubHub.SwiftUI",
-                                         comment: "Expertise description at bottom of Who's Who screen")
+    fileprivate let temporary = String(localized: "Temporary",
+                                       table: "PhotoClubHub.SwiftUI",
+                                       comment: "Expertise description at bottom of Who's Who screen")
 
     init(searchText: Binding<String>, navigationTitle: String? = nil) {
         self.searchText = searchText
@@ -71,12 +71,12 @@ struct WhoIsWhoListView: View {
                         id: \.self) { expertise in
                     HStack {
                         Text(verbatim: """
-                                       \(getIconString(standard: expertise.isStandard)) \
+                                       \(getIconString(isSupported: expertise.isSupported)) \
                                        \(expertise.selectedLocalizedExpertise.name)
                                        """)
                         Text(PhotographerExpertise.count(context: viewContext,
                                                          expertiseID: expertise.id).description+"x")
-                        Text("\(expertise.isStandard ? "" : nonStandard)")
+                        Text("\(expertise.isSupported ? "" : temporary)")
                     }
                 }
                 let totalCount = Expertise.count(context: viewContext)
@@ -85,7 +85,7 @@ struct WhoIsWhoListView: View {
                      comment: "Expertise statistics in footnote #4 of Who's Who screen")
                 Text("""
                      \(totalCount
-                     - Expertise.getAll(context: viewContext).filter { keyword in keyword.isStandard }.count) \
+                     - Expertise.getAll(context: viewContext).filter { keyword in keyword.isSupported }.count) \
                      of these \(Expertise.count(context: viewContext)) \
                      expertise tags are temporary.
                      """,
@@ -128,10 +128,10 @@ struct WhoIsWhoListView: View {
         return lhs.selectedLocalizedExpertise.name < rhs.selectedLocalizedExpertise.name
     }
 
-    static let iconExamples = LocalizedExpertiseResultLists(standardList: [], nonstandardList: [])
+    static let iconExamples = LocalizedExpertiseResultLists(supportedList: [], temporaryList: [])
 
-    fileprivate func getIconString(standard: Bool) -> String {
-        return standard ? Self.iconExamples.standard.icon : Self.iconExamples.nonstandard.icon
+    fileprivate func getIconString(isSupported: Bool) -> String {
+        return isSupported ? Self.iconExamples.supported.icon : Self.iconExamples.temporary.icon
     }
 
 }

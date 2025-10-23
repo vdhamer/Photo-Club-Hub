@@ -21,6 +21,7 @@ CODE MAINTENANCE
 
 * Sync of code updates from Photo Club Hub HTML.
 * Tested with Xcode 26.0.1 (17A400), Xcode 26.1 beta (17B5045g), and iOS 26.1 beta (23B5073a).
+* Expertises are now classified as supported or temporary (was: supported or temporary)
 
 DATA MAINTENANCE
 
@@ -101,8 +102,8 @@ This build #4649 was made using Xcode 16.4 and is suitable for release to the Ap
 ### 2.8.3 (GitHub commit c5245aa) 17-08-25
 
 Who's Who screen
-* Fix: some Standard Expertises (in footnote #4 at bottom of Who's Who) incorrectly displayed as Non-Standard.
-* Extra line in footnote #4 specifying how many of the Expertises are Standard (listed in root.level0.json).
+* Fix: some Supported Expertises (in footnote #4 at bottom of Who's Who) incorrectly displayed as Temporary.
+* Extra line in footnote #4 specifying how many of the Expertises are Supported (listed in root.level0.json).
 
 Settings
 * Fix: localization of "Data refresh pending" toggle

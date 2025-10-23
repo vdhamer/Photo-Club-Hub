@@ -17,36 +17,36 @@ import CoreData // for NSManagedObjectContext
         context = PersistenceController.shared.container.viewContext
     }
 
-    @Test("Add a standard expertise") func addStandardExpertise() throws {
+    @Test("Add a supported expertise") func addSupportedExpertise() throws {
         let expertiseID = String.random(length: 10).canonicalCase
-        let expertise = Expertise.findCreateUpdateStandard(context: context, id: expertiseID, names: [], usages: [])
+        let expertise = Expertise.findCreateUpdateSupported(context: context, id: expertiseID, names: [], usages: [])
         #expect(expertise.id == expertiseID.canonicalCase)
-        #expect(expertise.isStandard == true)
+        #expect(expertise.isSupported == true)
         Expertise.save(context: context, errorText: "Error saving expertise \"\(expertiseID)\"")
         #expect(Expertise.count(context: context, expertiseID: expertiseID) == 1)
         #expect(Expertise.count(context: context, expertiseID: expertiseID) == 1)
     }
 
-    @Test("Add a non-standard expertise") func addNonStandardExpertise() throws {
+    @Test("Add a temporary expertise") func addTemporaryExpertise() throws {
         let expertiseID = String.random(length: 10).canonicalCase
-        let expertise = Expertise.findCreateUpdateNonStandard(context: context, id: expertiseID, names: [], usages: [])
+        let expertise = Expertise.findCreateUpdateTemporary(context: context, id: expertiseID, names: [], usages: [])
         #expect(expertise.id == expertiseID)
-        #expect(expertise.isStandard == false)
+        #expect(expertise.isSupported == false)
         Expertise.save(context: context, errorText: "Error saving expertise \"\(expertiseID)\"")
         #expect(Expertise.count(context: context, expertiseID: expertiseID) == 1)
     }
 
     @Test("Check capitalization of incoming ID strings") func checkIdCaplitalization() throws {
         let expertiseID = "a " + String.random(length: 8)
-        let expertise = Expertise.findCreateUpdateStandard(context: context, id: expertiseID.canonicalCase,
+        let expertise = Expertise.findCreateUpdateSupported(context: context, id: expertiseID.canonicalCase,
                                                            names: [], usages: [])
         #expect(expertise.id == expertiseID.canonicalCase)
     }
 
-    @Test("Standard expertise cannot be changed back to non-standard") func expertiseStandard2NonStandard() {
+    @Test("Supported expertise cannot be changed back to Temporary") func expertiseSupported2Temporary() {
         var id = String.random(length: 10) // findCreateUpdate() converts this to .canonicalCase
-        let expertise1 = Expertise.findCreateUpdateStandard(context: context, id: id, names: [], usages: [])
-        #expect(expertise1.isStandard == true)
+        let expertise1 = Expertise.findCreateUpdateSupported(context: context, id: id, names: [], usages: [])
+        #expect(expertise1.isSupported == true)
         #expect(id.canonicalCase == expertise1.id)
         id = id.canonicalCase
         Expertise.save(context: context, errorText: "Error saving expertise \"\(id)\"")
@@ -54,17 +54,17 @@ import CoreData // for NSManagedObjectContext
         Expertise.save(context: context, errorText: "Error saving expertise \"\(id)\"") // shouldn't create a new record
         #expect(Expertise.count(context: context, expertiseID: id.canonicalCase) == 1)
 
-        let expertise2 = Expertise.findCreateUpdateNonStandard(context: context, id: id, names: [], usages: [])
+        let expertise2 = Expertise.findCreateUpdateTemporary(context: context, id: id, names: [], usages: [])
         Expertise.save(context: context, errorText: "Error saving expertise \"\(id)\"") // shouldn't create a new record
-        #expect(expertise2.isStandard == true) // standard never reverts back to non-standard (latching)
-        #expect(expertise1.isStandard == expertise2.isStandard) // should be same, as this is a class
+        #expect(expertise2.isSupported == true) // supported never reverts back to temporary (latching)
+        #expect(expertise1.isSupported == expertise2.isSupported) // should be same, as this is a class
         #expect(Expertise.count(context: context, expertiseID: id) == 1)
     }
 
-    @Test("Non-standard expertise can be promoted to standard") func expertiseNonStandard2Standard() {
+    @Test("Temporary expertise can be promoted to Supported") func expertiseTemporary2Supported() {
         var id = String.random(length: 10) // findCreateUpdate() converts this to .canonicalCase
-        let expertise1 = Expertise.findCreateUpdateNonStandard(context: context, id: id, names: [], usages: [])
-        #expect(expertise1.isStandard == false)
+        let expertise1 = Expertise.findCreateUpdateTemporary(context: context, id: id, names: [], usages: [])
+        #expect(expertise1.isSupported == false)
         #expect(id.canonicalCase == expertise1.id)
         id = id.canonicalCase
         Expertise.save(context: context, errorText: "Error saving expertise \"\(id)\"")
@@ -72,10 +72,10 @@ import CoreData // for NSManagedObjectContext
         Expertise.save(context: context, errorText: "Error saving expertise \"\(id)\"") // shouldn't create a new record
         #expect(Expertise.count(context: context, expertiseID: id.canonicalCase) == 1)
 
-        let expertise2 = Expertise.findCreateUpdateStandard(context: context, id: id, names: [], usages: [])
+        let expertise2 = Expertise.findCreateUpdateSupported(context: context, id: id, names: [], usages: [])
         Expertise.save(context: context, errorText: "Error saving expertise \"\(id)\"") // shouldn't create a new record
-        #expect(expertise2.isStandard == true) // should have promoted to standard
-        #expect(expertise1.isStandard == expertise2.isStandard) // should be same, as this is a class
+        #expect(expertise2.isSupported == true) // should have promoted to Supported
+        #expect(expertise1.isSupported == expertise2.isSupported) // should be same, as this is a class
         #expect(Expertise.count(context: context, expertiseID: id) == 1)
     }
 
