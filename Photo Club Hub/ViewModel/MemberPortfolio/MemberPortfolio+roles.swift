@@ -20,12 +20,12 @@ extension MemberPortfolio { // computed properties related to roles of members i
         }
         if isFormerMember && !isHonoraryMember { prefixList.append(MemberStatus.former.localizedString) }
 
-        if isChairman { suffixList.append(MemberRole.chairman.localizedString) }
-        if isViceChairman { suffixList.append(MemberRole.viceChairman.localizedString) }
-        if isTreasurer { suffixList.append(MemberRole.treasurer.localizedString) }
-        if isSecretary { suffixList.append(MemberRole.secretary.localizedString) }
-        if isAdmin { suffixList.append(MemberRole.admin.localizedString) }
-        if isOther { suffixList.append(MemberRole.other.localizedString) }
+        if isChairman { suffixList.append(MemberRole.chairman.displayName) }
+        if isViceChairman { suffixList.append(MemberRole.viceChairman.displayName) }
+        if isTreasurer { suffixList.append(MemberRole.treasurer.displayName) }
+        if isSecretary { suffixList.append(MemberRole.secretary.displayName) }
+        if isAdmin { suffixList.append(MemberRole.admin.displayName) }
+        if isOther { suffixList.append(MemberRole.other.displayName) }
 
         if isProspectiveMember { suffixList.append(MemberStatus.prospective.localizedString) } else {
             if isHonoraryMember { suffixList.append(MemberStatus.honorary.localizedString) } else {

@@ -184,7 +184,7 @@ struct ReadmeView2626: View {
                             // -2 is to not count XampleMin and XampleMax
                             let orgCount = Organization.count(context: viewContext,
                                                               organizationTypeE: OrganizationTypeEnum.club) - 2
-                            ReadmeSection2626(LocalizedStringResource("§3.06.b \(orgCount)",
+                            ReadmeSection2626(LocalizedStringResource("§3.06.b \(orgCount)", // dynamic via query
                                                                   table: "PhotoClubHub.Readme",
                                                                   comment: "Paragraph in the Readme screen"), geo: geo)
                             ReadmeSection2626(LocalizedStringResource("§3.06.c", table: "PhotoClubHub.Readme",
@@ -252,7 +252,7 @@ struct ReadmeView2626: View {
                                 .scaledToFill()
                                 .border(.gray, width: 1)
                                 .frame(width: geo.size.width, alignment: .center)
-                            Text(verbatim: "© 2021 Greetje van Son\n")
+                            Text(verbatim: "© Greetje van Son\n")
                                 .font(.callout.italic())
                                 .frame(width: geo.size.width, alignment: .center)
 

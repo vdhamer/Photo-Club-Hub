@@ -191,7 +191,7 @@ struct ReadmeView1718: View {
                             // -2 is to not count XampleMin and XampleMax
                             let orgCount = Organization.count(context: viewContext,
                                                               organizationTypeE: OrganizationTypeEnum.club) - 2
-                            ReadmeSection1718(LocalizedStringResource("§3.06.b \(orgCount)",
+                            ReadmeSection1718(LocalizedStringResource("§3.06.b \(orgCount)", // dynamic via query
                                                                   table: "PhotoClubHub.Readme",
                                                                   comment: "Paragraph in the Readme screen"), geo: geo)
                             ReadmeSection1718(LocalizedStringResource("§3.06.c", table: "PhotoClubHub.Readme",

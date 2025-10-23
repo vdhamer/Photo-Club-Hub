@@ -15,6 +15,7 @@ README SCREEN
 
 * Text and screenshot updates to the Dutch language Readme text.
 * Search function screenshot shown depends on iOS version (before/after introduction of Liquid Glass).
+* Count of photo clubs is now dynamically generated rather than hard coded.
 
 CODE MAINTENANCE
 
