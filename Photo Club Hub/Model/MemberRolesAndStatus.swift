@@ -64,22 +64,34 @@ extension MemberRole: CaseIterable, Identifiable, Codable {
 
 extension MemberRole: Comparable {
     public static func < (lhs: MemberRole, rhs: MemberRole) -> Bool {
-        lhs.displayName < rhs.displayName // is sorted based on locale's displayName, not on rawValue
+        return lhs.displayName < rhs.displayName // is sorted based on locale's displayName, not on rawValue
     }
 }
 
 // MARK: - MemberStatus
 
-public enum MemberStatus {
-    // a Member can have multiple of these special statusses
-    case coach // rawValue not used because string needs localization
-    case deceased // careful: isDeceased belongs to member.photographer.deceased rather than member.isdeceased
+/// The status a club member can hold within their photo club.
+///
+/// A member can have zero or more statusses concurrently.
+/// - The enum's `rawValue` serves as a  stable identifier.
+/// - Use`displayName` for localized presentation.
+public enum MemberStatus: String {
+    /// Photography coaches may guide the club in certain projects
+    case coach
+    /// Photographer has died. Stored as member.photographer.isDeceased rather than as member.isDeceased.
+    case deceased
+    /// Ex-member of this club.
     case former
+    /// Honorary club member.
     case honorary
+    /// Current  club member.
     case current
+    /// Aspiring member.
     case prospective
+}
 
-    public var localizedString: String {
+extension MemberStatus {
+    public var displayName: String {
         let table: String = "PhotoClubHubData"
 
         switch self {
@@ -111,15 +123,13 @@ public enum MemberStatus {
     }
 }
 
-extension MemberStatus: CaseIterable, Identifiable {
-    public var id: String {
-        self.localizedString
-    }
+extension MemberStatus: CaseIterable, Identifiable, Codable {
+    public var id: String { rawValue } // stable, locale-independent identifier
 }
 
 extension MemberStatus: Comparable {
     public static func < (lhs: MemberStatus, rhs: MemberStatus) -> Bool {
-            return lhs.localizedString < rhs.localizedString
+            return lhs.displayName < rhs.displayName // is sorted based on locale's displayName, not on rawValue
     }
 }
 

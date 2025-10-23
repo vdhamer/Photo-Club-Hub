@@ -109,7 +109,7 @@ struct RoleStatusIconView_Previews: PreviewProvider {
                         ForEach(MemberStatus.allCases.sorted(by: <)) { memberStatus in
                             HStack {
                                 RoleStatusIconView(memberStatus: memberStatus)
-                                Text(memberStatus.localizedString.capitalizingFirstLetter())
+                                Text(memberStatus.displayName.capitalizingFirstLetter())
                                 Spacer()
                             }
                             .foregroundStyle(.memberPortfolioColor, .gray, .red) // red tertiary color is not used

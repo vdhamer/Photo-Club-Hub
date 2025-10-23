@@ -16,9 +16,9 @@ extension MemberPortfolio { // computed properties related to roles of members i
                                   comment: "To generate strings like \"secretary and admin\"")
 
         if photographer.isDeceased {
-            prefixList.append(MemberStatus.deceased.localizedString)
+            prefixList.append(MemberStatus.deceased.displayName)
         }
-        if isFormerMember && !isHonoraryMember { prefixList.append(MemberStatus.former.localizedString) }
+        if isFormerMember && !isHonoraryMember { prefixList.append(MemberStatus.former.displayName) }
 
         if isChairman { suffixList.append(MemberRole.chairman.displayName) }
         if isViceChairman { suffixList.append(MemberRole.viceChairman.displayName) }
@@ -27,10 +27,10 @@ extension MemberPortfolio { // computed properties related to roles of members i
         if isAdmin { suffixList.append(MemberRole.admin.displayName) }
         if isOther { suffixList.append(MemberRole.other.displayName) }
 
-        if isProspectiveMember { suffixList.append(MemberStatus.prospective.localizedString) } else {
-            if isHonoraryMember { suffixList.append(MemberStatus.honorary.localizedString) } else {
-                if isMentor { suffixList.append(MemberStatus.coach.localizedString) } else {
-                    suffixList.append(MemberStatus.current.localizedString)
+        if isProspectiveMember { suffixList.append(MemberStatus.prospective.displayName) } else {
+            if isHonoraryMember { suffixList.append(MemberStatus.honorary.displayName) } else {
+                if isMentor { suffixList.append(MemberStatus.coach.displayName) } else {
+                    suffixList.append(MemberStatus.current.displayName)
                 }
             }
         }
