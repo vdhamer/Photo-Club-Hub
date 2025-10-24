@@ -112,7 +112,7 @@ extension Expertise {
                                                  id: String,
                                                  names: [JSON], // array mapping languages to localizedNames
                                                  usages: [JSON]
-    						  ) -> Expertise {
+    						) -> Expertise {
         findCreateUpdate(context: context, id: id, isSupported: false, names: names, usage: usages)
     }
 
