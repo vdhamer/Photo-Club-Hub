@@ -1,4 +1,10 @@
-### 2.8.5 (GitHub commit ???????) 23-10-25
+### 2.8.5 (GitHub commit ???????) ??-11-25
+
+This build #4652 was made using Xcode 26.1.
+
+---------------------------------------------------------------------------
+
+### 2.8.5 (GitHub commit 8a15801) 23-10-25
 
 WHO'S WHO SCREEN
 
@@ -31,7 +37,7 @@ DATA MAINTENANCE
 * Removed 2 members of fcBellusImago.
 * Forced a data reset at dataResetPending285b4651 (related to removing members from fcBellusImago).
 
-This build #4651 was made using Xcode 26.0.1.
+This build #4651 was made using Xcode 26.0.1 and is intended for release via the App Store.
 
 ---------------------------------------------------------------------------
 
