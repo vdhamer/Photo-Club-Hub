@@ -1,5 +1,9 @@
 ### 2.8.6 (GitHub commit ???????) ??-11-25
 
+CODE MAINTENANCE
+
+* Tested with SwiftLint 0.62.1.
+
 This build #4652 was made using Xcode 26.1.
 
 ---------------------------------------------------------------------------
