@@ -33,7 +33,7 @@ Dat zien en gezien-worden lukt prima _binnen_ de club doordat de leden regelmati
 
 Zichtbaarheid van hun werk _buiten_ de club loopt via online websites en fysieke exposities.
 Bezoek aan websites loopt al jaren terug:
-bezoekers moeten zelf initiatief nemen om ze vinden, het zijn er veel, en de inhoud verandert relatief langzaam.
+bezoekers moeten zelf initiatief nemen om ze vinden, en de inhoud verandert zelden.
 De aandacht van gebruikers is daardoor verschoven naar grote websites
 (zoals Nos.nl of Petapixel.com, met hun betaalde redactieteams)
 en social media platforms zoals Facebook die dienen als vluchtige ontmoetingspleken.</p>
