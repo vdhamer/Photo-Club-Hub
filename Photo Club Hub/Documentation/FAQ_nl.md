@@ -142,16 +142,17 @@ Omdat het vrij eenvoudig kon, goed samenging met de landkaartjes, en nuttig kon 
 ### Zijn er kosten aan verbonden?
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
-Niet of nauwelijks. De Photo Club Hub en Photo Club Hub HTML software is gratis en blijft gratis.
-En zijn geen kosten voor centrale opslag of rekenkracht: er is geen noemenswaardige centrale infrastructuur.</p>
+Niet of nauwelijks. De _Photo Club Hub_ en _Photo Club Hub HTML_ software is gratis en blijft gratis.
+En zijn geen kosten voor centrale opslag of rekenkracht want er is geen noemenswaardige centrale infrastructuur.</p>
 
 Als we ervan uitgaan dat een club vrijwel altijd al een website heeft en minstens één lid heeft met Lightroom Classic, 
 dan blijft als enige bekende kostenpost een eenmalige aanschaf van een LR plug-in
-([Juicebox Pro](https://www.juicebox.net)). Er kan gekeken worden gekeken worden of er een gratis alternatief
+([Juicebox Pro](https://www.juicebox.net)). Gebruik van Juicebox Pro is overigens optioneel.
+Er kan gekeken worden gekeken worden of er een gratis alternatief
 afdoende is (LR wordt geleverd met enkele web plug-ins, Juicebox zelf heeft een 'Lite' versie).
 Zelf bouwen van een alternatief voor die plug-in is in principe mogelijk maar niet eenvoudig: dat hangt dus op het
-vinden van een vrijwilliger die het kan en ertoe bereid is.
-Er kan ook gekeken worden of de plug-in kosten voor dit doel eenmalig centraal afkoopbaar zijn.
+vinden van een vrijwilliger die de hiervoor benodige deskundigheid en tijd heeft.
+Er kan ook gekeken worden of de plug-in kosten voor dit doel eenmalig centraal afkoopbaar zijn bij Juicebox.
 </details></p>
 
 </li><li>
@@ -164,8 +165,8 @@ De individuele clubs.</p>
 Zo kan je bijvoorbeeld ervoor kiezen dat foto's van alle clubexposities 
 en individuele exposities van de afgelopen jaren te zien zijn.
 Maar je kunt ook afspreken dat iedere fotograaf zelf foto's uitkiest voor zijn/naar portfolio in de app.
-Of een combinatie. De app gaat er in principe wel van uit dat de foto's geselecteerd zijn.
-Dus eerder tien dan honderd foto's per fotograaf per jaar. Dat heb je zo met exposeren: keuzes maken.
+Of een combinatie. De app gaat er wel vanuit dat de foto's geselecteerd zijn.
+Dus eerder tien dan honderd foto's (per fotograaf) per jaar. Dat heb je zo met exposeren: keuzes maken.
 </details></p>
 
 </li><li>
@@ -182,11 +183,11 @@ Dus nu zijn diezelfde gegevens omgezet in een voor software leesbaar formaat,
 zodat ze op een consistente, uniforme manier getoond kunnen worden.</p>
 
 De meeste velden zijn optioneel. 
-Dus een club is niet gedwongen om b.v. te linken naar hun website, of aan te geven wie in het bestuur zit.
-Verder doet de app niet aan postadressen, e-mailadressen of telefoonnummers van leden.
-Die zijn niet optioneel: de app ondersteunt ze niet.
+Dus een club is niet verplicht om b.v. te linken naar hun website, of aan te geven wie in het bestuur zit.
+Verder doet de app niet aan adressen, e-mailadressen of telefoonnummers van leden.
+Die zijn niet eens optioneel: de software heeft de informatie niet en kan er niets mee.
 Zelfs de locatie van de thuisbasis van de club is optioneel. De locatie opgeslagen als GPS coordinaten,
-die je kunt afronden of naar b.v. naar een dorpsplein of station kan laten wijzen.
+die je kunt afronden of naar b.v. naar een plein of treinstation kan laten wijzen.
 </details></p>
 
 </li><li>
@@ -196,29 +197,21 @@ die je kunt afronden of naar b.v. naar een dorpsplein of station kan laten wijze
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 Ja. Er worden geen kopieën getrokken van de foto's. De foto's staan op de website van de club.
 Technisch wordt er alleen naar "gelinkt".
-En zelfs de lijsten met linkjes naar foto's staan op de website van de club, en dus _niet_ op een centrale server. 
+En zelfs de lijsten met linkjes naar foto's staan liefst op de website van de club, en dus _niet_ op een centrale locatie 
 Dit is dus niet vergelijkbaar met foto's delen via Facebook, Instagram, Flickr, X, enz. Social media trekt 
-dus een kopie, en probeert zich vaak rechten toe te eigenen op foto's in ruil voor het gebruik van de dienst.
+dus een kopie, en probeert zich vaak rechten toe te eigenen (^%$#) op foto's in ruil voor het gebruik van de gratis dienst.
 Deze app is daarentegen expliciet ontwerpen zodat de club/fotograaf volledige controle houdt: 
 er worden geen kopieën van foto's of data gemaakt, er is geen centrale server, 
-en de software is gratis en openbaar ("open source").</p>
+en de software is gratis en de broncode is openbaar.</p>
 
-Voorbeeld: de foto's en lijsten met foto's van Fotogroep De Gender komen† op www.fcDeGender.nl te staan.
-Dat is de bestaande website van de club.
-En op die website stonden altijd al de namen van de leden, en geselecteerde foto's per lid.
-Je zou kunnen zeggen dat je met hander gereedschap hetzelfde doet als vroeger.
-Op een manier dat enkele problemen met bestaande websites ondervangt door gebruik te maken van wat modernere techniek.
+Voorbeeld: de foto's en lijsten met foto's van Fotogroep De Gender staan op [www.fcDeGender.nl](https://www.fcDeGender.nl).
+Dat is de bestaande website van die club.
+En op die website stonden altijd al de namen van de leden, en een geselecteerde foto's per lid.
+Je zou kunnen zeggen dat je met handiger gereedschap hetzelfde doet als vroeger.
+Op een manier dat enkele problemen met bestaande websites ondervangt door gebruik te maken van wat modernere aanpak.
 
-Het is overigens zelfs mogelijk om "de foto's van Jan" eventueel bij Jan zelf neer te zetten. Wij verwachten dat dit
-niet veel gebruikt zal worden, en raden aan om het vooral in het begin simpel te houden.
-
-† Als test staan de foto's van De Gender even op een andere (mijn privé) server.
-Maar dat is tijdelijk: het is beter voor het beheer als een club dat zelf doet, en het is
-onwenselijk als tientallen of honderden clubs afhankelijk worden van een enkele server ("single point of failure"). 
-En verder heeft een centrale server natuurlijk maar beperkte ruimte. 
-De meeste clubs zijn al gewend om een internet leverancier te betalen
-voor opslagruimte, bandbreedte, domeinnaam en het in de lucht houden van hun website.
-Dus dit zou normaal geen extra kosten met zich meebrengen. Zie volgend punt:
+Het is overigens zelfs mogelijk om "de foto's van Jan" eventueel bij Jan zelf neer te zetten.
+Wij verwachten echter dat dit om praktische reden niet veel gebruikt zal worden, en raden aan om het vooral in het begin simpel te houden.
 </details></p>
 
 </li><li>
