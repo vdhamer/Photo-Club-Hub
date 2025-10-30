@@ -584,6 +584,8 @@ Graag ons op dergelijke wijzigingen op club-niveau attenderen: dan corrigeren wi
 <ul><li>
 
 ### Eenvoudigere gegevensinvoer
+
+<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 De huidige manier om gegevens van een club in te voeren is omschreven in [tinyurl.com/Level2aanmaken](https://tinyurl.com/Level2aanmaken).
 Dit komt neer op
 
@@ -597,7 +599,6 @@ verwachte JSON bestand aanmaakt of aanpast.
 Zeg maar zoiets als wat websites gebruiken voor bestellingen in te voeren. Maar
 in dit geval zonder een centrale "server" met de bijbehorende gebruiker/wachtwaard gedoe.
 Het produceert of wijzigt een bestand op je eigen computer.
-<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 </details></p>
 
 </li><li>
