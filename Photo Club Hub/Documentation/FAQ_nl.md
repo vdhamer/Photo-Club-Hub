@@ -577,7 +577,7 @@ Graag ons op dergelijke wijzigingen op club-niveau attenderen: dan corrigeren wi
 </details></p></li></ul>
 </details></p>
 
-## Uitbreidingen
+## Toekomst?
 
 <details><summary>Klik om categorie open of dicht te klappen</summary></p>
 
