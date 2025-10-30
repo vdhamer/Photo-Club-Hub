@@ -587,15 +587,20 @@ Graag ons op dergelijke wijzigingen op club-niveau attenderen: dan corrigeren wi
 De huidige manier om gegevens van een club in te voeren is omschreven in [tinyurl.com/Level2aanmaken](https://tinyurl.com/Level2aanmaken).
 Dit komt neer op
 
-> "de club levert de gegevens aan in een bestand (clubnaam.level2.json) in een strict formaat
+> "de club levert de gegevens aan in een gegevensbestand (bijvoorbeeld `fcMaasvlakte.level2.json`) in een strict formaat
 
 zodat software de correcte gegevens uit dit bestand kan plukken.
 
-Het aanmaken van dit bestand betekent wat regels volgen, maar dat valt voor een leek niet mee.
-Het zou beter moeten kunnen met additionele software die "formulier-achtig" werkt.
-Zeg maar zoals bij online bestellingen doen of (gruwel) het invullen van belastingformulieren.
+Het aanmaken van dit bestand betekent wat regels volgen, maar dat valt voor velen niet mee.
+Het zou beter moeten kunnen met additionele software die "**formulier-achtige**" invoer biedt en de
+verwachte JSON bestand aanmaakt of aanpast.
+Zeg maar zoiets als wat websites gebruiken voor bestellingen in te voeren. Maar
+in dit geval zonder een centrale "server" met de bijbehorende gebruiker/wachtwaard gedoe.
+Het produceert of wijzigt een bestand op je eigen computer.
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
-</details></p><ul><li>
+</details></p>
+
+</li><li>
 
 ### Foto's van afgelopen exposities? (onderweg)
 
