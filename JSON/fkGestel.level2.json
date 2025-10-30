@@ -129,6 +129,8 @@
             },
             "optional": {
                 "featuredImage": "https://www.fotokring-gestel.nl/wp-content/uploads/2023/01/Jac-3.jpg",
+                "expertises": ["Architecture", "Nature"],
+                "level3URL": "https://www.fotokring-gestel.nl/hub_jac/",
                 "roles": {
                     "isChairman": true
                 }
