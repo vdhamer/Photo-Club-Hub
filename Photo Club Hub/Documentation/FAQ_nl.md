@@ -47,7 +47,7 @@ en de (te) hektische en vluchtige social media. Met als doel om de het fotowerk 
 ### Waarom staat mijn club niet in de app?
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
-Je kunt zelf een club toevoegen. Hier komen stapsgewijs instructies voor (zie vraag over documentatie).</p>
+Je kunt zelf een club toevoegen. Hier zijn stapsgewijs instructies voor (zie vraag over documentatie).</p>
     
 De lijst met clubs in Brabant-Oost staat er alvast in om het groeiproces op te starten.
 </details></p>
