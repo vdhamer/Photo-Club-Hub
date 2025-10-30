@@ -225,7 +225,7 @@ Dus deze vraag geld voor iedere clubwebsite waar foto's op te zien zijn.
 Kopieëren is niet helemaal tegen te gaan: alle online plaatjes die zichtbaar zijn, kan je een screenshot van maken.
 Maar het is hier wel opgezet om kopieëren zo lastig mogelijk te maken. Bij onze procedé hiervoor...
 
-- is rechtsklikken en "Save as.." is in de software geblokkeerd.
+- is rechtsklikken en "Save as.." is in de software vaak geblokkeerd. Dit wordt bepaald door de website van de club en browsers.
 - is iedere foto zichtbaar voorzien van de naam van de maker in de linkeronderhoek.
 - is iedere foto bevat digitaal en onzichtbaar gemerkt (EXIF copyright) met de naam van de maker.
 </details></p>
