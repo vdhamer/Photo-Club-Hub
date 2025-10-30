@@ -32,7 +32,7 @@ Fotografen worden lid van een fotoclub om hun werk aan elkaar te laten zien.
 Dat zien en gezien-worden lukt prima _binnen_ de club doordat de leden regelmatig bijeen komen.</p>
 
 Zichtbaarheid van hun werk _buiten_ de club loopt via online websites en fysieke exposities.
-Bezoek aan websites loopt al jaren terug:
+Bezoek aan dit soort kleine websites loopt al jaren terug:
 bezoekers moeten zelf initiatief nemen om ze vinden, en de inhoud verandert zelden.
 De aandacht van gebruikers is daardoor verschoven naar grote websites
 (zoals Nos.nl of Petapixel.com, met hun betaalde redactieteams)
