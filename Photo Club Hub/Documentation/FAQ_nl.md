@@ -603,7 +603,7 @@ Het produceert of wijzigt een bestand op je eigen computer.
 
 </li><li>
 
-### Foto's van afgelopen exposities?
+### Foto's van afgelopen exposities
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 Hier is een begin aan gemaakt in Photo Club Hub HTML ([voorbeeld](https://www.fcDeGender.nl/fgDeGender/expo2025/)).
