@@ -4,6 +4,7 @@ CODE MAINTENANCE
 
 * Tested with SwiftLint 0.62.1, XCode 26.1 RC (17B54), MacOS 26.1 RC (25B74) and iOS 26.1 RC (23B77).
 * Quick test of Memory Integrity Enforcement. Passed, but not sure it does anything on an M3 chip.
+* FAQ_nl.md updated.
 
 This build #4652 was made using Xcode 26.1.
 
