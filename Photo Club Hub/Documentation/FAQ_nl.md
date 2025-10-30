@@ -600,23 +600,6 @@ De komende expositie zou leiden naar een afbeelding van de aankondigingsposter v
 De app versie zou ook actief kunnen melden welke exposities er de komende dagen aankomen ("widget" op iOS home screen).
 </details></p>
 
-</li><li>
-    
-### Centrale ingang voor de webversie?
-
-<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
-Op termijn moet er ook een centrale (HTML) indexpagina komen die all deelnemende club websites vermeld.
-De hiervoor benodigde informatie is er al (voor de Portfolio's pagina van de appversie).
-Met deze uitbreiding worden de losstaande webeilandjes per club plotseling één doorgelinkt geheel. 
-
-</li><li>
-    
-### Ondersteuning individuele bondsleden?
-
-<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
-Hier lijkt naar te zijn.
-Ideeën hoe dit eruit zou moeten zien (zonder veel af te wijken van bestaande app structuur) zijn welkom.
-
 </li></ul></details></p>
 
 ## Meer informatie
