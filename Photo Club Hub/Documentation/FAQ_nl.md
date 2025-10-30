@@ -59,14 +59,14 @@ De lijst met clubs in Brabant-Oost staat er alvast in om het groeiproces op te s
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 
 Er is een **iOS** (iPhone/iPad) versie van de app op de Apple App Store.
-Voor andere merken telefoontjes en voor grotere schermen is er een **webversie**.
+Voor andere merken telefoontjes en voor grotere schermen is er een **webversie** [link](https://www.fcDeGender.nl/clugs).
 
 Met de webversie kan je club portfolio's bekijken in een internet browser (_Chrome_, _Edge_, _Safari_) 
 op allerlei apparaten (Android telefoons, Chinese telefoonmerken, tablets, laptops, Windows PC, Mac).
 Beide versies hebben dezelfde opzet en gebruiken dezelfde gegevens.
 
 Achter de schermen bestaat de webversie uit een app dat met een druk op de knop de vereiste webpagina's aanmaakt.
-Die pagina's kunnen toegevoegd worden aan bestaande clubwebsites (dit zullen vaak WordPress websites zijn). 
+Die pagina's kunnen toegevoegd worden aan bestaande clubwebsites. Dit zullen vaak WordPress websites zijn. 
 Iemand die de webversie bekijkt ziet de achterliggende app niet: de app ondherhoudt als het ware alleen de web pagina's.
 
 Er wordt continu aan verbeteringen van **beide** versies gewerkt.
@@ -84,6 +84,18 @@ Ja. De appversie op de Apple App Store is en blijft gratis.
 De software voor het genereren van de webversie is en blijft ook gratis.
 De broncode van deze software is "open source" en valt onder de zogenaamde
 [MIT licensie](https://github.com/vdhamer/Photo-Club-Hub/blob/main/.github/LICENSE.md).
+</details>
+
+</li><li>
+
+### Is de app af?
+
+<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
+
+Beide versies van de app zouden in de huidige versies al aardig bruikbaar moeten zijn.
+Maar er wordt ongeveer maandelijks app versies uitgebracht: hiermee krijgt men extra
+functionaliteit, blijft de software in de pas met de veranderende softwarewereld (b.v. Apple iOS 26)
+en worden er softwarebugs opgelost. 
 </details>
 
 </li></ul>
