@@ -617,9 +617,9 @@ Voor komende exposities: zie [volgende punt](https://github.com/vdhamer/Photo-Cl
 ### Aankondigen komende exposities
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
-Dat zou kunnen. Te denken valt aan het tonen van een chronologische lijst met afgelopen exposities en de komende expositie.
-De komende expositie zou leiden naar een afbeelding van de aankondigingsposter voor de expositie. 
-De app versie zou ook actief kunnen melden welke exposities er de komende dagen aankomen ("widget" op iOS home screen).
+Te denken valt aan het tonen van een chronologische lijst met afgelopen exposities en de komende expositie.
+De komende expositie zou leiden naar een afbeelding van de aankondigingsposter van de expositie. 
+De app versie zou ook actief kunnen melden welke exposities er in de buurt in de komende twee weken aankomen ("widget" op iOS home screen).
 </details></p>
 
 </li></ul></details></p>
