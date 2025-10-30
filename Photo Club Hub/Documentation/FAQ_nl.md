@@ -586,13 +586,15 @@ Graag ons op dergelijke wijzigingen op club-niveau attenderen: dan corrigeren wi
 ### Foto's van afgelopen exposities? (onderweg)
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
-Hier is een begin aan gemaakt in Photo Club Hub HTML ([voorproefje](http://www.vdhamer.com/fgDeGender/expo2024/)).
+Hier is een begin aan gemaakt in Photo Club Hub HTML ([voorbeeld](https://www.fcDeGender.nl/fgDeGender/expo2025/)).
+
 Het gaat dan om de foto's van clubexposities te tonen _na afloop_ van de fysieke expositie.
+Voor komende exposities: zie [volgende punt](Aankondigen%20komende%20exposities).
 </details></p>
 
 </li><li>
 
-### Aankondigen komende exposities doen?
+### Aankondigen komende exposities
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 Dat zou kunnen. Te denken valt aan het tonen van een chronologische lijst met afgelopen exposities en de komende expositie.
