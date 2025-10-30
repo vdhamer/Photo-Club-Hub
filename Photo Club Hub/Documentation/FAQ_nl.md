@@ -255,7 +255,7 @@ Maar er zijn genoeg andere doelgroepen. Dus is er een zogenaamde "webversie" in 
 Die bekijk je in je browser (Chrome, Edge, Safari...) en dekt dus zowel PC/Mac gebruikers als alle merken smartfoons af.
 Die webversie bestaat uit HTML pagina's die toegevoegen kunnen worden aan een bestaande website (b.v. Wordpress).</p>
 
-De software voor de webversie heet "Photo Club Hub HTML" (en) danwel "Fotoclub Hub HTML" (nl). 
+De software voor de webversie heet "Fotoclub Hub HTML" en "Photo Club Hub HTML" in het Engels. 
 Hiermee kan een website beheerder pagina's automatisch aanmaken vanuit _dezelfde_ databestanden
 die gebruikt worden voor "Fotoclub Hub" app.
 [Hier](http://www.vdhamer.com/fgDeGender/) is een vroege testversie van een dergelijke, genereerde mini-site.
