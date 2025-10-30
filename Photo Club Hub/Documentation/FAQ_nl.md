@@ -589,7 +589,7 @@ Graag ons op dergelijke wijzigingen op club-niveau attenderen: dan corrigeren wi
 Hier is een begin aan gemaakt in Photo Club Hub HTML ([voorbeeld](https://www.fcDeGender.nl/fgDeGender/expo2025/)).
 
 Het gaat dan om de foto's van clubexposities te tonen _na afloop_ van de fysieke expositie.
-Voor komende exposities: zie [volgende punt](Aankondigen%20komende%20exposities).
+Voor komende exposities: zie [volgende punt](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/FAQ_nl.md#aankondigen-komende-exposities).
 </details></p>
 
 </li><li>
