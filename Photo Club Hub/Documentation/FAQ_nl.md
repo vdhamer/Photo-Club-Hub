@@ -36,7 +36,7 @@ Bezoek aan websites loopt al jaren terug:
 bezoekers moeten zelf initiatief nemen om ze vinden, en de inhoud verandert zelden.
 De aandacht van gebruikers is daardoor verschoven naar grote websites
 (zoals Nos.nl of Petapixel.com, met hun betaalde redactieteams)
-en social media platforms zoals Facebook die dienen als vluchtige ontmoetingspleken.</p>
+en social media platforms zoals Facebook die dienen als ontmoetingspleken.</p>
 
 Vandaar dat wij een behoefte zagen voor een tussenvorm speciaal voor fotoclubs: iets tussen de relatief onbezochte websites
 en de (te) hektische en vluchtige social media. Met als doel om de het fotowerk van clubs eenvoudig en in alle rust te kunnen bekijken.
