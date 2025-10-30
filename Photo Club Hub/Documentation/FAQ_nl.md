@@ -583,6 +583,20 @@ Graag ons op dergelijke wijzigingen op club-niveau attenderen: dan corrigeren wi
 
 <ul><li>
 
+### Eenvoudigere gegevensinvoer
+De huidige manier om gegevens van een club in te voeren is omschreven in [tinyurl.com/Level2aanmaken](https://tinyurl.com/Level2aanmaken).
+Dit komt neer op
+
+> "de club levert de gegevens aan in een bestand (clubnaam.level2.json) in een strict formaat
+
+zodat software de correcte gegevens uit dit bestand kan plukken.
+
+Het aanmaken van dit bestand betekent wat regels volgen, maar dat valt voor een leek niet mee.
+Het zou beter moeten kunnen met additionele software die "formulier-achtig" werkt.
+Zeg maar zoals bij online bestellingen doen of (gruwel) het invullen van belastingformulieren.
+<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
+</details></p><ul><li>
+
 ### Foto's van afgelopen exposities? (onderweg)
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
