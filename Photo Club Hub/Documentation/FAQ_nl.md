@@ -95,7 +95,7 @@ De broncode van deze software is "open source" en valt onder de zogenaamde
 Beide versies van de app zouden in de huidige versies al aardig bruikbaar moeten zijn.
 Maar er wordt ongeveer maandelijks app versies uitgebracht: hiermee krijgt men extra
 functionaliteit, blijft de software in de pas met de veranderende softwarewereld (b.v. Apple iOS 26)
-en worden er softwarebugs opgelost. 
+en worden er softwarebugs verholpen. 
 </details>
 
 </li></ul>
