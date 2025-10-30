@@ -65,7 +65,7 @@ Met de webversie kan je club portfolio's bekijken in een internet browser (_Chro
 op allerlei apparaten (Android telefoons, Chinese telefoonmerken, tablets, laptops, Windows PC, Mac).
 Beide versies hebben dezelfde opzet en gebruiken dezelfde gegevens.
 
-Achter de schermen bestaat is de webversie uit een app dat met een druk op de knop de vereiste webpagina's aanmaakt.
+Achter de schermen bestaat de webversie uit een app dat met een druk op de knop de vereiste webpagina's aanmaakt.
 Die pagina's kunnen toegevoegd worden aan bestaande clubwebsites (dit zullen vaak WordPress websites zijn). 
 Iemand die de webversie bekijkt ziet de achterliggende app niet: de app ondherhoudt als het ware alleen de web pagina's.
 
