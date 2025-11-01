@@ -7,8 +7,7 @@
   ```
   _ = FotogroepOirschotMembersProvider(
           bgContext: makeBgContext(ctxName: "Level 2 loader fgOirschot"),
-          isBeingTested: false,
-          useOnlyInBundleFile: false)
+          isBeingTested: false, useOnlyInBundleFile: false)
   ```
   - This should change in the future to using the Level 1 data. This avoids having to update the app code when a new Level 2 club is added.
 - example: `https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/main/Photo%20Club%20Hub/ViewModel/Lists/fgDeGender.level2.json`
