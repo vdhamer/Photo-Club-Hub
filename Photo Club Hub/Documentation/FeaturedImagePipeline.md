@@ -12,7 +12,7 @@
   - The Level 2 data used in PhotoClubHubHTML.app is loaded intoCoreData, but currently _after clearing_ CoreData.
 - General content of Level 2 file
   - contains data about the club, and a list of club members
-- Finding featured images
+- Finding the featured images
   - a club member may have a field with a direct URL to the featured image
   `"featuredImage": "https://www.fotoclubbellusimago.nl/uploads/5/5/1/2/55129719/2024-01-14-12-28-macro-druppels-3754-2024-alex.jpg"`
   - advanced club usage may have a field pointing to the member's portfolio
