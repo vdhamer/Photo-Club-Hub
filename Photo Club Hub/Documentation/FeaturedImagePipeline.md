@@ -55,6 +55,7 @@
         OrganizationID(fullName: "Fotogroep de Gender", town: "Eindhoven")
     ]
   ```
+  - This hardcoded approach should be changed to a data driven approach (e.g. by checking for an appropriate XML file).
 
 ====================================================================================
 
