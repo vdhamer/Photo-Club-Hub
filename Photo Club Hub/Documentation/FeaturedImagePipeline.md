@@ -23,8 +23,11 @@
 ## Processing a single member in level2.json data
 
 - a club member may have a field with a direct URL to the featured image
+
   ``"featuredImage": "https://www.fotoclubbellusimago.nl/uploads/5/5/1/2/55129719/2024-01-14-12-28-macro-druppels-3754-2024-alex.jpg"``
+
 - advanced club usage may have a field pointing to the member's portfolio, and the software will find featuredImage automatically
+  
   ``"level3URL": "https://www.fcDeGender.nl/portfolios/Miep_Franssen/"``
   
   which contains the portfolio of image files and an (XML) index of these files.
