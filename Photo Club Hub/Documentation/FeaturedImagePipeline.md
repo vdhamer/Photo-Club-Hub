@@ -6,10 +6,10 @@
   - A club's Level 2 file is online at GitHub.
   - path: `https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/main/Photo%20Club%20Hub/ViewModel/Lists/fgDeGender.level2.json`
   - If the URL fails to load when the app starts, a version of the same file is taken from the PhotoClubHubData bundle.
-    - This version corresponds to the level2.json file state __at build time__. This implies it may be slightly outdated.
+    - This version corresponds to the level2.json file state _at build time_. This implies it may be slightly outdated.
   - The level2.json file is actually read from GitHub, so GitHub contains the **master copy** of the Level 2 data.
   - The Level 2 data used in PhotoClubHub.app is persisted by the CoreData database
-  - The Level 2 data used in PhotoClubHubHTML.app is loaded intoCoreData, but currently __after clearing__ CoreData.
+  - The Level 2 data used in PhotoClubHubHTML.app is loaded intoCoreData, but currently _after clearing_ CoreData.
 - General content of Level 2 file
   - contains data about the club, and a list of club members
 - Finding featured images
