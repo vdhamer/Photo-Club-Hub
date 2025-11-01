@@ -6,6 +6,10 @@ CODE MAINTENANCE
 * Quick test of Memory Integrity Enforcement. Passed, but not sure it does anything on an M3 chip.
 * FAQ_nl.md updated.
 
+DOCUMENTATION
+
+* Added a technical file documenting the FeaturedImagePipeline
+
 This build #4652 was made using Xcode 26.1.
 
 ---------------------------------------------------------------------------

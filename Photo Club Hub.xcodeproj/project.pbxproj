@@ -152,6 +152,7 @@
 		37E134B72E6F75ED00C61714 /* ReadmeView2626.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeView2626.swift; sourceTree = "<group>"; };
 		37E134B82E6F75ED00C61714 /* SectionHeader2626.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader2626.swift; sourceTree = "<group>"; };
 		37E61E042E62DB9300F6D3B5 /* Photo_Club_Hub_2_8_4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_8_4.xcdatamodel; sourceTree = "<group>"; };
+		37EC25472EB6889300667D8A /* FeaturedImagePipeline.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = FeaturedImagePipeline.md; sourceTree = "<group>"; };
 		D006BA7D2B115FB1002E555B /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		D008D2A928739167007A7BE2 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		D00DC8F02BD5D85900B4A9A2 /* Photo_Club_Hub_2_6_1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_6_1.xcdatamodel; sourceTree = "<group>"; };
@@ -647,6 +648,7 @@
 				D0B6B05C2DB27A3E00EAAF69 /* Photo Club Hub intro.pptx */,
 				D04A2B112AC0958C003ED113 /* LineCount.xlsx */,
 				D0A958632D596C3300658373 /* Website_Status_PPT */,
+				37EC25472EB6889300667D8A /* FeaturedImagePipeline.md */,
 			);
 			path = Documentation;
 			sourceTree = "<group>";
