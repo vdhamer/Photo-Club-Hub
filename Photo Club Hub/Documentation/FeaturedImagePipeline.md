@@ -67,8 +67,8 @@ that determines URL of xml file: https://www.fcDeGender.nl/portfolios/Miep_Frans
 ```
 This is used as a suffix to give
 ```
-    featuredImage = "https://www.fcDeGender.nl/portfolios/Miep_Franssen/images/2025_fgDeGenderExpo_034.jpg"
-    featuredImageThumbnail = "https://www.fcDeGender.nl/portfolios/Miep_Franssen/thumbs/2025_fgDeGenderExpo_034.jpg"
+featuredImage = "https://www.fcDeGender.nl/portfolios/Miep_Franssen/images/2025_fgDeGenderExpo_034.jpg"
+featuredImageThumbnail = "https://www.fcDeGender.nl/portfolios/Miep_Franssen/thumbs/2025_fgDeGenderExpo_034.jpg"
 ```
 The updated data gets committed on the bgContext for the thread loading this particular club (fgDeGender).
 
