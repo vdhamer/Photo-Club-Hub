@@ -43,12 +43,12 @@
   or to an HTML/XML page pair that can be parsed?
   - Currently the list of clubs that use the HTML/XML option (aka "JuiceBox Pro" LR plugin) are hardcoded in the app.
  
-  ``
+  ```
       private static let clubsUsingJuiceBox: [OrganizationID] = [ // careful: ID strings have to be accurate to match
         OrganizationID(fullName: "Fotogroep Waalre", town: "Waalre"),
         OrganizationID(fullName: "Fotogroep de Gender", town: "Eindhoven")
     ]
-  ``
+  ```
 
 ====================================================================================
 
