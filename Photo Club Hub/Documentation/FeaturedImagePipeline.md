@@ -3,21 +3,22 @@
 ## Location #1 = L2 = level2.json file
 
 - Accessing the data
-  - A club's Level 2 file is online at GitHub.
-  - path: `https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/main/Photo%20Club%20Hub/ViewModel/Lists/fgDeGender.level2.json`
+  - A club's Level 2 file is available online at GitHub.
+  - example: `https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/main/Photo%20Club%20Hub/ViewModel/Lists/fgDeGender.level2.json`
   - If the URL fails to load when the app starts, a version of the same file is taken from the PhotoClubHubData bundle.
-    - This version corresponds to the level2.json file state _at build time_. This implies it may be slightly outdated.
-  - The level2.json file is actually read from GitHub, so GitHub contains the _master copy_ of the Level 2 data.
+    - This version corresponds to the level2.json file state _at build time_. This means it could be outdated compared to the GitHub version.
+    - This means that GitHub holds the _master copy_ of (committed) Level 2 data. Both apps rely on this copy.
   - The Level 2 data used in PhotoClubHub.app is persisted by the CoreData database
-  - The Level 2 data used in PhotoClubHubHTML.app is loaded intoCoreData, but currently _after clearing_ CoreData.
-- General content of Level 2 file
-  - contains data about the club, and a list of club members
-- Finding the featured images
+  - The Level 2 data used in PhotoClubHubHTML.app is loaded into CoreData, but this happens _after clearing_ CoreData. So this isn't really persistent.
+- Content of the Level 2 file
+  - the `club` section contains data about the club
+  - the `members` section contains a list of club members with avarious URLs. Also with expertise tags and the member's roles/status (not relevant here).
+- Finding the featured images using the level2.json file
   - a club member may have a field with a direct URL to the featured image
   `"featuredImage": "https://www.fotoclubbellusimago.nl/uploads/5/5/1/2/55129719/2024-01-14-12-28-macro-druppels-3754-2024-alex.jpg"`
   - advanced club usage may have a field pointing to the member's portfolio
   `"level3URL": "https://www.fcDeGender.nl/portfolios/Miep_Franssen/"`
-  which contains the portfolio of image files and an XML index of these files.
+  which contains the portfolio of image files and an (XML) index of these files.
 
 ====================================================================================
 
