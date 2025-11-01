@@ -22,21 +22,24 @@
  
 ## Processing a single member in level2.json data
 
-- a club member may have a field with a direct URL to the featured image
+- A club member may have a field with a direct URL to the featured image. And may have an ad-hoc portfolio URL:
 
   ``"featuredImage": "https://www.fotoclubbellusimago.nl/uploads/5/5/1/2/55129719/2024-01-14-12-28-macro-druppels-3754-2024-alex.jpg"``
+  
+  - This sets `featuredImage` to `"https://www.fotoclubbellusimago.nl/uploads/5/5/1/2/55129719/2024-01-14-12-28-macro-druppels-3754-2024-alex.jpg"`
+  
+  ``"level3URL": "https://www.fotogroepWaalre.nl/leden/bram-van-den-berge#anker"``
 
-- advanced club usage may have a field pointing to the member's portfolio, and the software will find featuredImage automatically
+  whereby `level3URL` is copied to `level3URL_` which is an ordinary URL to a web page which needs to be rendered, but has no known structure.
+
+- advanced club usage may have a field pointing to a standardized portfolio, allowing the software to find `featuredImage` automatically
   
   ``"level3URL": "https://www.fcDeGender.nl/portfolios/Miep_Franssen/"``
   
   which contains the portfolio of image files and an (XML) index of these files.
-
-====================================================================================
-
-that sets local params:
-    featuredImage to nil (because it is not listed in online file)
-    level3URL_ to http://www.vdhamer.com/fgWaalre/Aad_Schoenmakers (as in online file)
+  - This sets `featuredImage` to `nil`
+  - And this sets `level3URL_` to `"level3URL": "https://www.fcDeGender.nl/portfolios/Miep_Franssen/"`
+- How does level2JsonReader know which
 
 ====================================================================================
 
