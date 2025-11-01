@@ -1,6 +1,6 @@
 #  Featured images data flow
 
-## Location #1 = L2 = level2.json file
+## Find level2.json data
 
 - Accessing the data
   - A club's Level 2 file is available online at GitHub.
@@ -10,21 +10,26 @@
     - This means that GitHub holds the _master copy_ of (committed) Level 2 data. Both apps rely on this copy.
   - The Level 2 data used in PhotoClubHub.app is persisted by the CoreData database
   - The Level 2 data used in PhotoClubHubHTML.app is loaded into CoreData, but this happens _after clearing_ CoreData. So this isn't really persistent.
+
+## Reading level2.json data
+
 - Content of the Level 2 file
   - the `club` section contains data about the club
   - the `members` section contains a list of club members with avarious URLs. Also with expertise tags and the member's roles/status (not relevant here).
-- Finding the featured images using the level2.json file
-  - a club member may have a field with a direct URL to the featured image
+- The reaading is done by `level2JsonReader`
+- `level2JsonReader` passes the jsonData to `mergeLevel2Json`
+  - which calls `loadMember()` in a for-loop (the members may show up alphabetically based on first or last name)
+ 
+## Processing a single member in level2.json data
+
+- a club member may have a field with a direct URL to the featured image
   `"featuredImage": "https://www.fotoclubbellusimago.nl/uploads/5/5/1/2/55129719/2024-01-14-12-28-macro-druppels-3754-2024-alex.jpg"`
-  - advanced club usage may have a field pointing to the member's portfolio
+- advanced club usage may have a field pointing to the member's portfolio, and the software will find featuredImage automatically
   `"level3URL": "https://www.fcDeGender.nl/portfolios/Miep_Franssen/"`
   which contains the portfolio of image files and an (XML) index of these files.
 
 ====================================================================================
 
-level2.json on GitHub file gets read by level2JsonReader
-passes jsonData to mergeLevel2Json()
-that calls loadMember() in a for-loop, starting alphabetically with Aad Schoenmakers
 that sets local params:
     featuredImage to nil (because it is not listed in online file)
     level3URL_ to http://www.vdhamer.com/fgWaalre/Aad_Schoenmakers (as in online file)
