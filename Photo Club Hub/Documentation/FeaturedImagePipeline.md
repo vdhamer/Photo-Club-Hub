@@ -1,6 +1,6 @@
 #  Featured images data flow
 
-## Find level2.json data
+## Finding level2.json data
 
 - Accessing the data
   - A club's Level 2 file is available online at GitHub.
