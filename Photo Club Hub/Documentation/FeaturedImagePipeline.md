@@ -57,14 +57,20 @@
   ```
   - This hardcoded approach should be changed to a data driven approach (e.g. by checking for an appropriate XML file).
 
-====================================================================================
+## `refreshFirstImage()` if XML file is available
 
-And then, still within for loop, calls refreshFirstImage() on an async thread
-that determines URL of xml file: http://www.vdhamer.com/fgWaalre/Aad_Schoenmakers/config.xml
-For Aad Schoenmakers:
-    featuredImage = http://www.vdhamer.com/fgWaalre/Aad_Schoenmakers/images/2014_ExpoFGWaalre_069.jpg
-    featuredImageThumbnail = http://www.vdhamer.com/fgWaalre/Aad_Schoenmakers/thumbs/2014_ExpoFGWaalre_069.jpg
-The updated data gets committed on the bgContext.
+- within the (background) for-loop that iterates over the club's members, there is a call to `refreshFirstImage()`
+that determines URL of xml file: https://www.fcDeGender.nl/portfolios/Miep_Franssen/config.xml
+- this is parsed to find the first image. It finds patterns like:
+```
+<image imageURL="images/2025_fgDeGenderExpo_034.jpg" thumbURL="thumbs/2025_fgDeGenderExpo_034.jpg" linkURL="" linkTarget="_blank">
+```
+This is used as a suffix to give
+```
+featuredImage = "https://www.fcDeGender.nl/portfolios/Miep_Franssen/images/2025_fgDeGenderExpo_034.jpg"
+featuredImageThumbnail = "https://www.fcDeGender.nl/portfolios/Miep_Franssen/thumbs/2025_fgDeGenderExpo_034.jpg"
+```
+The updated data gets committed on the bgContext for the thread loading this particular club (fgDeGender).
 
 ====================================================================================
 
