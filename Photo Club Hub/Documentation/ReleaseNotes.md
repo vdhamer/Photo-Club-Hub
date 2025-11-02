@@ -9,6 +9,7 @@ CODE MAINTENANCE
 DATA MAINTENANCE
 
 * Fixed fgWaalre.level2.json (/#anker become #anker)
+* Fixed expering FeaturedImage for SB of IndividueelBO
 
 DOCUMENTATION
 
