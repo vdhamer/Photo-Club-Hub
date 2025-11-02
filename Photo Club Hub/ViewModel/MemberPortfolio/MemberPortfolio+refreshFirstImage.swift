@@ -10,7 +10,7 @@ import RegexBuilder // for OneOrMore, Capture, etc
 
 extension MemberPortfolio {
 
-    private static let clubsUsingJuiceBox: [OrganizationID] = [ // careful: ID strings have to be accurate to match
+    private static let clubsUsingJuiceBox: [OrganizationID] = [ // careful: ID strings have to exactly match
         OrganizationID(fullName: "Fotogroep Waalre", town: "Waalre"),
         OrganizationID(fullName: "Fotogroep de Gender", town: "Eindhoven")
     ]
