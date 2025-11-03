@@ -3,13 +3,15 @@
 ## Storing level2.json data
 
 - A club's `level2.json` file is available online at GitHub.
-  - The subset of clubs that have Level 2 files is currently hardcoded in the respective `app.swift` files. Example:
+  - The subset of clubs that have Level 2 files is hardcoded in the respective `app.swift` files. Example code that loads the Level 2 data for club fgOirshot:
   ```
   _ = FotogroepOirschotMembersProvider(
           bgContext: makeBgContext(ctxName: "Level 2 loader fgOirschot"),
-          isBeingTested: false, useOnlyInBundleFile: false)
+          isBeingTested: false,
+          useOnlyInBundleFile: false)
   ```
-  - This should change in the future to using the Level 1 data. This avoids having to update the app code when a new Level 2 club is added.
+  - This hardcoding isn't ideal because it implies having to update the app's code when a new Level 2 club is added.
+    - Future: use the Level 1 data (list of clubs) to load the Level 2 data (members per club.
 - example: `https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/main/Photo%20Club%20Hub/ViewModel/Lists/fgDeGender.level2.json`
 - If the URL fails to load when the app starts, a version of the same file is taken from the PhotoClubHubData bundle.
   - This version corresponds to the level2.json file state _at build time_. This means it could be outdated compared to the GitHub version.
