@@ -2,7 +2,7 @@
 
 ## Storing level2.json data
 
-- A club's Level 2 file is available online at GitHub.
+- A club's `level2.json` file is available online at GitHub.
   - The list of clubs with Level 2 files are currently hardcoded in the respective `app.swift` files. Example:
   ```
   _ = FotogroepOirschotMembersProvider(
