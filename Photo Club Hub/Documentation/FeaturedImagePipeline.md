@@ -1,4 +1,4 @@
-#  Featured images data flow
+#  Featured image data flow
 
 ## Storing level2.json data
 
