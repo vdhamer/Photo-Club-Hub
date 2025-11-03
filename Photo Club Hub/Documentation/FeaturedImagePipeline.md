@@ -12,7 +12,7 @@
   ```
   - This hardcoding isn't ideal: the app code needs updating whenever a new Level 2 club is added.
     - Plan: use the Level 1 data (list of clubs) to load the Level 2 data (list of a club's members).
-- example: `https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/main/Photo%20Club%20Hub/ViewModel/Lists/fgDeGender.level2.json`
+- Example URL for a Level 2 file: `https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/main/Photo%20Club%20Hub/ViewModel/Lists/fgDeGender.level2.json`
 - If the URL fails to load when the app starts, a version of the same file is taken from the PhotoClubHubData bundle.
   - This version corresponds to the level2.json file state _at build time_. This means it could be outdated compared to the GitHub version.
   - This means that GitHub holds the _master copy_ of (committed) Level 2 data. Both apps rely on this copy.
