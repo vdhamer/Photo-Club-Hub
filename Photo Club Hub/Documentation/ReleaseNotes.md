@@ -2,8 +2,8 @@
 
 CODE MAINTENANCE
 
-* Tested with SwiftLint 0.62.2, XCode 26.1 RC (17B54), MacOS 26.1 RC (25B74) and iOS 26.1 RC (23B77).
-* Quick test of Memory Integrity Enforcement. Passed, but not sure it does anything on an M3 chip.
+* Tested with SwiftLint 0.62.2, XCode 26.1 RC (17B54), macOS 26.1 RC (25B74) and iOS 26.1 RC (23B77).
+* Quick test of Memory Integrity Enforcement. Passed, but not sure it does anything when simulated on an M3 chip.
 * FAQ_nl.md updated.
 
 DATA MAINTENANCE
@@ -130,7 +130,7 @@ Settings
 * Fix: localization of "Data refresh pending" toggle
 
 Code Maintenance
-* Tested with MacOS 26.0 (25A5338b), iOS 18.6.1, iOS 26 beta 6 (23A5318c)
+* Tested with macOS 26.0 (25A5338b), iOS 18.6.1, iOS 26 beta 6 (23A5318c)
 * Code sync with Photo Club Hub HTML
 
 This build #4648 was made using Xcode 26.0 build 5 and and therefore cannot be released via the App Store.
@@ -145,7 +145,7 @@ Who's Who screen
 * Only show birthdays if birthday is very soon (and the info was provided).
 
 Code Maintenance
-* Tested with MacOS 15.6, iOS 26 beta (23A5297i)
+* Tested with macOS 15.6, iOS 26 beta (23A5297i)
 * Code cleanup for dataResetPending
 
 Data Maintenance
