@@ -3,7 +3,7 @@
 ## Storing level2.json data
 
 - A club's `level2.json` file is available online at GitHub.
-  - The subset of clubs that have Level 2 files is hardcoded in the respective `app.swift` files. Example code that loads the Level 2 data for club fgOirshot:
+  - The subset of clubs that have Level 2 files is hardcoded in the respective `app.swift` files. Example code that loads the Level 2 data (`fgOirschot.level2.json`) for club fgOirshot:
   ```
   _ = FotogroepOirschotMembersProvider(
           bgContext: makeBgContext(ctxName: "Level 2 loader fgOirschot"),
