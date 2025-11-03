@@ -17,7 +17,7 @@
   - This version corresponds to the level2.json file state _at build time_. This means it could be outdated compared to the GitHub version.
   - This means that GitHub holds the _master copy_ of (committed) Level 2 data. Both apps rely on this copy.
 - The Level 2 data used in PhotoClubHub.app is persisted by the CoreData database
-- The Level 2 data used in PhotoClubHubHTML.app is loaded into CoreData, but this happens _after clearing_ CoreData. So this isn't really persistent.
+- The Level 2 data used in PhotoClubHubHTML.app is loaded into CoreData, but this happens _after clearing_ CoreData. So this isn't really persisted.
 
 ## Reading level2.json data
 
