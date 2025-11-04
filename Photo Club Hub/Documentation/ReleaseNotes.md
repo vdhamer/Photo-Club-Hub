@@ -11,6 +11,7 @@ DATA MAINTENANCE
 * Fixed fgWaalre.level2.json (/#anker become #anker).
 * Fixed expering FeaturedImage for SB of IndividueelBO.
 * Added "Sport" Expertise tag (for November 2025).
+* Removed 3rd Expertise for some members of fgDeGender.
 
 DOCUMENTATION
 
