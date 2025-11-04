@@ -2,7 +2,7 @@
 
 CODE MAINTENANCE
 
-* Tested with SwiftLint 0.62.2, XCode 26.1 RC (17B54), macOS 26.1 RC (25B74) and iOS 26.1 RC (23B77).
+* Tested with SwiftLint 0.62.2, XCode 26.1 (17B55), macOS 26.1 (25B74) and iOS 26.1 (23B77).
 * Quick test of Memory Integrity Enforcement. Passed, but not sure it does anything when simulated on an M3 chip.
 * FAQ_nl.md updated.
 
@@ -10,6 +10,7 @@ DATA MAINTENANCE
 
 * Fixed fgWaalre.level2.json (/#anker become #anker)
 * Fixed expering FeaturedImage for SB of IndividueelBO
+* Added "Sport" Expertise tag (for November 2025).
 
 DOCUMENTATION
 
@@ -48,7 +49,7 @@ DATA MAINTENANCE
 
 * Added 6 photo clubs.
 * Updated members and expertises for fgDeGender and IndividueelBO.
-* Added "Nature" Expertise tag.
+* Added "Nature" Expertise tag (for October 2025).
 * Removed 2 members of fcBellusImago.
 * Forced a data reset at dataResetPending285b4651 (related to removing members from fcBellusImago).
 
@@ -113,7 +114,7 @@ Data Maintenance
 * Forced a data reset at dataResetPending283b4649 (related to Street-Art).
 * Fixed a few lower-case Expertises in club IndividueelBO.
 * Fixed nickname of FG deGender -> fgDeGender and FG Oirschot -> fgOirschot
-* Approved "Industrial heritage" (NL: "industrieel erfgoed") expertise tag.
+* Added "Industrial heritage" (NL: "industrieel erfgoed") Expertise tag (for September 2025).
 * Updated fgDeGender.level2.json file (in time for release of 2.8.3)
 
 This build #4649 was made using Xcode 16.4 and is suitable for release to the App Store.
@@ -179,7 +180,7 @@ This build #4646 was made using Xcode 23.0 beta 4 and can thus only be used for 
 
 ### 2.8.1 (GitHub commit bc51dba) 14-07-25
 
-* New expertise tag: Theater
+* Added "Theater" Expertise tag (for August 2025).
 
 Portfolio screen
 * User can filter on Expertise (in local language) using the Search bar.

@@ -296,6 +296,20 @@
         },
 
         {
+            "idString": "Sport",
+            "name": [
+                { "language": "EN", "localizedString": "Sport" },
+                { "language": "NL", "localizedString": "Sport" }
+            ],
+            "optional": {
+                "usage":  [
+                    { "language": "EN", "localizedString": "Sports photography." },
+                    { "language": "NL", "localizedString": "Sportfotografie." }
+                ]
+            }
+        },
+
+        {
             "idString": "Street",
             "name": [
                 { "language": "EN", "localizedString": "Street" },
