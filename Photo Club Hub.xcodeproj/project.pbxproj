@@ -284,7 +284,7 @@
 		D0AEDF3C2BBE0CD1003FD250 /* Photo_Club_Hub_2_5_7.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_5_7.xcdatamodel; sourceTree = "<group>"; };
 		D0B32BB22C15C51A009FF8E7 /* AppVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVersion.swift; sourceTree = "<group>"; };
 		D0B6B05B2DB27A3E00EAAF69 /* packages.key */ = {isa = PBXFileReference; lastKnownFileType = file; path = packages.key; sourceTree = "<group>"; };
-		D0B6B05C2DB27A3E00EAAF69 /* Photo Club Hub intro.pptx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Photo Club Hub intro.pptx"; sourceTree = "<group>"; };
+		D0B6B05C2DB27A3E00EAAF69 /* FotoclubHubIntro_NL.pptx */ = {isa = PBXFileReference; lastKnownFileType = file; path = FotoclubHubIntro_NL.pptx; sourceTree = "<group>"; };
 		D0BAB01C2A76CED300387E63 /* URLSession+synchronous.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+synchronous.swift"; sourceTree = "<group>"; };
 		D0BD7FE62D9C84DE005D199A /* Photo_Club_Hub_2_8_0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_8_0.xcdatamodel; sourceTree = "<group>"; };
 		D0BF26FC2CFA218000DA2CB9 /* fcBellusImago.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fcBellusImago.level2.json; sourceTree = "<group>"; };
@@ -645,7 +645,7 @@
 				D0E02F972B80191300D67CDA /* Readme_NL_2_8_0.pages */,
 				D0300D2A2E2D6BA500A11A03 /* Nieuwsbrief_Aug_2025_app.pdf */,
 				D07A1E2E28314EA600C77F66 /* SwiftUIEnvironmentValues.png */,
-				D0B6B05C2DB27A3E00EAAF69 /* Photo Club Hub intro.pptx */,
+				D0B6B05C2DB27A3E00EAAF69 /* FotoclubHubIntro_NL.pptx */,
 				D04A2B112AC0958C003ED113 /* LineCount.xlsx */,
 				D0A958632D596C3300658373 /* Website_Status_PPT */,
 				37EC25472EB6889300667D8A /* FeaturedImagePipeline.md */,

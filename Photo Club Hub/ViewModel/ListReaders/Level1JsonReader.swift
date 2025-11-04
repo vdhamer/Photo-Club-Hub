@@ -11,8 +11,6 @@ import SwiftyJSON // for JSON struct
 
 private let organizationTypesToLoad: [OrganizationTypeEnum] = [.club, .museum] // types are loaded one-by-one
 
-// see XampleMin.level1.json and XampleMax.level1.json for examples of input data
-
 public class Level1JsonReader {
 
     public init(bgContext: NSManagedObjectContext,
