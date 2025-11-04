@@ -1,21 +1,23 @@
-#  Featured images data flow
+#  Featured image data flow
 
 ## Storing level2.json data
 
-- A club's Level 2 file is available online at GitHub.
-  - The list of clubs with Level 2 files are currently hardcoded in the respective `app.swift` files. Example:
+- A club's `level2.json` file is available online at GitHub.
+  - The subset of clubs that have Level 2 files is hardcoded in the respective `app.swift` files. Example code that loads the Level 2 data (`fgOirschot.level2.json`) for club fgOirshot:
   ```
   _ = FotogroepOirschotMembersProvider(
           bgContext: makeBgContext(ctxName: "Level 2 loader fgOirschot"),
-          isBeingTested: false, useOnlyInBundleFile: false)
+          isBeingTested: false,
+          useOnlyInBundleFile: false)
   ```
-  - This should change in the future to using the Level 1 data. This avoids having to update the app code when a new Level 2 club is added.
-- example: `https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/main/Photo%20Club%20Hub/ViewModel/Lists/fgDeGender.level2.json`
+  - This hardcoding isn't ideal: the app code needs updating whenever a new Level 2 club is added.
+    - Plan: use the Level 1 data (list of clubs) to load the Level 2 data (list of a club's members).
+- Example URL for a Level 2 file: `https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/main/Photo%20Club%20Hub/ViewModel/Lists/fgDeGender.level2.json`
 - If the URL fails to load when the app starts, a version of the same file is taken from the PhotoClubHubData bundle.
   - This version corresponds to the level2.json file state _at build time_. This means it could be outdated compared to the GitHub version.
   - This means that GitHub holds the _master copy_ of (committed) Level 2 data. Both apps rely on this copy.
 - The Level 2 data used in PhotoClubHub.app is persisted by the CoreData database
-- The Level 2 data used in PhotoClubHubHTML.app is loaded into CoreData, but this happens _after clearing_ CoreData. So this isn't really persistent.
+- The Level 2 data used in PhotoClubHubHTML.app is loaded into CoreData, but this happens _after clearing_ CoreData. So this isn't really persisted.
 
 ## Reading level2.json data
 
