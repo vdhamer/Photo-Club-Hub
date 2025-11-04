@@ -8,13 +8,14 @@ CODE MAINTENANCE
 
 DATA MAINTENANCE
 
-* Fixed fgWaalre.level2.json (/#anker become #anker)
-* Fixed expering FeaturedImage for SB of IndividueelBO
+* Fixed fgWaalre.level2.json (/#anker become #anker).
+* Fixed expering FeaturedImage for SB of IndividueelBO.
 * Added "Sport" Expertise tag (for November 2025).
 
 DOCUMENTATION
 
-* Added a technical file documenting the FeaturedImagePipeline
+* Added a technical file documenting the FeaturedImagePipeline.
+* Update to PhotoClubHubIntro.ppt (in Dutch).
 
 This build #4652 was made using Xcode 26.1.
 
