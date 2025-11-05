@@ -645,7 +645,7 @@ Vast wel. Zie tabel:
 | Readme Photo Club Hub | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/.github/README.md) | | ✓ |
 | Readme Photo Club Hub HTML | [link](https://github.com/vdhamer/Photo-Club-Hub-HTML/blob/main/.github/README.md) | | ✓ |
 | Interne readme in Photo Club Hub app | ingebouwd in app | ✓ | ✓ |
-| Powerpoint presentatie | [download](https://github.com/vdhamer/Photo-Club-Hub/raw/refs/heads/main/FotoclubHubIntro_NL.pptx) | ✓ | |
+| Powerpoint presentatie | [download](https://github.com/vdhamer/Photo-Club-Hub/blob/main/documentation/FotoclubHubIntro_NL.pptx) | ✓ | |
 | Featured Image pipeline (nogal technisch) | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/FeaturedImagePipeline.md) | | ✓ |
 </details></p></li></ul>
 </details></p>
