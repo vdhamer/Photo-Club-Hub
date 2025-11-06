@@ -12,6 +12,7 @@ DATA MAINTENANCE
 * Fixed expering FeaturedImage for SB of IndividueelBO.
 * Added "Sport" Expertise tag (for November 2025).
 * Removed 3rd Expertise for some members of fgDeGender.
+* TODO Forced a data reset at dataResetPending286b4652 (related to removing expertised from fgDeGender).
 
 DOCUMENTATION
 
