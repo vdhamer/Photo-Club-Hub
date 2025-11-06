@@ -418,11 +418,11 @@ Foto Club Hub HTML genereert dus een ledenlijst met links naar de portfolio's va
 
 </li><li>
 
-### Ik kan Fotoclub Hub niet vinden op de Apple App Store?
+### Hoe kan ik Fotoclub Hub vinden op de Apple App Store?
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
-Op het buitenland heet de app "Photo Club Hub" (engels) in plaats van "Fotoclub Hub" (Nederlands).
-Je kunt op een buitenlandse App Store aangewezen zijn als je een tijd in het buitenland gewoond hebt.
+In het buitenland heet de app "Photo Club Hub" (engels) in plaats van "Fotoclub Hub" (Nederlands).
+Je ziet misschien een buitenlandse App Store als je in het buitenland woont of gewoond hebt.
 In alle gevallen krijg je precies dezelfde app. De app kiest automatisch de juiste taal bij het opstarten.
 </details></p></li></ul>
 </details></p>
