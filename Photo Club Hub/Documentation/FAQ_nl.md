@@ -418,11 +418,11 @@ Foto Club Hub HTML genereert dus een ledenlijst met links naar de portfolio's va
 
 </li><li>
 
-### Ik kan Fotoclub Hub niet vinden op de Apple App Store?
+### Hoe kan ik Fotoclub Hub vinden op de Apple App Store?
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
-Op het buitenland heet de app "Photo Club Hub" (engels) in plaats van "Fotoclub Hub" (Nederlands).
-Je kunt op een buitenlandse App Store aangewezen zijn als je een tijd in het buitenland gewoond hebt.
+In het buitenland heet de app "Photo Club Hub" (engels) in plaats van "Fotoclub Hub" (Nederlands).
+Je ziet misschien een buitenlandse App Store als je in het buitenland woont of gewoond hebt.
 In alle gevallen krijg je precies dezelfde app. De app kiest automatisch de juiste taal bij het opstarten.
 </details></p></li></ul>
 </details></p>
@@ -647,5 +647,14 @@ Vast wel. Zie tabel:
 | Interne readme in Photo Club Hub app | ingebouwd in app | ✓ | ✓ |
 | FotoclubHubIntro_NL.pptx Powerpoint | [download](https://github.com/vdhamer/Photo-Club-Hub/raw/refs/heads/main/Photo%20Club%20Hub/Documentation/FotoclubHubIntro_NL.pptx) | ✓ | nodig |
 | Featured Image pipeline (nogal technisch) | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/FeaturedImagePipeline.md) | | ✓ |
-</details></p></li></ul>
+</details></p>
+
+</li><li>
+
+### Tabel met veschillen tussen Apple en Web versies?
+<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
+Antwoord
+</details></p>
+</li></ul>
+
 </details></p>
