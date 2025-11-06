@@ -466,7 +466,7 @@ who the club officials are, and which images the members want in their portfolio
     
 ### Levels
 
-Tnehe app distinguishes 4 hierarchical layers of information:
+The app distinguishes 4 hierarchical layers of information:
 
 - `Level 0` consists of reference data (like list of `Languages`). Consider this an implementation detail.
 - `Level 1` consists of the club names and geographic locations.
