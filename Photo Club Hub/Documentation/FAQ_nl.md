@@ -647,5 +647,14 @@ Vast wel. Zie tabel:
 | Interne readme in Photo Club Hub app | ingebouwd in app | ✓ | ✓ |
 | FotoclubHubIntro_NL.pptx Powerpoint | [download](https://github.com/vdhamer/Photo-Club-Hub/raw/refs/heads/main/Photo%20Club%20Hub/Documentation/FotoclubHubIntro_NL.pptx) | ✓ | nodig |
 | Featured Image pipeline (nogal technisch) | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/FeaturedImagePipeline.md) | | ✓ |
-</details></p></li></ul>
+</details></p>
+
+</li><li>
+
+### Tabel met veschillen tussen Apple en Web versies?
+<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
+Antwoord
+</details></p>
+</li></ul>
+
 </details></p>
