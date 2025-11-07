@@ -649,12 +649,6 @@ Vast wel. Zie tabel:
 | Featured Image pipeline (nogal technisch) | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/FeaturedImagePipeline.md) | | ✓ |
 </details></p>
 
-</li><li>
-
-### Tabel met veschillen tussen Apple en Web versies?
-<details><summary>Klik om antwoord open of dicht te klappen</summary></p>
-Antwoord
-</details></p>
 </li></ul>
 
 </details></p>
