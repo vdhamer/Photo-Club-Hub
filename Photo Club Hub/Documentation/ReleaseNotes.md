@@ -1,23 +1,25 @@
-### 2.8.6 (GitHub commit ???????) ??-11-25
+---------------------------------------------------------------------------
+
+### 2.8.6 (GitHub commit bf1c49f) 08-11-25
 
 CODE MAINTENANCE
 
 * Tested with SwiftLint 0.62.2, XCode 26.1 (17B55), macOS 26.1 (25B74) and iOS 26.1 (23B77).
-* Quick test of Memory Integrity Enforcement. Passed, but not sure it does anything when simulated on an M3 chip.
-* FAQ_nl.md updated.
+* Quick test of Memory Integrity Enforcement. Passed, but not sure that means anything unless you have a physical iPhone 17.
 
 DATA MAINTENANCE
 
-* Fixed fgWaalre.level2.json (/#anker become #anker).
-* Fixed expering FeaturedImage for SB of IndividueelBO.
 * Added "Sport" Expertise tag (for November 2025).
-* Removed 3rd Expertise for some members of fgDeGender.
-* Forced a data reset at dataResetPending286b4652 (related to removing some expertises for fgDeGender).
+* Fixed fgWaalre.level2.json (/#anker become #anker).
+* Fixed expiring FeaturedImage for member SB of IndividueelBO. Related to linking to an Instagram image.
+* Removed 3rd Expertise for 2 members of fgDeGender.
+* Forced a data reset at dataResetPending286b4652 (related to removing 2 expertise tags applied for fgDeGender).
 
 DOCUMENTATION
 
-* Added a technical file documenting the FeaturedImagePipeline.
-* Update to PhotoClubHubIntro.ppt (in Dutch).
+* Major update to PhotoClubHubIntro_NL.ppt (in Dutch).
+* Added technical documentation on reading in the FeaturedImage: FeaturedImagePipeline.md.
+* FAQ_nl.md updated.
 
 This build #4652 was made using Xcode 26.1.
 
