@@ -4,7 +4,6 @@ CODE MAINTENANCE
 
 * Removed Viewmodel/Lists JSON files. There were only there for backwards compatibility.
 * TODO: change opening image to show zoomed out at startup.
-* TODO: sync code with Photo Club Hub HTML.
 
 DOCUMENTATION
 
