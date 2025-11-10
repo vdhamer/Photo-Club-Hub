@@ -118,7 +118,6 @@
 		D0F871952D403D1700530D10 /* root.level1.json in Resources */ = {isa = PBXBuildFile; fileRef = D0F8718C2D403D1700530D10 /* root.level1.json */; };
 		D0F8719A2D403D1700530D10 /* fgDeGender.level2.json in Resources */ = {isa = PBXBuildFile; fileRef = D0F871882D403D1700530D10 /* fgDeGender.level2.json */; };
 		D0F8719C2D403D1700530D10 /* root.level0.json in Resources */ = {isa = PBXBuildFile; fileRef = D0F8718B2D403D1700530D10 /* root.level0.json */; };
-		D0F8719F2D403E6000530D10 /* readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = D0F8719E2D403E5500530D10 /* readme.txt */; };
 		D0FB52912E1F28560025E9A8 /* IndividueelBOMembersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FB52902E1F28560025E9A8 /* IndividueelBOMembersProvider.swift */; };
 		D0FD28BB2D8CDFD3002B5C38 /* languages.level0.json in Resources */ = {isa = PBXBuildFile; fileRef = D0FD28BA2D8CDFD3002B5C38 /* languages.level0.json */; };
 		D0FD28BC2D8CDFD3002B5C38 /* abstractExpertise.level0.json in Resources */ = {isa = PBXBuildFile; fileRef = D0FD28B82D8CDFD3002B5C38 /* abstractExpertise.level0.json */; };
@@ -204,7 +203,6 @@
 		D05124882C43122C00D94B81 /* UrlComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlComponents.swift; sourceTree = "<group>"; };
 		D05414F62AC7499000D899D8 /* FotogroepDeGenderMembersProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FotogroepDeGenderMembersProvider.swift; sourceTree = "<group>"; };
 		D05417372D31DDE300A2A579 /* XampleMaxMembersProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XampleMaxMembersProvider.swift; sourceTree = "<group>"; };
-		D054173D2D31DE6B00A2A579 /* xampleMax.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = xampleMax.level2.json; sourceTree = "<group>"; };
 		D05840172E3C18B00013E438 /* WhoIsWhoTextInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhoIsWhoTextInfo.swift; sourceTree = "<group>"; };
 		D05E451D27EF2A2C00D31327 /* ReadmeView1718.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeView1718.swift; sourceTree = "<group>"; };
 		D06061EC28A05D4600A675A7 /* String+Paths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Paths.swift"; sourceTree = "<group>"; };
@@ -220,8 +218,6 @@
 		D06588E62BAE3E41000FD7F3 /* preferencesScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = preferencesScreen.png; sourceTree = "<group>"; };
 		D06588E72BAE3E49000FD7F3 /* readmeScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = readmeScreen.png; sourceTree = "<group>"; };
 		D06588EA2BAE5071000FD7F3 /* preludeScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = preludeScreen.png; sourceTree = "<group>"; };
-		D066F0F72D0F4394002C6A2B /* fgDeGenderLeden.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = fgDeGenderLeden.xlsx; sourceTree = "<group>"; };
-		D066F0F82D0F461F002C6A2B /* level0.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = level0.json; sourceTree = "<group>"; };
 		D06B70E32D5FE9A700B0DECB /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		D06BE9322A4F870B0055B3B1 /* ifDebugUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ifDebugUtils.swift; sourceTree = "<group>"; };
 		D06E91E72B939C1B00D05BC0 /* Photo_Club_Hub_2_5_4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_5_4.xcdatamodel; sourceTree = "<group>"; };
@@ -229,10 +225,8 @@
 		D06F34FB2BDE56600047B04F /* Photo_Club_Hub_2_6_2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_6_2.xcdatamodel; sourceTree = "<group>"; };
 		D07276F92D63A8FB0047B0CF /* Website_Status_Feb25.pptx */ = {isa = PBXFileReference; lastKnownFileType = file; path = Website_Status_Feb25.pptx; sourceTree = "<group>"; };
 		D07276FA2D63A8FB0047B0CF /* Website_Status_template.pptx */ = {isa = PBXFileReference; lastKnownFileType = file; path = Website_Status_template.pptx; sourceTree = "<group>"; };
-		D072D5E22D333B4500EA88DD /* xampleMin.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = xampleMin.level2.json; sourceTree = "<group>"; };
 		D072D5E42D333E7500EA88DD /* XampleMinMembersProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XampleMinMembersProvider.swift; sourceTree = "<group>"; };
 		D073FE162D3B13B300DB01F4 /* Level2_aanmaken_NL.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Level2_aanmaken_NL.md; sourceTree = "<group>"; };
-		D07463E52CFB5EFA00F48EB2 /* root.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = root.level1.json; sourceTree = "<group>"; };
 		D076BE702CF0CC10008F4B47 /* Readme_EN_2_8_0.pages */ = {isa = PBXFileReference; lastKnownFileType = file; path = Readme_EN_2_8_0.pages; sourceTree = "<group>"; };
 		D0795CEB294FCCC200FA62A8 /* ShapeStyle+Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ShapeStyle+Colors.swift"; sourceTree = "<group>"; };
 		D07A1E2E28314EA600C77F66 /* SwiftUIEnvironmentValues.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SwiftUIEnvironmentValues.png; sourceTree = "<group>"; };
@@ -288,9 +282,6 @@
 		D0B6B05C2DB27A3E00EAAF69 /* FotoclubHubIntro_NL.pptx */ = {isa = PBXFileReference; lastKnownFileType = file; path = FotoclubHubIntro_NL.pptx; sourceTree = "<group>"; };
 		D0BAB01C2A76CED300387E63 /* URLSession+synchronous.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+synchronous.swift"; sourceTree = "<group>"; };
 		D0BD7FE62D9C84DE005D199A /* Photo_Club_Hub_2_8_0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_8_0.xcdatamodel; sourceTree = "<group>"; };
-		D0BF26FC2CFA218000DA2CB9 /* fcBellusImago.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fcBellusImago.level2.json; sourceTree = "<group>"; };
-		D0BF26FE2CFA218000DA2CB9 /* fgDeGender.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fgDeGender.level2.json; sourceTree = "<group>"; };
-		D0BF26FF2CFA218000DA2CB9 /* fgWaalre.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fgWaalre.level2.json; sourceTree = "<group>"; };
 		D0C53BDC2ABF3ADF000722A1 /* PersonName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonName.swift; sourceTree = "<group>"; };
 		D0C6E95429577921001E5CE9 /* DebugPanel1718.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugPanel1718.swift; sourceTree = "<group>"; };
 		D0C8E3A12BB81B4A00348D97 /* ItemFilterStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemFilterStatsView.swift; sourceTree = "<group>"; };
@@ -325,7 +316,6 @@
 		D0F8718E2D403D1700530D10 /* XampleMax.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = XampleMax.level2.json; sourceTree = "<group>"; };
 		D0F8718F2D403D1700530D10 /* XampleMin.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = XampleMin.level1.json; sourceTree = "<group>"; };
 		D0F871902D403D1700530D10 /* XampleMin.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = XampleMin.level2.json; sourceTree = "<group>"; };
-		D0F8719E2D403E5500530D10 /* readme.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
 		D0F999502AACE217005FA0FF /* Photo_Club_Hub_2_4_2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_4_2.xcdatamodel; sourceTree = "<group>"; };
 		D0FB52902E1F28560025E9A8 /* IndividueelBOMembersProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividueelBOMembersProvider.swift; sourceTree = "<group>"; };
 		D0FCF2E229B5517000F31442 /* VoteOnRoadmapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteOnRoadmapView.swift; sourceTree = "<group>"; };
@@ -583,7 +573,6 @@
 		D0831A23277F72340049AB84 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				D0BF26FA2CFA20AC00DA2CB9 /* Lists */,
 				D0621E832AE2DF8E000FFADB /* IndividualClubs */,
 				D08416942B2FC061000F316D /* ListReaders */,
 				D0621E822AE2DF1B000FFADB /* MemberPortfolio */,
@@ -711,22 +700,6 @@
 				D05840172E3C18B00013E438 /* WhoIsWhoTextInfo.swift */,
 			);
 			path = WhoIsWhoView;
-			sourceTree = "<group>";
-		};
-		D0BF26FA2CFA20AC00DA2CB9 /* Lists */ = {
-			isa = PBXGroup;
-			children = (
-				D0F8719E2D403E5500530D10 /* readme.txt */,
-				D066F0F72D0F4394002C6A2B /* fgDeGenderLeden.xlsx */,
-				D07463E52CFB5EFA00F48EB2 /* root.level1.json */,
-				D066F0F82D0F461F002C6A2B /* level0.json */,
-				D0BF26FC2CFA218000DA2CB9 /* fcBellusImago.level2.json */,
-				D0BF26FE2CFA218000DA2CB9 /* fgDeGender.level2.json */,
-				D0BF26FF2CFA218000DA2CB9 /* fgWaalre.level2.json */,
-				D072D5E22D333B4500EA88DD /* xampleMin.level2.json */,
-				D054173D2D31DE6B00A2A579 /* xampleMax.level2.json */,
-			);
-			path = Lists;
 			sourceTree = "<group>";
 		};
 		D0CEAECD2B2E1120005AE47D /* Localization */ = {
@@ -950,7 +923,6 @@
 				D0F78ACA2DFCCBFE00DE234D /* fcDenDungen.level2.json in Resources */,
 				D0273E4A2DEE42C800C4F5E1 /* fgOirschot.level2.json in Resources */,
 				D0273E4B2DEE42C800C4F5E1 /* fcEricamera.level2.json in Resources */,
-				D0F8719F2D403E6000530D10 /* readme.txt in Resources */,
 				D0F871952D403D1700530D10 /* root.level1.json in Resources */,
 				D0A615792D91B7A00024EC9E /* fcBellusImago.level2.json in Resources */,
 				D0DFBEF42D47036900CB9E73 /* PhotoClubHub.Readme.xcstrings in Resources */,

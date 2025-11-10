@@ -1,5 +1,9 @@
 ### 2.8.7 (GitHub commit ???????) ??-11-25
 
+CODE MAINTENANCE
+
+* Removed Viewmodel/Lists JSON files. There were only there for backwards compatibility.
+
 This build #4652 was made using Xcode 26.1.
 
 ---------------------------------------------------------------------------
