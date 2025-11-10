@@ -91,7 +91,7 @@ You can reach the bottom quickly by using the Search bar to filter out all the p
 The HTML/web version of the app will get a comparable list, but it will be accessed a bit differently. 
 
 The list is stored online and will change over time: there may be a new tag tomorrow that is not on the list today.
-The online master list (in JSON format) with all approved tags can be found
+The online master list (in JSON format) with all supported tags can be found
 [here](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/root.level0.json).
 </details></p>
 
@@ -170,7 +170,7 @@ Therefore, curating the list of keywords is a tradeoff between:
 
 </li><li>
 
-### Who manages the list of approved tags?
+### Who manages the list of supported tags?
 
 <details><summary>Click to expand or collapse an answer</summary></p>
 For now, this would be the maker(s) of the app. But this task of technically maintaining the
@@ -206,9 +206,9 @@ often be applied in multiple projects.
 Supported expertise tags can be shown in the user interface in at least two languages: English and Dutch.
 This means that if a photographer is known for multiple-exposure photography, the app will display either
 "Multiple exposure" for English or "Meervoudige opnamen" for Dutch - depending on your language preference.
-These translations for approved tags are stored in the
+These translations for supported tags are stored in the
 [root.level0.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/root.level0.json) file.
-If the app runs across an unapproved tag (because of a user error, or as a proposal),
+If the app runs across a temporary tag (because of a user error, or as a proposal),
 that tag is shown untranslated because it doesn't occur in the root.level0.json file right now.
 </details></p>
 
@@ -218,7 +218,7 @@ that tag is shown untranslated because it doesn't occur in the root.level0.json 
 
 <details><summary>Click to expand or collapse an answer</summary></p>
 When defining the tags per photographer in the Level2.json file, you should be using an English term and,
-if it is approved, using the so-called `idString` identifier as defined in the
+if it is supported, using the so-called `idString` identifier as defined in the
 [root.level0.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/root.level0.json) file.
 It might also be convenient to simply copy that `idString` identifier from an existing Level 2 file:
 if it works there, it will work for you as well.
@@ -277,14 +277,14 @@ This is meant to trigger the club to fix this.
 ### Errors in the provided `expertise` tags
 
 <details><summary>Click to expand or collapse an answer</summary></p>
-What happens if a Level 2 file contains a tag that hasn't been approved or just contains a typo?
+What happens if a Level 2 file contains a tag that hasn't been supported or just contains a typo?
 Example: the file has a tag called "Model" while there is only a tag for "Portrait".
 The app will then display a warning icon next to the unofficial tag "Model" to indicate that it doesn't really
 know that tag. And that, consequently, there will be no translations available.
 
-This *may* prompt the club to fix a typo, or replace the unapproved tag with a similar approved tag.
-Alternatively, it may prompt the app's maintainers to promote the unapproved tag to an approved one if it meets
-the necessary criteria. One an unapproved tag is promoted onto the approved 
+This *may* prompt the club to fix a typo, or replace the temporary tag with a similar supported tag.
+Alternatively, it may prompt the app's maintainers to promote the temporary tag to a supported one if it meets
+the necessary criteria. Once a temporary tag is promoted onto the supported 
 [root.level0.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/root.level0.json) tag list,
 or alternatively the Level 2 file has been fixed, the warning icon will disappear.
 </details></p>

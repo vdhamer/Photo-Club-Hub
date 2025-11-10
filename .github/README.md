@@ -846,7 +846,7 @@ Question: so what happens if an expertise string in a `Level2.json` file does _n
 Answer: it is shown as an error (gray?) in the user interface, thus prompting the user to fix the issue.
 The expertise reverts to the "supported" color as soon as that problem is resolved.
 Rationale: you might enter a typo ("Landscapes" instead of "Landscape").
-But it also signals a unsupported term (e.g., using "Scenery" or "Desert" instead of "Landscape").
+But it also signals a temporary tag (e.g., using "Scenery" or "Desert" instead of "Landscape").
 </p>
  
 > Note that the `birthday`, `website`, `isDeceased`, `photographerImage`, and `expertises` fields are technically special

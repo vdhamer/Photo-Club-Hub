@@ -3,8 +3,13 @@
 CODE MAINTENANCE
 
 * Removed Viewmodel/Lists JSON files. There were only there for backwards compatibility.
+* TODO: change opening image to show zoomed out at startup.
 
-This build #4652 was made using Xcode 26.1.
+DOCUMENTATION
+
+* Updated Level2expertise texts (both Dutch and English versions).
+
+This build #4653 was made using Xcode 26.1.
 
 ---------------------------------------------------------------------------
 
