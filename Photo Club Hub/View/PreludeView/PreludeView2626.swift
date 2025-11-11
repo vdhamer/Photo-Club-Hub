@@ -18,7 +18,7 @@ struct PreludeView2626: View {
     fileprivate let crossHairsColor: Color = Color(UIColor(white: 0.5, alpha: 0.5))
 
     // MARK: - State variables
-    @State fileprivate var offsetInCells = OffsetVectorInCells2626(x: 8, y: 6) // # of cell units left/above imagecenter
+    @State fileprivate var offsetInCells = OffsetVectorInCells2626(x: 4, y: 1) // # of cell units left/above imagecenter
     @State fileprivate var logScale = log2CellRepeat // value driving the animation
     @State fileprivate var willMoveToNextScreen = false // used to navigate to next screen
     @State fileprivate var crosshairsVisible = true // displays Crosshairs view, can be toggled via "c" on keyboard
@@ -50,7 +50,7 @@ struct PreludeView2626: View {
                 GeometryReader { geo in
                     ZStack(alignment: .center) {
                         ZStack {
-                            Image("2021_FotogroepWaalre_058_square")
+                            Image("Image1")
                                 .resizable()
                                 .scaledToFit()
                                 .brightness(logScale == 0  ? 0.1 : 0.2)
