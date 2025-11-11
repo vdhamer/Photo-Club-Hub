@@ -16,9 +16,13 @@ struct PreludeView2626: View {
     fileprivate static let squareSize = 5.5 / 18 // size of single colored square compared to pitch (0.3055555)
     fileprivate let crossHairsWidth: CGFloat = 2
     fileprivate let crossHairsColor: Color = Color(UIColor(white: 0.5, alpha: 0.5))
+    fileprivate let preludeImageStore = PreludeImageStore2626()
+    @State private var preludeImage = PreludeImage(assetName: "2021_FotogroepWaalre_058_square",
+                                                   copyright: "© Greetje van Son",
+                                                   whiteCoordinates: .init(x: 8, y: 6)) // non-random temp answer
 
     // MARK: - State variables
-    @State fileprivate var offsetInCells = OffsetVectorInCells2626(x: 4, y: 1) // # of cell units left/above imagecenter
+    @State fileprivate var offsetInCells = OffsetVectorInCells2626(x: 8, y: 8) // # of cell units left/above imagecenter
     @State fileprivate var logScale = log2CellRepeat // value driving the animation
     @State fileprivate var willMoveToNextScreen = false // used to navigate to next screen
     @State fileprivate var crosshairsVisible = true // displays Crosshairs view, can be toggled via "c" on keyboard
@@ -50,7 +54,7 @@ struct PreludeView2626: View {
                 GeometryReader { geo in
                     ZStack(alignment: .center) {
                         ZStack {
-                            Image("Image1")
+                            Image(preludeImage.assetName)
                                 .resizable()
                                 .scaledToFit()
                                 .brightness(logScale == 0  ? 0.1 : 0.2)
@@ -100,6 +104,10 @@ struct PreludeView2626: View {
                             }
                         }
                         .frame(width: geo.size.width, height: geo.size.height)
+                        .task {
+                            preludeImage = await preludeImageStore.getRandomPreludeImage()
+                            offsetInCells = preludeImage.whiteCoordinates
+                        }
                     }
 
                     CrossHairs(hidden: !crosshairsVisible)
