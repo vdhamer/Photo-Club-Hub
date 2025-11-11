@@ -102,7 +102,7 @@ struct PreludeView1718: View {
                         .frame(width: geo.size.width, height: geo.size.height)
                     }
 
-                    CrossHairs(hidden: !crosshairsVisible)
+                    CrossHairs1718(hidden: !crosshairsVisible)
                         .stroke(crossHairsColor, lineWidth: crossHairsWidth)
                         .blendMode(.normal)
 

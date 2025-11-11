@@ -1,5 +1,9 @@
 ### 2.8.7 (GitHub commit ???????) ??-11-25
 
+PREVIEW SCREEN
+
+* Now randomly chooses 1 of 6 background images for the opening screen.
+
 CODE MAINTENANCE
 
 * Removed Viewmodel/Lists JSON files. There were only there for backwards compatibility.

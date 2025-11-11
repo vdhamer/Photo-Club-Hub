@@ -1,5 +1,5 @@
 //
-//  Crosshairs.swift
+//  Crosshairs2626.swift
 //  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 24/12/2022.
@@ -10,7 +10,8 @@ import SwiftUI
 // Draws 8 lines through the middle of the screen
 // with a circle around the central point, aka cell (0,0).
 // This was used to tune the Prelude screen graphics.
-struct CrossHairs: Shape {
+@available(iOS, obsoleted: 19.0, message: "Please use 'DebugPanel2626_Previews' for versions above iOS 18.x")
+struct CrossHairs1718: Shape {
 
     let hidden: Bool // provided when instantiating CrossHairs
     let circleScaling: Double
@@ -41,12 +42,13 @@ struct CrossHairs: Shape {
     }
 }
 
-struct Crosshairs_Previews: PreviewProvider {
+@available(iOS, obsoleted: 19.0, message: "Please use 'DebugPanel2626_Previews' for versions above iOS 18.x")
+struct Crosshairs1718_Previews: PreviewProvider {
     static let crossHairsWidth: CGFloat = 2
     static let crossHairsColor: Color = Color(UIColor(white: 0.5, alpha: 0.5))
 
     static var previews: some View {
-        CrossHairs(hidden: false, circleScaling: 0.5)
+        CrossHairs1718(hidden: false, circleScaling: 0.5)
             .stroke(crossHairsColor, lineWidth: crossHairsWidth)
             .blendMode(.normal)
     }

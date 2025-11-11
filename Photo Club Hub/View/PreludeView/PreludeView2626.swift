@@ -110,7 +110,7 @@ struct PreludeView2626: View {
                         }
                     }
 
-                    CrossHairs(hidden: !crosshairsVisible)
+                    CrossHairs2626(hidden: !crosshairsVisible)
                         .stroke(crossHairsColor, lineWidth: crossHairsWidth)
                         .blendMode(.normal)
 
