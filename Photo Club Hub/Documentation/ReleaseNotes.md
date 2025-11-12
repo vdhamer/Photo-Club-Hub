@@ -7,7 +7,8 @@ PREVIEW SCREEN
 CODE MAINTENANCE
 
 * Removed Viewmodel/Lists JSON files. There were only there for backwards compatibility.
-* TODO: change opening image to show zoomed out at startup.
+* Tested with XCode 26.1.1 (17B100), and iOS 26.1 (23B85).
+* TODO: somehow show Prelude images briefly/optionally without the superimposed Bayer matrix.
 
 DOCUMENTATION
 
