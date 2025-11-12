@@ -30,6 +30,19 @@ struct PreludeView2626: View {
     @State fileprivate var debugLocation = CGPoint(x: 0, y: 0)
     @Environment(\.horizontalSizeClass) var horSizeClass
 
+    fileprivate func zoomInOutAnimated(_ location: CGPoint, geo: GeometryProxy) {
+        debugLocation = location // for debugging only
+        withAnimation(.easeInOut(duration: 7)) { // carefull: code is duplicated twice ;-(
+            if logScale == 0.0 { // if we are completely zoomed out at the time of the tap
+                logScale = log2(PreludeView2626.maxCellRepeat) // zoom in
+                offsetInCells = intOffset(rect: geo.size, location: location)
+            } else {
+                offsetInCells = OffsetVectorInCells2626(x: 0, y: 0)
+                logScale = 0.0 // zoom out
+            }
+        }
+    }
+
     var body: some View {
         NavigationStack { // defines navigation structure of entire app, even though you don't see navigation bar yet
             ZStack {
@@ -92,16 +105,7 @@ struct PreludeView2626: View {
                                                     style: .continuous)) // approximate iOS app icon rounding
                         .contentShape(Rectangle())
                         .onTapGesture { location in
-                            debugLocation = location
-                            withAnimation(.easeInOut(duration: 7)) { // carefull: code is duplicated twice ;-(
-                                if logScale == 0.0 { // if we are completely zoomed out at the time of the tap
-                                    logScale = log2(PreludeView2626.maxCellRepeat) // zoom in
-                                    offsetInCells = intOffset(rect: geo.size, location: location)
-                                } else {
-                                    offsetInCells = OffsetVectorInCells2626(x: 0, y: 0)
-                                    logScale = 0.0 // zoom out
-                                }
-                            }
+                            zoomInOutAnimated(location, geo: geo)
                         }
                         .frame(width: geo.size.width, height: geo.size.height)
                         .task {
@@ -129,17 +133,7 @@ struct PreludeView2626: View {
                         .opacity(logScale == 0  ? 0 : 1)
                         .frame(width: geo.size.width, height: geo.size.height)
                         .onTapGesture { location in
-                            debugLocation = location // for debugging only
-                            ifDebugPrint("Tap location: (\(location.x),\(location.y))")
-                            withAnimation(.easeInOut(duration: 7)) { // carefull: code is duplicated twice ;-(
-                                if logScale == 0.0 { // if we are completely zoomed out at the time of the tap
-                                    logScale = log2(PreludeView2626.maxCellRepeat) // zoom in
-                                    offsetInCells = intOffset(rect: geo.size, location: location)
-                                } else {
-                                    offsetInCells = OffsetVectorInCells2626(x: 0, y: 0)
-                                    logScale = 0.0 // zoom out
-                                }
-                            }
+                            zoomInOutAnimated(location, geo: geo)
                         }
                         .dynamicTypeSize(DynamicTypeSize.large ...
                                          DynamicTypeSize.large) // don't let DynamicType change WAALRE size
