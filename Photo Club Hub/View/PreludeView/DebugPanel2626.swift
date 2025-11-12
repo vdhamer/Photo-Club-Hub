@@ -49,7 +49,7 @@ struct DebugPanel2626_Previews: PreviewProvider {
         guard DebugPanel2626_Previews.logScale != 0 else { return OffsetVectorInCells2626(x: 0, y: 0) }
         let shortFrameDimension = min(rect.width, rect.height)
         let halfFrameDimension = shortFrameDimension / 2
-        let cellPitchInPixels = shortFrameDimension/PreludeView2626.maxCellRepeat
+        let cellPitchInPixels = shortFrameDimension/PreludeView2626.Const.maxCellRepeat
         return OffsetVectorInCells2626(x: Int((((halfFrameDimension - location.x) / cellPitchInPixels)).rounded()),
                                        y: Int((((halfFrameDimension - location.y) / cellPitchInPixels)).rounded()))
     }
@@ -67,7 +67,7 @@ struct DebugPanel2626_Previews: PreviewProvider {
                 print(location)
                 withAnimation(.easeInOut(duration: 7)) { // carefull: code is duplicated twice ;-(
                     if self.logScale == 0.0 { // if we are completely zoomed out at the time of the tap
-                        self.logScale = log2(PreludeView2626.maxCellRepeat) // zoom in
+                        self.logScale = log2(PreludeView2626.Const.maxCellRepeat) // zoom in
                         offsetInCells = intOffset(rect: geo.size, location: location)
                     } else {
                         offsetInCells = OffsetVectorInCells2626(x: 0, y: 0)

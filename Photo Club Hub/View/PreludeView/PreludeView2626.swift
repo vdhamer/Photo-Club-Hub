@@ -11,11 +11,14 @@ import SwiftUI
 struct PreludeView2626: View {
 
     // MARK: - Constants
-    static let maxCellRepeat: Double = 32 // max number of cells horizontally and vertically
-    fileprivate static let log2CellRepeat: Double = log2(maxCellRepeat) // typically log2(32) = 5
-    fileprivate static let squareSize = 5.5 / 18 // size of single colored square compared to pitch (0.3055555)
-    fileprivate let crossHairsWidth: CGFloat = 2
-    fileprivate let crossHairsColor: Color = Color(UIColor(white: 0.5, alpha: 0.5))
+    enum Const {
+        static let maxCellRepeat: Double = 32 // max number of cells horizontally and vertically
+        static let log2CellRepeat: Double = log2(Const.maxCellRepeat) // typically log2(32) = 5
+        static let squareSize = 5.5 / 18 // size of single colored square compared to pitch (0.3055555)
+        static let animationIntervalSeconds: TimeInterval = 7 // duration of animation in seconds
+        static let crossHairsWidth: CGFloat = 2
+        static let crossHairsColor: Color = Color(UIColor(white: 0.5, alpha: 0.5))
+    }
     fileprivate let preludeImageStore = PreludeImageStore2626()
     @State private var preludeImage = PreludeImage(assetName: "2021_FotogroepWaalre_058_square",
                                                    copyright: "© Greetje van Son",
@@ -23,7 +26,7 @@ struct PreludeView2626: View {
 
     // MARK: - State variables
     @State fileprivate var offsetInCells = OffsetVectorInCells2626(x: 8, y: 8) // # of cell units left/above imagecenter
-    @State fileprivate var logScale = log2CellRepeat // value driving the animation
+    @State fileprivate var logScale = Const.log2CellRepeat // value driving the animation
     @State fileprivate var willMoveToNextScreen = false // used to navigate to next screen
     @State fileprivate var crosshairsVisible = true // displays Crosshairs view, can be toggled via "c" on keyboard
     @State fileprivate var debugPanelVisible = false // displays DebugPanel view, can be toggled via "d" on keyboard
@@ -32,9 +35,9 @@ struct PreludeView2626: View {
 
     fileprivate func zoomInOutAnimated(_ location: CGPoint, geo: GeometryProxy) {
         debugLocation = location // for debugging only
-        withAnimation(.easeInOut(duration: 7)) { // carefull: code is duplicated twice ;-(
+        withAnimation(.easeInOut(duration: Const.animationIntervalSeconds)) {
             if logScale == 0.0 { // if we are completely zoomed out at the time of the tap
-                logScale = log2(PreludeView2626.maxCellRepeat) // zoom in
+                logScale = log2(Const.maxCellRepeat) // zoom in
                 offsetInCells = intOffset(rect: geo.size, location: location)
             } else {
                 offsetInCells = OffsetVectorInCells2626(x: 0, y: 0)
@@ -56,7 +59,7 @@ struct PreludeView2626: View {
                 .brightness(0.05)
                 .ignoresSafeArea()
                 .onTapGesture { // if user taps background, exit animation loop
-                    withAnimation(.easeInOut(duration: 7)) {
+                    withAnimation(.easeInOut(duration: Const.animationIntervalSeconds)) {
                         willMoveToNextScreen = true
                     }
                 }
@@ -72,20 +75,20 @@ struct PreludeView2626: View {
                                 .scaledToFit()
                                 .brightness(logScale == 0  ? 0.1 : 0.2)
                             Group {
-                                LogoPath(logCellRepeat: PreludeView2626.log2CellRepeat, // upper left part of logo
-                                         relPixelSize: PreludeView2626.squareSize,
+                                LogoPath(logCellRepeat: Const.log2CellRepeat, // upper left part of logo
+                                         relPixelSize: Const.squareSize,
                                          offsetPoint: .zero)
                                 .fill(.fgwGreen)
-                                LogoPath(logCellRepeat: PreludeView2626.log2CellRepeat, // upper right part of logo
-                                         relPixelSize: PreludeView2626.squareSize,
+                                LogoPath(logCellRepeat: Const.log2CellRepeat, // upper right part of logo
+                                         relPixelSize: Const.squareSize,
                                          offsetPoint: .top)
                                 .fill(.fgwBlue)
-                                LogoPath(logCellRepeat: PreludeView2626.log2CellRepeat, // lower left part of logo
-                                         relPixelSize: PreludeView2626.squareSize,
+                                LogoPath(logCellRepeat: Const.log2CellRepeat, // lower left part of logo
+                                         relPixelSize: Const.squareSize,
                                          offsetPoint: .leading)
                                 .fill(.fgwRed)
-                                LogoPath(logCellRepeat: PreludeView2626.log2CellRepeat, // lower righ part of logo
-                                         relPixelSize: PreludeView2626.squareSize,
+                                LogoPath(logCellRepeat: Const.log2CellRepeat, // lower righ part of logo
+                                         relPixelSize: Const.squareSize,
                                          offsetPoint: .center)
                                 .fill(.fgwGreen)
                             }
@@ -115,7 +118,7 @@ struct PreludeView2626: View {
                     }
 
                     CrossHairs2626(hidden: !crosshairsVisible)
-                        .stroke(crossHairsColor, lineWidth: crossHairsWidth)
+                        .stroke(Const.crossHairsColor, lineWidth: Const.crossHairsWidth)
                         .blendMode(.normal)
 
                     EscapeHatch(willMoveToNextScreen: $willMoveToNextScreen,
@@ -154,7 +157,7 @@ struct PreludeView2626: View {
     func offset(frame rect: CGSize) -> CGSize { // used to position large image in the middle of a cell
         guard logScale != 0 else { return .zero }
         let shortFrameDimension: Double = min(rect.width, rect.height)
-        let cellPitchInPixels: Double = shortFrameDimension/PreludeView2626.maxCellRepeat
+        let cellPitchInPixels: Double = shortFrameDimension/Const.maxCellRepeat
         let offset = CGSize( width: cellPitchInPixels * Double(offsetInCells.x) * pow(2, logScale),
                              height: cellPitchInPixels * Double(offsetInCells.y) * pow(2, logScale) )
         return offset
@@ -164,7 +167,7 @@ struct PreludeView2626: View {
         guard logScale != 0 else { return OffsetVectorInCells2626(x: 0, y: 0) }
         let shortFrameDimension = min(rect.width, rect.height)
         let halfFrameDimension = shortFrameDimension / 2
-        let cellPitchInPixels = shortFrameDimension/PreludeView2626.maxCellRepeat
+        let cellPitchInPixels = shortFrameDimension/Const.maxCellRepeat
         return OffsetVectorInCells2626(x: Int((((halfFrameDimension - location.x) / cellPitchInPixels)).rounded()),
                                        y: Int((((halfFrameDimension - location.y) / cellPitchInPixels)).rounded()))
     }
