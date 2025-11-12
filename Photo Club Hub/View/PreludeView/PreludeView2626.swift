@@ -243,16 +243,20 @@ struct OffsetVectorInCells2626 {
     var x, y: Int
 }
 
+// MARK: - Preview
+
 @available(iOS 26.0, *)
-struct Prelude2626_Previews: PreviewProvider {
-    static var previews: some View {
-        Group {
-            PreludeView2626()
-                .previewInterfaceOrientation(.portrait)
-            PreludeView2626()
-                .previewInterfaceOrientation(.landscapeLeft)
-            PreludeView2626()
-                .environment(\.colorScheme, .dark)
-        }
-    }
+#Preview("Prelude – Portrait", traits: .portrait) {
+    PreludeView2626()
+}
+
+@available(iOS 26.0, *)
+#Preview("Prelude – Landscape", traits: .landscapeLeft) {
+    PreludeView2626()
+}
+
+@available(iOS 26.0, *)
+#Preview("Prelude – Dark Mode") {
+    PreludeView2626()
+        .preferredColorScheme(.dark)
 }
