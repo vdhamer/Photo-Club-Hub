@@ -9,18 +9,18 @@ import SwiftUI
 import WebKit // for wkWebView
 
 struct FilteredMemberPortfoliosView: View {
-    fileprivate static let predicateNone = NSPredicate(format: "FALSEPREDICATE")
+    private static let predicateNone = NSPredicate(format: "FALSEPREDICATE")
 
-    @Environment(\.managedObjectContext) fileprivate var viewContext
+    @Environment(\.managedObjectContext) private var viewContext
 
     @SectionedFetchRequest<String, MemberPortfolio>(
         sectionIdentifier: \.organization_!.fullNameTown,
         sortDescriptors: [],
         predicate: predicateNone
-    ) fileprivate var sectionedPortfolios: SectionedFetchResults<String, MemberPortfolio>
+    ) private var sectionedPortfolios: SectionedFetchResults<String, MemberPortfolio>
 
-    fileprivate let searchText: Binding<String>
-    fileprivate let wkWebView = WKWebView()
+    private let searchText: Binding<String>
+    private let wkWebView = WKWebView()
 
     // regenerate Section using current FetchRequest with current filters and sorting
     init(memberPredicate: NSPredicate, searchText: Binding<String>) {
@@ -86,8 +86,8 @@ struct FilteredMemberPortfoliosView: View {
         }
     }
 
-    fileprivate struct Header: View {
-        @Environment(\.colorScheme) fileprivate var colorScheme // to detect dark mode
+    private struct Header: View {
+        @Environment(\.colorScheme) private var colorScheme // to detect dark mode
         var title: String
 
         var body: some View {
@@ -111,7 +111,7 @@ struct FilteredMemberPortfoliosView: View {
         }
     }
 
-    fileprivate struct Footer: View {
+    private struct Footer: View {
         var filtCount: Int // // number of items in filtered list
         var unfiltCount: Int // number of items in unfiltered list
         var listName: String
@@ -165,7 +165,7 @@ struct FilteredMemberPortfoliosView: View {
         }
     }
 
-    fileprivate func findFirstNonDistinct(memberPortfolios: [MemberPortfolio]) -> Photographer? {
+    private func findFirstNonDistinct(memberPortfolios: [MemberPortfolio]) -> Photographer? {
         let members = memberPortfolios.sorted()
         var previousMemberPortfolio: MemberPortfolio?
 
@@ -181,7 +181,7 @@ struct FilteredMemberPortfoliosView: View {
     }
 
     @MainActor
-    fileprivate func deleteMembers(section: [MemberPortfolio], indexSet: IndexSet) { // only temporarily deletes member
+    private func deleteMembers(section: [MemberPortfolio], indexSet: IndexSet) { // only temporarily deletes member
         // This function is no longer called (replaced by pull-down-to-reload data) but is kept for possible future use.
 
         for index in indexSet {
@@ -205,7 +205,7 @@ struct FilteredMemberPortfoliosView: View {
     // dynamically filter a sectionedFetchResult based on the bound searchText
     // The input type and output type differ: .filter returns a different data type (why?)
     // But the output type is simpler, and also works in a SwiftUI ForEach.
-    fileprivate func filterPortfolios(unFilteredPortfolios: SectionedFetchResults<String, MemberPortfolio>.Element)
+    private func filterPortfolios(unFilteredPortfolios: SectionedFetchResults<String, MemberPortfolio>.Element)
                                   -> [MemberPortfolio] {
         let filteredPortfolios: [MemberPortfolio]
 

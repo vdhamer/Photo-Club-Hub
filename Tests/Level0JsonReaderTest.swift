@@ -13,7 +13,7 @@ private let isBeingTested = true
 
 @MainActor @Suite("Tests the Level 0 JSON reader") struct Level0JsonReaderTests {
 
-    fileprivate let context: NSManagedObjectContext
+    private let context: NSManagedObjectContext
 
     init () {
         context = PersistenceController.shared.container.viewContext

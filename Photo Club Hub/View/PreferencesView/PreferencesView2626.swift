@@ -14,12 +14,12 @@ struct PreferencesView2626: View {
     @Binding var preferences: PreferencesStruct
     @Environment(\.dismiss) var dismiss: DismissAction // \.dismiss requires iOS 15
 
-    @State fileprivate var localPreferences = PreferencesStruct.defaultValue // parameters for various Toggles()
+    @State private var localPreferences = PreferencesStruct.defaultValue // parameters for various Toggles()
 
-    fileprivate let title = String(localized: "Preferences",
+    private let title = String(localized: "Preferences",
                                    table: "PhotoClubHub.SwiftUI",
                                    comment: "Title of screen with toggles to adjust preferences")
-    fileprivate static let animation: Animation = Animation.easeIn(duration: 5)
+    private static let animation: Animation = Animation.easeIn(duration: 5)
 
     init(preferences: Binding<PreferencesStruct>) {
         _preferences = preferences
@@ -150,7 +150,7 @@ struct PreferencesView2626: View {
 
 @available(iOS 26.0, *)
 struct PreferencesView2626_Previews: PreviewProvider {
-    @State static fileprivate var title = "PreferencesView Preview"
+    @State static private var title = "PreferencesView Preview"
     @State static var preferences = PreferencesStruct.defaultValue
 
     static var previews: some View {

@@ -11,7 +11,7 @@ import CoreData // for NSManagedObjectContext
 
 @MainActor @Suite("Tests the Level 2 JSON reader") struct Level2JsonReaderTests {
 
-    fileprivate let context: NSManagedObjectContext
+    private let context: NSManagedObjectContext
 
     init () {
         context = PersistenceController.shared.container.viewContext

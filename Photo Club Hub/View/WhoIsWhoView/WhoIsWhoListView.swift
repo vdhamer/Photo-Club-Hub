@@ -17,19 +17,19 @@ import WebKit // for wkWebView
 // Preview unfortunately doesn't work.
 
 struct WhoIsWhoListView: View {
-    @Environment(\.managedObjectContext) fileprivate var viewContext
-    @State fileprivate var showingPhotoClubs = false
-    @State fileprivate var showingMembers = false
+    @Environment(\.managedObjectContext) private var viewContext
+    @State private var showingPhotoClubs = false
+    @State private var showingMembers = false
     var searchText: Binding<String>
     let wkWebView: WKWebView
 
     @StateObject var model = PreferencesViewModel()
-    fileprivate var navigationTitle = String(localized: "Who's Who",
-                                             table: "PhotoClubHub.SwiftUI",
-                                             comment: "Title of page with list of photographers")
-    fileprivate let temporary = String(localized: "Temporary",
-                                       table: "PhotoClubHub.SwiftUI",
-                                       comment: "Expertise description at bottom of Who's Who screen")
+    private var navigationTitle = String(localized: "Who's Who",
+                                         table: "PhotoClubHub.SwiftUI",
+                                         comment: "Title of page with list of photographers")
+    private let temporary = String(localized: "Temporary",
+                                   table: "PhotoClubHub.SwiftUI",
+                                   comment: "Expertise description at bottom of Who's Who screen")
 
     init(searchText: Binding<String>, navigationTitle: String? = nil) {
         self.searchText = searchText
@@ -124,13 +124,13 @@ struct WhoIsWhoListView: View {
         .disableAutocorrection(true)
     }
 
-    fileprivate func sortExpertisesLocalized(lhs: Expertise, rhs: Expertise) -> Bool {
+    private func sortExpertisesLocalized(lhs: Expertise, rhs: Expertise) -> Bool {
         return lhs.selectedLocalizedExpertise.name < rhs.selectedLocalizedExpertise.name
     }
 
     static let iconExamples = LocalizedExpertiseResultLists(supportedList: [], temporaryList: [])
 
-    fileprivate func getIconString(isSupported: Bool) -> String {
+    private func getIconString(isSupported: Bool) -> String {
         return isSupported ? Self.iconExamples.supported.icon : Self.iconExamples.temporary.icon
     }
 

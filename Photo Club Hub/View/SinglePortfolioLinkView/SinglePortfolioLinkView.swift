@@ -15,7 +15,7 @@ struct SinglePortfolioLinkView<Content: View>: View {
     let wkWebView: WKWebView // pass as param to avoid creating this lots of times
     let content: () -> Content // what to show for this link
 
-    @Environment(\.horizontalSizeClass) fileprivate var horSizeClass
+    @Environment(\.horizontalSizeClass) private var horSizeClass
     var organization: Organization { destPortfolio.organization }
 
     var body: some View {

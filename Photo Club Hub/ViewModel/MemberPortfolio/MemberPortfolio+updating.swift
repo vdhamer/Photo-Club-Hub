@@ -70,9 +70,9 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
 
     // Update non-identifying attributes/properties within existing instance of class MemberPortfolio
     // swiftlint:disable:next function_body_length
-    fileprivate func update(bgContext: NSManagedObjectContext,
-                            removeMember: Bool, // used to remove club members that disappeared from lists
-                            optionalFields: MemberOptionalFields
+    private func update(bgContext: NSManagedObjectContext,
+                        removeMember: Bool, // used to remove club members that disappeared from lists
+                        optionalFields: MemberOptionalFields
                 ) -> Bool {
         var needsSaving: Bool = false
 
@@ -144,8 +144,8 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
     }
 
     // If optional support needed, use updateIfChangedOptional instead. updateIfChanged doesn't work for optionals.
-    fileprivate func updateIfChanged<Type>(update persistedValue: inout Type,
-                                           with newValue: Type?) -> Bool // true only if needsSaving
+    private func updateIfChanged<Type>(update persistedValue: inout Type,
+                                       with newValue: Type?) -> Bool // true only if needsSaving
                                     where Type: Equatable {
         if let newValue { // nil means no new value known - and thus doesn't erase existing value
             if persistedValue != newValue {
@@ -156,8 +156,8 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
         return false
     }
 
-    fileprivate func updateIfChangedOptional<Type>(update persistedValue: inout Type?,
-                                                   with newValue: Type?) -> Bool // true only if needsSaving
+    private func updateIfChangedOptional<Type>(update persistedValue: inout Type?,
+                                               with newValue: Type?) -> Bool // true only if needsSaving
                                                where Type?: Equatable {
         if let newValue { // nil means no new value known - and thus doesn't erase existing value
             if persistedValue != newValue {

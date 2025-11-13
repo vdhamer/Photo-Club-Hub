@@ -11,8 +11,8 @@ import CoreData // for NSManagedObjectContext
 
 @MainActor @Suite("Tests the Core Data PhotographerExpertise class") struct PhotographerExpertiseTest {
 
-    fileprivate let context: NSManagedObjectContext
-    fileprivate let photographer: Photographer
+    private let context: NSManagedObjectContext
+    private let photographer: Photographer
 
     init () {
         context = PersistenceController.shared.container.viewContext

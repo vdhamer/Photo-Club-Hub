@@ -41,9 +41,9 @@ struct DebugPanel1718: View {
 
 @available(iOS, obsoleted: 19.0, message: "Please use 'DebugPanel2626_Previews' for versions above iOS 18.x")
 struct DebugPanel1718_Previews: PreviewProvider {
-    @State fileprivate static var debugLocation = CGPoint(x: 0, y: 0)
-    @State fileprivate static var logScale: Double = 32 // value driving the animation
-    @State fileprivate static var offsetInCells = OffsetVectorInCells1718(x: 8, y: 6)
+    @State private static var debugLocation = CGPoint(x: 0, y: 0)
+    @State private static var logScale: Double = 32 // value driving the animation
+    @State private static var offsetInCells = OffsetVectorInCells1718(x: 8, y: 6)
 
     static func intOffset(rect: CGSize, location: CGPoint) -> OffsetVectorInCells1718 {
         guard DebugPanel1718_Previews.logScale != 0 else { return OffsetVectorInCells1718(x: 0, y: 0) }

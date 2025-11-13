@@ -49,9 +49,9 @@ struct FetchAndProcessFile {
     }
 
     // try to fetch the online root.level0.json file, and if that fails fetch it from one of the app's bundles instead
-    fileprivate func getData(remoteFileURL: URL,
-                             fileInBundleURL: URL,
-                             useOnlyInBundleFile: Bool) -> String {
+    private func getData(remoteFileURL: URL,
+                         fileInBundleURL: URL,
+                         useOnlyInBundleFile: Bool) -> String {
         if let urlData = try? String(contentsOf: remoteFileURL, encoding: .utf8), !useOnlyInBundleFile {
             return urlData
         }

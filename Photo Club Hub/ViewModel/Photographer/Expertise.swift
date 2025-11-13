@@ -38,12 +38,12 @@ extension Expertise {
 
     // Find existing Expertise object or create a new one.
     // Update existing attributes or fill the new object
-    fileprivate static func findCreateUpdate(context: NSManagedObjectContext, // can be foreground or background context
-                                             id: String,
-                                             isSupported: Bool?, // nil means don't change existing value
-                                             names: [JSON], // JSON equivalent of a dictionary with localized names
-                                             usage: [JSON]
-                                            ) -> Expertise {
+    private static func findCreateUpdate(context: NSManagedObjectContext, // can be foreground or background context
+                                         id: String,
+                                         isSupported: Bool?, // nil means don't change existing value
+                                         names: [JSON], // JSON equivalent of a dictionary with localized names
+                                         usage: [JSON]
+                                        ) -> Expertise {
 
         // execute fetchRequest to get expertise object for id=id. Query could return multiple - but shouldn't.
         let id = id.canonicalCase
@@ -128,10 +128,10 @@ extension Expertise {
 
     // Update non-identifying attributes/properties within an existing instance of class Expertise if needed.
     // Returns whether an update was needed.
-    fileprivate func update(context: NSManagedObjectContext,
-                            newIsSupported: Bool?, // nil means don't change
-                            name: [JSON], // empty array means do not change
-                            usage: [JSON]
+    private func update(context: NSManagedObjectContext,
+                        newIsSupported: Bool?, // nil means don't change
+                        name: [JSON], // empty array means do not change
+                        usage: [JSON]
     ) -> Bool {
 
         var updated: Bool = false // keep track if anything changed

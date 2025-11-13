@@ -18,11 +18,11 @@ extension View {
 struct ReadmeView1718: View {
 
     static let paddingConstant: CGFloat = 20
-    fileprivate let title = String(localized: "Readme", table: "PhotoClubHub.Readme", comment: "Title of Readme screen")
+    private let title = String(localized: "Readme", table: "PhotoClubHub.Readme", comment: "Title of Readme screen")
     @Environment(\.dismiss) var dismiss: DismissAction // \.dismiss requires iOS 15
-    @State fileprivate var showingRoadmap = false // controls visibility of Preferences screen
-    @State fileprivate var selectedRoadmapDetent = PresentationDetent.large // careful: must be element of detentsList
-    fileprivate var detentsList: Set<PresentationDetent> = [ .fraction(0.5), .fraction(0.70), .fraction(0.90), .large ]
+    @State private var showingRoadmap = false // controls visibility of Preferences screen
+    @State private var selectedRoadmapDetent = PresentationDetent.large // careful: must be element of detentsList
+    private var detentsList: Set<PresentationDetent> = [ .fraction(0.5), .fraction(0.70), .fraction(0.90), .large ]
 
     var body: some View {
         GeometryReader { geo in
@@ -389,7 +389,7 @@ struct ReadmeView1718: View {
 
 @available(iOS, obsoleted: 19.0, message: "Please use 'ReadmeView2626_Previews' for versions about iOS 18.x")
 struct ReadmeView1718_Previews: PreviewProvider {
-    @State static fileprivate var title = "Info Preview"
+    @State static private var title = "Info Preview"
 
     static var previews: some View {
         ReadmeView1718()

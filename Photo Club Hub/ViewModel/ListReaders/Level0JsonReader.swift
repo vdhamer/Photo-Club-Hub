@@ -31,10 +31,10 @@ public class Level0JsonReader {
     }
 
     // Marked as @Sendable to satisfy concurrency safety requirements.
-    @Sendable static fileprivate func readRootLevel0Json(bgContext: NSManagedObjectContext,
-                                                         jsonData: String,
-                                                         fileSelector: FileSelector,
-                                                         isBeingTested: Bool) {
+    @Sendable static private func readRootLevel0Json(bgContext: NSManagedObjectContext,
+                                                     jsonData: String,
+                                                     fileSelector: FileSelector,
+                                                     isBeingTested: Bool) {
 
         let fileName: String = fileSelector.fileName
         ifDebugPrint("\nStarting background read of \(fileName).level0.json to get supported Expertises and Languages.")

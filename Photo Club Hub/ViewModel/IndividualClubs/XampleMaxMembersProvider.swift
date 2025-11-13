@@ -35,10 +35,10 @@ final public class XampleMaxMembersProvider: Sendable {
 
     }
 
-    fileprivate func insertOnlineMemberData(bgContext: NSManagedObjectContext,
-                                            isBeingTested: Bool,
-                                            town: String = "Rotterdam",
-                                            useOnlyInBundleFile: Bool) {
+    private func insertOnlineMemberData(bgContext: NSManagedObjectContext,
+                                        isBeingTested: Bool,
+                                        town: String = "Rotterdam",
+                                        useOnlyInBundleFile: Bool) {
         let idPlus = OrganizationIdPlus(fullName: "Xample Club With Maximal Data",
                                         town: town,
                                         nickname: "XampleMax")

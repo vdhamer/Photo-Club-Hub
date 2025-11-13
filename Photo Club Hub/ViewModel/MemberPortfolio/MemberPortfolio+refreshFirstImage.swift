@@ -59,7 +59,7 @@ extension MemberPortfolio {
         }
     }
 
-    fileprivate func parseXMLContent(xmlContent: String, member: MemberPortfolio) { // sample data
+    private func parseXMLContent(xmlContent: String, member: MemberPortfolio) { // sample data
         //    <?xml version="1.0" encoding="UTF-8"?>
         //    <juiceboxgallery
         //                 galleryTitlePosition="NONE"

@@ -32,7 +32,7 @@ public struct PersonName {
     }
 
     @available(macOS 13.0, *)
-    fileprivate func removeParenthesizedRole(fullNameWithParenthesizedRole: String) -> String {
+    private func removeParenthesizedRole(fullNameWithParenthesizedRole: String) -> String {
         // "José Daniëls" -> "José Daniëls" - former member
         // "Bart van Stekelenburg (lid)" -> "Bart van Stekelenburg" - member
         // "Zoë Aspirant (aspirantlid)" -> "Zoë Aspirant" - aspiring member

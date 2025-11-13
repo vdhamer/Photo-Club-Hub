@@ -9,19 +9,19 @@ import SwiftUI
 
 @available(iOS 26.0, *)
 struct OrganizationListView2626: View {
-    @Environment(\.managedObjectContext) fileprivate var viewContext
+    @Environment(\.managedObjectContext) private var viewContext
     @StateObject var model = PreferencesViewModel()
     @State var locationManager = LocationManager()
-    @State fileprivate var searchText: String = "" // bindable string with content of Search bar
+    @State private var searchText: String = "" // bindable string with content of Search bar
 
     @FetchRequest(
         sortDescriptors: [], // organizations is only used for counting, so sorting doesn't matter
         animation: .default)
-    fileprivate var organizations: FetchedResults<Organization>
+    private var organizations: FetchedResults<Organization>
 
-    fileprivate static let predicateAll = NSPredicate(format: "TRUEPREDICATE")
-    fileprivate var predicate: NSPredicate = Self.predicateAll
-    fileprivate var navigationTitle = String(localized: "Clubs and Museums",
+    private static let predicateAll = NSPredicate(format: "TRUEPREDICATE")
+    private var predicate: NSPredicate = Self.predicateAll
+    private var navigationTitle = String(localized: "Clubs and Museums",
                                              table: "PhotoClubHub.SwiftUI",
                                              comment: "Title of page with maps for Clubs and Museums")
 
@@ -97,7 +97,7 @@ struct OrganizationListView2626: View {
         .disableAutocorrection(true)
     }
 
-    fileprivate let toolbarItemPlacement: ToolbarItemPlacement = UIDevice.isIPad ?
+    private let toolbarItemPlacement: ToolbarItemPlacement = UIDevice.isIPad ?
         .destructiveAction : // iPad: Search field in toolbar
         .navigationBarTrailing // iPhone: Search field in drawer
 }

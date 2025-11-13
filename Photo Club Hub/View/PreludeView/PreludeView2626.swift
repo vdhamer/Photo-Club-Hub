@@ -19,21 +19,21 @@ struct PreludeView2626: View {
         static let crossHairsWidth: CGFloat = 2
         static let crossHairsColor: Color = Color(UIColor(white: 0.5, alpha: 0.5))
     }
-    fileprivate let preludeImageStore = PreludeImageStore2626()
+    private let preludeImageStore = PreludeImageStore2626()
     @State private var preludeImage = PreludeImage(assetName: "2021_FotogroepWaalre_058_square",
                                                    copyright: "© Greetje van Son",
                                                    whiteCoordinates: .init(x: 8, y: 6)) // non-random temp answer
 
     // MARK: - State variables
-    @State fileprivate var offsetInCells = OffsetVectorInCells2626(x: 8, y: 8) // # of cell units left/above imagecenter
-    @State fileprivate var logScale = Const.log2CellRepeat // value driving the animation
-    @State fileprivate var willMoveToNextScreen = false // used to navigate to next screen
-    @State fileprivate var crosshairsVisible = true // displays Crosshairs view, can be toggled via "c" on keyboard
-    @State fileprivate var debugPanelVisible = false // displays DebugPanel view, can be toggled via "d" on keyboard
-    @State fileprivate var debugLocation = CGPoint(x: 0, y: 0)
+    @State private var offsetInCells = OffsetVectorInCells2626(x: 8, y: 8) // # of cell units left/above imagecenter
+    @State private var logScale = Const.log2CellRepeat // value driving the animation
+    @State private var willMoveToNextScreen = false // used to navigate to next screen
+    @State private var crosshairsVisible = true // displays Crosshairs view, can be toggled via "c" on keyboard
+    @State private var debugPanelVisible = false // displays DebugPanel view, can be toggled via "d" on keyboard
+    @State private var debugLocation = CGPoint(x: 0, y: 0)
     @Environment(\.horizontalSizeClass) var horSizeClass
 
-    fileprivate func zoomInOutAnimated(_ location: CGPoint, geo: GeometryProxy) {
+    private func zoomInOutAnimated(_ location: CGPoint, geo: GeometryProxy) {
         debugLocation = location // for debugging only
         withAnimation(.easeInOut(duration: Const.animationIntervalSeconds)) {
             if logScale == 0.0 { // if we are completely zoomed out at the time of the tap

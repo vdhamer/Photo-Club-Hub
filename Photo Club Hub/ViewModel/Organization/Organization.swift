@@ -257,13 +257,13 @@ extension Organization {
 
 	// Update non-identifying attributes/properties within existing instance of class PhotoClub
     // swiftlint:disable:next function_parameter_count cyclomatic_complexity function_body_length
-    fileprivate func update(bgContext: NSManagedObjectContext,
-                            organizationTypeEnum: OrganizationTypeEnum,
-                            nickName: String,
-                            coordinates: CLLocationCoordinate2D,
-                            removeOrganization: Bool, // used to remove records for org's that disappeared
-                            optionalFields: OrganizationOptionalFields,
-                            pinned: Bool) -> Bool {
+    private func update(bgContext: NSManagedObjectContext,
+                        organizationTypeEnum: OrganizationTypeEnum,
+                        nickName: String,
+                        coordinates: CLLocationCoordinate2D,
+                        removeOrganization: Bool, // used to remove records for org's that disappeared
+                        optionalFields: OrganizationOptionalFields,
+                        pinned: Bool) -> Bool {
 
 		var modified: Bool = false
 

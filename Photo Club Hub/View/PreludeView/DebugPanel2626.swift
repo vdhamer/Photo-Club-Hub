@@ -41,9 +41,9 @@ struct DebugPanel2626: View {
 
 @available(iOS 26.0, *)
 struct DebugPanel2626_Previews: PreviewProvider {
-    @State fileprivate static var debugLocation = CGPoint(x: 0, y: 0)
-    @State fileprivate static var logScale: Double = 32 // value driving the animation
-    @State fileprivate static var offsetInCells = OffsetVectorInCells2626(x: 8, y: 6)
+    @State private static var debugLocation = CGPoint(x: 0, y: 0)
+    @State private static var logScale: Double = 32 // value driving the animation
+    @State private static var offsetInCells = OffsetVectorInCells2626(x: 8, y: 6)
 
     static func intOffset(rect: CGSize, location: CGPoint) -> OffsetVectorInCells2626 {
         guard DebugPanel2626_Previews.logScale != 0 else { return OffsetVectorInCells2626(x: 0, y: 0) }

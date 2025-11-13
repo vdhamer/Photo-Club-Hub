@@ -122,9 +122,9 @@ extension LocalizedExpertise {
 
     // Update non-identifying attributes/properties within an existing instance of class LocalizedExpertise if needed.
     // Returns whether an update was needed.
-    fileprivate func update(context: NSManagedObjectContext,
-                            localizedName: String?,
-                            localizedUsage: String?) -> Bool {
+    private func update(context: NSManagedObjectContext,
+                        localizedName: String?,
+                        localizedUsage: String?) -> Bool {
 
         var modified: Bool = false
 

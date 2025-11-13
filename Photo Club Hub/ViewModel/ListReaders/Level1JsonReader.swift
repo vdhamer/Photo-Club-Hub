@@ -29,10 +29,10 @@ public class Level1JsonReader {
                                                                                           isBeingTested:))
     }
 
-    @Sendable static fileprivate func readRootLevel1Json(bgContext: NSManagedObjectContext,
-                                                         jsonData: String,
-                                                         fileSelector: FileSelector,
-                                                         isBeingTested: Bool = false) {
+    @Sendable static private func readRootLevel1Json(bgContext: NSManagedObjectContext,
+                                                     jsonData: String,
+                                                     fileSelector: FileSelector,
+                                                     isBeingTested: Bool = false) {
 
         let fileName = fileSelector.fileName
         ifDebugPrint("\nWill read (\(fileName)).level1.json with a list of organizations in the background.")

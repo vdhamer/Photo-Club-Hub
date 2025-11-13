@@ -35,10 +35,10 @@ public class Level2JsonReader { // normally running on a background thread
                                )
     }
 
-    @Sendable static fileprivate func readRootLevel2Json(bgContext: NSManagedObjectContext,
-                                                         jsonData: String,
-                                                         fileSelector: FileSelector,
-                                                         isBeingTested: Bool) {
+    @Sendable static private func readRootLevel2Json(bgContext: NSManagedObjectContext,
+                                                     jsonData: String,
+                                                     fileSelector: FileSelector,
+                                                     isBeingTested: Bool) {
 
         guard fileSelector.organizationIdPlus != nil else { // need expected id of a club
             fatalError("Missing `targetIdorganizationIdPlus` in readRootLevel2Json()")
@@ -105,9 +105,9 @@ public class Level2JsonReader { // normally running on a background thread
         ifDebugPrint("Completed mergeLevel2Json() in background")
     }
 
-    fileprivate static func loadMember(bgContext: NSManagedObjectContext,
-                                       member: JSON,
-                                       club: Organization) {
+    private static func loadMember(bgContext: NSManagedObjectContext,
+                                   member: JSON,
+                                   club: Organization) {
         // MARK: - /members/member/name
         guard member["name"].exists(),
               member["name"]["givenName"].exists(),
@@ -152,9 +152,9 @@ public class Level2JsonReader { // normally running on a background thread
         memberPortfolio.refreshFirstImage()
     }
 
-    fileprivate static func loadClubOptionals(bgContext: NSManagedObjectContext,
-                                              jsonOptionals: JSON,
-                                              club: Organization) {
+    private static func loadClubOptionals(bgContext: NSManagedObjectContext,
+                                          jsonOptionals: JSON,
+                                          club: Organization) {
         let clubWebsite = jsonOptionals["website"].exists() ? URL(string: jsonOptionals["website"].stringValue) : nil
         let wikipedia: URL? = Level2JsonReader.jsonOptionalsToURL(jsonOptionals: jsonOptionals, key: "wikipedia")
         // level2URL is deliberately ignoring to avoid possibility of overruling what is stated in Level 1 file
@@ -179,10 +179,10 @@ public class Level2JsonReader { // normally running on a background thread
         )
     }
 
-    fileprivate static func loadPhotographerAndMemberOptionals(bgContext: NSManagedObjectContext,
-                                                               jsonOptionals: JSON,
-                                                               photographer: Photographer,
-                                                               club: Organization) -> MemberPortfolio {
+    private static func loadPhotographerAndMemberOptionals(bgContext: NSManagedObjectContext,
+                                                           jsonOptionals: JSON,
+                                                           photographer: Photographer,
+                                                           club: Organization) -> MemberPortfolio {
 
         let memberRolesAndStatus = MemberRolesAndStatus(jsonRoles: jsonOptionals["roles"],
                                                         jsonStatus: jsonOptionals["status"])
@@ -240,7 +240,7 @@ public class Level2JsonReader { // normally running on a background thread
 
     }
 
-    fileprivate static func jsonOptionalsToURL(jsonOptionals: JSON, key: String) -> URL? {
+    private static func jsonOptionalsToURL(jsonOptionals: JSON, key: String) -> URL? {
         guard jsonOptionals[key].exists() else { return nil }
         guard let string = jsonOptionals[key].string else { return nil }
         return URL(string: string) // returns nil if the string doesn’t represent a valid URL
@@ -252,9 +252,9 @@ public class Level2JsonReader { // normally running on a background thread
     ///   - targetIdPlus: The expected value for OrganizationIdPlus.
     ///   - isBeingTested: if true, disable check on town.
     /// - Returns: The validated OrganizationIdPlus if all fields exist and match, or nil otherwise.
-    fileprivate static func checkIdPlus(jsonClub: JSON,
-                                        targetIdPlus: OrganizationIdPlus,
-                                        isBeingTested: Bool) -> OrganizationIdPlus? {
+    private static func checkIdPlus(jsonClub: JSON,
+                                    targetIdPlus: OrganizationIdPlus,
+                                    isBeingTested: Bool) -> OrganizationIdPlus? {
 
         // MARK: - /club/idPlus loading
         guard jsonClub["idPlus"].exists() else {
@@ -305,7 +305,7 @@ public class Level2JsonReader { // normally running on a background thread
         return idPlus
     }
 
-    fileprivate static func loadClubCoordinates(jsonClub: JSON, targetIdPlus: OrganizationIdPlus) ->
+    private static func loadClubCoordinates(jsonClub: JSON, targetIdPlus: OrganizationIdPlus) ->
         CLLocationCoordinate2D? {
 
         guard jsonClub["coordinates"].exists() else {

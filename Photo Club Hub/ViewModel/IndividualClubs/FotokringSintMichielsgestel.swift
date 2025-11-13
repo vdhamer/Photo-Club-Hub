@@ -35,10 +35,10 @@ final public class FotokringStMichielsgestelMembersProvider: Sendable {
 
     }
 
-    fileprivate func insertOnlineMemberData(bgContext: NSManagedObjectContext,
-                                            isBeingTested: Bool,
-                                            town: String = "Sint-Michielsgestel",
-                                            useOnlyInBundleFile: Bool) {
+    private func insertOnlineMemberData(bgContext: NSManagedObjectContext,
+                                        isBeingTested: Bool,
+                                        town: String = "Sint-Michielsgestel",
+                                        useOnlyInBundleFile: Bool) {
         let idPlus = OrganizationIdPlus(fullName: "Fotokring Sint-Michielsgestel",
                                         town: town,
                                         nickname: "fkGestel")

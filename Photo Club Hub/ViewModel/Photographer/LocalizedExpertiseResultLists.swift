@@ -88,7 +88,7 @@ public struct LocalizedExpertiseResultLists {
         self.temporary.list = resultLERLs.temporary.list
     }
 
-    fileprivate func customHint(localizedExpertiseResults: [LocalizedExpertiseResult]) -> String {
+    private func customHint(localizedExpertiseResults: [LocalizedExpertiseResult]) -> String {
         var hint: String = ""
         let temp = LocalizedExpertiseResultLists(supportedList: [], temporaryList: [])
 

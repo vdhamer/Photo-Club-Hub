@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RoleStatusIconView: View {
 
-    fileprivate let memberRoleToImage: [MemberRole: Image] =  [ // dictionary
+    private let memberRoleToImage: [MemberRole: Image] =  [ // dictionary
         .admin: Image(systemName: "wifi.square"),
         .chairman: Image("chairman"),
         .secretary: Image(systemName: "square.text.square"),
@@ -17,7 +17,7 @@ struct RoleStatusIconView: View {
         .viceChairman: Image("vice-chairman")
     ]
 
-    fileprivate let memberStatusToImage: [MemberStatus: Image] = [ // dictionary
+    private let memberStatusToImage: [MemberStatus: Image] = [ // dictionary
         .coach: Image(systemName: "mic.square"),
         .deceased: Image("deceased.member"),
         .former: Image("former.member"),
@@ -26,7 +26,7 @@ struct RoleStatusIconView: View {
         .prospective: Image(systemName: "dot.viewfinder")
     ]
 
-    fileprivate var iconImage = Image(systemName: "exclamationmark.triangle.fill")
+    private var iconImage = Image(systemName: "exclamationmark.triangle.fill")
 
     init(memberStatus: MemberStatus) { // construct icon for memberStatus
         iconImage = memberStatusToImage[memberStatus, default: iconImage]
@@ -49,7 +49,7 @@ struct RoleStatusIconView: View {
         }
     }
 
-    fileprivate func chooseOneMemberRole(memberRolesAndStatus: MemberRolesAndStatus) -> MemberRole? {
+    private func chooseOneMemberRole(memberRolesAndStatus: MemberRolesAndStatus) -> MemberRole? {
         if memberRolesAndStatus.roles[.chairman] == true { return .chairman }
         if memberRolesAndStatus.roles[.viceChairman] == true { return .viceChairman }
         if memberRolesAndStatus.roles[.treasurer] == true { return .treasurer}
@@ -58,7 +58,7 @@ struct RoleStatusIconView: View {
         return nil // member may not have any official managerial Role
     }
 
-    fileprivate func chooseOneMemberStatus(memberRolesAndStatus: MemberRolesAndStatus) -> MemberStatus {
+    private func chooseOneMemberStatus(memberRolesAndStatus: MemberRolesAndStatus) -> MemberStatus {
         if memberRolesAndStatus.status[.deceased] == true { return .deceased }
         if memberRolesAndStatus.status[.honorary] == true { return .honorary }
         if memberRolesAndStatus.status[.prospective] == true { return .prospective }

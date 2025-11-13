@@ -13,7 +13,7 @@ import UIKit
 class LocationManager {
     var location: CLLocation?
 
-    fileprivate let locationManager = CLLocationManager()
+    private let locationManager = CLLocationManager()
 
     func requestUserAuthorization() async throws {
         locationManager.requestWhenInUseAuthorization()

@@ -9,32 +9,32 @@ import SwiftUI
 
 @available(iOS 26.0, *)
 struct MemberPortfolioListView2626: View {
-    @Environment(\.managedObjectContext) fileprivate var viewContext
-    fileprivate var detentsList: Set<PresentationDetent> = [ .fraction(0.5), .fraction(0.70), .fraction(0.90), .large ]
+    @Environment(\.managedObjectContext) private var viewContext
+    private var detentsList: Set<PresentationDetent> = [ .fraction(0.5), .fraction(0.70), .fraction(0.90), .large ]
 
-    @State fileprivate var showingPreferences = false // controls visibility of Preferences screen
-    @State fileprivate var showingReadme = false // controls visibility of Readme screen
+    @State private var showingPreferences = false // controls visibility of Preferences screen
+    @State private var showingReadme = false // controls visibility of Readme screen
 
-    @State fileprivate var selectedPreferencesDetent = PresentationDetent.large // must be elem. of detentsList
-    @State fileprivate var selectedReadmeDetent = PresentationDetent.fraction(0.70) // must be element of detentsList
+    @State private var selectedPreferencesDetent = PresentationDetent.large // must be elem. of detentsList
+    @State private var selectedReadmeDetent = PresentationDetent.fraction(0.70) // must be element of detentsList
 
-    @State fileprivate var searchText: String = ""
+    @State private var searchText: String = ""
 
     @FetchRequest( // is this used? It is replaced by a fetchRequest in Photographers page
         sortDescriptors: [SortDescriptor(\.familyName_, order: .forward)], // deliberately in strange order
         animation: .default)
-    fileprivate var photographers: FetchedResults<Photographer>
+    private var photographers: FetchedResults<Photographer>
 
     @FetchRequest(
         sortDescriptors: [SortDescriptor(\.pinned, order: .reverse), // pinned first
                           SortDescriptor(\.fullName_, order: .forward), // photo clubs are identified by (name, town)
                           SortDescriptor(\.town_, order: .forward)],
         animation: .default)
-    fileprivate var organizations: FetchedResults<Organization>
+    private var organizations: FetchedResults<Organization>
 
     @StateObject var model = PreferencesViewModel()
 
-    fileprivate let toolbarItemPlacement: ToolbarItemPlacement = UIDevice.isIPad ?
+    private let toolbarItemPlacement: ToolbarItemPlacement = UIDevice.isIPad ?
         .destructiveAction : // iPad: Search field in toolbar
         .navigationBarTrailing // iPhone: Search field in drawer
 
@@ -145,7 +145,7 @@ struct MemberListView2626_Previews: PreviewProvider {
 
 @available(iOS 26.0, *)
 struct PreferencesIcon2626: View {
-    @Environment(\.isEnabled) fileprivate var isEnabled: Bool
+    @Environment(\.isEnabled) private var isEnabled: Bool
 
     var body: some View {
         Image("slider.horizontal.3.rectangle")

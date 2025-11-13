@@ -14,7 +14,7 @@ extension Language {
         fatalError("init() is not available. Use .findCreateUpdate instead.")
     }
 
-    fileprivate static var code2Name: [String: String] {
+    private static var code2Name: [String: String] {
         [
             "DE": "German",
             "EN": "English",
@@ -112,8 +112,8 @@ extension Language {
 
     // Update non-identifying attributes/properties within an existing instance of class Language if needed.
     // Returns whether an update was needed.
-    fileprivate func update(context: NSManagedObjectContext,
-                            nameENOptional: String?) -> Bool { // change language.name if needed
+    private func update(context: NSManagedObjectContext,
+                        nameENOptional: String?) -> Bool { // change language.name if needed
 
         guard let nameEN = nameENOptional else { return false } // nothing to change
 
@@ -137,7 +137,7 @@ extension Language {
         return modified
     }
 
-    fileprivate static func save(context: NSManagedObjectContext, language: Language, create: Bool) {
+    private static func save(context: NSManagedObjectContext, language: Language, create: Bool) {
         do {
             try context.save()
         } catch {

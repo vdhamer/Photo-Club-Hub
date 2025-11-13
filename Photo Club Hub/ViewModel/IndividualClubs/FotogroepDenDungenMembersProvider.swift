@@ -33,9 +33,9 @@ final public class FotoclubDenDungenMembersProvider: Sendable {
 
     }
 
-    fileprivate func insertOnlineMemberData(bgContext: NSManagedObjectContext,
-                                            isBeingTested: Bool,
-                                            town: String = "Den Dungen") {
+    private func insertOnlineMemberData(bgContext: NSManagedObjectContext,
+                                        isBeingTested: Bool,
+                                        town: String = "Den Dungen") {
         let idPlus = OrganizationIdPlus(fullName: "Fotoclub Den Dungen",
                                         town: town,
                                         nickname: "fcDenDungen")

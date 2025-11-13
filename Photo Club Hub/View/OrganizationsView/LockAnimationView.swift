@@ -58,7 +58,7 @@ struct LockAnimationView: View {
 }
 
 struct LockAnimation_Previews: PreviewProvider {
-    @State fileprivate var locked: Bool = true
+    @State private var locked: Bool = true
 
     static var previews: some View {
         GeometryReader { geo in

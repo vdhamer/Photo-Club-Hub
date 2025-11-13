@@ -110,8 +110,7 @@ extension PhotographerExpertise {
 
     // Update non-identifying attributes/properties within an existing instance of class LocalizedExpertise if needed.
     // Returns whether an update was needed. But this class (unlike the others) has no relevant properties.
-    fileprivate func update(context: NSManagedObjectContext) -> Bool {
-
+    private func update(context: NSManagedObjectContext) -> Bool {
         let modified: Bool = false
         // if there is ever anything to modify, this goes here
         return modified

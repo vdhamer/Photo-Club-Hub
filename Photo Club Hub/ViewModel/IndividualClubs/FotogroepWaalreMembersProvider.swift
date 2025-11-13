@@ -36,10 +36,10 @@ final public class FotogroepWaalreMembersProvider: Sendable { // WWDC21 Earthqua
 
     }
 
-    fileprivate func insertOnlineMemberData(bgContext: NSManagedObjectContext,
-                                            isBeingTested: Bool,
-                                            town: String = "Waalre",
-                                            useOnlyInBundleFile: Bool) {
+    private func insertOnlineMemberData(bgContext: NSManagedObjectContext,
+                                        isBeingTested: Bool,
+                                        town: String = "Waalre",
+                                        useOnlyInBundleFile: Bool) {
 
         let idPlus = OrganizationIdPlus(fullName: "Fotogroep Waalre",
                                         town: town,

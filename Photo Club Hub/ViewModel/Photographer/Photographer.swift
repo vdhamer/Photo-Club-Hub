@@ -30,17 +30,17 @@ extension Photographer {
 		(memberships_ as? Set<MemberPortfolio>) ?? []
 	}
 
-	fileprivate(set) public var givenName: String {
+	private(set) public var givenName: String {
 		get { return givenName_ ?? "MissingGivenName" }
 		set { givenName_ = newValue }
 	}
 
-    fileprivate(set) public var infixName: String { // "van" in names like "Jan van Doesburg"
+    private(set) public var infixName: String { // "van" in names like "Jan van Doesburg"
         get { return infixName_ ?? "MissingInfixName" } // Should never happen. CoreData defaults to empty string.
         set { infixName_ = newValue }
     }
 
-    fileprivate(set) public var familyName: String {
+    private(set) public var familyName: String {
 		get { return familyName_ ?? "MissingFamilyName" }
 		set { familyName_ = newValue }
 	}
@@ -127,9 +127,9 @@ extension Photographer {
 
 	// Update non-identifying properties within existing instance of class Photographer
     // Returns whether any of the non-identifying properties were updated.
-    fileprivate static func update(bgContext: NSManagedObjectContext,
-                                   photographer: Photographer,
-                                   optionalFields: PhotographerOptionalFields) -> Bool {
+    private static func update(bgContext: NSManagedObjectContext,
+                               photographer: Photographer,
+                               optionalFields: PhotographerOptionalFields) -> Bool {
 
         // following are fields in PhotographerOptionalFields type
         if optionalFields.bornDT != nil, photographer.bornDT != optionalFields.bornDT {

@@ -13,16 +13,16 @@ import CoreData
 @MainActor
 struct FilteredOrganizationView2626: View {
 
-    @Environment(\.managedObjectContext) fileprivate var viewContext // may not be correct
+    @Environment(\.managedObjectContext) private var viewContext // may not be correct
     @Environment(\.layoutDirection) var layoutDirection // .leftToRight or .rightToLeft
 
     @FetchRequest var fetchedOrganizations: FetchedResults<Organization>
 
-    @State fileprivate var cameraPositions: [OrganizationID: MapCameraPosition] = [:] // location of camera per club
-    @State fileprivate var mapSelection: MKMapItem? // selected Anotation, if any
+    @State private var cameraPositions: [OrganizationID: MapCameraPosition] = [:] // location of camera per club
+    @State private var mapSelection: MKMapItem? // selected Anotation, if any
 
-    fileprivate let searchText: Binding<String>
-    fileprivate let interactionModes: MapInteractionModes = [.pan, .zoom, .rotate, .pitch]
+    private let searchText: Binding<String>
+    private let interactionModes: MapInteractionModes = [.pan, .zoom, .rotate, .pitch]
 
     // regenerate Section using dynamic FetchRequest with dynamic predicate and dynamic sortDescriptor
     init(predicate: NSPredicate, searchText: Binding<String>) {
@@ -179,8 +179,8 @@ struct FilteredOrganizationView2626: View {
     } // body
 
     // find PhotoClub using identifier (clubName,oldTown) and then fill (newTown,newCountry) in CoreData database
-    fileprivate func updateTownCountry(clubName: String, town: String,
-                                       localizedTown: String, localizedCountry: String?) async {
+    private func updateTownCountry(clubName: String, town: String,
+                                   localizedTown: String, localizedCountry: String?) async {
 
         let bgContext = PersistenceController.shared.container.newBackgroundContext() // background thread
         bgContext.name = "save reverseGeocode \(clubName)"
@@ -222,7 +222,7 @@ struct FilteredOrganizationView2626: View {
     }
 
     // conversion to [MKMapItems] is needed to make Placemarks touch (and mouse) sensitive
-    fileprivate func toMapItems(organizations: FetchedResults<Organization>) -> [MKMapItem] {
+    private func toMapItems(organizations: FetchedResults<Organization>) -> [MKMapItem] {
         var mapItems: [MKMapItem] = []
         for organization in organizations {
             let coordinates = CLLocationCoordinate2D(latitude: organization.latitude_,
@@ -235,7 +235,7 @@ struct FilteredOrganizationView2626: View {
         return mapItems
     }
 
-    fileprivate func initializeCameraPosition(organization: Organization) {
+    private func initializeCameraPosition(organization: Organization) {
         let mapCameraPosition: MapCameraPosition
 
         mapCameraPosition = MapCameraPosition.region(MKCoordinateRegion(
@@ -246,7 +246,7 @@ struct FilteredOrganizationView2626: View {
         cameraPositions[organization.id] = mapCameraPosition // return MapCameraPosition and don't use input param
     }
 
-    fileprivate func cameraPositionBinding(for key: OrganizationID) -> Binding<MapCameraPosition> {
+    private func cameraPositionBinding(for key: OrganizationID) -> Binding<MapCameraPosition> {
         let defaultCameraPosition = MapCameraPosition.region(MKCoordinateRegion(
             center: CLLocationCoordinate2D(latitude: 0, longitude: 6.52396), // island on the equator
                     latitudinalMeters: 100000, longitudinalMeters: 100000)
@@ -261,7 +261,7 @@ struct FilteredOrganizationView2626: View {
     }
 
     @MainActor
-    fileprivate func deleteOrganizations(indexSet: IndexSet) {
+    private func deleteOrganizations(indexSet: IndexSet) {
         // Normally deletes just one organization, but this is how .onDelete works.
         // This function is no longer called (replaced by pull-down-to-reload data) but is kept for possible future use.
 
@@ -281,7 +281,7 @@ struct FilteredOrganizationView2626: View {
         }
     }
 
-    fileprivate var filteredOrganizations: [Organization] {
+    private var filteredOrganizations: [Organization] {
         if searchText.wrappedValue.isEmpty {
             return fetchedOrganizations.filter { _ in
                 true
@@ -354,7 +354,7 @@ extension FilteredOrganizationView2626 { // reverse GeoCoding
 @available(iOS 26.0, *)
 extension FilteredOrganizationView2626 { // tests for equality
 
-    fileprivate func isEqual(organizationLHS: Organization, organizationRHS: Organization) -> Bool {
+    private func isEqual(organizationLHS: Organization, organizationRHS: Organization) -> Bool {
         return (organizationLHS.fullName == organizationRHS.fullName) && (organizationLHS.town == organizationRHS.town)
     }
 
