@@ -325,6 +325,17 @@
         }
       }
     },
+    "Go to Portfolios screen" : {
+      "comment" : "Button hint",
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Naar het Portfolio’s scherm"
+          }
+        }
+      }
+    },
     "In debug mode" : {
       "comment" : "Shown instead of app name in PreludeView when app is started",
       "localizations" : {
@@ -406,6 +417,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "leden"
+          }
+        }
+      }
+    },
+    "Next" : {
+      "comment" : "Button text",
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Volgend"
           }
         }
       }
