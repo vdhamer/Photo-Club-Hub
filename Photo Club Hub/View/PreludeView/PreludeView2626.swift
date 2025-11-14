@@ -73,12 +73,18 @@ struct PreludeView2626: View {
                           horSizeClass: horSizeClass)
 
                 GeometryReader { geo in
+                    let side = min(geo.size.width, geo.size.height)
+                    let cornerRadius = side * (UIDevice.isIPad ? 0.035 : 0.15)
+                    let shape = RoundedRectangle(cornerRadius: cornerRadius, style: .continuous)
+
                     ZStack(alignment: .center) {
                         ZStack {
+
                             Image(preludeImage.assetName)
                                 .resizable()
                                 .scaledToFit()
                                 .brightness(isZoomedOut ? 0.1 : 0.2)
+
                             Group {
                                 LogoPath(logCellRepeat: Const.log2CellRepeat, // upper left part of logo
                                          relPixelSize: Const.squareSize,
@@ -99,16 +105,29 @@ struct PreludeView2626: View {
                             }
                             .blendMode(.multiply)
                             .opacity(isZoomedOut ? 0 : 25) // hack to influence animation: 0 : 1 would alter timing
+
+                            VStack { // copyright message for image
+                                Spacer() // push to bottom
+                                HStack {
+                                    Button {
+                                        // not a real button because it does nothing
+                                    } label: {
+                                        Text(preludeImage.copyright)
+                                            .font(.caption)
+                                    }
+                                    .buttonStyle(.glass)
+                                    .opacity(isZoomedOut ? 1 : -5) // hack to influence animation timing
+                                    .padding(UIDevice.isIPad ? cornerRadius*0.5 : cornerRadius*0.25)
+                                    Spacer() // push to trailing side
+                                }
+                            }
                         }
                         .scaleEffect(CGSize(width: pow(2, logScale), height: pow(2, logScale))) // does the zooming
                         .offset(offset(frame: geo.size)) // does the panning
                         .frame(width: min(geo.size.width, geo.size.height),
                                height: min(geo.size.width, geo.size.height))
-                        .overlay(RoundedRectangle(cornerRadius: min(geo.size.width, geo.size.height) * 0.15,
-                                                  style: .continuous)
-                            .stroke(.secondary, lineWidth: 2))
-                        .clipShape(RoundedRectangle(cornerRadius: min(geo.size.width, geo.size.height) * 0.15,
-                                                    style: .continuous)) // approximate iOS app icon rounding
+                        .overlay(shape.stroke(.secondary, lineWidth: 2)) // border of rounded square
+                        .clipShape(shape)
                         .contentShape(Rectangle())
                         .onTapGesture { location in
                             zoomInOutAnimated(location, geo: geo)
@@ -145,23 +164,6 @@ struct PreludeView2626: View {
                         }
                         .dynamicTypeSize(DynamicTypeSize.large ...
                                          DynamicTypeSize.large) // don't let DynamicType change WAALRE size
-
-                    VStack {
-                        Spacer()
-                        HStack {
-                            Spacer()
-                            Button {
-                                // not a real button because it does nothing
-                            } label: {
-                                Text(preludeImage.copyright)
-                                    .font(.caption)
-                           }
-                            .buttonStyle(.glass)
-                            .opacity(isZoomedOut ? 1 : -5) // hack to influence animation: 1 : 0 would alter timing
-                            .padding(.bottom, 4)
-                            Spacer()
-                        }
-                    }
 
                 } // GeometryReader
                 .compositingGroup() // This triggers use of Metal framework
