@@ -2,7 +2,9 @@
 
 PREVIEW SCREEN
 
-* Now randomly chooses 1 of 6 background images for the opening screen.
+* More (6) alternative background images can show up when you tap on logo.
+* Bayer matrix is now hidden when image is fully zoomed out.
+* TODO: show copyright message for image.
 
 CODE MAINTENANCE
 

@@ -27,6 +27,7 @@ struct PreludeView2626: View {
     // MARK: - State variables
     @State private var offsetInCells = OffsetVectorInCells2626(x: 8, y: 8) // # of cell units left/above imagecenter
     @State private var logScale = Const.log2CellRepeat // value driving the animation
+    private var isZoomedOut: Bool { abs(logScale) < 0.0001 }
     @State private var willMoveToNextScreen = false // used to navigate to next screen
     @State private var crosshairsVisible = true // displays Crosshairs view, can be toggled via "c" on keyboard
     @State private var debugPanelVisible = false // displays DebugPanel view, can be toggled via "d" on keyboard
@@ -36,7 +37,7 @@ struct PreludeView2626: View {
     private func zoomInOutAnimated(_ location: CGPoint, geo: GeometryProxy) {
         debugLocation = location // for debugging only
         withAnimation(.easeInOut(duration: Const.animationIntervalSeconds)) {
-            if logScale == 0.0 { // if we are completely zoomed out at the time of the tap
+            if isZoomedOut { // if we are completely zoomed out at the time of the tap
                 logScale = log2(Const.maxCellRepeat) // zoom in
                 offsetInCells = intOffset(rect: geo.size, location: location)
             } else {
@@ -73,7 +74,7 @@ struct PreludeView2626: View {
                             Image(preludeImage.assetName)
                                 .resizable()
                                 .scaledToFit()
-                                .brightness(logScale == 0  ? 0.1 : 0.2)
+                                .brightness(isZoomedOut ? 0.1 : 0.2)
                             Group {
                                 LogoPath(logCellRepeat: Const.log2CellRepeat, // upper left part of logo
                                          relPixelSize: Const.squareSize,
@@ -93,7 +94,7 @@ struct PreludeView2626: View {
                                 .fill(.fgwGreen)
                             }
                             .blendMode(.multiply)
-                            .opacity(logScale == 0  ? 0.5 : 1)
+                            .opacity(isZoomedOut ? 0 : 25) // Hack to influence animation: 0 : 1 would alter timing
                         }
                         .scaleEffect(CGSize(width: pow(2, logScale), height: pow(2, logScale))) // does the zooming
                         .offset(offset(frame: geo.size)) // does the panning
@@ -133,7 +134,7 @@ struct PreludeView2626: View {
                         .font(Font.custom("Gill Sans", size: 105*(min(geo.size.width, geo.size.height)/800))) // was 105
                         .kerning((0/3)*(min(geo.size.width, geo.size.height)/800)) // was 140/3
                         .offset(x: (0/3)*(min(geo.size.width, geo.size.height)/800)) // was 60/3
-                        .opacity(logScale == 0  ? 0 : 1)
+                        .opacity(isZoomedOut ? 0 : 1)
                         .frame(width: geo.size.width, height: geo.size.height)
                         .onTapGesture { location in
                             zoomInOutAnimated(location, geo: geo)
@@ -155,7 +156,7 @@ struct PreludeView2626: View {
     }
 
     func offset(frame rect: CGSize) -> CGSize { // used to position large image in the middle of a cell
-        guard logScale != 0 else { return .zero }
+        guard isZoomedOut == false else { return .zero }
         let shortFrameDimension: Double = min(rect.width, rect.height)
         let cellPitchInPixels: Double = shortFrameDimension/Const.maxCellRepeat
         let offset = CGSize( width: cellPitchInPixels * Double(offsetInCells.x) * pow(2, logScale),
@@ -164,7 +165,7 @@ struct PreludeView2626: View {
     }
 
     func intOffset(rect: CGSize, location: CGPoint) -> OffsetVectorInCells2626 { // to translate tap to selected cell
-        guard logScale != 0 else { return OffsetVectorInCells2626(x: 0, y: 0) }
+        guard isZoomedOut == false else { return OffsetVectorInCells2626(x: 0, y: 0) }
         let shortFrameDimension = min(rect.width, rect.height)
         let halfFrameDimension = shortFrameDimension / 2
         let cellPitchInPixels = shortFrameDimension/Const.maxCellRepeat
