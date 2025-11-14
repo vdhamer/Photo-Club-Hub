@@ -64,7 +64,10 @@ struct PreludeView2626: View {
                         willMoveToNextScreen = true
                     }
                 }
-                .navigate(to: MemberPortfolioListView2626().navigationBarTitle("Portfolios"),
+                .navigate(to: MemberPortfolioListView2626()
+                    .navigationBarTitle(String(localized: "Portfolios",
+                                               table: "PhotoClubHub.SwiftUI",
+                                               comment: "Title of page showing member portfolios")),
                           when: $willMoveToNextScreen,
                           horSizeClass: horSizeClass)
 
@@ -204,6 +207,12 @@ struct PreludeView2626: View {
                     DebugPanel2626(size: size, offset: offset, location: location, hidden: !debugPanelVisible)
                     Spacer()
                     Image(systemName: "arrowshape.turn.up.forward.circle")
+                        .accessibilityLabel(Text(String(localized: "Next",
+                                                        table: "PhotoClubHub.SwiftUI",
+                                                        comment: "Button text")))
+                        .accessibilityHint(Text((String(localized: "Go to Portfolios screen",
+                                                        table: "PhotoClubHub.SwiftUI",
+                                                        comment: "Button hint"))))
                         .foregroundStyle(.white)
                         .font(.system(size: 36))
                         .frame(width: 65, height: 65)
