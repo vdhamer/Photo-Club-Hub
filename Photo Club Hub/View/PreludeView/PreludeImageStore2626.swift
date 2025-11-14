@@ -10,6 +10,7 @@ import SwiftUI
 @available(iOS 26.0, *)
 actor PreludeImageStore2626 {
     private var storage: [Int: PreludeImage] = [:]
+    private var sessionPreludeImage: PreludeImage? // implicitly initialized to nil
 
     init() {
         Task {
@@ -17,6 +18,11 @@ actor PreludeImageStore2626 {
         }
     }
 
+    // Requirements for these images:
+    // 0. should be at least one image (else fatalerror is triggered)
+    // 1. should be square and high enough resolution (for displaying on a large iPad)
+    // 2. should be colorful (to demonstrate color handling)
+    // 3. should contain an area of pretty pure white (for the initial zoomed-in state)
     private func initialize() async {
         await self.append(PreludeImage(assetName: "2021_FotogroepWaalre_058_square",
                                        copyright: "© Greetje van Son",
@@ -43,16 +49,29 @@ actor PreludeImageStore2626 {
                                        whiteCoordinates: .init(x: -2, y: -6)))
     }
 
-    func get(_ key: Int) -> PreludeImage? {
-        storage[key]
-    }
-
+    /// Returns the session's selected `PreludeImage`.
+    ///
+    /// On first invocation, a random image is selected from internal storage and cached
+    /// in `sessionPreludeImage`. Subsequent calls return the same image for the lifetime
+    /// of this `PreludeImageStore2626` actor instance.
+    ///
+    /// - Important: This method assumes the store has been initialized and contains at least
+    ///   one image. If the storage is empty, the function triggers a `fatalError`.
+    ///
+    /// - Concurrency: This type is an `actor`, so access to `storage` and `sessionPreludeImage`
+    ///   is serialized, making this method safe to call from concurrent contexts.
+    ///
+    /// - Returns: The cached random `PreludeImage` for the current session.
     func getRandomPreludeImage() async -> PreludeImage {
         guard !storage.isEmpty else { // shouldn't happen due to code in initializer
             fatalError("PreludeImageStore array is empty")
         }
-        let randomIndex = Int.random(in: 1..<(storage.count + 1))
-        return self[randomIndex]!
+        if sessionPreludeImage != nil {
+            return sessionPreludeImage! // we already have selected an image
+        } else {
+            sessionPreludeImage = self[Int.random(in: 1..<(storage.count + 1))]
+            return sessionPreludeImage!
+        }
     }
 
     func append(_ preludeImage: PreludeImage) async {
@@ -60,12 +79,18 @@ actor PreludeImageStore2626 {
         storage[newKey] = preludeImage
     }
 
+        subscript(key: Int) -> PreludeImage? {
+            storage[key] // read-only
+        }
+
+// MARK: - unused functions (need to recheck once in a while)
+
     func count() -> Int {
         storage.count
     }
 
-    subscript(key: Int) -> PreludeImage? {
-        storage[key] // read-only
+    func get(_ key: Int) -> PreludeImage? { // should work, but isn't used yet
+        storage[key]
     }
 }
 
