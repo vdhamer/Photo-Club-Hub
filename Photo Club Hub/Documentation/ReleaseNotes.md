@@ -1,16 +1,16 @@
 ### 2.8.7 (GitHub commit ???????) ??-11-25
 
-PREVIEW SCREEN
+PREVIEW SCREEN (on iOS 26.0+ only)
 
 * More (6) alternative background images can show up when you tap on logo.
 * Bayer matrix is now hidden when image is fully zoomed out.
-* TODO: show copyright message for image.
+* Added copyright message per image (= the photographer who made the image).
+* Added support for light and dark mode
 
 CODE MAINTENANCE
 
 * Removed Viewmodel/Lists JSON files. There were only there for backwards compatibility.
 * Tested with XCode 26.1.1 (17B100), and iOS 26.1 (23B86).
-* TODO: somehow show Prelude images briefly/optionally without the superimposed Bayer matrix.
 
 DOCUMENTATION
 

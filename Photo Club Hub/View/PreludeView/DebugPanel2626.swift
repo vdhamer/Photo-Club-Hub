@@ -35,6 +35,7 @@ struct DebugPanel2626: View {
             .transaction { transaction in // https://www.avanderlee.com/swiftui/disable-animations-transactions/
                 transaction.animation = nil
             }
+            .accessibilityHidden(true)
         }
     }
 }

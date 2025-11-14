@@ -33,6 +33,7 @@ struct PreludeView2626: View {
     @State private var debugPanelVisible = false // displays DebugPanel view, can be toggled via "d" on keyboard
     @State private var debugLocation = CGPoint(x: 0, y: 0)
     @Environment(\.horizontalSizeClass) var horSizeClass
+    @Environment(\.colorScheme) var colorScheme: ColorScheme // to distinguish .light and .dark modes
 
     private func zoomInOutAnimated(_ location: CGPoint, geo: GeometryProxy) {
         debugLocation = location // for debugging only
@@ -57,7 +58,7 @@ struct PreludeView2626: View {
                                                             .white]
                 ), center: .center)
                 .saturation(0.5)
-                .brightness(0.05)
+                .brightness(colorScheme == .light ? 0.05 : -0.15)
                 .ignoresSafeArea()
                 .onTapGesture { // if user taps background, exit animation loop
                     withAnimation(.easeInOut(duration: Const.animationIntervalSeconds)) {
@@ -105,7 +106,7 @@ struct PreludeView2626: View {
                                height: min(geo.size.width, geo.size.height))
                         .overlay(RoundedRectangle(cornerRadius: min(geo.size.width, geo.size.height) * 0.15,
                                                   style: .continuous)
-                            .stroke(.black, lineWidth: 2))
+                            .stroke(.secondary, lineWidth: 2))
                         .clipShape(RoundedRectangle(cornerRadius: min(geo.size.width, geo.size.height) * 0.15,
                                                     style: .continuous)) // approximate iOS app icon rounding
                         .contentShape(Rectangle())
@@ -123,6 +124,7 @@ struct PreludeView2626: View {
                         .stroke(Const.crossHairsColor, lineWidth: Const.crossHairsWidth)
                         .blendMode(.normal)
                         .opacity(isZoomedOut ? 0 : 25) // hack to influence animation: 0 : 1 would alter timing
+                        .accessibilityHidden(true)
 
                     EscapeHatch(willMoveToNextScreen: $willMoveToNextScreen,
                                 offset: $offsetInCells,
@@ -174,7 +176,7 @@ struct PreludeView2626: View {
 
     }
 
-    func offset(frame rect: CGSize) -> CGSize { // used to position large image in the middle of a cell
+    private func offset(frame rect: CGSize) -> CGSize { // used to position large image in the middle of a cell
         guard isZoomedOut == false else { return .zero }
         let shortFrameDimension: Double = min(rect.width, rect.height)
         let cellPitchInPixels: Double = shortFrameDimension/Const.maxCellRepeat
@@ -183,7 +185,8 @@ struct PreludeView2626: View {
         return offset
     }
 
-    func intOffset(rect: CGSize, location: CGPoint) -> OffsetVectorInCells2626 { // to translate tap to selected cell
+    private func intOffset(rect: CGSize, location: CGPoint)
+            -> OffsetVectorInCells2626 { // to translate tap to selected cell
         guard isZoomedOut == false else { return OffsetVectorInCells2626(x: 0, y: 0) }
         let shortFrameDimension = min(rect.width, rect.height)
         let halfFrameDimension = shortFrameDimension / 2
@@ -192,7 +195,7 @@ struct PreludeView2626: View {
                                        y: Int((((halfFrameDimension - location.y) / cellPitchInPixels)).rounded()))
     }
 
-    var preludeText: String {
+    private var preludeText: String {
         if Settings.manualDataLoading {
             String(localized: "Manual loading",
                    table: "PhotoClubHub.SwiftUI",
@@ -208,7 +211,7 @@ struct PreludeView2626: View {
         }
     }
 
-    struct EscapeHatch: View {
+    private struct EscapeHatch: View {
         let willMoveToNextScreen: Binding<Bool>
         let offset: Binding<OffsetVectorInCells2626>
         let location: Binding<CGPoint>
