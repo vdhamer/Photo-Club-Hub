@@ -103,12 +103,10 @@ struct PreludeView2626: View {
                         .offset(offset(frame: geo.size)) // does the panning
                         .frame(width: min(geo.size.width, geo.size.height),
                                height: min(geo.size.width, geo.size.height))
-                        .overlay(RoundedRectangle(cornerRadius: CGFloat(Int(min(geo.size.width,
-                                                                                geo.size.height) * 0.15)),
+                        .overlay(RoundedRectangle(cornerRadius: min(geo.size.width, geo.size.height) * 0.15,
                                                   style: .continuous)
                             .stroke(.black, lineWidth: 2))
-                        .clipShape(RoundedRectangle(cornerRadius: CGFloat(Int(min(geo.size.width,
-                                                                                  geo.size.height) * 0.15)),
+                        .clipShape(RoundedRectangle(cornerRadius: min(geo.size.width, geo.size.height) * 0.15,
                                                     style: .continuous)) // approximate iOS app icon rounding
                         .contentShape(Rectangle())
                         .onTapGesture { location in
