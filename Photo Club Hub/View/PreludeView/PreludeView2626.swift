@@ -15,7 +15,7 @@ struct PreludeView2626: View {
         static let maxCellRepeat: Double = 32 // max number of cells horizontally and vertically
         static let log2CellRepeat: Double = log2(Const.maxCellRepeat) // typically log2(32) = 5
         static let squareSize = 5.5 / 18 // size of single colored square compared to pitch (0.3055555)
-        static let animationIntervalSeconds: TimeInterval = 7 // duration of animation in seconds
+        static let animationIntervalSeconds: TimeInterval = 8.5 // duration of animation in seconds
         static let crossHairsWidth: CGFloat = 2
         static let crossHairsColor: Color = Color(UIColor(white: 0.5, alpha: 0.5))
     }
@@ -97,7 +97,7 @@ struct PreludeView2626: View {
                                 .fill(.fgwGreen)
                             }
                             .blendMode(.multiply)
-                            .opacity(isZoomedOut ? 0 : 25) // Hack to influence animation: 0 : 1 would alter timing
+                            .opacity(isZoomedOut ? 0 : 25) // hack to influence animation: 0 : 1 would alter timing
                         }
                         .scaleEffect(CGSize(width: pow(2, logScale), height: pow(2, logScale))) // does the zooming
                         .offset(offset(frame: geo.size)) // does the panning
@@ -122,6 +122,7 @@ struct PreludeView2626: View {
                     CrossHairs2626(hidden: !crosshairsVisible)
                         .stroke(Const.crossHairsColor, lineWidth: Const.crossHairsWidth)
                         .blendMode(.normal)
+                        .opacity(isZoomedOut ? 0 : 25) // hack to influence animation: 0 : 1 would alter timing
 
                     EscapeHatch(willMoveToNextScreen: $willMoveToNextScreen,
                                 offset: $offsetInCells,
@@ -142,6 +143,23 @@ struct PreludeView2626: View {
                         }
                         .dynamicTypeSize(DynamicTypeSize.large ...
                                          DynamicTypeSize.large) // don't let DynamicType change WAALRE size
+
+                    VStack {
+                        Spacer()
+                        HStack {
+                            Spacer()
+                            Button {
+                                // not a real button because it does nothing
+                            } label: {
+                                Text(preludeImage.copyright)
+                                    .font(.caption)
+                           }
+                            .buttonStyle(.glass)
+                            .opacity(isZoomedOut ? 1 : -5) // hack to influence animation: 1 : 0 would alter timing
+                            .padding(.bottom, 4)
+                            Spacer()
+                        }
+                    }
 
                 } // GeometryReader
                 .compositingGroup() // This triggers use of Metal framework
