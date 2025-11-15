@@ -143,14 +143,12 @@ struct PreludeView2626: View {
                                                                                               sticky: false)
                                             preludeImage = img
                                             offsetInCells = img.whiteCoordinates
-                                            print("Swipe in direction \(increment)") // TODO
                                         }
                                     }
                                 }
                         )
                         .onTapGesture { location in
                             zoomInOutAnimated(location, geo: geo)
-                            print("Tap") // TODO
                         }                        .frame(width: geo.size.width, height: geo.size.height)
                         .task {
                             preludeImage = await preludeImageStore.selectNextImage(increment: +1, sticky: true)
@@ -313,4 +311,3 @@ struct OffsetVectorInCells2626 {
     PreludeView2626()
         .preferredColorScheme(.dark)
 }
-
