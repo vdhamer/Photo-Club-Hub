@@ -132,10 +132,26 @@ struct PreludeView2626: View {
                         .overlay(shape.stroke(.secondary, lineWidth: 2)) // border of rounded square
                         .clipShape(shape)
                         .contentShape(Rectangle())
+                        .highPriorityGesture( // swipe right moves to left (prev) image
+                            DragGesture(minimumDistance: 30, coordinateSpace: .local)
+                                .onEnded { value in
+                                    // Rightward swipe: previous image
+                                    if abs(value.translation.width) > 40 && abs(value.translation.height) < 60 {
+                                        Task {
+                                            let increment = (value.translation.width) > 0 ? -1 : 1
+                                            let img = await preludeImageStore.selectNextImage(increment: increment,
+                                                                                              sticky: false)
+                                            preludeImage = img
+                                            offsetInCells = img.whiteCoordinates
+                                            print("Swipe in direction \(increment)") // TODO
+                                        }
+                                    }
+                                }
+                        )
                         .onTapGesture { location in
                             zoomInOutAnimated(location, geo: geo)
-                        }
-                        .frame(width: geo.size.width, height: geo.size.height)
+                            print("Tap") // TODO
+                        }                        .frame(width: geo.size.width, height: geo.size.height)
                         .task {
                             preludeImage = await preludeImageStore.selectNextImage(increment: +1, sticky: true)
                             offsetInCells = preludeImage.whiteCoordinates
@@ -297,3 +313,4 @@ struct OffsetVectorInCells2626 {
     PreludeView2626()
         .preferredColorScheme(.dark)
 }
+
