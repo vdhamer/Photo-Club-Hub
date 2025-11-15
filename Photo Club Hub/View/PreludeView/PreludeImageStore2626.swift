@@ -34,10 +34,6 @@ actor PreludeImageStore2626 {
                                        copyright: "© Peter van den Hamer",
                                        whiteCoordinates: .init(x: 4, y: 12)))
 
-        await self.append(PreludeImage(assetName: "2025_Texel_X100vi_071_square",
-                                       copyright: "© Peter van den Hamer",
-                                       whiteCoordinates: .init(x: 8, y: 5)))
-
         await self.append(PreludeImage(assetName: "2024_California_R5_340-3-Edit_square",
                                        copyright: "© Peter van den Hamer",
                                        whiteCoordinates: .init(x: -2, y: -6)))
