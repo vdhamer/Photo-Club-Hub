@@ -67,6 +67,10 @@ actor PreludeImageStore2626 {
         guard !storage.isEmpty else {
             fatalError("PreludeImageStore array is empty")
         }
+        if sessionPreludeImage != nil {
+            return sessionPreludeImage! // we already have selected an image
+        } else {
+            let userDefaultsKey: String = "preludeImageIndex"
 
         if let cached = sessionPreludeImage {
             return cached
