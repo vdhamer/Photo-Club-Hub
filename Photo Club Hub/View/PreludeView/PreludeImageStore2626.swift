@@ -43,6 +43,10 @@ actor PreludeImageStore2626 {
         await self.append(PreludeImage(assetName: "2024_California_R5_340-3-Edit_square",
                                        copyright: "© Peter van den Hamer",
                                        whiteCoordinates: .init(x: -2, y: -6)))
+
+        await self.append(PreludeImage(assetName: "2005_Pimpernel_076_rot_crop_square",
+                                       copyright: "© Peter van den Hamer",
+                                       whiteCoordinates: .init(x: 3, y: 8)))
     }
 
     /// Returns the session's selected `PreludeImage`.
