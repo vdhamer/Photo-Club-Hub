@@ -52,7 +52,7 @@ actor PreludeImageStore2626 {
 
     /// Returns the session's selected `PreludeImage`.
     ///
-    /// On first invocation, a random image is selected from internal storage and cached
+    /// On first invocation, an  image is selected from internal storage and cached
     /// in `sessionPreludeImage`. Subsequent calls return the same image for the lifetime
     /// of this `PreludeImageStore2626` actor instance.
     ///
@@ -70,9 +70,19 @@ actor PreludeImageStore2626 {
         if sessionPreludeImage != nil {
             return sessionPreludeImage! // we already have selected an image
         } else {
-            sessionPreludeImage = self[Int.random(in: 1..<(storage.count + 1))]
+            let userDefaultsKey: String = "preludeImageIndex"
+
+            let prevIndex: Int = UserDefaults.standard.integer(forKey: userDefaultsKey) // returns 0 if key is absent
+            var index: Int = prevIndex + 1 // next, but might be beyond end of dictionary
+            if await index > count() { index = 1 } //  rollover
+            UserDefaults.standard.set(index, forKey: userDefaultsKey)
+            sessionPreludeImage = await get(index)
             return sessionPreludeImage!
         }
+    }
+
+    func get(_ key: Int) async -> PreludeImage2626? { // unused?
+        storage[key]
     }
 
     func append(_ preludeImage: PreludeImage2626) async {
@@ -80,17 +90,11 @@ actor PreludeImageStore2626 {
         storage[newKey] = preludeImage
     }
 
-        subscript(key: Int) -> PreludeImage2626? {
-            storage[key] // read-only
-        }
-
-// MARK: - unused functions (need to recheck once in a while)
-
-    func count() -> Int {
-        storage.count
+    subscript(key: Int) -> PreludeImage2626? {
+        storage[key] // read-only
     }
 
-    func get(_ key: Int) -> PreludeImage2626? { // should work, but isn't used yet
-        storage[key]
+    func count() async -> Int { // unused
+        storage.count
     }
 }
