@@ -21,8 +21,9 @@ struct PreludeView2626: View {
     }
     private let preludeImageStore = PreludeImageStore2626()
     @State private var preludeImage = PreludeImage2626(assetName: "2021_FotogroepWaalre_058_square",
-                                                   copyright: "© Greetje van Son",
-                                                   whiteCoordinates: .init(x: 8, y: 6)) // non-random temp answer
+                                                       copyright: "© Greetje van Son",
+                                                       copyrightAlignment: .bottomLeading,
+                                                       whiteCoordinates: .init(x: 8, y: 6)) // temporary value only
 
     // MARK: - State variables
     @State private var offsetInCells = OffsetVectorInCells2626(x: 8, y: 8) // # of cell units left/above imagecenter
@@ -136,7 +137,7 @@ struct PreludeView2626: View {
                         }
                         .frame(width: geo.size.width, height: geo.size.height)
                         .task {
-                            preludeImage = await preludeImageStore.get()
+                            preludeImage = await preludeImageStore.selectNextImage(increment: +1, sticky: true)
                             offsetInCells = preludeImage.whiteCoordinates
                         }
                     }
