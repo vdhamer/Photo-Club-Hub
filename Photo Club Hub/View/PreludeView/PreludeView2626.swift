@@ -136,7 +136,7 @@ struct PreludeView2626: View {
                         }
                         .frame(width: geo.size.width, height: geo.size.height)
                         .task {
-                            preludeImage = await preludeImageStore.getRandomPreludeImage()
+                            preludeImage = await preludeImageStore.get()
                             offsetInCells = preludeImage.whiteCoordinates
                         }
                     }

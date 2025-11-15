@@ -10,7 +10,7 @@ import SwiftUI
 @available(iOS 26.0, *)
 actor PreludeImageStore2626 {
     private var storage: [Int: PreludeImage2626] = [:]
-    private var sessionPreludeImage: PreludeImage2626? // implicitly initialized to nil
+    private var sessionPreludeImage: PreludeImage2626? // initializes to `nil`
 
     init() {
         Task {
@@ -19,10 +19,10 @@ actor PreludeImageStore2626 {
     }
 
     // Requirements for these images:
-    // 0. should be at least one image (else fatalerror is triggered)
-    // 1. should be square and high enough resolution (for displaying on a large iPad)
-    // 2. should be colorful (to demonstrate color handling)
-    // 3. should contain an area of pretty pure white (for the initial zoomed-in state)
+    // 0. there should be at least one image (else fatalerror is triggered)
+    // 1. image should be square and have enough resolution (for displaying on a large iPad)
+    // 2. image should be colorful (to demonstrate color handling)
+    // 3. image need to ccontain an area of pretty pure white (for the initial zoomed-in state)
     private func initialize() async {
         await self.append(PreludeImage2626(assetName: "2021_FotogroepWaalre_058_square",
                                            copyright: "© Greetje van Son",
@@ -52,7 +52,7 @@ actor PreludeImageStore2626 {
 
     /// Returns the session's selected `PreludeImage`.
     ///
-    /// On first invocation, a random image is selected from internal storage and cached
+    /// On first invocation, an  image is selected from internal storage and cached
     /// in `sessionPreludeImage`. Subsequent calls return the same image for the lifetime
     /// of this `PreludeImageStore2626` actor instance.
     ///
@@ -62,17 +62,31 @@ actor PreludeImageStore2626 {
     /// - Concurrency: This type is an `actor`, so access to `storage` and `sessionPreludeImage`
     ///   is serialized, making this method safe to call from concurrent contexts.
     ///
-    /// - Returns: The cached random `PreludeImage` for the current session.
-    func getRandomPreludeImage() async -> PreludeImage2626 {
-        guard !storage.isEmpty else { // shouldn't happen due to code in initializer
+    /// - Returns: The cached  `PreludeImage` for the current session.
+    func get() async -> PreludeImage2626 {
+        guard !storage.isEmpty else {
             fatalError("PreludeImageStore array is empty")
         }
-        if sessionPreludeImage != nil {
-            return sessionPreludeImage! // we already have selected an image
-        } else {
-            sessionPreludeImage = self[Int.random(in: 1..<(storage.count + 1))]
-            return sessionPreludeImage!
+
+        if let cached = sessionPreludeImage {
+            return cached
+        } else { // no cached value, so determine what image to use
+            let userDefaultsKey = "preludeImageIndex"
+            let prevIndex = UserDefaults.standard.integer(forKey: userDefaultsKey) // 0 if missing
+            let total = await count()
+            let index = (prevIndex % total) + 1 // index in range 1...total
+            UserDefaults.standard.set(index, forKey: userDefaultsKey)
+
+            guard let image = await get(index) else {
+                fatalError("PreludeImageStore: invalid index \(index)")
+            }
+            sessionPreludeImage = image
+            return image
         }
+    }
+
+    func get(_ key: Int) async -> PreludeImage2626? {
+        storage[key]
     }
 
     func append(_ preludeImage: PreludeImage2626) async {
@@ -80,17 +94,53 @@ actor PreludeImageStore2626 {
         storage[newKey] = preludeImage
     }
 
-        subscript(key: Int) -> PreludeImage2626? {
-            storage[key] // read-only
-        }
+    subscript(key: Int) -> PreludeImage2626? {
+        storage[key] // read-only
+    }
 
-// MARK: - unused functions (need to recheck once in a while)
-
-    func count() -> Int {
+    func count() async -> Int {
         storage.count
     }
 
-    func get(_ key: Int) -> PreludeImage2626? { // should work, but isn't used yet
-        storage[key]
+    // MARK: - Navigation helpers for swipe gestures
+
+    /// Advances to the next image (intended for a leftward swipe) and returns it.
+    /// Persists the new index in UserDefaults and updates the session cache.
+    func advanceToNextImage() async -> PreludeImage2626 {
+        guard await count() > 0 else {
+            fatalError("PreludeImageStore array is empty")
+        }
+        let userDefaultsKey = "preludeImageIndex"
+        let prevIndex = UserDefaults.standard.integer(forKey: userDefaultsKey) // 0 if missing
+        let total = await count()
+        let index = (prevIndex % total) + 1 // next index in 1...total
+        UserDefaults.standard.set(index, forKey: userDefaultsKey)
+
+        guard let image = await get(index) else {
+            fatalError("PreludeImageStore: invalid index \(index)")
+        }
+        sessionPreludeImage = image
+        return image
+    }
+
+    /// Goes to the previous image (intended for a rightward swipe) and returns it.
+    /// Persists the new index in UserDefaults and updates the session cache.
+    func advanceToPreviousImage() async -> PreludeImage2626 {
+        guard await count() > 0 else {
+            fatalError("PreludeImageStore array is empty")
+        }
+        let userDefaultsKey = "preludeImageIndex"
+        let prevIndex = UserDefaults.standard.integer(forKey: userDefaultsKey) // 0 if missing
+        let total = await count()
+        // Map 0 (no prior selection) to 1 as a starting point, then step back with rollover.
+        let current = (prevIndex == 0) ? 1 : prevIndex
+        let index = (current == 1) ? total : (current - 1)
+        UserDefaults.standard.set(index, forKey: userDefaultsKey)
+
+        guard let image = await get(index) else {
+            fatalError("PreludeImageStore: invalid index \(index)")
+        }
+        sessionPreludeImage = image
+        return image
     }
 }
