@@ -9,8 +9,8 @@ import SwiftUI
 
 @available(iOS 26.0, *)
 actor PreludeImageStore2626 {
-    private var storage: [Int: PreludeImage] = [:]
-    private var sessionPreludeImage: PreludeImage? // implicitly initialized to nil
+    private var storage: [Int: PreludeImage2626] = [:]
+    private var sessionPreludeImage: PreludeImage2626? // implicitly initialized to nil
 
     init() {
         Task {
@@ -24,29 +24,30 @@ actor PreludeImageStore2626 {
     // 2. should be colorful (to demonstrate color handling)
     // 3. should contain an area of pretty pure white (for the initial zoomed-in state)
     private func initialize() async {
-        await self.append(PreludeImage(assetName: "2021_FotogroepWaalre_058_square",
-                                       copyright: "© Greetje van Son",
-                                       whiteCoordinates: .init(x: 8, y: 6)))
+        await self.append(PreludeImage2626(assetName: "2021_FotogroepWaalre_058_square",
+                                           copyright: "© Greetje van Son",
+                                           whiteCoordinates: .init(x: 8, y: 6)))
 
-        await self.append(PreludeImage(assetName: "2025_fgDeGenderExpo_064_square",
-                                       copyright: "© Bert Zantingh",
-                                       whiteCoordinates: .init(x: 4, y: 1)))
+        await self.append(PreludeImage2626(assetName: "2025_fgDeGenderExpo_064_square",
+                                           copyright: "© Bert Zantingh",
+                                           whiteCoordinates: .init(x: 4, y: 1)))
 
-        await self.append(PreludeImage(assetName: "2023_Cornwall_R5_316_square",
-                                       copyright: "© Peter van den Hamer",
-                                       whiteCoordinates: .init(x: 7, y: 0)))
+        await self.append(PreludeImage2626(assetName: "2023_Cornwall_R5_316_square",
+                                           copyright: "© Peter van den Hamer",
+                                           whiteCoordinates: .init(x: 7, y: 0)))
 
-        await self.append(PreludeImage(assetName: "2025_Texel_R5_025_square",
-                                       copyright: "© Peter van den Hamer",
-                                       whiteCoordinates: .init(x: 4, y: 12)))
+        await self.append(PreludeImage2626(assetName: "2025_Texel_R5_025_square",
+                                           copyright: "© Peter van den Hamer",
+                                           whiteCoordinates: .init(x: 4, y: 12)))
 
-        await self.append(PreludeImage(assetName: "2024_California_R5_340-3-Edit_square",
-                                       copyright: "© Peter van den Hamer",
-                                       whiteCoordinates: .init(x: -2, y: -6)))
+        await self.append(PreludeImage2626(assetName: "2024_California_R5_340-3-Edit_square",
+                                           copyright: "© Peter van den Hamer",
+                                           whiteCoordinates: .init(x: -2, y: -6)))
 
-        await self.append(PreludeImage(assetName: "2005_Pimpernel_076_rot_crop_square",
-                                       copyright: "© Peter van den Hamer",
-                                       whiteCoordinates: .init(x: 3, y: 8)))
+        await self.append(PreludeImage2626(assetName: "2005_Pimpernel_076_rot_crop_square",
+                                           copyright: "© Peter van den Hamer",
+                                           copyrightAlignment: PreludeAlignment.bottomTrailing,
+                                           whiteCoordinates: .init(x: 3, y: 8)))
     }
 
     /// Returns the session's selected `PreludeImage`.
@@ -62,7 +63,7 @@ actor PreludeImageStore2626 {
     ///   is serialized, making this method safe to call from concurrent contexts.
     ///
     /// - Returns: The cached random `PreludeImage` for the current session.
-    func getRandomPreludeImage() async -> PreludeImage {
+    func getRandomPreludeImage() async -> PreludeImage2626 {
         guard !storage.isEmpty else { // shouldn't happen due to code in initializer
             fatalError("PreludeImageStore array is empty")
         }
@@ -74,12 +75,12 @@ actor PreludeImageStore2626 {
         }
     }
 
-    func append(_ preludeImage: PreludeImage) async {
+    func append(_ preludeImage: PreludeImage2626) async {
         let newKey = storage.count + 1 // assign a new identifier
         storage[newKey] = preludeImage
     }
 
-        subscript(key: Int) -> PreludeImage? {
+        subscript(key: Int) -> PreludeImage2626? {
             storage[key] // read-only
         }
 
@@ -89,14 +90,7 @@ actor PreludeImageStore2626 {
         storage.count
     }
 
-    func get(_ key: Int) -> PreludeImage? { // should work, but isn't used yet
+    func get(_ key: Int) -> PreludeImage2626? { // should work, but isn't used yet
         storage[key]
     }
-}
-
-@available(iOS 26.0, *)
-struct PreludeImage {
-    let assetName: String // name in assets
-    let copyright: String // who made the image
-    let whiteCoordinates: OffsetVectorInCells2626 // where to find a pure white location
 }

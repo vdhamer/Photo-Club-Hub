@@ -20,7 +20,7 @@ struct PreludeView2626: View {
         static let crossHairsColor: Color = Color(UIColor(white: 0.5, alpha: 0.5))
     }
     private let preludeImageStore = PreludeImageStore2626()
-    @State private var preludeImage = PreludeImage(assetName: "2021_FotogroepWaalre_058_square",
+    @State private var preludeImage = PreludeImage2626(assetName: "2021_FotogroepWaalre_058_square",
                                                    copyright: "© Greetje van Son",
                                                    whiteCoordinates: .init(x: 8, y: 6)) // non-random temp answer
 
@@ -107,8 +107,9 @@ struct PreludeView2626: View {
                             .opacity(isZoomedOut ? 0 : 25) // hack to influence animation: 0 : 1 would alter timing
 
                             VStack { // copyright message for image
-                                Spacer() // push to bottom
+                                if preludeImage.copyrightAlignment.isBottom { Spacer() } // push to bottom
                                 HStack {
+                                    if preludeImage.copyrightAlignment.isTrailing { Spacer() } // push to trailing
                                     Button {
                                         // not a real button because it does nothing
                                     } label: {
@@ -118,8 +119,9 @@ struct PreludeView2626: View {
                                     .buttonStyle(.glass)
                                     .opacity(isZoomedOut ? 1 : -5) // hack to influence animation timing
                                     .padding(UIDevice.isIPad ? cornerRadius*0.5 : cornerRadius*0.25)
-                                    Spacer() // push to trailing side
+                                    if preludeImage.copyrightAlignment.isLeading { Spacer() } // push to leading
                                 }
+                                if preludeImage.copyrightAlignment.isTop { Spacer() } // push to top
                             }
                         }
                         .scaleEffect(CGSize(width: pow(2, logScale), height: pow(2, logScale))) // does the zooming

@@ -22,6 +22,7 @@
 		37E134B92E6F75ED00C61714 /* ReadmeView2626.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E134B72E6F75ED00C61714 /* ReadmeView2626.swift */; };
 		37E134BA2E6F75ED00C61714 /* ReadmeSection2626.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E134B62E6F75ED00C61714 /* ReadmeSection2626.swift */; };
 		37E134BB2E6F75ED00C61714 /* SectionHeader2626.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E134B82E6F75ED00C61714 /* SectionHeader2626.swift */; };
+		37F7F53D2EC8A028000F1889 /* PreludeImage2626.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F7F53C2EC8A028000F1889 /* PreludeImage2626.swift */; };
 		D006BA7E2B115FB1002E555B /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D006BA7D2B115FB1002E555B /* LocationManager.swift */; };
 		D008D2AA28739167007A7BE2 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = D008D2A928739167007A7BE2 /* .gitignore */; };
 		D016DF992DF6D1850018B526 /* LocalizedExpertiseResultLists.swift in Sources */ = {isa = PBXBuildFile; fileRef = D016DF982DF6D1850018B526 /* LocalizedExpertiseResultLists.swift */; };
@@ -157,6 +158,7 @@
 		37E134B82E6F75ED00C61714 /* SectionHeader2626.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader2626.swift; sourceTree = "<group>"; };
 		37E61E042E62DB9300F6D3B5 /* Photo_Club_Hub_2_8_4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_8_4.xcdatamodel; sourceTree = "<group>"; };
 		37EC25472EB6889300667D8A /* FeaturedImagePipeline.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = FeaturedImagePipeline.md; sourceTree = "<group>"; };
+		37F7F53C2EC8A028000F1889 /* PreludeImage2626.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreludeImage2626.swift; sourceTree = "<group>"; };
 		D006BA7D2B115FB1002E555B /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		D008D2A928739167007A7BE2 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		D00DC8F02BD5D85900B4A9A2 /* Photo_Club_Hub_2_6_1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_6_1.xcdatamodel; sourceTree = "<group>"; };
@@ -728,6 +730,7 @@
 				D0EB533B295775240061613B /* Crosshairs2626.swift */,
 				D082BE902957806800FF0812 /* LogoPath.swift */,
 				376DC9512EC3A98900FB429B /* PreludeImageStore2626.swift */,
+				37F7F53C2EC8A028000F1889 /* PreludeImage2626.swift */,
 			);
 			path = PreludeView;
 			sourceTree = "<group>";
@@ -1061,6 +1064,7 @@
 				D0A0B6852AA930E90078DE9A /* Photo_Club_Hub.xcdatamodeld in Sources */,
 				D0EEF48F2C2844290086419D /* Settings.swift in Sources */,
 				D0831A22277F72270049AB84 /* MemberPortfolioListView1718.swift in Sources */,
+				37F7F53D2EC8A028000F1889 /* PreludeImage2626.swift in Sources */,
 				D0ACCEC32DEF90360002FACC /* FotogroepOirschotMembersProvider.swift in Sources */,
 				376DC9522EC3A98900FB429B /* PreludeImageStore2626.swift in Sources */,
 				D0C8E3A22BB81B4A00348D97 /* ItemFilterStatsView.swift in Sources */,
