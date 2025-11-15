@@ -70,22 +70,21 @@ actor PreludeImageStore2626 {
         if sessionPreludeImage != nil {
             return sessionPreludeImage! // we already have selected an image
         } else {
-            let userDefaultsKey: String = "preludeImageIndex"
+            if let cached = sessionPreludeImage {
+                return cached
+            } else { // no cached value, so determine what image to use
+                let userDefaultsKey = "preludeImageIndex"
+                let prevIndex = UserDefaults.standard.integer(forKey: userDefaultsKey) // 0 if missing
+                let total = await count()
+                let index = (prevIndex % total) + 1 // index in range 1...total
+                UserDefaults.standard.set(index, forKey: userDefaultsKey)
 
-        if let cached = sessionPreludeImage {
-            return cached
-        } else { // no cached value, so determine what image to use
-            let userDefaultsKey = "preludeImageIndex"
-            let prevIndex = UserDefaults.standard.integer(forKey: userDefaultsKey) // 0 if missing
-            let total = await count()
-            let index = (prevIndex % total) + 1 // index in range 1...total
-            UserDefaults.standard.set(index, forKey: userDefaultsKey)
-
-            guard let image = await get(index) else {
-                fatalError("PreludeImageStore: invalid index \(index)")
+                guard let image = await get(index) else {
+                    fatalError("PreludeImageStore: invalid index \(index)")
+                }
+                sessionPreludeImage = image
+                return image
             }
-            sessionPreludeImage = image
-            return image
         }
     }
 
