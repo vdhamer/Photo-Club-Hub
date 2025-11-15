@@ -4,7 +4,7 @@ PREVIEW SCREEN (on iOS 26.0+ only)
 
 * More (6) alternative background images can show up when you tap on logo.
 * Bayer matrix is now hidden when image is fully zoomed out.
-* Added copyright message per image (= the photographer who made the image).
+* Added copyright message per image (can be aligned in 4 locations).
 * Added support for light and dark mode
 
 CODE MAINTENANCE
