@@ -9,8 +9,8 @@
 struct PreludeImage2626 {
     let assetName: String // name in assets (e.g. "2021_FotogroepWaalre_058_square")
     let copyright: String // who made the image (e.g. "© Greetje van Son")
-    var copyrightAlignment: PreludeAlignment = PreludeAlignment.bottomLeading
-    let whiteCoordinates: OffsetVectorInCells2626 // where to find a pure white location
+    var copyrightAlignment: PreludeAlignment // could add a default, but prefer to keep this explicit
+    let whiteCoordinates: OffsetVectorInCells2626 // location where to find a patch of pure white image pixels
 }
 
 enum PreludeAlignment {
