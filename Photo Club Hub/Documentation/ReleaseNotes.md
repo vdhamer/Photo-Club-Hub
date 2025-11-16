@@ -1,6 +1,16 @@
+### 2.8.8 (GitHub commit ???????) ??-12-25
+
+DATA MAINTENANCE
+* TODO: add expertise for December (Printing)
+* TODO: prepare for 2 new clubs (ffcShot71, fcSchijndel)
+
+This build #4654 was made using Xcode 26.1.1
+
+---------------------------------------------------------------------------
+
 ### 2.8.7 (GitHub commit 09e9bcf) 16-11-25
 
-PREVIEW SCREEN (iOS v26 only)
+PRELUDE SCREEN (iOS v26 only)
 
 * Alternative background images show up when you tap on the logo.
 * Supports horizontal swiping (left/right) to view the alternative images.
@@ -15,7 +25,7 @@ CODE MAINTENANCE
 
 DOCUMENTATION
 
-* Updated Level2expertise texts (both Dutch and English versions).
+* Updated Level2_expertise texts (both Dutch and English versions).
 
 This build #4653 was made using Xcode 26.1.1
 
