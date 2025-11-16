@@ -20,32 +20,32 @@ actor PreludeImageStore2626 {
     init() {
         storage.append(PreludeImage2626(assetName: "2021_FotogroepWaalre_058_square",
                                         copyright: "© Greetje van Son",
-                                        copyrightAlignment: PreludeAlignment.bottomLeading,
+                                        copyrightAlignment: PreludeAlignment.bottomCentered,
                                         whiteCoordinates: .init(x: 8, y: 6)))
 
         storage.append(PreludeImage2626(assetName: "2005_Pimpernel_076_rot_crop_square",
                                         copyright: "© Peter van den Hamer",
-                                        copyrightAlignment: PreludeAlignment.bottomTrailing, // (c) to subject distance
+                                        copyrightAlignment: PreludeAlignment.bottomCentered,
                                         whiteCoordinates: .init(x: 3, y: 8)))
 
         storage.append(PreludeImage2626(assetName: "2023_Cornwall_R5_316_square",
                                         copyright: "© Peter van den Hamer",
-                                        copyrightAlignment: PreludeAlignment.bottomLeading,
+                                        copyrightAlignment: PreludeAlignment.bottomTrailing,
                                         whiteCoordinates: .init(x: 7, y: 0)))
 
         storage.append(PreludeImage2626(assetName: "2024_California_R5_340-3-Edit_square",
                                         copyright: "© Peter van den Hamer",
-                                        copyrightAlignment: PreludeAlignment.bottomLeading,
+                                        copyrightAlignment: PreludeAlignment.bottomTrailing,
                                         whiteCoordinates: .init(x: -2, y: -6)))
 
         storage.append(PreludeImage2626(assetName: "2025_fgDeGenderExpo_064_square",
                                         copyright: "© Bert Zantingh",
-                                        copyrightAlignment: PreludeAlignment.bottomLeading,
+                                        copyrightAlignment: PreludeAlignment.bottomCentered,
                                         whiteCoordinates: .init(x: 4, y: 1)))
 
         storage.append(PreludeImage2626(assetName: "2025_Texel_R5_025_square",
                                         copyright: "© Peter van den Hamer",
-                                        copyrightAlignment: PreludeAlignment.bottomLeading,
+                                        copyrightAlignment: PreludeAlignment.bottomCentered,
                                         whiteCoordinates: .init(x: 4, y: 12)))
     }
 

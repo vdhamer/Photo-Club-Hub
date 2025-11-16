@@ -18,10 +18,15 @@ enum PreludeAlignment {
     case topLeading
     case bottomLeading
     case bottomTrailing
+    case bottomCentered
+    case topCentered
+    case centerLeading
+    case centerTrailing
+    case centerCentered
 
     var isLeading: Bool {
         switch self {
-        case .topLeading, .bottomLeading:
+        case .topLeading, .bottomLeading, .bottomCentered, .topCentered:
             return true
         default:
             return false
@@ -30,7 +35,7 @@ enum PreludeAlignment {
 
     var isTrailing: Bool {
         switch self {
-        case .topTrailing, .bottomTrailing:
+        case .topTrailing, .bottomTrailing, .bottomCentered, .topCentered:
             return true
         default:
             return false
@@ -39,7 +44,7 @@ enum PreludeAlignment {
 
     var isTop: Bool {
         switch self {
-        case .topTrailing, .topLeading:
+        case .topTrailing, .topLeading, .topCentered, .centerCentered:
             return true
         default:
             return false
@@ -48,7 +53,7 @@ enum PreludeAlignment {
 
     var isBottom: Bool {
         switch self {
-        case .bottomTrailing, .bottomLeading:
+        case .bottomTrailing, .bottomLeading, .bottomCentered, .centerCentered:
             return true
         default:
             return false

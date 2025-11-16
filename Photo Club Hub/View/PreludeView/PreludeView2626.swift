@@ -20,9 +20,9 @@ struct PreludeView2626: View {
         static let crossHairsColor: Color = Color(UIColor(white: 0.5, alpha: 0.5))
     }
     private let preludeImageStore = PreludeImageStore2626()
-    @State private var preludeImage = PreludeImage2626(assetName: "2021_FotogroepWaalre_058_square",
-                                                       copyright: "© Greetje van Son",
-                                                       copyrightAlignment: .bottomLeading,
+    @State private var preludeImage = PreludeImage2626(assetName: "2024_California_R5_340-3-Edit_square",
+                                                       copyright: "🙈 You shouldn't be seeing this! 🙈",
+                                                       copyrightAlignment: .centerCentered,
                                                        whiteCoordinates: .init(x: 8, y: 6)) // temporary value only
 
     // MARK: - State variables
@@ -119,7 +119,7 @@ struct PreludeView2626: View {
                                     }
                                     .buttonStyle(.glass)
                                     .opacity(isZoomedOut ? 1 : -5) // hack to influence animation timing
-                                    .padding(UIDevice.isIPad ? cornerRadius*0.5 : cornerRadius*0.25)
+                                    .padding(UIDevice.isIPad ? cornerRadius*0.25 : cornerRadius*0.08)
                                     if preludeImage.copyrightAlignment.isLeading { Spacer() } // push to leading
                                 }
                                 if preludeImage.copyrightAlignment.isTop { Spacer() } // push to top
