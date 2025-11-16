@@ -631,13 +631,13 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "When the app opens, it shows an image (“Prelude”) corresponding to the app’s icon. If you tap somewhere __inside__ the image, it zooms out to show the full image representing how digital cameras see color."
+            "value" : "When the app opens, it shows an image (“Prelude”) corresponding to the app’s icon. If you tap somewhere __inside__ the image, it zooms out to show the full image representing how digital cameras see color. You can select one of the available background images by swiping to the right or left. The latter feature requires iOS 26 or higher."
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Na het opstarten van de app verschijnt er een beeld met een versie van het app logo. Men kan in- en uitzoomen door op het centrale beeld te klikken."
+            "value" : "Na het opstarten van de app verschijnt er een beeld met een versie van het app logo. Men kan in- en uitzoomen door op het centrale beeld te klikken. Op recente versies van iOS kan men uit enkele beschikbare beelden kiezen via swipen."
           }
         }
       }
@@ -654,7 +654,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Uitgezoomd blijkt het beeld een foto te zijn voorzien van een maskerlaag met kleurenfilters. Dit geeft aan hoe digitale camera's kleur zien (de chip is zonder dezw kleurenfilters volledig kleurenblind). Technisch heet dit een [Bayer kleurenfilter](https://nl.wikipedia.org/wiki/Bayerfilter). Per lichtgevoelige cel van de sensor worden bepaalde kleuren hiertoe selectief doorgelaten. Een 24 megapixel camera heeft bijvoorbeeld een raster van 4000 x 6000 microscopisch kleine kleurfiltertjes."
+            "value" : "Uitgezoomd blijkt het beeld een foto te zijn voorzien van een maskerlaag met kleurenfilters. Dit geeft aan hoe digitale camera's kleur zien (de chip is zonder dezw kleurenfilters volledig kleurenblind). Technisch heet dit een [Bayer kleurenfilter](https://nl.wikipedia.org/wiki/Bayerfilter). Per lichtgevoelige cel van de sensor worden bepaalde kleuren hiervoor selectief doorgelaten. Een 24 megapixel camera heeft bijvoorbeeld een raster van 4000 x 6000 microscopisch kleine kleurfiltertjes."
           }
         }
       }
