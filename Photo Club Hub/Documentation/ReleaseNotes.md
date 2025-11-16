@@ -1,23 +1,23 @@
-### 2.8.7 (GitHub commit ???????) ??-11-25
+### 2.8.7 (GitHub commit 09e9bcf) 16-11-25
 
-PREVIEW SCREEN (on iOS 26.0+ only)
+PREVIEW SCREEN (iOS v26 only)
 
-* More (6) alternative background images can show up when you tap on logo.
-* Bayer matrix is now hidden when image is fully zoomed out.
-* Added copyright message per image (can be aligned in 4 locations).
-* Added support for light and dark mode.
-* Added support for horizontal swiping to view the prelude images.
+* Alternative background images show up when you tap on the logo.
+* Supports horizontal swiping (left/right) to view the alternative images.
+* The Bayer matrix grid is now hidden when image is fully zoomed out.
+* Added image-specific copyright messages. Text can be position in 9 spots.
+* Added support for device's light and dark mode.
 
 CODE MAINTENANCE
 
-* Removed Viewmodel/Lists JSON files. There were only there for backwards compatibility.
+* Removed Viewmodel/Lists JSON files. There were for backwards compatibility.
 * Tested with XCode 26.1.1 (17B100), and iOS 26.1 (23B86).
 
 DOCUMENTATION
 
 * Updated Level2expertise texts (both Dutch and English versions).
 
-This build #4653 was made using Xcode 26.1.
+This build #4653 was made using Xcode 26.1.1
 
 ---------------------------------------------------------------------------
 
@@ -42,7 +42,7 @@ DOCUMENTATION
 * Added technical documentation on reading in the FeaturedImage: FeaturedImagePipeline.md.
 * FAQ_nl.md updated.
 
-This build #4652 was made using Xcode 26.1.
+This build #4652 was made using Xcode 26.1 and was published in the App Store.
 
 ---------------------------------------------------------------------------
 
