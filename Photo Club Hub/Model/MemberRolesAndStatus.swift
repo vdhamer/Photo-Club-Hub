@@ -93,31 +93,32 @@ public enum MemberStatus: String {
 extension MemberStatus {
     public var displayName: String {
         let table: String = "PhotoClubHubData"
+        let localizationBundle: Bundle = Bundle.photoClubHubDataModule
 
         switch self {
         case .coach:
             return String(localized: "external coach",
-                          table: table, bundle: Bundle.photoClubHubDataModule,
+                          table: table, bundle: localizationBundle,
                           comment: "Relationship status of member within a club.")
         case .deceased:
             return String(localized: "deceased",
-                          table: table, bundle: Bundle.photoClubHubDataModule,
+                          table: table, bundle: localizationBundle,
                           comment: "Relationship status of member within a club. Used as prefix.")
         case .former:
             return String(localized: "former",
-                          table: table, bundle: Bundle.photoClubHubDataModule,
+                          table: table, bundle: localizationBundle,
                           comment: "Relationship status of member within a club. Used as prefex.")
         case .honorary:
             return String(localized: "honorary member",
-                          table: table, bundle: Bundle.photoClubHubDataModule,
+                          table: table, bundle: localizationBundle,
                           comment: "Relationship status of member within a club.")
         case .current:
             return String(localized: "member",
-                          table: table, bundle: Bundle.photoClubHubDataModule,
+                          table: table, bundle: localizationBundle,
                           comment: "Default status of member within a club.")
         case .prospective:
             return String(localized: "prospective member",
-                          table: table, bundle: Bundle.photoClubHubDataModule,
+                          table: table, bundle: localizationBundle,
                           comment: "Relationship status of member within a club.")
         }
     }

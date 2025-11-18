@@ -1,8 +1,13 @@
 ### 2.8.8 (GitHub commit ???????) ??-12-25
 
 DATA MAINTENANCE
-* TODO: add expertise for December (Printing)
+* Forced a data reset at dataResetPending288b4654 (related to former members of fgDeGender).
+* Removed unused former members of fcDeGender
+* TODO: Added "Printing" Expertise tag (for December 2025).
 * TODO: prepare for 2 new clubs (ffcShot71, fcSchijndel)
+
+CODE MAINTENANCE
+* Synchronized code with Photo Club Hub HTML (very minor)
 
 This build #4654 was made using Xcode 26.1.1
 
