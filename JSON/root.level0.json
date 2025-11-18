@@ -281,7 +281,21 @@
             }
         },
 	
-        {
+    {
+        "idString": "Printing",
+        "name": [
+            { "language": "EN", "localizedString": "Printing" },
+            { "language": "NL", "localizedString": "Afdrukken" }
+        ],
+        "optional": {
+            "usage":  [
+                { "language": "EN", "localizedString": "Exposition-quality printing skills including color management and paper choice." },
+                { "language": "NL", "localizedString": "Gecontrolleerd afdrukken met aandacht voor kleurenprofielen en papierkeus." }
+            ]
+        }
+    },
+
+    {
             "idString": "Self-expression",
             "name": [
                 { "language": "EN", "localizedString": "Self-expression" },
