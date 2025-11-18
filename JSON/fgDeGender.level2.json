@@ -34,22 +34,6 @@
             "name": {
                 "givenName": "Albert",
                 "infixName": "",
-                "familyName": "Dekkers"
-            },
-            "optional": {
-                "level3URL": "https://www.fcDeGender.nl/portfolios/Albert_Dekkers/",
-                "status": {
-                    "isFormerMember": true
-                },
-                "membershipStartDate": "2019-01-01",
-                "membershipEndDate": "2020-12-31"
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "Albert",
-                "infixName": "",
                 "familyName": "Koning"
             },
             "optional": {
@@ -134,22 +118,6 @@
 
         {
             "name": {
-                "givenName": "Eddy",
-                "infixName": "",
-                "familyName": "Oosterbosch"
-            },
-            "optional": {
-                "level3URL": "https://www.fcDeGender.nl/portfolios/Eddy_Oosterbosch/",
-                "status": {
-                    "isFormerMember": true
-                },
-                "membershipStartDate": "2011-01-01",
-                "membershipEndDate": "2020-12-31"
-            }
-        },
-
-        {
-            "name": {
                 "givenName": "Eric",
                 "infixName": "van de",
                 "familyName": "Ven"
@@ -187,43 +155,6 @@
 
         {
             "name": {
-                "givenName": "Frans",
-                "infixName": "",
-                "familyName": "Verbeek"
-            },
-            "optional": {
-                "website": "https://www.facebook.com/frans.verbeek.54/photos?locale=nl_NL",
-                "level3URL": "https://www.fcDeGender.nl/portfolios/Frans_Verbeek/",
-                "status": {
-                    "isFormerMember": true
-                },
-                "membershipStartDate": "2004-01-01",
-                "membershipEndDate": "2023-12-31",
-                "nlSpecific": {
-                    "fotobondNumber": 1620061
-                }
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "Gio",
-                "infixName": "",
-                "familyName": "Bushman"
-            },
-            "optional": {
-                "level3URL": "https://www.fcDeGender.nl/portfolios/Gio_Bushman/",
-                "status": {
-                    "isDeceased": true,
-                    "isFormerMember": true
-                },
-                "membershipStartDate": "2011-01-01",
-                "membershipEndDate": "2023-12-31"
-            }
-        },
-
-        {
-            "name": {
                 "givenName": "Gert",
                 "infixName": "du",
                 "familyName": "Bois"
@@ -238,22 +169,6 @@
                 "nlSpecific": {
                     "fotobondNumber": 1620087
                 }
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "Greet",
-                "infixName": "",
-                "familyName": "Busink"
-            },
-            "optional": {
-                "level3URL": "https://www.fcDeGender.nl/portfolios/Greet_Busink/",
-                "status": {
-                    "isFormerMember": true
-                },
-                "membershipStartDate": "2011-01-01",
-                "membershipEndDate": "2023-12-31"
             }
         },
 
@@ -303,22 +218,6 @@
                 "level3URL": "https://www.fcDeGender.nl/portfolios/Hans_Vervloed/",
                 "membershipStartDate": "2025-09-29",
                 "expertises": [ "Experimental", "Mixed-Media" ]
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "Ingrid",
-                "infixName": "",
-                "familyName": "Helsen"
-            },
-            "optional": {
-                "level3URL": "https://www.fcDeGender.nl/portfolios/Ingrid_Helsen/",
-                "status": {
-                    "isFormerMember": true
-                },
-                "membershipStartDate": "2017-01-01",
-                "membershipEndDate": "2020-12-31"
             }
         },
 
@@ -375,24 +274,6 @@
                 "nlSpecific": {
                     "fotobondNumber": 1620064
                 }
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "Marcelle",
-                "infixName": "van",
-                "familyName": "Veen"
-            },
-            "optional": {
-                "birthday": "9999-10-09",
-                "level3URL": "https://www.fcDeGender.nl/portfolios/Marcelle_van_Veen/",
-                "status": {
-                    "isDeceased": true,
-                    "isFormerMember": true
-                },
-                "membershipStartDate": "2020-01-01",
-                "membershipEndDate": "2023-12-31"
             }
         },
 
@@ -457,22 +338,6 @@
 
         {
             "name": {
-                "givenName": "Michaël",
-                "infixName": "",
-                "familyName": "Frenkiel"
-            },
-            "optional": {
-                "level3URL": "https://www.fcDeGender.nl/portfolios/Michael_Frenkiel/",
-                "status": {
-                    "isFormerMember": true
-                },
-                "membershipStartDate": "2015-01-01",
-                "membershipEndDate": "2020-12-31"
-            }
-        },
-
-        {
-            "name": {
                 "givenName": "Miep",
                 "infixName": "",
                 "familyName": "Franssen"
@@ -487,38 +352,6 @@
                     "fotobondNumber": 1620021
                 },
                 "expertises": [ "Self-Expression" ]
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "Monique",
-                "infixName": "de",
-                "familyName": "Bruijn"
-            },
-            "optional": {
-                "level3URL": "https://www.fcDeGender.nl/portfolios/Monique_de_Bruijn/",
-                "status": {
-                    "isFormerMember": true
-                },
-                "membershipStartDate": "2013-01-01",
-                "membershipEndDate": "2021-12-31"
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "Nettie",
-                "infixName": "van der",
-                "familyName": "Palen"
-            },
-            "optional": {
-                "level3URL": "https://www.fcDeGender.nl/portfolios/Nettie_van_der_Palen/",
-                "status": {
-                    "isFormerMember": true
-                },
-                "membershipStartDate": "2011-01-01",
-                "membershipEndDate": "2023-12-31"
             }
         },
 
@@ -696,22 +529,6 @@
                     "isProspectiveMember": false
                 },
                 "expertises": [ "Bird", "Landscape" ]
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "Willy",
-                "infixName": "",
-                "familyName": "Lanters"
-            },
-            "optional": {
-                "level3URL": "https://www.fcDeGender.nl/portfolios/Willy_Lanters/",
-                "status": {
-                    "isFormerMember": true
-                },
-                "membershipStartDate": "2020-01-01",
-                "membershipEndDate": "2022-12-31"
             }
         },
 
