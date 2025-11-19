@@ -716,7 +716,7 @@
             },
             "optional": {
                 "website": "https://www.fcdegender.nl",
-                "level2URL": "https://www.fcDeGender.nl/deGender.level2.json",
+                "level2URL": "https://www.fcDeGender.nl/fgDeGender/deGender.level2.json",
                 "remark": [
                     {
                         "language": "EN",
