@@ -358,26 +358,6 @@
         {
             "name": {
                 "givenName": "Peter",
-                "infixName": "de",
-                "familyName": "Wit"
-            },
-            "optional": {
-                "website": "https://www.flickr.com/people/150047808@N08/",
-                "level3URL": "https://www.fcDeGender.nl/portfolios/Peter_de_Wit/",
-                "status": {
-                    "isFormerMember": true
-                },
-                "membershipStartDate": "2022-10-30",
-                "membershipEndDate": "2025-03-26",
-                "nlSpecific": {
-                    "fotobondNumber": 1620107
-                }
-            }
-        },
-
-        {
-            "name": {
-                "givenName": "Peter",
                 "infixName": "van den",
                 "familyName": "Hamer"
             },

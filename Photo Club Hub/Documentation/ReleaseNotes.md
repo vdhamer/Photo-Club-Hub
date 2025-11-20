@@ -2,7 +2,7 @@
 
 DATA MAINTENANCE
 * Forced a data reset at dataResetPending288b4654 (related to former members of fgDeGender).
-* Removed unused former members of fcDeGender
+* Removed unused former members of fcDeGender (including PdW)
 * Added portfolio's for 5 former members of fgDeGender (they disappeared after moving the location)
 * Added "Printing" Expertise tag (for December 2025).
 * TODO: prepare for 2 new clubs (ffcShot71, fcSchijndel)
