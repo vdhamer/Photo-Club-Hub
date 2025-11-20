@@ -134,7 +134,7 @@ Buitenlandse club zijn uiteraard ook niet lid van de (Nederlandse) Koninklijke F
 ### Waarom staan er fotomusea in?
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
-Omdat het vrij eenvoudig kon, goed samenging met de landkaartjes, en nuttig kon zijn voor sommige gebruikers.
+Omdat het nuttig kon zijn voor sommige gebruikers. En vrij eenvoudig was om toe te voegen.
 </details></p>
 
 </li><li>
