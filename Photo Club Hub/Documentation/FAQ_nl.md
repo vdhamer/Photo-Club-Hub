@@ -185,9 +185,18 @@ zodat ze op een consistente, uniforme manier getoond kunnen worden.</p>
 De meeste velden zijn optioneel. 
 Dus een club is niet verplicht om b.v. te linken naar hun website, of aan te geven wie in het bestuur zit.
 Verder doet de app niet aan adressen, e-mailadressen of telefoonnummers van leden.
-Die zijn niet eens optioneel: de software heeft de informatie niet en kan er niets mee.
+Die zijn niet eens optioneel: de software heeft de informatie niet en zou er niets mee kunnen.
 Zelfs de locatie van de thuisbasis van de club is optioneel. De locatie opgeslagen als GPS coordinaten,
 die je kunt afronden of naar b.v. naar een plein of treinstation kan laten wijzen.
+Op clublid niveau geldt hetzelfde: een link naar een persoonsgebonden website of het opgeven van expertises
+is optioneel. De app dwingt uiteraard ook niet af dat een clublid op de lijst voorkomt.
+
+#### Vergelijking met websites
+
+De app komt wat dit betreft overeen met de opzet van bestaande cubwebsites: die club heeft zeggenschap
+over wat ze willen aanleveren/tonen en hoort intern af te stemmen hoe ze dat organiseren. Het belangrijkste verschil
+is dat nieuwe informatievelden in de app ("wij willen melden wat voor merk camera een lid gebruikt" - hmmmm)
+een software uitbreiding vergt omdat de softwaretechnologie (JSON) een onbekend gewoon overslaat.
 </details></p>
 
 </li><li>
