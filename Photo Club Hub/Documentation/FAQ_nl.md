@@ -246,7 +246,7 @@ Maar het is hier wel opgezet om kopieëren zo lastig mogelijk te maken. Bij onze
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
 
 Nee. Maar de app is zo gemaakt dat het kan. Vaak wordt dat gewaardeerd
-(b.v. als iemand 20 jaar lid was, en wegens gezondheidsredenen niet meer meedoet met "zijn" club).
+(b.v. als iemand 20 jaar lid was, en wegens gezondheidsredenen zijn/haar lidmaatschap op moet zeggen).
 "In de app blijven of niet" kan per lid besloten worden. Of per club.
 Het is wel verstandig om dit met het lid zelf af te stemmen.
 Technisch kan een **gebruiker** van de app ook nog eens kiezen of ex-leden weergegeven worden.
