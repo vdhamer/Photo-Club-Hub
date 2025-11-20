@@ -196,7 +196,7 @@ is optioneel. De app dwingt uiteraard ook niet af dat een clublid op de lijst vo
 De app komt wat dit betreft overeen met de opzet van bestaande cubwebsites: die club heeft zeggenschap
 over wat ze willen aanleveren/tonen en hoort intern af te stemmen hoe ze dat organiseren. Het belangrijkste verschil
 is dat nieuwe informatievelden in de app ("wij willen melden wat voor merk camera een lid gebruikt" - hmmmm)
-een software uitbreiding vergt omdat de softwaretechnologie (JSON) een onbekend gewoon overslaat.
+een software uitbreiding vergt omdat de softwaretechnologie ([link](https://nl.wikipedia.org/wiki/JSON)) een onbekend veld volledig negeert.
 </details></p>
 
 </li><li>
