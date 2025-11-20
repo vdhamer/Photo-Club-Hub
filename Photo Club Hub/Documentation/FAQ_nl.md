@@ -112,11 +112,11 @@ en worden er softwarebugs verholpen.
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
     
-Nee. De nadruk ligt momenteel op Nederland, maar de app is wereldwijd te gebruiken.
+Nee. De nadruk ligt momenteel op groei in Nederland, maar de app is wereldwijd te gebruiken.
 
-De app ondersteunt bijvoorbeeld twee talen: Nederlands en Engels.
-In het Engels heet de app overigens "Photo Club Hub" ipv "Fotoclub Hub".
-De webversie kan in het Nederlands of in het Engels gegenereerd worden.
+De app ondersteunt daarvoor twee talen: Nederlands en Engels.
+In het Engels heet de app "Photo Club Hub" in plaats van "Fotoclub Hub".
+De zusterapp "Fotoclub Hub HTML" kan webpagina's in beide talen genereren.
 </details></p>
 
 </li><li>
