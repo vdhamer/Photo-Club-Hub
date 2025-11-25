@@ -2,16 +2,17 @@
 
 DATA MAINTENANCE
 * Forced a data reset at dataResetPending288b4654 (related to former members of fgDeGender).
-* Removed unused former members of fcDeGender (including PdW)
-* Added portfolio's for 5 former members of fgDeGender (they disappeared after moving the location)
+* Removed unused former members of fcDeGender (including PdW).
+* Added portfolio's for 5 former members of fgDeGender (they disappeared after moving the location).
 * Added "Printing" Expertise tag (for December 2025).
-* TODO: prepare for 2 new clubs (ffcShot71, fcSchijndel)
 * Fixed link in level 1 file to level2 file for fgDeGender.
+* TODO: prepare for 2 new clubs (ffcShot71, fcSchijndel).
 
 CODE MAINTENANCE
 * Synchronized code with Photo Club Hub HTML (very minor)
+* TODO: test with Xcode 26.2
 
-This build #4654 was made using Xcode 26.1.1
+This build #4654 was made using Xcode 26.2
 
 ---------------------------------------------------------------------------
 
