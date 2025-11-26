@@ -5,16 +5,30 @@
 //  Created by Peter van den Hamer on 09/06/2025.
 //
 
-import CoreData // for NSManagedObjectContext
+import Foundation // for Bundle
 
 public struct LocalizedExpertiseResultList {
 
     public init(isSupported: Bool, list: [LocalizedExpertiseResult]) {
-        self.icon = isSupported ? "🏵️" : "🪲"
+        self.isSupported = isSupported
         self.list = list
     }
 
-    public let icon: String // cannot be modified, icon is a single Unicode character
+    public let isSupported: Bool
     public var list: [LocalizedExpertiseResult]
+
+    public var icon: String {
+        if isSupported {
+            return String(localized: "🏵️", // mapping is to translate Unicode to escape codes for robustness
+                          table: "PhotoClubHubData",
+                          bundle: Bundle.photoClubHubDataModule,
+                          comment: "Expertise icon when expertise is supported")
+        } else {
+            return String(localized: "🪲",
+                          table: "PhotoClubHubData",
+                          bundle: Bundle.photoClubHubDataModule,
+                          comment: "Expertise icon when expertise is not supported aka temporary")
+        }
+    }
 
 }

@@ -1,6 +1,12 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "🏵️" : {
+      "comment" : "Expertise icon when expertise is supported"
+    },
+    "🪲" : {
+      "comment" : "Expertise icon when expertise is not supported aka temporary"
+    },
     "admin" : {
       "comment" : "Administrative role of member within a club.",
       "extractionState" : "stale",
