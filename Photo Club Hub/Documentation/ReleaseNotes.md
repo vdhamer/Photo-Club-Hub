@@ -1,15 +1,15 @@
 ### 2.8.8 (GitHub commit ???????) ??-12-25
 
 DATA MAINTENANCE
-* Forced a data reset at dataResetPending288b4654 (related to former members of fgDeGender).
-* Removed unused former members of fcDeGender (including PdW).
+* Forced a data reset with dataResetPending288b4654 (related to former members of fgDeGender).
+* Removed former members of fcDeGender without portfolios in the app (including PdW).
 * Added portfolio's for 5 former members of fgDeGender (they disappeared after moving the location).
-* Added "Printing" Expertise tag (for December 2025).
+* Added support for "Printing" Expertise (the tag for December 2025).
 * Fixed link in level 1 file to level2 file for fgDeGender.
-* TODO: prepare for 2 new clubs (ffcShot71, fcSchijndel).
+* TODO: prepare for 2 new clubs (ffcShot71, fcSchijndel). <<<<
 
 CODE MAINTENANCE
-* Synchronized code with Photo Club Hub HTML (very minor)
+* Synchronized code with Photo Club Hub HTML (minor changes)
 * Tested with Xcode 26.2 beta 2 (17C5038g) and iOS 26.2 (23C5044a) and SwiftLint 0.62.2_1
 
 This build #4654 was made using Xcode 26.2
