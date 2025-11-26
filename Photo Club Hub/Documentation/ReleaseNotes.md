@@ -10,7 +10,7 @@ DATA MAINTENANCE
 
 CODE MAINTENANCE
 * Synchronized code with Photo Club Hub HTML (very minor)
-* TODO: test with Xcode 26.2
+* Tested with Xcode 26.2 beta 2 (17C5038g) and iOS 26.2 (23C5044a) and SwiftLint 0.62.2_1
 
 This build #4654 was made using Xcode 26.2
 
