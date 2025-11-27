@@ -6,11 +6,18 @@ DATA MAINTENANCE
 * Added portfolio's for 5 former members of fgDeGender (they disappeared after moving the location).
 * Added support for "Printing" Expertise (the tag for December 2025).
 * Fixed link in level 1 file to level2 file for fgDeGender.
+
 * TODO: prepare for 2 new clubs (ffcShot71, fcSchijndel). <<<<
 
 CODE MAINTENANCE
 * Synchronized code with Photo Club Hub HTML (minor changes)
 * Tested with Xcode 26.2 beta 2 (17C5038g) and iOS 26.2 (23C5044a) and SwiftLint 0.62.2_1
+
+* TODO: Load Level2 from remote website if possible
+
+PORTFOLIO SCREEN
+
+* TODO: Data source is being displayed again
 
 This build #4654 was made using Xcode 26.2
 
