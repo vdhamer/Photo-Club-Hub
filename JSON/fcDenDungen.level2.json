@@ -8,7 +8,7 @@
         "coordinates": {"latitude": 51.65987, "longitude": 5.38646},
         "optional": {
             "website"  : "https://www.fotoclubdendungen.nl",
-            "level2URL": "https://www.example.com/fcdDungen.level2.json"
+            "level2URL": "https://www.example.com/fcDenDungen.level2.json"
         }
     },
 

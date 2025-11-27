@@ -10,7 +10,7 @@
         },
         "optional": {
             "website": "https://www.fotokring-gestel.nl",
-            "level2URL": "https://www.fotokring-gestel.nl/fkgestel.level2.json",
+            "level2URL": "https://www.example.com/fkGestel.level2.json",
             "contactEmail": "info@fotokring-gestel.nl",
             "nlSpecific": {"fotobondNumber": 1615}
         }

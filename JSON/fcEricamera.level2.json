@@ -7,8 +7,9 @@
         },
         "coordinates": {"latitude": 51.45403, "longitude": 5.46288},
         "optional": {
-            "website"    : {"level3URL": "https://www.ericamera.nl"},
-            "nlSpecific" : {"fotobondNumber": 1674}
+            "website": "https://www.ericamera.nl",
+            "level2URL": "https://www.example.com/fcEricamera.level2.json",
+            "nlSpecific": {"fotobondNumber": 1674}
         }
     },
 

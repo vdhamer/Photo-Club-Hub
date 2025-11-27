@@ -8,6 +8,7 @@
     "coordinates": {"latitude": 51.42541, "longitude": 5.38756},
     "optional": {
       "website": "https://www.fotoclubbellusimago.nl",
+      "level2URL": "https://www.example.com/fcBellusImago.level2.json",
       "contactEmail": "fotoclubbellusimago@gmail.com",
       "nlSpecific": {"fotobondNumber": 1671}
     }

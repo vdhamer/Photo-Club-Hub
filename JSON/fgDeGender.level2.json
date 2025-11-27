@@ -11,7 +11,7 @@
         "optional": {
             "website": "https://www.fcdegender.nl",
             "wikipedia": "https://nl.wikipedia.org/wiki/Gender_(beek)",
-            "level2URL": "https://www.example.com/deGender.level2.json",
+            "level2URL": "https://www.fcDeGender.nl/fgDeGender/fgDeGender.level2.json",
             "remark": [
                 {
                     "language": "EN",
