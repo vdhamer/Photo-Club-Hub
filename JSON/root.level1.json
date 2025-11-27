@@ -13,7 +13,7 @@
             },
             "optional": {
                 "website": "https://www.fotokringbeeldhoek.nl",
-                "level2URL": "https://www.example.com/FK_Beeldhoek.level2.json",
+                "level2URL": "https://www.example.com/fkBeeldhoek.level2.json",
                 "remark": [
                     {
                         "language": "EN",
@@ -42,7 +42,7 @@
             },
             "optional": {
                 "website": "https://www.fcobjectief.nl",
-                "level2URL": "https://www.example.com/FC_Objectief.level2.json",
+                "level2URL": "https://www.example.com/fcObjectief.level2.json",
                 "remark": [
                     {
                         "language": "EN",
@@ -71,7 +71,7 @@
             },
             "optional": {
                 "website": "https://www.shot71.nl",
-                "level2URL": "https://www.example.com/FFC_Shot71.level2.json",
+                "level2URL": "https://www.example.com/ffcShot71.level2.json",
                 "remark": [
                     {
                         "language": "EN",
@@ -230,7 +230,7 @@
             },
             "optional": {
                 "website": "https://www.fotogroep-focus.nl",
-                "level2URL": "https://www.example.com/FG_Focus.level2.json",
+                "level2URL": "https://www.example.com/fgFocus.level2.json",
                 "remark": [
                     {
                         "language": "EN",
@@ -259,7 +259,7 @@
             },
             "optional": {
                 "website": "https://boxtelontspant.nl",
-                "level2URL": "https://www.example.com/boxtelontspant.level2.json",
+                "level2URL": "https://www.example.com/BoxtelOntspant.level2.json",
                 "remark": [
                     {
                         "language": "EN",
@@ -313,7 +313,7 @@
             },
             "optional": {
                 "website": "https://argusfoto.nl/",
-                "level2URL": "https://www.example.com/Argusfoto.level2.json",
+                "level2URL": "https://www.example.com/fgArgus.level2.json",
                 "remark": [
                     {
                         "language": "EN",
@@ -339,7 +339,7 @@
             },
             "optional": {
                 "website": "https://fotoclubdenbosch.nl/",
-                "level2URL": "https://www.example.com/denBosch.level2.json",
+                "level2URL": "https://www.example.com/fcAFC68.level2.json",
                 "remark": [
                     {
                         "language": "EN",
@@ -393,7 +393,7 @@
             },
             "optional": {
                 "website": "https://www.fotoclubdendungen.nl",
-                "level2URL": "https://www.example.com/fcdDungen.level2.json",
+                "level2URL": "https://www.example.com/fcDenDungen.level2.json",
                 "remark": [
                     {
                         "language": "EN",
@@ -445,7 +445,7 @@
             },
             "optional": {
                 "website": "https://www.optika.nl",
-                "level2URL": "https://www.example.com/FC_Optika.level2.json",
+                "level2URL": "https://www.example.com/fcOptika.level2.json",
                 "remark": [
                     {
                         "language": "EN",
@@ -474,7 +474,7 @@
             },
             "optional": {
                 "website": "https://www.kemfodia.nl/",
-                "level2URL": "https://www.example.com/FC_Kemfodia.level2.json",
+                "level2URL": "https://www.example.com/fcKemfodia.level2.json",
                 "remark": [
                     {
                         "language": "EN",
@@ -558,7 +558,7 @@
             },
             "optional": {
                 "website": "https://dekatemousa.nl",
-                "level2URL": "https://www.example.com/dekatemousa.level2.json",
+                "level2URL": "https://www.example.com/DekateMousa.level2.json",
                 "remark": [
                     {
                         "language": "EN",
@@ -584,7 +584,7 @@
             },
             "optional": {
                 "website": "https://www.fotoschouw.nl",
-                "level2URL": "https://www.example.com/fotoschouw.level2.json",
+                "level2URL": "https://www.example.com/FotoSchouw.level2.json",
                 "remark": [
                     {
                         "language": "EN",
@@ -610,7 +610,7 @@
             },
             "optional": {
                 "website": "https://www.daffotovideoclub.nl",
-                "level2URL": "https://www.example.com/daf.level2.json",
+                "level2URL": "https://www.example.com/DAF.level2.json",
                 "remark": [
                     {
                         "language": "EN",
@@ -690,7 +690,7 @@
                 "longitude": 5.51534
             },
             "optional": {
-                "level2URL": "https://www.example.com/deBeeldmakers.level2.json",
+                "level2URL": "https://www.example.com/DeBeeldmakers.level2.json",
                 "remark": [
                     {
                         "language": "EN",
@@ -906,7 +906,7 @@
             },
             "optional": {
                 "website": "http://www.fotoclubgemert.nl/",
-                "level2URL": "https://www.example.com/fcGemert.level2.json",
+                "level2URL": "https://www.example.com/fegGemert.level2.json",
                 "remark": [
                     {
                         "language": "EN",
@@ -1117,7 +1117,7 @@
             },
             "optional": {
                 "website": "https://natuurinbeeldmiddelrode.nl",
-                "level2URL": "https://www.example.com/fcNatuurMiddelrode.level2.json",
+                "level2URL": "https://www.example.com/fcNatuurInBeeld.level2.json",
                 "remark": [
                     {
                         "language": "EN",
@@ -1489,7 +1489,7 @@
             },
             "optional": {
                 "website": "https://hefotoclub.nl",
-                "level2URL": "https://www.example.com/hefoto.level2.json",
+                "level2URL": "https://www.example.com/fcHefoto.level2.json",
                 "remark": [
                     {
                         "language": "EN",
@@ -1650,7 +1650,7 @@
             "idPlus": {
                 "town": "Uden",
                 "fullName": "Udense Amateurfotografen F/8",
-                "nickName": "f/8"
+                "nickName": "f8Uden"
             },
             "coordinates": {
                 "latitude": 51.66519,
@@ -1792,7 +1792,7 @@
                 "longitude": 5.53012
             },
             "optional": {
-                "level2URL": "https://www.example.com/fwgZienBezien.level2.json",
+                "level2URL": "https://www.example.com/fwgZienDoorzien.level2.json",
                 "remark": [
                     {
                         "language": "EN",
@@ -1977,7 +1977,7 @@
             "idPlus": {
                 "town": "Waalre",
                 "fullName": "Collectief de Verbeelding",
-                "nickName": "cVerbeelding"
+                "nickName": "cDeVerbeelding"
             },
             "coordinates": {
                 "latitude": 51.38691,
@@ -2011,7 +2011,7 @@
             },
             "optional": {
                 "website": "https://www.facebook.com/people/Collectief-Brabant/100007273477885",
-                "level2URL": "https://www.example.com/Brabant.level2.json",
+                "level2URL": "https://www.example.com/fcBrabant.level2.json",
                 "remark": [
                     {
                         "language": "EN",
@@ -2094,7 +2094,7 @@
                 "longitude": 5.25076
             },
             "optional": {
-                "level2URL": "https://www.example.com/?.level2.json",
+                "level2URL": "https://www.example.com/fcBommelerwaard.level2.json",
                 "remark": [
                     {
                         "language": "EN",
@@ -2123,7 +2123,7 @@
             },
             "optional": {
                 "website": "https://www.facebook.com/ObjectiefZeeland",
-                "level2URL": "https://www.example.com/???.level2.json",
+                "level2URL": "https://www.example.com/fcObjectiefZ.level2.json",
                 "remark": [
                     {
                         "language": "EN",
