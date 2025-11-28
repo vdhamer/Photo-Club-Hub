@@ -12,12 +12,11 @@ DATA MAINTENANCE
 CODE MAINTENANCE
 * Synchronized code with Photo Club Hub HTML (minor changes)
 * Tested with Xcode 26.2 beta 2 (17C5038g) and iOS 26.2 (23C5044a) and SwiftLint 0.62.2_1
-
-* TODO: Load Level2 from remote website if possible
+* Improved handling of Level2URL field
 
 PORTFOLIO SCREEN
 
-* TODO: Data source is being displayed again
+* Data source is displayed again (it used to be visible, many releases ago).
 
 This build #4654 was made using Xcode 26.2
 
