@@ -10,13 +10,14 @@ DATA MAINTENANCE
 * TODO: prepare for 2 new clubs (ffcShot71, fcSchijndel). <<<<
 
 CODE MAINTENANCE
-* Synchronized code with Photo Club Hub HTML (minor changes)
-* Tested with Xcode 26.2 beta 2 (17C5038g) and iOS 26.2 (23C5044a) and SwiftLint 0.62.2_1
-* Improved handling of Level2URL field
+* Synchronized code with Photo Club Hub HTML (minor changes).
+* Tested with Xcode 26.2 beta 2 (17C5038g) and iOS 26.2 (23C5044a) and SwiftLint 0.62.2_1.
+* Improved handling of Level2URL field.
+* Split organization.swift into 4 source files.
 
 PORTFOLIO SCREEN
 
-* Data source is displayed again (it used to be visible, many releases ago).
+* Data source is displayed again (but it still needs more work).
 
 This build #4654 was made using Xcode 26.2
 
