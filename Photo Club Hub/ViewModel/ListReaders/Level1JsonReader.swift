@@ -60,6 +60,7 @@ public class Level1JsonReader {
 
                 let jsonOrganizationOptionals = jsonOrganization["optional"] // rest will be empty if not found
                 let organizationWebsite = URL(string: jsonOrganizationOptionals["website"].stringValue)
+                let level2URL = URL(string: jsonOrganizationOptionals["level2URL"].stringValue)
                 let wikipedia = URL(string: jsonOrganizationOptionals["wikipedia"].stringValue)
                 let fotobondNumber = jsonOrganizationOptionals["nlSpecific"]["fotobondNumber"].int16Value
                 let contactEmail = jsonOrganizationOptionals["contactEmail"].stringValue
@@ -70,6 +71,7 @@ public class Level1JsonReader {
                                                   coordinates: coordinates,
                                                   optionalFields: OrganizationOptionalFields(
                                                       organizationWebsite: organizationWebsite,
+                                                      level2URL: level2URL,
                                                       wikipedia: wikipedia,
                                                       fotobondNumber: fotobondNumber, // Int16
                                                       contactEmail: contactEmail,

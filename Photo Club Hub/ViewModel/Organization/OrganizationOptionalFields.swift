@@ -13,16 +13,19 @@ import SwiftyJSON // for JSON struct
 public struct OrganizationOptionalFields {
     var organizationWebsite: URL?
     var wikipedia: URL?
+    var level2URL: URL?
     var fotobondNumber: Int16?
     var contactEmail: String?
     var localizedRemarks: [JSON] // defaults to an empty array instead of to nil
 
     public init(organizationWebsite: URL? = nil,
+                level2URL: URL? = nil,
                 wikipedia: URL? = nil,
                 fotobondNumber: Int16? = nil,
                 contactEmail: String? = nil,
                 localizedRemarks: [JSON] = []) {
         self.organizationWebsite = organizationWebsite
+        self.level2URL = level2URL
         self.wikipedia = wikipedia
         self.fotobondNumber = fotobondNumber
         self.contactEmail = contactEmail

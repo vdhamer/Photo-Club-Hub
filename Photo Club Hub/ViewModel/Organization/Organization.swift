@@ -139,8 +139,33 @@ extension Organization {
     }
 
     var level2URL: URL? {
-        get { level2URL_ }
+        get {
+            // use a default unless level2URL points to the club's own website
+            let defaultURL: URL? = URL(string: "http://www.vdhamer.com/\(self.nickName)/index.html")
+            guard let defaultURL else {
+                ifDebugFatalError("Bad URL: \(defaultURL?.absoluteString ?? "nil")")
+                return nil
+            }
+
+            guard !self.organizationType.isMuseum else { return nil } // no level2URL for a museum
+            guard self.organizationType.isClub else { // warn if bad or new OrganizationType
+                ifDebugFatalError("Unexpected organizationType: \(self.organizationType.organizationTypeName)")
+                return nil // for production code
+            }
+
+            guard self.level2URL_ != nil else { return defaultURL } // nobody provided a URL
+            guard let website: String = self.organizationWebsite?.absoluteString else { return defaultURL }
+            guard self.level2URL_!.absoluteString.lowercased().contains(website.lowercased()) else { return defaultURL }
+
+            return level2URL_ // initial files don't reach this point when Website is (still) a dummy value
+        }
         set { level2URL_ = newValue }
+    }
+
+    public var level2URLDir: URL? {
+        let url: URL? = level2URL
+        guard url != nil else { return nil }
+        return url!.deletingLastPathComponent()
     }
 
     var coordinates: CLLocationCoordinate2D {
@@ -282,6 +307,10 @@ extension Organization {
 
         if let website = optionalFields.organizationWebsite, self.organizationWebsite != website {
             self.organizationWebsite = website
+            modified = true }
+
+        if let level2URL = optionalFields.level2URL, self.level2URL_ != level2URL {
+            self.level2URL_ = level2URL
             modified = true }
 
         if let wikiURL = optionalFields.wikipedia, self.wikipedia != wikiURL {
