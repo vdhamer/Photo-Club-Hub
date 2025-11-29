@@ -79,7 +79,7 @@ extension Organization {
         }
     }
 
-    // Update non-identifying attributes/properties within existing instance of class PhotoClub
+    // Update non-identifying attributes/properties within existing instance of class Organization
     // swiftlint:disable:next function_parameter_count cyclomatic_complexity function_body_length
     private func update(bgContext: NSManagedObjectContext,
                         organizationTypeEnum: OrganizationTypeEnum,
