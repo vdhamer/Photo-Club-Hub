@@ -95,7 +95,10 @@ extension Organization {
             self.nickName_ = nickName
             modified = true }
 
-        if self.coordinates != coordinates {
+        // allow small rouding differences in double (instead of using != for Doubles)
+        let delta = abs(self.latitude_ - coordinates.latitude) +
+                    abs(self.longitude_ - coordinates.longitude)
+        if delta > 0.000001 {
             self.longitude_ = coordinates.longitude
             self.latitude_ = coordinates.latitude
             modified = true }
