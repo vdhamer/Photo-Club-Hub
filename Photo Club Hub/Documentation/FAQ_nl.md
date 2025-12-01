@@ -643,7 +643,7 @@ De app versie zou ook actief kunnen melden welke exposities er in de buurt in de
 ### Er is vast meer documentatie?
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
-Vast wel. Zie tabel:
+Jazeker:
     
 | Titel  | Link | Nederlands | Engels  |
 | ----------- | ----------- | :---: | :---: |
