@@ -30,15 +30,16 @@ Er zijn aparte instructies om lijsten met _clubleden_ ("Level 2") toe te voegen.
     > Als alternatief kan je een kale editor gebruiken zoals [Windows NotePad](https://nl.wikipedia.org/wiki/Notepad), [NotePad++](https://nl.wikipedia.org/wiki/Notepad%2B%2B) of [Sublime Text](https://nl.wikipedia.org/wiki/Sublime_Text).
     Microsoft Word is ongeschikt omdat het van nature een `.docx` bestandsformaat gebruikt.
     </br>
-
-    - Voor de verkorte naam `nickName` gebruiken we een soort conventie zoals fcDenDungen (voor "Fotoclub Den Dungen") of fgWaalre (voor "Fotogroep Waalre"). 
+    - Voor de verkorte naam, `nickName`, gebruiken we een soort conventie zoals fcDenDungen (voor "Fotoclub Den Dungen") of fgWaalre (voor "Fotogroep Waalre"). 
     Deze nickname wordt vooral intern gebruikt (Level 2 bestandsnamen).
 
-4. Pas de ligging van de club aan (`coordinates`):
-    - De coördinaten zullen er voor Nederland uitzien als b.v. 51.12345 en 5.67890. Dus met een punt (Internationaal) ipv een comma. Nederlandse coordinaten zullen ongeveer 51 (graden noorderbreedte) en 5 graden (oosterbreedte) zijn (de grote zendmast bij IJselsteijn zit op 52.01043 en 5.05285).
-    - Je kunt de coordinaten in maps.google.com uitlezen door op de juiste locatie rechts te klikken op de muis.
+4. Pas de locatie van de club aan (`coordinates`):
+    - De coördinaten worden gebruikt om de nominale ligging van een club op landkaartjes aan te geven. Dan kan je zien wat in de buurt van wat is. De app werkt _niet_ met een traditioneel adres.
+    - De coördinaten zullen er voor Nederland uitzien als b.v. 51.12345 en 5.67890. Dus met een punt ipv een komma. Nederlandse coordinaten zullen rond de 51 graden noorderbreedte en 5 graden oosterbreedte zijn (de grote zendmast/kerstboom onder Utrecht staat op 52.01043 en 5.05285).
+    - Je kunt de coordinaten bijvoorbeeld met [maps.google.com](https:/maps.google.com) uitlezen door op het gekozen adres rechts-te-klikken met de muis.
     - We kiezen normaal de locatie waar de club bijeenkomt of exposeert. Als dat ongewenst is, kan je een bekend
-    plein of station kiezen in de desbetreffende locatie. Als alternatief kan je minder cijfers achter de comma gebruiken. Hiermee introduceer je bewust een minder nauwkeurige locatie die b.v. een paar kilometer verderop ligt.
+    plein, station of monument kiezen in de buurt. Als alternatief kan je minder cijfers achter de comma gebruiken. Hiermee introduceer je een minder nauwkeurige locatie die b.v. een kilometer verderop ligt.
+    - Zou je ``coordinates` weglaten, dan werkt de app. En wordt de club weergeven op coordinaten 0, 0. Dat is 600 km westen van West Africa. Door gebrek aan eilanden zie je in de Apple versie van de app een kaart met alleen blauw water.
     </br>
     
     > Tip: De lijst met clubs hoeft niet in een keer compleet te zijn:
@@ -47,15 +48,15 @@ Er zijn aparte instructies om lijsten met _clubleden_ ("Level 2") toe te voegen.
 
     </br>
     
-5. Voeg indien mogelijk een opmerking (remark) toe. Gebruikt XampleMax.level1.json als voorbeeld.
+6. Voeg indien mogelijk een opmerking (remark) toe. Gebruikt XampleMax.level1.json als voorbeeld.
     - Dit bevat iets bijzonders over de club. Het maakt de club minder anoniem en maakt de lezer nieuwsgierig.
     - Probeer het niet langer dan zeg 100 karakters te maken. Ongeveer de lengte van een Twitter/X berichtje.
     - Het voorbeeld bestand laat zien dat je die tekst in het Nederlands (NL) en Engels (EN) aanlevert. De Apple app kiest automatisch welke taal van toepassing is voor de gebruiker.
     
-6. Voeg indien mogelijk het Fotobondnummer ("fotobondNumber") toe volgens het voorbeeld in XampleMax.level1.json.
+7. Voeg indien mogelijk het Fotobondnummer ("fotobondNumber") toe volgens het voorbeeld in XampleMax.level1.json.
     - dit bestaat uit 3 regel. Als een club geen lid is van de Fotobond, dan kan alles tussen "nlSpecific" en "}" verwijderd worden.
  
-7. Deze controlestap is alleen nodig als je [JSON Editor Online](https://jsoneditoronline.org) __niet__ gebruikt.
+8. Deze controlestap is alleen nodig als je [JSON Editor Online](https://jsoneditoronline.org) __niet__ gebruikt.
     - Er is bij [JSON Editor Online](https://jsoneditoronline.org) geen aparte JSON controle nodig.
       Het controleert namelijk voortdurend of de tekst voldoet aan de JSON regels. Hiermee worden sommige fouten in het bestand voorkomen door in het rood te waarschuwen als er is mis is en in welke regel.
     - Om handmatig in deze stap een tekst bestand op technische fouten te controleren, kan je de volledige inhoud kopiëren naar [JSON Editor Online](https://jsoneditoronline.org).
@@ -70,7 +71,7 @@ Er zijn aparte instructies om lijsten met _clubleden_ ("Level 2") toe te voegen.
     > Tip: het is handig om de clubs in alfabetische volgorde van __town__ (gemeente) te zetten:
     > dan valt het makkelijker op als een club dubbel op de lijst voorkomt. Of als een club onbedoeld ontbreekt. 
 
-8. **Stuur** ons het gemaakte `level1.json` bestand. Dat mag ook bij tussenversies. Wij zullen proberen binnen 24 uur te reageren.
+9. **Stuur** ons het gemaakte `level1.json` bestand. Dat mag ook bij tussenversies. Wij zullen proberen binnen 24 uur te reageren.
     - Onze rol is om een de _technische_ juistheid te bewaken en om hulp te bieden.
       Wij kijken niet of de aangeleverde clubinformatie zelf klopt. Correcties naderhand kunnen altijd nog.
       In ieder geval kan je clubs toevoegen.
@@ -78,7 +79,7 @@ Er zijn aparte instructies om lijsten met _clubleden_ ("Level 2") toe te voegen.
       In de toekomst komt er wellicht ondersteuning om het bestand op een eigen locatie online te zetten.
       Dan vindt de app dit via een vast adres. Maar kan het bestand bijgewerkt worden zonder centrale ondersteuning.
 
-9. **Controleer** of alles naar wens werkt via de [Photo Club Hub](https://www.fotobond-brabantoost.nl/nieuws/fotoclub-hub-app/) iOS app.
+10. **Controleer** of alles naar wens werkt via de [Photo Club Hub](https://www.fotobond-brabantoost.nl/nieuws/fotoclub-hub-app/) iOS app.
 Of via een door ons [gegenereerde](https://github.com/vdhamer/Photo-Club-Hub-HTML/blob/main/.github/README.md) HTML pagina die bereikbaar is onder [clubs](https://www.fcDeGender.nl/clubs).
 
 ## Bonus informatie
