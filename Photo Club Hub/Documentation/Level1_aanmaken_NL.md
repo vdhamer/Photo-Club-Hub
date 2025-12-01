@@ -3,7 +3,7 @@
 Dit stappenplan beschrijft hoe men een lijst met clubs aan kan maken, bijvoorbeeld voor een Fotobond Afdeling.
 Het resulterende bestand moet automatisch ingelezen kunnen worden door [Photo Club Hub](https://github.com/vdhamer/Photo-Club-Hub)
 en [Photo Club Hub HTML](https://github.com/vdhamer/Photo-Club-Hub-HTML). Daarom zijn er eisen ten aanzien van het formaat ("Level 1" JSON).
-Er zijn aparte instructies om lijsten met _clubleden_ ("Level 2") toe te voegen. Dit kan op een later moment gebeuren.
+Er zijn aparte instructies om lijsten met _clubleden_ ("Level 2") toe te voegen. Maar dat kan op een later moment gebeuren.
 
 > 🕚 Het voor de allereerste keer aanmaken van een Level1 bestand met één of twee clubs zal misschien 1 uur kosten. \
 > Die tijd is nodig om de aanpak te begrijpen en te ontdekken hoe met de vereiste software om te gaan. \
