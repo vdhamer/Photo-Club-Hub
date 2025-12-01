@@ -39,14 +39,12 @@ Er zijn aparte instructies om lijsten met _clubleden_ ("Level 2") toe te voegen.
     - Je kunt de coordinaten bijvoorbeeld met [maps.google.com](https:/maps.google.com) uitlezen door op het gekozen adres rechts-te-klikken met de muis.
     - We kiezen normaal de locatie waar de club bijeenkomt of exposeert. Als dat ongewenst is, kan je een bekend
     plein, station of monument kiezen in de buurt. Als alternatief kan je minder cijfers achter de comma gebruiken. Hiermee introduceer je een minder nauwkeurige locatie die b.v. een kilometer verderop ligt.
-    - Zou je ``coordinates` weglaten, dan werkt de app. En wordt de club weergeven op coordinaten 0, 0. Dat is 600 km westen van West Africa. Door gebrek aan eilanden zie je in de Apple versie van de app een kaart met alleen blauw water.
+    - Zou je `coordinates` weglaten, dan wordt de club weergeven op coordinaten 0, 0. Dat is midden in zee bij West Africa. Door gebrek aan eilanden zie je in de app een landkaart met alleen blauwe oceaan.
     </br>
     
     > Tip: De lijst met clubs hoeft niet in een keer compleet te zijn:
     > je kan dus eerst 1 of 2 clubs toevoegen om de kijken of alles lukt.
     > En de lijst vervolgens completer maken in een uitgebreidere versie.
-
-    </br>
     
 6. Voeg indien mogelijk een opmerking (remark) toe. Gebruikt XampleMax.level1.json als voorbeeld.
     - Dit bevat iets bijzonders over de club. Het maakt de club minder anoniem en maakt de lezer nieuwsgierig.
