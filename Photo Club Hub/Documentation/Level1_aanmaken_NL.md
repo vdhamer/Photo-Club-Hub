@@ -29,12 +29,12 @@ Er zijn aparte instructies om lijsten met _clubleden_ ("Level 2") toe te voegen.
     > Dat programma is speciaal bedoeld om zogenaamde "JSON" tekstbestanden aan te maken en te controlleren.
     > Als alternatief kan je een kale editor gebruiken zoals [Windows NotePad](https://nl.wikipedia.org/wiki/Notepad), [NotePad++](https://nl.wikipedia.org/wiki/Notepad%2B%2B) of [Sublime Text](https://nl.wikipedia.org/wiki/Sublime_Text).
     Microsoft Word is ongeschikt omdat het van nature een `.docx` bestandsformaat gebruikt.
+    </br>
 
-4. Pas de lengtegraad/breedtegraad **club (`members`) aan: `givenName`, `infixName` en `familyName`.
-    > Tip: met de [JSON Editor Online](https://jsoneditoronline.org) kan je de lijst van clubleden als tabel
-    > bekijken en aanpassen. Dan kan je dubbelklikken op cellen die je wilt aanpassen,
-    > en regels toevoegen of verwijderen via het een menu ("__⋮__").
-  
+    - Voor de verkorte naam `nickName` gebruiken we een soort conventie zoals fcDenDungen (voor "Fotoclub Den Dungen") of fgWaalre (voor "Fotogroep Waalre"). 
+    Deze nickname wordt vooral intern gebruikt (Level 2 bestandsnamen).
+
+4. Pas de ligging van de club aan (`coordinates`):
     - De coördinaten zullen er voor Nederland uitzien als b.v. 51.12345 en 5.67890. Dus met een punt (Internationaal) ipv een comma. Nederlandse coordinaten zullen ongeveer 51 (graden noorderbreedte) en 5 graden (oosterbreedte) zijn (de grote zendmast bij IJselsteijn zit op 52.01043 en 5.05285).
     - Je kunt de coordinaten in maps.google.com uitlezen door op de juiste locatie rechts te klikken op de muis.
     - We kiezen normaal de locatie waar de club bijeenkomt of exposeert. Als dat ongewenst is, kan je een bekend
