@@ -1,0 +1,176 @@
+{
+    "clubs": [
+
+        {
+            "idPlus": {
+                "town": "Gemeente?",
+                "fullName": "Naam van club",
+                "nickName": "fcOnzeClub voor fotoclub, fgOnzeClub voor fotogroep, controlleert Peter wel"
+            },
+            "coordinates": {
+                "latitude": 51.40235,
+                "longitude": 5.74476
+            },
+            "optional": {
+                "website": "https://www.fotokringbeeldhoek.nl",
+                "level2URL": "verwijst naar ledenlijst bestand, voorlopig maar weglaten",
+                "remark": [
+                    {
+                        "language": "NL",
+                        "value": "In zeg 100 tekens, aangeven wat leuk/nuttig te weten is over deze club."
+                    },
+                    {
+                        "language": "EN",
+                        "value": "Engelse vertaling (hoeft niet letterlijk hetzelfde te zijn) van Nederlandse versie. Peter van evt vertaling doen."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 1641
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "?",
+                "fullName": "?",
+                "nickName": "?"
+            },
+            "coordinates": {
+                "latitude": 51.53557,
+                "longitude": 5.62722
+            },
+            "optional": {
+                "website": "?",
+                "level2URL": "?",
+                "remark": [
+                    {
+                        "language": "NL",
+                        "value": "?"
+                    },
+                    {
+                        "language": "EN",
+                        "value": "?"
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 301
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "?",
+                "fullName": "Deze Is Geen Lid van Fotobond",
+                "nickName": "?"
+            },
+            "coordinates": {
+                "latitude": 51.53557,
+                "longitude": 5.62722
+            },
+            "optional": {
+                "website": "?",
+                "level2URL": "?",
+                "remark": [
+                    {
+                        "language": "NL",
+                        "value": "?"
+                    },
+                    {
+                        "language": "EN",
+                        "value": "?"
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "?",
+                "fullName": "?",
+                "nickName": "?"
+            },
+            "coordinates": {
+                "latitude": 51.53557,
+                "longitude": 5.62722
+            },
+            "optional": {
+                "website": "?",
+                "level2URL": "?",
+                "remark": [
+                    {
+                        "language": "NL",
+                        "value": "?"
+                    },
+                    {
+                        "language": "EN",
+                        "value": "?"
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 303
+                }
+            }
+        },
+
+         {
+            "idPlus": {
+                "town": "?",
+                "fullName": "?",
+                "nickName": "?"
+            },
+            "coordinates": {
+                "latitude": 51.53557,
+                "longitude": 5.62722
+            },
+            "optional": {
+                "website": "?",
+                "level2URL": "?",
+                "remark": [
+                    {
+                        "language": "NL",
+                        "value": "?"
+                    },
+                    {
+                        "language": "EN",
+                        "value": "?"
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 310
+                }
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "?",
+                "fullName": "?",
+                "nickName": "?"
+            },
+            "coordinates": {
+                "latitude": 51.53557,
+                "longitude": 5.62722
+            },
+            "optional": {
+                "website": "?",
+                "level2URL": "?",
+                "remark": [
+                    {
+                        "language": "NL",
+                        "value": "?"
+                    },
+                    {
+                        "language": "EN",
+                        "value": "?"
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 311
+                }
+            }
+        }
+
+    ]
+}
