@@ -29,7 +29,7 @@ Er zijn aparte instructies om lijsten met _clubleden_ ("Level 2") toe te voegen.
     > Dat programma is speciaal bedoeld om zogenaamde "JSON" tekstbestanden aan te maken en te controlleren.
     > Als alternatief kan je een kale editor gebruiken zoals [Windows NotePad](https://nl.wikipedia.org/wiki/Notepad), [NotePad++](https://nl.wikipedia.org/wiki/Notepad%2B%2B) of [Sublime Text](https://nl.wikipedia.org/wiki/Sublime_Text).
     Microsoft Word is ongeschikt omdat het van nature een `.docx` bestandsformaat gebruikt.
-    </br>
+
     - Voor de verkorte naam, `nickName`, gebruiken we een soort conventie zoals fcDenDungen (voor "Fotoclub Den Dungen") of fgWaalre (voor "Fotogroep Waalre"). 
     Deze nickname wordt vooral intern gebruikt (Level 2 bestandsnamen).
 
