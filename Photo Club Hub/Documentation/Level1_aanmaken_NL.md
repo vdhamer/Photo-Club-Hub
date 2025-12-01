@@ -15,6 +15,8 @@ Er zijn aparte instructies om lijsten met _clubleden_ ("Level 2") toe te voegen.
 2. Maak een **kopie** van het [Min](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/XampleMin.level1.json) bestand en geef het een passende bestandsnaam:
    - Voor Afdeling #3 (Drenthe en Vechtstreek) zou Afdeling03.level1.json kunnen kiezen.
 
+   </br>
+
    > Tip: Je kunt als alternatief ook uitgaan van het [Max](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/XampleMax.level1.json) bestand.
    > Dit betekent dat je velden die je momenteel niet wil of kan aanleveren gaat verwijderen. 
    > Het [Min](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/XampleMin.level1.json) bestand 
