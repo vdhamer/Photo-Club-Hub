@@ -13,7 +13,7 @@ Er zijn aparte instructies om lijsten met _clubleden_ ("Level 2") toe te voegen.
    _Min_ bevat een zo klein mogelijk voorbeeld. _Max_ is een voorbeeld met alle beschikbare opties. Bij zowel Min als Max is er een "download" icoon rechtsboven.
 
 2. Maak een **kopie** van het [Max](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/XampleMax.level1.json) bestand en geef het een passende bestandsnaam:
-   - Voor Afdeling #3 (Drenthe en Vechtstreek) zou Afdeling03.level1.json kunnen kiezen.
+   - Voor Afdeling #3 (Drenthe en Vechtstreek) zou je Afdeling03.level1.json kunnen kiezen. Gebruikers van de app zullen die naam toch niet zien.
 
    </br>
 
