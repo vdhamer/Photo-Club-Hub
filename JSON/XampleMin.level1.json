@@ -1,5 +1,6 @@
 {
     "clubs": [
+
         {
             "idPlus": {
                 "town": "Amsterdam",
@@ -13,21 +14,21 @@
                 },
                 "level2URL": "https://www.example.com/XampleMin.level2.json"
             }
-        }
-    ],
-    "museums": [
+        },
+
         {
             "idPlus": {
-                "town": "New York",
-                "fullName": "Fotografiska New York",
-                "nickName": "Fotografiska NYC"
+                "town": "Wetzlar",
+                "fullName": "Leica Rangefinders Owners Club",
+                "nickName": "LeicaROC"
             },
             "optional": {
                 "coordinates": {
-                    "latitude": 40.739278,
-                    "longitude": -73.986722
+                    "latitude": 50,55221,
+                    "longitude": 8,53346
                 }
             }
         }
+
     ]
 }
