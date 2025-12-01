@@ -1,8 +1,8 @@
 ## Een level1.json bestand aanmaken voor een afdeling
 
 Dit stappenplan beschrijft hoe men een lijst met clubs aan kan maken, bijvoorbeeld voor een Fotobond Afdeling.
-Het resulterende bestand moet automatisch ingelezen kunnen worden door de [Photo Club Hub](https://github.com/vdhamer/Photo-Club-Hub)
-en [Photo Club Hub HTML](https://github.com/vdhamer/Photo-Club-Hub-HTML) apps. Daarom zijn er eisen ten aanzien van het formaat ("Level 1" JSON).
+Het resulterende bestand moet automatisch ingelezen kunnen worden door [Photo Club Hub](https://github.com/vdhamer/Photo-Club-Hub)
+en [Photo Club Hub HTML](https://github.com/vdhamer/Photo-Club-Hub-HTML). Daarom zijn er eisen ten aanzien van het formaat ("Level 1" JSON).
 Er zij aparte instructies om lijsten met _clubleden_ ("Level 2") toe te voegen. Dit kan later gebeuren.
 
 > 🕚 Het voor de allereerste keer aanmaken van een Level1 bestand met één of twee clubs zal misschien 1 uur kosten. \
