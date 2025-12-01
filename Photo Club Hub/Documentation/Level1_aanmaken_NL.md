@@ -13,16 +13,16 @@ Er zijn aparte instructies om lijsten met _clubleden_ ("Level 2") toe te voegen.
    _Min_ bevat een zo klein mogelijk voorbeeld. _Max_ is een voorbeeld met alle beschikbare opties. Bij zowel Min als Max is er een "download" icoon rechtsboven.
 
 2. Maak een **kopie** van het [Max](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/XampleMax.level1.json) bestand en geef het een passende bestandsnaam:
-   - Voor Afdeling #3 (Drenthe en Vechtstreek) zou je Afdeling03.level1.json kunnen kiezen. Gebruikers van de app zullen die naam toch niet zien.
+   - Voor Afdeling #3 (Drenthe en Vechtstreek) zou je Afdeling03.level1.json kunnen kiezen. Gebruikers van de app zien de bestandsnaam niet.
 
    </br>
 
-   > Tip: Je kunt eventueel ook uitgaan van het [Min](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/XampleMin.level1.json) bestand ipv Max.
+   > Tip: Je kunt desgewenst ook uitgaan van het [Min](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/XampleMin.level1.json) bestand ipv Max.
    > Het [Min](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/XampleMin.level1.json) bestand 
-   > toont hoe het eruit ziet als vrijwel alle optionele velden ontbreken.
-   > Dit betekent dat je extra velden die je wilt vullen moet toevoegen door ze vanuit Max te kopiëren. 
-   > Zodra je dus meer wilt, moet je dus regels toevoegen. Dit heeft het risiko dat men zich vergist in een komma of een haakje teveel of te weinig krijgt.
-   > Verderop staat hoe je dat automatisch kan controleren: het JSON formaat is nu eenmaal kieskeurig over haakjes en comma's.
+   > toont hoe het eruit ziet als bijna alle optionele velden ontbreken.
+   > Dit betekent dat je extra velden die je wilt vullen moet toevoegen, bijvoorbeeld door die regels vanuit Max te kopiëren. 
+   > Dit brengt iets meer risiko met zich mee omdat je bij het kopiëren misschien iets teveel of te weinig overneemt, of het op een verkeerde plek zet.
+   > Dat is op zijn beurt niet heel erg: in stap 8 staat hoe je het bestand kunt controleren: het JSON formaat is nu eenmaal kieskeurig over haakjes en comma's.
 
 3. Pas de gegevens per **club** (`club`) aan: `town`, `fullName`, `nickName`, en ook de locatie:
     > Tip: gebruik voor het aanpassen van het bestand bijvoorbeeld [JSON Editor Online](https://jsoneditoronline.org).
