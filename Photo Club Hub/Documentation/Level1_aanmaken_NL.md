@@ -22,9 +22,9 @@ Er zijn aparte instructies om lijsten met _clubleden_ ("Level 2") toe te voegen.
    > toont hoe het eruit ziet als bijna alle optionele velden ontbreken.
    > Dit betekent dat je extra velden die je wilt vullen moet toevoegen, bijvoorbeeld door die regels vanuit Max te kopiëren. 
    > Dit brengt iets meer risiko met zich mee omdat je bij het kopiëren misschien iets teveel of te weinig overneemt, of het op een verkeerde plek zet.
-   > Dat is op zijn beurt niet heel erg: in stap 8 staat hoe je het bestand kunt controleren: het JSON formaat is nu eenmaal kieskeurig over haakjes en komma's.
+   > Dat is op zijn beurt niet heel erg: in stap 7 staat hoe je het bestand kunt controleren: het JSON formaat is nu eenmaal kieskeurig over haakjes en komma's.
 
-3. Pas de gegevens per **club** (`club`) aan: `town`, `fullName`, `nickName`, en ook de locatie:
+3. Pas de gegevens per **club** aan: `town`, `fullName`, `nickName`, en ook de locatie:
     > Tip: gebruik voor het aanpassen van het bestand bijvoorbeeld [JSON Editor Online](https://jsoneditoronline.org).
     > Dat programma is speciaal bedoeld om zogenaamde "JSON" tekstbestanden aan te maken en te controlleren.
     > Als alternatief kan je een kale editor gebruiken zoals [Windows NotePad](https://nl.wikipedia.org/wiki/Notepad), [NotePad++](https://nl.wikipedia.org/wiki/Notepad%2B%2B) of [Sublime Text](https://nl.wikipedia.org/wiki/Sublime_Text).
