@@ -146,6 +146,7 @@
 		3705AFC52E7381D10067CE6B /* fkGestel.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fkGestel.level2.json; sourceTree = "<group>"; };
 		372028CD2E84A4CC00ED1B91 /* Photo-Club-Hub-InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = "Photo-Club-Hub-InfoPlist.xcstrings"; sourceTree = "<group>"; };
 		37545CA32EBFB37300C75485 /* Photo_Club_Hub_2_8_7.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_8_7.xcdatamodel; sourceTree = "<group>"; };
+		3764D5E32EDDB0D9005A2539 /* FotoclubHubIntro_NL_20251129.pptx */ = {isa = PBXFileReference; lastKnownFileType = file; path = FotoclubHubIntro_NL_20251129.pptx; sourceTree = "<group>"; };
 		376D14F72E6DE60900A1403B /* PreludeView2626.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreludeView2626.swift; sourceTree = "<group>"; };
 		376D14F92E6DE83A00A1403B /* DebugPanel2626.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugPanel2626.swift; sourceTree = "<group>"; };
 		376DC9512EC3A98900FB429B /* PreludeImageStore2626.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreludeImageStore2626.swift; sourceTree = "<group>"; };
@@ -637,6 +638,7 @@
 		D0831A48277F736C0049AB84 /* Documentation */ = {
 			isa = PBXGroup;
 			children = (
+				3764D5E32EDDB0D9005A2539 /* FotoclubHubIntro_NL_20251129.pptx */,
 				D0831A4B277F736C0049AB84 /* ReleaseNotes.md */,
 				D04D7B2B2D2B3B210048454B /* Jaarverslag 2024 Website.docx */,
 				D0F361CE2D5134A00077FFA0 /* Nieuwsbrief_Feb25_app.docx */,
