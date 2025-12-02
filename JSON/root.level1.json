@@ -175,10 +175,6 @@
                 }
             }
         },
-
-        {
-          "note": "Above 6 clubs are temporarily included here. They will move to a separate file Afdeling03.level1.json"
-        },
       
         {
             "idPlus": {
