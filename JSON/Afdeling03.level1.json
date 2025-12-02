@@ -1,56 +1,115 @@
 {
     "clubs": [
-
+        
         {
             "idPlus": {
-                "town": "Gemeente?",
-                "fullName": "Naam van club",
-                "nickName": "fcOnzeClub voor fotoclub, fgOnzeClub voor fotogroep, controlleert Peter wel"
-            },
-            "coordinates": {
-                "latitude": 51.40235,
-                "longitude": 5.74476
+                "town": "Assen",
+                "fullName": "Fotoclub Afovera",
+                "nickName": "fcAfovera"
             },
             "optional": {
-                "website": "https://www.fotokringbeeldhoek.nl",
-                "level2URL": "verwijst naar ledenlijst bestand, voorlopig maar weglaten",
+                "coordinates": {
+                    "latitude": 53.01049,
+                    "longitude": 6.54517
+                },
+                "website": "https://www.afovera.nl",
+                "level2URL": "http://www.example.com/fcAfovera.level2.json",
                 "remark": [
                     {
                         "language": "NL",
-                        "value": "In zeg 100 tekens, aangeven wat leuk/nuttig te weten is over deze club."
+                        "value": "Afovera bestaat al meer dan 50 jaar. Foto’s worden getoond en besproken in een gezellige sfeer."
                     },
                     {
                         "language": "EN",
-                        "value": "Engelse vertaling (hoeft niet letterlijk hetzelfde te zijn) van Nederlandse versie. Peter van evt vertaling doen."
+                        "value": "A remark here about the club can be overruled by a remark in club's level2.json file."
                     }
                 ],
+                "contactEmail": "karel@stooptech.nl",
                 "nlSpecific": {
-                    "fotobondNumber": 1641
+                    "fotobondNumber": "301"
                 }
             }
         },
-
+        
         {
             "idPlus": {
-                "town": "?",
-                "fullName": "?",
-                "nickName": "?"
+                "town": "Beilen",
+                "fullName": "Fotoclub BeFoAm",
+                "nickName": "fcBeFoAm"
             },
             "coordinates": {
-                "latitude": 51.53557,
-                "longitude": 5.62722
+                "latitude": 52.89521,
+                "longitude": 6.44977
             },
             "optional": {
-                "website": "?",
-                "level2URL": "?",
+                "website": "https://www.befoam.nl",
+                "level2URL": "http://www.example.com/fcBeFoAm.level2.json",
                 "remark": [
                     {
                         "language": "NL",
-                        "value": "?"
+                        "value": "Bij BeFoAm proberen we elkaar te stimuleren steeds creatiever en perfecter werk af te leveren."
                     },
                     {
                         "language": "EN",
-                        "value": "?"
+                        "value": "At BeFoAm we try to encourage each other to deliver increasingly creative and perfect work."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 309
+                }
+            }
+        },
+        
+        {
+            "idPlus": {
+                "town": "Borger",
+                "fullName": "Fotoclub Borger-Odoorn",
+                "nickName": "fcBorgerOdoorn"
+            },
+            "coordinates": {
+                "latitude": 52.92176,
+                "longitude": 6.79626
+            },
+            "optional": {
+                "website": "https://www.fcbo.nl",
+                "level2URL": "http://www.example.com/fcBorgerOdoorn.level2.json",
+                "remark": [
+                    {
+                        "language": "NL",
+                        "value": "FC Borger probeert op een positieve manier alle leden een platform te bieden waarop ze hun hobby kunnen beoefenen."
+                    },
+                    {
+                        "language": "EN",
+                        "value": "FC Borger tries to offer all members a platform in a positive way on which they can practice their hobby."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 319
+                }
+            }
+        },
+        
+        {
+            "idPlus": {
+                "town": "Gieten",
+                "fullName": "Fotoclub GiAF",
+                "nickName": "fcGiaf"
+            },
+            "coordinates": {
+                "latitude": 53.00585,
+                "longitude": 6.76427
+            },
+            "optional": {
+                "website": "https://www.giaf.nl",
+                "level2URL": "http://www.example.com/fcGiaf.level2.json",
+                "remark": [
+                    {
+                        "language": "NL",
+                        "value": "Het doel van GiAF is het stimuleren en enthousiasmeren van de amateurfotografie in de meest brede zin van het woord."
+                    },
+                    {
+                        "language": "EN",
+                        "value": "The aim of GiAF is to stimulate and inspire amateur photography in the broadest sense of the word."
                     }
                 ],
                 "nlSpecific": {
@@ -58,116 +117,61 @@
                 }
             }
         },
-
+        
         {
             "idPlus": {
-                "town": "?",
-                "fullName": "Deze Is Geen Lid van Fotobond",
-                "nickName": "?"
+                "town": "Hoogeveen",
+                "fullName": "Fotogroep Hoogeveen",
+                "nickName": "fgHoogeveen"
             },
             "coordinates": {
-                "latitude": 51.53557,
-                "longitude": 5.62722
+                "latitude": 52.71383,
+                "longitude": 6.48460
             },
             "optional": {
-                "website": "?",
-                "level2URL": "?",
+                "website": "https://fotogroephoogeveen.nl",
+                "level2URL": "http://www.example.com/fgHoogeveen.level2.json",
                 "remark": [
                     {
                         "language": "NL",
-                        "value": "?"
+                        "value": "Beginnende en ervaren fotografen: iedereen is welkom. Samen delen we kennis en inspiratie, "
                     },
                     {
                         "language": "EN",
-                        "value": "?"
-                    }
-                ]
-            }
-        },
-
-        {
-            "idPlus": {
-                "town": "?",
-                "fullName": "?",
-                "nickName": "?"
-            },
-            "coordinates": {
-                "latitude": 51.53557,
-                "longitude": 5.62722
-            },
-            "optional": {
-                "website": "?",
-                "level2URL": "?",
-                "remark": [
-                    {
-                        "language": "NL",
-                        "value": "?"
-                    },
-                    {
-                        "language": "EN",
-                        "value": "?"
+                        "value": "Beginning and experienced photographers alike: everyone is welcome. Together we'll share knowledge and inspiration."
                     }
                 ],
                 "nlSpecific": {
-                    "fotobondNumber": 303
-                }
-            }
-        },
-
-         {
-            "idPlus": {
-                "town": "?",
-                "fullName": "?",
-                "nickName": "?"
-            },
-            "coordinates": {
-                "latitude": 51.53557,
-                "longitude": 5.62722
-            },
-            "optional": {
-                "website": "?",
-                "level2URL": "?",
-                "remark": [
-                    {
-                        "language": "NL",
-                        "value": "?"
-                    },
-                    {
-                        "language": "EN",
-                        "value": "?"
-                    }
-                ],
-                "nlSpecific": {
-                    "fotobondNumber": 310
+                    "fotobondNumber": 315
                 }
             }
         },
 
         {
             "idPlus": {
-                "town": "?",
-                "fullName": "?",
-                "nickName": "?"
+                "town": "Meppel",
+                "fullName": "Fotogroep Meppel e.o.",
+                "nickName": "fgMeppel"
             },
             "coordinates": {
-                "latitude": 51.53557,
-                "longitude": 5.62722
+                "latitude": 2.70455,
+                "longitude": 6.19480
             },
             "optional": {
-                "website": "?",
-                "level2URL": "?",
+                "website": "https://www.fotogroepmeppel.nl",
+                "level2URL": "http://www.example.com/fgMeppel.level2.json",
                 "remark": [
                     {
                         "language": "NL",
-                        "value": "?"
+                        "value": "Fotogroep Meppel heeft als doel het creatieve en technische niveau van de leden te verhogen."
                     },
                     {
                         "language": "EN",
-                        "value": "?"
+                        "value": "The aim of Fotogroep Meppel is to increase the creative and technical level of its members."
                     }
                 ],
                 "nlSpecific": {
-                    "fotobondNumber": 311
+                    "fotobondNumber":  305
                 }
             }
         }

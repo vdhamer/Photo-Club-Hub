@@ -1,5 +1,8 @@
 ### 2.8.8 (GitHub commit ???????) ??-12-25
 
+CLUBS AND MUSEUMS SCREEN
+* Added 6 clubs for a northern district of the Netherlands. They are for now at Level 1. Thanks to AH.
+
 DATA MAINTENANCE
 * Forced a data reset with dataResetPending288b4654 (related to former members of fgDeGender).
 * Removed former members of fcDeGender without portfolios in the app (including PdW).
