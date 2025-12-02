@@ -26,37 +26,7 @@
                 ],
                 "contactEmail": "karel@stooptech.nl",
                 "nlSpecific": {
-                    "fotobondNumber": "301"
-                }
-            }
-        },
-        
-        {
-            "idPlus": {
-                "town": "Assen",
-                "fullName": "Fotoclub Afovera",
-                "nickName": "fcAfovera"
-            },
-            "coordinates": {
-                "latitude": 53.01049,
-                "longitude": 6.54517
-            },
-            "optional": {
-                "website": "https://www.afovera.nl",
-                "level2URL": "http://www.example.com/fcAfovera.level2.json",
-                "remark": [
-                    {
-                        "language": "NL",
-                        "value": "Afovera bestaat al meer dan 50 jaar. Foto’s worden getoond en besproken in een gezellige sfeer."
-                    },
-                    {
-                        "language": "EN",
-                        "value": "Afovera was founded over 50 years ago. Photos are presented and reviewed in a friendly atmosphere."
-                    }
-                ],
-                "contactEmail": "karel@stooptech.nl",
-                "nlSpecific": {
-                    "fotobondNumber": "301"
+                    "fotobondNumber": 301
                 }
             }
         },
