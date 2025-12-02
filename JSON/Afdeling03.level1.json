@@ -154,7 +154,7 @@
                 "nickName": "fgMeppel"
             },
             "coordinates": {
-                "latitude": 2.70455,
+                "latitude": 52.70455,
                 "longitude": 6.19480
             },
             "optional": {
@@ -171,7 +171,7 @@
                     }
                 ],
                 "nlSpecific": {
-                    "fotobondNumber":  305
+                    "fotobondNumber": 305
                 }
             }
         }
