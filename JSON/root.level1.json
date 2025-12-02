@@ -7,11 +7,11 @@
                 "fullName": "Fotoclub Afovera",
                 "nickName": "fcAfovera"
             },
+            "coordinates": {
+                "latitude": 53.01049,
+                "longitude": 6.54517
+            },
             "optional": {
-                "coordinates": {
-                    "latitude": 53.01049,
-                    "longitude": 6.54517
-                },
                 "website": "https://www.afovera.nl",
                 "level2URL": "http://www.example.com/fcAfovera.level2.json",
                 "remark": [
@@ -187,8 +187,8 @@
                 "nickName": "fkBeeldhoek"
             },
             "coordinates": {
-                "latitude": 51.402345,
-                "longitude": 5.744756
+                "latitude": 51.40235,
+                "longitude": 5.74476
             },
             "optional": {
                 "website": "https://www.fotokringbeeldhoek.nl",
