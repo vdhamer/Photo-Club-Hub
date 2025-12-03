@@ -1,0 +1,50 @@
+{
+    "level1": {
+        "level1URL": "https://www.fcDeGender.nl/clubs/hierarchyDemo.level1.url",
+        "optional": {
+            "childLevel1URL": [
+                "https://www.fcDeGender.nl/clubs/childA.level1.url",
+                "https://www.fcDeGender.nl/clubs/childB.level1.url"
+            ],
+            "contactEmail": "john@fcDeGender.nl"
+        }
+    },
+    
+    "clubs": [
+
+        {
+            "idPlus": {
+                "town": "Amsterdam",
+                "fullName": "Xample Club With Minimal Data",
+                "nickName": "XampleMin"
+            },
+            "optional": {
+                "coordinates": {
+                    "latitude": 52.37312,
+                    "longitude": 4.89383
+                },
+                "level2URL": "https://www.example.com/XampleMin.level2.json"
+            }
+        }
+        
+    ],
+    
+    "museums": [
+
+        {
+            "idPlus": {
+                "town": "Wetzlar",
+                "fullName": "Ernst Leitz Museum",
+                "nickName": "LeicaMuseum"
+            },
+            "optional": {
+                "coordinates": {
+                    "latitude": 50.55230,
+                    "longitude": 8.53335
+                }
+            }
+        }
+
+    ]
+}
+
