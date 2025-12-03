@@ -3229,6 +3229,32 @@
                 ]
             }
         },
+        
+        {
+            "idPlus": {
+                "town": "Wetzlar",
+                "fullName": "Ernst Leitz Museum",
+                "nickName": "LeicaMuseum"
+            },
+            "coordinates": {
+                "latitude": 50.55230,
+                "longitude": 8.53335
+            },
+            "optional": {
+                "website": "https://leicawelt.com/en/experiences/ernst-leitz-museum",
+                "wikipedia": "https://de.wikipedia.org/wiki/Leica-Welt",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "This corporate museum showcases Leitz cameras and images make with Leicas. There are more Leitz buildings on site."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Dit museum, bij het hoofdkwartier van Leitz, gaat over Leitz camera's en de bekende Leitz fotografen."
+                    }
+                ]
+            }
+        },
 
         {
             "idPlus": {
