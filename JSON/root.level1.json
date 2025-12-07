@@ -47,11 +47,11 @@
                 "remark": [
                     {
                         "language": "NL",
-                        "value": "Bij BeFoAm proberen we elkaar te stimuleren steeds creatiever en perfecter werk af te leveren."
+                        "value": "Bij BeFoAm proberen we elkaar te stimuleren steeds creatiever en perfecter werk af te leveren, meerdere vrijetijdsfotografen hebben prijzen behaald met hun werk."
                     },
                     {
                         "language": "EN",
-                        "value": "At BeFoAm we try to encourage each other to deliver increasingly creative and perfect work."
+                        "value": "At BeFoAm, we strive to encourage each other to deliver increasingly creative and perfect work. Several amateur photographers have won awards for their work."
                     }
                 ],
                 "nlSpecific": {
@@ -120,6 +120,60 @@
         
         {
             "idPlus": {
+                "town": "Hardenberg",
+                "fullName": "Fotocollectief Hardenberg",
+                "nickName": "fcHardenberg"
+            },
+            "coordinates": {
+                "latitude": 52.56913,
+                "longitude": 6.62204
+            },
+            "optional": {
+                "website": "https://www.fotocollectiefhardenberg.nl/",
+                "level2URL": "http://www.example.com/fcHardenberg.level2.json",
+                "remark": [
+                    {
+                        "language": "NL",
+                        "value": "We hebben een gevarieerd jaarprogramma: fotobespreking en tips, adviezen over technische aspecten, cursussen, foto′s maken rond thema′s, kettingfoto, exposities samenstellen, enz."
+                    },
+                    {
+                        "language": "EN",
+                        "value": "We offer a varied annual program: photo discussions and tips, advice on technical aspects, courses, themed photography, chain photography, exhibition curation, and more."
+                    }
+                ]
+            }
+        },
+        
+        {
+            "idPlus": {
+                "town": "Hoogeveen",
+                "fullName": "Individuele leden Afdeling Drenthe - Vechtdal",
+                "nickName": "ilafdDrenthe"
+            },
+            "coordinates": {
+                "latitude": 52.71370,
+                "longitude": 6.48451
+            },
+            "optional": {
+                "level2URL": "http://www.example.com/ilafdDrenthe.level2.json",
+                "remark": [
+                    {
+                        "language": "NL",
+                        "value": "Individuele leden Fotobond Afdeling Drenthe - Vechtdal"
+                    },
+                    {
+                        "language": "EN",
+                        "value": "Members of Fotobond Afdeling Drenthe - Vechtdal who are not a member of any Fotobond club."
+                    }
+                ],
+                "nlSpecific": {
+                    "fotobondNumber": 300
+                }
+            }
+        },
+        
+        {
+            "idPlus": {
                 "town": "Hoogeveen",
                 "fullName": "Fotogroep Hoogeveen",
                 "nickName": "fgHoogeveen"
@@ -175,7 +229,59 @@
                 }
             }
         },
-      
+        
+        {
+            "idPlus": {
+                "town": "Ruinen",
+                "fullName": "Fotoclub De Wolden",
+                "nickName": "fcDWolden"
+            },
+            "coordinates": {
+                "latitude": 52.76128,
+                "longitude": 6.36187
+            },
+            "optional": {
+                "website": "https://www.fotoclubdewolden.nl/",
+                "level2URL": "http://www.example.com/fcDWolden.level2.json",
+                "remark": [
+                    {
+                        "language": "NL",
+                        "value": "We komen twee keer per maand bij elkaar, we bespreken foto's en technieken en ook gaan we samen op pad"
+                    },
+                    {
+                        "language": "EN",
+                        "value": "We meet twice a month, we discuss photos and techniques and we also go out together"
+                    }
+                ]
+            }
+        },
+        
+        {
+            "idPlus": {
+                "town": "Westerveld",
+                "fullName": "Fotoclub Westerveld en Omstreken",
+                "nickName": "fcwesterveld"
+            },
+            "coordinates": {
+                "latitude": 52.82573,
+                "longitude": 6.21837
+            },
+            "optional": {
+                "website": "https://fotoclubwesterveld.nl",
+                "level2URL": "http://www.example.com/fcwesterveld.level2.json",
+                "remark": [
+                    {
+                        "language": "NL",
+                        "value": "Behalve de clubavond organiseren we fotoworkshops, lezingen en/of uitstapjes naar waardevolle of inspirerende foto-objecten/doelen of tentoonstellingen"
+                    },
+                    {
+                        "language": "EN",
+                        "value": "In addition to the club evening, we organize photo workshops, lectures and/or trips to valuable or inspiring photo objects/targets or exhibitions"
+                    }
+                ]
+            }
+        },
+
         {
             "idPlus": {
                 "town": "Asten",
