@@ -2,7 +2,7 @@
 
 CLUBS AND MUSEUMS SCREEN
 * Added 10 clubs for a northern district of the Netherlands. They are for now at Level 1. Thanks to AH.
-* TODO: fix scrolling of Clubs and Museums screen. <<<<
+* TODO: fix scrolling of Clubs and Museums screen (on iPhone only?). <<<<
 
 DATA MAINTENANCE
 * Forced a data reset with dataResetPending288b4654 (related to former members of fgDeGender).
