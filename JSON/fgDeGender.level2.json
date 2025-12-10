@@ -421,6 +421,10 @@
                 "website": "http://www.rovado-artworks.nl/",
                 "level3URL": "https://www.fcDeGender.nl/portfolios/Rob_van_Doorn/",
                 "membershipStartDate": "2017-10-23",
+                "membershipEndDate": "2025-12-31",
+                "status": {
+                    "isFormerMember": true
+                },
                 "nlSpecific": {
                     "fotobondNumber": 1620093
                 },
