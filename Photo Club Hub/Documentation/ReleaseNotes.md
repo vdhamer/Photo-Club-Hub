@@ -10,8 +10,7 @@ DATA MAINTENANCE
 * Added portfolio's for 5 former members of fgDeGender (they disappeared after moving the location).
 * Added support for "Printing" Expertise (the tag for December 2025).
 * Fixed link in level 1 file to level2 file for fgDeGender.
-
-* TODO: prepare for 2 new clubs (ffcShot71, fcSchijndel). <<<<
+* Schema change around FotobondNumber
 
 CODE MAINTENANCE
 * Synchronized code with Photo Club Hub HTML (minor changes).
