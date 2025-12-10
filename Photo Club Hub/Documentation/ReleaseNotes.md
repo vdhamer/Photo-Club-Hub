@@ -1,12 +1,10 @@
 ### 2.8.8 (GitHub commit ???????) ??-12-25
 
 CLUBS AND MUSEUMS SCREEN
-
 * Added 10 clubs for a northern district of the Netherlands. They are for now at Level 1. Thanks to AH.
 * TODO: fix scrolling of Clubs and Museums screen (on iPhone only?). <<<<
 
 DATA MAINTENANCE
-
 * Forced a data reset with dataResetPending288b4654 (related to former members of fgDeGender).
 * Removed former members of fcDeGender without portfolios in the app (including PdW).
 * Added portfolio's for 5 former members of fgDeGender (they disappeared after moving the location).
@@ -15,7 +13,6 @@ DATA MAINTENANCE
 * Schema change around FotobondNumber
 
 CODE MAINTENANCE
-
 * Synchronized code with Photo Club Hub HTML (minor changes).
 * Tested with Xcode 26.2 beta 2 (17C5038g) and iOS 26.2 (23C5044a) and SwiftLint 0.62.2_1.
 * Improved handling of Level2URL field.
