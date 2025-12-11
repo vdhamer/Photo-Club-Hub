@@ -56,9 +56,14 @@ Bijvoorbeeld om even te kijken naar een databestand of naar documentatie.
 
 </details></p>
 
-## 1. Registereren bij GitHub
+## 1. Account aanmaken ("Sign up") bij GitHub
 
-Een account bij GitHub vragen is gratis. Een repository bijhouden op GitHub is (althans voor openbare projekten) ook gratis. Je als gebruiker registreren gebeurt via de "[Sign up]:" knop op de [hoofdpagina](https://github.com) van GitHub. "Sign up" is dus een soort inschrijven. "Sign in" is je aanmelden met een bestaand account. Wij hebben het in deze stap over "Sign up". Wie dit ooit eerder gedaan heeft bij GitHub, kan deze stap overslaan.
+Wie dit ooit eerder gedaan heeft bij GitHub, kan deze stap overslaan.
+
+Een account bij GitHub aanmaken is gratis.
+
+Registratie van een nieuwe GitHub gebruiker gebeurt via de "[Sign up]:" knop op de [hoofdpagina van GitHub](https://github.com). 
+"Sign up" is dus om je te registreren (account aanmaken). "Sign in" is daarentegen aanmelden om GitHub te gebruiken ("inloggen") met een reeds geregistreerd account. Wij hebben het in deze stap over "Sign up".
 
 
 
