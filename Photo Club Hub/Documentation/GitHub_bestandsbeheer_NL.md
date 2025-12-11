@@ -62,8 +62,14 @@ Wie dit ooit eerder gedaan heeft bij GitHub, kan deze stap overslaan.
 
 Een account bij GitHub aanmaken is gratis.
 
-Registratie van een nieuwe GitHub gebruiker gebeurt via de "[Sign up]:" knop op de [hoofdpagina van GitHub](https://github.com). 
-"Sign up" is dus om je te registreren (account aanmaken). "Sign in" is daarentegen aanmelden om GitHub te gebruiken ("inloggen") met een reeds geregistreerd account. Wij hebben het in deze stap over "Sign up".
+Registratie van een nieuwe GitHub gebruiker gebeurt via de "__Sign up__" knop op de [hoofdpagina van GitHub](https://github.com). 
+"Sign up" is dus om je te registreren (account aanmaken). 
+"Sign in" is daarentegen als je later aanmeldt bij GitHub ("inloggen") onder het account aangemaakt met "Sign up".
+
+<img width="532" height="889" alt="Screenshot 2025-12-11 at 22 19 03" src="https://github.com/user-attachments/assets/da795207-821c-4a14-bdce-4f156e796d61" />
+
+
+
 
 
 
