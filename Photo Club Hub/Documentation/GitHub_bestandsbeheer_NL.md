@@ -16,9 +16,18 @@ De hoofdstappen zijn dus:
 
 Bij een volgende verandering ga je verder met stap 3. Dus een bstand kan desgewenst in kleine stapjes aangepast worden.
 
-   > Tip: GitHub (of het achterliggende Git) is een zogenaamde versiebeheersystemen (__version control system__) dat houdt in dat het alle bestandswijzigingen nauwlettend bijhoudt. Git kan ook onafhankelijke wijzigingen aangebracht door meerdere personen aan. In de praktijk betekent dat dat niemand een wijziging ooit kwijt kan raken, en dat er goed onderscheid gemaakt wordt tussen gedeelde versies ()
+   > Tip: GitHub (of het achterliggende Git) is een zogenaamde versiebeheersystemen ("version control system").
+   > Dat houdt in dat het alle bestandswijzigingen nauwlettend bijhoudt. 
+   > Git kan ook teams van meerdere personen aan die soms dezelfde bestanden aanpassen.
+   > In de praktijk betekent dit dat niemand een wijziging in een bestand kwijt kan raken, 
+   > en dat er strict onderscheid gemaakt wordt tussen gedeelde versies en eigen versies.
 
-   > Tip: GitHub is vrij zware dienst. De halve software wereld is afhankelijk van GitHub of verwante systemen. Mini-kursusen op b.v. YouTube over Git en GitHub zijn vaak gericht op software ontwikkelaars, die veel meer toeters en bellen van het pakket nodig hebben. En zelfs die gebruiken vaak maar een fractie van alle mogelijkheden. Laat je dus niet teveel afleiden: concentreer dus alleen op de stappen en begrippen die je hier nodig hebt.
+   > Tip: GitHub is vrij zwaar systeem. De halve software wereld is afhankelijk van GitHub of verwante systemen.
+   > Mini-kursusen op b.v. YouTube over GitHub en Git zijn vaak gericht op softwareontwikkelaars.
+   > Ze omvatten meer toeters en bellen van Git(Hub) dan wat wij hier nodig hebben.
+   > En de meeste softwareontwikkelaars gebruiken vaak maar een fractie van alle mogelijkheden. 
+   > Pas dus op voor afleidingen: concentreer dus alleen op de stappen en begrippen die je hier nodig hebt.
+   > Zodra je dat beheerst, kan je altijd nog meer leren.
 
 ### Voordelen van GitHub
 
