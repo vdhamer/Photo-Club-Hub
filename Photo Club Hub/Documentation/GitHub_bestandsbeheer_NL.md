@@ -80,8 +80,8 @@ Registratie van een nieuwe GitHub gebruiker gebeurt via de "__Sign up__" knop op
    In de kleine lettertjes staat dat er bijvoorbeeld geen spaties in mogen.
    Het is dus Username in de IT zin, en niet de gewone naam van de gebruiker. Je mag dus wel Jan-Pietersen kiezen maar niet Jan Pietersen. Maar stroopwafelfrisbee mag ook. Ik gebruik zelf "vdhamer" en "vdhamer-for-testing".
 - Country is een makkelijke vraag: kan gewoon Netherlands kiezen uit de lijst. Het antwoord is onbelangrijk volgens de kleine lettertjes.
-- Op "Create account" klikken resulteert in het standaard ritueel van code ontvangen per Email, en code terugmelden aan GitHub om te controlleren dat het Email adres ok is. Anders is een vergeten wachtwoord extra pijnlijk.
-- Voor ontwikkelaars zijn er overigens meer geavanceerde opties om in te loggen bij GitHub maar die eisen meer kennis (SSH, passkeys).
+- Op "Create account" klikken resulteert in het standaard ritueel van code ontvangen per Email, en code terugmelden aan GitHub om te controlleren dat het Email adres ok is. En krijg je minstens 1 vraag (op basis van plaatjes of geluid) om aan te tonen dat jij een mens bent. Die "Captcha" tests zijn best lastig bij GitHub.
+- GitHub heeft ook alternatieve inlogopties bedoeld voor beroeps ontwikkelaars (SSH, passkeys). Die zijn moderner, maar vereisene meer kennis.
 
 </details></p>
 
