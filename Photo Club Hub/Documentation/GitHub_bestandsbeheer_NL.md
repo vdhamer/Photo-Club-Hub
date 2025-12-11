@@ -35,7 +35,7 @@ Bij een volgende verandering ga je verder met stap 3. Dus een bstand kan desgewe
 
 Voor ons gebruik hier, zijn de voordelen van GitHub:
 
-- versiebeheer. Alle versies worden bewaard. Je kunt zien wie wat wanneer gewijzigd heeft.
+- versiebeheer.<BR> Alle versies worden bewaard. Je kunt zien wie wat wanneer gewijzigd heeft.
 - samenwerking. Meerdere mensen kunnen wijzigingen aanbrengen, en versies van elkaar overnemen.
 Zonder het risiko van misverstanden of het kwijtraken van een voorgestelde aanpassingen wanneer je dit allemaal handmatig wilt regelen.
 - eenvoudige goedkeuring. In het ideale geval kan een ingediende wijziging met 1 druk op de knop goedgekeurd worden. Dit is belangrijk als er b.v.  meerdere voorstellen per dag binnenkomen.
