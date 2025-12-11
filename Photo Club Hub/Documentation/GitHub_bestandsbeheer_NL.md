@@ -69,13 +69,14 @@ Registratie van een nieuwe GitHub gebruiker gebeurt via de "__Sign up__" knop op
 <img width="532" height="889" alt="Screenshot 2025-12-11 at 22 19 03" src="https://github.com/user-attachments/assets/da795207-821c-4a14-bdce-4f156e796d61" />
 
 - Wie een Apple account gebruikt, kan "Continue wie Apple" kiezen. Als je dit (of de Google equivalent) gebruikt, ben je snel klaar. Anders...
-- Voor toekomstige "sign in" heb jij de combinatie Email/Password straks nodig. Of Username/Password. Je moet alle 3 velden invullen. En alle 3 goed bewaren (desnoods in een comment veld van een password app).
+- Voor toekomstige "sign in" heb jij de combinatie Email/Password straks nodig. Of Username/Password. Je moet alle 3 velden invullen. En alle 3 goed bewaren (desnoods in het "comment" veld van een password app).
    - Email moet uniek zijn. Gebruik geen "hide my Email" Apple iCloud account: dit wordt geweigerd met een slechte foutmelding. Voor de meeste mensen is deze stap geen probleem: hebben bijvoorbeeld een hoofdaccount en een minder gelezen Email account. Desnoods een extra Email account hiervoor aanmaken bij Gmail (een iCloud account dat automatisch doorverwijst kan zoals gezegd problemen geven).
    - Wachtwoord moet uiteraard bewaard worden bij al je andere wachtwoorden.
-   - Username moet uniek zijn en is wat misleidend.
-   In de kleine lettertjes staat dat er bijvoorbeeld geen spaties in mogen. Het is dus Username in de IT betekenis, en niet de gewone naam van de gebruiker. Je mag bijvoorbeeld Jan-Pietersen kiezen. Maar ook stroopwafelmonster. "vdhamer-for-testing" gaat niet lukken: Usernaam is al in gebruik.
-- Een makkelijke vraag is Country: kan gewoon Netherlands kiezen. Maar het antwoord is onbelangrijk volgens de kleine lettertjes.
-- Op "Create account" klikken resulteert in het standaard ritueel van code ontvangen per Email, en code terugvertellen aan GitHub.
+   - Username moet ook uniek zijn en is een beetje misleidend:
+   In de kleine lettertjes staat dat er bijvoorbeeld geen spaties in mogen.
+   Het is dus Username in de IT zin, en niet de gewone naam van de gebruiker. Je mag dus wel Jan-Pietersen kiezen maar niet Jan Pietersen. Maar stroopwafelfrisbee mag ook. Ik gebruik zelf "vdhamer" en "vdhamer-for-testing".
+- Country is een makkelijke vraag: kan gewoon Netherlands kiezen uit de lijst. Het antwoord is onbelangrijk volgens de kleine lettertjes.
+- Op "Create account" klikken resulteert in het standaard ritueel van code ontvangen per Email, en code terugmelden aan GitHub om te controlleren dat het Email adres ok is. Anders is een vergeten wachtwoord extra pijnlijk.
 
 
 
