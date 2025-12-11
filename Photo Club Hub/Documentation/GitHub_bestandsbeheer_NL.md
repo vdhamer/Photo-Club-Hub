@@ -6,7 +6,7 @@ Het is met name een manier om zelfstandig databestanden (b.v. `mijnClub.level2.j
 
 In hoofdlijnen komt het erop neer dat men een gewijzigd bestand kan aanmaken, en deze aanbieden aan het project (__repository__ of __repo__ voor intimi).
 Tussen aanbieden en daarwerkelijk opnemen van het gewijzigd bestand zit nog een goedkeuringsstap.
-Dit voorkomt dat een willekeurig iemand zomaar een willekeurige wijziging kan aanbrengen.
+Dit voorkomt dat een willekeurig persoon zomaar een willekeurige wijziging in een willekeurig bestand kan aanbrengen.
 
 De hoofdstappen zijn dus:
 
