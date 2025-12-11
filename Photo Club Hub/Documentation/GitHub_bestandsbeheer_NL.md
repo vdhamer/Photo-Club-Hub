@@ -10,7 +10,7 @@ Dit voorkomt dat een willekeurig persoon zomaar een willekeurige wijziging in ee
 
 De hoofdstappen zijn dus:
 
-1. Gebruiker maakt (eenmalig) een account aan bij GitHub. Dan kan GitHub eventueele voor meerdere projecten gebruikt worden.
+1. Gebruiker maakt (eenmalig) een account aan bij GitHub. In principe kan dat account voor meewerken in meerdere GitHub repositories gebruikt worden.
 2. Gebruiker maakt (eenmalig) een locale kopie aan van de gewenste repository ([Photo Club Hub](https://github.com/vdhamer/Photo-Club-Hub))
 3. Een bestand (eventueel meerdere bestanden) wordt locaal bijgewerkt. Deze stap vereist geen contact met GitHub.com (en vereist dus geen Internet).
 3. Gebruiker biedt versie aan bij GitHub voor goedkeuring en opname in het repository. 
