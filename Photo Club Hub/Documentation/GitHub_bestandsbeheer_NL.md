@@ -1,1 +1,39 @@
+## Aanmelden bij GitHub
+
+Dit stappenplan beschrijft hoe men zich kan aanmelden bij www.GitHub.com. Dit is een manier om zelfstandig databestanden (b.v. `mijnClub.level2.json`) of instructies zoals dit document te wijzigen. In hoofdlijnen komt het erop neer dat men een gewijzigd bestand kan aanmaken, en deze aanbieden aan het project (__repository__ of __repo__ voor intimi). Tussen aanbieden en daarwerkelijk opnemen van het gewijzigd bestand zit nog een goedkeuringsstap. Dit voorkomt dat een willekeurig iemand zomaar een willekeurige wijziging kan aanbrengen.
+
+De hoofdstappen zijn dus:
+
+1. gebruiker maakt (eenmalig) een account aan bij GitHub. Dan kan GitHub eventueele voor meerdere projecten gebruikt worden.
+2. gebruiker maakt (eenmalig) een locale kopie aan van de gewenste repository ([Photo Club Hub](https://github.com/vdhamer/Photo-Club-Hub))
+3. een bestand (eventueel) meerdere bestanden) wordt locaal aangepast. Deze stap vereist geen contact met GitHub.com (en vereist dus geen Internet).
+3. gebruiker biedt versie aan bij GitHub voor goedkeuring en opname in het repository. 
+4. de goedkeuring doet iemand anders, en wordt hier niet beschreven. Hiervoor moet je een soort beheerder zijn van het repository.
+
+Bij een volgende verandering ga je verder met stap 3. Dus een bstand kan desgewenst in kleine stapjes aangepast worden.
+
+   > Tip: GitHub (of het achterliggende Git) is een zogenaamde versiebeheersystemen (__version control system__) dat houdt in dat het alle bestandswijzigingen nauwlettend bijhoudt. Git kan ook onafhankelijke wijzigingen aangebracht door meerdere personen aan. In de praktijk betekent dat dat niemand een wijziging ooit kwijt kan raken, en dat er goed onderscheid gemaakt wordt tussen gedeelde versies ()
+
+   > Tip: GitHub is vrij zware dienst. De halve software wereld is afhankelijk van GitHub of verwante systemen. Mini-kursusen op b.v. YouTube over Git en GitHub zijn vaak gericht op software ontwikkelaars, die veel meer toeters en bellen van het pakket nodig hebben. En zelfs die gebruiken vaak maar een fractie van alle mogelijkheden. Laat je dus niet teveel afleiden: concentreer dus alleen op de stappen en begrippen die je hier nodig hebt.
+
+### Voordelen van GitHub
+
+<details><summary>Details (klik om uit te klappen)</summary></p>
+
+Voor ons gebruik hier, zijn de voordelen van GitHub:
+
+- versiebeheer. Alle versies worden bewaard. Je kunt zien wie wat wanneer gewijzigd heeft.
+- samenwerking. Meerdere mensen kunnen wijzigingen aanbrengen, van elkaar overnemen. Zonder het risiko van misverstanden of vergeten aanpassingen als je dit allemaal handmatig moet regelen.
+- to-do lijst. De centrale lijst van uitbreidingsverzoeken of melding van bugs loopt via GitHub. Jij kunt een wens direct op de "issue" lijst zetten.
+- archief. GitHub is in feite het archief voor alle bestanden van dit projekt: code, data, documentatie, "issues". GitHub zelf is extreem secuur dat er niets zoek raakt.
+- online bestanden. De app haalt de huidige gegevens op vanuit GitHub. Hier valt b.v. lijsten met clubs ("Level 1") en lijsten met clubleden ("Level 2"). Hierdoor kan de app de huidige gegevens vinden zodra die aangepast worden. Portfolio inhoud wordt op clubwebsites gehouden en lopen dus niet via GitHub.
+
+</details></p>
+
+## 1. Registereren bij GitHub
+
+Een account bij GitHub vragen is gratis. Een repository bijhouden op GitHub is (althans voor openbare projekten) ook gratis. Je als gebruiker registreren gebeurt via de "[Sign up]:" knop op de [hoofdpagina](https://github.com) van GitHub. "Sign up" is dus een soort inschrijven. "Sign in" is je aanmelden met een bestaand account. Wij hebben het in deze stap over "Sign up". Wie dit ooit eerder gedaan heeft bij GitHub, kan deze stap overslaan.
+
+
+
 
