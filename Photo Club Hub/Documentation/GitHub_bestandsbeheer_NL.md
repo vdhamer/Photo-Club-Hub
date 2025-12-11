@@ -36,8 +36,10 @@ Bij een volgende verandering ga je verder met stap 3. Dus een bstand kan desgewe
 Voor ons gebruik hier, zijn de voordelen van GitHub:
 
 - versiebeheer. Alle versies worden bewaard. Je kunt zien wie wat wanneer gewijzigd heeft.
-- samenwerking. Meerdere mensen kunnen wijzigingen aanbrengen, van elkaar overnemen. Zonder het risiko van misverstanden of vergeten aanpassingen als je dit allemaal handmatig moet regelen.
-- to-do lijst. De centrale lijst van uitbreidingsverzoeken of melding van bugs loopt via GitHub. Jij kunt een wens direct op de "issue" lijst zetten.
+- samenwerking. Meerdere mensen kunnen wijzigingen aanbrengen, en versies van elkaar overnemen.
+Zonder het risiko van misverstanden of het kwijtraken van een voorgestelde aanpassingen wanneer je dit allemaal handmatig wilt regelen.
+- eenvoudige goedkeuring. In het ideale geval kan een ingediende wijziging met 1 druk op de knop goedgekeurd worden. Dit is belangrijk als er b.v.  meerdere voorstellen per dag binnenkomen.
+- to-do lijst. De centrale lijst van uitbreidingsverzoeken of melding van bugs loopt via GitHub. Jij kunt hier zelf een wens of klacht ("issue") toevoegen. En bestaande wensen van jezelf en anderen zien.
 - archief. GitHub is in feite het archief voor alle bestanden van dit projekt: code, data, documentatie, "issues". GitHub zelf is extreem secuur dat er niets zoek raakt.
 - online bestanden. De app haalt de huidige gegevens op vanuit GitHub. Hier valt b.v. lijsten met clubs ("Level 1") en lijsten met clubleden ("Level 2"). Hierdoor kan de app de huidige gegevens vinden zodra die aangepast worden. Portfolio inhoud wordt op clubwebsites gehouden en lopen dus niet via GitHub.
 
