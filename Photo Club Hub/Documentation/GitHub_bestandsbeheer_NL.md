@@ -1,4 +1,4 @@
-## Aanmelden bij GitHub
+## Bestandsbeheer bij GitHub
 
 Dit stappenplan beschrijft hoe men zich kan aanmelden bij www.github.com
 en wijzigingen kan aanbieden zonder dat iemand anders als tussenpersoon moet dienen. 
@@ -31,7 +31,7 @@ Bij een volgende verandering ga je verder met stap 3. Dus een bstand kan desgewe
    > Pas dus op voor afleidingen: concentreer dus alleen op de stappen en begrippen die je hier nodig hebt.
    > Zodra je dat beheerst, kan je altijd nog meer leren.
 
-### Voordelen van GitHub
+#### Voordelen van GitHub
 
 <details><summary>Details (klik om uit te klappen)</summary></p>
 
@@ -84,6 +84,9 @@ Registratie van een nieuwe GitHub gebruiker gebeurt via de "__Sign up__" knop op
 - GitHub heeft ook alternatieve inlogopties bedoeld voor beroeps ontwikkelaars (SSH, passkeys). Die zijn moderner, maar vereisene meer kennis.
 
 </details></p>
+
+### 2. Locale copie van repository aanmaken
+
 
 
 
