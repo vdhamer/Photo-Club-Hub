@@ -22,7 +22,7 @@ Bij een volgende verandering ga je verder met stap 3. Dus een bstand kan desgewe
    > In de praktijk betekent dit dat niemand een wijziging in een bestand kwijt kan raken, 
    > en dat er strict onderscheid gemaakt wordt tussen gedeelde versies en eigen versies.
 
-   > Tip: GitHub is vrij zwaar systeem. De halve software wereld is afhankelijk van GitHub of verwante systemen.
+   > Tip: GitHub is een vrij zwaar systeem. De halve software wereld is afhankelijk van GitHub of verwante systemen.
    > Mini-kursusen op b.v. YouTube over GitHub en Git zijn vaak gericht op softwareontwikkelaars.
    > Ze omvatten meer toeters en bellen van Git(Hub) dan wat wij hier nodig hebben.
    > En de meeste softwareontwikkelaars gebruiken vaak maar een fractie van alle mogelijkheden. 
