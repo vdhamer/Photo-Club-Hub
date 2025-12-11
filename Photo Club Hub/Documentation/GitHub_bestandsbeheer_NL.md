@@ -51,7 +51,8 @@ De app haalt de huidige gegevens op vanuit GitHub. Hier valt b.v. lijsten met cl
 - URLs<BR>
 Alle bestanden zijn bereikbaar via een webadres (URL). Dat is nuttig voor bijvoorbeeld verwijzingen zoals naar deze [Powerpoint](tinyurl.com/fchPPTnl).
 - READ-ONLY<BR>
-Wie alleen wil kijken, maar niets wil wijzigen, heeft geen wachtwoord of account bij GitHub nodig. Voorbeeld: even kijken naar een voorbeeldbestand of het daadwerkelijke bestand van een andere club ("hoe doen die dat?").
+Wie alleen wil kijken, maar niets wil wijzigen, heeft geen wachtwoord of account bij GitHub nodig.
+Bijvoorbeeld om even te kijken naar een databestand of naar documentatie.
 
 </details></p>
 
