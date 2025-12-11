@@ -74,9 +74,8 @@ Registratie van een nieuwe GitHub gebruiker gebeurt via de "__Sign up__" knop op
    - Wachtwoord moet uiteraard bewaard worden bij al je andere wachtwoorden.
    - Username moet uniek zijn en is wat misleidend.
    In de kleine lettertjes staat dat er bijvoorbeeld geen spaties in mogen. Het is dus Username in de IT betekenis, en niet de gewone naam van de gebruiker. Je mag bijvoorbeeld Jan-Pietersen kiezen. Maar ook stroopwafelmonster. "vdhamer-for-testing" gaat niet lukken: Usernaam is al in gebruik.
-- De makkelijkste vraag is Country: normaal Netherlands kiezen. Maar het antwoord is vermoedelijk niet echt belangrijk, zoals je uit de kleine letters kan opmaken.
-- Op "Create account" klikken resulteert in het klassieke riedeltje van Email ontvangen, code uit e-mail in een web pagina invullen.
-Hiermee weten ze dat jouw Email account ook echt bij jou uitkomt.
+- Een makkelijke vraag is Country: kan gewoon Netherlands kiezen. Maar het antwoord is onbelangrijk volgens de kleine lettertjes.
+- Op "Create account" klikken resulteert in het standaard ritueel van code ontvangen per Email, en code terugvertellen aan GitHub.
 
 
 
