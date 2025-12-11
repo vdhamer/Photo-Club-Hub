@@ -49,7 +49,7 @@ GitHub is in feite het archief voor alle bestanden van dit projekt: code, data, 
 - ONLINE<BR>
 De app haalt de huidige gegevens op vanuit GitHub. Hier valt b.v. lijsten met clubs ("Level 1") en lijsten met clubleden ("Level 2"). Hierdoor kan de app de huidige gegevens vinden zodra die aangepast worden. Portfolio inhoud wordt op clubwebsites gehouden en lopen dus niet via GitHub.
 - URLs<BR>
-Alle bestanden zijn bereikbaar via een webadres (URL). Dat is nuttig voor bijvoorbeeld verwijzingen zoals naar deze [Powerpoint](tinyurl.com/fchPPTnl).
+Alle bestanden zijn bereikbaar via een webadres (URL). Dat is nuttig voor bijvoorbeeld verwijzingen zoals voor het downloaden van deze [Powerpoint](tinyurl.com/fchPPTnl).
 - READ-ONLY<BR>
 Wie alleen wil kijken, maar niets wil wijzigen, heeft geen wachtwoord of account bij GitHub nodig.
 Bijvoorbeeld om even te kijken naar een databestand of naar documentatie.
@@ -67,6 +67,16 @@ Registratie van een nieuwe GitHub gebruiker gebeurt via de "__Sign up__" knop op
 "Sign in" is daarentegen als je later aanmeldt bij GitHub ("inloggen") onder het account aangemaakt met "Sign up".
 
 <img width="532" height="889" alt="Screenshot 2025-12-11 at 22 19 03" src="https://github.com/user-attachments/assets/da795207-821c-4a14-bdce-4f156e796d61" />
+
+- Wie een Apple account gebruikt, kan "Continue wie Apple" kiezen. Als je dit (of de Google equivalent) gebruikt, ben je klaar. Anders...
+- Voor toekomstige "sign in" heb jij de combinatie Email/Password in de toekomst nodig. Of Username/Password. Je moet alle 3 velden invullen.
+   - Email moet uniek zijn. Gebruik geen "hide my Email" Apple iCloud account: dit wordt geweigerd met een slechte foutmelding. Voor de meeste mensen is deze stap geen probleem: hebben bijvoorbeeld een hoofdaccount en een minder gelezen Email account. Desnoods een extra Email account hiervoor aanmaken bij Gmail (een iCloud account dat automatisch doorverwijst kan zoals gezegd problemen geven).
+   - Wachtwoord moet uiteraard bewaard worden bij al je andere wachtwoorden.
+   - Username is wat misleiden. In de kleine lettertjes staat dat er bijvoorbeeld geen spaties in mogen. Het is dus Username in de IT betekenis, en niet de gewone naam van de gebruiker. Je mag bijvoorbeeld Jan-Pietersen kiezen. Maar ook stroopwafelmonster. "vdhamer-for-testing" gaat niet lukken: Usernaam is al in gebruik.
+- Neem even de tijd om te zorgen dat je Username/Password maar ook Email goed bewaart. Er is een "Forgot password?" knop, maar GitHub is heel precies t.a.v. security.
+- De makkelijkste vraag is Country: normaal Netherlands kiezen. Maar het antwoord is vermoedelijk niet echt belangrijk, zoals je uit de kleine letters kan opmaken.
+- Op "Create account" klikken resulteert in het klassieke riedeltje van Email ontvangen, code uit e-mail in een web pagina invullen.
+Hiermee weten ze dat jouw Email account ook echt bij jou uitkomt.
 
 
 
