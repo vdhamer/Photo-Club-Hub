@@ -1,7 +1,9 @@
 ## Aanmelden bij GitHub
 
-Dit stappenplan beschrijft hoe men zich kan aanmelden bij www.github.com. 
-Dit is een manier om zelfstandig databestanden (b.v. `mijnClub.level2.json`) of instructies zoals dit document te wijzigen. 
+Dit stappenplan beschrijft hoe men zich kan aanmelden bij www.github.com
+en wijzigingen kan aanbieden zonder dat iemand anders als tussenpersoon moet dienen. 
+Het is met name een manier om zelfstandig databestanden (b.v. `mijnClub.level2.json`) of instructies zoals dit document te wijzigen of toe te voegen.
+
 In hoofdlijnen komt het erop neer dat men een gewijzigd bestand kan aanmaken, en deze aanbieden aan het project (__repository__ of __repo__ voor intimi).
 Tussen aanbieden en daarwerkelijk opnemen van het gewijzigd bestand zit nog een goedkeuringsstap.
 Dit voorkomt dat een willekeurig iemand zomaar een willekeurige wijziging kan aanbrengen.
