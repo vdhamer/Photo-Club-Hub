@@ -72,7 +72,8 @@ Registratie van een nieuwe GitHub gebruiker gebeurt via de "__Sign up__" knop op
 - Voor toekomstige "sign in" heb jij de combinatie Email/Password straks nodig. Of Username/Password. Je moet alle 3 velden invullen. En alle 3 goed bewaren (desnoods in een comment veld van een password app).
    - Email moet uniek zijn. Gebruik geen "hide my Email" Apple iCloud account: dit wordt geweigerd met een slechte foutmelding. Voor de meeste mensen is deze stap geen probleem: hebben bijvoorbeeld een hoofdaccount en een minder gelezen Email account. Desnoods een extra Email account hiervoor aanmaken bij Gmail (een iCloud account dat automatisch doorverwijst kan zoals gezegd problemen geven).
    - Wachtwoord moet uiteraard bewaard worden bij al je andere wachtwoorden.
-   - Username is wat misleiden. In de kleine lettertjes staat dat er bijvoorbeeld geen spaties in mogen. Het is dus Username in de IT betekenis, en niet de gewone naam van de gebruiker. Je mag bijvoorbeeld Jan-Pietersen kiezen. Maar ook stroopwafelmonster. "vdhamer-for-testing" gaat niet lukken: Usernaam is al in gebruik.
+   - Username moet uniek zijn en is wat misleidend.
+   In de kleine lettertjes staat dat er bijvoorbeeld geen spaties in mogen. Het is dus Username in de IT betekenis, en niet de gewone naam van de gebruiker. Je mag bijvoorbeeld Jan-Pietersen kiezen. Maar ook stroopwafelmonster. "vdhamer-for-testing" gaat niet lukken: Usernaam is al in gebruik.
 - De makkelijkste vraag is Country: normaal Netherlands kiezen. Maar het antwoord is vermoedelijk niet echt belangrijk, zoals je uit de kleine letters kan opmaken.
 - Op "Create account" klikken resulteert in het klassieke riedeltje van Email ontvangen, code uit e-mail in een web pagina invullen.
 Hiermee weten ze dat jouw Email account ook echt bij jou uitkomt.
