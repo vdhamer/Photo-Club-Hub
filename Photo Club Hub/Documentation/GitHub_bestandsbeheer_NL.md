@@ -1,14 +1,18 @@
 ## Aanmelden bij GitHub
 
-Dit stappenplan beschrijft hoe men zich kan aanmelden bij www.GitHub.com. Dit is een manier om zelfstandig databestanden (b.v. `mijnClub.level2.json`) of instructies zoals dit document te wijzigen. In hoofdlijnen komt het erop neer dat men een gewijzigd bestand kan aanmaken, en deze aanbieden aan het project (__repository__ of __repo__ voor intimi). Tussen aanbieden en daarwerkelijk opnemen van het gewijzigd bestand zit nog een goedkeuringsstap. Dit voorkomt dat een willekeurig iemand zomaar een willekeurige wijziging kan aanbrengen.
+Dit stappenplan beschrijft hoe men zich kan aanmelden bij www.github.com. 
+Dit is een manier om zelfstandig databestanden (b.v. `mijnClub.level2.json`) of instructies zoals dit document te wijzigen. 
+In hoofdlijnen komt het erop neer dat men een gewijzigd bestand kan aanmaken, en deze aanbieden aan het project (__repository__ of __repo__ voor intimi).
+Tussen aanbieden en daarwerkelijk opnemen van het gewijzigd bestand zit nog een goedkeuringsstap.
+Dit voorkomt dat een willekeurig iemand zomaar een willekeurige wijziging kan aanbrengen.
 
 De hoofdstappen zijn dus:
 
-1. gebruiker maakt (eenmalig) een account aan bij GitHub. Dan kan GitHub eventueele voor meerdere projecten gebruikt worden.
-2. gebruiker maakt (eenmalig) een locale kopie aan van de gewenste repository ([Photo Club Hub](https://github.com/vdhamer/Photo-Club-Hub))
-3. een bestand (eventueel) meerdere bestanden) wordt locaal aangepast. Deze stap vereist geen contact met GitHub.com (en vereist dus geen Internet).
-3. gebruiker biedt versie aan bij GitHub voor goedkeuring en opname in het repository. 
-4. de goedkeuring doet iemand anders, en wordt hier niet beschreven. Hiervoor moet je een soort beheerder zijn van het repository.
+1. Gebruiker maakt (eenmalig) een account aan bij GitHub. Dan kan GitHub eventueele voor meerdere projecten gebruikt worden.
+2. Gebruiker maakt (eenmalig) een locale kopie aan van de gewenste repository ([Photo Club Hub](https://github.com/vdhamer/Photo-Club-Hub))
+3. Een bestand (eventueel meerdere bestanden) wordt locaal bijgewerkt. Deze stap vereist geen contact met GitHub.com (en vereist dus geen Internet).
+3. Gebruiker biedt versie aan bij GitHub voor goedkeuring en opname in het repository. 
+4. Ee goedkeuring doet iemand anders, en wordt hier niet beschreven. Hiervoor moet je een soort beheerder zijn van het repository.
 
 Bij een volgende verandering ga je verder met stap 3. Dus een bstand kan desgewenst in kleine stapjes aangepast worden.
 
