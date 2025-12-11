@@ -70,6 +70,8 @@ Registratie van een nieuwe GitHub gebruiker gebeurt via de "__Sign up__" knop op
 
 <img width="532" height="889" alt="Screenshot 2025-12-11 at 22 19 03" src="https://github.com/user-attachments/assets/da795207-821c-4a14-bdce-4f156e796d61" />
 
+<details><summary>Details (klik om uit te klappen)</summary></p>
+
 - Wie een Apple account gebruikt, kan "Continue wie Apple" kiezen. Als je dit (of de Google equivalent) gebruikt, ben je snel klaar. Anders...
 - Voor toekomstige "sign in" heb jij de combinatie Email/Password straks nodig. Of Username/Password. Je moet alle 3 velden invullen. En alle 3 goed bewaren (desnoods in het "comment" veld van een password app).
    - Email moet uniek zijn. Gebruik geen "hide my Email" Apple iCloud account: dit wordt geweigerd met een slechte foutmelding. Voor de meeste mensen is deze stap geen probleem: hebben bijvoorbeeld een hoofdaccount en een minder gelezen Email account. Desnoods een extra Email account hiervoor aanmaken bij Gmail (een iCloud account dat automatisch doorverwijst kan zoals gezegd problemen geven).
@@ -79,6 +81,8 @@ Registratie van een nieuwe GitHub gebruiker gebeurt via de "__Sign up__" knop op
    Het is dus Username in de IT zin, en niet de gewone naam van de gebruiker. Je mag dus wel Jan-Pietersen kiezen maar niet Jan Pietersen. Maar stroopwafelfrisbee mag ook. Ik gebruik zelf "vdhamer" en "vdhamer-for-testing".
 - Country is een makkelijke vraag: kan gewoon Netherlands kiezen uit de lijst. Het antwoord is onbelangrijk volgens de kleine lettertjes.
 - Op "Create account" klikken resulteert in het standaard ritueel van code ontvangen per Email, en code terugmelden aan GitHub om te controlleren dat het Email adres ok is. Anders is een vergeten wachtwoord extra pijnlijk.
+
+</details></p>
 
 
 
