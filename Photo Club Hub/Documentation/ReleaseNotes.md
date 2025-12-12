@@ -2,6 +2,7 @@
 
 CLUBS AND MUSEUMS SCREEN
 * Added 10 clubs for a northern district of the Netherlands. They are for now at Level 1. Thanks to AH.
+* Renamed IndividueelBO to PersoonlijkBO (to match Fotobond convention)
 * TODO: fix scrolling of Clubs and Museums screen (on iPhone only?). <<<<
 
 DATA MAINTENANCE
@@ -14,9 +15,10 @@ DATA MAINTENANCE
 
 CODE MAINTENANCE
 * Synchronized code with Photo Club Hub HTML (minor changes).
-* Tested with Xcode 26.2 beta 2 (17C5038g) and iOS 26.2 (23C5044a) and SwiftLint 0.62.2_1.
+* Tested with Xcode 26.2 (17C52) and iOS 26.2 (23C55) and SwiftLint 0.62.2_1.
 * Improved handling of Level2URL field.
 * Split organization.swift into 4 source files.
+* Fixed bug: OrganizationListView1718 was used instead of OrganizationListView2626 for iOS 26.x
 
 PORTFOLIO SCREEN
 
