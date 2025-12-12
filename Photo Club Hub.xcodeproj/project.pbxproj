@@ -157,6 +157,7 @@
 		37C014472EDA581F003B3901 /* FileOrganization+FindCreateUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileOrganization+FindCreateUpdate.swift"; sourceTree = "<group>"; };
 		37C61B8E2E72091000C5BAEF /* FotokringSintMichielsgestel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FotokringSintMichielsgestel.swift; sourceTree = "<group>"; };
 		37C9DB952E59CE8A0039F423 /* String+canonicalCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+canonicalCase.swift"; sourceTree = "<group>"; };
+		37CAF2A72EEC0E5C00BB1D36 /* GitHub_bestandsbeheer_NL 2.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "GitHub_bestandsbeheer_NL 2.md"; sourceTree = "<group>"; };
 		37D1EA4E2EDDDD46008A5FE1 /* Afdeling03.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Afdeling03.level1.json; sourceTree = "<group>"; };
 		37D1EA502EDDDDD3008A5FE1 /* Level1_aanmaken_NL.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Level1_aanmaken_NL.md; sourceTree = "<group>"; };
 		37E134AE2E6F63D100C61714 /* MemberPortfolioListView2626.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberPortfolioListView2626.swift; sourceTree = "<group>"; };
@@ -641,6 +642,7 @@
 		D0831A48277F736C0049AB84 /* Documentation */ = {
 			isa = PBXGroup;
 			children = (
+				37CAF2A72EEC0E5C00BB1D36 /* GitHub_bestandsbeheer_NL 2.md */,
 				D0831A4B277F736C0049AB84 /* ReleaseNotes.md */,
 				37D1EA502EDDDDD3008A5FE1 /* Level1_aanmaken_NL.md */,
 				3764D5E32EDDB0D9005A2539 /* FotoclubHubIntro_NL_20251129.pptx */,
