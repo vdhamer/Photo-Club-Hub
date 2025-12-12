@@ -1,5 +1,5 @@
 //
-//  IndividueelBOMemebersProvider.swift
+//  Persoonlijk16MemebersProvider.swift
 //  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 06/07/2025.
@@ -7,7 +7,7 @@
 
 import CoreData // for PersistenceController
 
-final public class IndividueelBOMembersProvider: Sendable {
+final public class Persoonlijk16MembersProvider: Sendable {
 
     public init(bgContext: NSManagedObjectContext,
                 isBeingTested: Bool,
@@ -39,9 +39,9 @@ final public class IndividueelBOMembersProvider: Sendable {
                                         isBeingTested: Bool,
                                         town: String = "Brabant Oost",
                                         useOnlyInBundleFile: Bool) {
-        let idPlus = OrganizationIdPlus(fullName: "Individuele Leden Brabant Oost",
+        let idPlus = OrganizationIdPlus(fullName: "Persoonlijke Leden Brabant Oost",
                                         town: town,
-                                        nickname: "IndividueelBO")
+                                        nickname: "Persoonlijk16")
 
         let club = Organization.findCreateUpdate(context: bgContext,
                                                  organizationTypeEnum: .club,

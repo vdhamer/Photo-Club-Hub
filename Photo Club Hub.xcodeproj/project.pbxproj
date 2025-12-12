@@ -18,6 +18,7 @@
 		37C014482EDA581F003B3901 /* FileOrganization+FindCreateUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C014472EDA581F003B3901 /* FileOrganization+FindCreateUpdate.swift */; };
 		37C61B8F2E72091000C5BAEF /* FotokringSintMichielsgestel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C61B8E2E72091000C5BAEF /* FotokringSintMichielsgestel.swift */; };
 		37C9DB962E59CE8A0039F423 /* String+canonicalCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C9DB952E59CE8A0039F423 /* String+canonicalCase.swift */; };
+		37CAF2C92EEC398600BB1D36 /* IndividueelBO.level2.json in Resources */ = {isa = PBXBuildFile; fileRef = 37CAF2C82EEC398600BB1D36 /* IndividueelBO.level2.json */; };
 		37E134AF2E6F63D100C61714 /* MemberPortfolioListView2626.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E134AE2E6F63D100C61714 /* MemberPortfolioListView2626.swift */; };
 		37E134B22E6F693E00C61714 /* OrganizationListView1718.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E134B12E6F693E00C61714 /* OrganizationListView1718.swift */; };
 		37E134B32E6F693E00C61714 /* FilteredOrganizationView2626.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E134B02E6F693E00C61714 /* FilteredOrganizationView2626.swift */; };
@@ -50,7 +51,7 @@
 		D04856362D46A45D00022117 /* PhotoClubHub.SwiftUI.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = D04856352D46A45D00022117 /* PhotoClubHub.SwiftUI.xcstrings */; };
 		D04856382D46A62200022117 /* PhotoClubHubData.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = D04856372D46A62200022117 /* PhotoClubHubData.xcstrings */; };
 		D04DFD882B39F788006EF297 /* Published+UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831A40277F731C0049AB84 /* Published+UserDefaults.swift */; };
-		D04E91232E1B163200F6A66F /* IndividueelBO.level2.json in Resources */ = {isa = PBXBuildFile; fileRef = D04E91222E1B163200F6A66F /* IndividueelBO.level2.json */; };
+		D04E91232E1B163200F6A66F /* Persoonlijk16.level2.json in Resources */ = {isa = PBXBuildFile; fileRef = D04E91222E1B163200F6A66F /* Persoonlijk16.level2.json */; };
 		D05124852C42BE2D00D94B81 /* Level2JsonReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05124842C42BE2D00D94B81 /* Level2JsonReader.swift */; };
 		D05124892C43122C00D94B81 /* UrlComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05124882C43122C00D94B81 /* UrlComponents.swift */; };
 		D05840182E3C18B00013E438 /* WhoIsWhoTextInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05840172E3C18B00013E438 /* WhoIsWhoTextInfo.swift */; };
@@ -124,7 +125,7 @@
 		D0F871952D403D1700530D10 /* root.level1.json in Resources */ = {isa = PBXBuildFile; fileRef = D0F8718C2D403D1700530D10 /* root.level1.json */; };
 		D0F8719A2D403D1700530D10 /* fgDeGender.level2.json in Resources */ = {isa = PBXBuildFile; fileRef = D0F871882D403D1700530D10 /* fgDeGender.level2.json */; };
 		D0F8719C2D403D1700530D10 /* root.level0.json in Resources */ = {isa = PBXBuildFile; fileRef = D0F8718B2D403D1700530D10 /* root.level0.json */; };
-		D0FB52912E1F28560025E9A8 /* IndividueelBOMembersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FB52902E1F28560025E9A8 /* IndividueelBOMembersProvider.swift */; };
+		D0FB52912E1F28560025E9A8 /* Persoonlijk16MembersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FB52902E1F28560025E9A8 /* Persoonlijk16MembersProvider.swift */; };
 		D0FD28BB2D8CDFD3002B5C38 /* languages.level0.json in Resources */ = {isa = PBXBuildFile; fileRef = D0FD28BA2D8CDFD3002B5C38 /* languages.level0.json */; };
 		D0FD28BC2D8CDFD3002B5C38 /* abstractExpertise.level0.json in Resources */ = {isa = PBXBuildFile; fileRef = D0FD28B82D8CDFD3002B5C38 /* abstractExpertise.level0.json */; };
 		D0FD28BD2D8CDFD3002B5C38 /* language.level0.json in Resources */ = {isa = PBXBuildFile; fileRef = D0FD28B92D8CDFD3002B5C38 /* language.level0.json */; };
@@ -158,6 +159,7 @@
 		37C61B8E2E72091000C5BAEF /* FotokringSintMichielsgestel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FotokringSintMichielsgestel.swift; sourceTree = "<group>"; };
 		37C9DB952E59CE8A0039F423 /* String+canonicalCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+canonicalCase.swift"; sourceTree = "<group>"; };
 		37CAF2A72EEC0E5C00BB1D36 /* GitHub_bestandsbeheer_NL 2.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "GitHub_bestandsbeheer_NL 2.md"; sourceTree = "<group>"; };
+		37CAF2C82EEC398600BB1D36 /* IndividueelBO.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = IndividueelBO.level2.json; sourceTree = "<group>"; };
 		37D1EA4E2EDDDD46008A5FE1 /* Afdeling03.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Afdeling03.level1.json; sourceTree = "<group>"; };
 		37D1EA502EDDDDD3008A5FE1 /* Level1_aanmaken_NL.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Level1_aanmaken_NL.md; sourceTree = "<group>"; };
 		37E134AE2E6F63D100C61714 /* MemberPortfolioListView2626.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberPortfolioListView2626.swift; sourceTree = "<group>"; };
@@ -215,7 +217,7 @@
 		D048571C2D46C13100022117 /* nl.xcloc */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = nl.xcloc; sourceTree = "<group>"; };
 		D04A2B112AC0958C003ED113 /* LineCount.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = LineCount.xlsx; sourceTree = "<group>"; };
 		D04D7B2B2D2B3B210048454B /* Jaarverslag 2024 Website.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jaarverslag 2024 Website.docx"; sourceTree = "<group>"; };
-		D04E91222E1B163200F6A66F /* IndividueelBO.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = IndividueelBO.level2.json; sourceTree = "<group>"; };
+		D04E91222E1B163200F6A66F /* Persoonlijk16.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Persoonlijk16.level2.json; sourceTree = "<group>"; };
 		D05124842C42BE2D00D94B81 /* Level2JsonReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level2JsonReader.swift; sourceTree = "<group>"; };
 		D05124882C43122C00D94B81 /* UrlComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlComponents.swift; sourceTree = "<group>"; };
 		D05414F62AC7499000D899D8 /* FotogroepDeGenderMembersProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FotogroepDeGenderMembersProvider.swift; sourceTree = "<group>"; };
@@ -246,7 +248,6 @@
 		D073FE162D3B13B300DB01F4 /* Level2_aanmaken_NL.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Level2_aanmaken_NL.md; sourceTree = "<group>"; };
 		D076BE702CF0CC10008F4B47 /* Readme_EN_2_8_0.pages */ = {isa = PBXFileReference; lastKnownFileType = file; path = Readme_EN_2_8_0.pages; sourceTree = "<group>"; };
 		D0795CEB294FCCC200FA62A8 /* ShapeStyle+Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ShapeStyle+Colors.swift"; sourceTree = "<group>"; };
-		D07A1E2E28314EA600C77F66 /* SwiftUIEnvironmentValues.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SwiftUIEnvironmentValues.png; sourceTree = "<group>"; };
 		D081655E278616930078AB16 /* SinglePortfolioView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SinglePortfolioView.swift; sourceTree = "<group>"; };
 		D082BE902957806800FF0812 /* LogoPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoPath.swift; sourceTree = "<group>"; };
 		D08319E3277F70A30049AB84 /* Photo Club Hub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Photo Club Hub.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -335,7 +336,7 @@
 		D0F8718F2D403D1700530D10 /* XampleMin.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = XampleMin.level1.json; sourceTree = "<group>"; };
 		D0F871902D403D1700530D10 /* XampleMin.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = XampleMin.level2.json; sourceTree = "<group>"; };
 		D0F999502AACE217005FA0FF /* Photo_Club_Hub_2_4_2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_4_2.xcdatamodel; sourceTree = "<group>"; };
-		D0FB52902E1F28560025E9A8 /* IndividueelBOMembersProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividueelBOMembersProvider.swift; sourceTree = "<group>"; };
+		D0FB52902E1F28560025E9A8 /* Persoonlijk16MembersProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persoonlijk16MembersProvider.swift; sourceTree = "<group>"; };
 		D0FCF2E229B5517000F31442 /* VoteOnRoadmapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteOnRoadmapView.swift; sourceTree = "<group>"; };
 		D0FCF2E529B558FE00F31442 /* Roadmap.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Roadmap.json; sourceTree = "<group>"; };
 		D0FD28B82D8CDFD3002B5C38 /* abstractExpertise.level0.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = abstractExpertise.level0.json; sourceTree = "<group>"; };
@@ -487,7 +488,7 @@
 				D0273E5B2DEE460E00C4F5E1 /* FotogroepOirschotMembersProvider.swift */,
 				D0831A2C277F72590049AB84 /* FotogroepWaalreMembersProvider.swift */,
 				37C61B8E2E72091000C5BAEF /* FotokringSintMichielsgestel.swift */,
-				D0FB52902E1F28560025E9A8 /* IndividueelBOMembersProvider.swift */,
+				D0FB52902E1F28560025E9A8 /* Persoonlijk16MembersProvider.swift */,
 				D05417372D31DDE300A2A579 /* XampleMaxMembersProvider.swift */,
 				D072D5E42D333E7500EA88DD /* XampleMinMembersProvider.swift */,
 			);
@@ -642,8 +643,8 @@
 		D0831A48277F736C0049AB84 /* Documentation */ = {
 			isa = PBXGroup;
 			children = (
-				37CAF2A72EEC0E5C00BB1D36 /* GitHub_bestandsbeheer_NL 2.md */,
 				D0831A4B277F736C0049AB84 /* ReleaseNotes.md */,
+				37CAF2A72EEC0E5C00BB1D36 /* GitHub_bestandsbeheer_NL 2.md */,
 				37D1EA502EDDDDD3008A5FE1 /* Level1_aanmaken_NL.md */,
 				3764D5E32EDDB0D9005A2539 /* FotoclubHubIntro_NL_20251129.pptx */,
 				D04D7B2B2D2B3B210048454B /* Jaarverslag 2024 Website.docx */,
@@ -659,7 +660,6 @@
 				D076BE702CF0CC10008F4B47 /* Readme_EN_2_8_0.pages */,
 				D0E02F972B80191300D67CDA /* Readme_NL_2_8_0.pages */,
 				D0300D2A2E2D6BA500A11A03 /* Nieuwsbrief_Aug_2025_app.pdf */,
-				D07A1E2E28314EA600C77F66 /* SwiftUIEnvironmentValues.png */,
 				D0B6B05C2DB27A3E00EAAF69 /* FotoclubHubIntro_NL.pptx */,
 				D04A2B112AC0958C003ED113 /* LineCount.xlsx */,
 				D0A958632D596C3300658373 /* Website_Status_PPT */,
@@ -814,7 +814,8 @@
 				D0273E492DEE42C800C4F5E1 /* fgOirschot.level2.json */,
 				D0A615B22D920C5B0024EC9E /* fgWaalre.level2.json */,
 				3705AFC52E7381D10067CE6B /* fkGestel.level2.json */,
-				D04E91222E1B163200F6A66F /* IndividueelBO.level2.json */,
+				37CAF2C82EEC398600BB1D36 /* IndividueelBO.level2.json */,
+				D04E91222E1B163200F6A66F /* Persoonlijk16.level2.json */,
 				D0FD28B92D8CDFD3002B5C38 /* language.level0.json */,
 				D0FD28BA2D8CDFD3002B5C38 /* languages.level0.json */,
 				D0F8718B2D403D1700530D10 /* root.level0.json */,
@@ -945,7 +946,7 @@
 				D0ACCFD82DEFAD690002FACC /* XampleMin.level2.json in Resources */,
 				D0F4B4D82D86CFA500F60920 /* empty.level0.json in Resources */,
 				D04856382D46A62200022117 /* PhotoClubHubData.xcstrings in Resources */,
-				D04E91232E1B163200F6A66F /* IndividueelBO.level2.json in Resources */,
+				D04E91232E1B163200F6A66F /* Persoonlijk16.level2.json in Resources */,
 				D008D2AA28739167007A7BE2 /* .gitignore in Resources */,
 				D0B5743E2C41D79300334E4C /* Assets.xcassets in Resources */,
 				372028CE2E84A4CC00ED1B91 /* Photo-Club-Hub-InfoPlist.xcstrings in Resources */,
@@ -958,6 +959,7 @@
 				D0F8719A2D403D1700530D10 /* fgDeGender.level2.json in Resources */,
 				D0F8719C2D403D1700530D10 /* root.level0.json in Resources */,
 				D06D08DE2C28835D00872BC2 /* Settings.bundle in Resources */,
+				37CAF2C92EEC398600BB1D36 /* IndividueelBO.level2.json in Resources */,
 				D04856362D46A45D00022117 /* PhotoClubHub.SwiftUI.xcstrings in Resources */,
 				3705AFC62E7381D10067CE6B /* fkGestel.level2.json in Resources */,
 				D0FD28BB2D8CDFD3002B5C38 /* languages.level0.json in Resources */,
@@ -1116,7 +1118,7 @@
 				D0AE1B782788A19500E0100E /* WhoIsWhoListView.swift in Sources */,
 				D006BA7E2B115FB1002E555B /* LocationManager.swift in Sources */,
 				376DC9742EC3F33200FB429B /* Crosshairs1718.swift in Sources */,
-				D0FB52912E1F28560025E9A8 /* IndividueelBOMembersProvider.swift in Sources */,
+				D0FB52912E1F28560025E9A8 /* Persoonlijk16MembersProvider.swift in Sources */,
 				D0831A21277F72270049AB84 /* FilteredWhoIsWhoView.swift in Sources */,
 				D04DFD882B39F788006EF297 /* Published+UserDefaults.swift in Sources */,
 				D0ACCEE12DEF9B070002FACC /* FotogroepWaalreMembersProvider.swift in Sources */,
