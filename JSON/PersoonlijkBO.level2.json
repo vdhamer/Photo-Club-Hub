@@ -2,8 +2,8 @@
     "club": {
         "idPlus": {
             "town": "Brabant Oost",
-            "fullName": "Individuele Leden Brabant Oost",
-            "nickName": "IndividueelBO"
+            "fullName": "Persoonlijke Leden Brabant Oost",
+            "nickName": "PersoonlijkBO"
         },
         "coordinates": {"latitude": 51.44327, "longitude": 5.47990},
         "optional": {
@@ -40,7 +40,7 @@
         }
     },
 
-    {
+	{
             "name": {
                 "givenName": "Arthur",
                 "infixName": "van",
