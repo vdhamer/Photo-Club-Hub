@@ -153,7 +153,7 @@ Het is namelijk voor die beoefenaars en geïnteresserden vaak extra waardevol.
 Dit is net als bij liefhebbers van bijzondere categorieen muziek of boeken.
 Maar het is handig als het minimale overlap geeft met andere categorieën.
 
-Het moet echter ook weer niet zo klein is dat er maar 1 persoon belangstelling in heeft. 
+Het moet echter ook weer niet zo klein is dat er maar één persoon belangstelling in heeft. 
 Een te grote expertisegebied ("buitenfotografie") levert minder waarde, en geeft kans op overlap met andere categorieën ("landschap", "street").
 </details></p>
 
@@ -214,7 +214,7 @@ Dus strict genomen zijn er 3 benaming voor een expertise tag:
 ### Expertisetags en clubs
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
-De app koppelt expertisetags aan een persoon - dus onafhankelijke van enig clubverband.</p>
+De app koppelt expertisetags aan personen - dus onafhankelijke van enig clubverband.</p>
   
 Maar de expertise tags worden door clubs ingevoerd.
 Dus een fijnproever kan zich afvragen: "als Jan lid is van Club 1 en Club 2, 
