@@ -89,7 +89,7 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
         let changed6 = updateIfChanged(update: &self.featuredImageThumbnail,
                                        with: optionalFields.featuredImageThumbnail)
         let changed7 = updateIfChanged(update: &self.removeMember, with: removeMember)
-        let changed8 = updateIfChanged(update: &self.fotobondNumber, with: optionalFields.fotobondNumber)
+        let changed8 = updateIfChanged(update: &self.fotobondMemberNumber, with: optionalFields.fotobondMemberNumber)
         needsSaving = changed1 || changed2 || changed3 || changed4 ||
                       changed5 || changed6 || changed7 || changed8 // forces execution of updateIfChanged()
 
@@ -129,8 +129,8 @@ extension MemberPortfolio { // findCreateUpdate() records in Member table
                                     """)}
                 if changed8 { print("""
                                     \(organization.fullNameTown): \
-                                    Changed latest fotobondNumber for \(photographer.fullNameFirstLast) \
-                                    to \(optionalFields.fotobondNumber ?? 0)
+                                    Changed latest fotobondMemberNumber for \(photographer.fullNameFirstLast) \
+                                    to \(optionalFields.fotobondMemberNumber?.id ?? -1)
                                     """)}
             } catch {
                 ifDebugFatalError("Update failed for member \(photographer.fullNameFirstLast) " +

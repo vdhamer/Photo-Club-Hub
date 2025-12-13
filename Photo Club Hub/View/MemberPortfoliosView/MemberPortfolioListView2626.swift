@@ -99,7 +99,7 @@ struct MemberPortfolioListView2626: View {
 
                 NavigationLink(destination: {
                     let predicateAll = NSPredicate(format: "TRUEPREDICATE")
-                    OrganizationListView1718(predicate: predicateAll)
+                    OrganizationListView2626(predicate: predicateAll)
                 }, label: {
                     Image("mappin.ellipse.rectangle")
                         .font(.title)

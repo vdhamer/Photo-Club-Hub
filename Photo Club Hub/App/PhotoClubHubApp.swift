@@ -125,9 +125,9 @@ extension PhotoClubHubApp {
                 useOnlyInBundleFile: useOnlyInBundleFile)
         }
 
-        // load current/former members of container for Individual members of Fotobond (in region 16)
-        _ = IndividueelBOMembersProvider(
-            bgContext: makeBgContext(ctxName: "Level 2 loader IndividueelBO"),
+        // load current/former members of container for Persoonlijke members of Fotobond (in region 16)
+        _ = Persoonlijk16MembersProvider(
+            bgContext: makeBgContext(ctxName: "Level 2 loader Persoonlijk16"),
             isBeingTested: isBeingTested,
             useOnlyInBundleFile: useOnlyInBundleFile)
 

@@ -23,7 +23,7 @@ extension Organization {
                 return organizationType_! // organizationType_ cannot be nil at this point
             } else {
                 // something is fundamentally wrong if this happens
-                ifDebugFatalError( "Error because organization is nil", file: #fileID, line: #line )
+                ifDebugFatalError( "Error because organizationType is nil", file: #fileID, line: #line )
                 let persistenceController = PersistenceController.shared // for Core Data
                 let viewContext = persistenceController.container.viewContext // requires @MainActor
                 return OrganizationType.findCreateUpdate( // organizationType is CoreData NSManagedObject
@@ -44,6 +44,24 @@ extension Organization {
 		get { return fullName_ ?? "DefaultPhotoClubName" }
 		set { fullName_ = newValue }
 	}
+
+    /* https://
+    stackoverflow.com/questions/25485273/swift-coredata-cannot-automatically-set-optional-attribute-on-generated-nsman
+    */
+    public var fotobondClubNumber: FotobondClubNumber? {
+        get {
+            if let raw: NSNumber = fotobondClubNumber_ as NSNumber? {
+                return FotobondClubNumber(id: Int16(truncating: raw))
+            } else {
+                return FotobondClubNumber(id: nil as Int16?)
+            }
+        }
+        set {
+            if let newValue, newValue.id != nil {
+                fotobondClubNumber_ = newValue.id! as NSNumber
+            }
+        }
+    }
 
     // Appends " \(town)" to \(fullName) unless \(town) is already part of \(fullName).
     // The following cases are tested in OrganizationTest:

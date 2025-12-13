@@ -2,12 +2,12 @@
     "club": {
         "idPlus": {
             "town": "Brabant Oost",
-            "fullName": "Individuele Leden Brabant Oost",
-            "nickName": "IndividueelBO"
+            "fullName": "Persoonlijke Leden Brabant Oost",
+            "nickName": "Persoonlijk16"
         },
         "coordinates": {"latitude": 51.44327, "longitude": 5.47990},
         "optional": {
-            "level2URL": "https://www.example.com/IndividueelBO.level2.json",
+            "level2URL": "https://www.example.com/Persoonlijk16.level2.json",
             "remark": [
                 {
                     "language": "EN",
@@ -15,7 +15,7 @@
                 },
                 {
                     "language": "NL",
-                    "value": "Individuele leden van de Koninklijke Fotobond - Afdeling 16 Brabant Oost."
+                    "value": "Persoonlijke leden van de Koninklijke Fotobond - Afdeling 16 Brabant Oost."
                 }
             ],
             "nlSpecific": {"fotobondNumber": 1600}
@@ -25,22 +25,22 @@
 
     "members": [
 
-    {
-        "name": {
-            "givenName": "Ad",
-            "infixName": "van der",
-            "familyName": "Nat"
+        {
+            "name": {
+                "givenName": "Ad",
+                "infixName": "van der",
+                "familyName": "Nat"
+            },
+            "optional": {
+                "website": "https://www.advandernat.nl",
+                "featuredImage": "",
+                "level3URL": "",
+                "membershipStartDate": "2025-09-08",
+                "expertises": ["Portrait", "Nature"]
+            }
         },
-        "optional": {
-            "website": "https://www.advandernat.nl",
-            "featuredImage": "",
-            "level3URL": "",
-            "membershipStartDate": "2025-09-08",
-            "expertises": ["Portrait", "Nature"]
-        }
-    },
 
-	{
+        {
             "name": {
                 "givenName": "Arthur",
                 "infixName": "van",

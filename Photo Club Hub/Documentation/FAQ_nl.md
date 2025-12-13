@@ -160,10 +160,10 @@ Er kan ook gekeken worden of de plug-in kosten voor dit doel eenmalig centraal a
 ### Wie bepaalt welke foto's in de app staan?
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
-De individuele clubs.</p>
+De clubs.</p>
 
 Zo kan je bijvoorbeeld ervoor kiezen dat foto's van alle clubexposities 
-en individuele exposities van de afgelopen jaren te zien zijn.
+evan de afgelopen jaren te zien zijn.
 Maar je kunt ook afspreken dat iedere fotograaf zelf foto's uitkiest voor zijn/naar portfolio in de app.
 Of een combinatie. De app gaat er wel vanuit dat de foto's geselecteerd zijn.
 Dus betekent eerder tien foto's dan honderd foto's per fotograaf per jaar. Portofolio's en exposeren betekent keuzes maken.

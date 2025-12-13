@@ -41,7 +41,7 @@ struct OrganizationListView2626: View {
         ScrollView(.vertical, showsIndicators: true) {
 
             LazyVStack {
-                FilteredOrganizationView1718(predicate: model.preferences.photoClubPredicate, searchText: $searchText)
+                FilteredOrganizationView2626(predicate: model.preferences.photoClubPredicate, searchText: $searchText)
             }
             .scrollTargetLayout()
 
@@ -119,7 +119,7 @@ struct PhotoClubListView2626_Previews: PreviewProvider {
 
     static var previews: some View {
         NavigationStack {
-            OrganizationListView1718(predicate: predicate, navigationTitle: String("PhotoClubView"))
+            OrganizationListView2626(predicate: predicate, navigationTitle: String("PhotoClubView"))
                 .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
         }
     }

@@ -22,7 +22,7 @@ Er komen later aparte instructies hoe _portfolio's_ met foto's ("Level 3") toe t
       | `town`  | `fullName` | `nickName` | `latitude` | `longitude` | Input bestand | Output pagina |
       | -----  | ---------| ----- | :-----: | :-----: | :-----: | :-----: |
       | Berlicum | FCC Shot71 | fccShot71 | 51.66306 | 5.41825 | ⌛ |  |
-      | Brabant Oost | Individueel | IndividueelBO | 51.44327 | 5.47990 | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/Individueel.level2.json) | [link](http://www.vdhamer.com/IndividueelBO) |
+      | Brabant Oost | Persoonlijk | Persoonlijk16 | 51.44327 | 5.47990 | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/Persoonlijk.level2.json) | [link](http://www.vdhamer.com/Persoonlijk16) |
       | Den Dungen | Fotoclub Den Dungen | fcDenDungen | 51.66214 | 5.37097 | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/fcDenDungen.level2.json) ⌛ | [link](http://www.vdhamer.com/fcDenDungen) |
       | Eindhoven | Fotogroep de Gender | fgDeGender | 51.42398 | 5.45010 | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/fgDeGender.level2.json) | [link](http://www.vdhamer.com/fgDeGender) |
       | Eindhoven | Fotoclub Ericamera | fcEricamera | 51.45403 | 5.46288 | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/fcEricamera.level2.json) ⌛ | [link](http://www.vdhamer.com/fcEricamera) |

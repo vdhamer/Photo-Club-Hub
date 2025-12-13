@@ -147,19 +147,19 @@
         {
             "idPlus": {
                 "town": "Hoogeveen",
-                "fullName": "Individuele Leden Afdeling Drenthe - Vechtdal",
-                "nickName": "ilafdDrenthe"
+                "fullName": "Persoonlijke Leden Afdeling Drenthe - Vechtdal",
+                "nickName": "Persoonlijk03"
             },
             "coordinates": {
                 "latitude": 52.71370,
                 "longitude": 6.48451
             },
             "optional": {
-                "level2URL": "http://www.example.com/ilafdDrenthe.level2.json",
+                "level2URL": "http://www.example.com/Persoonlijk16.level2.json",
                 "remark": [
                     {
                         "language": "NL",
-                        "value": "Individuele leden Fotobond Afdeling Drenthe - Vechtdal"
+                        "value": "Persoonlijke leden Fotobond Afdeling Drenthe - Vechtdal"
                     },
                     {
                         "language": "EN",
@@ -557,15 +557,15 @@
         {
             "idPlus": {
                 "town": "Brabant Oost",
-                "fullName": "Individuele Leden Brabant Oost",
-                "nickName": "IndividueelBO"
+                "fullName": "Persoonlijke Leden Brabant Oost",
+                "nickName": "Persoonlijk16"
             },
             "coordinates": {
                 "latitude": 51.44327,
                 "longitude": 5.47990
             },
             "optional": {
-               "level2URL": "https://www.example.com/IndividueelBO.level2.json",
+               "level2URL": "https://www.example.com/Persoonlijk16.level2.json",
                 "remark": [
                     {
                         "language": "EN",
@@ -573,7 +573,7 @@
                     },
                     {
                         "language": "NL",
-                        "value": "Individuele leden van de Koninklijke Fotobond, Afdeling 16: Brabant Oost."
+                        "value": "Persoonlijke leden van de Koninklijke Fotobond, Afdeling 16: Brabant Oost."
                     }
                 ],
                 "nlSpecific": {

@@ -147,19 +147,19 @@
         {
             "idPlus": {
                 "town": "Hoogeveen",
-                "fullName": "Individuele Leden Afdeling Drenthe - Vechtdal",
-                "nickName": "ilafdDrenthe"
+                "fullName": "Persoonlijke Leden Afdeling Drenthe - Vechtdal",
+                "nickName": "Persoonlijk03"
             },
             "coordinates": {
                 "latitude": 52.71370,
                 "longitude": 6.48451
             },
             "optional": {
-                "level2URL": "http://www.example.com/ilafdDrenthe.level2.json",
+                "level2URL": "http://www.example.com/Persoonlijk03.level2.json",
                 "remark": [
                     {
                         "language": "NL",
-                        "value": "Individuele leden Fotobond Afdeling Drenthe - Vechtdal"
+                        "value": "Persoonlijke leden Fotobond Afdeling Drenthe - Vechtdal"
                     },
                     {
                         "language": "EN",

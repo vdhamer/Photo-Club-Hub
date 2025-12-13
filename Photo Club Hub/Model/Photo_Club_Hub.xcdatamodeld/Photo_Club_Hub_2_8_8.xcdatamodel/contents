@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="24299" systemVersion="25A362" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="24512" systemVersion="25B78" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Expertise" representedClassName="Expertise" elementID="Keyword" syncable="YES" codeGenerationType="class">
         <attribute name="id_" attributeType="String" defaultValueString="ID is missing"/>
         <attribute name="isSupported" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
@@ -54,7 +54,7 @@
     <entity name="MemberPortfolio" representedClassName="MemberPortfolio" elementID="Member" syncable="YES" codeGenerationType="class">
         <attribute name="featuredImage" optional="YES" attributeType="URI" elementID="latestImage_"/>
         <attribute name="featuredImageThumbnail_" optional="YES" attributeType="URI" elementID="latestThumbURL"/>
-        <attribute name="fotobondNumber" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="fotobondMemberNumber_" optional="YES" attributeType="Integer 32" usesScalarValueType="NO" elementID="fotobondNumber"/>
         <attribute name="isAdmin" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="isChairman" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="isFormerMember" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
@@ -81,7 +81,7 @@
     </entity>
     <entity name="Organization" representedClassName="Organization" elementID="PhotoClub" syncable="YES" codeGenerationType="class">
         <attribute name="contactEmail_" optional="YES" attributeType="String" elementID="contactEmail"/>
-        <attribute name="fotobondNumber" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="fotobondClubNumber_" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" elementID="fotobondNumber"/>
         <attribute name="fullName_" attributeType="String" defaultValueString="DefaultPhotoClubName" elementID="name_"/>
         <attribute name="isMapScrollLocked" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES" elementID="isScrollLocked"/>
         <attribute name="latitude_" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
