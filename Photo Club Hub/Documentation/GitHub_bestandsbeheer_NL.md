@@ -108,7 +108,7 @@ Ons gebruik hier is een beetje een uitzonderingsgeval.
 
 </details></p>
 
-### 2.1 GitHub Desktop downloaden
+### 2.1 GitHub Desktop downloaden en installeren
 
 Via deze [link](https://desktop.github.com/download/) kan je GitHub Desktop gratis downloaded voor Mac of Windows
 
@@ -116,22 +116,33 @@ Via deze [link](https://desktop.github.com/download/) kan je GitHub Desktop grat
 
 Er zijn versies voor oude (Intel) en nieuwe generatie (Apple Silicon: M1 - M5) Macs.
 Bij Windows krijg je een installatieprogramma dat je moet uitvoeren om het te installeren.
-Bij Mac kan je het .zip bestand uitpakken in de Downloads folder. Er naar de Applications folder sleepen.
-
-### 2.2 GitHub Desktop installeren
+Bij Mac kan je het .zip bestand in de Downloads folder openen. Er de resulterende `GitHub Desktop.app` naar de Applications folder slepen.
 
 Bij het openen van GitHub Desktop krijg je (in ieder geval op de Mac) de vraag of je de app wel vertrouwt.
 Gerust "Open" kiezen: er zijn miljoenen gebruikers je voorgegaan.
 En GitHub (al jaren deel van Microsoft) is fanatieker dan de meesten op veiligheid.
 
-Vervolgs de keus tussen GitHub.com (deze kiezen) of GitHub Enterprise.
+Vervolgs de keus tussen GitHub.com (👈 deze kiezen) of GitHub Enterprise.
 
+Vervolgens wil het weten wie onder welke naam/wachtwoord jij bekend bent op GitHub.
+Dus moet je de gegevens gebruiken die je hierboven in het "Sign up for GitHub" gekozen hebt.
+Je browser of wachtwoord app kan hierbij een handje helpen. Maar dit is vergelijkbaar met
+allerlei andere online diensten.
 
+<img width="395" height="647" alt="Screenshot 2025-12-13 at 23 21 24" src="https://github.com/user-attachments/assets/8060a991-a12a-45cd-9c87-4f94cd1c7b6a" />
 
+Je krijgt nog een veiligheidsvraag van je Internet browser (Safari, Chrome, Edge, Firefox). Dat zal er ongeveer zo uitzien:
 
+```
+   Do you want to allow this website to open "GitHub Desktop"?
+```
 
+Dit is omdat je op dat punt overschakelt van browser naar een lokaal programma. Dat mag niet zomaar.
+Maar je kunt de GitHub Desktop applicatie ook zelf opstarten via een ikoontje in Applications of in een Start menu (Windows).
 
+### 2.2
 
+Hiermee heb je een werkende GitHub Desktop. Maar bij opstarten krijg je nog een vraag:
+Het wachtwoord is al bekend van stap 2.1. Maar het wil eigenlijk nog de gekopen e-mail adres hebben:
 
-
-
+<img width="1028" height="728" alt="Screenshot 2025-12-13 at 23 30 56" src="https://github.com/user-attachments/assets/fb96dc61-83d8-4ec7-b9a6-5d16cd249eee" />
