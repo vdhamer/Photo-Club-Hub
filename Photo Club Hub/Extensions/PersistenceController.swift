@@ -73,7 +73,7 @@ public struct PersistenceController: Sendable {
                     longitude: 5.46144 + Double.random(in: -2.0 ... 1.0)),
                 optionalFields: OrganizationOptionalFields(
                     organizationWebsite: URL(string: "http://www.example.com/\(index)"),
-                    fotobondNumber: Int16(index*1111)
+                    fotobondClubNumber: FotobondClubNumber(id: Int16(index*1111))
                 ),
                 pinned: (index % 4 == 0)
             )

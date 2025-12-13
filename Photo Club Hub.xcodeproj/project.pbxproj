@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3705AFC62E7381D10067CE6B /* fkGestel.level2.json in Resources */ = {isa = PBXBuildFile; fileRef = 3705AFC52E7381D10067CE6B /* fkGestel.level2.json */; };
 		372028CE2E84A4CC00ED1B91 /* Photo-Club-Hub-InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 372028CD2E84A4CC00ED1B91 /* Photo-Club-Hub-InfoPlist.xcstrings */; };
+		373EE0D12EED808700F311BE /* FotobondNumbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373EE0D02EED808700F311BE /* FotobondNumbers.swift */; };
 		376D14F82E6DE60900A1403B /* PreludeView2626.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376D14F72E6DE60900A1403B /* PreludeView2626.swift */; };
 		376D14FA2E6DE83A00A1403B /* DebugPanel2626.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376D14F92E6DE83A00A1403B /* DebugPanel2626.swift */; };
 		376DC9522EC3A98900FB429B /* PreludeImageStore2626.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376DC9512EC3A98900FB429B /* PreludeImageStore2626.swift */; };
@@ -146,6 +147,7 @@
 /* Begin PBXFileReference section */
 		3705AFC52E7381D10067CE6B /* fkGestel.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fkGestel.level2.json; sourceTree = "<group>"; };
 		372028CD2E84A4CC00ED1B91 /* Photo-Club-Hub-InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = "Photo-Club-Hub-InfoPlist.xcstrings"; sourceTree = "<group>"; };
+		373EE0D02EED808700F311BE /* FotobondNumbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FotobondNumbers.swift; sourceTree = "<group>"; };
 		37545CA32EBFB37300C75485 /* Photo_Club_Hub_2_8_7.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_8_7.xcdatamodel; sourceTree = "<group>"; };
 		375CC66B2EE0A10300B618DB /* hierarchyDemo.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = hierarchyDemo.level1.json; sourceTree = "<group>"; };
 		3764D5E32EDDB0D9005A2539 /* FotoclubHubIntro_NL_20251129.pptx */ = {isa = PBXFileReference; lastKnownFileType = file; path = FotoclubHubIntro_NL_20251129.pptx; sourceTree = "<group>"; };
@@ -611,6 +613,7 @@
 			isa = PBXGroup;
 			children = (
 				D0A0B6832AA930E90078DE9A /* Photo_Club_Hub.xcdatamodeld */,
+				373EE0D02EED808700F311BE /* FotobondNumbers.swift */,
 				D0ADF4AD27922DCA00535432 /* MemberRolesAndStatus.swift */,
 				D0D18C77296E1F6A00B334DB /* OrganizationIdPlus.swift */,
 				D0B32BB22C15C51A009FF8E7 /* AppVersion.swift */,
@@ -1074,6 +1077,7 @@
 				D06BE9332A4F870B0055B3B1 /* ifDebugUtils.swift in Sources */,
 				D0831A38277F72590049AB84 /* Organization+ComputedProperties.swift in Sources */,
 				37E134B22E6F693E00C61714 /* OrganizationListView1718.swift in Sources */,
+				373EE0D12EED808700F311BE /* FotobondNumbers.swift in Sources */,
 				37C014482EDA581F003B3901 /* FileOrganization+FindCreateUpdate.swift in Sources */,
 				37C014442EDA564B003B3901 /* Organization+Count.swift in Sources */,
 				37E134B32E6F693E00C61714 /* FilteredOrganizationView2626.swift in Sources */,

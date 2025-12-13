@@ -25,22 +25,22 @@
 
     "members": [
 
-    {
-        "name": {
-            "givenName": "Ad",
-            "infixName": "van der",
-            "familyName": "Nat"
+        {
+            "name": {
+                "givenName": "Ad",
+                "infixName": "van der",
+                "familyName": "Nat"
+            },
+            "optional": {
+                "website": "https://www.advandernat.nl",
+                "featuredImage": "",
+                "level3URL": "",
+                "membershipStartDate": "2025-09-08",
+                "expertises": ["Portrait", "Nature"]
+            }
         },
-        "optional": {
-            "website": "https://www.advandernat.nl",
-            "featuredImage": "",
-            "level3URL": "",
-            "membershipStartDate": "2025-09-08",
-            "expertises": ["Portrait", "Nature"]
-        }
-    },
 
-	{
+        {
             "name": {
                 "givenName": "Arthur",
                 "infixName": "van",

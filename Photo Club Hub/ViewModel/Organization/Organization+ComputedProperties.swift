@@ -45,6 +45,24 @@ extension Organization {
 		set { fullName_ = newValue }
 	}
 
+    /* https://
+    stackoverflow.com/questions/25485273/swift-coredata-cannot-automatically-set-optional-attribute-on-generated-nsman
+    */
+    public var fotobondClubNumber: FotobondClubNumber? {
+        get {
+            if let raw: NSNumber = fotobondClubNumber_ as NSNumber? {
+                return FotobondClubNumber(id: Int16(truncating: raw))
+            } else {
+                return FotobondClubNumber(id: nil as Int16?)
+            }
+        }
+        set {
+            if let newValue, newValue.id != nil {
+                fotobondClubNumber_ = newValue.id! as NSNumber
+            }
+        }
+    }
+
     // Appends " \(town)" to \(fullName) unless \(town) is already part of \(fullName).
     // The following cases are tested in OrganizationTest:
     // "Fotogroep Waalre" and "Aalst" returns "Fotogroep Waalre (Aalst)"

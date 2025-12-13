@@ -47,6 +47,24 @@ extension MemberPortfolio { // expose computed properties (some related to handl
         }
 	}
 
+    /* https://
+    stackoverflow.com/questions/25485273/swift-coredata-cannot-automatically-set-optional-attribute-on-generated-nsman
+    */
+    public var fotobondMemberNumber: FotobondMemberNumber? {
+        get {
+            if let raw: NSNumber = fotobondMemberNumber_ as NSNumber? {
+                return FotobondMemberNumber(id: Int32(truncating: raw))
+            } else {
+                return FotobondMemberNumber(id: nil as Int32?)
+            }
+        }
+        set {
+            if let newValue, newValue.id != nil {
+                fotobondMemberNumber_ = newValue.id! as NSNumber
+            }
+        }
+    }
+
 	public var photographer: Photographer {
         if let photographer = photographer_ {
             return photographer

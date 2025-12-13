@@ -144,7 +144,7 @@ import CoreData // for NSManagedObjectContext
             #expect(organizations[0].fullName == idPlus.fullName)
             #expect(organizations[0].town == idPlus.town)
             #expect(organizations[0].nickName == idPlus.nickname)
-            #expect(organizations[0].fotobondNumber == 1620)
+            #expect(organizations[0].fotobondClubNumber?.id == 1620)
         }
 
         #expect(Expertise.count(context: bgContext) == 21)

@@ -161,7 +161,7 @@ public class Level2JsonReader { // normally running on a background thread
         let localizedRemarks: [JSON] = jsonOptionals["remark"].arrayValue // empty array if missing
         let contactEmail: String? = jsonOptionals["contactEmail"].exists() ?
             jsonOptionals["contactEmail"].stringValue : nil
-        let fotobondNumber = jsonOptionals["nlSpecific"]["fotobondNumber"].exists()  ? // id of club
+        let fotobondClubNumberID: Int16? = jsonOptionals["nlSpecific"]["fotobondNumber"].exists() ? // FotobondNL clubid
             jsonOptionals["nlSpecific"]["fotobondNumber"].int16Value : nil
 
         _ = Organization.findCreateUpdate(context: bgContext,
@@ -172,7 +172,7 @@ public class Level2JsonReader { // normally running on a background thread
                                           optionalFields: OrganizationOptionalFields(
                                               organizationWebsite: clubWebsite,
                                               wikipedia: wikipedia,
-                                              fotobondNumber: fotobondNumber,
+                                              fotobondClubNumber: FotobondClubNumber(id: fotobondClubNumberID),
                                               contactEmail: contactEmail,
                                               localizedRemarks: localizedRemarks
                                               )
@@ -204,8 +204,8 @@ public class Level2JsonReader { // normally running on a background thread
 
         let photographerExpertises: [JSON] = jsonOptionals["expertises"].arrayValue
 
-        let fotobondNumber: Int32? = jsonOptionals["nlSpecific"]["fotobondNumber"].exists() ?
-            jsonOptionals["nlSpecific"]["fotobondNumber"].int32Value : nil
+        let fotobondMemberNumber: FotobondMemberNumber? = jsonOptionals["nlSpecific"]["fotobondNumber"].exists() ?
+            FotobondMemberNumber(id: jsonOptionals["nlSpecific"]["fotobondNumber"].int32Value) : nil
 
         // some attributes are at the Photographer level...
         _ = Photographer.findCreateUpdate(context: bgContext,
@@ -232,7 +232,7 @@ public class Level2JsonReader { // normally running on a background thread
                 featuredImageThumbnail: featuredImage,
                 level3URL: level3URL, // address of portfolio data for this member
                 memberRolesAndStatus: memberRolesAndStatus,
-                fotobondNumber: fotobondNumber,
+                fotobondMemberNumber: fotobondMemberNumber,
                 membershipStartDate: membershipStartDate,
                 membershipEndDate: membershipEndDate
             )
