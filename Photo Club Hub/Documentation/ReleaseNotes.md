@@ -19,6 +19,7 @@ CODE MAINTENANCE
 * Improved handling of Level2URL field.
 * Split organization.swift into 4 source files.
 * Fixed bug: OrganizationListView1718 was used instead of OrganizationListView2626 for iOS 26.x
+* Split organization.swift source code into 4 files.
 
 PORTFOLIO SCREEN
 
