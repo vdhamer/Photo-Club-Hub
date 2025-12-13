@@ -85,7 +85,7 @@ Registratie van een nieuwe GitHub gebruiker gebeurt via de "__Sign up__" knop op
 
 </details></p>
 
-### 2. Locale copie van repository aanmaken
+### 2. Locale "clone" aanmaken via GitHub Desktop
 
 
 

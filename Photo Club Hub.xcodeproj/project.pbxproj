@@ -160,7 +160,6 @@
 		37C014472EDA581F003B3901 /* FileOrganization+FindCreateUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileOrganization+FindCreateUpdate.swift"; sourceTree = "<group>"; };
 		37C61B8E2E72091000C5BAEF /* FotokringSintMichielsgestel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FotokringSintMichielsgestel.swift; sourceTree = "<group>"; };
 		37C9DB952E59CE8A0039F423 /* String+canonicalCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+canonicalCase.swift"; sourceTree = "<group>"; };
-		37CAF2A72EEC0E5C00BB1D36 /* GitHub_bestandsbeheer_NL 2.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "GitHub_bestandsbeheer_NL 2.md"; sourceTree = "<group>"; };
 		37CAF2C82EEC398600BB1D36 /* IndividueelBO.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = IndividueelBO.level2.json; sourceTree = "<group>"; };
 		37D1EA4E2EDDDD46008A5FE1 /* Afdeling03.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Afdeling03.level1.json; sourceTree = "<group>"; };
 		37D1EA502EDDDDD3008A5FE1 /* Level1_aanmaken_NL.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Level1_aanmaken_NL.md; sourceTree = "<group>"; };
@@ -172,6 +171,7 @@
 		37E134B72E6F75ED00C61714 /* ReadmeView2626.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeView2626.swift; sourceTree = "<group>"; };
 		37E134B82E6F75ED00C61714 /* SectionHeader2626.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader2626.swift; sourceTree = "<group>"; };
 		37E61E042E62DB9300F6D3B5 /* Photo_Club_Hub_2_8_4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_8_4.xcdatamodel; sourceTree = "<group>"; };
+		37E818B32EEDE61900BF5518 /* GitHub_bestandsbeheer_NL.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = GitHub_bestandsbeheer_NL.md; sourceTree = "<group>"; };
 		37EC25472EB6889300667D8A /* FeaturedImagePipeline.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = FeaturedImagePipeline.md; sourceTree = "<group>"; };
 		37F7F53C2EC8A028000F1889 /* PreludeImage2626.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreludeImage2626.swift; sourceTree = "<group>"; };
 		D006BA7D2B115FB1002E555B /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
@@ -646,8 +646,8 @@
 		D0831A48277F736C0049AB84 /* Documentation */ = {
 			isa = PBXGroup;
 			children = (
+				37E818B32EEDE61900BF5518 /* GitHub_bestandsbeheer_NL.md */,
 				D0831A4B277F736C0049AB84 /* ReleaseNotes.md */,
-				37CAF2A72EEC0E5C00BB1D36 /* GitHub_bestandsbeheer_NL 2.md */,
 				37D1EA502EDDDDD3008A5FE1 /* Level1_aanmaken_NL.md */,
 				3764D5E32EDDB0D9005A2539 /* FotoclubHubIntro_NL_20251129.pptx */,
 				D04D7B2B2D2B3B210048454B /* Jaarverslag 2024 Website.docx */,
