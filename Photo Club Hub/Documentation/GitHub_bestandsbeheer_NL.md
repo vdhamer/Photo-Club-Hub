@@ -166,9 +166,30 @@ Het is ongetwijfeld daarna aanpasbaar, maar het is het simpelst als je nu even g
 "waar kan ik honderden MegaBytes voor onbepaalde tijdsduur stallen zodat ik terug vind?".
 Op de Mac is /Users/mijnAccount/Developer gebruikelijk. Dan krijg je een mooi geel ikoon.
 
-> Tip: Op verjaardagsfeestjes kan je nerds imponeren met het feit dat jij "op GitHub" zit. Social media voor gevorderden.
+> Tip: Op verjaardagsfeestjes kan je nerds imponeren met het feit dat jij "op GitHub" zit.
+> Het is tenslotte best iets om trots op te zijn. GitHub heeft 500 honder miljoel repositories en ruim honderd miljoen gebruikers. De meesten gebruikers zitten
+> in de software industrie. Maar het is voor meerdere soorten documentbeheer bruikbaar: [GitHub for poets tutorial](https://www.youtube.com/watch?v=BCQHnlnPusY).
 
+### 2.3 Wat zien we inmiddels?
 
+<img width="1072" height="772" alt="Screenshot 2025-12-14 at 00 09 29" src="https://github.com/user-attachments/assets/645261ec-7836-4931-80e5-86e60bb0e5a3" />
+
+Zo ziet GitHub Desktop eruit bij 1 locale clone van het GitHub repository vdhamer/Photo-Club-Hub:
+
+- Current repository zegt dat je nu bezig bent in het Photo-Club-Hub projekt
+- Main branch betekent dat je niet bezig bent met een tijdelijk subprojekt. Hier volstaat "Main" omdat we maar 1 of hooguit 2 files aanpassen.
+- Fetch origin ververst jou locale copie van de repository. Dit bijt locale wijziging niet - zelfs niet als het hetzelfde bestand betreft. Zelfde regel van zelfde bestand wordt wat lastiger.
+- Er is een knop om een teksteditor te openen. In mijn geval (Mac) is dat "Sublime Text". "Notepad++" wordt veel gebruikt voor dit soort bestanden onder Windows.
+- Er is een knop om de folder te bekijken (in Finder op Mac, of Explorer onder Windows).
+- Je kunt ook de repository bekijken op GitHub via jouw browser. Ik denk dat dat (behalve voor de "owner") alleen bekijken en niet wijzigen betreft.
+
+Ik zou "View file is your repository in Finder/Explorer" maar kiezen. 
+En dan op zoek gaan naar het bestand dat je aan wilt passen. En met een locale editor (Sublimte Text, Notepad++, etc) aanpassen.
+
+Dat ziet op een Mac zo uit (Windows iets soortgelijks).
+
+Dit is dus de standaard bestandsbeheer van MacOS of Windows. Met een onzichtbaar maar belangrijk verschil:
+Wat je wijzigt in deze directories wordt in de gaten gehouden door GitHub Desktop.
 
 
 
