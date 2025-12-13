@@ -110,7 +110,22 @@ Ons gebruik hier is een beetje een uitzonderingsgeval.
 
 ### 2.1 GitHub Desktop downloaden
 
+Via deze [link](https://desktop.github.com/download/) kan je GitHub Desktop gratis downloaded voor Mac of Windows
+
+<img width="968" height="944" alt="Screenshot 2025-12-13 at 23 02 29" src="https://github.com/user-attachments/assets/e080f792-2d87-4a05-8542-eb8375a417d9" />
+
+Er zijn versies voor oude (Intel) en nieuwe generatie (Apple Silicon: M1 - M5) Macs.
+Bij Windows krijg je een installatieprogramma dat je moet uitvoeren om het te installeren.
+Bij Mac kan je het .zip bestand uitpakken in de Downloads folder. Er naar de Applications folder sleepen.
+
 ### 2.2 GitHub Desktop installeren
+
+Bij het openen van GitHub Desktop krijg je (in ieder geval op de Mac) de vraag of je de app wel vertrouwt.
+Gerust "Open" kiezen: er zijn miljoenen gebruikers je voorgegaan.
+En GitHub (al jaren deel van Microsoft) is fanatieker dan de meesten op veiligheid.
+
+Vervolgs de keus tussen GitHub.com (deze kiezen) of GitHub Enterprise.
+
 
 
 
