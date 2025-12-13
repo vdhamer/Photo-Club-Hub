@@ -155,6 +155,11 @@ En biedt het aan om mee te helpen aan een bestaande repository. Dat is de bedoel
 
 <img width="1072" height="772" alt="Screenshot 2025-12-13 at 23 39 00" src="https://github.com/user-attachments/assets/bf910eab-42d5-4b8a-9202-4257cf1e7d8f" />
 
+Kies hier dus "Clone a Repository from the Internet...". Waarna je (b.v.) URL kiest:
+
+<img width="497" height="292" alt="Screenshot 2025-12-13 at 23 51 23" src="https://github.com/user-attachments/assets/7914ae4c-d2e2-491e-afa4-aa1f62e19749" />
+
+
 
 
 
