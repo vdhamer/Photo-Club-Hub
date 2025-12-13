@@ -167,8 +167,10 @@ Het is ongetwijfeld daarna aanpasbaar, maar het is het simpelst als je nu even g
 Op de Mac is /Users/mijnAccount/Developer gebruikelijk. Dan krijg je een mooi geel ikoon.
 
 > Tip: Op verjaardagsfeestjes kan je nerds imponeren met het feit dat jij "op GitHub" zit.
-> Het is tenslotte best iets om trots op te zijn. GitHub heeft 500 honder miljoel repositories en ruim honderd miljoen gebruikers. De meesten gebruikers zitten
-> in de software industrie. Maar het is voor meerdere soorten documentbeheer bruikbaar: [GitHub for poets tutorial](https://www.youtube.com/watch?v=BCQHnlnPusY).
+> Het is tenslotte best iets om trots op te zijn. Heel Git is bepaald niet simpel.
+> Maar wij gebruiken hier maar enkele procent van de totale mogelijkheden.
+> GitHub heeft 500 honderd miljoen repositories en meer dan honderd miljoen gereistreerde gebruikers. De meeste gebruikers zitten
+> in de software industrie. Maar het is voor meerdere soorten documentbeheer bruikbaar: [GitHub for poets 1.1 tutorial](https://www.youtube.com/watch?v=BCQHnlnPusY).
 
 ### 2.3 Wat zien we inmiddels?
 
@@ -176,9 +178,9 @@ Op de Mac is /Users/mijnAccount/Developer gebruikelijk. Dan krijg je een mooi ge
 
 Zo ziet GitHub Desktop eruit bij 1 locale clone van het GitHub repository vdhamer/Photo-Club-Hub:
 
-- Current repository zegt dat je nu bezig bent in het Photo-Club-Hub projekt
-- Main branch betekent dat je niet bezig bent met een tijdelijk subprojekt. Hier volstaat "Main" omdat we maar 1 of hooguit 2 files aanpassen.
-- Fetch origin ververst jou locale copie van de repository. Dit bijt locale wijziging niet - zelfs niet als het hetzelfde bestand betreft. Zelfde regel van zelfde bestand wordt wat lastiger.
+- "Current repository" zegt dat je nu bezig bent in het Photo-Club-Hub projekt
+- "Main branch" betekent dat je niet bezig bent met een tijdelijk subprojekt. Voor ons volstaat "Main" omdat we relatief kleine aanpassingen doen.
+- "Fetch origin" ververst jou locale copie van de repository vanuit GitHub. Lokale aanpassingen (op eigen computer) worden hierbij niet overschreven. Als het bestand waaraan je werkt op GitHub inmiddels aangepast is, dan 
 - Er is een knop om een teksteditor te openen. In mijn geval (Mac) is dat "Sublime Text". "Notepad++" wordt veel gebruikt voor dit soort bestanden onder Windows.
 - Er is een knop om de folder te bekijken (in Finder op Mac, of Explorer onder Windows).
 - Je kunt ook de repository bekijken op GitHub via jouw browser. Ik denk dat dat (behalve voor de "owner") alleen bekijken en niet wijzigen betreft.
@@ -188,8 +190,11 @@ En dan op zoek gaan naar het bestand dat je aan wilt passen. En met een locale e
 
 Dat ziet op een Mac zo uit (Windows iets soortgelijks).
 
-Dit is dus de standaard bestandsbeheer van MacOS of Windows. Met een onzichtbaar maar belangrijk verschil:
-Wat je wijzigt in deze directories wordt in de gaten gehouden door GitHub Desktop.
+<img width="1032" height="576" alt="Screenshot 2025-12-14 at 00 27 12" src="https://github.com/user-attachments/assets/1bc3738a-b2ed-4c85-b7c4-0534a8e98744" />
 
+Dit is dus de standaard bestandsbeheer van MacOS of Windows. Met een onzichtbaar maar belangrijk verschil:
+GitHub Desktop regelt het op de hoogte houden van het centrale ("origin") repository in Github van jouw wijzigingen.
+GitHub/Git kan je ook lokaal vertellen (en tonen) wat er in welke versie gewijzigd is.
+Hiervoor houdt GitHub/Git automatisch een hele administratie bij in een verborgen directory.
 
 
