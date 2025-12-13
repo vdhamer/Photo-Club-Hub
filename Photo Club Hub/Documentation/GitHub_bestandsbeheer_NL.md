@@ -87,7 +87,14 @@ Registratie van een nieuwe GitHub gebruiker gebeurt via de "__Sign up__" knop op
 
 ### 2. Locale "clone" aanmaken via GitHub Desktop
 
+In deze stap installeren we software die hoort bij GitHub: GitHub Desktop.
 
+> Tip: vaak wordt softwareontwikkelaars aangeraden om nog een pakket te installeren: Git.
+> We gaan het hier zonder Git te doen: GitHub Desktop is een
+> modernere grafische applicatie, terwijl Git hetzelfde (en meer) kan door commando's in te typen.
+> Voor professioneel gebruik is `git` handig als iets bijzonders aan de hand is. Maar dat hopen wij te vermijden.
+
+En gebruiken dat om een lokale (op eigen computer) kopie te maken van __alle__ bestanden in het Photo Club Hub repository.
 
 
 
