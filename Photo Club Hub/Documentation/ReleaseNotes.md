@@ -18,7 +18,7 @@ CODE MAINTENANCE
 * Synchronized code with Photo Club Hub HTML (minor changes).
 * Tested with Xcode 26.2 beta 2 (17C5038g) and iOS 26.2 (23C5044a) and SwiftLint 0.62.2_1.
 * Improved handling of Level2URL field.
-* Split organization.swift into 4 source files.
+* Split organization.swift source code into 4 files.
 
 PORTFOLIO SCREEN
 
