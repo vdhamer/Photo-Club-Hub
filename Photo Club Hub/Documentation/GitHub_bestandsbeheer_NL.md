@@ -85,16 +85,31 @@ Registratie van een nieuwe GitHub gebruiker gebeurt via de "__Sign up__" knop op
 
 </details></p>
 
-### 2. Locale "clone" aanmaken via GitHub Desktop
+## 2. Locale "clone" aanmaken via GitHub Desktop
 
-In deze stap installeren we software die hoort bij GitHub: GitHub Desktop.
+In deze stap installeren we eerst locaal software die hoort bij GitHub: GitHub Desktop.
 
-> Tip: vaak wordt softwareontwikkelaars aangeraden om nog een pakket te installeren: Git.
-> We gaan het hier zonder Git doen: GitHub Desktop is een
-> modernere grafische "schil" om `git`.
-> Voor professioneel gebruik is laag niveau toegang (`git`) soms nuttig en een soort gemeenschappelijk taal (er zijn meer schillen dan alleen GitHub Desktop).
+> Tip: vaak wordt (aan softwareontwikkelaars) aangeraden om eerst het prakket Git te installeren.
+> We gaan het hier zonder Git doen: GitHub Desktop is een gebruikersvriendelijke
+> grafische "schil" om `git`. Git wordt daarentegen (zelfs door de bedenker) als minder gebruiksvriendelijk gezien.
 
-En gebruiken dat om een lokale (op eigen computer) kopie te maken van __alle__ bestanden in het Photo Club Hub repository.
+Het nut van GitHub Desktop is:
+
+<details><summary>Details (klik om uit te klappen)</summary></p>
+
+- je kunt je lokale wijziging bijhouden
+- je ziet het verschil (op regelbasis) tussen die versie die je aanbied aan GitHub en de vorige versie op GitHub
+- tijdens het lokaal werken heb je geen last van wijzigingen gemaakt door anderen
+- gelijktijdige wijzigingen van een tekstbestand door iemand worden automatisch gecombineerd met jouw wijzigingen
+
+Waarom is GitHub Desktop eigenlijk nodig, als je een bestand opgeslagen bij GitHub wilt wijzigen?
+Dat is ondeermeer omdat, bij het wijzingen van softwarebestanden, men de software lokaal wil bouwen en testen.
+Ons gebruik hier is een beetje een uitzonderingsgeval.
+
+</details></p>
+
+### 2.1 GitHub Desktop installeren
+
 
 
 
