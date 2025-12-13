@@ -108,7 +108,11 @@ Ons gebruik hier is een beetje een uitzonderingsgeval.
 
 </details></p>
 
-### 2.1 GitHub Desktop installeren
+### 2.1 GitHub Desktop downloaden
+
+### 2.2 GitHub Desktop installeren
+
+
 
 
 
