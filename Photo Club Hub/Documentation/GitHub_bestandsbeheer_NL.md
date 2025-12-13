@@ -155,9 +155,18 @@ En biedt het aan om mee te helpen aan een bestaande repository. Dat is de bedoel
 
 <img width="1072" height="772" alt="Screenshot 2025-12-13 at 23 39 00" src="https://github.com/user-attachments/assets/bf910eab-42d5-4b8a-9202-4257cf1e7d8f" />
 
-Kies hier dus "Clone a Repository from the Internet...". Waarna je (b.v.) URL kiest:
+Kies hier dus "Clone a Repository from the Internet...". <BR><BR> Waarna je (b.v.) URL kiest:
 
 <img width="497" height="292" alt="Screenshot 2025-12-13 at 23 51 23" src="https://github.com/user-attachments/assets/7914ae4c-d2e2-491e-afa4-aa1f62e19749" />
+
+Voordat je Clone klikt: dit gaat alle bestanden van dit projekt (in hun huidige versie) copieren naar de opgegeven locatie.
+Ik koos voor een directory "Photo-Club-Hub" binnen een nieuwe directory "GitHub" binnen nieuwe/bestaande directory "Developer".
+Maar dit mag je zelf weten: bij documenten, losse drive, in peter/Developer. 
+Het is ongetwijfeld daarna aanpasbaar, maar het is het simpelst als je nu even goed nadenkt:
+"waar kan ik honderden MegaBytes voor onbepaalde tijdsduur stallen zodat ik terug vind?".
+Op de Mac is /Users/mijnAccount/Developer gebruikelijk. Dan krijg je een mooi geel ikoon.
+
+> Tip: Op verjaardagsfeestjes kan je nerds imponeren met het feit dat jij "op GitHub" zit. Social media voor gevorderden.
 
 
 
