@@ -26,14 +26,14 @@ Bij een eventuele volgende verandering herhaal je stappen 3 en 4.
 Dus een bestand hoeft niet in een keer af, maar dient ten tijde van de goedkeuring wel bruikbaar zijn.
 Voor eventuele volgende veranderingen hoef je overigens niet te wachten totdat eerdere versies goedgekeurd zijn.
 
-   > Tip: GitHub (of het achterliggende Git) is een zogenaamde versiebeheersystemen (_version control system_).
+   > Tip: GitHub (of het achterliggende `git`) is een zogenaamde versiebeheersystemen (_version control system_).
    > Dat houdt in dat het alle aangeboden bestandswijzigingen nauwlettend bijhoudt. 
-   > Git kan ook teams aan waarbij soms 2 personen vrijwel gelijktijdig hetzelfde bestand aanpassen.
-   > In de praktijk betekent dit dat Git zorgt dat niemand een wijziging in een aangeboden bestand kwijt raakt.
+   > `git` kan ook teams aan waarbij soms 2 personen vrijwel gelijktijdig hetzelfde bestand aanpassen.
+   > In de praktijk betekent dit dat `git` zorgt dat niemand een wijziging in een aangeboden bestand kwijt raakt.
 
    > Tip: GitHub is een vrij complex systeem. De hele software-industrie is afhankelijk van GitHub en verwante systemen.
-   > Mini-cursussen op YouTube over GitHub en Git zijn vaak bedoeld voor softwareontwikkelaars.
-   > Ze beschrijven dan meer toeters en bellen van Git(Hub) dan wat wij hier nodig hebben.
+   > Mini-cursussen op YouTube over GitHub en `git` zijn vaak bedoeld voor softwareontwikkelaars.
+   > Ze beschrijven dan meer toeters en bellen van `git`(Hub) dan wat wij hier nodig hebben.
    > Concentreer je dus op die begrippen en stappen die hier nodig zijn.
    > De rest kan je altijd nog leren nadat de basis duidelijk is.
 
@@ -49,7 +49,7 @@ Alle aangeboden versies worden bewaard. Je kunt zien wie wat wanneer gewijzigd h
 - SAMENWERKING<BR>
 Meerdere mensen kunnen wijzigingen aanbrengen, en versies van elkaar overnemen.
 Zonder het risico van misverstanden of kwijtraken van een voorgestelde aanpassingen.
-Git(Hub) is als het ware de stoplichten die het dataverkeer tussen de verschillende partijen regelt: soms hinderlijk, maar het heeft zo zijn reden.
+`git`(Hub) is als het ware de stoplichten die het dataverkeer tussen de verschillende partijen regelt: soms hinderlijk, maar het heeft zo zijn reden.
 
 - EENVOUDIGE GOEDKEURING<BR>
 In het ideale geval kan een ingediende wijziging met 1 druk op de knop goedgekeurd worden. Dit is essentieel als er continue meerdere wijzigingsvoorstellen per dag binnenstromen.
@@ -111,7 +111,7 @@ Je krijgt minstens 1 vraag (op basis van plaatjes of geluid) om te bewijzen dat 
 
 In deze stap installeren we eerst __GitHub Desktop__. Dit is een lokaal draaiende software applicatie gemaakt door de GitHub organisatie. 
 
-> Tip: vaak wordt (aan softwareontwikkelaars) aangeraden om eerst het pakket `Git` te installeren.
+> Tip: vaak wordt (aan softwareontwikkelaars) aangeraden om eerst het pakket `git` te installeren.
 > We gaan het hier zonder `git` doen: GitHub Desktop is een gebruikersvriendelijke grafische "schil" om `git`.
 
 Het nut van GitHub Desktop is:
@@ -188,7 +188,7 @@ Het is ongetwijfeld daarna aanpasbaar, maar het is het simpelst als je nu even g
 Op de Mac is /Users/mijnAccount/Developer gebruikelijk. Dan krijg je een mooi geel icoon.
 
 > Tip: Op verjaardagsfeestjes kan je nerds imponeren met het feit dat jij "op GitHub" zit.
-> Het is tenslotte best iets om trots op te zijn. Heel Git is bepaald niet simpel.
+> Het is tenslotte best iets om trots op te zijn. Heel `git` is bepaald niet simpel.
 > Maar wij gebruiken hier maar enkele procent van de totale mogelijkheden.
 > GitHub heeft 500 honderd miljoen Repositories en meer dan honderd miljoen gereistreerde gebruikers. De meeste gebruikers zitten
 > in de software industrie. Maar het is voor meerdere soorten documentbeheer bruikbaar: [GitHub for poets 1.1 tutorial](https://www.youtube.com/watch?v=BCQHnlnPusY).
@@ -215,7 +215,7 @@ Dat ziet op een Mac zo uit (Windows iets soortgelijks).
 
 Dit is dus de standaard bestandsbeheer van MacOS of Windows. Met een onzichtbaar maar belangrijk verschil:
 GitHub Desktop regelt het op de hoogte houden van het centrale ("origin") Repository in Github van jouw wijzigingen.
-GitHub/Git kan je ook lokaal vertellen (en tonen) wat er in welke versie gewijzigd is.
-Hiervoor houdt GitHub/Git automatisch een hele administratie bij in een verborgen directory.
+GitHub/`git` kan je ook lokaal vertellen (en tonen) wat er in welke versie gewijzigd is.
+Hiervoor houdt GitHub/`git` automatisch een hele administratie bij in een verborgen directory.
 
 
