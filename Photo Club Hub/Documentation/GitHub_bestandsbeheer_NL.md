@@ -94,7 +94,7 @@ __Sign in__ is daarentegen als je later aanmeldt bij GitHub ("inloggen") onder h
 - Voor toekomstige "Sign in" heb jij de combinatie Email/Password straks nodig. Of Username/Password. Je moet alle 3 velden invullen en goed bewaren.
    - Email moet uniek zijn binnen GitHub.
 Voor de meeste mensen is deze stap geen probleem: die hebben bijvoorbeeld een primair en misschien een secondair Email account. 
-Je kunt eventueel extra Email account hiervoor aanmaken bij Gmail (een "nep" iCloud account kan zoals gezegd problemen geven).
+Je kunt eventueel een extra Email account hiervoor aanmaken bij Gmail (een "nep" iCloud account dat doorstuurt naar een primair account zal waarschijnlijk hier zoals gezegd problemen geven).
 Gebruik geen "hide my Email" Apple iCloud account: dit wordt geweigerd met een (verkeerde) foutmelding.
    - Wachtwoord moet uiteraard bewaard worden bij al je andere wachtwoorden.
    - Username moet ook uniek zijn en is een beetje misleidend:
