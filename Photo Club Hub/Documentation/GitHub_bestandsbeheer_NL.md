@@ -1,35 +1,43 @@
 ## Bestandsbeheer bij GitHub
 
-Dit stappenplan beschrijft hoe men zich kan aanmelden bij www.github.com
-en wijzigingen kan aanbieden zonder dat iemand anders als tussenpersoon moet dienen. 
-Het is met name een manier om zelfstandig databestanden (b.v. `mijnClub.level2.json`) of instructies zoals dit document te wijzigen of toe te voegen.
+Dit document beschrijft de procedures nodig om zich aan te melden bij www.github.com
+en om wijzigingen in _Photo Club Hub_ bestanden aan te bieden zonder dat hiervoor een tussenpersoon nodig is. 
+Het is met name bedoeld om ledenlijsten (zoals `mijnClub.level2.json`) of documentatiebestanden (zoals dit bestand) 
+te wijzigen met minimale afhankelijkheid van derden.
 
-In hoofdlijnen komt het erop neer dat men een gewijzigd bestand kan aanmaken, en deze aanbieden aan het project (__repository__ of __repo__ voor intimi).
-Tussen aanbieden en daarwerkelijk opnemen van het gewijzigd bestand zit nog een goedkeuringsstap.
-Dit voorkomt dat een willekeurig persoon zomaar een willekeurige wijziging in een willekeurig bestand kan aanbrengen.
+Het is ook mogelijk om nieuwe bestanden toe te voegen of bestaande bestanden te verwijderen.
+Maar dat krijgt hier geen aandacht omdat dit ongeveer op vrijwel dezelfde manier gaat.
+
+In hoofdlijnen komt het erop neer dat men een gewijzigd bestand kan aanmaken, en deze aanbieden aan het project ("__Repository__" ofwel "__Repo__").
+Tussen aanbieden en daadwerkelijk in gebruik nemen zit nog een __goedkeuringsstap__.
+De goedkeuringsstap voorkomt dat men zomaar een willekeurige wijziging in een willekeurig bestand kan aanbrengen.
+De goedkeuringsprocedure wordt hier moet beschreven omdat een Repository beheerder dat moet doen.
+
+### Alvast een samenvatting
 
 De hoofdstappen zijn dus:
 
-1. Gebruiker maakt (eenmalig) een account aan bij GitHub. In principe kan dat account voor meewerken in meerdere GitHub repositories gebruikt worden.
-2. Gebruiker maakt (eenmalig) een locale kopie aan van de gewenste repository ([Photo Club Hub](https://github.com/vdhamer/Photo-Club-Hub))
-3. Een bestand (eventueel meerdere bestanden) wordt locaal bijgewerkt. Deze stap vereist geen contact met GitHub.com (en vereist dus geen Internet).
-3. Gebruiker biedt versie aan bij GitHub voor goedkeuring en opname in het repository. 
-4. Ee goedkeuring doet iemand anders, en wordt hier niet beschreven. Hiervoor moet je een soort beheerder zijn van het repository.
+1. De gebruiker maakt (eenmalig) een account aan bij GitHub. Dat account is geldig voor _alle_ GitHub Repositories.
+2. De gebruiker maakt (eenmalig, via GitHub Desktop) een lokale kopie aan van 
+de _complete_ [Photo Club Hub](https://github.com/vdhamer/Photo-Club-Hub) Repository.
+3. Een bestand (of bestanden) wordt lokaal (op de eigen computer) aangepast.
+Deze stap kan zonder Internet verbindingen. De stap mag zo lang duren als nodig (minuten … dagen).
+4. De gebruiker biedt de aangepaste versie aan (weer via GitHub Desktop) bij de centrale Repository voor goedkeuring door de Repo beheerder(s).
 
-Bij een volgende verandering ga je verder met stap 3. Dus een bstand kan desgewenst in kleine stapjes aangepast worden.
+Bij een eventuele volgende verandering herhaal je stappen 3 en 4.
+Dus een bestand hoeft niet in een keer af, maar dient ten tijde van de goedkeuring wel bruikbaar zijn.
+Voor eventuele volgende veranderingen hoef je overigens niet te wachten totdat eerdere versies goedgekeurd zijn.
 
-   > Tip: GitHub (of het achterliggende Git) is een zogenaamde versiebeheersystemen ("version control system").
-   > Dat houdt in dat het alle bestandswijzigingen nauwlettend bijhoudt. 
-   > Git kan ook teams van meerdere personen aan die soms dezelfde bestanden aanpassen.
-   > In de praktijk betekent dit dat niemand een wijziging in een bestand kwijt kan raken, 
-   > en dat er strict onderscheid gemaakt wordt tussen gedeelde versies en eigen versies.
+   > Tip: GitHub (of het achterliggende `git`) is een zogenaamde versiebeheersystemen (_version control system_).
+   > Dat houdt in dat het alle aangeboden bestandswijzigingen nauwlettend bijhoudt. 
+   > `git` kan ook teams aan waarbij soms 2 personen vrijwel gelijktijdig hetzelfde bestand aanpassen.
+   > In de praktijk betekent dit dat `git` zorgt dat niemand een wijziging in een aangeboden bestand kwijt raakt.
 
-   > Tip: GitHub is een vrij zwaar systeem. De halve software wereld is afhankelijk van GitHub of verwante systemen.
-   > Mini-kursusen op b.v. YouTube over GitHub en Git zijn vaak gericht op softwareontwikkelaars.
-   > Ze omvatten meer toeters en bellen van Git(Hub) dan wat wij hier nodig hebben.
-   > En de meeste softwareontwikkelaars gebruiken vaak maar een fractie van alle mogelijkheden. 
-   > Pas dus op voor afleidingen: concentreer dus alleen op de stappen en begrippen die je hier nodig hebt.
-   > Zodra je dat beheerst, kan je altijd nog meer leren.
+   > Tip: GitHub is een vrij complex systeem. De hele software-industrie is afhankelijk van GitHub en verwante systemen.
+   > Mini-cursussen op YouTube over GitHub en `git` zijn vaak bedoeld voor softwareontwikkelaars.
+   > Ze beschrijven dan meer toeters en bellen van `git`(Hub) dan wat wij hier nodig hebben.
+   > Concentreer je dus op die begrippen en stappen die hier nodig zijn.
+   > De rest kan je altijd nog leren nadat de basis duidelijk is.
 
 #### Voordelen van GitHub
 
@@ -38,93 +46,115 @@ Bij een volgende verandering ga je verder met stap 3. Dus een bstand kan desgewe
 Voor ons gebruik hier, zijn de voordelen van GitHub:
 
 - VERSIEBEHEER<BR>
-Alle versies worden bewaard. Je kunt zien wie wat wanneer gewijzigd heeft.
+Alle aangeboden versies worden bewaard. Je kunt zien wie wat wanneer gewijzigd heeft.
+
 - SAMENWERKING<BR>
 Meerdere mensen kunnen wijzigingen aanbrengen, en versies van elkaar overnemen.
-Zonder het risiko van misverstanden of het kwijtraken van een voorgestelde aanpassingen wanneer je dit allemaal handmatig wilt regelen.
+Zonder het risico van misverstanden of kwijtraken van een voorgestelde aanpassingen.
+`git`(Hub) is als het ware de stoplichten die het dataverkeer tussen de verschillende partijen regelt: soms hinderlijk, maar het heeft zo zijn reden.
+
 - EENVOUDIGE GOEDKEURING<BR>
-In het ideale geval kan een ingediende wijziging met 1 druk op de knop goedgekeurd worden. Dit is belangrijk als er b.v.  meerdere voorstellen per dag binnenkomen.
-- CENTRALE TO-DO LIJST<BR>
-De centrale lijst van uitbreidingsverzoeken of melding van bugs loopt via GitHub. Jij kunt hier zelf een wens of klacht ("issue") toevoegen. En bestaande wensen van jezelf en anderen zien.
+In het ideale geval kan een ingediende wijziging met 1 druk op de knop goedgekeurd worden.
+Dit is essentieel als er continue meerdere wijzigingsvoorstellen per dag binnenstromen.
+
 - ARCHIEF<BR>
-GitHub is in feite het archief voor alle bestanden van dit projekt: code, data, documentatie, "issues". GitHub zelf is extreem secuur dat er niets zoek raakt.
+GitHub is in feite het werkarchief voor alle bestanden van dit project: code, data, documentatie, "Issues".
+GitHub zelf is extreem secuur dat er niets zoekraakt.
+
 - ONLINE<BR>
-De app haalt de huidige gegevens op vanuit GitHub. Hier valt b.v. lijsten met clubs ("Level 1") en lijsten met clubleden ("Level 2"). Hierdoor kan de app de huidige gegevens vinden zodra die aangepast worden. Portfolio inhoud wordt op clubwebsites gehouden en lopen dus niet via GitHub.
+De Photo Club Hub apps halen de huidige gegevens op vanuit GitHub.
+Dit zijn vooral lijsten met clubs ("Level 1") en lijsten met clubleden ("Level 2").
+Hierdoor kan de app de huidige meest recente gegevens ophalen.
+Portfolio foto's ("Level 3") worden daarentegen op de clubwebsites gehouden:
+dit zijn grote aantallen grotere bestanden. Het zorgt er verder voor dat clubwebsites losstaan van GitHub.
+
 - URLs<BR>
-Alle bestanden zijn bereikbaar via een webadres (URL). Dat is nuttig voor bijvoorbeeld verwijzingen zoals voor het downloaden van deze [Powerpoint](tinyurl.com/fchPPTnl).
+Alle bestanden hebben een webadres (URL). 
+Dat is nuttig voor bijvoorbeeld verwijzingen zoals voor het downloaden van [de introductie Powerpoint](tinyurl.com/fchPPTnl).
+
+- CENTRALE TO-DO LIJST<BR>
+De centrale lijst van uitbreidingsverzoeken of het aanmelden van bugs loopt via GitHub.
+Jij kunt zo zelf een wens of klacht ("Issue") toevoegen.
+En kijken of de klacht al bekend is. En commentaar en ideeën leveren bij Issues.
+
 - READ-ONLY<BR>
 Wie alleen wil kijken, maar niets wil wijzigen, heeft geen wachtwoord of account bij GitHub nodig.
-Bijvoorbeeld om even te kijken naar een databestand of naar documentatie.
+Bijvoorbeeld om even te kijken naar een databestand of naar documentatie. Dus read-only gebruikers hebben dit document niet nodig.
 
 </details></p>
 
 ## 1. Account aanmaken ("Sign up") bij GitHub
 
-Wie dit ooit eerder gedaan heeft bij GitHub, kan deze stap overslaan.
+Een account bij GitHub aanmaken is gratis. Wie zich eerder geregistreed heeft bij GitHub, kan deze Stap 1 overslaan.
 
-Een account bij GitHub aanmaken is gratis.
-
-Registratie van een nieuwe GitHub gebruiker gebeurt via de "__Sign up__" knop op de [hoofdpagina van GitHub](https://github.com). 
-"Sign up" is dus om je te registreren (account aanmaken). 
-"Sign in" is daarentegen als je later aanmeldt bij GitHub ("inloggen") onder het account aangemaakt met "Sign up".
+Registratie van een nieuwe GitHub gebruiker gebeurt via de "Sign up" knop op de [hoofdpagina van GitHub](https://github.com). 
+__Sign up__ is dus om je te registreren (account aanmaken). 
+__Sign in__ is daarentegen als je later aanmeldt bij GitHub ("inloggen") onder het account dat je eenmalig aangemaakt hebt met __Sign up__.
 
 <img width="532" height="889" alt="Screenshot 2025-12-11 at 22 19 03" src="https://github.com/user-attachments/assets/da795207-821c-4a14-bdce-4f156e796d61" />
 
 <details><summary>Details (klik om uit te klappen)</summary></p>
 
-- Wie een Apple account gebruikt, kan "Continue wie Apple" kiezen. Als je dit (of de Google equivalent) gebruikt, ben je snel klaar. Anders...
-- Voor toekomstige "sign in" heb jij de combinatie Email/Password straks nodig. Of Username/Password. Je moet alle 3 velden invullen. En alle 3 goed bewaren (desnoods in het "comment" veld van een password app).
-   - Email moet uniek zijn. Gebruik geen "hide my Email" Apple iCloud account: dit wordt geweigerd met een slechte foutmelding. Voor de meeste mensen is deze stap geen probleem: hebben bijvoorbeeld een hoofdaccount en een minder gelezen Email account. Desnoods een extra Email account hiervoor aanmaken bij Gmail (een iCloud account dat automatisch doorverwijst kan zoals gezegd problemen geven).
+- Wie een Apple account gebruikt, kan "Continue with Apple" (of "Continue with Google") kiezen. Als je dit gebruikt, ben je snel klaar.
+- Voor toekomstige "Sign in" heb jij de combinatie Email/Password straks nodig. Of Username/Password. Je moet alle 3 velden invullen en goed bewaren.
+   - Email moet uniek zijn binnen GitHub.
+Voor de meeste mensen is deze stap geen probleem: die hebben bijvoorbeeld een primair en misschien een secondair Email account. 
+Je kunt eventueel een apart Email account hiervoor aanmaken bij Gmail 
+(een "nep" iCloud account dat doorstuurt naar een primair account zal waarschijnlijk hier zoals gezegd problemen geven).
+Gebruik geen "hide my Email" Apple iCloud account: dit wordt geweigerd met een (verkeerde) foutmelding.
    - Wachtwoord moet uiteraard bewaard worden bij al je andere wachtwoorden.
    - Username moet ook uniek zijn en is een beetje misleidend:
    In de kleine lettertjes staat dat er bijvoorbeeld geen spaties in mogen.
-   Het is dus Username in de IT zin, en niet de gewone naam van de gebruiker. Je mag dus wel Jan-Pietersen kiezen maar niet Jan Pietersen. Maar stroopwafelfrisbee mag ook. Ik gebruik zelf "vdhamer" en "vdhamer-for-testing".
-- Country is een makkelijke vraag: kan gewoon Netherlands kiezen uit de lijst. Het antwoord is onbelangrijk volgens de kleine lettertjes.
-- Op "Create account" klikken resulteert in het standaard ritueel van code ontvangen per Email, en code terugmelden aan GitHub om te controlleren dat het Email adres ok is. En krijg je minstens 1 vraag (op basis van plaatjes of geluid) om aan te tonen dat jij een mens bent. Die "Captcha" tests zijn best lastig bij GitHub.
-- GitHub heeft ook alternatieve inlogopties bedoeld voor beroeps ontwikkelaars (SSH, passkeys). Die zijn moderner, maar vereisene meer kennis.
+   Het is dus Username in de IT zin, en niet de gewone naam van de gebruiker.
+   Je mag dus wel Jan-Pietersen kiezen maar niet Jan Pietersen. 
+   Maar stroopwafelfrisbee mag ook. Ik gebruik zelf "vdhamer" en "vdhamer-for-testing".
+- Country is een makkelijke vraag: gewoon Netherlands kiezen uit de lijst. Het antwoord is onbelangrijk volgens de kleine lettertjes.
+- Op "Create account" klikken resulteert in het standaard ritueel van code ontvangen per Email,
+en code terugmelden aan GitHub om te controleren dat het Email adres ok is.
+Je krijgt minstens 1 vraag (op basis van plaatjes of geluid) om te bewijzen dat jij een mens bent. Deze tests zijn best lastig bij GitHub.
+- GitHub heeft ook alternatieve inlogopties bedoeld voor softwareontwikkelaars (SSH, passkeys). Die zijn moderner, maar vereisen wat meer kennis.
 
 </details></p>
 
-## 2. Locale "clone" aanmaken via GitHub Desktop
+## 2. Lokale "Clone" aanmaken via GitHub Desktop
 
-In deze stap installeren we eerst locaal software die hoort bij GitHub: GitHub Desktop.
+In deze stap installeren we eerst __GitHub Desktop__. Dit is een lokaal draaiende software applicatie gemaakt door de GitHub organisatie. 
 
-> Tip: vaak wordt (aan softwareontwikkelaars) aangeraden om eerst het prakket Git te installeren.
-> We gaan het hier zonder Git doen: GitHub Desktop is een gebruikersvriendelijke
-> grafische "schil" om `git`. Git wordt daarentegen (zelfs door de bedenker) als minder gebruiksvriendelijk gezien.
+> Tip: vaak wordt (aan softwareontwikkelaars) aangeraden om eerst het pakket `git` te installeren.
+> We gaan het hier zonder `git` doen: GitHub Desktop is een gebruikersvriendelijke grafische "schil" om `git`.
 
 Het nut van GitHub Desktop is:
 
 <details><summary>Details (klik om uit te klappen)</summary></p>
 
-- je kunt je lokale wijziging bijhouden
+- je kunt je lokale wijzigingen desgewenst bijhouden
 - je ziet het verschil (op regelbasis) tussen die versie die je aanbied aan GitHub en de vorige versie op GitHub
 - tijdens het lokaal werken heb je geen last van wijzigingen gemaakt door anderen
 - gelijktijdige wijzigingen van een tekstbestand door iemand worden automatisch gecombineerd met jouw wijzigingen
 
 Waarom is GitHub Desktop eigenlijk nodig, als je een bestand opgeslagen bij GitHub wilt wijzigen?
-Dat is ondeermeer omdat, bij het wijzingen van softwarebestanden, men de software lokaal wil bouwen en testen.
+Dat is ondermeer omdat, bij het wijzingen van softwarebestanden, men de software lokaal wil bouwen en testen.
 Ons gebruik hier is een beetje een uitzonderingsgeval.
 
 </details></p>
 
 ### 2.1 GitHub Desktop downloaden en installeren
 
-Via deze [link](https://desktop.github.com/download/) kan je GitHub Desktop gratis downloaded voor Mac of Windows
+Via deze [link](https://desktop.github.com/download/) kan je GitHub Desktop gratis downloaded voor Mac of voor Windows
 
 <img width="968" height="944" alt="Screenshot 2025-12-13 at 23 02 29" src="https://github.com/user-attachments/assets/e080f792-2d87-4a05-8542-eb8375a417d9" />
 
 Er zijn versies voor oude (Intel) en nieuwe generatie (Apple Silicon: M1 - M5) Macs.
 Bij Windows krijg je een installatieprogramma dat je moet uitvoeren om het te installeren.
-Bij Mac kan je het .zip bestand in de Downloads folder openen. Er de resulterende `GitHub Desktop.app` naar de Applications folder slepen.
+Bij Mac kan je het `.zip` bestand in de Downloads folder openen. En de resulterende `GitHub Desktop.app` naar de Applications folder slepen.
 
 Bij het openen van GitHub Desktop krijg je (in ieder geval op de Mac) de vraag of je de app wel vertrouwt.
 Gerust "Open" kiezen: er zijn miljoenen gebruikers je voorgegaan.
 En GitHub (al jaren deel van Microsoft) is fanatieker dan de meesten op veiligheid.
 
-Vervolgs de keus tussen GitHub.com (👈 deze kiezen) of GitHub Enterprise.
+Vervolgens krijg je de keus tussen GitHub.com (👈 deze kiezen) of GitHub Enterprise.
 
-Vervolgens wil het weten wie onder welke naam/wachtwoord jij bekend bent op GitHub.
+Vervolgens wil het weten onder welke naam/wachtwoord jij bekend bent in GitHub.
 Dus moet je de gegevens gebruiken die je hierboven in het "Sign up for GitHub" gekozen hebt.
 Je browser of wachtwoord app kan hierbij een handje helpen. Maar dit is vergelijkbaar met
 allerlei andere online diensten.
@@ -138,63 +168,69 @@ Je krijgt nog een veiligheidsvraag van je Internet browser (Safari, Chrome, Edge
 ```
 
 Dit is omdat je op dat punt overschakelt van browser naar een lokaal programma. Dat mag niet zomaar.
-Maar je kunt de GitHub Desktop applicatie ook zelf opstarten via een ikoontje in Applications of in een Start menu (Windows).
+Maar je kunt de GitHub Desktop applicatie ook zelf opstarten via een icoontje in Applications (Mac) of in het Windows `Start` menu.
+
+Ergens in het verhaal komt dit scherm ook voor. Gewoon op "Authorize desktop" klikken:
+
+<img width="532" height="626" alt="Screenshot 2025-12-13 at 19 13 17" src="https://github.com/user-attachments/assets/1bfde716-75b4-44de-8830-d8161c26bb40" />
 
 ### 2.2 Verbinding instellen naar GitHub
 
-Hiermee heb je een werkende GitHub Desktop. Maar bij opstarten krijg je nog een vraag:
-Het wachtwoord is al bekend van stap 2.1. Maar het wil eigenlijk nog de gekopen e-mail adres hebben:
+Hiermee heb je een werkende GitHub Desktop. Maar bij het opstarten krijg je nog een vraag:
 
 <img width="1028" height="728" alt="Screenshot 2025-12-13 at 23 30 56" src="https://github.com/user-attachments/assets/fb96dc61-83d8-4ec7-b9a6-5d16cd249eee" />
 
-Ook hier de invoer kloppen met de gegevens die je hierboven in het "Sign up for GitHub" gekozen hebt.
+Ook hier moet de invoer kloppen met de gegevens die je hierboven in het "Sign up for GitHub" gekozen hebt.
 
-GitHub Desktop weet (via GitHub) dat jij geen eigen "repository" (project) heb.
-Dus biedt het aan een te maken (mag van mij, maar misschien iets om later mee te spelen: ).
-En biedt het aan om mee te helpen aan een bestaande repository. Dat is de bedoeling: vdhamer/Photo-Club-Hub.
+GitHub Desktop weet (via GitHub) dat jij geen eigen "Repository" (project) heb.
+Dus biedt het aan één te maken (misschien iets voor later als je met GitHub zelf wilt oefenen).
+Het biedt als alternatief aan dat je mee wilt helpen aan een bestaande Repository. Dat is hier de bedoeling: `vdhamer/Photo-Club-Hub`.
 
 <img width="1072" height="772" alt="Screenshot 2025-12-13 at 23 39 00" src="https://github.com/user-attachments/assets/bf910eab-42d5-4b8a-9202-4257cf1e7d8f" />
 
 Kies hier dus "Clone a Repository from the Internet...". <BR><BR> Waarna je (b.v.) URL kiest:
 
-<img width="497" height="292" alt="Screenshot 2025-12-13 at 23 51 23" src="https://github.com/user-attachments/assets/7914ae4c-d2e2-491e-afa4-aa1f62e19749" />
+<img width="518" height="313" alt="Screenshot 2025-12-13 at 19 14 34" src="https://github.com/user-attachments/assets/079eceae-efec-45da-84be-41ef36436365" />
 
-Voordat je Clone klikt: dit gaat alle bestanden van dit projekt (in hun huidige versie) copieren naar de opgegeven locatie.
-Ik koos voor een directory "Photo-Club-Hub" binnen een nieuwe directory "GitHub" binnen nieuwe/bestaande directory "Developer".
-Maar dit mag je zelf weten: bij documenten, losse drive, in peter/Developer. 
-Het is ongetwijfeld daarna aanpasbaar, maar het is het simpelst als je nu even goed nadenkt:
-"waar kan ik honderden MegaBytes voor onbepaalde tijdsduur stallen zodat ik terug vind?".
-Op de Mac is /Users/mijnAccount/Developer gebruikelijk. Dan krijg je een mooi geel ikoon.
+Voordat je Clone klikt: dit gaat __alle__ bestanden van dit project in hun huidige versie kopiëren naar de door jou gekozen directory op jouw computer.
+Ik koos voor een directory "Photo-Club-Hub" binnen een nieuwe directory "GitHubDesktopRepos" binnen een directory "Developer".
+Maar dit mag je helemaal zelf kiezen. 
+Die locatie is achteraf aanpasbaar, maar het is het eenvoudigst als je het meteen goed instelt. 
+De vraag hierbij is "waar kan ik honderden Megabytes voor onbepaalde tijdsduur stallen zodat ik terug vind?".
+Honderden Megabytes klinkt misschien wel groot, maar dat valt tegenwoordig mee.
+Op de Mac is /Users/mijnAccount/Developer gebruikelijk. Dan zie je een speciaal geel icoon verschijnen.
 
 > Tip: Op verjaardagsfeestjes kan je nerds imponeren met het feit dat jij "op GitHub" zit.
-> Het is tenslotte best iets om trots op te zijn. Heel Git is bepaald niet simpel.
+> Het is inderdaad iets om trots op te zijn. Heel `git` is bepaald niet simpel.
 > Maar wij gebruiken hier maar enkele procent van de totale mogelijkheden.
-> GitHub heeft 500 honderd miljoen repositories en meer dan honderd miljoen gereistreerde gebruikers. De meeste gebruikers zitten
-> in de software industrie. Maar het is voor meerdere soorten documentbeheer bruikbaar: [GitHub for poets 1.1 tutorial](https://www.youtube.com/watch?v=BCQHnlnPusY).
+> GitHub heeft 500 honderd miljoen Repositories en ruim honderd miljoen gereistreerde gebruikers. De meeste gebruikers zitten
+> in de software industrie. Maar het is voor bruikbaar voor ieder soort text-achtig document bruikbaar: [GitHub for poets 1.1 tutorial](https://www.youtube.com/watch?v=BCQHnlnPusY).
 
 ### 2.3 Wat zien we inmiddels?
 
-<img width="1072" height="772" alt="Screenshot 2025-12-14 at 00 09 29" src="https://github.com/user-attachments/assets/645261ec-7836-4931-80e5-86e60bb0e5a3" />
+<img width="1072" height="772" alt="Screenshot 2025-12-13 at 19 15 51" src="https://github.com/user-attachments/assets/8227d1e7-483e-44b7-aa4f-a36400f34e83" />
 
-Zo ziet GitHub Desktop eruit bij 1 locale clone van het GitHub repository vdhamer/Photo-Club-Hub:
+Zo ziet GitHub Desktop eruit bij 1 lokale Clone van het GitHub Repository vdhamer/Photo-Club-Hub:
 
-- "Current repository" zegt dat je nu bezig bent in het Photo-Club-Hub projekt
-- "Main branch" betekent dat je niet bezig bent met een tijdelijk subprojekt. Voor ons volstaat "Main" omdat we relatief kleine aanpassingen doen.
-- "Fetch origin" ververst jou locale copie van de repository vanuit GitHub. Lokale aanpassingen (op eigen computer) worden hierbij niet overschreven. Als het bestand waaraan je werkt op GitHub inmiddels aangepast is, dan 
-- Er is een knop om een teksteditor te openen. In mijn geval (Mac) is dat "Sublime Text". "Notepad++" wordt veel gebruikt voor dit soort bestanden onder Windows.
+- "Current Repository" zegt dat je nu bezig bent in het Photo-Club-Hub project
+- "Main branch" betekent dat je niet bezig bent met een tijdelijk subproject. Voor ons volstaat "Main" omdat we relatief kleine aanpassingen doen.
+- "Fetch origin" ververst jou lokale kopie van de Repository zodat het weer helemaal bij is.
+Lokale aanpassingen (op eigen computer) worden hierbij _niet_ overschreven.
+- Er is een knop om een teksteditor te openen. In mijn geval (Mac) is dat "Sublime Text". Onder Windows wordt "Notepad++" vaak gebruikt.
 - Er is een knop om de folder te bekijken (in Finder op Mac, of Explorer onder Windows).
-- Je kunt ook de repository bekijken op GitHub via jouw browser. Ik denk dat dat (behalve voor de "owner") alleen bekijken en niet wijzigen betreft.
+- Je kunt ook de Repository bekijken op GitHub via jouw browser. Hier kan je normaal geen wijzigingen aanbrenge.
+- Het gebied linksonder met "Commit to main" is waar je de locale wijzigingen aanbiedt aan GitHub. Dat heet Commit in het jargon. Je moet minstens enkele woorden toelichting geven met wat er veranderd is ("Summary (required").
 
-Ik zou "View file is your repository in Finder/Explorer" maar kiezen. 
-En dan op zoek gaan naar het bestand dat je aan wilt passen. En met een locale editor (Sublimte Text, Notepad++, etc) aanpassen.
+Ik zou "View file is your Repository in Finder/Explorer" maar kiezen. 
+En dan op zoek gaan naar het bestand dat je aan wilt passen. En met een lokale editor (Sublime Text, Notepad++, Notepad, TextEdit) aanpassen.
 
-Dat ziet op een Mac zo uit (Windows iets soortgelijks).
+Dat ziet op een Mac zo uit (onder Windows zie je iets vergelijkbaars):
 
 <img width="1032" height="576" alt="Screenshot 2025-12-14 at 00 27 12" src="https://github.com/user-attachments/assets/1bc3738a-b2ed-4c85-b7c4-0534a8e98744" />
 
 Dit is dus de standaard bestandsbeheer van MacOS of Windows. Met een onzichtbaar maar belangrijk verschil:
-GitHub Desktop regelt het op de hoogte houden van het centrale ("origin") repository in Github van jouw wijzigingen.
-GitHub/Git kan je ook lokaal vertellen (en tonen) wat er in welke versie gewijzigd is.
-Hiervoor houdt GitHub/Git automatisch een hele administratie bij in een verborgen directory.
+GitHub Desktop regelt dat het centrale ("origin") Repository in Github op de hoogte gehouden wordt van jouw aanpassingen.
+Hiervoor houdt GitHub/`git` automatisch een hele administratie bij in een verborgen directory.
 
+## 3. Bestand op de eigen computer aanpassen
 
