@@ -5,9 +5,10 @@ en wijzigingen in Photo Club Hub gegevensbestanden kan aanbieden zonder dat hier
 Het is met name een manier om zelfstandig ledenlijsten (zoals `mijnClub.level2.json`) of documentatiebestanden te wijzigen.
 Bestanden toevoegen kan ook, maar krijgt hier minder aandacht.
 
-In hoofdlijnen komt het erop neer dat men een gewijzigd bestand kan aanmaken, en deze aanbieden aan het project (__repository__ of __repo__ voor intimi).
+In hoofdlijnen komt het erop neer dat men een gewijzigd bestand kan aanmaken, en deze aanbieden aan het project ("__repository__" ofwel "__repo__").
 Tussen aanbieden en daarwerkelijk opnemen van het gewijzigd bestand zit nog een goedkeuringsstap.
-Dit voorkomt dat een willekeurig persoon zomaar een willekeurige wijziging in een willekeurig bestand kan aanbrengen.
+Dit voorkomt dat een willekeurig iemand zomaar een willekeurige wijziging in een willekeurig bestand kan aanbrengen.
+De goedkeuringsdetails worden hier moet beschrevem omdat iemand anders dat voor je doet.
 
 De hoofdstappen zijn dus:
 
