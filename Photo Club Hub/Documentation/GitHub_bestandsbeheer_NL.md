@@ -18,8 +18,10 @@ De goedkeuringsprocedure wordt hier moet beschreven omdat een Repository beheerd
 De hoofdstappen zijn dus:
 
 1. De gebruiker maakt (eenmalig) een account aan bij GitHub. Dat account is geldig voor _alle_ GitHub Repositories.
-2. De gebruiker maakt (eenmalig, via GitHub Desktop) een lokale kopie aan van de _complete_ [Photo Club Hub](https://github.com/vdhamer/Photo-Club-Hub) Repository.
-3. Een bestand (of bestanden) wordt lokaal (op de eigen computer) aangepast. Deze stap kan zonder Internet verbindingen. De stap mag zo lang duren als nodig (minuten … dagen).
+2. De gebruiker maakt (eenmalig, via GitHub Desktop) een lokale kopie aan van 
+de _complete_ [Photo Club Hub](https://github.com/vdhamer/Photo-Club-Hub) Repository.
+3. Een bestand (of bestanden) wordt lokaal (op de eigen computer) aangepast.
+Deze stap kan zonder Internet verbindingen. De stap mag zo lang duren als nodig (minuten … dagen).
 4. De gebruiker biedt de aangepaste versie aan (weer via GitHub Desktop) bij de centrale Repository voor goedkeuring door de Repo beheerder(s).
 
 Bij een eventuele volgende verandering herhaal je stappen 3 en 4.
@@ -52,10 +54,12 @@ Zonder het risico van misverstanden of kwijtraken van een voorgestelde aanpassin
 `git`(Hub) is als het ware de stoplichten die het dataverkeer tussen de verschillende partijen regelt: soms hinderlijk, maar het heeft zo zijn reden.
 
 - EENVOUDIGE GOEDKEURING<BR>
-In het ideale geval kan een ingediende wijziging met 1 druk op de knop goedgekeurd worden. Dit is essentieel als er continue meerdere wijzigingsvoorstellen per dag binnenstromen.
+In het ideale geval kan een ingediende wijziging met 1 druk op de knop goedgekeurd worden.
+Dit is essentieel als er continue meerdere wijzigingsvoorstellen per dag binnenstromen.
 
 - ARCHIEF<BR>
-GitHub is in feite het werkarchief voor alle bestanden van dit project: code, data, documentatie, "Issues". GitHub zelf is extreem secuur dat er niets zoekraakt.
+GitHub is in feite het werkarchief voor alle bestanden van dit project: code, data, documentatie, "Issues".
+GitHub zelf is extreem secuur dat er niets zoekraakt.
 
 - ONLINE<BR>
 De Photo Club Hub apps halen de huidige gegevens op vanuit GitHub.
@@ -65,7 +69,8 @@ Portfolio foto's ("Level 3") worden daarentegen op de clubwebsites gehouden:
 dit zijn grote aantallen grotere bestanden. Het zorgt er verder voor dat clubwebsites losstaan van GitHub.
 
 - URLs<BR>
-Alle bestanden hebben een webadres (URL). Dat is nuttig voor bijvoorbeeld verwijzingen zoals voor het downloaden van [de introductie Powerpoint](tinyurl.com/fchPPTnl).
+Alle bestanden hebben een webadres (URL). 
+Dat is nuttig voor bijvoorbeeld verwijzingen zoals voor het downloaden van [de introductie Powerpoint](tinyurl.com/fchPPTnl).
 
 - CENTRALE TO-DO LIJST<BR>
 De centrale lijst van uitbreidingsverzoeken of het aanmelden van bugs loopt via GitHub.
@@ -94,14 +99,18 @@ __Sign in__ is daarentegen als je later aanmeldt bij GitHub ("inloggen") onder h
 - Voor toekomstige "Sign in" heb jij de combinatie Email/Password straks nodig. Of Username/Password. Je moet alle 3 velden invullen en goed bewaren.
    - Email moet uniek zijn binnen GitHub.
 Voor de meeste mensen is deze stap geen probleem: die hebben bijvoorbeeld een primair en misschien een secondair Email account. 
-Je kunt eventueel een extra Email account hiervoor aanmaken bij Gmail (een "nep" iCloud account dat doorstuurt naar een primair account zal waarschijnlijk hier zoals gezegd problemen geven).
+Je kunt eventueel een apart Email account hiervoor aanmaken bij Gmail 
+(een "nep" iCloud account dat doorstuurt naar een primair account zal waarschijnlijk hier zoals gezegd problemen geven).
 Gebruik geen "hide my Email" Apple iCloud account: dit wordt geweigerd met een (verkeerde) foutmelding.
    - Wachtwoord moet uiteraard bewaard worden bij al je andere wachtwoorden.
    - Username moet ook uniek zijn en is een beetje misleidend:
    In de kleine lettertjes staat dat er bijvoorbeeld geen spaties in mogen.
-   Het is dus Username in de IT zin, en niet de gewone naam van de gebruiker. Je mag dus wel Jan-Pietersen kiezen maar niet Jan Pietersen. Maar stroopwafelfrisbee mag ook. Ik gebruik zelf "vdhamer" en "vdhamer-for-testing".
+   Het is dus Username in de IT zin, en niet de gewone naam van de gebruiker.
+   Je mag dus wel Jan-Pietersen kiezen maar niet Jan Pietersen. 
+   Maar stroopwafelfrisbee mag ook. Ik gebruik zelf "vdhamer" en "vdhamer-for-testing".
 - Country is een makkelijke vraag: gewoon Netherlands kiezen uit de lijst. Het antwoord is onbelangrijk volgens de kleine lettertjes.
-- Op "Create account" klikken resulteert in het standaard ritueel van code ontvangen per Email, en code terugmelden aan GitHub om te controleren dat het Email adres ok is.
+- Op "Create account" klikken resulteert in het standaard ritueel van code ontvangen per Email,
+en code terugmelden aan GitHub om te controleren dat het Email adres ok is.
 Je krijgt minstens 1 vraag (op basis van plaatjes of geluid) om te bewijzen dat jij een mens bent. Deze tests zijn best lastig bij GitHub.
 - GitHub heeft ook alternatieve inlogopties bedoeld voor softwareontwikkelaars (SSH, passkeys). Die zijn moderner, maar vereisen wat meer kennis.
 
@@ -184,10 +193,11 @@ Kies hier dus "Clone a Repository from the Internet...". <BR><BR> Waarna je (b.v
 <img width="518" height="313" alt="Screenshot 2025-12-13 at 19 14 34" src="https://github.com/user-attachments/assets/079eceae-efec-45da-84be-41ef36436365" />
 
 Voordat je Clone klikt: dit gaat __alle__ bestanden van dit project in hun huidige versie kopiëren naar de door jou gekozen directory op jouw computer.
-Ik koos voor een directory "Photo-Club-Hub" binnen een nieuwe directory "GitHubDesktopRepos" binnen nieuwe/bestaande directory "Developer".
+Ik koos voor een directory "Photo-Club-Hub" binnen een nieuwe directory "GitHubDesktopRepos" binnen een directory "Developer".
 Maar dit mag je helemaal zelf kiezen. 
-Het is ongetwijfeld achteraf met wat wat moeite aanpasbaar, maar het is het eenvoudigst als je nu even goed nadenkt:
-"waar kan ik honderden Megabytes voor onbepaalde tijdsduur stallen zodat ik terug vind?". Honderden Megabytes klinkt veel, maar is het niet meer.
+Die locatie is achteraf aanpasbaar, maar het is het eenvoudigst als je het meteen goed instelt. 
+De vraag hierbij is "waar kan ik honderden Megabytes voor onbepaalde tijdsduur stallen zodat ik terug vind?".
+Honderden Megabytes klinkt misschien wel groot, maar dat valt tegenwoordig mee.
 Op de Mac is /Users/mijnAccount/Developer gebruikelijk. Dan zie je een speciaal geel icoon verschijnen.
 
 > Tip: Op verjaardagsfeestjes kan je nerds imponeren met het feit dat jij "op GitHub" zit.
@@ -204,7 +214,8 @@ Zo ziet GitHub Desktop eruit bij 1 lokale Clone van het GitHub Repository vdhame
 
 - "Current Repository" zegt dat je nu bezig bent in het Photo-Club-Hub project
 - "Main branch" betekent dat je niet bezig bent met een tijdelijk subproject. Voor ons volstaat "Main" omdat we relatief kleine aanpassingen doen.
-- "Fetch origin" ververst jou lokale kopie van de Repository zodat het weer helemaal bij is. Lokale aanpassingen (op eigen computer) worden hierbij _niet_ overschreven.
+- "Fetch origin" ververst jou lokale kopie van de Repository zodat het weer helemaal bij is.
+Lokale aanpassingen (op eigen computer) worden hierbij _niet_ overschreven.
 - Er is een knop om een teksteditor te openen. In mijn geval (Mac) is dat "Sublime Text". Onder Windows wordt "Notepad++" vaak gebruikt.
 - Er is een knop om de folder te bekijken (in Finder op Mac, of Explorer onder Windows).
 - Je kunt ook de Repository bekijken op GitHub via jouw browser. Hier kan je normaal geen wijzigingen aanbrenge.
