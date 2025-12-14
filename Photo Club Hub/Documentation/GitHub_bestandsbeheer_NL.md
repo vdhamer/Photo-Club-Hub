@@ -216,5 +216,5 @@ Dit is dus de standaard bestandsbeheer van MacOS of Windows. Met een onzichtbaar
 GitHub Desktop regelt dat het centrale ("origin") Repository in Github op de hoogte gehouden wordt van jouw aanpassingen.
 Hiervoor houdt GitHub/`git` automatisch een hele administratie bij in een verborgen directory.
 
-## 3. Bestand/bestanden wordt op de eigen computer aangepast.
+## 3. Bestand op de eigen computer aanpassen
 
