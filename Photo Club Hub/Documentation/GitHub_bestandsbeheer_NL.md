@@ -55,10 +55,12 @@ Git(Hub) is als het ware de stoplichten die het dataverkeer tussen de verschille
 In het ideale geval kan een ingediende wijziging met 1 druk op de knop goedgekeurd worden. Dit is essentieel als er continue meerdere wijzigingsvoorstellen per dag binnenstromen.
 
 - CENTRALE TO-DO LIJST<BR>
-De centrale lijst van uitbreidingsverzoeken of het aanmelden van bugs loopt via GitHub. Jij kunt zo zelf een wens of klacht ("issue") toevoegen. En bestaande wensen van jezelf en anderen zien en becommentariëren.
+De centrale lijst van uitbreidingsverzoeken of het aanmelden van bugs loopt via GitHub.
+Jij kunt zo zelf een wens of klacht ("Issue") toevoegen.
+En kijken of de klach al bekend is. En commentaar en ideeen leveren bij Issues.
 
 - ARCHIEF<BR>
-GitHub is in feite het werkarchief voor alle bestanden van dit projekt: code, data, documentatie, "issues". GitHub zelf is extreem secuur dat er niets zoek raakt.
+GitHub is in feite het werkarchief voor alle bestanden van dit projekt: code, data, documentatie, "Issues". GitHub zelf is extreem secuur dat er niets zoek raakt.
 
 - ONLINE<BR>
 De Photo Club Hub apps halen de huidige gegevens op vanuit GitHub. Dit zijn vooral lijsten met clubs ("Level 1") en lijsten met clubleden ("Level 2"). Hierdoor kan de app de huidige meest recente gegevens ophalen. Portfolio foto's worden daarentegen op de clubwebsites gehouden: dit zijn grote bestanden en zorgt dat de club websites los van GitHub draaien.
