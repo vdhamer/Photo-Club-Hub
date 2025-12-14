@@ -15,7 +15,7 @@ DATA MAINTENANCE
 
 CODE MAINTENANCE
 * Synchronized code with Photo Club Hub HTML (minor changes).
-* Tested with Xcode 26.2 (17C52) and iOS 26.2 (23C55) and SwiftLint 0.62.2_1.
+* Tested with Xcode 26.2 (17C52), MacOS 26.2 (25C56) and iOS 26.2 (23C55) and SwiftLint 0.62.2_1.
 * Improved handling of Level2URL field.
 * Split organization.swift into 4 source files.
 * Fixed bug: OrganizationListView1718 was used instead of OrganizationListView2626 for iOS 26.x

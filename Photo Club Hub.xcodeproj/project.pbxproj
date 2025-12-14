@@ -646,8 +646,8 @@
 		D0831A48277F736C0049AB84 /* Documentation */ = {
 			isa = PBXGroup;
 			children = (
-				37E818B32EEDE61900BF5518 /* GitHub_bestandsbeheer_NL.md */,
 				D0831A4B277F736C0049AB84 /* ReleaseNotes.md */,
+				37E818B32EEDE61900BF5518 /* GitHub_bestandsbeheer_NL.md */,
 				37D1EA502EDDDDD3008A5FE1 /* Level1_aanmaken_NL.md */,
 				3764D5E32EDDB0D9005A2539 /* FotoclubHubIntro_NL_20251129.pptx */,
 				D04D7B2B2D2B3B210048454B /* Jaarverslag 2024 Website.docx */,
