@@ -118,7 +118,7 @@ Het nut van GitHub Desktop is:
 
 <details><summary>Details (klik om uit te klappen)</summary></p>
 
-- je kunt je lokale wijziging bijhouden
+- je kunt je lokale wijzigingen desgewenst bijhouden
 - je ziet het verschil (op regelbasis) tussen die versie die je aanbied aan GitHub en de vorige versie op GitHub
 - tijdens het lokaal werken heb je geen last van wijzigingen gemaakt door anderen
 - gelijktijdige wijzigingen van een tekstbestand door iemand worden automatisch gecombineerd met jouw wijzigingen
