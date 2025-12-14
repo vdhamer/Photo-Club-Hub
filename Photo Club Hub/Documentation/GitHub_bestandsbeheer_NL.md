@@ -206,7 +206,7 @@ Zo ziet GitHub Desktop eruit bij 1 lokale Clone van het GitHub Repository vdhame
 - Je kunt ook de Repository bekijken op GitHub via jouw browser. Hier kan je normaal geen wijzigingen aanbrenge.
 
 Ik zou "View file is your Repository in Finder/Explorer" maar kiezen. 
-En dan op zoek gaan naar het bestand dat je aan wilt passen. En met een lokale editor (Sublime Text, Notepad++, Noteapd, TextEdit) aanpassen.
+En dan op zoek gaan naar het bestand dat je aan wilt passen. En met een lokale editor (Sublime Text, Notepad++, Notepad, TextEdit) aanpassen.
 
 Dat ziet op een Mac zo uit (Windows iets soortgelijks).
 
