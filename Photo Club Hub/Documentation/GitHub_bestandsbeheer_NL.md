@@ -14,7 +14,7 @@ De goedkeuringsdetails worden hier moet beschrevem omdat iemand anders dat voor 
 De hoofdstappen zijn dus:
 
 1. Gebruiker maakt (eenmalig) een account aan bij GitHub. Dat account is geldig voor _alle_ GitHub Repositories.
-2. Gebruiker maakt (eenmalig) een locale kopie aan van de gewenste Repository ([Photo Club Hub](https://github.com/vdhamer/Photo-Club-Hub))
+2. Gebruiker maakt (eenmalig) een locale kopie aan van de relevante Repository ([Photo Club Hub](https://github.com/vdhamer/Photo-Club-Hub)).
 3. Een bestand (eventueel meerdere bestanden) wordt locaal bijgewerkt. Deze stap vereist geen contact met GitHub.com (en vereist dus geen Internet).
 3. Gebruiker biedt de aangepaste versie aan bij GitHub voor goedkeuring en opname in het Repository. 
 4. Ee goedkeuring doet iemand anders, en wordt hier niet beschreven. Hiervoor moet je een soort beheerder zijn van het Repository.
