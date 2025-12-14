@@ -303,7 +303,13 @@ Klik op "Push [to] Origin". Dus zien we nu dit:
 
 <img width="1072" height="772" alt="Screenshot 2025-12-14 at 23 23 57" src="https://github.com/user-attachments/assets/1491ad77-b429-47ff-8907-e00b7f2bea7e" />
 
-Hiermee zijn we eigenlijk klaar en hebben het volgende bereikt:
+In GitHub Desktop moeten we nog de beheerders van het Repository melden dat er een pakje voor hun deur ligt om te bekijken en goed te keuren.
+Dat heet een "Pull Request" omdat de beheerders het initiatief moeten nemen om de wijziging aan bood te halen ("Pull").
+En dit is een verzoek ("Request") om dat bij gelegenheid te doen.
+
+Dit gaat via het menu `Branch` > `Pull Request`.
+
+Hiermee zijn we eigenlijk (eindelijk) klaar en hebben het volgende bereikt:
 
 1) jouw wijziging aan `whiteboard.txt` ligt nu ter goedkeuring bij GitHub.
 Dit was "Push". Die heeft jouw Commit (evt meerdere) via het Internet naar GitHub ("Origin") overgebracht. Push vaak gebruiken kan geen kwaad.
