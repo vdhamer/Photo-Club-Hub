@@ -194,7 +194,7 @@ Op de Mac is /Users/mijnAccount/Developer gebruikelijk. Dan zie je een speciaal 
 
 ### 2.3 Wat zien we inmiddels?
 
-<img width="1072" height="772" alt="Screenshot 2025-12-14 at 00 09 29" src="https://github.com/user-attachments/assets/645261ec-7836-4931-80e5-86e60bb0e5a3" />
+<img width="1072" height="772" alt="Screenshot 2025-12-13 at 19 15 51" src="https://github.com/user-attachments/assets/8227d1e7-483e-44b7-aa4f-a36400f34e83" />
 
 Zo ziet GitHub Desktop eruit bij 1 lokale Clone van het GitHub Repository vdhamer/Photo-Club-Hub:
 
