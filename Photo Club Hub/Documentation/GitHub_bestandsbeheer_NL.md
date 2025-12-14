@@ -145,7 +145,7 @@ En GitHub (al jaren deel van Microsoft) is fanatieker dan de meesten op veilighe
 
 Vervolgens krijg je de keus tussen GitHub.com (👈 deze kiezen) of GitHub Enterprise.
 
-Vervolgens wil het weten wie onder welke naam/wachtwoord jij bekend bent op GitHub.
+Vervolgens wil het weten onder welke naam/wachtwoord jij bekend bent in GitHub.
 Dus moet je de gegevens gebruiken die je hierboven in het "Sign up for GitHub" gekozen hebt.
 Je browser of wachtwoord app kan hierbij een handje helpen. Maar dit is vergelijkbaar met
 allerlei andere online diensten.
