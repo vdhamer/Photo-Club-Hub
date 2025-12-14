@@ -44,21 +44,28 @@ Voor eventuele volgende veranderingen hoef je overigens niet te wachten totdat e
 Voor ons gebruik hier, zijn de voordelen van GitHub:
 
 - VERSIEBEHEER<BR>
-Alle versies worden bewaard. Je kunt zien wie wat wanneer gewijzigd heeft.<BR>
+Alle versies worden bewaard. Je kunt zien wie wat wanneer gewijzigd heeft.
+
 - SAMENWERKING<BR>
 Meerdere mensen kunnen wijzigingen aanbrengen, en versies van elkaar overnemen.
 Zonder het risiko van misverstanden of kwijtraken van een voorgestelde aanpassingen.
-Git(Hub) is als het ware de stoplichten die het dataverkeer tussen de verschillende partijen regelt: soms hinderlijk, maar het heeft zo zijn reden.<BR>
+Git(Hub) is als het ware de stoplichten die het dataverkeer tussen de verschillende partijen regelt: soms hinderlijk, maar het heeft zo zijn reden.
+
 - EENVOUDIGE GOEDKEURING<BR>
-In het ideale geval kan een ingediende wijziging met 1 druk op de knop goedgekeurd worden. Dit is essentieel als er b.v. veel wijzigingsvoorstellen per dag binnenkomen.<BR>
+In het ideale geval kan een ingediende wijziging met 1 druk op de knop goedgekeurd worden. Dit is essentieel als er b.v. veel wijzigingsvoorstellen per dag binnenkomen.
+
 - CENTRALE TO-DO LIJST<BR>
-De centrale lijst van uitbreidingsverzoeken of het aanmelden van bugs loopt via GitHub. Jij kunt zo zelf een wens of klacht ("issue") toevoegen. En bestaande wensen van jezelf en anderen zien en becommentariëren.<BR>
+De centrale lijst van uitbreidingsverzoeken of het aanmelden van bugs loopt via GitHub. Jij kunt zo zelf een wens of klacht ("issue") toevoegen. En bestaande wensen van jezelf en anderen zien en becommentariëren.
+
 - ARCHIEF<BR>
-GitHub is in feite het werkarchief voor alle bestanden van dit projekt: code, data, documentatie, "issues". GitHub zelf is extreem secuur dat er niets zoek raakt.<BR>
+GitHub is in feite het werkarchief voor alle bestanden van dit projekt: code, data, documentatie, "issues". GitHub zelf is extreem secuur dat er niets zoek raakt.
+
 - ONLINE<BR>
-De Photo Club Hub apps halen de huidige gegevens op vanuit GitHub. Dit zijn vooral lijsten met clubs ("Level 1") en lijsten met clubleden ("Level 2"). Hierdoor kan de app de huidige meest recente gegevens ophalen. Portfolio foto's worden daarentegen op de clubwebsites gehouden: dit zijn grote bestanden en zorgt dat de club websites los van GitHub draaien.<BR>
+De Photo Club Hub apps halen de huidige gegevens op vanuit GitHub. Dit zijn vooral lijsten met clubs ("Level 1") en lijsten met clubleden ("Level 2"). Hierdoor kan de app de huidige meest recente gegevens ophalen. Portfolio foto's worden daarentegen op de clubwebsites gehouden: dit zijn grote bestanden en zorgt dat de club websites los van GitHub draaien.
+
 - URLs<BR>
-Alle bestanden hebben een webadres (URL). Dat is nuttig voor bijvoorbeeld verwijzingen zoals voor het downloaden van [de introductie Powerpoint](tinyurl.com/fchPPTnl).<BR>
+Alle bestanden hebben een webadres (URL). Dat is nuttig voor bijvoorbeeld verwijzingen zoals voor het downloaden van [de introductie Powerpoint](tinyurl.com/fchPPTnl).
+
 - READ-ONLY<BR>
 Wie alleen wil kijken, maar niets wil wijzigen, heeft geen wachtwoord of account bij GitHub nodig.
 Bijvoorbeeld om even te kijken naar een databestand of naar documentatie. Dus read-only gebruikers hebben dit document niet nodig.
