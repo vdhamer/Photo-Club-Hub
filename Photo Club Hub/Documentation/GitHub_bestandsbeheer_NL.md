@@ -44,7 +44,7 @@ Voor eventuele volgende veranderingen hoef je overigens niet te wachten totdat e
 Voor ons gebruik hier, zijn de voordelen van GitHub:
 
 - VERSIEBEHEER<BR>
-Alle versies worden bewaard. Je kunt zien wie wat wanneer gewijzigd heeft.
+Alle aangeboden versies worden bewaard. Je kunt zien wie wat wanneer gewijzigd heeft.
 
 - SAMENWERKING<BR>
 Meerdere mensen kunnen wijzigingen aanbrengen, en versies van elkaar overnemen.
@@ -52,7 +52,7 @@ Zonder het risiko van misverstanden of kwijtraken van een voorgestelde aanpassin
 Git(Hub) is als het ware de stoplichten die het dataverkeer tussen de verschillende partijen regelt: soms hinderlijk, maar het heeft zo zijn reden.
 
 - EENVOUDIGE GOEDKEURING<BR>
-In het ideale geval kan een ingediende wijziging met 1 druk op de knop goedgekeurd worden. Dit is essentieel als er b.v. veel wijzigingsvoorstellen per dag binnenkomen.
+In het ideale geval kan een ingediende wijziging met 1 druk op de knop goedgekeurd worden. Dit is essentieel als er continue meerdere wijzigingsvoorstellen per dag binnenstromen.
 
 - CENTRALE TO-DO LIJST<BR>
 De centrale lijst van uitbreidingsverzoeken of het aanmelden van bugs loopt via GitHub. Jij kunt zo zelf een wens of klacht ("issue") toevoegen. En bestaande wensen van jezelf en anderen zien en becommentariëren.
