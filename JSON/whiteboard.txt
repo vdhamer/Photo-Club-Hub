@@ -1,0 +1,14 @@
+# This file is used for testing git-related stuff.
+# It is in the JSON directory, but is just a text file.
+# Its content can be changed at any time by anybody.
+
+To inspire you, here is a list of countries. Add, remove, change, whatever.
+
+- Japan: camera capital of the world
+
+- Canada: needs stirring - they all live near the Southern edge
+- USA: ask again in a few years
+
+- Iceland: sounds colder than Greenland, but it isn't
+- Netherlands: don't they call it Holland?
+- Greece: wasn't that a movie?
