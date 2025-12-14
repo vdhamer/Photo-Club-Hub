@@ -234,3 +234,18 @@ Hiervoor houdt GitHub/`git` automatisch een hele administratie bij in een verbor
 
 ## 3. Bestand op de eigen computer aanpassen
 
+In de directory `User/Developer/GitHubDesktopRepos/Photo-Club-Hub` (of wat je ook gekozen mocht hebben) vind je
+een JSON directory met daarin een bestand genaamd `whiteboard.txt`. Dit kan je naar hartelust aanpassen.
+Het bestand dient namelijk alleen dit doel. De software doet er niets mee.
+
+Dus...
+- ga naar `User/Developer/GitHubDesktopRepos/Photo-Club-Hub/JSON`
+- open het bestand in een editor (Sublime Text, Notepad++, Notepad, TextEdit)
+- bekijk even de bestaande inhoud. Het had oorspronkelijk 10 niet-blanko regels, maar dat kan veranderd zijn.
+- maak een wijziging (doet er niet toe wat je wijzigd, de inhoud is wel openbaar)
+- sla het bestand lokaal op (vaak Ctrl-S of File|Save in het menu)
+
+## 4. Aangepast bestand aanbieden aan repository in GitHub
+
+Nu hebben we een lokale clone van het Photo-Club-Hub repository dat (voor whiteboard.txt) voorloopt ten opzichte van het bestand op GitHub.
+We doen nu alsof wij die wijziging willen aanbieden
