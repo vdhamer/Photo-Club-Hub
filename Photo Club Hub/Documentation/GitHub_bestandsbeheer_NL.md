@@ -1,7 +1,7 @@
 ## Bestandsbeheer bij GitHub
 
-Dit stappenplan beschrijft hoe men zich kan aanmelden bij www.github.com
-en wijzigingen kan aanbieden zonder dat iemand anders als tussenpersoon moet dienen. 
+Deze procedure beschrijft hoe men zich kan aanmelden bij www.github.com
+en wijzigingen in Photo Club Hub gegevensbestanden kan aanbieden zonder dat hiervoor een tussenpersoon nodig is. 
 Het is met name een manier om zelfstandig databestanden (b.v. `mijnClub.level2.json`) of instructies zoals dit document te wijzigen of toe te voegen.
 
 In hoofdlijnen komt het erop neer dat men een gewijzigd bestand kan aanmaken, en deze aanbieden aan het project (__repository__ of __repo__ voor intimi).
