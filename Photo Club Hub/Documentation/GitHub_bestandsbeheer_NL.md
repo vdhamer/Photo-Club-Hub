@@ -143,7 +143,7 @@ Bij het openen van GitHub Desktop krijg je (in ieder geval op de Mac) de vraag o
 Gerust "Open" kiezen: er zijn miljoenen gebruikers je voorgegaan.
 En GitHub (al jaren deel van Microsoft) is fanatieker dan de meesten op veiligheid.
 
-Vervolgens de keus tussen GitHub.com (👈 deze kiezen) of GitHub Enterprise.
+Vervolgens krijg je de keus tussen GitHub.com (👈 deze kiezen) of GitHub Enterprise.
 
 Vervolgens wil het weten wie onder welke naam/wachtwoord jij bekend bent op GitHub.
 Dus moet je de gegevens gebruiken die je hierboven in het "Sign up for GitHub" gekozen hebt.
