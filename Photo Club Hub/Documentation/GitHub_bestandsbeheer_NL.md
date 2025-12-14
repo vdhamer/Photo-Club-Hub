@@ -200,13 +200,13 @@ Zo ziet GitHub Desktop eruit bij 1 lokale Clone van het GitHub Repository vdhame
 
 - "Current Repository" zegt dat je nu bezig bent in het Photo-Club-Hub project
 - "Main branch" betekent dat je niet bezig bent met een tijdelijk subproject. Voor ons volstaat "Main" omdat we relatief kleine aanpassingen doen.
-- "Fetch origin" ververst jou lokale kopie van de Repository vanuit GitHub. Lokale aanpassingen (op eigen computer) worden hierbij niet overschreven. Als het bestand waaraan je werkt op GitHub inmiddels aangepast is, dan 
-- Er is een knop om een teksteditor te openen. In mijn geval (Mac) is dat "Sublime Text". "Notepad++" wordt veel gebruikt voor dit soort bestanden onder Windows.
+- "Fetch origin" ververst jou lokale kopie van de Repository zodat het weer helemaal bij is. Lokale aanpassingen (op eigen computer) worden hierbij _niet_ overschreven.
+- Er is een knop om een teksteditor te openen. In mijn geval (Mac) is dat "Sublime Text". Onder Windows wordt "Notepad++" vaak gebruikt.
 - Er is een knop om de folder te bekijken (in Finder op Mac, of Explorer onder Windows).
-- Je kunt ook de Repository bekijken op GitHub via jouw browser. Ik denk dat dat (behalve voor de "owner") alleen bekijken en niet wijzigen betreft.
+- Je kunt ook de Repository bekijken op GitHub via jouw browser. Hier kan je normaal geen wijzigingen aanbrenge.
 
 Ik zou "View file is your Repository in Finder/Explorer" maar kiezen. 
-En dan op zoek gaan naar het bestand dat je aan wilt passen. En met een lokale editor (Sublimte Text, Notepad++, etc) aanpassen.
+En dan op zoek gaan naar het bestand dat je aan wilt passen. En met een lokale editor (Sublime Text, Notepad++, Noteapd, TextEdit) aanpassen.
 
 Dat ziet op een Mac zo uit (Windows iets soortgelijks).
 
