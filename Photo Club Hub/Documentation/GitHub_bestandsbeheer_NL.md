@@ -248,4 +248,10 @@ Dus...
 ## 4. Aangepast bestand aanbieden aan repository in GitHub
 
 Nu hebben we een lokale clone van het Photo-Club-Hub repository dat (voor whiteboard.txt) voorloopt ten opzichte van het bestand op GitHub.
-We doen nu alsof wij die wijziging willen aanbieden
+We doen nu alsof wij die wijziging willen aanbieden.
+
+In GitHub Desktop zien we (meteen na openen) het volgende:
+
+<img width="1028" height="728" alt="Screenshot 2025-12-14 at 22 27 44" src="https://github.com/user-attachments/assets/9f68f790-3bd7-4947-ba30-b3a279a28a53" />
+
+
