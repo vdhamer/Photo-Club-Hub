@@ -2,7 +2,7 @@
 # It is in the JSON directory, but is just a text file.
 # Its content can be changed at any time by anybody.
 
-To inspire you, here is a list of countries. Add, remove, change, whatever.
+To inspire you, here is a list of countries. Add, remove, change, translate, whatever.
 
 - Japan: camera capital of the world
 
