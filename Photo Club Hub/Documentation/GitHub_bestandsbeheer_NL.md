@@ -10,8 +10,8 @@ Maar dat krijgt hier geen aandacht omdat dit ongeveer op vrijwel dezelfde manier
 
 In hoofdlijnen komt het erop neer dat men een gewijzigd bestand kan aanmaken, en deze aanbieden aan het project ("__Repository__" ofwel "__Repo__").
 Tussen aanbieden en daarwerkelijk in gebruik nemen zit nog een __goedkeuringsstap__.
-Dit voorkomt dat een willekeurig iemand zomaar een willekeurige wijziging in een willekeurig bestand kan aanbrengen.
-De goedkeuringsdetails worden hier moet beschrevem omdat iemand anders dat voor je doet.
+De goedkeuringsstap voorkomt dat men zomaar een willekeurige wijziging in een willekeurig bestand kan aanbrengen.
+De goedkeuringsprocedure wordt hier moet beschreven omdat een Repository beheerder dat moet doen.
 
 ### Alvast een samenvatting
 
