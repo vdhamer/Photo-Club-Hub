@@ -11,6 +11,8 @@ Tussen aanbieden en daarwerkelijk in gebruik nemen of publiceren van het gewijzi
 Dit voorkomt dat een willekeurig iemand zomaar een willekeurige wijziging in een willekeurig bestand kan aanbrengen.
 De goedkeuringsdetails worden hier moet beschrevem omdat iemand anders dat voor je doet.
 
+### Korte samenvatting
+
 De hoofdstappen zijn dus:
 
 1. Gebruiker maakt (eenmalig) een account aan bij GitHub. Dat account is geldig voor _alle_ GitHub Repositories.
