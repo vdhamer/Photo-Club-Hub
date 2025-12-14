@@ -5,18 +5,18 @@ en wijzigingen in Photo Club Hub gegevensbestanden kan aanbieden zonder dat hier
 Het is met name een manier om zelfstandig ledenlijsten (zoals `mijnClub.level2.json`) of documentatiebestanden te wijzigen.
 Bestanden toevoegen kan ook, maar krijgt hier minder aandacht.
 
-In hoofdlijnen komt het erop neer dat men een gewijzigd bestand kan aanmaken, en deze aanbieden aan het project ("__repository__" ofwel "__repo__").
+In hoofdlijnen komt het erop neer dat men een gewijzigd bestand kan aanmaken, en deze aanbieden aan het project ("__Repository__" ofwel "__Repo__").
 Tussen aanbieden en daarwerkelijk opnemen van het gewijzigd bestand zit nog een goedkeuringsstap.
 Dit voorkomt dat een willekeurig iemand zomaar een willekeurige wijziging in een willekeurig bestand kan aanbrengen.
 De goedkeuringsdetails worden hier moet beschrevem omdat iemand anders dat voor je doet.
 
 De hoofdstappen zijn dus:
 
-1. Gebruiker maakt (eenmalig) een account aan bij GitHub. Dat account geldt voor _alle_ GitHub repositories.
-2. Gebruiker maakt (eenmalig) een locale kopie aan van de gewenste repository ([Photo Club Hub](https://github.com/vdhamer/Photo-Club-Hub))
+1. Gebruiker maakt (eenmalig) een account aan bij GitHub. Dat account geldt voor _alle_ GitHub Repositories.
+2. Gebruiker maakt (eenmalig) een locale kopie aan van de gewenste Repository ([Photo Club Hub](https://github.com/vdhamer/Photo-Club-Hub))
 3. Een bestand (eventueel meerdere bestanden) wordt locaal bijgewerkt. Deze stap vereist geen contact met GitHub.com (en vereist dus geen Internet).
-3. Gebruiker biedt versie aan bij GitHub voor goedkeuring en opname in het repository. 
-4. Ee goedkeuring doet iemand anders, en wordt hier niet beschreven. Hiervoor moet je een soort beheerder zijn van het repository.
+3. Gebruiker biedt de aangepaste versie aan bij GitHub voor goedkeuring en opname in het Repository. 
+4. Ee goedkeuring doet iemand anders, en wordt hier niet beschreven. Hiervoor moet je een soort beheerder zijn van het Repository.
 
 Bij een volgende verandering ga je verder met stap 3. Dus een bstand kan desgewenst in kleine stapjes aangepast worden.
 
@@ -151,9 +151,9 @@ Het wachtwoord is al bekend van stap 2.1. Maar het wil eigenlijk nog de gekopen 
 
 Ook hier de invoer kloppen met de gegevens die je hierboven in het "Sign up for GitHub" gekozen hebt.
 
-GitHub Desktop weet (via GitHub) dat jij geen eigen "repository" (project) heb.
+GitHub Desktop weet (via GitHub) dat jij geen eigen "Repository" (project) heb.
 Dus biedt het aan een te maken (mag van mij, maar misschien iets om later mee te spelen: ).
-En biedt het aan om mee te helpen aan een bestaande repository. Dat is de bedoeling: vdhamer/Photo-Club-Hub.
+En biedt het aan om mee te helpen aan een bestaande Repository. Dat is de bedoeling: vdhamer/Photo-Club-Hub.
 
 <img width="1072" height="772" alt="Screenshot 2025-12-13 at 23 39 00" src="https://github.com/user-attachments/assets/bf910eab-42d5-4b8a-9202-4257cf1e7d8f" />
 
@@ -171,23 +171,23 @@ Op de Mac is /Users/mijnAccount/Developer gebruikelijk. Dan krijg je een mooi ge
 > Tip: Op verjaardagsfeestjes kan je nerds imponeren met het feit dat jij "op GitHub" zit.
 > Het is tenslotte best iets om trots op te zijn. Heel Git is bepaald niet simpel.
 > Maar wij gebruiken hier maar enkele procent van de totale mogelijkheden.
-> GitHub heeft 500 honderd miljoen repositories en meer dan honderd miljoen gereistreerde gebruikers. De meeste gebruikers zitten
+> GitHub heeft 500 honderd miljoen Repositories en meer dan honderd miljoen gereistreerde gebruikers. De meeste gebruikers zitten
 > in de software industrie. Maar het is voor meerdere soorten documentbeheer bruikbaar: [GitHub for poets 1.1 tutorial](https://www.youtube.com/watch?v=BCQHnlnPusY).
 
 ### 2.3 Wat zien we inmiddels?
 
 <img width="1072" height="772" alt="Screenshot 2025-12-14 at 00 09 29" src="https://github.com/user-attachments/assets/645261ec-7836-4931-80e5-86e60bb0e5a3" />
 
-Zo ziet GitHub Desktop eruit bij 1 locale clone van het GitHub repository vdhamer/Photo-Club-Hub:
+Zo ziet GitHub Desktop eruit bij 1 locale clone van het GitHub Repository vdhamer/Photo-Club-Hub:
 
-- "Current repository" zegt dat je nu bezig bent in het Photo-Club-Hub projekt
+- "Current Repository" zegt dat je nu bezig bent in het Photo-Club-Hub projekt
 - "Main branch" betekent dat je niet bezig bent met een tijdelijk subprojekt. Voor ons volstaat "Main" omdat we relatief kleine aanpassingen doen.
-- "Fetch origin" ververst jou locale copie van de repository vanuit GitHub. Lokale aanpassingen (op eigen computer) worden hierbij niet overschreven. Als het bestand waaraan je werkt op GitHub inmiddels aangepast is, dan 
+- "Fetch origin" ververst jou locale copie van de Repository vanuit GitHub. Lokale aanpassingen (op eigen computer) worden hierbij niet overschreven. Als het bestand waaraan je werkt op GitHub inmiddels aangepast is, dan 
 - Er is een knop om een teksteditor te openen. In mijn geval (Mac) is dat "Sublime Text". "Notepad++" wordt veel gebruikt voor dit soort bestanden onder Windows.
 - Er is een knop om de folder te bekijken (in Finder op Mac, of Explorer onder Windows).
-- Je kunt ook de repository bekijken op GitHub via jouw browser. Ik denk dat dat (behalve voor de "owner") alleen bekijken en niet wijzigen betreft.
+- Je kunt ook de Repository bekijken op GitHub via jouw browser. Ik denk dat dat (behalve voor de "owner") alleen bekijken en niet wijzigen betreft.
 
-Ik zou "View file is your repository in Finder/Explorer" maar kiezen. 
+Ik zou "View file is your Repository in Finder/Explorer" maar kiezen. 
 En dan op zoek gaan naar het bestand dat je aan wilt passen. En met een locale editor (Sublimte Text, Notepad++, etc) aanpassen.
 
 Dat ziet op een Mac zo uit (Windows iets soortgelijks).
@@ -195,7 +195,7 @@ Dat ziet op een Mac zo uit (Windows iets soortgelijks).
 <img width="1032" height="576" alt="Screenshot 2025-12-14 at 00 27 12" src="https://github.com/user-attachments/assets/1bc3738a-b2ed-4c85-b7c4-0534a8e98744" />
 
 Dit is dus de standaard bestandsbeheer van MacOS of Windows. Met een onzichtbaar maar belangrijk verschil:
-GitHub Desktop regelt het op de hoogte houden van het centrale ("origin") repository in Github van jouw wijzigingen.
+GitHub Desktop regelt het op de hoogte houden van het centrale ("origin") Repository in Github van jouw wijzigingen.
 GitHub/Git kan je ook lokaal vertellen (en tonen) wat er in welke versie gewijzigd is.
 Hiervoor houdt GitHub/Git automatisch een hele administratie bij in een verborgen directory.
 
