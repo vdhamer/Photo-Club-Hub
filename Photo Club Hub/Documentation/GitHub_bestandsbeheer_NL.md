@@ -208,6 +208,7 @@ Zo ziet GitHub Desktop eruit bij 1 lokale Clone van het GitHub Repository vdhame
 - Er is een knop om een teksteditor te openen. In mijn geval (Mac) is dat "Sublime Text". Onder Windows wordt "Notepad++" vaak gebruikt.
 - Er is een knop om de folder te bekijken (in Finder op Mac, of Explorer onder Windows).
 - Je kunt ook de Repository bekijken op GitHub via jouw browser. Hier kan je normaal geen wijzigingen aanbrenge.
+- Het gebied linksonder met "Commit to main" is waar je de locale wijzigingen aanbiedt aan GitHub. Dat heet Commit in het jargon. Je moet minstens enkele woorden toelichting geven met wat er veranderd is ("Summary (required").
 
 Ik zou "View file is your Repository in Finder/Explorer" maar kiezen. 
 En dan op zoek gaan naar het bestand dat je aan wilt passen. En met een lokale editor (Sublime Text, Notepad++, Notepad, TextEdit) aanpassen.
