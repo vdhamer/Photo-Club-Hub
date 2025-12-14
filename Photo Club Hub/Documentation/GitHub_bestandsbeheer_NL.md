@@ -28,15 +28,14 @@ Voor eventuele volgende veranderingen hoef je overigens niet te wachten totdat e
 
    > Tip: GitHub (of het achterliggende Git) is een zogenaamde versiebeheersystemen (_version control system_).
    > Dat houdt in dat het alle aangeboden bestandswijzigingen nauwlettend bijhoudt. 
-   > Git kan ook teams aan die soms dezelfde bestanden gelijktijdig aanpassen. Git is erg robuust:
-   > In de praktijk betekent dit dat niemand een wijziging van een bestand ooit kwijt kan raken nadat het aangeboden wordt.
+   > Git kan ook teams aan waarbij soms 2 personen vrijwel gelijktijd hetzelfde bestand aanpassen.
+   > In de praktijk betekent dit dat Git zorgt dat niemand een wijziging in een aangeboden bestand kwijt raakt.
 
-   > Tip: GitHub is een vrij zwaar systeem. De hele software industrie is afhankelijk van GitHub en verwante systemen.
-   > Mini-kursusen op b.v. YouTube over GitHub en Git zijn vaak gericht op softwareontwikkelaars.
+   > Tip: GitHub is een vrij complex systeem. De hele software industrie is afhankelijk van GitHub en verwante systemen.
+   > Mini-kursusen op YouTube over GitHub en Git zijn vaak bedoeld voor softwareontwikkelaars.
    > Ze beschrijven dan meer toeters en bellen van Git(Hub) dan wat wij hier nodig hebben.
-   > En de meeste softwareontwikkelaars gebruiken vaak maar een fractie van alle mogelijkheden. 
-   > Pas dus op voor afleidingen: concentreer dus alleen op de stappen en begrippen die je hier nodig hebt.
-   > Zodra je dat beheerst, kan je altijd nog meer leren.
+   > Concentreer je dus op die begrippen en stappen die hier nodig zijn.
+   > De rest kan je altijd nog leren nadat de basis duidelijk is.
 
 #### Voordelen van GitHub
 
