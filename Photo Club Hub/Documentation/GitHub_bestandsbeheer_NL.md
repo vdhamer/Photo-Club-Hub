@@ -63,7 +63,11 @@ En kijken of de klach al bekend is. En commentaar en ideeen leveren bij Issues.
 GitHub is in feite het werkarchief voor alle bestanden van dit projekt: code, data, documentatie, "Issues". GitHub zelf is extreem secuur dat er niets zoek raakt.
 
 - ONLINE<BR>
-De Photo Club Hub apps halen de huidige gegevens op vanuit GitHub. Dit zijn vooral lijsten met clubs ("Level 1") en lijsten met clubleden ("Level 2"). Hierdoor kan de app de huidige meest recente gegevens ophalen. Portfolio foto's worden daarentegen op de clubwebsites gehouden: dit zijn grote bestanden en zorgt dat de club websites los van GitHub draaien.
+De Photo Club Hub apps halen de huidige gegevens op vanuit GitHub.
+Dit zijn vooral lijsten met clubs ("Level 1") en lijsten met clubleden ("Level 2").
+Hierdoor kan de app de huidige meest recente gegevens ophalen.
+Portfolio foto's ("Level 3") worden daarentegen op de clubwebsites gehouden:
+dit zijn grote aantallen grotere bestanden. Het zorgt er verder voor dat clubwebsites losstaan van GitHub.
 
 - URLs<BR>
 Alle bestanden hebben een webadres (URL). Dat is nuttig voor bijvoorbeeld verwijzingen zoals voor het downloaden van [de introductie Powerpoint](tinyurl.com/fchPPTnl).
