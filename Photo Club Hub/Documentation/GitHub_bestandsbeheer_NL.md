@@ -137,7 +137,7 @@ Via deze [link](https://desktop.github.com/download/) kan je GitHub Desktop grat
 
 Er zijn versies voor oude (Intel) en nieuwe generatie (Apple Silicon: M1 - M5) Macs.
 Bij Windows krijg je een installatieprogramma dat je moet uitvoeren om het te installeren.
-Bij Mac kan je het `.zip` bestand in de Downloads folder openen. Er de resulterende `GitHub Desktop.app` naar de Applications folder slepen.
+Bij Mac kan je het `.zip` bestand in de Downloads folder openen. En de resulterende `GitHub Desktop.app` naar de Applications folder slepen.
 
 Bij het openen van GitHub Desktop krijg je (in ieder geval op de Mac) de vraag of je de app wel vertrouwt.
 Gerust "Open" kiezen: er zijn miljoenen gebruikers je voorgegaan.
