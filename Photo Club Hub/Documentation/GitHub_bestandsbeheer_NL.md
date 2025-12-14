@@ -9,7 +9,7 @@ Het is ook mogelijk om nieuwe bestanden toe te voegen of bestaande bestanden te 
 Maar dat krijgt hier geen aandacht omdat dit ongeveer op vrijwel dezelfde manier gaat.
 
 In hoofdlijnen komt het erop neer dat men een gewijzigd bestand kan aanmaken, en deze aanbieden aan het project ("__Repository__" ofwel "__Repo__").
-Tussen aanbieden en daarwerkelijk in gebruik nemen zit nog een __goedkeuringsstap__.
+Tussen aanbieden en daadwerkelijk in gebruik nemen zit nog een __goedkeuringsstap__.
 De goedkeuringsstap voorkomt dat men zomaar een willekeurige wijziging in een willekeurig bestand kan aanbrengen.
 De goedkeuringsprocedure wordt hier moet beschreven omdat een Repository beheerder dat moet doen.
 
@@ -18,7 +18,7 @@ De goedkeuringsprocedure wordt hier moet beschreven omdat een Repository beheerd
 De hoofdstappen zijn dus:
 
 1. De gebruiker maakt (eenmalig) een account aan bij GitHub. Dat account is geldig voor _alle_ GitHub Repositories.
-2. De gebruiker maakt (eenmalig, via GitHub Desktop) een locale kopie aan van de _complete_ [Photo Club Hub](https://github.com/vdhamer/Photo-Club-Hub) Repository.
+2. De gebruiker maakt (eenmalig, via GitHub Desktop) een lokale kopie aan van de _complete_ [Photo Club Hub](https://github.com/vdhamer/Photo-Club-Hub) Repository.
 3. Een bestand (of bestanden) wordt lokaal (op de eigen computer) aangepast. Deze stap kan zonder Internet verbindingen. De stap mag zo lang duren als nodig (minuten … dagen).
 4. De gebruiker biedt de aangepaste versie aan (weer via GitHub Desktop) bij de centrale Repository voor goedkeuring door de Repo beheerder(s).
 
@@ -28,11 +28,11 @@ Voor eventuele volgende veranderingen hoef je overigens niet te wachten totdat e
 
    > Tip: GitHub (of het achterliggende Git) is een zogenaamde versiebeheersystemen (_version control system_).
    > Dat houdt in dat het alle aangeboden bestandswijzigingen nauwlettend bijhoudt. 
-   > Git kan ook teams aan waarbij soms 2 personen vrijwel gelijktijd hetzelfde bestand aanpassen.
+   > Git kan ook teams aan waarbij soms 2 personen vrijwel gelijktijdig hetzelfde bestand aanpassen.
    > In de praktijk betekent dit dat Git zorgt dat niemand een wijziging in een aangeboden bestand kwijt raakt.
 
-   > Tip: GitHub is een vrij complex systeem. De hele software industrie is afhankelijk van GitHub en verwante systemen.
-   > Mini-kursusen op YouTube over GitHub en Git zijn vaak bedoeld voor softwareontwikkelaars.
+   > Tip: GitHub is een vrij complex systeem. De hele software-industrie is afhankelijk van GitHub en verwante systemen.
+   > Mini-cursussen op YouTube over GitHub en Git zijn vaak bedoeld voor softwareontwikkelaars.
    > Ze beschrijven dan meer toeters en bellen van Git(Hub) dan wat wij hier nodig hebben.
    > Concentreer je dus op die begrippen en stappen die hier nodig zijn.
    > De rest kan je altijd nog leren nadat de basis duidelijk is.
@@ -48,14 +48,14 @@ Alle aangeboden versies worden bewaard. Je kunt zien wie wat wanneer gewijzigd h
 
 - SAMENWERKING<BR>
 Meerdere mensen kunnen wijzigingen aanbrengen, en versies van elkaar overnemen.
-Zonder het risiko van misverstanden of kwijtraken van een voorgestelde aanpassingen.
+Zonder het risico van misverstanden of kwijtraken van een voorgestelde aanpassingen.
 Git(Hub) is als het ware de stoplichten die het dataverkeer tussen de verschillende partijen regelt: soms hinderlijk, maar het heeft zo zijn reden.
 
 - EENVOUDIGE GOEDKEURING<BR>
 In het ideale geval kan een ingediende wijziging met 1 druk op de knop goedgekeurd worden. Dit is essentieel als er continue meerdere wijzigingsvoorstellen per dag binnenstromen.
 
 - ARCHIEF<BR>
-GitHub is in feite het werkarchief voor alle bestanden van dit projekt: code, data, documentatie, "Issues". GitHub zelf is extreem secuur dat er niets zoek raakt.
+GitHub is in feite het werkarchief voor alle bestanden van dit project: code, data, documentatie, "Issues". GitHub zelf is extreem secuur dat er niets zoekraakt.
 
 - ONLINE<BR>
 De Photo Club Hub apps halen de huidige gegevens op vanuit GitHub.
@@ -70,7 +70,7 @@ Alle bestanden hebben een webadres (URL). Dat is nuttig voor bijvoorbeeld verwij
 - CENTRALE TO-DO LIJST<BR>
 De centrale lijst van uitbreidingsverzoeken of het aanmelden van bugs loopt via GitHub.
 Jij kunt zo zelf een wens of klacht ("Issue") toevoegen.
-En kijken of de klach al bekend is. En commentaar en ideeen leveren bij Issues.
+En kijken of de klacht al bekend is. En commentaar en ideeën leveren bij Issues.
 
 - READ-ONLY<BR>
 Wie alleen wil kijken, maar niets wil wijzigen, heeft geen wachtwoord of account bij GitHub nodig.
@@ -100,16 +100,16 @@ Registratie van een nieuwe GitHub gebruiker gebeurt via de "__Sign up__" knop op
    In de kleine lettertjes staat dat er bijvoorbeeld geen spaties in mogen.
    Het is dus Username in de IT zin, en niet de gewone naam van de gebruiker. Je mag dus wel Jan-Pietersen kiezen maar niet Jan Pietersen. Maar stroopwafelfrisbee mag ook. Ik gebruik zelf "vdhamer" en "vdhamer-for-testing".
 - Country is een makkelijke vraag: kan gewoon Netherlands kiezen uit de lijst. Het antwoord is onbelangrijk volgens de kleine lettertjes.
-- Op "Create account" klikken resulteert in het standaard ritueel van code ontvangen per Email, en code terugmelden aan GitHub om te controlleren dat het Email adres ok is. En krijg je minstens 1 vraag (op basis van plaatjes of geluid) om aan te tonen dat jij een mens bent. Die "Captcha" tests zijn best lastig bij GitHub.
-- GitHub heeft ook alternatieve inlogopties bedoeld voor beroeps ontwikkelaars (SSH, passkeys). Die zijn moderner, maar vereisene meer kennis.
+- Op "Create account" klikken resulteert in het standaard ritueel van code ontvangen per Email, en code terugmelden aan GitHub om te controleren dat het Email adres ok is. En krijg je minstens 1 vraag (op basis van plaatjes of geluid) om aan te tonen dat jij een mens bent. Die "Captcha" tests zijn best lastig bij GitHub.
+- GitHub heeft ook alternatieve inlogopties bedoeld voor beroeps ontwikkelaars (SSH, passkeys). Die zijn moderner, maar vereisen meer kennis.
 
 </details></p>
 
-## 2. Locale "clone" aanmaken via GitHub Desktop
+## 2. Lokale "clone" aanmaken via GitHub Desktop
 
-In deze stap installeren we eerst locaal software die hoort bij GitHub: GitHub Desktop.
+In deze stap installeren we eerst lokaal software die hoort bij GitHub: GitHub Desktop.
 
-> Tip: vaak wordt (aan softwareontwikkelaars) aangeraden om eerst het prakket Git te installeren.
+> Tip: vaak wordt (aan softwareontwikkelaars) aangeraden om eerst het pakket Git te installeren.
 > We gaan het hier zonder Git doen: GitHub Desktop is een gebruikersvriendelijke
 > grafische "schil" om `git`. Git wordt daarentegen (zelfs door de bedenker) als minder gebruiksvriendelijk gezien.
 
@@ -123,7 +123,7 @@ Het nut van GitHub Desktop is:
 - gelijktijdige wijzigingen van een tekstbestand door iemand worden automatisch gecombineerd met jouw wijzigingen
 
 Waarom is GitHub Desktop eigenlijk nodig, als je een bestand opgeslagen bij GitHub wilt wijzigen?
-Dat is ondeermeer omdat, bij het wijzingen van softwarebestanden, men de software lokaal wil bouwen en testen.
+Dat is ondermeer omdat, bij het wijzingen van softwarebestanden, men de software lokaal wil bouwen en testen.
 Ons gebruik hier is een beetje een uitzonderingsgeval.
 
 </details></p>
@@ -142,7 +142,7 @@ Bij het openen van GitHub Desktop krijg je (in ieder geval op de Mac) de vraag o
 Gerust "Open" kiezen: er zijn miljoenen gebruikers je voorgegaan.
 En GitHub (al jaren deel van Microsoft) is fanatieker dan de meesten op veiligheid.
 
-Vervolgs de keus tussen GitHub.com (👈 deze kiezen) of GitHub Enterprise.
+Vervolgens de keus tussen GitHub.com (👈 deze kiezen) of GitHub Enterprise.
 
 Vervolgens wil het weten wie onder welke naam/wachtwoord jij bekend bent op GitHub.
 Dus moet je de gegevens gebruiken die je hierboven in het "Sign up for GitHub" gekozen hebt.
@@ -158,7 +158,7 @@ Je krijgt nog een veiligheidsvraag van je Internet browser (Safari, Chrome, Edge
 ```
 
 Dit is omdat je op dat punt overschakelt van browser naar een lokaal programma. Dat mag niet zomaar.
-Maar je kunt de GitHub Desktop applicatie ook zelf opstarten via een ikoontje in Applications of in een Start menu (Windows).
+Maar je kunt de GitHub Desktop applicatie ook zelf opstarten via een icoontje in Applications of in een Start menu (Windows).
 
 ### 2.2 Verbinding instellen naar GitHub
 
@@ -179,12 +179,12 @@ Kies hier dus "Clone a Repository from the Internet...". <BR><BR> Waarna je (b.v
 
 <img width="518" height="313" alt="Screenshot 2025-12-13 at 19 14 34" src="https://github.com/user-attachments/assets/079eceae-efec-45da-84be-41ef36436365" />
 
-Voordat je Clone klikt: dit gaat alle bestanden van dit projekt (in hun huidige versie) copieren naar de opgegeven locatie.
+Voordat je Clone klikt: dit gaat alle bestanden van dit project (in hun huidige versie) kopiëren naar de opgegeven locatie.
 Ik koos voor een directory "Photo-Club-Hub" binnen een nieuwe directory "GitHub" binnen nieuwe/bestaande directory "Developer".
 Maar dit mag je zelf weten: bij documenten, losse drive, in peter/Developer. 
 Het is ongetwijfeld daarna aanpasbaar, maar het is het simpelst als je nu even goed nadenkt:
-"waar kan ik honderden MegaBytes voor onbepaalde tijdsduur stallen zodat ik terug vind?".
-Op de Mac is /Users/mijnAccount/Developer gebruikelijk. Dan krijg je een mooi geel ikoon.
+"waar kan ik honderden Megabytes voor onbepaalde tijdsduur stallen zodat ik terug vind?".
+Op de Mac is /Users/mijnAccount/Developer gebruikelijk. Dan krijg je een mooi geel icoon.
 
 > Tip: Op verjaardagsfeestjes kan je nerds imponeren met het feit dat jij "op GitHub" zit.
 > Het is tenslotte best iets om trots op te zijn. Heel Git is bepaald niet simpel.
@@ -196,17 +196,17 @@ Op de Mac is /Users/mijnAccount/Developer gebruikelijk. Dan krijg je een mooi ge
 
 <img width="1072" height="772" alt="Screenshot 2025-12-14 at 00 09 29" src="https://github.com/user-attachments/assets/645261ec-7836-4931-80e5-86e60bb0e5a3" />
 
-Zo ziet GitHub Desktop eruit bij 1 locale clone van het GitHub Repository vdhamer/Photo-Club-Hub:
+Zo ziet GitHub Desktop eruit bij 1 lokale clone van het GitHub Repository vdhamer/Photo-Club-Hub:
 
-- "Current Repository" zegt dat je nu bezig bent in het Photo-Club-Hub projekt
-- "Main branch" betekent dat je niet bezig bent met een tijdelijk subprojekt. Voor ons volstaat "Main" omdat we relatief kleine aanpassingen doen.
-- "Fetch origin" ververst jou locale copie van de Repository vanuit GitHub. Lokale aanpassingen (op eigen computer) worden hierbij niet overschreven. Als het bestand waaraan je werkt op GitHub inmiddels aangepast is, dan 
+- "Current Repository" zegt dat je nu bezig bent in het Photo-Club-Hub project
+- "Main branch" betekent dat je niet bezig bent met een tijdelijk subproject. Voor ons volstaat "Main" omdat we relatief kleine aanpassingen doen.
+- "Fetch origin" ververst jou lokale kopie van de Repository vanuit GitHub. Lokale aanpassingen (op eigen computer) worden hierbij niet overschreven. Als het bestand waaraan je werkt op GitHub inmiddels aangepast is, dan 
 - Er is een knop om een teksteditor te openen. In mijn geval (Mac) is dat "Sublime Text". "Notepad++" wordt veel gebruikt voor dit soort bestanden onder Windows.
 - Er is een knop om de folder te bekijken (in Finder op Mac, of Explorer onder Windows).
 - Je kunt ook de Repository bekijken op GitHub via jouw browser. Ik denk dat dat (behalve voor de "owner") alleen bekijken en niet wijzigen betreft.
 
 Ik zou "View file is your Repository in Finder/Explorer" maar kiezen. 
-En dan op zoek gaan naar het bestand dat je aan wilt passen. En met een locale editor (Sublimte Text, Notepad++, etc) aanpassen.
+En dan op zoek gaan naar het bestand dat je aan wilt passen. En met een lokale editor (Sublimte Text, Notepad++, etc) aanpassen.
 
 Dat ziet op een Mac zo uit (Windows iets soortgelijks).
 
