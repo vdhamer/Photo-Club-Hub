@@ -208,13 +208,13 @@ Zo ziet GitHub Desktop eruit bij 1 lokale Clone van het GitHub Repository vdhame
 Ik zou "View file is your Repository in Finder/Explorer" maar kiezen. 
 En dan op zoek gaan naar het bestand dat je aan wilt passen. En met een lokale editor (Sublime Text, Notepad++, Notepad, TextEdit) aanpassen.
 
-Dat ziet op een Mac zo uit (Windows iets soortgelijks).
+Dat ziet op een Mac zo uit (onder Windows zie je iets vergelijkbaars):
 
 <img width="1032" height="576" alt="Screenshot 2025-12-14 at 00 27 12" src="https://github.com/user-attachments/assets/1bc3738a-b2ed-4c85-b7c4-0534a8e98744" />
 
 Dit is dus de standaard bestandsbeheer van MacOS of Windows. Met een onzichtbaar maar belangrijk verschil:
-GitHub Desktop regelt het op de hoogte houden van het centrale ("origin") Repository in Github van jouw wijzigingen.
-GitHub/`git` kan je ook lokaal vertellen (en tonen) wat er in welke versie gewijzigd is.
+GitHub Desktop regelt dat het centrale ("origin") Repository in Github op de hoogte gehouden wordt van jouw aanpassingen.
 Hiervoor houdt GitHub/`git` automatisch een hele administratie bij in een verborgen directory.
 
+## 3. Bestand/bestanden wordt op de eigen computer aangepast.
 
