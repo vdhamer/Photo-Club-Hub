@@ -80,18 +80,18 @@ Bijvoorbeeld om even te kijken naar een databestand of naar documentatie. Dus re
 
 ## 1. Account aanmaken ("Sign up") bij GitHub
 
-Een account bij GitHub aanmaken is gratis. Wie zich ooit eerder geregistreed heeft bij GitHub, kan deze Stap 1 overslaan.
+Een account bij GitHub aanmaken is gratis. Wie zich eerder geregistreed heeft bij GitHub, kan deze Stap 1 overslaan.
 
 Registratie van een nieuwe GitHub gebruiker gebeurt via de "Sign up" knop op de [hoofdpagina van GitHub](https://github.com). 
 __Sign up__ is dus om je te registreren (account aanmaken). 
-__Sign in__ is daarentegen als je later aanmeldt bij GitHub ("inloggen") onder het account aangemaakt met Sign up.
+__Sign in__ is daarentegen als je later aanmeldt bij GitHub ("inloggen") onder het account dat je eenmalig aangemaakt hebt met Sign up.
 
 <img width="532" height="889" alt="Screenshot 2025-12-11 at 22 19 03" src="https://github.com/user-attachments/assets/da795207-821c-4a14-bdce-4f156e796d61" />
 
 <details><summary>Details (klik om uit te klappen)</summary></p>
 
-- Wie een Apple account gebruikt, kan "Continue wie Apple" kiezen. Als je dit (of "Continue with Google") gebruikt, ben je snel klaar. Anders...
-- Voor toekomstige "Sign in" heb jij de combinatie Email/Password straks nodig. Of Username/Password. Je moet alle 3 velden invullen. En alle 3 goed bewaren.
+- Wie een Apple account gebruikt, kan "Continue wie Apple" kiezen. Als je dit (of "Continue with Google") gebruikt, ben je snel klaar.
+- Voor toekomstige "Sign in" heb jij de combinatie Email/Password straks nodig. Of Username/Password. Je moet alle 3 velden invullen en goed bewaren.
    - Email moet uniek zijn. Gebruik geen "hide my Email" Apple iCloud account: dit wordt geweigerd met een onduidelijke foutmelding.
 Voor de meeste mensen is deze stap geen probleem: die hebben bijvoorbeeld een hoofdaccount en misschien een secondair Email account. Je kunt eventueel extra Email account hiervoor aanmaken bij Gmail (een "nep" iCloud account kan zoals gezegd problemen geven).
    - Wachtwoord moet uiteraard bewaard worden bij al je andere wachtwoorden.
