@@ -286,4 +286,29 @@ Ter herinnering, Commit biedt de wijzigingen aan bij GitHub,
 waar de wijzigingen vervolgens door een beheerder van dit Repository goedgekeurd kunnen worden.
 Bij dit specifieke bestand zal die beheerder het al gauw goedvinden: het is maar een kliederbestand (vandaar "whiteboard.txt").
 
+Dan zie je dit:
+
+<img width="1072" height="772" alt="Screenshot 2025-12-14 at 23 01 28" src="https://github.com/user-attachments/assets/1aa2f990-73c3-47a1-aeff-def28d874445" />
+
+Hier zie je (in dit geval) dat er 2 Commits in het repository ondertussen door anderen gedaan zijn.
+De blauwe "Pull Origin" knop trekt ("pull") die vanuit het centrale repo naar jaar locale repo toe.
+Het is het duidelijkste, als er iets te "pull"en valt om dit nu even te doen. 
+We gaan nu klikken op "Pull Origin", maar let tegelijk op de getalletjes bovenaan: er zijn 2 Commits klaar voor Pull (door iemand anders veroorzaakt).
+En 1 Commit met de aangebrachte wijzigingen. Dus klik nu op "Pull Origin". Dit levert op:
+
+<img width="1028" height="728" alt="Screenshot 2025-12-14 at 23 08 35" src="https://github.com/user-attachments/assets/7a21d995-9428-4fc2-a75f-1a5c2c72181a" />
+
+Hier is het "Pull" verhaal weg (want dat is geregeld). Maar biedt GitHub Desktop aan om "__Push__ [to] Origin" voor je te doen.
+Klik op "Push [to] Origin". Dus zien we nu dit:
+
+<img width="1028" height="728" alt="Screenshot 2025-12-14 at 23 22 48" src="https://github.com/user-attachments/assets/34ec7ba8-e06a-4926-84a7-92c850438c62" />
+
+Hiermee zijn we eigenlijk klaar en hebben het volgende bereikt:
+
+1) jouw wijziging aan `whiteboard.txt` ligt nu ter goedkeuring bij GitHub.
+Dit was "Push". Die heeft jouw Commit (evt meerdere) via het Internet naar GitHub ("Origin") overgebracht. Push vaak gebruiken kan geen kwaad.
+2) in dit geval, hebben we wat laatste ongerelateerde wijzigingen in de omgekeerde richting ("Pull") naar binnen gehengeld.
+Vaak is er niets gewijzigd - dat hangt af van hoe actief anderen zijn, en hoe lang geleden je voor het laatst "Pull" gedaan hebt.
+Pull vaak gebruiken kan geen kwaad. Vermoedelijk kan je alleen Pull doen als GitHub Desktop ziet dat er iets nieuws voor je is.
+3) We hebben bij het Push commando, een korte beschrijving geleverd (soort etiket) van wat er gewijzigd is. "Summary" is verplicht en kan zoiets bevatten als "added website for JP of fgDeKoekoek". Dan hou je de geschiedenis leesbaar. In het "Description" veld is ruimte voor eventuele aanvullende tekst.
 
