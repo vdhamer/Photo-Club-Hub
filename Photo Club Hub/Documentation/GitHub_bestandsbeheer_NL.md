@@ -280,6 +280,10 @@ Kies "To contribute to the parent project" (default) en "Continue". Dit brengt o
 <img width="1072" height="772" alt="Screenshot 2025-12-14 at 22 51 48" src="https://github.com/user-attachments/assets/f9c33883-d845-4e56-a9d6-7a4b38159411" />
 
 Hier waren we indedaad al: het is het hoofdscherm van GitHub Desktop. Maar nu is die vervelende waarschuwing weg.
-En kunnen we nu wel Commit doen van met de blauwe knop linksonder.
+En kunnen we nu wel __Commit__ doen van met de blauwe knop linksonder. Het is Commit "to main" want we gebruiken hier alleen de Branch genaamd "main".
+
+Ter herinnering, Commit biedt de wijzigingen aan bij GitHub, 
+waar de wijzigingen vervolgens door een beheerder van dit Repository goedgekeurd kunnen worden.
+Bij dit specifieke bestand zal die beheerder het al gauw goedvinden: het is maar een kliederbestand (vandaar "whiteboard.txt").
 
 
