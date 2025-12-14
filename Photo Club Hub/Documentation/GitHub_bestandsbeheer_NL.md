@@ -163,8 +163,8 @@ Maar je kunt de GitHub Desktop applicatie ook zelf opstarten via een icoontje in
 
 ### 2.2 Verbinding instellen naar GitHub
 
-Hiermee heb je een werkende GitHub Desktop. Maar bij opstarten krijg je nog een vraag:
-Het wachtwoord is al bekend van stap 2.1. Maar het wil eigenlijk nog de gekopen e-mail adres hebben:
+Hiermee heb je een werkende GitHub Desktop. Maar bij het opstarten krijg je nog een vraag:
+het wil eigenlijk nog jouw gekozen e-mail adres nogmaals weten:
 
 <img width="1028" height="728" alt="Screenshot 2025-12-13 at 23 30 56" src="https://github.com/user-attachments/assets/fb96dc61-83d8-4ec7-b9a6-5d16cd249eee" />
 
