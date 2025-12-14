@@ -179,18 +179,18 @@ Kies hier dus "Clone a Repository from the Internet...". <BR><BR> Waarna je (b.v
 
 <img width="518" height="313" alt="Screenshot 2025-12-13 at 19 14 34" src="https://github.com/user-attachments/assets/079eceae-efec-45da-84be-41ef36436365" />
 
-Voordat je Clone klikt: dit gaat alle bestanden van dit project (in hun huidige versie) kopiëren naar de opgegeven locatie.
-Ik koos voor een directory "Photo-Club-Hub" binnen een nieuwe directory "GitHub" binnen nieuwe/bestaande directory "Developer".
-Maar dit mag je zelf weten: bij documenten, losse drive, in peter/Developer. 
-Het is ongetwijfeld daarna aanpasbaar, maar het is het simpelst als je nu even goed nadenkt:
-"waar kan ik honderden Megabytes voor onbepaalde tijdsduur stallen zodat ik terug vind?".
-Op de Mac is /Users/mijnAccount/Developer gebruikelijk. Dan krijg je een mooi geel icoon.
+Voordat je Clone klikt: dit gaat __alle__ bestanden van dit project in hun huidige versie kopiëren naar de door jou gekozen directory op jouw computer.
+Ik koos voor een directory "Photo-Club-Hub" binnen een nieuwe directory "GitHubDesktopRepos" binnen nieuwe/bestaande directory "Developer".
+Maar dit mag je helemaal zelf kiezen. 
+Het is ongetwijfeld achteraf met wat wat moeite aanpasbaar, maar het is het eenvoudigst als je nu even goed nadenkt:
+"waar kan ik honderden Megabytes voor onbepaalde tijdsduur stallen zodat ik terug vind?". Honderden Megabytes klinkt veel, maar is het niet meer.
+Op de Mac is /Users/mijnAccount/Developer gebruikelijk. Dan zie je een speciaal geel icoon verschijnen.
 
 > Tip: Op verjaardagsfeestjes kan je nerds imponeren met het feit dat jij "op GitHub" zit.
-> Het is tenslotte best iets om trots op te zijn. Heel `git` is bepaald niet simpel.
+> Het is inderdaad iets om trots op te zijn. Heel `git` is bepaald niet simpel.
 > Maar wij gebruiken hier maar enkele procent van de totale mogelijkheden.
-> GitHub heeft 500 honderd miljoen Repositories en meer dan honderd miljoen gereistreerde gebruikers. De meeste gebruikers zitten
-> in de software industrie. Maar het is voor meerdere soorten documentbeheer bruikbaar: [GitHub for poets 1.1 tutorial](https://www.youtube.com/watch?v=BCQHnlnPusY).
+> GitHub heeft 500 honderd miljoen Repositories en ruim honderd miljoen gereistreerde gebruikers. De meeste gebruikers zitten
+> in de software industrie. Maar het is voor bruikbaar voor ieder soort text-achtig document bruikbaar: [GitHub for poets 1.1 tutorial](https://www.youtube.com/watch?v=BCQHnlnPusY).
 
 ### 2.3 Wat zien we inmiddels?
 
