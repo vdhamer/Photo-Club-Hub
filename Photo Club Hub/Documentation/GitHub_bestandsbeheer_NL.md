@@ -14,12 +14,12 @@ De goedkeuringsdetails worden hier moet beschrevem omdat iemand anders dat voor 
 De hoofdstappen zijn dus:
 
 1. Gebruiker maakt (eenmalig) een account aan bij GitHub. Dat account is geldig voor _alle_ GitHub Repositories.
-2. Gebruiker maakt (eenmalig) een locale kopie aan van de _complete_ Repository: [Photo Club Hub](https://github.com/vdhamer/Photo-Club-Hub).
+2. Gebruiker maakt (eenmalig, via GitHub Desktop) een locale kopie aan van de _complete_ Repository: [Photo Club Hub](https://github.com/vdhamer/Photo-Club-Hub).
 3. Een bestand (of meerdere bestanden) wordt lokaal (op de eigen computer) bijgewerkt. Deze stap kan zonder Internet verbindingen en kan zo lang duren als nodig (minuten..dagen).
-3. Gebruiker biedt de aangepaste versie aan bij GitHub voor goedkeuring door de Repo beheerder(s) en opname in het Repository.
+4. Gebruiker biedt de aangepaste versie aan (weer via GitHub Desktop) bij de centrale Repository voor goedkeuring door de Repo beheerder(s).
 
-De goedkeuring doet iemand anders, en wordt hier niet beschreven. Hiervoor moet je een soort beheerder zijn van het Repository.
-Bij een eventuele volgende verandering ga je verder met stap 3. Dus een bstand kan in stapjes aangepast worden.
+Deze goedkeuringen doet iemand anders, en wordt hier niet beschreven. Dit gebeurt door de beheerder(s) van het Repository.
+Bij een eventuele volgende verandering ga herhaal je stappen 3 en 4. Dus een bestand kan stapsgewijs aangepast worden.
 Voor volgende veranderingen hoef je overigens niet persé op een goedkeuring van eerdere versie te wachten.
 
    > Tip: GitHub (of het achterliggende Git) is een zogenaamde versiebeheersystemen ("version control system").
