@@ -26,7 +26,7 @@ Bij een eventuele volgende verandering herhaal je stappen 3 en 4.
 Dus een bestand hoeft niet in een keer af, maar dient ten tijde van de goedkeuring wel bruikbaar zijn.
 Voor eventuele volgende veranderingen hoef je overigens niet te wachten totdat eerdere versies goedgekeurd zijn.
 
-   > Tip: GitHub (of het achterliggende Git) is een zogenaamde versiebeheersystemen ("version control system").
+   > Tip: GitHub (of het achterliggende Git) is een zogenaamde versiebeheersystemen (_version control system_).
    > Dat houdt in dat het alle aangeboden bestandswijzigingen nauwlettend bijhoudt. 
    > Git kan ook teams aan die soms dezelfde bestanden gelijktijdig aanpassen. Git is erg robuust:
    > In de praktijk betekent dit dat niemand een wijziging van een bestand ooit kwijt kan raken nadat het aangeboden wordt.
