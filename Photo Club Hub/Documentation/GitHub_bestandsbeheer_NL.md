@@ -84,7 +84,7 @@ Een account bij GitHub aanmaken is gratis. Wie zich eerder geregistreed heeft bi
 
 Registratie van een nieuwe GitHub gebruiker gebeurt via de "Sign up" knop op de [hoofdpagina van GitHub](https://github.com). 
 __Sign up__ is dus om je te registreren (account aanmaken). 
-__Sign in__ is daarentegen als je later aanmeldt bij GitHub ("inloggen") onder het account dat je eenmalig aangemaakt hebt met Sign up.
+__Sign in__ is daarentegen als je later aanmeldt bij GitHub ("inloggen") onder het account dat je eenmalig aangemaakt hebt met __Sign up__.
 
 <img width="532" height="889" alt="Screenshot 2025-12-11 at 22 19 03" src="https://github.com/user-attachments/assets/da795207-821c-4a14-bdce-4f156e796d61" />
 
