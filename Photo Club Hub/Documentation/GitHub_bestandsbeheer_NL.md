@@ -19,7 +19,7 @@ De hoofdstappen zijn dus:
 3. Gebruiker biedt de aangepaste versie aan bij GitHub voor goedkeuring en opname in het Repository. 
 4. Ee goedkeuring doet iemand anders, en wordt hier niet beschreven. Hiervoor moet je een soort beheerder zijn van het Repository.
 
-Bij een volgende verandering ga je verder met stap 3. Dus een bstand kan desgewenst in kleine stapjes aangepast worden.
+Bij een eventuele volgende verandering ga je verder met stap 3. Dus een bstand kan desgewenst in kleine stapjes aangepast worden.
 
    > Tip: GitHub (of het achterliggende Git) is een zogenaamde versiebeheersystemen ("version control system").
    > Dat houdt in dat het alle bestandswijzigingen nauwlettend bijhoudt. 
