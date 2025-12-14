@@ -159,7 +159,7 @@ Je krijgt nog een veiligheidsvraag van je Internet browser (Safari, Chrome, Edge
 ```
 
 Dit is omdat je op dat punt overschakelt van browser naar een lokaal programma. Dat mag niet zomaar.
-Maar je kunt de GitHub Desktop applicatie ook zelf opstarten via een icoontje in Applications of in een Start menu (Windows).
+Maar je kunt de GitHub Desktop applicatie ook zelf opstarten via een icoontje in Applications (Mac) of in het Windows `Start` menu.
 
 ### 2.2 Verbinding instellen naar GitHub
 
