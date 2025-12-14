@@ -161,6 +161,10 @@ Je krijgt nog een veiligheidsvraag van je Internet browser (Safari, Chrome, Edge
 Dit is omdat je op dat punt overschakelt van browser naar een lokaal programma. Dat mag niet zomaar.
 Maar je kunt de GitHub Desktop applicatie ook zelf opstarten via een icoontje in Applications (Mac) of in het Windows `Start` menu.
 
+Ergens in het verhaal komt dit scherm ook voor. Gewoon op "Authorize desktop" klikken:
+
+<img width="532" height="626" alt="Screenshot 2025-12-13 at 19 13 17" src="https://github.com/user-attachments/assets/1bfde716-75b4-44de-8830-d8161c26bb40" />
+
 ### 2.2 Verbinding instellen naar GitHub
 
 Hiermee heb je een werkende GitHub Desktop. Maar bij het opstarten krijg je nog een vraag:
