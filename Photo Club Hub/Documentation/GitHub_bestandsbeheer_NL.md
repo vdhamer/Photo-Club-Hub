@@ -15,15 +15,16 @@ De hoofdstappen zijn dus:
 
 1. Gebruiker maakt (eenmalig) een account aan bij GitHub. Dat account is geldig voor _alle_ GitHub Repositories.
 2. Gebruiker maakt (eenmalig) een locale kopie aan van de _complete_ Repository: [Photo Club Hub](https://github.com/vdhamer/Photo-Club-Hub).
-3. Een bestand (eventueel meerdere bestanden) wordt locaal bijgewerkt. Deze stap vereist geen contact met GitHub.com (en vereist dus geen Internet).
-3. Gebruiker biedt de aangepaste versie aan bij GitHub voor goedkeuring en opname in het Repository. 
-4. Ee goedkeuring doet iemand anders, en wordt hier niet beschreven. Hiervoor moet je een soort beheerder zijn van het Repository.
+3. Een bestand (of meerdere bestanden) wordt lokaal (op de eigen computer) bijgewerkt. Deze stap kan zonder Internet verbindingen en kan zo lang duren als nodig (minuten..dagen).
+3. Gebruiker biedt de aangepaste versie aan bij GitHub voor goedkeuring door de Repo beheerder(s) en opname in het Repository.
 
-Bij een eventuele volgende verandering ga je verder met stap 3. Dus een bstand kan desgewenst in kleine stapjes aangepast worden.
+De goedkeuring doet iemand anders, en wordt hier niet beschreven. Hiervoor moet je een soort beheerder zijn van het Repository.
+Bij een eventuele volgende verandering ga je verder met stap 3. Dus een bstand kan in stapjes aangepast worden.
+Voor volgende veranderingen hoef je overigens niet persé op een goedkeuring van eerdere versie te wachten.
 
    > Tip: GitHub (of het achterliggende Git) is een zogenaamde versiebeheersystemen ("version control system").
-   > Dat houdt in dat het alle bestandswijzigingen nauwlettend bijhoudt. 
-   > Git kan ook teams van meerdere personen aan die soms dezelfde bestanden aanpassen.
+   > Dat houdt in dat het alle aangeboden bestandswijzigingen nauwlettend bijhoudt. 
+   > Git kan ook teams aan die soms dezelfde bestanden aanpassen. Git is erg robuust: je raakt "nooit" je werk kwijt.
    > In de praktijk betekent dit dat niemand een wijziging in een bestand kwijt kan raken, 
    > en dat er strict onderscheid gemaakt wordt tussen gedeelde versies en eigen versies.
 
