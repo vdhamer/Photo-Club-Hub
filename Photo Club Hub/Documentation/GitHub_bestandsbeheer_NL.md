@@ -109,7 +109,7 @@ Je krijgt minstens 1 vraag (op basis van plaatjes of geluid) om te bewijzen dat 
 
 ## 2. Lokale "Clone" aanmaken via GitHub Desktop
 
-In deze stap installeren we eerst __GitHub Desktop__. Dit is lokaal draaiende software gemaakt door de GitHub organisatie. 
+In deze stap installeren we eerst __GitHub Desktop__. Dit is een lokaal draaiende software applicatie gemaakt door de GitHub organisatie. 
 
 > Tip: vaak wordt (aan softwareontwikkelaars) aangeraden om eerst het pakket `Git` te installeren.
 > We gaan het hier zonder `git` doen: GitHub Desktop is een gebruikersvriendelijke grafische "schil" om `git`.
