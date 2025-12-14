@@ -80,7 +80,7 @@ Bijvoorbeeld om even te kijken naar een databestand of naar documentatie. Dus re
 
 ## 1. Account aanmaken ("Sign up") bij GitHub
 
-Wie zich ooit eerder geregistreed heeft bij GitHub, kan deze stap overslaan.
+Wie zich ooit eerder geregistreed heeft bij GitHub, kan deze Stap 1 overslaan.
 
 Een account bij GitHub aanmaken is gratis.
 
