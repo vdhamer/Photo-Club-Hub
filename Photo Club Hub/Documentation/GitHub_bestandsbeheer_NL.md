@@ -131,7 +131,7 @@ Ons gebruik hier is een beetje een uitzonderingsgeval.
 
 ### 2.1 GitHub Desktop downloaden en installeren
 
-Via deze [link](https://desktop.github.com/download/) kan je GitHub Desktop gratis downloaded voor Mac of Windows
+Via deze [link](https://desktop.github.com/download/) kan je GitHub Desktop gratis downloaded voor Mac of voor Windows
 
 <img width="968" height="944" alt="Screenshot 2025-12-13 at 23 02 29" src="https://github.com/user-attachments/assets/e080f792-2d87-4a05-8542-eb8375a417d9" />
 
