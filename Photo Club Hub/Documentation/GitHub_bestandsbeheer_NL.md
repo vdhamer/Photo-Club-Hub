@@ -54,11 +54,6 @@ Git(Hub) is als het ware de stoplichten die het dataverkeer tussen de verschille
 - EENVOUDIGE GOEDKEURING<BR>
 In het ideale geval kan een ingediende wijziging met 1 druk op de knop goedgekeurd worden. Dit is essentieel als er continue meerdere wijzigingsvoorstellen per dag binnenstromen.
 
-- CENTRALE TO-DO LIJST<BR>
-De centrale lijst van uitbreidingsverzoeken of het aanmelden van bugs loopt via GitHub.
-Jij kunt zo zelf een wens of klacht ("Issue") toevoegen.
-En kijken of de klach al bekend is. En commentaar en ideeen leveren bij Issues.
-
 - ARCHIEF<BR>
 GitHub is in feite het werkarchief voor alle bestanden van dit projekt: code, data, documentatie, "Issues". GitHub zelf is extreem secuur dat er niets zoek raakt.
 
@@ -71,6 +66,11 @@ dit zijn grote aantallen grotere bestanden. Het zorgt er verder voor dat clubweb
 
 - URLs<BR>
 Alle bestanden hebben een webadres (URL). Dat is nuttig voor bijvoorbeeld verwijzingen zoals voor het downloaden van [de introductie Powerpoint](tinyurl.com/fchPPTnl).
+
+- CENTRALE TO-DO LIJST<BR>
+De centrale lijst van uitbreidingsverzoeken of het aanmelden van bugs loopt via GitHub.
+Jij kunt zo zelf een wens of klacht ("Issue") toevoegen.
+En kijken of de klach al bekend is. En commentaar en ideeen leveren bij Issues.
 
 - READ-ONLY<BR>
 Wie alleen wil kijken, maar niets wil wijzigen, heeft geen wachtwoord of account bij GitHub nodig.
