@@ -90,7 +90,7 @@ __Sign in__ is daarentegen als je later aanmeldt bij GitHub ("inloggen") onder h
 
 <details><summary>Details (klik om uit te klappen)</summary></p>
 
-- Wie een Apple account gebruikt, kan "Continue with Apple" kiezen. Als je dit (of "Continue with Google") gebruikt, ben je snel klaar.
+- Wie een Apple account gebruikt, kan "Continue with Apple" (of "Continue with Google") kiezen. Als je dit gebruikt, ben je snel klaar.
 - Voor toekomstige "Sign in" heb jij de combinatie Email/Password straks nodig. Of Username/Password. Je moet alle 3 velden invullen en goed bewaren.
    - Email moet uniek zijn binnen GitHub.
 Voor de meeste mensen is deze stap geen probleem: die hebben bijvoorbeeld een primair en misschien een secondair Email account. 
