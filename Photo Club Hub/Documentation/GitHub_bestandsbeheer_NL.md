@@ -271,10 +271,15 @@ We gaan eerst (5) oplossen. Dit is maar _eenmalig_ nodig. Klikken op "create a F
 
 <img width="1072" height="772" alt="Screenshot 2025-12-14 at 22 41 18" src="https://github.com/user-attachments/assets/49ae986b-f785-41cd-a685-86b4713edfb5" />
 
-Hier kiezen we "Fork this Repository", en dit levert:
+Hier kiezen we "Fork this Repository", en dit levert alweer een vraag:
 
 <img width="1072" height="772" alt="Screenshot 2025-12-14 at 22 41 43" src="https://github.com/user-attachments/assets/e787a577-17b0-4a1f-869f-42eade82c627" />
 
-<img width="1072" height="772" alt="Screenshot 2025-12-14 at 22 41 43" src="https://github.com/user-attachments/assets/65a29feb-720c-4e1a-9800-6f69a81a819e" />
+Kies "To contribute to the parent project" (default) en "Continue". Dit brengt ons naar:
+
+<img width="1072" height="772" alt="Screenshot 2025-12-14 at 22 51 48" src="https://github.com/user-attachments/assets/f9c33883-d845-4e56-a9d6-7a4b38159411" />
+
+Hier waren we indedaad al: het is het hoofdscherm van GitHub Desktop. Maar nu is die vervelende waarschuwing weg.
+En kunnen we nu wel Commit doen van met de blauwe knop linksonder.
 
 
