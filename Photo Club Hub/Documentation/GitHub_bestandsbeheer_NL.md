@@ -49,18 +49,18 @@ Meerdere mensen kunnen wijzigingen aanbrengen, en versies van elkaar overnemen.
 Zonder het risiko van misverstanden of kwijtraken van een voorgestelde aanpassingen.
 Git(Hub) is als het ware de stoplichten die het dataverkeer tussen de verschillende partijen regelt: soms hinderlijk, maar het heeft zo zijn reden.
 - EENVOUDIGE GOEDKEURING<BR>
-In het ideale geval kan een ingediende wijziging met 1 druk op de knop goedgekeurd worden. Dit is belangrijk als er b.v.  meerdere voorstellen per dag binnenkomen.
+In het ideale geval kan een ingediende wijziging met 1 druk op de knop goedgekeurd worden. Dit is essentieel als er b.v. veel wijzigingsvoorstellen per dag binnenkomen.
 - CENTRALE TO-DO LIJST<BR>
-De centrale lijst van uitbreidingsverzoeken of melding van bugs loopt via GitHub. Jij kunt hier zelf een wens of klacht ("issue") toevoegen. En bestaande wensen van jezelf en anderen zien.
+De centrale lijst van uitbreidingsverzoeken of het aanmelden van bugs loopt via GitHub. Jij kunt zo zelf een wens of klacht ("issue") toevoegen. En bestaande wensen van jezelf en anderen zien en becommentariëren.
 - ARCHIEF<BR>
-GitHub is in feite het archief voor alle bestanden van dit projekt: code, data, documentatie, "issues". GitHub zelf is extreem secuur dat er niets zoek raakt.
+GitHub is in feite het werkarchief voor alle bestanden van dit projekt: code, data, documentatie, "issues". GitHub zelf is extreem secuur dat er niets zoek raakt.
 - ONLINE<BR>
-De app haalt de huidige gegevens op vanuit GitHub. Hier valt b.v. lijsten met clubs ("Level 1") en lijsten met clubleden ("Level 2"). Hierdoor kan de app de huidige gegevens vinden zodra die aangepast worden. Portfolio inhoud wordt op clubwebsites gehouden en lopen dus niet via GitHub.
+De Photo Club Hub apps halen de huidige gegevens op vanuit GitHub. Dit zijn vooral lijsten met clubs ("Level 1") en lijsten met clubleden ("Level 2"). Hierdoor kan de app de huidige meest recente gegevens ophalen. Portfolio foto's worden daarentegen op de clubwebsites gehouden: dit zijn grote bestanden en zorgt dat de club websites los van GitHub draaien.
 - URLs<BR>
-Alle bestanden zijn bereikbaar via een webadres (URL). Dat is nuttig voor bijvoorbeeld verwijzingen zoals voor het downloaden van deze [Powerpoint](tinyurl.com/fchPPTnl).
+Alle bestanden hebben een webadres (URL). Dat is nuttig voor bijvoorbeeld verwijzingen zoals voor het downloaden van [de introductie Powerpoint](tinyurl.com/fchPPTnl).
 - READ-ONLY<BR>
 Wie alleen wil kijken, maar niets wil wijzigen, heeft geen wachtwoord of account bij GitHub nodig.
-Bijvoorbeeld om even te kijken naar een databestand of naar documentatie.
+Bijvoorbeeld om even te kijken naar een databestand of naar documentatie. Dus read-only gebruikers hebben dit document niet nodig.
 
 </details></p>
 
