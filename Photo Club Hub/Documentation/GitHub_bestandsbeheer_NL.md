@@ -111,9 +111,8 @@ Je krijgt minstens 1 vraag (op basis van plaatjes of geluid) om te bewijzen dat 
 
 In deze stap installeren we eerst __GitHub Desktop__. Dit is lokaal draaiende software gemaakt door de GitHub organisatie. 
 
-> Tip: vaak wordt (aan softwareontwikkelaars) aangeraden om eerst het pakket Git te installeren.
-> We gaan het hier zonder Git doen: GitHub Desktop is een gebruikersvriendelijke
-> grafische "schil" om `git`. Git wordt daarentegen (zelfs door de bedenker) als minder gebruiksvriendelijk gezien.
+> Tip: vaak wordt (aan softwareontwikkelaars) aangeraden om eerst het pakket `Git` te installeren.
+> We gaan het hier zonder `git` doen: GitHub Desktop is een gebruikersvriendelijke grafische "schil" om `git`.
 
 Het nut van GitHub Desktop is:
 
