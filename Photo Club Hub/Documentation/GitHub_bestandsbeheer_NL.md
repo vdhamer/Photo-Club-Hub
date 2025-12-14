@@ -267,4 +267,8 @@ Clone is dus zonder terugschrijf mogelijkheid. De equivalent met terugschrijf mo
 De term Fork hangt samen met b.v. een splitsing in een landweg: beide wegen gaan los van elkaar verder.
 Al kunnen we ze verderop weer gelijktrekken.
 
-We gaan eerst (5) oplossen. Dit is eenmalig.
+We gaan eerst (5) oplossen. Dit is maar _eenmalig_ nodig. Klikken op "create a Fork" levert:
+
+<img width="1072" height="772" alt="Screenshot 2025-12-14 at 22 41 18" src="https://github.com/user-attachments/assets/49ae986b-f785-41cd-a685-86b4713edfb5" />
+
+
