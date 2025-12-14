@@ -22,8 +22,9 @@ De hoofdstappen zijn dus:
 3. Een bestand (of bestanden) wordt lokaal (op de eigen computer) aangepast. Deze stap kan zonder Internet verbindingen. De stap mag zo lang duren als nodig (minuten … dagen).
 4. De gebruiker biedt de aangepaste versie aan (weer via GitHub Desktop) bij de centrale Repository voor goedkeuring door de Repo beheerder(s).
 
-Bij een eventuele volgende verandering herhaal je stappen 3 en 4. Dus een bestand hoeft niet in een keer af, maar moet bij goedkeuring wel bruikbaar zijn.
-Voor volgende veranderingen hoef je overigens niet persé op een goedkeuring van eerdere versie te wachten.
+Bij een eventuele volgende verandering herhaal je stappen 3 en 4.
+Dus een bestand hoeft niet in een keer af, maar dient ten tijde van de goedkeuring wel bruikbaar zijn.
+Voor eventuele volgende veranderingen hoef je overigens niet te wachten totdat eerdere versies goedgekeurd zijn.
 
    > Tip: GitHub (of het achterliggende Git) is een zogenaamde versiebeheersystemen ("version control system").
    > Dat houdt in dat het alle aangeboden bestandswijzigingen nauwlettend bijhoudt. 
