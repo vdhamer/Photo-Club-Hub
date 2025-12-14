@@ -17,10 +17,10 @@ De goedkeuringsprocedure wordt hier moet beschreven omdat een Repository beheerd
 
 De hoofdstappen zijn dus:
 
-1. Gebruiker maakt (eenmalig) een account aan bij GitHub. Dat account is geldig voor _alle_ GitHub Repositories.
-2. Gebruiker maakt (eenmalig, via GitHub Desktop) een locale kopie aan van de _complete_ [Photo Club Hub](https://github.com/vdhamer/Photo-Club-Hub) Repository.
-3. Een bestand (of meerdere bestanden) wordt lokaal (op de eigen computer) bijgewerkt. Deze stap kan zonder Internet verbindingen en kan zo lang duren als nodig (minuten..dagen).
-4. Gebruiker biedt de aangepaste versie aan (weer via GitHub Desktop) bij de centrale Repository voor goedkeuring door de Repo beheerder(s).
+1. De gebruiker maakt (eenmalig) een account aan bij GitHub. Dat account is geldig voor _alle_ GitHub Repositories.
+2. De gebruiker maakt (eenmalig, via GitHub Desktop) een locale kopie aan van de _complete_ [Photo Club Hub](https://github.com/vdhamer/Photo-Club-Hub) Repository.
+3. Een bestand (of meerdere bestanden) wordt lokaal (op de eigen computer) aangepast. Deze stap kan zonder Internet verbindingen. De stap mag zo lang duren als nodig (minuten … dagen).
+4. De gebruiker biedt de aangepaste versie aan (weer via GitHub Desktop) bij de centrale Repository voor goedkeuring door de Repo beheerder(s).
 
 Omdat deze goedkeuringen door beheerders gegeven wordt, wordt die stap hier niet beschreven.
 Bij een eventuele volgende verandering herhaal je stappen 3 en 4. Dus een bestand hoeft niet in een keer af, maar moet bij goedkeuring wel bruikbaar zijn.
