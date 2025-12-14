@@ -12,6 +12,7 @@ DATA MAINTENANCE
 * Added support for "Printing" Expertise (the tag for December 2025).
 * Fixed link in level 1 file to level2 file for fgDeGender.
 * Schema change around FotobondNumber
+* Added a dummy test file named whiteboard.txt for testing GitHub Desktop
 
 CODE MAINTENANCE
 * Synchronized code with Photo Club Hub HTML (minor changes).
@@ -24,6 +25,10 @@ CODE MAINTENANCE
 PORTFOLIO SCREEN
 
 * Data source is displayed again (but it still needs more work).
+
+DOCUMENTATION
+
+* Added GitHub_bestandsbeheer_NL.md
 
 This build #4654 was made using Xcode 26.2
 
