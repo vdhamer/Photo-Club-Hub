@@ -254,4 +254,17 @@ In GitHub Desktop zien we (meteen na openen) het volgende:
 
 <img width="1028" height="728" alt="Screenshot 2025-12-14 at 22 27 44" src="https://github.com/user-attachments/assets/9f68f790-3bd7-4947-ba30-b3a279a28a53" />
 
+Hier zijn een paar dingen te zien:
+1. Onder JSON/whiteboard.txt zie je de regels die verwijderd zijn (rood, "-") en regels die nieuw zijn (groen, "+").
+Er kunnen meerdere verandering per bestand getoond worden. En er kunnen meerdere bestanden veranderd zijn.
+2. Er staat in dit geval "1 changed file", met een lijst van veranderde bestanden daar vlak onder.
+3. Er staat je alle wijzingen kunt aanbieden via de knop "Commit 1 file to main".
+Met een automatisch gegeneerde text over de wijziging. Die text kan je aanpassen.
+Belangrijke: de term rondom `git` voor veranderingen aanbieden aan de centrale repository is __Commit__.
+5. Er staat deze keer een waarschuwing dat we nog geen rechten hebben om de wijzigingen te Commit'en. 
+Dit komt omdat we Clone gedaan hebben hierboven. 
+Clone is dus zonder terugschrijf mogelijkheid. De equivalent met terugschrijf mogelijkeheid heet __Fork__.
+De term Fork hangt samen met b.v. een splitsing in een landweg: beide wegen gaan los van elkaar verder.
+Al kunnen we ze verderop weer gelijktrekken.
 
+We gaan eerst (5) oplossen. Dit is eenmalig.
