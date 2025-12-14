@@ -2,10 +2,11 @@
 
 Dit document beschrijft de procedures nodig om zich aan te melden bij www.github.com
 en om wijzigingen in _Photo Club Hub_ bestanden aan te bieden zonder dat hiervoor een tussenpersoon nodig is. 
-Het is met name een manier om ledenlijsten (zoals `mijnClub.level2.json`) of documentatiebestanden (zoals dit bestand) 
+Het is met name bedoeld om ledenlijsten (zoals `mijnClub.level2.json`) of documentatiebestanden (zoals dit bestand) 
 te wijzigen met minimale afhankelijkheid van derden.
 
-Nieuwe bestanden toevoegen of oude bestanden verwijderen kan ook, maar krijgt hier geen aandacht omdat dit ongeveer op vrijwel dezelfde manier gaat.
+Het is ook mogelijk om nieuwe bestanden toe te voegen of bestaande bestanden te verwijderen.
+Maar dat krijgt hier geen aandacht omdat dit ongeveer op vrijwel dezelfde manier gaat.
 
 In hoofdlijnen komt het erop neer dat men een gewijzigd bestand kan aanmaken, en deze aanbieden aan het project ("__Repository__" ofwel "__Repo__").
 Tussen aanbieden en daarwerkelijk in gebruik nemen of publiceren van het gewijzigd bestand zit nog een goedkeuringsstap.
