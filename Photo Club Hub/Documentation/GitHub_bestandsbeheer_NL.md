@@ -268,6 +268,13 @@ De term Fork hangt samen met b.v. een splitsing in een landweg: beide wegen gaan
 Al kunnen we ze verderop weer gelijktrekken.
 
 We gaan eerst (5) oplossen. Dit is maar _eenmalig_ nodig. Klikken op "create a Fork" levert dit:
+
 <img width="1072" height="772" alt="Screenshot 2025-12-14 at 22 41 18" src="https://github.com/user-attachments/assets/49ae986b-f785-41cd-a685-86b4713edfb5" />
-xxx
+
+Hier kiezen we "Fork this Repository", en dit levert:
+
+<img width="1072" height="772" alt="Screenshot 2025-12-14 at 22 41 43" src="https://github.com/user-attachments/assets/e787a577-17b0-4a1f-869f-42eade82c627" />
+
+<img width="1072" height="772" alt="Screenshot 2025-12-14 at 22 41 43" src="https://github.com/user-attachments/assets/65a29feb-720c-4e1a-9800-6f69a81a819e" />
+
 
