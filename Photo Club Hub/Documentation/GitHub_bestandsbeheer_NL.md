@@ -85,12 +85,116 @@ Registratie van een nieuwe GitHub gebruiker gebeurt via de "__Sign up__" knop op
 
 </details></p>
 
-### 2. Locale "clone" aanmaken via GitHub Desktop
+## 2. Locale "clone" aanmaken via GitHub Desktop
 
+In deze stap installeren we eerst locaal software die hoort bij GitHub: GitHub Desktop.
 
+> Tip: vaak wordt (aan softwareontwikkelaars) aangeraden om eerst het prakket Git te installeren.
+> We gaan het hier zonder Git doen: GitHub Desktop is een gebruikersvriendelijke
+> grafische "schil" om `git`. Git wordt daarentegen (zelfs door de bedenker) als minder gebruiksvriendelijk gezien.
 
+Het nut van GitHub Desktop is:
 
+<details><summary>Details (klik om uit te klappen)</summary></p>
 
+- je kunt je lokale wijziging bijhouden
+- je ziet het verschil (op regelbasis) tussen die versie die je aanbied aan GitHub en de vorige versie op GitHub
+- tijdens het lokaal werken heb je geen last van wijzigingen gemaakt door anderen
+- gelijktijdige wijzigingen van een tekstbestand door iemand worden automatisch gecombineerd met jouw wijzigingen
 
+Waarom is GitHub Desktop eigenlijk nodig, als je een bestand opgeslagen bij GitHub wilt wijzigen?
+Dat is ondeermeer omdat, bij het wijzingen van softwarebestanden, men de software lokaal wil bouwen en testen.
+Ons gebruik hier is een beetje een uitzonderingsgeval.
+
+</details></p>
+
+### 2.1 GitHub Desktop downloaden en installeren
+
+Via deze [link](https://desktop.github.com/download/) kan je GitHub Desktop gratis downloaded voor Mac of Windows
+
+<img width="968" height="944" alt="Screenshot 2025-12-13 at 23 02 29" src="https://github.com/user-attachments/assets/e080f792-2d87-4a05-8542-eb8375a417d9" />
+
+Er zijn versies voor oude (Intel) en nieuwe generatie (Apple Silicon: M1 - M5) Macs.
+Bij Windows krijg je een installatieprogramma dat je moet uitvoeren om het te installeren.
+Bij Mac kan je het .zip bestand in de Downloads folder openen. Er de resulterende `GitHub Desktop.app` naar de Applications folder slepen.
+
+Bij het openen van GitHub Desktop krijg je (in ieder geval op de Mac) de vraag of je de app wel vertrouwt.
+Gerust "Open" kiezen: er zijn miljoenen gebruikers je voorgegaan.
+En GitHub (al jaren deel van Microsoft) is fanatieker dan de meesten op veiligheid.
+
+Vervolgs de keus tussen GitHub.com (👈 deze kiezen) of GitHub Enterprise.
+
+Vervolgens wil het weten wie onder welke naam/wachtwoord jij bekend bent op GitHub.
+Dus moet je de gegevens gebruiken die je hierboven in het "Sign up for GitHub" gekozen hebt.
+Je browser of wachtwoord app kan hierbij een handje helpen. Maar dit is vergelijkbaar met
+allerlei andere online diensten.
+
+<img width="395" height="647" alt="Screenshot 2025-12-13 at 23 21 24" src="https://github.com/user-attachments/assets/8060a991-a12a-45cd-9c87-4f94cd1c7b6a" />
+
+Je krijgt nog een veiligheidsvraag van je Internet browser (Safari, Chrome, Edge, Firefox). Dat zal er ongeveer zo uitzien:
+
+```
+   Do you want to allow this website to open "GitHub Desktop"?
+```
+
+Dit is omdat je op dat punt overschakelt van browser naar een lokaal programma. Dat mag niet zomaar.
+Maar je kunt de GitHub Desktop applicatie ook zelf opstarten via een ikoontje in Applications of in een Start menu (Windows).
+
+### 2.2 Verbinding instellen naar GitHub
+
+Hiermee heb je een werkende GitHub Desktop. Maar bij opstarten krijg je nog een vraag:
+Het wachtwoord is al bekend van stap 2.1. Maar het wil eigenlijk nog de gekopen e-mail adres hebben:
+
+<img width="1028" height="728" alt="Screenshot 2025-12-13 at 23 30 56" src="https://github.com/user-attachments/assets/fb96dc61-83d8-4ec7-b9a6-5d16cd249eee" />
+
+Ook hier de invoer kloppen met de gegevens die je hierboven in het "Sign up for GitHub" gekozen hebt.
+
+GitHub Desktop weet (via GitHub) dat jij geen eigen "repository" (project) heb.
+Dus biedt het aan een te maken (mag van mij, maar misschien iets om later mee te spelen: ).
+En biedt het aan om mee te helpen aan een bestaande repository. Dat is de bedoeling: vdhamer/Photo-Club-Hub.
+
+<img width="1072" height="772" alt="Screenshot 2025-12-13 at 23 39 00" src="https://github.com/user-attachments/assets/bf910eab-42d5-4b8a-9202-4257cf1e7d8f" />
+
+Kies hier dus "Clone a Repository from the Internet...". <BR><BR> Waarna je (b.v.) URL kiest:
+
+<img width="497" height="292" alt="Screenshot 2025-12-13 at 23 51 23" src="https://github.com/user-attachments/assets/7914ae4c-d2e2-491e-afa4-aa1f62e19749" />
+
+Voordat je Clone klikt: dit gaat alle bestanden van dit projekt (in hun huidige versie) copieren naar de opgegeven locatie.
+Ik koos voor een directory "Photo-Club-Hub" binnen een nieuwe directory "GitHub" binnen nieuwe/bestaande directory "Developer".
+Maar dit mag je zelf weten: bij documenten, losse drive, in peter/Developer. 
+Het is ongetwijfeld daarna aanpasbaar, maar het is het simpelst als je nu even goed nadenkt:
+"waar kan ik honderden MegaBytes voor onbepaalde tijdsduur stallen zodat ik terug vind?".
+Op de Mac is /Users/mijnAccount/Developer gebruikelijk. Dan krijg je een mooi geel ikoon.
+
+> Tip: Op verjaardagsfeestjes kan je nerds imponeren met het feit dat jij "op GitHub" zit.
+> Het is tenslotte best iets om trots op te zijn. Heel Git is bepaald niet simpel.
+> Maar wij gebruiken hier maar enkele procent van de totale mogelijkheden.
+> GitHub heeft 500 honderd miljoen repositories en meer dan honderd miljoen gereistreerde gebruikers. De meeste gebruikers zitten
+> in de software industrie. Maar het is voor meerdere soorten documentbeheer bruikbaar: [GitHub for poets 1.1 tutorial](https://www.youtube.com/watch?v=BCQHnlnPusY).
+
+### 2.3 Wat zien we inmiddels?
+
+<img width="1072" height="772" alt="Screenshot 2025-12-14 at 00 09 29" src="https://github.com/user-attachments/assets/645261ec-7836-4931-80e5-86e60bb0e5a3" />
+
+Zo ziet GitHub Desktop eruit bij 1 locale clone van het GitHub repository vdhamer/Photo-Club-Hub:
+
+- "Current repository" zegt dat je nu bezig bent in het Photo-Club-Hub projekt
+- "Main branch" betekent dat je niet bezig bent met een tijdelijk subprojekt. Voor ons volstaat "Main" omdat we relatief kleine aanpassingen doen.
+- "Fetch origin" ververst jou locale copie van de repository vanuit GitHub. Lokale aanpassingen (op eigen computer) worden hierbij niet overschreven. Als het bestand waaraan je werkt op GitHub inmiddels aangepast is, dan 
+- Er is een knop om een teksteditor te openen. In mijn geval (Mac) is dat "Sublime Text". "Notepad++" wordt veel gebruikt voor dit soort bestanden onder Windows.
+- Er is een knop om de folder te bekijken (in Finder op Mac, of Explorer onder Windows).
+- Je kunt ook de repository bekijken op GitHub via jouw browser. Ik denk dat dat (behalve voor de "owner") alleen bekijken en niet wijzigen betreft.
+
+Ik zou "View file is your repository in Finder/Explorer" maar kiezen. 
+En dan op zoek gaan naar het bestand dat je aan wilt passen. En met een locale editor (Sublimte Text, Notepad++, etc) aanpassen.
+
+Dat ziet op een Mac zo uit (Windows iets soortgelijks).
+
+<img width="1032" height="576" alt="Screenshot 2025-12-14 at 00 27 12" src="https://github.com/user-attachments/assets/1bc3738a-b2ed-4c85-b7c4-0534a8e98744" />
+
+Dit is dus de standaard bestandsbeheer van MacOS of Windows. Met een onzichtbaar maar belangrijk verschil:
+GitHub Desktop regelt het op de hoogte houden van het centrale ("origin") repository in Github van jouw wijzigingen.
+GitHub/Git kan je ook lokaal vertellen (en tonen) wat er in welke versie gewijzigd is.
+Hiervoor houdt GitHub/Git automatisch een hele administratie bij in een verborgen directory.
 
 
