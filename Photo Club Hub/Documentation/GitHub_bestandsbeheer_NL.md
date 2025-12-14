@@ -80,7 +80,7 @@ Bijvoorbeeld om even te kijken naar een databestand of naar documentatie. Dus re
 
 ## 1. Account aanmaken ("Sign up") bij GitHub
 
-Wie dit ooit eerder gedaan heeft bij GitHub, kan deze stap overslaan.
+Wie zich ooit eerder geregistreed heeft bij GitHub, kan deze stap overslaan.
 
 Een account bij GitHub aanmaken is gratis.
 
@@ -105,7 +105,7 @@ Registratie van een nieuwe GitHub gebruiker gebeurt via de "__Sign up__" knop op
 
 </details></p>
 
-## 2. Lokale "clone" aanmaken via GitHub Desktop
+## 2. Lokale "Clone" aanmaken via GitHub Desktop
 
 In deze stap installeren we eerst lokaal software die hoort bij GitHub: GitHub Desktop.
 
@@ -196,7 +196,7 @@ Op de Mac is /Users/mijnAccount/Developer gebruikelijk. Dan krijg je een mooi ge
 
 <img width="1072" height="772" alt="Screenshot 2025-12-14 at 00 09 29" src="https://github.com/user-attachments/assets/645261ec-7836-4931-80e5-86e60bb0e5a3" />
 
-Zo ziet GitHub Desktop eruit bij 1 lokale clone van het GitHub Repository vdhamer/Photo-Club-Hub:
+Zo ziet GitHub Desktop eruit bij 1 lokale Clone van het GitHub Repository vdhamer/Photo-Club-Hub:
 
 - "Current Repository" zegt dat je nu bezig bent in het Photo-Club-Hub project
 - "Main branch" betekent dat je niet bezig bent met een tijdelijk subproject. Voor ons volstaat "Main" omdat we relatief kleine aanpassingen doen.
