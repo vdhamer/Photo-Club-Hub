@@ -301,7 +301,7 @@ En 1 Commit met de aangebrachte wijzigingen. Dus klik nu op "Pull Origin". Dit l
 Hier is het "Pull" verhaal weg (want dat is geregeld). Maar biedt GitHub Desktop aan om "__Push__ [to] Origin" voor je te doen.
 Klik op "Push [to] Origin". Dus zien we nu dit:
 
-<img width="1028" height="728" alt="Screenshot 2025-12-14 at 23 22 48" src="https://github.com/user-attachments/assets/34ec7ba8-e06a-4926-84a7-92c850438c62" />
+<img width="1072" height="772" alt="Screenshot 2025-12-14 at 23 23 57" src="https://github.com/user-attachments/assets/1491ad77-b429-47ff-8907-e00b7f2bea7e" />
 
 Hiermee zijn we eigenlijk klaar en hebben het volgende bereikt:
 
