@@ -344,7 +344,8 @@ Je wordt aan deze "Pull" actie herinnerd als het nodig is.
 - "Push Commit": de locale wijziging via "Push Commit" overbrengen naar GitHub. Hier kan een korte omschrijving helpen.
 - "Pull Request": de beheerders verzoeken om de wijzigingen te verwerken via "Pull Request". Hier kan een korte omschrijving ook helpen.
 
-Samenvatting van deze samenvatting: (Pull) --> Push --> Pull Request.
-De terminologie is niet geweldig.
-Maar GitHub Desktop bewaakt dat men geen stappen kan vergeten en voorkomt stappen in de verkeerde volgorde.
+Samenvatting van deze samenvatting zijn de volgende 3 danspasjes: (Pull) --> Push --> Pull Request.
+De terminologie is wat troebel (omdat er nog veel meer kan),
+maar `git` is desondanks een wereldstandaard geworden.
+Gelukkig bewaakt GitHub Desktop dat men de stappen in de juiste volgorde doet.
 
