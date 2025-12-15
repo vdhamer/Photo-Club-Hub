@@ -6,7 +6,7 @@ Het is met name bedoeld om ledenlijsten (zoals `mijnClub.level2.json`) of docume
 te wijzigen met minimale afhankelijkheid van derden.
 
 Het is ook mogelijk om nieuwe bestanden toe te voegen of bestaande bestanden te verwijderen.
-Maar dat krijgt hier geen aandacht omdat dit ongeveer op vrijwel dezelfde manier gaat.
+Dat gaat op een vergelijkbare manier.
 
 In hoofdlijnen komt het erop neer dat men een gewijzigd bestand kan aanmaken, en deze aanbieden aan het project ("__Repository__" ofwel "__Repo__").
 Tussen aanbieden en daadwerkelijk in gebruik nemen zit nog een __goedkeuringsstap__.
