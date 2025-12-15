@@ -335,12 +335,16 @@ en hoe lang geleden je voor het laatst "Pull" gedaan hebt. Pull vaak gebruiken k
 
 ## Hoe complex is dit bij toekomstige wijzigingen?
 
-Dit was een best lang verhaal. Maar stappen (1) en (2) en de omschakeling van "Clone" naar "Fork" zijn eenmalig.
+Dit was een best lang verhaal. Maar stappen (1) en (2) en de omschakeling van "Clone" naar "Fork" waren eenmalig.
 
-Wat je dus overhoud bij nieuwe wijzigingen zijn:
-- de eigenlijke verandering lokaal uitvoeren op het bestand (of bestanden). Daar ging het allemaal om.
-- desgevraagd zorgen dat je lokaal archief in de pas loopt met de centrale versie. Hier wordt je duidelijk aan herinnerd ("Pull").
-- de locale wijziging via "Push commit" doorgeven aan GitHub. Hier kan een omschrijving helpen.
-- de beheerders verzoeken om de wijzigingen te verwerken via "Pull Request".
-De rest is aan de beheerder (die zelf een stuk of 3 knopjes moet indrukken: bekijken, goedkeuren, accepteren).
+Wat je dus overhoud bij iedere wijzigingen zijn:
+- de eigenlijke verandering lokaal uitvoeren op het bestand (of bestanden). Daar ging het tenslotte om.
+- "Pull": desgevraagd centrale wijzingen overnemen naar je lokale bestanden.
+Je wordt aan deze "Pull" actie herinnerd als het nodig is.
+- "Push Commit": de locale wijziging via "Push Commit" overbrengen naar GitHub. Hier kan een korte omschrijving helpen.
+- "Pull Request": de beheerders verzoeken om de wijzigingen te verwerken via "Pull Request". Hier kan een korte omschrijving ook helpen.
+
+Samenvatting van deze samenvatting: (Pull) --> Push --> Pull Request.
+De terminologie is niet geweldig.
+Maar GitHub Desktop bewaakt dat men geen stappen kan vergeten en voorkomt stappen in de verkeerde volgorde.
 
