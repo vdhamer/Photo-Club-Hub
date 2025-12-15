@@ -351,13 +351,61 @@ Gelukkig bewaakt GitHub Desktop dat men de stappen in de juiste volgorde doet.
 
 ## Bonus
 
+### Verklarende woordenlijst
+
+- **Repository**  
+een verzameling bestanden in git of GitHub die samen als projekt beschouwd worden.
+Bijvoorbeeld alls bronprogrammatuur voor een software ontwikkelprojekt.
+De Repository (=Repo) kan openbaar of privé zijn.
+De bestanden zijn normaal platte tekst bestanden in allerlei talen en formaten die door een computer begrepen kunnen worden (.json, .md, .c, .swift).
+
+- **git**  
+een versiebeheer technologie die het mogelijk maakt om met 1 of meerdere personen aana een Repository te werken.
+Git kan je bedienen door commando's in een terminal venster te typen.
+Maar wordt vaak vanuit een grafische schil zoals GitHub Desktop aangestuurd.
+
+- **GitHub**  
+Een grote website waar miljoenen Repositories (met gehulp van git) beheerd worden. Gratis voor openbare projekten.\
+GitHub is sedert 2018 een dochteronderneming van Microsoft, maar daar merk je normaal niets van.
+
+- **Origin**  
+Een locatie waar de bron van een bepaald Repository staat. Hier dus een ander wooord voor GitHub.
+Het woord Origin wordt gebruikt omdat er allelei andere bronnen dan GitHub bestaan, zowel openbaar als binnen bedrijven.
+
+- **Clone**  
+Clone is slechts tijdelijk nodig in deze procedure (en dus hier onbelangrijk).
+Een Clone is een lokale kopie van een Repo op je eigen computer.
+De bestanden in een Clone kan je lokaal (gewijzigd of ongewijzigd) testen: het is slechts een copie.
+Maar een Clone staat **niet** (normaal) toe dat men wijzgingen terug kan sturen richting GitHub.
+
+- **Fork**:  
+Een Fork is een lokale kopie van een Repo op je eigen computer.
+Wijzigingen aan een Fork kan je aanbieden aan GitHub (ter controle en integratie).
+GitHub houdt bij iedere Repository, ter info, bij welke Forks ervan bestaan.
+
+- **Commit**  
+Een wijziging aan 1 of meer bestanden, met korte beschrijving, registreren in de lokale Git administratie.
+Commit is een soort voorportaat van wijzigingen die straks met Push naar GitHub kunnen gaan.
+
+- **Push**  
+Lokaal initiatief nemen om een of meerdere Commits naar GitHub (Origin) te sturen.
+Hiermee kunnen anderen het desgewenst bekijken, maar dit is hier een tussenstap richting Pull Request.
+
+- **Pull Request**
+Een verzoek richting een Repository beheerder op GitHub (Origin) om wijzigingen te integreren. Centraal gaat men dan vaak
+controleren of de wijziging ok is. En, als het ok is (Accept), verder verwerkt en opgenomen.
+
+- **Main**  
+De Main Branch is zeg maar "latest en greatest" versie van een Repository. In grote projekten, kan er in meerdere Branches
+tegelijk gewerkt worden (subteams). Hier hebben we aan Main voldoende.
+
 ### Meerdere GitHub accounts
 
 <details><summary>Details (klik om uit te klappen)</summary></p>
 
 In speciale gevallen waarbij men meer dan één GitHub account gebruikt, en meerdere manieren om commando's te sturen naar
 GitHub, moet je uiteraard voorzichtig zijn. Dit hoort niet te gebeuren voor mensen die alleen GitHub Desktop gebruiken.
-En niet te gebeuren die zwaarder gereedschap gebruiken rondom versiebeheer (want dit zijn ontwikelaar die normaal maar
-1 GitHub account nodig hebben). Zou je toch in de problemen komen: [configuratie van `git`](https://github.com/orgs/community/discussions/69218)
+En het hoort niet te gebeuren bij ontwikkelaars die speciaal gereedschap gebruiken rondom versiebeheer (b.v. Xcode of Visual Studio of IntelliJ).
+Zou men toch (net als ik) in de problemen komen, dan kan dit helpen: [configuratie van `git`](https://github.com/orgs/community/discussions/69218)
 
 </details></p>
