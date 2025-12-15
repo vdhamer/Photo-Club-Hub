@@ -1,32 +1,35 @@
 ## Bestandsbeheer bij GitHub
 
-Dit document beschrijft de procedures nodig om zich aan te melden bij www.github.com
-en om wijzigingen in _Photo Club Hub_ bestanden aan te bieden. 
+Dit document beschrijft de procedure om jezelf aan te melden bij www.github.com
+en om __wijzigingen__ in _Photo Club Hub_ bestanden aan te bieden. 
 Het is met name bedoeld om ledenlijsten (zoals `mijnClub.level2.json`) of documentatiebestanden (zoals dit bestand) 
-te wijzigen met minimale afhankelijkheid van derden.
+te wijzigen met minimale afhankelijkheid van derden. Maar het recept werkt voor vrijwel alle bestanden.
 
 Het is ook mogelijk om nieuwe bestanden toe te voegen of bestaande bestanden te verwijderen.
-Dat gaat op een vergelijkbare manier.
+Dat gaat op een vergelijkbare manier (en gaan we hier niet verder op in).
 
-In hoofdlijnen komt het erop neer dat men een gewijzigd bestand kan aanmaken, en deze aanbieden aan het project ("__Repository__" ofwel "__Repo__").
+In hoofdlijnen komt het erop neer dat men een gewijzigd bestand kan aanmaken, en het aanbieden aan het project ("__Repository__" ofwel "__Repo__").
 Tussen aanbieden en daadwerkelijk in gebruik nemen zit nog een __goedkeuringsstap__.
-De goedkeuringsstap voorkomt dat men zomaar een willekeurige wijziging in een willekeurig bestand kan aanbrengen.
-De goedkeuringsprocedure wordt hier moet beschreven omdat een Repository beheerder dat moet doen.
+De goedkeuringsstap zorgt dat men zomaar een willekeurige wijziging in een willekeurig bestand kan aanbrengen.
+De details van de goedkeuringsprocedure wordt hier overgeslagen omdat een Repository beheerder dat moet doen.
+
+   > Tip: Achterin dit document is een verklarende woordenlijst met Git-gerelateerde begippen.
+   > Daar vind je Git-gerelateerde termen zoals __Repository__ en __GitHub__.
 
 ### Alvast een samenvatting
 
 De hoofdstappen zijn dus:
 
 1. De gebruiker maakt (eenmalig) een account aan bij GitHub. Dat account is geldig voor _alle_ GitHub Repositories.
-2. De gebruiker maakt (eenmalig, via GitHub Desktop) een lokale kopie aan van 
-de _complete_ [Photo Club Hub](https://github.com/vdhamer/Photo-Club-Hub) Repository.
-3. Een bestand (of bestanden) wordt lokaal (op de eigen computer) aangepast.
-Deze stap kan zonder Internet verbindingen. De stap mag zo lang duren als nodig (minuten … dagen).
-4. De gebruiker biedt de aangepaste versie aan (weer via GitHub Desktop) bij de centrale Repository voor goedkeuring door de Repo beheerder(s).
+2. De gebruiker maakt (eenmalig, via `GitHub Desktop`) een lokale kopie aan van 
+de _complete_ inhoud van het [Photo Club Hub](https://github.com/vdhamer/Photo-Club-Hub) Repository.
+3. Een bestand (of bestanden) wordt lokaal (op de eigen computer) naar wens aangepast.
+Deze stap vereist geen Internet verbinding, en mag zo lang duren als men wil (minuten … dagen).
+4. De gebruiker biedt de aangepaste versie aan (weer via GitHub Desktop) bij de centrale Repository voor goedkeuring door de Repository beheerders.
 
-Bij een eventuele volgende verandering herhaal je stappen 3 en 4.
-Dus een bestand hoeft niet in een keer af, maar dient ten tijde van de goedkeuring wel bruikbaar zijn.
-Voor eventuele volgende veranderingen hoef je overigens niet te wachten totdat eerdere versies goedgekeurd zijn.
+Als later nog een verandering nodig is (gebeurt vaak) dan herhaal je stappen 3 en 4.
+Dus een bestandsaanpassing hoeft niet in een keer af, maar dient ten tijde van verzoek om goedkeuring natuurlijk wel bruikbaar zijn.
+Voor eventuele volgende veranderingen hoef je overigens niet te wachten totdat een eerdere versie goedgekeurd is.
 
    > Tip: GitHub (of het achterliggende `git`) is een zogenaamde versiebeheersystemen (_version control system_).
    > Dat houdt in dat het alle aangeboden bestandswijzigingen nauwlettend bijhoudt. 
