@@ -13,7 +13,7 @@ Tussen aanbieden en daadwerkelijk in gebruik nemen zit nog een __goedkeuringssta
 De goedkeuringsstap zorgt dat men zomaar een willekeurige wijziging in een willekeurig bestand kan aanbrengen.
 De details van de goedkeuringsprocedure wordt hier overgeslagen omdat een Repository beheerder dat moet doen.
 
-   > Tip: Achterin dit document is een verklarende woordenlijst met Git-gerelateerde begippen.
+   > Tip: Achterin dit document is een verklarende woordenlijst.  
    > Daar vind je Git-gerelateerde termen zoals __Repository__ en __GitHub__.
 
 ### Alvast een samenvatting
