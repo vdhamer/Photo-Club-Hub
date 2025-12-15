@@ -349,3 +349,15 @@ De terminologie is wat troebel (omdat er nog veel meer kan),
 maar `git` is desondanks een wereldstandaard geworden.
 Gelukkig bewaakt GitHub Desktop dat men de stappen in de juiste volgorde doet.
 
+## Bonus
+
+### Meerdere GitHub accounts
+
+<details><summary>Details (klik om uit te klappen)</summary></p>
+
+In speciale gevallen waarbij men meer dan één GitHub account gebruikt, en meerdere manieren om commando's te sturen naar
+GitHub, moet je uiteraard voorzichtig zijn. Dit hoort niet te gebeuren voor mensen die alleen GitHub Desktop gebruiken.
+En niet te gebeuren die zwaarder gereedschap gebruiken rondom versiebeheer (want dit zijn ontwikelaar die normaal maar
+1 GitHub account nodig hebben). Zou je toch in de problemen komen: [configuratie van `git`](https://github.com/orgs/community/discussions/69218)
+
+</details></p>
