@@ -142,7 +142,7 @@ Ons gebruik hier is een beetje een uitzonderingsgeval.
 
 Via deze [link](https://desktop.github.com/download/) kan je GitHub Desktop gratis downloaded voor Mac of voor Windows
 
-<img width="968" height="944" alt="Screenshot 2025-12-13 at 23 02 29" src="https://github.com/user-attachments/assets/e080f792-2d87-4a05-8542-eb8375a417d9" />
+<p align="center"><img width="968" height="944" alt="Screenshot 2025-12-13 at 23 02 29" src="https://github.com/user-attachments/assets/e080f792-2d87-4a05-8542-eb8375a417d9" /></p>
 
 Er zijn versies voor oude (Intel) en nieuwe generatie (Apple Silicon: M1 - M5) Macs.
 Bij Windows krijg je een installatieprogramma dat je moet uitvoeren om het te installeren.
@@ -159,7 +159,7 @@ Dus moet je de gegevens gebruiken die je hierboven in het "Sign up for GitHub" g
 Je browser of wachtwoord app kan hierbij een handje helpen. Maar dit is vergelijkbaar met
 allerlei andere online diensten.
 
-<img width="395" height="647" alt="Screenshot 2025-12-13 at 23 21 24" src="https://github.com/user-attachments/assets/8060a991-a12a-45cd-9c87-4f94cd1c7b6a" />
+<p align="center"><img width="395" height="647" alt="Screenshot 2025-12-13 at 23 21 24" src="https://github.com/user-attachments/assets/8060a991-a12a-45cd-9c87-4f94cd1c7b6a" /></p>
 
 Je krijgt nog een veiligheidsvraag van je Internet browser (Safari, Chrome, Edge, Firefox). Dat zal er ongeveer zo uitzien:
 
@@ -172,13 +172,13 @@ Maar je kunt de GitHub Desktop applicatie ook zelf opstarten via een icoontje in
 
 Ergens in het verhaal komt dit scherm ook voor. Gewoon op "Authorize desktop" klikken:
 
-<img width="532" height="626" alt="Screenshot 2025-12-13 at 19 13 17" src="https://github.com/user-attachments/assets/1bfde716-75b4-44de-8830-d8161c26bb40" />
+<p align="center"><img width="532" height="626" alt="Screenshot 2025-12-13 at 19 13 17" src="https://github.com/user-attachments/assets/1bfde716-75b4-44de-8830-d8161c26bb40" /></p>
 
 ### 2.2 Verbinding instellen naar GitHub
 
 Hiermee heb je een werkende GitHub Desktop. Maar bij het opstarten krijg je nog een vraag:
 
-<img width="1028" height="728" alt="Screenshot 2025-12-13 at 23 30 56" src="https://github.com/user-attachments/assets/fb96dc61-83d8-4ec7-b9a6-5d16cd249eee" />
+<p align="center"><img width="1028" height="728" alt="Screenshot 2025-12-13 at 23 30 56" src="https://github.com/user-attachments/assets/fb96dc61-83d8-4ec7-b9a6-5d16cd249eee" /></p>
 
 Ook hier moet de invoer kloppen met de gegevens die je hierboven in het "Sign up for GitHub" gekozen hebt.
 
@@ -186,11 +186,11 @@ GitHub Desktop weet (via GitHub) dat jij geen eigen "Repository" (project) heb.
 Dus biedt het aan één te maken (misschien iets voor later als je met GitHub zelf wilt oefenen).
 Het biedt als alternatief aan dat je mee wilt helpen aan een bestaande Repository. Dat is hier de bedoeling: `vdhamer/Photo-Club-Hub`.
 
-<img width="1072" height="772" alt="Screenshot 2025-12-13 at 23 39 00" src="https://github.com/user-attachments/assets/bf910eab-42d5-4b8a-9202-4257cf1e7d8f" />
+<p align="center"><img width="1072" height="772" alt="Screenshot 2025-12-13 at 23 39 00" src="https://github.com/user-attachments/assets/bf910eab-42d5-4b8a-9202-4257cf1e7d8f" /></p>
 
 Kies hier dus "Clone a Repository from the Internet...". <BR><BR> Waarna je (b.v.) URL kiest:
 
-<img width="518" height="313" alt="Screenshot 2025-12-13 at 19 14 34" src="https://github.com/user-attachments/assets/079eceae-efec-45da-84be-41ef36436365" />
+<p align="center"><img width="518" height="313" alt="Screenshot 2025-12-13 at 19 14 34" src="https://github.com/user-attachments/assets/079eceae-efec-45da-84be-41ef36436365" /></p>
 
 Voordat je Clone klikt: dit gaat __alle__ bestanden van dit project in hun huidige versie kopiëren naar de door jou gekozen directory op jouw computer.
 Ik koos voor een directory "Photo-Club-Hub" binnen een nieuwe directory "GitHubDesktopRepos" binnen een directory "Developer".
@@ -208,7 +208,7 @@ Op de Mac is /Users/mijnAccount/Developer gebruikelijk. Dan zie je een speciaal 
 
 ### 2.3 Wat zien we inmiddels?
 
-<img width="1072" height="772" alt="Screenshot 2025-12-13 at 19 15 51" src="https://github.com/user-attachments/assets/8227d1e7-483e-44b7-aa4f-a36400f34e83" />
+<p align="center"><img width="1072" height="772" alt="Screenshot 2025-12-13 at 19 15 51" src="https://github.com/user-attachments/assets/8227d1e7-483e-44b7-aa4f-a36400f34e83" /></p>
 
 Zo ziet GitHub Desktop eruit bij 1 lokale Clone van het GitHub Repository vdhamer/Photo-Club-Hub:
 
@@ -226,7 +226,7 @@ En dan op zoek gaan naar het bestand dat je aan wilt passen. En met een lokale e
 
 Dat ziet op een Mac zo uit (onder Windows zie je iets vergelijkbaars):
 
-<img width="1032" height="576" alt="Screenshot 2025-12-14 at 00 27 12" src="https://github.com/user-attachments/assets/1bc3738a-b2ed-4c85-b7c4-0534a8e98744" />
+<p align="center"><img width="1032" height="576" alt="Screenshot 2025-12-14 at 00 27 12" src="https://github.com/user-attachments/assets/1bc3738a-b2ed-4c85-b7c4-0534a8e98744" /></p>
 
 Dit is dus de standaard bestandsbeheer van MacOS of Windows. Met een onzichtbaar maar belangrijk verschil:
 GitHub Desktop regelt dat het centrale ("origin") Repository in Github op de hoogte gehouden wordt van jouw aanpassingen.
@@ -252,7 +252,7 @@ We doen nu alsof wij die wijziging willen aanbieden.
 
 In GitHub Desktop zien we (meteen na openen) het volgende:
 
-<img width="1028" height="728" alt="Screenshot 2025-12-14 at 22 27 44" src="https://github.com/user-attachments/assets/9f68f790-3bd7-4947-ba30-b3a279a28a53" />
+<p align="center"><img width="1028" height="728" alt="Screenshot 2025-12-14 at 22 27 44" src="https://github.com/user-attachments/assets/9f68f790-3bd7-4947-ba30-b3a279a28a53" /></p>
 
 Hier zijn een paar dingen te zien:
 1. Onder JSON/whiteboard.txt zie je de regels die verwijderd zijn (rood, "-") en regels die nieuw zijn (groen, "+").
@@ -269,15 +269,15 @@ Al kunnen we ze verderop weer gelijktrekken.
 
 We gaan eerst (5) oplossen. Dit is maar _eenmalig_ nodig. Klikken op "create a Fork" levert dit:
 
-<img width="1072" height="772" alt="Screenshot 2025-12-14 at 22 41 18" src="https://github.com/user-attachments/assets/49ae986b-f785-41cd-a685-86b4713edfb5" />
+<p align="center"><img width="1072" height="772" alt="Screenshot 2025-12-14 at 22 41 18" src="https://github.com/user-attachments/assets/49ae986b-f785-41cd-a685-86b4713edfb5" /></p>
 
 Hier kiezen we "Fork this Repository", en dit levert alweer een vraag:
 
-<img width="1072" height="772" alt="Screenshot 2025-12-14 at 22 41 43" src="https://github.com/user-attachments/assets/e787a577-17b0-4a1f-869f-42eade82c627" />
+<p align="center"><img width="1072" height="772" alt="Screenshot 2025-12-14 at 22 41 43" src="https://github.com/user-attachments/assets/e787a577-17b0-4a1f-869f-42eade82c627" /></p>
 
 Kies "To contribute to the parent project" (default) en "Continue". Dit brengt ons naar:
 
-<img width="1072" height="772" alt="Screenshot 2025-12-14 at 22 51 48" src="https://github.com/user-attachments/assets/f9c33883-d845-4e56-a9d6-7a4b38159411" />
+<p align="center"><img width="1072" height="772" alt="Screenshot 2025-12-14 at 22 51 48" src="https://github.com/user-attachments/assets/f9c33883-d845-4e56-a9d6-7a4b38159411" /></p>
 
 Hier waren we indedaad al: het is het hoofdscherm van GitHub Desktop. Maar nu is die vervelende waarschuwing weg.
 En kunnen we nu wel __Commit__ doen van met de blauwe knop linksonder. Het is Commit "to main" want we gebruiken hier alleen de Branch genaamd "main".
@@ -288,7 +288,7 @@ Bij dit specifieke bestand zal die beheerder het al gauw goedvinden: het is maar
 
 Dan zie je dit:
 
-<img width="1072" height="772" alt="Screenshot 2025-12-14 at 23 01 28" src="https://github.com/user-attachments/assets/1aa2f990-73c3-47a1-aeff-def28d874445" />
+<p align="center"><img width="1072" height="772" alt="Screenshot 2025-12-14 at 23 01 28" src="https://github.com/user-attachments/assets/1aa2f990-73c3-47a1-aeff-def28d874445" /></p>
 
 Hier zie je (in dit geval) dat er 2 Commits in het repository ondertussen door anderen gedaan zijn.
 De blauwe "Pull Origin" knop trekt ("pull") die vanuit het centrale repo naar jaar locale repo toe.
@@ -296,12 +296,12 @@ Het is het duidelijkste, als er iets te "pull"en valt om dit nu even te doen.
 We gaan nu klikken op "Pull Origin", maar let tegelijk op de getalletjes bovenaan: er zijn 2 Commits klaar voor Pull (door iemand anders veroorzaakt).
 En 1 Commit met de aangebrachte wijzigingen. Dus klik nu op "Pull Origin". Dit levert op:
 
-<img width="1028" height="728" alt="Screenshot 2025-12-14 at 23 08 35" src="https://github.com/user-attachments/assets/7a21d995-9428-4fc2-a75f-1a5c2c72181a" />
+<p align="center"><img width="1028" height="728" alt="Screenshot 2025-12-14 at 23 08 35" src="https://github.com/user-attachments/assets/7a21d995-9428-4fc2-a75f-1a5c2c72181a" /></p>
 
 Hier is het "Pull" verhaal weg (want dat is geregeld). Maar biedt GitHub Desktop aan om "__Push__ [to] Origin" voor je te doen.
 Klik op "Push [to] Origin". Dus zien we nu dit:
 
-<img width="1072" height="772" alt="Screenshot 2025-12-14 at 23 23 57" src="https://github.com/user-attachments/assets/1491ad77-b429-47ff-8907-e00b7f2bea7e" />
+<p align="center"><img width="1072" height="772" alt="Screenshot 2025-12-14 at 23 23 57" src="https://github.com/user-attachments/assets/1491ad77-b429-47ff-8907-e00b7f2bea7e" /></p>
 
 In GitHub Desktop moeten we nog de beheerders van het Repository melden dat er een pakje voor hun deur ligt om te bekijken en goed te keuren.
 Dat heet een "Pull Request" omdat de beheerders het initiatief moeten nemen om de wijziging aan bood te halen ("Pull").
@@ -309,13 +309,13 @@ En dit is een verzoek ("Request") om dat bij gelegenheid te doen.
 
 Dit gaat via het menu `Branch` > `Pull Request`. Dat opent de browser:
 
-<img width="1393" height="1522" alt="Screenshot 2025-12-15 at 00 46 50" src="https://github.com/user-attachments/assets/55e08f00-3ed7-4211-9641-b908940aa476" />
+<p align="center"><img width="1393" height="1522" alt="Screenshot 2025-12-15 at 00 46 50" src="https://github.com/user-attachments/assets/55e08f00-3ed7-4211-9641-b908940aa476" /></p>
 
 Hier kan je opnieuw alle wijzigingen zien. En eventueel de beschrijving toevoegen of aanpassen.
 Je verstuurd dit naar de Repository beheerders via de know "Create Pull Request".
 Vervolgens zie je:
 
-<img width="1169" height="944" alt="Screenshot 2025-12-15 at 00 47 47" src="https://github.com/user-attachments/assets/3101c08e-7edd-4a3b-b0a1-f35b45375110" />
+<p align="center"><img width="1169" height="944" alt="Screenshot 2025-12-15 at 00 47 47" src="https://github.com/user-attachments/assets/3101c08e-7edd-4a3b-b0a1-f35b45375110" /></p>
 
 Dit is slechts ter informatie: je kunt zien (in het rood) dat iemand de wijziging ("Pull Request") mag controleren ("Review"). En bovenaan kan je zien dat er 1 Pull Request in de wachtrij staat. 
 Dit zelfde scherm gebruikt de beheerder om de inhoud even te bekijken, en als alles ok is, om de wijziging op te nemen
