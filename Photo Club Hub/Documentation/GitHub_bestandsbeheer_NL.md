@@ -391,7 +391,7 @@ Commit is een soort voorportaat van wijzigingen die straks met Push naar GitHub 
 Lokaal initiatief nemen om een of meerdere Commits naar GitHub (Origin) te sturen.
 Hiermee kunnen anderen het desgewenst bekijken, maar dit is hier een tussenstap richting Pull Request.
 
-- **Pull Request**
+- **Pull Request**  
 Een verzoek richting een Repository beheerder op GitHub (Origin) om wijzigingen te integreren. Centraal gaat men dan vaak
 controleren of de wijziging ok is. En, als het ok is (Accept), verder verwerkt en opgenomen.
 
