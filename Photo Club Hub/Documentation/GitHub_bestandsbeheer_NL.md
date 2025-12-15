@@ -14,7 +14,7 @@ De goedkeuringsstap zorgt dat men zomaar een willekeurige wijziging in een wille
 De details van de goedkeuringsprocedure wordt hier overgeslagen omdat een Repository beheerder dat moet doen.
 
    > Tip: Achterin dit document is een verklarende woordenlijst.
-   > Daar vind je Git-gerelateerde termen zoals __Repository__, __GitHub__ en de beruchte __Commit__, __Push__, __Pull__ en __Pull Request__.
+   > Daar vind je Git-gerelateerde termen zoals __Repository__, __GitHub__ en de beruchte Git rituelen: __Commit__, __Push__, __Pull__ en __Pull Request__.
 
 ### Alvast een samenvatting
 
@@ -367,21 +367,19 @@ een versiebeheer technologie die het mogelijk maakt om met 1 of meerdere persone
 Git kan je bedienen door commando's in een terminal venster te typen.
 Maar wordt vaak vanuit een grafische schil zoals GitHub Desktop aangestuurd.
 
-- __GitHub__  
+- __GitHub__ en __Origin__
 Een grote website waar miljoenen Repositories (met gehulp van git) beheerd worden. Gratis voor openbare projekten.\
 GitHub is sedert 2018 een dochteronderneming van Microsoft, maar daar merk je normaal niets van.
 
-- __Origin__  
-Een locatie waar de bron van een bepaald Repository staat. Hier dus een ander wooord voor GitHub.
+Origin is de plek waar de bron van een bepaald Repository staat. Hier dus een ander wooord voor GitHub.
 Het woord Origin wordt gebruikt omdat er allelei andere bronnen dan GitHub bestaan, zowel openbaar als binnen bedrijven.
 
-- __Clone__  
+- __Clone__ en __Fork__
 Clone is slechts tijdelijk nodig in deze procedure (en dus hier onbelangrijk).
 Een Clone is een lokale kopie van een Repo op je eigen computer.
 De bestanden in een Clone kan je lokaal (gewijzigd of ongewijzigd) testen: het is slechts een copie.
 Maar een Clone staat __niet__ (normaal) toe dat men wijzgingen terug kan sturen richting GitHub.
 
-- __Fork__:  
 Een Fork is een lokale kopie van een Repo op je eigen computer.
 Wijzigingen aan een Fork kan je aanbieden aan GitHub (ter controle en integratie).
 GitHub houdt bij iedere Repository, ter info, bij welke Forks ervan bestaan.
@@ -392,7 +390,14 @@ Commit is een soort voorportaat van wijzigingen die straks met Push naar GitHub 
 
 - __Push__  
 Lokaal initiatief nemen om een of meerdere Commits naar GitHub (Origin) te sturen.
-Hiermee kunnen anderen het desgewenst bekijken, maar dit is hier een tussenstap richting Pull Request.
+GitHub krijgt die informatie binnen zonder erom te vragen (vandaar de naam Push).
+Hiermee kunnen anderen de concept veranderingen zien, maar zijn de verandering nog niet definitief geaccepteerd.
+
+- __Pull__  
+Lokaal initiatief nemen om de lokale bestanden bij te werken met mogelijke centrale wijzigingen in het GitHub Repository.
+Pull is verwant aan een locaal E-mail programma dat nieuwe berichten ophaalt van een centrale server.
+Alleen by E-mail kan het geen kwaad om geregeld nieuwe berichten binnen te halen, en hier moet je op een knop drukken om te zeggen wanneer het je uitkomt.
+GitHub Desktop waarschuwt je als er iets veranderd is, en dan kan je beslissen of je het nu wilt ophalen.
 
 - __Pull Request__  
 Een verzoek richting een Repository beheerder op GitHub (Origin) om wijzigingen te integreren. Centraal gaat men dan vaak
