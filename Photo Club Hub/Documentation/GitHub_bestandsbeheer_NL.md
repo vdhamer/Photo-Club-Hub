@@ -307,14 +307,40 @@ In GitHub Desktop moeten we nog de beheerders van het Repository melden dat er e
 Dat heet een "Pull Request" omdat de beheerders het initiatief moeten nemen om de wijziging aan bood te halen ("Pull").
 En dit is een verzoek ("Request") om dat bij gelegenheid te doen.
 
-Dit gaat via het menu `Branch` > `Pull Request`.
+Dit gaat via het menu `Branch` > `Pull Request`. Dat opent de browser:
 
-Hiermee zijn we eigenlijk (eindelijk) klaar en hebben het volgende bereikt:
+<img width="1393" height="1522" alt="Screenshot 2025-12-15 at 00 46 50" src="https://github.com/user-attachments/assets/55e08f00-3ed7-4211-9641-b908940aa476" />
 
-1) jouw wijziging aan `whiteboard.txt` ligt nu ter goedkeuring bij GitHub.
-Dit was "Push". Die heeft jouw Commit (evt meerdere) via het Internet naar GitHub ("Origin") overgebracht. Push vaak gebruiken kan geen kwaad.
-2) in dit geval, hebben we wat laatste ongerelateerde wijzigingen in de omgekeerde richting ("Pull") naar binnen gehengeld.
-Vaak is er niets gewijzigd - dat hangt af van hoe actief anderen zijn, en hoe lang geleden je voor het laatst "Pull" gedaan hebt.
-Pull vaak gebruiken kan geen kwaad. Vermoedelijk kan je alleen Pull doen als GitHub Desktop ziet dat er iets nieuws voor je is.
-3) We hebben bij het Push commando, een korte beschrijving geleverd (soort etiket) van wat er gewijzigd is. "Summary" is verplicht en kan zoiets bevatten als "added website for JP of fgDeKoekoek". Dan hou je de geschiedenis leesbaar. In het "Description" veld is ruimte voor eventuele aanvullende tekst.
+Hier kan je opnieuw alle wijzigingen zien. En eventueel de beschrijving toevoegen of aanpassen.
+Je verstuurd dit naar de Repository beheerders via de know "Create Pull Request".
+Vervolgens zie je:
+
+<img width="1169" height="944" alt="Screenshot 2025-12-15 at 00 47 47" src="https://github.com/user-attachments/assets/3101c08e-7edd-4a3b-b0a1-f35b45375110" />
+
+Dit is slechts ter informatie: je kunt zien (in het rood) dat iemand de wijziging ("Pull Request") mag controleren ("Review"). En bovenaan kan je zien dat er 1 Pull Request in de wachtrij staat. 
+Dit zelfde scherm gebruikt de beheerder om de inhoud even te bekijken, en als alles ok is, om de wijziging op te nemen
+in het repository.
+
+Hiermee zijn we (eindelijk) klaar en hebben het volgende bereikt:
+
+1) jouw wijziging aan `whiteboard.txt` ligt nu ter goedkeuring bij de repository beheerder.
+Dit ging via "Push". Dat brengt jouw Commit (evt meerdere) naar GitHub. Push vaak gebruiken kan geen kwaad.
+2) de wijzging ligt ter goedkeuring bij de repo beheerder. Dat is het resultaat van de "Pull Request".
+3) in dit geval, hebben we terloops wat recente maar ongerelateerde wijzigingen in de
+4) omgekeerde richting ("Pull") naar binnen getrokken.
+Vaak is er niets gewijzigd - dat hangt af van hoe actief anderen zijn,
+en hoe lang geleden je voor het laatst "Pull" gedaan hebt. Pull vaak gebruiken kan geen kwaad.
+5) We hebben bij zowel de finale "Pull Request" als bij de eerder Commit een omschrijving kunnen aanleveren
+(zeg maar een etiket) van wat er gewijzigd is.
+
+## Hoe complex is dit bij toekomstige wijzigingen?
+
+Dit was een best lang verhaal. Maar stappen (1) en (2) en de omschakeling van "Clone" naar "Fork" zijn eenmalig.
+
+Wat je dus overhoud bij nieuwe wijzigingen zijn:
+- de eigenlijke verandering lokaal uitvoeren op het bestand (of bestanden). Daar ging het allemaal om.
+- desgevraagd zorgen dat je lokaal archief in de pas loopt met de centrale versie. Hier wordt je duidelijk aan herinnerd ("Pull").
+- de locale wijziging via "Push commit" doorgeven aan GitHub. Hier kan een omschrijving helpen.
+- de beheerders verzoeken om de wijzigingen te verwerken via "Pull Request".
+De rest is aan de beheerder (die zelf een stuk of 3 knopjes moet indrukken: bekijken, goedkeuren, accepteren).
 
