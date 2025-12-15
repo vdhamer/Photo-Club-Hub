@@ -1,7 +1,7 @@
 ## Bestandsbeheer bij GitHub
 
 Dit document beschrijft de procedures nodig om zich aan te melden bij www.github.com
-en om wijzigingen in _Photo Club Hub_ bestanden aan te bieden zonder dat hiervoor een tussenpersoon nodig is. 
+en om wijzigingen in _Photo Club Hub_ bestanden aan te bieden. 
 Het is met name bedoeld om ledenlijsten (zoals `mijnClub.level2.json`) of documentatiebestanden (zoals dit bestand) 
 te wijzigen met minimale afhankelijkheid van derden.
 
