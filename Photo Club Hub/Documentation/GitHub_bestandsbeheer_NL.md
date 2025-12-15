@@ -234,3 +234,118 @@ Hiervoor houdt GitHub/`git` automatisch een hele administratie bij in een verbor
 
 ## 3. Bestand op de eigen computer aanpassen
 
+In de directory `User/Developer/GitHubDesktopRepos/Photo-Club-Hub` (of wat je ook gekozen mocht hebben) vind je
+een JSON directory met daarin een bestand genaamd `whiteboard.txt`. Dit kan je naar hartelust aanpassen.
+Het bestand dient namelijk alleen dit doel. De software doet er niets mee.
+
+Dus...
+- ga naar `User/Developer/GitHubDesktopRepos/Photo-Club-Hub/JSON`
+- open het bestand in een editor (Sublime Text, Notepad++, Notepad, TextEdit)
+- bekijk even de bestaande inhoud. Het had oorspronkelijk 10 niet-blanko regels, maar dat kan veranderd zijn.
+- maak een wijziging (doet er niet toe wat je wijzigd, de inhoud is wel openbaar)
+- sla het bestand lokaal op (vaak Ctrl-S of File|Save in het menu)
+
+## 4. Aangepast bestand aanbieden aan repository in GitHub
+
+Nu hebben we een lokale clone van het Photo-Club-Hub repository dat (voor whiteboard.txt) voorloopt ten opzichte van het bestand op GitHub.
+We doen nu alsof wij die wijziging willen aanbieden.
+
+In GitHub Desktop zien we (meteen na openen) het volgende:
+
+<img width="1028" height="728" alt="Screenshot 2025-12-14 at 22 27 44" src="https://github.com/user-attachments/assets/9f68f790-3bd7-4947-ba30-b3a279a28a53" />
+
+Hier zijn een paar dingen te zien:
+1. Onder JSON/whiteboard.txt zie je de regels die verwijderd zijn (rood, "-") en regels die nieuw zijn (groen, "+").
+Er kunnen meerdere verandering per bestand getoond worden. En er kunnen meerdere bestanden veranderd zijn.
+2. Er staat in dit geval "1 changed file", met een lijst van veranderde bestanden daar vlak onder.
+3. Er staat je alle wijzingen kunt aanbieden via de knop "Commit 1 file to main".
+Met een automatisch gegeneerde text over de wijziging. Die text kan je aanpassen.
+Belangrijke: de term rondom `git` voor veranderingen aanbieden aan de centrale repository is __Commit__.
+5. Er staat deze keer een waarschuwing dat we nog geen rechten hebben om de wijzigingen te Commit'en. 
+Dit komt omdat we Clone gedaan hebben hierboven. 
+Clone is dus zonder terugschrijf mogelijkheid. De equivalent met terugschrijf mogelijkeheid heet __Fork__.
+De term Fork hangt samen met b.v. een splitsing in een landweg: beide wegen gaan los van elkaar verder.
+Al kunnen we ze verderop weer gelijktrekken.
+
+We gaan eerst (5) oplossen. Dit is maar _eenmalig_ nodig. Klikken op "create a Fork" levert dit:
+
+<img width="1072" height="772" alt="Screenshot 2025-12-14 at 22 41 18" src="https://github.com/user-attachments/assets/49ae986b-f785-41cd-a685-86b4713edfb5" />
+
+Hier kiezen we "Fork this Repository", en dit levert alweer een vraag:
+
+<img width="1072" height="772" alt="Screenshot 2025-12-14 at 22 41 43" src="https://github.com/user-attachments/assets/e787a577-17b0-4a1f-869f-42eade82c627" />
+
+Kies "To contribute to the parent project" (default) en "Continue". Dit brengt ons naar:
+
+<img width="1072" height="772" alt="Screenshot 2025-12-14 at 22 51 48" src="https://github.com/user-attachments/assets/f9c33883-d845-4e56-a9d6-7a4b38159411" />
+
+Hier waren we indedaad al: het is het hoofdscherm van GitHub Desktop. Maar nu is die vervelende waarschuwing weg.
+En kunnen we nu wel __Commit__ doen van met de blauwe knop linksonder. Het is Commit "to main" want we gebruiken hier alleen de Branch genaamd "main".
+
+Ter herinnering, Commit biedt de wijzigingen aan bij GitHub, 
+waar de wijzigingen vervolgens door een beheerder van dit Repository goedgekeurd kunnen worden.
+Bij dit specifieke bestand zal die beheerder het al gauw goedvinden: het is maar een kliederbestand (vandaar "whiteboard.txt").
+
+Dan zie je dit:
+
+<img width="1072" height="772" alt="Screenshot 2025-12-14 at 23 01 28" src="https://github.com/user-attachments/assets/1aa2f990-73c3-47a1-aeff-def28d874445" />
+
+Hier zie je (in dit geval) dat er 2 Commits in het repository ondertussen door anderen gedaan zijn.
+De blauwe "Pull Origin" knop trekt ("pull") die vanuit het centrale repo naar jaar locale repo toe.
+Het is het duidelijkste, als er iets te "pull"en valt om dit nu even te doen. 
+We gaan nu klikken op "Pull Origin", maar let tegelijk op de getalletjes bovenaan: er zijn 2 Commits klaar voor Pull (door iemand anders veroorzaakt).
+En 1 Commit met de aangebrachte wijzigingen. Dus klik nu op "Pull Origin". Dit levert op:
+
+<img width="1028" height="728" alt="Screenshot 2025-12-14 at 23 08 35" src="https://github.com/user-attachments/assets/7a21d995-9428-4fc2-a75f-1a5c2c72181a" />
+
+Hier is het "Pull" verhaal weg (want dat is geregeld). Maar biedt GitHub Desktop aan om "__Push__ [to] Origin" voor je te doen.
+Klik op "Push [to] Origin". Dus zien we nu dit:
+
+<img width="1072" height="772" alt="Screenshot 2025-12-14 at 23 23 57" src="https://github.com/user-attachments/assets/1491ad77-b429-47ff-8907-e00b7f2bea7e" />
+
+In GitHub Desktop moeten we nog de beheerders van het Repository melden dat er een pakje voor hun deur ligt om te bekijken en goed te keuren.
+Dat heet een "Pull Request" omdat de beheerders het initiatief moeten nemen om de wijziging aan bood te halen ("Pull").
+En dit is een verzoek ("Request") om dat bij gelegenheid te doen.
+
+Dit gaat via het menu `Branch` > `Pull Request`. Dat opent de browser:
+
+<img width="1393" height="1522" alt="Screenshot 2025-12-15 at 00 46 50" src="https://github.com/user-attachments/assets/55e08f00-3ed7-4211-9641-b908940aa476" />
+
+Hier kan je opnieuw alle wijzigingen zien. En eventueel de beschrijving toevoegen of aanpassen.
+Je verstuurd dit naar de Repository beheerders via de know "Create Pull Request".
+Vervolgens zie je:
+
+<img width="1169" height="944" alt="Screenshot 2025-12-15 at 00 47 47" src="https://github.com/user-attachments/assets/3101c08e-7edd-4a3b-b0a1-f35b45375110" />
+
+Dit is slechts ter informatie: je kunt zien (in het rood) dat iemand de wijziging ("Pull Request") mag controleren ("Review"). En bovenaan kan je zien dat er 1 Pull Request in de wachtrij staat. 
+Dit zelfde scherm gebruikt de beheerder om de inhoud even te bekijken, en als alles ok is, om de wijziging op te nemen
+in het repository.
+
+Hiermee zijn we (eindelijk) klaar en hebben het volgende bereikt:
+
+1) jouw wijziging aan `whiteboard.txt` ligt nu ter goedkeuring bij de repository beheerder.
+Dit ging via "Push". Dat brengt jouw Commit (evt meerdere) naar GitHub. Push vaak gebruiken kan geen kwaad.
+2) de wijzging ligt ter goedkeuring bij de repo beheerder. Dat is het resultaat van de "Pull Request".
+3) in dit geval, hebben we terloops wat recente maar ongerelateerde wijzigingen in de
+4) omgekeerde richting ("Pull") naar binnen getrokken.
+Vaak is er niets gewijzigd - dat hangt af van hoe actief anderen zijn,
+en hoe lang geleden je voor het laatst "Pull" gedaan hebt. Pull vaak gebruiken kan geen kwaad.
+5) We hebben bij zowel de finale "Pull Request" als bij de eerder Commit een omschrijving kunnen aanleveren
+(zeg maar een etiket) van wat er gewijzigd is.
+
+## Hoe complex is dit bij toekomstige wijzigingen?
+
+Dit was een best lang verhaal. Maar stappen (1) en (2) en de omschakeling van "Clone" naar "Fork" waren eenmalig.
+
+Wat je dus overhoud bij iedere wijzigingen zijn:
+- de eigenlijke verandering lokaal uitvoeren op het bestand (of bestanden). Daar ging het tenslotte om.
+- "Pull": desgevraagd centrale wijzingen overnemen naar je lokale bestanden.
+Je wordt aan deze "Pull" actie herinnerd als het nodig is.
+- "Push Commit": de locale wijziging via "Push Commit" overbrengen naar GitHub. Hier kan een korte omschrijving helpen.
+- "Pull Request": de beheerders verzoeken om de wijzigingen te verwerken via "Pull Request". Hier kan een korte omschrijving ook helpen.
+
+Samenvatting van deze samenvatting zijn de volgende 3 danspasjes: (Pull) --> Push --> Pull Request.
+De terminologie is wat troebel (omdat er nog veel meer kan),
+maar `git` is desondanks een wereldstandaard geworden.
+Gelukkig bewaakt GitHub Desktop dat men de stappen in de juiste volgorde doet.
+
