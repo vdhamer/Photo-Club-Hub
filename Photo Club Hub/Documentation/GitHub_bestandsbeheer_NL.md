@@ -14,7 +14,7 @@ De goedkeuringsstap zorgt dat men zomaar een willekeurige wijziging in een wille
 De details van de goedkeuringsprocedure wordt hier overgeslagen omdat een Repository beheerder dat moet doen.
 
    > Tip: Achterin dit document is een verklarende woordenlijst.  
-   > Daar vind je Git-gerelateerde termen zoals __Repository__ en __GitHub__.
+   > Daar vind je Git-gerelateerde termen zoals __Repository__, __GitHub__ en het beruchte riedetje __Commit__, __Push__, __Pull__
 
 ### Alvast een samenvatting
 
@@ -356,49 +356,49 @@ Gelukkig bewaakt GitHub Desktop dat men de stappen in de juiste volgorde doet.
 
 ### Verklarende woordenlijst
 
-- **Repository**  
+- __Repository__  
 een verzameling bestanden in git of GitHub die samen als projekt beschouwd worden.
 Bijvoorbeeld alls bronprogrammatuur voor een software ontwikkelprojekt.
 De Repository (=Repo) kan openbaar of privé zijn.
 De bestanden zijn normaal platte tekst bestanden in allerlei talen en formaten die door een computer begrepen kunnen worden (.json, .md, .c, .swift).
 
-- **git**  
+- __git__  
 een versiebeheer technologie die het mogelijk maakt om met 1 of meerdere personen aana een Repository te werken.
 Git kan je bedienen door commando's in een terminal venster te typen.
 Maar wordt vaak vanuit een grafische schil zoals GitHub Desktop aangestuurd.
 
-- **GitHub**  
+- __GitHub__  
 Een grote website waar miljoenen Repositories (met gehulp van git) beheerd worden. Gratis voor openbare projekten.\
 GitHub is sedert 2018 een dochteronderneming van Microsoft, maar daar merk je normaal niets van.
 
-- **Origin**  
+- __Origin__  
 Een locatie waar de bron van een bepaald Repository staat. Hier dus een ander wooord voor GitHub.
 Het woord Origin wordt gebruikt omdat er allelei andere bronnen dan GitHub bestaan, zowel openbaar als binnen bedrijven.
 
-- **Clone**  
+- __Clone__  
 Clone is slechts tijdelijk nodig in deze procedure (en dus hier onbelangrijk).
 Een Clone is een lokale kopie van een Repo op je eigen computer.
 De bestanden in een Clone kan je lokaal (gewijzigd of ongewijzigd) testen: het is slechts een copie.
-Maar een Clone staat **niet** (normaal) toe dat men wijzgingen terug kan sturen richting GitHub.
+Maar een Clone staat __niet__ (normaal) toe dat men wijzgingen terug kan sturen richting GitHub.
 
-- **Fork**:  
+- __Fork__:  
 Een Fork is een lokale kopie van een Repo op je eigen computer.
 Wijzigingen aan een Fork kan je aanbieden aan GitHub (ter controle en integratie).
 GitHub houdt bij iedere Repository, ter info, bij welke Forks ervan bestaan.
 
-- **Commit**  
+- __Commit__  
 Een wijziging aan 1 of meer bestanden, met korte beschrijving, registreren in de lokale Git administratie.
 Commit is een soort voorportaat van wijzigingen die straks met Push naar GitHub kunnen gaan.
 
-- **Push**  
+- __Push__  
 Lokaal initiatief nemen om een of meerdere Commits naar GitHub (Origin) te sturen.
 Hiermee kunnen anderen het desgewenst bekijken, maar dit is hier een tussenstap richting Pull Request.
 
-- **Pull Request**  
+- __Pull Request__  
 Een verzoek richting een Repository beheerder op GitHub (Origin) om wijzigingen te integreren. Centraal gaat men dan vaak
 controleren of de wijziging ok is. En, als het ok is (Accept), verder verwerkt en opgenomen.
 
-- **Main**  
+- __Main__  
 De Main Branch is zeg maar "latest en greatest" versie van een Repository. In grote projekten, kan er in meerdere Branches
 tegelijk gewerkt worden (subteams). Hier hebben we aan Main voldoende.
 
