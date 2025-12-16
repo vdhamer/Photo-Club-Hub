@@ -91,11 +91,12 @@ Dus read-only gebruikers kunnen alles zien wat er in een openbaar GitHub Reposit
 
 ## 1. Account aanmaken ("Sign up") bij GitHub
 
-Een account bij GitHub aanmaken is gratis. Wie zich eerder geregistreed heeft bij GitHub, kan deze Stap 1 overslaan.
+Een account bij GitHub aanmaken is gratis. Wie zich eerder geregistreerd heeft bij GitHub, kan doorgaan naar Stap 2.
 
 Registratie van een nieuwe GitHub gebruiker gebeurt via de "Sign up" knop op de [hoofdpagina van GitHub](https://github.com). 
 __Sign up__ is dus om je te registreren (account aanmaken). 
-__Sign in__ is daarentegen als je later aanmeldt bij GitHub ("inloggen") onder het account dat je eenmalig aangemaakt hebt met __Sign up__.
+__Sign in__ is iedere keer nodig dat je je aanmeldt bij GitHub ("inloggen").<BR>
+Dit is dus vergelijkbaar met allerlei webdiensten zoals Facebook of Instagram.
 
 <p align="center"><img width="532" height="889" alt="Screenshot 2025-12-11 at 22 19 03" src="https://github.com/user-attachments/assets/da795207-821c-4a14-bdce-4f156e796d61" /></p>
 
