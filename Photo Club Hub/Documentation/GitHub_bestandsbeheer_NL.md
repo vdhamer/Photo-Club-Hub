@@ -53,7 +53,7 @@ Voor ons gebruik hier, zijn de voordelen van GitHub:
 Alle aangeboden versies worden bewaard. Je kunt zien wie wat wanneer gewijzigd heeft.
 
 - SAMENWERKING<BR>
-Meerdere mensen kunnen wijzigingen aanbrengen, en versies van elkaar overnemen.
+Meerdere mensen kunnen wijzigingen aanbrengen, en wijzigingen van elkaar overnemen.
 Zonder het risico van misverstanden of kwijtraken van een voorgestelde aanpassingen.
 `git`(Hub) is als het ware de stoplichten die het dataverkeer tussen de verschillende partijen regelt: soms hinderlijk, maar het heeft zo zijn reden.
 
