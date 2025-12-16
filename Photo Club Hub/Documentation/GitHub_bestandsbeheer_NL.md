@@ -127,11 +127,6 @@ Je krijgt minstens 1 vraag (op basis van plaatjes of geluid) om te bewijzen dat 
 
 In deze stap installeren we eerst __GitHub Desktop__. Dit is lokaal draaiende software gemaakt door GitHub (tegenwoordig een deel van Microsoft). 
 
-> Tip: vaak wordt (aan softwareontwikkelaars) aangeraden om eerst het pakket `git` te installeren.
-> We gaan het hier niet doen omdat Git installatie indien nodig onderwater gebeurt. Citaat uit de documentatie:
-> "Installing GitHub Desktop will also install the latest version of Git if you don't already have it.
-> With GitHub Desktop, you get a command-line version of Git with a robust GUI (_Graphical User Interface_)."
-
 Het nut van GitHub Desktop is:
 
 <details><summary>Details (klik om uit te klappen)</summary></p>
@@ -144,6 +139,11 @@ Het nut van GitHub Desktop is:
 Waarom is GitHub Desktop eigenlijk nodig, als je een bestand opgeslagen bij GitHub wilt wijzigen?
 Dat is ondermeer omdat, bij het wijzingen van softwarebestanden, men de software graag lokaal wil bouwen en testen.
 Het is namelijk zelden in één keer goed. Ons geval is een beetje een uitzondering: we passen slechts de gegevensbestanden aan.
+
+   > Tip: vaak wordt (aan softwareontwikkelaars) aangeraden om eerst het pakket `git` te installeren.
+   > We gaan het hier niet doen omdat Git installatie indien nodig onderwater gebeurt. Citaat uit de documentatie:
+   > "Installing GitHub Desktop will also install the latest version of Git if you don't already have it.
+   > With GitHub Desktop, you get a command-line version of Git with a robust GUI (_Graphical User Interface_)."
 
 </details></p>
 
