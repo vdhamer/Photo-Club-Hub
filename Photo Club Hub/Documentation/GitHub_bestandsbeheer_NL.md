@@ -1,20 +1,20 @@
 ## Bestandsbeheer bij GitHub
 
-Dit document beschrijft de procedure om jezelf aan te melden bij www.github.com
-en om __wijzigingen__ in _Photo Club Hub_ bestanden aan te bieden. 
-Het is met name bedoeld om ledenlijsten (zoals `mijnClub.level2.json`) of documentatiebestanden (zoals dit bestand) 
-te wijzigen met minimale afhankelijkheid van derden. Maar het recept werkt voor vrijwel alle bestanden.
+Dit document beschrijft de procedure om je aan te melden bij www.github.com
+en om __bestandswijzigingen__ aan _Photo Club Hub_ aan te bieden. 
+Het is met name bedoeld om ledenlijsten (zoals `fgMijnClub.level2.json`) of documentatiebestanden (zoals dit bestand) 
+te beheren met minimale afhankelijkheid van derden. De procedure werkt voor vrijwel alle soorten tekstbestanden.
 
-Het is ook mogelijk om nieuwe bestanden toe te voegen of bestaande bestanden te verwijderen.
-Dat gaat op een vergelijkbare manier (en gaan we hier niet verder op in).
+Het is ook mogelijk om _nieuwe_ bestanden toe te voegen of bestaande bestanden te verwijderen.
+Dat gaat vrijwel op een dezelfde manier (we gaan op die details niet verder in).
 
-In hoofdlijnen komt het erop neer dat men een gewijzigd bestand kan aanmaken, en het aanbieden aan het project ("__Repository__" ofwel "__Repo__").
-Tussen aanbieden en daadwerkelijk in gebruik nemen zit nog een __goedkeuringsstap__.
-De goedkeuringsstap zorgt dat men zomaar een willekeurige wijziging in een willekeurig bestand kan aanbrengen.
-De details van de goedkeuringsprocedure wordt hier overgeslagen omdat een Repository beheerder dat moet doen.
+In hoofdlijnen komt het erop neer dat men een gewijzigd bestand kan aanmaken, en het aanbieden aan het project. Het project wordt meestal een __Repository__" of "__Repo__" genoemd.
+Tussen aanbieden en daadwerkelijk benutten zit nog een __goedkeuringsstap__.
+Die goedkeuringsstap voorkomt dat iemand zomaar een willekeurige wijziging in een belangrijke bestand kan aanbrengen.
+De details van de goedkeuringsprocedure wordt hier ook overgeslagen omdat de Repository beheerder het goedkeuren doet.
 
    > Tip: Achterin dit document is een verklarende woordenlijst.
-   > Daar vind je Git-gerelateerde termen zoals __Repository__, __GitHub__ en de beruchte Git rituelen: __Commit__, __Push__, __Pull__ en __Pull Request__.
+   > Daar vind je termen zoals __Repository__, __GitHub__ en de beruchte Git stapjes "__Commit__, __Push__, __Pull__ en __Pull Request__". Deze termen hebben hier een hoofdletter om te benadrukken dat het in dit verband een specifieke betekenis heeft.
 
 ### Alvast een samenvatting
 
