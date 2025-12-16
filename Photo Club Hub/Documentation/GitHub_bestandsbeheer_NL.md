@@ -238,22 +238,21 @@ Dat ziet op een Mac zo uit (onder Windows zie je iets vergelijkbaars):
 
 <p align="center"><img width="1032" height="576" alt="Screenshot 2025-12-14 at 00 27 12" src="https://github.com/user-attachments/assets/1bc3738a-b2ed-4c85-b7c4-0534a8e98744" /></p>
 
-Dit is dus de standaard bestandsbeheer van MacOS of Windows. Met een onzichtbaar maar belangrijk verschil:
-GitHub Desktop regelt dat het centrale ("origin") Repository in Github op de hoogte gehouden wordt van jouw aanpassingen.
-Hiervoor houdt GitHub/`git` automatisch een hele administratie bij in een verborgen directory.
+Dit is dus de standaard bestandsapplicatie ("file manager") van MacOS of Windows. Met een onzichtbaar maar belangrijk verschil:
+GitHub Desktop regelt dat het centrale ("Origin") Repository op Github en jouw projektdirectory in sync blijven.
 
 ## 3. Bestand op de eigen computer aanpassen
 
-In de directory `User/Developer/GitHubDesktopRepos/Photo-Club-Hub` (of wat je ook gekozen mocht hebben) vind je
-een JSON directory met daarin een bestand genaamd `whiteboard.txt`. Dit kan je naar hartelust aanpassen.
-Het bestand dient namelijk alleen dit doel. De software doet er niets mee.
+In de directory `User/Developer/GitHubDesktopRepos/Photo-Club-Hub` (of wat je ook gekozen hebt) vind je
+een JSON subdirectory met daarin een bestand genaamd `whiteboard.txt`. 
+Dit bestand kan je naar hartelust aanpassen: het bestand dient namelijk alleen als testbestand hiervoor.
 
 Dus...
 - ga naar `User/Developer/GitHubDesktopRepos/Photo-Club-Hub/JSON`
-- open het bestand in een editor (Sublime Text, Notepad++, Notepad, TextEdit)
-- bekijk even de bestaande inhoud. Het had oorspronkelijk 10 niet-blanko regels, maar dat kan veranderd zijn.
-- maak een wijziging (doet er niet toe wat je wijzigd, de inhoud is wel openbaar)
-- sla het bestand lokaal op (vaak Ctrl-S of File|Save in het menu)
+- open het bestand in een editor (`Sublime Text`, `Notepad++`...)
+- bekijk even de bestaande inhoud. Het had oorspronkelijk 10 niet-blanco regels, maar dat kan ondertussen veranderd zijn.
+- maak een wijziging (doet er niet toe wat je wijzigt, de inhoud is wel openbaar)
+- sla het bestand lokaal op (vaak Ctrl-S of Menu > File > Save)
 
 ## 4. Aangepast bestand aanbieden aan repository in GitHub
 
