@@ -193,27 +193,27 @@ Ook hier moet de invoer kloppen met de gegevens die je eerder in het "Sign up fo
 
 GitHub Desktop weet (via GitHub) dat jij geen eigen "Repository" (project) heb.
 Dus biedt het aan één te maken (misschien iets voor later als je verder met GitHub wilt oefenen).
-Het biedt ook een optie aan waarij je mee gaat helpen aan een bestaande Repository. Dat is hier de bedoeling:
+Het biedt ook een optie aan waarbij je mee gaat helpen aan een bestaande Repository. Dat is hier de bedoeling:
 
 <p align="center"><img width="1072" height="772" alt="Screenshot 2025-12-13 at 23 39 00" src="https://github.com/user-attachments/assets/bf910eab-42d5-4b8a-9202-4257cf1e7d8f" /></p>
 
-Kies hier dus "Clone a Repository from the Internet...". <BR><BR> Waarna je (b.v.) URL kiest:
+Kies hier "Clone a Repository from the Internet...". <BR><BR> Waarna je (b.v.) URL kiest:
 
 <p align="center"><img width="518" height="313" alt="Screenshot 2025-12-13 at 19 14 34" src="https://github.com/user-attachments/assets/079eceae-efec-45da-84be-41ef36436365" /></p>
 
-Voordat je Clone klikt: dit gaat __alle__ bestanden van dit project in hun huidige versie kopiëren naar de door jou gekozen directory op jouw computer.
+Voordat je op Clone klikt: dit gaat __alle__ bestanden van het project in hun huidige versie kopiëren naar de door jou gekozen directory op jouw computer.
 Ik koos voor een directory "Photo-Club-Hub" binnen een nieuwe directory "GitHubDesktopRepos" binnen een directory "Developer".
-Maar dit mag je helemaal zelf kiezen. 
-Die locatie is achteraf aanpasbaar, maar het is het eenvoudigst als je het meteen goed instelt. 
+Maar dit mag je helemaal zelf weten. 
+Die locatie is achteraf aanpasbaar, maar het is het eenvoudigst als je het in één keer goed instelt. 
 De vraag hierbij is "waar kan ik honderden Megabytes voor onbepaalde tijdsduur stallen zodat ik terug vind?".
-Honderden Megabytes klinkt misschien wel groot, maar dat valt tegenwoordig mee.
+Honderden Megabytes klinkt misschien groot, maar dat valt tegenwoordig mee: het is grofweg gelijk aan 5 uur MP3 audio.
 Op de Mac is /Users/mijnAccount/Developer gebruikelijk. Dan zie je een speciaal geel icoon verschijnen.
 
-> Tip: Op verjaardagsfeestjes kan je nerds imponeren met het feit dat jij "op GitHub" zit.
-> Het is inderdaad iets om trots op te zijn. Heel `git` is bepaald niet simpel.
-> Maar wij gebruiken hier maar enkele procent van de totale mogelijkheden.
-> GitHub heeft 500 honderd miljoen Repositories en ruim honderd miljoen gereistreerde gebruikers. De meeste gebruikers zitten
-> in de software industrie. Maar het is voor bruikbaar voor ieder soort text-achtig document bruikbaar: [GitHub for poets 1.1 tutorial](https://www.youtube.com/watch?v=BCQHnlnPusY).
+> Tip: Op verjaardagsfeestjes kan je familie en bekenden imponeren met het feit dat jij "op GitHub" zit.
+> Het is eigenlijk best iets om trots op te zijn. Heel `git` is bepaald niet simpel.
+> Maar wij gebruiken hier maar een paar procent van de totale mogelijkheden.
+> GitHub heeft 500 miljoen Repositories en ruim 100 miljoen geregistreerde gebruikers. De meeste gebruikers zitten
+> in de software industrie. Maar het is ook bruikbaar voor willekeurige text-achtig document bruikbaar: [GitHub for Poets, tutorial deel 1.1](https://www.youtube.com/watch?v=BCQHnlnPusY).
 
 ### 2.3 Wat zien we inmiddels?
 
