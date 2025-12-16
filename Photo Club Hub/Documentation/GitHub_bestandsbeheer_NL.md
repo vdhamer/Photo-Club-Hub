@@ -58,8 +58,8 @@ Zonder het risico van misverstanden of kwijtraken van een voorgestelde aanpassin
 `git` (`GitHub`) is als het ware de stoplichten die het dataverkeer tussen de verschillende partijen regelt: soms hinderlijk, maar het heeft zijn nut.
 
 - EENVOUDIGE GOEDKEURING<BR>
-In het ideale geval kan een ingediende wijziging met 1 druk op de knop goedgekeurd worden.
-Dit is essentieel als er continue meerdere wijzigingsvoorstellen per dag binnenstromen.
+Een ingediende wijziging eenvoudig goedgekeurd worden. Iets van 3 keer klikken.
+Dit is essentieel als er iedere dag een handjevol wijzigingsvoorstellen binnenkomen.
 
 - ARCHIEF<BR>
 GitHub is in feite het werkarchief voor alle bestanden van dit project: code, data, documentatie, "Issues".
