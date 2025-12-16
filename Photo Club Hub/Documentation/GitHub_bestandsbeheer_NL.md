@@ -50,7 +50,7 @@ Hierbij houden de Repository beheerders een oogje in het zijl.
 Voor ons gebruik hier, zijn de voordelen van GitHub:
 
 - VERSIEBEHEER<BR>
-Alle aangeboden versies worden bewaard. Je kunt zien wie wat wanneer gewijzigd heeft.
+Alle aangeboden versies worden bewaard. Je kunt zien wie, wanneer, en waarom een wijziging gemaakt is.
 
 - SAMENWERKING<BR>
 Meerdere mensen kunnen wijzigingen aanbrengen, en wijzigingen van elkaar overnemen.
