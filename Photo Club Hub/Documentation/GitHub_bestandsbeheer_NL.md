@@ -219,19 +219,20 @@ Op de Mac is /Users/mijnAccount/Developer gebruikelijk. Dan zie je een speciaal 
 
 <p align="center"><img width="1072" height="772" alt="Screenshot 2025-12-13 at 19 15 51" src="https://github.com/user-attachments/assets/8227d1e7-483e-44b7-aa4f-a36400f34e83" /></p>
 
-Zo ziet GitHub Desktop eruit bij 1 lokale Clone van het GitHub Repository vdhamer/Photo-Club-Hub:
+Zo ziet GitHub Desktop eruit bij een lokale Clone van het GitHub Repository `vdhamer/Photo-Club-Hub`:
 
-- "Current Repository" zegt dat je nu bezig bent in het Photo-Club-Hub project
-- "Main branch" betekent dat je niet bezig bent met een tijdelijk subproject. Voor ons volstaat "Main" omdat we relatief kleine aanpassingen doen.
-- "Fetch origin" ververst jou lokale kopie van de Repository zodat het weer helemaal bij is.
-Lokale aanpassingen (op eigen computer) worden hierbij _niet_ overschreven.
-- Er is een knop om een teksteditor te openen. In mijn geval (Mac) is dat "Sublime Text". Onder Windows wordt "Notepad++" vaak gebruikt.
-- Er is een knop om de folder te bekijken (in Finder op Mac, of Explorer onder Windows).
-- Je kunt ook de Repository bekijken op GitHub via jouw browser. Hier kan je normaal geen wijzigingen aanbrenge.
-- Het gebied linksonder met "Commit to main" is waar je de locale wijzigingen aanbiedt aan GitHub. Dat heet Commit in het jargon. Je moet minstens enkele woorden toelichting geven met wat er veranderd is ("Summary (required").
+- "Current Repository" meldt dat het gaat om het Photo-Club-Hub project
+- "Main Branch" betekent dat je niet bezig bent met een tijdelijk subproject. Voor ons volstaat "Main" omdat we relatief kleine aanpassingen doen.
+- "Fetch Origin" ververst jou lokale kopie van de Repository zodat het weer helemaal bij is.
+Lokale aanpassingen (op je eigen computer) worden hierbij _niet_ overschreven.
+- Er is een knop om een teksteditor te openen. In mijn geval (Mac) is dat `Sublime Text`. Onder Windows wordt `Notepad++` vaak gebruikt.
+- Er is een knop om de folder te bekijken (in `Finder` op Mac, of `Explorer` onder Windows).
+- Je kunt ook de Repository op GitHub bekijken via jouw browser. Hier kan je normaal geen wijzigingen in aanbrengen.
+- Het gebied linksonder met "Commit to Main" is waar je de locale wijzigingen aanbiedt aan GitHub. Dat heet "Commit" in het jargon.
+-  Je moet minstens enkele woorden omschrijving geven met wat er veranderd is ("Summary (required").
 
 Ik zou "View file is your Repository in Finder/Explorer" maar kiezen. 
-En dan op zoek gaan naar het bestand dat je aan wilt passen. En met een lokale editor (Sublime Text, Notepad++, Notepad, TextEdit) aanpassen.
+En dan het bestand dat je wilt aanpassen openen. En met een lokale editor (Sublime Text, Notepad++, Notepad, TextEdit) aanpassen.
 
 Dat ziet op een Mac zo uit (onder Windows zie je iets vergelijkbaars):
 
