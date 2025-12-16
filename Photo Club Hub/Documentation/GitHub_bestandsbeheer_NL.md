@@ -153,37 +153,37 @@ Via deze [link](https://desktop.github.com/download/) kan je GitHub Desktop grat
 
 <p align="center"><img width="968" height="944" alt="Screenshot 2025-12-13 at 23 02 29" src="https://github.com/user-attachments/assets/e080f792-2d87-4a05-8542-eb8375a417d9" /></p>
 
-Er zijn versies voor oude (Intel) en nieuwe generatie (Apple Silicon: M1 - M5) Macs.
-Bij Windows krijg je een installatieprogramma dat je moet uitvoeren om het te installeren.
-Bij Mac kan je het `.zip` bestand in de Downloads folder openen. En de resulterende `GitHub Desktop.app` naar de Applications folder slepen.
+Er zijn versies Macs met Intel chips en met nieuwere "Apple Silicon" (M1, M2...) chips. Maar één van beiden zal werken.
+Bij Mac kan je het `.zip` bestand in de Downloads folder openen. En dan de resulterende `GitHub Desktop.app` naar de Applications folder slepen.
+
+Bij Windows krijg je een installatieprogramma dat je moet uitvoeren om `GitHub Desktop` te installeren.
 
 Bij het openen van GitHub Desktop krijg je (in ieder geval op de Mac) de vraag of je de app wel vertrouwt.
 Gerust "Open" kiezen: er zijn miljoenen gebruikers je voorgegaan.
-En GitHub (al jaren deel van Microsoft) is fanatieker dan de meesten op veiligheid.
+En GitHub is fanatiek over veiligheid (ze moeten wel: de halve software wereld hangt ervan af).
 
 Vervolgens krijg je de keus tussen GitHub.com (👈 deze kiezen) of GitHub Enterprise.
 
-Vervolgens wil het weten onder welke naam/wachtwoord jij bekend bent in GitHub.
-Dus moet je de gegevens gebruiken die je hierboven in het "Sign up for GitHub" gekozen hebt.
-Je browser of wachtwoord app kan hierbij een handje helpen. Maar dit is vergelijkbaar met
-allerlei andere online diensten.
+Vervolgens wil `GitHub Desktop` weten onder welke naam/wachtwoord jij bekend bent op GitHub.
+Gebruik de gegevens die je eerder in het "Sign up for GitHub" gekozen hebt.
 
 <p align="center"><img width="395" height="647" alt="Screenshot 2025-12-13 at 23 21 24" src="https://github.com/user-attachments/assets/8060a991-a12a-45cd-9c87-4f94cd1c7b6a" /></p>
 
-Je krijgt nog een veiligheidsvraag van je Internet browser (Safari, Chrome, Edge, Firefox). Dat zal er ongeveer zo uitzien:
+Je krijgt nog een veiligheidsvraag van je Internet browser (Safari, Chrome, Edge, Firefox). Dat ziet er ongeveer zo uit:
 
 ```
    Do you want to allow this website to open "GitHub Desktop"?
 ```
 
-Dit is omdat je op dat punt overschakelt van browser naar een lokaal programma. Dat mag niet zomaar.
-Maar je kunt de GitHub Desktop applicatie ook zelf opstarten via een icoontje in Applications (Mac) of in het Windows `Start` menu.
+Dit komt omdat je op dat punt overschakelt van jouw browser naar een lokaal programma.
+Dat mag niet zomaar, maar is hier OK.
+Als alternatief kan je de `GitHub Desktop` applicatie zelf opstarten via een icoontje in Applications (Mac) of `Start` menu (Windows).
 
-Ergens in het verhaal komt dit scherm ook voor. Gewoon op "Authorize desktop" klikken:
+Rond deze tijd komt je dit scherm ook tegen. Gewoon op "Authorize desktop" klikken:
 
 <p align="center"><img width="532" height="626" alt="Screenshot 2025-12-13 at 19 13 17" src="https://github.com/user-attachments/assets/1bfde716-75b4-44de-8830-d8161c26bb40" /></p>
 
-### 2.2 Verbinding instellen naar GitHub
+### 2.2 Verbinding maken met GitHub account
 
 Hiermee heb je een werkende GitHub Desktop. Maar bij het opstarten krijg je nog een vraag:
 
