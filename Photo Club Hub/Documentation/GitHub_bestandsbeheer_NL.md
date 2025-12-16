@@ -55,7 +55,7 @@ Alle aangeboden versies worden bewaard. Je kunt zien wie, wanneer, en waarom een
 - SAMENWERKING<BR>
 Meerdere mensen kunnen wijzigingen aanbrengen, en wijzigingen van elkaar overnemen.
 Zonder het risico van misverstanden of kwijtraken van een voorgestelde aanpassingen.
-`git` (`GitHub`) is als het ware de stoplichten die het dataverkeer tussen de verschillende partijen regelt: soms hinderlijk, maar het heeft zijn nut.
+`git` (`GitHub`) is als het ware de stoplichten die het dataverkeer tussen de verschillende partijen regelt: soms irritant, maar het heeft zijn nut.
 
 - EENVOUDIGE GOEDKEURING<BR>
 Een ingediende wijziging eenvoudig goedgekeurd worden. Iets van 3 keer klikken.
@@ -63,7 +63,7 @@ Dit is essentieel als er iedere dag een handjevol wijzigingsvoorstellen binnenko
 
 - ARCHIEF<BR>
 GitHub is in feite het werkarchief voor alle bestanden van dit project: code, data, documentatie, "Issues".
-GitHub zelf is extreem secuur dat er niets zoekraakt.
+GitHub leidt alle procedures in goede banen.
 
 - ONLINE<BR>
 De Photo Club Hub apps halen de huidige gegevens op vanuit GitHub.
