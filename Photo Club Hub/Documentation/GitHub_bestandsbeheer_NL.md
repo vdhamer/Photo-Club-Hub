@@ -189,11 +189,11 @@ Hiermee heb je een werkende GitHub Desktop. Maar bij het opstarten krijg je nog 
 
 <p align="center"><img width="1028" height="728" alt="Screenshot 2025-12-13 at 23 30 56" src="https://github.com/user-attachments/assets/fb96dc61-83d8-4ec7-b9a6-5d16cd249eee" /></p>
 
-Ook hier moet de invoer kloppen met de gegevens die je hierboven in het "Sign up for GitHub" gekozen hebt.
+Ook hier moet de invoer kloppen met de gegevens die je eerder in het "Sign up for GitHub" gekozen hebt.
 
 GitHub Desktop weet (via GitHub) dat jij geen eigen "Repository" (project) heb.
-Dus biedt het aan één te maken (misschien iets voor later als je met GitHub zelf wilt oefenen).
-Het biedt als alternatief aan dat je mee wilt helpen aan een bestaande Repository. Dat is hier de bedoeling: `vdhamer/Photo-Club-Hub`.
+Dus biedt het aan één te maken (misschien iets voor later als je verder met GitHub wilt oefenen).
+Het biedt ook een optie aan waarij je mee gaat helpen aan een bestaande Repository. Dat is hier de bedoeling:
 
 <p align="center"><img width="1072" height="772" alt="Screenshot 2025-12-13 at 23 39 00" src="https://github.com/user-attachments/assets/bf910eab-42d5-4b8a-9202-4257cf1e7d8f" /></p>
 
