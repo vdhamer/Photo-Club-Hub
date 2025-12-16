@@ -35,7 +35,7 @@ Hierbij houden de Repository beheerders een oogje in het zijl.
 
    > Tip: GitHub (en het achterliggende `git`) is een zogenaamde "versiebeheersysteem" (_version control system_).
    > Dat houdt in dat het alle aangeboden bestandswijzigingen nauwlettend bijhoudt. 
-   > `git` kan ook teams van samenwerkende mensen aan, zelfs als 2 teamleden min of meer gelijktijdig hetzelfde bestand aanpassen.
+   > `git` kan ook teams van samenwerkende personen en aan, zelfs als 2 teamleden min of meer gelijktijdig hetzelfde bestand aanpassen.
    > Dit houdt in dat `git` zorgt dat aangeboden wijzigingen keurig beheerd bijven en dat er nooit een wijziging verloren raakt.
 
    > Tip: GitHub is een vrij complex systeem. De hele software-industrie is afhankelijk van GitHub en verwante systemen.
