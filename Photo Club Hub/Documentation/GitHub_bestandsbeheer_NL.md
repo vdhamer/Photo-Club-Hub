@@ -125,23 +125,25 @@ Je krijgt minstens 1 vraag (op basis van plaatjes of geluid) om te bewijzen dat 
 
 ## 2. Lokale "Clone" aanmaken via GitHub Desktop
 
-In deze stap installeren we eerst __GitHub Desktop__. Dit is een lokaal draaiende software applicatie gemaakt door de GitHub organisatie. 
+In deze stap installeren we eerst __GitHub Desktop__. Dit is lokaal draaiende software gemaakt door GitHub (tegenwoordig een deel van Microsoft). 
 
 > Tip: vaak wordt (aan softwareontwikkelaars) aangeraden om eerst het pakket `git` te installeren.
-> We gaan het hier zonder `git` doen: GitHub Desktop is een gebruikersvriendelijke grafische "schil" om `git`.
+> We gaan het hier niet doen omdat Git installatie indien nodig onderwater gebeurt. Citaat uit de documentatie:
+> "Installing GitHub Desktop will also install the latest version of Git if you don't already have it.
+> With GitHub Desktop, you get a command-line version of Git with a robust GUI (_Graphical User Interface_)."
 
 Het nut van GitHub Desktop is:
 
 <details><summary>Details (klik om uit te klappen)</summary></p>
 
-- je kunt je lokale wijzigingen desgewenst bijhouden
-- je ziet het verschil (op regelbasis) tussen die versie die je aanbied aan GitHub en de vorige versie op GitHub
+- je kunt je desgewenst lokale wijzigingen bijhouden
+- je ziet het verschil (op regelbasis) tussen die versie die je aanbied aan GitHub en de bestaande versie op GitHub
 - tijdens het lokaal werken heb je geen last van wijzigingen gemaakt door anderen
 - gelijktijdige wijzigingen van een tekstbestand door iemand worden automatisch gecombineerd met jouw wijzigingen
 
 Waarom is GitHub Desktop eigenlijk nodig, als je een bestand opgeslagen bij GitHub wilt wijzigen?
-Dat is ondermeer omdat, bij het wijzingen van softwarebestanden, men de software lokaal wil bouwen en testen.
-Ons gebruik hier is een beetje een uitzonderingsgeval.
+Dat is ondermeer omdat, bij het wijzingen van softwarebestanden, men de software graag lokaal wil bouwen en testen.
+Het is namelijk zelden in één keer goed. Ons geval is een beetje een uitzondering: we passen slechts de gegevensbestanden aan.
 
 </details></p>
 
