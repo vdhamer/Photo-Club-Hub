@@ -55,7 +55,7 @@ Alle aangeboden versies worden bewaard. Je kunt zien wie, wanneer, en waarom een
 - SAMENWERKING<BR>
 Meerdere mensen kunnen wijzigingen aanbrengen, en wijzigingen van elkaar overnemen.
 Zonder het risico van misverstanden of kwijtraken van een voorgestelde aanpassingen.
-`git`(Hub) is als het ware de stoplichten die het dataverkeer tussen de verschillende partijen regelt: soms hinderlijk, maar het heeft zo zijn reden.
+`git` (`GitHub`) is als het ware de stoplichten die het dataverkeer tussen de verschillende partijen regelt: soms hinderlijk, maar het heeft zijn nut.
 
 - EENVOUDIGE GOEDKEURING<BR>
 In het ideale geval kan een ingediende wijziging met 1 druk op de knop goedgekeurd worden.
