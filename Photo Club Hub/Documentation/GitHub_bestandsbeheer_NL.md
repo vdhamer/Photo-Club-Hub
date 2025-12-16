@@ -18,29 +18,30 @@ De details van de goedkeuringsprocedure wordt hier ook overgeslagen omdat de Rep
 
 ### Alvast een samenvatting
 
-De hoofdstappen zijn dus:
+Er zijn (althans in hoofdlijnen) 4 stappen:
 
 1. De gebruiker maakt (eenmalig) een account aan bij GitHub. Dat account is geldig voor _alle_ GitHub Repositories.
 2. De gebruiker maakt (eenmalig, via `GitHub Desktop`) een lokale kopie aan van 
 de _complete_ inhoud van het [Photo Club Hub](https://github.com/vdhamer/Photo-Club-Hub) Repository.
-3. Een bestand (of bestanden) wordt lokaal (op de eigen computer) naar wens aangepast.
-Deze stap vereist geen Internet verbinding, en mag zo lang duren als men wil (minuten … dagen).
-4. De gebruiker biedt de aangepaste versie aan (weer via GitHub Desktop) bij de centrale Repository voor goedkeuring door de Repository beheerders.
+Die lokale kopie is gewoon een directory (=folder) en kan allerlei subdirectories en ruim 100 bestanden bevatten.
+3. Een bestand (of bestanden) wordt lokaal (op de eigen computer) naar wens gewijzigd.
+Deze stap mag zo lang duren als men wil (minuten … dagen).
+4. De gebruiker biedt (gebruik makend van `GitHub Desktop`) de aangepaste bestanden aan bij de centrale 
+Repository op GitHub voor goedkeuring door de Repository beheerders. `GitHub Desktop` weet zelf welke bestanden gewijzigd zijn.
 
-Als later nog een verandering nodig is (gebeurt vaak) dan herhaal je stappen 3 en 4.
-Dus een bestandsaanpassing hoeft niet in een keer af, maar dient ten tijde van verzoek om goedkeuring natuurlijk wel bruikbaar zijn.
-Voor eventuele volgende veranderingen hoef je overigens niet te wachten totdat een eerdere versie goedgekeurd is.
+Als bijvoorbeeld een een dag of een jaar later een volgende verandering nodig is dan herhaal je gewoon stappen (3) en (4).
+Dus een bestandsaanpassing hoeft niet in een keer af, maar bij het aanbieden voor goedkeuring moet het geheel wel bruikbare inhoud.
+Hierbij houden de Repository beheerders een oogje in het zijl.
 
-   > Tip: GitHub (of het achterliggende `git`) is een zogenaamde versiebeheersystemen (_version control system_).
+   > Tip: GitHub (en het achterliggende `git`) is een zogenaamde "versiebeheersysteem" (_version control system_).
    > Dat houdt in dat het alle aangeboden bestandswijzigingen nauwlettend bijhoudt. 
-   > `git` kan ook teams aan waarbij soms 2 personen vrijwel gelijktijdig hetzelfde bestand aanpassen.
-   > In de praktijk betekent dit dat `git` zorgt dat niemand een wijziging in een aangeboden bestand kwijt raakt.
+   > `git` kan ook teams van samenwerkende mensen aan, zelfs als 2 teamleden min of meer gelijktijdig hetzelfde bestand aanpassen.
+   > Dit houdt in dat `git` zorgt dat aangeboden wijzigingen keurig beheerd bijven en dat er nooit een wijziging verloren raakt.
 
    > Tip: GitHub is een vrij complex systeem. De hele software-industrie is afhankelijk van GitHub en verwante systemen.
-   > Mini-cursussen op YouTube over GitHub en `git` zijn vaak bedoeld voor softwareontwikkelaars.
-   > Ze beschrijven dan meer toeters en bellen van `git`(Hub) dan wat wij hier nodig hebben.
-   > Concentreer je dus op die begrippen en stappen die hier nodig zijn.
-   > De rest kan je altijd nog leren nadat de basis duidelijk is.
+   > Cursussen op YouTube hierover zijn vaak bedoeld voor (aankomende) softwareontwikkelaars.
+   > Die videos behandelen meer toeters en bellen van `git` en `GitHub` dan wat wij hier nodig hebben.
+   > Concentreer je dus op het lijstje basisbegrippen achterin dit document. De rest kan je ooit nog bij leren zodra de basis soepel gaat.
 
 #### Voordelen van GitHub
 
