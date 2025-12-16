@@ -66,24 +66,26 @@ GitHub is in feite het werkarchief voor alle bestanden van dit project: code, da
 GitHub leidt alle procedures in goede banen.
 
 - ONLINE<BR>
-De Photo Club Hub apps halen de huidige gegevens op vanuit GitHub.
+De Photo Club Hub apps halen hun gegevens op vanuit GitHub.
 Dit zijn vooral lijsten met clubs ("Level 1") en lijsten met clubleden ("Level 2").
-Hierdoor kan de app de huidige meest recente gegevens ophalen.
-Portfolio foto's ("Level 3") worden daarentegen op de clubwebsites gehouden:
-dit zijn grote aantallen grotere bestanden. Het zorgt er verder voor dat clubwebsites losstaan van GitHub.
+Hierdoor krijgt de app de meest recente gegevens ophalen ("club fgMijnClub heeft een nieuw lid").
+Portfolio foto's ("Level 3") worden daarentegen op de clubwebsites bewaard:
+dit zijn grotere aantallen bestanden (ieder grofweg 1 Megabyte groot). Dus 20 leden x 20 foto's is grofwel 400 Megabyte opslag.
+Verder zorgt deze scheiding dat clubwebsites totaal onafhankelijk zijn van GitHub.
 
 - URLs<BR>
 Alle bestanden hebben een webadres (URL). 
 Dat is nuttig voor bijvoorbeeld verwijzingen zoals voor het downloaden van [de introductie Powerpoint](tinyurl.com/fchPPTnl).
 
 - CENTRALE TO-DO LIJST<BR>
-De centrale lijst van uitbreidingsverzoeken of het aanmelden van bugs loopt via GitHub.
-Jij kunt zo zelf een wens of klacht ("Issue") toevoegen.
-En kijken of de klacht al bekend is. En commentaar en ideeën leveren bij Issues.
+De centrale lijst per Repository op GitHub bevat uitbreidingsverzoeken en op te lossen bugs of problemen.
+Jij kunt dus als GitHub gebruiker kijken of een klacht ("Issue") al bekend is, 
+melding maken van een klacht, status zien van de afhandeling en lezen wat anderen ervan zeggen ("Heb ik ook, heel storend!").
 
 - READ-ONLY<BR>
-Wie alleen wil kijken, maar niets wil wijzigen, heeft geen wachtwoord of account bij GitHub nodig.
-Bijvoorbeeld om even te kijken naar een databestand of naar documentatie. Dus read-only gebruikers hebben dit document niet nodig.
+Wie alleen wil kijken, maar niets wil wijzigen, heeft geen account bij GitHub nodig.
+Bijvoorbeeld om even te kijken naar een databestand of naar documentatie.
+Dus read-only gebruikers kunnen alles zien wat er in een openbaar GitHub Repository staat.
 
 </details></p>
 
