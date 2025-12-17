@@ -385,39 +385,49 @@ De bestanden zijn meestal platte tekst in diverse formaten die door een computer
 #### __Git__
 
 Een versiebeheer technologie die het mogelijk maakt om met 1 of meerdere personen aan een Repository te werken.
-Experts kunnen Git, in zijn oervorm, bedienen door commando's in een "terminal" venster te tikken.
-Maar Git wordt ook vaak vanuit een grafische schil zoals `GitHub Desktop` aangestuurd.
+Experts kunnen een continue veranderend Repository onderhouden met commando's in een "terminal" venster te tikken.
+De oersoftware hiervoor heet Git.
+Maar Git wordt ook vaak vanuit een grafische schil zoals `GitHub Desktop` bediend om het wat makkelijker te maken.
 
 #### __GitHub__ en __Origin__
 
-Een grote website waar miljoenen Repositories (met behulp van git) beheerd worden. Het gebruik is gratis voor openbare projecten.
-GitHub is sedert 2018 een dochteronderneming van Microsoft, maar lijkt vrij los van Microsoft te opereren.
+GitHub is een grote website waar miljoenen Repositories (met behulp van git) beheerd worden. Het gebruik is gratis voor openbare projecten.
+GitHub is sedert 2018 eigendom van Microsoft, maar lijkt organisatorisch vrij los van Microsoft te staan.
 
-Origin is de plek waar de officiële bron van een bepaald Repository staat. Voor ons is Origin dus een synoniem voor GitHub.
-Het woord Origin wordt gebruikt omdat er alternatieven voor GitHub bestaan.
+Origin is de plek waar de officiële bron van een bepaald Repository staat. Voor ons is Origin dus een synoniem voor GitHub en de
+bestanden die daar staan. Het woord Origin wordt gebruikt omdat er ook alternatieven voor GitHub bestaan.
 
 #### __Clone__ en __Fork__
 
-Clone was slechts nodig in onze procedure als tijdelijk en eenmalige tussenstap. 
-Het is daarna dus niet meer relevant (althans voor ons).
+Clone was in onze procedure slechts nodig bij een tijdelijk en eenmalige tussenstap. 
+Het is daarna voor ons niet meer relevant.
 
-   > Details: Een Clone is een lokale kopie van een Repo in een directory op je eigen computer.
-   > De bestanden in een Clone kan je lokaal (gewijzigd of ongewijzigd) bekijken en testen:
-   > het is slechts een (wijzigbare) kopie van de oorspronkelijke bestanden op GitHub.
+<details><summary>Details (klik om uit te klappen)</summary></p>
+
+Details: Een Clone is een lokale kopie van een Repo in een directory op je eigen computer.
+De bestanden in een Clone kan je lokaal (gewijzigd of ongewijzigd) bekijken en testen:
+et is slechts een (wijzigbare) kopie van de oorspronkelijke bestanden op GitHub.
+
+</details></p>
 
 Een Clone staat __niet__ (direct) toe dat men eigen wijzigingen kan terugschrijven naar GitHub.
-Althans in ons geval: we gaan ervan uit dat wij geen schrijfrechten hebben in de oorspronkelijke GitHub repository.
 
-Een Fork is ook een lokale kopie van een Repo in een directory op je eigen computer.
+   > Althans in ons geval: we gaan ervan uit dat wij geen schrijfrechten hebben in de officiële GitHub repository.
+
+Een Fork is _ook_ een lokale kopie van een Repo in een directory op je eigen computer.
 Wijzigingen aan een Fork kan je __wel__ aanbieden aan GitHub (ter integratie).
-GitHub laat bij iedere Repository bij welke Forks ervan bestaan. En bij een Fork wordt bijgehouden waar het een Form van is.
+GitHub houdt bij iedere Repository bij welke Forks ervan bestaan. En bij een Fork wordt bijgehouden waar het een Fork van is.
 
-   > Details: Een Fork heeft technisch gezien een extra Repository op GitHub onder jouw naam (`mijnAccount/Photo-Club-Hub`).
-   > GitHub weet hiervan adat het ontstaan is als een kopie van andere repository (`vdhamer/Photo-Club-Hub`).
-   > Je kunt een voorbeeld van een geForkte repository [hier](https://github.com/vdhamer-for-testing) zien.
-   > Jouw eigen GitHub account zal, zodra je de Fork stap in de procedure uitgevoerd hebt, ook een geForkte Repo bevatten.
-   > GitHub ondersteunt het overhevelen van wijzigingen in `mijnAccount/Photo-Club-Hub` naar `vdhamer/Photo-Club-Hub`.
-   > Dit overhevelen van wijzigingen ("Pull Request") vereist instemming van de beheerders van `vdhamer/Photo-Club-Hub`.
+<details><summary>Details (klik om uit te klappen)</summary></p>
+
+Details: Een Fork heeft technisch gezien een extra Repository op GitHub onder jouw naam (`mijnAccount/Photo-Club-Hub`).
+GitHub weet hiervan adat het ontstaan is als een kopie van andere repository (`vdhamer/Photo-Club-Hub`).
+Je kunt een voorbeeld van een geForkte repository [hier](https://github.com/vdhamer-for-testing) zien.
+Jouw eigen GitHub account zal, zodra je de Fork stap in de procedure uitgevoerd hebt, ook een geForkte Repo bevatten.
+GitHub ondersteunt het overhevelen van wijzigingen in `mijnAccount/Photo-Club-Hub` naar `vdhamer/Photo-Club-Hub`.
+Dit overhevelen van wijzigingen ("Pull Request") vereist instemming van de beheerders van `vdhamer/Photo-Club-Hub`.
+
+</details></p>
 
 #### __Commit__
 
