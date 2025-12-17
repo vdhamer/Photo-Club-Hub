@@ -38,10 +38,10 @@ Hierbij houden de Repository beheerders een oogje in het zijl.
    > `git` kan ook teams van samenwerkende personen en aan, zelfs als 2 teamleden min of meer gelijktijdig hetzelfde bestand aanpassen.
    > Dit houdt in dat `git` zorgt dat aangeboden wijzigingen keurig beheerd bijven en dat er nooit een wijziging verloren raakt.
 
-   > Tip: GitHub is een vrij complex systeem. De hele software-industrie is afhankelijk van GitHub en verwante systemen.
-   > Cursussen op YouTube hierover zijn vaak bedoeld voor (aankomende) softwareontwikkelaars.
-   > Die videos behandelen meer toeters en bellen van `git` en `GitHub` dan wat wij hier nodig hebben.
-   > Concentreer je dus op het lijstje basisbegrippen achterin dit document. De rest kan je ooit nog bij leren zodra de basis soepel gaat.
+   > Tip: GitHub en Git zijn nu eenmaal vrij complex. De hele software-industrie is afhankelijk van GitHub en verwante systemen.
+   > Er zijn tal van cursussen (b.v. op YouTube) hierover, maar die zijn eigenlijk bedoeld voor (aankomende) softwareontwikkelaars.
+   > Die videos behandelen meer toeters en bellen van `git` en `GitHub` dan wij hier nodig hebben.
+   > Wij gaan ons concentreren op het lijstje basisbegrippen achterin dit document.
 
 #### Voordelen van GitHub
 
