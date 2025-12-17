@@ -239,7 +239,7 @@ Dat ziet op een Mac zo uit (onder Windows zie je iets vergelijkbaars):
 <p align="center"><img width="1032" height="576" alt="Screenshot 2025-12-14 at 00 27 12" src="https://github.com/user-attachments/assets/1bc3738a-b2ed-4c85-b7c4-0534a8e98744" /></p>
 
 Dit is dus de standaard bestandsapplicatie ("file manager") van MacOS of Windows. Met een onzichtbaar maar belangrijk verschil:
-GitHub Desktop regelt dat het centrale ("Origin") Repository op Github en jouw projektdirectory in sync blijven.
+GitHub Desktop regelt dat het centrale ("Origin") Repository op Github en jouw projectdirectory in sync blijven.
 
 ## 3. Bestand op de eigen computer aanpassen
 
@@ -377,7 +377,7 @@ Gelukkig bewaakt `GitHub Desktop` dat men de danspasjes in de juiste volgorde do
 
 #### __Repository__
 
-Een verzameling bestanden in Git/GitHub die samen als projekt behandeld worden.
+Een verzameling bestanden in Git/GitHub die samen als project behandeld worden.
 Bijvoorbeeld het complete ontwerp van een computer spel.
 Een Repository (=Repo) kan openbaar of privé zijn.
 De bestanden zijn meestal platte tekst in diverse formaten die door een computer begrepen worden (.json, .md, .swift, …).
@@ -390,50 +390,64 @@ Maar Git wordt ook vaak vanuit een grafische schil zoals `GitHub Desktop` aanges
 
 #### __GitHub__ en __Origin__
 
-Een grote website waar miljoenen Repositories (met gehulp van git) beheerd worden. Het gebruik is gratis voor openbare projekten.
+Een grote website waar miljoenen Repositories (met behulp van git) beheerd worden. Het gebruik is gratis voor openbare projecten.
 GitHub is sedert 2018 een dochteronderneming van Microsoft, maar lijkt vrij los van Microsoft te opereren.
 
-Origin is de plek waar de bron van een bepaald Repository staat. Hier dus een ander wooord voor GitHub.
-Het woord Origin wordt gebruikt omdat er allelei andere bronnen dan GitHub bestaan, zowel openbaar als binnen bedrijven.
+Origin is de plek waar de officiële bron van een bepaald Repository staat. Voor ons is Origin dus een synoniem voor GitHub.
+Het woord Origin wordt gebruikt omdat er alternatieven voor GitHub bestaan.
 
 #### __Clone__ en __Fork__
 
-Clone is slechts tijdelijk nodig in deze procedure (en dus hier onbelangrijk).
-Een Clone is een lokale kopie van een Repo op je eigen computer.
-De bestanden in een Clone kan je lokaal (gewijzigd of ongewijzigd) testen: het is slechts een copie.
-Maar een Clone staat __niet__ (normaal) toe dat men wijzgingen terug kan sturen richting GitHub.
+Clone was slechts nodig in onze procedure als tijdelijk en eenmalige tussenstap. 
+Het is daarna dus niet meer relevant (althans voor ons).
 
-Een Fork is een lokale kopie van een Repo op je eigen computer.
-Wijzigingen aan een Fork kan je aanbieden aan GitHub (ter controle en integratie).
-GitHub houdt bij iedere Repository, ter info, bij welke Forks ervan bestaan.
+   > Details: Een Clone is een lokale kopie van een Repo in een directory op je eigen computer.
+   > De bestanden in een Clone kan je lokaal (gewijzigd of ongewijzigd) bekijken en testen:
+   > het is slechts een (wijzigbare) kopie van de oorspronkelijke bestanden op GitHub.
+
+Een Clone staat __niet__ (direct) toe dat men eigen wijzigingen kan terugschrijven naar GitHub.
+Althans in ons geval: we gaan ervan uit dat wij geen schrijfrechten hebben in de oorspronkelijke GitHub repository.
+
+Een Fork is ook een lokale kopie van een Repo in een directory op je eigen computer.
+Wijzigingen aan een Fork kan je __wel__ aanbieden aan GitHub (ter integratie).
+GitHub laat bij iedere Repository bij welke Forks ervan bestaan. En bij een Fork wordt bijgehouden waar het een Form van is.
+
+   > Details: Een Fork heeft technisch gezien een extra Repository op GitHub onder jouw naam (`mijnAccount/Photo-Club-Hub`).
+   > GitHub weet hiervan adat het ontstaan is als een kopie van andere repository (`vdhamer/Photo-Club-Hub`).
+   > Je kunt een voorbeeld van een geForkte repository [hier](https://github.com/vdhamer-for-testing) zien.
+   > Jouw eigen GitHub account zal, zodra je de Fork stap in de procedure uitgevoerd hebt, ook een geForkte Repo bevatten.
+   > GitHub ondersteunt het overhevelen van wijzigingen in `mijnAccount/Photo-Club-Hub` naar `vdhamer/Photo-Club-Hub`.
+   > Dit overhevelen van wijzigingen ("Pull Request") vereist instemming van de beheerders van `vdhamer/Photo-Club-Hub`.
 
 #### __Commit__
 
 Een wijziging aan 1 of meer bestanden, met korte beschrijving, registreren in de lokale Git administratie.
-Commit is een soort voorportaat van wijzigingen die straks met Push naar GitHub kunnen gaan.
+Commit is een soort voorportaal van wijzigingen die straks met Push naar GitHub kunnen gaan.
 
 #### __Push__
 
 Lokaal initiatief nemen om een of meerdere Commits naar GitHub (Origin) te sturen.
-GitHub krijgt die informatie binnen zonder erom te vragen (vandaar de naam Push).
-Hiermee kunnen anderen de concept veranderingen zien, maar zijn de verandering nog niet definitief geaccepteerd.
+GitHub krijgt die informatie binnen op jouw initiatief (vandaar de naam "Push").
+Hiermee kunnen anderen de voorgestelde veranderingen zien, maar zijn de verandering nog niet definitief geaccepteerd of geïntegreerd.
 
 #### __Pull__
 
-Lokaal initiatief nemen om de lokale bestanden bij te werken met mogelijke centrale wijzigingen in het GitHub Repository.
-Pull is verwant aan een locaal E-mail programma dat nieuwe berichten ophaalt van een centrale server.
-Alleen by E-mail kan het geen kwaad om geregeld nieuwe berichten binnen te halen, en hier moet je op een knop drukken om te zeggen wanneer het je uitkomt.
-GitHub Desktop waarschuwt je als er iets veranderd is, en dan kan je beslissen of je het nu wilt ophalen.
+Lokaal initiatief nemen om de lokale bestanden bij te werken indien er centraal wijzigingen bijgekomen zijn in het GitHub Repository.
+Hier moet je op een knop drukken om te zeggen wanneer het uitkomt.
+GitHub Desktop waarschuwt als er iets centraal veranderd is, en dan kan je beslissen wanneer je het wilt ophalen. 
+Het ophalen verloopt zeer efficient en duurt meestal minder dan een seconde.
 
 #### __Pull Request__
 
-Een verzoek richting een Repository beheerder op GitHub (Origin) om wijzigingen te integreren. Centraal gaat men dan vaak
-controleren of de wijziging ok is. En, als het ok is (Accept), verder verwerkt en opgenomen.
+Een verzoek richting een GitHub (Origin) Repository beheerder om wijzigingen te integreren.
+Centraal gaat iemand dan controleren of de wijziging er OK uitziet. 
+En, als het OK is ("Accept"), wordt de wijziging verder geïntegreerd.
 
 #### __Main__
 
-De Main Branch is zeg maar "latest en greatest" versie van een Repository. In grote projekten, kan er in meerdere Branches
-tegelijk gewerkt worden (subteams). Hier hebben we aan Main voldoende.
+De Main Branch is zeg maar "latest en greatest" betrouwbare versie van een Repository.
+In grote projecten, kan er in meerdere Branches gelijktijdig gewerkt worden (subteams). 
+Voor ons doel is Main voldoende.
 
 </details></p>
 
