@@ -404,7 +404,7 @@ Het is daarna voor ons niet meer relevant.
 
 <details><summary>Details (klik om uit te klappen)</summary></p>
 
-Details: Een Clone is een lokale kopie van een Repo in een directory op je eigen computer.
+Een Clone is een lokale kopie van een Repo in een directory op je eigen computer.
 De bestanden in een Clone kan je lokaal (gewijzigd of ongewijzigd) bekijken en testen:
 et is slechts een (wijzigbare) kopie van de oorspronkelijke bestanden op GitHub.
 
@@ -420,7 +420,7 @@ GitHub houdt bij iedere Repository bij welke Forks ervan bestaan. En bij een For
 
 <details><summary>Details (klik om uit te klappen)</summary></p>
 
-Details: Een Fork heeft technisch gezien een extra Repository op GitHub onder jouw naam (`mijnAccount/Photo-Club-Hub`).
+Een Fork heeft technisch gezien een extra Repository op GitHub onder jouw naam (`mijnAccount/Photo-Club-Hub`).
 GitHub weet hiervan adat het ontstaan is als een kopie van andere repository (`vdhamer/Photo-Club-Hub`).
 Je kunt een voorbeeld van een geForkte repository [hier](https://github.com/vdhamer-for-testing) zien.
 Jouw eigen GitHub account zal, zodra je de Fork stap in de procedure uitgevoerd hebt, ook een geForkte Repo bevatten.
