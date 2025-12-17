@@ -256,111 +256,124 @@ Dus...
 
 ## 4. Aangepast bestand aanbieden aan repository in GitHub
 
-Nu hebben we een lokale clone van het Photo-Club-Hub repository dat (voor whiteboard.txt) voorloopt ten opzichte van het bestand op GitHub.
-We doen nu alsof wij die wijziging willen aanbieden.
+Nu hebben we een lokale clone van het Photo-Club-Hub repository dat (bijvoorbeeld wat betreft `whiteboard.txt`)
+voorloopt op het bestand van de centrale GitHub Repository. We gaan nu die wijziging aanbieden aan GitHub.
 
-In GitHub Desktop zien we (meteen na openen) het volgende:
+In GitHub Desktop zien we:
 
 <p align="center"><img width="1028" height="728" alt="Screenshot 2025-12-14 at 22 27 44" src="https://github.com/user-attachments/assets/9f68f790-3bd7-4947-ba30-b3a279a28a53" /></p>
 
-Hier zijn een paar dingen te zien:
-1. Onder JSON/whiteboard.txt zie je de regels die verwijderd zijn (rood, "-") en regels die nieuw zijn (groen, "+").
+Hier zijn een paar nuttige dingen te zien:
+1. Onder `JSON/whiteboard.txt` zie je de regels die verwijderd zijn (in het rood, "-") en regels die nieuw zijn (in het groen, "+").
 Er kunnen meerdere verandering per bestand getoond worden. En er kunnen meerdere bestanden veranderd zijn.
-2. Er staat in dit geval "1 changed file", met een lijst van veranderde bestanden daar vlak onder.
-3. Er staat je alle wijzingen kunt aanbieden via de knop "Commit 1 file to main".
+2. Er staat in dit geval "1 changed file", met een lijst van veranderde bestanden.
+3. Er staat dat je alle wijzingen kunt aanbieden via de knop "Commit 1 file to Main".
 Met een automatisch gegeneerde text over de wijziging. Die text kan je aanpassen.
-Belangrijke: de term rondom `git` voor veranderingen aanbieden aan de centrale repository is __Commit__.
-5. Er staat deze keer een waarschuwing dat we nog geen rechten hebben om de wijzigingen te Commit'en. 
-Dit komt omdat we Clone gedaan hebben hierboven. 
-Clone is dus zonder terugschrijf mogelijkheid. De equivalent met terugschrijf mogelijkeheid heet __Fork__.
-De term Fork hangt samen met b.v. een splitsing in een landweg: beide wegen gaan los van elkaar verder.
-Al kunnen we ze verderop weer gelijktrekken.
+Belangrijke: de term in `git` voor veranderingen aanbieden is __Commit__.
+Een beeld: je stopt all wijzigingen in een envelop en schrijft op de envelop wat de bedoeling van de wijzigingen is.
+4. Er staat in bovenstaand plaatje (deze keer) een waarschuwingsdriehoek dat we nog geen rechten hebben om de wijzigingen te Commit'en. 
+Dit komt omdat we eerder Clone gedaan hebben. En Clone is niet voldoende om de "envelop" op te mogen sturen.
+Om de "envelop" te mogen versturen hebben we iets nodig dat __Fork__ heet.
+Dat levert een lokale directory op die wel wijzigingen naar terugsturen naar GitHub/Origin.
+De term Fork is zoiets als een splitsing in een bospad: beide paden gaan los van elkaar verder.
+Al kunnen we ze verderop misschien weer samenkomen.
 
-We gaan eerst (5) oplossen. Dit is maar _eenmalig_ nodig. Klikken op "create a Fork" levert dit:
+We moeten eerst de waarschuwing van (4) oplossen. Dit is slechts _eenmalig_ nodig. Klikken op de "create a Fork" link levert:
 
 <p align="center"><img width="1072" height="772" alt="Screenshot 2025-12-14 at 22 41 18" src="https://github.com/user-attachments/assets/49ae986b-f785-41cd-a685-86b4713edfb5" /></p>
 
-Hier kiezen we "Fork this Repository", en dit levert alweer een vraag:
+Hier kiezen we "Fork this Repository", en dit levert nog een vraag:
 
 <p align="center"><img width="1072" height="772" alt="Screenshot 2025-12-14 at 22 41 43" src="https://github.com/user-attachments/assets/e787a577-17b0-4a1f-869f-42eade82c627" /></p>
 
-Kies "To contribute to the parent project" (default) en "Continue". Dit brengt ons naar:
+Kies "To contribute to the parent project" (default) en "Continue". Dit brengt ons bij:
 
 <p align="center"><img width="1072" height="772" alt="Screenshot 2025-12-14 at 22 51 48" src="https://github.com/user-attachments/assets/f9c33883-d845-4e56-a9d6-7a4b38159411" /></p>
 
-Hier waren we indedaad al: het is het hoofdscherm van GitHub Desktop. Maar nu is die vervelende waarschuwing weg.
-En kunnen we nu wel __Commit__ doen van met de blauwe knop linksonder. Het is Commit "to main" want we gebruiken hier alleen de Branch genaamd "main".
+Hier waren we inderdaad al eerder. Het is het hoofdscherm van `GitHub Desktop`. Maar nu is die vervelende waarschuwing weg.
+En kunnen we nu wel __Commit file(s) to Main__ doen van met de blauwe knop linksonder.
+Het is Commit "to Main" want we gebruiken hier alleen de Branch genaamd Main.
 
-Ter herinnering, Commit biedt de wijzigingen aan bij GitHub, 
-waar de wijzigingen vervolgens door een beheerder van dit Repository goedgekeurd kunnen worden.
-Bij dit specifieke bestand zal die beheerder het al gauw goedvinden: het is maar een kliederbestand (vandaar "whiteboard.txt").
+Ter herinnering, Commit stopt de wijzigingen in een envelop met etiket.
+Die envelop is nog niet aangemaakt en dus ook niet verstuurd naar GitHub.
 
-Dan zie je dit:
+We klikken dus op "Commit to Main" en zien:
 
 <p align="center"><img width="1072" height="772" alt="Screenshot 2025-12-14 at 23 01 28" src="https://github.com/user-attachments/assets/1aa2f990-73c3-47a1-aeff-def28d874445" /></p>
 
-Hier zie je (in dit geval) dat er 2 Commits in het repository ondertussen door anderen gedaan zijn.
-De blauwe "Pull Origin" knop trekt ("pull") die vanuit het centrale repo naar jaar locale repo toe.
-Het is het duidelijkste, als er iets te "pull"en valt om dit nu even te doen. 
-We gaan nu klikken op "Pull Origin", maar let tegelijk op de getalletjes bovenaan: er zijn 2 Commits klaar voor Pull (door iemand anders veroorzaakt).
-En 1 Commit met de aangebrachte wijzigingen. Dus klik nu op "Pull Origin". Dit levert op:
+Op het `GitHub Desktop` hoofdscherm
+zie je (in dit geval) dat er 2 Commits ondertussen in de centrale Repository (Origin) door anderen gedaan zijn.
+De blauwe "Pull (from) Origin" knop trekt ("pull") die wijzigingen vanuit het centrale repo naar jouw locale kopie.
+We gaan nu klikken op "Pull (from) Origin", maar let tegelijk op de getalletjes bovenaan: 
+er zijn 2 Commits klaar voor Pull (wijzigingen door iemand anders).
+En 1 Commit met de aangebrachte wijzigingen. Klikken op "Pull (from) Origin" geeft:
 
 <p align="center"><img width="1028" height="728" alt="Screenshot 2025-12-14 at 23 08 35" src="https://github.com/user-attachments/assets/7a21d995-9428-4fc2-a75f-1a5c2c72181a" /></p>
 
-Hier is het "Pull" verhaal weg (want dat is geregeld). Maar biedt GitHub Desktop aan om "__Push__ [to] Origin" voor je te doen.
-Klik op "Push [to] Origin". Dus zien we nu dit:
+Nu is het "Pull (from) Origin" verhaal weg. Want dat is geregeld.
+Maar biedt `GitHub Desktop` aan om "__Push__ [to] Origin" voor je te doen.
+Klikken op "Push [to] Origin" (envelop verzenden) geeft:
 
 <p align="center"><img width="1072" height="772" alt="Screenshot 2025-12-14 at 23 23 57" src="https://github.com/user-attachments/assets/1491ad77-b429-47ff-8907-e00b7f2bea7e" /></p>
 
-In GitHub Desktop moeten we nog de beheerders van het Repository melden dat er een pakje voor hun deur ligt om te bekijken en goed te keuren.
-Dat heet een "Pull Request" omdat de beheerders het initiatief moeten nemen om de wijziging aan bood te halen ("Pull").
-En dit is een verzoek ("Request") om dat bij gelegenheid te doen.
+Met `GitHub Desktop` moeten we nog de beheerders van het Repository melden dat er een envelop voor hun deur ligt om te bekijken en goed te keuren.
+Dat heet een "Pull Request" omdat de beheerders initiatief moeten nemen om de wijziging aan bood te halen. Ze moeten hiervoor het initiatief nemen
+("Pull") ipv dat zij de wijziging opgedrongen ("Push") krijgen.
+Dus een Pull Request is een verzoek om bij gelegenheid naar de envelop (soms nu ook Pull Request genaamd) te kijken.
 
-Dit gaat via het menu `Branch` > `Pull Request`. Dat opent de browser:
+Nu hebben we (een beetje vreemd) geen knopje om een Pull Request naar de beheerders te verzenden.
+In plaats van een knopje, loopt dit via Menu > `Branch` > `Pull Request`. Dat opent de browser:
 
 <p align="center"><img width="1393" height="1522" alt="Screenshot 2025-12-15 at 00 46 50" src="https://github.com/user-attachments/assets/55e08f00-3ed7-4211-9641-b908940aa476" /></p>
 
-Hier kan je opnieuw alle wijzigingen zien. En eventueel de beschrijving toevoegen of aanpassen.
-Je verstuurd dit naar de Repository beheerders via de know "Create Pull Request".
-Vervolgens zie je:
+   > Tip: jouw browser kan er net iets anders uitzien. Vooral aan de bovenkant van het scherm.
+
+Hier kan je opnieuw alle wijzigingen zien. En hoort je een beschrijving (Title) toe te voegen, en eventueel meer details.
+GitHub Desktop zal echter een poging doen om te verzinnen wat je in de Title in zou kunnen vullen.
+Je verstuurd dit naar de Repository beheerders via de "Create Pull Request" knop. Dan zie je:
 
 <p align="center"><img width="1169" height="944" alt="Screenshot 2025-12-15 at 00 47 47" src="https://github.com/user-attachments/assets/3101c08e-7edd-4a3b-b0a1-f35b45375110" /></p>
 
-Dit is slechts ter informatie: je kunt zien (in het rood) dat iemand de wijziging ("Pull Request") mag controleren ("Review"). En bovenaan kan je zien dat er 1 Pull Request in de wachtrij staat. 
-Dit zelfde scherm gebruikt de beheerder om de inhoud even te bekijken, en als alles ok is, om de wijziging op te nemen
-in het repository.
+Dit is een hele plens informatie, maar je hoeft hier niets meer te doen!
+Zo kan je zien (in het rood) dat iemand anders de wijziging ("Pull Request") mag controleren ("Review"). 
+En bovenaan kan je zien dat er 1 Pull Request in de wachtrij staat voor de beheerders. 
+Eenzelfde scherm gebruikt de beheerder om de inhoud van de Pull Request te bekijken, en als alles ok is, om de Pull Request te integreren
+in het Repository.
 
-Hiermee zijn we (eindelijk) klaar en hebben het volgende bereikt:
+Hiermee zijn we (eindelijk) KLAAR en hebben het volgende bereikt:
 
-1) jouw wijziging aan `whiteboard.txt` ligt nu ter goedkeuring bij de repository beheerder.
-Dit ging via "Push". Dat brengt jouw Commit (evt meerdere) naar GitHub. Push vaak gebruiken kan geen kwaad.
-2) de wijzging ligt ter goedkeuring bij de repo beheerder. Dat is het resultaat van de "Pull Request".
+1) jouw wijziging aan `whiteboard.txt` ligt nu ter goedkeuring bij de Repository beheerder.
+Dit ging via "Push". Dat brengt jouw Commit (evt meerdere) naar GitHub.
+2) de wijziging ligt ter goedkeuring bij de repo beheerder. Dat is het resultaat van de "Pull Request".
 3) in dit geval, hebben we terloops wat recente maar ongerelateerde wijzigingen in de
-4) omgekeerde richting ("Pull") naar binnen getrokken.
+omgekeerde richting ("Pull") naar binnen getrokken.
 Vaak is er niets gewijzigd - dat hangt af van hoe actief anderen zijn,
-en hoe lang geleden je voor het laatst "Pull" gedaan hebt. Pull vaak gebruiken kan geen kwaad.
-5) We hebben bij zowel de finale "Pull Request" als bij de eerder Commit een omschrijving kunnen aanleveren
-(zeg maar een etiket) van wat er gewijzigd is.
+en hoe lang geleden je voor het laatst "Pull (from) Origin" gedaan hebt.
+4) We hebben bij zowel de finale "Pull Request" als bij de eerder Commit een omschrijving kunnen aanleveren
+(etiket) van wat de bedoeling van de wijziging is.
 
 ## Hoe complex is dit bij toekomstige wijzigingen?
 
 Dit was een best lang verhaal. Maar stappen (1) en (2) en de omschakeling van "Clone" naar "Fork" waren eenmalig.
 
-Wat je dus overhoud bij iedere wijzigingen zijn:
-- de eigenlijke verandering lokaal uitvoeren op het bestand (of bestanden). Daar ging het tenslotte om.
-- "Pull": desgevraagd centrale wijzingen overnemen naar je lokale bestanden.
-Je wordt aan deze "Pull" actie herinnerd als het nodig is.
-- "Push Commit": de locale wijziging via "Push Commit" overbrengen naar GitHub. Hier kan een korte omschrijving helpen.
-- "Pull Request": de beheerders verzoeken om de wijzigingen te verwerken via "Pull Request". Hier kan een korte omschrijving ook helpen.
+Wat je dus aan handelingen overhoudt bij iedere nieuwe wijziging:
+- de eigenlijke verandering lokaal uitvoeren op het bestand (of bestanden). Dat is uiteraard waar het om draait.
+- "Pull (from) Origin": desgevraagd centrale wijzingen overnemen naar je lokale bestanden.
+Je wordt door `GitHub Desktop` aan deze "Pull" actie herinnerd als het nodig is.
+En ik denk dat je niet door kunt gaan naar "Push Commit" voordat "Pull"
+- "Push Commit": de locale wijziging via "Push Commit" overbrengen naar GitHub. Hier hoort een korte omschrijving bij.
+- "Pull Request": de beheerders verzoeken om de wijzigingen te verwerken via "Pull Request". Hier hoort een korte omschrijving ook bij.
 
 Samenvatting van deze samenvatting zijn de volgende 3 danspasjes: (Pull) --> Push --> Pull Request.
-De terminologie is wat troebel (omdat er nog veel meer kan),
-maar `git` is desondanks een wereldstandaard geworden.
-Gelukkig bewaakt GitHub Desktop dat men de stappen in de juiste volgorde doet.
+De terminologie is wat troebel (omdat er heel veel kan, en omdat de oorspronkelijke maker een beetje haast had),
+maar `git` is desondanks de wereldstandaard voor versiebeheer.
+Gelukkig bewaakt `GitHub Desktop` dat men de danspasjes in de juiste volgorde doet.
 
 ## Bonus
 
 ### Verklarende woordenlijst
+
+<details><summary>Details (klik om uit te klappen)</summary></p>
 
 - __Repository__  
 een verzameling bestanden in git of GitHub die samen als projekt beschouwd worden.
@@ -412,6 +425,8 @@ controleren of de wijziging ok is. En, als het ok is (Accept), verder verwerkt e
 - __Main__  
 De Main Branch is zeg maar "latest en greatest" versie van een Repository. In grote projekten, kan er in meerdere Branches
 tegelijk gewerkt worden (subteams). Hier hebben we aan Main voldoende.
+
+</details></p>
 
 ### Meerdere GitHub accounts
 
