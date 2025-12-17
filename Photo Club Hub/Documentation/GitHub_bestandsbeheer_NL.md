@@ -375,18 +375,21 @@ Gelukkig bewaakt `GitHub Desktop` dat men de danspasjes in de juiste volgorde do
 
 <details><summary>Details (klik om uit te klappen)</summary></p>
 
-- __Repository__  
-een verzameling bestanden in git of GitHub die samen als projekt beschouwd worden.
-Bijvoorbeeld alls bronprogrammatuur voor een software ontwikkelprojekt.
-De Repository (=Repo) kan openbaar of privé zijn.
-De bestanden zijn normaal platte tekst bestanden in allerlei talen en formaten die door een computer begrepen kunnen worden (.json, .md, .c, .swift).
+- __Repository__
 
-- __git__  
-een versiebeheer technologie die het mogelijk maakt om met 1 of meerdere personen aana een Repository te werken.
-Git kan je bedienen door commando's in een terminal venster te typen.
-Maar wordt vaak vanuit een grafische schil zoals GitHub Desktop aangestuurd.
+Een verzameling bestanden in Git/GitHub die samen als projekt behandeld worden.
+Bijvoorbeeld het complete ontwerp van een computer spel.
+Een Repository (=Repo) kan openbaar of privé zijn.
+De bestanden zijn meestal platte tekst in diverse formaten die door een computer begrepen worden (.json, .md, .swift, …).
+
+- __Git__
+
+Een versiebeheer technologie die het mogelijk maakt om met 1 of meerdere personen aan een Repository te werken.
+Experts kunnen Git, in zijn oervorm, bedienen door commando's in een "terminal" venster te tikken.
+Maar Git wordt ook vaak vanuit een grafische schil zoals `GitHub Desktop` aangestuurd.
 
 - __GitHub__ en __Origin__
+
 Een grote website waar miljoenen Repositories (met gehulp van git) beheerd worden. Gratis voor openbare projekten.\
 GitHub is sedert 2018 een dochteronderneming van Microsoft, maar daar merk je normaal niets van.
 
@@ -394,6 +397,7 @@ Origin is de plek waar de bron van een bepaald Repository staat. Hier dus een an
 Het woord Origin wordt gebruikt omdat er allelei andere bronnen dan GitHub bestaan, zowel openbaar als binnen bedrijven.
 
 - __Clone__ en __Fork__
+
 Clone is slechts tijdelijk nodig in deze procedure (en dus hier onbelangrijk).
 Een Clone is een lokale kopie van een Repo op je eigen computer.
 De bestanden in een Clone kan je lokaal (gewijzigd of ongewijzigd) testen: het is slechts een copie.
@@ -403,26 +407,31 @@ Een Fork is een lokale kopie van een Repo op je eigen computer.
 Wijzigingen aan een Fork kan je aanbieden aan GitHub (ter controle en integratie).
 GitHub houdt bij iedere Repository, ter info, bij welke Forks ervan bestaan.
 
-- __Commit__  
+- __Commit__
+
 Een wijziging aan 1 of meer bestanden, met korte beschrijving, registreren in de lokale Git administratie.
 Commit is een soort voorportaat van wijzigingen die straks met Push naar GitHub kunnen gaan.
 
-- __Push__  
+- __Push__
+
 Lokaal initiatief nemen om een of meerdere Commits naar GitHub (Origin) te sturen.
 GitHub krijgt die informatie binnen zonder erom te vragen (vandaar de naam Push).
 Hiermee kunnen anderen de concept veranderingen zien, maar zijn de verandering nog niet definitief geaccepteerd.
 
-- __Pull__  
+- __Pull__
+
 Lokaal initiatief nemen om de lokale bestanden bij te werken met mogelijke centrale wijzigingen in het GitHub Repository.
 Pull is verwant aan een locaal E-mail programma dat nieuwe berichten ophaalt van een centrale server.
 Alleen by E-mail kan het geen kwaad om geregeld nieuwe berichten binnen te halen, en hier moet je op een knop drukken om te zeggen wanneer het je uitkomt.
 GitHub Desktop waarschuwt je als er iets veranderd is, en dan kan je beslissen of je het nu wilt ophalen.
 
-- __Pull Request__  
+- __Pull Request__
+
 Een verzoek richting een Repository beheerder op GitHub (Origin) om wijzigingen te integreren. Centraal gaat men dan vaak
 controleren of de wijziging ok is. En, als het ok is (Accept), verder verwerkt en opgenomen.
 
-- __Main__  
+- __Main__
+
 De Main Branch is zeg maar "latest en greatest" versie van een Repository. In grote projekten, kan er in meerdere Branches
 tegelijk gewerkt worden (subteams). Hier hebben we aan Main voldoende.
 
