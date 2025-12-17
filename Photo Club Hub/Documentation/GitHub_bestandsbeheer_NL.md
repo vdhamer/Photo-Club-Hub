@@ -375,7 +375,7 @@ Gelukkig bewaakt `GitHub Desktop` dat men de danspasjes in de juiste volgorde do
 
 <details><summary>Details (klik om uit te klappen)</summary></p>
 
-- __Repository__
+#### __Repository__
 
 Een verzameling bestanden in Git/GitHub die samen als projekt behandeld worden.
 Bijvoorbeeld het complete ontwerp van een computer spel.
@@ -390,8 +390,8 @@ Maar Git wordt ook vaak vanuit een grafische schil zoals `GitHub Desktop` aanges
 
 - __GitHub__ en __Origin__
 
-Een grote website waar miljoenen Repositories (met gehulp van git) beheerd worden. Gratis voor openbare projekten.\
-GitHub is sedert 2018 een dochteronderneming van Microsoft, maar daar merk je normaal niets van.
+Een grote website waar miljoenen Repositories (met gehulp van git) beheerd worden. Het gebruik is gratis voor openbare projekten.
+GitHub is sedert 2018 een dochteronderneming van Microsoft, maar lijkt vrij los van Microsoft te opereren.
 
 Origin is de plek waar de bron van een bepaald Repository staat. Hier dus een ander wooord voor GitHub.
 Het woord Origin wordt gebruikt omdat er allelei andere bronnen dan GitHub bestaan, zowel openbaar als binnen bedrijven.
