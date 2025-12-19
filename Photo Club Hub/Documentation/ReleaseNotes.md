@@ -9,7 +9,7 @@ CLUBS AND MUSEUMS SCREEN
 DATA MAINTENANCE
 
 * Forced a data reset with dataResetPending288b4654 (related to former members of fgDeGender).
-* Removed former members of fcDeGender without portfolios in the app (including PdW).
+* Removed former members of fcDeGender who don't have portfolios in the app (including PdW).
 * Added portfolio's for 5 former members of fgDeGender (they disappeared after moving the location).
 * Added support for "Printing" Expertise (the tag for December 2025).
 * Fixed link in level 1 file to level2 file for fgDeGender.
