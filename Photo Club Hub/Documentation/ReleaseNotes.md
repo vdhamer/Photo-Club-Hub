@@ -6,32 +6,33 @@ CLUBS AND MUSEUMS SCREEN
 * Renamed IndividueelBO to Persoonlijk16 (to match Fotobond convention: "Persoonlijke leden")
 * TODO: fix scrolling of Clubs and Museums screen (on iPhone only?). <<<<
 
+PORTFOLIO SCREEN
+
+* Data source is displayed again (but it still needs some more work).
+
 DATA MAINTENANCE
 
 * Forced a data reset with dataResetPending288b4654 (related to former members of fgDeGender).
 * Removed former members of fcDeGender who don't have portfolios in the app (including PdW).
-* Added portfolio's for 5 former members of fgDeGender (they disappeared after moving the location).
-* Added support for "Printing" Expertise (the tag for December 2025).
+* Added portfolio's for 5 former members of fgDeGender (they disappeared after change file locations).
+* Added support for "Printing" Expertise (new tag for December 2025).
 * Fixed link in level 1 file to level2 file for fgDeGender.
-* Schema change around FotobondNumber
-* Added a dummy test file named whiteboard.txt for testing GitHub Desktop
+* Schema change around FotobondNumber.
+* Added a dummy test file named whiteboard.txt for testing data entry using GitHub Desktop.
 
 CODE MAINTENANCE
 
-* Synchronized code with Photo Club Hub HTML (minor changes).
+* Synchronized code with Photo Club Hub HTML.
 * Tested with Xcode 26.2 (17C52), MacOS 26.2 (25C56) and iOS 26.2 (23C55) and SwiftLint 0.62.2_1.
 * Improved handling of Level2URL field.
 * Split organization.swift into 4 source files.
-* Fixed bug: OrganizationListView1718 was used instead of OrganizationListView2626 for iOS 26.x
-* Split organization.swift source code into 4 files.
-
-PORTFOLIO SCREEN
-
-* Data source is displayed again (but it still needs more work).
+* Fixed bug: OrganizationListView1718 was used instead of OrganizationListView2626 for iOS 26. Oops.
+* Split organization.swift into 4 smaller files.
 
 DOCUMENTATION
 
-* Added GitHub_bestandsbeheer_NL.md
+* New GitHub_bestandsbeheer_NL.md with procedure to submit data file updates directly to the project's repository on  GitHub.
+* No English translation yet of GitHub_bestandsbeheer_NL (please bug us if you need it soon).
 
 This build #4654 was made using Xcode 26.2
 
