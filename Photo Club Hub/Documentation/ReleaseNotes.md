@@ -10,6 +10,11 @@ PORTFOLIO SCREEN
 
 * Data source is displayed again (but it still needs some more work).
 
+DOCUMENTATION
+
+* New GitHub_bestandsbeheer_NL.md with procedure to submit data file updates directly to the project's repository on  GitHub.
+* No English translation yet of GitHub_bestandsbeheer_NL (please bug us if you need it soon).
+
 DATA MAINTENANCE
 
 * Forced a data reset with dataResetPending288b4654 (related to former members of fgDeGender).
@@ -28,11 +33,6 @@ CODE MAINTENANCE
 * Split organization.swift into 4 source files.
 * Fixed bug: OrganizationListView1718 was used instead of OrganizationListView2626 for iOS 26. Oops.
 * Split organization.swift into 4 smaller files.
-
-DOCUMENTATION
-
-* New GitHub_bestandsbeheer_NL.md with procedure to submit data file updates directly to the project's repository on  GitHub.
-* No English translation yet of GitHub_bestandsbeheer_NL (please bug us if you need it soon).
 
 This build #4654 was made using Xcode 26.2
 
