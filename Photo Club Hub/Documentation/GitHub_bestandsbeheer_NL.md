@@ -100,9 +100,14 @@ Dit is dus vergelijkbaar met allerlei webdiensten zoals Facebook of Instagram.
 
 <p align="center"><img width="532" height="889" alt="Screenshot 2025-12-11 at 22 19 03" src="https://github.com/user-attachments/assets/da795207-821c-4a14-bdce-4f156e796d61" /></p>
 
+   > Waarschuwing: Wie een Apple account gebruikt, kan `Continue with Apple` (of `Continue with Google`) kiezen.
+   > Als je dit gebruikt, ben je snel klaar - maar het heeft een vrij groot nadeel: Apple geeft jou een eigen, onleesbare Username.
+   > Dit werkt allemaal wel, maar betekent dat je voortaan in GitHub bekend komt te staan onder zoiets als dtbfu7pkl3x-blob.
+   > Dat is niet makkelijke herkenbaar (al kan je wel in GitHub een leesbare naam vinden).
+   > Wij raden dus aan om `Continue with Apple` dus maar voor de GitHub registratie niet te gebruiken.
+
 <details><summary>Details (klik om uit te klappen)</summary></p>
 
-- Wie een Apple account gebruikt, kan "Continue with Apple" (of "Continue with Google") kiezen. Als je dit gebruikt, ben je snel klaar.
 - Voor toekomstige "Sign in" heb jij de combinatie Email/Password straks nodig. Of Username/Password. Je moet alle 3 velden invullen en goed bewaren.
    - Email moet uniek zijn binnen GitHub.
 Voor de meeste mensen is deze stap geen probleem: die hebben bijvoorbeeld een primair en misschien een secondair Email account. 
