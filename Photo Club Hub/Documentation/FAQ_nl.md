@@ -649,14 +649,15 @@ Jazeker:
 | ----------- | ----------- | :---: | :---: |
 | FAQ (dit document) | [tinyurl.com/fchFAQnl](https://tinyurl.com/fchFAQnl) | ✓ | komt |
 | Een level1.json bestand aanmaken voor een afdeling | [tinyurl.com/Level2aanmaken](https://tinyurl.com/Level1aanmaken) | ✓ | komt |
-| Een level2.json bestand aanmaken voor een club | [tinyurl.com/Level2aanmaken](https://tinyurl.com/Level2aanmaken) | ✓ | |
-| Creating a new level2.json file for your club | [tinyurl.com/Level2creation](https://tinyurl.com/Level2creation) | | ✓ |
+| Een level2.json bestand aanmaken voor een club | [tinyurl.com/Level2aanmaken](https://tinyurl.com/Level2aanmaken) | ✓ | - |
+| Creating a new level2.json file for your club | [tinyurl.com/Level2creation](https://tinyurl.com/Level2creation) | - | ✓ |
 | FAQ over `expertise` in level2.json bestanden | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/Level2_expertise_NL.md) | ✓ | |
-| FAQ about `expertise` in level2.json files | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/Level2_expertise_EN.md)  | | ✓ |
-| Readme Photo Club Hub | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/.github/README.md) | | ✓ |
-| Readme Photo Club Hub HTML | [link](https://github.com/vdhamer/Photo-Club-Hub-HTML/blob/main/.github/README.md) | | ✓ |
+| FAQ about `expertise` in level2.json files | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/Level2_expertise_EN.md)  | - | ✓ |
+| Readme Photo Club Hub | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/.github/README.md) | - | ✓ |
+| Readme Photo Club Hub HTML | [link](https://github.com/vdhamer/Photo-Club-Hub-HTML/blob/main/.github/README.md) | - | ✓ |
 | Interne readme in Photo Club Hub app | ingebouwd in app | ✓ | ✓ |
 | FotoclubHubIntro_NL.pptx Powerpoint | [download](https://tinyurl.com/fchPPTnl) | ✓ | komt |
+| Bestanden rechstreeks in Github wijzigingen | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/GitHub_bestandsbeheer_NL.md) | - | ✓ |
 | Featured Image pipeline (nogal technisch) | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/FeaturedImagePipeline.md) | | ✓ |
 </details></p>
 
