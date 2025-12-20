@@ -103,7 +103,7 @@ Dit is dus vergelijkbaar met allerlei webdiensten zoals Facebook of Instagram.
    > Waarschuwing: Wie een Apple account gebruikt, kan `Continue with Apple` (of `Continue with Google`) kiezen.
    > Als je dit gebruikt, ben je snel klaar - maar het heeft een vrij groot nadeel: Apple geeft jou een eigen, onleesbare Username.
    > Dit werkt allemaal wel, maar betekent dat je voortaan in GitHub bekend komt te staan onder zoiets als dtbfu7pkl3x-blob.
-   > Dat is niet makkelijke herkenbaar (al kan je wel in GitHub een leesbare naam vinden).
+   > Dat is niet makkelijke herkenbaar (al kan je wel in GitHub een bijbehorende leesbare naam vinden).
    > Wij raden dus aan om `Continue with Apple` dus maar voor de GitHub registratie niet te gebruiken.
 
 <details><summary>Details (klik om uit te klappen)</summary></p>
