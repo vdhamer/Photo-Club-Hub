@@ -15,25 +15,26 @@ struct LockAnimationView: View {
 
     var body: some View {
         GeometryReader { geo in
-            ZStack {
+            var minGeoSize: Double { min(geo.size.width, geo.size.height) }
 
-                RoundedRectangle(cornerRadius: min(geo.size.width, geo.size.height)*0.15, style: .continuous)
+            ZStack {
+                RoundedRectangle(cornerRadius: minGeoSize*0.15, style: .continuous)
                     .inset(by: lineWidth)
                     .strokeBorder(lineColor, lineWidth: lineWidth)
-                    .cornerRadius(min(geo.size.width, geo.size.height)*0.01)
+                    .cornerRadius(minGeoSize*0.01)
                     .foregroundColor(.white)
                     .offset(y: 13)
-                    .frame(width: min(geo.size.width, geo.size.height)*0.45,
-                           height: min(geo.size.width, geo.size.height)*0.40)
+                    .frame(width: minGeoSize*0.45,
+                           height: minGeoSize*0.40)
 
                 Capsule()
                     .trim(from: locked ? 0.60 : 0.60,
                           to: locked ? 0.90: 0.95)
                     .stroke(style: StrokeStyle(lineWidth: lineWidth, lineCap: .round))
-                    .frame(width: min(geo.size.width, geo.size.height)*0.20,
-                           height: min(geo.size.width, geo.size.height)*0.5)
+                    .frame(width: minGeoSize*0.20,
+                           height: minGeoSize*0.5)
                     .foregroundColor(lineColor)
-                    .offset(y: min(geo.size.width, geo.size.height) * (locked ? 0.20 : 0.10))
+                    .offset(y: minGeoSize * (locked ? 0.20 : 0.10))
                     .rotation3DEffect(.degrees(locked ? 0 : 180),
                                       axis: (x: 0, y: -1, z: 0),
                                       anchor: .topTrailing,
@@ -41,12 +42,12 @@ struct LockAnimationView: View {
 
                 Circle()
                     .scaleEffect(0.07)
-                    .offset(y: min(geo.size.width, geo.size.height) * 0.18)
+                    .offset(y: minGeoSize * 0.18)
                     .foregroundColor(.gray)
 
                 Rectangle()
                     .scaleEffect(CGSize(width: 0.03, height: 0.10))
-                    .offset(y: min(geo.size.width, geo.size.height) * 0.23)
+                    .offset(y: minGeoSize * 0.23)
                     .foregroundColor(.secondary)
 
             }
@@ -62,9 +63,11 @@ struct LockAnimation_Previews: PreviewProvider {
 
     static var previews: some View {
         GeometryReader { geo in
+            var minGeoSize: Double { min(geo.size.width, geo.size.height) }
+
             LockAnimationView(locked: true, lineWidth: 10, lineColor: .teal)
-                .frame(width: min(geo.size.width, geo.size.height),
-                       height: min(geo.size.width, geo.size.height))
+                .frame(width: minGeoSize,
+                       height: minGeoSize)
                 .frame(width: geo.size.width, height: geo.size.height)
                 .border(.red, width: 1)
         }
