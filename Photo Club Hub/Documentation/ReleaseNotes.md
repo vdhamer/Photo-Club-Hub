@@ -2,7 +2,7 @@
 
 CLUBS AND MUSEUMS SCREEN
 
-* Added 10 clubs for Drenthe, a district of the Netherlands. They are - for now - at Level 1. Thanks to AH.
+* Added 10 clubs in Drenthe, a district of the Netherlands. They are so far at Level 1. Thanks to AH.
 * Renamed IndividueelBO to Persoonlijk16 (to match Fotobond convention: "Persoonlijke leden")
 * TODO: fix scrolling of Clubs and Museums screen (on iPhone only?). <<<<
 
