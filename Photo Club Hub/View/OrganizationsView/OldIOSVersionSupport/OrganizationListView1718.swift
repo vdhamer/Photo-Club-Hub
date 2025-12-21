@@ -43,7 +43,7 @@ struct OrganizationListView1718: View {
             LazyVStack {
                 FilteredOrganizationView1718(predicate: model.preferences.photoClubPredicate, searchText: $searchText)
             }
-            .scrollTargetLayout()
+            .scrollTargetLayout() // doesn't work well on iOS 26, but looks ok on earlier versions
 
             if organizations.isEmpty {
                 NoClubsText()
