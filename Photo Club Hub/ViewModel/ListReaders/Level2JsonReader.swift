@@ -69,11 +69,10 @@ public class Level2JsonReader { // normally running on a background thread
                                                                idPlus: idPlus)
 
         // MARK: - /club/coordinates
-        guard let coordinates = loadClubCoordinates(jsonClub: jsonClub, targetIdPlus: targetIdPlus) else {
-            return // in the Debug version loadClubCoordinates forces a fatal error, so we never reach this point
-        }
-        if club.coordinates != coordinates {
-            club.coordinates = coordinates
+        if let coordinates = loadClubCoordinates(jsonClub: jsonClub, targetIdPlus: targetIdPlus) {
+            if club.coordinates != coordinates {
+                club.coordinates = coordinates
+            }
         }
 
         // MARK: - /club/optional may not exist

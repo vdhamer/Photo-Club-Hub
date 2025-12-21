@@ -148,6 +148,12 @@ extension PhotoClubHubApp {
             bgContext: makeBgContext(ctxName: "Level 2 loader fkGestel"),
             isBeingTested: isBeingTested,
             useOnlyInBundleFile: useOnlyInBundleFile)
+
+        // load current/former members of container for Persoonlijke members of Fotobond (in region 03)
+        _ = Persoonlijk03MembersProvider(
+            bgContext: makeBgContext(ctxName: "Level 2 loader Persoonlijk03"),
+            isBeingTested: isBeingTested,
+            useOnlyInBundleFile: useOnlyInBundleFile)
     }
 
     static func makeBgContext(ctxName: String) -> NSManagedObjectContext {

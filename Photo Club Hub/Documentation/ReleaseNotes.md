@@ -9,7 +9,7 @@ CLUBS AND MUSEUMS SCREEN
 PORTFOLIO SCREEN
 
 * Data source is displayed again (but it still needs some more work).
-* Can display Personal members of Fotobond region Drenthe/03 (as soon as data is available).
+* Added loader for members of Persoonlijk03.level2.json (but initial file has zero members).
 
 DOCUMENTATION
 
@@ -25,6 +25,7 @@ DATA MAINTENANCE
 * Fixed link in level 1 file to level2 file for fgDeGender.
 * Schema change around FotobondNumber.
 * Added a dummy test file named whiteboard.txt for testing data entry using GitHub Desktop.
+* Changed town for Persoonlijk03.level2.json from Hoogeveen to "Drenthe - Vechtdal"
 
 CODE MAINTENANCE
 
