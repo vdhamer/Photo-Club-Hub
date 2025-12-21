@@ -113,6 +113,7 @@
 		D0CA9B392D6B7739005428C0 /* LocalizedRemark.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0447C872BA510AF00982A1E /* LocalizedRemark.swift */; };
 		D0CFACAD2CDEDCBA005E3A0B /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D0CFACAC2CDEDCBA005E3A0B /* SwiftyJSON */; };
 		D0D18C78296E1F6A00B334DB /* OrganizationIdPlus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D18C77296E1F6A00B334DB /* OrganizationIdPlus.swift */; };
+		D0DD2B7B2EF89BCF002210DA /* Persoonlijk03.level2.json in Resources */ = {isa = PBXBuildFile; fileRef = D0DD2B7A2EF89BCF002210DA /* Persoonlijk03.level2.json */; };
 		D0DE02772789D1B30062738C /* RoleIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DE02762789D1B30062738C /* RoleIconView.swift */; };
 		D0DFBEF42D47036900CB9E73 /* PhotoClubHub.Readme.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = D0DFBEF32D47036900CB9E73 /* PhotoClubHub.Readme.xcstrings */; };
 		D0E2235427DE9139002A8600 /* PreludeView1718.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E2235327DE9139002A8600 /* PreludeView1718.swift */; };
@@ -313,6 +314,7 @@
 		D0D18C77296E1F6A00B334DB /* OrganizationIdPlus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationIdPlus.swift; sourceTree = "<group>"; };
 		D0D4860D2B0EC18A00ED0542 /* Photo_Club_Hub_2_5_2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_5_2.xcdatamodel; sourceTree = "<group>"; };
 		D0DCF7862D090D5C0057FB24 /* Photo_Club_Hub_2_7_2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_7_2.xcdatamodel; sourceTree = "<group>"; };
+		D0DD2B7A2EF89BCF002210DA /* Persoonlijk03.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Persoonlijk03.level2.json; sourceTree = "<group>"; };
 		D0DE02762789D1B30062738C /* RoleIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleIconView.swift; sourceTree = "<group>"; };
 		D0DE1B272E1BD23E00FEDFA7 /* Photo_Club_Hub_2_8_1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_8_1.xcdatamodel; sourceTree = "<group>"; };
 		D0DE6B6D2DB6DAE700841DBF /* packages.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = packages.png; sourceTree = "<group>"; };
@@ -384,8 +386,8 @@
 		37E134BD2E6F7AAB00C61714 /* OldIOSVersionSupport */ = {
 			isa = PBXGroup;
 			children = (
-				D0831A1B277F72270049AB84 /* FilteredOrganizationView1718.swift */,
 				37E134B12E6F693E00C61714 /* OrganizationListView1718.swift */,
+				D0831A1B277F72270049AB84 /* FilteredOrganizationView1718.swift */,
 			);
 			path = OldIOSVersionSupport;
 			sourceTree = "<group>";
@@ -805,6 +807,7 @@
 		D0F871912D403D1700530D10 /* JSON */ = {
 			isa = PBXGroup;
 			children = (
+				D0DD2B7A2EF89BCF002210DA /* Persoonlijk03.level2.json */,
 				375CC66B2EE0A10300B618DB /* hierarchyDemo.level1.json */,
 				37D1EA4E2EDDDD46008A5FE1 /* Afdeling03.level1.json */,
 				D061AEFF2E3A451700E39B43 /* 250925_Fotoclubs_Brabant_Oost.xlsx */,
@@ -972,6 +975,7 @@
 				D0FD28BB2D8CDFD3002B5C38 /* languages.level0.json in Resources */,
 				D0FD28BC2D8CDFD3002B5C38 /* abstractExpertise.level0.json in Resources */,
 				D0FD28BD2D8CDFD3002B5C38 /* language.level0.json in Resources */,
+				D0DD2B7B2EF89BCF002210DA /* Persoonlijk03.level2.json in Resources */,
 				D0831A51277F73C00049AB84 /* Preview Assets.xcassets in Resources */,
 				D0A615CF2D9218030024EC9E /* fgWaalre.level2.json in Resources */,
 			);

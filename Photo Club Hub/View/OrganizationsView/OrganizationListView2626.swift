@@ -40,10 +40,10 @@ struct OrganizationListView2626: View {
     var body: some View {
         ScrollView(.vertical, showsIndicators: true) {
 
-            LazyVStack {
+            LazyVStack(alignment: .leading, spacing: 25) { // TODO try using pinnedViews argument
                 FilteredOrganizationView2626(predicate: model.preferences.photoClubPredicate, searchText: $searchText)
             }
-//            .scrollTargetLayout()
+            .scrollTargetLayout() // TODO
 
             if organizations.isEmpty {
                 NoClubsText()

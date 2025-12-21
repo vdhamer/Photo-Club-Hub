@@ -137,8 +137,10 @@ struct FilteredOrganizationView2626: View {
                 } // Map ends here
                     .frame(minHeight: 300, idealHeight: 500, maxHeight: .infinity)
                 Text(filteredOrganization.localizedRemark) // display remark in preferred language (if possible)
+                    .lineLimit(2) // TODO
                     .padding(.top, 5)
             } // VStack
+            .id(filteredOrganization.id)
             .task {
                 initializeCameraPosition(organization: filteredOrganization) // better than .onAppear(perform:)?
             }

@@ -1,0 +1,36 @@
+{
+    "club": {
+        "idPlus": {
+            "town": "Hoogeveen",
+            "fullName": "Persoonlijke Leden Afdeling Drenthe - Vechtdal",
+            "nickName": "Persoonlijk03"
+        },
+        "coordinates": {
+            "latitude": 52.71370,
+            "longitude": 6.48451
+        },
+        "optional": {
+            "level2URL": "http://www.example.com/Persoonlijk03.level2.json",
+            "remark": [
+                {
+                    "language": "NL",
+                    "value": "Persoonlijke leden Fotobond Afdeling Drenthe - Vechtdal"
+                },
+                {
+                    "language": "EN",
+                    "value": "Members of Fotobond Afdeling Drenthe - Vechtdal who are not a member of any Fotobond club."
+                }
+            ],
+            "nlSpecific": {
+                "fotobondNumber": 300
+            }
+        }
+    },
+
+
+    "members": [
+
+
+
+    ]
+}
