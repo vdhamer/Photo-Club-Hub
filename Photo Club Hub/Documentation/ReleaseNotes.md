@@ -9,6 +9,7 @@ CLUBS AND MUSEUMS SCREEN
 PORTFOLIO SCREEN
 
 * Data source is displayed again (but it still needs some more work).
+* Can display Personal members of Fotobond region Drenthe/03 (as soon as data is available).
 
 DOCUMENTATION
 

@@ -47,7 +47,7 @@ public struct FotobondMemberNumber: Equatable {
 
     // format is DD.CC.MMM where D="department" and C=club and M=member and all are padded with leading 0's
     // example: 1610123 -> "16.10.123" (Brabant Oost)
-    // exmpple:  304123 -> "03.04.123" (Drenthe-Vechtdal)
+    // example:  304123 -> "03.04.123" (Drenthe - Vechtdal)
     // example: 3004321 -> "Pers.4321" (weird exception)
     public var display: String {
         guard let id else { return "N/A" }
