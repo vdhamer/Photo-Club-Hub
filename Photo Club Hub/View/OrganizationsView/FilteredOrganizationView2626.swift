@@ -137,8 +137,11 @@ struct FilteredOrganizationView2626: View {
                 } // Map ends here
                     .frame(minHeight: 300, idealHeight: 500, maxHeight: .infinity)
                 Text(filteredOrganization.localizedRemark) // display remark in preferred language (if possible)
-                    .lineLimit(2) // TODO
                     .padding(.top, 5)
+                    .font(.footnote)
+                    .lineLimit(3)
+                    .minimumScaleFactor(0.9)
+                    .frame(height: 40)
             } // VStack
             .id(filteredOrganization.id)
             .task {
