@@ -39,7 +39,7 @@ final public class Persoonlijk03MembersProvider: Sendable {
                                         isBeingTested: Bool,
                                         town: String = "Drenthe - Vechtdal",
                                         useOnlyInBundleFile: Bool) {
-        let idPlus = OrganizationIdPlus(fullName: "Persoonlijke Leden Afdeling Drenthe - Vechtdal",
+        let idPlus = OrganizationIdPlus(fullName: "Persoonlijke Leden Drenthe - Vechtdal",
                                         town: town,
                                         nickname: "Persoonlijk03")
 

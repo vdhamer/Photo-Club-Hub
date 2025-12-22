@@ -1,11 +1,13 @@
 ### 2.8.9 (GitHub commit ???????) ??-01-226
 
 * TODO: update schema image in GitHub readme.md
-* TODO: update Web version to (also) read `Persoonlijk03.level2.md`
 * TODO: hierarchical Level 1 files.
-* TODO: code sync between iOS and Web versions.
 * TODO: optimize loading time of fgWaalre for current members
 * TODO: collapse size of search field on some/all screens
+
+DATA MAINTENANCE
+
+* shortened "Persoonlijke Leden Afdeling Drenthe - Vechtdal" to "Persoonlijke Leden Drenthe - Vechtdal"
 
 This build #4655 was made using Xcode 26.2.
 

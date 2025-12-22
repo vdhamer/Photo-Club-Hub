@@ -2,7 +2,7 @@
     "club": {
         "idPlus": {
             "town": "Drenthe - Vechtdal",
-            "fullName": "Persoonlijke Leden Afdeling Drenthe - Vechtdal",
+            "fullName": "Persoonlijke Leden Drenthe - Vechtdal",
             "nickName": "Persoonlijk03"
         },
         "coordinates": {
@@ -14,11 +14,11 @@
             "remark": [
                 {
                     "language": "NL",
-                    "value": "Persoonlijke leden Fotobond Afdeling Drenthe - Vechtdal"
+                    "value": "Persoonlijke leden Fotobond Drenthe - Vechtdal"
                 },
                 {
                     "language": "EN",
-                    "value": "Members of Fotobond Afdeling Drenthe - Vechtdal who are not a member of any Fotobond club."
+                    "value": "Members of Fotobond Drenthe - Vechtdal who are not a member of any Fotobond club."
                 }
             ],
             "nlSpecific": {
