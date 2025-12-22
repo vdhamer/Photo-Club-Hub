@@ -139,7 +139,7 @@ struct FilteredOrganizationView2626: View {
                 Text(filteredOrganization.localizedRemark) // display remark in preferred language (if possible)
                     .padding(.top, 5)
                     .font(.footnote)
-                    .lineLimit(3)
+                    .lineLimit(2)
                     .minimumScaleFactor(0.9)
                     .frame(height: 40)
             } // VStack
