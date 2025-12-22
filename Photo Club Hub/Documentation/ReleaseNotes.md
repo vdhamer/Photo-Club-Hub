@@ -1,6 +1,5 @@
 ### 2.8.9 (GitHub commit ???????) ??-01-226
 
-* TODO: update schema image in GitHub readme.md
 * TODO: hierarchical Level 1 files.
 * TODO: optimize loading time of fgWaalre for current members
 * TODO: collapse size of search field on some/all screens
@@ -8,6 +7,10 @@
 DATA MAINTENANCE
 
 * shortened "Persoonlijke Leden Afdeling Drenthe - Vechtdal" to "Persoonlijke Leden Drenthe - Vechtdal"
+
+DOCUMENTATION
+
+* updated data schema image in GitHub README.md
 
 This build #4655 was made using Xcode 26.2.
 
@@ -17,7 +20,7 @@ This build #4655 was made using Xcode 26.2.
 
 CLUBS AND MUSEUMS SCREEN
 
-* Added 10 clubs in Drenthe, a district of the Netherlands. They are so far at Level 1. Thanks to AH.
+* Added 10 clubs in Drenthe, a district of the Netherlands. They are so far at Level 1. Thanks to AJH.
 * Renamed `IndividueelBO` to `Persoonlijk16` (to match Fotobond convention: "Persoonlijke leden" for non-club membership)
 * Fixed smart scrolling of Clubs and Museums screen (iOS 26-related; bug was limited to iPhones)
 
