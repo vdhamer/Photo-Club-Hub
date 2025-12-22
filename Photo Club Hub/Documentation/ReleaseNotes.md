@@ -1,4 +1,4 @@
-### 2.8.8 (GitHub commit ???????) ??-12-25
+### 2.8.8 (GitHub commit d6a09d9) 22-12-25
 
 CLUBS AND MUSEUMS SCREEN
 
