@@ -1,3 +1,9 @@
+### 2.8.9 (GitHub commit ???????) ??-01-226
+
+This build #4655 was made using Xcode 26.2 and is intended for the App Store.
+
+---------------------------------------------------------------------------
+
 ### 2.8.8 (GitHub commit d6a09d9) 22-12-25
 
 CLUBS AND MUSEUMS SCREEN
