@@ -1,31 +1,30 @@
-### 2.8.8 (GitHub commit ???????) ??-12-25
+### 2.8.8 (GitHub commit d6a09d9) 22-12-25
 
 CLUBS AND MUSEUMS SCREEN
 
 * Added 10 clubs in Drenthe, a district of the Netherlands. They are so far at Level 1. Thanks to AH.
-* Renamed IndividueelBO to Persoonlijk16 (to match Fotobond convention: "Persoonlijke leden")
-* Fixed smart scrolling of Clubs and Museums screen (on iOS 26)
+* Renamed `IndividueelBO` to `Persoonlijk16` (to match Fotobond convention: "Persoonlijke leden" for non-club membership)
+* Fixed smart scrolling of Clubs and Museums screen (iOS 26-related; bug was limited to iPhones)
 
 PORTFOLIO SCREEN
 
 * Data source is displayed again (but it still needs some more work).
-* Added loader for members of Persoonlijk03.level2.json (but initial file has zero members).
+* Added loader for members of `Persoonlijk03.level2.json` (but initial file has zero members).
 
 DOCUMENTATION
 
-* New GitHub_bestandsbeheer_NL.md with procedure to submit data file updates directly to the project's repository on  GitHub.
-* No English translation yet of GitHub_bestandsbeheer_NL (please bug us if you need it soon).
+* Added `GitHub_bestandsbeheer_NL` with procedure to submit file updates directly to the project's repository on  GitHub. It is uses `GitHub Desktop`. Contact us if you are awaiting `GitHub_filemanagement_EN`.
 
 DATA MAINTENANCE
 
-* Forced a data reset with dataResetPending288b4654 (related to former members of fgDeGender).
+* Forced a data reset with `dataResetPending288b4654` (related to former members of fgDeGender).
 * Removed former members of fcDeGender who don't have portfolios in the app (including PdW).
-* Added portfolio's for 5 former members of fgDeGender (they disappeared after change file locations).
-* Added support for "Printing" Expertise (new tag for December 2025).
+* Added portfolio's for 5 former members of fgDeGender (they disappeared after changed file locations).
+* Added support for `Printing` Expertise tag (the tag for December 2025).
 * Fixed link in level 1 file to level2 file for fgDeGender.
-* Schema change around FotobondNumber.
-* Added a dummy test file named whiteboard.txt for testing data entry using GitHub Desktop.
-* Changed town for Persoonlijk03.level2.json from Hoogeveen to "Drenthe - Vechtdal"
+* Schema change around `FotobondNumber`.
+* Added a dummy test file named `Whiteboard.txt` for to allow testing of `GitHub_bestandsbeheer_NL`.
+* Changed town for `Persoonlijk03.level2.json` from Hoogeveen to "Drenthe - Vechtdal"
 
 CODE MAINTENANCE
 
@@ -36,7 +35,7 @@ CODE MAINTENANCE
 * Fixed bug: OrganizationListView1718 was used instead of OrganizationListView2626 for iOS 26. Oops.
 * Split organization.swift into 4 smaller files.
 
-This build #4654 was made using Xcode 26.2
+This build #4654 was made using Xcode 26.2 and is intended for the App Store.
 
 ---------------------------------------------------------------------------
 
