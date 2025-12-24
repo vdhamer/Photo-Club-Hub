@@ -108,7 +108,7 @@ struct MemberPortfolioListView1718: View {
                 .offset(x: 5)
 
                 NavigationLink(destination: {
-                    WhoIsWhoListView(searchText: $searchText)
+                    WhoIsWhoListView1718(searchText: $searchText)
                 }, label: {
                     Image("person.text.rectangle.custom")
                         .font(.title)
