@@ -2,7 +2,7 @@
 
 * TODO: hierarchical Level 1 files.
 * TODO: optimize loading time of fgWaalre for current members
-* TODO: collapse size of search field on some/all screens
+* TODO: collapse size of search bar on Portfolios, Clubs & Museums, and Who's Who screens
 
 DATA MAINTENANCE
 
