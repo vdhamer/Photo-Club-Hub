@@ -379,6 +379,7 @@ struct FilteredOrganizationView2626_Previews: PreviewProvider {
             }
             .navigationBarTitle(Text(String("PhotoClubInnerView"))) // prevent localization
             .searchable(text: $searchText, placement: .toolbar, prompt: Text("Search names and towns"))
+            .searchToolbarBehavior(.minimize)
         }
     }
 }
