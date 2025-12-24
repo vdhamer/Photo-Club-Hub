@@ -96,9 +96,6 @@ struct OrganizationListView1718: View {
         .disableAutocorrection(true)
     }
 
-    private let toolbarItemPlacement: ToolbarItemPlacement = UIDevice.isIPad ?
-        .destructiveAction : // iPad: Search field in toolbar
-        .navigationBarTrailing // iPhone: Search field in drawer
 }
 
 struct NoClubsText: View {
