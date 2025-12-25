@@ -2,7 +2,19 @@
 
 * TODO: hierarchical Level 1 files.
 * TODO: optimize loading time of fgWaalre for current members
-* TODO: collapse size of search bar on Portfolios, Clubs & Museums, and Who's Who screens
+* TODO: add an extra expertise for Jan 2026
+
+PORTFOLIOS SCREEN
+
+* Minimize size of search bar on Portfolios when not in use
+
+CLUBS AND MUSEUMS SCREEN
+
+* Minimize size of search bar on Clubs & Museums screen when not in use
+
+WHO'S WHO SCREEN
+
+* Minimize size of search bar on Who's Who screen when not in use
 
 DATA MAINTENANCE
 
