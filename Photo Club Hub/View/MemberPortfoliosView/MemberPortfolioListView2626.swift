@@ -40,7 +40,8 @@ struct MemberPortfolioListView2626: View {
 
     var body: some View {
         List { // lists are automatically "Lazy"
-            FilteredMemberPortfoliosView(memberPredicate: model.preferences.memberPredicate, searchText: $searchText)
+            FilteredMemberPortfoliosView2626(memberPredicate: model.preferences.memberPredicate,
+                                             searchText: $searchText)
         }
         .listStyle(.plain)
         .refreshable { // for pull-to-refresh
@@ -131,6 +132,7 @@ struct MemberPortfolioListView2626: View {
                                           """
                                 ))
         .disableAutocorrection(true)
+        .searchToolbarBehavior(.minimize)
     }
 
 }
