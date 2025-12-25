@@ -1381,8 +1381,9 @@ Project Link: [https://github.com/vdhamer/Photo-Club-Hub](https://github.com/vdh
 
 ### Acknowledgments
 
-* The opening Prelude screen uses photos by Greetje van Son and Bert Zantingh.
-* The interactive Roadmap screen uses the [AvdLee/Roadmap](https://GitHub.com/AvdLee/Roadmap) package. The screen is currently disabled because the backend provider of Roadmap stopped supporting it.
+* The opening Prelude screen uses photos by Greetje van Son, Bert Zantingh and Peter van den Hamer.
+* The interactive Roadmap screen uses the [AvdLee/Roadmap](https://GitHub.com/AvdLee/Roadmap) package.
+  The screen is currently disabled because the backend provider of Roadmap stopped supporting it.
 * The diagram with Core Data entities was generated using the [Core Data Model Editor](https://GitHub.com/Mini-Stef/Core-Data-Model-Editor) tool by Stéphane Millet.
 * JSON parsing uses the [SwiftyJSON/SwiftyJSON](https://GitHub.com/SwiftyJSON/SwiftyJSON) package.
 
