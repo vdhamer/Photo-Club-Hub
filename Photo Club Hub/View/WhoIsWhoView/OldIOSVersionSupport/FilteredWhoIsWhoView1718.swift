@@ -1,5 +1,5 @@
 //
-//  FilteredWhoIsWhoView.swift
+//  FilteredWhoIsWhoView1718.swift
 //  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 30/12/2021.
@@ -19,7 +19,8 @@ import WebKit // for WKWebView
 //          - a horizontally scrolling list of thumbnails representing portfolios
 // Preview unfortunately doesn't work.
 
-struct FilteredWhoIsWhoView: View {
+@available(iOS, obsoleted: 19.0, message: "Please use 'FilteredOrganizationView2626' for versions above iOS 18.x")
+struct FilteredWhoIsWhoView1718: View {
 
     @Environment(\.managedObjectContext) private var viewContext // may not be correct
     @FetchRequest var fetchedPhotographers: FetchedResults<Photographer>
@@ -127,22 +128,24 @@ struct FilteredWhoIsWhoView: View {
     }
 }
 
-struct FilteredWhoIsWhoViewWrapper: View {
+@available(iOS, obsoleted: 19.0, message: "Please use 'FilteredOrganizationView2626' for versions above iOS 18.x")
+struct FilteredWhoIsWhoViewWrapper1718: View {
     var body: some View {
         let predicate = NSPredicate(format: "familyName_ = %@ || familyName_ = %@ || familyName_ = %@",
                                     argumentArray: ["Eau1", "Eau2", "Eau10"])
         @State var searchText: String = "Eau1"
         let wkWebView = WKWebView()
 
-        return FilteredWhoIsWhoView(predicate: predicate, searchText: $searchText, wkWebView: wkWebView)
+        return FilteredWhoIsWhoView1718(predicate: predicate, searchText: $searchText, wkWebView: wkWebView)
             .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }
 
+@available(iOS, obsoleted: 19.0, message: "Please use 'FilteredOrganizationView2626' for versions above iOS 18.x")
 #Preview {
     NavigationStack {
         List {
-            FilteredWhoIsWhoViewWrapper()
+            FilteredWhoIsWhoViewWrapper1718()
         }
     }
     .searchable(text: .constant("Name"))

@@ -620,7 +620,7 @@
       }
     },
     "Search names and towns" : {
-      "comment" : "Field at top of Clubs and Museums page that allows the user to filter the members based on a fragment of the organization name.",
+      "comment" : "Field at top of Clubs and Museums page that allows the user to filter the members based on a fragment of the organization name.\nField on the Clubs and Museums page that allows the user to filter the members based on a fragment of the organization name or town.",
       "localizations" : {
         "en" : {
           "stringUnit" : {

@@ -16,7 +16,8 @@ import WebKit // for wkWebView
 //     * help text at bottom. One of these footnotes shows the Expertise stats.
 // Preview unfortunately doesn't work.
 
-struct WhoIsWhoListView: View {
+@available(iOS, obsoleted: 19.0, message: "Please use 'OrganizationListView2626' for versions above iOS 18.x")
+struct WhoIsWhoListView1718: View {
     @Environment(\.managedObjectContext) private var viewContext
     @State private var showingPhotoClubs = false
     @State private var showingMembers = false
@@ -43,9 +44,9 @@ struct WhoIsWhoListView: View {
         ScrollView(.vertical, showsIndicators: true) {
 
             LazyVStack {
-                FilteredWhoIsWhoView(predicate: model.preferences.photographerPredicate,
-                                     searchText: searchText,
-                                     wkWebView: wkWebView)
+                FilteredWhoIsWhoView1718(predicate: model.preferences.photographerPredicate,
+                                         searchText: searchText,
+                                         wkWebView: wkWebView)
             }
             .scrollTargetLayout() // unit of vertical "smart" scrolling
 

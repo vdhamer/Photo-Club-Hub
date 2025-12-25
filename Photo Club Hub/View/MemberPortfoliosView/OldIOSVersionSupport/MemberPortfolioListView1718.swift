@@ -40,7 +40,8 @@ struct MemberPortfolioListView1718: View {
 
     var body: some View {
         List { // lists are automatically "Lazy"
-            FilteredMemberPortfoliosView(memberPredicate: model.preferences.memberPredicate, searchText: $searchText)
+            FilteredMemberPortfoliosView1718(memberPredicate: model.preferences.memberPredicate,
+                                             searchText: $searchText)
         }
         .listStyle(.plain)
         .refreshable { // for pull-to-refresh
@@ -108,7 +109,7 @@ struct MemberPortfolioListView1718: View {
                 .offset(x: 5)
 
                 NavigationLink(destination: {
-                    WhoIsWhoListView(searchText: $searchText)
+                    WhoIsWhoListView1718(searchText: $searchText)
                 }, label: {
                     Image("person.text.rectangle.custom")
                         .font(.title)

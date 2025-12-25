@@ -1,5 +1,5 @@
 //
-//  FilteredMemberPortfoliosView.swift
+//  FilteredMemberPortfoliosView2626.swift
 //  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 29/12/2021.
@@ -8,7 +8,8 @@
 import SwiftUI
 import WebKit // for wkWebView
 
-struct FilteredMemberPortfoliosView: View {
+@available(iOS 26.0, *)
+struct FilteredMemberPortfoliosView2626: View {
     private static let predicateNone = NSPredicate(format: "FALSEPREDICATE")
 
     @Environment(\.managedObjectContext) private var viewContext
@@ -236,16 +237,18 @@ struct FilteredMemberPortfoliosView: View {
 
 }
 
-struct FilteredMemberPortfolios_Previews: PreviewProvider {
+@available(iOS 26.0, *)
+struct FilteredMemberPortfolios2626_Previews: PreviewProvider {
     static let memberPredicate = NSPredicate(format: "photographer_.givenName_ = %@", argumentArray: ["Jan"])
     @State static var searchText: String = ""
 
     static var previews: some View {
         List { // lists are "Lazy" automatically
-            FilteredMemberPortfoliosView(memberPredicate: memberPredicate, searchText: $searchText)
+            FilteredMemberPortfoliosView2626(memberPredicate: memberPredicate, searchText: $searchText)
                 .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
         }
         .navigationBarTitle(Text(String("FilteredMemberPortfoliosView"))) // prevent localization
         .searchable(text: $searchText, placement: .toolbar, prompt: Text(verbatim: "Search names (preview)"))
+        .searchToolbarBehavior(.minimize)
     }
 }

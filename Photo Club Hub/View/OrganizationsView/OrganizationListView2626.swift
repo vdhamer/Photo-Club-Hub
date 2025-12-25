@@ -11,7 +11,7 @@ import SwiftUI
 struct OrganizationListView2626: View {
     @Environment(\.managedObjectContext) private var viewContext
     @StateObject var model = PreferencesViewModel()
-    @State var locationManager = LocationManager()
+    @State private var locationManager = LocationManager()
     @State private var searchText: String = "" // bindable string with content of Search bar
 
     @FetchRequest(
@@ -89,10 +89,11 @@ struct OrganizationListView2626: View {
                     prompt: Text("Search names and towns",
                                  tableName: "PhotoClubHub.SwiftUI",
                                  comment: """
-                                          Field at top of Clubs and Museums page that allows the user to \
-                                          filter the members based on a fragment of the organization name.
+                                          Field on the Clubs and Museums page that allows the user to \
+                                          filter the members based on a fragment of the organization name or town.
                                           """
                                 ))
+        .searchToolbarBehavior(.minimize)
         .autocapitalization(.sentences)
         .disableAutocorrection(true)
     }
