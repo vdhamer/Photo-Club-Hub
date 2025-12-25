@@ -27,7 +27,7 @@ struct SinglePortfolioLinkView<Content: View>: View {
             }
     }
 
-    func fullNameOrNickName(horSizeClass: UserInterfaceSizeClass?) -> String {
+    private func fullNameOrNickName(horSizeClass: UserInterfaceSizeClass?) -> String {
         // full photo club name on iPad and iPhone 14 Plus or Pro Max only
         guard horSizeClass != nil else { return organization.nickName } // don't know size of display
         return (horSizeClass! == UserInterfaceSizeClass.compact) ? organization.nickName : organization.fullName
@@ -50,8 +50,8 @@ struct SinglePortfolioLinkView<Content: View>: View {
     let personName = PersonName(givenName: "Jan", infixName: "de", familyName: "Korte")
     let optionalFields = PhotographerOptionalFields()
     let photographer = Photographer.findCreateUpdate(context: viewContext,
-                                                 personName: personName,
-                                                 optionalFields: optionalFields)
+                                                     personName: personName,
+                                                     optionalFields: optionalFields)
 
     let destPortfolio = MemberPortfolio.findCreateUpdate(bgContext: viewContext,
                                                          organization: organization,
