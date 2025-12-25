@@ -10,16 +10,23 @@ import RegexBuilder // for OneOrMore, Capture, etc
 
 extension MemberPortfolio {
 
-    private static let clubsUsingJuiceBox: [OrganizationID] = [ // careful: ID strings have to exactly match
-        OrganizationID(fullName: "Fotogroep Waalre", town: "Waalre"),
+    private static let clubsFullyUsingJuiceBox: [OrganizationID] = [ // careful: ID strings require an exact match
         OrganizationID(fullName: "Fotogroep de Gender", town: "Eindhoven")
+    ]
+
+    // if JuiceBox Pro is only used for former members
+    private static let clubsPartiallyUsingJuiceBox: [OrganizationID] = [ // careful: ID strings require an exact match
+        OrganizationID(fullName: "Fotogroep Waalre", town: "Waalre")
     ]
 
     public func refreshFirstImage() {
 
-    	// does this club use JuicBox Pro xml files?
-        guard MemberPortfolio.clubsUsingJuiceBox.contains(organization.id) else { return }
-        guard let urlOfImageIndex else { return }
+        if isUsingJuiceBox { return } // does this club use JuiceBox Pro's XML file for this member's portfolio?
+
+        guard let urlOfImageIndex else { // nil should already have been ruled out by isUsingJuiceBox() and returning
+            ifDebugFatalError("urlOfImageInex is nil")
+            return
+        }
 
         // assumes JuiceBox Pro is used
         ifDebugPrint("""
@@ -44,8 +51,15 @@ extension MemberPortfolio {
         ifDebugPrint("\(organization.fullNameTown): completed refreshFirstImage() \(urlOfImageIndex.absoluteString)")
     }
 
+    private var isUsingJuiceBox: Bool {
+        if urlOfImageIndex == nil { return false } // no data for finding JuiceBox XML file
+        if MemberPortfolio.clubsFullyUsingJuiceBox.contains(organization.id) { return true }
+        if MemberPortfolio.clubsPartiallyUsingJuiceBox.contains(organization.id) && isFormerMember { return true }
+        return false
+    }
+
     // remove a suffix like "#myanchor" if present, and append "config.xml"
-    var urlOfImageIndex: URL? {
+    private var urlOfImageIndex: URL? {
         let url: URL? = URL(string: self.level3URL.absoluteString)
         guard let url else { return nil } // bad string
 
