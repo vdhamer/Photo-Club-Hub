@@ -1,8 +1,7 @@
 ### 2.8.9 (GitHub commit ???????) ??-01-226
 
 * TODO: hierarchical Level 1 files.
-* TODO: optimize loading time of fgWaalre for current members
-* TODO: add an extra expertise for Jan 2026
+* TODO: add an extra expertise for Jan 2026 (Studio?)
 
 PORTFOLIOS SCREEN
 
@@ -19,6 +18,10 @@ WHO'S WHO SCREEN
 DATA MAINTENANCE
 
 * shortened "Persoonlijke Leden Afdeling Drenthe - Vechtdal" to "Persoonlijke Leden Drenthe - Vechtdal"
+
+PERFORMANCE
+
+* faster loading of fgWaalre (special because it is a mix of two types of portfolios)
 
 DOCUMENTATION
 
