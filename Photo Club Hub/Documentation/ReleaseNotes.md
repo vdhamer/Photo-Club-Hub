@@ -56,7 +56,7 @@ DATA MAINTENANCE
 * Added support for `Printing` Expertise tag (the tag for December 2025).
 * Fixed link in level 1 file to level2 file for fgDeGender.
 * Schema change around `FotobondNumber`.
-* Added a dummy test file named `Whiteboard.txt` for to allow testing of `GitHub_bestandsbeheer_NL`.
+* Added a dummy test file named `whiteboard.txt` for to allow testing of `GitHub_bestandsbeheer_NL`.
 * Changed town for `Persoonlijk03.level2.json` from Hoogeveen to "Drenthe - Vechtdal"
 
 CODE MAINTENANCE
