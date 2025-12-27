@@ -818,7 +818,6 @@
 		D0F871912D403D1700530D10 /* JSON */ = {
 			isa = PBXGroup;
 			children = (
-				3723DAEB2F008F1E006E2BB4 /* whiteboard.txt */,
 				3723DAE82F008E25006E2BB4 /* root_.level1.json */,
 				D0DD2B7A2EF89BCF002210DA /* Persoonlijk03.level2.json */,
 				375CC66B2EE0A10300B618DB /* hierarchyDemo.level1.json */,
@@ -845,6 +844,7 @@
 				D0F8718E2D403D1700530D10 /* XampleMax.level2.json */,
 				D0F8718F2D403D1700530D10 /* XampleMin.level1.json */,
 				D0F871902D403D1700530D10 /* XampleMin.level2.json */,
+				3723DAEB2F008F1E006E2BB4 /* whiteboard.txt */,
 			);
 			path = JSON;
 			sourceTree = "<group>";
