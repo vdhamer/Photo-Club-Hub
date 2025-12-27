@@ -81,7 +81,7 @@ extension PhotoClubHubApp {
 
         // load list of photo clubs and museums from root.Level1.json file
         _ = Level1JsonReader(
-            bgContext: makeBgContext(ctxName: "Level 1 loader"),
+            bgContext: makeBgContext(ctxName: "Level 1 loader for root"),
             isBeingTested: isBeingTested,
             useOnlyInBundleFile: useOnlyInBundleFile)
 
