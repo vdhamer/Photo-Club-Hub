@@ -1,13 +1,11 @@
 {
     "level1Header": {
         "level1URL": "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/hierarchyDemo.level1.json",
-        "optional": {
-            "Level1URLIncludes": [
-                "https://www.fcDeGender.nl/clubs/childA.level1.url",
-                "https://www.fcDeGender.nl/clubs/childB.level1.url"
-            ],
-            "contactEmail": "john@fcDeGender.nl"
-        }
+        "Level1URLIncludes": [
+            "https://www.fcDeGender.nl/clubs/childA.level1.url",
+            "https://www.fcDeGender.nl/clubs/childB.level1.url"
+        ],
+        "maintainerEmail": "john@fcDeGender.nl"
     },
     
     "clubs": [
