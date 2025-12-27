@@ -1,7 +1,7 @@
 {
     "level1Header": {
         "level1URL": "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/hierarchyDemo.level1.json",
-        "Level1URLIncludes": [
+        "level1URLIncludes": [
             "https://www.fcDeGender.nl/clubs/childA.level1.url",
             "https://www.fcDeGender.nl/clubs/childB.level1.url"
         ],
