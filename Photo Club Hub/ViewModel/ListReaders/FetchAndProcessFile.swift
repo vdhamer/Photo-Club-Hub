@@ -25,7 +25,7 @@ struct FetchAndProcessFile {
                                                     _ selectFile: FileSelector,
                                                     _ isBeingTested: Bool) -> Void) {
         bgContext.perform { [self] in // run on requested background thread
-            let nameWithSubtype = (fileSelector.fileName) + "." + fileSubType // e.g. "root.level0"
+            let nameWithSubtype = (fileSelector.fileName) + "." + fileSubType // e.g. "root.level1"
 
             let bundle: Bundle = Bundle.main // There is a fancier version of this in Photo Club Hub Data package
             let fileInBundleURL: URL? = bundle.url(forResource: nameWithSubtype, withExtension: fileType)

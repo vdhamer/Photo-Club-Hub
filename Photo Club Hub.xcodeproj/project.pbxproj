@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		3705AFC62E7381D10067CE6B /* fkGestel.level2.json in Resources */ = {isa = PBXBuildFile; fileRef = 3705AFC52E7381D10067CE6B /* fkGestel.level2.json */; };
 		372028CE2E84A4CC00ED1B91 /* Photo-Club-Hub-InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 372028CD2E84A4CC00ED1B91 /* Photo-Club-Hub-InfoPlist.xcstrings */; };
+		3723DAE92F008E25006E2BB4 /* root_.level1.json in Resources */ = {isa = PBXBuildFile; fileRef = 3723DAE82F008E25006E2BB4 /* root_.level1.json */; };
+		3723DAEC2F008F2F006E2BB4 /* whiteboard.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3723DAEB2F008F1E006E2BB4 /* whiteboard.txt */; };
 		373EE0D12EED808700F311BE /* FotobondNumbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373EE0D02EED808700F311BE /* FotobondNumbers.swift */; };
 		376D14F82E6DE60900A1403B /* PreludeView2626.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376D14F72E6DE60900A1403B /* PreludeView2626.swift */; };
 		376D14FA2E6DE83A00A1403B /* DebugPanel2626.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376D14F92E6DE83A00A1403B /* DebugPanel2626.swift */; };
 		376DC9522EC3A98900FB429B /* PreludeImageStore2626.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376DC9512EC3A98900FB429B /* PreludeImageStore2626.swift */; };
 		376DC9742EC3F33200FB429B /* Crosshairs1718.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376DC9732EC3F33200FB429B /* Crosshairs1718.swift */; };
-		378D19412EEF5A09004705FD /* Whiteboard.txt in Resources */ = {isa = PBXBuildFile; fileRef = 378D19402EEF5A09004705FD /* Whiteboard.txt */; };
 		37A57B1D2EFD395800ED13CE /* FilteredMemberPortfoliosView1718.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A57B1C2EFD395800ED13CE /* FilteredMemberPortfoliosView1718.swift */; };
 		37C014442EDA564B003B3901 /* Organization+Count.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C014432EDA564B003B3901 /* Organization+Count.swift */; };
 		37C014462EDA575B003B3901 /* Organization+Comparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C014452EDA575B003B3901 /* Organization+Comparable.swift */; };
@@ -151,6 +152,8 @@
 /* Begin PBXFileReference section */
 		3705AFC52E7381D10067CE6B /* fkGestel.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fkGestel.level2.json; sourceTree = "<group>"; };
 		372028CD2E84A4CC00ED1B91 /* Photo-Club-Hub-InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = "Photo-Club-Hub-InfoPlist.xcstrings"; sourceTree = "<group>"; };
+		3723DAE82F008E25006E2BB4 /* root_.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = root_.level1.json; sourceTree = "<group>"; };
+		3723DAEB2F008F1E006E2BB4 /* whiteboard.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = whiteboard.txt; sourceTree = "<group>"; };
 		373EE0D02EED808700F311BE /* FotobondNumbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FotobondNumbers.swift; sourceTree = "<group>"; };
 		37545CA32EBFB37300C75485 /* Photo_Club_Hub_2_8_7.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_8_7.xcdatamodel; sourceTree = "<group>"; };
 		375CC66B2EE0A10300B618DB /* hierarchyDemo.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = hierarchyDemo.level1.json; sourceTree = "<group>"; };
@@ -159,7 +162,6 @@
 		376D14F92E6DE83A00A1403B /* DebugPanel2626.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugPanel2626.swift; sourceTree = "<group>"; };
 		376DC9512EC3A98900FB429B /* PreludeImageStore2626.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreludeImageStore2626.swift; sourceTree = "<group>"; };
 		376DC9732EC3F33200FB429B /* Crosshairs1718.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crosshairs1718.swift; sourceTree = "<group>"; };
-		378D19402EEF5A09004705FD /* Whiteboard.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Whiteboard.txt; sourceTree = "<group>"; };
 		37A57B1C2EFD395800ED13CE /* FilteredMemberPortfoliosView1718.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredMemberPortfoliosView1718.swift; sourceTree = "<group>"; };
 		37C014432EDA564B003B3901 /* Organization+Count.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Organization+Count.swift"; sourceTree = "<group>"; };
 		37C014452EDA575B003B3901 /* Organization+Comparable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Organization+Comparable.swift"; sourceTree = "<group>"; };
@@ -816,6 +818,7 @@
 		D0F871912D403D1700530D10 /* JSON */ = {
 			isa = PBXGroup;
 			children = (
+				3723DAE82F008E25006E2BB4 /* root_.level1.json */,
 				D0DD2B7A2EF89BCF002210DA /* Persoonlijk03.level2.json */,
 				375CC66B2EE0A10300B618DB /* hierarchyDemo.level1.json */,
 				37D1EA4E2EDDDD46008A5FE1 /* Afdeling03.level1.json */,
@@ -841,7 +844,7 @@
 				D0F8718E2D403D1700530D10 /* XampleMax.level2.json */,
 				D0F8718F2D403D1700530D10 /* XampleMin.level1.json */,
 				D0F871902D403D1700530D10 /* XampleMin.level2.json */,
-				378D19402EEF5A09004705FD /* Whiteboard.txt */,
+				3723DAEB2F008F1E006E2BB4 /* whiteboard.txt */,
 			);
 			path = JSON;
 			sourceTree = "<group>";
@@ -965,7 +968,6 @@
 			files = (
 				D0ACCFD72DEFAD690002FACC /* XampleMax.level2.json in Resources */,
 				D0ACCFD82DEFAD690002FACC /* XampleMin.level2.json in Resources */,
-				378D19412EEF5A09004705FD /* Whiteboard.txt in Resources */,
 				D0F4B4D82D86CFA500F60920 /* empty.level0.json in Resources */,
 				D04856382D46A62200022117 /* PhotoClubHubData.xcstrings in Resources */,
 				D04E91232E1B163200F6A66F /* Persoonlijk16.level2.json in Resources */,
@@ -982,12 +984,14 @@
 				D0F8719C2D403D1700530D10 /* root.level0.json in Resources */,
 				D06D08DE2C28835D00872BC2 /* Settings.bundle in Resources */,
 				37CAF2C92EEC398600BB1D36 /* IndividueelBO.level2.json in Resources */,
+				3723DAE92F008E25006E2BB4 /* root_.level1.json in Resources */,
 				D04856362D46A45D00022117 /* PhotoClubHub.SwiftUI.xcstrings in Resources */,
 				3705AFC62E7381D10067CE6B /* fkGestel.level2.json in Resources */,
 				D0FD28BB2D8CDFD3002B5C38 /* languages.level0.json in Resources */,
 				D0FD28BC2D8CDFD3002B5C38 /* abstractExpertise.level0.json in Resources */,
 				D0FD28BD2D8CDFD3002B5C38 /* language.level0.json in Resources */,
 				D0DD2B7B2EF89BCF002210DA /* Persoonlijk03.level2.json in Resources */,
+				3723DAEC2F008F2F006E2BB4 /* whiteboard.txt in Resources */,
 				D0831A51277F73C00049AB84 /* Preview Assets.xcassets in Resources */,
 				D0A615CF2D9218030024EC9E /* fgWaalre.level2.json in Resources */,
 			);
