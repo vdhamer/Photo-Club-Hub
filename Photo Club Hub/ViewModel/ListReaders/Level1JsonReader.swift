@@ -40,6 +40,13 @@ public class Level1JsonReader {
         // hand the data to SwiftyJSON to parse
         let jsonRoot = JSON(parseJSON: jsonData) // call to SwiftyJSON
 
+        // spawn additional loaders for any include Level 1 files
+        let includes: [JSON] = jsonRoot["level1Header"]["level1URLIncludes"].arrayValue
+        for include in includes {
+            let includeString: String = include.stringValue
+            print("Will load Level1 include file \(includeString) on background thread")
+        }
+
         // extract the `organizationTypes` in `organizationTypeEnumsToLoad` one-by-one from `jsonRoot`
         for organizationTypeEnum in organizationTypesToLoad {
 
