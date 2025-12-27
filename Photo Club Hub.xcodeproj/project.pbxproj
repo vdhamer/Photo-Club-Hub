@@ -818,7 +818,6 @@
 		D0F871912D403D1700530D10 /* JSON */ = {
 			isa = PBXGroup;
 			children = (
-				3723DAE82F008E25006E2BB4 /* root_.level1.json */,
 				D0DD2B7A2EF89BCF002210DA /* Persoonlijk03.level2.json */,
 				375CC66B2EE0A10300B618DB /* hierarchyDemo.level1.json */,
 				37D1EA4E2EDDDD46008A5FE1 /* Afdeling03.level1.json */,
@@ -840,6 +839,7 @@
 				D0FD28BA2D8CDFD3002B5C38 /* languages.level0.json */,
 				D0F8718B2D403D1700530D10 /* root.level0.json */,
 				D0F8718C2D403D1700530D10 /* root.level1.json */,
+				3723DAE82F008E25006E2BB4 /* root_.level1.json */,
 				D0F8718D2D403D1700530D10 /* XampleMax.level1.json */,
 				D0F8718E2D403D1700530D10 /* XampleMax.level2.json */,
 				D0F8718F2D403D1700530D10 /* XampleMin.level1.json */,
