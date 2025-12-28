@@ -2,7 +2,7 @@
     "level1Header": {
         "level1URL": "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/root_.level1.json",
         "level1URLIncludes": [
-            "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/root_.level1.json"
+            "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/Afdeling03.level1.json"
         ],
         "maintainerEmail": "john@fcDeGender.nl"
     },
@@ -3397,4 +3397,5 @@
 
     ]
 }
+
 
