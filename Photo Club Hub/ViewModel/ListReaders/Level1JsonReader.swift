@@ -41,10 +41,14 @@ public class Level1JsonReader {
         let jsonRoot = JSON(parseJSON: jsonData) // call to SwiftyJSON
 
         // spawn additional loaders for any include Level 1 files
-        let includes: [JSON] = jsonRoot["level1Header"]["level1URLIncludes"].arrayValue
-        for include in includes {
-            let includeString: String = include.stringValue
-            print("Will load Level1 include file \(includeString) on background thread")
+        let includeJSONs: [JSON] = jsonRoot["level1Header"]["level1URLIncludes"].arrayValue
+        for includeJSON in includeJSONs {
+            let includeURLoptional: URL? = URL(string: includeJSON.stringValue)
+            guard let includeURL = includeURLoptional else {
+                ifDebugFatalError("Included level1URL <\(includeJSON.stringValue)> is not a valid URL")
+                return
+            }
+            print("Will load Level1 include file \(includeURL.lastPathComponent) on background thread")
         }
 
         // extract the `organizationTypes` in `organizationTypeEnumsToLoad` one-by-one from `jsonRoot`
