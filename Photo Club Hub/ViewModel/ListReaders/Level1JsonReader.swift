@@ -40,16 +40,7 @@ public class Level1JsonReader {
         // hand the data to SwiftyJSON to parse
         let jsonRoot = JSON(parseJSON: jsonData) // call to SwiftyJSON
 
-        // spawn additional loaders for any include Level 1 files
-        let includeJSONs: [JSON] = jsonRoot["level1Header"]["level1URLIncludes"].arrayValue
-        for includeJSON in includeJSONs {
-            let includeURLoptional: URL? = URL(string: includeJSON.stringValue)
-            guard let includeURL = includeURLoptional else {
-                ifDebugFatalError("Included level1URL <\(includeJSON.stringValue)> is not a valid URL")
-                return
-            }
-            print("Will load Level1 include file \(includeURL.lastPathComponent) on background thread")
-        }
+        triggerProcessingOfLevel1URLIncludes(from: jsonRoot)
 
         // extract the `organizationTypes` in `organizationTypeEnumsToLoad` one-by-one from `jsonRoot`
         for organizationTypeEnum in organizationTypesToLoad {
@@ -106,6 +97,26 @@ public class Level1JsonReader {
         }
 
         ifDebugPrint("Completed readRootLevel1Json() in background")
+    }
+
+    /// Parses the Level 1 URLs (with included data) from the JSON header and validates them.
+    ///
+    /// This helper scans `jsonRoot.level1Header.level1URLIncludes` for URL strings,
+    /// validates each entry, and loads that file on a separate thread.
+    /// If an entry is not a valid URL, the function emits a debug fatal error or
+    /// (in non-debug mode) returns without performing any work.
+    ///
+    /// - Parameter jsonRoot: The parsed SwiftyJSON root object for a Level 1 JSON file.
+    @Sendable static private func triggerProcessingOfLevel1URLIncludes(from jsonRoot: JSON) {
+        let includeJSONs: [JSON] = jsonRoot["level1Header"]["level1URLIncludes"].arrayValue
+        for includeJSON in includeJSONs {
+            let includeURLoptional: URL? = URL(string: includeJSON.stringValue)
+            guard let includeURL = includeURLoptional else {
+                ifDebugFatalError("Included level1URL <\(includeJSON.stringValue)> is not a valid URL")
+                return
+            }
+            print("Will load Level1 include file \(includeURL.lastPathComponent) on background thread")
+        }
     }
 
 }
