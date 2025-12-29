@@ -35,7 +35,7 @@ public class Level1JsonReader {
                                                      isBeingTested: Bool = false) {
 
         let fileName = fileSelector.fileName
-        ifDebugPrint("\nWill read (\(fileName)).level1.json with a list of organizations in the background.")
+        ifDebugPrint("\nWill read \(fileName).level1.json with a list of organizations in the background.")
 
         // hand the data to SwiftyJSON to parse
         let jsonRoot = JSON(parseJSON: jsonData) // call to SwiftyJSON
