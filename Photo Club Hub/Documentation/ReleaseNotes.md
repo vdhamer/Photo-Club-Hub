@@ -1,7 +1,7 @@
 ### 2.8.9 (GitHub commit ???????) ??-01-226
 
 * TODO: hierarchical Level 1 files.
-* TODO: add an extra expertise for Jan 2026 (Studio?)
+* TODO: add an extra expertise for Jan 2026 (Studio? Mobile?)
 
 PORTFOLIOS SCREEN
 
