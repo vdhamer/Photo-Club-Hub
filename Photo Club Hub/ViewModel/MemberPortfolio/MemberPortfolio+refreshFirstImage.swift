@@ -51,13 +51,6 @@ extension MemberPortfolio {
         ifDebugPrint("\(organization.fullNameTown): completed refreshFirstImage() \(urlOfImageIndex.absoluteString)")
     }
 
-    private var isUsingJuiceBox: Bool {
-        if urlOfImageIndex == nil { return false } // no data for finding JuiceBox XML file
-        if MemberPortfolio.clubsFullyUsingJuiceBox.contains(organization.id) { return true }
-        if MemberPortfolio.clubsPartiallyUsingJuiceBox.contains(organization.id) && isFormerMember { return true }
-        return false
-    }
-
     // remove a suffix like "#myanchor" if present, and append "config.xml"
     private var urlOfImageIndex: URL? {
         let url: URL? = URL(string: self.level3URL.absoluteString)
@@ -71,6 +64,14 @@ extension MemberPortfolio {
         } else {
             return url.appendingPathComponent("config.xml")
         }
+    }
+
+    private var isUsingJuiceBox: Bool {
+        print("TROEP: \(self.photographer.fullNameFirstLast) of \(self.organization.fullName)") // TODO
+        if urlOfImageIndex == nil { return false } // no data for finding JuiceBox XML file
+        if MemberPortfolio.clubsFullyUsingJuiceBox.contains(organization.id) { return true }
+        if MemberPortfolio.clubsPartiallyUsingJuiceBox.contains(organization.id) && isFormerMember { return true }
+        return false
     }
 
     private func parseXMLContent(xmlContent: String, member: MemberPortfolio) { // sample data
