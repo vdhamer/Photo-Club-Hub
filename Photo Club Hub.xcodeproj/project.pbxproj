@@ -169,7 +169,7 @@
 		37C61B8E2E72091000C5BAEF /* FotokringSintMichielsgestel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FotokringSintMichielsgestel.swift; sourceTree = "<group>"; };
 		37C9DB952E59CE8A0039F423 /* String+canonicalCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+canonicalCase.swift"; sourceTree = "<group>"; };
 		37CAF2C82EEC398600BB1D36 /* IndividueelBO.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = IndividueelBO.level2.json; sourceTree = "<group>"; };
-		37D1EA4E2EDDDD46008A5FE1 /* Afdeling03.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Afdeling03.level1.json; sourceTree = "<group>"; };
+		37D1EA4E2EDDDD46008A5FE1 /* clubsNL03.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = clubsNL03.level1.json; sourceTree = "<group>"; };
 		37D1EA502EDDDDD3008A5FE1 /* Level1_aanmaken_NL.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Level1_aanmaken_NL.md; sourceTree = "<group>"; };
 		37E134AE2E6F63D100C61714 /* MemberPortfolioListView2626.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberPortfolioListView2626.swift; sourceTree = "<group>"; };
 		37E134B02E6F693E00C61714 /* FilteredOrganizationView2626.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredOrganizationView2626.swift; sourceTree = "<group>"; };
@@ -820,7 +820,7 @@
 			children = (
 				D0DD2B7A2EF89BCF002210DA /* Persoonlijk03.level2.json */,
 				375CC66B2EE0A10300B618DB /* hierarchyDemo.level1.json */,
-				37D1EA4E2EDDDD46008A5FE1 /* Afdeling03.level1.json */,
+				37D1EA4E2EDDDD46008A5FE1 /* clubsNL03.level1.json */,
 				D061AEFF2E3A451700E39B43 /* 250925_Fotoclubs_Brabant_Oost.xlsx */,
 				D0FD28B82D8CDFD3002B5C38 /* abstractExpertise.level0.json */,
 				D06F109E2D84D8CC005AE931 /* empty.level0.json */,
