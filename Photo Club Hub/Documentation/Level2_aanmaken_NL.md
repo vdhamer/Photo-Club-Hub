@@ -24,23 +24,23 @@ Er zijn aparte instructie hoe bestanden online te krijgen via GitHub. En er kome
       | `town`  | `fullName` | `nickName` | `latitude` | `longitude` | Input bestand | Output pagina |
       | -----  | ---------| ----- | :-----: | :-----: | :-----: | :-----: |
       | Berlicum | FCC Shot71 | fccShot71 | 51.66306 | 5.41825 | ⌛ |  |
-      | Brabant Oost | Persoonlijk | Persoonlijk16 | 51.44327 | 5.47990 | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/Persoonlijk.level2.json) | [link](http://www.vdhamer.com/Persoonlijk16) |
-      | Den Dungen | Fotoclub Den Dungen | fcDenDungen | 51.66214 | 5.37097 | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/fcDenDungen.level2.json) ⌛ | [link](http://www.vdhamer.com/fcDenDungen) |
-      | Eindhoven | Fotogroep de Gender | fgDeGender | 51.42398 | 5.45010 | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/fgDeGender.level2.json) | [link](http://www.vdhamer.com/fgDeGender) |
-      | Eindhoven | Fotoclub Ericamera | fcEricamera | 51.45403 | 5.46288 | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/fcEricamera.level2.json) ⌛ | [link](http://www.vdhamer.com/fcEricamera) |
+      | Brabant Oost | Persoonlijk | Persoonlijk16 | 51.44327 | 5.47990 | [link](https://.com/vdhamer/Photo-Club-Hub/blob/main/JSON/Persoonlijk.level2.json) | [link](http://www.vdhamer.com/Persoonlijk16) |
+      | Den Dungen | Fotoclub Den Dungen | fcDenDungen | 51.66214 | 5.37097 | [link](https://.com/vdhamer/Photo-Club-Hub/blob/main/JSON/fcDenDungen.level2.json) ⌛ | [link](http://www.vdhamer.com/fcDenDungen) |
+      | Eindhoven | Fotogroep de Gender | fgDeGender | 51.42398 | 5.45010 | [link](https://.com/vdhamer/Photo-Club-Hub/blob/main/JSON/fgDeGender.level2.json) | [link](http://www.vdhamer.com/fgDeGender) |
+      | Eindhoven | Fotoclub Ericamera | fcEricamera | 51.45403 | 5.46288 | [link](https://.com/vdhamer/Photo-Club-Hub/blob/main/JSON/fcEricamera.level2.json) ⌛ | [link](http://www.vdhamer.com/fcEricamera) |
       | Eindhoven | Fotoclub 't Karregat | fcKarregat | 51.48048 | 5.42879 | ? |  |
       | Gemert | Foto Expressie Groep Gemert | fegGemert | 51.56025 | 5.68508 | ⌛ |  |
-      | Oirschot | Fotogroep Oirschot | fgOirschot | 51.46785 | 5.25568 | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/fgOirschot.level2.json) ⌛ | [link](http://www.vdhamer.com/fgOirschot) |
+      | Oirschot | Fotogroep Oirschot | fgOirschot | 51.46785 | 5.25568 | [link](https://.com/vdhamer/Photo-Club-Hub/blob/main/JSON/fgOirschot.level2.json) ⌛ | [link](http://www.vdhamer.com/fgOirschot) |
       | Schijndel | Fotoclub Schijndel | fcSchijndel | 51.61402 | 5.44888 | ? |  |
-      | Sint Michielsgestel | Fotokring Sint-Michielsgestel | fkGestel | 51.64036 | 5.34749 | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/fgGestel.level2.json) ⌛ | [link](http://www.vdhamer.com/fgGestel) |
-      | Veldhoven | Fotoclub Bellus Imago | fcBellusImago | 51.42541 | 5.38756 | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/fcBellusImago.level2.json) | [link](http://www.vdhamer.com/fcBellusImago) |
-      | Waalre | Fotogroep Waalre | fgWaalre | 51.39184 | 5.46144 | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/fgWaalre.level2.json) | [link](http://www.vdhamer.com/fgWaalre) |
+      | Sint Michielsgestel | Fotokring Sint-Michielsgestel | fkGestel | 51.64036 | 5.34749 | [link](https://.com/vdhamer/Photo-Club-Hub/blob/main/JSON/fgGestel.level2.json) ⌛ | [link](http://www.vdhamer.com/fgGestel) |
+      | Veldhoven | Fotoclub Bellus Imago | fcBellusImago | 51.42541 | 5.38756 | [link](https://.com/vdhamer/Photo-Club-Hub/blob/main/JSON/fcBellusImago.level2.json) | [link](http://www.vdhamer.com/fcBellusImago) |
+      | Waalre | Fotogroep Waalre | fgWaalre | 51.39184 | 5.46144 | [link](https://.com/vdhamer/Photo-Club-Hub/blob/main/JSON/fgWaalre.level2.json) | [link](http://www.vdhamer.com/fgWaalre) |
 
-   > Tip: Je kunt eventueel ook uitgaan van het [Max](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/XampleMax.level2.json) bestand.
+   > Tip: Je kunt eventueel ook uitgaan van het [Max](https://.com/vdhamer/Photo-Club-Hub/blob/main/JSON/XampleMax.level2.json) bestand.
    > Dit zal ertoe leiden dat je velden die je momenteel niet kunt aanleveren zult willen weglaten. 
-   > Het [Min](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/XampleMin.level2.json) bestand 
+   > Het [Min](https://.com/vdhamer/Photo-Club-Hub/blob/main/JSON/XampleMin.level2.json) bestand 
    > toont hoe het eruit ziet als vrijwel alle weglaatbare velden ontbreken.
-   > Als je dus uitgaat van het [Max](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/XampleMax.level2.json)
+   > Als je dus uitgaat van het [Max](https://.com/vdhamer/Photo-Club-Hub/blob/main/JSON/XampleMax.level2.json)
    > bestand zie je ingevulde voorbeelden van alle mogelijke extra ("optionele") velden.
    > Bij het creëren van een tussenvorm (tussen Min en Max in) is de kans groot dat je bijvoorbeeld een comma teveel of te weinig hebt.
    > Verderop staat hoe je dat automatisch kan controleren: het JSON formaat is kieskeurig over haakjes en comma's.
@@ -52,7 +52,7 @@ Er zijn aparte instructie hoe bestanden online te krijgen via GitHub. En er kome
 
     - Bepaalde proefkonijnclubs kunnen de vereiste `town`, `fullName`, `nickName`,`latitude` en `longitude`
       velden uit de bovenstaande tabel overnemen. Die gegevens zijn voor alle clubs in Brabant Oost (afdeling 16) te vinden in
-      [clubsNL16.level1.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/clubsNL16.level1.json).
+      [clubsNL16.level1.json](https://.com/vdhamer/Photo-Club-Hub/blob/main/JSON/clubsNL16.level1.json).
 
 4. Pas gegevens over de **clubleden** (`members`) aan: `givenName`, `infixName` en `familyName`.
     > Tip: met de [JSON Editor Online](https://jsoneditoronline.org) kan je de lijst van clubleden als tabel
@@ -99,7 +99,8 @@ Er zijn aparte instructie hoe bestanden online te krijgen via GitHub. En er kome
     - Onze rol is om een de technische juistheid te bewaken en om hulp te bieden.
       Wij kijken niet of de aangeleverde ledenlijst accuraat is en controlleren niet de spelling van namen.
     - Voor de proefkonijnclubs zullen we het bestand op onze eigen webserver zetten en het bijbehorende adres (URL) terugmelden.
-      Er zijn ook instructies hoe een club _zelf_ zijn Level2 ledenbestand op GitHub kan onderhouden.
+      Er zijn ook [instructies](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/GitHub_bestandsbeheer_NL.md)
+      hoe een club _zelf_ zijn Level2 ledenbestand op GitHub kan bijhouden.
       Dan kan een club zijn Level2 bestand aanpassen met minimale afhankelijkheid van derden.
 
 7. **Controleer** of alles naar wens werkt via de [Photo Club Hub](https://www.fotobond-brabantoost.nl/nieuws/fotoclub-hub-app/) iOS app.
