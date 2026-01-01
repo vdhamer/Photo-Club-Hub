@@ -1,0 +1,268 @@
+{
+    "level1Header": {
+        "level1URL": "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/museumsNL.level1.json",
+        "level1URLIncludes": [ ],
+        "maintainerEmail": "vdhamer@msn.com"
+    },
+    
+    "museums": [
+        
+        {
+            "idPlus": {
+                "town": "Amsterdam",
+                "fullName": "Foam Amsterdam",
+                "nickName": "Foam"
+            },
+            "coordinates": {
+                "latitude": 52.364217,
+                "longitude": 4.89337
+            },
+            "optional": {
+                "website": "https://www.foam.org",
+                "wikipedia": "https://en.wikipedia.org/wiki/Foam_Fotografiemuseum_Amsterdam",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "The two adjacent Amsterdam canal mansions house a museum orignally named after its founder (Carel Joseph) Fodor."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Het museum, gehuisvest in twee aangrenzende panden aan de Keizersgracht, was oorspronkelijk genoemd naar de oprichter Carel Joseph Fodor."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Amsterdam",
+                "fullName": "Huis Marseille Museum for Photography",
+                "nickName": "Marseille Adam"
+            },
+            "coordinates": {
+                "latitude": 52.367561,
+                "longitude": 4.884878
+            },
+            "optional": {
+                "website": "https://www.huismarseille.nl/",
+                "wikipedia": "https://nl.wikipedia.org/wiki/Huis_Marseille",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "The two adjacent Amsterdam canal mansions house the oldest photography museum in the Netherlands."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Huis Marseille ligt aan de Keizersgracht en is het oudste fotografiemuseum in Nederland."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Axel",
+                "fullName": "Witte’s Museum voor Fotografie en Radio",
+                "nickName": "Witte’s Museum"
+            },
+            "coordinates": {
+                "latitude": 51.269286,
+                "longitude": 3.909453
+            },
+            "optional": {
+                "website": "https://www.wittesmuseum.nl/fotografie/",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "The museum incorporates vintage cameras collected by Jan and Maarten Witte."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "De nadruk van dit museum is een collectie klassieke camera's van Jan and Maarten Witte."
+                    }
+                ]
+            }
+        },
+        
+        {
+            "idPlus": {
+                "town": "Den Haag",
+                "fullName": "Fotomuseum Den Haag",
+                "nickName": "FM Den Haag"
+            },
+            "coordinates": {
+                "latitude": 52.090556,
+                "longitude": 4.279722
+            },
+            "optional": {
+                "website": "https://www.fotomuseumdenhaag.nl/",
+                "wikipedia": "https://en.wikipedia.org/wiki/Fotomuseum_Den_Haag",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "The museum is afiliated with the older and adjacent art museum Kunstmuseum Den Haag."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Het museum is organisatorisch verbonden met het naastliggende Kunstmuseum Den Haag."
+                    }
+                ]
+            }
+        },
+        
+        {
+            "idPlus": {
+                "town": "Eindhoven",
+                "fullName": "Pennings Foundation",
+                "nickName": "Pennings"
+            },
+            "coordinates": {
+                "latitude": 51.43391,
+                "longitude": 5.48889
+            },
+            "optional": {
+                "website": "https://www.penningsfoundation.com",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Pennings' own tagline is \"Presentation platform and knowledge center for photography\"."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Pennings omschrijft zichzelf als \"Presentatieplatform en kenniscentrum voor fotografie\"."
+                    }
+                ]
+            }
+        },
+        
+        {
+            "idPlus": {
+                "town": "Hilversum",
+                "fullName": "Museum Hilversum",
+                "nickName": "Museum Hilversum"
+            },
+            "coordinates": {
+                "latitude": 52.224097,
+                "longitude": 5.17145
+            },
+            "optional": {
+                "website": "http://www.museumhilversum.nl",
+                "wikipedia": "https://nl.wikipedia.org/wiki/Museum_Hilversum",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "This museum hosted a 2023-2024 Dutch reality show, \"Het Perfecte Plaatje\", about aspiring photographers."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "In dit museum zijn scenes van het TV programma \"Het Perfecte Plaatje\" opgenomen."
+                    }
+                ]
+            }
+        },
+        
+        {
+            "idPlus": {
+                "town": "Maastricht",
+                "fullName": "Fotomuseum aan het Vrijthof",
+                "nickName": "F/M Vrijthof"
+            },
+            "coordinates": {
+                "latitude": 50.848333,
+                "longitude": 5.688611
+            },
+            "optional": {
+                "website": "http://www.museumaanhetvrijthof.nl",
+                "wikipedia": "https://nl.wikipedia.org/wiki/Fotomuseum_aan_het_Vrijthof",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "The museum is privately owned and is entirely funded by admission fees and donations."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Het museum is in particulier bezit en wordt bekostigd met schenkingen en entreegeld."
+                    }
+                ]
+            }
+        },
+        
+        {
+            "idPlus": {
+                "town": "Rotterdam",
+                "fullName": "Nederlands Fotomuseum",
+                "nickName": "NFM Rdam"
+            },
+            "coordinates": {
+                "latitude": 51.90296,
+                "longitude": 4.49504
+            },
+            "optional": {
+                "website": "https://www.nederlandsfotomuseum.nl",
+                "wikipedia": "https://en.wikipedia.org/wiki/Netherlands_Photo_Museum",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "The museum will relocate to a new building in the coming years, Both sites are in walking distance of each other."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Het museum heeft het plan aangekondigd om te verhuizen naar de nabijgelegen voormalig koffiepakhuis Santos aan de Rijnhaven."
+                    }
+                ]
+            }
+        },
+        
+        {
+            "idPlus": {
+                "town": "Utrecht",
+                "fullName": "FOTODOK",
+                "nickName": "Fotodok"
+            },
+            "coordinates": {
+                "latitude": 52.088824,
+                "longitude": 5.122775
+            },
+            "optional": {
+                "website": "https://www.fotodok.org",
+                "wikipedia": "https://nl.wikipedia.org/wiki/Rob_Hornstra#FOTODOK",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "The museum focusses on documentary photography and was founded by a Dutch photographer Rob Hornstra."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Het museum is opgericht door de Nederlandse fotograaf Rob Hornstra, en richt zich op documentaire fotografie."
+                    }
+                ]
+            }
+        },
+        
+        {
+            "idPlus": {
+                "town": "Zierikzee",
+                "fullName": "Cameramuseum Zierikzee",
+                "nickName": "CM Zierikzee"
+            },
+            "coordinates": {
+                "latitude": 51.6501,
+                "longitude": 3.91938
+            },
+            "optional": {
+                "website": "https://www.cameramuseum.nl",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "This small museum is mainly about classic cameras. It also covers regional photographers."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Dit museumpje heeft een collectie klassieke cameras, maar bevat ook werk van Zeeuwse fotografen."
+                    }
+                ]
+            }
+        }
+        
+    ]
+}

@@ -1,4 +1,10 @@
 {
+    "level1Header": {
+        "level1URL": "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/clubsNL03.level1.json",
+        "level1URLIncludes": [ ],
+        "maintainerEmail": "ajhooijer@kpnmail.nl"
+    },
+    
     "clubs": [
         
         {

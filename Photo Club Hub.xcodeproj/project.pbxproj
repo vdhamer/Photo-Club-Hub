@@ -24,6 +24,10 @@
 		37C61B8F2E72091000C5BAEF /* FotokringSintMichielsgestel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C61B8E2E72091000C5BAEF /* FotokringSintMichielsgestel.swift */; };
 		37C9DB962E59CE8A0039F423 /* String+canonicalCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C9DB952E59CE8A0039F423 /* String+canonicalCase.swift */; };
 		37CAF2C92EEC398600BB1D36 /* IndividueelBO.level2.json in Resources */ = {isa = PBXBuildFile; fileRef = 37CAF2C82EEC398600BB1D36 /* IndividueelBO.level2.json */; };
+		37DA3E092F06AFD100AB7993 /* clubsNL.level1.json in Resources */ = {isa = PBXBuildFile; fileRef = 37DA3E082F06AFC600AB7993 /* clubsNL.level1.json */; };
+		37DA3E0B2F06B17F00AB7993 /* clubsNL16.level1.json in Resources */ = {isa = PBXBuildFile; fileRef = 37DA3E0A2F06B16700AB7993 /* clubsNL16.level1.json */; };
+		37DA3E0F2F06B42600AB7993 /* museums.level1.json in Resources */ = {isa = PBXBuildFile; fileRef = 37DA3E0E2F06B40A00AB7993 /* museums.level1.json */; };
+		37DA3E112F06B63200AB7993 /* museumsNL.level1.json in Resources */ = {isa = PBXBuildFile; fileRef = 37DA3E102F06B62600AB7993 /* museumsNL.level1.json */; };
 		37E134AF2E6F63D100C61714 /* MemberPortfolioListView2626.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E134AE2E6F63D100C61714 /* MemberPortfolioListView2626.swift */; };
 		37E134B22E6F693E00C61714 /* OrganizationListView1718.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E134B12E6F693E00C61714 /* OrganizationListView1718.swift */; };
 		37E134B32E6F693E00C61714 /* FilteredOrganizationView2626.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E134B02E6F693E00C61714 /* FilteredOrganizationView2626.swift */; };
@@ -172,6 +176,10 @@
 		37CAF2C82EEC398600BB1D36 /* IndividueelBO.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = IndividueelBO.level2.json; sourceTree = "<group>"; };
 		37D1EA4E2EDDDD46008A5FE1 /* clubsNL03.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = clubsNL03.level1.json; sourceTree = "<group>"; };
 		37D1EA502EDDDDD3008A5FE1 /* Level1_aanmaken_NL.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Level1_aanmaken_NL.md; sourceTree = "<group>"; };
+		37DA3E082F06AFC600AB7993 /* clubsNL.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = clubsNL.level1.json; sourceTree = "<group>"; };
+		37DA3E0A2F06B16700AB7993 /* clubsNL16.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = clubsNL16.level1.json; sourceTree = "<group>"; };
+		37DA3E0E2F06B40A00AB7993 /* museums.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = museums.level1.json; sourceTree = "<group>"; };
+		37DA3E102F06B62600AB7993 /* museumsNL.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = museumsNL.level1.json; sourceTree = "<group>"; };
 		37E134AE2E6F63D100C61714 /* MemberPortfolioListView2626.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberPortfolioListView2626.swift; sourceTree = "<group>"; };
 		37E134B02E6F693E00C61714 /* FilteredOrganizationView2626.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredOrganizationView2626.swift; sourceTree = "<group>"; };
 		37E134B12E6F693E00C61714 /* OrganizationListView1718.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationListView1718.swift; sourceTree = "<group>"; };
@@ -819,11 +827,11 @@
 		D0F871912D403D1700530D10 /* JSON */ = {
 			isa = PBXGroup;
 			children = (
-				D0DD2B7A2EF89BCF002210DA /* Persoonlijk03.level2.json */,
-				375CC66B2EE0A10300B618DB /* hierarchyDemo.level1.json */,
-				37D1EA4E2EDDDD46008A5FE1 /* clubsNL03.level1.json */,
 				D061AEFF2E3A451700E39B43 /* 250925_Fotoclubs_Brabant_Oost.xlsx */,
 				D0FD28B82D8CDFD3002B5C38 /* abstractExpertise.level0.json */,
+				37DA3E082F06AFC600AB7993 /* clubsNL.level1.json */,
+				37DA3E0A2F06B16700AB7993 /* clubsNL16.level1.json */,
+				37D1EA4E2EDDDD46008A5FE1 /* clubsNL03.level1.json */,
 				D06F109E2D84D8CC005AE931 /* empty.level0.json */,
 				D0A615782D91B7A00024EC9E /* fcBellusImago.level2.json */,
 				D0F78AC92DFCCBFE00DE234D /* fcDenDungen.level2.json */,
@@ -834,13 +842,17 @@
 				D0273E492DEE42C800C4F5E1 /* fgOirschot.level2.json */,
 				D0A615B22D920C5B0024EC9E /* fgWaalre.level2.json */,
 				3705AFC52E7381D10067CE6B /* fkGestel.level2.json */,
+				375CC66B2EE0A10300B618DB /* hierarchyDemo.level1.json */,
 				37CAF2C82EEC398600BB1D36 /* IndividueelBO.level2.json */,
+				D0DD2B7A2EF89BCF002210DA /* Persoonlijk03.level2.json */,
 				D04E91222E1B163200F6A66F /* Persoonlijk16.level2.json */,
 				D0FD28B92D8CDFD3002B5C38 /* language.level0.json */,
 				D0FD28BA2D8CDFD3002B5C38 /* languages.level0.json */,
+				37DA3E0E2F06B40A00AB7993 /* museums.level1.json */,
+				37DA3E102F06B62600AB7993 /* museumsNL.level1.json */,
+				3723DAE82F008E25006E2BB4 /* root_.level1.json */,
 				D0F8718B2D403D1700530D10 /* root.level0.json */,
 				D0F8718C2D403D1700530D10 /* root.level1.json */,
-				3723DAE82F008E25006E2BB4 /* root_.level1.json */,
 				D0F8718D2D403D1700530D10 /* XampleMax.level1.json */,
 				D0F8718E2D403D1700530D10 /* XampleMax.level2.json */,
 				D0F8718F2D403D1700530D10 /* XampleMin.level1.json */,
@@ -968,16 +980,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				378DF75B2F0406E8004E1207 /* clubsNL03.level1.json in Resources */,
+				37DA3E0F2F06B42600AB7993 /* museums.level1.json in Resources */,
 				D0ACCFD72DEFAD690002FACC /* XampleMax.level2.json in Resources */,
 				D0ACCFD82DEFAD690002FACC /* XampleMin.level2.json in Resources */,
+				37DA3E092F06AFD100AB7993 /* clubsNL.level1.json in Resources */,
 				D0F4B4D82D86CFA500F60920 /* empty.level0.json in Resources */,
 				D04856382D46A62200022117 /* PhotoClubHubData.xcstrings in Resources */,
 				D04E91232E1B163200F6A66F /* Persoonlijk16.level2.json in Resources */,
 				D008D2AA28739167007A7BE2 /* .gitignore in Resources */,
 				D0B5743E2C41D79300334E4C /* Assets.xcassets in Resources */,
+				37DA3E0B2F06B17F00AB7993 /* clubsNL16.level1.json in Resources */,
 				372028CE2E84A4CC00ED1B91 /* Photo-Club-Hub-InfoPlist.xcstrings in Resources */,
 				D0F78ACA2DFCCBFE00DE234D /* fcDenDungen.level2.json in Resources */,
 				D0273E4A2DEE42C800C4F5E1 /* fgOirschot.level2.json in Resources */,
+				37DA3E112F06B63200AB7993 /* museumsNL.level1.json in Resources */,
 				D0273E4B2DEE42C800C4F5E1 /* fcEricamera.level2.json in Resources */,
 				D0F871952D403D1700530D10 /* root.level1.json in Resources */,
 				D0A615792D91B7A00024EC9E /* fcBellusImago.level2.json in Resources */,
