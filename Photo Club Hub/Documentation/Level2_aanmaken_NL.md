@@ -100,7 +100,7 @@ Er zijn aparte instructie hoe bestanden online te krijgen via GitHub. En er kome
       Wij kijken niet of de aangeleverde ledenlijst accuraat is en controlleren niet de spelling van namen.
     - Voor de proefkonijnclubs zullen we het bestand op onze eigen webserver zetten en het bijbehorende adres (URL) terugmelden.
       Er zijn ook [instructies](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/GitHub_bestandsbeheer_NL.md)
-      hoe een club _zelf_ zijn Level2 ledenbestand op GitHub kan bijhouden.
+      hoe een club _zelf_ zijn Level2 ledenbestand op [GitHub](https://github.com/vdhamer/Photo-Club-Hub) kan bijhouden.
       Dan kan een club zijn Level2 bestand aanpassen met minimale afhankelijkheid van derden.
 
 7. **Controleer** of alles naar wens werkt via de [Photo Club Hub](https://www.fotobond-brabantoost.nl/nieuws/fotoclub-hub-app/) iOS app.
