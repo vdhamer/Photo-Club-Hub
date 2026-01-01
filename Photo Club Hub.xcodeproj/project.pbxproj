@@ -28,6 +28,7 @@
 		37DA3E0B2F06B17F00AB7993 /* clubsNL16.level1.json in Resources */ = {isa = PBXBuildFile; fileRef = 37DA3E0A2F06B16700AB7993 /* clubsNL16.level1.json */; };
 		37DA3E0F2F06B42600AB7993 /* museums.level1.json in Resources */ = {isa = PBXBuildFile; fileRef = 37DA3E0E2F06B40A00AB7993 /* museums.level1.json */; };
 		37DA3E112F06B63200AB7993 /* museumsNL.level1.json in Resources */ = {isa = PBXBuildFile; fileRef = 37DA3E102F06B62600AB7993 /* museumsNL.level1.json */; };
+		37DA3E512F06F96A00AB7993 /* clubsXamples.level1.json in Resources */ = {isa = PBXBuildFile; fileRef = 37DA3E502F06F96200AB7993 /* clubsXamples.level1.json */; };
 		37E134AF2E6F63D100C61714 /* MemberPortfolioListView2626.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E134AE2E6F63D100C61714 /* MemberPortfolioListView2626.swift */; };
 		37E134B22E6F693E00C61714 /* OrganizationListView1718.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E134B12E6F693E00C61714 /* OrganizationListView1718.swift */; };
 		37E134B32E6F693E00C61714 /* FilteredOrganizationView2626.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E134B02E6F693E00C61714 /* FilteredOrganizationView2626.swift */; };
@@ -180,6 +181,7 @@
 		37DA3E0A2F06B16700AB7993 /* clubsNL16.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = clubsNL16.level1.json; sourceTree = "<group>"; };
 		37DA3E0E2F06B40A00AB7993 /* museums.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = museums.level1.json; sourceTree = "<group>"; };
 		37DA3E102F06B62600AB7993 /* museumsNL.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = museumsNL.level1.json; sourceTree = "<group>"; };
+		37DA3E502F06F96200AB7993 /* clubsXamples.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = clubsXamples.level1.json; sourceTree = "<group>"; };
 		37E134AE2E6F63D100C61714 /* MemberPortfolioListView2626.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberPortfolioListView2626.swift; sourceTree = "<group>"; };
 		37E134B02E6F693E00C61714 /* FilteredOrganizationView2626.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredOrganizationView2626.swift; sourceTree = "<group>"; };
 		37E134B12E6F693E00C61714 /* OrganizationListView1718.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationListView1718.swift; sourceTree = "<group>"; };
@@ -832,6 +834,7 @@
 				37DA3E082F06AFC600AB7993 /* clubsNL.level1.json */,
 				37DA3E0A2F06B16700AB7993 /* clubsNL16.level1.json */,
 				37D1EA4E2EDDDD46008A5FE1 /* clubsNL03.level1.json */,
+				37DA3E502F06F96200AB7993 /* clubsXamples.level1.json */,
 				D06F109E2D84D8CC005AE931 /* empty.level0.json */,
 				D0A615782D91B7A00024EC9E /* fcBellusImago.level2.json */,
 				D0F78AC92DFCCBFE00DE234D /* fcDenDungen.level2.json */,
@@ -979,6 +982,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37DA3E512F06F96A00AB7993 /* clubsXamples.level1.json in Resources */,
 				378DF75B2F0406E8004E1207 /* clubsNL03.level1.json in Resources */,
 				37DA3E0F2F06B42600AB7993 /* museums.level1.json in Resources */,
 				D0ACCFD72DEFAD690002FACC /* XampleMax.level2.json in Resources */,

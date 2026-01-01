@@ -17,16 +17,17 @@ WHO'S WHO SCREEN
 
 DATA MAINTENANCE
 
-* shortened "Persoonlijke Leden Afdeling Drenthe - Vechtdal" to "Persoonlijke Leden Drenthe - Vechtdal"
+* Shortened "Persoonlijke Leden Afdeling Drenthe - Vechtdal" to "Persoonlijke Leden Drenthe - Vechtdal"
+* Moved clubs and museums from the root.level1.json file into 6 shorter "include" level1.json files
 
 PERFORMANCE
 
-* faster loading of fgWaalre (special because it is a mix of two types of portfolios)
+* Faster loading of fgWaalre (special because it is a mix of two types of portfolios)
 
 DOCUMENTATION
 
-* updated data schema image in GitHub README.md
-* updated Level2_aanmaken_NL.md
+* Updated data schema image in GitHub README.md
+* Updated Level2_aanmaken_NL.md
 
 This build #4655 was made using Xcode 26.2.
 
