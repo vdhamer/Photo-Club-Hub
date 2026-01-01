@@ -99,10 +99,8 @@ Er zijn aparte instructie hoe bestanden online te krijgen via GitHub. En er kome
     - Onze rol is om een de technische juistheid te bewaken en om hulp te bieden.
       Wij kijken niet of de aangeleverde ledenlijst accuraat is en controlleren niet de spelling van namen.
     - Voor de proefkonijnclubs zullen we het bestand op onze eigen webserver zetten en het bijbehorende adres (URL) terugmelden.
-      Binnenkort komen er aanvullende instructies hoe een club _zelf_ zijn Level2 ledenbestand op een eigen (b.v. Wordpress) website kan plaatsen.
-      Dan kan een club zijn Level2 bestand aanpassen zonder tussenkomst van derden. 
-      Ofwel, hosting van enkele kleine tekstbestanden op onze webserver is slechts een tijdelijke oplossing.
-      Dit om het proces stapje-voor-stapje te kunnen uittesten.
+      Er zijn ook instructies hoe een club _zelf_ zijn Level2 ledenbestand op GitHub kan onderhouden.
+      Dan kan een club zijn Level2 bestand aanpassen met minimale afhankelijkheid van derden.
 
 7. **Controleer** of alles naar wens werkt via de [Photo Club Hub](https://www.fotobond-brabantoost.nl/nieuws/fotoclub-hub-app/) iOS app.
 Of via een door ons [gegenereerde](https://github.com/vdhamer/Photo-Club-Hub-HTML/blob/main/.github/README.md) HTML pagina
@@ -113,7 +111,7 @@ als men niet over een iPhone of iPad beschikt.
 ### Het `Level2.json` formaat
 <details><summary>Details (klik om uit te klappen)</summary></p>
 
-- [JSON](https://en.wikipedia.org/wiki/JSON) is heel bekende standaard in de IT wereld.
+- [JSON](https://en.wikipedia.org/wiki/JSON) is bekende standaard in de IT wereld.
 [Hier](https://codebeautify.org/json-cheat-sheet) is een korte uitleg van JSON. In ons geval is zou het voldoende moeten zijn om nauwgezet de voorbeelden in
 [XampleMin.level2.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/XampleMin.level2.json) en [XampleMax.level2.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/XampleMax.level2.json) te volgen.
 Bij gebruikt van [JSON Editor Online](https://jsoneditoronline.org) is de kans op fouten klein.
