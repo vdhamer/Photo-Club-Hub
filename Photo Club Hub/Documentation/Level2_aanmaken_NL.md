@@ -52,7 +52,7 @@ Er zijn aparte instructie hoe bestanden online te krijgen via GitHub. En er kome
 
     - Bepaalde proefkonijnclubs kunnen de vereiste `town`, `fullName`, `nickName`,`latitude` en `longitude`
       velden uit de bovenstaande tabel overnemen. Die gegevens zijn voor alle clubs in Brabant Oost (afdeling 16) te vinden in
-      [root.level1.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/clubsNL16.level1.json).
+      [clubsNL16.level1.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/clubsNL16.level1.json).
 
 4. Pas gegevens over de **clubleden** (`members`) aan: `givenName`, `infixName` en `familyName`.
     > Tip: met de [JSON Editor Online](https://jsoneditoronline.org) kan je de lijst van clubleden als tabel
