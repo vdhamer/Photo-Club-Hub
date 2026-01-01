@@ -40,19 +40,19 @@ Er zijn aparte instructie hoe bestanden online te krijgen via GitHub. En er kome
    > Dit zal ertoe leiden dat je velden die je momenteel niet kunt aanleveren zult willen weglaten. 
    > Het [Min](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/XampleMin.level2.json) bestand 
    > toont hoe het eruit ziet als vrijwel alle weglaatbare velden ontbreken.
-   >  Als je daarentegen uitgaat van het [Max](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/XampleMax.level2.json)
+   > Als je dus uitgaat van het [Max](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/XampleMax.level2.json)
    > bestand zie je ingevulde voorbeelden van alle mogelijke extra ("optionele") velden.
    > Bij het creëren van een tussenvorm (tussen Min en Max in) is de kans groot dat je bijvoorbeeld een comma teveel of te weinig hebt.
-   > Verderop staat hoe je dat automatisch kan controleren: het JSON formaat is gewoon kieskeurig over haakjes en comma's.
+   > Verderop staat hoe je dat automatisch kan controleren: het JSON formaat is kieskeurig over haakjes en comma's.
 
 3. Pas de gegevens over de **club** (`club`) aan: `town`, `fullName`, `nickName`, en ook de locatie:
-    > Tip: gebruik voor het aanpassen van het bestand liefst [JSON Editor Online](https://jsoneditoronline.org).
+    > Tip: gebruik voor het aanpassen van het bestand [JSON Editor Online](https://jsoneditoronline.org).
     > Dat programma is bedoeld om zogenaamde "JSON" tekstbestanden aan te maken.
-    > Als alternatief kan je een kale editor gebruiken zoals [Windows NotePad](https://nl.wikipedia.org/wiki/Notepad), [NotePad++](https://nl.wikipedia.org/wiki/Notepad%2B%2B) of [Sublime Text](https://nl.wikipedia.org/wiki/Sublime_Text).
+    > Als alternatief kan je een kale editor gebruiken zoals [Windows NotePad](https://nl.wikipedia.org/wiki/Notepad), [NotePad++](https://nl.wikipedia.org/wiki/Notepad%2B%2B) of [Sublime Text](https://nl.wikipedia.org/wiki/Sublime_Text). Maar dat biedt geen hulp t.a.v. de JSON conventiies.
 
-    - De genoemde proefkonijnclubs kunnen de vereiste `town`, `fullName`, `nickName`,`latitude` en `longitude`
-      velden uit de bovenstaande tabel overnemen. Er zijn gegevens voor de clubs uit de regio te vinden in
-      [root.level1.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/root.level1.json).
+    - Bepaalde proefkonijnclubs kunnen de vereiste `town`, `fullName`, `nickName`,`latitude` en `longitude`
+      velden uit de bovenstaande tabel overnemen. Die gegevens zijn voor alle clubs in Brabant Oost (afdeling 16) te vinden in
+      [root.level1.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/clubsNL16.level1.json).
 
 4. Pas gegevens over de **clubleden** (`members`) aan: `givenName`, `infixName` en `familyName`.
     > Tip: met de [JSON Editor Online](https://jsoneditoronline.org) kan je de lijst van clubleden als tabel
