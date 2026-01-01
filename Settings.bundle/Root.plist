@@ -124,9 +124,9 @@
 			<key>Type</key>
 			<string>PSToggleSwitchSpecifier</string>
 			<key>Title</key>
-			<string>Load test clubs</string>
+			<string>Show test clubs</string>
 			<key>Key</key>
-			<string>loadTestClubs</string>
+			<string>showTestClubs</string>
 			<key>DefaultValue</key>
 			<false/>
 		</dict>

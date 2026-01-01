@@ -112,19 +112,17 @@ extension PhotoClubHubApp {
             isBeingTested: isBeingTested,
             useOnlyInBundleFile: useOnlyInBundleFile)
 
-        if Settings.loadTestClubs {
-            // load test member(s) of XampleMin. Club name starts with an X in order to be at end of list
-            _ = XampleMinMembersProvider(
-                bgContext: makeBgContext(ctxName: "Level 2 loader XampleMin"),
-                isBeingTested: isBeingTested,
-                useOnlyInBundleFile: useOnlyInBundleFile)
+        // load test member(s) of XampleMin. Club name starts with an X in order to be at end of list
+        _ = XampleMinMembersProvider(
+            bgContext: makeBgContext(ctxName: "Level 2 loader XampleMin"),
+            isBeingTested: isBeingTested,
+            useOnlyInBundleFile: useOnlyInBundleFile)
 
-            // load test member(s) of XampleMax. Club name starts with an X in order to be at end of list
-            _ = XampleMaxMembersProvider(
-                bgContext: makeBgContext(ctxName: "Level 2 loader XampleMax"),
-                isBeingTested: isBeingTested,
-                useOnlyInBundleFile: useOnlyInBundleFile)
-        }
+        // load test member(s) of XampleMax. Club name starts with an X in order to be at end of list
+        _ = XampleMaxMembersProvider(
+            bgContext: makeBgContext(ctxName: "Level 2 loader XampleMax"),
+            isBeingTested: isBeingTested,
+            useOnlyInBundleFile: useOnlyInBundleFile)
 
         // load current/former members of container for Persoonlijke members of Fotobond (in region 16)
         _ = Persoonlijk16MembersProvider(
