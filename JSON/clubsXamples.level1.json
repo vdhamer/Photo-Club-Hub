@@ -28,11 +28,11 @@
                 "fullName": "Xample Club With Maximal Data",
                 "nickName": "XampleMax"
             },
+            "coordinates": {
+                "latitude": 51.92275,
+                "longitude": 4.47972
+            },
             "optional": {
-                "coordinates": {
-                    "latitude": 51.92275,
-                    "longitude": 4.47972
-                },
                 "website": "https://www.xamplemax.nl",
                 "wikipedia": "https://en.wikipedia.org/wiki/Rotterdam_City_Hall",
                 "level2URL": "https://www.xamplemax.nl/XampleMax.level2.json",
