@@ -26,6 +26,7 @@ PERFORMANCE
 DOCUMENTATION
 
 * updated data schema image in GitHub README.md
+* updated Level2_aanmaken_NL.md
 
 This build #4655 was made using Xcode 26.2.
 
