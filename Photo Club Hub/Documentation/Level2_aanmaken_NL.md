@@ -16,9 +16,10 @@ Er zijn aparte instructie hoe bestanden online te krijgen via GitHub. En er kome
 
 2. Maak een **kopie** van het [Min](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/XampleMin.level2.json) bestand en geef het een passende bestandsnaam:
    - Gebruik in de naam een korte versie (`nickName`) van de clubnaam.
-     Als de club bijvoorbeeld "Fotogroep Scheveningen" heet, zou je het bestand `fgScheveningen.level2.json` kunnen noemen.
-   - Onderstaande tabel bevat, voor de verwachte proefkonijnclubs, deze `nickName` plus enkele andere velden die straks nodig zijn.
-     Dan hoef je die velden niet zelf op te zoeken in de [lijst](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/root.level1.json) met de fotobond clubs in Noord Brabant Oost.
+     Als de club bijvoorbeeld "Fotogroep Scheveningen" heet, zou je het bestand liefst `fgScheveningen.level2.json` moeten heten:
+     Scheveningen is essentieel voor de herkenbaarheid, en voorvoegesels zoals Fotogroep (fg) en Fotoclub (fc) zijn bijzaak.
+   - Onderstaande tabel bevat, voor enkele clubs in Brabant Oost, deze `nickName` plus enkele andere velden die voor het invullen nuttig kunnen zijn.
+     Dan hoef je die velden niet zelf op te zoeken in de [lijst](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/root.level1.json).
 
       | `town`  | `fullName` | `nickName` | `latitude` | `longitude` | Input bestand | Output pagina |
       | -----  | ---------| ----- | :-----: | :-----: | :-----: | :-----: |
