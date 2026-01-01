@@ -60,11 +60,10 @@ Er zijn aparte instructie hoe bestanden online te krijgen via GitHub. En er kome
     > en regels toevoegen of verwijderen via het een menu ("__⋮__").
   
     - De spelling van de namen van clubleden let nauw.
-      De namen worden namelijk gebruikt als identificatie - bijvoorbeeld om te bepalen of een bepaald lid
-      ook voorkomt als lid of ex-lid van een andere club.
+      Die namen worden namelijk gebruikt om te bepalen of twee personen in verschillende bestanden (clubs) wel of niet dezelfde persoon zijn.
       Wat de software betreft zijn zelfs "Jan de Vries" en "Jan De Vries" verschillende personen.
         - Jan de Vries voer je in als `"givenName": "Jan", "infixName": "de", "familyName": "Vries"`.
-        - Max Verstappen voer je in als `"givenName": "Max", "infixName": "", "familyName": "Verstappen"` (het mag ook als `"givenName": "Max", "familyName": "Verstappen"`).
+        - Max Verstappen voer je in als `"givenName": "Max", "infixName": "", "familyName": "Verstappen"`. Als alternatief mag ook `"givenName": "Max", "familyName": "Verstappen"`.
     </br>
     
     > Tip: De lijst met leden hoeft niet in een keer compleet te zijn:
