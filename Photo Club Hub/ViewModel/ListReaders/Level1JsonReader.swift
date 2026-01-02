@@ -45,7 +45,7 @@ public class Level1JsonReader {
 
         triggerProcessingOfLevel1URLIncludes(from: jsonRoot,
                                              isBeingTested: isBeingTested,
-                                             useOnlyInBundleFile: false) // check false
+                                             useOnlyInBundleFile: false) // check false TODO
 
         // extract the `organizationTypes` in `organizationTypeEnumsToLoad` one-by-one from `jsonRoot`
         for organizationTypeEnum in organizationTypesToLoad {

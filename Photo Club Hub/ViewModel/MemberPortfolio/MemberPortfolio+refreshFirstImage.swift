@@ -69,7 +69,7 @@ extension MemberPortfolio {
     }
 
     private var isUsingJuiceBox: Bool {
-        print("TROEP: \(self.photographer.fullNameFirstLast) of \(self.organization.fullName)") // TODO
+        print("Refreshing thumbnail for \(self.photographer.fullNameFirstLast) of \(self.organization.fullName)")
         if urlOfImageIndex == nil { return false } // return if there is no data for finding JuiceBox XML file
         if MemberPortfolio.clubsFullyUsingJuiceBox.contains(organization.id) { return true }
         if MemberPortfolio.clubsPartiallyUsingJuiceBox.contains(organization.id) && isFormerMember { return true }
