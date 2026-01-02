@@ -101,7 +101,7 @@ struct PreferencesStruct: Codable { // order in which they are shown on Preferen
         return predicateAll // for now, we show all Photographers because filtering is done in View
     }
 
-    var photoClubPredicate: NSPredicate {
+    var organizationPredicate: NSPredicate {
         let predicateAll = NSPredicate(format: "TRUEPREDICATE")
         return predicateAll // for now, we show all Photo Clubs
     }

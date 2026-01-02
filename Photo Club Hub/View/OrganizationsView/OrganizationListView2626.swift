@@ -30,8 +30,9 @@ struct OrganizationListView2626: View {
         if predicate != nil {
             self.predicate = predicate!
         } else {
-            self.predicate = model.preferences.photoClubPredicate // dummy data for Preview
+            self.predicate = model.preferences.organizationPredicate // dummy data for Preview
         }
+
         if let navigationTitle {
             self.navigationTitle = navigationTitle
         }
@@ -41,7 +42,8 @@ struct OrganizationListView2626: View {
         ScrollView(.vertical, showsIndicators: true) {
 
             LazyVStack(alignment: .leading, spacing: 12) {
-                FilteredOrganizationView2626(predicate: model.preferences.photoClubPredicate, searchText: $searchText)
+                FilteredOrganizationView2626(predicate: model.preferences.organizationPredicate,
+                                             searchText: $searchText)
             }
             .scrollTargetLayout()
 
