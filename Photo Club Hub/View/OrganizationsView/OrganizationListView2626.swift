@@ -113,7 +113,7 @@ struct NoClubsText2626: View {
 @available(iOS 26.0, *)
 struct PhotoClubListView2626_Previews: PreviewProvider {
     static let predicate = NSPredicate(format: "fullName_ = %@ || fullName_ = %@ || fullName_ = %@",
-                                       argumentArray: ["PhotoClub2", "PhotoClub1", "PhotoClub3"])
+                                       argumentArray: ["PhotoClub1", "PhotoClub2", "PhotoClub3"])
 
     static var previews: some View {
         NavigationStack {
