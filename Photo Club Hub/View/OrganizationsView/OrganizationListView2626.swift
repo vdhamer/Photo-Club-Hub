@@ -20,7 +20,7 @@ struct OrganizationListView2626: View {
     private var organizations: FetchedResults<Organization>
 
     private static let predicateAll = NSPredicate(format: "TRUEPREDICATE")
-    private var predicate: NSPredicate = Self.predicateAll
+    private var predicate: NSPredicate = Self.predicateAll // overwritten below
     private var navigationTitle = String(localized: "Clubs and Museums",
                                              table: "PhotoClubHub.SwiftUI",
                                              comment: "Title of page with maps for Clubs and Museums")

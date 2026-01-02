@@ -9,10 +9,30 @@ import Foundation // for @Published and ObservableObject
 import CoreData // for NSManagedObject
 import Combine // for AnyCancellable
 
+/// A view model that manages the user's preferences for filtering members throughout the app.
+///
+/// This type is an `ObservableObject` that publishes a single `PreferencesStruct` value, which
+/// contains all toggleable options used to build Core Data predicates for members, photographers, and organizations.
+///
+/// The view model is annotated with `@MainActor` because it is observed by the UI
+/// and its published state is consumed on the main thread. (whatever that means, this documentation was written by AI)
+///
+/// Persistence
+/// - The `preferences` property uses a custom `@Published("preferences", cancellableSet:)` wrapper
+///   that persists changes and restores values across launches. The static `cancellableSet` is kept
+///   on the type so the app can retain Combine subscriptions associated with persistence.
+///
+/// Usage
+/// - Observe an instance of this view model from SwiftUI views and bind to the `preferences` value.
+/// - Read `preferences.memberPredicate` to obtain a composed `NSPredicate` that reflects the current
+///   set of toggles (e.g., current members, officers, former members, etc.).
 @MainActor
 class PreferencesViewModel: ObservableObject {
+    /// Stores Combine cancellables tied to persistence of the `preferences` property.
     static var cancellableSet: Set<AnyCancellable> = [] // not used yet: view has no OK/Cancel capabilities
 
+    /// The app's persisted user preferences. Changes are published to update dependent views and
+    /// are used to derive Core Data predicates for filtering content.
     @Published("preferences", cancellableSet: &cancellableSet)
     var preferences: PreferencesStruct = .defaultValue
 }

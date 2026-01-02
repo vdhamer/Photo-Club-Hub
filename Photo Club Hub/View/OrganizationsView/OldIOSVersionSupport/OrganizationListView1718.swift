@@ -41,7 +41,8 @@ struct OrganizationListView1718: View {
         ScrollView(.vertical, showsIndicators: true) {
 
             LazyVStack {
-                FilteredOrganizationView1718(predicate: model.preferences.organizationPredicate, searchText: $searchText)
+                FilteredOrganizationView1718(predicate: model.preferences.organizationPredicate,
+                                             searchText: $searchText)
             }
             .scrollTargetLayout() // doesn't work well on iOS 26, but looks ok on earlier versions
 
