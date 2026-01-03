@@ -11,7 +11,7 @@ import SwiftUI
 struct OrganizationListView1718: View {
     @Environment(\.managedObjectContext) private var viewContext
     @StateObject var model = PreferencesViewModel()
-    @State var locationManager = LocationManager()
+    @State private var locationManager = LocationManager()
     @State private var searchText: String = "" // bindable string with content of Search bar
 
     @FetchRequest(
@@ -20,18 +20,19 @@ struct OrganizationListView1718: View {
     private var organizations: FetchedResults<Organization>
 
     private static let predicateAll = NSPredicate(format: "TRUEPREDICATE")
-    private var predicate: NSPredicate = Self.predicateAll
+//    private var predicate: NSPredicate = Self.predicateAll // overwritten below TODO is it used??
     private var navigationTitle = String(localized: "Clubs and Museums",
                                              table: "PhotoClubHub.SwiftUI",
                                              comment: "Title of page with maps for Clubs and Museums")
 
     init(predicate: NSPredicate? = nil,
          navigationTitle: String? = nil) {
-        if predicate != nil {
-            self.predicate = predicate!
-        } else {
-            self.predicate = model.preferences.organizationPredicate // dummy data for Preview
-        }
+//        if predicate != nil {
+//            self.predicate = predicate!
+//        } else {
+//            self.predicate = model.preferences.organizationPredicate // dummy data for Preview
+//        }
+
         if let navigationTitle {
             self.navigationTitle = navigationTitle
         }
@@ -44,10 +45,10 @@ struct OrganizationListView1718: View {
                 FilteredOrganizationView1718(predicate: model.preferences.organizationPredicate,
                                              searchText: $searchText)
             }
-            .scrollTargetLayout() // doesn't work well on iOS 26, but looks ok on earlier versions
+            .scrollTargetLayout()
 
             if organizations.isEmpty {
-                NoClubsText()
+                NoClubsText1718()
             }
 
             VStack(alignment: .leading) {
@@ -90,8 +91,8 @@ struct OrganizationListView1718: View {
                     prompt: Text("Search names and towns",
                                  tableName: "PhotoClubHub.SwiftUI",
                                  comment: """
-                                          Field at top of Clubs and Museums page that allows the user to \
-                                          filter the members based on a fragment of the organization name.
+                                          Field on the Clubs and Museums page that allows the user to \
+                                          filter the members based on a fragment of the organization name or town.
                                           """
                                 ))
         .disableAutocorrection(true)
@@ -99,7 +100,8 @@ struct OrganizationListView1718: View {
 
 }
 
-struct NoClubsText: View {
+@available(iOS, obsoleted: 19.0, message: "Please use 'OrganizationListView2626' for versions above iOS 18.x")
+struct NoClubsText1718: View {
     var body: some View {
         Text("""
              No photo clubs seem to be currently loaded.
@@ -110,9 +112,10 @@ struct NoClubsText: View {
     }
 }
 
+@available(iOS, obsoleted: 19.0, message: "Please use 'OrganizationListView2626' for versions above iOS 18.x")
 struct PhotoClubListView1718_Previews: PreviewProvider {
     static let predicate = NSPredicate(format: "fullName_ = %@ || fullName_ = %@ || fullName_ = %@",
-                                       argumentArray: ["PhotoClub2", "PhotoClub1", "PhotoClub3"])
+                                       argumentArray: ["PhotoClub1", "PhotoClub2", "PhotoClub3"])
 
     static var previews: some View {
         NavigationStack {

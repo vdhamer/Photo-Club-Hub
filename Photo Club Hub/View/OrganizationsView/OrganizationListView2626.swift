@@ -48,7 +48,7 @@ struct OrganizationListView2626: View {
             .scrollTargetLayout()
 
             if organizations.isEmpty {
-                NoClubsText()
+                NoClubsText1718()
             }
 
             VStack(alignment: .leading) {
@@ -108,7 +108,9 @@ struct NoClubsText2626: View {
         Text("""
              No photo clubs seem to be currently loaded.
              Try dragging down the Clubs and Museums screen to reload the default clubs.
-             """, comment: "Hint to the user if the database returns zero PhotoClubs.")
+             """,
+             tableName: "PhotoClubHub.SwiftUI",
+             comment: "Hint to the user if the database returns zero PhotoClubs.")
     }
 }
 

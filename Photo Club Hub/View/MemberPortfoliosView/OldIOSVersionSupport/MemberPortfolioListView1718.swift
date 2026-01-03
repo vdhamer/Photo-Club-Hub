@@ -99,8 +99,11 @@ struct MemberPortfolioListView1718: View {
             ToolbarItemGroup(placement: toolbarItemPlacement) {
 
                 NavigationLink(destination: {
-                    let predicateAll = NSPredicate(format: "TRUEPREDICATE")
-                    OrganizationListView1718(predicate: predicateAll)
+                    let predicate: NSPredicate = Settings.showTestClubs ?
+                        NSPredicate(format: "TRUEPREDICATE") : // all clubs
+                        NSPredicate(format: "nickName_ CONTAINS %@",
+                                    argumentArray: ["fg"]) // TODO assumes pred passed to OrganizationListView2626 works
+                    OrganizationListView1718(predicate: predicate)
                 }, label: {
                     Image("mappin.ellipse.rectangle")
                         .font(.title)
