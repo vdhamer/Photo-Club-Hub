@@ -20,18 +20,19 @@ struct OrganizationListView2626: View {
     private var organizations: FetchedResults<Organization>
 
     private static let predicateAll = NSPredicate(format: "TRUEPREDICATE")
-    private var predicate: NSPredicate = Self.predicateAll
+//    private var predicate: NSPredicate = Self.predicateAll // overwritten below TODO is it used??
     private var navigationTitle = String(localized: "Clubs and Museums",
                                              table: "PhotoClubHub.SwiftUI",
                                              comment: "Title of page with maps for Clubs and Museums")
 
     init(predicate: NSPredicate? = nil,
          navigationTitle: String? = nil) {
-        if predicate != nil {
-            self.predicate = predicate!
-        } else {
-            self.predicate = model.preferences.photoClubPredicate // dummy data for Preview
-        }
+//        if predicate != nil {
+//            self.predicate = predicate!
+//        } else {
+//            self.predicate = model.preferences.organizationPredicate // dummy data for Preview
+//        }
+
         if let navigationTitle {
             self.navigationTitle = navigationTitle
         }
@@ -41,7 +42,8 @@ struct OrganizationListView2626: View {
         ScrollView(.vertical, showsIndicators: true) {
 
             LazyVStack(alignment: .leading, spacing: 12) {
-                FilteredOrganizationView2626(predicate: model.preferences.photoClubPredicate, searchText: $searchText)
+                FilteredOrganizationView2626(predicate: model.preferences.organizationPredicate,
+                                             searchText: $searchText)
             }
             .scrollTargetLayout()
 

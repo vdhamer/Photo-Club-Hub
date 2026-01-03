@@ -32,7 +32,7 @@ struct PreferencesView2626: View {
         GeometryReader(content: { _ in
             NavigationStack {
                 List {
-                    Section(header: Text("Member categories",
+                    Section(header: Text("Portfolios",
                                          tableName: "PhotoClubHub.SwiftUI",
                                          comment: "In Preferences, above toggles like \"Show former members\""),
                             content: {
@@ -115,7 +115,23 @@ struct PreferencesView2626: View {
                                           comment: "Label of toggle in Preferences"),
                                    isOn: $localPreferences.showExternalCoaches)
                         }
-                    }) // Section
+                    }) // end of Member Categories section
+
+                    Section(header: Text("Clubs and Museums",
+                                         tableName: "PhotoClubHub.SwiftUI",
+                                         comment: "In Preferences, section title"),
+                            content: {
+                        HStack {
+                            Image(systemName: "mappin.square")
+                                .font(.title2)
+                                .symbolRenderingMode(.palette)
+                                .foregroundStyle(.organizationColor, .gray, .red)
+                            Toggle(String(localized: "Show test clubs",
+                                          table: "PhotoClubHub.SwiftUI",
+                                          comment: "Label of toggle in Preferences"),
+                                   isOn: $localPreferences.showTestClubs.animation())
+                        }
+                    })
 
                     Section(header: Text("Advanced",
                                          tableName: "PhotoClubHub.SwiftUI",
@@ -148,6 +164,7 @@ struct PreferencesView2626: View {
 
 }
 
+// believe it or not, the following Preview actually works
 @available(iOS 26.0, *)
 struct PreferencesView2626_Previews: PreviewProvider {
     @State static private var title = "PreferencesView Preview"

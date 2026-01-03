@@ -30,7 +30,7 @@ struct OrganizationListView1718: View {
         if predicate != nil {
             self.predicate = predicate!
         } else {
-            self.predicate = model.preferences.photoClubPredicate // dummy data for Preview
+            self.predicate = model.preferences.organizationPredicate // dummy data for Preview
         }
         if let navigationTitle {
             self.navigationTitle = navigationTitle
@@ -41,7 +41,8 @@ struct OrganizationListView1718: View {
         ScrollView(.vertical, showsIndicators: true) {
 
             LazyVStack {
-                FilteredOrganizationView1718(predicate: model.preferences.photoClubPredicate, searchText: $searchText)
+                FilteredOrganizationView1718(predicate: model.preferences.organizationPredicate,
+                                             searchText: $searchText)
             }
             .scrollTargetLayout() // doesn't work well on iOS 26, but looks ok on earlier versions
 

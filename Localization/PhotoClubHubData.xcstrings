@@ -189,8 +189,8 @@
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "No remark currently available for %1$@ %2$@."
+            "state" : "translated",
+            "value" : "No remark currently available for %@ %@."
           }
         },
         "nl" : {

@@ -9,10 +9,30 @@ import Foundation // for @Published and ObservableObject
 import CoreData // for NSManagedObject
 import Combine // for AnyCancellable
 
+/// A view model that manages the user's preferences for filtering members throughout the app.
+///
+/// This type is an `ObservableObject` that publishes a single `PreferencesStruct` value, which
+/// contains all toggleable options used to build Core Data predicates for members, photographers, and organizations.
+///
+/// The view model is annotated with `@MainActor` because it is observed by the UI
+/// and its published state is consumed on the main thread. (whatever that means, this documentation was written by AI)
+///
+/// Persistence
+/// - The `preferences` property uses a custom `@Published("preferences", cancellableSet:)` wrapper
+///   that persists changes and restores values across launches. The static `cancellableSet` is kept
+///   on the type so the app can retain Combine subscriptions associated with persistence.
+///
+/// Usage
+/// - Observe an instance of this view model from SwiftUI views and bind to the `preferences` value.
+/// - Read `preferences.memberPredicate` to obtain a composed `NSPredicate` that reflects the current
+///   set of toggles (e.g., current members, officers, former members, etc.).
 @MainActor
 class PreferencesViewModel: ObservableObject {
+    /// Stores Combine cancellables tied to persistence of the `preferences` property.
     static var cancellableSet: Set<AnyCancellable> = [] // not used yet: view has no OK/Cancel capabilities
 
+    /// The app's persisted user preferences. Changes are published to update dependent views and
+    /// are used to derive Core Data predicates for filtering content.
     @Published("preferences", cancellableSet: &cancellableSet)
     var preferences: PreferencesStruct = .defaultValue
 }
@@ -36,6 +56,8 @@ struct PreferencesStruct: Codable { // order in which they are shown on Preferen
     var showDeceasedMembers: Bool
     var showExternalCoaches: Bool
 
+    var showTestClubs: Bool
+
     static let defaultValue = PreferencesStruct( // has to match order of declaration
         showCurrentMembers: true,
         showOfficers: true,
@@ -43,11 +65,12 @@ struct PreferencesStruct: Codable { // order in which they are shown on Preferen
         showHonoraryMembers: true,
         showFormerMembers: false, // used to be true
         showDeceasedMembers: false,
-        showExternalCoaches: false
+        showExternalCoaches: false,
+
+        showTestClubs: false
     )
 
     var memberPredicate: NSPredicate {
-        let predicateNone = NSPredicate(format: "FALSEPREDICATE")
         var format = ""
         let args: [NSManagedObject] = [] // array from which to fetch the %@ values
 
@@ -91,7 +114,27 @@ struct PreferencesStruct: Codable { // order in which they are shown on Preferen
         if format != "" {
             predicate = NSPredicate(format: format, argumentArray: args)
         } else {
+            let predicateNone = NSPredicate(format: "FALSEPREDICATE")
             predicate = predicateNone // if all toggles are disabled, we don't show anything
+        }
+        return predicate
+    }
+
+    var organizationPredicate: NSPredicate {
+        var format = ""
+        var args: [String] = [] // array from which to fetch the %@ values
+
+        if !showTestClubs {
+            format = format.predicateOrAppend(suffix: "(NOT (nickName_ CONTAINS %@))")
+            args.append("Xample")
+        }
+
+        let predicate: NSPredicate
+        if format != "" {
+            predicate = NSPredicate(format: format, argumentArray: args)
+        } else {
+            let predicateAll = NSPredicate(format: "TRUEPREDICATE")
+            predicate = predicateAll
         }
         return predicate
     }
@@ -99,11 +142,6 @@ struct PreferencesStruct: Codable { // order in which they are shown on Preferen
     var photographerPredicate: NSPredicate {
         let predicateAll = NSPredicate(format: "TRUEPREDICATE")
         return predicateAll // for now, we show all Photographers because filtering is done in View
-    }
-
-    var photoClubPredicate: NSPredicate {
-        let predicateAll = NSPredicate(format: "TRUEPREDICATE")
-        return predicateAll // for now, we show all Photo Clubs
     }
 }
 
