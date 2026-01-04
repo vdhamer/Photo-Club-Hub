@@ -1,0 +1,141 @@
+{
+    "level1Header": {
+        "level1URL": "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/museumsUS.level1.json",
+        "level1URLIncludes": [ ],
+        "maintainerEmail": "vdhamer@msn.com"
+    },
+    
+    "museums": [
+        
+        {
+            "idPlus": {
+                "town": "Riverside",
+                "fullName": "UCR/California Museum of Photography",
+                "nickName": "UCR/CMP"
+            },
+            "coordinates": {
+                "latitude": 33.9816,
+                "longitude": -117.3746
+            },
+            "optional": {
+                "website": "http://www.cmp.ucr.edu/",
+                "wikipedia": "https://en.wikipedia.org/wiki/UCR/California_Museum_of_Photography",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "The museum (near Los Angeles) is owned and operated by the University of California, Riverside."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Dit museum in de buurt van Los Angeles is eigendom van de Riverside vestiging van de Universiteit van Californië."
+                    }
+                ]
+            }
+        },
+        
+        {
+            "idPlus": {
+                "town": "Rochester",
+                "fullName": "George Eastman Museum",
+                "nickName": "George Eastman House"
+            },
+            "coordinates": {
+                "latitude": 43.152147,
+                "longitude": -77.580278
+            },
+            "optional": {
+                "website": "https://www.eastman.org/",
+                "wikipedia": "https://en.wikipedia.org/wiki/George_Eastman_Museum",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "This is the oldest photography museum in the world. George Eastman founded Kodak."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Dit is het oudste fotografiemuseum ter wereld. George Eastman heeft Eastman Kodak opgericht."
+                    }
+                ]
+            }
+        },
+        
+        {
+            "idPlus": {
+                "town": "New York City",
+                "fullName": "International Center of Photography Museum",
+                "nickName": "ICP NY"
+            },
+            "coordinates": {
+                "latitude": 40.718028,
+                "longitude": -73.988611
+            },
+            "optional": {
+                "website": "https://www.icp.org",
+                "wikipedia": "https://en.wikipedia.org/wiki/International_Center_of_Photography",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "The museum and school were founded by Cornell Capa, the younger brother of Magnum photographer Robert Capa."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Het museum en bijbehorden school zijn gesticht door Cornell Capa, een broer van Robert Capa, de bekende Magnum fotograaaf."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "New York",
+                "fullName": "Fotografiska New York",
+                "nickName": "Fotografiska NY"
+            },
+            "coordinates": {
+                "latitude": 40.739278,
+                "longitude": -73.986722
+            },
+            "optional": {
+                "website": "https://www.fotografiska.com/nyc/",
+                "wikipedia": "https://en.wikipedia.org/wiki/Fotografiska_New_York",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Fotografiska New York is a branch of the Swedish Fotografiska museum."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Fotografiska New York is een dependance van het Fotografiska museum in Stockholm."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "New York",
+                "fullName": "Museum of Modern Art New York",
+                "nickName": "MoMA NY"
+            },
+            "coordinates": {
+                "latitude": 40.761667,
+                "longitude": -73.9775
+            },
+            "optional": {
+                "website": "https://www.moma.org/about/curatorial-departments/photography",
+                "wikipedia": "https://en.wikipedia.org/wiki/Museum_of_Modern_Art",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "This department within the Museum of Modern Art describes itself as 'one of the most important collections of modern and contemporary photography in the world'."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "De fotografie tak van het Museum of Modern Art omschrijft zichzelf als \"een van de belangrijkste verzameling van moderne en eigentijdse fotografie ter wereld\"."
+                    }
+                ]
+            }
+        }
+
+    ]
+}

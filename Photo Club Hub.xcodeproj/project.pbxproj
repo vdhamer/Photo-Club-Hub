@@ -21,6 +21,7 @@
 		37B1A3EB2F0A8C4500854FBD /* Level2JsonReaders+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B1A3EA2F0A8C4500854FBD /* Level2JsonReaders+Helpers.swift */; };
 		37B1A43E2F0B0E8500854FBD /* recursionA.level1.json in Resources */ = {isa = PBXBuildFile; fileRef = 37B1A43C2F0B0E8500854FBD /* recursionA.level1.json */; };
 		37B1A43F2F0B0E8500854FBD /* recursionB.level1.json in Resources */ = {isa = PBXBuildFile; fileRef = 37B1A43D2F0B0E8500854FBD /* recursionB.level1.json */; };
+		37B1A4692F0B18BB00854FBD /* museumsUS.level1.json in Resources */ = {isa = PBXBuildFile; fileRef = 37B1A4682F0B18A700854FBD /* museumsUS.level1.json */; };
 		37C014442EDA564B003B3901 /* Organization+Count.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C014432EDA564B003B3901 /* Organization+Count.swift */; };
 		37C014462EDA575B003B3901 /* Organization+Comparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C014452EDA575B003B3901 /* Organization+Comparable.swift */; };
 		37C014482EDA581F003B3901 /* FileOrganization+FindCreateUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C014472EDA581F003B3901 /* FileOrganization+FindCreateUpdate.swift */; };
@@ -175,6 +176,7 @@
 		37B1A3EA2F0A8C4500854FBD /* Level2JsonReaders+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Level2JsonReaders+Helpers.swift"; sourceTree = "<group>"; };
 		37B1A43C2F0B0E8500854FBD /* recursionA.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = recursionA.level1.json; sourceTree = "<group>"; };
 		37B1A43D2F0B0E8500854FBD /* recursionB.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = recursionB.level1.json; sourceTree = "<group>"; };
+		37B1A4682F0B18A700854FBD /* museumsUS.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = museumsUS.level1.json; sourceTree = "<group>"; };
 		37C014432EDA564B003B3901 /* Organization+Count.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Organization+Count.swift"; sourceTree = "<group>"; };
 		37C014452EDA575B003B3901 /* Organization+Comparable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Organization+Comparable.swift"; sourceTree = "<group>"; };
 		37C014472EDA581F003B3901 /* FileOrganization+FindCreateUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileOrganization+FindCreateUpdate.swift"; sourceTree = "<group>"; };
@@ -858,6 +860,7 @@
 				D0FD28BA2D8CDFD3002B5C38 /* languages.level0.json */,
 				37DA3E0E2F06B40A00AB7993 /* museums.level1.json */,
 				37DA3E102F06B62600AB7993 /* museumsNL.level1.json */,
+				37B1A4682F0B18A700854FBD /* museumsUS.level1.json */,
 				D0DD2B7A2EF89BCF002210DA /* Persoonlijk03.level2.json */,
 				D04E91222E1B163200F6A66F /* Persoonlijk16.level2.json */,
 				37B1A43C2F0B0E8500854FBD /* recursionA.level1.json */,
@@ -1024,6 +1027,7 @@
 				D0FD28BC2D8CDFD3002B5C38 /* abstractExpertise.level0.json in Resources */,
 				D0FD28BD2D8CDFD3002B5C38 /* language.level0.json in Resources */,
 				D0DD2B7B2EF89BCF002210DA /* Persoonlijk03.level2.json in Resources */,
+				37B1A4692F0B18BB00854FBD /* museumsUS.level1.json in Resources */,
 				3723DAEC2F008F2F006E2BB4 /* whiteboard.txt in Resources */,
 				D0831A51277F73C00049AB84 /* Preview Assets.xcassets in Resources */,
 				D0A615CF2D9218030024EC9E /* fgWaalre.level2.json in Resources */,
