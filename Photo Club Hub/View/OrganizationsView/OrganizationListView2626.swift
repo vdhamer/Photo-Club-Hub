@@ -24,7 +24,7 @@ struct OrganizationListView2626: View {
                                              table: "PhotoClubHub.SwiftUI",
                                              comment: "Title of page with maps for Clubs and Museums")
 
-    init(predicate: NSPredicate? = nil, navigationTitle: String? = nil) {
+    init(navigationTitle: String? = nil) {
         if let navigationTitle {
             self.navigationTitle = navigationTitle
         }
@@ -108,12 +108,9 @@ struct NoClubsText2626: View {
 
 @available(iOS 26.0, *)
 struct PhotoClubListView2626_Previews: PreviewProvider {
-    static let predicate = NSPredicate(format: "fullName_ = %@ || fullName_ = %@ || fullName_ = %@",
-                                       argumentArray: ["PhotoClub1", "PhotoClub2", "PhotoClub3"])
-
     static var previews: some View {
         NavigationStack {
-            OrganizationListView2626(predicate: predicate, navigationTitle: String("PhotoClubView"))
+            OrganizationListView2626(navigationTitle: String("PhotoClubView"))
                 .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
         }
     }

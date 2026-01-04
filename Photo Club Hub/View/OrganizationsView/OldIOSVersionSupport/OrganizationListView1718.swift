@@ -24,7 +24,7 @@ struct OrganizationListView1718: View {
                                              table: "PhotoClubHub.SwiftUI",
                                              comment: "Title of page with maps for Clubs and Museums")
 
-    init(predicate: NSPredicate? = nil, navigationTitle: String? = nil) {
+    init(navigationTitle: String? = nil) {
         if let navigationTitle {
             self.navigationTitle = navigationTitle
         }
@@ -111,7 +111,7 @@ struct PhotoClubListView1718_Previews: PreviewProvider {
 
     static var previews: some View {
         NavigationStack {
-            OrganizationListView1718(predicate: predicate, navigationTitle: String("PhotoClubView"))
+            OrganizationListView1718(navigationTitle: String("PhotoClubView"))
                 .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
         }
     }
