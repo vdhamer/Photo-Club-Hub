@@ -1,4 +1,4 @@
-### 2.8.9 (GitHub commit ???????) ??-01-226
+### 2.9.0 (GitHub commit ???????) ??-01-226
 
 * TODO: hierarchical Level 1 files.
 * TODO: add an extra expertise for Jan 2026 (Studio? Mobile?)
@@ -31,7 +31,7 @@ CODE MAINTENANCE
 
 PERFORMANCE
 
-* Faster loading of fgWaalre (special because it is a mix of two types of portfolios)
+* Faster loading of fgWaalre (club is special because it is a mix of two types of portfolios)
 
 DOCUMENTATION
 
