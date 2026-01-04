@@ -25,6 +25,10 @@ DATA MAINTENANCE
 * Shortened "Persoonlijke Leden Afdeling Drenthe - Vechtdal" to "Persoonlijke Leden Drenthe - Vechtdal"
 * Moved clubs and museums from the root.level1.json file into 6 shorter "include" level1.json files
 
+CODE MAINTENANCE
+
+* Tested with SwiftLint 0.63
+
 PERFORMANCE
 
 * Faster loading of fgWaalre (special because it is a mix of two types of portfolios)
