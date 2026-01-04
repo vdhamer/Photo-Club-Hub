@@ -20,19 +20,11 @@ struct OrganizationListView2626: View {
     private var organizations: FetchedResults<Organization>
 
     private static let predicateAll = NSPredicate(format: "TRUEPREDICATE")
-//    private var predicate: NSPredicate = Self.predicateAll // overwritten below TODO is it used??
     private var navigationTitle = String(localized: "Clubs and Museums",
                                              table: "PhotoClubHub.SwiftUI",
                                              comment: "Title of page with maps for Clubs and Museums")
 
-    init(predicate: NSPredicate? = nil,
-         navigationTitle: String? = nil) {
-//        if predicate != nil {
-//            self.predicate = predicate!
-//        } else {
-//            self.predicate = model.preferences.organizationPredicate // dummy data for Preview
-//        }
-
+    init(predicate: NSPredicate? = nil, navigationTitle: String? = nil) {
         if let navigationTitle {
             self.navigationTitle = navigationTitle
         }
