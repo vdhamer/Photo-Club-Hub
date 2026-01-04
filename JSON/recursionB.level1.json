@@ -1,0 +1,26 @@
+{
+    "level1Header": {
+        "level1URL": "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/recursionB.level1.json",
+        "level1URLIncludes": [ ],
+        "maintainerEmail": "vdhamer@msn.com"
+    },
+    
+    "clubs": [
+
+        {
+            "idPlus": {
+                "town": "Antartica",
+                "fullName": "Penguin Photography Club",
+                "nickName": "DummyAntartica"
+            },
+            "optional": {
+                "coordinates": {
+                    "latitude": 52.37312,
+                    "longitude": -89.0
+                },
+                "level2URL": "https://www.example.com/DummyAntartica.level2.json"
+            }
+        }
+        
+    ]
+}
