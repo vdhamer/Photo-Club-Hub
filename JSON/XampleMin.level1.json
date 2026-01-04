@@ -7,11 +7,11 @@
                 "fullName": "Xample Club With Minimal Data",
                 "nickName": "XampleMin"
             },
+            "coordinates": {
+                "latitude": 52.37312,
+                "longitude": 4.89383
+            },
             "optional": {
-                "coordinates": {
-                    "latitude": 52.37312,
-                    "longitude": 4.89383
-                },
                 "level2URL": "https://www.example.com/XampleMin.level2.json"
             }
         },
@@ -22,11 +22,11 @@
                 "fullName": "Leica Rangefinders Owners Club",
                 "nickName": "LeicaROC"
             },
+            "coordinates": {
+                "latitude": 50.55221,
+                "longitude": 8.53346
+            }
             "optional": {
-                "coordinates": {
-                    "latitude": 50.55221,
-                    "longitude": 8.53346
-                }
             }
         }
 

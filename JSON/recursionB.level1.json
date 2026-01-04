@@ -13,11 +13,11 @@
                 "fullName": "Penguin Photography Club",
                 "nickName": "DummyAntartica"
             },
+            "coordinates": {
+                "latitude": -89.0,
+                "longitude": 0.0
+            },
             "optional": {
-                "coordinates": {
-                    "latitude": 52.37312,
-                    "longitude": -89.0
-                },
                 "level2URL": "https://www.example.com/DummyAntartica.level2.json"
             }
         }
