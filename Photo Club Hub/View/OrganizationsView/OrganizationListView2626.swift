@@ -20,18 +20,18 @@ struct OrganizationListView2626: View {
     private var organizations: FetchedResults<Organization>
 
     private static let predicateAll = NSPredicate(format: "TRUEPREDICATE")
-    private var predicate: NSPredicate = Self.predicateAll // overwritten below
+//    private var predicate: NSPredicate = Self.predicateAll // overwritten below TODO is it used??
     private var navigationTitle = String(localized: "Clubs and Museums",
                                              table: "PhotoClubHub.SwiftUI",
                                              comment: "Title of page with maps for Clubs and Museums")
 
     init(predicate: NSPredicate? = nil,
          navigationTitle: String? = nil) {
-        if predicate != nil {
-            self.predicate = predicate!
-        } else {
-            self.predicate = model.preferences.organizationPredicate // dummy data for Preview
-        }
+//        if predicate != nil {
+//            self.predicate = predicate!
+//        } else {
+//            self.predicate = model.preferences.organizationPredicate // dummy data for Preview
+//        }
 
         if let navigationTitle {
             self.navigationTitle = navigationTitle
@@ -48,7 +48,7 @@ struct OrganizationListView2626: View {
             .scrollTargetLayout()
 
             if organizations.isEmpty {
-                NoClubsText()
+                NoClubsText1718()
             }
 
             VStack(alignment: .leading) {
@@ -108,7 +108,9 @@ struct NoClubsText2626: View {
         Text("""
              No photo clubs seem to be currently loaded.
              Try dragging down the Clubs and Museums screen to reload the default clubs.
-             """, comment: "Hint to the user if the database returns zero PhotoClubs.")
+             """,
+             tableName: "PhotoClubHub.SwiftUI",
+             comment: "Hint to the user if the database returns zero PhotoClubs.")
     }
 }
 

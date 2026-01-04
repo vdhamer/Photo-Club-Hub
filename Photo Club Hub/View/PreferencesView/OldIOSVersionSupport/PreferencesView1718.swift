@@ -32,7 +32,7 @@ struct PreferencesView1718: View {
         GeometryReader(content: { _ in
             NavigationStack {
                 List {
-                    Section(header: Text("Member categories",
+                    Section(header: Text("Portfolios",
                                          tableName: "PhotoClubHub.SwiftUI",
                                          comment: "In Preferences, above toggles like \"Show former members\""),
                             content: {
@@ -100,10 +100,11 @@ struct PreferencesView1718: View {
                             HStack {
                                 RoleStatusIconView(memberStatus: .deceased)
                                     .foregroundColor(.deceasedColor)
-                                Text("“Former members” includes “deceased members”",
-                                     tableName: "PhotoClubHub.SwiftUI",
-                                     comment: "Shown when \"Show deceased members\" entry is missing in Preferences")
-                                .foregroundColor(.gray)
+                                Text(
+                                    "“Former members” includes “deceased members”",
+                                    tableName: "PhotoClubHub.SwiftUI",
+                                    comment: "Shown when \"Show deceased members\" entry is missing in Preferences")
+                                    .foregroundColor(.gray)
                             }
                         }
                         HStack {
@@ -114,7 +115,23 @@ struct PreferencesView1718: View {
                                           comment: "Label of toggle in Preferences"),
                                    isOn: $localPreferences.showExternalCoaches)
                         }
-                    }) // Section
+                    }) // end of Member Categories section
+
+                    Section(header: Text("Clubs and Museums",
+                                         tableName: "PhotoClubHub.SwiftUI",
+                                         comment: "In Preferences, section title"),
+                            content: {
+                        HStack {
+                            Image(systemName: "mappin.square")
+                                .font(.title2)
+                                .symbolRenderingMode(.palette)
+                                .foregroundStyle(.organizationColor, .gray, .red)
+                            Toggle(String(localized: "Show test clubs",
+                                          table: "PhotoClubHub.SwiftUI",
+                                          comment: "Label of toggle in Preferences"),
+                                   isOn: $localPreferences.showTestClubs.animation())
+                        }
+                    })
 
                     Section(header: Text("Advanced",
                                          tableName: "PhotoClubHub.SwiftUI",
@@ -153,6 +170,7 @@ struct PreferencesView1718: View {
 
 }
 
+// believe it or not, the following Preview actually works
 @available(iOS, obsoleted: 19.0, message: "Please use 'PreferencesView2626_Previews' for versions above iOS 18.x")
 struct PreferencesView1718_Previews: PreviewProvider {
     @State static private var title = "PreferencesView Preview"

@@ -15,6 +15,11 @@ WHO'S WHO SCREEN
 
 * Minimize size of search bar on Who's Who screen when not in use
 
+PREFERENCES SCREEN
+
+* Added "Show test clubs" toggle (replaces a toggle in iOS Settings "Load test clubs")
+* Changed section headers (minor)
+
 DATA MAINTENANCE
 
 * Shortened "Persoonlijke Leden Afdeling Drenthe - Vechtdal" to "Persoonlijke Leden Drenthe - Vechtdal"

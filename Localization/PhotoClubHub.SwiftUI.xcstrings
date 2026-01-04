@@ -240,7 +240,7 @@
       }
     },
     "Clubs and Museums" : {
-      "comment" : "Title of page with maps for Clubs and Museums",
+      "comment" : "In Preferences, section title\nTitle of page with maps for Clubs and Museums",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -328,6 +328,12 @@
     "Go to Portfolios screen" : {
       "comment" : "Button hint",
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Go to Portfolios screen"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -370,23 +376,6 @@
         }
       }
     },
-    "Member categories" : {
-      "comment" : "In Preferences, above toggles like \"Show former members\"",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Member categories"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Lidmaatschapstypen"
-          }
-        }
-      }
-    },
     "member_" : {
       "comment" : "Statistics at end of section of FilteredMemberPortfoliosView",
       "localizations" : {
@@ -424,6 +413,12 @@
     "Next" : {
       "comment" : "Button text",
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Next"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -569,7 +564,7 @@
       }
     },
     "Portfolios" : {
-      "comment" : "Title of page showing member portfolios",
+      "comment" : "In Preferences, above toggles like \"Show former members\"\nTitle of page showing member portfolios",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -620,7 +615,7 @@
       }
     },
     "Search names and towns" : {
-      "comment" : "Field at top of Clubs and Museums page that allows the user to filter the members based on a fragment of the organization name.\nField on the Clubs and Museums page that allows the user to filter the members based on a fragment of the organization name or town.",
+      "comment" : "Field on the Clubs and Museums page that allows the user to filter the members based on a fragment of the organization name or town.",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -785,6 +780,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Toon ereleden"
+          }
+        }
+      }
+    },
+    "Show test clubs" : {
+      "comment" : "Label of toggle in Preferences",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show test clubs"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toon testclubs"
           }
         }
       }

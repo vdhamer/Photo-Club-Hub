@@ -56,6 +56,8 @@ struct PreferencesStruct: Codable { // order in which they are shown on Preferen
     var showDeceasedMembers: Bool
     var showExternalCoaches: Bool
 
+    var showTestClubs: Bool
+
     static let defaultValue = PreferencesStruct( // has to match order of declaration
         showCurrentMembers: true,
         showOfficers: true,
@@ -63,11 +65,12 @@ struct PreferencesStruct: Codable { // order in which they are shown on Preferen
         showHonoraryMembers: true,
         showFormerMembers: false, // used to be true
         showDeceasedMembers: false,
-        showExternalCoaches: false
+        showExternalCoaches: false,
+
+        showTestClubs: false
     )
 
     var memberPredicate: NSPredicate {
-        let predicateNone = NSPredicate(format: "FALSEPREDICATE")
         var format = ""
         let args: [NSManagedObject] = [] // array from which to fetch the %@ values
 
@@ -111,7 +114,27 @@ struct PreferencesStruct: Codable { // order in which they are shown on Preferen
         if format != "" {
             predicate = NSPredicate(format: format, argumentArray: args)
         } else {
+            let predicateNone = NSPredicate(format: "FALSEPREDICATE")
             predicate = predicateNone // if all toggles are disabled, we don't show anything
+        }
+        return predicate
+    }
+
+    var organizationPredicate: NSPredicate {
+        var format = ""
+        var args: [String] = [] // array from which to fetch the %@ values
+
+        if !showTestClubs {
+            format = format.predicateOrAppend(suffix: "(NOT (nickName_ CONTAINS %@))")
+            args.append("Xample")
+        }
+
+        let predicate: NSPredicate
+        if format != "" {
+            predicate = NSPredicate(format: format, argumentArray: args)
+        } else {
+            let predicateAll = NSPredicate(format: "TRUEPREDICATE")
+            predicate = predicateAll
         }
         return predicate
     }
