@@ -16,11 +16,11 @@
                 "fullName": "Xample Club With Minimal Data",
                 "nickName": "XampleMin"
             },
+            "coordinates": {
+                "latitude": 52.37312,
+                "longitude": 4.89383
+            },
             "optional": {
-                "coordinates": {
-                    "latitude": 52.37312,
-                    "longitude": 4.89383
-                },
                 "level2URL": "https://www.example.com/XampleMin.level2.json"
             }
         }
@@ -35,11 +35,11 @@
                 "fullName": "Ernst Leitz Museum",
                 "nickName": "LeicaMuseum"
             },
+            "coordinates": {
+                "latitude": 50.55230,
+                "longitude": 8.53335
+            }
             "optional": {
-                "coordinates": {
-                    "latitude": 50.55230,
-                    "longitude": 8.53335
-                }
             }
         }
 
