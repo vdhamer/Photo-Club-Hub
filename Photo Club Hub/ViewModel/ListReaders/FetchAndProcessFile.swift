@@ -32,8 +32,8 @@ struct FetchAndProcessFile {
             let fileInBundleURL: URL? = bundle.url(forResource: nameWithSubtype, withExtension: fileType)
             guard fileInBundleURL != nil else {
                 fatalError("""
-                           Failed to find URL to the file \
-                           \(fileSelector.fileName).\(fileSubType).\(fileType) because fileInBundleURL is nil.
+                           Failed to find internal URL for \
+                           \(fileSelector.fileName).\(fileSubType).\(fileType). Might be a filename or branch problem.
                            """)
             }
 
