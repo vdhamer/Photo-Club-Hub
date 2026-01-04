@@ -31,6 +31,7 @@ public class Level2JsonReader { // normally running on a background thread
                                 fileContentProcessor: Level2JsonReader.readRootLevel2Json(bgContext:
                                                                                           jsonData:
                                                                                           fileSelector:
+                                                                                          useOnlyInBundleFile:
                                                                                           isBeingTested:)
                                )
     }
@@ -38,6 +39,7 @@ public class Level2JsonReader { // normally running on a background thread
     @Sendable static private func readRootLevel2Json(bgContext: NSManagedObjectContext,
                                                      jsonData: String,
                                                      fileSelector: FileSelector,
+                                                     useOnlyInBundleFile: Bool,
                                                      isBeingTested: Bool) {
 
         guard fileSelector.organizationIdPlus != nil else { // need expected id of a club

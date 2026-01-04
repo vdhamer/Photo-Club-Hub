@@ -26,6 +26,7 @@ public class Level0JsonReader {
             fileContentProcessor: Level0JsonReader.readRootLevel0Json(bgContext:
                                                                       jsonData:
                                                                       fileSelector:
+                                                                      useOnlyInBundleFile:
                                                                       isBeingTested:)
         )
     }
@@ -34,6 +35,7 @@ public class Level0JsonReader {
     @Sendable static private func readRootLevel0Json(bgContext: NSManagedObjectContext,
                                                      jsonData: String,
                                                      fileSelector: FileSelector,
+                                                     useOnlyInBundleFile: Bool,
                                                      isBeingTested: Bool) {
 
         let fileName: String = fileSelector.fileName

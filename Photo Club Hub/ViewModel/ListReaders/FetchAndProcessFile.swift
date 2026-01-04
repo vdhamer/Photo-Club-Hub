@@ -23,6 +23,7 @@ struct FetchAndProcessFile {
          fileContentProcessor: @Sendable @escaping (_ bgContext: NSManagedObjectContext,
                                                     _ jsonData: String,
                                                     _ selectFile: FileSelector,
+                                                    _ useOnlyInBundleFile: Bool,
                                                     _ isBeingTested: Bool) -> Void) {
         bgContext.perform { [self] in // run on requested background thread
             let nameWithSubtype = (fileSelector.fileName) + "." + fileSubType // e.g. "root.level1"
@@ -44,7 +45,7 @@ struct FetchAndProcessFile {
                 fileInBundleURL: fileInBundleURL!, // forced unwrap is safe (due to guard statement above)
                 useOnlyInBundleFile: useOnlyInBundleFile
             )
-            fileContentProcessor(bgContext, data, fileSelector, isBeingTested)
+            fileContentProcessor(bgContext, data, fileSelector, useOnlyInBundleFile, isBeingTested)
         }
     }
 

@@ -28,12 +28,14 @@ public class Level1JsonReader {
                                 fileContentProcessor: Level1JsonReader.readRootLevel1Json(bgContext:
                                                                                           jsonData:
                                                                                           fileSelector:
+                                                                                          useOnlyInBundleFile:
                                                                                           isBeingTested:))
     }
 
     @Sendable static private func readRootLevel1Json(bgContext: NSManagedObjectContext,
                                                      jsonData: String,
                                                      fileSelector: FileSelector,
+                                                     useOnlyInBundleFile: Bool,
                                                      isBeingTested: Bool = false) {
 
         let fileName = fileSelector.fileName
@@ -45,7 +47,7 @@ public class Level1JsonReader {
 
         triggerProcessingOfLevel1URLIncludes(from: jsonRoot,
                                              isBeingTested: isBeingTested,
-                                             useOnlyInBundleFile: false) // check false TODO
+                                             useOnlyInBundleFile: useOnlyInBundleFile)
 
         // extract the `organizationTypes` in `organizationTypeEnumsToLoad` one-by-one from `jsonRoot`
         for organizationTypeEnum in organizationTypesToLoad {
