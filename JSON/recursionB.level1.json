@@ -11,11 +11,11 @@
             "idPlus": {
                 "town": "Antartica",
                 "fullName": "Penguin Photography Club",
-                "nickName": "DummyAntartica"
+                "nickName": "XampleAntartica"
             },
             "coordinates": {
                 "latitude": -89.0,
-                "longitude": 0.0
+                "longitude": 12.3
             },
             "optional": {
                 "level2URL": "https://www.example.com/DummyAntartica.level2.json"
