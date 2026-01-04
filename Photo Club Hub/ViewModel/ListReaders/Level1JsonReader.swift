@@ -39,7 +39,10 @@ public class Level1JsonReader {
                                                      isBeingTested: Bool = false) {
 
         let fileName = fileSelector.fileName
-//        guard await level1Mutext.isBlockedBecauseRevisited(level1FileName: fileName) else { return }
+//        Task {
+//            static let level1Mutex = Level1Mutex()
+//            guard await level1Mutex.isBlockedBecauseRevisited(level1FileName: fileName) else { return }
+//        }
         ifDebugPrint("\nWill read \(fileName).level1.json with a list of organizations in the background.")
 
         // hand the data to SwiftyJSON to parse
