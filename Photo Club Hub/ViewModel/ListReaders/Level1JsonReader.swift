@@ -8,12 +8,14 @@
 import CoreData // for NSManagedObjectContext
 import CoreLocation // for CLLocationCoordinate2D
 import SwiftyJSON // for JSON struct
+import Synchronization // for Mutex (only used on iOS 18 or above)
 
 private let organizationTypesToLoad: [OrganizationTypeEnum] = [.club, .museum] // types are loaded one-by-one
 
 public class Level1JsonReader {
 
-//    static let level1Mutext = Level1Mutex()
+    @available(iOS 18, *)
+    static let level1History = Level1History() //
 
     public init(bgContext: NSManagedObjectContext,
                 fileName: String = "root",  // can overrule the name for unit testing
@@ -36,10 +38,11 @@ public class Level1JsonReader {
                                                      isBeingTested: Bool = false) {
 
         let fileName = fileSelector.fileName
-//        Task {
-//            static let level1Mutex = Level1Mutex()
-//            guard await level1Mutex.isBlockedBecauseRevisited(level1FileName: fileName) else { return }
-//        }
+        if #available(iOS 18, *) {
+            // If we've already visited `filename`, avoid loading it twice. For performance and against infinite loops.
+            // There is no safety net when running iOS 17: hopefully any infinite loops get fixed by others complaining.
+            if Level1JsonReader.level1History.isVisited(fileName: fileName) { return }
+        }
         ifDebugPrint("\nWill read \(fileName).level1.json with a list of organizations in the background.")
 
         // hand the data to SwiftyJSON to parse
@@ -176,16 +179,21 @@ extension Level1JsonReader {
 
 }
 
-// actor Level1Mutex {
-//    private var visitedLevel1Files: Set<String> = []
-//
-//    func isBlockedBecauseRevisited(level1FileName: String) async -> Bool {
-//        if visitedLevel1Files.contains(level1FileName) {
-//            return true
-//        } else {
-//            visitedLevel1Files.insert(level1FileName)
-//            return false
-//        }
-//
-//    }
-// }
+@available(iOS 18, *)
+final class Level1History: Sendable {
+
+    // https://www.avanderlee.com/concurrency/modern-swift-lock-mutex-the-synchronization-framework/
+    private let level1History = Mutex<[String]>([])
+
+    func isVisited(fileName: String) -> Bool {
+        level1History.withLock { level1History in
+            if level1History.contains(fileName) {
+                return true
+            } else {
+                level1History.append(fileName)
+                return false
+            }
+        }
+    }
+
+}
