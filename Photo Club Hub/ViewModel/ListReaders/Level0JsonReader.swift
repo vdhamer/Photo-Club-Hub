@@ -23,11 +23,7 @@ public class Level0JsonReader {
             fileType: "json", fileSubType: "level0", // "root.level0.json"
             useOnlyInBundleFile: useOnlyInBundleFile,
             isBeingTested: isBeingTested,
-            fileContentProcessor: Level0JsonReader.readRootLevel0Json(bgContext:
-                                                                      jsonData:
-                                                                      fileSelector:
-                                                                      useOnlyInBundleFile:
-                                                                      isBeingTested:)
+            fileContentProcessor: Level0JsonReader.readRootLevel0Json
         )
     }
 

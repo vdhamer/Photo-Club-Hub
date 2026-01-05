@@ -26,12 +26,8 @@ public class Level2JsonReader { // normally running on a background thread
                                 fileSubType: "level2", // "fgDeGender.level2.json"
                                 useOnlyInBundleFile: useOnlyInBundleFile,
                                 isBeingTested: isBeingTested,
-                                fileContentProcessor: Level2JsonReader.readRootLevel2Json(bgContext:
-                                                                                          jsonData:
-                                                                                          fileSelector:
-                                                                                          useOnlyInBundleFile:
-                                                                                          isBeingTested:)
-                               )
+                                fileContentProcessor: Level2JsonReader.readRootLevel2Json
+        )
     }
 
     @Sendable static private func readRootLevel2Json(bgContext: NSManagedObjectContext,

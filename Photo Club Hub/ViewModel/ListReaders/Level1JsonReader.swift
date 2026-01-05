@@ -25,11 +25,8 @@ public class Level1JsonReader {
                                 fileType: "json", fileSubType: "level1", // "root.level1.json"
                                 useOnlyInBundleFile: useOnlyInBundleFile,
                                 isBeingTested: isBeingTested,
-                                fileContentProcessor: Level1JsonReader.readRootLevel1Json(bgContext:
-                                                                                          jsonData:
-                                                                                          fileSelector:
-                                                                                          useOnlyInBundleFile:
-                                                                                          isBeingTested:))
+                                fileContentProcessor: Level1JsonReader.readRootLevel1Json
+        )
     }
 
     @Sendable static private func readRootLevel1Json(bgContext: NSManagedObjectContext,
