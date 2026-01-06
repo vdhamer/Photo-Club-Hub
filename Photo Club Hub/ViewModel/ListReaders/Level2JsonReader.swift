@@ -32,6 +32,7 @@ public class Level2JsonReader { // normally running on a background thread
         )
     }
 
+    // swiftlint:disable:next function_parameter_count
     @Sendable static private func readRootLevel2Json(bgContext: NSManagedObjectContext,
                                                      jsonData: String,
                                                      fileSelector: FileSelector,

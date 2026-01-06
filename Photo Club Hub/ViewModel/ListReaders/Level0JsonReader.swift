@@ -29,7 +29,7 @@ public class Level0JsonReader {
         )
     }
 
-    // Marked as @Sendable to satisfy concurrency safety requirements.
+    // swiftlint:disable:next function_parameter_count
     @Sendable static private func readRootLevel0Json(bgContext: NSManagedObjectContext,
                                                      jsonData: String,
                                                      fileSelector: FileSelector,
