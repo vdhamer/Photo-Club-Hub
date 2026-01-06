@@ -70,7 +70,7 @@ extension Level1JsonReader {
 }
 
 @available(iOS 18, *)
-final class Level1History: Sendable {
+final public class Level1History: Sendable {
 
     // https://www.avanderlee.com/concurrency/modern-swift-lock-mutex-the-synchronization-framework/
     private let level1History = Mutex<[String]>([])
@@ -84,6 +84,13 @@ final class Level1History: Sendable {
                 return false
             }
         }
+    }
+
+    public func clear() {
+        level1History.withLock { level1History in
+            level1History.removeAll()
+        }
+
     }
 
 }

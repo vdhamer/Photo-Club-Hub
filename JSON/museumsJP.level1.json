@@ -1,0 +1,63 @@
+{
+    "level1Header": {
+        "level1URL": "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/museumsJP.level1.json",
+        "level1URLIncludes": [ ],
+        "maintainerEmail": "vdhamer@msn.com"
+    },
+    
+    "museums": [
+
+        {
+            "idPlus": {
+                "town": "Sakata",
+                "fullName": "Ken Domon Museum of Photography",
+                "nickName": "土門拳記念館"
+            },
+            "coordinates": {
+                "latitude": 38.891299,
+                "longitude": 139.823716
+            },
+            "optional": {
+                "website": "http://www.domonken-kinenkan.jp/",
+                "wikipedia": "https://en.wikipedia.org/wiki/Ken_Domon_Museum_of_Photography",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "The museum is named after the Japanese photographer Ken Domon who was born in Sakata, Japan."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Het museum draagt de naam van de Japanese fotograaf Ken Domon, die in Sakata, Japan geboren is."
+                    }
+                ]
+            }
+        },
+        
+        {
+            "idPlus": {
+                "town": "Tokyo",
+                "fullName": "Tokyo Museum of Photography",
+                "nickName": "TOP Tokyo"
+            },
+            "coordinates": {
+                "latitude": 35.6417,
+                "longitude": 139.7132
+            },
+            "optional": {
+                "website": "http://topmuseum.jp/e/contents/index.html",
+                "wikipedia": "https://en.wikipedia.org/wiki/Tokyo_Photographic_Art_Museum",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "The museum is formally located in Meguro, on the outskirts of Tokyo."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Strikt genomen valt het museum onder Meguro, een randgemeente van Tokyo."
+                    }
+                ]
+            }
+        }
+        
+    ]
+}

@@ -1,0 +1,67 @@
+{
+    "level1Header": {
+        "level1URL": "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/museumsDE.level1.json",
+        "level1URLIncludes": [ ],
+        "maintainerEmail": "vdhamer@msn.com"
+    },
+    
+    "museums": [
+
+        {
+            "idPlus": {
+                "town": "Berlin",
+                "fullName": "Museum für Fotografie",
+                "nickName": "MfürF Berlin"
+            },
+            "coordinates": {
+                "latitude": 52.507778,
+                "longitude": 13.331667
+            },
+            "optional": {
+                "website": "https://www.smb.museum/museen-einrichtungen/museum-fuer-fotografie/home/",
+                "wikipedia": "https://en.wikipedia.org/wiki/Museum_of_Photography,_Berlin",
+                "remark": [
+                    {
+                        "language": "DE",
+                        "value": "Das Museum beinhaltet den fotografischen Nachlas von Helmut Newton."
+                    },
+                    {
+                        "language": "EN",
+                        "value": "The museum houses the Helmut Newton Foundation."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Het museum beheert de fotografische nalatenschap van Helmut Newton."
+                    }
+                ]
+            }
+        },
+        
+        {
+            "idPlus": {
+                "town": "Wetzlar",
+                "fullName": "Ernst Leitz Museum",
+                "nickName": "LeicaMuseum"
+            },
+            "coordinates": {
+                "latitude": 50.55230,
+                "longitude": 8.53335
+            },
+            "optional": {
+                "website": "https://leicawelt.com/en/experiences/ernst-leitz-museum",
+                "wikipedia": "https://de.wikipedia.org/wiki/Leica-Welt",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "This corporate museum showcases Leitz cameras and images make with Leicas. There are more Leitz buildings on site."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Dit museum, bij het hoofdkwartier van Leitz, gaat over Leitz camera's en de bekende Leitz fotografen."
+                    }
+                ]
+            }
+        }
+
+    ]
+}

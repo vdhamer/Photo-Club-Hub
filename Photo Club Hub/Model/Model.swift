@@ -16,6 +16,9 @@ public struct Model {
         // order is important to avoid problems with referential integrity
         deleteCoreDataExpertisesAndLanguages(viewContext: viewContext) // performs its own save()
         deleteCoreDataPhotographersClubs(viewContext: viewContext) // performs its own save()
+        if #available(iOS 18, *) {
+            Level1JsonReader.level1History.clear()
+        }
     }
 
     /// Deletes all Core Data objects related to expertises and languages.
