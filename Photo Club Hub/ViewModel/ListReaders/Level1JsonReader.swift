@@ -45,9 +45,15 @@ public class Level1JsonReader {
         let fileName = fileSelector.fileName
         if #available(iOS 18, *) {
             // If we've already visited `filename`, avoid loading it twice. For performance and against infinite loops.
-            // There is no safety net when running iOS 17: hopefully any infinite loops get fixed by others complaining.
+            // Under iOS 18, 26 and beyond use Level1History which uses Mutex - introduced in iOS 18.
             if Level1JsonReader.level1History.isVisited(fileName: fileName) {
-                ifDebugFatalError("Infinite or merging Include loop: \(includeFilePath)")
+                ifDebugFatalError("Infinite loop or duplicate file in Include tree: \(includeFilePath)")
+                return
+            }
+        } else {
+            // Under iOS 17 limit the nesting depth of includeFilePath to prevent executing infinite loops.
+            if includeFilePath.count >= 10 {
+                ifDebugFatalError("Excessive branch depth in Include tree: \(includeFilePath)")
                 return
             }
         }
