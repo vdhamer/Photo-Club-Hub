@@ -3,6 +3,8 @@
         "level1URL": "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/museums.level1.json",
         "level1URLIncludes": [
             "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/museumsAU.level1.json",
+            "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/museumsDE.level1.json",
+            "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/museumsJP.level1.json",
             "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/museumsNL.level1.json",
             "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/museumsUS.level1.json"
         ],
@@ -32,36 +34,6 @@
                     {
                         "language": "NL",
                         "value": "Dit museum in een voormalig pakhuis omvat onder andere het Agfa-Gevaert camera archief."
-                    }
-                ]
-            }
-        },
-
-        {
-            "idPlus": {
-                "town": "Berlin",
-                "fullName": "Museum für Fotografie",
-                "nickName": "MfürF Berlin"
-            },
-            "coordinates": {
-                "latitude": 52.507778,
-                "longitude": 13.331667
-            },
-            "optional": {
-                "website": "https://www.smb.museum/museen-einrichtungen/museum-fuer-fotografie/home/",
-                "wikipedia": "https://en.wikipedia.org/wiki/Museum_of_Photography,_Berlin",
-                "remark": [
-                    {
-                        "language": "DE",
-                        "value": "Das Museum beinhaltet den fotografischen Nachlas von Helmut Newton."
-                    },
-                    {
-                        "language": "EN",
-                        "value": "The museum houses the Helmut Newton Foundation."
-                    },
-                    {
-                        "language": "NL",
-                        "value": "Het museum beheert de fotografische nalatenschap van Helmut Newton."
                     }
                 ]
             }
@@ -331,32 +303,6 @@
         
         {
             "idPlus": {
-                "town": "Sakata",
-                "fullName": "Ken Domon Museum of Photography",
-                "nickName": "土門拳記念館"
-            },
-            "coordinates": {
-                "latitude": 38.891299,
-                "longitude": 139.823716
-            },
-            "optional": {
-                "website": "http://www.domonken-kinenkan.jp/",
-                "wikipedia": "https://en.wikipedia.org/wiki/Ken_Domon_Museum_of_Photography",
-                "remark": [
-                    {
-                        "language": "EN",
-                        "value": "The museum is named after the Japanese photographer Ken Domon who was born in Sakata, Japan."
-                    },
-                    {
-                        "language": "NL",
-                        "value": "Het museum draagt de naam van de Japanese fotograaf Ken Domon, die in Sakata, Japan geboren is."
-                    }
-                ]
-            }
-        },
-
-        {
-            "idPlus": {
                 "town": "Seoul",
                 "fullName": "Photography Seoul Museum of Art",
                 "nickName": "PhotoSeMA"
@@ -432,32 +378,6 @@
                 ]
             }
         },
-
-        {
-            "idPlus": {
-                "town": "Tokyo",
-                "fullName": "Tokyo Museum of Photography",
-                "nickName": "TOP Tokyo"
-            },
-            "coordinates": {
-                "latitude": 35.6417,
-                "longitude": 139.7132
-            },
-            "optional": {
-                "website": "http://topmuseum.jp/e/contents/index.html",
-                "wikipedia": "https://en.wikipedia.org/wiki/Tokyo_Photographic_Art_Museum",
-                "remark": [
-                    {
-                        "language": "EN",
-                        "value": "The museum is formally located in Meguro, on the outskirts of Tokyo."
-                    },
-                    {
-                        "language": "NL",
-                        "value": "Strikt genomen valt het museum onder Meguro, een randgemeente van Tokyo."
-                    }
-                ]
-            }
-        },
         
         {
             "idPlus": {
@@ -480,32 +400,6 @@
                     {
                         "language": "NL",
                         "value": "Het National Geographic Museum is (begin 2024) dicht wegens een renovatie."
-                    }
-                ]
-            }
-        },
-        
-        {
-            "idPlus": {
-                "town": "Wetzlar",
-                "fullName": "Ernst Leitz Museum",
-                "nickName": "LeicaMuseum"
-            },
-            "coordinates": {
-                "latitude": 50.55230,
-                "longitude": 8.53335
-            },
-            "optional": {
-                "website": "https://leicawelt.com/en/experiences/ernst-leitz-museum",
-                "wikipedia": "https://de.wikipedia.org/wiki/Leica-Welt",
-                "remark": [
-                    {
-                        "language": "EN",
-                        "value": "This corporate museum showcases Leitz cameras and images make with Leicas. There are more Leitz buildings on site."
-                    },
-                    {
-                        "language": "NL",
-                        "value": "Dit museum, bij het hoofdkwartier van Leitz, gaat over Leitz camera's en de bekende Leitz fotografen."
                     }
                 ]
             }
