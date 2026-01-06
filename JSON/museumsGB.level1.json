@@ -1,0 +1,63 @@
+{
+    "level1Header": {
+        "level1URL": "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/museumsGB.level1.json",
+        "level1URLIncludes": [ ],
+        "maintainerEmail": "vdhamer@msn.com"
+    },
+    
+    "museums": [
+
+        {
+            "idPlus": {
+                "town": "London",
+                "fullName": "The Photographers’ Gallery",
+                "nickName": "TPG London"
+            },
+            "coordinates": {
+                "latitude": 51.5148,
+                "longitude": -0.1389
+            },
+            "optional": {
+                "website": "http://thephotographersgallery.org.uk/",
+                "wikipedia": "https://en.wikipedia.org/wiki/The_Photographers%27_Gallery",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "The gallery has three exhibition spaces and a commercial gallery where photo prints are sold."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "De Gallery heeft drie expositieruimtes, plus een commerciële ruimte waar afdrukken te koop zijn."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "London",
+                "fullName": "The Victoria & Albert Museum",
+                "nickName": "V&A London"
+            },
+            "coordinates": {
+                "latitude": 51.496389,
+                "longitude": -0.171944
+            },
+            "optional": {
+                "website": "https://www.vam.ac.uk/info/photography-centre",
+                "wikipedia": "https://en.wikipedia.org/wiki/Victoria_and_Albert_Museum",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "The museum describes its Photography Centre as 'the largest space in the UK dedicated to a permanent photography collection'."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Het Photography Center van het museum is de grootste permanente expositieruimte voor fotografie in het Verenigd Koninkrijk."
+                    }
+                ]
+            }
+        }
+
+    ]
+}
