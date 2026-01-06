@@ -12,6 +12,7 @@
 		3723DAE92F008E25006E2BB4 /* root_.level1.json in Resources */ = {isa = PBXBuildFile; fileRef = 3723DAE82F008E25006E2BB4 /* root_.level1.json */; };
 		3723DAEC2F008F2F006E2BB4 /* whiteboard.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3723DAEB2F008F1E006E2BB4 /* whiteboard.txt */; };
 		373EE0D12EED808700F311BE /* FotobondNumbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373EE0D02EED808700F311BE /* FotobondNumbers.swift */; };
+		3768E6622F0D2BDC00E12F6F /* Level1JsonReader+Include.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3768E6612F0D2BDC00E12F6F /* Level1JsonReader+Include.swift */; };
 		376D14F82E6DE60900A1403B /* PreludeView2626.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376D14F72E6DE60900A1403B /* PreludeView2626.swift */; };
 		376D14FA2E6DE83A00A1403B /* DebugPanel2626.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376D14F92E6DE83A00A1403B /* DebugPanel2626.swift */; };
 		376DC9522EC3A98900FB429B /* PreludeImageStore2626.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376DC9512EC3A98900FB429B /* PreludeImageStore2626.swift */; };
@@ -168,6 +169,7 @@
 		37545CA32EBFB37300C75485 /* Photo_Club_Hub_2_8_7.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_8_7.xcdatamodel; sourceTree = "<group>"; };
 		375CC66B2EE0A10300B618DB /* hierarchyDemo.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = hierarchyDemo.level1.json; sourceTree = "<group>"; };
 		3764D5E32EDDB0D9005A2539 /* FotoclubHubIntro_NL_20251129.pptx */ = {isa = PBXFileReference; lastKnownFileType = file; path = FotoclubHubIntro_NL_20251129.pptx; sourceTree = "<group>"; };
+		3768E6612F0D2BDC00E12F6F /* Level1JsonReader+Include.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Level1JsonReader+Include.swift"; sourceTree = "<group>"; };
 		376D14F72E6DE60900A1403B /* PreludeView2626.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreludeView2626.swift; sourceTree = "<group>"; };
 		376D14F92E6DE83A00A1403B /* DebugPanel2626.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugPanel2626.swift; sourceTree = "<group>"; };
 		376DC9512EC3A98900FB429B /* PreludeImageStore2626.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreludeImageStore2626.swift; sourceTree = "<group>"; };
@@ -719,6 +721,7 @@
 				D0273F602DEE555C00C4F5E1 /* FileSelector.swift */,
 				D0F4FAA92D82275100FFAEAE /* Level0JsonReader.swift */,
 				D0EAEB322B3CA6D300EC05B6 /* Level1JsonReader.swift */,
+				3768E6612F0D2BDC00E12F6F /* Level1JsonReader+Include.swift */,
 				D05124842C42BE2D00D94B81 /* Level2JsonReader.swift */,
 				37B1A3EA2F0A8C4500854FBD /* Level2JsonReaders+Helpers.swift */,
 			);
@@ -1138,6 +1141,7 @@
 				D0273E6D2DEE484C00C4F5E1 /* FotoclubEricameraMembersProvider.swift in Sources */,
 				D06BE9332A4F870B0055B3B1 /* ifDebugUtils.swift in Sources */,
 				D0831A38277F72590049AB84 /* Organization+ComputedProperties.swift in Sources */,
+				3768E6622F0D2BDC00E12F6F /* Level1JsonReader+Include.swift in Sources */,
 				37E134B22E6F693E00C61714 /* OrganizationListView1718.swift in Sources */,
 				373EE0D12EED808700F311BE /* FotobondNumbers.swift in Sources */,
 				37C014482EDA581F003B3901 /* FileOrganization+FindCreateUpdate.swift in Sources */,
