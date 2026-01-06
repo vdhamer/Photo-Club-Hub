@@ -13,6 +13,7 @@
 		3723DAEC2F008F2F006E2BB4 /* whiteboard.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3723DAEB2F008F1E006E2BB4 /* whiteboard.txt */; };
 		373EE0D12EED808700F311BE /* FotobondNumbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373EE0D02EED808700F311BE /* FotobondNumbers.swift */; };
 		3768E6622F0D2BDC00E12F6F /* Level1JsonReader+Include.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3768E6612F0D2BDC00E12F6F /* Level1JsonReader+Include.swift */; };
+		3768E6B42F0DBB9B00E12F6F /* museumsAU.level1.json in Resources */ = {isa = PBXBuildFile; fileRef = 3768E6B32F0DBB9B00E12F6F /* museumsAU.level1.json */; };
 		376D14F82E6DE60900A1403B /* PreludeView2626.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376D14F72E6DE60900A1403B /* PreludeView2626.swift */; };
 		376D14FA2E6DE83A00A1403B /* DebugPanel2626.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376D14F92E6DE83A00A1403B /* DebugPanel2626.swift */; };
 		376DC9522EC3A98900FB429B /* PreludeImageStore2626.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376DC9512EC3A98900FB429B /* PreludeImageStore2626.swift */; };
@@ -170,6 +171,7 @@
 		375CC66B2EE0A10300B618DB /* hierarchyDemo.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = hierarchyDemo.level1.json; sourceTree = "<group>"; };
 		3764D5E32EDDB0D9005A2539 /* FotoclubHubIntro_NL_20251129.pptx */ = {isa = PBXFileReference; lastKnownFileType = file; path = FotoclubHubIntro_NL_20251129.pptx; sourceTree = "<group>"; };
 		3768E6612F0D2BDC00E12F6F /* Level1JsonReader+Include.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Level1JsonReader+Include.swift"; sourceTree = "<group>"; };
+		3768E6B32F0DBB9B00E12F6F /* museumsAU.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = museumsAU.level1.json; sourceTree = "<group>"; };
 		376D14F72E6DE60900A1403B /* PreludeView2626.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreludeView2626.swift; sourceTree = "<group>"; };
 		376D14F92E6DE83A00A1403B /* DebugPanel2626.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugPanel2626.swift; sourceTree = "<group>"; };
 		376DC9512EC3A98900FB429B /* PreludeImageStore2626.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreludeImageStore2626.swift; sourceTree = "<group>"; };
@@ -862,6 +864,7 @@
 				D0FD28B92D8CDFD3002B5C38 /* language.level0.json */,
 				D0FD28BA2D8CDFD3002B5C38 /* languages.level0.json */,
 				37DA3E0E2F06B40A00AB7993 /* museums.level1.json */,
+				3768E6B32F0DBB9B00E12F6F /* museumsAU.level1.json */,
 				37DA3E102F06B62600AB7993 /* museumsNL.level1.json */,
 				37B1A4682F0B18A700854FBD /* museumsUS.level1.json */,
 				D0DD2B7A2EF89BCF002210DA /* Persoonlijk03.level2.json */,
@@ -1024,6 +1027,7 @@
 				D06D08DE2C28835D00872BC2 /* Settings.bundle in Resources */,
 				37CAF2C92EEC398600BB1D36 /* IndividueelBO.level2.json in Resources */,
 				3723DAE92F008E25006E2BB4 /* root_.level1.json in Resources */,
+				3768E6B42F0DBB9B00E12F6F /* museumsAU.level1.json in Resources */,
 				D04856362D46A45D00022117 /* PhotoClubHub.SwiftUI.xcstrings in Resources */,
 				3705AFC62E7381D10067CE6B /* fkGestel.level2.json in Resources */,
 				D0FD28BB2D8CDFD3002B5C38 /* languages.level0.json in Resources */,

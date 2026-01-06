@@ -2,6 +2,7 @@
     "level1Header": {
         "level1URL": "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/museums.level1.json",
         "level1URLIncludes": [
+            "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/museumsAU.level1.json",
             "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/museumsNL.level1.json",
             "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/museumsUS.level1.json"
         ],
@@ -31,32 +32,6 @@
                     {
                         "language": "NL",
                         "value": "Dit museum in een voormalig pakhuis omvat onder andere het Agfa-Gevaert camera archief."
-                    }
-                ]
-            }
-        },
-        
-        {
-            "idPlus": {
-                "town": "Ballarat",
-                "fullName": "National Centre for Photography",
-                "nickName": "NCfP Au"
-            },
-            "coordinates": {
-                "latitude": -37.5624,
-                "longitude": 143.8574
-            },
-            "optional": {
-                "website": "https://ballaratfoto.org",
-                "wikipedia": "https://en.wikipedia.org/wiki/National_Centre_for_Photography",
-                "remark": [
-                    {
-                        "language": "EN",
-                        "value": "The museum is associated with the Ballarat International Foto Biennale festival. The building may not be finished yet."
-                    },
-                    {
-                        "language": "NL",
-                        "value": "Het museum is verbonden met het twee-jaarlijkse Ballarat fotofestival. Er is (was?) een grote verbouwing gaande."
                     }
                 ]
             }
@@ -278,32 +253,6 @@
 
         {
             "idPlus": {
-                "town": "Melbourne",
-                "fullName": "Centre for Contemporary Photography",
-                "nickName": "CCP Melbourne"
-            },
-            "coordinates": {
-                "latitude": -37.797222,
-                "longitude": 144.9825
-            },
-            "optional": {
-                "website": "http://ccp.org.au/",
-                "wikipedia": "https://en.wikipedia.org/wiki/Centre_for_Contemporary_Photography",
-                "remark": [
-                    {
-                        "language": "EN",
-                        "value": "The town Fitzroy is part of Melbourne, Australia."
-                    },
-                    {
-                        "language": "NL",
-                        "value": "Fitzroy is een voorstad van Melbourne, Australië."
-                    }
-                ]
-            }
-        },
-
-        {
-            "idPlus": {
                 "town": "Ottawa",
                 "fullName": "Canadian Photography Institute",
                 "nickName": "CPI"
@@ -427,32 +376,6 @@
                     {
                         "language": "NL",
                         "value": "Het museum is nieuw (Mei 2025) en is volledig gewijdt aan fotografie als kunstvorm."
-                    }
-                ]
-            }
-        },
-
-        {
-            "idPlus": {
-                "town": "Sidney",
-                "fullName": "Australian Centre for Photography",
-                "nickName": "ACP Sidney"
-            },
-            "coordinates": {
-                "latitude": -33.8788,
-                "longitude": 151.21502
-            },
-            "optional": {
-                "website": "https://acp.org.au/",
-                "wikipedia": "https://en.wikipedia.org/wiki/Australian_Centre_for_Photography",
-                "remark": [
-                    {
-                        "language": "EN",
-                        "value": "After financial issues in 2020, the museum is now part of Powerhouse, a museum group in Australia."
-                    },
-                    {
-                        "language": "NL",
-                        "value": "Na financiële problemen in 2020, is het ACP inmiddels als Powerhouse Photography opgenomen in een Australische Powerhouse museumcollectief."
                     }
                 ]
             }
