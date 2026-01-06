@@ -16,7 +16,8 @@ public class Level2JsonReader { // normally running on a background thread
     public init(bgContext: NSManagedObjectContext,
                 organizationIdPlus: OrganizationIdPlus,
                 isBeingTested: Bool,
-                useOnlyInBundleFile: Bool = false // true avoids fetching the latest version from GitHub
+                useOnlyInBundleFile: Bool = false, // true avoids fetching the latest version from GitHub
+                includeFilePath: [String] = [] // captures recursion path like ["root","museums","museumsNL"]
                ) {
         _ = FetchAndProcessFile( // FetchAndProcessFile fetches jsonData and passes it to readRootLevel2Json()
                                 bgContext: bgContext,
@@ -26,6 +27,7 @@ public class Level2JsonReader { // normally running on a background thread
                                 fileSubType: "level2", // "fgDeGender.level2.json"
                                 useOnlyInBundleFile: useOnlyInBundleFile,
                                 isBeingTested: isBeingTested,
+                                includeFilePath: includeFilePath,
                                 fileContentProcessor: Level2JsonReader.readRootLevel2Json
         )
     }
@@ -34,7 +36,8 @@ public class Level2JsonReader { // normally running on a background thread
                                                      jsonData: String,
                                                      fileSelector: FileSelector,
                                                      useOnlyInBundleFile: Bool,
-                                                     isBeingTested: Bool) {
+                                                     isBeingTested: Bool,
+                                                     includeFilePath: [String]) {
 
         guard fileSelector.organizationIdPlus != nil else { // need expected id of a club
             fatalError("Missing `targetIdorganizationIdPlus` in readRootLevel2Json()")

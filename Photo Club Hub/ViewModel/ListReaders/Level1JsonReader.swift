@@ -20,13 +20,17 @@ public class Level1JsonReader {
     public init(bgContext: NSManagedObjectContext,
                 fileName: String = "root",  // can overrule the name for unit testing
                 isBeingTested: Bool,
-                useOnlyInBundleFile: Bool = false // true can be used to avoid publishing a test file to GitHub
+                useOnlyInBundleFile: Bool, // true can be used to avoid publishing a test file to GitHub
+                includeFilePath: [String] = [] // captures recursion path like ["root","museums","museumsNL"]
                ) {
+        var extendedIncludeFilePath: [String] = includeFilePath // copy because parameter itself is `let`
+        extendedIncludeFilePath.append(fileName) // extend with extra name
         _ = FetchAndProcessFile(bgContext: bgContext,
                                 fileSelector: FileSelector(fileName: fileName, isBeingTested: isBeingTested),
                                 fileType: "json", fileSubType: "level1", // "root.level1.json"
                                 useOnlyInBundleFile: useOnlyInBundleFile,
                                 isBeingTested: isBeingTested,
+                                includeFilePath: extendedIncludeFilePath,
                                 fileContentProcessor: Level1JsonReader.readRootLevel1Json
         )
     }
@@ -35,13 +39,17 @@ public class Level1JsonReader {
                                                      jsonData: String,
                                                      fileSelector: FileSelector,
                                                      useOnlyInBundleFile: Bool,
-                                                     isBeingTested: Bool = false) {
+                                                     isBeingTested: Bool = false,
+                                                     includeFilePath: [String]) {
 
         let fileName = fileSelector.fileName
         if #available(iOS 18, *) {
             // If we've already visited `filename`, avoid loading it twice. For performance and against infinite loops.
             // There is no safety net when running iOS 17: hopefully any infinite loops get fixed by others complaining.
-            if Level1JsonReader.level1History.isVisited(fileName: fileName) { return }
+            if Level1JsonReader.level1History.isVisited(fileName: fileName) {
+                ifDebugFatalError("Infinite or merging Include loop: \(includeFilePath)")
+                return
+            }
         }
         ifDebugPrint("\nWill read \(fileName).level1.json with a list of organizations in the background.")
 
@@ -50,7 +58,8 @@ public class Level1JsonReader {
 
         triggerProcessingOfLevel1URLIncludes(from: jsonRoot,
                                              isBeingTested: isBeingTested,
-                                             useOnlyInBundleFile: useOnlyInBundleFile)
+                                             useOnlyInBundleFile: useOnlyInBundleFile,
+                                             includeFilePath: includeFilePath)
 
         // extract the `organizationTypes` in `organizationTypeEnumsToLoad` one-by-one from `jsonRoot`
         for organizationTypeEnum in organizationTypesToLoad {
@@ -137,7 +146,8 @@ extension Level1JsonReader {
     @Sendable static private func triggerProcessingOfLevel1URLIncludes(
         from jsonRoot: JSON,
         isBeingTested: Bool,
-        useOnlyInBundleFile: Bool
+        useOnlyInBundleFile: Bool,
+        includeFilePath: [String]
     ) {
         let includeJSONs: [JSON] = jsonRoot["level1Header"]["level1URLIncludes"].arrayValue
         for includeJSON in includeJSONs {
@@ -173,7 +183,8 @@ extension Level1JsonReader {
                 bgContext: bgContext,
                 fileName: includeName,
                 isBeingTested: isBeingTested,
-                useOnlyInBundleFile: useOnlyInBundleFile)
+                useOnlyInBundleFile: useOnlyInBundleFile,
+                includeFilePath: includeFilePath)
         }
     }
 
