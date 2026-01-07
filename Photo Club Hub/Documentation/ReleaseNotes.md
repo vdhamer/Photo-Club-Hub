@@ -1,7 +1,6 @@
 ### 2.9.0 (GitHub commit ???????) ??-01-226
 
-* TODO: hierarchical Level 1 files.
-* TODO: add an extra expertise for Jan 2026 (Studio? Mobile?)
+* TODO: add an extra expertise for Jan 2026 (Mobile?)
 
 PORTFOLIOS SCREEN
 
@@ -22,6 +21,7 @@ PREFERENCES SCREEN
 
 DATA MAINTENANCE
 
+* Level 1 files containing clubs and museums can now "include" (via a URL) other Level 1 files.
 * Shortened "Persoonlijke Leden Afdeling Drenthe - Vechtdal" to "Persoonlijke Leden Drenthe - Vechtdal"
 * Moved clubs and museums from the root.level1.json file into 6 shorter "include" level1.json files
 * Renamed Organization.contactEmail to Organization.maintainerEmail (in both database and JSON formats)
