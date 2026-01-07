@@ -1,6 +1,5 @@
 ### 2.9.0 (GitHub commit ???????) ??-01-226
 
-* TODO: add an extra expertise for Jan 2026 (Mobile?).
 * TODO: add toggle in Preferences for displaying museums in Clubs and Museums screen.
 * TODO: add toggle in Preferences for displaying clubs in Clubs and Museums screen.
 
