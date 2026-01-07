@@ -198,6 +198,20 @@
         },
 
         {
+            "idString": "Mobile",
+            "name": [
+                { "language": "EN", "localizedString": "Mobile" },
+                { "language": "NL", "localizedString": "Mobiel" }
+            ],
+            "optional": {
+                "usage":  [
+                    { "language": "EN", "localizedString": "Photography with smartphones and similar devices." },
+                    { "language": "NL", "localizedString": "Fotografie met mobieltjes en vergelijkbare apparaten." }
+                 ]
+            }
+        },
+
+        {
             "idString": "Multiple-exposure",
             "name": [
                 { "language": "EN", "localizedString": "Multiple exposure" },

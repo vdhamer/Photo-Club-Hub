@@ -23,10 +23,11 @@ PREFERENCES SCREEN
 
 DATA MAINTENANCE
 
-* Level 1 files containing clubs and museums can now "include" (via a URL) other Level 1 files.
-* Shortened "Persoonlijke Leden Afdeling Drenthe - Vechtdal" to "Persoonlijke Leden Drenthe - Vechtdal".
-* Moved clubs and museums from the root.level1.json file into 6 shorter "include" level1.json files.
+* Level 1 files containing clubs and museums can now "include" a link/URL to other Level 1 files.
+* Moved clubs and museums from the root.level1.json file into a dozen shorter "include" level1.json files.
+* Added "Mobile" as a supported expertise for Jan 2026. It replaced temporary expertise "iPhone" (used once).
 * Renamed Organization.contactEmail to Organization.maintainerEmail (in both database and JSON formats).
+* Shortened "Persoonlijke Leden Afdeling Drenthe - Vechtdal" to "Persoonlijke Leden Drenthe - Vechtdal".
 
 CODE MAINTENANCE
 
