@@ -1,45 +1,47 @@
 ### 2.9.0 (GitHub commit ???????) ??-01-226
 
-* TODO: add an extra expertise for Jan 2026 (Mobile?)
+* TODO: add an extra expertise for Jan 2026 (Mobile?).
+* TODO: add toggle in Preferences for displaying museums in Clubs and Museums screen.
+* TODO: add toggle in Preferences for displaying clubs in Clubs and Museums screen.
 
 PORTFOLIOS SCREEN
 
-* Minimize size of search bar on Portfolios when not in use
+* Minimize size of search bar on Portfolios when not searching.
 
 CLUBS AND MUSEUMS SCREEN
 
-* Minimize size of search bar on Clubs & Museums screen when not in use
+* Minimize size of search bar on Clubs & Museums screen when not searching.
 
 WHO'S WHO SCREEN
 
-* Minimize size of search bar on Who's Who screen when not in use
+* Minimize size of search bar on Who's Who screen when not searching.
 
 PREFERENCES SCREEN
 
-* Added "Show test clubs" toggle (replaces a toggle in iOS Settings "Load test clubs")
-* Changed section headers (minor)
+* Added "Show test clubs" toggle (replaces a toggle in iOS Settings "Load test clubs").
+* Changed section headers (minor).
 
 DATA MAINTENANCE
 
 * Level 1 files containing clubs and museums can now "include" (via a URL) other Level 1 files.
-* Shortened "Persoonlijke Leden Afdeling Drenthe - Vechtdal" to "Persoonlijke Leden Drenthe - Vechtdal"
-* Moved clubs and museums from the root.level1.json file into 6 shorter "include" level1.json files
-* Renamed Organization.contactEmail to Organization.maintainerEmail (in both database and JSON formats)
+* Shortened "Persoonlijke Leden Afdeling Drenthe - Vechtdal" to "Persoonlijke Leden Drenthe - Vechtdal".
+* Moved clubs and museums from the root.level1.json file into 6 shorter "include" level1.json files.
+* Renamed Organization.contactEmail to Organization.maintainerEmail (in both database and JSON formats).
 
 CODE MAINTENANCE
 
-* Tested with SwiftLint 0.63
+* Tested with SwiftLint 0.63.
 
 PERFORMANCE
 
-* Faster loading of fgWaalre (club is special because it is a mix of two types of portfolios)
+* Faster loading of fgWaalre (that club is special because it is still a mix of two types of portfolios).
 
 DOCUMENTATION
 
-* Updated data schema image in GitHub README.md
-* Updated Level2_aanmaken_NL.md
+* Updated data schema image in GitHub README.md.
+* Updated Level2_aanmaken_NL.md.
 
-This build #4655 was made using Xcode 26.2.
+This build #4655 was made using Xcode 26.2 but is for testers only.
 
 ---------------------------------------------------------------------------
 
