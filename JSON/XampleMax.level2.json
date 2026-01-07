@@ -24,7 +24,7 @@
                         "value": "Deze beschrijving van de club overschrijft een beschrijving in root.level1.json."
                     }
                 ],
-                "contactEmail": "admin@xamplemax.nl",
+                "maintainerEmail": "admin@xamplemax.nl",
                 "nlSpecific": {
                     "fotobondNumber": 9999
                 }

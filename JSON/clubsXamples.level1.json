@@ -46,7 +46,7 @@
                         "value": "A remark here about the club can be overruled by a remark in club's level2.json file."
                     }
                 ],
-                "contactEmail": "admin@xamplemax.nl",
+                "maintainerEmail": "admin@xamplemax.nl",
                 "nlSpecific": {
                     "fotobondNumber": 9999
                 }

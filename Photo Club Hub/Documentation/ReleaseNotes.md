@@ -24,6 +24,7 @@ DATA MAINTENANCE
 
 * Shortened "Persoonlijke Leden Afdeling Drenthe - Vechtdal" to "Persoonlijke Leden Drenthe - Vechtdal"
 * Moved clubs and museums from the root.level1.json file into 6 shorter "include" level1.json files
+* Renamed Organization.contactEmail to Organization.maintainerEmail (in both database and JSON formats)
 
 CODE MAINTENANCE
 

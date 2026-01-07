@@ -15,20 +15,20 @@ public struct OrganizationOptionalFields {
     var wikipedia: URL?
     var level2URL: URL?
     var fotobondClubNumber: FotobondClubNumber?
-    var contactEmail: String?
+    var maintainerEmail: String?
     var localizedRemarks: [JSON] // defaults to an empty array instead of to nil
 
     public init(organizationWebsite: URL? = nil,
                 level2URL: URL? = nil,
                 wikipedia: URL? = nil,
                 fotobondClubNumber: FotobondClubNumber? = nil,
-                contactEmail: String? = nil,
+                maintainerEmail: String? = nil,
                 localizedRemarks: [JSON] = []) {
         self.organizationWebsite = organizationWebsite
         self.level2URL = level2URL
         self.wikipedia = wikipedia
         self.fotobondClubNumber = fotobondClubNumber
-        self.contactEmail = contactEmail
+        self.maintainerEmail = maintainerEmail
         self.localizedRemarks = localizedRemarks
     }
 }

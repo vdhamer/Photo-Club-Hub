@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="24512" systemVersion="25B78" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="24512" systemVersion="25C56" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Expertise" representedClassName="Expertise" elementID="Keyword" syncable="YES" codeGenerationType="class">
         <attribute name="id_" attributeType="String" defaultValueString="ID is missing"/>
         <attribute name="isSupported" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
@@ -80,7 +80,6 @@
         </uniquenessConstraints>
     </entity>
     <entity name="Organization" representedClassName="Organization" elementID="PhotoClub" syncable="YES" codeGenerationType="class">
-        <attribute name="contactEmail_" optional="YES" attributeType="String" elementID="contactEmail"/>
         <attribute name="fotobondClubNumber_" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" elementID="fotobondNumber"/>
         <attribute name="fullName_" attributeType="String" defaultValueString="DefaultPhotoClubName" elementID="name_"/>
         <attribute name="isMapScrollLocked" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES" elementID="isScrollLocked"/>
@@ -89,6 +88,7 @@
         <attribute name="localizedCountry_" attributeType="String" defaultValueString="Country?"/>
         <attribute name="localizedTown_" attributeType="String" defaultValueString="Town?"/>
         <attribute name="longitude_" optional="YES" attributeType="Double" usesScalarValueType="YES"/>
+        <attribute name="maintainerEmail_" optional="YES" attributeType="String" elementID="contactEmail"/>
         <attribute name="nickName_" optional="YES" attributeType="String" elementID="shortName_"/>
         <attribute name="organizationWebsite" optional="YES" attributeType="URI" elementID="photoClubWebsite"/>
         <attribute name="pinned" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>

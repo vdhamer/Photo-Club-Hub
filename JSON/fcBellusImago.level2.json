@@ -9,7 +9,7 @@
     "optional": {
       "website": "https://www.fotoclubbellusimago.nl",
       "level2URL": "https://www.example.com/fcBellusImago.level2.json",
-      "contactEmail": "fotoclubbellusimago@gmail.com",
+      "maintainerEmail": "fotoclubbellusimago@gmail.com",
       "nlSpecific": {"fotobondNumber": 1671}
     }
   },

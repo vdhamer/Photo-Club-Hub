@@ -95,19 +95,19 @@ extension Organization {
         set { nickName_ = newValue }
     }
 
-    public var contactEmail: String? {
+    public var maintainerEmail: String? {
         get { // https://softwareengineering.stackexchange.com/questions/32578/sql-empty-string-vs-null-value
-            if contactEmail_ == "" || contactEmail_ == nil {
+            if maintainerEmail_ == "" || maintainerEmail_ == nil {
                 return nil
             } else {
-                return contactEmail_!
+                return maintainerEmail_!
             }
         }
         set {
             if newValue == "" {
-                contactEmail_ = nil
+                maintainerEmail_ = nil
             } else {
-                contactEmail_ = newValue
+                maintainerEmail_ = newValue
             }
         }
     }

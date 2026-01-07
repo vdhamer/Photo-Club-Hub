@@ -117,7 +117,7 @@ public class Level1JsonReader {
         let wikipedia = URL(string: jsonOrganizationOptionals["wikipedia"].stringValue)
         let fotobondClubNumberID: Int16? = jsonOrganizationOptionals["nlSpecific"]["fotobondNumber"].exists() ?
             jsonOrganizationOptionals["nlSpecific"]["fotobondNumber"].int16Value : nil
-        let contactEmail = jsonOrganizationOptionals["contactEmail"].stringValue
+        let maintainerEmail = jsonOrganizationOptionals["maintainerEmail"].stringValue
         let localizedRemarks = jsonOrganizationOptionals["remark"].arrayValue
         _ = Organization.findCreateUpdate(context: bgContext,
                                           organizationTypeEnum: organizationTypeEnum,
@@ -128,7 +128,7 @@ public class Level1JsonReader {
                                               level2URL: level2URL,
                                               wikipedia: wikipedia,
                                               fotobondClubNumber: FotobondClubNumber(id: fotobondClubNumberID),
-                                              contactEmail: contactEmail,
+                                              maintainerEmail: maintainerEmail,
                                               localizedRemarks: localizedRemarks)
                                           )
     }

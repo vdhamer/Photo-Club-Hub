@@ -119,8 +119,8 @@ extension Organization {
             self.wikipedia = wikiURL
             modified = true }
 
-        if let contactEmail = optionalFields.contactEmail, self.contactEmail != contactEmail {
-            self.contactEmail = contactEmail
+        if let maintainerEmail = optionalFields.maintainerEmail, self.maintainerEmail != maintainerEmail {
+            self.maintainerEmail = maintainerEmail
             modified = true }
 
         if let fotobondClubNumber = optionalFields.fotobondClubNumber, self.fotobondClubNumber != fotobondClubNumber {

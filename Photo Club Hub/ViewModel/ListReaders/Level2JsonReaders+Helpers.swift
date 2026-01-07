@@ -65,8 +65,8 @@ extension Level2JsonReader {
         let wikipedia: URL? = Level2JsonReader.jsonOptionalsToURL(jsonOptionals: jsonOptionals, key: "wikipedia")
         // level2URL is deliberately ignoring to avoid possibility of overruling what is stated in Level 1 file
         let localizedRemarks: [JSON] = jsonOptionals["remark"].arrayValue // empty array if missing
-        let contactEmail: String? = jsonOptionals["contactEmail"].exists() ?
-            jsonOptionals["contactEmail"].stringValue : nil
+        let maintainerEmail: String? = jsonOptionals["maintainerEmail"].exists() ?
+            jsonOptionals["maintainerEmail"].stringValue : nil
         let fotobondClubNumberID: Int16? = jsonOptionals["nlSpecific"]["fotobondNumber"].exists() ? // FotobondNL clubid
             jsonOptionals["nlSpecific"]["fotobondNumber"].int16Value : nil
 
@@ -79,7 +79,7 @@ extension Level2JsonReader {
                                               organizationWebsite: clubWebsite,
                                               wikipedia: wikipedia,
                                               fotobondClubNumber: FotobondClubNumber(id: fotobondClubNumberID),
-                                              contactEmail: contactEmail,
+                                              maintainerEmail: maintainerEmail,
                                               localizedRemarks: localizedRemarks
                                               )
         )
