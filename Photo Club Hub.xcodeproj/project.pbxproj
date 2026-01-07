@@ -237,7 +237,6 @@
 		D02AB3EF28A702800021BF41 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		D02C35F12880C3D6008C671A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D02C5A9B2EAB80D400FE1EA7 /* Photo_Club_Hub_2_8_6.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_8_6.xcdatamodel; sourceTree = "<group>"; };
-		D02F19212EF99C8D00C09970 /* Photo_Club_Hub_2_8_9.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_8_9.xcdatamodel; sourceTree = "<group>"; };
 		D02F88522C4C242C0043B25B /* String+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Date.swift"; sourceTree = "<group>"; };
 		D0300D2A2E2D6BA500A11A03 /* Nieuwsbrief_Aug_2025_app.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Nieuwsbrief_Aug_2025_app.pdf; sourceTree = "<group>"; };
 		D030CD642B3AE2E800A12E90 /* OrganizationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationType.swift; sourceTree = "<group>"; };
@@ -1571,7 +1570,6 @@
 			isa = XCVersionGroup;
 			children = (
 				375A21DE2F0EC4AC00544042 /* Photo_Club_Hub_2_9_0.xcdatamodel */,
-				D02F19212EF99C8D00C09970 /* Photo_Club_Hub_2_8_9.xcdatamodel */,
 				D0A73A482ECA28290055DACD /* Photo_Club_Hub_2_8_8.xcdatamodel */,
 				37545CA32EBFB37300C75485 /* Photo_Club_Hub_2_8_7.xcdatamodel */,
 				D02C5A9B2EAB80D400FE1EA7 /* Photo_Club_Hub_2_8_6.xcdatamodel */,
