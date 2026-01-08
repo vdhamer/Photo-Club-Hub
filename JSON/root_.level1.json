@@ -4,8 +4,7 @@
         "level1URLIncludes": [
             "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/clubsNL.level1.json",
             "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/museums.level1.json",
-            "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/clubsXamples.level1.json",
-            "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/recursionA.level1.json"
+            "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/clubsXamples.level1.json"
         ],
         "maintainerEmail": "vdhamer@msn.com"
     }
