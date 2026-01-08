@@ -39,7 +39,7 @@ public class Level1JsonReader {
                                                      includeFilePath: [String]) {
 
         let fileName = fileSelector.fileName
-        if #available(iOS 18, *) {
+        if #available(iOS 18, macOS 15, *) {
             // If we've already visited `filename`, avoid loading it twice. For performance and against infinite loops.
             // Under iOS 18, 26 and beyond use Level1History which uses Mutex - introduced in iOS 18.
             if Level1JsonReader.level1History.isVisited(fileName: fileName) {

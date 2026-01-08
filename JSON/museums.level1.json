@@ -326,32 +326,6 @@
                     }
                 ]
             }
-        },
-        
-        {
-            "idPlus": {
-                "town": "Washington D.C.",
-                "fullName": "National Geographic Museum",
-                "nickName": "NatGeo Washington"
-            },
-            "coordinates": {
-                "latitude": 38.90503,
-                "longitude": -77.03817
-            },
-            "optional": {
-                "website": "https://www.nationalgeographic.org/society/visit-base-camp/",
-                "wikipedia": "https://en.wikipedia.org/wiki/National_Geographic_Society#National_Geographic_Museum",
-                "remark": [
-                    {
-                        "language": "EN",
-                        "value": "The National Geographic Museum is currently (early 2024) temporarily closed for renovation."
-                    },
-                    {
-                        "language": "NL",
-                        "value": "Het National Geographic Museum is (begin 2024) dicht wegens een renovatie."
-                    }
-                ]
-            }
         }
         
     ]
