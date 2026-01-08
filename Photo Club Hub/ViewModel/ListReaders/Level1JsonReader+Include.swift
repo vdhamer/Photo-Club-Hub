@@ -11,7 +11,7 @@ import Synchronization // for Mutex (only used on iOS 18 or above)
 
 extension Level1JsonReader {
 
-    @available(iOS 18, *)
+    @available(iOS 18, macOS 15, *)
     static let level1History = Level1History() // singleton to tack Level 1 loading across all Level 1 reader threads
 
     /// Loads any files listed in the `level1URLIncludes` array in the Header of a level1.json file.
@@ -69,7 +69,7 @@ extension Level1JsonReader {
 
 }
 
-@available(iOS 18, *)
+@available(iOS 18, macOS 15, *)
 final public class Level1History: Sendable {
 
     // https://www.avanderlee.com/concurrency/modern-swift-lock-mutex-the-synchronization-framework/

@@ -18,7 +18,8 @@
                     "value": "Persoonlijke leden van de Koninklijke Fotobond - Afdeling 16 Brabant Oost."
                 }
             ],
-            "nlSpecific": {"fotobondNumber": 1600}
+            "nlSpecific": {"fotobondNumber": 1600},
+            "maintainerEmail": "mariet@m3w.nl"
         }
     },
 
