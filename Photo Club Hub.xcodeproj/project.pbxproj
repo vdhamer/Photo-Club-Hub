@@ -27,6 +27,8 @@
 		37B1A43E2F0B0E8500854FBD /* recursionA.level1.json in Resources */ = {isa = PBXBuildFile; fileRef = 37B1A43C2F0B0E8500854FBD /* recursionA.level1.json */; };
 		37B1A43F2F0B0E8500854FBD /* recursionB.level1.json in Resources */ = {isa = PBXBuildFile; fileRef = 37B1A43D2F0B0E8500854FBD /* recursionB.level1.json */; };
 		37B1A4692F0B18BB00854FBD /* museumsUS.level1.json in Resources */ = {isa = PBXBuildFile; fileRef = 37B1A4682F0B18A700854FBD /* museumsUS.level1.json */; };
+		37B39FAD2F1119FE004AA5D8 /* FotoclubVeghelMembersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B39FAC2F1119FE004AA5D8 /* FotoclubVeghelMembersProvider.swift */; };
+		37B39FAF2F111B20004AA5D8 /* fcVeghel.level2.json in Resources */ = {isa = PBXBuildFile; fileRef = 37B39FAE2F111B20004AA5D8 /* fcVeghel.level2.json */; };
 		37C014442EDA564B003B3901 /* Organization+Count.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C014432EDA564B003B3901 /* Organization+Count.swift */; };
 		37C014462EDA575B003B3901 /* Organization+Comparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C014452EDA575B003B3901 /* Organization+Comparable.swift */; };
 		37C014482EDA581F003B3901 /* FileOrganization+FindCreateUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C014472EDA581F003B3901 /* FileOrganization+FindCreateUpdate.swift */; };
@@ -188,6 +190,8 @@
 		37B1A43C2F0B0E8500854FBD /* recursionA.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = recursionA.level1.json; sourceTree = "<group>"; };
 		37B1A43D2F0B0E8500854FBD /* recursionB.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = recursionB.level1.json; sourceTree = "<group>"; };
 		37B1A4682F0B18A700854FBD /* museumsUS.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = museumsUS.level1.json; sourceTree = "<group>"; };
+		37B39FAC2F1119FE004AA5D8 /* FotoclubVeghelMembersProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FotoclubVeghelMembersProvider.swift; sourceTree = "<group>"; };
+		37B39FAE2F111B20004AA5D8 /* fcVeghel.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fcVeghel.level2.json; sourceTree = "<group>"; };
 		37C014432EDA564B003B3901 /* Organization+Count.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Organization+Count.swift"; sourceTree = "<group>"; };
 		37C014452EDA575B003B3901 /* Organization+Comparable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Organization+Comparable.swift"; sourceTree = "<group>"; };
 		37C014472EDA581F003B3901 /* FileOrganization+FindCreateUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileOrganization+FindCreateUpdate.swift"; sourceTree = "<group>"; };
@@ -536,6 +540,7 @@
 				D0FB52902E1F28560025E9A8 /* Persoonlijk16MembersProvider.swift */,
 				D05417372D31DDE300A2A579 /* XampleMaxMembersProvider.swift */,
 				D072D5E42D333E7500EA88DD /* XampleMinMembersProvider.swift */,
+				37B39FAC2F1119FE004AA5D8 /* FotoclubVeghelMembersProvider.swift */,
 			);
 			path = IndividualClubs;
 			sourceTree = "<group>";
@@ -859,6 +864,7 @@
 				D0A615782D91B7A00024EC9E /* fcBellusImago.level2.json */,
 				D0F78AC92DFCCBFE00DE234D /* fcDenDungen.level2.json */,
 				D0273E482DEE42C800C4F5E1 /* fcEricamera.level2.json */,
+				37B39FAE2F111B20004AA5D8 /* fcVeghel.level2.json */,
 				D01238FE2DBF9B43000EAD8B /* fgDeGender_Trefwoorden.xlsx */,
 				D0F871882D403D1700530D10 /* fgDeGender.level2.json */,
 				D0F871892D403D1700530D10 /* fgDeGenderLeden.xlsx */,
@@ -1010,6 +1016,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				37DA3E512F06F96A00AB7993 /* clubsXamples.level1.json in Resources */,
+				37B39FAF2F111B20004AA5D8 /* fcVeghel.level2.json in Resources */,
 				378DF75B2F0406E8004E1207 /* clubsNL03.level1.json in Resources */,
 				37DA3E0F2F06B42600AB7993 /* museums.level1.json in Resources */,
 				D0ACCFD72DEFAD690002FACC /* XampleMax.level2.json in Resources */,
@@ -1215,6 +1222,7 @@
 				D08319E7277F70A30049AB84 /* PhotoClubHubApp.swift in Sources */,
 				D0BAB01D2A76CED300387E63 /* URLSession+synchronous.swift in Sources */,
 				D05124892C43122C00D94B81 /* UrlComponents.swift in Sources */,
+				37B39FAD2F1119FE004AA5D8 /* FotoclubVeghelMembersProvider.swift in Sources */,
 				D0D18C78296E1F6A00B334DB /* OrganizationIdPlus.swift in Sources */,
 				D0831A1E277F72270049AB84 /* PreferencesView2626.swift in Sources */,
 				D030CD652B3AE2E800A12E90 /* OrganizationType.swift in Sources */,

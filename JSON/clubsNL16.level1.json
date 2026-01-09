@@ -1747,17 +1747,18 @@
                 "level2URL": "https://www.example.com/fcVeghel.level2.json",
                 "remark": [
                     {
-                        "language": "EN",
-                        "value": "fcVeghel coordinates it yearly exposition with 3 other nearby clubs (fcSchijndel, Zoomm, fcRooi)."
-                    },
-                    {
                         "language": "NL",
                         "value": "Fotofestijn Meierijstad is een keten van 4 aansluitende exposities (van fcRooi, fcSchijndel, Zoomm, fcVeghel) die okt/nov gehouden worden."
+                    },
+                    {
+                        "language": "EN",
+                        "value": "fcVeghel coordinates it yearly exposition with 3 other nearby clubs (fcSchijndel, Zoomm, fcRooi)."
                     }
                 ],
                 "nlSpecific": {
                     "fotobondNumber": 1601
-                }
+                },
+                "maintainerEmail": "dick.mandemaker@live.nl"
             }
         },
 
