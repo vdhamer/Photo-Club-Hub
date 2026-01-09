@@ -149,5 +149,5 @@ struct FilteredWhoIsWhoViewWrapper2626: View {
         }
     }
     .searchable(text: .constant("Name"))
-    .searchToolbarBehavior(.minimize) // iOS 26
+    .searchToolbarBehavior(.minimize) // requires iOS 26
 }
