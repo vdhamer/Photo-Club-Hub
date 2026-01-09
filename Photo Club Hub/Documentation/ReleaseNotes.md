@@ -27,6 +27,7 @@ DATA MAINTENANCE
 * Added "Mobile" as a supported expertise for Jan 2026. It replaced temporary expertise "iPhone" (used once).
 * Renamed Organization.contactEmail to Organization.maintainerEmail (in both database and JSON formats).
 * Shortened "Persoonlijke Leden Afdeling Drenthe - Vechtdal" to "Persoonlijke Leden Drenthe - Vechtdal".
+* Prepared for possible future onboarding of fcVeghel.
 
 CODE MAINTENANCE
 
