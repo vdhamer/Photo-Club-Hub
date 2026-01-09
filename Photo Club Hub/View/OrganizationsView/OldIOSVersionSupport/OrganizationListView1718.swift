@@ -87,6 +87,7 @@ struct OrganizationListView1718: View {
                                           filter the members based on a fragment of the organization name or town.
                                           """
                                 ))
+        .autocapitalization(.sentences)
         .disableAutocorrection(true)
     }
 

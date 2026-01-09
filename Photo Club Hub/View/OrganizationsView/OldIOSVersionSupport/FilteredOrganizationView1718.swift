@@ -147,6 +147,7 @@ struct FilteredOrganizationView1718: View {
                     .padding(.top, 5)
                     .frame(height: iOS18 ? nil : 70) // iOS 18 can handle variable size views for smart scrolling
             } // VStack
+            .id(filteredOrganization.id)
             .task {
                 initializeCameraPosition(organization: filteredOrganization) // better than .onAppear(perform:)?
             }
