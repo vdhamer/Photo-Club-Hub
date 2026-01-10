@@ -10,7 +10,7 @@ import SwiftUI
 @available(iOS 26.0, *)
 struct MemberPortfolioListView2626: View {
     @Environment(\.managedObjectContext) private var viewContext
-    private var detentsList: Set<PresentationDetent> = [ .fraction(0.5), .fraction(0.70), .fraction(0.90), .large ]
+    private var detentsList: Set<PresentationDetent> = [ .large, .fraction(0.50) ]
 
     @State private var showingPreferences = false // controls visibility of Preferences screen
     @State private var showingReadme = false // controls visibility of Readme screen

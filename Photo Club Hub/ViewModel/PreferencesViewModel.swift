@@ -56,18 +56,22 @@ struct PreferencesStruct: Codable { // order in which they are shown on Preferen
     var showDeceasedMembers: Bool
     var showExternalCoaches: Bool
 
+    var showClubs: Bool
     var showTestClubs: Bool
+    var showMuseums: Bool
 
     static let defaultValue = PreferencesStruct( // has to match order of declaration
         showCurrentMembers: true,
         showOfficers: true,
         showAspiringMembers: true,
         showHonoraryMembers: true,
-        showFormerMembers: false, // used to be true
+        showFormerMembers: false, // was formerly true, but different clubs have different preferences
         showDeceasedMembers: false,
         showExternalCoaches: false,
 
-        showTestClubs: false
+        showClubs: true,
+        showTestClubs: false,
+        showMuseums: true
     )
 
     var memberPredicate: NSPredicate {
@@ -123,17 +127,42 @@ struct PreferencesStruct: Codable { // order in which they are shown on Preferen
     var organizationPredicate: NSPredicate {
         var format = ""
         var args: [String] = [] // array from which to fetch the %@ values
+        let showAllClubs: Bool = showClubs && showTestClubs // for query optimization
 
-        if !showTestClubs {
-            format = format.predicateOrAppend(suffix: "(NOT (nickName_ CONTAINS %@))")
-            args.append("Xample")
+        let showAll = showAllClubs && showMuseums // for query oprimization
+        if showAll { return NSPredicate(format: "TRUEPREDICATE") } // kind of a guard statement, but avoiding Not()
+
+        if showAllClubs {
+
+            format = format.predicateOrAppend(suffix: "(organizationType_.organizationTypeName_ = %@)")
+            args.append(OrganizationTypeEnum.club.rawValue)
+
+        } else {
+            if showClubs {
+                format = format.predicateOrAppend(suffix: "(organizationType_.organizationTypeName_ = %@) AND" +
+                                                          " NOT (nickName_ CONTAINS[cd] %@)")
+                args.append(OrganizationTypeEnum.club.rawValue)
+                args.append("Xample")
+            }
+
+            if showTestClubs {
+                format = format.predicateOrAppend(suffix: "(organizationType_.organizationTypeName_ = %@) AND" +
+                                                          " (nickName_ CONTAINS[cd] %@)")
+                args.append(OrganizationTypeEnum.club.rawValue)
+                args.append("Xample") // clubs containing "Xample" anywhere in the name
+            }
+        }
+
+        if showMuseums {
+            format = format.predicateOrAppend(suffix: "(organizationType_.organizationTypeName_ = %@)")
+            args.append(OrganizationTypeEnum.museum.rawValue)
         }
 
         let predicate: NSPredicate
         if format != "" {
             predicate = NSPredicate(format: format, argumentArray: args)
         } else {
-            let predicateAll = NSPredicate(format: "TRUEPREDICATE")
+            let predicateAll = NSPredicate(format: "FALSEPREDICATE") // if no OR conditions, return 0 Organizations
             predicate = predicateAll
         }
         return predicate

@@ -699,6 +699,23 @@
         }
       }
     },
+    "Show clubs" : {
+      "comment" : "Label of toggle in Preferences",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show clubs"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toon clubs"
+          }
+        }
+      }
+    },
     "Show current members" : {
       "comment" : "Label of toggle in Preferences",
       "localizations" : {
@@ -780,6 +797,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Toon ereleden"
+          }
+        }
+      }
+    },
+    "Show museums" : {
+      "comment" : "Label of toggle in Preferences",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show museums"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toon musea"
           }
         }
       }

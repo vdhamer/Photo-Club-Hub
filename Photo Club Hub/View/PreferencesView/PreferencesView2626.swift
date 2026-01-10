@@ -121,7 +121,17 @@ struct PreferencesView2626: View {
                                          tableName: "PhotoClubHub.SwiftUI",
                                          comment: "In Preferences, section title"),
                             content: {
-                        HStack {
+                        HStack { // SHOW CLUBS
+                            Image(systemName: "mappin.square")
+                                .font(.title2)
+                                .symbolRenderingMode(.palette)
+                                .foregroundStyle(.organizationColor, .gray, .red)
+                            Toggle(String(localized: "Show clubs",
+                                          table: "PhotoClubHub.SwiftUI",
+                                          comment: "Label of toggle in Preferences"),
+                                   isOn: $localPreferences.showClubs.animation())
+                        }
+                        HStack { // SHOW TEST CLUBS
                             Image(systemName: "mappin.square")
                                 .font(.title2)
                                 .symbolRenderingMode(.palette)
@@ -130,6 +140,16 @@ struct PreferencesView2626: View {
                                           table: "PhotoClubHub.SwiftUI",
                                           comment: "Label of toggle in Preferences"),
                                    isOn: $localPreferences.showTestClubs.animation())
+                        }
+                        HStack { // SHOW MUSEUMS
+                            Image(systemName: "mappin.square")
+                                .font(.title2)
+                                .symbolRenderingMode(.palette)
+                                .foregroundStyle(.organizationColor, .gray, .red)
+                            Toggle(String(localized: "Show museums",
+                                          table: "PhotoClubHub.SwiftUI",
+                                          comment: "Label of toggle in Preferences"),
+                                   isOn: $localPreferences.showMuseums.animation())
                         }
                     })
 
