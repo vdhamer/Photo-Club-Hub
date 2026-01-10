@@ -11,14 +11,14 @@ import SwiftUI
 @MainActor
 struct PreferencesView2626: View {
 
-    @Binding var preferences: PreferencesStruct
-    @Environment(\.dismiss) var dismiss: DismissAction // \.dismiss requires iOS 15
+    @Environment(\.dismiss) var dismiss: DismissAction
 
+    @Binding var preferences: PreferencesStruct
     @State private var localPreferences = PreferencesStruct.defaultValue // parameters for various Toggles()
 
     private let title = String(localized: "Preferences",
-                                   table: "PhotoClubHub.SwiftUI",
-                                   comment: "Title of screen with toggles to adjust preferences")
+                               table: "PhotoClubHub.SwiftUI",
+                               comment: "Title of screen with toggles to adjust preferences")
     private static let animation: Animation = Animation.easeIn(duration: 5)
 
     init(preferences: Binding<PreferencesStruct>) {
@@ -178,7 +178,7 @@ struct PreferencesView2626: View {
                 // need to update Bindings for showPhotoClubsList etc
                 preferences = localPreferences
             }
-            .presentationSizing(.form)
+            .presentationSizing(.page)
         })
     }
 
