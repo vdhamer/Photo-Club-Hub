@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3705AFC62E7381D10067CE6B /* fkGestel.level2.json in Resources */ = {isa = PBXBuildFile; fileRef = 3705AFC52E7381D10067CE6B /* fkGestel.level2.json */; };
+		371414B72F12FF460032EF21 /* PreferencesIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371414B62F12FF460032EF21 /* PreferencesIcon.swift */; };
 		372028CE2E84A4CC00ED1B91 /* Photo-Club-Hub-InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 372028CD2E84A4CC00ED1B91 /* Photo-Club-Hub-InfoPlist.xcstrings */; };
 		3723DAE92F008E25006E2BB4 /* root_.level1.json in Resources */ = {isa = PBXBuildFile; fileRef = 3723DAE82F008E25006E2BB4 /* root_.level1.json */; };
 		3723DAEC2F008F2F006E2BB4 /* whiteboard.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3723DAEB2F008F1E006E2BB4 /* whiteboard.txt */; };
@@ -168,6 +169,7 @@
 
 /* Begin PBXFileReference section */
 		3705AFC52E7381D10067CE6B /* fkGestel.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fkGestel.level2.json; sourceTree = "<group>"; };
+		371414B62F12FF460032EF21 /* PreferencesIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesIcon.swift; sourceTree = "<group>"; };
 		372028CD2E84A4CC00ED1B91 /* Photo-Club-Hub-InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = "Photo-Club-Hub-InfoPlist.xcstrings"; sourceTree = "<group>"; };
 		3723DAE82F008E25006E2BB4 /* root_.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = root_.level1.json; sourceTree = "<group>"; };
 		3723DAEB2F008F1E006E2BB4 /* whiteboard.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = whiteboard.txt; sourceTree = "<group>"; };
@@ -499,6 +501,7 @@
 				37E134BE2E6F7AC300C61714 /* OldIOSVersionSupport */,
 				D0831A19277F72270049AB84 /* PreferencesView2626.swift */,
 				D0DE02762789D1B30062738C /* RoleIconView.swift */,
+				371414B62F12FF460032EF21 /* PreferencesIcon.swift */,
 			);
 			path = PreferencesView;
 			sourceTree = "<group>";
@@ -1205,6 +1208,7 @@
 				376D14FA2E6DE83A00A1403B /* DebugPanel2626.swift in Sources */,
 				D0831A20277F72270049AB84 /* FilteredOrganizationView1718.swift in Sources */,
 				D05124852C42BE2D00D94B81 /* Level2JsonReader.swift in Sources */,
+				371414B72F12FF460032EF21 /* PreferencesIcon.swift in Sources */,
 				D0E2235427DE9139002A8600 /* PreludeView1718.swift in Sources */,
 				D0F5EE872C54EDC60028C9A6 /* PhotographerOptionalFields.swift in Sources */,
 				D0621E812AE2D7DE000FFADB /* MemberPortfolio+roles.swift in Sources */,

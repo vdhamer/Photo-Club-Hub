@@ -18,6 +18,8 @@ WHO'S WHO SCREEN
 PREFERENCES SCREEN
 
 * Added "Show test clubs" toggle (replaces a toggle in iOS Settings "Load test clubs").
+* Added "Show clubs" toggle
+* Added "Show museums" toggle
 * Changed section headers (minor).
 
 DATA MAINTENANCE
@@ -32,6 +34,7 @@ DATA MAINTENANCE
 CODE MAINTENANCE
 
 * Tested with SwiftLint 0.63.
+* PreferencesIcon because one SwiftUI View (rather than having identical PreferencesIcon1718 and PreferencesIcon2626)
 
 PERFORMANCE
 

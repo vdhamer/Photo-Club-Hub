@@ -67,7 +67,7 @@ struct MemberPortfolioListView2626: View {
                         showingPreferences = true
                     }
                 } label: {
-                    PreferencesIcon1718()
+                    PreferencesIcon()
                 }
                 .sheet(isPresented: $showingPreferences, content: {
                     PreferencesView2626(preferences: $model.preferences)
@@ -141,18 +141,5 @@ struct MemberListView2626_Previews: PreviewProvider {
     static var previews: some View {
         MemberPortfolioListView2626()
 			.environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
-    }
-}
-
-@available(iOS 26.0, *)
-struct PreferencesIcon2626: View {
-    @Environment(\.isEnabled) private var isEnabled: Bool
-
-    var body: some View {
-        Image("slider.horizontal.3.rectangle")
-            .font(.title)
-            .foregroundStyle(isEnabled ? .memberPortfolioColor : .gray, // isEnabled is always true :-(
-                             .gray,
-                             isEnabled ? .sliderColor : .gray)
     }
 }
