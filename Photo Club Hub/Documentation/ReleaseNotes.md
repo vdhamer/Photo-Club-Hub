@@ -18,9 +18,10 @@ WHO'S WHO SCREEN
 PREFERENCES SCREEN
 
 * Added "Show test clubs" toggle (replaces a toggle in iOS Settings "Load test clubs").
-* Added "Show clubs" toggle
-* Added "Show museums" toggle
+* Added "Show clubs" toggle.
+* Added "Show museums" toggle.
 * Changed section headers (minor).
+* Increased height of Preferences screen on iPad.
 
 DATA MAINTENANCE
 

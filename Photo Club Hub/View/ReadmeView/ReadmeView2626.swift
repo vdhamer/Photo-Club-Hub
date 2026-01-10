@@ -11,12 +11,13 @@ import SwiftUI
 // swiftlint:disable:next type_body_length
 struct ReadmeView2626: View {
 
-    static let paddingConstant: CGFloat = 20
-    private let title = String(localized: "Readme", table: "PhotoClubHub.Readme", comment: "Title of Readme screen")
-    @Environment(\.dismiss) var dismiss: DismissAction // \.dismiss requires iOS 15
+    @Environment(\.dismiss) var dismiss: DismissAction
     @State private var showingRoadmap = false // controls visibility of Preferences screen
-    @State private var selectedRoadmapDetent = PresentationDetent.large // careful: must be element of detentsList
-    private var detentsList: Set<PresentationDetent> = [ .fraction(0.5), .fraction(0.70), .fraction(0.90), .large ]
+
+    static let paddingConstant: CGFloat = 20
+    private let title = String(localized: "Readme",
+                               table: "PhotoClubHub.Readme",
+                               comment: "Title of Readme screen")
 
     var body: some View {
         GeometryReader { geo in

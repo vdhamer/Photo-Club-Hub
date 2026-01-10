@@ -71,7 +71,6 @@ struct MemberPortfolioListView2626: View {
                 }
                 .sheet(isPresented: $showingPreferences, content: {
                     PreferencesView2626(preferences: $model.preferences)
-                    // the detents don't do anything on an iPad
                         .presentationDetents(detentsList, selection: $selectedPreferencesDetent)
                         .presentationBackground(.regularMaterial) // doesn't work yet with PreferencesView
                         .presentationCornerRadius(40)
@@ -89,7 +88,6 @@ struct MemberPortfolioListView2626: View {
                 }
                 .sheet(isPresented: $showingReadme, content: {
                     ReadmeView2626()
-                    // the detents don't do anything on an iPad
                         .presentationDetents(detentsList, selection: $selectedReadmeDetent)
                         .presentationBackground(.thickMaterial) // doesn't work yet with ReadmeView
                         .presentationCornerRadius(40) // compiler can't handle this yet
