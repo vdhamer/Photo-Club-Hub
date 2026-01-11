@@ -27,7 +27,8 @@ DATA MAINTENANCE
 * Added "Mobile" as a supported expertise for Jan 2026. It replaced temporary expertise "iPhone" (used once).
 * Renamed Organization.contactEmail to Organization.maintainerEmail (in both database and JSON formats).
 * Shortened "Persoonlijke Leden Afdeling Drenthe - Vechtdal" to "Persoonlijke Leden Drenthe - Vechtdal".
-* Prepared for possible future onboarding of fcVeghel.
+* Prepared for possible future onboarding of club fcVeghel.
+* Added four more museums to the Fotografiska chain: Talinn, Shanghai, Berlin, Oslo (opens 2028?).
 * Level 2 data update by fkGestel.
 
 CODE MAINTENANCE
