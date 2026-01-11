@@ -147,6 +147,32 @@
                 ]
             }
         },
+        
+        {
+            "idPlus": {
+                "town": "Oslo",
+                "fullName": "Fotografiska Oslo",
+                "nickName": "Fotografiska NO"
+            },
+            "coordinates": {
+                "latitude": 59.91661,
+                "longitude": 10.74640
+            },
+            "optional": {
+                "website": "https://oslo.fotografiska.com/en",
+                "wikipedia": "https://en.wikipedia.org/wiki/Fotografiska",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Fotografiska Oslo is a planned (2028) branch of the Swedish Fotografiska museum."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Fotografiska Oslo is een toekomstige (2028) dependance van het Fotografiska museum in Stockholm."
+                    }
+                ]
+            }
+        },
 
         {
             "idPlus": {
@@ -289,7 +315,7 @@
                 "longitude": 24.72850
             },
             "optional": {
-                "website": "https://tallinn.fotografiska.com/enn",
+                "website": "https://tallinn.fotografiska.com/en",
                 "wikipedia": "https://en.wikipedia.org/wiki/Fotografiska",
                 "remark": [
                     {
