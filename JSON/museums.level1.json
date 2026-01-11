@@ -277,6 +277,32 @@
                 ]
             }
         },
+        
+        {
+            "idPlus": {
+                "town": "Tallinn",
+                "fullName": "Fotografiska Tallinn",
+                "nickName": "Fotografiska EE"
+            },
+            "coordinates": {
+                "latitude": 59.43855,
+                "longitude": 24.72850
+            },
+            "optional": {
+                "website": "https://tallinn.fotografiska.com/enn",
+                "wikipedia": "https://en.wikipedia.org/wiki/Fotografiska",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Fotografiska Tallinn is a branch of the Swedish Fotografiska museum."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Fotografiska Tallinn is een dependance van het Fotografiska museum in Stockholm."
+                    }
+                ]
+            }
+        },
 
         {
             "idPlus": {
