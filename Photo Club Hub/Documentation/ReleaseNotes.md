@@ -1,7 +1,4 @@
-### 2.9.0 (GitHub commit ???????) ??-01-226
-
-* TODO: add toggle in Preferences for displaying museums in Clubs and Museums screen.
-* TODO: add toggle in Preferences for displaying clubs in Clubs and Museums screen.
+### 2.9.0 (GitHub commit ???????) ??-01-2026
 
 PORTFOLIOS SCREEN
 
