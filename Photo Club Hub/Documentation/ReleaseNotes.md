@@ -31,6 +31,7 @@ DATA MAINTENANCE
 * Renamed Organization.contactEmail to Organization.maintainerEmail (in both database and JSON formats).
 * Shortened "Persoonlijke Leden Afdeling Drenthe - Vechtdal" to "Persoonlijke Leden Drenthe - Vechtdal".
 * Prepared for possible future onboarding of fcVeghel.
+* Level 2 data update by fkGestel.
 
 CODE MAINTENANCE
 
