@@ -6,6 +6,32 @@
     },
     
     "museums": [
+        
+        {
+            "idPlus": {
+                "town": "Berlin",
+                "fullName": "Fotografiska Berlin",
+                "nickName": "Fotografiska DE"
+            },
+            "coordinates": {
+                "latitude": 52.52728,
+                "longitude": 13.38638
+            },
+            "optional": {
+                "website": "https://berlin.fotografiska.com/en",
+                "wikipedia": "https://en.wikipedia.org/wiki/Fotografiska",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Fotografiska Berlin is a branch of the Swedish Fotografiska museum."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Fotografiska Berlin is een dependance van het Fotografiska museum in Stockholm."
+                    }
+                ]
+            }
+        },
 
         {
             "idPlus": {
