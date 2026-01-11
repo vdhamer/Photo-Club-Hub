@@ -3,6 +3,7 @@
         "level1URL": "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/museums.level1.json",
         "level1URLIncludes": [
             "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/museumsAU.level1.json",
+            "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/museumsCN.level1.json",
             "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/museumsDE.level1.json",
             "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/museumsGB.level1.json",
             "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/museumsJP.level1.json",
@@ -117,31 +118,6 @@
                     {
                         "language": "FR",
                         "value": "Le musée est spécialisé dans la conservation de grandes collections photographiques, dont celle de Charlie Chaplin."
-                    }
-                ]
-            }
-        },
-
-        {
-            "idPlus": {
-                "town": "Lianzhou",
-                "fullName": "Lianzhou Museum of Photography",
-                "nickName": "LMoP Lianzhou"
-            },
-            "coordinates": {
-                "latitude": 24.78468,
-                "longitude": 112.38392
-            },
-            "optional": {
-                "website": "http://www.lmop.org.cn",
-                "remark": [
-                    {
-                        "language": "EN",
-                        "value": "The museum's URL and even GPS coordinates don't currently work, but the museum is in Lianzhou, China."
-                    },
-                    {
-                        "language": "NL",
-                        "value": "Het webadres en zelfs de lengte en breedtegraad van het in Lianzhou gelegen museum geven soms problemen."
                     }
                 ]
             }

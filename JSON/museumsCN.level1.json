@@ -1,0 +1,62 @@
+{
+    "level1Header": {
+        "level1URL": "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/museumsCN.level1.json",
+        "level1URLIncludes": [ ],
+        "maintainerEmail": "vdhamer@msn.com"
+    },
+    
+    "museums": [
+        
+        {
+            "idPlus": {
+                "town": "Lianzhou",
+                "fullName": "Lianzhou Museum of Photography",
+                "nickName": "LMoP Lianzhou"
+            },
+            "coordinates": {
+                "latitude": 31.24236,
+                "longitude": 121.45586
+            },
+            "optional": {
+                "website": "http://www.lmop.org.cn",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "The museum's URL and even GPS coordinates don't currently work, but the museum is in Lianzhou, China."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Het webadres en zelfs de lengte en breedtegraad van het in Lianzhou gelegen museum geven soms problemen."
+                    }
+                ]
+            }
+        },
+        
+        {
+            "idPlus": {
+                "town": "Shanghai",
+                "fullName": "Fotografiska Shanghai",
+                "nickName": "Fotografiska CN"
+            },
+            "coordinates": {
+                "latitude": 24.78468,
+                "longitude": 112.38392
+            },
+            "optional": {
+                "website": "https://shanghai.fotografiska.com/en",
+                "wikipedia": "https://en.wikipedia.org/wiki/Fotografiska_Shanghai",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Fotografiska Shanghai is a branch of the Swedish Fotografiska museum."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Fotografiska Shanghai is een dependance van het Fotografiska museum in Stockholm."
+                    }
+                ]
+            }
+        }
+            
+    ]
+}
