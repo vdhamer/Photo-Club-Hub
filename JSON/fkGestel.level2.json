@@ -34,6 +34,21 @@
 
         {
             "name": {
+                "givenName": "Majonka",
+                "infixName": "van",
+                "familyName": "Anken"
+            },
+            "optional": {
+                "featuredImage": "https://www.fotokring-gestel.nl/wp-content/uploads/2024/04/Majonka-26-april.jpg",
+                "level3URL": "https://www.fotokring-gestel.nl/hub_majonka/",
+                "roles": {
+                    "isAdmin": true
+                }
+            }
+        },
+
+        {
+            "name": {
                 "givenName": "Coby",
                 "infixName": "",
                 "familyName": "Spuls-Veld"
@@ -42,6 +57,21 @@
                 "featuredImage": "https://www.fotokring-gestel.nl/wp-content/uploads/2024/02/2024_02_10_IMG_6406-klein.jpg",
                 "expertises": ["People", "Travel"],
                 "level3URL": "https://www.fotokring-gestel.nl/hub_coby/"
+            }
+        },
+
+        {
+            "name": {
+                "givenName": "Peter",
+                "infixName": "van",
+                "familyName": "Ham"
+            },
+            "optional": {
+                "featuredImage": "https://www.fotokring-gestel.nl/wp-content/uploads/2025/07/3-juli-Peter-Abstract.jpg",
+                "level3URL": "https://www.fotokring-gestel.nl/hub_peter/",
+                "roles": {
+                    "isOther": true
+                }
             }
         },
 
@@ -72,6 +102,57 @@
                 "roles": {
                     "isOther": true
                 }
+            }
+        },
+
+        {
+            "name": {
+                "givenName": "Jacqueline",
+                "infixName": "van der",
+                "familyName": "Gugten"
+            },
+            "optional": {
+                "featuredImage": "https://www.fotokring-gestel.nl/wp-content/uploads/2024/12/Jacqueline-19-december.jpg",
+               "level3URL": "https://www.fotokring-gestel.nl/hub_jacqueline/"
+            }
+        },
+
+        {
+            "name": {
+                "givenName": "Rien",
+                "infixName": "den",
+                "familyName": "Otter"
+            },
+            "optional": {
+                "featuredImage": "https://www.fotokring-gestel.nl/wp-content/uploads/2025/01/01-januari-Rien-JBZ-2025-ZW.jpg",
+                "expertises": ["Portrait", "Sport"],
+                "level3URL": "https://www.fotokring-gestel.nl/hub_rien/"
+            }
+        },
+
+       {
+            "name": {
+                "givenName": "John",
+                "infixName": "",
+                "familyName": "Huysmans"
+            },
+            "optional": {
+                "featuredImage": "https://www.fotokring-gestel.nl/wp-content/uploads/2026/01/Rode-draad-2025-John.jpg",
+                "expertises": ["Landscape", "nature"],
+              "level3URL": "https://www.fotokring-gestel.nl/hub_john/"
+            }
+        },
+      
+        {
+            "name": {
+                "givenName": "Wendy",
+                "infixName": "",
+                "familyName": "Janssen"
+            },
+            "optional": {
+                "featuredImage": "https://www.fotokring-gestel.nl/wp-content/uploads/2026/01/w-jvg-k.jpg",
+                "expertises": ["Nature", "Birds"],
+                "level3URL": "https://www.fotokring-gestel.nl/hub_wendy/"
             }
         },
 
