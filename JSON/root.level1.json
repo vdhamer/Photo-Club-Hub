@@ -2550,6 +2550,32 @@
                 ]
             }
         },
+        
+        {
+            "idPlus": {
+                "town": "Berlin",
+                "fullName": "Fotografiska Berlin",
+                "nickName": "Fotografiska DE"
+            },
+            "coordinates": {
+                "latitude": 52.52728,
+                "longitude": 13.38638
+            },
+            "optional": {
+                "website": "https://berlin.fotografiska.com/en",
+                "wikipedia": "https://en.wikipedia.org/wiki/Fotografiska",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Fotografiska Berlin is a branch of the Swedish Fotografiska museum."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Fotografiska Berlin is een dependance van het Fotografiska museum in Stockholm."
+                    }
+                ]
+            }
+        },
 
         {
             "idPlus": {
@@ -2971,6 +2997,32 @@
                 ]
             }
         },
+        
+        {
+            "idPlus": {
+                "town": "Oslo",
+                "fullName": "Fotografiska Oslo",
+                "nickName": "Fotografiska NO"
+            },
+            "coordinates": {
+                "latitude": 59.91661,
+                "longitude": 10.74640
+            },
+            "optional": {
+                "website": "https://oslo.fotografiska.com/en",
+                "wikipedia": "https://en.wikipedia.org/wiki/Fotografiska",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Fotografiska Oslo is a planned (2028) branch of the Swedish Fotografiska museum."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Fotografiska Oslo is een toekomstige (2028) dependance van het Fotografiska museum in Stockholm."
+                    }
+                ]
+            }
+        },
 
         {
             "idPlus": {
@@ -3208,6 +3260,32 @@
 
         {
             "idPlus": {
+                "town": "Shanghai",
+                "fullName": "Fotografiska Shanghai",
+                "nickName": "Fotografiska CN"
+            },
+            "coordinates": {
+                "latitude": 24.78468,
+                "longitude": 112.38392
+            },
+            "optional": {
+                "website": "https://shanghai.fotografiska.com/en",
+                "wikipedia": "https://en.wikipedia.org/wiki/Fotografiska",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Fotografiska Shanghai is a branch of the Swedish Fotografiska museum."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Fotografiska Shanghai is een dependance van het Fotografiska museum in Stockholm."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Stockholm",
                 "fullName": "Fotografiska",
                 "nickName": "Fotografiska_SE"
@@ -3227,6 +3305,32 @@
                     {
                         "language": "NL",
                         "value": "Fotografiska heeft dependences in New York, Talinn en Berlijn."
+                    }
+                ]
+            }
+        },
+        
+        {
+            "idPlus": {
+                "town": "Tallinn",
+                "fullName": "Fotografiska Tallinn",
+                "nickName": "Fotografiska EE"
+            },
+            "coordinates": {
+                "latitude": 59.43855,
+                "longitude": 24.72850
+            },
+            "optional": {
+                "website": "https://tallinn.fotografiska.com/en",
+                "wikipedia": "https://en.wikipedia.org/wiki/Fotografiska",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Fotografiska Tallinn is a branch of the Swedish Fotografiska museum."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Fotografiska Tallinn is een dependance van het Fotografiska museum in Stockholm."
                     }
                 ]
             }
