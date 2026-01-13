@@ -1,5 +1,15 @@
 ### 2.9.1 (GitHub commit ???????) ??-02-2026
 
+STRUCTURAL
+
+* TODO: update documentation of Include feature of level1.json
+* TODO: add test for Include feature
+
+USER FACING
+
+* TODO: optionally distinguish Fotobond pins on maps in color
+* TODO: concentricity in Liquid Glass?
+
 This build #4656 was made using Xcode 26.3 and is intended for the App Store.
 
 ---------------------------------------------------------------------------
@@ -28,6 +38,8 @@ DATA MAINTENANCE
 * Prepared for likely onboarding of club fcVeghel.
 * Added four more museums to the Fotografiska network: Berlin, Oslo (not open yet), , Shanghai, Tallinn. 
 * Level 2 data update provided by fkGestel (Sint-Michelsgestel, NL).
+
+CODE MAINTENANCE
 
 * `PreferencesIcon` moved to a separate file (had identical code for pre-iOS26 and post-iOS26)
 * Tested with SwiftLint 0.63.
