@@ -377,6 +377,7 @@
 		D0F4FAA92D82275100FFAEAE /* Level0JsonReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level0JsonReader.swift; sourceTree = "<group>"; };
 		D0F5EE862C54EDC60028C9A6 /* PhotographerOptionalFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotographerOptionalFields.swift; sourceTree = "<group>"; };
 		D0F78AC92DFCCBFE00DE234D /* fcDenDungen.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fcDenDungen.level2.json; sourceTree = "<group>"; };
+		D0F7CF262F165B8F0016D7FC /* Photo_Club_Hub_2_9_1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_9_1.xcdatamodel; sourceTree = "<group>"; };
 		D0F871882D403D1700530D10 /* fgDeGender.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fgDeGender.level2.json; sourceTree = "<group>"; };
 		D0F871892D403D1700530D10 /* fgDeGenderLeden.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = fgDeGenderLeden.xlsx; sourceTree = "<group>"; };
 		D0F8718B2D403D1700530D10 /* root.level0.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = root.level0.json; sourceTree = "<group>"; };
@@ -1407,7 +1408,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Photo Club Hub/PhotoClubHub.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4655;
+				CURRENT_PROJECT_VERSION = 4656;
 				DEVELOPMENT_ASSET_PATHS = "\"Photo Club Hub/Preview Content\"";
 				DEVELOPMENT_TEAM = YDEWPN9GZ6;
 				ENABLE_PREVIEWS = YES;
@@ -1427,7 +1428,7 @@
 					"@executable_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 2.9.0;
+				MARKETING_VERSION = 2.9.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vdhamer.Fotogroep-Waalre";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1449,7 +1450,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Photo Club Hub/PhotoClubHub.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4655;
+				CURRENT_PROJECT_VERSION = 4656;
 				DEVELOPMENT_ASSET_PATHS = "\"Photo Club Hub/Preview Content\"";
 				DEVELOPMENT_TEAM = YDEWPN9GZ6;
 				ENABLE_APP_SANDBOX = YES;
@@ -1471,7 +1472,7 @@
 					"@executable_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 2.9.0;
+				MARKETING_VERSION = 2.9.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vdhamer.Fotogroep-Waalre";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1492,7 +1493,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4654;
+				CURRENT_PROJECT_VERSION = 4655;
 				DEVELOPMENT_TEAM = YDEWPN9GZ6;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1515,7 +1516,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4654;
+				CURRENT_PROJECT_VERSION = 4655;
 				DEVELOPMENT_TEAM = YDEWPN9GZ6;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1585,6 +1586,7 @@
 		D0A0B6832AA930E90078DE9A /* Photo_Club_Hub.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				D0F7CF262F165B8F0016D7FC /* Photo_Club_Hub_2_9_1.xcdatamodel */,
 				375A21DE2F0EC4AC00544042 /* Photo_Club_Hub_2_9_0.xcdatamodel */,
 				D0A73A482ECA28290055DACD /* Photo_Club_Hub_2_8_8.xcdatamodel */,
 				37545CA32EBFB37300C75485 /* Photo_Club_Hub_2_8_7.xcdatamodel */,
@@ -1614,7 +1616,7 @@
 				D0A0B6872AA932A10078DE9A /* Photo_Club_Hub_2_4_1.xcdatamodel */,
 				D0A0B6842AA930E90078DE9A /* Photo_Club_Hub.xcdatamodel */,
 			);
-			currentVersion = 375A21DE2F0EC4AC00544042 /* Photo_Club_Hub_2_9_0.xcdatamodel */;
+			currentVersion = D0F7CF262F165B8F0016D7FC /* Photo_Club_Hub_2_9_1.xcdatamodel */;
 			path = Photo_Club_Hub.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

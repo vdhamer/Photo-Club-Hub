@@ -1,52 +1,47 @@
-### 2.9.0 (GitHub commit ???????) 13-01-2026
+### 2.9.1 (GitHub commit ???????) ??-02-2026
 
-PORTFOLIOS SCREEN
+This build #4656 was made using Xcode 26.3 and is intended for the App Store.
 
-* Minimize size of search bar on Portfolios when not searching.
+---------------------------------------------------------------------------
 
-CLUBS AND MUSEUMS SCREEN
+### 2.9.0 (GitHub commit 436e910) 13-01-2026
 
-* Minimize size of search bar on Clubs & Museums screen when not searching.
+PORTFOLIOS, CLUBS & MUSEUMS, WHO'S WHO SCREENS
 
-WHO'S WHO SCREEN
-
-* Minimize size of search bar on Who's Who screen when not searching.
+* Minimize size of search bar when not searching (iOS 26 only).
 
 PREFERENCES SCREEN
 
-* Added "Show test clubs" toggle (replaces a toggle in iOS Settings "Load test clubs").
-* Added "Show clubs" toggle.
-* Added "Show museums" toggle.
+* New "Show test clubs" toggle (replaces a toggle in iOS Settings "Load test clubs").
+* New "Show clubs" and "Show museums" toggles. These filter list of organizations and pins visible on maps.
 * Changed section headers (minor).
-* Increased height of Preferences screen on iPad.
+* Taller Preferences window ("sheet") on iPad.
 
 DATA MAINTENANCE
 
-* Level 1 files containing clubs and museums can now "include" a link/URL to other Level 1 files.
-* Moved clubs and museums from the root.level1.json file into a dozen shorter "include" level1.json files.
-* Added "Mobile" as a supported expertise for Jan 2026. It replaced temporary expertise "iPhone" (used once).
-* Renamed Organization.contactEmail to Organization.maintainerEmail (in both database and JSON formats).
+* Level 1 files (list of Clubs and Museums) can now have "Include" URLs that point to child Level 1 files.
+* Moved clubs and museums from the `root.level1.json` file into a dozen shorter "Included" level1.json files.
+* Added "Mobile" as a supported expertise for Jan 2026. It replaced temporary expertise "iPhone".
+* Renamed `contactEmail` to `maintainerEmail` (in the JSON format, but also in internal CoreData database).
 * Shortened "Persoonlijke Leden Afdeling Drenthe - Vechtdal" to "Persoonlijke Leden Drenthe - Vechtdal".
-* Forced a data reset with `dataResetPending290b4655` (related to pseudoclub Persoonlijk03).
-* Prepared for possible future onboarding of club fcVeghel.
-* Added four more museums to the Fotografiska chain: Talinn, Shanghai, Berlin, Oslo (opens 2028?).
-* Level 2 data update by fkGestel.
+* Forced a data reset with `dataResetPending290b4655` (related to `persoonlijk03`).
+* Prepared for likely onboarding of club fcVeghel.
+* Added four more museums to the Fotografiska network: Berlin, Oslo (not open yet), , Shanghai, Tallinn. 
+* Level 2 data update provided by fkGestel (Sint-Michelsgestel, NL).
 
-CODE MAINTENANCE
-
+* `PreferencesIcon` moved to a separate file (had identical code for pre-iOS26 and post-iOS26)
 * Tested with SwiftLint 0.63.
-* PreferencesIcon because one SwiftUI View (rather than having identical PreferencesIcon1718 and PreferencesIcon2626)
 
 PERFORMANCE
 
-* Faster loading of fgWaalre (that club is special because it is still a mix of two types of portfolios).
+* Faster loading of fgWaalre (that club is special because it is still a mix of two ways to handle Portfolios).
 
 DOCUMENTATION
 
 * Updated data schema image in GitHub README.md.
 * Updated Level2_aanmaken_NL.md.
 
-This build #4655 was made using Xcode 26.2 but is for testers only.
+This build #4655 was made using Xcode 26.2 and is intended for the App Store.
 
 ---------------------------------------------------------------------------
 
