@@ -14,7 +14,7 @@ private let organizationTypesToLoad: [OrganizationTypeEnum] = [.club, .museum] /
 public class Level1JsonReader {
 
     public init(bgContext: NSManagedObjectContext,
-                fileName: String = "root",  // can overrule the name for unit testing
+                fileName: String = "root",  // can overrule the name in tests or in top-level app code
                 isBeingTested: Bool,
                 useOnlyInBundleFile: Bool, // true can be used to avoid publishing a test file to GitHub
                 includeFilePath: [String] = [] // captures recursion path like ["root","museums","museumsNL"]
