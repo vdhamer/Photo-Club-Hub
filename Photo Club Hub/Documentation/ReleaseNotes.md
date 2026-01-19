@@ -10,6 +10,11 @@ USER FACING
 * TODO: optionally distinguish Fotobond pins on maps in color
 * TODO: concentricity in Liquid Glass?
 
+CODE MAINTENANCE
+
+* Tested with SwiftLint 0.63.1
+* Fixed minor TODO item in Model.swift that was carryover from rlelease 2.9.0
+
 This build #4656 was made using Xcode 26.3 and is intended for the App Store.
 
 ---------------------------------------------------------------------------
