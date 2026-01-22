@@ -15,6 +15,7 @@ STRUCTURAL
 * TODO: first investigate what AI can do for iOS app
 * TODO: rename XampleMin/Max clubs to TemplateMin/Max
 * TODO: test with iOS 26.3
+* TODO: create empty Level 2 for fccShot71
 
 CODE MAINTENANCE
 
