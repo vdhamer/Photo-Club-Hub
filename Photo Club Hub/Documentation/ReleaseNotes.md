@@ -2,8 +2,8 @@
 
 USER-FACING
 
-* TODO: optionally distinguish Fotobond pins on maps in color
-* TODO: concentricity in Liquid Glass?
+* todo: optionally distinguish Fotobond pins on maps in color
+* todo: concentricity in Liquid Glass?
 * TODO: display expertises on Who's Who screen
 * TODO: more search functionality on Who's Who screen
 * TODO: more search functionality on Portfolio screen
@@ -11,8 +11,8 @@ USER-FACING
 STRUCTURAL
 
 * TODO: update documentation of Include feature of level1.json
-* TODO: add test for Include feature
-* TODO: investigate what AI can do for iOS apps
+* todo: add test for Include feature
+* TODO: first investigate what AI can do for iOS app
 * TODO: rename XampleMin/Max clubs to TemplateMin/Max
 * TODO: test with iOS 26.3
 
