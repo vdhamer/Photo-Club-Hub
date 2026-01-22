@@ -1,6 +1,6 @@
 ### 2.9.1 (GitHub commit ???????) ??-02-2026
 
-USER FACING
+USER-FACING
 
 * TODO: optionally distinguish Fotobond pins on maps in color
 * TODO: concentricity in Liquid Glass?
@@ -12,6 +12,8 @@ STRUCTURAL
 * TODO: update documentation of Include feature of level1.json
 * TODO: add test for Include feature
 * TODO: investigate what AI can do for iOS apps
+* TODO: rename XampleMin/Max clubs to TemplateMin/Max
+* TODO: test with iOS 26.3
 
 CODE MAINTENANCE
 
