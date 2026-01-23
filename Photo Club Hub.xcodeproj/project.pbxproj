@@ -31,6 +31,8 @@
 		37B1A4692F0B18BB00854FBD /* museumsUS.level1.json in Resources */ = {isa = PBXBuildFile; fileRef = 37B1A4682F0B18A700854FBD /* museumsUS.level1.json */; };
 		37B39FAD2F1119FE004AA5D8 /* FotoclubVeghelMembersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B39FAC2F1119FE004AA5D8 /* FotoclubVeghelMembersProvider.swift */; };
 		37B39FAF2F111B20004AA5D8 /* fcVeghel.level2.json in Resources */ = {isa = PBXBuildFile; fileRef = 37B39FAE2F111B20004AA5D8 /* fcVeghel.level2.json */; };
+		37B534992F242F2A000EA5BB /* ffcShot71.level2.json in Resources */ = {isa = PBXBuildFile; fileRef = 37B534982F242F2A000EA5BB /* ffcShot71.level2.json */; };
+		37B5349B2F243171000EA5BB /* FFCShot71MembersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B5349A2F243171000EA5BB /* FFCShot71MembersProvider.swift */; };
 		37C014442EDA564B003B3901 /* Organization+Count.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C014432EDA564B003B3901 /* Organization+Count.swift */; };
 		37C014462EDA575B003B3901 /* Organization+Comparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C014452EDA575B003B3901 /* Organization+Comparable.swift */; };
 		37C014482EDA581F003B3901 /* FileOrganization+FindCreateUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C014472EDA581F003B3901 /* FileOrganization+FindCreateUpdate.swift */; };
@@ -196,6 +198,8 @@
 		37B1A4682F0B18A700854FBD /* museumsUS.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = museumsUS.level1.json; sourceTree = "<group>"; };
 		37B39FAC2F1119FE004AA5D8 /* FotoclubVeghelMembersProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FotoclubVeghelMembersProvider.swift; sourceTree = "<group>"; };
 		37B39FAE2F111B20004AA5D8 /* fcVeghel.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fcVeghel.level2.json; sourceTree = "<group>"; };
+		37B534982F242F2A000EA5BB /* ffcShot71.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ffcShot71.level2.json; sourceTree = "<group>"; };
+		37B5349A2F243171000EA5BB /* FFCShot71MembersProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFCShot71MembersProvider.swift; sourceTree = "<group>"; };
 		37C014432EDA564B003B3901 /* Organization+Count.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Organization+Count.swift"; sourceTree = "<group>"; };
 		37C014452EDA575B003B3901 /* Organization+Comparable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Organization+Comparable.swift"; sourceTree = "<group>"; };
 		37C014472EDA581F003B3901 /* FileOrganization+FindCreateUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileOrganization+FindCreateUpdate.swift"; sourceTree = "<group>"; };
@@ -535,18 +539,19 @@
 		D0621E832AE2DF8E000FFADB /* IndividualClubs */ = {
 			isa = PBXGroup;
 			children = (
-				D0DD2B7C2EF8A14F002210DA /* Persoonlijk03MembersProvider.swift */,
+				37B5349A2F243171000EA5BB /* FFCShot71MembersProvider.swift */,
 				D0A6155A2D91AEA90024EC9E /* FotoclubBellusImagoMembersProvider.swift */,
 				D0273E5A2DEE460E00C4F5E1 /* FotoclubEricameraMembersProvider.swift */,
+				37B39FAC2F1119FE004AA5D8 /* FotoclubVeghelMembersProvider.swift */,
 				D05414F62AC7499000D899D8 /* FotogroepDeGenderMembersProvider.swift */,
 				D0839DAC2DFCDBEE004DC584 /* FotogroepDenDungenMembersProvider.swift */,
 				D0273E5B2DEE460E00C4F5E1 /* FotogroepOirschotMembersProvider.swift */,
 				D0831A2C277F72590049AB84 /* FotogroepWaalreMembersProvider.swift */,
 				37C61B8E2E72091000C5BAEF /* FotokringSintMichielsgestel.swift */,
+				D0DD2B7C2EF8A14F002210DA /* Persoonlijk03MembersProvider.swift */,
 				D0FB52902E1F28560025E9A8 /* Persoonlijk16MembersProvider.swift */,
 				D05417372D31DDE300A2A579 /* XampleMaxMembersProvider.swift */,
 				D072D5E42D333E7500EA88DD /* XampleMinMembersProvider.swift */,
-				37B39FAC2F1119FE004AA5D8 /* FotoclubVeghelMembersProvider.swift */,
 			);
 			path = IndividualClubs;
 			sourceTree = "<group>";
@@ -867,6 +872,7 @@
 				37D1EA4E2EDDDD46008A5FE1 /* clubsNL03.level1.json */,
 				37DA3E502F06F96200AB7993 /* clubsXamples.level1.json */,
 				D06F109E2D84D8CC005AE931 /* empty.level0.json */,
+				37B534982F242F2A000EA5BB /* ffcShot71.level2.json */,
 				D0A615782D91B7A00024EC9E /* fcBellusImago.level2.json */,
 				D0F78AC92DFCCBFE00DE234D /* fcDenDungen.level2.json */,
 				D0273E482DEE42C800C4F5E1 /* fcEricamera.level2.json */,
@@ -1045,6 +1051,7 @@
 				37A74C032F145202003DCD06 /* museumsCN.level1.json in Resources */,
 				D0273E4A2DEE42C800C4F5E1 /* fgOirschot.level2.json in Resources */,
 				37DA3E112F06B63200AB7993 /* museumsNL.level1.json in Resources */,
+				37B534992F242F2A000EA5BB /* ffcShot71.level2.json in Resources */,
 				D0273E4B2DEE42C800C4F5E1 /* fcEricamera.level2.json in Resources */,
 				D0F871952D403D1700530D10 /* root.level1.json in Resources */,
 				D0A615792D91B7A00024EC9E /* fcBellusImago.level2.json in Resources */,
@@ -1158,6 +1165,7 @@
 				37E134B52E6F709500C61714 /* PreferencesView1718.swift in Sources */,
 				D0FF4D3E2DFF813600C640F9 /* LocalizedExpertiseResultList.swift in Sources */,
 				D0831A1F277F72270049AB84 /* FilteredMemberPortfoliosView2626.swift in Sources */,
+				37B5349B2F243171000EA5BB /* FFCShot71MembersProvider.swift in Sources */,
 				D02F88532C4C242C0043B25B /* String+Date.swift in Sources */,
 				D0ACCEE22DEF9BCD0002FACC /* FotoclubBellusImagoMembersProvider.swift in Sources */,
 				D0ACCED22DEF99800002FACC /* FotogroepDeGenderMembersProvider.swift in Sources */,

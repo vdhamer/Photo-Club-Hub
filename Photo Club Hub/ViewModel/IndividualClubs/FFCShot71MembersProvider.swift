@@ -1,13 +1,13 @@
 //
-//  FotoclubVeghelMembersProvider.swift
+//  FFCShot71MembersProvider.swift
 //  Photo Club Hub
 //
-//  Created by Peter van den Hamer on 09/01/2026.
+//  Created by Peter van den Hamer on 23/01/2026.
 //
 
 import CoreData // for PersistenceController
 
-final public class FotoclubVeghelMembersProvider: Sendable {
+final public class FFCShot71MembersProvider: Sendable {
 
     public init(bgContext: NSManagedObjectContext,
                 isBeingTested: Bool,
@@ -37,11 +37,11 @@ final public class FotoclubVeghelMembersProvider: Sendable {
 
     private func insertOnlineMemberData(bgContext: NSManagedObjectContext,
                                         isBeingTested: Bool,
-                                        town: String = "Veghel",
+                                        town: String = "Berlicum",
                                         useOnlyInBundleFile: Bool) {
-        let idPlus = OrganizationIdPlus(fullName: "Fotoclub Veghel",
+        let idPlus = OrganizationIdPlus(fullName: "FFC Shot71",
                                         town: town,
-                                        nickname: "fcVeghel")
+                                        nickname: "ffcShot71")
 
         let club = Organization.findCreateUpdate(context: bgContext,
                                                  organizationTypeEnum: .club,

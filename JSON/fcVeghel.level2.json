@@ -32,7 +32,12 @@
 
     "members": [
 
+        {
+          "name": {"givenName": "Dick", "infixName": "", "familyName": "Mandemaker"},
+          "optional": {
 
+          }
+        }
 
     ]
 }

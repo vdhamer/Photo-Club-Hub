@@ -1,0 +1,43 @@
+{
+    "club": {
+        "idPlus": {
+            "town": "Berlicum",
+            "fullName": "FFC Shot71",
+            "nickName": "ffcShot71"
+        },
+        "coordinates": {
+            "latitude": 51.663059,
+            "longitude": 5.4182475
+        },
+        "optional": {
+            "website": "https://www.shot71.nl",
+            "level2URL": "https://www.example.com/ffcShot71.level2.json",
+            "remark": [
+                {
+                    "language": "EN",
+                    "value": "The club was founded in 1971, and has separate meetups for photography, video, and audiovisual presentations."
+                },
+                {
+                    "language": "NL",
+                    "value": "De club is opgericht in 1971 en bestrijkt fotografie, film en AV presentaties."
+                }
+            ],
+            "maintainerEmail": "ritadekkers@home.nl",
+            "nlSpecific": {
+                "fotobondNumber": 1623
+            }
+        }
+    },
+
+
+    "members": [
+
+        {
+          "name": {"givenName": "Rita", "infixName": "", "familyName": "Dekkers"},
+          "optional": {
+
+          }
+        }
+
+    ]
+}

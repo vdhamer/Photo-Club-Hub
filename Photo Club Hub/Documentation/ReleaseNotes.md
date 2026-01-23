@@ -22,6 +22,10 @@ CODE MAINTENANCE
 * Tested with SwiftLint 0.63.1
 * Fixed minor TODO item in Model.swift (carryover from rlelease 2.9.0)
 
+DATA MAINTENANCE
+
+* Prepared for likely onboarding of club ffcShot71.
+
 This build #4656 was made using Xcode 26.3 and is intended for the App Store.
 
 ---------------------------------------------------------------------------
