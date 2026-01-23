@@ -19,8 +19,9 @@ STRUCTURAL
 
 CODE MAINTENANCE
 
-* Tested with SwiftLint 0.63.1
-* Fixed minor TODO item in Model.swift (carryover from rlelease 2.9.0)
+* Tested with SwiftLint 0.63.2 and iOS 26.2.1
+* Fixed minor TODO item in Model.swift (carryover from release 2.9.0)
+* Added first member to fcVeghel
 
 DATA MAINTENANCE
 
