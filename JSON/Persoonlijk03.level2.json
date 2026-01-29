@@ -30,7 +30,12 @@
 
     "members": [
 
+        {
+          "name": {"givenName": "Anneke", "infixName": "", "familyName": "Hooijer"},
+          "optional": {
 
+          }
+        }
 
     ]
 }
