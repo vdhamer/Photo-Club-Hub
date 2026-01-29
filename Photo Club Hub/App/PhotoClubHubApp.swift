@@ -165,6 +165,12 @@ extension PhotoClubHubApp {
             bgContext: makeBgContext(ctxName: "Level 2 loader ffcShot71"),
             isBeingTested: isBeingTested,
             useOnlyInBundleFile: useOnlyInBundleFile)
+
+        // load current/former members of container for FFC Shot71 (in region 16)
+        _ = FEGGemertMembersProvider(
+            bgContext: makeBgContext(ctxName: "Level 2 loader fegGemert"),
+            isBeingTested: isBeingTested,
+            useOnlyInBundleFile: useOnlyInBundleFile)
     }
 
     static func makeBgContext(ctxName: String) -> NSManagedObjectContext {

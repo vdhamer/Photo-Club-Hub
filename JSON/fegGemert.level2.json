@@ -1,0 +1,42 @@
+{
+    "club": {
+        "idPlus": {
+            "town": "Gemert",
+            "fullName": "Foto Expressie Groep Gemert",
+            "nickName": "fegGemert"
+        },
+        "coordinates": {
+            "latitude": 51.56025,
+            "longitude": 5.68508
+        },
+        "optional": {
+            "website": "http://www.fotoclubgemert.nl/",
+            "level2URL": "https://www.example.com/fegGemert.level2.json",
+            "remark": [
+                {
+                    "language": "EN",
+                    "value": "The club was founded in 1980 as an initiative by the local photographer/painter Piet Kuppens who gave photography lessons."
+                },
+                {
+                    "language": "NL",
+                    "value": "De club is in 1980 opgericht door de dorpsfotograaf/schilder Piet Kuppens als een soort fotografieschool. Het woord Expressie in de clubnaam stamt uit die periode."
+                }
+            ],
+            "nlSpecific": {
+                "fotobondNumber": 1632
+            }
+        }
+    },
+
+
+    "members": [
+
+        {
+          "name": {"givenName": "Peter", "infixName": "van", "familyName": "Gils"},
+          "optional": {
+
+          }
+        }
+
+    ]
+}

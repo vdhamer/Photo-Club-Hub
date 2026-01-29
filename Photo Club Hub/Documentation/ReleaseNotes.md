@@ -4,18 +4,17 @@ USER-FACING
 
 * todo: optionally distinguish Fotobond pins on maps in color
 * todo: concentricity in Liquid Glass?
-* TODO: display expertises on Who's Who screen
-* TODO: more search functionality on Who's Who screen
-* TODO: more search functionality on Portfolio screen
+* TODO: display expertises on Who's Who screen <<<<
+* TODO: more search functionality on Who's Who screen <<<<
+* TODO: more search functionality on Portfolio screen <<<<
 
 STRUCTURAL
 
 * TODO: update documentation of Include feature of level1.json
-* todo: add test for Include feature
-* TODO: first investigate what AI can do for iOS app
-* TODO: rename XampleMin/Max clubs to TemplateMin/Max
-* TODO: test with iOS 26.3
-* TODO: create empty Level 2 for fcGemert
+* TODO: add test for Include feature
+* TODO: first investigate what AI can do for iOS apps
+* TODO: rename XampleMin/Max clubs to TemplateMin/Max <<<<
+* TODO: test with iOS 26.3 <<<<
 
 CODE MAINTENANCE
 
@@ -26,6 +25,7 @@ CODE MAINTENANCE
 DATA MAINTENANCE
 
 * Prepared for likely onboarding of club ffcShot71.
+* TODO: create empty Level 2 for fcGemert <<<<<
 
 This build #4656 was made using Xcode 26.3 and is intended for the App Store.
 

@@ -13,6 +13,8 @@
 		3723DAE92F008E25006E2BB4 /* root_.level1.json in Resources */ = {isa = PBXBuildFile; fileRef = 3723DAE82F008E25006E2BB4 /* root_.level1.json */; };
 		3723DAEC2F008F2F006E2BB4 /* whiteboard.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3723DAEB2F008F1E006E2BB4 /* whiteboard.txt */; };
 		373EE0D12EED808700F311BE /* FotobondNumbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373EE0D02EED808700F311BE /* FotobondNumbers.swift */; };
+		376855672F2BA327002590F6 /* fegGemert.level2.json in Resources */ = {isa = PBXBuildFile; fileRef = 376855662F2BA327002590F6 /* fegGemert.level2.json */; };
+		376855692F2BA418002590F6 /* FEGGemertMembersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376855682F2BA418002590F6 /* FEGGemertMembersProvider.swift */; };
 		3768E6622F0D2BDC00E12F6F /* Level1JsonReader+Include.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3768E6612F0D2BDC00E12F6F /* Level1JsonReader+Include.swift */; };
 		3768E6B42F0DBB9B00E12F6F /* museumsAU.level1.json in Resources */ = {isa = PBXBuildFile; fileRef = 3768E6B32F0DBB9B00E12F6F /* museumsAU.level1.json */; };
 		3768E6CB2F0DC0D600E12F6F /* museumsJP.level1.json in Resources */ = {isa = PBXBuildFile; fileRef = 3768E6CA2F0DC0D600E12F6F /* museumsJP.level1.json */; };
@@ -181,6 +183,8 @@
 		375A21DE2F0EC4AC00544042 /* Photo_Club_Hub_2_9_0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_9_0.xcdatamodel; sourceTree = "<group>"; };
 		375CC66B2EE0A10300B618DB /* hierarchyDemo.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = hierarchyDemo.level1.json; sourceTree = "<group>"; };
 		3764D5E32EDDB0D9005A2539 /* FotoclubHubIntro_NL_20251129.pptx */ = {isa = PBXFileReference; lastKnownFileType = file; path = FotoclubHubIntro_NL_20251129.pptx; sourceTree = "<group>"; };
+		376855662F2BA327002590F6 /* fegGemert.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fegGemert.level2.json; sourceTree = "<group>"; };
+		376855682F2BA418002590F6 /* FEGGemertMembersProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FEGGemertMembersProvider.swift; sourceTree = "<group>"; };
 		3768E6612F0D2BDC00E12F6F /* Level1JsonReader+Include.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Level1JsonReader+Include.swift"; sourceTree = "<group>"; };
 		3768E6B32F0DBB9B00E12F6F /* museumsAU.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = museumsAU.level1.json; sourceTree = "<group>"; };
 		3768E6C92F0DC0D600E12F6F /* museumsDE.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = museumsDE.level1.json; sourceTree = "<group>"; };
@@ -540,6 +544,7 @@
 		D0621E832AE2DF8E000FFADB /* IndividualClubs */ = {
 			isa = PBXGroup;
 			children = (
+				376855682F2BA418002590F6 /* FEGGemertMembersProvider.swift */,
 				37B5349A2F243171000EA5BB /* FFCShot71MembersProvider.swift */,
 				D0A6155A2D91AEA90024EC9E /* FotoclubBellusImagoMembersProvider.swift */,
 				D0273E5A2DEE460E00C4F5E1 /* FotoclubEricameraMembersProvider.swift */,
@@ -874,6 +879,7 @@
 				37D1EA4E2EDDDD46008A5FE1 /* clubsNL03.level1.json */,
 				37DA3E502F06F96200AB7993 /* clubsXamples.level1.json */,
 				D06F109E2D84D8CC005AE931 /* empty.level0.json */,
+				376855662F2BA327002590F6 /* fegGemert.level2.json */,
 				37B534982F242F2A000EA5BB /* ffcShot71.level2.json */,
 				D0A615782D91B7A00024EC9E /* fcBellusImago.level2.json */,
 				D0F78AC92DFCCBFE00DE234D /* fcDenDungen.level2.json */,
@@ -1059,6 +1065,7 @@
 				D0A615792D91B7A00024EC9E /* fcBellusImago.level2.json in Resources */,
 				D0DFBEF42D47036900CB9E73 /* PhotoClubHub.Readme.xcstrings in Resources */,
 				D0F8719A2D403D1700530D10 /* fgDeGender.level2.json in Resources */,
+				376855672F2BA327002590F6 /* fegGemert.level2.json in Resources */,
 				D0F8719C2D403D1700530D10 /* root.level0.json in Resources */,
 				D06D08DE2C28835D00872BC2 /* Settings.bundle in Resources */,
 				37CAF2C92EEC398600BB1D36 /* IndividueelBO.level2.json in Resources */,
@@ -1177,6 +1184,7 @@
 				D0ADF4AE27922DCA00535432 /* MemberRolesAndStatus.swift in Sources */,
 				D0447C882BA510AF00982A1E /* Language.swift in Sources */,
 				D0ACCFD92DEFADD40002FACC /* XampleMaxMembersProvider.swift in Sources */,
+				376855692F2BA418002590F6 /* FEGGemertMembersProvider.swift in Sources */,
 				D0273F632DEE555C00C4F5E1 /* FetchAndProcessFile.swift in Sources */,
 				D0273F642DEE555C00C4F5E1 /* FileSelector.swift in Sources */,
 				D0273E6D2DEE484C00C4F5E1 /* FotoclubEricameraMembersProvider.swift in Sources */,
