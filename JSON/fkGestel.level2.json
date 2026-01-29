@@ -167,7 +167,7 @@
             },
             "optional": {
                 "featuredImage": "https://www.fotokring-gestel.nl/wp-content/uploads/2026/01/w-jvg-k.jpg",
-                "expertises": ["Nature", "Birds"],
+                "expertises": ["Nature", "Bird"],
                 "level3URL": "https://www.fotokring-gestel.nl/hub_wendy/"
             }
         }
