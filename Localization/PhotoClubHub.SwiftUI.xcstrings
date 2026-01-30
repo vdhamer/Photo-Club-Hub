@@ -427,6 +427,23 @@
         }
       }
     },
+    "No photo clubs or museums seem to be currently loaded.\nTry dragging down the Clubs and Museums screen to reload the default clubs." : {
+      "comment" : "Hint to the user if the database returns zero Organizations.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No photo clubs or museums seem to be currently loaded.\nTry dragging down the Clubs and Museums screen to reload the default clubs."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Er zijn geen Fotoclubs of Musea momenteel geladen.\nDoor dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorbeeldclubs geladen. "
+          }
+        }
+      }
+    },
     "No photo clubs seem to be currently loaded.\nTry dragging down the Clubs and Museums screen to reload the default clubs." : {
       "comment" : "Hint to the user if the database returns zero PhotoClubs.",
       "localizations" : {
@@ -439,7 +456,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Er zijn geen Fotogroepen momenteel geladen.\nDoor dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorbeeldclubs geladen. "
+            "value" : "Er zijn geen Fotoclubs momenteel geladen.\nDoor dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorbeeldclubs geladen. "
           }
         }
       }

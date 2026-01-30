@@ -5,7 +5,8 @@
 //  Created by Peter van den Hamer on 07/01/2022.
 //
 
-import SwiftUI
+import SwiftUI // for View
+import CoreData // for NSPersistentContainer
 
 @available(iOS 26.0, *)
 struct OrganizationListView2626: View {
@@ -21,8 +22,8 @@ struct OrganizationListView2626: View {
 
     private static let predicateAll = NSPredicate(format: "TRUEPREDICATE")
     private var navigationTitle = String(localized: "Clubs and Museums",
-                                             table: "PhotoClubHub.SwiftUI",
-                                             comment: "Title of page with maps for Clubs and Museums")
+                                         table: "PhotoClubHub.SwiftUI",
+                                         comment: "Title of page with maps for Clubs and Museums")
 
     init(navigationTitle: String? = nil) {
         if let navigationTitle {
@@ -98,14 +99,15 @@ struct OrganizationListView2626: View {
 struct NoClubsText2626: View {
     var body: some View {
         Text("""
-             No photo clubs seem to be currently loaded.
+             No photo clubs or museums seem to be currently loaded.
              Try dragging down the Clubs and Museums screen to reload the default clubs.
              """,
              tableName: "PhotoClubHub.SwiftUI",
-             comment: "Hint to the user if the database returns zero PhotoClubs.")
+             comment: "Hint to the user if the database returns zero Organizations.")
     }
 }
 
+// previewing on Canvas doesn't work
 @available(iOS 26.0, *)
 struct PhotoClubListView2626_Previews: PreviewProvider {
     static var previews: some View {
