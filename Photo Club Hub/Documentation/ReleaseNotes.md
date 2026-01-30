@@ -2,8 +2,8 @@
 
 USER-FACING
 
-* todo: optionally distinguish Fotobond pins on maps in color
-* todo: concentricity in Liquid Glass?
+* TODO: optionally distinguish Fotobond pins on maps in color
+* TODO: concentricity in Liquid Glass?
 * TODO: display expertises on Who's Who screen <<<<
 * TODO: more search functionality on Who's Who screen <<<<
 * TODO: more search functionality on Portfolio screen <<<<
