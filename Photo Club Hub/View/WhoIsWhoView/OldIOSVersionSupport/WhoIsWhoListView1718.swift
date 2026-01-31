@@ -142,7 +142,7 @@ struct WhoIsWhoListView1718: View {
 //    static var previews: some View {
 //        NavigationStack {
 //            WhoIsWhoListView(searchText: $searchText,
-//                             navigationTitle: String("PhotographerListView")
+//                             organizationLabel: String("PhotographerListView")
 //                )
 //                .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
 //        }

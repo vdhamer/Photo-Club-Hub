@@ -495,6 +495,24 @@
         }
       }
     },
+    "No photo clubs seem to be currently loaded.\nTry dragging down the Clubs and Museums screen to reload the default clubs." : {
+      "comment" : "Hint to the user if the database returns zero PhotoClubs.",
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No photo clubs seem to be currently loaded.\nTry dragging down the Clubs and Museums screen to reload the default clubs."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Er zijn geen Fotoclubs momenteel geladen.\nDoor dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorbeeldclubs geladen. "
+          }
+        }
+      }
+    },
     "of1" : {
       "comment" : "X of Y portfolio(s) shown (due to various forms of filtering)",
       "localizations" : {

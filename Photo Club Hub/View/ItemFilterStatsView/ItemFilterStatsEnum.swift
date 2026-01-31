@@ -6,8 +6,6 @@
 //
 
 enum ItemFilterStatsEnum {
-
     case photographer
     case organization
-
 }

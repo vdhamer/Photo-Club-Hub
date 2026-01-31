@@ -22,7 +22,22 @@ struct OrganizationListView2626: View {
 
     private static let predicateAll = NSPredicate(format: "TRUEPREDICATE")
 
-    private var navigationTitle: String { // title depends on `showClubs`, `showTestClubs` and `showMuseums` settings
+    /// A localized title for the Organizations screen derived from user preferences.
+    /// The`organizationLabel` is also used when displaying the count of shown organizations (e.g. "35 museums").
+    ///
+    /// This computed property inspects the current `PreferencesViewModel().preferences` flags
+    /// — `showClubs`, `showTestClubs`, and `showMuseums` — to decide which section(s)
+    /// of organizations are visible, and returns an appropriate, localized string.
+    ///
+    /// Logic overview:
+    /// - If clubs (including test clubs) are shown and museums are hidden, returns "Clubs".
+    /// - If only museums are shown, returns "Museums".
+    /// - If nothing is shown, returns the neutral "Organizations".
+    /// - In all mixed/combined cases (both clubs and museums visible), returns "Organizations".
+    ///
+    /// The returned value is localized using the "PhotoClubHub.SwiftUI" strings table.
+    /// The returned value starts with a capital, so must be converted to lower case where needed.
+    private var organizationLabel: String { // title depends on `showClubs`, `showTestClubs` and `showMuseums` settings
         let preferences = PreferencesViewModel().preferences
         let showClubs = preferences.showClubs
         let showTestClubs = preferences.showTestClubs
@@ -50,7 +65,7 @@ struct OrganizationListView2626: View {
         return String(localized: "Organizations",
                       table: "PhotoClubHub.SwiftUI",
                       comment: "Title of page with maps for Clubs and Museums")
-    }
+    } // TODO move to another file
 
     var body: some View {
         ScrollView(.vertical, showsIndicators: true) {
@@ -96,7 +111,7 @@ struct OrganizationListView2626: View {
             try? await locationManager.startCurrentLocationUpdates()
             // remember that nothing will run here until the for try await loop finishes
         }
-        .navigationTitle(navigationTitle)
+        .navigationTitle(organizationLabel)
         .searchable(text: $searchText, placement: .automatic,
                     // .automatic
                     // .toolbar The search field is placed in the toolbar. To right of person.text.rect.cust

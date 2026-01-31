@@ -931,8 +931,8 @@
 		D0FE77E32BB9AE9000272077 /* ItemFilterStatsView */ = {
 			isa = PBXGroup;
 			children = (
-				D0C8E3A12BB81B4A00348D97 /* ItemFilterStatsView.swift */,
 				D0FE77E42BB9AEE900272077 /* ItemFilterStatsEnum.swift */,
+				D0C8E3A12BB81B4A00348D97 /* ItemFilterStatsView.swift */,
 			);
 			path = ItemFilterStatsView;
 			sourceTree = "<group>";

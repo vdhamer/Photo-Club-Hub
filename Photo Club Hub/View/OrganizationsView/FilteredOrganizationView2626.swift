@@ -81,7 +81,7 @@ struct FilteredOrganizationView2626: View {
                     VStack(alignment: .leading) {
                         Text(verbatim: layoutDirection == .leftToRight ?
                              "\(filteredOrganization.localizedTown), \(filteredOrganization.localizedCountry)" :
-                                "\(filteredOrganization.localizedCountry) ,\(filteredOrganization.localizedTown)")
+                             "\(filteredOrganization.localizedCountry) ,\(filteredOrganization.localizedTown)")
                         .font(.subheadline)
                         if filteredOrganization.members.count > 0 { // hide for museums and clubs without members
                             Text("\(filteredOrganization.members.count) members (inc. ex-members)",
