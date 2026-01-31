@@ -20,14 +20,35 @@ struct OrganizationListView1718: View {
     private var organizations: FetchedResults<Organization>
 
     private static let predicateAll = NSPredicate(format: "TRUEPREDICATE")
-    private var navigationTitle = String(localized: "Clubs and Museums",
-                                             table: "PhotoClubHub.SwiftUI",
-                                             comment: "Title of page with maps for Clubs and Museums")
 
-    init(navigationTitle: String? = nil) {
-        if let navigationTitle {
-            self.navigationTitle = navigationTitle
+    private var navigationTitle: String { // title depends on `showClubs`, `showTestClubs` and `showMuseums` settings
+        let preferences = PreferencesViewModel().preferences
+        let showClubs = preferences.showClubs
+        let showTestClubs = preferences.showTestClubs
+        let showMuseums = preferences.showMuseums
+
+        if (showClubs || showTestClubs) && !showMuseums {
+            return String(localized: "Clubs",
+                          table: "PhotoClubHub.SwiftUI",
+                          comment: "Title of page with maps for Clubs")
         }
+
+        if !showClubs && !showTestClubs && showMuseums {
+            return String(localized: "Museums",
+                          table: "PhotoClubHub.SwiftUI",
+                          comment: "Title of page with maps for Museums")
+        }
+
+        if !showClubs && !showTestClubs && !showMuseums {
+            return String(localized: "Clubs and Museums are disabled",
+                          table: "PhotoClubHub.SwiftUI",
+                          comment: "Title of page with maps for Clubs and Museums")
+        }
+
+        // if (showClubs || showTestClubs) && showMuseums
+        return String(localized: "Clubs and Museums",
+                      table: "PhotoClubHub.SwiftUI",
+                      comment: "Title of page with maps for Clubs and Museums")
     }
 
     var body: some View {
@@ -97,22 +118,19 @@ struct OrganizationListView1718: View {
 struct NoClubsText1718: View {
     var body: some View {
         Text("""
-             No photo clubs seem to be currently loaded.
+             No photo clubs or museums seem to be currently loaded.
              Try dragging down the Clubs and Museums screen to reload the default clubs.
              """,
              tableName: "PhotoClubHub.SwiftUI",
-             comment: "Hint to the user if the database returns zero PhotoClubs.")
+             comment: "Hint to the user if the database returns zero Organizations.")
     }
 }
 
 @available(iOS, obsoleted: 19.0, message: "Please use 'OrganizationListView2626' for versions above iOS 18.x")
 struct PhotoClubListView1718_Previews: PreviewProvider {
-    static let predicate = NSPredicate(format: "fullName_ = %@ || fullName_ = %@ || fullName_ = %@",
-                                       argumentArray: ["PhotoClub1", "PhotoClub2", "PhotoClub3"])
-
     static var previews: some View {
         NavigationStack {
-            OrganizationListView1718(navigationTitle: String("PhotoClubView"))
+            OrganizationListView1718()
                 .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
         }
     }

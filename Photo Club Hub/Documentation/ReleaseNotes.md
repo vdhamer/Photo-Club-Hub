@@ -16,6 +16,10 @@ STRUCTURAL
 * TODO: rename XampleMin/Max clubs to TemplateMin/Max <<<<
 * TODO: test with iOS 26.3 <<<<
 
+CLUBS AND MUSEUMS SCREEN
+
+* Screen title reflects whether clubs or museums are being shown (see Preferences).
+
 CODE MAINTENANCE
 
 * Tested with SwiftLint 0.63.2 and iOS 26.2.1
@@ -25,7 +29,7 @@ CODE MAINTENANCE
 DATA MAINTENANCE
 
 * Prepared for likely onboarding of club ffcShot71.
-* TODO: create empty Level 2 for fcGemert <<<<<
+* Created initial Level 2 for fcGemert
 
 This build #4656 was made using Xcode 26.3 and is intended for the App Store.
 

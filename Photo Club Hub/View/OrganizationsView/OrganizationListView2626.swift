@@ -21,14 +21,35 @@ struct OrganizationListView2626: View {
     private var organizations: FetchedResults<Organization>
 
     private static let predicateAll = NSPredicate(format: "TRUEPREDICATE")
-    private var navigationTitle = String(localized: "Clubs and Museums",
-                                         table: "PhotoClubHub.SwiftUI",
-                                         comment: "Title of page with maps for Clubs and Museums")
 
-    init(navigationTitle: String? = nil) {
-        if let navigationTitle {
-            self.navigationTitle = navigationTitle
+    private var navigationTitle: String { // title depends on `showClubs`, `showTestClubs` and `showMuseums` settings
+        let preferences = PreferencesViewModel().preferences
+        let showClubs = preferences.showClubs
+        let showTestClubs = preferences.showTestClubs
+        let showMuseums = preferences.showMuseums
+
+        if (showClubs || showTestClubs) && !showMuseums {
+            return String(localized: "Clubs",
+                          table: "PhotoClubHub.SwiftUI",
+                          comment: "Title of page with maps for Clubs")
         }
+
+        if !showClubs && !showTestClubs && showMuseums {
+            return String(localized: "Museums",
+                          table: "PhotoClubHub.SwiftUI",
+                          comment: "Title of page with maps for Museums")
+        }
+
+        if !showClubs && !showTestClubs && !showMuseums {
+            return String(localized: "Clubs and Museums are disabled",
+                          table: "PhotoClubHub.SwiftUI",
+                          comment: "Title of page with maps for Clubs and Museums")
+        }
+
+        // if (showClubs || showTestClubs) && showMuseums
+        return String(localized: "Clubs and Museums",
+                      table: "PhotoClubHub.SwiftUI",
+                      comment: "Title of page with maps for Clubs and Museums")
     }
 
     var body: some View {
@@ -112,7 +133,7 @@ struct NoClubsText2626: View {
 struct PhotoClubListView2626_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
-            OrganizationListView2626(navigationTitle: String("PhotoClubView"))
+            OrganizationListView2626()
                 .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
         }
     }

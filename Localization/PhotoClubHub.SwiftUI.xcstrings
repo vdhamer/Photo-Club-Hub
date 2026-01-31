@@ -239,6 +239,23 @@
         }
       }
     },
+    "Clubs" : {
+      "comment" : "Title of page with maps for Clubs",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clubs"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clubs"
+          }
+        }
+      }
+    },
     "Clubs and Museums" : {
       "comment" : "In Preferences, section title\nTitle of page with maps for Clubs and Museums",
       "localizations" : {
@@ -252,6 +269,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Clubs en Musea"
+          }
+        }
+      }
+    },
+    "Clubs and Museums are disabled" : {
+      "comment" : "Title of page with maps for Clubs and Museums",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clubs and Museums are disabled"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clubs en Musea staan beiden uit"
           }
         }
       }
@@ -410,6 +444,23 @@
         }
       }
     },
+    "Museums" : {
+      "comment" : "Title of page with maps for Museums",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Museums"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Musea"
+          }
+        }
+      }
+    },
     "Next" : {
       "comment" : "Button text",
       "localizations" : {
@@ -446,6 +497,7 @@
     },
     "No photo clubs seem to be currently loaded.\nTry dragging down the Clubs and Museums screen to reload the default clubs." : {
       "comment" : "Hint to the user if the database returns zero PhotoClubs.",
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
