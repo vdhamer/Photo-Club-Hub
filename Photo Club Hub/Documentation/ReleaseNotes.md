@@ -20,6 +20,10 @@ ORGANIZATIONS SCREEN
 * Screen title changed from "Clubs and Museums" and can display "Clubs" or "Museum" (select in Preferences).
 * TODO: fix Wikipedia link <<<<
 
+CLUBS AND MUSEUMS SCREEN
+
+* Screen title reflects whether clubs or museums are being shown (see Preferences).
+
 CODE MAINTENANCE
 
 * Tested with SwiftLint 0.63.2 and iOS 26.2.1
