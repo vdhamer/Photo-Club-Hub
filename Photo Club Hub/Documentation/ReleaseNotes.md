@@ -14,18 +14,23 @@ STRUCTURAL
 * TODO: add test for Include feature
 * TODO: first investigate what AI can do for iOS apps
 * TODO: rename XampleMin/Max clubs to TemplateMin/Max <<<<
-* TODO: test with iOS 26.3 <<<<
+
+ORGANIZATIONS SCREEN
+
+* Screen title changed from "Clubs and Museums" and can display "Clubs" or "Museum" (select in Preferences).
+* TODO: fix Wikipedia link <<<<
 
 CODE MAINTENANCE
 
 * Tested with SwiftLint 0.63.2 and iOS 26.2.1
 * Fixed minor TODO item in Model.swift (carryover from release 2.9.0)
 * Added first member to fcVeghel
+* TODO: test with iOS 26.3 <<<<
 
 DATA MAINTENANCE
 
 * Prepared for likely onboarding of club ffcShot71.
-* TODO: create empty Level 2 for fcGemert <<<<<
+* Created initial Level 2 for fcGemert
 
 This build #4656 was made using Xcode 26.3 and is intended for the App Store.
 

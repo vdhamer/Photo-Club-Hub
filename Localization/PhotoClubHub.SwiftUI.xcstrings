@@ -239,6 +239,23 @@
         }
       }
     },
+    "Clubs" : {
+      "comment" : "Title of page with maps for Clubs",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clubs"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clubs"
+          }
+        }
+      }
+    },
     "Clubs and Museums" : {
       "comment" : "In Preferences, section title\nTitle of page with maps for Clubs and Museums",
       "localizations" : {
@@ -252,6 +269,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Clubs en Musea"
+          }
+        }
+      }
+    },
+    "Clubs and Museums are disabled" : {
+      "comment" : "Title of page with maps for Clubs and Museums",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clubs and Museums are disabled"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clubs en Musea staan beiden uit"
           }
         }
       }
@@ -410,6 +444,23 @@
         }
       }
     },
+    "Museums" : {
+      "comment" : "Title of page with maps for Museums",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Museums"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Musea"
+          }
+        }
+      }
+    },
     "Next" : {
       "comment" : "Button text",
       "localizations" : {
@@ -440,23 +491,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Er zijn geen Fotoclubs of Musea momenteel geladen.\nDoor dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorbeeldclubs geladen. "
-          }
-        }
-      }
-    },
-    "No photo clubs seem to be currently loaded.\nTry dragging down the Clubs and Museums screen to reload the default clubs." : {
-      "comment" : "Hint to the user if the database returns zero PhotoClubs.",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No photo clubs seem to be currently loaded.\nTry dragging down the Clubs and Museums screen to reload the default clubs."
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Er zijn geen Fotoclubs momenteel geladen.\nDoor dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorbeeldclubs geladen. "
           }
         }
       }
@@ -508,6 +542,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Opties bij Instellingen"
+          }
+        }
+      }
+    },
+    "Organizations" : {
+      "comment" : "Title of page with maps for Clubs and Museums",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Organizations"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Organisaties"
           }
         }
       }
