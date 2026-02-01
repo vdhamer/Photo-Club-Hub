@@ -22,7 +22,7 @@
     <a href="#the-user-interface-screens">The User Interface Screens</a>
           <ul>
             <li><a href="#the-portfolios-screen">The Portfolios Screen</a></li>
-            <li><a href="#the-clubs-and-museums-screen">The Clubs and Museums Screen</a></li>
+            <li><a href="#the-clubs-and-museums-screen">The Organizations Screen</a></li>
             <li><a href="#the-images-screen">The Images Screen</a></li>
             <li><a href="#the-preferences-screen">The Preferences Screen</a></li>
             <li><a href="#the-readme-screen">The Readme Screen</a></li>
@@ -222,9 +222,9 @@ Swiping left deletes an entry, but this is not normally needed and is not perman
 
 ![Portfolios Screen](images/portfoliosScreen.png "Portfolios Screen")
 
-### The `Clubs and Museums` Screen
+### The `Organizations` Screen
 
-The `Clubs and Museums` screen lists all photo clubs that are known to the app.
+The `Organizations` screen lists all photo clubs that are known to the app.
 Each entry predominantly contains a map showing where the club is located and optionally your current location.
 A button with a lock icon toggles whether the map is can be controlled interactively (scroll, zoom, rotate, 3D).
 By default, the maps are not interactive. This mode helps scroll through the list of clubs rather than scrolling within a map.
@@ -233,7 +233,7 @@ A _blue_ pin shows the location of any other photo club that happens to be in th
 The screen can also show any photo museums that happen to be in sight. These have different markers than the photo clubs.
 The plan is that the screen can switch between listing all photo clubs and listing all photo museums.
 
-![Clubs and Museums Screen](images/clubsMuseumsScreen.png "Clubs and Museums Screen")
+![Organizations Screen](images/clubsMuseumsScreen.png "Organizations Screen")
 
 ### The `Images` Screen
 
@@ -339,7 +339,7 @@ The HTML version also covers the cases where someone wants to view the  the info
 
 ### Searchable Lists
 
-The three screens with long lists (`Portfolios`, `Clubs and Museums`, `Who's Who`) each have a Search Bar
+The three screens with long lists (`Portfolios`, `Organizations`, `Who's Who`) each have a Search Bar
 where you can enter what you are looking for. This reduces the list to items that match that filter criterion.</p>
 
 <details><summary>Details on the Search Bar(click to expand)</summary></p>
@@ -351,8 +351,8 @@ The text you type inside the search bar is matched against key fields for the re
 
 - In the `Portfolios` screen, a search scans photographers' full names.
   Searching on `Jan` might return `Jan Stege`, `Ariejan van Twisk` and `Jos Jansen`.
-  If you need to search on club names, go to the `Clubs and Museums` screen.
-- In the `Clubs and Museums` screen, searches try to match against the organization names and towns.
+  If you need to search on club names, go to the `Organizations` screen.
+- In the `Organizations` screen, searches try to match against the organization names and towns.
   Searching on `Ber` might match `FFC Shot71 (Berlicum)` and `Museum für Fotografie (Berlin)` and `The Victoria & Albert Museum (London)`.
   Note that the town is the location specified in the `root.level1.json` file and _not_ its translated version, which can be different.
 - In the `Who's Who` screen, searches try to match the photographer's full name.
@@ -431,7 +431,7 @@ Another application of _pull down to refresh_ is to force a reload of online dat
 
 ### Fancy scrolling
 
-The _Clubs and Museums_ and _Who's Who_ screens try to prevent showing partial maps or partial photographer info.
+The _Organizations_ and _Who's Who_ screens try to prevent showing partial maps or partial photographer info.
 </p>
 
 <details><summary>Details about smart scrolling</summary></p>
@@ -585,7 +585,7 @@ The optional `usage` text can be defined in multiple languages (preferably at le
 ### Level 1. Adding Clubs
 
 Adding photo clubs (or museums) to get to `Level 1` requires providing a name, location and a few optional URLs. 
-This enables the app to list the items on the `Clubs and Museums` screen and display them using location markers on the maps.
+This enables the app to list the items on the `Organizations` screen and display them using location markers on the maps.
 
 `Level 1` data is technically stored in a _single_ `root.level1.json`
 [file](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/root.level1.json)
