@@ -79,7 +79,7 @@ extension PhotoClubHubApp {
 
         // MARK: - Level 1
 
-        // load list of photo clubs and museums from root.Level1.json file
+        // load list of organizations from root.Level1.json file
         _ = Level1JsonReader(
             bgContext: makeBgContext(ctxName: "Level 1 loader for root"),
             fileName: "root_",

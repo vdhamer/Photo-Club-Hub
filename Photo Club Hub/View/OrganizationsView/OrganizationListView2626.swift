@@ -38,15 +38,15 @@ struct OrganizationListView2626: View {
             VStack(alignment: .leading) {
                 Text("Organizations_Caption_1",
                      tableName: "PhotoClubHub.SwiftUI",
-                     comment: "Shown in gray at the bottom of the Clubs and Museums page (1/3).")
+                     comment: "Shown in gray at the bottom of the Organizations page (1/3).")
                 Divider()
                 Text("Organizations_Caption_2",
                      tableName: "PhotoClubHub.SwiftUI",
-                     comment: "Shown in gray at the bottom of the Clubs and Museums page (2/3).")
+                     comment: "Shown in gray at the bottom of the Organizations page (2/3).")
                 Divider()
                 Text("Organizations_Caption_3",
                      tableName: "PhotoClubHub.SwiftUI",
-                     comment: "Shown in gray at the bottom of the Clubs and Museums page (3/3).")
+                     comment: "Shown in gray at the bottom of the Organizations page (3/3).")
             }
             .foregroundColor(Color.secondary)
             .padding(.horizontal)
@@ -75,7 +75,7 @@ struct OrganizationListView2626: View {
                     prompt: Text("Search names and towns",
                                  tableName: "PhotoClubHub.SwiftUI",
                                  comment: """
-                                          Field on the Clubs and Museums page that allows the user to \
+                                          Field on the Organizations page that allows the user to \
                                           filter the members based on a fragment of the organization name or town.
                                           """
                                 ))
@@ -91,7 +91,7 @@ struct NoClubsText2626: View {
     var body: some View {
         Text("""
              No photo clubs or museums seem to be currently loaded.
-             Try dragging down the Clubs and Museums screen to reload the default clubs.
+             Try dragging down the Organizations screen to reload the default clubs.
              """,
              tableName: "PhotoClubHub.SwiftUI",
              comment: "Hint to the user if the database returns zero Organizations.")

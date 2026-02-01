@@ -117,7 +117,7 @@ struct PreferencesView2626: View {
                         }
                     }) // end of Member Categories section
 
-                    Section(header: Text("Clubs and Museums",
+                    Section(header: Text("Organizations",
                                          tableName: "PhotoClubHub.SwiftUI",
                                          comment: "In Preferences, section title"),
                             content: {

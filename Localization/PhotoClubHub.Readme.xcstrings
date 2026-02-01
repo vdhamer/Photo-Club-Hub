@@ -223,13 +223,13 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Entering part of person’s name in the Search bar (on the _Portfolios_ and _Who’s Who_ screens) will find people with that name. The _Clubs and Museums_ screen simultaneously searches for matches in the club/museum name and in its specified location (“town”)."
+            "value" : "Entering part of person’s name in the Search bar (on the _Portfolios_ and _Who’s Who_ screens) will find people with that name. The _Organizations_ screen simultaneously searches for matches in the club/museum name and in its specified location (“town”)."
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Op het _Portfolio's_ scherm kan men zowel op de naam van de fotograaf als op een expertisegebied gebied zoeken. Op het _Clubs en Musea_ scherm kan men op de clubnaam en op gemeente zoeken."
+            "value" : "Op het _Portfolio's_ scherm kan men zowel op de naam van de fotograaf als op een expertisegebied gebied zoeken. Op het _Orgnisaties_ scherm kan men op de clubnaam en op gemeente zoeken."
           }
         }
       }
@@ -563,13 +563,13 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "The _Clubs and Museums_ screen and the _Who’s Who_ screen feature _smart scrolling_, as introduced in iOS 17. This tries to prevent an item in a list from being partially visible. The _Portfolios_ screen does not currently support smart scrolling for technical reasons."
+            "value" : "The _Organizations_ screen and the _Who’s Who_ screen feature _smart scrolling_, as introduced in iOS 17. This tries to prevent an item in a list from being partially visible. The _Portfolios_ screen does not currently support smart scrolling for technical reasons."
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Het _Clubs en Musea_ scherm and het _Namenlijst_ scherm ondersteunen zogenaamde \"smart scrolling\". Smart scrolling voorkomt dat een lijst tot stilstand komt op een onhandige positie. Zo voorkomt de app dat de gebruiker een halve foto of halve landkaart op het schermpje ziet."
+            "value" : "Het _Organisaties_ scherm and het _Namenlijst_ scherm ondersteunen zogenaamde \"smart scrolling\". Smart scrolling voorkomt dat een lijst tot stilstand komt op een onhandige positie. Zo voorkomt de app dat de gebruiker een halve foto of halve landkaart op het schermpje ziet."
           }
         }
       }
@@ -886,13 +886,13 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "__Level 1__ requires providing the club’s name, location and a few optional links. Once it is on Level 1, the club is listed on the _Clubs and Museums_ screen and shown on maps. If you send us the Level 1 information, we will add it to the app’s online list of clubs. The technically inclined can best submit that information (and any future updates) in the form a [GitHub “pull request”](https://www.youtube.com/watch?v=BCQHnlnPusY&list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV): this pretty much automates the integration process and reduces the risk of errors."
+            "value" : "__Level 1__ requires providing the club’s name, location and a few optional links. Once it is on Level 1, the club is listed on the _Organizations_ screen and shown on maps. If you send us the Level 1 information, we will add it to the app’s online list of clubs. The technically inclined can best submit that information (and any future updates) in the form a [GitHub “pull request”](https://www.youtube.com/watch?v=BCQHnlnPusY&list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV): this pretty much automates the integration process and reduces the risk of errors."
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "__Niveau 1__ informatie bevat de naam en locatie van de club. Zodra Niveau 1 gegevens beschikbaar zijn, wordt de club zichtbaar in de clublijst op het _Clubs en Musea_ scherm. Verder wordt de club hier letterlijk “op de kaart gezet”. _Fotoclub de Soos_ in Grave is een voorbeeld van een club op Niveau 1. Wij kunnen deze gegevens voor een club handmatig aan de centrale clublijst toevoegen als U ons die gegevens stuurt. Wij zien echter liever dat een club (of misschien een _Fotobond_ regio) deze gegevens via een [GitHub “pull request”](https://www.youtube.com/watch?v=BCQHnlnPusY&list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV&index=2) aanbiedt. GitHub is weliswaar voor fotografen een geheel onbekende wereld, maar dit zorgt dat clubs hun invoer en latere wijzigingen in eigen hand houden. Dit verkleint de kans op vertraging of vergissingen."
+            "value" : "__Niveau 1__ informatie bevat de naam en locatie van de club. Zodra Niveau 1 gegevens beschikbaar zijn, wordt de club zichtbaar in de clublijst op het _Organisaties_ scherm. Verder wordt de club hier letterlijk “op de kaart gezet”. _Fotoclub de Soos_ in Grave is een voorbeeld van een club op Niveau 1. Wij kunnen deze gegevens voor een club handmatig aan de centrale clublijst toevoegen als U ons die gegevens stuurt. Wij zien echter liever dat een club (of misschien een _Fotobond_ regio) deze gegevens via een [GitHub “pull request”](https://www.youtube.com/watch?v=BCQHnlnPusY&list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV&index=2) aanbiedt. GitHub is weliswaar voor fotografen een geheel onbekende wereld, maar dit zorgt dat clubs hun invoer en latere wijzigingen in eigen hand houden. Dit verkleint de kans op vertraging of vergissingen."
           }
         }
       }

@@ -256,23 +256,6 @@
         }
       }
     },
-    "Clubs and Museums" : {
-      "comment" : "In Preferences, section title",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Clubs and Museums"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Clubs en Musea"
-          }
-        }
-      }
-    },
     "Data source: %@://%@%@/" : {
       "comment" : "Section footer text Portfolios screen",
       "localizations" : {
@@ -461,15 +444,9 @@
         }
       }
     },
-    "No photo clubs or museums seem to be currently loaded.\nTry dragging down the Clubs and Museums screen to reload the default clubs." : {
+    "No photo clubs or museums seem to be currently loaded.\nTry dragging down the Organizations screen to reload the default clubs." : {
       "comment" : "Hint to the user if the database returns zero Organizations.",
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No photo clubs or museums seem to be currently loaded.\nTry dragging down the Clubs and Museums screen to reload the default clubs."
-          }
-        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -530,7 +507,7 @@
       }
     },
     "Organizations" : {
-      "comment" : "Title of page with maps for Clubs and Museums",
+      "comment" : "In Preferences, section title\nTitle of page with maps for Organizations",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -547,7 +524,7 @@
       }
     },
     "Organizations_Caption_1" : {
-      "comment" : "Shown in gray at the bottom of the Clubs and Museums page (1/3).",
+      "comment" : "Shown in gray at the bottom of the Organizations page (1/3).",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -564,7 +541,7 @@
       }
     },
     "Organizations_Caption_2" : {
-      "comment" : "Shown in gray at the bottom of the Clubs and Museums page (2/3).",
+      "comment" : "Shown in gray at the bottom of the Organizations page (2/3).",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -581,7 +558,7 @@
       }
     },
     "Organizations_Caption_3" : {
-      "comment" : "Shown in gray at the bottom of the Clubs and Museums page (3/3).",
+      "comment" : "Shown in gray at the bottom of the Organizations page (3/3).",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -591,7 +568,7 @@
         },
         "nl" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "③ Dit scherm kan twee soorten organisaties (Clubs en Musea) tonen. Welke getoond worden hangt af van keuzes onder Instellingen. Afhankelijk van deze keuzes is de titel van dit scherm “Organisaties”, “Clubs” of “Musea”."
           }
         }
@@ -666,7 +643,7 @@
       }
     },
     "Search names and towns" : {
-      "comment" : "Field on the Clubs and Museums page that allows the user to filter the members based on a fragment of the organization name or town.",
+      "comment" : "Field on the Organizations page that allows the user to filter the members based on a fragment of the organization name or town.",
       "localizations" : {
         "en" : {
           "stringUnit" : {

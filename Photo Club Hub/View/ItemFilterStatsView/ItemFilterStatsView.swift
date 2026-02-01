@@ -23,7 +23,7 @@ struct ItemFilterStatsView: View { // display right-aligned string like "12 entr
         if elementType == ElementTypeEnum.photographer {
             comment = "Stats header displayed at top of Who's who screen"
         } else {
-            comment = "Stats header displayed at top of Clubs and Museums screen"
+            comment = "Stats header displayed at top of Organizations screen"
         }
     }
 

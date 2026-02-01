@@ -204,7 +204,7 @@ struct PreferencesStruct: Codable { // order in which they are shown on Preferen
             fallthrough
         case (true, true):
             return String(localized: "Organizations",
-                          table: "PhotoClubHub.SwiftUI", comment: "Title of page with maps for Clubs and Museums")
+                          table: "PhotoClubHub.SwiftUI", comment: "Title of page with maps for Organizations")
         }
     }
 

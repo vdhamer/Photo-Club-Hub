@@ -1068,7 +1068,7 @@ a value such as "Unknown town" instead of `nil`.
 
 <ul><details><summary>Details (click to expand)</summary></p>
 
-`Organization` supports both photo clubs and museums. Almost all properties apply to both.
+`Organization` supports both photo clubs and photo museums. Almost all properties apply to both.
 The relationship to `OrganizationType` is used to distinguish between clubs and museums.
 We could conceivably add photography `festivals` as well.</p>
 
