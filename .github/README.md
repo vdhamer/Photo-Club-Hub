@@ -22,7 +22,7 @@
     <a href="#the-user-interface-screens">The User Interface Screens</a>
           <ul>
             <li><a href="#the-portfolios-screen">The Portfolios Screen</a></li>
-            <li><a href="#the-clubs-and-museums-screen">The Organizations Screen</a></li>
+            <li><a href="#the-organizations-screen">The Organizations Screen</a></li>
             <li><a href="#the-images-screen">The Images Screen</a></li>
             <li><a href="#the-preferences-screen">The Preferences Screen</a></li>
             <li><a href="#the-readme-screen">The Readme Screen</a></li>
