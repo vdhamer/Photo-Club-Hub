@@ -21,36 +21,6 @@ struct OrganizationListView1718: View {
 
     private static let predicateAll = NSPredicate(format: "TRUEPREDICATE")
 
-    private var navigationTitle: String { // title depends on `showClubs`, `showTestClubs` and `showMuseums` settings
-        let preferences = PreferencesViewModel().preferences
-        let showClubs = preferences.showClubs
-        let showTestClubs = preferences.showTestClubs
-        let showMuseums = preferences.showMuseums
-
-        if (showClubs || showTestClubs) && !showMuseums {
-            return String(localized: "Clubs",
-                          table: "PhotoClubHub.SwiftUI",
-                          comment: "Title of page with maps for Clubs")
-        }
-
-        if !showClubs && !showTestClubs && showMuseums {
-            return String(localized: "Museums",
-                          table: "PhotoClubHub.SwiftUI",
-                          comment: "Title of page with maps for Museums")
-        }
-
-        if !showClubs && !showTestClubs && !showMuseums {
-            return String(localized: "Clubs and Museums are disabled",
-                          table: "PhotoClubHub.SwiftUI",
-                          comment: "Title of page with maps for Clubs and Museums")
-        }
-
-        // if (showClubs || showTestClubs) && showMuseums
-        return String(localized: "Clubs and Museums",
-                      table: "PhotoClubHub.SwiftUI",
-                      comment: "Title of page with maps for Clubs and Museums")
-    }
-
     var body: some View {
         ScrollView(.vertical, showsIndicators: true) {
 
@@ -65,15 +35,15 @@ struct OrganizationListView1718: View {
             }
 
             VStack(alignment: .leading) {
-                Text("PhotoClubs_Caption_1",
+                Text("Organizations_Caption_1",
                      tableName: "PhotoClubHub.SwiftUI",
                      comment: "Shown in gray at the bottom of the Clubs and Museums page (1/3).")
                 Divider()
-                Text("PhotoClubs_Caption_2",
+                Text("Organizations_Caption_2",
                      tableName: "PhotoClubHub.SwiftUI",
                      comment: "Shown in gray at the bottom of the Clubs and Museums page (2/3).")
                 Divider()
-                Text("PhotoClubs_Caption_3",
+                Text("Organizations_Caption_3",
                      tableName: "PhotoClubHub.SwiftUI",
                      comment: "Shown in gray at the bottom of the Clubs and Museums page (3/3).")
             }
@@ -95,7 +65,7 @@ struct OrganizationListView1718: View {
             try? await locationManager.startCurrentLocationUpdates()
             // remember that nothing will run here until the for try await loop finishes
         }
-        .navigationTitle(navigationTitle)
+        .navigationTitle(PreferencesViewModel().preferences.organizationLabel()) // trick: Published+UserDefaults.swift
         .searchable(text: $searchText, placement: .automatic,
                     // .automatic
                     // .toolbar The search field is placed in the toolbar. To right of person.text.rect.cust

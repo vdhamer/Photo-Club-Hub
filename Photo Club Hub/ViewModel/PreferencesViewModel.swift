@@ -58,6 +58,7 @@ struct PreferencesStruct: Codable { // order in which they are shown on Preferen
 
     var showClubs: Bool
     var showTestClubs: Bool
+    var anyClubs: Bool { showClubs || showTestClubs } // convenience function
     var showMuseums: Bool
 
     static let defaultValue = PreferencesStruct( // has to match order of declaration
@@ -171,6 +172,40 @@ struct PreferencesStruct: Codable { // order in which they are shown on Preferen
     var photographerPredicate: NSPredicate {
         let predicateAll = NSPredicate(format: "TRUEPREDICATE")
         return predicateAll // for now, we show all Photographers because filtering is done in View
+    }
+
+    /// A localized title for the Organizations screen derived from user preferences.
+    /// The`organizationLabel` is also used when displaying the count of shown organizations (e.g. "35 museums").
+    ///
+    /// This computed property inspects the current `PreferencesViewModel().preferences` flags
+    /// — `showClubs`, `showTestClubs`, and `showMuseums` — to decide which section(s)
+    /// of organizations are visible, and returns an appropriate, localized string.
+    ///
+    /// Logic overview:
+    /// - If clubs (including test clubs) are shown and museums are hidden, returns "Clubs".
+    /// - If only museums are shown, returns "Museums".
+    /// - If nothing is shown, returns the neutral "Organizations".
+    /// - In all mixed/combined cases (both clubs and museums visible), returns "Organizations".
+    ///
+    /// The returned value is localized using the "PhotoClubHub.SwiftUI" strings table.
+    /// The returned value starts with a capital, so must be converted to lower case where needed.
+
+    func organizationLabel() -> String {
+
+        switch (anyClubs, showMuseums) {
+        case (true, false):
+            return String(localized: "Clubs",
+                          table: "PhotoClubHub.SwiftUI", comment: "Title of page with maps for Clubs")
+        case (false, true):
+            return String(localized: "Museums",
+                          table: "PhotoClubHub.SwiftUI", comment: "Title of page with maps for Museums")
+        case (false, false): // nothing to show, but let's call that "0 organizations"
+            // swiftlint:disable:next no_fallthrough_only
+            fallthrough
+        case (true, true):
+            return String(localized: "Organizations",
+                          table: "PhotoClubHub.SwiftUI", comment: "Title of page with maps for Clubs and Museums")
+        }
     }
 
 }

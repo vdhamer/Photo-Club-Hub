@@ -43,7 +43,7 @@ struct FilteredWhoIsWhoView2626: View {
     var body: some View {
 //        ItemFilterStatsView(filteredCount: filteredPhotographers.count,
 //                            unfilteredCount: fetchedPhotographers.count,
-//                            elementType: ItemFilterStatsEnum.photographer)
+//                            elementType: ElementTypeEnum.photographer)
         ForEach(filteredPhotographers, id: \.id) { photographer in // each photographer's "card"
             VStack(alignment: .leading) { // there are horizontal layers within each photographer's "card"
                 HStack(alignment: .top) { // first row within each photographer's "card" with textual info

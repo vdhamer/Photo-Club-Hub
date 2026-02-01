@@ -257,7 +257,7 @@
       }
     },
     "Clubs and Museums" : {
-      "comment" : "In Preferences, section title\nTitle of page with maps for Clubs and Museums",
+      "comment" : "In Preferences, section title",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -269,23 +269,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Clubs en Musea"
-          }
-        }
-      }
-    },
-    "Clubs and Museums are disabled" : {
-      "comment" : "Title of page with maps for Clubs and Museums",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Clubs and Museums are disabled"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Clubs en Musea staan beiden uit"
           }
         }
       }
@@ -495,24 +478,6 @@
         }
       }
     },
-    "No photo clubs seem to be currently loaded.\nTry dragging down the Clubs and Museums screen to reload the default clubs." : {
-      "comment" : "Hint to the user if the database returns zero PhotoClubs.",
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No photo clubs seem to be currently loaded.\nTry dragging down the Clubs and Museums screen to reload the default clubs."
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Er zijn geen Fotoclubs momenteel geladen.\nDoor dit Fotogroepen scherm omlaag te slepen en los te laten worden enkele voorbeeldclubs geladen. "
-          }
-        }
-      }
-    },
     "of1" : {
       "comment" : "X of Y portfolio(s) shown (due to various forms of filtering)",
       "localizations" : {
@@ -581,6 +546,57 @@
         }
       }
     },
+    "Organizations_Caption_1" : {
+      "comment" : "Shown in gray at the bottom of the Clubs and Museums page (1/3).",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "① To find a particular club or museum, enter part of its name or town in the Search bar at the top."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "① Men kan een specifieke club of museum vinden door de naam in te voeren in de zoekbalk (vergrootglas icoon)."
+          }
+        }
+      }
+    },
+    "Organizations_Caption_2" : {
+      "comment" : "Shown in gray at the bottom of the Clubs and Museums page (2/3).",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "② You can unlock/lock a map's scrolling and panning features using the Lock icon."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "② Als het “slotje” open is, kan een kaart verplaatst of gezoomd worden."
+          }
+        }
+      }
+    },
+    "Organizations_Caption_3" : {
+      "comment" : "Shown in gray at the bottom of the Clubs and Museums page (3/3).",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "③ This list consists of two sublists. The first shows the photo clubs, the second shows photo museums. Individual sublists can be enabled/disabled in Preferences. The titel of the Organizations screen may then change to “Clubs” or “Museums”. "
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "③ Dit scherm kan twee soorten organisaties (Clubs en Musea) tonen. Welke getoond worden hangt af van keuzes onder Instellingen. Afhankelijk van deze keuzes is de titel van dit scherm “Organisaties”, “Clubs” of “Musea”."
+          }
+        }
+      }
+    },
     "Photo Club Hub" : {
       "comment" : "Name of the app shown in PreludeView when app is started",
       "localizations" : {
@@ -594,57 +610,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fotoclub Hub"
-          }
-        }
-      }
-    },
-    "PhotoClubs_Caption_1" : {
-      "comment" : "Shown in gray at the bottom of the Clubs and Museums page (1/3).",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "① This list consists of two sublists. The first shows the photo clubs, the second shows photo museums."
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "① De lijst begint met alle ondersteunde fotoclubs, gevolgd door alle fotomusea."
-          }
-        }
-      }
-    },
-    "PhotoClubs_Caption_2" : {
-      "comment" : "Shown in gray at the bottom of the Clubs and Museums page (2/3).",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "② To find a particular club or museum, enter part of its name or town in the Search bar at the top."
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "② Er is een Zoekveld bovenaan het scherm. Hiermee kunnen clubs en musea gevonden worden door hun naam of locatie in te voeren."
-          }
-        }
-      }
-    },
-    "PhotoClubs_Caption_3" : {
-      "comment" : "Shown in gray at the bottom of the Clubs and Museums page (3/3).",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "③ You can unlock/lock a map's scrolling and panning features using the Lock icon."
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "③ Het slotje kan gebruikt worden om deze landkaarten sleepbaar en inzoombaar/uitzoombaar te maken."
           }
         }
       }

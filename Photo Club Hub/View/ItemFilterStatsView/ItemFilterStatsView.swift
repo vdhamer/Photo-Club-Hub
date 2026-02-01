@@ -11,19 +11,19 @@ struct ItemFilterStatsView: View { // display right-aligned string like "12 entr
 
     let filteredCount: Int
     let unfilteredCount: Int
-    let elementType: ItemFilterStatsEnum
+    let elementType: ElementTypeEnum
     let comment: StaticString
 
-    init(filteredCount: Int, unfilteredCount: Int, elementType: ItemFilterStatsEnum) {
+    init(filteredCount: Int, unfilteredCount: Int, elementType: ElementTypeEnum) {
         self.filteredCount = filteredCount
         self.unfilteredCount = unfilteredCount
         self.elementType = elementType
 
         // somehow use of variable Comment of type StaticString gives warnings in the build log, but the results do work
-        if elementType == ItemFilterStatsEnum.organization {
-            comment = "Stats header displayed at top of Clubs and Museums screen"
-        } else {
+        if elementType == ElementTypeEnum.photographer {
             comment = "Stats header displayed at top of Who's who screen"
+        } else {
+            comment = "Stats header displayed at top of Clubs and Museums screen"
         }
     }
 
@@ -31,7 +31,7 @@ struct ItemFilterStatsView: View { // display right-aligned string like "12 entr
         HStack {
             Spacer() // allign to trailing edge
 
-            if elementType == ItemFilterStatsEnum.organization {
+            if elementType == ElementTypeEnum.organization {
                 if (filteredCount == 1) && unfiltered {
                     Text("1 organization",
                          tableName: "PhotoClubHub.SwiftUI",
@@ -79,9 +79,9 @@ struct ItemFilterStatsView: View { // display right-aligned string like "12 entr
 
 #Preview {
     VStack {
-        ItemFilterStatsView(filteredCount: 100, unfilteredCount: 100, elementType: ItemFilterStatsEnum.organization)
-        ItemFilterStatsView(filteredCount: 1, unfilteredCount: 1, elementType: ItemFilterStatsEnum.organization)
-        ItemFilterStatsView(filteredCount: 12, unfilteredCount: 100, elementType: ItemFilterStatsEnum.organization)
-        ItemFilterStatsView(filteredCount: 1, unfilteredCount: 100, elementType: ItemFilterStatsEnum.organization)
+        ItemFilterStatsView(filteredCount: 100, unfilteredCount: 100, elementType: ElementTypeEnum.organization)
+        ItemFilterStatsView(filteredCount: 1, unfilteredCount: 1, elementType: ElementTypeEnum.organization)
+        ItemFilterStatsView(filteredCount: 12, unfilteredCount: 100, elementType: ElementTypeEnum.organization)
+        ItemFilterStatsView(filteredCount: 1, unfilteredCount: 100, elementType: ElementTypeEnum.organization)
     }
 }
