@@ -32,7 +32,7 @@ struct OrganizationListView2626: View {
             .scrollTargetLayout()
 
             if organizations.isEmpty {
-                NoClubsText1718()
+                NoClubsText2626()
             }
 
             VStack(alignment: .leading) {
