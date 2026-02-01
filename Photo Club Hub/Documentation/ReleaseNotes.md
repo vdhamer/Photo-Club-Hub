@@ -18,13 +18,13 @@ STRUCTURAL
 ORGANIZATIONS SCREEN
 
 * TODO: fix Wikipedia link <<<<
-* Screen title reflects whether clubs or museums are being shown (see Preferences).
+* Screen title changed. And it is dynamic: changes if only Clubs or Museums are being shown (see Preferences).
 
 CODE MAINTENANCE
 
 * Tested with SwiftLint 0.63.2 and iOS 26.2.1
 * Fixed minor TODO item in Model.swift (carryover from release 2.9.0)
-* Added first member to fcVeghel
+* Added first member to some empty clubs (containing just name of contact)
 * TODO: test with iOS 26.3 <<<<
 
 DATA MAINTENANCE

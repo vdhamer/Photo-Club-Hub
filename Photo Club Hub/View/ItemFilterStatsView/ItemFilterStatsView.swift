@@ -9,10 +9,10 @@ import SwiftUI
 
 struct ItemFilterStatsView: View { // display right-aligned string like "12 entries (of 123)" or "123 entries"
 
-    let filteredCount: Int
-    let unfilteredCount: Int
-    let elementType: ElementTypeEnum
-    let comment: StaticString
+    private let filteredCount: Int
+    private let unfilteredCount: Int
+    private let elementType: ElementTypeEnum
+    private let comment: StaticString
 
     init(filteredCount: Int, unfilteredCount: Int, elementType: ElementTypeEnum) {
         self.filteredCount = filteredCount

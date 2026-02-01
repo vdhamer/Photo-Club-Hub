@@ -8,4 +8,6 @@
 enum ElementTypeEnum: String {
     case photographer
     case organization
+    case club
+    case museum
 }
