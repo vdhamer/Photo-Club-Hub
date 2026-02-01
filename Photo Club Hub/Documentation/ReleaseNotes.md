@@ -20,6 +20,10 @@ ORGANIZATIONS SCREEN
 * TODO: fix Wikipedia link <<<<
 * Screen title changed. And it is dynamic: changes if only Clubs or Museums are being shown (see Preferences).
 
+WHO'S WHO SCREEN
+
+* Added count of photographers to top of screen. It was absent in recent releases.
+
 CODE MAINTENANCE
 
 * Tested with SwiftLint 0.63.2 and iOS 26.2.1

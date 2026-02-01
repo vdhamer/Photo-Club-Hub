@@ -78,10 +78,14 @@ struct ItemFilterStatsView: View { // display right-aligned string like "12 entr
 }
 
 #Preview {
-    VStack {
-        ItemFilterStatsView(filteredCount: 100, unfilteredCount: 100, elementType: ElementTypeEnum.organization)
-        ItemFilterStatsView(filteredCount: 1, unfilteredCount: 1, elementType: ElementTypeEnum.organization)
-        ItemFilterStatsView(filteredCount: 12, unfilteredCount: 100, elementType: ElementTypeEnum.organization)
-        ItemFilterStatsView(filteredCount: 1, unfilteredCount: 100, elementType: ElementTypeEnum.organization)
+    List {
+        ItemFilterStatsView(filteredCount: 100, unfilteredCount: 100, unit: "organization")
+        ItemFilterStatsView(filteredCount: 1, unfilteredCount: 1, unit: "organization")
+        ItemFilterStatsView(filteredCount: 12, unfilteredCount: 100, unit: "organization")
+        ItemFilterStatsView(filteredCount: 1, unfilteredCount: 100, unit: "organization")
+        ItemFilterStatsView(filteredCount: 100, unfilteredCount: 100, unit: "photographer")
+        ItemFilterStatsView(filteredCount: 1, unfilteredCount: 1, unit: "photographer")
+        ItemFilterStatsView(filteredCount: 12, unfilteredCount: 100, unit: "photographer")
+        ItemFilterStatsView(filteredCount: 1, unfilteredCount: 100, unit: "photographer")
     }
 }
