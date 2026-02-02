@@ -8,7 +8,7 @@
 import SwiftUI
 
 /// A small right-aligned stats header showing a count with proper pluralization
-/// and an optional "(of X)" suffix when a filter is active. See the preview.
+/// and an optional "(of X)" suffix when the list is being filtered. See the Preview.
 ///
 /// Examples:
 /// - "123 organizations"
@@ -17,29 +17,26 @@ import SwiftUI
 struct ItemFilterStatsView: View { // display right-aligned string like "12 entries (of 123)" or "123 entries"
 
     init(filteredCount: Int, unfilteredCount: Int, unit: ElementTypeEnum) {
-        self.filteredCount = filteredCount
-        self.unfilteredCount = unfilteredCount
-        self.unit = unit
+        self.filteredCount = filteredCount      // Number of items after filtering.
+        self.unfilteredCount = unfilteredCount  // Total number of items before filtering.
+        self.unit = unit                        // Items that we're counting (key for localization via a String Table)
     }
 
-    /// Number of items after filtering.
     private let filteredCount: Int
-    /// Total number of items before filtering.
     private let unfilteredCount: Int
-    /// What we are counting (key for localization via String Table)
     private let unit: ElementTypeEnum
 
     var body: some View {
         // Right-align the stats text
         HStack {
-            Spacer() // allign to trailing edge
+            Spacer() // align to trailing edge
 
             if unfiltered {
                 Text(verbatim: "\(localizedFilteredCount(unit: unit))")
             } else {
                 let unfilteredCountString = String(localized: "(of \(unfilteredCount))",
                                                    table: "PhotoClubHub.SwiftUI",
-                comment: "Suffix showing effect of filtering via \"(of 123)\"")
+                                                   comment: "Suffix showing effect of filtering via \"(of 123)\"")
                 Text(verbatim: "\(localizedFilteredCount(unit: unit)) \(unfilteredCountString)")
             }
 
@@ -47,10 +44,14 @@ struct ItemFilterStatsView: View { // display right-aligned string like "12 entr
         .foregroundStyle(.secondary)
         .padding(.trailing)
         .font(.callout) // small font
-
-        var filtered: Bool { filteredCount != unfilteredCount } // filter active
-        var unfiltered: Bool { !filtered } // no filter active
     }
+
+    private var filtered: Bool { filteredCount != unfilteredCount } // filter active
+    private var unfiltered: Bool { !filtered } // no filter active
+
+}
+
+extension ItemFilterStatsView {
 
     private var comment: StaticString {
         // somehow use of variable Comment of type StaticString gives warnings in the build log, but the results do work
@@ -64,31 +65,39 @@ struct ItemFilterStatsView: View { // display right-aligned string like "12 entr
 
     private func localizedFilteredCount(unit: ElementTypeEnum) -> String {
         switch unit {
+
         case .photographer:
             return String(localized: "\(filteredCount) photographer",
                           table: "PhotoClubHub.SwiftUI",
                           comment: comment)
-        case .organization:
-            if PreferencesViewModel().preferences.anyClubs && !PreferencesViewModel().preferences.showMuseums {
-                return localizedFilteredCount(unit: .club)
-            } else if !PreferencesViewModel().preferences.anyClubs && PreferencesViewModel().preferences.showMuseums {
-                return localizedFilteredCount(unit: .museum)
-            }
-            return String(localized: "\(filteredCount) organization",
-                          table: "PhotoClubHub.SwiftUI",
-                          comment: comment)
+
         case .club:
             return String(localized: "\(filteredCount) club",
                           table: "PhotoClubHub.SwiftUI",
                           comment: comment)
+
         case .museum:
             return String(localized: "\(filteredCount) museum",
                           table: "PhotoClubHub.SwiftUI",
                           comment: comment)
+
         case .member: // still unused?
             return String(localized: "\(filteredCount) member",
                           table: "PhotoClubHub.SwiftUI",
                           comment: comment)
+
+        case .organization: // may change unit to ElementTypeEnum.club if Museums are filted out in Preferences
+            let preferences = PreferencesViewModel().preferences
+            if preferences.anyClubs && !preferences.showMuseums {
+                return localizedFilteredCount(unit: .club)
+            } else if !preferences.anyClubs && preferences.showMuseums {
+                return localizedFilteredCount(unit: .museum)
+            } else {
+                return String(localized: "\(filteredCount) organization",
+                              table: "PhotoClubHub.SwiftUI",
+                              comment: comment)
+            }
+
         }
     }
 }
