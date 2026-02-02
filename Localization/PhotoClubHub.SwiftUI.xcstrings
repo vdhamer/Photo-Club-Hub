@@ -38,6 +38,12 @@
     "(of %lld)" : {
       "comment" : "Suffix showing effect of filtering via \"(of 123)\"",
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "(of %lld)"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -682,6 +688,91 @@
         }
       }
     },
+    "Photographers" : {
+      "comment" : "Title of page with list of photographers",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Photographers"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fotografen"
+          }
+        }
+      }
+    },
+    "Photographers_Caption_1" : {
+      "comment" : "Shown in gray at the bottom of the Who's Who page (1/3).",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "① This page lists all the photographers known to the app."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "① Deze lijst bevat alle fotografen die in deze app voorkomen."
+          }
+        }
+      }
+    },
+    "Photographers_Caption_2" : {
+      "comment" : "Shown in gray at the bottom of the Who's Who page (2/3).",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "② A photographer has one or more clickable image thumbnails below the photographer's name. Clicking on a thumbnail brings you to the image portfolio for that photographer/club combination."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "② Per fotograaf zijn er meestal één of twee miniatuurfoto's. Klik op een foto om een portfolio te bekijken."
+          }
+        }
+      }
+    },
+    "Photographers_Caption_3" : {
+      "comment" : "Shown in gray at the bottom of the Who's Who page (3/3).",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "③ The thumbnails can be scrolled horizontally."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "③ De miniatuurfoto's kunnen horizontaal versleept worden, al zal dat zelden nodig zijn."
+          }
+        }
+      }
+    },
+    "Photographers_Caption_4" : {
+      "comment" : "Shown in gray at the bottom of the Who's Who page (3/3).",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "④ Photographic expertise tags"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "④ Fotografische expertise tags"
+          }
+        }
+      }
+    },
     "Portfolios" : {
       "comment" : "In Preferences, above toggles like \"Show former members\"\nTitle of page showing member portfolios",
       "localizations" : {
@@ -1056,90 +1147,8 @@
         }
       }
     },
-    "Who's Who" : {
-      "comment" : "Title of page with list of photographers",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Who's Who"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Namenlijst"
-          }
-        }
-      }
-    },
-    "WhosWho_Caption_1" : {
-      "comment" : "Shown in gray at the bottom of the Who's Who page (1/3).",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "① This page lists all the photographers known to the app."
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "① Deze lijst bevat alle fotografen die in deze app voorkomen."
-          }
-        }
-      }
-    },
-    "WhosWho_Caption_2" : {
-      "comment" : "Shown in gray at the bottom of the Who's Who page (2/3).",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "② A photographer has one or more clickable image thumbnails below the photographer's name. Clicking on a thumbnail brings you to the image portfolio for that photographer/club combination."
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "② Per fotograaf zijn er meestal één of twee miniatuurfoto's. Klik op een foto om een portfolio te bekijken."
-          }
-        }
-      }
-    },
     "WhosWho_Caption_3" : {
-      "comment" : "Shown in gray at the bottom of the Who's Who page (3/3).",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "③ The thumbnails can be scrolled horizontally."
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "③ De miniatuurfoto's kunnen horizontaal versleept worden, al zal dat zelden nodig zijn."
-          }
-        }
-      }
-    },
-    "WhosWho_Caption_4" : {
-      "comment" : "Shown in gray at the bottom of the Who's Who page (3/3).",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "④ Photographic expertise tags"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "④ Fotografische expertise tags"
-          }
-        }
-      }
+      "comment" : "Shown in gray at the bottom of the Who's Who page (3/3)."
     }
   },
   "version" : "1.1"
