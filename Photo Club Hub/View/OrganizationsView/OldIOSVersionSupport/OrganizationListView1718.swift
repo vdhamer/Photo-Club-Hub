@@ -78,6 +78,7 @@ struct OrganizationListView1718: View {
                                           filter the members based on a fragment of the organization name or town.
                                           """
                                 ))
+        // .searchToolbarBehavior(.minimize) // not available before iOS 26
         .autocapitalization(.sentences)
         .disableAutocorrection(true)
     }

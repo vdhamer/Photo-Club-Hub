@@ -1,5 +1,5 @@
 //
-//  WhoIsWhoListView.swift
+//  PhotographersListView1718.swift
 //  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 07/01/2022.
@@ -9,7 +9,7 @@ import SwiftUI
 import CoreData
 import WebKit // for wkWebView
 
-// Implements entire Who's Who screen including
+// Implements entire Photographers screen including
 //     * providing the navigation title,
 //     * searchbar to filter on photographer's name,
 //     * vertical (smart) scrolling photographer cards,
@@ -30,7 +30,7 @@ struct PhotographersListView1718: View {
                                          comment: "Title of page with list of photographers")
     private let temporary = String(localized: "Temporary",
                                    table: "PhotoClubHub.SwiftUI",
-                                   comment: "Expertise description at bottom of Who's Who screen")
+                                   comment: "Expertise description at bottom of Photographers screen")
 
     init(searchText: Binding<String>, navigationTitle: String? = nil) {
         self.searchText = searchText
@@ -53,19 +53,19 @@ struct PhotographersListView1718: View {
             VStack(alignment: .leading) {
                 Text("Photographers_Caption_1",
                      tableName: "PhotoClubHub.SwiftUI",
-                     comment: "Shown in gray at the bottom of the Who's Who page (1/3).")
+                     comment: "Shown in gray at the bottom of the Photographers page (1/3).")
                 Divider()
                 Text("Photographers_Caption_2",
                      tableName: "PhotoClubHub.SwiftUI",
-                     comment: "Shown in gray at the bottom of the Who's Who page (2/3).")
+                     comment: "Shown in gray at the bottom of the Photographers page (2/3).")
                 Divider()
                 Text("WhosWho_Caption_3",
                      tableName: "PhotoClubHub.SwiftUI",
-                     comment: "Shown in gray at the bottom of the Who's Who page (3/3).")
+                     comment: "Shown in gray at the bottom of the Photographers page (3/3).")
                 Divider()
                 Text("Photographers_Caption_4",
                      tableName: "PhotoClubHub.SwiftUI",
-                     comment: "Shown in gray at the bottom of the Who's Who page (3/3).")
+                     comment: "Shown in gray at the bottom of the Photographers page (3/3).")
                 ForEach(Expertise.getAll(context: viewContext)
                     .filter { !$0.id.contains("expertise") }  // Block "Too many expertises" entry
                     .sorted(by: sortExpertisesLocalized),
@@ -83,7 +83,7 @@ struct PhotographersListView1718: View {
                 let totalCount = Expertise.count(context: viewContext)
                 Text("There are \(totalCount) expertise tags.",
                      tableName: "PhotoClubHub.SwiftUI",
-                     comment: "Expertise statistics in footnote #4 of Who's Who screen")
+                     comment: "Expertise statistics in footnote #4 of Photographers screen")
                 Text("""
                      \(totalCount
                      - Expertise.getAll(context: viewContext).filter { keyword in keyword.isSupported }.count) \
@@ -91,10 +91,10 @@ struct PhotographersListView1718: View {
                      expertise tags are temporary.
                      """,
                      tableName: "PhotoClubHub.SwiftUI",
-                     comment: "Expertise statistics in footnote #4 of Who's Who screen")
+                     comment: "Expertise statistics in footnote #4 of Photographers screen")
                 Text("Expertise tags were assigned \(PhotographerExpertise.count(context: viewContext)) times.",
                      tableName: "PhotoClubHub.SwiftUI",
-                     comment: "Expertise statistics in footnote #4 of Who's Who screen")
+                     comment: "Expertise statistics in footnote #4 of Photographers screen")
             }
             .foregroundColor(Color.secondary)
 
@@ -118,7 +118,7 @@ struct PhotographersListView1718: View {
                     prompt: Text("Search_names_p",
                                  tableName: "PhotoClubHub.SwiftUI",
                                  comment: """
-                                          Field at top of Who's Who page that allows the user to \
+                                          Field at top of Photographers page that allows the user to \
                                           filter the photographers based on either given- and family name.
                                           """)
         )

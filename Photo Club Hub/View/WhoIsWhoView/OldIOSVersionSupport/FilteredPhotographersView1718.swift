@@ -1,5 +1,5 @@
 //
-//  FilteredWhoIsWhoView1718.swift
+//  FilteredPhotographersView1718.swift
 //  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 30/12/2021.
@@ -56,7 +56,7 @@ struct FilteredPhotographersView1718: View {
 
                     PhotographersTextInfo(photographer: photographer)
 
-                    Spacer() // push WhoIsTextInfo to the left
+                    Spacer() // push PhotographersTextInfo to the left
 
                     if let url: URL = photographer.photographerWebsite {
                         Link(destination: url, label: {

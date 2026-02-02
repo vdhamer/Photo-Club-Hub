@@ -58,7 +58,7 @@ struct ItemFilterStatsView: View { // display right-aligned string like "12 entr
         // somehow use of variable Comment of type StaticString gives warnings in the build log, but the results do work
         switch unit {
         case .photographer:
-            return "Stats header displayed at top of Who's who screen"
+            return "Stats header displayed at top of Photographers screen"
         default:
             return "Stats header displayed at top of Organizations screen"
         }

@@ -88,7 +88,7 @@ struct FilteredOrganizationView1718: View {
                     VStack(alignment: .leading) {
                         Text(verbatim: layoutDirection == .leftToRight ?
                              "\(filteredOrganization.localizedTown), \(filteredOrganization.localizedCountry)" :
-                                "\(filteredOrganization.localizedCountry) ,\(filteredOrganization.localizedTown)")
+                             "\(filteredOrganization.localizedCountry) ,\(filteredOrganization.localizedTown)")
                         .font(.subheadline)
                         if filteredOrganization.members.count > 0 { // hide for museums and clubs without members
                             Text("\(filteredOrganization.members.count) members (inc. ex-members)",
@@ -383,6 +383,7 @@ struct FilteredOrganizationView1718_Previews: PreviewProvider {
             }
             .navigationBarTitle(Text(String("PhotoClubInnerView"))) // prevent localization
             .searchable(text: $searchText, placement: .toolbar, prompt: Text("Search names and towns"))
+            // .searchToolbarBehavior(.minimize) // unavailable before iOS 26
         }
     }
 }

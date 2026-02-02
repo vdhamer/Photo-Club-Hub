@@ -13,7 +13,7 @@ import WebKit
 //     * role of protographer related to that photo club
 // No preview because it didn't work.
 
-struct : View {
+struct WhoIsWhoThumbnails: View {
     var photographer: Photographer // who is this about?
     var wkWebView: WKWebView // reusable WKWebView
 
