@@ -51,7 +51,7 @@ struct FilteredOrganizationView1718: View {
     var body: some View {
         ItemFilterStatsView(filteredCount: filteredOrganizations.count,
                             unfilteredCount: fetchedOrganizations.count,
-                            elementType: ElementTypeEnum.organization)
+                            unit: .organization)
         ForEach(filteredOrganizations, id: \.id) { filteredOrganization in // for each club or museum...
             VStack(alignment: .leading) {
                 HStack {
