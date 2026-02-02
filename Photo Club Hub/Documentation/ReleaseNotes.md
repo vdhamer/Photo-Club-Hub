@@ -4,25 +4,26 @@ USER-FACING
 
 * TODO: optionally distinguish Fotobond pins on maps in color
 * TODO: concentricity in Liquid Glass?
-* TODO: display expertises on Who's Who screen <<<<
-* TODO: more search functionality on Who's Who screen <<<<
+* TODO: display expertises on Photographers screen <<<<
+* TODO: more search functionality on Photographers screen <<<<
 * TODO: more search functionality on Portfolio screen <<<<
 
 STRUCTURAL
 
 * TODO: update documentation of Include feature of level1.json
 * TODO: add test for Include feature
-* TODO: first investigate what AI can do for iOS apps
 * TODO: rename XampleMin/Max clubs to TemplateMin/Max <<<<
 
 ORGANIZATIONS SCREEN
 
+* Screen title changed. Title is now dynamic and may show Organizations, Clubs, Museums depending on settings.
+* Screen statistics changed to match title change.
 * TODO: fix Wikipedia link <<<<
-* Screen title changed. And it is dynamic: changes if only Clubs or Museums are being shown (see Preferences).
 
-WHO'S WHO SCREEN
+Photographers SCREEN
 
-* Added count of photographers to top of screen. It was absent in recent releases.
+* TODO: change title of screen to PHOTOGRAPHERS screen.
+* Count of shown photographers is visible at top of screen.
 
 CODE MAINTENANCE
 
