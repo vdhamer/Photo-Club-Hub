@@ -10,11 +10,17 @@ import SwiftUI
 /// A small right-aligned stats header showing a count with proper pluralization
 /// and an optional "(of X)" suffix when the list is being filtered. See the Preview.
 ///
-/// Examples:
+/// Examples (English):
 /// - "123 organizations"
 /// - "12 organizations (of 123)"
 /// - "1 photographer (of 123)"
 struct ItemFilterStatsView: View { // display right-aligned string like "12 entries (of 123)" or "123 entries"
+
+    // MARK: - Init
+
+    private let filteredCount: Int
+    private let unfilteredCount: Int
+    private let unit: ElementTypeEnum
 
     init(filteredCount: Int, unfilteredCount: Int, unit: ElementTypeEnum) {
         self.filteredCount = filteredCount      // Number of items after filtering.
@@ -22,9 +28,7 @@ struct ItemFilterStatsView: View { // display right-aligned string like "12 entr
         self.unit = unit                        // Items that we're counting (key for localization via a String Table)
     }
 
-    private let filteredCount: Int
-    private let unfilteredCount: Int
-    private let unit: ElementTypeEnum
+    // MARK: - SwiftUI body
 
     var body: some View {
         // Right-align the stats text
@@ -46,13 +50,10 @@ struct ItemFilterStatsView: View { // display right-aligned string like "12 entr
         .font(.callout) // small font
     }
 
+    // MARK: - Utilities
+
     private var filtered: Bool { filteredCount != unfilteredCount } // filter active
     private var unfiltered: Bool { !filtered } // no filter active
-
-}
-
-extension ItemFilterStatsView {
-
     private var comment: StaticString {
         // somehow use of variable Comment of type StaticString gives warnings in the build log, but the results do work
         switch unit {
@@ -63,6 +64,17 @@ extension ItemFilterStatsView {
         }
     }
 
+    /// Returns a localized, properly pluralized count string for the given element type.
+    /// For `.organization`, the effective unit may be remapped to `.club` or `.museum`
+    /// based on user preferences (e.g., when museums are filtered out).
+    ///
+    /// Examples (English):
+    /// - "123 organizations"
+    /// - "12 organizations"
+    /// - "1 photographer"
+    ///
+    /// - Parameter unit: The element type to describe (e.g., `.organization`, `.photographer`).
+    /// - Returns: A localized string such as "12 organizations" or "1 photographer".
     private func localizedFilteredCount(unit: ElementTypeEnum) -> String {
         switch unit {
 
