@@ -85,6 +85,10 @@ struct ItemFilterStatsView: View { // display right-aligned string like "12 entr
             return String(localized: "\(filteredCount) museum",
                           table: "PhotoClubHub.SwiftUI",
                           comment: comment)
+        case .member: // still unused?
+            return String(localized: "\(filteredCount) member",
+                          table: "PhotoClubHub.SwiftUI",
+                          comment: comment)
         }
     }
 }

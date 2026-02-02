@@ -6,8 +6,9 @@
 //
 
 enum ElementTypeEnum: String {
-    case photographer
-    case organization
-    case club
-    case museum
+    case photographer   // photographers (independent of any club context)
+    case organization   // photography clubs or photo musea
+    case club           // photography clubs
+    case museum         // photo musea
+    case member         // club members = photographers that are/were members of a particular club
 }
