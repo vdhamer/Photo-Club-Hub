@@ -29,7 +29,7 @@ This enables you to find Rob and others by typing "abstract" or "abst" into the 
 
 1. In the HTML/web version of the app, `expertises` are shown in the `Expertise tags` column in the tables of club members.
 2. In the iOS version of the app, `expertises` are shown per photographer on the `Portfolio` page. 
-2. In the iOS version, the list of `expertises` and their statistics are shown at the bottom of the `Who's Who` screen. To avoid a lot of scrolling you can search for "expertises" or any other text that has no matches like "zzz".
+2. In the iOS version, the list of `expertises` and their statistics are shown at the bottom of the `Photographers` screen. To avoid a lot of scrolling you can search for "expertises" or any other text that has no matches like "zzz".
 4. In the iOS version, you can **search** for `expertise` tags by typing in the first few letters of the expertise in the Search bar.
    So typing "black" shortens the list to only show photographers that have the "Black & White" tag.
    But you may also find a stray photographer with a name like "Blackstone" unless you type "black ".</p>
@@ -85,7 +85,7 @@ Sure. That can have various causes:
 <details><summary>Click to expand or collapse an answer</summary></p>
 At the moment, there are roughly 25 tags available.
 
-In the iOS version of the app, all available (and some candidate) tags are listed at the bottom of the `Who's Who` screen.
+In the iOS version of the app, all available (and some candidate) tags are listed at the bottom of the `Photographers` screen.
 You can reach the bottom quickly by using the Search bar to filter out all the photographers.</p>
 
 The HTML/web version of the app will get a comparable list, but it will be accessed a bit differently. 
