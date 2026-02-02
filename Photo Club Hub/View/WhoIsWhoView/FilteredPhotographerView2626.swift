@@ -1,5 +1,5 @@
 //
-//  FilteredWhoIsWhoView1718.swift
+//  FilteredWhoIsWhoView.swift
 //  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 30/12/2021.
@@ -19,8 +19,8 @@ import WebKit // for WKWebView
 //          - a horizontally scrolling list of thumbnails representing portfolios
 // Preview unfortunately doesn't work.
 
-@available(iOS, obsoleted: 19.0, message: "Please use 'FilteredOrganizationView2626' for versions above iOS 18.x")
-struct FilteredWhoIsWhoView1718: View {
+@available(iOS 26.0, *)
+struct FilteredPhotographerView2626: View {
 
     @Environment(\.managedObjectContext) private var viewContext // may not be correct
     @FetchRequest var fetchedPhotographers: FetchedResults<Photographer>
@@ -41,9 +41,9 @@ struct FilteredWhoIsWhoView1718: View {
     }
 
     var body: some View {
-//        ItemFilterStatsView(filteredCount: filteredPhotographers.count,
-//                            unfilteredCount: fetchedPhotographers.count,
-//                            unit: ElementTypeEnum.photographer)
+        ItemFilterStatsView(filteredCount: filteredPhotographers.count,
+                            unfilteredCount: fetchedPhotographers.count,
+                            unit: .photographer)
         ForEach(filteredPhotographers, id: \.id) { photographer in // each photographer's "card"
             VStack(alignment: .leading) { // there are horizontal layers within each photographer's "card"
                 HStack(alignment: .top) { // first row within each photographer's "card" with textual info
@@ -54,7 +54,7 @@ struct FilteredWhoIsWhoView1718: View {
                         .frame(width: 35)
                         .padding(.top, 3)
 
-                    WhoIsWhoTextInfo(photographer: photographer)
+                    PhotographersTextInfo(photographer: photographer)
 
                     Spacer() // push WhoIsTextInfo to the left
 
@@ -68,7 +68,7 @@ struct FilteredWhoIsWhoView1718: View {
 
                 } // HStack
 
-                WhoIsWhoThumbnails(photographer: photographer, wkWebView: wkWebView)
+                (photographer: photographer, wkWebView: wkWebView)
 
             } // VStack
             .accentColor(.photographerColor)
@@ -128,25 +128,26 @@ struct FilteredWhoIsWhoView1718: View {
     }
 }
 
-@available(iOS, obsoleted: 19.0, message: "Please use 'FilteredOrganizationView2626' for versions above iOS 18.x")
-struct FilteredWhoIsWhoViewWrapper1718: View {
+@available(iOS 26.0, *)
+struct FilteredWhoIsWhoViewWrapper2626: View {
     var body: some View {
         let predicate = NSPredicate(format: "familyName_ = %@ || familyName_ = %@ || familyName_ = %@",
                                     argumentArray: ["Eau1", "Eau2", "Eau10"])
         @State var searchText: String = "Eau1"
         let wkWebView = WKWebView()
 
-        return FilteredWhoIsWhoView1718(predicate: predicate, searchText: $searchText, wkWebView: wkWebView)
+        return FilteredPhotographerView2626(predicate: predicate, searchText: $searchText, wkWebView: wkWebView)
             .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }
 
-@available(iOS, obsoleted: 19.0, message: "Please use 'FilteredOrganizationView2626' for versions above iOS 18.x")
+@available(iOS 26.0, *)
 #Preview {
     NavigationStack {
         List {
-            FilteredWhoIsWhoViewWrapper1718()
+            FilteredWhoIsWhoViewWrapper2626()
         }
     }
     .searchable(text: .constant("Name"))
+    .searchToolbarBehavior(.minimize) // requires iOS 26
 }

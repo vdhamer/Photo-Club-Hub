@@ -1,5 +1,5 @@
 //
-//  WhoIsWhoListView2626.swift
+//  PhotographersListView2626.swift
 //  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 07/01/2022.
@@ -17,7 +17,7 @@ import WebKit // for wkWebView
 // Preview unfortunately doesn't work.
 
 @available(iOS 26.0, *)
-struct WhoIsWhoListView2626: View {
+struct PhotographersListView2626: View {
     @Environment(\.managedObjectContext) private var viewContext
     @State private var showingPhotoClubs = false
     @State private var showingMembers = false
@@ -25,7 +25,7 @@ struct WhoIsWhoListView2626: View {
     let wkWebView: WKWebView
 
     @StateObject var model = PreferencesViewModel()
-    private var navigationTitle = String(localized: "Who's Who",
+    private var navigationTitle = String(localized: "Photographers",
                                          table: "PhotoClubHub.SwiftUI",
                                          comment: "Title of page with list of photographers")
     private let temporary = String(localized: "Temporary",
@@ -51,19 +51,19 @@ struct WhoIsWhoListView2626: View {
             .scrollTargetLayout() // unit of vertical "smart" scrolling
 
             VStack(alignment: .leading) {
-                Text("WhosWho_Caption_1",
+                Text("Photographers_Caption_1",
                      tableName: "PhotoClubHub.SwiftUI",
                      comment: "Shown in gray at the bottom of the Who's Who page (1/3).")
                 Divider()
-                Text("WhosWho_Caption_2",
+                Text("Photographers_Caption_2",
                      tableName: "PhotoClubHub.SwiftUI",
                      comment: "Shown in gray at the bottom of the Who's Who page (2/3).")
                 Divider()
-                Text("WhosWho_Caption_3",
+                Text("Photographers_Caption_3",
                      tableName: "PhotoClubHub.SwiftUI",
                      comment: "Shown in gray at the bottom of the Who's Who page (3/3).")
                 Divider()
-                Text("WhosWho_Caption_4",
+                Text("Photographers_Caption_4",
                      tableName: "PhotoClubHub.SwiftUI",
                      comment: "Shown in gray at the bottom of the Who's Who page (3/3).")
                 ForEach(Expertise.getAll(context: viewContext)

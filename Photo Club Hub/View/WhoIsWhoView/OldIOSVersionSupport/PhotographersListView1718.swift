@@ -17,7 +17,7 @@ import WebKit // for wkWebView
 // Preview unfortunately doesn't work.
 
 @available(iOS, obsoleted: 19.0, message: "Please use 'OrganizationListView2626' for versions above iOS 18.x")
-struct WhoIsWhoListView1718: View {
+struct PhotographersListView1718: View {
     @Environment(\.managedObjectContext) private var viewContext
     @State private var showingPhotoClubs = false
     @State private var showingMembers = false
@@ -25,7 +25,7 @@ struct WhoIsWhoListView1718: View {
     let wkWebView: WKWebView
 
     @StateObject var model = PreferencesViewModel()
-    private var navigationTitle = String(localized: "Who's Who",
+    private var navigationTitle = String(localized: "Photographers",
                                          table: "PhotoClubHub.SwiftUI",
                                          comment: "Title of page with list of photographers")
     private let temporary = String(localized: "Temporary",
@@ -44,18 +44,18 @@ struct WhoIsWhoListView1718: View {
         ScrollView(.vertical, showsIndicators: true) {
 
             LazyVStack {
-                FilteredWhoIsWhoView1718(predicate: model.preferences.photographerPredicate,
+                FilteredPhotographersView1718(predicate: model.preferences.photographerPredicate,
                                          searchText: searchText,
                                          wkWebView: wkWebView)
             }
             .scrollTargetLayout() // unit of vertical "smart" scrolling
 
             VStack(alignment: .leading) {
-                Text("WhosWho_Caption_1",
+                Text("Photographers_Caption_1",
                      tableName: "PhotoClubHub.SwiftUI",
                      comment: "Shown in gray at the bottom of the Who's Who page (1/3).")
                 Divider()
-                Text("WhosWho_Caption_2",
+                Text("Photographers_Caption_2",
                      tableName: "PhotoClubHub.SwiftUI",
                      comment: "Shown in gray at the bottom of the Who's Who page (2/3).")
                 Divider()
@@ -63,7 +63,7 @@ struct WhoIsWhoListView1718: View {
                      tableName: "PhotoClubHub.SwiftUI",
                      comment: "Shown in gray at the bottom of the Who's Who page (3/3).")
                 Divider()
-                Text("WhosWho_Caption_4",
+                Text("Photographers_Caption_4",
                      tableName: "PhotoClubHub.SwiftUI",
                      comment: "Shown in gray at the bottom of the Who's Who page (3/3).")
                 ForEach(Expertise.getAll(context: viewContext)

@@ -26,7 +26,7 @@
             <li><a href="#the-images-screen">The Images Screen</a></li>
             <li><a href="#the-preferences-screen">The Preferences Screen</a></li>
             <li><a href="#the-readme-screen">The Readme Screen</a></li>
-            <li><a href="#the-whos-who-screen">The Who's Who Screen</a></li>
+            <li><a href="#the-whos-who-screen">The Photographers Screen</a></li>
             <li><a href="#the-prelude-screen">The Prelude Screen</a></li>
           </ul>
     </p>
@@ -129,7 +129,7 @@ There is a <a href="#adding-photo-clubs-to-the-app">chapter</a> below on how to 
 Photo clubs are thus the distinguishing feature of this app.
 
 You can first look up a photo club and then find its members in the `Portfolio` screen. 
-Or you can alternatively look up a photographer and then the associated photo club in the `Who's Who` screen.
+Or you can alternatively look up a photographer and then the associated photo club in the `Photographers` screen.
 Either way, once you have chosen a photographer-and-club combination, you can view the photo portfolio of that club member.
 
 <ul><details><summary>Details (click to expand)</summary></p>
@@ -151,7 +151,7 @@ This screen puts the photo club first, and then allows you to select club member
 
 <a/></p>
 
-An alternative navigation path is provided by the `Who's Who` screen.
+An alternative navigation path is provided by the `Photographers` screen.
 This screen puts the photographer first, thus allowing you to find a photographer even if you don't
 know the name of the club (or clubs) the photographer is associated with:
 
@@ -238,7 +238,7 @@ The plan is that the screen can switch between listing all photo clubs and listi
 ### The `Images` Screen
 
 The `Images` screen displays one portfolio (of one photographer associated with one club.
-It can be reached by tapping on a `portfolio` in either the `Portfolios` or the `Who's Who` screen.
+It can be reached by tapping on a `portfolio` in either the `Portfolios` or the `Photographers` screen.
 The title at the top of the screen shows the selected photographer and selected club affiliation:
 "Jane Doe @ Club F/8".
 
@@ -255,7 +255,7 @@ currently based on a Javascript plug-in (`Juicebox Pro`) that is normally used i
 
 The `Preferences` screen allows you to configure which types of portfolios you want to include in the
 `Portfolios` screen. You can, for example, choose whether to show former members.
-The `Preferences` screen probably should also filter the `Who's Who` screen - but it doesn't yet.
+The `Preferences` screen probably should also filter the `Photographers` screen - but it doesn't yet.
 
 ![Preferences Screen](images/preferencesScreen.png "Preferences Screen")
 
@@ -265,14 +265,14 @@ The `Readme` screen contains background information on the app and info on app u
 
 ![Readme Screen](images/readmeScreen.png "Readme Screen")
 
-### The `Who's Who` Screen
+### The `Photographers` Screen
 
-The `Who's Who` screen lists all the photographers known to the app.
+The `Photographers` screen lists all the photographers known to the app.
 It allows you to first select the photographer and then select that person's club-specific portfolio.
 If available, club-independent information (like birthdays) for that photographer is displayed here.
 The `Search` bar filters on photographer names.
 
-![Who's Who Screen](images/whosWhoScreen.png "Who's Who Screen")
+![Photographers Screen](images/whosWhoScreen.png "Photographers Screen")
 
 ### The `Prelude` Screen
 
@@ -339,7 +339,7 @@ The HTML version also covers the cases where someone wants to view the  the info
 
 ### Searchable Lists
 
-The three screens with long lists (`Portfolios`, `Organizations`, `Who's Who`) each have a Search Bar
+The three screens with long lists (`Portfolios`, `Organizations`, `Photographers`) each have a Search Bar
 where you can enter what you are looking for. This reduces the list to items that match that filter criterion.</p>
 
 <details><summary>Details on the Search Bar(click to expand)</summary></p>
@@ -355,7 +355,7 @@ The text you type inside the search bar is matched against key fields for the re
 - In the `Organizations` screen, searches try to match against the organization names and towns.
   Searching on `Ber` might match `FFC Shot71 (Berlicum)` and `Museum für Fotografie (Berlin)` and `The Victoria & Albert Museum (London)`.
   Note that the town is the location specified in the `root.level1.json` file and _not_ its translated version, which can be different.
-- In the `Who's Who` screen, searches try to match the photographer's full name.
+- In the `Photographers` screen, searches try to match the photographer's full name.
   Searching on `Jan` might return `Jan Stege`, `Ariejan van Twisk` and `Jos Jansen`.
 
 Design detail: Search Bar filtering is done in the app's user interface and not by the CoreData database.
@@ -431,7 +431,7 @@ Another application of _pull down to refresh_ is to force a reload of online dat
 
 ### Fancy scrolling
 
-The _Organizations_ and _Who's Who_ screens try to prevent showing partial maps or partial photographer info.
+The _Organizations_ and _Photographers_ screens try to prevent showing partial maps or partial photographer info.
 </p>
 
 <details><summary>Details about smart scrolling</summary></p>
@@ -498,7 +498,7 @@ When a club is at `Level 1`, it shows up as a marker on the maps (leftmost scree
 This is because the app knows the club's name and the latitude/longitude where it is based.
 
 For clubs at `Level 2`, the app also knows the names and optional roles of club members.
-As illustrated in the center screenshot, the club and its members are now shown on the `Portfolio` and `Who's Who` screens.
+As illustrated in the center screenshot, the club and its members are now shown on the `Portfolio` and `Photographers` screens.
 Clubs with zero members (as far as the app is concerned) are _not_ shown on either screens.
 
 For clubs at `Level 3`, the app is aware of the image portfolios of club members (rightmost screenshot), 
@@ -819,7 +819,7 @@ Here is an example of the format of a `Level 2` list for a photo club. This exam
     - a club's `wikipedia`, `fotobondNumber`, `coordinates`, `website`, and `localizedRemarks` fields overrule the corresponding `root.level1.json` fields if needed. This allows a club to _correct_ the centrally-provided information with club-provided information. Note that not all these optional fields are shown in the example: see the Level 1 documentation for more details.
     - `maintainerEmail` is who to contact who to reach out to if there are issues with this file. It might be the club's admin, secretary or another member entirely.</p>
     - `givenName`, `infixName` and `familyName` are used to uniquely identify the photographer.
-    - `infixName` will often be empty. It enables correctly sorting European surnames: "van Aalst" sorts like "Aalst" in the _Who's Who_ screen.
+    - `infixName` will often be empty. It enables correctly sorting European surnames: "van Aalst" sorts like "Aalst" in the _Photographers_ screen.
         - An omitted "infixName" is interpreted as "infixName" = "".
     - the `level3URL` field allows the app to find the Level 3 information with the selected images for this member.</p>
     - the `roles` field indicates whether a member fullfills a role as a club officer (e.g. chairman). If a given `role` is not mentioned, a default value of `false` is assumed. Many `members` have an empty or even absent `roles` section. Some `members` may have multiple roles (e.g., `secretary` and `admin`).
@@ -832,7 +832,7 @@ Here is an example of the format of a `Level 2` list for a photo club. This exam
     - `birthday` can be the full date of birth but currently only the month and date are shown in the user interface. So you can provide a dummy year (like `9999`) if that is preferred.
     - `website` is a personal photography-related website. If the website URL is available, the app provides a link to it.
     - `photographerImage` is a depiction of the photographer. A special mode may be added whereby this photo or avatar of the photographer is shown instead of the featured image made by the photographer.
-    - `featuredImage` is a URL to a single image that can be shown beside the member's name. It is visible in the `Portfolios` screen and the `Who's Who` screen.
+    - `featuredImage` is a URL to a single image that can be shown beside the member's name. It is visible in the `Portfolios` screen and the `Photographers` screen.
     - `level3URL` is URL to a file containing the selected portfolio images made by this particular member in the context of a given photo club.
     - `membershipStartDate` is the date when the member joined the club.
     - `membershipEndDate` is the date when the member left the club. If the member is a current member, it is best to omit this date.

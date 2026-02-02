@@ -1,5 +1,5 @@
 //
-//  WhoIsWhoTextInfo.swift
+//  PhotographersTextInfo.swift
 //  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 09/04/2024.
@@ -15,7 +15,7 @@ import SwiftUI
 //     * a horizontally scrolling list of thumbnails representing portfolios
 // Preview is commented out (doesn't work yet).
 
-struct WhoIsWhoTextInfo: View {
+struct PhotographersTextInfo: View {
     var photographer: Photographer
 
     private static let dateFormatter: DateFormatter = {
