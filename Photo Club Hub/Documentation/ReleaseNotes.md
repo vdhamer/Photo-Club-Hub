@@ -16,14 +16,15 @@ STRUCTURAL
 
 ORGANIZATIONS SCREEN
 
-* Screen title changed. Title is now dynamic and may show Organizations, Clubs, Museums depending on settings.
+* Screen was previously called "Clubs and Museums" or "Clubs en Musea".
+* Screene title is now dynamic: it may state "Organizations", "Clubs", or "Museums" depending on settings.
 * Screen statistics changed to match title change.
 * TODO: fix Wikipedia link <<<<
 
-Photographers SCREEN
+PHOTOGRAPHERS SCREEN
 
-* TODO: change title of screen to PHOTOGRAPHERS screen.
-* Count of shown photographers is visible at top of screen.
+* Screen was previously called "Who's Who" or "Namenlijst".
+* Count of visible photographers is shown at top of screen.
 
 CODE MAINTENANCE
 
@@ -36,6 +37,10 @@ DATA MAINTENANCE
 
 * Prepared for likely onboarding of club ffcShot71.
 * Created initial Level 2 for fcGemert
+
+DOCUMENTATION
+
+* Updated FotoclubHubIntro_NL.ppt to cover Level1includeURL feature and its use.
 
 This build #4656 was made using Xcode 26.3 and is intended for the App Store.
 
