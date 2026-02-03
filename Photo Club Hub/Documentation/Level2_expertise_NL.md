@@ -29,7 +29,7 @@ in de zoekbalk van het `Portfolio` scherm.
 
 1. In de HTML/web versie van de app staat dit vermeld in een kolom "expertise tags" in de tabellen met clubleden.
 2. In de iOS versie zie je de beschikbare expertises bij iedere fotograaf op de `Portfolio` pagina.
-3. In de iOS versie staan de beschikbare expertise tags helemaal onderaan de `Namenlijst` pagina.
+3. In de iOS versie staan de beschikbare expertise tags helemaal onderaan de `Fotografen` pagina.
    Om snel onderaan te komen, zoek op "expertise" of "zzz". Deze locatie gaat veranderen in een toekomstige versie.
 4. In de iOS versie, kan men **zoeken** op expertiseg tag door de eerste paar letters in te tikken in de zoekbalk.
    Dus intypen van "zwart" reduceert de lijst tot fotografen die aan "zwart-wit" gekoppeld zijn.
@@ -84,8 +84,10 @@ Ja, dat mag. Dat kan drie verschillende redenen hebben:
 ### Hoeveel en welke expertise tags zijn beschikbaar?
 
 <details><summary>Klik om antwoord open of dicht te klappen</summary></p>
-In de iOS versie van de app staat alle beschikbare expertise tags helemaal onderaan de `Namenlijst` pagina (zoek op "expertise" of "xyz").
-Deze lijst is dynamisch (online opgehaald): het kan dat er volgende week een nieuw gebied bijgekomen is. Het zijn er al ruim 20.</p>
+In de iOS versie van de app staat alle beschikbare expertise tags helemaal onderaan de `Fotografen` pagina
+(zoek op "expertise" of "xyz").
+Deze lijst is dynamisch (online opgehaald): het kan dat er volgende week een nieuw gebied bijgekomen is. 
+Het zijn er al ruim 20.</p>
 
 De HTML versie heeft een pagina met de [lijst](https://www.fcDeGender.nl/expertises) van expertises.
 Verder kan je de actuele lijst (in JSON formaat) [hier](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/root.level0.json) bekijken.
