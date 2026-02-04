@@ -22,7 +22,7 @@ struct PhotographersThumbnails: View {
             HStack { // to support multiple portfolio previews in one row
                 ForEach(photographer.memberships.sorted(), id: \.id) { membership in
                     SinglePortfolioLinkView(destPortfolio: membership, wkWebView: wkWebView) {
-                        WhoIsWhoThumbnail(membership: membership, wkWebView: wkWebView)
+                        PhotographersThumbnail(membership: membership, wkWebView: wkWebView)
                     } // SinglePortfolioLinkView
                 } // ForEach
             } // HStack to support multiple portfolio previews in one row
@@ -40,7 +40,7 @@ struct PhotographersThumbnails: View {
 //     * role of protographer related to that photo club
 // No preview because it didn't work.
 
-struct WhoIsWhoThumbnail: View {
+struct PhotographersThumbnail: View {
     var membership: MemberPortfolio // who is this about?
     var wkWebView: WKWebView // reusable WKWebView
 
