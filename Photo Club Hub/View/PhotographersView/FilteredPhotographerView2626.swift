@@ -56,7 +56,7 @@ struct FilteredPhotographerView2626: View {
 
                     PhotographersTextInfo(photographer: photographer)
 
-                    Spacer() // push WhoIsTextInfo to the left
+                    Spacer() // push PhotographersTextInfo to the left
 
                     if let url: URL = photographer.photographerWebsite {
                         Link(destination: url, label: {
@@ -129,7 +129,7 @@ struct FilteredPhotographerView2626: View {
 }
 
 @available(iOS 26.0, *)
-struct FilteredPhotographerWrapper2626: View {
+struct FilteredPhotographersViewWrapper2626: View {
     var body: some View {
         let predicate = NSPredicate(format: "familyName_ = %@ || familyName_ = %@ || familyName_ = %@",
                                     argumentArray: ["Eau1", "Eau2", "Eau10"])
@@ -145,7 +145,7 @@ struct FilteredPhotographerWrapper2626: View {
 #Preview {
     NavigationStack {
         List {
-            FilteredPhotographerWrapper2626()
+            FilteredPhotographersViewWrapper2626()
         }
     }
     .searchable(text: .constant("Name"))

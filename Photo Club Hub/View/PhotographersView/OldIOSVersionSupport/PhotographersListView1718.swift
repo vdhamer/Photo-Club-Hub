@@ -137,7 +137,7 @@ struct PhotographersListView1718: View {
 
 }
 
-// struct PhotographersView_Previews: PreviewProvider {
+// struct PhotographersListView_Previews: PreviewProvider {
 //    @State static var searchText = "D'Eau1"
 //    static var previews: some View {
 //        NavigationStack {
