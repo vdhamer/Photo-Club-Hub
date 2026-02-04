@@ -1,5 +1,5 @@
 //
-//  FilteredWhoIsWhoView.swift
+//  FilteredPhotographerView2626.swift
 //  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 30/12/2021.
@@ -129,7 +129,7 @@ struct FilteredPhotographerView2626: View {
 }
 
 @available(iOS 26.0, *)
-struct FilteredWhoIsWhoViewWrapper2626: View {
+struct FilteredPhotographerWrapper2626: View {
     var body: some View {
         let predicate = NSPredicate(format: "familyName_ = %@ || familyName_ = %@ || familyName_ = %@",
                                     argumentArray: ["Eau1", "Eau2", "Eau10"])
@@ -145,7 +145,7 @@ struct FilteredWhoIsWhoViewWrapper2626: View {
 #Preview {
     NavigationStack {
         List {
-            FilteredWhoIsWhoViewWrapper2626()
+            FilteredPhotographerWrapper2626()
         }
     }
     .searchable(text: .constant("Name"))
