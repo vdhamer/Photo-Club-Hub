@@ -141,8 +141,8 @@ struct PhotographersListView1718: View {
 //    @State static var searchText = "D'Eau1"
 //    static var previews: some View {
 //        NavigationStack {
-//            WhoIsWhoListView(searchText: $searchText,
-//                             organizationLabel: String("PhotographerListView")
+//            PhotographersListView1718(searchText: $searchText,
+//                                      organizationLabel: String("PhotographerListView")
 //                )
 //                .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
 //        }
