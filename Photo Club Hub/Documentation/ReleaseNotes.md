@@ -19,7 +19,7 @@ ORGANIZATIONS SCREEN
 * Screen was previously called "Clubs and Museums" or "Clubs en Musea".
 * Screene title is now dynamic: it may state "Organizations", "Clubs", or "Museums" depending on settings.
 * Screen statistics changed to match title change.
-* TODO: fix Wikipedia link <<<<
+* Fixed missing Wikipedia link (used mainly for museums)
 
 PHOTOGRAPHERS SCREEN
 
