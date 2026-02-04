@@ -138,12 +138,12 @@ struct PhotographersListView2626: View {
 
 }
 
-// struct PhotographersView_Previews: PreviewProvider {
+// struct PhotographersListView2626_Previews: PreviewProvider {
 //    @State static var searchText = "D'Eau1"
 //    static var previews: some View {
 //        NavigationStack {
-//            WhoIsWhoListView(searchText: $searchText,
-//                             organizationLabel: String("PhotographerListView")
+//            PhotographersListView2626(searchText: $searchText,
+//                                      organizationLabel: String("PhotographerListView")
 //                )
 //                .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
 //        }
