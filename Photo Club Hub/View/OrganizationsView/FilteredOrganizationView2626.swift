@@ -302,15 +302,46 @@ struct FilteredOrganizationView2626: View {
 @available(iOS 26.0, *)
 extension FilteredOrganizationView2626 { // graphic representation
 
-    func selectMarkerTint(organization: Organization, selectedOrganization: Organization) -> Color {
-        if isEqual(organizationLHS: organization, organizationRHS: selectedOrganization) {
-            .organizationColor // this is the organization centered on this particular map
-        } else if organization.organizationType.isUnknown {
-            .red // for .unknown organization type (has higher priority than other rules)
+    /// Returns the tint color for a map marker representing an organization. // TODO backport function to v1718
+    ///
+    /// - Parameters:
+    ///   - organization: The organization for which the function is asked to determine the marker tint.
+    ///   - selectedOrganization: The organization currently centered/selected on this particular  map.
+    /// - Returns: A `Color` used to tint the marker for the given organization.
+    private func selectMarkerTint(organization: Organization, selectedOrganization: Organization) -> Color {
 
-        } else {
-            .blue // for .museum and .club (and future) organization types (this should be the normal case)
+        if isEqual(organizationLHS: organization, organizationRHS: selectedOrganization) {
+            return .organizationColor // this marker represents the Organization for which the map is being drawn
         }
+
+        if organization.organizationType.isMuseum {
+            return .blue // museums always shown in blue (they have a special symbol anyway, blue is default here)
+        }
+
+        if organization.organizationType.isClub {
+            let appSettings = PreferencesViewModel().preferences
+
+            if appSettings.highlightFotobondNL == false && appSettings.highlightNonFotobondNL == false {
+                return .blue // without special highlighting settings, use default color of blue
+            }
+
+            guard !(appSettings.highlightNonFotobondNL && appSettings.highlightFotobondNL) else {
+                ifDebugFatalError("Fotobond and non-Fotobond toggle are both enabled. That shouldn't happen.")
+                return .orange // error color
+            }
+
+            let clubInFotobond: Bool = (organization.fotobondClubNumber?.id != nil)
+            let highlightColor: Color = .red
+
+            if appSettings.highlightFotobondNL {
+                return clubInFotobond ? highlightColor : .gray // highlight Fotobond clubs, other clubs in gray
+            } else {
+                return clubInFotobond ? .gray: highlightColor // highlight nonFotobond clubs, other clubs in gray
+            }
+        }
+
+        ifDebugFatalError("Unknown organizationType in selectMarkerTint()")
+        return .orange // organization.organizationType.isUnknown
     }
 
     private func systemName(organizationType: OrganizationType?, circleNeeded: Bool) -> String { // for SF symbols

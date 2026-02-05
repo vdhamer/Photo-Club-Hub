@@ -151,6 +151,26 @@ struct PreferencesView2626: View {
                                           comment: "Label of toggle in Preferences"),
                                    isOn: $localPreferences.showMuseums.animation())
                         }
+                        HStack { // HIGHLIGHT FOTOBOND
+                            Image(systemName: "mappin.square")
+                                .font(.title2)
+                                .symbolRenderingMode(.palette)
+                                .foregroundStyle(.organizationColor, .gray, .red)
+                            Toggle(String(localized: "Highlight Dutch Fotobond clubs",
+                                          table: "PhotoClubHub.SwiftUI",
+                                          comment: "Label of toggle in Preferences"),
+                                   isOn: $localPreferences.highlightFotobondNL.animation())
+                        }
+                        HStack { // HIGHLIGHT NON-FOTOBOND
+                            Image(systemName: "mappin.square")
+                                .font(.title2)
+                                .symbolRenderingMode(.palette)
+                                .foregroundStyle(.organizationColor, .gray, .red)
+                            Toggle(String(localized: "Highlight non-Dutch Fotobond clubs",
+                                          table: "PhotoClubHub.SwiftUI",
+                                          comment: "Label of toggle in Preferences"),
+                                   isOn: $localPreferences.highlightNonFotobondNL.animation())
+                        }
                     })
 
                     Section(header: Text("Advanced",

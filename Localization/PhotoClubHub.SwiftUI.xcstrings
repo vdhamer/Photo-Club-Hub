@@ -433,6 +433,40 @@
         }
       }
     },
+    "Highlight Dutch Fotobond clubs" : {
+      "comment" : "Label of toggle in Preferences",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Highlight Dutch Fotobond clubs"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Markeer de Fotobond clubs"
+          }
+        }
+      }
+    },
+    "Highlight non-Dutch Fotobond clubs" : {
+      "comment" : "Label of toggle in Preferences",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Highlight non-Dutch Fotobond clubs"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Markeer de niet-Fotobond clubs"
+          }
+        }
+      }
+    },
     "In debug mode" : {
       "comment" : "Shown instead of app name in PreludeView when app is started",
       "localizations" : {

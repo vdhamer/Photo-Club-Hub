@@ -60,6 +60,8 @@ struct PreferencesStruct: Codable { // order in which they are shown on Preferen
     var showTestClubs: Bool
     var anyClubs: Bool { showClubs || showTestClubs } // convenience function
     var showMuseums: Bool
+    var highlightFotobondNL: Bool
+    var highlightNonFotobondNL: Bool
 
     static let defaultValue = PreferencesStruct( // has to match order of declaration
         showCurrentMembers: true,
@@ -72,7 +74,9 @@ struct PreferencesStruct: Codable { // order in which they are shown on Preferen
 
         showClubs: true,
         showTestClubs: false,
-        showMuseums: true
+        showMuseums: true,
+        highlightFotobondNL: false,
+        highlightNonFotobondNL: false
     )
 
     var memberPredicate: NSPredicate {
