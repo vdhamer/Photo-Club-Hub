@@ -313,7 +313,7 @@ extension FilteredOrganizationView2626 { // graphic representation
         }
     }
 
-    func systemName(organizationType: OrganizationType?, circleNeeded: Bool) -> String { // for SanFrancisco symbols
+    private func systemName(organizationType: OrganizationType?, circleNeeded: Bool) -> String { // for SF symbols
         guard let organizationType else { return "questionmark.circle.fill" }
 
         var result: String
@@ -340,7 +340,7 @@ extension FilteredOrganizationView2626 { // graphic representation
 @available(iOS 26.0, *)
 extension FilteredOrganizationView2626 { // reverse GeoCoding
 
-    func reverseGeocode(coordinates: CLLocationCoordinate2D) async throws -> (city: String?, country: String?) {
+    private func reverseGeocode(coordinates: CLLocationCoordinate2D) async throws -> (city: String?, country: String?) {
         let geocoder = CLGeocoder()
         let location = CLLocation(latitude: coordinates.latitude,
                                   longitude: coordinates.longitude)
