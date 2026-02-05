@@ -249,13 +249,13 @@ Dit moet de club aanmoedigen om het te corrigeren.
 
 Wat gebeurt als een Level 2 bestand een onbekende `expertise` tag bevat die niet bekend is in de app?
 Voorbeeld: een bestand bevat "Model" terwijl alleen "Portrait" ondersteund wordt.
-De app toont dan "Model" - maar met een speciaal groen ikoon.
-Het ikoon en bijbehorende 'tooltip' geven aan dat dit op dit moment geen officeel "ondersteunde" ""tag is.
+De app toont dan "Model" - maar met een speciaal groen icoon.
+Het icoon en bijbehorende 'tooltip' geven aan dat dit op dit moment geen officeel "ondersteunde" ""tag is.
 De app meldt expliciet dat daardoor geen vertalingen beschikbaar zijn: die zijn alleen mogelijk voor ondersteunde expertise tags. 
 Dit kan ertoe leiden dat de club de eventuele fout corrigeert of het vervangt door naar een verwante, ondersteunde expertise tag.
 Maar andere uitkomst is dat "Model" op een gegeven moment gepromoveerd wordt tot een ondersteunde `expertise`.
 Dit kan gebeuren als de "tijdelijke" tag welliswaar nieuw is, maar nuttig lijkt voor toekomstig gebruik.
-Het groene ikoon en de waarschuwing verdwijnen dan automatisch zodra de app ziet dat "Model" inmiddels een ondersteunde tag geworden is.
+Het groene icoon en de waarschuwing verdwijnen dan automatisch zodra de app ziet dat "Model" inmiddels een ondersteunde tag geworden is.
 </details></p>
 
 </li>
