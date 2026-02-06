@@ -311,19 +311,9 @@ extension FilteredOrganizationView2626 { // graphic representation
     private func selectMarkerTint(organization: Organization, selectedOrganization: Organization) -> Color {
 
         if isEqual(organizationLHS: organization, organizationRHS: selectedOrganization) {
-            return .organizationColor // this marker represents the Organization for which the map is being drawn
-        }
-
-        if organization.organizationType.isMuseum {
-            return .blue // museums always shown in blue (they have a special symbol anyway, blue is default here)
-        }
-
-        if organization.organizationType.isClub {
-            let appSettings = PreferencesViewModel().preferences
-
-            if appSettings.highlightFotobondNL == false && appSettings.highlightNonFotobondNL == false {
-                return .blue // without special highlighting settings, use default color of blue
-            }
+            .organizationColor // this is the organization centered on this particular map
+        } else if organization.organizationType.isUnknown {
+            .red // for .unknown organization type (has higher priority than other rules)
 
             guard !(appSettings.highlightNonFotobondNL && appSettings.highlightFotobondNL) else {
                 ifDebugFatalError("Fotobond and non-Fotobond toggle are both enabled. That shouldn't happen.")
@@ -331,7 +321,7 @@ extension FilteredOrganizationView2626 { // graphic representation
             }
 
             let clubInFotobond: Bool = (organization.fotobondClubNumber?.id != nil)
-            let highlightColor: Color = .red
+            let highlightColor: Color = appSettings.highlightColor
 
             if appSettings.highlightFotobondNL {
                 return clubInFotobond ? highlightColor : .gray // highlight Fotobond clubs, other clubs in gray
