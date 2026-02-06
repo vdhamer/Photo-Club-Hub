@@ -207,20 +207,21 @@ struct PreferencesView2626: View {
 
                         let highlightIsUsed = localPreferences.highlightFotobondNL ||
                                               localPreferences.highlightNonFotobondNL
-                        HStack {
-                            Image(systemName: "paintpalette")
-                                .font(.title2)
-                                .symbolRenderingMode(.palette)
-                                .foregroundStyle(.organizationColor, .gray, .red)
-                            ColorPicker(
-                                String(localized: "Highlighting color",
-                                       table: "PhotoClubHub.SwiftUI",
-                                       comment: "Label of color picker in Preferences"),
-                                selection: $localPreferences.highlightColor
-                            ) .foregroundStyle(highlightIsUsed ? .primary : .secondary)
+                        if highlightIsUsed {
+                            HStack {
+                                Image(systemName: "mappin.square")
+                                    .font(.title2)
+                                    .symbolRenderingMode(.palette)
+                                    .foregroundStyle(.organizationColor, .gray, .red)
+                                ColorPicker(
+                                    String(localized: "Highlighting color",
+                                           table: "PhotoClubHub.SwiftUI",
+                                           comment: "Label of color picker in Preferences"),
+                                    selection: $localPreferences.highlightColor,
+                                    supportsOpacity: false
+                                )
+                            }
                         }
-                        .disabled(!highlightIsUsed)
-
                     })
 
                     Section(header: Text("Advanced",
