@@ -121,6 +121,7 @@ struct PreferencesView2626: View {
                                          tableName: "PhotoClubHub.SwiftUI",
                                          comment: "In Preferences, section title"),
                             content: {
+
                         HStack { // SHOW CLUBS
                             Image(systemName: "mappin.square")
                                 .font(.title2)
@@ -131,6 +132,7 @@ struct PreferencesView2626: View {
                                           comment: "Label of toggle in Preferences"),
                                    isOn: $localPreferences.showClubs.animation())
                         }
+
                         HStack { // SHOW TEST CLUBS
                             Image(systemName: "mappin.square")
                                 .font(.title2)
@@ -141,6 +143,7 @@ struct PreferencesView2626: View {
                                           comment: "Label of toggle in Preferences"),
                                    isOn: $localPreferences.showTestClubs.animation())
                         }
+
                         HStack { // SHOW MUSEUMS
                             Image(systemName: "mappin.square")
                                 .font(.title2)
@@ -151,6 +154,73 @@ struct PreferencesView2626: View {
                                           comment: "Label of toggle in Preferences"),
                                    isOn: $localPreferences.showMuseums.animation())
                         }
+
+                        if localPreferences.highlightNonFotobondNL == false {
+                            HStack { // HIGHLIGHT FOTOBOND
+                                Image(systemName: "mappin.square")
+                                    .font(.title2)
+                                    .symbolRenderingMode(.palette)
+                                    .foregroundStyle(.organizationColor, .gray, .red)
+                                Toggle(String(localized: "Highlight Dutch Fotobond NL clubs",
+                                              table: "PhotoClubHub.SwiftUI",
+                                              comment: "Label of toggle in Preferences"),
+                                       isOn: $localPreferences.highlightFotobondNL.animation())
+                            }
+                        } else {
+                            HStack {
+                                Image(systemName: "mappin.square")
+                                    .font(.title2)
+                                    .symbolRenderingMode(.palette)
+                                    .foregroundStyle(.organizationColor, .gray, .red)
+                                Text(
+                                    "Highlighting of non-Fotobond clubs already enabled",
+                                    tableName: "PhotoClubHub.SwiftUI",
+                                    comment: "Shown when highlightNonFotobondNL toggle is enabled")
+                                    .foregroundColor(.gray)
+                            }
+                        }
+
+                        if localPreferences.highlightFotobondNL == false {
+                            HStack { // HIGHLIGHT NON-FOTOBOND
+                                Image(systemName: "mappin.square")
+                                    .font(.title2)
+                                    .symbolRenderingMode(.palette)
+                                    .foregroundStyle(.organizationColor, .gray, .red)
+                                Toggle(String(localized: "Highlight non-Fotobond NL clubs",
+                                              table: "PhotoClubHub.SwiftUI",
+                                              comment: "Label of toggle in Preferences"),
+                                       isOn: $localPreferences.highlightNonFotobondNL.animation())
+                            }
+                        } else {
+                            HStack {
+                                Image(systemName: "mappin.square")
+                                    .font(.title2)
+                                    .symbolRenderingMode(.palette)
+                                    .foregroundStyle(.organizationColor, .gray, .red)
+                                Text(
+                                    "Highlighting of Fotobond clubs already enabled",
+                                    tableName: "PhotoClubHub.SwiftUI",
+                                    comment: "Shown when highlightFotobondNL toggle is enabled")
+                                    .foregroundColor(.gray)
+                            }
+                        }
+
+                        let highlightIsUsed = localPreferences.highlightFotobondNL ||
+                                              localPreferences.highlightNonFotobondNL
+                        HStack {
+                            Image(systemName: "paintpalette")
+                                .font(.title2)
+                                .symbolRenderingMode(.palette)
+                                .foregroundStyle(.organizationColor, .gray, .red)
+                            ColorPicker(
+                                String(localized: "Highlighting color",
+                                       table: "PhotoClubHub.SwiftUI",
+                                       comment: "Label of color picker in Preferences"),
+                                selection: $localPreferences.highlightColor
+                            ) .foregroundStyle(highlightIsUsed ? .primary : .secondary)
+                        }
+                        .disabled(!highlightIsUsed)
+
                     })
 
                     Section(header: Text("Advanced",

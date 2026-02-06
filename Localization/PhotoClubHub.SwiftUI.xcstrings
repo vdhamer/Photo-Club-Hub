@@ -61,7 +61,7 @@
             "plural" : {
               "one" : {
                 "stringUnit" : {
-                  "state" : "needs_review",
+                  "state" : "translated",
                   "value" : "%lld club"
                 }
               },
@@ -103,7 +103,7 @@
             "plural" : {
               "one" : {
                 "stringUnit" : {
-                  "state" : "needs_review",
+                  "state" : "translated",
                   "value" : "%lld member"
                 }
               },
@@ -162,7 +162,7 @@
             "plural" : {
               "one" : {
                 "stringUnit" : {
-                  "state" : "needs_review",
+                  "state" : "translated",
                   "value" : "%lld museum"
                 }
               },
@@ -221,7 +221,7 @@
             "plural" : {
               "one" : {
                 "stringUnit" : {
-                  "state" : "needs_review",
+                  "state" : "translated",
                   "value" : "%lld organization"
                 }
               },
@@ -263,7 +263,7 @@
             "plural" : {
               "one" : {
                 "stringUnit" : {
-                  "state" : "needs_review",
+                  "state" : "translated",
                   "value" : "%lld photographer"
                 }
               },
@@ -429,6 +429,91 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Naar het Portfolio’s scherm"
+          }
+        }
+      }
+    },
+    "Highlight Dutch Fotobond NL clubs" : {
+      "comment" : "Label of toggle in Preferences",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Highlight Dutch Fotobond NL clubs"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Benadruk Fotobond clubs"
+          }
+        }
+      }
+    },
+    "Highlight non-Fotobond NL clubs" : {
+      "comment" : "Label of toggle in Preferences",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Highlight non-Fotobond NL clubs"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Benadruk overige clubs"
+          }
+        }
+      }
+    },
+    "Highlighting color" : {
+      "comment" : "Label of color picker in Preferences",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Highlighting color"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kleur om clubs te benadrukken"
+          }
+        }
+      }
+    },
+    "Highlighting of Fotobond clubs already enabled" : {
+      "comment" : "Shown when highlightFotobondNL toggle is enabled",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Highlighting of Fotobond clubs already enabled"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fotobond clubs worden al benadrukt"
+          }
+        }
+      }
+    },
+    "Highlighting of non-Fotobond clubs already enabled" : {
+      "comment" : "Shown when highlightNonFotobondNL toggle is enabled",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Highlighting of non-Fotobond clubs already enabled"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Overige clubs worden al benadrukt"
           }
         }
       }

@@ -8,6 +8,7 @@
 import Foundation // for @Published and ObservableObject
 import CoreData // for NSManagedObject
 import Combine // for AnyCancellable
+import SwiftUI // for Color
 
 /// A view model that manages the user's preferences for filtering members throughout the app.
 ///
@@ -37,7 +38,9 @@ class PreferencesViewModel: ObservableObject {
     var preferences: PreferencesStruct = .defaultValue
 }
 
-struct PreferencesStruct: Codable { // order in which they are shown on Preferences page
+// Custom Codable conformance is needed for PreferencesStruct because `highlightColor` does not conform to Codable.
+// We encode highlightColor as an RGBA tuple using UIColor and decode it back into a SwiftUI Color.
+struct PreferencesStruct { // order in which they are shown on Preferences page
     var showCurrentMembers: Bool {
         didSet {
             showOfficers = showCurrentMembers // officers are current members
@@ -60,6 +63,9 @@ struct PreferencesStruct: Codable { // order in which they are shown on Preferen
     var showTestClubs: Bool
     var anyClubs: Bool { showClubs || showTestClubs } // convenience function
     var showMuseums: Bool
+    var highlightFotobondNL: Bool
+    var highlightNonFotobondNL: Bool
+    var highlightColor: Color
 
     static let defaultValue = PreferencesStruct( // has to match order of declaration
         showCurrentMembers: true,
@@ -72,7 +78,10 @@ struct PreferencesStruct: Codable { // order in which they are shown on Preferen
 
         showClubs: true,
         showTestClubs: false,
-        showMuseums: true
+        showMuseums: true,
+        highlightFotobondNL: false,
+        highlightNonFotobondNL: false,
+        highlightColor: Color(.red)
     )
 
     var memberPredicate: NSPredicate {
@@ -214,5 +223,88 @@ extension String {
     func predicateOrAppend(suffix: String) -> String {
         guard self != "" else { return suffix }
         return self + " OR " + suffix
+    }
+}
+
+extension PreferencesStruct: Codable { // this extension was generated entirely by ChatGPT
+    enum CodingKeys: String, CodingKey {
+        case showCurrentMembers
+        case showOfficers
+        case showAspiringMembers
+        case showHonoraryMembers
+        case showFormerMembers
+        case showDeceasedMembers
+        case showExternalCoaches
+        case showClubs
+        case showTestClubs
+        case showMuseums
+        case highlightFotobondNL
+        case highlightNonFotobondNL
+        // highlightColor handled separately
+    }
+
+    enum HighlightColorKeys: String, CodingKey {
+        case red, green, blue, alpha
+    }
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+
+        showCurrentMembers = try container.decode(Bool.self, forKey: .showCurrentMembers)
+        showOfficers = try container.decode(Bool.self, forKey: .showOfficers)
+        showAspiringMembers = try container.decode(Bool.self, forKey: .showAspiringMembers)
+        showHonoraryMembers = try container.decode(Bool.self, forKey: .showHonoraryMembers)
+        showFormerMembers = try container.decode(Bool.self, forKey: .showFormerMembers)
+        showDeceasedMembers = try container.decode(Bool.self, forKey: .showDeceasedMembers)
+        showExternalCoaches = try container.decode(Bool.self, forKey: .showExternalCoaches)
+
+        showClubs = try container.decode(Bool.self, forKey: .showClubs)
+        showTestClubs = try container.decode(Bool.self, forKey: .showTestClubs)
+        showMuseums = try container.decode(Bool.self, forKey: .showMuseums)
+        highlightFotobondNL = try container.decode(Bool.self, forKey: .highlightFotobondNL)
+        highlightNonFotobondNL = try container.decode(Bool.self, forKey: .highlightNonFotobondNL)
+
+        // Decode highlightColor
+        if let colorContainer = try? decoder.container(keyedBy: HighlightColorKeys.self) {
+            let red = try colorContainer.decode(Double.self, forKey: .red)
+            let green = try colorContainer.decode(Double.self, forKey: .green)
+            let blue = try colorContainer.decode(Double.self, forKey: .blue)
+            let alpha = try colorContainer.decode(Double.self, forKey: .alpha)
+            highlightColor = Color(.sRGB, red: red, green: green, blue: blue, opacity: alpha)
+        } else {
+            highlightColor = .red // fallback default color
+        }
+    }
+
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+
+        try container.encode(showCurrentMembers, forKey: .showCurrentMembers)
+        try container.encode(showOfficers, forKey: .showOfficers)
+        try container.encode(showAspiringMembers, forKey: .showAspiringMembers)
+        try container.encode(showHonoraryMembers, forKey: .showHonoraryMembers)
+        try container.encode(showFormerMembers, forKey: .showFormerMembers)
+        try container.encode(showDeceasedMembers, forKey: .showDeceasedMembers)
+        try container.encode(showExternalCoaches, forKey: .showExternalCoaches)
+
+        try container.encode(showClubs, forKey: .showClubs)
+        try container.encode(showTestClubs, forKey: .showTestClubs)
+        try container.encode(showMuseums, forKey: .showMuseums)
+        try container.encode(highlightFotobondNL, forKey: .highlightFotobondNL)
+        try container.encode(highlightNonFotobondNL, forKey: .highlightNonFotobondNL)
+
+        // Encode highlightColor as RGBA components via UIColor
+        var colorContainer = encoder.container(keyedBy: HighlightColorKeys.self)
+        let uiColor = UIColor(highlightColor)
+        var red: CGFloat = 0
+        var green: CGFloat = 0
+        var blue: CGFloat = 0
+        var alpha: CGFloat = 0
+        uiColor.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
+
+        try colorContainer.encode(Double(red), forKey: .red)
+        try colorContainer.encode(Double(green), forKey: .green)
+        try colorContainer.encode(Double(blue), forKey: .blue)
+        try colorContainer.encode(Double(alpha), forKey: .alpha)
     }
 }

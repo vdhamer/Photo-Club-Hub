@@ -308,8 +308,19 @@ extension FilteredOrganizationView2626 { // graphic representation
         } else if organization.organizationType.isUnknown {
             .red // for .unknown organization type (has higher priority than other rules)
 
-        } else {
-            .blue // for .museum and .club (and future) organization types (this should be the normal case)
+            guard !(appSettings.highlightNonFotobondNL && appSettings.highlightFotobondNL) else {
+                ifDebugFatalError("Fotobond and non-Fotobond toggle are both enabled. That shouldn't happen.")
+                return .orange // error color
+            }
+
+            let clubInFotobond: Bool = (organization.fotobondClubNumber?.id != nil)
+            let highlightColor: Color = appSettings.highlightColor
+
+            if appSettings.highlightFotobondNL {
+                return clubInFotobond ? highlightColor : .gray // highlight Fotobond clubs, other clubs in gray
+            } else {
+                return clubInFotobond ? .gray: highlightColor // highlight nonFotobond clubs, other clubs in gray
+            }
         }
     }
 
