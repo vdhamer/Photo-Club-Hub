@@ -53,6 +53,7 @@
 		37E134B92E6F75ED00C61714 /* ReadmeView2626.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E134B72E6F75ED00C61714 /* ReadmeView2626.swift */; };
 		37E134BA2E6F75ED00C61714 /* ReadmeSection2626.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E134B62E6F75ED00C61714 /* ReadmeSection2626.swift */; };
 		37E134BB2E6F75ED00C61714 /* SectionHeader2626.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E134B82E6F75ED00C61714 /* SectionHeader2626.swift */; };
+		37F573CA2F3668C7001305F2 /* MapMarker​Appearance​.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F573C92F3668C7001305F2 /* MapMarker​Appearance​.swift */; };
 		37F7F53D2EC8A028000F1889 /* PreludeImage2626.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F7F53C2EC8A028000F1889 /* PreludeImage2626.swift */; };
 		D006BA7E2B115FB1002E555B /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D006BA7D2B115FB1002E555B /* LocationManager.swift */; };
 		D008D2AA28739167007A7BE2 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = D008D2A928739167007A7BE2 /* .gitignore */; };
@@ -228,6 +229,7 @@
 		37E61E042E62DB9300F6D3B5 /* Photo_Club_Hub_2_8_4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_8_4.xcdatamodel; sourceTree = "<group>"; };
 		37E818B32EEDE61900BF5518 /* GitHub_bestandsbeheer_NL.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = GitHub_bestandsbeheer_NL.md; sourceTree = "<group>"; };
 		37EC25472EB6889300667D8A /* FeaturedImagePipeline.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = FeaturedImagePipeline.md; sourceTree = "<group>"; };
+		37F573C92F3668C7001305F2 /* MapMarker​Appearance​.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapMarker​Appearance​.swift"; sourceTree = "<group>"; };
 		37F7F53C2EC8A028000F1889 /* PreludeImage2626.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreludeImage2626.swift; sourceTree = "<group>"; };
 		D006BA7D2B115FB1002E555B /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		D008D2A928739167007A7BE2 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
@@ -782,6 +784,7 @@
 				D0AE1B7427889E8600E0100E /* OrganizationListView2626.swift */,
 				37E134B02E6F693E00C61714 /* FilteredOrganizationView2626.swift */,
 				D0E694C827EF9B450054D634 /* LockAnimationView.swift */,
+				37F573C92F3668C7001305F2 /* MapMarker​Appearance​.swift */,
 			);
 			path = OrganizationsView;
 			sourceTree = "<group>";
@@ -1235,6 +1238,7 @@
 				D0E2235427DE9139002A8600 /* PreludeView1718.swift in Sources */,
 				D0F5EE872C54EDC60028C9A6 /* PhotographerOptionalFields.swift in Sources */,
 				D0621E812AE2D7DE000FFADB /* MemberPortfolio+roles.swift in Sources */,
+				37F573CA2F3668C7001305F2 /* MapMarker​Appearance​.swift in Sources */,
 				D0362A872AC3A21200F87378 /* String+containsWordUsingNLP.swift in Sources */,
 				D0AE1B782788A19500E0100E /* PhotographersListView2626.swift in Sources */,
 				D006BA7E2B115FB1002E555B /* LocationManager.swift in Sources */,
