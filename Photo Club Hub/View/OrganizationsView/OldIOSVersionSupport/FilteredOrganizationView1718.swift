@@ -304,47 +304,9 @@ struct FilteredOrganizationView1718: View {
 }
 
 @available(iOS, obsoleted: 19.0, message: "Please use 'FilteredOrganizationView2626' for versions above iOS 18.x")
-extension FilteredOrganizationView1718 { // graphic representation
-
-    func selectMarkerTint(organization: Organization, selectedOrganization: Organization) -> Color {
-        if isEqual(organizationLHS: organization, organizationRHS: selectedOrganization) {
-            .organizationColor // this is the organization centered on this particular map
-        } else if organization.organizationType.isUnknown {
-            .red // for .unknown organization type (has higher priority than other rules)
-
-        } else {
-            .blue // for .museum and .club (and future) organization types (this should be the normal case)
-        }
-    }
-
-    func systemName(organizationType: OrganizationType?, circleNeeded: Bool) -> String { // for SanFrancisco symbols
-        guard let organizationType else { return "questionmark.circle.fill" }
-
-        var result: String
-
-        switch organizationType.organizationTypeName {
-        case OrganizationTypeEnum.museum.rawValue:
-            result = "building.columns.fill"
-        case OrganizationTypeEnum.club.rawValue:
-            result = "camera.fill"
-        case OrganizationTypeEnum.unknown.rawValue:
-            result = "questionmark"
-        default: // compiler insists on having a default, likely because organizationTypeName is a String
-            result = "exclamationmark"
-        }
-
-        if circleNeeded {
-            result = result.replacing(".fill", with: ".circle.fill")
-        }
-        return result
-    }
-
-}
-
-@available(iOS, obsoleted: 19.0, message: "Please use 'FilteredOrganizationView2626' for versions above iOS 18.x")
 extension FilteredOrganizationView1718 { // reverse GeoCoding
 
-    func reverseGeocode(coordinates: CLLocationCoordinate2D) async throws -> (city: String?, country: String?) {
+    private func reverseGeocode(coordinates: CLLocationCoordinate2D) async throws -> (city: String?, country: String?) {
         let geocoder = CLGeocoder()
         let location = CLLocation(latitude: coordinates.latitude,
                                   longitude: coordinates.longitude)
@@ -361,15 +323,6 @@ extension FilteredOrganizationView1718 { // reverse GeoCoding
 }
 
 @available(iOS, obsoleted: 19.0, message: "Please use 'FilteredOrganizationView2626' for versions above iOS 18.x")
-extension FilteredOrganizationView1718 { // tests for equality
-
-    private func isEqual(organizationLHS: Organization, organizationRHS: Organization) -> Bool {
-        return (organizationLHS.fullName == organizationRHS.fullName) && (organizationLHS.town == organizationRHS.town)
-    }
-
-}
-
-@available(iOS, obsoleted: 19.0, message: "Please use 'FilteredOrganizationView_Previews2626' for versions > iOS 18.x")
 struct FilteredOrganizationView1718_Previews: PreviewProvider {
     static let organizationPredicate = NSPredicate(format: "fullName_ = %@ || fullName_ = %@ || fullName_ = %@",
                                                    argumentArray: ["PhotoClub2", "PhotoClub1", "PhotoClub3"])
