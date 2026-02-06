@@ -468,7 +468,7 @@
       }
     },
     "Highlighting color" : {
-      "comment" : "Label of highlight color picker in Preferences",
+      "comment" : "Label of color picker in Preferences",
       "localizations" : {
         "en" : {
           "stringUnit" : {
