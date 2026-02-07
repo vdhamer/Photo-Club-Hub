@@ -348,7 +348,7 @@
       }
     },
     "Data source: %@://%@%@/" : {
-      "comment" : "Section footer text Members screen",
+      "comment" : "Section footer text for Members screen",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -927,7 +927,7 @@
       }
     },
     "Search_names_m" : {
-      "comment" : "Field at top of Members page that allows the user to filter the members based on either given- and family name.",
+      "comment" : "Field at top of MemberPortfolios page that allows the user to filter the members based on either given- and family name.",
       "localizations" : {
         "en" : {
           "stringUnit" : {
