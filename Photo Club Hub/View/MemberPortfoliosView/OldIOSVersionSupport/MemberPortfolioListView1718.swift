@@ -56,7 +56,7 @@ struct MemberPortfolioListView1718: View {
         .autocapitalization(.sentences)
         .submitLabel(.done) // currently only works with text fields?
         .disableAutocorrection(true)
-        .navigationTitle(String(localized: "Portfolios",
+        .navigationTitle(String(localized: "Members",
                                 table: "PhotoClubHub.SwiftUI",
                                 comment: "Title of page showing member portfolios"))
         .toolbar {
