@@ -32,7 +32,7 @@ struct PreferencesView1718: View {
         GeometryReader(content: { _ in
             NavigationStack {
                 List {
-                    Section(header: Text("Portfolios",
+                    Section(header: Text("Members",
                                          tableName: "PhotoClubHub.SwiftUI",
                                          comment: "In Preferences, above toggles like \"Show former members\""),
                             content: {

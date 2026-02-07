@@ -2,7 +2,6 @@
 
 USER-FACING
 
-* TODO: optionally distinguish Fotobond pins on maps in color
 * TODO: concentricity in Liquid Glass?
 * TODO: display expertises on Photographers screen <<<<
 * TODO: more search functionality on Photographers screen <<<<
@@ -17,9 +16,10 @@ STRUCTURAL
 ORGANIZATIONS SCREEN
 
 * Screen was previously called "Clubs and Museums" or "Clubs en Musea".
-* Screene title is now dynamic: it may state "Organizations", "Clubs", or "Museums" depending on settings.
+* Preferences allow you to highlight club markers that are/aren't federated into the Dutch Fotobond.
+* Screen title is now dynamic: it may read "Organizations", "Clubs", or "Museums" depending on the list's contents.
 * Screen statistics changed to match title change.
-* Fixed missing Wikipedia link (used mainly for museums)
+* Fixed missing Wikipedia link (often visible for museums)
 
 PHOTOGRAPHERS SCREEN
 
