@@ -29,7 +29,7 @@
         }
     },
 
-
+    
     "members": [
         {
             "name": {
@@ -38,13 +38,10 @@
                 "familyName": "Kleinendorst"
             },
             "optional": {
-                "birthday": "9999-02-24",
                 "featuredImage": "",
                 "level3URL": "",
                 "membershipStartDate": "",
-                "expertises": [
-                    ""
-                ],
+                "expertises": [],
                 "nlSpecific": {
                     "fotobondNumber": 1601095
                 }
@@ -58,13 +55,10 @@
                 "familyName": "Kennis"
             },
             "optional": {
-                "birthday": "9999-02-24",
                 "featuredImage": "",
                 "level3URL": "",
                 "membershipStartDate": "",
-                "expertises": [
-                    ""
-                ],
+                "expertises": [],
                 "nlSpecific": {
                     "fotobondNumber": 1601088
                 }
@@ -75,16 +69,13 @@
             "name": {
                 "givenName": "Angelique",
                 "infixName": "van",
-                "familyName": "Haaren-van de Kaa"
+                "familyName": "Haaren - van de Kaa"
             },
             "optional": {
-                "birthday": "9999-02-24",
                 "featuredImage": "",
                 "level3URL": "",
                 "membershipStartDate": "",
-                "expertises": [
-                    ""
-                ],
+                "expertises": [],
                 "nlSpecific": {
                     "fotobondNumber": 1601086
                 }
@@ -93,18 +84,15 @@
 
         {
             "name": {
-                "givenName": "Anouscka",
+                "givenName": "Anouschka",
                 "infixName": "",
                 "familyName": "Hendriks"
             },
             "optional": {
-                "birthday": "9999-02-24",
                 "featuredImage": "",
                 "level3URL": "",
                 "membershipStartDate": "",
-                "expertises": [
-                    ""
-                ],
+                "expertises": [],
                 "nlSpecific": {
                     "fotobondNumber": 1601096
                 }
@@ -113,20 +101,51 @@
 
         {
             "name": {
+                "givenName": "Anton",
+                "infixName": "",
+                "familyName": "Sweere"
+            },
+            "optional": {
+                "featuredImage": "",
+                "level3URL": "",
+                "membershipStartDate": "",
+                "expertises": [],
+                "nlSpecific": {
+                    "fotobondNumber": 1601111
+                }
+            }
+        },
+        
+        {
+            "name": {
                 "givenName": "Astrid",
                 "infixName": "",
                 "familyName": "Sjoerdsma - van der Weide"
             },
             "optional": {
-                "birthday": "9999-02-24",
                 "featuredImage": "",
                 "level3URL": "",
                 "membershipStartDate": "",
-                "expertises": [
-                    ""
-                ],
+                "expertises": [],
                 "nlSpecific": {
                     "fotobondNumber": 1601097
+                }
+            }
+        },
+
+        {
+            "name": {
+                "givenName": "Bert",
+                "infixName": "",
+                "familyName": "Ketelaars"
+            },
+            "optional": {
+                "featuredImage": "",
+                "level3URL": "",
+                "membershipStartDate": "",
+                "expertises": [],
+                "nlSpecific": {
+                    "fotobondNumber": 1601082
                 }
             }
         },
@@ -138,13 +157,10 @@
                 "familyName": "Mandemaker"
             },
             "optional": {
-                "birthday": "9999-02-24",
                 "featuredImage": "",
                 "level3URL": "",
                 "membershipStartDate": "",
-                "expertises": [
-                    ""
-                ],
+                "expertises": [],
                 "nlSpecific": {
                     "fotobondNumber": 1601099
                 }
@@ -158,13 +174,10 @@
                 "familyName": "Loo"
             },
             "optional": {
-                "birthday": "9999-02-24",
                 "featuredImage": "",
                 "level3URL": "",
                 "membershipStartDate": "",
-                "expertises": [
-                    ""
-                ],
+                "expertises": [],
                 "nlSpecific": {
                     "fotobondNumber": 1601110
                 }
@@ -178,15 +191,29 @@
                 "familyName": "Hegemans"
             },
             "optional": {
-                "birthday": "9999-02-24",
                 "featuredImage": "",
                 "level3URL": "",
                 "membershipStartDate": "",
-                "expertises": [
-                    ""
-                ],
+                "expertises": [],
                 "nlSpecific": {
                     "fotobondNumber": 1601098
+                }
+            }
+        },
+
+        {
+            "name": {
+                "givenName": "Elena",
+                "infixName": "",
+                "familyName": "Wendelin"
+            },
+            "optional": {
+                "featuredImage": "",
+                "level3URL": "",
+                "membershipStartDate": "",
+                "expertises": [],
+                "nlSpecific": {
+                    "fotobondNumber": 1601085
                 }
             }
         },
@@ -198,13 +225,10 @@
                 "familyName": "Tillaart - van Ham"
             },
             "optional": {
-                "birthday": "9999-02-24",
                 "featuredImage": "",
                 "level3URL": "",
                 "membershipStartDate": "",
-                "expertises": [
-                    ""
-                ],
+                "expertises": [],
                 "nlSpecific": {
                     "fotobondNumber": 1601105
                 }
@@ -218,13 +242,10 @@
                 "familyName": "Geenevasen"
             },
             "optional": {
-                "birthday": "9999-02-24",
                 "featuredImage": "",
                 "level3URL": "",
                 "membershipStartDate": "",
-                "expertises": [
-                    ""
-                ],
+                "expertises": [],
                 "nlSpecific": {
                     "fotobondNumber": 1601101
                 }
@@ -238,15 +259,29 @@
                 "familyName": "Holtkamp"
             },
             "optional": {
-                "birthday": "9999-02-24",
                 "featuredImage": "",
                 "level3URL": "",
                 "membershipStartDate": "",
-                "expertises": [
-                    ""
-                ],
+                "expertises": [],
                 "nlSpecific": {
                     "fotobondNumber": 1601083
+                }
+            }
+        },
+
+        {
+            "name": {
+                "givenName": "Gerard",
+                "infixName": "van",
+                "familyName": "Leiden"
+            },
+            "optional": {
+                "featuredImage": "",
+                "level3URL": "",
+                "membershipStartDate": "",
+                "expertises": [],
+                "nlSpecific": {
+                    "fotobondNumber": 1601013
                 }
             }
         },
@@ -258,13 +293,10 @@
                 "familyName": "Nielen"
             },
             "optional": {
-                "birthday": "9999-02-24",
                 "featuredImage": "",
                 "level3URL": "",
                 "membershipStartDate": "",
-                "expertises": [
-                    ""
-                ],
+                "expertises": [],
                 "nlSpecific": {
                     "fotobondNumber": 1601093
                 }
@@ -278,13 +310,10 @@
                 "familyName": "Rijkers"
             },
             "optional": {
-                "birthday": "9999-02-24",
                 "featuredImage": "",
                 "level3URL": "",
                 "membershipStartDate": "",
-                "expertises": [
-                    ""
-                ],
+                "expertises": [],
                 "nlSpecific": {
                     "fotobondNumber": 1601063
                 }
@@ -298,13 +327,10 @@
                 "familyName": "Michiels"
             },
             "optional": {
-                "birthday": "9999-02-24",
                 "featuredImage": "",
                 "level3URL": "",
                 "membershipStartDate": "",
-                "expertises": [
-                    ""
-                ],
+                "expertises": [],
                 "nlSpecific": {
                     "fotobondNumber": 1601107
                 }
@@ -318,13 +344,10 @@
                 "familyName": "Zutphen"
             },
             "optional": {
-                "birthday": "9999-02-24",
                 "featuredImage": "",
                 "level3URL": "",
                 "membershipStartDate": "",
-                "expertises": [
-                    ""
-                ],
+                "expertises": [],
                 "nlSpecific": {
                     "fotobondNumber": 1601050
                 }
@@ -338,13 +361,10 @@
                 "familyName": "Pas"
             },
             "optional": {
-                "birthday": "9999-02-24",
                 "featuredImage": "",
                 "level3URL": "",
                 "membershipStartDate": "",
-                "expertises": [
-                    ""
-                ],
+                "expertises": [],
                 "nlSpecific": {
                     "fotobondNumber": 1601080
                 }
@@ -358,13 +378,10 @@
                 "familyName": "Nunen"
             },
             "optional": {
-                "birthday": "9999-02-24",
                 "featuredImage": "",
                 "level3URL": "",
                 "membershipStartDate": "",
-                "expertises": [
-                    ""
-                ],
+                "expertises": [],
                 "nlSpecific": {
                     "fotobondNumber": 1601081
                 }
@@ -378,15 +395,29 @@
                 "familyName": "Rotteveel"
             },
             "optional": {
-                "birthday": "9999-02-24",
                 "featuredImage": "",
                 "level3URL": "",
                 "membershipStartDate": "",
-                "expertises": [
-                    ""
-                ],
+                "expertises": [],
                 "nlSpecific": {
                     "fotobondNumber": 1601091
+                }
+            }
+        },
+
+        {
+            "name": {
+                "givenName": "Huibert",
+                "infixName": "van",
+                "familyName": "Aarle"
+            },
+            "optional": {
+                "featuredImage": "",
+                "level3URL": "",
+                "membershipStartDate": "",
+                "expertises": [],
+                "nlSpecific": {
+                    "fotobondNumber": 1601109
                 }
             }
         },
@@ -398,13 +429,10 @@
                 "familyName": "Kuik"
             },
             "optional": {
-                "birthday": "9999-02-24",
                 "featuredImage": "",
                 "level3URL": "",
                 "membershipStartDate": "",
-                "expertises": [
-                    ""
-                ],
+                "expertises": [],
                 "nlSpecific": {
                     "fotobondNumber": 1601100
                 }
@@ -418,13 +446,10 @@
                 "familyName": "Rovers"
             },
             "optional": {
-                "birthday": "9999-02-24",
                 "featuredImage": "",
                 "level3URL": "",
                 "membershipStartDate": "",
-                "expertises": [
-                    ""
-                ],
+                "expertises": [],
                 "nlSpecific": {
                     "fotobondNumber": 1601072
                 }
@@ -438,13 +463,10 @@
                 "familyName": "Rooijmans"
             },
             "optional": {
-                "birthday": "9999-02-24",
                 "featuredImage": "",
                 "level3URL": "",
                 "membershipStartDate": "",
-                "expertises": [
-                    ""
-                ],
+                "expertises": [],
                 "nlSpecific": {
                     "fotobondNumber": 1601047
                 }
@@ -458,13 +480,10 @@
                 "familyName": "Evers"
             },
             "optional": {
-                "birthday": "9999-02-24",
                 "featuredImage": "",
                 "level3URL": "",
                 "membershipStartDate": "",
-                "expertises": [
-                    ""
-                ],
+                "expertises": [],
                 "nlSpecific": {
                     "fotobondNumber": 1601069
                 }
@@ -478,13 +497,10 @@
                 "familyName": "Rovers"
             },
             "optional": {
-                "birthday": "9999-02-24",
                 "featuredImage": "",
                 "level3URL": "",
                 "membershipStartDate": "",
-                "expertises": [
-                    ""
-                ],
+                "expertises": [],
                 "nlSpecific": {
                     "fotobondNumber": 1601067
                 }
@@ -498,13 +514,10 @@
                 "familyName": "Haas"
             },
             "optional": {
-                "birthday": "9999-02-24",
                 "featuredImage": "",
                 "level3URL": "",
                 "membershipStartDate": "",
-                "expertises": [
-                    ""
-                ],
+                "expertises": [],
                 "nlSpecific": {
                     "fotobondNumber": 1601106
                 }
@@ -518,15 +531,29 @@
                 "familyName": "Gruijters"
             },
             "optional": {
-                "birthday": "9999-02-24",
                 "featuredImage": "",
                 "level3URL": "",
                 "membershipStartDate": "",
-                "expertises": [
-                    ""
-                ],
+                "expertises": [],
                 "nlSpecific": {
                     "fotobondNumber": 1601071
+                }
+            }
+        },
+
+        {
+            "name": {
+                "givenName": "Theo",
+                "infixName": "de",
+                "familyName": "Vrede"
+            },
+            "optional": {
+                "featuredImage": "",
+                "level3URL": "",
+                "membershipStartDate": "",
+                "expertises": [],
+                "nlSpecific": {
+                    "fotobondNumber": 1601103
                 }
             }
         },
@@ -538,13 +565,10 @@
                 "familyName": "Timmermans"
             },
             "optional": {
-                "birthday": "9999-02-24",
                 "featuredImage": "",
                 "level3URL": "",
                 "membershipStartDate": "",
-                "expertises": [
-                    ""
-                ],
+                "expertises": [],
                 "nlSpecific": {
                     "fotobondNumber": 1601087
                 }
@@ -558,13 +582,10 @@
                 "familyName": "Verhoeven"
             },
             "optional": {
-                "birthday": "9999-02-24",
                 "featuredImage": "",
                 "level3URL": "",
                 "membershipStartDate": "",
-                "expertises": [
-                    ""
-                ],
+                "expertises": [],
                 "nlSpecific": {
                     "fotobondNumber": 1601052
                 }
@@ -573,18 +594,32 @@
         
         {
             "name": {
+                "givenName": "Toon",
+                "infixName": "",
+                "familyName": "Bekkers"
+            },
+            "optional": {
+                "featuredImage": "",
+                "level3URL": "",
+                "membershipStartDate": "",
+                "expertises": [],
+                "nlSpecific": {
+                    "fotobondNumber": 1601045
+                }
+            }
+        },
+
+        {
+            "name": {
                 "givenName": "Wim",
                 "infixName": "van der",
                 "familyName": "Ven"
             },
             "optional": {
-                "birthday": "9999-02-24",
                 "featuredImage": "",
                 "level3URL": "",
                 "membershipStartDate": "",
-                "expertises": [
-                    ""
-                ],
+                "expertises": [],
                 "nlSpecific": {
                     "fotobondNumber": 1601034
                 }
