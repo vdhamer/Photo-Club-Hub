@@ -348,7 +348,7 @@
       }
     },
     "Data source: %@://%@%@/" : {
-      "comment" : "Section footer text for Members screen",
+      "comment" : "Section footer text Portfolios screen",
       "localizations" : {
         "en" : {
           "stringUnit" : {
