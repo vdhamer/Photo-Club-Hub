@@ -87,7 +87,7 @@ Ja, dat mag. Dat kan drie verschillende redenen hebben:
 In de iOS versie van de app staat alle beschikbare expertise tags helemaal onderaan de `Fotografen` pagina
 (zoek op "expertise" of "xyz").
 Deze lijst is dynamisch (online opgehaald): het kan dat er volgende week een nieuw gebied bijgekomen is. 
-Het zijn er al ruim 20.</p>
+Het zijn er al minstens 28.</p>
 
 De HTML versie heeft een pagina met de [lijst](https://www.fcDeGender.nl/expertises) van expertises.
 Verder kan je de actuele lijst (in JSON formaat) [hier](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/root.level0.json) bekijken.
