@@ -1,6 +1,6 @@
 {
     "expertises": [
-
+        
         {
             "idString": "Abstract",
             "name": [
@@ -12,9 +12,10 @@
                     { "language": "EN", "localizedString": "Subject of the image is difficult to identify or less relevant." },
                     { "language": "NL", "localizedString": "Beelden waarbij het onderwerp nauwelijks herkenbaar of nauwelijks relevant is." }
                 ]
-            }
+            },
+            "dateAdded": "2025-01-01"
         },
-
+        
         {
             "idString": "Architecture",
             "name": [
@@ -25,10 +26,11 @@
                 "usage":  [
                     { "language": "EN", "localizedString": "Fragments of, or personal interpretations of buildings." },
                     { "language": "NL", "localizedString": "Stukjes van, of eigen interpretaties van, gebouwen." }
-               ]
+                ],
+                "dateAdded": "2025-01-01"
             }
         },
-
+        
         {
             "idString": "Bird",
             "name": [
@@ -39,10 +41,11 @@
                 "usage":  [
                     { "language": "EN", "localizedString": "Images of birds in the wild." },
                     { "language": "NL", "localizedString": "Beelden van vogels in de natuur." }
-                ]
+                ],
+                "dateAdded": "2025-06-04"
             }
         },
-
+        
         {
             "idString": "Black & white",
             "name": [
@@ -53,10 +56,11 @@
                 "usage":  [
                     { "language": "EN", "localizedString": "Grayscale or monochromatic images" },
                     { "language": "NL", "localizedString": "Monochrome beelden, waaronder beelden in grijstinten of sepia." }
-                ]
+                ],
+                "dateAdded": "2025-01-01"
             }
         },
-
+        
         {
             "idString": "Conceptual",
             "name": [
@@ -67,10 +71,11 @@
                 "usage":  [
                     { "language": "EN", "localizedString": "Images that represent a predetermined idea." },
                     { "language": "NL", "localizedString": "Beelden die een idee trachten uit te beelden." }
-                ]
+                ],
+                "dateAdded": "2025-06-04"
             }
         },
-
+        
         {
             "idString": "Concert",
             "name": [
@@ -81,10 +86,11 @@
                 "usage":  [
                     { "language": "EN", "localizedString": "Images of musicians during performances." },
                     { "language": "NL", "localizedString": "Beelden van musici tijdens optredens." }
-                ]
+                ],
+                "dateAdded": "2025-06-04"
             }
         },
-
+        
         {
             "idString": "Documentary",
             "name": [
@@ -95,10 +101,11 @@
                 "usage":  [
                     { "language": "EN", "localizedString": "Images (often in series) that tell a story about some noteworthy aspect of life or the world." },
                     { "language": "NL", "localizedString": "Foto's of fotoseries die de werkelijkheid verhalend vastleggen." }
-                ]
+                ],
+                "dateAdded": "2025-01-01"
             }
         },
-
+        
         {
             "idString": "Drone",
             "name": [
@@ -109,10 +116,11 @@
                 "usage":  [
                     { "language": "EN", "localizedString": "Low altitude aerial photography." },
                     { "language": "NL", "localizedString": "Luchtfotografie met drones of andere laagvliegers." }
-                ]
+                ],
+                "dateAdded": "2025-01-01"
             }
         },
-
+        
         {
             "idString": "Experimental",
             "name": [
@@ -123,10 +131,11 @@
                 "usage":  [
                     { "language": "EN", "localizedString": "Trying out something that is not cliche." },
                     { "language": "NL", "localizedString": "Beelden die nadrukkelijk de gebaande paden verlaten." }
-                ]
+                ],
+                "dateAdded": "2025-01-01"
             }
         },
-
+        
         {
             "idString": "Industrial-heritage",
             "name": [
@@ -137,10 +146,11 @@
                 "usage":  [
                     { "language": "EN", "localizedString": "Monuments from the industrial revolution (mills, machines, etc)." },
                     { "language": "NL", "localizedString": "Monumenten van de industriele revolutie (fabrieken, machines, enz.)." }
-                ]
+                ],
+                "dateAdded": "2025-08-29"
             }
         },
-
+        
         {
             "idString": "Landscape",
             "name": [
@@ -151,10 +161,11 @@
                 "usage":  [
                     { "language": "EN", "localizedString": "Images showing the beauty and tranquility of nature or rural environments." },
                     { "language": "NL", "localizedString": "Sfeerbeelden met een nadruk op natuurlijke omgevingen." }
-                ]
+                ],
+                "dateAdded": "2025-01-01"
             }
         },
-
+        
         {
             "idString": "Macro",
             "name": [
@@ -165,10 +176,11 @@
                 "usage":  [
                     { "language": "EN", "localizedString": "Macro and micro photography." },
                     { "language": "NL", "localizedString": "Macro en micro fotografie." }
-                 ]
+                ],
+                "dateAdded": "2025-01-01"
             }
         },
-
+        
         {
             "idString": "Minimal",
             "name": [
@@ -179,10 +191,11 @@
                 "usage":  [
                     { "language": "EN", "localizedString": "Images with few visual elements." },
                     { "language": "NL", "localizedString": "Rustige foto's met relatief weinig beeldelementen." }
-                 ]
+                ],
+                "dateAdded": "2025-01-01"
             }
         },
-
+        
         {
             "idString": "Mixed-media",
             "name": [
@@ -193,10 +206,11 @@
                 "usage":  [
                     { "language": "EN", "localizedString": "Photographs combined with other media or materials." },
                     { "language": "NL", "localizedString": "Fotografie gecombineerd met andere kunstmedia of materialen." }
-                 ]
+                ],
+                "dateAdded": "2025-01-01"
             }
         },
-
+        
         {
             "idString": "Mobile",
             "name": [
@@ -207,10 +221,11 @@
                 "usage":  [
                     { "language": "EN", "localizedString": "Photography with smartphones and similar devices." },
                     { "language": "NL", "localizedString": "Fotografie met mobieltjes en vergelijkbare apparaten." }
-                 ]
+                ],
+                "dateAdded": "2026-01-13"
             }
         },
-
+        
         {
             "idString": "Multiple-exposure",
             "name": [
@@ -221,10 +236,11 @@
                 "usage":  [
                     { "language": "EN", "localizedString": "Superimposed images made in camera or in postprocessing." },
                     { "language": "NL", "localizedString": "Dubbeldruk en vergelijkbare technieken in camera of tijdens nabewerking." }
-                 ]
+                ],
+                "dateAdded": "2025-06-04"
             }
         },
-
+        
         {
             "idString": "Museum",
             "name": [
@@ -235,10 +251,11 @@
                 "usage":  [
                     { "language": "EN", "localizedString": "Similar to street photography, but in a museum." },
                     { "language": "NL", "localizedString": "Vergelijkbaar met straatfotografie, maar dan in een museum." }
-                 ]
+                ],
+                "dateAdded": "2025-01-01"
             }
         },
-
+        
         {
             "idString": "Nature",
             "name": [
@@ -249,10 +266,11 @@
                 "usage":  [
                     { "language": "EN", "localizedString": "Animals and plants in the wild (Birds are a separate tag)." },
                     { "language": "NL", "localizedString": "Natuurfotografie (Vogels hebben een aparte tag)." }
-                 ]
+                ],
+                "dateAdded": "2025-10-25"
             }
         },
-
+        
         {
             "idString": "Panorama",
             "name": [
@@ -263,10 +281,11 @@
                 "usage":  [
                     { "language": "EN", "localizedString": "Panoramas and other forms of projection/stitching." },
                     { "language": "NL", "localizedString": "Panorama's of andere projecties met een groot blikveld." }
-                 ]
+                ],
+                "dateAdded": "2025-01-01"
             }
         },
-
+        
         {
             "idString": "Portrait",
             "name": [
@@ -277,10 +296,11 @@
                 "usage":  [
                     { "language": "EN", "localizedString": "Often posed images of a person, sometimes with a focus on their personality or environment." },
                     { "language": "NL", "localizedString": "Karakteristieke beelden van personen, soms in een kenmerkende omgeving." }
-                ]
+                ],
+                "dateAdded": "2025-01-01"
             }
         },
-
+        
         {
             "idString": "Postprocessing",
             "name": [
@@ -291,25 +311,27 @@
                 "usage":  [
                     { "language": "EN", "localizedString": "Images where the use of e.g. Photoshop is noteworthy." },
                     { "language": "NL", "localizedString": "Beelden met in het oog springende nabewerkingen." }
-                ]
+                ],
+                "dateAdded": "2025-01-01"
             }
         },
-	
-    {
-        "idString": "Printing",
-        "name": [
-            { "language": "EN", "localizedString": "Printing" },
-            { "language": "NL", "localizedString": "Afdrukken" }
-        ],
-        "optional": {
-            "usage":  [
-                { "language": "EN", "localizedString": "Exposition-quality printing skills including color management and paper choice." },
-                { "language": "NL", "localizedString": "Gecontrolleerd afdrukken met aandacht voor kleurenprofielen en papierkeus." }
-            ]
-        }
-    },
-
-    {
+        
+        {
+            "idString": "Printing",
+            "name": [
+                { "language": "EN", "localizedString": "Printing" },
+                { "language": "NL", "localizedString": "Afdrukken" }
+            ],
+            "optional": {
+                "usage":  [
+                    { "language": "EN", "localizedString": "Exposition-quality printing skills including color management and paper choice." },
+                    { "language": "NL", "localizedString": "Gecontrolleerd afdrukken met aandacht voor kleurenprofielen en papierkeus." }
+                ],
+                "dateAdded": "2025-12-22"
+            }
+        },
+        
+        {
             "idString": "Self-expression",
             "name": [
                 { "language": "EN", "localizedString": "Self-expression" },
@@ -319,10 +341,11 @@
                 "usage":  [
                     { "language": "EN", "localizedString": "Images that the photographer uses to express feelings or personality." },
                     { "language": "NL", "localizedString": "Beelden bedoeld on gevoelens en persoonlijkheid van de maker te uiten." }
-                 ]
+                ],
+                "dateAdded": "2025-01-01"
             }
         },
-
+        
         {
             "idString": "Sport",
             "name": [
@@ -333,10 +356,11 @@
                 "usage":  [
                     { "language": "EN", "localizedString": "Sports photography." },
                     { "language": "NL", "localizedString": "Sportfotografie." }
-                ]
+                ],
+                "dateAdded": "2025-11-08"
             }
         },
-
+        
         {
             "idString": "Street",
             "name": [
@@ -347,10 +371,26 @@
                 "usage":  [
                     { "language": "EN", "localizedString": "Urban scenes largely involving passers by." },
                     { "language": "NL", "localizedString": "Stadsbeelden met passanten." }
-                ]
+                ],
+                "dateAdded": "2025-01-01"
             }
         },
-
+        
+        {
+            "idString": "Studio",
+            "name": [
+                { "language": "EN", "localizedString": "Studio" },
+                { "language": "NL", "localizedString": "Studio" }
+            ],
+            "optional": {
+                "usage":  [
+                    { "language": "EN", "localizedString": "Setups with lamps, reflectors, backdrops, etc." },
+                    { "language": "NL", "localizedString": "Opstellingen met b.v. grote flitsers en achtergronden." }
+                ],
+                "dateAdded": "2026-02-08"
+            }
+        },
+        
         {
             "idString": "Theater",
             "name": [
@@ -361,10 +401,11 @@
                 "usage":  [
                     { "language": "EN", "localizedString": "Images of theatrical performances." },
                     { "language": "NL", "localizedString": "Beelden van theatervoorstellingen." }
-                 ]
+                ],
+                "dateAdded": "2025-07-14"
             }
         },
-
+        
         {
             "idString": "Travel",
             "name": [
@@ -375,12 +416,13 @@
                 "usage":  [
                     { "language": "EN", "localizedString": "Scenes clearly depicting 'other' parts of the word" },
                     { "language": "NL", "localizedString": "Beelden die associaties opwekken met andere landen." }
-                 ]
+                ],
+                "dateAdded": "2025-01-01"
             }
         }
-
+        
     ],
-
+    
     "languages": [
         {
             "isoCode": "EN",
