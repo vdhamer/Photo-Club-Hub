@@ -255,6 +255,22 @@
                 }
             }
         },
+        
+        {
+            "name": {
+                "givenName": "Jos",
+                "infixName": "van den ",
+                "familyName": "Wittenboer"
+            },
+            "optional": {
+                "level3URL": "https://www.fcDeGender.nl/portfolios/Jos_van_den_Wittenboer/",
+                "membershipStartDate": "9999-01-01",
+                "expertises": [ ],
+                "status": {
+                    "isProspectiveMember": true
+                }
+            }
+        },
 
         {
             "name": {

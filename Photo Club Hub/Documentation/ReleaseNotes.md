@@ -34,9 +34,11 @@ CODE MAINTENANCE
 
 DATA MAINTENANCE
 
+* Added "Studio" as a supported expertise for Feb 2026.
 * Prepared for likely onboarding of club ffcShot71.
 * Created initial Level 2 for fcGemert
 * Added initial members list for fcVeghel
+* Added a prospective member to fgDeGender
 
 DOCUMENTATION
 
