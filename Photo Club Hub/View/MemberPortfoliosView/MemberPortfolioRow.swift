@@ -38,7 +38,7 @@ struct MemberPortfolioRow: View {
                     let localizedExpertiseResultLists = LocalizedExpertiseResultLists(moc: moc,
                                                             member.photographer.photographerExpertises)
                     Group {
-                        if !localizedExpertiseResultLists.supported.list.isEmpty {
+                        if !localizedExpertiseResultLists.supported.list.isEmpty { // list any supported expertises
                             HStack(spacing: 3) {
                                 Text(localizedExpertiseResultLists.supported.icon)
                                     .font(.footnote)
@@ -48,7 +48,7 @@ struct MemberPortfolioRow: View {
                             }
                         }
 
-                        if !localizedExpertiseResultLists.temporary.list.isEmpty {
+                        if !localizedExpertiseResultLists.temporary.list.isEmpty { // list  any "temporary" expertises
                             HStack(spacing: 3) {
                                 Text(localizedExpertiseResultLists.temporary.icon)
                                     .font(.footnote)
