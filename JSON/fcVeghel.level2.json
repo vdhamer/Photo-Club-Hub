@@ -39,7 +39,7 @@
             },
             "optional": {
                 "featuredImage": "https://www.fotoclubveghel.nl/wp-content/gallery/aart-kleinendorst/Fotos_Aart-4.jpg",
-                "level3URL": "https://www.fotoclubveghel/nl/aart-kleinendorst",
+                "level3URL": "https://www.fotoclubveghel.nl/aart-kleinendorst",
                 "membershipStartDate": "",
                 "expertises": [],
                 "nlSpecific": {
@@ -123,7 +123,7 @@
                 "familyName": "Sjoerdsma - van der Weide"
             },
             "optional": {
-                "featuredImage": "https://www.fotoclubveghel.nl/wp-content/gallery/astrid-sjoerdsma-van-der-weide/DSC_0076bewerkt1",
+                "featuredImage": "https://www.fotoclubveghel.nl/wp-content/gallery/astrid-sjoerdsma-van-der-weide/DSC_0076bewerkt1.jpg",
                 "level3URL": "https://www.fotoclubveghel.nl/astrid-sjoerdsma-van-der-weide",
                 "membershipStartDate": "",
                 "expertises": [],
@@ -260,7 +260,7 @@
             },
             "optional": {
                 "featuredImage": "https://www.fotoclubveghel.nl/wp-content/gallery/gerard_h/Bol.sur_.mer_.jpg",
-                "level3URL": "https://www.fotoclubveghel.nl/gerard_h",
+                "level3URL": "https://www.fotoclubveghel.nl/gerard-holtkamp",
                 "membershipStartDate": "",
                 "expertises": [],
                 "nlSpecific": {
@@ -362,7 +362,7 @@
             },
             "optional": {
                 "featuredImage": "https://www.fotoclubveghel.nl/wp-content/gallery/henk_vd_p/2013019-Eindh-Torenallee-verbinding-toren-2-en-3-0168.jpg",
-                "level3URL": "https://www.fotoclubveghel.nl/henk_vd_p",
+                "level3URL": "https://www.fotoclubveghel.nl/henk-van-der-pas",
                 "membershipStartDate": "",
                 "expertises": [],
                 "nlSpecific": {
@@ -379,7 +379,7 @@
             },
             "optional": {
                 "featuredImage": "https://www.fotoclubveghel.nl/wp-content/gallery/henk_van_n/HvN1-121125.jpg",
-                "level3URL": "https://www.fotoclubveghel.nl/henk_van_n",
+                "level3URL": "https://www.fotoclubveghel.nl/henk-van-nunen",
                 "membershipStartDate": "",
                 "expertises": [],
                 "nlSpecific": {
@@ -395,7 +395,7 @@
                 "familyName": "Rotteveel"
             },
             "optional": {
-                "featuredImage": "https://www.fotoclubveghel.nl/wp-content/gallery/henk_rotteveel/1_DSC6574.jpg",
+                "featuredImage": "https://www.fotoclubveghel.nl/wp-content/gallery/henk-rotteveel/1_DSC6678.jpg",
                 "level3URL": "https://www.fotoclubveghel.nl/henk-rotteveel",
                 "membershipStartDate": "",
                 "expertises": [],
@@ -447,7 +447,7 @@
             },
             "optional": {
                 "featuredImage": "https://www.fotoclubveghel.nl/wp-content/gallery/mark/Een-nieuwe-dag-Mark.jpg",
-                "level3URL": "https://www.fotoclubveghel.nl/mark",
+                "level3URL": "https://www.fotoclubveghel.nl/mark-rovers",
                 "membershipStartDate": "",
                 "expertises": [],
                 "nlSpecific": {
@@ -464,7 +464,7 @@
             },
             "optional": {
                 "featuredImage": "https://www.fotoclubveghel.nl/wp-content/gallery/miarooijmans/1-1.jpg",
-                "level3URL": "https://www.fotoclubveghel.nl/miarooijmans",
+                "level3URL": "https://www.fotoclubveghel.nl/mia-rooijmans",
                 "membershipStartDate": "",
                 "expertises": [],
                 "nlSpecific": {
@@ -481,7 +481,7 @@
             },
             "optional": {
                 "featuredImage": "https://www.fotoclubveghel.nl/wp-content/gallery/mirjamevers/1-2.jpg",
-                "level3URL": "https://www.fotoclubveghel.nl/mirjamevers",
+                "level3URL": "https://www.fotoclubveghel.nl/mirjam-evers",
                 "membershipStartDate": "",
                 "expertises": [],
                 "nlSpecific": {
@@ -498,7 +498,7 @@
             },
             "optional": {
                 "featuredImage": "https://www.fotoclubveghel.nl/wp-content/gallery/peterrovers/DSC01038-Marko-Site.jpg",
-                "level3URL": "https://www.fotoclubveghel.nl/peterrovers",
+                "level3URL": "https://www.fotoclubveghel.nl/peter-rovers",
                 "membershipStartDate": "",
                 "expertises": [],
                 "nlSpecific": {
@@ -566,7 +566,7 @@
             },
             "optional": {
                 "featuredImage": "https://www.fotoclubveghel.nl/wp-content/gallery/tjeutimmermans/1.jpg",
-                "level3URL": "https://www.fotoclubveghel.nl/tjeutimmermans",
+                "level3URL": "https://www.fotoclubveghel.nl/tjeu-timmermans",
                 "membershipStartDate": "",
                 "expertises": [],
                 "nlSpecific": {
@@ -612,12 +612,12 @@
         {
             "name": {
                 "givenName": "Wim",
-                "infixName": "van der",
+                "infixName": "van de",
                 "familyName": "Ven"
             },
             "optional": {
-                "featuredImage": "https://www.fotoclubveghel.nl/wp-content/gallery/wim-van-der-ven/naamloos-2.jpg",
-                "level3URL": "https://www.fotoclubveghel.nl/wim-van-der-ven",
+                "featuredImage": "https://www.fotoclubveghel.nl/wp-content/gallery/wim-van-de-ven/naamloos-2.jpg",
+                "level3URL": "https://www.fotoclubveghel.nl/wim-van-de-ven",
                 "membershipStartDate": "",
                 "expertises": [],
                 "nlSpecific": {
