@@ -1386,6 +1386,7 @@ Project Link: [https://github.com/vdhamer/Photo-Club-Hub](https://github.com/vdh
   The screen is currently disabled because the backend provider of Roadmap stopped supporting it.
 * The diagram with Core Data entities was generated using the [Core Data Model Editor](https://GitHub.com/Mini-Stef/Core-Data-Model-Editor) tool by Stéphane Millet.
 * JSON parsing uses the [SwiftyJSON/SwiftyJSON](https://GitHub.com/SwiftyJSON/SwiftyJSON) package.
+* The color picker code is migrating to the [borisovodov/SemanticColorPicker](https://github.com/borisovodov/SemanticColorPicker) package.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
