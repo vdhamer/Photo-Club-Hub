@@ -28,7 +28,7 @@ PHOTOGRAPHERS SCREEN
 
 CODE MAINTENANCE
 
-* Tested with SwiftLint 0.63.2 and iOS 26.2.1 and Xcode 26.3 RC1 (17C519)
+* Tested with SwiftLint 0.63.2 and iOS 26.3 and Xcode 26.3 RC1 (17C519)
 * Fixed minor TODO item in Model.swift (carryover from release 2.9.0)
 * Added first member to some empty clubs (containing just name of contact)
 
