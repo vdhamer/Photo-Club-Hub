@@ -140,9 +140,9 @@
                 "familyName": "Ketelaars"
             },
             "optional": {
-                "featuredImage": "2018-01-01",
+                "featuredImage": "",
                 "level3URL": "",
-                "membershipStartDate": "",
+                "membershipStartDate": "2018-01-01",
                 "expertises": [],
                 "nlSpecific": {
                     "fotobondNumber": 1601082
