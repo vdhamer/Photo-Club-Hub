@@ -1,4 +1,4 @@
-### 2.9.1 (GitHub commit ???????) ??-02-2026
+### 2.9.2 (GitHub commit ???????) ??-03-2026
 
 USER-FACING
 
@@ -11,7 +11,10 @@ STRUCTURAL
 
 * TODO: update documentation of Include feature of level1.json
 * TODO: add test for Include feature
-* TODO: rename XampleMin/Max clubs to TemplateMin/Max <<<<
+
+---------------------------------------------------------------------------
+
+### 2.9.1 (GitHub commit ???????) ??-02-2026
 
 ORGANIZATIONS SCREEN
 
@@ -28,7 +31,7 @@ PHOTOGRAPHERS SCREEN
 
 CODE MAINTENANCE
 
-* Tested with SwiftLint 0.63.2 and iOS 26.2.1 and Xcode 26.3 RC1 (17C519)
+* Tested with SwiftLint 0.63.2 and iOS 26.2.1, MacOS 26.3 and Xcode 26.3 RC1 (17C519)
 * Fixed minor TODO item in Model.swift (carryover from release 2.9.0)
 * Added first member to some empty clubs (containing just name of contact)
 
@@ -40,6 +43,7 @@ DATA MAINTENANCE
 * Added initial members list for fcVeghel
 * Added a prospective member to fgDeGender
 * Supported expertise tags have a new "dateAdded" field.
+* TODO: rename XampleMin/Max clubs to TemplateMin/Max <<<<
 
 DOCUMENTATION
 
