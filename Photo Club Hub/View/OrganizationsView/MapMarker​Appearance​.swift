@@ -5,7 +5,7 @@
 //  Created by Peter van den Hamer on 06/02/2026.
 //
 
-import SwiftUI // for Color
+import SemanticColorPicker // for SemanticColor
 
 /// Returns the tint color for a single map marker representing an organization.
 /// The rules for this are executed in a specific priority.
@@ -16,12 +16,12 @@ import SwiftUI // for Color
 ///   - selectedOrganization: The organization currently centered/selected on this particular  map.
 /// - Returns: The `Color` in which to tint the marker for `organization`.
 @MainActor
-public func selectMarkerTint(organization: Organization, selectedOrganization: Organization) -> Color {
-    let errorColor = Color.orange
+public func selectMarkerTint(organization: Organization, selectedOrganization: Organization) -> SemanticColor {
+    let errorColor: SemanticColor = .red
 
     /// The marker for `selectedOrganization` gets a special color. It is usually at the center of the map.
     if isEqual(organizationLHS: organization, organizationRHS: selectedOrganization) {
-        return .organizationColor
+        return .purple // TODO change to .organizationColor
     }
 
     if organization.organizationType.isMuseum {
@@ -43,12 +43,13 @@ public func selectMarkerTint(organization: Organization, selectedOrganization: O
         }
 
         let clubInFotobond: Bool = (organization.fotobondClubNumber?.id != nil) // is club member of Dutch Fotobond
-        let highlightColor: Color = appSettings.highlightColor
+        let highlightColor: SemanticColor = appSettings.highlightColor
+        let neutralColor: SemanticColor = .blue
 
-        if appSettings.highlightFotobondNL {
-            return clubInFotobond ? highlightColor : .gray // highlight Fotobond clubs, and make other clubs gray
+        if appSettings.highlightFotobondNL { // TODO add .gray (temp .brown50)
+            return clubInFotobond ? highlightColor : neutralColor // highlight Fotobond clubs, and make other clubs gray
         } else {
-            return clubInFotobond ? .gray: highlightColor // highlight NonFotobond clubs, and make other clubs gray
+            return clubInFotobond ? neutralColor: highlightColor // highlight NonFotobond clubs; other clubs as gray
         }
     }
 

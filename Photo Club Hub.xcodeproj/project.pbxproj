@@ -53,6 +53,8 @@
 		37E134B92E6F75ED00C61714 /* ReadmeView2626.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E134B72E6F75ED00C61714 /* ReadmeView2626.swift */; };
 		37E134BA2E6F75ED00C61714 /* ReadmeSection2626.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E134B62E6F75ED00C61714 /* ReadmeSection2626.swift */; };
 		37E134BB2E6F75ED00C61714 /* SectionHeader2626.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E134B82E6F75ED00C61714 /* SectionHeader2626.swift */; };
+		37EE61E22F3E221500DC1223 /* SemanticColorPicker in Frameworks */ = {isa = PBXBuildFile; productRef = 37EE61E12F3E221500DC1223 /* SemanticColorPicker */; };
+		37EE61E42F3E2B2000DC1223 /* SemanticColor+ExtraColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EE61E32F3E2B2000DC1223 /* SemanticColor+ExtraColors.swift */; };
 		37F573CA2F3668C7001305F2 /* MapMarker​Appearance​.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F573C92F3668C7001305F2 /* MapMarker​Appearance​.swift */; };
 		37F7F53D2EC8A028000F1889 /* PreludeImage2626.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F7F53C2EC8A028000F1889 /* PreludeImage2626.swift */; };
 		D006BA7E2B115FB1002E555B /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D006BA7D2B115FB1002E555B /* LocationManager.swift */; };
@@ -229,6 +231,7 @@
 		37E61E042E62DB9300F6D3B5 /* Photo_Club_Hub_2_8_4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_8_4.xcdatamodel; sourceTree = "<group>"; };
 		37E818B32EEDE61900BF5518 /* GitHub_bestandsbeheer_NL.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = GitHub_bestandsbeheer_NL.md; sourceTree = "<group>"; };
 		37EC25472EB6889300667D8A /* FeaturedImagePipeline.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = FeaturedImagePipeline.md; sourceTree = "<group>"; };
+		37EE61E32F3E2B2000DC1223 /* SemanticColor+ExtraColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SemanticColor+ExtraColors.swift"; sourceTree = "<group>"; };
 		37F573C92F3668C7001305F2 /* MapMarker​Appearance​.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapMarker​Appearance​.swift"; sourceTree = "<group>"; };
 		37F7F53C2EC8A028000F1889 /* PreludeImage2626.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreludeImage2626.swift; sourceTree = "<group>"; };
 		D006BA7D2B115FB1002E555B /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
@@ -418,6 +421,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37EE61E22F3E221500DC1223 /* SemanticColorPicker in Frameworks */,
 				D0CFACAD2CDEDCBA005E3A0B /* SwiftyJSON in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -476,6 +480,13 @@
 				D09816EB2D485375009D22FE /* SectionHeader1718.swift */,
 			);
 			path = OldIOSVersionSupport;
+			sourceTree = "<group>";
+		};
+		37EE61E02F3E221500DC1223 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		D029C4D02C54096200ABA977 /* Organization */ = {
@@ -617,6 +628,7 @@
 				D008D2A928739167007A7BE2 /* .gitignore */,
 				D0F2F2F22873A19F009DDD2A /* .github */,
 				D0E8689B2D693A3600F2A03A /* Tests */,
+				37EE61E02F3E221500DC1223 /* Frameworks */,
 				D08319E4277F70A30049AB84 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -699,6 +711,7 @@
 				D006BA7D2B115FB1002E555B /* LocationManager.swift */,
 				D0831A43277F731C0049AB84 /* PersistenceController.swift */,
 				D0831A40277F731C0049AB84 /* Published+UserDefaults.swift */,
+				37EE61E32F3E2B2000DC1223 /* SemanticColor+ExtraColors.swift */,
 				D0EEF48E2C2844290086419D /* Settings.swift */,
 				D0795CEB294FCCC200FA62A8 /* ShapeStyle+Colors.swift */,
 				D024F11528423BE60055021B /* Sounds.swift */,
@@ -964,6 +977,7 @@
 			name = "Photo Club Hub";
 			packageProductDependencies = (
 				D0CFACAC2CDEDCBA005E3A0B /* SwiftyJSON */,
+				37EE61E12F3E221500DC1223 /* SemanticColorPicker */,
 			);
 			productName = "Fotogroep Waalre 2";
 			productReference = D08319E3277F70A30049AB84 /* Photo Club Hub.app */;
@@ -1023,6 +1037,7 @@
 			mainGroup = D08319DA277F70A30049AB84;
 			packageReferences = (
 				D0CFACAB2CDEDCBA005E3A0B /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				37EE61DF2F3E21FB00DC1223 /* XCRemoteSwiftPackageReference "SemanticColorPicker" */,
 			);
 			productRefGroup = D08319E4277F70A30049AB84 /* Products */;
 			projectDirPath = "";
@@ -1226,6 +1241,7 @@
 				D016DF992DF6D1850018B526 /* LocalizedExpertiseResultLists.swift in Sources */,
 				37A57B1D2EFD395800ED13CE /* FilteredMemberPortfoliosView1718.swift in Sources */,
 				D0EB533C295775240061613B /* Crosshairs2626.swift in Sources */,
+				37EE61E42F3E2B2000DC1223 /* SemanticColor+ExtraColors.swift in Sources */,
 				D0ACCEE32DEF9CED0002FACC /* XampleMinMembersProvider.swift in Sources */,
 				D0CA9B392D6B7739005428C0 /* LocalizedRemark.swift in Sources */,
 				D0621E892AE2E47B000FFADB /* MemberPortfolio+refreshFirstImage.swift in Sources */,
@@ -1586,6 +1602,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		37EE61DF2F3E21FB00DC1223 /* XCRemoteSwiftPackageReference "SemanticColorPicker" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/borisovodov/SemanticColorPicker";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		D0CFACAB2CDEDCBA005E3A0B /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
@@ -1597,6 +1621,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		37EE61E12F3E221500DC1223 /* SemanticColorPicker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 37EE61DF2F3E21FB00DC1223 /* XCRemoteSwiftPackageReference "SemanticColorPicker" */;
+			productName = SemanticColorPicker;
+		};
 		D0CFACAC2CDEDCBA005E3A0B /* SwiftyJSON */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D0CFACAB2CDEDCBA005E3A0B /* XCRemoteSwiftPackageReference "SwiftyJSON" */;

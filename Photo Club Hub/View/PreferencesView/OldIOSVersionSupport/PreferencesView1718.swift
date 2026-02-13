@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SemanticColorPicker
 
 @available(iOS, obsoleted: 19.0, message: "Please use 'PreferencesView2626' for versions above iOS 18.x")
 @MainActor
@@ -213,12 +214,12 @@ struct PreferencesView1718: View {
                                     .font(.title2)
                                     .symbolRenderingMode(.palette)
                                     .foregroundStyle(.organizationColor, .gray, .red)
-                                ColorPicker(
+                                SemanticColorPicker(
                                     String(localized: "Highlighting color",
                                            table: "PhotoClubHub.SwiftUI",
                                            comment: "Label of color picker in Preferences"),
-                                    selection: $localPreferences.highlightColor,
-                                    supportsOpacity: false
+                                    data: SemanticColor.allCases,
+                                    selection: $localPreferences.highlightColor
                                 )
                             }
                         }
