@@ -1,17 +1,20 @@
-### 2.9.1 (GitHub commit ???????) ??-02-2026
+### 2.9.2 (GitHub commit ???????) ??-03-2026
 
 USER-FACING
 
 * TODO: concentricity in Liquid Glass?
-* TODO: display expertises on Photographers screen <<<<
-* TODO: more search functionality on Photographers screen <<<<
-* TODO: more search functionality on Portfolio screen <<<<
+* TODO: display expertises on Photographers screen
+* TODO: more search functionality on Photographers screen
+* TODO: more search functionality on Portfolio screen
 
 STRUCTURAL
 
 * TODO: update documentation of Include feature of level1.json
 * TODO: add test for Include feature
-* TODO: rename XampleMin/Max clubs to TemplateMin/Max <<<<
+
+---------------------------------------------------------------------------
+
+### 2.9.1 (GitHub commit ???????) ??-02-2026
 
 ORGANIZATIONS SCREEN
 
@@ -28,7 +31,7 @@ PHOTOGRAPHERS SCREEN
 
 CODE MAINTENANCE
 
-* Tested with SwiftLint 0.63.2 and iOS 26.3 and Xcode 26.3 RC1 (17C519)
+* Tested with SwiftLint 0.63.2, iOS 26.3, MacOS 26.3 and Xcode 26.3 RC1 (17C519)
 * Fixed minor TODO item in Model.swift (carryover from release 2.9.0)
 * Added first member to some empty clubs (containing just name of contact)
 
@@ -40,10 +43,12 @@ DATA MAINTENANCE
 * Added initial members list for fcVeghel
 * Added a prospective member to fgDeGender
 * Supported expertise tags have a new "dateAdded" field.
+* TODO: rename XampleMin/Max clubs to TemplateMin/Max <<<<
+* TODO: Forced a data reset with `dataResetPending291b4656` (related to `XampleMin/Max` and fcVeghel). <<<<
 
 DOCUMENTATION
 
-* Updated FotoclubHubIntro_NL.ppt to cover Level1includeURL feature and its use.
+* Updated FotoclubHubIntro_NL.ppt to cover the Level1includeURL feature.
 
 This build #4656 was made using Xcode 26.3 and is intended for the App Store.
 
