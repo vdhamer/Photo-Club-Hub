@@ -138,7 +138,7 @@ struct FilteredOrganizationView1718: View {
                                                        circleNeeded: false),
                                coordinate: organization.coordinates)
                         .tint(selectMarkerTint(organization: organization,
-                                               selectedOrganization: filteredOrganization).color)
+                                               selectedOrganization: filteredOrganization))
                     } // Marker loop
                     UserAnnotation() // show user's location on map
                 } // Map ends here

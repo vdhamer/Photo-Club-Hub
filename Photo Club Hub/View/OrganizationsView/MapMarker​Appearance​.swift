@@ -5,6 +5,7 @@
 //  Created by Peter van den Hamer on 06/02/2026.
 //
 
+import SwiftUI // for Color
 import SemanticColorPicker // for SemanticColor
 
 /// Returns the tint color for a single map marker representing an organization.
@@ -16,12 +17,12 @@ import SemanticColorPicker // for SemanticColor
 ///   - selectedOrganization: The organization currently centered/selected on this particular  map.
 /// - Returns: The `Color` in which to tint the marker for `organization`.
 @MainActor
-public func selectMarkerTint(organization: Organization, selectedOrganization: Organization) -> SemanticColor {
-    let errorColor: SemanticColor = .red
+public func selectMarkerTint(organization: Organization, selectedOrganization: Organization) -> Color {
+    let errorColor: Color = .red
 
     /// The marker for `selectedOrganization` gets a special color. It is usually at the center of the map.
     if isEqual(organizationLHS: organization, organizationRHS: selectedOrganization) {
-        return .purple // TODO change to .organizationColor
+        return .organizationColor
     }
 
     if organization.organizationType.isMuseum {
@@ -43,13 +44,17 @@ public func selectMarkerTint(organization: Organization, selectedOrganization: O
         }
 
         let clubInFotobond: Bool = (organization.fotobondClubNumber?.id != nil) // is club member of Dutch Fotobond
-        let highlightColor: SemanticColor = appSettings.highlightColor
-        let neutralColor: SemanticColor = .blue
+        let highlightColor: Color = appSettings.highlightColor.color // convert from SemanticColor
+        let neutralColor: Color = .gray
 
-        if appSettings.highlightFotobondNL { // TODO add .gray (temp .brown50)
-            return clubInFotobond ? highlightColor : neutralColor // highlight Fotobond clubs, and make other clubs gray
+        if appSettings.highlightFotobondNL == false && appSettings.highlightNonFotobondNL == false {
+            return .blue // nothing to highlight
+        }
+
+        if appSettings.highlightFotobondNL {
+            return clubInFotobond ? highlightColor : neutralColor // highlight Fotobond clubs else neutralColor
         } else {
-            return clubInFotobond ? neutralColor: highlightColor // highlight NonFotobond clubs; other clubs as gray
+            return clubInFotobond ? neutralColor: highlightColor // highlight NonFotobond clubs else neutralColor
         }
     }
 

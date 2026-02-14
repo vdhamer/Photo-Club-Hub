@@ -65,7 +65,7 @@ struct PreferencesStruct { // order in which they are shown on Preferences page
     var showMuseums: Bool
     var highlightFotobondNL: Bool
     var highlightNonFotobondNL: Bool
-    var highlightColor: SemanticColor
+    var highlightColor: SemanticColor // convert to Color using highlightColor.color
 
     static let defaultValue = PreferencesStruct( // has to match order of declaration
         showCurrentMembers: true,

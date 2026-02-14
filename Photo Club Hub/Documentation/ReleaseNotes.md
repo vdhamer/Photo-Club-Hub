@@ -3,9 +3,9 @@
 USER-FACING
 
 * TODO: concentricity in Liquid Glass?
-* TODO: display expertises on Photographers screen <<<<
-* TODO: more search functionality on Photographers screen <<<<
-* TODO: more search functionality on Portfolio screen <<<<
+* TODO: display expertises on Photographers screen
+* TODO: more search functionality on Photographers screen
+* TODO: more search functionality on Portfolio screen
 
 STRUCTURAL
 
@@ -44,10 +44,11 @@ DATA MAINTENANCE
 * Added a prospective member to fgDeGender
 * Supported expertise tags have a new "dateAdded" field.
 * TODO: rename XampleMin/Max clubs to TemplateMin/Max <<<<
+* TODO: Forced a data reset with `dataResetPending291b4656` (related to `XampleMin/Max` and fcVeghel). <<<<
 
 DOCUMENTATION
 
-* Updated FotoclubHubIntro_NL.ppt to cover Level1includeURL feature and its use.
+* Updated FotoclubHubIntro_NL.ppt to cover the Level1includeURL feature.
 
 This build #4656 was made using Xcode 26.3 and is intended for the App Store.
 
