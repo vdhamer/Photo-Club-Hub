@@ -1,0 +1,110 @@
+{
+
+    "club":
+        {
+            "idPlus": {
+                "town": "Rotterdam",
+                "fullName": "Template Club With Maximal Data",
+                "nickName": "TemplateMax"
+            },
+            "coordinates": {
+                "latitude": 51.92275, "longitude": 4.47972
+            },
+            "optional": {
+                "website": "https://www.rotterdam.nl/stadhuis",
+                "wikipedia": "https://en.wikipedia.org/wiki/Rotterdam",
+                "level2URL": "https://www.example.com/TemplateMax.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "A remark here about the club will overrule any remark provided in level1.json file."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Deze beschrijving van de club overschrijft een beschrijving in root.level1.json."
+                    }
+                ],
+                "maintainerEmail": "admin@TemplateMax.nl",
+                "nlSpecific": {
+                    "fotobondNumber": 9999
+                }
+            }
+        },
+
+
+    "members": [
+
+        {
+            "name": {
+                "givenName": "Mien",
+                "infixName": "van",
+                "familyName": "Rotterdam"
+            },
+            "optional": {
+                "roles": {
+                    "isChairman": true,
+                    "isViceChairman": false,
+                    "isTreasurer": false,
+                    "isSecretary": false,
+                    "isAdmin": false,
+                    "isOther": false
+                },
+                "status": {
+                    "isDeceased": false,
+                    "isFormerMember": false,
+                    "isHonoraryMember": false,
+                    "isMentor": false,
+                    "isProspectiveMember": false
+                },
+                "birthday": "9999-01-02",
+                "website": "https://glass.photo/vdhamer",
+                "photographerImage": "http://www.vdhamer.com/wp-content/uploads/2022/07/cropped-2006_Norway_276_SSharp1_4.jpg",
+                "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg",
+                "level3URL": "https://www.example.com/XmpleMax/Mien_van_Rotterdam.level3.json",
+                "membershipStartDate": "2020-01-01",
+                "expertises": [ "Experimental", "Street" ],
+                "nlSpecific": {
+                    "fotobondNumber": 1620111
+                }
+            }
+        },
+
+        {
+            "name": {
+                "givenName": "Mike",
+                "infixName": "",
+                "familyName": "Blaak"
+            },
+            "optional": {
+                "roles": {
+                    "isChairman": true,
+                    "isViceChairman": false,
+                    "isTreasurer": false,
+                    "isSecretary": false,
+                    "isAdmin": false,
+                    "isOther": false
+                },
+                "status": {
+                    "isDeceased": true,
+                    "isFormerMember": true,
+                    "isHonoraryMember": false,
+                    "isMentor": false,
+                    "isProspectiveMember": false
+                },
+                "birthday": "9999-08-11",
+                "website": "https://glass.photo/vdhamer",
+                "photographerImage": "http://www.vdhamer.com/wp-content/uploads/2022/07/cropped-2006_Norway_276_SSharp1_4.jpg",
+                "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg",
+                "level3URL": "https://www.example.com/XmpleMax/Mike_Blaak.level3.json",
+                "membershipStartDate": "2020-01-01",
+                "membershipEndDate": "2020-12-31",
+                "expertises": [ "Landscape", "Travel", "Minimal" ],
+                "nlSpecific": {
+                    "fotobondNumber": 1620110
+                }
+            }
+        }
+
+    ]
+
+}

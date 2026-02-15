@@ -1,0 +1,57 @@
+{
+    "level1Header": {
+        "level1URL": "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/clubsTemplates.level1.json",
+        "level1URLIncludes": [ ],
+        "maintainerEmail": "vdhamer@msn.com"
+    },
+    
+    "clubs": [
+        
+        {
+            "idPlus": {
+                "town": "Amsterdam",
+                "fullName": "Template Club With Minimal Data",
+                "nickName": "TemplateMin"
+            },
+            "coordinates": {
+                "latitude": 52.37312,
+                "longitude": 4.89383
+            },
+            "optional": {
+                "level2URL": "https://www.example.com/TemplateMin.level2.json"
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Rotterdam",
+                "fullName": "Template Club With Maximal Data",
+                "nickName": "TemplateMax"
+            },
+            "coordinates": {
+                "latitude": 51.92275,
+                "longitude": 4.47972
+            },
+            "optional": {
+                "website": "https://www.TemplateMax.nl",
+                "wikipedia": "https://en.wikipedia.org/wiki/Rotterdam_City_Hall",
+                "level2URL": "https://www.TemplateMax.nl/TemplateMax.level2.json",
+                "remark": [
+                    {
+                        "language": "NL",
+                        "value": "Deze clubbeschrijving kan overschreven worden door een remark veld in club.level2.json"
+                    },
+                    {
+                        "language": "EN",
+                        "value": "A remark here about the club can be overruled by a remark in club's level2.json file."
+                    }
+                ],
+                "maintainerEmail": "admin@TemplateMax.nl",
+                "nlSpecific": {
+                    "fotobondNumber": 9999
+                }
+            }
+        }
+        
+    ]
+}

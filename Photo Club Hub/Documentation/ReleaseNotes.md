@@ -11,6 +11,7 @@ STRUCTURAL
 
 * TODO: update documentation of Include feature of level1.json
 * TODO: add test for Include feature
+* TODO: Rename XampleMin/Max clubs to TemplateMin/Max (#687)
 
 ---------------------------------------------------------------------------
 
@@ -43,8 +44,7 @@ DATA MAINTENANCE
 * Added initial members list for fcVeghel
 * Added a prospective member to fgDeGender
 * Supported expertise tags have a new "dateAdded" field.
-* TODO: rename XampleMin/Max clubs to TemplateMin/Max <<<<
-* TODO: Forced a data reset with `dataResetPending291b4656` (related to `XampleMin/Max` and fcVeghel). <<<<
+* Forced a data reset with `dataResetPending291b4656` (related to `TemplateMin/Max` and fcVeghel).
 
 DOCUMENTATION
 

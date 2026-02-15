@@ -1,0 +1,44 @@
+{
+    "club":
+        {
+            "idPlus": {
+                "town": "Amsterdam",
+                "fullName": "Template Club With Minimal Data",
+                "nickName": "TemplateMin"
+            },
+            "coordinates": {
+                "latitude": 52.37312,
+                "longitude": 4.89383
+            },
+            "optional": {
+                "level2URL": "https://www.TemplateMin.nl/TemplateMin.level2.json"
+            }
+        },
+
+
+    "members": [
+
+        {
+            "name": {
+                "givenName": "Jan",
+                "infixName": "uit de",
+                "familyName": "Jordaan"
+            },
+            "optional": {
+                "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg"
+            }
+        },
+
+        {
+            "name": {
+                "givenName": "Max",
+                "infixName": "van",
+                "familyName": "Amsterdam"
+            },
+            "optional": {
+                "featuredImage": "http://www.vdhamer.com/wp-content/uploads/2023/11/PeterVanDenHamer.jpg"
+            }
+        }
+
+    ]
+}

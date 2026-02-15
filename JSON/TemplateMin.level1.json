@@ -1,0 +1,34 @@
+{
+    "clubs": [
+
+        {
+            "idPlus": {
+                "town": "Amsterdam",
+                "fullName": "Template Club With Minimal Data",
+                "nickName": "TemplateMin"
+            },
+            "coordinates": {
+                "latitude": 52.37312,
+                "longitude": 4.89383
+            },
+            "optional": {
+                "level2URL": "https://www.example.com/TemplateMin.level2.json"
+            }
+        },
+
+        {
+            "idPlus": {
+                "town": "Wetzlar",
+                "fullName": "Leica Rangefinders Owners Club",
+                "nickName": "LeicaROC"
+            },
+            "coordinates": {
+                "latitude": 50.55221,
+                "longitude": 8.53346
+            }
+            "optional": {
+            }
+        }
+
+    ]
+}

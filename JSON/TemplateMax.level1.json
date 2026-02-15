@@ -1,0 +1,89 @@
+{
+    "clubs": [
+
+        {
+            "idPlus": {
+                "town": "Rotterdam",
+                "fullName": "Template Club With Maximal Data",
+                "nickName": "TemplateMax"
+            },
+            "coordinates": {
+                "latitude": 51.92275,
+                "longitude": 4.47972
+            },
+            "optional": {
+                "website": "https://www.TemplateMax.nl",
+                "wikipedia": "https://en.wikipedia.org/wiki/Rotterdam_City_Hall",
+                "level2URL": "https://www.TemplateMax.nl/TemplateMax.level2.json",
+                "remark": [
+                    {
+                        "language": "NL",
+                        "value": "Deze clubbeschrijving kan overschreven worden door een remark veld in club.level2.json"
+                    },
+                    {
+                        "language": "EN",
+                        "value": "A remark here about the club can be overruled by a remark in club's level2.json file."
+                    }
+                ],
+                "maintainerEmail": "admin@TemplateMax.nl",
+                "nlSpecific": {
+                    "fotobondNumber": 9999
+                }
+            }
+        },
+        
+        {
+            "idPlus": {
+                "town": "Wetzlar",
+                "fullName": "Leica Rangefinder Club",
+                "nickName": "LeicaRC"
+            },
+            "coordinates": {
+                "latitude": 50.55221,
+                "longitude": 8.53346
+            },
+            "optional": {
+                "website": "https://leicasocietyinternational.org",
+                "wikipedia": "https://en.wikipedia.org/wiki/Leica_Camera",
+                "level2URL": "https://www.TemplateMax.nl/LeicaRC.level2.json",
+                "remark": [
+                    {
+                        "language": "NL",
+                        "value": "Een denkbeeldige club van enthousiaste eigenaren van Leica meetzoeker camera's."
+                    },
+                    {
+                        "language": "EN",
+                        "value": "A hypothetical exclusive photography club for Leica rangefinder owners."
+                    }
+                ],
+                "maintainerEmail": "admin@leicaROC.de",
+            }
+        }
+    ],
+
+
+    "museums": [
+        {
+            "idPlus": {
+                "town": "New York",
+                "fullName": "Fotografiska New York",
+                "nickName": "Fotografiska NYC"
+            },
+            "coordinates": {
+                "latitude": 40.739278,
+                "longitude": -73.986722
+            },
+            "optional": {
+                "website": "https://www.fotografiska.com/nyc/",
+                "wikipedia": "https://en.wikipedia.org/wiki/Fotografiska_New_York",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Associated with the original Fotografiska Museum in Stockholm"
+                    }
+                ]
+            }
+        }
+    ]
+
+}
