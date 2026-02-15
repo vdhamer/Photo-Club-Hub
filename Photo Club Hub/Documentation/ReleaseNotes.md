@@ -1,4 +1,4 @@
-### 2.9.2 (GitHub commit 749f85a) ??-03-2026
+### 2.9.2 (GitHub commit ???????) ??-03-2026
 
 USER-FACING
 
@@ -15,7 +15,7 @@ STRUCTURAL
 
 ---------------------------------------------------------------------------
 
-### 2.9.1 (GitHub commit ???????) ??-02-2026
+### 2.9.1 (GitHub commit 749f85a) 15-02-2026
 
 ORGANIZATIONS SCREEN
 
