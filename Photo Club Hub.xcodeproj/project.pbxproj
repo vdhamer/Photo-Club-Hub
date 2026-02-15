@@ -359,6 +359,7 @@
 		D0B32BB22C15C51A009FF8E7 /* AppVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVersion.swift; sourceTree = "<group>"; };
 		D0B6B05B2DB27A3E00EAAF69 /* packages.key */ = {isa = PBXFileReference; lastKnownFileType = file; path = packages.key; sourceTree = "<group>"; };
 		D0B6B05C2DB27A3E00EAAF69 /* FotoclubHubIntro_NL.pptx */ = {isa = PBXFileReference; lastKnownFileType = file; path = FotoclubHubIntro_NL.pptx; sourceTree = "<group>"; };
+		D0B7D2602F427B9400BBCC5F /* Photo_Club_Hub_2_9_2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_9_2.xcdatamodel; sourceTree = "<group>"; };
 		D0BAB01C2A76CED300387E63 /* URLSession+synchronous.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+synchronous.swift"; sourceTree = "<group>"; };
 		D0BD7FE62D9C84DE005D199A /* Photo_Club_Hub_2_8_0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_8_0.xcdatamodel; sourceTree = "<group>"; };
 		D0C53BDC2ABF3ADF000722A1 /* PersonName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonName.swift; sourceTree = "<group>"; };
@@ -1442,7 +1443,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Photo Club Hub/PhotoClubHub.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4656;
+				CURRENT_PROJECT_VERSION = 4657;
 				DEVELOPMENT_ASSET_PATHS = "\"Photo Club Hub/Preview Content\"";
 				DEVELOPMENT_TEAM = YDEWPN9GZ6;
 				ENABLE_PREVIEWS = YES;
@@ -1462,7 +1463,7 @@
 					"@executable_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 2.9.1;
+				MARKETING_VERSION = 2.9.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vdhamer.Fotogroep-Waalre";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1484,7 +1485,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Photo Club Hub/PhotoClubHub.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4656;
+				CURRENT_PROJECT_VERSION = 4657;
 				DEVELOPMENT_ASSET_PATHS = "\"Photo Club Hub/Preview Content\"";
 				DEVELOPMENT_TEAM = YDEWPN9GZ6;
 				ENABLE_APP_SANDBOX = YES;
@@ -1506,7 +1507,7 @@
 					"@executable_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 2.9.1;
+				MARKETING_VERSION = 2.9.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vdhamer.Fotogroep-Waalre";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1633,6 +1634,7 @@
 		D0A0B6832AA930E90078DE9A /* Photo_Club_Hub.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				D0B7D2602F427B9400BBCC5F /* Photo_Club_Hub_2_9_2.xcdatamodel */,
 				D0F7CF262F165B8F0016D7FC /* Photo_Club_Hub_2_9_1.xcdatamodel */,
 				375A21DE2F0EC4AC00544042 /* Photo_Club_Hub_2_9_0.xcdatamodel */,
 				D0A73A482ECA28290055DACD /* Photo_Club_Hub_2_8_8.xcdatamodel */,
@@ -1663,7 +1665,7 @@
 				D0A0B6872AA932A10078DE9A /* Photo_Club_Hub_2_4_1.xcdatamodel */,
 				D0A0B6842AA930E90078DE9A /* Photo_Club_Hub.xcdatamodel */,
 			);
-			currentVersion = D0F7CF262F165B8F0016D7FC /* Photo_Club_Hub_2_9_1.xcdatamodel */;
+			currentVersion = D0B7D2602F427B9400BBCC5F /* Photo_Club_Hub_2_9_2.xcdatamodel */;
 			path = Photo_Club_Hub.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
