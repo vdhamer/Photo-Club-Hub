@@ -1,6 +1,15 @@
 {
-  "originHash" : "def7d170524c5bbdd72b33bad8ae29549b3305eb393afc1e48b0dfc5c154d850",
+  "originHash" : "1e215ce5f8cf8b0981b3b63c495539e02bc90a0c8d33327d9b95969603a8fb2b",
   "pins" : [
+    {
+      "identity" : "semanticcolorpicker",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/borisovodov/SemanticColorPicker",
+      "state" : {
+        "revision" : "a14ba8e966db1b0e941abc902cde1fef3ef4a28a",
+        "version" : "1.0.0"
+      }
+    },
     {
       "identity" : "swiftyjson",
       "kind" : "remoteSourceControl",
