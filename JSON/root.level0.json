@@ -227,6 +227,21 @@
         },
         
         {
+            "idString": "Motorsport",
+            "name": [
+                { "language": "EN", "localizedString": "Motorsport" },
+                { "language": "NL", "localizedString": "Motorsport" }
+            ],
+            "optional": {
+                "usage":  [
+                    { "language": "EN", "localizedString": "Car and motorcycle racing." },
+                    { "language": "NL", "localizedString": "Autosport en racen met motoren." }
+                ],
+                "dateAdded": "2026-02-16"
+            }
+        },
+        
+        {
             "idString": "Multiple-exposure",
             "name": [
                 { "language": "EN", "localizedString": "Multiple exposure" },
