@@ -12,7 +12,10 @@ STRUCTURAL
 * TODO: update documentation of Include feature of level1.json
 * TODO: add test for Include feature
 * TODO: Rename XampleMin/Max clubs to TemplateMin/Max (branch #687) <<<
-* TODO: Add expertise tag "Motorsport"
+
+DATA MAINTENANCE
+
+* Added new expertise tag for "Motorsport" (for both cars and motorcycles) (branch #688)
 
 ---------------------------------------------------------------------------
 
