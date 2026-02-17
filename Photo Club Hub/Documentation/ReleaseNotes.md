@@ -10,12 +10,15 @@ STRUCTURAL
 
 * TODO: update documentation of Include feature of level1.json
 * TODO: add test for Include feature
-* TODO: Rename XampleMin/Max clubs to TemplateMin/Max (branch #687) <<<
 
 DATA MAINTENANCE
 
-* Added new expertise tag for "Motorsport" (for both cars and motorcycles) (branch #688)
+* Added new expertise tag for "Motorsport" (for both cars and motorcycles)
 * Removed fwgZienDoorzien as they don't exist anymore
+
+DOCUMENTATION
+
+* TODO: Rename XampleMin/Max clubs to TemplateMin/Max (branch #687) <<<
 
 ---------------------------------------------------------------------------
 
