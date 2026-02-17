@@ -15,6 +15,7 @@ STRUCTURAL
 DATA MAINTENANCE
 
 * Added new expertise tag for "Motorsport" (for both cars and motorcycles) (branch #688)
+* Removed fwgZienDoorzien as they don't exist anymore
 
 ---------------------------------------------------------------------------
 
