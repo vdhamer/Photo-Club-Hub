@@ -2,7 +2,6 @@
 
 USER-FACING
 
-* TODO: concentricity in Liquid Glass?
 * TODO: display expertises on Photographers screen
 * TODO: more search functionality on Photographers screen
 * TODO: more search functionality on Portfolio screen
