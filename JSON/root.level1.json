@@ -2064,31 +2064,6 @@
 
         {
             "idPlus": {
-                "town": "Veghel",
-                "fullName": "Fotowerkgroep Zien & Doorzien",
-                "nickName": "fwgZienDoorzien"
-            },
-            "coordinates": {
-                "latitude": 51.61640,
-                "longitude": 5.53012
-            },
-            "optional": {
-                "level2URL": "https://www.example.com/fwgZienDoorzien.level2.json",
-                "remark": [
-                    {
-                        "language": "EN",
-                        "value": "De club holds joint expositions with 4 other regional photo clubs."
-                    },
-                    {
-                        "language": "NL",
-                        "value": "De club exposeert samen met 4 andere clubs op voormalig fabrieksterrein de Noordkade."
-                    }
-                ]
-            }
-        },
-
-        {
-            "idPlus": {
                 "town": "Veldhoven",
                 "fullName": "Fotoclub Bellus Imago",
                 "nickName": "fcBellusImago"
