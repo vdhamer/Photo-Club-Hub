@@ -134,15 +134,15 @@ struct PreferencesView1718: View {
                                    isOn: $localPreferences.showClubs.animation())
                         }
 
-                        HStack { // SHOW TEST CLUBS
+                        HStack { // SHOW TEMPLATE CLUBS
                             Image(systemName: "mappin.square")
                                 .font(.title2)
                                 .symbolRenderingMode(.palette)
                                 .foregroundStyle(.organizationColor, .gray, .red)
-                            Toggle(String(localized: "Show test clubs",
+                            Toggle(String(localized: "Show template clubs",
                                           table: "PhotoClubHub.SwiftUI",
                                           comment: "Label of toggle in Preferences"),
-                                   isOn: $localPreferences.showTestClubs.animation())
+                                   isOn: $localPreferences.showTemplateClubs.animation())
                         }
 
                         HStack { // SHOW MUSEUMS

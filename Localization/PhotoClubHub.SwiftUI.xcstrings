@@ -1113,19 +1113,19 @@
         }
       }
     },
-    "Show test clubs" : {
+    "Show template clubs" : {
       "comment" : "Label of toggle in Preferences",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Show test clubs"
+            "value" : "Show template clubs"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Toon testclubs"
+            "value" : "Toon template clubs"
           }
         }
       }
