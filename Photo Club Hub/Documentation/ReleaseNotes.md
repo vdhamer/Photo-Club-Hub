@@ -29,6 +29,7 @@ CODE MAINTENANCE
 DOCUMENTATION
 
 * The instructions referencing XampleMin/Max now reference TemplateMin/TemplateMax.
+* Updated FotoclubHubIntro_NL.ppt
 
 ---------------------------------------------------------------------------
 
@@ -546,15 +547,16 @@ Code Maintenance
 Data Maintenance
 * Added fgDeVriendschap (near Sint-Oedenrode), Fotocollectief 2020 (Vught), 
 * Fixed level2 url for fgDeGender in root.level1.json file (.com -> .nl).
-* Updated TemplateMin.level1.json and TemplateMax.level1.json sample files.
+* Updated TemplateMin.level1.json and TemplateMax.level1.json files.
 * Updated admin role for fgWaalre.
 * Added prospective members for fgDeGender.
 * Updated membership data for fgWaalre.
 
 Documentation
 * Updated FAQ_nl.md
+* Updated 
 
-This build #4637 was made using Xcode 16.3 RC
+This build #4637 was made using Xcode 16.3
 
 ---------------------------------------------------------------------------
 
@@ -575,7 +577,7 @@ Data Maintenance
 * Added fcBrandevoort (in Helmond)
 * Removed 2 clubs used only for demo purposes (they will hopefully show up again in the future)
 * Updated club officer list for fgDeGender
-* Changes status for MvA in TemplateMax sample club
+* Changes status for MvA in TemplateMax file
 
 This build #4636 was made using Xcode 16.2 and is intended for App Store distribution.
 
