@@ -10,11 +10,11 @@ Er zijn aparte instructie hoe bestanden online te krijgen via GitHub. En er kome
 > Die eenmalige investering is nodig om de aanpak te begrijpen en te ontdekken hoe met de vereiste software om te gaan. \
 > Latere uitbreiding en aanpassingen van de gegevens horen, na dit inleren, zullen slechts minuten per clublid kosten.
 
-1. Maak desgewenst een lokale kopie van het [XampleMin.level2.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/XampleMin.level2.json) ("Min") en het
-   [XampleMax.level2.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/XampleMax.level2.json) ("Max") voorbeeldbestand.
+1. Maak desgewenst een lokale kopie van het [TemplateMin.level2.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMin.level2.json) ("Min") en het
+   [TemplateMax.level2.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMax.level2.json) ("Max") voorbeeldbestand.
    _Min_ is een zo klein mogelijk voorbeeldbestand. _Max_ bevat juist alle beschikbare toeters en bellen.
 
-2. Maak een **kopie** van het [Min](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/XampleMin.level2.json) bestand en geef het een passende bestandsnaam:
+2. Maak een **kopie** van het [Min](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMin.level2.json) bestand en geef het een passende bestandsnaam:
    - Gebruik in de naam een korte versie (`nickName`) van de clubnaam.
      Als de club bijvoorbeeld "Fotogroep Scheveningen" heet, zou je het bestand liefst `fgScheveningen.level2.json` moeten heten:
      Scheveningen is essentieel voor de herkenbaarheid, en voorvoegesels zoals Fotogroep (fg) en Fotoclub (fc) zijn bijzaak.
@@ -36,11 +36,11 @@ Er zijn aparte instructie hoe bestanden online te krijgen via GitHub. En er kome
       | Veldhoven | Fotoclub Bellus Imago | fcBellusImago | 51.42541 | 5.38756 | [link](https://.com/vdhamer/Photo-Club-Hub/blob/main/JSON/fcBellusImago.level2.json) | [link](http://www.vdhamer.com/fcBellusImago) |
       | Waalre | Fotogroep Waalre | fgWaalre | 51.39184 | 5.46144 | [link](https://.com/vdhamer/Photo-Club-Hub/blob/main/JSON/fgWaalre.level2.json) | [link](http://www.vdhamer.com/fgWaalre) |
 
-   > Tip: Je kunt eventueel ook uitgaan van het [Max](https://.com/vdhamer/Photo-Club-Hub/blob/main/JSON/XampleMax.level2.json) bestand.
+   > Tip: Je kunt eventueel ook uitgaan van het [Max](https://.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMax.level2.json) bestand.
    > Dit zal ertoe leiden dat je velden die je momenteel niet kunt aanleveren zult willen weglaten. 
-   > Het [Min](https://.com/vdhamer/Photo-Club-Hub/blob/main/JSON/XampleMin.level2.json) bestand 
+   > Het [Min](https://.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMin.level2.json) bestand 
    > toont hoe het eruit ziet als vrijwel alle weglaatbare velden ontbreken.
-   > Als je dus uitgaat van het [Max](https://.com/vdhamer/Photo-Club-Hub/blob/main/JSON/XampleMax.level2.json)
+   > Als je dus uitgaat van het [Max](https://.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMax.level2.json)
    > bestand zie je ingevulde voorbeelden van alle mogelijke extra ("optionele") velden.
    > Bij het creëren van een tussenvorm (tussen Min en Max in) is de kans groot dat je bijvoorbeeld een comma teveel of te weinig hebt.
    > Verderop staat hoe je dat automatisch kan controleren: het JSON formaat is kieskeurig over haakjes en comma's.
@@ -114,7 +114,7 @@ als men niet over een iPhone of iPad beschikt.
 
 - [JSON](https://en.wikipedia.org/wiki/JSON) is bekende standaard in de IT wereld.
 [Hier](https://codebeautify.org/json-cheat-sheet) is een korte uitleg van JSON. In ons geval is zou het voldoende moeten zijn om nauwgezet de voorbeelden in
-[XampleMin.level2.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/XampleMin.level2.json) en [XampleMax.level2.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/XampleMax.level2.json) te volgen.
+[TemplateMin.level2.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMin.level2.json) en [TemplateMax.level2.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMax.level2.json) te volgen.
 Bij gebruikt van [JSON Editor Online](https://jsoneditoronline.org) is de kans op fouten klein.
 
 - Alle informatie tussen de haakjes in het `optional: { }` gedeelte van het bestand mag eventueel weggelaten worden. Dat is geen JSON-conventie, maar een keus alleen voor deze app. 
@@ -132,7 +132,7 @@ Het zijn dus velden die je bij een tekstaanpassing alsnog kan toevoegen, bijvoor
          Als je de persoon zelf vraagt ("de familienaam is Beelaerts van Blokland") voorkom je dit probleem. 
        - In principe kan de app met de volledige [Unicode](https://nl.wikipedia.org/wiki/Unicode) karakterset uit de voeten. Voor een enkele letter is dat vaak ok, maar voor volledige namen zoals Вікторія Кобленко wordt dat onhandig.
    - Voorlopig kan het `Level3URL` veld weggelaten worden (het dient voor verwijzingen naar Level 3 bestanden).
-   - Men zal vaak het `featuredImage` veld vrij snel willen invullen. Een voorbeeld is daarom te vinden in de [XampleMin.level2.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/XampleMin.level2.json) bestand.
+   - Men zal vaak het `featuredImage` veld vrij snel willen invullen. Een voorbeeld is daarom te vinden in de [TemplateMin.level2.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMin.level2.json) bestand.
 Het levert een voorbeeldplaatje op van het werk van een clublid.
    - Op termijn is het vast de moeite waard om nog enkele velden in te vullen:
        - `website` is het webadres van een portfolio website van de fotograaf. Voorbeeld: een site op [Glass.photo](http://glass.photo/vdhamer) dat geen direct verband heeft met een specifieke club.

@@ -9,16 +9,16 @@ Er zijn aparte instructies om lijsten met _clubleden_ ("Level 2") toe te voegen.
 > Die tijd is nodig om de aanpak te begrijpen en te ontdekken hoe met de vereiste software om te gaan. \
 > Hierna zal aanvullen en aanpassen van de gegevens slechts minuten per club kosten.
 
-1. Maak desgewenst een lokale kopie van de [XampleMin.level1.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/XampleMin.level1.json) ("Min") en    [XampleMax.level1.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/XampleMax.level1.json) ("Max") voorbeeldbestanden.
+1. Maak desgewenst een lokale kopie van de [TemplateMin.level1.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMin.level1.json) ("Min") en    [TemplateMax.level1.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMax.level1.json) ("Max") voorbeeldbestanden.
    _Min_ bevat een zo klein mogelijk voorbeeld. _Max_ is een voorbeeld met alle beschikbare opties. Bij zowel Min als Max is er een "download" icoon rechtsboven.
 
-2. Maak een **kopie** van het [Max](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/XampleMax.level1.json) bestand en geef het een passende bestandsnaam:
+2. Maak een **kopie** van het [Max](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMax.level1.json) bestand en geef het een passende bestandsnaam:
    - Voor Afdeling #3 (Drenthe - Vechtdal) zou je Afdeling03.level1.json kunnen kiezen. Gebruikers van de app zien de bestandsnaam niet.
 
    </br>
 
-   > Tip: Je kunt desgewenst ook uitgaan van het [Min](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/XampleMin.level1.json) bestand ipv Max.
-   > Het [Min](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/XampleMin.level1.json) bestand 
+   > Tip: Je kunt desgewenst ook uitgaan van het [Min](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMin.level1.json) bestand ipv Max.
+   > Het [Min](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMin.level1.json) bestand 
    > toont hoe het eruit ziet als bijna alle optionele velden ontbreken.
    > Dit betekent dat je extra velden die je wilt vullen moet toevoegen, bijvoorbeeld door die regels vanuit Max te kopiëren. 
    > Dit brengt iets meer risiko met zich mee omdat je bij het kopiëren misschien iets teveel of te weinig overneemt, of het op een verkeerde plek zet.
@@ -51,7 +51,7 @@ Er zijn aparte instructies om lijsten met _clubleden_ ("Level 2") toe te voegen.
     - Probeer de tekst niet langer dan 100 karakters te maken (slechts een richtlijn). Dat is ongeveer de lengte van een Twitter/X "tweet".
     - `Remark` bevat zowel een Nederlandse (NL) als een Engelstalige (EN) vertaling. De app toont automatisch een van die twee talen.
     
-7. Voeg voor aangesloten clubs hun Fotobondnummer ("fotobondNumber") toe volgens het voorbeeld in XampleMax.level1.json.
+7. Voeg voor aangesloten clubs hun Fotobondnummer ("fotobondNumber") toe volgens het voorbeeld in TemplateMax.level1.json.
     - Dit bestaat uit 3 tekstregels. Als een club geen lid is van de Fotobond, dan moet men die 3 regels weglaten: hiermee weet de app welke clubs lid zijn van de Fotobond.
  
 8. Deze controlestap is vooral nuttig als je [JSON Editor Online](https://jsoneditoronline.org) __niet__ gebruikt.
@@ -87,7 +87,7 @@ Of via een door ons gegenereerde webpagina die bereikbaar is als [/clubs](https:
 
 - [JSON](https://en.wikipedia.org/wiki/JSON) is zeer bekende standaard in de IT wereld.
 [Hier](https://codebeautify.org/json-cheat-sheet) is een korte uitleg van JSON. In ons geval is zou het voldoende moeten zijn om nauwgezet de beschikbare voorbeelden te volgen:
-[XampleMax.level1.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/XampleMax.level1.json) en [XampleMin.level1.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/XampleMin.level1.json) te volgen.
+[TemplateMax.level1.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMax.level1.json) en [TemplateMin.level1.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMin.level1.json) te volgen.
 Bij gebruikt van [JSON Editor Online](https://jsoneditoronline.org) is de kans op dit soort fouten klein.
 
 - Alle informatie tussen de haakjes in het `optional: { }` gedeelte van het bestand mag weggelaten worden. Dat is geen JSON-conventie, maar een keus binnen deze app. 

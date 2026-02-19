@@ -1,8 +1,8 @@
 ## Creating a new level2.json file for your club 
 
-1. **Download** the [min](https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/xampleMin.level2.json) and the [max](https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/xampleMax.level2.json) example files. “Min” is optimized for simplicity. “Max” shows all supported optional data fields.
+1. **Download** the [min](https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/TemplateMin.level2.json) and the [max](https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/TemplateMax.level2.json) example files. “Min” is optimized for simplicity. “Max” shows all supported optional data fields.
 
-2. Make a **copy** of the [min](https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/xampleMin.level2.json) file.
+2. Make a **copy** of the [min](https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/TemplateMin.level2.json) file.
    - Rename the file to some short name (`nickName`) for the club. So if the club is called "F/8 and Be There" you might choose `f8AndBeThere.level2.json`. If your club is already listed in the Photo Club Hub app, you can just reuse the `nickName` from the file [root.level1.json](https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/root.level1.json). To make this even simpler, here's what it says for some of the early-adopter clubs:
 
       | `town`  | `fullName` | `nickName` | `latitude` | `longitude` | Input file | Output page |
@@ -46,8 +46,8 @@
 ### The `Level2.json` format
 <details><summary>Details (click to expand)</summary></p>
 
-- [JSON](https://en.wikipedia.org/wiki/JSON) is a very commonly used international standard, but you often won't see it directly. To learn more, find a [tutorial](https://codebeautify.org/json-cheat-sheet). But it should be enough to simply edit the provided [xampleMin.level2.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/xampleMin.level2.json) and [xampleMax.level2.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/xampleMax.level2.json) examples. Especially if you use an editor like [JSON Editor Online](https://jsoneditoronline.org).
-- Anything in the `optional: { }` section is not strictly needed and can be left out. This is not a JSON rule. It is a Photo Club Hub choice. See this as “stuff you can add later after your first version works”. In the xampleMin file, we have reduced the optional fields to a suggested minimum set.
+- [JSON](https://en.wikipedia.org/wiki/JSON) is a very commonly used international standard, but you often won't see it directly. To learn more, find a [tutorial](https://codebeautify.org/json-cheat-sheet). But it should be enough to simply edit the provided [TemplateMin.level2.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMin.level2.json) and [TemplateMax.level2.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMax.level2.json) examples. Especially if you use an editor like [JSON Editor Online](https://jsoneditoronline.org).
+- Anything in the `optional: { }` section is not strictly needed and can be left out. This is not a JSON rule. It is a Photo Club Hub choice. See this as “stuff you can add later after your first version works”. In the TemplateMin file, we have reduced the optional fields to a suggested minimum set.
 </details></p>
 
 ### Data fields about members
@@ -61,7 +61,7 @@
        - American style suffixes like `Jr.` can be left out. Alternatively, if you prefer them to be visible, you can insert them at the end of the `familyName`. 
        - If in doubt, temporarily leave out a member with a tricky name (like François) until you have decided how to deal with this. This avoids seeing the person twice with a slightly different name. The app is actually supposed to support the full UniCode character set. But not everybody can read Mandarin or modern Greek.
    - For now, you can leave `Level3URL` empty (it is for later: Level 3)
-   - You probably want to fill in `featuredImage` soon, as found the `xampleMin.level2.json` file. It gives you a nice sample picture next to the club member's name.
+   - You probably want to fill in `featuredImage` soon. It is in the `TemplateMin.level2.json` file. It gives you a nice sample picture next to the club member's name.
    - Later you may want to add
        - a `website` address (a portfolio website managed by the photographer, separately from their club portfolio). This shows up in the app and via Photo Club Hub HTML as a clickable link.
        - any special roles of the member such as `"isChairman": true`. These are displayed in the app and via Photo Club Hub HTML.
