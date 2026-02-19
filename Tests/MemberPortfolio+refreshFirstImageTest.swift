@@ -21,14 +21,14 @@ import CoreData // for NSMergePolicy
         bgContext.automaticallyMergesChangesFromParent = true
 
         let randomTownForTesting = String.random(length: 10)
-        _ = XampleMinMembersProvider(bgContext: bgContext,
-                                     isBeingTested: true,
-                                     useOnlyInBundleFile: false,
-                                     randomTownForTesting: randomTownForTesting)
+        _ = TemplateMinMembersProvider(bgContext: bgContext,
+                                       isBeingTested: true,
+                                       useOnlyInBundleFile: false,
+                                       randomTownForTesting: randomTownForTesting)
 
-        let idPlus = OrganizationIdPlus(fullName: "Xample Club With Minimal Data",
+        let idPlus = OrganizationIdPlus(fullName: "Template Club With Minimal Data",
                                         town: randomTownForTesting, // new town to distinguish from normal club data
-                                        nickname: "XampleMin")
+                                        nickname: "TemplateMin")
 
         let club = Organization.findCreateUpdate(context: bgContext, organizationTypeEnum: .club, idPlus: idPlus)
 
