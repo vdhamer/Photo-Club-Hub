@@ -11,14 +11,24 @@ STRUCTURAL
 * TODO: update documentation of Include feature of level1.json
 * TODO: add test for Include feature
 
+PREFERENCES SCREEN
+
+* Rename "Include test clubs" to "Include template clubs" (because file names changed)
+
 DATA MAINTENANCE
 
+* The XampleMin/XampleMax JSON files are now renamed to TemplateMin/TemplateMax to stress their usage.
 * Added new expertise tag for "Motorsport" (for both cars and motorcycles)
-* Removed fwgZienDoorzien as they don't exist anymore
+* Removed fwgZienDoorzien club. It no longer exists although the website still does.
+
+CODE MAINTENANCE
+
+* Fixed: crashes if a needed JSON file is missing on GitHub. Relevant when renaming data files.
+* Removed UrlComponents.swift as it no longer used.
 
 DOCUMENTATION
 
-* TODO: Rename XampleMin/Max clubs to TemplateMin/Max (branch #687) <<<
+* The instructions referencing XampleMin/Max now reference TemplateMin/TemplateMax.
 
 ---------------------------------------------------------------------------
 
@@ -69,7 +79,7 @@ PORTFOLIOS, CLUBS & MUSEUMS, WHO'S WHO SCREENS
 
 PREFERENCES SCREEN
 
-* New "Show test clubs" toggle (replaces a toggle in iOS Settings "Load test clubs").
+* New "Show template clubs" toggle (replaces a toggle in iOS Settings "Load test clubs").
 * New "Show clubs" and "Show museums" toggles. These filter list of organizations and pins visible on maps.
 * Changed section headers (minor).
 * Taller Preferences window ("sheet") on iPad.
@@ -341,7 +351,7 @@ Code Maintenance
 * Tested with Xcode 26.0 beta 4 (17A5285i), iOS 26 beta (23A5297f)
 
 Data Maintenance
-* Forced a datareset at dataResetPending282b4646 (related to IndividueelBO, XampleMax and XampleMin town changes).
+* Forced a datareset at dataResetPending282b4646 (related to IndividueelBO, TemplateMax and TemplateMin town changes).
 * Added data for member PdJ of fgDeGender.
 
 Documentation
@@ -403,7 +413,7 @@ Code Maintenance
 * Bug: List of expertises often showed incorrect icons, due to no intermediate CoreData save().
 
 Settings App
-* Added a toggle (default is Off) to load the XampleMin, XampleMax, and (temp) IndividueelBO and fgOirschot clubs.
+* Added a toggle (default is Off) to load the TemplateMin, TemplateMax, and (temp) IndividueelBO and fgOirschot clubs.
 * Forced a datareset at dataResetPending280b4643 (related to new Settings switch).
 
 This build #4643 was made using Xcode beta 2 (17A5241o) and can thus only be used for beta testing.
@@ -491,7 +501,7 @@ Data Maintenance
 * Updated membership list for fgDeGender and fgWaalre.
 * Mentioned fkGestel in Level2_aanmaken_NL.md
 * Updated usage text for expertises in root.level0.json
-* Minor update to XampleMin and XampleMax demo files
+* Minor update to TemplateMin and TemplateMax demo files
 * Added Level 2 for fgOirschot and fcEricamera
 
 Documentation
@@ -536,7 +546,7 @@ Code Maintenance
 Data Maintenance
 * Added fgDeVriendschap (near Sint-Oedenrode), Fotocollectief 2020 (Vught), 
 * Fixed level2 url for fgDeGender in root.level1.json file (.com -> .nl).
-* Updated xampleMin.level1.json and xampleMax.level1.json sample files.
+* Updated TemplateMin.level1.json and TemplateMax.level1.json sample files.
 * Updated admin role for fgWaalre.
 * Added prospective members for fgDeGender.
 * Updated membership data for fgWaalre.
@@ -565,7 +575,7 @@ Data Maintenance
 * Added fcBrandevoort (in Helmond)
 * Removed 2 clubs used only for demo purposes (they will hopefully show up again in the future)
 * Updated club officer list for fgDeGender
-* Changes status for MvA in XampleMax sample club
+* Changes status for MvA in TemplateMax sample club
 
 This build #4636 was made using Xcode 16.2 and is intended for App Store distribution.
 
@@ -574,7 +584,7 @@ This build #4636 was made using Xcode 16.2 and is intended for App Store distrib
 ### 2.7.2 (GitHub commit c4d0faa) 29-01-25
 
 Portfolios and Clubs-and-Museums screens
-* Added two demo clubs (XampleMin and XampleMax) as examples for adding new clubs.
+* Added two demo clubs (TemplateMin and TemplateMax) as examples for adding new clubs.
 
 Preferences screen
 * Bug fix: role "Other" didn't show up when filtering on club officers
@@ -601,7 +611,7 @@ Data Maintenance
 * Added a missing club fcAFCReusel
 * Created empty collections in LR for former members of fgDeGender
 * Updated fgWaalre (JJ)
-* Created two demo Level 12 files: XampleMin.level2.json and XampleMax.level2.json
+* Created two demo Level 12 files: TemplateMin.level2.json and TemplateMax.level2.json
 * Fixed broken link for ME of fgAnders (still don't have a real image though)
 
 This build #4635 was made using Xcode 16.2 and is intended for TestFlight distribution.
