@@ -188,7 +188,7 @@ struct ReadmeView1718: View {
                                                                   geo: geo)
                             let persistenceController = PersistenceController.shared // for Core Data
                             let viewContext = persistenceController.container.viewContext
-                            // -2 is to not count XampleMin and XampleMax
+                            // -2 is not counting TemplateMin and TemplateMax
                             let orgCount = Organization.count(context: viewContext,
                                                               organizationTypeE: OrganizationTypeEnum.club) - 2
                             ReadmeSection1718(LocalizedStringResource("§3.06.b \(orgCount)", // dynamic via query

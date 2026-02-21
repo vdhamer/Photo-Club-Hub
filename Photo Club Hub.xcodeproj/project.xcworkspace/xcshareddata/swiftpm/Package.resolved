@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/borisovodov/SemanticColorPicker",
       "state" : {
-        "revision" : "a14ba8e966db1b0e941abc902cde1fef3ef4a28a",
-        "version" : "1.0.0"
+        "revision" : "59c66998b7622bfe0b17dff72b0fad82d5075435",
+        "version" : "1.1.0"
       }
     },
     {

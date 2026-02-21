@@ -54,7 +54,7 @@ extension MemberPortfolio {
     }
 
     // remove a suffix like "#myanchor" if present, and append "config.xml"
-    private var urlOfImageIndex: URL? {
+    var urlOfImageIndex: URL? {
         let url: URL? = URL(string: self.level3URL.absoluteString)
         guard let url else { return nil } // bad string
 

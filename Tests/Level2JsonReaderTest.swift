@@ -17,29 +17,29 @@ import CoreData // for NSManagedObjectContext
         context = PersistenceController.shared.container.viewContext
     }
 
-    // Read XampleMin.level2.json and check for parsing errors.
+    // Read TemplateMin.level2.json and check for parsing errors.
     // Clears all CoreData expertises. Runs on background thread, adding bunch of extra complexity ;-(
-    @Test("Parse XampleMin.level2.json") func xampleMinParse() async {
+    @Test("Parse TemplateMin.level2.json") func templateMinParse() async {
         let bgContext = PersistenceController.shared.container.newBackgroundContext()
-        bgContext.name = "XampleMin"
+        bgContext.name = "TemplateMin"
         bgContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         bgContext.automaticallyMergesChangesFromParent = true
 
         Model.deleteCoreDataExpertisesAndLanguages(viewContext: bgContext) // This test doesn't have Expertises
         #expect(Expertise.count(context: bgContext) == 0)
 
-        // note that club XampleMin may already be loaded
-        // note that XampleMinMembersProvider runs asynchronously (via bgContext.perform {})
+        // note that club TemplateMin may already be loaded
+        // note that TemplateMinMembersProvider runs asynchronously (via bgContext.perform {})
         let randomTownForTesting = String.random(length: 10)
 
-        _ = XampleMinMembersProvider(bgContext: bgContext,
-                                     isBeingTested: true,
-                                     useOnlyInBundleFile: true,
-                                     randomTownForTesting: randomTownForTesting)
+        _ = TemplateMinMembersProvider(bgContext: bgContext,
+                                       isBeingTested: true,
+                                       useOnlyInBundleFile: true,
+                                       randomTownForTesting: randomTownForTesting)
 
-        let idPlus = OrganizationIdPlus(fullName: "Xample Club Min",
+        let idPlus = OrganizationIdPlus(fullName: "Template Club Min",
                                         town: randomTownForTesting, // town to keep this separate from normal club data
-                                        nickname: "XampleMin")
+                                        nickname: "TemplateMin")
 
         let predicateFormat: String = "town_ = %@" // avoid localization
         // Note that organizationType is not an identifying attribute.
@@ -63,28 +63,28 @@ import CoreData // for NSManagedObjectContext
 
     }
 
-    // Read XampleMax.level2.json and check for parsing errors
+    // Read TemplateMax.level2.json and check for parsing errors
     // Clears all CoreData expertises. Runs on background thread, adding bunch of extra complexity ;-(
-    @Test("Parse XampleMax.level2.json") func xampleMaxParse() async {
+    @Test("Parse TemplateMax.level2.json") func templateMaxParse() async {
         let bgContext = PersistenceController.shared.container.newBackgroundContext()
-        bgContext.name = "XampleMax"
+        bgContext.name = "TemplateMax"
         bgContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         bgContext.automaticallyMergesChangesFromParent = true
 
         Model.deleteCoreDataExpertisesAndLanguages(viewContext: bgContext) // This test does have Expertises
         #expect(Expertise.count(context: bgContext) == 0)
 
-        // note that club XampleMax may already be loaded
-        // note that XampleMaxMembersProvider runs asynchronously (via bgContext.perform {})
+        // note that club TemplateMax may already be loaded
+        // note that TemplateMaxMembersProvider runs asynchronously (via bgContext.perform {})
         let randomTownForTesting = String.random(length: 10)
-        _ = XampleMaxMembersProvider(bgContext: bgContext,
-                                     isBeingTested: true,
-                                     useOnlyInBundleFile: true,
-                                     randomTownForTesting: randomTownForTesting)
+        _ = TemplateMaxMembersProvider(bgContext: bgContext,
+                                       isBeingTested: true,
+                                       useOnlyInBundleFile: true,
+                                       randomTownForTesting: randomTownForTesting)
 
-        let idPlus = OrganizationIdPlus(fullName: "Xample Club With Maximal Data",
+        let idPlus = OrganizationIdPlus(fullName: "Template Club With Maximal Data",
                                         town: randomTownForTesting, // town to distinguish this from normal club data
-                                        nickname: "XampleMax")
+                                        nickname: "TemplateMax")
 
         let predicateFormat: String = "town_ = %@" // avoid localization
         // Note that organizationType is not an identifying attribute.

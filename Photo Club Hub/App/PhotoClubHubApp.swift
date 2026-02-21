@@ -112,15 +112,15 @@ extension PhotoClubHubApp {
             isBeingTested: isBeingTested,
             useOnlyInBundleFile: useOnlyInBundleFile)
 
-        // load test member(s) of XampleMin. Club name starts with an X in order to be at end of list
-        _ = XampleMinMembersProvider(
-            bgContext: makeBgContext(ctxName: "Level 2 loader XampleMin"),
+        // load test member(s) of TemplateMin.
+        _ = TemplateMinMembersProvider(
+            bgContext: makeBgContext(ctxName: "Level 2 loader TemplateMin"),
             isBeingTested: isBeingTested,
             useOnlyInBundleFile: useOnlyInBundleFile)
 
-        // load test member(s) of XampleMax. Club name starts with an X in order to be at end of list
-        _ = XampleMaxMembersProvider(
-            bgContext: makeBgContext(ctxName: "Level 2 loader XampleMax"),
+        // load test member(s) of TemplateMax.
+        _ = TemplateMaxMembersProvider(
+            bgContext: makeBgContext(ctxName: "Level 2 loader TemplateMax"),
             isBeingTested: isBeingTested,
             useOnlyInBundleFile: useOnlyInBundleFile)
 

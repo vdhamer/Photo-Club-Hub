@@ -8,7 +8,7 @@
 import CoreData // for NSManagedObjectContext
 import SwiftyJSON // for JSON struct
 
-// see XampleMin.level2.json and XampleMax.level2.json for example data files
+// see TemplateMin.level2.json and TemplateMax.level2.json for example data files
 
 public class Level2JsonReader { // normally running on a background thread
 

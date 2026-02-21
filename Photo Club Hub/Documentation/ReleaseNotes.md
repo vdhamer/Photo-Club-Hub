@@ -25,6 +25,8 @@ CODE MAINTENANCE
 
 * Fixed: crashes if a needed JSON file is missing on GitHub. Relevant when renaming data files.
 * Removed UrlComponents.swift as it no longer used.
+* Changed from SemanticColorPicker 1.0.0 to 1.1.0 (may impact look on iPad) <<<< 1.2?
+* Tested with iOS 26.4 beta (23E5207p) and Xcode 26.3 RC2 and Xcode 26.4 beta 1 (17E5159k)
 
 DOCUMENTATION
 

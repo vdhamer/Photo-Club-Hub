@@ -38,8 +38,6 @@ class PreferencesViewModel: ObservableObject {
     var preferences: PreferencesStruct = .defaultValue
 }
 
-// Custom Codable conformance is needed for PreferencesStruct because `highlightColor` does not conform to Codable.
-// We encode highlightColor as an RGBA tuple using UIColor and decode it back into a SwiftUI Color.
 struct PreferencesStruct { // order in which they are shown on Preferences page
     var showCurrentMembers: Bool {
         didSet {
@@ -60,8 +58,8 @@ struct PreferencesStruct { // order in which they are shown on Preferences page
     var showExternalCoaches: Bool
 
     var showClubs: Bool
-    var showTestClubs: Bool
-    var anyClubs: Bool { showClubs || showTestClubs } // convenience function
+    var showTemplateClubs: Bool
+    var anyClubs: Bool { showClubs || showTemplateClubs } // convenience function
     var showMuseums: Bool
     var highlightFotobondNL: Bool
     var highlightNonFotobondNL: Bool
@@ -77,7 +75,7 @@ struct PreferencesStruct { // order in which they are shown on Preferences page
         showExternalCoaches: false,
 
         showClubs: true,
-        showTestClubs: false,
+        showTemplateClubs: false,
         showMuseums: true,
         highlightFotobondNL: false,
         highlightNonFotobondNL: false,
@@ -137,7 +135,7 @@ struct PreferencesStruct { // order in which they are shown on Preferences page
     var organizationPredicate: NSPredicate {
         var format = ""
         var args: [String] = [] // array from which to fetch the %@ values
-        let showAllClubs: Bool = showClubs && showTestClubs // for query optimization
+        let showAllClubs: Bool = showClubs && showTemplateClubs // for query optimization
 
         let showAll = showAllClubs && showMuseums // for query oprimization
         if showAll { return NSPredicate(format: "TRUEPREDICATE") } // kind of a guard statement, but avoiding Not()
@@ -152,14 +150,14 @@ struct PreferencesStruct { // order in which they are shown on Preferences page
                 format = format.predicateOrAppend(suffix: "(organizationType_.organizationTypeName_ = %@) AND" +
                                                           " NOT (nickName_ CONTAINS[cd] %@)")
                 args.append(OrganizationTypeEnum.club.rawValue)
-                args.append("Xample")
+                args.append("Template") // clubs containing "Template" anywhere in the name
             }
 
-            if showTestClubs {
+            if showTemplateClubs {
                 format = format.predicateOrAppend(suffix: "(organizationType_.organizationTypeName_ = %@) AND" +
                                                           " (nickName_ CONTAINS[cd] %@)")
                 args.append(OrganizationTypeEnum.club.rawValue)
-                args.append("Xample") // clubs containing "Xample" anywhere in the name
+                args.append("Template") // clubs containing "Template" anywhere in their name
             }
         }
 
@@ -187,7 +185,7 @@ struct PreferencesStruct { // order in which they are shown on Preferences page
     /// The`organizationLabel` is also used when displaying the count of shown organizations (e.g. "35 museums").
     ///
     /// This computed property inspects the current `PreferencesViewModel().preferences` flags
-    /// — `showClubs`, `showTestClubs`, and `showMuseums` — to decide which section(s)
+    /// — `showClubs`, `showTemplateClubs`, and `showMuseums` — to decide which section(s)
     /// of organizations are visible, and returns an appropriate, localized string.
     ///
     /// Logic overview:
@@ -227,20 +225,21 @@ extension String {
 }
 
 extension PreferencesStruct: Codable { // this extension was generated entirely by ChatGPT
+
     enum CodingKeys: String, CodingKey {
-        case showCurrentMembers
-        case showOfficers
-        case showAspiringMembers
-        case showHonoraryMembers
-        case showFormerMembers
-        case showDeceasedMembers
-        case showExternalCoaches
-        case showClubs
-        case showTestClubs
-        case showMuseums
-        case highlightFotobondNL
-        case highlightNonFotobondNL
-        case highlightColor
+        case showCurrentMembers // Bool
+        case showOfficers // Bool
+        case showAspiringMembers // Bool
+        case showHonoraryMembers // Bool
+        case showFormerMembers // Bool
+        case showDeceasedMembers // Bool
+        case showExternalCoaches // Bool
+        case showClubs // Bool
+        case showTemplateClubs // Bool
+        case showMuseums // Bool
+        case highlightFotobondNL // Bool
+        case highlightNonFotobondNL // Bool
+        case highlightColor // SemanticColor
     }
 
 }
