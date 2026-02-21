@@ -20,6 +20,7 @@ DATA MAINTENANCE
 * The XampleMin/XampleMax JSON files are now renamed to TemplateMin/TemplateMax to stress their usage.
 * Added new expertise tag for "Motorsport" (for both cars and motorcycles)
 * Removed fwgZienDoorzien club. It no longer exists although the website still does.
+* Forced a data reset with `dataResetPending292b4657` (related to `TemplateMin/Max` and fcVeghel).
 
 CODE MAINTENANCE
 
