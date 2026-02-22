@@ -17,6 +17,8 @@
 		3744553E2F46611B007DBDE3 /* TemplateMax.level1.json in Resources */ = {isa = PBXBuildFile; fileRef = 374455392F46611B007DBDE3 /* TemplateMax.level1.json */; };
 		3744553F2F46611B007DBDE3 /* TemplateMin.level2.json in Resources */ = {isa = PBXBuildFile; fileRef = 3744553C2F46611B007DBDE3 /* TemplateMin.level2.json */; };
 		374455402F46611B007DBDE3 /* TemplateMax.level2.json in Resources */ = {isa = PBXBuildFile; fileRef = 3744553A2F46611B007DBDE3 /* TemplateMax.level2.json */; };
+		375AEF0B2F4B4F2700C6FBD9 /* SemanticColorPicker in Frameworks */ = {isa = PBXBuildFile; productRef = 375AEF0A2F4B4F2700C6FBD9 /* SemanticColorPicker */; };
+		375AEF0D2F4B500F00C6FBD9 /* SemanticColor+palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375AEF0C2F4B500F00C6FBD9 /* SemanticColor+palette.swift */; };
 		376855672F2BA327002590F6 /* fegGemert.level2.json in Resources */ = {isa = PBXBuildFile; fileRef = 376855662F2BA327002590F6 /* fegGemert.level2.json */; };
 		376855692F2BA418002590F6 /* FEGGemertMembersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376855682F2BA418002590F6 /* FEGGemertMembersProvider.swift */; };
 		3768E6622F0D2BDC00E12F6F /* Level1JsonReader+Include.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3768E6612F0D2BDC00E12F6F /* Level1JsonReader+Include.swift */; };
@@ -60,7 +62,6 @@
 		37E134B92E6F75ED00C61714 /* ReadmeView2626.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E134B72E6F75ED00C61714 /* ReadmeView2626.swift */; };
 		37E134BA2E6F75ED00C61714 /* ReadmeSection2626.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E134B62E6F75ED00C61714 /* ReadmeSection2626.swift */; };
 		37E134BB2E6F75ED00C61714 /* SectionHeader2626.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E134B82E6F75ED00C61714 /* SectionHeader2626.swift */; };
-		37EE61E22F3E221500DC1223 /* SemanticColorPicker in Frameworks */ = {isa = PBXBuildFile; productRef = 37EE61E12F3E221500DC1223 /* SemanticColorPicker */; };
 		37F573CA2F3668C7001305F2 /* MapMarker​Appearance​.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F573C92F3668C7001305F2 /* MapMarker​Appearance​.swift */; };
 		37F7F53D2EC8A028000F1889 /* PreludeImage2626.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F7F53C2EC8A028000F1889 /* PreludeImage2626.swift */; };
 		D006BA7E2B115FB1002E555B /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D006BA7D2B115FB1002E555B /* LocationManager.swift */; };
@@ -191,6 +192,7 @@
 		3744553C2F46611B007DBDE3 /* TemplateMin.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TemplateMin.level2.json; sourceTree = "<group>"; };
 		37545CA32EBFB37300C75485 /* Photo_Club_Hub_2_8_7.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_8_7.xcdatamodel; sourceTree = "<group>"; };
 		375A21DE2F0EC4AC00544042 /* Photo_Club_Hub_2_9_0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Club_Hub_2_9_0.xcdatamodel; sourceTree = "<group>"; };
+		375AEF0C2F4B500F00C6FBD9 /* SemanticColor+palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SemanticColor+palette.swift"; sourceTree = "<group>"; };
 		375CC66B2EE0A10300B618DB /* hierarchyDemo.level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = hierarchyDemo.level1.json; sourceTree = "<group>"; };
 		3764D5E32EDDB0D9005A2539 /* FotoclubHubIntro_NL_20251129.pptx */ = {isa = PBXFileReference; lastKnownFileType = file; path = FotoclubHubIntro_NL_20251129.pptx; sourceTree = "<group>"; };
 		376855662F2BA327002590F6 /* fegGemert.level2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fegGemert.level2.json; sourceTree = "<group>"; };
@@ -428,7 +430,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37EE61E22F3E221500DC1223 /* SemanticColorPicker in Frameworks */,
+				375AEF0B2F4B4F2700C6FBD9 /* SemanticColorPicker in Frameworks */,
 				D0CFACAD2CDEDCBA005E3A0B /* SwiftyJSON in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -725,6 +727,7 @@
 				D0795CE9294FCAC000FA62A8 /* String extensions */,
 				D044646427FCE7C100990613 /* UIDevice+IsIPad.swift */,
 				D0795CEA294FCB1D00FA62A8 /* View extensions */,
+				375AEF0C2F4B500F00C6FBD9 /* SemanticColor+palette.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -987,7 +990,7 @@
 			name = "Photo Club Hub";
 			packageProductDependencies = (
 				D0CFACAC2CDEDCBA005E3A0B /* SwiftyJSON */,
-				37EE61E12F3E221500DC1223 /* SemanticColorPicker */,
+				375AEF0A2F4B4F2700C6FBD9 /* SemanticColorPicker */,
 			);
 			productName = "Fotogroep Waalre 2";
 			productReference = D08319E3277F70A30049AB84 /* Photo Club Hub.app */;
@@ -1047,7 +1050,7 @@
 			mainGroup = D08319DA277F70A30049AB84;
 			packageReferences = (
 				D0CFACAB2CDEDCBA005E3A0B /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
-				37EE61DF2F3E21FB00DC1223 /* XCRemoteSwiftPackageReference "SemanticColorPicker" */,
+				375AEEF32F4B4EF500C6FBD9 /* XCRemoteSwiftPackageReference "SemanticColorPicker" */,
 			);
 			productRefGroup = D08319E4277F70A30049AB84 /* Products */;
 			projectDirPath = "";
@@ -1240,6 +1243,7 @@
 				D0EEF48F2C2844290086419D /* Settings.swift in Sources */,
 				D0831A22277F72270049AB84 /* MemberPortfolioListView1718.swift in Sources */,
 				37F7F53D2EC8A028000F1889 /* PreludeImage2626.swift in Sources */,
+				375AEF0D2F4B500F00C6FBD9 /* SemanticColor+palette.swift in Sources */,
 				D0ACCEC32DEF90360002FACC /* FotogroepOirschotMembersProvider.swift in Sources */,
 				37C014462EDA575B003B3901 /* Organization+Comparable.swift in Sources */,
 				376DC9522EC3A98900FB429B /* PreludeImageStore2626.swift in Sources */,
@@ -1615,12 +1619,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		37EE61DF2F3E21FB00DC1223 /* XCRemoteSwiftPackageReference "SemanticColorPicker" */ = {
+		375AEEF32F4B4EF500C6FBD9 /* XCRemoteSwiftPackageReference "SemanticColorPicker" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/borisovodov/SemanticColorPicker";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
+				minimumVersion = 2.0.0;
 			};
 		};
 		D0CFACAB2CDEDCBA005E3A0B /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
@@ -1634,9 +1638,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		37EE61E12F3E221500DC1223 /* SemanticColorPicker */ = {
+		375AEF0A2F4B4F2700C6FBD9 /* SemanticColorPicker */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 37EE61DF2F3E21FB00DC1223 /* XCRemoteSwiftPackageReference "SemanticColorPicker" */;
+			package = 375AEEF32F4B4EF500C6FBD9 /* XCRemoteSwiftPackageReference "SemanticColorPicker" */;
 			productName = SemanticColorPicker;
 		};
 		D0CFACAC2CDEDCBA005E3A0B /* SwiftyJSON */ = {

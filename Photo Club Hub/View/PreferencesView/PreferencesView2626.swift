@@ -218,7 +218,7 @@ struct PreferencesView2626: View {
                                     String(localized: "Highlighting color",
                                            table: "PhotoClubHub.SwiftUI",
                                            comment: "Label of color picker in Preferences"),
-                                    data: SemanticColor.allCases,
+                                    data: SemanticColor.palette,
                                     selection: $localPreferences.highlightColor)
                             }
                         }
