@@ -329,7 +329,7 @@
                 "familyName": "Michiels"
             },
             "optional": {
-                "website":"http://www.hmimages.nl/"',
+                "website":"http://www.hmimages.nl/",
                 "featuredImage": "https://fotoclubveghel.nl/wp-content/gallery/harry-michiels/5.jpg",
                 "level3URL": "https://www.fotoclubveghel.nl/harry-michiels",
                 "membershipStartDate": "2023-09-01",
@@ -488,7 +488,7 @@
                 "featuredImage": "https://www.fotoclubveghel.nl/wp-content/gallery/mirjamevers/1-2.jpg",
                 "level3URL": "https://www.fotoclubveghel.nl/mirjam-evers",
                 "membershipStartDate": "2013-02-01",
-                "expertises": ["Conceptual ,"Postprocessing"],
+                "expertises": ["Conceptual" ,"Postprocessing"],
                 "nlSpecific": {
                     "fotobondNumber": 1601069
                 }
