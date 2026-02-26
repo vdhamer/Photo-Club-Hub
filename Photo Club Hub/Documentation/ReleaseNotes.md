@@ -13,7 +13,11 @@ STRUCTURAL
 
 ---------------------------------------------------------------------------
 
-### 2.9.2 (GitHub commit ???????) 26-02-2026
+### 2.9.2 (GitHub commit acc336e) 26-02-2026
+
+ORGANIZATIONS SCREEN
+
+* The XampleMin/XampleMax example clubs were renamed to TemplateMin/TemplateMax.
 
 PREFERENCES SCREEN
 
@@ -40,7 +44,7 @@ DOCUMENTATION
 * The instructions referencing XampleMin/Max now reference TemplateMin/TemplateMax.
 * Updated FotoclubHubIntro_NL.ppt
 
-This build #4656 was made using Xcode 26.3 and is intended for the App Store.
+This build #4657 was made using Xcode 26.3 and is intended for the App Store.
 
 ---------------------------------------------------------------------------
 
