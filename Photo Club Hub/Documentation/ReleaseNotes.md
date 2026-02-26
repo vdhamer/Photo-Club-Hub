@@ -45,6 +45,7 @@ DOCUMENTATION
 * Updated FotoclubHubIntro_NL.ppt
 
 This build #4657 was made using Xcode 26.3 and is intended for the App Store.
+Amount of code and data lines changed since previous release: 476 additions and 441 deletions in 38 files.
 
 ---------------------------------------------------------------------------
 
@@ -84,6 +85,7 @@ DOCUMENTATION
 * Updated FotoclubHubIntro_NL.ppt to cover the Level1includeURL feature.
 
 This build #4656 was made using Xcode 26.3 and is intended for the App Store.
+Amount of code and data lines changed since previous release: 2,816 additions and 720 deletions in 65 files.
 
 ---------------------------------------------------------------------------
 
@@ -127,6 +129,7 @@ DOCUMENTATION
 * Updated Level2_aanmaken_NL.md.
 
 This build #4655 was made using Xcode 26.2 and is intended for the App Store.
+Amount of code and data lines changed since previous release: 5,636 additions and 663 deletions in 80 files.
 
 ---------------------------------------------------------------------------
 
