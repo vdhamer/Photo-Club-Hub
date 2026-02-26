@@ -11,6 +11,9 @@ STRUCTURAL
 * TODO: update documentation of Include feature of level1.json
 * TODO: add test for Include feature
 
+This build #4657 was made using Xcode 26.3 and is intended for the App Store.
+Amount of code and data lines changed since previous release: 0 additions and 0 deletions in 0 files.
+
 ---------------------------------------------------------------------------
 
 ### 2.9.2 (GitHub commit acc336e) 26-02-2026
@@ -37,7 +40,7 @@ CODE MAINTENANCE
 * Fixed: crash if a required JSON file is not found on GitHub. Could happen when renaming files.
 * Removed UrlComponents.swift as it no longer used.
 * Changed from SemanticColorPicker 1.0 to 2.0.
-* Tested with iOS 26.4 beta (23E5207p) and Xcode 26.3 RC2 and Xcode 26.4 beta 1 (17E5159k)
+* Tested with iOS 26.4 beta (23E5207p) and Xcode 26.3 and Xcode 26.4 beta 2 (17E5170d)
 
 DOCUMENTATION
 
