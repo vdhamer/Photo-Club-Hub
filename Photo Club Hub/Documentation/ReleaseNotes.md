@@ -1,4 +1,4 @@
-### 2.9.2 (GitHub commit ???????) ??-03-2026
+### 2.9.3 (GitHub commit ???????) ??-03-2026
 
 USER-FACING
 
@@ -11,29 +11,36 @@ STRUCTURAL
 * TODO: update documentation of Include feature of level1.json
 * TODO: add test for Include feature
 
+---------------------------------------------------------------------------
+
+### 2.9.2 (GitHub commit ???????) 26-02-2026
+
 PREFERENCES SCREEN
 
-* Rename "Include test clubs" to "Include template clubs" (because file names changed)
+* Rename "Include test clubs" to "Include template clubs" (the file/club names changed).
+* Shortened list of available highlight colors (now 12, no semi-translucent colors).
 
 DATA MAINTENANCE
 
 * The XampleMin/XampleMax JSON files are now renamed to TemplateMin/TemplateMax to stress their usage.
-* Added new expertise tag for "Motorsport" (for both cars and motorcycles)
+* Added new expertise tag for "Motorsport" (for both cars and motorcycles).
 * Removed fwgZienDoorzien club. It no longer exists although the website still does.
 * Forced a data reset with `dataResetPending292b4657` (related to `TemplateMin/Max` and fcVeghel).
-* Data updates for fcVeghel
+* Level 2 maintenance by fcVeghel.
 
 CODE MAINTENANCE
 
-* Fixed: crashes if a needed JSON file is missing on GitHub. Relevant when renaming data files.
+* Fixed: crash if a required JSON file is not found on GitHub. Could happen when renaming files.
 * Removed UrlComponents.swift as it no longer used.
-* Changed from SemanticColorPicker 1.0 to 2.0 and reduced list of available colors to 12.
+* Changed from SemanticColorPicker 1.0 to 2.0.
 * Tested with iOS 26.4 beta (23E5207p) and Xcode 26.3 RC2 and Xcode 26.4 beta 1 (17E5159k)
 
 DOCUMENTATION
 
 * The instructions referencing XampleMin/Max now reference TemplateMin/TemplateMax.
 * Updated FotoclubHubIntro_NL.ppt
+
+This build #4656 was made using Xcode 26.3 and is intended for the App Store.
 
 ---------------------------------------------------------------------------
 
