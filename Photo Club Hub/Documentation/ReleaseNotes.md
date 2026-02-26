@@ -11,7 +11,7 @@ STRUCTURAL
 * TODO: update documentation of Include feature of level1.json
 * TODO: add test for Include feature
 
-This build #4657 was made using Xcode 26.3 and is intended for the App Store.
+This build #4658 was made using Xcode 26.3 and is intended for the App Store.
 Amount of code and data lines changed since previous release: 0 additions and 0 deletions in 0 files.
 
 ---------------------------------------------------------------------------
@@ -20,32 +20,32 @@ Amount of code and data lines changed since previous release: 0 additions and 0 
 
 ORGANIZATIONS SCREEN
 
-* The XampleMin/XampleMax example clubs were renamed to TemplateMin/TemplateMax.
+* The XampleMin/XampleMax example clubs were renamed to TemplateMin/TemplateMax to stress what their role is.
 
 PREFERENCES SCREEN
 
-* Rename "Include test clubs" to "Include template clubs" (the file/club names changed).
-* Shortened list of available highlight colors (now 12, no semi-translucent colors).
+* Rename `Include test clubs` to `Include template clubs` (the file and club names changed).
+* Shortened list of available highlight colors (hiding semi-translucent colors).
 
 DATA MAINTENANCE
 
 * The XampleMin/XampleMax JSON files are now renamed to TemplateMin/TemplateMax to stress their usage.
-* Added new expertise tag for "Motorsport" (for both cars and motorcycles).
+* Added new expertise tag for "Motorsport" (car and motorcycle racing).
 * Removed fwgZienDoorzien club. It no longer exists although the website still does.
 * Forced a data reset with `dataResetPending292b4657` (related to `TemplateMin/Max` and fcVeghel).
 * Level 2 maintenance by fcVeghel.
 
 CODE MAINTENANCE
 
-* Fixed: crash if a required JSON file is not found on GitHub. Could happen when renaming files.
+* FFixed: crash if a required JSON file cannot be downloaded from GitHub. This can happen when data files are renamed.
 * Removed UrlComponents.swift as it no longer used.
-* Changed from SemanticColorPicker 1.0 to 2.0.
+* Changed from using SemanticColorPicker v1.0 to v2.0.
 * Tested with iOS 26.4 beta (23E5207p) and Xcode 26.3 and Xcode 26.4 beta 2 (17E5170d)
 
-DOCUMENTATION
+DOCUMENTATION MAINTENANCE
 
-* The instructions referencing XampleMin/Max now reference TemplateMin/TemplateMax.
-* Updated FotoclubHubIntro_NL.ppt
+* The instruction .md files referencing XampleMin/Max now reference TemplateMin/TemplateMax.
+* Updated `FotoclubHubIntro_NL.ppt` to introduce the nesting of Level 2 files.
 
 This build #4657 was made using Xcode 26.3 and is intended for the App Store.
 Amount of code and data lines changed since previous release: 476 additions and 441 deletions in 38 files.
