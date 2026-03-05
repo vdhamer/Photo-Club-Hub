@@ -47,10 +47,8 @@
           {
             "name" : "Level2JsonReaderTests",
             "testFunctions" : [
-              "fgDeGenderParse()",
-              "fgWaalreFgDeGender()",
-              "xampleMaxParse()",
-              "xampleMinParse()"
+              "templateMaxParse()",
+              "templateMinParse()"
             ]
           }
         ]
