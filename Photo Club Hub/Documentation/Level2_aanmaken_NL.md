@@ -32,7 +32,7 @@ Er zijn aparte instructie hoe bestanden online te krijgen via GitHub. En er kome
       | Gemert | Foto Expressie Groep Gemert | fegGemert | 51.56025 | 5.68508 | ⌛ |  |
       | Oirschot | Fotogroep Oirschot | fgOirschot | 51.46785 | 5.25568 | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/fgOirschot.level2.json) ⌛ | [link](http://www.vdhamer.com/fgOirschot) |
       | Schijndel | Fotoclub Schijndel | fcSchijndel | 51.61402 | 5.44888 | ? |  |
-      | Sint Michielsgestel | Fotokring Sint-Michielsgestel | fkGestel | 51.64036 | 5.34749 | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/fgGestel.level2.json) ⌛ | [link](http://www.vdhamer.com/fgGestel) |
+      | Sint Michielsgestel | Fotokring Sint-Michielsgestel | fkGestel | 51.64036 | 5.34749 | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/fkGestel.level2.json) ⌛ | [link](http://www.vdhamer.com/fkGestel) |
       | Veldhoven | Fotoclub Bellus Imago | fcBellusImago | 51.42541 | 5.38756 | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/fcBellusImago.level2.json) | [link](http://www.vdhamer.com/fcBellusImago) |
       | Veghel | Fotoclub Veghel | fcVeghel | 51.62441 | 5.55930 | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/fcVeghel.level2.json) | [link](http://www.vdhamer.com/fcVeghel) |
       | Waalre | Fotogroep Waalre | fgWaalre | 51.39184 | 5.46144 | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/fgWaalre.level2.json) | [link](http://www.vdhamer.com/fgWaalre) |
