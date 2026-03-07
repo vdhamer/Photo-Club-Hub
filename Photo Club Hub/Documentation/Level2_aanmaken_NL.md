@@ -24,18 +24,18 @@ Er zijn aparte instructie hoe bestanden online te krijgen via GitHub. En er kome
       | `town`  | `fullName` | `nickName` | `latitude` | `longitude` | Input bestand | Output pagina |
       | -----  | ---------| ----- | :-----: | :-----: | :-----: | :-----: |
       | Berlicum | FCC Shot71 | fccShot71 | 51.66306 | 5.41825 | ⌛ |  |
-      | Brabant Oost | Persoonlijk | Persoonlijk16 | 51.44327 | 5.47990 | [link](https://.com/vdhamer/Photo-Club-Hub/blob/main/JSON/Persoonlijk.level2.json) | [link](http://www.vdhamer.com/Persoonlijk16) |
-      | Den Dungen | Fotoclub Den Dungen | fcDenDungen | 51.66214 | 5.37097 | [link](https://.com/vdhamer/Photo-Club-Hub/blob/main/JSON/fcDenDungen.level2.json) ⌛ | [link](http://www.vdhamer.com/fcDenDungen) |
-      | Eindhoven | Fotogroep de Gender | fgDeGender | 51.42398 | 5.45010 | [link](https://.com/vdhamer/Photo-Club-Hub/blob/main/JSON/fgDeGender.level2.json) | [link](http://www.vdhamer.com/fgDeGender) |
-      | Eindhoven | Fotoclub Ericamera | fcEricamera | 51.45403 | 5.46288 | [link](https://.com/vdhamer/Photo-Club-Hub/blob/main/JSON/fcEricamera.level2.json) ⌛ | [link](http://www.vdhamer.com/fcEricamera) |
+      | Brabant Oost | Persoonlijk | Persoonlijk16 | 51.44327 | 5.47990 | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/Persoonlijk.level2.json) | [link](http://www.vdhamer.com/Persoonlijk16) |
+      | Den Dungen | Fotoclub Den Dungen | fcDenDungen | 51.66214 | 5.37097 | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/fcDenDungen.level2.json) ⌛ | [link](http://www.vdhamer.com/fcDenDungen) |
+      | Eindhoven | Fotogroep de Gender | fgDeGender | 51.42398 | 5.45010 | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/fgDeGender.level2.json) | [link](http://www.vdhamer.com/fgDeGender) |
+      | Eindhoven | Fotoclub Ericamera | fcEricamera | 51.45403 | 5.46288 | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/fcEricamera.level2.json) ⌛ | [link](http://www.vdhamer.com/fcEricamera) |
       | Eindhoven | Fotoclub 't Karregat | fcKarregat | 51.48048 | 5.42879 | ? |  |
       | Gemert | Foto Expressie Groep Gemert | fegGemert | 51.56025 | 5.68508 | ⌛ |  |
-      | Oirschot | Fotogroep Oirschot | fgOirschot | 51.46785 | 5.25568 | [link](https://.com/vdhamer/Photo-Club-Hub/blob/main/JSON/fgOirschot.level2.json) ⌛ | [link](http://www.vdhamer.com/fgOirschot) |
+      | Oirschot | Fotogroep Oirschot | fgOirschot | 51.46785 | 5.25568 | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/fgOirschot.level2.json) ⌛ | [link](http://www.vdhamer.com/fgOirschot) |
       | Schijndel | Fotoclub Schijndel | fcSchijndel | 51.61402 | 5.44888 | ? |  |
-      | Sint Michielsgestel | Fotokring Sint-Michielsgestel | fkGestel | 51.64036 | 5.34749 | [link](https://.com/vdhamer/Photo-Club-Hub/blob/main/JSON/fgGestel.level2.json) ⌛ | [link](http://www.vdhamer.com/fgGestel) |
-      | Veldhoven | Fotoclub Bellus Imago | fcBellusImago | 51.42541 | 5.38756 | [link](https://.com/vdhamer/Photo-Club-Hub/blob/main/JSON/fcBellusImago.level2.json) | [link](http://www.vdhamer.com/fcBellusImago) |
-      | Veghel | Fotoclub Veghel | fcVeghel | 51.62441 | 5.55930 | [link](https://.com/vdhamer/Photo-Club-Hub/blob/main/JSON/fcVeghel.level2.json) | [link](http://www.vdhamer.com/fcVeghel) |
-      | Waalre | Fotogroep Waalre | fgWaalre | 51.39184 | 5.46144 | [link](https://.com/vdhamer/Photo-Club-Hub/blob/main/JSON/fgWaalre.level2.json) | [link](http://www.vdhamer.com/fgWaalre) |
+      | Sint Michielsgestel | Fotokring Sint-Michielsgestel | fkGestel | 51.64036 | 5.34749 | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/fgGestel.level2.json) ⌛ | [link](http://www.vdhamer.com/fgGestel) |
+      | Veldhoven | Fotoclub Bellus Imago | fcBellusImago | 51.42541 | 5.38756 | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/fcBellusImago.level2.json) | [link](http://www.vdhamer.com/fcBellusImago) |
+      | Veghel | Fotoclub Veghel | fcVeghel | 51.62441 | 5.55930 | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/fcVeghel.level2.json) | [link](http://www.vdhamer.com/fcVeghel) |
+      | Waalre | Fotogroep Waalre | fgWaalre | 51.39184 | 5.46144 | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/fgWaalre.level2.json) | [link](http://www.vdhamer.com/fgWaalre) |
 
    > Tip: Je kunt eventueel ook uitgaan van het [Max](https://.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMax.level2.json) bestand.
    > Dit zal ertoe leiden dat je velden die je momenteel niet kunt aanleveren zult willen weglaten. 
