@@ -5,6 +5,7 @@ USER-FACING
 * TODO: display expertises on Photographers screen
 * TODO: more search functionality on Photographers screen
 * TODO: more search functionality on Portfolio screen
+* TODO: toggle to switch between FeaturedImage and PhotographerImage
 
 STRUCTURAL
 
@@ -14,7 +15,11 @@ STRUCTURAL
 CODE MAINTENANCE
 
 * Fixed 1 test ("Parse TemplateMin.level2.json")
-* Tested with iOS 26.3.1 and MacOS 26.3.1
+* Tested with [iOS 26.3.1 and] MacOS 26.3.1
+
+DOCUMENTATION MAINTENANCE
+
+* Fixed broken links in Level2_aanmaken_NL.md and updated Level2_creation_NL.md
 
 This build #4658 was made using Xcode 26.3 and is intended for the App Store.
 Amount of code and data lines changed since previous release: 0 additions and 0 deletions in 0 files.
