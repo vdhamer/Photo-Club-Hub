@@ -37,7 +37,7 @@ import CoreData // for NSManagedObjectContext
                                        useOnlyInBundleFile: true,
                                        randomTownForTesting: randomTownForTesting)
 
-        let idPlus = OrganizationIdPlus(fullName: "Template Club Min",
+        let idPlus = OrganizationIdPlus(fullName: "Template Club with Minimal Data",
                                         town: randomTownForTesting, // town to keep this separate from normal club data
                                         nickname: "TemplateMin")
 

@@ -11,6 +11,11 @@ STRUCTURAL
 * TODO: update documentation of Include feature of level1.json
 * TODO: add test for Include feature
 
+CODE MAINTENANCE
+
+* Fixed 1 test ("Parse TemplateMin.level2.json")
+* Tested with iOS 26.3.1 and MacOS 26.3.1
+
 This build #4658 was made using Xcode 26.3 and is intended for the App Store.
 Amount of code and data lines changed since previous release: 0 additions and 0 deletions in 0 files.
 
@@ -37,7 +42,7 @@ DATA MAINTENANCE
 
 CODE MAINTENANCE
 
-* FFixed: crash if a required JSON file cannot be downloaded from GitHub. This can happen when data files are renamed.
+* Fixed: crash if a required JSON file cannot be downloaded from GitHub. This can happen when data files are renamed.
 * Removed UrlComponents.swift as it no longer used.
 * Changed from using SemanticColorPicker v1.0 to v2.0.
 * Tested with iOS 26.4 beta (23E5207p) and Xcode 26.3 and Xcode 26.4 beta 2 (17E5170d)
