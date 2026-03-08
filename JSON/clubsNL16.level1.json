@@ -2011,6 +2011,32 @@
 
         {
             "idPlus": {
+                "town": "Waalwijk",
+                "fullName": "Fotoclub Waalwijk",
+                "nickName": "fcWaalwijk"
+            },
+            "coordinates": {
+                "latitude": 51.69437,
+                "longitude": 5.09274
+            },
+            "optional": {
+                "website": "https://www.fotoclubwaalwijk.nl",
+                "level2URL": "https://www.example.com/fcWaalwijk.level2.json",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "The club has roughly 25 members and meets biweekly."
+                    },
+                    {
+                        "language": "NL",
+                        "value": "De club komt om de 2 weken bijeen in verenigingsgebouw De Ouwe Toren in Waalwijk."
+                    }
+                ]
+            }
+        },
+
+        {
+            "idPlus": {
                 "town": "Wanroy",
                 "fullName": "Fotoclub Kiekus",
                 "nickName": "fcKiekus"
