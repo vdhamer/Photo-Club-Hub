@@ -16,6 +16,7 @@ CODE MAINTENANCE
 
 * Fixed 1 test ("Parse TemplateMin.level2.json")
 * Tested with [iOS 26.3.1 and] MacOS 26.3.1
+* Fixed GitHub merging issue (push and fetch stopped working from within Xcode)
 
 DOCUMENTATION MAINTENANCE
 
