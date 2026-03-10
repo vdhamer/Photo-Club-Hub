@@ -15,7 +15,7 @@ STRUCTURAL
 CODE MAINTENANCE
 
 * Fixed 1 test ("Parse TemplateMin.level2.json")
-* Tested with [iOS 26.3.1 and] MacOS 26.3.1 and Xcode 26.4 beta (17E5179g)
+* Tested with [iOS 26.3.1 and] MacOS 26.3.1 and Xcode 26.4 beta (17E5179g) and iOS 26.4 beta (23E5234a)
 * Fixed GitHub merging issue (push and fetch stopped working from within Xcode)
 
 DOCUMENTATION MAINTENANCE
