@@ -5,7 +5,6 @@
 //  Created by Peter van den Hamer on 23/12/2021.
 //
 
-import Foundation // for @Published and ObservableObject
 import CoreData // for NSManagedObject
 import Combine // for AnyCancellable
 import SemanticColorPicker // for SemanticColor
