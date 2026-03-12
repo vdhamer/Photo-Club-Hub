@@ -11,11 +11,11 @@ import SemanticColorPicker // for SemanticColor
 
 /// A view model that manages the user's preferences for filtering members throughout the app.
 ///
-/// This type is an `ObservableObject` that publishes a single `PreferencesStruct` value, which
+/// `PreferencesViewModel` is an `ObservableObject` that publishes a single `PreferencesStruct` value, which
 /// contains all toggleable options used to build Core Data predicates for members, photographers, and organizations.
 ///
 /// The view model is annotated with `@MainActor` because it is observed by the UI
-/// and its published state is read only on the main thread.
+/// and its published state is read-only on the main thread.
 ///
 /// Persistence
 /// - The `preferences` property uses a custom `@Published("preferences", cancellableSet:)` wrapper
@@ -29,7 +29,7 @@ import SemanticColorPicker // for SemanticColor
 @MainActor
 class PreferencesViewModel: ObservableObject {
     /// Stores Combine cancellables tied to persistence of the `preferences` property.
-    static var cancellableSet: Set<AnyCancellable> = [] // not used: view currently has no OK/Cancel capabilities
+    static var cancellableSet: Set<AnyCancellable> = [] // not used: view currently has no Cancel button
 
     /// The app's persisted user preferences. Changes are published to update dependent views and
     /// are used to derive Core Data predicates for filtering content.
