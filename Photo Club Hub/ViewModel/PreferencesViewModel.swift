@@ -16,12 +16,12 @@ import SemanticColorPicker // for SemanticColor
 /// contains all toggleable options used to build Core Data predicates for members, photographers, and organizations.
 ///
 /// The view model is annotated with `@MainActor` because it is observed by the UI
-/// and its published state is consumed on the main thread. (whatever that means, this documentation was written by AI)
+/// and its published state is read only on the main thread.
 ///
 /// Persistence
 /// - The `preferences` property uses a custom `@Published("preferences", cancellableSet:)` wrapper
 ///   that persists changes and restores values across launches. The static `cancellableSet` is kept
-///   on the type so the app can retain Combine subscriptions associated with persistence.
+///   on the type so the app can retain Combine subscriptions associated with persistence. (Hmmm. Written by ChapGTP).
 ///
 /// Usage
 /// - Observe an instance of this view model from SwiftUI views and bind to the `preferences` value.
