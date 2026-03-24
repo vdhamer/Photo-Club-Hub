@@ -1,11 +1,11 @@
-### 2.9.3 (GitHub commit ???????) ??-03-2026
+### 2.9.3 (GitHub commit ???????) ??-04-2026
 
 USER-FACING
 
+* TODO: toggle to switch between FeaturedImage and PhotographerImage
 * TODO: display expertises on Photographers screen
 * TODO: more search functionality on Photographers screen
 * TODO: more search functionality on Portfolio screen
-* TODO: toggle to switch between FeaturedImage and PhotographerImage
 
 STRUCTURAL
 
