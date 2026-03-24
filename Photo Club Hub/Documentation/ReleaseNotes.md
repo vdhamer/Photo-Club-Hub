@@ -15,7 +15,7 @@ STRUCTURAL
 CODE MAINTENANCE
 
 * Fixed 1 test ("Parse TemplateMin.level2.json")
-* Tested with iOS 26.3.1 and iOS 26.4 RC (23E244) MacOS 26.3.1 (a) and Xcode 26.4 RC1 (17E192) 
+* Tested with iOS 26.3.1 and iOS 26.4 (23E244) MacOS 26.3.1 (a) and Xcode 26.4 (17E192) 
 * Fixed GitHub merging issue (push and fetch stopped working from within Xcode)
 * TODO: Sync code with Photo Club Hub HTML
 
