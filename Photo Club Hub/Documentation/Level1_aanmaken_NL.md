@@ -19,7 +19,7 @@ Er bestaan andere instructies om lijsten met _clubleden_ ("Level 2" JSON) toe te
 
    > Tip: Je kunt desgewenst ook uitgaan van het [Min](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMin.level1.json) bestand ipv Max.
    > Het [Min](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMin.level1.json) bestand 
-   > toont hoe het eruit ziet als bijna alle optionele velden ontbreken.
+   > toont hoe het eruit ziet als bijna alle optionele invulvelden ontbreken.
    > Dit betekent dat je extra velden die je wilt vullen moet toevoegen, bijvoorbeeld door die regels vanuit Max te kopiëren. 
    > Dit brengt iets meer risiko met zich mee omdat je bij het kopiëren misschien iets teveel of te weinig overneemt, of het op een verkeerde plek zet.
    > Dat is op zijn beurt niet heel erg: in stap 7 staat hoe je het bestand kunt controleren: het JSON formaat is nu eenmaal kieskeurig over haakjes en komma's.
