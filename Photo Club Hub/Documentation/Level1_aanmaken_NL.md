@@ -80,6 +80,21 @@ Er bestaan andere instructies om lijsten met _clubleden_ ("Level 2" JSON) toe te
 10. **Controleer** of alles naar wens werkt via de [Photo Club Hub](https://www.fotobond-brabantoost.nl/nieuws/fotoclub-hub-app/) iOS app.
 Of via een door ons gegenereerde webpagina die bereikbaar is vanuit [/clubs](https://www.fcDeGender.nl/clubs).
 
+## Hoe werkt `Include`?
+
+Hierboven is beschreven hoe een nieuwe `naam.level1.json` bestand aan te maken.
+
+Maar er zijn nog 2 kanttekeningen:
+
+- de app weet niet vanzelf dat het `naam.level1.json` bestand geladen moet worden. Dit werkt doordat er een ander bestand is met een verwijzing naar `naam.level1.json'.
+- het bestand `naam.level1.json` kan zelf desgewentst verwijzigingen bevatting naar nog meer bestanden.
+
+Beide truukjes zijn eigenlijk één en dezelfde truuk.
+
+### Verwijzingen naar een nieuw bestand
+
+### Verwijzingen vanuit een nieuw bestand
+
 ## Bonus informatie
 
 ### Het `Level1.json` formaat
@@ -108,10 +123,6 @@ Het zijn dus velden die men later kan toevoegen, bijvoorbeeld omdat de vereiste 
 - Gebruikers van de Apple Safari browser (macOS, iPad) die de beschikbare horizontale schermruimte krap vinden kunnen de reclame aan de rechterrand verwijderen.
 Dit gaat via de Safari [Hide distracting items](https://support.apple.com/nl-nl/guide/safari/ibrwb68cc4bf/mac) functie. Gebruikers van een groot scherm zullen hier minder behoefte aan hebben. Maar laptops hebben bijvoorbeeld kleinere schermen.
 </details></p>
-
-## Hoe werkt `Include`?
-
-[ uitleg ontbreekt nog ]
 
 ### Kan het eenvoudiger?
 <details><summary>Details (klik om uit te klappen)</summary></p>
