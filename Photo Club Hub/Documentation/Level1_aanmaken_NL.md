@@ -110,7 +110,7 @@ Hier is een voorbeeld van een bestand dat `clubsNL.level1.json` heet. Het dekt a
 }
 ```
 
-In dit geval bevat het geen losse clubs (dat kan), maar alleen verwijzingen naar 2 onderliggende bestanden: `clubNLS03.level1.json` en `clubsNL16.level1.json`.
+In dit geval bevat het geen losse clubs (wat wel kan), maar bevat alleen verwijzingen naar 2 onderliggende bestanden: `clubNLS03.level1.json` en `clubsNL16.level1.json`.
 Bij het inlezen van `clubsNL.level1.json` zullen de apps kijken of er clubs instaan (in dit geval niet) en de beide genoemde lagere Level 1 bestanden inlezen.
 Voor de gebruikers van de app is er geen verschil tussen een `clubsNL.level1.json` bestand met 80 clubs en een `clubsNL.level1.json` bestand met 2 verwijzingen 
 naar bestanden die samen die 80 bestanden bevatten.
