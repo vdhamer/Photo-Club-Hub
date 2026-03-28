@@ -86,7 +86,7 @@ Hierboven is beschreven hoe een nieuwe `onzenaam.level1.json` bestand aan te mak
 
 Maar er zijn nog 2 kanttekeningen:
 
-- de app kan niet zondermeer weten niet dat het `onzenaam.level1.json` geladen moet worden.
+- de app kan niet zondermeer weten niet dat het `onzenaam.level1.json` zou moet laden.
 Dit wordt opgelost doordat er een ander bestand is met een verwijzing naar `onzenaam.level1.json`.
 - het bestand `onzenaam.level1.json` kan zelf ook verwijzigingen bevatting naar additionele Level 1 bestanden.
 
