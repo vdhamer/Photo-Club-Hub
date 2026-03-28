@@ -82,19 +82,68 @@ Of via een door ons gegenereerde webpagina die bereikbaar is vanuit [/clubs](htt
 
 ## Hoe werkt `Include`?
 
-Hierboven is beschreven hoe een nieuwe `naam.level1.json` bestand aan te maken.
+Hierboven is beschreven hoe een nieuwe `onzenaam.level1.json` bestand aan te maken.
 
 Maar er zijn nog 2 kanttekeningen:
 
-- de app weet niet vanzelf dat het `naam.level1.json` bestand geladen moet worden. Dit werkt doordat er een ander bestand is met een verwijzing naar `naam.level1.json`.
-- het bestand `naam.level1.json` kan zelf desgewentst verwijzigingen bevatting naar nog meer bestanden.
+- de app kan niet zondermeer weten niet dat het `onzenaam.level1.json` geladen moet worden.
+Dit wordt opgelost doordat er een ander bestand is met een verwijzing naar `onzenaam.level1.json`.
+- het bestand `onzenaam.level1.json` kan zelf ook verwijzigingen bevatting naar additionele Level 1 bestanden.
 
-Beide truukjes zijn eigenlijk één en dezelfde truuk: ieder Level 1 bestand kan via `level1URLIncludes` opgeven dat er meer onderliggende Level 1 bestanden zijn.
-Alleen het "bovenste" Level 1 bestand wordt gevonden via een vaste adres (URL). We gaat hier nu iets dieper op in: 
+Beide truukjes gebruiken één en hetzelfde truuk: ieder Level 1 bestand kan via `level1URLIncludes` opgeven dat er meer onderliggende Level 1 bestanden geladen dienen te worden.
+Alleen het allereerste (hoogste, `root.level1.json`) bestand wordt gevonden via een vaste naam en locatie (URL). We gaat hier nu iets dieper op in: 
 
-### Verwijzingen naar een nieuw bestand
+### Opknippen van level 1 bestanden
 
-### Verwijzingen vanuit een nieuw bestand
+Hier is een voorbeeld van een bestand dat `clubsNL.level1.json` heet. Het dekt alle club in Nederland direct of indirect af:
+
+``` json
+{
+    "level1Header": {
+        "level1URL": "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/clubsNL.level1.json",
+        "level1URLIncludes": [
+            "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/clubsNL03.level1.json",
+            "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/clubsNL16.level1.json"
+        ],
+        "maintainerEmail": "vdhamer@msn.com"
+    }
+}
+```
+
+In dit geval bevat het geen losse clubs (dat kan), maar alleen verwijzingen naar 2 onderliggende bestanden: `clubNLS03.level1.json` en `clubsNL16.level1.json`.
+Bij het inlezen van `clubsNL.level1.json` zullen de apps kijken of er clubs instaan (in dit geval niet) en de beide genoemde lagere Level 1 bestanden inlezen.
+Voor de gebruikers van de app is er geen verschil tussen een `clubsNL.level1.json` bestand met 80 clubs en een `clubsNL.level1.json` bestand met 2 verwijzingen 
+naar bestanden die samen die 80 bestanden bevatten.
+
+Het voordeel van opsplitsen is vooral organisatisch: door het opkippen van een lange lijst met clubs in meedere kortere deellijsten
+kan je duidelijker krijgen wie welk deelbestand onderhoudt (`maintainerEmail`).
+
+### Vinden van alle Level 1 bestanden
+
+In bovenstaand voorbeeld wordt `clubsNL03.level1.json` gevonden vanuit `clubsNL.level1.json` (all clubs in Nederland).
+Op een soortgelijke manier kan `clubsNL.level1.json` gevonden worden vanuit een bestand dat `cubs.level1.json` zou kunnen heten (alle clubs ter wereld).
+Op zijn beurt wordt `clubs.level1.json` gevonden vanuit een bestand dat `root.level1.json` heet. Dat bestand kan de software vinden en dat bestand dient altijd aanwezig te zijn.
+
+### Samenvattend
+
+Vanuit een vaste naam `root_.level1.json` worden via 0 of meer include verwijzingen alle Level 1 bestand gevonden en ingelezen.
+In deze boomstructuur is trouwens een tak van de boom dat over fotomusea gaat. Dus de huidige inhoud van 'root.level1.json' is
+
+``` json
+{
+    "level1Header": {
+        "level1URL": "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/root_.level1.json",
+        "level1URLIncludes": [
+            "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/clubsNL.level1.json",
+            "https://raw.githubusercontent.com/vdhamer/Photo-Club-Hub/refs/heads/main/JSON/museums.level1.json"
+        ],
+        "maintainerEmail": "vdhamer@msn.com"
+    }
+}
+```
+
+Op termijn zal de naam `root_.level1.json` veranderen in `root.level1.json`. Dit onderscheid is omdat oudere versies
+van de apps nog geen `level1URLIncludes` hadden. Dit leidde tot lange bestanden met alle clubs en alle fotomusea.
 
 ## Bonus informatie
 
