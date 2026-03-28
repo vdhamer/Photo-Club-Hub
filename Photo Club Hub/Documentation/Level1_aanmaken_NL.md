@@ -86,7 +86,7 @@ Hierboven is beschreven hoe een nieuwe `naam.level1.json` bestand aan te maken.
 
 Maar er zijn nog 2 kanttekeningen:
 
-- de app weet niet vanzelf dat het `naam.level1.json` bestand geladen moet worden. Dit werkt doordat er een ander bestand is met een verwijzing naar `naam.level1.json'.
+- de app weet niet vanzelf dat het `naam.level1.json` bestand geladen moet worden. Dit werkt doordat er een ander bestand is met een verwijzing naar `naam.level1.json`.
 - het bestand `naam.level1.json` kan zelf desgewentst verwijzigingen bevatting naar nog meer bestanden.
 
 Beide truukjes zijn eigenlijk één en dezelfde truuk.
