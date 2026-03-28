@@ -38,21 +38,21 @@ Er bestaan andere instructies om lijsten met _clubleden_ ("Level 2" JSON) toe te
     - De coördinaten zullen er voor Nederland uitzien als b.v. 51.12345 en 5.67890. Dus met een punt ipv een komma. Nederlandse coordinaten zullen rond de 51 graden noorderbreedte en 5 graden oosterbreedte zijn (de grote zendmast/kerstboom onder Utrecht staat op 52.01043 en 5.05285).
     - Je kunt de coordinaten bijvoorbeeld met [maps.google.com](https:/maps.google.com) uitlezen door op het gekozen adres rechts-te-klikken met de muis.
     - We kiezen normaal de locatie waar de club bijeenkomt of exposeert. Als dat ongewenst is, kan je een bekend
-    plein, station of monument kiezen in de buurt. Als alternatief kan je minder cijfers achter de comma gebruiken. Hiermee introduceer je een minder nauwkeurige locatie die b.v. een kilometer verderop ligt.
-    - Zou je `coordinates` weglaten, dan wordt de club weergeven op coordinaten 0, 0. Dat is midden in zee bij West Africa. Door gebrek aan eilanden zie je in de app een landkaart met alleen blauwe oceaan.
+    plein, station of monument in de buurt kiezen. Als alternatief kan je minder cijfers achter de comma gebruiken. Hiermee introduceer je een minder nauwkeurige locatie die b.v. een kilometer verderop ligt.
+    - Zou je `coordinates` weglaten, dan wordt de club weergeven op coordinaten 0, 0. Dat is midden in zee bij West Africa. Door gebrek aan eilanden zie je in de app een landkaart met alleen blauwe oceaan op de evenaar.
     </br>
     
     > Tip: De lijst met clubs hoeft niet in een keer compleet te zijn:
     > je kan dus eerst 1 of 2 clubs toevoegen om de kijken of alles lukt.
-    > En de lijst vervolgens completer maken in een uitgebreidere versie.
+    > En de lijst later completer maken in een volgende versie.
     
 6. Voeg bij voorkeur een opmerking (`remark`) toe.
-    - Dit benadrukt iets bijzonders over deze club. Het maakt de informatie wat interessanter om door te bladeren. En de informatie kan belangrijk zijn.
+    - Dit benadrukt iets bijzonders over deze club. Het maakt de informatie wat interessanter om door te bladeren. Praktische informatie mag uiteraard ook. Vermijdt een standaard zin die voor vrijwel alle clubs van toepassing is (dus niet "wij steven ernaar om betere foto's te maken, maar zijn ook best gezellig").
     - Probeer de tekst niet langer dan 100 karakters te maken (slechts een richtlijn). Dat is ongeveer de lengte van een Twitter/X "tweet".
-    - `Remark` bevat zowel een Nederlandse (NL) als een Engelstalige (EN) vertaling. De app toont automatisch een van die twee talen.
+    - `Remark` bevat zowel een Nederlandse (NL) als een Engelstalige (EN) vertaling. De iOS app kiest automatisch de juiste taal op basis van de iOS instellingen.
     
 7. Voeg voor aangesloten clubs hun Fotobondnummer ("fotobondNumber") toe volgens het voorbeeld in TemplateMax.level1.json.
-    - Dit bestaat uit 3 tekstregels. Als een club geen lid is van de Fotobond, dan moet men die 3 regels weglaten: hiermee weet de app welke clubs lid zijn van de Fotobond.
+    - Dit bestaat uit 3 tekstregels. Als een club geen lid is van de Fotobond, dan dient men die 3 regels weg te laten: hiermee weet de app welke clubs lid zijn van de Fotobond.
  
 8. Deze controlestap is vooral nuttig als je [JSON Editor Online](https://jsoneditoronline.org) __niet__ gebruikt.
     - Er is bij [JSON Editor Online](https://jsoneditoronline.org) geen aparte JSON controle nodig.
@@ -67,8 +67,8 @@ Er bestaan andere instructies om lijsten met _clubleden_ ("Level 2" JSON) toe te
           inhoud volledig aan de hand van de genoemde leestekens.
     </br>
     
-    > Tip: het is handig om de clubs in alfabetische volgorde van __town__ (gemeente) te zetten:
-    > dan valt het op als een club dubbel op de lijst voorkomt. Of als een club onbedoeld ontbreekt.
+    > Tip: het is handig om de clubs in alfabetische volgorde van __town__ (gemeente) in het Level 1 bestand te zetten:
+    > dan valt het op als een club dubbel op de lijst voorkomt of als een club per ongeluk ontbreekt.
 
 9. **Stuur** ons het gemaakte `level1.json` bestand. Dat mag ook een tussentijdse versie zijn. Wij zullen proberen binnen 24 uur te reageren.
     - Onze rol is om een de _technische_ juistheid te bewaken en om hulp te bieden.
@@ -78,7 +78,7 @@ Er bestaan andere instructies om lijsten met _clubleden_ ("Level 2" JSON) toe te
       Dan vindt de app het bestand op een vast adres. Maar kan het bestand "lokaal" bijgewerkt worden zonder centrale betrokkenheid.
 
 10. **Controleer** of alles naar wens werkt via de [Photo Club Hub](https://www.fotobond-brabantoost.nl/nieuws/fotoclub-hub-app/) iOS app.
-Of via een door ons gegenereerde webpagina die bereikbaar is als [/clubs](https://www.fcDeGender.nl/clubs).
+Of via een door ons gegenereerde webpagina die bereikbaar is vanuit [/clubs](https://www.fcDeGender.nl/clubs).
 
 ## Bonus informatie
 
