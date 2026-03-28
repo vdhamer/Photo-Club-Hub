@@ -30,7 +30,7 @@ Er bestaan andere instructies om lijsten met _clubleden_ ("Level 2" JSON) toe te
     > Als alternatief kan je een kale editor gebruiken zoals [Windows NotePad](https://nl.wikipedia.org/wiki/Notepad), [NotePad++](https://nl.wikipedia.org/wiki/Notepad%2B%2B) of [Sublime Text](https://nl.wikipedia.org/wiki/Sublime_Text).
     Microsoft Word is ongeschikt omdat het van nature een `.docx` bestandsformaat gebruikt.
 
-    - Voor de verkorte naam, `nickName`, gebruiken we een soort conventie zoals fcDenDungen (voor "Fotoclub Den Dungen") of fgWaalre (voor "Fotogroep Waalre"). 
+    - Voor de verkorte naam, `nickName`, gebruiken we een soort conventie zoals `fcDenDungen` (voor "Fotoclub Den Dungen") of `fgWaalre` (voor "Fotogroep Waalre"). 
     Deze nickname wordt vooral intern gebruikt (Level 2 bestandsnamen).
 
 4. Pas de locatie van de club aan (`coordinates`):
