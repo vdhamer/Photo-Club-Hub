@@ -89,7 +89,8 @@ Maar er zijn nog 2 kanttekeningen:
 - de app weet niet vanzelf dat het `naam.level1.json` bestand geladen moet worden. Dit werkt doordat er een ander bestand is met een verwijzing naar `naam.level1.json`.
 - het bestand `naam.level1.json` kan zelf desgewentst verwijzigingen bevatting naar nog meer bestanden.
 
-Beide truukjes zijn eigenlijk één en dezelfde truuk.
+Beide truukjes zijn eigenlijk één en dezelfde truuk: ieder Level 1 bestand kan via `level1URLIncludes` opgeven dat er meer onderliggende Level 1 bestanden zijn.
+Alleen het "bovenste" Level 1 bestand wordt gevonden via een vaste adres (URL). We gaat hier nu iets dieper op in: 
 
 ### Verwijzingen naar een nieuw bestand
 
