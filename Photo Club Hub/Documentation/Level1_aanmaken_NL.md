@@ -109,6 +109,10 @@ Het zijn dus velden die men later kan toevoegen, bijvoorbeeld omdat de vereiste 
 Dit gaat via de Safari [Hide distracting items](https://support.apple.com/nl-nl/guide/safari/ibrwb68cc4bf/mac) functie. Gebruikers van een groot scherm zullen hier minder behoefte aan hebben. Maar laptops hebben bijvoorbeeld kleinere schermen.
 </details></p>
 
+## Hoe werkt `Include`?
+
+[ uitleg ontbreekt nog ]
+
 ### Kan het eenvoudiger?
 <details><summary>Details (klik om uit te klappen)</summary></p>
 
