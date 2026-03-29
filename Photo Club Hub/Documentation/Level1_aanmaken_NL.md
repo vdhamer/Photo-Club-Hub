@@ -123,24 +123,25 @@ Hier is een voorbeeld van een bestand dat `clubsNL.level1.json` heet. Het dekt a
 }
 ```
 
-In dit geval bevat het geen losse clubs (wat wel kan), maar bevat alleen verwijzingen naar 2 onderliggende bestanden: `clubNLS03.level1.json` en `clubsNL16.level1.json`.
+In dit geval bevat het geen losse clubs, maar bevat alleen verwijzingen naar 2 onderliggende bestanden: `clubNLS03.level1.json` en `clubsNL16.level1.json`.
 Bij het inlezen van `clubsNL.level1.json` zullen de apps kijken of er clubs instaan (in dit geval niet) en de beide genoemde lagere Level 1 bestanden inlezen.
 Voor de gebruikers van de app is er geen verschil tussen een `clubsNL.level1.json` bestand met 80 clubs en een `clubsNL.level1.json` bestand met 2 verwijzingen 
-naar bestanden die samen die 80 bestanden bevatten.
+naar bestanden die samen die 80 clubs bevatten.
 
-Het voordeel van opsplitsen is vooral organisatisch: door het opkippen van een lange lijst met clubs in meedere kortere deellijsten
-kan je duidelijker krijgen wie welk deelbestand onderhoudt (`maintainerEmail`).
+Het voordeel van opsplitsen is vooral organisatisch: door het opkippen van een lange lijst met clubs in kortere deellijsten
+kan je duidelijker zien  (via `maintainerEmail`) wie welk deelbestand onderhoudt.
 
 ### Vinden van alle Level 1 bestanden
 
-In bovenstaand voorbeeld wordt `clubsNL03.level1.json` gevonden vanuit `clubsNL.level1.json` (all clubs in Nederland).
-Op een soortgelijke manier kan `clubsNL.level1.json` gevonden worden vanuit een bestand dat `cubs.level1.json` zou kunnen heten (alle clubs ter wereld).
-Op zijn beurt wordt `clubs.level1.json` gevonden vanuit een bestand dat `root.level1.json` heet. Dat bestand kan de software vinden en dat bestand dient altijd aanwezig te zijn.
+In bovenstaand voorbeeld wordt `clubsNL03.level1.json` gevonden via een verwijzing vanuit `clubsNL.level1.json` (all clubs in Nederland).
+Op een soortgelijke manier kan `clubsNL.level1.json` gevonden worden vanuit een bestand dat `clubs.level1.json` heet (clubs in alle landen).
+Op zijn beurt wordt `clubs.level1.json` gevonden vanuit een bestand dat `root_.level1.json` of `root.level1.json` heet. 
+Dat bestand kan de software vinden onder een vaste naam en locatie.
 
 ### Samenvattend
 
-Vanuit een vaste naam `root_.level1.json` worden via 0 of meer include verwijzingen alle Level 1 bestand gevonden en ingelezen.
-In deze boomstructuur is trouwens een tak van de boom dat over fotomusea gaat. Dus de huidige inhoud van 'root.level1.json' is
+Vanuit een vaste naam `root_.level1.json` worden via 0 of meer verwijzingen alle geldige Level 1 bestanden gevonden en ingelezen.
+In deze boomstructuur vindt men ook een tak van de boom dat over fotomusea (in plaats van clubs) gaat. Dus de huidige inhoud van 'root_.level1.json' is
 
 ``` json
 {
@@ -156,7 +157,7 @@ In deze boomstructuur is trouwens een tak van de boom dat over fotomusea gaat. D
 ```
 
 Op termijn zal de naam `root_.level1.json` veranderen in `root.level1.json`. Dit onderscheid is omdat oudere versies
-van de apps nog geen `level1URLIncludes` hadden. Dit leidde tot lange bestanden met alle clubs en alle fotomusea.
+van de apps nog geen `level1URLIncludes` veld kenden.
 
 ## Bonus informatie
 
