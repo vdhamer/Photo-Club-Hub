@@ -10,28 +10,28 @@ Er bestaan andere instructies om lijsten met _clubleden_ ("Level 2" JSON) toe te
 > Hierna zal aanvullen en aanpassen van de gegevens slechts minuten per club kosten.
 
 1. Maak desgewenst een lokale kopie van de [TemplateMin.level1.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMin.level1.json) ("Min") en    [TemplateMax.level1.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMax.level1.json) ("Max") voorbeeldbestanden.
-   _Min_ bevat een zo klein mogelijk voorbeeld. _Max_ is een voorbeeld met alle beschikbare opties. Bij zowel Min als Max is er een "download" icoon rechtsboven.
+   _Min_ bevat een zo klein mogelijk voorbeeld. _Max_ is een voorbeeld met vrijwel alle beschikbare opties. Het volgen van de Min en de  Max links geeft een "download" icoon rechtsboven.
 
 2. Maak een **kopie** van het [Max](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMax.level1.json) bestand en geef het een passende bestandsnaam:
-   - Voor Afdeling #3 (Drenthe - Vechtdal) zou je `clubsNL03.level1.json` kunnen kiezen. Gebruikers van de app zien de bestandsnaam overigens niet.
+   - Voor Afdeling #3 (Drenthe - Vechtdal) zou je `clubsNL03.level1.json` kunnen kiezen.
 
    </br>
 
    > Tip: Je kunt desgewenst ook uitgaan van het [Min](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMin.level1.json) bestand ipv Max.
    > Het [Min](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMin.level1.json) bestand 
    > toont hoe het eruit ziet als bijna alle optionele invulvelden ontbreken.
-   > Dit betekent dat je extra velden die je wilt vullen moet toevoegen, bijvoorbeeld door die regels vanuit Max te kopiëren. 
-   > Dit brengt iets meer risiko met zich mee omdat je bij het kopiëren misschien iets teveel of te weinig overneemt, of het op een verkeerde plek zet.
-   > Dat is op zijn beurt niet heel erg: in stap 7 staat hoe je het bestand kunt controleren: het JSON formaat is nu eenmaal kieskeurig over haakjes en komma's.
+   > Dit betekent dat je extra velden die je wilt vullen zelf moet toevoegen, bijvoorbeeld door die regels vanuit Max te kopiëren. 
+   > In principe kunnen bij dit kopieren fouten gemaakt worden, door iets teveel of iets te weinig over te nemen. Of door de extra gegevens op een verkeerde plek toe te voegen.
+   > Dat is echter niet heel erg: in stap 7 staat hoe je het bestand kunt controleren. Het JSON formaat is nu eenmaal kieskeurig over haakjes en komma's.
 
 3. Pas de naamgeving per **club** aan: `town`, `fullName`, en `nickName`:
     > Tip: gebruik voor het aanpassen van het bestand bijvoorbeeld [JSON Editor Online](https://jsoneditoronline.org).
     > Dat programma is speciaal bedoeld om zogenaamde "JSON" tekstbestanden aan te maken en te controlleren.
     > Als alternatief kan je een kale editor gebruiken zoals [Windows NotePad](https://nl.wikipedia.org/wiki/Notepad), [NotePad++](https://nl.wikipedia.org/wiki/Notepad%2B%2B) of [Sublime Text](https://nl.wikipedia.org/wiki/Sublime_Text).
-    Microsoft Word is ongeschikt omdat het van nature een `.docx` bestandsformaat gebruikt.
+    Microsoft Word of Apple Pages zijn ongeschikt omdat het van nature een eigen bestandsformaat gebruiken (.docx en .pages).
 
     - Voor de verkorte naam, `nickName`, gebruiken we een soort conventie zoals `fcDenDungen` (voor "Fotoclub Den Dungen") of `fgWaalre` (voor "Fotogroep Waalre"). 
-    Deze nickname wordt vooral intern gebruikt (Level 2 bestandsnamen).
+    Deze nickname wordt vooral gebruikt voor Level 2 bestandsnamen en voor webadressen.
 
 4. Pas de locatie van de club aan (`coordinates`):
     - De coördinaten worden gebruikt om de nominale ligging van een club op landkaartjes aan te geven. Dan kan je zien wat in de buurt van wat is. De app werkt _niet_ met een traditioneel adres.
