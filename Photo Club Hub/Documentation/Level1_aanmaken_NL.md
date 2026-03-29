@@ -102,7 +102,8 @@ Maar er zijn nog 2 kanttekeningen:
 Dit wordt opgelost doordat er een ander bestand is met een verwijzing naar `onzenaam.level1.json`.
 - het bestand `onzenaam.level1.json` kan zelf ook verwijzigingen bevatting naar additionele Level 1 bestanden.
 
-Beide truukjes gebruiken één en hetzelfde truuk: ieder Level 1 bestand kan via `level1URLIncludes` opgeven dat er meer onderliggende Level 1 bestanden geladen dienen te worden.
+Beide kanttekeningen gebruiken één en hetzelfde mechanisme:
+ieder Level 1 bestand kan via `level1URLIncludes` opgeven dat er meer onderliggende Level 1 bestanden geladen dienen te worden.
 Alleen het allereerste (hoogste, `root.level1.json`) bestand wordt gevonden via een vaste naam en locatie (URL). We gaat hier nu iets dieper op in: 
 
 ### Opknippen van level 1 bestanden
