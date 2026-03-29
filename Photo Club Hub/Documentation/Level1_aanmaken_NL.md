@@ -34,37 +34,49 @@ Er bestaan andere instructies om lijsten met _clubleden_ ("Level 2" JSON) toe te
     Deze nickname wordt vooral gebruikt voor Level 2 bestandsnamen en voor webadressen.
 
 4. Pas de locatie van de club aan (`coordinates`):
-    - De coördinaten worden gebruikt om de nominale ligging van een club op landkaartjes aan te geven. Dan kan je zien wat in de buurt van wat is. De app werkt _niet_ met een traditioneel adres.
-    - De coördinaten zullen er voor Nederland uitzien als b.v. 51.12345 en 5.67890. Dus met een punt ipv een komma. Nederlandse coordinaten zullen rond de 51 graden noorderbreedte en 5 graden oosterbreedte zijn (de grote zendmast/kerstboom onder Utrecht staat op 52.01043 en 5.05285).
-    - Je kunt de coordinaten bijvoorbeeld met [maps.google.com](https:/maps.google.com) uitlezen door op het gekozen adres rechts-te-klikken met de muis.
+    - De coördinaten worden gebruikt om de nominale ligging van een club op landkaartjes aan te geven. Dan kan je clubs in de buurt ontdekken. De app werkt _niet_ met een traditioneel adres.
+    - De coördinaten zullen er voor Nederland uitzien als b.v. 51.12345 en 5.67890. Dus met een punt ipv een komma. En waarden hebben rond de 52 en 5.
+    - Je kunt de coordinaten met [maps.google.com](https:/maps.google.com) uitlezen door op het gekozen adres rechts-te-klikken met de muis.
     - We kiezen normaal de locatie waar de club bijeenkomt of exposeert. Als dat ongewenst is, kan je een bekend
     plein, station of monument in de buurt kiezen. Als alternatief kan je minder cijfers achter de comma gebruiken. Hiermee introduceer je een minder nauwkeurige locatie die b.v. een kilometer verderop ligt.
-    - Zou je `coordinates` weglaten, dan wordt de club weergeven op coordinaten 0, 0. Dat is midden in zee bij West Africa. Door gebrek aan eilanden zie je in de app een landkaart met alleen blauwe oceaan op de evenaar.
+    - Zou je per ongeluk `coordinates` weglaten, dan wordt de club weergeven op coordinaten 0, 0. Dat is midden in zee bij West Africa. Dan zie je in de app een landkaart met alleen blauwe oceaan op de evenaar ten westen van Africa.
     </br>
     
     > Tip: De lijst met clubs hoeft niet in een keer compleet te zijn:
-    > je kan dus eerst 1 of 2 clubs toevoegen om de kijken of alles lukt.
-    > En de lijst later completer maken in een volgende versie.
+    > je kan dus eerst 1 of 2 clubs toevoegen om de kijken of alles goed gaat.
+    > En de lijst vervolgens completer maken in een volgende versie.
     
 6. Voeg bij voorkeur een opmerking (`remark`) toe.
-    - Dit benadrukt iets bijzonders over deze club. Het maakt de informatie wat interessanter om door te bladeren. Praktische informatie mag uiteraard ook. Vermijdt een standaard zin die voor vrijwel alle clubs van toepassing is (dus niet "wij steven ernaar om betere foto's te maken, maar zijn ook best gezellig").
+    - Dit benadrukt iets bijzonders over deze club. Het maakt de informatie wat interessanter om door te bladeren. Praktische informatie mag uiteraard ook.
+      Vermijdt een standaard zin die voor vrijwel alle clubs van toepassing is (dus niet "wij steven ernaar om betere foto's te maken" of "wij vinden onzelf best gezellig").
     - Probeer de tekst niet langer dan 100 karakters te maken (slechts een richtlijn). Dat is ongeveer de lengte van een Twitter/X "tweet".
-    - `Remark` bevat zowel een Nederlandse (NL) als een Engelstalige (EN) vertaling. De iOS app kiest automatisch de juiste taal op basis van de iOS instellingen.
+    - `Remark` bevat minimaal een Nederlandse (NL) en een Engelstalige (EN) vertaling. De iOS app kiest automatisch de weer te geven taal op basis van de iOS instellingen.
     
-7. Voeg voor aangesloten clubs hun Fotobondnummer ("fotobondNumber") toe volgens het voorbeeld in TemplateMax.level1.json.
-    - Dit bestaat uit 3 tekstregels. Als een club geen lid is van de Fotobond, dan dient men die 3 regels weg te laten: hiermee weet de app welke clubs lid zijn van de Fotobond.
+7. Voeg voor aangesloten clubs hun vier-cijferig Fotobondnummer ("fotobondNumber") toe. Zie TemplateMax.level1.json voor voorbeelden.
+    - Dit bestaat uit 3 tekstregels. Als een club geen lid is van de Fotobond, dan dient men die 3 regels weg te laten: hiermee weet de app of een club aangesloten is bij de Fotobond.
  
 8. Deze controlestap is vooral nuttig als je [JSON Editor Online](https://jsoneditoronline.org) __niet__ gebruikt.
     - Er is bij [JSON Editor Online](https://jsoneditoronline.org) geen aparte JSON controle nodig.
-      Het controleert namelijk voortdurend of de tekst voldoet aan de JSON spelregels.
-      Hiermee worden bepaalde invoerfouten meteen als rode waarschuwing gesignaleerd, inclusief het regelnummer van de fout.
+      Het controleert namelijk tijdens invoer continue of de tekst voldoet aan de JSON spelregels.
+      Hiermee worden bepaalde invoerfouten meteen als rode waarschuwing gesignaleerd, inclusief het regelnummer waar de fout gevonden is.
     - Om handmatig in deze stap een tekstbestand op dit soort fouten te controleren, kan je de volledige inhoud kopiëren naar [JSON Editor Online](https://jsoneditoronline.org).
         - JSON Editor Online vindt de eerste fout. Na correctie (kan binnen JSON Editor Online) gaat het op zoek naar een volgende fout.
         - Het JSON formaat let nogal nauw ten aanzien van komma's, dubbele punten, openen/sluiten van haakjes en aanhalingstekens. 
           Vandaar dat we hier aanraden om uit te gaan van een voorbeeldbestand.
         - Daarentegen is JSON totaal _niet_ kieskeurig wat betreft de hoeveelheid spaties, tabs of nieuwe regels.
           Inspringen van de tekst is heel nuttig voor menselijke lezers, maar de software analyseert de
-          inhoud volledig aan de hand van de genoemde leestekens.
+          inhoud volledig aan de hand van de genoemde leestekens. Voorbeeld: het fragment
+          ``` json
+          "coordinates": {"latitude": 51.39184, "longitude": 5.46144}
+          ```
+          en
+          ``` json
+          "coordinates": {
+             "latitude": 51.39184,
+             "longitude": 5.46144
+          }
+          ```
+          zijn wat de software (en de JSON standaard) betreft gelijkwaardig.
     </br>
     
     > Tip: het is handig om de clubs in alfabetische volgorde van __town__ (gemeente) in het Level 1 bestand te zetten:
