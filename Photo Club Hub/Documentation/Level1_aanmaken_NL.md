@@ -92,23 +92,25 @@ Er bestaan andere instructies om lijsten met _clubleden_ ("Level 2" JSON) toe te
 10. **Controleer** of alles naar wens werkt via de [Photo Club Hub](https://www.fotobond-brabantoost.nl/nieuws/fotoclub-hub-app/) iOS app.
 Of via een door ons gegenereerde webpagina die bereikbaar is vanuit [/clubs](https://www.fcDeGender.nl/clubs).
 
-## Hoe werkt `Include`?
+## Hoe werkt `level1URLIncludes`?
 
-Hierboven is beschreven hoe een nieuwe `onzenaam.level1.json` bestand aan te maken.
+Hierboven is beschreven hoe met bijvoorbeeld een nieuwe bestand gemaamd `naam.level1.json` bestand aan te maken.
 
 Maar er zijn nog 2 kanttekeningen:
 
-- de app kan niet zondermeer weten niet dat het `onzenaam.level1.json` zou moet laden.
-Dit wordt opgelost doordat er een ander bestand is met een verwijzing naar `onzenaam.level1.json`.
-- het bestand `onzenaam.level1.json` kan zelf ook verwijzigingen bevatting naar additionele Level 1 bestanden.
+1. de app weet niet zondermeer dat het het bestand `naam.level1.json` zou moet laden.
+De app kan dit ontdekken als er een _ander_ bestand is met een verwijzing naar het `naam.level1.json` bestand.
+2. het bestand `naam.level1.json` kan zelf ook verwijzigingen bevatting naar andere Level 1 bestanden.
+Deze andere bestandene kunnen beschouwd worden als integraal deel ("include") van `naam.level1.json`.
 
-Beide kanttekeningen gebruiken één en hetzelfde mechanisme:
-ieder Level 1 bestand kan via `level1URLIncludes` opgeven dat er meer onderliggende Level 1 bestanden geladen dienen te worden.
-Alleen het allereerste (hoogste, `root.level1.json`) bestand wordt gevonden via een vaste naam en locatie (URL). We gaat hier nu iets dieper op in: 
+Beide kanttekeningen gebruiken dus één en hetzelfde mechanisme:
+ieder Level 1 bestand kan via `level1URLIncludes` opgeven dat er extra onderliggende Level 1 bestanden geladen moeten worden.
+Alleen het allereerste (hoogste, `root.level1.json`) bestand wordt gevonden via een vaste naam en locatie (URL).
+We gaat hier nu iets dieper op in: 
 
-### Opknippen van level 1 bestanden
+### Opknippen van Level 1 bestanden
 
-Hier is een voorbeeld van een bestand dat `clubsNL.level1.json` heet. Het dekt alle club in Nederland direct of indirect af:
+Hier is een voorbeeld van een bestand dat `clubsNL.level1.json` heet. Het bevat direct of indirect de club in Nederland af:
 
 ``` json
 {
@@ -123,25 +125,32 @@ Hier is een voorbeeld van een bestand dat `clubsNL.level1.json` heet. Het dekt a
 }
 ```
 
-In dit geval bevat het geen losse clubs, maar bevat alleen verwijzingen naar 2 onderliggende bestanden: `clubNLS03.level1.json` en `clubsNL16.level1.json`.
-Bij het inlezen van `clubsNL.level1.json` zullen de apps kijken of er clubs instaan (in dit geval niet) en de beide genoemde lagere Level 1 bestanden inlezen.
-Voor de gebruikers van de app is er geen verschil tussen een `clubsNL.level1.json` bestand met 80 clubs en een `clubsNL.level1.json` bestand met 2 verwijzingen 
-naar bestanden die samen die 80 clubs bevatten.
+In dit geval bevat het geen losse clubs,
+maar bevat alleen verwijzingen naar 2 onderliggende bestanden: `clubNLS03.level1.json` en `clubsNL16.level1.json`.
+Het kan uitgebreid worden met meer verwijzingen.
+Bij het inlezen van `clubsNL.level1.json` zullen de apps kijken of er clubs direct in het bestand staan
+(in dit geval niet) en bovendien de beide genoemde lagere Level 1 bestanden inlezen.
 
-Het voordeel van opsplitsen is vooral organisatisch: door het opkippen van een lange lijst met clubs in kortere deellijsten
-kan je duidelijker zien  (via `maintainerEmail`) wie welk deelbestand onderhoudt.
+Voor de gebruikers van de app is er geen verschil tussen een `clubsNL.level1.json` bestand met 80 clubs
+en een `clubsNL.level1.json` bestand met 2 verwijzingen  naar bestanden die samen die 80 clubs bevatten.
+
+Het voordeel van opsplitsen is vooral organisatisch:
+door het opkippen van een lange lijst met clubs in kortere deellijsten
+kan je duidelijk afspreken (en via `maintainerEmail` zien) wie welk deelbestand onderhoudt.
 
 ### Vinden van alle Level 1 bestanden
 
-In bovenstaand voorbeeld wordt `clubsNL03.level1.json` gevonden via een verwijzing vanuit `clubsNL.level1.json` (all clubs in Nederland).
+In bovenstaand voorbeeld wordt `clubsNL03.level1.json` gevonden via een verwijzing vanuit `clubsNL.level1.json` (clubs in Nederland).
 Op een soortgelijke manier kan `clubsNL.level1.json` gevonden worden vanuit een bestand dat `clubs.level1.json` heet (clubs in alle landen).
 Op zijn beurt wordt `clubs.level1.json` gevonden vanuit een bestand dat `root_.level1.json` of `root.level1.json` heet. 
-Dat bestand kan de software vinden onder een vaste naam en locatie.
+Dat bestand is het enige level1.json dat de software vindt via een vaste naam en locatie.
+Alle andere level1.json bestanden worden via verwijzingen gevonden.
 
 ### Samenvattend
 
-Vanuit een vaste naam `root_.level1.json` worden via 0 of meer verwijzingen alle geldige Level 1 bestanden gevonden en ingelezen.
-In deze boomstructuur vindt men ook een tak van de boom dat over fotomusea (in plaats van clubs) gaat. Dus de huidige inhoud van 'root_.level1.json' is
+Vanuit een vaste naam `root.level1.json` worden via verwijzingen alle geldige Level 1 bestanden gevonden en en stapsgewijs ingelezen.
+In deze boomstructuur vindt men ook een tak van de boom dat over fotomusea gaat. 
+Dus de inhoud inhoud van 'root_.level1.json' is typisch zoiets als:
 
 ``` json
 {
@@ -156,8 +165,8 @@ In deze boomstructuur vindt men ook een tak van de boom dat over fotomusea (in p
 }
 ```
 
-Op termijn zal de naam `root_.level1.json` veranderen in `root.level1.json`. Dit onderscheid is omdat oudere versies
-van de apps nog geen `level1URLIncludes` veld kenden.
+Op termijn zal de naam `root_.level1.json` veranderen in `root.level1.json`. Dit onderscheid hangt samen met
+oudere versies van de apps nog geen `level1URLIncludes` veld kenden.
 
 ## Bonus informatie
 
@@ -165,24 +174,28 @@ van de apps nog geen `level1URLIncludes` veld kenden.
 <details><summary>Details (klik om uit te klappen)</summary></p>
 
 - [JSON](https://en.wikipedia.org/wiki/JSON) is zeer bekende standaard in de IT wereld.
-[Hier](https://codebeautify.org/json-cheat-sheet) is een korte uitleg van JSON. In ons geval is zou het voldoende moeten zijn om nauwgezet de beschikbare voorbeelden te volgen:
-[TemplateMax.level1.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMax.level1.json) en [TemplateMin.level1.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMin.level1.json) te volgen.
-Bij gebruikt van [JSON Editor Online](https://jsoneditoronline.org) is de kans op dit soort fouten klein.
+[Hier](https://codebeautify.org/json-cheat-sheet) is een korte uitleg van JSON.
+Voor ons doel is het waarschijnlijk voldoende om nauwgezet de beschikbare voorbeeldbestanden te volgen:
+[TemplateMax.level1.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMax.level1.json) en
+[TemplateMin.level1.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMin.level1.json).
 
-- Alle informatie tussen de haakjes in het `optional: { }` gedeelte van het bestand mag weggelaten worden. Dat is geen JSON-conventie, maar een keus binnen deze app. 
-Het zijn dus velden die men later kan toevoegen, bijvoorbeeld omdat de vereiste gegevens inmiddels beschikbaar zijn.
+- Alle informatie tussen de haakjes in het `optional: { }` gedeelte van het bestand mag weggelaten worden.
+Dat is geen JSON-conventie, maar een keus binnen deze app. 
+Het zijn dus velden die men later kan toevoegen, bijvoorbeeld omdat zodra de vereiste gegevens inmiddels verzameld zijn.
 </details></p>
 
 ### Meer over JSON Editor Online
 <details><summary>Details (klik om uit te klappen)</summary></p>
 
-- Bovenaan het scherm staat iets over "inloggen" en "prijzen". Men kan dat voor ons doel negeren: de gratis versie is meer dan genoeg. De site doet vrijwel alles zonder je te registreren. Dat scheelt weer het onthouden van een extra wachtwoord.
+- Bovenaan het scherm staat iets over "inloggen" en "prijzen".
+  Men kan dat voor ons doel negeren: de gratis versie is meer dan genoeg.
+  De site doet vrijwel alles zonder je te registreren. Dat scheelt weer het onthouden van een extra wachtwoord.
 
 - De site toont een linker en een rechter paneel. Die twee panelen kunnen verschillende bestanden (b.v. een voorbeeldbestand en een nieuw bestand) bevatten. Er zijn knopjes om de inhoud van het ene paneel naar het andere te kopiëren. Dat kan je gebruiken om dezelfde JSON inhoud op 2 verschillende manieren tegelijk te bekijken. Of om een kopie te maken en die kopie te gebruiken om de wijzingen in aan te brengen.
 
-- In JSON wordt de __volgorde__ van de elementen binnen een `[ ]` paar (=lijst) of `{ }` paar (=samenstelling) genegeerd. Bij het vergelijken van 2 versies van een bestand in [JSON Editor Online](https://jsoneditoronline.org) zal dus een verschil in volgorde __niet__ als verschil in inhoud opgevat worden.
+- In JSON wordt de __volgorde__ van de elementen binnen een `[ ]` paar (=lijst) of een `{ }` paar (=samenstelling) genegeerd. Bij het vergelijken van 2 versies van een bestand in [JSON Editor Online](https://jsoneditoronline.org) zal dus een verschil in volgorde __niet__ als verschil in inhoud opgevat worden.
 
-- Het is riskant om blindelings JSON Editor Online gedetecteerde fouten te laten herstellen ("Autorepair"). Dit lost verhelpt vaak de foutmelding, maar vaak niet op de correcte manier. Op termijn gaan we dit oplossen (JSON Schema).
+- Het is riskant om blindelings JSON Editor Online gedetecteerde fouten te laten herstellen ("Autorepair"). Dit verhelpt vaak de foutmelding, maar vaak niet op de correcte manier. Op termijn gaan we dit oplossen (via JSON Schema).
 
 - Gebruikers van de Apple Safari browser (macOS, iPad) die de beschikbare horizontale schermruimte krap vinden kunnen de reclame aan de rechterrand verwijderen.
 Dit gaat via de Safari [Hide distracting items](https://support.apple.com/nl-nl/guide/safari/ibrwb68cc4bf/mac) functie. Gebruikers van een groot scherm zullen hier minder behoefte aan hebben. Maar laptops hebben bijvoorbeeld kleinere schermen.
@@ -206,4 +219,29 @@ Dus ook daar willen we hergebruik maken van bestaande technologie die clubs al v
 Ten derde willen wij voorkomen dat er kosten gemaakt worden. Kosten geven organisatorisch gedoe ("kan het niet goedkoper").
 
 Toekomstige versimpelingen sluiten we zeker niet uit. Maar dit vereist wel slimme ideeën, en de deskundigheid en energie om ze uit te voeren.
+</details></p>
+
+### Invoervelden over clublijsten
+<details><summary>Details (klik om uit te klappen)</summary></p>
+
+- Een gedetailleerde engeltalige omschrijven van alle ondersteunde velden in een 'level1.json' bestand is te vinden in [README.md file section](https://github.com/vdhamer/Photo-Club-Hub/blob/main/.github/README.md#level-1-adding-clubs).
+- Wat betreft de belangrijkste velden over clubleden:
+   - De velden `givenName` en `familyName` zijn verplicht. `infixName` is voor namen met tussenvoegsel zoals "Jaap van Zweden". Het onderscheid tussen tussenvoegsel en achternaam is relevant om op achternaam te sorteren (althans op zijn Nederlands, Duits, enz). Jaap is dan te vinden onder de Z in plaats van onder de "V".
+       - Het is belangrijk om `givenName`, `infixName` en `familyName` juist in te vullen. Dit inclusief spelling, hoofdletters en eventuele speciale letters (“François”). Dit zorgt voor consistentie: als de naam voorkomt in een `level2.json` van een andere club, moet de software beslissen of het om dezelfde persoon gaat. Ander voorbeeld: de software bewaart wat de inhoud van een ingelezen `level2.json` bestand. Bij het opnieuw inlezen van dat bestand (al dan niet na aanpassingen), gaat het om dezelfde persoon? 
+       - Bij moeilijke namen (like "François Smit", of zelfs "François Beelaerts van Blokland") zou je invoeren even kunnen uitstellen om te voorkomen dat de naam soms op de ene manier en soms op een andere manier gebeurt.
+         Als je de persoon zelf vraagt ("de familienaam is Beelaerts van Blokland") voorkom je dit probleem. 
+       - In principe kan de app met de volledige [Unicode](https://nl.wikipedia.org/wiki/Unicode) karakterset uit de voeten. Voor een enkele letter is dat vaak ok, maar voor volledige namen zoals Вікторія Кобленко wordt dat onhandig.
+   - Voorlopig kan het `Level3URL` veld weggelaten worden (het dient voor verwijzingen naar Level 3 bestanden).
+   - Men zal vaak het `featuredImage` veld vrij snel willen invullen. Een voorbeeld is daarom te vinden in de [TemplateMin.level2.json](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMin.level2.json) bestand.
+Het levert een voorbeeldplaatje op van het werk van een clublid.
+   - Op termijn is het vast de moeite waard om nog enkele velden in te vullen:
+       - `website` is het webadres van een portfolio website van de fotograaf. Voorbeeld: een site op [Glass.photo](http://glass.photo/vdhamer) dat geen direct verband heeft met een specifieke club.
+         De iOS app en HTML generator maken met dit veld een klikbare link naar deze website.
+       - `roles` bevat eventuele bestuursfuncties van het lid binnen de club. Een lid kan meerdere bestuurfuncties hebben.
+           - Men hoeft niet te vermelden dat een lid een bestuursfunctie _niet_ heeft.
+             Invoer zoals '"isSecretary": false` kan nodig zijn om te expliciet aan te geven dat iemand die vroeger secretaris was dat niet meer is.
+       - `membershipStartDate`. Dit veld wordt momenteel alleen gebruikt in _Photo Club Hub HTML_ en niet in de iOS app.
+       - `expertises` geven één of twee opvallendste expertisegebieden van de fotograaf aan. Er zijn [aparte instructies](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/Level2_expertise_NL.md) over hoe het `expertises` veld het beste te gebruiken.
+- Het `maintainerEmail` veld is diegene die benaderd kan worden als er iets aan de hand is met dit JSON bestand.
+  Vaak ik dat de website beheerder (b.v. admin@clubnaam.nl mits dat werkt), maar het zou een direct gmail account van een clublid kunnen zijn.
 </details></p>

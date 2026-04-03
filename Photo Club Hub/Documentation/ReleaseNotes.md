@@ -1,3 +1,10 @@
+### 2.9.4 (GitHub commit ???????) ??-05-2026
+
+This build #4658 was made using Xcode 26.4 and is intended for the App Store.
+Amount of code and data lines changed since previous release: 0 additions and 0 deletions in 0 files.
+
+---------------------------------------------------------------------------
+
 ### 2.9.3 (GitHub commit ???????) ??-04-2026
 
 USER-FACING
@@ -9,19 +16,19 @@ USER-FACING
 
 STRUCTURAL
 
-* TODO: update documentation of Include feature of level1.json
 * TODO: add test for Include feature
 
 CODE MAINTENANCE
 
-* Fixed 1 test ("Parse TemplateMin.level2.json")
-* Tested with iOS 26.3.1 and iOS 26.4 (23E244) MacOS 26.3.1 (a) and Xcode 26.4 (17E192) 
-* Fixed GitHub merging issue (push and fetch stopped working from within Xcode)
-* TODO: Sync code with Photo Club Hub HTML
+* Fixed 1 test ("Parse TemplateMin.level2.json").
+* Tested with iOS 26.5 beta (23F5043g), and Xcode 26.5 beta 1 (17F5012f).
+* Fixed GitHub merging issue (push and fetch stopped working from within Xcode).
+* TODO: Sync code with Photo Club Hub HTML.
 
 DOCUMENTATION MAINTENANCE
 
 * Fixed broken links in Level2_aanmaken_NL.md and updated Level2_creation_NL.md
+* TODO: Updated documentation of Include feature of level1.json (introduced in app v2.9.0)
 
 This build #4658 was made using Xcode 26.4 and is intended for the App Store.
 Amount of code and data lines changed since previous release: 0 additions and 0 deletions in 0 files.

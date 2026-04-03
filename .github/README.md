@@ -661,6 +661,16 @@ You can indentally check the basic syntax of JSON files using online JSON valida
 
 <ul><details><Summary>Mandatory Level 1 fields (click to expand)</Summary></p>
 
+- `level1Header` contains information about the Level 1 file itself.
+    - Technically all the fields inside the `level1Header` can be omitted. But it is a good idea to include `level1URL` and `maintainerEmail`. If `level1URLIncludes` contains an empty array (see below), the `level1URLIncludes` field can be omitted or can contain an empty list.
+- `level1URL` contains the name and location of the master copy of this Level 1 file.
+    - Although the field is not currently read by the software, it serves as an identifier for trouble shooting purposes.
+- `maintainerEmail` is who to contact if there is a technical issue with the content of this file. 
+- `level1URLIncludes` contains a list of Level 1 files that are included by the software when this Level 1 file is loaded.
+    - The list can be empty if this Level 1 file holds say 10 clubs, but if the list logically contains say dozens or hundreds of clubs, it is a good idea to split the list into 2 or more smaller included files.
+    - There is no limit to how deep include files can be nested, but there is a safety mechanism that automatically protects agains accidental endless loops.
+    - `level1URLIncludes` empowers the owner of this file to determine the names and scope of its Include files (if any are needed).
+    - Keep the filename globally unique so that a file can be moved to another location in the future. But mainly to use the filename to represent the Include nesting hierarchy. Example: `clubsNL` contains clubs in the Netherlands. We decided to adhere to the way the photo clubs in the Netherlands have been organized into regions: `clubsNL01` to `clubsNL17`. Future branches like `clubsUS` may want to have include files named after states like `clubsUSca`. And the owner of `clubsUSca` is empowered to define up a next level decomposition for California if needed.
 - `clubs` and `museums` are required to distinguish photo clubs from photo museums.
   - Syntactially either can be omitted, but then you wouldn't have photo clubs or museums in the app.
     - When loaded into the app's internal database, `clubs` and `museums` determine the `OrganizationType` (`club` or `museum`) of each `Organization` object. This in turn determines which marker type is shown on maps.
