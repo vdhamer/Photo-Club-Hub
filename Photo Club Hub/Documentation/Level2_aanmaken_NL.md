@@ -35,7 +35,7 @@ Er zijn aparte instructie hoe bestanden online te krijgen via GitHub. En er kome
       | Sint Michielsgestel | Fotokring Sint-Michielsgestel | fkGestel | 51.64036 | 5.34749 | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/fkGestel.level2.json) ⌛ | [link](http://www.vdhamer.com/fkGestel) |
       | Veldhoven | Fotoclub Bellus Imago | fcBellusImago | 51.42541 | 5.38756 | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/fcBellusImago.level2.json) | [link](http://www.vdhamer.com/fcBellusImago) |
       | Veghel | Fotoclub Veghel | fcVeghel | 51.62441 | 5.55930 | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/fcVeghel.level2.json) | [link](http://www.vdhamer.com/fcVeghel) |
-      | Veghel | Fotoclub Zzzoom | fcVeghel | ? | ? | ? | [link](http://www.vdhamer.com/fcVeghel) |
+      | Veghel | Fotoclub Zzzoom | fcVeghel | 51.35712 | 5.31062 | ? | [link](http://www.vdhamer.com/fcVeghel) |
       | Waalre | Fotogroep Waalre | fgWaalre | 51.39184 | 5.46144 | [link](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/fgWaalre.level2.json) | [link](http://www.vdhamer.com/fgWaalre) |
 
    > Tip: Je kunt eventueel ook uitgaan van het [Max](https://.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMax.level2.json) bestand.
