@@ -184,6 +184,31 @@ Dat is geen JSON-conventie, maar een keus binnen deze app.
 Het zijn dus velden die men later kan toevoegen, bijvoorbeeld omdat zodra de vereiste gegevens inmiddels verzameld zijn.
 </details></p>
 
+
+### Invoervelden over clubs
+<details><summary>Details (klik om uit te klappen)</summary></p>
+
+- Een gedetailleerde engeltalige omschrijven van alle ondersteunde velden in een 'level1.json' bestand is te vinden in [README.md file section](https://github.com/vdhamer/Photo-Club-Hub/blob/main/.github/README.md#level-1-adding-clubs).
+
+- Wat betreft de belangrijkste velden over clubs:
+   - `level1Header`
+      - `level1URL`
+      - `level1URLIncludes`
+      - `maintainerEmail`
+   - `clubs`
+      - `idPlus`
+      - `coordinates`
+      - `optional`
+         - `website`
+         - `wikipedia`
+         - `level2URL`
+         - `remark`
+         - `maintainerEmail`
+         - `nlSpecific`
+   - `museums` 
+
+</details></p>
+
 ### Meer over JSON Editor Online
 <details><summary>Details (klik om uit te klappen)</summary></p>
 
@@ -219,14 +244,4 @@ Dus ook daar willen we hergebruik maken van bestaande technologie die clubs al v
 Ten derde willen wij voorkomen dat er kosten gemaakt worden. Kosten geven organisatorisch gedoe ("kan het niet goedkoper").
 
 Toekomstige versimpelingen sluiten we zeker niet uit. Maar dit vereist wel slimme ideeën, en de deskundigheid en energie om ze uit te voeren.
-</details></p>
-
-### Invoervelden over clubs
-<details><summary>Details (klik om uit te klappen)</summary></p>
-
-- Een gedetailleerde engeltalige omschrijven van alle ondersteunde velden in een 'level1.json' bestand is te vinden in [README.md file section](https://github.com/vdhamer/Photo-Club-Hub/blob/main/.github/README.md#level-1-adding-clubs).
-
-- Wat betreft de belangrijkste velden over clubs:
-   - x
-
 </details></p>
