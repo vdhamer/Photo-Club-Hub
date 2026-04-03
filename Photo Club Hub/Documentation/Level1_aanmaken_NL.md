@@ -190,7 +190,9 @@ Het zijn dus velden die men later kan toevoegen, bijvoorbeeld omdat zodra de ver
 
 - Een gedetailleerde engeltalige omschrijven van alle ondersteunde velden in een 'level1.json' bestand is te vinden in [README.md file section](https://github.com/vdhamer/Photo-Club-Hub/blob/main/.github/README.md#level-1-adding-clubs).
 
-- Wat betreft de belangrijkste velden over clubs:
+- Alle velden die onder `clubs:` een individuele fotoclub omschrijven in een Level 1 bestand, komen terug in de `club:` gedeelte bovenaan een Level 2 bestand. De velden worden in [die documentatie](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/Level1_aanmaken_NL.md) wat uitvoeriger in het Nederlands beschreven.
+
+- Wat betreft de belangrijkste velden over Clubs:
    - `level1Header`
       - `level1URL`
       - `level1URLIncludes`
@@ -205,7 +207,11 @@ Het zijn dus velden die men later kan toevoegen, bijvoorbeeld omdat zodra de ver
          - `remark`
          - `maintainerEmail`
          - `nlSpecific`
-   - `museums` 
+   - `museums`
+ 
+- Er bestaan ook Level 1 bestanden die in zijn geheel over fotomusea gaan.
+- En het is mogelijk om een combinatie van clubs en musea in eenzelfde bestand te zetten.
+Voor meer informatie hierover, zie het Engelstalige [README.me]((https://github.com/vdhamer/Photo-Club-Hub/blob/main/.github/README.md) document. 
 
 </details></p>
 
