@@ -146,7 +146,7 @@ Op zijn beurt wordt `clubs.level1.json` gevonden vanuit een bestand dat `root_.l
 Dat bestand is het enige level1.json dat de software vindt via een vaste naam en locatie.
 Alle andere level1.json bestanden worden via verwijzingen gevonden.
 
-### Samenvattend
+### Samenvatting Include mechanisme
 
 Vanuit een vaste naam `root.level1.json` worden via verwijzingen alle geldige Level 1 bestanden gevonden en en stapsgewijs ingelezen.
 In deze boomstructuur vindt men ook een tak van de boom dat over fotomusea gaat. 
