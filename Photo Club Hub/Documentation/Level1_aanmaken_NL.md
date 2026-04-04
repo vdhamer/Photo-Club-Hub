@@ -148,9 +148,9 @@ Alle andere level1.json bestanden worden via verwijzingen gevonden.
 
 ### Samenvatting Include mechanisme
 
-Vanuit een vaste naam zoals `root.level1.json` worden via verwijzingen alle relevante Level 1 bestanden stapsgewijs gevonden en ingelezen.
+De apps lezen vanuit een vaste naam zoals `root.level1.json` via verwijzingen alle relevante Level 1 bestanden in.
 In deze boomstructuur van bestanden vindt men naast een tak (`clubsNL.level1.json`) met Nederlandse clubs
-ook de tak (`museums.level1.json`) met fotomusea. Dat ziet er momenteel zo uit:
+ook de tak (`museums.level1.json`) met internationale fotomusea. Dat ziet er momenteel zo uit:
 
 ``` json
 {
@@ -165,14 +165,14 @@ ook de tak (`museums.level1.json`) met fotomusea. Dat ziet er momenteel zo uit:
 }
 ```
 
-waarbij het `clubsNL.level1.json` op zijn beurt doorverwijst naar de zogenaamde afdelingen van de Koninklijke Fotobond.
-De afdelingen bevatten de eigenlijke lijsten met `clubs` van de afdelingen.
+Hierbij verwijst `clubsNL.level1.json` op zijn beurt door naar de regionale afdelingen van de Nederlandse Fotobond.
+De afdelingen bevatten de lijsten met `clubs` per afdeling.
 
-Opgelet: deze boomstructuur dient alleen om de invloergegevens beheersbaar te houden. In de beide app versies zie je momenteel
-alleen het eindresultaat: een "platte" verzameling fotoclubs en fotomusea.
+Opgelet: deze boomstructuur dient vooral om de invoergegevens beheersbaar te houden. 
+Momenteel wordt de boomstructuur tijdens het inlezen niet bewaard of aan de gebruiker getoond.
 
-Er zijn tijdelijk twee versies van het start bestand: `root_.level1.json` (voor nieuwe versies van de software) en `root.level1.json` voor
-oude versies van de software. Op termijn zal er maar één versie zijn.
+Er zijn overigens tijdelijk twee versies van het start bestand:
+`root_.level1.json` (voor nieuwe versies van de software) en `root.level1.json` voor oude versies van de software.
 
 ## Bonusinformatie
 
@@ -199,25 +199,24 @@ Het zijn dus velden die men later kan toevoegen, bijvoorbeeld omdat zodra de ver
 - Alle velden die onder `clubs:` een individuele fotoclub omschrijven in een Level 1 bestand, komen terug in de `club:` gedeelte bovenaan een Level 2 bestand. De velden worden in [die documentatie](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/Level1_aanmaken_NL.md) wat uitvoeriger in het Nederlands beschreven.
 
 - Wat betreft de belangrijkste velden over Clubs:
-   - `level1Header`
-      - `level1URL`
-      - `level1URLIncludes`
-      - `maintainerEmail`
-   - `clubs`
-      - `idPlus`
-      - `coordinates`
+   - `level1Header` omschrijft het bestand zelf.
+      - `level1URL` is het webadres van de meesterversie van dit document (vermoedelijk op GitHub).
+      - `level1URLIncludes` kan een lijst van in te lezen [ondergeschikte](https://github.com/vdhamer/Photo-Club-Hub/edit/main/Photo%20Club%20Hub/Documentation/Level1_aanmaken_NL.md#hoe-zit-het-met-level1urlincludes) Level 1 bestanden bevatten.
+      - `maintainerEmail` is de contactpersoon voor problemen met dit bestand.
+   - `clubs` bevat een lijst met fotoclubs. Deze wordt samengevoegd met eventuele clubs gevonden via `level1URLIncludes`.
+      - `idPlus` is de unieke identificatie van een club. `nickName` moet uniek zijn. En `town` en `fullName` moeten samen uniek zijn.
+      - `coordinates` zijn lengtegraad en breedtegraad van waar de club bijeekomt of exposeert (formaat: 51.53557 resp 5.62722).
       - `optional`
-         - `website`
-         - `wikipedia`
-         - `level2URL`
-         - `remark`
-         - `maintainerEmail`
-         - `nlSpecific`
-   - `museums`
- 
-- Er bestaan ook Level 1 bestanden die in zijn geheel over fotomusea gaan.
-- En het is mogelijk om een combinatie van clubs en musea in eenzelfde bestand te zetten.
-Voor meer informatie hierover, zie het Engelstalige [README.me]((https://github.com/vdhamer/Photo-Club-Hub/blob/main/.github/README.md) document. 
+         - `website` bevat het adres van een bestaande website van de club.
+         - `wikipedia` bevat een webadres in Wikipedia, maar zal bij clubs (itt musea) vrijwel nooit voorkomen.
+         - `level2URL` bevat het webadres van het level2.json bestand met ledenlijst informatie voor deze club.
+         - `remark` bevat een enkele zin (in Nederlands en Engels) met iets belangrijks of onderscheidends over de club. Liever niets dat voor vele clubs zou gelden: dat leest men zelf maar via de website.
+         - `maintainerEmail` van de Level 2 bestand. Zal hier zelden ingevuld worden (zelfde gegevens staan namelijk ook in Level 2 bestand zelf).
+         - `nlSpecific` bevat informatie die alleen betekenis heeft voor Nederlandse clubs
+               - `fotobondNumber` is het Fotobond nummer (b.v. 1641) voor de clubs aangesloten bij de Fotobond. Bij andere Nederlandse clubs dient men de `fotobondNumber` regel weg te laten. Hierdoor kan de app zien of een club lid is van de Fotobond. 
+   - `museums` bevat een lijst met musea met een opmerkelijke fotografie collectie.
+Voor Nederland worden fotoclubs en fotomusea gescheiden opgeslagen, en zal men dus geen musea aantreffen in bestanden over Nederlandse fotoclubs.
+Musea worden uitgelegd in het Engelstalige [README.me]((https://github.com/vdhamer/Photo-Club-Hub/blob/main/.github/README.md) document. 
 
 </details></p>
 
