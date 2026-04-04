@@ -194,9 +194,9 @@ Het zijn dus velden die men later kan toevoegen, bijvoorbeeld omdat zodra de ver
 ### Invoervelden over clubs
 <details><summary>Details (klik om uit te klappen)</summary></p>
 
-- Een gedetailleerde Engeltalige omschrijven van alle ondersteunde velden in een 'level1.json' bestand is te vinden in het [README.md bestand](https://github.com/vdhamer/Photo-Club-Hub/blob/main/.github/README.md#level-1-adding-clubs).
+- Een gedetailleerde Engeltalige omschrijven van alle ondersteunde velden in een 'level1.json' bestand is te vinden in het [README.md](https://github.com/vdhamer/Photo-Club-Hub/blob/main/.github/README.md#level-1-adding-clubs) bestand.
 
-- Alle velden die onder `clubs:` een individuele fotoclub omschrijven in een Level 1 bestand, komen terug in de `club:` gedeelte bovenaan een Level 2 bestand. De velden worden in [die documentatie](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/Level1_aanmaken_NL.md) wat uitvoeriger in het Nederlands beschreven.
+- Alle velden die onder `clubs:` een individuele fotoclub omschrijven in een Level 1 bestand, komen terug in de `club:` gedeelte bovenaan een Level 2 bestand. De velden worden in [die documentatie](https://github.com/vdhamer/Photo-Club-Hub/blob/main/Photo%20Club%20Hub/Documentation/Level1_aanmaken_NL.md) wat uitvoeriger beschreven.
 
 - Wat betreft de belangrijkste velden over Clubs:
    - `level1Header` omschrijft het bestand zelf.
