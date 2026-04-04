@@ -148,9 +148,9 @@ Alle andere level1.json bestanden worden via verwijzingen gevonden.
 
 ### Samenvatting Include mechanisme
 
-Vanuit een vaste naam `root.level1.json` worden via verwijzingen alle relevante Level 1 bestanden stapsgewijs gevonden en en ingelezen.
-In deze boomstructuur van bestanden vindt men ook een tak van de boom dat over Nederlandse fotomusea gaat. 
-Dus de inhoud inhoud van 'root_.level1.json' is typisch zoiets als:
+Vanuit een vaste naam zoals `root.level1.json` worden via verwijzingen alle relevante Level 1 bestanden stapsgewijs gevonden en ingelezen.
+In deze boomstructuur van bestanden vindt men naast een tak (`clubsNL.level1.json`) met Nederlandse clubs
+ook de tak (`museums.level1.json`) met fotomusea. Dat ziet er momenteel zo uit:
 
 ``` json
 {
@@ -165,10 +165,16 @@ Dus de inhoud inhoud van 'root_.level1.json' is typisch zoiets als:
 }
 ```
 
-Op termijn zal de naam `root_.level1.json` veranderen in `root.level1.json`. Dit onderscheid hangt samen met
-oudere versies van de apps nog geen `level1URLIncludes` veld kenden.
+waarbij het `clubsNL.level1.json` op zijn beurt doorverwijst naar de zogenaamde afdelingen van de Koninklijke Fotobond.
+De afdelingen bevatten de eigenlijke lijsten met `clubs` van de afdelingen.
 
-## Bonus informatie
+Opgelet: deze boomstructuur dient alleen om de invloergegevens beheersbaar te houden. In de beide app versies zie je momenteel
+alleen het eindresultaat: een "platte" verzameling fotoclubs en fotomusea.
+
+Er zijn tijdelijk twee versies van het start bestand: `root_.level1.json` (voor nieuwe versies van de software) en `root.level1.json` voor
+oude versies van de software. Op termijn zal er maar één versie zijn.
+
+## Bonusinformatie
 
 ### Het `Level1.json` formaat
 <details><summary>Details (klik om uit te klappen)</summary></p>
