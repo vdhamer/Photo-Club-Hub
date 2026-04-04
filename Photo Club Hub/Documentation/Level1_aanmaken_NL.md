@@ -203,7 +203,7 @@ Het zijn dus velden die men later kan toevoegen, bijvoorbeeld omdat zodra de ver
       - `level1URL` is het webadres van de meesterversie van dit document (vermoedelijk op GitHub).
       - `level1URLIncludes` kan een lijst van in te lezen [ondergeschikte](https://github.com/vdhamer/Photo-Club-Hub/edit/main/Photo%20Club%20Hub/Documentation/Level1_aanmaken_NL.md#hoe-zit-het-met-level1urlincludes) Level 1 bestanden bevatten.
       - `maintainerEmail` is de contactpersoon voor problemen met dit bestand.
-   - `clubs` bevat een lijst met fotoclubs. Deze wordt samengevoegd met eventuele clubs gevonden via `level1URLIncludes`. De individuele leden binnen een afdeling worden al extra club behandeld door de app (met Fotobondnummer 1600 voor b.v. afdeling 16).
+   - `clubs` bevat een lijst met fotoclubs. Deze wordt samengevoegd met eventuele clubs gevonden via `level1URLIncludes`. De individuele leden binnen een afdeling worden al extra club behandeld door de app (met `fotobondNumber` 1600 voor b.v. afdeling 16).
       - `idPlus` is de identificatie van een club. `town` en `fullName` moeten samen uniek zijn. `nickName` moet ook uniek zijn en liefst voor Nederland een formaat zoals "fcMijnClub" (Fotoclub) of "fgMijnClub" (Fotogroep) hebben.
       - `coordinates` zijn lengtegraad en breedtegraad van waar de club bijeekomt of exposeert (formaat: 51.53557 resp 5.62722 maar minder precisie mag ook - meer heeft geen zin).
       - `optional`
