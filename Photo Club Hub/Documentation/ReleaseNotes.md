@@ -28,7 +28,7 @@ CODE MAINTENANCE
 DOCUMENTATION MAINTENANCE
 
 * Fixed broken links in Level2_aanmaken_NL.md and updated Level2_creation_NL.md
-* TODO: Updated documentation of Include feature of level1.json (introduced in app v2.9.0)
+* Updated documentation of Include feature (Level1_aanmaken_NL.md). No EN translation yet.
 
 This build #4658 was made using Xcode 26.4 and is intended for the App Store.
 Amount of code and data lines changed since previous release: 0 additions and 0 deletions in 0 files.
