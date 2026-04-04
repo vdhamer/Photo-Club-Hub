@@ -216,7 +216,7 @@ Het zijn dus velden die men later kan toevoegen, bijvoorbeeld omdat zodra de ver
                - `fotobondNumber` is het Fotobond nummer (b.v. 1641) voor de clubs aangesloten bij de Fotobond. Bij andere Nederlandse clubs dient men de `fotobondNumber` regel weg te laten. Hierdoor kan de app zien of een club lid is van de Fotobond. 
    - `museums` bevat een lijst met musea met een opmerkelijke fotografie collectie.
 Voor Nederland worden fotoclubs en fotomusea gescheiden opgeslagen, en zal men dus geen musea aantreffen in bestanden over Nederlandse fotoclubs.
-Musea worden uitgelegd in het Engelstalige [README.me]((https://github.com/vdhamer/Photo-Club-Hub/blob/main/.github/README.md) document. 
+Musea worden uitgelegd in het Engelstalige [README.me](https://github.com/vdhamer/Photo-Club-Hub/blob/main/.github/README.md) document. 
 
 </details></p>
 
