@@ -203,7 +203,7 @@ Het zijn dus velden die men later kan toevoegen, bijvoorbeeld omdat zodra de ver
       - `level1URL` is het webadres van de meesterversie van dit document (vermoedelijk op GitHub).
       - `level1URLIncludes` kan een lijst van in te lezen [ondergeschikte](https://github.com/vdhamer/Photo-Club-Hub/edit/main/Photo%20Club%20Hub/Documentation/Level1_aanmaken_NL.md#hoe-zit-het-met-level1urlincludes) Level 1 bestanden bevatten.
       - `maintainerEmail` is de contactpersoon voor problemen met dit bestand.
-   - `clubs` bevat een lijst met fotoclubs. Deze wordt samengevoegd met eventuele clubs gevonden via `level1URLIncludes`.
+   - `clubs` bevat een lijst met fotoclubs. Deze wordt samengevoegd met eventuele clubs gevonden via `level1URLIncludes`. De individuele leden binnen een afdeling worden al extra club behandeld door de app (met Fotobondnummer 1600 voor b.v. afdeling 16).
       - `idPlus` is de identificatie van een club. `town` en `fullName` moeten samen uniek zijn. `nickName` moet ook uniek zijn en liefst voor Nederland een formaat zoals "fcMijnClub" (Fotoclub) of "fgMijnClub" (Fotogroep) hebben.
       - `coordinates` zijn lengtegraad en breedtegraad van waar de club bijeekomt of exposeert (formaat: 51.53557 resp 5.62722 maar minder precisie mag ook - meer heeft geen zin).
       - `optional`
@@ -213,7 +213,7 @@ Het zijn dus velden die men later kan toevoegen, bijvoorbeeld omdat zodra de ver
          - `remark` bevat een enkele zin (in Nederlands en Engels) met iets belangrijks of onderscheidends over de club. Liever niets dat voor vele clubs zou gelden: dat leest men zelf maar via de website.
          - `maintainerEmail` van de Level 2 bestand. Omdat dezelfde gegevens ook in het Level 2 bestand van de club staan, is invullen hier niet belangrijk.
          - `nlSpecific` bevat informatie die alleen betekenis heeft voor Nederlandse clubs
-            - `fotobondNumber` is het Fotobondnummer (b.v. 1641) een club die aangesloten is bij de Fotobond. Bij Nederlandse clubs die niet (meer) aangesloten zijn bij de Fotobond dient men de `fotobondNumber` regel weg te laten. De app kan hierdoor weten of een club momenteel lid is van de Fotobond. 
+            - `fotobondNumber` is het Fotobondnummer (b.v. 1641) van een club die aangesloten is bij de Fotobond. Bij Nederlandse clubs die niet (meer) aangesloten zijn bij de Fotobond dient men de `fotobondNumber` regel weg te laten. De app kan hierdoor weten of een club momenteel lid is van de Fotobond. 
    - `museums` bevat een lijst met musea met een opmerkelijke fotografie collectie.
 Voor Nederland worden fotoclubs en fotomusea in gescheiden bestanden opgeslagen,
 en zal men dus geen musea aantreffen in bestanden over Nederlandse fotoclubs.
