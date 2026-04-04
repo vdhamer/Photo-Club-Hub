@@ -148,7 +148,7 @@ Alle andere level1.json bestanden worden via verwijzingen gevonden.
 
 ### Samenvatting Include mechanisme
 
-Vanuit een vaste naam `root.level1.json` worden via verwijzingen alle geldige Level 1 bestanden gevonden en en stapsgewijs ingelezen.
+Vanuit een vaste naam `root.level1.json` worden via verwijzingen alle geldige Level 1 bestanden stapsgewijs gevonden en en ingelezen.
 In deze boomstructuur vindt men ook een tak van de boom dat over fotomusea gaat. 
 Dus de inhoud inhoud van 'root_.level1.json' is typisch zoiets als:
 
