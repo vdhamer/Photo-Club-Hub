@@ -11,6 +11,17 @@
         "optional": {
             "website": "https://www.fotogroepoirschot.nl",
             "level2URL": "https://www.example.com/fgOirschot.level2.json",
+            "maintainerEmail": "penningmeester@fotogroepoirschot.nl",
+            "remark": [
+                {
+                    "language": "EN",
+                    "value": "At a club meeting, the work of 3 of the members is discussed. Each of these 3 members selects one “photo of the month” for an in depth discussion."
+                },
+                {
+                    "language": "NL",
+                    "value": "Op een forumavond wordt het werk van 3 van de leden besproken, waarbij één foto per lid zeer uitvoerig “volgens het boekje” besproken wordt."
+                }
+            ],
             "nlSpecific": {
                 "fotobondNumber": 1607
             }
@@ -116,8 +127,8 @@
             "optional": {
                 "birthday": "9999-04-01",               
                 "roles": {
-		         "isTreasurer": true
-		         },
+                    "isTreasurer": true
+                },
                 "membershipStartDate": "1978-01-01",
                 "level3URL": "https://fotogroepoirschot.nl/henk-verbeek/",
                 "featuredImage": "https://fotogroepoirschot.nl/wp-content/uploads/2025/07/Webpag-Henk-01.jpg",
@@ -125,6 +136,27 @@
                     "fotobondNumber": 1607009
                 },
                 "expertises": [ "Architecture", "Experimental" ]
+            }  
+        },
+
+        {
+            "name": {
+                "givenName": "Jan",
+                "infixName": "",
+                "familyName": "Kooreman"
+            },
+            "optional": {
+                "birthday": "9999-09-28",               
+                "roles": {
+		    "isTreasurer": true
+		},
+                "membershipStartDate": "2025-09-01",
+                "level3URL": "https://fotogroepoirschot.nl/jan-kooreman/",
+                "featuredImage": "https://fotogroepoirschot.nl/wp-content/uploads/2025/12/A1-DSCF0821WEB.jpg",
+                "nlSpecific": {
+                    "fotobondNumber": 1607058
+                },
+                "expertises": [ "Studio", "Street" ]
             }  
         },
 

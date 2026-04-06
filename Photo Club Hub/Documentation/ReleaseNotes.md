@@ -26,6 +26,7 @@ CODE MAINTENANCE
 * TODO: Sync code with Photo Club Hub HTML.
 
 DATA MAINTENANCE
+* Updated info for fgOirschot
 
 * fcBorgerOdoorn is no longer a member of the Dutch Fotobond
 

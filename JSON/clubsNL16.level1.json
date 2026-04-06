@@ -1330,8 +1330,9 @@
                 "longitude": 5.25568
             },
             "optional": {
-                "website": "https://fotogroepoirschot.nl/",
+                "website": "https://www.fotogroepoirschot.nl/",
                 "level2URL": "https://www.example.com/fgOirschot.level2.json",
+                "maintainerEmail": "penningmeester@fotogroepoirschot.nl",
                 "remark": [
                     {
                         "language": "EN",
