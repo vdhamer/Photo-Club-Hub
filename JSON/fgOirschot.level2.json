@@ -148,8 +148,8 @@
             "optional": {
                 "birthday": "9999-09-28",               
                 "roles": {
-		    "isTreasurer": true
-		},
+                    "isTreasurer": true
+                },
                 "membershipStartDate": "2025-09-01",
                 "level3URL": "https://fotogroepoirschot.nl/jan-kooreman/",
                 "featuredImage": "https://fotogroepoirschot.nl/wp-content/uploads/2025/12/A1-DSCF0821WEB.jpg",
