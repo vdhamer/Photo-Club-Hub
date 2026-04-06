@@ -25,6 +25,9 @@ CODE MAINTENANCE
 * Fixed GitHub merging issue (push and fetch stopped working from within Xcode).
 * TODO: Sync code with Photo Club Hub HTML.
 
+DATA MAINTENANCE
+* Updated info for fgOirschot
+
 DOCUMENTATION MAINTENANCE
 
 * Fixed broken links in Level2_aanmaken_NL.md and updated Level2_creation_NL.md
