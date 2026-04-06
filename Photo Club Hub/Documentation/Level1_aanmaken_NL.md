@@ -21,7 +21,7 @@ Er bestaan andere instructies om lijsten met _clubleden_ ("Level 2" JSON) toe te
    > Het [Min](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/TemplateMin.level1.json) bestand 
    > toont hoe het eruit ziet als bijna alle optionele invulvelden ontbreken.
    > Dit betekent dat je extra velden die je wilt vullen zelf moet toevoegen, bijvoorbeeld door die regels vanuit Max te kopiëren. 
-   > In principe kunnen bij dit kopieren fouten gemaakt worden, door iets teveel of iets te weinig over te nemen. Of door de extra gegevens op een verkeerde plek toe te voegen.
+   > In principe kunnen bij dit kopiëren fouten gemaakt worden, door iets teveel of iets te weinig over te nemen. Of door de extra gegevens op een verkeerde plek toe te voegen.
    > Dat is echter niet heel erg: in stap 7 staat hoe je het bestand kunt controleren. Het JSON formaat is nu eenmaal kieskeurig over haakjes en komma's.
 
 3. Pas de naamgeving per **club** aan: `town`, `fullName`, en `nickName`:
@@ -98,10 +98,10 @@ Hierboven is beschreven hoe met bijvoorbeeld een nieuwe bestand gemaamd `naam.le
 
 Maar er zijn nog 2 kanttekeningen:
 
-1. de app weet niet zondermeer dat het het bestand `naam.level1.json` zou moet laden.
+1. de app weet niet zonder meer dat het het bestand `naam.level1.json` zou moet laden.
 De app kan dit ontdekken als er een _ander_ bestand is met een verwijzing naar het `naam.level1.json` bestand.
 2. het bestand `naam.level1.json` kan zelf ook verwijzigingen bevatting naar andere Level 1 bestanden.
-Deze andere bestandene kunnen beschouwd worden als integraal deel ("include") van `naam.level1.json`.
+Deze andere bestanden kunnen beschouwd worden als integraal deel ("include") van `naam.level1.json`.
 
 Beide kanttekeningen gebruiken dus één en hetzelfde mechanisme:
 ieder Level 1 bestand kan via `level1URLIncludes` opgeven dat er extra onderliggende Level 1 bestanden geladen moeten worden.
@@ -134,8 +134,8 @@ Bij het inlezen van `clubsNL.level1.json` zullen de apps kijken of er clubs dire
 Voor de gebruikers van de app is er geen verschil tussen een `clubsNL.level1.json` bestand met 80 clubs
 en een `clubsNL.level1.json` bestand met 2 verwijzingen  naar bestanden die samen die 80 clubs bevatten.
 
-Het voordeel van opsplitsen is vooral organisatisch:
-door het opkippen van een lange lijst met clubs in kortere deellijsten
+Het voordeel van opsplitsen is vooral organisatorisch:
+door het opknippen van een lange lijst met clubs in kortere deellijsten
 kan je duidelijk afspreken (en via `maintainerEmail` zien) wie welk deelbestand onderhoudt.
 
 ### Vinden van alle Level 1 bestanden
@@ -194,7 +194,7 @@ Het zijn dus velden die men later kan toevoegen, bijvoorbeeld omdat zodra de ver
 ### Invoervelden over clubs
 <details><summary>Details (klik om uit te klappen)</summary></p>
 
-- Een gedetailleerde Engeltalige omschrijven van alle ondersteunde velden in een 'level1.json' bestand is te vinden in het [README.md](https://github.com/vdhamer/Photo-Club-Hub/blob/main/.github/README.md#level-1-adding-clubs) bestand.
+- Een gedetailleerde Engelstalige omschrijving van alle ondersteunde velden in een 'level1.json' bestand is te vinden in het [README.md](https://github.com/vdhamer/Photo-Club-Hub/blob/main/.github/README.md#level-1-adding-clubs) bestand.
 Het is vaak praktisch om een bestaand Level 1 zoals [dit echte](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/clubsNL16.level1.json)
 of [dit schematische](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/clubTemplates.level1.json) voorbeeld uit te gaan.
 
@@ -207,7 +207,7 @@ of [dit schematische](https://github.com/vdhamer/Photo-Club-Hub/blob/main/JSON/c
       - `maintainerEmail` is de contactpersoon voor problemen met dit bestand.
    - `clubs` bevat een lijst met fotoclubs. Deze wordt samengevoegd met eventuele clubs gevonden via `level1URLIncludes`. De individuele leden binnen een afdeling worden al extra club behandeld door de app (met `fotobondNumber` 1600 voor b.v. afdeling 16).
       - `idPlus` is de identificatie van een club. `town` en `fullName` moeten samen uniek zijn. `nickName` moet ook uniek zijn en liefst voor Nederland een formaat zoals "fcMijnClub" (Fotoclub) of "fgMijnClub" (Fotogroep) hebben.
-      - `coordinates` zijn lengtegraad en breedtegraad van waar de club bijeekomt of exposeert (formaat: 51.53557 resp 5.62722 maar minder precisie mag ook - meer heeft geen zin).
+      - `coordinates` zijn lengtegraad en breedtegraad van waar de club bijeenkomt of exposeert (formaat: 51.53557 resp 5.62722 maar minder precisie mag ook - meer heeft geen zin).
       - `optional`
          - `website` bevat het adres van een bestaande website van de club.
          - `wikipedia` bevat een webadres in Wikipedia, maar zal bij clubs (itt musea) vrijwel nooit voorkomen.
