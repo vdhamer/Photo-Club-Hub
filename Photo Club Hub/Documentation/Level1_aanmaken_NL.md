@@ -94,23 +94,35 @@ Of via een door ons gegenereerde webpagina die bereikbaar is vanuit [/clubs](htt
 
 ## Hoe zit het met `level1URLIncludes`?
 
-Hierboven is beschreven hoe met bijvoorbeeld een nieuwe bestand gemaamd `naam.level1.json` bestand aan te maken.
+Dit hoofdstuk is vooral relevant voor bestanden met "onhandig" veel clubs: 
+het biedt de mogelijk om grote Level 1 bestanden op te knippen in kleinere bestanden.
+Het geheel wordt ondanks het opknippen nog steeds als geheel gezien door de app
+omdat de bestanden naar elkaar kunnen doorverwijzen (zeg maar via "links").
 
-Maar er zijn nog 2 kanttekeningen:
+Dus, bij twijfel, sla gerust dit hoofdstukje over "include" bestanden over.
 
-1. de app weet niet zonder meer dat het het bestand `naam.level1.json` zou moet laden.
-De app kan dit ontdekken als er een _ander_ bestand is met een verwijzing naar het `naam.level1.json` bestand.
-2. het bestand `naam.level1.json` kan zelf ook verwijzigingen bevatting naar andere Level 1 bestanden.
-Deze andere bestanden kunnen beschouwd worden als integraal deel ("include") van `naam.level1.json`.
+### Hoe zit het precies?
 
-Beide kanttekeningen gebruiken dus één en hetzelfde mechanisme:
-ieder Level 1 bestand kan via `level1URLIncludes` opgeven dat er extra onderliggende Level 1 bestanden geladen moeten worden.
+In het vorige hoofdstuk is beschreven hoe men bijvoorbeeld een nieuwe bestand genaamd
+`naam.level1.json` kan aan te maken. Maar er zijn 2 open vragen:
+
+Q: Hoe weet de app eigenlijk dat het bestand `naam.level1.json` geladen moet worden?.
+
+A: De app kan dit ontdekken als er een _ander_ bestand is met een verwijzing naar het `naam.level1.json` bestand.
+
+Q: Kan het bestand `naam.level1.json` zelf ook verwijzigingen bevatting naar andere Level 1 bestanden?
+
+A: Ja. Deze andere bestanden kunnen beschouwd worden als integraal deel ("include") van `naam.level1.json`.
+
+Beide aspecten maken gebruik van één en hetzelfde mechanisme: ieder Level 1 bestand 
+kan via `level1URLIncludes` opgeven dat er extra onderliggende Level 1 bestanden geladen moeten worden.
 Alleen het allereerste (hoogste, `root.level1.json`) bestand wordt gevonden via een vaste naam en locatie (URL).
 We gaat hier nu iets dieper op in: 
 
 ### Opknippen van Level 1 bestanden
 
-Hier is een voorbeeld van een bestand dat `clubsNL.level1.json` heet. Het bevat direct of indirect de club in Nederland af:
+Hier is een voorbeeld van een bestand dat `clubsNL.level1.json` heet.
+Het bevat direct of indirect de club in Nederland af:
 
 ``` json
 {
