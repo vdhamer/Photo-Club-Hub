@@ -37,7 +37,7 @@ This enables you to find Rob and others by typing "abstract" or "abst" into the 
 In a future release, you can expect similar search functions for the HTML/web version:
 
 1. Clicking on an expertise tag brings you to a list of all photographers labelled with that tag.
-2. A separate Expertise tags page will show all supported tags with their statistics and with links to pages per Expertise.
+2. A separate Expertise tags page already shows all supported tags with their statistics and with links to pages per Expertise.
 </details></p>
 
 </li><li>
