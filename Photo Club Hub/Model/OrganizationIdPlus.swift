@@ -8,7 +8,7 @@
 import Foundation
 
 public struct OrganizationIdPlus: Sendable { // PhotoClubID plus non-identifying nickname
-    var id: OrganizationID
+    public var id: OrganizationID
     public var nickname: String
 
     public init(id: OrganizationID, nickname: String) { // initializer exposes PhotoClubId level (not used, but works)

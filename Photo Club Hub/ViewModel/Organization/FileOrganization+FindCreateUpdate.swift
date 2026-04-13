@@ -191,6 +191,29 @@ extension Organization {
         }
     }
 
+    public static func find(context: NSManagedObjectContext, // can be foreground or background context
+                            nickname: String) throws -> Organization {
+
+        let predicateFormat: String = "nickName_ = %@" // avoid localization
+        let predicate = NSPredicate(format: predicateFormat, argumentArray: [nickname] )
+        let fetchRequest: NSFetchRequest<Organization> = Organization.fetchRequest()
+        fetchRequest.predicate = predicate
+        let organizations: [Organization] = (try? context.fetch(fetchRequest)) ?? []
+
+        if organizations.count > 1 { // organization exists, but there shouldn't be multiple that satify the predicate
+            ifDebugFatalError("Query returned \(organizations.count) organizations nicknamed \(nickname)",
+                              file: #fileID, line: #line) // likely deprecation of #fileID in Swift 6.0
+            // in release mode, log that there are multiple clubs, but continue using the first one.
+        }
+
+        if let org = organizations.first {
+            return org
+        } else {
+            throw CoreDataError.cantFindOrg(
+                "No organization found matching nickname \(nickname)")
+        }
+    }
+
     fileprivate enum CoreDataError: Error {
         case cantFindOrg(_ message: String)
     }

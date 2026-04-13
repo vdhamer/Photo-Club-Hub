@@ -54,7 +54,7 @@ extension MemberPortfolio { // computed properties related to roles of members i
     }
 
     public var memberRolesAndStatus: MemberRolesAndStatus {
-        get { // conversion from Bool to dictionary
+        get { // conversion from Bool to MemberRolesAndStatus dictionary
             var memberRS = MemberRolesAndStatus(roles: [:], status: [:])
 
             if photographer.isDeceased { memberRS.status[.deceased] = true }

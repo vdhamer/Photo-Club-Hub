@@ -46,17 +46,17 @@ public struct FotobondMemberNumber: Equatable {
     }
 
     // format is DD.CC.MMM where D="department" and C=club and M=member and all are padded with leading 0's
-    // example: 1610123 -> "16.10.123" (Brabant Oost)
+    // example: 3004321 -> "Pers.4321" (weird exception handled by 2nd guard statement)
+    // example: 1610123 -> "16.10.123" (Brabant Oost) This is used in comments below
     // example:  304123 -> "03.04.123" (Drenthe - Vechtdal)
-    // example: 3004321 -> "Pers.4321" (weird exception)
     public var display: String {
-        guard let id else { return "N/A" }
-        guard id % 1000000 != 3_000_000 else { return "Pers.\(id.description.suffix(4))" }
+        guard let id else { return "N/A" } // unwrap id
+        guard (id - (id % 10_000)) != 3_000_000 else { return "Pers.\(id.description.suffix(4))" }
 
-        let afdelingNr: Int32 = (id - (id % 100_000)) / 100_000
-        let remainder: Int32 = id - afdelingNr * 100_000
-        let clubNr: Int32 = remainder - (remainder - remainder % 100) / 100
-        let memberNr3: Int32 = remainder % 1_000
-        return String(format: "%02d.%02d.%03d", afdelingNr, clubNr, memberNr3)
+        let afdelingNr: Int32 = (id - (id % 100_000)) / 100_000 // (1610_123 - 10_123) / 100_000 = 16
+        let remainder: Int32 = id - (afdelingNr * 100_000) // 1610_123 - 1600_000 = 10_123
+        let clubNr: Int32 = (remainder - (remainder % 1000)) / 1000 // (10_123 - 123) / 1_000 = 10
+        let memberNr3: Int32 = remainder % 1_000 // 1610_123 % 1_000 = 123
+        return String(format: "%02d.%02d.%03d", afdelingNr, clubNr, memberNr3) // "16.10.123"
     }
 }

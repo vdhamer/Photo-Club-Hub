@@ -95,7 +95,7 @@ import CoreData // for NSManagedObjectContext
         fetchRequest.predicate = predicate
         let organizations: [Organization] = (try? context.fetch(fetchRequest)) ?? []
 
-        #expect(Expertise.count(context: bgContext) == 3)
+        #expect(Expertise.count(context: bgContext) == 5)
         #expect(PhotographerExpertise.count(context: bgContext, expertiseID: "Landscape") == 1)
 
         #expect(organizations.count == 1)
