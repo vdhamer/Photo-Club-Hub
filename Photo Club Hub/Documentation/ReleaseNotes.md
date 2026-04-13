@@ -1,5 +1,15 @@
 ### 2.9.4 (GitHub commit ???????) ??-05-2026
 
+USER-FACING
+
+* TODO: display expertises on Photographers screen
+* TODO: more search functionality on Photographers screen
+* TODO: more search functionality on Portfolio screen
+
+STRUCTURAL
+
+* TODO: add test for Include feature
+
 This build #4658 was made using Xcode 26.4 and is intended for the App Store.
 Amount of code and data lines changed since previous release: 0 additions and 0 deletions in 0 files.
 
@@ -9,26 +19,20 @@ Amount of code and data lines changed since previous release: 0 additions and 0 
 
 USER-FACING
 
-* TODO: toggle to switch between FeaturedImage and PhotographerImage
-* TODO: display expertises on Photographers screen
-* TODO: more search functionality on Photographers screen
-* TODO: more search functionality on Portfolio screen
-
-STRUCTURAL
-
-* TODO: add test for Include feature
+* TODO: allow useer to toggle between seeing FeaturedImage and PhotographerImage <<<<<
 
 CODE MAINTENANCE
 
 * Fixed 1 test ("Parse TemplateMin.level2.json").
-* Tested with iOS 26.5 beta (23F5043g), and Xcode 26.5 beta 1 (17F5012f).
+* Tested with iOS 26.5 beta (23F5043g), and Xcode 26.5 beta 1 (17F5012f) and iOS 26.4.1 (23E254)
 * Fixed GitHub merging issue (push and fetch stopped working from within Xcode).
+* TODO: Sync code with Photo Club Hub HTML. <<<<<
 * Sync code with Photo Club Hub HTML code.
 
 DATA MAINTENANCE
 
 * Updated info for fgOirschot
-* fcBorgerOdoorn is no longer a member of the Dutch Fotobond
+* Club fcBorgerOdoorn is no longer a member of the Dutch Fotobond. Unclear if they still exist as a club.
 
 DOCUMENTATION MAINTENANCE
 
