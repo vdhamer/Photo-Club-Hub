@@ -57,10 +57,25 @@ struct FetchAndProcessFile {
                                                     _ useOnlyInBundleFile: Bool,
                                                     _ isBeingTested: Bool,
                                                     _ includeFilePath: [String]) -> Void) {
-        bgContext.perform { [self] in // run (both fetching and processing) on requested background thread
-            let nameWithSubtype: String = (fileSelector.fileName) + "." + fileSubType // e.g. "root.level1"
+        bgContext.perform { [self] in // run on requested background thread
+            let nameWithSubtype = (fileSelector.fileName) + "." + fileSubType // e.g. "root.level1"
 
-            let bundle: Bundle = Bundle.main // There is a fancier version of this in Photo Club Hub Data package
+            // bundle is overwritten by Test Bundle if fileSelector.isBeingTested
+            var bundle: Bundle = Bundle(for: Dummy.self) // was Bundle.module, but .main works at app level
+
+            if fileSelector.isBeingTested {
+                let testUrl = bundle.bundleURL.deletingLastPathComponent().appending( // propagate to PCH HTML
+                    path: "Photo Club Hub Data_Photo Club Hub DataTests.bundle")
+                let testBundle: Bundle? = Bundle(url: testUrl)
+                guard testBundle != nil else {
+                    fatalError("""
+                               Failed to find URL to test bundle \
+                               \(fileSelector.fileName).\(fileSubType).\(fileType) because testBundle is nil.
+                               """)
+                }
+                bundle = testBundle!
+            }
+
             let fileInBundleURL: URL? = bundle.url(forResource: nameWithSubtype, withExtension: fileType)
 
             guard fileInBundleURL != nil else {
@@ -78,12 +93,14 @@ struct FetchAndProcessFile {
                 remoteFileURL: URL(string: Self.dataSourcePath + fileName // e.g., "fgDeGender" or "root"
                                    + "." + fileSubType // e.g., ".level0" or ".level1" or ".level2"
                                    + "." + fileType)!, // ".json"
-                fileInBundleURL: fileInBundleURL!, // forced unwrap is safe due to guard above
+                fileInBundleURL: fileInBundleURL!, // forced unwrap is safe (due to aobve guard statement)
                 useOnlyInBundleFile: useOnlyInBundleFile
             )
             fileContentProcessor(bgContext, data, fileSelector, useOnlyInBundleFile, isBeingTested, includeFilePath)
         }
     }
+
+    private class Dummy {} // target for Bundle(for:). This has to be a class, so we can't use FetchAndProcessFile.self
 
     /// Attempts to read the file from the remote URL (unless `useOnlyInBundleFile` is true),
     /// falling back to the bundled resource if the network read fails.

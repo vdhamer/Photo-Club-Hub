@@ -85,7 +85,7 @@ public class Level0JsonReader {
                 ifDebugFatalError("JSON Expertise doesn't have any localized names", file: #fileID, line: #line)
                 continue  // if name doesn't exist, skip the expertise
             }
-            let jsonExpertiseNames = jsonExpertise["name"].arrayValue // dictionary of localized names for the expertise
+            let jsonExpertiseNames = jsonExpertise["name"].arrayValue // dictionary of localized names for an expertise
 
             // Must insist on having at least one language for which jsonExpertise has a localized name
             guard jsonExpertiseNames.count > 0,
