@@ -116,6 +116,22 @@ struct PreferencesView1718: View {
                                           comment: "Label of toggle in Preferences"),
                                    isOn: $localPreferences.showExternalCoaches)
                         }
+                        HStack {
+                            Image(systemName: "photo")
+                                .foregroundStyle(.memberPortfolioColor)
+                            Picker(String(localized: "Thumbnail",
+                                          table: "PhotoClubHub.SwiftUI",
+                                          comment: "Picker to display featuredImage or photographerImage"),
+                                   selection: $localPreferences.showPhotographerImage) {
+                                Text(String(localized: "photographerImage",
+                                            table: "PhotoClubHub.SwiftUI",
+                                            comment: "Label of picker item")).tag(true)
+                                Text(String(localized: "featuredImage",
+                                            table: "PhotoClubHub.SwiftUI",
+                                            comment: "Label of picker item")).tag(false)
+                            }
+                                   .pickerStyle(.automatic)
+                        }
                     }) // end of Member Categories section
 
                     Section(header: Text("Organizations",
