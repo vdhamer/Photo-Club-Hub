@@ -117,9 +117,9 @@ struct PreferencesView1718: View {
                                    isOn: $localPreferences.showExternalCoaches)
                         }
                         HStack {
-                            Image(systemName: "photo")
-                                .foregroundStyle(.memberPortfolioColor)
-                            Picker(String(localized: "Thumbnail",
+                            Image(systemName: "photo.artframe")
+                                .foregroundStyle(.gray, .memberPortfolioColor, .red)
+                            Picker(String(localized: "ThumbnailMembers",
                                           table: "PhotoClubHub.SwiftUI",
                                           comment: "Picker to display featuredImage or photographerImage"),
                                    selection: $localPreferences.showPhotographerImage) {
@@ -130,7 +130,6 @@ struct PreferencesView1718: View {
                                             table: "PhotoClubHub.SwiftUI",
                                             comment: "Label of picker item")).tag(false)
                             }
-                                   .pickerStyle(.automatic)
                         }
                     }) // end of Member Categories section
 
@@ -237,6 +236,27 @@ struct PreferencesView1718: View {
                                     data: SemanticColor.palette,
                                     selection: $localPreferences.highlightColor
                                 )
+                            }
+                        }
+                    })
+
+                    Section(header: Text("Photographers",
+                                         tableName: "PhotoClubHub.SwiftUI",
+                                         comment: "In Preferences, section title"),
+                            content: {
+                        HStack {
+                            Image(systemName: "photo.artframe")
+                                .foregroundStyle(.gray, .memberPortfolioColor, .red)
+                            Picker(String(localized: "ThumbnailPhotographers",
+                                          table: "PhotoClubHub.SwiftUI",
+                                          comment: "Picker to display featuredImage or photographerImage"),
+                                   selection: $localPreferences.showPhotographerImage) {
+                                Text(String(localized: "photographerImage",
+                                            table: "PhotoClubHub.SwiftUI",
+                                            comment: "Label of picker item")).tag(true)
+                                Text(String(localized: "featuredImage",
+                                            table: "PhotoClubHub.SwiftUI",
+                                            comment: "Label of picker item")).tag(false)
                             }
                         }
                     })

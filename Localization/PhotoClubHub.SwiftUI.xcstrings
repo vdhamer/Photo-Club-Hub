@@ -825,7 +825,7 @@
       }
     },
     "Photographers" : {
-      "comment" : "Title of page with list of photographers",
+      "comment" : "In Preferences, section title\nTitle of page with list of photographers",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1215,19 +1215,108 @@
         }
       }
     },
-    "Thumbnail" : {
+    "ThumbnailMembers" : {
       "comment" : "Picker to display featuredImage or photographerImage",
       "localizations" : {
         "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Thumbnail"
+          "variations" : {
+            "device" : {
+              "ipad" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Thumbnail image shows"
+                }
+              },
+              "iphone" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Thumbnail"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Thumbnail"
+                }
+              }
+            }
           }
         },
         "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Thumbnail"
+          "variations" : {
+            "device" : {
+              "ipad" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Thumbnail plaatje toont"
+                }
+              },
+              "iphone" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Thumbnail"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Thumbnail"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "ThumbnailPhotographers" : {
+      "comment" : "Picker to display featuredImage or photographerImage",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "device" : {
+              "ipad" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Thumbnail images show"
+                }
+              },
+              "iphone" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Thumbnails"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Thumbnails"
+                }
+              }
+            }
+          }
+        },
+        "nl" : {
+          "variations" : {
+            "device" : {
+              "ipad" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Thumbnail plaatjes tonen"
+                }
+              },
+              "iphone" : {
+                "stringUnit" : {
+                  "state" : "needs_review",
+                  "value" : "Thumbnail"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "needs_review",
+                  "value" : "Thumbnail"
+                }
+              }
+            }
           }
         }
       }

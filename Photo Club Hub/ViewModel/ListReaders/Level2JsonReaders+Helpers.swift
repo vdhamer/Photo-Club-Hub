@@ -98,13 +98,6 @@ extension Level2JsonReader {
                                                                             key: "website")
         let photographerImage: URL? = Level2JsonReader.jsonOptionalsToURL(jsonOptionals: jsonOptionals,
                                                                           key: "photographerImage")
-        if let photographerImage { // TODO
-            print("""
-                  photographerImage: \(photographer.fullNameFirstLast) \
-                  maps to \(club.fullName) \
-                  for club \(club.nickName)
-                  """)
-        }
 
         let featuredImage: URL? = Level2JsonReader.jsonOptionalsToURL(jsonOptionals: jsonOptionals,
                                                                       key: "featuredImage")
