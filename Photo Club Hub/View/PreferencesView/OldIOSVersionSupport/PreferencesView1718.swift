@@ -13,17 +13,12 @@ import SemanticColorPicker
 struct PreferencesView1718: View {
 
     @Binding var preferences: PreferencesStruct
-    @State private var localPreferences = PreferencesStruct.defaultValue // parameters for various Toggles()
 
     init(preferences: Binding<PreferencesStruct>) {
         _preferences = preferences
-
-        // https://stackoverflow.com/questions/57060854/how-keep-a-copy-of-original-binding-value
-        _localPreferences = State(initialValue: preferences.wrappedValue)
     }
 
     var body: some View {
-
         PreferencesViewBody(preferences: $preferences)
     }
 
