@@ -13,13 +13,19 @@ import SemanticColorPicker
 struct PreferencesView1718: View {
 
     @Binding var preferences: PreferencesStruct
+    @State var localPreferences: PreferencesStruct // in case the view gets a Cancel option
 
     init(preferences: Binding<PreferencesStruct>) {
         _preferences = preferences
+        localPreferences = preferences.wrappedValue
     }
 
     var body: some View {
         PreferencesViewBody(preferences: $preferences)
+            .onDisappear {
+                // need to update Bindings for showPhotoClubsList etc
+                preferences = localPreferences
+            }
     }
 
 }
