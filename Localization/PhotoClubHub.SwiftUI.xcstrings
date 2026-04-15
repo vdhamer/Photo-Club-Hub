@@ -399,6 +399,23 @@
         }
       }
     },
+    "featuredImage" : {
+      "comment" : "Label of picker item",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "featuredImage"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "featuredImage"
+          }
+        }
+      }
+    },
     "frameSize = [%@,%@]" : {
       "comment" : "Used in DebugPanel. Can't avoid localization here. Just use original as translation",
       "localizations" : {
@@ -790,8 +807,25 @@
         }
       }
     },
+    "photographerImage" : {
+      "comment" : "Label of picker item",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "photographerImage"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "photographerImage"
+          }
+        }
+      }
+    },
     "Photographers" : {
-      "comment" : "Title of page with list of photographers",
+      "comment" : "In Preferences, section title\nTitle of page with list of photographers",
       "localizations" : {
         "en" : {
           "stringUnit" : {
