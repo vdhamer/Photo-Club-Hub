@@ -234,8 +234,7 @@ struct PreferencesView1718: View {
                                            table: "PhotoClubHub.SwiftUI",
                                            comment: "Label of color picker in Preferences"),
                                     data: SemanticColor.palette,
-                                    selection: $localPreferences.highlightColor
-                                )
+                                    selection: $localPreferences.highlightColor)
                             }
                         }
                     })
@@ -288,7 +287,7 @@ struct PreferencesView1718: View {
             }
             .apply {
                 if #available(iOS 18.0, *) {
-                    $0.presentationSizing(.form)
+                    $0.presentationSizing(.form) // this is why there are separate PreferencesView2626 and PreferencesView1718 files
                 } else {
                     $0
                 }
@@ -298,7 +297,7 @@ struct PreferencesView1718: View {
 
 }
 
-// believe it or not, the following Preview actually works
+// believe it or not, the following Preview does work
 @available(iOS, obsoleted: 19.0, message: "Please use 'PreferencesView2626_Previews' for versions above iOS 18.x")
 struct PreferencesView1718_Previews: PreviewProvider {
     @State static private var title = "PreferencesView Preview"
