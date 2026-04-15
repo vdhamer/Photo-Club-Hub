@@ -1247,8 +1247,8 @@
             "device" : {
               "ipad" : {
                 "stringUnit" : {
-                  "state" : "needs_review",
-                  "value" : "Thumbnails tonen"
+                  "state" : "translated",
+                  "value" : "Thumbnail plaatje toont"
                 }
               },
               "iphone" : {
@@ -1301,7 +1301,7 @@
               "ipad" : {
                 "stringUnit" : {
                   "state" : "translated",
-                  "value" : "Thumbnails tonen"
+                  "value" : "Thumbnail plaatjes tonen"
                 }
               },
               "iphone" : {
