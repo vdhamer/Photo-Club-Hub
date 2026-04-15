@@ -11,7 +11,7 @@ import SwiftUI
 @MainActor
 struct PreferencesView2626: View {
 
-    @Binding var preferences: PreferencesStruct
+    @Binding var preferences: PreferencesStruct // parameters for various Toggles and Pickers
     @State var localPreferences: PreferencesStruct // in case the view gets a Cancel option
 
     init(preferences: Binding<PreferencesStruct>) {

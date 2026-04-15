@@ -6,13 +6,12 @@
 //
 
 import SwiftUI
-import SemanticColorPicker
 
 @available(iOS, obsoleted: 19.0, message: "Please use 'PreferencesView2626' for versions above iOS 18.x")
 @MainActor
 struct PreferencesView1718: View {
 
-    @Binding var preferences: PreferencesStruct
+    @Binding var preferences: PreferencesStruct // parameters for various Toggles and Pickers
     @State var localPreferences: PreferencesStruct // in case the view gets a Cancel option
 
     init(preferences: Binding<PreferencesStruct>) {
