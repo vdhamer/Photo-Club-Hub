@@ -20,7 +20,7 @@ struct PreferencesView1718: View {
     }
 
     var body: some View {
-        PreferencesViewBody(preferences: $preferences)
+        PreferencesView(preferences: $preferences)
             .onDisappear {
                 // need to update Bindings for showPhotoClubsList etc
                 preferences = localPreferences

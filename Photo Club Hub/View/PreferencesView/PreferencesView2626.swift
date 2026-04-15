@@ -20,7 +20,7 @@ struct PreferencesView2626: View {
     }
 
     var body: some View {
-        PreferencesViewBody(preferences: $preferences)
+        PreferencesView(preferences: $preferences)
             .presentationSizing(.page) // iOS 26+
             .onDisappear {
                 // need to update Bindings for showPhotoClubsList etc
