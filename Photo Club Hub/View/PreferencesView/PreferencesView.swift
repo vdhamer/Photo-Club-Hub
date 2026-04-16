@@ -18,26 +18,30 @@ struct PreferencesView: View {
                                comment: "Title of screen with toggles to adjust preferences")
 
     var body: some View {
-        GeometryReader(content: { _ in
-            NavigationStack {
-                List {
-                    PreferencesViewMembersSection(localPreferences: $localPreferences)
-                    PreferencesViewOrganizationsSection(localPreferences: $localPreferences)
-                    PreferencesViewPhotographersSection(localPreferences: $localPreferences)
-                    PreferencesViewAdvancedSection(localPreferences: $localPreferences)
-                }
-                .navigationTitle(title)
+        NavigationStack {
+            List {
+                PreferencesViewMembersSection(localPreferences: $localPreferences)
+                PreferencesViewOrganizationsSection(localPreferences: $localPreferences)
+                PreferencesViewPhotographersSection(localPreferences: $localPreferences)
+                PreferencesViewAdvancedSection(localPreferences: $localPreferences)
             }
-            .onDisappear {
-                // need to update Bindings for showPhotoClubsList etc
-                preferences = localPreferences
-            }
-        })
+            .navigationTitle(title)
+        }
+        .onDisappear {
+            // need to update Bindings for showPhotoClubsList etc
+            preferences = localPreferences
+        }
+    }
+}
+
+private struct PreferencesViewPreviewHost: View {
+    @StateObject var model = PreferencesViewModel()
+
+    var body: some View {
+        PreferencesView(preferences: $model.preferences)
     }
 }
 
 #Preview {
-    @Previewable @StateObject var model = PreferencesViewModel()
-
-    PreferencesView(preferences: $model.preferences)
+    PreferencesViewPreviewHost()
 }
