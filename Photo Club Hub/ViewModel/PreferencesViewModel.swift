@@ -218,6 +218,8 @@ struct PreferencesStruct { // order in which they are shown on Preferences page
 
 }
 
+extension PreferencesStruct: Equatable { }
+
 extension String {
     func predicateOrAppend(suffix: String) -> String {
         guard self != "" else { return suffix }

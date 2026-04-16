@@ -19,7 +19,8 @@ Amount of code and data lines changed since previous release: 0 additions and 0 
 
 USER-FACING
 
-* TODO: allow useer to toggle between seeing FeaturedImage and PhotographerImage <<<<<
+* User can switch between seeing FeaturedImage and PhotographerImage in thumbnails for club members.
+* Added `Done` and `Cancel` buttons in titlebar of Preferences screen.
 
 CODE MAINTENANCE
 
