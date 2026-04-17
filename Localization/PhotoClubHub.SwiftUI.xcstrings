@@ -330,6 +330,23 @@
         }
       }
     },
+    "Cancel" : {
+      "comment" : "Dismiss preferences without applying changes",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancel"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Annuleren"
+          }
+        }
+      }
+    },
     "Clubs" : {
       "comment" : "Title of page with maps for Clubs",
       "localizations" : {
@@ -378,6 +395,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bron: in-app ledenlijst."
+          }
+        }
+      }
+    },
+    "Done" : {
+      "comment" : "Apply preference changes and dismiss",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Done"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sluiten"
           }
         }
       }
@@ -939,6 +973,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Prelude"
+          }
+        }
+      }
+    },
+    "Save" : {
+      "comment" : "Apply preference changes and dismiss",
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opslaan"
           }
         }
       }
