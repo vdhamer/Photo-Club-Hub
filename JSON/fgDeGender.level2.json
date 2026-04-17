@@ -39,7 +39,12 @@
             "optional": {
                 "level3URL": "https://www.fcDeGender.nl/portfolios/Albert_Koning/",
                 "membershipStartDate": "2022-11-17",
+                "membershipEndDate": "2026-04-14",
                 "photographerImage": "https://www.fcdegender.nl/wp-content/uploads/Albert-Koning.jpg",
+                "status": {
+                    "isDeceased": true,
+                    "isFormerMember": true
+                },
                 "nlSpecific": {
                     "fotobondNumber": 1620108
                 },
