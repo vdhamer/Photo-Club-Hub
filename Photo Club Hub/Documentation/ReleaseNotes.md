@@ -32,7 +32,7 @@ CODE MAINTENANCE
 
 DATA MAINTENANCE
 
-* Updated info for fgOirschot
+* Updated info for fgOirschot and fgDeGender
 * Club fcBorgerOdoorn is no longer a member of the Dutch Fotobond. Unclear if they still exist as a club.
 
 DOCUMENTATION MAINTENANCE
