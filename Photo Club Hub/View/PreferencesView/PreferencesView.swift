@@ -60,7 +60,7 @@ struct PreferencesView: View {
                     Button(isDirty ? String(localized: "Cancel",
                                             table: "PhotoClubHub.SwiftUI",
                                             comment: "Dismiss preferences without applying changes") :
-                                     String(localized: "No changes to cancel",
+                                     String(localized: "No changes to undo",
                                             table: "PhotoClubHub.SwiftUI",
                                             comment: "Explanation why Cancel buton is greyed out")
                     ) {
@@ -80,7 +80,7 @@ struct PreferencesView: View {
                 ToolbarItem(placement: .secondaryAction) {
                     Button(String(localized: "Reset to defaults",
                                   table: "PhotoClubHub.SwiftUI",
-                                  comment: "Button to reset preferences to factory defaults")
+                                  comment: "Button to reset preferences to original settings")
                     ) {
                         preferences = PreferencesStruct.defaultValue
                         dismiss()

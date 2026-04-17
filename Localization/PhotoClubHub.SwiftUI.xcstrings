@@ -334,15 +334,51 @@
       "comment" : "Dismiss preferences without applying changes",
       "localizations" : {
         "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cancel changes"
+          "variations" : {
+            "device" : {
+              "ipad" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Undo changes"
+                }
+              },
+              "iphone" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Undo changes"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Undo changes"
+                }
+              }
+            }
           }
         },
         "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Wijzigingen annuleren"
+          "variations" : {
+            "device" : {
+              "ipad" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Wijzigingen ongedaan maken"
+                }
+              },
+              "iphone" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Undo"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Undo"
+                }
+              }
+            }
           }
         }
       }
@@ -688,13 +724,37 @@
         }
       }
     },
-    "No changes to cancel" : {
+    "No changes to undo" : {
       "comment" : "Explanation why Cancel buton is greyed out",
       "localizations" : {
-        "nl" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Geen wijzigingen"
+            "value" : "No changes to undo"
+          }
+        },
+        "nl" : {
+          "variations" : {
+            "device" : {
+              "ipad" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Er is niets gewijzigd"
+                }
+              },
+              "iphone" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Geen wijzigingen"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Geen wijzigingen"
+                }
+              }
+            }
           }
         }
       }
@@ -989,18 +1049,18 @@
       }
     },
     "Reset to defaults" : {
-      "comment" : "Button to reset preferences to factory defaults",
+      "comment" : "Button to reset preferences to original settings",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Factory defaults"
+            "value" : "Set to app defaults"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Fabrieksinstellingen"
+            "value" : "Standaard instellingen"
           }
         }
       }
