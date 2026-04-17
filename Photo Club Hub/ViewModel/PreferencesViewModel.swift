@@ -34,7 +34,9 @@ class PreferencesViewModel: ObservableObject {
     /// The app's persisted user preferences. Changes are published to update dependent views and
     /// are used to derive Core Data predicates for filtering content.
     @Published("preferences", cancellableSet: &cancellableSet)
-    var preferences: PreferencesStruct = .defaultValue
+    var preferences: PreferencesStruct = PreferencesStruct.defaultValue
+
+    private var cancellables = Set<AnyCancellable>()
 }
 
 struct PreferencesStruct { // order in which they are shown on Preferences page
