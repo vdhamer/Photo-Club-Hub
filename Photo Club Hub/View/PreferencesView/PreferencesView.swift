@@ -35,23 +35,6 @@ struct PreferencesView: View {
             }
             .navigationTitle(title)
             .toolbar {
-                ToolbarItem(placement: .cancellationAction) {
-                    Button(String(localized: "Cancel",
-                                  table: "PhotoClubHub.SwiftUI",
-                                  comment: "Dismiss preferences without applying changes")
-                    ) {
-                        // Discard local changes and dismiss
-                        dismiss()
-                    }
-                    // .buttonStyle(.bordered) // gives round button on Xcode 26.5 beta 2
-                    .onChange(of: localPreferences) { _, newValue in
-                        isDirty = newValue != preferences // PreferencesStruct is Equatable
-                    }
-                    .onChange(of: preferences) { _, newValue in
-                        isDirty = localPreferences != newValue
-                    }
-                    .disabled(isDirty == false)
-                }
                 ToolbarItem(placement: .confirmationAction) {
                     Button(isDirty ? String(localized: "Save",
                                              table: "PhotoClubHub.SwiftUI",
@@ -71,6 +54,37 @@ struct PreferencesView: View {
                         dismiss()
                     }
                     .buttonStyle(.borderedProminent )
+                }
+
+                ToolbarItem(placement: .secondaryAction) {
+                    Button(isDirty ? String(localized: "Cancel",
+                                            table: "PhotoClubHub.SwiftUI",
+                                            comment: "Dismiss preferences without applying changes") :
+                                     String(localized: "No changes to cancel",
+                                            table: "PhotoClubHub.SwiftUI",
+                                            comment: "Explanation why Cancel buton is greyed out")
+                    ) {
+                        // Discard local changes and dismiss
+                        dismiss()
+                    }
+                    // .buttonStyle(.bordered) // gives round button on Xcode 26.5 beta 2
+                    .onChange(of: localPreferences) { _, newValue in
+                        isDirty = newValue != preferences // PreferencesStruct is Equatable
+                    }
+                    .onChange(of: preferences) { _, newValue in
+                        isDirty = localPreferences != newValue
+                    }
+                    .disabled(isDirty == false)
+                }
+
+                ToolbarItem(placement: .secondaryAction) {
+                    Button(String(localized: "Reset to defaults",
+                                  table: "PhotoClubHub.SwiftUI",
+                                  comment: "Button to reset preferences to factory defaults")
+                    ) {
+                        preferences = PreferencesStruct.defaultValue
+                        dismiss()
+                    }
                 }
             }
         }

@@ -17,10 +17,10 @@ Amount of code and data lines changed since previous release: 0 additions and 0 
 
 ### 2.9.3 (GitHub commit ???????) ??-04-2026
 
-USER-FACING
+PREFERENCES SCREEN
 
 * User can switch between seeing FeaturedImage and PhotographerImage in thumbnails for club members.
-* Added `Done` and `Cancel` buttons in titlebar of Preferences screen.
+* Added titlebar to Preferences screen with options to discard changes and revert to factory defaults.
 
 CODE MAINTENANCE
 

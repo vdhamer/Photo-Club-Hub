@@ -336,13 +336,13 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Cancel"
+            "value" : "Cancel changes"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Annuleren"
+            "value" : "Wijzigingen annuleren"
           }
         }
       }
@@ -688,6 +688,17 @@
         }
       }
     },
+    "No changes to cancel" : {
+      "comment" : "Explanation why Cancel buton is greyed out",
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geen wijzigingen"
+          }
+        }
+      }
+    },
     "No photo clubs or museums seem to be currently loaded.\nTry dragging down the Organizations screen to reload the default clubs." : {
       "comment" : "Hint to the user if the database returns zero Organizations.",
       "localizations" : {
@@ -973,6 +984,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Prelude"
+          }
+        }
+      }
+    },
+    "Reset to defaults" : {
+      "comment" : "Button to reset preferences to factory defaults",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Factory defaults"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fabrieksinstellingen"
           }
         }
       }
