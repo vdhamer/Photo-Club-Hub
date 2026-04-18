@@ -100,6 +100,7 @@
                 "status": {
                     "isFormerMember": true
                 },
+                "photographerImage": "https://www.fcdegender.nl/wp-content/uploads/Bert-Zantingh.jpg",
                 "membershipStartDate": "1996-01-01",
                 "membershipEndDate": "2025-03-31",
                 "expertises": [ "Architecture", "Drone" ]
@@ -175,6 +176,7 @@
                 "status": {
                     "isFormerMember": true
                 },
+                "photographerImage": "https://www.fcdegender.nl/wp-content/uploads/Gert-du-Bois.jpg",
                 "membershipStartDate": "2015-01-01",
                 "membershipEndDate": "2025-03-31",
                 "nlSpecific": {
@@ -307,6 +309,7 @@
                 "status": {
                     "isFormerMember": true
                 },
+                "photographerImage": "https://www.fcdegender.nl/wp-content/uploads/Mariet-Wielders.jpg",
                 "membershipStartDate": "2009-11-01",
                 "membershipEndDate": "2024-12-31",
                 "nlSpecific": {
@@ -345,6 +348,7 @@
                 "status": {
                     "isFormerMember": true
                 },
+                "photographerImage": "https://www.fcdegender.nl/wp-content/uploads/Martien-Leenders.jpg",
                 "membershipStartDate": "1990-01-01",
                 "membershipEndDate": "2024-12-31",
                 "nlSpecific": {
@@ -365,8 +369,8 @@
                 "status": {
                     "isHonoraryMember": true
                 },
-                "membershipStartDate": "1976-01-01",
                 "photographerImage": "https://www.fcDeGender.nl/wp-content/uploads/Miep-Franssen.jpg",
+                "membershipStartDate": "1976-01-01",
                 "nlSpecific": {
                     "fotobondNumber": 1620021
                 },
@@ -388,7 +392,7 @@
                     "isAdmin": true
                 },
                 "membershipStartDate": "2024-01-01",
-                "photographerImage": "https://www.fcDeGender.nl/wp-content/uploads/Peter-van-den-Hamer.jpg",
+                "photographerImage": "https://www.fcDeGender.nl/wp-content/uploads/Peter-van-den-Hamer.png",
                 "expertises": [ "Minimal", "Travel" ],
                 "nlSpecific": {
                     "fotobondNumber": 1620110
@@ -447,6 +451,7 @@
                 "status": {
                     "isFormerMember": true
                 },
+                "photographerImage": "https://www.fcDeGender.nl/wp-content/uploads/Rob-van-Doorn.jpg",
                 "nlSpecific": {
                     "fotobondNumber": 1620093
                 },

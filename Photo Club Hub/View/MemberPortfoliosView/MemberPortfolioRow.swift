@@ -70,7 +70,8 @@ struct MemberPortfolioRow: View {
                             .deceasedColor : .primary)
                 }
                 Spacer()
-                AsyncImage(url: member.featuredImageThumbnail) { phase in
+//                AsyncImage(url: member.featuredImageThumbnail) { phase in // TODO
+                AsyncImage(url: member.photographer.photographerImage) { phase in
                     if let image = phase.image {
                         image // Displays the loaded image
                             .resizable()
