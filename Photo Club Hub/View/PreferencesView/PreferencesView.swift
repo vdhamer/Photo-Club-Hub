@@ -36,38 +36,38 @@ struct PreferencesView: View {
             .navigationTitle(title)
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {
-                    Button(isDirty ? String(localized: "Save",
-                                             table: "PhotoClubHub.SwiftUI",
-                                             comment: "Apply preference changes and dismiss") :
-                                     String(localized: "Done",
-                                            table: "PhotoClubHub.SwiftUI",
-                                            comment: "Apply preference changes and dismiss")
-                    ) {
-                        // Commit changes and dismiss
-                        if isDirty {
-                            print("""
-                                  <\(preferences.showCurrentMembers)> \
-                                  <\(localPreferences.showCurrentMembers)> // TODO
-                                  """)
-                            preferences = localPreferences // this is were state of Preferences is persisted
+                    if isDirty {
+                        Button(String(localized: "Save",
+                                      table: "PhotoClubHub.SwiftUI",
+                                      comment: "Apply preference changes and dismiss")
+                        ) {
+                            preferences = localPreferences // this is where state of Preferences is persisted
+                            dismiss()
                         }
-                        dismiss()
+                        .buttonStyle(BorderedProminentButtonStyle())
+                        .controlSize(.small)
+                    } else {
+                        Button(String(localized: "Done",
+                                      table: "PhotoClubHub.SwiftUI",
+                                      comment: "Apply preference changes and dismiss")
+                        ) {
+                            dismiss()
+                        }
+                        .buttonStyle(BorderedButtonStyle()) // ternary operator doesn't work here
                     }
-                    .buttonStyle(.borderedProminent )
                 }
 
                 ToolbarItem(placement: .secondaryAction) {
                     Button(isDirty ? String(localized: "Cancel",
                                             table: "PhotoClubHub.SwiftUI",
                                             comment: "Dismiss preferences without applying changes") :
-                                     String(localized: "No changes to undo",
-                                            table: "PhotoClubHub.SwiftUI",
-                                            comment: "Explanation why Cancel buton is greyed out")
+                            String(localized: "No changes to undo",
+                                   table: "PhotoClubHub.SwiftUI",
+                                   comment: "Explanation why Cancel buton is greyed out")
                     ) {
                         // Discard local changes and dismiss
                         dismiss()
                     }
-                    // .buttonStyle(.bordered) // gives round button on Xcode 26.5 beta 2
                     .onChange(of: localPreferences) { _, newValue in
                         isDirty = newValue != preferences // PreferencesStruct is Equatable
                     }
@@ -87,6 +87,8 @@ struct PreferencesView: View {
                     }
                 }
             }
+            .animation(.easeOut(duration: 0.75), value: isDirty)
+            .controlSize(.small)
         }
     }
 }
