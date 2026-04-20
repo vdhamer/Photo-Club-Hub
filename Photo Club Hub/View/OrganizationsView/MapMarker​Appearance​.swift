@@ -36,7 +36,7 @@ public func selectMarkerTint(organization: Organization, selectedOrganization: O
 
     if organization.organizationType.isClub {
 
-        let appSettings = PreferencesViewModel().preferences /// persisted via UserDefaults via `@Published``
+        let appSettings = PreferencesViewModel().preferences /// PreferencesViewModel is marked as `@Published`
 
         guard !(appSettings.highlightNonFotobondNL == true && appSettings.highlightFotobondNL == true) else {
             ifDebugFatalError("Fotobond and non-Fotobond toggle are both enabled. That shouldn't happen.")
