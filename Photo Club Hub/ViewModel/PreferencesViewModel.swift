@@ -9,7 +9,7 @@ import CoreData // for NSManagedObject
 import Combine // for AnyCancellable
 import SemanticColorPicker // for SemanticColor
 
-/// A view model that manages the user's preferences for filtering members throughout the app.
+/// A view model that manages the user's preferences for filtering presentation preferences throughout the app.
 ///
 /// `PreferencesViewModel` is an `ObservableObject` that publishes a single `PreferencesStruct` value, which
 /// contains all toggleable options used to build Core Data predicates for members, photographers, and organizations.
