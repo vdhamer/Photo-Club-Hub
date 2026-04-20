@@ -116,8 +116,7 @@ struct MemberPortfolioRow: View {
             let viewContext = persistenceController.container.viewContext
 
             let personName = PersonName(givenName: "Jan", infixName: "de", familyName: "Korte")
-            let photographerOptionalFields = PhotographerOptionalFields(
-            )
+            let photographerOptionalFields = PhotographerOptionalFields(isDeceased: true)
             let photographer = Photographer.findCreateUpdate(
                 context: viewContext,
                 personName: personName,
@@ -134,7 +133,8 @@ struct MemberPortfolioRow: View {
                 optionalFields: OrganizationOptionalFields()
             )
 
-            let memberRolesAndStatus = MemberRolesAndStatus(roles: [.chairman: true], status: [:])
+            let memberRolesAndStatus = MemberRolesAndStatus(roles: [.chairman: true],
+                                                            status: [.former: true])
             let member = MemberPortfolio.findCreateUpdate(
                 bgContext: viewContext,
                 organization: organization,
