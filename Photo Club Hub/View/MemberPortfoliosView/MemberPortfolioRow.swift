@@ -69,7 +69,7 @@ struct MemberPortfolioRow: View {
                             .deceasedColor : .primary)
                 }
                 Spacer()
-//                AsyncImage(url: member.featuredImageThumbnail) { phase in // TODO
+                AsyncImage(url: chooseImageURL(member: member)) { phase in
                 AsyncImage(url: member.photographer.photographerImage) { phase in
                     if let image = phase.image {
                         image // Displays the loaded image
@@ -98,7 +98,7 @@ struct MemberPortfolioRow: View {
         } // NavigationLink
     } // body of View
 
-    func chooseColor(defaultColor: Color, isDeceased: Bool) -> Color {
+    private func chooseColor(defaultColor: Color, isDeceased: Bool) -> Color {
         if isDeceased {
             return .deceasedColor
         } else {
