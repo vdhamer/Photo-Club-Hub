@@ -43,7 +43,7 @@ struct PreludeView1718: View {
                         willMoveToNextScreen = true
                     }
                 }
-                .navigate(to: MemberPortfolioListView1718(preferences: model.preferences)
+                .navigate(to: MemberPortfolioListView1718()
                                 .navigationBarTitle(String(localized: "Members",
                                                            table: "PhotoClubHub.SwiftUI",
                                                            comment: "Title of page showing member portfolios")),

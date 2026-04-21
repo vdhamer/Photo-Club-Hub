@@ -69,8 +69,7 @@ struct MemberPortfolioRow: View {
                             .deceasedColor : .primary)
                 }
                 Spacer()
-                AsyncImage(url: chooseImageURL(member: member)) { phase in
-                AsyncImage(url: member.photographer.photographerImage) { phase in
+                AsyncImage(url: chooseImageURL(member: member).url) { phase in
                     if let image = phase.image {
                         image // Displays the loaded image
                             .resizable()
@@ -104,6 +103,20 @@ struct MemberPortfolioRow: View {
         } else {
             return defaultColor // .primary
         }
+    }
+
+    private func chooseImageURL(member: MemberPortfolio) -> (url: URL, isPhotographerImage: Bool) {
+        let appPreferences = PreferencesViewModel().preferences
+
+        guard appPreferences.showPhotographerImage else {
+            return (member.featuredImageThumbnail, false)
+        }
+
+        if let photographerImageURL = member.photographer.photographerImage {
+            return (photographerImageURL, true)
+        }
+
+        return (member.featuredImageThumbnail, false)
     }
 
 }
