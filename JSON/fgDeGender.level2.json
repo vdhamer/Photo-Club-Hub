@@ -276,6 +276,20 @@
 
         {
             "name": {
+                "givenName": "Jos",
+                "infixName": "",
+                "familyName": "Verhoosel"
+            },
+            "optional": {
+                "level3URL": "https://www.fcDeGender.nl/portfolios/Jos_Verhoosel/",
+                "membershipStartDate": "2026-04-21",
+                "expertises": [ ],
+                "nlSpecific": { }
+            }
+        },
+
+        {
+            "name": {
                 "givenName": "Lex",
                 "infixName": "",
                 "familyName": "Augusteijn"
