@@ -81,7 +81,7 @@ private let isBeingTested = true
                              fileName: "root",
                              isBeingTested: isBeingTested,
                              useOnlyInBundleFile: false)
-        #expect(Expertise.count(context: bgContext) == 26)
+        #expect(Expertise.count(context: bgContext) == 29)
     }
 
     // Read language.level0.json.

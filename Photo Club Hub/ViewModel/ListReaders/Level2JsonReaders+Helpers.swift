@@ -98,7 +98,6 @@ extension Level2JsonReader {
                                                                             key: "website")
         let photographerImage: URL? = Level2JsonReader.jsonOptionalsToURL(jsonOptionals: jsonOptionals,
                                                                           key: "photographerImage")
-
         let featuredImage: URL? = Level2JsonReader.jsonOptionalsToURL(jsonOptionals: jsonOptionals,
                                                                       key: "featuredImage")
         let level3URL: URL? = Level2JsonReader.jsonOptionalsToURL(jsonOptionals: jsonOptionals,
