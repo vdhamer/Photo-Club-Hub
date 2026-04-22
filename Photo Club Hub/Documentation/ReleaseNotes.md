@@ -25,7 +25,7 @@ PREFERENCES SCREEN
 CODE MAINTENANCE
 
 * Fixed 1 test ("Parse TemplateMin.level2.json").
-* Tested with iOS 26.5 beta (23F5054d), and Xcode 26.5 beta 2 (17F5022i) and iOS 26.4.1 (23E254)
+* Tested with iOS 26.5 beta (23F5054d), and Xcode 26.5 beta 2 (17F5022i) and iOS 26.4.1 (23E254a)
 * Fixed GitHub merging issue (push and fetch stopped working from within Xcode).
 * Sync code with Photo Club Hub HTML.
 * Sync code with Photo Club Hub HTML code.
@@ -40,7 +40,7 @@ DOCUMENTATION MAINTENANCE
 * Fixed broken links in Level2_aanmaken_NL.md and updated Level2_creation_NL.md
 * Updated documentation of Include feature (Level1_aanmaken_NL.md). No EN translation yet.
 
-This build #4658 was made using Xcode 26.4 and is intended for the App Store.
+This build #4658 was made using Xcode 26.4.1 and is intended for testing only.
 Amount of code and data lines changed since previous release: 0 additions and 0 deletions in 0 files.
 
 ---------------------------------------------------------------------------
