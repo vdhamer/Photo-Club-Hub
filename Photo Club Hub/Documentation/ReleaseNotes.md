@@ -25,7 +25,7 @@ PREFERENCES SCREEN
 CODE MAINTENANCE
 
 * Fixed 1 test ("Parse TemplateMin.level2.json").
-* Tested with iOS 26.5 beta (23F5054d), and Xcode 26.5 beta 2 (17F5022i) and iOS 26.4.1 (23E254)
+* Tested with iOS 26.5 beta (23F5054d), and Xcode 26.5 beta 2 (17F5022i) and iOS 26.4.1 (23E254a)
 * Fixed GitHub merging issue (push and fetch stopped working from within Xcode).
 * Sync code with Photo Club Hub HTML.
 * Sync code with Photo Club Hub HTML code.
