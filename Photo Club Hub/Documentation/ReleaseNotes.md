@@ -15,7 +15,7 @@ Amount of code and data lines changed since previous release: 0 additions and 0 
 
 ---------------------------------------------------------------------------
 
-### 2.9.3 (GitHub commit ???????) ??-04-2026
+### 2.9.3 (GitHub commit e601453) 22-04-2026
 
 PREFERENCES SCREEN
 
