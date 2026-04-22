@@ -105,20 +105,6 @@ struct MemberPortfolioRow: View {
         }
     }
 
-    private func chooseImageURL(member: MemberPortfolio) -> (url: URL, isPhotographerImage: Bool) {
-        let appPreferences = PreferencesViewModel().preferences
-
-        guard appPreferences.showPhotographerImage else {
-            return (member.featuredImageThumbnail, false)
-        }
-
-        if let photographerImageURL = member.photographer.photographerImage {
-            return (photographerImageURL, true)
-        }
-
-        return (member.featuredImageThumbnail, false)
-    }
-
 }
 
  struct MemberPortfolioRow_Previews: PreviewProvider { // this preview actually works!

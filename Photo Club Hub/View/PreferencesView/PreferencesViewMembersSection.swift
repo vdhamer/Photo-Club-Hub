@@ -100,11 +100,11 @@ struct PreferencesViewMembersSection: View {
                 Picker(String(localized: "ThumbnailMembers",
                               table: "PhotoClubHub.SwiftUI",
                               comment: "Picker to display featuredImage or photographerImage"),
-                       selection: $localPreferences.showPhotographerImage) {
-                    Text(String(localized: "photographerImage",
+                       selection: $localPreferences.preferenceForFeaturedImage) {
+                    Text(String(localized: "featuredImage",
                                 table: "PhotoClubHub.SwiftUI",
                                 comment: "Label of picker item")).tag(true)
-                    Text(String(localized: "featuredImage",
+                    Text(String(localized: "photographerImage",
                                 table: "PhotoClubHub.SwiftUI",
                                 comment: "Label of picker item")).tag(false)
                 }
