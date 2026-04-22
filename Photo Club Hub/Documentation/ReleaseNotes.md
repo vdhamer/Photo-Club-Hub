@@ -19,23 +19,24 @@ Amount of code and data lines changed since previous release: 0 additions and 0 
 
 PREFERENCES SCREEN
 
-* User can switch between seeing FeaturedImage and PhotographerImage in thumbnails for club members.
+* User can switch between seeing FeaturedImage and PhotographerImage as thumbnails for club members.
 * New titlebar on Preferences screen with options to discard changes and revert to factory defaults.
 
 MEMBERS SCREEN
 
 * Thumbnails can show a portrait of the photographer (instead of a featured image) if available. See PREFERENCES.
+* Fixed title of screen on iOS 17 and iOS 18.
 
 CODE MAINTENANCE
 
 * Fixed 1 test ("Parse TemplateMin.level2.json").
-* Tested with iOS 26.5 beta (23F5054d), and Xcode 26.5 beta 2 (17F5022i) and iOS 26.4.1 (23E254a)
+* Tested with iOS 26.5 beta (23F5054d), and Xcode 26.5 beta 2 (17F5022i) and iOS 26.4.1 (23E254a).
 * Fixed GitHub merging issue (push and fetch stopped working from within Xcode).
 * Sync code with Photo Club Hub HTML code.
 
 DATA MAINTENANCE
 
-* Updated info for clubs fgDeGender and fgOirschot
+* Updated info for clubs fgDeGender and fgOirschot.
 * Club fcBorgerOdoorn is no longer a member of the Dutch Fotobond. Don't know yet if they still exist as a club.
 
 DOCUMENTATION MAINTENANCE
