@@ -371,6 +371,17 @@ struct ReadmeView1718: View {
 
                 } // ScrollView
                 .navigationTitle(title)
+                .toolbar { // toolbar is not essential but added because PreferenceView needed one
+                    ToolbarItem(placement: .confirmationAction) {
+                        Button(String(localized: "Done",
+                                      table: "PhotoClubHub.SwiftUI",
+                                      comment: "Close button for dismissing Readme view")
+                        ) {
+                            dismiss()
+                        }
+                        .buttonStyle(BorderedButtonStyle()) // ternary operator doesn't work here
+                    }
+                }
             }
             .padding(.init(top: 0, leading: 0, bottom: 15, trailing: 0))
             .apply {

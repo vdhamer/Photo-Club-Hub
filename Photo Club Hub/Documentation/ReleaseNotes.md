@@ -15,7 +15,7 @@ Amount of code and data lines changed since previous release: 0 additions and 0 
 
 ---------------------------------------------------------------------------
 
-### 2.9.3 (GitHub commit e601453) 22-04-2026
+### 2.9.3 (GitHub commit ???????) ??-04-2026
 
 PREFERENCES SCREEN
 
@@ -26,6 +26,10 @@ MEMBERS SCREEN
 
 * Thumbnails can show a portrait of the photographer (instead of a featured image) if available. See PREFERENCES.
 * Fixed title of screen on iOS 17 and iOS 18.
+
+README SCREEN
+
+* Added a close button at top of the screen (for consistency with Preferences).
 
 CODE MAINTENANCE
 

@@ -436,7 +436,7 @@
       }
     },
     "Done" : {
-      "comment" : "Apply preference changes and dismiss",
+      "comment" : "Apply preference changes and dismiss\nClose button for dismissing Readme view",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1356,7 +1356,7 @@
             "device" : {
               "ipad" : {
                 "stringUnit" : {
-                  "state" : "needs_review",
+                  "state" : "translated",
                   "value" : "Thumbnail filled using field"
                 }
               },
