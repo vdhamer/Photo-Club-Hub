@@ -58,6 +58,31 @@
                 ]
             }
         },
+        
+        {
+            "idPlus": {
+                "town": "Amsterdam",
+                "fullName": "The Route Photography Gallery",
+                "nickName": "TheRoute"
+            },
+            "coordinates": {
+                "latitude": 52,38329,
+                "longitude": 4,88577
+            },
+            "optional": {
+                "website": "https://gallerytheroute.com",
+                "remark": [
+                    {
+                        "language": "EN",
+                        "value": "Qoute: `Our motive is not only to exhibit the photographs, it is also to depict and/or to narrate stories from all over the world.`"
+                    },
+                    {
+                        "language": "NL",
+                        "value": "Citaat: /"Onze drijfveer is om meer te doen dan foto's te exposeren. We willen ook verhalen uit alle werelddelen uitbeelden en vertellen./""
+                    }
+                ]
+            }
+        },
 
         {
             "idPlus": {

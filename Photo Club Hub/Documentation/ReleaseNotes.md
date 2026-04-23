@@ -38,6 +38,7 @@ DATA MAINTENANCE
 
 * Updated info for clubs fgDeGender and fgOirschot.
 * Club fcBorgerOdoorn is no longer a member of the Dutch Fotobond. Don't know yet if they still exist as a club.
+* Added a photography-only gallery in Amsterdam
 
 DOCUMENTATION MAINTENANCE
 
