@@ -191,7 +191,8 @@ public struct ReadmeSectionOnFeaturesAndTips2626: View {
                 .scaledToFit()
                 .border(.gray, width: 1)
                 .frame(width: geo.size.width * 0.6, alignment: .center)
-            Text("Example of a link to a club web site", tableName: "PhotoClubHub.Readme",
+            Text("Example of a link to a club web site",
+                 tableName: "PhotoClubHub.Readme",
                  comment: "Caption of Websites image on Readme page")
             .font(.callout.italic())
             .frame(width: geo.size.width, alignment: .center)
@@ -281,8 +282,19 @@ public struct ReadmeSectionOnFeaturesAndTips2626: View {
 }
 
 @available(iOS 26.0, *)
-#Preview {
-    GeometryReader {geo in
-        ReadmeSectionOnFeaturesAndTips2626(geo: geo)
+struct ReadmeSectionOnFeaturesAndTips2626_Previews: PreviewProvider {
+    @State static private var title = "Readme Preview"
+
+    static var previews: some View {
+        GeometryReader { geo in
+            NavigationStack {
+                ScrollView(.vertical, showsIndicators: true) {
+                    ReadmeSectionOnFeaturesAndTips2626(geo: geo)
+                        .preferredColorScheme(.light)
+                        .navigationTitle(title)
+                        .previewInterfaceOrientation(.portrait)
+                }
+            }
+        }
     }
 }

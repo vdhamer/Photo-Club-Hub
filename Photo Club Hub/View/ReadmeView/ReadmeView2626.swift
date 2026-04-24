@@ -60,7 +60,7 @@ struct ReadmeView2626: View {
 
 @available(iOS 26.0, *)
 struct ReadmeView2626_Previews: PreviewProvider {
-    @State static private var title = "Info Preview"
+    @State static private var title = "Readme Preview"
 
     static var previews: some View {
         ReadmeView2626()

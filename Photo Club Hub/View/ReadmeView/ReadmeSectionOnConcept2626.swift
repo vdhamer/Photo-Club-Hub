@@ -66,8 +66,19 @@ public struct ReadmeSectionOnConcept2626: View {
 }
 
 @available(iOS 26.0, *)
-#Preview {
-    GeometryReader {geo in
-        ReadmeSectionOnConcept2626(geo: geo)
+struct ReadmeSectionOnConcept2626_Previews: PreviewProvider {
+    @State static private var title = "Readme Preview"
+
+    static var previews: some View {
+        GeometryReader { geo in
+            NavigationStack {
+                ScrollView(.vertical, showsIndicators: true) {
+                    ReadmeSectionOnConcept2626(geo: geo)
+                        .preferredColorScheme(.light)
+                        .navigationTitle(title)
+                        .previewInterfaceOrientation(.portrait)
+                }
+            }
+        }
     }
 }
