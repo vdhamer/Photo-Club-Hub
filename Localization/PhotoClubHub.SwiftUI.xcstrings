@@ -1068,6 +1068,12 @@
     "Save" : {
       "comment" : "Apply preference changes and dismiss",
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Save"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",

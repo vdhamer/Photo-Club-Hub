@@ -110,7 +110,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Neem voor vragen overigens gerust contact op via [Facebook](https://www.facebook.com/vdhamer) of [LinkedIn](https://www.linkedin.com/in/vdhamer/) of [GitHub](https://github.com/vdhamer/Photo-Club-Hub)."
+            "value" : "Neem voor vragen overigens gerust contact op via [Facebook](https://www.facebook.com/vdhamer), [LinkedIn](https://www.linkedin.com/in/vdhamer/) of [GitHub](https://github.com/vdhamer/Photo-Club-Hub)."
           }
         }
       }
@@ -1164,7 +1164,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "De zoekfunctie vindt men bij iOS versies t/m 18 helemaal bovenin de pagina."
+            "value" : "De zoekfunctie vindt men bij iOS versies t/m 18 helemaal bovenaan het scherm."
           }
         }
       }
