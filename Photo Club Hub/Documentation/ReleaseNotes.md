@@ -37,6 +37,7 @@ CODE MAINTENANCE
 * Tested with iOS 26.5 beta (23F5054d), and Xcode 26.5 beta 2 (17F5022i) and iOS 26.4.1 (23E254a).
 * Fixed GitHub merging issue (push and fetch stopped working from within Xcode).
 * Sync code with Photo Club Hub HTML code.
+* Cleanup of ReadmeView2626 (was 400 lines long)
 
 DATA MAINTENANCE
 

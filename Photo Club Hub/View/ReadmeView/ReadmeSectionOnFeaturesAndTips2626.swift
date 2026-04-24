@@ -10,7 +10,6 @@ import SwiftUI
 @available(iOS 26.0, *)
 public struct ReadmeSectionOnFeaturesAndTips2626: View {
     let geo: GeometryProxy
-
     public init(geo: GeometryProxy) { self.geo = geo }
 
     public var body: some View {
@@ -19,6 +18,28 @@ public struct ReadmeSectionOnFeaturesAndTips2626: View {
                                                       table: "PhotoClubHub.Readme",
                                                       comment: "Title of one section of Readme screen"),
                               geo: geo)
+
+            ReadmeSection2626(LocalizedStringResource("§3.01.a",
+                                                      table: "PhotoClubHub.Readme",
+                                                      comment: "Title of a section of the Readme screen"),
+                              geo: geo)
+            ReadmeSection2626(LocalizedStringResource("§3.01.b",
+                                                      table: "PhotoClubHub.Readme",
+                                                      comment: "Paragraph in the Readme screen"),
+                              geo: geo, bottomPaddingAmount: 0)
+
+            Image("Search-bar-bottom")
+                .resizable()
+                .scaledToFit()
+                .frame(width: geo.size.width * 0.8, height: 260, alignment: .center)
+            Text("Search bar of _Portfolios_ screen (for iOS 26 and up)",
+                 tableName: "PhotoClubHub.Readme",
+                 comment: "Caption about Search Bar on the Readme page")
+            .font(.callout.italic())
+            Text(verbatim: "")
+
+            ReadmeSection2626(LocalizedStringResource("§3.01.c", table: "PhotoClubHub.Readme",
+                                                  comment: "Paragraph in the Readme screen"), geo: geo)
 
             ReadmeSection2626(LocalizedStringResource("§3.02.a",
                                                       table: "PhotoClubHub.Readme",

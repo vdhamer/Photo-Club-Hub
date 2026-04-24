@@ -10,7 +10,6 @@ import SwiftUI
 @available(iOS 26.0, *)
 public struct ReadmeSectionOnSupportedPlatforms2626: View {
     let geo: GeometryProxy
-
     public init(geo: GeometryProxy) { self.geo = geo }
 
     public var body: some View {
