@@ -13,7 +13,6 @@ struct ReadmeView2626: View {
     @Environment(\.dismiss) var dismiss: DismissAction
     @State private var showingRoadmap = false // controls visibility of Preferences screen
 
-    static let paddingConstant: CGFloat = 20
     private let title = String(localized: "Readme",
                                table: "PhotoClubHub.Readme",
                                comment: "Title of Readme screen")
@@ -29,7 +28,8 @@ struct ReadmeView2626: View {
                         ReadmeSectionOnSupportedPlatforms2626(geo: geo)
                         ReadmeSectionOnHowYouCanHelp2626(geo: geo)
 
-                        SectionHeader2626(LocalizedStringResource("", table: "PhotoClubHub.Readme",
+                        SectionHeader(LocalizedStringResource("",
+                                                              table: "PhotoClubHub.Readme",
                                                               comment: "Empty section header"),
                                       geo: geo)
 

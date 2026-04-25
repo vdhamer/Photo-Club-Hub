@@ -15,23 +15,29 @@ struct ReadmeSectionOnConcept1718: View {
 
     var body: some View {
         Group {
-            SectionHeader1718(LocalizedStringResource("The Concept", table: "PhotoClubHub.Readme",
+            SectionHeader(LocalizedStringResource("The Concept",
+                                                  table: "PhotoClubHub.Readme",
                                                   comment: "Title of one section of Readme screen"),
-                                                  geo: geo)
-            ReadmeSection1718(LocalizedStringResource("§2.1", table: "PhotoClubHub.Readme",
-                                                  comment: "Paragraph in the Readme screen"),
+                          geo: geo)
+            ReadmeSection1718(LocalizedStringResource("§2.1",
+                                                      table: "PhotoClubHub.Readme",
+                                                      comment: "Paragraph in the Readme screen"),
                               geo: geo)
-            ReadmeSection1718(LocalizedStringResource("§2.2", table: "PhotoClubHub.Readme",
-                                                  comment: "Paragraph in the Readme screen"),
+            ReadmeSection1718(LocalizedStringResource("§2.2",
+                                                      table: "PhotoClubHub.Readme",
+                                                      comment: "Paragraph in the Readme screen"),
                               geo: geo)
-            ReadmeSection1718(LocalizedStringResource("§2.3", table: "PhotoClubHub.Readme",
-                                                  comment: "Paragraph in the Readme screen"),
+            ReadmeSection1718(LocalizedStringResource("§2.3",
+                                                      table: "PhotoClubHub.Readme",
+                                                      comment: "Paragraph in the Readme screen"),
                               geo: geo)
-            ReadmeSection1718(LocalizedStringResource("§2.4", table: "PhotoClubHub.Readme",
-                                                  comment: "Paragraph in the Readme screen"),
+            ReadmeSection1718(LocalizedStringResource("§2.4",
+                                                      table: "PhotoClubHub.Readme",
+                                                      comment: "Paragraph in the Readme screen"),
                               geo: geo)
-            ReadmeSection1718(LocalizedStringResource("§2.5", table: "PhotoClubHub.Readme",
-                                                  comment: "Paragraph in the Readme screen"),
+            ReadmeSection1718(LocalizedStringResource("§2.5",
+                                                      table: "PhotoClubHub.Readme",
+                                                      comment: "Paragraph in the Readme screen"),
                               geo: geo)
 
             Image("Waalre_AppIcon")

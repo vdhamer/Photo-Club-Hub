@@ -14,7 +14,7 @@ public struct ReadmeSectionOnApp2626: View {
 
     public var body: some View {
         Group {
-            SectionHeader2626(
+            SectionHeader(
                 LocalizedStringResource("The App",
                                         table: "PhotoClubHub.Readme",
                                         comment: "Title of one section of Readme screen"),

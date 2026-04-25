@@ -13,10 +13,10 @@ struct ReadmeSectionOnSupportedPlatforms1718: View {
 
     var body: some View {
         Group {
-            SectionHeader1718(LocalizedStringResource("Supported Platforms",
-                                                      table: "PhotoClubHub.Readme",
-                                                      comment: "Title of one section of Readme screen"),
-                              geo: geo)
+            SectionHeader(LocalizedStringResource("Supported Platforms",
+                                                  table: "PhotoClubHub.Readme",
+                                                  comment: "Title of one section of Readme screen"),
+                          geo: geo)
             ReadmeSection1718(LocalizedStringResource("§4.1", table: "PhotoClubHub.Readme",
                                                   comment: "Paragraph in the Readme screen"),
                               geo: geo)

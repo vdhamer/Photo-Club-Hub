@@ -16,7 +16,6 @@ extension View {
 @available(iOS, obsoleted: 19.0, message: "Please use 'ReadmeView2626' for versions about iOS 18.x")
 struct ReadmeView1718: View {
 
-    static let paddingConstant: CGFloat = 20
     private let title = String(localized: "Readme", table: "PhotoClubHub.Readme", comment: "Title of Readme screen")
     @Environment(\.dismiss) var dismiss: DismissAction // \.dismiss requires iOS 15
     @State private var showingRoadmap = false // controls visibility of Preferences screen
@@ -34,7 +33,8 @@ struct ReadmeView1718: View {
                         ReadmeSectionOnSupportedPlatforms1718(geo: geo)
                         ReadmeSectionOnHowYouCanHelp1718(geo: geo)
 
-                        SectionHeader1718(LocalizedStringResource("", table: "PhotoClubHub.Readme",
+                        SectionHeader(LocalizedStringResource("",
+                                                              table: "PhotoClubHub.Readme",
                                                               comment: "Empty section header"),
                                       geo: geo)
 

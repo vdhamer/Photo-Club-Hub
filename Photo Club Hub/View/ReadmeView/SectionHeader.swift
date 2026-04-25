@@ -1,5 +1,5 @@
 //
-//  SectionHeader2626.swift
+//  SectionHeader.swift
 //  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 28/01/2025.
@@ -7,10 +7,11 @@
 
 import SwiftUI
 
-@available(iOS 26.0, *)
-struct SectionHeader2626: View {
+struct SectionHeader: View {
     private let localizedString: LocalizedStringResource
     private let geo: GeometryProxy
+
+    public static let paddingConstant: CGFloat = 20
 
     // explicit init() used here just to suppress localizedStringKey argument label
     init(_ localizedString: LocalizedStringResource, geo: GeometryProxy) {
@@ -45,6 +46,6 @@ struct SectionHeader2626: View {
             }
         }
         .frame(width: geo.size.width * 0.9, height: 50, alignment: .center)
-        .padding(Edge.Set([.horizontal]), ReadmeView2626.paddingConstant)
+        .padding(Edge.Set([.horizontal]), SectionHeader.paddingConstant)
     }
 }

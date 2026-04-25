@@ -17,7 +17,7 @@ struct ReadmeSection2626: View {
     // explicit init() used here just to suppress localizedString argument label
     init(_ localizedString: LocalizedStringResource,
          geo: GeometryProxy,
-         bottomPaddingAmount: CGFloat = ReadmeView2626.paddingConstant) {
+         bottomPaddingAmount: CGFloat = SectionHeader.paddingConstant) {
         self.localizedString = localizedString
         self.geo = geo
         self.bottomPaddingAmount = bottomPaddingAmount
@@ -25,7 +25,7 @@ struct ReadmeSection2626: View {
 
     var body: some View {
         Text(localizedString)
-            .padding([.horizontal], ReadmeView2626.paddingConstant)
+            .padding([.horizontal], SectionHeader.paddingConstant)
             .padding([.bottom], bottomPaddingAmount)
             .frame(width: geo.size.width, alignment: .leading)
             .fixedSize() // magic to get Text to wrap
