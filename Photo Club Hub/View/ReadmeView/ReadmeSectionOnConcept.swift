@@ -1,5 +1,5 @@
 //
-//  ReadmeSectionOnConcept2626.swift
+//  ReadmeSectionOnConcept.swift
 //  Photo Club Hub
 //
 //  Created by Peter van den Hamer on 24/04/2026.
@@ -7,8 +7,7 @@
 
 import SwiftUI
 
-@available(iOS 26.0, *)
-public struct ReadmeSectionOnConcept2626: View {
+public struct ReadmeSectionOnConcept: View {
     let geo: GeometryProxy
     public init(geo: GeometryProxy) { self.geo = geo }
 
@@ -66,14 +65,14 @@ public struct ReadmeSectionOnConcept2626: View {
 }
 
 @available(iOS 26.0, *)
-struct ReadmeSectionOnConcept2626_Previews: PreviewProvider {
+struct ReadmeSectionOnConcept_Previews: PreviewProvider {
     @State static private var title = "Readme Preview"
 
     static var previews: some View {
         GeometryReader { geo in
             NavigationStack {
                 ScrollView(.vertical, showsIndicators: true) {
-                    ReadmeSectionOnConcept2626(geo: geo)
+                    ReadmeSectionOnConcept(geo: geo)
                         .preferredColorScheme(.light)
                         .navigationTitle(title)
                         .previewInterfaceOrientation(.portrait)

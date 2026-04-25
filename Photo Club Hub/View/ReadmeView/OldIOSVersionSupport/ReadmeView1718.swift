@@ -28,7 +28,7 @@ struct ReadmeView1718: View {
                 ScrollView(.vertical, showsIndicators: true) {
                     VStack {
                         ReadmeSectionOnApp(geo: geo)
-                        ReadmeSectionOnConcept1718(geo: geo)
+                        ReadmeSectionOnConcept(geo: geo)
                         ReadmeSectionOnFeaturesAndTips1718(geo: geo)
                         ReadmeSectionOnSupportedPlatforms1718(geo: geo)
                         ReadmeSectionOnHowYouCanHelp1718(geo: geo)
